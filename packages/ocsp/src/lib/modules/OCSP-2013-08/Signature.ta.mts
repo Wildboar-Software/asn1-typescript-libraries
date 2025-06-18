@@ -206,11 +206,11 @@ export function _encode_Signature(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.signatureAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certs === undefined
                             ? undefined
@@ -220,13 +220,13 @@ export function _encode_Signature(
                                   () =>
                                       $._encodeSequenceOf<Certificate>(
                                           () => _encode_Certificate,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.certs, $.BER),
+                                  $.DER
+                              )(value.certs, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

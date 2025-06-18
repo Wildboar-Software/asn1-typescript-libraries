@@ -164,14 +164,14 @@ export function _encode_IssuerAndSerialNumber(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
+                        /* REQUIRED   */ _encode_Name(value.issuer, $.DER),
                         /* REQUIRED   */ _encode_CertificateSerialNumber(
                             value.serialNumber,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

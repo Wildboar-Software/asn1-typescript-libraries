@@ -65,7 +65,7 @@ export function _encode_ETYPE_INFO(
   if (!_cached_encoder_for_ETYPE_INFO) {
     _cached_encoder_for_ETYPE_INFO = $._encodeSequenceOf<ETYPE_INFO_ENTRY>(
       () => _encode_ETYPE_INFO_ENTRY,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_ETYPE_INFO(value, elGetter);

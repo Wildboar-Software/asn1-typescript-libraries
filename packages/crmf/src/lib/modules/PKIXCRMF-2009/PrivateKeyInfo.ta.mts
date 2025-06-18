@@ -230,14 +230,14 @@ export function _encode_PrivateKeyInfo(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.version, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.version, $.DER),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.privateKeyAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.privateKey,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.attributes === undefined
                             ? undefined
@@ -245,11 +245,11 @@ export function _encode_PrivateKeyInfo(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Attributes,
-                                  $.BER
-                              )(value.attributes, $.BER),
+                                  $.DER
+                              )(value.attributes, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -66,7 +66,7 @@ export function _encode_ECParameters(
             {
                 namedCurve: $._encodeObjectIdentifier,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ECParameters(value, elGetter);

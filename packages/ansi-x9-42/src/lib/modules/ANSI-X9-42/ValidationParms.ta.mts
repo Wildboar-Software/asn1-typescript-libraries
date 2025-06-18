@@ -163,14 +163,14 @@ export function _encode_ValidationParms(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeBitString(value.seed, $.BER),
+                        /* REQUIRED   */ $._encodeBitString(value.seed, $.DER),
                         /* REQUIRED   */ $._encodeInteger(
                             value.pGenCounter,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

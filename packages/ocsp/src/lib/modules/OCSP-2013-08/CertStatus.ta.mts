@@ -88,22 +88,22 @@ export function _encode_CertStatus(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 revoked: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_RevokedInfo,
-                    $.BER
+                    $.DER
                 ),
                 unknown: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_UnknownInfo,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertStatus(value, elGetter);

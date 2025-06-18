@@ -216,23 +216,23 @@ export function _encode_KeyTransRecipientInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_RecipientIdentifier(
                             value.rid,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.keyEncryptionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_EncryptedKey(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

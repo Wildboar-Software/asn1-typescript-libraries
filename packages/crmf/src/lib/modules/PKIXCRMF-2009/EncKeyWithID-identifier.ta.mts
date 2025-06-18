@@ -73,7 +73,7 @@ export function _encode_EncKeyWithID_identifier(
                 string_: $._encodeUTF8String,
                 generalName: _encode_GeneralName,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EncKeyWithID_identifier(value, elGetter);

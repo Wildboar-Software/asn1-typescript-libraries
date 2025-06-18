@@ -201,13 +201,13 @@ export function _encode_ResponseStatus(
               ResponseStatus._default_value_for_statusCode
             )
               ? undefined
-              : _encode_CVStatusCode(value.statusCode, $.BER),
+              : _encode_CVStatusCode(value.statusCode, $.DER),
             /* IF_ABSENT  */ value.errorMessage === undefined
               ? undefined
-              : $._encodeUTF8String(value.errorMessage, $.BER),
+              : $._encodeUTF8String(value.errorMessage, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

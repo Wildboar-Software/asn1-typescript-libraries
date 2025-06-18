@@ -370,7 +370,7 @@ export function _encode_AuthenticatedData(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.originatorInfo === undefined
                             ? undefined
@@ -378,15 +378,15 @@ export function _encode_AuthenticatedData(
                                   _TagClass.context,
                                   0,
                                   () => _encode_OriginatorInfo,
-                                  $.BER
-                              )(value.originatorInfo, $.BER),
+                                  $.DER
+                              )(value.originatorInfo, $.DER),
                         /* REQUIRED   */ _encode_RecipientInfos(
                             value.recipientInfos,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_MessageAuthenticationCodeAlgorithm(
                             value.macAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.digestAlgorithm === undefined
                             ? undefined
@@ -394,11 +394,11 @@ export function _encode_AuthenticatedData(
                                   _TagClass.context,
                                   1,
                                   () => _encode_DigestAlgorithmIdentifier,
-                                  $.BER
-                              )(value.digestAlgorithm, $.BER),
+                                  $.DER
+                              )(value.digestAlgorithm, $.DER),
                         /* REQUIRED   */ _encode_EncapsulatedContentInfo(
                             value.encapContentInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.authAttrs === undefined
                             ? undefined
@@ -406,11 +406,11 @@ export function _encode_AuthenticatedData(
                                   _TagClass.context,
                                   2,
                                   () => _encode_AuthAttributes,
-                                  $.BER
-                              )(value.authAttrs, $.BER),
+                                  $.DER
+                              )(value.authAttrs, $.DER),
                         /* REQUIRED   */ _encode_MessageAuthenticationCode(
                             value.mac,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.unauthAttrs === undefined
                             ? undefined
@@ -418,11 +418,11 @@ export function _encode_AuthenticatedData(
                                   _TagClass.context,
                                   3,
                                   () => _encode_UnauthAttributes,
-                                  $.BER
-                              )(value.unauthAttrs, $.BER),
+                                  $.DER
+                              )(value.unauthAttrs, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

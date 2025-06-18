@@ -202,18 +202,18 @@ export function _encode_CertRequest(
                     .concat([
                         /* REQUIRED   */ $._encodeInteger(
                             value.certReqId,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_CertTemplate(
                             value.certTemplate,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.controls === undefined
                             ? undefined
-                            : _encode_Controls(value.controls, $.BER),
+                            : _encode_Controls(value.controls, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

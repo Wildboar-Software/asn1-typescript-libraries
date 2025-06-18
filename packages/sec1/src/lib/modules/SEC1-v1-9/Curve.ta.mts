@@ -16,9 +16,9 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
 /**
  * @summary Curve
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Curve ::= SEQUENCE {
  *     a FieldElement,
@@ -28,7 +28,7 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
  *     -- with version equal to ecdpVer2 or ecdpVer3
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -57,9 +57,9 @@ class Curve {
     /**
      * @summary Restructures an object into a Curve
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Curve`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -76,9 +76,9 @@ class Curve {
 /**
  * @summary The Leading Root Component Types of Curve
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -91,27 +91,27 @@ const _root_component_type_list_1_spec_for_Curve: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of Curve
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_Curve: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of Curve
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_Curve: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_Curve: $.ASN1Decoder<Curve> | null = null;
@@ -166,11 +166,11 @@ function _encode_Curve (value: Curve, elGetter: $.ASN1Encoder<Curve>) {
     if (!_cached_encoder_for_Curve) { _cached_encoder_for_Curve = function (value: Curve): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_FieldElement(value.a, $.BER),
-            /* REQUIRED   */ _encode_FieldElement(value.b, $.BER),
-            /* IF_ABSENT  */ ((value.seed === undefined) ? undefined : $._encodeBitString(value.seed, $.BER))
+            /* REQUIRED   */ _encode_FieldElement(value.a, $.DER),
+            /* REQUIRED   */ _encode_FieldElement(value.b, $.DER),
+            /* IF_ABSENT  */ ((value.seed === undefined) ? undefined : $._encodeBitString(value.seed, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_Curve(value, elGetter);
 }

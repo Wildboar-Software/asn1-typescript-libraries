@@ -211,25 +211,25 @@ export function _encode_EncryptedData(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.etype, $.BER),
+              $.DER
+            )(value.etype, $.DER),
             /* IF_ABSENT  */ value.kvno === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_UInt32,
-                  $.BER
-                )(value.kvno, $.BER),
+                  $.DER
+                )(value.kvno, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               2,
               () => $._encodeOctetString,
-              $.BER
-            )(value.cipher, $.BER),
+              $.DER
+            )(value.cipher, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

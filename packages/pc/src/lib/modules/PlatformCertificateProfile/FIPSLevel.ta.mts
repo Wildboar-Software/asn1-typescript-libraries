@@ -17,16 +17,16 @@ import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_
 /**
  * @summary FIPSLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * FIPSLevel ::= SEQUENCE {
  *     version         IA5String (SIZE (1..strmax)), -- “140-1”, “140-2”, or “140-3”
  *     level           SecurityLevel,
  *     plus            BOOLEAN DEFAULT FALSE }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -55,9 +55,9 @@ class FIPSLevel {
     /**
      * @summary Restructures an object into a FIPSLevel
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `FIPSLevel`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -86,9 +86,9 @@ class FIPSLevel {
 /**
  * @summary The Leading Root Component Types of FIPSLevel
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -101,27 +101,27 @@ const _root_component_type_list_1_spec_for_FIPSLevel: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of FIPSLevel
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_FIPSLevel: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of FIPSLevel
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_FIPSLevel: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_FIPSLevel: $.ASN1Decoder<FIPSLevel> | null = null;
@@ -176,11 +176,11 @@ function _encode_FIPSLevel (value: FIPSLevel, elGetter: $.ASN1Encoder<FIPSLevel>
     if (!_cached_encoder_for_FIPSLevel) { _cached_encoder_for_FIPSLevel = function (value: FIPSLevel): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeIA5String(value.version, $.BER),
-            /* REQUIRED   */ _encode_SecurityLevel(value.level, $.BER),
-            /* IF_DEFAULT */ (value.plus === undefined || $.deepEq(value.plus, FIPSLevel._default_value_for_plus) ? undefined : $._encodeBoolean(value.plus, $.BER))
+            /* REQUIRED   */ $._encodeIA5String(value.version, $.DER),
+            /* REQUIRED   */ _encode_SecurityLevel(value.level, $.DER),
+            /* IF_DEFAULT */ (value.plus === undefined || $.deepEq(value.plus, FIPSLevel._default_value_for_plus) ? undefined : $._encodeBoolean(value.plus, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_FIPSLevel(value, elGetter);
 }

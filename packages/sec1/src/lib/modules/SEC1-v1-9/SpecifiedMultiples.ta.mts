@@ -14,9 +14,9 @@ import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_Speci
 /**
  * @summary SpecifiedMultiples
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SpecifiedMultiples  ::=  SEQUENCE OF SEQUENCE {
  *     multiple INTEGER,
@@ -51,7 +51,7 @@ let _cached_encoder_for_SpecifiedMultiples: $.ASN1Encoder<SpecifiedMultiples> | 
  */
 export
 function _encode_SpecifiedMultiples (value: SpecifiedMultiples, elGetter: $.ASN1Encoder<SpecifiedMultiples>) {
-    if (!_cached_encoder_for_SpecifiedMultiples) { _cached_encoder_for_SpecifiedMultiples = $._encodeSequenceOf<SpecifiedMultiples_Item>(() => _encode_SpecifiedMultiples_Item, $.BER); }
+    if (!_cached_encoder_for_SpecifiedMultiples) { _cached_encoder_for_SpecifiedMultiples = $._encodeSequenceOf<SpecifiedMultiples_Item>(() => _encode_SpecifiedMultiples_Item, $.DER); }
     return _cached_encoder_for_SpecifiedMultiples(value, elGetter);
 }
 

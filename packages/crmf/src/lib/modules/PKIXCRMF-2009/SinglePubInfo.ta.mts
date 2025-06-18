@@ -182,14 +182,14 @@ export function _encode_SinglePubInfo(
                     .concat([
                         /* REQUIRED   */ _encode_SinglePubInfo_pubMethod(
                             value.pubMethod,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.pubLocation === undefined
                             ? undefined
-                            : _encode_GeneralName(value.pubLocation, $.BER),
+                            : _encode_GeneralName(value.pubLocation, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

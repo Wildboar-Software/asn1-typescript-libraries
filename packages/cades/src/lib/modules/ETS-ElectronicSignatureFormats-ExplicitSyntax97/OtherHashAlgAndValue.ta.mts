@@ -148,10 +148,10 @@ function _encode_OtherHashAlgAndValue (value: OtherHashAlgAndValue, elGetter: $.
     if (!_cached_encoder_for_OtherHashAlgAndValue) { _cached_encoder_for_OtherHashAlgAndValue = function (value: OtherHashAlgAndValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.BER),
-            /* REQUIRED   */ _encode_OtherHashValue(value.hashValue, $.BER)
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.DER),
+            /* REQUIRED   */ _encode_OtherHashValue(value.hashValue, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OtherHashAlgAndValue(value, elGetter);
 }

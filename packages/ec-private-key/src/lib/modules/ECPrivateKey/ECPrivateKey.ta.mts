@@ -19,9 +19,9 @@ import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKI
 /**
  * @summary ECPrivateKey
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECPrivateKey ::= SEQUENCE {
  *     version        INTEGER { ecPrivkeyVer1(1) } (ecPrivkeyVer1),
@@ -30,7 +30,7 @@ import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKI
  *     publicKey  [1] BIT STRING OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -65,9 +65,9 @@ class ECPrivateKey {
     /**
      * @summary Restructures an object into a ECPrivateKey
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ECPrivateKey`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -85,9 +85,9 @@ class ECPrivateKey {
 /**
  * @summary The Leading Root Component Types of ECPrivateKey
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -102,28 +102,28 @@ const _root_component_type_list_1_spec_for_ECPrivateKey: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of ECPrivateKey
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ECPrivateKey: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of ECPrivateKey
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ECPrivateKey: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -185,12 +185,12 @@ function _encode_ECPrivateKey (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPr
     if (!_cached_encoder_for_ECPrivateKey) { _cached_encoder_for_ECPrivateKey = function (value: ECPrivateKey): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ECPrivateKey_version(value.version, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.privateKey, $.BER),
-            /* IF_ABSENT  */ ((value.parameters === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_ECParameters, $.BER)(value.parameters, $.BER)),
-            /* IF_ABSENT  */ ((value.publicKey === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeBitString, $.BER)(value.publicKey, $.BER))
+            /* REQUIRED   */ _encode_ECPrivateKey_version(value.version, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.privateKey, $.DER),
+            /* IF_ABSENT  */ ((value.parameters === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_ECParameters, $.DER)(value.parameters, $.DER)),
+            /* IF_ABSENT  */ ((value.publicKey === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeBitString, $.DER)(value.publicKey, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ECPrivateKey(value, elGetter);
 }

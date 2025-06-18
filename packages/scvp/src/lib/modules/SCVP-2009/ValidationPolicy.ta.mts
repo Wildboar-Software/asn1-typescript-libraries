@@ -383,7 +383,7 @@ export function _encode_ValidationPolicy(
           .concat([
             /* REQUIRED   */ _encode_ValidationPolRef(
               value.validationPolRef,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.validationAlg === undefined
               ? undefined
@@ -391,8 +391,8 @@ export function _encode_ValidationPolicy(
                   _TagClass.context,
                   0,
                   () => _encode_ValidationAlg,
-                  $.BER
-                )(value.validationAlg, $.BER),
+                  $.DER
+                )(value.validationAlg, $.DER),
             /* IF_ABSENT  */ value.userPolicySet === undefined
               ? undefined
               : $._encode_implicit(
@@ -401,42 +401,42 @@ export function _encode_ValidationPolicy(
                   () =>
                     $._encodeSequenceOf<OBJECT_IDENTIFIER>(
                       () => $._encodeObjectIdentifier,
-                      $.BER
+                      $.DER
                     ),
-                  $.BER
-                )(value.userPolicySet, $.BER),
+                  $.DER
+                )(value.userPolicySet, $.DER),
             /* IF_ABSENT  */ value.inhibitPolicyMapping === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   2,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.inhibitPolicyMapping, $.BER),
+                  $.DER
+                )(value.inhibitPolicyMapping, $.DER),
             /* IF_ABSENT  */ value.requireExplicitPolicy === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   3,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.requireExplicitPolicy, $.BER),
+                  $.DER
+                )(value.requireExplicitPolicy, $.DER),
             /* IF_ABSENT  */ value.inhibitAnyPolicy === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   4,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.inhibitAnyPolicy, $.BER),
+                  $.DER
+                )(value.inhibitAnyPolicy, $.DER),
             /* IF_ABSENT  */ value.trustAnchors === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   5,
                   () => _encode_TrustAnchors,
-                  $.BER
-                )(value.trustAnchors, $.BER),
+                  $.DER
+                )(value.trustAnchors, $.DER),
             /* IF_ABSENT  */ value.keyUsages === undefined
               ? undefined
               : $._encode_implicit(
@@ -445,10 +445,10 @@ export function _encode_ValidationPolicy(
                   () =>
                     $._encodeSequenceOf<KeyUsage>(
                       () => _encode_KeyUsage,
-                      $.BER
+                      $.DER
                     ),
-                  $.BER
-                )(value.keyUsages, $.BER),
+                  $.DER
+                )(value.keyUsages, $.DER),
             /* IF_ABSENT  */ value.extendedKeyUsages === undefined
               ? undefined
               : $._encode_implicit(
@@ -457,10 +457,10 @@ export function _encode_ValidationPolicy(
                   () =>
                     $._encodeSequenceOf<KeyPurposeId>(
                       () => _encode_KeyPurposeId,
-                      $.BER
+                      $.DER
                     ),
-                  $.BER
-                )(value.extendedKeyUsages, $.BER),
+                  $.DER
+                )(value.extendedKeyUsages, $.DER),
             /* IF_ABSENT  */ value.specifiedKeyUsages === undefined
               ? undefined
               : $._encode_implicit(
@@ -469,13 +469,13 @@ export function _encode_ValidationPolicy(
                   () =>
                     $._encodeSequenceOf<KeyPurposeId>(
                       () => _encode_KeyPurposeId,
-                      $.BER
+                      $.DER
                     ),
-                  $.BER
-                )(value.specifiedKeyUsages, $.BER),
+                  $.DER
+                )(value.specifiedKeyUsages, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

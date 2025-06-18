@@ -100,28 +100,28 @@ export function _encode_RevocationInfo(
           _TagClass.context,
           0,
           () => _encode_CertificateList,
-          $.BER
+          $.DER
         ),
         delta_crl: $._encode_implicit(
           _TagClass.context,
           1,
           () => _encode_CertificateList,
-          $.BER
+          $.DER
         ),
         ocsp: $._encode_implicit(
           _TagClass.context,
           2,
           () => _encode_OCSPResponse,
-          $.BER
+          $.DER
         ),
         other: $._encode_implicit(
           _TagClass.context,
           3,
           () => _encode_OtherRevInfo,
-          $.BER
+          $.DER
         ),
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_RevocationInfo(value, elGetter);

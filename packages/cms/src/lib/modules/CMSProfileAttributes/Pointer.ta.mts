@@ -91,7 +91,7 @@ export function _encode_Pointer(
                 address: _encode_Address,
                 dbRecord: _encode_DBRecord,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Pointer(value, elGetter);

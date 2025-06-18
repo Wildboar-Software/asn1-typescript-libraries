@@ -17,9 +17,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary Pentanomial
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Pentanomial ::= SEQUENCE {
  *     k1 INTEGER, -- k1 > 0
@@ -27,7 +27,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     k3 INTEGER -- k3 > k2
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -56,9 +56,9 @@ class Pentanomial {
     /**
      * @summary Restructures an object into a Pentanomial
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Pentanomial`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -75,9 +75,9 @@ class Pentanomial {
 /**
  * @summary The Leading Root Component Types of Pentanomial
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -90,27 +90,27 @@ const _root_component_type_list_1_spec_for_Pentanomial: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of Pentanomial
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_Pentanomial: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of Pentanomial
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_Pentanomial: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_Pentanomial: $.ASN1Decoder<Pentanomial> | null = null;
@@ -161,11 +161,11 @@ function _encode_Pentanomial (value: Pentanomial, elGetter: $.ASN1Encoder<Pentan
     if (!_cached_encoder_for_Pentanomial) { _cached_encoder_for_Pentanomial = function (value: Pentanomial): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.k1, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.k2, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.k3, $.BER)
+            /* REQUIRED   */ $._encodeInteger(value.k1, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.k2, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.k3, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_Pentanomial(value, elGetter);
 }

@@ -248,33 +248,33 @@ export function _encode_AD_KDCIssued(
               _TagClass.context,
               0,
               () => _encode_Checksum,
-              $.BER
-            )(value.ad_checksum, $.BER),
+              $.DER
+            )(value.ad_checksum, $.DER),
             /* IF_ABSENT  */ value.i_realm === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Realm,
-                  $.BER
-                )(value.i_realm, $.BER),
+                  $.DER
+                )(value.i_realm, $.DER),
             /* IF_ABSENT  */ value.i_sname === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.i_sname, $.BER),
+                  $.DER
+                )(value.i_sname, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               3,
               () => _encode_AuthorizationData,
-              $.BER
-            )(value.elements, $.BER),
+              $.DER
+            )(value.elements, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

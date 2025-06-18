@@ -164,13 +164,13 @@ export function _encode_ValidationPolRef(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.valPolId, $.BER),
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.valPolId, $.DER),
             /* IF_ABSENT  */ value.valPolParams === undefined
               ? undefined
-              : $._encodeAny(value.valPolParams, $.BER),
+              : $._encodeAny(value.valPolParams, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

@@ -15,16 +15,16 @@ import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../
 /**
  * @summary ECPKRestrictions
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECPKRestrictions ::= SEQUENCE {
  *     ecDomain ECDomainParameters {{ SECGCurveNames }},
  *     eccAlgorithms ECCAlgorithms
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -47,9 +47,9 @@ class ECPKRestrictions {
     /**
      * @summary Restructures an object into a ECPKRestrictions
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ECPKRestrictions`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -66,9 +66,9 @@ class ECPKRestrictions {
 /**
  * @summary The Leading Root Component Types of ECPKRestrictions
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -80,27 +80,27 @@ const _root_component_type_list_1_spec_for_ECPKRestrictions: $.ComponentSpec[] =
 /**
  * @summary The Trailing Root Component Types of ECPKRestrictions
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ECPKRestrictions: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ECPKRestrictions
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ECPKRestrictions: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ECPKRestrictions: $.ASN1Decoder<ECPKRestrictions> | null = null;
@@ -147,10 +147,10 @@ function _encode_ECPKRestrictions (value: ECPKRestrictions, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_ECPKRestrictions) { _cached_encoder_for_ECPKRestrictions = function (value: ECPKRestrictions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ECDomainParameters(value.ecDomain, $.BER),
-            /* REQUIRED   */ _encode_ECCAlgorithms(value.eccAlgorithms, $.BER)
+            /* REQUIRED   */ _encode_ECDomainParameters(value.ecDomain, $.DER),
+            /* REQUIRED   */ _encode_ECCAlgorithms(value.eccAlgorithms, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ECPKRestrictions(value, elGetter);
 }

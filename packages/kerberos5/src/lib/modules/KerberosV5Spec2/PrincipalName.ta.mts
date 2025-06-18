@@ -179,21 +179,21 @@ export function _encode_PrincipalName(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.name_type, $.BER),
+              $.DER
+            )(value.name_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () =>
                 $._encodeSequenceOf<KerberosString>(
                   () => _encode_KerberosString,
-                  $.BER
+                  $.DER
                 ),
-              $.BER
-            )(value.name_string, $.BER),
+              $.DER
+            )(value.name_string, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

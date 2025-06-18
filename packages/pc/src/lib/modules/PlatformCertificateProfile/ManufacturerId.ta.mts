@@ -14,14 +14,14 @@ import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_Priva
 /**
  * @summary ManufacturerId
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ManufacturerId ::= SEQUENCE {
  *     manufacturerIdentifier  PrivateEnterpriseNumber }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -38,9 +38,9 @@ class ManufacturerId {
     /**
      * @summary Restructures an object into a ManufacturerId
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ManufacturerId`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -57,9 +57,9 @@ class ManufacturerId {
 /**
  * @summary The Leading Root Component Types of ManufacturerId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -70,27 +70,27 @@ const _root_component_type_list_1_spec_for_ManufacturerId: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of ManufacturerId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ManufacturerId: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ManufacturerId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ManufacturerId: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ManufacturerId: $.ASN1Decoder<ManufacturerId> | null = null;
@@ -133,9 +133,9 @@ function _encode_ManufacturerId (value: ManufacturerId, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ManufacturerId) { _cached_encoder_for_ManufacturerId = function (value: ManufacturerId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_PrivateEnterpriseNumber(value.manufacturerIdentifier, $.BER)
+            /* REQUIRED   */ _encode_PrivateEnterpriseNumber(value.manufacturerIdentifier, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ManufacturerId(value, elGetter);
 }

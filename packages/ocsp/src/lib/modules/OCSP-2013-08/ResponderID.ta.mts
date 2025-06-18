@@ -79,16 +79,16 @@ export function _encode_ResponderID(
                     _TagClass.context,
                     1,
                     () => _encode_Name,
-                    $.BER
+                    $.DER
                 ),
                 byKey: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_KeyHash,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ResponderID(value, elGetter);

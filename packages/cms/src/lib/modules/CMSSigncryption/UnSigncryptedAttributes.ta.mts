@@ -57,7 +57,7 @@ export function _encode_UnSigncryptedAttributes(
     if (!_cached_encoder_for_UnSigncryptedAttributes) {
         _cached_encoder_for_UnSigncryptedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UnSigncryptedAttributes(value, elGetter);

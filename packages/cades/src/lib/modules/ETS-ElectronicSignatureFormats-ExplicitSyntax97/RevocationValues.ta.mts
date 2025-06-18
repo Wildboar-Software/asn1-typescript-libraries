@@ -166,11 +166,11 @@ function _encode_RevocationValues (value: RevocationValues, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_RevocationValues) { _cached_encoder_for_RevocationValues = function (value: RevocationValues): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.crlVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeSequenceOf<CertificateList>(() => _encode_CertificateList, $.BER), $.BER)(value.crlVals, $.BER)),
-            /* IF_ABSENT  */ ((value.ocspVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeSequenceOf<BasicOCSPResponse>(() => _encode_BasicOCSPResponse, $.BER), $.BER)(value.ocspVals, $.BER)),
-            /* IF_ABSENT  */ ((value.otherRevVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_OtherRevVals, $.BER)(value.otherRevVals, $.BER))
+            /* IF_ABSENT  */ ((value.crlVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeSequenceOf<CertificateList>(() => _encode_CertificateList, $.DER), $.DER)(value.crlVals, $.DER)),
+            /* IF_ABSENT  */ ((value.ocspVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeSequenceOf<BasicOCSPResponse>(() => _encode_BasicOCSPResponse, $.DER), $.DER)(value.ocspVals, $.DER)),
+            /* IF_ABSENT  */ ((value.otherRevVals === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_OtherRevVals, $.DER)(value.otherRevVals, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_RevocationValues(value, elGetter);
 }

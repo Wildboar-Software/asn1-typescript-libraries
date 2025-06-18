@@ -289,15 +289,15 @@ export function _encode_SignedData(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSetOf<DigestAlgorithmIdentifier>(
                             () => _encode_DigestAlgorithmIdentifier,
-                            $.BER
-                        )(value.digestAlgorithms, $.BER),
+                            $.DER
+                        )(value.digestAlgorithms, $.DER),
                         /* REQUIRED   */ _encode_EncapsulatedContentInfo(
                             value.encapContentInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certificates === undefined
                             ? undefined
@@ -305,23 +305,23 @@ export function _encode_SignedData(
                                   _TagClass.context,
                                   0,
                                   () => _encode_CertificateSet,
-                                  $.BER
-                              )(value.certificates, $.BER),
+                                  $.DER
+                              )(value.certificates, $.DER),
                         /* IF_ABSENT  */ value.crls === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_RevocationInfoChoices,
-                                  $.BER
-                              )(value.crls, $.BER),
+                                  $.DER
+                              )(value.crls, $.DER),
                         /* REQUIRED   */ _encode_SignerInfos(
                             value.signerInfos,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

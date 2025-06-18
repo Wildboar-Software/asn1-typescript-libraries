@@ -56,7 +56,7 @@ export function _encode_Attributes(
     if (!_cached_encoder_for_Attributes) {
         _cached_encoder_for_Attributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Attributes(value, elGetter);

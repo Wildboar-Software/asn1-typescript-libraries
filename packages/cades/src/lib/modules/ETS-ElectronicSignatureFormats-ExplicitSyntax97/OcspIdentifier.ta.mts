@@ -147,10 +147,10 @@ function _encode_OcspIdentifier (value: OcspIdentifier, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_OcspIdentifier) { _cached_encoder_for_OcspIdentifier = function (value: OcspIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ResponderID(value.ocspResponderID, $.BER),
-            /* REQUIRED   */ $._encodeGeneralizedTime(value.producedAt, $.BER)
+            /* REQUIRED   */ _encode_ResponderID(value.ocspResponderID, $.DER),
+            /* REQUIRED   */ $._encodeGeneralizedTime(value.producedAt, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OcspIdentifier(value, elGetter);
 }

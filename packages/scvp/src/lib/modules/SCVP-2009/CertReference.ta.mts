@@ -79,7 +79,7 @@ export function _encode_CertReference(
         pkc: _encode_PKCReference,
         ac: _encode_ACReference,
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_CertReference(value, elGetter);

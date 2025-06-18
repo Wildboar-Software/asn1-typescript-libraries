@@ -78,10 +78,10 @@ export function _encode_ExtendedCertificateOrCertificate(
                     _TagClass.context,
                     0,
                     () => _encode_ExtendedCertificate,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ExtendedCertificateOrCertificate(

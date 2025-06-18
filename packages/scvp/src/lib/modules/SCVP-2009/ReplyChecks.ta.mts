@@ -60,7 +60,7 @@ export function _encode_ReplyChecks(
   if (!_cached_encoder_for_ReplyChecks) {
     _cached_encoder_for_ReplyChecks = $._encodeSequenceOf<ReplyCheck>(
       () => _encode_ReplyCheck,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_ReplyChecks(value, elGetter);

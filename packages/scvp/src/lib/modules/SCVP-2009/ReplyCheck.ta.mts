@@ -177,14 +177,14 @@ export function _encode_ReplyCheck(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.check, $.BER),
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.check, $.DER),
             /* IF_DEFAULT */ value.status === undefined ||
             $.deepEq(value.status, ReplyCheck._default_value_for_status)
               ? undefined
-              : $._encodeInteger(value.status, $.BER),
+              : $._encodeInteger(value.status, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

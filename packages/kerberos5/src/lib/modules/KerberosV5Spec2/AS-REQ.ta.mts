@@ -64,7 +64,7 @@ export function _encode_AS_REQ(value: AS_REQ, elGetter: $.ASN1Encoder<AS_REQ>) {
       _TagClass.application,
       10,
       () => _encode_KDC_REQ,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_AS_REQ(value, elGetter);

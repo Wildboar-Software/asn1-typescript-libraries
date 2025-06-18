@@ -84,16 +84,16 @@ export function _encode_PKCReference(
           _TagClass.context,
           0,
           () => _encode_Certificate,
-          $.BER
+          $.DER
         ),
         pkcRef: $._encode_implicit(
           _TagClass.context,
           1,
           () => _encode_SCVPCertID,
-          $.BER
+          $.DER
         ),
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_PKCReference(value, elGetter);

@@ -86,16 +86,16 @@ export function _encode_ACReference(
           _TagClass.context,
           2,
           () => _encode_AttributeCertificate,
-          $.BER
+          $.DER
         ),
         acRef: $._encode_implicit(
           _TagClass.context,
           3,
           () => _encode_SCVPCertID,
-          $.BER
+          $.DER
         ),
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_ACReference(value, elGetter);

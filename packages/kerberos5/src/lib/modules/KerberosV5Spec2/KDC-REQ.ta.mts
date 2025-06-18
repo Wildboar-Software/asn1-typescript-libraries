@@ -234,32 +234,32 @@ export function _encode_KDC_REQ(
               _TagClass.context,
               1,
               () => $._encodeInteger,
-              $.BER
-            )(value.pvno, $.BER),
+              $.DER
+            )(value.pvno, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               2,
               () => $._encodeInteger,
-              $.BER
-            )(value.msg_type, $.BER),
+              $.DER
+            )(value.msg_type, $.DER),
             /* IF_ABSENT  */ value.padata === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   3,
                   () =>
-                    $._encodeSequenceOf<PA_DATA>(() => _encode_PA_DATA, $.BER),
-                  $.BER
-                )(value.padata, $.BER),
+                    $._encodeSequenceOf<PA_DATA>(() => _encode_PA_DATA, $.DER),
+                  $.DER
+                )(value.padata, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               4,
               () => _encode_KDC_REQ_BODY,
-              $.BER
-            )(value.req_body, $.BER),
+              $.DER
+            )(value.req_body, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

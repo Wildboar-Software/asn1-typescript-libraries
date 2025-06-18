@@ -15,9 +15,9 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
 /**
  * @summary ECDSA_Sig_Value_y
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECDSA-Sig-Value-y ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
  * ```
@@ -58,7 +58,7 @@ function _encode_ECDSA_Sig_Value_y (value: ECDSA_Sig_Value_y, elGetter: $.ASN1En
     if (!_cached_encoder_for_ECDSA_Sig_Value_y) { _cached_encoder_for_ECDSA_Sig_Value_y = $._encode_choice<ECDSA_Sig_Value_y>({
     "b": $._encodeBoolean,
     "f": _encode_FieldElement,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_ECDSA_Sig_Value_y(value, elGetter);
 }
 

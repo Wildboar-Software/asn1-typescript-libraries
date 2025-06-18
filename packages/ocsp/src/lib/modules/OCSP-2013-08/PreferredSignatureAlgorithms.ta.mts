@@ -56,7 +56,7 @@ export function _encode_PreferredSignatureAlgorithms(
     if (!_cached_encoder_for_PreferredSignatureAlgorithms) {
         _cached_encoder_for_PreferredSignatureAlgorithms = $._encodeSequenceOf<PreferredSignatureAlgorithm>(
             () => _encode_PreferredSignatureAlgorithm,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PreferredSignatureAlgorithms(value, elGetter);

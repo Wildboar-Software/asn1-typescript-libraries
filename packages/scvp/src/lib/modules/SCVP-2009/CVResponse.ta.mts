@@ -444,15 +444,15 @@ export function _encode_CVResponse(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeInteger(value.cvResponseVersion, $.BER),
+            /* REQUIRED   */ $._encodeInteger(value.cvResponseVersion, $.DER),
             /* REQUIRED   */ $._encodeInteger(
               value.serverConfigurationID,
-              $.BER
+              $.DER
             ),
-            /* REQUIRED   */ $._encodeGeneralizedTime(value.producedAt, $.BER),
+            /* REQUIRED   */ $._encodeGeneralizedTime(value.producedAt, $.DER),
             /* REQUIRED   */ _encode_ResponseStatus(
               value.responseStatus,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.respValidationPolicy === undefined
               ? undefined
@@ -460,75 +460,75 @@ export function _encode_CVResponse(
                   _TagClass.context,
                   0,
                   () => _encode_RespValidationPolicy,
-                  $.BER
-                )(value.respValidationPolicy, $.BER),
+                  $.DER
+                )(value.respValidationPolicy, $.DER),
             /* IF_ABSENT  */ value.requestRef === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_RequestReference,
-                  $.BER
-                )(value.requestRef, $.BER),
+                  $.DER
+                )(value.requestRef, $.DER),
             /* IF_ABSENT  */ value.requestorRef === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   2,
                   () => _encode_GeneralNames,
-                  $.BER
-                )(value.requestorRef, $.BER),
+                  $.DER
+                )(value.requestorRef, $.DER),
             /* IF_ABSENT  */ value.requestorName === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   3,
                   () => _encode_GeneralNames,
-                  $.BER
-                )(value.requestorName, $.BER),
+                  $.DER
+                )(value.requestorName, $.DER),
             /* IF_ABSENT  */ value.replyObjects === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   4,
                   () => _encode_ReplyObjects,
-                  $.BER
-                )(value.replyObjects, $.BER),
+                  $.DER
+                )(value.replyObjects, $.DER),
             /* IF_ABSENT  */ value.respNonce === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   5,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.respNonce, $.BER),
+                  $.DER
+                )(value.respNonce, $.DER),
             /* IF_ABSENT  */ value.serverContextInfo === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   6,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.serverContextInfo, $.BER),
+                  $.DER
+                )(value.serverContextInfo, $.DER),
             /* IF_ABSENT  */ value.cvResponseExtensions === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   7,
                   () => _encode_Extensions,
-                  $.BER
-                )(value.cvResponseExtensions, $.BER),
+                  $.DER
+                )(value.cvResponseExtensions, $.DER),
             /* IF_ABSENT  */ value.requestorText === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   8,
                   () => $._encodeUTF8String,
-                  $.BER
-                )(value.requestorText, $.BER),
+                  $.DER
+                )(value.requestorText, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

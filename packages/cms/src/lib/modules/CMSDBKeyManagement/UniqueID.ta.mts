@@ -169,14 +169,14 @@ export function _encode_UniqueID(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.name,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.type_ === undefined
                             ? undefined
-                            : $._encodeAny(value.type_, $.BER),
+                            : $._encodeAny(value.type_, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

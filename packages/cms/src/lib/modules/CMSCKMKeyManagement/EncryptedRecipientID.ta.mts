@@ -204,7 +204,7 @@ export function _encode_EncryptedRecipientID(
                             ? undefined
                             : _encode_ContentEncryptionAlgorithmIdentifier(
                                   value.algorithm,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.keyID === undefined
                             ? undefined
@@ -212,15 +212,15 @@ export function _encode_EncryptedRecipientID(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.keyID, $.BER),
+                                  $.DER
+                              )(value.keyID, $.DER),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.ciphertext,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

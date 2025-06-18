@@ -15,9 +15,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary SubjectPublicKeyInfo
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SubjectPublicKeyInfo ::= SEQUENCE {
  *     algorithm           AlgorithmIdentifier {{ECPKAlgorithms}}
@@ -25,7 +25,7 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  *     subjectPublicKey    BIT STRING
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -48,9 +48,9 @@ class SubjectPublicKeyInfo {
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SubjectPublicKeyInfo`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -67,9 +67,9 @@ class SubjectPublicKeyInfo {
 /**
  * @summary The Leading Root Component Types of SubjectPublicKeyInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -81,27 +81,27 @@ const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.ComponentSpec
 /**
  * @summary The Trailing Root Component Types of SubjectPublicKeyInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of SubjectPublicKeyInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_SubjectPublicKeyInfo: $.ASN1Decoder<SubjectPublicKeyInfo> | null = null;
@@ -148,10 +148,10 @@ function _encode_SubjectPublicKeyInfo (value: SubjectPublicKeyInfo, elGetter: $.
     if (!_cached_encoder_for_SubjectPublicKeyInfo) { _cached_encoder_for_SubjectPublicKeyInfo = function (value: SubjectPublicKeyInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.algorithm, $.BER),
-            /* REQUIRED   */ $._encodeBitString(value.subjectPublicKey, $.BER)
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.algorithm, $.DER),
+            /* REQUIRED   */ $._encodeBitString(value.subjectPublicKey, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SubjectPublicKeyInfo(value, elGetter);
 }

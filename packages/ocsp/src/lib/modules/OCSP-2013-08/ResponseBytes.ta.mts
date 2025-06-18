@@ -165,15 +165,15 @@ export function _encode_ResponseBytes(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.responseType,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.response,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -68,7 +68,7 @@ export function _encode_HostAddresses(
   if (!_cached_encoder_for_HostAddresses) {
     _cached_encoder_for_HostAddresses = $._encodeSequenceOf<HostAddress>(
       () => _encode_HostAddress,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_HostAddresses(value, elGetter);

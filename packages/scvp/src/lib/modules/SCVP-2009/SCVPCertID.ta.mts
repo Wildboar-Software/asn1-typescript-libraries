@@ -218,10 +218,10 @@ export function _encode_SCVPCertID(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeOctetString(value.certHash, $.BER),
+            /* REQUIRED   */ $._encodeOctetString(value.certHash, $.DER),
             /* REQUIRED   */ _encode_SCVPIssuerSerial(
               value.issuerSerial,
-              $.BER
+              $.DER
             ),
             /* IF_DEFAULT */ value.hashAlgorithm === undefined ||
             $.deepEq(
@@ -229,10 +229,10 @@ export function _encode_SCVPCertID(
               SCVPCertID._default_value_for_hashAlgorithm
             )
               ? undefined
-              : _encode_HashAlgorithm(value.hashAlgorithm, $.BER),
+              : _encode_HashAlgorithm(value.hashAlgorithm, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

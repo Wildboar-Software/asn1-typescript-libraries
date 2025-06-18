@@ -393,83 +393,83 @@ export function _encode_CertTemplate(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Version,
-                                  $.BER
-                              )(value.version, $.BER),
+                                  $.DER
+                              )(value.version, $.DER),
                         /* IF_ABSENT  */ value.serialNumber === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.serialNumber, $.BER),
+                                  $.DER
+                              )(value.serialNumber, $.DER),
                         /* IF_ABSENT  */ value.signingAlg === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   2,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.signingAlg, $.BER),
+                                  $.DER
+                              )(value.signingAlg, $.DER),
                         /* IF_ABSENT  */ value.issuer === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   3,
                                   () => _encode_Name,
-                                  $.BER
-                              )(value.issuer, $.BER),
+                                  $.DER
+                              )(value.issuer, $.DER),
                         /* IF_ABSENT  */ value.validity === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   4,
                                   () => _encode_OptionalValidity,
-                                  $.BER
-                              )(value.validity, $.BER),
+                                  $.DER
+                              )(value.validity, $.DER),
                         /* IF_ABSENT  */ value.subject === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   5,
                                   () => _encode_Name,
-                                  $.BER
-                              )(value.subject, $.BER),
+                                  $.DER
+                              )(value.subject, $.DER),
                         /* IF_ABSENT  */ value.publicKey === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   6,
                                   () => _encode_SubjectPublicKeyInfo,
-                                  $.BER
-                              )(value.publicKey, $.BER),
+                                  $.DER
+                              )(value.publicKey, $.DER),
                         /* IF_ABSENT  */ value.issuerUID === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   7,
                                   () => _encode_UniqueIdentifier,
-                                  $.BER
-                              )(value.issuerUID, $.BER),
+                                  $.DER
+                              )(value.issuerUID, $.DER),
                         /* IF_ABSENT  */ value.subjectUID === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   8,
                                   () => _encode_UniqueIdentifier,
-                                  $.BER
-                              )(value.subjectUID, $.BER),
+                                  $.DER
+                              )(value.subjectUID, $.DER),
                         /* IF_ABSENT  */ value.extensions === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   9,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.extensions, $.BER),
+                                  $.DER
+                              )(value.extensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

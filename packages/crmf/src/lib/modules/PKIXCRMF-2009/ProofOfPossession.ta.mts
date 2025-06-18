@@ -98,28 +98,28 @@ export function _encode_ProofOfPossession(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 signature: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_POPOSigningKey,
-                    $.BER
+                    $.DER
                 ),
                 keyEncipherment: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_POPOPrivKey,
-                    $.BER
+                    $.DER
                 ),
                 keyAgreement: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_POPOPrivKey,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ProofOfPossession(value, elGetter);

@@ -181,14 +181,14 @@ export function _encode_RevInfoWantBack(
           .concat([
             /* REQUIRED   */ _encode_RevocationInfos(
               value.revocationInfo,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.extraCerts === undefined
               ? undefined
-              : _encode_CertBundle(value.extraCerts, $.BER),
+              : _encode_CertBundle(value.extraCerts, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

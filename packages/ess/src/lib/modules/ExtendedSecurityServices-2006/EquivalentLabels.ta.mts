@@ -56,7 +56,7 @@ export function _encode_EquivalentLabels(
     if (!_cached_encoder_for_EquivalentLabels) {
         _cached_encoder_for_EquivalentLabels = $._encodeSequenceOf<ESSSecurityLabel>(
             () => _encode_ESSSecurityLabel,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EquivalentLabels(value, elGetter);

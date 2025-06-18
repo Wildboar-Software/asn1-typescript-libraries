@@ -174,17 +174,17 @@ export function _encode_AuthorizationData_Item(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.ad_type, $.BER),
+              $.DER
+            )(value.ad_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeOctetString,
-              $.BER
-            )(value.ad_data, $.BER),
+              $.DER
+            )(value.ad_data, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

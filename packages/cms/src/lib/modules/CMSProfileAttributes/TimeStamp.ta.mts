@@ -68,7 +68,7 @@ export function _encode_TimeStamp(
                 timeStampToken: _encode_TimeStampToken,
                 localTimeStamp: $._encodeGeneralizedTime,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TimeStamp(value, elGetter);

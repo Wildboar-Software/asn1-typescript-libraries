@@ -263,33 +263,33 @@ export function _encode_KeyAgreeRecipientInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             0,
                             () => _encode_OriginatorIdentifierOrKey,
-                            $.BER
-                        )(value.originator, $.BER),
+                            $.DER
+                        )(value.originator, $.DER),
                         /* IF_ABSENT  */ value.ukm === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_UserKeyingMaterial,
-                                  $.BER
-                              )(value.ukm, $.BER),
+                                  $.DER
+                              )(value.ukm, $.DER),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.keyEncryptionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_RecipientEncryptedKeys(
                             value.recipientEncryptedKeys,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -82,10 +82,10 @@ export function _encode_RevocationInfoChoice(
                     _TagClass.context,
                     1,
                     () => _encode_OtherRevocationInfoFormat,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RevocationInfoChoice(value, elGetter);

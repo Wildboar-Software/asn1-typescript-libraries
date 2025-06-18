@@ -180,17 +180,17 @@ export function _encode_EncKeyWithID(
                     .concat([
                         /* REQUIRED   */ _encode_PrivateKeyInfo(
                             value.privateKey,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.identifier === undefined
                             ? undefined
                             : _encode_EncKeyWithID_identifier(
                                   value.identifier,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

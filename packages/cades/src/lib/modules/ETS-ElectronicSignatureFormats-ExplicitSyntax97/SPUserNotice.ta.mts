@@ -16,15 +16,15 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
 /**
  * @summary SPUserNotice
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SPUserNotice ::= SEQUENCE {
  *     noticeRef       NoticeReference OPTIONAL,
  *     explicitText    DisplayText OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -47,9 +47,9 @@ class SPUserNotice {
     /**
      * @summary Restructures an object into a SPUserNotice
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SPUserNotice`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -66,9 +66,9 @@ class SPUserNotice {
 /**
  * @summary The Leading Root Component Types of SPUserNotice
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -80,27 +80,27 @@ const _root_component_type_list_1_spec_for_SPUserNotice: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of SPUserNotice
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SPUserNotice: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of SPUserNotice
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SPUserNotice: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_SPUserNotice: $.ASN1Decoder<SPUserNotice> | null = null;
@@ -152,10 +152,10 @@ function _encode_SPUserNotice (value: SPUserNotice, elGetter: $.ASN1Encoder<SPUs
     if (!_cached_encoder_for_SPUserNotice) { _cached_encoder_for_SPUserNotice = function (value: SPUserNotice): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.noticeRef === undefined) ? undefined : _encode_NoticeReference(value.noticeRef, $.BER)),
-            /* IF_ABSENT  */ ((value.explicitText === undefined) ? undefined : _encode_DisplayText(value.explicitText, $.BER))
+            /* IF_ABSENT  */ ((value.noticeRef === undefined) ? undefined : _encode_NoticeReference(value.noticeRef, $.DER)),
+            /* IF_ABSENT  */ ((value.explicitText === undefined) ? undefined : _encode_DisplayText(value.explicitText, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SPUserNotice(value, elGetter);
 }

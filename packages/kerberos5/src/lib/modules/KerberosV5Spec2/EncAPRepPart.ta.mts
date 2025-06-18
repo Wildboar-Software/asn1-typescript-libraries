@@ -252,36 +252,36 @@ export function _encode_EncAPRepPart(
                   _TagClass.context,
                   0,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.ctime, $.BER),
+                  $.DER
+                )(value.ctime, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Microseconds,
-                  $.BER
-                )(value.cusec, $.BER),
+                  $.DER
+                )(value.cusec, $.DER),
                 /* IF_ABSENT  */ value.subkey === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       2,
                       () => _encode_EncryptionKey,
-                      $.BER
-                    )(value.subkey, $.BER),
+                      $.DER
+                    )(value.subkey, $.DER),
                 /* IF_ABSENT  */ value.seq_number === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       3,
                       () => _encode_UInt32,
-                      $.BER
-                    )(value.seq_number, $.BER),
+                      $.DER
+                    )(value.seq_number, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_EncAPRepPart(value, elGetter);

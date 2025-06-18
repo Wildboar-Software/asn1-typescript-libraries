@@ -60,7 +60,7 @@ export function _encode_TrustAnchors(
   if (!_cached_encoder_for_TrustAnchors) {
     _cached_encoder_for_TrustAnchors = $._encodeSequenceOf<PKCReference>(
       () => _encode_PKCReference,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_TrustAnchors(value, elGetter);

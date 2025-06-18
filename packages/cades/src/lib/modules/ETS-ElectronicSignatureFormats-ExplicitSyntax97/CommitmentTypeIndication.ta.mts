@@ -16,15 +16,15 @@ import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_Commi
 /**
  * @summary CommitmentTypeIndication
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CommitmentTypeIndication ::= SEQUENCE {
  *     commitmentTypeId            CommitmentTypeIdentifier,
  *     commitmentTypeQualifier     SEQUENCE SIZE (1..MAX) OF CommitmentTypeQualifier OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -47,9 +47,9 @@ class CommitmentTypeIndication {
     /**
      * @summary Restructures an object into a CommitmentTypeIndication
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CommitmentTypeIndication`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -66,9 +66,9 @@ class CommitmentTypeIndication {
 /**
  * @summary The Leading Root Component Types of CommitmentTypeIndication
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -80,27 +80,27 @@ const _root_component_type_list_1_spec_for_CommitmentTypeIndication: $.Component
 /**
  * @summary The Trailing Root Component Types of CommitmentTypeIndication
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_CommitmentTypeIndication: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of CommitmentTypeIndication
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_CommitmentTypeIndication: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_CommitmentTypeIndication: $.ASN1Decoder<CommitmentTypeIndication> | null = null;
@@ -152,10 +152,10 @@ function _encode_CommitmentTypeIndication (value: CommitmentTypeIndication, elGe
     if (!_cached_encoder_for_CommitmentTypeIndication) { _cached_encoder_for_CommitmentTypeIndication = function (value: CommitmentTypeIndication): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_CommitmentTypeIdentifier(value.commitmentTypeId, $.BER),
-            /* IF_ABSENT  */ ((value.commitmentTypeQualifier === undefined) ? undefined : $._encodeSequenceOf<CommitmentTypeQualifier>(() => _encode_CommitmentTypeQualifier, $.BER)(value.commitmentTypeQualifier, $.BER))
+            /* REQUIRED   */ _encode_CommitmentTypeIdentifier(value.commitmentTypeId, $.DER),
+            /* IF_ABSENT  */ ((value.commitmentTypeQualifier === undefined) ? undefined : $._encodeSequenceOf<CommitmentTypeQualifier>(() => _encode_CommitmentTypeQualifier, $.DER)(value.commitmentTypeQualifier, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CommitmentTypeIndication(value, elGetter);
 }

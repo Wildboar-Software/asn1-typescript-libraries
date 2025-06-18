@@ -56,7 +56,7 @@ export function _encode_SignerInfos(
     if (!_cached_encoder_for_SignerInfos) {
         _cached_encoder_for_SignerInfos = $._encodeSetOf<SignerInfo>(
             () => _encode_SignerInfo,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SignerInfos(value, elGetter);

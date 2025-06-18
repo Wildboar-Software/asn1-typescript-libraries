@@ -156,12 +156,12 @@ export function _encode_OtherRecipientInfo(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.oriType,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.oriValue, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.oriValue, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

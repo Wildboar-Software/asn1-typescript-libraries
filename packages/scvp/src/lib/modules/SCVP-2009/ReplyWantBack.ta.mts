@@ -158,11 +158,11 @@ export function _encode_ReplyWantBack(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.wb, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.value, $.BER),
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.wb, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.value, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

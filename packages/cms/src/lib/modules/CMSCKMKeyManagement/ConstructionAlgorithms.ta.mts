@@ -177,15 +177,15 @@ export function _encode_ConstructionAlgorithms(
                     .concat([
                         /* REQUIRED   */ _encode_CombinerAlgorithmIdentifier(
                             value.combiner,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_KeyEncryptionAlgorithmIdentifier(
                             value.keyEncryptionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

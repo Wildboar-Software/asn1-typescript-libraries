@@ -85,10 +85,10 @@ export function _encode_RecipientIdentifier(
                     _TagClass.context,
                     0,
                     () => _encode_SubjectKeyIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RecipientIdentifier(value, elGetter);

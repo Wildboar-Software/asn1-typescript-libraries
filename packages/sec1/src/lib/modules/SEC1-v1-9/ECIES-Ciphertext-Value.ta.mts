@@ -15,9 +15,9 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
 /**
  * @summary ECIES_Ciphertext_Value
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECIES-Ciphertext-Value ::= SEQUENCE {
  *     ephemeralPublicKey ECPoint,
@@ -25,7 +25,7 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  *     macTag OCTET STRING
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -54,9 +54,9 @@ class ECIES_Ciphertext_Value {
     /**
      * @summary Restructures an object into a ECIES_Ciphertext_Value
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ECIES_Ciphertext_Value`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -73,9 +73,9 @@ class ECIES_Ciphertext_Value {
 /**
  * @summary The Leading Root Component Types of ECIES_Ciphertext_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -88,27 +88,27 @@ const _root_component_type_list_1_spec_for_ECIES_Ciphertext_Value: $.ComponentSp
 /**
  * @summary The Trailing Root Component Types of ECIES_Ciphertext_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ECIES_Ciphertext_Value: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ECIES_Ciphertext_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ECIES_Ciphertext_Value: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ECIES_Ciphertext_Value: $.ASN1Decoder<ECIES_Ciphertext_Value> | null = null;
@@ -159,11 +159,11 @@ function _encode_ECIES_Ciphertext_Value (value: ECIES_Ciphertext_Value, elGetter
     if (!_cached_encoder_for_ECIES_Ciphertext_Value) { _cached_encoder_for_ECIES_Ciphertext_Value = function (value: ECIES_Ciphertext_Value): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ECPoint(value.ephemeralPublicKey, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.symmetricCiphertext, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.macTag, $.BER)
+            /* REQUIRED   */ _encode_ECPoint(value.ephemeralPublicKey, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.symmetricCiphertext, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.macTag, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ECIES_Ciphertext_Value(value, elGetter);
 }

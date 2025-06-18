@@ -285,36 +285,36 @@ export function _encode_TimeStampReq(
                     .concat([
                         /* REQUIRED   */ _encode_TimeStampReq_version(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_MessageImprint(
                             value.messageImprint,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.reqPolicy === undefined
                             ? undefined
-                            : _encode_TSAPolicyId(value.reqPolicy, $.BER),
+                            : _encode_TSAPolicyId(value.reqPolicy, $.DER),
                         /* IF_ABSENT  */ value.nonce === undefined
                             ? undefined
-                            : $._encodeBigInt(value.nonce, $.BER),
+                            : $._encodeBigInt(value.nonce, $.DER),
                         /* IF_DEFAULT */ value.certReq === undefined ||
                         $.deepEq(
                             value.certReq,
                             TimeStampReq._default_value_for_certReq
                         )
                             ? undefined
-                            : $._encodeBoolean(value.certReq, $.BER),
+                            : $._encodeBoolean(value.certReq, $.DER),
                         /* IF_ABSENT  */ value.extensions === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.extensions, $.BER),
+                                  $.DER
+                              )(value.extensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

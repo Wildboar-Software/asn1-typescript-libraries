@@ -51,7 +51,7 @@ export function _encode_ECCAlgorithms(
     if (!_cached_encoder_for_ECCAlgorithms) {
         _cached_encoder_for_ECCAlgorithms = $._encodeSequenceOf<ECCAlgorithm>(
             () => _encode_ECCAlgorithm,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ECCAlgorithms(value, elGetter);

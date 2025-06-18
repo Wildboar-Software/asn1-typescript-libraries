@@ -175,17 +175,17 @@ export function _encode_HostAddress(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.addr_type, $.BER),
+              $.DER
+            )(value.addr_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeOctetString,
-              $.BER
-            )(value.address, $.BER),
+              $.DER
+            )(value.address, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

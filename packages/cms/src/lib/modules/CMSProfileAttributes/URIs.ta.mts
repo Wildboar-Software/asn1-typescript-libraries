@@ -47,7 +47,7 @@ export function _encode_URIs(value: URIs, elGetter: $.ASN1Encoder<URIs>) {
     if (!_cached_encoder_for_URIs) {
         _cached_encoder_for_URIs = $._encodeSequenceOf<URI>(
             () => _encode_URI,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_URIs(value, elGetter);

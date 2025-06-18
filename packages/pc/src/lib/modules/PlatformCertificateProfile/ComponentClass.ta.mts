@@ -15,15 +15,15 @@ import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_Compone
 /**
  * @summary ComponentClass
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ComponentClass ::= SEQUENCE {
  *     componentClassRegistry      ComponentClassRegistry,
  *     componentClassValue         OCTET STRING (SIZE(4)) }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -46,9 +46,9 @@ class ComponentClass {
     /**
      * @summary Restructures an object into a ComponentClass
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ComponentClass`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -65,9 +65,9 @@ class ComponentClass {
 /**
  * @summary The Leading Root Component Types of ComponentClass
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -79,27 +79,27 @@ const _root_component_type_list_1_spec_for_ComponentClass: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of ComponentClass
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ComponentClass: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ComponentClass
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ComponentClass: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ComponentClass: $.ASN1Decoder<ComponentClass> | null = null;
@@ -146,10 +146,10 @@ function _encode_ComponentClass (value: ComponentClass, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ComponentClass) { _cached_encoder_for_ComponentClass = function (value: ComponentClass): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ComponentClassRegistry(value.componentClassRegistry, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.componentClassValue, $.BER)
+            /* REQUIRED   */ _encode_ComponentClassRegistry(value.componentClassRegistry, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.componentClassValue, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ComponentClass(value, elGetter);
 }

@@ -213,21 +213,21 @@ export function _encode_MasterKeyEncryptedHMACkey(
                             ? undefined
                             : _encode_MasterKeyAlgorithmIdentifier(
                                   value.masterKeyAID,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.hmacKeyAID === undefined
                             ? undefined
                             : _encode_MessageAuthenticationCodeAlgorithm(
                                   value.hmacKeyAID,
-                                  $.BER
+                                  $.DER
                               ),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

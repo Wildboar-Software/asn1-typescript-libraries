@@ -251,38 +251,38 @@ export function _encode_AP_REQ(value: AP_REQ, elGetter: $.ASN1Encoder<AP_REQ>) {
                   _TagClass.context,
                   0,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.pvno, $.BER),
+                  $.DER
+                )(value.pvno, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.msg_type, $.BER),
+                  $.DER
+                )(value.msg_type, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_APOptions,
-                  $.BER
-                )(value.ap_options, $.BER),
+                  $.DER
+                )(value.ap_options, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_Ticket,
-                  $.BER
-                )(value.ticket, $.BER),
+                  $.DER
+                )(value.ticket, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_EncryptedData,
-                  $.BER
-                )(value.authenticator, $.BER),
+                  $.DER
+                )(value.authenticator, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_AP_REQ(value, elGetter);

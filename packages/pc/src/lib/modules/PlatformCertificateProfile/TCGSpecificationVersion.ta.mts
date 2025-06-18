@@ -17,16 +17,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary TCGSpecificationVersion
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TCGSpecificationVersion ::= SEQUENCE {
  *     majorVersion    INTEGER,
  *     minorVersion    INTEGER,
  *     revision        INTEGER }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -55,9 +55,9 @@ class TCGSpecificationVersion {
     /**
      * @summary Restructures an object into a TCGSpecificationVersion
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `TCGSpecificationVersion`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -74,9 +74,9 @@ class TCGSpecificationVersion {
 /**
  * @summary The Leading Root Component Types of TCGSpecificationVersion
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -89,27 +89,27 @@ const _root_component_type_list_1_spec_for_TCGSpecificationVersion: $.ComponentS
 /**
  * @summary The Trailing Root Component Types of TCGSpecificationVersion
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_TCGSpecificationVersion: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of TCGSpecificationVersion
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_TCGSpecificationVersion: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_TCGSpecificationVersion: $.ASN1Decoder<TCGSpecificationVersion> | null = null;
@@ -160,11 +160,11 @@ function _encode_TCGSpecificationVersion (value: TCGSpecificationVersion, elGett
     if (!_cached_encoder_for_TCGSpecificationVersion) { _cached_encoder_for_TCGSpecificationVersion = function (value: TCGSpecificationVersion): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.majorVersion, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.minorVersion, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.revision, $.BER)
+            /* REQUIRED   */ $._encodeInteger(value.majorVersion, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.minorVersion, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.revision, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_TCGSpecificationVersion(value, elGetter);
 }

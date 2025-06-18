@@ -240,25 +240,25 @@ export function _encode_SignatureInformation(
                             ? undefined
                             : _encode_SignerIdentifier(
                                   value.signerIdentifier,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.signatureAlgorithm === undefined
                             ? undefined
                             : _encode_SignatureAlgorithmIdentifier(
                                   value.signatureAlgorithm,
-                                  $.BER
+                                  $.DER
                               ),
                         /* REQUIRED   */ _encode_ToBeSigned(
                             value.toBeSigned,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SignatureValue(
                             value.signatureValue,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

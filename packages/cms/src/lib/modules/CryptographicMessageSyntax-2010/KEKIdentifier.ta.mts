@@ -198,17 +198,17 @@ export function _encode_KEKIdentifier(
                     .concat([
                         /* REQUIRED   */ $._encodeOctetString(
                             value.keyIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.date === undefined
                             ? undefined
-                            : $._encodeGeneralizedTime(value.date, $.BER),
+                            : $._encodeGeneralizedTime(value.date, $.DER),
                         /* IF_ABSENT  */ value.other === undefined
                             ? undefined
-                            : _encode_OtherKeyAttribute(value.other, $.BER),
+                            : _encode_OtherKeyAttribute(value.other, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

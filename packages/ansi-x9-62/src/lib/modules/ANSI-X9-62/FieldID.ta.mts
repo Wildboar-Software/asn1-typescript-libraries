@@ -147,12 +147,12 @@ export function _encode_FieldID(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.fieldType,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.parameters, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.parameters, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -279,7 +279,7 @@ export function _encode_EnvelopedData(
                         [
                             /* REQUIRED   */ _encode_CMSVersion(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.originatorInfo === undefined
                                 ? undefined
@@ -287,15 +287,15 @@ export function _encode_EnvelopedData(
                                       _TagClass.context,
                                       0,
                                       () => _encode_OriginatorInfo,
-                                      $.BER
-                                  )(value.originatorInfo, $.BER),
+                                      $.DER
+                                  )(value.originatorInfo, $.DER),
                             /* REQUIRED   */ _encode_RecipientInfos(
                                 value.recipientInfos,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_EncryptedContentInfo(
                                 value.encryptedContentInfo,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         [
@@ -305,15 +305,15 @@ export function _encode_EnvelopedData(
                                     _TagClass.context,
                                     1,
                                     () => _encode_Attributes,
-                                    $.BER,
-                                ))(value.unprotectedAttrs, $.BER),
+                                    $.DER,
+                                ))(value.unprotectedAttrs, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

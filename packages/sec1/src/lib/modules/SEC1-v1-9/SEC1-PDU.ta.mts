@@ -18,9 +18,9 @@ import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "
 /**
  * @summary SEC1_PDU
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SEC1-PDU  ::=  CHOICE {
  *     privateKey [0] ECPrivateKey,
@@ -73,12 +73,12 @@ let _cached_encoder_for_SEC1_PDU: $.ASN1Encoder<SEC1_PDU> | null = null;
 export
 function _encode_SEC1_PDU (value: SEC1_PDU, elGetter: $.ASN1Encoder<SEC1_PDU>) {
     if (!_cached_encoder_for_SEC1_PDU) { _cached_encoder_for_SEC1_PDU = $._encode_choice<SEC1_PDU>({
-    "privateKey": $._encode_implicit(_TagClass.context, 0, () => _encode_ECPrivateKey, $.BER),
-    "spki": $._encode_implicit(_TagClass.context, 1, () => _encode_SubjectPublicKeyInfo, $.BER),
-    "ecdsa": $._encode_explicit(_TagClass.context, 2, () => _encode_ECDSA_Signature, $.BER),
-    "ecies": $._encode_implicit(_TagClass.context, 3, () => _encode_ECIES_Ciphertext_Value, $.BER),
-    "sharedinfo": $._encode_implicit(_TagClass.context, 4, () => _encode_ASN1SharedInfo, $.BER),
-}, $.BER); }
+    "privateKey": $._encode_implicit(_TagClass.context, 0, () => _encode_ECPrivateKey, $.DER),
+    "spki": $._encode_implicit(_TagClass.context, 1, () => _encode_SubjectPublicKeyInfo, $.DER),
+    "ecdsa": $._encode_explicit(_TagClass.context, 2, () => _encode_ECDSA_Signature, $.DER),
+    "ecies": $._encode_implicit(_TagClass.context, 3, () => _encode_ECIES_Ciphertext_Value, $.DER),
+    "sharedinfo": $._encode_implicit(_TagClass.context, 4, () => _encode_ASN1SharedInfo, $.DER),
+}, $.DER); }
     return _cached_encoder_for_SEC1_PDU(value, elGetter);
 }
 

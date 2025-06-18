@@ -56,7 +56,7 @@ export function _encode_AuthAttributes(
     if (!_cached_encoder_for_AuthAttributes) {
         _cached_encoder_for_AuthAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AuthAttributes(value, elGetter);

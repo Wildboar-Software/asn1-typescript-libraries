@@ -197,26 +197,26 @@ export function _encode_AP_REP(value: AP_REP, elGetter: $.ASN1Encoder<AP_REP>) {
                   _TagClass.context,
                   0,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.pvno, $.BER),
+                  $.DER
+                )(value.pvno, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.msg_type, $.BER),
+                  $.DER
+                )(value.msg_type, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_EncryptedData,
-                  $.BER
-                )(value.enc_part, $.BER),
+                  $.DER
+                )(value.enc_part, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_AP_REP(value, elGetter);

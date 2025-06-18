@@ -146,10 +146,10 @@ function _encode_AttributeCertificateIdentifier (value: AttributeCertificateIden
     if (!_cached_encoder_for_AttributeCertificateIdentifier) { _cached_encoder_for_AttributeCertificateIdentifier = function (value: AttributeCertificateIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.hashOverSignatureValue, $.BER)
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.hashOverSignatureValue, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_AttributeCertificateIdentifier(value, elGetter);
 }

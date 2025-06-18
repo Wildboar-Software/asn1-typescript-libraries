@@ -308,15 +308,15 @@ export function _encode_SignerInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SignerIdentifier(
                             value.sid,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_DigestAlgorithmIdentifier(
                             value.digestAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.signedAttrs === undefined
                             ? undefined
@@ -324,15 +324,15 @@ export function _encode_SignerInfo(
                                   _TagClass.context,
                                   0,
                                   () => _encode_SignedAttributes,
-                                  $.BER
-                              )(value.signedAttrs, $.BER),
+                                  $.DER
+                              )(value.signedAttrs, $.DER),
                         /* REQUIRED   */ _encode_SignatureAlgorithmIdentifier(
                             value.signatureAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SignatureValue(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.unsignedAttrs === undefined
                             ? undefined
@@ -340,11 +340,11 @@ export function _encode_SignerInfo(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Attributes,
-                                  $.BER
-                              )(value.unsignedAttrs, $.BER),
+                                  $.DER
+                              )(value.unsignedAttrs, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

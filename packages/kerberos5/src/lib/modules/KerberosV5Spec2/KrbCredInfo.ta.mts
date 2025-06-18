@@ -410,91 +410,91 @@ export function _encode_KrbCredInfo(
               _TagClass.context,
               0,
               () => _encode_EncryptionKey,
-              $.BER
-            )(value.key, $.BER),
+              $.DER
+            )(value.key, $.DER),
             /* IF_ABSENT  */ value.prealm === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Realm,
-                  $.BER
-                )(value.prealm, $.BER),
+                  $.DER
+                )(value.prealm, $.DER),
             /* IF_ABSENT  */ value.pname === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.pname, $.BER),
+                  $.DER
+                )(value.pname, $.DER),
             /* IF_ABSENT  */ value.flags === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_TicketFlags,
-                  $.BER
-                )(value.flags, $.BER),
+                  $.DER
+                )(value.flags, $.DER),
             /* IF_ABSENT  */ value.authtime === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.authtime, $.BER),
+                  $.DER
+                )(value.authtime, $.DER),
             /* IF_ABSENT  */ value.starttime === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   5,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.starttime, $.BER),
+                  $.DER
+                )(value.starttime, $.DER),
             /* IF_ABSENT  */ value.endtime === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   6,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.endtime, $.BER),
+                  $.DER
+                )(value.endtime, $.DER),
             /* IF_ABSENT  */ value.renew_till === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   7,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.renew_till, $.BER),
+                  $.DER
+                )(value.renew_till, $.DER),
             /* IF_ABSENT  */ value.srealm === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   8,
                   () => _encode_Realm,
-                  $.BER
-                )(value.srealm, $.BER),
+                  $.DER
+                )(value.srealm, $.DER),
             /* IF_ABSENT  */ value.sname === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   9,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.sname, $.BER),
+                  $.DER
+                )(value.sname, $.DER),
             /* IF_ABSENT  */ value.caddr === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   10,
                   () => _encode_HostAddresses,
-                  $.BER
-                )(value.caddr, $.BER),
+                  $.DER
+                )(value.caddr, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

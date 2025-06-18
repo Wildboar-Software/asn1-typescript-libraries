@@ -15,9 +15,9 @@ import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_Signatu
 /**
  * @summary SignaturePolicyIdentifier
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SignaturePolicyIdentifier  ::=  CHOICE {
  *     signaturePolicyId           SignaturePolicyId,
@@ -62,7 +62,7 @@ function _encode_SignaturePolicyIdentifier (value: SignaturePolicyIdentifier, el
     if (!_cached_encoder_for_SignaturePolicyIdentifier) { _cached_encoder_for_SignaturePolicyIdentifier = $._encode_choice<SignaturePolicyIdentifier>({
     "signaturePolicyId": _encode_SignaturePolicyId,
     "signaturePolicyImplied": _encode_SignaturePolicyImplied,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_SignaturePolicyIdentifier(value, elGetter);
 }
 

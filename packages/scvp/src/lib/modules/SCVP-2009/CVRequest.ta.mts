@@ -394,75 +394,75 @@ export function _encode_CVRequest(
               CVRequest._default_value_for_cvRequestVersion
             )
               ? undefined
-              : $._encodeInteger(value.cvRequestVersion, $.BER),
-            /* REQUIRED   */ _encode_Query(value.query, $.BER),
+              : $._encodeInteger(value.cvRequestVersion, $.DER),
+            /* REQUIRED   */ _encode_Query(value.query, $.DER),
             /* IF_ABSENT  */ value.requestorRef === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   0,
                   () => _encode_GeneralNames,
-                  $.BER
-                )(value.requestorRef, $.BER),
+                  $.DER
+                )(value.requestorRef, $.DER),
             /* IF_ABSENT  */ value.requestNonce === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   1,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.requestNonce, $.BER),
+                  $.DER
+                )(value.requestNonce, $.DER),
             /* IF_ABSENT  */ value.requestorName === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_GeneralName,
-                  $.BER
-                )(value.requestorName, $.BER),
+                  $.DER
+                )(value.requestorName, $.DER),
             /* IF_ABSENT  */ value.responderName === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_GeneralName,
-                  $.BER
-                )(value.responderName, $.BER),
+                  $.DER
+                )(value.responderName, $.DER),
             /* IF_ABSENT  */ value.requestExtensions === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   4,
                   () => _encode_Extensions,
-                  $.BER
-                )(value.requestExtensions, $.BER),
+                  $.DER
+                )(value.requestExtensions, $.DER),
             /* IF_ABSENT  */ value.signatureAlg === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   5,
                   () => _encode_AlgorithmIdentifier,
-                  $.BER
-                )(value.signatureAlg, $.BER),
+                  $.DER
+                )(value.signatureAlg, $.DER),
             /* IF_ABSENT  */ value.hashAlg === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   6,
                   () => $._encodeObjectIdentifier,
-                  $.BER
-                )(value.hashAlg, $.BER),
+                  $.DER
+                )(value.hashAlg, $.DER),
             /* IF_ABSENT  */ value.requestorText === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   7,
                   () => $._encodeUTF8String,
-                  $.BER
-                )(value.requestorText, $.BER),
+                  $.DER
+                )(value.requestorText, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

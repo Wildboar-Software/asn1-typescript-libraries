@@ -317,50 +317,50 @@ export function _encode_KDC_REP(
               _TagClass.context,
               0,
               () => $._encodeInteger,
-              $.BER
-            )(value.pvno, $.BER),
+              $.DER
+            )(value.pvno, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeInteger,
-              $.BER
-            )(value.msg_type, $.BER),
+              $.DER
+            )(value.msg_type, $.DER),
             /* IF_ABSENT  */ value.padata === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   2,
                   () =>
-                    $._encodeSequenceOf<PA_DATA>(() => _encode_PA_DATA, $.BER),
-                  $.BER
-                )(value.padata, $.BER),
+                    $._encodeSequenceOf<PA_DATA>(() => _encode_PA_DATA, $.DER),
+                  $.DER
+                )(value.padata, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               3,
               () => _encode_Realm,
-              $.BER
-            )(value.crealm, $.BER),
+              $.DER
+            )(value.crealm, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               4,
               () => _encode_PrincipalName,
-              $.BER
-            )(value.cname, $.BER),
+              $.DER
+            )(value.cname, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               5,
               () => _encode_Ticket,
-              $.BER
-            )(value.ticket, $.BER),
+              $.DER
+            )(value.ticket, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               6,
               () => _encode_EncryptedData,
-              $.BER
-            )(value.enc_part, $.BER),
+              $.DER
+            )(value.enc_part, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

@@ -172,15 +172,15 @@ export function _encode_ToBeSigned(
                     .concat([
                         /* REQUIRED   */ _encode_SigncryptedPartsManifest(
                             value.signcryptedPartsManifest,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SignedAttributes(
                             value.signedAttributes,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

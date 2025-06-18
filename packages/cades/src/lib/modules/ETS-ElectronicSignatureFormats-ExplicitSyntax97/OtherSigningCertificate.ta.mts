@@ -158,10 +158,10 @@ function _encode_OtherSigningCertificate (value: OtherSigningCertificate, elGett
     if (!_cached_encoder_for_OtherSigningCertificate) { _cached_encoder_for_OtherSigningCertificate = function (value: OtherSigningCertificate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.BER)(value.certs, $.BER),
-            /* IF_ABSENT  */ ((value.policies === undefined) ? undefined : $._encodeSequenceOf<PolicyInformation>(() => _encode_PolicyInformation, $.BER)(value.policies, $.BER))
+            /* REQUIRED   */ $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.DER)(value.certs, $.DER),
+            /* IF_ABSENT  */ ((value.policies === undefined) ? undefined : $._encodeSequenceOf<PolicyInformation>(() => _encode_PolicyInformation, $.DER)(value.policies, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OtherSigningCertificate(value, elGetter);
 }

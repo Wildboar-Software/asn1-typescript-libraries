@@ -393,74 +393,74 @@ export function _encode_Query(value: Query, elGetter: $.ASN1Encoder<Query>) {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ _encode_CertReferences(value.queriedCerts, $.BER),
-            /* REQUIRED   */ _encode_CertChecks(value.checks, $.BER),
+            /* REQUIRED   */ _encode_CertReferences(value.queriedCerts, $.DER),
+            /* REQUIRED   */ _encode_CertChecks(value.checks, $.DER),
             /* IF_ABSENT  */ value.wantBack === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   1,
                   () => _encode_WantBack,
-                  $.BER
-                )(value.wantBack, $.BER),
+                  $.DER
+                )(value.wantBack, $.DER),
             /* REQUIRED   */ _encode_ValidationPolicy(
               value.validationPolicy,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.responseFlags === undefined
               ? undefined
-              : _encode_ResponseFlags(value.responseFlags, $.BER),
+              : _encode_ResponseFlags(value.responseFlags, $.DER),
             /* IF_ABSENT  */ value.serverContextInfo === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   2,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.serverContextInfo, $.BER),
+                  $.DER
+                )(value.serverContextInfo, $.DER),
             /* IF_ABSENT  */ value.validationTime === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   3,
                   () => $._encodeGeneralizedTime,
-                  $.BER
-                )(value.validationTime, $.BER),
+                  $.DER
+                )(value.validationTime, $.DER),
             /* IF_ABSENT  */ value.intermediateCerts === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   4,
                   () => _encode_CertBundle,
-                  $.BER
-                )(value.intermediateCerts, $.BER),
+                  $.DER
+                )(value.intermediateCerts, $.DER),
             /* IF_ABSENT  */ value.revInfos === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   5,
                   () => _encode_RevocationInfos,
-                  $.BER
-                )(value.revInfos, $.BER),
+                  $.DER
+                )(value.revInfos, $.DER),
             /* IF_ABSENT  */ value.producedAt === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   6,
                   () => $._encodeGeneralizedTime,
-                  $.BER
-                )(value.producedAt, $.BER),
+                  $.DER
+                )(value.producedAt, $.DER),
             /* IF_ABSENT  */ value.queryExtensions === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   7,
                   () => _encode_Extensions,
-                  $.BER
-                )(value.queryExtensions, $.BER),
+                  $.DER
+                )(value.queryExtensions, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

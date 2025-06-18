@@ -65,7 +65,7 @@ export function _encode_METHOD_DATA(
   if (!_cached_encoder_for_METHOD_DATA) {
     _cached_encoder_for_METHOD_DATA = $._encodeSequenceOf<PA_DATA>(
       () => _encode_PA_DATA,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_METHOD_DATA(value, elGetter);

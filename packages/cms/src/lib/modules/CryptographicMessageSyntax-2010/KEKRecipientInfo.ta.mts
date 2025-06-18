@@ -227,23 +227,23 @@ export function _encode_KEKRecipientInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_KEKIdentifier(
                             value.kekid,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_KeyEncryptionAlgorithmIdentifier(
                             value.keyEncryptionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_EncryptedKey(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -89,19 +89,19 @@ export function _encode_CertReferences(
           () =>
             $._encodeSequenceOf<PKCReference>(
               () => _encode_PKCReference,
-              $.BER
+              $.DER
             ),
-          $.BER
+          $.DER
         ),
         acRefs: $._encode_implicit(
           _TagClass.context,
           1,
           () =>
-            $._encodeSequenceOf<ACReference>(() => _encode_ACReference, $.BER),
-          $.BER
+            $._encodeSequenceOf<ACReference>(() => _encode_ACReference, $.DER),
+          $.DER
         ),
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_CertReferences(value, elGetter);

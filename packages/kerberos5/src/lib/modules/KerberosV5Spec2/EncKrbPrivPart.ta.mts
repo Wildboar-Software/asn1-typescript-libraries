@@ -302,52 +302,52 @@ export function _encode_EncKrbPrivPart(
                   _TagClass.context,
                   0,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.user_data, $.BER),
+                  $.DER
+                )(value.user_data, $.DER),
                 /* IF_ABSENT  */ value.timestamp === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       1,
                       () => _encode_KerberosTime,
-                      $.BER
-                    )(value.timestamp, $.BER),
+                      $.DER
+                    )(value.timestamp, $.DER),
                 /* IF_ABSENT  */ value.usec === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       2,
                       () => _encode_Microseconds,
-                      $.BER
-                    )(value.usec, $.BER),
+                      $.DER
+                    )(value.usec, $.DER),
                 /* IF_ABSENT  */ value.seq_number === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       3,
                       () => _encode_UInt32,
-                      $.BER
-                    )(value.seq_number, $.BER),
+                      $.DER
+                    )(value.seq_number, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_HostAddress,
-                  $.BER
-                )(value.s_address, $.BER),
+                  $.DER
+                )(value.s_address, $.DER),
                 /* IF_ABSENT  */ value.r_address === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       5,
                       () => _encode_HostAddress,
-                      $.BER
-                    )(value.r_address, $.BER),
+                      $.DER
+                    )(value.r_address, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_EncKrbPrivPart(value, elGetter);

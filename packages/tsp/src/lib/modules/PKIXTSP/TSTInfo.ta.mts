@@ -380,56 +380,56 @@ export function _encode_TSTInfo(
                     .concat([
                         /* REQUIRED   */ _encode_TSTInfo_version(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_TSAPolicyId(
                             value.policy,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_MessageImprint(
                             value.messageImprint,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBigInt(
                             value.serialNumber,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeGeneralizedTime(
                             value.genTime,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.accuracy === undefined
                             ? undefined
-                            : _encode_Accuracy(value.accuracy, $.BER),
+                            : _encode_Accuracy(value.accuracy, $.DER),
                         /* IF_DEFAULT */ value.ordering === undefined ||
                         $.deepEq(
                             value.ordering,
                             TSTInfo._default_value_for_ordering
                         )
                             ? undefined
-                            : $._encodeBoolean(value.ordering, $.BER),
+                            : $._encodeBoolean(value.ordering, $.DER),
                         /* IF_ABSENT  */ value.nonce === undefined
                             ? undefined
-                            : $._encodeBigInt(value.nonce, $.BER),
+                            : $._encodeBigInt(value.nonce, $.DER),
                         /* IF_ABSENT  */ value.tsa === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   0,
                                   () => _encode_GeneralName,
-                                  $.BER
-                              )(value.tsa, $.BER),
+                                  $.DER
+                              )(value.tsa, $.DER),
                         /* IF_ABSENT  */ value.extensions === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.extensions, $.BER),
+                                  $.DER
+                              )(value.extensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

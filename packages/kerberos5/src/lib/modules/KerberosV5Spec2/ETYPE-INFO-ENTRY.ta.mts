@@ -186,19 +186,19 @@ export function _encode_ETYPE_INFO_ENTRY(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.etype, $.BER),
+              $.DER
+            )(value.etype, $.DER),
             /* IF_ABSENT  */ value.salt === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.salt, $.BER),
+                  $.DER
+                )(value.salt, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

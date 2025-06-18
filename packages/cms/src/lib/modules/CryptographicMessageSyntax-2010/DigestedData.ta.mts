@@ -234,19 +234,19 @@ export function _encode_DigestedData(
                         [
                             /* REQUIRED   */ _encode_CMSVersion(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DigestAlgorithmIdentifier(
                                 value.digestAlgorithm,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_EncapsulatedContentInfo(
                                 value.encapContentInfo,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_Digest(
                                 value.digest,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -254,7 +254,7 @@ export function _encode_DigestedData(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

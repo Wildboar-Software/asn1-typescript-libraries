@@ -60,7 +60,7 @@ export function _encode_RevocationInfos(
   if (!_cached_encoder_for_RevocationInfos) {
     _cached_encoder_for_RevocationInfos = $._encodeSequenceOf<RevocationInfo>(
       () => _encode_RevocationInfo,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_RevocationInfos(value, elGetter);

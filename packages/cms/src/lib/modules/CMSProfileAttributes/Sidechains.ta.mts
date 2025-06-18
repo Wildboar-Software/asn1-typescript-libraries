@@ -56,7 +56,7 @@ export function _encode_Sidechains(
     if (!_cached_encoder_for_Sidechains) {
         _cached_encoder_for_Sidechains = $._encodeSequenceOf<Sidechain>(
             () => _encode_Sidechain,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Sidechains(value, elGetter);

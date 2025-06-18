@@ -53,7 +53,7 @@ let _cached_encoder_for_CertificateValues: $.ASN1Encoder<CertificateValues> | nu
  */
 export
 function _encode_CertificateValues (value: CertificateValues, elGetter: $.ASN1Encoder<CertificateValues>) {
-    if (!_cached_encoder_for_CertificateValues) { _cached_encoder_for_CertificateValues = $._encodeSequenceOf<Certificate>(() => _encode_Certificate, $.BER); }
+    if (!_cached_encoder_for_CertificateValues) { _cached_encoder_for_CertificateValues = $._encodeSequenceOf<Certificate>(() => _encode_Certificate, $.DER); }
     return _cached_encoder_for_CertificateValues(value, elGetter);
 }
 

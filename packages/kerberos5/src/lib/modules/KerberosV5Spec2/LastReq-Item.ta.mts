@@ -176,17 +176,17 @@ export function _encode_LastReq_Item(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.lr_type, $.BER),
+              $.DER
+            )(value.lr_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => _encode_KerberosTime,
-              $.BER
-            )(value.lr_value, $.BER),
+              $.DER
+            )(value.lr_value, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

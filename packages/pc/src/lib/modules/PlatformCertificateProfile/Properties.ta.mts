@@ -16,16 +16,16 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
 /**
  * @summary Properties
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Properties ::= SEQUENCE {
  *     propertyName        UTF8String (SIZE (1..strmax)),
  *     propertyValue       UTF8String (SIZE (1..strmax)),
  *     status              [0] IMPLICIT AttributeStatus OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -54,9 +54,9 @@ class Properties {
     /**
      * @summary Restructures an object into a Properties
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Properties`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -79,9 +79,9 @@ class Properties {
 /**
  * @summary The Leading Root Component Types of Properties
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -94,27 +94,27 @@ const _root_component_type_list_1_spec_for_Properties: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of Properties
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_Properties: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of Properties
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_Properties: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_Properties: $.ASN1Decoder<Properties> | null = null;
@@ -169,11 +169,11 @@ function _encode_Properties (value: Properties, elGetter: $.ASN1Encoder<Properti
     if (!_cached_encoder_for_Properties) { _cached_encoder_for_Properties = function (value: Properties): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeUTF8String(value.propertyName, $.BER),
-            /* REQUIRED   */ $._encodeUTF8String(value.propertyValue, $.BER),
-            /* IF_ABSENT  */ ((value.status === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeStatus, $.BER)(value.status, $.BER))
+            /* REQUIRED   */ $._encodeUTF8String(value.propertyName, $.DER),
+            /* REQUIRED   */ $._encodeUTF8String(value.propertyValue, $.DER),
+            /* IF_ABSENT  */ ((value.status === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeStatus, $.DER)(value.status, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_Properties(value, elGetter);
 }

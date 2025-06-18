@@ -288,37 +288,37 @@ export function _encode_Signcrypter(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SigncrypterIDs(
                             value.side,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SigncryptedDataAlgorithmIdentifier(
                             value.signcryptedDataAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SigncryptionValue(
                             value.signcryptionValue,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.signatureInformation ===
                         undefined
                             ? undefined
                             : _encode_SignatureInformation(
                                   value.signatureInformation,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.unsigncryptedAttributes ===
                         undefined
                             ? undefined
                             : _encode_UnSigncryptedAttributes(
                                   value.unsigncryptedAttributes,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

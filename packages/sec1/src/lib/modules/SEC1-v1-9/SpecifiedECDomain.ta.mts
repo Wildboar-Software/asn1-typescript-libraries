@@ -20,9 +20,9 @@ import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../
 /**
  * @summary SpecifiedECDomain
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SpecifiedECDomain ::= SEQUENCE {
  *     version     SpecifiedECDomainVersion(ecdpVer1 | ecdpVer2 | ecdpVer3, ...),
@@ -35,7 +35,7 @@ import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../
  *     ...
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -94,9 +94,9 @@ class SpecifiedECDomain {
     /**
      * @summary Restructures an object into a SpecifiedECDomain
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SpecifiedECDomain`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -113,9 +113,9 @@ class SpecifiedECDomain {
 /**
  * @summary The Leading Root Component Types of SpecifiedECDomain
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -132,27 +132,27 @@ const _root_component_type_list_1_spec_for_SpecifiedECDomain: $.ComponentSpec[] 
 /**
  * @summary The Trailing Root Component Types of SpecifiedECDomain
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SpecifiedECDomain: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of SpecifiedECDomain
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SpecifiedECDomain: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_SpecifiedECDomain: $.ASN1Decoder<SpecifiedECDomain> | null = null;
@@ -221,16 +221,16 @@ function _encode_SpecifiedECDomain (value: SpecifiedECDomain, elGetter: $.ASN1En
     if (!_cached_encoder_for_SpecifiedECDomain) { _cached_encoder_for_SpecifiedECDomain = function (value: SpecifiedECDomain): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_SpecifiedECDomainVersion(value.version, $.BER),
-            /* REQUIRED   */ _encode_FieldID(value.fieldID, $.BER),
-            /* REQUIRED   */ _encode_Curve(value.curve, $.BER),
-            /* REQUIRED   */ _encode_ECPoint(value.base, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.order, $.BER),
-            /* IF_ABSENT  */ ((value.cofactor === undefined) ? undefined : $._encodeInteger(value.cofactor, $.BER)),
-            /* IF_ABSENT  */ ((value.hash === undefined) ? undefined : _encode_HashAlgorithm(value.hash, $.BER))
+            /* REQUIRED   */ _encode_SpecifiedECDomainVersion(value.version, $.DER),
+            /* REQUIRED   */ _encode_FieldID(value.fieldID, $.DER),
+            /* REQUIRED   */ _encode_Curve(value.curve, $.DER),
+            /* REQUIRED   */ _encode_ECPoint(value.base, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.order, $.DER),
+            /* IF_ABSENT  */ ((value.cofactor === undefined) ? undefined : $._encodeInteger(value.cofactor, $.DER)),
+            /* IF_ABSENT  */ ((value.hash === undefined) ? undefined : _encode_HashAlgorithm(value.hash, $.DER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SpecifiedECDomain(value, elGetter);
 }

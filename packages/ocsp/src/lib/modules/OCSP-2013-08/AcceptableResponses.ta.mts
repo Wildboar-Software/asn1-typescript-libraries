@@ -51,7 +51,7 @@ export function _encode_AcceptableResponses(
     if (!_cached_encoder_for_AcceptableResponses) {
         _cached_encoder_for_AcceptableResponses = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AcceptableResponses(value, elGetter);

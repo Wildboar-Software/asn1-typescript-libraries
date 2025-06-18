@@ -193,19 +193,19 @@ export function _encode_PA_ENC_TS_ENC(
               _TagClass.context,
               0,
               () => _encode_KerberosTime,
-              $.BER
-            )(value.patimestamp, $.BER),
+              $.DER
+            )(value.patimestamp, $.DER),
             /* IF_ABSENT  */ value.pausec === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Microseconds,
-                  $.BER
-                )(value.pausec, $.BER),
+                  $.DER
+                )(value.pausec, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

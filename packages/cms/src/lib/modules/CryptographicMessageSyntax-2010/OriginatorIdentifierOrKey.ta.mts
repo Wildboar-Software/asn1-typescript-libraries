@@ -94,16 +94,16 @@ export function _encode_OriginatorIdentifierOrKey(
                     _TagClass.context,
                     0,
                     () => _encode_SubjectKeyIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 originatorKey: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_OriginatorPublicKey,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OriginatorIdentifierOrKey(value, elGetter);

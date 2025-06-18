@@ -15,9 +15,9 @@ import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC
 /**
  * @summary ECDSA_Signature
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECDSA-Signature  ::=  CHOICE {
  *     two-ints-plus ECDSA-Sig-Value,
@@ -62,8 +62,8 @@ export
 function _encode_ECDSA_Signature (value: ECDSA_Signature, elGetter: $.ASN1Encoder<ECDSA_Signature>) {
     if (!_cached_encoder_for_ECDSA_Signature) { _cached_encoder_for_ECDSA_Signature = $._encode_choice<ECDSA_Signature>({
     "two_ints_plus": _encode_ECDSA_Sig_Value,
-    "point_int": $._encode_implicit(_TagClass.context, 0, () => _encode_ECDSA_Full_R, $.BER),
-}, $.BER); }
+    "point_int": $._encode_implicit(_TagClass.context, 0, () => _encode_ECDSA_Full_R, $.DER),
+}, $.DER); }
     return _cached_encoder_for_ECDSA_Signature(value, elGetter);
 }
 

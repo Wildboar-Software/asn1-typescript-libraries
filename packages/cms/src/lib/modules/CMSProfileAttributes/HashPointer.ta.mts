@@ -182,13 +182,13 @@ export function _encode_HashPointer(
                     .concat([
                         /* IF_ABSENT  */ value.hash === undefined
                             ? undefined
-                            : _encode_DigestedData(value.hash, $.BER),
+                            : _encode_DigestedData(value.hash, $.DER),
                         /* IF_ABSENT  */ value.pointers === undefined
                             ? undefined
-                            : _encode_Pointers(value.pointers, $.BER),
+                            : _encode_Pointers(value.pointers, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

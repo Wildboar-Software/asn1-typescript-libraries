@@ -616,71 +616,71 @@ export function _encode_ValPolResponse(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeInteger(value.vpResponseVersion, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.maxCVRequestVersion, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.maxVPRequestVersion, $.BER),
+            /* REQUIRED   */ $._encodeInteger(value.vpResponseVersion, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.maxCVRequestVersion, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.maxVPRequestVersion, $.DER),
             /* REQUIRED   */ $._encodeInteger(
               value.serverConfigurationID,
-              $.BER
+              $.DER
             ),
-            /* REQUIRED   */ $._encodeGeneralizedTime(value.thisUpdate, $.BER),
+            /* REQUIRED   */ $._encodeGeneralizedTime(value.thisUpdate, $.DER),
             /* IF_ABSENT  */ value.nextUpdate === undefined
               ? undefined
-              : $._encodeGeneralizedTime(value.nextUpdate, $.BER),
-            /* REQUIRED   */ _encode_CertChecks(value.supportedChecks, $.BER),
-            /* REQUIRED   */ _encode_WantBack(value.supportedWantBacks, $.BER),
+              : $._encodeGeneralizedTime(value.nextUpdate, $.DER),
+            /* REQUIRED   */ _encode_CertChecks(value.supportedChecks, $.DER),
+            /* REQUIRED   */ _encode_WantBack(value.supportedWantBacks, $.DER),
             /* REQUIRED   */ $._encodeSequenceOf<OBJECT_IDENTIFIER>(
               () => $._encodeObjectIdentifier,
-              $.BER
-            )(value.validationPolicies, $.BER),
+              $.DER
+            )(value.validationPolicies, $.DER),
             /* REQUIRED   */ $._encodeSequenceOf<OBJECT_IDENTIFIER>(
               () => $._encodeObjectIdentifier,
-              $.BER
-            )(value.validationAlgs, $.BER),
+              $.DER
+            )(value.validationAlgs, $.DER),
             /* REQUIRED   */ $._encodeSequenceOf<AuthPolicy>(
               () => _encode_AuthPolicy,
-              $.BER
-            )(value.authPolicies, $.BER),
-            /* REQUIRED   */ _encode_ResponseTypes(value.responseTypes, $.BER),
+              $.DER
+            )(value.authPolicies, $.DER),
+            /* REQUIRED   */ _encode_ResponseTypes(value.responseTypes, $.DER),
             /* REQUIRED   */ _encode_RespValidationPolicy(
               value.defaultPolicyValues,
-              $.BER
+              $.DER
             ),
             /* REQUIRED   */ _encode_RevocationInfoTypes(
               value.revocationInfoTypes,
-              $.BER
+              $.DER
             ),
             /* REQUIRED   */ $._encodeSequenceOf<AlgorithmIdentifier>(
               () => _encode_AlgorithmIdentifier,
-              $.BER
-            )(value.signatureGeneration, $.BER),
+              $.DER
+            )(value.signatureGeneration, $.DER),
             /* REQUIRED   */ $._encodeSequenceOf<AlgorithmIdentifier>(
               () => _encode_AlgorithmIdentifier,
-              $.BER
-            )(value.signatureVerification, $.BER),
+              $.DER
+            )(value.signatureVerification, $.DER),
             /* REQUIRED   */ $._encodeSequenceOf<OBJECT_IDENTIFIER>(
               () => $._encodeObjectIdentifier,
-              $.BER
-            )(value.hashAlgorithms, $.BER),
+              $.DER
+            )(value.hashAlgorithms, $.DER),
             /* IF_ABSENT  */ value.serverPublicKeys === undefined
               ? undefined
               : $._encodeSequenceOf<KeyAgreePublicKey>(
                   () => _encode_KeyAgreePublicKey,
-                  $.BER
-                )(value.serverPublicKeys, $.BER),
+                  $.DER
+                )(value.serverPublicKeys, $.DER),
             /* IF_DEFAULT */ value.clockSkew === undefined ||
             $.deepEq(
               value.clockSkew,
               ValPolResponse._default_value_for_clockSkew
             )
               ? undefined
-              : $._encodeInteger(value.clockSkew, $.BER),
+              : $._encodeInteger(value.clockSkew, $.DER),
             /* IF_ABSENT  */ value.requestNonce === undefined
               ? undefined
-              : $._encodeOctetString(value.requestNonce, $.BER),
+              : $._encodeOctetString(value.requestNonce, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

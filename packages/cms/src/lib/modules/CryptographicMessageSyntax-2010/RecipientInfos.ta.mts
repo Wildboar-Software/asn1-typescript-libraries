@@ -56,7 +56,7 @@ export function _encode_RecipientInfos(
     if (!_cached_encoder_for_RecipientInfos) {
         _cached_encoder_for_RecipientInfos = $._encodeSetOf<RecipientInfo>(
             () => _encode_RecipientInfo,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RecipientInfos(value, elGetter);

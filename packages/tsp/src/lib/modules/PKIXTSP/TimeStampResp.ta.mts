@@ -174,17 +174,17 @@ export function _encode_TimeStampResp(
                     .concat([
                         /* REQUIRED   */ _encode_PKIStatusInfo(
                             value.status,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.timeStampToken === undefined
                             ? undefined
                             : _encode_TimeStampToken(
                                   value.timeStampToken,
-                                  $.BER,
+                                  $.DER,
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

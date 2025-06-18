@@ -57,7 +57,7 @@ export function _encode_SigncryptedAttributes(
     if (!_cached_encoder_for_SigncryptedAttributes) {
         _cached_encoder_for_SigncryptedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SigncryptedAttributes(value, elGetter);

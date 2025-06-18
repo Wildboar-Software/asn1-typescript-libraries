@@ -251,14 +251,14 @@ export function _encode_SingleResponse(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_CertID(value.certID, $.BER),
+                        /* REQUIRED   */ _encode_CertID(value.certID, $.DER),
                         /* REQUIRED   */ _encode_CertStatus(
                             value.certStatus,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeGeneralizedTime(
                             value.thisUpdate,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.nextUpdate === undefined
                             ? undefined
@@ -266,19 +266,19 @@ export function _encode_SingleResponse(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeGeneralizedTime,
-                                  $.BER
-                              )(value.nextUpdate, $.BER),
+                                  $.DER
+                              )(value.nextUpdate, $.DER),
                         /* IF_ABSENT  */ value.singleExtensions === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.singleExtensions, $.BER),
+                                  $.DER
+                              )(value.singleExtensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

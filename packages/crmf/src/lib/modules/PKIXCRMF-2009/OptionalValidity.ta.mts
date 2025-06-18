@@ -186,19 +186,19 @@ export function _encode_OptionalValidity(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Time,
-                                  $.BER
-                              )(value.notBefore, $.BER),
+                                  $.DER
+                              )(value.notBefore, $.DER),
                         /* IF_ABSENT  */ value.notAfter === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Time,
-                                  $.BER
-                              )(value.notAfter, $.BER),
+                                  $.DER
+                              )(value.notAfter, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -188,12 +188,12 @@ function _encode_LongTermValidation (value: LongTermValidation, elGetter: $.ASN1
     if (!_cached_encoder_for_LongTermValidation) { _cached_encoder_for_LongTermValidation = function (value: LongTermValidation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeGeneralizedTime(value.poeDate, $.BER),
-            /* IF_ABSENT  */ ((value.poeValue === undefined) ? undefined : _encode_LongTermValidation_poeValue(value.poeValue, $.BER)),
-            /* IF_ABSENT  */ ((value.extraCertificates === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CertificateSet, $.BER)(value.extraCertificates, $.BER)),
-            /* IF_ABSENT  */ ((value.extraRevocation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_RevocationInfoChoices, $.BER)(value.extraRevocation, $.BER))
+            /* REQUIRED   */ $._encodeGeneralizedTime(value.poeDate, $.DER),
+            /* IF_ABSENT  */ ((value.poeValue === undefined) ? undefined : _encode_LongTermValidation_poeValue(value.poeValue, $.DER)),
+            /* IF_ABSENT  */ ((value.extraCertificates === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CertificateSet, $.DER)(value.extraCertificates, $.DER)),
+            /* IF_ABSENT  */ ((value.extraRevocation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_RevocationInfoChoices, $.DER)(value.extraRevocation, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_LongTermValidation(value, elGetter);
 }

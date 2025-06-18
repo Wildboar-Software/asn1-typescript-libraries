@@ -61,7 +61,7 @@ export function _encode_SCVPResponses(
   if (!_cached_encoder_for_SCVPResponses) {
     _cached_encoder_for_SCVPResponses = $._encodeSequenceOf<ContentInfo>(
       () => _encode_ContentInfo,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_SCVPResponses(value, elGetter);

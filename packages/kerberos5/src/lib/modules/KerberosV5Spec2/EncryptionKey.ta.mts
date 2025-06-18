@@ -175,17 +175,17 @@ export function _encode_EncryptionKey(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.keytype, $.BER),
+              $.DER
+            )(value.keytype, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeOctetString,
-              $.BER
-            )(value.keyvalue, $.BER),
+              $.DER
+            )(value.keyvalue, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

@@ -183,14 +183,14 @@ export function _encode_XPathTokensSet(
                     .concat([
                         /* IF_ABSENT  */ value.tSP === undefined
                             ? undefined
-                            : _encode_TokenServiceProvider(value.tSP, $.BER),
+                            : _encode_TokenServiceProvider(value.tSP, $.DER),
                         /* REQUIRED   */ _encode_XPathSet(
                             value.xPathSet,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

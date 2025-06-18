@@ -66,7 +66,7 @@ export function _encode_ECDomainParameters(
                 named: $._encodeObjectIdentifier,
                 implicitCA: $._encodeNull,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ECDomainParameters(value, elGetter);

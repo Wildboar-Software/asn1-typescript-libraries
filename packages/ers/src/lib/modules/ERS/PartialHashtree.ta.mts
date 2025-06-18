@@ -18,9 +18,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary PartialHashtree
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * PartialHashtree  ::=  SEQUENCE OF OCTET STRING
  * ```
@@ -57,7 +57,7 @@ let _cached_encoder_for_PartialHashtree: $.ASN1Encoder<PartialHashtree> | null =
  */
 export
 function _encode_PartialHashtree (value: PartialHashtree, elGetter: $.ASN1Encoder<PartialHashtree>) {
-    if (!_cached_encoder_for_PartialHashtree) { _cached_encoder_for_PartialHashtree = $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER); }
+    if (!_cached_encoder_for_PartialHashtree) { _cached_encoder_for_PartialHashtree = $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.DER); }
     return _cached_encoder_for_PartialHashtree(value, elGetter);
 }
 

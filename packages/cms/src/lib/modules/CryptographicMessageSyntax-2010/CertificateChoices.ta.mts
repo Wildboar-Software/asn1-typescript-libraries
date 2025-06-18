@@ -127,28 +127,28 @@ export function _encode_CertificateChoices(
                     _TagClass.context,
                     0,
                     () => _encode_ExtendedCertificate,
-                    $.BER
+                    $.DER
                 ),
                 v1AttrCert: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_AttributeCertificateV1,
-                    $.BER
+                    $.DER
                 ),
                 v2AttrCert: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_AttributeCertificateV2,
-                    $.BER
+                    $.DER
                 ),
                 other: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_OtherCertificateFormat,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertificateChoices(value, elGetter);

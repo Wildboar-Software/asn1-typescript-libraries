@@ -15,16 +15,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary EncryptionInfo
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EncryptionInfo ::= SEQUENCE {
  *     encryptionInfoType   ENCINFO-TYPE.&id({SupportedEncryptionAlgorithms}),
  *     encryptionInfoValue  ENCINFO-TYPE.&Type
  *                 ({SupportedEncryptionAlgorithms}{@encryptionInfoType}) }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -47,9 +47,9 @@ class EncryptionInfo {
     /**
      * @summary Restructures an object into a EncryptionInfo
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `EncryptionInfo`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -67,9 +67,9 @@ class EncryptionInfo {
 /**
  * @summary The Leading Root Component Types of EncryptionInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -82,28 +82,28 @@ const _root_component_type_list_1_spec_for_EncryptionInfo: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of EncryptionInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_EncryptionInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of EncryptionInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_EncryptionInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -154,10 +154,10 @@ function _encode_EncryptionInfo (value: EncryptionInfo, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_EncryptionInfo) { _cached_encoder_for_EncryptionInfo = function (value: EncryptionInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.encryptionInfoType, $.BER),
-            /* REQUIRED   */ $._encodeAny(value.encryptionInfoValue, $.BER)
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.encryptionInfoType, $.DER),
+            /* REQUIRED   */ $._encodeAny(value.encryptionInfoValue, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_EncryptionInfo(value, elGetter);
 }

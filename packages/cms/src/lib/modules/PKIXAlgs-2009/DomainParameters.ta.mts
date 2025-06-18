@@ -240,21 +240,21 @@ export function _encode_DomainParameters(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.p, $.BER),
-                        /* REQUIRED   */ $._encodeInteger(value.g, $.BER),
-                        /* REQUIRED   */ $._encodeInteger(value.q, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.p, $.DER),
+                        /* REQUIRED   */ $._encodeInteger(value.g, $.DER),
+                        /* REQUIRED   */ $._encodeInteger(value.q, $.DER),
                         /* IF_ABSENT  */ value.j === undefined
                             ? undefined
-                            : $._encodeInteger(value.j, $.BER),
+                            : $._encodeInteger(value.j, $.DER),
                         /* IF_ABSENT  */ value.validationParams === undefined
                             ? undefined
                             : _encode_ValidationParams(
                                   value.validationParams,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

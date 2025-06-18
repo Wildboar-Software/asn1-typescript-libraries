@@ -272,8 +272,8 @@ export function _encode_ResponseFlags(
                   _TagClass.context,
                   0,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.fullRequestInResponse, $.BER),
+                  $.DER
+                )(value.fullRequestInResponse, $.DER),
             /* IF_DEFAULT */ value.responseValidationPolByRef === undefined ||
             $.deepEq(
               value.responseValidationPolByRef,
@@ -284,8 +284,8 @@ export function _encode_ResponseFlags(
                   _TagClass.context,
                   1,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.responseValidationPolByRef, $.BER),
+                  $.DER
+                )(value.responseValidationPolByRef, $.DER),
             /* IF_DEFAULT */ value.protectResponse === undefined ||
             $.deepEq(
               value.protectResponse,
@@ -296,8 +296,8 @@ export function _encode_ResponseFlags(
                   _TagClass.context,
                   2,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.protectResponse, $.BER),
+                  $.DER
+                )(value.protectResponse, $.DER),
             /* IF_DEFAULT */ value.cachedResponse === undefined ||
             $.deepEq(
               value.cachedResponse,
@@ -308,11 +308,11 @@ export function _encode_ResponseFlags(
                   _TagClass.context,
                   3,
                   () => $._encodeBoolean,
-                  $.BER
-                )(value.cachedResponse, $.BER),
+                  $.DER
+                )(value.cachedResponse, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

@@ -64,7 +64,7 @@ export function _encode_AS_REP(value: AS_REP, elGetter: $.ASN1Encoder<AS_REP>) {
       _TagClass.application,
       11,
       () => _encode_KDC_REP,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_AS_REP(value, elGetter);

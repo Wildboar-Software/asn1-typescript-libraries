@@ -56,7 +56,7 @@ export function _encode_Signcrypters(
     if (!_cached_encoder_for_Signcrypters) {
         _cached_encoder_for_Signcrypters = $._encodeSequenceOf<Signcrypter>(
             () => _encode_Signcrypter,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Signcrypters(value, elGetter);

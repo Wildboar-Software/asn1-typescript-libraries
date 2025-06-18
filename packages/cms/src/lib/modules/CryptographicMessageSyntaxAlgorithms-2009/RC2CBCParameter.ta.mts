@@ -164,12 +164,12 @@ export function _encode_RC2CBCParameter(
                     .concat([
                         /* REQUIRED   */ $._encodeInteger(
                             value.rc2ParameterVersion,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeOctetString(value.iv, $.BER),
+                        /* REQUIRED   */ $._encodeOctetString(value.iv, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

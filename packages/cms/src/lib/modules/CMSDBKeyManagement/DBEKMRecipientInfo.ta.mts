@@ -72,7 +72,7 @@ export function _encode_DBEKMRecipientInfo(
                 keyManager: _encode_MasterKeyEncryptedHMACkey,
                 server: _encode_DatabaseServerToKeyManager,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DBEKMRecipientInfo(value, elGetter);

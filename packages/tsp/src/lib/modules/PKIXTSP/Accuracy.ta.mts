@@ -187,26 +187,26 @@ export function _encode_Accuracy(
                     .concat([
                         /* IF_ABSENT  */ value.seconds === undefined
                             ? undefined
-                            : $._encodeInteger(value.seconds, $.BER),
+                            : $._encodeInteger(value.seconds, $.DER),
                         /* IF_ABSENT  */ value.millis === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.millis, $.BER),
+                                  $.DER
+                              )(value.millis, $.DER),
                         /* IF_ABSENT  */ value.micros === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.micros, $.BER),
+                                  $.DER
+                              )(value.micros, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

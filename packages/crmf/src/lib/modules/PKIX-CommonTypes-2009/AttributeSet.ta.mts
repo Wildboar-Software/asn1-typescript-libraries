@@ -165,15 +165,15 @@ export function _encode_AttributeSet(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSetOf<_Element>(
                             () => $._encodeAny,
-                            $.BER
-                        )(value.values, $.BER),
+                            $.DER
+                        )(value.values, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

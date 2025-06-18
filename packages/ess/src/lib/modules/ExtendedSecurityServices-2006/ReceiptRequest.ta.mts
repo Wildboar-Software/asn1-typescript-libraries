@@ -204,19 +204,19 @@ export function _encode_ReceiptRequest(
                     .concat([
                         /* REQUIRED   */ _encode_ContentIdentifier(
                             value.signedContentIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_ReceiptsFrom(
                             value.receiptsFrom,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSequenceOf<GeneralNames>(
                             () => _encode_GeneralNames,
-                            $.BER
-                        )(value.receiptsTo, $.BER),
+                            $.DER
+                        )(value.receiptsTo, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

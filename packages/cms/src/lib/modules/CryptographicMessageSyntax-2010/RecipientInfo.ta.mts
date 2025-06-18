@@ -119,28 +119,28 @@ export function _encode_RecipientInfo(
                     _TagClass.context,
                     1,
                     () => _encode_KeyAgreeRecipientInfo,
-                    $.BER
+                    $.DER
                 ),
                 kekri: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_KEKRecipientInfo,
-                    $.BER
+                    $.DER
                 ),
                 pwri: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_PasswordRecipientInfo,
-                    $.BER
+                    $.DER
                 ),
                 ori: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_OtherRecipientInfo,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RecipientInfo(value, elGetter);

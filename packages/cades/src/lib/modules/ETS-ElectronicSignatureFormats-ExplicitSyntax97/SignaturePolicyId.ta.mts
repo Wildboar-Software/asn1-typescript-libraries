@@ -17,16 +17,16 @@ import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPoli
 /**
  * @summary SignaturePolicyId
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SignaturePolicyId ::= SEQUENCE {
  *     sigPolicyId             SigPolicyId,
  *     sigPolicyHash           SigPolicyHash,
  *     sigPolicyQualifiers     SEQUENCE SIZE (1..MAX) OF SigPolicyQualifierInfo OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -55,9 +55,9 @@ class SignaturePolicyId {
     /**
      * @summary Restructures an object into a SignaturePolicyId
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SignaturePolicyId`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -74,9 +74,9 @@ class SignaturePolicyId {
 /**
  * @summary The Leading Root Component Types of SignaturePolicyId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -89,27 +89,27 @@ const _root_component_type_list_1_spec_for_SignaturePolicyId: $.ComponentSpec[] 
 /**
  * @summary The Trailing Root Component Types of SignaturePolicyId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SignaturePolicyId: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of SignaturePolicyId
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SignaturePolicyId: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_SignaturePolicyId: $.ASN1Decoder<SignaturePolicyId> | null = null;
@@ -164,11 +164,11 @@ function _encode_SignaturePolicyId (value: SignaturePolicyId, elGetter: $.ASN1En
     if (!_cached_encoder_for_SignaturePolicyId) { _cached_encoder_for_SignaturePolicyId = function (value: SignaturePolicyId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_SigPolicyId(value.sigPolicyId, $.BER),
-            /* REQUIRED   */ _encode_SigPolicyHash(value.sigPolicyHash, $.BER),
-            /* IF_ABSENT  */ ((value.sigPolicyQualifiers === undefined) ? undefined : $._encodeSequenceOf<SigPolicyQualifierInfo>(() => _encode_SigPolicyQualifierInfo, $.BER)(value.sigPolicyQualifiers, $.BER))
+            /* REQUIRED   */ _encode_SigPolicyId(value.sigPolicyId, $.DER),
+            /* REQUIRED   */ _encode_SigPolicyHash(value.sigPolicyHash, $.DER),
+            /* IF_ABSENT  */ ((value.sigPolicyQualifiers === undefined) ? undefined : $._encodeSequenceOf<SigPolicyQualifierInfo>(() => _encode_SigPolicyQualifierInfo, $.DER)(value.sigPolicyQualifiers, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SignaturePolicyId(value, elGetter);
 }

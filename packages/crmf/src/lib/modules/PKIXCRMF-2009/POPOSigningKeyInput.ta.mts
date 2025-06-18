@@ -174,15 +174,15 @@ export function _encode_POPOSigningKeyInput(
                     .concat([
                         /* REQUIRED   */ _encode_POPOSigningKeyInput_authInfo(
                             value.authInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SubjectPublicKeyInfo(
                             value.publicKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

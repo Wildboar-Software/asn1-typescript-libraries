@@ -168,11 +168,11 @@ function _encode_CrlIdentifier (value: CrlIdentifier, elGetter: $.ASN1Encoder<Cr
     if (!_cached_encoder_for_CrlIdentifier) { _cached_encoder_for_CrlIdentifier = function (value: CrlIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_Name(value.crlissuer, $.BER),
-            /* REQUIRED   */ $._encodeUTCTime(value.crlIssuedTime, $.BER),
-            /* IF_ABSENT  */ ((value.crlNumber === undefined) ? undefined : $._encodeInteger(value.crlNumber, $.BER))
+            /* REQUIRED   */ _encode_Name(value.crlissuer, $.DER),
+            /* REQUIRED   */ $._encodeUTCTime(value.crlIssuedTime, $.DER),
+            /* IF_ABSENT  */ ((value.crlNumber === undefined) ? undefined : $._encodeInteger(value.crlNumber, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CrlIdentifier(value, elGetter);
 }

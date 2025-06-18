@@ -16,9 +16,9 @@ import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y
 /**
  * @summary ECDSA_Sig_Value
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECDSA-Sig-Value ::= SEQUENCE {
  *     r INTEGER,
@@ -27,7 +27,7 @@ import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y
  *     y CHOICE { b BOOLEAN, f FieldElement } OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -62,9 +62,9 @@ class ECDSA_Sig_Value {
     /**
      * @summary Restructures an object into a ECDSA_Sig_Value
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ECDSA_Sig_Value`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -81,9 +81,9 @@ class ECDSA_Sig_Value {
 /**
  * @summary The Leading Root Component Types of ECDSA_Sig_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -97,27 +97,27 @@ const _root_component_type_list_1_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of ECDSA_Sig_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ECDSA_Sig_Value
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ECDSA_Sig_Value: $.ASN1Decoder<ECDSA_Sig_Value> | null = null;
@@ -175,12 +175,12 @@ function _encode_ECDSA_Sig_Value (value: ECDSA_Sig_Value, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_ECDSA_Sig_Value) { _cached_encoder_for_ECDSA_Sig_Value = function (value: ECDSA_Sig_Value): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.r, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.s, $.BER),
-            /* IF_ABSENT  */ ((value.a === undefined) ? undefined : $._encodeInteger(value.a, $.BER)),
-            /* IF_ABSENT  */ ((value.y === undefined) ? undefined : _encode_ECDSA_Sig_Value_y(value.y, $.BER))
+            /* REQUIRED   */ $._encodeInteger(value.r, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.s, $.DER),
+            /* IF_ABSENT  */ ((value.a === undefined) ? undefined : $._encodeInteger(value.a, $.DER)),
+            /* IF_ABSENT  */ ((value.y === undefined) ? undefined : _encode_ECDSA_Sig_Value_y(value.y, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ECDSA_Sig_Value(value, elGetter);
 }

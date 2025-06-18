@@ -183,7 +183,7 @@ export function _encode_Request(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_CertID(value.reqCert, $.BER),
+                        /* REQUIRED   */ _encode_CertID(value.reqCert, $.DER),
                         /* IF_ABSENT  */ value.singleRequestExtensions ===
                         undefined
                             ? undefined
@@ -191,11 +191,11 @@ export function _encode_Request(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.singleRequestExtensions, $.BER),
+                                  $.DER
+                              )(value.singleRequestExtensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

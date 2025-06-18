@@ -187,17 +187,17 @@ export function _encode_SigningCertificate(
                     .concat([
                         /* REQUIRED   */ $._encodeSequenceOf<ESSCertID>(
                             () => _encode_ESSCertID,
-                            $.BER
-                        )(value.certs, $.BER),
+                            $.DER
+                        )(value.certs, $.DER),
                         /* IF_ABSENT  */ value.policies === undefined
                             ? undefined
                             : $._encodeSequenceOf<PolicyInformation>(
                                   () => _encode_PolicyInformation,
-                                  $.BER
-                              )(value.policies, $.BER),
+                                  $.DER
+                              )(value.policies, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

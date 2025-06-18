@@ -158,10 +158,10 @@ function _encode_CertificateIdentifier (value: CertificateIdentifier, elGetter: 
     if (!_cached_encoder_for_CertificateIdentifier) { _cached_encoder_for_CertificateIdentifier = function (value: CertificateIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.attributeCertIdentifier === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeCertificateIdentifier, $.BER)(value.attributeCertIdentifier, $.BER)),
-            /* IF_ABSENT  */ ((value.genericCertIdentifier === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_IssuerSerial, $.BER)(value.genericCertIdentifier, $.BER))
+            /* IF_ABSENT  */ ((value.attributeCertIdentifier === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeCertificateIdentifier, $.DER)(value.attributeCertIdentifier, $.DER)),
+            /* IF_ABSENT  */ ((value.genericCertIdentifier === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_IssuerSerial, $.DER)(value.genericCertIdentifier, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CertificateIdentifier(value, elGetter);
 }

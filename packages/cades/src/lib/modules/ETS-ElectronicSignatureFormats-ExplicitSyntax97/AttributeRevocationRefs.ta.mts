@@ -14,9 +14,9 @@ import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-Elect
 /**
  * @summary AttributeRevocationRefs
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AttributeRevocationRefs  ::=  SEQUENCE OF CrlOcspRef
  * ```
@@ -49,7 +49,7 @@ let _cached_encoder_for_AttributeRevocationRefs: $.ASN1Encoder<AttributeRevocati
  */
 export
 function _encode_AttributeRevocationRefs (value: AttributeRevocationRefs, elGetter: $.ASN1Encoder<AttributeRevocationRefs>) {
-    if (!_cached_encoder_for_AttributeRevocationRefs) { _cached_encoder_for_AttributeRevocationRefs = $._encodeSequenceOf<CrlOcspRef>(() => _encode_CrlOcspRef, $.BER); }
+    if (!_cached_encoder_for_AttributeRevocationRefs) { _cached_encoder_for_AttributeRevocationRefs = $._encodeSequenceOf<CrlOcspRef>(() => _encode_CrlOcspRef, $.DER); }
     return _cached_encoder_for_AttributeRevocationRefs(value, elGetter);
 }
 

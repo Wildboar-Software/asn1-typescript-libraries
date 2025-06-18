@@ -203,19 +203,19 @@ export function _encode_SignedPublicKeyAndChallenge(
                     .concat([
                         /* REQUIRED   */ _encode_PublicKeyAndChallenge(
                             value.publicKeyAndChallenge,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.signatureAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

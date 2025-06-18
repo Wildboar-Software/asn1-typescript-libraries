@@ -68,7 +68,7 @@ export function _encode_TYPED_DATA(
   if (!_cached_encoder_for_TYPED_DATA) {
     _cached_encoder_for_TYPED_DATA = $._encodeSequenceOf<TYPED_DATA_Item>(
       () => _encode_TYPED_DATA_Item,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_TYPED_DATA(value, elGetter);

@@ -198,19 +198,19 @@ export function _encode_ContentReference(
                     .concat([
                         /* REQUIRED   */ _encode_ContentType(
                             value.contentType,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_ContentIdentifier(
                             value.signedContentIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.originatorSignatureValue,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

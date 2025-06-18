@@ -205,19 +205,19 @@ export function _encode_ExtendedCertificate(
                     .concat([
                         /* REQUIRED   */ _encode_ExtendedCertificateInfo(
                             value.extendedCertificateInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_SignatureAlgorithmIdentifier(
                             value.signatureAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Signature(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

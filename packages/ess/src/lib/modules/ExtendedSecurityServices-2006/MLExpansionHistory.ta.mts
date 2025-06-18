@@ -56,7 +56,7 @@ export function _encode_MLExpansionHistory(
     if (!_cached_encoder_for_MLExpansionHistory) {
         _cached_encoder_for_MLExpansionHistory = $._encodeSequenceOf<MLData>(
             () => _encode_MLData,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MLExpansionHistory(value, elGetter);

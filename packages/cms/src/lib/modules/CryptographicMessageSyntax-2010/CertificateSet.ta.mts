@@ -56,7 +56,7 @@ export function _encode_CertificateSet(
     if (!_cached_encoder_for_CertificateSet) {
         _cached_encoder_for_CertificateSet = $._encodeSetOf<CertificateChoices>(
             () => _encode_CertificateChoices,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertificateSet(value, elGetter);

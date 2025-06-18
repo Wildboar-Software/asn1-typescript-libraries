@@ -165,15 +165,15 @@ export function _encode_Characteristic_two(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.m, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.m, $.DER),
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.basis,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.parameters, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.parameters, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

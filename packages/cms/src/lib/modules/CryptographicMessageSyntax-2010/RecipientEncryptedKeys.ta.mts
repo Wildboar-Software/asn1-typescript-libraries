@@ -56,7 +56,7 @@ export function _encode_RecipientEncryptedKeys(
     if (!_cached_encoder_for_RecipientEncryptedKeys) {
         _cached_encoder_for_RecipientEncryptedKeys = $._encodeSequenceOf<RecipientEncryptedKey>(
             () => _encode_RecipientEncryptedKey,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RecipientEncryptedKeys(value, elGetter);

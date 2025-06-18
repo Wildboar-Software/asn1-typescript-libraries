@@ -52,7 +52,7 @@ export function _encode_SMIMECapabilities(
     if (!_cached_encoder_for_SMIMECapabilities) {
         _cached_encoder_for_SMIMECapabilities = $._encodeSequenceOf<SMIMECapability>(
             () => _encode_SMIMECapability,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SMIMECapabilities(value, elGetter);

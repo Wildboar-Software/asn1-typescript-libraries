@@ -83,16 +83,16 @@ export function _encode_KeyConstructionRecipient(
                     _TagClass.context,
                     0,
                     () => _encode_KeyConstructionLabels,
-                    $.BER
+                    $.DER
                 ),
                 encrypted: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_EncryptedRecipientID,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_KeyConstructionRecipient(value, elGetter);

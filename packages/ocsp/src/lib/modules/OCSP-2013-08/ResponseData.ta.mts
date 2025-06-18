@@ -285,31 +285,31 @@ export function _encode_ResponseData(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Version,
-                                  $.BER
-                              )(value.version, $.BER),
+                                  $.DER
+                              )(value.version, $.DER),
                         /* REQUIRED   */ _encode_ResponderID(
                             value.responderID,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeGeneralizedTime(
                             value.producedAt,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSequenceOf<SingleResponse>(
                             () => _encode_SingleResponse,
-                            $.BER
-                        )(value.responses, $.BER),
+                            $.DER
+                        )(value.responses, $.DER),
                         /* IF_ABSENT  */ value.responseExtensions === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.responseExtensions, $.BER),
+                                  $.DER
+                              )(value.responseExtensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

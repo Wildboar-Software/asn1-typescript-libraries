@@ -14,14 +14,14 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
 /**
  * @summary TCGCredentialType
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TCGCredentialType ::= SEQUENCE {
  *     certificateType     CredentialType }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -38,9 +38,9 @@ class TCGCredentialType {
     /**
      * @summary Restructures an object into a TCGCredentialType
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `TCGCredentialType`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -57,9 +57,9 @@ class TCGCredentialType {
 /**
  * @summary The Leading Root Component Types of TCGCredentialType
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -70,27 +70,27 @@ const _root_component_type_list_1_spec_for_TCGCredentialType: $.ComponentSpec[] 
 /**
  * @summary The Trailing Root Component Types of TCGCredentialType
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_TCGCredentialType: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of TCGCredentialType
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_TCGCredentialType: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_TCGCredentialType: $.ASN1Decoder<TCGCredentialType> | null = null;
@@ -133,9 +133,9 @@ function _encode_TCGCredentialType (value: TCGCredentialType, elGetter: $.ASN1En
     if (!_cached_encoder_for_TCGCredentialType) { _cached_encoder_for_TCGCredentialType = function (value: TCGCredentialType): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_CredentialType(value.certificateType, $.BER)
+            /* REQUIRED   */ _encode_CredentialType(value.certificateType, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_TCGCredentialType(value, elGetter);
 }

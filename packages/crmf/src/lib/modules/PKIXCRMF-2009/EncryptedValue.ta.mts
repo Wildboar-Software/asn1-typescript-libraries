@@ -286,47 +286,47 @@ export function _encode_EncryptedValue(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.intendedAlg, $.BER),
+                                  $.DER
+                              )(value.intendedAlg, $.DER),
                         /* IF_ABSENT  */ value.symmAlg === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.symmAlg, $.BER),
+                                  $.DER
+                              )(value.symmAlg, $.DER),
                         /* IF_ABSENT  */ value.encSymmKey === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeBitString,
-                                  $.BER
-                              )(value.encSymmKey, $.BER),
+                                  $.DER
+                              )(value.encSymmKey, $.DER),
                         /* IF_ABSENT  */ value.keyAlg === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   3,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.keyAlg, $.BER),
+                                  $.DER
+                              )(value.keyAlg, $.DER),
                         /* IF_ABSENT  */ value.valueHint === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   4,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.valueHint, $.BER),
+                                  $.DER
+                              )(value.valueHint, $.DER),
                         /* REQUIRED   */ $._encodeBitString(
                             value.encValue,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

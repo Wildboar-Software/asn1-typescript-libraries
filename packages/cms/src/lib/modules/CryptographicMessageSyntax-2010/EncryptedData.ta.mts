@@ -224,11 +224,11 @@ export function _encode_EncryptedData(
                         [
                             /* REQUIRED   */ _encode_CMSVersion(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_EncryptedContentInfo(
                                 value.encryptedContentInfo,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         [
@@ -238,15 +238,15 @@ export function _encode_EncryptedData(
                                     _TagClass.context,
                                     1,
                                     () => _encode_Attributes,
-                                    $.BER,
-                                ))(value.unprotectedAttrs, $.BER),
+                                    $.DER,
+                                ))(value.unprotectedAttrs, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

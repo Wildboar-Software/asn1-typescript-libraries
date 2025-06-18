@@ -169,12 +169,12 @@ export function _encode_Pentanomial(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.k1, $.BER),
-                        /* REQUIRED   */ $._encodeInteger(value.k2, $.BER),
-                        /* REQUIRED   */ $._encodeInteger(value.k3, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.k1, $.DER),
+                        /* REQUIRED   */ $._encodeInteger(value.k2, $.DER),
+                        /* REQUIRED   */ $._encodeInteger(value.k3, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

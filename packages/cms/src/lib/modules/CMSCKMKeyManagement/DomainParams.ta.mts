@@ -84,16 +84,16 @@ export function _encode_DomainParams(
                     _TagClass.context,
                     0,
                     () => _encode_DomainParameters,
-                    $.BER
+                    $.DER
                 ),
                 ecParams: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_ECDomainParameters,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DomainParams(value, elGetter);

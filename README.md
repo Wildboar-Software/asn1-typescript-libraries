@@ -48,20 +48,12 @@ done
 
 ## To Do
 
-- [ ] Use `$.DER` where appropriate
 - [ ] Refactor `XSD` into a separate module
-- [ ] Export via `index.mts` in some packages
 - [ ] Documentation
-- [ ] Single-module exports
-- [x] Deduplicate `COMPONENTS OF` spec arrays
-- [ ] Implement interfaces / subclasses where `COMPONENTS OF` is used
 - [ ] SNMPv3 (No formal module.)
 - [ ] F515 (No artifact for this...)
 - [ ] CAP (I already have code out there for this.)
-- [ ] RFC5915-ECPrivateKey
 - [ ] [CSTA](https://www.ecma-international.org/wp-content/uploads/ECMA-285_4th_edition_december_2011.pdf)
-- [ ] Remove unused imports
-- [ ] Remove unused exports
 - [ ] Prettify
 - [ ] Implement XER for CINF
 - [ ] Implement XER for RINF
@@ -76,7 +68,7 @@ done
 
 ## Usage
 
-These libraries expose few or no imports directly from the main file. Instead,
+Some libraries expose few or no imports directly from the main file. Instead,
 users must "deep-import" symbols from these libraries.
 
 ```typescript

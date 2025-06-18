@@ -15,9 +15,9 @@ import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultip
 /**
  * @summary ECCSupplements
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECCSupplements  ::=  CHOICE {
  *     namedMultiples [0] NamedMultiples,
@@ -59,9 +59,9 @@ let _cached_encoder_for_ECCSupplements: $.ASN1Encoder<ECCSupplements> | null = n
 export
 function _encode_ECCSupplements (value: ECCSupplements, elGetter: $.ASN1Encoder<ECCSupplements>) {
     if (!_cached_encoder_for_ECCSupplements) { _cached_encoder_for_ECCSupplements = $._encode_choice<ECCSupplements>({
-    "namedMultiples": $._encode_implicit(_TagClass.context, 0, () => _encode_NamedMultiples, $.BER),
-    "specifiedMultiples": $._encode_implicit(_TagClass.context, 1, () => _encode_SpecifiedMultiples, $.BER),
-}, $.BER); }
+    "namedMultiples": $._encode_implicit(_TagClass.context, 0, () => _encode_NamedMultiples, $.DER),
+    "specifiedMultiples": $._encode_implicit(_TagClass.context, 1, () => _encode_SpecifiedMultiples, $.DER),
+}, $.DER); }
     return _cached_encoder_for_ECCSupplements(value, elGetter);
 }
 

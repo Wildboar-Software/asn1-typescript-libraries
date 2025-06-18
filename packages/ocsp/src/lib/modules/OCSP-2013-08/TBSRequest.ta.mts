@@ -264,31 +264,31 @@ export function _encode_TBSRequest(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Version,
-                                  $.BER
-                              )(value.version, $.BER),
+                                  $.DER
+                              )(value.version, $.DER),
                         /* IF_ABSENT  */ value.requestorName === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_GeneralName,
-                                  $.BER
-                              )(value.requestorName, $.BER),
+                                  $.DER
+                              )(value.requestorName, $.DER),
                         /* REQUIRED   */ $._encodeSequenceOf<Request>(
                             () => _encode_Request,
-                            $.BER
-                        )(value.requestList, $.BER),
+                            $.DER
+                        )(value.requestList, $.DER),
                         /* IF_ABSENT  */ value.requestExtensions === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   2,
                                   () => _encode_Extensions,
-                                  $.BER
-                              )(value.requestExtensions, $.BER),
+                                  $.DER
+                              )(value.requestExtensions, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

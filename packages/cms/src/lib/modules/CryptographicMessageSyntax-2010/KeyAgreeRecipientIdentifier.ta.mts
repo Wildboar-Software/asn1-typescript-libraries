@@ -81,10 +81,10 @@ export function _encode_KeyAgreeRecipientIdentifier(
                     _TagClass.context,
                     0,
                     () => _encode_RecipientKeyIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_KeyAgreeRecipientIdentifier(value, elGetter);

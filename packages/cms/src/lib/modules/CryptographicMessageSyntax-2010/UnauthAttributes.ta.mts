@@ -56,7 +56,7 @@ export function _encode_UnauthAttributes(
     if (!_cached_encoder_for_UnauthAttributes) {
         _cached_encoder_for_UnauthAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UnauthAttributes(value, elGetter);

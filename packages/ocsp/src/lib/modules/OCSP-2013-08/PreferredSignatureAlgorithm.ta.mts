@@ -184,17 +184,17 @@ export function _encode_PreferredSignatureAlgorithm(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.sigIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certIdentifier === undefined
                             ? undefined
                             : _encode_AlgorithmIdentifier(
                                   value.certIdentifier,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

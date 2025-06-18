@@ -170,15 +170,15 @@ export function _encode_PublicKeyAndChallenge(
                     .concat([
                         /* REQUIRED   */ _encode_SubjectPublicKeyInfo(
                             value.spki,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeIA5String(
                             value.challenge,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

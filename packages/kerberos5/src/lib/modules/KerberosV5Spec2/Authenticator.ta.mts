@@ -384,70 +384,70 @@ export function _encode_Authenticator(
                   _TagClass.context,
                   0,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.authenticator_vno, $.BER),
+                  $.DER
+                )(value.authenticator_vno, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Realm,
-                  $.BER
-                )(value.crealm, $.BER),
+                  $.DER
+                )(value.crealm, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.cname, $.BER),
+                  $.DER
+                )(value.cname, $.DER),
                 /* IF_ABSENT  */ value.cksum === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       3,
                       () => _encode_Checksum,
-                      $.BER
-                    )(value.cksum, $.BER),
+                      $.DER
+                    )(value.cksum, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_Microseconds,
-                  $.BER
-                )(value.cusec, $.BER),
+                  $.DER
+                )(value.cusec, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   5,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.ctime, $.BER),
+                  $.DER
+                )(value.ctime, $.DER),
                 /* IF_ABSENT  */ value.subkey === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       6,
                       () => _encode_EncryptionKey,
-                      $.BER
-                    )(value.subkey, $.BER),
+                      $.DER
+                    )(value.subkey, $.DER),
                 /* IF_ABSENT  */ value.seq_number === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       7,
                       () => _encode_UInt32,
-                      $.BER
-                    )(value.seq_number, $.BER),
+                      $.DER
+                    )(value.seq_number, $.DER),
                 /* IF_ABSENT  */ value.authorization_data === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       8,
                       () => _encode_AuthorizationData,
-                      $.BER
-                    )(value.authorization_data, $.BER),
+                      $.DER
+                    )(value.authorization_data, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_Authenticator(value, elGetter);

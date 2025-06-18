@@ -96,22 +96,22 @@ export function _encode_SMIMEEncryptionKeyPreference(
                     _TagClass.context,
                     0,
                     () => _encode_IssuerAndSerialNumber,
-                    $.BER
+                    $.DER
                 ),
                 receipentKeyId: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_RecipientKeyIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 subjectAltKeyIdentifier: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_SubjectKeyIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SMIMEEncryptionKeyPreference(value, elGetter);

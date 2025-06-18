@@ -79,10 +79,10 @@ export function _encode_EncryptedKey(
                     _TagClass.context,
                     0,
                     () => _encode_EnvelopedData,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EncryptedKey(value, elGetter);

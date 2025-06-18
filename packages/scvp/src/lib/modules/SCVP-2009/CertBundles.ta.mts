@@ -60,7 +60,7 @@ export function _encode_CertBundles(
   if (!_cached_encoder_for_CertBundles) {
     _cached_encoder_for_CertBundles = $._encodeSequenceOf<CertBundle>(
       () => _encode_CertBundle,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_CertBundles(value, elGetter);

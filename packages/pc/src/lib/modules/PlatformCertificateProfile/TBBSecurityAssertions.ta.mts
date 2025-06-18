@@ -226,14 +226,14 @@ function _encode_TBBSecurityAssertions (value: TBBSecurityAssertions, elGetter: 
     if (!_cached_encoder_for_TBBSecurityAssertions) { _cached_encoder_for_TBBSecurityAssertions = function (value: TBBSecurityAssertions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TBBSecurityAssertions._default_value_for_version) ? undefined : _encode_Version(value.version, $.BER)),
-            /* IF_ABSENT  */ ((value.ccInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CommonCriteriaMeasures, $.BER)(value.ccInfo, $.BER)),
-            /* IF_ABSENT  */ ((value.fipsLevel === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_FIPSLevel, $.BER)(value.fipsLevel, $.BER)),
-            /* IF_ABSENT  */ ((value.rtmType === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_MeasurementRootType, $.BER)(value.rtmType, $.BER)),
-            /* IF_DEFAULT */ (value.iso9000Certified === undefined || $.deepEq(value.iso9000Certified, TBBSecurityAssertions._default_value_for_iso9000Certified) ? undefined : $._encodeBoolean(value.iso9000Certified, $.BER)),
-            /* IF_ABSENT  */ ((value.iso9000Uri === undefined) ? undefined : $._encodeIA5String(value.iso9000Uri, $.BER))
+            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TBBSecurityAssertions._default_value_for_version) ? undefined : _encode_Version(value.version, $.DER)),
+            /* IF_ABSENT  */ ((value.ccInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CommonCriteriaMeasures, $.DER)(value.ccInfo, $.DER)),
+            /* IF_ABSENT  */ ((value.fipsLevel === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_FIPSLevel, $.DER)(value.fipsLevel, $.DER)),
+            /* IF_ABSENT  */ ((value.rtmType === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_MeasurementRootType, $.DER)(value.rtmType, $.DER)),
+            /* IF_DEFAULT */ (value.iso9000Certified === undefined || $.deepEq(value.iso9000Certified, TBBSecurityAssertions._default_value_for_iso9000Certified) ? undefined : $._encodeBoolean(value.iso9000Certified, $.DER)),
+            /* IF_ABSENT  */ ((value.iso9000Uri === undefined) ? undefined : $._encodeIA5String(value.iso9000Uri, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_TBBSecurityAssertions(value, elGetter);
 }

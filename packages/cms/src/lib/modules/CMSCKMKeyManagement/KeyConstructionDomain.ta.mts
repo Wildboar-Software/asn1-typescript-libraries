@@ -214,18 +214,18 @@ export function _encode_KeyConstructionDomain(
                     .concat([
                         /* REQUIRED   */ _encode_DomainName(
                             value.domainName,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_DomainMaintenanceLevel(
                             value.domainMaintenanceLevel,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.domainParams === undefined
                             ? undefined
-                            : _encode_DomainParams(value.domainParams, $.BER),
+                            : _encode_DomainParams(value.domainParams, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

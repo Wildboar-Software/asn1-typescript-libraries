@@ -47,7 +47,7 @@ export function _encode_PKIFreeText(
     if (!_cached_encoder_for_PKIFreeText) {
         _cached_encoder_for_PKIFreeText = $._encodeSequenceOf<UTF8String>(
             () => $._encodeUTF8String,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PKIFreeText(value, elGetter);

@@ -164,11 +164,11 @@ function _encode_URIReference (value: URIReference, elGetter: $.ASN1Encoder<URIR
     if (!_cached_encoder_for_URIReference) { _cached_encoder_for_URIReference = function (value: URIReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeIA5String(value.uniformResourceIdentifier, $.BER),
-            /* IF_ABSENT  */ ((value.hashAlgorithm === undefined) ? undefined : _encode_AlgorithmIdentifier(value.hashAlgorithm, $.BER)),
-            /* IF_ABSENT  */ ((value.hashValue === undefined) ? undefined : $._encodeBitString(value.hashValue, $.BER))
+            /* REQUIRED   */ $._encodeIA5String(value.uniformResourceIdentifier, $.DER),
+            /* IF_ABSENT  */ ((value.hashAlgorithm === undefined) ? undefined : _encode_AlgorithmIdentifier(value.hashAlgorithm, $.DER)),
+            /* IF_ABSENT  */ ((value.hashValue === undefined) ? undefined : $._encodeBitString(value.hashValue, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_URIReference(value, elGetter);
 }

@@ -16,9 +16,9 @@ import { SpecifiedECDomain, _decode_SpecifiedECDomain, _encode_SpecifiedECDomain
 /**
  * @summary ECDomainParameters
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECDomainParameters{ECDOMAIN:IOSet}  ::=  CHOICE {
  *     specified   SpecifiedECDomain,
@@ -66,7 +66,7 @@ function _encode_ECDomainParameters (value: ECDomainParameters, elGetter: $.ASN1
     "specified": _encode_SpecifiedECDomain,
     "named": $._encodeObjectIdentifier,
     "implicitCA": $._encodeNull,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_ECDomainParameters(value, elGetter);
 }
 

@@ -60,7 +60,7 @@ export function _encode_ReplyObjects(
   if (!_cached_encoder_for_ReplyObjects) {
     _cached_encoder_for_ReplyObjects = $._encodeSequenceOf<CertReply>(
       () => _encode_CertReply,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_ReplyObjects(value, elGetter);

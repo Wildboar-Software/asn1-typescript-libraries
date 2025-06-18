@@ -168,15 +168,15 @@ export function _encode_SubjectPublicKeyInfo(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.subjectPublicKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -181,17 +181,17 @@ export function _encode_AD_AND_OR(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.condition_count, $.BER),
+              $.DER
+            )(value.condition_count, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => _encode_AuthorizationData,
-              $.BER
-            )(value.elements, $.BER),
+              $.DER
+            )(value.elements, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

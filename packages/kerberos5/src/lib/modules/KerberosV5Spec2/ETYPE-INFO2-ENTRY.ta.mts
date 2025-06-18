@@ -215,27 +215,27 @@ export function _encode_ETYPE_INFO2_ENTRY(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.etype, $.BER),
+              $.DER
+            )(value.etype, $.DER),
             /* IF_ABSENT  */ value.salt === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_KerberosString,
-                  $.BER
-                )(value.salt, $.BER),
+                  $.DER
+                )(value.salt, $.DER),
             /* IF_ABSENT  */ value.s2kparams === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => $._encodeOctetString,
-                  $.BER
-                )(value.s2kparams, $.BER),
+                  $.DER
+                )(value.s2kparams, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

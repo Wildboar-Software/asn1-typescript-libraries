@@ -174,17 +174,17 @@ export function _encode_PA_DATA(
               _TagClass.context,
               1,
               () => _encode_Int32,
-              $.BER
-            )(value.padata_type, $.BER),
+              $.DER
+            )(value.padata_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               2,
               () => $._encodeOctetString,
-              $.BER
-            )(value.padata_value, $.BER),
+              $.DER
+            )(value.padata_value, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

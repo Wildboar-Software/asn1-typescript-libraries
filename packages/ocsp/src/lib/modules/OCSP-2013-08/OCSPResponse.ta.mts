@@ -193,7 +193,7 @@ export function _encode_OCSPResponse(
                     .concat([
                         /* REQUIRED   */ _encode_OCSPResponseStatus(
                             value.responseStatus,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.responseBytes === undefined
                             ? undefined
@@ -201,11 +201,11 @@ export function _encode_OCSPResponse(
                                   _TagClass.context,
                                   0,
                                   () => _encode_ResponseBytes,
-                                  $.BER
-                              )(value.responseBytes, $.BER),
+                                  $.DER
+                              )(value.responseBytes, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -14,9 +14,9 @@ import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttri
 /**
  * @summary SignerAttribute
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SignerAttribute  ::=  SEQUENCE OF CHOICE {
  *     claimedAttributes       [0] ClaimedAttributes,
@@ -51,7 +51,7 @@ let _cached_encoder_for_SignerAttribute: $.ASN1Encoder<SignerAttribute> | null =
  */
 export
 function _encode_SignerAttribute (value: SignerAttribute, elGetter: $.ASN1Encoder<SignerAttribute>) {
-    if (!_cached_encoder_for_SignerAttribute) { _cached_encoder_for_SignerAttribute = $._encodeSequenceOf<SignerAttribute_Item>(() => _encode_SignerAttribute_Item, $.BER); }
+    if (!_cached_encoder_for_SignerAttribute) { _cached_encoder_for_SignerAttribute = $._encodeSequenceOf<SignerAttribute_Item>(() => _encode_SignerAttribute_Item, $.DER); }
     return _cached_encoder_for_SignerAttribute(value, elGetter);
 }
 

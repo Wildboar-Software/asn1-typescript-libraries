@@ -15,15 +15,15 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
 /**
  * @summary NamedMultiples
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * NamedMultiples ::= SEQUENCE {
  *     multiples OBJECT IDENTIFIER,
  *     points SEQUENCE OF ECPoint }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -46,9 +46,9 @@ class NamedMultiples {
     /**
      * @summary Restructures an object into a NamedMultiples
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `NamedMultiples`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -65,9 +65,9 @@ class NamedMultiples {
 /**
  * @summary The Leading Root Component Types of NamedMultiples
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -79,27 +79,27 @@ const _root_component_type_list_1_spec_for_NamedMultiples: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of NamedMultiples
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_NamedMultiples: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of NamedMultiples
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_NamedMultiples: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_NamedMultiples: $.ASN1Decoder<NamedMultiples> | null = null;
@@ -146,10 +146,10 @@ function _encode_NamedMultiples (value: NamedMultiples, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_NamedMultiples) { _cached_encoder_for_NamedMultiples = function (value: NamedMultiples): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.multiples, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<ECPoint>(() => _encode_ECPoint, $.BER)(value.points, $.BER)
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.multiples, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<ECPoint>(() => _encode_ECPoint, $.DER)(value.points, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_NamedMultiples(value, elGetter);
 }

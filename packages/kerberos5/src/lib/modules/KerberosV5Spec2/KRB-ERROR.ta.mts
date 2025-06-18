@@ -459,98 +459,98 @@ export function _encode_KRB_ERROR(
                   _TagClass.context,
                   0,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.pvno, $.BER),
+                  $.DER
+                )(value.pvno, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.msg_type, $.BER),
+                  $.DER
+                )(value.msg_type, $.DER),
                 /* IF_ABSENT  */ value.ctime === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       2,
                       () => _encode_KerberosTime,
-                      $.BER
-                    )(value.ctime, $.BER),
+                      $.DER
+                    )(value.ctime, $.DER),
                 /* IF_ABSENT  */ value.cusec === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       3,
                       () => _encode_Microseconds,
-                      $.BER
-                    )(value.cusec, $.BER),
+                      $.DER
+                    )(value.cusec, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.stime, $.BER),
+                  $.DER
+                )(value.stime, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   5,
                   () => _encode_Microseconds,
-                  $.BER
-                )(value.susec, $.BER),
+                  $.DER
+                )(value.susec, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   6,
                   () => _encode_Int32,
-                  $.BER
-                )(value.error_code, $.BER),
+                  $.DER
+                )(value.error_code, $.DER),
                 /* IF_ABSENT  */ value.crealm === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       7,
                       () => _encode_Realm,
-                      $.BER
-                    )(value.crealm, $.BER),
+                      $.DER
+                    )(value.crealm, $.DER),
                 /* IF_ABSENT  */ value.cname === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       8,
                       () => _encode_PrincipalName,
-                      $.BER
-                    )(value.cname, $.BER),
+                      $.DER
+                    )(value.cname, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   9,
                   () => _encode_Realm,
-                  $.BER
-                )(value.realm, $.BER),
+                  $.DER
+                )(value.realm, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   10,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.sname, $.BER),
+                  $.DER
+                )(value.sname, $.DER),
                 /* IF_ABSENT  */ value.e_text === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       11,
                       () => _encode_KerberosString,
-                      $.BER
-                    )(value.e_text, $.BER),
+                      $.DER
+                    )(value.e_text, $.DER),
                 /* IF_ABSENT  */ value.e_data === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       12,
                       () => $._encodeOctetString,
-                      $.BER
-                    )(value.e_data, $.BER),
+                      $.DER
+                    )(value.e_data, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_KRB_ERROR(value, elGetter);

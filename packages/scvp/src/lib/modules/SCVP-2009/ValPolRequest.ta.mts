@@ -187,11 +187,11 @@ export function _encode_ValPolRequest(
               ValPolRequest._default_value_for_vpRequestVersion
             )
               ? undefined
-              : $._encodeInteger(value.vpRequestVersion, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.requestNonce, $.BER),
+              : $._encodeInteger(value.vpRequestVersion, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.requestNonce, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

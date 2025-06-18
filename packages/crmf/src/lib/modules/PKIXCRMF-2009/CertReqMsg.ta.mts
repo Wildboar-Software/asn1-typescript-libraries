@@ -202,20 +202,20 @@ export function _encode_CertReqMsg(
                     .concat([
                         /* REQUIRED   */ _encode_CertRequest(
                             value.certReq,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.popo === undefined
                             ? undefined
-                            : _encode_ProofOfPossession(value.popo, $.BER),
+                            : _encode_ProofOfPossession(value.popo, $.DER),
                         /* IF_ABSENT  */ value.regInfo === undefined
                             ? undefined
                             : $._encodeSequenceOf<SingleAttribute>(
                                   () => _encode_SingleAttribute,
-                                  $.BER
-                              )(value.regInfo, $.BER),
+                                  $.DER
+                              )(value.regInfo, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

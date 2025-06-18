@@ -166,12 +166,12 @@ export function _encode_NameValidationAlgParams(
           .concat([
             /* REQUIRED   */ $._encodeObjectIdentifier(
               value.nameCompAlgId,
-              $.BER
+              $.DER
             ),
-            /* REQUIRED   */ _encode_GeneralNames(value.validationNames, $.BER),
+            /* REQUIRED   */ _encode_GeneralNames(value.validationNames, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

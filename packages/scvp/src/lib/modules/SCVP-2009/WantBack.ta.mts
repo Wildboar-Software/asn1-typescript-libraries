@@ -57,7 +57,7 @@ export function _encode_WantBack(
   if (!_cached_encoder_for_WantBack) {
     _cached_encoder_for_WantBack = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._encodeObjectIdentifier,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_WantBack(value, elGetter);

@@ -209,23 +209,23 @@ export function _encode_PBMParameter(
                     .concat([
                         /* REQUIRED   */ $._encodeOctetString(
                             value.salt,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.owf,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeInteger(
                             value.iterationCount,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.mac,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

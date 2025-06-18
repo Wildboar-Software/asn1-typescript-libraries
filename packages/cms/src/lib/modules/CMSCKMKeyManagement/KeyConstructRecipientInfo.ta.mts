@@ -290,30 +290,30 @@ export function _encode_KeyConstructRecipientInfo(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Version(value.version, $.BER),
+                        /* REQUIRED   */ _encode_Version(value.version, $.DER),
                         /* IF_ABSENT  */ value.did === undefined
                             ? undefined
-                            : _encode_KeyConstructionDomain(value.did, $.BER),
+                            : _encode_KeyConstructionDomain(value.did, $.DER),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             0,
                             () => _encode_KeyConstructionRecipient,
-                            $.BER
-                        )(value.ckmid, $.BER),
+                            $.DER
+                        )(value.ckmid, $.DER),
                         /* IF_ABSENT  */ value.ukm === undefined
                             ? undefined
-                            : _encode_UserKeyingMaterial(value.ukm, $.BER),
+                            : _encode_UserKeyingMaterial(value.ukm, $.DER),
                         /* REQUIRED   */ _encode_KeyConstructionAlgorithmIdentifier(
                             value.keyConstructionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_EncryptedKey(
                             value.encryptedRandom,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

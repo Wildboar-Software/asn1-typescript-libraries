@@ -17,16 +17,16 @@ import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS
 /**
  * @summary CrlOcspRef
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CrlOcspRef ::= SEQUENCE {
  *     crlids      [0] CRLListID OPTIONAL,
  *     ocspids     [1] OcspListID OPTIONAL,
  *     otherRev    [2] OtherRevRefs OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -55,9 +55,9 @@ class CrlOcspRef {
     /**
      * @summary Restructures an object into a CrlOcspRef
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CrlOcspRef`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -74,9 +74,9 @@ class CrlOcspRef {
 /**
  * @summary The Leading Root Component Types of CrlOcspRef
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -89,27 +89,27 @@ const _root_component_type_list_1_spec_for_CrlOcspRef: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of CrlOcspRef
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_CrlOcspRef: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of CrlOcspRef
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_CrlOcspRef: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_CrlOcspRef: $.ASN1Decoder<CrlOcspRef> | null = null;
@@ -164,11 +164,11 @@ function _encode_CrlOcspRef (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspR
     if (!_cached_encoder_for_CrlOcspRef) { _cached_encoder_for_CrlOcspRef = function (value: CrlOcspRef): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.crlids === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_CRLListID, $.BER)(value.crlids, $.BER)),
-            /* IF_ABSENT  */ ((value.ocspids === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_OcspListID, $.BER)(value.ocspids, $.BER)),
-            /* IF_ABSENT  */ ((value.otherRev === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_OtherRevRefs, $.BER)(value.otherRev, $.BER))
+            /* IF_ABSENT  */ ((value.crlids === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_CRLListID, $.DER)(value.crlids, $.DER)),
+            /* IF_ABSENT  */ ((value.ocspids === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_OcspListID, $.DER)(value.ocspids, $.DER)),
+            /* IF_ABSENT  */ ((value.otherRev === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_OtherRevRefs, $.DER)(value.otherRev, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CrlOcspRef(value, elGetter);
 }

@@ -278,28 +278,28 @@ export function _encode_ECParameters(
                         [
                             /* REQUIRED   */ _encode_ECParameters_version(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_FieldID(
                                 value.fieldID,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ _encode_Curve(value.curve, $.BER),
-                            /* REQUIRED   */ _encode_ECPoint(value.base, $.BER),
+                            /* REQUIRED   */ _encode_Curve(value.curve, $.DER),
+                            /* REQUIRED   */ _encode_ECPoint(value.base, $.DER),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.order,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.cofactor === undefined
                                 ? undefined
-                                : $._encodeInteger(value.cofactor, $.BER),
+                                : $._encodeInteger(value.cofactor, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

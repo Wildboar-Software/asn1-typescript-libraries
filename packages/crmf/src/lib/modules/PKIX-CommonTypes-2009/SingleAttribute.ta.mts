@@ -158,12 +158,12 @@ export function _encode_SingleAttribute(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.value, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.value, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

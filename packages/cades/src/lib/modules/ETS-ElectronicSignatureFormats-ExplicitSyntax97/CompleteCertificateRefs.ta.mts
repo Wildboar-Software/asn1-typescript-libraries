@@ -14,9 +14,9 @@ import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-El
 /**
  * @summary CompleteCertificateRefs
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CompleteCertificateRefs  ::=  SEQUENCE OF OtherCertID
  * ```
@@ -49,7 +49,7 @@ let _cached_encoder_for_CompleteCertificateRefs: $.ASN1Encoder<CompleteCertifica
  */
 export
 function _encode_CompleteCertificateRefs (value: CompleteCertificateRefs, elGetter: $.ASN1Encoder<CompleteCertificateRefs>) {
-    if (!_cached_encoder_for_CompleteCertificateRefs) { _cached_encoder_for_CompleteCertificateRefs = $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.BER); }
+    if (!_cached_encoder_for_CompleteCertificateRefs) { _cached_encoder_for_CompleteCertificateRefs = $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.DER); }
     return _cached_encoder_for_CompleteCertificateRefs(value, elGetter);
 }
 

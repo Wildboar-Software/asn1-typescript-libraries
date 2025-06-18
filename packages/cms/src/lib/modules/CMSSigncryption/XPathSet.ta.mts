@@ -56,7 +56,7 @@ export function _encode_XPathSet(
     if (!_cached_encoder_for_XPathSet) {
         _cached_encoder_for_XPathSet = $._encodeSequenceOf<XPath>(
             () => _encode_XPath,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_XPathSet(value, elGetter);

@@ -16,15 +16,15 @@ import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../
 /**
  * @summary CrlValidatedID
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CrlValidatedID ::= SEQUENCE {
  *     crlHash         OtherHash,
  *     crlIdentifier   CrlIdentifier OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -47,9 +47,9 @@ class CrlValidatedID {
     /**
      * @summary Restructures an object into a CrlValidatedID
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CrlValidatedID`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -66,9 +66,9 @@ class CrlValidatedID {
 /**
  * @summary The Leading Root Component Types of CrlValidatedID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -80,27 +80,27 @@ const _root_component_type_list_1_spec_for_CrlValidatedID: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of CrlValidatedID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_CrlValidatedID: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of CrlValidatedID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_CrlValidatedID: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_CrlValidatedID: $.ASN1Decoder<CrlValidatedID> | null = null;
@@ -152,10 +152,10 @@ function _encode_CrlValidatedID (value: CrlValidatedID, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_CrlValidatedID) { _cached_encoder_for_CrlValidatedID = function (value: CrlValidatedID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_OtherHash(value.crlHash, $.BER),
-            /* IF_ABSENT  */ ((value.crlIdentifier === undefined) ? undefined : _encode_CrlIdentifier(value.crlIdentifier, $.BER))
+            /* REQUIRED   */ _encode_OtherHash(value.crlHash, $.DER),
+            /* IF_ABSENT  */ ((value.crlIdentifier === undefined) ? undefined : _encode_CrlIdentifier(value.crlIdentifier, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CrlValidatedID(value, elGetter);
 }

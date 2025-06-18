@@ -49,7 +49,7 @@ let _cached_encoder_for_TrustAnchorList: $.ASN1Encoder<TrustAnchorList> | null =
  */
 export
 function _encode_TrustAnchorList (value: TrustAnchorList, elGetter: $.ASN1Encoder<TrustAnchorList>) {
-    if (!_cached_encoder_for_TrustAnchorList) { _cached_encoder_for_TrustAnchorList = $._encodeSequenceOf<TrustAnchorChoice>(() => _encode_TrustAnchorChoice, $.BER); }
+    if (!_cached_encoder_for_TrustAnchorList) { _cached_encoder_for_TrustAnchorList = $._encodeSequenceOf<TrustAnchorChoice>(() => _encode_TrustAnchorChoice, $.DER); }
     return _cached_encoder_for_TrustAnchorList(value, elGetter);
 }
 

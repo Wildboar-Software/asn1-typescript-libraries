@@ -56,7 +56,7 @@ export function _encode_KeyConstructionLabels(
     if (!_cached_encoder_for_KeyConstructionLabels) {
         _cached_encoder_for_KeyConstructionLabels = $._encodeSequenceOf<KeyConstructionLabel>(
             () => _encode_KeyConstructionLabel,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_KeyConstructionLabels(value, elGetter);

@@ -67,7 +67,7 @@ export function _encode_EncASRepPart(
       _TagClass.application,
       25,
       () => _encode_EncKDCRepPart,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_EncASRepPart(value, elGetter);

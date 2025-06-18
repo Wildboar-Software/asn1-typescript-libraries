@@ -162,11 +162,11 @@ export function _encode_DSA_Sig_Value(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.r, $.BER),
-                        /* REQUIRED   */ $._encodeInteger(value.s, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.r, $.DER),
+                        /* REQUIRED   */ $._encodeInteger(value.s, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

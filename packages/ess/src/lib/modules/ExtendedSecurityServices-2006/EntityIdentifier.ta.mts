@@ -79,7 +79,7 @@ export function _encode_EntityIdentifier(
                 issuerAndSerialNumber: _encode_IssuerAndSerialNumber,
                 subjectKeyIdentifier: _encode_SubjectKeyIdentifier,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EntityIdentifier(value, elGetter);

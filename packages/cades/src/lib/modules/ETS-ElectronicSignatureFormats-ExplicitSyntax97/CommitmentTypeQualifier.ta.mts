@@ -15,15 +15,15 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary CommitmentTypeQualifier
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CommitmentTypeQualifier ::= SEQUENCE {
  *     commitmentQualifierId       COMMITMENT-QUALIFIER.&id,
  *     qualifier                   COMMITMENT-QUALIFIER.&Qualifier OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -46,9 +46,9 @@ class CommitmentTypeQualifier {
     /**
      * @summary Restructures an object into a CommitmentTypeQualifier
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CommitmentTypeQualifier`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -65,9 +65,9 @@ class CommitmentTypeQualifier {
 /**
  * @summary The Leading Root Component Types of CommitmentTypeQualifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -79,27 +79,27 @@ const _root_component_type_list_1_spec_for_CommitmentTypeQualifier: $.ComponentS
 /**
  * @summary The Trailing Root Component Types of CommitmentTypeQualifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_CommitmentTypeQualifier: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of CommitmentTypeQualifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_CommitmentTypeQualifier: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_CommitmentTypeQualifier: $.ASN1Decoder<CommitmentTypeQualifier> | null = null;
@@ -151,10 +151,10 @@ function _encode_CommitmentTypeQualifier (value: CommitmentTypeQualifier, elGett
     if (!_cached_encoder_for_CommitmentTypeQualifier) { _cached_encoder_for_CommitmentTypeQualifier = function (value: CommitmentTypeQualifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.commitmentQualifierId, $.BER),
-            /* IF_ABSENT  */ ((value.qualifier === undefined) ? undefined : $._encodeAny(value.qualifier, $.BER))
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.commitmentQualifierId, $.DER),
+            /* IF_ABSENT  */ ((value.qualifier === undefined) ? undefined : $._encodeAny(value.qualifier, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CommitmentTypeQualifier(value, elGetter);
 }

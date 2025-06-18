@@ -15,13 +15,13 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
 /**
  * @summary SpecifiedMultiples_Item
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SpecifiedMultiples-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -44,9 +44,9 @@ class SpecifiedMultiples_Item {
     /**
      * @summary Restructures an object into a SpecifiedMultiples_Item
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SpecifiedMultiples_Item`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -63,9 +63,9 @@ class SpecifiedMultiples_Item {
 /**
  * @summary The Leading Root Component Types of SpecifiedMultiples_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -77,27 +77,27 @@ const _root_component_type_list_1_spec_for_SpecifiedMultiples_Item: $.ComponentS
 /**
  * @summary The Trailing Root Component Types of SpecifiedMultiples_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SpecifiedMultiples_Item: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of SpecifiedMultiples_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SpecifiedMultiples_Item: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_SpecifiedMultiples_Item: $.ASN1Decoder<SpecifiedMultiples_Item> | null = null;
@@ -144,10 +144,10 @@ function _encode_SpecifiedMultiples_Item (value: SpecifiedMultiples_Item, elGett
     if (!_cached_encoder_for_SpecifiedMultiples_Item) { _cached_encoder_for_SpecifiedMultiples_Item = function (value: SpecifiedMultiples_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.multiple, $.BER),
-            /* REQUIRED   */ _encode_ECPoint(value.point, $.BER)
+            /* REQUIRED   */ $._encodeInteger(value.multiple, $.DER),
+            /* REQUIRED   */ _encode_ECPoint(value.point, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SpecifiedMultiples_Item(value, elGetter);
 }

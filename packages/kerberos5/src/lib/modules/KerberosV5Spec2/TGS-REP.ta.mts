@@ -67,7 +67,7 @@ export function _encode_TGS_REP(
       _TagClass.application,
       13,
       () => _encode_KDC_REP,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_TGS_REP(value, elGetter);

@@ -82,16 +82,16 @@ export function _encode_RequestReference(
           _TagClass.context,
           0,
           () => _encode_HashValue,
-          $.BER
+          $.DER
         ),
         fullRequest: $._encode_implicit(
           _TagClass.context,
           1,
           () => _encode_CVRequest,
-          $.BER
+          $.DER
         ),
       },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_RequestReference(value, elGetter);

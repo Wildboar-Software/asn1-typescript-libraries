@@ -162,17 +162,17 @@ export function _encode_ContentInfo(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.contentType,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             0,
                             () => $._encodeAny,
-                            $.BER
-                        )(value.content, $.BER),
+                            $.DER
+                        )(value.content, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

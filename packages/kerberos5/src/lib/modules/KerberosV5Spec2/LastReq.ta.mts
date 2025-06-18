@@ -68,7 +68,7 @@ export function _encode_LastReq(
   if (!_cached_encoder_for_LastReq) {
     _cached_encoder_for_LastReq = $._encodeSequenceOf<LastReq_Item>(
       () => _encode_LastReq_Item,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_LastReq(value, elGetter);

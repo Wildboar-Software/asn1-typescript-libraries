@@ -160,15 +160,15 @@ export function _encode_ECPKRestrictions(
                     .concat([
                         /* REQUIRED   */ _encode_ECDomainParameters(
                             value.ecDomain,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_ECCAlgorithms(
                             value.eccAlgorithms,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

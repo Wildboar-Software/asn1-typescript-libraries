@@ -16,9 +16,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary SMIMECapability
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SMIMECapability{SMIME-CAPS:CapabilitySet} ::= SEQUENCE {
  * capabilityID    SMIME-CAPS.&id({CapabilitySet}),
@@ -26,7 +26,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *                 OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -49,9 +49,9 @@ class SMIMECapability {
     /**
      * @summary Restructures an object into a SMIMECapability
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SMIMECapability`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -69,9 +69,9 @@ class SMIMECapability {
 /**
  * @summary The Leading Root Component Types of SMIMECapability
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -84,28 +84,28 @@ const _root_component_type_list_1_spec_for_SMIMECapability: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of SMIMECapability
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_SMIMECapability: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of SMIMECapability
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_SMIMECapability: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -161,10 +161,10 @@ function _encode_SMIMECapability (value: SMIMECapability, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_SMIMECapability) { _cached_encoder_for_SMIMECapability = function (value: SMIMECapability): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.capabilityID, $.BER),
-            /* IF_ABSENT  */ ((value.parameters === undefined) ? undefined : $._encodeAny(value.parameters, $.BER))
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.capabilityID, $.DER),
+            /* IF_ABSENT  */ ((value.parameters === undefined) ? undefined : $._encodeAny(value.parameters, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SMIMECapability(value, elGetter);
 }

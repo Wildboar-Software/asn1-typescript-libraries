@@ -202,14 +202,14 @@ function _encode_CertPathControls (value: CertPathControls, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_CertPathControls) { _cached_encoder_for_CertPathControls = function (value: CertPathControls): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_Name(value.taName, $.BER),
-            /* IF_ABSENT  */ ((value.certificate === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Certificate, $.BER)(value.certificate, $.BER)),
-            /* IF_ABSENT  */ ((value.policySet === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_CertificatePoliciesSyntax, $.BER)(value.policySet, $.BER)),
-            /* IF_ABSENT  */ ((value.policyFlags === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CertPolicyFlags, $.BER)(value.policyFlags, $.BER)),
-            /* IF_ABSENT  */ ((value.nameConstr === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_NameConstraintsSyntax, $.BER)(value.nameConstr, $.BER)),
-            /* IF_ABSENT  */ ((value.pathLenConstraint === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER)(value.pathLenConstraint, $.BER))
+            /* REQUIRED   */ _encode_Name(value.taName, $.DER),
+            /* IF_ABSENT  */ ((value.certificate === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Certificate, $.DER)(value.certificate, $.DER)),
+            /* IF_ABSENT  */ ((value.policySet === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_CertificatePoliciesSyntax, $.DER)(value.policySet, $.DER)),
+            /* IF_ABSENT  */ ((value.policyFlags === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CertPolicyFlags, $.DER)(value.policyFlags, $.DER)),
+            /* IF_ABSENT  */ ((value.nameConstr === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_NameConstraintsSyntax, $.DER)(value.nameConstr, $.DER)),
+            /* IF_ABSENT  */ ((value.pathLenConstraint === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.DER)(value.pathLenConstraint, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CertPathControls(value, elGetter);
 }

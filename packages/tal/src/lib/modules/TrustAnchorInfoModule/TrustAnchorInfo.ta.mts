@@ -220,15 +220,15 @@ function _encode_TrustAnchorInfo (value: TrustAnchorInfo, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_TrustAnchorInfo) { _cached_encoder_for_TrustAnchorInfo = function (value: TrustAnchorInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TrustAnchorInfo._default_value_for_version) ? undefined : _encode_TrustAnchorInfoVersion(value.version, $.BER)),
-            /* REQUIRED   */ _encode_SubjectPublicKeyInfo(value.pubKey, $.BER),
-            /* REQUIRED   */ _encode_KeyIdentifier(value.keyId, $.BER),
-            /* IF_ABSENT  */ ((value.taTitle === undefined) ? undefined : _encode_TrustAnchorTitle(value.taTitle, $.BER)),
-            /* IF_ABSENT  */ ((value.certPath === undefined) ? undefined : _encode_CertPathControls(value.certPath, $.BER)),
-            /* IF_ABSENT  */ ((value.exts === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_Extensions, $.BER)(value.exts, $.BER)),
-            /* IF_ABSENT  */ ((value.taTitleLangTag === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeUTF8String, $.BER)(value.taTitleLangTag, $.BER))
+            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TrustAnchorInfo._default_value_for_version) ? undefined : _encode_TrustAnchorInfoVersion(value.version, $.DER)),
+            /* REQUIRED   */ _encode_SubjectPublicKeyInfo(value.pubKey, $.DER),
+            /* REQUIRED   */ _encode_KeyIdentifier(value.keyId, $.DER),
+            /* IF_ABSENT  */ ((value.taTitle === undefined) ? undefined : _encode_TrustAnchorTitle(value.taTitle, $.DER)),
+            /* IF_ABSENT  */ ((value.certPath === undefined) ? undefined : _encode_CertPathControls(value.certPath, $.DER)),
+            /* IF_ABSENT  */ ((value.exts === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_Extensions, $.DER)(value.exts, $.DER)),
+            /* IF_ABSENT  */ ((value.taTitleLangTag === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeUTF8String, $.DER)(value.taTitleLangTag, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_TrustAnchorInfo(value, elGetter);
 }

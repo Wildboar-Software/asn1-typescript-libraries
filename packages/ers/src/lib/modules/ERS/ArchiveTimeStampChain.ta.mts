@@ -15,9 +15,9 @@ import { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } 
 /**
  * @summary ArchiveTimeStampChain
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ArchiveTimeStampChain     ::=  SEQUENCE OF ArchiveTimeStamp
  * ```
@@ -54,7 +54,7 @@ let _cached_encoder_for_ArchiveTimeStampChain: $.ASN1Encoder<ArchiveTimeStampCha
  */
 export
 function _encode_ArchiveTimeStampChain (value: ArchiveTimeStampChain, elGetter: $.ASN1Encoder<ArchiveTimeStampChain>) {
-    if (!_cached_encoder_for_ArchiveTimeStampChain) { _cached_encoder_for_ArchiveTimeStampChain = $._encodeSequenceOf<ArchiveTimeStamp>(() => _encode_ArchiveTimeStamp, $.BER); }
+    if (!_cached_encoder_for_ArchiveTimeStampChain) { _cached_encoder_for_ArchiveTimeStampChain = $._encodeSequenceOf<ArchiveTimeStamp>(() => _encode_ArchiveTimeStamp, $.DER); }
     return _cached_encoder_for_ArchiveTimeStampChain(value, elGetter);
 }
 

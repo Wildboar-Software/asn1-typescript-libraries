@@ -14,15 +14,15 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary OtherRevRefs
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OtherRevRefs ::= SEQUENCE {
  *     otherRevRefType     OTHER-REVOCATION-REF.&id,
  *     otherRevRefs        SEQUENCE OF OTHER-REVOCATION-REF.&Type }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -45,9 +45,9 @@ class OtherRevRefs {
     /**
      * @summary Restructures an object into a OtherRevRefs
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `OtherRevRefs`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -64,9 +64,9 @@ class OtherRevRefs {
 /**
  * @summary The Leading Root Component Types of OtherRevRefs
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -78,27 +78,27 @@ const _root_component_type_list_1_spec_for_OtherRevRefs: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of OtherRevRefs
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_OtherRevRefs: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of OtherRevRefs
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_OtherRevRefs: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_OtherRevRefs: $.ASN1Decoder<OtherRevRefs> | null = null;
@@ -145,10 +145,10 @@ function _encode_OtherRevRefs (value: OtherRevRefs, elGetter: $.ASN1Encoder<Othe
     if (!_cached_encoder_for_OtherRevRefs) { _cached_encoder_for_OtherRevRefs = function (value: OtherRevRefs): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.otherRevRefType, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<_Element>(() => $._encodeAny, $.BER)(value.otherRevRefs, $.BER)
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.otherRevRefType, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<_Element>(() => $._encodeAny, $.DER)(value.otherRevRefs, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OtherRevRefs(value, elGetter);
 }

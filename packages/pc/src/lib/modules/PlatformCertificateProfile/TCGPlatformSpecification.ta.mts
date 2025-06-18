@@ -15,15 +15,15 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
 /**
  * @summary TCGPlatformSpecification
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TCGPlatformSpecification ::= SEQUENCE {
  *     version             TCGSpecificationVersion,
  *     platformClass       OCTET STRING (SIZE(4)) }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -46,9 +46,9 @@ class TCGPlatformSpecification {
     /**
      * @summary Restructures an object into a TCGPlatformSpecification
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `TCGPlatformSpecification`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -65,9 +65,9 @@ class TCGPlatformSpecification {
 /**
  * @summary The Leading Root Component Types of TCGPlatformSpecification
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -79,27 +79,27 @@ const _root_component_type_list_1_spec_for_TCGPlatformSpecification: $.Component
 /**
  * @summary The Trailing Root Component Types of TCGPlatformSpecification
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_TCGPlatformSpecification: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of TCGPlatformSpecification
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_TCGPlatformSpecification: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_TCGPlatformSpecification: $.ASN1Decoder<TCGPlatformSpecification> | null = null;
@@ -146,10 +146,10 @@ function _encode_TCGPlatformSpecification (value: TCGPlatformSpecification, elGe
     if (!_cached_encoder_for_TCGPlatformSpecification) { _cached_encoder_for_TCGPlatformSpecification = function (value: TCGPlatformSpecification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_TCGSpecificationVersion(value.version, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.platformClass, $.BER)
+            /* REQUIRED   */ _encode_TCGSpecificationVersion(value.version, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.platformClass, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_TCGPlatformSpecification(value, elGetter);
 }

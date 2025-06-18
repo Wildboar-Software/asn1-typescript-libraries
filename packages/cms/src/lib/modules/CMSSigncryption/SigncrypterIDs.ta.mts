@@ -167,15 +167,15 @@ export function _encode_SigncrypterIDs(
                     .concat([
                         /* REQUIRED   */ _encode_KeyPairIdentifier(
                             value.sender,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_KeyPairIdentifier(
                             value.recipient,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

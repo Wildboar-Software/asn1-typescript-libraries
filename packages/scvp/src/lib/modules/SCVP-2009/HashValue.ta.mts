@@ -192,11 +192,11 @@ export function _encode_HashValue(
             /* IF_DEFAULT */ value.algorithm === undefined ||
             $.deepEq(value.algorithm, HashValue._default_value_for_algorithm)
               ? undefined
-              : _encode_HashAlgorithm(value.algorithm, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.value, $.BER),
+              : _encode_HashAlgorithm(value.algorithm, $.DER),
+            /* REQUIRED   */ $._encodeOctetString(value.value, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

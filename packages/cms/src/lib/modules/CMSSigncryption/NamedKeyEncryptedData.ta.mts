@@ -237,7 +237,7 @@ export function _encode_NamedKeyEncryptedData(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.keyName === undefined
                             ? undefined
@@ -245,11 +245,11 @@ export function _encode_NamedKeyEncryptedData(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.keyName, $.BER),
+                                  $.DER
+                              )(value.keyName, $.DER),
                         /* REQUIRED   */ _encode_EncryptedContentInfo(
                             value.encryptedContentInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.unprotectedAttrs === undefined
                             ? undefined
@@ -257,11 +257,11 @@ export function _encode_NamedKeyEncryptedData(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Attributes,
-                                  $.BER
-                              )(value.unprotectedAttrs, $.BER),
+                                  $.DER
+                              )(value.unprotectedAttrs, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

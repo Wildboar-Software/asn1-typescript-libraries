@@ -15,15 +15,15 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
 /**
  * @summary NoticeReference
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * NoticeReference ::= SEQUENCE {
  *     organization    DisplayText,
  *     noticeNumbers   SEQUENCE OF INTEGER }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -46,9 +46,9 @@ class NoticeReference {
     /**
      * @summary Restructures an object into a NoticeReference
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `NoticeReference`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -65,9 +65,9 @@ class NoticeReference {
 /**
  * @summary The Leading Root Component Types of NoticeReference
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -79,27 +79,27 @@ const _root_component_type_list_1_spec_for_NoticeReference: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of NoticeReference
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_NoticeReference: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of NoticeReference
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_NoticeReference: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_NoticeReference: $.ASN1Decoder<NoticeReference> | null = null;
@@ -146,10 +146,10 @@ function _encode_NoticeReference (value: NoticeReference, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_NoticeReference) { _cached_encoder_for_NoticeReference = function (value: NoticeReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_DisplayText(value.organization, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<INTEGER>(() => $._encodeInteger, $.BER)(value.noticeNumbers, $.BER)
+            /* REQUIRED   */ _encode_DisplayText(value.organization, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<INTEGER>(() => $._encodeInteger, $.DER)(value.noticeNumbers, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_NoticeReference(value, elGetter);
 }

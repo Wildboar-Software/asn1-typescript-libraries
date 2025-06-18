@@ -186,14 +186,14 @@ export function _encode_DatabaseServerToKeyManager(
                     .concat([
                         /* REQUIRED   */ _encode_MasterKeyEncryptedHMACkey(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.uniqueID === undefined
                             ? undefined
-                            : _encode_UniqueIdentifier(value.uniqueID, $.BER),
+                            : _encode_UniqueIdentifier(value.uniqueID, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -156,12 +156,12 @@ export function _encode_OtherKeyAttribute(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.keyAttrId,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.keyAttr, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.keyAttr, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

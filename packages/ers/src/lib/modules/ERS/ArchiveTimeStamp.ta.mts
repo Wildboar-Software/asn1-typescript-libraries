@@ -194,12 +194,12 @@ function _encode_ArchiveTimeStamp (value: ArchiveTimeStamp, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_ArchiveTimeStamp) { _cached_encoder_for_ArchiveTimeStamp = function (value: ArchiveTimeStamp): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.digestAlgorithm === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AlgorithmIdentifier, $.BER)(value.digestAlgorithm, $.BER)),
-            /* IF_ABSENT  */ ((value.attributes === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Attributes, $.BER)(value.attributes, $.BER)),
-            /* IF_ABSENT  */ ((value.reducedHashtree === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<PartialHashtree>(() => _encode_PartialHashtree, $.BER), $.BER)(value.reducedHashtree, $.BER)),
-            /* REQUIRED   */ _encode_ContentInfo(value.timeStamp, $.BER)
+            /* IF_ABSENT  */ ((value.digestAlgorithm === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AlgorithmIdentifier, $.DER)(value.digestAlgorithm, $.DER)),
+            /* IF_ABSENT  */ ((value.attributes === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Attributes, $.DER)(value.attributes, $.DER)),
+            /* IF_ABSENT  */ ((value.reducedHashtree === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<PartialHashtree>(() => _encode_PartialHashtree, $.DER), $.DER)(value.reducedHashtree, $.DER)),
+            /* REQUIRED   */ _encode_ContentInfo(value.timeStamp, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ArchiveTimeStamp(value, elGetter);
 }

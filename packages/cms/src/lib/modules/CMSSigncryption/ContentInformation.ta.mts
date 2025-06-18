@@ -177,13 +177,13 @@ export function _encode_ContentInformation(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Mode(value.mode, $.BER),
+                        /* REQUIRED   */ _encode_Mode(value.mode, $.DER),
                         /* IF_ABSENT  */ value.content === undefined
                             ? undefined
-                            : _encode_Content(value.content, $.BER),
+                            : _encode_Content(value.content, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

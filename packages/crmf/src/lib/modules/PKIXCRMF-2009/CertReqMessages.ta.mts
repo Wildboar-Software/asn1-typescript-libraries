@@ -56,7 +56,7 @@ export function _encode_CertReqMessages(
     if (!_cached_encoder_for_CertReqMessages) {
         _cached_encoder_for_CertReqMessages = $._encodeSequenceOf<CertReqMsg>(
             () => _encode_CertReqMsg,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertReqMessages(value, elGetter);

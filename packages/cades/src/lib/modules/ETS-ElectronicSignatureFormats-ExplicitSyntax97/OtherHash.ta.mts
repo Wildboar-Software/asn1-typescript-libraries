@@ -15,9 +15,9 @@ import { OtherHashAlgAndValue, _decode_OtherHashAlgAndValue, _encode_OtherHashAl
 /**
  * @summary OtherHash
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OtherHash  ::=  CHOICE {
  *     sha1Hash    OtherHashValue, -- This contains a SHA-1 hash
@@ -60,7 +60,7 @@ function _encode_OtherHash (value: OtherHash, elGetter: $.ASN1Encoder<OtherHash>
     if (!_cached_encoder_for_OtherHash) { _cached_encoder_for_OtherHash = $._encode_choice<OtherHash>({
     "sha1Hash": _encode_OtherHashValue,
     "otherHash": _encode_OtherHashAlgAndValue,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_OtherHash(value, elGetter);
 }
 

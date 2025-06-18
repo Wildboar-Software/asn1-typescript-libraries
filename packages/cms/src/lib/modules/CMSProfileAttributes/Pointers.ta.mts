@@ -56,7 +56,7 @@ export function _encode_Pointers(
     if (!_cached_encoder_for_Pointers) {
         _cached_encoder_for_Pointers = $._encodeSequenceOf<Pointer>(
             () => _encode_Pointer,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Pointers(value, elGetter);

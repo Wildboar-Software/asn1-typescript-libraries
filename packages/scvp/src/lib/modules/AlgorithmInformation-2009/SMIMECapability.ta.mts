@@ -161,14 +161,14 @@ export function _encode_SMIMECapability(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.capabilityID,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.parameters === undefined
                             ? undefined
-                            : $._encodeAny(value.parameters, $.BER),
+                            : $._encodeAny(value.parameters, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

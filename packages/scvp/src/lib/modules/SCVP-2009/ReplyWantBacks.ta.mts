@@ -60,7 +60,7 @@ export function _encode_ReplyWantBacks(
   if (!_cached_encoder_for_ReplyWantBacks) {
     _cached_encoder_for_ReplyWantBacks = $._encodeSequenceOf<ReplyWantBack>(
       () => _encode_ReplyWantBack,
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_ReplyWantBacks(value, elGetter);

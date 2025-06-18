@@ -157,15 +157,15 @@ export function _encode_CertId(value: CertId, elGetter: $.ASN1Encoder<CertId>) {
                     .concat([
                         /* REQUIRED   */ _encode_GeneralName(
                             value.issuer,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeInteger(
                             value.serialNumber,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

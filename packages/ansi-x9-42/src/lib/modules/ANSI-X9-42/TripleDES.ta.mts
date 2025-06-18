@@ -52,7 +52,7 @@ export function _encode_TripleDES(
     if (!_cached_encoder_for_TripleDES) {
         _cached_encoder_for_TripleDES = $._encodeSequenceOf<INTEGER>(
             () => $._encodeInteger,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TripleDES(value, elGetter);

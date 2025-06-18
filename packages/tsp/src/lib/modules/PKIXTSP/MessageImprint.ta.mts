@@ -160,15 +160,15 @@ export function _encode_MessageImprint(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.hashAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.hashedMessage,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

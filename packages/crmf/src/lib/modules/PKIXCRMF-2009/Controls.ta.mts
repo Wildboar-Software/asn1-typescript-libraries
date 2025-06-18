@@ -57,7 +57,7 @@ export function _encode_Controls(
     if (!_cached_encoder_for_Controls) {
         _cached_encoder_for_Controls = $._encodeSequenceOf<SingleAttribute>(
             () => _encode_SingleAttribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Controls(value, elGetter);

@@ -240,7 +240,7 @@ export function _encode_PasswordRecipientInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.keyDerivationAlgorithm ===
                         undefined
@@ -250,19 +250,19 @@ export function _encode_PasswordRecipientInfo(
                                   0,
                                   () =>
                                       _encode_KeyDerivationAlgorithmIdentifier,
-                                  $.BER
-                              )(value.keyDerivationAlgorithm, $.BER),
+                                  $.DER
+                              )(value.keyDerivationAlgorithm, $.DER),
                         /* REQUIRED   */ _encode_KeyEncryptionAlgorithmIdentifier(
                             value.keyEncryptionAlgorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_EncryptedKey(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -158,10 +158,10 @@ function _encode_OtherCertID (value: OtherCertID, elGetter: $.ASN1Encoder<OtherC
     if (!_cached_encoder_for_OtherCertID) { _cached_encoder_for_OtherCertID = function (value: OtherCertID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_OtherHash(value.otherCertHash, $.BER),
-            /* IF_ABSENT  */ ((value.issuerSerial === undefined) ? undefined : _encode_IssuerSerial(value.issuerSerial, $.BER))
+            /* REQUIRED   */ _encode_OtherHash(value.otherCertHash, $.DER),
+            /* IF_ABSENT  */ ((value.issuerSerial === undefined) ? undefined : _encode_IssuerSerial(value.issuerSerial, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OtherCertID(value, elGetter);
 }

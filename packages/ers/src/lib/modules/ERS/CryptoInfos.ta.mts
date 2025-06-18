@@ -63,7 +63,7 @@ let _cached_encoder_for_CryptoInfos: $.ASN1Encoder<CryptoInfos> | null = null;
  */
 export
 function _encode_CryptoInfos (value: CryptoInfos, elGetter: $.ASN1Encoder<CryptoInfos>) {
-    if (!_cached_encoder_for_CryptoInfos) { _cached_encoder_for_CryptoInfos = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.BER); }
+    if (!_cached_encoder_for_CryptoInfos) { _cached_encoder_for_CryptoInfos = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_CryptoInfos(value, elGetter);
 }
 

@@ -113,34 +113,34 @@ export function _encode_POPOPrivKey(
                     _TagClass.context,
                     0,
                     () => $._encodeBitString,
-                    $.BER
+                    $.DER
                 ),
                 subsequentMessage: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_SubsequentMessage,
-                    $.BER
+                    $.DER
                 ),
                 dhMAC: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => $._encodeBitString,
-                    $.BER
+                    $.DER
                 ),
                 agreeMAC: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_PKMACValue,
-                    $.BER
+                    $.DER
                 ),
                 encryptedKey: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_EnvelopedData,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_POPOPrivKey(value, elGetter);

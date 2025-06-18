@@ -203,19 +203,19 @@ export function _encode_ExtendedCertificateInfo(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Certificate(
                             value.certificate,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_UnauthAttributes(
                             value.attributes,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

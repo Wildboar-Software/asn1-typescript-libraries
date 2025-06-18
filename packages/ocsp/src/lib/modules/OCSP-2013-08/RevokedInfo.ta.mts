@@ -179,7 +179,7 @@ export function _encode_RevokedInfo(
                     .concat([
                         /* REQUIRED   */ $._encodeGeneralizedTime(
                             value.revocationTime,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.revocationReason === undefined
                             ? undefined
@@ -187,11 +187,11 @@ export function _encode_RevokedInfo(
                                   _TagClass.context,
                                   0,
                                   () => _encode_CRLReason,
-                                  $.BER
-                              )(value.revocationReason, $.BER),
+                                  $.DER
+                              )(value.revocationReason, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

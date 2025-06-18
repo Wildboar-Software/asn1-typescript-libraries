@@ -163,15 +163,15 @@ export function _encode_OriginatorPublicKey(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.publicKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

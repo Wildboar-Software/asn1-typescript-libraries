@@ -193,12 +193,12 @@ function _encode_ATSHashIndex (value: ATSHashIndex, elGetter: $.ASN1Encoder<ATSH
     if (!_cached_encoder_for_ATSHashIndex) { _cached_encoder_for_ATSHashIndex = function (value: ATSHashIndex): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_DEFAULT */ (value.hashIndAlgorithm === undefined || $.deepEq(value.hashIndAlgorithm, ATSHashIndex._default_value_for_hashIndAlgorithm) ? undefined : _encode_AlgorithmIdentifier(value.hashIndAlgorithm, $.BER)),
-            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER)(value.certificatesHashIndex, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER)(value.crlsHashIndex, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER)(value.unsignedAttrsHashIndex, $.BER)
+            /* IF_DEFAULT */ (value.hashIndAlgorithm === undefined || $.deepEq(value.hashIndAlgorithm, ATSHashIndex._default_value_for_hashIndAlgorithm) ? undefined : _encode_AlgorithmIdentifier(value.hashIndAlgorithm, $.DER)),
+            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.DER)(value.certificatesHashIndex, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.DER)(value.crlsHashIndex, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.DER)(value.unsignedAttrsHashIndex, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ATSHashIndex(value, elGetter);
 }

@@ -454,92 +454,92 @@ export function _encode_KDC_REQ_BODY(
               _TagClass.context,
               0,
               () => _encode_KDCOptions,
-              $.BER
-            )(value.kdc_options, $.BER),
+              $.DER
+            )(value.kdc_options, $.DER),
             /* IF_ABSENT  */ value.cname === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.cname, $.BER),
+                  $.DER
+                )(value.cname, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               2,
               () => _encode_Realm,
-              $.BER
-            )(value.realm, $.BER),
+              $.DER
+            )(value.realm, $.DER),
             /* IF_ABSENT  */ value.sname === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.sname, $.BER),
+                  $.DER
+                )(value.sname, $.DER),
             /* IF_ABSENT  */ value.from_ === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.from_, $.BER),
+                  $.DER
+                )(value.from_, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               5,
               () => _encode_KerberosTime,
-              $.BER
-            )(value.till, $.BER),
+              $.DER
+            )(value.till, $.DER),
             /* IF_ABSENT  */ value.rtime === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   6,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.rtime, $.BER),
+                  $.DER
+                )(value.rtime, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               7,
               () => _encode_UInt32,
-              $.BER
-            )(value.nonce, $.BER),
+              $.DER
+            )(value.nonce, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               8,
-              () => $._encodeSequenceOf<Int32>(() => _encode_Int32, $.BER),
-              $.BER
-            )(value.etype, $.BER),
+              () => $._encodeSequenceOf<Int32>(() => _encode_Int32, $.DER),
+              $.DER
+            )(value.etype, $.DER),
             /* IF_ABSENT  */ value.addresses === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   9,
                   () => _encode_HostAddresses,
-                  $.BER
-                )(value.addresses, $.BER),
+                  $.DER
+                )(value.addresses, $.DER),
             /* IF_ABSENT  */ value.enc_authorization_data === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   10,
                   () => _encode_EncryptedData,
-                  $.BER
-                )(value.enc_authorization_data, $.BER),
+                  $.DER
+                )(value.enc_authorization_data, $.DER),
             /* IF_ABSENT  */ value.additional_tickets === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   11,
                   () =>
-                    $._encodeSequenceOf<Ticket>(() => _encode_Ticket, $.BER),
-                  $.BER
-                )(value.additional_tickets, $.BER),
+                    $._encodeSequenceOf<Ticket>(() => _encode_Ticket, $.DER),
+                  $.DER
+                )(value.additional_tickets, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

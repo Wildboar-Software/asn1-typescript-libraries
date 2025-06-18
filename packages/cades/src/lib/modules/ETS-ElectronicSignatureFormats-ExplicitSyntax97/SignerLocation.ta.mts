@@ -172,11 +172,11 @@ function _encode_SignerLocation (value: SignerLocation, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_SignerLocation) { _cached_encoder_for_SignerLocation = function (value: SignerLocation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.countryName === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_DirectoryString, $.BER)(value.countryName, $.BER)),
-            /* IF_ABSENT  */ ((value.localityName === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_DirectoryString, $.BER)(value.localityName, $.BER)),
-            /* IF_ABSENT  */ ((value.postalAdddress === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_PostalAddress, $.BER)(value.postalAdddress, $.BER))
+            /* IF_ABSENT  */ ((value.countryName === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_DirectoryString, $.DER)(value.countryName, $.DER)),
+            /* IF_ABSENT  */ ((value.localityName === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_DirectoryString, $.DER)(value.localityName, $.DER)),
+            /* IF_ABSENT  */ ((value.postalAdddress === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_PostalAddress, $.DER)(value.postalAdddress, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_SignerLocation(value, elGetter);
 }

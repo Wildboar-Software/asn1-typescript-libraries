@@ -85,7 +85,7 @@ export function _encode_ReceiptsFrom(
                     _TagClass.context,
                     0,
                     () => _encode_AllOrFirstTier,
-                    $.BER
+                    $.DER
                 ),
                 receiptList: $._encode_implicit(
                     _TagClass.context,
@@ -93,12 +93,12 @@ export function _encode_ReceiptsFrom(
                     () =>
                         $._encodeSequenceOf<GeneralNames>(
                             () => _encode_GeneralNames,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ReceiptsFrom(value, elGetter);

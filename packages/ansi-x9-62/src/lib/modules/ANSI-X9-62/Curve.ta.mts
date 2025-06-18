@@ -179,14 +179,14 @@ export function _encode_Curve(value: Curve, elGetter: $.ASN1Encoder<Curve>) {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_FieldElement(value.a, $.BER),
-                        /* REQUIRED   */ _encode_FieldElement(value.b, $.BER),
+                        /* REQUIRED   */ _encode_FieldElement(value.a, $.DER),
+                        /* REQUIRED   */ _encode_FieldElement(value.b, $.DER),
                         /* IF_ABSENT  */ value.seed === undefined
                             ? undefined
-                            : $._encodeBitString(value.seed, $.BER),
+                            : $._encodeBitString(value.seed, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

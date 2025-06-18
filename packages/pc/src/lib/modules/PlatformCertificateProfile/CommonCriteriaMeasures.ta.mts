@@ -258,17 +258,17 @@ function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter
     if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeIA5String(value.version, $.BER),
-            /* REQUIRED   */ _encode_EvaluationAssuranceLevel(value.assurancelevel, $.BER),
-            /* REQUIRED   */ _encode_EvaluationStatus(value.evaluationStatus, $.BER),
-            /* IF_DEFAULT */ (value.plus === undefined || $.deepEq(value.plus, CommonCriteriaMeasures._default_value_for_plus) ? undefined : $._encodeBoolean(value.plus, $.BER)),
-            /* IF_ABSENT  */ ((value.strengthOfFunction === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_StrengthOfFunction, $.BER)(value.strengthOfFunction, $.BER)),
-            /* IF_ABSENT  */ ((value.profileOid === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER)(value.profileOid, $.BER)),
-            /* IF_ABSENT  */ ((value.profileUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_URIReference, $.BER)(value.profileUri, $.BER)),
-            /* IF_ABSENT  */ ((value.targetOid === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeObjectIdentifier, $.BER)(value.targetOid, $.BER)),
-            /* IF_ABSENT  */ ((value.targetUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_URIReference, $.BER)(value.targetUri, $.BER))
+            /* REQUIRED   */ $._encodeIA5String(value.version, $.DER),
+            /* REQUIRED   */ _encode_EvaluationAssuranceLevel(value.assurancelevel, $.DER),
+            /* REQUIRED   */ _encode_EvaluationStatus(value.evaluationStatus, $.DER),
+            /* IF_DEFAULT */ (value.plus === undefined || $.deepEq(value.plus, CommonCriteriaMeasures._default_value_for_plus) ? undefined : $._encodeBoolean(value.plus, $.DER)),
+            /* IF_ABSENT  */ ((value.strengthOfFunction === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_StrengthOfFunction, $.DER)(value.strengthOfFunction, $.DER)),
+            /* IF_ABSENT  */ ((value.profileOid === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.DER)(value.profileOid, $.DER)),
+            /* IF_ABSENT  */ ((value.profileUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_URIReference, $.DER)(value.profileUri, $.DER)),
+            /* IF_ABSENT  */ ((value.targetOid === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeObjectIdentifier, $.DER)(value.targetOid, $.DER)),
+            /* IF_ABSENT  */ ((value.targetUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_URIReference, $.DER)(value.targetUri, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_CommonCriteriaMeasures(value, elGetter);
 }

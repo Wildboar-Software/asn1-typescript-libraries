@@ -171,15 +171,15 @@ export function _encode_OtherRevocationInfoFormat(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.otherRevInfoFormat,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeAny(
                             value.otherRevInfo,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

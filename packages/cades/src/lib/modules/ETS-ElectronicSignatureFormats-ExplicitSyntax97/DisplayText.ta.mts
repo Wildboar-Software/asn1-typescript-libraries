@@ -19,9 +19,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary DisplayText
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * DisplayText  ::=  CHOICE {
  *     visibleString       VisibleString (SIZE (1..200)),
@@ -68,7 +68,7 @@ function _encode_DisplayText (value: DisplayText, elGetter: $.ASN1Encoder<Displa
     "visibleString": $._encodeVisibleString,
     "bmpString": $._encodeBMPString,
     "utf8String": $._encodeUTF8String,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_DisplayText(value, elGetter);
 }
 

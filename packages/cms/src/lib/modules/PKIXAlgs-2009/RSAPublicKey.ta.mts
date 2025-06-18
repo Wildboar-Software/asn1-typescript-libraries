@@ -162,14 +162,14 @@ export function _encode_RSAPublicKey(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.modulus, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.modulus, $.DER),
                         /* REQUIRED   */ $._encodeInteger(
                             value.publicExponent,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

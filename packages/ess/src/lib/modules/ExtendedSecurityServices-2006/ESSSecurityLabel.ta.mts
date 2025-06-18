@@ -241,27 +241,27 @@ export function _encode_ESSSecurityLabel(
                     .concat([
                         /* REQUIRED   */ _encode_SecurityPolicyIdentifier(
                             value.security_policy_identifier,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.security_classification ===
                         undefined
                             ? undefined
                             : _encode_SecurityClassification(
                                   value.security_classification,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.privacy_mark === undefined
                             ? undefined
-                            : _encode_ESSPrivacyMark(value.privacy_mark, $.BER),
+                            : _encode_ESSPrivacyMark(value.privacy_mark, $.DER),
                         /* IF_ABSENT  */ value.security_categories === undefined
                             ? undefined
                             : _encode_SecurityCategories(
                                   value.security_categories,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

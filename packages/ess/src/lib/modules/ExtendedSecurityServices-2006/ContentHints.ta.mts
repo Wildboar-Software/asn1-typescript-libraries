@@ -181,15 +181,15 @@ export function _encode_ContentHints(
                             ? undefined
                             : $._encodeUTF8String(
                                   value.contentDescription,
-                                  $.BER
+                                  $.DER
                               ),
                         /* REQUIRED   */ _encode_ContentType(
                             value.contentType,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

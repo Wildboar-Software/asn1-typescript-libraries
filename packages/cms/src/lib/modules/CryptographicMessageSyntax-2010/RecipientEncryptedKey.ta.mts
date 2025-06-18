@@ -165,15 +165,15 @@ export function _encode_RecipientEncryptedKey(
                     .concat([
                         /* REQUIRED   */ _encode_KeyAgreeRecipientIdentifier(
                             value.rid,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_EncryptedKey(
                             value.encryptedKey,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

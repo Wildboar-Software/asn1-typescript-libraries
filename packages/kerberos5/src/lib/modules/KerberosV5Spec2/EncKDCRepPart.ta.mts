@@ -440,85 +440,85 @@ export function _encode_EncKDCRepPart(
               _TagClass.context,
               0,
               () => _encode_EncryptionKey,
-              $.BER
-            )(value.key, $.BER),
+              $.DER
+            )(value.key, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => _encode_LastReq,
-              $.BER
-            )(value.last_req, $.BER),
+              $.DER
+            )(value.last_req, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               2,
               () => _encode_UInt32,
-              $.BER
-            )(value.nonce, $.BER),
+              $.DER
+            )(value.nonce, $.DER),
             /* IF_ABSENT  */ value.key_expiration === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.key_expiration, $.BER),
+                  $.DER
+                )(value.key_expiration, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               4,
               () => _encode_TicketFlags,
-              $.BER
-            )(value.flags, $.BER),
+              $.DER
+            )(value.flags, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               5,
               () => _encode_KerberosTime,
-              $.BER
-            )(value.authtime, $.BER),
+              $.DER
+            )(value.authtime, $.DER),
             /* IF_ABSENT  */ value.starttime === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   6,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.starttime, $.BER),
+                  $.DER
+                )(value.starttime, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               7,
               () => _encode_KerberosTime,
-              $.BER
-            )(value.endtime, $.BER),
+              $.DER
+            )(value.endtime, $.DER),
             /* IF_ABSENT  */ value.renew_till === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   8,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.renew_till, $.BER),
+                  $.DER
+                )(value.renew_till, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               9,
               () => _encode_Realm,
-              $.BER
-            )(value.srealm, $.BER),
+              $.DER
+            )(value.srealm, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               10,
               () => _encode_PrincipalName,
-              $.BER
-            )(value.sname, $.BER),
+              $.DER
+            )(value.sname, $.DER),
             /* IF_ABSENT  */ value.caddr === undefined
               ? undefined
               : $._encode_explicit(
                   _TagClass.context,
                   11,
                   () => _encode_HostAddresses,
-                  $.BER
-                )(value.caddr, $.BER),
+                  $.DER
+                )(value.caddr, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

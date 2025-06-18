@@ -214,19 +214,19 @@ export function _encode_POPOSigningKey(
                                   _TagClass.context,
                                   0,
                                   () => _encode_POPOSigningKeyInput,
-                                  $.BER
-                              )(value.poposkInput, $.BER),
+                                  $.DER
+                              )(value.poposkInput, $.DER),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algorithmIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

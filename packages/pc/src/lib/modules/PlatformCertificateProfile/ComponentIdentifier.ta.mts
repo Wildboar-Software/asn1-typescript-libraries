@@ -22,9 +22,9 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
 /**
  * @summary ComponentIdentifier
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ComponentIdentifier ::= SEQUENCE {
  *     componentClass              ComponentClass,
@@ -39,7 +39,7 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  *     componentPlatformCertUri    [6] IMPLICIT URIReference OPTIONAL,
  *     status                      [7] IMPLICIT AttributeStatus OPTIONAL }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -116,9 +116,9 @@ class ComponentIdentifier {
     /**
      * @summary Restructures an object into a ComponentIdentifier
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ComponentIdentifier`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -141,9 +141,9 @@ class ComponentIdentifier {
 /**
  * @summary The Leading Root Component Types of ComponentIdentifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -164,27 +164,27 @@ const _root_component_type_list_1_spec_for_ComponentIdentifier: $.ComponentSpec[
 /**
  * @summary The Trailing Root Component Types of ComponentIdentifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ComponentIdentifier: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ComponentIdentifier
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ComponentIdentifier: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ComponentIdentifier: $.ASN1Decoder<ComponentIdentifier> | null = null;
@@ -263,19 +263,19 @@ function _encode_ComponentIdentifier (value: ComponentIdentifier, elGetter: $.AS
     if (!_cached_encoder_for_ComponentIdentifier) { _cached_encoder_for_ComponentIdentifier = function (value: ComponentIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ComponentClass(value.componentClass, $.BER),
-            /* REQUIRED   */ $._encodeUTF8String(value.componentManufacturer, $.BER),
-            /* REQUIRED   */ $._encodeUTF8String(value.componentModel, $.BER),
-            /* IF_ABSENT  */ ((value.componentSerial === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.componentSerial, $.BER)),
-            /* IF_ABSENT  */ ((value.componentRevision === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.componentRevision, $.BER)),
-            /* IF_ABSENT  */ ((value.componentManufacturerId === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_PrivateEnterpriseNumber, $.BER)(value.componentManufacturerId, $.BER)),
-            /* IF_ABSENT  */ ((value.fieldReplaceable === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeBoolean, $.BER)(value.fieldReplaceable, $.BER)),
-            /* IF_ABSENT  */ ((value.componentAddresses === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<ComponentAddress>(() => _encode_ComponentAddress, $.BER), $.BER)(value.componentAddresses, $.BER)),
-            /* IF_ABSENT  */ ((value.componentPlatformCert === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_CertificateIdentifier, $.BER)(value.componentPlatformCert, $.BER)),
-            /* IF_ABSENT  */ ((value.componentPlatformCertUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_URIReference, $.BER)(value.componentPlatformCertUri, $.BER)),
-            /* IF_ABSENT  */ ((value.status === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_AttributeStatus, $.BER)(value.status, $.BER))
+            /* REQUIRED   */ _encode_ComponentClass(value.componentClass, $.DER),
+            /* REQUIRED   */ $._encodeUTF8String(value.componentManufacturer, $.DER),
+            /* REQUIRED   */ $._encodeUTF8String(value.componentModel, $.DER),
+            /* IF_ABSENT  */ ((value.componentSerial === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.DER)(value.componentSerial, $.DER)),
+            /* IF_ABSENT  */ ((value.componentRevision === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.DER)(value.componentRevision, $.DER)),
+            /* IF_ABSENT  */ ((value.componentManufacturerId === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_PrivateEnterpriseNumber, $.DER)(value.componentManufacturerId, $.DER)),
+            /* IF_ABSENT  */ ((value.fieldReplaceable === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeBoolean, $.DER)(value.fieldReplaceable, $.DER)),
+            /* IF_ABSENT  */ ((value.componentAddresses === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<ComponentAddress>(() => _encode_ComponentAddress, $.DER), $.DER)(value.componentAddresses, $.DER)),
+            /* IF_ABSENT  */ ((value.componentPlatformCert === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_CertificateIdentifier, $.DER)(value.componentPlatformCert, $.DER)),
+            /* IF_ABSENT  */ ((value.componentPlatformCertUri === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_URIReference, $.DER)(value.componentPlatformCertUri, $.DER)),
+            /* IF_ABSENT  */ ((value.status === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_AttributeStatus, $.DER)(value.status, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ComponentIdentifier(value, elGetter);
 }

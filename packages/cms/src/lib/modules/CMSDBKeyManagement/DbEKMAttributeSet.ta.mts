@@ -57,7 +57,7 @@ export function _encode_DbEKMAttributeSet(
     if (!_cached_encoder_for_DbEKMAttributeSet) {
         _cached_encoder_for_DbEKMAttributeSet = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DbEKMAttributeSet(value, elGetter);

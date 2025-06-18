@@ -431,82 +431,82 @@ export function _encode_EncTicketPart(
                   _TagClass.context,
                   0,
                   () => _encode_TicketFlags,
-                  $.BER
-                )(value.flags, $.BER),
+                  $.DER
+                )(value.flags, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_EncryptionKey,
-                  $.BER
-                )(value.key, $.BER),
+                  $.DER
+                )(value.key, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_Realm,
-                  $.BER
-                )(value.crealm, $.BER),
+                  $.DER
+                )(value.crealm, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.cname, $.BER),
+                  $.DER
+                )(value.cname, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   4,
                   () => _encode_TransitedEncoding,
-                  $.BER
-                )(value.transited, $.BER),
+                  $.DER
+                )(value.transited, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   5,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.authtime, $.BER),
+                  $.DER
+                )(value.authtime, $.DER),
                 /* IF_ABSENT  */ value.starttime === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       6,
                       () => _encode_KerberosTime,
-                      $.BER
-                    )(value.starttime, $.BER),
+                      $.DER
+                    )(value.starttime, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   7,
                   () => _encode_KerberosTime,
-                  $.BER
-                )(value.endtime, $.BER),
+                  $.DER
+                )(value.endtime, $.DER),
                 /* IF_ABSENT  */ value.renew_till === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       8,
                       () => _encode_KerberosTime,
-                      $.BER
-                    )(value.renew_till, $.BER),
+                      $.DER
+                    )(value.renew_till, $.DER),
                 /* IF_ABSENT  */ value.caddr === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       9,
                       () => _encode_HostAddresses,
-                      $.BER
-                    )(value.caddr, $.BER),
+                      $.DER
+                    )(value.caddr, $.DER),
                 /* IF_ABSENT  */ value.authorization_data === undefined
                   ? undefined
                   : $._encode_explicit(
                       _TagClass.context,
                       10,
                       () => _encode_AuthorizationData,
-                      $.BER
-                    )(value.authorization_data, $.BER),
+                      $.DER
+                    )(value.authorization_data, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_EncTicketPart(value, elGetter);

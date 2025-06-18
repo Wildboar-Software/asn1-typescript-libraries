@@ -93,7 +93,7 @@ export function _encode_MLReceiptPolicy(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 insteadOf: $._encode_implicit(
                     _TagClass.context,
@@ -101,9 +101,9 @@ export function _encode_MLReceiptPolicy(
                     () =>
                         $._encodeSequenceOf<GeneralNames>(
                             () => _encode_GeneralNames,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 inAdditionTo: $._encode_implicit(
                     _TagClass.context,
@@ -111,12 +111,12 @@ export function _encode_MLReceiptPolicy(
                     () =>
                         $._encodeSequenceOf<GeneralNames>(
                             () => _encode_GeneralNames,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MLReceiptPolicy(value, elGetter);

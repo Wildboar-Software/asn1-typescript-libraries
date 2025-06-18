@@ -188,13 +188,13 @@ function _encode_Scrypt_params (value: Scrypt_params, elGetter: $.ASN1Encoder<Sc
     if (!_cached_encoder_for_Scrypt_params) { _cached_encoder_for_Scrypt_params = function (value: Scrypt_params): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeOctetString(value.salt, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.costParameter, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.blockSize, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.parallelizationParameter, $.BER),
-            /* IF_ABSENT  */ ((value.keyLength === undefined) ? undefined : $._encodeInteger(value.keyLength, $.BER))
+            /* REQUIRED   */ $._encodeOctetString(value.salt, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.costParameter, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.blockSize, $.DER),
+            /* REQUIRED   */ $._encodeInteger(value.parallelizationParameter, $.DER),
+            /* IF_ABSENT  */ ((value.keyLength === undefined) ? undefined : $._encodeInteger(value.keyLength, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_Scrypt_params(value, elGetter);
 }

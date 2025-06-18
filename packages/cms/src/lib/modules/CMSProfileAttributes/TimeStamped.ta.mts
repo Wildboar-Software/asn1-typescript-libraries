@@ -177,14 +177,14 @@ export function _encode_TimeStamped(
                     .concat([
                         /* REQUIRED   */ _encode_TimeStamp(
                             value.timeStampValue,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.timeStampService === undefined
                             ? undefined
-                            : _encode_URI(value.timeStampService, $.BER),
+                            : _encode_URI(value.timeStampService, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

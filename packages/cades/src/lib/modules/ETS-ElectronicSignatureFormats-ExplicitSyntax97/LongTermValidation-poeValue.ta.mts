@@ -56,9 +56,9 @@ let _cached_encoder_for_LongTermValidation_poeValue: $.ASN1Encoder<LongTermValid
 export
 function _encode_LongTermValidation_poeValue (value: LongTermValidation_poeValue, elGetter: $.ASN1Encoder<LongTermValidation_poeValue>) {
     if (!_cached_encoder_for_LongTermValidation_poeValue) { _cached_encoder_for_LongTermValidation_poeValue = $._encode_choice<LongTermValidation_poeValue>({
-    "timeStamp": $._encode_explicit(_TagClass.context, 0, () => _encode_TimeStampToken, $.BER),
-    "evidenceRecord": $._encode_explicit(_TagClass.context, 1, () => _encode_EvidenceRecord, $.BER),
-}, $.BER); }
+    "timeStamp": $._encode_explicit(_TagClass.context, 0, () => _encode_TimeStampToken, $.DER),
+    "evidenceRecord": $._encode_explicit(_TagClass.context, 1, () => _encode_EvidenceRecord, $.DER),
+}, $.DER); }
     return _cached_encoder_for_LongTermValidation_poeValue(value, elGetter);
 }
 

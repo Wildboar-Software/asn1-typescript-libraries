@@ -224,32 +224,32 @@ export function _encode_Ticket(value: Ticket, elGetter: $.ASN1Encoder<Ticket>) {
                   _TagClass.context,
                   0,
                   () => $._encodeInteger,
-                  $.BER
-                )(value.tkt_vno, $.BER),
+                  $.DER
+                )(value.tkt_vno, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   1,
                   () => _encode_Realm,
-                  $.BER
-                )(value.realm, $.BER),
+                  $.DER
+                )(value.realm, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   2,
                   () => _encode_PrincipalName,
-                  $.BER
-                )(value.sname, $.BER),
+                  $.DER
+                )(value.sname, $.DER),
                 /* REQUIRED   */ $._encode_explicit(
                   _TagClass.context,
                   3,
                   () => _encode_EncryptedData,
-                  $.BER
-                )(value.enc_part, $.BER),
+                  $.DER
+                )(value.enc_part, $.DER),
               ])
               .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
           );
         },
-      $.BER
+      $.DER
     );
   }
   return _cached_encoder_for_Ticket(value, elGetter);

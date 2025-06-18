@@ -69,7 +69,7 @@ export
 function _encode_ECParameters (value: ECParameters, elGetter: $.ASN1Encoder<ECParameters>) {
     if (!_cached_encoder_for_ECParameters) { _cached_encoder_for_ECParameters = $._encode_choice<ECParameters>({
     "namedCurve": $._encodeObjectIdentifier,
-}, $.BER); }
+}, $.DER); }
     return _cached_encoder_for_ECParameters(value, elGetter);
 }
 

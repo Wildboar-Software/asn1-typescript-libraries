@@ -157,12 +157,12 @@ export function _encode_OtherCertificateFormat(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.otherCertFormat,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeAny(value.otherCert, $.BER),
+                        /* REQUIRED   */ $._encodeAny(value.otherCert, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

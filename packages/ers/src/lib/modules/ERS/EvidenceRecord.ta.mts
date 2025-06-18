@@ -200,13 +200,13 @@ function _encode_EvidenceRecord (value: EvidenceRecord, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_EvidenceRecord) { _cached_encoder_for_EvidenceRecord = function (value: EvidenceRecord): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_EvidenceRecord_version(value.version, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<AlgorithmIdentifier>(() => _encode_AlgorithmIdentifier, $.BER)(value.digestAlgorithms, $.BER),
-            /* IF_ABSENT  */ ((value.cryptoInfos === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CryptoInfos, $.BER)(value.cryptoInfos, $.BER)),
-            /* IF_ABSENT  */ ((value.encryptionInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_EncryptionInfo, $.BER)(value.encryptionInfo, $.BER)),
-            /* REQUIRED   */ _encode_ArchiveTimeStampSequence(value.archiveTimeStampSequence, $.BER)
+            /* REQUIRED   */ _encode_EvidenceRecord_version(value.version, $.DER),
+            /* REQUIRED   */ $._encodeSequenceOf<AlgorithmIdentifier>(() => _encode_AlgorithmIdentifier, $.DER)(value.digestAlgorithms, $.DER),
+            /* IF_ABSENT  */ ((value.cryptoInfos === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CryptoInfos, $.DER)(value.cryptoInfos, $.DER)),
+            /* IF_ABSENT  */ ((value.encryptionInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_EncryptionInfo, $.DER)(value.encryptionInfo, $.DER)),
+            /* REQUIRED   */ _encode_ArchiveTimeStampSequence(value.archiveTimeStampSequence, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_EvidenceRecord(value, elGetter);
 }

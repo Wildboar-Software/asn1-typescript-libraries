@@ -15,11 +15,11 @@ import { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } fro
 /**
  * @summary SMIMECapabilities
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
- * SMIMECapabilities { SMIME-CAPS:CapabilitySet }  ::= 
+ * SMIMECapabilities { SMIME-CAPS:CapabilitySet }  ::=
  * SEQUENCE SIZE (1..MAX) OF SMIMECapability{{CapabilitySet} }
  * ```
  */
@@ -55,7 +55,7 @@ let _cached_encoder_for_SMIMECapabilities: $.ASN1Encoder<SMIMECapabilities> | nu
  */
 export
 function _encode_SMIMECapabilities (value: SMIMECapabilities, elGetter: $.ASN1Encoder<SMIMECapabilities>) {
-    if (!_cached_encoder_for_SMIMECapabilities) { _cached_encoder_for_SMIMECapabilities = $._encodeSequenceOf<SMIMECapability>(() => _encode_SMIMECapability, $.BER); }
+    if (!_cached_encoder_for_SMIMECapabilities) { _cached_encoder_for_SMIMECapabilities = $._encodeSequenceOf<SMIMECapability>(() => _encode_SMIMECapability, $.DER); }
     return _cached_encoder_for_SMIMECapabilities(value, elGetter);
 }
 

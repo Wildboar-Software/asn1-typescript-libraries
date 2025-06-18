@@ -225,19 +225,19 @@ export function _encode_KeyAgreePublicKey(
           .concat([
             /* REQUIRED   */ _encode_AlgorithmIdentifier(
               value.algorithm,
-              $.BER
+              $.DER
             ),
-            /* REQUIRED   */ $._encodeBitString(value.publicKey, $.BER),
+            /* REQUIRED   */ $._encodeBitString(value.publicKey, $.DER),
             /* REQUIRED   */ _encode_AlgorithmIdentifier(
               value.macAlgorithm,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.kDF === undefined
               ? undefined
-              : _encode_AlgorithmIdentifier(value.kDF, $.BER),
+              : _encode_AlgorithmIdentifier(value.kDF, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

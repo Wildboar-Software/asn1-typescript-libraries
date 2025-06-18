@@ -177,17 +177,17 @@ export function _encode_TransitedEncoding(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.tr_type, $.BER),
+              $.DER
+            )(value.tr_type, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeOctetString,
-              $.BER
-            )(value.contents, $.BER),
+              $.DER
+            )(value.contents, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

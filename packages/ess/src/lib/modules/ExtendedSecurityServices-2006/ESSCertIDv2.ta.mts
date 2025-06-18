@@ -228,15 +228,15 @@ export function _encode_ESSCertIDv2(
                             ? undefined
                             : _encode_AlgorithmIdentifier(
                                   value.hashAlgorithm,
-                                  $.BER
+                                  $.DER
                               ),
-                        /* REQUIRED   */ _encode_Hash(value.certHash, $.BER),
+                        /* REQUIRED   */ _encode_Hash(value.certHash, $.DER),
                         /* IF_ABSENT  */ value.issuerSerial === undefined
                             ? undefined
-                            : _encode_IssuerSerial(value.issuerSerial, $.BER),
+                            : _encode_IssuerSerial(value.issuerSerial, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

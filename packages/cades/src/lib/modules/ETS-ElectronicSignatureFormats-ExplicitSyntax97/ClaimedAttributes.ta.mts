@@ -53,7 +53,7 @@ let _cached_encoder_for_ClaimedAttributes: $.ASN1Encoder<ClaimedAttributes> | nu
  */
 export
 function _encode_ClaimedAttributes (value: ClaimedAttributes, elGetter: $.ASN1Encoder<ClaimedAttributes>) {
-    if (!_cached_encoder_for_ClaimedAttributes) { _cached_encoder_for_ClaimedAttributes = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.BER); }
+    if (!_cached_encoder_for_ClaimedAttributes) { _cached_encoder_for_ClaimedAttributes = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_ClaimedAttributes(value, elGetter);
 }
 

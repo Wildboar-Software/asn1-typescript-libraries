@@ -173,17 +173,17 @@ export function _encode_Checksum(
               _TagClass.context,
               0,
               () => _encode_Int32,
-              $.BER
-            )(value.cksumtype, $.BER),
+              $.DER
+            )(value.cksumtype, $.DER),
             /* REQUIRED   */ $._encode_explicit(
               _TagClass.context,
               1,
               () => $._encodeOctetString,
-              $.BER
-            )(value.checksum, $.BER),
+              $.DER
+            )(value.checksum, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

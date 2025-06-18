@@ -260,8 +260,8 @@ export function _encode_RSAES_OAEP_params(
                                   _TagClass.context,
                                   0,
                                   () => _encode_HashAlgorithm,
-                                  $.BER
-                              )(value.hashFunc, $.BER),
+                                  $.DER
+                              )(value.hashFunc, $.DER),
                         /* IF_DEFAULT */ value.maskGenFunc === undefined ||
                         $.deepEq(
                             value.maskGenFunc,
@@ -272,8 +272,8 @@ export function _encode_RSAES_OAEP_params(
                                   _TagClass.context,
                                   1,
                                   () => _encode_MaskGenAlgorithm,
-                                  $.BER
-                              )(value.maskGenFunc, $.BER),
+                                  $.DER
+                              )(value.maskGenFunc, $.DER),
                         /* IF_DEFAULT */ value.pSourceFunc === undefined ||
                         $.deepEq(
                             value.pSourceFunc,
@@ -284,11 +284,11 @@ export function _encode_RSAES_OAEP_params(
                                   _TagClass.context,
                                   2,
                                   () => _encode_PSourceAlgorithm,
-                                  $.BER
-                              )(value.pSourceFunc, $.BER),
+                                  $.DER
+                              )(value.pSourceFunc, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

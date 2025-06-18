@@ -63,7 +63,7 @@ export function _encode_ESSPrivacyMark(
                 pString: $._encodePrintableString,
                 utf8String: $._encodeUTF8String,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ESSPrivacyMark(value, elGetter);

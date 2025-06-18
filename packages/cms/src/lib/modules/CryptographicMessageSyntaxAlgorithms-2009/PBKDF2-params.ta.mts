@@ -234,15 +234,15 @@ export function _encode_PBKDF2_params(
                     .concat([
                         /* REQUIRED   */ _encode_PBKDF2_params_salt(
                             value.salt,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeInteger(
                             value.iterationCount,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.keyLength === undefined
                             ? undefined
-                            : $._encodeInteger(value.keyLength, $.BER),
+                            : $._encodeInteger(value.keyLength, $.DER),
                         /* IF_DEFAULT */ value.prf === undefined ||
                         $.deepEq(
                             value.prf,
@@ -251,11 +251,11 @@ export function _encode_PBKDF2_params(
                             ? undefined
                             : _encode_PBKDF2_PRFsAlgorithmIdentifier(
                                   value.prf,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

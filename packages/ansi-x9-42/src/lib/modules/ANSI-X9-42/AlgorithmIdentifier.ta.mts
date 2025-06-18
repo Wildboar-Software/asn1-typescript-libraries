@@ -168,14 +168,14 @@ export function _encode_AlgorithmIdentifier(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.algorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.parameters === undefined
                             ? undefined
-                            : $._encodeAny(value.parameters, $.BER),
+                            : $._encodeAny(value.parameters, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

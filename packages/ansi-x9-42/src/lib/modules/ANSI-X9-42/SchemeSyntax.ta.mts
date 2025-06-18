@@ -81,7 +81,7 @@ export function _encode_SchemeSyntax(
                 oid: _encode_SchemeOID,
                 number_: _encode_SchemeNumber,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SchemeSyntax(value, elGetter);

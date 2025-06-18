@@ -65,9 +65,9 @@ export
 function _encode_TrustAnchorChoice (value: TrustAnchorChoice, elGetter: $.ASN1Encoder<TrustAnchorChoice>) {
     if (!_cached_encoder_for_TrustAnchorChoice) { _cached_encoder_for_TrustAnchorChoice = $._encode_choice<TrustAnchorChoice>({
     "certificate": _encode_Certificate,
-    "tbsCert": $._encode_explicit(_TagClass.context, 1, () => _encode_TBSCertificate, $.BER),
-    "taInfo": $._encode_explicit(_TagClass.context, 2, () => _encode_TrustAnchorInfo, $.BER),
-}, $.BER); }
+    "tbsCert": $._encode_explicit(_TagClass.context, 1, () => _encode_TBSCertificate, $.DER),
+    "taInfo": $._encode_explicit(_TagClass.context, 2, () => _encode_TrustAnchorInfo, $.DER),
+}, $.DER); }
     return _cached_encoder_for_TrustAnchorChoice(value, elGetter);
 }
 

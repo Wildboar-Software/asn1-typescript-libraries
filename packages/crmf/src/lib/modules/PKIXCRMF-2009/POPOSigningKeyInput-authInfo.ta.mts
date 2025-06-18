@@ -74,11 +74,11 @@ export function _encode_POPOSigningKeyInput_authInfo(
                     _TagClass.context,
                     0,
                     () => _encode_GeneralName,
-                    $.BER
+                    $.DER
                 ),
                 publicKeyMAC: _encode_PKMACValue,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_POPOSigningKeyInput_authInfo(value, elGetter);

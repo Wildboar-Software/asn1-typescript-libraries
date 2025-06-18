@@ -150,11 +150,11 @@ export function _encode_OtherRevInfo(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.riType, $.BER),
-            /* REQUIRED   */ $._encodeAny(value.riValue, $.BER),
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.riType, $.DER),
+            /* REQUIRED   */ $._encodeAny(value.riValue, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

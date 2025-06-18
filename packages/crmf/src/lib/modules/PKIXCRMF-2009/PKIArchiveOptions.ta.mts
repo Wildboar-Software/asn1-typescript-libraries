@@ -94,22 +94,22 @@ export function _encode_PKIArchiveOptions(
                     _TagClass.context,
                     0,
                     () => _encode_EncryptedKey,
-                    $.BER
+                    $.DER
                 ),
                 keyGenParameters: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_KeyGenParameters,
-                    $.BER
+                    $.DER
                 ),
                 archiveRemGenPrivKey: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => $._encodeBoolean,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PKIArchiveOptions(value, elGetter);

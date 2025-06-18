@@ -186,17 +186,17 @@ export function _encode_PKIPublicationInfo(
                     .concat([
                         /* REQUIRED   */ _encode_PKIPublicationInfo_action(
                             value.action,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.pubInfos === undefined
                             ? undefined
                             : $._encodeSequenceOf<SinglePubInfo>(
                                   () => _encode_SinglePubInfo,
-                                  $.BER
-                              )(value.pubInfos, $.BER),
+                                  $.DER
+                              )(value.pubInfos, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

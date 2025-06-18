@@ -16,9 +16,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary ASN1SharedInfo
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ASN1SharedInfo ::= SEQUENCE {
  *     keyInfo AlgorithmIdentifier,
@@ -28,7 +28,7 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  *     suppPrivInfo [3] OCTET STRING OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -69,9 +69,9 @@ class ASN1SharedInfo {
     /**
      * @summary Restructures an object into a ASN1SharedInfo
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ASN1SharedInfo`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -88,9 +88,9 @@ class ASN1SharedInfo {
 /**
  * @summary The Leading Root Component Types of ASN1SharedInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -105,27 +105,27 @@ const _root_component_type_list_1_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of ASN1SharedInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ASN1SharedInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ASN1SharedInfo: $.ASN1Decoder<ASN1SharedInfo> | null = null;
@@ -186,13 +186,13 @@ function _encode_ASN1SharedInfo (value: ASN1SharedInfo, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ASN1SharedInfo) { _cached_encoder_for_ASN1SharedInfo = function (value: ASN1SharedInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.keyInfo, $.BER),
-            /* IF_ABSENT  */ ((value.entityUInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.entityUInfo, $.BER)),
-            /* IF_ABSENT  */ ((value.entityVInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.entityVInfo, $.BER)),
-            /* IF_ABSENT  */ ((value.suppPubInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.suppPubInfo, $.BER)),
-            /* IF_ABSENT  */ ((value.suppPrivInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 3, () => $._encodeOctetString, $.BER)(value.suppPrivInfo, $.BER))
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.keyInfo, $.DER),
+            /* IF_ABSENT  */ ((value.entityUInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.DER)(value.entityUInfo, $.DER)),
+            /* IF_ABSENT  */ ((value.entityVInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => $._encodeOctetString, $.DER)(value.entityVInfo, $.DER)),
+            /* IF_ABSENT  */ ((value.suppPubInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => $._encodeOctetString, $.DER)(value.suppPubInfo, $.DER)),
+            /* IF_ABSENT  */ ((value.suppPrivInfo === undefined) ? undefined : $._encode_explicit(_TagClass.context, 3, () => $._encodeOctetString, $.DER)(value.suppPrivInfo, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ASN1SharedInfo(value, elGetter);
 }

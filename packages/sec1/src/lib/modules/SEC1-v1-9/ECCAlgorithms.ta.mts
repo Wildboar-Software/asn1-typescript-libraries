@@ -14,9 +14,9 @@ import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC
 /**
  * @summary ECCAlgorithms
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECCAlgorithms  ::=  SEQUENCE OF ECCAlgorithm
  * ```
@@ -49,7 +49,7 @@ let _cached_encoder_for_ECCAlgorithms: $.ASN1Encoder<ECCAlgorithms> | null = nul
  */
 export
 function _encode_ECCAlgorithms (value: ECCAlgorithms, elGetter: $.ASN1Encoder<ECCAlgorithms>) {
-    if (!_cached_encoder_for_ECCAlgorithms) { _cached_encoder_for_ECCAlgorithms = $._encodeSequenceOf<ECCAlgorithm>(() => _encode_ECCAlgorithm, $.BER); }
+    if (!_cached_encoder_for_ECCAlgorithms) { _cached_encoder_for_ECCAlgorithms = $._encodeSequenceOf<ECCAlgorithm>(() => _encode_ECCAlgorithm, $.DER); }
     return _cached_encoder_for_ECCAlgorithms(value, elGetter);
 }
 

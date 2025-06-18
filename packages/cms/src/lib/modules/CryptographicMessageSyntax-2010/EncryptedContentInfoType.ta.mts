@@ -192,11 +192,11 @@ export function _get_encoder_for_EncryptedContentInfoType<
                 .concat([
                     /* REQUIRED   */ $._encodeObjectIdentifier(
                         value.contentType,
-                        $.BER
+                        $.DER
                     ),
                     /* REQUIRED   */ _encode_AlgorithmIdentifierType(
                         value.contentEncryptionAlgorithm,
-                        $.BER
+                        $.DER
                     ),
                     /* IF_ABSENT  */ value.encryptedContent === undefined
                         ? undefined
@@ -204,11 +204,11 @@ export function _get_encoder_for_EncryptedContentInfoType<
                               _TagClass.context,
                               0,
                               () => $._encodeOctetString,
-                              $.BER
-                          )(value.encryptedContent, $.BER),
+                              $.DER
+                          )(value.encryptedContent, $.DER),
                 ])
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

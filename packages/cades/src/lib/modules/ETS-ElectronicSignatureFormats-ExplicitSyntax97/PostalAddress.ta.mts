@@ -55,7 +55,7 @@ let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = nul
  */
 export
 function _encode_PostalAddress (value: PostalAddress, elGetter: $.ASN1Encoder<PostalAddress>) {
-    if (!_cached_encoder_for_PostalAddress) { _cached_encoder_for_PostalAddress = $._encodeSequenceOf<DirectoryString>(() => _encode_DirectoryString, $.BER); }
+    if (!_cached_encoder_for_PostalAddress) { _cached_encoder_for_PostalAddress = $._encodeSequenceOf<DirectoryString>(() => _encode_DirectoryString, $.DER); }
     return _cached_encoder_for_PostalAddress(value, elGetter);
 }
 

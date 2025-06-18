@@ -202,21 +202,21 @@ export function _encode_MLData(value: MLData, elGetter: $.ASN1Encoder<MLData>) {
                     .concat([
                         /* REQUIRED   */ _encode_EntityIdentifier(
                             value.mailListIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeGeneralizedTime(
                             value.expansionTime,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.mlReceiptPolicy === undefined
                             ? undefined
                             : _encode_MLReceiptPolicy(
                                   value.mlReceiptPolicy,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

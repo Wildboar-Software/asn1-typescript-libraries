@@ -248,7 +248,7 @@ export function _encode_OtherInfo(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.keyInfo,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.partyUInfo === undefined
                             ? undefined
@@ -256,35 +256,35 @@ export function _encode_OtherInfo(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.partyUInfo, $.BER),
+                                  $.DER
+                              )(value.partyUInfo, $.DER),
                         /* IF_ABSENT  */ value.partyVInfo === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.partyVInfo, $.BER),
+                                  $.DER
+                              )(value.partyVInfo, $.DER),
                         /* IF_ABSENT  */ value.suppPubInfo === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.suppPubInfo, $.BER),
+                                  $.DER
+                              )(value.suppPubInfo, $.DER),
                         /* IF_ABSENT  */ value.suppPrivInfo === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   3,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.suppPrivInfo, $.BER),
+                                  $.DER
+                              )(value.suppPrivInfo, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

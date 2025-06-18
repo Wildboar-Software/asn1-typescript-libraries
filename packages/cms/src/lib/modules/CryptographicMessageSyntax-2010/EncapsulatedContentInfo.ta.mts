@@ -179,7 +179,7 @@ export function _encode_EncapsulatedContentInfo(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.eContentType,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.eContent === undefined
                             ? undefined
@@ -187,11 +187,11 @@ export function _encode_EncapsulatedContentInfo(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.eContent, $.BER),
+                                  $.DER
+                              )(value.eContent, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

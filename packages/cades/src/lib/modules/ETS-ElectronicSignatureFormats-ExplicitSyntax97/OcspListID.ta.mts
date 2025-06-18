@@ -14,14 +14,14 @@ import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } fro
 /**
  * @summary OcspListID
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OcspListID ::= SEQUENCE {
  *     ocspResponses   SEQUENCE OF OcspResponsesID }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -38,9 +38,9 @@ class OcspListID {
     /**
      * @summary Restructures an object into a OcspListID
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `OcspListID`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -57,9 +57,9 @@ class OcspListID {
 /**
  * @summary The Leading Root Component Types of OcspListID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -70,27 +70,27 @@ const _root_component_type_list_1_spec_for_OcspListID: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of OcspListID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_OcspListID: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of OcspListID
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_OcspListID: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_OcspListID: $.ASN1Decoder<OcspListID> | null = null;
@@ -133,9 +133,9 @@ function _encode_OcspListID (value: OcspListID, elGetter: $.ASN1Encoder<OcspList
     if (!_cached_encoder_for_OcspListID) { _cached_encoder_for_OcspListID = function (value: OcspListID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeSequenceOf<OcspResponsesID>(() => _encode_OcspResponsesID, $.BER)(value.ocspResponses, $.BER)
+            /* REQUIRED   */ $._encodeSequenceOf<OcspResponsesID>(() => _encode_OcspResponsesID, $.DER)(value.ocspResponses, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_OcspListID(value, elGetter);
 }

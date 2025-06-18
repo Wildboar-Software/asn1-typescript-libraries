@@ -196,16 +196,16 @@ export function _encode_PKIStatusInfo(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_PKIStatus(value.status, $.BER),
+                        /* REQUIRED   */ _encode_PKIStatus(value.status, $.DER),
                         /* IF_ABSENT  */ value.statusString === undefined
                             ? undefined
-                            : _encode_PKIFreeText(value.statusString, $.BER),
+                            : _encode_PKIFreeText(value.statusString, $.DER),
                         /* IF_ABSENT  */ value.failInfo === undefined
                             ? undefined
-                            : _encode_PKIFailureInfo(value.failInfo, $.BER),
+                            : _encode_PKIFailureInfo(value.failInfo, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

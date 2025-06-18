@@ -286,8 +286,8 @@ export function _encode_RSASSA_PSS_params(
                                   _TagClass.context,
                                   0,
                                   () => _encode_HashAlgorithm,
-                                  $.BER
-                              )(value.hashAlgorithm, $.BER),
+                                  $.DER
+                              )(value.hashAlgorithm, $.DER),
                         /* IF_DEFAULT */ value.maskGenAlgorithm === undefined ||
                         $.deepEq(
                             value.maskGenAlgorithm,
@@ -298,8 +298,8 @@ export function _encode_RSASSA_PSS_params(
                                   _TagClass.context,
                                   1,
                                   () => _encode_MaskGenAlgorithm,
-                                  $.BER
-                              )(value.maskGenAlgorithm, $.BER),
+                                  $.DER
+                              )(value.maskGenAlgorithm, $.DER),
                         /* IF_DEFAULT */ value.saltLength === undefined ||
                         $.deepEq(
                             value.saltLength,
@@ -310,8 +310,8 @@ export function _encode_RSASSA_PSS_params(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.saltLength, $.BER),
+                                  $.DER
+                              )(value.saltLength, $.DER),
                         /* IF_DEFAULT */ value.trailerField === undefined ||
                         $.deepEq(
                             value.trailerField,
@@ -322,11 +322,11 @@ export function _encode_RSASSA_PSS_params(
                                   _TagClass.context,
                                   3,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.trailerField, $.BER),
+                                  $.DER
+                              )(value.trailerField, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

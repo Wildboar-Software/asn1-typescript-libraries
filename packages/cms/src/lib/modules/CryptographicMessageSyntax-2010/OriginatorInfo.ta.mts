@@ -190,19 +190,19 @@ export function _encode_OriginatorInfo(
                                   _TagClass.context,
                                   0,
                                   () => _encode_CertificateSet,
-                                  $.BER
-                              )(value.certs, $.BER),
+                                  $.DER
+                              )(value.certs, $.DER),
                         /* IF_ABSENT  */ value.crls === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_RevocationInfoChoices,
-                                  $.BER
-                              )(value.crls, $.BER),
+                                  $.DER
+                              )(value.crls, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

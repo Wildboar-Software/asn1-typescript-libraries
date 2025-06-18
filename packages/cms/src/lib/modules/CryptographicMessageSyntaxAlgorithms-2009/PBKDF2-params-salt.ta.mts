@@ -69,7 +69,7 @@ export function _encode_PBKDF2_params_salt(
                 specified: $._encodeOctetString,
                 otherSource: _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PBKDF2_params_salt(value, elGetter);

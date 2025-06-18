@@ -15,9 +15,9 @@ import { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttr
 /**
  * @summary SignerAttribute_Item
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SignerAttribute-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
  * ```
@@ -56,9 +56,9 @@ let _cached_encoder_for_SignerAttribute_Item: $.ASN1Encoder<SignerAttribute_Item
 export
 function _encode_SignerAttribute_Item (value: SignerAttribute_Item, elGetter: $.ASN1Encoder<SignerAttribute_Item>) {
     if (!_cached_encoder_for_SignerAttribute_Item) { _cached_encoder_for_SignerAttribute_Item = $._encode_choice<SignerAttribute_Item>({
-    "claimedAttributes": $._encode_implicit(_TagClass.context, 0, () => _encode_ClaimedAttributes, $.BER),
-    "certifiedAttributes": $._encode_implicit(_TagClass.context, 1, () => _encode_CertifiedAttributes, $.BER),
-}, $.BER); }
+    "claimedAttributes": $._encode_implicit(_TagClass.context, 0, () => _encode_ClaimedAttributes, $.DER),
+    "certifiedAttributes": $._encode_implicit(_TagClass.context, 1, () => _encode_CertifiedAttributes, $.DER),
+}, $.DER); }
     return _cached_encoder_for_SignerAttribute_Item(value, elGetter);
 }
 

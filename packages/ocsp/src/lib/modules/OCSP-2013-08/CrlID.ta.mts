@@ -198,27 +198,27 @@ export function _encode_CrlID(value: CrlID, elGetter: $.ASN1Encoder<CrlID>) {
                                   _TagClass.context,
                                   0,
                                   () => $._encodeIA5String,
-                                  $.BER
-                              )(value.crlUrl, $.BER),
+                                  $.DER
+                              )(value.crlUrl, $.DER),
                         /* IF_ABSENT  */ value.crlNum === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.crlNum, $.BER),
+                                  $.DER
+                              )(value.crlNum, $.DER),
                         /* IF_ABSENT  */ value.crlTime === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeGeneralizedTime,
-                                  $.BER
-                              )(value.crlTime, $.BER),
+                                  $.DER
+                              )(value.crlTime, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

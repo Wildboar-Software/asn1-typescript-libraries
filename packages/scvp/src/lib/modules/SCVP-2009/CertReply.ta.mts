@@ -342,22 +342,22 @@ export function _encode_CertReply(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            /* REQUIRED   */ _encode_CertReference(value.cert, $.BER),
+            /* REQUIRED   */ _encode_CertReference(value.cert, $.DER),
             /* IF_DEFAULT */ value.replyStatus === undefined ||
             $.deepEq(
               value.replyStatus,
               CertReply._default_value_for_replyStatus
             )
               ? undefined
-              : _encode_ReplyStatus(value.replyStatus, $.BER),
+              : _encode_ReplyStatus(value.replyStatus, $.DER),
             /* REQUIRED   */ $._encodeGeneralizedTime(
               value.replyValTime,
-              $.BER
+              $.DER
             ),
-            /* REQUIRED   */ _encode_ReplyChecks(value.replyChecks, $.BER),
+            /* REQUIRED   */ _encode_ReplyChecks(value.replyChecks, $.DER),
             /* REQUIRED   */ _encode_ReplyWantBacks(
               value.replyWantBacks,
-              $.BER
+              $.DER
             ),
             /* IF_ABSENT  */ value.validationErrors === undefined
               ? undefined
@@ -367,29 +367,29 @@ export function _encode_CertReply(
                   () =>
                     $._encodeSequenceOf<OBJECT_IDENTIFIER>(
                       () => $._encodeObjectIdentifier,
-                      $.BER
+                      $.DER
                     ),
-                  $.BER
-                )(value.validationErrors, $.BER),
+                  $.DER
+                )(value.validationErrors, $.DER),
             /* IF_ABSENT  */ value.nextUpdate === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   1,
                   () => $._encodeGeneralizedTime,
-                  $.BER
-                )(value.nextUpdate, $.BER),
+                  $.DER
+                )(value.nextUpdate, $.DER),
             /* IF_ABSENT  */ value.certReplyExtensions === undefined
               ? undefined
               : $._encode_implicit(
                   _TagClass.context,
                   2,
                   () => _encode_Extensions,
-                  $.BER
-                )(value.certReplyExtensions, $.BER),
+                  $.DER
+                )(value.certReplyExtensions, $.DER),
           ])
           .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
+        $.DER
       );
     };
   }

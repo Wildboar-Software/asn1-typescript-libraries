@@ -167,12 +167,12 @@ export function _encode_PKMACValue(
                     .concat([
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algId,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeBitString(value.value, $.BER),
+                        /* REQUIRED   */ $._encodeBitString(value.value, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

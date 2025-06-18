@@ -16,16 +16,16 @@ import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } fro
 /**
  * @summary ECWKTParameters
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ECWKTParameters ::= SEQUENCE {
  *     kdf [0] KeyDerivationFunction OPTIONAL,
  *     wrap [1] KeyWrapFunction OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -48,9 +48,9 @@ class ECWKTParameters {
     /**
      * @summary Restructures an object into a ECWKTParameters
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ECWKTParameters`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -67,9 +67,9 @@ class ECWKTParameters {
 /**
  * @summary The Leading Root Component Types of ECWKTParameters
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -81,27 +81,27 @@ const _root_component_type_list_1_spec_for_ECWKTParameters: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of ECWKTParameters
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ECWKTParameters: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ECWKTParameters
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ECWKTParameters: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ECWKTParameters: $.ASN1Decoder<ECWKTParameters> | null = null;
@@ -153,10 +153,10 @@ function _encode_ECWKTParameters (value: ECWKTParameters, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_ECWKTParameters) { _cached_encoder_for_ECWKTParameters = function (value: ECWKTParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.kdf === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_KeyDerivationFunction, $.BER)(value.kdf, $.BER)),
-            /* IF_ABSENT  */ ((value.wrap === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_KeyWrapFunction, $.BER)(value.wrap, $.BER))
+            /* IF_ABSENT  */ ((value.kdf === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_KeyDerivationFunction, $.DER)(value.kdf, $.DER)),
+            /* IF_ABSENT  */ ((value.wrap === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_KeyWrapFunction, $.DER)(value.wrap, $.DER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_ECWKTParameters(value, elGetter);
 }

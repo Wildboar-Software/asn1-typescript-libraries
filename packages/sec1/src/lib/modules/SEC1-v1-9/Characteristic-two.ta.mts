@@ -15,9 +15,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary Characteristic_two
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Characteristic-two ::= SEQUENCE {
  *     m INTEGER, -- Field size 2m
@@ -25,7 +25,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     parameters CHARACTERISTIC-TWO.&Type({BasisTypes}{@basis})
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -54,9 +54,9 @@ class Characteristic_two {
     /**
      * @summary Restructures an object into a Characteristic_two
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Characteristic_two`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -73,9 +73,9 @@ class Characteristic_two {
 /**
  * @summary The Leading Root Component Types of Characteristic_two
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -88,27 +88,27 @@ const _root_component_type_list_1_spec_for_Characteristic_two: $.ComponentSpec[]
 /**
  * @summary The Trailing Root Component Types of Characteristic_two
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_Characteristic_two: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of Characteristic_two
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_Characteristic_two: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_Characteristic_two: $.ASN1Decoder<Characteristic_two> | null = null;
@@ -159,11 +159,11 @@ function _encode_Characteristic_two (value: Characteristic_two, elGetter: $.ASN1
     if (!_cached_encoder_for_Characteristic_two) { _cached_encoder_for_Characteristic_two = function (value: Characteristic_two): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.m, $.BER),
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.basis, $.BER),
-            /* REQUIRED   */ $._encodeAny(value.parameters, $.BER)
+            /* REQUIRED   */ $._encodeInteger(value.m, $.DER),
+            /* REQUIRED   */ $._encodeObjectIdentifier(value.basis, $.DER),
+            /* REQUIRED   */ $._encodeAny(value.parameters, $.DER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.DER);
 }; }
     return _cached_encoder_for_Characteristic_two(value, elGetter);
 }

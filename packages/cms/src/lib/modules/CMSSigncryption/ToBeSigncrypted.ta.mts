@@ -170,14 +170,14 @@ export function _encode_ToBeSigncrypted(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Content(value.content, $.BER),
+                        /* REQUIRED   */ _encode_Content(value.content, $.DER),
                         /* REQUIRED   */ _encode_SigncryptedAttributes(
                             value.attributes,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

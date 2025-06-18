@@ -64,7 +64,7 @@ let _cached_encoder_for_Attributes: $.ASN1Encoder<Attributes> | null = null;
  */
 export
 function _encode_Attributes (value: Attributes, elGetter: $.ASN1Encoder<Attributes>) {
-    if (!_cached_encoder_for_Attributes) { _cached_encoder_for_Attributes = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.BER); }
+    if (!_cached_encoder_for_Attributes) { _cached_encoder_for_Attributes = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_Attributes(value, elGetter);
 }
 

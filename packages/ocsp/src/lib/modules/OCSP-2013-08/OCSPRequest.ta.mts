@@ -182,7 +182,7 @@ export function _encode_OCSPRequest(
                     .concat([
                         /* REQUIRED   */ _encode_TBSRequest(
                             value.tbsRequest,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.optionalSignature === undefined
                             ? undefined
@@ -190,11 +190,11 @@ export function _encode_OCSPRequest(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Signature,
-                                  $.BER
-                              )(value.optionalSignature, $.BER),
+                                  $.DER
+                              )(value.optionalSignature, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

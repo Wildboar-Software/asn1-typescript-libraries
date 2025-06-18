@@ -167,7 +167,7 @@ function selectFromEntry (
     const extraAttributes: Set<string> | undefined = (eis.extraAttributes && ("select" in eis.extraAttributes))
         ? new Set(eis.extraAttributes.select.map((attr) => attr.toString()))
         : undefined;
-    const selectedContexts: Record<string, TypeAndContextAssertion[]> | undefined = (
+    const selectedContexts: Map<string, TypeAndContextAssertion[]> | undefined = (
         eis.contextSelection
         && ("selectedContexts" in eis.contextSelection)
     )
@@ -243,7 +243,7 @@ function selectFromEntry (
                     ...getAttributeSupertypes(type_).map((oid) => oid.toString()),
                 ]);
                 const typeAndContextAssertions = Array.from(typeAndSuperTypes)
-                    .flatMap((oid) => selectedContexts[oid] ?? []);
+                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
                 if (typeAndContextAssertions.length === 0) {
                     return true; // There are no context assertions for this attribute type.
                 }
@@ -296,7 +296,7 @@ function selectFromEntry (
                     ...getAttributeSupertypes(type_).map((oid) => oid.toString()),
                 ]);
                 const typeAndContextAssertions = Array.from(typeAndSuperTypes)
-                    .flatMap((oid) => selectedContexts[oid] ?? []);
+                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
                 if (typeAndContextAssertions.length === 0) {
                     return true; // There are no context assertions for this attribute type.
                 }

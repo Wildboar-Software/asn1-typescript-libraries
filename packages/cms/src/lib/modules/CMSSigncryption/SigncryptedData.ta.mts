@@ -257,25 +257,25 @@ export function _encode_SigncryptedData(
                     .concat([
                         /* REQUIRED   */ _encode_CMSVersion(
                             value.version,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_ContentInformation(
                             value.contentInformation,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certificates === undefined
                             ? undefined
-                            : _encode_Certificates(value.certificates, $.BER),
+                            : _encode_Certificates(value.certificates, $.DER),
                         /* IF_ABSENT  */ value.crls === undefined
                             ? undefined
-                            : _encode_CRLs(value.crls, $.BER),
+                            : _encode_CRLs(value.crls, $.DER),
                         /* REQUIRED   */ _encode_Signcrypters(
                             value.signcrypters,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }
