@@ -1,0 +1,21 @@
+{
+  "name": "tai",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tai/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+            "outputPath": "dist/packages/tai",
+            "tsConfig": "packages/tai/tsconfig.lib.json",
+            "packageJson": "packages/tai/package.json",
+            "main": "packages/tai/src/index.mts",
+            "assets": ["packages/tai/*.md", "packages/tai/LICENSE.txt", "packages/tai/package.json"],
+            "generatePackageJson": false
+        }
+    }
+  }
+}

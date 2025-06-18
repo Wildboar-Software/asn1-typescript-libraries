@@ -2,10 +2,12 @@
   "compilerOptions": {
     "composite": true,
     "declarationMap": true,
-    "emitDeclarationOnly": false, // Why the fuck did Nx make this true by default?
+    "emitDeclarationOnly": false,
     "importHelpers": true,
     "isolatedModules": false,
-    "lib": ["es2022"],
+    "lib": [
+      "es2022"
+    ],
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmitOnError": true,
@@ -22,70 +24,184 @@
     "strictFunctionTypes": true,
     "target": "es2022",
     "baseUrl": ".",
-    "customConditions": ["development"],
-      "paths": {
-        "@wildboar/acbio/*": ["./packages/acbio/*"],
-        "@wildboar/acse/*": ["./packages/acse/*"],
-        "@wildboar/ansi-x9-42/*": ["./packages/ansi-x9-42/*"],
-        "@wildboar/ansi-x9-62/*": ["./packages/ansi-x9-62/*"],
-        "@wildboar/asn1soap/*": ["./packages/asn1soap/*"],
-        "@wildboar/attribute-asn1module/*": ["./packages/attribute-asn1module/*"],
-        "@wildboar/bip/*": ["./packages/bip/*"],
-        "@wildboar/cades/*": ["./packages/cades/*"],
-        "@wildboar/casscam/*": ["./packages/casscam/*"],
-        "@wildboar/cbeff/*": ["./packages/cbeff/*"],
-        "@wildboar/ccr/*": ["./packages/ccr/*"],
-        "@wildboar/cinf/*": ["./packages/cinf/*"],
-        "@wildboar/clacse/*": ["./packages/clacse/*"],
-        "@wildboar/clearance-sponsor-attribute/*": [
-            "./packages/clearance-sponsor-attribute/*"
-        ],
-        "@wildboar/cmail/*": ["./packages/cmail/*"],
-        "@wildboar/cmip/*": ["./packages/cmip/*"],
-        "@wildboar/cmp": ["./packages/cmp/*"],
-        "@wildboar/cms/*": ["./packages/cms/*"],
-        "@wildboar/copp/*": ["./packages/copp/*"],
-        "@wildboar/crmf/*": ["./packages/crmf/*"],
-        "@wildboar/device-owner-attribute/*": [
-            "./packages/device-owner-attribute/*"
-        ],
-        "@wildboar/ec-private-key/*": ["./packages/ec-private-key/*"],
-        "@wildboar/ers/*": ["./packages/ers/*"],
-        "@wildboar/ess/*": ["./packages/ess/*"],
-        "@wildboar/fast-infoset/*": ["./packages/fast-infoset/*"],
-        "@wildboar/ftam/*": ["./packages/ftam/*"],
-        "@wildboar/gmi-attributemodule/*": ["./packages/gmi-attributemodule/*"],
-        "@wildboar/guls/*": ["./packages/guls/*"],
-        "@wildboar/isis/*": ["./packages/isis/*"],
-        "@wildboar/iso-9798-3-sasl/*": ["./packages/iso-9798-3-sasl/*"],
-        "@wildboar/iso19785/*": ["./packages/iso19785/*"],
-        "@wildboar/kerberos5/*": ["./packages/kerberos5/*"],
-        "@wildboar/ldap/*": ["./packages/ldap/*"],
-        "@wildboar/m3100/*": ["./packages/m3100/*"],
-        "@wildboar/nlm/*": ["./packages/nlm/*"],
-        "@wildboar/ocsp/*": ["./packages/ocsp/*"],
-        "@wildboar/pc/*": ["./packages/pc/*"],
-        "@wildboar/pkcs/*": ["./packages/pkcs/*"],
-        "@wildboar/pki-stub/*": ["./packages/pki-stub/*"],
-        "@wildboar/qc/*": ["./packages/qc/*"],
-        "@wildboar/rinf/*": ["./packages/rinf/*"],
-        "@wildboar/rose/*": ["./packages/rose/*"],
-        "@wildboar/rtse/*": ["./packages/rtse/*"],
-        "@wildboar/safecurves-pkix-18/*": ["./packages/safecurves-pkix-18/*"],
-        "@wildboar/scrypt-0": ["./packages/scrypt-0/src/index.ts"],
-        "@wildboar/scvp/*": ["./packages/scvp/*"],
-        "@wildboar/sec1/*": ["./packages/sec1/*"],
-        "@wildboar/sio/*": ["./packages/sio/*"],
-        "@wildboar/spkac/*": ["./packages/spkac/*"],
-        "@wildboar/t38/*": ["./packages/t38/*"],
-        "@wildboar/tal/*": ["./packages/tal/*"],
-        "@wildboar/tcap/*": ["./packages/tcap/*"],
-        "@wildboar/tsp/*": ["./packages/tsp/*"],
-        "@wildboar/usm/*": ["./packages/usm/*"],
-        "@wildboar/x1080/*": ["./packages/x1080/*"],
-        "@wildboar/x400/*": ["./packages/x400/*"],
-        "@wildboar/x500/*": ["./packages/x500/*"],
-        "@wildboar/x700/*": ["./packages/x700/*"]
+    "customConditions": [
+      "development"
+    ],
+    "paths": {
+      "@wildboar/acbio/*": [
+        "./packages/acbio/*"
+      ],
+      "@wildboar/acse/*": [
+        "./packages/acse/*"
+      ],
+      "@wildboar/ansi-x9-42/*": [
+        "./packages/ansi-x9-42/*"
+      ],
+      "@wildboar/ansi-x9-62/*": [
+        "./packages/ansi-x9-62/*"
+      ],
+      "@wildboar/asn1soap/*": [
+        "./packages/asn1soap/*"
+      ],
+      "@wildboar/attribute-asn1module/*": [
+        "./packages/attribute-asn1module/*"
+      ],
+      "@wildboar/bip/*": [
+        "./packages/bip/*"
+      ],
+      "@wildboar/cades/*": [
+        "./packages/cades/*"
+      ],
+      "@wildboar/casscam/*": [
+        "./packages/casscam/*"
+      ],
+      "@wildboar/cbeff/*": [
+        "./packages/cbeff/*"
+      ],
+      "@wildboar/ccr/*": [
+        "./packages/ccr/*"
+      ],
+      "@wildboar/cinf/*": [
+        "./packages/cinf/*"
+      ],
+      "@wildboar/clacse/*": [
+        "./packages/clacse/*"
+      ],
+      "@wildboar/clearance-sponsor-attribute/*": [
+        "./packages/clearance-sponsor-attribute/*"
+      ],
+      "@wildboar/cmail/*": [
+        "./packages/cmail/*"
+      ],
+      "@wildboar/cmip/*": [
+        "./packages/cmip/*"
+      ],
+      "@wildboar/cmp": [
+        "./packages/cmp/*"
+      ],
+      "@wildboar/cms/*": [
+        "./packages/cms/*"
+      ],
+      "@wildboar/copp/*": [
+        "./packages/copp/*"
+      ],
+      "@wildboar/crmf/*": [
+        "./packages/crmf/*"
+      ],
+      "@wildboar/device-owner-attribute/*": [
+        "./packages/device-owner-attribute/*"
+      ],
+      "@wildboar/ec-private-key/*": [
+        "./packages/ec-private-key/*"
+      ],
+      "@wildboar/ers/*": [
+        "./packages/ers/*"
+      ],
+      "@wildboar/ess/*": [
+        "./packages/ess/*"
+      ],
+      "@wildboar/fast-infoset/*": [
+        "./packages/fast-infoset/*"
+      ],
+      "@wildboar/ftam/*": [
+        "./packages/ftam/*"
+      ],
+      "@wildboar/gmi-attributemodule/*": [
+        "./packages/gmi-attributemodule/*"
+      ],
+      "@wildboar/guls/*": [
+        "./packages/guls/*"
+      ],
+      "@wildboar/isis/*": [
+        "./packages/isis/*"
+      ],
+      "@wildboar/iso-9798-3-sasl/*": [
+        "./packages/iso-9798-3-sasl/*"
+      ],
+      "@wildboar/iso19785/*": [
+        "./packages/iso19785/*"
+      ],
+      "@wildboar/kerberos5/*": [
+        "./packages/kerberos5/*"
+      ],
+      "@wildboar/ldap/*": [
+        "./packages/ldap/*"
+      ],
+      "@wildboar/m3100/*": [
+        "./packages/m3100/*"
+      ],
+      "@wildboar/nlm/*": [
+        "./packages/nlm/*"
+      ],
+      "@wildboar/ocsp/*": [
+        "./packages/ocsp/*"
+      ],
+      "@wildboar/pc/*": [
+        "./packages/pc/*"
+      ],
+      "@wildboar/pkcs/*": [
+        "./packages/pkcs/*"
+      ],
+      "@wildboar/pki-stub/*": [
+        "./packages/pki-stub/*"
+      ],
+      "@wildboar/qc/*": [
+        "./packages/qc/*"
+      ],
+      "@wildboar/rinf/*": [
+        "./packages/rinf/*"
+      ],
+      "@wildboar/rose/*": [
+        "./packages/rose/*"
+      ],
+      "@wildboar/rtse/*": [
+        "./packages/rtse/*"
+      ],
+      "@wildboar/safecurves-pkix-18/*": [
+        "./packages/safecurves-pkix-18/*"
+      ],
+      "@wildboar/scrypt-0": [
+        "./packages/scrypt-0/src/index.ts"
+      ],
+      "@wildboar/scvp/*": [
+        "./packages/scvp/*"
+      ],
+      "@wildboar/sec1/*": [
+        "./packages/sec1/*"
+      ],
+      "@wildboar/sio/*": [
+        "./packages/sio/*"
+      ],
+      "@wildboar/spkac/*": [
+        "./packages/spkac/*"
+      ],
+      "@wildboar/t38/*": [
+        "./packages/t38/*"
+      ],
+      "@wildboar/tal/*": [
+        "./packages/tal/*"
+      ],
+      "@wildboar/tcap/*": [
+        "./packages/tcap/*"
+      ],
+      "@wildboar/tsp/*": [
+        "./packages/tsp/*"
+      ],
+      "@wildboar/usm/*": [
+        "./packages/usm/*"
+      ],
+      "@wildboar/x1080/*": [
+        "./packages/x1080/*"
+      ],
+      "@wildboar/x400/*": [
+        "./packages/x400/*"
+      ],
+      "@wildboar/x500/*": [
+        "./packages/x500/*"
+      ],
+      "@wildboar/x700/*": [
+        "./packages/x700/*"
+      ]
     }
   }
 }

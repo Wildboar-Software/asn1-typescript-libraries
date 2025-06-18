@@ -1,0 +1,39 @@
+{
+    "name": "@wildboar/tai",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript",
+    "keywords": [
+        "snmp",
+        "management",
+        "snmpv3",
+        "network"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "asn1-ts": "9.x.x"
+    }
+}
