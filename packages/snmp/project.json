@@ -1,0 +1,27 @@
+{
+  "name": "snmp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/snmp/src",
+  "projectType": "library",
+  "tags": [],
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/snmp/**/*.mts"]
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/snmp",
+                "tsConfig": "packages/snmp/tsconfig.lib.json",
+                "packageJson": "packages/snmp/package.json",
+                "main": "packages/snmp/src/index.mts",
+                "assets": ["packages/snmp/*.md", "packages/snmp/LICENSE.txt", "packages/snmp/package.json"],
+                "generatePackageJson": false
+            }
+        }
+    }
+}
