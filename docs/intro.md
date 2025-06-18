@@ -14,15 +14,15 @@ assignments, object class assignments, object assignments, and object set
 assignments--in other words, the entirety of an ASN.1 file can be compiled into
 directly useful TypeScript.
 
-For _some_ of the published TypeScript ASN.1 libraries, such as `@wildboar/x500`,
-the symbols produced from compilation are not exported from the index. They must
-be "deep imported"
-(e.g. `module-name/src/lib/modules/AuthenticationFramework/TBSCertificate.ta`).
-For each of these libraries, the symbols
-produced from ASN.1 module compilation will be exported under `src/lib/modules`, then further namespaced by the module name. There may be other things
-exported from a library other than just the compiled ASN.1 modules; for
-instance, in `@wildboar/x500` there are functions available that implement
-X.500 matching rules.
+For _some_ of the published TypeScript ASN.1 libraries, such as
+`@wildboar/x500`, the symbols produced from compilation are not exported from
+the index. They must be "deep imported" (e.g.
+`module-name/src/lib/modules/AuthenticationFramework/TBSCertificate.ta`). For
+each of these libraries, the symbols produced from ASN.1 module compilation will
+be exported under `src/lib/modules`, then further namespaced by the module name.
+There may be other things exported from a library other than just the compiled
+ASN.1 modules; for instance, in `@wildboar/x500` there are functions available
+that implement X.500 matching rules.
 
 Note that the files produced by compilation end with one of these extensions:
 
@@ -42,14 +42,3 @@ mitigates any potential name collision.
 In file names, hyphens are kept, but in the actual exported symbols in each
 file will have their hyphens replaced with underscores (because hyphens are not
 valid in identifier names in TypeScript / JavaScript.)
-
-## PKI-Stub Library
-
-## X.500 Library
-
-- Stringifiers
-- Comparators
-- Matchers
-- `evaluateFilter()`
-
-## Platform Certificates Library

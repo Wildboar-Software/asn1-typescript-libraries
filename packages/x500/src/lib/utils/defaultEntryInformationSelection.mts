@@ -2,6 +2,11 @@ import { EntryInformationSelection } from "../modules/DirectoryAbstractService/E
 
 /**
  * @summary Convenience default value for EntryInformationSelection.
+ * @description
+ * 
+ * This seelcts all user attributes, no operational attributes, performs no
+ * context selection, returns no contexts, and selects for contributing entries
+ * only within a compound entry.
  *
  * ### ASN.1 Definition
  *
@@ -22,6 +27,9 @@ import { EntryInformationSelection } from "../modules/DirectoryAbstractService/E
  *     familyReturn                   FamilyReturn DEFAULT
  *                                      {memberSelect contributingEntriesOnly} }
  * ```
+ * 
+ * @returns {EntryInformationSelection}
+ * @function
  */
 export
 const defaultEntryInformationSelection: EntryInformationSelection = new EntryInformationSelection(

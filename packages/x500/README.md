@@ -23,6 +23,7 @@ are (inclusively):
 - Certificate Authority Subscription Protocol (CASP)
 - Authorization Validation Management Protocol (AVMP)
 - Trust Broker Protocol (TBP)
+
 ## Footnote
 
 These libraries were generated entirely or in part by the

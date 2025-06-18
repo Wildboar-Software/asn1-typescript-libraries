@@ -14,6 +14,13 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 
+/**
+ * @summary Compare two `GeneralName` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareGeneralName (
     a: GeneralName,

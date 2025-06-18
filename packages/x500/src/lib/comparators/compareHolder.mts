@@ -8,6 +8,13 @@ import compareIssuerSerial from "./compareIssuerSerial.mjs";
 import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier.mjs";
 import compareBitStrings from "./compareBitStrings.mjs";
 
+/**
+ * @summary Compare two `Holder` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareHolder (
     a: Holder,

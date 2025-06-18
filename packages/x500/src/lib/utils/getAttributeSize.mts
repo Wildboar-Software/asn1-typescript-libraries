@@ -4,9 +4,22 @@ import type {
 
 const BYTES_FOR_TAG: number = 2;
 
-// Note that this measures in terms of BER/DER encoding, and it is somewhat inaccurate.
-// This is intentionally written using for loops, since they are much more
-// performant than .reduce().
+/**
+ * @summary Get the size of an attribute in bytes
+ * @description
+ * 
+ * Get the size of an X.500 directory attribute in bytes, using the
+ * DER encoding of the tag and length. This implementation is somewhat
+ * inaccurate in the interest of simplicity and performance, since it is likely
+ * to be called very frequently.
+ * 
+ * Despite a `.map().reduce()` implementation being more elegant, this is
+ * written using for loops, which are far more performant.
+ * 
+ * @param {Attribute} attr The attribute whose size is to be evaluated
+ * @returns {number} The size of the attribute in bytes
+ * @function
+ */
 export
 function getAttributeSize (attr: Attribute): number {
     let size: number = 0;

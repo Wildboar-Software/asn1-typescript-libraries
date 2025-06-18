@@ -7,6 +7,13 @@ import compareGeneralName from "./compareGeneralName.mjs";
 
 const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum;
 
+/**
+ * @summary Compare two `GeneralSubtree` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareGeneralSubtree (
     a: GeneralSubtree,

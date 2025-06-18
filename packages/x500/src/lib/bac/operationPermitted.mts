@@ -9,6 +9,23 @@ import {
     PERMISSION_CATEGORY_IMPORT,
 } from "./bacACDF.mjs";
 
+/**
+ * @summary Check if at least one ACDF tuple grants access and none deny
+ * @description
+ * 
+ * This is the last step of the Basic Access Control (BAC) Access Control
+ * Decision Function (ACDF): this function evaluates whether the
+ * operation is permitted by checking that at least one relevant ACDF tuple
+ * grants access and that none deny access.
+ * 
+ * @param {number[]} operations - An array of `PERMISSION_CATEGORY_*` constants
+ *  defined in `@wildboar/x500`.
+ * @param {ACDFTupleExtended} tuple - The Access Control Decision Function
+ *  (ACDF) tuple.
+ * @param {ProtectedItem} request 
+ * @returns {Boolean} `true` if the operation is permitted 
+ * @function
+ */
 export
 function operationPermitted (
     operations: number[],

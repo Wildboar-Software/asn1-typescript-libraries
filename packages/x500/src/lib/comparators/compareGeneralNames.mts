@@ -5,6 +5,13 @@ import type {
 } from "../modules/CertificateExtensions/GeneralNames.ta.mjs";
 import compareGeneralName from "./compareGeneralName.mjs";
 
+/**
+ * @summary Compare two `GeneralNames` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareGeneralNames (
     a: GeneralNames,

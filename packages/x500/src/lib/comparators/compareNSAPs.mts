@@ -8,6 +8,13 @@ const commonPrefix: number[] = [
 ];
 
 // TODO: Add port number to IDM URL if it is not specified.
+/**
+ * @summary Compare two X.213 NSAP values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareNSAP (a: OCTET_STRING, b: OCTET_STRING): boolean {
     if (a[0] !== b[0]) {

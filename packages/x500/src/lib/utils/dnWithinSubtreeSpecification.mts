@@ -50,11 +50,13 @@ import objectClassesWithinRefinement from "./objectClassesWithinRefinement.mjs";
  *     ... }
  * ```
  *
- * @param dn The full distinguished name of the entry.
- * @param sts The subtree specification used to subcategorize the administrative area.
- * @param scope The vertex that forms the root to which the subtree specification is applied.
- * @param getEqualityMatcher A function that takes an object identifier that identifies a type and returns an equality matcher.
+ * @param {DistinguishedName} entryDN The full distinguished name of the entry.
+ * @param {OBJECT_IDENTIFIER[]} entryObjectClasses The entry's object classes
+ * @param {SubtreeSpecification} sts The subtree specification used to subcategorize the administrative area.
+ * @param {DistinguishedName} scope The vertex that forms the root to which the subtree specification is applied.
+ * @param {Function} getEqualityMatcher A function that takes an object identifier that identifies a type and returns an equality matcher.
  * @returns {boolean} A boolean, which will be `true` if the entry falls within the subtree specification.
+ * @function
  */
 export
 function dnWithinSubtreeSpecification (

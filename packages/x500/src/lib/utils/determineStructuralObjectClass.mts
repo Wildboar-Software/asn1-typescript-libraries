@@ -7,11 +7,16 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs";
 
 /**
+ * @summary Determine the structural object class among a set of object classes
+ * @description
+ * 
  * NOTE: There may only be one structural object class chain in an entry.
  *
- * @param ctx
- * @param objectClasses
- * @returns
+ * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes the entry has
+ * @param {Function} getKind A function that can retrieve the object class kind by its ID
+ * @param {Function} getSuperclasses A function that can retrieve an object class'
+ *  superclasses by its ID
+ * @returns {OBJECT_IDENTIFIER} 
  */
 export
 function determineStructuralObjectClass (

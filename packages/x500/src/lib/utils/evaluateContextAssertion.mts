@@ -5,6 +5,22 @@ import type {
 } from "../modules/InformationFramework/ContextAssertion.ta.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
 
+/**
+ * @summary Evaluate a Context Assertion
+ * @description
+ * 
+ * Evaluate an X.500 directory context assertion according to the procedures
+ * specified in ITU-T Recommendation X.501 (2019), Section 8.9.2.4.
+ *
+ * @param {ContextAssertion} ca The context assertion to be evaluated
+ * @param {Context[]} contexts The contexts to be evaluated
+ * @param {Function} getContextMatcher A function that returns a matcher function when given
+ *  the OID of the context type.
+ * @param {Function} determineAbsentMatch A function that returns whether the context
+ *  assertion is `ABSENT-MATCH`
+ * @returns {Boolean} `true` if the context assertion matches
+ * @function
+ */
 export
 function evaluateContextAssertion (
     ca: ContextAssertion,

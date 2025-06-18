@@ -3,7 +3,6 @@ import type { XDayOf } from "../modules/SelectedAttributeTypes/XDayOf.ta.mjs";
 import type { NamedDay } from "../modules/SelectedAttributeTypes/NamedDay.ta.mjs";
 import { TRUE_BIT } from "asn1-ts";
 
-
 function destructureXDayOf (x: XDayOf): [ number, NamedDay ] {
     if ("first" in x) {
         return [ 1, x.first ];

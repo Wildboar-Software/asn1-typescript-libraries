@@ -4,6 +4,13 @@ import type { RelativeDistinguishedName } from "../modules/InformationFramework/
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import compareAttributeTypeAndValue from "./compareAttributeTypeAndValue.mjs";
 
+/**
+ * @summary Compare two `RelativeDistinguishedName` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export default function compare(
     a: RelativeDistinguishedName,
     b: RelativeDistinguishedName,

@@ -5,6 +5,13 @@ import type {
 } from "../modules/AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
 
+/**
+ * @summary Compare two `IssuerSerial` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareIssuerSerial (
     a: IssuerSerial,

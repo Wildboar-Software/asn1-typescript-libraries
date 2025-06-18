@@ -50,15 +50,37 @@ import {
     id_errcode_updateError,
 } from "../modules/CommonProtocolSpecification/id-errcode-updateError.va.mjs";
 
+/**
+ * @summary Any X.500 directory error that has an associated ROSE error code
+ */
 export
-class AbandonError extends Error {
+interface X500DirectoryErrorCoded {
+    /**
+     * @summary Get the associated X.500 directory error code
+     * @function
+     * @returns {Code} the error code
+     */
+    error_code(): Code;
+}
+
+/**
+ * @classdesc The X.500 directory `abandoned` error
+ */
+export
+class AbandonError extends Error implements X500DirectoryErrorCoded {
     public static readonly errcode: Code = id_errcode_abandoned;
     constructor (override readonly message: string, readonly data: AbandonedData) {
         super(message);
         Object.setPrototypeOf(this, AbandonError.prototype);
     }
+    public error_code(): Code {
+        return AbandonError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `abandonFailed` error
+ */
 export
 class AbandonFailedError extends Error {
     public static readonly errcode: Code = id_errcode_abandonFailed;
@@ -66,8 +88,14 @@ class AbandonFailedError extends Error {
         super(message);
         Object.setPrototypeOf(this, AbandonFailedError.prototype);
     }
+    public error_code(): Code {
+        return AbandonFailedError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `attributeError`
+ */
 export
 class AttributeError extends Error {
     public static readonly errcode: Code = id_errcode_attributeError;
@@ -75,8 +103,14 @@ class AttributeError extends Error {
         super(message);
         Object.setPrototypeOf(this, AttributeError.prototype);
     }
+    public error_code(): Code {
+        return AttributeError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `nameError`
+ */
 export
 class NameError extends Error {
     public static readonly errcode: Code = id_errcode_nameError;
@@ -84,8 +118,14 @@ class NameError extends Error {
         super(message);
         Object.setPrototypeOf(this, NameError.prototype);
     }
+    public error_code(): Code {
+        return NameError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `referral` "error"
+ */
 export
 class ReferralError extends Error {
     public static readonly errcode: Code = id_errcode_referral;
@@ -93,8 +133,14 @@ class ReferralError extends Error {
         super(message);
         Object.setPrototypeOf(this, ReferralError.prototype);
     }
+    public error_code(): Code {
+        return ReferralError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `securityError`
+ */
 export
 class SecurityError extends Error {
     public static readonly errcode: Code = id_errcode_securityError;
@@ -102,8 +148,14 @@ class SecurityError extends Error {
         super(message);
         Object.setPrototypeOf(this, SecurityError.prototype);
     }
+    public error_code(): Code {
+        return SecurityError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `serviceError`
+ */
 export
 class ServiceError extends Error {
     public static readonly errcode: Code = id_errcode_serviceError;
@@ -111,8 +163,14 @@ class ServiceError extends Error {
         super(message);
         Object.setPrototypeOf(this, ServiceError.prototype);
     }
+    public error_code(): Code {
+        return ServiceError.errcode;
+    }
 }
 
+/**
+ * @classdesc The X.500 directory `updateError`
+ */
 export
 class UpdateError extends Error {
     public static readonly errcode: Code = id_errcode_updateError;
@@ -120,8 +178,14 @@ class UpdateError extends Error {
         super(message);
         Object.setPrototypeOf(this, UpdateError.prototype);
     }
+    public error_code(): Code {
+        return UpdateError.errcode;
+    }
 }
 
+/**
+ * @classdesc The Remote Operation Service Element (ROSE) `unknownOperationRequest` rejection
+ */
 export
 class UnknownOperationError extends Error {
     constructor (message?: string) {

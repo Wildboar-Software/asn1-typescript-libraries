@@ -19,10 +19,10 @@ import type {
  *
  * This unintuitive reversal warrants a function specifically for clarification.
  *
- * @param dn The distinguished name from whence to extract the relative
+ * @param {DistinguishedName} dn The distinguished name from whence to extract the relative
  *  distinguished name.
- * @returns The relative distinguished name or `undefined` if the distinguished
- *  name is zero-length.
+ * @returns {RelativeDistinguishedName | undefined} The relative distinguished
+ *  name or `undefined` if the distinguished name is zero-length.
  */
 export
 function getRDN (dn: DistinguishedName): RelativeDistinguishedName | undefined {

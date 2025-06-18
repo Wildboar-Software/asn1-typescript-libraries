@@ -10,6 +10,13 @@ function score (hour: number, minute: number, second: number): number {
     );
 }
 
+/**
+ * @summary Determine if a point in time occurs between a day time band
+ * @param {DayTimeBand} dtb The asserted day time band
+ * @param {Date} point The date representing the asserted point in time
+ * @returns {Boolean} `true` if the date is between the asserted time band
+ * @function
+ */
 export
 function dateIsBetweenDayTimeBand (dtb: DayTimeBand, point: Date): boolean {
     const pointHours: number = point.getHours();

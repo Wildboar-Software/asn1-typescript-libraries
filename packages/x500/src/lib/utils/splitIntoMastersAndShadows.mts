@@ -6,6 +6,17 @@ import {
     MasterOrShadowAccessPoint_category_shadow,
 } from "../modules/DistributedOperations/MasterOrShadowAccessPoint-category.ta.mjs";
 
+/**
+ * @summary Group access points into masters and shadows
+ * @description
+ * 
+ * Access points that are neither masters nor shadows are silently excluded from
+ * both returned arrays.
+ * 
+ * @param {MasterOrShadowAccessPoint[]} mosaps The access points to be grouped
+ * @returns {Array} Master and shadow access points, respectively, in two arrays
+ * @function
+ */
 export
 function splitIntoMastersAndShadows (
     mosaps: MasterOrShadowAccessPoint[],

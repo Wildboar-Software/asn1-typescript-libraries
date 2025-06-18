@@ -36,7 +36,7 @@ import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute.mj
  * @param {boolean} onlyRDN Whether to only sort values found in the relative
  *  distinguished name, as would be desirable when implementing the Directory
  *  Access Protocol (DAP) `list` operation.
- * @returns >0 if A is greater, <0 if B is greater, and 0 if they are equal.
+ * @returns {number} >0 if A is greater, <0 if B is greater, and 0 if they are equal.
  * @function
  */
 export

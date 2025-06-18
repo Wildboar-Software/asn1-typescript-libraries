@@ -5,6 +5,13 @@ import type {
 } from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
 
+/**
+ * @summary Compare two `AuthorityKeyIdentifier` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareAttCertIssuer (
     a: AuthorityKeyIdentifier,

@@ -1,7 +1,19 @@
 import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca.mjs";
 import type { Refinement } from "../modules/InformationFramework/Refinement.ta.mjs";
 
-// TODO: Review. I worked on this late at night and don't feel confident in this code.
+// TODO: Re-write to use for loops?
+/**
+ * @summary Determine whether object classes match a refinement
+ * @description
+ * 
+ * If the refinement type is not understood, `false` is returned. This function
+ * is recursive.
+ * 
+ * @param {OBJECT_IDENTIFIER[]} classes The object classes to be evaluated for a match
+ * @param {Refinement} refinement The object class refinement
+ * @returns {Boolean} `true` if the object classes match the refinement
+ * @function
+ */
 export
 function objectClassesWithinRefinement (
     classes: OBJECT_CLASS["&id"][],

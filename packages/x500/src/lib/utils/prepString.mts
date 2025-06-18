@@ -22,8 +22,8 @@ const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
  * section 7.6.2, but those should simply be handled in the `NumericString`
  * matching rules; they will not be handled here.
  *
- * @param str The string to be normalized.
- * @returns The normalized string, or `undefined` if there was a prohibited character.
+ * @param {string} str The string to be normalized.
+ * @returns {string} The normalized string, or `undefined` if there was a prohibited character.
  *
  * @function
  */

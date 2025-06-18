@@ -63,7 +63,7 @@ function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntrie
 }
 
 /**
- * @summary selectFromEntry
+ * @summary Select information from an entry to produce `EntryInformation`
  * @description
  *
  * This function implements most of the entry information selection algorithm

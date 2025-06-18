@@ -6,6 +6,13 @@ import {
 import compareGeneralName from "./compareGeneralName.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
 
+/**
+ * @summary Compare two `RoleSpecCertIdentifier` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareRoleSpecCertIdentifier (
     a: RoleSpecCertIdentifier,

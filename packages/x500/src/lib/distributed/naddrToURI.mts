@@ -2,6 +2,12 @@ import type { OCTET_STRING } from "asn1-ts";
 import { ipv4FromNSAP } from "./ipv4.mjs";
 import IPV4_AFI_IDI from "./IPV4_AFI_IDI.mjs";
 
+/**
+ * @summary Convert an X.213 NSAP Address to a string
+ * @param {Uint8Array} naddr The network address to be converted to a URI
+ * @returns {string | undefined} The URI, if one can be created; or `undefined`
+ * @function
+ */
 export
 function naddrToURI (naddr: OCTET_STRING): string | undefined {
     switch (naddr[0]) {

@@ -7,6 +7,19 @@ import { id_opcode_modifyEntry } from "../modules/CommonProtocolSpecification/id
 import { id_opcode_removeEntry } from "../modules/CommonProtocolSpecification/id-opcode-removeEntry.va.mjs";
 import compareCode from "../utils/compareCode.mjs";
 
+/**
+ * @summary Determine whether an operation is a modification operation
+ * @description
+ * 
+ * Determine whether an operation is a modification operation as opposed to an
+ * operation that only reads values. (In some cases, these reads can have
+ * auxiliary effects like changing some operational attributes, but they should
+ * not have an effect on user attributes.)
+ * 
+ * @param {Code} operationType The operation code of the operation
+ * @returns {Boolean} `true` if the operation is a modification operation
+ * @function
+ */
 export
 function isModificationOperation (operationType: Code): boolean {
     return (

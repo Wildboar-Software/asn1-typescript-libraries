@@ -3,6 +3,20 @@ import type {
     RelativeDistinguishedName as RDN,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
 
+/**
+ * @summary Evaluate the compliance of an RDN to a name form
+ * @description
+ * 
+ * Return `true` if the provided relative distinguished name (RDN) does not
+ * contain all of the `mandatories` attribute types, and contains nothing
+ * outside of the union of `mandatories` and `optionals`.
+ * 
+ * @param {RelativeDistinguishedName} rdn The Relative Distinguished Name (RDN) to be evaluated
+ * @param {OBJECT_IDENTIFIER[] | undefined} mandatories Mandatory attribute types
+ * @param {OBJECT_IDENTIFIER[] | undefined} optionals Optional attribute types
+ * @returns {Boolean} `true` if the `rdn` is compliant.
+ * @function
+ */
 export
 function checkNameForm (
     rdn: RDN,

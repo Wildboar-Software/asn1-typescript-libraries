@@ -7,7 +7,7 @@ function codeToString (code: Code): string {
     } else if ("global" in code) {
         return code.global.toString();
     } else {
-        return "";
+        return "?";
     }
 }
 

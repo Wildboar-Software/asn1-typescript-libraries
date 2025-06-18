@@ -19,6 +19,13 @@ const deconstructableTypes: Set<ASN1UniversalType> = new Set([
     ASN1UniversalType.bmpString,
 ]);
 
+/**
+ * @summary Compare two ASN.1 elements
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (

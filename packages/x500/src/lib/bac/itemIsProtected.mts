@@ -32,8 +32,6 @@ import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
  * This function determines whether the requested item is targeted by the
  * `ProtectedItems`.
  *
- * ### Parameters
- *
  * @param {object} request The aspect of the entry to which authorization is
  *  being requested.
  * @param {ProtectedItems} protectedItems The data structure that defines what

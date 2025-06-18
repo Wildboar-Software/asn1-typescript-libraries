@@ -14,6 +14,34 @@ function getAncestorObjectClasses (
     return getSuperclasses(oc).flatMap((oid) => getAncestorObjectClasses(oid, getSuperclasses));
 }
 
+/**
+ * @summary Validate a set of object classes
+ * @description
+ * 
+ * There are restrictions on which object classes may be used together. This
+ * function validates a set of object classes for compliance to these
+ * restrictions, which are specified in ITU-T Recommendation X.501 (2019),
+ * Sections 8.3 and 13.3.1.
+ * 
+ * Quoting section 13.3.1:
+ * 
+ * > There are restrictions on subclassing, namely:
+ * > 
+ * > - only abstract object classes shall be superclasses of other abstract object classes.
+ * > - a structural object class shall not be derived from auxiliary object classes.
+ * > - an auxiliary object class shall not be derived from structural object classes.
+ * >
+ * > There is one special object class, of which every structural object class
+ * > is a subclass. This object class is called top. top is an abstract object
+ * > class.
+ * 
+ * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes to be validated
+ * @param {Function} getKind A function that returns the object class' kind given its OID
+ * @param {Function} getSuperclasses A function that returns the object class' superclasses
+ *   given its OID
+ * @returns {Boolean} `true` if the object classes are valid
+ * @function
+ */
 export
 function validateObjectClasses (
     objectClasses: OBJECT_IDENTIFIER[],

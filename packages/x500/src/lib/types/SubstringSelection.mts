@@ -1,3 +1,6 @@
+/**
+ * A type of a substring match subsequence.
+ */
 export
 enum SubstringSelection {
     any_,

@@ -4,6 +4,9 @@ import type {
 } from "../modules/BasicAccessControl/ACIItem.ta.mjs";
 
 /**
+ * @summary Get Access Control Decision Function (ACDF) tuples
+ * @description
+ *
  * Produces the Access Control Decision Function (ACDF) tuple types from
  * Access Control Information (ACI) items as defined in ITU Recommendation
  * X.501 (2016), Section 18.8.1.

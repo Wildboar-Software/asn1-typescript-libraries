@@ -64,9 +64,9 @@ import deniesAccess from "./deniesAccess.mjs";
  * @param {function} isMemberOfGroup A function that takes a user group and user
  *  and resolves a `boolean` indicating whether the user is a member of the
  *  group or `undefined` if it could not be determined.
- * @returns A `number` that ascends with increasing specificity of the match, or
- *  `0` if it did not match. This number will be non-integral if group
- *  membership was checked, but group membership could not be determined.
+ * @returns {Promise<number>} A `number` that ascends with increasing specificity
+ *  of the match, or `0` if it did not match. This number will be non-integral
+ *  if group membership was checked, but group membership could not be determined.
  *
  * @function
  */

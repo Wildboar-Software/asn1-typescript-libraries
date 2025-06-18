@@ -432,3 +432,6 @@ const decoded: AlgorithmIdentifier = _decode_AlgorithmIdentifier(encoded);
 console.log(decoded.algorithm);
 console.log(decoded.parameters);
 ```
+
+The symbols `DER`, `BER`, and `CER` exported from `asn1-ts/dist/functional.mjs`
+are aliases for `() => new DERElement()` et. al.

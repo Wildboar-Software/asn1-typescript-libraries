@@ -5,6 +5,13 @@ import type {
 } from "../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import compareGeneralSubtrees from "../comparators/compareGeneralSubtrees.mjs";
 
+/**
+ * @summary Compare two `NameConstraintsSyntax` values
+ * @param a One value
+ * @param b The other
+ * @returns {boolean} `true` if they match; `false` otherwise
+ * @function
+ */
 export
 function compareNameConstraintsSyntax (
     a: NameConstraintsSyntax,

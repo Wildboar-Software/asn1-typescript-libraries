@@ -1,6 +1,12 @@
 import type { FilterItem } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FilterItem.ta.mjs";
 import type { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs";
 
+/**
+ * @summary Get the attribute types used in a `FilterItem`
+ * @param {FilterItem} item the `FilterItem` whose attribute types are to be collected
+ * @returns {AttributeType[]} the attribute types mentioned
+ * @function
+ */
 export
 function getAttributeTypesFromFilterItem (item: FilterItem): AttributeType[] {
     if ("equality" in item) {

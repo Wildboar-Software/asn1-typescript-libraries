@@ -36,6 +36,9 @@ import compareDistinguishedName from "../comparators/compareDistinguishedName.mj
  *   registeredID               [8]  OBJECT IDENTIFIER,
  *   ... }
  * ```
+ * 
+ * @returns {Boolean} `true` if the distinguished name falls within the subtree
+ * @function
  */
 export
 function dnWithinGeneralSubtree (

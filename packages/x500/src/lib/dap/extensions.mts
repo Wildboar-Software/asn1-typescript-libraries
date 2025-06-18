@@ -31,6 +31,9 @@ export const EXT_BIT_ABANDON_OF_PAGED_RESULTS: number = 33;
 export const EXT_BIT_PAGED_RESULTS_ON_THE_DSP: number = 34;
 export const EXT_BIT_REPLACE_VALUES: number = 35;
 
+/**
+ * X.500 directory operations to which critical extensions can apply
+ */
 type Operations = {
     read: boolean;
     compare: boolean;
@@ -43,10 +46,32 @@ type Operations = {
     abandon: boolean;
 };
 
+/**
+ * Information about a Directory Access Protocol (DAP) Critical Extension
+ */
 type ExtensionInfo = {
+
+    /**
+     * The 1-based index of the bit in the `criticalExtensions` `BIT STRING`
+     * that corresponds to this critical extension.
+     */
     identifier: number;
+
+    /**
+     * The operations to which this critical extension applies. `undefined` if
+     * it applies to all of them.
+     */
     operations?: Partial<Operations>; // Undefined means "all"
+
+    /**
+     * Whether this extension is critical (which makes you wonder why they are
+     * called critical extensions if this can be `false`)
+     */
     critical: boolean;
+
+    /**
+     * The corresponding LDAP control `OBJECT IDENTIFIER`, if one is defined.
+     */
     ldapControl?: OBJECT_IDENTIFIER;
 };
 
@@ -57,8 +82,18 @@ const SEARCH = {
     search: true,
 };
 
+/**
+ * @summary Data on all Directory Access Protocol (DAP) Critical Extensions
+ * @descriptions
+ *
+ * This is a mapping of Directory Access Protocol (DAP) Critical Extensions by
+ * their names. This information was taken from ITU-T Recommendation X.511
+ * (2019), Section 7.3.1.
+ *
+ * @constant {Object}
+ */
 export
-const extensions: { [name: string]: ExtensionInfo } = {
+const extensions: Record<string, ExtensionInfo> = {
     subentries: {
         identifier: EXT_BIT_SUBENTRIES,
         operations: ALL_OPERATIONS,

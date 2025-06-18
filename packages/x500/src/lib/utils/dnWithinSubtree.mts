@@ -7,41 +7,24 @@ import compareDistinguishedName from "../comparators/compareDistinguishedName.mj
 
 // TODO: This should be split into two: nameWithinGeneralSubtree and dnWithinSubtreeSpecification
 
-// GeneralSubtree ::= SEQUENCE {
-//     base          GeneralName,
-//     minimum  [0]  BaseDistance DEFAULT 0,
-//     maximum  [1]  BaseDistance OPTIONAL,
-//     ... }
-
-//   BaseDistance ::= INTEGER(0..MAX)
-
-// SubtreeSpecification ::= SEQUENCE {
-//     base                 [0]  LocalName DEFAULT {},
-//     COMPONENTS OF             ChopSpecification,
-//     specificationFilter  [4]  Refinement OPTIONAL,
-//     ... }
-//   -- empty sequence specifies whole administrative area
-
-//   LocalName ::= RDNSequence
-
-//   ChopSpecification ::= SEQUENCE {
-//     specificExclusions    [1]  SET SIZE (1..MAX) OF CHOICE {
-//       chopBefore  [0]  LocalName,
-//       chopAfter   [1]  LocalName,
-//       ...} OPTIONAL,
-//     minimum       [2]  BaseDistance DEFAULT 0,
-//     maximum       [3]  BaseDistance OPTIONAL,
-//     ... }
-
-//   BaseDistance ::= INTEGER(0..MAX)
-
-//   Refinement ::= CHOICE {
-//     item  [0]  OBJECT-CLASS.&id,
-//     and   [1]  SET SIZE (1..MAX) OF Refinement,
-//     or    [2]  SET SIZE (1..MAX) OF Refinement,
-//     not   [3]  Refinement,
-//     ... }
-
+/**
+ * @summary Determine whether a distinguished name falls within a subtree of the DIT
+ * @description
+ * 
+ * The `minimum` and `maximum` bounds are inclusive. A minimum of `0` is the
+ * default. A maximum of `0` is the default.
+ * 
+ * @param {DistinguishedName} dn The distinguished name to be evaluated
+ * @param {DistinguishedName} dit The vertex that forms the top of the subtree
+ * @param {number} minimum The number of "levels" below `dit` that should comprise the matching area
+ * @param {number} maximum The number of "levels" below `dit` beyond which should NOT
+ *  comprise the matching area
+ * @param {Function} getEqualityMatcher A function that returns a function for matching
+ *  values of a given attribute type when given the attribute type's OID.
+ * @returns {Boolean} `true` if the distinguished name falls within the
+ *  asserted subtree.
+ * @function
+ */
 export
 function dnWithinSubtree (
     dn: DistinguishedName,
