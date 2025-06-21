@@ -137,44 +137,32 @@ export const _root_component_type_list_1_spec_for_ScanReportInformation: $.Compo
     new $.ComponentSpec(
         'scanInitiationTime',
         true,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         'onceReportAttributeList',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'observationScanList',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'incompleteScan',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'additionalText',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'additionalInformation',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
 ];
 

@@ -76,16 +76,12 @@ export const _root_component_type_list_1_spec_for_AlertDestination: $.ComponentS
     new $.ComponentSpec(
         'alert-address',
         false,
-        $.hasTag(_TagClass.universal, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 8)
     ),
     new $.ComponentSpec(
         'alert-qualifier',
         true,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
 ];
 

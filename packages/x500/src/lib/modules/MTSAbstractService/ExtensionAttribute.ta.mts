@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_ExtensionAttribute: $.Componen
     new $.ComponentSpec(
         "extension-attribute-type",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "extension-attribute-value",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

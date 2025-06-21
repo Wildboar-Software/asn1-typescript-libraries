@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_OptionalIdentifierAndRole: $.C
     new $.ComponentSpec(
         'optionalOperationName',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'optionalRoleName',
         true,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

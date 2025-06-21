@@ -132,37 +132,27 @@ export const _root_component_type_list_1_spec_for_EscalationList_Item: $.Compone
     new $.ComponentSpec(
         'state',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'escTime',
         false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         'requestPerson',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'level',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'escPerson',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

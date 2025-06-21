@@ -164,51 +164,37 @@ export const _root_component_type_list_1_spec_for_PartialOutcomeQualifier: $.Com
     new $.ComponentSpec(
         "limitProblem",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "unexplored",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "unavailableCriticalExtensions",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "unknownErrors",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "queryReference",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "overspecFilter",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "notification",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'entryCount',
@@ -217,9 +203,7 @@ export const _root_component_type_list_1_spec_for_PartialOutcomeQualifier: $.Com
             $.hasTag(_TagClass.context, 7),
             $.hasTag(_TagClass.context, 8),
             $.hasTag(_TagClass.context, 9)
-        ),
-        undefined,
-        undefined
+        )
     ),
 ];
 

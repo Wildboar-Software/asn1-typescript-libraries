@@ -97,16 +97,12 @@ export const _root_component_type_list_1_spec_for_TargetSelect: $.ComponentSpec[
     new $.ComponentSpec(
         'objOper',
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         'attrSel',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

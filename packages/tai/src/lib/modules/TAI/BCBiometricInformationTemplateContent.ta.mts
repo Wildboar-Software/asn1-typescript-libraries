@@ -92,10 +92,10 @@ class BCBiometricInformationTemplateContent {
  */
 export
 const _root_component_type_list_1_spec_for_BCBiometricInformationTemplateContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("biometricTemplateVersion", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("biometricTemplateInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("issuerDigitalSignatureAlgorithm", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("bioTempIssuer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("biometricTemplateVersion", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("biometricTemplateInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("issuerDigitalSignatureAlgorithm", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("bioTempIssuer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

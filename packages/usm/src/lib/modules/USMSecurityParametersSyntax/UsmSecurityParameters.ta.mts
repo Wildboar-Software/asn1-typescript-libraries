@@ -108,12 +108,12 @@ class UsmSecurityParameters {
  */
 export
 const _root_component_type_list_1_spec_for_UsmSecurityParameters: $.ComponentSpec[] = [
-    new $.ComponentSpec("msgAuthoritativeEngineID", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msgAuthoritativeEngineBoots", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("msgAuthoritativeEngineTime", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("msgUserName", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msgAuthenticationParameters", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msgPrivacyParameters", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("msgAuthoritativeEngineID", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msgAuthoritativeEngineBoots", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("msgAuthoritativeEngineTime", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("msgUserName", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msgAuthenticationParameters", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msgPrivacyParameters", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 

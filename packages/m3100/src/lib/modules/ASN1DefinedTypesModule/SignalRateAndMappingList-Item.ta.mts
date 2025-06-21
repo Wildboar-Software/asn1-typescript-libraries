@@ -96,20 +96,16 @@ export class SignalRateAndMappingList_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SignalRateAndMappingList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('signalRate', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('signalRate', false, $.hasAnyTag),
     new $.ComponentSpec(
         'mappingList',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'wavelength',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

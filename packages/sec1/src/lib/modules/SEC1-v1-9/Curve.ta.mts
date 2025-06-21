@@ -83,9 +83,9 @@ class Curve {
  */
 export
 const _root_component_type_list_1_spec_for_Curve: $.ComponentSpec[] = [
-    new $.ComponentSpec("a", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("b", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("seed", true, $.hasTag(_TagClass.universal, 3), undefined, undefined)
+    new $.ComponentSpec("a", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("b", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("seed", true, $.hasTag(_TagClass.universal, 3))
 ];
 
 /**

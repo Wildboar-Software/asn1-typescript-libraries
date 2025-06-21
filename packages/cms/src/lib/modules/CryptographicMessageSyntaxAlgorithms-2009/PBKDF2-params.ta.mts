@@ -108,27 +108,21 @@ export class PBKDF2_params {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PBKDF2_params: $.ComponentSpec[] = [
-    new $.ComponentSpec("salt", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("salt", false, $.hasAnyTag),
     new $.ComponentSpec(
         "iterationCount",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "keyLength",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "prf",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

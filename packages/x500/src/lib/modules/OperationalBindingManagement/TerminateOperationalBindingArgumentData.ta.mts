@@ -133,16 +133,12 @@ export const _root_component_type_list_1_spec_for_TerminateOperationalBindingArg
     new $.ComponentSpec(
         "bindingType",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "bindingID",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'initiator',
@@ -151,23 +147,17 @@ export const _root_component_type_list_1_spec_for_TerminateOperationalBindingArg
             $.hasTag(_TagClass.context, 3),
             $.hasTag(_TagClass.context, 4),
             $.hasTag(_TagClass.context, 5),
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "terminateAt",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "securityParameters",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
 ];
 

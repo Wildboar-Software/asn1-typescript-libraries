@@ -150,17 +150,13 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypes: $.Com
     new $.ComponentSpec(
         'built-in-encoded-information-types',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     ..._root_component_type_list_1_spec_for_NonBasicParameters,
     new $.ComponentSpec(
         'extended-encoded-information-types',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

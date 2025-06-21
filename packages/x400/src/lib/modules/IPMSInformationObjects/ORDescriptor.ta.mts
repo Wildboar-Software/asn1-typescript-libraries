@@ -99,23 +99,17 @@ export const _root_component_type_list_1_spec_for_ORDescriptor: $.ComponentSpec[
     new $.ComponentSpec(
         'formal-name',
         true,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'free-form-name',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'telephone-number',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

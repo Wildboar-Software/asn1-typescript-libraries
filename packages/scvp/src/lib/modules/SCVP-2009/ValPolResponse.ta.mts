@@ -289,142 +289,102 @@ export const _root_component_type_list_1_spec_for_ValPolResponse: $.ComponentSpe
   new $.ComponentSpec(
     'vpResponseVersion',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'maxCVRequestVersion',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'maxVPRequestVersion',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'serverConfigurationID',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'thisUpdate',
     false,
-    $.hasTag(_TagClass.universal, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 24)
   ),
   new $.ComponentSpec(
     'nextUpdate',
     true,
-    $.hasTag(_TagClass.universal, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 24)
   ),
   new $.ComponentSpec(
     'supportedChecks',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'supportedWantBacks',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'validationPolicies',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'validationAlgs',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'authPolicies',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'responseTypes',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'defaultPolicyValues',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'revocationInfoTypes',
     false,
-    $.hasTag(_TagClass.universal, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 3)
   ),
   new $.ComponentSpec(
     'signatureGeneration',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'signatureVerification',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'hashAlgorithms',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'serverPublicKeys',
     true,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'clockSkew',
     true,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'requestNonce',
     true,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
 ];
 

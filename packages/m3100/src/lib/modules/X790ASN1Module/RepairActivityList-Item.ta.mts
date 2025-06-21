@@ -110,30 +110,22 @@ export const _root_component_type_list_1_spec_for_RepairActivityList_Item: $.Com
     new $.ComponentSpec(
         'entryTime',
         false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         'activityInfo',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'activityPerson',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'activityCode',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

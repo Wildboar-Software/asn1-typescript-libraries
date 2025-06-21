@@ -91,7 +91,7 @@ export
 const _root_component_type_list_1_spec_for_SignerLocation: $.ComponentSpec[] = [
     /* FIXME: countryName COULD_NOT_RESOLVE_TYPE_DEF */,
     /* FIXME: localityName COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("postalAdddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("postalAdddress", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

@@ -126,37 +126,27 @@ export const _root_component_type_list_1_spec_for_BIPNotification: $.ComponentSp
   new $.ComponentSpec(
     'masterEndpointIRI',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'slaveEndpointIRI',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'linkNumber',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'notificationId',
     false,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'params',
     false,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
 ];
 

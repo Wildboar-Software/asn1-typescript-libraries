@@ -91,23 +91,17 @@ export const _root_component_type_list_1_spec_for_OsiBindResult_normal_mode_para
     new $.ComponentSpec(
         "transfer-syntax-name",
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "presentation-context-identifier",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "presentation-data-values",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

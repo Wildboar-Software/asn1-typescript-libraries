@@ -83,23 +83,17 @@ export const _root_component_type_list_1_spec_for_BioAPI_DATE: $.ComponentSpec[]
   new $.ComponentSpec(
     'year',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'month',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'day',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
 ];
 

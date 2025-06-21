@@ -80,8 +80,8 @@ export class PtoTPPool {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PtoTPPool: $.ComponentSpec[] = [
-    new $.ComponentSpec('fromTp', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('toTpPool', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('fromTp', false, $.hasAnyTag),
+    new $.ComponentSpec('toTpPool', false, $.hasAnyTag),
 ];
 
 

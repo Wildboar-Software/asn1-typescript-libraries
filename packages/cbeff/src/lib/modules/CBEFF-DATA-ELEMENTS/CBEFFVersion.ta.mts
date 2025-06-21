@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_CBEFFVersion: $.ComponentSpec[
   new $.ComponentSpec(
     'cbeff-major',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'cbeff-minor',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

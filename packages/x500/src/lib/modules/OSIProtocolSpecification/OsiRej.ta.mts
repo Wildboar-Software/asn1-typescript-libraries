@@ -89,8 +89,8 @@ export class OsiRej {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_OsiRej: $.ComponentSpec[] = [
-    new $.ComponentSpec("invokeId", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("problem", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("invokeId", false, $.hasAnyTag),
+    new $.ComponentSpec("problem", false, $.hasAnyTag),
 ];
 
 /**

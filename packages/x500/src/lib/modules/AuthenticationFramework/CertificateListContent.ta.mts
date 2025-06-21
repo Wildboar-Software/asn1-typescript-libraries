@@ -155,27 +155,21 @@ export const _root_component_type_list_1_spec_for_CertificateListContent: $.Comp
     new $.ComponentSpec(
         "version",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "signature",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
-    new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("issuer", false, $.hasAnyTag),
     new $.ComponentSpec(
         "thisUpdate",
         false,
         $.or(
             $.hasTag(_TagClass.universal, 23),
             $.hasTag(_TagClass.universal, 24)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         'nextUpdate',
@@ -183,16 +177,12 @@ export const _root_component_type_list_1_spec_for_CertificateListContent: $.Comp
         $.or(
             $.hasTag(_TagClass.universal, 23),
             $.hasTag(_TagClass.universal, 24)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "revokedCertificates",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 
@@ -208,9 +198,7 @@ export const _root_component_type_list_2_spec_for_CertificateListContent: $.Comp
     new $.ComponentSpec(
         "crlExtensions",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

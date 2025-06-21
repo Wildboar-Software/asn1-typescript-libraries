@@ -80,9 +80,9 @@ class ECPKSupplements {
  */
 export
 const _root_component_type_list_1_spec_for_ECPKSupplements: $.ComponentSpec[] = [
-    new $.ComponentSpec("ecDomain", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("eccAlgorithms", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("eccSupplements", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("ecDomain", false, $.hasAnyTag),
+    new $.ComponentSpec("eccAlgorithms", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("eccSupplements", false, $.hasAnyTag)
 ];
 
 /**

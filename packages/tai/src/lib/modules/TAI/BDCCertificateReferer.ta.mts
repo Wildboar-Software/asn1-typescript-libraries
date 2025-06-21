@@ -82,9 +82,9 @@ class BDCCertificateReferer {
  */
 export
 const _root_component_type_list_1_spec_for_BDCCertificateReferer: $.ComponentSpec[] = [
-    new $.ComponentSpec("bdcIssuer", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("bdcSerialNumber", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("bdcUsage", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("bdcIssuer", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("bdcSerialNumber", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("bdcUsage", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

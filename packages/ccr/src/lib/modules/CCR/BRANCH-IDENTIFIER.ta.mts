@@ -90,16 +90,12 @@ export const _root_component_type_list_1_spec_for_BRANCH_IDENTIFIER: $.Component
   new $.ComponentSpec(
     'initiators-name',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'branch-suffix',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 

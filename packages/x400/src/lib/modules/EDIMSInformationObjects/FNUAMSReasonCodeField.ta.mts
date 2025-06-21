@@ -109,23 +109,17 @@ export const _root_component_type_list_1_spec_for_FNUAMSReasonCodeField: $.Compo
     new $.ComponentSpec(
         'fn-ua-ms-basic-code',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'fn-ua-ms-diagnostic',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'fn-security-check',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

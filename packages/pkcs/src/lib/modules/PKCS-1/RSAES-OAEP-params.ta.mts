@@ -126,23 +126,17 @@ export const _root_component_type_list_1_spec_for_RSAES_OAEP_params: $.Component
     new $.ComponentSpec(
         "hashAlgorithm",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "maskGenAlgorithm",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "pSourceAlgorithm",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

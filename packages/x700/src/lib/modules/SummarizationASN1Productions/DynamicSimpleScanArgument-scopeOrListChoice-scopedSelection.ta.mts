@@ -92,17 +92,13 @@ export const _root_component_type_list_1_spec_for_DynamicSimpleScanArgument_scop
     new $.ComponentSpec(
         'baseManagedObject',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
-    new $.ComponentSpec('scope', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('scope', false, $.hasAnyTag),
     new $.ComponentSpec(
         'scanningFilter',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

@@ -83,7 +83,7 @@ export class AttributeSel {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AttributeSel: $.ComponentSpec[] = [
-    new $.ComponentSpec('attSelect', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('attSelect', false, $.hasAnyTag),
 ];
 
 

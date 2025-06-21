@@ -115,31 +115,23 @@ export const _root_component_type_list_1_spec_for_SingleResponse: $.ComponentSpe
     new $.ComponentSpec(
         "certID",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
-    new $.ComponentSpec("certStatus", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("certStatus", false, $.hasAnyTag),
     new $.ComponentSpec(
         "thisUpdate",
         false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         "nextUpdate",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "singleExtensions",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

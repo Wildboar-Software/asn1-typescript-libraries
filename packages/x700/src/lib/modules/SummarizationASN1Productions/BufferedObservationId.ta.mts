@@ -112,30 +112,22 @@ export const _root_component_type_list_1_spec_for_BufferedObservationId: $.Compo
     new $.ComponentSpec(
         'observedObject',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'scanAttributeIdList',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'numericAttributeIdArray',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'reportTimeAttributeIdList',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

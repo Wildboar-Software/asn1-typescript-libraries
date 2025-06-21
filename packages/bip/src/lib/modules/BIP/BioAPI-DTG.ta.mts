@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_BioAPI_DTG: $.ComponentSpec[] 
   new $.ComponentSpec(
     'date',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'time',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

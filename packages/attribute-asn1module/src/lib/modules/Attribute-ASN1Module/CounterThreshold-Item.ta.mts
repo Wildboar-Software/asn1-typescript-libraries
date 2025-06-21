@@ -79,9 +79,9 @@ class CounterThreshold_Item {
  */
 export
 const _root_component_type_list_1_spec_for_CounterThreshold_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("comparisonLevel", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("offsetValue", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("notificationOnOff", false, $.hasTag(_TagClass.universal, 1), undefined, undefined)
+    new $.ComponentSpec("comparisonLevel", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("offsetValue", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("notificationOnOff", false, $.hasTag(_TagClass.universal, 1))
 ];
 
 /**

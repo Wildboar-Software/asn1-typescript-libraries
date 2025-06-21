@@ -105,23 +105,17 @@ export const _root_component_type_list_1_spec_for_DLExpansionInformation: $.Comp
     new $.ComponentSpec(
         'dl-expansion-routing-collectives',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'dl-name',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'any-mta-may-expand',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

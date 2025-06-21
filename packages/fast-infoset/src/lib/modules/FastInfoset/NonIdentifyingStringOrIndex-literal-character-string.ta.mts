@@ -80,16 +80,12 @@ export const _root_component_type_list_1_spec_for_NonIdentifyingStringOrIndex_li
   new $.ComponentSpec(
     'add-to-table',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'character-string',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

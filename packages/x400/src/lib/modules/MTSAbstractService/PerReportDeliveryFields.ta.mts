@@ -138,37 +138,27 @@ export const _root_component_type_list_1_spec_for_PerReportDeliveryFields: $.Com
     new $.ComponentSpec(
         'subject-submission-identifier',
         false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 4)
     ),
     new $.ComponentSpec(
         'content-identifier',
         true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 10)
     ),
     new $.ComponentSpec(
         'content-type',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'original-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

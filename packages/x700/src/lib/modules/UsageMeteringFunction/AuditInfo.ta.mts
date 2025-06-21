@@ -73,16 +73,12 @@ export const _root_component_type_list_1_spec_for_AuditInfo: $.ComponentSpec[] =
     new $.ComponentSpec(
         'service',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'auditDetails',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

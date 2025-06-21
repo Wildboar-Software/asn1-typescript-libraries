@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_BioAPI_DBBIR_ID: $.ComponentSp
   new $.ComponentSpec(
     'dbHandle',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'keyValue',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

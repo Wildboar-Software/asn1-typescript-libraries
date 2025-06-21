@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_InvokeExerciseArg: $.Component
     new $.ComponentSpec(
         'protectionEntity',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'otherInfo',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

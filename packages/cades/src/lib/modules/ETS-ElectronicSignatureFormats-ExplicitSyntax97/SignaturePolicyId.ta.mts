@@ -81,9 +81,9 @@ class SignaturePolicyId {
  */
 export
 const _root_component_type_list_1_spec_for_SignaturePolicyId: $.ComponentSpec[] = [
-    new $.ComponentSpec("sigPolicyId", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("sigPolicyHash", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("sigPolicyQualifiers", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("sigPolicyId", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("sigPolicyHash", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("sigPolicyQualifiers", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

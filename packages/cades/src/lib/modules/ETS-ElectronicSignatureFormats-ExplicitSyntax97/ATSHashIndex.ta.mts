@@ -106,10 +106,10 @@ class ATSHashIndex {
  */
 export
 const _root_component_type_list_1_spec_for_ATSHashIndex: $.ComponentSpec[] = [
-    new $.ComponentSpec("hashIndAlgorithm", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("certificatesHashIndex", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("crlsHashIndex", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("unsignedAttrsHashIndex", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("hashIndAlgorithm", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("certificatesHashIndex", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("crlsHashIndex", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("unsignedAttrsHashIndex", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

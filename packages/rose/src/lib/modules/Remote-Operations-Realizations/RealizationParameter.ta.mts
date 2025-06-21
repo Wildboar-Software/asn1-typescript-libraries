@@ -99,16 +99,12 @@ export const _root_component_type_list_1_spec_for_RealizationParameter: $.Compon
   new $.ComponentSpec(
     'realization-type',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'concatenation',
     true,
-    $.hasTag(_TagClass.universal, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 1)
   ),
 ];
 

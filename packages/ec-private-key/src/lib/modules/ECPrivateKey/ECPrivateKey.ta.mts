@@ -92,10 +92,10 @@ class ECPrivateKey {
  */
 export
 const _root_component_type_list_1_spec_for_ECPrivateKey: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("privateKey", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("parameters", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("publicKey", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("privateKey", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("parameters", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("publicKey", true, $.hasTag(_TagClass.context, 1))
 ];
 
 

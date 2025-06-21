@@ -64,7 +64,7 @@ class CRLListID {
  */
 export
 const _root_component_type_list_1_spec_for_CRLListID: $.ComponentSpec[] = [
-    new $.ComponentSpec("crls", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("crls", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

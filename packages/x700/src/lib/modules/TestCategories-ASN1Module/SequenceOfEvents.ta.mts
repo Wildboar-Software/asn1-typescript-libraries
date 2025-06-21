@@ -146,51 +146,37 @@ export const _root_component_type_list_1_spec_for_SequenceOfEvents: $.ComponentS
     new $.ComponentSpec(
         'eventId',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'signalType',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'signalValue',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'signalDirection',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'mORTs',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'associatedObjects',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'waitDuration',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

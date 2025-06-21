@@ -95,23 +95,17 @@ export const _root_component_type_list_1_spec_for_ProtectedChangeCredentials: $.
     new $.ComponentSpec(
         'algorithm-identifier',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'old-credentials',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'password-delta',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

@@ -161,44 +161,32 @@ export const _root_component_type_list_1_spec_for_PerMessageAutoForwardFields: $
     new $.ComponentSpec(
         'originator-name',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'content-identifier',
         true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 10)
     ),
     new $.ComponentSpec(
         'priority',
         true,
-        $.hasTag(_TagClass.application, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 7)
     ),
     new $.ComponentSpec(
         'per-message-indicators',
         true,
-        $.hasTag(_TagClass.application, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 8)
     ),
     new $.ComponentSpec(
         'deferred-delivery-time',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

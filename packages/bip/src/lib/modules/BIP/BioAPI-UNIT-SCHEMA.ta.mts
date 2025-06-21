@@ -234,114 +234,82 @@ export const _root_component_type_list_1_spec_for_BioAPI_UNIT_SCHEMA: $.Componen
   new $.ComponentSpec(
     'bspProductUuid',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'unitManagerProductUuid',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'unitId',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'category',
     false,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'unitProperties',
     false,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'vendorInformation',
     false,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'supportedUnitEvents',
     false,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'propertyUuid',
     false,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'property',
     false,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
   new $.ComponentSpec(
     'hardwareVersion',
     false,
-    $.hasTag(_TagClass.context, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 9)
   ),
   new $.ComponentSpec(
     'firmwareVersion',
     false,
-    $.hasTag(_TagClass.context, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 10)
   ),
   new $.ComponentSpec(
     'softwareVersion',
     false,
-    $.hasTag(_TagClass.context, 11),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 11)
   ),
   new $.ComponentSpec(
     'hardwareSerialNumber',
     false,
-    $.hasTag(_TagClass.context, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 12)
   ),
   new $.ComponentSpec(
     'authenticatedHardware',
     false,
-    $.hasTag(_TagClass.context, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 13)
   ),
   new $.ComponentSpec(
     'maxBSPDbSize',
     false,
-    $.hasTag(_TagClass.context, 14),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 14)
   ),
   new $.ComponentSpec(
     'maxIdentify',
     false,
-    $.hasTag(_TagClass.context, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 15)
   ),
 ];
 

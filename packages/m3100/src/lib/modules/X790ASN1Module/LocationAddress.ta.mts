@@ -95,16 +95,12 @@ export const _root_component_type_list_1_spec_for_LocationAddress: $.ComponentSp
     new $.ComponentSpec(
         'name',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'address',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_mta_name_Type: $.ComponentSpec
     new $.ComponentSpec(
         'domain',
         false,
-        $.hasTag(_TagClass.application, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 3)
     ),
     new $.ComponentSpec(
         'mta-name',
         false,
-        $.hasTag(_TagClass.universal, 22),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 22)
     ),
 ];
 

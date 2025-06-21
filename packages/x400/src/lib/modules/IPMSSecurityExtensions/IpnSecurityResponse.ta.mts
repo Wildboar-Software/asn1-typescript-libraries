@@ -94,16 +94,12 @@ export const _root_component_type_list_1_spec_for_IpnSecurityResponse: $.Compone
     new $.ComponentSpec(
         'content-or-arguments',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'security-diagnostic-code',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

@@ -196,58 +196,42 @@ export const _root_component_type_list_1_spec_for_MessageClass: $.ComponentSpec[
     new $.ComponentSpec(
         'content-types',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'maximum-content-length',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'encoded-information-types-constraints',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'security-labels',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'priority',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'objects',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'applies-only-to',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
 ];
 

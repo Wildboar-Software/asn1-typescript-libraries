@@ -75,16 +75,12 @@ export const _root_component_type_list_1_spec_for_ObjectIdData: $.ComponentSpec[
     new $.ComponentSpec(
         "objectId",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "objectIdName",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

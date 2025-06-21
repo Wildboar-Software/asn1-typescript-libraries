@@ -169,72 +169,52 @@ export const _root_component_type_list_1_spec_for_ValidationPolicy: $.ComponentS
   new $.ComponentSpec(
     'validationPolRef',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'validationAlg',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'userPolicySet',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'inhibitPolicyMapping',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'requireExplicitPolicy',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'inhibitAnyPolicy',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'trustAnchors',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'keyUsages',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'extendedKeyUsages',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'specifiedKeyUsages',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
 ];
 

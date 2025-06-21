@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_PBES2_params: $.ComponentSpec[
     new $.ComponentSpec(
         "keyDerivationFunc",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "encryptionScheme",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

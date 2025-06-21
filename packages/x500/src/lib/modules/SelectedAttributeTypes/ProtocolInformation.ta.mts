@@ -69,16 +69,12 @@ export const _root_component_type_list_1_spec_for_ProtocolInformation: $.Compone
     new $.ComponentSpec(
         "nAddress",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "profiles",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

@@ -106,17 +106,13 @@ export const _root_component_type_list_1_spec_for_SetArgument_modificationList_I
   new $.ComponentSpec(
     'modifyOperator',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
-  new $.ComponentSpec('attributeId', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('attributeId', false, $.hasAnyTag),
   new $.ComponentSpec(
     'attributeValue',
     true,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 

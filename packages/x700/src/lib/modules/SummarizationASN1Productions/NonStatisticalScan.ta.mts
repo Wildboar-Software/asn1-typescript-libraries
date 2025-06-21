@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_NonStatisticalScan: $.Componen
     new $.ComponentSpec(
         'objectInstance',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'attributeValues',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

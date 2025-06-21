@@ -88,11 +88,9 @@ export const _root_component_type_list_1_spec_for_BilateralDomain: $.ComponentSp
     new $.ComponentSpec(
         'country-name',
         false,
-        $.hasTag(_TagClass.application, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 1)
     ),
-    new $.ComponentSpec('domain', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('domain', false, $.hasAnyTag),
 ];
 
 /**

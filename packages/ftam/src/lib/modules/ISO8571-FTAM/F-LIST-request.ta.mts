@@ -136,44 +136,32 @@ export const _root_component_type_list_1_spec_for_F_LIST_request: $.ComponentSpe
   new $.ComponentSpec(
     'attribute-value-asset-tions',
     false,
-    $.hasTag(_TagClass.application, 26),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 26)
   ),
   new $.ComponentSpec(
     'scope',
     false,
-    $.hasTag(_TagClass.application, 28),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 28)
   ),
   new $.ComponentSpec(
     'access-passwords',
     true,
-    $.hasTag(_TagClass.application, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 2)
   ),
   new $.ComponentSpec(
     'path-access-passwords',
     true,
-    $.hasTag(_TagClass.application, 27),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 27)
   ),
   new $.ComponentSpec(
     'attribute-names',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'attribute-extension-names',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

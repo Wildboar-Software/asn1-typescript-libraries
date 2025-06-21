@@ -120,37 +120,27 @@ export const _root_component_type_list_1_spec_for_RevAnnContent: $.ComponentSpec
   new $.ComponentSpec(
     'status',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'certId',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'willBeRevokedAt',
     false,
-    $.hasTag(_TagClass.universal, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 24)
   ),
   new $.ComponentSpec(
     'badSinceDate',
     false,
-    $.hasTag(_TagClass.universal, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 24)
   ),
   new $.ComponentSpec(
     'crlDetails',
     true,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
 ];
 

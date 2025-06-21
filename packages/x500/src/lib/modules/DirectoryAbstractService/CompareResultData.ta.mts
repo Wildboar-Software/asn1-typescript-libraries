@@ -175,30 +175,22 @@ export const _root_component_type_list_1_spec_for_CompareResultData: $.Component
     new $.ComponentSpec(
         'name',
         true,
-        $.or($.hasTag(_TagClass.universal, 16)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.universal, 16))
     ),
     new $.ComponentSpec(
         "matched",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "fromEntry",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "matchedSubtype",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];

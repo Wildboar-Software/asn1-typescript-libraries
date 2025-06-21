@@ -78,11 +78,9 @@ export const _root_component_type_list_1_spec_for_WrappedPDUInfo: $.ComponentSpe
     new $.ComponentSpec(
         "pduType",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec("pduInfo", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("pduInfo", false, $.hasAnyTag),
 ];
 
 /**

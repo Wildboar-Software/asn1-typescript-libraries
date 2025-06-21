@@ -76,13 +76,11 @@ export class TpsAddedToTpPool {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_TpsAddedToTpPool: $.ComponentSpec[] = [
-    new $.ComponentSpec('tpPool', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('tpPool', false, $.hasAnyTag),
     new $.ComponentSpec(
         'tps',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

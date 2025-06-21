@@ -72,8 +72,8 @@ class FieldID {
  */
 export
 const _root_component_type_list_1_spec_for_FieldID: $.ComponentSpec[] = [
-    new $.ComponentSpec("fieldType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("parameters", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("fieldType", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("parameters", false, $.hasAnyTag)
 ];
 
 /**

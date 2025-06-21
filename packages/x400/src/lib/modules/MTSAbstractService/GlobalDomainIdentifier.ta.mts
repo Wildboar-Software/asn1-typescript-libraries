@@ -99,23 +99,17 @@ export const _root_component_type_list_1_spec_for_GlobalDomainIdentifier: $.Comp
     new $.ComponentSpec(
         'country-name',
         false,
-        $.hasTag(_TagClass.application, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 1)
     ),
     new $.ComponentSpec(
         'administration-domain-name',
         false,
-        $.hasTag(_TagClass.application, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 2)
     ),
     new $.ComponentSpec(
         'private-domain-identifier',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

@@ -92,10 +92,10 @@ class BiometricPara_Item {
  */
 export
 const _root_component_type_list_1_spec_for_BiometricPara_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("biometricType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("fMR-Value", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("trialNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("requestQuality", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("biometricType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("fMR-Value", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("trialNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("requestQuality", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

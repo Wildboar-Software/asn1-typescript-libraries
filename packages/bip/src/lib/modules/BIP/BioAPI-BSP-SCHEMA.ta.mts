@@ -287,149 +287,107 @@ export const _root_component_type_list_1_spec_for_BioAPI_BSP_SCHEMA: $.Component
   new $.ComponentSpec(
     'bspProductUuid',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'description',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'path',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'specVersion',
     false,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'productVersion',
     false,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'vendor',
     false,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'supportedFormats',
     false,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'factorsMask',
     false,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'operations',
     false,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
   new $.ComponentSpec(
     'options',
     false,
-    $.hasTag(_TagClass.context, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 9)
   ),
   new $.ComponentSpec(
     'payloadPolicy',
     false,
-    $.hasTag(_TagClass.context, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 10)
   ),
   new $.ComponentSpec(
     'maxPayloadSize',
     false,
-    $.hasTag(_TagClass.context, 11),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 11)
   ),
   new $.ComponentSpec(
     'defaultVerifyTimeout',
     false,
-    $.hasTag(_TagClass.context, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 12)
   ),
   new $.ComponentSpec(
     'defaultIdentifyTimeout',
     false,
-    $.hasTag(_TagClass.context, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 13)
   ),
   new $.ComponentSpec(
     'defaultCaptureTimeout',
     false,
-    $.hasTag(_TagClass.context, 14),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 14)
   ),
   new $.ComponentSpec(
     'defaultEnrollTimeout',
     false,
-    $.hasTag(_TagClass.context, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 15)
   ),
   new $.ComponentSpec(
     'defaultCalibrateTimeout',
     false,
-    $.hasTag(_TagClass.context, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 16)
   ),
   new $.ComponentSpec(
     'maxBSPDbSize',
     false,
-    $.hasTag(_TagClass.context, 17),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 17)
   ),
   new $.ComponentSpec(
     'maxIdentify',
     false,
-    $.hasTag(_TagClass.context, 18),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 18)
   ),
   new $.ComponentSpec(
     'hostingEndpointIRI',
     false,
-    $.hasTag(_TagClass.context, 19),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 19)
   ),
   new $.ComponentSpec(
     'bspAccessUuid',
     false,
-    $.hasTag(_TagClass.context, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 20)
   ),
 ];
 

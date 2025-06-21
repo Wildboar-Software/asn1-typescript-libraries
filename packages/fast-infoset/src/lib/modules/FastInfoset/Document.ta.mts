@@ -200,58 +200,42 @@ export const _root_component_type_list_1_spec_for_Document: $.ComponentSpec[] = 
   new $.ComponentSpec(
     'additional-data',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'initial-vocabulary',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'notations',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'unparsed-entities',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'character-encoding-scheme',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'standalone',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'version',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'children',
     false,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
 ];
 

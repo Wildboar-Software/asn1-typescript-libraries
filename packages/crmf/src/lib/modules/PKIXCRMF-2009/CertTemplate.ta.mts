@@ -173,72 +173,52 @@ export const _root_component_type_list_1_spec_for_CertTemplate: $.ComponentSpec[
     new $.ComponentSpec(
         "version",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "serialNumber",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "signingAlg",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "issuer",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "validity",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "subject",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "publicKey",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         "issuerUID",
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         "subjectUID",
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         "extensions",
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
 ];
 

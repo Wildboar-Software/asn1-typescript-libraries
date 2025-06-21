@@ -84,10 +84,10 @@ class E_health_SetUp_Message_Response_interactive_conditional_accept {
  */
 export
 const _root_component_type_list_1_spec_for_E_health_SetUp_Message_Response_interactive_conditional_accept: $.ComponentSpec[] = [
-    new $.ComponentSpec("id", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("reduced-requirements", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("voice-options", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("video-options", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("id", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("reduced-requirements", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("voice-options", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("video-options", false, $.hasTag(_TagClass.context, 3))
 ];
 
 

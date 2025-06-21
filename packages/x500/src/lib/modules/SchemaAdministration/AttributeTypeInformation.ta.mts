@@ -195,65 +195,47 @@ export const _root_component_type_list_1_spec_for_AttributeTypeInformation: $.Co
     new $.ComponentSpec(
         "derivation",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "equalityMatch",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "orderingMatch",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "substringsMatch",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "attributeSyntax",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "multi-valued",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "collective",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         "userModifiable",
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         "application",
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

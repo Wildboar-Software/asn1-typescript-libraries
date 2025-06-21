@@ -96,10 +96,10 @@ class SNMPv3Message {
  */
 export
 const _root_component_type_list_1_spec_for_SNMPv3Message: $.ComponentSpec[] = [
-    new $.ComponentSpec("msgVersion", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("msgGlobalData", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("msgSecurityParameters", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msgData", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("msgVersion", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("msgGlobalData", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("msgSecurityParameters", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msgData", false, $.hasAnyTag)
 ];
 
 /**

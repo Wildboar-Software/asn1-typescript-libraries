@@ -91,16 +91,12 @@ export const _root_component_type_list_1_spec_for_NamingObjectClass: $.Component
     new $.ComponentSpec(
         'class',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'andSubclasses',
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
 ];
 

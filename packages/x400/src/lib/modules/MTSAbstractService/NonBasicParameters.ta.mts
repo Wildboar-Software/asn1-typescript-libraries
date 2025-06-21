@@ -108,16 +108,12 @@ export const _root_component_type_list_1_spec_for_NonBasicParameters: $.Componen
     new $.ComponentSpec(
         'g3-facsimile',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'teletex',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

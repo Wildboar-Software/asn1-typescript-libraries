@@ -108,23 +108,17 @@ export const _root_component_type_list_1_spec_for_SMASEUserData: $.ComponentSpec
     new $.ComponentSpec(
         'smfuPackages',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'reason',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'systemsManagementUserInformation',
         true,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
 ];
 

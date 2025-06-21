@@ -133,51 +133,37 @@ export const _root_component_type_list_1_spec_for_LoopbackTestInfo: $.ComponentS
     new $.ComponentSpec(
         'loopbackData',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'testStartTime',
         true,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         'testIntervalTime',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'reportingIntervalTime',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'loopbackType',
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'loopbackTimeout',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'loopbackErrorThreshold',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

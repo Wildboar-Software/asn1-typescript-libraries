@@ -75,8 +75,8 @@ export class PtoPoint {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PtoPoint: $.ComponentSpec[] = [
-    new $.ComponentSpec('aEnd', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('zEnd', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('aEnd', false, $.hasAnyTag),
+    new $.ComponentSpec('zEnd', false, $.hasAnyTag),
 ];
 
 

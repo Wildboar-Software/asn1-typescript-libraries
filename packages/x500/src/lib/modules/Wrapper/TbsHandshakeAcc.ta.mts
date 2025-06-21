@@ -199,47 +199,35 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeAcc: $.ComponentSp
     new $.ComponentSpec(
         "version",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
-    new $.ComponentSpec("sigSel", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("sigSel", false, $.hasAnyTag),
     new $.ComponentSpec(
         "pkiPath",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "assoID",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "time",
         false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
-    new $.ComponentSpec("keyEstSel", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("encr-mode", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("keyEstSel", false, $.hasAnyTag),
+    new $.ComponentSpec("encr-mode", false, $.hasAnyTag),
     new $.ComponentSpec(
         "attCert",
         true,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "applData",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

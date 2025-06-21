@@ -116,30 +116,22 @@ export const _root_component_type_list_1_spec_for_F_GROUP_CHANGE_ATTRIB_request:
   new $.ComponentSpec(
     'attributes',
     false,
-    $.hasTag(_TagClass.application, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 8)
   ),
   new $.ComponentSpec(
     'error-action',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'request-Operation-result',
     true,
-    $.hasTag(_TagClass.application, 31),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 31)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
 ];
 

@@ -102,20 +102,16 @@ export class GeneralSubtree {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_GeneralSubtree: $.ComponentSpec[] = [
-    new $.ComponentSpec("base", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("base", false, $.hasAnyTag),
     new $.ComponentSpec(
         "minimum",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "maximum",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

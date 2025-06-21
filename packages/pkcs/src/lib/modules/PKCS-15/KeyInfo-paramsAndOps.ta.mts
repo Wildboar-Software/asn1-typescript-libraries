@@ -65,13 +65,11 @@ export class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps: $.ComponentSpec[] = [
-    new $.ComponentSpec("parameters", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("parameters", false, $.hasAnyTag),
     new $.ComponentSpec(
         "supportedOperations",
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

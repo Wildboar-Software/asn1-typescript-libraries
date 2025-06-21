@@ -82,8 +82,8 @@ export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AUTHEN_ENCRYPT: $.ComponentSpec[] = [
-    new $.ComponentSpec("aad", true, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("encr", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("aad", true, $.hasAnyTag),
+    new $.ComponentSpec("encr", false, $.hasAnyTag),
 ];
 
 /**

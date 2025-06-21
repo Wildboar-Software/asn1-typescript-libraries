@@ -81,16 +81,12 @@ export const _root_component_type_list_1_spec_for_Context_keyword: $.ComponentSp
     new $.ComponentSpec(
         'type-reference',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'field',
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

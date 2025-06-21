@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_AttributeValueAssertion: $.Com
     new $.ComponentSpec(
         'attribute-type',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'attribute-value',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

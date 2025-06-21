@@ -130,17 +130,13 @@ export const _root_component_type_list_1_spec_for_LDAPMessage: $.ComponentSpec[]
   new $.ComponentSpec(
     'messageID',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
-  new $.ComponentSpec('protocolOp', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('protocolOp', false, $.hasAnyTag),
   new $.ComponentSpec(
     'controls',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

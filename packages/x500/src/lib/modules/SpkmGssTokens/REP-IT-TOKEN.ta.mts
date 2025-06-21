@@ -122,45 +122,33 @@ export const _root_component_type_list_1_spec_for_REP_IT_TOKEN: $.ComponentSpec[
     new $.ComponentSpec(
         "tok-id",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "context-id",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "randSrc",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "randTarg",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
-    new $.ComponentSpec("targ-name", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("targ-name", false, $.hasAnyTag),
     new $.ComponentSpec(
         'src-name',
         true,
-        $.or($.hasTag(_TagClass.universal, 16)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.universal, 16))
     ),
     new $.ComponentSpec(
         "key-estb-rep",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
 ];
 

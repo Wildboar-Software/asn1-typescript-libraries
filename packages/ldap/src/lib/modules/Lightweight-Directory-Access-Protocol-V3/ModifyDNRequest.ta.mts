@@ -112,30 +112,22 @@ export const _root_component_type_list_1_spec_for_ModifyDNRequest: $.ComponentSp
   new $.ComponentSpec(
     'entry',
     false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
   new $.ComponentSpec(
     'newrdn',
     false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
   new $.ComponentSpec(
     'deleteoldrdn',
     false,
-    $.hasTag(_TagClass.universal, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 1)
   ),
   new $.ComponentSpec(
     'newSuperior',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

@@ -70,7 +70,7 @@ export class Select_Attributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Select_Attributes: $.ComponentSpec[] = [
-  new $.ComponentSpec('pathname', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('pathname', false, $.hasAnyTag),
 ];
 
 

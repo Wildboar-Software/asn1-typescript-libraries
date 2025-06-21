@@ -120,24 +120,18 @@ export const _root_component_type_list_1_spec_for_ShadowingAgreementInfo: $.Comp
     new $.ComponentSpec(
         "shadowSubject",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
-    new $.ComponentSpec("updateMode", true, $.not($.or($.hasTag(_TagClass.universal, 17), $.hasTag(_TagClass.context, 2))), undefined, undefined),
+    new $.ComponentSpec("updateMode", true, $.not($.or($.hasTag(_TagClass.universal, 17), $.hasTag(_TagClass.context, 2)))),
     new $.ComponentSpec(
         "master",
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         "secondaryShadows",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

@@ -101,8 +101,8 @@ class LongTermValidation {
  */
 export
 const _root_component_type_list_1_spec_for_LongTermValidation: $.ComponentSpec[] = [
-    new $.ComponentSpec("poeDate", false, $.hasTag(_TagClass.universal, 24), undefined, undefined),
-    new $.ComponentSpec("poeValue", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("poeDate", false, $.hasTag(_TagClass.universal, 24)),
+    new $.ComponentSpec("poeValue", true, $.hasAnyTag),
     /* FIXME: extraCertificates COULD_NOT_RESOLVE_TYPE_DEF */,
     /* FIXME: extraRevocation COULD_NOT_RESOLVE_TYPE_DEF */
 ];

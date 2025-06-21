@@ -103,11 +103,11 @@ class EvidenceRecord {
  */
 export
 const _root_component_type_list_1_spec_for_EvidenceRecord: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("digestAlgorithms", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("cryptoInfos", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("encryptionInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("archiveTimeStampSequence", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("digestAlgorithms", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("cryptoInfos", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("encryptionInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("archiveTimeStampSequence", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 

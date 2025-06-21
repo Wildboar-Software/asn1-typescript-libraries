@@ -73,9 +73,7 @@ export const _root_component_type_list_1_spec_for_UnregisterBFP_RequestParams: $
   new $.ComponentSpec(
     'bfpProductUuid',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

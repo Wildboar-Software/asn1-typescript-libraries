@@ -99,8 +99,8 @@ export class PublicECKeyAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PublicECKeyAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
+    new $.ComponentSpec("keyInfo", true, $.hasAnyTag),
 ];
 
 

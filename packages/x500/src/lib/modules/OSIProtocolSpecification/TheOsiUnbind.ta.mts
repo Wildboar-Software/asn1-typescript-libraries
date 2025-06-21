@@ -64,9 +64,7 @@ export const _root_component_type_list_1_spec_for_TheOsiUnbind: $.ComponentSpec[
     new $.ComponentSpec(
         "reason",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

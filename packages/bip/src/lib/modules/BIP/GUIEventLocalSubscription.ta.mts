@@ -173,79 +173,57 @@ export const _root_component_type_list_1_spec_for_GUIEventLocalSubscription: $.C
   new $.ComponentSpec(
     'guiEventSubscriptionUuid',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'hostingEndpointIRI',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'bspProductUuid',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'useBSPAccessUuid',
     false,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'originalBSPHandle',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'guiSelectEventHandlerAddress',
     false,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'guiSelectEventHandlerContext',
     false,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'guiStateEventHandlerAddress',
     false,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'guiStateEventHandlerContext',
     false,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
   new $.ComponentSpec(
     'guiProgressEventHandlerAddress',
     false,
-    $.hasTag(_TagClass.context, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 9)
   ),
   new $.ComponentSpec(
     'guiProgressEventHandlerContext',
     false,
-    $.hasTag(_TagClass.context, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 10)
   ),
 ];
 

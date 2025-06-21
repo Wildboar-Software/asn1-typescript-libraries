@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_MapsToPair: $.ComponentSpec[] 
     new $.ComponentSpec(
         'systemsMgtOperation',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'roleOrRelationshipObject',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

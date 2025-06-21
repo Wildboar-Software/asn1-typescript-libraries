@@ -157,41 +157,31 @@ export class EntryInformation {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_EntryInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("name", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("name", false, $.hasAnyTag),
     new $.ComponentSpec(
         "fromEntry",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         "information",
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         "incompleteEntry",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "partialName",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "derivedEntry",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
 ];
 

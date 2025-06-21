@@ -345,135 +345,97 @@ export const _root_component_type_list_1_spec_for_Heading: $.ComponentSpec[] = [
     new $.ComponentSpec(
         'this-EDIM',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'originator',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'recipients',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'edin-receiver',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'responsibility-forwarded',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'edi-bodypart-type',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'incomplete-copy',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'expiry-time',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'related-messages',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'obsoleted-EDIMs',
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
     new $.ComponentSpec(
         'edi-application-security-elements',
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         'cross-referencing-information',
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         'edi-message-type',
         true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 13)
     ),
     new $.ComponentSpec(
         'service-string-advice',
         true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 14)
     ),
     new $.ComponentSpec(
         'syntax-identifier',
         true,
-        $.hasTag(_TagClass.context, 15),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 15)
     ),
     new $.ComponentSpec(
         'interchange-sender',
         true,
-        $.hasTag(_TagClass.context, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 16)
     ),
     new $.ComponentSpec(
         'date-and-time-of-preparation',
         true,
-        $.hasTag(_TagClass.context, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 17)
     ),
     new $.ComponentSpec(
         'application-reference',
         true,
-        $.hasTag(_TagClass.context, 18),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 18)
     ),
     new $.ComponentSpec(
         'heading-extensions',
         true,
-        $.hasTag(_TagClass.context, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 19)
     ),
 ];
 

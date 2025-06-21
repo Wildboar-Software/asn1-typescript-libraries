@@ -155,44 +155,32 @@ export const _root_component_type_list_1_spec_for_DynamicSimpleScanArgument: $.C
     new $.ComponentSpec(
         'scanAttributeIdList',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'numericAttributeIdArray',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'scopeOrListChoice',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'suppressObjectInstance',
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         'onceReportAttributeIdList',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'timeStampReportMode',
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

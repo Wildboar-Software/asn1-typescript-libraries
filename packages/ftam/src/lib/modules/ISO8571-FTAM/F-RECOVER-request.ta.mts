@@ -191,79 +191,57 @@ export const _root_component_type_list_1_spec_for_F_RECOVER_request: $.Component
   new $.ComponentSpec(
     'activity-identifier',
     false,
-    $.hasTag(_TagClass.application, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 6)
   ),
   new $.ComponentSpec(
     'bulk-transfer-number',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'requested-access',
     false,
-    $.hasTag(_TagClass.application, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 3)
   ),
   new $.ComponentSpec(
     'access-passwords',
     true,
-    $.hasTag(_TagClass.application, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 2)
   ),
   new $.ComponentSpec(
     'recovefy-Point',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'remove-contexts',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'define-contexts',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'concurrent-bulk-transfer-number',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'concurrent-recovery-point',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
   new $.ComponentSpec(
     'last-transfer-end-read-response',
     true,
-    $.hasTag(_TagClass.context, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 9)
   ),
   new $.ComponentSpec(
     'last-transfer-end-write-response',
     true,
-    $.hasTag(_TagClass.context, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 10)
   ),
 ];
 

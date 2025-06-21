@@ -107,15 +107,13 @@ export class PublicRSAKeyAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PublicRSAKeyAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
     new $.ComponentSpec(
         "modulusLength",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("keyInfo", true, $.hasAnyTag),
 ];
 
 

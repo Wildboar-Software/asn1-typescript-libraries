@@ -115,23 +115,17 @@ export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] =
         new $.ComponentSpec(
             "extnId",
             false,
-            $.hasTag(_TagClass.universal, 6),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 6)
         ),
         new $.ComponentSpec(
             "critical",
             true,
-            $.hasTag(_TagClass.universal, 1),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 1)
         ),
         new $.ComponentSpec(
             "extnValue",
             false,
-            $.hasTag(_TagClass.universal, 4),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 4)
         ),
     ];
 

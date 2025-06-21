@@ -73,16 +73,12 @@ export const _root_component_type_list_1_spec_for_MessageImprint: $.ComponentSpe
     new $.ComponentSpec(
         "hashAlgorithm",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "hashedMessage",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
 ];
 

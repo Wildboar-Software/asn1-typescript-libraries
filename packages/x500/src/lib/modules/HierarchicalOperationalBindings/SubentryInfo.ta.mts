@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_SubentryInfo: $.ComponentSpec[
     new $.ComponentSpec(
         "rdn",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "info",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

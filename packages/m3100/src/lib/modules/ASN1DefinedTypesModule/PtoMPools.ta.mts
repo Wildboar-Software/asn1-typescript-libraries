@@ -80,13 +80,11 @@ export class PtoMPools {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PtoMPools: $.ComponentSpec[] = [
-    new $.ComponentSpec('fromTp', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('fromTp', false, $.hasAnyTag),
     new $.ComponentSpec(
         'toTPPools',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

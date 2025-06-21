@@ -159,44 +159,32 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeSecAbort: $.Compon
     new $.ComponentSpec(
         "version",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "sigAlg",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "assoID",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "time",
         false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         "pkiPath",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "diag",
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_F_TERMINATE_response: $.Compon
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'charging',
     true,
-    $.hasTag(_TagClass.application, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 9)
   ),
 ];
 

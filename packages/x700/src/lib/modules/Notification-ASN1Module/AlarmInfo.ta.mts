@@ -259,100 +259,72 @@ export const _root_component_type_list_1_spec_for_AlarmInfo: $.ComponentSpec[] =
     new $.ComponentSpec(
         'probableCause',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'specificProblems',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'perceivedSeverity',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'backedUpStatus',
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         'backUpObject',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'trendIndication',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'thresholdInfo',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'notificationIdentifier',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'correlatedNotifications',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'stateChangeDefinition',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'monitoredAttributes',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'proposedRepairActions',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'additionalText',
         true,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'additionalInformation',
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
 ];
 

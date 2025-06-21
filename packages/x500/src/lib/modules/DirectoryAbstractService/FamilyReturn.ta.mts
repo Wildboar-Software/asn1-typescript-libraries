@@ -96,16 +96,12 @@ export const _root_component_type_list_1_spec_for_FamilyReturn: $.ComponentSpec[
     new $.ComponentSpec(
         "memberSelect",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         "familySelect",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

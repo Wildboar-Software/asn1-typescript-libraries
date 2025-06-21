@@ -184,53 +184,39 @@ export const _root_component_type_list_1_spec_for_CPA_PPDU_normal_mode_parameter
     new $.ComponentSpec(
         'protocol-version',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'responding-presentation-selector',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'presentation-context-definition-result-list',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'presentation-requirements',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'user-session-requirements',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'protocol-options',
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         'responders-nominated-context',
         true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 13)
     ),
-    new $.ComponentSpec('user-data', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('user-data', true, $.hasAnyTag),
 ];
 
 

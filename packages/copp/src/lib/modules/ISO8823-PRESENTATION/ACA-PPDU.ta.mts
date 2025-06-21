@@ -103,18 +103,14 @@ export const _root_component_type_list_1_spec_for_ACA_PPDU: $.ComponentSpec[] = 
     new $.ComponentSpec(
         'presentation-context-addition-result-list',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'presentation-context-deletion-result-list',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
-    new $.ComponentSpec('user-data', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('user-data', true, $.hasAnyTag),
 ];
 
 

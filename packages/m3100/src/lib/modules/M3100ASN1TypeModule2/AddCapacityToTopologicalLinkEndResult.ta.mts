@@ -97,23 +97,17 @@ export const _root_component_type_list_1_spec_for_AddCapacityToTopologicalLinkEn
     new $.ComponentSpec(
         'resultingCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'resultingnetworkCTPs',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'resultingProvisionedLinkEndCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

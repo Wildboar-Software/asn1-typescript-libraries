@@ -100,23 +100,17 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryEnvelope: $.Com
     new $.ComponentSpec(
         'message-delivery-identifier',
         false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 4)
     ),
     new $.ComponentSpec(
         'message-delivery-time',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
     new $.ComponentSpec(
         'other-fields',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

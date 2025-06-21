@@ -91,10 +91,10 @@ class ThresholdInfo {
  */
 export
 const _root_component_type_list_1_spec_for_ThresholdInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("triggeredThreshold", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("observedValue", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("thresholdLevel", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("armTime", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("triggeredThreshold", false, $.hasAnyTag),
+    new $.ComponentSpec("observedValue", false, $.hasAnyTag),
+    new $.ComponentSpec("thresholdLevel", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("armTime", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

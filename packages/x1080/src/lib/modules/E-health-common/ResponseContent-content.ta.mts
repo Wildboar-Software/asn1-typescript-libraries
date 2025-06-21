@@ -106,25 +106,19 @@ export const _root_component_type_list_1_spec_for_ResponseContent_content: $.Com
     new $.ComponentSpec(
         'invokId',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'sessionType',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'sessionId',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec('response', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('response', false, $.hasAnyTag),
 ];
 
 

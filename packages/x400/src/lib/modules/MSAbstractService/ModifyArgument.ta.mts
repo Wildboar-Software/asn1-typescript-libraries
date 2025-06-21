@@ -127,24 +127,18 @@ export const _root_component_type_list_1_spec_for_ModifyArgument: $.ComponentSpe
     new $.ComponentSpec(
         'entry-class',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
-    new $.ComponentSpec('entries', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('entries', false, $.hasAnyTag),
     new $.ComponentSpec(
         'modifications',
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'modify-extensions',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

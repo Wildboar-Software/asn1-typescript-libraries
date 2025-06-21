@@ -96,30 +96,22 @@ export const _root_component_type_list_1_spec_for_ResourceSelfTestResults_nonInt
     new $.ComponentSpec(
         'phases',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'iteration',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'timeoutPeriod',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'finalResponse',
         true,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

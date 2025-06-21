@@ -116,16 +116,12 @@ export const _root_component_type_list_1_spec_for_DirectoryBindResult: $.Compone
     new $.ComponentSpec(
         "credentials",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "versions",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 
@@ -151,9 +147,7 @@ export const _extension_additions_list_spec_for_DirectoryBindResult: $.Component
     new $.ComponentSpec(
         "pwdResponseValue",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

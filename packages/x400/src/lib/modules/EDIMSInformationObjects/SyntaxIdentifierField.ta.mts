@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_SyntaxIdentifierField: $.Compo
     new $.ComponentSpec(
         'syntax-identifier',
         false,
-        $.hasTag(_TagClass.universal, 20),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 20)
     ),
     new $.ComponentSpec(
         'syntax-version',
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

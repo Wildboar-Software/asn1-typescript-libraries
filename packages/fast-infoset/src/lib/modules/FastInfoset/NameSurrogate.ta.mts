@@ -86,23 +86,17 @@ export const _root_component_type_list_1_spec_for_NameSurrogate: $.ComponentSpec
   new $.ComponentSpec(
     'prefix-string-index',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'namespace-name-string-index',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'local-name-string-index',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
 ];
 

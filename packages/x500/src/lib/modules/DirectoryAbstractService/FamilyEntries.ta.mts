@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_FamilyEntries: $.ComponentSpec
     new $.ComponentSpec(
         "family-class",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "familyEntries",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

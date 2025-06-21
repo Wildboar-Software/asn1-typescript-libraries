@@ -168,93 +168,67 @@ export const _root_component_type_list_1_spec_for_Document_initial_vocabulary: $
   new $.ComponentSpec(
     'external-vocabulary',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'restricted-alphabets',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'encoding-algorithms',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'prefixes',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'namespace-names',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'local-names',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'other-ncnames',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'other-uris',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
   new $.ComponentSpec(
     'attribute-values',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
   new $.ComponentSpec(
     'content-character-chunks',
     true,
-    $.hasTag(_TagClass.context, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 9)
   ),
   new $.ComponentSpec(
     'other-strings',
     true,
-    $.hasTag(_TagClass.context, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 10)
   ),
   new $.ComponentSpec(
     'element-name-surrogates',
     true,
-    $.hasTag(_TagClass.context, 11),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 11)
   ),
   new $.ComponentSpec(
     'attribute-name-surrogates',
     true,
-    $.hasTag(_TagClass.context, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 12)
   ),
 ];
 

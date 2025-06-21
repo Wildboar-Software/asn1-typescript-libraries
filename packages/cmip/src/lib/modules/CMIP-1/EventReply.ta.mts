@@ -78,13 +78,11 @@ export class EventReply {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_EventReply: $.ComponentSpec[] = [
-  new $.ComponentSpec('eventType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('eventType', false, $.hasAnyTag),
   new $.ComponentSpec(
     'eventReplyInfo',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
 ];
 

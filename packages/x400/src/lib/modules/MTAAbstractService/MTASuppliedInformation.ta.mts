@@ -168,18 +168,14 @@ export const _root_component_type_list_1_spec_for_MTASuppliedInformation: $.Comp
     new $.ComponentSpec(
         'arrival-time',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'routing-action',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
-    new $.ComponentSpec('attempted', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('attempted', true, $.hasAnyTag),
     ..._root_component_type_list_1_spec_for_AdditionalActions,
 ];
 

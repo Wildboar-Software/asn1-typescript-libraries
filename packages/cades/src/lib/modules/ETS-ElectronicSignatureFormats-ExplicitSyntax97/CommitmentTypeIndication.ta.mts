@@ -73,8 +73,8 @@ class CommitmentTypeIndication {
  */
 export
 const _root_component_type_list_1_spec_for_CommitmentTypeIndication: $.ComponentSpec[] = [
-    new $.ComponentSpec("commitmentTypeId", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("commitmentTypeQualifier", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("commitmentTypeId", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("commitmentTypeQualifier", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

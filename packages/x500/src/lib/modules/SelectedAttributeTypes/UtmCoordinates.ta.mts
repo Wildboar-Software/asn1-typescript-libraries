@@ -76,23 +76,17 @@ export const _root_component_type_list_1_spec_for_UtmCoordinates: $.ComponentSpe
     new $.ComponentSpec(
         "zone",
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
     new $.ComponentSpec(
         "easting",
         false,
-        $.hasTag(_TagClass.universal, 18),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 18)
     ),
     new $.ComponentSpec(
         "northing",
         false,
-        $.hasTag(_TagClass.universal, 18),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 18)
     ),
 ];
 

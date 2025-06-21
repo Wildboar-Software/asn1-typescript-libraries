@@ -91,23 +91,17 @@ export const _root_component_type_list_1_spec_for_ICV_Invoke: $.ComponentSpec[] 
     new $.ComponentSpec(
         "toBeProtected",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "dynParms",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "icv",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
 ];
 

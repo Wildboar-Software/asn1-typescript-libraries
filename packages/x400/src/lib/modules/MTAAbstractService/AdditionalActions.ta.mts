@@ -110,23 +110,17 @@ export const _root_component_type_list_1_spec_for_AdditionalActions: $.Component
     new $.ComponentSpec(
         'deferred-time',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'converted-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'other-actions',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

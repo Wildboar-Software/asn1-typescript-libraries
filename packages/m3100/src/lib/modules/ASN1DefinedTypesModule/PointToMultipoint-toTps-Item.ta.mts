@@ -75,13 +75,11 @@ export class PointToMultipoint_toTps_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PointToMultipoint_toTps_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('tp', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('tp', false, $.hasAnyTag),
     new $.ComponentSpec(
         'xConnection',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

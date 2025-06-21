@@ -76,16 +76,12 @@ export const _root_component_type_list_1_spec_for_change_auto_discard_ArgumentTy
     new $.ComponentSpec(
         'auto-discard-expired-IPMs',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'auto-discard-obsolete-IPMs',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

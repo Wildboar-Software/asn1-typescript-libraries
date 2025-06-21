@@ -153,23 +153,17 @@ export const _root_component_type_list_1_spec_for_C_RECOVER_RI: $.ComponentSpec[
   new $.ComponentSpec(
     'atomic-action-identifier',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'branch-identifier',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'recovery-state',
     false,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
 ];
 
@@ -186,9 +180,7 @@ export const _root_component_type_list_2_spec_for_C_RECOVER_RI: $.ComponentSpec[
   new $.ComponentSpec(
     'user-data',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 
@@ -205,9 +197,7 @@ export const _extension_additions_list_spec_for_C_RECOVER_RI: $.ComponentSpec[] 
   new $.ComponentSpec(
     'reversed-branch',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
 ];
 

@@ -89,15 +89,13 @@ export class IndividualSwitchOver {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_IndividualSwitchOver: $.ComponentSpec[] = [
-    new $.ComponentSpec('connection', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('connection', false, $.hasAnyTag),
     new $.ComponentSpec(
         'unchangedTP',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
-    new $.ComponentSpec('newTP', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('newTP', false, $.hasAnyTag),
 ];
 
 

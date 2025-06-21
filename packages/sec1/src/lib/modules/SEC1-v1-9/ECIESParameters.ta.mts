@@ -82,9 +82,9 @@ class ECIESParameters {
  */
 export
 const _root_component_type_list_1_spec_for_ECIESParameters: $.ComponentSpec[] = [
-    new $.ComponentSpec("kdf", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sym", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mac", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("kdf", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sym", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mac", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

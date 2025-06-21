@@ -174,7 +174,7 @@ export class TbpDataTransferServer extends AadServer {
  */
 export const _root_component_type_list_1_spec_for_TbpDataTransferServer: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_AadServer,
-    new $.ComponentSpec("conf", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("conf", false, $.hasAnyTag),
 ];
 
 /**

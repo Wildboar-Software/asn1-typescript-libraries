@@ -95,20 +95,16 @@ export class MITSearch {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MITSearch: $.ComponentSpec[] = [
-    new $.ComponentSpec('base', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('base', false, $.hasAnyTag),
     new $.ComponentSpec(
         'discoveryScope',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'classRequest',
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
 ];
 

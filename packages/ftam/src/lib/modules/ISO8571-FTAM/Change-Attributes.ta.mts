@@ -178,62 +178,46 @@ export class Change_Attributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Change_Attributes: $.ComponentSpec[] = [
-  new $.ComponentSpec('pathname', true, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('pathname', true, $.hasAnyTag),
   new $.ComponentSpec(
     'storage-account',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'object-availability',
     true,
-    $.hasTag(_TagClass.context, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 12)
   ),
   new $.ComponentSpec(
     'future-Object-size',
     true,
-    $.hasTag(_TagClass.context, 14),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 14)
   ),
   new $.ComponentSpec(
     'access-control',
     true,
-    $.hasTag(_TagClass.context, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 15)
   ),
   new $.ComponentSpec(
     'path-access-control',
     true,
-    $.hasTag(_TagClass.context, 21),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 21)
   ),
   new $.ComponentSpec(
     'legal-qualification',
     true,
-    $.hasTag(_TagClass.context, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 16)
   ),
   new $.ComponentSpec(
     'private-use',
     true,
-    $.hasTag(_TagClass.context, 17),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 17)
   ),
   new $.ComponentSpec(
     'attribute-extensions',
     true,
-    $.hasTag(_TagClass.context, 22),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 22)
   ),
 ];
 

@@ -133,32 +133,24 @@ export const _root_component_type_list_1_spec_for_OsiBindError_normal_mode_param
     new $.ComponentSpec(
         "protocol-version",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "responding-presentation-selector",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "presentation-context-definition-result-list",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "provider-reason",
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
-    new $.ComponentSpec("user-data", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("user-data", true, $.hasAnyTag),
 ];
 
 /**

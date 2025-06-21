@@ -181,72 +181,52 @@ export const _root_component_type_list_1_spec_for_CVRequest: $.ComponentSpec[] =
   new $.ComponentSpec(
     'cvRequestVersion',
     true,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'query',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'requestorRef',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'requestNonce',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'requestorName',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'responderName',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'requestExtensions',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'signatureAlg',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'hashAlg',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'requestorText',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
 ];
 

@@ -180,52 +180,38 @@ export const _root_component_type_list_1_spec_for_SearchRequest: $.ComponentSpec
   new $.ComponentSpec(
     'baseObject',
     false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
   new $.ComponentSpec(
     'scope',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'derefAliases',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'sizeLimit',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'timeLimit',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'typesOnly',
     false,
-    $.hasTag(_TagClass.universal, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 1)
   ),
-  new $.ComponentSpec('filter', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('filter', false, $.hasAnyTag),
   new $.ComponentSpec(
     'attributes',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
 ];
 

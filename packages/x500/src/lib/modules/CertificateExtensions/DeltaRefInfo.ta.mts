@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_DeltaRefInfo: $.ComponentSpec[
     new $.ComponentSpec(
         "deltaLocation",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "lastDelta",
         true,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
 ];
 

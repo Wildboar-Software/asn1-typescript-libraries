@@ -78,7 +78,7 @@ export class ModifyResult {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ModifyResult: $.ComponentSpec[] = [
-    new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('result', false, $.hasAnyTag),
 ];
 
 

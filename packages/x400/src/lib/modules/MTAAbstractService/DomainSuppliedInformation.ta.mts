@@ -167,23 +167,17 @@ export const _root_component_type_list_1_spec_for_DomainSuppliedInformation: $.C
     new $.ComponentSpec(
         'arrival-time',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'routing-action',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'attempted-domain',
         true,
-        $.hasTag(_TagClass.application, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 3)
     ),
     ..._root_component_type_list_1_spec_for_AdditionalActions,
 ];

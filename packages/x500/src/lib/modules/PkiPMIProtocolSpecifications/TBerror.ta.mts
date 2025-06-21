@@ -102,16 +102,12 @@ export const _root_component_type_list_1_spec_for_TBerror: $.ComponentSpec[] = [
     new $.ComponentSpec(
         "code",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         "diagnostic",
         true,
-        $.hasTag(_TagClass.universal, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 12)
     ),
 ];
 

@@ -86,9 +86,9 @@ class KeyReqMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_KeyReqMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("keyParingID", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cAMCertificate", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("keyParingID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cAMCertificate", false, $.hasTag(_TagClass.context, 2))
 ];
 
 

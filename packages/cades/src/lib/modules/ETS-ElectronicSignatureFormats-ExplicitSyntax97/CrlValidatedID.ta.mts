@@ -73,8 +73,8 @@ class CrlValidatedID {
  */
 export
 const _root_component_type_list_1_spec_for_CrlValidatedID: $.ComponentSpec[] = [
-    new $.ComponentSpec("crlHash", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("crlIdentifier", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("crlHash", false, $.hasAnyTag),
+    new $.ComponentSpec("crlIdentifier", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

@@ -72,8 +72,8 @@ class NotifyThreshold {
  */
 export
 const _root_component_type_list_1_spec_for_NotifyThreshold: $.ComponentSpec[] = [
-    new $.ComponentSpec("threshold", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("notifyOnOff", false, $.hasTag(_TagClass.universal, 1), undefined, undefined)
+    new $.ComponentSpec("threshold", false, $.hasAnyTag),
+    new $.ComponentSpec("notifyOnOff", false, $.hasTag(_TagClass.universal, 1))
 ];
 
 /**

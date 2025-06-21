@@ -83,13 +83,11 @@ export class CertErr {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertErr: $.ComponentSpec[] = [
-    new $.ComponentSpec("notOK", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("notOK", false, $.hasAnyTag),
     new $.ComponentSpec(
         "note",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

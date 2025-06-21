@@ -91,9 +91,7 @@ export const _root_component_type_list_2_spec_for_C_PREPARE_RI: $.ComponentSpec[
   new $.ComponentSpec(
     'user-data',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 

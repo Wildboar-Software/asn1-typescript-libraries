@@ -130,16 +130,12 @@ export const _root_component_type_list_1_spec_for_WeekMask: $.ComponentSpec[] = 
     new $.ComponentSpec(
         'daysOfWeek',
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         'intervalsOfDay',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

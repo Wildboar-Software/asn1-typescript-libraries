@@ -82,9 +82,9 @@ class SecurityLevelBioRef {
  */
 export
 const _root_component_type_list_1_spec_for_SecurityLevelBioRef: $.ComponentSpec[] = [
-    new $.ComponentSpec("biometricSecurityLevelId", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("modalityPolicy", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("biometricPara", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("biometricSecurityLevelId", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("modalityPolicy", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("biometricPara", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

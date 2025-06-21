@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_Default_P_context: $.Component
     new $.ComponentSpec(
         'abstract-syntax',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'transfer-syntax',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

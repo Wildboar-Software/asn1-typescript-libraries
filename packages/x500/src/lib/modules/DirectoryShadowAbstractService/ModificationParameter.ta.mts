@@ -74,9 +74,7 @@ export const _root_component_type_list_1_spec_for_ModificationParameter: $.Compo
     new $.ComponentSpec(
         "secondaryShadows",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

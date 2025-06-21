@@ -87,20 +87,16 @@ export class MprInfo_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MprInfo_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('mprId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('mprId', false, $.hasAnyTag),
     new $.ComponentSpec(
         'arrivalTime',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
     new $.ComponentSpec(
         'processingState',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

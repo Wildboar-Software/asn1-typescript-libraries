@@ -117,27 +117,21 @@ export class X509AttributeCertificateAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_X509AttributeCertificateAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
     new $.ComponentSpec(
         "issuer",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "serialNumber",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "attrTypes",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

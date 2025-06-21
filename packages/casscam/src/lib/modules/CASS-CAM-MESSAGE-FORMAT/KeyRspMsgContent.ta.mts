@@ -91,10 +91,10 @@ class KeyRspMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_KeyRspMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("cASSCertificate", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("rSAEncryptedContent", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("sIGN-kpk", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("cASSCertificate", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("rSAEncryptedContent", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("sIGN-kpk", false, $.hasTag(_TagClass.context, 3))
 ];
 
 

@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_TransferInfo: $.ComponentSpec[
     new $.ComponentSpec(
         'transferProtocol',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'protocolSpecificInfo',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

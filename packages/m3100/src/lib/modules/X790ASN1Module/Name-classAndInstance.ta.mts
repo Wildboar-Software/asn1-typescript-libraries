@@ -91,16 +91,12 @@ export const _root_component_type_list_1_spec_for_Name_classAndInstance: $.Compo
     new $.ComponentSpec(
         'managedObjectClass',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'managedObjectInstance',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

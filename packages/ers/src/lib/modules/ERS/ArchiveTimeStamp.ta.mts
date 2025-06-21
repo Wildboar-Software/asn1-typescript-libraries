@@ -101,10 +101,10 @@ class ArchiveTimeStamp {
  */
 export
 const _root_component_type_list_1_spec_for_ArchiveTimeStamp: $.ComponentSpec[] = [
-    new $.ComponentSpec("digestAlgorithm", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("attributes", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("reducedHashtree", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("timeStamp", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("digestAlgorithm", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("attributes", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("reducedHashtree", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("timeStamp", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 

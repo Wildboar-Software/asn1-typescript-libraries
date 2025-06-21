@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_EncryptedBodyPart: $.Component
     new $.ComponentSpec(
         'parameters',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'data',
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
 ];
 

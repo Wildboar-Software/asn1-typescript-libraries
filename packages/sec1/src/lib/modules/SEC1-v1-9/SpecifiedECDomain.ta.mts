@@ -120,13 +120,13 @@ class SpecifiedECDomain {
  */
 export
 const _root_component_type_list_1_spec_for_SpecifiedECDomain: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("fieldID", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("curve", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("base", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("order", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("cofactor", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("hash", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("fieldID", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("curve", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("base", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("order", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("cofactor", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("hash", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

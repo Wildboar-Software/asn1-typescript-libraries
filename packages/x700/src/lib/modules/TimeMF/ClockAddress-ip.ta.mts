@@ -72,16 +72,12 @@ export const _root_component_type_list_1_spec_for_ClockAddress_ip: $.ComponentSp
     new $.ComponentSpec(
         'host',
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         'port',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

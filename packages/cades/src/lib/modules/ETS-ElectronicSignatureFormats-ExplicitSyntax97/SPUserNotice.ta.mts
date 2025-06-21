@@ -73,8 +73,8 @@ class SPUserNotice {
  */
 export
 const _root_component_type_list_1_spec_for_SPUserNotice: $.ComponentSpec[] = [
-    new $.ComponentSpec("noticeRef", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("explicitText", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("noticeRef", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("explicitText", true, $.hasAnyTag)
 ];
 
 /**

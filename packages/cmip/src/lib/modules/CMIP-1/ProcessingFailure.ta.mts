@@ -109,23 +109,17 @@ export const _root_component_type_list_1_spec_for_ProcessingFailure: $.Component
   new $.ComponentSpec(
     'managedObjectClass',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'managedObjectInstance',
     true,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'specificErrorInfo',
     false,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
 ];
 

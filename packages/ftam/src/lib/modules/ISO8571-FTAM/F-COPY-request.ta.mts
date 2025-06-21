@@ -153,44 +153,32 @@ export const _root_component_type_list_1_spec_for_F_COPY_request: $.ComponentSpe
   new $.ComponentSpec(
     'destination-file-directory',
     false,
-    $.hasTag(_TagClass.application, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 24)
   ),
   new $.ComponentSpec(
     'override',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'create-password',
     true,
-    $.hasTag(_TagClass.application, 17),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 17)
   ),
   new $.ComponentSpec(
     'access-passwords',
     true,
-    $.hasTag(_TagClass.application, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 2)
   ),
   new $.ComponentSpec(
     'path-access-passwords',
     true,
-    $.hasTag(_TagClass.application, 27),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 27)
   ),
   new $.ComponentSpec(
     'attributes',
     true,
-    $.hasTag(_TagClass.application, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 8)
   ),
 ];
 

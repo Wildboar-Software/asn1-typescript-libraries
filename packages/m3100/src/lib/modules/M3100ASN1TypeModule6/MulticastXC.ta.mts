@@ -83,9 +83,9 @@ export class MulticastXC {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MulticastXC: $.ComponentSpec[] = [
-    new $.ComponentSpec('mpXC', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('xcA', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('xcB', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('mpXC', false, $.hasAnyTag),
+    new $.ComponentSpec('xcA', false, $.hasAnyTag),
+    new $.ComponentSpec('xcB', false, $.hasAnyTag),
 ];
 
 

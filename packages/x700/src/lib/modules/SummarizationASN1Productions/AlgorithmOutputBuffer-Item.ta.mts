@@ -84,16 +84,12 @@ export const _root_component_type_list_1_spec_for_AlgorithmOutputBuffer_Item: $.
     new $.ComponentSpec(
         'attributeId',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'algorithmOutput',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

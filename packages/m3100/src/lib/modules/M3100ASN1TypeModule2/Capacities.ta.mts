@@ -98,30 +98,22 @@ export const _root_component_type_list_1_spec_for_Capacities: $.ComponentSpec[] 
     new $.ComponentSpec(
         'availableLinkCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'maxProvisionableCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'potentialLinkCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'provisionedLinkCapacity',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

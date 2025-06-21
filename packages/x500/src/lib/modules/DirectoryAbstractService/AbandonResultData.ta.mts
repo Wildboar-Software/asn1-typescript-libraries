@@ -132,7 +132,7 @@ export class AbandonResultData implements CommonResultsSeq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AbandonResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec("invokeID", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("invokeID", false, $.hasAnyTag),
 ];
 
 /**

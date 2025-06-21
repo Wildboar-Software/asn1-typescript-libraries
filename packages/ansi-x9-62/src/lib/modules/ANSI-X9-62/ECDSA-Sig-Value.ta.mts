@@ -69,16 +69,12 @@ export const _root_component_type_list_1_spec_for_ECDSA_Sig_Value: $.ComponentSp
     new $.ComponentSpec(
         "r",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "s",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

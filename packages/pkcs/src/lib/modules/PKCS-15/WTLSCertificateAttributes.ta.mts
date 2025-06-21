@@ -75,7 +75,7 @@ export class WTLSCertificateAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_WTLSCertificateAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
 ];
 
 

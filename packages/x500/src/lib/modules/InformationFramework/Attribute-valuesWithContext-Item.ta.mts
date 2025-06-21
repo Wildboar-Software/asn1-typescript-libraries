@@ -80,13 +80,11 @@ export class Attribute_valuesWithContext_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
     new $.ComponentSpec(
         "contextList",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

@@ -81,9 +81,9 @@ class TCGSpecificationVersion {
  */
 export
 const _root_component_type_list_1_spec_for_TCGSpecificationVersion: $.ComponentSpec[] = [
-    new $.ComponentSpec("majorVersion", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("minorVersion", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("revision", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("majorVersion", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("minorVersion", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("revision", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

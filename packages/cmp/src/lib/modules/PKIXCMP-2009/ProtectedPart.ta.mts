@@ -83,11 +83,9 @@ export const _root_component_type_list_1_spec_for_ProtectedPart: $.ComponentSpec
   new $.ComponentSpec(
     'header',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
-  new $.ComponentSpec('body', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('body', false, $.hasAnyTag),
 ];
 
 

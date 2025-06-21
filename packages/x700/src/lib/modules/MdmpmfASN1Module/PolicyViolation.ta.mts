@@ -77,16 +77,12 @@ export const _root_component_type_list_1_spec_for_PolicyViolation: $.ComponentSp
     new $.ComponentSpec(
         'violatorName',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'violatedPolicy',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

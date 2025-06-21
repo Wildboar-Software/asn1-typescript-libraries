@@ -107,16 +107,12 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
     new $.ComponentSpec(
         "hand",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         "finger",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

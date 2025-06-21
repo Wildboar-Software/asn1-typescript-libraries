@@ -124,7 +124,7 @@ export class CertUnsubscribeRsp implements CASPcommonComponents {
  */
 export const _root_component_type_list_1_spec_for_CertUnsubscribeRsp: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CASPcommonComponents,
-    new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("result", false, $.hasAnyTag),
 ];
 
 /**

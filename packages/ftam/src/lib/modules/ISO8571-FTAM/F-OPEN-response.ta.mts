@@ -230,72 +230,52 @@ export const _root_component_type_list_1_spec_for_F_OPEN_response: $.ComponentSp
   new $.ComponentSpec(
     'state-result',
     true,
-    $.hasTag(_TagClass.application, 21),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 21)
   ),
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'contents-type',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'concurrency-control',
     true,
-    $.hasTag(_TagClass.application, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 10)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
   new $.ComponentSpec(
     'recovery-mode',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'presentation-action',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'degree-of-overlap',
     true,
-    $.hasTag(_TagClass.application, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 30)
   ),
   new $.ComponentSpec(
     'transfer-window',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
 ];
 

@@ -107,16 +107,12 @@ export const _root_component_type_list_1_spec_for_StrongCredentials: $.Component
     new $.ComponentSpec(
         'bind-token',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'certificate',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 
@@ -142,9 +138,7 @@ export const _extension_additions_list_spec_for_StrongCredentials: $.ComponentSp
     new $.ComponentSpec(
         'certificate-selector',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

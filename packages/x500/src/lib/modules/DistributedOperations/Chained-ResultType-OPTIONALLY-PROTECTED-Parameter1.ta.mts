@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_Chained_ResultType_OPTIONALLY_
     new $.ComponentSpec(
         "chainedResult",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         "result",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

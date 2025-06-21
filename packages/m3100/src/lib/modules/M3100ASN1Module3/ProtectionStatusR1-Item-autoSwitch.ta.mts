@@ -115,23 +115,17 @@ export const _root_component_type_list_1_spec_for_ProtectionStatusR1_Item_autoSw
     new $.ComponentSpec(
         'switchStatus',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'relatedUnit',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'autoSwitchReason',
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

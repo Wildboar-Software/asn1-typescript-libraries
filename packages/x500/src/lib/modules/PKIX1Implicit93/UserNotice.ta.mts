@@ -79,9 +79,7 @@ export const _root_component_type_list_1_spec_for_UserNotice: $.ComponentSpec[] 
     new $.ComponentSpec(
         "noticeRef",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'explicitText',
@@ -90,9 +88,7 @@ export const _root_component_type_list_1_spec_for_UserNotice: $.ComponentSpec[] 
             $.hasTag(_TagClass.universal, 26),
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 12)
-        ),
-        undefined,
-        undefined
+        )
     ),
 ];
 

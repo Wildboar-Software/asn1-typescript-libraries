@@ -81,13 +81,11 @@ export class CertSubscribeReq_certs_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertSubscribeReq_certs_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("subject", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("subject", false, $.hasAnyTag),
     new $.ComponentSpec(
         "serialNumber",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

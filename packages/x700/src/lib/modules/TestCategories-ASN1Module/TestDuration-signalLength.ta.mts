@@ -78,11 +78,9 @@ export const _root_component_type_list_1_spec_for_TestDuration_signalLength: $.C
     new $.ComponentSpec(
         'size',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec('dataRate', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('dataRate', true, $.hasAnyTag),
 ];
 
 /**

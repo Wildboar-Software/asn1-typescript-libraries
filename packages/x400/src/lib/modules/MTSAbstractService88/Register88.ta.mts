@@ -154,51 +154,37 @@ export const _root_component_type_list_1_spec_for_Register88: $.ComponentSpec[] 
     new $.ComponentSpec(
         'user-name',
         true,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'user-address',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'deliverable-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'deliverable-maximum-content-length',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'default-delivery-controls',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'deliverable-content-types',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'labels-and-redirections',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

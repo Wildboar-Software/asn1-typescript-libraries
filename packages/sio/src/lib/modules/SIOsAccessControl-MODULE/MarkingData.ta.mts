@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_MarkingData: $.ComponentSpec[]
     new $.ComponentSpec(
         "markingPhrase",
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "markingCodes",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_TestConditions: $.ComponentSpe
     new $.ComponentSpec(
         'first',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'second',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

@@ -83,9 +83,9 @@ class BioTempIssuer {
  */
 export
 const _root_component_type_list_1_spec_for_BioTempIssuer: $.ComponentSpec[] = [
-    new $.ComponentSpec("issuerName", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("baseCertificateID", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("objectDigestInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("issuerName", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("baseCertificateID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("objectDigestInfo", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

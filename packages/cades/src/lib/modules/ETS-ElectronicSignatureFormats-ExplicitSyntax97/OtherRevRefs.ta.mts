@@ -71,8 +71,8 @@ class OtherRevRefs {
  */
 export
 const _root_component_type_list_1_spec_for_OtherRevRefs: $.ComponentSpec[] = [
-    new $.ComponentSpec("otherRevRefType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("otherRevRefs", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("otherRevRefType", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("otherRevRefs", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

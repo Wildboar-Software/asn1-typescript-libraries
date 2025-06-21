@@ -267,86 +267,62 @@ export const _root_component_type_list_1_spec_for_CommonArgumentsSeq: $.Componen
     new $.ComponentSpec(
         "serviceControls",
         true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
     new $.ComponentSpec(
         "securityParameters",
         true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 29)
     ),
     new $.ComponentSpec(
         "requestor",
         true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 28)
     ),
     new $.ComponentSpec(
         "operationProgress",
         true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 27)
     ),
     new $.ComponentSpec(
         "aliasedRDNs",
         true,
-        $.hasTag(_TagClass.context, 26),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 26)
     ),
     new $.ComponentSpec(
         "criticalExtensions",
         true,
-        $.hasTag(_TagClass.context, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 25)
     ),
     new $.ComponentSpec(
         "referenceType",
         true,
-        $.hasTag(_TagClass.context, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 24)
     ),
     new $.ComponentSpec(
         "entryOnly",
         true,
-        $.hasTag(_TagClass.context, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 23)
     ),
     new $.ComponentSpec(
         "exclusions",
         true,
-        $.hasTag(_TagClass.context, 22),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 22)
     ),
     new $.ComponentSpec(
         "nameResolveOnMaster",
         true,
-        $.hasTag(_TagClass.context, 21),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 21)
     ),
     new $.ComponentSpec(
         "operationContexts",
         true,
-        $.hasTag(_TagClass.context, 20),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 20)
     ),
     new $.ComponentSpec(
         "familyGrouping",
         true,
-        $.hasTag(_TagClass.context, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 19)
     ),
 ];
 

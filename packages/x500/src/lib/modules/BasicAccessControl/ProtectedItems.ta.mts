@@ -218,100 +218,72 @@ export const _root_component_type_list_1_spec_for_ProtectedItems: $.ComponentSpe
     new $.ComponentSpec(
         "entry",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "allUserAttributeTypes",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "attributeType",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "allAttributeValues",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "allUserAttributeTypesAndValues",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "attributeValue",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "selfValue",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         "rangeOfValues",
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         "maxValueCount",
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         "maxImmSub",
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         "restrictedBy",
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
     new $.ComponentSpec(
         "contexts",
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         "classes",
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         'entryMethods',
         true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
 ];
 

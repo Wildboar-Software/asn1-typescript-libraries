@@ -93,23 +93,17 @@ export const _root_component_type_list_1_spec_for_Begin: $.ComponentSpec[] = [
   new $.ComponentSpec(
     'otid',
     false,
-    $.hasTag(_TagClass.application, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 8)
   ),
   new $.ComponentSpec(
     'dialoguePortion',
     true,
-    $.hasTag(_TagClass.application, 11),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 11)
   ),
   new $.ComponentSpec(
     'components',
     true,
-    $.hasTag(_TagClass.application, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 12)
   ),
 ];
 

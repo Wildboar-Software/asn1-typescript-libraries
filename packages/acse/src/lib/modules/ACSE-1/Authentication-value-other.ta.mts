@@ -75,16 +75,12 @@ export const _root_component_type_list_1_spec_for_Authentication_value_other: $.
   new $.ComponentSpec(
     'other-mechanism-name',
     false,
-    $.hasTag(_TagClass.universal, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 6)
   ),
   new $.ComponentSpec(
     'other-mechanism-value',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 

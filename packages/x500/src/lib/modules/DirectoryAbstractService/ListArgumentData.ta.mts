@@ -307,23 +307,17 @@ export const _root_component_type_list_1_spec_for_ListArgumentData: $.ComponentS
     new $.ComponentSpec(
         "object",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "pagedResults",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "listFamily",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];

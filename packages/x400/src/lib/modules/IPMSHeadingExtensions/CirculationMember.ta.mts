@@ -91,11 +91,9 @@ export const _root_component_type_list_1_spec_for_CirculationMember: $.Component
     new $.ComponentSpec(
         'circulation-recipient',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
-    new $.ComponentSpec('checked', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('checked', true, $.hasAnyTag),
 ];
 
 /**

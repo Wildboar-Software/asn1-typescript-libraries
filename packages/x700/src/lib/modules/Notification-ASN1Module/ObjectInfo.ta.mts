@@ -147,44 +147,32 @@ export const _root_component_type_list_1_spec_for_ObjectInfo: $.ComponentSpec[] 
     new $.ComponentSpec(
         'sourceIndicator',
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'attributeList',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'notificationIdentifier',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'correlatedNotifications',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'additionalText',
         true,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'additionalInformation',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

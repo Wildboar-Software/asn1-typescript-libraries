@@ -84,16 +84,12 @@ export const _root_component_type_list_1_spec_for_CertificatePair: $.ComponentSp
     new $.ComponentSpec(
         "issuedToThisCA",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "issuedByThisCA",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

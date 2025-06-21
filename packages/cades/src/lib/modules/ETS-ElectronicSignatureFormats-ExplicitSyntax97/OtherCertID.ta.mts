@@ -79,8 +79,8 @@ class OtherCertID {
  */
 export
 const _root_component_type_list_1_spec_for_OtherCertID: $.ComponentSpec[] = [
-    new $.ComponentSpec("otherCertHash", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("issuerSerial", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("otherCertHash", false, $.hasAnyTag),
+    new $.ComponentSpec("issuerSerial", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

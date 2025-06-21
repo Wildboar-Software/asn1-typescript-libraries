@@ -125,30 +125,22 @@ export const _root_component_type_list_1_spec_for_F_COPY_response: $.ComponentSp
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'destination-file-directory',
     true,
-    $.hasTag(_TagClass.application, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 24)
   ),
   new $.ComponentSpec(
     'attributes',
     true,
-    $.hasTag(_TagClass.application, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 8)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

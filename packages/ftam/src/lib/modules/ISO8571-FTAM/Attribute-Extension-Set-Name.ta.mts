@@ -89,16 +89,12 @@ export const _root_component_type_list_1_spec_for_Attribute_Extension_Set_Name: 
   new $.ComponentSpec(
     'extension-set-identifier',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'extension-attribute-names',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

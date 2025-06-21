@@ -140,38 +140,28 @@ export const _root_component_type_list_1_spec_for_BiometricAttributes: $.Compone
     new $.ComponentSpec(
         "bioFlags",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "templateId",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec("bioType", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("bioType", false, $.hasAnyTag),
     new $.ComponentSpec(
         "bioReference",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "lastChange",
         true,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 24)
     ),
     new $.ComponentSpec(
         "path",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

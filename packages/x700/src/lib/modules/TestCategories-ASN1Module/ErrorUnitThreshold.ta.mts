@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_ErrorUnitThreshold: $.Componen
     new $.ComponentSpec(
         'unitType',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'unitsTotal',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

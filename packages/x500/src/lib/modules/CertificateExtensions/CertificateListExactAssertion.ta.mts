@@ -89,14 +89,12 @@ export class CertificateListExactAssertion {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertificateListExactAssertion: $.ComponentSpec[] = [
-    new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("thisUpdate", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("issuer", false, $.hasAnyTag),
+    new $.ComponentSpec("thisUpdate", false, $.hasAnyTag),
     new $.ComponentSpec(
         "distributionPoint",
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

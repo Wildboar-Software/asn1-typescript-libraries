@@ -258,100 +258,72 @@ export const _root_component_type_list_1_spec_for_AUDT_apdu: $.ComponentSpec[] =
     new $.ComponentSpec(
         'protocol-version',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'aSO-context',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'called-AP-title',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'called-AE-qualifier',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'called-AP-invocation-id',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'called-AE-invocation-id',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'calling-AP-title',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'calling-AE-qualifier',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'calling-AP-invocation-id',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'calling-AE-invocation-id',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'mechanism-name',
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         'calling-authentication-value',
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         'p-context',
         true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 14)
     ),
     new $.ComponentSpec(
         'implementation-information',
         true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 29)
     ),
 ];
 
@@ -368,9 +340,7 @@ export const _root_component_type_list_2_spec_for_AUDT_apdu: $.ComponentSpec[] =
     new $.ComponentSpec(
         'user-information',
         false,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
 ];
 

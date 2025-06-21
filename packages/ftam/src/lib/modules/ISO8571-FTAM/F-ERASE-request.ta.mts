@@ -71,9 +71,7 @@ export const _root_component_type_list_1_spec_for_F_ERASE_request: $.ComponentSp
   new $.ComponentSpec(
     'file-access-data-unit-identity',
     false,
-    $.hasTag(_TagClass.application, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 15)
   ),
 ];
 

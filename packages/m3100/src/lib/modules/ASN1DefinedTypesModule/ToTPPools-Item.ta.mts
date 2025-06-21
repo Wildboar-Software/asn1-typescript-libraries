@@ -74,13 +74,11 @@ export class ToTPPools_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ToTPPools_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('tpPoolId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('tpPoolId', false, $.hasAnyTag),
     new $.ComponentSpec(
         'numberOfTPs',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

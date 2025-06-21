@@ -66,9 +66,7 @@ export const _root_component_type_list_1_spec_for_AnyType_nillable_content: $.Co
   new $.ComponentSpec(
     'elem-list',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

@@ -77,16 +77,12 @@ export const _root_component_type_list_1_spec_for_Identified_Command_Response_re
     new $.ComponentSpec(
         'message-id',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'message-content',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

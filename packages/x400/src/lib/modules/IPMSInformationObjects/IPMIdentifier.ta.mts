@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_IPMIdentifier: $.ComponentSpec
     new $.ComponentSpec(
         'user',
         true,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'user-relative-identifier',
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

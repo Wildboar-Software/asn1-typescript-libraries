@@ -134,30 +134,22 @@ export const _root_component_type_list_1_spec_for_ACRP_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'aso-qualifier',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'asoi-identifier',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'aSO-context-name',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'p-context-result-list',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
 ];
 
@@ -173,9 +165,7 @@ export const _root_component_type_list_2_spec_for_ACRP_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'user-information',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 

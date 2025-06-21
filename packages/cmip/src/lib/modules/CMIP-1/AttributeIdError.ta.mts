@@ -105,11 +105,9 @@ export const _root_component_type_list_1_spec_for_AttributeIdError: $.ComponentS
   new $.ComponentSpec(
     'errorStatus',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
-  new $.ComponentSpec('attributeId', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('attributeId', false, $.hasAnyTag),
 ];
 
 

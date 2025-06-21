@@ -104,12 +104,12 @@ class Content {
  */
 export
 const _root_component_type_list_1_spec_for_Content: $.ComponentSpec[] = [
-    new $.ComponentSpec("cHK", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("iHK", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("rAND-AC-1", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("rAND-AC-2", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("rAND-AC-3", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("kPK", false, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("cHK", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("iHK", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("rAND-AC-1", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("rAND-AC-2", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("rAND-AC-3", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("kPK", false, $.hasTag(_TagClass.context, 5))
 ];
 
 

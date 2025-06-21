@@ -80,13 +80,11 @@ export class AbsenceAdvice {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AbsenceAdvice: $.ComponentSpec[] = [
-    new $.ComponentSpec('advice', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('advice', true, $.hasAnyTag),
     new $.ComponentSpec(
         'next-available',
         true,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
 ];
 

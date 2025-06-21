@@ -93,13 +93,11 @@ export class VerifyMembershipStatusReply {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_VerifyMembershipStatusReply: $.ComponentSpec[] = [
-    new $.ComponentSpec('objectName', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('objectName', false, $.hasAnyTag),
     new $.ComponentSpec(
         'membershipStatus',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

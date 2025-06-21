@@ -87,23 +87,17 @@ export const _root_component_type_list_1_spec_for_TelexNumber: $.ComponentSpec[]
     new $.ComponentSpec(
         "telexNumber",
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
     new $.ComponentSpec(
         "countryCode",
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
     new $.ComponentSpec(
         "answerback",
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

@@ -73,16 +73,12 @@ export const _root_component_type_list_1_spec_for_UserAddress_x121: $.ComponentS
     new $.ComponentSpec(
         'x121-address',
         true,
-        $.hasTag(_TagClass.universal, 18),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 18)
     ),
     new $.ComponentSpec(
         'tsap-id',
         true,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

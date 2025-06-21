@@ -82,11 +82,9 @@ export const _root_component_type_list_1_spec_for_Abort: $.ComponentSpec[] = [
   new $.ComponentSpec(
     'dtid',
     false,
-    $.hasTag(_TagClass.application, 9),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 9)
   ),
-  new $.ComponentSpec('reason', true, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('reason', true, $.hasAnyTag),
 ];
 
 /**

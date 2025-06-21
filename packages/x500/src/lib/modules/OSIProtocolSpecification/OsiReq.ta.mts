@@ -80,9 +80,9 @@ export class OsiReq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_OsiReq: $.ComponentSpec[] = [
-    new $.ComponentSpec("invokeId", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("opcode", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("argument", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("invokeId", false, $.hasAnyTag),
+    new $.ComponentSpec("opcode", false, $.hasAnyTag),
+    new $.ComponentSpec("argument", false, $.hasAnyTag),
 ];
 
 /**

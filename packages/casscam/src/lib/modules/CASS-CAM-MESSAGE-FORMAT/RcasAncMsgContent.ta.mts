@@ -88,9 +88,9 @@ class RcasAncMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_RcasAncMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("protocolTypeFlag", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("cAMClientVersion", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cASSInfo", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("protocolTypeFlag", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("cAMClientVersion", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cASSInfo", false, $.hasTag(_TagClass.context, 2))
 ];
 
 

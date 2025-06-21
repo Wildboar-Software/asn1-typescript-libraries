@@ -174,9 +174,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControlResult: $.Compo
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
 ];
 

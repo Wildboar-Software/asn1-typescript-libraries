@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_RDNInfo: $.ComponentSpec[] = [
     new $.ComponentSpec(
         'rdn',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'moClass',
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
 ];
 

@@ -109,24 +109,18 @@ export const _root_component_type_list_1_spec_for_PKIMessage: $.ComponentSpec[] 
   new $.ComponentSpec(
     'header',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
-  new $.ComponentSpec('body', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('body', false, $.hasAnyTag),
   new $.ComponentSpec(
     'protection',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'extraCerts',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

@@ -69,8 +69,8 @@ class IntervalsOfDay_Item {
  */
 export
 const _root_component_type_list_1_spec_for_IntervalsOfDay_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("intervalStart", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("intervalEnd", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("intervalStart", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("intervalEnd", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

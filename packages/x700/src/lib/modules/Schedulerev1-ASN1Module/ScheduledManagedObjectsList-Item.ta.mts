@@ -85,11 +85,9 @@ export const _root_component_type_list_1_spec_for_ScheduledManagedObjectsList_It
     new $.ComponentSpec(
         'objectInstance',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
-    new $.ComponentSpec('activity', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('activity', true, $.hasAnyTag),
 ];
 
 /**

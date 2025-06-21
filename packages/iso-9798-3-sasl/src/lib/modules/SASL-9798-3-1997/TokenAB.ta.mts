@@ -108,11 +108,11 @@ class TokenAB {
  */
 export
 const _root_component_type_list_1_spec_for_TokenAB: $.ComponentSpec[] = [
-    new $.ComponentSpec("randomA", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
+    new $.ComponentSpec("randomA", false, $.hasTag(_TagClass.universal, 4)),
     /* FIXME: entityB COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("certA", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("certA", false, $.hasTag(_TagClass.context, 1)),
     /* FIXME: authID COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("signature", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("signature", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 

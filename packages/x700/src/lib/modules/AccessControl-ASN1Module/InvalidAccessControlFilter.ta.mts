@@ -94,11 +94,9 @@ export const _root_component_type_list_1_spec_for_InvalidAccessControlFilter: $.
     new $.ComponentSpec(
         'errorId',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
-    new $.ComponentSpec('filter', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('filter', true, $.hasAnyTag),
 ];
 
 /**

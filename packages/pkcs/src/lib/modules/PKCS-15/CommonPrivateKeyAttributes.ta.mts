@@ -90,13 +90,11 @@ export class CommonPrivateKeyAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("subjectName", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("subjectName", true, $.hasAnyTag),
     new $.ComponentSpec(
         "keyIdentifiers",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

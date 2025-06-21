@@ -70,9 +70,7 @@ export const _root_component_type_list_1_spec_for_auto_action_request_error_Para
     new $.ComponentSpec(
         'problems',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

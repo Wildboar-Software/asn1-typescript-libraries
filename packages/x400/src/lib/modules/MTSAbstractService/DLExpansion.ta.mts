@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_DLExpansion: $.ComponentSpec[]
     new $.ComponentSpec(
         'dl',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'dl-expansion-time',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
 ];
 

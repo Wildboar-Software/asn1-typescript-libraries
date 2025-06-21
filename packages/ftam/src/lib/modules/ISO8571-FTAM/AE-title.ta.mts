@@ -80,8 +80,8 @@ export class AE_title {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AE_title: $.ComponentSpec[] = [
-  new $.ComponentSpec('ap', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('ae', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('ap', false, $.hasAnyTag),
+  new $.ComponentSpec('ae', false, $.hasAnyTag),
 ];
 
 

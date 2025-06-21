@@ -83,9 +83,9 @@ export class CAKeyUpdAnnContent {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CAKeyUpdAnnContent: $.ComponentSpec[] = [
-  new $.ComponentSpec('oldWithNew', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('newWithOld', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('newWithNew', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('oldWithNew', false, $.hasAnyTag),
+  new $.ComponentSpec('newWithOld', false, $.hasAnyTag),
+  new $.ComponentSpec('newWithNew', false, $.hasAnyTag),
 ];
 
 

@@ -103,30 +103,22 @@ export const _root_component_type_list_1_spec_for_PremisesAddress: $.ComponentSp
     new $.ComponentSpec(
         'civicAddress',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'city',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'state',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'zip',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
 ];
 

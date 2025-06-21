@@ -112,20 +112,16 @@ export class ArcControlRequest {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ArcControlRequest: $.ComponentSpec[] = [
-    new $.ComponentSpec('time', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('time', true, $.hasAnyTag),
     new $.ComponentSpec(
         'newState',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'additionalInfo',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

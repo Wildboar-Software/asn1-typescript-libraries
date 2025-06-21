@@ -83,11 +83,9 @@ export const _root_component_type_list_1_spec_for_NoSuchArgument_eventId: $.Comp
   new $.ComponentSpec(
     'managedObjectClass',
     true,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
-  new $.ComponentSpec('eventType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('eventType', false, $.hasAnyTag),
 ];
 
 

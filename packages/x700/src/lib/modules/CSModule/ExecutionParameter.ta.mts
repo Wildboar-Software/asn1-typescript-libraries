@@ -79,13 +79,11 @@ export class ExecutionParameter {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ExecutionParameter: $.ComponentSpec[] = [
-    new $.ComponentSpec('scriptId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('scriptId', false, $.hasAnyTag),
     new $.ComponentSpec(
         'scriptParameters',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

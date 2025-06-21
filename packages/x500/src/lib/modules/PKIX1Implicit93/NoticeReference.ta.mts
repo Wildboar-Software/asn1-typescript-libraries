@@ -73,16 +73,12 @@ export const _root_component_type_list_1_spec_for_NoticeReference: $.ComponentSp
     new $.ComponentSpec(
         "organization",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "noticeNumbers",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

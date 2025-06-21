@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_InstallInfo: $.ComponentSpec[]
     new $.ComponentSpec(
         'targetSoftware',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'installInfo',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

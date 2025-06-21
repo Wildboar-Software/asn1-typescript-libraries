@@ -89,9 +89,9 @@ class TokenBA1 {
  */
 export
 const _root_component_type_list_1_spec_for_TokenBA1: $.ComponentSpec[] = [
-    new $.ComponentSpec("randomB", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
+    new $.ComponentSpec("randomB", false, $.hasTag(_TagClass.universal, 4)),
     /* FIXME: entityB COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("certPref", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("certPref", true, $.hasTag(_TagClass.context, 1))
 ];
 
 

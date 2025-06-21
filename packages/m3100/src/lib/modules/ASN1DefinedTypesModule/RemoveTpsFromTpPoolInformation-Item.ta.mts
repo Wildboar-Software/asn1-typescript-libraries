@@ -75,13 +75,11 @@ export class RemoveTpsFromTpPoolInformation_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RemoveTpsFromTpPoolInformation_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('fromTpPool', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('fromTpPool', false, $.hasAnyTag),
     new $.ComponentSpec(
         'tps',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

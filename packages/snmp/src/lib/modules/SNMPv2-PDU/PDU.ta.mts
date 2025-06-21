@@ -123,9 +123,9 @@ class PDU {
  */
 export
 const _root_component_type_list_1_spec_for_PDU: $.ComponentSpec[] = [
-    new $.ComponentSpec("request-id", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("error-status", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("error-index", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
+    new $.ComponentSpec("request-id", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("error-status", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("error-index", false, $.hasTag(_TagClass.universal, 2)),
     /* FIXME: variable-bindings COULD_NOT_RESOLVE_TYPE_DEF */
 ];
 

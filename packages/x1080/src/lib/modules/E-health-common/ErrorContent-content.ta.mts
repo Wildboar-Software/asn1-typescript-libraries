@@ -103,25 +103,19 @@ export const _root_component_type_list_1_spec_for_ErrorContent_content: $.Compon
     new $.ComponentSpec(
         'invokId',
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'sessionType',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'sessionId',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec('error', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('error', false, $.hasAnyTag),
 ];
 
 

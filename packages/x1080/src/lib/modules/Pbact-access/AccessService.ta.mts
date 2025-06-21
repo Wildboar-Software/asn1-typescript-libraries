@@ -90,16 +90,12 @@ export const _root_component_type_list_1_spec_for_AccessService: $.ComponentSpec
     new $.ComponentSpec(
         'serviceId',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'objectDef',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

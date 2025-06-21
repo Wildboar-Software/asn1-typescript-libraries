@@ -64,7 +64,7 @@ class ManufacturerId {
  */
 export
 const _root_component_type_list_1_spec_for_ManufacturerId: $.ComponentSpec[] = [
-    new $.ComponentSpec("manufacturerIdentifier", false, $.hasTag(_TagClass.universal, 6), undefined, undefined)
+    new $.ComponentSpec("manufacturerIdentifier", false, $.hasTag(_TagClass.universal, 6))
 ];
 
 /**

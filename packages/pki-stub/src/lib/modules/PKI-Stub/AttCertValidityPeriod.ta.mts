@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.Compo
         new $.ComponentSpec(
             "notBeforeTime",
             false,
-            $.hasTag(_TagClass.universal, 24),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 24)
         ),
         new $.ComponentSpec(
             "notAfterTime",
             false,
-            $.hasTag(_TagClass.universal, 24),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 24)
         ),
     ];
 

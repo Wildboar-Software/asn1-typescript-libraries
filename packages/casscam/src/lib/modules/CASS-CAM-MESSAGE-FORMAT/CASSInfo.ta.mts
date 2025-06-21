@@ -106,11 +106,11 @@ class CASSInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CASSInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("cASSUniqueID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("cASSIPAddrType", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cASSIPAddr", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cASSConnectionType", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("cASSListeningPort", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("cASSUniqueID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("cASSIPAddrType", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cASSIPAddr", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cASSConnectionType", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("cASSListeningPort", false, $.hasTag(_TagClass.context, 4))
 ];
 
 

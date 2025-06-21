@@ -129,37 +129,27 @@ export const _root_component_type_list_1_spec_for_F_CREATE_DIRECTORY_request: $.
   new $.ComponentSpec(
     'initial-attributes',
     false,
-    $.hasTag(_TagClass.application, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 12)
   ),
   new $.ComponentSpec(
     'create-password',
     true,
-    $.hasTag(_TagClass.application, 17),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 17)
   ),
   new $.ComponentSpec(
     'requested-access',
     false,
-    $.hasTag(_TagClass.application, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 3)
   ),
   new $.ComponentSpec(
     'shared-ASE-infonnation',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'account',
     true,
-    $.hasTag(_TagClass.application, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 4)
   ),
 ];
 

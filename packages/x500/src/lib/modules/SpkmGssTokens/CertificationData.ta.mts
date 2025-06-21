@@ -80,16 +80,12 @@ export const _root_component_type_list_1_spec_for_CertificationData: $.Component
     new $.ComponentSpec(
         "certificationPath",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "certificateRevocationList",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

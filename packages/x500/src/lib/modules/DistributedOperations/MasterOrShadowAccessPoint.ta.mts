@@ -172,16 +172,12 @@ export const _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint: $.C
     new $.ComponentSpec(
         "category",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "chainingRequired",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
 ];
 

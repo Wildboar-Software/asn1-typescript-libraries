@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_UDPTLPacket_error_recovery_fec
   new $.ComponentSpec(
     'fec-npackets',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'fec-data',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

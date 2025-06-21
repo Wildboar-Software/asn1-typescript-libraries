@@ -80,9 +80,9 @@ class Characteristic_two {
  */
 export
 const _root_component_type_list_1_spec_for_Characteristic_two: $.ComponentSpec[] = [
-    new $.ComponentSpec("m", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("basis", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("parameters", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("m", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("basis", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("parameters", false, $.hasAnyTag)
 ];
 
 /**

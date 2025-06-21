@@ -78,13 +78,11 @@ export class Condition {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Condition: $.ComponentSpec[] = [
-    new $.ComponentSpec('object', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('object', false, $.hasAnyTag),
     new $.ComponentSpec(
         'details',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

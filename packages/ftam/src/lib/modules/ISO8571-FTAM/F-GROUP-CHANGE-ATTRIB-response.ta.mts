@@ -127,30 +127,22 @@ export const _root_component_type_list_1_spec_for_F_GROUP_CHANGE_ATTRIB_response
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'operation-result',
     true,
-    $.hasTag(_TagClass.application, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 30)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

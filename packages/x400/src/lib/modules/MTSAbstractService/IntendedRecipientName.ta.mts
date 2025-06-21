@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_IntendedRecipientName: $.Compo
     new $.ComponentSpec(
         'intended-recipient',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'redirection-time',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
 ];
 

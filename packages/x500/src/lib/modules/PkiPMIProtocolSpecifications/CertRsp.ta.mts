@@ -132,7 +132,7 @@ export class CertRsp implements AVMPcommonComponents {
  */
 export const _root_component_type_list_1_spec_for_CertRsp: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
-    new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("result", false, $.hasAnyTag),
 ];
 
 /**

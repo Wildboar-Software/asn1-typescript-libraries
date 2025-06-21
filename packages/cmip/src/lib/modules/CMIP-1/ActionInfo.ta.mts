@@ -79,13 +79,11 @@ export class ActionInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ActionInfo: $.ComponentSpec[] = [
-  new $.ComponentSpec('actionType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('actionType', false, $.hasAnyTag),
   new $.ComponentSpec(
     'actionInfoArg',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
 ];
 

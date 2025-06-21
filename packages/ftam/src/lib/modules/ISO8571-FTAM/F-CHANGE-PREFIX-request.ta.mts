@@ -120,30 +120,22 @@ export const _root_component_type_list_1_spec_for_F_CHANGE_PREFIX_request: $.Com
   new $.ComponentSpec(
     'reset',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'destination-file-directory',
     false,
-    $.hasTag(_TagClass.application, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 24)
   ),
   new $.ComponentSpec(
     'access-passwords',
     true,
-    $.hasTag(_TagClass.application, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 2)
   ),
   new $.ComponentSpec(
     'path-access-passwords',
     true,
-    $.hasTag(_TagClass.application, 27),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 27)
   ),
 ];
 

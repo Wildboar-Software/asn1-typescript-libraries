@@ -77,11 +77,9 @@ export const _root_component_type_list_1_spec_for_EncryptedContentInfo_contentEn
     new $.ComponentSpec(
         'algorithm',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec('parameter', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('parameter', false, $.hasAnyTag),
 ];
 
 

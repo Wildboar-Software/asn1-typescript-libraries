@@ -151,30 +151,22 @@ export const _root_component_type_list_1_spec_for_CertificateListAssertion: $.Co
     new $.ComponentSpec(
         'issuer',
         true,
-        $.or($.hasTag(_TagClass.universal, 16)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.universal, 16))
     ),
     new $.ComponentSpec(
         "minCRLNumber",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "maxCRLNumber",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "reasonFlags",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         'dateAndTime',
@@ -182,23 +174,17 @@ export const _root_component_type_list_1_spec_for_CertificateListAssertion: $.Co
         $.or(
             $.hasTag(_TagClass.universal, 23),
             $.hasTag(_TagClass.universal, 24)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "distributionPoint",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "authorityKeyIdentifier",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

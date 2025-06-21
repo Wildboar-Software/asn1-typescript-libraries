@@ -112,23 +112,17 @@ export const _root_component_type_list_1_spec_for_F_GROUP_LIST_response: $.Compo
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'objects-attributes-list',
     true,
-    $.hasTag(_TagClass.application, 25),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 25)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

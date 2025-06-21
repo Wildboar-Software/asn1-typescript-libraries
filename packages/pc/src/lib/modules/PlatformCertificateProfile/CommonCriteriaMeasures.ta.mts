@@ -151,15 +151,15 @@ class CommonCriteriaMeasures {
  */
 export
 const _root_component_type_list_1_spec_for_CommonCriteriaMeasures: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 22), undefined, undefined),
-    new $.ComponentSpec("assurancelevel", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 22)),
+    new $.ComponentSpec("assurancelevel", false, $.hasTag(_TagClass.universal, 10)),
     /* FIXME: evaluationStatus COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("plus", true, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("strengthOfFunction", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("profileOid", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("profileUri", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("targetOid", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("targetUri", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("plus", true, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("strengthOfFunction", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("profileOid", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("profileUri", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("targetOid", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("targetUri", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

@@ -122,20 +122,16 @@ export class ArcAlarmDetail {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ArcAlarmDetail: $.ComponentSpec[] = [
-    new $.ComponentSpec('problem', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('problem', false, $.hasAnyTag),
     new $.ComponentSpec(
         'alarmStatus',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'perceivedSeverity',
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     /* FIXME: eventTime COULD_NOT_RESOLVE_TYPE_DEF */
 ];

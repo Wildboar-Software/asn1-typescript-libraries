@@ -110,14 +110,12 @@ export class ToBeTestedMORTs_scopedSet {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ToBeTestedMORTs_scopedSet: $.ComponentSpec[] = [
-    new $.ComponentSpec('base', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('mORTsScope0', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('base', false, $.hasAnyTag),
+    new $.ComponentSpec('mORTsScope0', true, $.hasAnyTag),
     new $.ComponentSpec(
         'mORTsFilter',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

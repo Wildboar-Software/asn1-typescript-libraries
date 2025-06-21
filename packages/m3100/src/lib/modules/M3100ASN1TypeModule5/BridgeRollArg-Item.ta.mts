@@ -117,34 +117,26 @@ export class BridgeRollArg_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_BridgeRollArg_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('xc', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('xc', false, $.hasAnyTag),
     new $.ComponentSpec(
         'bridgeRollFromTp',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'bridgeRollToTp',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'bridgeRollOperation',
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'additionalInfo',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

@@ -96,20 +96,16 @@ export class RootedNameTree {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RootedNameTree: $.ComponentSpec[] = [
-    new $.ComponentSpec('rootObject', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('rootObject', false, $.hasAnyTag),
     new $.ComponentSpec(
         'classOfRoot',
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'subordinates',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

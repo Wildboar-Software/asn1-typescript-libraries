@@ -91,13 +91,11 @@ export class ATOMIC_ACTION_IDENTIFIER {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ATOMIC_ACTION_IDENTIFIER: $.ComponentSpec[] = [
-  new $.ComponentSpec('owners-name', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('owners-name', false, $.hasAnyTag),
   new $.ComponentSpec(
     'atomic-action-suffix',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 

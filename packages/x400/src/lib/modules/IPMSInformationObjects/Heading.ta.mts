@@ -366,121 +366,87 @@ export const _root_component_type_list_1_spec_for_Heading: $.ComponentSpec[] = [
     new $.ComponentSpec(
         'this-IPM',
         false,
-        $.hasTag(_TagClass.application, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 11)
     ),
     new $.ComponentSpec(
         'originator',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'authorizing-users',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'primary-recipients',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'copy-recipients',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'blind-copy-recipients',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'replied-to-IPM',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'obsoleted-IPMs',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'related-IPMs',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'subject',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'expiry-time',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'reply-time',
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
     new $.ComponentSpec(
         'reply-recipients',
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         'importance',
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         'sensitivity',
         true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 13)
     ),
     new $.ComponentSpec(
         'auto-forwarded',
         true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 14)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 15),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 15)
     ),
 ];
 

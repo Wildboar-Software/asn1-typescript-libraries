@@ -132,11 +132,11 @@ class TBBSecurityAssertions {
 export
 const _root_component_type_list_1_spec_for_TBBSecurityAssertions: $.ComponentSpec[] = [
     /* FIXME: version COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("ccInfo", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("fipsLevel", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("rtmType", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("iso9000Certified", true, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("iso9000Uri", true, $.hasTag(_TagClass.universal, 22), undefined, undefined)
+    new $.ComponentSpec("ccInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("fipsLevel", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("rtmType", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("iso9000Certified", true, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("iso9000Uri", true, $.hasTag(_TagClass.universal, 22))
 ];
 
 /**

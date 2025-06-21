@@ -70,9 +70,7 @@ export const _root_component_type_list_1_spec_for_sequence_number_error_Paramete
     new $.ComponentSpec(
         'problems',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

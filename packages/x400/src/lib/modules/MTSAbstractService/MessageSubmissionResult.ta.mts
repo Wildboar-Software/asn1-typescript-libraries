@@ -125,30 +125,22 @@ export const _root_component_type_list_1_spec_for_MessageSubmissionResult: $.Com
     new $.ComponentSpec(
         'message-submission-identifier',
         false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 4)
     ),
     new $.ComponentSpec(
         'message-submission-time',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'content-identifier',
         true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 10)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

@@ -75,8 +75,8 @@ export class ConvertPtoPToMulticastReply_Item_success {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ConvertPtoPToMulticastReply_Item_success: $.ComponentSpec[] = [
-    new $.ComponentSpec('mpXC', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('xC', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('mpXC', false, $.hasAnyTag),
+    new $.ComponentSpec('xC', false, $.hasAnyTag),
 ];
 
 

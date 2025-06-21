@@ -150,37 +150,27 @@ export const _root_component_type_list_1_spec_for_F_CREATE_DIRECTORY_response: $
   new $.ComponentSpec(
     'state-result',
     true,
-    $.hasTag(_TagClass.application, 21),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 21)
   ),
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'initial-attributes',
     false,
-    $.hasTag(_TagClass.application, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 12)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

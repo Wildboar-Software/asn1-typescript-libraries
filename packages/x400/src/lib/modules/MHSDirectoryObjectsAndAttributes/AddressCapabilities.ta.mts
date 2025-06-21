@@ -95,23 +95,17 @@ export const _root_component_type_list_1_spec_for_AddressCapabilities: $.Compone
     new $.ComponentSpec(
         'description',
         true,
-        $.hasTag(_TagClass.universal, 27),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 27)
     ),
     new $.ComponentSpec(
         'address',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'capabilities',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

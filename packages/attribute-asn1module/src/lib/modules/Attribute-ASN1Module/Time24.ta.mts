@@ -74,8 +74,8 @@ class Time24 {
  */
 export
 const _root_component_type_list_1_spec_for_Time24: $.ComponentSpec[] = [
-    new $.ComponentSpec("hour", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("minute", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("hour", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("minute", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

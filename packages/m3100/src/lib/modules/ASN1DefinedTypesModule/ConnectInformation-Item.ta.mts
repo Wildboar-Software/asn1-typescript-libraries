@@ -148,20 +148,16 @@ export class ConnectInformation_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ConnectInformation_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('itemType', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('itemType', false, $.hasAnyTag),
     new $.ComponentSpec(
         'administrativeState',
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         'namedCrossConnection',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 
@@ -178,9 +174,7 @@ export const _root_component_type_list_2_spec_for_ConnectInformation_Item: $.Com
     new $.ComponentSpec(
         'additionalInfo',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
 ];
 
@@ -197,16 +191,12 @@ export const _extension_additions_list_spec_for_ConnectInformation_Item: $.Compo
     new $.ComponentSpec(
         'userLabel',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'redline',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
 ];
 

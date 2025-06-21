@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_FNUserReasonCodeField: $.Compo
     new $.ComponentSpec(
         'fn-user-basic-code',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'fn-user-diagnostic',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

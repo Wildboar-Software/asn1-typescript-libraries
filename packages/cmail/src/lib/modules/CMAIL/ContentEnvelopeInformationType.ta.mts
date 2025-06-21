@@ -98,16 +98,12 @@ export const _root_component_type_list_1_spec_for_ContentEnvelopeInformationType
   new $.ComponentSpec(
     'uncipheredEnvelopeHash',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'cipheredEnvelopeHash',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   /* FIXME: messageId COULD_NOT_RESOLVE_TYPE_DEF */
 ];

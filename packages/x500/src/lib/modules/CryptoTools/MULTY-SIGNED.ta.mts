@@ -92,20 +92,16 @@ export class MULTY_SIGNED<ToBeSigned> {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MULTY_SIGNED: $.ComponentSpec[] = [
-    new $.ComponentSpec("toBeSigned", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("toBeSigned", false, $.hasAnyTag),
     new $.ComponentSpec(
         "algorithm",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "parmeters",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

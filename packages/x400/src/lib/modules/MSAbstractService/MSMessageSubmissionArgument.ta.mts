@@ -112,9 +112,7 @@ export const _root_component_type_list_1_spec_for_MSMessageSubmissionArgument: $
     new $.ComponentSpec(
         'submission-options',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

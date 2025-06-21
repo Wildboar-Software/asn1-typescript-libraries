@@ -80,16 +80,12 @@ export const _root_component_type_list_1_spec_for_BodyPartReference_stored_body_
     new $.ComponentSpec(
         'message-entry',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         'body-part-number',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

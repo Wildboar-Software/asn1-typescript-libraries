@@ -78,7 +78,7 @@ export class RenameResult {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RenameResult: $.ComponentSpec[] = [
-    new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('result', false, $.hasAnyTag),
 ];
 
 

@@ -294,107 +294,77 @@ export const _root_component_type_list_1_spec_for_SearchRule: $.ComponentSpec[] 
     new $.ComponentSpec(
         "serviceType",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "userClass",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "inputAttributeTypes",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "attributeCombination",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "outputAttributeTypes",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "defaultControls",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         "mandatoryControls",
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         "searchRuleControls",
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         "familyGrouping",
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         "familyReturn",
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
     new $.ComponentSpec(
         "relaxation",
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         "additionalControl",
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         "allowedSubset",
         true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 13)
     ),
     new $.ComponentSpec(
         "imposedSubset",
         true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 14)
     ),
     new $.ComponentSpec(
         "entryLimit",
         true,
-        $.hasTag(_TagClass.context, 15),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 15)
     ),
 ];
 

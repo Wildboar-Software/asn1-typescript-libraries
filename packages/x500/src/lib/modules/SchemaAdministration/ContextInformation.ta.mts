@@ -75,7 +75,7 @@ export class ContextInformation {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ContextInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("syntax", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("syntax", false, $.hasAnyTag),
     new $.ComponentSpec(
         'assertionSyntax',
         true,
@@ -85,9 +85,7 @@ export const _root_component_type_list_1_spec_for_ContextInformation: $.Componen
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 28),
             $.hasTag(_TagClass.universal, 12)
-        ),
-        undefined,
-        undefined
+        )
     ),
 ];
 

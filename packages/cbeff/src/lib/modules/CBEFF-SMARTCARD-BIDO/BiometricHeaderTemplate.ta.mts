@@ -156,17 +156,17 @@ class BiometricHeaderTemplate {
  */
 export
 const _root_component_type_list_1_spec_for_BiometricHeaderTemplate: $.ComponentSpec[] = [
-    new $.ComponentSpec("patronHeaderVersion", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("bdbBiometricType", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("bdbBiometricSubType", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("bdbCreationDate", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("birCreator", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("bdbValidityPeriod", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("bdbPID", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("bdbFormatOwner", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("bdbFormatType", false, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("birIndex", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("matchingAlgParameters", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
+    new $.ComponentSpec("patronHeaderVersion", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("bdbBiometricType", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("bdbBiometricSubType", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("bdbCreationDate", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("birCreator", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("bdbValidityPeriod", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("bdbPID", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("bdbFormatOwner", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("bdbFormatType", false, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("birIndex", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("matchingAlgParameters", true, $.hasTag(_TagClass.context, 17))
 ];
 
 /**

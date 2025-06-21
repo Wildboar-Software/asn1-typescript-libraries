@@ -144,30 +144,22 @@ export const _root_component_type_list_1_spec_for_MTSBindArgument: $.ComponentSp
     new $.ComponentSpec(
         'initiator-name',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'messages-waiting',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'initiator-credentials',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'security-context',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 
@@ -193,9 +185,7 @@ export const _extension_additions_list_spec_for_MTSBindArgument: $.ComponentSpec
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
 ];
 

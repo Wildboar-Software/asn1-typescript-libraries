@@ -173,51 +173,37 @@ export const _root_component_type_list_1_spec_for_PerProbeSubmissionFields: $.Co
     new $.ComponentSpec(
         'originator-name',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'original-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'content-type',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'content-identifier',
         true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 10)
     ),
     new $.ComponentSpec(
         'content-length',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'per-message-indicators',
         true,
-        $.hasTag(_TagClass.application, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 8)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

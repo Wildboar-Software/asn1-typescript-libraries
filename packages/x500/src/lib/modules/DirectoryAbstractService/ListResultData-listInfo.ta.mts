@@ -161,23 +161,17 @@ export const _root_component_type_list_1_spec_for_ListResultData_listInfo: $.Com
     new $.ComponentSpec(
         'name',
         true,
-        $.or($.hasTag(_TagClass.universal, 16)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.universal, 16))
     ),
     new $.ComponentSpec(
         "subordinates",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "partialOutcomeQualifier",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];

@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_DateTranslationList_Item: $.Co
     new $.ComponentSpec(
         'date',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'typeOfDay',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

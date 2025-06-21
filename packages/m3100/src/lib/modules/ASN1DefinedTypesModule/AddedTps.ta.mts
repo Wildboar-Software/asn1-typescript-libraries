@@ -76,13 +76,11 @@ export class AddedTps {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AddedTps: $.ComponentSpec[] = [
-    new $.ComponentSpec('gtp', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('gtp', false, $.hasAnyTag),
     new $.ComponentSpec(
         'tpsAdded',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

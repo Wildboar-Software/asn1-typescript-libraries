@@ -77,8 +77,8 @@ class Timer {
  */
 export
 const _root_component_type_list_1_spec_for_Timer: $.ComponentSpec[] = [
-    new $.ComponentSpec("exponent", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mantissa", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("exponent", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mantissa", false, $.hasTag(_TagClass.context, 2))
 ];
 
 

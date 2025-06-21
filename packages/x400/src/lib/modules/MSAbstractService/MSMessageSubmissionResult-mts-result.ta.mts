@@ -145,9 +145,7 @@ export const _root_component_type_list_1_spec_for_MSMessageSubmissionResult_mts_
     new $.ComponentSpec(
         'ms-message-result',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

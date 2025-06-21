@@ -114,17 +114,13 @@ export const _root_component_type_list_1_spec_for_DeleteArgument: $.ComponentSpe
     new $.ComponentSpec(
         'entry-class',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
-    new $.ComponentSpec('items', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('items', false, $.hasAnyTag),
     new $.ComponentSpec(
         'delete-extensions',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

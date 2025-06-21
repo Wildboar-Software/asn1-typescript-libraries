@@ -75,13 +75,11 @@ export class RemoveTpsFromGtpInformation_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RemoveTpsFromGtpInformation_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('fromGtp', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('fromGtp', false, $.hasAnyTag),
     new $.ComponentSpec(
         'tps',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

@@ -71,9 +71,7 @@ export const _root_component_type_list_1_spec_for_F_CHANGE_ATTRIB_request: $.Com
   new $.ComponentSpec(
     'attributes',
     false,
-    $.hasTag(_TagClass.application, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 8)
   ),
 ];
 

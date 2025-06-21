@@ -75,9 +75,9 @@ export class OsiErr {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_OsiErr: $.ComponentSpec[] = [
-    new $.ComponentSpec("invokeID", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("errcode", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("error", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("invokeID", false, $.hasAnyTag),
+    new $.ComponentSpec("errcode", false, $.hasAnyTag),
+    new $.ComponentSpec("error", false, $.hasAnyTag),
 ];
 
 /**

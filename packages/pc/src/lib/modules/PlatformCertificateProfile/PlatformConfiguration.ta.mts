@@ -88,10 +88,10 @@ class PlatformConfiguration {
  */
 export
 const _root_component_type_list_1_spec_for_PlatformConfiguration: $.ComponentSpec[] = [
-    new $.ComponentSpec("componentIdentifiers", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("componentIdentifiersUri", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("platformProperties", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("platformPropertiesUri", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("componentIdentifiers", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("componentIdentifiersUri", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("platformProperties", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("platformPropertiesUri", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

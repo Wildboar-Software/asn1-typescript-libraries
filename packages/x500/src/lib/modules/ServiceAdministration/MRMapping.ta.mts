@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_MRMapping: $.ComponentSpec[] =
     new $.ComponentSpec(
         "mapping",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "substitution",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

@@ -132,38 +132,28 @@ export const _root_component_type_list_1_spec_for_TBSAsymmetricToken: $.Componen
     new $.ComponentSpec(
         'signature-algorithm-identifier',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
-    new $.ComponentSpec('name', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('name', false, $.hasAnyTag),
     new $.ComponentSpec(
         'time',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
     new $.ComponentSpec(
         'signed-data',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'encryption-algorithm-identifier',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'encrypted-data',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

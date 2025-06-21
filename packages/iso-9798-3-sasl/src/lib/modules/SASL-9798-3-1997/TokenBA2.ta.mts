@@ -102,10 +102,10 @@ class TokenBA2 {
  */
 export
 const _root_component_type_list_1_spec_for_TokenBA2: $.ComponentSpec[] = [
-    new $.ComponentSpec("randomC", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
+    new $.ComponentSpec("randomC", false, $.hasTag(_TagClass.universal, 4)),
     /* FIXME: entityA COULD_NOT_RESOLVE_TYPE_DEF */,
-    new $.ComponentSpec("certB", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("signature", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("certB", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("signature", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 

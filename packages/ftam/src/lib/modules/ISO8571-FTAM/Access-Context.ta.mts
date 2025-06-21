@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_Access_Context: $.ComponentSpe
   new $.ComponentSpec(
     'access-context',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'level-number',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

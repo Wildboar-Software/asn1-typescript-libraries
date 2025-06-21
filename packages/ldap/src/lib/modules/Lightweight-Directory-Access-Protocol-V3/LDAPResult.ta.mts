@@ -162,30 +162,22 @@ export const _root_component_type_list_1_spec_for_LDAPResult: $.ComponentSpec[] 
   new $.ComponentSpec(
     'resultCode',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'matchedDN',
     false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
   new $.ComponentSpec(
     'diagnosticMessage',
     false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
   new $.ComponentSpec(
     'referral',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
 ];
 

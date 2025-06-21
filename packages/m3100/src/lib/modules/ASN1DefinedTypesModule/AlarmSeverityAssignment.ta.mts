@@ -126,27 +126,21 @@ export class AlarmSeverityAssignment {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AlarmSeverityAssignment: $.ComponentSpec[] = [
-    new $.ComponentSpec('problem', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('problem', false, $.hasAnyTag),
     new $.ComponentSpec(
         'severityAssignedServiceAffecting',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'severityAssignedNonServiceAffecting',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'severityAssignedServiceIndependent',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

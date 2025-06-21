@@ -74,8 +74,8 @@ class BPUReport {
  */
 export
 const _root_component_type_list_1_spec_for_BPUReport: $.ComponentSpec[] = [
-    new $.ComponentSpec("contentType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("contentType", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**

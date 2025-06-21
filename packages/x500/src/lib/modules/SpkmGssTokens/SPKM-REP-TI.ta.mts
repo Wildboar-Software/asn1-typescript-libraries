@@ -78,16 +78,12 @@ export const _root_component_type_list_1_spec_for_SPKM_REP_TI: $.ComponentSpec[]
     new $.ComponentSpec(
         "responseToken",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "certif-data",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

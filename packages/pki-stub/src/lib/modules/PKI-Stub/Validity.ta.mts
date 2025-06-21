@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_Validity: $.ComponentSpec[] =
         new $.ComponentSpec(
             "notBefore",
             false,
-            $.hasAnyTag,
-            undefined,
-            undefined
+            $.hasAnyTag
         ),
         new $.ComponentSpec(
             "notAfter",
             false,
-            $.hasAnyTag,
-            undefined,
-            undefined
+            $.hasAnyTag
         ),
     ];
 

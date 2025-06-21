@@ -76,16 +76,12 @@ export const _root_component_type_list_1_spec_for_IntervalsOfDayWps_Item: $.Comp
     new $.ComponentSpec(
         'intervalStart',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'intervalEnd',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

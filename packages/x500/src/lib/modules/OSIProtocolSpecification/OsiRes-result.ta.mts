@@ -65,8 +65,8 @@ export class OsiRes_result {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_OsiRes_result: $.ComponentSpec[] = [
-    new $.ComponentSpec("opcode", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("opcode", false, $.hasAnyTag),
+    new $.ComponentSpec("result", false, $.hasAnyTag),
 ];
 
 /**

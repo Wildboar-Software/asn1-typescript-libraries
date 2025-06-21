@@ -79,13 +79,11 @@ export class TriggerParameters {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_TriggerParameters: $.ComponentSpec[] = [
-    new $.ComponentSpec('triggerId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('triggerId', false, $.hasAnyTag),
     new $.ComponentSpec(
         'executionParameterList',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

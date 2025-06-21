@@ -104,23 +104,17 @@ export const _root_component_type_list_1_spec_for_SessionConnectionIdentifier: $
   new $.ComponentSpec(
     'callingSSuserReference',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'commonReference',
     false,
-    $.hasTag(_TagClass.universal, 23),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 23)
   ),
   new $.ComponentSpec(
     'additionalReferenceInformation',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

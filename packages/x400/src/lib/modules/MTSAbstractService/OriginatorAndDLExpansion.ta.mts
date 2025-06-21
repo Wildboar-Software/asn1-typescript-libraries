@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_OriginatorAndDLExpansion: $.Co
     new $.ComponentSpec(
         'originator-or-dl-name',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'origination-or-expansion-time',
         false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 23)
     ),
 ];
 

@@ -148,17 +148,17 @@ class ComponentIdentifier {
  */
 export
 const _root_component_type_list_1_spec_for_ComponentIdentifier: $.ComponentSpec[] = [
-    new $.ComponentSpec("componentClass", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("componentManufacturer", false, $.hasTag(_TagClass.universal, 12), undefined, undefined),
-    new $.ComponentSpec("componentModel", false, $.hasTag(_TagClass.universal, 12), undefined, undefined),
-    new $.ComponentSpec("componentSerial", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("componentRevision", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("componentManufacturerId", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("fieldReplaceable", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("componentAddresses", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("componentPlatformCert", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("componentPlatformCertUri", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("componentClass", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("componentManufacturer", false, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("componentModel", false, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("componentSerial", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("componentRevision", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("componentManufacturerId", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("fieldReplaceable", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("componentAddresses", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("componentPlatformCert", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("componentPlatformCertUri", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**

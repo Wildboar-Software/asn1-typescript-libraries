@@ -89,16 +89,12 @@ export const _root_component_type_list_1_spec_for_InfoSyntax_pointer: $.Componen
     new $.ComponentSpec(
         "name",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "hash",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

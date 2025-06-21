@@ -80,9 +80,9 @@ class ECIES_Ciphertext_Value {
  */
 export
 const _root_component_type_list_1_spec_for_ECIES_Ciphertext_Value: $.ComponentSpec[] = [
-    new $.ComponentSpec("ephemeralPublicKey", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("symmetricCiphertext", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("macTag", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("ephemeralPublicKey", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("symmetricCiphertext", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("macTag", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

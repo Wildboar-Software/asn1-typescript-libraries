@@ -111,23 +111,17 @@ export const _root_component_type_list_1_spec_for_FunctionalUnitPackage: $.Compo
     new $.ComponentSpec(
         'functionalUnitPackageId',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'managerRoleFunctionalUnit',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'agentRoleFunctionalUnit',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

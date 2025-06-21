@@ -123,9 +123,7 @@ export const _root_component_type_list_1_spec_for_RLRE_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'reason',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 
@@ -141,9 +139,7 @@ export const _root_component_type_list_2_spec_for_RLRE_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'user-information',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 
@@ -159,16 +155,12 @@ export const _extension_additions_list_spec_for_RLRE_apdu: $.ComponentSpec[] = [
   new $.ComponentSpec(
     'aso-qualifier',
     true,
-    $.hasTag(_TagClass.context, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 13)
   ),
   new $.ComponentSpec(
     'asoi-identifier',
     true,
-    $.hasTag(_TagClass.context, 14),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 14)
   ),
 ];
 

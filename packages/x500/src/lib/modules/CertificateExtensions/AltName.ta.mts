@@ -72,16 +72,12 @@ export const _root_component_type_list_1_spec_for_AltName: $.ComponentSpec[] = [
     new $.ComponentSpec(
         "altnameType",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "altNameValue",
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

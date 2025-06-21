@@ -81,16 +81,12 @@ export const _root_component_type_list_1_spec_for_ConnectivityThreshold_time: $.
     new $.ComponentSpec(
         'unitsType',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'unitsTotal',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

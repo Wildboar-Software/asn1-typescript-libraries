@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_SlcEnds: $.ComponentSpec[] = [
     new $.ComponentSpec(
         'endA',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'endB',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

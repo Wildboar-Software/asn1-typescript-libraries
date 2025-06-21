@@ -69,11 +69,9 @@ export const _root_component_type_list_1_spec_for_OtherRecipientInfo: $.Componen
     new $.ComponentSpec(
         "oriType",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec("oriValue", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("oriValue", false, $.hasAnyTag),
 ];
 
 

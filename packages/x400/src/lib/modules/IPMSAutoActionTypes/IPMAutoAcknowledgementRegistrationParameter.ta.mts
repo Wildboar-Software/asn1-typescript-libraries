@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_IPMAutoAcknowledgementRegistra
     new $.ComponentSpec(
         'auto-acknowledge-suppl-receipt-info',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'submission-options',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

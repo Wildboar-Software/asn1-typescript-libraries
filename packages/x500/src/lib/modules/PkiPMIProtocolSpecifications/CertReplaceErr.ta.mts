@@ -71,7 +71,7 @@ export class CertReplaceErr {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertReplaceErr: $.ComponentSpec[] = [
-    new $.ComponentSpec("code", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("code", false, $.hasAnyTag),
 ];
 
 /**

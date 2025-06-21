@@ -70,8 +70,8 @@ class WeekMask_Item {
  */
 export
 const _root_component_type_list_1_spec_for_WeekMask_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("daysOfWeek", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("intervalsOfDay", false, $.hasTag(_TagClass.universal, 17), undefined, undefined)
+    new $.ComponentSpec("daysOfWeek", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("intervalsOfDay", false, $.hasTag(_TagClass.universal, 17))
 ];
 
 /**

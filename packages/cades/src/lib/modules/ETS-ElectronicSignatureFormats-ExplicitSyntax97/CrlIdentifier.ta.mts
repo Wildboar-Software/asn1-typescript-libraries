@@ -85,9 +85,9 @@ class CrlIdentifier {
  */
 export
 const _root_component_type_list_1_spec_for_CrlIdentifier: $.ComponentSpec[] = [
-    new $.ComponentSpec("crlissuer", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("crlIssuedTime", false, $.hasTag(_TagClass.universal, 23), undefined, undefined),
-    new $.ComponentSpec("crlNumber", true, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("crlissuer", false, $.hasAnyTag),
+    new $.ComponentSpec("crlIssuedTime", false, $.hasTag(_TagClass.universal, 23)),
+    new $.ComponentSpec("crlNumber", true, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

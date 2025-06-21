@@ -163,23 +163,17 @@ export const _root_component_type_list_1_spec_for_ModifyOperationalBindingArgume
     new $.ComponentSpec(
         "bindingType",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "bindingID",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "accessPoint",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'initiator',
@@ -188,37 +182,27 @@ export const _root_component_type_list_1_spec_for_ModifyOperationalBindingArgume
             $.hasTag(_TagClass.context, 3),
             $.hasTag(_TagClass.context, 4),
             $.hasTag(_TagClass.context, 5),
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "newBindingID",
         false,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         "newAgreement",
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         "valid",
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         "securityParameters",
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
 ];
 

@@ -107,20 +107,16 @@ export class ExtensionField {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ExtensionField: $.ComponentSpec[] = [
-    new $.ComponentSpec('type', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('type', false, $.hasAnyTag),
     new $.ComponentSpec(
         'criticality',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'value',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

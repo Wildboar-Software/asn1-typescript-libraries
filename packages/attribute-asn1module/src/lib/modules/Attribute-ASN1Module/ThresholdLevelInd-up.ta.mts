@@ -70,8 +70,8 @@ class ThresholdLevelInd_up {
  */
 export
 const _root_component_type_list_1_spec_for_ThresholdLevelInd_up: $.ComponentSpec[] = [
-    new $.ComponentSpec("high", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("low", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("high", false, $.hasAnyTag),
+    new $.ComponentSpec("low", true, $.hasAnyTag)
 ];
 
 /**

@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_RegistrationTypes: $.Component
     new $.ComponentSpec(
         'standard-parameters',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

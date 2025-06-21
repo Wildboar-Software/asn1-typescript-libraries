@@ -95,16 +95,12 @@ export const _root_component_type_list_1_spec_for_RegisterResult_non_empty_resul
     new $.ComponentSpec(
         'registered-information',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

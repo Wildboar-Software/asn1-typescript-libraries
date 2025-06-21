@@ -128,38 +128,28 @@ export const _root_component_type_list_1_spec_for_Context_Data: $.ComponentSpec[
     new $.ComponentSpec(
         "channelId",
         true,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "seq-number",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "options",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
-    new $.ComponentSpec("conf-alg", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("conf-alg", false, $.hasAnyTag),
     new $.ComponentSpec(
         "intg-alg",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "owf-alg",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

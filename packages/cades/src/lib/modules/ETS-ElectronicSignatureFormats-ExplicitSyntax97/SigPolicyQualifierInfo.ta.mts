@@ -73,8 +73,8 @@ class SigPolicyQualifierInfo {
  */
 export
 const _root_component_type_list_1_spec_for_SigPolicyQualifierInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("sigPolicyQualifierId", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("qualifier", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("sigPolicyQualifierId", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("qualifier", true, $.hasAnyTag)
 ];
 
 /**

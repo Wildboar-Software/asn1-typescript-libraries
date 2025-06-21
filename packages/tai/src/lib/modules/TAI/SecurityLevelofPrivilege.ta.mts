@@ -68,7 +68,7 @@ class SecurityLevelofPrivilege {
  */
 export
 const _root_component_type_list_1_spec_for_SecurityLevelofPrivilege: $.ComponentSpec[] = [
-    new $.ComponentSpec("bioSecLevel", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("bioSecLevel", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**

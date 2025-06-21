@@ -88,9 +88,9 @@ class ManagementExtension {
  */
 export
 const _root_component_type_list_1_spec_for_ManagementExtension: $.ComponentSpec[] = [
-    new $.ComponentSpec("identifier", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("significance", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("information", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("identifier", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("significance", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("information", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

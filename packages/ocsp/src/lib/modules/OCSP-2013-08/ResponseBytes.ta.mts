@@ -72,16 +72,12 @@ export const _root_component_type_list_1_spec_for_ResponseBytes: $.ComponentSpec
     new $.ComponentSpec(
         "responseType",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "response",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
 ];
 

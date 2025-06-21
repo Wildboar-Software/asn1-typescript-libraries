@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_Access_Control_Change_Attribut
   new $.ComponentSpec(
     'insert-values',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'delete-values',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

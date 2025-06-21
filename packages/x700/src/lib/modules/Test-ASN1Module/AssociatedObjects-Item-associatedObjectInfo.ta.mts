@@ -76,16 +76,12 @@ export const _root_component_type_list_1_spec_for_AssociatedObjects_Item_associa
     new $.ComponentSpec(
         'associatedObjectInfoId',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'associatedObjectInform',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

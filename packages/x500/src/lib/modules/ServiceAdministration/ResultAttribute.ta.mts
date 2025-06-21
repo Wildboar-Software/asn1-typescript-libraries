@@ -99,9 +99,7 @@ export const _root_component_type_list_1_spec_for_ResultAttribute: $.ComponentSp
     new $.ComponentSpec(
         "attributeType",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'outputValues',
@@ -109,16 +107,12 @@ export const _root_component_type_list_1_spec_for_ResultAttribute: $.ComponentSp
         $.or(
             $.hasTag(_TagClass.universal, 16),
             $.hasTag(_TagClass.universal, 5)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "contexts",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

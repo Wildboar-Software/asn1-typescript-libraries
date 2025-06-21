@@ -193,65 +193,47 @@ export const _root_component_type_list_1_spec_for_F_CREATE_request: $.ComponentS
   new $.ComponentSpec(
     'override',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'initial-attributes',
     false,
-    $.hasTag(_TagClass.application, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 12)
   ),
   new $.ComponentSpec(
     'create-password',
     true,
-    $.hasTag(_TagClass.application, 17),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 17)
   ),
   new $.ComponentSpec(
     'requested-access',
     false,
-    $.hasTag(_TagClass.application, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 3)
   ),
   new $.ComponentSpec(
     'access-passwords',
     true,
-    $.hasTag(_TagClass.application, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 2)
   ),
   new $.ComponentSpec(
     'path-access-passwords',
     true,
-    $.hasTag(_TagClass.application, 27),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 27)
   ),
   new $.ComponentSpec(
     'concurrency-control',
     true,
-    $.hasTag(_TagClass.application, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 10)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'account',
     true,
-    $.hasTag(_TagClass.application, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 4)
   ),
 ];
 

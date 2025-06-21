@@ -85,13 +85,11 @@ export class ServiceControls_manageDSAITPlaneRef {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ServiceControls_manageDSAITPlaneRef: $.ComponentSpec[] = [
-    new $.ComponentSpec("dsaName", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("dsaName", false, $.hasAnyTag),
     new $.ComponentSpec(
         "agreementID",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

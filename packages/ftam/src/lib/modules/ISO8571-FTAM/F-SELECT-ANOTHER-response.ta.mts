@@ -168,44 +168,32 @@ export const _root_component_type_list_1_spec_for_F_SELECT_ANOTHER_response: $.C
   new $.ComponentSpec(
     'state-result',
     true,
-    $.hasTag(_TagClass.application, 21),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 21)
   ),
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'last-member-indicator',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'referent-indicator',
     true,
-    $.hasTag(_TagClass.application, 29),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 29)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

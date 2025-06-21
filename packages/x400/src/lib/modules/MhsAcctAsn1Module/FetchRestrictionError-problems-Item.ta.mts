@@ -84,16 +84,12 @@ export const _root_component_type_list_1_spec_for_FetchRestrictionError_problems
     new $.ComponentSpec(
         'problem',
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'restriction',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

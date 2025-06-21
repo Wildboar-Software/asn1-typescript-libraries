@@ -156,9 +156,7 @@ export const _root_component_type_list_1_spec_for_ContentChange: $.ComponentSpec
         $.or(
             $.hasTag(_TagClass.universal, 17),
             $.hasTag(_TagClass.universal, 16)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         'attributeChanges',
@@ -166,37 +164,27 @@ export const _root_component_type_list_1_spec_for_ContentChange: $.ComponentSpec
         $.or(
             $.hasTag(_TagClass.context, 0),
             $.hasTag(_TagClass.context, 1)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "sDSEType",
         false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "subComplete",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "attComplete",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "attValIncomplete",
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

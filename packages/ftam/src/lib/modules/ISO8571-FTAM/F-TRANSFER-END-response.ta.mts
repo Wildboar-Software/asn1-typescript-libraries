@@ -135,37 +135,27 @@ export const _root_component_type_list_1_spec_for_F_TRANSFER_END_response: $.Com
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
   new $.ComponentSpec(
     'request-type',
     true,
-    $.hasTag(_TagClass.application, 31),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 31)
   ),
   new $.ComponentSpec(
     'transfer-number',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

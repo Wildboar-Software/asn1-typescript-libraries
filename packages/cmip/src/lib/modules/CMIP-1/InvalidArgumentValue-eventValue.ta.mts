@@ -77,13 +77,11 @@ export class InvalidArgumentValue_eventValue {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_InvalidArgumentValue_eventValue: $.ComponentSpec[] = [
-  new $.ComponentSpec('eventType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('eventType', false, $.hasAnyTag),
   new $.ComponentSpec(
     'eventInfo',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
 ];
 

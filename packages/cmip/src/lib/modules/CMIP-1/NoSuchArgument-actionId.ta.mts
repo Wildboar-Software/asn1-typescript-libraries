@@ -83,11 +83,9 @@ export const _root_component_type_list_1_spec_for_NoSuchArgument_actionId: $.Com
   new $.ComponentSpec(
     'managedObjectClass',
     true,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
-  new $.ComponentSpec('actionType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('actionType', false, $.hasAnyTag),
 ];
 
 

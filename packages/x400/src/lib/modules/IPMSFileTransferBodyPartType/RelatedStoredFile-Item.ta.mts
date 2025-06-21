@@ -94,16 +94,12 @@ export const _root_component_type_list_1_spec_for_RelatedStoredFile_Item: $.Comp
     new $.ComponentSpec(
         'file-identifier',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'relationship',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

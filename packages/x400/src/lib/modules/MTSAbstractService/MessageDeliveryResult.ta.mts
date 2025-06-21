@@ -118,16 +118,12 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryResult: $.Compo
     new $.ComponentSpec(
         'recipient-certificate',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'proof-of-delivery',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 
@@ -153,9 +149,7 @@ export const _extension_additions_list_spec_for_MessageDeliveryResult: $.Compone
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

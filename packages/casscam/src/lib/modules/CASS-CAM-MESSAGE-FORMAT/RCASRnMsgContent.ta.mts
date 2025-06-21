@@ -88,9 +88,9 @@ class RCASRnMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_RCASRnMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("downloadSchedule", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("keyRequest-Req", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("purchaseReport-Req", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("downloadSchedule", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("keyRequest-Req", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("purchaseReport-Req", true, $.hasTag(_TagClass.context, 2))
 ];
 
 

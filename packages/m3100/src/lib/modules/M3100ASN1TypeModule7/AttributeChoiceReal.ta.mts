@@ -88,23 +88,17 @@ export const _root_component_type_list_1_spec_for_AttributeChoiceReal: $.Compone
     new $.ComponentSpec(
         'attributeName',
         false,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'minimumValue',
         false,
-        $.hasTag(_TagClass.universal, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 9)
     ),
     new $.ComponentSpec(
         'maximumValue',
         false,
-        $.hasTag(_TagClass.universal, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 9)
     ),
 ];
 

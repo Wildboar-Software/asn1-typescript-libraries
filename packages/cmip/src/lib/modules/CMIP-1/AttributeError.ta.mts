@@ -126,24 +126,18 @@ export const _root_component_type_list_1_spec_for_AttributeError: $.ComponentSpe
   new $.ComponentSpec(
     'errorStatus',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'modifyOperator',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
-  new $.ComponentSpec('attributeId', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('attributeId', false, $.hasAnyTag),
   new $.ComponentSpec(
     'attributeValue',
     true,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 

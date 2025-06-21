@@ -103,30 +103,22 @@ export const _root_component_type_list_1_spec_for_KeyAgreePublicKey: $.Component
   new $.ComponentSpec(
     'algorithm',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'publicKey',
     false,
-    $.hasTag(_TagClass.universal, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 3)
   ),
   new $.ComponentSpec(
     'macAlgorithm',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'kDF',
     true,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
 ];
 

@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_MultipleMatchingLocalities: $.
     new $.ComponentSpec(
         "matchingRuleUsed",
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "attributeList",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

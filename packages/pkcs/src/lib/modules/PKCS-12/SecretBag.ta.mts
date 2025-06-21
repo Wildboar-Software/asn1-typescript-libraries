@@ -71,16 +71,12 @@ export const _root_component_type_list_1_spec_for_SecretBag: $.ComponentSpec[] =
     new $.ComponentSpec(
         "secretTypeId",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "secretValue",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

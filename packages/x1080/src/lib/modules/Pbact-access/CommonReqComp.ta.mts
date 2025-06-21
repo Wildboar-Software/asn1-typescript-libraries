@@ -100,23 +100,17 @@ export const _root_component_type_list_1_spec_for_CommonReqComp: $.ComponentSpec
     new $.ComponentSpec(
         'attrCerts',
         true,
-        $.hasTag(_TagClass.context, 31),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 31)
     ),
     new $.ComponentSpec(
         'serviceId',
         false,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
     new $.ComponentSpec(
         'invokId',
         false,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 29)
     ),
 ];
 

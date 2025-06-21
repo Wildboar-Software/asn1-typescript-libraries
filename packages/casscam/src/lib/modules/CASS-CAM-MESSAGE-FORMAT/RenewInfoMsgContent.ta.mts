@@ -131,14 +131,14 @@ class RenewInfoMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_RenewInfoMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("clientType", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("imageFlag", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("imageInfo", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("purchaseReport-Req", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("hashed-CCCI", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("hashed-ICCI", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("directives", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("clientType", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("imageFlag", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("imageInfo", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("purchaseReport-Req", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("hashed-CCCI", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("hashed-ICCI", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("directives", true, $.hasTag(_TagClass.context, 7))
 ];
 
 

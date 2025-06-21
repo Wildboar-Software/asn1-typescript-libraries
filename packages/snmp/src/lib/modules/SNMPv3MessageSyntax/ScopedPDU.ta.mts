@@ -82,9 +82,9 @@ class ScopedPDU {
  */
 export
 const _root_component_type_list_1_spec_for_ScopedPDU: $.ComponentSpec[] = [
-    new $.ComponentSpec("contextEngineID", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("contextName", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("data", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("contextEngineID", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("contextName", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("data", false, $.hasAnyTag)
 ];
 
 /**

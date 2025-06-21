@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Attribute_docume
   new $.ComponentSpec(
     'document-type-name',
     false,
-    $.hasTag(_TagClass.application, 14),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 14)
   ),
   new $.ComponentSpec(
     'parameter',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

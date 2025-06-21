@@ -83,9 +83,9 @@ export class PointToPoint {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PointToPoint: $.ComponentSpec[] = [
-    new $.ComponentSpec('fromTp', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('toTp', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('xCon', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('fromTp', false, $.hasAnyTag),
+    new $.ComponentSpec('toTp', false, $.hasAnyTag),
+    new $.ComponentSpec('xCon', false, $.hasAnyTag),
 ];
 
 

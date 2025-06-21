@@ -115,37 +115,27 @@ export const _root_component_type_list_1_spec_for_BiometricInformationTemplate: 
   new $.ComponentSpec(
     'algorithmReference',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'referenceDataQualifier',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'biometricHeaderTemplate',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'bdbReferenceData',
     true,
-    $.hasTag(_TagClass.application, 46),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 46)
   ),
   new $.ComponentSpec(
     'birPayLoad',
     true,
-    $.hasTag(_TagClass.application, 19),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 19)
   ),
 ];
 

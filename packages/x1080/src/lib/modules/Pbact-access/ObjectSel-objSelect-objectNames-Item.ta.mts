@@ -90,13 +90,11 @@ export class ObjectSel_objSelect_objectNames_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ObjectSel_objSelect_objectNames_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('object', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('object', false, $.hasAnyTag),
     new $.ComponentSpec(
         'select',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

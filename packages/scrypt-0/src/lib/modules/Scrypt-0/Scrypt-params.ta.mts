@@ -91,11 +91,11 @@ class Scrypt_params {
  */
 export
 const _root_component_type_list_1_spec_for_Scrypt_params: $.ComponentSpec[] = [
-    new $.ComponentSpec("salt", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("costParameter", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("blockSize", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("parallelizationParameter", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("keyLength", true, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("salt", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("costParameter", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("blockSize", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("parallelizationParameter", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("keyLength", true, $.hasTag(_TagClass.universal, 2))
 ];
 
 

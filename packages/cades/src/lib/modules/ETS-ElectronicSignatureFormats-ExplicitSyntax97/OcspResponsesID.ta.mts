@@ -73,8 +73,8 @@ class OcspResponsesID {
  */
 export
 const _root_component_type_list_1_spec_for_OcspResponsesID: $.ComponentSpec[] = [
-    new $.ComponentSpec("ocspIdentifier", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("ocspRepHash", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("ocspIdentifier", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("ocspRepHash", true, $.hasAnyTag)
 ];
 
 /**

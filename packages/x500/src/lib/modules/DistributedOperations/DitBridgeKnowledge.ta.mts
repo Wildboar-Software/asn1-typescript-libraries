@@ -93,16 +93,12 @@ export const _root_component_type_list_1_spec_for_DitBridgeKnowledge: $.Componen
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 28),
             $.hasTag(_TagClass.universal, 12)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "accessPoints",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_Usage: $.ComponentSpec[] = [
     new $.ComponentSpec(
         "keyUsage",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
     new $.ComponentSpec(
         "extKeyUsage",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

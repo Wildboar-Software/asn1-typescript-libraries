@@ -171,38 +171,28 @@ export const _root_component_type_list_1_spec_for_TBSCertAVL: $.ComponentSpec[] 
         new $.ComponentSpec(
             "version",
             true,
-            $.hasTag(_TagClass.context, 0),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.context, 0)
         ),
         new $.ComponentSpec(
             "serialNumber",
             true,
-            $.hasTag(_TagClass.universal, 2),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 2)
         ),
         new $.ComponentSpec(
             "signature",
             false,
-            $.hasTag(_TagClass.universal, 16),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 16)
         ),
-        new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+        new $.ComponentSpec("issuer", false, $.hasAnyTag),
         new $.ComponentSpec(
             "constrained",
             false,
-            $.hasTag(_TagClass.universal, 1),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 1)
         ),
         new $.ComponentSpec(
             "entries",
             false,
-            $.hasTag(_TagClass.universal, 16),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 16)
         ),
     ];
 
@@ -219,9 +209,7 @@ export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] 
         new $.ComponentSpec(
             "avlExtensions",
             true,
-            $.hasTag(_TagClass.universal, 16),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 16)
         ),
     ];
 

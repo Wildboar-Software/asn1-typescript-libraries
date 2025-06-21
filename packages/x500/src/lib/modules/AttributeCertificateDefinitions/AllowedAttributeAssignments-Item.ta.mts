@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_AllowedAttributeAssignments_It
     new $.ComponentSpec(
         "attributes",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "holderDomain",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

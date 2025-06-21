@@ -111,30 +111,22 @@ export const _root_component_type_list_1_spec_for_F_READ_request: $.ComponentSpe
   new $.ComponentSpec(
     'file-access-data-unit-identity',
     false,
-    $.hasTag(_TagClass.application, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 15)
   ),
   new $.ComponentSpec(
     'access-context',
     false,
-    $.hasTag(_TagClass.application, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 1)
   ),
   new $.ComponentSpec(
     'fadu-lock',
     true,
-    $.hasTag(_TagClass.application, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 16)
   ),
   new $.ComponentSpec(
     'transfer-number',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

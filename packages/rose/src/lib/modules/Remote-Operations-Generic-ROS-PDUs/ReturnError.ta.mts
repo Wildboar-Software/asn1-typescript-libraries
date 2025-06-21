@@ -106,9 +106,9 @@ export class ReturnError {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ReturnError: $.ComponentSpec[] = [
-  new $.ComponentSpec('invokeId', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('errcode', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('parameter', true, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('invokeId', false, $.hasAnyTag),
+  new $.ComponentSpec('errcode', false, $.hasAnyTag),
+  new $.ComponentSpec('parameter', true, $.hasAnyTag),
 ];
 
 

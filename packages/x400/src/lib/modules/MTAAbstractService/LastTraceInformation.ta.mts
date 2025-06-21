@@ -100,23 +100,17 @@ export const _root_component_type_list_1_spec_for_LastTraceInformation: $.Compon
     new $.ComponentSpec(
         'arrival-time',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'converted-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'report-type',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

@@ -96,10 +96,10 @@ class CAMClientInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CAMClientInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("clientType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("clientPriority", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("clientVendor", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("clientVersion", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("clientType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("clientPriority", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("clientVendor", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("clientVersion", false, $.hasTag(_TagClass.context, 3))
 ];
 
 

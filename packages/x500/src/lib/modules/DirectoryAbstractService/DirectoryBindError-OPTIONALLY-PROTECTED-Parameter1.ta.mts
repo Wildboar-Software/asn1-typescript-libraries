@@ -115,9 +115,7 @@ export const _root_component_type_list_1_spec_for_DirectoryBindError_OPTIONALLY_
     new $.ComponentSpec(
         "versions",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'error',
@@ -125,16 +123,12 @@ export const _root_component_type_list_1_spec_for_DirectoryBindError_OPTIONALLY_
         $.or(
             $.hasTag(_TagClass.context, 1),
             $.hasTag(_TagClass.context, 2)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "securityParameters",
         true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
 ];
 

@@ -236,79 +236,57 @@ export const _root_component_type_list_1_spec_for_F_OPEN_request: $.ComponentSpe
   new $.ComponentSpec(
     'processing-mode',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'contents-type',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'concurrency-control',
     true,
-    $.hasTag(_TagClass.application, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 10)
   ),
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'enable-fadu-locking',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
   new $.ComponentSpec(
     'activity-identifier',
     true,
-    $.hasTag(_TagClass.application, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 6)
   ),
   new $.ComponentSpec(
     'recovery-mode',
     true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 3)
   ),
   new $.ComponentSpec(
     'remove-contexts',
     true,
-    $.hasTag(_TagClass.context, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 4)
   ),
   new $.ComponentSpec(
     'define-contexts',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'degree-of-overlap',
     true,
-    $.hasTag(_TagClass.application, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 30)
   ),
   new $.ComponentSpec(
     'transfer-window',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
 ];
 

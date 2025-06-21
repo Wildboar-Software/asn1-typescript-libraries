@@ -95,11 +95,11 @@ class ASN1SharedInfo {
  */
 export
 const _root_component_type_list_1_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("keyInfo", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("entityUInfo", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("entityVInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("suppPubInfo", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("suppPrivInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("keyInfo", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("entityUInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("entityVInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("suppPubInfo", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("suppPrivInfo", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

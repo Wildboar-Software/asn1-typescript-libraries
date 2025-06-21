@@ -107,9 +107,9 @@ class Restriction {
  */
 export
 const _root_component_type_list_1_spec_for_Restriction: $.ComponentSpec[] = [
-    new $.ComponentSpec("permitted", true, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("source-type", true, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("source-name", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("permitted", true, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("source-type", true, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("source-name", true, $.hasAnyTag)
 ];
 
 /**

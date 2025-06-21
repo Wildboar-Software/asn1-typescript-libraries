@@ -84,16 +84,12 @@ export const _root_component_type_list_1_spec_for_NameConstraintsSyntax: $.Compo
     new $.ComponentSpec(
         "permittedSubtrees",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "excludedSubtrees",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

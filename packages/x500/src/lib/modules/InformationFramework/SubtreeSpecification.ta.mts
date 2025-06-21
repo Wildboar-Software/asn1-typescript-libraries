@@ -145,17 +145,13 @@ export const _root_component_type_list_1_spec_for_SubtreeSpecification: $.Compon
     new $.ComponentSpec(
         "base",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     ..._root_component_type_list_1_spec_for_ChopSpecification,
     new $.ComponentSpec(
         "specificationFilter",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
 ];
 

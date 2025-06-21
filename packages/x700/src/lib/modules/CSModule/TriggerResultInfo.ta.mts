@@ -82,8 +82,8 @@ export class TriggerResultInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_TriggerResultInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec('triggerId', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('resultType', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('triggerId', false, $.hasAnyTag),
+    new $.ComponentSpec('resultType', false, $.hasAnyTag),
 ];
 
 /**

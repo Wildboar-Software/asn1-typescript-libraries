@@ -160,51 +160,37 @@ export const _root_component_type_list_1_spec_for_Controls: $.ComponentSpec[] = 
     new $.ComponentSpec(
         'restrict',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'permissible-operations',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'permissible-maximum-content-length',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'permissible-lowest-priority',
         true,
-        $.hasTag(_TagClass.application, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 7)
     ),
     new $.ComponentSpec(
         'permissible-content-types',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'permissible-encoded-information-types',
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'permissible-security-context',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
 ];
 

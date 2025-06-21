@@ -70,11 +70,9 @@ export const _root_component_type_list_1_spec_for_OtherCertificateFormat: $.Comp
     new $.ComponentSpec(
         "otherCertFormat",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec("otherCert", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("otherCert", false, $.hasAnyTag),
 ];
 
 

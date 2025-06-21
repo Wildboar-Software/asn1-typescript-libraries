@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_ACIItem_itemOrUserFirst_userFi
     new $.ComponentSpec(
         "userClasses",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "userPermissions",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

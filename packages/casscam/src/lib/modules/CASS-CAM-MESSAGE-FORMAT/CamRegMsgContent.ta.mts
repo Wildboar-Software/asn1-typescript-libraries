@@ -107,12 +107,12 @@ class CamRegMsgContent {
  */
 export
 const _root_component_type_list_1_spec_for_CamRegMsgContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("nONCE-CAM", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cAMID", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("hWVersion", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("sWversion", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("hashed-MEK-ICCIEK", false, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("nONCE-CAM", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cAMID", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("hWVersion", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("sWversion", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("hashed-MEK-ICCIEK", false, $.hasTag(_TagClass.context, 5))
 ];
 
 

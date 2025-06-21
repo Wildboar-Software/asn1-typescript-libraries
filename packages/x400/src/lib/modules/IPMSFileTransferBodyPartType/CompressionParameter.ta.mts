@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_CompressionParameter: $.Compon
     new $.ComponentSpec(
         'compression-algorithm-id',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'compression-algorithm-param',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

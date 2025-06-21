@@ -77,16 +77,12 @@ export const _root_component_type_list_1_spec_for_AdditionalInformation: $.Compo
         new $.ComponentSpec(
             'creationDate',
             true,
-            $.hasTag(_TagClass.universal, 24),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 24)
         ),
         new $.ComponentSpec(
             'comment',
             true,
-            $.hasTag(_TagClass.universal, 25),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 25)
         ),
     ];
 

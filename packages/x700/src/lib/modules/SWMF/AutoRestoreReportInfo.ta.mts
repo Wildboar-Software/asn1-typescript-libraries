@@ -92,20 +92,16 @@ export class AutoRestoreReportInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AutoRestoreReportInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec('source', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('source', false, $.hasAnyTag),
     new $.ComponentSpec(
         'success',
         false,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         'additionalInfo',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

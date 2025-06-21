@@ -123,30 +123,22 @@ export const _root_component_type_list_1_spec_for_ReportTransferEnvelope: $.Comp
     new $.ComponentSpec(
         'report-identifier',
         false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 4)
     ),
     new $.ComponentSpec(
         'report-destination-name',
         false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 0)
     ),
     new $.ComponentSpec(
         'trace-information',
         false,
-        $.hasTag(_TagClass.application, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 9)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

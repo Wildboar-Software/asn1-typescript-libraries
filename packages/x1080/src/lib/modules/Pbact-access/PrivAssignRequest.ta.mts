@@ -82,9 +82,7 @@ export const _root_component_type_list_1_spec_for_PrivAssignRequest: $.Component
     new $.ComponentSpec(
         'attrCerts',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

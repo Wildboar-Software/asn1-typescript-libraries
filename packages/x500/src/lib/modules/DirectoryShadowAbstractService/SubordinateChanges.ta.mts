@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_SubordinateChanges: $.Componen
     new $.ComponentSpec(
         "subordinate",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         "changes",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

@@ -132,9 +132,7 @@ export const _root_component_type_list_1_spec_for_RejectCAsubscribe: $.Component
     new $.ComponentSpec(
         "reason",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

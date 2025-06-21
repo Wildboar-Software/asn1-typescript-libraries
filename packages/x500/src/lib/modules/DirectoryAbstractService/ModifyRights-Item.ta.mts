@@ -81,13 +81,11 @@ export class ModifyRights_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ModifyRights_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("item", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("item", false, $.hasAnyTag),
     new $.ComponentSpec(
         "permission",
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

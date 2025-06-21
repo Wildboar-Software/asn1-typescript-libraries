@@ -272,125 +272,91 @@ export class FileAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_FileAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec('pathname', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('pathname', true, $.hasAnyTag),
     new $.ComponentSpec(
         'permitted-actions',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'storage-account',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         'date-and-time-of-creation',
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'date-and-time-of-last-modification',
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         'date-and-time-of-last-read-access',
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
     new $.ComponentSpec(
         'date-and-time-of-last-attribute-modification',
         true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 7)
     ),
     new $.ComponentSpec(
         'identity-of-creator',
         true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 8)
     ),
     new $.ComponentSpec(
         'identity-of-last-modifier',
         true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 9)
     ),
     new $.ComponentSpec(
         'identity-of-last-reader',
         true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 10)
     ),
     new $.ComponentSpec(
         'identity-of-last-attribute-modifier',
         true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 11)
     ),
     new $.ComponentSpec(
         'object-availability',
         true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 12)
     ),
     new $.ComponentSpec(
         'object-size',
         true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 13)
     ),
     new $.ComponentSpec(
         'future-object-size',
         true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 14)
     ),
     new $.ComponentSpec(
         'access-control',
         true,
-        $.hasTag(_TagClass.context, 15),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 15)
     ),
     new $.ComponentSpec(
         'legal-qualifications',
         true,
-        $.hasTag(_TagClass.context, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 16)
     ),
     new $.ComponentSpec(
         'private-use',
         true,
-        $.hasTag(_TagClass.context, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 17)
     ),
     new $.ComponentSpec(
         'attribute-extensions',
         true,
-        $.hasTag(_TagClass.context, 22),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 22)
     ),
 ];
 

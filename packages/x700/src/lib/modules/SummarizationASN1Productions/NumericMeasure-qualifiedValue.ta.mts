@@ -100,14 +100,12 @@ export class NumericMeasure_qualifiedValue {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_NumericMeasure_qualifiedValue: $.ComponentSpec[] = [
-    new $.ComponentSpec('value', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('timeStamp', true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('value', false, $.hasAnyTag),
+    new $.ComponentSpec('timeStamp', true, $.hasAnyTag),
     new $.ComponentSpec(
         'suspectFlag',
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
 ];
 

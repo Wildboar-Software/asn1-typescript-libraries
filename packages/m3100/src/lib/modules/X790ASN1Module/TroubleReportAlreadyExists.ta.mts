@@ -106,23 +106,17 @@ export const _root_component_type_list_1_spec_for_TroubleReportAlreadyExists: $.
     new $.ComponentSpec(
         'managedObjectClass',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'managedObjectInstance',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'troubleReportInstance',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

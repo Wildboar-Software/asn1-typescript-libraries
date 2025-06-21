@@ -108,30 +108,22 @@ export const _root_component_type_list_1_spec_for_BiometricData: $.ComponentSpec
     new $.ComponentSpec(
         "typeOfBiometricData",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "hashAlgorithm",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "biometricDataHash",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "sourceDataUri",
         true,
-        $.hasTag(_TagClass.universal, 22),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 22)
     ),
 ];
 

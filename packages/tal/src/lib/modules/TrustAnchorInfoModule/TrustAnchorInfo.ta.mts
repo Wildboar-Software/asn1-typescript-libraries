@@ -121,13 +121,13 @@ class TrustAnchorInfo {
  */
 export
 const _root_component_type_list_1_spec_for_TrustAnchorInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("pubKey", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("keyId", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("taTitle", true, $.hasTag(_TagClass.universal, 12), undefined, undefined),
-    new $.ComponentSpec("certPath", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("exts", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("taTitleLangTag", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("version", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("pubKey", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("keyId", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("taTitle", true, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("certPath", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("exts", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("taTitleLangTag", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

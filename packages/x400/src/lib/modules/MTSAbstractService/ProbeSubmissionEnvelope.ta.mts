@@ -194,9 +194,7 @@ export const _root_component_type_list_1_spec_for_ProbeSubmissionEnvelope: $.Com
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

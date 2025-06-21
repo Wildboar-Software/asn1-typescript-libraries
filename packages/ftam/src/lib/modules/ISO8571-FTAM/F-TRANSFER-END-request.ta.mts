@@ -114,37 +114,27 @@ export const _root_component_type_list_1_spec_for_F_TRANSFER_END_request: $.Comp
   new $.ComponentSpec(
     'shared-ASE-information',
     true,
-    $.hasTag(_TagClass.application, 20),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 20)
   ),
   new $.ComponentSpec(
     'request-type',
     true,
-    $.hasTag(_TagClass.application, 31),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 31)
   ),
   new $.ComponentSpec(
     'transfer-number',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'last-transfer-end-read-response',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'last-transfer-end-write-response',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
 ];
 

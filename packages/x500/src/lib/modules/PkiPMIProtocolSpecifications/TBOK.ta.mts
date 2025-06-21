@@ -95,30 +95,22 @@ export const _root_component_type_list_1_spec_for_TBOK: $.ComponentSpec[] = [
     new $.ComponentSpec(
         "levelOfAssurance",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "confidenceLevel",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "validationTime",
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "info",
         true,
-        $.hasTag(_TagClass.universal, 12),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 12)
     ),
 ];
 

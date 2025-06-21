@@ -123,16 +123,12 @@ export const _root_component_type_list_1_spec_for_NameFormDescription: $.Compone
     new $.ComponentSpec(
         "identifier",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "name",
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'description',
@@ -143,23 +139,17 @@ export const _root_component_type_list_1_spec_for_NameFormDescription: $.Compone
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 28),
             $.hasTag(_TagClass.universal, 12)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "obsolete",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         "information",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

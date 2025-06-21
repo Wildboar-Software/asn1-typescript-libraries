@@ -125,37 +125,27 @@ export const _root_component_type_list_1_spec_for_CommonFields: $.ComponentSpec[
     new $.ComponentSpec(
         'subject-ipm',
         false,
-        $.hasTag(_TagClass.application, 11),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 11)
     ),
     new $.ComponentSpec(
         'ipn-originator',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'ipm-intended-recipient',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'conversion-eits',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'notification-extensions',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

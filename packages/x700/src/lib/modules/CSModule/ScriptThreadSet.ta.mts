@@ -78,8 +78,8 @@ export class ScriptThreadSet {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ScriptThreadSet: $.ComponentSpec[] = [
-    new $.ComponentSpec('scriptId', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('threadId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('scriptId', false, $.hasAnyTag),
+    new $.ComponentSpec('threadId', false, $.hasAnyTag),
 ];
 
 /**

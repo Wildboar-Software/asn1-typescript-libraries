@@ -81,9 +81,9 @@ class CrlOcspRef {
  */
 export
 const _root_component_type_list_1_spec_for_CrlOcspRef: $.ComponentSpec[] = [
-    new $.ComponentSpec("crlids", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ocspids", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("otherRev", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("crlids", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ocspids", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("otherRev", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

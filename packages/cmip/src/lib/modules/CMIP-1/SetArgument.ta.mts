@@ -216,31 +216,23 @@ export const _root_component_type_list_1_spec_for_SetArgument: $.ComponentSpec[]
   new $.ComponentSpec(
     'accessControl',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
   new $.ComponentSpec(
     'synchronization',
     true,
-    $.hasTag(_TagClass.context, 6),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 6)
   ),
   new $.ComponentSpec(
     'scope',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
-  new $.ComponentSpec('filter', true, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('filter', true, $.hasAnyTag),
   new $.ComponentSpec(
     'modificationList',
     false,
-    $.hasTag(_TagClass.context, 12),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 12)
   ),
 ];
 

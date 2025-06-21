@@ -79,11 +79,9 @@ export const _root_component_type_list_1_spec_for_PolicyQualifierInfo: $.Compone
     new $.ComponentSpec(
         "policyQualifierId",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
-    new $.ComponentSpec("qualifier", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("qualifier", true, $.hasAnyTag),
 ];
 
 /**

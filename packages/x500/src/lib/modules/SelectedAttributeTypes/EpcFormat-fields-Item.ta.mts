@@ -100,17 +100,13 @@ export const _root_component_type_list_1_spec_for_EpcFormat_fields_Item: $.Compo
     new $.ComponentSpec(
         "bits",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec("charField", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("charField", false, $.hasAnyTag),
     new $.ComponentSpec(
         "result",
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

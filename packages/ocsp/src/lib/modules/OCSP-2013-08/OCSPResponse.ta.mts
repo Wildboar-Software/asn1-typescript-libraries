@@ -87,16 +87,12 @@ export const _root_component_type_list_1_spec_for_OCSPResponse: $.ComponentSpec[
     new $.ComponentSpec(
         "responseStatus",
         false,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
     new $.ComponentSpec(
         "responseBytes",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

@@ -91,16 +91,12 @@ export const _root_component_type_list_1_spec_for_FacsimileTelephoneNumber: $.Co
     new $.ComponentSpec(
         "telephoneNumber",
         false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
     new $.ComponentSpec(
         "parameters",
         true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 3)
     ),
 ];
 

@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_ClassAttributeSelection: $.Com
     new $.ComponentSpec(
         "class",
         true,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "classAttributes",
         true,
-        $.not($.hasTag(_TagClass.universal, 6)),
-        undefined,
-        undefined
+        $.not($.hasTag(_TagClass.universal, 6))
     ),
 ];
 

@@ -122,30 +122,22 @@ export const _root_component_type_list_1_spec_for_SignedSecurityLabelContent: $.
     new $.ComponentSpec(
         "attHash",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'issuer',
         true,
-        $.or($.hasTag(_TagClass.universal, 16)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.universal, 16))
     ),
     new $.ComponentSpec(
         "keyIdentifier",
         true,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "securityLabel",
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

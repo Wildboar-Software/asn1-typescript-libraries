@@ -91,16 +91,12 @@ export const _root_component_type_list_1_spec_for_NHOBSubordinateToSuperior: $.C
     new $.ComponentSpec(
         "accessPoints",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "subentries",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

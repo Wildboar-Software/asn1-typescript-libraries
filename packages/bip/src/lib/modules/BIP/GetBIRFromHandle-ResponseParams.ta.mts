@@ -73,9 +73,7 @@ export const _root_component_type_list_1_spec_for_GetBIRFromHandle_ResponseParam
   new $.ComponentSpec(
     'bir',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

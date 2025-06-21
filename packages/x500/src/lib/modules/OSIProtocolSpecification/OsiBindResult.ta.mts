@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_OsiBindResult: $.ComponentSpec
     new $.ComponentSpec(
         "mode-selector",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "normal-mode-parameters",
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

@@ -108,16 +108,12 @@ export const _root_component_type_list_1_spec_for_A_DT_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'aso-qualifier',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'asoi-identifier',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 
@@ -133,9 +129,7 @@ export const _root_component_type_list_2_spec_for_A_DT_apdu: $.ComponentSpec[] =
   new $.ComponentSpec(
     'a-user-data',
     false,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 

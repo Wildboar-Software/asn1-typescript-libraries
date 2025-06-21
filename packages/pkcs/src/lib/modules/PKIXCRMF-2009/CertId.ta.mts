@@ -17,16 +17,14 @@ export class CertId {
     ) {}
 }
 export const _root_component_type_list_1_spec_for_CertId: $.ComponentSpec[] = [
-    new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("issuer", false, $.hasAnyTag),
     new $.ComponentSpec(
         "serialNumber",
         false,
         $.hasTag(
             asn1.ASN1TagClass.universal,
             asn1.ASN1UniversalType.octetString
-        ),
-        undefined,
-        undefined
+        )
     ),
 ];
 export const _encode_CertId = function (

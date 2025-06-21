@@ -302,23 +302,17 @@ export const _root_component_type_list_1_spec_for_AddEntryArgumentData: $.Compon
     new $.ComponentSpec(
         "object",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "entry",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "targetSystem",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];

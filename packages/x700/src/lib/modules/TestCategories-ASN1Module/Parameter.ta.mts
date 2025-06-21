@@ -74,11 +74,9 @@ export const _root_component_type_list_1_spec_for_Parameter: $.ComponentSpec[] =
     new $.ComponentSpec(
         'attributeType',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
-    new $.ComponentSpec('value', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('value', false, $.hasAnyTag),
 ];
 
 /**

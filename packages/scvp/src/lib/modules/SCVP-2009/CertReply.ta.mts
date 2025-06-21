@@ -170,55 +170,41 @@ export class CertReply {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertReply: $.ComponentSpec[] = [
-  new $.ComponentSpec('cert', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('cert', false, $.hasAnyTag),
   new $.ComponentSpec(
     'replyStatus',
     true,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'replyValTime',
     false,
-    $.hasTag(_TagClass.universal, 24),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 24)
   ),
   new $.ComponentSpec(
     'replyChecks',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'replyWantBacks',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'validationErrors',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'nextUpdate',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'certReplyExtensions',
     true,
-    $.hasTag(_TagClass.context, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 2)
   ),
 ];
 

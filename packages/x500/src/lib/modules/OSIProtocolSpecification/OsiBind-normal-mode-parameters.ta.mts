@@ -128,32 +128,24 @@ export const _root_component_type_list_1_spec_for_OsiBind_normal_mode_parameters
     new $.ComponentSpec(
         "protocol-version",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "calling-presentation-selector",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "called-presentation-selector",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "presentation-context-definition-list",
         false,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
-    new $.ComponentSpec("user-data", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("user-data", false, $.hasAnyTag),
 ];
 
 /**

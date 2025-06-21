@@ -134,29 +134,23 @@ export class ExecutionResultInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ExecutionResultInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec('triggerId', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('scriptId', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('threadId', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('triggerId', false, $.hasAnyTag),
+    new $.ComponentSpec('scriptId', false, $.hasAnyTag),
+    new $.ComponentSpec('threadId', false, $.hasAnyTag),
     new $.ComponentSpec(
         'errorCode',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
     new $.ComponentSpec(
         'executionResultType',
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         'executionResult',
         false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

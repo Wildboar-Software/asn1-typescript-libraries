@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_EntryClassErrorParameter: $.Co
     new $.ComponentSpec(
         'entry-class',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'problem',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

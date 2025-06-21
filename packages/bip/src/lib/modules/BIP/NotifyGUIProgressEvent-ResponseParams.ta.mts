@@ -83,9 +83,7 @@ export const _root_component_type_list_1_spec_for_NotifyGUIProgressEvent_Respons
   new $.ComponentSpec(
     'response',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

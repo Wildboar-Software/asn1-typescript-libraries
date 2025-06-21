@@ -179,58 +179,42 @@ export const _root_component_type_list_1_spec_for_PerReportTransferFields: $.Com
     new $.ComponentSpec(
         'subject-identifier',
         false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 4)
     ),
     new $.ComponentSpec(
         'subject-intermediate-trace-information',
         true,
-        $.hasTag(_TagClass.application, 9),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 9)
     ),
     new $.ComponentSpec(
         'original-encoded-information-types',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'content-type',
         true,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         'content-identifier',
         true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 10)
     ),
     new $.ComponentSpec(
         'returned-content',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'additional-information',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         'extensions',
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

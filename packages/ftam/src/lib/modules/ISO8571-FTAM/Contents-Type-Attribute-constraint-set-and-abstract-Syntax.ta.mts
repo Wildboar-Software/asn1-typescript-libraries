@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Attribute_constr
   new $.ComponentSpec(
     'constraint-set-name',
     false,
-    $.hasTag(_TagClass.application, 11),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 11)
   ),
   new $.ComponentSpec(
     'abstract-Syntax-name',
     false,
-    $.hasTag(_TagClass.application, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 0)
   ),
 ];
 

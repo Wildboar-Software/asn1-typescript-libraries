@@ -71,9 +71,7 @@ export const _root_component_type_list_1_spec_for_LinkCallParams: $.ComponentSpe
   new $.ComponentSpec(
     'slaveEndpointIRI',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 

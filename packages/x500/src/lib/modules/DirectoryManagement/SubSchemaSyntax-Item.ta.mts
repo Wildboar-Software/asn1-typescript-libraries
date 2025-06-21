@@ -74,16 +74,12 @@ export const _root_component_type_list_1_spec_for_SubSchemaSyntax_Item: $.Compon
     new $.ComponentSpec(
         "name",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "subSchema",
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

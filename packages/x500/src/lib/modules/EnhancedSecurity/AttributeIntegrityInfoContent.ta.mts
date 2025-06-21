@@ -101,14 +101,12 @@ export class AttributeIntegrityInfoContent {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AttributeIntegrityInfoContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("scope", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("signer", true, $.not($.hasTag(_TagClass.universal, 16)), undefined, undefined),
+    new $.ComponentSpec("scope", false, $.hasAnyTag),
+    new $.ComponentSpec("signer", true, $.not($.hasTag(_TagClass.universal, 16))),
     new $.ComponentSpec(
         "attribsHash",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

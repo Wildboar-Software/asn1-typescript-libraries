@@ -102,27 +102,21 @@ export class GeneralError_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_GeneralError_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('cause', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('cause', false, $.hasAnyTag),
     new $.ComponentSpec(
         'details',
         true,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 25)
     ),
     new $.ComponentSpec(
         'relatedObjects',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'attributeList',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

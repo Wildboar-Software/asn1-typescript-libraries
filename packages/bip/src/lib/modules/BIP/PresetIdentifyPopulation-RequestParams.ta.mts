@@ -89,16 +89,12 @@ export const _root_component_type_list_1_spec_for_PresetIdentifyPopulation_Reque
   new $.ComponentSpec(
     'originalBSPHandle',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'population',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

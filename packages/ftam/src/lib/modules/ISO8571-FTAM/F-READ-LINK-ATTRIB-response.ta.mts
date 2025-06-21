@@ -114,23 +114,17 @@ export const _root_component_type_list_1_spec_for_F_READ_LINK_ATTRIB_response: $
   new $.ComponentSpec(
     'action-result',
     true,
-    $.hasTag(_TagClass.application, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 5)
   ),
   new $.ComponentSpec(
     'attributes',
     true,
-    $.hasTag(_TagClass.application, 18),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 18)
   ),
   new $.ComponentSpec(
     'diagnostic',
     true,
-    $.hasTag(_TagClass.application, 13),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 13)
   ),
 ];
 

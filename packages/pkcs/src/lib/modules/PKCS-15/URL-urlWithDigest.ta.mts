@@ -72,16 +72,12 @@ export const _root_component_type_list_1_spec_for_URL_urlWithDigest: $.Component
     new $.ComponentSpec(
         "url",
         false,
-        $.hasTag(_TagClass.universal, 22),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 22)
     ),
     new $.ComponentSpec(
         "digest",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

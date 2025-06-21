@@ -85,16 +85,12 @@ export const _root_component_type_list_1_spec_for_CertRepMessage: $.ComponentSpe
   new $.ComponentSpec(
     'caPubs',
     true,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
   new $.ComponentSpec(
     'response',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
 ];
 

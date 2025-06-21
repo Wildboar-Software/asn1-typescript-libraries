@@ -108,20 +108,16 @@ export class TimeSpecification {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_TimeSpecification: $.ComponentSpec[] = [
-    new $.ComponentSpec("time", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("time", false, $.hasAnyTag),
     new $.ComponentSpec(
         "notThisTime",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         "timeZone",
         true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

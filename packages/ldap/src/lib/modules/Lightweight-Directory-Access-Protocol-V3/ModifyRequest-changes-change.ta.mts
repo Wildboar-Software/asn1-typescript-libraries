@@ -102,16 +102,12 @@ export const _root_component_type_list_1_spec_for_ModifyRequest_changes_change: 
   new $.ComponentSpec(
     'operation',
     false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 10)
   ),
   new $.ComponentSpec(
     'modification',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
 ];
 

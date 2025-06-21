@@ -82,16 +82,12 @@ export const _root_component_type_list_1_spec_for_ProcessingInstruction: $.Compo
   new $.ComponentSpec(
     'target',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'content',
     false,
-    $.hasTag(_TagClass.context, 1),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 1)
   ),
 ];
 

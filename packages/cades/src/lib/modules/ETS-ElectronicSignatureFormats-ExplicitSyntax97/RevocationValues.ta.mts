@@ -83,9 +83,9 @@ class RevocationValues {
  */
 export
 const _root_component_type_list_1_spec_for_RevocationValues: $.ComponentSpec[] = [
-    new $.ComponentSpec("crlVals", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ocspVals", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("otherRevVals", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("crlVals", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ocspVals", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("otherRevVals", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

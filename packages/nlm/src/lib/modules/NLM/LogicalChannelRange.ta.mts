@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_LogicalChannelRange: $.Compone
     new $.ComponentSpec(
         'low',
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         'high',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

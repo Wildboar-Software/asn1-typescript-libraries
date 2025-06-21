@@ -159,30 +159,22 @@ export const _root_component_type_list_1_spec_for_CommonCertificateAttributes: $
     new $.ComponentSpec(
         "iD",
         false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 4)
     ),
     new $.ComponentSpec(
         "authority",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         "identifier",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "certHash",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined,
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 
@@ -210,23 +202,17 @@ export const _extension_additions_list_spec_for_CommonCertificateAttributes: $.C
     new $.ComponentSpec(
         "trustedUsage",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "identifiers",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "implicitTrust",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

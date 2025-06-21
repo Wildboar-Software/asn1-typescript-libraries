@@ -83,16 +83,12 @@ export const _root_component_type_list_1_spec_for_RelationshipObject: $.Componen
     new $.ComponentSpec(
         'class',
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         'qualifies',
         true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 17)
     ),
 ];
 

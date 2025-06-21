@@ -86,16 +86,12 @@ export const _root_component_type_list_1_spec_for_CPR_PPDU_x400_mode_parameters:
     new $.ComponentSpec(
         'refuseReason',
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'userDataRJ',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

@@ -118,9 +118,7 @@ export const _root_component_type_list_1_spec_for_C_NOCHANGE_RI: $.ComponentSpec
   new $.ComponentSpec(
     'confirmation',
     true,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
 ];
 
@@ -137,9 +135,7 @@ export const _root_component_type_list_2_spec_for_C_NOCHANGE_RI: $.ComponentSpec
   new $.ComponentSpec(
     'user-data',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 

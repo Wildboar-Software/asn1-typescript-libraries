@@ -91,16 +91,12 @@ export const _root_component_type_list_1_spec_for_PrivilegePolicyIdentifier: $.C
     new $.ComponentSpec(
         "privilegePolicy",
         false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 6)
     ),
     new $.ComponentSpec(
         "privPolSyntax",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

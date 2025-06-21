@@ -75,7 +75,7 @@ export class X9_68CertificateAttributes {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_X9_68CertificateAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("value", false, $.hasAnyTag),
 ];
 
 

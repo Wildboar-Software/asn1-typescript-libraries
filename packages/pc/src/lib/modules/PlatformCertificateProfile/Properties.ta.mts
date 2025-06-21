@@ -86,9 +86,9 @@ class Properties {
  */
 export
 const _root_component_type_list_1_spec_for_Properties: $.ComponentSpec[] = [
-    new $.ComponentSpec("propertyName", false, $.hasTag(_TagClass.universal, 12), undefined, undefined),
-    new $.ComponentSpec("propertyValue", false, $.hasTag(_TagClass.universal, 12), undefined, undefined),
-    new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("propertyName", false, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("propertyValue", false, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**

@@ -86,12 +86,10 @@ export const _root_component_type_list_1_spec_for_ProtectedXC: $.ComponentSpec[]
     new $.ComponentSpec(
         'conProtGroup',
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
-    new $.ComponentSpec('conProtA', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec('conProtB', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('conProtA', false, $.hasAnyTag),
+    new $.ComponentSpec('conProtB', false, $.hasAnyTag),
 ];
 
 

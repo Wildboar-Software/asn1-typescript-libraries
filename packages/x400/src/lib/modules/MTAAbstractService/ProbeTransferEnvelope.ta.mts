@@ -230,9 +230,7 @@ export const _root_component_type_list_1_spec_for_ProbeTransferEnvelope: $.Compo
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

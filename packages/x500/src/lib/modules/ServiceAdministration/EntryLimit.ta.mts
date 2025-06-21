@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_EntryLimit: $.ComponentSpec[] 
     new $.ComponentSpec(
         "default",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
     new $.ComponentSpec(
         "max",
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
 ];
 

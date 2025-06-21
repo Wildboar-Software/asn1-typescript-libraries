@@ -182,23 +182,17 @@ export const _root_component_type_list_1_spec_for_EntryInformationSelection: $.C
     new $.ComponentSpec(
         'attributes',
         true,
-        $.or($.hasTag(_TagClass.context, 0), $.hasTag(_TagClass.context, 1)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.context, 0), $.hasTag(_TagClass.context, 1))
     ),
     new $.ComponentSpec(
         "infoTypes",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "extraAttributes",
         true,
-        $.or($.hasTag(_TagClass.context, 3), $.hasTag(_TagClass.context, 4)),
-        undefined,
-        undefined
+        $.or($.hasTag(_TagClass.context, 3), $.hasTag(_TagClass.context, 4))
     ),
     new $.ComponentSpec(
         'contextSelection',
@@ -206,23 +200,17 @@ export const _root_component_type_list_1_spec_for_EntryInformationSelection: $.C
         $.or(
             $.hasTag(_TagClass.universal, 5),
             $.hasTag(_TagClass.universal, 17)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "returnContexts",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         "familyReturn",
         true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

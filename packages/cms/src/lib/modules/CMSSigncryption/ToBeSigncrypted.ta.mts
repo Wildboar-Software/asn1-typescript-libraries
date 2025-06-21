@@ -79,16 +79,12 @@ export const _root_component_type_list_1_spec_for_ToBeSigncrypted: $.ComponentSp
     new $.ComponentSpec(
         "content",
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "attributes",
         false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 

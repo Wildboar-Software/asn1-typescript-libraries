@@ -86,30 +86,22 @@ export const _root_component_type_list_1_spec_for_DIRRecord: $.ComponentSpec[] =
     new $.ComponentSpec(
         "aid",
         false,
-        $.hasTag(_TagClass.application, 15),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 15)
     ),
     new $.ComponentSpec(
         "label",
         true,
-        $.hasTag(_TagClass.application, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 16)
     ),
     new $.ComponentSpec(
         "path",
         false,
-        $.hasTag(_TagClass.application, 17),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 17)
     ),
     new $.ComponentSpec(
         "ddo",
         true,
-        $.hasTag(_TagClass.application, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 19)
     ),
 ];
 

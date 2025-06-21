@@ -128,31 +128,23 @@ export const _root_component_type_list_1_spec_for_EventReportArgument: $.Compone
   new $.ComponentSpec(
     'managedObjectClass',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'managedObjectInstance',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
   new $.ComponentSpec(
     'eventTime',
     true,
-    $.hasTag(_TagClass.context, 5),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 5)
   ),
-  new $.ComponentSpec('eventType', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('eventType', false, $.hasAnyTag),
   new $.ComponentSpec(
     'eventInfo',
     true,
-    $.hasTag(_TagClass.context, 8),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 8)
   ),
 ];
 

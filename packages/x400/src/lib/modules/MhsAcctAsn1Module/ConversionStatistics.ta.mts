@@ -77,16 +77,12 @@ export const _root_component_type_list_1_spec_for_ConversionStatistics: $.Compon
     new $.ComponentSpec(
         'oldEit',
         false,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
     new $.ComponentSpec(
         'newEit',
         false,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
 ];
 

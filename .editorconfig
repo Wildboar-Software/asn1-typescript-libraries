@@ -19,3 +19,6 @@ end_of_line = lf
 
 [*.{yml,yaml}]
 indent_size = 2
+
+[typefiles.txt]
+end_of_line = lf

@@ -90,16 +90,12 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
         new $.ComponentSpec(
             "algorithmIdentifier",
             false,
-            $.hasTag(_TagClass.universal, 16),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 16)
         ),
         new $.ComponentSpec(
             "fingerprint",
             false,
-            $.hasTag(_TagClass.universal, 3),
-            undefined,
-            undefined
+            $.hasTag(_TagClass.universal, 3)
         ),
     ];
 

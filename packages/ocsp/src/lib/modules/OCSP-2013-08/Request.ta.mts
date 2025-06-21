@@ -81,16 +81,12 @@ export const _root_component_type_list_1_spec_for_Request: $.ComponentSpec[] = [
     new $.ComponentSpec(
         "reqCert",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
     new $.ComponentSpec(
         "singleRequestExtensions",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
 ];
 

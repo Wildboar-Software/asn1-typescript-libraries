@@ -72,8 +72,8 @@ class NoticeReference {
  */
 export
 const _root_component_type_list_1_spec_for_NoticeReference: $.ComponentSpec[] = [
-    new $.ComponentSpec("organization", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("noticeNumbers", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("organization", false, $.hasAnyTag),
+    new $.ComponentSpec("noticeNumbers", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

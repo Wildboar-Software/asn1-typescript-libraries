@@ -81,16 +81,12 @@ export const _root_component_type_list_1_spec_for_PkiPathMatchSyntax: $.Componen
     new $.ComponentSpec(
         "firstIssuer",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
     new $.ComponentSpec(
         "lastSubject",
         false,
-        $.hasAnyTag,
-        undefined,
-        undefined
+        $.hasAnyTag
     ),
 ];
 

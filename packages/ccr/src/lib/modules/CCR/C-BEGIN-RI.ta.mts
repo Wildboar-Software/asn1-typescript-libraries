@@ -113,16 +113,12 @@ export const _root_component_type_list_1_spec_for_C_BEGIN_RI: $.ComponentSpec[] 
   new $.ComponentSpec(
     'atomic-action-identifier',
     false,
-    $.hasTag(_TagClass.context, 0),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 0)
   ),
   new $.ComponentSpec(
     'branch-suffix',
     false,
-    $.hasAnyTag,
-    undefined,
-    undefined
+    $.hasAnyTag
   ),
 ];
 
@@ -139,9 +135,7 @@ export const _root_component_type_list_2_spec_for_C_BEGIN_RI: $.ComponentSpec[] 
   new $.ComponentSpec(
     'user-data',
     true,
-    $.hasTag(_TagClass.context, 30),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 30)
   ),
 ];
 

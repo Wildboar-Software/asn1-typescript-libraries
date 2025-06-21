@@ -79,11 +79,9 @@ export const _root_component_type_list_1_spec_for_TypeOfDaysMaskWps_Item: $.Comp
     new $.ComponentSpec(
         'typeOfDay',
         false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 2)
     ),
-    new $.ComponentSpec('timesOfDay', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('timesOfDay', false, $.hasAnyTag),
 ];
 
 /**

@@ -145,9 +145,7 @@ export const _root_component_type_list_1_spec_for_BindResponse: $.ComponentSpec[
   new $.ComponentSpec(
     'serverSaslCreds',
     true,
-    $.hasTag(_TagClass.context, 7),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.context, 7)
   ),
 ];
 

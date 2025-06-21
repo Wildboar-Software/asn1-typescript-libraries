@@ -181,9 +181,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControls88: $.Componen
     new $.ComponentSpec(
         'permissible-encoded-information-types-88',
         true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 5)
     ),
 ];
 

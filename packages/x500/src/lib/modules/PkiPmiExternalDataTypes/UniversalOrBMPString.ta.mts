@@ -80,16 +80,12 @@ export const _root_component_type_list_1_spec_for_UniversalOrBMPString: $.Compon
         $.or(
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 28)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "iso-639-language-code",
         true,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 19)
     ),
 ];
 

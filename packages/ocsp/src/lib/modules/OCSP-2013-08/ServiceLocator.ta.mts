@@ -76,13 +76,11 @@ export class ServiceLocator {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ServiceLocator: $.ComponentSpec[] = [
-    new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("issuer", false, $.hasAnyTag),
     new $.ComponentSpec(
         "locator",
         false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 16)
     ),
 ];
 

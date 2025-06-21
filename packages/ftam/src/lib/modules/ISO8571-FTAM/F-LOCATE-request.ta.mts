@@ -88,16 +88,12 @@ export const _root_component_type_list_1_spec_for_F_LOCATE_request: $.ComponentS
   new $.ComponentSpec(
     'file-access-data-unit-identity',
     false,
-    $.hasTag(_TagClass.application, 15),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 15)
   ),
   new $.ComponentSpec(
     'fadu-lock',
     true,
-    $.hasTag(_TagClass.application, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.application, 16)
   ),
 ];
 

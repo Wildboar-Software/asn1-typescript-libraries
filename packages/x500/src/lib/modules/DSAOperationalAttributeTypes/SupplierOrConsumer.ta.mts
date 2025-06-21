@@ -123,9 +123,7 @@ export const _root_component_type_list_1_spec_for_SupplierOrConsumer: $.Componen
     new $.ComponentSpec(
         "agreementID",
         false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
 ];
 

@@ -103,20 +103,16 @@ export class SeverityIndicatingThreshold {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SeverityIndicatingThreshold: $.ComponentSpec[] = [
-    new $.ComponentSpec('threshold', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('threshold', false, $.hasAnyTag),
     new $.ComponentSpec(
         'notifyOnOff',
         false,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
     new $.ComponentSpec(
         'severityIndication',
         true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 10)
     ),
 ];
 

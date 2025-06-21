@@ -77,8 +77,8 @@ export class Attribute {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Attribute: $.ComponentSpec[] = [
-  new $.ComponentSpec('id', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('value', false, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('id', false, $.hasAnyTag),
+  new $.ComponentSpec('value', false, $.hasAnyTag),
 ];
 
 

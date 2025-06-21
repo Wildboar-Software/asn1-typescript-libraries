@@ -111,30 +111,22 @@ export const _root_component_type_list_1_spec_for_CertResponse: $.ComponentSpec[
   new $.ComponentSpec(
     'certReqId',
     false,
-    $.hasTag(_TagClass.universal, 2),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 2)
   ),
   new $.ComponentSpec(
     'status',
     false,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'certifiedKeyPair',
     true,
-    $.hasTag(_TagClass.universal, 16),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 16)
   ),
   new $.ComponentSpec(
     'rspInfo',
     true,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
+    $.hasTag(_TagClass.universal, 4)
   ),
 ];
 

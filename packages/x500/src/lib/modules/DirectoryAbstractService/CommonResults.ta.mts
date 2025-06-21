@@ -120,30 +120,22 @@ export const _root_component_type_list_1_spec_for_CommonResults: $.ComponentSpec
     new $.ComponentSpec(
         "securityParameters",
         true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 30)
     ),
     new $.ComponentSpec(
         "performer",
         true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 29)
     ),
     new $.ComponentSpec(
         "aliasDereferenced",
         true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 28)
     ),
     new $.ComponentSpec(
         "notification",
         true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 27)
     ),
 ];
 

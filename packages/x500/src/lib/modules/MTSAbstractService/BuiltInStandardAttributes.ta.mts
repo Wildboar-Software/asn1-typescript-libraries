@@ -179,65 +179,47 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
     new $.ComponentSpec(
         "country-name",
         true,
-        $.hasTag(_TagClass.application, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 1)
     ),
     new $.ComponentSpec(
         "administration-domain-name",
         true,
-        $.hasTag(_TagClass.application, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.application, 2)
     ),
     new $.ComponentSpec(
         "network-address",
         true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         "terminal-identifier",
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
     new $.ComponentSpec(
         "private-domain-name",
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
     new $.ComponentSpec(
         "organization-name",
         true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 3)
     ),
     new $.ComponentSpec(
         "numeric-user-identifier",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         "personal-name",
         true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 5)
     ),
     new $.ComponentSpec(
         "organizational-unit-names",
         true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 6)
     ),
 ];
 

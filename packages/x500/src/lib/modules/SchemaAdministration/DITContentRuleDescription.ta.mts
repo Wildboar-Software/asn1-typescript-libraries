@@ -164,9 +164,7 @@ export const _root_component_type_list_1_spec_for_DITContentRuleDescription: $.C
     new $.ComponentSpec(
         "name",
         true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 4)
     ),
     new $.ComponentSpec(
         'description',
@@ -177,16 +175,12 @@ export const _root_component_type_list_1_spec_for_DITContentRuleDescription: $.C
             $.hasTag(_TagClass.universal, 30),
             $.hasTag(_TagClass.universal, 28),
             $.hasTag(_TagClass.universal, 12)
-        ),
-        undefined,
-        undefined
+        )
     ),
     new $.ComponentSpec(
         "obsolete",
         true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.universal, 1)
     ),
 ];
 

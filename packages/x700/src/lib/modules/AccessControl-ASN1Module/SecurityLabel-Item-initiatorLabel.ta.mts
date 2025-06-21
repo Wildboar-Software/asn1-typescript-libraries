@@ -75,13 +75,11 @@ export class SecurityLabel_Item_initiatorLabel {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SecurityLabel_Item_initiatorLabel: $.ComponentSpec[] = [
-    new $.ComponentSpec('clearance', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec('clearance', false, $.hasAnyTag),
     new $.ComponentSpec(
         'category',
         true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 2)
     ),
 ];
 

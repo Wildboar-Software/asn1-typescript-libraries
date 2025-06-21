@@ -89,16 +89,12 @@ export const _root_component_type_list_1_spec_for_AuthorizationInformationField:
     new $.ComponentSpec(
         'authorization-information',
         false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 0)
     ),
     new $.ComponentSpec(
         'authorization-information-qualifier',
         true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
+        $.hasTag(_TagClass.context, 1)
     ),
 ];
 
