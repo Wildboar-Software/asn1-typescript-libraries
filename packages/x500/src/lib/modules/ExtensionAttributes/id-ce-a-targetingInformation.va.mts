@@ -13,7 +13,7 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_a_targetingInformation: OBJECT_IDENTIFIER = new _OID(
+export const id_ce_a_targetingInformation: OBJECT_IDENTIFIER = _OID.fromParts(
     [55, 1],
     id_ce
 );

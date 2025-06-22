@@ -23,7 +23,7 @@ import { id_swb } from '../SCVP-2009/id-swb.va.mjs';
  *
  * @constant
  */
-export const id_swb_relayed_responses: OBJECT_IDENTIFIER = new _OID(
+export const id_swb_relayed_responses: OBJECT_IDENTIFIER = _OID.fromParts(
   [9],
   id_swb
 );

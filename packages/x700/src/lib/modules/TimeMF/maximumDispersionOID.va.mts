@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const maximumDispersionOID: OBJECT_IDENTIFIER = new _OID(
+export const maximumDispersionOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* maximumDispersion */ 18],
     timeManagement
 );

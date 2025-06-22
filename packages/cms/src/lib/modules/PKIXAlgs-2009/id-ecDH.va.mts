@@ -15,7 +15,7 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const id_ecDH: OBJECT_IDENTIFIER = new _OID([
+export const id_ecDH: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* certicom */ 132,

@@ -142,7 +142,7 @@ export class FileTransferParameters {
     public static get _default_value_for_contents_type(): ContentsTypeParameter {
         return {
             document_type: new Contents_Type_Attribute_document_type(
-                new ObjectIdentifier([
+                ObjectIdentifier.fromParts([
                     1,
                     0,
                     8571,

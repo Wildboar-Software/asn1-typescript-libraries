@@ -14,7 +14,7 @@ import { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va.mjs";
  *
  * @constant
  */
-export const kdasn1der: OBJECT_IDENTIFIER = new _OID(
+export const kdasn1der: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* asn1der */ 0],
     keyDerivationMethod
 );

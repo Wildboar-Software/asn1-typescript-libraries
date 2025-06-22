@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_multiple_originator_certificates: ID = new _OID(
+export const id_att_multiple_originator_certificates: ID = _OID.fromParts(
     [81],
     id_att
 );

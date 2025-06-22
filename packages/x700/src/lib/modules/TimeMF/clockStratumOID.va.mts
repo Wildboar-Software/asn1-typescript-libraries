@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const clockStratumOID: OBJECT_IDENTIFIER = new _OID(
+export const clockStratumOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* clockStratum */ 10],
     timeManagement
 );

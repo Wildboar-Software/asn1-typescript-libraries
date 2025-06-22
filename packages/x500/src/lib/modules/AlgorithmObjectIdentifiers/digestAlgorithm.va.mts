@@ -14,6 +14,6 @@ import { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
  *
  * @constant
  */
-export const digestAlgorithm: ID = new _OID([/* digestAlgorithm */ 2], rsadsi);
+export const digestAlgorithm: ID = _OID.fromParts([/* digestAlgorithm */ 2], rsadsi);
 
 /* eslint-enable */

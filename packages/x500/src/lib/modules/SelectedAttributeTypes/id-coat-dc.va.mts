@@ -13,6 +13,6 @@ import { id_coat } from "../UsefulDefinitions/id-coat.va.mjs";
  *
  * @constant
  */
-export const id_coat_dc: OBJECT_IDENTIFIER = new _OID([25], id_coat);
+export const id_coat_dc: OBJECT_IDENTIFIER = _OID.fromParts([25], id_coat);
 
 /* eslint-enable */

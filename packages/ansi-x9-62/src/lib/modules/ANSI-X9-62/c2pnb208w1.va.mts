@@ -13,6 +13,6 @@ import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.mjs";
  *
  * @constant
  */
-export const c2pnb208w1: OBJECT_IDENTIFIER = new _OID([10], c_TwoCurve);
+export const c2pnb208w1: OBJECT_IDENTIFIER = _OID.fromParts([10], c_TwoCurve);
 
 /* eslint-enable */

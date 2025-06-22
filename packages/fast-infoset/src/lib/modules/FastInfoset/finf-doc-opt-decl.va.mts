@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const finf_doc_opt_decl: OBJECT_IDENTIFIER = new _OID([
+export const finf_doc_opt_decl: OBJECT_IDENTIFIER = _OID.fromParts([
   /* joint-iso-itu-t */ 2,
   /* asn1 */ 1,
   /* generic-applications */ 10,

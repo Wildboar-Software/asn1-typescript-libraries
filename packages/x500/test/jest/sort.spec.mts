@@ -44,9 +44,9 @@ function createTestEntry (
     );
 }
 
-const ID_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 41 ]);
-const ID_COMMON_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 3 ]);
-const ID_ORG_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 10 ]);
+const ID_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 41 ]);
+const ID_COMMON_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
+const ID_ORG_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 10 ]);
 
 const COMMON_NAME_1: Attribute = new Attribute(
     ID_COMMON_NAME,

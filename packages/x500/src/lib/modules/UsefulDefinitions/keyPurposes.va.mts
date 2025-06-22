@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const keyPurposes: ID = new _OID([38], ds);
+export const keyPurposes: ID = _OID.fromParts([38], ds);
 
 /* eslint-enable */

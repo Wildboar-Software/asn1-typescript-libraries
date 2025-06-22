@@ -13,7 +13,7 @@ import { id_aca } from "../UsefulDefinitions/id-aca.va.mjs";
  *
  * @constant
  */
-export const id_aca_accessControlScheme: OBJECT_IDENTIFIER = new _OID(
+export const id_aca_accessControlScheme: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_aca
 );

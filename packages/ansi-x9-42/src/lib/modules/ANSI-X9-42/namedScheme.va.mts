@@ -14,7 +14,7 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  *
  * @constant
  */
-export const namedScheme: OBJECT_IDENTIFIER = new _OID(
+export const namedScheme: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* names */ 4],
     ansi_X9_42
 );

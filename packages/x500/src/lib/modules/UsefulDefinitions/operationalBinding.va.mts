@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const operationalBinding: ID = new _OID([19], ds);
+export const operationalBinding: ID = _OID.fromParts([19], ds);
 
 /* eslint-enable */

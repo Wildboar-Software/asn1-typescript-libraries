@@ -23,7 +23,7 @@ import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_encrypted_mhs_dl_submit_permissions: ID = new _OID(
+export const id_at_encrypted_mhs_dl_submit_permissions: ID = _OID.fromParts(
     [4, 2],
     id_at
 );

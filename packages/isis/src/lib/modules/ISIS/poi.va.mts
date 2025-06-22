@@ -23,6 +23,6 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  *
  * @constant
  */
-export const poi: OBJECT_IDENTIFIER = new _OID([/* package */ 4], isisoi);
+export const poi: OBJECT_IDENTIFIER = _OID.fromParts([/* package */ 4], isisoi);
 
 /* eslint-enable */

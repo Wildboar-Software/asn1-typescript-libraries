@@ -17,7 +17,7 @@ import {
  *
  * @constant
  */
-export const id_acseAS: OBJECT_IDENTIFIER = new _OID(
+export const id_acseAS: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* association-control */ 2,
         /* abstract-syntax */ 1,

@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_maxSizeMprTransferredOut: ID = new _OID(
+export const id_attribute_maxSizeMprTransferredOut: ID = _OID.fromParts(
     [60],
     id_attribute
 );

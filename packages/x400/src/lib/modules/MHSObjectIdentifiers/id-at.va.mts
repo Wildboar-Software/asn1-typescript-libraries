@@ -23,6 +23,6 @@ import { id_arch } from '../MHSObjectIdentifiers/id-arch.va.mjs';
  *
  * @constant
  */
-export const id_at: ID = new _OID([2], id_arch);
+export const id_at: ID = _OID.fromParts([2], id_arch);
 
 /* eslint-enable */

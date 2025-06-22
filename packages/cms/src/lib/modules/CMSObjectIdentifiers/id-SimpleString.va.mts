@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_SimpleString: OID = new _OID([/* ss */ 1], dbEKM);
+export const id_SimpleString: OID = _OID.fromParts([/* ss */ 1], dbEKM);
 
 /* eslint-enable */

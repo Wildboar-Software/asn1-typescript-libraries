@@ -23,6 +23,6 @@ import { id_moc } from '../MhsMTAObjectIdentifiers/id-moc.va.mjs';
  *
  * @constant
  */
-export const id_moc_mpr: ID = new _OID([4], id_moc);
+export const id_moc_mpr: ID = _OID.fromParts([4], id_moc);
 
 /* eslint-enable */

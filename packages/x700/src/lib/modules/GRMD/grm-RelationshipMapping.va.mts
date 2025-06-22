@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const grm_RelationshipMapping: OBJECT_IDENTIFIER = new _OID(
+export const grm_RelationshipMapping: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* smi */ 3, /* part7 */ 7, /* relationshipMapping */ 12],
     joint_iso_itu_t
 );

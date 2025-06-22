@@ -24,6 +24,6 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  *
  * @constant
  */
-export const algorithms: OBJECT_IDENTIFIER = new _OID([44], ds);
+export const algorithms: OBJECT_IDENTIFIER = _OID.fromParts([44], ds);
 
 /* eslint-enable */

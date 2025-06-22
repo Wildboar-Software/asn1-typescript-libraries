@@ -24,7 +24,7 @@ import { tcg_common } from "../PlatformCertificateProfile/tcg-common.va.mjs";
  * @constant
  */
 export
-const tcg_at_platformManufacturerId: OBJECT_IDENTIFIER = new _OID([
+const tcg_at_platformManufacturerId: OBJECT_IDENTIFIER = _OID.fromParts([
     2,
 ], tcg_common);
 

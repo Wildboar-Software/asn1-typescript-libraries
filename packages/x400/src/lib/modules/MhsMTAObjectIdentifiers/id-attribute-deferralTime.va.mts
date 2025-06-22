@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_deferralTime: ID = new _OID([32], id_attribute);
+export const id_attribute_deferralTime: ID = _OID.fromParts([32], id_attribute);
 
 /* eslint-enable */

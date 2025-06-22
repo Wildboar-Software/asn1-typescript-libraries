@@ -13,7 +13,7 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_shadowingSubject: OBJECT_IDENTIFIER = new _OID(
+export const id_mat_shadowingSubject: OBJECT_IDENTIFIER = _OID.fromParts(
     [91],
     id_mat
 );

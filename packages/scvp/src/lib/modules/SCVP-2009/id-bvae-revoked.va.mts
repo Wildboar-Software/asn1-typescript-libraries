@@ -23,6 +23,6 @@ import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
  *
  * @constant
  */
-export const id_bvae_revoked: OBJECT_IDENTIFIER = new _OID([5], id_bvae);
+export const id_bvae_revoked: OBJECT_IDENTIFIER = _OID.fromParts([5], id_bvae);
 
 /* eslint-enable */

@@ -13,6 +13,6 @@ import { id_contract } from "../UsefulDefinitions/id-contract.va.mjs";
  *
  * @constant
  */
-export const id_contract_dap: OBJECT_IDENTIFIER = new _OID([1], id_contract);
+export const id_contract_dap: OBJECT_IDENTIFIER = _OID.fromParts([1], id_contract);
 
 /* eslint-enable */

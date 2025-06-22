@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryObjectIdentifiers: ID = new _OID(
+export const directoryObjectIdentifiers: ID = _OID.fromParts(
     [/* directoryObjectIdentifiers */ 9, 9],
     module_
 );

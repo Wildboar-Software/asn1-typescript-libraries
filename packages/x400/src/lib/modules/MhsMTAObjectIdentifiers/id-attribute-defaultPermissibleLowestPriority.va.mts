@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_defaultPermissibleLowestPriority: ID = new _OID(
+export const id_attribute_defaultPermissibleLowestPriority: ID = _OID.fromParts(
     [28],
     id_attribute
 );

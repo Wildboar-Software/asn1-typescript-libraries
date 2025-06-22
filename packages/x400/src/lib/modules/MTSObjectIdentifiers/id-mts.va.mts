@@ -23,6 +23,6 @@ import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
  *
  * @constant
  */
-export const id_mts: ID = new _OID([/* mhs */ 6, /* mts */ 3], joint_iso_itu_t);
+export const id_mts: ID = _OID.fromParts([/* mhs */ 6, /* mts */ 3], joint_iso_itu_t);
 
 /* eslint-enable */

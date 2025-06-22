@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const dsp: ID = new _OID([/* dsp */ 12, 9], module_);
+export const dsp: ID = _OID.fromParts([/* dsp */ 12, 9], module_);
 
 /* eslint-enable */

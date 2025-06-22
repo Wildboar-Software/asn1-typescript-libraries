@@ -27,6 +27,6 @@ import { id_nf } from '../MHSRoutingObjectIdentifiers/id-nf.va.mjs';
  *
  * @constant
  */
-export const id_nf_mhs_physical_delivery_country: ID = new _OID([13], id_nf);
+export const id_nf_mhs_physical_delivery_country: ID = _OID.fromParts([13], id_nf);
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const basicAccessControl: ID = new _OID(
+export const basicAccessControl: ID = _OID.fromParts(
     [/* basicAccessControl */ 24, 9],
     module_
 );

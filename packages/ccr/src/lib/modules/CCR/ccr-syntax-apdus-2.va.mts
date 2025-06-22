@@ -24,7 +24,7 @@ import { joint_CCR } from '../CCR/joint-CCR.va.mjs';
  *
  * @constant
  */
-export const ccr_syntax_apdus_2: OBJECT_IDENTIFIER = new _OID(
+export const ccr_syntax_apdus_2: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* abstract-syntax */ 2, /* apdus */ 1, /* version2 */ 2],
   joint_CCR
 );

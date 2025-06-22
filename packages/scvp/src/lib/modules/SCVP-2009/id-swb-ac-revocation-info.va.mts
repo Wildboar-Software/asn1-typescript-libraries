@@ -23,7 +23,7 @@ import { id_swb } from '../SCVP-2009/id-swb.va.mjs';
  *
  * @constant
  */
-export const id_swb_ac_revocation_info: OBJECT_IDENTIFIER = new _OID(
+export const id_swb_ac_revocation_info: OBJECT_IDENTIFIER = _OID.fromParts(
   [7],
   id_swb
 );

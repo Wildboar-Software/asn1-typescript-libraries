@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_policyConstraints: OBJECT_IDENTIFIER = new _OID([36], id_ce);
+export const id_ce_policyConstraints: OBJECT_IDENTIFIER = _OID.fromParts([36], id_ce);
 
 /* eslint-enable */

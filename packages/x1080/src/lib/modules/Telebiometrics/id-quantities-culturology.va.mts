@@ -24,7 +24,7 @@ import { id_quantities } from '../Telebiometrics/id-quantities.va.mjs';
  *
  * @constant
  */
-export const id_quantities_culturology: OBJECT_IDENTIFIER = new _OID(
+export const id_quantities_culturology: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* culturology */ 4],
     id_quantities
 );

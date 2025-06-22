@@ -13,7 +13,7 @@ import { id_ob } from "../UsefulDefinitions/id-ob.va.mjs";
  *
  * @constant
  */
-export const id_op_binding_hierarchical: OBJECT_IDENTIFIER = new _OID(
+export const id_op_binding_hierarchical: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_ob
 );

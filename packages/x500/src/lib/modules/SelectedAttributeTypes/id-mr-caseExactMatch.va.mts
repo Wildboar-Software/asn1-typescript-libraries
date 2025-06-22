@@ -13,6 +13,6 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_caseExactMatch: OBJECT_IDENTIFIER = new _OID([5], id_mr);
+export const id_mr_caseExactMatch: OBJECT_IDENTIFIER = _OID.fromParts([5], id_mr);
 
 /* eslint-enable */

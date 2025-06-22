@@ -13,6 +13,6 @@ import { id_wrprot } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-wrprot
  *
  * @constant
  */
-export const id_avlprot: OBJECT_IDENTIFIER = new _OID([0], id_wrprot);
+export const id_avlprot: OBJECT_IDENTIFIER = _OID.fromParts([0], id_wrprot);
 
 /* eslint-enable */

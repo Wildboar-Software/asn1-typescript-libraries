@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const excessiveVibration: ProbableCause = { globalValue: new _OID([16,], arfProbableCause) };
+const excessiveVibration: ProbableCause = { globalValue: _OID.fromParts([16,], arfProbableCause) };
 
 /* eslint-enable */

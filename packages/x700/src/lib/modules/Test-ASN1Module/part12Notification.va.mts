@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const part12Notification: OBJECT_IDENTIFIER = new _OID(
+export const part12Notification: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part12 */ 12, /* notification */ 10],
     joint_iso_ccitt
 );

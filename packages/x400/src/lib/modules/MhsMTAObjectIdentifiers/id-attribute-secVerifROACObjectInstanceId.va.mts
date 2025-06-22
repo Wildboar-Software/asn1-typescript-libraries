@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_secVerifROACObjectInstanceId: ID = new _OID(
+export const id_attribute_secVerifROACObjectInstanceId: ID = _OID.fromParts(
     [163],
     id_attribute
 );

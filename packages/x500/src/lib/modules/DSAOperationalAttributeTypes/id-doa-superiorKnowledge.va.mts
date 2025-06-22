@@ -13,7 +13,7 @@ import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
  *
  * @constant
  */
-export const id_doa_superiorKnowledge: OBJECT_IDENTIFIER = new _OID(
+export const id_doa_superiorKnowledge: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_doa
 );

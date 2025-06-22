@@ -13,6 +13,6 @@ import { id_cat } from "../UsefulDefinitions/id-cat.va.mjs";
  *
  * @constant
  */
-export const id_cat_wordMatchType: OBJECT_IDENTIFIER = new _OID([2], id_cat);
+export const id_cat_wordMatchType: OBJECT_IDENTIFIER = _OID.fromParts([2], id_cat);
 
 /* eslint-enable */

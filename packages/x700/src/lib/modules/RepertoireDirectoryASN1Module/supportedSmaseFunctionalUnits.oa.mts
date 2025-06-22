@@ -47,7 +47,7 @@ export const supportedSmaseFunctionalUnits: ATTRIBUTE<FunctionalUnitPackage> = {
     encoderFor: {
         '&Type': _encode_FunctionalUnitPackage,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [5],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

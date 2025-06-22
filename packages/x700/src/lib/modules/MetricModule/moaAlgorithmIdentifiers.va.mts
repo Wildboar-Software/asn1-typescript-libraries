@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const moaAlgorithmIdentifiers: OBJECT_IDENTIFIER = new _OID(
+export const moaAlgorithmIdentifiers: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

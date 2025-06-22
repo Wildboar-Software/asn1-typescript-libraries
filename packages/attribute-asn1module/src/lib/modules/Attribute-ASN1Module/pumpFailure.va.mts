@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const pumpFailure: ProbableCause = { globalValue: new _OID([38,], arfProbableCause) };
+const pumpFailure: ProbableCause = { globalValue: _OID.fromParts([38,], arfProbableCause) };
 
 /* eslint-enable */

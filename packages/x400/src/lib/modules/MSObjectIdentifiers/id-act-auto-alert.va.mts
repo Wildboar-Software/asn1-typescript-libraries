@@ -23,6 +23,6 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  *
  * @constant
  */
-export const id_act_auto_alert: ID = new _OID([1], id_act);
+export const id_act_auto_alert: ID = _OID.fromParts([1], id_act);
 
 /* eslint-enable */

@@ -23,6 +23,6 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  *
  * @constant
  */
-export const id_doc_edi_user_agent: ID = new _OID([1], id_doc);
+export const id_doc_edi_user_agent: ID = _OID.fromParts([1], id_doc);
 
 /* eslint-enable */

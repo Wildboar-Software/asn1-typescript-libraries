@@ -23,6 +23,6 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_certificate_selectors: ID = new _OID([80], id_att);
+export const id_att_certificate_selectors: ID = _OID.fromParts([80], id_att);
 
 /* eslint-enable */

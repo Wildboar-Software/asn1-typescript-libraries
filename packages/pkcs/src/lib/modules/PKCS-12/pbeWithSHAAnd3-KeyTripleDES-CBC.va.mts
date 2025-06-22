@@ -14,7 +14,7 @@ import { pkcs_12PbeIds } from "../PKCS-12/pkcs-12PbeIds.va.mjs";
  *
  * @constant
  */
-export const pbeWithSHAAnd3_KeyTripleDES_CBC: OBJECT_IDENTIFIER = new _OID(
+export const pbeWithSHAAnd3_KeyTripleDES_CBC: OBJECT_IDENTIFIER = _OID.fromParts(
     [3],
     pkcs_12PbeIds
 );

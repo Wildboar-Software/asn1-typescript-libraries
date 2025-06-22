@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const toxicLeakDetected: ProbableCause = { globalValue: new _OID([53,], arfProbableCause) };
+const toxicLeakDetected: ProbableCause = { globalValue: _OID.fromParts([53,], arfProbableCause) };
 
 /* eslint-enable */

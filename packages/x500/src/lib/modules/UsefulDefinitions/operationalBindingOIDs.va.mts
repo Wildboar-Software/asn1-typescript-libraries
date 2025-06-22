@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const operationalBindingOIDs: ID = new _OID([25], module_);
+export const operationalBindingOIDs: ID = _OID.fromParts([25], module_);
 
 /* eslint-enable */

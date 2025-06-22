@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const incomingCallsBarred: OBJECT_IDENTIFIER = new _OID([148], aoi);
+export const incomingCallsBarred: OBJECT_IDENTIFIER = _OID.fromParts([148], aoi);
 
 /* eslint-enable */

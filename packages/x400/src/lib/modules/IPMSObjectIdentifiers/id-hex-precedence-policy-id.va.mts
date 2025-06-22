@@ -23,6 +23,6 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  *
  * @constant
  */
-export const id_hex_precedence_policy_id: ID = new _OID([12], id_hex);
+export const id_hex_precedence_policy_id: ID = _OID.fromParts([12], id_hex);
 
 /* eslint-enable */

@@ -24,6 +24,6 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  *
  * @constant
  */
-export const securityExchanges: OBJECT_IDENTIFIER = new _OID([4], genericULS);
+export const securityExchanges: OBJECT_IDENTIFIER = _OID.fromParts([4], genericULS);
 
 /* eslint-enable */

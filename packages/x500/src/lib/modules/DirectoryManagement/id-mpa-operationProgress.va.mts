@@ -13,7 +13,7 @@ import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
  *
  * @constant
  */
-export const id_mpa_operationProgress: OBJECT_IDENTIFIER = new _OID(
+export const id_mpa_operationProgress: OBJECT_IDENTIFIER = _OID.fromParts(
     [19],
     id_mpa
 );

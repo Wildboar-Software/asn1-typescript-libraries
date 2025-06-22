@@ -13,7 +13,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const us_iso: ID = new _OID([
+export const us_iso: ID = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

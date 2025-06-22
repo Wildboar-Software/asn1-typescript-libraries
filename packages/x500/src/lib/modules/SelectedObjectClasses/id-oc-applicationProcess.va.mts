@@ -13,7 +13,7 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_applicationProcess: OBJECT_IDENTIFIER = new _OID(
+export const id_oc_applicationProcess: OBJECT_IDENTIFIER = _OID.fromParts(
     [11],
     id_oc
 );

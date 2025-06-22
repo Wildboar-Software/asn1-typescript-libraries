@@ -23,7 +23,7 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_forwarded_report_body_part_type: ID = new _OID(
+export const id_mod_forwarded_report_body_part_type: ID = _OID.fromParts(
     [12],
     id_mod
 );

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryIDMProtocols: ID = new _OID(
+export const directoryIDMProtocols: ID = _OID.fromParts(
     [/* directoryIDMProtocols */ 31, 9],
     module_
 );

@@ -13,6 +13,6 @@ import { primeCurve } from "../ANSI-X9-62/primeCurve.va.mjs";
  *
  * @constant
  */
-export const prime192v1: OBJECT_IDENTIFIER = new _OID([1], primeCurve);
+export const prime192v1: OBJECT_IDENTIFIER = _OID.fromParts([1], primeCurve);
 
 /* eslint-enable */

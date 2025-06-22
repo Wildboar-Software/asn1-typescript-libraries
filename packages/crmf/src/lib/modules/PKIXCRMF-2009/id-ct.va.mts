@@ -14,6 +14,6 @@ import { id_smime } from "../PKIXCRMF-2009/id-smime.va.mjs";
  *
  * @constant
  */
-export const id_ct: OBJECT_IDENTIFIER = new _OID([1], id_smime);
+export const id_ct: OBJECT_IDENTIFIER = _OID.fromParts([1], id_smime);
 
 /* eslint-enable */

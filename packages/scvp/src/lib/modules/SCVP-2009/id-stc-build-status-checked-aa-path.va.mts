@@ -24,7 +24,7 @@ import { id_stc } from '../SCVP-2009/id-stc.va.mjs';
  *
  * @constant
  */
-export const id_stc_build_status_checked_aa_path: OBJECT_IDENTIFIER = new _OID(
+export const id_stc_build_status_checked_aa_path: OBJECT_IDENTIFIER = _OID.fromParts(
   [6],
   id_stc
 );

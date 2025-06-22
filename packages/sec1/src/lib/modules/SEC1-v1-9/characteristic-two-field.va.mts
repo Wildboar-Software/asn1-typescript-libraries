@@ -24,7 +24,7 @@ import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.mjs";
  * @constant
  */
 export
-const characteristic_two_field: OBJECT_IDENTIFIER = new _OID([
+const characteristic_two_field: OBJECT_IDENTIFIER = _OID.fromParts([
     2,
 ], id_fieldType);
 

@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const rTM_Package: OBJECT_IDENTIFIER = new _OID(
+export const rTM_Package: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part22 */ 22, /* package */ 4],
     joint_iso_itu_t
 );

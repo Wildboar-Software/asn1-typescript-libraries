@@ -13,7 +13,7 @@ import { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
  *
  * @constant
  */
-export const id_pr_unavailableOperation: OBJECT_IDENTIFIER = new _OID(
+export const id_pr_unavailableOperation: OBJECT_IDENTIFIER = _OID.fromParts(
     [4],
     id_pr
 );

@@ -15,7 +15,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const hashAlg: ID = new _OID([
+export const hashAlg: ID = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* dod */ 6,

@@ -14,6 +14,6 @@ import { pkcs_3 } from "../PKCS-3/pkcs-3.va.mjs";
  *
  * @constant
  */
-export const dhKeyAgreement: OBJECT_IDENTIFIER = new _OID([1], pkcs_3);
+export const dhKeyAgreement: OBJECT_IDENTIFIER = _OID.fromParts([1], pkcs_3);
 
 /* eslint-enable */

@@ -23,6 +23,6 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  *
  * @constant
  */
-export const id_aae_duplicate_ipn: ID = new _OID([2], id_aae);
+export const id_aae_duplicate_ipn: ID = _OID.fromParts([2], id_aae);
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const algorithmObjectIdentifiers: ID = new _OID(
+export const algorithmObjectIdentifiers: ID = _OID.fromParts(
     [/* algorithmObjectIdentifiers */ 8, 9],
     module_
 );

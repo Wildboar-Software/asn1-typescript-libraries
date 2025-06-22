@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_sha512_224: ID = new _OID([5], hashAlgs);
+export const id_sha512_224: ID = _OID.fromParts([5], hashAlgs);
 
 /* eslint-enable */

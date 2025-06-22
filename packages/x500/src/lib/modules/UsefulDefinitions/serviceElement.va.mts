@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const serviceElement: ID = new _OID([2], ds);
+export const serviceElement: ID = _OID.fromParts([2], ds);
 
 /* eslint-enable */

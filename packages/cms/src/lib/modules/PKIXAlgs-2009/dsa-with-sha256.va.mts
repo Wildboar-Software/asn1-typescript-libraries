@@ -16,7 +16,7 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const dsa_with_sha256: OBJECT_IDENTIFIER = new _OID([
+export const dsa_with_sha256: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-ccitt */ 2,
     /* country */ 16,
     /* us */ 840,

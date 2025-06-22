@@ -14,6 +14,6 @@ import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.mjs";
  *
  * @constant
  */
-export const brainpoolP320r1: ID = new _OID([9], versionOne);
+export const brainpoolP320r1: ID = _OID.fromParts([9], versionOne);
 
 /* eslint-enable */

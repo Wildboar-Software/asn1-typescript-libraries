@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const enclosureDoorOpen: ProbableCause = { globalValue: new _OID([14,], arfProbableCause) };
+const enclosureDoorOpen: ProbableCause = { globalValue: _OID.fromParts([14,], arfProbableCause) };
 
 /* eslint-enable */

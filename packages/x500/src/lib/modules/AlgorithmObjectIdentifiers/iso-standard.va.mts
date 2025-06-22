@@ -13,6 +13,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const iso_standard: ID = new _OID([/* iso */ 1, /* standard */ 0]);
+export const iso_standard: ID = _OID.fromParts([/* iso */ 1, /* standard */ 0]);
 
 /* eslint-enable */

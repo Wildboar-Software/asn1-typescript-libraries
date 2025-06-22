@@ -23,6 +23,6 @@ import { id_mr } from '../MHSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_orname_exact_match: ID = new _OID([0], id_mr);
+export const id_mr_orname_exact_match: ID = _OID.fromParts([0], id_mr);
 
 /* eslint-enable */

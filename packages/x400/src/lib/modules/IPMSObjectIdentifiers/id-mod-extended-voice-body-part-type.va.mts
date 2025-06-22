@@ -23,6 +23,6 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_extended_voice_body_part_type: ID = new _OID([11], id_mod);
+export const id_mod_extended_voice_body_part_type: ID = _OID.fromParts([11], id_mod);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const throughputClassNegotiation: OBJECT_IDENTIFIER = new _OID(
+export const throughputClassNegotiation: OBJECT_IDENTIFIER = _OID.fromParts(
     [168],
     aoi
 );

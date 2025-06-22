@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const congestion: ProbableCause = { globalValue: new _OID([8,], arfProbableCause) };
+const congestion: ProbableCause = { globalValue: _OID.fromParts([8,], arfProbableCause) };
 
 /* eslint-enable */

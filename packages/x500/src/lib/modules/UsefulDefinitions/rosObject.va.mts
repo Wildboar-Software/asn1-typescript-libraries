@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const rosObject: ID = new _OID([25], ds);
+export const rosObject: ID = _OID.fromParts([25], ds);
 
 /* eslint-enable */

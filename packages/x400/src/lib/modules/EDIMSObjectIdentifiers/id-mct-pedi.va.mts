@@ -23,6 +23,6 @@ import { id_mct } from '../EDIMSObjectIdentifiers/id-mct.va.mjs';
  *
  * @constant
  */
-export const id_mct_pedi: ID = new _OID([0], id_mct);
+export const id_mct_pedi: ID = _OID.fromParts([0], id_mct);
 
 /* eslint-enable */

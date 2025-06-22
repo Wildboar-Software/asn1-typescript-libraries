@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const securityAuditTrail_Attribute: OBJECT_IDENTIFIER = new _OID(
+export const securityAuditTrail_Attribute: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part8 */ 8, /* attribute */ 7],
     joint_iso_itu_t
 );

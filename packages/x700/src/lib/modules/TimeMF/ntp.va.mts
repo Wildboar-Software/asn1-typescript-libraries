@@ -27,7 +27,7 @@ import {
  *
  * @constant
  */
-export const ntp: SynchronizationProtocolType = new _OID(
+export const ntp: SynchronizationProtocolType = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

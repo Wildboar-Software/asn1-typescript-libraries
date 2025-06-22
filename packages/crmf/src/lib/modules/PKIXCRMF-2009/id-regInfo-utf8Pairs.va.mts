@@ -14,7 +14,7 @@ import { id_regInfo } from "../PKIXCRMF-2009/id-regInfo.va.mjs";
  *
  * @constant
  */
-export const id_regInfo_utf8Pairs: OBJECT_IDENTIFIER = new _OID(
+export const id_regInfo_utf8Pairs: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_regInfo
 );

@@ -23,7 +23,7 @@ import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
  *
  * @constant
  */
-export const id_ipms: ID = new _OID(
+export const id_ipms: ID = _OID.fromParts(
     [/* mhs */ 6, /* ipms */ 1],
     joint_iso_itu_t
 );

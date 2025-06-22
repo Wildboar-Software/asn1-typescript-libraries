@@ -24,7 +24,7 @@ import { id_publicKeyType } from "../SEC1-v1-9/id-publicKeyType.va.mjs";
  * @constant
  */
 export
-const id_ecPublicKey: OBJECT_IDENTIFIER = new _OID([
+const id_ecPublicKey: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], id_publicKeyType);
 

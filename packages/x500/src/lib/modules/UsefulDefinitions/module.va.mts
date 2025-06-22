@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const module_: ID = new _OID([1], ds);
+export const module_: ID = _OID.fromParts([1], ds);
 
 /* eslint-enable */

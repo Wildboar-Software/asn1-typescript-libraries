@@ -23,6 +23,6 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_edin_receiver: ID = new _OID([4], id_hat);
+export const id_hat_edin_receiver: ID = _OID.fromParts([4], id_hat);
 
 /* eslint-enable */

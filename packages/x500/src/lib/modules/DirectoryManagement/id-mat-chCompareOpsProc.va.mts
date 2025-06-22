@@ -13,7 +13,7 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_chCompareOpsProc: OBJECT_IDENTIFIER = new _OID(
+export const id_mat_chCompareOpsProc: OBJECT_IDENTIFIER = _OID.fromParts(
     [37],
     id_mat
 );

@@ -50,7 +50,7 @@ export const cMISE: OBJECT_CLASS = {
         supportedCmipProfiles,
         supportedCmisFunctionalUnits,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [1],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

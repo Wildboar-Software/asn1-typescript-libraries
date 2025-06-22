@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_globalDomainId: ID = new _OID([39], id_attribute);
+export const id_attribute_globalDomainId: ID = _OID.fromParts([39], id_attribute);
 
 /* eslint-enable */

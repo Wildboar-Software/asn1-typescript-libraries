@@ -26,7 +26,7 @@ export const mD5Algorithm: ALGORITHM<NULL> = {
     encoderFor: {
         "&Type": $._encodeNull,
     },
-    "&id": new _OID([
+    "&id": _OID.fromParts([
         /* iso */ 1,
         /* member-body */ 2,
         /* us */ 840,

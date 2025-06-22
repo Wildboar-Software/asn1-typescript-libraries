@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const mqvSinglePass_recommendedKDF: OBJECT_IDENTIFIER = new _OID([
+const mqvSinglePass_recommendedKDF: OBJECT_IDENTIFIER = _OID.fromParts([
     3,
 ], secg_scheme);
 

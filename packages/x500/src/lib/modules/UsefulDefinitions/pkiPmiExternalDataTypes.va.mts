@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const pkiPmiExternalDataTypes: ID = new _OID(
+export const pkiPmiExternalDataTypes: ID = _OID.fromParts(
     [/* pkiPmiExternalDataTypes */ 40, 9],
     module_
 );

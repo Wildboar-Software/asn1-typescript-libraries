@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardProtocolProcedureError: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardProtocolProcedureError: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* protocolProcedureError */ 1],
     pDUDiscard
 );

@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const id_DHBasedMac: OBJECT_IDENTIFIER = new _OID([
+export const id_DHBasedMac: OBJECT_IDENTIFIER = _OID.fromParts([
   /* iso */ 1,
   /* member-body */ 2,
   /* usa */ 840,

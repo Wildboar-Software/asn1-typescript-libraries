@@ -59,11 +59,11 @@ export const dirSignedTransformation: SECURITY_TRANSFORMATION<dirSignedTransform
     '&XformedDataType': _encode_dirSignedTransformation_XformedDataType,
     '&QualifierType': undefined,
   },
-  '&sT-Identifier': new _OID(
+  '&sT-Identifier': _OID.fromParts(
     [/* dir-signed */ 2],
     securityTransformations
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-  '&initialEncodingRules': new _OID(
+  '&initialEncodingRules': _OID.fromParts(
     [/* asn1 */ 1, /* ber-derived */ 2, /* distinguished-encoding */ 1],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */,

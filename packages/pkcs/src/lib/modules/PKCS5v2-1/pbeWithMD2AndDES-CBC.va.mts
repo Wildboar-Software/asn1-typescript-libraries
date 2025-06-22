@@ -14,6 +14,6 @@ import { pkcs_5 } from "../PKCS5v2-1/pkcs-5.va.mjs";
  *
  * @constant
  */
-export const pbeWithMD2AndDES_CBC: OBJECT_IDENTIFIER = new _OID([1], pkcs_5);
+export const pbeWithMD2AndDES_CBC: OBJECT_IDENTIFIER = _OID.fromParts([1], pkcs_5);
 
 /* eslint-enable */

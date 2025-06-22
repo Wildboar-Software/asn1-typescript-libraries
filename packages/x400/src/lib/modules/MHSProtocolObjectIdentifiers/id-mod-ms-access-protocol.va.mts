@@ -27,6 +27,6 @@ import { id_mod } from '../MHSProtocolObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_ms_access_protocol: ID = new _OID([2], id_mod);
+export const id_mod_ms_access_protocol: ID = _OID.fromParts([2], id_mod);
 
 /* eslint-enable */

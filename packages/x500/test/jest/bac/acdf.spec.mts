@@ -194,8 +194,8 @@ const WHATEVER_LABEL: UnboundedDirectoryString = {
     uTF8String: "Whatever",
 };
 
-const ID_COMMON_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 3 ]);
-const ID_ORG_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 10 ]);
+const ID_COMMON_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
+const ID_ORG_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 10 ]);
 
 const COMMON_NAME = new AttributeTypeAndValue(
     ID_COMMON_NAME,
@@ -352,11 +352,11 @@ describe("itemIsProtected()", () => {
             undefined,
             undefined,
             {
-                item: new ObjectIdentifier([ 2, 5, 4, 3 ]),
+                item: ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
             },
         );
         const protected_ = itemIsProtected({
-            entry: [ new ObjectIdentifier([ 2, 5, 4, 3 ]) ],
+            entry: [ ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]) ],
         }, pi, requester, getSettings(ALWAYS_EQUAL));
         expect(protected_).toBe(true);
     });
@@ -670,7 +670,7 @@ describe("bacACDF()", () => {
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
         const request: ProtectedItem = {
-            attributeType: new ObjectIdentifier([ 2, 5, 4, 3 ]),
+            attributeType: ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
         };
         const operations: number[] = [
             PERMISSION_CATEGORY_ADD,

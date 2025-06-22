@@ -322,7 +322,7 @@ function selectFromEntry (
         : selectedAttributes;
 
     const protoAttributes = groupByOID(attributesSelectedByContext, (atvac) => atvac[0]);
-    const infos: EntryInformation_information_Item[] = Object.values(protoAttributes)
+    const infos: EntryInformation_information_Item[] = Array.from(protoAttributes.values())
         .map((attrs: ATVAC[]): EntryInformation_information_Item | undefined => {
             if (eis.infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
                 /**

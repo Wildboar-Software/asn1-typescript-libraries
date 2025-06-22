@@ -47,7 +47,7 @@ export const delivery_88: PORT = {
     '&Both': [operationObject1] /* OBJECT_FIELD_SETTING */,
     '&Supplier': [delivery_control_88] /* OBJECT_FIELD_SETTING */,
     '&Consumer': [message_delivery, report_delivery] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [88],
         id_pt_delivery
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

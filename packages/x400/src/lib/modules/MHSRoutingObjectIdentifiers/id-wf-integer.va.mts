@@ -27,6 +27,6 @@ import { id_wf } from '../MHSRoutingObjectIdentifiers/id-wf.va.mjs';
  *
  * @constant
  */
-export const id_wf_integer: ID = new _OID([0], id_wf);
+export const id_wf_integer: ID = _OID.fromParts([0], id_wf);
 
 /* eslint-enable */

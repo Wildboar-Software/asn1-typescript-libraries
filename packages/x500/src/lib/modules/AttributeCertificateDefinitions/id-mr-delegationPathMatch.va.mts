@@ -13,7 +13,7 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_delegationPathMatch: OBJECT_IDENTIFIER = new _OID(
+export const id_mr_delegationPathMatch: OBJECT_IDENTIFIER = _OID.fromParts(
     [61],
     id_mr
 );

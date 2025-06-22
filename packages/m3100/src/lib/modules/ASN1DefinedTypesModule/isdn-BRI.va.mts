@@ -28,7 +28,7 @@ import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo
  *
  * @constant
  */
-export const isdn_BRI: CharacteristicInformation = new _OID(
+export const isdn_BRI: CharacteristicInformation = _OID.fromParts(
     [40],
     characteristicInfo
 );

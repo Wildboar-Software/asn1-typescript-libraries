@@ -14,6 +14,6 @@ import { namedScheme } from "../ANSI-X9-42/namedScheme.va.mjs";
  *
  * @constant
  */
-export const dhEphem_sha1: OBJECT_IDENTIFIER = new _OID([2], namedScheme);
+export const dhEphem_sha1: OBJECT_IDENTIFIER = _OID.fromParts([2], namedScheme);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import {
  *
  * @constant
  */
-export const dmiNotification: OBJECT_IDENTIFIER = new _OID([
+export const dmiNotification: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* ms */ 9,
     /* smi */ 3,

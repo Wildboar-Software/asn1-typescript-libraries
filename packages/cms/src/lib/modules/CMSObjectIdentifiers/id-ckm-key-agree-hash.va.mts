@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_ckm_key_agree_hash: OID = new _OID(
+export const id_ckm_key_agree_hash: OID = _OID.fromParts(
     [/* key-agree-hash */ 4],
     id_ckm_algorithms
 );

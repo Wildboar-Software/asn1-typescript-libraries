@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const id_sha: OBJECT_IDENTIFIER = new _OID([
+const id_sha: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* country */ 16,
     /* us */ 840,

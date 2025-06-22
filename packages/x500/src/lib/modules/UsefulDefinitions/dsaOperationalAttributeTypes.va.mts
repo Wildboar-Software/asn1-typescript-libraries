@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const dsaOperationalAttributeTypes: ID = new _OID(
+export const dsaOperationalAttributeTypes: ID = _OID.fromParts(
     [/* dsaOperationalAttributeTypes */ 22, 9],
     module_
 );

@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardUnsupportedProtocolVersion: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardUnsupportedProtocolVersion: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* unsupportedProtocolVersion */ 177],
     pDUDiscard
 );

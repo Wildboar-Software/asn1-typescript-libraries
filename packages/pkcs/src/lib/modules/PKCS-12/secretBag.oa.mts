@@ -30,7 +30,7 @@ export const secretBag: BAG_TYPE<SecretBag> = {
     encoderFor: {
         "&Type": _encode_SecretBag,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [5],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

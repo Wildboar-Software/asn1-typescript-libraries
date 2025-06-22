@@ -23,6 +23,6 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  *
  * @constant
  */
-export const id_mst_invalid_ipn: ID = new _OID([1], id_mst);
+export const id_mst_invalid_ipn: ID = _OID.fromParts([1], id_mst);
 
 /* eslint-enable */

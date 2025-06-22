@@ -15,6 +15,6 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  *
  * @constant
  */
-export const smime: OID = new _OID([/* smime */ 16], pkcs9);
+export const smime: OID = _OID.fromParts([/* smime */ 16], pkcs9);
 
 /* eslint-enable */

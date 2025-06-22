@@ -14,6 +14,6 @@ import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const id_RSASSA_PSS: ID = new _OID([10], pkcs_1);
+export const id_RSASSA_PSS: ID = _OID.fromParts([10], pkcs_1);
 
 /* eslint-enable */

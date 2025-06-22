@@ -23,6 +23,6 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_redirection_reason_match: ID = new _OID([23], id_mr);
+export const id_mr_redirection_reason_match: ID = _OID.fromParts([23], id_mr);
 
 /* eslint-enable */

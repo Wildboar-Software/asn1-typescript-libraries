@@ -23,7 +23,7 @@ import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.
  *
  * @constant
  */
-export const id_name_binding_acctRequest_customer: ID = new _OID(
+export const id_name_binding_acctRequest_customer: ID = _OID.fromParts(
     [0],
     id_name_binding
 );

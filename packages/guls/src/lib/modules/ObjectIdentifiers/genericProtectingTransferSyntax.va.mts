@@ -24,7 +24,7 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const genericProtectingTransferSyntax: OBJECT_IDENTIFIER = new _OID(
+export const genericProtectingTransferSyntax: OBJECT_IDENTIFIER = _OID.fromParts(
   [7],
   modules
 );

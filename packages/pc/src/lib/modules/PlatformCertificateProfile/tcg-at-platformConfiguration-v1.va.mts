@@ -24,7 +24,7 @@ import { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-
  * @constant
  */
 export
-const tcg_at_platformConfiguration_v1: OBJECT_IDENTIFIER = new _OID([
+const tcg_at_platformConfiguration_v1: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_at_platformConfiguration);
 

@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const clockMaximumErrorOID: OBJECT_IDENTIFIER = new _OID(
+export const clockMaximumErrorOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* clockMaximumError */ 7],
     timeManagement
 );

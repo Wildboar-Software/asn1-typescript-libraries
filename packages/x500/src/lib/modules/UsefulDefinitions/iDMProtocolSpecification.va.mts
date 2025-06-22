@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const iDMProtocolSpecification: ID = new _OID(
+export const iDMProtocolSpecification: ID = _OID.fromParts(
     [/* iDMProtocolSpecification */ 30, 9],
     module_
 );

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const usefulDefinitions: ID = new _OID(
+export const usefulDefinitions: ID = _OID.fromParts(
     [/* usefulDefinitions */ 0, 9],
     module_
 );

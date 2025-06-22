@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const defaultPacketSizes: OBJECT_IDENTIFIER = new _OID([103], aoi);
+export const defaultPacketSizes: OBJECT_IDENTIFIER = _OID.fromParts([103], aoi);
 
 /* eslint-enable */

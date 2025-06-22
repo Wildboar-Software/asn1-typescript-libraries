@@ -23,6 +23,6 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_ipm_identifier: ID = new _OID([0], id_mr);
+export const id_mr_ipm_identifier: ID = _OID.fromParts([0], id_mr);
 
 /* eslint-enable */

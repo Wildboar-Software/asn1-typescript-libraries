@@ -27,7 +27,7 @@ import { moaAlgorithmIdentifiers } from '../MetricModule/moaAlgorithmIdentifiers
  *
  * @constant
  */
-export const ewmaAlgorithm: AlgorithmIdentifier = new _OID(
+export const ewmaAlgorithm: AlgorithmIdentifier = _OID.fromParts(
     [0],
     moaAlgorithmIdentifiers
 );

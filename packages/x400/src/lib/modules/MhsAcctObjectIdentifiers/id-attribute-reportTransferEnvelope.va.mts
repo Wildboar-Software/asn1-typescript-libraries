@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_reportTransferEnvelope: ID = new _OID(
+export const id_attribute_reportTransferEnvelope: ID = _OID.fromParts(
     [106],
     id_attribute
 );

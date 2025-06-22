@@ -17,7 +17,7 @@ function decodeLDAPOID (ldapoid: LDAPOID): OBJECT_IDENTIFIER {
         }
     }
     nodes.push(current);
-    return new ObjectIdentifier(nodes);
+    return ObjectIdentifier.fromParts(nodes);
 }
 
 export default decodeLDAPOID;

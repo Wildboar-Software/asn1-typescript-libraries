@@ -23,6 +23,6 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_body_part_encryption_token: ID = new _OID([26], id_hat);
+export const id_hat_body_part_encryption_token: ID = _OID.fromParts([26], id_hat);
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const hMAC_SHA1: OBJECT_IDENTIFIER = new _OID([
+export const hMAC_SHA1: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* dod */ 6,

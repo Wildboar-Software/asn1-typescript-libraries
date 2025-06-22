@@ -23,6 +23,6 @@ import { id_att } from '../MTSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_physicalRendition_no_cover_page: ID = new _OID([1], id_att);
+export const id_att_physicalRendition_no_cover_page: ID = _OID.fromParts([1], id_att);
 
 /* eslint-enable */

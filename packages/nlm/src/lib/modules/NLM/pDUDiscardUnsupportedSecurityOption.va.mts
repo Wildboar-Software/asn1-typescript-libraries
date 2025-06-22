@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardUnsupportedSecurityOption: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardUnsupportedSecurityOption: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* unsupportedSecurityOption */ 178],
     pDUDiscard
 );

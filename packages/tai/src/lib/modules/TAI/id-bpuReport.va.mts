@@ -26,7 +26,7 @@ import {
  * @constant
  */
 export
-const id_bpuReport: OBJECT_IDENTIFIER = new _OID([
+const id_bpuReport: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* standard */ 0,
     /* acbio */ 24761,

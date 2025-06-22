@@ -24,6 +24,6 @@ import { nl } from "@wildboar/nlm/src/lib/modules/NLM/nl.va.mjs";
  *
  * @constant
  */
-export const isisoi: OBJECT_IDENTIFIER = new _OID([/* iSIS */ 1], nl);
+export const isisoi: OBJECT_IDENTIFIER = _OID.fromParts([/* iSIS */ 1], nl);
 
 /* eslint-enable */

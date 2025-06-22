@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const summarizationPackage: OBJECT_IDENTIFIER = new _OID(
+export const summarizationPackage: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part13 */ 13, /* package */ 4],
     joint_iso_ccitt
 );

@@ -45,7 +45,7 @@ export const managementBehaviour: OBJECT_CLASS = {
     '&Superclasses': [managementTemplate] /* OBJECT_FIELD_SETTING */,
     '&kind': auxiliary /* OBJECT_FIELD_SETTING */,
     '&MandatoryAttributes': [definedAs] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [12],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

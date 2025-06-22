@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const rTSE_abstract_syntax: OBJECT_IDENTIFIER = new _OID(
+export const rTSE_abstract_syntax: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* reliable-transfer */ 3, /* abstract-syntax */ 2],
   joint_iso_itu_t
 );

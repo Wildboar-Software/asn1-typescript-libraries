@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const serviceAdministration: ID = new _OID(
+export const serviceAdministration: ID = _OID.fromParts(
     [/* serviceAdministration */ 33, 9],
     module_
 );

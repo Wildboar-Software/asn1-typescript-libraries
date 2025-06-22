@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const basic_per_aligned: OBJECT_IDENTIFIER = new _OID(
+export const basic_per_aligned: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* asn1 */ 1, /* packed-encoding */ 3, /* basic */ 0, /* aligned */ 0],
   joint_iso_itu_t
 );

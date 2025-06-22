@@ -23,7 +23,7 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_simpleRedirectionPackage: ID = new _OID(
+export const id_package_simpleRedirectionPackage: ID = _OID.fromParts(
     [33],
     id_package
 );

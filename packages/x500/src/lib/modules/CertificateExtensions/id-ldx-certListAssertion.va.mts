@@ -13,7 +13,7 @@ import { id_ldx } from "../UsefulDefinitions/id-ldx.va.mjs";
  *
  * @constant
  */
-export const id_ldx_certListAssertion: OBJECT_IDENTIFIER = new _OID(
+export const id_ldx_certListAssertion: OBJECT_IDENTIFIER = _OID.fromParts(
     [6],
     id_ldx
 );

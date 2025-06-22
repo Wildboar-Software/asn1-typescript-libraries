@@ -23,7 +23,7 @@ import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
  *
  * @constant
  */
-export const id_bvae_invalidKeyUsage: OBJECT_IDENTIFIER = new _OID(
+export const id_bvae_invalidKeyUsage: OBJECT_IDENTIFIER = _OID.fromParts(
   [10],
   id_bvae
 );

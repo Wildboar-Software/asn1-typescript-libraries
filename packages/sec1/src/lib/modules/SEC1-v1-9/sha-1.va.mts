@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const sha_1: OBJECT_IDENTIFIER = new _OID([
+const sha_1: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* oiw */ 14,

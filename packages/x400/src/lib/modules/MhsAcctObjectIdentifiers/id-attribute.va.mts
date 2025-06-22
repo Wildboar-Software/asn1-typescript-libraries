@@ -23,6 +23,6 @@ import { id_accounting } from '../MhsAcctObjectIdentifiers/id-accounting.va.mjs'
  *
  * @constant
  */
-export const id_attribute: ID = new _OID([2], id_accounting);
+export const id_attribute: ID = _OID.fromParts([2], id_accounting);
 
 /* eslint-enable */

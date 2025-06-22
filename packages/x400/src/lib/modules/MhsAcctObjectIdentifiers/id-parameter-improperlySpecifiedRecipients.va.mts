@@ -23,7 +23,7 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  *
  * @constant
  */
-export const id_parameter_improperlySpecifiedRecipients: ID = new _OID(
+export const id_parameter_improperlySpecifiedRecipients: ID = _OID.fromParts(
     [4],
     id_parameter
 );

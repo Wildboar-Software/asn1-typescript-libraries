@@ -23,6 +23,6 @@ import { id_con } from '../MHSObjectIdentifiers/id-con.va.mjs';
  *
  * @constant
  */
-export const id_con_dl_administrator_annotation: ID = new _OID([0], id_con);
+export const id_con_dl_administrator_annotation: ID = _OID.fromParts([0], id_con);
 
 /* eslint-enable */

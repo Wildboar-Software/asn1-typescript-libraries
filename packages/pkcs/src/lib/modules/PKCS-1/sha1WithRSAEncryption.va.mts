@@ -14,6 +14,6 @@ import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const sha1WithRSAEncryption: OBJECT_IDENTIFIER = new _OID([5], pkcs_1);
+export const sha1WithRSAEncryption: OBJECT_IDENTIFIER = _OID.fromParts([5], pkcs_1);
 
 /* eslint-enable */

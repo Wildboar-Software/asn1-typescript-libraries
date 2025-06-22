@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const notification: ID = new _OID([35], ds);
+export const notification: ID = _OID.fromParts([35], ds);
 
 /* eslint-enable */

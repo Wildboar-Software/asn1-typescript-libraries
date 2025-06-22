@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const defaultThroughputClasses: OBJECT_IDENTIFIER = new _OID([112], aoi);
+export const defaultThroughputClasses: OBJECT_IDENTIFIER = _OID.fromParts([112], aoi);
 
 /* eslint-enable */

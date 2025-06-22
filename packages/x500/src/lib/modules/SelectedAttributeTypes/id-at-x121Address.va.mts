@@ -13,6 +13,6 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_x121Address: OBJECT_IDENTIFIER = new _OID([24], id_at);
+export const id_at_x121Address: OBJECT_IDENTIFIER = _OID.fromParts([24], id_at);
 
 /* eslint-enable */

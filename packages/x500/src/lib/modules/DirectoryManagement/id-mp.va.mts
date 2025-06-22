@@ -13,6 +13,6 @@ import { id_mgt } from "../UsefulDefinitions/id-mgt.va.mjs";
  *
  * @constant
  */
-export const id_mp: OBJECT_IDENTIFIER = new _OID([4], id_mgt);
+export const id_mp: OBJECT_IDENTIFIER = _OID.fromParts([4], id_mgt);
 
 /* eslint-enable */

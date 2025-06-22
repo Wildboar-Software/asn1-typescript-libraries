@@ -24,7 +24,7 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfile/tcg-r
  * @constant
  */
 export
-const tcg_registry_componentClass_tcg: OBJECT_IDENTIFIER = new _OID([
+const tcg_registry_componentClass_tcg: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_registry_componentClass);
 

@@ -13,6 +13,6 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdDictionaries: OBJECT_IDENTIFIER = new _OID([37], id_oa);
+export const id_oa_pwdDictionaries: OBJECT_IDENTIFIER = _OID.fromParts([37], id_oa);
 
 /* eslint-enable */

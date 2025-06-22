@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const synchronizationProtocol_systemOID: OBJECT_IDENTIFIER = new _OID(
+export const synchronizationProtocol_systemOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* nameBinding */ 6, /* synchronizationProtocol-system */ 1],
     timeManagement
 );

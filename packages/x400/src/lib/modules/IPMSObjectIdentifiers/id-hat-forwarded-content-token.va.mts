@@ -23,6 +23,6 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_forwarded_content_token: ID = new _OID([35], id_hat);
+export const id_hat_forwarded_content_token: ID = _OID.fromParts([35], id_hat);
 
 /* eslint-enable */

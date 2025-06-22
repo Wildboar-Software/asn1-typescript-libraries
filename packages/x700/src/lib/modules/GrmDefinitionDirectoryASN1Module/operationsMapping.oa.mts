@@ -47,7 +47,7 @@ export const operationsMapping: ATTRIBUTE<MappingPair> = {
     encoderFor: {
         '&Type': _encode_MappingPair,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [48],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -32,7 +32,7 @@ import {
  * @constant
  */
 export
-const id_aa_ets_longTermValidation: OBJECT_IDENTIFIER = new _OID([
+const id_aa_ets_longTermValidation: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* identified-organization */ 4,
     /* etsi */ 0,

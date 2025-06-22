@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_labelsAndRedirections: ID = new _OID(
+export const id_attribute_labelsAndRedirections: ID = _OID.fromParts(
     [55],
     id_attribute
 );

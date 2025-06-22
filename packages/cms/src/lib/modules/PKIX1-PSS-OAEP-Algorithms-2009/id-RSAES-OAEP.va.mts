@@ -14,6 +14,6 @@ import { pkcs_1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const id_RSAES_OAEP: OBJECT_IDENTIFIER = new _OID([7], pkcs_1);
+export const id_RSAES_OAEP: OBJECT_IDENTIFIER = _OID.fromParts([7], pkcs_1);
 
 /* eslint-enable */

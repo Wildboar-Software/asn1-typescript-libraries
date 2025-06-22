@@ -23,6 +23,6 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  *
  * @constant
  */
-export const id_et_videotex: ID = new _OID([5], id_et);
+export const id_et_videotex: ID = _OID.fromParts([5], id_et);
 
 /* eslint-enable */

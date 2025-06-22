@@ -14,6 +14,6 @@ import { ldap_enterprise } from "../UsefulDefinitions/ldap-enterprise.va.mjs";
  *
  * @constant
  */
-export const ldap_wall: ID = new _OID([/* wahl */ 1466], ldap_enterprise);
+export const ldap_wall: ID = _OID.fromParts([/* wahl */ 1466], ldap_enterprise);
 
 /* eslint-enable */

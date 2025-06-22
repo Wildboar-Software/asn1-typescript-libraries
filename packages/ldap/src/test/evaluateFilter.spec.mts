@@ -50,9 +50,9 @@ function utf8Element (str: string): BERElement {
     );
 }
 
-const commonName = new ObjectIdentifier([ 2, 5, 4, 3 ]);
-const organizationName = new ObjectIdentifier([ 2, 5, 4, 10 ]);
-const serialNumber = new ObjectIdentifier([ 2, 5, 4, 5 ]);
+const commonName = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
+const organizationName = ObjectIdentifier.fromParts([ 2, 5, 4, 10 ]);
+const serialNumber = ObjectIdentifier.fromParts([ 2, 5, 4, 5 ]);
 
 const dn: AttributeTypeAndValue[][] = [
     [

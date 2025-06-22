@@ -23,6 +23,6 @@ import { id_edims } from '../EDIMSObjectIdentifiers/id-edims.va.mjs';
  *
  * @constant
  */
-export const id_sat: ID = new _OID([5], id_edims);
+export const id_sat: ID = _OID.fromParts([5], id_edims);
 
 /* eslint-enable */

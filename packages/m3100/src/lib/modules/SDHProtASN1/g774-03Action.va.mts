@@ -24,7 +24,7 @@ import { sdhProt } from '../SDHProtASN1/sdhProt.va.mjs';
  *
  * @constant
  */
-export const g774_03Action: OBJECT_IDENTIFIER = new _OID(
+export const g774_03Action: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* action */ 9],
     sdhProt
 );

@@ -15,7 +15,7 @@ import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-mani
  *
  * @constant
  */
-export const id_XPathSigncryptionSet: OID = new _OID(
+export const id_XPathSigncryptionSet: OID = _OID.fromParts(
     [/* xPathSigncryptionSet */ 2],
     signcryption_manifest
 );

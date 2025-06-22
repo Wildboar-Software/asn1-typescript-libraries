@@ -14,6 +14,6 @@ import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
  *
  * @constant
  */
-export const nullAlgorithm: ID = new _OID([0], algorithm);
+export const nullAlgorithm: ID = _OID.fromParts([0], algorithm);
 
 /* eslint-enable */

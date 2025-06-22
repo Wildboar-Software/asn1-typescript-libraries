@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const versionMismatch: ProbableCause = { globalValue: new _OID([57,], arfProbableCause) };
+const versionMismatch: ProbableCause = { globalValue: _OID.fromParts([57,], arfProbableCause) };
 
 /* eslint-enable */

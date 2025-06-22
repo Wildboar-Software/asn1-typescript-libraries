@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const timeManagement: OBJECT_IDENTIFIER = new _OID(
+export const timeManagement: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part20 */ 20],
     joint_iso_itu_t
 );

@@ -14,6 +14,6 @@ import { id_qt } from "../PKIX1Explicit-2009/id-qt.va.mjs";
  *
  * @constant
  */
-export const id_qt_unotice: OBJECT_IDENTIFIER = new _OID([2], id_qt);
+export const id_qt_unotice: OBJECT_IDENTIFIER = _OID.fromParts([2], id_qt);
 
 /* eslint-enable */

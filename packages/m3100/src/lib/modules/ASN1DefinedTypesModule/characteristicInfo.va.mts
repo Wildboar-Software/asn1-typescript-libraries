@@ -24,7 +24,7 @@ import { m3100standardSpecificExtension } from '../ASN1DefinedTypesModule/m3100s
  *
  * @constant
  */
-export const characteristicInfo: OBJECT_IDENTIFIER = new _OID(
+export const characteristicInfo: OBJECT_IDENTIFIER = _OID.fromParts(
     [0],
     m3100standardSpecificExtension
 );

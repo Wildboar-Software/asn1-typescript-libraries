@@ -28,7 +28,7 @@ import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceRepo
  *
  * @constant
  */
-export const serviceResponse: ServiceReportCause = new _OID(
+export const serviceResponse: ServiceReportCause = _OID.fromParts(
     [3],
     serviceReportCause
 );

@@ -14,6 +14,6 @@ import { id_pkip } from "../PKIXCRMF-2009/id-pkip.va.mjs";
  *
  * @constant
  */
-export const id_regCtrl: OBJECT_IDENTIFIER = new _OID([1], id_pkip);
+export const id_regCtrl: OBJECT_IDENTIFIER = _OID.fromParts([1], id_pkip);
 
 /* eslint-enable */

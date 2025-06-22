@@ -24,7 +24,7 @@ import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.v
  * @constant
  */
 export
-const proceduralError: SecurityAlarmCause = new _OID([
+const proceduralError: SecurityAlarmCause = _OID.fromParts([
     15,
 ], securityAlarmCause);
 

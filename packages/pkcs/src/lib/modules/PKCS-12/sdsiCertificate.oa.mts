@@ -26,7 +26,7 @@ export const sdsiCertificate: BAG_TYPE<IA5String> = {
     encoderFor: {
         "&Type": $._encodeIA5String,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [2],
         certTypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -26,7 +26,7 @@ import {
  * @constant
  */
 export
-const ansi_X9_62: OBJECT_IDENTIFIER = new _OID([
+const ansi_X9_62: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

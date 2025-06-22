@@ -55,7 +55,7 @@ export const managementRelationshipClass: OBJECT_CLASS = {
         qualifiedBy,
         roleSpecifier,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [16],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

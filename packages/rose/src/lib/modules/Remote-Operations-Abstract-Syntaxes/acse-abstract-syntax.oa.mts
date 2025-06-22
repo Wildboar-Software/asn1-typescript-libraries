@@ -45,7 +45,7 @@ export const acse_abstract_syntax: ABSTRACT_SYNTAX<ACSE_apdu> = {
   encoderFor: {
     '&Type': _encode_ACSE_apdu,
   },
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [
       /* association-control */ 2,
       /* abstract-syntax */ 1,

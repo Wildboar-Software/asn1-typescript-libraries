@@ -13,6 +13,6 @@ import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
  *
  * @constant
  */
-export const id_ar_autonomousArea: OBJECT_IDENTIFIER = new _OID([1], id_ar);
+export const id_ar_autonomousArea: OBJECT_IDENTIFIER = _OID.fromParts([1], id_ar);
 
 /* eslint-enable */

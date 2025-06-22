@@ -13,6 +13,6 @@ import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
  *
  * @constant
  */
-export const id_not_filterItem: OBJECT_IDENTIFIER = new _OID([5], id_not);
+export const id_not_filterItem: OBJECT_IDENTIFIER = _OID.fromParts([5], id_not);
 
 /* eslint-enable */

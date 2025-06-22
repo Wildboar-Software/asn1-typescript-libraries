@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const multiplexerProblem: ProbableCause = { globalValue: new _OID([31,], arfProbableCause) };
+const multiplexerProblem: ProbableCause = { globalValue: _OID.fromParts([31,], arfProbableCause) };
 
 /* eslint-enable */

@@ -13,6 +13,6 @@ import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
  *
  * @constant
  */
-export const id_asx_dnsString: OBJECT_IDENTIFIER = new _OID([9], id_asx);
+export const id_asx_dnsString: OBJECT_IDENTIFIER = _OID.fromParts([9], id_asx);
 
 /* eslint-enable */

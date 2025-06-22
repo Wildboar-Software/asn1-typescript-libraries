@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const mqvSinglePass_sha384kdf_scheme: OBJECT_IDENTIFIER = new _OID([
+const mqvSinglePass_sha384kdf_scheme: OBJECT_IDENTIFIER = _OID.fromParts([
     15,
     2,
 ], secg_scheme);

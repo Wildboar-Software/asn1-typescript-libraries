@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_typeOfMpr: ID = new _OID([165], id_attribute);
+export const id_attribute_typeOfMpr: ID = _OID.fromParts([165], id_attribute);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  *
  * @constant
  */
-export const id_mst_originator_forwarded_content_token: ID = new _OID(
+export const id_mst_originator_forwarded_content_token: ID = _OID.fromParts(
     [6],
     id_mst
 );

@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_meanFunctionProcessingTime: ID = new _OID(
+export const id_attribute_meanFunctionProcessingTime: ID = _OID.fromParts(
     [62],
     id_attribute
 );

@@ -23,6 +23,6 @@ import { id_mod } from '../EDIMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_upper_bounds: ID = new _OID([5], id_mod);
+export const id_mod_upper_bounds: ID = _OID.fromParts([5], id_mod);
 
 /* eslint-enable */

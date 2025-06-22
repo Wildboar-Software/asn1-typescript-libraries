@@ -24,6 +24,6 @@ import {
  *
  * @constant
  */
-export const ds: OBJECT_IDENTIFIER = new _OID([/* ds */ 5], joint_iso_itu_t);
+export const ds: OBJECT_IDENTIFIER = _OID.fromParts([/* ds */ 5], joint_iso_itu_t);
 
 /* eslint-enable */

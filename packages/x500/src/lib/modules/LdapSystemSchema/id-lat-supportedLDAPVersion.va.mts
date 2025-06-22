@@ -13,7 +13,7 @@ import { id_lat } from "../UsefulDefinitions/id-lat.va.mjs";
  *
  * @constant
  */
-export const id_lat_supportedLDAPVersion: OBJECT_IDENTIFIER = new _OID(
+export const id_lat_supportedLDAPVersion: OBJECT_IDENTIFIER = _OID.fromParts(
     [15],
     id_lat
 );

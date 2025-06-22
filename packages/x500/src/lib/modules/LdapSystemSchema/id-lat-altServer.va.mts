@@ -13,6 +13,6 @@ import { id_lat } from "../UsefulDefinitions/id-lat.va.mjs";
  *
  * @constant
  */
-export const id_lat_altServer: OBJECT_IDENTIFIER = new _OID([6], id_lat);
+export const id_lat_altServer: OBJECT_IDENTIFIER = _OID.fromParts([6], id_lat);
 
 /* eslint-enable */

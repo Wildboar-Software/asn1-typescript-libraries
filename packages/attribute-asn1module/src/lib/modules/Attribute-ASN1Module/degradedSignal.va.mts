@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const degradedSignal: ProbableCause = { globalValue: new _OID([12,], arfProbableCause) };
+const degradedSignal: ProbableCause = { globalValue: _OID.fromParts([12,], arfProbableCause) };
 
 /* eslint-enable */

@@ -14,6 +14,6 @@ import { nistAlgorithms } from "../PKCS5v2-1/nistAlgorithms.va.mjs";
  *
  * @constant
  */
-export const aes: OBJECT_IDENTIFIER = new _OID([1], nistAlgorithms);
+export const aes: OBJECT_IDENTIFIER = _OID.fromParts([1], nistAlgorithms);
 
 /* eslint-enable */

@@ -13,6 +13,6 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdMaxFailures: OBJECT_IDENTIFIER = new _OID([42], id_oa);
+export const id_oa_pwdMaxFailures: OBJECT_IDENTIFIER = _OID.fromParts([42], id_oa);
 
 /* eslint-enable */

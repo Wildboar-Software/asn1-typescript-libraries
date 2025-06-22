@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const ownLSPPurge: OBJECT_IDENTIFIER = new _OID(
+export const ownLSPPurge: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* ownLSPPurge */ 10],
   se
 );

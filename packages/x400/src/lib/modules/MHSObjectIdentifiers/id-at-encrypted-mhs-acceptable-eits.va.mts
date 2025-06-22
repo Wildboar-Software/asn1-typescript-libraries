@@ -23,6 +23,6 @@ import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_encrypted_mhs_acceptable_eits: ID = new _OID([17, 2], id_at);
+export const id_at_encrypted_mhs_acceptable_eits: ID = _OID.fromParts([17, 2], id_at);
 
 /* eslint-enable */

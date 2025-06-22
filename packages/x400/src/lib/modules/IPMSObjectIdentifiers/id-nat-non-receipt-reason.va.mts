@@ -23,6 +23,6 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  *
  * @constant
  */
-export const id_nat_non_receipt_reason: ID = new _OID([4], id_nat);
+export const id_nat_non_receipt_reason: ID = _OID.fromParts([4], id_nat);
 
 /* eslint-enable */

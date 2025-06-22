@@ -49,7 +49,7 @@ export const withReplySyntax: ATTRIBUTE<WithSyntax> = {
         '&Type': _encode_WithSyntax,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [42],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

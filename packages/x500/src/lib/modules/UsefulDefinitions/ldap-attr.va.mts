@@ -14,6 +14,6 @@ import { ldap_wall } from "../UsefulDefinitions/ldap-wall.va.mjs";
  *
  * @constant
  */
-export const ldap_attr: ID = new _OID([101, 120], ldap_wall);
+export const ldap_attr: ID = _OID.fromParts([101, 120], ldap_wall);
 
 /* eslint-enable */

@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const controlAttributeType: ID = new _OID([37], ds);
+export const controlAttributeType: ID = _OID.fromParts([37], ds);
 
 /* eslint-enable */

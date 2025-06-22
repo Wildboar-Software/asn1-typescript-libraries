@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const uniDialogue_as_id: OBJECT_IDENTIFIER = new _OID(
+export const uniDialogue_as_id: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         0 /* recommendation */,
         17 /* q */,

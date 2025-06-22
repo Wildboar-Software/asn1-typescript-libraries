@@ -26,7 +26,7 @@ import {
  * @constant
  */
 export
-const id_tai_at_BiometricInformationTemplate: OBJECT_IDENTIFIER = new _OID([
+const id_tai_at_BiometricInformationTemplate: OBJECT_IDENTIFIER = _OID.fromParts([
     /* registration-authority */ 1,
     /* cbeff */ 19785,
     /* biometric-organization */ 0,

@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const upperBounds: ID = new _OID([/* upperBounds */ 10, 9], module_);
+export const upperBounds: ID = _OID.fromParts([/* upperBounds */ 10, 9], module_);
 
 /* eslint-enable */

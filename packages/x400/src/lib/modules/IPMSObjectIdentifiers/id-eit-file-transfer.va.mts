@@ -23,6 +23,6 @@ import { id_eit } from '../IPMSObjectIdentifiers/id-eit.va.mjs';
  *
  * @constant
  */
-export const id_eit_file_transfer: ID = new _OID([0], id_eit);
+export const id_eit_file_transfer: ID = _OID.fromParts([0], id_eit);
 
 /* eslint-enable */

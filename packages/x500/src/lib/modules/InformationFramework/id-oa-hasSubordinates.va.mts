@@ -13,6 +13,6 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_hasSubordinates: OBJECT_IDENTIFIER = new _OID([9], id_oa);
+export const id_oa_hasSubordinates: OBJECT_IDENTIFIER = _OID.fromParts([9], id_oa);
 
 /* eslint-enable */

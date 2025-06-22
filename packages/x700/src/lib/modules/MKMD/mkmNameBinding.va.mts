@@ -23,7 +23,7 @@ import {
  *
  * @constant
  */
-export const mkmNameBinding: OBJECT_IDENTIFIER = new _OID([
+export const mkmNameBinding: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* ms */ 9,
     /* function */ 2,

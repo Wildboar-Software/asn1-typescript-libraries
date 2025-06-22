@@ -11,7 +11,7 @@ const csr = new pkcs.PKCS10.CertificationRequest(
             rdnSequence: [
                 [
                     new InformationFramework.AttributeTypeAndValue(
-                        new asn1.ObjectIdentifier([ 2, 5, 4, 3 ]),
+                        asn1.ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
                         new asn1.DERElement(
                             asn1.ASN1TagClass.universal,
                             asn1.ASN1Construction.primitive,
@@ -24,7 +24,7 @@ const csr = new pkcs.PKCS10.CertificationRequest(
         },
         new AuthenticationFramework.SubjectPublicKeyInfo(
             new AuthenticationFramework.AlgorithmIdentifier(
-                new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 1 ]),
+                asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 1 ]),
                 new asn1.DERElement(
                     asn1.ASN1TagClass.universal,
                     asn1.ASN1Construction.primitive,
@@ -50,7 +50,7 @@ const csr = new pkcs.PKCS10.CertificationRequest(
         []
     ),
     new AuthenticationFramework.AlgorithmIdentifier(
-        new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 11 ]),
+        asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 11 ]),
         new asn1.DERElement(
             asn1.ASN1TagClass.universal,
             asn1.ASN1Construction.primitive,

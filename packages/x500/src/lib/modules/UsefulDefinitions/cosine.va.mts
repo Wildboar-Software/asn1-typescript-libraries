@@ -13,7 +13,7 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const cosine: ID = new _OID([
+export const cosine: ID = _OID.fromParts([
     /* itu-t */ 0,
     /* data */ 9,
     /* pss */ 2342,

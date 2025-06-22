@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_Filelength: OID = new _OID([3], ckm_CMS);
+export const id_Filelength: OID = _OID.fromParts([3], ckm_CMS);
 
 /* eslint-enable */

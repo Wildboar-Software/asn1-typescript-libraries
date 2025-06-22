@@ -53,7 +53,7 @@ export const withAttribute: ATTRIBUTE<TemplateLabel> = {
     '&equality-match':
         directoryStringFirstComponentMatch /* OBJECT_FIELD_SETTING */,
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [40],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

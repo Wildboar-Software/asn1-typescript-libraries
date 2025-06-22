@@ -24,7 +24,7 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  *
  * @constant
  */
-export const id_video: OBJECT_IDENTIFIER = new _OID(
+export const id_video: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* video */ 2],
     id_modalities
 );

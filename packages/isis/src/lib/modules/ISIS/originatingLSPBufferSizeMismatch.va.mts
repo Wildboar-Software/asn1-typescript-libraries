@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const originatingLSPBufferSizeMismatch: OBJECT_IDENTIFIER = new _OID(
+export const originatingLSPBufferSizeMismatch: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* originatingLSPBufferSizeMismatch */ 15],
   se
 );

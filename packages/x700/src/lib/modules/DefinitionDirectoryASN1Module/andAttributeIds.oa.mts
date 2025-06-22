@@ -49,7 +49,7 @@ export const andAttributeIds: ATTRIBUTE<AndAttributeIds> = {
         '&Type': _encode_AndAttributeIds,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [8],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

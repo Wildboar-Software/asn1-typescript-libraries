@@ -23,6 +23,6 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  *
  * @constant
  */
-export const id_mst_suspend_auto_acknowledgement: ID = new _OID([3], id_mst);
+export const id_mst_suspend_auto_acknowledgement: ID = _OID.fromParts([3], id_mst);
 
 /* eslint-enable */

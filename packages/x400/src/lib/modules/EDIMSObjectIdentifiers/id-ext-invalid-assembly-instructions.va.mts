@@ -23,6 +23,6 @@ import { id_ext } from '../EDIMSObjectIdentifiers/id-ext.va.mjs';
  *
  * @constant
  */
-export const id_ext_invalid_assembly_instructions: ID = new _OID([1], id_ext);
+export const id_ext_invalid_assembly_instructions: ID = _OID.fromParts([1], id_ext);
 
 /* eslint-enable */

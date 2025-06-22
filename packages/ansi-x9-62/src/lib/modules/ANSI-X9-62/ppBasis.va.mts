@@ -13,7 +13,7 @@ import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two
  *
  * @constant
  */
-export const ppBasis: OBJECT_IDENTIFIER = new _OID(
+export const ppBasis: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* pentanomial */ 3],
     id_characteristic_two_basis
 );

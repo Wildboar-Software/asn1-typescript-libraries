@@ -24,6 +24,6 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const dirProtectionMappings: OBJECT_IDENTIFIER = new _OID([4], modules);
+export const dirProtectionMappings: OBJECT_IDENTIFIER = _OID.fromParts([4], modules);
 
 /* eslint-enable */

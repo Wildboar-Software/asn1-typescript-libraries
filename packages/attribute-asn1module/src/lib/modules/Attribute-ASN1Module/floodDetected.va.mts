@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const floodDetected: ProbableCause = { globalValue: new _OID([19,], arfProbableCause) };
+const floodDetected: ProbableCause = { globalValue: _OID.fromParts([19,], arfProbableCause) };
 
 /* eslint-enable */

@@ -47,7 +47,7 @@ export const attributeGroups: ATTRIBUTE<AttributeGroups> = {
     encoderFor: {
         '&Type': _encode_AttributeGroups,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [9],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

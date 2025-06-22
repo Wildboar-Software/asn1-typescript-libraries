@@ -28,7 +28,7 @@ import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo
  *
  * @constant
  */
-export const msSTM4SPICI: CharacteristicInformation = new _OID(
+export const msSTM4SPICI: CharacteristicInformation = _OID.fromParts(
     [9],
     characteristicInfo
 );

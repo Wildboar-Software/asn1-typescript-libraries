@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const id_telebio: OBJECT_IDENTIFIER = new _OID([
+export const id_telebio: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* telebiometrics */ 42,
 ]);

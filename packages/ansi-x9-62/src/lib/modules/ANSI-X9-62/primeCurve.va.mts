@@ -13,7 +13,7 @@ import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
  *
  * @constant
  */
-export const primeCurve: OBJECT_IDENTIFIER = new _OID(
+export const primeCurve: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* prime */ 1],
     ellipticCurve
 );

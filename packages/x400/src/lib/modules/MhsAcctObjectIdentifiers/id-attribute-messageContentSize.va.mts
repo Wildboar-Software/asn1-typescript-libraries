@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_messageContentSize: ID = new _OID([61], id_attribute);
+export const id_attribute_messageContentSize: ID = _OID.fromParts([61], id_attribute);
 
 /* eslint-enable */

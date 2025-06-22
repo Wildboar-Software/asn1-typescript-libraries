@@ -13,6 +13,6 @@ import { id_ldx } from "../UsefulDefinitions/id-ldx.va.mjs";
  *
  * @constant
  */
-export const id_ldx_certAssertion: OBJECT_IDENTIFIER = new _OID([2], id_ldx);
+export const id_ldx_certAssertion: OBJECT_IDENTIFIER = _OID.fromParts([2], id_ldx);
 
 /* eslint-enable */

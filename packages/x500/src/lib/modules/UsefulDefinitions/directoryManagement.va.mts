@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryManagement: ID = new _OID(
+export const directoryManagement: ID = _OID.fromParts(
     [/* directoryManagement */ 27, 9],
     module_
 );

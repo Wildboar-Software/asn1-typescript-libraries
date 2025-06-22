@@ -23,6 +23,6 @@ import { id_on } from '../IPMSObjectIdentifiers/id-on.va.mjs';
  *
  * @constant
  */
-export const id_on_change_of_address_advice: ID = new _OID([1], id_on);
+export const id_on_change_of_address_advice: ID = _OID.fromParts([1], id_on);
 
 /* eslint-enable */

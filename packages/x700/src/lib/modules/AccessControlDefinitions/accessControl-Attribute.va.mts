@@ -23,7 +23,7 @@ import {
  *
  * @constant
  */
-export const accessControl_Attribute: OBJECT_IDENTIFIER = new _OID([
+export const accessControl_Attribute: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* ms */ 9,
     /* function */ 2,

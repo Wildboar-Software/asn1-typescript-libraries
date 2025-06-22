@@ -13,7 +13,7 @@ import { id_cat } from "../UsefulDefinitions/id-cat.va.mjs";
  *
  * @constant
  */
-export const id_cat_characterMatchTypes: OBJECT_IDENTIFIER = new _OID(
+export const id_cat_characterMatchTypes: OBJECT_IDENTIFIER = _OID.fromParts(
     [3],
     id_cat
 );

@@ -24,6 +24,6 @@ import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.mjs';
  *
  * @constant
  */
-export const id_pkcs_9: OBJECT_IDENTIFIER = new _OID([/* pkcs-9 */ 9], id_pkcs);
+export const id_pkcs_9: OBJECT_IDENTIFIER = _OID.fromParts([/* pkcs-9 */ 9], id_pkcs);
 
 /* eslint-enable */

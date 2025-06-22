@@ -35,7 +35,7 @@ import {
  * @constant
  */
 export
-const id_spq_ets_unotice: OBJECT_IDENTIFIER = new _OID([
+const id_spq_ets_unotice: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const authenticationFramework: ID = new _OID(
+export const authenticationFramework: ID = _OID.fromParts(
     [/* authenticationFramework */ 7, 9],
     module_
 );

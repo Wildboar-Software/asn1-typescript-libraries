@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const dsaOperationalAttribute: ID = new _OID([12], ds);
+export const dsaOperationalAttribute: ID = _OID.fromParts([12], ds);
 
 /* eslint-enable */

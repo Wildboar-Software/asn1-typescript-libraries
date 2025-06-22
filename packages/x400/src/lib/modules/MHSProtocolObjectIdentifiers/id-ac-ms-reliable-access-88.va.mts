@@ -27,6 +27,6 @@ import { id_ac } from '../MHSProtocolObjectIdentifiers/id-ac.va.mjs';
  *
  * @constant
  */
-export const id_ac_ms_reliable_access_88: ID = new _OID([5], id_ac);
+export const id_ac_ms_reliable_access_88: ID = _OID.fromParts([5], id_ac);
 
 /* eslint-enable */

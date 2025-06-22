@@ -13,7 +13,7 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  *
  * @constant
  */
-export const id_lsx_matchingRuleUseDescription: OBJECT_IDENTIFIER = new _OID(
+export const id_lsx_matchingRuleUseDescription: OBJECT_IDENTIFIER = _OID.fromParts(
     [31],
     id_lsx
 );

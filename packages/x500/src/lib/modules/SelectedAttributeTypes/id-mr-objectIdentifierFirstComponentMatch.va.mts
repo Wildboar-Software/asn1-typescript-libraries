@@ -13,7 +13,7 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_objectIdentifierFirstComponentMatch: OBJECT_IDENTIFIER = new _OID(
+export const id_mr_objectIdentifierFirstComponentMatch: OBJECT_IDENTIFIER = _OID.fromParts(
     [30],
     id_mr
 );

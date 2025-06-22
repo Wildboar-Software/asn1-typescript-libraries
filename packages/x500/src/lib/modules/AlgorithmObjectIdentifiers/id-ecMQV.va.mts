@@ -14,7 +14,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_ecMQV: ID = new _OID(
+export const id_ecMQV: ID = _OID.fromParts(
     [/* schemes */ 1, /* ecmqv */ 13],
     certicom
 );

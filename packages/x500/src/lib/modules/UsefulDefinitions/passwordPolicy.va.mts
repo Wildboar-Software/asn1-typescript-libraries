@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const passwordPolicy: ID = new _OID(
+export const passwordPolicy: ID = _OID.fromParts(
     [/* passwordPolicy */ 39, 9],
     module_
 );

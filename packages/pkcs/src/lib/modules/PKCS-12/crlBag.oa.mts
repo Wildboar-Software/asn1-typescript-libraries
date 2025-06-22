@@ -26,7 +26,7 @@ export const crlBag: BAG_TYPE<CRLBag> = {
     encoderFor: {
         "&Type": _encode_CRLBag,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [4],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

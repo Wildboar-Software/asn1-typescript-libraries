@@ -14,6 +14,6 @@ import { internet } from "../UsefulDefinitions/internet.va.mjs";
  *
  * @constant
  */
-export const ldap_dir: ID = new _OID([/* directory */ 1], internet);
+export const ldap_dir: ID = _OID.fromParts([/* directory */ 1], internet);
 
 /* eslint-enable */

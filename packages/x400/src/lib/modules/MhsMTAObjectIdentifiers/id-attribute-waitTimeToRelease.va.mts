@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_waitTimeToRelease: ID = new _OID([166], id_attribute);
+export const id_attribute_waitTimeToRelease: ID = _OID.fromParts([166], id_attribute);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const eSReachabilityChange: OBJECT_IDENTIFIER = new _OID(
+export const eSReachabilityChange: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* informationtype */ 4, /* eSReachabilityChange */ 2],
     sseoi
 );

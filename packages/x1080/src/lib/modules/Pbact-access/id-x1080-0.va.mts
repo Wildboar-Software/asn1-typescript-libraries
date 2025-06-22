@@ -24,7 +24,7 @@ import { id_thprot } from '../Pbact-access/id-thprot.va.mjs';
  *
  * @constant
  */
-export const id_x1080_0: OBJECT_IDENTIFIER = new _OID(
+export const id_x1080_0: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* part0 */ 0],
     id_thprot
 );

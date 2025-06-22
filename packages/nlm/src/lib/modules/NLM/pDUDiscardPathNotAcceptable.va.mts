@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardPathNotAcceptable: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardPathNotAcceptable: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* pathNotAcceptable */ 147],
     pDUDiscard
 );

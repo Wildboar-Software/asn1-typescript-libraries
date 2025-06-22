@@ -28,7 +28,7 @@ import {
  * @constant
  */
 export
-const id_aa_er_internal: OBJECT_IDENTIFIER = new _OID([
+const id_aa_er_internal: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

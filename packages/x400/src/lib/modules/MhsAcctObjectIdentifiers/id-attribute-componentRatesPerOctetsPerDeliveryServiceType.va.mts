@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_componentRatesPerOctetsPerDeliveryServiceType: ID = new _OID(
+export const id_attribute_componentRatesPerOctetsPerDeliveryServiceType: ID = _OID.fromParts(
     [11],
     id_attribute
 );

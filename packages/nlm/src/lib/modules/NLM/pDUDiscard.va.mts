@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const pDUDiscard: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscard: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* specificProblems */ 3, /* pDUDiscard */ 1],
     sseoi
 );

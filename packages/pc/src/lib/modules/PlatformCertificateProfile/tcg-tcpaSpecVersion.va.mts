@@ -24,7 +24,7 @@ import { tcg } from "../PlatformCertificateProfile/tcg.va.mjs";
  * @constant
  */
 export
-const tcg_tcpaSpecVersion: OBJECT_IDENTIFIER = new _OID([
+const tcg_tcpaSpecVersion: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg);
 

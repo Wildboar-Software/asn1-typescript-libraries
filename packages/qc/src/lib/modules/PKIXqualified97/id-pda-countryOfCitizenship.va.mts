@@ -16,6 +16,6 @@ import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
  *
  * @constant
  */
-export const id_pda_countryOfCitizenship: AttributeType = new _OID([4], id_pda);
+export const id_pda_countryOfCitizenship: AttributeType = _OID.fromParts([4], id_pda);
 
 /* eslint-enable */

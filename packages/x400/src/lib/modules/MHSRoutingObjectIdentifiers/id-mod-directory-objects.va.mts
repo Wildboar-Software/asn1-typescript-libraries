@@ -27,6 +27,6 @@ import { id_mod } from '../MHSRoutingObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_directory_objects: ID = new _OID([1], id_mod);
+export const id_mod_directory_objects: ID = _OID.fromParts([1], id_mod);
 
 /* eslint-enable */

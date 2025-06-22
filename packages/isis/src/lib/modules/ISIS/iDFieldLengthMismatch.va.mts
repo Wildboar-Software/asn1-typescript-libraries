@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const iDFieldLengthMismatch: OBJECT_IDENTIFIER = new _OID(
+export const iDFieldLengthMismatch: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* iDFieldLengthMismatch */ 4],
   se
 );

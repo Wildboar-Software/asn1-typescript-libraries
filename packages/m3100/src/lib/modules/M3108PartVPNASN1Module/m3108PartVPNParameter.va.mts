@@ -24,7 +24,7 @@ import { m3108PartVPNInformationModel } from '../M3108PartVPNASN1Module/m3108Par
  *
  * @constant
  */
-export const m3108PartVPNParameter: OBJECT_IDENTIFIER = new _OID(
+export const m3108PartVPNParameter: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* parameter */ 6],
     m3108PartVPNInformationModel
 );

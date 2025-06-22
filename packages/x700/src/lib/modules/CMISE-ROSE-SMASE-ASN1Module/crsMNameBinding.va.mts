@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const crsMNameBinding: OBJECT_IDENTIFIER = new _OID(
+export const crsMNameBinding: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* smi */ 3, /* part9 */ 9, /* nameBinding */ 6],
     joint_iso_ccitt
 );

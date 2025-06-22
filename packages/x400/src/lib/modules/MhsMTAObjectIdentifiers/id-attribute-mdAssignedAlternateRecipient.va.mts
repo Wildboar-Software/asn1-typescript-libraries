@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_mdAssignedAlternateRecipient: ID = new _OID(
+export const id_attribute_mdAssignedAlternateRecipient: ID = _OID.fromParts(
     [61],
     id_attribute
 );

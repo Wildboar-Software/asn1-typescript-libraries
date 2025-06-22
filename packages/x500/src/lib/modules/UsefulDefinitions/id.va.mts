@@ -13,7 +13,7 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const id: ID = new _OID(
+export const id: ID = _OID.fromParts(
     [/* registration-procedures */ 17, /* module */ 1, /* directory-defs */ 2],
     joint_iso_itu_t
 );

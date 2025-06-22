@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const abstractSyntax: ID = new _OID([9], ds);
+export const abstractSyntax: ID = _OID.fromParts([9], ds);
 
 /* eslint-enable */

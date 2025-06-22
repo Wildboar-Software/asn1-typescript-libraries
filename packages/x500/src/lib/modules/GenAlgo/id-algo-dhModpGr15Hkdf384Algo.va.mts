@@ -13,7 +13,7 @@ import { id_algo_kea } from "../GenAlgo/id-algo-kea.va.mjs";
  *
  * @constant
  */
-export const id_algo_dhModpGr15Hkdf384Algo: OBJECT_IDENTIFIER = new _OID(
+export const id_algo_dhModpGr15Hkdf384Algo: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_algo_kea
 );

@@ -23,7 +23,7 @@ import { sseoi } from '../ISIS/sseoi.va.mjs';
  *
  * @constant
  */
-export const se: OBJECT_IDENTIFIER = new _OID(
+export const se: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* specificProblems */ 3],
   sseoi
 );

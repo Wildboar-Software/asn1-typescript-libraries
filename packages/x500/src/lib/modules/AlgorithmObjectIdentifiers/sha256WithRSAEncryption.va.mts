@@ -14,7 +14,7 @@ import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const sha256WithRSAEncryption: ID = new _OID(
+export const sha256WithRSAEncryption: ID = _OID.fromParts(
     [/* sha256WithRSAEncryption */ 11],
     pkcs_1
 );

@@ -52,7 +52,7 @@ export const registeredAs: ATTRIBUTE<RegisteredAs> = {
     },
     '&equality-match': objectIdentifierMatch /* OBJECT_FIELD_SETTING */,
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [33],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

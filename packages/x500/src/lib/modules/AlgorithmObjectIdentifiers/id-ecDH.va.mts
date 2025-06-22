@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_ecDH: ID = new _OID([/* schemes */ 1, /* ecdh */ 12], certicom);
+export const id_ecDH: ID = _OID.fromParts([/* schemes */ 1, /* ecdh */ 12], certicom);
 
 /* eslint-enable */

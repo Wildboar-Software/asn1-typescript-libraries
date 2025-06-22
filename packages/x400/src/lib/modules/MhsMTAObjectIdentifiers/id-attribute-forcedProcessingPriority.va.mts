@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_forcedProcessingPriority: ID = new _OID(
+export const id_attribute_forcedProcessingPriority: ID = _OID.fromParts(
     [38],
     id_attribute
 );

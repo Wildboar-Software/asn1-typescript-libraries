@@ -23,6 +23,6 @@ import { id_on } from '../IPMSObjectIdentifiers/id-on.va.mjs';
  *
  * @constant
  */
-export const id_on_absence_advice: ID = new _OID([0], id_on);
+export const id_on_absence_advice: ID = _OID.fromParts([0], id_on);
 
 /* eslint-enable */

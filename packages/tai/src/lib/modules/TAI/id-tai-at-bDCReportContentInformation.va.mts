@@ -24,7 +24,7 @@ import { id_tai_at } from "../TAI/id-tai-at.va.mjs";
  * @constant
  */
 export
-const id_tai_at_bDCReportContentInformation: OBJECT_IDENTIFIER = new _OID([
+const id_tai_at_bDCReportContentInformation: OBJECT_IDENTIFIER = _OID.fromParts([
     2,
 ], id_tai_at);
 

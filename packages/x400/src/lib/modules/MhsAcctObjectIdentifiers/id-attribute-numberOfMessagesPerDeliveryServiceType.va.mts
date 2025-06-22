@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_numberOfMessagesPerDeliveryServiceType: ID = new _OID(
+export const id_attribute_numberOfMessagesPerDeliveryServiceType: ID = _OID.fromParts(
     [75],
     id_attribute
 );

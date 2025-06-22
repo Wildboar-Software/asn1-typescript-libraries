@@ -14,6 +14,6 @@ import { id_smime } from "../SecureMimeMessageV3dot1-2009/id-smime.va.mjs";
  *
  * @constant
  */
-export const id_cap: OBJECT_IDENTIFIER = new _OID([11], id_smime);
+export const id_cap: OBJECT_IDENTIFIER = _OID.fromParts([11], id_smime);
 
 /* eslint-enable */

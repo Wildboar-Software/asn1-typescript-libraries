@@ -23,6 +23,6 @@ import { id_iso_mod } from '../IPMSObjectIdentifiers2/id-iso-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_extended_body_part_types_2: ID = new _OID([1], id_iso_mod);
+export const id_mod_extended_body_part_types_2: ID = _OID.fromParts([1], id_iso_mod);
 
 /* eslint-enable */

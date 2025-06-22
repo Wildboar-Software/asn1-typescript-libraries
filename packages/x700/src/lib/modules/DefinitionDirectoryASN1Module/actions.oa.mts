@@ -49,7 +49,7 @@ export const actions: ATTRIBUTE<Actions> = {
         '&Type': _encode_Actions,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [6],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardReassemblyInterference: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardReassemblyInterference: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* reassemblyInterference */ 181],
     pDUDiscard
 );

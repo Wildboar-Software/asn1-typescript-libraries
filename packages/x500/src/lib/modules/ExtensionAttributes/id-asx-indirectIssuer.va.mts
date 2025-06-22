@@ -13,7 +13,7 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_asx_indirectIssuer: OBJECT_IDENTIFIER = new _OID(
+export const id_asx_indirectIssuer: OBJECT_IDENTIFIER = _OID.fromParts(
     [61, 2],
     id_ce
 );

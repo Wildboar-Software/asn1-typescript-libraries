@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const selectWeightOID: OBJECT_IDENTIFIER = new _OID(
+export const selectWeightOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* selectWeight */ 30],
     timeManagement
 );

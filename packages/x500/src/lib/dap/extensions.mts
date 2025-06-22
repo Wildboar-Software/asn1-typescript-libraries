@@ -98,7 +98,7 @@ const extensions: Record<string, ExtensionInfo> = {
         identifier: EXT_BIT_SUBENTRIES,
         operations: ALL_OPERATIONS,
         critical: NON_CRITICAL,
-        ldapControl: new ObjectIdentifier([ 1, 3, 6, 1, 4, 1, 4203, 1, 10, 1 ]),
+        ldapControl: ObjectIdentifier.fromParts([ 1, 3, 6, 1, 4, 1, 4203, 1, 10, 1 ]),
     },
     copyShallDo: {
         identifier: EXT_BIT_COPY_SHALL_DO,
@@ -140,7 +140,7 @@ const extensions: Record<string, ExtensionInfo> = {
             search: true,
         },
         critical: NON_CRITICAL,
-        ldapControl: new ObjectIdentifier([ 1, 2, 840, 113556, 1, 4, 319 ]),
+        ldapControl: ObjectIdentifier.fromParts([ 1, 2, 840, 113556, 1, 4, 319 ]),
     },
     matchedValuesOnly: {
         identifier: EXT_BIT_MATCHED_VALUES_ONLY,
@@ -148,7 +148,7 @@ const extensions: Record<string, ExtensionInfo> = {
             read: true,
         },
         critical: NON_CRITICAL,
-        ldapControl: new ObjectIdentifier([ 1, 2, 826, 0, 1, 3344810, 2, 3 ]),
+        ldapControl: ObjectIdentifier.fromParts([ 1, 2, 826, 0, 1, 3344810, 2, 3 ]),
     },
     extendedFilter: {
         identifier: EXT_BIT_EXTENDED_FILTER,
@@ -182,7 +182,7 @@ const extensions: Record<string, ExtensionInfo> = {
         identifier: EXT_BIT_MANAGE_DSA_IT,
         operations: ALL_OPERATIONS,
         critical: CRITICAL,
-        ldapControl: new ObjectIdentifier([ 2, 16, 840, 1, 113730, 3, 4, 2 ]),
+        ldapControl: ObjectIdentifier.fromParts([ 2, 16, 840, 1, 113730, 3, 4, 2 ]),
     },
     "Use of contexts": {
         identifier: EXT_BIT_USE_OF_CONTEXTS,
@@ -309,7 +309,7 @@ const extensions: Record<string, ExtensionInfo> = {
             modifyEntry: true,
         },
         critical: CRITICAL,
-        ldapControl: new ObjectIdentifier([ 1, 3, 6, 1, 1, 14 ]),
+        ldapControl: ObjectIdentifier.fromParts([ 1, 3, 6, 1, 1, 14 ]),
     },
 };
 

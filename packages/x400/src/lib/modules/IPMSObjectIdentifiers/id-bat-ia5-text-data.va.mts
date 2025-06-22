@@ -23,6 +23,6 @@ import { id_bat } from '../IPMSObjectIdentifiers/id-bat.va.mjs';
  *
  * @constant
  */
-export const id_bat_ia5_text_data: ID = new _OID([20], id_bat);
+export const id_bat_ia5_text_data: ID = _OID.fromParts([20], id_bat);
 
 /* eslint-enable */

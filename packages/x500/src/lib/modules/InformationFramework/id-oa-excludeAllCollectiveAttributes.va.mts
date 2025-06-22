@@ -13,7 +13,7 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_excludeAllCollectiveAttributes: OBJECT_IDENTIFIER = new _OID(
+export const id_oa_excludeAllCollectiveAttributes: OBJECT_IDENTIFIER = _OID.fromParts(
     [0],
     id_oa
 );

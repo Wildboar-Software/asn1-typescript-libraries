@@ -15,6 +15,6 @@ import { signcryption } from "../CMSObjectIdentifiers/signcryption.va.mjs";
  *
  * @constant
  */
-export const signcryption_mode: OID = new _OID([/* modes */ 1], signcryption);
+export const signcryption_mode: OID = _OID.fromParts([/* modes */ 1], signcryption);
 
 /* eslint-enable */

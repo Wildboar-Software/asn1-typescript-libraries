@@ -24,6 +24,6 @@ import { id_obj_cat } from '../Telebiometrics/id-obj-cat.va.mjs';
  *
  * @constant
  */
-export const id_lab: OBJECT_IDENTIFIER = new _OID([/* lab */ 5], id_obj_cat);
+export const id_lab: OBJECT_IDENTIFIER = _OID.fromParts([/* lab */ 5], id_obj_cat);
 
 /* eslint-enable */

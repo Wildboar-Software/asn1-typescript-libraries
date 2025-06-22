@@ -23,6 +23,6 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_adjMTAPackage: ID = new _OID([0], id_package);
+export const id_package_adjMTAPackage: ID = _OID.fromParts([0], id_package);
 
 /* eslint-enable */

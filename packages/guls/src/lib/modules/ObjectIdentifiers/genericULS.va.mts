@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const genericULS: OBJECT_IDENTIFIER = new _OID(
+export const genericULS: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* genericULS */ 20],
   joint_iso_itu_t
 );

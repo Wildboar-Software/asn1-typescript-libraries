@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_reportROACAlg: ID = new _OID([144], id_attribute);
+export const id_attribute_reportROACAlg: ID = _OID.fromParts([144], id_attribute);
 
 /* eslint-enable */

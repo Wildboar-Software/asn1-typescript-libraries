@@ -23,6 +23,6 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_expiry_time: ID = new _OID([8], id_hat);
+export const id_hat_expiry_time: ID = _OID.fromParts([8], id_hat);
 
 /* eslint-enable */

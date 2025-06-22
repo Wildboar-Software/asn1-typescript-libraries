@@ -23,6 +23,6 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_file_transfer_body_part_type: ID = new _OID([9], id_mod);
+export const id_mod_file_transfer_body_part_type: ID = _OID.fromParts([9], id_mod);
 
 /* eslint-enable */

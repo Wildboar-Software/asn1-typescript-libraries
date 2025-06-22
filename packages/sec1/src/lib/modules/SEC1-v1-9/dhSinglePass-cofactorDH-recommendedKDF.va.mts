@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const dhSinglePass_cofactorDH_recommendedKDF: OBJECT_IDENTIFIER = new _OID([
+const dhSinglePass_cofactorDH_recommendedKDF: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], secg_scheme);
 

@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const dop: ID = new _OID([/* dop */ 17, 7], module_);
+export const dop: ID = _OID.fromParts([/* dop */ 17, 7], module_);
 
 /* eslint-enable */

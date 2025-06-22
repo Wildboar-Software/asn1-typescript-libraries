@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_signatureGeneration: ID = new _OID(
+export const id_attribute_signatureGeneration: ID = _OID.fromParts(
     [118],
     id_attribute
 );

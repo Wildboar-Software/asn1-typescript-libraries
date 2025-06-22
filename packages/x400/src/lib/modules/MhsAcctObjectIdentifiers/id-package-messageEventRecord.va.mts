@@ -23,6 +23,6 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_messageEventRecord: ID = new _OID([27], id_package);
+export const id_package_messageEventRecord: ID = _OID.fromParts([27], id_package);
 
 /* eslint-enable */

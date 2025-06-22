@@ -37,7 +37,7 @@ export const mts_88: MHS_OBJECT = {
     encoderFor: {},
     '&Initiates': [mts_forced_access_contract_88] /* OBJECT_FIELD_SETTING */,
     '&Responds': [mts_access_contract_88] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [88],
         id_ot_mts
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

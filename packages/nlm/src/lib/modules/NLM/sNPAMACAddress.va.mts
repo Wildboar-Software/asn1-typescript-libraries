@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const sNPAMACAddress: OBJECT_IDENTIFIER = new _OID(
+export const sNPAMACAddress: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* sNPAAddressType */ 5, /* mACAddress */ 2],
     sseoi
 );

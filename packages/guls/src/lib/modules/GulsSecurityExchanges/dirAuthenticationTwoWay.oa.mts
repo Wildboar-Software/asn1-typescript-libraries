@@ -44,7 +44,7 @@ export const dirAuthenticationTwoWay: SECURITY_EXCHANGE = {
     responderCredentials,
   ] /* OBJECT_FIELD_SETTING */,
   '&sE-Identifier': {
-    global: new _OID([/* dir-authent-two-way */ 2], securityExchanges),
+    global: _OID.fromParts([/* dir-authent-two-way */ 2], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

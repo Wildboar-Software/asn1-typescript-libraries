@@ -13,7 +13,7 @@ import { id_oat } from "../UsefulDefinitions/id-oat.va.mjs";
  *
  * @constant
  */
-export const id_oat_supportedFeatures: OBJECT_IDENTIFIER = new _OID(
+export const id_oat_supportedFeatures: OBJECT_IDENTIFIER = _OID.fromParts(
     [5],
     id_oat
 );

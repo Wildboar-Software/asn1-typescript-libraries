@@ -15,6 +15,6 @@ import { id_at } from "@wildboar/x500/src/lib/modules/UsefulDefinitions/id-at.va
  *
  * @constant
  */
-export const id_at_pseudonym: OBJECT_IDENTIFIER = new _OID([65], id_at);
+export const id_at_pseudonym: OBJECT_IDENTIFIER = _OID.fromParts([65], id_at);
 
 /* eslint-enable */

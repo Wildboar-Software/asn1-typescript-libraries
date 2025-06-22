@@ -14,7 +14,7 @@ import { internet } from "../UsefulDefinitions/internet.va.mjs";
  *
  * @constant
  */
-export const ldap_enterprise: ID = new _OID(
+export const ldap_enterprise: ID = _OID.fromParts(
     [/* private */ 4, /* enterprise */ 1],
     internet
 );

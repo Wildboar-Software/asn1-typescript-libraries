@@ -30,7 +30,7 @@ export const safeContentsBag: BAG_TYPE<SafeContents> = {
     encoderFor: {
         "&Type": _encode_SafeContents,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [6],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

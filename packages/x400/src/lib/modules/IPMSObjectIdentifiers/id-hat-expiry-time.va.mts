@@ -23,6 +23,6 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_expiry_time: ID = new _OID([5], id_hat);
+export const id_hat_expiry_time: ID = _OID.fromParts([5], id_hat);
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const distributedDirectoryObjectIdentifiers: ID = new _OID(
+export const distributedDirectoryObjectIdentifiers: ID = _OID.fromParts(
     [13],
     module_
 );

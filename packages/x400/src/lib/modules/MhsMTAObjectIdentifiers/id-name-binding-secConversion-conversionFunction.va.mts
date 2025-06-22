@@ -23,7 +23,7 @@ import { id_name_binding } from '../MhsMTAObjectIdentifiers/id-name-binding.va.m
  *
  * @constant
  */
-export const id_name_binding_secConversion_conversionFunction: ID = new _OID(
+export const id_name_binding_secConversion_conversionFunction: ID = _OID.fromParts(
     [21],
     id_name_binding
 );

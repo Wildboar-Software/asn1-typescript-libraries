@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const dap: ID = new _OID([/* dap */ 11, 9], module_);
+export const dap: ID = _OID.fromParts([/* dap */ 11, 9], module_);
 
 /* eslint-enable */

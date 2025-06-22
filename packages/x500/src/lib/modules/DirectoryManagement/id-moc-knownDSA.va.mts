@@ -13,6 +13,6 @@ import { id_moc } from "../DirectoryManagement/id-moc.va.mjs";
  *
  * @constant
  */
-export const id_moc_knownDSA: OBJECT_IDENTIFIER = new _OID([2], id_moc);
+export const id_moc_knownDSA: OBJECT_IDENTIFIER = _OID.fromParts([2], id_moc);
 
 /* eslint-enable */

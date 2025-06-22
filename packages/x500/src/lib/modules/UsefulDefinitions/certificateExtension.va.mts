@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const certificateExtension: ID = new _OID([29], ds);
+export const certificateExtension: ID = _OID.fromParts([29], ds);
 
 /* eslint-enable */

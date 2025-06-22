@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_disallowedMessages: ID = new _OID([34], id_attribute);
+export const id_attribute_disallowedMessages: ID = _OID.fromParts([34], id_attribute);
 
 /* eslint-enable */

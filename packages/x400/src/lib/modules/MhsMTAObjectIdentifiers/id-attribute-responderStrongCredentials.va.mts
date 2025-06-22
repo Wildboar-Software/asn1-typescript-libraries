@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_responderStrongCredentials: ID = new _OID(
+export const id_attribute_responderStrongCredentials: ID = _OID.fromParts(
     [148],
     id_attribute
 );

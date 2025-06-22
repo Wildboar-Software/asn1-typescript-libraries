@@ -23,6 +23,6 @@ import { id_ms } from '../MHSObjectIdentifiers/id-ms.va.mjs';
  *
  * @constant
  */
-export const id_ot: ID = new _OID([1], id_ms);
+export const id_ot: ID = _OID.fromParts([1], id_ms);
 
 /* eslint-enable */

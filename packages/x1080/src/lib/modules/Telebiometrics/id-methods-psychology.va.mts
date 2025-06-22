@@ -24,7 +24,7 @@ import { id_methods } from '../Telebiometrics/id-methods.va.mjs';
  *
  * @constant
  */
-export const id_methods_psychology: OBJECT_IDENTIFIER = new _OID(
+export const id_methods_psychology: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* psychology */ 5],
     id_methods
 );

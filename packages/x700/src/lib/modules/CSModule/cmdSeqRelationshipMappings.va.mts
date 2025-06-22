@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const cmdSeqRelationshipMappings: OBJECT_IDENTIFIER = new _OID(
+export const cmdSeqRelationshipMappings: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

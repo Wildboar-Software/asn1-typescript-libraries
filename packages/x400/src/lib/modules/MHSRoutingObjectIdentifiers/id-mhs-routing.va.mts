@@ -27,7 +27,7 @@ import {
  *
  * @constant
  */
-export const id_mhs_routing: ID = new _OID(
+export const id_mhs_routing: ID = _OID.fromParts(
     [/* mhs */ 6, /* routing */ 10],
     joint_iso_itu_t
 );

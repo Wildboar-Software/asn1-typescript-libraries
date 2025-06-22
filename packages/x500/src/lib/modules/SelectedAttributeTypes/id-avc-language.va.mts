@@ -13,6 +13,6 @@ import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
  *
  * @constant
  */
-export const id_avc_language: OBJECT_IDENTIFIER = new _OID([0], id_avc);
+export const id_avc_language: OBJECT_IDENTIFIER = _OID.fromParts([0], id_avc);
 
 /* eslint-enable */

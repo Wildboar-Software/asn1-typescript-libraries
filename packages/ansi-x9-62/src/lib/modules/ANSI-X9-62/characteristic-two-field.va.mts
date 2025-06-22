@@ -14,7 +14,7 @@ import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.mjs";
  *
  * @constant
  */
-export const characteristic_two_field: OBJECT_IDENTIFIER = new _OID(
+export const characteristic_two_field: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* characteristic-two */ 2],
     id_fieldType
 );

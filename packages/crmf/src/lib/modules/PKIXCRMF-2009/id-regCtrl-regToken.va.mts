@@ -14,6 +14,6 @@ import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.mjs";
  *
  * @constant
  */
-export const id_regCtrl_regToken: OBJECT_IDENTIFIER = new _OID([1], id_regCtrl);
+export const id_regCtrl_regToken: OBJECT_IDENTIFIER = _OID.fromParts([1], id_regCtrl);
 
 /* eslint-enable */

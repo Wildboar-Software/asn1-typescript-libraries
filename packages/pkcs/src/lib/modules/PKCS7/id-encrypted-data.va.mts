@@ -14,6 +14,6 @@ import { id_pkcs } from "../PKCS7/id-pkcs.va.mjs";
  *
  * @constant
  */
-export const id_encrypted_data: OBJECT_IDENTIFIER = new _OID([7, 6], id_pkcs);
+export const id_encrypted_data: OBJECT_IDENTIFIER = _OID.fromParts([7, 6], id_pkcs);
 
 /* eslint-enable */

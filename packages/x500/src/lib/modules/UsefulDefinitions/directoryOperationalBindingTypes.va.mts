@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryOperationalBindingTypes: ID = new _OID(
+export const directoryOperationalBindingTypes: ID = _OID.fromParts(
     [/* directoryOperationalBindingTypes */ 25, 9],
     module_
 );

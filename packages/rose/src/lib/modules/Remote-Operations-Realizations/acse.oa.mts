@@ -47,7 +47,7 @@ export const acse: REALIZATION<RealizationParameter> = {
   encoderFor: {
     '&Type': _encode_RealizationParameter,
   },
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [
       /* remote-operations */ 4,
       /* association-realizations */ 10,

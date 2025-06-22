@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardDestinationAddressUnknown: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardDestinationAddressUnknown: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* destinationAddressUnknown */ 129],
     pDUDiscard
 );

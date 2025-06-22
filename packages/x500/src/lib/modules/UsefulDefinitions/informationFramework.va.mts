@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const informationFramework: ID = new _OID(
+export const informationFramework: ID = _OID.fromParts(
     [/* informationFramework */ 1, 9],
     module_
 );

@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_tokenizedParts: OID = new _OID(
+export const id_tokenizedParts: OID = _OID.fromParts(
     [/* tokenizedParts */ 0],
     id_tokenization_manifest
 );

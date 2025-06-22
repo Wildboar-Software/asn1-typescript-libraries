@@ -14,7 +14,7 @@ import { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va.mjs";
  *
  * @constant
  */
-export const des_EDE3_CBC: OBJECT_IDENTIFIER = new _OID(
+export const des_EDE3_CBC: OBJECT_IDENTIFIER = _OID.fromParts(
     [7],
     encryptionAlgorithm
 );

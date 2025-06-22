@@ -14,7 +14,7 @@ import { id_cap } from "../SecureMimeMessageV3dot1-2009/id-cap.va.mjs";
  *
  * @constant
  */
-export const id_cap_preferBinaryInside: OBJECT_IDENTIFIER = new _OID(
+export const id_cap_preferBinaryInside: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_cap
 );

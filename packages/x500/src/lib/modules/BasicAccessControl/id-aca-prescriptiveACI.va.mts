@@ -13,6 +13,6 @@ import { id_aca } from "../UsefulDefinitions/id-aca.va.mjs";
  *
  * @constant
  */
-export const id_aca_prescriptiveACI: OBJECT_IDENTIFIER = new _OID([4], id_aca);
+export const id_aca_prescriptiveACI: OBJECT_IDENTIFIER = _OID.fromParts([4], id_aca);
 
 /* eslint-enable */

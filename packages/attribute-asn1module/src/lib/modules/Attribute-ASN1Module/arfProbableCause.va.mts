@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const arfProbableCause: OBJECT_IDENTIFIER = new _OID([
+const arfProbableCause: OBJECT_IDENTIFIER = _OID.fromParts([
     /* ms */ 9,
     /* smi */ 3,
     /* part2 */ 2,

@@ -13,6 +13,6 @@ import { id_as } from "../UsefulDefinitions/id-as.va.mjs";
  *
  * @constant
  */
-export const id_as_directoryShadowAS: OBJECT_IDENTIFIER = new _OID([3], id_as);
+export const id_as_directoryShadowAS: OBJECT_IDENTIFIER = _OID.fromParts([3], id_as);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const maximumStratumOID: OBJECT_IDENTIFIER = new _OID(
+export const maximumStratumOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* maximumStratum */ 23],
     timeManagement
 );

@@ -23,6 +23,6 @@ import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
  *
  * @constant
  */
-export const id_voice_g728_16k_ld_celp: ID = new _OID([5], id_eit_voice);
+export const id_voice_g728_16k_ld_celp: ID = _OID.fromParts([5], id_eit_voice);
 
 /* eslint-enable */

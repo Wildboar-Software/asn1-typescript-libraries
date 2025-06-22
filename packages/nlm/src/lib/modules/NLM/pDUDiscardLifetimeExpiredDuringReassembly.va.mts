@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardLifetimeExpiredDuringReassembly: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardLifetimeExpiredDuringReassembly: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* lifetimeExpiredDuringReassembly */ 161],
     pDUDiscard
 );

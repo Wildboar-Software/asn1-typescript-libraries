@@ -14,6 +14,6 @@ import { pkcs_9 } from "../PKCS-9/pkcs-9.va.mjs";
  *
  * @constant
  */
-export const pkcs_9_at_friendlyName: OBJECT_IDENTIFIER = new _OID([20], pkcs_9);
+export const pkcs_9_at_friendlyName: OBJECT_IDENTIFIER = _OID.fromParts([20], pkcs_9);
 
 /* eslint-enable */

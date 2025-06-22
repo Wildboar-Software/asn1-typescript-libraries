@@ -15,6 +15,6 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  *
  * @constant
  */
-export const id_contentType: OID = new _OID([/* contentType */ 3], pkcs9);
+export const id_contentType: OID = _OID.fromParts([/* contentType */ 3], pkcs9);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const protocolResetActionOID: OBJECT_IDENTIFIER = new _OID(
+export const protocolResetActionOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* action */ 9, /* protocolResetAction */ 3],
     timeManagement
 );

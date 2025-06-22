@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const maximumSkewOID: OBJECT_IDENTIFIER = new _OID(
+export const maximumSkewOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* maximumSkew */ 22],
     timeManagement
 );

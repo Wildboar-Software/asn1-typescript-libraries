@@ -14,6 +14,6 @@ import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
  *
  * @constant
  */
-export const hashAlgorithm: ID = new _OID([2], algorithm);
+export const hashAlgorithm: ID = _OID.fromParts([2], algorithm);
 
 /* eslint-enable */

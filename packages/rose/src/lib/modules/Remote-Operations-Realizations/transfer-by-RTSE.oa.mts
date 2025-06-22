@@ -46,7 +46,7 @@ export const transfer_by_RTSE: REALIZATION<RealizationParameter> = {
   encoderFor: {
     '&Type': _encode_RealizationParameter,
   },
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [
       /* remote-operations */ 4,
       /* transfer-realizations */ 11,

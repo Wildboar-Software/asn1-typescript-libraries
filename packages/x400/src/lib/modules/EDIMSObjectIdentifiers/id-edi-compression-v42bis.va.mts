@@ -23,6 +23,6 @@ import { id_edi } from '../EDIMSObjectIdentifiers/id-edi.va.mjs';
  *
  * @constant
  */
-export const id_edi_compression_v42bis: ID = new _OID([1], id_edi);
+export const id_edi_compression_v42bis: ID = _OID.fromParts([1], id_edi);
 
 /* eslint-enable */

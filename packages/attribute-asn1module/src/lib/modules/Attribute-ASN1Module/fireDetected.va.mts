@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const fireDetected: ProbableCause = { globalValue: new _OID([18,], arfProbableCause) };
+const fireDetected: ProbableCause = { globalValue: _OID.fromParts([18,], arfProbableCause) };
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_chRemoveEntryOpsProc: OBJECT_IDENTIFIER = new _OID(
+export const id_mat_chRemoveEntryOpsProc: OBJECT_IDENTIFIER = _OID.fromParts(
     [44],
     id_mat
 );

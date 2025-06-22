@@ -15,6 +15,6 @@ import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-mani
  *
  * @constant
  */
-export const xPath: OID = new _OID([/* xPath */ 0], signcryption_manifest);
+export const xPath: OID = _OID.fromParts([/* xPath */ 0], signcryption_manifest);
 
 /* eslint-enable */

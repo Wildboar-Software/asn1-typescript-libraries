@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const x790Attribute: OBJECT_IDENTIFIER = new _OID([
+export const x790Attribute: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* recommendation */ 0,
     /* x */ 24,

@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const passwordQuality: ID = new _OID([39], ds);
+export const passwordQuality: ID = _OID.fromParts([39], ds);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_permissibleSecurityContext: ID = new _OID(
+export const id_attribute_permissibleSecurityContext: ID = _OID.fromParts(
     [85],
     id_attribute
 );

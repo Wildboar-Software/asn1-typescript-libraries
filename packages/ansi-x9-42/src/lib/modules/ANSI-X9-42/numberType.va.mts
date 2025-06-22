@@ -14,7 +14,7 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  *
  * @constant
  */
-export const numberType: OBJECT_IDENTIFIER = new _OID(
+export const numberType: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* numberTypes */ 2],
     ansi_X9_42
 );

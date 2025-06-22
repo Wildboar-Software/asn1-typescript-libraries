@@ -23,6 +23,6 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  *
  * @constant
  */
-export const id_bat_edi_body_part: ID = new _OID([2], id_bat);
+export const id_bat_edi_body_part: ID = _OID.fromParts([2], id_bat);
 
 /* eslint-enable */

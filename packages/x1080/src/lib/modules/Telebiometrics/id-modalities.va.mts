@@ -24,7 +24,7 @@ import { id_tmm } from '../Telebiometrics/id-tmm.va.mjs';
  *
  * @constant
  */
-export const id_modalities: OBJECT_IDENTIFIER = new _OID(
+export const id_modalities: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* sensory */ 3],
     id_tmm
 );

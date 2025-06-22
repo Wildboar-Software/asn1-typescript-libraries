@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_groupAC: OBJECT_IDENTIFIER = new _OID([66], id_ce);
+export const id_ce_groupAC: OBJECT_IDENTIFIER = _OID.fromParts([66], id_ce);
 
 /* eslint-enable */

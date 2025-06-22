@@ -27,6 +27,6 @@ import { id_mhs_routing } from '../MHSRoutingObjectIdentifiers/id-mhs-routing.va
  *
  * @constant
  */
-export const id_oc: ID = new _OID([1], id_mhs_routing);
+export const id_oc: ID = _OID.fromParts([1], id_mhs_routing);
 
 /* eslint-enable */

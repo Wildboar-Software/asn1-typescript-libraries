@@ -23,6 +23,6 @@ import { id_con } from '../MHSObjectIdentifiers/id-con.va.mjs';
  *
  * @constant
  */
-export const id_con_dl_nested_dl: ID = new _OID([1], id_con);
+export const id_con_dl_nested_dl: ID = _OID.fromParts([1], id_con);
 
 /* eslint-enable */

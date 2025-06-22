@@ -13,7 +13,7 @@ import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
  *
  * @constant
  */
-export const id_mnb_nHOB_name_binding: OBJECT_IDENTIFIER = new _OID(
+export const id_mnb_nHOB_name_binding: OBJECT_IDENTIFIER = _OID.fromParts(
     [6],
     id_mnb
 );

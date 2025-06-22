@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryShadowOIDs: ID = new _OID(
+export const directoryShadowOIDs: ID = _OID.fromParts(
     [/* directoryShadowOIDs */ 14, 9],
     module_
 );

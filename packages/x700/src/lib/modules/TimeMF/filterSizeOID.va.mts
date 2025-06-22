@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const filterSizeOID: OBJECT_IDENTIFIER = new _OID(
+export const filterSizeOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* filterSize */ 12],
     timeManagement
 );

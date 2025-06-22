@@ -23,6 +23,6 @@ import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
  *
  * @constant
  */
-export const id_aae_duplicate_edin: ID = new _OID([1], id_aae);
+export const id_aae_duplicate_edin: ID = _OID.fromParts([1], id_aae);
 
 /* eslint-enable */

@@ -23,6 +23,6 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  *
  * @constant
  */
-export const id_ep_encrypted: ID = new _OID([6], id_ep);
+export const id_ep_encrypted: ID = _OID.fromParts([6], id_ep);
 
 /* eslint-enable */

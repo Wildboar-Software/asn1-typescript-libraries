@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_attributeMappings: OBJECT_IDENTIFIER = new _OID([68], id_ce);
+export const id_ce_attributeMappings: OBJECT_IDENTIFIER = _OID.fromParts([68], id_ce);
 
 /* eslint-enable */

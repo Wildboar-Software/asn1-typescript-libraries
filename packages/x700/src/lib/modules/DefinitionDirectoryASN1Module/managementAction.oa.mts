@@ -59,7 +59,7 @@ export const managementAction: OBJECT_CLASS = {
         withReplySyntax,
         registeredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [13],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

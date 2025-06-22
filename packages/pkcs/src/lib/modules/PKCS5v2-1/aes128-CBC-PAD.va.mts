@@ -14,6 +14,6 @@ import { aes } from "../PKCS5v2-1/aes.va.mjs";
  *
  * @constant
  */
-export const aes128_CBC_PAD: OBJECT_IDENTIFIER = new _OID([2], aes);
+export const aes128_CBC_PAD: OBJECT_IDENTIFIER = _OID.fromParts([2], aes);
 
 /* eslint-enable */

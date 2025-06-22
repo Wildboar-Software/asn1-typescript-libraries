@@ -13,7 +13,7 @@ import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
  *
  * @constant
  */
-export const id_sc_accessControlSubentry: OBJECT_IDENTIFIER = new _OID(
+export const id_sc_accessControlSubentry: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_sc
 );

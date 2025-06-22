@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_reportSecurityLabel: ID = new _OID(
+export const id_attribute_reportSecurityLabel: ID = _OID.fromParts(
     [145],
     id_attribute
 );

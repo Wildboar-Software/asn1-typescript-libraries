@@ -14,6 +14,6 @@ import { internet } from "../UsefulDefinitions/internet.va.mjs";
  *
  * @constant
  */
-export const intSecurity: ID = new _OID([/* security */ 5], internet);
+export const intSecurity: ID = _OID.fromParts([/* security */ 5], internet);
 
 /* eslint-enable */

@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const cpuCyclesLimitExceeded: ProbableCause = { globalValue: new _OID([10,], arfProbableCause) };
+const cpuCyclesLimitExceeded: ProbableCause = { globalValue: _OID.fromParts([10,], arfProbableCause) };
 
 /* eslint-enable */

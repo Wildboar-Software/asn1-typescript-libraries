@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_ecPublicKey: ID = new _OID([/* keyType */ 2, 1], ansi_x9_62);
+export const id_ecPublicKey: ID = _OID.fromParts([/* keyType */ 2, 1], ansi_x9_62);
 
 /* eslint-enable */

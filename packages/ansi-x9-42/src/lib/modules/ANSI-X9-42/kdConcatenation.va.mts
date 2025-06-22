@@ -14,7 +14,7 @@ import { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va.mjs";
  *
  * @constant
  */
-export const kdConcatenation: OBJECT_IDENTIFIER = new _OID(
+export const kdConcatenation: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* concatenation */ 1],
     keyDerivationMethod
 );

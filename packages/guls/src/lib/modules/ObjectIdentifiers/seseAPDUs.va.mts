@@ -24,6 +24,6 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const seseAPDUs: OBJECT_IDENTIFIER = new _OID([6], modules);
+export const seseAPDUs: OBJECT_IDENTIFIER = _OID.fromParts([6], modules);
 
 /* eslint-enable */

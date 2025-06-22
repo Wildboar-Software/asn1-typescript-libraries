@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const hierarchicalOperationalBindings: ID = new _OID(
+export const hierarchicalOperationalBindings: ID = _OID.fromParts(
     [/* hierarchicalOperationalBindings */ 20, 9],
     module_
 );

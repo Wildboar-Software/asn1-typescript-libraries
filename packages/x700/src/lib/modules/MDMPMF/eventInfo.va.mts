@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const eventInfo: OBJECT_IDENTIFIER = new _OID(
+export const eventInfo: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

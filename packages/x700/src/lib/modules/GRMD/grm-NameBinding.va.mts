@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const grm_NameBinding: OBJECT_IDENTIFIER = new _OID(
+export const grm_NameBinding: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* smi */ 3, /* part7 */ 7, /* nameBinding */ 6],
     joint_iso_itu_t
 );

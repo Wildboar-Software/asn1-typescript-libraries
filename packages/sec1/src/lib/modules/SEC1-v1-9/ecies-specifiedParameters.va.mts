@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const ecies_specifiedParameters: OBJECT_IDENTIFIER = new _OID([
+const ecies_specifiedParameters: OBJECT_IDENTIFIER = _OID.fromParts([
     8,
 ], secg_scheme);
 

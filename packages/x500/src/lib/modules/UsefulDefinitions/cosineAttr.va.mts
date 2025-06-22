@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const cosineAttr: ID = new _OID([/* pilotAttributeType */ 1], cosine);
+export const cosineAttr: ID = _OID.fromParts([/* pilotAttributeType */ 1], cosine);
 
 /* eslint-enable */

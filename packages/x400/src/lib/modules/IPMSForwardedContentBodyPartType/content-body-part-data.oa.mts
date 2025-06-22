@@ -43,7 +43,7 @@ export function content_body_part_data (content_type: ExtendedContentType): TYPE
         encoderFor: {
             '&Type': _encode_Content,
         },
-        '&id': new _OID(
+        '&id': _OID.fromParts(
             content_type,
             id_et_content
         ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

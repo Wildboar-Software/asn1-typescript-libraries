@@ -14,6 +14,6 @@ import { us_iso } from "../AlgorithmObjectIdentifiers/us-iso.va.mjs";
  *
  * @constant
  */
-export const ansi_x9_57: ID = new _OID([/* ansi-x9-57 */ 10040], us_iso);
+export const ansi_x9_57: ID = _OID.fromParts([/* ansi-x9-57 */ 10040], us_iso);
 
 /* eslint-enable */

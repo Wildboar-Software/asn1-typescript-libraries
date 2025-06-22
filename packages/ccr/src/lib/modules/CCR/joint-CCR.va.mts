@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const joint_CCR: OBJECT_IDENTIFIER = new _OID(
+export const joint_CCR: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* ccr */ 7],
   joint_iso_itu_t
 );

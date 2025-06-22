@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_recipient_reassignment_prohibited: ID = new _OID(
+export const id_att_recipient_reassignment_prohibited: ID = _OID.fromParts(
     [72],
     id_att
 );

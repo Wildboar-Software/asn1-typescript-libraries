@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const schemaAdministration: ID = new _OID(
+export const schemaAdministration: ID = _OID.fromParts(
     [/* schemaAdministration */ 23, 9],
     module_
 );

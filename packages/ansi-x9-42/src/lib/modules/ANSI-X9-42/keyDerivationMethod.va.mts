@@ -14,7 +14,7 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  *
  * @constant
  */
-export const keyDerivationMethod: OBJECT_IDENTIFIER = new _OID(
+export const keyDerivationMethod: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* kdMethods */ 5],
     ansi_X9_42
 );

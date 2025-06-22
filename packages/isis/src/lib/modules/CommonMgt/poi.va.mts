@@ -23,6 +23,6 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  *
  * @constant
  */
-export const poi: OBJECT_IDENTIFIER = new _OID([/* package */ 4], cmoi);
+export const poi: OBJECT_IDENTIFIER = _OID.fromParts([/* package */ 4], cmoi);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const gulsSecurityTransformations: OBJECT_IDENTIFIER = new _OID(
+export const gulsSecurityTransformations: OBJECT_IDENTIFIER = _OID.fromParts(
   [3],
   modules
 );

@@ -25,7 +25,7 @@ import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-al
  * @constant
  */
 export
-const id_X448: OBJECT_IDENTIFIER = new _OID([
+const id_X448: OBJECT_IDENTIFIER = _OID.fromParts([
     111,
 ], id_edwards_curve_algs);
 

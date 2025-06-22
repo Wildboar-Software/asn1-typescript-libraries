@@ -13,6 +13,6 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_postOfficeBox: OBJECT_IDENTIFIER = new _OID([18], id_at);
+export const id_at_postOfficeBox: OBJECT_IDENTIFIER = _OID.fromParts([18], id_at);
 
 /* eslint-enable */

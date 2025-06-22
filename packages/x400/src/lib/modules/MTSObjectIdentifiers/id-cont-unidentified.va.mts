@@ -23,6 +23,6 @@ import { id_cont } from '../MTSObjectIdentifiers/id-cont.va.mjs';
  *
  * @constant
  */
-export const id_cont_unidentified: ID = new _OID([0], id_cont);
+export const id_cont_unidentified: ID = _OID.fromParts([0], id_cont);
 
 /* eslint-enable */

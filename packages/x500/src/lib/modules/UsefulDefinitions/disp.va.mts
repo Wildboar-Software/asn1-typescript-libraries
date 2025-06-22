@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const disp: ID = new _OID([/* disp */ 16, 7], module_);
+export const disp: ID = _OID.fromParts([/* disp */ 16, 7], module_);
 
 /* eslint-enable */

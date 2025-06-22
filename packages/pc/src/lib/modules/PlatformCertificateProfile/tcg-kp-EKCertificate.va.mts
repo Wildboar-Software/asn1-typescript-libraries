@@ -24,7 +24,7 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
  * @constant
  */
 export
-const tcg_kp_EKCertificate: OBJECT_IDENTIFIER = new _OID([
+const tcg_kp_EKCertificate: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_kp);
 

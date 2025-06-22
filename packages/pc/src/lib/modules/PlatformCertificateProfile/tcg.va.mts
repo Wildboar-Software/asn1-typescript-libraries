@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const tcg: OBJECT_IDENTIFIER = new _OID([
+const tcg: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* international-organizations */ 23,
     /* tcg */ 133,

@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const signcryption: OID = new _OID([
+export const signcryption: OID = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* tc68 */ 133,

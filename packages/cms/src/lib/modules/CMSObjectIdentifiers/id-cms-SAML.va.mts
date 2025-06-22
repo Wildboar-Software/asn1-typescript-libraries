@@ -15,6 +15,6 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  *
  * @constant
  */
-export const id_cms_SAML: OID = new _OID([/* saml */ 1], xmlMarkup);
+export const id_cms_SAML: OID = _OID.fromParts([/* saml */ 1], xmlMarkup);
 
 /* eslint-enable */

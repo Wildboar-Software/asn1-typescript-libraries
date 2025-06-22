@@ -14,6 +14,6 @@ import { fieldType } from "../ANSI-X9-42/fieldType.va.mjs";
  *
  * @constant
  */
-export const gfPrime: OBJECT_IDENTIFIER = new _OID([1], fieldType);
+export const gfPrime: OBJECT_IDENTIFIER = _OID.fromParts([1], fieldType);
 
 /* eslint-enable */

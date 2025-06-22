@@ -14,7 +14,7 @@ import { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va.mjs";
  *
  * @constant
  */
-export const id_hmacWithSHA512: OBJECT_IDENTIFIER = new _OID(
+export const id_hmacWithSHA512: OBJECT_IDENTIFIER = _OID.fromParts(
     [11],
     digestAlgorithm
 );

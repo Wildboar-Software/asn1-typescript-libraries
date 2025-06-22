@@ -16,7 +16,7 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const nistAlgorithms: OBJECT_IDENTIFIER = new _OID([
+export const nistAlgorithms: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* country */ 16,
     /* us */ 840,

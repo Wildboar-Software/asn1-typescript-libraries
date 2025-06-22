@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const cmoi: OBJECT_IDENTIFIER = new _OID(
+export const cmoi: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* network-layer */ 13, /* management */ 0, /* sc6-gmi */ 0],
   joint_iso_ccitt
 );

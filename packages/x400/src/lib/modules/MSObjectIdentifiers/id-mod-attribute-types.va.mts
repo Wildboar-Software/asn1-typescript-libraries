@@ -23,6 +23,6 @@ import { id_mod } from '../MSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_attribute_types: ID = new _OID([2], id_mod);
+export const id_mod_attribute_types: ID = _OID.fromParts([2], id_mod);
 
 /* eslint-enable */

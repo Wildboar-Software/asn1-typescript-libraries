@@ -14,7 +14,7 @@ import { us_joint } from "../AlgorithmObjectIdentifiers/us-joint.va.mjs";
  *
  * @constant
  */
-export const usgov: ID = new _OID(
+export const usgov: ID = _OID.fromParts(
     [/* organization */ 1, /* gov */ 101],
     us_joint
 );

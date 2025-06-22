@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const sdhProt: OBJECT_IDENTIFIER = new _OID([
+export const sdhProt: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* recommendation */ 0,
     /* g */ 7,

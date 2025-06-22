@@ -14,7 +14,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const secp256r1: ID = new _OID(
+export const secp256r1: ID = _OID.fromParts(
     [/* curves */ 3, /* prime */ 1, 7],
     ansi_x9_62
 );

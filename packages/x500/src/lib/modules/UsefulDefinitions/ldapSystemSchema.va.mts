@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const ldapSystemSchema: ID = new _OID(
+export const ldapSystemSchema: ID = _OID.fromParts(
     [/* ldapSystemSchema */ 38, 9],
     module_
 );

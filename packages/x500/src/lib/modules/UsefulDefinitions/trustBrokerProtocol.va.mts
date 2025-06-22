@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const trustBrokerProtocol: ID = new _OID(
+export const trustBrokerProtocol: ID = _OID.fromParts(
     [/* trustBrokerProtocol */ 44, 9],
     module_
 );

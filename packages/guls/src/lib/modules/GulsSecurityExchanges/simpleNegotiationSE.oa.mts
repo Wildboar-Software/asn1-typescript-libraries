@@ -41,7 +41,7 @@ export const simpleNegotiationSE: SECURITY_EXCHANGE = {
   encoderFor: {},
   '&SE-Items': [offeredIds, acceptedIds] /* OBJECT_FIELD_SETTING */,
   '&sE-Identifier': {
-    global: new _OID([/* simple-negotiation-se */ 3], securityExchanges),
+    global: _OID.fromParts([/* simple-negotiation-se */ 3], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

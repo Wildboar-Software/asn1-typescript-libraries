@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const cmac_aes128_ecies: OBJECT_IDENTIFIER = new _OID([
+const cmac_aes128_ecies: OBJECT_IDENTIFIER = _OID.fromParts([
     24,
     0,
 ], secg_scheme);

@@ -13,6 +13,6 @@ import { id_kmr } from "../UsefulDefinitions/id-kmr.va.mjs";
  *
  * @constant
  */
-export const id_kmr_accessPointMatch: OBJECT_IDENTIFIER = new _OID([0], id_kmr);
+export const id_kmr_accessPointMatch: OBJECT_IDENTIFIER = _OID.fromParts([0], id_kmr);
 
 /* eslint-enable */

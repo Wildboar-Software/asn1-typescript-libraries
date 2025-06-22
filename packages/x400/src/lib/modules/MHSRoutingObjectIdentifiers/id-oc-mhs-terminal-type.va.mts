@@ -27,6 +27,6 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  *
  * @constant
  */
-export const id_oc_mhs_terminal_type: ID = new _OID([19], id_oc);
+export const id_oc_mhs_terminal_type: ID = _OID.fromParts([19], id_oc);
 
 /* eslint-enable */

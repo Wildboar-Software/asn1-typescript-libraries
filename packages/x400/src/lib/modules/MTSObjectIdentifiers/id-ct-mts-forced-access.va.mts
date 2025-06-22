@@ -23,6 +23,6 @@ import { id_ct } from '../MTSObjectIdentifiers/id-ct.va.mjs';
  *
  * @constant
  */
-export const id_ct_mts_forced_access: ID = new _OID([1], id_ct);
+export const id_ct_mts_forced_access: ID = _OID.fromParts([1], id_ct);
 
 /* eslint-enable */

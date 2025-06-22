@@ -36,7 +36,7 @@ export const rTSE = {
   class: 'CONTRACT',
   decoderFor: {},
   encoderFor: {},
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [/* reliable-transfer */ 3, /* aseID */ 1],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_deferred_delivery_cancellation_time: ID = new _OID(
+export const id_att_deferred_delivery_cancellation_time: ID = _OID.fromParts(
     [50],
     id_att
 );

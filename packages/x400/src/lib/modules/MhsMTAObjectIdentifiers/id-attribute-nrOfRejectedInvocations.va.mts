@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_nrOfRejectedInvocations: ID = new _OID(
+export const id_attribute_nrOfRejectedInvocations: ID = _OID.fromParts(
     [117],
     id_attribute
 );

@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_deliveryError: ID = new _OID([37], id_attribute);
+export const id_attribute_deliveryError: ID = _OID.fromParts([37], id_attribute);
 
 /* eslint-enable */

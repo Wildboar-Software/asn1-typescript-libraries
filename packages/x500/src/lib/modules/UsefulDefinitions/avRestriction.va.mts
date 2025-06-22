@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const avRestriction: ID = new _OID([41], ds);
+export const avRestriction: ID = _OID.fromParts([41], ds);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardDuplicateOption: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardDuplicateOption: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* duplicateOption */ 7],
     pDUDiscard
 );

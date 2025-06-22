@@ -57,7 +57,7 @@ export const managementAttribute: OBJECT_CLASS = {
         parameters,
         optionallyRegisteredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [10],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

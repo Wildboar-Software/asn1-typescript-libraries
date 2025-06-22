@@ -15,7 +15,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const ecdsa_with_SHA224: ID = new _OID(
+export const ecdsa_with_SHA224: ID = _OID.fromParts(
     [/* signatures */ 4, /* ecdsa-with-SHA2 */ 3, 1],
     ansi_x9_62
 );

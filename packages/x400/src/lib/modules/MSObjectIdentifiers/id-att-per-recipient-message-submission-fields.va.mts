@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_per_recipient_message_submission_fields: ID = new _OID(
+export const id_att_per_recipient_message_submission_fields: ID = _OID.fromParts(
     [66],
     id_att
 );

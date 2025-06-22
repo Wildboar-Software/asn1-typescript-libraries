@@ -24,6 +24,6 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  *
  * @constant
  */
-export const wrapperProtocolType: OBJECT_IDENTIFIER = new _OID([43], ds);
+export const wrapperProtocolType: OBJECT_IDENTIFIER = _OID.fromParts([43], ds);
 
 /* eslint-enable */

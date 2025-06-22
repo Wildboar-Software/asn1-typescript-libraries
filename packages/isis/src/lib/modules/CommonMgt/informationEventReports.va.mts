@@ -23,7 +23,7 @@ import { fupoi } from '../CommonMgt/fupoi.va.mjs';
  *
  * @constant
  */
-export const informationEventReports: OBJECT_IDENTIFIER = new _OID(
+export const informationEventReports: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* informationEventReports */ 1000],
   fupoi
 );

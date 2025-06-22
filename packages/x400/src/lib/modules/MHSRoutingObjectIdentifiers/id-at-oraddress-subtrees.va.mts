@@ -27,6 +27,6 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_oraddress_subtrees: ID = new _OID([33], id_at);
+export const id_at_oraddress_subtrees: ID = _OID.fromParts([33], id_at);
 
 /* eslint-enable */

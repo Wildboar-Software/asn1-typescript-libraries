@@ -13,7 +13,7 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_asx_inhibitAnyPolicy: OBJECT_IDENTIFIER = new _OID(
+export const id_asx_inhibitAnyPolicy: OBJECT_IDENTIFIER = _OID.fromParts(
     [54, 2],
     id_ce
 );

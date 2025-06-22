@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const nameForm: ID = new _OID([15], ds);
+export const nameForm: ID = _OID.fromParts([15], ds);
 
 /* eslint-enable */

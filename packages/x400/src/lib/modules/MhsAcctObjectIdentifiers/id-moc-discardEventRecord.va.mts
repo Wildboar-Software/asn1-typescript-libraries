@@ -23,6 +23,6 @@ import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
  *
  * @constant
  */
-export const id_moc_discardEventRecord: ID = new _OID([7], id_moc);
+export const id_moc_discardEventRecord: ID = _OID.fromParts([7], id_moc);
 
 /* eslint-enable */

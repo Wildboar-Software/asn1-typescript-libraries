@@ -14,7 +14,7 @@ import { teletrust } from "../AlgorithmObjectIdentifiers/teletrust.va.mjs";
  *
  * @constant
  */
-export const ecStdCurvesAndGen: ID = new _OID(
+export const ecStdCurvesAndGen: ID = _OID.fromParts(
     [/* algorithm */ 3, /* signature-algorithm */ 3, /* ecSign */ 2, 8],
     teletrust
 );

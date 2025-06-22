@@ -23,6 +23,6 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_parent_sequence_number: ID = new _OID([29], id_att);
+export const id_att_parent_sequence_number: ID = _OID.fromParts([29], id_att);
 
 /* eslint-enable */

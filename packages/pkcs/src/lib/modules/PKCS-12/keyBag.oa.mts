@@ -26,7 +26,7 @@ export const keyBag: BAG_TYPE<KeyBag> = {
     encoderFor: {
         "&Type": _encode_KeyBag,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [1],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

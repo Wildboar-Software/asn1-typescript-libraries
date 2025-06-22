@@ -24,7 +24,7 @@ import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
  * @constant
  */
 export
-const ecdsa_with_SHA1: OBJECT_IDENTIFIER = new _OID([
+const ecdsa_with_SHA1: OBJECT_IDENTIFIER = _OID.fromParts([
     /* sha1 */ 1,
 ], id_ecSigType);
 

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const extensionAttributes: ID = new _OID(
+export const extensionAttributes: ID = _OID.fromParts(
     [/* extensionAttributes */ 41, 9],
     module_
 );

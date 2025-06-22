@@ -14,6 +14,6 @@ import { id_qcs } from "../PKIXqualified97/id-qcs.va.mjs";
  *
  * @constant
  */
-export const id_qcs_pkixQCSyntax_v1: OBJECT_IDENTIFIER = new _OID([1], id_qcs);
+export const id_qcs_pkixQCSyntax_v1: OBJECT_IDENTIFIER = _OID.fromParts([1], id_qcs);
 
 /* eslint-enable */

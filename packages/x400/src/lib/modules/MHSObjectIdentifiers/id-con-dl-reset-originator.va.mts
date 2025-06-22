@@ -23,6 +23,6 @@ import { id_con } from '../MHSObjectIdentifiers/id-con.va.mjs';
  *
  * @constant
  */
-export const id_con_dl_reset_originator: ID = new _OID([2], id_con);
+export const id_con_dl_reset_originator: ID = _OID.fromParts([2], id_con);
 
 /* eslint-enable */

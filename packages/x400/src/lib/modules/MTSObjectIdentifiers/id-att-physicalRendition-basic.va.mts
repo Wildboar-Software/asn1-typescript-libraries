@@ -23,6 +23,6 @@ import { id_att } from '../MTSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_physicalRendition_basic: ID = new _OID([0], id_att);
+export const id_att_physicalRendition_basic: ID = _OID.fromParts([0], id_att);
 
 /* eslint-enable */

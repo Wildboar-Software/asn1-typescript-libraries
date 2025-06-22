@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const partitionVirtualLinkChange: OBJECT_IDENTIFIER = new _OID(
+export const partitionVirtualLinkChange: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* partitionVirtualLinkChange */ 11],
   se
 );

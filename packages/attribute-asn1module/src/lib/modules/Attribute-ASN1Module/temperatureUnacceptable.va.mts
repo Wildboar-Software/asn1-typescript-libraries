@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const temperatureUnacceptable: ProbableCause = { globalValue: new _OID([50,], arfProbableCause) };
+const temperatureUnacceptable: ProbableCause = { globalValue: _OID.fromParts([50,], arfProbableCause) };
 
 /* eslint-enable */

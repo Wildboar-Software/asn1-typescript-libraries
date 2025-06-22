@@ -25,7 +25,7 @@ import { aes } from "../CMSAesRsaesOaep-2009/aes.va.mjs";
  * @constant
  */
 export
-const id_aes256_wrap: OBJECT_IDENTIFIER = new _OID([
+const id_aes256_wrap: OBJECT_IDENTIFIER = _OID.fromParts([
     45,
 ], aes);
 

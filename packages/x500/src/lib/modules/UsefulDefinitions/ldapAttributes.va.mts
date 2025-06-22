@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const ldapAttributes: ID = new _OID(
+export const ldapAttributes: ID = _OID.fromParts(
     [/* ldapAttributes */ 34, 9],
     module_
 );

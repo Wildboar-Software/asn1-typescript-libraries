@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const localNodeTransmissionError: ProbableCause = { globalValue: new _OID([27,], arfProbableCause) };
+const localNodeTransmissionError: ProbableCause = { globalValue: _OID.fromParts([27,], arfProbableCause) };
 
 /* eslint-enable */

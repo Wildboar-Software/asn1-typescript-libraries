@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_ckm_key_transport: OID = new _OID(
+export const id_ckm_key_transport: OID = _OID.fromParts(
     [/* key-transport */ 2],
     id_ckm_algorithms
 );

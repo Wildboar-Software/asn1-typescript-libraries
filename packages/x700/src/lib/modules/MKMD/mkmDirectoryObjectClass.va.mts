@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const mkmDirectoryObjectClass: OBJECT_IDENTIFIER = new _OID([
+export const mkmDirectoryObjectClass: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* ms */ 9,
     /* function */ 2,

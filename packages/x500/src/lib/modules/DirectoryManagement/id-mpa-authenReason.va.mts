@@ -13,6 +13,6 @@ import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
  *
  * @constant
  */
-export const id_mpa_authenReason: OBJECT_IDENTIFIER = new _OID([11], id_mpa);
+export const id_mpa_authenReason: OBJECT_IDENTIFIER = _OID.fromParts([11], id_mpa);
 
 /* eslint-enable */

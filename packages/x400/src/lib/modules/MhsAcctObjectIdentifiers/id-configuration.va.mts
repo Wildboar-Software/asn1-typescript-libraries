@@ -23,6 +23,6 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  *
  * @constant
  */
-export const id_configuration: ID = new _OID([5], mhs_management);
+export const id_configuration: ID = _OID.fromParts([5], mhs_management);
 
 /* eslint-enable */

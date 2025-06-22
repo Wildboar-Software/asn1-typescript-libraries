@@ -28,7 +28,7 @@ import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo
  *
  * @constant
  */
-export const sts48c_and_VC4_16c: CharacteristicInformation = new _OID(
+export const sts48c_and_VC4_16c: CharacteristicInformation = _OID.fromParts(
     [27],
     characteristicInfo
 );

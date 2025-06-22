@@ -23,7 +23,7 @@ import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.
  *
  * @constant
  */
-export const id_name_binding_mdServiceManagementPointOfAccess_misManagementDomain: ID = new _OID(
+export const id_name_binding_mdServiceManagementPointOfAccess_misManagementDomain: ID = _OID.fromParts(
     [9],
     id_name_binding
 );

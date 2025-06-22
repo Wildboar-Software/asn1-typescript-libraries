@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const part12MObjectClass: OBJECT_IDENTIFIER = new _OID(
+export const part12MObjectClass: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part12 */ 12, /* mObjectClass */ 3],
     joint_iso_ccitt
 );

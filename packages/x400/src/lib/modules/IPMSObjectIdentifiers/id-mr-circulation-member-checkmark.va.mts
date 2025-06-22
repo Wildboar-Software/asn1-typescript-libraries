@@ -23,6 +23,6 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_circulation_member_checkmark: ID = new _OID([14], id_mr);
+export const id_mr_circulation_member_checkmark: ID = _OID.fromParts([14], id_mr);
 
 /* eslint-enable */

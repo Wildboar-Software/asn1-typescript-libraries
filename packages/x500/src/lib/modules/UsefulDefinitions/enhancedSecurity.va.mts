@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const enhancedSecurity: ID = new _OID(
+export const enhancedSecurity: ID = _OID.fromParts(
     [/* enhancedSecurity */ 28, 9],
     module_
 );

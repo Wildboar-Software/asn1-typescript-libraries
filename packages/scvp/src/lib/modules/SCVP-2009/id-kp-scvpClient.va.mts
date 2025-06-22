@@ -23,6 +23,6 @@ import { id_kp } from '../SCVP-2009/id-kp.va.mjs';
  *
  * @constant
  */
-export const id_kp_scvpClient: OBJECT_IDENTIFIER = new _OID([16], id_kp);
+export const id_kp_scvpClient: OBJECT_IDENTIFIER = _OID.fromParts([16], id_kp);
 
 /* eslint-enable */

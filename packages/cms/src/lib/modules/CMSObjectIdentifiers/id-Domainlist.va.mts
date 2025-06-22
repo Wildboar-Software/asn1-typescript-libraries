@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_Domainlist: OID = new _OID([6], ckm_CMS);
+export const id_Domainlist: OID = _OID.fromParts([6], ckm_CMS);
 
 /* eslint-enable */

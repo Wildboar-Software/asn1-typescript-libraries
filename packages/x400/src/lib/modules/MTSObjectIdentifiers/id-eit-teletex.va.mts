@@ -23,6 +23,6 @@ import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
  *
  * @constant
  */
-export const id_eit_teletex: ID = new _OID([5], id_eit);
+export const id_eit_teletex: ID = _OID.fromParts([5], id_eit);
 
 /* eslint-enable */

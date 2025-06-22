@@ -13,7 +13,7 @@ import { id_soa } from "../UsefulDefinitions/id-soa.va.mjs";
  *
  * @constant
  */
-export const id_soa_structuralObjectClass: OBJECT_IDENTIFIER = new _OID(
+export const id_soa_structuralObjectClass: OBJECT_IDENTIFIER = _OID.fromParts(
     [9],
     id_soa
 );

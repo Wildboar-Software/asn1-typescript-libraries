@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const crsMObjectClass: OBJECT_IDENTIFIER = new _OID(
+export const crsMObjectClass: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* smi */ 3, /* part9 */ 9, /* managedObjectClass */ 3],
     joint_iso_ccitt
 );

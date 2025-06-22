@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_responderAccessPointAddress: ID = new _OID(
+export const id_attribute_responderAccessPointAddress: ID = _OID.fromParts(
     [146],
     id_attribute
 );

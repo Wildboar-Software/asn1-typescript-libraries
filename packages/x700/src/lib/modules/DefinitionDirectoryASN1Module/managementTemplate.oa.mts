@@ -45,7 +45,7 @@ export const managementTemplate: OBJECT_CLASS = {
     '&kind': auxiliary /* OBJECT_FIELD_SETTING */,
     '&MandatoryAttributes': [templateName] /* OBJECT_FIELD_SETTING */,
     '&OptionalAttributes': [templateDefinition] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [5],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -27,6 +27,6 @@ import { id_ase } from '../MHSProtocolObjectIdentifiers/id-ase.va.mjs';
  *
  * @constant
  */
-export const id_ase_mrse: ID = new _OID([2], id_ase);
+export const id_ase_mrse: ID = _OID.fromParts([2], id_ase);
 
 /* eslint-enable */

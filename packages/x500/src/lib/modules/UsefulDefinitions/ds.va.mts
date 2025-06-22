@@ -13,6 +13,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const ds: ID = new _OID([/* ds */ 5], joint_iso_itu_t);
+export const ds: ID = _OID.fromParts([/* ds */ 5], joint_iso_itu_t);
 
 /* eslint-enable */

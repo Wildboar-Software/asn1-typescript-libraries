@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const nistAlgorithms: ID = new _OID([/* nistAlgorithm */ 4], csor);
+export const nistAlgorithms: ID = _OID.fromParts([/* nistAlgorithm */ 4], csor);
 
 /* eslint-enable */

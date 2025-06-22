@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const hmac_half_ecies: OBJECT_IDENTIFIER = new _OID([
+const hmac_half_ecies: OBJECT_IDENTIFIER = _OID.fromParts([
     23,
 ], secg_scheme);
 

@@ -16,6 +16,6 @@ import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
  *
  * @constant
  */
-export const id_pda_dateOfBirth: AttributeType = new _OID([1], id_pda);
+export const id_pda_dateOfBirth: AttributeType = _OID.fromParts([1], id_pda);
 
 /* eslint-enable */

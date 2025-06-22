@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const ecdh: OBJECT_IDENTIFIER = new _OID([
+const ecdh: OBJECT_IDENTIFIER = _OID.fromParts([
     12,
 ], secg_scheme);
 

@@ -13,6 +13,6 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_sizeLimit: OBJECT_IDENTIFIER = new _OID([112], id_mat);
+export const id_mat_sizeLimit: OBJECT_IDENTIFIER = _OID.fromParts([112], id_mat);
 
 /* eslint-enable */

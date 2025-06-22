@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const powerProblem: ProbableCause = { globalValue: new _OID([35,], arfProbableCause) };
+const powerProblem: ProbableCause = { globalValue: _OID.fromParts([35,], arfProbableCause) };
 
 /* eslint-enable */

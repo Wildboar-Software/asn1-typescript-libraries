@@ -37,7 +37,7 @@ export const registeredInformationNameForm: NAME_FORM = {
     encoderFor: {},
     '&namedObjectClass': registeredInformation /* OBJECT_FIELD_SETTING */,
     '&MandatoryAttributes': [commonName] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [1],
         mkmDirectoryNameForm
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

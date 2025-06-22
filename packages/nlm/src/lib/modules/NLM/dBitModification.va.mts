@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const dBitModification: OBJECT_IDENTIFIER = new _OID([139], aoi);
+export const dBitModification: OBJECT_IDENTIFIER = _OID.fromParts([139], aoi);
 
 /* eslint-enable */

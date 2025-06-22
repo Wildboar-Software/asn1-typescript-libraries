@@ -14,6 +14,6 @@ import { scheme } from "../ANSI-X9-42/scheme.va.mjs";
  *
  * @constant
  */
-export const dhStatic: OBJECT_IDENTIFIER = new _OID([1], scheme);
+export const dhStatic: OBJECT_IDENTIFIER = _OID.fromParts([1], scheme);
 
 /* eslint-enable */

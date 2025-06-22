@@ -13,7 +13,7 @@ import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
  *
  * @constant
  */
-export const id_avc_ldapAttributeOption: OBJECT_IDENTIFIER = new _OID(
+export const id_avc_ldapAttributeOption: OBJECT_IDENTIFIER = _OID.fromParts(
     [5],
     id_avc
 );

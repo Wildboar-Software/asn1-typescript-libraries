@@ -23,6 +23,6 @@ import { id_mod } from '../MTSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_mta_abstract_service: ID = new _OID([2], id_mod);
+export const id_mod_mta_abstract_service: ID = _OID.fromParts([2], id_mod);
 
 /* eslint-enable */

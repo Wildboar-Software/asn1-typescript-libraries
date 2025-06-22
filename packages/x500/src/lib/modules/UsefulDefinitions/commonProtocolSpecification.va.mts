@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const commonProtocolSpecification: ID = new _OID(
+export const commonProtocolSpecification: ID = _OID.fromParts(
     [/* commonProtocolSpecification */ 35, 9],
     module_
 );

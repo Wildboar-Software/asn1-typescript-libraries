@@ -24,6 +24,6 @@ import { nloi } from '../NLM/nloi.va.mjs';
  *
  * @constant
  */
-export const poi: OBJECT_IDENTIFIER = new _OID([/* package */ 4], nloi);
+export const poi: OBJECT_IDENTIFIER = _OID.fromParts([/* package */ 4], nloi);
 
 /* eslint-enable */

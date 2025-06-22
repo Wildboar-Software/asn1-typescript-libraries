@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_newMessageMOACAlg: ID = new _OID([103], id_attribute);
+export const id_attribute_newMessageMOACAlg: ID = _OID.fromParts([103], id_attribute);
 
 /* eslint-enable */

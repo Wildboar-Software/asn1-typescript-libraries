@@ -54,7 +54,7 @@ export const managementObjectClass: OBJECT_CLASS = {
         conditionalPackages,
         registeredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [6],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

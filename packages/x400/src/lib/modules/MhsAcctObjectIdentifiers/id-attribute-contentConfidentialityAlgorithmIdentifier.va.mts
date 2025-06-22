@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_contentConfidentialityAlgorithmIdentifier: ID = new _OID(
+export const id_attribute_contentConfidentialityAlgorithmIdentifier: ID = _OID.fromParts(
     [19],
     id_attribute
 );

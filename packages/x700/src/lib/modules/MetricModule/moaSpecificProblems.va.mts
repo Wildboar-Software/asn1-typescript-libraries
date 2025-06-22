@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const moaSpecificProblems: OBJECT_IDENTIFIER = new _OID(
+export const moaSpecificProblems: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

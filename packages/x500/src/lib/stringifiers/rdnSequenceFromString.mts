@@ -58,7 +58,7 @@ export const nameToAttribute = new Map<
     [
         "dc",
         [
-            new ObjectIdentifier([0, 9, 2342, 19200300, 100, 1, 25]),
+            ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 25]),
             encodeIA5String,
         ],
     ],
@@ -92,7 +92,7 @@ export function atavFromString(
     } else {
         if (oidRegex.test(name)) {
             // Then it is just an OID.
-            const oid: OBJECT_IDENTIFIER = new ObjectIdentifier(
+            const oid: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts(
                 str.split(".").map((c) => Number.parseInt(c))
             );
             return new ATAV(

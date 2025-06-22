@@ -23,6 +23,6 @@ import { id_pt } from '../MSObjectIdentifiers/id-pt.va.mjs';
  *
  * @constant
  */
-export const id_pt_retrieval_94: ID = new _OID([1], id_pt);
+export const id_pt_retrieval_94: ID = _OID.fromParts([1], id_pt);
 
 /* eslint-enable */

@@ -13,6 +13,6 @@ import { id_soa } from "../UsefulDefinitions/id-soa.va.mjs";
  *
  * @constant
  */
-export const id_soa_dITStructureRule: OBJECT_IDENTIFIER = new _OID([1], id_soa);
+export const id_soa_dITStructureRule: OBJECT_IDENTIFIER = _OID.fromParts([1], id_soa);
 
 /* eslint-enable */

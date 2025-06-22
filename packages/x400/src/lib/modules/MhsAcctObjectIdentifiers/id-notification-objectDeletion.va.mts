@@ -23,7 +23,7 @@ import { id_notification } from '../MhsAcctObjectIdentifiers/id-notification.va.
  *
  * @constant
  */
-export const id_notification_objectDeletion: ID = new _OID(
+export const id_notification_objectDeletion: ID = _OID.fromParts(
     [1],
     id_notification
 );

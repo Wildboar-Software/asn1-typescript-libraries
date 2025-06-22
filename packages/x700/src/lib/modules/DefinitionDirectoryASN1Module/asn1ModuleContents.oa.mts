@@ -47,7 +47,7 @@ export const asn1ModuleContents: ATTRIBUTE<TextualRepresentation> = {
     encoderFor: {
         '&Type': _encode_TextualRepresentation,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [14],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

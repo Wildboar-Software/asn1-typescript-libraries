@@ -23,6 +23,6 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_value_count_match: ID = new _OID([24], id_mr);
+export const id_mr_value_count_match: ID = _OID.fromParts([24], id_mr);
 
 /* eslint-enable */

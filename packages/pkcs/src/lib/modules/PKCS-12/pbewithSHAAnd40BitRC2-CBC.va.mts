@@ -14,7 +14,7 @@ import { pkcs_12PbeIds } from "../PKCS-12/pkcs-12PbeIds.va.mjs";
  *
  * @constant
  */
-export const pbewithSHAAnd40BitRC2_CBC: OBJECT_IDENTIFIER = new _OID(
+export const pbewithSHAAnd40BitRC2_CBC: OBJECT_IDENTIFIER = _OID.fromParts(
     [6],
     pkcs_12PbeIds
 );

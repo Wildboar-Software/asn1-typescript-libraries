@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_BlockSize: OID = new _OID([15], ckm_CMS);
+export const id_BlockSize: OID = _OID.fromParts([15], ckm_CMS);
 
 /* eslint-enable */

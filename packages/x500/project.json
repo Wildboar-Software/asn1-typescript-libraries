@@ -11,11 +11,9 @@
             }
         },
         "test": {
-            "executor": "@nx/jest:jest",
-
+            "executor": "@nx/vite:test",
             "options": {
-                "jestConfig": "packages/x500/jest.config.mjs",
-                "passWithNoTests": true
+                "config": "packages/x500/vite.config.ts"
             }
         },
         "build": {

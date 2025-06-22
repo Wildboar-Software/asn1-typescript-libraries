@@ -24,7 +24,7 @@ import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.v
  * @constant
  */
 export
-const nonRepudiationFailure: SecurityAlarmCause = new _OID([
+const nonRepudiationFailure: SecurityAlarmCause = _OID.fromParts([
     12,
 ], securityAlarmCause);
 

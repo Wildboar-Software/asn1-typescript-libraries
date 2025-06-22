@@ -23,6 +23,6 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_ipm_security_extensions: ID = new _OID([14], id_mod);
+export const id_mod_ipm_security_extensions: ID = _OID.fromParts([14], id_mod);
 
 /* eslint-enable */

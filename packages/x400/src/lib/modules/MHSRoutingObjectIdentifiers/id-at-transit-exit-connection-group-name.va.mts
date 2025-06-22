@@ -27,7 +27,7 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_transit_exit_connection_group_name: ID = new _OID(
+export const id_at_transit_exit_connection_group_name: ID = _OID.fromParts(
     [38],
     id_at
 );

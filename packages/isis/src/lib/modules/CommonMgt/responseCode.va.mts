@@ -23,7 +23,7 @@ import { proi } from '../CommonMgt/proi.va.mjs';
  *
  * @constant
  */
-export const responseCode: OBJECT_IDENTIFIER = new _OID(
+export const responseCode: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* responseCode */ 1001],
   proi
 );

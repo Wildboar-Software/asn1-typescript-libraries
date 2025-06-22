@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_colocated: ID = new _OID([14], id_attribute);
+export const id_attribute_colocated: ID = _OID.fromParts([14], id_attribute);
 
 /* eslint-enable */

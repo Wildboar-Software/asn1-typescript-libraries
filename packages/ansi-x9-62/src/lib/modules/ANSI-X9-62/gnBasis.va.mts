@@ -13,7 +13,7 @@ import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two
  *
  * @constant
  */
-export const gnBasis: OBJECT_IDENTIFIER = new _OID(
+export const gnBasis: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* gaussian */ 1],
     id_characteristic_two_basis
 );

@@ -14,7 +14,7 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const pkcs_9_at_userPKCS12: OBJECT_IDENTIFIER = new _OID([
+export const pkcs_9_at_userPKCS12: OBJECT_IDENTIFIER = _OID.fromParts([
     2,
     16,
     840,

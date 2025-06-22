@@ -13,6 +13,6 @@ import { id_idm } from "../UsefulDefinitions/id-idm.va.mjs";
  *
  * @constant
  */
-export const id_idm_dap: OBJECT_IDENTIFIER = new _OID([0], id_idm);
+export const id_idm_dap: OBJECT_IDENTIFIER = _OID.fromParts([0], id_idm);
 
 /* eslint-enable */

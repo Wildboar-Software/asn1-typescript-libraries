@@ -14,6 +14,6 @@ import { id_ct } from "../PKIXCRMF-2009/id-ct.va.mjs";
  *
  * @constant
  */
-export const id_ct_encKeyWithID: OBJECT_IDENTIFIER = new _OID([21], id_ct);
+export const id_ct_encKeyWithID: OBJECT_IDENTIFIER = _OID.fromParts([21], id_ct);
 
 /* eslint-enable */

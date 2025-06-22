@@ -38,7 +38,7 @@ export const confidentiality: PROTECTION_MAPPING = {
     dirEncryptedTransformation,
   ] /* OBJECT_FIELD_SETTING */,
   '&bypassPermitted': false /* OBJECT_FIELD_SETTING */,
-  '&protTransferSyntax': new _OID(
+  '&protTransferSyntax': _OID.fromParts(
     [/* genericULS */ 20, /* generalTransferSyntax */ 2],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

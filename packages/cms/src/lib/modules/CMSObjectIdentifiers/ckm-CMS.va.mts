@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const ckm_CMS: OID = new _OID([
+export const ckm_CMS: OID = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* international-organizations */ 23,
     /* set */ 42,

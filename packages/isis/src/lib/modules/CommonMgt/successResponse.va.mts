@@ -23,7 +23,7 @@ import { responseCode } from '../CommonMgt/responseCode.va.mjs';
  *
  * @constant
  */
-export const successResponse: OBJECT_IDENTIFIER = new _OID(
+export const successResponse: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* successResponse */ 1002],
   responseCode
 );

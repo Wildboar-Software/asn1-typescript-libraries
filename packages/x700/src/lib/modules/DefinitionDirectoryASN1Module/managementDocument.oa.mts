@@ -49,7 +49,7 @@ export const managementDocument: OBJECT_CLASS = {
         documentObjectIdentifier,
     ] /* OBJECT_FIELD_SETTING */,
     '&OptionalAttributes': [specification] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [4],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

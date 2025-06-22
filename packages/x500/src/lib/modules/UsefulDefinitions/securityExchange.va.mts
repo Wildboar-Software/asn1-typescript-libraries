@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const securityExchange: ID = new _OID([32], ds);
+export const securityExchange: ID = _OID.fromParts([32], ds);
 
 /* eslint-enable */

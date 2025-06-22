@@ -14,6 +14,6 @@ import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.mjs";
  *
  * @constant
  */
-export const id_gmac: ID = new _OID([/* part3 */ 3, /* gmac */ 4], iso9797);
+export const id_gmac: ID = _OID.fromParts([/* part3 */ 3, /* gmac */ 4], iso9797);
 
 /* eslint-enable */

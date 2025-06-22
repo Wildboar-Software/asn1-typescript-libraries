@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const selectedObjectClasses: ID = new _OID(
+export const selectedObjectClasses: ID = _OID.fromParts(
     [/* selectedObjectClasses */ 6, 9],
     module_
 );

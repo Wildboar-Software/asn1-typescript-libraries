@@ -13,7 +13,7 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_attributeCertificate: OBJECT_IDENTIFIER = new _OID(
+export const id_at_attributeCertificate: OBJECT_IDENTIFIER = _OID.fromParts(
     [58],
     id_at
 );

@@ -61,7 +61,7 @@ export const managementNotification: OBJECT_CLASS = {
         withReplySyntax,
         registeredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [14],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

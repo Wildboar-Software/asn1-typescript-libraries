@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_ckm_symmetric: OID = new _OID(
+export const id_ckm_symmetric: OID = _OID.fromParts(
     [/* symmetric */ 1],
     id_ckm_algorithms
 );

@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_serviceFlag: ID = new _OID([114], id_attribute);
+export const id_attribute_serviceFlag: ID = _OID.fromParts([114], id_attribute);
 
 /* eslint-enable */

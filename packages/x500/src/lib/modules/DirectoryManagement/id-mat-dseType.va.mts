@@ -13,6 +13,6 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_dseType: OBJECT_IDENTIFIER = new _OID([131], id_mat);
+export const id_mat_dseType: OBJECT_IDENTIFIER = _OID.fromParts([131], id_mat);
 
 /* eslint-enable */

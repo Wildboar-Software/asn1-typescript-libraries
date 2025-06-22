@@ -24,7 +24,7 @@ import { id_telebio } from '../Telebiometrics/id-telebio.va.mjs';
  *
  * @constant
  */
-export const id_hum_phys: OBJECT_IDENTIFIER = new _OID(
+export const id_hum_phys: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* human-phy */ 2],
     id_telebio
 );

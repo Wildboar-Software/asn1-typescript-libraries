@@ -14,6 +14,6 @@ import { rsadsi } from "../PKCS5v2-1/rsadsi.va.mjs";
  *
  * @constant
  */
-export const encryptionAlgorithm: OBJECT_IDENTIFIER = new _OID([3], rsadsi);
+export const encryptionAlgorithm: OBJECT_IDENTIFIER = _OID.fromParts([3], rsadsi);
 
 /* eslint-enable */

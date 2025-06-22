@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_adjMtaAccessPointAddress: ID = new _OID(
+export const id_attribute_adjMtaAccessPointAddress: ID = _OID.fromParts(
     [0],
     id_attribute
 );

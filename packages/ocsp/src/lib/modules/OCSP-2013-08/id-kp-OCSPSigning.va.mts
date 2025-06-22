@@ -15,6 +15,6 @@ import { id_kp } from "@wildboar/x500/src/lib/modules/UsefulDefinitions/id-kp.va
  *
  * @constant
  */
-export const id_kp_OCSPSigning: OBJECT_IDENTIFIER = new _OID([9], id_kp);
+export const id_kp_OCSPSigning: OBJECT_IDENTIFIER = _OID.fromParts([9], id_kp);
 
 /* eslint-enable */

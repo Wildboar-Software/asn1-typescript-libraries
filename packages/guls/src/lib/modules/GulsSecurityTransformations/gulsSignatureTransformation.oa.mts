@@ -85,8 +85,8 @@ function gulsSignatureTransformation (SupportedKIClasses: KEY_INFORMATION[]): SE
         encoderFor: {
             "&XformedDataType": _encode_gulsSignatureTransformation_XformedDataType,
         },
-        "&sT-Identifier": new ObjectIdentifier([ 5 ], securityTransformations),
-        "&initialEncodingRules": new ObjectIdentifier([ 2, 1, 2, 0 ]),
+        "&sT-Identifier": ObjectIdentifier.fromParts([ 5 ], securityTransformations),
+        "&initialEncodingRules": ObjectIdentifier.fromParts([ 2, 1, 2, 0 ]),
         "&XformedDataType": 0 as never,
         "&StaticUnprotectedParm": undefined,
         "&DynamicUnprotectedParm": undefined,

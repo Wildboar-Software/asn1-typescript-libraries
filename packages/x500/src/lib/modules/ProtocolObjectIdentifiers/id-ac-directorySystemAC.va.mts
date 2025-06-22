@@ -13,6 +13,6 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  *
  * @constant
  */
-export const id_ac_directorySystemAC: OBJECT_IDENTIFIER = new _OID([2], id_ac);
+export const id_ac_directorySystemAC: OBJECT_IDENTIFIER = _OID.fromParts([2], id_ac);
 
 /* eslint-enable */

@@ -23,6 +23,6 @@ import { id_mct } from '../IPMSObjectIdentifiers/id-mct.va.mjs';
  *
  * @constant
  */
-export const id_mct_p2_1984: ID = new _OID([0], id_mct);
+export const id_mct_p2_1984: ID = _OID.fromParts([0], id_mct);
 
 /* eslint-enable */

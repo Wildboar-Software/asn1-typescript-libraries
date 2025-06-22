@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const oSIProtocolSpecification: ID = new _OID(
+export const oSIProtocolSpecification: ID = _OID.fromParts(
     [/* oSIProtocolSpecification */ 36, 9],
     module_
 );

@@ -13,6 +13,6 @@ import { id_algo } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-algo.va.
  *
  * @constant
  */
-export const id_algo_kea: OBJECT_IDENTIFIER = new _OID([7], id_algo);
+export const id_algo_kea: OBJECT_IDENTIFIER = _OID.fromParts([7], id_algo);
 
 /* eslint-enable */

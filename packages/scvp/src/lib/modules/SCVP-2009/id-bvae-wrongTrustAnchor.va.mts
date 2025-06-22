@@ -23,7 +23,7 @@ import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
  *
  * @constant
  */
-export const id_bvae_wrongTrustAnchor: OBJECT_IDENTIFIER = new _OID(
+export const id_bvae_wrongTrustAnchor: OBJECT_IDENTIFIER = _OID.fromParts(
   [3],
   id_bvae
 );

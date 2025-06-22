@@ -23,7 +23,7 @@ import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
  *
  * @constant
  */
-export const id_group: ID = new _OID(
+export const id_group: ID = _OID.fromParts(
     [/* mhs */ 6, /* group */ 6],
     joint_iso_itu_t
 );

@@ -19,7 +19,7 @@ import {
  * @constant
  */
 export
-const id_scrypt: OBJECT_IDENTIFIER = new _OID([
+const id_scrypt: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* dod */ 6,

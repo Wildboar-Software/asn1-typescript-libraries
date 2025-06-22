@@ -59,7 +59,7 @@ export const managementPackage: OBJECT_CLASS = {
         notifications,
         optionallyRegisteredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [7],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -23,6 +23,6 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  *
  * @constant
  */
-export const id_ep_teletex: ID = new _OID([4], id_ep);
+export const id_ep_teletex: ID = _OID.fromParts([4], id_ep);
 
 /* eslint-enable */

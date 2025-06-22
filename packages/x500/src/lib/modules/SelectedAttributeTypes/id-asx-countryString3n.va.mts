@@ -13,6 +13,6 @@ import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
  *
  * @constant
  */
-export const id_asx_countryString3n: OBJECT_IDENTIFIER = new _OID([8], id_asx);
+export const id_asx_countryString3n: OBJECT_IDENTIFIER = _OID.fromParts([8], id_asx);
 
 /* eslint-enable */

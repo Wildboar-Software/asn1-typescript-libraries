@@ -24,7 +24,7 @@ import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
  * @constant
  */
 export
-const id_publicKeyType: OBJECT_IDENTIFIER = new _OID([
+const id_publicKeyType: OBJECT_IDENTIFIER = _OID.fromParts([
     /* keyType */ 2,
 ], ansi_X9_62);
 

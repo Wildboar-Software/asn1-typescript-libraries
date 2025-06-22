@@ -23,6 +23,6 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  *
  * @constant
  */
-export const id_mst_prevent_nrn_generation: ID = new _OID([4], id_mst);
+export const id_mst_prevent_nrn_generation: ID = _OID.fromParts([4], id_mst);
 
 /* eslint-enable */

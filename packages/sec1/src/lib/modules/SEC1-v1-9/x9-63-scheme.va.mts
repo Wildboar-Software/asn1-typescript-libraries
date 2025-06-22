@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const x9_63_scheme: OBJECT_IDENTIFIER = new _OID([
+const x9_63_scheme: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

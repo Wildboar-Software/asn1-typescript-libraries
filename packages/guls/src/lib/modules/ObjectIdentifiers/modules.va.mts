@@ -24,6 +24,6 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  *
  * @constant
  */
-export const modules: OBJECT_IDENTIFIER = new _OID([1], genericULS);
+export const modules: OBJECT_IDENTIFIER = _OID.fromParts([1], genericULS);
 
 /* eslint-enable */

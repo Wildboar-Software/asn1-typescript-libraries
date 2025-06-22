@@ -24,7 +24,7 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  *
  * @constant
  */
-export const securityTransformations: OBJECT_IDENTIFIER = new _OID(
+export const securityTransformations: OBJECT_IDENTIFIER = _OID.fromParts(
   [5],
   genericULS
 );

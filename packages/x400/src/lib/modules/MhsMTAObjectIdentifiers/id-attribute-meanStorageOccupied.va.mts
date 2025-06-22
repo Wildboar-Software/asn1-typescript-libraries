@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_meanStorageOccupied: ID = new _OID(
+export const id_attribute_meanStorageOccupied: ID = _OID.fromParts(
     [70],
     id_attribute
 );

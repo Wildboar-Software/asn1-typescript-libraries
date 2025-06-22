@@ -13,7 +13,7 @@ import { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
  *
  * @constant
  */
-export const id_pr_invalidSearchControlOptions: OBJECT_IDENTIFIER = new _OID(
+export const id_pr_invalidSearchControlOptions: OBJECT_IDENTIFIER = _OID.fromParts(
     [26],
     id_pr
 );

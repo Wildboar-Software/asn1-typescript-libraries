@@ -25,7 +25,7 @@ import { id_fields_of_study } from '../Telebiometrics/id-fields-of-study.va.mjs'
  *
  * @constant
  */
-export const id_culturology: OBJECT_IDENTIFIER = new _OID(
+export const id_culturology: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* culturology */ 4],
     id_fields_of_study
 );

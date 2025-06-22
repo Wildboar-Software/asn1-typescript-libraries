@@ -23,6 +23,6 @@ import { id_nvae } from '../SCVP-2009/id-nvae.va.mjs';
  *
  * @constant
  */
-export const id_nvae_bad_name_type: OBJECT_IDENTIFIER = new _OID([5], id_nvae);
+export const id_nvae_bad_name_type: OBJECT_IDENTIFIER = _OID.fromParts([5], id_nvae);
 
 /* eslint-enable */

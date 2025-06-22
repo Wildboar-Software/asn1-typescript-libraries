@@ -23,6 +23,6 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  *
  * @constant
  */
-export const aoi: OBJECT_IDENTIFIER = new _OID([/* attribute */ 7], isisoi);
+export const aoi: OBJECT_IDENTIFIER = _OID.fromParts([/* attribute */ 7], isisoi);
 
 /* eslint-enable */

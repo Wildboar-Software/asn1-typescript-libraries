@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardHeaderSyntaxError: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardHeaderSyntaxError: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* headerSyntaxError */ 4],
     pDUDiscard
 );

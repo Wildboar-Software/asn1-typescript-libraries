@@ -49,7 +49,7 @@ export const delete_: ATTRIBUTE<Delete> = {
         '&Type': _encode_Delete,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [18],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

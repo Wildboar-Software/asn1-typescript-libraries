@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_transitDomainTransferOutList: ID = new _OID(
+export const id_attribute_transitDomainTransferOutList: ID = _OID.fromParts(
     [132],
     id_attribute
 );

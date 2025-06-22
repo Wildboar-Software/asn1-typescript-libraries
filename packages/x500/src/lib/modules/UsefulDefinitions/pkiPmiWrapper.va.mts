@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const pkiPmiWrapper: ID = new _OID([/* pkiPmiWrapper */ 42, 9], module_);
+export const pkiPmiWrapper: ID = _OID.fromParts([/* pkiPmiWrapper */ 42, 9], module_);
 
 /* eslint-enable */

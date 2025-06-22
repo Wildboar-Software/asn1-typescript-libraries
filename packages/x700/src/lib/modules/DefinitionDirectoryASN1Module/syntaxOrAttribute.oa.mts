@@ -49,7 +49,7 @@ export const syntaxOrAttribute: ATTRIBUTE<SyntaxOrAttribute> = {
         '&Type': _encode_SyntaxOrAttribute,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [37],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

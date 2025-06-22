@@ -13,7 +13,7 @@ import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two
  *
  * @constant
  */
-export const tpBasis: OBJECT_IDENTIFIER = new _OID(
+export const tpBasis: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* trinomial */ 2],
     id_characteristic_two_basis
 );

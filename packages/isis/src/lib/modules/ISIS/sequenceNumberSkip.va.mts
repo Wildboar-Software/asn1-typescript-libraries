@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const sequenceNumberSkip: OBJECT_IDENTIFIER = new _OID(
+export const sequenceNumberSkip: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* sequenceNumberSkip */ 13],
   se
 );

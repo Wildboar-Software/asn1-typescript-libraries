@@ -13,6 +13,6 @@ import { id_lat } from "../UsefulDefinitions/id-lat.va.mjs";
  *
  * @constant
  */
-export const id_soa_ldapSyntaxes: OBJECT_IDENTIFIER = new _OID([16], id_lat);
+export const id_soa_ldapSyntaxes: OBJECT_IDENTIFIER = _OID.fromParts([16], id_lat);
 
 /* eslint-enable */

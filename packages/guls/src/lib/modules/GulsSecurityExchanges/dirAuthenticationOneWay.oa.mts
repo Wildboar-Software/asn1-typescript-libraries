@@ -40,7 +40,7 @@ export const dirAuthenticationOneWay: SECURITY_EXCHANGE = {
   encoderFor: {},
   '&SE-Items': [credentials] /* OBJECT_FIELD_SETTING */,
   '&sE-Identifier': {
-    global: new _OID([/* dir-authent-one-way */ 1], securityExchanges),
+    global: _OID.fromParts([/* dir-authent-one-way */ 1], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

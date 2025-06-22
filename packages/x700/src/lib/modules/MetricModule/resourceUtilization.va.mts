@@ -28,7 +28,7 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
  * @constant
  */
 export const resourceUtilization: SpecificIdentifier = {
-    oi: new _OID([2], moaSpecificProblems),
+    oi: _OID.fromParts([2], moaSpecificProblems),
 };
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const softwareManagement: OBJECT_IDENTIFIER = new _OID(
+export const softwareManagement: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part18 */ 18],
     joint_iso_itu_t
 );

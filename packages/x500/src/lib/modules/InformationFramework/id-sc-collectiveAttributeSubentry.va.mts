@@ -13,7 +13,7 @@ import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
  *
  * @constant
  */
-export const id_sc_collectiveAttributeSubentry: OBJECT_IDENTIFIER = new _OID(
+export const id_sc_collectiveAttributeSubentry: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_sc
 );

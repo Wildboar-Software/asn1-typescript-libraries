@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const umf_pkg: OBJECT_IDENTIFIER = new _OID(
+export const umf_pkg: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part10 */ 10, /* package */ 4],
     joint_iso_itu_t
 );

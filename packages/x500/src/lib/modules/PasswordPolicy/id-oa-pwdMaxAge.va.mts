@@ -13,6 +13,6 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdMaxAge: OBJECT_IDENTIFIER = new _OID([32], id_oa);
+export const id_oa_pwdMaxAge: OBJECT_IDENTIFIER = _OID.fromParts([32], id_oa);
 
 /* eslint-enable */

@@ -49,7 +49,7 @@ export const additionalInformation: ATTRIBUTE<AdditionalInformation> = {
         '&Type': _encode_AdditionalInformation,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [7],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

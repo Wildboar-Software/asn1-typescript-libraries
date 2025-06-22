@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_asx_protRestrict: OBJECT_IDENTIFIER = new _OID([71, 2], id_ce);
+export const id_asx_protRestrict: OBJECT_IDENTIFIER = _OID.fromParts([71, 2], id_ce);
 
 /* eslint-enable */

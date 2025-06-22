@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const packetRetransmission: OBJECT_IDENTIFIER = new _OID([161], aoi);
+export const packetRetransmission: OBJECT_IDENTIFIER = _OID.fromParts([161], aoi);
 
 /* eslint-enable */

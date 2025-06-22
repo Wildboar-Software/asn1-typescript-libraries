@@ -44,7 +44,7 @@ import destringifyFilter from "../lib/destringifiers/Filter";
 //     );
 // }
 
-const serialNumber = new ObjectIdentifier([ 2, 5, 4, 5 ]);
+const serialNumber = ObjectIdentifier.fromParts([ 2, 5, 4, 5 ]);
 
 const TEST_FILTER: Filter = {
     present: encodeLDAPOID(serialNumber),

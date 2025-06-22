@@ -23,6 +23,6 @@ import { id_name_binding } from '../MhsMTAObjectIdentifiers/id-name-binding.va.m
  *
  * @constant
  */
-export const id_name_binding_mta_md: ID = new _OID([11], id_name_binding);
+export const id_name_binding_mta_md: ID = _OID.fromParts([11], id_name_binding);
 
 /* eslint-enable */

@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const inputOutputDeviceError: ProbableCause = { globalValue: new _OID([23,], arfProbableCause) };
+const inputOutputDeviceError: ProbableCause = { globalValue: _OID.fromParts([23,], arfProbableCause) };
 
 /* eslint-enable */

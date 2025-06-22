@@ -13,6 +13,6 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_caseIgnoreMatch: OBJECT_IDENTIFIER = new _OID([2], id_mr);
+export const id_mr_caseIgnoreMatch: OBJECT_IDENTIFIER = _OID.fromParts([2], id_mr);
 
 /* eslint-enable */

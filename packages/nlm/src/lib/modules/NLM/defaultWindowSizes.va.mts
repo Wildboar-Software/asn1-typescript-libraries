@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const defaultWindowSizes: OBJECT_IDENTIFIER = new _OID([104], aoi);
+export const defaultWindowSizes: OBJECT_IDENTIFIER = _OID.fromParts([104], aoi);
 
 /* eslint-enable */

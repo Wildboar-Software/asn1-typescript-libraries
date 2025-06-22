@@ -15,6 +15,6 @@ import { id_pkix } from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/
  *
  * @constant
  */
-export const id_pkip: OBJECT_IDENTIFIER = new _OID([5], id_pkix);
+export const id_pkip: OBJECT_IDENTIFIER = _OID.fromParts([5], id_pkix);
 
 /* eslint-enable */

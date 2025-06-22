@@ -13,6 +13,6 @@ import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
  *
  * @constant
  */
-export const id_sc_subentry: OBJECT_IDENTIFIER = new _OID([0], id_sc);
+export const id_sc_subentry: OBJECT_IDENTIFIER = _OID.fromParts([0], id_sc);
 
 /* eslint-enable */

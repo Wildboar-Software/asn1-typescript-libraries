@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const smi2Notification: OBJECT_IDENTIFIER = new _OID(
+export const smi2Notification: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* smi */ 3, /* part2 */ 2, /* notification */ 10],
     joint_iso_itu_t
 );

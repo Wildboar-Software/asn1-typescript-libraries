@@ -13,7 +13,7 @@ import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
  *
  * @constant
  */
-export const id_not_ldapDiagnosticMsg: OBJECT_IDENTIFIER = new _OID(
+export const id_not_ldapDiagnosticMsg: OBJECT_IDENTIFIER = _OID.fromParts(
     [17],
     id_not
 );

@@ -14,6 +14,6 @@ import { pkcs_12 } from "../PKCS-12/pkcs-12.va.mjs";
  *
  * @constant
  */
-export const bagtypes: OBJECT_IDENTIFIER = new _OID([10, 1], pkcs_12);
+export const bagtypes: OBJECT_IDENTIFIER = _OID.fromParts([10, 1], pkcs_12);
 
 /* eslint-enable */

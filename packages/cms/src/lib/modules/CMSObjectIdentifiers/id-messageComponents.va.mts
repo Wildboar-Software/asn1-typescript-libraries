@@ -15,6 +15,6 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  *
  * @constant
  */
-export const id_messageComponents: OID = new _OID([/* mc */ 3], xmlMarkup);
+export const id_messageComponents: OID = _OID.fromParts([/* mc */ 3], xmlMarkup);
 
 /* eslint-enable */

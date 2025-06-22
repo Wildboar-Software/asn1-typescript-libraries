@@ -24,7 +24,7 @@ import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
  * @constant
  */
 export
-const mqvFull_sha1kdf: OBJECT_IDENTIFIER = new _OID([
+const mqvFull_sha1kdf: OBJECT_IDENTIFIER = _OID.fromParts([
     17,
 ], x9_63_scheme);
 

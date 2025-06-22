@@ -14,6 +14,6 @@ import { nistAlgorithms } from "../AlgorithmObjectIdentifiers/nistAlgorithms.va.
  *
  * @constant
  */
-export const sigAlgs: ID = new _OID([3], nistAlgorithms);
+export const sigAlgs: ID = _OID.fromParts([3], nistAlgorithms);
 
 /* eslint-enable */

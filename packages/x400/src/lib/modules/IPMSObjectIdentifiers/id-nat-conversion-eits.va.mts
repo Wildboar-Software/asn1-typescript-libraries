@@ -23,6 +23,6 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  *
  * @constant
  */
-export const id_nat_conversion_eits: ID = new _OID([3], id_nat);
+export const id_nat_conversion_eits: ID = _OID.fromParts([3], id_nat);
 
 /* eslint-enable */

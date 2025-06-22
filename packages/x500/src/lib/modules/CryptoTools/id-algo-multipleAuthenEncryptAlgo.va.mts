@@ -13,7 +13,7 @@ import { id_algo_mca } from "../GenAlgo/id-algo-mca.va.mjs";
  *
  * @constant
  */
-export const id_algo_multipleAuthenEncryptAlgo: OBJECT_IDENTIFIER = new _OID(
+export const id_algo_multipleAuthenEncryptAlgo: OBJECT_IDENTIFIER = _OID.fromParts(
     [5],
     id_algo_mca
 );

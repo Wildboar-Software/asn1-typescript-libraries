@@ -14,7 +14,7 @@ import { algorithm } from "../ANSI-X9-42/algorithm.va.mjs";
  *
  * @constant
  */
-export const tripleDES: OBJECT_IDENTIFIER = new _OID(
+export const tripleDES: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* triple-des */ 2],
     algorithm
 );

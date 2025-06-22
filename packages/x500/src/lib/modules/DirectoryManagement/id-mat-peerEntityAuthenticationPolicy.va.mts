@@ -13,7 +13,7 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_peerEntityAuthenticationPolicy: OBJECT_IDENTIFIER = new _OID(
+export const id_mat_peerEntityAuthenticationPolicy: OBJECT_IDENTIFIER = _OID.fromParts(
     [49],
     id_mat
 );

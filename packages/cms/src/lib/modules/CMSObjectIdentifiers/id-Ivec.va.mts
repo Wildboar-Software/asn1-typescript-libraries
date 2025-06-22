@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_Ivec: OID = new _OID([1], ckm_CMS);
+export const id_Ivec: OID = _OID.fromParts([1], ckm_CMS);
 
 /* eslint-enable */

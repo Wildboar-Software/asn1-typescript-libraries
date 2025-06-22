@@ -13,7 +13,7 @@ import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.mjs";
  *
  * @constant
  */
-export const ellipticCurve: OBJECT_IDENTIFIER = new _OID(
+export const ellipticCurve: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* curves */ 3],
     ansi_X9_62
 );

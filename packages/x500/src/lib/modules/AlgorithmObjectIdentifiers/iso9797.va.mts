@@ -14,7 +14,7 @@ import { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.mjs"
  *
  * @constant
  */
-export const iso9797: ID = new _OID(
+export const iso9797: ID = _OID.fromParts(
     [/* message-authentication-codes */ 9797],
     iso_standard
 );

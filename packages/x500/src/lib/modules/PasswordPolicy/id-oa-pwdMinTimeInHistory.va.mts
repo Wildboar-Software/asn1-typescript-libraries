@@ -13,7 +13,7 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdMinTimeInHistory: OBJECT_IDENTIFIER = new _OID(
+export const id_oa_pwdMinTimeInHistory: OBJECT_IDENTIFIER = _OID.fromParts(
     [44],
     id_oa
 );

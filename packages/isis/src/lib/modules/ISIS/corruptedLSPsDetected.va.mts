@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const corruptedLSPsDetected: OBJECT_IDENTIFIER = new _OID(
+export const corruptedLSPsDetected: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* corruptedLSPsDetected */ 3],
   se
 );

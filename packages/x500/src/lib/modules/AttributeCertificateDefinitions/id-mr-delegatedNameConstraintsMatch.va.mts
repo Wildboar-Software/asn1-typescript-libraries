@@ -13,7 +13,7 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_delegatedNameConstraintsMatch: OBJECT_IDENTIFIER = new _OID(
+export const id_mr_delegatedNameConstraintsMatch: OBJECT_IDENTIFIER = _OID.fromParts(
     [56],
     id_mr
 );

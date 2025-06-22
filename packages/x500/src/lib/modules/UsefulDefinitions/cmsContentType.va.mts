@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const cmsContentType: ID = new _OID([42], ds);
+export const cmsContentType: ID = _OID.fromParts([42], ds);
 
 /* eslint-enable */

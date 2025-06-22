@@ -13,6 +13,6 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_pkiPath: OBJECT_IDENTIFIER = new _OID([70], id_at);
+export const id_at_pkiPath: OBJECT_IDENTIFIER = _OID.fromParts([70], id_at);
 
 /* eslint-enable */

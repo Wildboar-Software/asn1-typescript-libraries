@@ -14,7 +14,7 @@ import { usgov } from "../AlgorithmObjectIdentifiers/usgov.va.mjs";
  *
  * @constant
  */
-export const dodAlgorithms: ID = new _OID(
+export const dodAlgorithms: ID = _OID.fromParts(
     [/* dod */ 2, /* infosec */ 1, /* algorithms */ 1],
     usgov
 );

@@ -26,7 +26,7 @@ import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.
  * @constant
  */
 export
-const id_characteristic_two_basis: OBJECT_IDENTIFIER = new _OID([
+const id_characteristic_two_basis: OBJECT_IDENTIFIER = _OID.fromParts([
     /* basisType */ 3,
 ], characteristic_two_field);
 

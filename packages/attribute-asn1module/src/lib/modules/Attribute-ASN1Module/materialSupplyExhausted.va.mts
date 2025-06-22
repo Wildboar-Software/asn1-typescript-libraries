@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const materialSupplyExhausted: ProbableCause = { globalValue: new _OID([30,], arfProbableCause) };
+const materialSupplyExhausted: ProbableCause = { globalValue: _OID.fromParts([30,], arfProbableCause) };
 
 /* eslint-enable */

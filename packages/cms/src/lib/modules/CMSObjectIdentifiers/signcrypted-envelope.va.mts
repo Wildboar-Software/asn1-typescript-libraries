@@ -15,7 +15,7 @@ import { signcryption_mode } from "../CMSObjectIdentifiers/signcryption-mode.va.
  *
  * @constant
  */
-export const signcrypted_envelope: OID = new _OID(
+export const signcrypted_envelope: OID = _OID.fromParts(
     [/* enveloped */ 4],
     signcryption_mode
 );

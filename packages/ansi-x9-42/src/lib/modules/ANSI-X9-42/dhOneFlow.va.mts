@@ -14,6 +14,6 @@ import { scheme } from "../ANSI-X9-42/scheme.va.mjs";
  *
  * @constant
  */
-export const dhOneFlow: OBJECT_IDENTIFIER = new _OID([3], scheme);
+export const dhOneFlow: OBJECT_IDENTIFIER = _OID.fromParts([3], scheme);
 
 /* eslint-enable */

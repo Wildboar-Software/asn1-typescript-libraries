@@ -13,7 +13,7 @@ import { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va.mjs";
  *
  * @constant
  */
-export const ecdsa_with_Recommended: OBJECT_IDENTIFIER = new _OID(
+export const ecdsa_with_Recommended: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* recommended */ 2],
     id_ecSigType
 );

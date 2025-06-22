@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_namedkeyencryptedData: OID = new _OID([
+export const id_namedkeyencryptedData: OID = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

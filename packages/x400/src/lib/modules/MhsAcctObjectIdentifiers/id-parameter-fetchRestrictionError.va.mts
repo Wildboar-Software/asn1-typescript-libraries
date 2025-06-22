@@ -23,7 +23,7 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  *
  * @constant
  */
-export const id_parameter_fetchRestrictionError: ID = new _OID(
+export const id_parameter_fetchRestrictionError: ID = _OID.fromParts(
     [3],
     id_parameter
 );

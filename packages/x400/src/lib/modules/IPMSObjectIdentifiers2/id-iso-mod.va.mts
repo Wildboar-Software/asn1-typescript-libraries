@@ -23,6 +23,6 @@ import { id_iso_ipms } from '../IPMSObjectIdentifiers2/id-iso-ipms.va.mjs';
  *
  * @constant
  */
-export const id_iso_mod: ID = new _OID([0], id_iso_ipms);
+export const id_iso_mod: ID = _OID.fromParts([0], id_iso_ipms);
 
 /* eslint-enable */

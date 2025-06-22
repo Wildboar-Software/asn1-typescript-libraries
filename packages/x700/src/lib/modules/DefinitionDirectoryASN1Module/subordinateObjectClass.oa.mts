@@ -49,7 +49,7 @@ export const subordinateObjectClass: ATTRIBUTE<NamingObjectClass> = {
         '&Type': _encode_NamingObjectClass,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [36],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

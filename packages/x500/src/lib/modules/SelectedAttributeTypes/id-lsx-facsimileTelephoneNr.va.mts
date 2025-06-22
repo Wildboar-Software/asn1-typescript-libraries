@@ -13,7 +13,7 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  *
  * @constant
  */
-export const id_lsx_facsimileTelephoneNr: OBJECT_IDENTIFIER = new _OID(
+export const id_lsx_facsimileTelephoneNr: OBJECT_IDENTIFIER = _OID.fromParts(
     [22],
     id_lsx
 );

@@ -27,6 +27,6 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_mhs_message_transfer_agent: ID = new _OID([17], id_at);
+export const id_at_mhs_message_transfer_agent: ID = _OID.fromParts([17], id_at);
 
 /* eslint-enable */

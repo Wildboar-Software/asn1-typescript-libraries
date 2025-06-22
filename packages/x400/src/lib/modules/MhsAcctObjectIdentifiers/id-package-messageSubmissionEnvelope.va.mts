@@ -23,7 +23,7 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_messageSubmissionEnvelope: ID = new _OID(
+export const id_package_messageSubmissionEnvelope: ID = _OID.fromParts(
     [29],
     id_package
 );

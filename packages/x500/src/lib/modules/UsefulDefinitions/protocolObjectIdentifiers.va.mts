@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const protocolObjectIdentifiers: ID = new _OID(
+export const protocolObjectIdentifiers: ID = _OID.fromParts(
     [/* protocolObjectIdentifiers */ 4, 9],
     module_
 );

@@ -24,6 +24,6 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const fastSelectAcceptance: OBJECT_IDENTIFIER = new _OID([145], aoi);
+export const fastSelectAcceptance: OBJECT_IDENTIFIER = _OID.fromParts([145], aoi);
 
 /* eslint-enable */

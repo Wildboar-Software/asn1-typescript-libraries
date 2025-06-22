@@ -13,7 +13,7 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_collectiveOrganizationalUnitName: OBJECT_IDENTIFIER = new _OID(
+export const id_at_collectiveOrganizationalUnitName: OBJECT_IDENTIFIER = _OID.fromParts(
     [11, 1],
     id_at
 );

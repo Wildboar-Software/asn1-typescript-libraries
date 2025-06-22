@@ -13,7 +13,7 @@ import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.mjs"
  *
  * @constant
  */
-export const ecdsa_with_Sha512: OBJECT_IDENTIFIER = new _OID(
+export const ecdsa_with_Sha512: OBJECT_IDENTIFIER = _OID.fromParts(
     [4],
     ecdsa_with_Specified
 );

@@ -14,7 +14,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const dh_public_number: ID = new _OID(
+export const dh_public_number: ID = _OID.fromParts(
     [/* number-type */ 2, /* dh-public-number */ 1],
     ansi_x9_42
 );

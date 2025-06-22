@@ -23,6 +23,6 @@ import { id_bp } from '../EDIMSObjectIdentifiers/id-bp.va.mjs';
  *
  * @constant
  */
-export const id_bp_ansiX12_TeletexString: ID = new _OID([4], id_bp);
+export const id_bp_ansiX12_TeletexString: ID = _OID.fromParts([4], id_bp);
 
 /* eslint-enable */

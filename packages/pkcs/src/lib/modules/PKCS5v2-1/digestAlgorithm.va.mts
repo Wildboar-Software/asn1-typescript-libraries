@@ -14,6 +14,6 @@ import { rsadsi } from "../PKCS5v2-1/rsadsi.va.mjs";
  *
  * @constant
  */
-export const digestAlgorithm: OBJECT_IDENTIFIER = new _OID([2], rsadsi);
+export const digestAlgorithm: OBJECT_IDENTIFIER = _OID.fromParts([2], rsadsi);
 
 /* eslint-enable */

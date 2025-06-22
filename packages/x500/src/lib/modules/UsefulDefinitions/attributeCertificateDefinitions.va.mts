@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const attributeCertificateDefinitions: ID = new _OID(
+export const attributeCertificateDefinitions: ID = _OID.fromParts(
     [/* attributeCertificateDefinitions */ 32, 9],
     module_
 );

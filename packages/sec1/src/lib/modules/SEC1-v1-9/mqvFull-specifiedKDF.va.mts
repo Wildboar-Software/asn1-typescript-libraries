@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const mqvFull_specifiedKDF: OBJECT_IDENTIFIER = new _OID([
+const mqvFull_specifiedKDF: OBJECT_IDENTIFIER = _OID.fromParts([
     6,
 ], secg_scheme);
 

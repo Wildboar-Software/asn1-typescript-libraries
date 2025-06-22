@@ -24,7 +24,7 @@ import { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepa
  * @constant
  */
 export
-const noActionRequired: OBJECT_IDENTIFIER = new _OID([
+const noActionRequired: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], arfProposedRepairAction);
 

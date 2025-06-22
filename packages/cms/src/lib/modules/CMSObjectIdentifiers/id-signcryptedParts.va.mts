@@ -15,7 +15,7 @@ import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-mani
  *
  * @constant
  */
-export const id_signcryptedParts: OID = new _OID(
+export const id_signcryptedParts: OID = _OID.fromParts(
     [/* signcryptedParts */ 1],
     signcryption_manifest
 );

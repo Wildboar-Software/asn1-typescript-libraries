@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_maxMTAResponseTime: ID = new _OID([53], id_attribute);
+export const id_attribute_maxMTAResponseTime: ID = _OID.fromParts([53], id_attribute);
 
 /* eslint-enable */

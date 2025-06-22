@@ -13,6 +13,6 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_organizationalUnit: OBJECT_IDENTIFIER = new _OID([5], id_oc);
+export const id_oc_organizationalUnit: OBJECT_IDENTIFIER = _OID.fromParts([5], id_oc);
 
 /* eslint-enable */

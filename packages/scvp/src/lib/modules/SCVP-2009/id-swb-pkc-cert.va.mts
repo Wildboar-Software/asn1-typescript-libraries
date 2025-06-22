@@ -23,6 +23,6 @@ import { id_swb } from '../SCVP-2009/id-swb.va.mjs';
  *
  * @constant
  */
-export const id_swb_pkc_cert: OBJECT_IDENTIFIER = new _OID([10], id_swb);
+export const id_swb_pkc_cert: OBJECT_IDENTIFIER = _OID.fromParts([10], id_swb);
 
 /* eslint-enable */

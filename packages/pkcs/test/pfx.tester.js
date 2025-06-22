@@ -28,7 +28,7 @@ const pkcs = require("../dist/node/index");
 // const pfx = new pkcs.PKCS12.PFX(
 //     pkcs.PKCS12.PFX_version_v3,
 //     new pkcs.PKCS12.ContentInfo(
-//         new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 7, 1 ]),
+//         asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 7, 1 ]),
 //         new asn1.DERElement(
 //             asn1.ASN1TagClass.universal,
 //             asn1.ASN1Construction.primitive,

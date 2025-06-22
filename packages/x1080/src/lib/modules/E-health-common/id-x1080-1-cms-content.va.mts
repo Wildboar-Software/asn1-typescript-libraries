@@ -24,7 +24,7 @@ import { id_x1080_1 } from '../E-health-common/id-x1080-1.va.mjs';
  *
  * @constant
  */
-export const id_x1080_1_cms_content: OBJECT_IDENTIFIER = new _OID(
+export const id_x1080_1_cms_content: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* cms-content */ 1],
     id_x1080_1
 );

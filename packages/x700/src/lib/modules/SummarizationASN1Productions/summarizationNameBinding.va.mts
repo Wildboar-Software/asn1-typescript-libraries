@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const summarizationNameBinding: OBJECT_IDENTIFIER = new _OID(
+export const summarizationNameBinding: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part13 */ 13, /* nameBinding */ 6],
     joint_iso_ccitt
 );

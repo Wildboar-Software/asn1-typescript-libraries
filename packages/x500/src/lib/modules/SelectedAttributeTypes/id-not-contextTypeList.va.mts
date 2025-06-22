@@ -13,6 +13,6 @@ import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
  *
  * @constant
  */
-export const id_not_contextTypeList: OBJECT_IDENTIFIER = new _OID([7], id_not);
+export const id_not_contextTypeList: OBJECT_IDENTIFIER = _OID.fromParts([7], id_not);
 
 /* eslint-enable */

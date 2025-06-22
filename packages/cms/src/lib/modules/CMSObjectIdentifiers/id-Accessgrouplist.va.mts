@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_Accessgrouplist: OID = new _OID([7], ckm_CMS);
+export const id_Accessgrouplist: OID = _OID.fromParts([7], ckm_CMS);
 
 /* eslint-enable */

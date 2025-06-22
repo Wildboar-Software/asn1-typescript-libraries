@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const reachabilityRegisterSizeOID: OBJECT_IDENTIFIER = new _OID(
+export const reachabilityRegisterSizeOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* reachabilityRegisterSize */ 28],
     timeManagement
 );

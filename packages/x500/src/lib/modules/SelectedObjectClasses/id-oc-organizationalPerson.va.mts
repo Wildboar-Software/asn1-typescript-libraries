@@ -13,7 +13,7 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_organizationalPerson: OBJECT_IDENTIFIER = new _OID(
+export const id_oc_organizationalPerson: OBJECT_IDENTIFIER = _OID.fromParts(
     [7],
     id_oc
 );

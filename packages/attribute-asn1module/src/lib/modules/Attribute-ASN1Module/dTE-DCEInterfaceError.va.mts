@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const dTE_DCEInterfaceError: ProbableCause = { globalValue: new _OID([13,], arfProbableCause) };
+const dTE_DCEInterfaceError: ProbableCause = { globalValue: _OID.fromParts([13,], arfProbableCause) };
 
 /* eslint-enable */

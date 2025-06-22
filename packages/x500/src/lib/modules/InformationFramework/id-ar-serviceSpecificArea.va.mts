@@ -13,7 +13,7 @@ import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
  *
  * @constant
  */
-export const id_ar_serviceSpecificArea: OBJECT_IDENTIFIER = new _OID(
+export const id_ar_serviceSpecificArea: OBJECT_IDENTIFIER = _OID.fromParts(
     [8],
     id_ar
 );

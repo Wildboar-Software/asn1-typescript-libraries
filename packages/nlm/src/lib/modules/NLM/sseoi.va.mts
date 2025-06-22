@@ -24,7 +24,7 @@ import { nloi } from '../NLM/nloi.va.mjs';
  *
  * @constant
  */
-export const sseoi: OBJECT_IDENTIFIER = new _OID(
+export const sseoi: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* standardSpecificExtensions */ 0],
     nloi
 );

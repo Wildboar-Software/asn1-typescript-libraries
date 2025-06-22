@@ -14,6 +14,6 @@ import { namedScheme } from "../ANSI-X9-42/namedScheme.va.mjs";
  *
  * @constant
  */
-export const mqv1_sha1: OBJECT_IDENTIFIER = new _OID([8], namedScheme);
+export const mqv1_sha1: OBJECT_IDENTIFIER = _OID.fromParts([8], namedScheme);
 
 /* eslint-enable */

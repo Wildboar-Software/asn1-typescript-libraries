@@ -14,6 +14,6 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const ietf_at: OBJECT_IDENTIFIER = new _OID([1, 3, 6, 1, 5, 5, 7, 9]);
+export const ietf_at: OBJECT_IDENTIFIER = _OID.fromParts([1, 3, 6, 1, 5, 5, 7, 9]);
 
 /* eslint-enable */

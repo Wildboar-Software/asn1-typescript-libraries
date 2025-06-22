@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_XPathTokensSet: OID = new _OID(
+export const id_XPathTokensSet: OID = _OID.fromParts(
     [/* xPathTokensSet */ 1],
     id_tokenization_manifest
 );

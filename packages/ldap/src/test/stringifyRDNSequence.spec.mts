@@ -7,10 +7,10 @@ function utf8Element (str: string): BERElement {
     return _encodeUTF8String(str, BER) as BERElement;
 }
 
-const COUNTRY_NAME = new ObjectIdentifier([ 2, 5, 4, 6 ]);
-const STATE_NAME = new ObjectIdentifier([ 2, 5, 4, 8 ]);
-const GIVEN_NAME = new ObjectIdentifier([ 2, 5, 4, 42 ]);
-const SURNAME = new ObjectIdentifier([ 2, 5, 4, 4 ]);
+const COUNTRY_NAME = ObjectIdentifier.fromParts([ 2, 5, 4, 6 ]);
+const STATE_NAME = ObjectIdentifier.fromParts([ 2, 5, 4, 8 ]);
+const GIVEN_NAME = ObjectIdentifier.fromParts([ 2, 5, 4, 42 ]);
+const SURNAME = ObjectIdentifier.fromParts([ 2, 5, 4, 4 ]);
 
 const BASE_RDN: AttributeTypeAndValue[] = [
     [

@@ -31,7 +31,7 @@ import {
  * @constant
  */
 export
-const id_etsi_es_attributes: OBJECT_IDENTIFIER = new _OID([
+const id_etsi_es_attributes: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* identified-organization */ 4,
     /* etsi */ 0,

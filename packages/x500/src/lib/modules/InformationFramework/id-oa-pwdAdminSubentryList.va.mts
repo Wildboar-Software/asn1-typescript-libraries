@@ -13,7 +13,7 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdAdminSubentryList: OBJECT_IDENTIFIER = new _OID(
+export const id_oa_pwdAdminSubentryList: OBJECT_IDENTIFIER = _OID.fromParts(
     [21],
     id_oa
 );

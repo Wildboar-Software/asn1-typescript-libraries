@@ -24,7 +24,7 @@ import { network_layer } from '../NLM/network-layer.va.mjs';
  *
  * @constant
  */
-export const nl: OBJECT_IDENTIFIER = new _OID(
+export const nl: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* management */ 0],
     network_layer
 );

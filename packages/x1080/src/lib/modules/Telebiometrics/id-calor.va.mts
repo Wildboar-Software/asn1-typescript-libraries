@@ -24,7 +24,7 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  *
  * @constant
  */
-export const id_calor: OBJECT_IDENTIFIER = new _OID(
+export const id_calor: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* calor */ 6],
     id_modalities
 );

@@ -13,7 +13,7 @@ import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
  *
  * @constant
  */
-export const c_TwoCurve: OBJECT_IDENTIFIER = new _OID(
+export const c_TwoCurve: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* characteristicTwo */ 0],
     ellipticCurve
 );

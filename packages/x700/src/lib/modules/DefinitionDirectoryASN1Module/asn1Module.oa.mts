@@ -52,7 +52,7 @@ export const asn1Module: OBJECT_CLASS = {
         asn1Version,
         optionallyRegisteredAs,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [15],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

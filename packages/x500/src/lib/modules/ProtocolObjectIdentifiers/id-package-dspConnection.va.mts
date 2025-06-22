@@ -13,7 +13,7 @@ import { id_package } from "../UsefulDefinitions/id-package.va.mjs";
  *
  * @constant
  */
-export const id_package_dspConnection: OBJECT_IDENTIFIER = new _OID(
+export const id_package_dspConnection: OBJECT_IDENTIFIER = _OID.fromParts(
     [11],
     id_package
 );

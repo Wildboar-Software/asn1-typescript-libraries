@@ -24,7 +24,7 @@ import { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100Informatio
  *
  * @constant
  */
-export const m3100Package: OBJECT_IDENTIFIER = new _OID(
+export const m3100Package: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* package */ 4],
     m3100InformationModel
 );

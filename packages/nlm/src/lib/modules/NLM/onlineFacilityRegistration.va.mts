@@ -24,7 +24,7 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const onlineFacilityRegistration: OBJECT_IDENTIFIER = new _OID(
+export const onlineFacilityRegistration: OBJECT_IDENTIFIER = _OID.fromParts(
     [158],
     aoi
 );

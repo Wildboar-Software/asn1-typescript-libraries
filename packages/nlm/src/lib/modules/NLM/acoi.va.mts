@@ -24,6 +24,6 @@ import { nloi } from '../NLM/nloi.va.mjs';
  *
  * @constant
  */
-export const acoi: OBJECT_IDENTIFIER = new _OID([/* action */ 9], nloi);
+export const acoi: OBJECT_IDENTIFIER = _OID.fromParts([/* action */ 9], nloi);
 
 /* eslint-enable */

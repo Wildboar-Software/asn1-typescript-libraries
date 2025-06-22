@@ -14,7 +14,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_ckm_recip_info2: OID = new _OID(
+export const id_ckm_recip_info2: OID = _OID.fromParts(
     [/* member-body */ 2, /* us */ 840, /* x973 */ 10060, /* km */ 2, 2],
     iso
 );

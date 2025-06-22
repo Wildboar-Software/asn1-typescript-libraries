@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const iSO9542PDUDiscard: OBJECT_IDENTIFIER = new _OID(
+export const iSO9542PDUDiscard: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* specificProblems */ 3, /* iSO9542PDUDiscard */ 2],
     sseoi
 );

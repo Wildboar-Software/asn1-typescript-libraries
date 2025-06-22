@@ -23,6 +23,6 @@ import { id_alg } from '../MSObjectIdentifiers/id-alg.va.mjs';
  *
  * @constant
  */
-export const id_alg_password_xor: ID = new _OID([0], id_alg);
+export const id_alg_password_xor: ID = _OID.fromParts([0], id_alg);
 
 /* eslint-enable */

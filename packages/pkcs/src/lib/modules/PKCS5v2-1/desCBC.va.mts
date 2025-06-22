@@ -14,7 +14,7 @@ import { oiw } from "../PKCS5v2-1/oiw.va.mjs";
  *
  * @constant
  */
-export const desCBC: OBJECT_IDENTIFIER = new _OID(
+export const desCBC: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* secsig */ 3, /* algorithms */ 2, 7],
     oiw
 );

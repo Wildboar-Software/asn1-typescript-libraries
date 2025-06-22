@@ -24,7 +24,7 @@ import { nloi } from '../NLM/nloi.va.mjs';
  *
  * @constant
  */
-export const moi: OBJECT_IDENTIFIER = new _OID(
+export const moi: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* managedObjectClass */ 3],
     nloi
 );

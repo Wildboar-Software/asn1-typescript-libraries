@@ -15,7 +15,7 @@ import { signcryption_mode } from "../CMSObjectIdentifiers/signcryption-mode.va.
  *
  * @constant
  */
-export const signcrypted_components: OID = new _OID(
+export const signcrypted_components: OID = _OID.fromParts(
     [/* components */ 3],
     signcryption_mode
 );

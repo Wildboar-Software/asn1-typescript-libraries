@@ -27,6 +27,6 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_mhs_country_name: ID = new _OID([11], id_at);
+export const id_at_mhs_country_name: ID = _OID.fromParts([11], id_at);
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const dbEKM: OID = new _OID([
+export const dbEKM: OID = _OID.fromParts([
     /* joint-iso-itu-t */ 2,
     /* country */ 16,
     /* us */ 840,

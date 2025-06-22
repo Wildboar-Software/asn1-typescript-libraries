@@ -23,6 +23,6 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  *
  * @constant
  */
-export const id_aae_auto_forwarding_loop: ID = new _OID([1], id_aae);
+export const id_aae_auto_forwarding_loop: ID = _OID.fromParts([1], id_aae);
 
 /* eslint-enable */

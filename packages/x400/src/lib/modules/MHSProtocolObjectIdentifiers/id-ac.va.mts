@@ -27,6 +27,6 @@ import { id_mhs_protocols } from '../MHSProtocolObjectIdentifiers/id-mhs-protoco
  *
  * @constant
  */
-export const id_ac: ID = new _OID([1], id_mhs_protocols);
+export const id_ac: ID = _OID.fromParts([1], id_mhs_protocols);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const leapSecondCountOID: OBJECT_IDENTIFIER = new _OID(
+export const leapSecondCountOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* leapSecondCount */ 14],
     timeManagement
 );

@@ -13,7 +13,7 @@ import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
  *
  * @constant
  */
-export const id_mpa_shadowing_dop_prob: OBJECT_IDENTIFIER = new _OID(
+export const id_mpa_shadowing_dop_prob: OBJECT_IDENTIFIER = _OID.fromParts(
     [26],
     id_mpa
 );

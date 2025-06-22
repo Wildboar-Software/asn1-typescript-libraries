@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_meanSizeMprSubmitted: ID = new _OID(
+export const id_attribute_meanSizeMprSubmitted: ID = _OID.fromParts(
     [67],
     id_attribute
 );

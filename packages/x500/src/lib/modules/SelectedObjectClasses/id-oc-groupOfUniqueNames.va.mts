@@ -13,7 +13,7 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_groupOfUniqueNames: OBJECT_IDENTIFIER = new _OID(
+export const id_oc_groupOfUniqueNames: OBJECT_IDENTIFIER = _OID.fromParts(
     [17],
     id_oc
 );

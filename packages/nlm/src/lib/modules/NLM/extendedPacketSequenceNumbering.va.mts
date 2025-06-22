@@ -24,7 +24,7 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const extendedPacketSequenceNumbering: OBJECT_IDENTIFIER = new _OID(
+export const extendedPacketSequenceNumbering: OBJECT_IDENTIFIER = _OID.fromParts(
     [49],
     aoi
 );

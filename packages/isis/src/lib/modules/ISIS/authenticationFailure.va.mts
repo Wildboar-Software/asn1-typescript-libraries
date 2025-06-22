@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const authenticationFailure: OBJECT_IDENTIFIER = new _OID(
+export const authenticationFailure: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* authenticationFailure */ 2],
   se
 );

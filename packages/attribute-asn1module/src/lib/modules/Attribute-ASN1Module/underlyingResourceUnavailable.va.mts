@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const underlyingResourceUnavailable: ProbableCause = { globalValue: new _OID([56,], arfProbableCause) };
+const underlyingResourceUnavailable: ProbableCause = { globalValue: _OID.fromParts([56,], arfProbableCause) };
 
 /* eslint-enable */

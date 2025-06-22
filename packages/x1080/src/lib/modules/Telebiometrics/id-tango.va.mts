@@ -24,7 +24,7 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  *
  * @constant
  */
-export const id_tango: OBJECT_IDENTIFIER = new _OID(
+export const id_tango: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* tango */ 1],
     id_modalities
 );

@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const sect571k1: ID = new _OID([38], certicom_curve);
+export const sect571k1: ID = _OID.fromParts([38], certicom_curve);
 
 /* eslint-enable */

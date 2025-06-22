@@ -13,6 +13,6 @@ import { id_ob } from "../UsefulDefinitions/id-ob.va.mjs";
  *
  * @constant
  */
-export const id_op_binding_shadow: OBJECT_IDENTIFIER = new _OID([1], id_ob);
+export const id_op_binding_shadow: OBJECT_IDENTIFIER = _OID.fromParts([1], id_ob);
 
 /* eslint-enable */

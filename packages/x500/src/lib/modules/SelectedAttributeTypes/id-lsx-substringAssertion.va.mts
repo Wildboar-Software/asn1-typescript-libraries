@@ -13,7 +13,7 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  *
  * @constant
  */
-export const id_lsx_substringAssertion: OBJECT_IDENTIFIER = new _OID(
+export const id_lsx_substringAssertion: OBJECT_IDENTIFIER = _OID.fromParts(
     [58],
     id_lsx
 );

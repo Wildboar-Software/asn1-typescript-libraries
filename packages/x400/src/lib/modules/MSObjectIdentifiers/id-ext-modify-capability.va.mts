@@ -23,6 +23,6 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  *
  * @constant
  */
-export const id_ext_modify_capability: ID = new _OID([0], id_ext);
+export const id_ext_modify_capability: ID = _OID.fromParts([0], id_ext);
 
 /* eslint-enable */

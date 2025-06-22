@@ -24,7 +24,7 @@ import { id_characteristic_two_basis } from "../SEC1-v1-9/id-characteristic-two-
  * @constant
  */
 export
-const gnBasis: OBJECT_IDENTIFIER = new _OID([
+const gnBasis: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], id_characteristic_two_basis);
 

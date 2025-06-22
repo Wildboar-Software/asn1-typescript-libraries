@@ -23,6 +23,6 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  *
  * @constant
  */
-export const id_act_auto_delete: ID = new _OID([3], id_act);
+export const id_act_auto_delete: ID = _OID.fromParts([3], id_act);
 
 /* eslint-enable */

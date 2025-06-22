@@ -13,6 +13,6 @@ import { id_pkix } from "../PkiPmiExternalDataTypes/id-pkix.va.mjs";
  *
  * @constant
  */
-export const id_ad: OBJECT_IDENTIFIER = new _OID([48], id_pkix);
+export const id_ad: OBJECT_IDENTIFIER = _OID.fromParts([48], id_pkix);
 
 /* eslint-enable */

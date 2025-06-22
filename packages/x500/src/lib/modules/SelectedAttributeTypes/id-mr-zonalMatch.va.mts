@@ -13,6 +13,6 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  *
  * @constant
  */
-export const id_mr_zonalMatch: OBJECT_IDENTIFIER = new _OID([52], id_mr);
+export const id_mr_zonalMatch: OBJECT_IDENTIFIER = _OID.fromParts([52], id_mr);
 
 /* eslint-enable */

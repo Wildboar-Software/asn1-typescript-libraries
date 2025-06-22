@@ -13,7 +13,7 @@ import { id_kmr } from "../UsefulDefinitions/id-kmr.va.mjs";
  *
  * @constant
  */
-export const id_kmr_supplierConsumersMatch: OBJECT_IDENTIFIER = new _OID(
+export const id_kmr_supplierConsumersMatch: OBJECT_IDENTIFIER = _OID.fromParts(
     [3],
     id_kmr
 );

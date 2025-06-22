@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const rejectedAdjacency: OBJECT_IDENTIFIER = new _OID(
+export const rejectedAdjacency: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* rejectedAdjacency */ 12],
   se
 );

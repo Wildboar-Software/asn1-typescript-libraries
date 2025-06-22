@@ -26,7 +26,7 @@ import {
  *
  * @constant
  */
-export const m3108Part2Identifier: OBJECT_IDENTIFIER = new _OID(
+export const m3108Part2Identifier: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* recommendation */ 0,
         /* m */ 13,

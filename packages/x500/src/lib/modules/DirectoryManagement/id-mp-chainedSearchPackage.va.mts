@@ -13,7 +13,7 @@ import { id_mp } from "../DirectoryManagement/id-mp.va.mjs";
  *
  * @constant
  */
-export const id_mp_chainedSearchPackage: OBJECT_IDENTIFIER = new _OID(
+export const id_mp_chainedSearchPackage: OBJECT_IDENTIFIER = _OID.fromParts(
     [14],
     id_mp
 );

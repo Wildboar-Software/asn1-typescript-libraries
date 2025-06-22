@@ -26,7 +26,7 @@ const crl = new AuthenticationFramework.SIGNED(
     new AuthenticationFramework.CertificateListContent(
         AuthenticationFramework.Version_v1,
         new AuthenticationFramework.AlgorithmIdentifier(
-            new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 11 ]),
+            asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 11 ]),
             new asn1.DERElement(
                 asn1.ASN1TagClass.universal,
                 asn1.ASN1Construction.primitive,
@@ -38,7 +38,7 @@ const crl = new AuthenticationFramework.SIGNED(
             rdnSequence: [
                 [
                     new InformationFramework.AttributeTypeAndValue(
-                        new asn1.ObjectIdentifier([ 2, 5, 4, 3 ]),
+                        asn1.ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
                         new asn1.DERElement(
                             asn1.ASN1TagClass.universal,
                             asn1.ASN1Construction.primitive,
@@ -62,7 +62,7 @@ const crl = new AuthenticationFramework.SIGNED(
         [],
     ),
     new AuthenticationFramework.AlgorithmIdentifier(
-        new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 11 ]),
+        asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 11 ]),
         new asn1.DERElement(
             asn1.ASN1TagClass.universal,
             asn1.ASN1Construction.primitive,

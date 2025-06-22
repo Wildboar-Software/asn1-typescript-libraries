@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const secg_scheme: OBJECT_IDENTIFIER = new _OID([
+const secg_scheme: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* certicom */ 132,

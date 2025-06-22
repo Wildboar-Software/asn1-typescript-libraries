@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_processingErrorFlag: ID = new _OID(
+export const id_attribute_processingErrorFlag: ID = _OID.fromParts(
     [92],
     id_attribute
 );

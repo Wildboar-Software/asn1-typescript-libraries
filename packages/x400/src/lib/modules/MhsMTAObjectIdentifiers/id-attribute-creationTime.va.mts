@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_creationTime: ID = new _OID([23], id_attribute);
+export const id_attribute_creationTime: ID = _OID.fromParts([23], id_attribute);
 
 /* eslint-enable */

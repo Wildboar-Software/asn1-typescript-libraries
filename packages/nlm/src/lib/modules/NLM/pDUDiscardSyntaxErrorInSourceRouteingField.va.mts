@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardSyntaxErrorInSourceRouteingField: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardSyntaxErrorInSourceRouteingField: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* syntaxErrorInSourceRouteingField */ 145],
     pDUDiscard
 );

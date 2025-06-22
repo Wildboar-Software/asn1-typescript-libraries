@@ -13,6 +13,6 @@ import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
  *
  * @constant
  */
-export const id_doa_dseType: OBJECT_IDENTIFIER = new _OID([0], id_doa);
+export const id_doa_dseType: OBJECT_IDENTIFIER = _OID.fromParts([0], id_doa);
 
 /* eslint-enable */

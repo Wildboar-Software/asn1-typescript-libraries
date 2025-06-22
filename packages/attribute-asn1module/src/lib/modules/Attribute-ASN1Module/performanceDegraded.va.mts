@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const performanceDegraded: ProbableCause = { globalValue: new _OID([34,], arfProbableCause) };
+const performanceDegraded: ProbableCause = { globalValue: _OID.fromParts([34,], arfProbableCause) };
 
 /* eslint-enable */

@@ -52,7 +52,7 @@ export const supportedCmipVersion: ATTRIBUTE<ProtocolVersion> = {
     },
     '&equality-match': bitStringMatch /* OBJECT_FIELD_SETTING */,
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [2],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

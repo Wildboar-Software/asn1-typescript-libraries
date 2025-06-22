@@ -27,6 +27,6 @@ import { id_pro } from '../MHSRoutingObjectIdentifiers/id-pro.va.mjs';
  *
  * @constant
  */
-export const id_pro_x445: ID = new _OID([2], id_pro);
+export const id_pro_x445: ID = _OID.fromParts([2], id_pro);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const maximumDistanceOID: OBJECT_IDENTIFIER = new _OID(
+export const maximumDistanceOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* maximumDistance */ 19],
     timeManagement
 );

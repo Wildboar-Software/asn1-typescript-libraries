@@ -23,6 +23,6 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  *
  * @constant
  */
-export const id_parameter_securityError: ID = new _OID([6], id_parameter);
+export const id_parameter_securityError: ID = _OID.fromParts([6], id_parameter);
 
 /* eslint-enable */

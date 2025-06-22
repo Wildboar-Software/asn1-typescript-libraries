@@ -24,6 +24,6 @@ import { id_ct } from '../CmsTelebiometric/id-ct.va.mjs';
  *
  * @constant
  */
-export const id_ct_authEnvelopedData: OBJECT_IDENTIFIER = new _OID([23], id_ct);
+export const id_ct_authEnvelopedData: OBJECT_IDENTIFIER = _OID.fromParts([23], id_ct);
 
 /* eslint-enable */

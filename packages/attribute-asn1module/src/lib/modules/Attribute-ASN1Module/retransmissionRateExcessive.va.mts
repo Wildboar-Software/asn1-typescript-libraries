@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const retransmissionRateExcessive: ProbableCause = { globalValue: new _OID([45,], arfProbableCause) };
+const retransmissionRateExcessive: ProbableCause = { globalValue: _OID.fromParts([45,], arfProbableCause) };
 
 /* eslint-enable */

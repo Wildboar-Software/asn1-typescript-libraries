@@ -23,7 +23,7 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_destinationDomainDelivery: ID = new _OID(
+export const id_package_destinationDomainDelivery: ID = _OID.fromParts(
     [16],
     id_package
 );

@@ -23,6 +23,6 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_responsibility_forwarded: ID = new _OID([5], id_hat);
+export const id_hat_responsibility_forwarded: ID = _OID.fromParts([5], id_hat);
 
 /* eslint-enable */

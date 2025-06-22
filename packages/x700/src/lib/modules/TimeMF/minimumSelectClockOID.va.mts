@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const minimumSelectClockOID: OBJECT_IDENTIFIER = new _OID(
+export const minimumSelectClockOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* minimumSelectClock */ 26],
     timeManagement
 );

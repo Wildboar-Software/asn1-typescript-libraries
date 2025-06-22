@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_probePOACAlg: ID = new _OID([127], id_attribute);
+export const id_attribute_probePOACAlg: ID = _OID.fromParts([127], id_attribute);
 
 /* eslint-enable */

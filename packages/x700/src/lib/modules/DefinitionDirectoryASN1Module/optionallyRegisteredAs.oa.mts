@@ -49,7 +49,7 @@ export const optionallyRegisteredAs: ATTRIBUTE<OptionallyRegisteredAs> = {
         '&Type': _encode_OptionallyRegisteredAs,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [46],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

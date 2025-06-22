@@ -105,7 +105,7 @@ export class gulsSignatureTransformation_XformedDataType {
    * @method
    */
   public static get _default_value_for_initEncRules() {
-    return new _OID(
+    return _OID.fromParts(
       [/* asn1 */ 1, /* ber-derived */ 2, /* canonical-encoding */ 0],
       joint_iso_itu_t
     );

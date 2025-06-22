@@ -24,7 +24,7 @@ import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
  * @constant
  */
 export
-const dhSinglePass_cofactorDH_sha1kdf: OBJECT_IDENTIFIER = new _OID([
+const dhSinglePass_cofactorDH_sha1kdf: OBJECT_IDENTIFIER = _OID.fromParts([
     3,
 ], x9_63_scheme);
 

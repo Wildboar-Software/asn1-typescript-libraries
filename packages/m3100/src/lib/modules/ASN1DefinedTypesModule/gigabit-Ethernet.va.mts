@@ -28,7 +28,7 @@ import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo
  *
  * @constant
  */
-export const gigabit_Ethernet: CharacteristicInformation = new _OID(
+export const gigabit_Ethernet: CharacteristicInformation = _OID.fromParts(
     [39],
     characteristicInfo
 );

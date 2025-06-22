@@ -14,6 +14,6 @@ import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
  *
  * @constant
  */
-export const signatureAlgorithm: ID = new _OID([3], algorithm);
+export const signatureAlgorithm: ID = _OID.fromParts([3], algorithm);
 
 /* eslint-enable */

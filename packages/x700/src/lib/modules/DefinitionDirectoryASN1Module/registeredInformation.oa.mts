@@ -52,7 +52,7 @@ export const registeredInformation: OBJECT_CLASS = {
         informationStatus,
         additionalInformation,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [3],
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

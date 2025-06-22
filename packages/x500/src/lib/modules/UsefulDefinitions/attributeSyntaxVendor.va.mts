@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const attributeSyntaxVendor: ID = new _OID([5], ds);
+export const attributeSyntaxVendor: ID = _OID.fromParts([5], ds);
 
 /* eslint-enable */

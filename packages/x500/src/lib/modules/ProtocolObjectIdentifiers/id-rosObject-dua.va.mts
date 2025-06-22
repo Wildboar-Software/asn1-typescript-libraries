@@ -13,6 +13,6 @@ import { id_rosObject } from "../UsefulDefinitions/id-rosObject.va.mjs";
  *
  * @constant
  */
-export const id_rosObject_dua: OBJECT_IDENTIFIER = new _OID([1], id_rosObject);
+export const id_rosObject_dua: OBJECT_IDENTIFIER = _OID.fromParts([1], id_rosObject);
 
 /* eslint-enable */

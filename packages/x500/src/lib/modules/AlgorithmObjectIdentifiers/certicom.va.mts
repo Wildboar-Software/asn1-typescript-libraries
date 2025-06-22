@@ -14,6 +14,6 @@ import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization
  *
  * @constant
  */
-export const certicom: ID = new _OID([/* certicom */ 132], iso_organization);
+export const certicom: ID = _OID.fromParts([/* certicom */ 132], iso_organization);
 
 /* eslint-enable */

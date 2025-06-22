@@ -14,6 +14,6 @@ import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization
  *
  * @constant
  */
-export const teletrust: ID = new _OID([/* teletrust */ 36], iso_organization);
+export const teletrust: ID = _OID.fromParts([/* teletrust */ 36], iso_organization);
 
 /* eslint-enable */

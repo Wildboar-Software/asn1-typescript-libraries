@@ -13,7 +13,7 @@ import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.mjs";
  *
  * @constant
  */
-export const id_fieldType: OBJECT_IDENTIFIER = new _OID(
+export const id_fieldType: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* fieldType */ 1],
     ansi_X9_62
 );

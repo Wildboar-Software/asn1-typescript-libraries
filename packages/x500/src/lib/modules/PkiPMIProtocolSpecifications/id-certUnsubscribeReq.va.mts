@@ -13,7 +13,7 @@ import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
  *
  * @constant
  */
-export const id_certUnsubscribeReq: OBJECT_IDENTIFIER = new _OID(
+export const id_certUnsubscribeReq: OBJECT_IDENTIFIER = _OID.fromParts(
     [13],
     id_cmsct
 );

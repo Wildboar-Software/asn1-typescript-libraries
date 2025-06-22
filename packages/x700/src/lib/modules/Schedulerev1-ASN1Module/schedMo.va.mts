@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const schedMo: OBJECT_IDENTIFIER = new _OID(
+export const schedMo: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part15 */ 15, /* managedObjectClass */ 3],
     joint_iso_itu_t
 );

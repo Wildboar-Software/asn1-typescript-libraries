@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const versionSkew: OBJECT_IDENTIFIER = new _OID(
+export const versionSkew: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* versionSkew */ 14],
   se
 );

@@ -13,7 +13,7 @@ import { id_rosObject } from "../UsefulDefinitions/id-rosObject.va.mjs";
  *
  * @constant
  */
-export const id_rosObject_initiatingConsumerDSA: OBJECT_IDENTIFIER = new _OID(
+export const id_rosObject_initiatingConsumerDSA: OBJECT_IDENTIFIER = _OID.fromParts(
     [8],
     id_rosObject
 );

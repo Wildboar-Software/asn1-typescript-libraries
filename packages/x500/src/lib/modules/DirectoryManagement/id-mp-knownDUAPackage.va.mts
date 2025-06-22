@@ -13,6 +13,6 @@ import { id_mp } from "../DirectoryManagement/id-mp.va.mjs";
  *
  * @constant
  */
-export const id_mp_knownDUAPackage: OBJECT_IDENTIFIER = new _OID([21], id_mp);
+export const id_mp_knownDUAPackage: OBJECT_IDENTIFIER = _OID.fromParts([21], id_mp);
 
 /* eslint-enable */

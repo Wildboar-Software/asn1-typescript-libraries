@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const matchingRestriction: ID = new _OID([36], ds);
+export const matchingRestriction: ID = _OID.fromParts([36], ds);
 
 /* eslint-enable */

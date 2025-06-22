@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const mdmpmfRelationshipMapping: OBJECT_IDENTIFIER = new _OID(
+export const mdmpmfRelationshipMapping: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* ms */ 9,
         /* function */ 2,

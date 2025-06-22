@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardIncorrectChecksum: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardIncorrectChecksum: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* incorrectChecksum */ 2],
     pDUDiscard
 );

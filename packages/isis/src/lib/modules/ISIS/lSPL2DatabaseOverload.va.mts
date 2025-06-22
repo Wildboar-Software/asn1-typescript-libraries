@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const lSPL2DatabaseOverload: OBJECT_IDENTIFIER = new _OID(
+export const lSPL2DatabaseOverload: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* lSPL2DatabaseOverload */ 7],
   se
 );

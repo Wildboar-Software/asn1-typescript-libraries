@@ -14,6 +14,6 @@ import { scheme } from "../ANSI-X9-42/scheme.va.mjs";
  *
  * @constant
  */
-export const dhEphem: OBJECT_IDENTIFIER = new _OID([2], scheme);
+export const dhEphem: OBJECT_IDENTIFIER = _OID.fromParts([2], scheme);
 
 /* eslint-enable */

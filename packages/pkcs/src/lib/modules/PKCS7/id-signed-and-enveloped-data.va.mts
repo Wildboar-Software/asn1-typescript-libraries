@@ -14,7 +14,7 @@ import { id_pkcs } from "../PKCS7/id-pkcs.va.mjs";
  *
  * @constant
  */
-export const id_signed_and_enveloped_data: OBJECT_IDENTIFIER = new _OID(
+export const id_signed_and_enveloped_data: OBJECT_IDENTIFIER = _OID.fromParts(
     [7, 4],
     id_pkcs
 );

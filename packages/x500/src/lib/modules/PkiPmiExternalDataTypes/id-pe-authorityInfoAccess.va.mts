@@ -13,7 +13,7 @@ import { id_pe } from "../PkiPmiExternalDataTypes/id-pe.va.mjs";
  *
  * @constant
  */
-export const id_pe_authorityInfoAccess: OBJECT_IDENTIFIER = new _OID(
+export const id_pe_authorityInfoAccess: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_pe
 );

@@ -13,7 +13,7 @@ import { id_lmr } from "../UsefulDefinitions/id-lmr.va.mjs";
  *
  * @constant
  */
-export const id_lmr_caseIgnoreIA5Match: OBJECT_IDENTIFIER = new _OID(
+export const id_lmr_caseIgnoreIA5Match: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_lmr
 );

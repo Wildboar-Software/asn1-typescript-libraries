@@ -46,7 +46,7 @@ export const aUnitData: REALIZATION<RealizationParameter> = {
   encoderFor: {
     '&Type': _encode_RealizationParameter,
   },
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [
       /* association-control */ 2,
       /* abstract-syntax */ 1,

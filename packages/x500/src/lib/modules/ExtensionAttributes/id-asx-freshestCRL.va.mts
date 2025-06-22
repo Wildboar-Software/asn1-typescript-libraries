@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_asx_freshestCRL: OBJECT_IDENTIFIER = new _OID([46, 2], id_ce);
+export const id_asx_freshestCRL: OBJECT_IDENTIFIER = _OID.fromParts([46, 2], id_ce);
 
 /* eslint-enable */

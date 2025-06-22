@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_shake128_len: ID = new _OID([17], hashAlgs);
+export const id_shake128_len: ID = _OID.fromParts([17], hashAlgs);
 
 /* eslint-enable */

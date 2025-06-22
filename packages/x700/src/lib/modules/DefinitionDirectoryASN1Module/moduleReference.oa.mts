@@ -49,7 +49,7 @@ export const moduleReference: ATTRIBUTE<Identifier> = {
         '&Type': _encode_Identifier,
     },
     '&single-valued': true /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [28],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -23,6 +23,6 @@ import { id_aa } from '../IPMSObjectIdentifiers/id-aa.va.mjs';
  *
  * @constant
  */
-export const id_aa_ipm_auto_advise: ID = new _OID([3], id_aa);
+export const id_aa_ipm_auto_advise: ID = _OID.fromParts([3], id_aa);
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryOSIProtocols: ID = new _OID(
+export const directoryOSIProtocols: ID = _OID.fromParts(
     [/* directoryOSIProtocols */ 37, 9],
     module_
 );

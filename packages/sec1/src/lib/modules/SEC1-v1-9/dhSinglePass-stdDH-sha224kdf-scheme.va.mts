@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const dhSinglePass_stdDH_sha224kdf_scheme: OBJECT_IDENTIFIER = new _OID([
+const dhSinglePass_stdDH_sha224kdf_scheme: OBJECT_IDENTIFIER = _OID.fromParts([
     11,
     0,
 ], secg_scheme);

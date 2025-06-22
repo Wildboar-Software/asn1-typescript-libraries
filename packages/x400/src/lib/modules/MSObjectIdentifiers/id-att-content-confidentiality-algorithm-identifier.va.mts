@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_content_confidentiality_algorithm_identifier: ID = new _OID(
+export const id_att_content_confidentiality_algorithm_identifier: ID = _OID.fromParts(
     [2],
     id_att
 );

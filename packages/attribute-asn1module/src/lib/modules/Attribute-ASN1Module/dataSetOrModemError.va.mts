@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const dataSetOrModemError: ProbableCause = { globalValue: new _OID([11,], arfProbableCause) };
+const dataSetOrModemError: ProbableCause = { globalValue: _OID.fromParts([11,], arfProbableCause) };
 
 /* eslint-enable */

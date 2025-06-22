@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardIncompletePDUReceived: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardIncompletePDUReceived: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* incompletePDUReceived */ 6],
     pDUDiscard
 );

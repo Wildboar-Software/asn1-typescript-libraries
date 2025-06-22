@@ -13,6 +13,6 @@ import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
  *
  * @constant
  */
-export const id_nf_cRLDistPtNameForm: OBJECT_IDENTIFIER = new _OID([14], id_nf);
+export const id_nf_cRLDistPtNameForm: OBJECT_IDENTIFIER = _OID.fromParts([14], id_nf);
 
 /* eslint-enable */

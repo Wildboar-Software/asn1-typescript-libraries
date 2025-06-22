@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const administrativeRoles: ID = new _OID([23], ds);
+export const administrativeRoles: ID = _OID.fromParts([23], ds);
 
 /* eslint-enable */

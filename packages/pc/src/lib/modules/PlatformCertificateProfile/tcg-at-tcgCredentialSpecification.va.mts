@@ -24,7 +24,7 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
  * @constant
  */
 export
-const tcg_at_tcgCredentialSpecification: OBJECT_IDENTIFIER = new _OID([
+const tcg_at_tcgCredentialSpecification: OBJECT_IDENTIFIER = _OID.fromParts([
     23,
 ], tcg_attribute);
 

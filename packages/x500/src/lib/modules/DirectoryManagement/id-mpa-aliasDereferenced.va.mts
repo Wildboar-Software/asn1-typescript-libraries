@@ -13,7 +13,7 @@ import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
  *
  * @constant
  */
-export const id_mpa_aliasDereferenced: OBJECT_IDENTIFIER = new _OID(
+export const id_mpa_aliasDereferenced: OBJECT_IDENTIFIER = _OID.fromParts(
     [17],
     id_mpa
 );

@@ -14,6 +14,6 @@ import { numberType } from "../ANSI-X9-42/numberType.va.mjs";
  *
  * @constant
  */
-export const dhPublicNumber: OBJECT_IDENTIFIER = new _OID([1], numberType);
+export const dhPublicNumber: OBJECT_IDENTIFIER = _OID.fromParts([1], numberType);
 
 /* eslint-enable */

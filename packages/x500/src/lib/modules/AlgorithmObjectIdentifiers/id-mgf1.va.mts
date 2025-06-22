@@ -14,6 +14,6 @@ import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const id_mgf1: ID = new _OID([8], pkcs_1);
+export const id_mgf1: ID = _OID.fromParts([8], pkcs_1);
 
 /* eslint-enable */

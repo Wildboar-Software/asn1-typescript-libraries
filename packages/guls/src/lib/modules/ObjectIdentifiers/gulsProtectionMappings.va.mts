@@ -24,6 +24,6 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const gulsProtectionMappings: OBJECT_IDENTIFIER = new _OID([5], modules);
+export const gulsProtectionMappings: OBJECT_IDENTIFIER = _OID.fromParts([5], modules);
 
 /* eslint-enable */

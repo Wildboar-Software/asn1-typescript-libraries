@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const lanL1DesignatedIntermediateSystemChange: OBJECT_IDENTIFIER = new _OID(
+export const lanL1DesignatedIntermediateSystemChange: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* lanL1DesignatedIntermediateSystemChange */ 5],
   se
 );

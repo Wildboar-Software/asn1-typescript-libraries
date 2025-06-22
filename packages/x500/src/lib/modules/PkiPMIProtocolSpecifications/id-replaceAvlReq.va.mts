@@ -13,6 +13,6 @@ import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
  *
  * @constant
  */
-export const id_replaceAvlReq: OBJECT_IDENTIFIER = new _OID([4], id_cmsct);
+export const id_replaceAvlReq: OBJECT_IDENTIFIER = _OID.fromParts([4], id_cmsct);
 
 /* eslint-enable */

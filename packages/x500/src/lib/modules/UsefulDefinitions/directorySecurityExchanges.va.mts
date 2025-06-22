@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directorySecurityExchanges: ID = new _OID(
+export const directorySecurityExchanges: ID = _OID.fromParts(
     [/* directorySecurityExchanges */ 29, 9],
     module_
 );

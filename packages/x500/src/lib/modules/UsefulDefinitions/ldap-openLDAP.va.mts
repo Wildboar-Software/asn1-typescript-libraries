@@ -14,7 +14,7 @@ import { ldap_enterprise } from "../UsefulDefinitions/ldap-enterprise.va.mjs";
  *
  * @constant
  */
-export const ldap_openLDAP: ID = new _OID(
+export const ldap_openLDAP: ID = _OID.fromParts(
     [/* openLDAP */ 4203, /* ldap */ 1],
     ldap_enterprise
 );

@@ -24,7 +24,7 @@ import { aoi } from '../NLM/aoi.va.mjs';
  *
  * @constant
  */
-export const flowControlParameterNegotiation: OBJECT_IDENTIFIER = new _OID(
+export const flowControlParameterNegotiation: OBJECT_IDENTIFIER = _OID.fromParts(
     [119],
     aoi
 );

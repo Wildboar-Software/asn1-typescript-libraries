@@ -14,7 +14,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const versionOne: ID = new _OID(
+export const versionOne: ID = _OID.fromParts(
     [/* ellipticCurve */ 1, /* versionOne */ 1],
     ecStdCurvesAndGen
 );

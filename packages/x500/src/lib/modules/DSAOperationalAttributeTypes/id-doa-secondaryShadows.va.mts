@@ -13,6 +13,6 @@ import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
  *
  * @constant
  */
-export const id_doa_secondaryShadows: OBJECT_IDENTIFIER = new _OID([7], id_doa);
+export const id_doa_secondaryShadows: OBJECT_IDENTIFIER = _OID.fromParts([7], id_doa);
 
 /* eslint-enable */

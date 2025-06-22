@@ -13,7 +13,7 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  *
  * @constant
  */
-export const id_mat_requestsFailedCounter: OBJECT_IDENTIFIER = new _OID(
+export const id_mat_requestsFailedCounter: OBJECT_IDENTIFIER = _OID.fromParts(
     [86],
     id_mat
 );

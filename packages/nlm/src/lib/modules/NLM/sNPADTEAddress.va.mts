@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const sNPADTEAddress: OBJECT_IDENTIFIER = new _OID(
+export const sNPADTEAddress: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* sNPAAddressType */ 5, /* dTEAddress */ 1],
     sseoi
 );

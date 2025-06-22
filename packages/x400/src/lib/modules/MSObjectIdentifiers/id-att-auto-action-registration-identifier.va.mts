@@ -23,7 +23,7 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_auto_action_registration_identifier: ID = new _OID(
+export const id_att_auto_action_registration_identifier: ID = _OID.fromParts(
     [47],
     id_att
 );

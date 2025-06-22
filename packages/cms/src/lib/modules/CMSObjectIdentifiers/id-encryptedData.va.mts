@@ -15,6 +15,6 @@ import { pkcs7 } from "../CMSObjectIdentifiers/pkcs7.va.mjs";
  *
  * @constant
  */
-export const id_encryptedData: OID = new _OID([/* encryptedData */ 6], pkcs7);
+export const id_encryptedData: OID = _OID.fromParts([/* encryptedData */ 6], pkcs7);
 
 /* eslint-enable */

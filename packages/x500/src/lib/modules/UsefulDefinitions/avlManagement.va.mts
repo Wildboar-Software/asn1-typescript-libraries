@@ -14,6 +14,6 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const avlManagement: ID = new _OID([/* avlManagement */ 43, 9], module_);
+export const avlManagement: ID = _OID.fromParts([/* avlManagement */ 43, 9], module_);
 
 /* eslint-enable */

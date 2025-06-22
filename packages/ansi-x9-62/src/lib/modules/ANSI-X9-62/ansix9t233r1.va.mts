@@ -13,6 +13,6 @@ import { secgCurve } from "../ANSI-X9-62/secgCurve.va.mjs";
  *
  * @constant
  */
-export const ansix9t233r1: OBJECT_IDENTIFIER = new _OID([27], secgCurve);
+export const ansix9t233r1: OBJECT_IDENTIFIER = _OID.fromParts([27], secgCurve);
 
 /* eslint-enable */

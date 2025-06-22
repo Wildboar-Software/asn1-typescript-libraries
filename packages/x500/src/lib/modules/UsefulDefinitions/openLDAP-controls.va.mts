@@ -14,7 +14,7 @@ import { ldap_openLDAP } from "../UsefulDefinitions/ldap-openLDAP.va.mjs";
  *
  * @constant
  */
-export const openLDAP_controls: ID = new _OID(
+export const openLDAP_controls: ID = _OID.fromParts(
     [/* controls */ 10],
     ldap_openLDAP
 );

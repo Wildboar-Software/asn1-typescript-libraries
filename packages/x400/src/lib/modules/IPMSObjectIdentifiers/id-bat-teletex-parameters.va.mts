@@ -23,6 +23,6 @@ import { id_bat } from '../IPMSObjectIdentifiers/id-bat.va.mjs';
  *
  * @constant
  */
-export const id_bat_teletex_parameters: ID = new _OID([16], id_bat);
+export const id_bat_teletex_parameters: ID = _OID.fromParts([16], id_bat);
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_collectivePhysicalDeliveryOfficeName: OBJECT_IDENTIFIER = new _OID(
+export const id_at_collectivePhysicalDeliveryOfficeName: OBJECT_IDENTIFIER = _OID.fromParts(
     [19, 1],
     id_at
 );

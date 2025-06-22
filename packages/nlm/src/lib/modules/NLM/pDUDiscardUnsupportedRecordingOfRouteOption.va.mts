@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardUnsupportedRecordingOfRouteOption: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardUnsupportedRecordingOfRouteOption: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* unsupportedRecordingOfRouteOption */ 180],
     pDUDiscard
 );

@@ -13,7 +13,7 @@ import { id_acScheme } from "../UsefulDefinitions/id-acScheme.va.mjs";
  *
  * @constant
  */
-export const simplifiedAccessControlScheme: OBJECT_IDENTIFIER = new _OID(
+export const simplifiedAccessControlScheme: OBJECT_IDENTIFIER = _OID.fromParts(
     [2],
     id_acScheme
 );

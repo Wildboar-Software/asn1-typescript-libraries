@@ -35,7 +35,7 @@ import {
 import type {
     Name,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
-import { evaluateFilter, EvaluateFilterSettings } from "@wildboar/x500/src/lib/utils/evaluateFilter";
+import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
 import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher.mjs";
@@ -81,12 +81,12 @@ const FILLER_NAME: Name = {
     rdnSequence: [],
 };
 
-const FILLER_ATTRIBUTE_TYPE_1 = new asn1.ObjectIdentifier([1, 1, 1, 1]);
-const FILLER_ATTRIBUTE_TYPE_2 = new asn1.ObjectIdentifier([1, 2, 2, 2]);
+const FILLER_ATTRIBUTE_TYPE_1 = asn1.ObjectIdentifier.fromParts([1, 1, 1, 1]);
+const FILLER_ATTRIBUTE_TYPE_2 = asn1.ObjectIdentifier.fromParts([1, 2, 2, 2]);
 
-const FILLER_CONTEXT_TYPE_1 = new asn1.ObjectIdentifier([2, 1, 1, 1]);
+const FILLER_CONTEXT_TYPE_1 = asn1.ObjectIdentifier.fromParts([2, 1, 1, 1]);
 
-const FILLER_MATCHING_RULE_TYPE_1 = new asn1.ObjectIdentifier([0, 1, 1, 1]);
+const FILLER_MATCHING_RULE_TYPE_1 = asn1.ObjectIdentifier.fromParts([0, 1, 1, 1]);
 
 const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (assertion.value[0] === value.value[0]);
 

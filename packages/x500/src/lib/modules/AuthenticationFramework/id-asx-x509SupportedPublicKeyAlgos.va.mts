@@ -13,7 +13,7 @@ import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
  *
  * @constant
  */
-export const id_asx_x509SupportedPublicKeyAlgos: OBJECT_IDENTIFIER = new _OID(
+export const id_asx_x509SupportedPublicKeyAlgos: OBJECT_IDENTIFIER = _OID.fromParts(
     [10],
     id_asx
 );

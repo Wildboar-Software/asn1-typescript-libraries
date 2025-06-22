@@ -13,6 +13,6 @@ import { id_aca } from "../UsefulDefinitions/id-aca.va.mjs";
  *
  * @constant
  */
-export const id_aca_subentryACI: OBJECT_IDENTIFIER = new _OID([6], id_aca);
+export const id_aca_subentryACI: OBJECT_IDENTIFIER = _OID.fromParts([6], id_aca);
 
 /* eslint-enable */

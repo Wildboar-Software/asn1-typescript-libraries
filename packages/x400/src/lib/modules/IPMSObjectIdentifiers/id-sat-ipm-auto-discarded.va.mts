@@ -23,6 +23,6 @@ import { id_sat } from '../IPMSObjectIdentifiers/id-sat.va.mjs';
  *
  * @constant
  */
-export const id_sat_ipm_auto_discarded: ID = new _OID([3], id_sat);
+export const id_sat_ipm_auto_discarded: ID = _OID.fromParts([3], id_sat);
 
 /* eslint-enable */

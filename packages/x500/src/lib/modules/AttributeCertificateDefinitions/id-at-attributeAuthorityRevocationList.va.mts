@@ -13,7 +13,7 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_attributeAuthorityRevocationList: OBJECT_IDENTIFIER = new _OID(
+export const id_at_attributeAuthorityRevocationList: OBJECT_IDENTIFIER = _OID.fromParts(
     [63],
     id_at
 );

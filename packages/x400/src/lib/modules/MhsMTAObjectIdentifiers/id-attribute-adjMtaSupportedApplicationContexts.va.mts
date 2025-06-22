@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_adjMtaSupportedApplicationContexts: ID = new _OID(
+export const id_attribute_adjMtaSupportedApplicationContexts: ID = _OID.fromParts(
     [8],
     id_attribute
 );

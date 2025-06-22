@@ -13,6 +13,6 @@ import { id_package } from "../UsefulDefinitions/id-package.va.mjs";
  *
  * @constant
  */
-export const id_package_search: OBJECT_IDENTIFIER = new _OID([2], id_package);
+export const id_package_search: OBJECT_IDENTIFIER = _OID.fromParts([2], id_package);
 
 /* eslint-enable */

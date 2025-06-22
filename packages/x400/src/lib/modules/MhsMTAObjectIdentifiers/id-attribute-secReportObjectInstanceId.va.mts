@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_secReportObjectInstanceId: ID = new _OID(
+export const id_attribute_secReportObjectInstanceId: ID = _OID.fromParts(
     [157],
     id_attribute
 );

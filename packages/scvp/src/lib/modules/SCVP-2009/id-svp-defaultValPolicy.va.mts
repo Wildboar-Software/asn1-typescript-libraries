@@ -23,6 +23,6 @@ import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
  *
  * @constant
  */
-export const id_svp_defaultValPolicy: OBJECT_IDENTIFIER = new _OID([1], id_svp);
+export const id_svp_defaultValPolicy: OBJECT_IDENTIFIER = _OID.fromParts([1], id_svp);
 
 /* eslint-enable */

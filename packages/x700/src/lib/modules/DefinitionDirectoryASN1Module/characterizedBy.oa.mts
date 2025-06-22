@@ -51,7 +51,7 @@ export const characterizedBy: ATTRIBUTE<TemplateLabel> = {
     },
     '&equality-match':
         directoryStringFirstComponentMatch /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [12],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

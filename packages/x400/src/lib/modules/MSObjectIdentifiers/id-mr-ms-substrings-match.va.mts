@@ -23,6 +23,6 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  *
  * @constant
  */
-export const id_mr_ms_substrings_match: ID = new _OID([6], id_mr);
+export const id_mr_ms_substrings_match: ID = _OID.fromParts([6], id_mr);
 
 /* eslint-enable */

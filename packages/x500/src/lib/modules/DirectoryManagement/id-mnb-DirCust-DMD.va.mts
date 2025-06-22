@@ -13,6 +13,6 @@ import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
  *
  * @constant
  */
-export const id_mnb_DirCust_DMD: OBJECT_IDENTIFIER = new _OID([13], id_mnb);
+export const id_mnb_DirCust_DMD: OBJECT_IDENTIFIER = _OID.fromParts([13], id_mnb);
 
 /* eslint-enable */

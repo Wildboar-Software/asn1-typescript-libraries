@@ -23,7 +23,7 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  *
  * @constant
  */
-export const fupoi: OBJECT_IDENTIFIER = new _OID(
+export const fupoi: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* functionalUnitPackage */ 1],
   cmoi
 );

@@ -23,6 +23,6 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  *
  * @constant
  */
-export const id_hex_body_part_signatures: ID = new _OID([3], id_hex);
+export const id_hex_body_part_signatures: ID = _OID.fromParts([3], id_hex);
 
 /* eslint-enable */

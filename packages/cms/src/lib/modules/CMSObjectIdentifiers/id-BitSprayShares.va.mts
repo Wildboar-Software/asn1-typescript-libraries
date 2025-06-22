@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_BitSprayShares: OID = new _OID([12, 2], ckm_CMS);
+export const id_BitSprayShares: OID = _OID.fromParts([12, 2], ckm_CMS);
 
 /* eslint-enable */

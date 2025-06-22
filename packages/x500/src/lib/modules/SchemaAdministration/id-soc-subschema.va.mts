@@ -13,6 +13,6 @@ import { id_soc } from "../UsefulDefinitions/id-soc.va.mjs";
  *
  * @constant
  */
-export const id_soc_subschema: OBJECT_IDENTIFIER = new _OID([1], id_soc);
+export const id_soc_subschema: OBJECT_IDENTIFIER = _OID.fromParts([1], id_soc);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  *
  * @constant
  */
-export const successfulConnectionEstablishment: OBJECT_IDENTIFIER = new _OID(
+export const successfulConnectionEstablishment: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* informationtype */ 4, /* successfulConnectionEstablishment */ 3],
     sseoi
 );

@@ -14,6 +14,6 @@ import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const rsaEncryption: ID = new _OID([/* rsaEncryption */ 1], pkcs_1);
+export const rsaEncryption: ID = _OID.fromParts([/* rsaEncryption */ 1], pkcs_1);
 
 /* eslint-enable */

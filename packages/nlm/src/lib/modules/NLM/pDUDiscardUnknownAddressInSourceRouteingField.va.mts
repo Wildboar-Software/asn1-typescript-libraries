@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardUnknownAddressInSourceRouteingField: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardUnknownAddressInSourceRouteingField: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* unknownAddressInSourceRouteingField */ 146],
     pDUDiscard
 );

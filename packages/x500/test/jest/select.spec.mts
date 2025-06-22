@@ -53,12 +53,12 @@ const EMPTY_NAME: Name = {
 };
 
 const ID_ALL_ATTRIBUTE_TYPES: OBJECT_IDENTIFIER = id_oa_allAttributeTypes;
-const ID_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 41 ]);
-const ID_COMMON_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 3 ]);
-const ID_ORG_NAME: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 4, 10 ]);
-const ID_DSE_TYPE: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 12, 0 ]);
-const ID_MY_ACCESS_POINT: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 12, 1 ]);
-const ID_LANGUAGE: OBJECT_IDENTIFIER = new ObjectIdentifier([ 2, 5, 31, 0 ]);
+const ID_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 41 ]);
+const ID_COMMON_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
+const ID_ORG_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 10 ]);
+const ID_DSE_TYPE: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 12, 0 ]);
+const ID_MY_ACCESS_POINT: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 12, 1 ]);
+const ID_LANGUAGE: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 31, 0 ]);
 const NEVER_OPERATIONAL: Parameters<typeof selectFromEntry>[2] = () => false;
 const ALWAYS_OPERATIONAL: Parameters<typeof selectFromEntry>[2] = () => true;
 const NO_SUPERTYPES: Parameters<typeof selectFromEntry>[3] = () => [];
@@ -814,7 +814,7 @@ describe("selectFromEntry()", () => {
 
     it("recurses into the family-entries, converting attributes to attribute types", () => {
         const familyEntries: FamilyEntries = new FamilyEntries(
-            new ObjectIdentifier([ 2, 5, 32, 23 ]),
+            ObjectIdentifier.fromParts([ 2, 5, 32, 23 ]),
             [
                 new FamilyEntry(
                     [],

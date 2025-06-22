@@ -23,6 +23,6 @@ import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
  *
  * @constant
  */
-export const id_voice_22khz_sample: ID = new _OID([1], id_eit_voice);
+export const id_voice_22khz_sample: ID = _OID.fromParts([1], id_eit_voice);
 
 /* eslint-enable */

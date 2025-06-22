@@ -24,7 +24,7 @@ import { id_telebio } from '../Pbact-access/id-telebio.va.mjs';
  *
  * @constant
  */
-export const id_thprot: OBJECT_IDENTIFIER = new _OID(
+export const id_thprot: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* thprot */ 10],
     id_telebio
 );

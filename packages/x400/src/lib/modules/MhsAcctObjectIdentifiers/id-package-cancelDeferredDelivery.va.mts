@@ -23,6 +23,6 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_cancelDeferredDelivery: ID = new _OID([3], id_package);
+export const id_package_cancelDeferredDelivery: ID = _OID.fromParts([3], id_package);
 
 /* eslint-enable */

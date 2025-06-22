@@ -13,6 +13,6 @@ import { id_mac } from "../DirectoryManagement/id-mac.va.mjs";
  *
  * @constant
  */
-export const id_mac_useRemoteDSA: OBJECT_IDENTIFIER = new _OID([0], id_mac);
+export const id_mac_useRemoteDSA: OBJECT_IDENTIFIER = _OID.fromParts([0], id_mac);
 
 /* eslint-enable */

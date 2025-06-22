@@ -23,7 +23,7 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  *
  * @constant
  */
-export const id_parameter_autoActionRequestError: ID = new _OID(
+export const id_parameter_autoActionRequestError: ID = _OID.fromParts(
     [1],
     id_parameter
 );

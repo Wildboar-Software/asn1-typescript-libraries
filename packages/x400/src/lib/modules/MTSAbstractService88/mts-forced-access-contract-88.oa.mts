@@ -43,7 +43,7 @@ export const mts_forced_access_contract_88: CONTRACT = {
         delivery_88,
         administration_88,
     ] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [88],
         id_ct_mts_forced_access
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

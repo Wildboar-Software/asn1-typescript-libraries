@@ -23,6 +23,6 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_ac_report_summary: ID = new _OID([43], id_att);
+export const id_att_ac_report_summary: ID = _OID.fromParts([43], id_att);
 
 /* eslint-enable */

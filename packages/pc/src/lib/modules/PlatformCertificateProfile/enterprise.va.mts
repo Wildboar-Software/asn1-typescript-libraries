@@ -32,7 +32,7 @@ import {
  * @constant
  */
 export
-const enterprise: OBJECT_IDENTIFIER = new _OID([
+const enterprise: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* dod */ 6,

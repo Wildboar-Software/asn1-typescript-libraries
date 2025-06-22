@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const selectedAttributeTypes: ID = new _OID(
+export const selectedAttributeTypes: ID = _OID.fromParts(
     [/* selectedAttributeTypes */ 5, 9],
     module_
 );

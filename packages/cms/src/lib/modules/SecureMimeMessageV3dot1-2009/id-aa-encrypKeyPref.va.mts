@@ -14,6 +14,6 @@ import { id_aa } from "../SecureMimeMessageV3dot1-2009/id-aa.va.mjs";
  *
  * @constant
  */
-export const id_aa_encrypKeyPref: OBJECT_IDENTIFIER = new _OID([11], id_aa);
+export const id_aa_encrypKeyPref: OBJECT_IDENTIFIER = _OID.fromParts([11], id_aa);
 
 /* eslint-enable */

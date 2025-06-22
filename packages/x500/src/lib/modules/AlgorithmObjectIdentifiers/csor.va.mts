@@ -14,6 +14,6 @@ import { usgov } from "../AlgorithmObjectIdentifiers/usgov.va.mjs";
  *
  * @constant
  */
-export const csor: ID = new _OID([/* csor */ 3], usgov);
+export const csor: ID = _OID.fromParts([/* csor */ 3], usgov);
 
 /* eslint-enable */

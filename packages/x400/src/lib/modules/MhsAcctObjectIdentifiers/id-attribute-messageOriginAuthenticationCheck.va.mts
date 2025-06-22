@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_messageOriginAuthenticationCheck: ID = new _OID(
+export const id_attribute_messageOriginAuthenticationCheck: ID = _OID.fromParts(
     [64],
     id_attribute
 );

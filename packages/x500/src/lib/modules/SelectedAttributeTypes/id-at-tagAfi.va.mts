@@ -13,6 +13,6 @@ import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
  *
  * @constant
  */
-export const id_at_tagAfi: OBJECT_IDENTIFIER = new _OID([92], id_at);
+export const id_at_tagAfi: OBJECT_IDENTIFIER = _OID.fromParts([92], id_at);
 
 /* eslint-enable */

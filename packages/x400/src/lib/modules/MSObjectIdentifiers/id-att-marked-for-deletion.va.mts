@@ -23,6 +23,6 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_marked_for_deletion: ID = new _OID([56], id_att);
+export const id_att_marked_for_deletion: ID = _OID.fromParts([56], id_att);
 
 /* eslint-enable */

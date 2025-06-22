@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const ccr_basic_encoding: OBJECT_IDENTIFIER = new _OID(
+export const ccr_basic_encoding: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* asn1 */ 1, /* basic-encoding */ 1],
   joint_iso_itu_t
 );

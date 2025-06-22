@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_msBindAuthenticationCheck: ID = new _OID(
+export const id_attribute_msBindAuthenticationCheck: ID = _OID.fromParts(
     [71],
     id_attribute
 );

@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const id_signedData: OBJECT_IDENTIFIER = new _OID([
+export const id_signedData: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

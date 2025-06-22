@@ -27,6 +27,6 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_routing_collective_name: ID = new _OID([35], id_at);
+export const id_at_routing_collective_name: ID = _OID.fromParts([35], id_at);
 
 /* eslint-enable */

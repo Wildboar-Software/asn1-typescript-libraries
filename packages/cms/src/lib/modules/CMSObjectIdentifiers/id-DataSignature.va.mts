@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_DataSignature: OID = new _OID([14], ckm_CMS);
+export const id_DataSignature: OID = _OID.fromParts([14], ckm_CMS);
 
 /* eslint-enable */

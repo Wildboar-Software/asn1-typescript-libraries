@@ -49,11 +49,11 @@ export const dirEncryptedTransformation: SECURITY_TRANSFORMATION<BIT_STRING> = {
     '&XformedDataType': $._encodeBitString,
     '&QualifierType': undefined,
   },
-  '&sT-Identifier': new _OID(
+  '&sT-Identifier': _OID.fromParts(
     [/* dir-encrypted */ 1],
     securityTransformations
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-  '&initialEncodingRules': new _OID(
+  '&initialEncodingRules': _OID.fromParts(
     [/* asn1 */ 1, /* ber */ 1],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */,

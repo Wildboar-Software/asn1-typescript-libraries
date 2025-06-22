@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const attributeValueContext: ID = new _OID([31], ds);
+export const attributeValueContext: ID = _OID.fromParts([31], ds);
 
 /* eslint-enable */

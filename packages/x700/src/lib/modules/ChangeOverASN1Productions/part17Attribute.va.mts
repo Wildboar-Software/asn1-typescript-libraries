@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const part17Attribute: OBJECT_IDENTIFIER = new _OID(
+export const part17Attribute: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part17 */ 17, /* attribute */ 7],
     joint_iso_itu_t
 );

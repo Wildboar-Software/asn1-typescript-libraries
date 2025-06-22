@@ -13,6 +13,6 @@ import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
  *
  * @constant
  */
-export const id_sc_pwdAdminSubentry: OBJECT_IDENTIFIER = new _OID([5], id_sc);
+export const id_sc_pwdAdminSubentry: OBJECT_IDENTIFIER = _OID.fromParts([5], id_sc);
 
 /* eslint-enable */

@@ -14,6 +14,6 @@ import { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
  *
  * @constant
  */
-export const pkcs_1: ID = new _OID([/* pkcs */ 1, /* pkcs-1 */ 1], rsadsi);
+export const pkcs_1: ID = _OID.fromParts([/* pkcs */ 1, /* pkcs-1 */ 1], rsadsi);
 
 /* eslint-enable */

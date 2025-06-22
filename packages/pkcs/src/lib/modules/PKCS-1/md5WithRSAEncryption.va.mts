@@ -14,6 +14,6 @@ import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const md5WithRSAEncryption: OBJECT_IDENTIFIER = new _OID([4], pkcs_1);
+export const md5WithRSAEncryption: OBJECT_IDENTIFIER = _OID.fromParts([4], pkcs_1);
 
 /* eslint-enable */

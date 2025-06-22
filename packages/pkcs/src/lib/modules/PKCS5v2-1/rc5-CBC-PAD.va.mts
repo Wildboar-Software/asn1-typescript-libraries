@@ -14,7 +14,7 @@ import { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va.mjs";
  *
  * @constant
  */
-export const rc5_CBC_PAD: OBJECT_IDENTIFIER = new _OID(
+export const rc5_CBC_PAD: OBJECT_IDENTIFIER = _OID.fromParts(
     [9],
     encryptionAlgorithm
 );

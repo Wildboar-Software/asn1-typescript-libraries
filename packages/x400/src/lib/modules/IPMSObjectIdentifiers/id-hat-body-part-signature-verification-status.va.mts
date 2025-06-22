@@ -23,7 +23,7 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_body_part_signature_verification_status: ID = new _OID(
+export const id_hat_body_part_signature_verification_status: ID = _OID.fromParts(
     [38],
     id_hat
 );

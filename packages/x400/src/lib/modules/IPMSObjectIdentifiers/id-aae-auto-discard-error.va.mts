@@ -23,6 +23,6 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  *
  * @constant
  */
-export const id_aae_auto_discard_error: ID = new _OID([0], id_aae);
+export const id_aae_auto_discard_error: ID = _OID.fromParts([0], id_aae);
 
 /* eslint-enable */

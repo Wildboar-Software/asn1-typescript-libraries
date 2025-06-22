@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const certificateExtensions: ID = new _OID(
+export const certificateExtensions: ID = _OID.fromParts(
     [/* certificateExtensions */ 26, 9],
     module_
 );

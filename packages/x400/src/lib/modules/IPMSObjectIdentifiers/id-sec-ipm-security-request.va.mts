@@ -23,6 +23,6 @@ import { id_sec } from '../IPMSObjectIdentifiers/id-sec.va.mjs';
  *
  * @constant
  */
-export const id_sec_ipm_security_request: ID = new _OID([0], id_sec);
+export const id_sec_ipm_security_request: ID = _OID.fromParts([0], id_sec);
 
 /* eslint-enable */

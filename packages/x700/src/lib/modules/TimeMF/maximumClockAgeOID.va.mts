@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const maximumClockAgeOID: OBJECT_IDENTIFIER = new _OID(
+export const maximumClockAgeOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* maximumClockAge */ 17],
     timeManagement
 );

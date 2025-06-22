@@ -23,7 +23,7 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  *
  * @constant
  */
-export const sseoi: OBJECT_IDENTIFIER = new _OID(
+export const sseoi: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* standardSpecificExtensions */ 0],
   cmoi
 );

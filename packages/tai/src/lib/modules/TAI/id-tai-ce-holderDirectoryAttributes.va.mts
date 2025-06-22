@@ -24,7 +24,7 @@ import { id_tai_ce } from "../TAI/id-tai-ce.va.mjs";
  * @constant
  */
 export
-const id_tai_ce_holderDirectoryAttributes: OBJECT_IDENTIFIER = new _OID([
+const id_tai_ce_holderDirectoryAttributes: OBJECT_IDENTIFIER = _OID.fromParts([
     5,
 ], id_tai_ce);
 

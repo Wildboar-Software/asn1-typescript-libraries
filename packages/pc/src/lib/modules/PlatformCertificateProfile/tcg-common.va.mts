@@ -24,7 +24,7 @@ import { tcg_platformClass } from "../PlatformCertificateProfile/tcg-platformCla
  * @constant
  */
 export
-const tcg_common: OBJECT_IDENTIFIER = new _OID([
+const tcg_common: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_platformClass);
 

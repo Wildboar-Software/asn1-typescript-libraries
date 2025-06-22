@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const xmlMarkup: OID = new _OID([/* xml */ 0], id_cms_attributes);
+export const xmlMarkup: OID = _OID.fromParts([/* xml */ 0], id_cms_attributes);
 
 /* eslint-enable */

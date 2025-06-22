@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_ha_sqMod_n: ID = new _OID([1], id_ha);
+export const id_ha_sqMod_n: ID = _OID.fromParts([1], id_ha);
 
 /* eslint-enable */

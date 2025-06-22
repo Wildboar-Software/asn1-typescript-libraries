@@ -24,7 +24,7 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @constant
  */
 export
-const aes128_key_wrap: OBJECT_IDENTIFIER = new _OID([
+const aes128_key_wrap: OBJECT_IDENTIFIER = _OID.fromParts([
     25,
     0,
 ], secg_scheme);

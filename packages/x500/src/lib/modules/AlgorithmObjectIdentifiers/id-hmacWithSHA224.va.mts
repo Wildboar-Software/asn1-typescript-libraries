@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_hmacWithSHA224: ID = new _OID([8], digestAlgorithm);
+export const id_hmacWithSHA224: ID = _OID.fromParts([8], digestAlgorithm);
 
 /* eslint-enable */

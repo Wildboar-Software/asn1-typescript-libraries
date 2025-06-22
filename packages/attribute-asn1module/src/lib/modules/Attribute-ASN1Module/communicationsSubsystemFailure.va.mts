@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const communicationsSubsystemFailure: ProbableCause = { globalValue: new _OID([6,], arfProbableCause) };
+const communicationsSubsystemFailure: ProbableCause = { globalValue: _OID.fromParts([6,], arfProbableCause) };
 
 /* eslint-enable */

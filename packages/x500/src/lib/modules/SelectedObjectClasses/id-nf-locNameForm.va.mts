@@ -13,6 +13,6 @@ import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
  *
  * @constant
  */
-export const id_nf_locNameForm: OBJECT_IDENTIFIER = new _OID([1], id_nf);
+export const id_nf_locNameForm: OBJECT_IDENTIFIER = _OID.fromParts([1], id_nf);
 
 /* eslint-enable */

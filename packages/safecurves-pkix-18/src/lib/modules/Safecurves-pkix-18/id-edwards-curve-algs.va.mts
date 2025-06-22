@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const id_edwards_curve_algs: OBJECT_IDENTIFIER = new _OID([
+const id_edwards_curve_algs: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
     3,
     101,

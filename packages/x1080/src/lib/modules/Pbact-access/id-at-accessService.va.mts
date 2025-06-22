@@ -24,7 +24,7 @@ import { id_x1080_0_attr } from '../Pbact-access/id-x1080-0-attr.va.mjs';
  *
  * @constant
  */
-export const id_at_accessService: OBJECT_IDENTIFIER = new _OID(
+export const id_at_accessService: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     id_x1080_0_attr
 );

@@ -14,6 +14,6 @@ import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.mjs";
  *
  * @constant
  */
-export const ldap_x509: ID = new _OID([/* x509 */ 15], ldap_dir);
+export const ldap_x509: ID = _OID.fromParts([/* x509 */ 15], ldap_dir);
 
 /* eslint-enable */

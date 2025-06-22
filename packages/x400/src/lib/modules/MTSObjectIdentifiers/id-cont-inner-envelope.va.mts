@@ -23,6 +23,6 @@ import { id_cont } from '../MTSObjectIdentifiers/id-cont.va.mjs';
  *
  * @constant
  */
-export const id_cont_inner_envelope: ID = new _OID([1], id_cont);
+export const id_cont_inner_envelope: ID = _OID.fromParts([1], id_cont);
 
 /* eslint-enable */

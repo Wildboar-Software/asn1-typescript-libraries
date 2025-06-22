@@ -13,7 +13,7 @@ import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
  *
  * @constant
  */
-export const id_nf_applEntityNameForm: OBJECT_IDENTIFIER = new _OID(
+export const id_nf_applEntityNameForm: OBJECT_IDENTIFIER = _OID.fromParts(
     [11],
     id_nf
 );

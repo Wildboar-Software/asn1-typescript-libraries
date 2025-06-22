@@ -13,7 +13,7 @@ import { id_contract } from "../UsefulDefinitions/id-contract.va.mjs";
  *
  * @constant
  */
-export const id_contract_shadowSupplier: OBJECT_IDENTIFIER = new _OID(
+export const id_contract_shadowSupplier: OBJECT_IDENTIFIER = _OID.fromParts(
     [4],
     id_contract
 );

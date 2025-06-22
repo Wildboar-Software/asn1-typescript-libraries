@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const network_layer: OBJECT_IDENTIFIER = new _OID(
+export const network_layer: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* network-layer */ 13],
     joint_iso_itu_t
 );

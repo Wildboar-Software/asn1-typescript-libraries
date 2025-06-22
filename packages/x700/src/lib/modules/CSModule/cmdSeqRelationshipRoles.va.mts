@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const cmdSeqRelationshipRoles: OBJECT_IDENTIFIER = new _OID(
+export const cmdSeqRelationshipRoles: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part21 */ 21, /* relationshipRole */ 13],
     joint_iso_itu_t
 );

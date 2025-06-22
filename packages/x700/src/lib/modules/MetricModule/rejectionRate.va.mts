@@ -28,7 +28,7 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
  * @constant
  */
 export const rejectionRate: SpecificIdentifier = {
-    oi: new _OID([3], moaSpecificProblems),
+    oi: _OID.fromParts([3], moaSpecificProblems),
 };
 
 /* eslint-enable */

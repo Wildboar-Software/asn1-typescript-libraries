@@ -30,7 +30,7 @@ export const pkcs8ShroudedKeyBag: BAG_TYPE<PKCS8ShroudedKeyBag> = {
     encoderFor: {
         "&Type": _encode_PKCS8ShroudedKeyBag,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [2],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

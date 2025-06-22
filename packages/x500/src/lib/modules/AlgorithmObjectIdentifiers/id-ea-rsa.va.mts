@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_ea_rsa: ID = new _OID([1], id_ea);
+export const id_ea_rsa: ID = _OID.fromParts([1], id_ea);
 
 /* eslint-enable */

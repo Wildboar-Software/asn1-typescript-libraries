@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const heatingOrVentilationOrCoolingSystemProblem: ProbableCause = { globalValue: new _OID([21,], arfProbableCause) };
+const heatingOrVentilationOrCoolingSystemProblem: ProbableCause = { globalValue: _OID.fromParts([21,], arfProbableCause) };
 
 /* eslint-enable */

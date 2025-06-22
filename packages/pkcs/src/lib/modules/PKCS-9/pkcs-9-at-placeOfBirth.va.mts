@@ -14,6 +14,6 @@ import { ietf_at } from "../PKCS-9/ietf-at.va.mjs";
  *
  * @constant
  */
-export const pkcs_9_at_placeOfBirth: OBJECT_IDENTIFIER = new _OID([2], ietf_at);
+export const pkcs_9_at_placeOfBirth: OBJECT_IDENTIFIER = _OID.fromParts([2], ietf_at);
 
 /* eslint-enable */

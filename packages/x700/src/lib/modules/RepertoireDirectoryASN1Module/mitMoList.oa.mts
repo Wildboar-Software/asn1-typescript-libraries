@@ -47,7 +47,7 @@ export const mitMoList: ATTRIBUTE<MitMo> = {
     encoderFor: {
         '&Type': _encode_MitMo,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [1],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

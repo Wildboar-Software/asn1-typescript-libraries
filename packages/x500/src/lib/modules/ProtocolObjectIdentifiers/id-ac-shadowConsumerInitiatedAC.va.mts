@@ -13,7 +13,7 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  *
  * @constant
  */
-export const id_ac_shadowConsumerInitiatedAC: OBJECT_IDENTIFIER = new _OID(
+export const id_ac_shadowConsumerInitiatedAC: OBJECT_IDENTIFIER = _OID.fromParts(
     [4],
     id_ac
 );

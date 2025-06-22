@@ -13,6 +13,6 @@ import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
  *
  * @constant
  */
-export const id_mnb_dse_name_binding: OBJECT_IDENTIFIER = new _OID([1], id_mnb);
+export const id_mnb_dse_name_binding: OBJECT_IDENTIFIER = _OID.fromParts([1], id_mnb);
 
 /* eslint-enable */

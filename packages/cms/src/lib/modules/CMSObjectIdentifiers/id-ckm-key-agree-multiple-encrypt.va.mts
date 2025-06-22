@@ -16,7 +16,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_ckm_key_agree_multiple_encrypt: OID = new _OID(
+export const id_ckm_key_agree_multiple_encrypt: OID = _OID.fromParts(
     [/* key-agree-multiple-encrypt */ 3],
     id_ckm_algorithms
 );

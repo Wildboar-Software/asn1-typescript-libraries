@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_SignKey: OID = new _OID([10], ckm_CMS);
+export const id_SignKey: OID = _OID.fromParts([10], ckm_CMS);
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import { tcg_address } from "../PlatformCertificateProfile/tcg-address.va.mjs";
  * @constant
  */
 export
-const tcg_address_ethernetmac: OBJECT_IDENTIFIER = new _OID([
+const tcg_address_ethernetmac: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_address);
 

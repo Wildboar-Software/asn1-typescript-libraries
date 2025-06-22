@@ -47,7 +47,7 @@ export const specification: ATTRIBUTE<TextualRepresentation> = {
     encoderFor: {
         '&Type': _encode_TextualRepresentation,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [35],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

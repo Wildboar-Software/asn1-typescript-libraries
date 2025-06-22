@@ -14,6 +14,6 @@ import { nistAlgorithms } from "../AlgorithmObjectIdentifiers/nistAlgorithms.va.
  *
  * @constant
  */
-export const aes: ID = new _OID([1], nistAlgorithms);
+export const aes: ID = _OID.fromParts([1], nistAlgorithms);
 
 /* eslint-enable */

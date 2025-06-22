@@ -13,7 +13,7 @@ import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
  *
  * @constant
  */
-export const id_mnb_acseInvoc_knownDUA: OBJECT_IDENTIFIER = new _OID(
+export const id_mnb_acseInvoc_knownDUA: OBJECT_IDENTIFIER = _OID.fromParts(
     [5],
     id_mnb
 );

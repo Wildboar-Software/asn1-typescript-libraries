@@ -23,6 +23,6 @@ import { id_crt } from '../MSObjectIdentifiers/id-crt.va.mjs';
  *
  * @constant
  */
-export const id_crt_ms_access_94: ID = new _OID([1], id_crt);
+export const id_crt_ms_access_94: ID = _OID.fromParts([1], id_crt);
 
 /* eslint-enable */

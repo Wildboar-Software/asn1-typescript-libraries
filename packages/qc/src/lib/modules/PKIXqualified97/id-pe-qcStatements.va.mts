@@ -15,6 +15,6 @@ import { id_pe } from "../PKIX1Explicit88/id-pe.va.mjs";
  *
  * @constant
  */
-export const id_pe_qcStatements: OBJECT_IDENTIFIER = new _OID([3], id_pe);
+export const id_pe_qcStatements: OBJECT_IDENTIFIER = _OID.fromParts([3], id_pe);
 
 /* eslint-enable */

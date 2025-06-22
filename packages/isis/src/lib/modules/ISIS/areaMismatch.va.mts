@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const areaMismatch: OBJECT_IDENTIFIER = new _OID(
+export const areaMismatch: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* areaMismatch */ 0],
   se
 );

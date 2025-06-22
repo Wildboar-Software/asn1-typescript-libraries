@@ -14,7 +14,7 @@ import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
  *
  * @constant
  */
-export const sha512_256WithRSAEncryption: OBJECT_IDENTIFIER = new _OID(
+export const sha512_256WithRSAEncryption: OBJECT_IDENTIFIER = _OID.fromParts(
     [16],
     pkcs_1
 );

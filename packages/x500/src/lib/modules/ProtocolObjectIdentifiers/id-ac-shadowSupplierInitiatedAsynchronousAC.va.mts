@@ -13,7 +13,7 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  *
  * @constant
  */
-export const id_ac_shadowSupplierInitiatedAsynchronousAC: OBJECT_IDENTIFIER = new _OID(
+export const id_ac_shadowSupplierInitiatedAsynchronousAC: OBJECT_IDENTIFIER = _OID.fromParts(
     [8],
     id_ac
 );

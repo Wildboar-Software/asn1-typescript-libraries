@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const algorithm: ID = new _OID([8], ds);
+export const algorithm: ID = _OID.fromParts([8], ds);
 
 /* eslint-enable */

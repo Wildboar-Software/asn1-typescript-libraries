@@ -14,7 +14,7 @@ import { pkcs_9_at } from "../PKCS-9/pkcs-9-at.va.mjs";
  *
  * @constant
  */
-export const pkcs_9_at_pkcs15Token: OBJECT_IDENTIFIER = new _OID(
+export const pkcs_9_at_pkcs15Token: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     pkcs_9_at
 );

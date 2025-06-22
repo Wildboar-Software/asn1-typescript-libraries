@@ -1,20 +1,20 @@
-const asn1 = require("asn1-ts");
-const fs = require("fs");
-const { SIGNED } = require("../dist/node/modules/AuthenticationFramework/SIGNED.ta");
-const { _encode_Certificate } = require("../dist/node/modules/AuthenticationFramework/Certificate.ta");
-const { TBSCertificate } = require("../dist/node/modules/AuthenticationFramework/TBSCertificate.ta");
-const { Version_v1 } = require("../dist/node/modules/AuthenticationFramework/Version.ta");
-const { AlgorithmIdentifier } = require("../dist/node/modules/AuthenticationFramework/AlgorithmIdentifier.ta");
-const { Validity } = require("../dist/node/modules/AuthenticationFramework/Validity.ta");
-const { SubjectPublicKeyInfo } = require("../dist/node/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta");
-const { AttributeTypeAndValue } = require("../dist/node/modules/InformationFramework/AttributeTypeAndValue.ta");
+import asn1 from "asn1-ts";
+import fs from "fs";
+import { SIGNED } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/SIGNED.ta.mjs";
+import { _encode_Certificate } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
+import { TBSCertificate } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/TBSCertificate.ta.mjs";
+import { Version_v1 } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/Version.ta.mjs";
+import { AlgorithmIdentifier } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { Validity } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/Validity.ta.mjs";
+import { SubjectPublicKeyInfo } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
+import { AttributeTypeAndValue } from "../../../dist/packages/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 const cert2 = new SIGNED(
     new TBSCertificate(
         Version_v1,
         new Uint8Array([ 1, 2, 3, 4, 5, 6, 7, 8 ]),
         new AlgorithmIdentifier(
-            new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 11 ]),
+            asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 11 ]),
             new asn1.DERElement(
                 asn1.ASN1TagClass.universal,
                 asn1.ASN1Construction.primitive,
@@ -26,7 +26,7 @@ const cert2 = new SIGNED(
             rdnSequence: [
                 [
                     new AttributeTypeAndValue(
-                        new asn1.ObjectIdentifier([ 2, 5, 4, 3 ]),
+                        asn1.ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
                         new asn1.DERElement(
                             asn1.ASN1TagClass.universal,
                             asn1.ASN1Construction.primitive,
@@ -45,7 +45,7 @@ const cert2 = new SIGNED(
             rdnSequence: [
                 [
                     new AttributeTypeAndValue(
-                        new asn1.ObjectIdentifier([ 2, 5, 4, 3 ]),
+                        asn1.ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
                         new asn1.DERElement(
                             asn1.ASN1TagClass.universal,
                             asn1.ASN1Construction.primitive,
@@ -58,7 +58,7 @@ const cert2 = new SIGNED(
         },
         new SubjectPublicKeyInfo(
             new AlgorithmIdentifier(
-                new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 1 ]),
+                asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 1 ]),
                 new asn1.DERElement(
                     asn1.ASN1TagClass.universal,
                     asn1.ASN1Construction.primitive,
@@ -86,7 +86,7 @@ const cert2 = new SIGNED(
         undefined,
     ),
     new AlgorithmIdentifier(
-        new asn1.ObjectIdentifier([ 1, 2, 840, 113549, 1, 1, 11 ]),
+        asn1.ObjectIdentifier.fromParts([ 1, 2, 840, 113549, 1, 1, 11 ]),
         new asn1.DERElement(
             asn1.ASN1TagClass.universal,
             asn1.ASN1Construction.primitive,

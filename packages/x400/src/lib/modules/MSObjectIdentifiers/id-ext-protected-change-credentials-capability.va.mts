@@ -23,7 +23,7 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  *
  * @constant
  */
-export const id_ext_protected_change_credentials_capability: ID = new _OID(
+export const id_ext_protected_change_credentials_capability: ID = _OID.fromParts(
     [5],
     id_ext
 );

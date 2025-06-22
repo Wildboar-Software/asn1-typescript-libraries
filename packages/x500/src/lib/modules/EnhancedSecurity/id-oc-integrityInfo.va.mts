@@ -13,6 +13,6 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_integrityInfo: OBJECT_IDENTIFIER = new _OID([40], id_oc);
+export const id_oc_integrityInfo: OBJECT_IDENTIFIER = _OID.fromParts([40], id_oc);
 
 /* eslint-enable */

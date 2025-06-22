@@ -23,6 +23,6 @@ import { id_cp } from '../MTSObjectIdentifiers/id-cp.va.mjs';
  *
  * @constant
  */
-export const id_cp_mta_connect: ID = new _OID([1], id_cp);
+export const id_cp_mta_connect: ID = _OID.fromParts([1], id_cp);
 
 /* eslint-enable */

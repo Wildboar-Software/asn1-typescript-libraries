@@ -13,7 +13,7 @@ import { id_lat } from "../UsefulDefinitions/id-lat.va.mjs";
  *
  * @constant
  */
-export const id_lat_supportedSASLMechanisms: OBJECT_IDENTIFIER = new _OID(
+export const id_lat_supportedSASLMechanisms: OBJECT_IDENTIFIER = _OID.fromParts(
     [14],
     id_lat
 );

@@ -47,7 +47,7 @@ export const supports: ATTRIBUTE<SupportedChoice> = {
     encoderFor: {
         '&Type': _encode_SupportedChoice,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [53],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

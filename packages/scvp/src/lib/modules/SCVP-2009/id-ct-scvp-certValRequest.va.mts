@@ -23,7 +23,7 @@ import { id_ct } from '../SCVP-2009/id-ct.va.mjs';
  *
  * @constant
  */
-export const id_ct_scvp_certValRequest: OBJECT_IDENTIFIER = new _OID(
+export const id_ct_scvp_certValRequest: OBJECT_IDENTIFIER = _OID.fromParts(
   [10],
   id_ct
 );

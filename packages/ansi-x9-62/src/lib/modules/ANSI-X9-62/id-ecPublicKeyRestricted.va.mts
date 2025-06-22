@@ -15,7 +15,7 @@ import { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va.mjs";
  *
  * @constant
  */
-export const id_ecPublicKeyRestricted: OBJECT_IDENTIFIER = new _OID(
+export const id_ecPublicKeyRestricted: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* restricted */ 2],
     id_publicKeyType
 );

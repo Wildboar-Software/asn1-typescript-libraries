@@ -23,6 +23,6 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  *
  * @constant
  */
-export const id_doc_edi_message_store: ID = new _OID([2], id_doc);
+export const id_doc_edi_message_store: ID = _OID.fromParts([2], id_doc);
 
 /* eslint-enable */

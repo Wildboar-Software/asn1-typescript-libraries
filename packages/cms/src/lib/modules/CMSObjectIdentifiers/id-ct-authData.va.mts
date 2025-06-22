@@ -15,6 +15,6 @@ import { smime } from "../CMSObjectIdentifiers/smime.va.mjs";
  *
  * @constant
  */
-export const id_ct_authData: OID = new _OID([/* ct */ 1, 2], smime);
+export const id_ct_authData: OID = _OID.fromParts([/* ct */ 1, 2], smime);
 
 /* eslint-enable */

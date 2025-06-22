@@ -14,6 +14,6 @@ import { scheme } from "../ANSI-X9-42/scheme.va.mjs";
  *
  * @constant
  */
-export const dhHybrid2: OBJECT_IDENTIFIER = new _OID([5], scheme);
+export const dhHybrid2: OBJECT_IDENTIFIER = _OID.fromParts([5], scheme);
 
 /* eslint-enable */

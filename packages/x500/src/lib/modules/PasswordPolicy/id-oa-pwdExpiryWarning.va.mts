@@ -13,6 +13,6 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  *
  * @constant
  */
-export const id_oa_pwdExpiryWarning: OBJECT_IDENTIFIER = new _OID([38], id_oa);
+export const id_oa_pwdExpiryWarning: OBJECT_IDENTIFIER = _OID.fromParts([38], id_oa);
 
 /* eslint-enable */

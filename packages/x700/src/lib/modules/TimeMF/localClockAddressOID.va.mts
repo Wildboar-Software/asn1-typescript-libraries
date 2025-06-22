@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const localClockAddressOID: OBJECT_IDENTIFIER = new _OID(
+export const localClockAddressOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* localClockAddress */ 16],
     timeManagement
 );

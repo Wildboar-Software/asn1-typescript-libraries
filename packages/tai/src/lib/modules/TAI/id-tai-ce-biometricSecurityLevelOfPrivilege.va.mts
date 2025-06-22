@@ -24,7 +24,7 @@ import { id_tai_ce } from "../TAI/id-tai-ce.va.mjs";
  * @constant
  */
 export
-const id_tai_ce_biometricSecurityLevelOfPrivilege: OBJECT_IDENTIFIER = new _OID([
+const id_tai_ce_biometricSecurityLevelOfPrivilege: OBJECT_IDENTIFIER = _OID.fromParts([
     3,
 ], id_tai_ce);
 

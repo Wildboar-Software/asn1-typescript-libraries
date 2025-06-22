@@ -23,6 +23,6 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_bilateralDeferral: ID = new _OID([13], id_attribute);
+export const id_attribute_bilateralDeferral: ID = _OID.fromParts([13], id_attribute);
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_newMessageOriginatorCertificate: ID = new _OID(
+export const id_attribute_newMessageOriginatorCertificate: ID = _OID.fromParts(
     [104],
     id_attribute
 );

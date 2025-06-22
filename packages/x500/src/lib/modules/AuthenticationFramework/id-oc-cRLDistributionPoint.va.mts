@@ -13,7 +13,7 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  *
  * @constant
  */
-export const id_oc_cRLDistributionPoint: OBJECT_IDENTIFIER = new _OID(
+export const id_oc_cRLDistributionPoint: OBJECT_IDENTIFIER = _OID.fromParts(
     [19],
     id_oc
 );

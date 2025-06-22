@@ -23,6 +23,6 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * @constant
  */
-export const id_att_signature_verification_status: ID = new _OID([79], id_att);
+export const id_att_signature_verification_status: ID = _OID.fromParts([79], id_att);
 
 /* eslint-enable */

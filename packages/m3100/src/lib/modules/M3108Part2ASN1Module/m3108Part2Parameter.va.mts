@@ -24,7 +24,7 @@ import { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifi
  *
  * @constant
  */
-export const m3108Part2Parameter: OBJECT_IDENTIFIER = new _OID(
+export const m3108Part2Parameter: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* parameter */ 4],
     m3108Part2Identifier
 );

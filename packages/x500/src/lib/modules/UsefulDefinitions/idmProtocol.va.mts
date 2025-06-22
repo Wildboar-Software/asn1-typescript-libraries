@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const idmProtocol: ID = new _OID([33], ds);
+export const idmProtocol: ID = _OID.fromParts([33], ds);
 
 /* eslint-enable */

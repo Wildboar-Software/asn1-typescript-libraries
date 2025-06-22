@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const ntpProtocolOID: OBJECT_IDENTIFIER = new _OID(
+export const ntpProtocolOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* managedObjectClass */ 3, /* ntpProtocol */ 4],
     timeManagement
 );

@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const part17MRelClass: OBJECT_IDENTIFIER = new _OID(
+export const part17MRelClass: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part17 */ 17, /* relationshipClass */ 11],
     joint_iso_itu_t
 );

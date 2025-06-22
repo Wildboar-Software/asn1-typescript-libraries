@@ -14,7 +14,7 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_keyExchangeAlgorithm: ID = new _OID(
+export const id_keyExchangeAlgorithm: ID = _OID.fromParts(
     [/* id-keyExchangeAlgorithm */ 22],
     dodAlgorithms
 );

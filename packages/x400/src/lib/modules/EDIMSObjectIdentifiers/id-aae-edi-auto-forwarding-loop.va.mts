@@ -23,6 +23,6 @@ import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
  *
  * @constant
  */
-export const id_aae_edi_auto_forwarding_loop: ID = new _OID([0], id_aae);
+export const id_aae_edi_auto_forwarding_loop: ID = _OID.fromParts([0], id_aae);
 
 /* eslint-enable */

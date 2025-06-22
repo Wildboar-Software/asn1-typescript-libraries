@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_aes192_CBC: ID = new _OID([22], aes);
+export const id_aes192_CBC: ID = _OID.fromParts([22], aes);
 
 /* eslint-enable */

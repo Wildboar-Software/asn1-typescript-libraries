@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const attemptToExceedMaximumSequenceNumber: OBJECT_IDENTIFIER = new _OID(
+export const attemptToExceedMaximumSequenceNumber: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* attemptToExceedMaximumSequenceNumber */ 1],
   se
 );

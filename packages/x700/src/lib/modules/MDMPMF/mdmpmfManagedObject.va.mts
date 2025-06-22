@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const mdmpmfManagedObject: OBJECT_IDENTIFIER = new _OID(
+export const mdmpmfManagedObject: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part19 */ 19, /* managedObject */ 3],
     joint_iso_itu_t
 );

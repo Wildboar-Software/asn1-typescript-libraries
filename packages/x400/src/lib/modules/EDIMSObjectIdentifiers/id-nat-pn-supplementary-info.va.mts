@@ -23,6 +23,6 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  *
  * @constant
  */
-export const id_nat_pn_supplementary_info: ID = new _OID([7], id_nat);
+export const id_nat_pn_supplementary_info: ID = _OID.fromParts([7], id_nat);
 
 /* eslint-enable */

@@ -15,6 +15,6 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const id_Secryptm: OID = new _OID([2], ckm_CMS);
+export const id_Secryptm: OID = _OID.fromParts([2], ckm_CMS);
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import { id_package } from "../UsefulDefinitions/id-package.va.mjs";
  *
  * @constant
  */
-export const id_package_chainedSearch: OBJECT_IDENTIFIER = new _OID(
+export const id_package_chainedSearch: OBJECT_IDENTIFIER = _OID.fromParts(
     [5],
     id_package
 );

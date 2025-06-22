@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const softwareProgramAbnormallyTerminated: ProbableCause = { globalValue: new _OID([47,], arfProbableCause) };
+const softwareProgramAbnormallyTerminated: ProbableCause = { globalValue: _OID.fromParts([47,], arfProbableCause) };
 
 /* eslint-enable */

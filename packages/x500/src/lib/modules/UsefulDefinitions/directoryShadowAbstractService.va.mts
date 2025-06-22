@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const directoryShadowAbstractService: ID = new _OID(
+export const directoryShadowAbstractService: ID = _OID.fromParts(
     [/* directoryShadowAbstractService */ 15, 9],
     module_
 );

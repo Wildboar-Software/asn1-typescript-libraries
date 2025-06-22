@@ -24,7 +24,7 @@ import { id_sha } from "../SEC1-v1-9/id-sha.va.mjs";
  * @constant
  */
 export
-const id_sha256: OBJECT_IDENTIFIER = new _OID([
+const id_sha256: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], id_sha);
 

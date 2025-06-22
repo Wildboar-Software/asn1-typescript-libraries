@@ -26,7 +26,7 @@ export const x509CRL: BAG_TYPE<OCTET_STRING> = {
     encoderFor: {
         "&Type": $._encodeOctetString,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [1],
         crlTypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

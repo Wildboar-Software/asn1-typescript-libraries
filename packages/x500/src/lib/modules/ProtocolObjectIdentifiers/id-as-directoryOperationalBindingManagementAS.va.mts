@@ -13,7 +13,7 @@ import { id_as } from "../UsefulDefinitions/id-as.va.mjs";
  *
  * @constant
  */
-export const id_as_directoryOperationalBindingManagementAS: OBJECT_IDENTIFIER = new _OID(
+export const id_as_directoryOperationalBindingManagementAS: OBJECT_IDENTIFIER = _OID.fromParts(
     [4],
     id_as
 );

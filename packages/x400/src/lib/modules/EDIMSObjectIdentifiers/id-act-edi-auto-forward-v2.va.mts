@@ -23,6 +23,6 @@ import { id_act } from '../EDIMSObjectIdentifiers/id-act.va.mjs';
  *
  * @constant
  */
-export const id_act_edi_auto_forward_v2: ID = new _OID([3], id_act);
+export const id_act_edi_auto_forward_v2: ID = _OID.fromParts([3], id_act);
 
 /* eslint-enable */

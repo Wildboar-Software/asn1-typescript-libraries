@@ -24,6 +24,6 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  *
  * @constant
  */
-export const objectIdentifiers: OBJECT_IDENTIFIER = new _OID([0], modules);
+export const objectIdentifiers: OBJECT_IDENTIFIER = _OID.fromParts([0], modules);
 
 /* eslint-enable */

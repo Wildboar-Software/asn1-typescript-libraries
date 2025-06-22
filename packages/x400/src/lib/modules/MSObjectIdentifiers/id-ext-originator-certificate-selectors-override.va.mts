@@ -23,7 +23,7 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  *
  * @constant
  */
-export const id_ext_originator_certificate_selectors_override: ID = new _OID(
+export const id_ext_originator_certificate_selectors_override: ID = _OID.fromParts(
     [2],
     id_ext
 );

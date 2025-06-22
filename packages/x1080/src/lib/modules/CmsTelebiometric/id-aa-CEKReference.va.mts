@@ -24,6 +24,6 @@ import { id_aa } from '../CmsTelebiometric/id-aa.va.mjs';
  *
  * @constant
  */
-export const id_aa_CEKReference: OBJECT_IDENTIFIER = new _OID([30], id_aa);
+export const id_aa_CEKReference: OBJECT_IDENTIFIER = _OID.fromParts([30], id_aa);
 
 /* eslint-enable */

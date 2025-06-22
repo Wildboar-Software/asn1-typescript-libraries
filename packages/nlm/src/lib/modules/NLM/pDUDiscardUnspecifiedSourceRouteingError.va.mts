@@ -24,7 +24,7 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  *
  * @constant
  */
-export const pDUDiscardUnspecifiedSourceRouteingError: OBJECT_IDENTIFIER = new _OID(
+export const pDUDiscardUnspecifiedSourceRouteingError: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* unspecifiedSourceRouteingError */ 144],
     pDUDiscard
 );

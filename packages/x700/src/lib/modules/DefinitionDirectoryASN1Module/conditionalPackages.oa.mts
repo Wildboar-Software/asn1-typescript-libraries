@@ -47,7 +47,7 @@ export const conditionalPackages: ATTRIBUTE<ConditionalPackages> = {
     encoderFor: {
         '&Type': _encode_ConditionalPackages,
     },
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [13],
         mkmDirectoryAttributeType
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

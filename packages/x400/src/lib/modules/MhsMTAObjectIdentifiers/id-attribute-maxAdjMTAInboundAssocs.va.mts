@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_maxAdjMTAInboundAssocs: ID = new _OID(
+export const id_attribute_maxAdjMTAInboundAssocs: ID = _OID.fromParts(
     [50],
     id_attribute
 );

@@ -13,6 +13,6 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  *
  * @constant
  */
-export const id_lsx_oid: OBJECT_IDENTIFIER = new _OID([38], id_lsx);
+export const id_lsx_oid: OBJECT_IDENTIFIER = _OID.fromParts([38], id_lsx);
 
 /* eslint-enable */

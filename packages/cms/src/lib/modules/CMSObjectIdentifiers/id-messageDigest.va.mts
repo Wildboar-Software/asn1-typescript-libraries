@@ -15,6 +15,6 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  *
  * @constant
  */
-export const id_messageDigest: OID = new _OID([/* messageDigest */ 4], pkcs9);
+export const id_messageDigest: OID = _OID.fromParts([/* messageDigest */ 4], pkcs9);
 
 /* eslint-enable */

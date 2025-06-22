@@ -15,7 +15,7 @@ import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const id_signerInfos: OBJECT_IDENTIFIER = new _OID(
+export const id_signerInfos: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* recommendation */ 0,
         /* x */ 24,

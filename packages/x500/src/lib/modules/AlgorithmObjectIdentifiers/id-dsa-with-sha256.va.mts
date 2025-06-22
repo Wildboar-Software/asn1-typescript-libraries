@@ -14,6 +14,6 @@ import { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va.mjs";
  *
  * @constant
  */
-export const id_dsa_with_sha256: ID = new _OID([2], sigAlgs);
+export const id_dsa_with_sha256: ID = _OID.fromParts([2], sigAlgs);
 
 /* eslint-enable */

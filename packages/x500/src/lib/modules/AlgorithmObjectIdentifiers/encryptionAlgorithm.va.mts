@@ -14,6 +14,6 @@ import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
  *
  * @constant
  */
-export const encryptionAlgorithm: ID = new _OID([1], algorithm);
+export const encryptionAlgorithm: ID = _OID.fromParts([1], algorithm);
 
 /* eslint-enable */

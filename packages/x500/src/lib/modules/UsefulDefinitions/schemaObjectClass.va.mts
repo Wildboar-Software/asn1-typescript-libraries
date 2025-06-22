@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const schemaObjectClass: ID = new _OID([20], ds);
+export const schemaObjectClass: ID = _OID.fromParts([20], ds);
 
 /* eslint-enable */

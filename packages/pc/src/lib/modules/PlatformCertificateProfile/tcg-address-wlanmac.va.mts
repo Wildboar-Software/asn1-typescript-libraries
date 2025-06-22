@@ -24,7 +24,7 @@ import { tcg_address } from "../PlatformCertificateProfile/tcg-address.va.mjs";
  * @constant
  */
 export
-const tcg_address_wlanmac: OBJECT_IDENTIFIER = new _OID([
+const tcg_address_wlanmac: OBJECT_IDENTIFIER = _OID.fromParts([
     2,
 ], tcg_address);
 

@@ -27,7 +27,7 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  *
  * @constant
  */
-export const id_oc_mhs_physical_delivery_country_name: ID = new _OID(
+export const id_oc_mhs_physical_delivery_country_name: ID = _OID.fromParts(
     [14],
     id_oc
 );

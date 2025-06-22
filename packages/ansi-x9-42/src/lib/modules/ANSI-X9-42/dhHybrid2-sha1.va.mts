@@ -14,6 +14,6 @@ import { namedScheme } from "../ANSI-X9-42/namedScheme.va.mjs";
  *
  * @constant
  */
-export const dhHybrid2_sha1: OBJECT_IDENTIFIER = new _OID([5], namedScheme);
+export const dhHybrid2_sha1: OBJECT_IDENTIFIER = _OID.fromParts([5], namedScheme);
 
 /* eslint-enable */

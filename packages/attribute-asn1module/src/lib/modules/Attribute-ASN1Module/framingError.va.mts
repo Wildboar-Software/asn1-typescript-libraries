@@ -24,6 +24,6 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @constant
  */
 export
-const framingError: ProbableCause = { globalValue: new _OID([20,], arfProbableCause) };
+const framingError: ProbableCause = { globalValue: _OID.fromParts([20,], arfProbableCause) };
 
 /* eslint-enable */

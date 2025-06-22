@@ -23,6 +23,6 @@ import { id_san } from '../MHSObjectIdentifiers/id-san.va.mjs';
  *
  * @constant
  */
-export const id_san_mta_name: ID = new _OID([0], id_san);
+export const id_san_mta_name: ID = _OID.fromParts([0], id_san);
 
 /* eslint-enable */

@@ -23,6 +23,6 @@ import { id_rat } from '../EDIMSObjectIdentifiers/id-rat.va.mjs';
  *
  * @constant
  */
-export const id_rat_this_recipient: ID = new _OID([0], id_rat);
+export const id_rat_this_recipient: ID = _OID.fromParts([0], id_rat);
 
 /* eslint-enable */

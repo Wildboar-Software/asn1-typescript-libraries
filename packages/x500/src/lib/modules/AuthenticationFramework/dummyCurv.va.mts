@@ -13,6 +13,6 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
  *
  * @constant
  */
-export const dummyCurv: OBJECT_IDENTIFIER = new _OID([2, 5, 5]);
+export const dummyCurv: OBJECT_IDENTIFIER = _OID.fromParts([2, 5, 5]);
 
 /* eslint-enable */

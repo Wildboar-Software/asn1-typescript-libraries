@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_deliverableMaximumContentLength: ID = new _OID(
+export const id_attribute_deliverableMaximumContentLength: ID = _OID.fromParts(
     [33],
     id_attribute
 );

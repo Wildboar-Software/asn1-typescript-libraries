@@ -13,6 +13,6 @@ import { id } from "../UsefulDefinitions/id.va.mjs";
  *
  * @constant
  */
-export const id_oidC2: OBJECT_IDENTIFIER = new _OID([1], id);
+export const id_oidC2: OBJECT_IDENTIFIER = _OID.fromParts([1], id);
 
 /* eslint-enable */

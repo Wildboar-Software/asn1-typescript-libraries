@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const synchronizationSourceAddressOID: OBJECT_IDENTIFIER = new _OID(
+export const synchronizationSourceAddressOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* synchronizationSourceAddress */ 33],
     timeManagement
 );

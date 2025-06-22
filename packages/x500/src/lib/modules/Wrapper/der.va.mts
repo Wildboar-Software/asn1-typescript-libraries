@@ -17,7 +17,7 @@ import {
  *
  * @constant
  */
-export const der: OBJECT_IDENTIFIER = new _OID(
+export const der: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* asn1 */ 1, /* ber-derived */ 2, /* distinguished-encoding */ 1],
     joint_iso_itu_t
 );

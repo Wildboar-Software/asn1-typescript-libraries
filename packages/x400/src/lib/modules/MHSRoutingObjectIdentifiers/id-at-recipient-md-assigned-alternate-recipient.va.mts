@@ -27,7 +27,7 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_recipient_md_assigned_alternate_recipient: ID = new _OID(
+export const id_at_recipient_md_assigned_alternate_recipient: ID = _OID.fromParts(
     [34],
     id_at
 );

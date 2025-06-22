@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const contract: ID = new _OID([26], ds);
+export const contract: ID = _OID.fromParts([26], ds);
 
 /* eslint-enable */

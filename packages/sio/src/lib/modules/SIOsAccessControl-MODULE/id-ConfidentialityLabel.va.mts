@@ -19,7 +19,7 @@ import {
  *
  * @constant
  */
-export const id_ConfidentialityLabel: OBJECT_IDENTIFIER = new _OID(
+export const id_ConfidentialityLabel: OBJECT_IDENTIFIER = _OID.fromParts(
     [
         /* sios */ 24,
         /* specification */ 0,

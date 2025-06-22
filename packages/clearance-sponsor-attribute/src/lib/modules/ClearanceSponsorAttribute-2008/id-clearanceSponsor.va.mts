@@ -31,7 +31,7 @@ import {
  * @constant
  */
 export
-const id_clearanceSponsor: OBJECT_IDENTIFIER = new _OID([
+const id_clearanceSponsor: OBJECT_IDENTIFIER = _OID.fromParts([
     /* joint-iso-ccitt */ 2,
     /* country */ 16,
     /* us */ 840,

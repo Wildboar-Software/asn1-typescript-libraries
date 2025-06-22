@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const matchingRule: ID = new _OID([13], ds);
+export const matchingRule: ID = _OID.fromParts([13], ds);
 
 /* eslint-enable */

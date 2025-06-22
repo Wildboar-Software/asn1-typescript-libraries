@@ -23,6 +23,6 @@ import { id_dir } from '../EDIMSObjectIdentifiers/id-dir.va.mjs';
  *
  * @constant
  */
-export const id_doc: ID = new _OID([0], id_dir);
+export const id_doc: ID = _OID.fromParts([0], id_dir);
 
 /* eslint-enable */

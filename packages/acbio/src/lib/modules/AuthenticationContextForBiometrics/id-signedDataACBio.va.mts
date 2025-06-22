@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const id_signedDataACBio: OBJECT_IDENTIFIER = new _OID([
+export const id_signedDataACBio: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* standard */ 0,
     /* acbio */ 24761,

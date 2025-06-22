@@ -25,7 +25,7 @@ import {
  *
  * @constant
  */
-export const schedNotif: OBJECT_IDENTIFIER = new _OID(
+export const schedNotif: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part15 */ 15, /* notification */ 10],
     joint_iso_itu_t
 );

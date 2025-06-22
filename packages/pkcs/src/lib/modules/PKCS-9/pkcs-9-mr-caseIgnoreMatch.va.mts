@@ -14,7 +14,7 @@ import { pkcs_9_mr } from "../PKCS-9/pkcs-9-mr.va.mjs";
  *
  * @constant
  */
-export const pkcs_9_mr_caseIgnoreMatch: OBJECT_IDENTIFIER = new _OID(
+export const pkcs_9_mr_caseIgnoreMatch: OBJECT_IDENTIFIER = _OID.fromParts(
     [1],
     pkcs_9_mr
 );

@@ -14,6 +14,6 @@ import { rsadsi } from "../PKCS-12/rsadsi.va.mjs";
  *
  * @constant
  */
-export const pkcs: OBJECT_IDENTIFIER = new _OID([/* pkcs */ 1], rsadsi);
+export const pkcs: OBJECT_IDENTIFIER = _OID.fromParts([/* pkcs */ 1], rsadsi);
 
 /* eslint-enable */

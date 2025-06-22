@@ -23,6 +23,6 @@ import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
  *
  * @constant
  */
-export const id_cat_replying_ipms: ID = new _OID([12], id_cat);
+export const id_cat_replying_ipms: ID = _OID.fromParts([12], id_cat);
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
  *
  * @constant
  */
-export const id_asx_userPwdDescription: OBJECT_IDENTIFIER = new _OID(
+export const id_asx_userPwdDescription: OBJECT_IDENTIFIER = _OID.fromParts(
     [0],
     id_asx
 );

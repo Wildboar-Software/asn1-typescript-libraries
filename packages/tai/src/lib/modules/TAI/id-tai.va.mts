@@ -26,7 +26,7 @@ import {
  * @constant
  */
 export
-const id_tai: OBJECT_IDENTIFIER = new _OID([
+const id_tai: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* recommendation */ 0,
     /* x */ 24,

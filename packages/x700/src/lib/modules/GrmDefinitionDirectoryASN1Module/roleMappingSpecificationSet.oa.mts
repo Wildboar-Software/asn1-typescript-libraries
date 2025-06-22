@@ -48,7 +48,7 @@ export const roleMappingSpecificationSet: ATTRIBUTE<RoleMappingSpecification> =
         encoderFor: {
             '&Type': _encode_RoleMappingSpecification,
         },
-        '&id': new _OID(
+        '&id': _OID.fromParts(
             [51],
             mkmDirectoryAttributeType
         ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

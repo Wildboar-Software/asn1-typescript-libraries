@@ -23,7 +23,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  *
  * @constant
  */
-export const id_attribute_faxTelephoneNumberList: ID = new _OID(
+export const id_attribute_faxTelephoneNumberList: ID = _OID.fromParts(
     [46],
     id_attribute
 );

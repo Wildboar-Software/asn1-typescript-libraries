@@ -23,7 +23,7 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  *
  * @constant
  */
-export const id_package_secVerifROACFunctionPackage: ID = new _OID(
+export const id_package_secVerifROACFunctionPackage: ID = _OID.fromParts(
     [31],
     id_package
 );

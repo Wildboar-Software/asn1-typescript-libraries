@@ -23,6 +23,6 @@ import { id_rex } from '../IPMSObjectIdentifiers/id-rex.va.mjs';
  *
  * @constant
  */
-export const id_rex_circulation_list_indicator: ID = new _OID([0], id_rex);
+export const id_rex_circulation_list_indicator: ID = _OID.fromParts([0], id_rex);
 
 /* eslint-enable */

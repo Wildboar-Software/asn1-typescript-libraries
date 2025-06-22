@@ -13,7 +13,7 @@ import { intSecurity } from "../UsefulDefinitions/intSecurity.va.mjs";
  *
  * @constant
  */
-export const id_pkix: OBJECT_IDENTIFIER = new _OID(
+export const id_pkix: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* mechanisms */ 5, /* pkix */ 7],
     intSecurity
 );

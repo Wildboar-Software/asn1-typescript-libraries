@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const clockValueOID: OBJECT_IDENTIFIER = new _OID(
+export const clockValueOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* clockValue */ 11],
     timeManagement
 );

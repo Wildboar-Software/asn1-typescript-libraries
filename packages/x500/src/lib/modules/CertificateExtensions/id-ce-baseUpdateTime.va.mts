@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_baseUpdateTime: OBJECT_IDENTIFIER = new _OID([51], id_ce);
+export const id_ce_baseUpdateTime: OBJECT_IDENTIFIER = _OID.fromParts([51], id_ce);
 
 /* eslint-enable */

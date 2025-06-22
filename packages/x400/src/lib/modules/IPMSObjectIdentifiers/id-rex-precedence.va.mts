@@ -23,6 +23,6 @@ import { id_rex } from '../IPMSObjectIdentifiers/id-rex.va.mjs';
  *
  * @constant
  */
-export const id_rex_precedence: ID = new _OID([1], id_rex);
+export const id_rex_precedence: ID = _OID.fromParts([1], id_rex);
 
 /* eslint-enable */

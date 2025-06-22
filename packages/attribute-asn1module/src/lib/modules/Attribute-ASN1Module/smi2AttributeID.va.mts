@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const smi2AttributeID: OBJECT_IDENTIFIER = new _OID([
+const smi2AttributeID: OBJECT_IDENTIFIER = _OID.fromParts([
     /* ms */ 9,
     /* smi */ 3,
     /* part2 */ 2,

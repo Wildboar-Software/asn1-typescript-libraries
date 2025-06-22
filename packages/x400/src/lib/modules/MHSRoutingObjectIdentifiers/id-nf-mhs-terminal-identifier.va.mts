@@ -27,6 +27,6 @@ import { id_nf } from '../MHSRoutingObjectIdentifiers/id-nf.va.mjs';
  *
  * @constant
  */
-export const id_nf_mhs_terminal_identifier: ID = new _OID([17], id_nf);
+export const id_nf_mhs_terminal_identifier: ID = _OID.fromParts([17], id_nf);
 
 /* eslint-enable */

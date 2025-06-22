@@ -14,6 +14,6 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  *
  * @constant
  */
-export const accessControlSchemes: ID = new _OID([28], ds);
+export const accessControlSchemes: ID = _OID.fromParts([28], ds);
 
 /* eslint-enable */

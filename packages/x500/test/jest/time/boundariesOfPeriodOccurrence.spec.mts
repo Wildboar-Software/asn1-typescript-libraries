@@ -1,9 +1,11 @@
 import boundariesOfPeriodOccurrence from "@wildboar/x500/src/lib/utils/boundariesOfPeriodOccurrence";
 import {
-    DayTimeBand,
     Period,
-    _encode_Period_months,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/Period.ta.mjs";
+import {
+    DayTimeBand,
+    _encode_Period_months,
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/index.mjs";
 import { DayTime } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { DERElement, FALSE_BIT, TRUE_BIT } from "asn1-ts";
 import { NamedDay_intNamedDays_friday } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";

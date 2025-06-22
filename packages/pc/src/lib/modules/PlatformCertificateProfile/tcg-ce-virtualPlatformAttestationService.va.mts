@@ -24,7 +24,7 @@ import { tcg_ce } from "../PlatformCertificateProfile/tcg-ce.va.mjs";
  * @constant
  */
 export
-const tcg_ce_virtualPlatformAttestationService: OBJECT_IDENTIFIER = new _OID([
+const tcg_ce_virtualPlatformAttestationService: OBJECT_IDENTIFIER = _OID.fromParts([
     4,
 ], tcg_ce);
 

@@ -13,7 +13,7 @@ import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
  *
  * @constant
  */
-export const id_not_searchControlOptionsList: OBJECT_IDENTIFIER = new _OID(
+export const id_not_searchControlOptionsList: OBJECT_IDENTIFIER = _OID.fromParts(
     [11],
     id_not
 );

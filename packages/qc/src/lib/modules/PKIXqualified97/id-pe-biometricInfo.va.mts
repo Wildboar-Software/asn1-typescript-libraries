@@ -15,6 +15,6 @@ import { id_pe } from "../PKIX1Explicit88/id-pe.va.mjs";
  *
  * @constant
  */
-export const id_pe_biometricInfo: OBJECT_IDENTIFIER = new _OID([2], id_pe);
+export const id_pe_biometricInfo: OBJECT_IDENTIFIER = _OID.fromParts([2], id_pe);
 
 /* eslint-enable */

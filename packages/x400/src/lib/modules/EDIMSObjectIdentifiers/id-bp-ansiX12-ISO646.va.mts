@@ -23,6 +23,6 @@ import { id_bp } from '../EDIMSObjectIdentifiers/id-bp.va.mjs';
  *
  * @constant
  */
-export const id_bp_ansiX12_ISO646: ID = new _OID([3], id_bp);
+export const id_bp_ansiX12_ISO646: ID = _OID.fromParts([3], id_bp);
 
 /* eslint-enable */

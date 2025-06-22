@@ -1,6 +1,6 @@
 import * as asn1 from "asn1-ts";
 
-export const hashAlgs: asn1.OBJECT_IDENTIFIER = new asn1.ObjectIdentifier([
+export const hashAlgs: asn1.OBJECT_IDENTIFIER = asn1.ObjectIdentifier.fromParts([
     2,
     16,
     840,

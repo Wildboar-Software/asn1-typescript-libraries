@@ -46,7 +46,7 @@ export const administration_88: PORT = {
     '&Both': [change_credentials] /* OBJECT_FIELD_SETTING */,
     '&Supplier': [register_88] /* OBJECT_FIELD_SETTING */,
     '&Consumer': [operationObject1] /* OBJECT_FIELD_SETTING */,
-    '&id': new _OID(
+    '&id': _OID.fromParts(
         [88],
         id_pt_administration
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -23,6 +23,6 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_information_category: ID = new _OID([31], id_hat);
+export const id_hat_information_category: ID = _OID.fromParts([31], id_hat);
 
 /* eslint-enable */

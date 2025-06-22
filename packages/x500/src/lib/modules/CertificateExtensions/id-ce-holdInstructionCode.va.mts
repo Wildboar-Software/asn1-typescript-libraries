@@ -13,7 +13,7 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_holdInstructionCode: OBJECT_IDENTIFIER = new _OID(
+export const id_ce_holdInstructionCode: OBJECT_IDENTIFIER = _OID.fromParts(
     [23],
     id_ce
 );

@@ -23,6 +23,6 @@ import { id_dat } from '../EDIMUseOfDirectory/id-dat.va.mjs';
  *
  * @constant
  */
-export const id_dat_edi_capabilities: ID = new _OID([2], id_dat);
+export const id_dat_edi_capabilities: ID = _OID.fromParts([2], id_dat);
 
 /* eslint-enable */

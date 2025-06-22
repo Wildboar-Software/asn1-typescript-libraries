@@ -13,7 +13,7 @@ import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certif
  *
  * @constant
  */
-export const anyPolicy: OBJECT_IDENTIFIER = new _OID(
+export const anyPolicy: OBJECT_IDENTIFIER = _OID.fromParts(
     [0],
     id_ce_certificatePolicies
 );

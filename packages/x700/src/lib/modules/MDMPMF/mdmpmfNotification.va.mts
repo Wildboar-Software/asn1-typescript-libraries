@@ -24,7 +24,7 @@ import {
  *
  * @constant
  */
-export const mdmpmfNotification: OBJECT_IDENTIFIER = new _OID(
+export const mdmpmfNotification: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* ms */ 9, /* function */ 2, /* part19 */ 19, /* notification */ 10],
     joint_iso_itu_t
 );

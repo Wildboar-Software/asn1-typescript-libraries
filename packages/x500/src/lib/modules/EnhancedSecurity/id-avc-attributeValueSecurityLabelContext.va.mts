@@ -13,7 +13,7 @@ import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
  *
  * @constant
  */
-export const id_avc_attributeValueSecurityLabelContext: OBJECT_IDENTIFIER = new _OID(
+export const id_avc_attributeValueSecurityLabelContext: OBJECT_IDENTIFIER = _OID.fromParts(
     [3],
     id_avc
 );

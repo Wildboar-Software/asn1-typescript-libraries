@@ -27,6 +27,6 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * @constant
  */
-export const id_at_group_mta_password: ID = new _OID([6], id_at);
+export const id_at_group_mta_password: ID = _OID.fromParts([6], id_at);
 
 /* eslint-enable */

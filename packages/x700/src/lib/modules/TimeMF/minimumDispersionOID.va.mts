@@ -23,7 +23,7 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  *
  * @constant
  */
-export const minimumDispersionOID: OBJECT_IDENTIFIER = new _OID(
+export const minimumDispersionOID: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* attribute */ 7, /* minimumDispersion */ 24],
     timeManagement
 );

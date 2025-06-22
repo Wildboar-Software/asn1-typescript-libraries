@@ -23,6 +23,6 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  *
  * @constant
  */
-export const id_hat_precedence_policy_id: ID = new _OID([34], id_hat);
+export const id_hat_precedence_policy_id: ID = _OID.fromParts([34], id_hat);
 
 /* eslint-enable */

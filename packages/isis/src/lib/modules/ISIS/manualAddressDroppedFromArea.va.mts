@@ -23,7 +23,7 @@ import { se } from '../ISIS/se.va.mjs';
  *
  * @constant
  */
-export const manualAddressDroppedFromArea: OBJECT_IDENTIFIER = new _OID(
+export const manualAddressDroppedFromArea: OBJECT_IDENTIFIER = _OID.fromParts(
   [/* manualAddressDroppedFromArea */ 8],
   se
 );

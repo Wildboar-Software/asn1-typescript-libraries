@@ -14,7 +14,7 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  *
  * @constant
  */
-export const pkcs9: OID = new _OID([
+export const pkcs9: OID = _OID.fromParts([
     /* iso */ 1,
     /* member-body */ 2,
     /* us */ 840,

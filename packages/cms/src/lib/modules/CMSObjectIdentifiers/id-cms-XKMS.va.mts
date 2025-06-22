@@ -15,6 +15,6 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  *
  * @constant
  */
-export const id_cms_XKMS: OID = new _OID([/* xkms */ 2], xmlMarkup);
+export const id_cms_XKMS: OID = _OID.fromParts([/* xkms */ 2], xmlMarkup);
 
 /* eslint-enable */

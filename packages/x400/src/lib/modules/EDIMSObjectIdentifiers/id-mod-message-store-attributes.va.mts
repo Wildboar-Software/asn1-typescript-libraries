@@ -23,6 +23,6 @@ import { id_mod } from '../EDIMSObjectIdentifiers/id-mod.va.mjs';
  *
  * @constant
  */
-export const id_mod_message_store_attributes: ID = new _OID([4], id_mod);
+export const id_mod_message_store_attributes: ID = _OID.fromParts([4], id_mod);
 
 /* eslint-enable */

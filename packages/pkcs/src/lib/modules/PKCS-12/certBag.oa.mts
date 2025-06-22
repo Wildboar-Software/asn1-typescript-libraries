@@ -30,7 +30,7 @@ export const certBag: BAG_TYPE<CertBag> = {
     encoderFor: {
         "&Type": _encode_CertBag,
     },
-    "&id": new _OID(
+    "&id": _OID.fromParts(
         [3],
         bagtypes
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

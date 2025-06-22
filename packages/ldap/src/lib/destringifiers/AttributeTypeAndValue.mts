@@ -67,7 +67,7 @@ export function atavFromString(
         return [ oid, decoder(escapedValue) ];
     // We can salvage it if the OID is in numeric form and the value is BER-encoded.
     } else if (oidRegex.test(name) && value.startsWith("#")) {
-        const oid = new ObjectIdentifier(name.split(".").map((n) => Number.parseInt(n)));
+        const oid = ObjectIdentifier.fromParts(name.split(".").map((n) => Number.parseInt(n)));
         const el = new BERElement();
         const valueBytes = decodeHex(value.slice(1));
         el.fromBytes(valueBytes);

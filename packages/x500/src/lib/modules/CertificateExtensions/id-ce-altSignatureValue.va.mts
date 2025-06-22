@@ -13,6 +13,6 @@ import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
  *
  * @constant
  */
-export const id_ce_altSignatureValue: OBJECT_IDENTIFIER = new _OID([74], id_ce);
+export const id_ce_altSignatureValue: OBJECT_IDENTIFIER = _OID.fromParts([74], id_ce);
 
 /* eslint-enable */

@@ -39,7 +39,7 @@ export const sha224WithRSAEncryptionAlgorithm: ALGORITHM<NULL> = {
         "&Type": $._encodeNull,
         "&DynParms": undefined,
     },
-    "&id": new _OID([
+    "&id": _OID.fromParts([
         1, 2, 840, 113549, 1, 11,
     ]) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

@@ -28,7 +28,7 @@ import {
  * @constant
  */
 export
-const ltans: OBJECT_IDENTIFIER = new _OID([
+const ltans: OBJECT_IDENTIFIER = _OID.fromParts([
     /* iso */ 1,
     /* identified-organization */ 3,
     /* dod */ 6,

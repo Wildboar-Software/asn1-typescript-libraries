@@ -24,7 +24,7 @@ import { tcg_protocol } from "../PlatformCertificateProfile/tcg-protocol.va.mjs"
  * @constant
  */
 export
-const tcg_prt_tpmIdProtocol: OBJECT_IDENTIFIER = new _OID([
+const tcg_prt_tpmIdProtocol: OBJECT_IDENTIFIER = _OID.fromParts([
     1,
 ], tcg_protocol);
 

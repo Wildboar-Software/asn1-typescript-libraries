@@ -13,6 +13,6 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  *
  * @constant
  */
-export const id_lsx_x509Certificate: OBJECT_IDENTIFIER = new _OID([8], id_lsx);
+export const id_lsx_x509Certificate: OBJECT_IDENTIFIER = _OID.fromParts([8], id_lsx);
 
 /* eslint-enable */

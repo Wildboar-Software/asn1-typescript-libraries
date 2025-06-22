@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const opBindingManagement: ID = new _OID(
+export const opBindingManagement: ID = _OID.fromParts(
     [/* opBindingManagement */ 18, 9],
     module_
 );

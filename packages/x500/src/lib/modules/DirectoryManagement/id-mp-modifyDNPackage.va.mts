@@ -13,6 +13,6 @@ import { id_mp } from "../DirectoryManagement/id-mp.va.mjs";
  *
  * @constant
  */
-export const id_mp_modifyDNPackage: OBJECT_IDENTIFIER = new _OID([9], id_mp);
+export const id_mp_modifyDNPackage: OBJECT_IDENTIFIER = _OID.fromParts([9], id_mp);
 
 /* eslint-enable */

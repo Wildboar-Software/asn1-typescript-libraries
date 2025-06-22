@@ -27,7 +27,7 @@ import {
  * @constant
  */
 export
-const arfProposedRepairAction: OBJECT_IDENTIFIER = new _OID([
+const arfProposedRepairAction: OBJECT_IDENTIFIER = _OID.fromParts([
     /* ms */ 9,
     /* smi */ 3,
     /* part2 */ 2,

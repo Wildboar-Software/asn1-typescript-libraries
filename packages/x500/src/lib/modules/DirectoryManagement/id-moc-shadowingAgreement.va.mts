@@ -13,7 +13,7 @@ import { id_moc } from "../DirectoryManagement/id-moc.va.mjs";
  *
  * @constant
  */
-export const id_moc_shadowingAgreement: OBJECT_IDENTIFIER = new _OID(
+export const id_moc_shadowingAgreement: OBJECT_IDENTIFIER = _OID.fromParts(
     [7],
     id_moc
 );

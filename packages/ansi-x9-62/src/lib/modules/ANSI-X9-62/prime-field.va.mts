@@ -13,7 +13,7 @@ import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.mjs";
  *
  * @constant
  */
-export const prime_field: OBJECT_IDENTIFIER = new _OID(
+export const prime_field: OBJECT_IDENTIFIER = _OID.fromParts(
     [/* prime */ 1],
     id_fieldType
 );

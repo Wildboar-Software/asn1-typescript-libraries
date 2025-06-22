@@ -14,6 +14,6 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  *
  * @constant
  */
-export const id_dsa: ID = new _OID([/* x9algorithm */ 4, 1], ansi_x9_57);
+export const id_dsa: ID = _OID.fromParts([/* x9algorithm */ 4, 1], ansi_x9_57);
 
 /* eslint-enable */

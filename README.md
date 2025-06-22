@@ -24,6 +24,20 @@ will not be much faster due to type-checking still being done by TypeScript.
 The TypeScript compiler is being ported to Go anyway, and once that's done, it
 will be nearly as fast.
 
+## Testing
+
+The project uses Vitest for running tests. You can run tests for the X.500 package using:
+
+```bash
+# Run tests once
+npm run test:x500
+
+# Run tests in watch mode
+npm run test:x500:watch
+```
+
+The tests are located in `packages/x500/test/jest/` and use the `.spec.mts` extension.
+
 ## Remove all unused imports
 
 This is slow and will crash from running out of memory if you try this for the

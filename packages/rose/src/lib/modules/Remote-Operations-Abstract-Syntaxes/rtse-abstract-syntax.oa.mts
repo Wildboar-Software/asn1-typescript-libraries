@@ -42,7 +42,7 @@ export const rtse_abstract_syntax: ABSTRACT_SYNTAX<RTSE_apdus> = {
   encoderFor: {
     '&Type': _encode_RTSE_apdus,
   },
-  '&id': new _OID(
+  '&id': _OID.fromParts(
     [/* reliable-transfer */ 3, /* apdus */ 0],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

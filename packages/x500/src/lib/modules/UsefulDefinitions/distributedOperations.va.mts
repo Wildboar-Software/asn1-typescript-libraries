@@ -14,7 +14,7 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  *
  * @constant
  */
-export const distributedOperations: ID = new _OID(
+export const distributedOperations: ID = _OID.fromParts(
     [/* distributedOperations */ 3, 9],
     module_
 );
