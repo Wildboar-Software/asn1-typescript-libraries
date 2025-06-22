@@ -1,33 +1,40 @@
 {
-    "name": "ers",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/ers/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/ers",
-                "tsConfig": "packages/ers/tsconfig.lib.json",
-                "packageJson": "packages/ers/package.json",
-                "main": "packages/ers/src/index.mts",
-                "assets": ["packages/ers/*.md", "packages/ers/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/ers/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/ers/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "ers",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ers/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/ers",
+        "tsConfig": "packages/ers/tsconfig.lib.json",
+        "packageJson": "packages/ers/package.json",
+        "main": "packages/ers/src/index.mts",
+        "assets": [
+          "packages/ers/*.md",
+          "packages/ers/LICENSE.txt",
+          "packages/ers/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/ers/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/ers/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

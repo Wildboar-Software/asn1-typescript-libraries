@@ -1,33 +1,40 @@
 {
-    "name": "cmail",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/cmail/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/cmail/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/cmail/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/cmail",
-                "tsConfig": "packages/cmail/tsconfig.lib.json",
-                "packageJson": "packages/cmail/package.json",
-                "main": "packages/cmail/src/index.mts",
-                "assets": ["packages/cmail/*.md", "packages/cmail/LICENSE.txt"]
-            }
-        }
+  "name": "cmail",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cmail/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/cmail/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/cmail/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cmail",
+        "tsConfig": "packages/cmail/tsconfig.lib.json",
+        "packageJson": "packages/cmail/package.json",
+        "main": "packages/cmail/src/index.mts",
+        "assets": [
+          "packages/cmail/*.md",
+          "packages/cmail/LICENSE.txt",
+          "packages/cmail/package.json"
+        ]
+      }
     }
+  }
 }

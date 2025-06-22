@@ -1,33 +1,40 @@
 {
-    "name": "tal",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/tal/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/tal/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/tal/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/tal",
-                "tsConfig": "packages/tal/tsconfig.lib.json",
-                "packageJson": "packages/tal/package.json",
-                "main": "packages/tal/src/index.mts",
-                "assets": ["packages/tal/*.md", "packages/tal/LICENSE.txt"]
-            }
-        }
+  "name": "tal",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tal/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/tal/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/tal/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/tal",
+        "tsConfig": "packages/tal/tsconfig.lib.json",
+        "packageJson": "packages/tal/package.json",
+        "main": "packages/tal/src/index.mts",
+        "assets": [
+          "packages/tal/*.md",
+          "packages/tal/LICENSE.txt",
+          "packages/tal/package.json"
+        ]
+      }
     }
+  }
 }

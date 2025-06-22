@@ -1,33 +1,40 @@
 {
-    "name": "rose",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/rose/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/rose/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/rose/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/rose",
-                "tsConfig": "packages/rose/tsconfig.lib.json",
-                "packageJson": "packages/rose/package.json",
-                "main": "packages/rose/src/index.mts",
-                "assets": ["packages/rose/*.md", "packages/rose/LICENSE.txt"]
-            }
-        }
+  "name": "rose",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/rose/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/rose/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/rose/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/rose",
+        "tsConfig": "packages/rose/tsconfig.lib.json",
+        "packageJson": "packages/rose/package.json",
+        "main": "packages/rose/src/index.mts",
+        "assets": [
+          "packages/rose/*.md",
+          "packages/rose/LICENSE.txt",
+          "packages/rose/package.json"
+        ]
+      }
     }
+  }
 }

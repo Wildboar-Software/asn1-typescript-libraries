@@ -1,36 +1,40 @@
 {
-    "name": "attribute-asn1module",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/attribute-asn1module/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/attribute-asn1module",
-                "tsConfig": "packages/attribute-asn1module/tsconfig.lib.json",
-                "packageJson": "packages/attribute-asn1module/package.json",
-                "main": "packages/attribute-asn1module/src/index.mts",
-                "assets": [
-                    "packages/attribute-asn1module/*.md",
-                    "packages/attribute-asn1module/LICENSE.txt"
-                ]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/attribute-asn1module/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/attribute-asn1module/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "attribute-asn1module",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/attribute-asn1module/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/attribute-asn1module",
+        "tsConfig": "packages/attribute-asn1module/tsconfig.lib.json",
+        "packageJson": "packages/attribute-asn1module/package.json",
+        "main": "packages/attribute-asn1module/src/index.mts",
+        "assets": [
+          "packages/attribute-asn1module/*.md",
+          "packages/attribute-asn1module/LICENSE.txt",
+          "packages/attribute-asn1module/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/attribute-asn1module/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/attribute-asn1module/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

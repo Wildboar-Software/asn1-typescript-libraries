@@ -1,33 +1,40 @@
 {
-    "name": "cmip",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/cmip/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/cmip/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/cmip/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/cmip",
-                "tsConfig": "packages/cmip/tsconfig.lib.json",
-                "packageJson": "packages/cmip/package.json",
-                "main": "packages/cmip/src/index.mts",
-                "assets": ["packages/cmip/*.md", "packages/cmip/LICENSE.txt"]
-            }
-        }
+  "name": "cmip",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cmip/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/cmip/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/cmip/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cmip",
+        "tsConfig": "packages/cmip/tsconfig.lib.json",
+        "packageJson": "packages/cmip/package.json",
+        "main": "packages/cmip/src/index.mts",
+        "assets": [
+          "packages/cmip/*.md",
+          "packages/cmip/LICENSE.txt",
+          "packages/cmip/package.json"
+        ]
+      }
     }
+  }
 }

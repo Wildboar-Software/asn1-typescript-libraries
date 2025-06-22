@@ -1,0 +1,80 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package:
+          - "acbio"
+          - "acse"
+          - "ansi-x9-42"
+          - "ansi-x9-62"
+          - "asn1soap"
+          - "attribute-asn1module"
+          - "bip"
+          - "cades"
+          - "casscam"
+          - "cbeff"
+          - "ccr"
+          - "cinf"
+          - "clacse"
+          - "clearance-sponsor-attribute"
+          - "cmail"
+          - "cmip"
+          - "cmp"
+          - "cms"
+          - "copp"
+          - "crmf"
+          - "device-owner-attribute"
+          - "ec-private-key"
+          - "ers"
+          - "ess"
+          - "fast-infoset"
+          - "ftam"
+          - "gmi-attributemodule"
+          - "guls"
+          - "isis"
+          - "iso-9798-3-sasl"
+          - "kerberos5"
+          - "ldap"
+          - "m3100"
+          - "nlm"
+          - "ocsp"
+          - "openldap-x500-schema"
+          - "pc"
+          - "pkcs"
+          - "pki-stub"
+          - "qc"
+          - "rinf"
+          - "rose"
+          - "rtse"
+          - "safecurves-pkix-18"
+          - "scrypt-0"
+          - "scvp"
+          - "sec1"
+          - "sio"
+          - "snmp"
+          - "spkac"
+          - "t38"
+          - "tai"
+          - "tal"
+          - "tcap"
+          - "tsp"
+          - "usm"
+          - "x1080"
+          - "x400"
+          - "x500"
+          - "x700"
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish package ${{ matrix.package }}
+        working-directory: packages/${{ matrix.package }}
+        run: npx jsr publish

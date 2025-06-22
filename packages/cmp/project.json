@@ -1,33 +1,40 @@
 {
-    "name": "cmp",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/cmp/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/cmp/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/cmp/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/cmp",
-                "tsConfig": "packages/cmp/tsconfig.lib.json",
-                "packageJson": "packages/cmp/package.json",
-                "main": "packages/cmp/src/index.mts",
-                "assets": ["packages/cmp/*.md", "packages/cmp/LICENSE.txt"]
-            }
-        }
+  "name": "cmp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cmp/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/cmp/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/cmp/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cmp",
+        "tsConfig": "packages/cmp/tsconfig.lib.json",
+        "packageJson": "packages/cmp/package.json",
+        "main": "packages/cmp/src/index.mts",
+        "assets": [
+          "packages/cmp/*.md",
+          "packages/cmp/LICENSE.txt",
+          "packages/cmp/package.json"
+        ]
+      }
     }
+  }
 }

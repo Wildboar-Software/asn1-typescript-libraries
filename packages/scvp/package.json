@@ -33,13 +33,17 @@
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
     "dependencies": {
-        "@wildboar/x500": "2.x.x",
-        "@wildboar/cms": "2.x.x",
-        "@wildboar/pki-stub": "2.x.x",
-        "@wildboar/ldap": "2.x.x",
-        "@wildboar/ansi-x9-42": "2.x.x",
-        "@wildboar/ansi-x9-62": "2.x.x",
-        "@wildboar/ocsp": "2.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x",
+        "@wildboar/cms": "npm:@jsr/wildboar__cms@2.x.x",
+        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
+        "@wildboar/ldap": "npm:@jsr/wildboar__ldap@2.x.x",
+        "@wildboar/ansi-x9-42": "npm:@jsr/wildboar__ansi-x9-42@2.x.x",
+        "@wildboar/ansi-x9-62": "npm:@jsr/wildboar__ansi-x9-62@2.x.x",
+        "@wildboar/ocsp": "npm:@jsr/wildboar__ocsp@2.x.x"
     }
 }

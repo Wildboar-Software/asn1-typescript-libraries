@@ -1,33 +1,40 @@
 {
-    "name": "rinf",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/rinf/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/rinf/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/rinf/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/rinf",
-                "tsConfig": "packages/rinf/tsconfig.lib.json",
-                "packageJson": "packages/rinf/package.json",
-                "main": "packages/rinf/src/index.mts",
-                "assets": ["packages/rinf/*.md", "packages/rinf/LICENSE.txt"]
-            }
-        }
+  "name": "rinf",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/rinf/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/rinf/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/rinf/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/rinf",
+        "tsConfig": "packages/rinf/tsconfig.lib.json",
+        "packageJson": "packages/rinf/package.json",
+        "main": "packages/rinf/src/index.mts",
+        "assets": [
+          "packages/rinf/*.md",
+          "packages/rinf/LICENSE.txt",
+          "packages/rinf/package.json"
+        ]
+      }
     }
+  }
 }

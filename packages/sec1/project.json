@@ -1,33 +1,40 @@
 {
-    "name": "sec1",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/sec1/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/sec1",
-                "tsConfig": "packages/sec1/tsconfig.lib.json",
-                "packageJson": "packages/sec1/package.json",
-                "main": "packages/sec1/src/index.mts",
-                "assets": ["packages/sec1/*.md", "packages/sec1/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/sec1/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/sec1/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "sec1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sec1/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/sec1",
+        "tsConfig": "packages/sec1/tsconfig.lib.json",
+        "packageJson": "packages/sec1/package.json",
+        "main": "packages/sec1/src/index.mts",
+        "assets": [
+          "packages/sec1/*.md",
+          "packages/sec1/LICENSE.txt",
+          "packages/sec1/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/sec1/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/sec1/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

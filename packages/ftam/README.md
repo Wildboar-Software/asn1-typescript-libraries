@@ -4,6 +4,10 @@ TypeScript equivalent of ASN.1 data structures derived from
 [ISO 8571-1:1988](https://www.iso.org/standard/15836.html), which defines
 File Transfer, Access, and Management (FTAM).
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1

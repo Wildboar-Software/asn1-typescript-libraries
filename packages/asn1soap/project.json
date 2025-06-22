@@ -1,33 +1,40 @@
 {
-    "name": "asn1soap",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/asn1soap/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/asn1soap/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/asn1soap/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/asn1soap",
-                "tsConfig": "packages/asn1soap/tsconfig.lib.json",
-                "packageJson": "packages/asn1soap/package.json",
-                "main": "packages/asn1soap/src/index.mts",
-                "assets": ["packages/asn1soap/*.md", "packages/asn1soap/LICENSE.txt"]
-            }
-        }
+  "name": "asn1soap",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/asn1soap/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/asn1soap/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/asn1soap/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/asn1soap",
+        "tsConfig": "packages/asn1soap/tsconfig.lib.json",
+        "packageJson": "packages/asn1soap/package.json",
+        "main": "packages/asn1soap/src/index.mts",
+        "assets": [
+          "packages/asn1soap/*.md",
+          "packages/asn1soap/LICENSE.txt",
+          "packages/asn1soap/package.json"
+        ]
+      }
     }
+  }
 }

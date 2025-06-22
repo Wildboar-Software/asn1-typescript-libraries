@@ -1,33 +1,40 @@
 {
-    "name": "qc",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/qc/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/qc/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/qc/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/qc",
-                "tsConfig": "packages/qc/tsconfig.lib.json",
-                "packageJson": "packages/qc/package.json",
-                "main": "packages/qc/src/index.mts",
-                "assets": ["packages/qc/*.md", "packages/qc/LICENSE.txt"]
-            }
-        }
+  "name": "qc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/qc/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/qc/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/qc/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/qc",
+        "tsConfig": "packages/qc/tsconfig.lib.json",
+        "packageJson": "packages/qc/package.json",
+        "main": "packages/qc/src/index.mts",
+        "assets": [
+          "packages/qc/*.md",
+          "packages/qc/LICENSE.txt",
+          "packages/qc/package.json"
+        ]
+      }
     }
+  }
 }

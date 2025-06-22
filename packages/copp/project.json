@@ -1,33 +1,40 @@
 {
-    "name": "copp",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/copp/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/copp",
-                "tsConfig": "packages/copp/tsconfig.lib.json",
-                "packageJson": "packages/copp/package.json",
-                "main": "packages/copp/src/index.mts",
-                "assets": ["packages/copp/*.md", "packages/copp/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/copp/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/copp/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "copp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/copp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/copp",
+        "tsConfig": "packages/copp/tsconfig.lib.json",
+        "packageJson": "packages/copp/package.json",
+        "main": "packages/copp/src/index.mts",
+        "assets": [
+          "packages/copp/*.md",
+          "packages/copp/LICENSE.txt",
+          "packages/copp/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/copp/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/copp/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

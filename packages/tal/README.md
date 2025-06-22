@@ -4,6 +4,10 @@ ASN.1 data structures based on the ASN.1 definitions in
 [IETF RFC 5914](https://datatracker.ietf.org/doc/html/rfc5914),
 which defines the Trust Anchor List format.
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1

@@ -1,33 +1,40 @@
 {
-    "name": "x1080",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/x1080/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/x1080",
-                "tsConfig": "packages/x1080/tsconfig.lib.json",
-                "packageJson": "packages/x1080/package.json",
-                "main": "packages/x1080/src/index.mts",
-                "assets": ["packages/x1080/*.md", "packages/x1080/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/x1080/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/x1080/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "x1080",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/x1080/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/x1080",
+        "tsConfig": "packages/x1080/tsconfig.lib.json",
+        "packageJson": "packages/x1080/package.json",
+        "main": "packages/x1080/src/index.mts",
+        "assets": [
+          "packages/x1080/*.md",
+          "packages/x1080/LICENSE.txt",
+          "packages/x1080/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/x1080/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/x1080/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

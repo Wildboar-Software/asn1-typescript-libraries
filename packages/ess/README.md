@@ -5,6 +5,10 @@ ASN.1 data structures and PDUs based on the ASN.1 definitions in
 the Enhanced Security Services for S/MIME. This document is later updated by
 [IETF RFC 5035](https://datatracker.ietf.org/doc/html/rfc5035).
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1

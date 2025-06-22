@@ -1,33 +1,40 @@
 {
-    "name": "nlm",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/nlm/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/nlm",
-                "tsConfig": "packages/nlm/tsconfig.lib.json",
-                "packageJson": "packages/nlm/package.json",
-                "main": "packages/nlm/src/index.mts",
-                "assets": ["packages/nlm/*.md", "packages/nlm/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/nlm/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/nlm/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "nlm",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nlm/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/nlm",
+        "tsConfig": "packages/nlm/tsconfig.lib.json",
+        "packageJson": "packages/nlm/package.json",
+        "main": "packages/nlm/src/index.mts",
+        "assets": [
+          "packages/nlm/*.md",
+          "packages/nlm/LICENSE.txt",
+          "packages/nlm/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/nlm/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/nlm/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

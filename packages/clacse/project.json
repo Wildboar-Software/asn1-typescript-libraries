@@ -1,33 +1,40 @@
 {
-    "name": "clacse",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/clacse/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/clacse",
-                "tsConfig": "packages/clacse/tsconfig.lib.json",
-                "packageJson": "packages/clacse/package.json",
-                "main": "packages/clacse/src/index.mts",
-                "assets": ["packages/clacse/*.md", "packages/clacse/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/clacse/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/clacse/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "clacse",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/clacse/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/clacse",
+        "tsConfig": "packages/clacse/tsconfig.lib.json",
+        "packageJson": "packages/clacse/package.json",
+        "main": "packages/clacse/src/index.mts",
+        "assets": [
+          "packages/clacse/*.md",
+          "packages/clacse/LICENSE.txt",
+          "packages/clacse/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/clacse/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/clacse/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

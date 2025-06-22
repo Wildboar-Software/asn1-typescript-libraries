@@ -1,33 +1,40 @@
 {
-    "name": "cbeff",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/cbeff/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/cbeff/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/cbeff/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/cbeff",
-                "tsConfig": "packages/cbeff/tsconfig.lib.json",
-                "packageJson": "packages/cbeff/package.json",
-                "main": "packages/cbeff/src/index.mts",
-                "assets": ["packages/cbeff/*.md", "packages/cbeff/LICENSE.txt"]
-            }
-        }
+  "name": "cbeff",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cbeff/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/cbeff/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/cbeff/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cbeff",
+        "tsConfig": "packages/cbeff/tsconfig.lib.json",
+        "packageJson": "packages/cbeff/package.json",
+        "main": "packages/cbeff/src/index.mts",
+        "assets": [
+          "packages/cbeff/*.md",
+          "packages/cbeff/LICENSE.txt",
+          "packages/cbeff/package.json"
+        ]
+      }
     }
+  }
 }

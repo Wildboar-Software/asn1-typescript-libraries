@@ -1,0 +1,8 @@
+{
+  "name": "@wildboar/attribute-asn1module",
+  "version": "2.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts"
+  }
+}

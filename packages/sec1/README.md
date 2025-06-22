@@ -5,6 +5,10 @@ TypeScript implementation of the ASN.1 data structures defined in the
 specification [SEC-1](https://www.secg.org/sec1-v2.pdf), concerning
 elliptic-curve cryptography.
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1

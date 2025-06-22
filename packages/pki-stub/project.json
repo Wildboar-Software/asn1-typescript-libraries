@@ -1,33 +1,40 @@
 {
-    "name": "pki-stub",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/pki-stub/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/pki-stub",
-                "tsConfig": "packages/pki-stub/tsconfig.lib.json",
-                "packageJson": "packages/pki-stub/package.json",
-                "main": "packages/pki-stub/src/index.mts",
-                "assets": ["packages/pki-stub/*.md", "packages/pki-stub/LICENSE.txt"]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/pki-stub/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/pki-stub/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "pki-stub",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pki-stub/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/pki-stub",
+        "tsConfig": "packages/pki-stub/tsconfig.lib.json",
+        "packageJson": "packages/pki-stub/package.json",
+        "main": "packages/pki-stub/src/index.mts",
+        "assets": [
+          "packages/pki-stub/*.md",
+          "packages/pki-stub/LICENSE.txt",
+          "packages/pki-stub/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/pki-stub/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/pki-stub/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

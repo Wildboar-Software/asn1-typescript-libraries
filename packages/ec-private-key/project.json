@@ -1,36 +1,40 @@
 {
-    "name": "ec-private-key",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/ec-private-key/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/ec-private-key",
-                "tsConfig": "packages/ec-private-key/tsconfig.lib.json",
-                "packageJson": "packages/ec-private-key/package.json",
-                "main": "packages/ec-private-key/src/index.mts",
-                "assets": [
-                    "packages/ec-private-key/*.md",
-                    "packages/ec-private-key/LICENSE.txt"
-                ]
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/ec-private-key/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/ec-private-key/jest.config.js",
-                "passWithNoTests": true
-            }
-        }
+  "name": "ec-private-key",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ec-private-key/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/ec-private-key",
+        "tsConfig": "packages/ec-private-key/tsconfig.lib.json",
+        "packageJson": "packages/ec-private-key/package.json",
+        "main": "packages/ec-private-key/src/index.mts",
+        "assets": [
+          "packages/ec-private-key/*.md",
+          "packages/ec-private-key/LICENSE.txt",
+          "packages/ec-private-key/package.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/ec-private-key/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/ec-private-key/jest.config.js",
+        "passWithNoTests": true
+      }
     }
+  }
 }

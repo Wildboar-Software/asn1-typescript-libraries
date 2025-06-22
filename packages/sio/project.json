@@ -1,33 +1,40 @@
 {
-    "name": "sio",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/sio/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["packages/sio/**/*.mts"]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-
-            "options": {
-                "jestConfig": "packages/sio/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/packages/sio",
-                "tsConfig": "packages/sio/tsconfig.lib.json",
-                "packageJson": "packages/sio/package.json",
-                "main": "packages/sio/src/index.mts",
-                "assets": ["packages/sio/*.md", "packages/sio/LICENSE.txt"]
-            }
-        }
+  "name": "sio",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sio/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/sio/**/*.mts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "packages/sio/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/sio",
+        "tsConfig": "packages/sio/tsconfig.lib.json",
+        "packageJson": "packages/sio/package.json",
+        "main": "packages/sio/src/index.mts",
+        "assets": [
+          "packages/sio/*.md",
+          "packages/sio/LICENSE.txt",
+          "packages/sio/package.json"
+        ]
+      }
     }
+  }
 }

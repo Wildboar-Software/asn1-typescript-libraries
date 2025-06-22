@@ -5,6 +5,10 @@ The PDUs and other data types from the ASN.1 definitions defined in the
 Recommendations X.830, X.832, and X.833, which defines Generic Upper Layer
 Security (GULS) and Security Exchange Service Element (SESE).
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1

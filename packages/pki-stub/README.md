@@ -5,6 +5,10 @@ PKI-Stub ASN.1 Module defined by the
 [International Telecommunication Union's (ITU)](https://www.itu.int/en/Pages/default.aspx)
 [recommendation X.510](https://www.itu.int/rec/T-REC-X.510/en).
 
+See the
+[documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
+that applies to this library and others to learn how to use this module.
+
 This library only implements the ASN.1 data structures and PDUs defined in these
 specifications.
 
