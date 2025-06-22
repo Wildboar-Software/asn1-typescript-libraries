@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { GeneralizedTime } from "asn1-ts";
+import { GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_generalizedTime } from "../SelectedAttributeTypes/id-lsx-generalizedTime.va.mjs";

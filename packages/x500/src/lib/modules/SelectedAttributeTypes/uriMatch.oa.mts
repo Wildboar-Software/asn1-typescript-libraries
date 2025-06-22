@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { UTF8String } from "asn1-ts";
+import { UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";

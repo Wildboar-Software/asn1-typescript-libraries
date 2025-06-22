@@ -1,5 +1,5 @@
 import type StringEncoderGetter from "../types/StringEncoderGetter.mjs";
-import { ASN1Element, BERElement, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ASN1Element, BERElement, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type AttributeTypeAndValue from "../types/AttributeTypeAndValue.mjs";
 
 export

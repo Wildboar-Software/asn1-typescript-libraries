@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
 /**
  * @summary id_not_contextCombinations

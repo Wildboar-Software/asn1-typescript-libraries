@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { probe } from '../Remote-Operations-Useful-Definitions/probe.oa.mjs';
 import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa.mjs';

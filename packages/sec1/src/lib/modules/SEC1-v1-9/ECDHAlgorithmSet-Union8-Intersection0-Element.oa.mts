@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { dhSinglePass_stdDH_sha512kdf_scheme } from "../SEC1-v1-9/dhSinglePass-stdDH-sha512kdf-scheme.va.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**

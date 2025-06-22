@@ -1,4 +1,4 @@
-import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
+import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
 import stringifyRDNSequence from "../lib/stringifiers/RDNSequence";
 import AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
 import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";

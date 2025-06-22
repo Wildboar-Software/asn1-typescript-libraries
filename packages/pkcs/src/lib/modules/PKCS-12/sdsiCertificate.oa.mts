@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { IA5String, ObjectIdentifier as _OID } from "asn1-ts";
+import { IA5String, ObjectIdentifier as _OID } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { certTypes } from "../PKCS-9/certTypes.va.mjs";

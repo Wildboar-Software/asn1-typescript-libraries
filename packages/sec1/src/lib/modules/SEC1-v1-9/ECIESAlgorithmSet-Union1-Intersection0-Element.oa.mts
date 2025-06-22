@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { ecies_specifiedParameters } from "../SEC1-v1-9/ecies-specifiedParameters.va.mjs";
 import { ECIESParameters, _decode_ECIESParameters, _encode_ECIESParameters } from "../SEC1-v1-9/ECIESParameters.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
 import { asymmetric_token } from '../MTSAbstractService/asymmetric-token.oa.mjs';
 /**

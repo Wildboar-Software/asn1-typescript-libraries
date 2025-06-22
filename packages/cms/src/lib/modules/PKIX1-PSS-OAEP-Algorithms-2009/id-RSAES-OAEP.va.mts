@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { pkcs_1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/pkcs-1.va.mjs";
 
 /**

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TRUE } from "asn1-ts";
+import { TRUE } from "@wildboar/asn1";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import {

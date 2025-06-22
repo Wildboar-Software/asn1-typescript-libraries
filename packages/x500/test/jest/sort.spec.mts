@@ -6,7 +6,7 @@ import {
     ASN1TagClass,
     ASN1Construction,
     ASN1UniversalType,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import sort from "../../src/lib/dap/sort";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import {

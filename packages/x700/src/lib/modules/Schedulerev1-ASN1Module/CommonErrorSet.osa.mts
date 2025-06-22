@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs';
 /**
  * @summary CommonErrorSet

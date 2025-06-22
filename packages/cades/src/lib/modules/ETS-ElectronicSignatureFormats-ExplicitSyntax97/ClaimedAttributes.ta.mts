@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     Attribute, _decode_Attribute, _encode_Attribute

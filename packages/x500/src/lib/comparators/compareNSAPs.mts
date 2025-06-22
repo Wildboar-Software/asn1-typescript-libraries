@@ -1,4 +1,4 @@
-import type { OCTET_STRING } from "asn1-ts";
+import type { OCTET_STRING } from "@wildboar/asn1";
 import { ipv4FromNSAP } from "../distributed/ipv4.mjs";
 import { uriFromNSAP } from "../distributed/uri.mjs";
 

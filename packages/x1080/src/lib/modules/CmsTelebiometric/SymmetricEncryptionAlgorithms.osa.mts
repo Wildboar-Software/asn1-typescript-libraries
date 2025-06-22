@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs';
 
 /**

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { acknowledgment_mode } from '../IPMSMessageStoreAttributes/acknowledgment-mode.oa.mjs';
 import { authorizing_users } from '../IPMSMessageStoreAttributes/authorizing-users.oa.mjs';

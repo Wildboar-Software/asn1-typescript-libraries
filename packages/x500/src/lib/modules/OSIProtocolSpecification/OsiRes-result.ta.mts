@@ -2,7 +2,7 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     Code,

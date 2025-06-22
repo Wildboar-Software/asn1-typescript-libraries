@@ -5,7 +5,7 @@ import {
     OCTET_STRING,
     OPTIONAL,
     PrintableString,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmInfo,

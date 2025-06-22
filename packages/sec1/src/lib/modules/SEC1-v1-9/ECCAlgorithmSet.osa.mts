@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { ECDSAAlgorithmSet } from "../SEC1-v1-9/ECDSAAlgorithmSet.osa.mjs";
 import { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa.mjs";

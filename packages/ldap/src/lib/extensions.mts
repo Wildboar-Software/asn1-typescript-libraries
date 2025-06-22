@@ -1,4 +1,4 @@
-import { ObjectIdentifier } from "asn1-ts";
+import { ObjectIdentifier } from "@wildboar/asn1";
 
 /**
  * Cancel Operation [RFC3909]

@@ -1,5 +1,5 @@
 import type { EqualityMatcher } from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.mjs";
 /**
  * @summary id_ecSigType

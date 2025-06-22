@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { receive_report } from '../IPMSAbstractService/receive-report.oa.mjs';
 import { receive_ipm } from '../IPMSAbstractService/receive-ipm.oa.mjs';
 import { receive_rn } from '../IPMSAbstractService/receive-rn.oa.mjs';

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.mjs';
 import { sMASE } from '../RepertoireDirectoryASN1Module/sMASE.oa.mjs';
 import { cMISE } from '../RepertoireDirectoryASN1Module/cMISE.oa.mjs';

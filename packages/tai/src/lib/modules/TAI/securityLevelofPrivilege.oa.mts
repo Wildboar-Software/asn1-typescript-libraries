@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { SecurityLevelofPrivilege, _decode_SecurityLevelofPrivilege, _encode_SecurityLevelofPrivilege } from "../TAI/SecurityLevelofPrivilege.ta.mjs";
 import { id_tai_ce_biometricSecurityLevelOfPrivilege } from "../TAI/id-tai-ce-biometricSecurityLevelOfPrivilege.va.mjs";
 import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";

@@ -7,7 +7,7 @@ import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Acce
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
 import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
-import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "asn1-ts";
+import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 import SubstringSelection from "../lib/types/SubstringSelection";
 

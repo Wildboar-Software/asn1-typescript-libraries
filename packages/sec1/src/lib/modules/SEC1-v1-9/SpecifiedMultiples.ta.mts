@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta.mjs";
 /**

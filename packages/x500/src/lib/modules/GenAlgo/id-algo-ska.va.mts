@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_algo } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-algo.va.mjs";
 /**
  * @summary id_algo_ska

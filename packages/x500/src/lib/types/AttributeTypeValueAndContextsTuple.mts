@@ -1,4 +1,4 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 
 /**

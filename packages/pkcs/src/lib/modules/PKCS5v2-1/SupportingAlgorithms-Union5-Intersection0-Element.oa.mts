@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "asn1-ts";
+import { OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { aes128_CBC_PAD } from "../PKCS5v2-1/aes128-CBC-PAD.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";

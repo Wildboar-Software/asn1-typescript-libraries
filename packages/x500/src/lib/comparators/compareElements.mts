@@ -1,4 +1,4 @@
-import { ASN1Element, ASN1Construction, ASN1TagClass, ASN1UniversalType } from "asn1-ts";
+import { ASN1Element, ASN1Construction, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
 
 const deconstructableTypes: Set<ASN1UniversalType> = new Set([
     // ASN1UniversalType.bitString,

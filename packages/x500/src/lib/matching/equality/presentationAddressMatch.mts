@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OCTET_STRING } from "asn1-ts";
+import type { ASN1Element, OCTET_STRING } from "@wildboar/asn1";
 import {
     PresentationAddress,
     _decode_PresentationAddress,

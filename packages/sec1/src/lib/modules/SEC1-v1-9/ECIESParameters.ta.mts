@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
 import { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.mjs";

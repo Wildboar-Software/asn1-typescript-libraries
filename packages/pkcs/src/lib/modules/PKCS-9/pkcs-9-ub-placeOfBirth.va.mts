@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "asn1-ts";
+import { INTEGER } from "@wildboar/asn1";
 import { ub_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-name.va.mjs";
 
 

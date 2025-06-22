@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta.mjs";
 import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.mjs";

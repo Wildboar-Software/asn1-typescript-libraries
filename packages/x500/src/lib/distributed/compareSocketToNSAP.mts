@@ -1,6 +1,6 @@
 import type { Socket } from "net";
 import { TLSSocket, checkServerIdentity } from "tls";
-import type { OCTET_STRING } from "asn1-ts";
+import type { OCTET_STRING } from "@wildboar/asn1";
 import { lookup } from "dns/promises";
 import { ipv4FromNSAP } from "./ipv4.mjs";
 import { uriFromNSAP } from "./uri.mjs";

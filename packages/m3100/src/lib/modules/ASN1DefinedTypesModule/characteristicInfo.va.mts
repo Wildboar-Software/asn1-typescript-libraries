@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { m3100standardSpecificExtension } from '../ASN1DefinedTypesModule/m3100standardSpecificExtension.va.mjs';
 
 /**

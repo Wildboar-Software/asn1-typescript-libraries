@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 import { privAssignRequest } from '../Pbact-access/privAssignRequest.oa.mjs';
 import { privAssignResult } from '../Pbact-access/privAssignResult.oa.mjs';

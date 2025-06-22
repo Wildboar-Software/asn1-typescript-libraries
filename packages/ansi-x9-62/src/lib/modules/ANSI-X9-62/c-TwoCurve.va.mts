@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
 /**
  * @summary c_TwoCurve

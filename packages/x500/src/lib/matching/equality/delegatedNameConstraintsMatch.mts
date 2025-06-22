@@ -1,5 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     id_ce_delegatedNameConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.mjs";
@@ -14,7 +14,7 @@ import {
 import type {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
-import { DERElement } from "asn1-ts";
+import { DERElement } from "@wildboar/asn1";
 import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax.mjs";
 
 export

@@ -7,7 +7,7 @@ import {
     INTEGER,
     OPTIONAL,
     TRUE_BIT,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     ContextSelection,

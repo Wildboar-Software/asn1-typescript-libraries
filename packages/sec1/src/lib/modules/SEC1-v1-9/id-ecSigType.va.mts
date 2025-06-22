@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
 /**
  * @summary id_ecSigType

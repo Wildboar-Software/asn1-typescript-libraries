@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa.mjs';
 import { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa.mjs';

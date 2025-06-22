@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element } from "asn1-ts";
+import { ASN1Element } from "@wildboar/asn1";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
 import {
     CertificatePairAssertion,

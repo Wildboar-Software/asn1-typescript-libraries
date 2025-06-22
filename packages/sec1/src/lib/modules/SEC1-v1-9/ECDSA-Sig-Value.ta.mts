@@ -10,7 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y } from "../SEC1-v1-9/ECDSA-Sig-Value-y.ta.mjs";
 /**

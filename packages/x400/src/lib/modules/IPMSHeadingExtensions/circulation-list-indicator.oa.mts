@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { id_rex_circulation_list_indicator } from '../IPMSObjectIdentifiers/id-rex-circulation-list-indicator.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';

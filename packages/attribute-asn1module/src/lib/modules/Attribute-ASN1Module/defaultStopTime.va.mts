@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.mjs";
 /**
  * @summary defaultStopTime

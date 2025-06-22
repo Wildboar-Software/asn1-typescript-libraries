@@ -12,7 +12,7 @@ import {
     ASN1UniversalType,
     ASN1Element,
     External,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended";
 import type ProtectedItem from "../../../src/lib/types/ProtectedItem";
 import {

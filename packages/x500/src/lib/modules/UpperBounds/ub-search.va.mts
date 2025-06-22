@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "asn1-ts";
+import { INTEGER } from "@wildboar/asn1";
 
 /**
  * @summary ub_search

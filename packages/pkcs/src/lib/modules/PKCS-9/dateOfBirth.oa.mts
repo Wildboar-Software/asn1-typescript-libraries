@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { GeneralizedTime } from "asn1-ts";
+import { GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 import {

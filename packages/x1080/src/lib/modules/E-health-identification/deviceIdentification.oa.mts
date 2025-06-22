@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { id_med_device } from '../E-health-identification/id-med-device.va.mjs';
 import {
     DeviceIdentification,

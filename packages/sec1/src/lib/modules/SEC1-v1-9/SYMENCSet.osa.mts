@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { SYMENCSet_Union0_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union0-Intersection0-Element.oa.mjs";
 import { SYMENCSet_Union1_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union1-Intersection0-Element.oa.mjs";

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { ms_connect } from '../MSAbstractService/ms-connect.oa.mjs';
 import { retrieval } from '../MSAbstractService/retrieval.oa.mjs';
 import { ms_submission } from '../MSAbstractService/ms-submission.oa.mjs';

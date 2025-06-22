@@ -9,7 +9,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
 /**
  * @summary id_bvae_expired

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { TrustAnchorList, _decode_TrustAnchorList, _encode_TrustAnchorList } from "../TrustAnchorInfoModule/TrustAnchorList.ta.mjs";
 import { id_ct_trustAnchorList } from "../TrustAnchorInfoModule/id-ct-trustAnchorList.va.mjs";
 import { PKCS7_CONTENT_TYPE } from "../TrustAnchorInfoModule/PKCS7-CONTENT-TYPE.oca.mjs";

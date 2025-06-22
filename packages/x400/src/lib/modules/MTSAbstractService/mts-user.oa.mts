@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mts_access_contract } from '../MTSAbstractService/mts-access-contract.oa.mjs';
 import { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa.mjs';
 import { id_ot_mts_user } from '../MTSObjectIdentifiers/id-ot-mts-user.va.mjs';

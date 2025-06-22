@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { absence_advice } from '../IPMSInformationObjects/absence-advice.oa.mjs';
 import { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa.mjs';

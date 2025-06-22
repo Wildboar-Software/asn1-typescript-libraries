@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OPTIONAL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va.mjs";
 import {

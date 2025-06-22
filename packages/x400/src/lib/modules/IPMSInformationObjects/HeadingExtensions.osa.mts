@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { authorization_time } from '../IPMSHeadingExtensions/authorization-time.oa.mjs';
 import { auto_submitted } from '../IPMSHeadingExtensions/auto-submitted.oa.mjs';

@@ -2,7 +2,7 @@
 
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
-import { ObjectIdentifier } from "asn1-ts";
+import { ObjectIdentifier } from "@wildboar/asn1";
 import destringifyFilter from "../lib/destringifiers/Filter";
 
 // Filter ::= CHOICE {

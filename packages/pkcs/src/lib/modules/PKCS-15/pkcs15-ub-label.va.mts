@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "asn1-ts";
+import { INTEGER } from "@wildboar/asn1";
 import { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va.mjs";
 
 /**

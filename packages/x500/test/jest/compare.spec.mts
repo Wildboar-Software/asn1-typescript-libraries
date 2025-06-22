@@ -1,4 +1,4 @@
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 import {
     AttributeTypeAndValue,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";

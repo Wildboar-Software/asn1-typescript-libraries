@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, IA5String } from "asn1-ts";
+import { ASN1Element as _Element, IA5String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     DirectoryString,

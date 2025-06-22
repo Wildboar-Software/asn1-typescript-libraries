@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.mjs";
 import { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.mjs";

@@ -4,7 +4,7 @@ import {
     BOOLEAN,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";

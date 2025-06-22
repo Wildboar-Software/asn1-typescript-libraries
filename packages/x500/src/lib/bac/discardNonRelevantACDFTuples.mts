@@ -4,7 +4,7 @@ import itemIsProtected from "./itemIsProtected.mjs";
 import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
-import { TRUE_BIT } from "asn1-ts";
+import { TRUE_BIT } from "@wildboar/asn1";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import type {
     NameAndOptionalUID,

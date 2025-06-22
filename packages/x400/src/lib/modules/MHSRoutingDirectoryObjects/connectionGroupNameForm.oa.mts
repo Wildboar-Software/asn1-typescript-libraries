@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { connectionGroup } from '../MHSRoutingDirectoryObjects/connectionGroup.oa.mjs';
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { id_nf_connection_group } from '../MHSRoutingObjectIdentifiers/id-nf-connection-group.va.mjs';

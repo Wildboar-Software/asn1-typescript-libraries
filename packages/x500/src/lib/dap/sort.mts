@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
+import type { OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
 import type OrderingMatcher from "../types/OrderingMatcher.mjs";
 import type {
     SortKey,

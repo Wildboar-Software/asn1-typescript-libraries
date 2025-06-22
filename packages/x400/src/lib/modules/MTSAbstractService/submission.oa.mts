@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { message_submission } from '../MTSAbstractService/message-submission.oa.mjs';
 import { probe_submission } from '../MTSAbstractService/probe-submission.oa.mjs';

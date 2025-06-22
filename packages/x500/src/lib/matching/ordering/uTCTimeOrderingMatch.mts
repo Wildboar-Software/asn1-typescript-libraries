@@ -1,5 +1,5 @@
 import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element, UTCTime } from "asn1-ts";
+import type { ASN1Element, UTCTime } from "@wildboar/asn1";
 
 export
 const uTCTimeOrderingMatch: OrderingMatcher = (

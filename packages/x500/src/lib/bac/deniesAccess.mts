@@ -1,4 +1,4 @@
-import type { BIT_STRING } from "asn1-ts";
+import type { BIT_STRING } from "@wildboar/asn1";
 
 /**
  * @summary Determine whether permission bits involve denying access

@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, DERElement } from "asn1-ts";
+import { ASN1Element, DERElement } from "@wildboar/asn1";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,

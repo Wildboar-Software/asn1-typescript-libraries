@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta.mjs";
 import { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta.mjs";

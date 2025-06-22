@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SimpleSyntax, _decode_SimpleSyntax, _encode_SimpleSyntax } from "../SNMPv2-PDU/SimpleSyntax.ta.mjs";
 import { ApplicationSyntax, _decode_ApplicationSyntax, _encode_ApplicationSyntax } from "../SNMPv2-PDU/ApplicationSyntax.ta.mjs";

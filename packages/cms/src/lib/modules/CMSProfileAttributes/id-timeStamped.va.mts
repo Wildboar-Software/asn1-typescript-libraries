@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 
 /**

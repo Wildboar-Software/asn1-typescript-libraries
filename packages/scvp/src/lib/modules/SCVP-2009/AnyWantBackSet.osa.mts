@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa.mjs';
 /**

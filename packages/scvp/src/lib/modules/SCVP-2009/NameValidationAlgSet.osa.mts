@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.mjs';
 /**

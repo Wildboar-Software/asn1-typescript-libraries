@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.mjs";
 import { prime_field } from "../SEC1-v1-9/prime-field.va.mjs";
 import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";

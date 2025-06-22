@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_mr_extensionPresenceMatch } from "../AttributeCertificateDefinitions/id-mr-extensionPresenceMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";

@@ -1,4 +1,4 @@
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { _decode_DirectoryString } from "../modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { id_at_commonName } from "../modules/SelectedAttributeTypes/id-at-commonName.va.mjs";

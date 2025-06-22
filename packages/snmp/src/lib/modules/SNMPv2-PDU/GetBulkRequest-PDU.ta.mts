@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BulkPDU, _decode_BulkPDU, _encode_BulkPDU } from "../SNMPv2-PDU/BulkPDU.ta.mjs";
 /**

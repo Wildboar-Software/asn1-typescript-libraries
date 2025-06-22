@@ -1,4 +1,4 @@
-import { ObjectIdentifier } from "asn1-ts";
+import { ObjectIdentifier } from "@wildboar/asn1";
 
 /**
  * Modify-Increment [RFC4525]

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca.mjs';
 /**
  * @summary AuthenticationContextSet

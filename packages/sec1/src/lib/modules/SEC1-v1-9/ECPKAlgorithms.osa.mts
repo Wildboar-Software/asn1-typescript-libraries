@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa.mjs";
 import { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa.mjs";

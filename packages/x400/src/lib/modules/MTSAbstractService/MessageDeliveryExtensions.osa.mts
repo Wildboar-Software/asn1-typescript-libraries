@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.mjs';
 import { physical_forwarding_address_request } from '../MTSAbstractService/physical-forwarding-address-request.oa.mjs';

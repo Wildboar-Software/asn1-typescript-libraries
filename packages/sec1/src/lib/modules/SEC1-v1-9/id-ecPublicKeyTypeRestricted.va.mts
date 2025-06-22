@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { id_publicKeyType } from "../SEC1-v1-9/id-publicKeyType.va.mjs";
 /**
  * @summary id_ecPublicKeyTypeRestricted

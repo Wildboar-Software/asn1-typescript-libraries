@@ -1,7 +1,7 @@
 import {
     ASN1TagClass,
     ASN1UniversalType,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import type {
     ProtectedItems,
 } from "../modules/BasicAccessControl/ProtectedItems.ta.mjs";

@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta.mjs";
 import {

@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeCertificateIdentifier, _decode_AttributeCertificateIdentifier, _encode_AttributeCertificateIdentifier } from "../PlatformCertificateProfile/AttributeCertificateIdentifier.ta.mjs";
 import {

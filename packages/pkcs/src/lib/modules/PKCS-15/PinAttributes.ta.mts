@@ -6,7 +6,7 @@ import {
     INTEGER,
     OCTET_STRING,
     OPTIONAL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import {

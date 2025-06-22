@@ -9,7 +9,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.mjs';
 import {
   dirSignedTransformation_XformedDataType,

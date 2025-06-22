@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.mjs';
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.mjs';

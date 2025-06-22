@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "asn1-ts";
+import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_ce_noAssertion } from "../AttributeCertificateDefinitions/id-ce-noAssertion.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";

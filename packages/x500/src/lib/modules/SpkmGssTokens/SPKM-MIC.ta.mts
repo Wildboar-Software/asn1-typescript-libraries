@@ -4,7 +4,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BIT_STRING,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     Mic_Header,

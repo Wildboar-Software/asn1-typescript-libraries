@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta.mjs";
 import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta.mjs";

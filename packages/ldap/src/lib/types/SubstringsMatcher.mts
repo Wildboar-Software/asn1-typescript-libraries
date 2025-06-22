@@ -1,4 +1,4 @@
-import { ASN1Element } from "asn1-ts";
+import { ASN1Element } from "@wildboar/asn1";
 import SubstringSelection from "./SubstringSelection.mjs";
 
 export

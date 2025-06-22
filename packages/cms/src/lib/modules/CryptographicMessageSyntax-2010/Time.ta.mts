@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, GeneralizedTime, UTCTime } from "asn1-ts";
+import { ASN1Element as _Element, GeneralizedTime, UTCTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 

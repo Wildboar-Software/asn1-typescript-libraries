@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { HashAlgorithm } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import { id_sha1 } from "../PKCS-1/id-sha1.va.mjs";

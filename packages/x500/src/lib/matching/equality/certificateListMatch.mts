@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
     CertificateListAssertion,

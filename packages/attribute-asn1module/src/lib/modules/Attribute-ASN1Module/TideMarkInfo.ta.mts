@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.mjs";
 /**

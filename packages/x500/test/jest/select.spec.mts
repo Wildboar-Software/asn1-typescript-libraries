@@ -7,7 +7,7 @@ import {
     ASN1TagClass,
     ASN1Construction,
     ASN1UniversalType,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { EntryInformationSelection } from "../../src/lib/modules/DirectoryAbstractService/EntryInformationSelection.ta.mjs";
 import { EntryInformation } from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import { Context } from "../../src/lib/modules/InformationFramework/Context.ta.mjs";

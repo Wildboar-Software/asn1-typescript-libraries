@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca.mjs';
 /**
  * @summary InternalResourceSet

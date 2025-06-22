@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.mjs";
 import { tpBasis } from "../SEC1-v1-9/tpBasis.va.mjs";
 import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";

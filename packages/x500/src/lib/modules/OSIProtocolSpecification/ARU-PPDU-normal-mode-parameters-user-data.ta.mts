@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,

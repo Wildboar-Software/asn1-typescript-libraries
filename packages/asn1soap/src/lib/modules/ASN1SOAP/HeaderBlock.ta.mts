@@ -10,7 +10,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 import { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va.mjs';

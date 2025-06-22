@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "asn1-ts";
+import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va.mjs";

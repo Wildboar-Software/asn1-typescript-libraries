@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs';
 
 /**

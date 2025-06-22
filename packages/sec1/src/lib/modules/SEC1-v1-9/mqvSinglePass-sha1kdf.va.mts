@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
 /**
  * @summary mqvSinglePass_sha1kdf

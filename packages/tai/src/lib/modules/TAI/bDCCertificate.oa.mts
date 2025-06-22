@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { BDCCertificateReferer, _decode_BDCCertificateReferer, _encode_BDCCertificateReferer } from "../TAI/BDCCertificateReferer.ta.mjs";
 import { id_tai_ce_bDCCertificate } from "../TAI/id-tai-ce-bDCCertificate.va.mjs";
 import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";

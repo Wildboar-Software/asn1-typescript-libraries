@@ -1,5 +1,5 @@
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";

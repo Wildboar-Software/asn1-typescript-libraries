@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mHSOrganization } from '../MHSRoutingORAddressSubtree/mHSOrganization.oa.mjs';
 import { mHSOrganizationName } from '../MHSRoutingORAddressSubtree/mHSOrganizationName.oa.mjs';
 import { id_nf_mhs_organization } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organization.va.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
+import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_TLSResponse {

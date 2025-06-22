@@ -1,7 +1,7 @@
 import type {
     Filter,
 } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 /**
  * @summary Get the OIDs of matching rules used in a `Filter`

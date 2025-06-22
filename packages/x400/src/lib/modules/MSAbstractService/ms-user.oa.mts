@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa.mjs';
 import { ms_access_contract_94 } from '../MSAbstractService/ms-access-contract-94.oa.mjs';
 import { id_ot_ms_user } from '../MSObjectIdentifiers/id-ot-ms-user.va.mjs';

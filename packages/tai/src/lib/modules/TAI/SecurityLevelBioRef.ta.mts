@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricSecurityLevelId, _decode_BiometricSecurityLevelId, _encode_BiometricSecurityLevelId } from "../TAI/BiometricSecurityLevelId.ta.mjs";
 import { ModalityPolicy, _decode_ModalityPolicy, _encode_ModalityPolicy } from "../TAI/ModalityPolicy.ta.mjs";

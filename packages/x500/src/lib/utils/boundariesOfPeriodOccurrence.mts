@@ -1,4 +1,4 @@
-import { TRUE_BIT } from "asn1-ts";
+import { TRUE_BIT } from "@wildboar/asn1";
 import type {
     Period,
 } from "../modules/SelectedAttributeTypes/Period.ta.mjs";

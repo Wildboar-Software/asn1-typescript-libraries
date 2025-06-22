@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TRUE } from "asn1-ts";
+import { TRUE } from "@wildboar/asn1";
 import { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va.mjs";
 import {
     SignedSecurityLabel,

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { message_security_label } from '../MTSAbstractService/message-security-label.oa.mjs';
 import { redirection_history } from '../MTSAbstractService/redirection-history.oa.mjs';

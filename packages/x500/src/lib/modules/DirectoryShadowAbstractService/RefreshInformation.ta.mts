@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     EXTERNAL,
     NULL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     IncrementalRefresh,

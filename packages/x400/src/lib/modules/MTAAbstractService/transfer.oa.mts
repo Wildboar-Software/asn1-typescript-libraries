@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { message_transfer } from '../MTAAbstractService/message-transfer.oa.mjs';
 import { probe_transfer } from '../MTAAbstractService/probe-transfer.oa.mjs';
 import { report_transfer } from '../MTAAbstractService/report-transfer.oa.mjs';

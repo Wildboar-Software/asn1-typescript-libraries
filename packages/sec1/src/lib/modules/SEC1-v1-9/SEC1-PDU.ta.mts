@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.mjs";

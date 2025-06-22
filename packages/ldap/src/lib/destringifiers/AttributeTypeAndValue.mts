@@ -1,4 +1,4 @@
-import { BERElement, ObjectIdentifier } from "asn1-ts";
+import { BERElement, ObjectIdentifier } from "@wildboar/asn1";
 import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue.mjs";
 import type { StringDecoderGetter } from "../types/StringDecoderGetter.mjs";
 import isDigit from "../utils/isDigit.mjs";

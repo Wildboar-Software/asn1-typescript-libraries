@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va.mjs';
 
 /**

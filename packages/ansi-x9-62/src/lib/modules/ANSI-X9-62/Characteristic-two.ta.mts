@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Characteristic_two

@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { tcg_registry_componentClass } from "../PlatformCertificateProfile/tcg-registry-componentClass.va.mjs";
 /**
  * @summary tcg_registry_componentClass_dmtf

@@ -3,7 +3,7 @@ import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
-import { TRUE_BIT, INTEGER } from "asn1-ts";
+import { TRUE_BIT, INTEGER } from "@wildboar/asn1";
 import {
     PERMISSION_CATEGORY_ADD,
     PERMISSION_CATEGORY_IMPORT,

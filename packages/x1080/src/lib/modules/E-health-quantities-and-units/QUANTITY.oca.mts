@@ -12,7 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';
 import { UNIT } from '../E-health-quantities-and-units/UNIT.oca.mjs';

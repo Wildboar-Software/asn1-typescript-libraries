@@ -1,5 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     id_ce_roleSpecCertIdentifier,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-roleSpecCertIdentifier.va.mjs";
@@ -15,7 +15,7 @@ import type {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
 import compareRoleSpecCertIdentifier from "../../comparators/compareRoleSpecCertIdentifier.mjs";
-import { DERElement } from "asn1-ts";
+import { DERElement } from "@wildboar/asn1";
 
 export
 const roleSpecCertIdMatch: EqualityMatcher = (

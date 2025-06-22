@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_aca_accessControlScheme } from "../BasicAccessControl/id-aca-accessControlScheme.va.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";

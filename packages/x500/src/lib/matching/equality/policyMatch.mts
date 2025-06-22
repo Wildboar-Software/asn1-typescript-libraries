@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     PolicySyntax,
     _decode_PolicySyntax,

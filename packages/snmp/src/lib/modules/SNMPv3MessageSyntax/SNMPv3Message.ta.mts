@@ -10,7 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HeaderData, _decode_HeaderData, _encode_HeaderData } from "../SNMPv3MessageSyntax/HeaderData.ta.mjs";
 import { ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../SNMPv3MessageSyntax/ScopedPduData.ta.mjs";

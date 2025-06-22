@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mHSGenerationQualifier } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifier.oa.mjs';
 import { mHSGenerationQualifierAttribute } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifierAttribute.oa.mjs';
 import { id_nf_mhs_generation_qualifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-generation-qualifier.va.mjs';

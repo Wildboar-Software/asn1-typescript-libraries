@@ -1,4 +1,4 @@
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     GeneralName,

@@ -1,4 +1,4 @@
-import type { TeletexString } from "asn1-ts";
+import type { TeletexString } from "@wildboar/asn1";
 
 // See https://en.wikipedia.org/wiki/ITU_T.61
 const teletexCharToStringCharMap: Map<number, number> = new Map([

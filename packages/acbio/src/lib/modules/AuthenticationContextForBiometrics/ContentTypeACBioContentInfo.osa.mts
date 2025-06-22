@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { acbioContentInformation } from '../AuthenticationContextForBiometrics/acbioContentInformation.oa.mjs';
 import type {
     CONTENT_TYPE,

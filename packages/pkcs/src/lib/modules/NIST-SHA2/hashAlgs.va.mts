@@ -1,4 +1,4 @@
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 
 export const hashAlgs: asn1.OBJECT_IDENTIFIER = asn1.ObjectIdentifier.fromParts([
     2,

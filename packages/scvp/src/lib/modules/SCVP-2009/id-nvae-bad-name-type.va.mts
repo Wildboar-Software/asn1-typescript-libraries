@@ -9,7 +9,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { id_nvae } from '../SCVP-2009/id-nvae.va.mjs';
 /**
  * @summary id_nvae_bad_name_type

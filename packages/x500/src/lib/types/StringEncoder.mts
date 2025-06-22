@@ -1,4 +1,4 @@
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * A function that converts an X.500 directory value to its LDAP string

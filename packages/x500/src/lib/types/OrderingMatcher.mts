@@ -1,4 +1,4 @@
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * A function for implement ordering matching of X.500 directory values.

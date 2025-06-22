@@ -1,6 +1,6 @@
 import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 
 export
 const numericStringSubstringsMatch: SubstringsMatcher = (

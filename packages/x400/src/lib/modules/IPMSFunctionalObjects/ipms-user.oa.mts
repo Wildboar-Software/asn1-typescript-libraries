@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { ipms_access_contract } from '../IPMSFunctionalObjects/ipms-access-contract.oa.mjs';
 import { id_ot_ipms_user } from '../IPMSObjectIdentifiers/id-ot-ipms-user.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';

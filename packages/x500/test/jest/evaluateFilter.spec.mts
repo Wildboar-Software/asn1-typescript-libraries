@@ -1,4 +1,4 @@
-import * as asn1 from "asn1-ts";
+import * as asn1 from "@wildboar/asn1";
 import type {
     Filter,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Filter.ta.mjs";
@@ -40,7 +40,7 @@ import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher.m
 import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher.mjs";
 import SubstringSelection from "@wildboar/x500/src/lib/types/SubstringSelection.mjs";
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,

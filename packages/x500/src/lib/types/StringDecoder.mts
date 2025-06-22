@@ -1,4 +1,4 @@
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * A function that converts an LDAP string representation of a value to its

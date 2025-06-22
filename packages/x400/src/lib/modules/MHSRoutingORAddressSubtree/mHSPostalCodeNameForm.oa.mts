@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa.mjs';
 import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.mjs';
 import { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va.mjs';

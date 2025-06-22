@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.mjs';
 import { managementDocument } from '../DefinitionDirectoryASN1Module/managementDocument.oa.mjs';
 import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.mjs';

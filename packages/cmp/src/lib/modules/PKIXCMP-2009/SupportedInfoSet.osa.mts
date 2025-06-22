@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.mjs';
 
 /**

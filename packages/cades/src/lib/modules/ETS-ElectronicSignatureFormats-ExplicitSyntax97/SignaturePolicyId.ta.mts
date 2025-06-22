@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
 import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";

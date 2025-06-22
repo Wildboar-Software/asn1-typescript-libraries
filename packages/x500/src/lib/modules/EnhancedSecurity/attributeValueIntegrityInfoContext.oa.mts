@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TRUE } from "asn1-ts";
+import { TRUE } from "@wildboar/asn1";
 import {
     AttributeValueIntegrityInfo,
     _decode_AttributeValueIntegrityInfo,

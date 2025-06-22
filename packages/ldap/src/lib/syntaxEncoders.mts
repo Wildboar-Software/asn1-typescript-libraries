@@ -1,5 +1,5 @@
 import type LDAPSyntaxEncoder from "./types/LDAPSyntaxEncoder.mjs";
-import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "asn1-ts";
+import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
 import encodeLDAPOID from "./encodeLDAPOID.mjs";
 
 // LDAPSyntaxEncoder = (value: ASN1Element) => Uint8Array;

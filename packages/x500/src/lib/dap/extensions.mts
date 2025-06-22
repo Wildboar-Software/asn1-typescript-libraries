@@ -1,4 +1,4 @@
-import { OBJECT_IDENTIFIER, ObjectIdentifier } from "asn1-ts";
+import { OBJECT_IDENTIFIER, ObjectIdentifier } from "@wildboar/asn1";
 
 export const EXT_BIT_SUBENTRIES: number = 1;
 export const EXT_BIT_COPY_SHALL_DO: number = 2;

@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa.mjs';
 import { m_CancelGet } from '../CMIP-1/m-CancelGet.oa.mjs';

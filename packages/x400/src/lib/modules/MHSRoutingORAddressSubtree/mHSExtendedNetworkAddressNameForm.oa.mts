@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddress.oa.mjs';
 import { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa.mjs';
 import { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va.mjs';

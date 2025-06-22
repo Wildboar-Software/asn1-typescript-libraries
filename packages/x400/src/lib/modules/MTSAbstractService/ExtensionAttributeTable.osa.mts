@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 import { common_name } from '../MTSAbstractService/common-name.oa.mjs';
 import { teletex_common_name } from '../MTSAbstractService/teletex-common-name.oa.mjs';

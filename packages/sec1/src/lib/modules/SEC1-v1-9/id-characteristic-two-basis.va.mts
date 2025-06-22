@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.mjs";
 /**
  * @summary id_characteristic_two_basis

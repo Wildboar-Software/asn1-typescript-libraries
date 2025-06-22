@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_algo_mca } from "../GenAlgo/id-algo-mca.va.mjs";
 /**
  * @summary id_algo_multipleHashAlgo

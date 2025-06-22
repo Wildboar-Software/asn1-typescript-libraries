@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { id_x1080_0_attr } from '../Pbact-access/id-x1080-0-attr.va.mjs';
 
 /**

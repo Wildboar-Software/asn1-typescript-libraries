@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.mjs';
 
 /**

@@ -8,7 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
 import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
 

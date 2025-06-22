@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.oa.mjs';
 import { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa.mjs';
 import { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa.mjs';

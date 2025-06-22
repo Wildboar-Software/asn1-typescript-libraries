@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";

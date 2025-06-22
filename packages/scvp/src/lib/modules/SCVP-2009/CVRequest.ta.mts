@@ -13,7 +13,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { Query, _decode_Query, _encode_Query } from '../SCVP-2009/Query.ta.mjs';
 import {

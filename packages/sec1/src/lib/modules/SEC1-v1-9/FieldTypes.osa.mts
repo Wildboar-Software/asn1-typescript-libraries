@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
 import { FieldTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union0-Intersection0-Element.oa.mjs";
 import { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union1-Intersection0-Element.oa.mjs";

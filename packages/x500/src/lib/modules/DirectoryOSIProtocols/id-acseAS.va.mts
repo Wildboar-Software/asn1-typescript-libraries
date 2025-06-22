@@ -3,7 +3,7 @@ import {
     joint_iso_itu_t,
     ObjectIdentifier as _OID,
     OBJECT_IDENTIFIER,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 
 /**
  * @summary id_acseAS

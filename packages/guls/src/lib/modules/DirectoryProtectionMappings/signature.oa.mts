@@ -9,7 +9,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa.mjs';
 import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
 

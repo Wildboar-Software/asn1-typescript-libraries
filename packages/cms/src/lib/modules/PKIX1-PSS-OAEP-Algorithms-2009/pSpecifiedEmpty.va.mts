@@ -10,7 +10,7 @@ import {
     ASN1Construction,
     ASN1UniversalType,
     DERElement,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 
 
 /**

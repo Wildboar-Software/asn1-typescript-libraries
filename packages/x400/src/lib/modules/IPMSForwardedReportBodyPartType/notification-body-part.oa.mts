@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { notification_body_part_parameters } from '../IPMSForwardedReportBodyPartType/notification-body-part-parameters.oa.mjs';
 import { notification_body_part_data } from '../IPMSForwardedReportBodyPartType/notification-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';

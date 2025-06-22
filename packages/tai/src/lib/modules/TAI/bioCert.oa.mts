@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { BioCert, _decode_BioCert, _encode_BioCert } from "../TAI/BioCert.ta.mjs";
 import { id_tai_ce_bioCert } from "../TAI/id-tai-ce-bioCert.va.mjs";
 import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";

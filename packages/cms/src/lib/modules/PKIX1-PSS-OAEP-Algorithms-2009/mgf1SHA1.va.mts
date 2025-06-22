@@ -8,7 +8,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
     DERElement,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 
 
 /**

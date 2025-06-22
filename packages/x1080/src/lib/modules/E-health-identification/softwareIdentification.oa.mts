@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { id_med_softw } from '../E-health-identification/id-med-softw.va.mjs';
 import {
     SoftwareIdentification,

@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { id_tai_at } from "../TAI/id-tai-at.va.mjs";
 /**
  * @summary id_tai_at_bioSecLevelReference

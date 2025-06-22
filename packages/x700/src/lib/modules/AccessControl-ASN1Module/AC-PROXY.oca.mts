@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs';
 /**
  * @summary AC_PROXY

@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 
 export type EXTERNAL_MESSAGE_REFERENCE = TYPE_IDENTIFIER;
 

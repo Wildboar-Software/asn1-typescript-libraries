@@ -1,4 +1,4 @@
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";

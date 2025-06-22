@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { PublicKeyCert, _decode_PublicKeyCert, _encode_PublicKeyCert } from "../TAI/PublicKeyCert.ta.mjs";
 import { id_tai_ce_publicKeyCert } from "../TAI/id-tai-ce-publicKeyCert.va.mjs";
 import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";

@@ -5,7 +5,7 @@ import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Ac
 import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
-import { ObjectIdentifier } from "asn1-ts";
+import { ObjectIdentifier } from "@wildboar/asn1";
 import stringifyFilter from "../lib/stringifiers/Filter";
 
 // Filter ::= CHOICE {

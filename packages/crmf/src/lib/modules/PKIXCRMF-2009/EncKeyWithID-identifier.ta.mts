@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, UTF8String } from "asn1-ts";
+import { ASN1Element as _Element, UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     GeneralName,

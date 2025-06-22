@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type StringDecoder from "./StringDecoder.mjs";
 
 export

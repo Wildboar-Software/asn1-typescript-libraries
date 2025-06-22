@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "asn1-ts";
+import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 import {

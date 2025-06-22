@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 /**

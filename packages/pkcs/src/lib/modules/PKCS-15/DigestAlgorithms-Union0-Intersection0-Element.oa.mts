@@ -1,4 +1,4 @@
-import type { NULL } from "asn1-ts";
+import type { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { sha_1 } from "../CryptographicMessageSyntax/sha-1.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";

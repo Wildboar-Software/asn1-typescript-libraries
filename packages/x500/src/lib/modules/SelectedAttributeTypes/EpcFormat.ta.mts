@@ -5,7 +5,7 @@ import {
     INTEGER,
     OPTIONAL,
     UTF8String,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     EpcFormat_fields_Item,

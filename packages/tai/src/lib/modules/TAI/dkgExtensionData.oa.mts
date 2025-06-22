@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { DkgExtensionDataSyntax, _decode_DkgExtensionDataSyntax, _encode_DkgExtensionDataSyntax } from "../TAI/DkgExtensionDataSyntax.ta.mjs";
 import { id_tai_ce_dgkExtensionData } from "../TAI/id-tai-ce-dgkExtensionData.va.mjs";
 import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";

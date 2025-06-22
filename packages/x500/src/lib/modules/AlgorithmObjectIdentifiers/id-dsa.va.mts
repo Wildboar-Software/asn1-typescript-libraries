@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID } from "asn1-ts";
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { ansi_x9_57 } from "../AlgorithmObjectIdentifiers/ansi-x9-57.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 /**

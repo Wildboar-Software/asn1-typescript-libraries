@@ -12,7 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../PlatformCertificateProfile/EvaluationAssuranceLevel.ta.mjs";
 import { StrengthOfFunction, _enum_for_StrengthOfFunction, _decode_StrengthOfFunction, _encode_StrengthOfFunction } from "../PlatformCertificateProfile/StrengthOfFunction.ta.mjs";

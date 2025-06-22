@@ -1,7 +1,7 @@
 import { getDay, subDays, getDaysInMonth, lastDayOfMonth } from "date-fns";
 import type { XDayOf } from "../modules/SelectedAttributeTypes/XDayOf.ta.mjs";
 import type { NamedDay } from "../modules/SelectedAttributeTypes/NamedDay.ta.mjs";
-import { TRUE_BIT } from "asn1-ts";
+import { TRUE_BIT } from "@wildboar/asn1";
 
 function destructureXDayOf (x: XDayOf): [ number, NamedDay ] {
     if ("first" in x) {

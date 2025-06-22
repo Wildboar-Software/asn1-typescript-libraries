@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { ms_child_sequence_numbers } from '../MSGeneralAttributeTypes/ms-child-sequence-numbers.oa.mjs';
 import { mt_content } from '../MSGeneralAttributeTypes/mt-content.oa.mjs';

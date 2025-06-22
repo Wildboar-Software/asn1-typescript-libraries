@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { originate_probe } from '../IPMSAbstractService/originate-probe.oa.mjs';
 import { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa.mjs';
 import { originate_rn } from '../IPMSAbstractService/originate-rn.oa.mjs';

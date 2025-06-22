@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { routingCollective } from '../MHSRoutingDirectoryObjects/routingCollective.oa.mjs';
 import { routingCollectiveName } from '../MHSRoutingDirectoryObjects/routingCollectiveName.oa.mjs';
 import { id_nf_routing_collective } from '../MHSRoutingObjectIdentifiers/id-nf-routing-collective.va.mjs';

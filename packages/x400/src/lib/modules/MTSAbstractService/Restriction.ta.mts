@@ -12,7 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.mjs";
 import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.mjs";

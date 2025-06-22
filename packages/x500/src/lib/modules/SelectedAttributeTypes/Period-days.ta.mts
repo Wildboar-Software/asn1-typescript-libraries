@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "asn1-ts";
+import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     Period_days_bitDay,

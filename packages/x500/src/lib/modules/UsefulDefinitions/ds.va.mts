@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { joint_iso_itu_t, ObjectIdentifier as _OID } from "asn1-ts";
+import { joint_iso_itu_t, ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 /**
  * @summary ds

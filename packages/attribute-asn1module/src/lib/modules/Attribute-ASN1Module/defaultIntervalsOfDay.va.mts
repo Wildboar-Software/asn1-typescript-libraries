@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
 import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/Time24.ta.mjs";
 import { IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.mjs";

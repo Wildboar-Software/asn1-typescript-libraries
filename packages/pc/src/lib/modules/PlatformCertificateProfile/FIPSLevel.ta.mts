@@ -11,7 +11,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta.mjs";
 /**

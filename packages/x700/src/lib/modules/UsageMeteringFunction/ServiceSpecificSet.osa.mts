@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.mjs';
 /**
  * @summary ServiceSpecificSet

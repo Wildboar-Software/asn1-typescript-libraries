@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca.mjs';
 /**
  * @summary AssociatedObjectSet

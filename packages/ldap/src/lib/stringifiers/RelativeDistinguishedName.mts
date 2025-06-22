@@ -1,7 +1,7 @@
 import { stringifyAttributeTypeAndValue } from "./AttributeTypeAndValue.mjs";
 import type StringEncoderGetter from "../types/StringEncoderGetter.mjs";
 import type AttributeTypeAndValue from "../types/AttributeTypeAndValue.mjs";
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 export
 function stringifyRelativeDistinguishedName (

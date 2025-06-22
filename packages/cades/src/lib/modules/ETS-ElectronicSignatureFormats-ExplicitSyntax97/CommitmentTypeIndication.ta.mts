@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.mjs";
 import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta.mjs";

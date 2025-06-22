@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { RDNSequence } from "../modules/InformationFramework/RDNSequence.ta.mjs";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import compareRelativeDistinguishedName from "./compareRelativeDistinguishedName.mjs";

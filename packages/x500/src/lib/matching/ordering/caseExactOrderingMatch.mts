@@ -1,5 +1,5 @@
 import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element } from "asn1-ts";
+import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 import { auto_forwarding_loop } from '../EDIMSAutoActionTypes/auto-forwarding-loop.oa.mjs';
 import { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa.mjs';

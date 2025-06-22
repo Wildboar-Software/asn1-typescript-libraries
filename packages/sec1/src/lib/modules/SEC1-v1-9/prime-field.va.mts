@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.mjs";
 /**
  * @summary prime_field

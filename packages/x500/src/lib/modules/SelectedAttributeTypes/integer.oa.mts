@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "asn1-ts";
+import { INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs";

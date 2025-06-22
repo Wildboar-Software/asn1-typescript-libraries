@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { mHSTerminalType } from '../MHSRoutingORAddressSubtree/mHSTerminalType.oa.mjs';
 import { mHSTerminalTypeAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalTypeAttribute.oa.mjs';
 import { id_nf_mhs_terminal_type } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-type.va.mjs';

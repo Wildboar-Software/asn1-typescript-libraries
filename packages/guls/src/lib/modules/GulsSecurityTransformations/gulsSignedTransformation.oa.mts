@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
     ObjectIdentifier,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
 import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.mjs';
 import {

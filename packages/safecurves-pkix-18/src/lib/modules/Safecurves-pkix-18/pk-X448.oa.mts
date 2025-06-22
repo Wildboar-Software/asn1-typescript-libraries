@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { _enum_for_ParamOptions, absent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_X448 } from "../Safecurves-pkix-18/id-X448.va.mjs";
 import { CurvePrivateKey, _decode_CurvePrivateKey, _encode_CurvePrivateKey } from "../Safecurves-pkix-18/CurvePrivateKey.ta.mjs";

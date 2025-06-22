@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta.mjs";
 /**

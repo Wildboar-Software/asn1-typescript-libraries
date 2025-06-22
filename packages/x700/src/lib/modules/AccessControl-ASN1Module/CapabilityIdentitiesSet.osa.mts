@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca.mjs';
 /**
  * @summary CapabilityIdentitiesSet

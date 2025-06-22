@@ -12,7 +12,7 @@ import {
     ASN1Element,
     DERElement,
     OBJECT_IDENTIFIER,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 
 /**
  * @summary Compare two `GeneralName` values

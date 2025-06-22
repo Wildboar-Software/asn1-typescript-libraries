@@ -31,7 +31,7 @@ import type {
 import type {
     FilterItem_substrings,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta.mjs";
 /**

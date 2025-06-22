@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_bioSecLevel, _encode_SecurityLevelofPrivilege_bioSecLevel } from "../TAI/SecurityLevelofPrivilege-bioSecLevel.ta.mjs";
 

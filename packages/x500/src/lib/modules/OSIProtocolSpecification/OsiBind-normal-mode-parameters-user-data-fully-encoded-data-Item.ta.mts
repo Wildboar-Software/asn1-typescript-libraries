@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,

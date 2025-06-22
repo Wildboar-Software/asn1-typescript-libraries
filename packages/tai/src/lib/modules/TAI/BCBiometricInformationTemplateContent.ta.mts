@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricTemplateVersion, _decode_BiometricTemplateVersion, _encode_BiometricTemplateVersion } from "../TAI/BiometricTemplateVersion.ta.mjs";
 import { BiometricTemplateInfo, _decode_BiometricTemplateInfo, _encode_BiometricTemplateInfo } from "../TAI/BiometricTemplateInfo.ta.mjs";

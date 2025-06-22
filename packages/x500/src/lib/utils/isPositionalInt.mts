@@ -1,4 +1,4 @@
-import type { INTEGER } from "asn1-ts";
+import type { INTEGER } from "@wildboar/asn1";
 
 export
 function isPositionalInt (max: number): (num: INTEGER) => boolean {

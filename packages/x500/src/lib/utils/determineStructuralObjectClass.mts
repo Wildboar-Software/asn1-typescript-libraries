@@ -1,4 +1,4 @@
-import { ObjectIdentifier, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ObjectIdentifier, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs";
 import {
     ObjectClassKind,

@@ -3,7 +3,7 @@ import {
     DERElement,
     ObjectIdentifier,
     OBJECT_IDENTIFIER,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import {
     _encodeIA5String,
     _encodePrintableString,

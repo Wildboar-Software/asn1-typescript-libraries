@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 import { ia5_text_body_part } from '../IPMSExtendedBodyPartTypes/ia5-text-body-part.oa.mjs';
 import { g3_facsimile_body_part } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part.oa.mjs';

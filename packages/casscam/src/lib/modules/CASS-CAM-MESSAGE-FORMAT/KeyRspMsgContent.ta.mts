@@ -10,7 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.mjs";
 

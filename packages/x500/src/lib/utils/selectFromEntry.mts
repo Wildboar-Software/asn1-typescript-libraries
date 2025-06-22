@@ -1,4 +1,4 @@
-import { ASN1Element, OBJECT_IDENTIFIER, DERElement } from "asn1-ts";
+import { ASN1Element, OBJECT_IDENTIFIER, DERElement } from "@wildboar/asn1";
 import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta.mjs";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import type {

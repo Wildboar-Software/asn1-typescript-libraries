@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BMPString, UniversalString } from "asn1-ts";
+import { ASN1Element as _Element, BMPString, UniversalString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**

@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 import { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa.mjs';
 import { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa.mjs';

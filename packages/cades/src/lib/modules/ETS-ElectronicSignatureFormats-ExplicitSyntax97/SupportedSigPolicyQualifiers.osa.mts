@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
 import { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa.mjs";
 import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa.mjs";

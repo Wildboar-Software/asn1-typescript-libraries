@@ -7,7 +7,7 @@ import {
     _encode_Period_months,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/index.mjs";
 import { DayTime } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DayTime.ta.mjs";
-import { DERElement, FALSE_BIT, TRUE_BIT } from "asn1-ts";
+import { DERElement, FALSE_BIT, TRUE_BIT } from "@wildboar/asn1";
 import { NamedDay_intNamedDays_friday } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
 import { addDays } from "date-fns";
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PrintableString } from "asn1-ts";
+import { PrintableString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_printableString } from "../SelectedAttributeTypes/id-lsx-printableString.va.mjs";

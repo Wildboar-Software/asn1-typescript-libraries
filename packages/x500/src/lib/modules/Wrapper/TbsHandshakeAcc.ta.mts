@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     TRUE_BIT,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {

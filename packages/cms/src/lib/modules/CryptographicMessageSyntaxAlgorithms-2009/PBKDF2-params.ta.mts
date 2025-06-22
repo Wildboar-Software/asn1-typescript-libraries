@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OPTIONAL,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va.mjs";
 import {

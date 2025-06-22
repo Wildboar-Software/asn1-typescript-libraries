@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 import { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa.mjs';
 import { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa.mjs';

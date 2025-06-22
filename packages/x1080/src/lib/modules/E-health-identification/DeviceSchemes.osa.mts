@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { DEVICE_SCHEME } from '../E-health-identification/DEVICE-SCHEME.oca.mjs';
 
 /**

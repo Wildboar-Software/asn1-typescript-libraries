@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     RelativeDistinguishedName as RDN,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta.mjs";

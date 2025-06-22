@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
+} from '@wildboar/asn1';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation-list-indicator.oa.mjs';
 import { precedence } from '../IPMSHeadingExtensions/precedence.oa.mjs';

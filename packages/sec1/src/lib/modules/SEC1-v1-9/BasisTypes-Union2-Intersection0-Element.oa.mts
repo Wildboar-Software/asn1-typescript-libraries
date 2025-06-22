@@ -8,7 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
+} from "@wildboar/asn1";
 import { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta.mjs";
 import { ppBasis } from "../SEC1-v1-9/ppBasis.va.mjs";
 import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
