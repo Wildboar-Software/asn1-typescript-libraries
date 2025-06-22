@@ -6,8 +6,8 @@ import {
     INSTANCE_OF,
     OBJECT_IDENTIFIER,
     OCTET_STRING,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 import {
     EDIPartyName,
     _decode_EDIPartyName,

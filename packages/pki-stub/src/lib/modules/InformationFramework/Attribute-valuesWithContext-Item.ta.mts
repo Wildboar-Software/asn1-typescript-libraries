@@ -3,8 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 import {
     Context,
     _decode_Context,

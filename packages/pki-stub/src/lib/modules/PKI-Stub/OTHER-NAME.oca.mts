@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
+} from "jsr:@wildboar/asn1";
 
 export type OTHER_NAME<Type> = TYPE_IDENTIFIER<Type>;
 

@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 
 /**
  * @summary ExtensionAttribute

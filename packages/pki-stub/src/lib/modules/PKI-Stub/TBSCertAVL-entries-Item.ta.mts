@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 import {
     TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,

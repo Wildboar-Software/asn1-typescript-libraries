@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, PrintableString } from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 
 /**
  * @summary TerminalIdentifier

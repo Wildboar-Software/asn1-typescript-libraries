@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1";
+import * as $ from "jsr:@wildboar/asn1/functional";
 import {
     Attribute_valuesWithContext_Item as VWC,
     _decode_Attribute_valuesWithContext_Item as _decode_VWC,
