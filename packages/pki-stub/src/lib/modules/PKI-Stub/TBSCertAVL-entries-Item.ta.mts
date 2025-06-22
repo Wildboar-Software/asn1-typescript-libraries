@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1/functional@11";
+import * as $ from "jsr:@wildboar/asn1@11/functional";
 import {
     TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,

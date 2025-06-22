@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1/functional@11";
+import * as $ from "jsr:@wildboar/asn1@11/functional";
 
 export enum _enum_for_CRLReason {
     unspecified = 0,

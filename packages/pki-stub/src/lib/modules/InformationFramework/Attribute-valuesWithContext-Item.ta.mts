@@ -4,7 +4,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1/functional@11";
+import * as $ from "jsr:@wildboar/asn1@11/functional";
 import {
     Context,
     _decode_Context,

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1/functional@11";
+import * as $ from "jsr:@wildboar/asn1@11/functional";
 
 /**
  * @summary ScopeRestriction
