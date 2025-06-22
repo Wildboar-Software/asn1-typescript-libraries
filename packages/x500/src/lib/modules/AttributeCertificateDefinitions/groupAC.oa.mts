@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**

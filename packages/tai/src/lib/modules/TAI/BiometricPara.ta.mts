@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { BiometricPara_Item, _decode_BiometricPara_Item, _encode_BiometricPara_Item } from "../TAI/BiometricPara-Item.ta.mjs";
 /**
  * @summary BiometricPara

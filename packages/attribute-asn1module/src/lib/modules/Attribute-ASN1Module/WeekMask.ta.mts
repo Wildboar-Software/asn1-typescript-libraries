@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { WeekMask_Item, _decode_WeekMask_Item, _encode_WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
 /**
  * @summary WeekMask

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { GetRequest_PDU, _decode_GetRequest_PDU, _encode_GetRequest_PDU } from "../SNMPv2-PDU/GetRequest-PDU.ta.mjs";
 import { GetNextRequest_PDU, _decode_GetNextRequest_PDU, _encode_GetNextRequest_PDU } from "../SNMPv2-PDU/GetNextRequest-PDU.ta.mjs";
 import { GetBulkRequest_PDU, _decode_GetBulkRequest_PDU, _encode_GetBulkRequest_PDU } from "../SNMPv2-PDU/GetBulkRequest-PDU.ta.mjs";

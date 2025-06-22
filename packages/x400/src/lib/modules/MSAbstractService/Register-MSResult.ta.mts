@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
+import * as $ from '@wildboar/asn1/functional';
 import {
     Register_MSResult_registered_information,
     _decode_Register_MSResult_registered_information,

@@ -5,7 +5,7 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     SimpleCredentials_validity_time1,
     _decode_SimpleCredentials_validity_time1,

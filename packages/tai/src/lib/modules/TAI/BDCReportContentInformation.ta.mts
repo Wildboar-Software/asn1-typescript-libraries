@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { BdcPKCInformation, _decode_BdcPKCInformation, _encode_BdcPKCInformation } from "../TAI/BdcPKCInformation.ta.mjs";
 import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportInformation } from "../TAI/BPUReportInformation.ta.mjs";
 

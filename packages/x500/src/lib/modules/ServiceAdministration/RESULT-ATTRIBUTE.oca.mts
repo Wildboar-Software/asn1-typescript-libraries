@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 /**
  * @summary RESULT_ATTRIBUTE

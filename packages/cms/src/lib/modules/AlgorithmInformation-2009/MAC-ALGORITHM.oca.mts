@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { BOOLEAN, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 

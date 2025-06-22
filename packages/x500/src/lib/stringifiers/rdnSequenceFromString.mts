@@ -7,7 +7,7 @@ import {
 import {
     _encodeIA5String,
     _encodePrintableString,
-} from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1/functional";
 import * as selat from "../collections/module/selectedAttributeTypeAttributes.mjs";
 import { AttributeTypeAndValue as ATAV } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { RelativeDistinguishedName as RDN } from "../modules/InformationFramework/RelativeDistinguishedName.ta.mjs";

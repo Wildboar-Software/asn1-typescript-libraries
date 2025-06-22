@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { INTEGER, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { Operations } from "../PKCS-15/Operations.ta.mjs";
 
 /**

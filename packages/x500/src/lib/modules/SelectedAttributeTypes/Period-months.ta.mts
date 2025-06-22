@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, INTEGER, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     Period_months_bitMonth,
     _decode_Period_months_bitMonth,

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta.mjs";
 /**
  * @summary PrioritisedObject

@@ -1,5 +1,5 @@
 import type { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { hMAC_SHA1 } from "../CryptographicMessageSyntax/hMAC-SHA1.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 

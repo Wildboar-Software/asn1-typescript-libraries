@@ -6,7 +6,7 @@ import {
     OPTIONAL,
     UTF8String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     EpcFormat_fields_Item,
     _decode_EpcFormat_fields_Item,

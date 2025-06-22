@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { BCBiometricInformationTemplate, _decode_BCBiometricInformationTemplate, _encode_BCBiometricInformationTemplate } from "../TAI/BCBiometricInformationTemplate.ta.mjs";
 import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**

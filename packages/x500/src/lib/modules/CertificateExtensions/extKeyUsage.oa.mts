@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_extKeyUsage } from "../CertificateExtensions/id-ce-extKeyUsage.va.mjs";
 import {

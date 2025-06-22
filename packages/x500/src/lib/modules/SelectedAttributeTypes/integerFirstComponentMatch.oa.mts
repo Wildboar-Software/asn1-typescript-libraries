@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_integerFirstComponentMatch } from "../SelectedAttributeTypes/id-mr-integerFirstComponentMatch.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";

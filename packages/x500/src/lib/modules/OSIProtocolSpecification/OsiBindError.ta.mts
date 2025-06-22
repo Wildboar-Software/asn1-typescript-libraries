@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     OsiBindError_normal_mode_parameters,
     _decode_OsiBindError_normal_mode_parameters,

@@ -11,7 +11,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { SpecifiedECDomain, _decode_SpecifiedECDomain, _encode_SpecifiedECDomain } from "../SEC1-v1-9/SpecifiedECDomain.ta.mjs";
 /**
  * @summary ECDomainParameters

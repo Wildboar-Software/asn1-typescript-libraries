@@ -14,7 +14,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
     DERElement,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary Extension

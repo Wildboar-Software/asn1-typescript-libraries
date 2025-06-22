@@ -5,7 +5,7 @@ import {
     OPTIONAL,
     PrintableString,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     UniversalOrBMPString_character_encoding,
     _decode_UniversalOrBMPString_character_encoding,

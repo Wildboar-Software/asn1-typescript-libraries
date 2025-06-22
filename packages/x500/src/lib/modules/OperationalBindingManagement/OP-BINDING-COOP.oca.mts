@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
 /**

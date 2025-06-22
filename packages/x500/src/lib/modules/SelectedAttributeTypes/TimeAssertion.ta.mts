@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, GeneralizedTime, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     TimeAssertion_between,
     _decode_TimeAssertion_between,

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta.mjs";
 /**
  * @summary SupportedFeatures

@@ -5,7 +5,7 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
     _decode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,

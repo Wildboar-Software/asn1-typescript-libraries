@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta.mjs";
 /**
  * @summary ServiceProvider

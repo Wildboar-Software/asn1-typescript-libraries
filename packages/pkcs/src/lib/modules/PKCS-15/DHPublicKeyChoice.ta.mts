@@ -5,7 +5,7 @@ import {
     _encode_DiffieHellmanPublicNumber,
 } from "@wildboar/ansi-x9-42/src/lib/modules/ANSI-X9-42/DiffieHellmanPublicNumber.ta.mjs";
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
 
 /**

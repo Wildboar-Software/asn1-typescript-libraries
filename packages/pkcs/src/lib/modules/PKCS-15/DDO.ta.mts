@@ -5,7 +5,7 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 
 /**

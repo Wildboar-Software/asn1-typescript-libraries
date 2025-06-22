@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     OsiOperation_fully_encoded_data_Item,
     _decode_OsiOperation_fully_encoded_data_Item,

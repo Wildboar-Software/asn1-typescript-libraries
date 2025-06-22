@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 /**
  * @summary DIT_CONTEXT_USE_RULE

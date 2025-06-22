@@ -13,7 +13,7 @@ import {
   ASN1Construction,
   ASN1UniversalType,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
+import * as $ from '@wildboar/asn1/functional';
 import {
   AttributeDescription,
   _decode_AttributeDescription,

@@ -12,7 +12,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../ECPrivateKey/ECPrivateKey-version.ta.mjs";
 import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKIXAlgs-2009/ECParameters.ta.mjs";
 

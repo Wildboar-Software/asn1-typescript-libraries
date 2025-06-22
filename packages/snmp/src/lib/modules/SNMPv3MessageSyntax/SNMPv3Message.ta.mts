@@ -11,7 +11,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { HeaderData, _decode_HeaderData, _encode_HeaderData } from "../SNMPv3MessageSyntax/HeaderData.ta.mjs";
 import { ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../SNMPv3MessageSyntax/ScopedPduData.ta.mjs";
 /**

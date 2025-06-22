@@ -13,7 +13,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
+import * as $ from '@wildboar/asn1/functional';
 import {
   F_OPEN_request_processing_mode,
   F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,

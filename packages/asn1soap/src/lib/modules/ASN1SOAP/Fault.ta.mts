@@ -10,7 +10,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
+import * as $ from '@wildboar/asn1/functional';
 import { Code, _decode_Code, _encode_Code } from '../ASN1SOAP/Code.ta.mjs';
 import { Text, _decode_Text, _encode_Text } from '../ASN1SOAP/Text.ta.mjs';
 import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';

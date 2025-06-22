@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
+import * as $ from '@wildboar/asn1/functional';
 
 /**
  * @summary G4Class1BodyPart

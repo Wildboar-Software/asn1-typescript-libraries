@@ -5,7 +5,7 @@ import {
     NumericString,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary ExtendedNetworkAddress_e163_4_address

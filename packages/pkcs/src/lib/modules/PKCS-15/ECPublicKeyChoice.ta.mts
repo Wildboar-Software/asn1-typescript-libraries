@@ -5,7 +5,7 @@ import {
     _encode_ECPoint,
 } from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECPoint.ta.mjs";
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,

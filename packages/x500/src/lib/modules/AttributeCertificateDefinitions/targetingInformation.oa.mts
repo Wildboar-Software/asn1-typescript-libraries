@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { id_ce_targetingInformation } from "../AttributeCertificateDefinitions/id-ce-targetingInformation.va.mjs";
 import {
     Targets,

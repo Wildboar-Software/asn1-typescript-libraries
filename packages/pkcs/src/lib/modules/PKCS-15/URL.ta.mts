@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     PrintableString,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     URL_urlWithDigest,
     _decode_URL_urlWithDigest,

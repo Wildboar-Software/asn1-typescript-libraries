@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../Attribute-ASN1Module/ManagementExtension.ta.mjs";
 /**
  * @summary AdditionalInformation

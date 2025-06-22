@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { IpAddress, _decode_IpAddress, _encode_IpAddress } from "../SNMPv2-PDU/IpAddress.ta.mjs";
 import { Counter32, _decode_Counter32, _encode_Counter32 } from "../SNMPv2-PDU/Counter32.ta.mjs";
 import { TimeTicks, _decode_TimeTicks, _encode_TimeTicks } from "../SNMPv2-PDU/TimeTicks.ta.mjs";

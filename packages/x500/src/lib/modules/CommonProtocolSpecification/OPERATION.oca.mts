@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
 import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 /**

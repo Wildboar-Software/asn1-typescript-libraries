@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     Presentation_context_identifier_list_Item,
     _decode_Presentation_context_identifier_list_Item,

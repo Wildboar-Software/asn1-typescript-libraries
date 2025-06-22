@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { GeneralizedTime } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_invalidityDate } from "../CertificateExtensions/id-ce-invalidityDate.va.mjs";
 /**

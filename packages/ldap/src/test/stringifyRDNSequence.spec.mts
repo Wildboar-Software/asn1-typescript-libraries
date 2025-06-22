@@ -1,7 +1,7 @@
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
 import stringifyRDNSequence from "../lib/stringifiers/RDNSequence";
 import AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
-import { BER, _encodeUTF8String } from "asn1-ts/dist/functional.mjs";
+import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";
 
 function utf8Element (str: string): BERElement {
     return _encodeUTF8String(str, BER) as BERElement;

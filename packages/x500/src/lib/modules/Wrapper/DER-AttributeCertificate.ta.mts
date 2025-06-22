@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DER_AttributeCertificate
  * @description

@@ -5,7 +5,7 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va.mjs";
 import {
     AlgorithmIdentifier,

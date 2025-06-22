@@ -4,7 +4,7 @@ import { id_sha1 } from "../ANSI-X9-42/id-sha1.va.mjs";
 import {
     _decodeNull,
     _encodeNull,
-} from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1/functional";
 
 
 /**

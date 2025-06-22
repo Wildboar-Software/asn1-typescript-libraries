@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     BIT_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     Mic_Header,
     _decode_Mic_Header,

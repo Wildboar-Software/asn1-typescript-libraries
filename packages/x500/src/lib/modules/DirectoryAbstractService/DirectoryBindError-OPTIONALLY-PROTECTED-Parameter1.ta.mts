@@ -5,7 +5,7 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,

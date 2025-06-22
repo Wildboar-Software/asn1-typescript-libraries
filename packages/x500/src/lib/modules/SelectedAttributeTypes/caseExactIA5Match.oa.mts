@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { IA5String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";

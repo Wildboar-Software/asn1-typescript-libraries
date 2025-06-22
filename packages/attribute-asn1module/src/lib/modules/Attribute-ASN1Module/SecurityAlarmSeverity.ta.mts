@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import { PerceivedSeverity, _enum_for_PerceivedSeverity, _decode_PerceivedSeverity, _encode_PerceivedSeverity } from "../Attribute-ASN1Module/PerceivedSeverity.ta.mjs";
 /**
  * @summary SecurityAlarmSeverity

@@ -5,7 +5,7 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+import * as $ from "@wildboar/asn1/functional";
 import {
     Attribute_valuesWithContext_Item as VWC,
     _decode_Attribute_valuesWithContext_Item as _decode_VWC,
