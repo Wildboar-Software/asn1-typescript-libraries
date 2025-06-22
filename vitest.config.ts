@@ -5,7 +5,10 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
-    include: ['packages/x500/test/jest/**/*.spec.mts'],
+    include: [
+        'packages/ldap/src/test/**/*.spec.mts',
+        'packages/x500/test/jest/**/*.spec.mts'
+    ],
     exclude: ['node_modules', 'dist', '.nx'],
   },
   resolve: {
@@ -70,4 +73,4 @@ export default defineConfig({
       '@wildboar/x700': resolve(__dirname, './packages/x700'),
     },
   },
-}); 
+});

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "test:ldap": "vitest run packages/ldap/src/test",
     "test:x500": "vitest run packages/x500/test/jest",
     "test:x500:watch": "vitest packages/x500/test/jest"
   },
