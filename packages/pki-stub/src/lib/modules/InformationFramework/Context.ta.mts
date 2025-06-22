@@ -5,8 +5,8 @@ import {
     BOOLEAN,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary Context
@@ -140,7 +140,7 @@ export const _extension_additions_list_spec_for_Context: $.ComponentSpec[] = [];
  * @param {_Element} el The element being decoded.
  * @returns {Context} The decoded data structure.
  */
-export function _decode_Context(el: _Element) {
+export function _decode_Context(el: _Element): Context {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let contextType!: OBJECT_IDENTIFIER;
     let contextValues!: _Element[];

@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     GeneralNames,
     _decode_GeneralNames,
@@ -150,7 +150,7 @@ export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] 
  * @param {_Element} el The element being decoded.
  * @returns {IssuerSerial} The decoded data structure.
  */
-export function _decode_IssuerSerial(el: _Element) {
+export function _decode_IssuerSerial(el: _Element): IssuerSerial {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let issuer!: GeneralNames;
     let serial!: CertificateSerialNumber;

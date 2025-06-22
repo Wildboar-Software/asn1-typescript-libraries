@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     Extension,
     _decode_Extension,
@@ -36,7 +36,7 @@ let _cached_decoder_for_Extensions: $.ASN1Decoder<Extensions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Extensions} The decoded data structure.
  */
-export function _decode_Extensions(el: _Element) {
+export function _decode_Extensions(el: _Element): Extensions {
     if (!_cached_decoder_for_Extensions) {
         _cached_decoder_for_Extensions = $._decodeSequenceOf<Extension>(
             () => _decode_Extension

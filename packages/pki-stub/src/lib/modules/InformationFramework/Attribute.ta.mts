@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     Attribute_valuesWithContext_Item as VWC,
     _decode_Attribute_valuesWithContext_Item as _decode_VWC,
@@ -138,7 +138,7 @@ export const _extension_additions_list_spec_for_Attribute: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {Attribute} The decoded data structure.
  */
-export function _decode_Attribute(el: _Element) {
+export function _decode_Attribute(el: _Element): Attribute {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let type_!: OBJECT_IDENTIFIER;
     let values!: _Element[];

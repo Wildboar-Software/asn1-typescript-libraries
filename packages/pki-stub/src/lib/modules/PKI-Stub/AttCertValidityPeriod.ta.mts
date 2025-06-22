@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary AttCertValidityPeriod
@@ -123,7 +123,7 @@ export const _extension_additions_list_spec_for_AttCertValidityPeriod: $.Compone
  * @param {_Element} el The element being decoded.
  * @returns {AttCertValidityPeriod} The decoded data structure.
  */
-export function _decode_AttCertValidityPeriod(el: _Element) {
+export function _decode_AttCertValidityPeriod(el: _Element): AttCertValidityPeriod {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

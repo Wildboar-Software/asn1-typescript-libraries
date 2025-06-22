@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     RDNSequence,
     _decode_RDNSequence,
@@ -28,7 +28,7 @@ export type DistinguishedName = RDNSequence; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {DistinguishedName} The decoded data structure.
  */
-export function _decode_DistinguishedName(el: _Element) {
+export function _decode_DistinguishedName(el: _Element): DistinguishedName {
     return _decode_RDNSequence(el);
 }
 

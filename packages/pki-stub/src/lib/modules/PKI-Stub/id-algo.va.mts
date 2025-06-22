@@ -9,7 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
+} from "jsr:@wildboar/asn1@11";
 import { algorithms } from "../PKI-Stub/algorithms.va.mjs";
 
 /**

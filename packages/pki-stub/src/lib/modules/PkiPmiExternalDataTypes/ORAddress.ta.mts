@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
@@ -137,7 +137,7 @@ export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {ORAddress} The decoded data structure.
  */
-export function _decode_ORAddress(el: _Element) {
+export function _decode_ORAddress(el: _Element): ORAddress {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let built_in_standard_attributes!: BuiltInStandardAttributes;
     let built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>;

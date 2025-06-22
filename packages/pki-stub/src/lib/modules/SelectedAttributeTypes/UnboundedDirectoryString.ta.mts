@@ -6,8 +6,8 @@ import {
     TeletexString,
     UniversalString,
     UTF8String,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary UnboundedDirectoryString
@@ -46,7 +46,7 @@ const _cached_decoder_for_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirec
  * @param {_Element} el The element being decoded.
  * @returns {UnboundedDirectoryString} The decoded data structure.
  */
-export function _decode_UnboundedDirectoryString(el: _Element) {
+export function _decode_UnboundedDirectoryString(el: _Element): UnboundedDirectoryString {
     return _cached_decoder_for_UnboundedDirectoryString(el);
 }
 

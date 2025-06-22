@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     PKCertIdentifier,
     _decode_PKCertIdentifier,
@@ -45,7 +45,7 @@ let _cached_decoder_for_TBSCertAVL_entries_Item_idType: $.ASN1Decoder<TBSCertAVL
  * @param {_Element} el The element being decoded.
  * @returns {TBSCertAVL_entries_Item_idType} The decoded data structure.
  */
-export function _decode_TBSCertAVL_entries_Item_idType(el: _Element) {
+export function _decode_TBSCertAVL_entries_Item_idType(el: _Element): TBSCertAVL_entries_Item_idType {
     if (!_cached_decoder_for_TBSCertAVL_entries_Item_idType) {
         _cached_decoder_for_TBSCertAVL_entries_Item_idType =
             $._decode_extensible_choice<TBSCertAVL_entries_Item_idType>({

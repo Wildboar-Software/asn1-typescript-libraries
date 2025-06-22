@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import { Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
 
 /**
@@ -122,7 +122,7 @@ export const _extension_additions_list_spec_for_Validity: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {Validity} The decoded data structure.
  */
-export function _decode_Validity(el: _Element) {
+export function _decode_Validity(el: _Element): Validity {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

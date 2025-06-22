@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     ScopeRestriction,
     _decode_ScopeRestriction,
@@ -28,7 +28,7 @@ let _cached_decoder_for_ScopeRestrictions: $.ASN1Decoder<ScopeRestrictions> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ScopeRestrictions} The decoded data structure.
  */
-export function _decode_ScopeRestrictions(el: _Element) {
+export function _decode_ScopeRestrictions(el: _Element): ScopeRestrictions {
     if (!_cached_decoder_for_ScopeRestrictions) {
         _cached_decoder_for_ScopeRestrictions =
             $._decodeSequenceOf<ScopeRestriction>(

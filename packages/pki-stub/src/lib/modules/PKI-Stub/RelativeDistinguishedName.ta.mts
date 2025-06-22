@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
@@ -28,7 +28,7 @@ let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDisting
  * @param {_Element} el The element being decoded.
  * @returns {RelativeDistinguishedName} The decoded data structure.
  */
-export function _decode_RelativeDistinguishedName(el: _Element) {
+export function _decode_RelativeDistinguishedName(el: _Element): RelativeDistinguishedName {
     if (!_cached_decoder_for_RelativeDistinguishedName) {
         _cached_decoder_for_RelativeDistinguishedName =
             $._decodeSetOf<AttributeTypeAndValue>(

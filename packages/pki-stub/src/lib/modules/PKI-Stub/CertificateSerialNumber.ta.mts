@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OCTET_STRING } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element, OCTET_STRING } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary CertificateSerialNumber
@@ -20,7 +20,7 @@ export type CertificateSerialNumber = OCTET_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {CertificateSerialNumber} The decoded data structure.
  */
-export function _decode_CertificateSerialNumber(el: _Element) {
+export function _decode_CertificateSerialNumber(el: _Element): CertificateSerialNumber {
     return $._decodeBigInt(el);
 }
 

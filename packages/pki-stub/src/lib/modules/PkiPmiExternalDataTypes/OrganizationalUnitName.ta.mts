@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element, PrintableString } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary OrganizationalUnitName
@@ -21,7 +21,7 @@ export type OrganizationalUnitName = PrintableString; // PrintableString
  * @param {_Element} el The element being decoded.
  * @returns {OrganizationalUnitName} The decoded data structure.
  */
-export function _decode_OrganizationalUnitName(el: _Element) {
+export function _decode_OrganizationalUnitName(el: _Element): OrganizationalUnitName {
     return $._decodePrintableString(el);
 }
 

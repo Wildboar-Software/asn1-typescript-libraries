@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
@@ -252,7 +252,7 @@ export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.Com
  * @param {_Element} el The element being decoded.
  * @returns {BuiltInStandardAttributes} The decoded data structure.
  */
-export function _decode_BuiltInStandardAttributes(el: _Element) {
+export function _decode_BuiltInStandardAttributes(el: _Element): BuiltInStandardAttributes {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let country_name: OPTIONAL<CountryName>;
     let administration_domain_name: OPTIONAL<AdministrationDomainName>;

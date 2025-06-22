@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     PrintableString,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary PersonalName
@@ -140,7 +140,7 @@ let _cached_decoder_for_PersonalName: $.ASN1Decoder<PersonalName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PersonalName} The decoded data structure.
  */
-export function _decode_PersonalName(el: _Element) {
+export function _decode_PersonalName(el: _Element): PersonalName {
     if (!_cached_decoder_for_PersonalName) {
         _cached_decoder_for_PersonalName = function (
             el: _Element

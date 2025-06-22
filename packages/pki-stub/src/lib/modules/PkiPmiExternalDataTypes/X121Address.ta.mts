@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NumericString } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element, NumericString } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary X121Address
@@ -20,7 +20,7 @@ export type X121Address = NumericString; // NumericString
  * @param {_Element} el The element being decoded.
  * @returns {X121Address} The decoded data structure.
  */
-export function _decode_X121Address(el: _Element) {
+export function _decode_X121Address(el: _Element): X121Address {
     return $._decodeNumericString(el);
 }
 

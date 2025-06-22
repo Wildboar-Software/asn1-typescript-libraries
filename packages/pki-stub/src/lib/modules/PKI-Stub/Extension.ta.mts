@@ -13,8 +13,8 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
     DERElement,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary Extension
@@ -157,7 +157,7 @@ export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {Extension} The decoded data structure.
  */
-export function _decode_Extension(el: _Element) {
+export function _decode_Extension(el: _Element): Extension {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let extnId!: OBJECT_IDENTIFIER;
     let critical: OPTIONAL<BOOLEAN> =

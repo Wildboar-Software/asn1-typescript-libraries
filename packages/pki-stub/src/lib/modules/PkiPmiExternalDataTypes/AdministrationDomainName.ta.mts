@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     NumericString,
     PrintableString,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary AdministrationDomainName
@@ -32,7 +32,7 @@ let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDo
  * @param {_Element} el The element being decoded.
  * @returns {AdministrationDomainName} The decoded data structure.
  */
-export function _decode_AdministrationDomainName(el: _Element) {
+export function _decode_AdministrationDomainName(el: _Element): AdministrationDomainName {
     if (!_cached_decoder_for_AdministrationDomainName) {
         _cached_decoder_for_AdministrationDomainName =
             $._decode_explicit<AdministrationDomainName>(() =>

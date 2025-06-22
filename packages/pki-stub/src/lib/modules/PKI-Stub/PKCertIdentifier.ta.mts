@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     IssuerSerialNumber,
     _decode_IssuerSerialNumber,
@@ -60,7 +60,7 @@ let _cached_decoder_for_PKCertIdentifier: $.ASN1Decoder<PKCertIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {PKCertIdentifier} The decoded data structure.
  */
-export function _decode_PKCertIdentifier(el: _Element) {
+export function _decode_PKCertIdentifier(el: _Element): PKCertIdentifier {
     if (!_cached_decoder_for_PKCertIdentifier) {
         _cached_decoder_for_PKCertIdentifier =
             $._decode_extensible_choice<PKCertIdentifier>({

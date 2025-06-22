@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
@@ -121,7 +121,7 @@ export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] 
  * @param {_Element} el The element being decoded.
  * @returns {EDIPartyName} The decoded data structure.
  */
-export function _decode_EDIPartyName(el: _Element) {
+export function _decode_EDIPartyName(el: _Element): EDIPartyName {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let nameAssigner: OPTIONAL<UnboundedDirectoryString>;
     let partyName!: UnboundedDirectoryString;

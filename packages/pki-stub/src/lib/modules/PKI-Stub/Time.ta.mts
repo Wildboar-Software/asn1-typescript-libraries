@@ -10,8 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary Time
@@ -37,7 +37,7 @@ let _cached_decoder_for_Time: $.ASN1Decoder<Time> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Time} The decoded data structure.
  */
-export function _decode_Time(el: _Element) {
+export function _decode_Time(el: _Element): Time {
     if (!_cached_decoder_for_Time) {
         _cached_decoder_for_Time = $._decode_inextensible_choice<Time>({
             "UNIVERSAL 23": ["utcTime", $._decodeUTCTime],

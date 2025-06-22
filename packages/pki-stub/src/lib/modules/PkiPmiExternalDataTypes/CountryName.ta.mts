@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     NumericString,
     PrintableString,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary CountryName
@@ -31,7 +31,7 @@ let _cached_decoder_for_CountryName: $.ASN1Decoder<CountryName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CountryName} The decoded data structure.
  */
-export function _decode_CountryName(el: _Element) {
+export function _decode_CountryName(el: _Element): CountryName {
     if (!_cached_decoder_for_CountryName) {
         _cached_decoder_for_CountryName = $._decode_explicit<CountryName>(() =>
             $._decode_inextensible_choice<CountryName>({

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+import { ASN1Element as _Element } from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     OrganizationalUnitName,
     _decode_OrganizationalUnitName,
@@ -29,7 +29,7 @@ let _cached_decoder_for_OrganizationalUnitNames: $.ASN1Decoder<OrganizationalUni
  * @param {_Element} el The element being decoded.
  * @returns {OrganizationalUnitNames} The decoded data structure.
  */
-export function _decode_OrganizationalUnitNames(el: _Element) {
+export function _decode_OrganizationalUnitNames(el: _Element): OrganizationalUnitNames {
     if (!_cached_decoder_for_OrganizationalUnitNames) {
         _cached_decoder_for_OrganizationalUnitNames =
             $._decodeSequenceOf<OrganizationalUnitName>(

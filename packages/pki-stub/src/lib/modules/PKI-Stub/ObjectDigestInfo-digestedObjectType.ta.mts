@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary ObjectDigestInfo_digestedObjectType
@@ -116,7 +116,7 @@ let _cached_decoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<Objec
  * @param {_Element} el The element being decoded.
  * @returns {ObjectDigestInfo_digestedObjectType} The decoded data structure.
  */
-export function _decode_ObjectDigestInfo_digestedObjectType(el: _Element) {
+export function _decode_ObjectDigestInfo_digestedObjectType(el: _Element): ObjectDigestInfo_digestedObjectType {
     if (!_cached_decoder_for_ObjectDigestInfo_digestedObjectType) {
         _cached_decoder_for_ObjectDigestInfo_digestedObjectType =
             $._decodeEnumerated;

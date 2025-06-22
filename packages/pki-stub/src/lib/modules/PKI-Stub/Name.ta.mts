@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     RDNSequence,
     _decode_RDNSequence,
@@ -36,7 +36,7 @@ let _cached_decoder_for_Name: $.ASN1Decoder<Name> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Name} The decoded data structure.
  */
-export function _decode_Name(el: _Element) {
+export function _decode_Name(el: _Element): Name {
     if (!_cached_decoder_for_Name) {
         _cached_decoder_for_Name = $._decode_inextensible_choice<Name>({
             "UNIVERSAL 16": ["rdnSequence", _decode_RDNSequence],

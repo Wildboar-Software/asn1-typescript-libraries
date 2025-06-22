@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     GeneralNames,
     _decode_GeneralNames,
@@ -156,7 +156,7 @@ let _cached_decoder_for_AttCertIssuer: $.ASN1Decoder<AttCertIssuer> | null =
  * @param {_Element} el The element being decoded.
  * @returns {AttCertIssuer} The decoded data structure.
  */
-export function _decode_AttCertIssuer(el: _Element) {
+export function _decode_AttCertIssuer(el: _Element): AttCertIssuer {
     if (!_cached_decoder_for_AttCertIssuer) {
         _cached_decoder_for_AttCertIssuer = $._decode_implicit<AttCertIssuer>(
             () =>

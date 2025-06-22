@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
@@ -41,7 +41,7 @@ let _cached_decoder_for_CertAVL: $.ASN1Decoder<CertAVL> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertAVL} The decoded data structure.
  */
-export function _decode_CertAVL(el: _Element) {
+export function _decode_CertAVL(el: _Element): CertAVL {
     if (!_cached_decoder_for_CertAVL) {
         _cached_decoder_for_CertAVL =
             _get_decoder_for_SIGNED<TBSCertAVL>(_decode_TBSCertAVL);

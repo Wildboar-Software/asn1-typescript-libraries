@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary ExtensionAttribute
@@ -112,7 +112,7 @@ export const _extension_additions_list_spec_for_ExtensionAttribute: $.ComponentS
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionAttribute} The decoded data structure.
  */
-export function _decode_ExtensionAttribute(el: _Element) {
+export function _decode_ExtensionAttribute(el: _Element): ExtensionAttribute {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

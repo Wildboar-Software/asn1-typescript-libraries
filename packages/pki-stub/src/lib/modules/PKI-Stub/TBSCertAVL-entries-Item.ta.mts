@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,
@@ -140,7 +140,7 @@ export const _extension_additions_list_spec_for_TBSCertAVL_entries_Item: $.Compo
  * @param {_Element} el The element being decoded.
  * @returns {TBSCertAVL_entries_Item} The decoded data structure.
  */
-export function _decode_TBSCertAVL_entries_Item(el: _Element) {
+export function _decode_TBSCertAVL_entries_Item(el: _Element): TBSCertAVL_entries_Item {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let idType!: TBSCertAVL_entries_Item_idType;
     let scope: OPTIONAL<ScopeRestrictions>;

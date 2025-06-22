@@ -10,8 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary AlgorithmIdentifier
@@ -123,7 +123,7 @@ export const _extension_additions_list_spec_for_AlgorithmIdentifier: $.Component
  * @param {_Element} el The element being decoded.
  * @returns {AlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_AlgorithmIdentifier(el: _Element) {
+export function _decode_AlgorithmIdentifier(el: _Element): AlgorithmIdentifier {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let algorithm!: OBJECT_IDENTIFIER;
     let parameters: OPTIONAL<_Element>;

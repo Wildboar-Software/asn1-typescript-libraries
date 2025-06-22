@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary Version
@@ -72,7 +72,7 @@ export const v3: Version = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
  * @param {_Element} el The element being decoded.
  * @returns {Version} The decoded data structure.
  */
-export function _decode_Version(el: _Element) {
+export function _decode_Version(el: _Element): Version {
     return $._decodeInteger(el);
 }
 

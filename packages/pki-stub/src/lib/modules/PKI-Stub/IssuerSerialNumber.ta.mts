@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
 import {
     CertificateSerialNumber,
@@ -123,7 +123,7 @@ export const _extension_additions_list_spec_for_IssuerSerialNumber: $.ComponentS
  * @param {_Element} el The element being decoded.
  * @returns {IssuerSerialNumber} The decoded data structure.
  */
-export function _decode_IssuerSerialNumber(el: _Element) {
+export function _decode_IssuerSerialNumber(el: _Element): IssuerSerialNumber {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

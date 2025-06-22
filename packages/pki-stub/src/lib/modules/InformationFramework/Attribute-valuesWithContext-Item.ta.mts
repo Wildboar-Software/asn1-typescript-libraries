@@ -3,8 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     Context,
     _decode_Context,
@@ -118,7 +118,7 @@ export const _extension_additions_list_spec_for_Attribute_valuesWithContext_Item
  * @param {_Element} el The element being decoded.
  * @returns {Attribute_valuesWithContext_Item} The decoded data structure.
  */
-export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
+export function _decode_Attribute_valuesWithContext_Item(el: _Element): Attribute_valuesWithContext_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

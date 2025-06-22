@@ -6,8 +6,8 @@ import {
     INSTANCE_OF,
     OBJECT_IDENTIFIER,
     OCTET_STRING,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     EDIPartyName,
     _decode_EDIPartyName,
@@ -60,7 +60,7 @@ let _cached_decoder_for_GeneralName: $.ASN1Decoder<GeneralName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GeneralName} The decoded data structure.
  */
-export function _decode_GeneralName(el: _Element) {
+export function _decode_GeneralName(el: _Element): GeneralName {
     if (!_cached_decoder_for_GeneralName) {
         _cached_decoder_for_GeneralName =
             $._decode_extensible_choice<GeneralName>({

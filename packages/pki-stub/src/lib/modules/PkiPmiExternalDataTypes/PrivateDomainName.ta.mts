@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element,
     NumericString,
     PrintableString,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary PrivateDomainName
@@ -31,7 +31,7 @@ let _cached_decoder_for_PrivateDomainName: $.ASN1Decoder<PrivateDomainName> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PrivateDomainName} The decoded data structure.
  */
-export function _decode_PrivateDomainName(el: _Element) {
+export function _decode_PrivateDomainName(el: _Element): PrivateDomainName {
     if (!_cached_decoder_for_PrivateDomainName) {
         _cached_decoder_for_PrivateDomainName =
             $._decode_inextensible_choice<PrivateDomainName>({

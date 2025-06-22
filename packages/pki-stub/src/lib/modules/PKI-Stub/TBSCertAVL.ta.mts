@@ -10,8 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     Version,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -230,7 +230,7 @@ export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {TBSCertAVL} The decoded data structure.
  */
-export function _decode_TBSCertAVL(el: _Element) {
+export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version: OPTIONAL<Version> =
         TBSCertAVL._default_value_for_version;

@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary AttributeTypeAndValue
@@ -113,7 +113,7 @@ export const _extension_additions_list_spec_for_AttributeTypeAndValue: $.Compone
  * @param {_Element} el The element being decoded.
  * @returns {AttributeTypeAndValue} The decoded data structure.
  */
-export function _decode_AttributeTypeAndValue(el: _Element) {
+export function _decode_AttributeTypeAndValue(el: _Element): AttributeTypeAndValue {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

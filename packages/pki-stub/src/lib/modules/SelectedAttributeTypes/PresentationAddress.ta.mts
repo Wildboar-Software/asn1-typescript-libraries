@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary PresentationAddress
@@ -144,7 +144,7 @@ export const _extension_additions_list_spec_for_PresentationAddress: $.Component
  * @param {_Element} el The element being decoded.
  * @returns {PresentationAddress} The decoded data structure.
  */
-export function _decode_PresentationAddress(el: _Element) {
+export function _decode_PresentationAddress(el: _Element): PresentationAddress {
     /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let pSelector: OPTIONAL<OCTET_STRING>;
     let sSelector: OPTIONAL<OCTET_STRING>;

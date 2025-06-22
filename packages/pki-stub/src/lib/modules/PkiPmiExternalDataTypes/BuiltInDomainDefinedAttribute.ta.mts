@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     PrintableString,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary BuiltInDomainDefinedAttribute
@@ -110,7 +110,7 @@ export const _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute: $
  * @param {_Element} el The element being decoded.
  * @returns {BuiltInDomainDefinedAttribute} The decoded data structure.
  */
-export function _decode_BuiltInDomainDefinedAttribute(el: _Element) {
+export function _decode_BuiltInDomainDefinedAttribute(el: _Element): BuiltInDomainDefinedAttribute {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(

@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 export enum _enum_for_CRLReason {
     unspecified = 0,
@@ -223,7 +223,7 @@ export const weakAlgorithmOrKey: CRLReason =
  * @param {_Element} el The element being decoded.
  * @returns {CRLReason} The decoded data structure.
  */
-export function _decode_CRLReason(el: _Element) {
+export function _decode_CRLReason(el: _Element): CRLReason {
     return $._decodeEnumerated(el);
 }
 

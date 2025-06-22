@@ -8,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 import {
     Certificate,
     _decode_Certificate,
@@ -36,7 +36,7 @@ let _cached_decoder_for_PkiPath: $.ASN1Decoder<PkiPath> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PkiPath} The decoded data structure.
  */
-export function _decode_PkiPath(el: _Element) {
+export function _decode_PkiPath(el: _Element): PkiPath {
     if (!_cached_decoder_for_PkiPath) {
         _cached_decoder_for_PkiPath = $._decodeSequenceOf<Certificate>(
             () => _decode_Certificate

@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1";
-import * as $ from "jsr:@wildboar/asn1/functional";
+} from "jsr:@wildboar/asn1@11";
+import * as $ from "jsr:@wildboar/asn1/functional@11";
 
 /**
  * @summary PublicKey
@@ -30,7 +30,7 @@ export type PublicKey = BIT_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {PublicKey} The decoded data structure.
  */
-export function _decode_PublicKey(el: _Element) {
+export function _decode_PublicKey(el: _Element): PublicKey {
     return $._decodeBitString(el);
 }
 
