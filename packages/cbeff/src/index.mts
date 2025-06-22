@@ -1,5 +1,5 @@
 export {
-    Any_sub_type,
+    type Any_sub_type,
     Any_sub_type_left,
     left,
     Any_sub_type_right,
@@ -24,7 +24,7 @@ export * from "./lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 export {
-    BiometricType,
+    type BiometricType,
     BiometricType_no_value_available,
     no_value_available,
     BiometricType_multiple_biometric_types,
@@ -67,7 +67,7 @@ export * from "./lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/BIRValidityPeriod.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.mjs";
 export {
-    CBEFFVersion_cbeff_minor,
+    type CBEFFVersion_cbeff_minor,
     CBEFFVersion_cbeff_minor_version0,
     _decode_CBEFFVersion_cbeff_minor,
     _encode_CBEFFVersion_cbeff_minor,
@@ -81,7 +81,7 @@ export * from "./lib/modules/CBEFF-DATA-ELEMENTS/FourBit.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/FourByte.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta.mjs";
 export {
-    HeaderVersion_header_minor,
+   type  HeaderVersion_header_minor,
     HeaderVersion_header_minor_version0,
     _decode_HeaderVersion_header_minor,
     _encode_HeaderVersion_header_minor,
@@ -117,7 +117,7 @@ export * from "./lib/modules/CBEFF-DATA-ELEMENTS/ThreeByte.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/TwoBit.ta.mjs";
 export * from "./lib/modules/CBEFF-DATA-ELEMENTS/TwoByte.ta.mjs";
 export {
-    Vein_only,
+    type Vein_only,
     Vein_only_left,
     Vein_only_right,
     Vein_only_palm,

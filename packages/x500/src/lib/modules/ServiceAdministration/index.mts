@@ -1,5 +1,7 @@
-export {
+export type {
     AllowedSubset,
+} from "./AllowedSubset.ta.mjs";
+export {
     AllowedSubset_baseObject,
     AllowedSubset_oneLevel,
     AllowedSubset_wholeSubtree,
@@ -11,8 +13,8 @@ export * from "./ContextCombination.ta.mjs";
 export * from "./ContextProfile.ta.mjs";
 export * from "./ControlOptions.ta.mjs";
 export * from "./EntryLimit.ta.mjs";
+export type { ImposedSubset } from "./ImposedSubset.ta.mjs";
 export {
-    ImposedSubset,
     ImposedSubset_baseObject,
     ImposedSubset_oneLevel,
     ImposedSubset_wholeSubtree,

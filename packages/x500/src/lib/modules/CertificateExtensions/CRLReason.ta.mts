@@ -1,5 +1,7 @@
-export {
+export type {
     CRLReason,
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
+export {
     _decode_CRLReason,
     _encode_CRLReason,
     unspecified,

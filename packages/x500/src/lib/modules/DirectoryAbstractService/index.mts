@@ -12,8 +12,10 @@ export {
 export * from "./AbandonFailedData.ta.mjs";
 export * from "./abandonFailed.oa.mjs";
 export * from "./abandon.oa.mjs";
-export {
+export type {
     AbandonProblem,
+} from "./AbandonProblem.ta.mjs";
+export {
     AbandonProblem_cannotAbandon,
     AbandonProblem_noSuchOperation,
     AbandonProblem_tooLate,
@@ -35,8 +37,10 @@ export * from "./AdministerPasswordResult.ta.mjs";
 export * from "./AttributeErrorData-problems-Item.ta.mjs";
 export * from "./AttributeErrorData.ta.mjs";
 export * from "./attributeError.oa.mjs";
-export {
+export type {
     AttributeProblem,
+} from "./AttributeProblem.ta.mjs";
+export {
     AttributeProblem_noSuchAttributeOrValue,
     AttributeProblem_invalidAttributeSyntax,
     AttributeProblem_undefinedAttributeType,
@@ -79,8 +83,10 @@ export * from "./EntryInformationSelection-infoTypes.ta.mjs";
 export * from "./EntryInformationSelection.ta.mjs";
 export * from "./EntryInformation.ta.mjs";
 export * from "./EntryModification.ta.mjs";
-export {
+export type {
     ErrorProtectionRequest,
+} from "./ErrorProtectionRequest.ta.mjs";
+export {
     ErrorProtectionRequest_none,
     ErrorProtectionRequest_signed,
     _decode_ErrorProtectionRequest,
@@ -89,8 +95,10 @@ export {
 export * from "./FamilyEntries.ta.mjs";
 export * from "./FamilyEntry-information-Item.ta.mjs";
 export * from "./FamilyEntry.ta.mjs";
-export {
+export type {
     FamilyGrouping,
+} from "./FamilyGrouping.ta.mjs";
+export {
     FamilyGrouping_compoundEntry,
     FamilyGrouping_entryOnly,
     FamilyGrouping_multiStrand,
@@ -100,8 +108,10 @@ export {
     _enum_for_FamilyGrouping,
 } from "./FamilyGrouping.ta.mjs";
 export * from "./family-information.oa.mjs";
-export {
+export type {
     FamilyReturn_memberSelect,
+} from "./FamilyReturn-memberSelect.ta.mjs";
+export {
     FamilyReturn_memberSelect_compoundEntry,
     FamilyReturn_memberSelect_contributingEntriesOnly,
     FamilyReturn_memberSelect_participatingEntriesOnly,
@@ -117,8 +127,10 @@ export * from "./Filter.ta.mjs";
 export * from "./HierarchySelections.ta.mjs";
 export * from "./id-at-family-information.va.mjs";
 export * from "./index.mjs";
-export {
+export type {
     JoinArgument_joinSubset,
+} from "./JoinArgument-joinSubset.ta.mjs";
+export {
     JoinArgument_joinSubset_baseObject,
     JoinArgument_joinSubset_oneLevel,
     JoinArgument_joinSubset_wholeSubtree,
@@ -164,8 +176,10 @@ export * from "./ModifyRights-Item.ta.mjs";
 export * from "./ModifyRights.ta.mjs";
 export * from "./NameErrorData.ta.mjs";
 export * from "./nameError.oa.mjs";
-export {
+export type {
     NameProblem,
+} from "./NameProblem.ta.mjs";
+export {
     NameProblem_aliasDereferencingProblem,
     NameProblem_aliasProblem,
     NameProblem_invalidAttributeSyntax,
@@ -177,8 +191,10 @@ export * from "./PagedResultsRequest-newRequest.ta.mjs";
 export * from "./PagedResultsRequest.ta.mjs";
 export * from "./PartialOutcomeQualifier-entryCount.ta.mjs";
 export * from "./PartialOutcomeQualifier.ta.mjs";
-export {
+export type {
     ProtectionRequest,
+} from "./ProtectionRequest.ta.mjs";
+export {
     ProtectionRequest_none,
     ProtectionRequest_signed,
     _decode_ProtectionRequest,
@@ -201,8 +217,10 @@ export * from "./RemoveEntryResultData.ta.mjs";
 export * from "./RemoveEntryResult.ta.mjs";
 export * from "./SaslCredentials.ta.mjs";
 export * from "./SearchArgumentData-joinType.ta.mjs";
-export {
+export type {
     SearchArgumentData_subset,
+} from "./SearchArgumentData-subset.ta.mjs";
+export {
     SearchArgumentData_subset_baseObject,
     SearchArgumentData_subset_oneLevel,
     SearchArgumentData_subset_wholeSubtree,
@@ -219,8 +237,10 @@ export * from "./SearchResult.ta.mjs";
 export * from "./SecurityErrorData.ta.mjs";
 export * from "./securityError.oa.mjs";
 export * from "./SecurityParameters.ta.mjs";
-export {
+export type {
     SecurityProblem,
+} from "./SecurityProblem.ta.mjs";
+export {
     SecurityProblem_inappropriateAuthentication,
     SecurityProblem_invalidCredentials,
     SecurityProblem_insufficientAccessRights,
@@ -242,8 +262,10 @@ export * from "./ServiceControls-scopeOfReferral.ta.mjs";
 export * from "./ServiceControls.ta.mjs";
 export * from "./ServiceErrorData.ta.mjs";
 export * from "./serviceError.oa.mjs";
-export {
+export type {
     ServiceProblem,
+} from "./ServiceProblem.ta.mjs";
+export {
     ServiceProblem_busy,
     ServiceProblem_unavailable,
     ServiceProblem_unwillingToPerform,
@@ -282,8 +304,10 @@ export * from "./ub-saslMechanism.va.mjs";
 export * from "./UpdateErrorData-attributeInfo-Item.ta.mjs";
 export * from "./UpdateErrorData.ta.mjs";
 export * from "./updateError.oa.mjs";
-export {
+export type {
     UpdateProblem,
+} from "./UpdateProblem.ta.mjs";
+export {
     UpdateProblem_namingViolation,
     UpdateProblem_objectClassViolation,
     UpdateProblem_notAllowedOnNonLeaf,

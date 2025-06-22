@@ -3,7 +3,7 @@ export * from './lib/modules/ACSE-1/AARQ-apdu.ta.mjs';
 export * from './lib/modules/ACSE-1/A-DT-apdu.ta.mjs';
 export * from './lib/modules/ACSE-1/ABRT-apdu.ta.mjs';
 export {
-    ABRT_diagnostic,
+    type ABRT_diagnostic,
     _enum_for_ABRT_diagnostic,
     _decode_ABRT_diagnostic,
     _encode_ABRT_diagnostic,
@@ -35,7 +35,7 @@ export * from './lib/modules/ACSE-1/Transfer-syntax-name.ta.mjs';
 export * from './lib/modules/ACSE-1/User-information.ta.mjs';
 export * from './lib/modules/ACSE-1/acse-as-id.va.mjs';
 export {
-    AARQ_apdu_protocol_version,
+    type AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
@@ -65,7 +65,7 @@ export * from './lib/modules/ACSE-1/PDV-list.ta.mjs';
 export * from './lib/modules/ACSE-1/RLRE-apdu.ta.mjs';
 export * from './lib/modules/ACSE-1/RLRQ-apdu.ta.mjs';
 export {
-    Release_request_reason,
+    type Release_request_reason,
     Release_request_reason_normal,
     Release_request_reason_urgent,
     Release_request_reason_user_defined,
@@ -77,7 +77,7 @@ export * from './lib/modules/ACSE-1/Simply-encoded-data.ta.mjs';
 export * from './lib/modules/ACSE-1/User-Data.ta.mjs';
 export * from './lib/modules/ACSE-1/aCSE-id.va.mjs';
 export {
-    AARE_apdu_protocol_version,
+    type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
@@ -88,7 +88,7 @@ export * from './lib/modules/ACSE-1/ASO-qualifier-form1.ta.mjs';
 export * from './lib/modules/ACSE-1/ASO-qualifier-form4.ta.mjs';
 export * from './lib/modules/ACSE-1/ASOI-tag-Item.ta.mjs';
 export {
-    Associate_source_diagnostic_acse_service_provider,
+    type Associate_source_diagnostic_acse_service_provider,
     Associate_source_diagnostic_acse_service_provider_null_,
     Associate_source_diagnostic_acse_service_provider_no_reason_given,
     Associate_source_diagnostic_acse_service_provider_no_common_acse_version,

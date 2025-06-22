@@ -8,8 +8,10 @@ export * from "./attributeValueIntegrityInfoContext.oa.mjs";
 export * from "./AttributeValueIntegrityInfo.ta.mjs";
 export * from "./attributeValueSecurityLabelContext.oa.mjs";
 export * from "./AVIHash.ta.mjs";
-export {
+export type {
     ClassList,
+} from "./ClassList.ta.mjs";
+export {
     ClassList_confidential,
     ClassList_restricted,
     ClassList_secret,
@@ -38,8 +40,10 @@ export * from "./SecurityCategoriesTable.osa.mjs";
 export * from "./SecurityCategories.ta.mjs";
 export * from "./SECURITY-CATEGORY.oca.mjs";
 export * from "./SecurityCategory.ta.mjs";
-export {
+export type {
     SecurityClassification,
+} from "./SecurityClassification.ta.mjs";
+export {
     SecurityClassification_confidential,
     SecurityClassification_restricted,
     SecurityClassification_secret,

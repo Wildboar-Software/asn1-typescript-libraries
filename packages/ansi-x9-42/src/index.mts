@@ -58,7 +58,7 @@ export * from "./lib/modules/ANSI-X9-42/OtherInfo.ta.mjs";
 export * from "./lib/modules/ANSI-X9-42/SchemeIdentifier.ta.mjs";
 export {
     _enum_for_SchemeNumber,
-    SchemeNumber,
+    type SchemeNumber,
     _decode_SchemeNumber,
     _encode_SchemeNumber,
     SchemeNumber_dhStatic_sha1,

@@ -78,8 +78,10 @@ export * from "./dnsString.oa.mjs";
 export * from "./DomainName.ta.mjs";
 export * from "./dSAProblem.oa.mjs";
 export * from "./enhancedGuide.oa.mjs";
-export {
+export type {
     EnhancedGuide_subset,
+} from "./EnhancedGuide-subset.ta.mjs";
+export {
     EnhancedGuide_subset_baseObject,
     EnhancedGuide_subset_oneLevel,
     EnhancedGuide_subset_wholeSubtree,
@@ -395,8 +397,10 @@ export * from "./multipleMatchingLocalities.oa.mjs";
 export * from "./MultipleMatchingLocalities.ta.mjs";
 export * from "./nameAndOptionalUID.oa.mjs";
 export * from "./NameAndOptionalUID.ta.mjs";
-export {
+export type {
     NamedDay_bitNamedDays,
+} from "./NamedDay-bitNamedDays.ta.mjs";
+export {
     NamedDay_bitNamedDays_sunday,
     NamedDay_bitNamedDays_monday,
     NamedDay_bitNamedDays_tuesday,

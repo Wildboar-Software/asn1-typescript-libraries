@@ -1,5 +1,5 @@
 export {
-    Abort_reason,
+    type Abort_reason,
     Abort_reason_reason_not_specified,
     Abort_reason_unrecognized_ppdu,
     Abort_reason_unexpected_ppdu,
@@ -47,7 +47,7 @@ export * from "./lib/modules/ISO8823-PRESENTATION/Presentation-context-definitio
 export * from "./lib/modules/ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs";
 export * from "./lib/modules/ISO8823-PRESENTATION/Presentation-context-deletion-list.ta.mjs";
 export {
-    Presentation_context_deletion_result_list_Item,
+    type Presentation_context_deletion_result_list_Item,
     Presentation_context_deletion_result_list_Item_acceptance,
     Presentation_context_deletion_result_list_Item_user_rejection,
     _decode_Presentation_context_deletion_result_list_Item,
@@ -62,7 +62,7 @@ export * from "./lib/modules/ISO8823-PRESENTATION/Presentation-selector.ta.mjs";
 export * from "./lib/modules/ISO8823-PRESENTATION/Protocol-options.ta.mjs";
 export * from "./lib/modules/ISO8823-PRESENTATION/Protocol-version.ta.mjs";
 export {
-    Provider_reason,
+    type Provider_reason,
     Provider_reason_reason_not_specified,
     Provider_reason_temporary_congestion,
     Provider_reason_local_limit_exceeded,
@@ -76,7 +76,7 @@ export {
 } from "./lib/modules/ISO8823-PRESENTATION/Provider-reason.ta.mjs";
 export * from "./lib/modules/ISO8823-PRESENTATION/Responding-presentation-selector.ta.mjs";
 export {
-    Result_list_Item_provider_reason,
+    type Result_list_Item_provider_reason,
     Result_list_Item_provider_reason_reason_not_specified,
     Result_list_Item_provider_reason_abstract_syntax_not_supported,
     Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported,
@@ -87,7 +87,7 @@ export {
 export * from "./lib/modules/ISO8823-PRESENTATION/Result-list-Item.ta.mjs";
 export * from "./lib/modules/ISO8823-PRESENTATION/Result-list.ta.mjs";
 export {
-    Result,
+    type Result,
     Result_acceptance,
     acceptance,
     Result_user_rejection,

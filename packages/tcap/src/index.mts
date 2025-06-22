@@ -1,12 +1,12 @@
 export {
-    AARE_apdu_protocol_version,
+    type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
 } from "./lib/modules/DialoguePDUs/AARE-apdu-protocol-version.ta.mjs";
 export * from "./lib/modules/DialoguePDUs/AARE-apdu.ta.mjs";
 export {
-    AARQ_apdu_protocol_version,
+    type AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
@@ -16,7 +16,7 @@ export * from "./lib/modules/DialoguePDUs/ABRT-apdu.ta.mjs";
 export * from "./lib/modules/DialoguePDUs/ABRT-source.ta.mjs";
 export * from "./lib/modules/DialoguePDUs/Associate-result.ta.mjs";
 export {
-    Associate_source_diagnostic_dialogue_service_provider,
+    type Associate_source_diagnostic_dialogue_service_provider,
     Associate_source_diagnostic_dialogue_service_provider_null_,
     Associate_source_diagnostic_dialogue_service_provider_no_reason_given,
     Associate_source_diagnostic_dialogue_service_provider_no_common_dialogue_portion,
@@ -24,7 +24,7 @@ export {
     _encode_Associate_source_diagnostic_dialogue_service_provider,
 } from "./lib/modules/DialoguePDUs/Associate-source-diagnostic-dialogue-service-provider.ta.mjs";
 export {
-    Associate_source_diagnostic_dialogue_service_user,
+    type Associate_source_diagnostic_dialogue_service_user,
     Associate_source_diagnostic_dialogue_service_user_null_,
     Associate_source_diagnostic_dialogue_service_user_no_reason_given,
     Associate_source_diagnostic_dialogue_service_user_application_context_name_not_supported,
@@ -35,7 +35,7 @@ export * from "./lib/modules/DialoguePDUs/Associate-source-diagnostic.ta.mjs";
 export * from "./lib/modules/DialoguePDUs/dialogue-as-id.va.mjs";
 export * from "./lib/modules/DialoguePDUs/DialoguePDU.ta.mjs";
 export {
-    Release_request_reason,
+    type Release_request_reason,
     Release_request_reason_normal,
     Release_request_reason_urgent,
     Release_request_reason_user_defined,
@@ -43,7 +43,7 @@ export {
     _encode_Release_request_reason,
 } from "./lib/modules/DialoguePDUs/Release-request-reason.ta.mjs";
 export {
-    Release_response_reason,
+    type Release_response_reason,
     Release_response_reason_normal,
     Release_response_reason_not_finished,
     Release_response_reason_user_defined,

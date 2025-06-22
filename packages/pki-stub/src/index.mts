@@ -30,7 +30,7 @@ export * from "./lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
 export * from "./lib/modules/PKI-Stub/AttCertIssuer.ta.mjs";
 export * from "./lib/modules/PKI-Stub/AttCertValidityPeriod.ta.mjs";
 export {
-    AttCertVersion,
+    type AttCertVersion,
     AttCertVersion_v2,
     _decode_AttCertVersion,
     _encode_AttCertVersion,
@@ -83,7 +83,7 @@ export * from "./lib/modules/PKI-Stub/Time.ta.mjs";
 export * from "./lib/modules/PKI-Stub/UniqueIdentifier.ta.mjs";
 export * from "./lib/modules/PKI-Stub/Validity.ta.mjs";
 export {
-    Version,
+    type Version,
     Version_v1,
     Version_v2,
     Version_v3,

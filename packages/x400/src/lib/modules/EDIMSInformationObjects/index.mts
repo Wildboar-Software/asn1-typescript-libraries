@@ -41,8 +41,10 @@ export * from "./EDINInitiatorField.ta.mjs";
 export * from "./EDINOriginatorField.ta.mjs";
 export * from "./EDINotificationRequestsField.ta.mjs";
 export * from "./EDINotificationRequests.ta.mjs";
-export {
+export type {
     EDINotificationSecurity,
+} from "./EDINotificationSecurity.ta.mjs";
+export {
     EDINotificationSecurity_non_repudiation,
     EDINotificationSecurity_proof,
     _decode_EDINotificationSecurity,
@@ -50,8 +52,10 @@ export {
 } from "./EDINotificationSecurity.ta.mjs";
 export * from "./EDINReceiverField.ta.mjs";
 export * from "./EDIN.ta.mjs";
-export {
+export type {
     EDIReceptionSecurity,
+} from "./EDIReceptionSecurity.ta.mjs";
+export {
     EDIReceptionSecurity_non_repudiation,
     EDIReceptionSecurity_proof,
     _decode_EDIReceptionSecurity,
@@ -68,8 +72,10 @@ export * from "./EXTERNAL-MESSAGE-REFERENCE.oca.mjs";
 export * from "./FirstRecipientField.ta.mjs";
 export * from "./FNExtensionsField.ta.mjs";
 export * from "./FNExtensionsSubField.ta.mjs";
-export {
+export type {
     FNPDAUBasicCodeField,
+} from "./FNPDAUBasicCodeField.ta.mjs";
+export {
     FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery,
     FNPDAUBasicCodeField_unspecified,
     _decode_FNPDAUBasicCodeField,
@@ -78,8 +84,10 @@ export {
 export * from "./FNPDAUDiagnosticField.ta.mjs";
 export * from "./FNPDAUReasonCodeField.ta.mjs";
 export * from "./FNReasonCodeField.ta.mjs";
-export {
+export type {
     FNUAMSBasicCodeField,
+} from "./FNUAMSBasicCodeField.ta.mjs";
+export {
     FNUAMSBasicCodeField_edim_originator_unknown,
     FNUAMSBasicCodeField_edim_recipient_unknown,
     FNUAMSBasicCodeField_forwarded_by_edi_ms,
@@ -91,8 +99,10 @@ export {
 export * from "./FNUAMSDiagnosticField.ta.mjs";
 export * from "./FNUAMSReasonCodeField.ta.mjs";
 export * from "./FNUAMSSecurityCheckField.ta.mjs";
-export {
+export type {
     FNUserBasicCodeField,
+} from "./FNUserBasicCodeField.ta.mjs";
+export {
     FNUserBasicCodeField_bodypart_type_not_supported,
     FNUserBasicCodeField_forwarded_for_additional_action,
     FNUserBasicCodeField_forwarded_for_archiving,
@@ -131,8 +141,10 @@ export * from "./MessageReference.ta.mjs";
 export * from "./NegativeNotificationFields.ta.mjs";
 export * from "./NNExtensionsField.ta.mjs";
 export * from "./NNExtensionsSubField.ta.mjs";
-export {
+export type {
     NNPDAUBasicCodeField,
+} from "./NNPDAUBasicCodeField.ta.mjs";
+export {
     NNPDAUBasicCodeField_physical_rendition_not_performed,
     NNPDAUBasicCodeField_undeliverable_mail,
     NNPDAUBasicCodeField_unspecified,
@@ -142,8 +154,10 @@ export {
 export * from "./NNPDAUDiagnosticField.ta.mjs";
 export * from "./NNPDAUReasonCodeField.ta.mjs";
 export * from "./NNReasonCodeField.ta.mjs";
-export {
+export type {
     NNUAMSBasicCodeField,
+} from "./NNUAMSBasicCodeField.ta.mjs";
+export {
     NNUAMSBasicCodeField_cannot_deliver_to_user,
     NNUAMSBasicCodeField_delivery_timeout,
     NNUAMSBasicCodeField_forwarding_error,
@@ -154,8 +168,10 @@ export {
     _decode_NNUAMSBasicCodeField,
     _encode_NNUAMSBasicCodeField,
 } from "./NNUAMSBasicCodeField.ta.mjs";
-export {
+export type {
     NNUAMSDiagnosticField,
+} from "./NNUAMSDiagnosticField.ta.mjs";
+export {
     NNUAMSDiagnosticField_protocol_violation,
     NNUAMSDiagnosticField_edim_originator_unknown,
     NNUAMSDiagnosticField_edim_recipient_unknown,
@@ -194,8 +210,10 @@ export {
     _encode_NNUAMSDiagnosticField,
 } from "./NNUAMSDiagnosticField.ta.mjs";
 export * from "./NNUAMSReasonCodeField.ta.mjs";
-export {
+export type {
     NNUserBasicCodeField,
+} from "./NNUserBasicCodeField.ta.mjs";
+export {
     NNUserBasicCodeField_unspecified,
     NNUserBasicCodeField_syntax_error,
     NNUserBasicCodeField_interchange_sender_unknown,
@@ -210,8 +228,10 @@ export {
     _decode_NNUserBasicCodeField,
     _encode_NNUserBasicCodeField,
 } from "./NNUserBasicCodeField.ta.mjs";
-export {
+export type {
     NNUserDiagnosticField,
+} from "./NNUserDiagnosticField.ta.mjs";
+export {
     NNUserDiagnosticField_compression_unsupported,
     _decode_NNUserDiagnosticField,
     _encode_NNUserDiagnosticField,

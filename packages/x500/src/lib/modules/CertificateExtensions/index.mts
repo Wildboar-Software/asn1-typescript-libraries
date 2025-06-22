@@ -53,8 +53,10 @@ export * from "./CRLDistPointsSyntax.ta.mjs";
 export * from "./cRLDistributionPoints.oa.mjs";
 export * from "./cRLNumber.oa.mjs";
 export * from "./CRLNumber.ta.mjs";
-export {
+export type {
     CRLReason,
+} from "./CRLReason.ta.mjs";
+export {
     _decode_CRLReason,
     _encode_CRLReason,
     CRLReason_unspecified,
@@ -184,8 +186,10 @@ export * from "./PrivateKeyUsagePeriod.ta.mjs";
 export * from "./ProtRestriction.ta.mjs";
 export * from "./protRestrict.oa.mjs";
 export * from "./reasonCode.oa.mjs";
-export {
+export type {
     ReasonFlags,
+} from "./ReasonFlags.ta.mjs";
+export {
     ReasonFlags_unused,
     ReasonFlags_keyCompromise,
     ReasonFlags_cACompromise,

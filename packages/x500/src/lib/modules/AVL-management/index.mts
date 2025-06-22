@@ -17,9 +17,11 @@ export * from "./DeleteAvlReq.ta.mjs";
 export * from "./DeleteAvlRsp-result.ta.mjs";
 export * from "./DeleteAvlRsp.ta.mjs";
 export * from "./index.mjs";
+export type {
+    InitializationAbort_diag,
+} from "./InitializationAbort-diag.ta.mjs";
 export {
     _enum_for_InitializationAbort_diag,
-    InitializationAbort_diag,
     InitializationAbort_diag_unsupportedVersion,
     InitializationAbort_diag_onlySingleVersionAllowed,
     _decode_InitializationAbort_diag,
@@ -28,9 +30,11 @@ export {
 export * from "./InitializationAbort.ta.mjs";
 export * from "./InitializationAcc.ta.mjs";
 export * from "./InitializationRec.ta.mjs";
+export type {
+    InitializationRej_diag,
+} from "./InitializationRej-diag.ta.mjs";
 export {
     _enum_for_InitializationRej_diag,
-    InitializationRej_diag,
     InitializationRej_diag_unsupportedVersion,
     _decode_InitializationRej_diag,
     _encode_InitializationRej_diag,

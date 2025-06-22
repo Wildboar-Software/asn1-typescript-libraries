@@ -4,7 +4,7 @@ export * from "./lib/modules/CMIP-1/ActionArgument.ta.mjs";
 export * from "./lib/modules/CMIP-1/ActionErrorInfo-errorInfo.ta.mjs";
 export {
     _enum_for_ActionErrorInfo_errorStatus,
-    ActionErrorInfo_errorStatus,
+    type ActionErrorInfo_errorStatus,
     ActionErrorInfo_errorStatus_accessDenied,
     ActionErrorInfo_errorStatus_noSuchAction,
     ActionErrorInfo_errorStatus_noSuchArgument,
@@ -21,7 +21,7 @@ export * from "./lib/modules/CMIP-1/ActionSet.osa.mjs";
 export * from "./lib/modules/CMIP-1/ActionTypeId.ta.mjs";
 export {
     _enum_for_AttributeError_errorStatus,
-    AttributeError_errorStatus,
+    type AttributeError_errorStatus,
     AttributeError_errorStatus_accessDenied,
     AttributeError_errorStatus_noSuchAttribute,
     AttributeError_errorStatus_invalidAttributeValue,
@@ -33,7 +33,7 @@ export {
 export * from "./lib/modules/CMIP-1/AttributeError.ta.mjs";
 export {
     _enum_for_AttributeIdError_errorStatus,
-    AttributeIdError_errorStatus,
+    type AttributeIdError_errorStatus,
     AttributeIdError_errorStatus_accessDenied,
     AttributeIdError_errorStatus_noSuchAttribute,
     _decode_AttributeIdError_errorStatus,
@@ -64,7 +64,7 @@ export * from "./lib/modules/CMIP-1/CreateResult.ta.mjs";
 export * from "./lib/modules/CMIP-1/DeleteArgument.ta.mjs";
 export {
     _enum_for_DeleteError_deleteErrorInfo,
-    DeleteError_deleteErrorInfo,
+    type DeleteError_deleteErrorInfo,
     DeleteError_deleteErrorInfo_accessDenied,
     _decode_DeleteError_deleteErrorInfo,
     _encode_DeleteError_deleteErrorInfo,

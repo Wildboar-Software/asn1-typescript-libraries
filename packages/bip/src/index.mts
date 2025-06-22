@@ -17,7 +17,7 @@ export * from "./lib/modules/BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-BIR-DATA-TYPE-flags.ta.mjs";
 export {
     _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel,
-    BioAPI_BIR_DATA_TYPE_processedLevel,
+    type BioAPI_BIR_DATA_TYPE_processedLevel,
     BioAPI_BIR_DATA_TYPE_processedLevel_raw,
     BioAPI_BIR_DATA_TYPE_processedLevel_intermediate,
     BioAPI_BIR_DATA_TYPE_processedLevel_processed,
@@ -29,7 +29,7 @@ export * from "./lib/modules/BIP/BioAPI-BIR-HANDLE.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-BIR-HEADER.ta.mjs";
 export {
     _enum_for_BioAPI_BIR_PURPOSE,
-    BioAPI_BIR_PURPOSE,
+    type BioAPI_BIR_PURPOSE,
     BioAPI_BIR_PURPOSE_verify,
     verify,
     BioAPI_BIR_PURPOSE_identify,
@@ -49,7 +49,7 @@ export {
 } from "./lib/modules/BIP/BioAPI-BIR-PURPOSE.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-BIR-SECURITY-BLOCK-FORMAT.ta.mjs";
 export {
-    BioAPI_BIR_SUBTYPE_anySubtype,
+    type BioAPI_BIR_SUBTYPE_anySubtype,
     BioAPI_BIR_SUBTYPE_anySubtype_left,
     BioAPI_BIR_SUBTYPE_anySubtype_right,
     BioAPI_BIR_SUBTYPE_anySubtype_thumb,
@@ -61,7 +61,7 @@ export {
     _decode_BioAPI_BIR_SUBTYPE_anySubtype,
 } from "./lib/modules/BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta.mjs";
 export {
-    BioAPI_BIR_SUBTYPE_MASK,
+    type BioAPI_BIR_SUBTYPE_MASK,
     BioAPI_BIR_SUBTYPE_MASK_left,
     BioAPI_BIR_SUBTYPE_MASK_right,
     BioAPI_BIR_SUBTYPE_MASK_left_thumb,
@@ -105,7 +105,7 @@ export * from "./lib/modules/BIP/BioAPI-GUI-ENROLL-TYPE.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-GUI-EVENT-SUBSCRIPTION.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-GUI-MOMENT.ta.mjs";
 export {
-    BioAPI_GUI_OPERATION,
+    type BioAPI_GUI_OPERATION,
     BioAPI_GUI_OPERATION_capture,
     BioAPI_GUI_OPERATION_process,
     BioAPI_GUI_OPERATION_createtemplate,
@@ -120,7 +120,7 @@ export {
 export * from "./lib/modules/BIP/BioAPI-GUI-RESPONSE.ta.mjs";
 export {
     _enum_for_BioAPI_GUI_SUBOPERATION,
-    BioAPI_GUI_SUBOPERATION,
+    type BioAPI_GUI_SUBOPERATION,
     BioAPI_GUI_SUBOPERATION_capture,
     BioAPI_GUI_SUBOPERATION_process,
     BioAPI_GUI_SUBOPERATION_createtemplate,
@@ -136,7 +136,7 @@ export * from "./lib/modules/BIP/BioAPI-INDICATOR-STATUS.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-INPUT-BIR-inputBIR.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-INPUT-BIR.ta.mjs";
 export {
-    BioAPI_OPERATIONS_MASK,
+    type BioAPI_OPERATIONS_MASK,
     BioAPI_OPERATIONS_MASK_enableEvents,
     BioAPI_OPERATIONS_MASK_subscribeToGUIEvents,
     BioAPI_OPERATIONS_MASK_capture,
@@ -163,7 +163,7 @@ export {
     _encode_BioAPI_OPERATIONS_MASK,
 } from "./lib/modules/BIP/BioAPI-OPERATIONS-MASK.ta.mjs";
 export {
-    BioAPI_OPTIONS_MASK,
+    type BioAPI_OPTIONS_MASK,
     BioAPI_OPTIONS_MASK_raw,
     BioAPI_OPTIONS_MASK_qualityRaw,
     BioAPI_OPTIONS_MASK_qualityIntermediate,
@@ -194,7 +194,7 @@ export * from "./lib/modules/BIP/BioAPI-RETURN.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-STRING.ta.mjs";
 export * from "./lib/modules/BIP/BioAPI-TIME.ta.mjs";
 export {
-    BioAPI_UNIT_EVENT_TYPE_MASK,
+    type BioAPI_UNIT_EVENT_TYPE_MASK,
     BioAPI_UNIT_EVENT_TYPE_MASK_insert,
     BioAPI_UNIT_EVENT_TYPE_MASK_remove,
     BioAPI_UNIT_EVENT_TYPE_MASK_fault,
@@ -205,7 +205,7 @@ export {
 } from "./lib/modules/BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs";
 export {
     _enum_for_BioAPI_UNIT_EVENT_TYPE,
-    BioAPI_UNIT_EVENT_TYPE,
+    type BioAPI_UNIT_EVENT_TYPE,
     BioAPI_UNIT_EVENT_TYPE_insert,
     BioAPI_UNIT_EVENT_TYPE_remove,
     BioAPI_UNIT_EVENT_TYPE_fault,

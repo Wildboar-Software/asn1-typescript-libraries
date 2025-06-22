@@ -8,7 +8,7 @@ export * from "./AddResult.ta.mjs";
 export * from "./AssignErr.ta.mjs";
 export * from "./AttributeCertificates.ta.mjs";
 export {
-    AttributeOperations,
+    type AttributeOperations,
     AttributeOperations_add,
     AttributeOperations_compare,
     AttributeOperations_deleteValue,
@@ -68,7 +68,7 @@ export * from "./ModifyResult.ta.mjs";
 export * from "./ObjectInformation.ta.mjs";
 export * from "./ObjectModification.ta.mjs";
 export {
-    ObjectOperations,
+    type ObjectOperations,
     ObjectOperations_add,
     ObjectOperations_delete_,
     ObjectOperations_discloseOnError,

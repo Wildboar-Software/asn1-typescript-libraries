@@ -4,7 +4,7 @@ export * from "./lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs";
 export * from "./lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs";
 export * from "./lib/modules/Attribute-ASN1Module/AdministrativeState.ta.mjs";
 export {
-    AlarmStatus_Item,
+    type AlarmStatus_Item,
     AlarmStatus_Item_underRepair,
     AlarmStatus_Item_critical,
     AlarmStatus_Item_major,

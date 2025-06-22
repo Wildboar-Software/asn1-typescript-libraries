@@ -11,8 +11,10 @@ export * from "./ContentChange-attributeChanges.ta.mjs";
 export * from "./ContentChange-rename.ta.mjs";
 export * from "./ContentChange.ta.mjs";
 export * from "./CoordinateShadowUpdateArgumentData.ta.mjs";
-export {
+export type {
     CoordinateShadowUpdateArgumentData_updateStrategy_standard,
+} from "./CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.mjs";
+export {
     CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental,
     CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges,
     CoordinateShadowUpdateArgumentData_updateStrategy_standard_total,
@@ -35,8 +37,10 @@ export * from "./Knowledge.ta.mjs";
 export * from "./ModificationParameter.ta.mjs";
 export * from "./PeriodicStrategy.ta.mjs";
 export * from "./RefreshInformation.ta.mjs";
-export {
+export type {
     RequestShadowUpdateArgumentData_requestedStrategy_standard,
+} from "./RequestShadowUpdateArgumentData-requestedStrategy-standard.ta.mjs";
+export {
     RequestShadowUpdateArgumentData_requestedStrategy_standard_incremental,
     RequestShadowUpdateArgumentData_requestedStrategy_standard_total,
     _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard,

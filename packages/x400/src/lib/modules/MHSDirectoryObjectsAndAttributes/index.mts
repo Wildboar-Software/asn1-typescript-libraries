@@ -35,8 +35,10 @@ export {
     _encode_DLPolicy_implicit_conversion_prohibited,
     _enum_for_DLPolicy_implicit_conversion_prohibited,
 } from "./DLPolicy-implicit-conversion-prohibited.ta.mjs";
-export {
+export type {
     DLPolicy_originating_MTA_report,
+} from "./DLPolicy-originating-MTA-report.ta.mjs";
+export {
     DLPolicy_originating_MTA_report_audited_report,
     DLPolicy_originating_MTA_report_non_delivery_report,
     DLPolicy_originating_MTA_report_report,
@@ -44,8 +46,10 @@ export {
     _decode_DLPolicy_originating_MTA_report,
     _encode_DLPolicy_originating_MTA_report,
 } from "./DLPolicy-originating-MTA-report.ta.mjs";
-export {
+export type {
     DLPolicy_originator_report,
+} from "./DLPolicy-originator-report.ta.mjs";
+export {
     DLPolicy_originator_report_no_report,
     DLPolicy_originator_report_non_delivery_report,
     DLPolicy_originator_report_report,
@@ -53,8 +57,10 @@ export {
     _decode_DLPolicy_originator_report,
     _encode_DLPolicy_originator_report,
 } from "./DLPolicy-originator-report.ta.mjs";
-export {
+export type {
     DLPolicy_priority,
+} from "./DLPolicy-priority.ta.mjs";
+export {
     DLPolicy_priority_non_urgent,
     DLPolicy_priority_normal,
     DLPolicy_priority_unchanged,

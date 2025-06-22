@@ -1,7 +1,7 @@
 export * from "./AccessRatePerDeliveryServiceType.ta.mjs";
 export * from "./Actions.ta.mjs";
 export {
-    AdministrationError,
+    type AdministrationError,
     AdministrationError_new_credentials_unacceptable,
     AdministrationError_old_credentials_incorrectly_specified,
     AdministrationError_register_rejected,
@@ -16,14 +16,14 @@ export * from "./alert.va.mjs";
 export * from "./AttributeError-problems-Item.ta.mjs";
 export * from "./AttributeError.ta.mjs";
 export {
-    AuthenticationCheck,
+    type AuthenticationCheck,
     AuthenticationCheck_failed,
     AuthenticationCheck_validated,
     _decode_AuthenticationCheck,
     _encode_AuthenticationCheck,
 } from "./AuthenticationCheck.ta.mjs";
 export {
-    AuthenticationGeneration,
+    type AuthenticationGeneration,
     AuthenticationGeneration_generated,
     AuthenticationGeneration_non_generated,
     _decode_AuthenticationGeneration,
@@ -67,7 +67,7 @@ export * from "./DeliveryComponentRateToUa.ta.mjs";
 export * from "./DeliveryControlErrors.ta.mjs";
 export * from "./delivery-control.va.mjs";
 export {
-    DeliveryError,
+    type DeliveryError,
     DeliveryError_control_violates_registration,
     DeliveryError_delivery_control_violation,
     DeliveryError_security_error,
@@ -157,7 +157,7 @@ export * from "./report-delivery.va.mjs";
 export * from "./report-transfer-in.va.mjs";
 export * from "./report-transfer-out.va.mjs";
 export {
-    RetrievalError,
+    type RetrievalError,
     RetrievalError_attribute_error,
     RetrievalError_auto_action_request_error,
     RetrievalError_delete_error,
@@ -181,14 +181,14 @@ export * from "./ServiceFlag.ta.mjs";
 export * from "./ServiceRequestId.ta.mjs";
 export * from "./SettlementPolicy.ta.mjs";
 export {
-    SignatureCheck,
+    type SignatureCheck,
     SignatureCheck_failed,
     SignatureCheck_valid,
     _decode_SignatureCheck,
     _encode_SignatureCheck,
 } from "./SignatureCheck.ta.mjs";
 export {
-    SignatureGeneration,
+    type SignatureGeneration,
     SignatureGeneration_generated,
     SignatureGeneration_non_generated,
     _decode_SignatureGeneration,
@@ -199,7 +199,7 @@ export * from "./Status.ta.mjs";
 export * from "./SubmissionControlErrors.ta.mjs";
 export * from "./submission-control.va.mjs";
 export {
-    SubmissionError,
+    type SubmissionError,
     SubmissionError_deferred_delivery_cancellation_rejected,
     SubmissionError_element_of_service_not_subscribed,
     SubmissionError_inconsistent_request,

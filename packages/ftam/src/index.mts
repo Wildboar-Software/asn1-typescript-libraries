@@ -7,7 +7,7 @@ export * from "./lib/modules/ISO8571-FTAM/Access-Control-Change-Attribute.ta.mjs
 export * from "./lib/modules/ISO8571-FTAM/Access-Control-Element.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Access-Passwords.ta.mjs";
 export {
-    Access_Request,
+    type Access_Request,
     Access_Request_read,
     Access_Request_insert,
     Access_Request_replace,
@@ -22,7 +22,7 @@ export {
 export * from "./lib/modules/ISO8571-FTAM/Account-Attribute.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Account.ta.mjs";
 export {
-    Action_Result,
+    type Action_Result,
     Action_Result_success,
     Action_Result_transient_error,
     Action_Result_permanent_error,
@@ -56,7 +56,7 @@ export * from "./lib/modules/ISO8571-FTAM/Child-Objects-Attribute.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Concurrency-Access.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Concurrency-Control.ta.mjs";
 export {
-    Concurrency_Key,
+    type Concurrency_Key,
     Concurrency_Key_not_required,
     Concurrency_Key_shared,
     Concurrency_Key_exclusive,
@@ -83,7 +83,7 @@ export * from "./lib/modules/ISO8571-FTAM/Diagnostic.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Document-Type-Name.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Entity-Reference.ta.mjs";
 export {
-    Equality_Comparision,
+    type Equality_Comparision,
     Equality_Comparision_no_value_available_matches,
     Equality_Comparision_equals_matches,
     _decode_Equality_Comparision,
@@ -155,7 +155,7 @@ export * from "./lib/modules/ISO8571-FTAM/F-MOVE-response.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-OPEN-request-contents-type.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-OPEN-request-processing-mode.ta.mjs";
 export {
-    F_OPEN_request_recovery_mode,
+    type F_OPEN_request_recovery_mode,
     F_OPEN_request_recovery_mode_none,
     F_OPEN_request_recovery_mode_at_start_of_file,
     F_OPEN_request_recovery_mode_at_any_active_Checkpoint,
@@ -164,7 +164,7 @@ export {
 } from "./lib/modules/ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-OPEN-request.ta.mjs";
 export {
-    F_OPEN_response_recovery_mode,
+    type F_OPEN_response_recovery_mode,
     F_OPEN_response_recovery_mode_none,
     F_OPEN_response_recovery_mode_at_start_of_file,
     F_OPEN_response_recovery_mode_at_any_active_Checkpoint,
@@ -195,7 +195,7 @@ export * from "./lib/modules/ISO8571-FTAM/F-TRANSFER-END-request.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-TRANSFER-END-response.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-U-ABORT-request.ta.mjs";
 export {
-    Functional_Units,
+    type Functional_Units,
     Functional_Units_read,
     Functional_Units_write,
     Functional_Units_file_access,
@@ -217,7 +217,7 @@ export {
 export * from "./lib/modules/ISO8571-FTAM/F-UNLINK-request.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/F-UNLINK-response.ta.mjs";
 export {
-    F_WRITE_request_file_access_data_unit_Operation,
+    type F_WRITE_request_file_access_data_unit_Operation,
     F_WRITE_request_file_access_data_unit_Operation_insert,
     F_WRITE_request_file_access_data_unit_Operation_replace,
     F_WRITE_request_file_access_data_unit_Operation_extend,
@@ -229,7 +229,7 @@ export * from "./lib/modules/ISO8571-FTAM/Implementation-Information.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Integer-Pattern.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs";
 export {
-    Lock,
+    type Lock,
     Lock_not_required,
     Lock_shared,
     Lock_exclusive,
@@ -258,7 +258,7 @@ export * from "./lib/modules/ISO8571-FTAM/Pathname-Pattern.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Pathname.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/PDU.ta.mjs";
 export {
-    Permitted_Actions_Attribute,
+    type Permitted_Actions_Attribute,
     Permitted_Actions_Attribute_read,
     Permitted_Actions_Attribute_insert,
     Permitted_Actions_Attribute_replace,
@@ -280,7 +280,7 @@ export * from "./lib/modules/ISO8571-FTAM/Protocol-Version.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Read-Attributes.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Referent-Indicator.ta.mjs";
 export {
-    Relational_Comparision,
+    type Relational_Comparision,
     Relational_Comparision_no_value_available_matches,
     Relational_Comparision_equals_matches,
     Relational_Comparision_less_than_matches,
@@ -290,7 +290,7 @@ export {
 } from "./lib/modules/ISO8571-FTAM/Relational-Comparision.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Request-Operation-Result.ta.mjs";
 export {
-    Request_Type,
+    type Request_Type,
     Request_Type_read,
     Request_Type_write,
     _decode_Request_Type,
@@ -303,7 +303,7 @@ export * from "./lib/modules/ISO8571-FTAM/Select-Attributes.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Service-Class.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Shared-ASE-Information.ta.mjs";
 export {
-    State_Result,
+    type State_Result,
     State_Result_success,
     State_Result_failure,
     _decode_State_Result,

@@ -6,16 +6,20 @@ export * from "./AssociationId.ta.mjs";
 export * from "./AuthenReasonSyntax.ta.mjs";
 export * from "./DirectoryInformationServiceElement-operationType.ta.mjs";
 export * from "./DirectoryInformationServiceElement.ta.mjs";
-export {
+export type {
     DSAScopeOfChainingValue,
+} from "./DSAScopeOfChainingValue.ta.mjs";
+export {
     DSAScopeOfChainingValue_country,
     DSAScopeOfChainingValue_dmd,
     DSAScopeOfChainingValue_global,
     _decode_DSAScopeOfChainingValue,
     _encode_DSAScopeOfChainingValue,
 } from "./DSAScopeOfChainingValue.ta.mjs";
-export {
+export type {
     DSAScopeOfReferralValue,
+} from "./DSAScopeOfReferralValue.ta.mjs";
+export {
     DSAScopeOfReferralValue_country,
     DSAScopeOfReferralValue_dmd,
     DSAScopeOfReferralValue_global,
@@ -275,8 +279,10 @@ export * from "./MgtName.ta.mjs";
 export * from "./MgtOctetString.ta.mjs";
 export * from "./MgtOID.ta.mjs";
 export * from "./MgtPrintableString.ta.mjs";
-export {
+export type {
     PeerEntityAuthenticationPolicy,
+} from "./PeerEntityAuthenticationPolicy.ta.mjs";
+export {
     PeerEntityAuthenticationPolicy_external,
     PeerEntityAuthenticationPolicy_nameOnly,
     PeerEntityAuthenticationPolicy_none,
@@ -287,8 +293,10 @@ export {
     _encode_PeerEntityAuthenticationPolicy,
 } from "./PeerEntityAuthenticationPolicy.ta.mjs";
 export * from "./RemoteDSAList.ta.mjs";
-export {
+export type {
     RequestAuthenticationPolicy,
+} from "./RequestAuthenticationPolicy.ta.mjs";
+export {
     RequestAuthenticationPolicy_none,
     RequestAuthenticationPolicy_simpleName,
     RequestAuthenticationPolicy_strong,

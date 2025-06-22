@@ -1,5 +1,7 @@
-export {
+export type {
     Version,
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Version.ta.mjs";
+export {
     _decode_Version,
     _encode_Version,
     Version_v1,

@@ -43,8 +43,10 @@ export * from "./conversion-eits.oa.mjs";
 export * from "./copy-recipients.oa.mjs";
 export * from "./CorrelatedDeliveredIPNs.ta.mjs";
 export * from "./CorrelatedDeliveredReplies.ta.mjs";
-export {
+export type {
     DeliveredIPNStatus,
+} from "./DeliveredIPNStatus.ta.mjs";
+export {
     DeliveredIPNStatus_an_received,
     DeliveredIPNStatus_an_requested,
     DeliveredIPNStatus_ipm_auto_forwarded,
@@ -56,8 +58,10 @@ export {
     _decode_DeliveredIPNStatus,
     _encode_DeliveredIPNStatus,
 } from "./DeliveredIPNStatus.ta.mjs";
-export {
+export type {
     DeliveredReplyStatus,
+} from "./DeliveredReplyStatus.ta.mjs";
+export {
     DeliveredReplyStatus_no_reply_requested,
     DeliveredReplyStatus_reply_outstanding,
     DeliveredReplyStatus_reply_received,
@@ -144,8 +148,10 @@ export * from "./rn-requestors.oa.mjs";
 export * from "./sensitivity.oa.mjs";
 export * from "./subject-ipm.oa.mjs";
 export * from "./subject.oa.mjs";
-export {
+export type {
     SubmittedIPNStatus,
+} from "./SubmittedIPNStatus.ta.mjs";
+export {
     SubmittedIPNStatus_ipm_auto_forwarded,
     SubmittedIPNStatus_ipm_discarded,
     SubmittedIPNStatus_no_ipn_requested,
@@ -157,8 +163,10 @@ export {
     _decode_SubmittedIPNStatus,
     _encode_SubmittedIPNStatus,
 } from "./SubmittedIPNStatus.ta.mjs";
-export {
+export type {
     SubmittedReplyStatus,
+} from "./SubmittedReplyStatus.ta.mjs";
+export {
     SubmittedReplyStatus_no_reply_intended,
     SubmittedReplyStatus_no_reply_requested,
     SubmittedReplyStatus_reply_pending,

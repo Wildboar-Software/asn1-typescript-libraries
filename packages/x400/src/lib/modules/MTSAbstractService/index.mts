@@ -12,8 +12,10 @@ export * from "./BindTokenSignedData.ta.mjs";
 export * from "./BuiltInContentType.ta.mjs";
 export * from "./BuiltInDomainDefinedAttributes.ta.mjs";
 export * from "./BuiltInDomainDefinedAttribute.ta.mjs";
-export {
+export type {
     BuiltInEncodedInformationTypes,
+} from "./BuiltInEncodedInformationTypes.ta.mjs";
+export {
     BuiltInEncodedInformationTypes_unknown,
     BuiltInEncodedInformationTypes_ia5_text,
     BuiltInEncodedInformationTypes_g3_facsimile,
@@ -76,8 +78,10 @@ export * from "./DeliveryControlResultExtensions.osa.mjs";
 export * from "./DeliveryControlResult.ta.mjs";
 export * from "./DeliveryControls.ta.mjs";
 export * from "./delivery-control-violated.oa.mjs";
-export {
+export type {
     DeliveryFlags,
+} from "./DeliveryFlags.ta.mjs";
+export {
     DeliveryFlags_implicit_conversion_prohibited,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
@@ -123,8 +127,10 @@ export * from "./ExtensionORAddressComponents.ta.mjs";
 export * from "./extension-physical-delivery-address-components.oa.mjs";
 export * from "./ExtensionPhysicalDeliveryAddressComponents.ta.mjs";
 export * from "./ExtensionType.ta.mjs";
-export {
+export type {
     G3FacsimileNonBasicParameters,
+} from "./G3FacsimileNonBasicParameters.ta.mjs";
+export {
     G3FacsimileNonBasicParameters_a3_width,
     G3FacsimileNonBasicParameters_b4_length,
     G3FacsimileNonBasicParameters_b4_width,
@@ -214,8 +220,10 @@ export * from "./multiple-originator-certificates.oa.mjs";
 export * from "./NetworkAddress.ta.mjs";
 export * from "./new-credentials-unacceptable.oa.mjs";
 export * from "./NonBasicParameters.ta.mjs";
-export {
+export type {
     NonDeliveryDiagnosticCode,
+} from "./NonDeliveryDiagnosticCode.ta.mjs";
+export {
     NonDeliveryDiagnosticCode_unrecognised_OR_name,
     NonDeliveryDiagnosticCode_ambiguous_OR_name,
     NonDeliveryDiagnosticCode_mts_congestion,
@@ -298,8 +306,10 @@ export {
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from "./NonDeliveryDiagnosticCode.ta.mjs";
-export {
+export type {
     NonDeliveryReasonCode,
+} from "./NonDeliveryReasonCode.ta.mjs";
+export {
     NonDeliveryReasonCode_transfer_failure,
     NonDeliveryReasonCode_unable_to_transfer,
     NonDeliveryReasonCode_conversion_not_performed,
@@ -454,8 +464,10 @@ export * from "./RecipientRedirection.ta.mjs";
 export * from "./RedirectionClass.ta.mjs";
 export * from "./redirection-history.oa.mjs";
 export * from "./RedirectionHistory.ta.mjs";
-export {
+export type {
     RedirectionReason,
+} from "./RedirectionReason.ta.mjs";
+export {
     RedirectionReason_recipient_assigned_alternate_recipient,
     RedirectionReason_originator_requested_alternate_recipient,
     RedirectionReason_recipient_MD_assigned_alternate_recipient,
@@ -563,8 +575,10 @@ export * from "./teletex-personal-name.oa.mjs";
 export * from "./TeletexPersonalName.ta.mjs";
 export * from "./TerminalIdentifier.ta.mjs";
 export * from "./terminal-type.oa.mjs";
-export {
+export type {
     TerminalType,
+} from "./TerminalType.ta.mjs";
+export {
     TerminalType_telex,
     TerminalType_teletex,
     TerminalType_g3_facsimile,

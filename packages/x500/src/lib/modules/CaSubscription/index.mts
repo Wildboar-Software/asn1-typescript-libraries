@@ -1,13 +1,17 @@
-export {
+export type {
     CASP_CertStatusCode,
+} from "./CASP-CertStatusCode.ta.mjs";
+export {
     CASP_CertStatusCode_noReason,
     CASP_CertStatusCode_unknownCert,
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
 } from "./CASP-CertStatusCode.ta.mjs";
-export {
+export type {
     CASP_error,
+} from "./CASP-error.ta.mjs";
+export {
     CASP_error_noReason,
     CASP_error_unknownContentType,
     CASP_error_unsupportedWLMPversion,
@@ -61,8 +65,10 @@ export * from "./CertUpdateReq.ta.mjs";
 export * from "./CertUpdateRsp-result.ta.mjs";
 export * from "./CertUpdateRsp.ta.mjs";
 export * from "./index.mjs";
-export {
+export type {
     InitializationAbort_diag,
+} from "./InitializationAbort-diag.ta.mjs";
+export {
     InitializationAbort_diag_onlySingleVersionAllowed,
     InitializationAbort_diag_unsupportedVersion,
     _decode_InitializationAbort_diag,
@@ -72,8 +78,10 @@ export {
 export * from "./InitializationAbort.ta.mjs";
 export * from "./InitializationAcc.ta.mjs";
 export * from "./InitializationRec.ta.mjs";
-export {
+export type {
     InitializationRej_diag,
+} from "./InitializationRej-diag.ta.mjs";
+export {
     InitializationRej_diag_unsupportedVersion,
     _decode_InitializationRej_diag,
     _encode_InitializationRej_diag,

@@ -31,8 +31,10 @@ export * from "./dsaReferral.oa.mjs";
 export * from "./Exclusions.ta.mjs";
 export * from "./index.mjs";
 export * from "./MasterAndShadowAccessPoints.ta.mjs";
-export {
+export type {
     MasterOrShadowAccessPoint_category,
+} from "./MasterOrShadowAccessPoint-category.ta.mjs";
+export {
     MasterOrShadowAccessPoint_category_master,
     MasterOrShadowAccessPoint_category_shadow,
     MasterOrShadowAccessPoint_category_writeableCopy,
@@ -43,9 +45,11 @@ export {
 export * from "./MasterOrShadowAccessPoint.ta.mjs";
 export * from "./OperationProgress-nameResolutionPhase.ta.mjs";
 export * from "./OperationProgress.ta.mjs";
+export type {
+    ReferenceType,
+} from "./ReferenceType.ta.mjs";
 export {
     _enum_for_ReferenceType,
-    ReferenceType,
     ReferenceType_superior,
     ReferenceType_subordinate,
     ReferenceType_cross,

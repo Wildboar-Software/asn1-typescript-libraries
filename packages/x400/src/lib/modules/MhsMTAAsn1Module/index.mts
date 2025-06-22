@@ -38,7 +38,7 @@ export * from "./ObjectIdOrDN.ta.mjs";
 export * from "./Percent.ta.mjs";
 export * from "./PriorityList.ta.mjs";
 export {
-    ProcessingState,
+    type ProcessingState,
     ProcessingState_idle,
     ProcessingState_redirection,
     ProcessingState_processed,
@@ -53,7 +53,7 @@ export {
     _encode_ProcessingState,
 } from "./ProcessingState.ta.mjs";
 export {
-    ProcessingSummary,
+    type ProcessingSummary,
     ProcessingSummary_idle,
     ProcessingSummary_redirection,
     ProcessingSummary_processed,

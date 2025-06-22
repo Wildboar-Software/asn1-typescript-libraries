@@ -7,9 +7,11 @@ export * from "./AddAvlRsp-result.ta.mjs";
 export * from "./AddAvlRsp.ta.mjs";
 export * from "./AvlPduSet.osa.mjs";
 export * from "./AVMPcommonComponents.ta.mjs";
+export type {
+    AVMP_error,
+} from "./AVMP-error.ta.mjs";
 export {
     _enum_for_AVMP_error,
-    AVMP_error,
     AVMP_error_noReason,
     AVMP_error_unknownAvlEntity,
     AVMP_error_unknownContentType,
@@ -38,25 +40,31 @@ export {
 export * from "./AVMPsequence.ta.mjs";
 export {
     _enum_for_AVMPversion,
-    AVMPversion,
     AVMPversion_v1,
     AVMPversion_v2,
     AVMPversion_v3,
     _decode_AVMPversion,
     _encode_AVMPversion,
 } from "./AVMPversion.ta.mjs";
+export type {
+    AVMPversion,
+} from "./AVMPversion.ta.mjs";
+export type {
+    CASP_CertStatusCode,
+} from "./CASP-CertStatusCode.ta.mjs";
 export {
     _enum_for_CASP_CertStatusCode,
-    CASP_CertStatusCode,
     CASP_CertStatusCode_noReason,
     CASP_CertStatusCode_unknownCert,
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
 } from "./CASP-CertStatusCode.ta.mjs";
 export * from "./CASPcommonComponents.ta.mjs";
+export type {
+    CASP_error,
+} from "./CASP-error.ta.mjs";
 export {
     _enum_for_CASP_error,
-    CASP_error,
     CASP_error_noReason,
     CASP_error_unknownContentType,
     CASP_error_unsupportedWLMPversion,
@@ -70,9 +78,11 @@ export {
     _encode_CASP_error,
 } from "./CASP-error.ta.mjs";
 export * from "./CASPsequence.ta.mjs";
+export type {
+    CASPversion,
+} from "./CASPversion.ta.mjs";
 export {
     _enum_for_CASPversion,
-    CASPversion,
     CASPversion_v1,
     CASPversion_v2,
     CASPversion_v3,
@@ -140,9 +150,11 @@ export * from "./DeleteAvlReq.ta.mjs";
 export * from "./deleteAvlRsp.oa.mjs";
 export * from "./DeleteAvlRsp-result.ta.mjs";
 export * from "./DeleteAvlRsp.ta.mjs";
+export type {
+    EnvelopedData_error,
+} from "./EnvelopedData-error.ta.mjs";
 export {
     _enum_for_EnvelopedData_error,
-    EnvelopedData_error,
     EnvelopedData_error_noReason,
     _decode_EnvelopedData_error,
     _encode_EnvelopedData_error,
@@ -182,9 +194,11 @@ export * from "./ReplaceAvlReq.ta.mjs";
 export * from "./replaceAvlRsp.oa.mjs";
 export * from "./ReplaceAvlRsp-result.ta.mjs";
 export * from "./ReplaceAvlRsp.ta.mjs";
+export type {
+    SignedData_error,
+} from "./SignedData-error.ta.mjs";
 export {
     _enum_for_SignedData_error,
-    SignedData_error,
     SignedData_error_noReason,
     SignedData_error_signedDataContectTypeExpected,
     SignedData_error_wrongSignedDataVersion,

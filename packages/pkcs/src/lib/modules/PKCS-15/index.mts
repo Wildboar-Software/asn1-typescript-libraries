@@ -9,7 +9,7 @@ export * from "./AuthKeyAttributes.ta.mjs";
 export * from "./AuthObjects.ta.mjs";
 export * from "./BiometricAttributes.ta.mjs";
 export {
-    BiometricFlags,
+    type BiometricFlags,
     BiometricFlags_local,
     BiometricFlags_change_disabled,
     BiometricFlags_unblock_disabled,
@@ -55,7 +55,7 @@ export * from "./ECPublicKeyChoice.ta.mjs";
 export * from "./EncryptedContentInfo.ta.mjs";
 export * from "./EnvelopedData.ta.mjs";
 export {
-    EnvelopedData_version,
+    type EnvelopedData_version,
     EnvelopedData_version_v0,
     EnvelopedData_version_v1,
     EnvelopedData_version_v2,
@@ -94,7 +94,7 @@ export * from "./issuerNameHash.oa.mjs";
 export * from "./KEAPrivateKey.ta.mjs";
 export * from "./KEAPublicKeyChoice.ta.mjs";
 export {
-    KeyAccessFlags,
+    type KeyAccessFlags,
     KeyAccessFlags_sensitive,
     KeyAccessFlags_extractable,
     KeyAccessFlags_alwaysSensitive,
@@ -142,7 +142,7 @@ export * from "./PKCS15Object.ta.mjs";
 export * from "./PKCS15-OPAQUE.oca.mjs";
 export * from "./PKCS15Token.ta.mjs";
 export {
-    PKCS15Token_version,
+    type PKCS15Token_version,
     PKCS15Token_version_v1,
     v1,
     _decode_PKCS15Token_version,
@@ -194,7 +194,7 @@ export * from "./subjectNameHash.oa.mjs";
 export * from "./TokenFlags.ta.mjs";
 export * from "./TokenInfo.ta.mjs";
 export {
-    TokenInfo_version,
+    type TokenInfo_version,
     TokenInfo_version_v1,
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,

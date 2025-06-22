@@ -1,5 +1,7 @@
-export {
+export type {
     Abort,
+} from "./Abort.ta.mjs";
+export {
     Abort_mistypedPDU,
     Abort_unboundRequest,
     Abort_invalidPDU,
@@ -17,9 +19,11 @@ export * from "./IdmBindResult.ta.mjs";
 export * from "./IdmBind.ta.mjs";
 export * from "./IDM-PDU.ta.mjs";
 export * from "./IDM-PROTOCOL.oca.mjs";
+export type {
+    IdmReject_reason,
+} from "./IdmReject-reason.ta.mjs";
 export {
     _enum_for_IdmReject_reason,
-    IdmReject_reason,
     IdmReject_reason_mistypedPDU,
     IdmReject_reason_duplicateInvokeIDRequest,
     IdmReject_reason_unsupportedOperationRequest,

@@ -20,7 +20,7 @@ export * from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/Reject-problem.t
 export * from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.mjs";
 export * from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/Reject.ta.mjs";
 export {
-    ReturnErrorProblem,
+    type ReturnErrorProblem,
     ReturnErrorProblem_unrecognizedInvocation,
     ReturnErrorProblem_errorResponseUnexpected,
     ReturnErrorProblem_unrecognizedError,
@@ -31,7 +31,7 @@ export {
 } from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta.mjs";
 export * from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnError.ta.mjs";
 export {
-    ReturnResultProblem,
+    type ReturnResultProblem,
     ReturnResultProblem_unrecognizedInvocation,
     ReturnResultProblem_resultResponseUnexpected,
     ReturnResultProblem_mistypedResult,
@@ -64,7 +64,7 @@ export * from "./lib/modules/Remote-Operations-Realizations/transfer-by-RTSE.oa.
 export * from "./lib/modules/Remote-Operations-Useful-Definitions/acknowledge.oa.mjs";
 export {
     _enum_for_acknowledge_ResultType,
-    acknowledge_ResultType,
+    type acknowledge_ResultType,
     acknowledge_ResultType_acknowledged,
     acknowledge_ResultType_unknown,
     _decode_acknowledge_ResultType,
@@ -87,7 +87,7 @@ export * from "./lib/modules/Remote-Operations-Useful-Definitions/probe-Argument
 export * from "./lib/modules/Remote-Operations-Useful-Definitions/probe.oa.mjs";
 export {
     _enum_for_probe_ResultType,
-    probe_ResultType,
+    type probe_ResultType,
     probe_ResultType_running,
     probe_ResultType_finished,
     probe_ResultType_unknown,

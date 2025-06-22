@@ -5,7 +5,7 @@ export * from "./DateTranslationList-Item.ta.mjs";
 export * from "./DateTranslationList.ta.mjs";
 export * from "./DaysOfMonth.ta.mjs";
 export {
-    DaysOfWeek,
+    type DaysOfWeek,
     DaysOfWeek_friday,
     DaysOfWeek_monday,
     DaysOfWeek_saturday,
