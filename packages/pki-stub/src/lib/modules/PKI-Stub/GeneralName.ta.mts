@@ -120,7 +120,7 @@ let _cached_encoder_for_GeneralName: $.ASN1Encoder<GeneralName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeneralName, encoded as an ASN.1 Element.
  */
-export function _encode_GeneralName(value: GeneralName, elGetter: $.ASN1Encoder<GeneralName>): _Element) {
+export function _encode_GeneralName(value: GeneralName, elGetter: $.ASN1Encoder<GeneralName>): _Element {
     if (!_cached_encoder_for_GeneralName) {
         _cached_encoder_for_GeneralName = $._encode_choice<GeneralName>(
             {

@@ -154,7 +154,7 @@ export function _decode_AttCertValidityPeriod(el: _Element): AttCertValidityPeri
  * @returns {_Element} The AttCertValidityPeriod, encoded as an ASN.1 Element.
  */
 export function _encode_AttCertValidityPeriod(value: AttCertValidityPeriod,
-    _elGetter: $.ASN1Encoder<AttCertValidityPeriod>): _Element) {
+    _elGetter: $.ASN1Encoder<AttCertValidityPeriod>): _Element {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeGeneralizedTime(
             value.notBeforeTime,

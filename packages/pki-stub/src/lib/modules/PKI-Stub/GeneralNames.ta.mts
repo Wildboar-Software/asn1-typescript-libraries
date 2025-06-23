@@ -47,7 +47,7 @@ export function _decode_GeneralNames(el: _Element): GeneralNames {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeneralNames, encoded as an ASN.1 Element.
  */
-export function _encode_GeneralNames(value: GeneralNames, elGetter: $.ASN1Encoder<GeneralNames>): _Element) {
+export function _encode_GeneralNames(value: GeneralNames, elGetter: $.ASN1Encoder<GeneralNames>): _Element {
     return $._encodeSequenceOf<GeneralName>(
         () => _encode_GeneralName,
         $.BER

@@ -342,7 +342,7 @@ export function _decode_BuiltInStandardAttributes(el: _Element): BuiltInStandard
  * @returns {_Element} The BuiltInStandardAttributes, encoded as an ASN.1 Element.
  */
 export function _encode_BuiltInStandardAttributes(value: BuiltInStandardAttributes,
-    _elGetter: $.ASN1Encoder<BuiltInStandardAttributes>): _Element) {
+    _elGetter: $.ASN1Encoder<BuiltInStandardAttributes>): _Element {
     const components: _Element[] = [];
     if (value.country_name) {
         components.push(_encode_CountryName(value.country_name, $.BER));

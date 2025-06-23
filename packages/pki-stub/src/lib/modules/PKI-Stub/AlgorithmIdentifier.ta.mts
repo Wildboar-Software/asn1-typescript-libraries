@@ -164,7 +164,7 @@ export function _decode_AlgorithmIdentifier(el: _Element): AlgorithmIdentifier {
  * @returns {_Element} The AlgorithmIdentifier, encoded as an ASN.1 Element.
  */
 export function _encode_AlgorithmIdentifier(value: AlgorithmIdentifier,
-    _elGetter: $.ASN1Encoder<AlgorithmIdentifier>): _Element) {
+    _elGetter: $.ASN1Encoder<AlgorithmIdentifier>): _Element {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.algorithm,

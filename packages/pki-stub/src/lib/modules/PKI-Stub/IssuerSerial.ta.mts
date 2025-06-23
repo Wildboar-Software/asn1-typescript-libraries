@@ -196,7 +196,7 @@ export function _decode_IssuerSerial(el: _Element): IssuerSerial {
  * @returns {_Element} The IssuerSerial, encoded as an ASN.1 Element.
  */
 export function _encode_IssuerSerial(value: IssuerSerial,
-    _elGetter: $.ASN1Encoder<IssuerSerial>): _Element) {
+    _elGetter: $.ASN1Encoder<IssuerSerial>): _Element {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_GeneralNames(
             value.issuer,

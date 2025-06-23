@@ -71,7 +71,7 @@ let _cached_encoder_for_TBSCertAVL_entries_Item_idType: $.ASN1Encoder<TBSCertAVL
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSCertAVL_entries_Item_idType, encoded as an ASN.1 Element.
  */
-export function _encode_TBSCertAVL_entries_Item_idType(value: TBSCertAVL_entries_Item_idType, elGetter: $.ASN1Encoder<TBSCertAVL_entries_Item_idType>): _Element) {
+export function _encode_TBSCertAVL_entries_Item_idType(value: TBSCertAVL_entries_Item_idType, elGetter: $.ASN1Encoder<TBSCertAVL_entries_Item_idType>): _Element {
     if (!_cached_encoder_for_TBSCertAVL_entries_Item_idType) {
         _cached_encoder_for_TBSCertAVL_entries_Item_idType =
             $._encode_choice<TBSCertAVL_entries_Item_idType>(

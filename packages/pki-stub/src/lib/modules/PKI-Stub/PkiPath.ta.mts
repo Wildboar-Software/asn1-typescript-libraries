@@ -54,7 +54,7 @@ let _cached_encoder_for_PkiPath: $.ASN1Encoder<PkiPath> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PkiPath, encoded as an ASN.1 Element.
  */
-export function _encode_PkiPath(value: PkiPath, elGetter: $.ASN1Encoder<PkiPath>): _Element) {
+export function _encode_PkiPath(value: PkiPath, elGetter: $.ASN1Encoder<PkiPath>): _Element {
     if (!_cached_encoder_for_PkiPath) {
         _cached_encoder_for_PkiPath = $._encodeSequenceOf<Certificate>(
             () => _encode_Certificate,
