@@ -31,7 +31,10 @@ export function _decode_TerminalIdentifier(el: _Element): TerminalIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminalIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_TerminalIdentifier(value: TerminalIdentifier, elGetter: $.ASN1Encoder<TerminalIdentifier>): TerminalIdentifier {
+export function _encode_TerminalIdentifier(
+    value: TerminalIdentifier,
+    elGetter: $.ASN1Encoder<TerminalIdentifier>
+) {
     return $._encodePrintableString(value, elGetter);
 }
 

@@ -45,7 +45,10 @@ let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkAddress, encoded as an ASN.1 Element.
  */
-export function _encode_NetworkAddress(value: NetworkAddress, elGetter: $.ASN1Encoder<NetworkAddress>): NetworkAddress {
+export function _encode_NetworkAddress(
+    value: NetworkAddress,
+    elGetter: $.ASN1Encoder<NetworkAddress>
+) {
     if (!_cached_encoder_for_NetworkAddress) {
         _cached_encoder_for_NetworkAddress = _encode_X121Address;
     }

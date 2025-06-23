@@ -56,7 +56,10 @@ export function _decode_AttCertVersion(el: _Element): AttCertVersion {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttCertVersion, encoded as an ASN.1 Element.
  */
-export function _encode_AttCertVersion(value: AttCertVersion, elGetter: $.ASN1Encoder<AttCertVersion>): AttCertVersion {
+export function _encode_AttCertVersion(
+    value: AttCertVersion,
+    elGetter: $.ASN1Encoder<AttCertVersion>
+) {
     return $._encodeInteger(value, elGetter);
 }
 

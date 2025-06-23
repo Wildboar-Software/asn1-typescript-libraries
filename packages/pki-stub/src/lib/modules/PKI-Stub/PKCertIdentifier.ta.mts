@@ -99,7 +99,10 @@ let _cached_encoder_for_PKCertIdentifier: $.ASN1Encoder<PKCertIdentifier> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PKCertIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_PKCertIdentifier(value: PKCertIdentifier, elGetter: $.ASN1Encoder<PKCertIdentifier>): PKCertIdentifier {
+export function _encode_PKCertIdentifier(
+    value: PKCertIdentifier,
+    elGetter: $.ASN1Encoder<PKCertIdentifier>
+) {
     if (!_cached_encoder_for_PKCertIdentifier) {
         _cached_encoder_for_PKCertIdentifier =
             $._encode_choice<PKCertIdentifier>(

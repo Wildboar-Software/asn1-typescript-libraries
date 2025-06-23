@@ -163,8 +163,10 @@ export function _decode_AlgorithmIdentifier(el: _Element): AlgorithmIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_AlgorithmIdentifier(value: AlgorithmIdentifier,
-    _elGetter: $.ASN1Encoder<AlgorithmIdentifier>): AlgorithmIdentifier {
+export function _encode_AlgorithmIdentifier(
+    value: AlgorithmIdentifier,
+    _elGetter: $.ASN1Encoder<AlgorithmIdentifier>
+) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.algorithm,

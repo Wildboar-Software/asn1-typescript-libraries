@@ -52,7 +52,10 @@ let _cached_encoder_for_PrivateDomainName: $.ASN1Encoder<PrivateDomainName> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrivateDomainName, encoded as an ASN.1 Element.
  */
-export function _encode_PrivateDomainName(value: PrivateDomainName, elGetter: $.ASN1Encoder<PrivateDomainName>): PrivateDomainName {
+export function _encode_PrivateDomainName(
+    value: PrivateDomainName,
+    elGetter: $.ASN1Encoder<PrivateDomainName>
+) {
     if (!_cached_encoder_for_PrivateDomainName) {
         _cached_encoder_for_PrivateDomainName =
             $._encode_choice<PrivateDomainName>(

@@ -41,7 +41,10 @@ export function _decode_PublicKey(el: _Element): PublicKey {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PublicKey, encoded as an ASN.1 Element.
  */
-export function _encode_PublicKey(value: PublicKey, elGetter: $.ASN1Encoder<PublicKey>): PublicKey {
+export function _encode_PublicKey(
+    value: PublicKey,
+    elGetter: $.ASN1Encoder<PublicKey>
+) {
     return $._encodeBitString(value, elGetter);
 }
 

@@ -189,7 +189,8 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element): TBSCertAVL_entrie
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSCertAVL_entries_Item, encoded as an ASN.1 Element.
  */
-export function _encode_TBSCertAVL_entries_Item(value: TBSCertAVL_entries_Item) {
+export function _encode_TBSCertAVL_entries_Item(
+    value: TBSCertAVL_entries_Item) {
     const components: _Element[] = [
         _encode_TBSCertAVL_entries_Item_idType(value.idType, $.BER),
     ];

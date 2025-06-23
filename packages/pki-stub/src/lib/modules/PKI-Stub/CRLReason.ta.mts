@@ -234,7 +234,10 @@ export function _decode_CRLReason(el: _Element): CRLReason {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CRLReason, encoded as an ASN.1 Element.
  */
-export function _encode_CRLReason(value: CRLReason, elGetter: $.ASN1Encoder<CRLReason>): CRLReason {
+export function _encode_CRLReason(
+    value: CRLReason,
+    elGetter: $.ASN1Encoder<CRLReason>
+) {
     return $._encodeEnumerated(value, elGetter);
 }
 

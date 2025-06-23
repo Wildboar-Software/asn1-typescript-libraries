@@ -49,7 +49,10 @@ let _cached_encoder_for_OrganizationalUnitNames: $.ASN1Encoder<OrganizationalUni
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OrganizationalUnitNames, encoded as an ASN.1 Element.
  */
-export function _encode_OrganizationalUnitNames(value: OrganizationalUnitNames, elGetter: $.ASN1Encoder<OrganizationalUnitNames>): OrganizationalUnitNames {
+export function _encode_OrganizationalUnitNames(
+    value: OrganizationalUnitNames,
+    elGetter: $.ASN1Encoder<OrganizationalUnitNames>
+) {
     if (!_cached_encoder_for_OrganizationalUnitNames) {
         _cached_encoder_for_OrganizationalUnitNames =
             $._encodeSequenceOf<OrganizationalUnitName>(

@@ -195,8 +195,10 @@ export function _decode_IssuerSerial(el: _Element): IssuerSerial {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IssuerSerial, encoded as an ASN.1 Element.
  */
-export function _encode_IssuerSerial(value: IssuerSerial,
-    _elGetter: $.ASN1Encoder<IssuerSerial>): IssuerSerial {
+export function _encode_IssuerSerial(
+    value: IssuerSerial,
+    _elGetter: $.ASN1Encoder<IssuerSerial>
+) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_GeneralNames(
             value.issuer,

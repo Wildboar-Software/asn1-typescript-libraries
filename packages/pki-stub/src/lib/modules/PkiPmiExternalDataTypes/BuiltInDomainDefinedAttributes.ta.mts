@@ -50,7 +50,10 @@ let _cached_encoder_for_BuiltInDomainDefinedAttributes: $.ASN1Encoder<BuiltInDom
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BuiltInDomainDefinedAttributes, encoded as an ASN.1 Element.
  */
-export function _encode_BuiltInDomainDefinedAttributes(value: BuiltInDomainDefinedAttributes, elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttributes>): BuiltInDomainDefinedAttributes {
+export function _encode_BuiltInDomainDefinedAttributes(
+    value: BuiltInDomainDefinedAttributes,
+    elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttributes>
+) {
     if (!_cached_encoder_for_BuiltInDomainDefinedAttributes) {
         _cached_encoder_for_BuiltInDomainDefinedAttributes =
             $._encodeSequenceOf<BuiltInDomainDefinedAttribute>(

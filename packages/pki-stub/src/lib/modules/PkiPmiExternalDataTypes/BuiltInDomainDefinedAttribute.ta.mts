@@ -135,7 +135,8 @@ export function _decode_BuiltInDomainDefinedAttribute(el: _Element): BuiltInDoma
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BuiltInDomainDefinedAttribute, encoded as an ASN.1 Element.
  */
-export function _encode_BuiltInDomainDefinedAttribute(value: BuiltInDomainDefinedAttribute) {
+export function _encode_BuiltInDomainDefinedAttribute(
+    value: BuiltInDomainDefinedAttribute) {
     const components: _Element[] = [
         $._encodePrintableString(value.type_, $.BER),
         $._encodePrintableString(value.value, $.BER),

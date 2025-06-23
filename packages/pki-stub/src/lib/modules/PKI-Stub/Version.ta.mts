@@ -83,7 +83,10 @@ export function _decode_Version(el: _Element): Version {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Version, encoded as an ASN.1 Element.
  */
-export function _encode_Version(value: Version, elGetter: $.ASN1Encoder<Version>): Version {
+export function _encode_Version(
+    value: Version,
+    elGetter: $.ASN1Encoder<Version>
+) {
     return $._encodeInteger(value, elGetter);
 }
 

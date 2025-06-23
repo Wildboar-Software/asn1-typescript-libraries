@@ -147,7 +147,10 @@ export function _decode_Attribute_valuesWithContext_Item(el: _Element): Attribut
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attribute_valuesWithContext_Item, encoded as an ASN.1 Element.
  */
-export function _encode_Attribute_valuesWithContext_Item(value: Attribute_valuesWithContext_Item, elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>): Attribute_valuesWithContext_Item {
+export function _encode_Attribute_valuesWithContext_Item(
+    value: Attribute_valuesWithContext_Item,
+    elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>
+) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeAny(value.value, $.BER),
         /* REQUIRED   */ $._encodeSetOf<Context>(

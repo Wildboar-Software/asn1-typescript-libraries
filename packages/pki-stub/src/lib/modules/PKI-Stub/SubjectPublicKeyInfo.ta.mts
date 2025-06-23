@@ -160,8 +160,10 @@ export function _decode_SubjectPublicKeyInfo(el: _Element): SubjectPublicKeyInfo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubjectPublicKeyInfo, encoded as an ASN.1 Element.
  */
-export function _encode_SubjectPublicKeyInfo(value: SubjectPublicKeyInfo,
-    _elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>): SubjectPublicKeyInfo {
+export function _encode_SubjectPublicKeyInfo(
+    value: SubjectPublicKeyInfo,
+    _elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>
+) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_AlgorithmIdentifier(
             value.algorithm,

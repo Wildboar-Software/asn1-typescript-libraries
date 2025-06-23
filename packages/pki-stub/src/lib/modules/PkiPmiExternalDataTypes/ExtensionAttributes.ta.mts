@@ -49,7 +49,10 @@ let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtensionAttributes, encoded as an ASN.1 Element.
  */
-export function _encode_ExtensionAttributes(value: ExtensionAttributes, elGetter: $.ASN1Encoder<ExtensionAttributes>): ExtensionAttributes {
+export function _encode_ExtensionAttributes(
+    value: ExtensionAttributes,
+    elGetter: $.ASN1Encoder<ExtensionAttributes>
+) {
     if (!_cached_encoder_for_ExtensionAttributes) {
         _cached_encoder_for_ExtensionAttributes =
             $._encodeSetOf<ExtensionAttribute>(

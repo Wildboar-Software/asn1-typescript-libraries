@@ -138,7 +138,8 @@ export function _decode_AttributeTypeAndValue(el: _Element): AttributeTypeAndVal
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeTypeAndValue, encoded as an ASN.1 Element.
  */
-export function _encode_AttributeTypeAndValue(value: AttributeTypeAndValue) {
+export function _encode_AttributeTypeAndValue(
+    value: AttributeTypeAndValue) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.type_,

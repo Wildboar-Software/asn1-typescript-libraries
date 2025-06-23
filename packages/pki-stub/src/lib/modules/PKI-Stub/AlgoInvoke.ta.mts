@@ -41,7 +41,10 @@ export function _decode_AlgoInvoke(el: _Element): AlgoInvoke {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlgoInvoke, encoded as an ASN.1 Element.
  */
-export function _encode_AlgoInvoke(value: AlgoInvoke, elGetter: $.ASN1Encoder<AlgoInvoke>): AlgoInvoke {
+export function _encode_AlgoInvoke(
+    value: AlgoInvoke,
+    elGetter: $.ASN1Encoder<AlgoInvoke>
+) {
     return $._encodeAny(value, elGetter);
 }
 
