@@ -163,7 +163,7 @@ let _cached_decoder_for_ModifyDNRequest: $.ASN1Decoder<ModifyDNRequest> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ModifyDNRequest} The decoded data structure.
  */
-export function _decode_ModifyDNRequest(el: _Element) {
+export function _decode_ModifyDNRequest(el: _Element): ModifyDNRequest {
   if (!_cached_decoder_for_ModifyDNRequest) {
     _cached_decoder_for_ModifyDNRequest = $._decode_implicit<ModifyDNRequest>(
       () =>
@@ -226,7 +226,7 @@ let _cached_encoder_for_ModifyDNRequest: $.ASN1Encoder<ModifyDNRequest> | null =
 export function _encode_ModifyDNRequest(
   value: ModifyDNRequest,
   elGetter: $.ASN1Encoder<ModifyDNRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_ModifyDNRequest) {
     _cached_encoder_for_ModifyDNRequest = $._encode_implicit(
       _TagClass.application,

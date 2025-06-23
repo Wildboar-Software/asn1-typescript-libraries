@@ -32,7 +32,7 @@ export type AttributeValue = OCTET_STRING; // OctetStringType
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValue} The decoded data structure.
  */
-export function _decode_AttributeValue(el: _Element) {
+export function _decode_AttributeValue(el: _Element): AttributeValue {
   return $._decodeOctetString(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_AttributeValue(el: _Element) {
 export function _encode_AttributeValue(
   value: AttributeValue,
   elGetter: $.ASN1Encoder<AttributeValue>
-) {
+): _Element {
   return $._encodeOctetString(value, elGetter);
 }
 

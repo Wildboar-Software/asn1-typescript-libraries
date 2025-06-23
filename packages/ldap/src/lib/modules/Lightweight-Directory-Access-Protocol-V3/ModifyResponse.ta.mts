@@ -38,7 +38,7 @@ let _cached_decoder_for_ModifyResponse: $.ASN1Decoder<ModifyResponse> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ModifyResponse} The decoded data structure.
  */
-export function _decode_ModifyResponse(el: _Element) {
+export function _decode_ModifyResponse(el: _Element): ModifyResponse {
   if (!_cached_decoder_for_ModifyResponse) {
     _cached_decoder_for_ModifyResponse = $._decode_implicit<ModifyResponse>(
       () => _decode_LDAPResult
@@ -61,7 +61,7 @@ let _cached_encoder_for_ModifyResponse: $.ASN1Encoder<ModifyResponse> | null = n
 export function _encode_ModifyResponse(
   value: ModifyResponse,
   elGetter: $.ASN1Encoder<ModifyResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_ModifyResponse) {
     _cached_encoder_for_ModifyResponse = $._encode_implicit(
       _TagClass.application,

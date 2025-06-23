@@ -32,7 +32,7 @@ export type LDAPOID = OCTET_STRING; // OctetStringType
  * @param {_Element} el The element being decoded.
  * @returns {LDAPOID} The decoded data structure.
  */
-export function _decode_LDAPOID(el: _Element) {
+export function _decode_LDAPOID(el: _Element): LDAPOID {
   return $._decodeOctetString(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_LDAPOID(el: _Element) {
 export function _encode_LDAPOID(
   value: LDAPOID,
   elGetter: $.ASN1Encoder<LDAPOID>
-) {
+): _Element {
   return $._encodeOctetString(value, elGetter);
 }
 

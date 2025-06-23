@@ -149,7 +149,7 @@ let _cached_decoder_for_BindRequest: $.ASN1Decoder<BindRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BindRequest} The decoded data structure.
  */
-export function _decode_BindRequest(el: _Element) {
+export function _decode_BindRequest(el: _Element): BindRequest {
   if (!_cached_decoder_for_BindRequest) {
     _cached_decoder_for_BindRequest = $._decode_implicit<BindRequest>(
       () =>
@@ -197,7 +197,7 @@ let _cached_encoder_for_BindRequest: $.ASN1Encoder<BindRequest> | null = null;
 export function _encode_BindRequest(
   value: BindRequest,
   elGetter: $.ASN1Encoder<BindRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_BindRequest) {
     _cached_encoder_for_BindRequest = $._encode_implicit(
       _TagClass.application,

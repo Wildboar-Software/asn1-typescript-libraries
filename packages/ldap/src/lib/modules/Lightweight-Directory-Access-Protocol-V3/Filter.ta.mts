@@ -74,7 +74,7 @@ let _cached_decoder_for_Filter: $.ASN1Decoder<Filter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Filter} The decoded data structure.
  */
-export function _decode_Filter(el: _Element) {
+export function _decode_Filter(el: _Element): Filter {
   if (!_cached_decoder_for_Filter) {
     _cached_decoder_for_Filter = $._decode_extensible_choice<Filter>({
       'CONTEXT 0': [
@@ -144,7 +144,7 @@ let _cached_encoder_for_Filter: $.ASN1Encoder<Filter> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Filter, encoded as an ASN.1 Element.
  */
-export function _encode_Filter(value: Filter, elGetter: $.ASN1Encoder<Filter>) {
+export function _encode_Filter(value: Filter, elGetter: $.ASN1Encoder<Filter>): _Element {
   if (!_cached_encoder_for_Filter) {
     _cached_encoder_for_Filter = $._encode_choice<Filter>(
       {

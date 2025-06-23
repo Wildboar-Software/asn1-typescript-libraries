@@ -38,7 +38,7 @@ let _cached_decoder_for_PartialAttributeList: $.ASN1Decoder<PartialAttributeList
  * @param {_Element} el The element being decoded.
  * @returns {PartialAttributeList} The decoded data structure.
  */
-export function _decode_PartialAttributeList(el: _Element) {
+export function _decode_PartialAttributeList(el: _Element): PartialAttributeList {
   if (!_cached_decoder_for_PartialAttributeList) {
     _cached_decoder_for_PartialAttributeList = $._decodeSequenceOf<PartialAttribute>(
       () => _decode_PartialAttribute
@@ -61,7 +61,7 @@ let _cached_encoder_for_PartialAttributeList: $.ASN1Encoder<PartialAttributeList
 export function _encode_PartialAttributeList(
   value: PartialAttributeList,
   elGetter: $.ASN1Encoder<PartialAttributeList>
-) {
+): _Element {
   if (!_cached_encoder_for_PartialAttributeList) {
     _cached_encoder_for_PartialAttributeList = $._encodeSequenceOf<PartialAttribute>(
       () => _encode_PartialAttribute,

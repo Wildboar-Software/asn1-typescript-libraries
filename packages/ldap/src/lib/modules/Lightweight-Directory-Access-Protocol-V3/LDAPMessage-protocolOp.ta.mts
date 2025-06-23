@@ -160,7 +160,7 @@ let _cached_decoder_for_LDAPMessage_protocolOp: $.ASN1Decoder<LDAPMessage_protoc
  * @param {_Element} el The element being decoded.
  * @returns {LDAPMessage_protocolOp} The decoded data structure.
  */
-export function _decode_LDAPMessage_protocolOp(el: _Element) {
+export function _decode_LDAPMessage_protocolOp(el: _Element): LDAPMessage_protocolOp {
   if (!_cached_decoder_for_LDAPMessage_protocolOp) {
     _cached_decoder_for_LDAPMessage_protocolOp = $._decode_extensible_choice<LDAPMessage_protocolOp>(
       {
@@ -208,7 +208,7 @@ let _cached_encoder_for_LDAPMessage_protocolOp: $.ASN1Encoder<LDAPMessage_protoc
 export function _encode_LDAPMessage_protocolOp(
   value: LDAPMessage_protocolOp,
   elGetter: $.ASN1Encoder<LDAPMessage_protocolOp>
-) {
+): _Element {
   if (!_cached_encoder_for_LDAPMessage_protocolOp) {
     _cached_encoder_for_LDAPMessage_protocolOp = $._encode_choice<LDAPMessage_protocolOp>(
       {

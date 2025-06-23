@@ -42,7 +42,7 @@ let _cached_decoder_for_SubstringFilter_substrings_substring: $.ASN1Decoder<Subs
  * @param {_Element} el The element being decoded.
  * @returns {SubstringFilter_substrings_substring} The decoded data structure.
  */
-export function _decode_SubstringFilter_substrings_substring(el: _Element) {
+export function _decode_SubstringFilter_substrings_substring(el: _Element): SubstringFilter_substrings_substring {
   if (!_cached_decoder_for_SubstringFilter_substrings_substring) {
     _cached_decoder_for_SubstringFilter_substrings_substring = $._decode_extensible_choice<SubstringFilter_substrings_substring>(
       {
@@ -78,7 +78,7 @@ let _cached_encoder_for_SubstringFilter_substrings_substring: $.ASN1Encoder<Subs
 export function _encode_SubstringFilter_substrings_substring(
   value: SubstringFilter_substrings_substring,
   elGetter: $.ASN1Encoder<SubstringFilter_substrings_substring>
-) {
+): _Element {
   if (!_cached_encoder_for_SubstringFilter_substrings_substring) {
     _cached_encoder_for_SubstringFilter_substrings_substring = $._encode_choice<SubstringFilter_substrings_substring>(
       {

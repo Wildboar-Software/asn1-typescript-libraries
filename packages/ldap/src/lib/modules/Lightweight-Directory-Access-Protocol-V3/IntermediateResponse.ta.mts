@@ -132,7 +132,7 @@ let _cached_decoder_for_IntermediateResponse: $.ASN1Decoder<IntermediateResponse
  * @param {_Element} el The element being decoded.
  * @returns {IntermediateResponse} The decoded data structure.
  */
-export function _decode_IntermediateResponse(el: _Element) {
+export function _decode_IntermediateResponse(el: _Element): IntermediateResponse {
   if (!_cached_decoder_for_IntermediateResponse) {
     _cached_decoder_for_IntermediateResponse = $._decode_implicit<IntermediateResponse>(
       () =>
@@ -187,7 +187,7 @@ let _cached_encoder_for_IntermediateResponse: $.ASN1Encoder<IntermediateResponse
 export function _encode_IntermediateResponse(
   value: IntermediateResponse,
   elGetter: $.ASN1Encoder<IntermediateResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_IntermediateResponse) {
     _cached_encoder_for_IntermediateResponse = $._encode_implicit(
       _TagClass.application,

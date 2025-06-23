@@ -210,7 +210,7 @@ export const _extension_additions_list_spec_for_LDAPResult: $.ComponentSpec[] = 
  * @param {_Element} el The element being decoded.
  * @returns {LDAPResult} The decoded data structure.
  */
-export function _decode_LDAPResult(el: _Element) {
+export function _decode_LDAPResult(el: _Element): LDAPResult {
     let resultCode!: LDAPResult_resultCode;
     let matchedDN!: LDAPDN;
     let diagnosticMessage!: LDAPString;
@@ -258,7 +258,8 @@ export function _decode_LDAPResult(el: _Element) {
  * @returns {_Element} The LDAPResult, encoded as an ASN.1 Element.
  */
 export function _encode_LDAPResult(
-  value: LDAPResult) {
+  value: LDAPResult
+): _Element {
     const components: _Element[] = [
         _encode_LDAPResult_resultCode(value.resultCode, $.BER),
         _encode_LDAPDN(value.matchedDN, $.BER),

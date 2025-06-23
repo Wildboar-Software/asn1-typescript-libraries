@@ -129,7 +129,7 @@ export const _extension_additions_list_spec_for_SaslCredentials: $.ComponentSpec
  * @param {_Element} el The element being decoded.
  * @returns {SaslCredentials} The decoded data structure.
  */
-export function _decode_SaslCredentials(el: _Element) {
+export function _decode_SaslCredentials(el: _Element): SaslCredentials {
     let mechanism!: LDAPString;
     let credentials: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
@@ -167,7 +167,8 @@ export function _decode_SaslCredentials(el: _Element) {
  * @returns {_Element} The SaslCredentials, encoded as an ASN.1 Element.
  */
 export function _encode_SaslCredentials(
-  value: SaslCredentials) {
+  value: SaslCredentials
+): _Element {
     const components: _Element[] = [
         _encode_LDAPString(value.mechanism, $.BER),
     ];

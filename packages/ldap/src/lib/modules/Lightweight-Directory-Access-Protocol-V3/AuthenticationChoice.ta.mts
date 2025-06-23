@@ -47,7 +47,7 @@ let _cached_decoder_for_AuthenticationChoice: $.ASN1Decoder<AuthenticationChoice
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticationChoice} The decoded data structure.
  */
-export function _decode_AuthenticationChoice(el: _Element) {
+export function _decode_AuthenticationChoice(el: _Element): AuthenticationChoice {
   if (!_cached_decoder_for_AuthenticationChoice) {
     _cached_decoder_for_AuthenticationChoice = $._decode_extensible_choice<AuthenticationChoice>(
       {
@@ -79,7 +79,7 @@ let _cached_encoder_for_AuthenticationChoice: $.ASN1Encoder<AuthenticationChoice
 export function _encode_AuthenticationChoice(
   value: AuthenticationChoice,
   elGetter: $.ASN1Encoder<AuthenticationChoice>
-) {
+): _Element {
   if (!_cached_encoder_for_AuthenticationChoice) {
     _cached_encoder_for_AuthenticationChoice = $._encode_choice<AuthenticationChoice>(
       {

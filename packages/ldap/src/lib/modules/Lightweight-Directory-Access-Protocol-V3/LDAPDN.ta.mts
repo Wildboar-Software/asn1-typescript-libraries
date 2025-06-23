@@ -38,7 +38,7 @@ export type LDAPDN = LDAPString; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {LDAPDN} The decoded data structure.
  */
-export function _decode_LDAPDN(el: _Element) {
+export function _decode_LDAPDN(el: _Element): LDAPDN {
   return _decode_LDAPString(el);
 }
 
@@ -50,7 +50,7 @@ export function _decode_LDAPDN(el: _Element) {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPDN, encoded as an ASN.1 Element.
  */
-export function _encode_LDAPDN(value: LDAPDN, elGetter: $.ASN1Encoder<LDAPDN>) {
+export function _encode_LDAPDN(value: LDAPDN, elGetter: $.ASN1Encoder<LDAPDN>): _Element {
   return _encode_LDAPString(value, elGetter);
 }
 

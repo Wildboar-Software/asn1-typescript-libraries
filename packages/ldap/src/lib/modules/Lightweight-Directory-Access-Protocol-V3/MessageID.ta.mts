@@ -32,7 +32,7 @@ export type MessageID = INTEGER;
  * @param {_Element} el The element being decoded.
  * @returns {MessageID} The decoded data structure.
  */
-export function _decode_MessageID(el: _Element) {
+export function _decode_MessageID(el: _Element): MessageID {
   return $._decodeInteger(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_MessageID(el: _Element) {
 export function _encode_MessageID(
   value: MessageID,
   elGetter: $.ASN1Encoder<MessageID>
-) {
+): _Element {
   return $._encodeInteger(value, elGetter);
 }
 

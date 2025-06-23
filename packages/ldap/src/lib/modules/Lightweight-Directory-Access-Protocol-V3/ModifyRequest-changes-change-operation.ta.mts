@@ -91,7 +91,7 @@ export const replace: ModifyRequest_changes_change_operation = ModifyRequest_cha
  * @param {_Element} el The element being decoded.
  * @returns {ModifyRequest_changes_change_operation} The decoded data structure.
  */
-export function _decode_ModifyRequest_changes_change_operation(el: _Element) {
+export function _decode_ModifyRequest_changes_change_operation(el: _Element): ModifyRequest_changes_change_operation {
   return $._decodeEnumerated(el);
 }
 
@@ -106,7 +106,7 @@ export function _decode_ModifyRequest_changes_change_operation(el: _Element) {
 export function _encode_ModifyRequest_changes_change_operation(
   value: ModifyRequest_changes_change_operation,
   elGetter: $.ASN1Encoder<ModifyRequest_changes_change_operation>
-) {
+): _Element {
   return $._encodeEnumerated(value, elGetter);
 }
 

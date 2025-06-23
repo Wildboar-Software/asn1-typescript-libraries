@@ -38,7 +38,7 @@ let _cached_decoder_for_CompareResponse: $.ASN1Decoder<CompareResponse> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CompareResponse} The decoded data structure.
  */
-export function _decode_CompareResponse(el: _Element) {
+export function _decode_CompareResponse(el: _Element): CompareResponse {
   if (!_cached_decoder_for_CompareResponse) {
     _cached_decoder_for_CompareResponse = $._decode_implicit<CompareResponse>(
       () => _decode_LDAPResult
@@ -61,7 +61,7 @@ let _cached_encoder_for_CompareResponse: $.ASN1Encoder<CompareResponse> | null =
 export function _encode_CompareResponse(
   value: CompareResponse,
   elGetter: $.ASN1Encoder<CompareResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_CompareResponse) {
     _cached_encoder_for_CompareResponse = $._encode_implicit(
       _TagClass.application,

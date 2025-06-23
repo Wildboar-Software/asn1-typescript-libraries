@@ -38,7 +38,7 @@ let _cached_decoder_for_AbandonRequest: $.ASN1Decoder<AbandonRequest> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AbandonRequest} The decoded data structure.
  */
-export function _decode_AbandonRequest(el: _Element) {
+export function _decode_AbandonRequest(el: _Element): AbandonRequest {
   if (!_cached_decoder_for_AbandonRequest) {
     _cached_decoder_for_AbandonRequest = $._decode_implicit<AbandonRequest>(
       () => _decode_MessageID
@@ -61,7 +61,7 @@ let _cached_encoder_for_AbandonRequest: $.ASN1Encoder<AbandonRequest> | null = n
 export function _encode_AbandonRequest(
   value: AbandonRequest,
   elGetter: $.ASN1Encoder<AbandonRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_AbandonRequest) {
     _cached_encoder_for_AbandonRequest = $._encode_implicit(
       _TagClass.application,

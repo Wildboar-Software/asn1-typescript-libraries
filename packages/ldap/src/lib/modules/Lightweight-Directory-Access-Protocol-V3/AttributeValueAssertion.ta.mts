@@ -132,7 +132,7 @@ export const _extension_additions_list_spec_for_AttributeValueAssertion: $.Compo
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValueAssertion} The decoded data structure.
  */
-export function _decode_AttributeValueAssertion(el: _Element) {
+export function _decode_AttributeValueAssertion(el: _Element): AttributeValueAssertion {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(
@@ -165,7 +165,7 @@ export function _decode_AttributeValueAssertion(el: _Element) {
 export function _encode_AttributeValueAssertion(
   value: AttributeValueAssertion,
   _elGetter: $.ASN1Encoder<AttributeValueAssertion>
-) {
+): _Element {
     const components: _Element[] = [
         _encode_AttributeDescription(value.attributeDesc, $.BER),
         _encode_AssertionValue(value.assertionValue, $.BER),

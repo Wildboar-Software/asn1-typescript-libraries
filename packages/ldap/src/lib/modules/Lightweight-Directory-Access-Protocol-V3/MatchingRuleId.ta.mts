@@ -35,7 +35,7 @@ export type MatchingRuleId = LDAPString; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {MatchingRuleId} The decoded data structure.
  */
-export function _decode_MatchingRuleId(el: _Element) {
+export function _decode_MatchingRuleId(el: _Element): MatchingRuleId {
   return _decode_LDAPString(el);
 }
 
@@ -50,7 +50,7 @@ export function _decode_MatchingRuleId(el: _Element) {
 export function _encode_MatchingRuleId(
   value: MatchingRuleId,
   elGetter: $.ASN1Encoder<MatchingRuleId>
-) {
+): _Element {
   return _encode_LDAPString(value, elGetter);
 }
 

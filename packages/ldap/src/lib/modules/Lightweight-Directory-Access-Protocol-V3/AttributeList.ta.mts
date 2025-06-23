@@ -38,7 +38,7 @@ let _cached_decoder_for_AttributeList: $.ASN1Decoder<AttributeList> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AttributeList} The decoded data structure.
  */
-export function _decode_AttributeList(el: _Element) {
+export function _decode_AttributeList(el: _Element): AttributeList {
   if (!_cached_decoder_for_AttributeList) {
     _cached_decoder_for_AttributeList = $._decodeSequenceOf<Attribute>(
       () => _decode_Attribute
@@ -61,7 +61,7 @@ let _cached_encoder_for_AttributeList: $.ASN1Encoder<AttributeList> | null = nul
 export function _encode_AttributeList(
   value: AttributeList,
   elGetter: $.ASN1Encoder<AttributeList>
-) {
+): _Element {
   if (!_cached_encoder_for_AttributeList) {
     _cached_encoder_for_AttributeList = $._encodeSequenceOf<Attribute>(
       () => _encode_Attribute,

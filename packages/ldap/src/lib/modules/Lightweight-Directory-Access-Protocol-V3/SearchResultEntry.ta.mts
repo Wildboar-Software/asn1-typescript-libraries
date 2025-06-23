@@ -134,7 +134,7 @@ export const _extension_additions_list_spec_for_SearchResultEntry: $.ComponentSp
  * @param {_Element} el The element being decoded.
  * @returns {SearchResultEntry} The decoded data structure.
  */
-export function _decode_SearchResultEntry(el: _Element) {
+export function _decode_SearchResultEntry(el: _Element): SearchResultEntry {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(
@@ -165,7 +165,8 @@ export function _decode_SearchResultEntry(el: _Element) {
  * @returns {_Element} The SearchResultEntry, encoded as an ASN.1 Element.
  */
 export function _encode_SearchResultEntry(
-  value: SearchResultEntry) {
+  value: SearchResultEntry
+): _Element {
     const attrsEl = _encode_PartialAttributeList(value.attributes, $.BER);
     attrsEl.tagClass = ASN1TagClass.universal;
     attrsEl.tagNumber = ASN1UniversalType.sequence;

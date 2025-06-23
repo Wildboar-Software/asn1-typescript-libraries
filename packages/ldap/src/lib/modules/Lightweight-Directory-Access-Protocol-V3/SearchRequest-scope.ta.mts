@@ -89,7 +89,7 @@ export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtre
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest_scope} The decoded data structure.
  */
-export function _decode_SearchRequest_scope(el: _Element) {
+export function _decode_SearchRequest_scope(el: _Element): SearchRequest_scope {
   return $._decodeEnumerated(el);
 }
 
@@ -104,7 +104,7 @@ export function _decode_SearchRequest_scope(el: _Element) {
 export function _encode_SearchRequest_scope(
   value: SearchRequest_scope,
   elGetter: $.ASN1Encoder<SearchRequest_scope>
-) {
+): _Element {
   return $._encodeEnumerated(value, elGetter);
 }
 

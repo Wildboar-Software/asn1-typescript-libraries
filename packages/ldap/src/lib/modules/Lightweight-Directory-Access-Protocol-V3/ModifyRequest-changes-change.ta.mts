@@ -140,7 +140,7 @@ export const _extension_additions_list_spec_for_ModifyRequest_changes_change: $.
  * @param {_Element} el The element being decoded.
  * @returns {ModifyRequest_changes_change} The decoded data structure.
  */
-export function _decode_ModifyRequest_changes_change(el: _Element) {
+export function _decode_ModifyRequest_changes_change(el: _Element): ModifyRequest_changes_change {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(
@@ -171,7 +171,8 @@ export function _decode_ModifyRequest_changes_change(el: _Element) {
  * @returns {_Element} The ModifyRequest_changes_change, encoded as an ASN.1 Element.
  */
 export function _encode_ModifyRequest_changes_change(
-  value: ModifyRequest_changes_change) {
+  value: ModifyRequest_changes_change
+): _Element {
     const components: _Element[] = [
         _encode_ModifyRequest_changes_change_operation(value.operation, $.BER),
         _encode_PartialAttribute(value.modification, $.BER),

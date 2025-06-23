@@ -140,7 +140,7 @@ export const derefAlways: SearchRequest_derefAliases =
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest_derefAliases} The decoded data structure.
  */
-export function _decode_SearchRequest_derefAliases(el: _Element) {
+export function _decode_SearchRequest_derefAliases(el: _Element): SearchRequest_derefAliases {
   return $._decodeEnumerated(el);
 }
 
@@ -155,7 +155,7 @@ export function _decode_SearchRequest_derefAliases(el: _Element) {
 export function _encode_SearchRequest_derefAliases(
   value: SearchRequest_derefAliases,
   elGetter: $.ASN1Encoder<SearchRequest_derefAliases>
-) {
+): _Element {
   return $._encodeEnumerated(value, elGetter);
 }
 

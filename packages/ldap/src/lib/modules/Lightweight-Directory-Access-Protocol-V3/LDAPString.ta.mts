@@ -32,7 +32,7 @@ export type LDAPString = OCTET_STRING; // OctetStringType
  * @param {_Element} el The element being decoded.
  * @returns {LDAPString} The decoded data structure.
  */
-export function _decode_LDAPString(el: _Element) {
+export function _decode_LDAPString(el: _Element): LDAPString {
   return $._decodeOctetString(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_LDAPString(el: _Element) {
 export function _encode_LDAPString(
   value: LDAPString,
   elGetter: $.ASN1Encoder<LDAPString>
-) {
+): _Element {
   return $._encodeOctetString(value, elGetter);
 }
 

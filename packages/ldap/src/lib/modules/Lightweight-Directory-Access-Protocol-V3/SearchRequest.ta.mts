@@ -247,7 +247,7 @@ let _cached_decoder_for_SearchRequest: $.ASN1Decoder<SearchRequest> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest} The decoded data structure.
  */
-export function _decode_SearchRequest(el: _Element) {
+export function _decode_SearchRequest(el: _Element): SearchRequest {
   if (!_cached_decoder_for_SearchRequest) {
     _cached_decoder_for_SearchRequest = $._decode_implicit<SearchRequest>(
       () =>
@@ -315,7 +315,7 @@ let _cached_encoder_for_SearchRequest: $.ASN1Encoder<SearchRequest> | null = nul
 export function _encode_SearchRequest(
   value: SearchRequest,
   elGetter: $.ASN1Encoder<SearchRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_SearchRequest) {
     _cached_encoder_for_SearchRequest = $._encode_implicit(
       _TagClass.application,

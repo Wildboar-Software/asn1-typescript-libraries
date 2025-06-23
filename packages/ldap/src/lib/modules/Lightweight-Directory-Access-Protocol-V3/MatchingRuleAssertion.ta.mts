@@ -109,7 +109,7 @@ export class MatchingRuleAssertion {
    * @static
    * @method
    */
-  public static get _default_value_for_dnAttributes() {
+  public static get _default_value_for_dnAttributes(): BOOLEAN {
     return false;
   }
 }
@@ -175,7 +175,7 @@ export const _extension_additions_list_spec_for_MatchingRuleAssertion: $.Compone
  * @param {_Element} el The element being decoded.
  * @returns {MatchingRuleAssertion} The decoded data structure.
  */
-export function _decode_MatchingRuleAssertion(el: _Element) {
+export function _decode_MatchingRuleAssertion(el: _Element): MatchingRuleAssertion {
     let matchingRule: OPTIONAL<MatchingRuleId>;
     let type_: OPTIONAL<AttributeDescription>;
     let matchValue!: AssertionValue;
@@ -232,7 +232,8 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
  * @returns {_Element} The MatchingRuleAssertion, encoded as an ASN.1 Element.
  */
 export function _encode_MatchingRuleAssertion(
-  value: MatchingRuleAssertion) {
+  value: MatchingRuleAssertion
+): _Element {
     const components: _Element[] = [];
     if (value.matchingRule) {
         const c = $._encode_implicit(

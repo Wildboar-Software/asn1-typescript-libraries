@@ -92,7 +92,7 @@ export class Control {
    * @static
    * @method
    */
-  public static get _default_value_for_criticality() {
+  public static get _default_value_for_criticality(): BOOLEAN {
     return false;
   }
 }
@@ -153,7 +153,7 @@ export const _extension_additions_list_spec_for_Control: $.ComponentSpec[] = [];
  * @param {_Element} el The element being decoded.
  * @returns {Control} The decoded data structure.
  */
-export function _decode_Control(el: _Element) {
+export function _decode_Control(el: _Element): Control {
     let controlType!: LDAPOID;
     let criticality: OPTIONAL<BOOLEAN> = Control._default_value_for_criticality;
     let controlValue: OPTIONAL<OCTET_STRING>;
@@ -198,7 +198,8 @@ export function _decode_Control(el: _Element) {
  * @returns {_Element} The Control, encoded as an ASN.1 Element.
  */
 export function _encode_Control(
-  value: Control) {
+  value: Control
+): _Element {
     const components: _Element[] = [
         _encode_LDAPOID(value.controlType, $.BER),
     ];

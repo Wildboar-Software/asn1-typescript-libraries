@@ -38,7 +38,7 @@ let _cached_decoder_for_DelResponse: $.ASN1Decoder<DelResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DelResponse} The decoded data structure.
  */
-export function _decode_DelResponse(el: _Element) {
+export function _decode_DelResponse(el: _Element): DelResponse {
   if (!_cached_decoder_for_DelResponse) {
     _cached_decoder_for_DelResponse = $._decode_implicit<DelResponse>(
       () => _decode_LDAPResult
@@ -61,7 +61,7 @@ let _cached_encoder_for_DelResponse: $.ASN1Encoder<DelResponse> | null = null;
 export function _encode_DelResponse(
   value: DelResponse,
   elGetter: $.ASN1Encoder<DelResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_DelResponse) {
     _cached_encoder_for_DelResponse = $._encode_implicit(
       _TagClass.application,

@@ -136,7 +136,7 @@ export const _extension_additions_list_spec_for_SubstringFilter: $.ComponentSpec
  * @param {_Element} el The element being decoded.
  * @returns {SubstringFilter} The decoded data structure.
  */
-export function _decode_SubstringFilter(el: _Element) {
+export function _decode_SubstringFilter(el: _Element): SubstringFilter {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(
@@ -165,7 +165,8 @@ export function _decode_SubstringFilter(el: _Element) {
  * @returns {_Element} The SubstringFilter, encoded as an ASN.1 Element.
  */
 export function _encode_SubstringFilter(
-  value: SubstringFilter) {
+  value: SubstringFilter
+): _Element {
     const components: _Element[] = [
         _encode_AttributeDescription(value.type_, $.BER),
         $._encodeSequenceOf<SubstringFilter_substrings_substring>(

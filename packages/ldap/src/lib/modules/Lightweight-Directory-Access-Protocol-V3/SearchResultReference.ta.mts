@@ -38,7 +38,7 @@ let _cached_decoder_for_SearchResultReference: $.ASN1Decoder<SearchResultReferen
  * @param {_Element} el The element being decoded.
  * @returns {SearchResultReference} The decoded data structure.
  */
-export function _decode_SearchResultReference(el: _Element) {
+export function _decode_SearchResultReference(el: _Element): SearchResultReference {
   if (!_cached_decoder_for_SearchResultReference) {
     _cached_decoder_for_SearchResultReference = $._decode_implicit<SearchResultReference>(
       () => $._decodeSequenceOf<URI>(() => _decode_URI)
@@ -61,7 +61,7 @@ let _cached_encoder_for_SearchResultReference: $.ASN1Encoder<SearchResultReferen
 export function _encode_SearchResultReference(
   value: SearchResultReference,
   elGetter: $.ASN1Encoder<SearchResultReference>
-) {
+): _Element {
   if (!_cached_encoder_for_SearchResultReference) {
     _cached_encoder_for_SearchResultReference = $._encode_implicit(
       _TagClass.application,

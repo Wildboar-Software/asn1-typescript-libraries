@@ -136,7 +136,7 @@ export const _extension_additions_list_spec_for_PartialAttribute: $.ComponentSpe
  * @param {_Element} el The element being decoded.
  * @returns {PartialAttribute} The decoded data structure.
  */
-export function _decode_PartialAttribute(el: _Element) {
+export function _decode_PartialAttribute(el: _Element): PartialAttribute {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
         throw new _ConstructionError(
@@ -165,7 +165,7 @@ export function _decode_PartialAttribute(el: _Element) {
 export function _encode_PartialAttribute(
   value: PartialAttribute,
   _elGetter: $.ASN1Encoder<PartialAttribute>
-) {
+): _Element {
     const vals = value.vals.map((v) => _encode_AttributeValue(v, $.BER));
     const valsEl = new BERElement(
         ASN1TagClass.universal,

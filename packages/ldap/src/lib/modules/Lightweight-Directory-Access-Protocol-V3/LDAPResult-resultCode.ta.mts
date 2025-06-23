@@ -703,7 +703,7 @@ export const other: LDAPResult_resultCode = LDAPResult_resultCode_other; /* SHOR
  * @param {_Element} el The element being decoded.
  * @returns {LDAPResult_resultCode} The decoded data structure.
  */
-export function _decode_LDAPResult_resultCode(el: _Element) {
+export function _decode_LDAPResult_resultCode(el: _Element): LDAPResult_resultCode {
   return $._decodeEnumerated(el);
 }
 
@@ -718,7 +718,7 @@ export function _decode_LDAPResult_resultCode(el: _Element) {
 export function _encode_LDAPResult_resultCode(
   value: LDAPResult_resultCode,
   elGetter: $.ASN1Encoder<LDAPResult_resultCode>
-) {
+): _Element {
   return $._encodeEnumerated(value, elGetter);
 }
 

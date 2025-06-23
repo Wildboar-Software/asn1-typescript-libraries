@@ -35,7 +35,7 @@ let _cached_decoder_for_UnbindRequest: $.ASN1Decoder<UnbindRequest> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {UnbindRequest} The decoded data structure.
  */
-export function _decode_UnbindRequest(el: _Element) {
+export function _decode_UnbindRequest(el: _Element): UnbindRequest {
   if (!_cached_decoder_for_UnbindRequest) {
     _cached_decoder_for_UnbindRequest = $._decode_implicit<UnbindRequest>(
       () => $._decodeNull
@@ -58,7 +58,7 @@ let _cached_encoder_for_UnbindRequest: $.ASN1Encoder<UnbindRequest> | null = nul
 export function _encode_UnbindRequest(
   value: UnbindRequest,
   elGetter: $.ASN1Encoder<UnbindRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_UnbindRequest) {
     _cached_encoder_for_UnbindRequest = $._encode_implicit(
       _TagClass.application,

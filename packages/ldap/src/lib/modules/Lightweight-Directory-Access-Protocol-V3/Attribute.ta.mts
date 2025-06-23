@@ -38,7 +38,7 @@ export type Attribute = PartialAttribute; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {Attribute} The decoded data structure.
  */
-export function _decode_Attribute(el: _Element) {
+export function _decode_Attribute(el: _Element): Attribute {
   return _decode_PartialAttribute(el);
 }
 
@@ -53,7 +53,7 @@ export function _decode_Attribute(el: _Element) {
 export function _encode_Attribute(
   value: Attribute,
   elGetter: $.ASN1Encoder<Attribute>
-) {
+): _Element {
   return _encode_PartialAttribute(value, elGetter);
 }
 

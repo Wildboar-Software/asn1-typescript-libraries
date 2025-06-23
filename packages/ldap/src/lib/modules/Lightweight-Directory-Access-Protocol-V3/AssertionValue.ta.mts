@@ -32,7 +32,7 @@ export type AssertionValue = OCTET_STRING; // OctetStringType
  * @param {_Element} el The element being decoded.
  * @returns {AssertionValue} The decoded data structure.
  */
-export function _decode_AssertionValue(el: _Element) {
+export function _decode_AssertionValue(el: _Element): AssertionValue {
   return $._decodeOctetString(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_AssertionValue(el: _Element) {
 export function _encode_AssertionValue(
   value: AssertionValue,
   elGetter: $.ASN1Encoder<AssertionValue>
-) {
+): _Element {
   return $._encodeOctetString(value, elGetter);
 }
 

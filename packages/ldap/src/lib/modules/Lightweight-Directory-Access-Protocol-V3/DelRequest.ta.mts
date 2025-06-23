@@ -28,9 +28,7 @@ import {
  */
 export type DelRequest = LDAPDN; // DefinedType
 
-
 let _cached_decoder_for_DelRequest: $.ASN1Decoder<DelRequest> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DelRequest
@@ -38,7 +36,7 @@ let _cached_decoder_for_DelRequest: $.ASN1Decoder<DelRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DelRequest} The decoded data structure.
  */
-export function _decode_DelRequest(el: _Element) {
+export function _decode_DelRequest(el: _Element): DelRequest {
   if (!_cached_decoder_for_DelRequest) {
     _cached_decoder_for_DelRequest = $._decode_implicit<DelRequest>(
       () => _decode_LDAPDN
@@ -47,9 +45,7 @@ export function _decode_DelRequest(el: _Element) {
   return _cached_decoder_for_DelRequest(el);
 }
 
-
 let _cached_encoder_for_DelRequest: $.ASN1Encoder<DelRequest> | null = null;
-
 
 /**
  * @summary Encodes a(n) DelRequest into an ASN.1 Element.
@@ -61,7 +57,7 @@ let _cached_encoder_for_DelRequest: $.ASN1Encoder<DelRequest> | null = null;
 export function _encode_DelRequest(
   value: DelRequest,
   elGetter: $.ASN1Encoder<DelRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_DelRequest) {
     _cached_encoder_for_DelRequest = $._encode_implicit(
       _TagClass.application,
@@ -72,6 +68,5 @@ export function _encode_DelRequest(
   }
   return _cached_encoder_for_DelRequest(value, elGetter);
 }
-
 
 /* eslint-enable */

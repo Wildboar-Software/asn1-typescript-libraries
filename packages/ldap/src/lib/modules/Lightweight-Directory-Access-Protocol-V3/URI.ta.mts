@@ -35,7 +35,7 @@ export type URI = LDAPString; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {URI} The decoded data structure.
  */
-export function _decode_URI(el: _Element) {
+export function _decode_URI(el: _Element): URI {
   return _decode_LDAPString(el);
 }
 
@@ -47,7 +47,7 @@ export function _decode_URI(el: _Element) {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>) {
+export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>): _Element {
   return _encode_LDAPString(value, elGetter);
 }
 

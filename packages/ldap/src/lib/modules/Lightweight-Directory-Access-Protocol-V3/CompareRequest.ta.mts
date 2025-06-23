@@ -131,7 +131,7 @@ let _cached_decoder_for_CompareRequest: $.ASN1Decoder<CompareRequest> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CompareRequest} The decoded data structure.
  */
-export function _decode_CompareRequest(el: _Element) {
+export function _decode_CompareRequest(el: _Element): CompareRequest {
   if (!_cached_decoder_for_CompareRequest) {
     _cached_decoder_for_CompareRequest = $._decode_implicit<CompareRequest>(
       () =>
@@ -171,7 +171,7 @@ let _cached_encoder_for_CompareRequest: $.ASN1Encoder<CompareRequest> | null = n
 export function _encode_CompareRequest(
   value: CompareRequest,
   elGetter: $.ASN1Encoder<CompareRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_CompareRequest) {
     _cached_encoder_for_CompareRequest = $._encode_implicit(
       _TagClass.application,

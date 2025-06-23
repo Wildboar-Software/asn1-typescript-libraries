@@ -132,7 +132,7 @@ let _cached_decoder_for_ExtendedRequest: $.ASN1Decoder<ExtendedRequest> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedRequest} The decoded data structure.
  */
-export function _decode_ExtendedRequest(el: _Element) {
+export function _decode_ExtendedRequest(el: _Element): ExtendedRequest {
   if (!_cached_decoder_for_ExtendedRequest) {
     _cached_decoder_for_ExtendedRequest = $._decode_implicit<ExtendedRequest>(
       () =>
@@ -187,7 +187,7 @@ let _cached_encoder_for_ExtendedRequest: $.ASN1Encoder<ExtendedRequest> | null =
 export function _encode_ExtendedRequest(
   value: ExtendedRequest,
   elGetter: $.ASN1Encoder<ExtendedRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_ExtendedRequest) {
     _cached_encoder_for_ExtendedRequest = $._encode_implicit(
       _TagClass.application,

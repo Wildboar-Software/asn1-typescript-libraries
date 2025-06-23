@@ -169,7 +169,7 @@ export const _extension_additions_list_spec_for_LDAPMessage: $.ComponentSpec[] =
  * @param {_Element} el The element being decoded.
  * @returns {LDAPMessage} The decoded data structure.
  */
-export function _decode_LDAPMessage(el: _Element) {
+export function _decode_LDAPMessage(el: _Element): LDAPMessage {
     let messageID!: MessageID;
     let protocolOp!: LDAPMessage_protocolOp;
     let controls: OPTIONAL<Controls>;
@@ -214,7 +214,7 @@ export function _decode_LDAPMessage(el: _Element) {
 export function _encode_LDAPMessage(
   value: LDAPMessage,
   _elGetter: $.ASN1Encoder<LDAPMessage>
-) {
+): _Element {
     const components: _Element[] = [
         _encode_MessageID(value.messageID, $.BER),
         _encode_LDAPMessage_protocolOp(value.protocolOp, $.BER),

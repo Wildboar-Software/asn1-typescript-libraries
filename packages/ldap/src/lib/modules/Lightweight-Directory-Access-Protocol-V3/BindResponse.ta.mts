@@ -181,7 +181,7 @@ let _cached_decoder_for_BindResponse: $.ASN1Decoder<BindResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BindResponse} The decoded data structure.
  */
-export function _decode_BindResponse(el: _Element) {
+export function _decode_BindResponse(el: _Element): BindResponse {
   if (!_cached_decoder_for_BindResponse) {
     _cached_decoder_for_BindResponse = $._decode_implicit<BindResponse>(
       () =>
@@ -251,7 +251,7 @@ let _cached_encoder_for_BindResponse: $.ASN1Encoder<BindResponse> | null = null;
 export function _encode_BindResponse(
   value: BindResponse,
   elGetter: $.ASN1Encoder<BindResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_BindResponse) {
     _cached_encoder_for_BindResponse = $._encode_implicit(
       _TagClass.application,

@@ -38,7 +38,7 @@ let _cached_decoder_for_Referral: $.ASN1Decoder<Referral> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Referral} The decoded data structure.
  */
-export function _decode_Referral(el: _Element) {
+export function _decode_Referral(el: _Element): Referral {
   if (!_cached_decoder_for_Referral) {
     _cached_decoder_for_Referral = $._decodeSequenceOf<URI>(() => _decode_URI);
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Referral: $.ASN1Encoder<Referral> | null = null;
 export function _encode_Referral(
   value: Referral,
   elGetter: $.ASN1Encoder<Referral>
-) {
+): _Element {
   if (!_cached_encoder_for_Referral) {
     _cached_encoder_for_Referral = $._encodeSequenceOf<URI>(
       () => _encode_URI,

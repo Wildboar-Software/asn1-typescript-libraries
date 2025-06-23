@@ -38,7 +38,7 @@ let _cached_decoder_for_SearchResultDone: $.ASN1Decoder<SearchResultDone> | null
  * @param {_Element} el The element being decoded.
  * @returns {SearchResultDone} The decoded data structure.
  */
-export function _decode_SearchResultDone(el: _Element) {
+export function _decode_SearchResultDone(el: _Element): SearchResultDone {
   if (!_cached_decoder_for_SearchResultDone) {
     _cached_decoder_for_SearchResultDone = $._decode_implicit<SearchResultDone>(
       () => _decode_LDAPResult
@@ -61,7 +61,7 @@ let _cached_encoder_for_SearchResultDone: $.ASN1Encoder<SearchResultDone> | null
 export function _encode_SearchResultDone(
   value: SearchResultDone,
   elGetter: $.ASN1Encoder<SearchResultDone>
-) {
+): _Element {
   if (!_cached_encoder_for_SearchResultDone) {
     _cached_encoder_for_SearchResultDone = $._encode_implicit(
       _TagClass.application,

@@ -139,7 +139,7 @@ let _cached_decoder_for_ModifyRequest: $.ASN1Decoder<ModifyRequest> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ModifyRequest} The decoded data structure.
  */
-export function _decode_ModifyRequest(el: _Element) {
+export function _decode_ModifyRequest(el: _Element): ModifyRequest {
   if (!_cached_decoder_for_ModifyRequest) {
     _cached_decoder_for_ModifyRequest = $._decode_implicit<ModifyRequest>(
       () =>
@@ -181,7 +181,7 @@ let _cached_encoder_for_ModifyRequest: $.ASN1Encoder<ModifyRequest> | null = nul
 export function _encode_ModifyRequest(
   value: ModifyRequest,
   elGetter: $.ASN1Encoder<ModifyRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_ModifyRequest) {
     _cached_encoder_for_ModifyRequest = $._encode_implicit(
       _TagClass.application,

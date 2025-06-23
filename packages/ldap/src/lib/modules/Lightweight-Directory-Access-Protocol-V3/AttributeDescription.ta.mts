@@ -35,7 +35,7 @@ export type AttributeDescription = LDAPString; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {AttributeDescription} The decoded data structure.
  */
-export function _decode_AttributeDescription(el: _Element) {
+export function _decode_AttributeDescription(el: _Element): AttributeDescription {
   return _decode_LDAPString(el);
 }
 
@@ -50,7 +50,7 @@ export function _decode_AttributeDescription(el: _Element) {
 export function _encode_AttributeDescription(
   value: AttributeDescription,
   elGetter: $.ASN1Encoder<AttributeDescription>
-) {
+): _Element {
   return _encode_LDAPString(value, elGetter);
 }
 
