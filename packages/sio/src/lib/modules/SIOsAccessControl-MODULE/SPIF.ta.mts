@@ -265,7 +265,6 @@ let _cached_decoder_for_SPIF: $.ASN1Decoder<SPIF> | null = null;
 export function _decode_SPIF(el: _Element) {
     if (!_cached_decoder_for_SPIF) {
         _cached_decoder_for_SPIF = function (el: _Element): SPIF {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let versionInformation: OPTIONAL<VersionInformationData> =
                 SPIF._default_value_for_versionInformation;
             let updateInformation!: UpdateInformationData;
@@ -277,8 +276,6 @@ export function _decode_SPIF(el: _Element) {
             let equivalentPolicies: OPTIONAL<EquivalentPolicies>;
             let defaultSecurityPolicyIdData: OPTIONAL<ObjectIdData>;
             let extensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 versionInformation: (_el: _Element): void => {
                     versionInformation = _decode_VersionInformationData(_el);
@@ -321,7 +318,6 @@ export function _decode_SPIF(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -330,7 +326,7 @@ export function _decode_SPIF(el: _Element) {
                 _root_component_type_list_2_spec_for_SPIF,
                 undefined
             );
-            return new SPIF /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SPIF (
                 versionInformation,
                 updateInformation,
                 securityPolicyIdData,

@@ -256,7 +256,6 @@ export function _decode_Authenticator(el: _Element) {
     _cached_decoder_for_Authenticator = $._decode_implicit<Authenticator>(
       () =>
         function (el: _Element): Authenticator {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let authenticator_vno!: INTEGER;
           let crealm!: Realm;
           let cname!: PrincipalName;
@@ -266,8 +265,6 @@ export function _decode_Authenticator(el: _Element) {
           let subkey: OPTIONAL<EncryptionKey>;
           let seq_number: OPTIONAL<UInt32>;
           let authorization_data: OPTIONAL<AuthorizationData>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'authenticator-vno': (_el: _Element): void => {
               authenticator_vno = $._decode_explicit<INTEGER>(
@@ -311,7 +308,6 @@ export function _decode_Authenticator(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -320,7 +316,7 @@ export function _decode_Authenticator(el: _Element) {
             _root_component_type_list_2_spec_for_Authenticator,
             undefined
           );
-          return new Authenticator /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new Authenticator (
             authenticator_vno,
             crealm,
             cname,

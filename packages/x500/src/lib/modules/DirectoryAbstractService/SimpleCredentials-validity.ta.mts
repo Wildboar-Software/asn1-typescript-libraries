@@ -154,7 +154,6 @@ export function _decode_SimpleCredentials_validity(el: _Element) {
             let random1: OPTIONAL<BIT_STRING>;
             let random2: OPTIONAL<BIT_STRING>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 time1: (_el: _Element): void => {
                     time1 = $._decode_explicit<SimpleCredentials_validity_time1>(
@@ -177,7 +176,6 @@ export function _decode_SimpleCredentials_validity(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

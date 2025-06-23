@@ -137,12 +137,9 @@ export function _decode_AutoActionDeregistration(el: _Element) {
         _cached_decoder_for_AutoActionDeregistration = function (
             el: _Element
         ): AutoActionDeregistration {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let auto_action_type!: AutoActionType;
             let registration_identifier: OPTIONAL<INTEGER> =
                 AutoActionDeregistration._default_value_for_registration_identifier;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-action-type': (_el: _Element): void => {
                     auto_action_type = _decode_AutoActionType(_el);
@@ -153,7 +150,6 @@ export function _decode_AutoActionDeregistration(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -162,7 +158,7 @@ export function _decode_AutoActionDeregistration(el: _Element) {
                 _root_component_type_list_2_spec_for_AutoActionDeregistration,
                 undefined
             );
-            return new AutoActionDeregistration /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AutoActionDeregistration (
                 auto_action_type,
                 registration_identifier
             );

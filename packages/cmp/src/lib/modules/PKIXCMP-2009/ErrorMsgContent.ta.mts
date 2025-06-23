@@ -146,12 +146,9 @@ export function _decode_ErrorMsgContent(el: _Element) {
     _cached_decoder_for_ErrorMsgContent = function (
       el: _Element
     ): ErrorMsgContent {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let pKIStatusInfo!: PKIStatusInfo;
       let errorCode: OPTIONAL<INTEGER>;
       let errorDetails: OPTIONAL<PKIFreeText>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         pKIStatusInfo: (_el: _Element): void => {
           pKIStatusInfo = _decode_PKIStatusInfo(_el);
@@ -163,7 +160,6 @@ export function _decode_ErrorMsgContent(el: _Element) {
           errorDetails = _decode_PKIFreeText(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -172,7 +168,7 @@ export function _decode_ErrorMsgContent(el: _Element) {
         _root_component_type_list_2_spec_for_ErrorMsgContent,
         undefined
       );
-      return new ErrorMsgContent /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ErrorMsgContent (
         pKIStatusInfo,
         errorCode,
         errorDetails

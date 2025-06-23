@@ -228,7 +228,6 @@ export function _decode_IPMAutoAdviseRegistrationParameter(el: _Element) {
                 IPMAutoAdviseRegistrationParameter._default_value_for_use_ipm_if_an_not_supported;
             let submission_options: OPTIONAL<MSSubmissionOptions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 enabled: (_el: _Element): void => {
                     enabled = $._decode_explicit<BOOLEAN>(
@@ -264,7 +263,6 @@ export function _decode_IPMAutoAdviseRegistrationParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

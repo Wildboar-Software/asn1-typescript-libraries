@@ -156,13 +156,10 @@ let _cached_decoder_for_SCVPCertID: $.ASN1Decoder<SCVPCertID> | null = null;
 export function _decode_SCVPCertID(el: _Element) {
   if (!_cached_decoder_for_SCVPCertID) {
     _cached_decoder_for_SCVPCertID = function (el: _Element): SCVPCertID {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let certHash!: OCTET_STRING;
       let issuerSerial!: SCVPIssuerSerial;
       let hashAlgorithm: OPTIONAL<HashAlgorithm> =
         SCVPCertID._default_value_for_hashAlgorithm;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         certHash: (_el: _Element): void => {
           certHash = $._decodeOctetString(_el);
@@ -174,7 +171,6 @@ export function _decode_SCVPCertID(el: _Element) {
           hashAlgorithm = _decode_HashAlgorithm(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -183,7 +179,7 @@ export function _decode_SCVPCertID(el: _Element) {
         _root_component_type_list_2_spec_for_SCVPCertID,
         undefined
       );
-      return new SCVPCertID /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SCVPCertID (
         certHash,
         issuerSerial,
         hashAlgorithm

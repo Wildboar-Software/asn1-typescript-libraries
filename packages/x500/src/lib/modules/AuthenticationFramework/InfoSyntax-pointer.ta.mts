@@ -131,12 +131,9 @@ export function _decode_InfoSyntax_pointer(el: _Element) {
         _cached_decoder_for_InfoSyntax_pointer = function (
             el: _Element
         ): InfoSyntax_pointer {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: GeneralNames;
             let hash: OPTIONAL<HASH<HashedPolicyInfo>>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = _decode_GeneralNames(_el);
@@ -147,7 +144,6 @@ export function _decode_InfoSyntax_pointer(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_InfoSyntax_pointer(el: _Element) {
                 }
             );
             return new InfoSyntax_pointer(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ name,
+                name,
                 hash,
                 _unrecognizedExtensionsList
             );

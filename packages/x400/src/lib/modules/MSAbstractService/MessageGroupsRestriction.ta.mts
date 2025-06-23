@@ -166,7 +166,6 @@ export function _decode_MessageGroupsRestriction(el: _Element) {
             let omit_descriptors: OPTIONAL<BOOLEAN> =
                 MessageGroupsRestriction._default_value_for_omit_descriptors;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'parent-group': (_el: _Element): void => {
                     parent_group = $._decode_explicit<MessageGroupName>(
@@ -184,7 +183,6 @@ export function _decode_MessageGroupsRestriction(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

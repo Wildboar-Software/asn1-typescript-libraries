@@ -123,11 +123,8 @@ export function _decode_PrivAssignRequest(el: _Element) {
         _cached_decoder_for_PrivAssignRequest = function (
             el: _Element
         ): PrivAssignRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -135,7 +132,6 @@ export function _decode_PrivAssignRequest(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_PrivAssignRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new PrivAssignRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PrivAssignRequest (
                 attrCerts,
                 _unrecognizedExtensionsList
             );

@@ -171,13 +171,10 @@ let _cached_decoder_for_TestState: $.ASN1Decoder<TestState> | null = null;
 export function _decode_TestState(el: _Element) {
     if (!_cached_decoder_for_TestState) {
         _cached_decoder_for_TestState = function (el: _Element): TestState {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let operationalState!: OperationalState;
             let proceduralStatus!: ProceduralStatus;
             let controlStatus: OPTIONAL<ControlStatus>;
             let availabilityStatus: OPTIONAL<AvailabilityStatus>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 operationalState: (_el: _Element): void => {
                     operationalState = _decode_OperationalState(_el);
@@ -196,7 +193,6 @@ export function _decode_TestState(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -205,7 +201,7 @@ export function _decode_TestState(el: _Element) {
                 _root_component_type_list_2_spec_for_TestState,
                 undefined
             );
-            return new TestState /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestState (
                 operationalState,
                 proceduralStatus,
                 controlStatus,

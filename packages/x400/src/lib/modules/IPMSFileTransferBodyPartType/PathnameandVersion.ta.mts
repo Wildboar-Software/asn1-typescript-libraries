@@ -121,11 +121,8 @@ export function _decode_PathnameandVersion(el: _Element) {
         _cached_decoder_for_PathnameandVersion = function (
             el: _Element
         ): PathnameandVersion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pathname!: Pathname_Attribute;
             let file_version: OPTIONAL<GraphicString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pathname: (_el: _Element): void => {
                     pathname = $._decode_explicit<Pathname_Attribute>(
@@ -138,7 +135,6 @@ export function _decode_PathnameandVersion(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_PathnameandVersion(el: _Element) {
                 _root_component_type_list_2_spec_for_PathnameandVersion,
                 undefined
             );
-            return new PathnameandVersion /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PathnameandVersion (
                 pathname,
                 file_version
             );

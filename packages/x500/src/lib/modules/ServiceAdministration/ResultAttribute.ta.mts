@@ -149,13 +149,10 @@ export function _decode_ResultAttribute(el: _Element) {
         _cached_decoder_for_ResultAttribute = function (
             el: _Element
         ): ResultAttribute {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeType!: OBJECT_IDENTIFIER;
             let outputValues: OPTIONAL<ResultAttribute_outputValues>;
             let contexts: OPTIONAL<ContextProfile[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeType: (_el: _Element): void => {
                     attributeType = $._decodeObjectIdentifier(_el);
@@ -171,7 +168,6 @@ export function _decode_ResultAttribute(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_ResultAttribute(el: _Element) {
                 }
             );
             return new ResultAttribute(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ attributeType,
+                attributeType,
                 outputValues,
                 contexts,
                 _unrecognizedExtensionsList

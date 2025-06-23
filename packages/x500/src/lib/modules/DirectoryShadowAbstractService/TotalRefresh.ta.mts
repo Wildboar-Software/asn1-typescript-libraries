@@ -129,12 +129,9 @@ export function _decode_TotalRefresh(el: _Element) {
         _cached_decoder_for_TotalRefresh = function (
             el: _Element
         ): TotalRefresh {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sDSE: OPTIONAL<SDSEContent>;
             let subtree: OPTIONAL<Subtree[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sDSE: (_el: _Element): void => {
                     sDSE = _decode_SDSEContent(_el);
@@ -145,7 +142,6 @@ export function _decode_TotalRefresh(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_TotalRefresh(el: _Element) {
                 }
             );
             return new TotalRefresh(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ sDSE,
+                sDSE,
                 subtree,
                 _unrecognizedExtensionsList
             );

@@ -125,25 +125,21 @@ let _cached_decoder_for_BioTempIssuer: $.ASN1Decoder<BioTempIssuer> | null = nul
 export
 function _decode_BioTempIssuer (el: _Element) {
     if (!_cached_decoder_for_BioTempIssuer) { _cached_decoder_for_BioTempIssuer = $._decode_implicit<BioTempIssuer>(() => function (el: _Element): BioTempIssuer {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let issuerName: OPTIONAL<GeneralNames>;
     let baseCertificateID: OPTIONAL<IssuerSerial>;
     let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "issuerName": (_el: _Element): void => { issuerName = _decode_GeneralNames(_el); },
         "baseCertificateID": (_el: _Element): void => { baseCertificateID = $._decode_implicit<IssuerSerial>(() => _decode_IssuerSerial)(_el); },
         "objectDigestInfo": (_el: _Element): void => { objectDigestInfo = $._decode_implicit<ObjectDigestInfo>(() => _decode_ObjectDigestInfo)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BioTempIssuer,
         _extension_additions_list_spec_for_BioTempIssuer,
         _root_component_type_list_2_spec_for_BioTempIssuer,
         undefined,
     );
-    return new BioTempIssuer( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new BioTempIssuer( 
         issuerName,
         baseCertificateID,
         objectDigestInfo

@@ -230,7 +230,6 @@ export function _decode_IPMAutoForwardRegistrationParameter(el: _Element) {
         _cached_decoder_for_IPMAutoForwardRegistrationParameter = function (
             el: _Element
         ): IPMAutoForwardRegistrationParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let filter: OPTIONAL<Filter>;
             let forwarding_envelope!: MessageSubmissionEnvelope;
             let forwarding_heading!: Heading;
@@ -239,8 +238,6 @@ export function _decode_IPMAutoForwardRegistrationParameter(el: _Element) {
             let nrn_comment: OPTIONAL<AutoForwardComment>;
             let ipm_auto_forward_options: OPTIONAL<IPMAutoForwardOptions> =
                 IPMAutoForwardRegistrationParameter._default_value_for_ipm_auto_forward_options;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 filter: (_el: _Element): void => {
                     filter = $._decode_explicit<Filter>(() => _decode_Filter)(
@@ -278,7 +275,6 @@ export function _decode_IPMAutoForwardRegistrationParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -287,7 +283,7 @@ export function _decode_IPMAutoForwardRegistrationParameter(el: _Element) {
                 _root_component_type_list_2_spec_for_IPMAutoForwardRegistrationParameter,
                 undefined
             );
-            return new IPMAutoForwardRegistrationParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new IPMAutoForwardRegistrationParameter (
                 filter,
                 forwarding_envelope,
                 forwarding_heading,

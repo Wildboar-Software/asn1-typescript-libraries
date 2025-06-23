@@ -112,23 +112,19 @@ let _cached_decoder_for_CorrelatedNotifications_Item: $.ASN1Decoder<CorrelatedNo
 export
 function _decode_CorrelatedNotifications_Item (el: _Element) {
     if (!_cached_decoder_for_CorrelatedNotifications_Item) { _cached_decoder_for_CorrelatedNotifications_Item = function (el: _Element): CorrelatedNotifications_Item {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let correlatedNotifications!: NotificationIdentifier[];
     let sourceObjectInst: OPTIONAL<ObjectInstance>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "correlatedNotifications": (_el: _Element): void => { correlatedNotifications = $._decodeSetOf<NotificationIdentifier>(() => _decode_NotificationIdentifier)(_el); },
         "sourceObjectInst": (_el: _Element): void => { sourceObjectInst = _decode_ObjectInstance(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CorrelatedNotifications_Item,
         _extension_additions_list_spec_for_CorrelatedNotifications_Item,
         _root_component_type_list_2_spec_for_CorrelatedNotifications_Item,
         undefined,
     );
-    return new CorrelatedNotifications_Item( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CorrelatedNotifications_Item( 
         correlatedNotifications,
         sourceObjectInst
     );

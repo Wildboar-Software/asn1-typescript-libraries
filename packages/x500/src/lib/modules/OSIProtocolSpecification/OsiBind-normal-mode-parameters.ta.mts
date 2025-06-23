@@ -181,15 +181,12 @@ export function _decode_OsiBind_normal_mode_parameters(el: _Element) {
         _cached_decoder_for_OsiBind_normal_mode_parameters = function (
             el: _Element
         ): OsiBind_normal_mode_parameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let protocol_version: OPTIONAL<OsiBind_normal_mode_parameters_protocol_version> =
                 OsiBind_normal_mode_parameters._default_value_for_protocol_version;
             let calling_presentation_selector: OPTIONAL<Presentation_selector>;
             let called_presentation_selector: OPTIONAL<Presentation_selector>;
             let presentation_context_definition_list!: Context_list;
             let user_data!: OsiBind_normal_mode_parameters_user_data;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "protocol-version": (_el: _Element): void => {
                     protocol_version = $._decode_implicit<OsiBind_normal_mode_parameters_protocol_version>(
@@ -220,7 +217,6 @@ export function _decode_OsiBind_normal_mode_parameters(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -230,7 +226,7 @@ export function _decode_OsiBind_normal_mode_parameters(el: _Element) {
                 undefined
             );
             return new OsiBind_normal_mode_parameters(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ protocol_version,
+                protocol_version,
                 calling_presentation_selector,
                 called_presentation_selector,
                 presentation_context_definition_list,

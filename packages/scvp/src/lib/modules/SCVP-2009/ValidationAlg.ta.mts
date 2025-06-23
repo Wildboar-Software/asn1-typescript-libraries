@@ -110,11 +110,8 @@ let _cached_decoder_for_ValidationAlg: $.ASN1Decoder<ValidationAlg> | null = nul
 export function _decode_ValidationAlg(el: _Element) {
   if (!_cached_decoder_for_ValidationAlg) {
     _cached_decoder_for_ValidationAlg = function (el: _Element): ValidationAlg {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let valAlgId!: OBJECT_IDENTIFIER;
       let parameters: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         valAlgId: (_el: _Element): void => {
           valAlgId = $._decodeObjectIdentifier(_el);
@@ -123,7 +120,6 @@ export function _decode_ValidationAlg(el: _Element) {
           parameters = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -132,7 +128,7 @@ export function _decode_ValidationAlg(el: _Element) {
         _root_component_type_list_2_spec_for_ValidationAlg,
         undefined
       );
-      return new ValidationAlg /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ValidationAlg (
         valAlgId,
         parameters
       );

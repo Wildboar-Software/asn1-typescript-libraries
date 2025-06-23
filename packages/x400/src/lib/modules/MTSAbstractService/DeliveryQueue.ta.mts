@@ -121,7 +121,6 @@ export function _decode_DeliveryQueue(el: _Element) {
             let messages!: INTEGER;
             let octets: OPTIONAL<INTEGER>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 messages: (_el: _Element): void => {
                     messages = $._decode_implicit<INTEGER>(
@@ -134,7 +133,6 @@ export function _decode_DeliveryQueue(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

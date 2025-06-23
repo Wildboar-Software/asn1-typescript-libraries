@@ -132,7 +132,6 @@ export function _decode_OsiBindResult(el: _Element) {
             let mode_selector!: OsiBindResult_mode_selector;
             let normal_mode_parameters!: OsiBindResult_normal_mode_parameters;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "mode-selector": (_el: _Element): void => {
                     mode_selector = $._decode_implicit<OsiBindResult_mode_selector>(
@@ -145,7 +144,6 @@ export function _decode_OsiBindResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

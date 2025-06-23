@@ -265,7 +265,6 @@ export function _decode_Document_initial_vocabulary(el: _Element) {
     _cached_decoder_for_Document_initial_vocabulary = function (
       el: _Element
     ): Document_initial_vocabulary {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let external_vocabulary: OPTIONAL<URI>;
       let restricted_alphabets: OPTIONAL<NonEmptyOctetString[]>;
       let encoding_algorithms: OPTIONAL<NonEmptyOctetString[]>;
@@ -279,8 +278,6 @@ export function _decode_Document_initial_vocabulary(el: _Element) {
       let other_strings: OPTIONAL<EncodedCharacterString[]>;
       let element_name_surrogates: OPTIONAL<NameSurrogate[]>;
       let attribute_name_surrogates: OPTIONAL<NameSurrogate[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'external-vocabulary': (_el: _Element): void => {
           external_vocabulary = _decode_URI(_el);
@@ -346,7 +343,6 @@ export function _decode_Document_initial_vocabulary(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -355,7 +351,7 @@ export function _decode_Document_initial_vocabulary(el: _Element) {
         _root_component_type_list_2_spec_for_Document_initial_vocabulary,
         undefined
       );
-      return new Document_initial_vocabulary /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Document_initial_vocabulary (
         external_vocabulary,
         restricted_alphabets,
         encoding_algorithms,

@@ -117,12 +117,9 @@ export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
     _decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>
 ) {
     return function (el: _Element): AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let aad: OPTIONAL<ToBeAuth>;
         let encr!: ToBeEnciphered;
         let _unrecognizedExtensionsList: _Element[] = [];
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             aad: (_el: _Element): void => {
                 aad = $._decode_implicit<ToBeAuth>(() => _decode_ToBeAuth)(_el);
@@ -133,7 +130,6 @@ export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -145,7 +141,7 @@ export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
             }
         );
         return new AUTHEN_ENCRYPT(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ aad,
+            aad,
             encr,
             _unrecognizedExtensionsList
         );

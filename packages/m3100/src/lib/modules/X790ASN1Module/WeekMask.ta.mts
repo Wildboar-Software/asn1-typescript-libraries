@@ -174,14 +174,11 @@ let _cached_decoder_for_WeekMask: $.ASN1Decoder<WeekMask> | null = null;
 export function _decode_WeekMask(el: _Element) {
     if (!_cached_decoder_for_WeekMask) {
         _cached_decoder_for_WeekMask = function (el: _Element): WeekMask {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let daysOfWeek: OPTIONAL<WeekMask_daysOfWeek> =
                 WeekMask._default_value_for_daysOfWeek;
             let intervalsOfDay: OPTIONAL<WeekMask_intervalsOfDay_Item[]> =
                 WeekMask._default_value_for_intervalsOfDay;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 daysOfWeek: (_el: _Element): void => {
                     daysOfWeek = _decode_WeekMask_daysOfWeek(_el);
@@ -192,7 +189,6 @@ export function _decode_WeekMask(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_WeekMask(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new WeekMask /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new WeekMask (
                 daysOfWeek,
                 intervalsOfDay,
                 _unrecognizedExtensionsList

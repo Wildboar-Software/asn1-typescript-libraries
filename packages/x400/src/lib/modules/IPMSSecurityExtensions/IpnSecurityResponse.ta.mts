@@ -140,7 +140,6 @@ export function _decode_IpnSecurityResponse(el: _Element) {
             let content_or_arguments!: IpnSecurityResponse_content_or_arguments;
             let security_diagnostic_code: OPTIONAL<SecurityDiagnosticCode>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-or-arguments': (_el: _Element): void => {
                     content_or_arguments = _decode_IpnSecurityResponse_content_or_arguments(
@@ -153,7 +152,6 @@ export function _decode_IpnSecurityResponse(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

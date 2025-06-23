@@ -139,11 +139,8 @@ export function _decode_TerminateValidationArgument(el: _Element) {
         _cached_decoder_for_TerminateValidationArgument = function (
             el: _Element
         ): TerminateValidationArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let terminateValidationInfo!: TerminateValidationInfo;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 terminateValidationInfo: (_el: _Element): void => {
                     terminateValidationInfo = $._decode_implicit<TerminateValidationInfo>(
@@ -159,7 +156,6 @@ export function _decode_TerminateValidationArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_TerminateValidationArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_TerminateValidationArgument,
                 undefined
             );
-            return new TerminateValidationArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TerminateValidationArgument (
                 terminateValidationInfo,
                 additionalInfo
             );

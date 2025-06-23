@@ -325,7 +325,6 @@ export function _decode_Create_Attributes(el: _Element) {
     _cached_decoder_for_Create_Attributes = $._decode_implicit<Create_Attributes>(
       () =>
         function (el: _Element): Create_Attributes {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let pathname!: Pathname_Attribute;
           let object_type: OPTIONAL<Object_Type_Attribute> =
             Create_Attributes._default_value_for_object_type;
@@ -339,8 +338,6 @@ export function _decode_Create_Attributes(el: _Element) {
           let legal_qualification: OPTIONAL<Legal_Qualification_Attribute>;
           let private_use: OPTIONAL<Private_Use_Attribute>;
           let attribute_extensions: OPTIONAL<Attribute_Extensions>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             pathname: (_el: _Element): void => {
               pathname = _decode_Pathname_Attribute(_el);
@@ -401,7 +398,6 @@ export function _decode_Create_Attributes(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -410,7 +406,7 @@ export function _decode_Create_Attributes(el: _Element) {
             _root_component_type_list_2_spec_for_Create_Attributes,
             undefined
           );
-          return new Create_Attributes /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new Create_Attributes (
             pathname,
             object_type,
             permitted_actions,

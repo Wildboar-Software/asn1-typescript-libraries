@@ -235,7 +235,6 @@ let _cached_decoder_for_SETransfer: $.ASN1Decoder<SETransfer> | null = null;
 export function _decode_SETransfer(el: _Element) {
   if (!_cached_decoder_for_SETransfer) {
     _cached_decoder_for_SETransfer = function (el: _Element): SETransfer {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let seIdentifier!: Identifier;
       let itemIdentifier!: _Element;
       let seItem!: _Element;
@@ -244,8 +243,6 @@ export function _decode_SETransfer(el: _Element) {
       let startFlag: OPTIONAL<BOOLEAN> =
         SETransfer._default_value_for_startFlag;
       let endFlag: OPTIONAL<BOOLEAN> = SETransfer._default_value_for_endFlag;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         seIdentifier: (_el: _Element): void => {
           seIdentifier = _decode_Identifier(_el);
@@ -266,7 +263,6 @@ export function _decode_SETransfer(el: _Element) {
           endFlag = $._decodeBoolean(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -275,7 +271,7 @@ export function _decode_SETransfer(el: _Element) {
         _root_component_type_list_2_spec_for_SETransfer,
         undefined
       );
-      return new SETransfer /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SETransfer (
         seIdentifier,
         itemIdentifier,
         seItem,

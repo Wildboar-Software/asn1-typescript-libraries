@@ -121,23 +121,19 @@ let _cached_decoder_for_SMIMECapability: $.ASN1Decoder<SMIMECapability> | null =
 export
 function _decode_SMIMECapability (el: _Element) {
     if (!_cached_decoder_for_SMIMECapability) { _cached_decoder_for_SMIMECapability = function (el: _Element): SMIMECapability {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let capabilityID!: OBJECT_IDENTIFIER;
     let parameters: OPTIONAL<_Element>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "capabilityID": (_el: _Element): void => { capabilityID = $._decodeObjectIdentifier(_el); },
         "parameters": (_el: _Element): void => { parameters = $._decodeAny(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SMIMECapability,
         _extension_additions_list_spec_for_SMIMECapability,
         _root_component_type_list_2_spec_for_SMIMECapability,
         undefined,
     );
-    return new SMIMECapability( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SMIMECapability( 
         capabilityID,
         parameters
     );

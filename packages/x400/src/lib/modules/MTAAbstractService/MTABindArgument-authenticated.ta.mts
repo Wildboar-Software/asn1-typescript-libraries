@@ -149,7 +149,6 @@ export function _decode_MTABindArgument_authenticated(el: _Element) {
             let initiator_credentials!: InitiatorCredentials;
             let security_context: OPTIONAL<SecurityContext>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'initiator-name': (_el: _Element): void => {
                     initiator_name = $._decode_implicit<MTAName>(
@@ -167,7 +166,6 @@ export function _decode_MTABindArgument_authenticated(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -148,12 +148,9 @@ export function _decode_Result_list_Item(el: _Element) {
         _cached_decoder_for_Result_list_Item = function (
             el: _Element
         ): Result_list_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let result!: Result;
             let transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
             let provider_reason: OPTIONAL<Result_list_Item_provider_reason>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 result: (_el: _Element): void => {
                     result = $._decode_implicit<Result>(() => _decode_Result)(
@@ -171,7 +168,6 @@ export function _decode_Result_list_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_Result_list_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_Result_list_Item,
                 undefined
             );
-            return new Result_list_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Result_list_Item (
                 result,
                 transfer_syntax_name,
                 provider_reason

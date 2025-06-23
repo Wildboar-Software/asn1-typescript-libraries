@@ -134,11 +134,8 @@ export function _decode_RequestArgument(el: _Element) {
         _cached_decoder_for_RequestArgument = function (
             el: _Element
         ): RequestArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let calledNumber!: IsdnNumber;
             let basicService: OPTIONAL<BasicServiceIndicator>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 calledNumber: (_el: _Element): void => {
                     calledNumber = _decode_IsdnNumber(_el);
@@ -147,7 +144,6 @@ export function _decode_RequestArgument(el: _Element) {
                     basicService = _decode_BasicServiceIndicator(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_RequestArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_RequestArgument,
                 undefined
             );
-            return new RequestArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RequestArgument (
                 calledNumber,
                 basicService
             );

@@ -183,7 +183,6 @@ export function _decode_RelaxationPolicy(el: _Element) {
         _cached_decoder_for_RelaxationPolicy = function (
             el: _Element
         ): RelaxationPolicy {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let basic: OPTIONAL<MRMapping> =
                 RelaxationPolicy._default_value_for_basic;
             let tightenings: OPTIONAL<MRMapping[]>;
@@ -192,8 +191,6 @@ export function _decode_RelaxationPolicy(el: _Element) {
             let minimum: OPTIONAL<INTEGER> =
                 RelaxationPolicy._default_value_for_minimum;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 basic: (_el: _Element): void => {
                     basic = $._decode_explicit<MRMapping>(
@@ -221,7 +218,6 @@ export function _decode_RelaxationPolicy(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -233,7 +229,7 @@ export function _decode_RelaxationPolicy(el: _Element) {
                 }
             );
             return new RelaxationPolicy(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ basic,
+                basic,
                 tightenings,
                 relaxations,
                 maximum,

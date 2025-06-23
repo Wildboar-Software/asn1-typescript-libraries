@@ -163,15 +163,12 @@ export function _decode_V42BisCompressionParameter(el: _Element) {
         _cached_decoder_for_V42BisCompressionParameter = function (
             el: _Element
         ): V42BisCompressionParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let dictionary_size: OPTIONAL<INTEGER> =
                 V42BisCompressionParameter._default_value_for_dictionary_size;
             let largest_compressed_chain: OPTIONAL<INTEGER> =
                 V42BisCompressionParameter._default_value_for_largest_compressed_chain;
             let last_entries_to_delete: OPTIONAL<INTEGER> =
                 V42BisCompressionParameter._default_value_for_last_entries_to_delete;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'dictionary-size': (_el: _Element): void => {
                     dictionary_size = $._decode_implicit<INTEGER>(
@@ -189,7 +186,6 @@ export function _decode_V42BisCompressionParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -198,7 +194,7 @@ export function _decode_V42BisCompressionParameter(el: _Element) {
                 _root_component_type_list_2_spec_for_V42BisCompressionParameter,
                 undefined
             );
-            return new V42BisCompressionParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new V42BisCompressionParameter (
                 dictionary_size,
                 largest_compressed_chain,
                 last_entries_to_delete

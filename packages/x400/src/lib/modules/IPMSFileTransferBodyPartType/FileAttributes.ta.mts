@@ -393,7 +393,6 @@ export function _decode_FileAttributes(el: _Element) {
         _cached_decoder_for_FileAttributes = function (
             el: _Element
         ): FileAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pathname: OPTIONAL<Pathname_Attribute>;
             let permitted_actions: OPTIONAL<Permitted_Actions_Attribute>;
             let storage_account: OPTIONAL<Account_Attribute>;
@@ -412,8 +411,6 @@ export function _decode_FileAttributes(el: _Element) {
             let legal_qualifications: OPTIONAL<Legal_Qualification_Attribute>;
             let private_use: OPTIONAL<Private_Use_Attribute>;
             let attribute_extensions: OPTIONAL<Attribute_Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pathname: (_el: _Element): void => {
                     pathname = _decode_Pathname_Attribute(_el);
@@ -508,7 +505,6 @@ export function _decode_FileAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -517,7 +513,7 @@ export function _decode_FileAttributes(el: _Element) {
                 _root_component_type_list_2_spec_for_FileAttributes,
                 undefined
             );
-            return new FileAttributes /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FileAttributes (
                 pathname,
                 permitted_actions,
                 storage_account,

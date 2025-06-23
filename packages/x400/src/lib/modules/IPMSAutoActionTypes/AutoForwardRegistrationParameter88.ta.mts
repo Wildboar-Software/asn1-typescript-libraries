@@ -179,7 +179,6 @@ export function _decode_AutoForwardRegistrationParameter88(el: _Element) {
                 AutoForwardRegistrationParameter88._default_value_for_delete_after_auto_forwarding;
             let forwarding_information!: EncodedForwardingInformation;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 filter: (_el: _Element): void => {
                     filter = $._decode_explicit<Filter>(() => _decode_Filter)(
@@ -202,7 +201,6 @@ export function _decode_AutoForwardRegistrationParameter88(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

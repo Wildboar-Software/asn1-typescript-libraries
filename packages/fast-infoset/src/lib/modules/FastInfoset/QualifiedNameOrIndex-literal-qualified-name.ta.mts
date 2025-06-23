@@ -136,12 +136,9 @@ export function _decode_QualifiedNameOrIndex_literal_qualified_name(
     _cached_decoder_for_QualifiedNameOrIndex_literal_qualified_name = function (
       el: _Element
     ): QualifiedNameOrIndex_literal_qualified_name {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let prefix: OPTIONAL<IdentifyingStringOrIndex>;
       let namespace_name: OPTIONAL<IdentifyingStringOrIndex>;
       let local_name!: IdentifyingStringOrIndex;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         prefix: (_el: _Element): void => {
           prefix = _decode_IdentifyingStringOrIndex(_el);
@@ -153,7 +150,6 @@ export function _decode_QualifiedNameOrIndex_literal_qualified_name(
           local_name = _decode_IdentifyingStringOrIndex(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -162,7 +158,7 @@ export function _decode_QualifiedNameOrIndex_literal_qualified_name(
         _root_component_type_list_2_spec_for_QualifiedNameOrIndex_literal_qualified_name,
         undefined
       );
-      return new QualifiedNameOrIndex_literal_qualified_name /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new QualifiedNameOrIndex_literal_qualified_name (
         prefix,
         namespace_name,
         local_name

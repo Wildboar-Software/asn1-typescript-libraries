@@ -112,11 +112,8 @@ export function _decode_ValidationPolRef(el: _Element) {
     _cached_decoder_for_ValidationPolRef = function (
       el: _Element
     ): ValidationPolRef {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let valPolId!: OBJECT_IDENTIFIER;
       let valPolParams: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         valPolId: (_el: _Element): void => {
           valPolId = $._decodeObjectIdentifier(_el);
@@ -125,7 +122,6 @@ export function _decode_ValidationPolRef(el: _Element) {
           valPolParams = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -134,7 +130,7 @@ export function _decode_ValidationPolRef(el: _Element) {
         _root_component_type_list_2_spec_for_ValidationPolRef,
         undefined
       );
-      return new ValidationPolRef /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ValidationPolRef (
         valPolId,
         valPolParams
       );

@@ -288,7 +288,6 @@ export function _decode_ProbeTransferEnvelope(el: _Element) {
                 ProbeTransferEnvelope._default_value_for_extensions;
             let per_recipient_fields!: PerRecipientProbeTransferFields[];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'probe-identifier': (_el: _Element): void => {
                     probe_identifier = _decode_ProbeIdentifier(_el);
@@ -344,7 +343,6 @@ export function _decode_ProbeTransferEnvelope(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

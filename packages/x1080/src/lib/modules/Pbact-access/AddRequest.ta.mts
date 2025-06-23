@@ -179,15 +179,12 @@ let _cached_decoder_for_AddRequest: $.ASN1Decoder<AddRequest> | null = null;
 export function _decode_AddRequest(el: _Element) {
     if (!_cached_decoder_for_AddRequest) {
         _cached_decoder_for_AddRequest = function (el: _Element): AddRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let serviceId!: OBJECT_IDENTIFIER;
             let invokId!: INTEGER;
             let object!: DistinguishedName;
             let attr: OPTIONAL<Attribute[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -215,7 +212,6 @@ export function _decode_AddRequest(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -226,7 +222,7 @@ export function _decode_AddRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new AddRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AddRequest (
                 attrCerts,
                 serviceId,
                 invokId,

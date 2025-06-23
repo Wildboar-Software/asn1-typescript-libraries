@@ -125,11 +125,8 @@ export function _decode_LabelAndParameters(el: _Element) {
         _cached_decoder_for_LabelAndParameters = function (
             el: _Element
         ): LabelAndParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let label!: TemplateLabel;
             let parameters: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 label: (_el: _Element): void => {
                     label = _decode_TemplateLabel(_el);
@@ -138,7 +135,6 @@ export function _decode_LabelAndParameters(el: _Element) {
                     parameters = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_LabelAndParameters(el: _Element) {
                 _root_component_type_list_2_spec_for_LabelAndParameters,
                 undefined
             );
-            return new LabelAndParameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new LabelAndParameters (
                 label,
                 parameters
             );

@@ -164,14 +164,11 @@ export function _decode_CertReplaceReq(el: _Element) {
         _cached_decoder_for_CertReplaceReq = function (
             el: _Element
         ): CertReplaceReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<CASPversion> =
                 CertReplaceReq._default_value_for_version;
             let sequence!: CASPsequence;
             let certs!: CertReplaceReq_certs_Item[];
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CASPversion(_el);
@@ -185,7 +182,6 @@ export function _decode_CertReplaceReq(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -197,7 +193,7 @@ export function _decode_CertReplaceReq(el: _Element) {
                 }
             );
             return new CertReplaceReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sequence,
                 certs,
                 _unrecognizedExtensionsList

@@ -138,12 +138,9 @@ let _cached_decoder_for_End: $.ASN1Decoder<End> | null = null;
 export function _decode_End(el: _Element) {
   if (!_cached_decoder_for_End) {
     _cached_decoder_for_End = function (el: _Element): End {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let dtid!: DestTransactionID;
       let dialoguePortion: OPTIONAL<DialoguePortion>;
       let components: OPTIONAL<ComponentPortion>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         dtid: (_el: _Element): void => {
           dtid = _decode_DestTransactionID(_el);
@@ -155,7 +152,6 @@ export function _decode_End(el: _Element) {
           components = _decode_ComponentPortion(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -164,7 +160,7 @@ export function _decode_End(el: _Element) {
         _root_component_type_list_2_spec_for_End,
         undefined
       );
-      return new End /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new End (
         dtid,
         dialoguePortion,
         components

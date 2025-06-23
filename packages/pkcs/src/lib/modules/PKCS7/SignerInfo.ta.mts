@@ -207,7 +207,6 @@ let _cached_decoder_for_SignerInfo: $.ASN1Decoder<SignerInfo> | null = null;
 export function _decode_SignerInfo(el: _Element) {
     if (!_cached_decoder_for_SignerInfo) {
         _cached_decoder_for_SignerInfo = function (el: _Element): SignerInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: Version;
             let signerIdentifier!: SignerIdentifier;
             let digestAlgorithm!: DigestAlgorithmIdentifier;
@@ -215,8 +214,6 @@ export function _decode_SignerInfo(el: _Element) {
             let digestEncryptionAlgorithm!: DigestEncryptionAlgorithmIdentifier;
             let encryptedDigest!: EncryptedDigest;
             let unauthenticatedAttributes: OPTIONAL<Attributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -246,7 +243,6 @@ export function _decode_SignerInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -256,7 +252,7 @@ export function _decode_SignerInfo(el: _Element) {
                 undefined
             );
             return new SignerInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 signerIdentifier,
                 digestAlgorithm,
                 authenticatedAttributes,

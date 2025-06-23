@@ -233,7 +233,6 @@ export function _decode_RSAPrivateKey(el: _Element) {
         _cached_decoder_for_RSAPrivateKey = function (
             el: _Element
         ): RSAPrivateKey {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: Version;
             let modulus!: OCTET_STRING;
             let publicExponent!: OCTET_STRING;
@@ -244,8 +243,6 @@ export function _decode_RSAPrivateKey(el: _Element) {
             let exponent2!: OCTET_STRING;
             let coefficient!: OCTET_STRING;
             let otherPrimeInfos: OPTIONAL<OtherPrimeInfos>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -278,7 +275,6 @@ export function _decode_RSAPrivateKey(el: _Element) {
                     otherPrimeInfos = _decode_OtherPrimeInfos(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -288,7 +284,7 @@ export function _decode_RSAPrivateKey(el: _Element) {
                 undefined
             );
             return new RSAPrivateKey(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 modulus,
                 publicExponent,
                 privateExponent,

@@ -228,7 +228,6 @@ export function _decode_Register88(el: _Element) {
             let deliverable_content_types: OPTIONAL<ContentTypes>;
             let labels_and_redirections: OPTIONAL<LabelAndRedirection[]>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'user-name': (_el: _Element): void => {
                     user_name = _decode_UserName(_el);
@@ -270,7 +269,6 @@ export function _decode_Register88(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

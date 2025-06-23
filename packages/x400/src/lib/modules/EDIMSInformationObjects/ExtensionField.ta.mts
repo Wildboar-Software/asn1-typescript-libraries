@@ -152,14 +152,11 @@ export function _decode_ExtensionField(el: _Element) {
         _cached_decoder_for_ExtensionField = function (
             el: _Element
         ): ExtensionField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let type_!: OBJECT_IDENTIFIER;
             let criticality: OPTIONAL<Criticality> =
                 ExtensionField._default_value_for_criticality;
             let value: OPTIONAL<_Element> =
                 ExtensionField._default_value_for_value;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = $._decode_implicit<OBJECT_IDENTIFIER>(
@@ -177,7 +174,6 @@ export function _decode_ExtensionField(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -186,7 +182,7 @@ export function _decode_ExtensionField(el: _Element) {
                 _root_component_type_list_2_spec_for_ExtensionField,
                 undefined
             );
-            return new ExtensionField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ExtensionField (
                 type_,
                 criticality,
                 value

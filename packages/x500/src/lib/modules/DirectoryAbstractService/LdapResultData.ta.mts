@@ -196,7 +196,6 @@ export function _decode_LdapResultData(el: _Element) {
         _cached_decoder_for_LdapResultData = function (
             el: _Element
         ): LdapResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let ldapMessages: OPTIONAL<LDAPMessage[]>;
             let returnToClient: OPTIONAL<BOOLEAN> =
                 LdapResultData._default_value_for_returnToClient;
@@ -206,8 +205,6 @@ export function _decode_LdapResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 LdapResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 ldapMessages: (_el: _Element): void => {
                     ldapMessages = $._decodeSequenceOf<LDAPMessage>(
@@ -238,7 +235,6 @@ export function _decode_LdapResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -250,7 +246,7 @@ export function _decode_LdapResultData(el: _Element) {
                 }
             );
             return new LdapResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ ldapMessages,
+                ldapMessages,
                 returnToClient,
                 _unrecognizedExtensionsList,
                 securityParameters,

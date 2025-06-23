@@ -122,11 +122,8 @@ export function _decode_Contents_Type_Attribute_document_type(el: _Element) {
         _cached_decoder_for_Contents_Type_Attribute_document_type = function (
             el: _Element
         ): Contents_Type_Attribute_document_type {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let document_type_name!: Document_Type_Name;
             let parameter: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'document-type-name': (_el: _Element): void => {
                     document_type_name = _decode_Document_Type_Name(_el);
@@ -137,7 +134,6 @@ export function _decode_Contents_Type_Attribute_document_type(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_Contents_Type_Attribute_document_type(el: _Element) {
                 _root_component_type_list_2_spec_for_Contents_Type_Attribute_document_type,
                 undefined
             );
-            return new Contents_Type_Attribute_document_type /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Contents_Type_Attribute_document_type (
                 document_type_name,
                 parameter
             );

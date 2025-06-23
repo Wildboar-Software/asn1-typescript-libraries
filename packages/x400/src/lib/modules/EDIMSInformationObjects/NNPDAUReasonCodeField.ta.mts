@@ -128,11 +128,8 @@ export function _decode_NNPDAUReasonCodeField(el: _Element) {
         _cached_decoder_for_NNPDAUReasonCodeField = function (
             el: _Element
         ): NNPDAUReasonCodeField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let nn_pdau_basic_code!: NNPDAUBasicCodeField;
             let nn_pdau_diagnostic: OPTIONAL<NNPDAUDiagnosticField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'nn-pdau-basic-code': (_el: _Element): void => {
                     nn_pdau_basic_code = $._decode_implicit<NNPDAUBasicCodeField>(
@@ -145,7 +142,6 @@ export function _decode_NNPDAUReasonCodeField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_NNPDAUReasonCodeField(el: _Element) {
                 _root_component_type_list_2_spec_for_NNPDAUReasonCodeField,
                 undefined
             );
-            return new NNPDAUReasonCodeField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NNPDAUReasonCodeField (
                 nn_pdau_basic_code,
                 nn_pdau_diagnostic
             );

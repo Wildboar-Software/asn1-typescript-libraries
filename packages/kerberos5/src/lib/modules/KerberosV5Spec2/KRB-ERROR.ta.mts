@@ -299,7 +299,6 @@ export function _decode_KRB_ERROR(el: _Element) {
     _cached_decoder_for_KRB_ERROR = $._decode_implicit<KRB_ERROR>(
       () =>
         function (el: _Element): KRB_ERROR {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let pvno!: INTEGER;
           let msg_type!: INTEGER;
           let ctime: OPTIONAL<KerberosTime>;
@@ -313,8 +312,6 @@ export function _decode_KRB_ERROR(el: _Element) {
           let sname!: PrincipalName;
           let e_text: OPTIONAL<KerberosString>;
           let e_data: OPTIONAL<OCTET_STRING>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             pvno: (_el: _Element): void => {
               pvno = $._decode_explicit<INTEGER>(() => $._decodeInteger)(_el);
@@ -374,7 +371,6 @@ export function _decode_KRB_ERROR(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -383,7 +379,7 @@ export function _decode_KRB_ERROR(el: _Element) {
             _root_component_type_list_2_spec_for_KRB_ERROR,
             undefined
           );
-          return new KRB_ERROR /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new KRB_ERROR (
             pvno,
             msg_type,
             ctime,

@@ -211,15 +211,12 @@ export function _decode_Capture_RequestParams(el: _Element) {
     _cached_decoder_for_Capture_RequestParams = function (
       el: _Element
     ): Capture_RequestParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let originalBSPHandle!: BioAPI_HANDLE;
       let purpose!: BioAPI_BIR_PURPOSE;
       let subtype!: BioAPI_BIR_SUBTYPE;
       let outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
       let timeout!: SignedInt;
       let no_auditData!: BOOLEAN;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         originalBSPHandle: (_el: _Element): void => {
           originalBSPHandle = _decode_BioAPI_HANDLE(_el);
@@ -240,7 +237,6 @@ export function _decode_Capture_RequestParams(el: _Element) {
           no_auditData = $._decodeBoolean(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -249,7 +245,7 @@ export function _decode_Capture_RequestParams(el: _Element) {
         _root_component_type_list_2_spec_for_Capture_RequestParams,
         undefined
       );
-      return new Capture_RequestParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Capture_RequestParams (
         originalBSPHandle,
         purpose,
         subtype,

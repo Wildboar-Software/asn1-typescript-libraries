@@ -170,14 +170,11 @@ let _cached_decoder_for_Wrap_Header: $.ASN1Decoder<Wrap_Header> | null = null;
 export function _decode_Wrap_Header(el: _Element) {
     if (!_cached_decoder_for_Wrap_Header) {
         _cached_decoder_for_Wrap_Header = function (el: _Element): Wrap_Header {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tok_id!: INTEGER;
             let context_id!: Random_Integer;
             let int_alg: OPTIONAL<AlgorithmIdentifier>;
             let conf_alg: OPTIONAL<Conf_Alg>;
             let snd_seq: OPTIONAL<SeqNum>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "tok-id": (_el: _Element): void => {
                     tok_id = $._decodeInteger(_el);
@@ -201,7 +198,6 @@ export function _decode_Wrap_Header(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -211,7 +207,7 @@ export function _decode_Wrap_Header(el: _Element) {
                 undefined
             );
             return new Wrap_Header(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tok_id,
+                tok_id,
                 context_id,
                 int_alg,
                 conf_alg,

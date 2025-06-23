@@ -152,14 +152,11 @@ let _cached_decoder_for_Validity: $.ASN1Decoder<Validity> | null = null;
 export function _decode_Validity(el: _Element) {
     if (!_cached_decoder_for_Validity) {
         _cached_decoder_for_Validity = function (el: _Element): Validity {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let validFrom: OPTIONAL<Validity_validFrom> =
                 Validity._default_value_for_validFrom;
             let validUntil: OPTIONAL<Validity_validUntil> =
                 Validity._default_value_for_validUntil;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 validFrom: (_el: _Element): void => {
                     validFrom = $._decode_explicit<Validity_validFrom>(
@@ -172,7 +169,6 @@ export function _decode_Validity(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -184,7 +180,7 @@ export function _decode_Validity(el: _Element) {
                 }
             );
             return new Validity(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ validFrom,
+                validFrom,
                 validUntil,
                 _unrecognizedExtensionsList
             );

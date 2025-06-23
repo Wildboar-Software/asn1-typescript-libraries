@@ -121,11 +121,8 @@ export function _decode_InformationCategory(el: _Element) {
         _cached_decoder_for_InformationCategory = function (
             el: _Element
         ): InformationCategory {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reference: OPTIONAL<OBJECT_IDENTIFIER>;
             let description: OPTIONAL<DescriptionString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reference: (_el: _Element): void => {
                     reference = $._decode_implicit<OBJECT_IDENTIFIER>(
@@ -138,7 +135,6 @@ export function _decode_InformationCategory(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_InformationCategory(el: _Element) {
                 _root_component_type_list_2_spec_for_InformationCategory,
                 undefined
             );
-            return new InformationCategory /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new InformationCategory (
                 reference,
                 description
             );

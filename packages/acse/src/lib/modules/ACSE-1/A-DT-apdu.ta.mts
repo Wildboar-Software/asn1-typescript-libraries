@@ -156,13 +156,10 @@ export function _decode_A_DT_apdu(el: _Element) {
     _cached_decoder_for_A_DT_apdu = $._decode_implicit<A_DT_apdu>(
       () =>
         function (el: _Element): A_DT_apdu {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let aso_qualifier: OPTIONAL<ASO_qualifier>;
           let asoi_identifier: OPTIONAL<ASOI_identifier>;
           let _unrecognizedExtensionsList: _Element[] = [];
           let a_user_data!: User_Data;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'aso-qualifier': (_el: _Element): void => {
               aso_qualifier = $._decode_explicit<ASO_qualifier>(
@@ -180,7 +177,6 @@ export function _decode_A_DT_apdu(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -191,7 +187,7 @@ export function _decode_A_DT_apdu(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new A_DT_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new A_DT_apdu (
             aso_qualifier,
             asoi_identifier,
             _unrecognizedExtensionsList,

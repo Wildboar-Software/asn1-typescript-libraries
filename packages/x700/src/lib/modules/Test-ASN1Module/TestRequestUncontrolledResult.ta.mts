@@ -184,14 +184,11 @@ export function _decode_TestRequestUncontrolledResult(el: _Element) {
         _cached_decoder_for_TestRequestUncontrolledResult = function (
             el: _Element
         ): TestRequestUncontrolledResult {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let testOutcome: OPTIONAL<TestOutcome>;
             let mORTs: OPTIONAL<ObjectInstance[]>;
             let proposedRepairActions: OPTIONAL<ProposedRepairActions>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 testOutcome: (_el: _Element): void => {
                     testOutcome = $._decode_implicit<TestOutcome>(
@@ -221,7 +218,6 @@ export function _decode_TestRequestUncontrolledResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -230,7 +226,7 @@ export function _decode_TestRequestUncontrolledResult(el: _Element) {
                 _root_component_type_list_2_spec_for_TestRequestUncontrolledResult,
                 undefined
             );
-            return new TestRequestUncontrolledResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestRequestUncontrolledResult (
                 testOutcome,
                 mORTs,
                 proposedRepairActions,

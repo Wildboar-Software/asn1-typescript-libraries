@@ -249,7 +249,6 @@ let _cached_decoder_for_PersonReach: $.ASN1Decoder<PersonReach> | null = null;
 export function _decode_PersonReach(el: _Element) {
     if (!_cached_decoder_for_PersonReach) {
         _cached_decoder_for_PersonReach = function (el: _Element): PersonReach {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let number_: OPTIONAL<PersonNumber> =
                 PersonReach._default_value_for_number_;
             let name: OPTIONAL<PersonName> =
@@ -260,8 +259,6 @@ export function _decode_PersonReach(el: _Element) {
             let fax: OPTIONAL<PersonFax>;
             let respon: OPTIONAL<PersonRespon>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 number: (_el: _Element): void => {
                     number_ = $._decode_implicit<PersonNumber>(
@@ -299,7 +296,6 @@ export function _decode_PersonReach(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -310,7 +306,7 @@ export function _decode_PersonReach(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new PersonReach /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PersonReach (
                 number_,
                 name,
                 phone,

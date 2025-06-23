@@ -261,7 +261,6 @@ let _cached_decoder_for_CVRequest: $.ASN1Decoder<CVRequest> | null = null;
 export function _decode_CVRequest(el: _Element) {
   if (!_cached_decoder_for_CVRequest) {
     _cached_decoder_for_CVRequest = function (el: _Element): CVRequest {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let cvRequestVersion: OPTIONAL<INTEGER> =
         CVRequest._default_value_for_cvRequestVersion;
       let query!: Query;
@@ -273,8 +272,6 @@ export function _decode_CVRequest(el: _Element) {
       let signatureAlg: OPTIONAL<AlgorithmIdentifier>;
       let hashAlg: OPTIONAL<OBJECT_IDENTIFIER>;
       let requestorText: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         cvRequestVersion: (_el: _Element): void => {
           cvRequestVersion = $._decodeInteger(_el);
@@ -323,7 +320,6 @@ export function _decode_CVRequest(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -332,7 +328,7 @@ export function _decode_CVRequest(el: _Element) {
         _root_component_type_list_2_spec_for_CVRequest,
         undefined
       );
-      return new CVRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CVRequest (
         cvRequestVersion,
         query,
         requestorRef,

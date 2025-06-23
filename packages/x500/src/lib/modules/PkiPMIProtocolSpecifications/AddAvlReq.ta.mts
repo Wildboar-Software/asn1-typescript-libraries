@@ -167,15 +167,12 @@ let _cached_decoder_for_AddAvlReq: $.ASN1Decoder<AddAvlReq> | null = null;
 export function _decode_AddAvlReq(el: _Element) {
     if (!_cached_decoder_for_AddAvlReq) {
         _cached_decoder_for_AddAvlReq = function (el: _Element): AddAvlReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 AddAvlReq._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let certlist!: CertAVL;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -190,7 +187,6 @@ export function _decode_AddAvlReq(el: _Element) {
                     certlist = _decode_CertAVL(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -202,7 +198,7 @@ export function _decode_AddAvlReq(el: _Element) {
                 }
             );
             return new AddAvlReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 certlist,

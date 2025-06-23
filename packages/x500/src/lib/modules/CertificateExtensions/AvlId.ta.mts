@@ -121,12 +121,9 @@ let _cached_decoder_for_AvlId: $.ASN1Decoder<AvlId> | null = null;
 export function _decode_AvlId(el: _Element) {
     if (!_cached_decoder_for_AvlId) {
         _cached_decoder_for_AvlId = function (el: _Element): AvlId {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let issuer!: Name;
             let serialNumber: OPTIONAL<AvlSerialNumber>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 issuer: (_el: _Element): void => {
                     issuer = _decode_Name(_el);
@@ -135,7 +132,6 @@ export function _decode_AvlId(el: _Element) {
                     serialNumber = _decode_AvlSerialNumber(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_AvlId(el: _Element) {
                 }
             );
             return new AvlId(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
+                issuer,
                 serialNumber,
                 _unrecognizedExtensionsList
             );

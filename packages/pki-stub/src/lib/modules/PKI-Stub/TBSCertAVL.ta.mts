@@ -231,7 +231,6 @@ export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] =
  * @returns {TBSCertAVL} The decoded data structure.
  */
 export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version: OPTIONAL<Version> =
         TBSCertAVL._default_value_for_version;
     let serialNumber: OPTIONAL<AvlSerialNumber>;
@@ -241,8 +240,6 @@ export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
     let entries!: TBSCertAVL_entries_Item[];
     let _unrecognizedExtensionsList: _Element[] = [];
     let avlExtensions: OPTIONAL<Extensions>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         version: (_el: _Element): void => {
             version = $._decode_implicit<Version>(
@@ -270,7 +267,6 @@ export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
             avlExtensions = _decode_Extensions(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -282,7 +278,7 @@ export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
         }
     );
     return new TBSCertAVL(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+        version,
         serialNumber,
         signature,
         issuer,

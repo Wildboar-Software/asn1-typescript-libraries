@@ -166,15 +166,12 @@ let _cached_decoder_for_CertRsp: $.ASN1Decoder<CertRsp> | null = null;
 export function _decode_CertRsp(el: _Element) {
     if (!_cached_decoder_for_CertRsp) {
         _cached_decoder_for_CertRsp = function (el: _Element): CertRsp {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 CertRsp._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let result!: CertRsp_result;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -189,7 +186,6 @@ export function _decode_CertRsp(el: _Element) {
                     result = _decode_CertRsp_result(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -201,7 +197,7 @@ export function _decode_CertRsp(el: _Element) {
                 }
             );
             return new CertRsp(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 result,

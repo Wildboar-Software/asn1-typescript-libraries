@@ -229,7 +229,6 @@ export function _decode_TestRequestControlledInfo(el: _Element) {
         _cached_decoder_for_TestRequestControlledInfo = function (
             el: _Element
         ): TestRequestControlledInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let controlledTestRequestType!: ControlledTestRequestType;
             let testCategoryInformation: OPTIONAL<TestCategoryInformation>;
             let testSessionId: OPTIONAL<TestSessionId>;
@@ -237,8 +236,6 @@ export function _decode_TestRequestControlledInfo(el: _Element) {
             let associatedObjects: OPTIONAL<AssociatedObjects>;
             let timeoutPeriod: OPTIONAL<TimeoutPeriod>;
             let testObjectList!: TestObjectList;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 controlledTestRequestType: (_el: _Element): void => {
                     controlledTestRequestType = $._decode_implicit<ControlledTestRequestType>(
@@ -272,7 +269,6 @@ export function _decode_TestRequestControlledInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -281,7 +277,7 @@ export function _decode_TestRequestControlledInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_TestRequestControlledInfo,
                 undefined
             );
-            return new TestRequestControlledInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestRequestControlledInfo (
                 controlledTestRequestType,
                 testCategoryInformation,
                 testSessionId,

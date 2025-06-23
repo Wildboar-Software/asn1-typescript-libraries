@@ -181,13 +181,10 @@ export function _decode_AlarmSeverityAssignment(el: _Element) {
         _cached_decoder_for_AlarmSeverityAssignment = function (
             el: _Element
         ): AlarmSeverityAssignment {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let problem!: ProbableCause;
             let severityAssignedServiceAffecting: OPTIONAL<AlarmSeverityCode>;
             let severityAssignedNonServiceAffecting: OPTIONAL<AlarmSeverityCode>;
             let severityAssignedServiceIndependent: OPTIONAL<AlarmSeverityCode>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = _decode_ProbableCause(_el);
@@ -208,7 +205,6 @@ export function _decode_AlarmSeverityAssignment(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -217,7 +213,7 @@ export function _decode_AlarmSeverityAssignment(el: _Element) {
                 _root_component_type_list_2_spec_for_AlarmSeverityAssignment,
                 undefined
             );
-            return new AlarmSeverityAssignment /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AlarmSeverityAssignment (
                 problem,
                 severityAssignedServiceAffecting,
                 severityAssignedNonServiceAffecting,

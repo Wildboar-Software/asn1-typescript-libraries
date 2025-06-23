@@ -151,7 +151,6 @@ export function _decode_DeliveryService(el: _Element) {
             let per_message_component_rate: OPTIONAL<PerMessageComponentRate>;
             let per_octet_component_rate: OPTIONAL<PerOctetComponentRate>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'delivery-service-type': (_el: _Element): void => {
                     delivery_service_type = _decode_DeliveryServiceType(_el);
@@ -167,7 +166,6 @@ export function _decode_DeliveryService(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

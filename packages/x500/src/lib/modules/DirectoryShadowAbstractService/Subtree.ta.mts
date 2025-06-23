@@ -132,13 +132,10 @@ let _cached_decoder_for_Subtree: $.ASN1Decoder<Subtree> | null = null;
 export function _decode_Subtree(el: _Element) {
     if (!_cached_decoder_for_Subtree) {
         _cached_decoder_for_Subtree = function (el: _Element): Subtree {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdn!: RelativeDistinguishedName;
             let sDSE: OPTIONAL<SDSEContent>;
             let subtree: OPTIONAL<Subtree[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdn: (_el: _Element): void => {
                     rdn = _decode_RelativeDistinguishedName(_el);
@@ -152,7 +149,6 @@ export function _decode_Subtree(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -164,7 +160,7 @@ export function _decode_Subtree(el: _Element) {
                 }
             );
             return new Subtree(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rdn,
+                rdn,
                 sDSE,
                 subtree,
                 _unrecognizedExtensionsList

@@ -120,11 +120,8 @@ let _cached_decoder_for_TOsState: $.ASN1Decoder<TOsState> | null = null;
 export function _decode_TOsState(el: _Element) {
     if (!_cached_decoder_for_TOsState) {
         _cached_decoder_for_TOsState = function (el: _Element): TOsState {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tOInstance: OPTIONAL<ObjectInstance>;
             let testState!: TestState;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tOInstance: (_el: _Element): void => {
                     tOInstance = _decode_ObjectInstance(_el);
@@ -133,7 +130,6 @@ export function _decode_TOsState(el: _Element) {
                     testState = _decode_TestState(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -142,7 +138,7 @@ export function _decode_TOsState(el: _Element) {
                 _root_component_type_list_2_spec_for_TOsState,
                 undefined
             );
-            return new TOsState /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TOsState (
                 tOInstance,
                 testState
             );

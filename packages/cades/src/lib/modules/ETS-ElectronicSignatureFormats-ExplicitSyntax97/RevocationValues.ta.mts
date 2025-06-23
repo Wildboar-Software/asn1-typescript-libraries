@@ -125,25 +125,21 @@ let _cached_decoder_for_RevocationValues: $.ASN1Decoder<RevocationValues> | null
 export
 function _decode_RevocationValues (el: _Element) {
     if (!_cached_decoder_for_RevocationValues) { _cached_decoder_for_RevocationValues = function (el: _Element): RevocationValues {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let crlVals: OPTIONAL<CertificateList[]>;
     let ocspVals: OPTIONAL<BasicOCSPResponse[]>;
     let otherRevVals: OPTIONAL<OtherRevVals>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "crlVals": (_el: _Element): void => { crlVals = $._decode_explicit<CertificateList[]>(() => $._decodeSequenceOf<CertificateList>(() => _decode_CertificateList))(_el); },
         "ocspVals": (_el: _Element): void => { ocspVals = $._decode_explicit<BasicOCSPResponse[]>(() => $._decodeSequenceOf<BasicOCSPResponse>(() => _decode_BasicOCSPResponse))(_el); },
         "otherRevVals": (_el: _Element): void => { otherRevVals = $._decode_explicit<OtherRevVals>(() => _decode_OtherRevVals)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_RevocationValues,
         _extension_additions_list_spec_for_RevocationValues,
         _root_component_type_list_2_spec_for_RevocationValues,
         undefined,
     );
-    return new RevocationValues( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new RevocationValues( 
         crlVals,
         ocspVals,
         otherRevVals

@@ -137,12 +137,9 @@ let _cached_decoder_for_CertReqMsg: $.ASN1Decoder<CertReqMsg> | null = null;
 export function _decode_CertReqMsg(el: _Element) {
     if (!_cached_decoder_for_CertReqMsg) {
         _cached_decoder_for_CertReqMsg = function (el: _Element): CertReqMsg {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certReq!: CertRequest;
             let popo: OPTIONAL<ProofOfPossession>;
             let regInfo: OPTIONAL<SingleAttribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certReq: (_el: _Element): void => {
                     certReq = _decode_CertRequest(_el);
@@ -156,7 +153,6 @@ export function _decode_CertReqMsg(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -165,7 +161,7 @@ export function _decode_CertReqMsg(el: _Element) {
                 _root_component_type_list_2_spec_for_CertReqMsg,
                 undefined
             );
-            return new CertReqMsg /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CertReqMsg (
                 certReq,
                 popo,
                 regInfo

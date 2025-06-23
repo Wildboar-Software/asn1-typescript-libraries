@@ -151,7 +151,6 @@ export function _decode_ProcessingError(el: _Element) {
             let non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>;
             let supplementary_info!: SupplementaryError;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'non-delivery-reason': (_el: _Element): void => {
                     non_delivery_reason = $._decode_implicit<NonDeliveryReasonCode>(
@@ -169,7 +168,6 @@ export function _decode_ProcessingError(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -170,13 +170,10 @@ export const _extension_additions_list_spec_for_LDAPMessage: $.ComponentSpec[] =
  * @returns {LDAPMessage} The decoded data structure.
  */
 export function _decode_LDAPMessage(el: _Element) {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let messageID!: MessageID;
     let protocolOp!: LDAPMessage_protocolOp;
     let controls: OPTIONAL<Controls>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         messageID: (_el: _Element): void => {
             messageID = _decode_MessageID(_el);
@@ -188,7 +185,6 @@ export function _decode_LDAPMessage(el: _Element) {
             controls = $._decode_implicit<Controls>(() => _decode_Controls)(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -199,7 +195,7 @@ export function _decode_LDAPMessage(el: _Element) {
             _unrecognizedExtensionsList.push(ext);
         }
     );
-    return new LDAPMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
+    return new LDAPMessage (
         messageID,
         protocolOp,
         controls,

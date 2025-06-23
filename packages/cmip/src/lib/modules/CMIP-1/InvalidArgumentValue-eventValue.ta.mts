@@ -122,11 +122,8 @@ export function _decode_InvalidArgumentValue_eventValue(el: _Element) {
     _cached_decoder_for_InvalidArgumentValue_eventValue = function (
       el: _Element
     ): InvalidArgumentValue_eventValue {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let eventType!: EventTypeId;
       let eventInfo: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         eventType: (_el: _Element): void => {
           eventType = _decode_EventTypeId(_el);
@@ -135,7 +132,6 @@ export function _decode_InvalidArgumentValue_eventValue(el: _Element) {
           eventInfo = $._decode_explicit<_Element>(() => $._decodeAny)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -144,7 +140,7 @@ export function _decode_InvalidArgumentValue_eventValue(el: _Element) {
         _root_component_type_list_2_spec_for_InvalidArgumentValue_eventValue,
         undefined
       );
-      return new InvalidArgumentValue_eventValue /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new InvalidArgumentValue_eventValue (
         eventType,
         eventInfo
       );

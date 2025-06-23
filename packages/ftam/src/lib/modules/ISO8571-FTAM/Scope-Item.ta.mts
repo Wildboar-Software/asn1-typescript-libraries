@@ -126,11 +126,8 @@ let _cached_decoder_for_Scope_Item: $.ASN1Decoder<Scope_Item> | null = null;
 export function _decode_Scope_Item(el: _Element) {
   if (!_cached_decoder_for_Scope_Item) {
     _cached_decoder_for_Scope_Item = function (el: _Element): Scope_Item {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let root_directory: OPTIONAL<Pathname_Attribute>;
       let retrieval_scope!: Scope_Item_retrieval_scope;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'root-directory': (_el: _Element): void => {
           root_directory = $._decode_explicit<Pathname_Attribute>(
@@ -143,7 +140,6 @@ export function _decode_Scope_Item(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -152,7 +148,7 @@ export function _decode_Scope_Item(el: _Element) {
         _root_component_type_list_2_spec_for_Scope_Item,
         undefined
       );
-      return new Scope_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Scope_Item (
         root_directory,
         retrieval_scope
       );

@@ -393,7 +393,6 @@ export function _decode_DefaultAccess(el: _Element) {
         _cached_decoder_for_DefaultAccess = function (
             el: _Element
         ): DefaultAccess {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let action: OPTIONAL<EnforcementAction> =
                 DefaultAccess._default_value_for_action;
             let create: OPTIONAL<EnforcementAction> =
@@ -414,8 +413,6 @@ export function _decode_DefaultAccess(el: _Element) {
                 DefaultAccess._default_value_for_multipleObjectSelection;
             let filter: OPTIONAL<EnforcementAction> =
                 DefaultAccess._default_value_for_filter;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 action: (_el: _Element): void => {
                     action = $._decode_implicit<EnforcementAction>(
@@ -468,7 +465,6 @@ export function _decode_DefaultAccess(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -477,7 +473,7 @@ export function _decode_DefaultAccess(el: _Element) {
                 _root_component_type_list_2_spec_for_DefaultAccess,
                 undefined
             );
-            return new DefaultAccess /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DefaultAccess (
                 action,
                 create,
                 delete_,

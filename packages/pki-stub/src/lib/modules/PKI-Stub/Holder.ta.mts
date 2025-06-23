@@ -144,12 +144,9 @@ export const _extension_additions_list_spec_for_Holder: $.ComponentSpec[] = [];
  * @returns {Holder} The decoded data structure.
  */
 export function _decode_Holder(el: _Element): Holder {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let baseCertificateID: OPTIONAL<IssuerSerial>;
     let entityName: OPTIONAL<GeneralNames>;
     let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         baseCertificateID: (_el: _Element): void => {
             baseCertificateID = $._decode_implicit<IssuerSerial>(
@@ -167,7 +164,6 @@ export function _decode_Holder(el: _Element): Holder {
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -177,7 +173,7 @@ export function _decode_Holder(el: _Element): Holder {
         undefined
     );
     return new Holder(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ baseCertificateID,
+        baseCertificateID,
         entityName,
         objectDigestInfo
     );

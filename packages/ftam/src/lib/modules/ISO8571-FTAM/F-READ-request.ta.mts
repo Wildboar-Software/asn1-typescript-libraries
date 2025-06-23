@@ -167,13 +167,10 @@ export function _decode_F_READ_request(el: _Element) {
     _cached_decoder_for_F_READ_request = function (
       el: _Element
     ): F_READ_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let file_access_data_unit_identity!: FADU_Identity;
       let access_context!: Access_Context;
       let fadu_lock: OPTIONAL<FADU_Lock>;
       let transfer_number: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'file-access-data-unit-identity': (_el: _Element): void => {
           file_access_data_unit_identity = _decode_FADU_Identity(_el);
@@ -190,7 +187,6 @@ export function _decode_F_READ_request(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -199,7 +195,7 @@ export function _decode_F_READ_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_READ_request,
         undefined
       );
-      return new F_READ_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_READ_request (
         file_access_data_unit_identity,
         access_context,
         fadu_lock,

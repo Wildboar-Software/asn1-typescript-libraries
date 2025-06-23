@@ -130,7 +130,6 @@ export function _decode_CrossReference(el: _Element) {
             let accessPoint!: AccessPointInformation;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 contextPrefix: (_el: _Element): void => {
                     contextPrefix = $._decode_explicit<DistinguishedName>(
@@ -143,7 +142,6 @@ export function _decode_CrossReference(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

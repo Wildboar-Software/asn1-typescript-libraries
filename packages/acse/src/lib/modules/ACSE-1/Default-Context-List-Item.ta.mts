@@ -127,11 +127,8 @@ export function _decode_Default_Context_List_Item(el: _Element) {
     _cached_decoder_for_Default_Context_List_Item = function (
       el: _Element
     ): Default_Context_List_Item {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let abstract_syntax_name: OPTIONAL<Abstract_syntax_name>;
       let transfer_syntax_name!: Transfer_syntax_name;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'abstract-syntax-name': (_el: _Element): void => {
           abstract_syntax_name = $._decode_implicit<Abstract_syntax_name>(
@@ -144,7 +141,6 @@ export function _decode_Default_Context_List_Item(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -153,7 +149,7 @@ export function _decode_Default_Context_List_Item(el: _Element) {
         _root_component_type_list_2_spec_for_Default_Context_List_Item,
         undefined
       );
-      return new Default_Context_List_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Default_Context_List_Item (
         abstract_syntax_name,
         transfer_syntax_name
       );

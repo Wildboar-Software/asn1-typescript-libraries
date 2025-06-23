@@ -248,7 +248,6 @@ export function _decode_F_CANCEL_request(el: _Element) {
     _cached_decoder_for_F_CANCEL_request = function (
       el: _Element
     ): F_CANCEL_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let action_result: OPTIONAL<Action_Result> =
         F_CANCEL_request._default_value_for_action_result;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
@@ -259,8 +258,6 @@ export function _decode_F_CANCEL_request(el: _Element) {
       let last_transfer_end_read_response: OPTIONAL<INTEGER>;
       let last_transfer_end_write_request: OPTIONAL<INTEGER>;
       let last_transfer_end_write_response: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'action-result': (_el: _Element): void => {
           action_result = _decode_Action_Result(_el);
@@ -300,7 +297,6 @@ export function _decode_F_CANCEL_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -309,7 +305,7 @@ export function _decode_F_CANCEL_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_CANCEL_request,
         undefined
       );
-      return new F_CANCEL_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_CANCEL_request (
         action_result,
         shared_ASE_information,
         diagnostic,

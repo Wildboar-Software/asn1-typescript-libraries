@@ -157,13 +157,10 @@ export function _decode_GeneralError_Item(el: _Element) {
         _cached_decoder_for_GeneralError_Item = function (
             el: _Element
         ): GeneralError_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let cause!: GeneralErrorCause;
             let details: OPTIONAL<GraphicString>;
             let relatedObjects: OPTIONAL<ObjectInstance[]>;
             let attributeList: OPTIONAL<AttributeList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 cause: (_el: _Element): void => {
                     cause = _decode_GeneralErrorCause(_el);
@@ -184,7 +181,6 @@ export function _decode_GeneralError_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -193,7 +189,7 @@ export function _decode_GeneralError_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_GeneralError_Item,
                 undefined
             );
-            return new GeneralError_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new GeneralError_Item (
                 cause,
                 details,
                 relatedObjects,

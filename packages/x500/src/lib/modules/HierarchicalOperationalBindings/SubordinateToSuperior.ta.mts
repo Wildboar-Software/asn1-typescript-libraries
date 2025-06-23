@@ -171,15 +171,12 @@ export function _decode_SubordinateToSuperior(el: _Element) {
         _cached_decoder_for_SubordinateToSuperior = function (
             el: _Element
         ): SubordinateToSuperior {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let accessPoints: OPTIONAL<MasterAndShadowAccessPoints>;
             let alias: OPTIONAL<BOOLEAN> =
                 SubordinateToSuperior._default_value_for_alias;
             let entryInfo: OPTIONAL<Attribute[]>;
             let subentries: OPTIONAL<SubentryInfo[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 accessPoints: (_el: _Element): void => {
                     accessPoints = $._decode_explicit<MasterAndShadowAccessPoints>(
@@ -202,7 +199,6 @@ export function _decode_SubordinateToSuperior(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -214,7 +210,7 @@ export function _decode_SubordinateToSuperior(el: _Element) {
                 }
             );
             return new SubordinateToSuperior(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ accessPoints,
+                accessPoints,
                 alias,
                 entryInfo,
                 subentries,

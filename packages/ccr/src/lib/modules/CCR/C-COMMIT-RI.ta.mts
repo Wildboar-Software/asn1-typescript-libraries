@@ -121,17 +121,13 @@ export function _decode_C_COMMIT_RI(el: _Element) {
     _cached_decoder_for_C_COMMIT_RI = $._decode_implicit<C_COMMIT_RI>(
       () =>
         function (el: _Element): C_COMMIT_RI {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_data: OPTIONAL<User_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'user-data': (_el: _Element): void => {
               user_data = _decode_User_data(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -142,7 +138,7 @@ export function _decode_C_COMMIT_RI(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new C_COMMIT_RI /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new C_COMMIT_RI (
             _unrecognizedExtensionsList,
             user_data
           );

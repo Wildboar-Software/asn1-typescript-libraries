@@ -269,7 +269,6 @@ export function _decode_ServiceControls(el: _Element) {
             let userClass: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 options: (_el: _Element): void => {
                     options = $._decode_explicit<ServiceControlOptions>(
@@ -317,7 +316,6 @@ export function _decode_ServiceControls(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

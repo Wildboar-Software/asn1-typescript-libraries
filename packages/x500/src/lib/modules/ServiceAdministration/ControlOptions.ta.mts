@@ -172,15 +172,12 @@ export function _decode_ControlOptions(el: _Element) {
         _cached_decoder_for_ControlOptions = function (
             el: _Element
         ): ControlOptions {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let serviceControls: OPTIONAL<ServiceControlOptions> =
                 ControlOptions._default_value_for_serviceControls;
             let searchOptions: OPTIONAL<SearchControlOptions> =
                 ControlOptions._default_value_for_searchOptions;
             let hierarchyOptions: OPTIONAL<HierarchySelections>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 serviceControls: (_el: _Element): void => {
                     serviceControls = $._decode_explicit<ServiceControlOptions>(
@@ -198,7 +195,6 @@ export function _decode_ControlOptions(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -210,7 +206,7 @@ export function _decode_ControlOptions(el: _Element) {
                 }
             );
             return new ControlOptions(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ serviceControls,
+                serviceControls,
                 searchOptions,
                 hierarchyOptions,
                 _unrecognizedExtensionsList

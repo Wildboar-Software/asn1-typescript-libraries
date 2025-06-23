@@ -112,11 +112,8 @@ export function _get_decoder_for_KeyInfo_paramsAndOps<
     return function (
         el: _Element
     ): KeyInfo_paramsAndOps<ParameterType, OperationsType> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let parameters!: ParameterType;
         let supportedOperations: OPTIONAL<OperationsType>;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             parameters: (_el: _Element): void => {
                 parameters = _decode_ParameterType(_el);
@@ -125,7 +122,6 @@ export function _get_decoder_for_KeyInfo_paramsAndOps<
                 supportedOperations = _decode_OperationsType(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -135,7 +131,7 @@ export function _get_decoder_for_KeyInfo_paramsAndOps<
             undefined
         );
         return new KeyInfo_paramsAndOps(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ parameters,
+            parameters,
             supportedOperations
         );
     };

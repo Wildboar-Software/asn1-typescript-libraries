@@ -137,12 +137,9 @@ let _cached_decoder_for_CertRequest: $.ASN1Decoder<CertRequest> | null = null;
 export function _decode_CertRequest(el: _Element) {
     if (!_cached_decoder_for_CertRequest) {
         _cached_decoder_for_CertRequest = function (el: _Element): CertRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certReqId!: INTEGER;
             let certTemplate!: CertTemplate;
             let controls: OPTIONAL<Controls>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certReqId: (_el: _Element): void => {
                     certReqId = $._decodeInteger(_el);
@@ -154,7 +151,6 @@ export function _decode_CertRequest(el: _Element) {
                     controls = _decode_Controls(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -163,7 +159,7 @@ export function _decode_CertRequest(el: _Element) {
                 _root_component_type_list_2_spec_for_CertRequest,
                 undefined
             );
-            return new CertRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CertRequest (
                 certReqId,
                 certTemplate,
                 controls

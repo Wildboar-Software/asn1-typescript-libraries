@@ -183,7 +183,6 @@ let _cached_decoder_for_Time24Wps: $.ASN1Decoder<Time24Wps> | null = null;
 export function _decode_Time24Wps(el: _Element) {
     if (!_cached_decoder_for_Time24Wps) {
         _cached_decoder_for_Time24Wps = function (el: _Element): Time24Wps {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hour!: INTEGER;
             let minute: OPTIONAL<INTEGER>;
             let second: OPTIONAL<INTEGER>;
@@ -191,8 +190,6 @@ export function _decode_Time24Wps(el: _Element) {
             let microseconds: OPTIONAL<INTEGER>;
             let nanoseconds: OPTIONAL<INTEGER>;
             let picoseconds: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hour: (_el: _Element): void => {
                     hour = $._decode_implicit<INTEGER>(() => $._decodeInteger)(
@@ -230,7 +227,6 @@ export function _decode_Time24Wps(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -239,7 +235,7 @@ export function _decode_Time24Wps(el: _Element) {
                 _root_component_type_list_2_spec_for_Time24Wps,
                 undefined
             );
-            return new Time24Wps /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Time24Wps (
                 hour,
                 minute,
                 second,

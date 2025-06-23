@@ -139,12 +139,9 @@ export function _decode_DataIntegrityTestResults_testResult(el: _Element) {
         _cached_decoder_for_DataIntegrityTestResults_testResult = function (
             el: _Element
         ): DataIntegrityTestResults_testResult {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let establishmentTime: OPTIONAL<EstablishmentTime>;
             let originalData!: DataUnits;
             let corruptedData: OPTIONAL<DataUnits>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 establishmentTime: (_el: _Element): void => {
                     establishmentTime = $._decode_explicit<EstablishmentTime>(
@@ -162,7 +159,6 @@ export function _decode_DataIntegrityTestResults_testResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_DataIntegrityTestResults_testResult(el: _Element) {
                 _root_component_type_list_2_spec_for_DataIntegrityTestResults_testResult,
                 undefined
             );
-            return new DataIntegrityTestResults_testResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DataIntegrityTestResults_testResult (
                 establishmentTime,
                 originalData,
                 corruptedData

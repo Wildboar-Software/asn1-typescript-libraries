@@ -269,7 +269,6 @@ let _cached_decoder_for_Query: $.ASN1Decoder<Query> | null = null;
 export function _decode_Query(el: _Element) {
   if (!_cached_decoder_for_Query) {
     _cached_decoder_for_Query = function (el: _Element): Query {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let queriedCerts!: CertReferences;
       let checks!: CertChecks;
       let wantBack: OPTIONAL<WantBack>;
@@ -281,8 +280,6 @@ export function _decode_Query(el: _Element) {
       let revInfos: OPTIONAL<RevocationInfos>;
       let producedAt: OPTIONAL<GeneralizedTime>;
       let queryExtensions: OPTIONAL<Extensions>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         queriedCerts: (_el: _Element): void => {
           queriedCerts = _decode_CertReferences(_el);
@@ -330,7 +327,6 @@ export function _decode_Query(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -339,7 +335,7 @@ export function _decode_Query(el: _Element) {
         _root_component_type_list_2_spec_for_Query,
         undefined
       );
-      return new Query /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Query (
         queriedCerts,
         checks,
         wantBack,

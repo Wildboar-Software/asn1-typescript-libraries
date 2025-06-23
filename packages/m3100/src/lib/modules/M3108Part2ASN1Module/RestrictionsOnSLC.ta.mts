@@ -153,12 +153,9 @@ export function _decode_RestrictionsOnSLC(el: _Element) {
         _cached_decoder_for_RestrictionsOnSLC = function (
             el: _Element
         ): RestrictionsOnSLC {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let restrictionId!: RestrictionsOnSLC_restrictionId;
             let restrictionText: OPTIONAL<GraphicString>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 restrictionId: (_el: _Element): void => {
                     restrictionId = $._decode_implicit<RestrictionsOnSLC_restrictionId>(
@@ -171,7 +168,6 @@ export function _decode_RestrictionsOnSLC(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_RestrictionsOnSLC(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new RestrictionsOnSLC /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RestrictionsOnSLC (
                 restrictionId,
                 restrictionText,
                 _unrecognizedExtensionsList

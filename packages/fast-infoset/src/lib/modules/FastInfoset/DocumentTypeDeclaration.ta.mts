@@ -141,12 +141,9 @@ export function _decode_DocumentTypeDeclaration(el: _Element) {
     _cached_decoder_for_DocumentTypeDeclaration = function (
       el: _Element
     ): DocumentTypeDeclaration {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let system_identifier: OPTIONAL<IdentifyingStringOrIndex>;
       let public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
       let children!: ProcessingInstruction[];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'system-identifier': (_el: _Element): void => {
           system_identifier = _decode_IdentifyingStringOrIndex(_el);
@@ -160,7 +157,6 @@ export function _decode_DocumentTypeDeclaration(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -169,7 +165,7 @@ export function _decode_DocumentTypeDeclaration(el: _Element) {
         _root_component_type_list_2_spec_for_DocumentTypeDeclaration,
         undefined
       );
-      return new DocumentTypeDeclaration /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new DocumentTypeDeclaration (
         system_identifier,
         public_identifier,
         children

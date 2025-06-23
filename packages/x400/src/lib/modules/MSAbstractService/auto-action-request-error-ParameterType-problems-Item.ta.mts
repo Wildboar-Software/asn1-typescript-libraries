@@ -135,7 +135,6 @@ export function _decode_auto_action_request_error_ParameterType_problems_Item(
             let problem!: AutoActionRequestProblem;
             let type_!: AutoActionType;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<AutoActionRequestProblem>(
@@ -148,7 +147,6 @@ export function _decode_auto_action_request_error_ParameterType_problems_Item(
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

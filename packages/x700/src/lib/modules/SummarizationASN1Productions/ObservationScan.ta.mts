@@ -146,12 +146,9 @@ export function _decode_ObservationScan(el: _Element) {
         _cached_decoder_for_ObservationScan = function (
             el: _Element
         ): ObservationScan {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let observedObjectInstance: OPTIONAL<ObjectInstance>;
             let attributeMeasureList: OPTIONAL<AttributeMeasure[]>;
             let numericValueArray: OPTIONAL<NumericMeasure[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 observedObjectInstance: (_el: _Element): void => {
                     observedObjectInstance = _decode_ObjectInstance(_el);
@@ -174,7 +171,6 @@ export function _decode_ObservationScan(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_ObservationScan(el: _Element) {
                 _root_component_type_list_2_spec_for_ObservationScan,
                 undefined
             );
-            return new ObservationScan /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ObservationScan (
                 observedObjectInstance,
                 attributeMeasureList,
                 numericValueArray

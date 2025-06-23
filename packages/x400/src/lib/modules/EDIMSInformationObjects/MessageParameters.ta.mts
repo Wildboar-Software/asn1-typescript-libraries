@@ -151,7 +151,6 @@ export function _decode_MessageParameters(el: _Element) {
             let delivery_envelope: OPTIONAL<OtherMessageDeliveryFields>;
             let other_parameters: OPTIONAL<EDISupplementaryInformation>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'delivery-time': (_el: _Element): void => {
                     delivery_time = $._decode_implicit<MessageDeliveryTime>(
@@ -169,7 +168,6 @@ export function _decode_MessageParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

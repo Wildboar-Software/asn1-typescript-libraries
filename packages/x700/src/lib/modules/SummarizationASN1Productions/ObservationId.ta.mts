@@ -146,12 +146,9 @@ export function _decode_ObservationId(el: _Element) {
         _cached_decoder_for_ObservationId = function (
             el: _Element
         ): ObservationId {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let observedObject!: ObjectInstance;
             let scanAttributeIdList: OPTIONAL<ScanAttributeIdList>;
             let numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 observedObject: (_el: _Element): void => {
                     observedObject = _decode_ObjectInstance(_el);
@@ -165,7 +162,6 @@ export function _decode_ObservationId(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -174,7 +170,7 @@ export function _decode_ObservationId(el: _Element) {
                 _root_component_type_list_2_spec_for_ObservationId,
                 undefined
             );
-            return new ObservationId /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ObservationId (
                 observedObject,
                 scanAttributeIdList,
                 numericAttributeIdArray

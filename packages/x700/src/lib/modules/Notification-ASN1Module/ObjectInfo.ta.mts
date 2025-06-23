@@ -207,15 +207,12 @@ let _cached_decoder_for_ObjectInfo: $.ASN1Decoder<ObjectInfo> | null = null;
 export function _decode_ObjectInfo(el: _Element) {
     if (!_cached_decoder_for_ObjectInfo) {
         _cached_decoder_for_ObjectInfo = function (el: _Element): ObjectInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sourceIndicator: OPTIONAL<SourceIndicator>;
             let attributeList: OPTIONAL<AttributeList>;
             let notificationIdentifier: OPTIONAL<NotificationIdentifier>;
             let correlatedNotifications: OPTIONAL<CorrelatedNotifications>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sourceIndicator: (_el: _Element): void => {
                     sourceIndicator = _decode_SourceIndicator(_el);
@@ -242,7 +239,6 @@ export function _decode_ObjectInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -251,7 +247,7 @@ export function _decode_ObjectInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ObjectInfo,
                 undefined
             );
-            return new ObjectInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ObjectInfo (
                 sourceIndicator,
                 attributeList,
                 notificationIdentifier,

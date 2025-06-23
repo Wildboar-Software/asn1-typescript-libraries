@@ -156,13 +156,10 @@ export function _decode_UpdateInformationData(el: _Element) {
         _cached_decoder_for_UpdateInformationData = function (
             el: _Element
         ): UpdateInformationData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sPIFVersionNumber!: SPIFVersionNumber;
             let creationDate!: GeneralizedTime;
             let originatorDistinguishedName!: Name;
             let keyIdentifier: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sPIFVersionNumber: (_el: _Element): void => {
                     sPIFVersionNumber = _decode_SPIFVersionNumber(_el);
@@ -177,7 +174,6 @@ export function _decode_UpdateInformationData(el: _Element) {
                     keyIdentifier = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -186,7 +182,7 @@ export function _decode_UpdateInformationData(el: _Element) {
                 _root_component_type_list_2_spec_for_UpdateInformationData,
                 undefined
             );
-            return new UpdateInformationData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new UpdateInformationData (
                 sPIFVersionNumber,
                 creationDate,
                 originatorDistinguishedName,

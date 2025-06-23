@@ -168,13 +168,10 @@ let _cached_decoder_for_AD_KDCIssued: $.ASN1Decoder<AD_KDCIssued> | null = null;
 export function _decode_AD_KDCIssued(el: _Element) {
   if (!_cached_decoder_for_AD_KDCIssued) {
     _cached_decoder_for_AD_KDCIssued = function (el: _Element): AD_KDCIssued {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let ad_checksum!: Checksum;
       let i_realm: OPTIONAL<Realm>;
       let i_sname: OPTIONAL<PrincipalName>;
       let elements!: AuthorizationData;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'ad-checksum': (_el: _Element): void => {
           ad_checksum = $._decode_explicit<Checksum>(() => _decode_Checksum)(
@@ -195,7 +192,6 @@ export function _decode_AD_KDCIssued(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -204,7 +200,7 @@ export function _decode_AD_KDCIssued(el: _Element) {
         _root_component_type_list_2_spec_for_AD_KDCIssued,
         undefined
       );
-      return new AD_KDCIssued /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new AD_KDCIssued (
         ad_checksum,
         i_realm,
         i_sname,

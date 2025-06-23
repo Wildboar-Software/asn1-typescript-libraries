@@ -195,7 +195,6 @@ export function _decode_TbsReleaseRsp(el: _Element) {
         _cached_decoder_for_TbsReleaseRsp = function (
             el: _Element
         ): TbsReleaseRsp {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 TbsReleaseRsp._default_value_for_version;
             let sigAlg!: AlgorithmIdentifier;
@@ -203,8 +202,6 @@ export function _decode_TbsReleaseRsp(el: _Element) {
             let time!: TimeStamp;
             let pkiPath!: DER_PkiPath;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -222,7 +219,6 @@ export function _decode_TbsReleaseRsp(el: _Element) {
                     pkiPath = _decode_DER_PkiPath(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -234,7 +230,7 @@ export function _decode_TbsReleaseRsp(el: _Element) {
                 }
             );
             return new TbsReleaseRsp(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sigAlg,
                 assoID,
                 time,

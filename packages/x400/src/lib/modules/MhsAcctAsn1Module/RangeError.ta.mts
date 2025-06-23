@@ -107,7 +107,6 @@ export function _decode_RangeError(el: _Element) {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
             let problem!: RangeProblem;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_implicit<RangeProblem>(
@@ -115,7 +114,6 @@ export function _decode_RangeError(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

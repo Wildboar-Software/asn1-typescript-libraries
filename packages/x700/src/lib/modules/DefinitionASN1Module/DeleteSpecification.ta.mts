@@ -136,11 +136,8 @@ export function _decode_DeleteSpecification(el: _Element) {
         _cached_decoder_for_DeleteSpecification = function (
             el: _Element
         ): DeleteSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let deleteModifier: OPTIONAL<DeleteSpecification_deleteModifier>;
             let parameter: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 deleteModifier: (_el: _Element): void => {
                     deleteModifier = _decode_DeleteSpecification_deleteModifier(
@@ -151,7 +148,6 @@ export function _decode_DeleteSpecification(el: _Element) {
                     parameter = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_DeleteSpecification(el: _Element) {
                 _root_component_type_list_2_spec_for_DeleteSpecification,
                 undefined
             );
-            return new DeleteSpecification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DeleteSpecification (
                 deleteModifier,
                 parameter
             );

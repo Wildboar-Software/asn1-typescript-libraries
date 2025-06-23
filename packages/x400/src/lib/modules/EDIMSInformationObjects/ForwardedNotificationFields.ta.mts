@@ -184,14 +184,11 @@ export function _decode_ForwardedNotificationFields(el: _Element) {
         _cached_decoder_for_ForwardedNotificationFields = function (
             el: _Element
         ): ForwardedNotificationFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let fn_common_fields!: CommonFields;
             let forwarded_to!: ForwardedTo;
             let fn_reason_code!: FNReasonCodeField;
             let fn_supplementary_information: OPTIONAL<EDISupplementaryInformation>;
             let fn_extensions: OPTIONAL<FNExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'fn-common-fields': (_el: _Element): void => {
                     fn_common_fields = $._decode_implicit<CommonFields>(
@@ -219,7 +216,6 @@ export function _decode_ForwardedNotificationFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -228,7 +224,7 @@ export function _decode_ForwardedNotificationFields(el: _Element) {
                 _root_component_type_list_2_spec_for_ForwardedNotificationFields,
                 undefined
             );
-            return new ForwardedNotificationFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ForwardedNotificationFields (
                 fn_common_fields,
                 forwarded_to,
                 fn_reason_code,

@@ -118,11 +118,8 @@ let _cached_decoder_for_TimeRange: $.ASN1Decoder<TimeRange> | null = null;
 export function _decode_TimeRange(el: _Element) {
     if (!_cached_decoder_for_TimeRange) {
         _cached_decoder_for_TimeRange = function (el: _Element): TimeRange {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let from_: OPTIONAL<CreationTime>;
             let to: OPTIONAL<CreationTime>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 from: (_el: _Element): void => {
                     from_ = $._decode_explicit<CreationTime>(
@@ -135,7 +132,6 @@ export function _decode_TimeRange(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_TimeRange(el: _Element) {
                 _root_component_type_list_2_spec_for_TimeRange,
                 undefined
             );
-            return new TimeRange /* SEQUENCE_CONSTRUCTOR_CALL */(from_, to);
+            return new TimeRange (from_, to);
         };
     }
     return _cached_decoder_for_TimeRange(el);

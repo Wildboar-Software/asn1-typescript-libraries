@@ -168,13 +168,10 @@ export function _decode_F_WRITE_request(el: _Element) {
     _cached_decoder_for_F_WRITE_request = function (
       el: _Element
     ): F_WRITE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let file_access_data_unit_Operation!: F_WRITE_request_file_access_data_unit_Operation;
       let file_access_data_unit_identity!: FADU_Identity;
       let fadu_lock: OPTIONAL<FADU_Lock>;
       let transfer_number: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'file-access-data-unit-Operation': (_el: _Element): void => {
           file_access_data_unit_Operation = $._decode_implicit<F_WRITE_request_file_access_data_unit_Operation>(
@@ -193,7 +190,6 @@ export function _decode_F_WRITE_request(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -202,7 +198,7 @@ export function _decode_F_WRITE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_WRITE_request,
         undefined
       );
-      return new F_WRITE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_WRITE_request (
         file_access_data_unit_Operation,
         file_access_data_unit_identity,
         fadu_lock,

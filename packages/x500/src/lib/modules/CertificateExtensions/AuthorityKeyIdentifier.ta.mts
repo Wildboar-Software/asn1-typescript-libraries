@@ -151,13 +151,10 @@ export function _decode_AuthorityKeyIdentifier(el: _Element) {
         _cached_decoder_for_AuthorityKeyIdentifier = function (
             el: _Element
         ): AuthorityKeyIdentifier {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let keyIdentifier: OPTIONAL<KeyIdentifier>;
             let authorityCertIssuer: OPTIONAL<GeneralNames>;
             let authorityCertSerialNumber: OPTIONAL<CertificateSerialNumber>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 keyIdentifier: (_el: _Element): void => {
                     keyIdentifier = $._decode_implicit<KeyIdentifier>(
@@ -175,7 +172,6 @@ export function _decode_AuthorityKeyIdentifier(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -187,7 +183,7 @@ export function _decode_AuthorityKeyIdentifier(el: _Element) {
                 }
             );
             return new AuthorityKeyIdentifier(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ keyIdentifier,
+                keyIdentifier,
                 authorityCertIssuer,
                 authorityCertSerialNumber,
                 _unrecognizedExtensionsList

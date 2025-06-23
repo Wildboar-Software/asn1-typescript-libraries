@@ -141,12 +141,9 @@ export function _decode_IPMSecurityLabel(el: _Element) {
         _cached_decoder_for_IPMSecurityLabel = function (
             el: _Element
         ): IPMSecurityLabel {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let content_security_label!: SecurityLabel;
             let heading_security_label: OPTIONAL<SecurityLabel>;
             let body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-security-label': (_el: _Element): void => {
                     content_security_label = $._decode_implicit<SecurityLabel>(
@@ -168,7 +165,6 @@ export function _decode_IPMSecurityLabel(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -177,7 +173,7 @@ export function _decode_IPMSecurityLabel(el: _Element) {
                 _root_component_type_list_2_spec_for_IPMSecurityLabel,
                 undefined
             );
-            return new IPMSecurityLabel /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new IPMSecurityLabel (
                 content_security_label,
                 heading_security_label,
                 body_part_security_labels

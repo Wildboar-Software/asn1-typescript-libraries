@@ -178,14 +178,11 @@ export function _decode_SigncryptedData(el: _Element) {
         _cached_decoder_for_SigncryptedData = function (
             el: _Element
         ): SigncryptedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let contentInformation!: ContentInformation;
             let certificates: OPTIONAL<Certificates>;
             let crls: OPTIONAL<CRLs>;
             let signcrypters!: Signcrypters;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -203,7 +200,6 @@ export function _decode_SigncryptedData(el: _Element) {
                     signcrypters = _decode_Signcrypters(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -212,7 +208,7 @@ export function _decode_SigncryptedData(el: _Element) {
                 _root_component_type_list_2_spec_for_SigncryptedData,
                 undefined
             );
-            return new SigncryptedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SigncryptedData (
                 version,
                 contentInformation,
                 certificates,

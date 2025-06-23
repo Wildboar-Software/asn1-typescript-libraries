@@ -145,14 +145,11 @@ export const _extension_additions_list_spec_for_PresentationAddress: $.Component
  * @returns {PresentationAddress} The decoded data structure.
  */
 export function _decode_PresentationAddress(el: _Element): PresentationAddress {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let pSelector: OPTIONAL<OCTET_STRING>;
     let sSelector: OPTIONAL<OCTET_STRING>;
     let tSelector: OPTIONAL<OCTET_STRING>;
     let nAddresses!: OCTET_STRING[];
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         pSelector: (_el: _Element): void => {
             pSelector = $._decode_explicit<OCTET_STRING>(
@@ -175,7 +172,6 @@ export function _decode_PresentationAddress(el: _Element): PresentationAddress {
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -187,7 +183,7 @@ export function _decode_PresentationAddress(el: _Element): PresentationAddress {
         }
     );
     return new PresentationAddress(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ pSelector,
+        pSelector,
         sSelector,
         tSelector,
         nAddresses,

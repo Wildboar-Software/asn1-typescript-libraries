@@ -186,15 +186,12 @@ export function _decode_BindResponse(el: _Element) {
     _cached_decoder_for_BindResponse = $._decode_implicit<BindResponse>(
       () =>
         function (el: _Element): BindResponse {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let resultCode!: LDAPResult_resultCode;
           let matchedDN!: LDAPDN;
           let diagnosticMessage!: LDAPString;
           let referral: OPTIONAL<Referral>;
           let serverSaslCreds: OPTIONAL<OCTET_STRING>;
           let _unrecognizedExtensionsList: _Element[] = [];
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             resultCode: (_el: _Element): void => {
               resultCode = _decode_LDAPResult_resultCode(_el);
@@ -216,7 +213,6 @@ export function _decode_BindResponse(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -227,7 +223,7 @@ export function _decode_BindResponse(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new BindResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new BindResponse (
             resultCode,
             matchedDN,
             diagnosticMessage,

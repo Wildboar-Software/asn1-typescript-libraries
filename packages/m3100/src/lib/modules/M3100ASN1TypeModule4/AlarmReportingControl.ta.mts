@@ -175,13 +175,10 @@ export function _decode_AlarmReportingControl(el: _Element) {
         _cached_decoder_for_AlarmReportingControl = function (
             el: _Element
         ): AlarmReportingControl {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let controlledEntity!: ObjectInstance;
             let arcProbableCauseList!: ProbableCause[];
             let arcState!: ArcState;
             let timeRemainingInARCState: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 controlledEntity: (_el: _Element): void => {
                     controlledEntity = _decode_ObjectInstance(_el);
@@ -198,7 +195,6 @@ export function _decode_AlarmReportingControl(el: _Element) {
                     timeRemainingInARCState = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -207,7 +203,7 @@ export function _decode_AlarmReportingControl(el: _Element) {
                 _root_component_type_list_2_spec_for_AlarmReportingControl,
                 undefined
             );
-            return new AlarmReportingControl /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AlarmReportingControl (
                 controlledEntity,
                 arcProbableCauseList,
                 arcState,

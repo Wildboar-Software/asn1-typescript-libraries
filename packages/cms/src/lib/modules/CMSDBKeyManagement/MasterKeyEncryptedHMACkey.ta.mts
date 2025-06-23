@@ -144,12 +144,9 @@ export function _decode_MasterKeyEncryptedHMACkey(el: _Element) {
         _cached_decoder_for_MasterKeyEncryptedHMACkey = function (
             el: _Element
         ): MasterKeyEncryptedHMACkey {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>;
             let hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>;
             let encryptedKey!: OCTET_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 masterKeyAID: (_el: _Element): void => {
                     masterKeyAID = _decode_MasterKeyAlgorithmIdentifier(_el);
@@ -163,7 +160,6 @@ export function _decode_MasterKeyEncryptedHMACkey(el: _Element) {
                     encryptedKey = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -172,7 +168,7 @@ export function _decode_MasterKeyEncryptedHMACkey(el: _Element) {
                 _root_component_type_list_2_spec_for_MasterKeyEncryptedHMACkey,
                 undefined
             );
-            return new MasterKeyEncryptedHMACkey /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MasterKeyEncryptedHMACkey (
                 masterKeyAID,
                 hmacKeyAID,
                 encryptedKey

@@ -210,7 +210,6 @@ export function _decode_TbpDataTransferServer(el: _Element) {
         _cached_decoder_for_TbpDataTransferServer = function (
             el: _Element
         ): TbpDataTransferServer {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokeID: OPTIONAL<InvokeID>;
             let assoID!: AssoID;
             let time!: TimeStamp;
@@ -222,8 +221,6 @@ export function _decode_TbpDataTransferServer(el: _Element) {
             let encInvoke: OPTIONAL<AlgoInvoke>;
             let conf!: TbpDataTransferServer_conf;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokeID: (_el: _Element): void => {
                     invokeID = $._decode_implicit<InvokeID>(
@@ -258,7 +255,6 @@ export function _decode_TbpDataTransferServer(el: _Element) {
                     conf = _decode_TbpDataTransferServer_conf(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -270,7 +266,7 @@ export function _decode_TbpDataTransferServer(el: _Element) {
                 }
             );
             return new TbpDataTransferServer(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ invokeID,
+                invokeID,
                 assoID,
                 time,
                 seq,

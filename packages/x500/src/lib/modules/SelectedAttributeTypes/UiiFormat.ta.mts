@@ -153,13 +153,10 @@ let _cached_decoder_for_UiiFormat: $.ASN1Decoder<UiiFormat> | null = null;
 export function _decode_UiiFormat(el: _Element) {
     if (!_cached_decoder_for_UiiFormat) {
         _cached_decoder_for_UiiFormat = function (el: _Element): UiiFormat {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let baseObject: OPTIONAL<URI>;
             let subset: OPTIONAL<UiiFormat_subset> =
                 UiiFormat._default_value_for_subset;
             let next!: UiiFormat_next;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 baseObject: (_el: _Element): void => {
                     baseObject = _decode_URI(_el);
@@ -171,7 +168,6 @@ export function _decode_UiiFormat(el: _Element) {
                     next = _decode_UiiFormat_next(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -181,7 +177,7 @@ export function _decode_UiiFormat(el: _Element) {
                 undefined
             );
             return new UiiFormat(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ baseObject,
+                baseObject,
                 subset,
                 next
             );

@@ -258,7 +258,6 @@ export function _decode_Change_Attributes(el: _Element) {
     _cached_decoder_for_Change_Attributes = $._decode_implicit<Change_Attributes>(
       () =>
         function (el: _Element): Change_Attributes {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let pathname: OPTIONAL<Pathname_Attribute>;
           let storage_account: OPTIONAL<Account_Attribute>;
           let object_availability: OPTIONAL<Object_Availability_Attribute>;
@@ -268,8 +267,6 @@ export function _decode_Change_Attributes(el: _Element) {
           let legal_qualification: OPTIONAL<Legal_Qualification_Attribute>;
           let private_use: OPTIONAL<Private_Use_Attribute>;
           let attribute_extensions: OPTIONAL<Attribute_Extensions>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             pathname: (_el: _Element): void => {
               pathname = _decode_Pathname_Attribute(_el);
@@ -315,7 +312,6 @@ export function _decode_Change_Attributes(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -324,7 +320,7 @@ export function _decode_Change_Attributes(el: _Element) {
             _root_component_type_list_2_spec_for_Change_Attributes,
             undefined
           );
-          return new Change_Attributes /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new Change_Attributes (
             pathname,
             storage_account,
             object_availability,

@@ -219,7 +219,6 @@ export function _decode_TimeInterval(el: _Element) {
         _cached_decoder_for_TimeInterval = function (
             el: _Element
         ): TimeInterval {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let day: OPTIONAL<INTEGER> = TimeInterval._default_value_for_day;
             let hour: OPTIONAL<INTEGER> = TimeInterval._default_value_for_hour;
             let minute: OPTIONAL<INTEGER> =
@@ -228,8 +227,6 @@ export function _decode_TimeInterval(el: _Element) {
                 TimeInterval._default_value_for_second;
             let msec: OPTIONAL<INTEGER> = TimeInterval._default_value_for_msec;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 day: (_el: _Element): void => {
                     day = $._decode_implicit<INTEGER>(() => $._decodeInteger)(
@@ -257,7 +254,6 @@ export function _decode_TimeInterval(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -268,7 +264,7 @@ export function _decode_TimeInterval(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TimeInterval /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TimeInterval (
                 day,
                 hour,
                 minute,

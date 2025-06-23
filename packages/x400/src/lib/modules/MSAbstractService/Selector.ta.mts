@@ -193,7 +193,6 @@ export function _decode_Selector(el: _Element) {
             let limit: OPTIONAL<INTEGER>;
             let override: OPTIONAL<OverrideRestrictions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'child-entries': (_el: _Element): void => {
                     child_entries = $._decode_explicit<BOOLEAN>(
@@ -219,7 +218,6 @@ export function _decode_Selector(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

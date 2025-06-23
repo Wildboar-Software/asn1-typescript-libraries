@@ -189,7 +189,6 @@ export function _decode_ECParameters(el: _Element) {
         _cached_decoder_for_ECParameters = function (
             el: _Element
         ): ECParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: ECParameters_version;
             let fieldID!: FieldID;
             let curve!: Curve;
@@ -197,8 +196,6 @@ export function _decode_ECParameters(el: _Element) {
             let order!: INTEGER;
             let cofactor: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_ECParameters_version(_el);
@@ -219,7 +216,6 @@ export function _decode_ECParameters(el: _Element) {
                     cofactor = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -231,7 +227,7 @@ export function _decode_ECParameters(el: _Element) {
                 }
             );
             return new ECParameters(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 fieldID,
                 curve,
                 base,

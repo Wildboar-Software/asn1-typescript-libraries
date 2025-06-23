@@ -165,13 +165,10 @@ export function _decode_BioAPI_GUI_BITMAP(el: _Element) {
     _cached_decoder_for_BioAPI_GUI_BITMAP = function (
       el: _Element
     ): BioAPI_GUI_BITMAP {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let subtypeMask!: BioAPI_BIR_SUBTYPE_MASK;
       let width!: UnsignedInt;
       let height!: UnsignedInt;
       let bitmap: OPTIONAL<BioAPI_DATA>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         subtypeMask: (_el: _Element): void => {
           subtypeMask = _decode_BioAPI_BIR_SUBTYPE_MASK(_el);
@@ -186,7 +183,6 @@ export function _decode_BioAPI_GUI_BITMAP(el: _Element) {
           bitmap = _decode_BioAPI_DATA(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -195,7 +191,7 @@ export function _decode_BioAPI_GUI_BITMAP(el: _Element) {
         _root_component_type_list_2_spec_for_BioAPI_GUI_BITMAP,
         undefined
       );
-      return new BioAPI_GUI_BITMAP /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new BioAPI_GUI_BITMAP (
         subtypeMask,
         width,
         height,

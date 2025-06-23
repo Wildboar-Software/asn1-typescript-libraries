@@ -177,7 +177,6 @@ export function _decode_IPMAutoDiscardRegistrationParameter(el: _Element) {
             let auto_discard_obsoleted_ipms!: BOOLEAN;
             let restrict_obsoleting_to_originator!: BOOLEAN;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 filter: (_el: _Element): void => {
                     filter = $._decode_explicit<Filter>(() => _decode_Filter)(
@@ -205,7 +204,6 @@ export function _decode_IPMAutoDiscardRegistrationParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -160,13 +160,10 @@ export function _decode_MessageDeliveryArgument(el: _Element) {
         _cached_decoder_for_MessageDeliveryArgument = function (
             el: _Element
         ): MessageDeliveryArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let message_delivery_identifier!: MessageDeliveryIdentifier;
             let message_delivery_time!: MessageDeliveryTime;
             let other_fields!: OtherMessageDeliveryFields;
             let content!: Content;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'message-delivery-identifier': (_el: _Element): void => {
                     message_delivery_identifier = _decode_MessageDeliveryIdentifier(
@@ -183,7 +180,6 @@ export function _decode_MessageDeliveryArgument(el: _Element) {
                     content = _decode_Content(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -192,7 +188,7 @@ export function _decode_MessageDeliveryArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_MessageDeliveryArgument,
                 undefined
             );
-            return new MessageDeliveryArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MessageDeliveryArgument (
                 message_delivery_identifier,
                 message_delivery_time,
                 other_fields,

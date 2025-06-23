@@ -133,11 +133,8 @@ export function _decode_CreateSpecification(el: _Element) {
         _cached_decoder_for_CreateSpecification = function (
             el: _Element
         ): CreateSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let createModifier: OPTIONAL<CreateSpecification_createModifier>;
             let parameter: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 createModifier: (_el: _Element): void => {
                     createModifier = _decode_CreateSpecification_createModifier(
@@ -148,7 +145,6 @@ export function _decode_CreateSpecification(el: _Element) {
                     parameter = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_CreateSpecification(el: _Element) {
                 _root_component_type_list_2_spec_for_CreateSpecification,
                 undefined
             );
-            return new CreateSpecification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CreateSpecification (
                 createModifier,
                 parameter
             );

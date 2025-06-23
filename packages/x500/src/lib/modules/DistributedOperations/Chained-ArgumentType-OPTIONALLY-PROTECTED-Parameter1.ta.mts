@@ -124,7 +124,6 @@ export function _decode_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1(
             let chainedArgument!: ChainingArguments;
             let argument!: _Element;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 chainedArgument: (_el: _Element): void => {
                     chainedArgument = _decode_ChainingArguments(_el);
@@ -135,7 +134,6 @@ export function _decode_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1(
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

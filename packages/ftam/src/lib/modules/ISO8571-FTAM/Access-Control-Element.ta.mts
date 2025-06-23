@@ -188,14 +188,11 @@ export function _decode_Access_Control_Element(el: _Element) {
     _cached_decoder_for_Access_Control_Element = function (
       el: _Element
     ): Access_Control_Element {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let action_list!: Access_Request;
       let concurrency_access: OPTIONAL<Concurrency_Access>;
       let identity: OPTIONAL<User_Identity>;
       let passwords: OPTIONAL<Access_Passwords>;
       let location: OPTIONAL<Application_Entity_Title>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'action-list': (_el: _Element): void => {
           action_list = $._decode_implicit<Access_Request>(
@@ -223,7 +220,6 @@ export function _decode_Access_Control_Element(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -232,7 +228,7 @@ export function _decode_Access_Control_Element(el: _Element) {
         _root_component_type_list_2_spec_for_Access_Control_Element,
         undefined
       );
-      return new Access_Control_Element /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Access_Control_Element (
         action_list,
         concurrency_access,
         identity,

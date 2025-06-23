@@ -142,12 +142,9 @@ export function _decode_TroubleProgressInfo(el: _Element) {
         _cached_decoder_for_TroubleProgressInfo = function (
             el: _Element
         ): TroubleProgressInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let troubleReportStatus!: TroubleReportStatus;
             let additionalTroubleStatusInfo: OPTIONAL<AdditionalTroubleStatusInfo>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 troubleReportStatus: (_el: _Element): void => {
                     troubleReportStatus = $._decode_explicit<TroubleReportStatus>(
@@ -160,7 +157,6 @@ export function _decode_TroubleProgressInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_TroubleProgressInfo(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TroubleProgressInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TroubleProgressInfo (
                 troubleReportStatus,
                 additionalTroubleStatusInfo,
                 _unrecognizedExtensionsList

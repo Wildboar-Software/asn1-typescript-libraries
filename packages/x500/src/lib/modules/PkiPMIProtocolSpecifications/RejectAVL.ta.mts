@@ -175,15 +175,12 @@ let _cached_decoder_for_RejectAVL: $.ASN1Decoder<RejectAVL> | null = null;
 export function _decode_RejectAVL(el: _Element) {
     if (!_cached_decoder_for_RejectAVL) {
         _cached_decoder_for_RejectAVL = function (el: _Element): RejectAVL {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 RejectAVL._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let reason!: AVMP_error;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -198,7 +195,6 @@ export function _decode_RejectAVL(el: _Element) {
                     reason = _decode_AVMP_error(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -210,7 +206,7 @@ export function _decode_RejectAVL(el: _Element) {
                 }
             );
             return new RejectAVL(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 reason,

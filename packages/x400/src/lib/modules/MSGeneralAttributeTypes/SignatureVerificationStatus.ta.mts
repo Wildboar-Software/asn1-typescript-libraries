@@ -253,7 +253,6 @@ export function _decode_SignatureVerificationStatus(el: _Element) {
             let proof_of_submission: OPTIONAL<SignatureStatus> =
                 SignatureVerificationStatus._default_value_for_proof_of_submission;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-integrity-check': (_el: _Element): void => {
                     content_integrity_check = $._decode_explicit<SignatureStatus>(
@@ -288,7 +287,6 @@ export function _decode_SignatureVerificationStatus(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

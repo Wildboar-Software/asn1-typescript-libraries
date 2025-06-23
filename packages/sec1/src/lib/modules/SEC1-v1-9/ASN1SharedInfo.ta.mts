@@ -139,14 +139,11 @@ let _cached_decoder_for_ASN1SharedInfo: $.ASN1Decoder<ASN1SharedInfo> | null = n
 export
 function _decode_ASN1SharedInfo (el: _Element) {
     if (!_cached_decoder_for_ASN1SharedInfo) { _cached_decoder_for_ASN1SharedInfo = function (el: _Element): ASN1SharedInfo {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let keyInfo!: AlgorithmIdentifier;
     let entityUInfo: OPTIONAL<OCTET_STRING>;
     let entityVInfo: OPTIONAL<OCTET_STRING>;
     let suppPubInfo: OPTIONAL<OCTET_STRING>;
     let suppPrivInfo: OPTIONAL<OCTET_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "keyInfo": (_el: _Element): void => { keyInfo = _decode_AlgorithmIdentifier(_el); },
         "entityUInfo": (_el: _Element): void => { entityUInfo = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
@@ -154,14 +151,13 @@ function _decode_ASN1SharedInfo (el: _Element) {
         "suppPubInfo": (_el: _Element): void => { suppPubInfo = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "suppPrivInfo": (_el: _Element): void => { suppPrivInfo = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ASN1SharedInfo,
         _extension_additions_list_spec_for_ASN1SharedInfo,
         _root_component_type_list_2_spec_for_ASN1SharedInfo,
         undefined,
     );
-    return new ASN1SharedInfo( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ASN1SharedInfo( 
         keyInfo,
         entityUInfo,
         entityVInfo,

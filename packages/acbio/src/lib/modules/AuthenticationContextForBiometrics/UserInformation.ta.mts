@@ -147,12 +147,9 @@ export function _decode_UserInformation(el: _Element) {
         _cached_decoder_for_UserInformation = function (
             el: _Element
         ): UserInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let userIdentifier!: OCTET_STRING;
             let userName!: Name;
             let userUniqueIdentifier: OPTIONAL<UniqueIdentifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 userIdentifier: (_el: _Element): void => {
                     userIdentifier = $._decodeOctetString(_el);
@@ -164,7 +161,6 @@ export function _decode_UserInformation(el: _Element) {
                     userUniqueIdentifier = _decode_UniqueIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_UserInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_UserInformation,
                 undefined
             );
-            return new UserInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new UserInformation (
                 userIdentifier,
                 userName,
                 userUniqueIdentifier

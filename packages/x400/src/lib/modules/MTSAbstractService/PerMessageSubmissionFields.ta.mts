@@ -281,7 +281,6 @@ export function _decode_PerMessageSubmissionFields(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 PerMessageSubmissionFields._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'originator-name': (_el: _Element): void => {
                     originator_name = _decode_OriginatorName(_el);
@@ -316,7 +315,6 @@ export function _decode_PerMessageSubmissionFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

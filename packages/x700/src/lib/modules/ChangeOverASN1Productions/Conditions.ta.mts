@@ -118,11 +118,8 @@ let _cached_decoder_for_Conditions: $.ASN1Decoder<Conditions> | null = null;
 export function _decode_Conditions(el: _Element) {
     if (!_cached_decoder_for_Conditions) {
         _cached_decoder_for_Conditions = function (el: _Element): Conditions {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primary: OPTIONAL<Condition>;
             let secondary: OPTIONAL<Condition>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 primary: (_el: _Element): void => {
                     primary = $._decode_implicit<Condition>(
@@ -135,7 +132,6 @@ export function _decode_Conditions(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_Conditions(el: _Element) {
                 _root_component_type_list_2_spec_for_Conditions,
                 undefined
             );
-            return new Conditions /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Conditions (
                 primary,
                 secondary
             );

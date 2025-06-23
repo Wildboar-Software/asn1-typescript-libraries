@@ -176,14 +176,11 @@ export function _decode_KeyAgreementRecipientInfo(el: _Element) {
         _cached_decoder_for_KeyAgreementRecipientInfo = function (
             el: _Element
         ): KeyAgreementRecipientInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: Version;
             let originator!: OriginatorIdentifierOrKey;
             let userKeyingMaterial: OPTIONAL<OCTET_STRING>;
             let keyEncryptionAlgorithm!: KeyEncryptionAlgorithmIdentifier;
             let recipientEncryptedKeys!: RecipientEncryptedKeys;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -209,7 +206,6 @@ export function _decode_KeyAgreementRecipientInfo(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -219,7 +215,7 @@ export function _decode_KeyAgreementRecipientInfo(el: _Element) {
                 undefined
             );
             return new KeyAgreementRecipientInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 originator,
                 userKeyingMaterial,
                 keyEncryptionAlgorithm,

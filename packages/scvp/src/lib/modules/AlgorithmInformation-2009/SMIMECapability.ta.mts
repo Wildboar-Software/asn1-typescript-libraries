@@ -107,11 +107,8 @@ export function _decode_SMIMECapability(el: _Element) {
         _cached_decoder_for_SMIMECapability = function (
             el: _Element
         ): SMIMECapability {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let capabilityID!: OBJECT_IDENTIFIER;
             let parameters: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 capabilityID: (_el: _Element): void => {
                     capabilityID = $._decodeObjectIdentifier(_el);
@@ -120,7 +117,6 @@ export function _decode_SMIMECapability(el: _Element) {
                     parameters = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -129,7 +125,7 @@ export function _decode_SMIMECapability(el: _Element) {
                 _root_component_type_list_2_spec_for_SMIMECapability,
                 undefined
             );
-            return new SMIMECapability /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SMIMECapability (
                 capabilityID,
                 parameters
             );

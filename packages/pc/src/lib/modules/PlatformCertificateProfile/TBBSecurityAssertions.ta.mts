@@ -176,15 +176,12 @@ let _cached_decoder_for_TBBSecurityAssertions: $.ASN1Decoder<TBBSecurityAssertio
 export
 function _decode_TBBSecurityAssertions (el: _Element) {
     if (!_cached_decoder_for_TBBSecurityAssertions) { _cached_decoder_for_TBBSecurityAssertions = function (el: _Element): TBBSecurityAssertions {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version: OPTIONAL<Version> = TBBSecurityAssertions._default_value_for_version;
     let ccInfo: OPTIONAL<CommonCriteriaMeasures>;
     let fipsLevel: OPTIONAL<FIPSLevel>;
     let rtmType: OPTIONAL<MeasurementRootType>;
     let iso9000Certified: OPTIONAL<BOOLEAN> = TBBSecurityAssertions._default_value_for_iso9000Certified;
     let iso9000Uri: OPTIONAL<IA5String>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = _decode_Version(_el); },
         "ccInfo": (_el: _Element): void => { ccInfo = $._decode_implicit<CommonCriteriaMeasures>(() => _decode_CommonCriteriaMeasures)(_el); },
@@ -193,14 +190,13 @@ function _decode_TBBSecurityAssertions (el: _Element) {
         "iso9000Certified": (_el: _Element): void => { iso9000Certified = $._decodeBoolean(_el); },
         "iso9000Uri": (_el: _Element): void => { iso9000Uri = $._decodeIA5String(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TBBSecurityAssertions,
         _extension_additions_list_spec_for_TBBSecurityAssertions,
         _root_component_type_list_2_spec_for_TBBSecurityAssertions,
         undefined,
     );
-    return new TBBSecurityAssertions( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TBBSecurityAssertions( 
         version,
         ccInfo,
         fipsLevel,

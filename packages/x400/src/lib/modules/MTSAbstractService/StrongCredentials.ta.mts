@@ -161,7 +161,6 @@ export function _decode_StrongCredentials(el: _Element) {
             let certificate_selector: OPTIONAL<CertificateAssertion>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'bind-token': (_el: _Element): void => {
                     bind_token = $._decode_implicit<Token>(() => _decode_Token)(
@@ -179,7 +178,6 @@ export function _decode_StrongCredentials(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -148,12 +148,9 @@ export function _decode_AnyType_nillable(el: _Element) {
     _cached_decoder_for_AnyType_nillable = function (
       el: _Element
     ): AnyType_nillable {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let embed_values!: String[];
       let attr!: String[];
       let content: OPTIONAL<AnyType_nillable_content>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'embed-values': (_el: _Element): void => {
           embed_values = $._decodeSequenceOf<String>(() => _decode_String)(_el);
@@ -165,7 +162,6 @@ export function _decode_AnyType_nillable(el: _Element) {
           content = _decode_AnyType_nillable_content(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -174,7 +170,7 @@ export function _decode_AnyType_nillable(el: _Element) {
         _root_component_type_list_2_spec_for_AnyType_nillable,
         undefined
       );
-      return new AnyType_nillable /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new AnyType_nillable (
         embed_values,
         attr,
         content

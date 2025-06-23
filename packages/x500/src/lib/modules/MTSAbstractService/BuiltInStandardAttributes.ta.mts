@@ -256,7 +256,6 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
         _cached_decoder_for_BuiltInStandardAttributes = function (
             el: _Element
         ): BuiltInStandardAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let country_name: OPTIONAL<CountryName>;
             let administration_domain_name: OPTIONAL<AdministrationDomainName>;
             let network_address: OPTIONAL<NetworkAddress>;
@@ -266,8 +265,6 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
             let numeric_user_identifier: OPTIONAL<NumericUserIdentifier>;
             let personal_name: OPTIONAL<PersonalName>;
             let organizational_unit_names: OPTIONAL<OrganizationalUnitNames>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "country-name": (_el: _Element): void => {
                     country_name = _decode_CountryName(_el);
@@ -313,7 +310,6 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -323,7 +319,7 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                 undefined
             );
             return new BuiltInStandardAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ country_name,
+                country_name,
                 administration_domain_name,
                 network_address,
                 terminal_identifier,

@@ -320,7 +320,6 @@ export function _decode_ProtectedItems(el: _Element) {
         _cached_decoder_for_ProtectedItems = function (
             el: _Element
         ): ProtectedItems {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let entry: OPTIONAL<NULL>;
             let allUserAttributeTypes: OPTIONAL<NULL>;
             let attributeType: OPTIONAL<AttributeType[]>;
@@ -336,8 +335,6 @@ export function _decode_ProtectedItems(el: _Element) {
             let classes: OPTIONAL<Refinement>;
             let entryMethods: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 entry: (_el: _Element): void => {
                     entry = $._decode_explicit<NULL>(() => $._decodeNull)(_el);
@@ -427,7 +424,6 @@ export function _decode_ProtectedItems(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -439,7 +435,7 @@ export function _decode_ProtectedItems(el: _Element) {
                 }
             );
             return new ProtectedItems(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ entry,
+                entry,
                 allUserAttributeTypes,
                 attributeType,
                 allAttributeValues,

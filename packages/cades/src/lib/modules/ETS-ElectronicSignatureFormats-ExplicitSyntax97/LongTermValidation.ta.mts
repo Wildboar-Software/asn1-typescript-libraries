@@ -144,27 +144,23 @@ let _cached_decoder_for_LongTermValidation: $.ASN1Decoder<LongTermValidation> | 
 export
 function _decode_LongTermValidation (el: _Element) {
     if (!_cached_decoder_for_LongTermValidation) { _cached_decoder_for_LongTermValidation = function (el: _Element): LongTermValidation {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let poeDate!: GeneralizedTime;
     let poeValue: OPTIONAL<LongTermValidation_poeValue>;
     let extraCertificates: OPTIONAL<CertificateSet>;
     let extraRevocation: OPTIONAL<RevocationInfoChoices>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "poeDate": (_el: _Element): void => { poeDate = $._decodeGeneralizedTime(_el); },
         "poeValue": (_el: _Element): void => { poeValue = _decode_LongTermValidation_poeValue(_el); },
         "extraCertificates": (_el: _Element): void => { extraCertificates = $._decode_implicit<CertificateSet>(() => _decode_CertificateSet)(_el); },
         "extraRevocation": (_el: _Element): void => { extraRevocation = $._decode_implicit<RevocationInfoChoices>(() => _decode_RevocationInfoChoices)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_LongTermValidation,
         _extension_additions_list_spec_for_LongTermValidation,
         _root_component_type_list_2_spec_for_LongTermValidation,
         undefined,
     );
-    return new LongTermValidation( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new LongTermValidation( 
         poeDate,
         poeValue,
         extraCertificates,

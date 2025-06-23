@@ -131,12 +131,9 @@ let _cached_decoder_for_SafeBag: $.ASN1Decoder<SafeBag> | null = null;
 export function _decode_SafeBag(el: _Element) {
     if (!_cached_decoder_for_SafeBag) {
         _cached_decoder_for_SafeBag = function (el: _Element): SafeBag {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bagId!: OBJECT_IDENTIFIER;
             let bagValue!: _Element;
             let bagAttributes: OPTIONAL<PKCS12Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bagId: (_el: _Element): void => {
                     bagId = $._decodeObjectIdentifier(_el);
@@ -152,7 +149,6 @@ export function _decode_SafeBag(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -162,7 +158,7 @@ export function _decode_SafeBag(el: _Element) {
                 undefined
             );
             return new SafeBag(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bagId,
+                bagId,
                 bagValue,
                 bagAttributes
             );

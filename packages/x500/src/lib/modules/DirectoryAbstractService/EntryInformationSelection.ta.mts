@@ -259,7 +259,6 @@ export function _decode_EntryInformationSelection(el: _Element) {
             let familyReturn: OPTIONAL<FamilyReturn> =
                 EntryInformationSelection._default_value_for_familyReturn;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributes: (_el: _Element): void => {
                     attributes = _decode_EntryInformationSelection_attributes(
@@ -286,7 +285,6 @@ export function _decode_EntryInformationSelection(el: _Element) {
                     familyReturn = _decode_FamilyReturn(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

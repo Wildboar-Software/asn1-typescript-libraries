@@ -119,11 +119,8 @@ export function _decode_EncapsulatedContentInfo(el: _Element) {
         _cached_decoder_for_EncapsulatedContentInfo = function (
             el: _Element
         ): EncapsulatedContentInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let eContentType!: OBJECT_IDENTIFIER;
             let eContent: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 eContentType: (_el: _Element): void => {
                     eContentType = $._decodeObjectIdentifier(_el);
@@ -134,7 +131,6 @@ export function _decode_EncapsulatedContentInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_EncapsulatedContentInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_EncapsulatedContentInfo,
                 undefined
             );
-            return new EncapsulatedContentInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncapsulatedContentInfo (
                 eContentType,
                 eContent
             );

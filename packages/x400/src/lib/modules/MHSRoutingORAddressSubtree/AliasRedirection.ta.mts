@@ -131,12 +131,9 @@ export function _decode_AliasRedirection(el: _Element) {
         _cached_decoder_for_AliasRedirection = function (
             el: _Element
         ): AliasRedirection {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let redirection_address!: ORAddress;
             let edit: OPTIONAL<BOOLEAN> =
                 AliasRedirection._default_value_for_edit;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'redirection-address': (_el: _Element): void => {
                     redirection_address = $._decode_implicit<ORAddress>(
@@ -149,7 +146,6 @@ export function _decode_AliasRedirection(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_AliasRedirection(el: _Element) {
                 _root_component_type_list_2_spec_for_AliasRedirection,
                 undefined
             );
-            return new AliasRedirection /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AliasRedirection (
                 redirection_address,
                 edit
             );

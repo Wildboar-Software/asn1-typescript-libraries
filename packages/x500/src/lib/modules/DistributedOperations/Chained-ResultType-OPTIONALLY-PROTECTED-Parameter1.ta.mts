@@ -124,7 +124,6 @@ export function _decode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
             let chainedResult!: ChainingResults;
             let result!: _Element;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 chainedResult: (_el: _Element): void => {
                     chainedResult = _decode_ChainingResults(_el);
@@ -135,7 +134,6 @@ export function _decode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

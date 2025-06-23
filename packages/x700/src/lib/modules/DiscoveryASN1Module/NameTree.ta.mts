@@ -119,11 +119,8 @@ let _cached_decoder_for_NameTree: $.ASN1Decoder<NameTree> | null = null;
 export function _decode_NameTree(el: _Element) {
     if (!_cached_decoder_for_NameTree) {
         _cached_decoder_for_NameTree = function (el: _Element): NameTree {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdnInfo!: RDNInfo;
             let subordinates: OPTIONAL<NameTree[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdnInfo: (_el: _Element): void => {
                     rdnInfo = _decode_RDNInfo(_el);
@@ -134,7 +131,6 @@ export function _decode_NameTree(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_NameTree(el: _Element) {
                 _root_component_type_list_2_spec_for_NameTree,
                 undefined
             );
-            return new NameTree /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NameTree (
                 rdnInfo,
                 subordinates
             );

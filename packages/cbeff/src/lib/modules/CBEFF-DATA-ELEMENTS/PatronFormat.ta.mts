@@ -115,11 +115,8 @@ let _cached_decoder_for_PatronFormat: $.ASN1Decoder<PatronFormat> | null = null;
 export function _decode_PatronFormat(el: _Element) {
   if (!_cached_decoder_for_PatronFormat) {
     _cached_decoder_for_PatronFormat = function (el: _Element): PatronFormat {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let patron_format_owner: OPTIONAL<INTEGER>;
       let patron_format_type: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'patron-format-owner': (_el: _Element): void => {
           patron_format_owner = $._decodeInteger(_el);
@@ -128,7 +125,6 @@ export function _decode_PatronFormat(el: _Element) {
           patron_format_type = $._decodeInteger(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -137,7 +133,7 @@ export function _decode_PatronFormat(el: _Element) {
         _root_component_type_list_2_spec_for_PatronFormat,
         undefined
       );
-      return new PatronFormat /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new PatronFormat (
         patron_format_owner,
         patron_format_type
       );

@@ -186,15 +186,12 @@ export function _decode_Context_Data(el: _Element) {
         _cached_decoder_for_Context_Data = function (
             el: _Element
         ): Context_Data {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let channelId: OPTIONAL<ChannelId>;
             let seq_number: OPTIONAL<INTEGER>;
             let options!: Options;
             let conf_alg!: Conf_Algs;
             let intg_alg!: Intg_Algs;
             let owf_alg!: OWF_Algs;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 channelId: (_el: _Element): void => {
                     channelId = _decode_ChannelId(_el);
@@ -215,7 +212,6 @@ export function _decode_Context_Data(el: _Element) {
                     owf_alg = _decode_OWF_Algs(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -225,7 +221,7 @@ export function _decode_Context_Data(el: _Element) {
                 undefined
             );
             return new Context_Data(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ channelId,
+                channelId,
                 seq_number,
                 options,
                 conf_alg,

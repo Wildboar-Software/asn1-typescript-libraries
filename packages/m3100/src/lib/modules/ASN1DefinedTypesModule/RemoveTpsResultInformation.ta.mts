@@ -128,11 +128,8 @@ export function _decode_RemoveTpsResultInformation(el: _Element) {
         _cached_decoder_for_RemoveTpsResultInformation = function (
             el: _Element
         ): RemoveTpsResultInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let deletedTpPoolOrGTP: OPTIONAL<ObjectInstance>;
             let tps!: ObjectInstance[];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 deletedTpPoolOrGTP: (_el: _Element): void => {
                     deletedTpPoolOrGTP = _decode_ObjectInstance(_el);
@@ -143,7 +140,6 @@ export function _decode_RemoveTpsResultInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_RemoveTpsResultInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_RemoveTpsResultInformation,
                 undefined
             );
-            return new RemoveTpsResultInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RemoveTpsResultInformation (
                 deletedTpPoolOrGTP,
                 tps
             );

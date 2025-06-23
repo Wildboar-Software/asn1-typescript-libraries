@@ -596,7 +596,6 @@ export function _decode_ChainingArguments(el: _Element) {
                 ChainingArguments._default_value_for_excludeWriteableCopies;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 originator: (_el: _Element): void => {
                     originator = $._decode_explicit<DistinguishedName>(
@@ -714,7 +713,6 @@ export function _decode_ChainingArguments(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

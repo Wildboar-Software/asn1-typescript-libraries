@@ -147,12 +147,9 @@ export function _decode_FirstPdvExternal(el: _Element) {
     _cached_decoder_for_FirstPdvExternal = function (
       el: _Element
     ): FirstPdvExternal {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let externalSAID!: ExternalSAID;
       let dynamicUnprotParm: OPTIONAL<_Element>;
       let xformedData!: _Element;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         externalSAID: (_el: _Element): void => {
           externalSAID = _decode_ExternalSAID(_el);
@@ -164,7 +161,6 @@ export function _decode_FirstPdvExternal(el: _Element) {
           xformedData = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -173,7 +169,7 @@ export function _decode_FirstPdvExternal(el: _Element) {
         _root_component_type_list_2_spec_for_FirstPdvExternal,
         undefined
       );
-      return new FirstPdvExternal /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new FirstPdvExternal (
         externalSAID,
         dynamicUnprotParm,
         xformedData

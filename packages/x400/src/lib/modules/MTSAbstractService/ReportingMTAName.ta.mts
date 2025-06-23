@@ -146,12 +146,9 @@ export function _decode_ReportingMTAName(el: _Element) {
         _cached_decoder_for_ReportingMTAName = function (
             el: _Element
         ): ReportingMTAName {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let domain!: GlobalDomainIdentifier;
             let mta_name!: MTAName;
             let mta_directory_name: OPTIONAL<Name>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 domain: (_el: _Element): void => {
                     domain = _decode_GlobalDomainIdentifier(_el);
@@ -165,7 +162,6 @@ export function _decode_ReportingMTAName(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -174,7 +170,7 @@ export function _decode_ReportingMTAName(el: _Element) {
                 _root_component_type_list_2_spec_for_ReportingMTAName,
                 undefined
             );
-            return new ReportingMTAName /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ReportingMTAName (
                 domain,
                 mta_name,
                 mta_directory_name

@@ -136,11 +136,8 @@ export function _decode_F_READ_LINK_ATTRIB_request(el: _Element) {
     _cached_decoder_for_F_READ_LINK_ATTRIB_request = function (
       el: _Element
     ): F_READ_LINK_ATTRIB_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let attribute_names!: Attribute_Names;
       let attribute_extension_names: OPTIONAL<Attribute_Extension_Names>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'attribute-names': (_el: _Element): void => {
           attribute_names = $._decode_implicit<Attribute_Names>(
@@ -153,7 +150,6 @@ export function _decode_F_READ_LINK_ATTRIB_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -162,7 +158,7 @@ export function _decode_F_READ_LINK_ATTRIB_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_READ_LINK_ATTRIB_request,
         undefined
       );
-      return new F_READ_LINK_ATTRIB_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_READ_LINK_ATTRIB_request (
         attribute_names,
         attribute_extension_names
       );

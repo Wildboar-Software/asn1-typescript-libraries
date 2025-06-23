@@ -150,13 +150,10 @@ let _cached_decoder_for_EpcFormat: $.ASN1Decoder<EpcFormat> | null = null;
 export function _decode_EpcFormat(el: _Element) {
     if (!_cached_decoder_for_EpcFormat) {
         _cached_decoder_for_EpcFormat = function (el: _Element): EpcFormat {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let fields!: EpcFormat_fields_Item[];
             let digitShift: OPTIONAL<INTEGER>;
             let checkCalc: OPTIONAL<INTEGER>;
             let urnPrefix: OPTIONAL<UTF8String>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 fields: (_el: _Element): void => {
                     fields = $._decodeSequenceOf<EpcFormat_fields_Item>(
@@ -177,7 +174,6 @@ export function _decode_EpcFormat(el: _Element) {
                     urnPrefix = $._decodeUTF8String(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -187,7 +183,7 @@ export function _decode_EpcFormat(el: _Element) {
                 undefined
             );
             return new EpcFormat(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ fields,
+                fields,
                 digitShift,
                 checkCalc,
                 urnPrefix

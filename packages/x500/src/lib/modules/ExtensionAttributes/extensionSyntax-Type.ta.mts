@@ -149,15 +149,12 @@ export function _decode_extensionSyntax_Type(el: _Element) {
         _cached_decoder_for_extensionSyntax_Type = function (
             el: _Element
         ): extensionSyntax_Type {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mandatory: OPTIONAL<BOOLEAN> =
                 extensionSyntax_Type._default_value_for_mandatory;
             let critical: OPTIONAL<BOOLEAN> =
                 extensionSyntax_Type._default_value_for_critical;
             let ext!: _Element;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mandatory: (_el: _Element): void => {
                     mandatory = $._decode_explicit<BOOLEAN>(
@@ -173,7 +170,6 @@ export function _decode_extensionSyntax_Type(el: _Element) {
                     ext = $._decode_explicit<_Element>(() => $._decodeAny)(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -185,7 +181,7 @@ export function _decode_extensionSyntax_Type(el: _Element) {
                 }
             );
             return new extensionSyntax_Type(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mandatory,
+                mandatory,
                 critical,
                 ext,
                 _unrecognizedExtensionsList

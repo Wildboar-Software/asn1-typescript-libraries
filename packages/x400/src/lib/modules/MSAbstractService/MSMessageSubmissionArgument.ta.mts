@@ -149,12 +149,9 @@ export function _decode_MSMessageSubmissionArgument(el: _Element) {
         _cached_decoder_for_MSMessageSubmissionArgument = function (
             el: _Element
         ): MSMessageSubmissionArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let envelope!: MessageSubmissionEnvelope;
             let content!: Content;
             let submission_options: OPTIONAL<MSSubmissionOptions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 envelope: (_el: _Element): void => {
                     envelope = _decode_MessageSubmissionEnvelope(_el);
@@ -168,7 +165,6 @@ export function _decode_MSMessageSubmissionArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -177,7 +173,7 @@ export function _decode_MSMessageSubmissionArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_MSMessageSubmissionArgument,
                 undefined
             );
-            return new MSMessageSubmissionArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MSMessageSubmissionArgument (
                 envelope,
                 content,
                 submission_options

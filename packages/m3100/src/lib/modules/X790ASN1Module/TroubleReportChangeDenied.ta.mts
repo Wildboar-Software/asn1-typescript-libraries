@@ -184,14 +184,11 @@ export function _decode_TroubleReportChangeDenied(el: _Element) {
         _cached_decoder_for_TroubleReportChangeDenied = function (
             el: _Element
         ): TroubleReportChangeDenied {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let changeDeniedReason!: ChangeDeniedReason;
             let managedObjectClass: OPTIONAL<ObjectClass>;
             let managedObjectInstance!: ObjectInstance;
             let troubleReportInstance!: ObjectInstance;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 changeDeniedReason: (_el: _Element): void => {
                     changeDeniedReason = _decode_ChangeDeniedReason(_el);
@@ -206,7 +203,6 @@ export function _decode_TroubleReportChangeDenied(el: _Element) {
                     troubleReportInstance = _decode_ObjectInstance(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -217,7 +213,7 @@ export function _decode_TroubleReportChangeDenied(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TroubleReportChangeDenied /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TroubleReportChangeDenied (
                 changeDeniedReason,
                 managedObjectClass,
                 managedObjectInstance,

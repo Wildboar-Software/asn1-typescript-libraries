@@ -144,13 +144,10 @@ let _cached_decoder_for_Knowledge: $.ASN1Decoder<Knowledge> | null = null;
 export function _decode_Knowledge(el: _Element) {
     if (!_cached_decoder_for_Knowledge) {
         _cached_decoder_for_Knowledge = function (el: _Element): Knowledge {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let knowledgeType!: Knowledge_knowledgeType;
             let extendedKnowledge: OPTIONAL<BOOLEAN> =
                 Knowledge._default_value_for_extendedKnowledge;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 knowledgeType: (_el: _Element): void => {
                     knowledgeType = _decode_Knowledge_knowledgeType(_el);
@@ -159,7 +156,6 @@ export function _decode_Knowledge(el: _Element) {
                     extendedKnowledge = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_Knowledge(el: _Element) {
                 }
             );
             return new Knowledge(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ knowledgeType,
+                knowledgeType,
                 extendedKnowledge,
                 _unrecognizedExtensionsList
             );

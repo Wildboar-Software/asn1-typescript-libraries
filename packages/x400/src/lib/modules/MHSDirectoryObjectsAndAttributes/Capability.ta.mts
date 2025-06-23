@@ -179,7 +179,6 @@ export function _decode_Capability(el: _Element) {
             let security_labels: OPTIONAL<SecurityContext>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-types': (_el: _Element): void => {
                     content_types = $._decode_implicit<ExtendedContentType[]>(
@@ -207,7 +206,6 @@ export function _decode_Capability(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

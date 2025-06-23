@@ -154,14 +154,11 @@ export function _decode_TimeSpecification(el: _Element) {
         _cached_decoder_for_TimeSpecification = function (
             el: _Element
         ): TimeSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let time!: TimeSpecification_time;
             let notThisTime: OPTIONAL<BOOLEAN> =
                 TimeSpecification._default_value_for_notThisTime;
             let timeZone: OPTIONAL<TimeZone>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 time: (_el: _Element): void => {
                     time = _decode_TimeSpecification_time(_el);
@@ -173,7 +170,6 @@ export function _decode_TimeSpecification(el: _Element) {
                     timeZone = _decode_TimeZone(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -185,7 +181,7 @@ export function _decode_TimeSpecification(el: _Element) {
                 }
             );
             return new TimeSpecification(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ time,
+                time,
                 notThisTime,
                 timeZone,
                 _unrecognizedExtensionsList

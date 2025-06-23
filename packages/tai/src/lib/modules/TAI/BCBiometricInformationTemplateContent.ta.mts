@@ -135,27 +135,23 @@ let _cached_decoder_for_BCBiometricInformationTemplateContent: $.ASN1Decoder<BCB
 export
 function _decode_BCBiometricInformationTemplateContent (el: _Element) {
     if (!_cached_decoder_for_BCBiometricInformationTemplateContent) { _cached_decoder_for_BCBiometricInformationTemplateContent = function (el: _Element): BCBiometricInformationTemplateContent {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let biometricTemplateVersion!: BiometricTemplateVersion;
     let biometricTemplateInfo!: BiometricTemplateInfo;
     let issuerDigitalSignatureAlgorithm: OPTIONAL<AlgorithmIdentifier>;
     let bioTempIssuer: OPTIONAL<BioTempIssuer>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "biometricTemplateVersion": (_el: _Element): void => { biometricTemplateVersion = _decode_BiometricTemplateVersion(_el); },
         "biometricTemplateInfo": (_el: _Element): void => { biometricTemplateInfo = _decode_BiometricTemplateInfo(_el); },
         "issuerDigitalSignatureAlgorithm": (_el: _Element): void => { issuerDigitalSignatureAlgorithm = _decode_AlgorithmIdentifier(_el); },
         "bioTempIssuer": (_el: _Element): void => { bioTempIssuer = _decode_BioTempIssuer(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BCBiometricInformationTemplateContent,
         _extension_additions_list_spec_for_BCBiometricInformationTemplateContent,
         _root_component_type_list_2_spec_for_BCBiometricInformationTemplateContent,
         undefined,
     );
-    return new BCBiometricInformationTemplateContent( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new BCBiometricInformationTemplateContent( 
         biometricTemplateVersion,
         biometricTemplateInfo,
         issuerDigitalSignatureAlgorithm,

@@ -130,11 +130,8 @@ export function _decode_BPUCertificateReferrerInformation(el: _Element) {
         _cached_decoder_for_BPUCertificateReferrerInformation = function (
             el: _Element
         ): BPUCertificateReferrerInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bpuCertificateReferrer!: URI;
             let crlsReferrer: OPTIONAL<URI>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bpuCertificateReferrer: (_el: _Element): void => {
                     bpuCertificateReferrer = _decode_URI(_el);
@@ -143,7 +140,6 @@ export function _decode_BPUCertificateReferrerInformation(el: _Element) {
                     crlsReferrer = _decode_URI(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_BPUCertificateReferrerInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_BPUCertificateReferrerInformation,
                 undefined
             );
-            return new BPUCertificateReferrerInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BPUCertificateReferrerInformation (
                 bpuCertificateReferrer,
                 crlsReferrer
             );

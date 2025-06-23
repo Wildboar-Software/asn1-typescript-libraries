@@ -130,11 +130,8 @@ export function _decode_RegistrationTypes(el: _Element) {
         _cached_decoder_for_RegistrationTypes = function (
             el: _Element
         ): RegistrationTypes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let standard_parameters: OPTIONAL<RegistrationTypes_standard_parameters>;
             let extensions: OPTIONAL<ExtensionType[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'standard-parameters': (_el: _Element): void => {
                     standard_parameters = $._decode_implicit<RegistrationTypes_standard_parameters>(
@@ -149,7 +146,6 @@ export function _decode_RegistrationTypes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_RegistrationTypes(el: _Element) {
                 _root_component_type_list_2_spec_for_RegistrationTypes,
                 undefined
             );
-            return new RegistrationTypes /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RegistrationTypes (
                 standard_parameters,
                 extensions
             );

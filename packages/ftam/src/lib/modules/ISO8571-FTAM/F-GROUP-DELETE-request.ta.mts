@@ -134,11 +134,8 @@ export function _decode_F_GROUP_DELETE_request(el: _Element) {
     _cached_decoder_for_F_GROUP_DELETE_request = function (
       el: _Element
     ): F_GROUP_DELETE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let request_Operation_result: OPTIONAL<Request_Operation_Result>;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'request-Operation-result': (_el: _Element): void => {
           request_Operation_result = _decode_Request_Operation_Result(_el);
@@ -147,7 +144,6 @@ export function _decode_F_GROUP_DELETE_request(el: _Element) {
           shared_ASE_information = _decode_Shared_ASE_Information(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -156,7 +152,7 @@ export function _decode_F_GROUP_DELETE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_GROUP_DELETE_request,
         undefined
       );
-      return new F_GROUP_DELETE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_GROUP_DELETE_request (
         request_Operation_result,
         shared_ASE_information
       );

@@ -166,7 +166,6 @@ export function _decode_FetchResult(el: _Element) {
             let next: OPTIONAL<SequenceNumber>;
             let fetch_result_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entry-information': (_el: _Element): void => {
                     entry_information = $._decode_explicit<EntryInformation>(
@@ -191,7 +190,6 @@ export function _decode_FetchResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

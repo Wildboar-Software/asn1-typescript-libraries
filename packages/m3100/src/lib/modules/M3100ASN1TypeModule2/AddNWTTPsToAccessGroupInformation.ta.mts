@@ -124,11 +124,8 @@ export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element) {
         _cached_decoder_for_AddNWTTPsToAccessGroupInformation = function (
             el: _Element
         ): AddNWTTPsToAccessGroupInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let nwTTPs!: ObjectInstance[];
             let accessGroup: OPTIONAL<ObjectInstance>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 nwTTPs: (_el: _Element): void => {
                     nwTTPs = $._decodeSetOf<ObjectInstance>(
@@ -139,7 +136,6 @@ export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element) {
                     accessGroup = _decode_ObjectInstance(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_AddNWTTPsToAccessGroupInformation,
                 undefined
             );
-            return new AddNWTTPsToAccessGroupInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AddNWTTPsToAccessGroupInformation (
                 nwTTPs,
                 accessGroup
             );

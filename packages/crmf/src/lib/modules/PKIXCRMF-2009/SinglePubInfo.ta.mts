@@ -126,11 +126,8 @@ export function _decode_SinglePubInfo(el: _Element) {
         _cached_decoder_for_SinglePubInfo = function (
             el: _Element
         ): SinglePubInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pubMethod!: SinglePubInfo_pubMethod;
             let pubLocation: OPTIONAL<GeneralName>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pubMethod: (_el: _Element): void => {
                     pubMethod = _decode_SinglePubInfo_pubMethod(_el);
@@ -139,7 +136,6 @@ export function _decode_SinglePubInfo(el: _Element) {
                     pubLocation = _decode_GeneralName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_SinglePubInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_SinglePubInfo,
                 undefined
             );
-            return new SinglePubInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SinglePubInfo (
                 pubMethod,
                 pubLocation
             );

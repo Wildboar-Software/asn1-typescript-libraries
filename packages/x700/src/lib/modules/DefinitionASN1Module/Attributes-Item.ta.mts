@@ -142,12 +142,9 @@ export function _decode_Attributes_Item(el: _Element) {
         _cached_decoder_for_Attributes_Item = function (
             el: _Element
         ): Attributes_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeLabel!: TemplateLabel;
             let property!: PropertyList;
             let parameterLabel: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeLabel: (_el: _Element): void => {
                     attributeLabel = _decode_TemplateLabel(_el);
@@ -159,7 +156,6 @@ export function _decode_Attributes_Item(el: _Element) {
                     parameterLabel = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_Attributes_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_Attributes_Item,
                 undefined
             );
-            return new Attributes_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Attributes_Item (
                 attributeLabel,
                 property,
                 parameterLabel

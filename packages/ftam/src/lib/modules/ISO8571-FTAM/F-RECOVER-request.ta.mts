@@ -282,7 +282,6 @@ export function _decode_F_RECOVER_request(el: _Element) {
     _cached_decoder_for_F_RECOVER_request = function (
       el: _Element
     ): F_RECOVER_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let activity_identifier!: Activity_Identifier;
       let bulk_transfer_number!: INTEGER;
       let requested_access!: Access_Request;
@@ -295,8 +294,6 @@ export function _decode_F_RECOVER_request(el: _Element) {
       let concurrent_recovery_point: OPTIONAL<INTEGER>;
       let last_transfer_end_read_response: OPTIONAL<INTEGER>;
       let last_transfer_end_write_response: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'activity-identifier': (_el: _Element): void => {
           activity_identifier = _decode_Activity_Identifier(_el);
@@ -352,7 +349,6 @@ export function _decode_F_RECOVER_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -361,7 +357,7 @@ export function _decode_F_RECOVER_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_RECOVER_request,
         undefined
       );
-      return new F_RECOVER_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_RECOVER_request (
         activity_identifier,
         bulk_transfer_number,
         requested_access,

@@ -171,7 +171,6 @@ export function _decode_ComplexityLimitation(el: _Element) {
       let sync: OPTIONAL<CMISSync>;
       let _unrecognizedExtensionsList: _Element[] = [];
       /* END_OF_SET_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         scope: (_el: _Element): void => {
           scope = $._decode_explicit<Scope>(() => _decode_Scope)(_el);
@@ -185,7 +184,6 @@ export function _decode_ComplexityLimitation(el: _Element) {
           sync = $._decode_explicit<CMISSync>(() => _decode_CMISSync)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_set(
         el,
         callbacks,

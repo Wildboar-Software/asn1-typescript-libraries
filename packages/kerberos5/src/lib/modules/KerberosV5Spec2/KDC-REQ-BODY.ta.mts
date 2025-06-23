@@ -304,7 +304,6 @@ let _cached_decoder_for_KDC_REQ_BODY: $.ASN1Decoder<KDC_REQ_BODY> | null = null;
 export function _decode_KDC_REQ_BODY(el: _Element) {
   if (!_cached_decoder_for_KDC_REQ_BODY) {
     _cached_decoder_for_KDC_REQ_BODY = function (el: _Element): KDC_REQ_BODY {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let kdc_options!: KDCOptions;
       let cname: OPTIONAL<PrincipalName>;
       let realm!: Realm;
@@ -317,8 +316,6 @@ export function _decode_KDC_REQ_BODY(el: _Element) {
       let addresses: OPTIONAL<HostAddresses>;
       let enc_authorization_data: OPTIONAL<EncryptedData>;
       let additional_tickets: OPTIONAL<Ticket[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'kdc-options': (_el: _Element): void => {
           kdc_options = $._decode_explicit<KDCOptions>(
@@ -377,7 +374,6 @@ export function _decode_KDC_REQ_BODY(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -386,7 +382,7 @@ export function _decode_KDC_REQ_BODY(el: _Element) {
         _root_component_type_list_2_spec_for_KDC_REQ_BODY,
         undefined
       );
-      return new KDC_REQ_BODY /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KDC_REQ_BODY (
         kdc_options,
         cname,
         realm,

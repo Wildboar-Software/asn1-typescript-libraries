@@ -377,7 +377,6 @@ export function _decode_F_INITIALIZE_request(el: _Element) {
     _cached_decoder_for_F_INITIALIZE_request = function (
       el: _Element
     ): F_INITIALIZE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let protocol_Version: OPTIONAL<Protocol_Version> =
         F_INITIALIZE_request._default_value_for_protocol_Version;
       let implementation_information: OPTIONAL<Implementation_Information>;
@@ -396,8 +395,6 @@ export function _decode_F_INITIALIZE_request(el: _Element) {
       let filestore_password: OPTIONAL<Password>;
       let checkpoint_window: OPTIONAL<INTEGER> =
         F_INITIALIZE_request._default_value_for_checkpoint_window;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'protocol-Version': (_el: _Element): void => {
           protocol_Version = _decode_Protocol_Version(_el);
@@ -443,7 +440,6 @@ export function _decode_F_INITIALIZE_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -452,7 +448,7 @@ export function _decode_F_INITIALIZE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_INITIALIZE_request,
         undefined
       );
-      return new F_INITIALIZE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_INITIALIZE_request (
         protocol_Version,
         implementation_information,
         presentation_tontext_management,

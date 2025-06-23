@@ -154,7 +154,6 @@ export function _decode_TeletexParameters(el: _Element) {
                 TeletexParameters._default_value_for_telex_compatible;
             let non_basic_parameters: OPTIONAL<TeletexNonBasicParameters>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'number-of-pages': (_el: _Element): void => {
                     number_of_pages = $._decode_implicit<INTEGER>(
@@ -172,7 +171,6 @@ export function _decode_TeletexParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

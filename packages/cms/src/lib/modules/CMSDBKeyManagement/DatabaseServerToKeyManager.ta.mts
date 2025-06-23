@@ -128,11 +128,8 @@ export function _decode_DatabaseServerToKeyManager(el: _Element) {
         _cached_decoder_for_DatabaseServerToKeyManager = function (
             el: _Element
         ): DatabaseServerToKeyManager {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let encryptedKey!: MasterKeyEncryptedHMACkey;
             let uniqueID: OPTIONAL<UniqueIdentifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 encryptedKey: (_el: _Element): void => {
                     encryptedKey = _decode_MasterKeyEncryptedHMACkey(_el);
@@ -141,7 +138,6 @@ export function _decode_DatabaseServerToKeyManager(el: _Element) {
                     uniqueID = _decode_UniqueIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_DatabaseServerToKeyManager(el: _Element) {
                 _root_component_type_list_2_spec_for_DatabaseServerToKeyManager,
                 undefined
             );
-            return new DatabaseServerToKeyManager /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DatabaseServerToKeyManager (
                 encryptedKey,
                 uniqueID
             );

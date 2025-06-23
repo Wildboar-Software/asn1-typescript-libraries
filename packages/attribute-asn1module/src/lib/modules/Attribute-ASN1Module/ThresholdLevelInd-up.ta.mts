@@ -111,23 +111,19 @@ let _cached_decoder_for_ThresholdLevelInd_up: $.ASN1Decoder<ThresholdLevelInd_up
 export
 function _decode_ThresholdLevelInd_up (el: _Element) {
     if (!_cached_decoder_for_ThresholdLevelInd_up) { _cached_decoder_for_ThresholdLevelInd_up = function (el: _Element): ThresholdLevelInd_up {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let high!: ObservedValue;
     let low: OPTIONAL<ObservedValue>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "high": (_el: _Element): void => { high = _decode_ObservedValue(_el); },
         "low": (_el: _Element): void => { low = _decode_ObservedValue(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ThresholdLevelInd_up,
         _extension_additions_list_spec_for_ThresholdLevelInd_up,
         _root_component_type_list_2_spec_for_ThresholdLevelInd_up,
         undefined,
     );
-    return new ThresholdLevelInd_up( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ThresholdLevelInd_up( 
         high,
         low
     );

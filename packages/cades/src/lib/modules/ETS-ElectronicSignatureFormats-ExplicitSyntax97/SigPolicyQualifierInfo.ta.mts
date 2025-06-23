@@ -114,23 +114,19 @@ let _cached_decoder_for_SigPolicyQualifierInfo: $.ASN1Decoder<SigPolicyQualifier
 export
 function _decode_SigPolicyQualifierInfo (el: _Element) {
     if (!_cached_decoder_for_SigPolicyQualifierInfo) { _cached_decoder_for_SigPolicyQualifierInfo = function (el: _Element): SigPolicyQualifierInfo {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let sigPolicyQualifierId!: OBJECT_IDENTIFIER;
     let qualifier: OPTIONAL<_Element>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "sigPolicyQualifierId": (_el: _Element): void => { sigPolicyQualifierId = $._decodeObjectIdentifier(_el); },
         "qualifier": (_el: _Element): void => { qualifier = $._decodeAny(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SigPolicyQualifierInfo,
         _extension_additions_list_spec_for_SigPolicyQualifierInfo,
         _root_component_type_list_2_spec_for_SigPolicyQualifierInfo,
         undefined,
     );
-    return new SigPolicyQualifierInfo( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SigPolicyQualifierInfo( 
         sigPolicyQualifierId,
         qualifier
     );

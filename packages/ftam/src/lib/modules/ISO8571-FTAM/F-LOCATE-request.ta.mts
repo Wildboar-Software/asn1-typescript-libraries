@@ -134,11 +134,8 @@ export function _decode_F_LOCATE_request(el: _Element) {
     _cached_decoder_for_F_LOCATE_request = function (
       el: _Element
     ): F_LOCATE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let file_access_data_unit_identity!: FADU_Identity;
       let fadu_lock: OPTIONAL<FADU_Lock>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'file-access-data-unit-identity': (_el: _Element): void => {
           file_access_data_unit_identity = _decode_FADU_Identity(_el);
@@ -147,7 +144,6 @@ export function _decode_F_LOCATE_request(el: _Element) {
           fadu_lock = _decode_FADU_Lock(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -156,7 +152,7 @@ export function _decode_F_LOCATE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_LOCATE_request,
         undefined
       );
-      return new F_LOCATE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_LOCATE_request (
         file_access_data_unit_identity,
         fadu_lock
       );

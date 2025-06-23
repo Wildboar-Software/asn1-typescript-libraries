@@ -196,7 +196,6 @@ export function _decode_AbandonedData(el: _Element) {
                 AbandonedData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = _decode_AbandonedProblem(_el);
@@ -222,7 +221,6 @@ export function _decode_AbandonedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

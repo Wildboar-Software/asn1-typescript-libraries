@@ -133,12 +133,9 @@ export function _decode_AttributeCertificationPath(el: _Element) {
         _cached_decoder_for_AttributeCertificationPath = function (
             el: _Element
         ): AttributeCertificationPath {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeCertificate!: AttributeCertificate;
             let acPath: OPTIONAL<ACPathData[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeCertificate: (_el: _Element): void => {
                     attributeCertificate = _decode_AttributeCertificate(_el);
@@ -149,7 +146,6 @@ export function _decode_AttributeCertificationPath(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -161,7 +157,7 @@ export function _decode_AttributeCertificationPath(el: _Element) {
                 }
             );
             return new AttributeCertificationPath(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ attributeCertificate,
+                attributeCertificate,
                 acPath,
                 _unrecognizedExtensionsList
             );

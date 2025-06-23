@@ -156,13 +156,10 @@ export function _decode_FNUAMSReasonCodeField(el: _Element) {
         _cached_decoder_for_FNUAMSReasonCodeField = function (
             el: _Element
         ): FNUAMSReasonCodeField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let fn_ua_ms_basic_code!: FNUAMSBasicCodeField;
             let fn_ua_ms_diagnostic: OPTIONAL<FNUAMSDiagnosticField>;
             let fn_security_check: OPTIONAL<FNUAMSSecurityCheckField> =
                 FNUAMSReasonCodeField._default_value_for_fn_security_check;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'fn-ua-ms-basic-code': (_el: _Element): void => {
                     fn_ua_ms_basic_code = $._decode_implicit<FNUAMSBasicCodeField>(
@@ -180,7 +177,6 @@ export function _decode_FNUAMSReasonCodeField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -189,7 +185,7 @@ export function _decode_FNUAMSReasonCodeField(el: _Element) {
                 _root_component_type_list_2_spec_for_FNUAMSReasonCodeField,
                 undefined
             );
-            return new FNUAMSReasonCodeField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FNUAMSReasonCodeField (
                 fn_ua_ms_basic_code,
                 fn_ua_ms_diagnostic,
                 fn_security_check

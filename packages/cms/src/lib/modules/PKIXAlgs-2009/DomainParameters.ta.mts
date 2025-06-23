@@ -163,14 +163,11 @@ export function _decode_DomainParameters(el: _Element) {
         _cached_decoder_for_DomainParameters = function (
             el: _Element
         ): DomainParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let p!: INTEGER;
             let g!: INTEGER;
             let q!: INTEGER;
             let j: OPTIONAL<INTEGER>;
             let validationParams: OPTIONAL<ValidationParams>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 p: (_el: _Element): void => {
                     p = $._decodeInteger(_el);
@@ -188,7 +185,6 @@ export function _decode_DomainParameters(el: _Element) {
                     validationParams = _decode_ValidationParams(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -197,7 +193,7 @@ export function _decode_DomainParameters(el: _Element) {
                 _root_component_type_list_2_spec_for_DomainParameters,
                 undefined
             );
-            return new DomainParameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DomainParameters (
                 p,
                 g,
                 q,

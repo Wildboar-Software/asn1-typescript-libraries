@@ -149,14 +149,11 @@ export function _decode_SaslCredentials(el: _Element) {
         _cached_decoder_for_SaslCredentials = function (
             el: _Element
         ): SaslCredentials {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mechanism!: DirectoryString;
             let credentials: OPTIONAL<OCTET_STRING>;
             let saslAbort: OPTIONAL<BOOLEAN> =
                 SaslCredentials._default_value_for_saslAbort;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mechanism: (_el: _Element): void => {
                     mechanism = $._decode_explicit<DirectoryString>(
@@ -174,7 +171,6 @@ export function _decode_SaslCredentials(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -186,7 +182,7 @@ export function _decode_SaslCredentials(el: _Element) {
                 }
             );
             return new SaslCredentials(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mechanism,
+                mechanism,
                 credentials,
                 saslAbort,
                 _unrecognizedExtensionsList

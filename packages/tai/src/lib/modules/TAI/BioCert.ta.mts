@@ -130,25 +130,21 @@ let _cached_decoder_for_BioCert: $.ASN1Decoder<BioCert> | null = null;
 export
 function _decode_BioCert (el: _Element) {
     if (!_cached_decoder_for_BioCert) { _cached_decoder_for_BioCert = function (el: _Element): BioCert {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let baseCertificateID: OPTIONAL<IssuerSerial>;
     let entityName: OPTIONAL<GeneralNames>;
     let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "baseCertificateID": (_el: _Element): void => { baseCertificateID = $._decode_implicit<IssuerSerial>(() => _decode_IssuerSerial)(_el); },
         "entityName": (_el: _Element): void => { entityName = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
         "objectDigestInfo": (_el: _Element): void => { objectDigestInfo = $._decode_implicit<ObjectDigestInfo>(() => _decode_ObjectDigestInfo)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BioCert,
         _extension_additions_list_spec_for_BioCert,
         _root_component_type_list_2_spec_for_BioCert,
         undefined,
     );
-    return new BioCert( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new BioCert( 
         baseCertificateID,
         entityName,
         objectDigestInfo

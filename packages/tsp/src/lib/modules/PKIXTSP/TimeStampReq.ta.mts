@@ -198,7 +198,6 @@ export function _decode_TimeStampReq(el: _Element) {
         _cached_decoder_for_TimeStampReq = function (
             el: _Element
         ): TimeStampReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: TimeStampReq_version;
             let messageImprint!: MessageImprint;
             let reqPolicy: OPTIONAL<TSAPolicyId>;
@@ -206,8 +205,6 @@ export function _decode_TimeStampReq(el: _Element) {
             let certReq: OPTIONAL<BOOLEAN> =
                 TimeStampReq._default_value_for_certReq;
             let extensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_TimeStampReq_version(_el);
@@ -230,7 +227,6 @@ export function _decode_TimeStampReq(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -240,7 +236,7 @@ export function _decode_TimeStampReq(el: _Element) {
                 undefined
             );
             return new TimeStampReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 messageImprint,
                 reqPolicy,
                 nonce,

@@ -114,23 +114,19 @@ let _cached_decoder_for_SPUserNotice: $.ASN1Decoder<SPUserNotice> | null = null;
 export
 function _decode_SPUserNotice (el: _Element) {
     if (!_cached_decoder_for_SPUserNotice) { _cached_decoder_for_SPUserNotice = function (el: _Element): SPUserNotice {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let noticeRef: OPTIONAL<NoticeReference>;
     let explicitText: OPTIONAL<DisplayText>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "noticeRef": (_el: _Element): void => { noticeRef = _decode_NoticeReference(_el); },
         "explicitText": (_el: _Element): void => { explicitText = _decode_DisplayText(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SPUserNotice,
         _extension_additions_list_spec_for_SPUserNotice,
         _root_component_type_list_2_spec_for_SPUserNotice,
         undefined,
     );
-    return new SPUserNotice( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SPUserNotice( 
         noticeRef,
         explicitText
     );

@@ -229,7 +229,6 @@ export function _decode_FileTransferParameters(el: _Element) {
         _cached_decoder_for_FileTransferParameters = function (
             el: _Element
         ): FileTransferParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let related_stored_file: OPTIONAL<RelatedStoredFile>;
             let contents_type: OPTIONAL<ContentsTypeParameter> =
                 FileTransferParameters._default_value_for_contents_type;
@@ -237,8 +236,6 @@ export function _decode_FileTransferParameters(el: _Element) {
             let compression: OPTIONAL<CompressionParameter>;
             let file_attributes: OPTIONAL<FileAttributes>;
             let extensions: OPTIONAL<ExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'related-stored-file': (_el: _Element): void => {
                     related_stored_file = $._decode_implicit<RelatedStoredFile>(
@@ -271,7 +268,6 @@ export function _decode_FileTransferParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -280,7 +276,7 @@ export function _decode_FileTransferParameters(el: _Element) {
                 _root_component_type_list_2_spec_for_FileTransferParameters,
                 undefined
             );
-            return new FileTransferParameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FileTransferParameters (
                 related_stored_file,
                 contents_type,
                 environment,

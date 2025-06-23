@@ -221,7 +221,6 @@ export function _decode_RoleSpecifier(el: _Element) {
         _cached_decoder_for_RoleSpecifier = function (
             el: _Element
         ): RoleSpecifier {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let role!: Identifier;
             let compatibleWith: OPTIONAL<TemplateLabel>;
             let permittedRoleCardinality: OPTIONAL<DefinedType>;
@@ -230,8 +229,6 @@ export function _decode_RoleSpecifier(el: _Element) {
             let unbindingSupport: OPTIONAL<OptionalIdentifier>;
             let permittedRelationshipCardinality: OPTIONAL<DefinedType>;
             let optionalRegisteredAs!: OptionallyRegisteredAs;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 role: (_el: _Element): void => {
                     role = _decode_Identifier(_el);
@@ -270,7 +267,6 @@ export function _decode_RoleSpecifier(el: _Element) {
                     optionalRegisteredAs = _decode_OptionallyRegisteredAs(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -279,7 +275,7 @@ export function _decode_RoleSpecifier(el: _Element) {
                 _root_component_type_list_2_spec_for_RoleSpecifier,
                 undefined
             );
-            return new RoleSpecifier /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RoleSpecifier (
                 role,
                 compatibleWith,
                 permittedRoleCardinality,

@@ -142,7 +142,6 @@ export function _decode_RegisterResult_non_empty_result(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 RegisterResult_non_empty_result._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'registered-information': (_el: _Element): void => {
                     registered_information = $._decode_implicit<RegisterArgument>(
@@ -157,7 +156,6 @@ export function _decode_RegisterResult_non_empty_result(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -121,11 +121,8 @@ let _cached_decoder_for_MitMo: $.ASN1Decoder<MitMo> | null = null;
 export function _decode_MitMo(el: _Element) {
     if (!_cached_decoder_for_MitMo) {
         _cached_decoder_for_MitMo = function (el: _Element): MitMo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objectClass!: GdmoObjectClass;
             let instances: OPTIONAL<InstanceIdList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectClass: (_el: _Element): void => {
                     objectClass = _decode_GdmoObjectClass(_el);
@@ -134,7 +131,6 @@ export function _decode_MitMo(el: _Element) {
                     instances = _decode_InstanceIdList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_MitMo(el: _Element) {
                 _root_component_type_list_2_spec_for_MitMo,
                 undefined
             );
-            return new MitMo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MitMo (
                 objectClass,
                 instances
             );

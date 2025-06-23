@@ -146,12 +146,9 @@ export function _decode_DeliverResultInfo(el: _Element) {
         _cached_decoder_for_DeliverResultInfo = function (
             el: _Element
         ): DeliverResultInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let deliverId: OPTIONAL<DeliverId>;
             let deliverResult!: DeliverResult;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 deliverId: (_el: _Element): void => {
                     deliverId = $._decode_explicit<DeliverId>(
@@ -169,7 +166,6 @@ export function _decode_DeliverResultInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_DeliverResultInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_DeliverResultInfo,
                 undefined
             );
-            return new DeliverResultInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DeliverResultInfo (
                 deliverId,
                 deliverResult,
                 additionalInfo

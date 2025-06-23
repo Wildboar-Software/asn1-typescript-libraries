@@ -159,13 +159,10 @@ export function _get_decoder_for_PKCS15Object<
     return function (
         el: _Element
     ): PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let commonObjectAttributes!: CommonObjectAttributes;
         let classAttributes!: ClassAttributes;
         let subClassAttributes: OPTIONAL<SubClassAttributes>;
         let typeAttributes!: TypeAttributes;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             commonObjectAttributes: (_el: _Element): void => {
                 commonObjectAttributes = _decode_CommonObjectAttributes(_el);
@@ -184,7 +181,6 @@ export function _get_decoder_for_PKCS15Object<
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -194,7 +190,7 @@ export function _get_decoder_for_PKCS15Object<
             undefined
         );
         return new PKCS15Object(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ commonObjectAttributes,
+            commonObjectAttributes,
             classAttributes,
             subClassAttributes,
             typeAttributes

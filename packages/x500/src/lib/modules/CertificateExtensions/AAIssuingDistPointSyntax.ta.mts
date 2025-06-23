@@ -223,7 +223,6 @@ export function _decode_AAIssuingDistPointSyntax(el: _Element) {
         _cached_decoder_for_AAIssuingDistPointSyntax = function (
             el: _Element
         ): AAIssuingDistPointSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let distributionPoint: OPTIONAL<DistributionPointName>;
             let onlySomeReasons: OPTIONAL<ReasonFlags>;
             let indirectCRL: OPTIONAL<BOOLEAN> =
@@ -235,8 +234,6 @@ export function _decode_AAIssuingDistPointSyntax(el: _Element) {
             let containsSOAPublicKeyCerts: OPTIONAL<BOOLEAN> =
                 AAIssuingDistPointSyntax._default_value_for_containsSOAPublicKeyCerts;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 distributionPoint: (_el: _Element): void => {
                     distributionPoint = $._decode_explicit<DistributionPointName>(
@@ -269,7 +266,6 @@ export function _decode_AAIssuingDistPointSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -281,7 +277,7 @@ export function _decode_AAIssuingDistPointSyntax(el: _Element) {
                 }
             );
             return new AAIssuingDistPointSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ distributionPoint,
+                distributionPoint,
                 onlySomeReasons,
                 indirectCRL,
                 containsUserAttributeCerts,

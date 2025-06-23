@@ -118,11 +118,8 @@ let _cached_decoder_for_NumberRange: $.ASN1Decoder<NumberRange> | null = null;
 export function _decode_NumberRange(el: _Element) {
     if (!_cached_decoder_for_NumberRange) {
         _cached_decoder_for_NumberRange = function (el: _Element): NumberRange {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let from_: OPTIONAL<SequenceNumber>;
             let to: OPTIONAL<SequenceNumber>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 from: (_el: _Element): void => {
                     from_ = $._decode_explicit<SequenceNumber>(
@@ -135,7 +132,6 @@ export function _decode_NumberRange(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_NumberRange(el: _Element) {
                 _root_component_type_list_2_spec_for_NumberRange,
                 undefined
             );
-            return new NumberRange /* SEQUENCE_CONSTRUCTOR_CALL */(from_, to);
+            return new NumberRange (from_, to);
         };
     }
     return _cached_decoder_for_NumberRange(el);

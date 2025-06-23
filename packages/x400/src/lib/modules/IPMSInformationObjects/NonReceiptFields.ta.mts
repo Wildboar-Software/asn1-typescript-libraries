@@ -206,7 +206,6 @@ export function _decode_NonReceiptFields(el: _Element) {
             let returned_ipm: OPTIONAL<ReturnedIPMField>;
             let nrn_extensions: OPTIONAL<NRNExtensionsField>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'non-receipt-reason': (_el: _Element): void => {
                     non_receipt_reason = $._decode_implicit<NonReceiptReasonField>(
@@ -234,7 +233,6 @@ export function _decode_NonReceiptFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

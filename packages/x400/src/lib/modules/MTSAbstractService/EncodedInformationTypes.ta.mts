@@ -205,7 +205,6 @@ export function _decode_EncodedInformationTypes(el: _Element) {
                         EncodedInformationTypes._default_value_for_teletex;
                     let extended_encoded_information_types: OPTIONAL<ExtendedEncodedInformationTypes>;
                     /* END_OF_SET_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         'built-in-encoded-information-types': (
                             _el: _Element
@@ -232,7 +231,6 @@ export function _decode_EncodedInformationTypes(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_set(
                         el,
                         callbacks,

@@ -122,12 +122,9 @@ let _cached_decoder_for_CertErr: $.ASN1Decoder<CertErr> | null = null;
 export function _decode_CertErr(el: _Element) {
     if (!_cached_decoder_for_CertErr) {
         _cached_decoder_for_CertErr = function (el: _Element): CertErr {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let notOK!: CertErr_notOK;
             let note: OPTIONAL<Notifications>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 notOK: (_el: _Element): void => {
                     notOK = _decode_CertErr_notOK(_el);
@@ -136,7 +133,6 @@ export function _decode_CertErr(el: _Element) {
                     note = _decode_Notifications(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_CertErr(el: _Element) {
                 }
             );
             return new CertErr(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ notOK,
+                notOK,
                 note,
                 _unrecognizedExtensionsList
             );

@@ -132,12 +132,9 @@ let _cached_decoder_for_Bandwidth: $.ASN1Decoder<Bandwidth> | null = null;
 export function _decode_Bandwidth(el: _Element) {
     if (!_cached_decoder_for_Bandwidth) {
         _cached_decoder_for_Bandwidth = function (el: _Element): Bandwidth {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let peakBandwidth: OPTIONAL<INTEGER>;
             let sustainableBandwidth: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 peakBandwidth: (_el: _Element): void => {
                     peakBandwidth = $._decode_implicit<INTEGER>(
@@ -150,7 +147,6 @@ export function _decode_Bandwidth(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -161,7 +157,7 @@ export function _decode_Bandwidth(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new Bandwidth /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Bandwidth (
                 peakBandwidth,
                 sustainableBandwidth,
                 _unrecognizedExtensionsList

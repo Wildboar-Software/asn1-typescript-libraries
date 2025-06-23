@@ -148,12 +148,9 @@ let _cached_decoder_for_AC_PPDU: $.ASN1Decoder<AC_PPDU> | null = null;
 export function _decode_AC_PPDU(el: _Element) {
     if (!_cached_decoder_for_AC_PPDU) {
         _cached_decoder_for_AC_PPDU = function (el: _Element): AC_PPDU {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let presentation_context_addition_list: OPTIONAL<Presentation_context_addition_list>;
             let presentation_context_deletion_list: OPTIONAL<Presentation_context_deletion_list>;
             let user_data: OPTIONAL<User_data>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'presentation-context-addition-list': (_el: _Element): void => {
                     presentation_context_addition_list = $._decode_implicit<Presentation_context_addition_list>(
@@ -169,7 +166,6 @@ export function _decode_AC_PPDU(el: _Element) {
                     user_data = _decode_User_data(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_AC_PPDU(el: _Element) {
                 _root_component_type_list_2_spec_for_AC_PPDU,
                 undefined
             );
-            return new AC_PPDU /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AC_PPDU (
                 presentation_context_addition_list,
                 presentation_context_deletion_list,
                 user_data

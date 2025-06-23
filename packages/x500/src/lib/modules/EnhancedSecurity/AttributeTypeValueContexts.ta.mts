@@ -138,13 +138,10 @@ export function _decode_AttributeTypeValueContexts(el: _Element) {
         _cached_decoder_for_AttributeTypeValueContexts = function (
             el: _Element
         ): AttributeTypeValueContexts {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let type_!: OBJECT_IDENTIFIER;
             let value!: _Element;
             let contextList: OPTIONAL<Context[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = $._decodeObjectIdentifier(_el);
@@ -158,7 +155,6 @@ export function _decode_AttributeTypeValueContexts(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_AttributeTypeValueContexts(el: _Element) {
                 }
             );
             return new AttributeTypeValueContexts(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ type_,
+                type_,
                 value,
                 contextList,
                 _unrecognizedExtensionsList

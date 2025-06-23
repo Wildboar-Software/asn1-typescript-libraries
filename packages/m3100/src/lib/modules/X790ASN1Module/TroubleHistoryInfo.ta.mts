@@ -385,7 +385,6 @@ export function _decode_TroubleHistoryInfo(el: _Element) {
         _cached_decoder_for_TroubleHistoryInfo = function (
             el: _Element
         ): TroubleHistoryInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let managedObjectInstance!: ObjectInstance;
             let receivedTime!: GeneralizedTime;
             let troubleFound!: TroubleFound;
@@ -403,8 +402,6 @@ export function _decode_TroubleHistoryInfo(el: _Element) {
             let troubleReportNumberList: OPTIONAL<TroubleReportNumberList>;
             let troubleType: OPTIONAL<TroubleType>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 managedObjectInstance: (_el: _Element): void => {
                     managedObjectInstance = $._decode_explicit<ObjectInstance>(
@@ -487,7 +484,6 @@ export function _decode_TroubleHistoryInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -498,7 +494,7 @@ export function _decode_TroubleHistoryInfo(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TroubleHistoryInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TroubleHistoryInfo (
                 managedObjectInstance,
                 receivedTime,
                 troubleFound,

@@ -115,11 +115,8 @@ let _cached_decoder_for_SBFormat: $.ASN1Decoder<SBFormat> | null = null;
 export function _decode_SBFormat(el: _Element) {
   if (!_cached_decoder_for_SBFormat) {
     _cached_decoder_for_SBFormat = function (el: _Element): SBFormat {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let sb_owner: OPTIONAL<INTEGER>;
       let sb_type: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'sb-owner': (_el: _Element): void => {
           sb_owner = $._decodeInteger(_el);
@@ -128,7 +125,6 @@ export function _decode_SBFormat(el: _Element) {
           sb_type = $._decodeInteger(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -137,7 +133,7 @@ export function _decode_SBFormat(el: _Element) {
         _root_component_type_list_2_spec_for_SBFormat,
         undefined
       );
-      return new SBFormat /* SEQUENCE_CONSTRUCTOR_CALL */(sb_owner, sb_type);
+      return new SBFormat (sb_owner, sb_type);
     };
   }
   return _cached_decoder_for_SBFormat(el);

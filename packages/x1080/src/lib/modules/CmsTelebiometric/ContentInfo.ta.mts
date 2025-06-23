@@ -127,12 +127,9 @@ let _cached_decoder_for_ContentInfo: $.ASN1Decoder<ContentInfo> | null = null;
 export function _decode_ContentInfo(el: _Element) {
     if (!_cached_decoder_for_ContentInfo) {
         _cached_decoder_for_ContentInfo = function (el: _Element): ContentInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let contentType!: OBJECT_IDENTIFIER;
             let content: OPTIONAL<_Element>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 contentType: (_el: _Element): void => {
                     contentType = $._decodeObjectIdentifier(_el);
@@ -141,7 +138,6 @@ export function _decode_ContentInfo(el: _Element) {
                     content = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_ContentInfo(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ContentInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ContentInfo (
                 contentType,
                 content,
                 _unrecognizedExtensionsList

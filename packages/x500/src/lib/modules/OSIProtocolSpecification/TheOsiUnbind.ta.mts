@@ -101,10 +101,7 @@ export function _decode_TheOsiUnbind(el: _Element) {
         _cached_decoder_for_TheOsiUnbind = $._decode_implicit<TheOsiUnbind>(
             () =>
                 function (el: _Element): TheOsiUnbind {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let reason: OPTIONAL<Release_request_reason>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         reason: (_el: _Element): void => {
                             reason = $._decode_implicit<Release_request_reason>(
@@ -112,7 +109,6 @@ export function _decode_TheOsiUnbind(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -122,7 +118,7 @@ export function _decode_TheOsiUnbind(el: _Element) {
                         undefined
                     );
                     return new TheOsiUnbind(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ reason
+                        reason
                     );
                 }
         );

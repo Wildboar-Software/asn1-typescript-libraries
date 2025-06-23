@@ -193,7 +193,6 @@ export function _decode_TBSPDU_wrapper(el: _Element) {
         _cached_decoder_for_TBSPDU_wrapper = function (
             el: _Element
         ): TBSPDU_wrapper {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 TBSPDU_wrapper._default_value_for_version;
             let signatureAlgorithm!: AlgorithmIdentifier;
@@ -201,8 +200,6 @@ export function _decode_TBSPDU_wrapper(el: _Element) {
             let signedAttrs: OPTIONAL<SignedAttributes>;
             let conf!: TBSPDU_wrapper_conf;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -224,7 +221,6 @@ export function _decode_TBSPDU_wrapper(el: _Element) {
                     conf = _decode_TBSPDU_wrapper_conf(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -236,7 +232,7 @@ export function _decode_TBSPDU_wrapper(el: _Element) {
                 }
             );
             return new TBSPDU_wrapper(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 signatureAlgorithm,
                 certPath,
                 signedAttrs,

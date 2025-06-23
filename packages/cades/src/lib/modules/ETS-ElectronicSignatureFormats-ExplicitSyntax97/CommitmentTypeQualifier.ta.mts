@@ -113,23 +113,19 @@ let _cached_decoder_for_CommitmentTypeQualifier: $.ASN1Decoder<CommitmentTypeQua
 export
 function _decode_CommitmentTypeQualifier (el: _Element) {
     if (!_cached_decoder_for_CommitmentTypeQualifier) { _cached_decoder_for_CommitmentTypeQualifier = function (el: _Element): CommitmentTypeQualifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let commitmentQualifierId!: OBJECT_IDENTIFIER;
     let qualifier: OPTIONAL<_Element>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "commitmentQualifierId": (_el: _Element): void => { commitmentQualifierId = $._decodeObjectIdentifier(_el); },
         "qualifier": (_el: _Element): void => { qualifier = $._decodeAny(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CommitmentTypeQualifier,
         _extension_additions_list_spec_for_CommitmentTypeQualifier,
         _root_component_type_list_2_spec_for_CommitmentTypeQualifier,
         undefined,
     );
-    return new CommitmentTypeQualifier( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CommitmentTypeQualifier( 
         commitmentQualifierId,
         qualifier
     );

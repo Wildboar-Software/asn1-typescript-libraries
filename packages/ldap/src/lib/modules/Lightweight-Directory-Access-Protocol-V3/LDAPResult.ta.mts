@@ -211,14 +211,11 @@ export const _extension_additions_list_spec_for_LDAPResult: $.ComponentSpec[] = 
  * @returns {LDAPResult} The decoded data structure.
  */
 export function _decode_LDAPResult(el: _Element) {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let resultCode!: LDAPResult_resultCode;
     let matchedDN!: LDAPDN;
     let diagnosticMessage!: LDAPString;
     let referral: OPTIONAL<Referral>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         resultCode: (_el: _Element): void => {
             resultCode = _decode_LDAPResult_resultCode(_el);
@@ -233,7 +230,6 @@ export function _decode_LDAPResult(el: _Element) {
             referral = $._decode_implicit<Referral>(() => _decode_Referral)(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -244,7 +240,7 @@ export function _decode_LDAPResult(el: _Element) {
             _unrecognizedExtensionsList.push(ext);
         }
     );
-    return new LDAPResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+    return new LDAPResult (
         resultCode,
         matchedDN,
         diagnosticMessage,

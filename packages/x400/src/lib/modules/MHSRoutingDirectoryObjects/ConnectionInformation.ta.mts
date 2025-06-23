@@ -229,7 +229,6 @@ export function _decode_ConnectionInformation(el: _Element) {
                 ConnectionInformation._default_value_for_authentication_method;
             let weighting_factors: OPTIONAL<INSTANCE_OF>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'application-context': (_el: _Element): void => {
                     application_context = $._decode_implicit<OBJECT_IDENTIFIER>(
@@ -264,7 +263,6 @@ export function _decode_ConnectionInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

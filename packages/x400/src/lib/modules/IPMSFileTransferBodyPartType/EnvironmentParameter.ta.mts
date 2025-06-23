@@ -151,13 +151,10 @@ export function _decode_EnvironmentParameter(el: _Element) {
         _cached_decoder_for_EnvironmentParameter = function (
             el: _Element
         ): EnvironmentParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let application_reference: OPTIONAL<GeneralIdentifier>;
             let machine: OPTIONAL<GeneralIdentifier>;
             let operating_system: OPTIONAL<OBJECT_IDENTIFIER>;
             let user_visible_string: OPTIONAL<GraphicString[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'application-reference': (_el: _Element): void => {
                     application_reference = $._decode_explicit<GeneralIdentifier>(
@@ -183,7 +180,6 @@ export function _decode_EnvironmentParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -192,7 +188,7 @@ export function _decode_EnvironmentParameter(el: _Element) {
                 _root_component_type_list_2_spec_for_EnvironmentParameter,
                 undefined
             );
-            return new EnvironmentParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EnvironmentParameter (
                 application_reference,
                 machine,
                 operating_system,

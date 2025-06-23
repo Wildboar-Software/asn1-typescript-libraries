@@ -130,12 +130,9 @@ let _cached_decoder_for_Notation: $.ASN1Decoder<Notation> | null = null;
 export function _decode_Notation(el: _Element) {
   if (!_cached_decoder_for_Notation) {
     _cached_decoder_for_Notation = function (el: _Element): Notation {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let name!: IdentifyingStringOrIndex;
       let system_identifier: OPTIONAL<IdentifyingStringOrIndex>;
       let public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         name: (_el: _Element): void => {
           name = _decode_IdentifyingStringOrIndex(_el);
@@ -147,7 +144,6 @@ export function _decode_Notation(el: _Element) {
           public_identifier = _decode_IdentifyingStringOrIndex(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -156,7 +152,7 @@ export function _decode_Notation(el: _Element) {
         _root_component_type_list_2_spec_for_Notation,
         undefined
       );
-      return new Notation /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Notation (
         name,
         system_identifier,
         public_identifier

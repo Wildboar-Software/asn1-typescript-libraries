@@ -168,15 +168,12 @@ export function _decode_ReplaceAvlRsp(el: _Element) {
         _cached_decoder_for_ReplaceAvlRsp = function (
             el: _Element
         ): ReplaceAvlRsp {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 ReplaceAvlRsp._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let result!: ReplaceAvlRsp_result;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -191,7 +188,6 @@ export function _decode_ReplaceAvlRsp(el: _Element) {
                     result = _decode_ReplaceAvlRsp_result(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_ReplaceAvlRsp(el: _Element) {
                 }
             );
             return new ReplaceAvlRsp(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 result,

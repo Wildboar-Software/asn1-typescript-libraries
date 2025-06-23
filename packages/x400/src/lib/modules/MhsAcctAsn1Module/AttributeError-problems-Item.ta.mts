@@ -127,7 +127,6 @@ export function _decode_AttributeError_problems_Item(el: _Element) {
             let problem!: AttributeProblem;
             let type_!: AttributeType;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_implicit<AttributeProblem>(
@@ -140,7 +139,6 @@ export function _decode_AttributeError_problems_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

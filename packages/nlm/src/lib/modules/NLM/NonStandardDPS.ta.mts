@@ -144,12 +144,9 @@ export function _decode_NonStandardDPS(el: _Element) {
         _cached_decoder_for_NonStandardDPS = function (
             el: _Element
         ): NonStandardDPS {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subscription!: BOOLEAN;
             let supportedPacketSizes: OPTIONAL<INTEGER[]>;
             let selectedPacketSizes: OPTIONAL<BidirectionalValues>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subscription: (_el: _Element): void => {
                     subscription = $._decode_implicit<BOOLEAN>(
@@ -167,7 +164,6 @@ export function _decode_NonStandardDPS(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -176,7 +172,7 @@ export function _decode_NonStandardDPS(el: _Element) {
                 _root_component_type_list_2_spec_for_NonStandardDPS,
                 undefined
             );
-            return new NonStandardDPS /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NonStandardDPS (
                 subscription,
                 supportedPacketSizes,
                 selectedPacketSizes

@@ -127,7 +127,6 @@ export function _decode_UniversalOrBMPString(el: _Element) {
             let character_encoding!: UniversalOrBMPString_character_encoding;
             let iso_639_language_code: OPTIONAL<PrintableString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "character-encoding": (_el: _Element): void => {
                     character_encoding = _decode_UniversalOrBMPString_character_encoding(
@@ -138,7 +137,6 @@ export function _decode_UniversalOrBMPString(el: _Element) {
                     iso_639_language_code = $._decodePrintableString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

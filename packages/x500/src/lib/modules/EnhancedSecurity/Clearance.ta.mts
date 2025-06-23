@@ -157,14 +157,11 @@ let _cached_decoder_for_Clearance: $.ASN1Decoder<Clearance> | null = null;
 export function _decode_Clearance(el: _Element) {
     if (!_cached_decoder_for_Clearance) {
         _cached_decoder_for_Clearance = function (el: _Element): Clearance {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let policyId!: OBJECT_IDENTIFIER;
             let classList: OPTIONAL<ClassList> =
                 Clearance._default_value_for_classList;
             let securityCategories: OPTIONAL<SecurityCategory[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 policyId: (_el: _Element): void => {
                     policyId = $._decodeObjectIdentifier(_el);
@@ -178,7 +175,6 @@ export function _decode_Clearance(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -190,7 +186,7 @@ export function _decode_Clearance(el: _Element) {
                 }
             );
             return new Clearance(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ policyId,
+                policyId,
                 classList,
                 securityCategories,
                 _unrecognizedExtensionsList

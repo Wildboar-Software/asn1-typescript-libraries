@@ -142,12 +142,9 @@ let _cached_decoder_for_EncryptedData: $.ASN1Decoder<EncryptedData> | null = nul
 export function _decode_EncryptedData(el: _Element) {
   if (!_cached_decoder_for_EncryptedData) {
     _cached_decoder_for_EncryptedData = function (el: _Element): EncryptedData {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let etype!: Int32;
       let kvno: OPTIONAL<UInt32>;
       let cipher!: OCTET_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         etype: (_el: _Element): void => {
           etype = $._decode_explicit<Int32>(() => _decode_Int32)(_el);
@@ -161,7 +158,6 @@ export function _decode_EncryptedData(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -170,7 +166,7 @@ export function _decode_EncryptedData(el: _Element) {
         _root_component_type_list_2_spec_for_EncryptedData,
         undefined
       );
-      return new EncryptedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new EncryptedData (
         etype,
         kvno,
         cipher

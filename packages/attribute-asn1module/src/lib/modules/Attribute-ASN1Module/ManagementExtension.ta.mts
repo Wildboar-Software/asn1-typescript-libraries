@@ -130,25 +130,21 @@ let _cached_decoder_for_ManagementExtension: $.ASN1Decoder<ManagementExtension> 
 export
 function _decode_ManagementExtension (el: _Element) {
     if (!_cached_decoder_for_ManagementExtension) { _cached_decoder_for_ManagementExtension = function (el: _Element): ManagementExtension {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let identifier!: OBJECT_IDENTIFIER;
     let significance: OPTIONAL<BOOLEAN> = ManagementExtension._default_value_for_significance;
     let information!: _Element;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "identifier": (_el: _Element): void => { identifier = $._decodeObjectIdentifier(_el); },
         "significance": (_el: _Element): void => { significance = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "information": (_el: _Element): void => { information = $._decode_implicit<_Element>(() => $._decodeAny)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ManagementExtension,
         _extension_additions_list_spec_for_ManagementExtension,
         _root_component_type_list_2_spec_for_ManagementExtension,
         undefined,
     );
-    return new ManagementExtension( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ManagementExtension( 
         identifier,
         significance,
         information

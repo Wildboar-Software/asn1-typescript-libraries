@@ -193,7 +193,6 @@ export function _decode_RequestShadowUpdateResultData(el: _Element) {
         _cached_decoder_for_RequestShadowUpdateResultData = $._decode_implicit<RequestShadowUpdateResultData>(
             () =>
                 function (el: _Element): RequestShadowUpdateResultData {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let agreementID!: AgreementID;
                     let lastUpdate: OPTIONAL<Time>;
                     let _unrecognizedExtensionsList: _Element[] = [];
@@ -202,8 +201,6 @@ export function _decode_RequestShadowUpdateResultData(el: _Element) {
                     let aliasDereferenced: OPTIONAL<BOOLEAN> =
                         RequestShadowUpdateResultData._default_value_for_aliasDereferenced;
                     let notification: OPTIONAL<Attribute[]>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         agreementID: (_el: _Element): void => {
                             agreementID = _decode_AgreementID(_el);
@@ -234,7 +231,6 @@ export function _decode_RequestShadowUpdateResultData(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -246,7 +242,7 @@ export function _decode_RequestShadowUpdateResultData(el: _Element) {
                         }
                     );
                     return new RequestShadowUpdateResultData(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ agreementID,
+                        agreementID,
                         lastUpdate,
                         _unrecognizedExtensionsList,
                         securityParameters,

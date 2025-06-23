@@ -118,11 +118,8 @@ export function _decode_TimeStampResp(el: _Element) {
         _cached_decoder_for_TimeStampResp = function (
             el: _Element
         ): TimeStampResp {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let status!: PKIStatusInfo;
             let timeStampToken: OPTIONAL<TimeStampToken>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 status: (_el: _Element): void => {
                     status = _decode_PKIStatusInfo(_el);
@@ -131,7 +128,6 @@ export function _decode_TimeStampResp(el: _Element) {
                     timeStampToken = _decode_TimeStampToken(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -141,7 +137,7 @@ export function _decode_TimeStampResp(el: _Element) {
                 undefined
             );
             return new TimeStampResp(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ status,
+                status,
                 timeStampToken
             );
         };

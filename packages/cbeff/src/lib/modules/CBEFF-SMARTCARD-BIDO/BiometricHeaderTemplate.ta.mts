@@ -219,7 +219,6 @@ function _decode_BiometricHeaderTemplate (el: _Element) {
     let birIndex: OPTIONAL<BIRIndex>;
     let matchingAlgParameters: OPTIONAL<OCTET_STRING>;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "patronHeaderVersion": (_el: _Element): void => { patronHeaderVersion = $._decode_implicit<PatronHeaderVersion>(() => _decode_PatronHeaderVersion)(_el); },
         "bdbBiometricType": (_el: _Element): void => { bdbBiometricType = $._decode_implicit<BiometricType>(() => _decode_BiometricType)(_el); },
@@ -233,7 +232,6 @@ function _decode_BiometricHeaderTemplate (el: _Element) {
         "birIndex": (_el: _Element): void => { birIndex = $._decode_implicit<BIRIndex>(() => _decode_BIRIndex)(_el); },
         "matchingAlgParameters": (_el: _Element): void => { matchingAlgParameters = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
         _root_component_type_list_1_spec_for_BiometricHeaderTemplate,
         _extension_additions_list_spec_for_BiometricHeaderTemplate,

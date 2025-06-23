@@ -206,7 +206,6 @@ export function _decode_TbsDtSecAbort(el: _Element) {
         _cached_decoder_for_TbsDtSecAbort = function (
             el: _Element
         ): TbsDtSecAbort {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sigAlg!: AlgorithmIdentifier;
             let assoID!: AssoID;
             let time!: TimeStamp;
@@ -214,8 +213,6 @@ export function _decode_TbsDtSecAbort(el: _Element) {
             let seq!: SequenceNumber;
             let diag: OPTIONAL<WrpError>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sigAlg: (_el: _Element): void => {
                     sigAlg = _decode_AlgorithmIdentifier(_el);
@@ -236,7 +233,6 @@ export function _decode_TbsDtSecAbort(el: _Element) {
                     diag = _decode_WrpError(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -248,7 +244,7 @@ export function _decode_TbsDtSecAbort(el: _Element) {
                 }
             );
             return new TbsDtSecAbort(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ sigAlg,
+                sigAlg,
                 assoID,
                 time,
                 pkiPath,

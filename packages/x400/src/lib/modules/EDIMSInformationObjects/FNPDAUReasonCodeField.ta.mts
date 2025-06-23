@@ -128,11 +128,8 @@ export function _decode_FNPDAUReasonCodeField(el: _Element) {
         _cached_decoder_for_FNPDAUReasonCodeField = function (
             el: _Element
         ): FNPDAUReasonCodeField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let fn_pdau_basic_code!: FNPDAUBasicCodeField;
             let fn_pdau_diagnostic: OPTIONAL<FNPDAUDiagnosticField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'fn-pdau-basic-code': (_el: _Element): void => {
                     fn_pdau_basic_code = $._decode_implicit<FNPDAUBasicCodeField>(
@@ -145,7 +142,6 @@ export function _decode_FNPDAUReasonCodeField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_FNPDAUReasonCodeField(el: _Element) {
                 _root_component_type_list_2_spec_for_FNPDAUReasonCodeField,
                 undefined
             );
-            return new FNPDAUReasonCodeField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FNPDAUReasonCodeField (
                 fn_pdau_basic_code,
                 fn_pdau_diagnostic
             );

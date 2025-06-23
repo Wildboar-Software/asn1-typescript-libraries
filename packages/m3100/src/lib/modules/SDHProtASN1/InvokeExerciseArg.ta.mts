@@ -131,11 +131,8 @@ export function _decode_InvokeExerciseArg(el: _Element) {
         _cached_decoder_for_InvokeExerciseArg = function (
             el: _Element
         ): InvokeExerciseArg {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let protectionEntity: OPTIONAL<ProtectionEntity>;
             let otherInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 protectionEntity: (_el: _Element): void => {
                     protectionEntity = _decode_ProtectionEntity(_el);
@@ -146,7 +143,6 @@ export function _decode_InvokeExerciseArg(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_InvokeExerciseArg(el: _Element) {
                 _root_component_type_list_2_spec_for_InvokeExerciseArg,
                 undefined
             );
-            return new InvokeExerciseArg /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new InvokeExerciseArg (
                 protectionEntity,
                 otherInfo
             );

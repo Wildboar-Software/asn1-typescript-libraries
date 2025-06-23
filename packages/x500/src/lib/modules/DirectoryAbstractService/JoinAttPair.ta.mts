@@ -140,13 +140,10 @@ let _cached_decoder_for_JoinAttPair: $.ASN1Decoder<JoinAttPair> | null = null;
 export function _decode_JoinAttPair(el: _Element) {
     if (!_cached_decoder_for_JoinAttPair) {
         _cached_decoder_for_JoinAttPair = function (el: _Element): JoinAttPair {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let baseAtt!: AttributeType;
             let joinAtt!: AttributeType;
             let joinContext: OPTIONAL<JoinContextType[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 baseAtt: (_el: _Element): void => {
                     baseAtt = _decode_AttributeType(_el);
@@ -160,7 +157,6 @@ export function _decode_JoinAttPair(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -172,7 +168,7 @@ export function _decode_JoinAttPair(el: _Element) {
                 }
             );
             return new JoinAttPair(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ baseAtt,
+                baseAtt,
                 joinAtt,
                 joinContext,
                 _unrecognizedExtensionsList

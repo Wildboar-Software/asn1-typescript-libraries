@@ -261,7 +261,6 @@ let _cached_decoder_for_GetArgument: $.ASN1Decoder<GetArgument> | null = null;
 export function _decode_GetArgument(el: _Element) {
   if (!_cached_decoder_for_GetArgument) {
     _cached_decoder_for_GetArgument = function (el: _Element): GetArgument {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let baseManagedObjectClass!: ObjectClass;
       let baseManagedObjectInstance!: ObjectInstance;
       let accessControl: OPTIONAL<AccessControl>;
@@ -271,8 +270,6 @@ export function _decode_GetArgument(el: _Element) {
       let filter: OPTIONAL<CMISFilter> = GetArgument._default_value_for_filter;
       let attributeIdList: OPTIONAL<AttributeId[]>;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         baseManagedObjectClass: (_el: _Element): void => {
           baseManagedObjectClass = _decode_ObjectClass(_el);
@@ -302,7 +299,6 @@ export function _decode_GetArgument(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -313,7 +309,7 @@ export function _decode_GetArgument(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new GetArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GetArgument (
         baseManagedObjectClass,
         baseManagedObjectInstance,
         accessControl,

@@ -131,25 +131,21 @@ let _cached_decoder_for_SignerLocation: $.ASN1Decoder<SignerLocation> | null = n
 export
 function _decode_SignerLocation (el: _Element) {
     if (!_cached_decoder_for_SignerLocation) { _cached_decoder_for_SignerLocation = function (el: _Element): SignerLocation {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let countryName: OPTIONAL<DirectoryString>;
     let localityName: OPTIONAL<DirectoryString>;
     let postalAdddress: OPTIONAL<PostalAddress>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "countryName": (_el: _Element): void => { countryName = $._decode_explicit<DirectoryString>(() => _decode_DirectoryString)(_el); },
         "localityName": (_el: _Element): void => { localityName = $._decode_explicit<DirectoryString>(() => _decode_DirectoryString)(_el); },
         "postalAdddress": (_el: _Element): void => { postalAdddress = $._decode_explicit<PostalAddress>(() => _decode_PostalAddress)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SignerLocation,
         _extension_additions_list_spec_for_SignerLocation,
         _root_component_type_list_2_spec_for_SignerLocation,
         undefined,
     );
-    return new SignerLocation( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SignerLocation( 
         countryName,
         localityName,
         postalAdddress

@@ -135,12 +135,9 @@ export function _decode_Content_encoded_value(el: _Element) {
     _cached_decoder_for_Content_encoded_value = function (
       el: _Element
     ): Content_encoded_value {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let schema_identifier: OPTIONAL<OCTET_STRING>;
       let id!: Identifier;
       let encoding!: OCTET_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'schema-identifier': (_el: _Element): void => {
           schema_identifier = $._decodeOctetString(_el);
@@ -152,7 +149,6 @@ export function _decode_Content_encoded_value(el: _Element) {
           encoding = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -161,7 +157,7 @@ export function _decode_Content_encoded_value(el: _Element) {
         _root_component_type_list_2_spec_for_Content_encoded_value,
         undefined
       );
-      return new Content_encoded_value /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Content_encoded_value (
         schema_identifier,
         id,
         encoding

@@ -185,7 +185,6 @@ export function _decode_REP_IT_TOKEN(el: _Element) {
         _cached_decoder_for_REP_IT_TOKEN = function (
             el: _Element
         ): REP_IT_TOKEN {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tok_id!: INTEGER;
             let context_id!: Random_Integer;
             let randSrc!: Random_Integer;
@@ -193,8 +192,6 @@ export function _decode_REP_IT_TOKEN(el: _Element) {
             let targ_name!: Name;
             let src_name: OPTIONAL<Name>;
             let key_estb_rep: OPTIONAL<BIT_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "tok-id": (_el: _Element): void => {
                     tok_id = $._decodeInteger(_el);
@@ -218,7 +215,6 @@ export function _decode_REP_IT_TOKEN(el: _Element) {
                     key_estb_rep = $._decodeBitString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -228,7 +224,7 @@ export function _decode_REP_IT_TOKEN(el: _Element) {
                 undefined
             );
             return new REP_IT_TOKEN(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tok_id,
+                tok_id,
                 context_id,
                 randSrc,
                 randTarg,

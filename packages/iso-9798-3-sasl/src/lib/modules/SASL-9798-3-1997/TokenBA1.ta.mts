@@ -135,25 +135,21 @@ let _cached_decoder_for_TokenBA1: $.ASN1Decoder<TokenBA1> | null = null;
 export
 function _decode_TokenBA1 (el: _Element) {
     if (!_cached_decoder_for_TokenBA1) { _cached_decoder_for_TokenBA1 = function (el: _Element): TokenBA1 {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let randomB!: RandomNumber;
     let entityB: OPTIONAL<GeneralNames>;
     let certPref: OPTIONAL<TrustedAuth[]>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "randomB": (_el: _Element): void => { randomB = _decode_RandomNumber(_el); },
         "entityB": (_el: _Element): void => { entityB = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
         "certPref": (_el: _Element): void => { certPref = $._decode_implicit<TrustedAuth[]>(() => $._decodeSequenceOf<TrustedAuth>(() => _decode_TrustedAuth))(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TokenBA1,
         _extension_additions_list_spec_for_TokenBA1,
         _root_component_type_list_2_spec_for_TokenBA1,
         undefined,
     );
-    return new TokenBA1( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TokenBA1( 
         randomB,
         entityB,
         certPref

@@ -162,14 +162,11 @@ export function _decode_AVMPcommonComponents(el: _Element) {
         _cached_decoder_for_AVMPcommonComponents = function (
             el: _Element
         ): AVMPcommonComponents {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 AVMPcommonComponents._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -181,7 +178,6 @@ export function _decode_AVMPcommonComponents(el: _Element) {
                     sequence = _decode_AVMPsequence(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -193,7 +189,7 @@ export function _decode_AVMPcommonComponents(el: _Element) {
                 }
             );
             return new AVMPcommonComponents(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 _unrecognizedExtensionsList

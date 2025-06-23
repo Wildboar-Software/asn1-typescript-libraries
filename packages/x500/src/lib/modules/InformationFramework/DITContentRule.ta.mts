@@ -159,15 +159,12 @@ export function _decode_DITContentRule(el: _Element) {
         _cached_decoder_for_DITContentRule = function (
             el: _Element
         ): DITContentRule {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let structuralObjectClass!: OBJECT_IDENTIFIER;
             let auxiliaries: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let mandatory: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let optional: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let precluded: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 structuralObjectClass: (_el: _Element): void => {
                     structuralObjectClass = $._decodeObjectIdentifier(_el);
@@ -199,7 +196,6 @@ export function _decode_DITContentRule(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -211,7 +207,7 @@ export function _decode_DITContentRule(el: _Element) {
                 }
             );
             return new DITContentRule(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ structuralObjectClass,
+                structuralObjectClass,
                 auxiliaries,
                 mandatory,
                 optional,

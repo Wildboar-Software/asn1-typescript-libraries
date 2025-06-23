@@ -195,14 +195,11 @@ let _cached_decoder_for_UnitEventInfo: $.ASN1Decoder<UnitEventInfo> | null = nul
 export function _decode_UnitEventInfo(el: _Element) {
   if (!_cached_decoder_for_UnitEventInfo) {
     _cached_decoder_for_UnitEventInfo = function (el: _Element): UnitEventInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let hostingEndpointIRI!: EndpointIRI;
       let bspProductUuid!: BioAPI_UUID;
       let unitID!: BioAPI_UNIT_ID;
       let unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
       let unitEventType!: BioAPI_UNIT_EVENT_TYPE;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         hostingEndpointIRI: (_el: _Element): void => {
           hostingEndpointIRI = _decode_EndpointIRI(_el);
@@ -220,7 +217,6 @@ export function _decode_UnitEventInfo(el: _Element) {
           unitEventType = _decode_BioAPI_UNIT_EVENT_TYPE(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -229,7 +225,7 @@ export function _decode_UnitEventInfo(el: _Element) {
         _root_component_type_list_2_spec_for_UnitEventInfo,
         undefined
       );
-      return new UnitEventInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new UnitEventInfo (
         hostingEndpointIRI,
         bspProductUuid,
         unitID,

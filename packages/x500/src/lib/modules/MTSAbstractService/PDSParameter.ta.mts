@@ -116,7 +116,6 @@ export function _decode_PDSParameter(el: _Element) {
             let printable_string: OPTIONAL<PrintableString>;
             let teletex_string: OPTIONAL<TeletexString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "printable-string": (_el: _Element): void => {
                     printable_string = $._decodePrintableString(_el);
@@ -125,7 +124,6 @@ export function _decode_PDSParameter(el: _Element) {
                     teletex_string = $._decodeTeletexString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

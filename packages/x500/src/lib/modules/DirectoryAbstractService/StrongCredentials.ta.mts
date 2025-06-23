@@ -172,7 +172,6 @@ export function _decode_StrongCredentials(el: _Element) {
             let attributeCertificationPath: OPTIONAL<AttributeCertificationPath>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "certification-path": (_el: _Element): void => {
                     certification_path = $._decode_explicit<CertificationPath>(
@@ -195,7 +194,6 @@ export function _decode_StrongCredentials(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

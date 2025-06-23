@@ -155,13 +155,10 @@ export function _decode_PrivateRSAKeyAttributes(el: _Element) {
         _cached_decoder_for_PrivateRSAKeyAttributes = function (
             el: _Element
         ): PrivateRSAKeyAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let value!: ObjectValue<RSAPrivateKeyObject>;
             let modulusLength!: INTEGER;
             let keyInfo: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 value: (_el: _Element): void => {
                     value = _get_decoder_for_ObjectValue<RSAPrivateKeyObject>(
@@ -181,7 +178,6 @@ export function _decode_PrivateRSAKeyAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -193,7 +189,7 @@ export function _decode_PrivateRSAKeyAttributes(el: _Element) {
                 }
             );
             return new PrivateRSAKeyAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ value,
+                value,
                 modulusLength,
                 keyInfo,
                 _unrecognizedExtensionsList

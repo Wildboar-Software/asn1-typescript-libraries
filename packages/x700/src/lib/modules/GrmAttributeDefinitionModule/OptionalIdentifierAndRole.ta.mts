@@ -130,11 +130,8 @@ export function _decode_OptionalIdentifierAndRole(el: _Element) {
         _cached_decoder_for_OptionalIdentifierAndRole = function (
             el: _Element
         ): OptionalIdentifierAndRole {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let optionalOperationName!: OptionalIdentifier;
             let optionalRoleName: OPTIONAL<Identifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 optionalOperationName: (_el: _Element): void => {
                     optionalOperationName = _decode_OptionalIdentifier(_el);
@@ -143,7 +140,6 @@ export function _decode_OptionalIdentifierAndRole(el: _Element) {
                     optionalRoleName = _decode_Identifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_OptionalIdentifierAndRole(el: _Element) {
                 _root_component_type_list_2_spec_for_OptionalIdentifierAndRole,
                 undefined
             );
-            return new OptionalIdentifierAndRole /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new OptionalIdentifierAndRole (
                 optionalOperationName,
                 optionalRoleName
             );

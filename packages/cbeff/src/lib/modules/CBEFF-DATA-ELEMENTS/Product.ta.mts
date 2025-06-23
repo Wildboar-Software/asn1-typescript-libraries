@@ -115,11 +115,8 @@ let _cached_decoder_for_Product: $.ASN1Decoder<Product> | null = null;
 export function _decode_Product(el: _Element) {
   if (!_cached_decoder_for_Product) {
     _cached_decoder_for_Product = function (el: _Element): Product {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let product_owner: OPTIONAL<INTEGER>;
       let product_type: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'product-owner': (_el: _Element): void => {
           product_owner = $._decodeInteger(_el);
@@ -128,7 +125,6 @@ export function _decode_Product(el: _Element) {
           product_type = $._decodeInteger(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -137,7 +133,7 @@ export function _decode_Product(el: _Element) {
         _root_component_type_list_2_spec_for_Product,
         undefined
       );
-      return new Product /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Product (
         product_owner,
         product_type
       );

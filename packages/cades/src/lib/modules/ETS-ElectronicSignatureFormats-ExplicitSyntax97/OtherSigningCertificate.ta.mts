@@ -120,23 +120,19 @@ let _cached_decoder_for_OtherSigningCertificate: $.ASN1Decoder<OtherSigningCerti
 export
 function _decode_OtherSigningCertificate (el: _Element) {
     if (!_cached_decoder_for_OtherSigningCertificate) { _cached_decoder_for_OtherSigningCertificate = function (el: _Element): OtherSigningCertificate {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let certs!: OtherCertID[];
     let policies: OPTIONAL<PolicyInformation[]>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "certs": (_el: _Element): void => { certs = $._decodeSequenceOf<OtherCertID>(() => _decode_OtherCertID)(_el); },
         "policies": (_el: _Element): void => { policies = $._decodeSequenceOf<PolicyInformation>(() => _decode_PolicyInformation)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_OtherSigningCertificate,
         _extension_additions_list_spec_for_OtherSigningCertificate,
         _root_component_type_list_2_spec_for_OtherSigningCertificate,
         undefined,
     );
-    return new OtherSigningCertificate( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new OtherSigningCertificate( 
         certs,
         policies
     );

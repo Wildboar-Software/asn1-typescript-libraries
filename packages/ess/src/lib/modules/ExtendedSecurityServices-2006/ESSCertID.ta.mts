@@ -123,11 +123,8 @@ let _cached_decoder_for_ESSCertID: $.ASN1Decoder<ESSCertID> | null = null;
 export function _decode_ESSCertID(el: _Element) {
     if (!_cached_decoder_for_ESSCertID) {
         _cached_decoder_for_ESSCertID = function (el: _Element): ESSCertID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certHash!: Hash;
             let issuerSerial: OPTIONAL<IssuerSerial>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certHash: (_el: _Element): void => {
                     certHash = _decode_Hash(_el);
@@ -136,7 +133,6 @@ export function _decode_ESSCertID(el: _Element) {
                     issuerSerial = _decode_IssuerSerial(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_ESSCertID(el: _Element) {
                 undefined
             );
             return new ESSCertID(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certHash,
+                certHash,
                 issuerSerial
             );
         };

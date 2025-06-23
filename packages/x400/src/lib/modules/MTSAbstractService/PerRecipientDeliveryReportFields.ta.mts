@@ -166,13 +166,10 @@ export function _decode_PerRecipientDeliveryReportFields(el: _Element) {
         _cached_decoder_for_PerRecipientDeliveryReportFields = function (
             el: _Element
         ): PerRecipientDeliveryReportFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let message_delivery_time!: MessageDeliveryTime;
             let type_of_MTS_user!: TypeOfMTSUser;
             let recipient_certificate: OPTIONAL<RecipientCertificate>;
             let proof_of_delivery: OPTIONAL<ProofOfDelivery>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'message-delivery-time': (_el: _Element): void => {
                     message_delivery_time = _decode_MessageDeliveryTime(_el);
@@ -191,7 +188,6 @@ export function _decode_PerRecipientDeliveryReportFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -200,7 +196,7 @@ export function _decode_PerRecipientDeliveryReportFields(el: _Element) {
                 _root_component_type_list_2_spec_for_PerRecipientDeliveryReportFields,
                 undefined
             );
-            return new PerRecipientDeliveryReportFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PerRecipientDeliveryReportFields (
                 message_delivery_time,
                 type_of_MTS_user,
                 recipient_certificate,

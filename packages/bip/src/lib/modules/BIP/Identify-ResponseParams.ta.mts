@@ -132,11 +132,8 @@ export function _decode_Identify_ResponseParams(el: _Element) {
     _cached_decoder_for_Identify_ResponseParams = function (
       el: _Element
     ): Identify_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let candidates!: BioAPI_CANDIDATE[];
       let auditData: OPTIONAL<BioAPI_BIR_HANDLE>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         candidates: (_el: _Element): void => {
           candidates = $._decodeSequenceOf<BioAPI_CANDIDATE>(
@@ -147,7 +144,6 @@ export function _decode_Identify_ResponseParams(el: _Element) {
           auditData = _decode_BioAPI_BIR_HANDLE(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -156,7 +152,7 @@ export function _decode_Identify_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_Identify_ResponseParams,
         undefined
       );
-      return new Identify_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Identify_ResponseParams (
         candidates,
         auditData
       );

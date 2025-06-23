@@ -153,13 +153,10 @@ let _cached_decoder_for_CommonError: $.ASN1Decoder<CommonError> | null = null;
 export function _decode_CommonError(el: _Element) {
     if (!_cached_decoder_for_CommonError) {
         _cached_decoder_for_CommonError = function (el: _Element): CommonError {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let managedObjectClass!: ObjectClass;
             let managedObjectInstance!: ObjectInstance;
             let errorId!: ErrorId;
             let errorValue: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 managedObjectClass: (_el: _Element): void => {
                     managedObjectClass = _decode_ObjectClass(_el);
@@ -174,7 +171,6 @@ export function _decode_CommonError(el: _Element) {
                     errorValue = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_CommonError(el: _Element) {
                 _root_component_type_list_2_spec_for_CommonError,
                 undefined
             );
-            return new CommonError /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CommonError (
                 managedObjectClass,
                 managedObjectInstance,
                 errorId,

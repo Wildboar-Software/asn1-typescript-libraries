@@ -127,7 +127,6 @@ export function _decode_change_auto_acknowledgment_ArgumentType(el: _Element) {
             let auto_acknowledge_IPMs!: BOOLEAN;
             let auto_acknowledge_suppl_receipt_info: OPTIONAL<SupplementaryInformation>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-acknowledge-IPMs': (_el: _Element): void => {
                     auto_acknowledge_IPMs = $._decode_implicit<BOOLEAN>(
@@ -142,7 +141,6 @@ export function _decode_change_auto_acknowledgment_ArgumentType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

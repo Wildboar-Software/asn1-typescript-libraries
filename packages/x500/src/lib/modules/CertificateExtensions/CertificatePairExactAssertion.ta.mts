@@ -130,12 +130,9 @@ export function _decode_CertificatePairExactAssertion(el: _Element) {
         _cached_decoder_for_CertificatePairExactAssertion = function (
             el: _Element
         ): CertificatePairExactAssertion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let issuedToThisCAAssertion: OPTIONAL<CertificateExactAssertion>;
             let issuedByThisCAAssertion: OPTIONAL<CertificateExactAssertion>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 issuedToThisCAAssertion: (_el: _Element): void => {
                     issuedToThisCAAssertion = $._decode_implicit<CertificateExactAssertion>(
@@ -148,7 +145,6 @@ export function _decode_CertificatePairExactAssertion(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_CertificatePairExactAssertion(el: _Element) {
                 }
             );
             return new CertificatePairExactAssertion(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuedToThisCAAssertion,
+                issuedToThisCAAssertion,
                 issuedByThisCAAssertion,
                 _unrecognizedExtensionsList
             );

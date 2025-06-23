@@ -159,13 +159,10 @@ let _cached_decoder_for_PKIMessage: $.ASN1Decoder<PKIMessage> | null = null;
 export function _decode_PKIMessage(el: _Element) {
   if (!_cached_decoder_for_PKIMessage) {
     _cached_decoder_for_PKIMessage = function (el: _Element): PKIMessage {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let header!: PKIHeader;
       let body!: PKIBody;
       let protection: OPTIONAL<PKIProtection>;
       let extraCerts: OPTIONAL<CMPCertificate[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         header: (_el: _Element): void => {
           header = _decode_PKIHeader(_el);
@@ -184,7 +181,6 @@ export function _decode_PKIMessage(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -193,7 +189,7 @@ export function _decode_PKIMessage(el: _Element) {
         _root_component_type_list_2_spec_for_PKIMessage,
         undefined
       );
-      return new PKIMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new PKIMessage (
         header,
         body,
         protection,

@@ -190,15 +190,12 @@ export function _decode_NextRecipientFields(el: _Element) {
         _cached_decoder_for_NextRecipientFields = function (
             el: _Element
         ): NextRecipientFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let next_recipient!: RecipientField;
             let next_recipient_action_request: OPTIONAL<ActionRequestField> =
                 NextRecipientFields._default_value_for_next_recipient_action_request;
             let next_recipient_edi_notification_requests_field: OPTIONAL<EDINotificationRequestsField>;
             let next_responsibility_passing_allowed: OPTIONAL<ResponsibilityPassingAllowedField> =
                 NextRecipientFields._default_value_for_next_responsibility_passing_allowed;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'next-recipient': (_el: _Element): void => {
                     next_recipient = $._decode_explicit<RecipientField>(
@@ -225,7 +222,6 @@ export function _decode_NextRecipientFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -234,7 +230,7 @@ export function _decode_NextRecipientFields(el: _Element) {
                 _root_component_type_list_2_spec_for_NextRecipientFields,
                 undefined
             );
-            return new NextRecipientFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NextRecipientFields (
                 next_recipient,
                 next_recipient_action_request,
                 next_recipient_edi_notification_requests_field,

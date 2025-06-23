@@ -297,7 +297,6 @@ let _cached_decoder_for_PKIHeader: $.ASN1Decoder<PKIHeader> | null = null;
 export function _decode_PKIHeader(el: _Element) {
   if (!_cached_decoder_for_PKIHeader) {
     _cached_decoder_for_PKIHeader = function (el: _Element): PKIHeader {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let pvno!: PKIHeader_pvno;
       let sender!: GeneralName;
       let recipient!: GeneralName;
@@ -310,8 +309,6 @@ export function _decode_PKIHeader(el: _Element) {
       let recipNonce: OPTIONAL<OCTET_STRING>;
       let freeText: OPTIONAL<PKIFreeText>;
       let generalInfo: OPTIONAL<InfoTypeAndValue[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         pvno: (_el: _Element): void => {
           pvno = _decode_PKIHeader_pvno(_el);
@@ -370,7 +367,6 @@ export function _decode_PKIHeader(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -379,7 +375,7 @@ export function _decode_PKIHeader(el: _Element) {
         _root_component_type_list_2_spec_for_PKIHeader,
         undefined
       );
-      return new PKIHeader /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new PKIHeader (
         pvno,
         sender,
         recipient,

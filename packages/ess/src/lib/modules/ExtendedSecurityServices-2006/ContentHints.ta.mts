@@ -121,11 +121,8 @@ export function _decode_ContentHints(el: _Element) {
         _cached_decoder_for_ContentHints = function (
             el: _Element
         ): ContentHints {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let contentDescription: OPTIONAL<UTF8String>;
             let contentType!: ContentType;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 contentDescription: (_el: _Element): void => {
                     contentDescription = $._decodeUTF8String(_el);
@@ -134,7 +131,6 @@ export function _decode_ContentHints(el: _Element) {
                     contentType = _decode_ContentType(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_ContentHints(el: _Element) {
                 undefined
             );
             return new ContentHints(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ contentDescription,
+                contentDescription,
                 contentType
             );
         };

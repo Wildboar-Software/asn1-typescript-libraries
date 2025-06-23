@@ -125,11 +125,8 @@ export function _decode_SemanticsInformation(el: _Element) {
         _cached_decoder_for_SemanticsInformation = function (
             el: _Element
         ): SemanticsInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let semanticsIdentifier: OPTIONAL<OBJECT_IDENTIFIER>;
             let nameRegistrationAuthorities: OPTIONAL<NameRegistrationAuthorities>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 semanticsIdentifier: (_el: _Element): void => {
                     semanticsIdentifier = $._decodeObjectIdentifier(_el);
@@ -140,7 +137,6 @@ export function _decode_SemanticsInformation(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_SemanticsInformation(el: _Element) {
                 undefined
             );
             return new SemanticsInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ semanticsIdentifier,
+                semanticsIdentifier,
                 nameRegistrationAuthorities
             );
         };

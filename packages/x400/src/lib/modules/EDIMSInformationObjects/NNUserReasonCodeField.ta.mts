@@ -128,11 +128,8 @@ export function _decode_NNUserReasonCodeField(el: _Element) {
         _cached_decoder_for_NNUserReasonCodeField = function (
             el: _Element
         ): NNUserReasonCodeField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let nn_user_basic_code!: NNUserBasicCodeField;
             let nn_user_diagnostic: OPTIONAL<NNUserDiagnosticField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'nn-user-basic-code': (_el: _Element): void => {
                     nn_user_basic_code = $._decode_implicit<NNUserBasicCodeField>(
@@ -145,7 +142,6 @@ export function _decode_NNUserReasonCodeField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_NNUserReasonCodeField(el: _Element) {
                 _root_component_type_list_2_spec_for_NNUserReasonCodeField,
                 undefined
             );
-            return new NNUserReasonCodeField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NNUserReasonCodeField (
                 nn_user_basic_code,
                 nn_user_diagnostic
             );

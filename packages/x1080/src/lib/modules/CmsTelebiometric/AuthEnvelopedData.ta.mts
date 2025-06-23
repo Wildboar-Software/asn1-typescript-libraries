@@ -201,15 +201,12 @@ export function _decode_AuthEnvelopedData(el: _Element) {
         _cached_decoder_for_AuthEnvelopedData = function (
             el: _Element
         ): AuthEnvelopedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let recipientInfos!: RecipientInfos;
             let authEncryptedContentInfo!: EncryptedContentInfo;
             let authAttrs: OPTIONAL<Attributes>;
             let mac!: MessageAuthenticationCode;
             let unauthAttrs: OPTIONAL<Attributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -236,7 +233,6 @@ export function _decode_AuthEnvelopedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -245,7 +241,7 @@ export function _decode_AuthEnvelopedData(el: _Element) {
                 _root_component_type_list_2_spec_for_AuthEnvelopedData,
                 undefined
             );
-            return new AuthEnvelopedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AuthEnvelopedData (
                 version,
                 recipientInfos,
                 authEncryptedContentInfo,

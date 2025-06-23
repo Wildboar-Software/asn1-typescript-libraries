@@ -175,14 +175,11 @@ export function _decode_MessageTokenEncryptedData(el: _Element) {
         _cached_decoder_for_MessageTokenEncryptedData = function (
             el: _Element
         ): MessageTokenEncryptedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let content_confidentiality_key: OPTIONAL<EncryptionKey>;
             let content_integrity_check: OPTIONAL<ContentIntegrityCheck>;
             let message_security_label: OPTIONAL<MessageSecurityLabel>;
             let content_integrity_key: OPTIONAL<EncryptionKey>;
             let message_sequence_number: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-confidentiality-key': (_el: _Element): void => {
                     content_confidentiality_key = $._decode_implicit<EncryptionKey>(
@@ -210,7 +207,6 @@ export function _decode_MessageTokenEncryptedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -219,7 +215,7 @@ export function _decode_MessageTokenEncryptedData(el: _Element) {
                 _root_component_type_list_2_spec_for_MessageTokenEncryptedData,
                 undefined
             );
-            return new MessageTokenEncryptedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MessageTokenEncryptedData (
                 content_confidentiality_key,
                 content_integrity_check,
                 message_security_label,

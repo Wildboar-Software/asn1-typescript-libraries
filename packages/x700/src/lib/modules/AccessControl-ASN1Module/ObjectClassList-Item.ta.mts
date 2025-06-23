@@ -118,11 +118,8 @@ export function _decode_ObjectClassList_Item(el: _Element) {
         _cached_decoder_for_ObjectClassList_Item = function (
             el: _Element
         ): ObjectClassList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objectClass!: ObjectClass;
             let nameBinding: OPTIONAL<OBJECT_IDENTIFIER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectClass: (_el: _Element): void => {
                     objectClass = $._decode_explicit<ObjectClass>(
@@ -135,7 +132,6 @@ export function _decode_ObjectClassList_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_ObjectClassList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_ObjectClassList_Item,
                 undefined
             );
-            return new ObjectClassList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ObjectClassList_Item (
                 objectClass,
                 nameBinding
             );

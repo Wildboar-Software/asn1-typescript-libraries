@@ -126,12 +126,9 @@ let _cached_decoder_for_ValPolRequest: $.ASN1Decoder<ValPolRequest> | null = nul
 export function _decode_ValPolRequest(el: _Element) {
   if (!_cached_decoder_for_ValPolRequest) {
     _cached_decoder_for_ValPolRequest = function (el: _Element): ValPolRequest {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let vpRequestVersion: OPTIONAL<INTEGER> =
         ValPolRequest._default_value_for_vpRequestVersion;
       let requestNonce!: OCTET_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         vpRequestVersion: (_el: _Element): void => {
           vpRequestVersion = $._decodeInteger(_el);
@@ -140,7 +137,6 @@ export function _decode_ValPolRequest(el: _Element) {
           requestNonce = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -149,7 +145,7 @@ export function _decode_ValPolRequest(el: _Element) {
         _root_component_type_list_2_spec_for_ValPolRequest,
         undefined
       );
-      return new ValPolRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ValPolRequest (
         vpRequestVersion,
         requestNonce
       );

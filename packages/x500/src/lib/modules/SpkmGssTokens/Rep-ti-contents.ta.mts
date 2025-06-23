@@ -266,7 +266,6 @@ export function _decode_Rep_ti_contents(el: _Element) {
         _cached_decoder_for_Rep_ti_contents = function (
             el: _Element
         ): Rep_ti_contents {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tok_id!: INTEGER;
             let context_id!: Random_Integer;
             let pvno: OPTIONAL<BIT_STRING>;
@@ -279,8 +278,6 @@ export function _decode_Rep_ti_contents(el: _Element) {
             let validity: OPTIONAL<Validity>;
             let key_estb_id: OPTIONAL<AlgorithmIdentifier>;
             let key_estb_str: OPTIONAL<BIT_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "tok-id": (_el: _Element): void => {
                     tok_id = $._decodeInteger(_el);
@@ -325,7 +322,6 @@ export function _decode_Rep_ti_contents(el: _Element) {
                     key_estb_str = $._decodeBitString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -335,7 +331,7 @@ export function _decode_Rep_ti_contents(el: _Element) {
                 undefined
             );
             return new Rep_ti_contents(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tok_id,
+                tok_id,
                 context_id,
                 pvno,
                 timestamp,

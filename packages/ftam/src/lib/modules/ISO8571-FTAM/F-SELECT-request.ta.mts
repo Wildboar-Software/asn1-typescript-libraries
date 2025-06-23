@@ -227,7 +227,6 @@ export function _decode_F_SELECT_request(el: _Element) {
     _cached_decoder_for_F_SELECT_request = function (
       el: _Element
     ): F_SELECT_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let attributes!: Select_Attributes;
       let requested_access!: Access_Request;
       let access_passwords: OPTIONAL<Access_Passwords>;
@@ -235,8 +234,6 @@ export function _decode_F_SELECT_request(el: _Element) {
       let concurrency_control: OPTIONAL<Concurrency_Control>;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let account: OPTIONAL<Account>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         attributes: (_el: _Element): void => {
           attributes = _decode_Select_Attributes(_el);
@@ -260,7 +257,6 @@ export function _decode_F_SELECT_request(el: _Element) {
           account = _decode_Account(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -269,7 +265,7 @@ export function _decode_F_SELECT_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_SELECT_request,
         undefined
       );
-      return new F_SELECT_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_SELECT_request (
         attributes,
         requested_access,
         access_passwords,

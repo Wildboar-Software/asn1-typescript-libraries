@@ -198,15 +198,12 @@ let _cached_decoder_for_Signcrypter: $.ASN1Decoder<Signcrypter> | null = null;
 export function _decode_Signcrypter(el: _Element) {
     if (!_cached_decoder_for_Signcrypter) {
         _cached_decoder_for_Signcrypter = function (el: _Element): Signcrypter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let side!: SigncrypterIDs;
             let signcryptedDataAlgorithm!: SigncryptedDataAlgorithmIdentifier;
             let signcryptionValue!: SigncryptionValue;
             let signatureInformation: OPTIONAL<SignatureInformation>;
             let unsigncryptedAttributes: OPTIONAL<UnSigncryptedAttributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -231,7 +228,6 @@ export function _decode_Signcrypter(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -240,7 +236,7 @@ export function _decode_Signcrypter(el: _Element) {
                 _root_component_type_list_2_spec_for_Signcrypter,
                 undefined
             );
-            return new Signcrypter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Signcrypter (
                 version,
                 side,
                 signcryptedDataAlgorithm,

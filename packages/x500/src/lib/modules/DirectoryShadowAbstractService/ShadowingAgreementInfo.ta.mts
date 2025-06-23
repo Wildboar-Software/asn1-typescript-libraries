@@ -168,15 +168,12 @@ export function _decode_ShadowingAgreementInfo(el: _Element) {
         _cached_decoder_for_ShadowingAgreementInfo = function (
             el: _Element
         ): ShadowingAgreementInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let shadowSubject!: UnitOfReplication;
             let updateMode: OPTIONAL<UpdateMode> =
                 ShadowingAgreementInfo._default_value_for_updateMode;
             let master: OPTIONAL<AccessPoint>;
             let secondaryShadows: OPTIONAL<BOOLEAN> =
                 ShadowingAgreementInfo._default_value_for_secondaryShadows;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 shadowSubject: (_el: _Element): void => {
                     shadowSubject = _decode_UnitOfReplication(_el);
@@ -193,7 +190,6 @@ export function _decode_ShadowingAgreementInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_ShadowingAgreementInfo(el: _Element) {
                 undefined
             );
             return new ShadowingAgreementInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ shadowSubject,
+                shadowSubject,
                 updateMode,
                 master,
                 secondaryShadows

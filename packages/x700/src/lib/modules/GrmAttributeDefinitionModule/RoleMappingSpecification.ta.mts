@@ -161,13 +161,10 @@ export function _decode_RoleMappingSpecification(el: _Element) {
         _cached_decoder_for_RoleMappingSpecification = function (
             el: _Element
         ): RoleMappingSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let role!: Identifier;
             let relatedClasses!: TemplateList;
             let representedBy: OPTIONAL<Representation>;
             let qualifies: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 role: (_el: _Element): void => {
                     role = _decode_Identifier(_el);
@@ -186,7 +183,6 @@ export function _decode_RoleMappingSpecification(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -195,7 +191,7 @@ export function _decode_RoleMappingSpecification(el: _Element) {
                 _root_component_type_list_2_spec_for_RoleMappingSpecification,
                 undefined
             );
-            return new RoleMappingSpecification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RoleMappingSpecification (
                 role,
                 relatedClasses,
                 representedBy,

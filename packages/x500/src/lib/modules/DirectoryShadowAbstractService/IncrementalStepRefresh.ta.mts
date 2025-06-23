@@ -121,11 +121,8 @@ export function _decode_IncrementalStepRefresh(el: _Element) {
         _cached_decoder_for_IncrementalStepRefresh = function (
             el: _Element
         ): IncrementalStepRefresh {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sDSEChanges: OPTIONAL<IncrementalStepRefresh_sDSEChanges>;
             let subordinateUpdates: OPTIONAL<SubordinateChanges[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sDSEChanges: (_el: _Element): void => {
                     sDSEChanges = _decode_IncrementalStepRefresh_sDSEChanges(
@@ -138,7 +135,6 @@ export function _decode_IncrementalStepRefresh(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_IncrementalStepRefresh(el: _Element) {
                 undefined
             );
             return new IncrementalStepRefresh(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ sDSEChanges,
+                sDSEChanges,
                 subordinateUpdates
             );
         };

@@ -152,14 +152,11 @@ export function _decode_ImplementedValues_Item(el: _Element) {
         _cached_decoder_for_ImplementedValues_Item = function (
             el: _Element
         ): ImplementedValues_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeId!: OBJECT_IDENTIFIER;
             let defaultValue: OPTIONAL<_Element>;
             let initialValue: OPTIONAL<_Element>;
             let minValue: OPTIONAL<_Element>;
             let maxValue: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeId: (_el: _Element): void => {
                     attributeId = $._decodeObjectIdentifier(_el);
@@ -185,7 +182,6 @@ export function _decode_ImplementedValues_Item(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -194,7 +190,7 @@ export function _decode_ImplementedValues_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_ImplementedValues_Item,
                 undefined
             );
-            return new ImplementedValues_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ImplementedValues_Item (
                 attributeId,
                 defaultValue,
                 initialValue,

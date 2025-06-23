@@ -129,11 +129,8 @@ let _cached_decoder_for_IFPPacket: $.ASN1Decoder<IFPPacket> | null = null;
 export function _decode_IFPPacket(el: _Element) {
   if (!_cached_decoder_for_IFPPacket) {
     _cached_decoder_for_IFPPacket = function (el: _Element): IFPPacket {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let type_of_msg!: Type_of_msg;
       let data_field: OPTIONAL<Data_Field>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'type-of-msg': (_el: _Element): void => {
           type_of_msg = _decode_Type_of_msg(_el);
@@ -142,7 +139,6 @@ export function _decode_IFPPacket(el: _Element) {
           data_field = _decode_Data_Field(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -151,7 +147,7 @@ export function _decode_IFPPacket(el: _Element) {
         _root_component_type_list_2_spec_for_IFPPacket,
         undefined
       );
-      return new IFPPacket /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new IFPPacket (
         type_of_msg,
         data_field
       );

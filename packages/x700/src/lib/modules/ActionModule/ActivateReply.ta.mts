@@ -156,12 +156,9 @@ export function _decode_ActivateReply(el: _Element) {
         _cached_decoder_for_ActivateReply = function (
             el: _Element
         ): ActivateReply {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let operationalStatus!: OperationalState;
             let responseCode!: ActivateReply_responseCode;
             let responseParams: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 operationalStatus: (_el: _Element): void => {
                     operationalStatus = $._decode_explicit<OperationalState>(
@@ -182,7 +179,6 @@ export function _decode_ActivateReply(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -191,7 +187,7 @@ export function _decode_ActivateReply(el: _Element) {
                 _root_component_type_list_2_spec_for_ActivateReply,
                 undefined
             );
-            return new ActivateReply /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ActivateReply (
                 operationalStatus,
                 responseCode,
                 responseParams

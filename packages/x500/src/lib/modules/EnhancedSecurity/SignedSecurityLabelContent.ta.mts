@@ -174,14 +174,11 @@ export function _decode_SignedSecurityLabelContent(el: _Element) {
         _cached_decoder_for_SignedSecurityLabelContent = function (
             el: _Element
         ): SignedSecurityLabelContent {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attHash!: HASH<AttributeTypeAndValue>;
             let issuer: OPTIONAL<Name>;
             let keyIdentifier: OPTIONAL<KeyIdentifier>;
             let securityLabel!: SecurityLabel;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attHash: (_el: _Element): void => {
                     attHash = _get_decoder_for_HASH<AttributeTypeAndValue>(
@@ -198,7 +195,6 @@ export function _decode_SignedSecurityLabelContent(el: _Element) {
                     securityLabel = _decode_SecurityLabel(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -210,7 +206,7 @@ export function _decode_SignedSecurityLabelContent(el: _Element) {
                 }
             );
             return new SignedSecurityLabelContent(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ attHash,
+                attHash,
                 issuer,
                 keyIdentifier,
                 securityLabel,

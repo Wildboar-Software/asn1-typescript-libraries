@@ -137,7 +137,6 @@ export function _decode_EDIAutoAcknowledgementRegistrationParameter(
             let auto_acknowledge_suppl_receipt_info: OPTIONAL<EDISupplementaryInformation>;
             let submission_options: OPTIONAL<MSSubmissionOptions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-acknowledge-suppl-receipt-info': (
                     _el: _Element
@@ -152,7 +151,6 @@ export function _decode_EDIAutoAcknowledgementRegistrationParameter(
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

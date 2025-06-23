@@ -123,11 +123,8 @@ let _cached_decoder_for_MarkingData: $.ASN1Decoder<MarkingData> | null = null;
 export function _decode_MarkingData(el: _Element) {
     if (!_cached_decoder_for_MarkingData) {
         _cached_decoder_for_MarkingData = function (el: _Element): MarkingData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let markingPhrase: OPTIONAL<MarkingPhrase>;
             let markingCodes: OPTIONAL<MarkingCodes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 markingPhrase: (_el: _Element): void => {
                     markingPhrase = _decode_MarkingPhrase(_el);
@@ -136,7 +133,6 @@ export function _decode_MarkingData(el: _Element) {
                     markingCodes = _decode_MarkingCodes(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -145,7 +141,7 @@ export function _decode_MarkingData(el: _Element) {
                 _root_component_type_list_2_spec_for_MarkingData,
                 undefined
             );
-            return new MarkingData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MarkingData (
                 markingPhrase,
                 markingCodes
             );

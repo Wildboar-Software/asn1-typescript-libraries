@@ -123,25 +123,21 @@ let _cached_decoder_for_URIReference: $.ASN1Decoder<URIReference> | null = null;
 export
 function _decode_URIReference (el: _Element) {
     if (!_cached_decoder_for_URIReference) { _cached_decoder_for_URIReference = function (el: _Element): URIReference {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let uniformResourceIdentifier!: IA5String;
     let hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
     let hashValue: OPTIONAL<BIT_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "uniformResourceIdentifier": (_el: _Element): void => { uniformResourceIdentifier = $._decodeIA5String(_el); },
         "hashAlgorithm": (_el: _Element): void => { hashAlgorithm = _decode_AlgorithmIdentifier(_el); },
         "hashValue": (_el: _Element): void => { hashValue = $._decodeBitString(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_URIReference,
         _extension_additions_list_spec_for_URIReference,
         _root_component_type_list_2_spec_for_URIReference,
         undefined,
     );
-    return new URIReference( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new URIReference( 
         uniformResourceIdentifier,
         hashAlgorithm,
         hashValue

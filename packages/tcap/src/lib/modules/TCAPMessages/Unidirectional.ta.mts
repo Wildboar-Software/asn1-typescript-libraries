@@ -125,11 +125,8 @@ export function _decode_Unidirectional(el: _Element) {
     _cached_decoder_for_Unidirectional = function (
       el: _Element
     ): Unidirectional {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let dialoguePortion: OPTIONAL<DialoguePortion>;
       let components!: ComponentPortion;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         dialoguePortion: (_el: _Element): void => {
           dialoguePortion = _decode_DialoguePortion(_el);
@@ -138,7 +135,6 @@ export function _decode_Unidirectional(el: _Element) {
           components = _decode_ComponentPortion(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -147,7 +143,7 @@ export function _decode_Unidirectional(el: _Element) {
         _root_component_type_list_2_spec_for_Unidirectional,
         undefined
       );
-      return new Unidirectional /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Unidirectional (
         dialoguePortion,
         components
       );

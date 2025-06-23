@@ -150,7 +150,6 @@ export function _decode_ARU_PPDU_x400_mode_parameters(el: _Element) {
             let reflectedParameter: OPTIONAL<BIT_STRING>;
             let userdataAB: OPTIONAL<_Element>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 abortReason: (_el: _Element): void => {
                     abortReason = $._decode_implicit<AbortReason>(
@@ -168,7 +167,6 @@ export function _decode_ARU_PPDU_x400_mode_parameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

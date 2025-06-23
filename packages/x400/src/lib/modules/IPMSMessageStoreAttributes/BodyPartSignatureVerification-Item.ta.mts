@@ -130,7 +130,6 @@ export function _decode_BodyPartSignatureVerification_Item(el: _Element) {
             let body_part_sequence_number!: BodyPartNumber;
             let body_part_signature!: SignatureStatus;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'body-part-sequence-number': (_el: _Element): void => {
                     body_part_sequence_number = $._decode_implicit<BodyPartNumber>(
@@ -143,7 +142,6 @@ export function _decode_BodyPartSignatureVerification_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

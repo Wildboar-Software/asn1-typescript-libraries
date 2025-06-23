@@ -152,14 +152,11 @@ export function _decode_ToBeTestedMORTs_scopedSet(el: _Element) {
         _cached_decoder_for_ToBeTestedMORTs_scopedSet = function (
             el: _Element
         ): ToBeTestedMORTs_scopedSet {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let base!: ObjectInstance;
             let mORTsScope0: OPTIONAL<Scope> =
                 ToBeTestedMORTs_scopedSet._default_value_for_mORTsScope0;
             let mORTsFilter: OPTIONAL<CMISFilter> =
                 ToBeTestedMORTs_scopedSet._default_value_for_mORTsFilter;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 base: (_el: _Element): void => {
                     base = _decode_ObjectInstance(_el);
@@ -173,7 +170,6 @@ export function _decode_ToBeTestedMORTs_scopedSet(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_ToBeTestedMORTs_scopedSet(el: _Element) {
                 _root_component_type_list_2_spec_for_ToBeTestedMORTs_scopedSet,
                 undefined
             );
-            return new ToBeTestedMORTs_scopedSet /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ToBeTestedMORTs_scopedSet (
                 base,
                 mORTsScope0,
                 mORTsFilter

@@ -358,7 +358,6 @@ export function _decode_GUIStateEventHandlerCallbackParams(el: _Element) {
     _cached_decoder_for_GUIStateEventHandlerCallbackParams = function (
       el: _Element
     ): GUIStateEventHandlerCallbackParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiStateEventHandlerAddress!: MemoryAddress;
       let guiStateEventHandlerContext!: MemoryAddress;
       let bspUuid!: BioAPI_UUID;
@@ -372,8 +371,6 @@ export function _decode_GUIStateEventHandlerCallbackParams(el: _Element) {
       let enrollSampleIndex!: SignedInt;
       let bitmaps: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiStateEventHandlerAddress: (_el: _Element): void => {
           guiStateEventHandlerAddress = _decode_MemoryAddress(_el);
@@ -415,7 +412,6 @@ export function _decode_GUIStateEventHandlerCallbackParams(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -424,7 +420,7 @@ export function _decode_GUIStateEventHandlerCallbackParams(el: _Element) {
         _root_component_type_list_2_spec_for_GUIStateEventHandlerCallbackParams,
         undefined
       );
-      return new GUIStateEventHandlerCallbackParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIStateEventHandlerCallbackParams (
         guiStateEventHandlerAddress,
         guiStateEventHandlerContext,
         bspUuid,

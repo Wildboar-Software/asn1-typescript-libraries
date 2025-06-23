@@ -316,7 +316,6 @@ export function _decode_F_OPEN_response(el: _Element) {
     _cached_decoder_for_F_OPEN_response = function (
       el: _Element
     ): F_OPEN_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let state_result: OPTIONAL<State_Result> =
         F_OPEN_response._default_value_for_state_result;
       let action_result: OPTIONAL<Action_Result> =
@@ -331,8 +330,6 @@ export function _decode_F_OPEN_response(el: _Element) {
         F_OPEN_response._default_value_for_presentation_action;
       let degree_of_overlap: OPTIONAL<Degree_Of_Overlap>;
       let transfer_window: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'state-result': (_el: _Element): void => {
           state_result = _decode_State_Result(_el);
@@ -373,7 +370,6 @@ export function _decode_F_OPEN_response(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -382,7 +378,7 @@ export function _decode_F_OPEN_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_OPEN_response,
         undefined
       );
-      return new F_OPEN_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_OPEN_response (
         state_result,
         action_result,
         contents_type,

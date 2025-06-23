@@ -139,7 +139,6 @@ export function _decode_register_ms_error_ParameterType(el: _Element) {
             let problem!: RegistrationProblem;
             let registration_type!: RegistrationTypes;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<RegistrationProblem>(
@@ -152,7 +151,6 @@ export function _decode_register_ms_error_ParameterType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

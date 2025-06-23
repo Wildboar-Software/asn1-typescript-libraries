@@ -171,7 +171,6 @@ export function _decode_TeletexNonBasicParameters(el: _Element) {
             let miscellaneous_terminal_capabilities: OPTIONAL<TeletexString>;
             let private_use: OPTIONAL<OCTET_STRING>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'graphic-character-sets': (_el: _Element): void => {
                     graphic_character_sets = $._decode_implicit<TeletexString>(
@@ -201,7 +200,6 @@ export function _decode_TeletexNonBasicParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

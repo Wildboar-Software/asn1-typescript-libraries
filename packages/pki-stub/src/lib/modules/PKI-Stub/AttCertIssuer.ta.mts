@@ -161,13 +161,10 @@ export function _decode_AttCertIssuer(el: _Element): AttCertIssuer {
         _cached_decoder_for_AttCertIssuer = $._decode_implicit<AttCertIssuer>(
             () =>
                 function (el: _Element): AttCertIssuer {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let issuerName: OPTIONAL<GeneralNames>;
                     let baseCertificateID: OPTIONAL<IssuerSerial>;
                     let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
                     let _unrecognizedExtensionsList: _Element[] = [];
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         issuerName: (_el: _Element): void => {
                             issuerName = _decode_GeneralNames(_el);
@@ -185,7 +182,6 @@ export function _decode_AttCertIssuer(el: _Element): AttCertIssuer {
                                 )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -197,7 +193,7 @@ export function _decode_AttCertIssuer(el: _Element): AttCertIssuer {
                         }
                     );
                     return new AttCertIssuer(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ issuerName,
+                        issuerName,
                         baseCertificateID,
                         objectDigestInfo,
                         _unrecognizedExtensionsList

@@ -121,23 +121,19 @@ let _cached_decoder_for_CommunicationsInformation: $.ASN1Decoder<CommunicationsI
 export
 function _decode_CommunicationsInformation (el: _Element) {
     if (!_cached_decoder_for_CommunicationsInformation) { _cached_decoder_for_CommunicationsInformation = function (el: _Element): CommunicationsInformation {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let informationType!: InformationType;
     let informationData: OPTIONAL<InformationData>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "informationType": (_el: _Element): void => { informationType = _decode_InformationType(_el); },
         "informationData": (_el: _Element): void => { informationData = _decode_InformationData(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CommunicationsInformation,
         _extension_additions_list_spec_for_CommunicationsInformation,
         _root_component_type_list_2_spec_for_CommunicationsInformation,
         undefined,
     );
-    return new CommunicationsInformation( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CommunicationsInformation( 
         informationType,
         informationData
     );

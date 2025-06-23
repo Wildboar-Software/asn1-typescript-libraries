@@ -123,11 +123,8 @@ let _cached_decoder_for_RevertReply: $.ASN1Decoder<RevertReply> | null = null;
 export function _decode_RevertReply(el: _Element) {
     if (!_cached_decoder_for_RevertReply) {
         _cached_decoder_for_RevertReply = function (el: _Element): RevertReply {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let revertedPatches!: AppliedPatches;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 revertedPatches: (_el: _Element): void => {
                     revertedPatches = $._decode_implicit<AppliedPatches>(
@@ -143,7 +140,6 @@ export function _decode_RevertReply(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_RevertReply(el: _Element) {
                 _root_component_type_list_2_spec_for_RevertReply,
                 undefined
             );
-            return new RevertReply /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RevertReply (
                 revertedPatches,
                 additionalInfo
             );

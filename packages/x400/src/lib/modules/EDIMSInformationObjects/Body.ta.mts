@@ -121,11 +121,8 @@ let _cached_decoder_for_Body: $.ASN1Decoder<Body> | null = null;
 export function _decode_Body(el: _Element) {
     if (!_cached_decoder_for_Body) {
         _cached_decoder_for_Body = function (el: _Element): Body {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primary_body_part!: PrimaryBodyPart;
             let additional_body_parts: OPTIONAL<OtherBodyParts>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'primary-body-part': (_el: _Element): void => {
                     primary_body_part = _decode_PrimaryBodyPart(_el);
@@ -134,7 +131,6 @@ export function _decode_Body(el: _Element) {
                     additional_body_parts = _decode_OtherBodyParts(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_Body(el: _Element) {
                 _root_component_type_list_2_spec_for_Body,
                 undefined
             );
-            return new Body /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Body (
                 primary_body_part,
                 additional_body_parts
             );

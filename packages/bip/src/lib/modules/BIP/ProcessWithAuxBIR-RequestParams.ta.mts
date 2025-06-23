@@ -167,13 +167,10 @@ export function _decode_ProcessWithAuxBIR_RequestParams(el: _Element) {
     _cached_decoder_for_ProcessWithAuxBIR_RequestParams = function (
       el: _Element
     ): ProcessWithAuxBIR_RequestParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let originalBSPHandle!: BioAPI_HANDLE;
       let capturedBIR!: BioAPI_INPUT_BIR;
       let auxiliaryData!: BioAPI_INPUT_BIR;
       let outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         originalBSPHandle: (_el: _Element): void => {
           originalBSPHandle = _decode_BioAPI_HANDLE(_el);
@@ -188,7 +185,6 @@ export function _decode_ProcessWithAuxBIR_RequestParams(el: _Element) {
           outputFormat = _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -197,7 +193,7 @@ export function _decode_ProcessWithAuxBIR_RequestParams(el: _Element) {
         _root_component_type_list_2_spec_for_ProcessWithAuxBIR_RequestParams,
         undefined
       );
-      return new ProcessWithAuxBIR_RequestParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ProcessWithAuxBIR_RequestParams (
         originalBSPHandle,
         capturedBIR,
         auxiliaryData,

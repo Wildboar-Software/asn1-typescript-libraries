@@ -133,12 +133,9 @@ export function _decode_DigestInfoWithDefault(el: _Element) {
         _cached_decoder_for_DigestInfoWithDefault = function (
             el: _Element
         ): DigestInfoWithDefault {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let digestAlg: OPTIONAL<AlgorithmIdentifier> =
                 DigestInfoWithDefault._default_value_for_digestAlg;
             let digest!: OCTET_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 digestAlg: (_el: _Element): void => {
                     digestAlg = _decode_AlgorithmIdentifier(_el);
@@ -147,7 +144,6 @@ export function _decode_DigestInfoWithDefault(el: _Element) {
                     digest = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_DigestInfoWithDefault(el: _Element) {
                 undefined
             );
             return new DigestInfoWithDefault(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ digestAlg,
+                digestAlg,
                 digest
             );
         };

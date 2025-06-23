@@ -283,7 +283,6 @@ export function _decode_EncTicketPart(el: _Element) {
     _cached_decoder_for_EncTicketPart = $._decode_implicit<EncTicketPart>(
       () =>
         function (el: _Element): EncTicketPart {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let flags!: TicketFlags;
           let key!: EncryptionKey;
           let crealm!: Realm;
@@ -295,8 +294,6 @@ export function _decode_EncTicketPart(el: _Element) {
           let renew_till: OPTIONAL<KerberosTime>;
           let caddr: OPTIONAL<HostAddresses>;
           let authorization_data: OPTIONAL<AuthorizationData>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             flags: (_el: _Element): void => {
               flags = $._decode_explicit<TicketFlags>(
@@ -352,7 +349,6 @@ export function _decode_EncTicketPart(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -361,7 +357,7 @@ export function _decode_EncTicketPart(el: _Element) {
             _root_component_type_list_2_spec_for_EncTicketPart,
             undefined
           );
-          return new EncTicketPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new EncTicketPart (
             flags,
             key,
             crealm,

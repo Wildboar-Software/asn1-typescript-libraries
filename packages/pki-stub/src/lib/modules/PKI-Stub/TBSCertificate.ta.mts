@@ -275,7 +275,6 @@ export const _extension_additions_list_spec_for_TBSCertificate: $.ComponentSpec[
  * @returns {TBSCertificate} The decoded data structure.
  */
 export function _decode_TBSCertificate(el: _Element): TBSCertificate {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version: OPTIONAL<Version> = TBSCertificate._default_value_for_version;
     let serialNumber!: CertificateSerialNumber;
     let signature!: AlgorithmIdentifier;
@@ -287,8 +286,6 @@ export function _decode_TBSCertificate(el: _Element): TBSCertificate {
     let subjectUniqueIdentifier: OPTIONAL<UniqueIdentifier>;
     let extensions: OPTIONAL<Extensions>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         version: (_el: _Element): void => {
             version = $._decode_explicit<Version>(
@@ -331,7 +328,6 @@ export function _decode_TBSCertificate(el: _Element): TBSCertificate {
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -343,7 +339,7 @@ export function _decode_TBSCertificate(el: _Element): TBSCertificate {
         }
     );
     return new TBSCertificate(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+        version,
         serialNumber,
         signature,
         issuer,

@@ -136,13 +136,10 @@ export function _decode_SchedulingParameters(el: _Element) {
         _cached_decoder_for_SchedulingParameters = function (
             el: _Element
         ): SchedulingParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let periodic: OPTIONAL<PeriodicStrategy>;
             let othertimes: OPTIONAL<BOOLEAN> =
                 SchedulingParameters._default_value_for_othertimes;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 periodic: (_el: _Element): void => {
                     periodic = _decode_PeriodicStrategy(_el);
@@ -151,7 +148,6 @@ export function _decode_SchedulingParameters(el: _Element) {
                     othertimes = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -163,7 +159,7 @@ export function _decode_SchedulingParameters(el: _Element) {
                 }
             );
             return new SchedulingParameters(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ periodic,
+                periodic,
                 othertimes,
                 _unrecognizedExtensionsList
             );

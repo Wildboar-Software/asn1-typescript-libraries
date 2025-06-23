@@ -173,15 +173,12 @@ export function _decode_AlgorithmInfo(el: _Element) {
         _cached_decoder_for_AlgorithmInfo = function (
             el: _Element
         ): AlgorithmInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reference!: Reference;
             let algorithm!: INTEGER;
             let parameters!: _Element;
             let supportedOperations!: _Element;
             let algId: OPTIONAL<OBJECT_IDENTIFIER>;
             let algRef: OPTIONAL<Reference>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reference: (_el: _Element): void => {
                     reference = _decode_Reference(_el);
@@ -202,7 +199,6 @@ export function _decode_AlgorithmInfo(el: _Element) {
                     algRef = _decode_Reference(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -212,7 +208,7 @@ export function _decode_AlgorithmInfo(el: _Element) {
                 undefined
             );
             return new AlgorithmInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ reference,
+                reference,
                 algorithm,
                 parameters,
                 supportedOperations,

@@ -157,14 +157,11 @@ export function _decode_AuthenticationLevel_basicLevels(el: _Element) {
         _cached_decoder_for_AuthenticationLevel_basicLevels = function (
             el: _Element
         ): AuthenticationLevel_basicLevels {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let level!: AuthenticationLevel_basicLevels_level;
             let localQualifier: OPTIONAL<INTEGER>;
             let signed: OPTIONAL<BOOLEAN> =
                 AuthenticationLevel_basicLevels._default_value_for_signed;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 level: (_el: _Element): void => {
                     level = _decode_AuthenticationLevel_basicLevels_level(_el);
@@ -176,7 +173,6 @@ export function _decode_AuthenticationLevel_basicLevels(el: _Element) {
                     signed = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_AuthenticationLevel_basicLevels(el: _Element) {
                 }
             );
             return new AuthenticationLevel_basicLevels(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ level,
+                level,
                 localQualifier,
                 signed,
                 _unrecognizedExtensionsList

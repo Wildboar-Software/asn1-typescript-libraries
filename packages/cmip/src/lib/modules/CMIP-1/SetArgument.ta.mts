@@ -271,7 +271,6 @@ let _cached_decoder_for_SetArgument: $.ASN1Decoder<SetArgument> | null = null;
 export function _decode_SetArgument(el: _Element) {
   if (!_cached_decoder_for_SetArgument) {
     _cached_decoder_for_SetArgument = function (el: _Element): SetArgument {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let baseManagedObjectClass!: ObjectClass;
       let baseManagedObjectInstance!: ObjectInstance;
       let accessControl: OPTIONAL<AccessControl>;
@@ -281,8 +280,6 @@ export function _decode_SetArgument(el: _Element) {
       let filter: OPTIONAL<CMISFilter> = SetArgument._default_value_for_filter;
       let modificationList!: SetArgument_modificationList_Item[];
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         baseManagedObjectClass: (_el: _Element): void => {
           baseManagedObjectClass = _decode_ObjectClass(_el);
@@ -316,7 +313,6 @@ export function _decode_SetArgument(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -327,7 +323,7 @@ export function _decode_SetArgument(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new SetArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SetArgument (
         baseManagedObjectClass,
         baseManagedObjectInstance,
         accessControl,

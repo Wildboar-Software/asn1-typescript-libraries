@@ -163,7 +163,6 @@ export function _decode_change_auto_forwarding_ArgumentType(el: _Element) {
             let auto_forward_heading: OPTIONAL<Heading>;
             let auto_forward_comment: OPTIONAL<AutoForwardComment>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-forward-IPMs': (_el: _Element): void => {
                     auto_forward_IPMs = $._decode_implicit<BOOLEAN>(
@@ -186,7 +185,6 @@ export function _decode_change_auto_forwarding_ArgumentType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

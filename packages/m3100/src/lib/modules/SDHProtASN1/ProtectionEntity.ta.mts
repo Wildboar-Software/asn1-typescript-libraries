@@ -126,11 +126,8 @@ export function _decode_ProtectionEntity(el: _Element) {
         _cached_decoder_for_ProtectionEntity = function (
             el: _Element
         ): ProtectionEntity {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let protectedUnits: OPTIONAL<RelativeDistinguishedName[]>;
             let protectingUnits: OPTIONAL<RelativeDistinguishedName[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 protectedUnits: (_el: _Element): void => {
                     protectedUnits = $._decode_implicit<
@@ -151,7 +148,6 @@ export function _decode_ProtectionEntity(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_ProtectionEntity(el: _Element) {
                 _root_component_type_list_2_spec_for_ProtectionEntity,
                 undefined
             );
-            return new ProtectionEntity /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ProtectionEntity (
                 protectedUnits,
                 protectingUnits
             );

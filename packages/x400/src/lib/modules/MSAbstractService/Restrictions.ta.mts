@@ -144,7 +144,6 @@ export function _decode_Restrictions(el: _Element) {
             let allowed_EITs: OPTIONAL<MS_EITs>;
             let maximum_attribute_length: OPTIONAL<INTEGER>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'allowed-content-types': (_el: _Element): void => {
                     allowed_content_types = $._decode_explicit<
@@ -166,7 +165,6 @@ export function _decode_Restrictions(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

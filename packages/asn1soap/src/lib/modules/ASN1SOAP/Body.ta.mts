@@ -109,16 +109,12 @@ let _cached_decoder_for_Body: $.ASN1Decoder<Body> | null = null;
 export function _decode_Body(el: _Element) {
   if (!_cached_decoder_for_Body) {
     _cached_decoder_for_Body = function (el: _Element): Body {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let content: OPTIONAL<Content>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         content: (_el: _Element): void => {
           content = _decode_Content(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -127,7 +123,7 @@ export function _decode_Body(el: _Element) {
         _root_component_type_list_2_spec_for_Body,
         undefined
       );
-      return new Body /* SEQUENCE_CONSTRUCTOR_CALL */(content);
+      return new Body (content);
     };
   }
   return _cached_decoder_for_Body(el);

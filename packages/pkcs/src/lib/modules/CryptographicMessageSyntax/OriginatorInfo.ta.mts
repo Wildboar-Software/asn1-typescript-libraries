@@ -125,11 +125,8 @@ export function _decode_OriginatorInfo(el: _Element) {
         _cached_decoder_for_OriginatorInfo = function (
             el: _Element
         ): OriginatorInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certs: OPTIONAL<CertificateSet>;
             let crls: OPTIONAL<CertificateRevocationLists>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certs: (_el: _Element): void => {
                     certs = $._decode_implicit<CertificateSet>(
@@ -142,7 +139,6 @@ export function _decode_OriginatorInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_OriginatorInfo(el: _Element) {
                 undefined
             );
             return new OriginatorInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certs,
+                certs,
                 crls
             );
         };

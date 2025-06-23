@@ -183,7 +183,6 @@ export function _decode_BiometricInformationTemplate(el: _Element) {
           let bdbReferenceData: OPTIONAL<EXTERNAL>;
           let birPayLoad: OPTIONAL<OCTET_STRING>;
           /* END_OF_SET_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             algorithmReference: (_el: _Element): void => {
               algorithmReference = $._decode_implicit<OCTET_STRING>(
@@ -211,7 +210,6 @@ export function _decode_BiometricInformationTemplate(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_set(
             el,
             callbacks,

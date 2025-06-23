@@ -130,7 +130,6 @@ export function _decode_MTABindResult_authenticated(el: _Element) {
             let responder_name!: MTAName;
             let responder_credentials!: ResponderCredentials;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'responder-name': (_el: _Element): void => {
                     responder_name = $._decode_implicit<MTAName>(
@@ -143,7 +142,6 @@ export function _decode_MTABindResult_authenticated(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

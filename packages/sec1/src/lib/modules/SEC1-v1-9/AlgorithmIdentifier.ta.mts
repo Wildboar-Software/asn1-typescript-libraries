@@ -114,23 +114,19 @@ let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> 
 export
 function _decode_AlgorithmIdentifier (el: _Element) {
     if (!_cached_decoder_for_AlgorithmIdentifier) { _cached_decoder_for_AlgorithmIdentifier = function (el: _Element): AlgorithmIdentifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let algorithm!: OBJECT_IDENTIFIER;
     let parameters: OPTIONAL<_Element>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "algorithm": (_el: _Element): void => { algorithm = $._decodeObjectIdentifier(_el); },
         "parameters": (_el: _Element): void => { parameters = $._decodeAny(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_AlgorithmIdentifier,
         _extension_additions_list_spec_for_AlgorithmIdentifier,
         _root_component_type_list_2_spec_for_AlgorithmIdentifier,
         undefined,
     );
-    return new AlgorithmIdentifier( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new AlgorithmIdentifier( 
         algorithm,
         parameters
     );

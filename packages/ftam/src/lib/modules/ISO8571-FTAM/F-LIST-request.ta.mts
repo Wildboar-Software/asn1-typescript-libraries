@@ -202,15 +202,12 @@ export function _decode_F_LIST_request(el: _Element) {
     _cached_decoder_for_F_LIST_request = function (
       el: _Element
     ): F_LIST_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let attribute_value_asset_tions!: Attribute_Value_Assertions;
       let scope!: Scope;
       let access_passwords: OPTIONAL<Access_Passwords>;
       let path_access_passwords: OPTIONAL<Path_Access_Passwords>;
       let attribute_names!: Attribute_Names;
       let attribute_extension_names: OPTIONAL<Attribute_Extension_Names>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'attribute-value-asset-tions': (_el: _Element): void => {
           attribute_value_asset_tions = _decode_Attribute_Value_Assertions(_el);
@@ -235,7 +232,6 @@ export function _decode_F_LIST_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -244,7 +240,7 @@ export function _decode_F_LIST_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_LIST_request,
         undefined
       );
-      return new F_LIST_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_LIST_request (
         attribute_value_asset_tions,
         scope,
         access_passwords,

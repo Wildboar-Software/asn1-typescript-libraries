@@ -151,7 +151,6 @@ export function _decode_PersonalName(el: _Element): PersonalName {
             let initials: OPTIONAL<PrintableString>;
             let generation_qualifier: OPTIONAL<PrintableString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 surname: (_el: _Element): void => {
                     surname = $._decode_explicit<PrintableString>(
@@ -174,7 +173,6 @@ export function _decode_PersonalName(el: _Element): PersonalName {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

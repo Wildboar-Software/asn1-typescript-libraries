@@ -120,11 +120,8 @@ export function _decode_NamespaceAttribute(el: _Element) {
     _cached_decoder_for_NamespaceAttribute = function (
       el: _Element
     ): NamespaceAttribute {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let prefix: OPTIONAL<IdentifyingStringOrIndex>;
       let namespace_name: OPTIONAL<IdentifyingStringOrIndex>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         prefix: (_el: _Element): void => {
           prefix = _decode_IdentifyingStringOrIndex(_el);
@@ -133,7 +130,6 @@ export function _decode_NamespaceAttribute(el: _Element) {
           namespace_name = _decode_IdentifyingStringOrIndex(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -142,7 +138,7 @@ export function _decode_NamespaceAttribute(el: _Element) {
         _root_component_type_list_2_spec_for_NamespaceAttribute,
         undefined
       );
-      return new NamespaceAttribute /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new NamespaceAttribute (
         prefix,
         namespace_name
       );

@@ -169,14 +169,11 @@ let _cached_decoder_for_AadClient: $.ASN1Decoder<AadClient> | null = null;
 export function _decode_AadClient(el: _Element) {
     if (!_cached_decoder_for_AadClient) {
         _cached_decoder_for_AadClient = function (el: _Element): AadClient {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokeID: OPTIONAL<InvokeID>;
             let assoID!: AssoID;
             let time!: TimeStamp;
             let seq!: SequenceNumber;
             let keyEst: OPTIONAL<AlgoInvoke>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokeID: (_el: _Element): void => {
                     invokeID = $._decode_implicit<InvokeID>(
@@ -198,7 +195,6 @@ export function _decode_AadClient(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -208,7 +204,7 @@ export function _decode_AadClient(el: _Element) {
                 undefined
             );
             return new AadClient(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ invokeID,
+                invokeID,
                 assoID,
                 time,
                 seq,

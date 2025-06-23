@@ -171,7 +171,6 @@ export function _decode_ModifyEntryResultData(el: _Element) {
         _cached_decoder_for_ModifyEntryResultData = function (
             el: _Element
         ): ModifyEntryResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let entry: OPTIONAL<EntryInformation>;
             let _unrecognizedExtensionsList: _Element[] = [];
             let securityParameters: OPTIONAL<SecurityParameters>;
@@ -179,8 +178,6 @@ export function _decode_ModifyEntryResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 ModifyEntryResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 entry: (_el: _Element): void => {
                     entry = $._decode_explicit<EntryInformation>(
@@ -208,7 +205,6 @@ export function _decode_ModifyEntryResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -220,7 +216,7 @@ export function _decode_ModifyEntryResultData(el: _Element) {
                 }
             );
             return new ModifyEntryResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ entry,
+                entry,
                 _unrecognizedExtensionsList,
                 securityParameters,
                 performer,

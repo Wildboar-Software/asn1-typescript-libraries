@@ -263,7 +263,6 @@ let _cached_decoder_for_TSTInfo: $.ASN1Decoder<TSTInfo> | null = null;
 export function _decode_TSTInfo(el: _Element) {
     if (!_cached_decoder_for_TSTInfo) {
         _cached_decoder_for_TSTInfo = function (el: _Element): TSTInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: TSTInfo_version;
             let policy!: TSAPolicyId;
             let messageImprint!: MessageImprint;
@@ -275,8 +274,6 @@ export function _decode_TSTInfo(el: _Element) {
             let nonce: OPTIONAL<OCTET_STRING>;
             let tsa: OPTIONAL<GeneralName>;
             let extensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_TSTInfo_version(_el);
@@ -313,7 +310,6 @@ export function _decode_TSTInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -323,7 +319,7 @@ export function _decode_TSTInfo(el: _Element) {
                 undefined
             );
             return new TSTInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 policy,
                 messageImprint,
                 serialNumber,

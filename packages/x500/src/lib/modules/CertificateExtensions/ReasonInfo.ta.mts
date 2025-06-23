@@ -136,12 +136,9 @@ let _cached_decoder_for_ReasonInfo: $.ASN1Decoder<ReasonInfo> | null = null;
 export function _decode_ReasonInfo(el: _Element) {
     if (!_cached_decoder_for_ReasonInfo) {
         _cached_decoder_for_ReasonInfo = function (el: _Element): ReasonInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reasonCode!: CRLReason;
             let holdInstructionCode: OPTIONAL<HoldInstruction>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reasonCode: (_el: _Element): void => {
                     reasonCode = _decode_CRLReason(_el);
@@ -150,7 +147,6 @@ export function _decode_ReasonInfo(el: _Element) {
                     holdInstructionCode = _decode_HoldInstruction(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -162,7 +158,7 @@ export function _decode_ReasonInfo(el: _Element) {
                 }
             );
             return new ReasonInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ reasonCode,
+                reasonCode,
                 holdInstructionCode,
                 _unrecognizedExtensionsList
             );

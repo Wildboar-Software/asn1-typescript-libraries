@@ -122,12 +122,9 @@ export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] 
  * @returns {EDIPartyName} The decoded data structure.
  */
 export function _decode_EDIPartyName(el: _Element): EDIPartyName {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let nameAssigner: OPTIONAL<UnboundedDirectoryString>;
     let partyName!: UnboundedDirectoryString;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         nameAssigner: (_el: _Element): void => {
             nameAssigner = $._decode_explicit<UnboundedDirectoryString>(
@@ -140,7 +137,6 @@ export function _decode_EDIPartyName(el: _Element): EDIPartyName {
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -152,7 +148,7 @@ export function _decode_EDIPartyName(el: _Element): EDIPartyName {
         }
     );
     return new EDIPartyName(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ nameAssigner,
+        nameAssigner,
         partyName,
         _unrecognizedExtensionsList
     );

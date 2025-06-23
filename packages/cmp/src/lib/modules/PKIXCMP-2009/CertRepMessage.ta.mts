@@ -131,11 +131,8 @@ export function _decode_CertRepMessage(el: _Element) {
     _cached_decoder_for_CertRepMessage = function (
       el: _Element
     ): CertRepMessage {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let caPubs: OPTIONAL<CMPCertificate[]>;
       let response!: CertResponse[];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         caPubs: (_el: _Element): void => {
           caPubs = $._decode_explicit<CMPCertificate[]>(() =>
@@ -148,7 +145,6 @@ export function _decode_CertRepMessage(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -157,7 +153,7 @@ export function _decode_CertRepMessage(el: _Element) {
         _root_component_type_list_2_spec_for_CertRepMessage,
         undefined
       );
-      return new CertRepMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CertRepMessage (
         caPubs,
         response
       );

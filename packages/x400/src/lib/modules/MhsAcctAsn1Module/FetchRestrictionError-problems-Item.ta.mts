@@ -130,7 +130,6 @@ export function _decode_FetchRestrictionError_problems_Item(el: _Element) {
             let problem!: FetchRestrictionProblem;
             let restriction!: FetchRestrictionError_problems_Item_restriction;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_implicit<FetchRestrictionProblem>(
@@ -143,7 +142,6 @@ export function _decode_FetchRestrictionError_problems_Item(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

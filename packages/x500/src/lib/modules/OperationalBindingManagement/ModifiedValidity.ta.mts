@@ -155,14 +155,11 @@ export function _decode_ModifiedValidity(el: _Element) {
         _cached_decoder_for_ModifiedValidity = function (
             el: _Element
         ): ModifiedValidity {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let validFrom: OPTIONAL<ModifiedValidity_validFrom> =
                 ModifiedValidity._default_value_for_validFrom;
             let validUntil: OPTIONAL<ModifiedValidity_validUntil> =
                 ModifiedValidity._default_value_for_validUntil;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 validFrom: (_el: _Element): void => {
                     validFrom = $._decode_explicit<ModifiedValidity_validFrom>(
@@ -175,7 +172,6 @@ export function _decode_ModifiedValidity(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -187,7 +183,7 @@ export function _decode_ModifiedValidity(el: _Element) {
                 }
             );
             return new ModifiedValidity(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ validFrom,
+                validFrom,
                 validUntil,
                 _unrecognizedExtensionsList
             );

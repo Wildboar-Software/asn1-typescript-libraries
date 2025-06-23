@@ -166,13 +166,10 @@ export function _decode_NegativeNotificationFields(el: _Element) {
         _cached_decoder_for_NegativeNotificationFields = function (
             el: _Element
         ): NegativeNotificationFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let nn_common_fields!: CommonFields;
             let nn_reason_code!: NNReasonCodeField;
             let nn_supplementary_information: OPTIONAL<EDISupplementaryInformation>;
             let nn_extensions: OPTIONAL<NNExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'nn-common-fields': (_el: _Element): void => {
                     nn_common_fields = $._decode_implicit<CommonFields>(
@@ -195,7 +192,6 @@ export function _decode_NegativeNotificationFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -204,7 +200,7 @@ export function _decode_NegativeNotificationFields(el: _Element) {
                 _root_component_type_list_2_spec_for_NegativeNotificationFields,
                 undefined
             );
-            return new NegativeNotificationFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NegativeNotificationFields (
                 nn_common_fields,
                 nn_reason_code,
                 nn_supplementary_information,

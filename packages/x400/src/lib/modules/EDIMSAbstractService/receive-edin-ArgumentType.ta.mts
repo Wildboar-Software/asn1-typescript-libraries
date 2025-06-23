@@ -127,7 +127,6 @@ export function _decode_receive_edin_ArgumentType(el: _Element) {
             let envelope!: MessageDeliveryEnvelope;
             let content!: EDIN;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 envelope: (_el: _Element): void => {
                     envelope = $._decode_implicit<MessageDeliveryEnvelope>(
@@ -138,7 +137,6 @@ export function _decode_receive_edin_ArgumentType(el: _Element) {
                     content = $._decode_explicit<EDIN>(() => _decode_EDIN)(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

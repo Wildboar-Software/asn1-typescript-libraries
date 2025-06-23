@@ -117,12 +117,9 @@ export function _decode_PolicyQualifierInfo(el: _Element) {
         _cached_decoder_for_PolicyQualifierInfo = function (
             el: _Element
         ): PolicyQualifierInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let policyQualifierId!: OBJECT_IDENTIFIER;
             let qualifier: OPTIONAL<_Element>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 policyQualifierId: (_el: _Element): void => {
                     policyQualifierId = $._decodeObjectIdentifier(_el);
@@ -131,7 +128,6 @@ export function _decode_PolicyQualifierInfo(el: _Element) {
                     qualifier = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_PolicyQualifierInfo(el: _Element) {
                 }
             );
             return new PolicyQualifierInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ policyQualifierId,
+                policyQualifierId,
                 qualifier,
                 _unrecognizedExtensionsList
             );

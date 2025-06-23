@@ -123,25 +123,21 @@ let _cached_decoder_for_SignaturePolicyId: $.ASN1Decoder<SignaturePolicyId> | nu
 export
 function _decode_SignaturePolicyId (el: _Element) {
     if (!_cached_decoder_for_SignaturePolicyId) { _cached_decoder_for_SignaturePolicyId = function (el: _Element): SignaturePolicyId {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let sigPolicyId!: SigPolicyId;
     let sigPolicyHash!: SigPolicyHash;
     let sigPolicyQualifiers: OPTIONAL<SigPolicyQualifierInfo[]>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "sigPolicyId": (_el: _Element): void => { sigPolicyId = _decode_SigPolicyId(_el); },
         "sigPolicyHash": (_el: _Element): void => { sigPolicyHash = _decode_SigPolicyHash(_el); },
         "sigPolicyQualifiers": (_el: _Element): void => { sigPolicyQualifiers = $._decodeSequenceOf<SigPolicyQualifierInfo>(() => _decode_SigPolicyQualifierInfo)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SignaturePolicyId,
         _extension_additions_list_spec_for_SignaturePolicyId,
         _root_component_type_list_2_spec_for_SignaturePolicyId,
         undefined,
     );
-    return new SignaturePolicyId( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SignaturePolicyId( 
         sigPolicyId,
         sigPolicyHash,
         sigPolicyQualifiers

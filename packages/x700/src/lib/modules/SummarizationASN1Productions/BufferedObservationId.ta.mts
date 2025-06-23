@@ -164,13 +164,10 @@ export function _decode_BufferedObservationId(el: _Element) {
         _cached_decoder_for_BufferedObservationId = function (
             el: _Element
         ): BufferedObservationId {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let observedObject!: ObjectInstance;
             let scanAttributeIdList: OPTIONAL<AttributeId[]>;
             let numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>;
             let reportTimeAttributeIdList: OPTIONAL<ReportTimeAttributeIdList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 observedObject: (_el: _Element): void => {
                     observedObject = _decode_ObjectInstance(_el);
@@ -194,7 +191,6 @@ export function _decode_BufferedObservationId(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_BufferedObservationId(el: _Element) {
                 _root_component_type_list_2_spec_for_BufferedObservationId,
                 undefined
             );
-            return new BufferedObservationId /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BufferedObservationId (
                 observedObject,
                 scanAttributeIdList,
                 numericAttributeIdArray,

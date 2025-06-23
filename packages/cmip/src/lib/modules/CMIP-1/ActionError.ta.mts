@@ -172,14 +172,11 @@ let _cached_decoder_for_ActionError: $.ASN1Decoder<ActionError> | null = null;
 export function _decode_ActionError(el: _Element) {
   if (!_cached_decoder_for_ActionError) {
     _cached_decoder_for_ActionError = function (el: _Element): ActionError {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let currentTime: OPTIONAL<GeneralizedTime>;
       let actionErrorInfo!: ActionErrorInfo;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -198,7 +195,6 @@ export function _decode_ActionError(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -209,7 +205,7 @@ export function _decode_ActionError(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new ActionError /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ActionError (
         managedObjectClass,
         managedObjectInstance,
         currentTime,

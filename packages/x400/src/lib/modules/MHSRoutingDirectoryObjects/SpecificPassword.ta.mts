@@ -145,7 +145,6 @@ export function _decode_SpecificPassword(el: _Element) {
             let this_mta_password!: Password;
             let calling_mta_password!: Password;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'routing-collective-name': (_el: _Element): void => {
                     routing_collective_name = _decode_RoutingCollectiveName(
@@ -163,7 +162,6 @@ export function _decode_SpecificPassword(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

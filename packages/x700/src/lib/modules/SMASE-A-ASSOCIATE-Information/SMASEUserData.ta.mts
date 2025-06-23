@@ -155,12 +155,9 @@ export function _decode_SMASEUserData(el: _Element) {
         _cached_decoder_for_SMASEUserData = function (
             el: _Element
         ): SMASEUserData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let smfuPackages: OPTIONAL<FunctionalUnitPackage[]>;
             let reason: OPTIONAL<Reason>;
             let systemsManagementUserInformation: OPTIONAL<GraphicString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 smfuPackages: (_el: _Element): void => {
                     smfuPackages = $._decodeSetOf<FunctionalUnitPackage>(
@@ -176,7 +173,6 @@ export function _decode_SMASEUserData(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -185,7 +181,7 @@ export function _decode_SMASEUserData(el: _Element) {
                 _root_component_type_list_2_spec_for_SMASEUserData,
                 undefined
             );
-            return new SMASEUserData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SMASEUserData (
                 smfuPackages,
                 reason,
                 systemsManagementUserInformation

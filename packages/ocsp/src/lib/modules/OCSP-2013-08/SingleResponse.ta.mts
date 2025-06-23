@@ -172,14 +172,11 @@ export function _decode_SingleResponse(el: _Element) {
         _cached_decoder_for_SingleResponse = function (
             el: _Element
         ): SingleResponse {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certID!: CertID;
             let certStatus!: CertStatus;
             let thisUpdate!: GeneralizedTime;
             let nextUpdate: OPTIONAL<GeneralizedTime>;
             let singleExtensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certID: (_el: _Element): void => {
                     certID = _decode_CertID(_el);
@@ -201,7 +198,6 @@ export function _decode_SingleResponse(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -211,7 +207,7 @@ export function _decode_SingleResponse(el: _Element) {
                 undefined
             );
             return new SingleResponse(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certID,
+                certID,
                 certStatus,
                 thisUpdate,
                 nextUpdate,

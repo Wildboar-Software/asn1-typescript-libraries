@@ -160,14 +160,11 @@ export function _decode_CertUnsubscribeRsp(el: _Element) {
         _cached_decoder_for_CertUnsubscribeRsp = function (
             el: _Element
         ): CertUnsubscribeRsp {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<CASPversion> =
                 CertUnsubscribeRsp._default_value_for_version;
             let sequence!: CASPsequence;
             let result!: CertUnsubscribeRsp_result;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CASPversion(_el);
@@ -179,7 +176,6 @@ export function _decode_CertUnsubscribeRsp(el: _Element) {
                     result = _decode_CertUnsubscribeRsp_result(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -191,7 +187,7 @@ export function _decode_CertUnsubscribeRsp(el: _Element) {
                 }
             );
             return new CertUnsubscribeRsp(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sequence,
                 result,
                 _unrecognizedExtensionsList

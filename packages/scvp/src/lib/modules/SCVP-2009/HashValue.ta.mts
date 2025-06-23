@@ -137,12 +137,9 @@ let _cached_decoder_for_HashValue: $.ASN1Decoder<HashValue> | null = null;
 export function _decode_HashValue(el: _Element) {
   if (!_cached_decoder_for_HashValue) {
     _cached_decoder_for_HashValue = function (el: _Element): HashValue {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let algorithm: OPTIONAL<HashAlgorithm> =
         HashValue._default_value_for_algorithm;
       let value!: OCTET_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         algorithm: (_el: _Element): void => {
           algorithm = _decode_HashAlgorithm(_el);
@@ -151,7 +148,6 @@ export function _decode_HashValue(el: _Element) {
           value = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -160,7 +156,7 @@ export function _decode_HashValue(el: _Element) {
         _root_component_type_list_2_spec_for_HashValue,
         undefined
       );
-      return new HashValue /* SEQUENCE_CONSTRUCTOR_CALL */(algorithm, value);
+      return new HashValue (algorithm, value);
     };
   }
   return _cached_decoder_for_HashValue(el);

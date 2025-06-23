@@ -139,13 +139,10 @@ export function _decode_DITStructureRule(el: _Element) {
         _cached_decoder_for_DITStructureRule = function (
             el: _Element
         ): DITStructureRule {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let ruleIdentifier!: RuleIdentifier;
             let nameForm!: OBJECT_IDENTIFIER;
             let superiorStructureRules: OPTIONAL<RuleIdentifier[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 ruleIdentifier: (_el: _Element): void => {
                     ruleIdentifier = _decode_RuleIdentifier(_el);
@@ -159,7 +156,6 @@ export function _decode_DITStructureRule(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_DITStructureRule(el: _Element) {
                 }
             );
             return new DITStructureRule(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ ruleIdentifier,
+                ruleIdentifier,
                 nameForm,
                 superiorStructureRules,
                 _unrecognizedExtensionsList

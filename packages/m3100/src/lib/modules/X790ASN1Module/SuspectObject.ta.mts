@@ -153,13 +153,10 @@ export function _decode_SuspectObject(el: _Element) {
         _cached_decoder_for_SuspectObject = function (
             el: _Element
         ): SuspectObject {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let suspectObjectClass!: OBJECT_IDENTIFIER;
             let suspectObjectInstance!: ObjectInstance;
             let failureProbability: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 suspectObjectClass: (_el: _Element): void => {
                     suspectObjectClass = $._decodeObjectIdentifier(_el);
@@ -171,7 +168,6 @@ export function _decode_SuspectObject(el: _Element) {
                     failureProbability = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_SuspectObject(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new SuspectObject /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SuspectObject (
                 suspectObjectClass,
                 suspectObjectInstance,
                 failureProbability,

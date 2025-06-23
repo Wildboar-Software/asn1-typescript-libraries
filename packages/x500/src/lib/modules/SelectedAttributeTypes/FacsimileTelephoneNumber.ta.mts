@@ -133,12 +133,9 @@ export function _decode_FacsimileTelephoneNumber(el: _Element) {
         _cached_decoder_for_FacsimileTelephoneNumber = function (
             el: _Element
         ): FacsimileTelephoneNumber {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let telephoneNumber!: TelephoneNumber;
             let parameters: OPTIONAL<G3FacsimileNonBasicParameters>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 telephoneNumber: (_el: _Element): void => {
                     telephoneNumber = _decode_TelephoneNumber(_el);
@@ -147,7 +144,6 @@ export function _decode_FacsimileTelephoneNumber(el: _Element) {
                     parameters = _decode_G3FacsimileNonBasicParameters(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_FacsimileTelephoneNumber(el: _Element) {
                 }
             );
             return new FacsimileTelephoneNumber(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ telephoneNumber,
+                telephoneNumber,
                 parameters,
                 _unrecognizedExtensionsList
             );

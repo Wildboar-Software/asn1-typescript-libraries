@@ -181,14 +181,11 @@ export function _decode_AuthorizationList_Item(el: _Element) {
         _cached_decoder_for_AuthorizationList_Item = function (
             el: _Element
         ): AuthorizationList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let state!: RequestState;
             let type_!: ActivityType;
             let authTime: OPTIONAL<AuthorizationTime>;
             let authPerson: OPTIONAL<PersonReach>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 state: (_el: _Element): void => {
                     state = _decode_RequestState(_el);
@@ -203,7 +200,6 @@ export function _decode_AuthorizationList_Item(el: _Element) {
                     authPerson = _decode_PersonReach(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -214,7 +210,7 @@ export function _decode_AuthorizationList_Item(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new AuthorizationList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AuthorizationList_Item (
                 state,
                 type_,
                 authTime,

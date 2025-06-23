@@ -179,14 +179,11 @@ export function _get_decoder_for_EnvelopedData<Type>(
     _decode_Type: $.ASN1Decoder<Type>
 ) {
     return function (el: _Element): EnvelopedData<Type> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let version!: EnvelopedData_version;
         let originatorInfo: OPTIONAL<OriginatorInfo>;
         let recipientInfos!: RecipientInfos;
         let encryptedContentInfo!: EncryptedContentInfo<Type>;
         let unprotectedAttrs: OPTIONAL<Attribute[]>;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             version: (_el: _Element): void => {
                 version = _get_decoder_for_EnvelopedData_version<Type>(
@@ -212,7 +209,6 @@ export function _get_decoder_for_EnvelopedData<Type>(
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -222,7 +218,7 @@ export function _get_decoder_for_EnvelopedData<Type>(
             undefined
         );
         return new EnvelopedData(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+            version,
             originatorInfo,
             recipientInfos,
             encryptedContentInfo,

@@ -190,7 +190,6 @@ export function _decode_DITContextUseDescription(el: _Element) {
         _cached_decoder_for_DITContextUseDescription = function (
             el: _Element
         ): DITContextUseDescription {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let identifier!: OBJECT_IDENTIFIER;
             let name: OPTIONAL<UnboundedDirectoryString[]>;
             let description: OPTIONAL<UnboundedDirectoryString>;
@@ -198,8 +197,6 @@ export function _decode_DITContextUseDescription(el: _Element) {
                 DITContextUseDescription._default_value_for_obsolete;
             let information!: DITContextUseInformation;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 identifier: (_el: _Element): void => {
                     identifier = $._decodeObjectIdentifier(_el);
@@ -221,7 +218,6 @@ export function _decode_DITContextUseDescription(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -233,7 +229,7 @@ export function _decode_DITContextUseDescription(el: _Element) {
                 }
             );
             return new DITContextUseDescription(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ identifier,
+                identifier,
                 name,
                 description,
                 obsolete,

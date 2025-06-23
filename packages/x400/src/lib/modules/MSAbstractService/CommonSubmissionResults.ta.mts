@@ -153,7 +153,6 @@ export function _decode_CommonSubmissionResults(el: _Element) {
             let auto_action_error_indication: OPTIONAL<AutoActionErrorIndication>;
             let ms_submission_result_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'created-entry': (_el: _Element): void => {
                     created_entry = $._decode_explicit<SequenceNumber>(
@@ -171,7 +170,6 @@ export function _decode_CommonSubmissionResults(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

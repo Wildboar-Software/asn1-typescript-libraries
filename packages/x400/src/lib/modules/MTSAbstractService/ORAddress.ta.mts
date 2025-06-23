@@ -145,12 +145,9 @@ let _cached_decoder_for_ORAddress: $.ASN1Decoder<ORAddress> | null = null;
 export function _decode_ORAddress(el: _Element) {
     if (!_cached_decoder_for_ORAddress) {
         _cached_decoder_for_ORAddress = function (el: _Element): ORAddress {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let built_in_standard_attributes!: BuiltInStandardAttributes;
             let built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>;
             let extension_attributes: OPTIONAL<ExtensionAttributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'built-in-standard-attributes': (_el: _Element): void => {
                     built_in_standard_attributes = _decode_BuiltInStandardAttributes(
@@ -166,7 +163,6 @@ export function _decode_ORAddress(el: _Element) {
                     extension_attributes = _decode_ExtensionAttributes(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -175,7 +171,7 @@ export function _decode_ORAddress(el: _Element) {
                 _root_component_type_list_2_spec_for_ORAddress,
                 undefined
             );
-            return new ORAddress /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ORAddress (
                 built_in_standard_attributes,
                 built_in_domain_defined_attributes,
                 extension_attributes

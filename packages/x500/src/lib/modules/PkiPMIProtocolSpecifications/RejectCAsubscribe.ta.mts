@@ -169,14 +169,11 @@ export function _decode_RejectCAsubscribe(el: _Element) {
         _cached_decoder_for_RejectCAsubscribe = function (
             el: _Element
         ): RejectCAsubscribe {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<CASPversion> =
                 RejectCAsubscribe._default_value_for_version;
             let sequence!: CASPsequence;
             let reason!: CASP_error;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CASPversion(_el);
@@ -188,7 +185,6 @@ export function _decode_RejectCAsubscribe(el: _Element) {
                     reason = _decode_CASP_error(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -200,7 +196,7 @@ export function _decode_RejectCAsubscribe(el: _Element) {
                 }
             );
             return new RejectCAsubscribe(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sequence,
                 reason,
                 _unrecognizedExtensionsList

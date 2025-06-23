@@ -175,14 +175,11 @@ export function _decode_DeviceIdentification(el: _Element) {
         _cached_decoder_for_DeviceIdentification = function (
             el: _Element
         ): DeviceIdentification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scheme!: OBJECT_IDENTIFIER;
             let schemeName: OPTIONAL<SchemeName>;
             let manufacturerId: OPTIONAL<_Element>;
             let device!: _Element;
             let formats!: Supported_formats;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scheme: (_el: _Element): void => {
                     scheme = $._decodeObjectIdentifier(_el);
@@ -200,7 +197,6 @@ export function _decode_DeviceIdentification(el: _Element) {
                     formats = _decode_Supported_formats(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -209,7 +205,7 @@ export function _decode_DeviceIdentification(el: _Element) {
                 _root_component_type_list_2_spec_for_DeviceIdentification,
                 undefined
             );
-            return new DeviceIdentification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DeviceIdentification (
                 scheme,
                 schemeName,
                 manufacturerId,

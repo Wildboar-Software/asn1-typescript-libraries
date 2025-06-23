@@ -147,13 +147,10 @@ export function _decode_DistributionPoint(el: _Element) {
         _cached_decoder_for_DistributionPoint = function (
             el: _Element
         ): DistributionPoint {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let distributionPoint: OPTIONAL<DistributionPointName>;
             let reasons: OPTIONAL<ReasonFlags>;
             let cRLIssuer: OPTIONAL<GeneralNames>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 distributionPoint: (_el: _Element): void => {
                     distributionPoint = $._decode_explicit<DistributionPointName>(
@@ -171,7 +168,6 @@ export function _decode_DistributionPoint(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_DistributionPoint(el: _Element) {
                 }
             );
             return new DistributionPoint(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ distributionPoint,
+                distributionPoint,
                 reasons,
                 cRLIssuer,
                 _unrecognizedExtensionsList

@@ -133,7 +133,6 @@ export function _decode_LabelAndRedirection(el: _Element) {
             let user_security_label: OPTIONAL<UserSecurityLabel>;
             let recipient_assigned_alternate_recipient: OPTIONAL<RecipientAssignedAlternateRecipient>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'user-security-label': (_el: _Element): void => {
                     user_security_label = $._decode_implicit<UserSecurityLabel>(
@@ -148,7 +147,6 @@ export function _decode_LabelAndRedirection(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

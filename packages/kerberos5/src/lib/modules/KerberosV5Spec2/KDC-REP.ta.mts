@@ -216,7 +216,6 @@ let _cached_decoder_for_KDC_REP: $.ASN1Decoder<KDC_REP> | null = null;
 export function _decode_KDC_REP(el: _Element) {
   if (!_cached_decoder_for_KDC_REP) {
     _cached_decoder_for_KDC_REP = function (el: _Element): KDC_REP {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let pvno!: INTEGER;
       let msg_type!: INTEGER;
       let padata: OPTIONAL<PA_DATA[]>;
@@ -224,8 +223,6 @@ export function _decode_KDC_REP(el: _Element) {
       let cname!: PrincipalName;
       let ticket!: Ticket;
       let enc_part!: EncryptedData;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         pvno: (_el: _Element): void => {
           pvno = $._decode_explicit<INTEGER>(() => $._decodeInteger)(_el);
@@ -255,7 +252,6 @@ export function _decode_KDC_REP(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -264,7 +260,7 @@ export function _decode_KDC_REP(el: _Element) {
         _root_component_type_list_2_spec_for_KDC_REP,
         undefined
       );
-      return new KDC_REP /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KDC_REP (
         pvno,
         msg_type,
         padata,

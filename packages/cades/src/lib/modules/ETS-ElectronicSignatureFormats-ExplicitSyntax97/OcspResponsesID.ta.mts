@@ -114,23 +114,19 @@ let _cached_decoder_for_OcspResponsesID: $.ASN1Decoder<OcspResponsesID> | null =
 export
 function _decode_OcspResponsesID (el: _Element) {
     if (!_cached_decoder_for_OcspResponsesID) { _cached_decoder_for_OcspResponsesID = function (el: _Element): OcspResponsesID {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let ocspIdentifier!: OcspIdentifier;
     let ocspRepHash: OPTIONAL<OtherHash>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "ocspIdentifier": (_el: _Element): void => { ocspIdentifier = _decode_OcspIdentifier(_el); },
         "ocspRepHash": (_el: _Element): void => { ocspRepHash = _decode_OtherHash(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_OcspResponsesID,
         _extension_additions_list_spec_for_OcspResponsesID,
         _root_component_type_list_2_spec_for_OcspResponsesID,
         undefined,
     );
-    return new OcspResponsesID( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new OcspResponsesID( 
         ocspIdentifier,
         ocspRepHash
     );

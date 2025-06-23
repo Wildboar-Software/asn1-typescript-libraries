@@ -146,12 +146,9 @@ export function _decode_InterchangeSenderField(el: _Element) {
         _cached_decoder_for_InterchangeSenderField = function (
             el: _Element
         ): InterchangeSenderField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sender_identification!: IdentificationCode;
             let identification_code_qualifier: OPTIONAL<IdentificationCodeQualifier>;
             let address_for_reverse_routing: OPTIONAL<RoutingAddress>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'sender-identification': (_el: _Element): void => {
                     sender_identification = $._decode_implicit<IdentificationCode>(
@@ -169,7 +166,6 @@ export function _decode_InterchangeSenderField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_InterchangeSenderField(el: _Element) {
                 _root_component_type_list_2_spec_for_InterchangeSenderField,
                 undefined
             );
-            return new InterchangeSenderField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new InterchangeSenderField (
                 sender_identification,
                 identification_code_qualifier,
                 address_for_reverse_routing

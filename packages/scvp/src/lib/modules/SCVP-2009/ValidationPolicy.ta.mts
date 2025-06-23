@@ -251,7 +251,6 @@ export function _decode_ValidationPolicy(el: _Element) {
     _cached_decoder_for_ValidationPolicy = function (
       el: _Element
     ): ValidationPolicy {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let validationPolRef!: ValidationPolRef;
       let validationAlg: OPTIONAL<ValidationAlg>;
       let userPolicySet: OPTIONAL<OBJECT_IDENTIFIER[]>;
@@ -262,8 +261,6 @@ export function _decode_ValidationPolicy(el: _Element) {
       let keyUsages: OPTIONAL<KeyUsage[]>;
       let extendedKeyUsages: OPTIONAL<KeyPurposeId[]>;
       let specifiedKeyUsages: OPTIONAL<KeyPurposeId[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         validationPolRef: (_el: _Element): void => {
           validationPolRef = _decode_ValidationPolRef(_el);
@@ -316,7 +313,6 @@ export function _decode_ValidationPolicy(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -325,7 +321,7 @@ export function _decode_ValidationPolicy(el: _Element) {
         _root_component_type_list_2_spec_for_ValidationPolicy,
         undefined
       );
-      return new ValidationPolicy /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ValidationPolicy (
         validationPolRef,
         validationAlg,
         userPolicySet,

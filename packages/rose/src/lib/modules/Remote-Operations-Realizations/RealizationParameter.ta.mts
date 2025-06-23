@@ -145,12 +145,9 @@ export function _decode_RealizationParameter(el: _Element) {
     _cached_decoder_for_RealizationParameter = function (
       el: _Element
     ): RealizationParameter {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let realization_type!: RealizationParameter_realization_type;
       let concatenation: OPTIONAL<BOOLEAN> =
         RealizationParameter._default_value_for_concatenation;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'realization-type': (_el: _Element): void => {
           realization_type = _decode_RealizationParameter_realization_type(_el);
@@ -159,7 +156,6 @@ export function _decode_RealizationParameter(el: _Element) {
           concatenation = $._decodeBoolean(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -168,7 +164,7 @@ export function _decode_RealizationParameter(el: _Element) {
         _root_component_type_list_2_spec_for_RealizationParameter,
         undefined
       );
-      return new RealizationParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new RealizationParameter (
         realization_type,
         concatenation
       );

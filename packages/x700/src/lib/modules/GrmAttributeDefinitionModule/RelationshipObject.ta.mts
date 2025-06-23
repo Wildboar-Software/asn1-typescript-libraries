@@ -125,11 +125,8 @@ export function _decode_RelationshipObject(el: _Element) {
         _cached_decoder_for_RelationshipObject = function (
             el: _Element
         ): RelationshipObject {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let class_!: TemplateLabel;
             let qualifies: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 class: (_el: _Element): void => {
                     class_ = _decode_TemplateLabel(_el);
@@ -138,7 +135,6 @@ export function _decode_RelationshipObject(el: _Element) {
                     qualifies = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_RelationshipObject(el: _Element) {
                 _root_component_type_list_2_spec_for_RelationshipObject,
                 undefined
             );
-            return new RelationshipObject /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RelationshipObject (
                 class_,
                 qualifies
             );

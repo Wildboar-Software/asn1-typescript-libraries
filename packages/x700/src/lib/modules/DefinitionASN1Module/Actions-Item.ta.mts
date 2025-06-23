@@ -122,11 +122,8 @@ export function _decode_Actions_Item(el: _Element) {
         _cached_decoder_for_Actions_Item = function (
             el: _Element
         ): Actions_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let action!: TemplateLabel;
             let parameter: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 action: (_el: _Element): void => {
                     action = $._decode_implicit<TemplateLabel>(
@@ -139,7 +136,6 @@ export function _decode_Actions_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_Actions_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_Actions_Item,
                 undefined
             );
-            return new Actions_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Actions_Item (
                 action,
                 parameter
             );

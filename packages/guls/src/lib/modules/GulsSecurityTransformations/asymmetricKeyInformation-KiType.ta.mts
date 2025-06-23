@@ -154,13 +154,10 @@ export function _decode_asymmetricKeyInformation_KiType(el: _Element) {
     _cached_decoder_for_asymmetricKeyInformation_KiType = function (
       el: _Element
     ): asymmetricKeyInformation_KiType {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let issuerCAName: OPTIONAL<SecurityIdentity>;
       let certSerialNumber: OPTIONAL<INTEGER>;
       let signerName: OPTIONAL<SecurityIdentity>;
       let keyIdentifier: OPTIONAL<BIT_STRING>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         issuerCAName: (_el: _Element): void => {
           issuerCAName = _decode_SecurityIdentity(_el);
@@ -175,7 +172,6 @@ export function _decode_asymmetricKeyInformation_KiType(el: _Element) {
           keyIdentifier = $._decodeBitString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -184,7 +180,7 @@ export function _decode_asymmetricKeyInformation_KiType(el: _Element) {
         _root_component_type_list_2_spec_for_asymmetricKeyInformation_KiType,
         undefined
       );
-      return new asymmetricKeyInformation_KiType /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new asymmetricKeyInformation_KiType (
         issuerCAName,
         certSerialNumber,
         signerName,

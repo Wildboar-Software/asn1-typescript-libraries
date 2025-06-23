@@ -190,15 +190,12 @@ export function _decode_TBSAsymmetricToken(el: _Element) {
         _cached_decoder_for_TBSAsymmetricToken = function (
             el: _Element
         ): TBSAsymmetricToken {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signature_algorithm_identifier!: AlgorithmIdentifier;
             let name!: TBSAsymmetricToken_name;
             let time!: Time;
             let signed_data: OPTIONAL<TokenData>;
             let encryption_algorithm_identifier: OPTIONAL<AlgorithmIdentifier>;
             let encrypted_data: OPTIONAL<ENCRYPTED<TokenData>>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'signature-algorithm-identifier': (_el: _Element): void => {
                     signature_algorithm_identifier = _decode_AlgorithmIdentifier(
@@ -230,7 +227,6 @@ export function _decode_TBSAsymmetricToken(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -239,7 +235,7 @@ export function _decode_TBSAsymmetricToken(el: _Element) {
                 _root_component_type_list_2_spec_for_TBSAsymmetricToken,
                 undefined
             );
-            return new TBSAsymmetricToken /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TBSAsymmetricToken (
                 signature_algorithm_identifier,
                 name,
                 time,

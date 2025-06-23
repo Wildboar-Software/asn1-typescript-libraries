@@ -399,7 +399,6 @@ let _cached_decoder_for_SearchRule: $.ASN1Decoder<SearchRule> | null = null;
 export function _decode_SearchRule(el: _Element) {
     if (!_cached_decoder_for_SearchRule) {
         _cached_decoder_for_SearchRule = function (el: _Element): SearchRule {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let id!: INTEGER;
             let dmdId!: OBJECT_IDENTIFIER;
             let serviceType: OPTIONAL<OBJECT_IDENTIFIER>;
@@ -420,8 +419,6 @@ export function _decode_SearchRule(el: _Element) {
             let imposedSubset: OPTIONAL<ImposedSubset>;
             let entryLimit: OPTIONAL<EntryLimit>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 id: (_el: _Element): void => {
                     id = $._decodeInteger(_el);
@@ -518,7 +515,6 @@ export function _decode_SearchRule(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -530,7 +526,7 @@ export function _decode_SearchRule(el: _Element) {
                 }
             );
             return new SearchRule(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ id,
+                id,
                 dmdId,
                 serviceType,
                 userClass,

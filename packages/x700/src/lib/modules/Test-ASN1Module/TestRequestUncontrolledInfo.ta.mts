@@ -184,14 +184,11 @@ export function _decode_TestRequestUncontrolledInfo(el: _Element) {
         _cached_decoder_for_TestRequestUncontrolledInfo = function (
             el: _Element
         ): TestRequestUncontrolledInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let testCategoryInformation!: TestCategoryInformation;
             let testSessionId: OPTIONAL<TestSessionId>;
             let timeoutPeriod: OPTIONAL<TimeoutPeriod>;
             let associatedObjects: OPTIONAL<AssociatedObjects>;
             let toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 testCategoryInformation: (_el: _Element): void => {
                     testCategoryInformation = $._decode_implicit<TestCategoryInformation>(
@@ -215,7 +212,6 @@ export function _decode_TestRequestUncontrolledInfo(el: _Element) {
                     toBeTestedMORTs = _decode_ToBeTestedMORTs(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -224,7 +220,7 @@ export function _decode_TestRequestUncontrolledInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_TestRequestUncontrolledInfo,
                 undefined
             );
-            return new TestRequestUncontrolledInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestRequestUncontrolledInfo (
                 testCategoryInformation,
                 testSessionId,
                 timeoutPeriod,

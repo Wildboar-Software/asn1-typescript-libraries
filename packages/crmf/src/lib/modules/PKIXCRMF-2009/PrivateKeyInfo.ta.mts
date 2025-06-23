@@ -158,13 +158,10 @@ export function _decode_PrivateKeyInfo(el: _Element) {
         _cached_decoder_for_PrivateKeyInfo = function (
             el: _Element
         ): PrivateKeyInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: INTEGER;
             let privateKeyAlgorithm!: AlgorithmIdentifier;
             let privateKey!: OCTET_STRING;
             let attributes: OPTIONAL<Attributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = $._decodeInteger(_el);
@@ -181,7 +178,6 @@ export function _decode_PrivateKeyInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -190,7 +186,7 @@ export function _decode_PrivateKeyInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_PrivateKeyInfo,
                 undefined
             );
-            return new PrivateKeyInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PrivateKeyInfo (
                 version,
                 privateKeyAlgorithm,
                 privateKey,

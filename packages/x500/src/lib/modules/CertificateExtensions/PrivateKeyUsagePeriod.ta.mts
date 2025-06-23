@@ -123,12 +123,9 @@ export function _decode_PrivateKeyUsagePeriod(el: _Element) {
         _cached_decoder_for_PrivateKeyUsagePeriod = function (
             el: _Element
         ): PrivateKeyUsagePeriod {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let notBefore: OPTIONAL<GeneralizedTime>;
             let notAfter: OPTIONAL<GeneralizedTime>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 notBefore: (_el: _Element): void => {
                     notBefore = $._decode_implicit<GeneralizedTime>(
@@ -141,7 +138,6 @@ export function _decode_PrivateKeyUsagePeriod(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -153,7 +149,7 @@ export function _decode_PrivateKeyUsagePeriod(el: _Element) {
                 }
             );
             return new PrivateKeyUsagePeriod(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ notBefore,
+                notBefore,
                 notAfter,
                 _unrecognizedExtensionsList
             );

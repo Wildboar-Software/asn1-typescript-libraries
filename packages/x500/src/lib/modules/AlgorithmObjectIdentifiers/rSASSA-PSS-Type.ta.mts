@@ -146,14 +146,11 @@ export function _decode_rSASSA_PSS_Type(el: _Element) {
         _cached_decoder_for_rSASSA_PSS_Type = function (
             el: _Element
         ): rSASSA_PSS_Type {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hashAlgorithm!: AlgorithmIdentifier;
             let saltLength: OPTIONAL<INTEGER> =
                 rSASSA_PSS_Type._default_value_for_saltLength;
             let trailerField: OPTIONAL<INTEGER> =
                 rSASSA_PSS_Type._default_value_for_trailerField;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hashAlgorithm: (_el: _Element): void => {
                     hashAlgorithm = $._decode_explicit<AlgorithmIdentifier>(
@@ -171,7 +168,6 @@ export function _decode_rSASSA_PSS_Type(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -181,7 +177,7 @@ export function _decode_rSASSA_PSS_Type(el: _Element) {
                 undefined
             );
             return new rSASSA_PSS_Type(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ hashAlgorithm,
+                hashAlgorithm,
                 saltLength,
                 trailerField
             );

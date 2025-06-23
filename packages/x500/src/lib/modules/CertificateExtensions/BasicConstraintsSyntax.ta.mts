@@ -132,13 +132,10 @@ export function _decode_BasicConstraintsSyntax(el: _Element) {
         _cached_decoder_for_BasicConstraintsSyntax = function (
             el: _Element
         ): BasicConstraintsSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let cA: OPTIONAL<BOOLEAN> =
                 BasicConstraintsSyntax._default_value_for_cA;
             let pathLenConstraint: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 cA: (_el: _Element): void => {
                     cA = $._decodeBoolean(_el);
@@ -147,7 +144,6 @@ export function _decode_BasicConstraintsSyntax(el: _Element) {
                     pathLenConstraint = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_BasicConstraintsSyntax(el: _Element) {
                 }
             );
             return new BasicConstraintsSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ cA,
+                cA,
                 pathLenConstraint,
                 _unrecognizedExtensionsList
             );

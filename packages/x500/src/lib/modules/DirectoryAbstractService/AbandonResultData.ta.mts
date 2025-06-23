@@ -170,7 +170,6 @@ export function _decode_AbandonResultData(el: _Element) {
         _cached_decoder_for_AbandonResultData = function (
             el: _Element
         ): AbandonResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokeID!: InvokeId;
             let _unrecognizedExtensionsList: _Element[] = [];
             let securityParameters: OPTIONAL<SecurityParameters>;
@@ -178,8 +177,6 @@ export function _decode_AbandonResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 AbandonResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokeID: (_el: _Element): void => {
                     invokeID = _decode_InvokeId(_el);
@@ -205,7 +202,6 @@ export function _decode_AbandonResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -217,7 +213,7 @@ export function _decode_AbandonResultData(el: _Element) {
                 }
             );
             return new AbandonResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ invokeID,
+                invokeID,
                 _unrecognizedExtensionsList,
                 securityParameters,
                 performer,

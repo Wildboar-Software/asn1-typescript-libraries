@@ -174,14 +174,11 @@ export const _extension_additions_list_spec_for_ObjectDigestInfo: $.ComponentSpe
  * @returns {ObjectDigestInfo} The decoded data structure.
  */
 export function _decode_ObjectDigestInfo(el: _Element): ObjectDigestInfo {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let digestedObjectType!: ObjectDigestInfo_digestedObjectType;
     let otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>;
     let digestAlgorithm!: AlgorithmIdentifier;
     let objectDigest!: BIT_STRING;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         digestedObjectType: (_el: _Element): void => {
             digestedObjectType =
@@ -197,7 +194,6 @@ export function _decode_ObjectDigestInfo(el: _Element): ObjectDigestInfo {
             objectDigest = $._decodeBitString(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -209,7 +205,7 @@ export function _decode_ObjectDigestInfo(el: _Element): ObjectDigestInfo {
         }
     );
     return new ObjectDigestInfo(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ digestedObjectType,
+        digestedObjectType,
         otherObjectTypeID,
         digestAlgorithm,
         objectDigest,

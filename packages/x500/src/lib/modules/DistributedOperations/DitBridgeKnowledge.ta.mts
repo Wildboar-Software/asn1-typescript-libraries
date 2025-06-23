@@ -135,12 +135,9 @@ export function _decode_DitBridgeKnowledge(el: _Element) {
         _cached_decoder_for_DitBridgeKnowledge = function (
             el: _Element
         ): DitBridgeKnowledge {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let domainLocalID: OPTIONAL<UnboundedDirectoryString>;
             let accessPoints!: MasterAndShadowAccessPoints;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 domainLocalID: (_el: _Element): void => {
                     domainLocalID = _decode_UnboundedDirectoryString(_el);
@@ -149,7 +146,6 @@ export function _decode_DitBridgeKnowledge(el: _Element) {
                     accessPoints = _decode_MasterAndShadowAccessPoints(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -161,7 +157,7 @@ export function _decode_DitBridgeKnowledge(el: _Element) {
                 }
             );
             return new DitBridgeKnowledge(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ domainLocalID,
+                domainLocalID,
                 accessPoints,
                 _unrecognizedExtensionsList
             );

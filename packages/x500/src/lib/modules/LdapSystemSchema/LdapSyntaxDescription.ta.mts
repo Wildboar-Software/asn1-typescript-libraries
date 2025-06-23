@@ -131,12 +131,9 @@ export function _decode_LdapSyntaxDescription(el: _Element) {
         _cached_decoder_for_LdapSyntaxDescription = function (
             el: _Element
         ): LdapSyntaxDescription {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let identifier!: OBJECT_IDENTIFIER;
             let description: OPTIONAL<UnboundedDirectoryString>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 identifier: (_el: _Element): void => {
                     identifier = $._decodeObjectIdentifier(_el);
@@ -145,7 +142,6 @@ export function _decode_LdapSyntaxDescription(el: _Element) {
                     description = _decode_UnboundedDirectoryString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_LdapSyntaxDescription(el: _Element) {
                 }
             );
             return new LdapSyntaxDescription(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ identifier,
+                identifier,
                 description,
                 _unrecognizedExtensionsList
             );

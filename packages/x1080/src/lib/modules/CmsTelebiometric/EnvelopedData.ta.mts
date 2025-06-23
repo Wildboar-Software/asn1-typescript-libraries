@@ -161,13 +161,10 @@ export function _decode_EnvelopedData(el: _Element) {
         _cached_decoder_for_EnvelopedData = function (
             el: _Element
         ): EnvelopedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let recipientInfos!: RecipientInfos;
             let encryptedContentInfo!: EncryptedContentInfo;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -179,7 +176,6 @@ export function _decode_EnvelopedData(el: _Element) {
                     encryptedContentInfo = _decode_EncryptedContentInfo(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -190,7 +186,7 @@ export function _decode_EnvelopedData(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new EnvelopedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EnvelopedData (
                 version,
                 recipientInfos,
                 encryptedContentInfo,

@@ -182,7 +182,6 @@ export function _decode_ModifyArgument(el: _Element) {
             let modifications!: EntryModification[];
             let modify_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entry-class': (_el: _Element): void => {
                     entry_class = $._decode_explicit<EntryClass>(
@@ -206,7 +205,6 @@ export function _decode_ModifyArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

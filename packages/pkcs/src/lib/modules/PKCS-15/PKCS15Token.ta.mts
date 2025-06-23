@@ -144,12 +144,9 @@ let _cached_decoder_for_PKCS15Token: $.ASN1Decoder<PKCS15Token> | null = null;
 export function _decode_PKCS15Token(el: _Element) {
     if (!_cached_decoder_for_PKCS15Token) {
         _cached_decoder_for_PKCS15Token = function (el: _Element): PKCS15Token {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: PKCS15Token_version;
             let keyManagementInfo: OPTIONAL<KeyManagementInfo>;
             let pkcs15Objects!: PKCS15Objects[];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_PKCS15Token_version(_el);
@@ -165,7 +162,6 @@ export function _decode_PKCS15Token(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -175,7 +171,7 @@ export function _decode_PKCS15Token(el: _Element) {
                 undefined
             );
             return new PKCS15Token(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 keyManagementInfo,
                 pkcs15Objects
             );

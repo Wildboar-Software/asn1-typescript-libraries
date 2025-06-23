@@ -134,27 +134,23 @@ let _cached_decoder_for_ThresholdInfo: $.ASN1Decoder<ThresholdInfo> | null = nul
 export
 function _decode_ThresholdInfo (el: _Element) {
     if (!_cached_decoder_for_ThresholdInfo) { _cached_decoder_for_ThresholdInfo = function (el: _Element): ThresholdInfo {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let triggeredThreshold!: AttributeId;
     let observedValue!: ObservedValue;
     let thresholdLevel: OPTIONAL<ThresholdLevelInd>;
     let armTime: OPTIONAL<GeneralizedTime>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "triggeredThreshold": (_el: _Element): void => { triggeredThreshold = _decode_AttributeId(_el); },
         "observedValue": (_el: _Element): void => { observedValue = _decode_ObservedValue(_el); },
         "thresholdLevel": (_el: _Element): void => { thresholdLevel = $._decode_explicit<ThresholdLevelInd>(() => _decode_ThresholdLevelInd)(_el); },
         "armTime": (_el: _Element): void => { armTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ThresholdInfo,
         _extension_additions_list_spec_for_ThresholdInfo,
         _root_component_type_list_2_spec_for_ThresholdInfo,
         undefined,
     );
-    return new ThresholdInfo( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ThresholdInfo( 
         triggeredThreshold,
         observedValue,
         thresholdLevel,

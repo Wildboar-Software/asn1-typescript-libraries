@@ -233,7 +233,6 @@ export function _decode_DeliveryControls88(el: _Element) {
             let permissible_security_context: OPTIONAL<SecurityContext>;
             let permissible_encoded_information_types_88: OPTIONAL<EncodedInformationTypes>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 restrict: (_el: _Element): void => {
                     restrict = $._decode_implicit<BOOLEAN>(
@@ -278,7 +277,6 @@ export function _decode_DeliveryControls88(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

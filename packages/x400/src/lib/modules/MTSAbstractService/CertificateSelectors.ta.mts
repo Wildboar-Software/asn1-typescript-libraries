@@ -169,7 +169,6 @@ export function _decode_CertificateSelectors(el: _Element) {
             let token_signature: OPTIONAL<CertificateAssertion>;
             let message_origin_authentication: OPTIONAL<CertificateAssertion>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'encryption-recipient': (_el: _Element): void => {
                     encryption_recipient = $._decode_implicit<CertificateAssertion>(
@@ -197,7 +196,6 @@ export function _decode_CertificateSelectors(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -146,12 +146,9 @@ export function _decode_EDIApplicationSecurityElementsField(el: _Element) {
         _cached_decoder_for_EDIApplicationSecurityElementsField = function (
             el: _Element
         ): EDIApplicationSecurityElementsField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let edi_application_security_element: OPTIONAL<EDIApplicationSecurityElement>;
             let edi_encrypted_primary_bodypart: OPTIONAL<BOOLEAN>;
             let edi_application_security_extensions: OPTIONAL<EDIApplicationSecurityExtensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'edi-application-security-element': (_el: _Element): void => {
                     edi_application_security_element = $._decode_implicit<EDIApplicationSecurityElement>(
@@ -171,7 +168,6 @@ export function _decode_EDIApplicationSecurityElementsField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_EDIApplicationSecurityElementsField(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIApplicationSecurityElementsField,
                 undefined
             );
-            return new EDIApplicationSecurityElementsField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIApplicationSecurityElementsField (
                 edi_application_security_element,
                 edi_encrypted_primary_bodypart,
                 edi_application_security_extensions

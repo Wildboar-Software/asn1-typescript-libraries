@@ -121,12 +121,9 @@ export function _decode_RequestAttribute_defaultValues_Item(el: _Element) {
         _cached_decoder_for_RequestAttribute_defaultValues_Item = function (
             el: _Element
         ): RequestAttribute_defaultValues_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let entryType: OPTIONAL<OBJECT_IDENTIFIER>;
             let values!: _Element[];
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 entryType: (_el: _Element): void => {
                     entryType = $._decodeObjectIdentifier(_el);
@@ -137,7 +134,6 @@ export function _decode_RequestAttribute_defaultValues_Item(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -149,7 +145,7 @@ export function _decode_RequestAttribute_defaultValues_Item(el: _Element) {
                 }
             );
             return new RequestAttribute_defaultValues_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ entryType,
+                entryType,
                 values,
                 _unrecognizedExtensionsList
             );

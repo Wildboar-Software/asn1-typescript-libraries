@@ -125,11 +125,8 @@ let _cached_decoder_for_Request: $.ASN1Decoder<Request> | null = null;
 export function _decode_Request(el: _Element) {
     if (!_cached_decoder_for_Request) {
         _cached_decoder_for_Request = function (el: _Element): Request {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reqCert!: CertID;
             let singleRequestExtensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reqCert: (_el: _Element): void => {
                     reqCert = _decode_CertID(_el);
@@ -140,7 +137,6 @@ export function _decode_Request(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_Request(el: _Element) {
                 undefined
             );
             return new Request(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ reqCert,
+                reqCert,
                 singleRequestExtensions
             );
         };

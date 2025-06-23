@@ -312,7 +312,6 @@ export function _decode_TbsHandshakeReq(el: _Element) {
         _cached_decoder_for_TbsHandshakeReq = function (
             el: _Element
         ): TbsHandshakeReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 TbsHandshakeReq._default_value_for_version;
             let prProt!: OBJECT_IDENTIFIER;
@@ -327,8 +326,6 @@ export function _decode_TbsHandshakeReq(el: _Element) {
             let attCert: OPTIONAL<DER_AttributeCertificate>;
             let applData: OPTIONAL<WrappedProt>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -373,7 +370,6 @@ export function _decode_TbsHandshakeReq(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -385,7 +381,7 @@ export function _decode_TbsHandshakeReq(el: _Element) {
                 }
             );
             return new TbsHandshakeReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 prProt,
                 sigAlg,
                 altSigAlg,

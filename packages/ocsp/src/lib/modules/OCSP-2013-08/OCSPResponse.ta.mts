@@ -133,11 +133,8 @@ export function _decode_OCSPResponse(el: _Element) {
         _cached_decoder_for_OCSPResponse = function (
             el: _Element
         ): OCSPResponse {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let responseStatus!: OCSPResponseStatus;
             let responseBytes: OPTIONAL<ResponseBytes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 responseStatus: (_el: _Element): void => {
                     responseStatus = _decode_OCSPResponseStatus(_el);
@@ -148,7 +145,6 @@ export function _decode_OCSPResponse(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_OCSPResponse(el: _Element) {
                 undefined
             );
             return new OCSPResponse(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ responseStatus,
+                responseStatus,
                 responseBytes
             );
         };

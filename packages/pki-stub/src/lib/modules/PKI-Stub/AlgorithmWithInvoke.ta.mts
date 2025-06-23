@@ -137,13 +137,10 @@ export const _extension_additions_list_spec_for_AlgorithmWithInvoke: $.Component
  * @returns {AlgorithmWithInvoke} The decoded data structure.
  */
 export function _decode_AlgorithmWithInvoke(el: _Element): AlgorithmWithInvoke {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let algorithm!: OBJECT_IDENTIFIER;
     let parameters: OPTIONAL<_Element>;
     let dynamParms: OPTIONAL<_Element>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         algorithm: (_el: _Element): void => {
             algorithm = $._decodeObjectIdentifier(_el);
@@ -159,7 +156,6 @@ export function _decode_AlgorithmWithInvoke(el: _Element): AlgorithmWithInvoke {
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -171,7 +167,7 @@ export function _decode_AlgorithmWithInvoke(el: _Element): AlgorithmWithInvoke {
         }
     );
     return new AlgorithmWithInvoke(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
+        algorithm,
         parameters,
         dynamParms,
         _unrecognizedExtensionsList

@@ -184,7 +184,6 @@ export function _decode_SummarizeResult(el: _Element) {
             let summaries: OPTIONAL<Summary[]>;
             let summarize_result_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 next: (_el: _Element): void => {
                     next = $._decode_explicit<SequenceNumber>(
@@ -210,7 +209,6 @@ export function _decode_SummarizeResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

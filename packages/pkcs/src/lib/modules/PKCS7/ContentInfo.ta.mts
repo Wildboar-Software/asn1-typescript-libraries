@@ -119,11 +119,8 @@ let _cached_decoder_for_ContentInfo: $.ASN1Decoder<ContentInfo> | null = null;
 export function _decode_ContentInfo(el: _Element) {
     if (!_cached_decoder_for_ContentInfo) {
         _cached_decoder_for_ContentInfo = function (el: _Element): ContentInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let content_type!: OBJECT_IDENTIFIER;
             let pkcs7_content: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "content-type": (_el: _Element): void => {
                     content_type = $._decodeObjectIdentifier(_el);
@@ -134,7 +131,6 @@ export function _decode_ContentInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_ContentInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ContentInfo,
                 undefined
             );
-            return new ContentInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ContentInfo (
                 content_type,
                 pkcs7_content
             );

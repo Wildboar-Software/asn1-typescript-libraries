@@ -181,13 +181,10 @@ export function _decode_UnitEvent_NotificationParams(el: _Element) {
     _cached_decoder_for_UnitEvent_NotificationParams = function (
       el: _Element
     ): UnitEvent_NotificationParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let bspProductUuid!: BioAPI_UUID;
       let unitID!: BioAPI_UNIT_ID;
       let unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
       let unitEventType!: BioAPI_UNIT_EVENT_TYPE;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         bspProductUuid: (_el: _Element): void => {
           bspProductUuid = _decode_BioAPI_UUID(_el);
@@ -202,7 +199,6 @@ export function _decode_UnitEvent_NotificationParams(el: _Element) {
           unitEventType = _decode_BioAPI_UNIT_EVENT_TYPE(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -211,7 +207,7 @@ export function _decode_UnitEvent_NotificationParams(el: _Element) {
         _root_component_type_list_2_spec_for_UnitEvent_NotificationParams,
         undefined
       );
-      return new UnitEvent_NotificationParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new UnitEvent_NotificationParams (
         bspProductUuid,
         unitID,
         unitSchema,

@@ -166,14 +166,11 @@ export function _decode_PBKDF2_params(el: _Element) {
         _cached_decoder_for_PBKDF2_params = function (
             el: _Element
         ): PBKDF2_params {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let salt!: PBKDF2_params_salt;
             let iterationCount!: INTEGER;
             let keyLength: OPTIONAL<INTEGER>;
             let prf: OPTIONAL<AlgorithmIdentifier> =
                 PBKDF2_params._default_value_for_prf;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 salt: (_el: _Element): void => {
                     salt = _decode_PBKDF2_params_salt(_el);
@@ -188,7 +185,6 @@ export function _decode_PBKDF2_params(el: _Element) {
                     prf = _decode_AlgorithmIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -198,7 +194,7 @@ export function _decode_PBKDF2_params(el: _Element) {
                 undefined
             );
             return new PBKDF2_params(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ salt,
+                salt,
                 iterationCount,
                 keyLength,
                 prf

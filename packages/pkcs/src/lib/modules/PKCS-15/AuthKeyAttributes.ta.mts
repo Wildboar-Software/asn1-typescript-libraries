@@ -142,13 +142,10 @@ export function _decode_AuthKeyAttributes(el: _Element) {
         _cached_decoder_for_AuthKeyAttributes = function (
             el: _Element
         ): AuthKeyAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let derivedKey: OPTIONAL<BOOLEAN> =
                 AuthKeyAttributes._default_value_for_derivedKey;
             let authKeyId!: Identifier;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 derivedKey: (_el: _Element): void => {
                     derivedKey = $._decodeBoolean(_el);
@@ -157,7 +154,6 @@ export function _decode_AuthKeyAttributes(el: _Element) {
                     authKeyId = _decode_Identifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -169,7 +165,7 @@ export function _decode_AuthKeyAttributes(el: _Element) {
                 }
             );
             return new AuthKeyAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ derivedKey,
+                derivedKey,
                 authKeyId,
                 _unrecognizedExtensionsList
             );

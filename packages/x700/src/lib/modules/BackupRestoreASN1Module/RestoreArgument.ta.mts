@@ -125,11 +125,8 @@ export function _decode_RestoreArgument(el: _Element) {
         _cached_decoder_for_RestoreArgument = function (
             el: _Element
         ): RestoreArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let restoreSource!: RestoreSource;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 restoreSource: (_el: _Element): void => {
                     restoreSource = $._decode_explicit<RestoreSource>(
@@ -145,7 +142,6 @@ export function _decode_RestoreArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_RestoreArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_RestoreArgument,
                 undefined
             );
-            return new RestoreArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RestoreArgument (
                 restoreSource,
                 additionalInfo
             );

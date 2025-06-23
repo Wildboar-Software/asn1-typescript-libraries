@@ -161,14 +161,11 @@ export function _decode_ToBeRevokedGroup(el: _Element) {
         _cached_decoder_for_ToBeRevokedGroup = function (
             el: _Element
         ): ToBeRevokedGroup {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certificateIssuer: OPTIONAL<GeneralName>;
             let reasonInfo: OPTIONAL<ReasonInfo>;
             let revocationTime!: GeneralizedTime;
             let certificateGroup!: CertificateGroup;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certificateIssuer: (_el: _Element): void => {
                     certificateIssuer = $._decode_explicit<GeneralName>(
@@ -187,7 +184,6 @@ export function _decode_ToBeRevokedGroup(el: _Element) {
                     certificateGroup = _decode_CertificateGroup(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -199,7 +195,7 @@ export function _decode_ToBeRevokedGroup(el: _Element) {
                 }
             );
             return new ToBeRevokedGroup(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certificateIssuer,
+                certificateIssuer,
                 reasonInfo,
                 revocationTime,
                 certificateGroup,

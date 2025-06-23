@@ -129,11 +129,8 @@ export function _decode_TBSAsymmetricToken_name_mta(el: _Element) {
         _cached_decoder_for_TBSAsymmetricToken_name_mta = function (
             el: _Element
         ): TBSAsymmetricToken_name_mta {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let global_domain_identifier: OPTIONAL<GlobalDomainIdentifier>;
             let mta_name!: MTAName;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'global-domain-identifier': (_el: _Element): void => {
                     global_domain_identifier = _decode_GlobalDomainIdentifier(
@@ -144,7 +141,6 @@ export function _decode_TBSAsymmetricToken_name_mta(el: _Element) {
                     mta_name = _decode_MTAName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -153,7 +149,7 @@ export function _decode_TBSAsymmetricToken_name_mta(el: _Element) {
                 _root_component_type_list_2_spec_for_TBSAsymmetricToken_name_mta,
                 undefined
             );
-            return new TBSAsymmetricToken_name_mta /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TBSAsymmetricToken_name_mta (
                 global_domain_identifier,
                 mta_name
             );

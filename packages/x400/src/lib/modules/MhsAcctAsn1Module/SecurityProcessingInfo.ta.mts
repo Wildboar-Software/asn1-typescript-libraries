@@ -125,7 +125,6 @@ export function _decode_SecurityProcessingInfo(el: _Element) {
             let action!: SecurityAction;
             let security_policy: OPTIONAL<OBJECT_IDENTIFIER>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 action: (_el: _Element): void => {
                     action = $._decode_implicit<SecurityAction>(
@@ -138,7 +137,6 @@ export function _decode_SecurityProcessingInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

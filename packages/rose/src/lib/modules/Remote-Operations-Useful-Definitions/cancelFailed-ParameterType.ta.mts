@@ -142,7 +142,6 @@ export function _decode_cancelFailed_ParameterType(el: _Element) {
       let problem!: CancelProblem;
       let operation!: InvokeId;
       /* END_OF_SET_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         problem: (_el: _Element): void => {
           problem = $._decode_implicit<CancelProblem>(
@@ -153,7 +152,6 @@ export function _decode_cancelFailed_ParameterType(el: _Element) {
           operation = $._decode_explicit<InvokeId>(() => _decode_InvokeId)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_set(
         el,
         callbacks,

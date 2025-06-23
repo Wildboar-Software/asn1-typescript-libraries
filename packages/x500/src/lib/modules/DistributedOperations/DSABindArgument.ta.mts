@@ -151,7 +151,6 @@ export function _decode_DSABindArgument(el: _Element) {
                 DSABindArgument._default_value_for_versions;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 credentials: (_el: _Element): void => {
                     credentials = $._decode_explicit<DSACredentials>(
@@ -164,7 +163,6 @@ export function _decode_DSABindArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

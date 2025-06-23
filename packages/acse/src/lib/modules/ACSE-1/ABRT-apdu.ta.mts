@@ -205,15 +205,12 @@ export function _decode_ABRT_apdu(el: _Element) {
     _cached_decoder_for_ABRT_apdu = $._decode_implicit<ABRT_apdu>(
       () =>
         function (el: _Element): ABRT_apdu {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let abort_source!: ABRT_source;
           let abort_diagnostic: OPTIONAL<ABRT_diagnostic>;
           let aso_qualifier: OPTIONAL<ASO_qualifier>;
           let asoi_identifier: OPTIONAL<ASOI_identifier>;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_information: OPTIONAL<Association_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'abort-source': (_el: _Element): void => {
               abort_source = $._decode_implicit<ABRT_source>(
@@ -241,7 +238,6 @@ export function _decode_ABRT_apdu(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -252,7 +248,7 @@ export function _decode_ABRT_apdu(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new ABRT_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new ABRT_apdu (
             abort_source,
             abort_diagnostic,
             aso_qualifier,

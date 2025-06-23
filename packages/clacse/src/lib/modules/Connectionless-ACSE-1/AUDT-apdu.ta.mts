@@ -370,7 +370,6 @@ export function _decode_AUDT_apdu(el: _Element) {
         _cached_decoder_for_AUDT_apdu = $._decode_implicit<AUDT_apdu>(
             () =>
                 function (el: _Element): AUDT_apdu {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let protocol_version: OPTIONAL<AUDT_apdu_protocol_version> =
                         AUDT_apdu._default_value_for_protocol_version;
                     let aSO_context: OPTIONAL<ASO_context_name>;
@@ -388,8 +387,6 @@ export function _decode_AUDT_apdu(el: _Element) {
                     let implementation_information: OPTIONAL<GraphicString>;
                     let _unrecognizedExtensionsList: _Element[] = [];
                     let user_information!: EXTERNAL[];
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         'protocol-version': (_el: _Element): void => {
                             protocol_version = $._decode_implicit<AUDT_apdu_protocol_version>(
@@ -472,7 +469,6 @@ export function _decode_AUDT_apdu(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -483,7 +479,7 @@ export function _decode_AUDT_apdu(el: _Element) {
                             _unrecognizedExtensionsList.push(ext);
                         }
                     );
-                    return new AUDT_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+                    return new AUDT_apdu (
                         protocol_version,
                         aSO_context,
                         called_AP_title,

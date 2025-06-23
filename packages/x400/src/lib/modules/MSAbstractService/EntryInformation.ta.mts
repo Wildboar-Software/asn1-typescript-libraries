@@ -148,12 +148,9 @@ export function _decode_EntryInformation(el: _Element) {
         _cached_decoder_for_EntryInformation = function (
             el: _Element
         ): EntryInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sequence_number!: SequenceNumber;
             let attributes: OPTIONAL<Attribute[]>;
             let value_count_exceeded: OPTIONAL<AttributeValueCount[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'sequence-number': (_el: _Element): void => {
                     sequence_number = _decode_SequenceNumber(_el);
@@ -173,7 +170,6 @@ export function _decode_EntryInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_EntryInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_EntryInformation,
                 undefined
             );
-            return new EntryInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EntryInformation (
                 sequence_number,
                 attributes,
                 value_count_exceeded

@@ -128,12 +128,9 @@ let _cached_decoder_for_DHParameter: $.ASN1Decoder<DHParameter> | null = null;
 export function _decode_DHParameter(el: _Element) {
     if (!_cached_decoder_for_DHParameter) {
         _cached_decoder_for_DHParameter = function (el: _Element): DHParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let prime!: OCTET_STRING;
             let base!: OCTET_STRING;
             let privateValueLength: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 prime: (_el: _Element): void => {
                     prime = $._decodeBigInt(_el);
@@ -145,7 +142,6 @@ export function _decode_DHParameter(el: _Element) {
                     privateValueLength = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_DHParameter(el: _Element) {
                 undefined
             );
             return new DHParameter(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ prime,
+                prime,
                 base,
                 privateValueLength
             );

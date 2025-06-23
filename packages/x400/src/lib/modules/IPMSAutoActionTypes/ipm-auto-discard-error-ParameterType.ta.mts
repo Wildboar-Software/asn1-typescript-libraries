@@ -110,7 +110,6 @@ export function _decode_ipm_auto_discard_error_ParameterType(el: _Element) {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
             let problem!: AutoDiscardProblem;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<AutoDiscardProblem>(
@@ -118,7 +117,6 @@ export function _decode_ipm_auto_discard_error_ParameterType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

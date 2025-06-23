@@ -142,12 +142,9 @@ export function _decode_RecipientKeyIdentifier(el: _Element) {
         _cached_decoder_for_RecipientKeyIdentifier = function (
             el: _Element
         ): RecipientKeyIdentifier {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subjectKeyIdentifier!: SubjectKeyIdentifier;
             let date: OPTIONAL<GeneralizedTime>;
             let otherKeyAttribute: OPTIONAL<OtherKeyAttribute>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subjectKeyIdentifier: (_el: _Element): void => {
                     subjectKeyIdentifier = _decode_SubjectKeyIdentifier(_el);
@@ -159,7 +156,6 @@ export function _decode_RecipientKeyIdentifier(el: _Element) {
                     otherKeyAttribute = _decode_OtherKeyAttribute(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -169,7 +165,7 @@ export function _decode_RecipientKeyIdentifier(el: _Element) {
                 undefined
             );
             return new RecipientKeyIdentifier(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ subjectKeyIdentifier,
+                subjectKeyIdentifier,
                 date,
                 otherKeyAttribute
             );

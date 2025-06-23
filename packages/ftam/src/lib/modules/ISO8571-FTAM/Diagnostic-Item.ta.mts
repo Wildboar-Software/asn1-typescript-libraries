@@ -181,15 +181,12 @@ export function _decode_Diagnostic_Item(el: _Element) {
     _cached_decoder_for_Diagnostic_Item = function (
       el: _Element
     ): Diagnostic_Item {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let diagnostic_type!: Diagnostic_Item_diagnostic_type;
       let error_identifier!: INTEGER;
       let error_observer!: Entity_Reference;
       let error_Source!: Entity_Reference;
       let suggested_delay: OPTIONAL<INTEGER>;
       let further_details: OPTIONAL<GraphicString>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'diagnostic-type': (_el: _Element): void => {
           diagnostic_type = $._decode_implicit<Diagnostic_Item_diagnostic_type>(
@@ -222,7 +219,6 @@ export function _decode_Diagnostic_Item(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -231,7 +227,7 @@ export function _decode_Diagnostic_Item(el: _Element) {
         _root_component_type_list_2_spec_for_Diagnostic_Item,
         undefined
       );
-      return new Diagnostic_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Diagnostic_Item (
         diagnostic_type,
         error_identifier,
         error_observer,

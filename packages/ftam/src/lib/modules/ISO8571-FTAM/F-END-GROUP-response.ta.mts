@@ -95,12 +95,7 @@ export function _decode_F_END_GROUP_response(el: _Element) {
     _cached_decoder_for_F_END_GROUP_response = function (
       el: _Element
     ): F_END_GROUP_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {};
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -109,7 +104,7 @@ export function _decode_F_END_GROUP_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_END_GROUP_response,
         undefined
       );
-      return new F_END_GROUP_response /* SEQUENCE_CONSTRUCTOR_CALL */();
+      return new F_END_GROUP_response ();
     };
   }
   return _cached_decoder_for_F_END_GROUP_response(el);

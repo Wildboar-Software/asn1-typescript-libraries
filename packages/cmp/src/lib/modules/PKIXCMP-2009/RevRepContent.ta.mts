@@ -151,12 +151,9 @@ let _cached_decoder_for_RevRepContent: $.ASN1Decoder<RevRepContent> | null = nul
 export function _decode_RevRepContent(el: _Element) {
   if (!_cached_decoder_for_RevRepContent) {
     _cached_decoder_for_RevRepContent = function (el: _Element): RevRepContent {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let status!: PKIStatusInfo[];
       let revCerts: OPTIONAL<CertId[]>;
       let crls: OPTIONAL<CertificateList[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         status: (_el: _Element): void => {
           status = $._decodeSequenceOf<PKIStatusInfo>(
@@ -174,7 +171,6 @@ export function _decode_RevRepContent(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -183,7 +179,7 @@ export function _decode_RevRepContent(el: _Element) {
         _root_component_type_list_2_spec_for_RevRepContent,
         undefined
       );
-      return new RevRepContent /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new RevRepContent (
         status,
         revCerts,
         crls

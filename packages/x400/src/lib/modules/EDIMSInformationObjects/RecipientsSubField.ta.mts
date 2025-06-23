@@ -376,7 +376,6 @@ export function _decode_RecipientsSubField(el: _Element) {
         _cached_decoder_for_RecipientsSubField = function (
             el: _Element
         ): RecipientsSubField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let recipient!: RecipientField;
             let action_request: OPTIONAL<ActionRequestField> =
                 RecipientsSubField._default_value_for_action_request;
@@ -394,8 +393,6 @@ export function _decode_RecipientsSubField(el: _Element) {
                 RecipientsSubField._default_value_for_test_indicator;
             let authorization_information: OPTIONAL<AuthorizationInformationField>;
             let recipient_extensions: OPTIONAL<RecipientExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 recipient: (_el: _Element): void => {
                     recipient = $._decode_implicit<RecipientField>(
@@ -463,7 +460,6 @@ export function _decode_RecipientsSubField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -472,7 +468,7 @@ export function _decode_RecipientsSubField(el: _Element) {
                 _root_component_type_list_2_spec_for_RecipientsSubField,
                 undefined
             );
-            return new RecipientsSubField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RecipientsSubField (
                 recipient,
                 action_request,
                 edi_notification_requests_field,

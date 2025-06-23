@@ -392,7 +392,6 @@ export function _decode_ReadArgumentData(el: _Element) {
             let familyGrouping: OPTIONAL<FamilyGrouping> =
                 ReadArgumentData._default_value_for_familyGrouping;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 object: (_el: _Element): void => {
                     object = $._decode_explicit<Name>(() => _decode_Name)(_el);
@@ -468,7 +467,6 @@ export function _decode_ReadArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

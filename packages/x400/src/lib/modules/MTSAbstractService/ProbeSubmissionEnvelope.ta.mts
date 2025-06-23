@@ -247,7 +247,6 @@ export function _decode_ProbeSubmissionEnvelope(el: _Element) {
                 ProbeSubmissionEnvelope._default_value_for_extensions;
             let per_recipient_fields!: PerRecipientProbeSubmissionFields[];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'originator-name': (_el: _Element): void => {
                     originator_name = _decode_OriginatorName(_el);
@@ -288,7 +287,6 @@ export function _decode_ProbeSubmissionEnvelope(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

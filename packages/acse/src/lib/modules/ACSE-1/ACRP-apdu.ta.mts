@@ -192,15 +192,12 @@ export function _decode_ACRP_apdu(el: _Element) {
     _cached_decoder_for_ACRP_apdu = $._decode_implicit<ACRP_apdu>(
       () =>
         function (el: _Element): ACRP_apdu {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let aso_qualifier: OPTIONAL<ASO_qualifier>;
           let asoi_identifier: OPTIONAL<ASOI_identifier>;
           let aSO_context_name: OPTIONAL<ASO_context_name_list>;
           let p_context_result_list: OPTIONAL<P_context_result_list>;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_information: OPTIONAL<User_information>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'aso-qualifier': (_el: _Element): void => {
               aso_qualifier = $._decode_explicit<ASO_qualifier>(
@@ -228,7 +225,6 @@ export function _decode_ACRP_apdu(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -239,7 +235,7 @@ export function _decode_ACRP_apdu(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new ACRP_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new ACRP_apdu (
             aso_qualifier,
             asoi_identifier,
             aSO_context_name,

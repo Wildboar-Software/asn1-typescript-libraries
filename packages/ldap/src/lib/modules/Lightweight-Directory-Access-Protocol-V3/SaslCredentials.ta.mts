@@ -130,12 +130,9 @@ export const _extension_additions_list_spec_for_SaslCredentials: $.ComponentSpec
  * @returns {SaslCredentials} The decoded data structure.
  */
 export function _decode_SaslCredentials(el: _Element) {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let mechanism!: LDAPString;
     let credentials: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         mechanism: (_el: _Element): void => {
             mechanism = _decode_LDAPString(_el);
@@ -144,7 +141,6 @@ export function _decode_SaslCredentials(el: _Element) {
             credentials = $._decodeOctetString(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -155,7 +151,7 @@ export function _decode_SaslCredentials(el: _Element) {
             _unrecognizedExtensionsList.push(ext);
         }
     );
-    return new SaslCredentials /* SEQUENCE_CONSTRUCTOR_CALL */(
+    return new SaslCredentials (
         mechanism,
         credentials,
         _unrecognizedExtensionsList

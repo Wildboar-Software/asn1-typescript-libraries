@@ -189,7 +189,6 @@ export function _decode_UARegistration(el: _Element) {
             let ua_submission_defaults: OPTIONAL<MSSubmissionOptions>;
             let content_specific_defaults: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'ua-registration-identifier': (_el: _Element): void => {
                     ua_registration_identifier = $._decode_explicit<RegistrationIdentifier>(
@@ -225,7 +224,6 @@ export function _decode_UARegistration(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

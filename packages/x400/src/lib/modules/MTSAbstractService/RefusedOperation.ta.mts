@@ -130,7 +130,6 @@ export function _decode_RefusedOperation(el: _Element) {
             let refused_argument!: RefusedOperation_refused_argument;
             let refusal_reason!: RefusalReason;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'refused-argument': (_el: _Element): void => {
                     refused_argument = _decode_RefusedOperation_refused_argument(
@@ -143,7 +142,6 @@ export function _decode_RefusedOperation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -146,7 +146,6 @@ export function _decode_TraceItem(el: _Element) {
             let operationProgress!: OperationProgress;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 dsa: (_el: _Element): void => {
                     dsa = $._decode_explicit<Name>(() => _decode_Name)(_el);
@@ -162,7 +161,6 @@ export function _decode_TraceItem(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -131,7 +131,6 @@ export function _decode_MessageGroupNameAndDescriptor(el: _Element) {
             let message_group_name!: MessageGroupName;
             let message_group_descriptor: OPTIONAL<GeneralString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'message-group-name': (_el: _Element): void => {
                     message_group_name = $._decode_explicit<MessageGroupName>(
@@ -144,7 +143,6 @@ export function _decode_MessageGroupNameAndDescriptor(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

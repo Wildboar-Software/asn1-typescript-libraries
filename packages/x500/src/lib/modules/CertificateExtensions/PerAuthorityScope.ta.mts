@@ -232,7 +232,6 @@ export function _decode_PerAuthorityScope(el: _Element) {
         _cached_decoder_for_PerAuthorityScope = function (
             el: _Element
         ): PerAuthorityScope {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let authorityName: OPTIONAL<GeneralName>;
             let distributionPoint: OPTIONAL<DistributionPointName>;
             let onlyContains: OPTIONAL<OnlyCertificateTypes>;
@@ -242,8 +241,6 @@ export function _decode_PerAuthorityScope(el: _Element) {
             let nameSubtrees: OPTIONAL<GeneralNames>;
             let baseRevocationInfo: OPTIONAL<BaseRevocationInfo>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 authorityName: (_el: _Element): void => {
                     authorityName = $._decode_explicit<GeneralName>(
@@ -286,7 +283,6 @@ export function _decode_PerAuthorityScope(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -298,7 +294,7 @@ export function _decode_PerAuthorityScope(el: _Element) {
                 }
             );
             return new PerAuthorityScope(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ authorityName,
+                authorityName,
                 distributionPoint,
                 onlyContains,
                 onlySomeReasons,

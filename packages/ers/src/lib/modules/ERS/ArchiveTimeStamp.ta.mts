@@ -148,27 +148,23 @@ let _cached_decoder_for_ArchiveTimeStamp: $.ASN1Decoder<ArchiveTimeStamp> | null
 export
 function _decode_ArchiveTimeStamp (el: _Element) {
     if (!_cached_decoder_for_ArchiveTimeStamp) { _cached_decoder_for_ArchiveTimeStamp = function (el: _Element): ArchiveTimeStamp {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let digestAlgorithm: OPTIONAL<AlgorithmIdentifier>;
     let attributes: OPTIONAL<Attributes>;
     let reducedHashtree: OPTIONAL<PartialHashtree[]>;
     let timeStamp!: ContentInfo;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "digestAlgorithm": (_el: _Element): void => { digestAlgorithm = $._decode_implicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(_el); },
         "attributes": (_el: _Element): void => { attributes = $._decode_implicit<Attributes>(() => _decode_Attributes)(_el); },
         "reducedHashtree": (_el: _Element): void => { reducedHashtree = $._decode_implicit<PartialHashtree[]>(() => $._decodeSequenceOf<PartialHashtree>(() => _decode_PartialHashtree))(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = _decode_ContentInfo(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ArchiveTimeStamp,
         _extension_additions_list_spec_for_ArchiveTimeStamp,
         _root_component_type_list_2_spec_for_ArchiveTimeStamp,
         undefined,
     );
-    return new ArchiveTimeStamp( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ArchiveTimeStamp( 
         digestAlgorithm,
         attributes,
         reducedHashtree,

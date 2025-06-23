@@ -132,7 +132,6 @@ export function _decode_EntryClassErrorParameter(el: _Element) {
             let entry_class!: EntryClass;
             let problem!: EntryClassErrorParameter_problem;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entry-class': (_el: _Element): void => {
                     entry_class = $._decode_explicit<EntryClass>(
@@ -145,7 +144,6 @@ export function _decode_EntryClassErrorParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

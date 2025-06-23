@@ -224,7 +224,6 @@ export function _decode_ModifyOperationalBindingResultData(el: _Element) {
         _cached_decoder_for_ModifyOperationalBindingResultData = function (
             el: _Element
         ): ModifyOperationalBindingResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let newBindingID!: OperationalBindingID;
             let bindingType!: OBJECT_IDENTIFIER;
             let newAgreement!: _Element;
@@ -235,8 +234,6 @@ export function _decode_ModifyOperationalBindingResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 ModifyOperationalBindingResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 newBindingID: (_el: _Element): void => {
                     newBindingID = _decode_OperationalBindingID(_el);
@@ -271,7 +268,6 @@ export function _decode_ModifyOperationalBindingResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -283,7 +279,7 @@ export function _decode_ModifyOperationalBindingResultData(el: _Element) {
                 }
             );
             return new ModifyOperationalBindingResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ newBindingID,
+                newBindingID,
                 bindingType,
                 newAgreement,
                 valid,

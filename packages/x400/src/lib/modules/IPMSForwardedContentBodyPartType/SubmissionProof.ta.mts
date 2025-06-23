@@ -150,7 +150,6 @@ export function _decode_SubmissionProof(el: _Element) {
             let originating_MTA_certificate!: OriginatingMTACertificate;
             let message_submission_envelope!: MessageSubmissionEnvelope;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'proof-of-submission': (_el: _Element): void => {
                     proof_of_submission = $._decode_implicit<ProofOfSubmission>(
@@ -168,7 +167,6 @@ export function _decode_SubmissionProof(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

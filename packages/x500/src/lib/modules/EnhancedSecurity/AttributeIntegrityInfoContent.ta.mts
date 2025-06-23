@@ -143,13 +143,10 @@ export function _decode_AttributeIntegrityInfoContent(el: _Element) {
         _cached_decoder_for_AttributeIntegrityInfoContent = function (
             el: _Element
         ): AttributeIntegrityInfoContent {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scope!: Scope;
             let signer: OPTIONAL<Signer>;
             let attribsHash!: AttribsHash;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scope: (_el: _Element): void => {
                     scope = _decode_Scope(_el);
@@ -161,7 +158,6 @@ export function _decode_AttributeIntegrityInfoContent(el: _Element) {
                     attribsHash = _decode_AttribsHash(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_AttributeIntegrityInfoContent(el: _Element) {
                 }
             );
             return new AttributeIntegrityInfoContent(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ scope,
+                scope,
                 signer,
                 attribsHash,
                 _unrecognizedExtensionsList

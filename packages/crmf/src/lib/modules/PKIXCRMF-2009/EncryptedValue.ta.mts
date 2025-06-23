@@ -186,15 +186,12 @@ export function _decode_EncryptedValue(el: _Element) {
         _cached_decoder_for_EncryptedValue = function (
             el: _Element
         ): EncryptedValue {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let intendedAlg: OPTIONAL<AlgorithmIdentifier>;
             let symmAlg: OPTIONAL<AlgorithmIdentifier>;
             let encSymmKey: OPTIONAL<BIT_STRING>;
             let keyAlg: OPTIONAL<AlgorithmIdentifier>;
             let valueHint: OPTIONAL<OCTET_STRING>;
             let encValue!: BIT_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 intendedAlg: (_el: _Element): void => {
                     intendedAlg = $._decode_implicit<AlgorithmIdentifier>(
@@ -225,7 +222,6 @@ export function _decode_EncryptedValue(el: _Element) {
                     encValue = $._decodeBitString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -234,7 +230,7 @@ export function _decode_EncryptedValue(el: _Element) {
                 _root_component_type_list_2_spec_for_EncryptedValue,
                 undefined
             );
-            return new EncryptedValue /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncryptedValue (
                 intendedAlg,
                 symmAlg,
                 encSymmKey,

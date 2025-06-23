@@ -165,13 +165,10 @@ export function _decode_SecurityElementsField(el: _Element) {
         _cached_decoder_for_SecurityElementsField = function (
             el: _Element
         ): SecurityElementsField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let original_content: OPTIONAL<Content>;
             let original_content_integrity_check: OPTIONAL<ContentIntegrityCheck>;
             let edi_application_security_elements: OPTIONAL<EDIApplicationSecurityElementsField>;
             let security_extensions: OPTIONAL<SecurityExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'original-content': (_el: _Element): void => {
                     original_content = $._decode_implicit<Content>(
@@ -194,7 +191,6 @@ export function _decode_SecurityElementsField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_SecurityElementsField(el: _Element) {
                 _root_component_type_list_2_spec_for_SecurityElementsField,
                 undefined
             );
-            return new SecurityElementsField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SecurityElementsField (
                 original_content,
                 original_content_integrity_check,
                 edi_application_security_elements,

@@ -126,12 +126,9 @@ let _cached_decoder_for_Path: $.ASN1Decoder<Path> | null = null;
 export function _decode_Path(el: _Element) {
     if (!_cached_decoder_for_Path) {
         _cached_decoder_for_Path = function (el: _Element): Path {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let path!: OCTET_STRING;
             let index: OPTIONAL<INTEGER>;
             let length: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 path: (_el: _Element): void => {
                     path = $._decodeOctetString(_el);
@@ -145,7 +142,6 @@ export function _decode_Path(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_Path(el: _Element) {
                 undefined
             );
             return new Path(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ path,
+                path,
                 index,
                 length
             );

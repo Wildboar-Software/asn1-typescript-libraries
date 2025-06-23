@@ -174,13 +174,10 @@ let _cached_decoder_for_DayTime: $.ASN1Decoder<DayTime> | null = null;
 export function _decode_DayTime(el: _Element) {
     if (!_cached_decoder_for_DayTime) {
         _cached_decoder_for_DayTime = function (el: _Element): DayTime {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hour!: INTEGER;
             let minute: OPTIONAL<INTEGER> = DayTime._default_value_for_minute;
             let second: OPTIONAL<INTEGER> = DayTime._default_value_for_second;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hour: (_el: _Element): void => {
                     hour = $._decode_explicit<INTEGER>(() => $._decodeInteger)(
@@ -198,7 +195,6 @@ export function _decode_DayTime(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -210,7 +206,7 @@ export function _decode_DayTime(el: _Element) {
                 }
             );
             return new DayTime(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ hour,
+                hour,
                 minute,
                 second,
                 _unrecognizedExtensionsList

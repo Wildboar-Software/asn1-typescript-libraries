@@ -162,13 +162,10 @@ export function _decode_LogicalChannelAssignments(el: _Element) {
         _cached_decoder_for_LogicalChannelAssignments = function (
             el: _Element
         ): LogicalChannelAssignments {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pVC!: LogicalChannelId[];
             let incoming: OPTIONAL<LogicalChannelRange>;
             let twoWay: OPTIONAL<LogicalChannelRange>;
             let outgoing: OPTIONAL<LogicalChannelRange>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pVC: (_el: _Element): void => {
                     pVC = $._decode_implicit<LogicalChannelId[]>(() =>
@@ -193,7 +190,6 @@ export function _decode_LogicalChannelAssignments(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -202,7 +198,7 @@ export function _decode_LogicalChannelAssignments(el: _Element) {
                 _root_component_type_list_2_spec_for_LogicalChannelAssignments,
                 undefined
             );
-            return new LogicalChannelAssignments /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new LogicalChannelAssignments (
                 pVC,
                 incoming,
                 twoWay,

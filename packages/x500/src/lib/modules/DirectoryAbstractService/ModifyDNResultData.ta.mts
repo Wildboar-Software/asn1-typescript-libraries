@@ -171,7 +171,6 @@ export function _decode_ModifyDNResultData(el: _Element) {
         _cached_decoder_for_ModifyDNResultData = function (
             el: _Element
         ): ModifyDNResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let newRDN!: RelativeDistinguishedName;
             let _unrecognizedExtensionsList: _Element[] = [];
             let securityParameters: OPTIONAL<SecurityParameters>;
@@ -179,8 +178,6 @@ export function _decode_ModifyDNResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 ModifyDNResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 newRDN: (_el: _Element): void => {
                     newRDN = _decode_RelativeDistinguishedName(_el);
@@ -206,7 +203,6 @@ export function _decode_ModifyDNResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -218,7 +214,7 @@ export function _decode_ModifyDNResultData(el: _Element) {
                 }
             );
             return new ModifyDNResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ newRDN,
+                newRDN,
                 _unrecognizedExtensionsList,
                 securityParameters,
                 performer,

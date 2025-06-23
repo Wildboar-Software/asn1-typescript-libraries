@@ -143,12 +143,9 @@ export function _decode_POPOSigningKey(el: _Element) {
         _cached_decoder_for_POPOSigningKey = function (
             el: _Element
         ): POPOSigningKey {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let poposkInput: OPTIONAL<POPOSigningKeyInput>;
             let algorithmIdentifier!: AlgorithmIdentifier;
             let signature!: BIT_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 poposkInput: (_el: _Element): void => {
                     poposkInput = $._decode_implicit<POPOSigningKeyInput>(
@@ -162,7 +159,6 @@ export function _decode_POPOSigningKey(el: _Element) {
                     signature = $._decodeBitString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_POPOSigningKey(el: _Element) {
                 _root_component_type_list_2_spec_for_POPOSigningKey,
                 undefined
             );
-            return new POPOSigningKey /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new POPOSigningKey (
                 poposkInput,
                 algorithmIdentifier,
                 signature

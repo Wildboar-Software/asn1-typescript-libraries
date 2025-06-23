@@ -124,12 +124,9 @@ export function _decode_DITContextUseInformation(el: _Element) {
         _cached_decoder_for_DITContextUseInformation = function (
             el: _Element
         ): DITContextUseInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mandatoryContexts: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let optionalContexts: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mandatoryContexts: (_el: _Element): void => {
                     mandatoryContexts = $._decode_explicit<OBJECT_IDENTIFIER[]>(
@@ -148,7 +145,6 @@ export function _decode_DITContextUseInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_DITContextUseInformation(el: _Element) {
                 }
             );
             return new DITContextUseInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mandatoryContexts,
+                mandatoryContexts,
                 optionalContexts,
                 _unrecognizedExtensionsList
             );

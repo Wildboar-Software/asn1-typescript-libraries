@@ -292,7 +292,6 @@ let _cached_decoder_for_EncKDCRepPart: $.ASN1Decoder<EncKDCRepPart> | null = nul
 export function _decode_EncKDCRepPart(el: _Element) {
   if (!_cached_decoder_for_EncKDCRepPart) {
     _cached_decoder_for_EncKDCRepPart = function (el: _Element): EncKDCRepPart {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let key!: EncryptionKey;
       let last_req!: LastReq;
       let nonce!: UInt32;
@@ -305,8 +304,6 @@ export function _decode_EncKDCRepPart(el: _Element) {
       let srealm!: Realm;
       let sname!: PrincipalName;
       let caddr: OPTIONAL<HostAddresses>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         key: (_el: _Element): void => {
           key = $._decode_explicit<EncryptionKey>(() => _decode_EncryptionKey)(
@@ -363,7 +360,6 @@ export function _decode_EncKDCRepPart(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -372,7 +368,7 @@ export function _decode_EncKDCRepPart(el: _Element) {
         _root_component_type_list_2_spec_for_EncKDCRepPart,
         undefined
       );
-      return new EncKDCRepPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new EncKDCRepPart (
         key,
         last_req,
         nonce,

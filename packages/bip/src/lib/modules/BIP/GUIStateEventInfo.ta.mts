@@ -369,7 +369,6 @@ export function _decode_GUIStateEventInfo(el: _Element) {
     _cached_decoder_for_GUIStateEventInfo = function (
       el: _Element
     ): GUIStateEventInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let subscriberEndpointIRI!: EndpointIRI;
       let guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
       let hostingEndpointIRI!: EndpointIRI;
@@ -384,8 +383,6 @@ export function _decode_GUIStateEventInfo(el: _Element) {
       let enrollSampleIndex!: SignedInt;
       let bitmaps: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         subscriberEndpointIRI: (_el: _Element): void => {
           subscriberEndpointIRI = _decode_EndpointIRI(_el);
@@ -430,7 +427,6 @@ export function _decode_GUIStateEventInfo(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -439,7 +435,7 @@ export function _decode_GUIStateEventInfo(el: _Element) {
         _root_component_type_list_2_spec_for_GUIStateEventInfo,
         undefined
       );
-      return new GUIStateEventInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIStateEventInfo (
         subscriberEndpointIRI,
         guiEventSubscriptionUuid,
         hostingEndpointIRI,

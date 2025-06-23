@@ -127,12 +127,9 @@ let _cached_decoder_for_RoleSyntax: $.ASN1Decoder<RoleSyntax> | null = null;
 export function _decode_RoleSyntax(el: _Element) {
     if (!_cached_decoder_for_RoleSyntax) {
         _cached_decoder_for_RoleSyntax = function (el: _Element): RoleSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let roleAuthority: OPTIONAL<GeneralNames>;
             let roleName!: GeneralName;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 roleAuthority: (_el: _Element): void => {
                     roleAuthority = $._decode_implicit<GeneralNames>(
@@ -145,7 +142,6 @@ export function _decode_RoleSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_RoleSyntax(el: _Element) {
                 }
             );
             return new RoleSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ roleAuthority,
+                roleAuthority,
                 roleName,
                 _unrecognizedExtensionsList
             );

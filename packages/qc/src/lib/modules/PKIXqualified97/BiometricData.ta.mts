@@ -164,14 +164,11 @@ export function _decode_BiometricData(el: _Element) {
         _cached_decoder_for_BiometricData = function (
             el: _Element
         ): BiometricData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let typeOfBiometricData!: TypeOfBiometricData;
             let hashAlgorithm!: AlgorithmIdentifier;
             let biometricDataHash!: OCTET_STRING;
             let sourceDataUri: OPTIONAL<IA5String>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 typeOfBiometricData: (_el: _Element): void => {
                     typeOfBiometricData = _decode_TypeOfBiometricData(_el);
@@ -186,7 +183,6 @@ export function _decode_BiometricData(el: _Element) {
                     sourceDataUri = $._decodeIA5String(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -198,7 +194,7 @@ export function _decode_BiometricData(el: _Element) {
                 }
             );
             return new BiometricData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ typeOfBiometricData,
+                typeOfBiometricData,
                 hashAlgorithm,
                 biometricDataHash,
                 sourceDataUri,

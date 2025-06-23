@@ -184,7 +184,6 @@ export function _decode_CPA_PPDU(el: _Element) {
             let x410_mode_parameters: OPTIONAL<CPA_PPDU_x410_mode_parameters>;
             let normal_mode_parameters: OPTIONAL<CPA_PPDU_normal_mode_parameters>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'mode-selector': (_el: _Element): void => {
                     mode_selector = $._decode_implicit<Mode_selector>(
@@ -202,7 +201,6 @@ export function _decode_CPA_PPDU(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

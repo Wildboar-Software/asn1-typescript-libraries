@@ -154,12 +154,9 @@ export function _decode_ResourceBoundaryTestResults(el: _Element) {
         _cached_decoder_for_ResourceBoundaryTestResults = function (
             el: _Element
         ): ResourceBoundaryTestResults {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signalReceived: OPTIONAL<SignalReceived>;
             let intermediateResourceBoundaryTestOutcome: OPTIONAL<IntermediateResourceBoundaryTestOutcome>;
             let eventId: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 signalReceived: (_el: _Element): void => {
                     signalReceived = $._decode_implicit<SignalReceived>(
@@ -179,7 +176,6 @@ export function _decode_ResourceBoundaryTestResults(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_ResourceBoundaryTestResults(el: _Element) {
                 _root_component_type_list_2_spec_for_ResourceBoundaryTestResults,
                 undefined
             );
-            return new ResourceBoundaryTestResults /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ResourceBoundaryTestResults (
                 signalReceived,
                 intermediateResourceBoundaryTestOutcome,
                 eventId

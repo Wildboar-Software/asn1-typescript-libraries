@@ -132,7 +132,6 @@ export function _decode_ChangeCredentialsArgument(el: _Element) {
             let old_credentials!: Credentials;
             let new_credentials!: Credentials;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'old-credentials': (_el: _Element): void => {
                     old_credentials = $._decode_explicit<Credentials>(
@@ -145,7 +144,6 @@ export function _decode_ChangeCredentialsArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

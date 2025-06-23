@@ -186,7 +186,6 @@ let _cached_decoder_for_CRLReferral: $.ASN1Decoder<CRLReferral> | null = null;
 export function _decode_CRLReferral(el: _Element) {
     if (!_cached_decoder_for_CRLReferral) {
         _cached_decoder_for_CRLReferral = function (el: _Element): CRLReferral {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let issuer: OPTIONAL<GeneralName>;
             let location: OPTIONAL<GeneralName>;
             let deltaRefInfo: OPTIONAL<DeltaRefInfo>;
@@ -194,8 +193,6 @@ export function _decode_CRLReferral(el: _Element) {
             let lastUpdate: OPTIONAL<GeneralizedTime>;
             let lastChangedCRL: OPTIONAL<GeneralizedTime>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 issuer: (_el: _Element): void => {
                     issuer = $._decode_explicit<GeneralName>(
@@ -226,7 +223,6 @@ export function _decode_CRLReferral(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -238,7 +234,7 @@ export function _decode_CRLReferral(el: _Element) {
                 }
             );
             return new CRLReferral(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
+                issuer,
                 location,
                 deltaRefInfo,
                 cRLScope,

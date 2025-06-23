@@ -309,7 +309,6 @@ export function _decode_CertificateAssertion(el: _Element) {
         _cached_decoder_for_CertificateAssertion = function (
             el: _Element
         ): CertificateAssertion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let serialNumber: OPTIONAL<CertificateSerialNumber>;
             let issuer: OPTIONAL<Name>;
             let subjectKeyIdentifier: OPTIONAL<SubjectKeyIdentifier>;
@@ -324,8 +323,6 @@ export function _decode_CertificateAssertion(el: _Element) {
             let subject: OPTIONAL<Name>;
             let nameConstraints: OPTIONAL<NameConstraintsSyntax>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 serialNumber: (_el: _Element): void => {
                     serialNumber = $._decode_implicit<CertificateSerialNumber>(
@@ -389,7 +386,6 @@ export function _decode_CertificateAssertion(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -401,7 +397,7 @@ export function _decode_CertificateAssertion(el: _Element) {
                 }
             );
             return new CertificateAssertion(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ serialNumber,
+                serialNumber,
                 issuer,
                 subjectKeyIdentifier,
                 authorityKeyIdentifier,

@@ -191,15 +191,12 @@ export function _decode_ResponseData(el: _Element) {
         _cached_decoder_for_ResponseData = function (
             el: _Element
         ): ResponseData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 ResponseData._default_value_for_version;
             let responderID!: ResponderID;
             let producedAt!: GeneralizedTime;
             let responses!: SingleResponse[];
             let responseExtensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = $._decode_explicit<Version>(
@@ -223,7 +220,6 @@ export function _decode_ResponseData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -233,7 +229,7 @@ export function _decode_ResponseData(el: _Element) {
                 undefined
             );
             return new ResponseData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 responderID,
                 producedAt,
                 responses,

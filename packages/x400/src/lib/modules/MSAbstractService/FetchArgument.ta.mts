@@ -181,7 +181,6 @@ export function _decode_FetchArgument(el: _Element) {
             let requested_attributes: OPTIONAL<EntryInformationSelection>;
             let fetch_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entry-class': (_el: _Element): void => {
                     entry_class = $._decode_explicit<EntryClass>(
@@ -202,7 +201,6 @@ export function _decode_FetchArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

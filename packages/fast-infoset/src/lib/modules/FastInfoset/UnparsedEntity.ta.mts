@@ -149,13 +149,10 @@ export function _decode_UnparsedEntity(el: _Element) {
     _cached_decoder_for_UnparsedEntity = function (
       el: _Element
     ): UnparsedEntity {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let name!: IdentifyingStringOrIndex;
       let system_identifier!: IdentifyingStringOrIndex;
       let public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
       let notation_name!: IdentifyingStringOrIndex;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         name: (_el: _Element): void => {
           name = _decode_IdentifyingStringOrIndex(_el);
@@ -170,7 +167,6 @@ export function _decode_UnparsedEntity(el: _Element) {
           notation_name = _decode_IdentifyingStringOrIndex(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -179,7 +175,7 @@ export function _decode_UnparsedEntity(el: _Element) {
         _root_component_type_list_2_spec_for_UnparsedEntity,
         undefined
       );
-      return new UnparsedEntity /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new UnparsedEntity (
         name,
         system_identifier,
         public_identifier,

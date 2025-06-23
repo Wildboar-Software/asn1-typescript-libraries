@@ -128,12 +128,9 @@ export function _decode_ClassAttributeSelection(el: _Element) {
         _cached_decoder_for_ClassAttributeSelection = function (
             el: _Element
         ): ClassAttributeSelection {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let class_: OPTIONAL<OBJECT_IDENTIFIER>;
             let classAttributes: OPTIONAL<ClassAttributes> =
                 ClassAttributeSelection._default_value_for_classAttributes;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 class: (_el: _Element): void => {
                     class_ = $._decodeObjectIdentifier(_el);
@@ -142,7 +139,6 @@ export function _decode_ClassAttributeSelection(el: _Element) {
                     classAttributes = _decode_ClassAttributes(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_ClassAttributeSelection(el: _Element) {
                 undefined
             );
             return new ClassAttributeSelection(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ class_,
+                class_,
                 classAttributes
             );
         };

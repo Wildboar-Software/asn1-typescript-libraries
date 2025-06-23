@@ -135,13 +135,10 @@ export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
     _decode_ToBeProtected: $.ASN1Decoder<ToBeProtected>
 ) {
     return function (el: _Element): ICV_Invoke<ToBeProtected> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let toBeProtected!: ToBeProtected;
         let dynParms: OPTIONAL<AlgoInvoke>;
         let icv!: BIT_STRING;
         let _unrecognizedExtensionsList: _Element[] = [];
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             toBeProtected: (_el: _Element): void => {
                 toBeProtected = _decode_ToBeProtected(_el);
@@ -155,7 +152,6 @@ export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
                 icv = $._decodeBitString(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -167,7 +163,7 @@ export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
             }
         );
         return new ICV_Invoke(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ toBeProtected,
+            toBeProtected,
             dynParms,
             icv,
             _unrecognizedExtensionsList

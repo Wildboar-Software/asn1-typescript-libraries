@@ -131,11 +131,8 @@ export function _decode_LogicalProblem(el: _Element) {
         _cached_decoder_for_LogicalProblem = function (
             el: _Element
         ): LogicalProblem {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let problemCause!: ProblemCause;
             let incorrectInstances: OPTIONAL<ObjectInstance[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problemCause: (_el: _Element): void => {
                     problemCause = _decode_ProblemCause(_el);
@@ -146,7 +143,6 @@ export function _decode_LogicalProblem(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_LogicalProblem(el: _Element) {
                 _root_component_type_list_2_spec_for_LogicalProblem,
                 undefined
             );
-            return new LogicalProblem /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new LogicalProblem (
                 problemCause,
                 incorrectInstances
             );

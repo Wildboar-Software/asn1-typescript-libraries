@@ -124,11 +124,8 @@ export function _decode_EncKeyWithID(el: _Element) {
         _cached_decoder_for_EncKeyWithID = function (
             el: _Element
         ): EncKeyWithID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let privateKey!: PrivateKeyInfo;
             let identifier: OPTIONAL<EncKeyWithID_identifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 privateKey: (_el: _Element): void => {
                     privateKey = _decode_PrivateKeyInfo(_el);
@@ -137,7 +134,6 @@ export function _decode_EncKeyWithID(el: _Element) {
                     identifier = _decode_EncKeyWithID_identifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_EncKeyWithID(el: _Element) {
                 _root_component_type_list_2_spec_for_EncKeyWithID,
                 undefined
             );
-            return new EncKeyWithID /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncKeyWithID (
                 privateKey,
                 identifier
             );

@@ -154,13 +154,11 @@ function _decode_Restriction (el: _Element) {
     let source_type: OPTIONAL<Restriction_source_type> = Restriction._default_value_for_source_type;
     let source_name: OPTIONAL<ExactOrPattern>;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "permitted": (_el: _Element): void => { permitted = $._decodeBoolean(_el); },
         "source-type": (_el: _Element): void => { source_type = _decode_Restriction_source_type(_el); },
         "source-name": (_el: _Element): void => { source_name = _decode_ExactOrPattern(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
         _root_component_type_list_1_spec_for_Restriction,
         _extension_additions_list_spec_for_Restriction,

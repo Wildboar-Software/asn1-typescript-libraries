@@ -130,11 +130,8 @@ export function _decode_PerRecipientNonDeliveryReportFields(el: _Element) {
         _cached_decoder_for_PerRecipientNonDeliveryReportFields = function (
             el: _Element
         ): PerRecipientNonDeliveryReportFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let non_delivery_reason_code!: NonDeliveryReasonCode;
             let non_delivery_diagnostic_code: OPTIONAL<NonDeliveryDiagnosticCode>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'non-delivery-reason-code': (_el: _Element): void => {
                     non_delivery_reason_code = _decode_NonDeliveryReasonCode(
@@ -147,7 +144,6 @@ export function _decode_PerRecipientNonDeliveryReportFields(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_PerRecipientNonDeliveryReportFields(el: _Element) {
                 _root_component_type_list_2_spec_for_PerRecipientNonDeliveryReportFields,
                 undefined
             );
-            return new PerRecipientNonDeliveryReportFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PerRecipientNonDeliveryReportFields (
                 non_delivery_reason_code,
                 non_delivery_diagnostic_code
             );

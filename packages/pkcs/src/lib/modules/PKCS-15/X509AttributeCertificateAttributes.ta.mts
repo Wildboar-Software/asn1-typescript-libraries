@@ -172,14 +172,11 @@ export function _decode_X509AttributeCertificateAttributes(el: _Element) {
         _cached_decoder_for_X509AttributeCertificateAttributes = function (
             el: _Element
         ): X509AttributeCertificateAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let value!: ObjectValue<AttributeCertificate>;
             let issuer: OPTIONAL<GeneralNames>;
             let serialNumber: OPTIONAL<CertificateSerialNumber>;
             let attrTypes: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 value: (_el: _Element): void => {
                     value = _get_decoder_for_ObjectValue<AttributeCertificate>(
@@ -200,7 +197,6 @@ export function _decode_X509AttributeCertificateAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -212,7 +208,7 @@ export function _decode_X509AttributeCertificateAttributes(el: _Element) {
                 }
             );
             return new X509AttributeCertificateAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ value,
+                value,
                 issuer,
                 serialNumber,
                 attrTypes,

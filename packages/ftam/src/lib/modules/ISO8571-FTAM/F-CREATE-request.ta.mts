@@ -274,7 +274,6 @@ export function _decode_F_CREATE_request(el: _Element) {
     _cached_decoder_for_F_CREATE_request = function (
       el: _Element
     ): F_CREATE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let override: OPTIONAL<Override> =
         F_CREATE_request._default_value_for_override;
       let initial_attributes!: Create_Attributes;
@@ -285,8 +284,6 @@ export function _decode_F_CREATE_request(el: _Element) {
       let concurrency_control: OPTIONAL<Concurrency_Control>;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let account: OPTIONAL<Account>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         override: (_el: _Element): void => {
           override = $._decode_implicit<Override>(() => _decode_Override)(_el);
@@ -316,7 +313,6 @@ export function _decode_F_CREATE_request(el: _Element) {
           account = _decode_Account(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -325,7 +321,7 @@ export function _decode_F_CREATE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_CREATE_request,
         undefined
       );
-      return new F_CREATE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_CREATE_request (
         override,
         initial_attributes,
         create_password,

@@ -115,23 +115,19 @@ let _cached_decoder_for_ECWKTParameters: $.ASN1Decoder<ECWKTParameters> | null =
 export
 function _decode_ECWKTParameters (el: _Element) {
     if (!_cached_decoder_for_ECWKTParameters) { _cached_decoder_for_ECWKTParameters = function (el: _Element): ECWKTParameters {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let kdf: OPTIONAL<KeyDerivationFunction>;
     let wrap: OPTIONAL<KeyWrapFunction>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "kdf": (_el: _Element): void => { kdf = $._decode_explicit<KeyDerivationFunction>(() => _decode_KeyDerivationFunction)(_el); },
         "wrap": (_el: _Element): void => { wrap = $._decode_explicit<KeyWrapFunction>(() => _decode_KeyWrapFunction)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ECWKTParameters,
         _extension_additions_list_spec_for_ECWKTParameters,
         _root_component_type_list_2_spec_for_ECWKTParameters,
         undefined,
     );
-    return new ECWKTParameters( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ECWKTParameters( 
         kdf,
         wrap
     );

@@ -147,13 +147,10 @@ export function _decode_SupportedAlgorithm(el: _Element) {
         _cached_decoder_for_SupportedAlgorithm = function (
             el: _Element
         ): SupportedAlgorithm {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let algorithmIdentifier!: AlgorithmIdentifier;
             let intendedUsage: OPTIONAL<KeyUsage>;
             let intendedCertificatePolicies: OPTIONAL<CertificatePoliciesSyntax>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 algorithmIdentifier: (_el: _Element): void => {
                     algorithmIdentifier = _decode_AlgorithmIdentifier(_el);
@@ -169,7 +166,6 @@ export function _decode_SupportedAlgorithm(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -181,7 +177,7 @@ export function _decode_SupportedAlgorithm(el: _Element) {
                 }
             );
             return new SupportedAlgorithm(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ algorithmIdentifier,
+                algorithmIdentifier,
                 intendedUsage,
                 intendedCertificatePolicies,
                 _unrecognizedExtensionsList

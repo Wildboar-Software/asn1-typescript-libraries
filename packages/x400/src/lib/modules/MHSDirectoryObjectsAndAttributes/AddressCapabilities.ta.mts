@@ -142,12 +142,9 @@ export function _decode_AddressCapabilities(el: _Element) {
         _cached_decoder_for_AddressCapabilities = function (
             el: _Element
         ): AddressCapabilities {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let description: OPTIONAL<GeneralString>;
             let address!: ORAddress;
             let capabilities!: Capability[];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 description: (_el: _Element): void => {
                     description = $._decodeGeneralString(_el);
@@ -161,7 +158,6 @@ export function _decode_AddressCapabilities(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_AddressCapabilities(el: _Element) {
                 _root_component_type_list_2_spec_for_AddressCapabilities,
                 undefined
             );
-            return new AddressCapabilities /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AddressCapabilities (
                 description,
                 address,
                 capabilities

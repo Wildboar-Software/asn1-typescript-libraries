@@ -126,11 +126,8 @@ export function _decode_Capture_ResponseParams(el: _Element) {
     _cached_decoder_for_Capture_ResponseParams = function (
       el: _Element
     ): Capture_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let capturedBIR!: BioAPI_BIR_HANDLE;
       let auditData: OPTIONAL<BioAPI_BIR_HANDLE>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         capturedBIR: (_el: _Element): void => {
           capturedBIR = _decode_BioAPI_BIR_HANDLE(_el);
@@ -139,7 +136,6 @@ export function _decode_Capture_ResponseParams(el: _Element) {
           auditData = _decode_BioAPI_BIR_HANDLE(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -148,7 +144,7 @@ export function _decode_Capture_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_Capture_ResponseParams,
         undefined
       );
-      return new Capture_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Capture_ResponseParams (
         capturedBIR,
         auditData
       );

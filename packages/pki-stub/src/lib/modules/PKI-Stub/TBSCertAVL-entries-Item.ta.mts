@@ -141,13 +141,10 @@ export const _extension_additions_list_spec_for_TBSCertAVL_entries_Item: $.Compo
  * @returns {TBSCertAVL_entries_Item} The decoded data structure.
  */
 export function _decode_TBSCertAVL_entries_Item(el: _Element): TBSCertAVL_entries_Item {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let idType!: TBSCertAVL_entries_Item_idType;
     let scope: OPTIONAL<ScopeRestrictions>;
     let entryExtensions: OPTIONAL<Extensions>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         idType: (_el: _Element): void => {
             idType = _decode_TBSCertAVL_entries_Item_idType(_el);
@@ -163,7 +160,6 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element): TBSCertAVL_entrie
             )(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -175,7 +171,7 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element): TBSCertAVL_entrie
         }
     );
     return new TBSCertAVL_entries_Item(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ idType,
+        idType,
         scope,
         entryExtensions,
         _unrecognizedExtensionsList

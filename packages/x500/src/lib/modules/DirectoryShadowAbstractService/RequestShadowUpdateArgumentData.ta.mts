@@ -175,14 +175,11 @@ export function _decode_RequestShadowUpdateArgumentData(el: _Element) {
         _cached_decoder_for_RequestShadowUpdateArgumentData = $._decode_implicit<RequestShadowUpdateArgumentData>(
             () =>
                 function (el: _Element): RequestShadowUpdateArgumentData {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let agreementID!: AgreementID;
                     let lastUpdate: OPTIONAL<Time>;
                     let requestedStrategy!: RequestShadowUpdateArgumentData_requestedStrategy;
                     let securityParameters: OPTIONAL<SecurityParameters>;
                     let _unrecognizedExtensionsList: _Element[] = [];
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         agreementID: (_el: _Element): void => {
                             agreementID = _decode_AgreementID(_el);
@@ -201,7 +198,6 @@ export function _decode_RequestShadowUpdateArgumentData(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -213,7 +209,7 @@ export function _decode_RequestShadowUpdateArgumentData(el: _Element) {
                         }
                     );
                     return new RequestShadowUpdateArgumentData(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ agreementID,
+                        agreementID,
                         lastUpdate,
                         requestedStrategy,
                         securityParameters,

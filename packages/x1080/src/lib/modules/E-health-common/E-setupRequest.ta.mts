@@ -283,7 +283,6 @@ export function _decode_E_setupRequest(el: _Element) {
         _cached_decoder_for_E_setupRequest = function (
             el: _Element
         ): E_setupRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sessionType!: SessionType;
             let sessionId!: SessionId;
             let requirement: OPTIONAL<Requirements> =
@@ -295,8 +294,6 @@ export function _decode_E_setupRequest(el: _Element) {
             let operations!: INTEGER[];
             let first: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sessionType: (_el: _Element): void => {
                     sessionType = _decode_SessionType(_el);
@@ -334,7 +331,6 @@ export function _decode_E_setupRequest(el: _Element) {
                     first = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -345,7 +341,7 @@ export function _decode_E_setupRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new E_setupRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new E_setupRequest (
                 sessionType,
                 sessionId,
                 requirement,

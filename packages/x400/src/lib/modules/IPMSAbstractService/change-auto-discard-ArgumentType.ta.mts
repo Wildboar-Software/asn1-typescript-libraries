@@ -122,7 +122,6 @@ export function _decode_change_auto_discard_ArgumentType(el: _Element) {
             let auto_discard_expired_IPMs!: BOOLEAN;
             let auto_discard_obsolete_IPMs!: BOOLEAN;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-discard-expired-IPMs': (_el: _Element): void => {
                     auto_discard_expired_IPMs = $._decode_implicit<BOOLEAN>(
@@ -135,7 +134,6 @@ export function _decode_change_auto_discard_ArgumentType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

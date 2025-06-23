@@ -359,7 +359,6 @@ let _cached_decoder_for_AlarmInfo: $.ASN1Decoder<AlarmInfo> | null = null;
 export function _decode_AlarmInfo(el: _Element) {
     if (!_cached_decoder_for_AlarmInfo) {
         _cached_decoder_for_AlarmInfo = function (el: _Element): AlarmInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let probableCause!: ProbableCause;
             let specificProblems: OPTIONAL<SpecificProblems>;
             let perceivedSeverity!: PerceivedSeverity;
@@ -374,8 +373,6 @@ export function _decode_AlarmInfo(el: _Element) {
             let proposedRepairActions: OPTIONAL<ProposedRepairActions>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 probableCause: (_el: _Element): void => {
                     probableCause = _decode_ProbableCause(_el);
@@ -440,7 +437,6 @@ export function _decode_AlarmInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -449,7 +445,7 @@ export function _decode_AlarmInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_AlarmInfo,
                 undefined
             );
-            return new AlarmInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AlarmInfo (
                 probableCause,
                 specificProblems,
                 perceivedSeverity,

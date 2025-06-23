@@ -131,11 +131,8 @@ export function _decode_AuthorizationInformationField(el: _Element) {
         _cached_decoder_for_AuthorizationInformationField = function (
             el: _Element
         ): AuthorizationInformationField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let authorization_information!: AuthorizationInformation;
             let authorization_information_qualifier: OPTIONAL<AuthorizationInformationQualifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'authorization-information': (_el: _Element): void => {
                     authorization_information = $._decode_implicit<AuthorizationInformation>(
@@ -150,7 +147,6 @@ export function _decode_AuthorizationInformationField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_AuthorizationInformationField(el: _Element) {
                 _root_component_type_list_2_spec_for_AuthorizationInformationField,
                 undefined
             );
-            return new AuthorizationInformationField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AuthorizationInformationField (
                 authorization_information,
                 authorization_information_qualifier
             );

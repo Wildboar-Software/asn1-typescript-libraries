@@ -129,12 +129,9 @@ export function _decode_HolderIssuerAssertion(el: _Element) {
         _cached_decoder_for_HolderIssuerAssertion = function (
             el: _Element
         ): HolderIssuerAssertion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let holder: OPTIONAL<Holder>;
             let issuer: OPTIONAL<AttCertIssuer>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 holder: (_el: _Element): void => {
                     holder = $._decode_implicit<Holder>(() => _decode_Holder)(
@@ -147,7 +144,6 @@ export function _decode_HolderIssuerAssertion(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_HolderIssuerAssertion(el: _Element) {
                 }
             );
             return new HolderIssuerAssertion(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ holder,
+                holder,
                 issuer,
                 _unrecognizedExtensionsList
             );

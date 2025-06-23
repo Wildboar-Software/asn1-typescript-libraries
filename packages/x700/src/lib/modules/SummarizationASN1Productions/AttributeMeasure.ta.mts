@@ -166,14 +166,11 @@ export function _decode_AttributeMeasure(el: _Element) {
         _cached_decoder_for_AttributeMeasure = function (
             el: _Element
         ): AttributeMeasure {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeId!: AttributeId;
             let attributeValue: OPTIONAL<_Element>;
             let timeStamp: OPTIONAL<TimePeriod>;
             let suspectFlag: OPTIONAL<BOOLEAN> =
                 AttributeMeasure._default_value_for_suspectFlag;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeId: (_el: _Element): void => {
                     attributeId = _decode_AttributeId(_el);
@@ -190,7 +187,6 @@ export function _decode_AttributeMeasure(el: _Element) {
                     suspectFlag = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -199,7 +195,7 @@ export function _decode_AttributeMeasure(el: _Element) {
                 _root_component_type_list_2_spec_for_AttributeMeasure,
                 undefined
             );
-            return new AttributeMeasure /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AttributeMeasure (
                 attributeId,
                 attributeValue,
                 timeStamp,

@@ -150,14 +150,11 @@ let _cached_decoder_for_DDO: $.ASN1Decoder<DDO> | null = null;
 export function _decode_DDO(el: _Element) {
     if (!_cached_decoder_for_DDO) {
         _cached_decoder_for_DDO = function (el: _Element): DDO {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let oid!: OBJECT_IDENTIFIER;
             let odfPath: OPTIONAL<Path>;
             let tokenInfoPath: OPTIONAL<Path>;
             let unusedPath: OPTIONAL<Path>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 oid: (_el: _Element): void => {
                     oid = $._decodeObjectIdentifier(_el);
@@ -176,7 +173,6 @@ export function _decode_DDO(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_DDO(el: _Element) {
                 }
             );
             return new DDO(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ oid,
+                oid,
                 odfPath,
                 tokenInfoPath,
                 unusedPath,

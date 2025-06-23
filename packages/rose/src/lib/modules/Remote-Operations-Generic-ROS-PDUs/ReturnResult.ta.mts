@@ -144,11 +144,8 @@ let _cached_decoder_for_ReturnResult: $.ASN1Decoder<ReturnResult> | null = null;
 export function _decode_ReturnResult(el: _Element) {
   if (!_cached_decoder_for_ReturnResult) {
     _cached_decoder_for_ReturnResult = function (el: _Element): ReturnResult {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let invokeId!: InvokeId;
       let result: OPTIONAL<ReturnResult_result>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         invokeId: (_el: _Element): void => {
           invokeId = _decode_InvokeId(_el);
@@ -157,7 +154,6 @@ export function _decode_ReturnResult(el: _Element) {
           result = _decode_ReturnResult_result(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -166,7 +162,7 @@ export function _decode_ReturnResult(el: _Element) {
         _root_component_type_list_2_spec_for_ReturnResult,
         undefined
       );
-      return new ReturnResult /* SEQUENCE_CONSTRUCTOR_CALL */(invokeId, result);
+      return new ReturnResult (invokeId, result);
     };
   }
   return _cached_decoder_for_ReturnResult(el);

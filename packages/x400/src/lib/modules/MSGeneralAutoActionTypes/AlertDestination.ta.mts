@@ -118,11 +118,8 @@ export function _decode_AlertDestination(el: _Element) {
         _cached_decoder_for_AlertDestination = function (
             el: _Element
         ): AlertDestination {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let alert_address!: EXTERNAL;
             let alert_qualifier: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'alert-address': (_el: _Element): void => {
                     alert_address = $._decodeExternal(_el);
@@ -131,7 +128,6 @@ export function _decode_AlertDestination(el: _Element) {
                     alert_qualifier = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -140,7 +136,7 @@ export function _decode_AlertDestination(el: _Element) {
                 _root_component_type_list_2_spec_for_AlertDestination,
                 undefined
             );
-            return new AlertDestination /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AlertDestination (
                 alert_address,
                 alert_qualifier
             );

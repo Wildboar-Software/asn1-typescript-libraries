@@ -239,7 +239,6 @@ let _cached_decoder_for_CertReply: $.ASN1Decoder<CertReply> | null = null;
 export function _decode_CertReply(el: _Element) {
   if (!_cached_decoder_for_CertReply) {
     _cached_decoder_for_CertReply = function (el: _Element): CertReply {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let cert!: CertReference;
       let replyStatus: OPTIONAL<ReplyStatus> =
         CertReply._default_value_for_replyStatus;
@@ -249,8 +248,6 @@ export function _decode_CertReply(el: _Element) {
       let validationErrors: OPTIONAL<OBJECT_IDENTIFIER[]>;
       let nextUpdate: OPTIONAL<GeneralizedTime>;
       let certReplyExtensions: OPTIONAL<Extensions>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         cert: (_el: _Element): void => {
           cert = _decode_CertReference(_el);
@@ -285,7 +282,6 @@ export function _decode_CertReply(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -294,7 +290,7 @@ export function _decode_CertReply(el: _Element) {
         _root_component_type_list_2_spec_for_CertReply,
         undefined
       );
-      return new CertReply /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CertReply (
         cert,
         replyStatus,
         replyValTime,

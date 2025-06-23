@@ -145,13 +145,10 @@ let _cached_decoder_for_MacData: $.ASN1Decoder<MacData> | null = null;
 export function _decode_MacData(el: _Element) {
     if (!_cached_decoder_for_MacData) {
         _cached_decoder_for_MacData = function (el: _Element): MacData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mac!: DigestInfo;
             let macSalt!: OCTET_STRING;
             let iterations: OPTIONAL<INTEGER> =
                 MacData._default_value_for_iterations;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mac: (_el: _Element): void => {
                     mac = _decode_DigestInfo(_el);
@@ -163,7 +160,6 @@ export function _decode_MacData(el: _Element) {
                     iterations = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_MacData(el: _Element) {
                 undefined
             );
             return new MacData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mac,
+                mac,
                 macSalt,
                 iterations
             );

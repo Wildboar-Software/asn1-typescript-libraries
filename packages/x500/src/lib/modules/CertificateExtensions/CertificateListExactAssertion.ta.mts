@@ -131,12 +131,9 @@ export function _decode_CertificateListExactAssertion(el: _Element) {
         _cached_decoder_for_CertificateListExactAssertion = function (
             el: _Element
         ): CertificateListExactAssertion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let issuer!: Name;
             let thisUpdate!: Time;
             let distributionPoint: OPTIONAL<DistributionPointName>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 issuer: (_el: _Element): void => {
                     issuer = _decode_Name(_el);
@@ -148,7 +145,6 @@ export function _decode_CertificateListExactAssertion(el: _Element) {
                     distributionPoint = _decode_DistributionPointName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_CertificateListExactAssertion(el: _Element) {
                 undefined
             );
             return new CertificateListExactAssertion(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
+                issuer,
                 thisUpdate,
                 distributionPoint
             );

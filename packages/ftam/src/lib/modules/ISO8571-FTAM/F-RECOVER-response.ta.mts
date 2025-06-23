@@ -282,7 +282,6 @@ export function _decode_F_RECOVER_response(el: _Element) {
     _cached_decoder_for_F_RECOVER_response = function (
       el: _Element
     ): F_RECOVER_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let state_result: OPTIONAL<State_Result> =
         F_RECOVER_response._default_value_for_state_result;
       let action_result: OPTIONAL<Action_Result> =
@@ -296,8 +295,6 @@ export function _decode_F_RECOVER_response(el: _Element) {
       let concurrent_recovery_point: OPTIONAL<INTEGER>;
       let last_transfer_end_read_request: OPTIONAL<INTEGER>;
       let last_transfer_end_write_request: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'state-result': (_el: _Element): void => {
           state_result = _decode_State_Result(_el);
@@ -339,7 +336,6 @@ export function _decode_F_RECOVER_response(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -348,7 +344,7 @@ export function _decode_F_RECOVER_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_RECOVER_response,
         undefined
       );
-      return new F_RECOVER_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_RECOVER_response (
         state_result,
         action_result,
         contents_type,

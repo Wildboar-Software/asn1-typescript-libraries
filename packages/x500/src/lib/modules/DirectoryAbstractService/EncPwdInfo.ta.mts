@@ -128,12 +128,9 @@ let _cached_decoder_for_EncPwdInfo: $.ASN1Decoder<EncPwdInfo> | null = null;
 export function _decode_EncPwdInfo(el: _Element) {
     if (!_cached_decoder_for_EncPwdInfo) {
         _cached_decoder_for_EncPwdInfo = function (el: _Element): EncPwdInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let algorithms: OPTIONAL<AlgorithmIdentifier[]>;
             let pwdQualityRule: OPTIONAL<AttributeTypeAndValue[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 algorithms: (_el: _Element): void => {
                     algorithms = $._decode_explicit<AlgorithmIdentifier[]>(() =>
@@ -152,7 +149,6 @@ export function _decode_EncPwdInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -164,7 +160,7 @@ export function _decode_EncPwdInfo(el: _Element) {
                 }
             );
             return new EncPwdInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ algorithms,
+                algorithms,
                 pwdQualityRule,
                 _unrecognizedExtensionsList
             );

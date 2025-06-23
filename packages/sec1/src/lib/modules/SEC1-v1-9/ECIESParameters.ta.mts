@@ -124,25 +124,21 @@ let _cached_decoder_for_ECIESParameters: $.ASN1Decoder<ECIESParameters> | null =
 export
 function _decode_ECIESParameters (el: _Element) {
     if (!_cached_decoder_for_ECIESParameters) { _cached_decoder_for_ECIESParameters = function (el: _Element): ECIESParameters {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let kdf: OPTIONAL<KeyDerivationFunction>;
     let sym: OPTIONAL<SymmetricEncryption>;
     let mac: OPTIONAL<MessageAuthenticationCode>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "kdf": (_el: _Element): void => { kdf = $._decode_explicit<KeyDerivationFunction>(() => _decode_KeyDerivationFunction)(_el); },
         "sym": (_el: _Element): void => { sym = $._decode_explicit<SymmetricEncryption>(() => _decode_SymmetricEncryption)(_el); },
         "mac": (_el: _Element): void => { mac = $._decode_explicit<MessageAuthenticationCode>(() => _decode_MessageAuthenticationCode)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ECIESParameters,
         _extension_additions_list_spec_for_ECIESParameters,
         _root_component_type_list_2_spec_for_ECIESParameters,
         undefined,
     );
-    return new ECIESParameters( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ECIESParameters( 
         kdf,
         sym,
         mac

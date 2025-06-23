@@ -290,7 +290,6 @@ export function _decode_TestResultInfo(el: _Element) {
         _cached_decoder_for_TestResultInfo = function (
             el: _Element
         ): TestResultInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let testInvocationId: OPTIONAL<TestInvocationId>;
             let testSessionId: OPTIONAL<TestSessionId>;
             let testOutcome: OPTIONAL<TestOutcome>;
@@ -302,8 +301,6 @@ export function _decode_TestResultInfo(el: _Element) {
             let additionalInformation: OPTIONAL<AdditionalInformation>;
             let notificationIdentifier: OPTIONAL<NotificationIdentifier>;
             let correlatedNotifications: OPTIONAL<CorrelatedNotifications>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 testInvocationId: (_el: _Element): void => {
                     testInvocationId = $._decode_explicit<TestInvocationId>(
@@ -359,7 +356,6 @@ export function _decode_TestResultInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -368,7 +364,7 @@ export function _decode_TestResultInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_TestResultInfo,
                 undefined
             );
-            return new TestResultInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestResultInfo (
                 testInvocationId,
                 testSessionId,
                 testOutcome,

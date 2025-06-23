@@ -164,13 +164,10 @@ export function _decode_ConnectionTestInfo(el: _Element) {
         _cached_decoder_for_ConnectionTestInfo = function (
             el: _Element
         ): ConnectionTestInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let testPattern: OPTIONAL<TestPattern>;
             let testDirection: OPTIONAL<TestDirection>;
             let testDuration: OPTIONAL<TestDuration>;
             let reportingInterval: OPTIONAL<Timespec>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 testPattern: (_el: _Element): void => {
                     testPattern = $._decode_explicit<TestPattern>(
@@ -193,7 +190,6 @@ export function _decode_ConnectionTestInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -202,7 +198,7 @@ export function _decode_ConnectionTestInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ConnectionTestInfo,
                 undefined
             );
-            return new ConnectionTestInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ConnectionTestInfo (
                 testPattern,
                 testDirection,
                 testDuration,

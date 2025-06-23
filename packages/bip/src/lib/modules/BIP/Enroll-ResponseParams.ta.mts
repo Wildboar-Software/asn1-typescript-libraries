@@ -147,12 +147,9 @@ export function _decode_Enroll_ResponseParams(el: _Element) {
     _cached_decoder_for_Enroll_ResponseParams = function (
       el: _Element
     ): Enroll_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let newTemplate!: BioAPI_BIR_HANDLE;
       let auditData: OPTIONAL<BioAPI_BIR_HANDLE>;
       let templateUuid: OPTIONAL<BioAPI_UUID>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         newTemplate: (_el: _Element): void => {
           newTemplate = _decode_BioAPI_BIR_HANDLE(_el);
@@ -164,7 +161,6 @@ export function _decode_Enroll_ResponseParams(el: _Element) {
           templateUuid = _decode_BioAPI_UUID(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -173,7 +169,7 @@ export function _decode_Enroll_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_Enroll_ResponseParams,
         undefined
       );
-      return new Enroll_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Enroll_ResponseParams (
         newTemplate,
         auditData,
         templateUuid

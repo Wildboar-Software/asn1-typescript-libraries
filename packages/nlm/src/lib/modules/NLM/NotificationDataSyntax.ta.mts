@@ -156,13 +156,10 @@ export function _decode_NotificationDataSyntax(el: _Element) {
         _cached_decoder_for_NotificationDataSyntax = function (
             el: _Element
         ): NotificationDataSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let channel: OPTIONAL<LogicalChannelId>;
             let packetHeader!: OCTET_STRING;
             let diagnosticCode!: OCTET_STRING;
             let causeCode!: OCTET_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 channel: (_el: _Element): void => {
                     channel = $._decode_implicit<LogicalChannelId>(
@@ -185,7 +182,6 @@ export function _decode_NotificationDataSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -194,7 +190,7 @@ export function _decode_NotificationDataSyntax(el: _Element) {
                 _root_component_type_list_2_spec_for_NotificationDataSyntax,
                 undefined
             );
-            return new NotificationDataSyntax /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NotificationDataSyntax (
                 channel,
                 packetHeader,
                 diagnosticCode,

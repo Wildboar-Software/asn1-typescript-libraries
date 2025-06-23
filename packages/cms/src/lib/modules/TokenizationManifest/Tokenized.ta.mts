@@ -114,11 +114,8 @@ let _cached_decoder_for_Tokenized: $.ASN1Decoder<Tokenized> | null = null;
 export function _decode_Tokenized(el: _Element) {
     if (!_cached_decoder_for_Tokenized) {
         _cached_decoder_for_Tokenized = function (el: _Element): Tokenized {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: OBJECT_IDENTIFIER;
             let parts: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = $._decodeObjectIdentifier(_el);
@@ -127,7 +124,6 @@ export function _decode_Tokenized(el: _Element) {
                     parts = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -136,7 +132,7 @@ export function _decode_Tokenized(el: _Element) {
                 _root_component_type_list_2_spec_for_Tokenized,
                 undefined
             );
-            return new Tokenized /* SEQUENCE_CONSTRUCTOR_CALL */(name, parts);
+            return new Tokenized (name, parts);
         };
     }
     return _cached_decoder_for_Tokenized(el);

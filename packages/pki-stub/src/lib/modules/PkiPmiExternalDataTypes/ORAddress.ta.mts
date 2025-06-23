@@ -138,12 +138,9 @@ export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] =
  * @returns {ORAddress} The decoded data structure.
  */
 export function _decode_ORAddress(el: _Element): ORAddress {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let built_in_standard_attributes!: BuiltInStandardAttributes;
     let built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>;
     let extension_attributes: OPTIONAL<ExtensionAttributes>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "built-in-standard-attributes": (_el: _Element): void => {
             built_in_standard_attributes =
@@ -157,7 +154,6 @@ export function _decode_ORAddress(el: _Element): ORAddress {
             extension_attributes = _decode_ExtensionAttributes(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -167,7 +163,7 @@ export function _decode_ORAddress(el: _Element): ORAddress {
         undefined
     );
     return new ORAddress(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ built_in_standard_attributes,
+        built_in_standard_attributes,
         built_in_domain_defined_attributes,
         extension_attributes
     );

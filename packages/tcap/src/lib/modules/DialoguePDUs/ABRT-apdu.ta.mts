@@ -121,11 +121,8 @@ export function _decode_ABRT_apdu(el: _Element) {
         _cached_decoder_for_ABRT_apdu = $._decode_implicit<ABRT_apdu>(
             () =>
                 function (el: _Element): ABRT_apdu {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let abort_source!: ABRT_source;
                     let user_information: OPTIONAL<EXTERNAL[]>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         'abort-source': (_el: _Element): void => {
                             abort_source = $._decode_implicit<ABRT_source>(
@@ -141,7 +138,6 @@ export function _decode_ABRT_apdu(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -150,7 +146,7 @@ export function _decode_ABRT_apdu(el: _Element) {
                         _root_component_type_list_2_spec_for_ABRT_apdu,
                         undefined
                     );
-                    return new ABRT_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+                    return new ABRT_apdu (
                         abort_source,
                         user_information
                     );

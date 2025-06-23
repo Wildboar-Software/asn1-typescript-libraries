@@ -146,12 +146,9 @@ export function _decode_NonDeliveryInformation(el: _Element) {
         _cached_decoder_for_NonDeliveryInformation = function (
             el: _Element
         ): NonDeliveryInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reason!: NonDeliveryReasonCode;
             let diagnostic: OPTIONAL<NonDeliveryDiagnosticCode>;
             let supplementary_information: OPTIONAL<SupplementaryInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reason: (_el: _Element): void => {
                     reason = $._decode_implicit<NonDeliveryReasonCode>(
@@ -169,7 +166,6 @@ export function _decode_NonDeliveryInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_NonDeliveryInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_NonDeliveryInformation,
                 undefined
             );
-            return new NonDeliveryInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NonDeliveryInformation (
                 reason,
                 diagnostic,
                 supplementary_information

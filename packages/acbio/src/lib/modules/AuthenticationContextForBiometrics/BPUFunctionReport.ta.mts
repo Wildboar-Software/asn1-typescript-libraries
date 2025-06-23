@@ -146,12 +146,9 @@ export function _decode_BPUFunctionReport(el: _Element) {
         _cached_decoder_for_BPUFunctionReport = function (
             el: _Element
         ): BPUFunctionReport {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bpuSubprocessInformationList!: BPUSubprocessInformationList;
             let bpuInputStaticInformationList: OPTIONAL<BPUIOStaticInformationList>;
             let bpuOutputStaticInformationList: OPTIONAL<BPUIOStaticInformationList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bpuSubprocessInformationList: (_el: _Element): void => {
                     bpuSubprocessInformationList = _decode_BPUSubprocessInformationList(
@@ -169,7 +166,6 @@ export function _decode_BPUFunctionReport(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_BPUFunctionReport(el: _Element) {
                 _root_component_type_list_2_spec_for_BPUFunctionReport,
                 undefined
             );
-            return new BPUFunctionReport /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BPUFunctionReport (
                 bpuSubprocessInformationList,
                 bpuInputStaticInformationList,
                 bpuOutputStaticInformationList

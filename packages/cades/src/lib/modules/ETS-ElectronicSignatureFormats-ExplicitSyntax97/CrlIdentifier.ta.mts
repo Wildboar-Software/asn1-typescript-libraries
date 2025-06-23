@@ -127,25 +127,21 @@ let _cached_decoder_for_CrlIdentifier: $.ASN1Decoder<CrlIdentifier> | null = nul
 export
 function _decode_CrlIdentifier (el: _Element) {
     if (!_cached_decoder_for_CrlIdentifier) { _cached_decoder_for_CrlIdentifier = function (el: _Element): CrlIdentifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let crlissuer!: Name;
     let crlIssuedTime!: UTCTime;
     let crlNumber: OPTIONAL<INTEGER>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "crlissuer": (_el: _Element): void => { crlissuer = _decode_Name(_el); },
         "crlIssuedTime": (_el: _Element): void => { crlIssuedTime = $._decodeUTCTime(_el); },
         "crlNumber": (_el: _Element): void => { crlNumber = $._decodeInteger(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CrlIdentifier,
         _extension_additions_list_spec_for_CrlIdentifier,
         _root_component_type_list_2_spec_for_CrlIdentifier,
         undefined,
     );
-    return new CrlIdentifier( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CrlIdentifier( 
         crlissuer,
         crlIssuedTime,
         crlNumber

@@ -118,11 +118,8 @@ let _cached_decoder_for_QName: $.ASN1Decoder<QName> | null = null;
 export function _decode_QName(el: _Element) {
   if (!_cached_decoder_for_QName) {
     _cached_decoder_for_QName = function (el: _Element): QName {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let uri: OPTIONAL<AnyURI>;
       let name!: NCName;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         uri: (_el: _Element): void => {
           uri = _decode_AnyURI(_el);
@@ -131,7 +128,6 @@ export function _decode_QName(el: _Element) {
           name = _decode_NCName(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -140,7 +136,7 @@ export function _decode_QName(el: _Element) {
         _root_component_type_list_2_spec_for_QName,
         undefined
       );
-      return new QName /* SEQUENCE_CONSTRUCTOR_CALL */(uri, name);
+      return new QName (uri, name);
     };
   }
   return _cached_decoder_for_QName(el);

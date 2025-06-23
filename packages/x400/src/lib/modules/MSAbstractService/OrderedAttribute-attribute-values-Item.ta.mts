@@ -118,11 +118,8 @@ export function _decode_OrderedAttribute_attribute_values_Item(el: _Element) {
         _cached_decoder_for_OrderedAttribute_attribute_values_Item = function (
             el: _Element
         ): OrderedAttribute_attribute_values_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let value: OPTIONAL<_Element>;
             let position: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 value: (_el: _Element): void => {
                     value = $._decode_explicit<_Element>(() => $._decodeAny)(
@@ -135,7 +132,6 @@ export function _decode_OrderedAttribute_attribute_values_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_OrderedAttribute_attribute_values_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_OrderedAttribute_attribute_values_Item,
                 undefined
             );
-            return new OrderedAttribute_attribute_values_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new OrderedAttribute_attribute_values_Item (
                 value,
                 position
             );

@@ -123,23 +123,19 @@ let _cached_decoder_for_LogRcAMessageContent: $.ASN1Decoder<LogRcAMessageContent
 export
 function _decode_LogRcAMessageContent (el: _Element) {
     if (!_cached_decoder_for_LogRcAMessageContent) { _cached_decoder_for_LogRcAMessageContent = function (el: _Element): LogRcAMessageContent {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let sessionID!: OCTET_STRING;
     let logResponseInfo: OPTIONAL<OCTET_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "sessionID": (_el: _Element): void => { sessionID = $._decodeOctetString(_el); },
         "logResponseInfo": (_el: _Element): void => { logResponseInfo = $._decodeOctetString(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_LogRcAMessageContent,
         _extension_additions_list_spec_for_LogRcAMessageContent,
         _root_component_type_list_2_spec_for_LogRcAMessageContent,
         undefined,
     );
-    return new LogRcAMessageContent( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new LogRcAMessageContent( 
         sessionID,
         logResponseInfo
     );

@@ -178,14 +178,11 @@ export function _decode_EnvelopedData(el: _Element) {
         _cached_decoder_for_EnvelopedData = function (
             el: _Element
         ): EnvelopedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: Version;
             let originatorInfo: OPTIONAL<OriginatorInfo>;
             let recipientInfos!: RecipientInfos;
             let encryptedContentInfo!: EncryptedContentInfo;
             let unprotectedAttributes: OPTIONAL<Attributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -207,7 +204,6 @@ export function _decode_EnvelopedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -217,7 +213,7 @@ export function _decode_EnvelopedData(el: _Element) {
                 undefined
             );
             return new EnvelopedData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 originatorInfo,
                 recipientInfos,
                 encryptedContentInfo,

@@ -146,12 +146,9 @@ export function _decode_BiometricProcess(el: _Element) {
         _cached_decoder_for_BiometricProcess = function (
             el: _Element
         ): BiometricProcess {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subprocessIndexList!: SubprocessIndexList;
             let bpuInputExecutionInformationList: OPTIONAL<BPUIOExecutionInformationList>;
             let bpuOuputExecutionInformationList: OPTIONAL<BPUIOExecutionInformationList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subprocessIndexList: (_el: _Element): void => {
                     subprocessIndexList = _decode_SubprocessIndexList(_el);
@@ -167,7 +164,6 @@ export function _decode_BiometricProcess(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -176,7 +172,7 @@ export function _decode_BiometricProcess(el: _Element) {
                 _root_component_type_list_2_spec_for_BiometricProcess,
                 undefined
             );
-            return new BiometricProcess /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BiometricProcess (
                 subprocessIndexList,
                 bpuInputExecutionInformationList,
                 bpuOuputExecutionInformationList

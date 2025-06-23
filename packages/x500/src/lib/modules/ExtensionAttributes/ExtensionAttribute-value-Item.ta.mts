@@ -152,15 +152,12 @@ export function _decode_ExtensionAttribute_value_Item(el: _Element) {
         _cached_decoder_for_ExtensionAttribute_value_Item = function (
             el: _Element
         ): ExtensionAttribute_value_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mandatory: OPTIONAL<BOOLEAN> =
                 ExtensionAttribute_value_Item._default_value_for_mandatory;
             let critical: OPTIONAL<BOOLEAN> =
                 ExtensionAttribute_value_Item._default_value_for_critical;
             let ext!: _Element;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mandatory: (_el: _Element): void => {
                     mandatory = $._decode_explicit<BOOLEAN>(
@@ -176,7 +173,6 @@ export function _decode_ExtensionAttribute_value_Item(el: _Element) {
                     ext = $._decode_explicit<_Element>(() => $._decodeAny)(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_ExtensionAttribute_value_Item(el: _Element) {
                 }
             );
             return new ExtensionAttribute_value_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mandatory,
+                mandatory,
                 critical,
                 ext,
                 _unrecognizedExtensionsList

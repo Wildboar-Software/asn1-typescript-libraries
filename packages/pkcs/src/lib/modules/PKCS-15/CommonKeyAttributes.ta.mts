@@ -223,7 +223,6 @@ export function _decode_CommonKeyAttributes(el: _Element) {
         _cached_decoder_for_CommonKeyAttributes = function (
             el: _Element
         ): CommonKeyAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let iD!: Identifier;
             let usage!: KeyUsageFlags;
             let native: OPTIONAL<BOOLEAN> =
@@ -233,8 +232,6 @@ export function _decode_CommonKeyAttributes(el: _Element) {
             let startDate: OPTIONAL<GeneralizedTime>;
             let endDate: OPTIONAL<GeneralizedTime>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 iD: (_el: _Element): void => {
                     iD = _decode_Identifier(_el);
@@ -260,7 +257,6 @@ export function _decode_CommonKeyAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -272,7 +268,7 @@ export function _decode_CommonKeyAttributes(el: _Element) {
                 }
             );
             return new CommonKeyAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ iD,
+                iD,
                 usage,
                 native,
                 accessFlags,

@@ -168,13 +168,10 @@ let _cached_decoder_for_Element: $.ASN1Decoder<Element> | null = null;
 export function _decode_Element(el: _Element) {
   if (!_cached_decoder_for_Element) {
     _cached_decoder_for_Element = function (el: _Element): Element {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let namespace_attributes: OPTIONAL<NamespaceAttribute[]>;
       let qualified_name!: QualifiedNameOrIndex;
       let attributes: OPTIONAL<Attribute[]>;
       let children!: Element_children_Item[];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'namespace-attributes': (_el: _Element): void => {
           namespace_attributes = $._decodeSequenceOf<NamespaceAttribute>(
@@ -195,7 +192,6 @@ export function _decode_Element(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -204,7 +200,7 @@ export function _decode_Element(el: _Element) {
         _root_component_type_list_2_spec_for_Element,
         undefined
       );
-      return new Element /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Element (
         namespace_attributes,
         qualified_name,
         attributes,

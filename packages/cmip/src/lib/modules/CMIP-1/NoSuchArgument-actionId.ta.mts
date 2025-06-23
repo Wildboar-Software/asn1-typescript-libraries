@@ -125,11 +125,8 @@ export function _decode_NoSuchArgument_actionId(el: _Element) {
     _cached_decoder_for_NoSuchArgument_actionId = function (
       el: _Element
     ): NoSuchArgument_actionId {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let actionType!: ActionTypeId;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -138,7 +135,6 @@ export function _decode_NoSuchArgument_actionId(el: _Element) {
           actionType = _decode_ActionTypeId(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -147,7 +143,7 @@ export function _decode_NoSuchArgument_actionId(el: _Element) {
         _root_component_type_list_2_spec_for_NoSuchArgument_actionId,
         undefined
       );
-      return new NoSuchArgument_actionId /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new NoSuchArgument_actionId (
         managedObjectClass,
         actionType
       );

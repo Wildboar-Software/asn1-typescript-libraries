@@ -139,13 +139,10 @@ let _cached_decoder_for_MITSearch: $.ASN1Decoder<MITSearch> | null = null;
 export function _decode_MITSearch(el: _Element) {
     if (!_cached_decoder_for_MITSearch) {
         _cached_decoder_for_MITSearch = function (el: _Element): MITSearch {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let base!: ObjectInstance;
             let discoveryScope!: Scope;
             let classRequest: OPTIONAL<BOOLEAN> =
                 MITSearch._default_value_for_classRequest;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 base: (_el: _Element): void => {
                     base = _decode_ObjectInstance(_el);
@@ -157,7 +154,6 @@ export function _decode_MITSearch(el: _Element) {
                     classRequest = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -166,7 +162,7 @@ export function _decode_MITSearch(el: _Element) {
                 _root_component_type_list_2_spec_for_MITSearch,
                 undefined
             );
-            return new MITSearch /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MITSearch (
                 base,
                 discoveryScope,
                 classRequest

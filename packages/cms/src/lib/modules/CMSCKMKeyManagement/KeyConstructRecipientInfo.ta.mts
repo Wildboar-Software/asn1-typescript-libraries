@@ -202,15 +202,12 @@ export function _decode_KeyConstructRecipientInfo(el: _Element) {
         _cached_decoder_for_KeyConstructRecipientInfo = function (
             el: _Element
         ): KeyConstructRecipientInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: Version;
             let did: OPTIONAL<KeyConstructionDomain>;
             let ckmid!: KeyConstructionRecipient;
             let ukm: OPTIONAL<UserKeyingMaterial>;
             let keyConstructionAlgorithm!: KeyConstructionAlgorithmIdentifier;
             let encryptedRandom!: EncryptedKey;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -235,7 +232,6 @@ export function _decode_KeyConstructRecipientInfo(el: _Element) {
                     encryptedRandom = _decode_EncryptedKey(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -244,7 +240,7 @@ export function _decode_KeyConstructRecipientInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_KeyConstructRecipientInfo,
                 undefined
             );
-            return new KeyConstructRecipientInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new KeyConstructRecipientInfo (
                 version,
                 did,
                 ckmid,

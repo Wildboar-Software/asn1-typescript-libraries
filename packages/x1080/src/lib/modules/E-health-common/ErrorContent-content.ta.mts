@@ -155,14 +155,11 @@ export function _decode_ErrorContent_content(el: _Element) {
         _cached_decoder_for_ErrorContent_content = function (
             el: _Element
         ): ErrorContent_content {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokId: OPTIONAL<INTEGER>;
             let sessionType!: SessionType;
             let sessionId!: INTEGER;
             let error!: _Element;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokId: (_el: _Element): void => {
                     invokId = $._decodeInteger(_el);
@@ -177,7 +174,6 @@ export function _decode_ErrorContent_content(el: _Element) {
                     error = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_ErrorContent_content(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ErrorContent_content /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ErrorContent_content (
                 invokId,
                 sessionType,
                 sessionId,

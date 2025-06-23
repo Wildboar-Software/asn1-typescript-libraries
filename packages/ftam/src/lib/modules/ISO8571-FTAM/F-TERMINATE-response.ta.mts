@@ -131,11 +131,8 @@ export function _decode_F_TERMINATE_response(el: _Element) {
     _cached_decoder_for_F_TERMINATE_response = function (
       el: _Element
     ): F_TERMINATE_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let charging: OPTIONAL<Charging>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'shared-ASE-information': (_el: _Element): void => {
           shared_ASE_information = _decode_Shared_ASE_Information(_el);
@@ -144,7 +141,6 @@ export function _decode_F_TERMINATE_response(el: _Element) {
           charging = _decode_Charging(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -153,7 +149,7 @@ export function _decode_F_TERMINATE_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_TERMINATE_response,
         undefined
       );
-      return new F_TERMINATE_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_TERMINATE_response (
         shared_ASE_information,
         charging
       );

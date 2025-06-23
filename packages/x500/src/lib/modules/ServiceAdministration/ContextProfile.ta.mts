@@ -121,12 +121,9 @@ export function _decode_ContextProfile(el: _Element) {
         _cached_decoder_for_ContextProfile = function (
             el: _Element
         ): ContextProfile {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let contextType!: OBJECT_IDENTIFIER;
             let contextValue: OPTIONAL<_Element[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 contextType: (_el: _Element): void => {
                     contextType = $._decodeObjectIdentifier(_el);
@@ -137,7 +134,6 @@ export function _decode_ContextProfile(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -149,7 +145,7 @@ export function _decode_ContextProfile(el: _Element) {
                 }
             );
             return new ContextProfile(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ contextType,
+                contextType,
                 contextValue,
                 _unrecognizedExtensionsList
             );

@@ -242,7 +242,6 @@ export function _decode_OpBindingErrorParam(el: _Element) {
         _cached_decoder_for_OpBindingErrorParam = function (
             el: _Element
         ): OpBindingErrorParam {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let problem!: OpBindingErrorParam_problem;
             let bindingType: OPTIONAL<OBJECT_IDENTIFIER>;
             let agreementProposal: OPTIONAL<_Element>;
@@ -253,8 +252,6 @@ export function _decode_OpBindingErrorParam(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 OpBindingErrorParam._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<OpBindingErrorParam_problem>(
@@ -295,7 +292,6 @@ export function _decode_OpBindingErrorParam(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -307,7 +303,7 @@ export function _decode_OpBindingErrorParam(el: _Element) {
                 }
             );
             return new OpBindingErrorParam(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ problem,
+                problem,
                 bindingType,
                 agreementProposal,
                 retryAt,

@@ -124,11 +124,8 @@ let _cached_decoder_for_DefinedType: $.ASN1Decoder<DefinedType> | null = null;
 export function _decode_DefinedType(el: _Element) {
     if (!_cached_decoder_for_DefinedType) {
         _cached_decoder_for_DefinedType = function (el: _Element): DefinedType {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let module_: OPTIONAL<Identifier>;
             let reference!: Identifier;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 module: (_el: _Element): void => {
                     module_ = $._decode_implicit<Identifier>(
@@ -141,7 +138,6 @@ export function _decode_DefinedType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_DefinedType(el: _Element) {
                 _root_component_type_list_2_spec_for_DefinedType,
                 undefined
             );
-            return new DefinedType /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DefinedType (
                 module_,
                 reference
             );

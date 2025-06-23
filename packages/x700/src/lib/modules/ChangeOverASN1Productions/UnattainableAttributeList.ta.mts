@@ -125,11 +125,8 @@ export function _decode_UnattainableAttributeList(el: _Element) {
         _cached_decoder_for_UnattainableAttributeList = function (
             el: _Element
         ): UnattainableAttributeList {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primaryChanges: OPTIONAL<ExpectedAttributeList>;
             let secondaryChanges: OPTIONAL<ExpectedAttributeList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 primaryChanges: (_el: _Element): void => {
                     primaryChanges = $._decode_implicit<ExpectedAttributeList>(
@@ -142,7 +139,6 @@ export function _decode_UnattainableAttributeList(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_UnattainableAttributeList(el: _Element) {
                 _root_component_type_list_2_spec_for_UnattainableAttributeList,
                 undefined
             );
-            return new UnattainableAttributeList /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new UnattainableAttributeList (
                 primaryChanges,
                 secondaryChanges
             );

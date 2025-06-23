@@ -219,7 +219,6 @@ export function _decode_TbsHandshakeWrpRej(el: _Element) {
         _cached_decoder_for_TbsHandshakeWrpRej = function (
             el: _Element
         ): TbsHandshakeWrpRej {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 TbsHandshakeWrpRej._default_value_for_version;
             let sigSel!: TbsHandshakeWrpRej_sigSel;
@@ -228,8 +227,6 @@ export function _decode_TbsHandshakeWrpRej(el: _Element) {
             let pkiPath!: DER_PkiPath;
             let diag: OPTIONAL<WrpError>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -250,7 +247,6 @@ export function _decode_TbsHandshakeWrpRej(el: _Element) {
                     diag = _decode_WrpError(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -262,7 +258,7 @@ export function _decode_TbsHandshakeWrpRej(el: _Element) {
                 }
             );
             return new TbsHandshakeWrpRej(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sigSel,
                 assoID,
                 time,

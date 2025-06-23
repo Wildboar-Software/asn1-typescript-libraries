@@ -129,7 +129,6 @@ export function _decode_RTORJapdu(el: _Element) {
       let refuseReason: OPTIONAL<RefuseReason>;
       let userDataRJ: OPTIONAL<_Element>;
       /* END_OF_SET_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         refuseReason: (_el: _Element): void => {
           refuseReason = $._decode_implicit<RefuseReason>(
@@ -140,7 +139,6 @@ export function _decode_RTORJapdu(el: _Element) {
           userDataRJ = $._decode_explicit<_Element>(() => $._decodeAny)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_set(
         el,
         callbacks,

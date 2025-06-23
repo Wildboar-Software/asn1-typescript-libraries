@@ -123,7 +123,6 @@ export function _decode_UnformattedPostalAddress(el: _Element) {
             let printable_address: OPTIONAL<PrintableString[]>;
             let teletex_string: OPTIONAL<TeletexString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "printable-address": (_el: _Element): void => {
                     printable_address = $._decodeSequenceOf<PrintableString>(
@@ -134,7 +133,6 @@ export function _decode_UnformattedPostalAddress(el: _Element) {
                     teletex_string = $._decodeTeletexString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

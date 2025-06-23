@@ -129,11 +129,8 @@ let _cached_decoder_for_PA_ENC_TS_ENC: $.ASN1Decoder<PA_ENC_TS_ENC> | null = nul
 export function _decode_PA_ENC_TS_ENC(el: _Element) {
   if (!_cached_decoder_for_PA_ENC_TS_ENC) {
     _cached_decoder_for_PA_ENC_TS_ENC = function (el: _Element): PA_ENC_TS_ENC {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let patimestamp!: KerberosTime;
       let pausec: OPTIONAL<Microseconds>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         patimestamp: (_el: _Element): void => {
           patimestamp = $._decode_explicit<KerberosTime>(
@@ -146,7 +143,6 @@ export function _decode_PA_ENC_TS_ENC(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -155,7 +151,7 @@ export function _decode_PA_ENC_TS_ENC(el: _Element) {
         _root_component_type_list_2_spec_for_PA_ENC_TS_ENC,
         undefined
       );
-      return new PA_ENC_TS_ENC /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new PA_ENC_TS_ENC (
         patimestamp,
         pausec
       );

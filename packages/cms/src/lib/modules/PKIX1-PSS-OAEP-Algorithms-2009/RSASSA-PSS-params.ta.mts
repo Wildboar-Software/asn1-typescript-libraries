@@ -194,7 +194,6 @@ export function _decode_RSASSA_PSS_params(el: _Element) {
         _cached_decoder_for_RSASSA_PSS_params = function (
             el: _Element
         ): RSASSA_PSS_params {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hashAlgorithm: OPTIONAL<HashAlgorithm> =
                 RSASSA_PSS_params._default_value_for_hashAlgorithm;
             let maskGenAlgorithm: OPTIONAL<MaskGenAlgorithm> =
@@ -203,8 +202,6 @@ export function _decode_RSASSA_PSS_params(el: _Element) {
                 RSASSA_PSS_params._default_value_for_saltLength;
             let trailerField: OPTIONAL<INTEGER> =
                 RSASSA_PSS_params._default_value_for_trailerField;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hashAlgorithm: (_el: _Element): void => {
                     hashAlgorithm = $._decode_explicit<HashAlgorithm>(
@@ -227,7 +224,6 @@ export function _decode_RSASSA_PSS_params(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -236,7 +232,7 @@ export function _decode_RSASSA_PSS_params(el: _Element) {
                 _root_component_type_list_2_spec_for_RSASSA_PSS_params,
                 undefined
             );
-            return new RSASSA_PSS_params /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RSASSA_PSS_params (
                 hashAlgorithm,
                 maskGenAlgorithm,
                 saltLength,

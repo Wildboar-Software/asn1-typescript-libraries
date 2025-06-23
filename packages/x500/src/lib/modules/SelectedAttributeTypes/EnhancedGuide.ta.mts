@@ -157,14 +157,11 @@ export function _decode_EnhancedGuide(el: _Element) {
         _cached_decoder_for_EnhancedGuide = function (
             el: _Element
         ): EnhancedGuide {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objectClass!: OBJECT_IDENTIFIER;
             let criteria!: Criteria;
             let subset: OPTIONAL<EnhancedGuide_subset> =
                 EnhancedGuide._default_value_for_subset;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectClass: (_el: _Element): void => {
                     objectClass = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -182,7 +179,6 @@ export function _decode_EnhancedGuide(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -194,7 +190,7 @@ export function _decode_EnhancedGuide(el: _Element) {
                 }
             );
             return new EnhancedGuide(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ objectClass,
+                objectClass,
                 criteria,
                 subset,
                 _unrecognizedExtensionsList

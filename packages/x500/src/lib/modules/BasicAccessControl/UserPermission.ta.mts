@@ -148,13 +148,10 @@ export function _decode_UserPermission(el: _Element) {
         _cached_decoder_for_UserPermission = function (
             el: _Element
         ): UserPermission {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let precedence: OPTIONAL<Precedence>;
             let protectedItems!: ProtectedItems;
             let grantsAndDenials!: GrantsAndDenials;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 precedence: (_el: _Element): void => {
                     precedence = _decode_Precedence(_el);
@@ -166,7 +163,6 @@ export function _decode_UserPermission(el: _Element) {
                     grantsAndDenials = _decode_GrantsAndDenials(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_UserPermission(el: _Element) {
                 }
             );
             return new UserPermission(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ precedence,
+                precedence,
                 protectedItems,
                 grantsAndDenials,
                 _unrecognizedExtensionsList

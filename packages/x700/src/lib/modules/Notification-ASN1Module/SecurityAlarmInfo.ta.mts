@@ -266,7 +266,6 @@ export function _decode_SecurityAlarmInfo(el: _Element) {
         _cached_decoder_for_SecurityAlarmInfo = function (
             el: _Element
         ): SecurityAlarmInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let securityAlarmCause!: SecurityAlarmCause;
             let securityAlarmSeverity!: SecurityAlarmSeverity;
             let securityAlarmDetector!: SecurityAlarmDetector;
@@ -276,8 +275,6 @@ export function _decode_SecurityAlarmInfo(el: _Element) {
             let correlatedNotifications: OPTIONAL<CorrelatedNotifications>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 securityAlarmCause: (_el: _Element): void => {
                     securityAlarmCause = _decode_SecurityAlarmCause(_el);
@@ -313,7 +310,6 @@ export function _decode_SecurityAlarmInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -322,7 +318,7 @@ export function _decode_SecurityAlarmInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_SecurityAlarmInfo,
                 undefined
             );
-            return new SecurityAlarmInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SecurityAlarmInfo (
                 securityAlarmCause,
                 securityAlarmSeverity,
                 securityAlarmDetector,

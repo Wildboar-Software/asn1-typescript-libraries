@@ -120,11 +120,8 @@ export function _decode_BIRValidityPeriod(el: _Element) {
     _cached_decoder_for_BIRValidityPeriod = function (
       el: _Element
     ): BIRValidityPeriod {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let not_valid_before: OPTIONAL<Date_Time>;
       let not_valid_after: OPTIONAL<Date_Time>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'not-valid-before': (_el: _Element): void => {
           not_valid_before = _decode_Date_Time(_el);
@@ -133,7 +130,6 @@ export function _decode_BIRValidityPeriod(el: _Element) {
           not_valid_after = _decode_Date_Time(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -142,7 +138,7 @@ export function _decode_BIRValidityPeriod(el: _Element) {
         _root_component_type_list_2_spec_for_BIRValidityPeriod,
         undefined
       );
-      return new BIRValidityPeriod /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new BIRValidityPeriod (
         not_valid_before,
         not_valid_after
       );

@@ -160,14 +160,11 @@ export function _decode_RoleSpecCertIdentifier(el: _Element) {
         _cached_decoder_for_RoleSpecCertIdentifier = function (
             el: _Element
         ): RoleSpecCertIdentifier {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let roleName!: GeneralName;
             let roleCertIssuer!: GeneralName;
             let roleCertSerialNumber: OPTIONAL<CertificateSerialNumber>;
             let roleCertLocator: OPTIONAL<GeneralNames>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 roleName: (_el: _Element): void => {
                     roleName = $._decode_explicit<GeneralName>(
@@ -190,7 +187,6 @@ export function _decode_RoleSpecCertIdentifier(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -202,7 +198,7 @@ export function _decode_RoleSpecCertIdentifier(el: _Element) {
                 }
             );
             return new RoleSpecCertIdentifier(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ roleName,
+                roleName,
                 roleCertIssuer,
                 roleCertSerialNumber,
                 roleCertLocator,

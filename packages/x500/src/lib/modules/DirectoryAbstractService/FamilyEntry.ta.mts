@@ -148,13 +148,10 @@ let _cached_decoder_for_FamilyEntry: $.ASN1Decoder<FamilyEntry> | null = null;
 export function _decode_FamilyEntry(el: _Element) {
     if (!_cached_decoder_for_FamilyEntry) {
         _cached_decoder_for_FamilyEntry = function (el: _Element): FamilyEntry {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdn!: RelativeDistinguishedName;
             let information!: FamilyEntry_information_Item[];
             let family_info: OPTIONAL<FamilyEntries[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdn: (_el: _Element): void => {
                     rdn = _decode_RelativeDistinguishedName(_el);
@@ -170,7 +167,6 @@ export function _decode_FamilyEntry(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_FamilyEntry(el: _Element) {
                 }
             );
             return new FamilyEntry(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rdn,
+                rdn,
                 information,
                 family_info,
                 _unrecognizedExtensionsList

@@ -171,13 +171,10 @@ let _cached_decoder_for_Invoke: $.ASN1Decoder<Invoke> | null = null;
 export function _decode_Invoke(el: _Element) {
   if (!_cached_decoder_for_Invoke) {
     _cached_decoder_for_Invoke = function (el: _Element): Invoke {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let invokeId!: InvokeId;
       let linkedId: OPTIONAL<Invoke_linkedId>;
       let opcode!: Code;
       let argument: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         invokeId: (_el: _Element): void => {
           invokeId = _decode_InvokeId(_el);
@@ -192,7 +189,6 @@ export function _decode_Invoke(el: _Element) {
           argument = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -201,7 +197,7 @@ export function _decode_Invoke(el: _Element) {
         _root_component_type_list_2_spec_for_Invoke,
         undefined
       );
-      return new Invoke /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Invoke (
         invokeId,
         linkedId,
         opcode,

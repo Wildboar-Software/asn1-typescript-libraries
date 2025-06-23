@@ -140,12 +140,9 @@ export function _decode_ResponseStatus(el: _Element) {
     _cached_decoder_for_ResponseStatus = function (
       el: _Element
     ): ResponseStatus {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let statusCode: OPTIONAL<CVStatusCode> =
         ResponseStatus._default_value_for_statusCode;
       let errorMessage: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         statusCode: (_el: _Element): void => {
           statusCode = _decode_CVStatusCode(_el);
@@ -154,7 +151,6 @@ export function _decode_ResponseStatus(el: _Element) {
           errorMessage = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -163,7 +159,7 @@ export function _decode_ResponseStatus(el: _Element) {
         _root_component_type_list_2_spec_for_ResponseStatus,
         undefined
       );
-      return new ResponseStatus /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ResponseStatus (
         statusCode,
         errorMessage
       );

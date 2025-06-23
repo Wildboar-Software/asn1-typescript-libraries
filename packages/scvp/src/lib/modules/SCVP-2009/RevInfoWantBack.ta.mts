@@ -125,11 +125,8 @@ export function _decode_RevInfoWantBack(el: _Element) {
     _cached_decoder_for_RevInfoWantBack = function (
       el: _Element
     ): RevInfoWantBack {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let revocationInfo!: RevocationInfos;
       let extraCerts: OPTIONAL<CertBundle>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         revocationInfo: (_el: _Element): void => {
           revocationInfo = _decode_RevocationInfos(_el);
@@ -138,7 +135,6 @@ export function _decode_RevInfoWantBack(el: _Element) {
           extraCerts = _decode_CertBundle(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -147,7 +143,7 @@ export function _decode_RevInfoWantBack(el: _Element) {
         _root_component_type_list_2_spec_for_RevInfoWantBack,
         undefined
       );
-      return new RevInfoWantBack /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new RevInfoWantBack (
         revocationInfo,
         extraCerts
       );

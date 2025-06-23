@@ -207,7 +207,6 @@ export function _decode_SpecifiedECDomain(el: _Element) {
         _cached_decoder_for_SpecifiedECDomain = function (
             el: _Element
         ): SpecifiedECDomain {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: SpecifiedECDomainVersion;
             let fieldID!: FieldID;
             let curve!: Curve;
@@ -216,8 +215,6 @@ export function _decode_SpecifiedECDomain(el: _Element) {
             let cofactor: OPTIONAL<INTEGER>;
             let hash: OPTIONAL<HashAlgorithm>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_SpecifiedECDomainVersion(_el);
@@ -241,7 +238,6 @@ export function _decode_SpecifiedECDomain(el: _Element) {
                     hash = _decode_HashAlgorithm(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -253,7 +249,7 @@ export function _decode_SpecifiedECDomain(el: _Element) {
                 }
             );
             return new SpecifiedECDomain(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 fieldID,
                 curve,
                 base,

@@ -255,7 +255,6 @@ export function _decode_F_GROUP_MOVE_request(el: _Element) {
     _cached_decoder_for_F_GROUP_MOVE_request = function (
       el: _Element
     ): F_GROUP_MOVE_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let destination_file_directory!: Destination_File_Directory;
       let override: OPTIONAL<Override> =
         F_GROUP_MOVE_request._default_value_for_override;
@@ -265,8 +264,6 @@ export function _decode_F_GROUP_MOVE_request(el: _Element) {
       let path_access_passwords: OPTIONAL<Path_Access_Passwords>;
       let request_Operation_result: OPTIONAL<Request_Operation_Result>;
       let attributes: OPTIONAL<Change_Attributes>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'destination-file-directory': (_el: _Element): void => {
           destination_file_directory = _decode_Destination_File_Directory(_el);
@@ -295,7 +292,6 @@ export function _decode_F_GROUP_MOVE_request(el: _Element) {
           attributes = _decode_Change_Attributes(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -304,7 +300,7 @@ export function _decode_F_GROUP_MOVE_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_GROUP_MOVE_request,
         undefined
       );
-      return new F_GROUP_MOVE_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_GROUP_MOVE_request (
         destination_file_directory,
         override,
         error_action,

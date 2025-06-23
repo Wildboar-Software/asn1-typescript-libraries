@@ -132,11 +132,8 @@ export function _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
     _cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern = function (
       el: _Element
     ): Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let constraint_Set_Pattern: OPTIONAL<Object_Identifier_Pattern>;
       let abstract_Syntax_Pattern: OPTIONAL<Object_Identifier_Pattern>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'constraint-Set-Pattern': (_el: _Element): void => {
           constraint_Set_Pattern = $._decode_implicit<Object_Identifier_Pattern>(
@@ -149,7 +146,6 @@ export function _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -158,7 +154,7 @@ export function _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
         _root_component_type_list_2_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
         undefined
       );
-      return new Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern (
         constraint_Set_Pattern,
         abstract_Syntax_Pattern
       );

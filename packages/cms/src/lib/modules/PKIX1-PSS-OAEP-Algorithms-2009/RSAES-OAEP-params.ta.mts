@@ -178,15 +178,12 @@ export function _decode_RSAES_OAEP_params(el: _Element) {
         _cached_decoder_for_RSAES_OAEP_params = function (
             el: _Element
         ): RSAES_OAEP_params {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hashFunc: OPTIONAL<HashAlgorithm> =
                 RSAES_OAEP_params._default_value_for_hashFunc;
             let maskGenFunc: OPTIONAL<MaskGenAlgorithm> =
                 RSAES_OAEP_params._default_value_for_maskGenFunc;
             let pSourceFunc: OPTIONAL<PSourceAlgorithm> =
                 RSAES_OAEP_params._default_value_for_pSourceFunc;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hashFunc: (_el: _Element): void => {
                     hashFunc = $._decode_explicit<HashAlgorithm>(
@@ -204,7 +201,6 @@ export function _decode_RSAES_OAEP_params(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -213,7 +209,7 @@ export function _decode_RSAES_OAEP_params(el: _Element) {
                 _root_component_type_list_2_spec_for_RSAES_OAEP_params,
                 undefined
             );
-            return new RSAES_OAEP_params /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RSAES_OAEP_params (
                 hashFunc,
                 maskGenFunc,
                 pSourceFunc

@@ -120,11 +120,8 @@ export function _decode_DefinedValue(el: _Element) {
         _cached_decoder_for_DefinedValue = function (
             el: _Element
         ): DefinedValue {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let module_: OPTIONAL<Identifier>;
             let reference!: Identifier;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 module: (_el: _Element): void => {
                     module_ = $._decode_implicit<Identifier>(
@@ -137,7 +134,6 @@ export function _decode_DefinedValue(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_DefinedValue(el: _Element) {
                 _root_component_type_list_2_spec_for_DefinedValue,
                 undefined
             );
-            return new DefinedValue /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DefinedValue (
                 module_,
                 reference
             );

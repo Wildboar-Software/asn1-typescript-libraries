@@ -131,11 +131,8 @@ export function _decode_TargetRoutingCollective(el: _Element) {
         _cached_decoder_for_TargetRoutingCollective = function (
             el: _Element
         ): TargetRoutingCollective {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let target_routing_collective!: RoutingCollectiveName;
             let local_user_identifier: OPTIONAL<UniversalOrBMPString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'target-routing-collective': (_el: _Element): void => {
                     target_routing_collective = $._decode_implicit<RoutingCollectiveName>(
@@ -148,7 +145,6 @@ export function _decode_TargetRoutingCollective(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_TargetRoutingCollective(el: _Element) {
                 _root_component_type_list_2_spec_for_TargetRoutingCollective,
                 undefined
             );
-            return new TargetRoutingCollective /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TargetRoutingCollective (
                 target_routing_collective,
                 local_user_identifier
             );

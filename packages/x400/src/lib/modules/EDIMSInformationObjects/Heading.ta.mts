@@ -470,7 +470,6 @@ let _cached_decoder_for_Heading: $.ASN1Decoder<Heading> | null = null;
 export function _decode_Heading(el: _Element) {
     if (!_cached_decoder_for_Heading) {
         _cached_decoder_for_Heading = function (el: _Element): Heading {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let this_EDIM!: ThisEDIMField;
             let originator: OPTIONAL<OriginatorField>;
             let recipients: OPTIONAL<RecipientsField>;
@@ -493,8 +492,6 @@ export function _decode_Heading(el: _Element) {
             let date_and_time_of_preparation: OPTIONAL<DateAndTimeOfPreparationField>;
             let application_reference: OPTIONAL<ApplicationReferenceField>;
             let heading_extensions: OPTIONAL<HeadingExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'this-EDIM': (_el: _Element): void => {
                     this_EDIM = $._decode_implicit<ThisEDIMField>(
@@ -592,7 +589,6 @@ export function _decode_Heading(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -601,7 +597,7 @@ export function _decode_Heading(el: _Element) {
                 _root_component_type_list_2_spec_for_Heading,
                 undefined
             );
-            return new Heading /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Heading (
                 this_EDIM,
                 originator,
                 recipients,

@@ -149,13 +149,10 @@ let _cached_decoder_for_UnusedSpace: $.ASN1Decoder<UnusedSpace> | null = null;
 export function _decode_UnusedSpace(el: _Element) {
     if (!_cached_decoder_for_UnusedSpace) {
         _cached_decoder_for_UnusedSpace = function (el: _Element): UnusedSpace {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let path!: Path;
             let authId: OPTIONAL<Identifier>;
             let accessControlRules: OPTIONAL<AccessControlRule[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 path: (_el: _Element): void => {
                     path = _decode_Path(_el);
@@ -169,7 +166,6 @@ export function _decode_UnusedSpace(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -181,7 +177,7 @@ export function _decode_UnusedSpace(el: _Element) {
                 }
             );
             return new UnusedSpace(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ path,
+                path,
                 authId,
                 accessControlRules,
                 _unrecognizedExtensionsList

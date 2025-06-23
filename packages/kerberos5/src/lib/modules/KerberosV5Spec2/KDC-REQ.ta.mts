@@ -156,13 +156,10 @@ let _cached_decoder_for_KDC_REQ: $.ASN1Decoder<KDC_REQ> | null = null;
 export function _decode_KDC_REQ(el: _Element) {
   if (!_cached_decoder_for_KDC_REQ) {
     _cached_decoder_for_KDC_REQ = function (el: _Element): KDC_REQ {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let pvno!: INTEGER;
       let msg_type!: INTEGER;
       let padata: OPTIONAL<PA_DATA[]>;
       let req_body!: KDC_REQ_BODY;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         pvno: (_el: _Element): void => {
           pvno = $._decode_explicit<INTEGER>(() => $._decodeInteger)(_el);
@@ -181,7 +178,6 @@ export function _decode_KDC_REQ(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -190,7 +186,7 @@ export function _decode_KDC_REQ(el: _Element) {
         _root_component_type_list_2_spec_for_KDC_REQ,
         undefined
       );
-      return new KDC_REQ /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KDC_REQ (
         pvno,
         msg_type,
         padata,

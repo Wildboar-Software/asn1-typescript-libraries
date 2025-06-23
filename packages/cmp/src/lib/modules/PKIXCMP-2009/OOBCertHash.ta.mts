@@ -146,12 +146,9 @@ let _cached_decoder_for_OOBCertHash: $.ASN1Decoder<OOBCertHash> | null = null;
 export function _decode_OOBCertHash(el: _Element) {
   if (!_cached_decoder_for_OOBCertHash) {
     _cached_decoder_for_OOBCertHash = function (el: _Element): OOBCertHash {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let hashAlg: OPTIONAL<AlgorithmIdentifier>;
       let certId: OPTIONAL<CertId>;
       let hashVal!: BIT_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         hashAlg: (_el: _Element): void => {
           hashAlg = $._decode_explicit<AlgorithmIdentifier>(
@@ -165,7 +162,6 @@ export function _decode_OOBCertHash(el: _Element) {
           hashVal = $._decodeBitString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -174,7 +170,7 @@ export function _decode_OOBCertHash(el: _Element) {
         _root_component_type_list_2_spec_for_OOBCertHash,
         undefined
       );
-      return new OOBCertHash /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new OOBCertHash (
         hashAlg,
         certId,
         hashVal

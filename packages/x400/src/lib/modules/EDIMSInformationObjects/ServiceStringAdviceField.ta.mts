@@ -202,15 +202,12 @@ export function _decode_ServiceStringAdviceField(el: _Element) {
         _cached_decoder_for_ServiceStringAdviceField = function (
             el: _Element
         ): ServiceStringAdviceField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let component_data_element_separator!: ComponentDataElementSeparator;
             let data_element_separator!: DataElementSeparator;
             let decimal_notation!: DecimalNotation;
             let release_indicator: OPTIONAL<ReleaseIndicator>;
             let reserved: OPTIONAL<Reserved>;
             let segment_terminator!: SegmentTerminator;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'component-data-element-separator': (_el: _Element): void => {
                     component_data_element_separator = $._decode_implicit<ComponentDataElementSeparator>(
@@ -243,7 +240,6 @@ export function _decode_ServiceStringAdviceField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -252,7 +248,7 @@ export function _decode_ServiceStringAdviceField(el: _Element) {
                 _root_component_type_list_2_spec_for_ServiceStringAdviceField,
                 undefined
             );
-            return new ServiceStringAdviceField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ServiceStringAdviceField (
                 component_data_element_separator,
                 data_element_separator,
                 decimal_notation,

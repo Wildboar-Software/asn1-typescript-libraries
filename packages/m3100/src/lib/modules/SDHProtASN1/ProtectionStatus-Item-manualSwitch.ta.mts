@@ -167,12 +167,9 @@ export function _decode_ProtectionStatus_Item_manualSwitch(el: _Element) {
         _cached_decoder_for_ProtectionStatus_Item_manualSwitch = function (
             el: _Element
         ): ProtectionStatus_Item_manualSwitch {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let requestSource: OPTIONAL<RequestSource>;
             let switchStatus!: SwitchStatus;
             let relatedChannel!: FromAndToProtectionUnit;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 requestSource: (_el: _Element): void => {
                     requestSource = $._decode_implicit<RequestSource>(
@@ -190,7 +187,6 @@ export function _decode_ProtectionStatus_Item_manualSwitch(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -199,7 +195,7 @@ export function _decode_ProtectionStatus_Item_manualSwitch(el: _Element) {
                 _root_component_type_list_2_spec_for_ProtectionStatus_Item_manualSwitch,
                 undefined
             );
-            return new ProtectionStatus_Item_manualSwitch /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ProtectionStatus_Item_manualSwitch (
                 requestSource,
                 switchStatus,
                 relatedChannel

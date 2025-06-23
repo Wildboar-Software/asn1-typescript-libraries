@@ -183,15 +183,12 @@ export function _decode_AttributeDescriptorSyntax(el: _Element) {
         _cached_decoder_for_AttributeDescriptorSyntax = function (
             el: _Element
         ): AttributeDescriptorSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let identifier!: AttributeIdentifier;
             let attributeSyntax!: OCTET_STRING;
             let name: OPTIONAL<AttributeName>;
             let description: OPTIONAL<AttributeDescription>;
             let dominationRule!: PrivilegePolicyIdentifier;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 identifier: (_el: _Element): void => {
                     identifier = _decode_AttributeIdentifier(_el);
@@ -213,7 +210,6 @@ export function _decode_AttributeDescriptorSyntax(el: _Element) {
                     dominationRule = _decode_PrivilegePolicyIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -225,7 +221,7 @@ export function _decode_AttributeDescriptorSyntax(el: _Element) {
                 }
             );
             return new AttributeDescriptorSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ identifier,
+                identifier,
                 attributeSyntax,
                 name,
                 description,

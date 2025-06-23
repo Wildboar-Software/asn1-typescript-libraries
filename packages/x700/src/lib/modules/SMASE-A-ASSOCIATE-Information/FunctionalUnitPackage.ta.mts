@@ -158,14 +158,11 @@ export function _decode_FunctionalUnitPackage(el: _Element) {
         _cached_decoder_for_FunctionalUnitPackage = function (
             el: _Element
         ): FunctionalUnitPackage {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let functionalUnitPackageId!: FunctionalUnitPackageId;
             let managerRoleFunctionalUnit: OPTIONAL<BIT_STRING> =
                 FunctionalUnitPackage._default_value_for_managerRoleFunctionalUnit;
             let agentRoleFunctionalUnit: OPTIONAL<BIT_STRING> =
                 FunctionalUnitPackage._default_value_for_agentRoleFunctionalUnit;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 functionalUnitPackageId: (_el: _Element): void => {
                     functionalUnitPackageId = _decode_FunctionalUnitPackageId(
@@ -183,7 +180,6 @@ export function _decode_FunctionalUnitPackage(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -192,7 +188,7 @@ export function _decode_FunctionalUnitPackage(el: _Element) {
                 _root_component_type_list_2_spec_for_FunctionalUnitPackage,
                 undefined
             );
-            return new FunctionalUnitPackage /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FunctionalUnitPackage (
                 functionalUnitPackageId,
                 managerRoleFunctionalUnit,
                 agentRoleFunctionalUnit

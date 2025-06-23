@@ -135,25 +135,21 @@ let _cached_decoder_for_FIPSLevel: $.ASN1Decoder<FIPSLevel> | null = null;
 export
 function _decode_FIPSLevel (el: _Element) {
     if (!_cached_decoder_for_FIPSLevel) { _cached_decoder_for_FIPSLevel = function (el: _Element): FIPSLevel {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: IA5String;
     let level!: SecurityLevel;
     let plus: OPTIONAL<BOOLEAN> = FIPSLevel._default_value_for_plus;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = $._decodeIA5String(_el); },
         "level": (_el: _Element): void => { level = _decode_SecurityLevel(_el); },
         "plus": (_el: _Element): void => { plus = $._decodeBoolean(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_FIPSLevel,
         _extension_additions_list_spec_for_FIPSLevel,
         _root_component_type_list_2_spec_for_FIPSLevel,
         undefined,
     );
-    return new FIPSLevel( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new FIPSLevel( 
         version,
         level,
         plus

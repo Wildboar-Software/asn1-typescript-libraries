@@ -251,7 +251,6 @@ export function _decode_PartialOutcomeQualifier(el: _Element) {
             let notification: OPTIONAL<Attribute[]>;
             let entryCount: OPTIONAL<PartialOutcomeQualifier_entryCount>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 limitProblem: (_el: _Element): void => {
                     limitProblem = $._decode_explicit<LimitProblem>(
@@ -297,7 +296,6 @@ export function _decode_PartialOutcomeQualifier(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

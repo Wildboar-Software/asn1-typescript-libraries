@@ -120,11 +120,8 @@ export function _decode_OptionalValidity(el: _Element) {
         _cached_decoder_for_OptionalValidity = function (
             el: _Element
         ): OptionalValidity {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let notBefore: OPTIONAL<Time>;
             let notAfter: OPTIONAL<Time>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 notBefore: (_el: _Element): void => {
                     notBefore = $._decode_explicit<Time>(() => _decode_Time)(
@@ -137,7 +134,6 @@ export function _decode_OptionalValidity(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -146,7 +142,7 @@ export function _decode_OptionalValidity(el: _Element) {
                 _root_component_type_list_2_spec_for_OptionalValidity,
                 undefined
             );
-            return new OptionalValidity /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new OptionalValidity (
                 notBefore,
                 notAfter
             );

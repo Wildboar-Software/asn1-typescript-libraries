@@ -154,12 +154,9 @@ export function _decode_AddMaster_ResponseParams(el: _Element) {
     _cached_decoder_for_AddMaster_ResponseParams = function (
       el: _Element
     ): AddMaster_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>;
       let bspSchemas!: BioAPI_BSP_SCHEMA[];
       let bfpSchemas!: BioAPI_BFP_SCHEMA[];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         fwSchema: (_el: _Element): void => {
           fwSchema = _decode_BioAPI_FRAMEWORK_SCHEMA(_el);
@@ -175,7 +172,6 @@ export function _decode_AddMaster_ResponseParams(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -184,7 +180,7 @@ export function _decode_AddMaster_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_AddMaster_ResponseParams,
         undefined
       );
-      return new AddMaster_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new AddMaster_ResponseParams (
         fwSchema,
         bspSchemas,
         bfpSchemas

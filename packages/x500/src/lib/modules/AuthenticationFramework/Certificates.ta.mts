@@ -129,12 +129,9 @@ export function _decode_Certificates(el: _Element) {
         _cached_decoder_for_Certificates = function (
             el: _Element
         ): Certificates {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let userCertificate!: Certificate;
             let certificationPath: OPTIONAL<ForwardCertificationPath>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 userCertificate: (_el: _Element): void => {
                     userCertificate = _decode_Certificate(_el);
@@ -143,7 +140,6 @@ export function _decode_Certificates(el: _Element) {
                     certificationPath = _decode_ForwardCertificationPath(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_Certificates(el: _Element) {
                 }
             );
             return new Certificates(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ userCertificate,
+                userCertificate,
                 certificationPath,
                 _unrecognizedExtensionsList
             );

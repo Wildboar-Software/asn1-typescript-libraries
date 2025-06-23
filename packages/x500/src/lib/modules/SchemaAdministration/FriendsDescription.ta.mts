@@ -181,7 +181,6 @@ export function _decode_FriendsDescription(el: _Element) {
         _cached_decoder_for_FriendsDescription = function (
             el: _Element
         ): FriendsDescription {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let anchor!: OBJECT_IDENTIFIER;
             let name: OPTIONAL<UnboundedDirectoryString[]>;
             let description: OPTIONAL<UnboundedDirectoryString>;
@@ -189,8 +188,6 @@ export function _decode_FriendsDescription(el: _Element) {
                 FriendsDescription._default_value_for_obsolete;
             let friends!: OBJECT_IDENTIFIER[];
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 anchor: (_el: _Element): void => {
                     anchor = $._decodeObjectIdentifier(_el);
@@ -214,7 +211,6 @@ export function _decode_FriendsDescription(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -226,7 +222,7 @@ export function _decode_FriendsDescription(el: _Element) {
                 }
             );
             return new FriendsDescription(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ anchor,
+                anchor,
                 name,
                 description,
                 obsolete,

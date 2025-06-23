@@ -206,7 +206,6 @@ export function _decode_TerminateOperationalBindingResultData(el: _Element) {
         _cached_decoder_for_TerminateOperationalBindingResultData = function (
             el: _Element
         ): TerminateOperationalBindingResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bindingID!: OperationalBindingID;
             let bindingType!: OBJECT_IDENTIFIER;
             let terminateAt: OPTIONAL<GeneralizedTime>;
@@ -216,8 +215,6 @@ export function _decode_TerminateOperationalBindingResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 TerminateOperationalBindingResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bindingID: (_el: _Element): void => {
                     bindingID = _decode_OperationalBindingID(_el);
@@ -249,7 +246,6 @@ export function _decode_TerminateOperationalBindingResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -261,7 +257,7 @@ export function _decode_TerminateOperationalBindingResultData(el: _Element) {
                 }
             );
             return new TerminateOperationalBindingResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bindingID,
+                bindingID,
                 bindingType,
                 terminateAt,
                 _unrecognizedExtensionsList,

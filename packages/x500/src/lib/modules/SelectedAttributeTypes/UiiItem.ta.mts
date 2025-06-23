@@ -108,11 +108,8 @@ let _cached_decoder_for_UiiItem: $.ASN1Decoder<UiiItem> | null = null;
 export function _decode_UiiItem(el: _Element) {
     if (!_cached_decoder_for_UiiItem) {
         _cached_decoder_for_UiiItem = function (el: _Element): UiiItem {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let type_!: OBJECT_IDENTIFIER;
             let length: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = $._decodeObjectIdentifier(_el);
@@ -121,7 +118,6 @@ export function _decode_UiiItem(el: _Element) {
                     length = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -130,7 +126,7 @@ export function _decode_UiiItem(el: _Element) {
                 _root_component_type_list_2_spec_for_UiiItem,
                 undefined
             );
-            return new UiiItem(/* SEQUENCE_CONSTRUCTOR_CALL */ type_, length);
+            return new UiiItem(type_, length);
         };
     }
     return _cached_decoder_for_UiiItem(el);

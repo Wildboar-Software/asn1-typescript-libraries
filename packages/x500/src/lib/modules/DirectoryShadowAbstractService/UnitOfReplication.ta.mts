@@ -205,7 +205,6 @@ export function _decode_UnitOfReplication(el: _Element) {
         _cached_decoder_for_UnitOfReplication = function (
             el: _Element
         ): UnitOfReplication {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let area!: AreaSpecification;
             let attributes!: AttributeSelection;
             let knowledge: OPTIONAL<Knowledge>;
@@ -213,8 +212,6 @@ export function _decode_UnitOfReplication(el: _Element) {
                 UnitOfReplication._default_value_for_subordinates;
             let contextSelection: OPTIONAL<ContextSelection>;
             let supplyContexts: OPTIONAL<UnitOfReplication_supplyContexts>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 area: (_el: _Element): void => {
                     area = _decode_AreaSpecification(_el);
@@ -237,7 +234,6 @@ export function _decode_UnitOfReplication(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -247,7 +243,7 @@ export function _decode_UnitOfReplication(el: _Element) {
                 undefined
             );
             return new UnitOfReplication(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ area,
+                area,
                 attributes,
                 knowledge,
                 subordinates,

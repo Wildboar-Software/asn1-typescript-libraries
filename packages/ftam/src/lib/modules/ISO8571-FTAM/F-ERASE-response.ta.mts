@@ -142,12 +142,9 @@ export function _decode_F_ERASE_response(el: _Element) {
     _cached_decoder_for_F_ERASE_response = function (
       el: _Element
     ): F_ERASE_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let action_result: OPTIONAL<Action_Result> =
         F_ERASE_response._default_value_for_action_result;
       let diagnostic: OPTIONAL<Diagnostic>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'action-result': (_el: _Element): void => {
           action_result = _decode_Action_Result(_el);
@@ -156,7 +153,6 @@ export function _decode_F_ERASE_response(el: _Element) {
           diagnostic = _decode_Diagnostic(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -165,7 +161,7 @@ export function _decode_F_ERASE_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_ERASE_response,
         undefined
       );
-      return new F_ERASE_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_ERASE_response (
         action_result,
         diagnostic
       );

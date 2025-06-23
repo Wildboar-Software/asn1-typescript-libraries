@@ -184,7 +184,6 @@ let _cached_decoder_for_BackUpInfo: $.ASN1Decoder<BackUpInfo> | null = null;
 export function _decode_BackUpInfo(el: _Element) {
     if (!_cached_decoder_for_BackUpInfo) {
         _cached_decoder_for_BackUpInfo = function (el: _Element): BackUpInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let backedUpObjectSpecified: OPTIONAL<OptionalObject> =
                 BackUpInfo._default_value_for_backedUpObjectSpecified;
             let backUpObjectSpecified: OPTIONAL<OptionalObject> =
@@ -193,8 +192,6 @@ export function _decode_BackUpInfo(el: _Element) {
                 BackUpInfo._default_value_for_backedUpObjectExisting;
             let backUpObjectExisting: OPTIONAL<OptionalObject> =
                 BackUpInfo._default_value_for_backUpObjectExisting;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 backedUpObjectSpecified: (_el: _Element): void => {
                     backedUpObjectSpecified = $._decode_explicit<OptionalObject>(
@@ -217,7 +214,6 @@ export function _decode_BackUpInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -226,7 +222,7 @@ export function _decode_BackUpInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_BackUpInfo,
                 undefined
             );
-            return new BackUpInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BackUpInfo (
                 backedUpObjectSpecified,
                 backUpObjectSpecified,
                 backedUpObjectExisting,

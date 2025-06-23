@@ -131,27 +131,23 @@ let _cached_decoder_for_PlatformConfiguration: $.ASN1Decoder<PlatformConfigurati
 export
 function _decode_PlatformConfiguration (el: _Element) {
     if (!_cached_decoder_for_PlatformConfiguration) { _cached_decoder_for_PlatformConfiguration = function (el: _Element): PlatformConfiguration {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let componentIdentifiers: OPTIONAL<ComponentIdentifier[]>;
     let componentIdentifiersUri: OPTIONAL<URIReference>;
     let platformProperties: OPTIONAL<Properties[]>;
     let platformPropertiesUri: OPTIONAL<URIReference>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "componentIdentifiers": (_el: _Element): void => { componentIdentifiers = $._decode_implicit<ComponentIdentifier[]>(() => $._decodeSequenceOf<ComponentIdentifier>(() => _decode_ComponentIdentifier))(_el); },
         "componentIdentifiersUri": (_el: _Element): void => { componentIdentifiersUri = $._decode_implicit<URIReference>(() => _decode_URIReference)(_el); },
         "platformProperties": (_el: _Element): void => { platformProperties = $._decode_implicit<Properties[]>(() => $._decodeSequenceOf<Properties>(() => _decode_Properties))(_el); },
         "platformPropertiesUri": (_el: _Element): void => { platformPropertiesUri = $._decode_implicit<URIReference>(() => _decode_URIReference)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_PlatformConfiguration,
         _extension_additions_list_spec_for_PlatformConfiguration,
         _root_component_type_list_2_spec_for_PlatformConfiguration,
         undefined,
     );
-    return new PlatformConfiguration( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new PlatformConfiguration( 
         componentIdentifiers,
         componentIdentifiersUri,
         platformProperties,

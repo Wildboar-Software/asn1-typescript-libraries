@@ -156,14 +156,11 @@ let _cached_decoder_for_TokenAB: $.ASN1Decoder<TokenAB> | null = null;
 export
 function _decode_TokenAB (el: _Element) {
     if (!_cached_decoder_for_TokenAB) { _cached_decoder_for_TokenAB = function (el: _Element): TokenAB {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let randomA!: RandomNumber;
     let entityB: OPTIONAL<GeneralNames>;
     let certA!: CertData;
     let authID: OPTIONAL<GeneralNames>;
     let signature!: SIGNATURE;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "randomA": (_el: _Element): void => { randomA = _decode_RandomNumber(_el); },
         "entityB": (_el: _Element): void => { entityB = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
@@ -171,14 +168,13 @@ function _decode_TokenAB (el: _Element) {
         "authID": (_el: _Element): void => { authID = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
         "signature": (_el: _Element): void => { signature = _decode_SIGNATURE(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TokenAB,
         _extension_additions_list_spec_for_TokenAB,
         _root_component_type_list_2_spec_for_TokenAB,
         undefined,
     );
-    return new TokenAB( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TokenAB( 
         randomA,
         entityB,
         certA,

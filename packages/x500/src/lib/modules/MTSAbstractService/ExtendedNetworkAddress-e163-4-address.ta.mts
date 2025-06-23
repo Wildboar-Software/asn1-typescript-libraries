@@ -115,11 +115,8 @@ export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element) {
         _cached_decoder_for_ExtendedNetworkAddress_e163_4_address = function (
             el: _Element
         ): ExtendedNetworkAddress_e163_4_address {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let number_!: NumericString;
             let sub_address: OPTIONAL<NumericString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 number: (_el: _Element): void => {
                     number_ = $._decode_implicit<NumericString>(
@@ -132,7 +129,6 @@ export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -142,7 +138,7 @@ export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element) {
                 undefined
             );
             return new ExtendedNetworkAddress_e163_4_address(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ number_,
+                number_,
                 sub_address
             );
         };

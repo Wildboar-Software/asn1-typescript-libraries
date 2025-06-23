@@ -126,11 +126,8 @@ export function _decode_AddTpsToGtpInformation_Item(el: _Element) {
         _cached_decoder_for_AddTpsToGtpInformation_Item = function (
             el: _Element
         ): AddTpsToGtpInformation_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tpsAdded!: TerminationPointInformation[];
             let gtp: OPTIONAL<ObjectInstance>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tpsAdded: (_el: _Element): void => {
                     tpsAdded = $._decodeSequenceOf<TerminationPointInformation>(
@@ -141,7 +138,6 @@ export function _decode_AddTpsToGtpInformation_Item(el: _Element) {
                     gtp = _decode_ObjectInstance(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_AddTpsToGtpInformation_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_AddTpsToGtpInformation_Item,
                 undefined
             );
-            return new AddTpsToGtpInformation_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AddTpsToGtpInformation_Item (
                 tpsAdded,
                 gtp
             );

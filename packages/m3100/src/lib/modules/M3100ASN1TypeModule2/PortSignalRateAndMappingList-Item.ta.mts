@@ -147,12 +147,9 @@ export function _decode_PortSignalRateAndMappingList_Item(el: _Element) {
         _cached_decoder_for_PortSignalRateAndMappingList_Item = function (
             el: _Element
         ): PortSignalRateAndMappingList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let portId!: NameType;
             let signalRate!: SignalRate;
             let mappingList: OPTIONAL<MappingList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 portId: (_el: _Element): void => {
                     portId = _decode_NameType(_el);
@@ -164,7 +161,6 @@ export function _decode_PortSignalRateAndMappingList_Item(el: _Element) {
                     mappingList = _decode_MappingList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_PortSignalRateAndMappingList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_PortSignalRateAndMappingList_Item,
                 undefined
             );
-            return new PortSignalRateAndMappingList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PortSignalRateAndMappingList_Item (
                 portId,
                 signalRate,
                 mappingList

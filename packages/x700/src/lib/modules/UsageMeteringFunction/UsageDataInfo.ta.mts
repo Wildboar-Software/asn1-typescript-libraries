@@ -218,7 +218,6 @@ export function _decode_UsageDataInfo(el: _Element) {
         _cached_decoder_for_UsageDataInfo = function (
             el: _Element
         ): UsageDataInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let accountableObjectReference!: ObjectInstance;
             let notificationCause!: NotificationCause;
             let usageInfo!: UsageInfo;
@@ -226,8 +225,6 @@ export function _decode_UsageDataInfo(el: _Element) {
             let dataErrors!: DataErrors;
             let providerId: OPTIONAL<ProviderId>;
             let additionalInformation: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 accountableObjectReference: (_el: _Element): void => {
                     accountableObjectReference = $._decode_explicit<ObjectInstance>(
@@ -269,7 +266,6 @@ export function _decode_UsageDataInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -278,7 +274,7 @@ export function _decode_UsageDataInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_UsageDataInfo,
                 undefined
             );
-            return new UsageDataInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new UsageDataInfo (
                 accountableObjectReference,
                 notificationCause,
                 usageInfo,

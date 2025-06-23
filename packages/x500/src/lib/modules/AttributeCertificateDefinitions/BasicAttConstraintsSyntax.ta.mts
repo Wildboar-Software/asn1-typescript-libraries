@@ -136,13 +136,10 @@ export function _decode_BasicAttConstraintsSyntax(el: _Element) {
         _cached_decoder_for_BasicAttConstraintsSyntax = function (
             el: _Element
         ): BasicAttConstraintsSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let authority: OPTIONAL<BOOLEAN> =
                 BasicAttConstraintsSyntax._default_value_for_authority;
             let pathLenConstraint: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 authority: (_el: _Element): void => {
                     authority = $._decodeBoolean(_el);
@@ -151,7 +148,6 @@ export function _decode_BasicAttConstraintsSyntax(el: _Element) {
                     pathLenConstraint = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -163,7 +159,7 @@ export function _decode_BasicAttConstraintsSyntax(el: _Element) {
                 }
             );
             return new BasicAttConstraintsSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ authority,
+                authority,
                 pathLenConstraint,
                 _unrecognizedExtensionsList
             );

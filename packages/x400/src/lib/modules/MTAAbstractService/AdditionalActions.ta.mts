@@ -163,7 +163,6 @@ export function _decode_AdditionalActions(el: _Element) {
             let other_actions: OPTIONAL<OtherActions> =
                 AdditionalActions._default_value_for_other_actions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'deferred-time': (_el: _Element): void => {
                     deferred_time = $._decode_implicit<DeferredTime>(
@@ -183,7 +182,6 @@ export function _decode_AdditionalActions(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

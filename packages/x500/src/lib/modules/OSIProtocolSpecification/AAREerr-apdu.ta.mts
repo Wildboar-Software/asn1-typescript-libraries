@@ -284,7 +284,6 @@ export function _decode_AAREerr_apdu(el: _Element) {
         _cached_decoder_for_AAREerr_apdu = $._decode_implicit<AAREerr_apdu>(
             () =>
                 function (el: _Element): AAREerr_apdu {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let protocol_version: OPTIONAL<AAREerr_apdu_protocol_version> =
                         AAREerr_apdu._default_value_for_protocol_version;
                     let application_context_name!: Application_context_name;
@@ -296,8 +295,6 @@ export function _decode_AAREerr_apdu(el: _Element) {
                     let responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>;
                     let implementation_information: OPTIONAL<Implementation_data>;
                     let user_information: OPTIONAL<Association_informationBindErr>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         "protocol-version": (_el: _Element): void => {
                             protocol_version = $._decode_implicit<AAREerr_apdu_protocol_version>(
@@ -354,7 +351,6 @@ export function _decode_AAREerr_apdu(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -364,7 +360,7 @@ export function _decode_AAREerr_apdu(el: _Element) {
                         undefined
                     );
                     return new AAREerr_apdu(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ protocol_version,
+                        protocol_version,
                         application_context_name,
                         result,
                         result_source_diagnostic,

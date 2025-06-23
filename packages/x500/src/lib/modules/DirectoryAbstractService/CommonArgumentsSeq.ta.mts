@@ -359,7 +359,6 @@ export function _decode_CommonArgumentsSeq(el: _Element) {
         _cached_decoder_for_CommonArgumentsSeq = function (
             el: _Element
         ): CommonArgumentsSeq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let serviceControls: OPTIONAL<ServiceControls> =
                 CommonArgumentsSeq._default_value_for_serviceControls;
             let securityParameters: OPTIONAL<SecurityParameters>;
@@ -378,8 +377,6 @@ export function _decode_CommonArgumentsSeq(el: _Element) {
             let familyGrouping: OPTIONAL<FamilyGrouping> =
                 CommonArgumentsSeq._default_value_for_familyGrouping;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 serviceControls: (_el: _Element): void => {
                     serviceControls = $._decode_explicit<ServiceControls>(
@@ -442,7 +439,6 @@ export function _decode_CommonArgumentsSeq(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -454,7 +450,7 @@ export function _decode_CommonArgumentsSeq(el: _Element) {
                 }
             );
             return new CommonArgumentsSeq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ serviceControls,
+                serviceControls,
                 securityParameters,
                 requestor,
                 operationProgress,

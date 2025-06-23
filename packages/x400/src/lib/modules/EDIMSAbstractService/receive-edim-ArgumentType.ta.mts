@@ -127,7 +127,6 @@ export function _decode_receive_edim_ArgumentType(el: _Element) {
             let envelope!: MessageDeliveryEnvelope;
             let content!: EDIM;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 envelope: (_el: _Element): void => {
                     envelope = $._decode_implicit<MessageDeliveryEnvelope>(
@@ -138,7 +137,6 @@ export function _decode_receive_edim_ArgumentType(el: _Element) {
                     content = $._decode_implicit<EDIM>(() => _decode_EDIM)(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

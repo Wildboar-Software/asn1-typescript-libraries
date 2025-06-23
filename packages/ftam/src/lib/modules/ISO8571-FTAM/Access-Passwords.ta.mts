@@ -238,7 +238,6 @@ export function _decode_Access_Passwords(el: _Element) {
     _cached_decoder_for_Access_Passwords = $._decode_implicit<Access_Passwords>(
       () =>
         function (el: _Element): Access_Passwords {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let read_password!: Password;
           let insert_password!: Password;
           let replace_password!: Password;
@@ -249,8 +248,6 @@ export function _decode_Access_Passwords(el: _Element) {
           let delete_password!: Password;
           let pass_passwords: OPTIONAL<Pass_Passwords>;
           let link_password: OPTIONAL<Password>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'read-password': (_el: _Element): void => {
               read_password = $._decode_explicit<Password>(
@@ -303,7 +300,6 @@ export function _decode_Access_Passwords(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -312,7 +308,7 @@ export function _decode_Access_Passwords(el: _Element) {
             _root_component_type_list_2_spec_for_Access_Passwords,
             undefined
           );
-          return new Access_Passwords /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new Access_Passwords (
             read_password,
             insert_password,
             replace_password,

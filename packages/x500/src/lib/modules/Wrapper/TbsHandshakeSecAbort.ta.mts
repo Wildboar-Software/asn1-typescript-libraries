@@ -221,7 +221,6 @@ export function _decode_TbsHandshakeSecAbort(el: _Element) {
         _cached_decoder_for_TbsHandshakeSecAbort = function (
             el: _Element
         ): TbsHandshakeSecAbort {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 TbsHandshakeSecAbort._default_value_for_version;
             let sigAlg!: AlgorithmIdentifier;
@@ -230,8 +229,6 @@ export function _decode_TbsHandshakeSecAbort(el: _Element) {
             let pkiPath!: DER_PkiPath;
             let diag: OPTIONAL<WrpError>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -252,7 +249,6 @@ export function _decode_TbsHandshakeSecAbort(el: _Element) {
                     diag = _decode_WrpError(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -264,7 +260,7 @@ export function _decode_TbsHandshakeSecAbort(el: _Element) {
                 }
             );
             return new TbsHandshakeSecAbort(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 sigAlg,
                 assoID,
                 time,

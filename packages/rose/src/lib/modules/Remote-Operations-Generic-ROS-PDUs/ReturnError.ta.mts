@@ -146,12 +146,9 @@ let _cached_decoder_for_ReturnError: $.ASN1Decoder<ReturnError> | null = null;
 export function _decode_ReturnError(el: _Element) {
   if (!_cached_decoder_for_ReturnError) {
     _cached_decoder_for_ReturnError = function (el: _Element): ReturnError {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let invokeId!: InvokeId;
       let errcode!: Code;
       let parameter: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         invokeId: (_el: _Element): void => {
           invokeId = _decode_InvokeId(_el);
@@ -163,7 +160,6 @@ export function _decode_ReturnError(el: _Element) {
           parameter = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -172,7 +168,7 @@ export function _decode_ReturnError(el: _Element) {
         _root_component_type_list_2_spec_for_ReturnError,
         undefined
       );
-      return new ReturnError /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ReturnError (
         invokeId,
         errcode,
         parameter

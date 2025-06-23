@@ -122,12 +122,9 @@ export function _decode_TimeSpecification_time_absolute(el: _Element) {
         _cached_decoder_for_TimeSpecification_time_absolute = function (
             el: _Element
         ): TimeSpecification_time_absolute {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let startTime: OPTIONAL<GeneralizedTime>;
             let endTime: OPTIONAL<GeneralizedTime>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 startTime: (_el: _Element): void => {
                     startTime = $._decode_explicit<GeneralizedTime>(
@@ -140,7 +137,6 @@ export function _decode_TimeSpecification_time_absolute(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_TimeSpecification_time_absolute(el: _Element) {
                 }
             );
             return new TimeSpecification_time_absolute(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ startTime,
+                startTime,
                 endTime,
                 _unrecognizedExtensionsList
             );

@@ -128,7 +128,6 @@ export function _decode_AlertArgument(el: _Element) {
             let alert_registration_identifier!: INTEGER;
             let new_entry: OPTIONAL<EntryInformation>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'alert-registration-identifier': (_el: _Element): void => {
                     alert_registration_identifier = $._decode_explicit<INTEGER>(
@@ -141,7 +140,6 @@ export function _decode_AlertArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

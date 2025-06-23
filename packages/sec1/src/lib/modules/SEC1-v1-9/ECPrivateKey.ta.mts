@@ -133,27 +133,23 @@ let _cached_decoder_for_ECPrivateKey: $.ASN1Decoder<ECPrivateKey> | null = null;
 export
 function _decode_ECPrivateKey (el: _Element) {
     if (!_cached_decoder_for_ECPrivateKey) { _cached_decoder_for_ECPrivateKey = function (el: _Element): ECPrivateKey {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: ECPrivateKey_version;
     let privateKey!: OCTET_STRING;
     let parameters: OPTIONAL<ECDomainParameters>;
     let publicKey: OPTIONAL<BIT_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = _decode_ECPrivateKey_version(_el); },
         "privateKey": (_el: _Element): void => { privateKey = $._decodeOctetString(_el); },
         "parameters": (_el: _Element): void => { parameters = $._decode_explicit<ECDomainParameters>(() => _decode_ECDomainParameters)(_el); },
         "publicKey": (_el: _Element): void => { publicKey = $._decode_explicit<BIT_STRING>(() => $._decodeBitString)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ECPrivateKey,
         _extension_additions_list_spec_for_ECPrivateKey,
         _root_component_type_list_2_spec_for_ECPrivateKey,
         undefined,
     );
-    return new ECPrivateKey( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ECPrivateKey( 
         version,
         privateKey,
         parameters,

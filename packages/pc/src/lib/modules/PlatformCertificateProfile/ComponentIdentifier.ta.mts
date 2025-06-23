@@ -198,7 +198,6 @@ let _cached_decoder_for_ComponentIdentifier: $.ASN1Decoder<ComponentIdentifier> 
 export
 function _decode_ComponentIdentifier (el: _Element) {
     if (!_cached_decoder_for_ComponentIdentifier) { _cached_decoder_for_ComponentIdentifier = function (el: _Element): ComponentIdentifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let componentClass!: ComponentClass;
     let componentManufacturer!: UTF8String;
     let componentModel!: UTF8String;
@@ -210,8 +209,6 @@ function _decode_ComponentIdentifier (el: _Element) {
     let componentPlatformCert: OPTIONAL<CertificateIdentifier>;
     let componentPlatformCertUri: OPTIONAL<URIReference>;
     let status: OPTIONAL<AttributeStatus>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "componentClass": (_el: _Element): void => { componentClass = _decode_ComponentClass(_el); },
         "componentManufacturer": (_el: _Element): void => { componentManufacturer = $._decodeUTF8String(_el); },
@@ -225,14 +222,13 @@ function _decode_ComponentIdentifier (el: _Element) {
         "componentPlatformCertUri": (_el: _Element): void => { componentPlatformCertUri = $._decode_implicit<URIReference>(() => _decode_URIReference)(_el); },
         "status": (_el: _Element): void => { status = $._decode_implicit<AttributeStatus>(() => _decode_AttributeStatus)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ComponentIdentifier,
         _extension_additions_list_spec_for_ComponentIdentifier,
         _root_component_type_list_2_spec_for_ComponentIdentifier,
         undefined,
     );
-    return new ComponentIdentifier( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ComponentIdentifier( 
         componentClass,
         componentManufacturer,
         componentModel,

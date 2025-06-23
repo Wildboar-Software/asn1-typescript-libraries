@@ -154,13 +154,10 @@ export function _decode_EncryptedData(el: _Element) {
         _cached_decoder_for_EncryptedData = function (
             el: _Element
         ): EncryptedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let encryptedContentInfo!: EncryptedContentInfo;
             let unprotectedAttrs: OPTIONAL<Attributes>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -174,7 +171,6 @@ export function _decode_EncryptedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -185,7 +181,7 @@ export function _decode_EncryptedData(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new EncryptedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncryptedData (
                 version,
                 encryptedContentInfo,
                 unprotectedAttrs,

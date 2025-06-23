@@ -125,11 +125,8 @@ export function _decode_EDIMBodyPart(el: _Element) {
         _cached_decoder_for_EDIMBodyPart = function (
             el: _Element
         ): EDIMBodyPart {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let parameters: OPTIONAL<MessageParameters>;
             let data!: MessageData;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 parameters: (_el: _Element): void => {
                     parameters = $._decode_implicit<MessageParameters>(
@@ -142,7 +139,6 @@ export function _decode_EDIMBodyPart(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_EDIMBodyPart(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIMBodyPart,
                 undefined
             );
-            return new EDIMBodyPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIMBodyPart (
                 parameters,
                 data
             );

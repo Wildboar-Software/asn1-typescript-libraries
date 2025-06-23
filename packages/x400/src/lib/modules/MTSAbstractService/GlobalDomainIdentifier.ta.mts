@@ -146,12 +146,9 @@ export function _decode_GlobalDomainIdentifier(el: _Element) {
         _cached_decoder_for_GlobalDomainIdentifier = $._decode_implicit<GlobalDomainIdentifier>(
             () =>
                 function (el: _Element): GlobalDomainIdentifier {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let country_name!: CountryName;
                     let administration_domain_name!: AdministrationDomainName;
                     let private_domain_identifier: OPTIONAL<PrivateDomainIdentifier>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         'country-name': (_el: _Element): void => {
                             country_name = _decode_CountryName(_el);
@@ -167,7 +164,6 @@ export function _decode_GlobalDomainIdentifier(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -176,7 +172,7 @@ export function _decode_GlobalDomainIdentifier(el: _Element) {
                         _root_component_type_list_2_spec_for_GlobalDomainIdentifier,
                         undefined
                     );
-                    return new GlobalDomainIdentifier /* SEQUENCE_CONSTRUCTOR_CALL */(
+                    return new GlobalDomainIdentifier (
                         country_name,
                         administration_domain_name,
                         private_domain_identifier

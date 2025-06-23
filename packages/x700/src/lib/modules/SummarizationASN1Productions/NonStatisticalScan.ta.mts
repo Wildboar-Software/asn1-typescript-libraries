@@ -127,11 +127,8 @@ export function _decode_NonStatisticalScan(el: _Element) {
         _cached_decoder_for_NonStatisticalScan = function (
             el: _Element
         ): NonStatisticalScan {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objectInstance: OPTIONAL<ObjectInstance>;
             let attributeValues: OPTIONAL<AttributeMeasure[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectInstance: (_el: _Element): void => {
                     objectInstance = _decode_ObjectInstance(_el);
@@ -142,7 +139,6 @@ export function _decode_NonStatisticalScan(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_NonStatisticalScan(el: _Element) {
                 _root_component_type_list_2_spec_for_NonStatisticalScan,
                 undefined
             );
-            return new NonStatisticalScan /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NonStatisticalScan (
                 objectInstance,
                 attributeValues
             );

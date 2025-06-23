@@ -262,7 +262,6 @@ export function _decode_PerReportTransferFields(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 PerReportTransferFields._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'subject-identifier': (_el: _Element): void => {
                     subject_identifier = _decode_SubjectIdentifier(_el);
@@ -303,7 +302,6 @@ export function _decode_PerReportTransferFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

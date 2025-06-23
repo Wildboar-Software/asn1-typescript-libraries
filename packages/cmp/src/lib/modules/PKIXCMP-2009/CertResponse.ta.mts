@@ -165,13 +165,10 @@ let _cached_decoder_for_CertResponse: $.ASN1Decoder<CertResponse> | null = null;
 export function _decode_CertResponse(el: _Element) {
   if (!_cached_decoder_for_CertResponse) {
     _cached_decoder_for_CertResponse = function (el: _Element): CertResponse {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let certReqId!: INTEGER;
       let status!: PKIStatusInfo;
       let certifiedKeyPair: OPTIONAL<CertifiedKeyPair>;
       let rspInfo: OPTIONAL<OCTET_STRING>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         certReqId: (_el: _Element): void => {
           certReqId = $._decodeInteger(_el);
@@ -186,7 +183,6 @@ export function _decode_CertResponse(el: _Element) {
           rspInfo = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -195,7 +191,7 @@ export function _decode_CertResponse(el: _Element) {
         _root_component_type_list_2_spec_for_CertResponse,
         undefined
       );
-      return new CertResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CertResponse (
         certReqId,
         status,
         certifiedKeyPair,

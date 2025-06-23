@@ -161,14 +161,11 @@ let _cached_decoder_for_Fault: $.ASN1Decoder<Fault> | null = null;
 export function _decode_Fault(el: _Element) {
   if (!_cached_decoder_for_Fault) {
     _cached_decoder_for_Fault = function (el: _Element): Fault {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let code!: Code;
       let reason!: Text[];
       let node: OPTIONAL<AnyURI>;
       let role: OPTIONAL<AnyURI>;
       let detail: OPTIONAL<Content>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         code: (_el: _Element): void => {
           code = _decode_Code(_el);
@@ -186,7 +183,6 @@ export function _decode_Fault(el: _Element) {
           detail = _decode_Content(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -195,7 +191,7 @@ export function _decode_Fault(el: _Element) {
         _root_component_type_list_2_spec_for_Fault,
         undefined
       );
-      return new Fault /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Fault (
         code,
         reason,
         node,

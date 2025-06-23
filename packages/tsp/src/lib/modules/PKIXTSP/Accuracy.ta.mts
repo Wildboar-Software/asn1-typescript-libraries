@@ -120,12 +120,9 @@ let _cached_decoder_for_Accuracy: $.ASN1Decoder<Accuracy> | null = null;
 export function _decode_Accuracy(el: _Element) {
     if (!_cached_decoder_for_Accuracy) {
         _cached_decoder_for_Accuracy = function (el: _Element): Accuracy {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let seconds: OPTIONAL<INTEGER>;
             let millis: OPTIONAL<INTEGER>;
             let micros: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 seconds: (_el: _Element): void => {
                     seconds = $._decodeInteger(_el);
@@ -141,7 +138,6 @@ export function _decode_Accuracy(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_Accuracy(el: _Element) {
                 undefined
             );
             return new Accuracy(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ seconds,
+                seconds,
                 millis,
                 micros
             );

@@ -148,7 +148,6 @@ export function _decode_attribute_error_ParameterType_problems_Item(
             let type_!: AttributeType;
             let value: OPTIONAL<_Element>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<AttributeProblem>(
@@ -166,7 +165,6 @@ export function _decode_attribute_error_ParameterType_problems_Item(
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

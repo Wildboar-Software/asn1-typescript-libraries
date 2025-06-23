@@ -205,7 +205,6 @@ export function _decode_ExtendedResponse(el: _Element) {
     _cached_decoder_for_ExtendedResponse = $._decode_implicit<ExtendedResponse>(
       () =>
         function (el: _Element): ExtendedResponse {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let resultCode!: LDAPResult_resultCode;
           let matchedDN!: LDAPDN;
           let diagnosticMessage!: LDAPString;
@@ -213,8 +212,6 @@ export function _decode_ExtendedResponse(el: _Element) {
           let responseName: OPTIONAL<LDAPOID>;
           let responseValue: OPTIONAL<OCTET_STRING>;
           let _unrecognizedExtensionsList: _Element[] = [];
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             resultCode: (_el: _Element): void => {
               resultCode = _decode_LDAPResult_resultCode(_el);
@@ -241,7 +238,6 @@ export function _decode_ExtendedResponse(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -252,7 +248,7 @@ export function _decode_ExtendedResponse(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new ExtendedResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new ExtendedResponse (
             resultCode,
             matchedDN,
             diagnosticMessage,

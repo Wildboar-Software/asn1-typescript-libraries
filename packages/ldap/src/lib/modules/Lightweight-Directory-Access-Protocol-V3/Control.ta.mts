@@ -154,13 +154,10 @@ export const _extension_additions_list_spec_for_Control: $.ComponentSpec[] = [];
  * @returns {Control} The decoded data structure.
  */
 export function _decode_Control(el: _Element) {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let controlType!: LDAPOID;
     let criticality: OPTIONAL<BOOLEAN> = Control._default_value_for_criticality;
     let controlValue: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         controlType: (_el: _Element): void => {
             controlType = _decode_LDAPOID(_el);
@@ -172,7 +169,6 @@ export function _decode_Control(el: _Element) {
             controlValue = $._decodeOctetString(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -183,7 +179,7 @@ export function _decode_Control(el: _Element) {
             _unrecognizedExtensionsList.push(ext);
         }
     );
-    return new Control /* SEQUENCE_CONSTRUCTOR_CALL */(
+    return new Control (
         controlType,
         criticality,
         controlValue,

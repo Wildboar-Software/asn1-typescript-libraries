@@ -214,7 +214,6 @@ let _cached_decoder_for_Announcement: $.ASN1Decoder<Announcement> | null = null;
 export function _decode_Announcement(el: _Element) {
   if (!_cached_decoder_for_Announcement) {
     _cached_decoder_for_Announcement = function (el: _Element): Announcement {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let protocolVersion!: ProtocolVersion;
       let slaveEndpointIPAddress!: IPAddress;
       let slaveEndpointMACAddress!: MACAddress;
@@ -223,8 +222,6 @@ export function _decode_Announcement(el: _Element) {
         Announcement._default_value_for_bipMessagePort;
       let securityProtocols: OPTIONAL<SecurityProtocol[]>;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         protocolVersion: (_el: _Element): void => {
           protocolVersion = _decode_ProtocolVersion(_el);
@@ -247,7 +244,6 @@ export function _decode_Announcement(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -258,7 +254,7 @@ export function _decode_Announcement(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new Announcement /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Announcement (
         protocolVersion,
         slaveEndpointIPAddress,
         slaveEndpointMACAddress,

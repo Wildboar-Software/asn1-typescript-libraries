@@ -129,7 +129,6 @@ export function _decode_IPMIdentifier(el: _Element) {
                     let user: OPTIONAL<ORName>;
                     let user_relative_identifier!: LocalIPMIdentifier;
                     /* END_OF_SET_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         user: (_el: _Element): void => {
                             user = _decode_ORName(_el);
@@ -140,7 +139,6 @@ export function _decode_IPMIdentifier(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_set(
                         el,
                         callbacks,

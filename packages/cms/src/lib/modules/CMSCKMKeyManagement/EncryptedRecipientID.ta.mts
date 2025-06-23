@@ -133,12 +133,9 @@ export function _decode_EncryptedRecipientID(el: _Element) {
         _cached_decoder_for_EncryptedRecipientID = function (
             el: _Element
         ): EncryptedRecipientID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>;
             let keyID: OPTIONAL<OCTET_STRING>;
             let ciphertext!: OCTET_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 algorithm: (_el: _Element): void => {
                     algorithm = _decode_ContentEncryptionAlgorithmIdentifier(
@@ -154,7 +151,6 @@ export function _decode_EncryptedRecipientID(el: _Element) {
                     ciphertext = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -163,7 +159,7 @@ export function _decode_EncryptedRecipientID(el: _Element) {
                 _root_component_type_list_2_spec_for_EncryptedRecipientID,
                 undefined
             );
-            return new EncryptedRecipientID /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncryptedRecipientID (
                 algorithm,
                 keyID,
                 ciphertext

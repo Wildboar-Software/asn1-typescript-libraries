@@ -125,7 +125,6 @@ export function _decode_EMailRedirections(el: _Element) {
             let label!: Label;
             let address!: EMailRedirections_address;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 label: (_el: _Element): void => {
                     label = _decode_Label(_el);
@@ -134,7 +133,6 @@ export function _decode_EMailRedirections(el: _Element) {
                     address = _decode_EMailRedirections_address(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

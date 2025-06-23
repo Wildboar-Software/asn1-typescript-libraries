@@ -133,11 +133,8 @@ export function _decode_CreateTemplate_ResponseParams(el: _Element) {
     _cached_decoder_for_CreateTemplate_ResponseParams = function (
       el: _Element
     ): CreateTemplate_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let newTemplate!: BioAPI_BIR_HANDLE;
       let templateUuid: OPTIONAL<BioAPI_UUID>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         newTemplate: (_el: _Element): void => {
           newTemplate = _decode_BioAPI_BIR_HANDLE(_el);
@@ -146,7 +143,6 @@ export function _decode_CreateTemplate_ResponseParams(el: _Element) {
           templateUuid = _decode_BioAPI_UUID(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -155,7 +151,7 @@ export function _decode_CreateTemplate_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_CreateTemplate_ResponseParams,
         undefined
       );
-      return new CreateTemplate_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CreateTemplate_ResponseParams (
         newTemplate,
         templateUuid
       );

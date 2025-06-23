@@ -217,15 +217,12 @@ export function _decode_DynamicSimpleScanArgument(el: _Element) {
         _cached_decoder_for_DynamicSimpleScanArgument = function (
             el: _Element
         ): DynamicSimpleScanArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scanAttributeIdList: OPTIONAL<ScanAttributeIdList>;
             let numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>;
             let scopeOrListChoice!: DynamicSimpleScanArgument_scopeOrListChoice;
             let suppressObjectInstance: OPTIONAL<SuppressObjectInstance>;
             let onceReportAttributeIdList: OPTIONAL<OnceReportAttributeIdList>;
             let timeStampReportMode: OPTIONAL<TimeStampReportMode>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scanAttributeIdList: (_el: _Element): void => {
                     scanAttributeIdList = $._decode_implicit<ScanAttributeIdList>(
@@ -256,7 +253,6 @@ export function _decode_DynamicSimpleScanArgument(el: _Element) {
                     timeStampReportMode = _decode_TimeStampReportMode(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -265,7 +261,7 @@ export function _decode_DynamicSimpleScanArgument(el: _Element) {
                 _root_component_type_list_2_spec_for_DynamicSimpleScanArgument,
                 undefined
             );
-            return new DynamicSimpleScanArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DynamicSimpleScanArgument (
                 scanAttributeIdList,
                 numericAttributeIdArray,
                 scopeOrListChoice,

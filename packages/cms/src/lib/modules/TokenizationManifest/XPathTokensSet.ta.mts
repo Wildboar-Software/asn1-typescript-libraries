@@ -125,11 +125,8 @@ export function _decode_XPathTokensSet(el: _Element) {
         _cached_decoder_for_XPathTokensSet = function (
             el: _Element
         ): XPathTokensSet {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tSP: OPTIONAL<TokenServiceProvider>;
             let xPathSet!: XPathSet;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tSP: (_el: _Element): void => {
                     tSP = _decode_TokenServiceProvider(_el);
@@ -138,7 +135,6 @@ export function _decode_XPathTokensSet(el: _Element) {
                     xPathSet = _decode_XPathSet(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_XPathTokensSet(el: _Element) {
                 _root_component_type_list_2_spec_for_XPathTokensSet,
                 undefined
             );
-            return new XPathTokensSet /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new XPathTokensSet (
                 tSP,
                 xPathSet
             );

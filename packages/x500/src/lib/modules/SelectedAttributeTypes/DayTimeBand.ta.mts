@@ -141,14 +141,11 @@ let _cached_decoder_for_DayTimeBand: $.ASN1Decoder<DayTimeBand> | null = null;
 export function _decode_DayTimeBand(el: _Element) {
     if (!_cached_decoder_for_DayTimeBand) {
         _cached_decoder_for_DayTimeBand = function (el: _Element): DayTimeBand {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let startDayTime: OPTIONAL<DayTime> =
                 DayTimeBand._default_value_for_startDayTime;
             let endDayTime: OPTIONAL<DayTime> =
                 DayTimeBand._default_value_for_endDayTime;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 startDayTime: (_el: _Element): void => {
                     startDayTime = $._decode_explicit<DayTime>(
@@ -161,7 +158,6 @@ export function _decode_DayTimeBand(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_DayTimeBand(el: _Element) {
                 }
             );
             return new DayTimeBand(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ startDayTime,
+                startDayTime,
                 endDayTime,
                 _unrecognizedExtensionsList
             );

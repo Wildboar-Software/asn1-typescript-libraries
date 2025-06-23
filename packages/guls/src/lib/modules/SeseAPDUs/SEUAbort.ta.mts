@@ -163,13 +163,10 @@ let _cached_decoder_for_SEUAbort: $.ASN1Decoder<SEUAbort> | null = null;
 export function _decode_SEUAbort(el: _Element) {
   if (!_cached_decoder_for_SEUAbort) {
     _cached_decoder_for_SEUAbort = function (el: _Element): SEUAbort {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let invocationId: OPTIONAL<InvocationId> =
         SEUAbort._default_value_for_invocationId;
       let itemIdentifier: OPTIONAL<_Element>;
       let errors: OPTIONAL<SEerror[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         invocationId: (_el: _Element): void => {
           invocationId = _decode_InvocationId(_el);
@@ -181,7 +178,6 @@ export function _decode_SEUAbort(el: _Element) {
           errors = $._decodeSequenceOf<SEerror>(() => _decode_SEerror)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -190,7 +186,7 @@ export function _decode_SEUAbort(el: _Element) {
         _root_component_type_list_2_spec_for_SEUAbort,
         undefined
       );
-      return new SEUAbort /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SEUAbort (
         invocationId,
         itemIdentifier,
         errors

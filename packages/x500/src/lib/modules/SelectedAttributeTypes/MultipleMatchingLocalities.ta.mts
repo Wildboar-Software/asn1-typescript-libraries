@@ -129,12 +129,9 @@ export function _decode_MultipleMatchingLocalities(el: _Element) {
         _cached_decoder_for_MultipleMatchingLocalities = function (
             el: _Element
         ): MultipleMatchingLocalities {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let matchingRuleUsed: OPTIONAL<OBJECT_IDENTIFIER>;
             let attributeList!: AttributeValueAssertion[];
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 matchingRuleUsed: (_el: _Element): void => {
                     matchingRuleUsed = $._decodeObjectIdentifier(_el);
@@ -145,7 +142,6 @@ export function _decode_MultipleMatchingLocalities(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_MultipleMatchingLocalities(el: _Element) {
                 }
             );
             return new MultipleMatchingLocalities(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ matchingRuleUsed,
+                matchingRuleUsed,
                 attributeList,
                 _unrecognizedExtensionsList
             );

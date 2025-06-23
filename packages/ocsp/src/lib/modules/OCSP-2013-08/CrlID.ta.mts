@@ -126,12 +126,9 @@ let _cached_decoder_for_CrlID: $.ASN1Decoder<CrlID> | null = null;
 export function _decode_CrlID(el: _Element) {
     if (!_cached_decoder_for_CrlID) {
         _cached_decoder_for_CrlID = function (el: _Element): CrlID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let crlUrl: OPTIONAL<IA5String>;
             let crlNum: OPTIONAL<INTEGER>;
             let crlTime: OPTIONAL<GeneralizedTime>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 crlUrl: (_el: _Element): void => {
                     crlUrl = $._decode_explicit<IA5String>(
@@ -149,7 +146,6 @@ export function _decode_CrlID(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_CrlID(el: _Element) {
                 undefined
             );
             return new CrlID(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ crlUrl,
+                crlUrl,
                 crlNum,
                 crlTime
             );

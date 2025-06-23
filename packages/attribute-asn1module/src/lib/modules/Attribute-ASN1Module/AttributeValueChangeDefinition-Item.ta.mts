@@ -118,25 +118,21 @@ let _cached_decoder_for_AttributeValueChangeDefinition_Item: $.ASN1Decoder<Attri
 export
 function _decode_AttributeValueChangeDefinition_Item (el: _Element) {
     if (!_cached_decoder_for_AttributeValueChangeDefinition_Item) { _cached_decoder_for_AttributeValueChangeDefinition_Item = function (el: _Element): AttributeValueChangeDefinition_Item {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let attributeId!: AttributeId;
     let oldAttributeValue: OPTIONAL<_Element>;
     let newAttributeValue!: _Element;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "attributeId": (_el: _Element): void => { attributeId = _decode_AttributeId(_el); },
         "oldAttributeValue": (_el: _Element): void => { oldAttributeValue = $._decode_implicit<_Element>(() => $._decodeAny)(_el); },
         "newAttributeValue": (_el: _Element): void => { newAttributeValue = $._decode_implicit<_Element>(() => $._decodeAny)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_AttributeValueChangeDefinition_Item,
         _extension_additions_list_spec_for_AttributeValueChangeDefinition_Item,
         _root_component_type_list_2_spec_for_AttributeValueChangeDefinition_Item,
         undefined,
     );
-    return new AttributeValueChangeDefinition_Item( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new AttributeValueChangeDefinition_Item( 
         attributeId,
         oldAttributeValue,
         newAttributeValue

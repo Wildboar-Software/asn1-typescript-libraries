@@ -200,7 +200,6 @@ export function _decode_Waiting(el: _Element) {
                 Waiting._default_value_for_waiting_content_types;
             let waiting_encoded_information_types: OPTIONAL<EncodedInformationTypes>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'waiting-operations': (_el: _Element): void => {
                     waiting_operations = $._decode_implicit<Operations>(
@@ -226,7 +225,6 @@ export function _decode_Waiting(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

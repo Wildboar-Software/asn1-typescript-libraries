@@ -181,14 +181,11 @@ let _cached_decoder_for_ControlInfo: $.ASN1Decoder<ControlInfo> | null = null;
 export function _decode_ControlInfo(el: _Element) {
     if (!_cached_decoder_for_ControlInfo) {
         _cached_decoder_for_ControlInfo = function (el: _Element): ControlInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let actionResponse!: ActionResponse;
             let reportingTriggers: OPTIONAL<ReportingTriggers>;
             let accountableObjectsReferenceList: OPTIONAL<AccountableObjectsReferenceList>;
             let dataObjectsReferenceList: OPTIONAL<DataObjectsReferenceList>;
             let additionalInformation!: ManagementExtension[];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 actionResponse: (_el: _Element): void => {
                     actionResponse = _decode_ActionResponse(_el);
@@ -218,7 +215,6 @@ export function _decode_ControlInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -227,7 +223,7 @@ export function _decode_ControlInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ControlInfo,
                 undefined
             );
-            return new ControlInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ControlInfo (
                 actionResponse,
                 reportingTriggers,
                 accountableObjectsReferenceList,

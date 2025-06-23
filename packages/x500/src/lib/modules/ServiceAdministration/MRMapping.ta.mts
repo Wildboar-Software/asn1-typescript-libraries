@@ -127,12 +127,9 @@ let _cached_decoder_for_MRMapping: $.ASN1Decoder<MRMapping> | null = null;
 export function _decode_MRMapping(el: _Element) {
     if (!_cached_decoder_for_MRMapping) {
         _cached_decoder_for_MRMapping = function (el: _Element): MRMapping {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mapping: OPTIONAL<Mapping[]>;
             let substitution: OPTIONAL<MRSubstitution[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mapping: (_el: _Element): void => {
                     mapping = $._decode_explicit<Mapping[]>(() =>
@@ -147,7 +144,6 @@ export function _decode_MRMapping(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_MRMapping(el: _Element) {
                 }
             );
             return new MRMapping(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mapping,
+                mapping,
                 substitution,
                 _unrecognizedExtensionsList
             );

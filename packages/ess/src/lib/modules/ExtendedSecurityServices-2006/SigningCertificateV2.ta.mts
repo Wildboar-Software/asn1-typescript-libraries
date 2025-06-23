@@ -125,11 +125,8 @@ export function _decode_SigningCertificateV2(el: _Element) {
         _cached_decoder_for_SigningCertificateV2 = function (
             el: _Element
         ): SigningCertificateV2 {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certs!: ESSCertIDv2[];
             let policies: OPTIONAL<PolicyInformation[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certs: (_el: _Element): void => {
                     certs = $._decodeSequenceOf<ESSCertIDv2>(
@@ -142,7 +139,6 @@ export function _decode_SigningCertificateV2(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_SigningCertificateV2(el: _Element) {
                 undefined
             );
             return new SigningCertificateV2(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certs,
+                certs,
                 policies
             );
         };

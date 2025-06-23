@@ -155,13 +155,10 @@ export function _decode_KeyAgreePublicKey(el: _Element) {
     _cached_decoder_for_KeyAgreePublicKey = function (
       el: _Element
     ): KeyAgreePublicKey {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let algorithm!: AlgorithmIdentifier;
       let publicKey!: BIT_STRING;
       let macAlgorithm!: AlgorithmIdentifier;
       let kDF: OPTIONAL<AlgorithmIdentifier>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         algorithm: (_el: _Element): void => {
           algorithm = _decode_AlgorithmIdentifier(_el);
@@ -176,7 +173,6 @@ export function _decode_KeyAgreePublicKey(el: _Element) {
           kDF = _decode_AlgorithmIdentifier(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -185,7 +181,7 @@ export function _decode_KeyAgreePublicKey(el: _Element) {
         _root_component_type_list_2_spec_for_KeyAgreePublicKey,
         undefined
       );
-      return new KeyAgreePublicKey /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KeyAgreePublicKey (
         algorithm,
         publicKey,
         macAlgorithm,

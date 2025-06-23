@@ -277,7 +277,6 @@ export function _decode_Req_contents(el: _Element) {
         _cached_decoder_for_Req_contents = function (
             el: _Element
         ): Req_contents {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tok_id!: INTEGER;
             let context_id!: Random_Integer;
             let pvno!: BIT_STRING;
@@ -290,8 +289,6 @@ export function _decode_Req_contents(el: _Element) {
             let key_estb_set!: Key_Estb_Algs;
             let key_estb_req: OPTIONAL<BIT_STRING>;
             let key_src_bind: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "tok-id": (_el: _Element): void => {
                     tok_id = $._decodeInteger(_el);
@@ -334,7 +331,6 @@ export function _decode_Req_contents(el: _Element) {
                     key_src_bind = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -344,7 +340,7 @@ export function _decode_Req_contents(el: _Element) {
                 undefined
             );
             return new Req_contents(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tok_id,
+                tok_id,
                 context_id,
                 pvno,
                 timestamp,

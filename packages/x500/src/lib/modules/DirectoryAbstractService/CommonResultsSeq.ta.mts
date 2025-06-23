@@ -172,15 +172,12 @@ export function _decode_CommonResultsSeq(el: _Element) {
         _cached_decoder_for_CommonResultsSeq = function (
             el: _Element
         ): CommonResultsSeq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let securityParameters: OPTIONAL<SecurityParameters>;
             let performer: OPTIONAL<DistinguishedName>;
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 CommonResultsSeq._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 securityParameters: (_el: _Element): void => {
                     securityParameters = $._decode_explicit<SecurityParameters>(
@@ -203,7 +200,6 @@ export function _decode_CommonResultsSeq(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -215,7 +211,7 @@ export function _decode_CommonResultsSeq(el: _Element) {
                 }
             );
             return new CommonResultsSeq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ securityParameters,
+                securityParameters,
                 performer,
                 aliasDereferenced,
                 notification,

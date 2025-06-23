@@ -239,7 +239,6 @@ export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
         _cached_decoder_for_ModifyOperationalBindingArgumentData = function (
             el: _Element
         ): ModifyOperationalBindingArgumentData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bindingType!: OBJECT_IDENTIFIER;
             let bindingID!: OperationalBindingID;
             let accessPoint: OPTIONAL<AccessPoint>;
@@ -249,8 +248,6 @@ export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
             let valid: OPTIONAL<ModifiedValidity>;
             let securityParameters: OPTIONAL<SecurityParameters>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bindingType: (_el: _Element): void => {
                     bindingType = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -293,7 +290,6 @@ export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -305,7 +301,7 @@ export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
                 }
             );
             return new ModifyOperationalBindingArgumentData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bindingType,
+                bindingType,
                 bindingID,
                 accessPoint,
                 initiator,

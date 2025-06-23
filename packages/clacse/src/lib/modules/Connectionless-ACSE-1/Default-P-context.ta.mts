@@ -131,11 +131,8 @@ export function _decode_Default_P_context(el: _Element) {
         _cached_decoder_for_Default_P_context = function (
             el: _Element
         ): Default_P_context {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let abstract_syntax: OPTIONAL<Abstract_syntax_name>;
             let transfer_syntax!: Transfer_syntax_name;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'abstract-syntax': (_el: _Element): void => {
                     abstract_syntax = $._decode_implicit<Abstract_syntax_name>(
@@ -148,7 +145,6 @@ export function _decode_Default_P_context(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_Default_P_context(el: _Element) {
                 _root_component_type_list_2_spec_for_Default_P_context,
                 undefined
             );
-            return new Default_P_context /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new Default_P_context (
                 abstract_syntax,
                 transfer_syntax
             );

@@ -134,11 +134,8 @@ let _cached_decoder_for_CMIPAbortInfo: $.ASN1Decoder<CMIPAbortInfo> | null = nul
 export function _decode_CMIPAbortInfo(el: _Element) {
   if (!_cached_decoder_for_CMIPAbortInfo) {
     _cached_decoder_for_CMIPAbortInfo = function (el: _Element): CMIPAbortInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let abortSource!: CMIPAbortSource;
       let userInfo: OPTIONAL<EXTERNAL>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         abortSource: (_el: _Element): void => {
           abortSource = $._decode_implicit<CMIPAbortSource>(
@@ -149,7 +146,6 @@ export function _decode_CMIPAbortInfo(el: _Element) {
           userInfo = $._decode_explicit<EXTERNAL>(() => $._decodeExternal)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -158,7 +154,7 @@ export function _decode_CMIPAbortInfo(el: _Element) {
         _root_component_type_list_2_spec_for_CMIPAbortInfo,
         undefined
       );
-      return new CMIPAbortInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CMIPAbortInfo (
         abortSource,
         userInfo
       );

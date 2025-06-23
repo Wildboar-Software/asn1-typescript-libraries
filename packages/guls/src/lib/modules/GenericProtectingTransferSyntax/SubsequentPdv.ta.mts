@@ -122,11 +122,8 @@ let _cached_decoder_for_SubsequentPdv: $.ASN1Decoder<SubsequentPdv> | null = nul
 export function _decode_SubsequentPdv(el: _Element) {
   if (!_cached_decoder_for_SubsequentPdv) {
     _cached_decoder_for_SubsequentPdv = function (el: _Element): SubsequentPdv {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let dynamicUnprotParm: OPTIONAL<_Element>;
       let xformedData!: _Element;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         dynamicUnprotParm: (_el: _Element): void => {
           dynamicUnprotParm = $._decodeAny(_el);
@@ -135,7 +132,6 @@ export function _decode_SubsequentPdv(el: _Element) {
           xformedData = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -144,7 +140,7 @@ export function _decode_SubsequentPdv(el: _Element) {
         _root_component_type_list_2_spec_for_SubsequentPdv,
         undefined
       );
-      return new SubsequentPdv /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SubsequentPdv (
         dynamicUnprotParm,
         xformedData
       );

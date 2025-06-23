@@ -147,12 +147,9 @@ export function _decode_KeyConstructionDomain(el: _Element) {
         _cached_decoder_for_KeyConstructionDomain = function (
             el: _Element
         ): KeyConstructionDomain {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let domainName!: DomainName;
             let domainMaintenanceLevel!: DomainMaintenanceLevel;
             let domainParams: OPTIONAL<DomainParams>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 domainName: (_el: _Element): void => {
                     domainName = _decode_DomainName(_el);
@@ -166,7 +163,6 @@ export function _decode_KeyConstructionDomain(el: _Element) {
                     domainParams = _decode_DomainParams(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -175,7 +171,7 @@ export function _decode_KeyConstructionDomain(el: _Element) {
                 _root_component_type_list_2_spec_for_KeyConstructionDomain,
                 undefined
             );
-            return new KeyConstructionDomain /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new KeyConstructionDomain (
                 domainName,
                 domainMaintenanceLevel,
                 domainParams

@@ -188,15 +188,12 @@ export function _decode_gulsSignatureTransformation_XformedDataType(
     _cached_decoder_for_gulsSignatureTransformation_XformedDataType = function (
       el: _Element
     ): gulsSignatureTransformation_XformedDataType {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let initEncRules: OPTIONAL<OBJECT_IDENTIFIER> =
         gulsSignatureTransformation_XformedDataType._default_value_for_initEncRules;
       let signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>;
       let hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
       let keyInformation: OPTIONAL<gulsSignatureTransformation_XformedDataType_keyInformation>;
       let appendix!: BIT_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         initEncRules: (_el: _Element): void => {
           initEncRules = $._decodeObjectIdentifier(_el);
@@ -216,7 +213,6 @@ export function _decode_gulsSignatureTransformation_XformedDataType(
           appendix = $._decodeBitString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -225,7 +221,7 @@ export function _decode_gulsSignatureTransformation_XformedDataType(
         _root_component_type_list_2_spec_for_gulsSignatureTransformation_XformedDataType,
         undefined
       );
-      return new gulsSignatureTransformation_XformedDataType /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new gulsSignatureTransformation_XformedDataType (
         initEncRules,
         signOrSealAlgorithm,
         hashAlgorithm,

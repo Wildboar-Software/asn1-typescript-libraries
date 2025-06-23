@@ -196,7 +196,6 @@ export function _decode_F_RESTART_response(el: _Element) {
     _cached_decoder_for_F_RESTART_response = function (
       el: _Element
     ): F_RESTART_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let checkpoint_identifier!: INTEGER;
       let request_type: OPTIONAL<Request_Type>;
       let transfer_number!: INTEGER;
@@ -204,8 +203,6 @@ export function _decode_F_RESTART_response(el: _Element) {
       let last_transfer_end_read_response: OPTIONAL<INTEGER>;
       let last_transfer_end_write_request: OPTIONAL<INTEGER>;
       let last_transfer_end_write_response: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'checkpoint-identifier': (_el: _Element): void => {
           checkpoint_identifier = $._decode_implicit<INTEGER>(
@@ -241,7 +238,6 @@ export function _decode_F_RESTART_response(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -250,7 +246,7 @@ export function _decode_F_RESTART_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_RESTART_response,
         undefined
       );
-      return new F_RESTART_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_RESTART_response (
         checkpoint_identifier,
         request_type,
         transfer_number,

@@ -125,11 +125,8 @@ export function _decode_ActionFilterList_Item(el: _Element) {
         _cached_decoder_for_ActionFilterList_Item = function (
             el: _Element
         ): ActionFilterList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let actionTypeId!: ActionTypeId;
             let attributeFilterList: OPTIONAL<FilterList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 actionTypeId: (_el: _Element): void => {
                     actionTypeId = _decode_ActionTypeId(_el);
@@ -138,7 +135,6 @@ export function _decode_ActionFilterList_Item(el: _Element) {
                     attributeFilterList = _decode_FilterList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_ActionFilterList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_ActionFilterList_Item,
                 undefined
             );
-            return new ActionFilterList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ActionFilterList_Item (
                 actionTypeId,
                 attributeFilterList
             );

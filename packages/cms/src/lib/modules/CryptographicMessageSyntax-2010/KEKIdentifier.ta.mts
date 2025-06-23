@@ -133,12 +133,9 @@ export function _decode_KEKIdentifier(el: _Element) {
         _cached_decoder_for_KEKIdentifier = function (
             el: _Element
         ): KEKIdentifier {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let keyIdentifier!: OCTET_STRING;
             let date: OPTIONAL<GeneralizedTime>;
             let other: OPTIONAL<OtherKeyAttribute>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 keyIdentifier: (_el: _Element): void => {
                     keyIdentifier = $._decodeOctetString(_el);
@@ -150,7 +147,6 @@ export function _decode_KEKIdentifier(el: _Element) {
                     other = _decode_OtherKeyAttribute(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -159,7 +155,7 @@ export function _decode_KEKIdentifier(el: _Element) {
                 _root_component_type_list_2_spec_for_KEKIdentifier,
                 undefined
             );
-            return new KEKIdentifier /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new KEKIdentifier (
                 keyIdentifier,
                 date,
                 other

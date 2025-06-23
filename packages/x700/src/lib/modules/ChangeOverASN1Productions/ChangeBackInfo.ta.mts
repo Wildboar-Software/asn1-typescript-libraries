@@ -169,14 +169,11 @@ export function _decode_ChangeBackInfo(el: _Element) {
         _cached_decoder_for_ChangeBackInfo = function (
             el: _Element
         ): ChangeBackInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let backedUpObject!: ObjectInstance;
             let backUpObject: OPTIONAL<OptionalObject> =
                 ChangeBackInfo._default_value_for_backUpObject;
             let backedUpObjectChanges: OPTIONAL<ExpectedAttributeList>;
             let backUpObjectChanges: OPTIONAL<ExpectedAttributeList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 backedUpObject: (_el: _Element): void => {
                     backedUpObject = $._decode_explicit<ObjectInstance>(
@@ -199,7 +196,6 @@ export function _decode_ChangeBackInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -208,7 +204,7 @@ export function _decode_ChangeBackInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ChangeBackInfo,
                 undefined
             );
-            return new ChangeBackInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ChangeBackInfo (
                 backedUpObject,
                 backUpObject,
                 backedUpObjectChanges,

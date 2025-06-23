@@ -131,12 +131,9 @@ let _cached_decoder_for_NameSurrogate: $.ASN1Decoder<NameSurrogate> | null = nul
 export function _decode_NameSurrogate(el: _Element) {
   if (!_cached_decoder_for_NameSurrogate) {
     _cached_decoder_for_NameSurrogate = function (el: _Element): NameSurrogate {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let prefix_string_index: OPTIONAL<INTEGER>;
       let namespace_name_string_index: OPTIONAL<INTEGER>;
       let local_name_string_index!: INTEGER;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'prefix-string-index': (_el: _Element): void => {
           prefix_string_index = $._decodeInteger(_el);
@@ -148,7 +145,6 @@ export function _decode_NameSurrogate(el: _Element) {
           local_name_string_index = $._decodeInteger(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -157,7 +153,7 @@ export function _decode_NameSurrogate(el: _Element) {
         _root_component_type_list_2_spec_for_NameSurrogate,
         undefined
       );
-      return new NameSurrogate /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new NameSurrogate (
         prefix_string_index,
         namespace_name_string_index,
         local_name_string_index

@@ -221,7 +221,6 @@ export function _decode_ContentChange(el: _Element) {
         _cached_decoder_for_ContentChange = function (
             el: _Element
         ): ContentChange {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rename: OPTIONAL<ContentChange_rename>;
             let attributeChanges: OPTIONAL<ContentChange_attributeChanges>;
             let sDSEType!: SDSEType;
@@ -231,8 +230,6 @@ export function _decode_ContentChange(el: _Element) {
             let attValIncomplete: OPTIONAL<AttributeType[]> =
                 ContentChange._default_value_for_attValIncomplete;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rename: (_el: _Element): void => {
                     rename = _decode_ContentChange_rename(_el);
@@ -261,7 +258,6 @@ export function _decode_ContentChange(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -273,7 +269,7 @@ export function _decode_ContentChange(el: _Element) {
                 }
             );
             return new ContentChange(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rename,
+                rename,
                 attributeChanges,
                 sDSEType,
                 subComplete,

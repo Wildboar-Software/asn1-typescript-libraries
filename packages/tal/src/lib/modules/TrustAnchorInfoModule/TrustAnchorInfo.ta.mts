@@ -167,7 +167,6 @@ let _cached_decoder_for_TrustAnchorInfo: $.ASN1Decoder<TrustAnchorInfo> | null =
 export
 function _decode_TrustAnchorInfo (el: _Element) {
     if (!_cached_decoder_for_TrustAnchorInfo) { _cached_decoder_for_TrustAnchorInfo = function (el: _Element): TrustAnchorInfo {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version: OPTIONAL<TrustAnchorInfoVersion> = TrustAnchorInfo._default_value_for_version;
     let pubKey!: SubjectPublicKeyInfo;
     let keyId!: KeyIdentifier;
@@ -175,8 +174,6 @@ function _decode_TrustAnchorInfo (el: _Element) {
     let certPath: OPTIONAL<CertPathControls>;
     let exts: OPTIONAL<Extensions>;
     let taTitleLangTag: OPTIONAL<UTF8String>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = _decode_TrustAnchorInfoVersion(_el); },
         "pubKey": (_el: _Element): void => { pubKey = _decode_SubjectPublicKeyInfo(_el); },
@@ -186,14 +183,13 @@ function _decode_TrustAnchorInfo (el: _Element) {
         "exts": (_el: _Element): void => { exts = $._decode_explicit<Extensions>(() => _decode_Extensions)(_el); },
         "taTitleLangTag": (_el: _Element): void => { taTitleLangTag = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TrustAnchorInfo,
         _extension_additions_list_spec_for_TrustAnchorInfo,
         _root_component_type_list_2_spec_for_TrustAnchorInfo,
         undefined,
     );
-    return new TrustAnchorInfo( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TrustAnchorInfo( 
         version,
         pubKey,
         keyId,

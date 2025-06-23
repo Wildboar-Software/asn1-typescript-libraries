@@ -259,7 +259,6 @@ export function _decode_CertTemplate(el: _Element) {
         _cached_decoder_for_CertTemplate = function (
             el: _Element
         ): CertTemplate {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version>;
             let serialNumber: OPTIONAL<INTEGER>;
             let signingAlg: OPTIONAL<AlgorithmIdentifier>;
@@ -270,8 +269,6 @@ export function _decode_CertTemplate(el: _Element) {
             let issuerUID: OPTIONAL<UniqueIdentifier>;
             let subjectUID: OPTIONAL<UniqueIdentifier>;
             let extensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = $._decode_implicit<Version>(
@@ -320,7 +317,6 @@ export function _decode_CertTemplate(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -329,7 +325,7 @@ export function _decode_CertTemplate(el: _Element) {
                 _root_component_type_list_2_spec_for_CertTemplate,
                 undefined
             );
-            return new CertTemplate /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CertTemplate (
                 version,
                 serialNumber,
                 signingAlg,

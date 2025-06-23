@@ -171,7 +171,6 @@ export function _decode_CPA_PPDU_x410_mode_parameters(el: _Element) {
                 CPA_PPDU_x410_mode_parameters._default_value_for_windowSize;
             let connectionDataAC!: ConnectionData;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 checkpointSize: (_el: _Element): void => {
                     checkpointSize = $._decode_implicit<INTEGER>(
@@ -189,7 +188,6 @@ export function _decode_CPA_PPDU_x410_mode_parameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

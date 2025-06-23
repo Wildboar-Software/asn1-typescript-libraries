@@ -153,12 +153,9 @@ export function _decode_PKICertificateInformation(el: _Element) {
         _cached_decoder_for_PKICertificateInformation = function (
             el: _Element
         ): PKICertificateInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pkiCertificateSerialNumber!: CertificateSerialNumber;
             let pkiCertificateIssuerName!: Name;
             let pkiCertificateIssuerUniqueIdentifier: OPTIONAL<UniqueIdentifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pkiCertificateSerialNumber: (_el: _Element): void => {
                     pkiCertificateSerialNumber = _decode_CertificateSerialNumber(
@@ -174,7 +171,6 @@ export function _decode_PKICertificateInformation(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_PKICertificateInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_PKICertificateInformation,
                 undefined
             );
-            return new PKICertificateInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PKICertificateInformation (
                 pkiCertificateSerialNumber,
                 pkiCertificateIssuerName,
                 pkiCertificateIssuerUniqueIdentifier

@@ -227,7 +227,6 @@ export function _decode_StateChangeInfo(el: _Element) {
         _cached_decoder_for_StateChangeInfo = function (
             el: _Element
         ): StateChangeInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sourceIndicator: OPTIONAL<SourceIndicator>;
             let attributeIdentifierList: OPTIONAL<AttributeIdentifierList>;
             let stateChangeDefinition!: AttributeValueChangeDefinition;
@@ -235,8 +234,6 @@ export function _decode_StateChangeInfo(el: _Element) {
             let correlatedNotifications: OPTIONAL<CorrelatedNotifications>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sourceIndicator: (_el: _Element): void => {
                     sourceIndicator = _decode_SourceIndicator(_el);
@@ -270,7 +267,6 @@ export function _decode_StateChangeInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -279,7 +275,7 @@ export function _decode_StateChangeInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_StateChangeInfo,
                 undefined
             );
-            return new StateChangeInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new StateChangeInfo (
                 sourceIndicator,
                 attributeIdentifierList,
                 stateChangeDefinition,

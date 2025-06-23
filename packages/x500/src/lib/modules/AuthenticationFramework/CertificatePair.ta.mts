@@ -126,12 +126,9 @@ export function _decode_CertificatePair(el: _Element) {
         _cached_decoder_for_CertificatePair = function (
             el: _Element
         ): CertificatePair {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let issuedToThisCA: OPTIONAL<Certificate>;
             let issuedByThisCA: OPTIONAL<Certificate>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 issuedToThisCA: (_el: _Element): void => {
                     issuedToThisCA = $._decode_explicit<Certificate>(
@@ -144,7 +141,6 @@ export function _decode_CertificatePair(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_CertificatePair(el: _Element) {
                 }
             );
             return new CertificatePair(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuedToThisCA,
+                issuedToThisCA,
                 issuedByThisCA,
                 _unrecognizedExtensionsList
             );

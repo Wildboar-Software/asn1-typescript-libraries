@@ -162,13 +162,10 @@ export function _decode_BasicOCSPResponse(el: _Element) {
         _cached_decoder_for_BasicOCSPResponse = function (
             el: _Element
         ): BasicOCSPResponse {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tbsResponseData!: ResponseData;
             let signatureAlgorithm!: AlgorithmIdentifier;
             let signature!: BIT_STRING;
             let certs: OPTIONAL<Certificate[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tbsResponseData: (_el: _Element): void => {
                     tbsResponseData = _decode_ResponseData(_el);
@@ -187,7 +184,6 @@ export function _decode_BasicOCSPResponse(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -197,7 +193,7 @@ export function _decode_BasicOCSPResponse(el: _Element) {
                 undefined
             );
             return new BasicOCSPResponse(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tbsResponseData,
+                tbsResponseData,
                 signatureAlgorithm,
                 signature,
                 certs

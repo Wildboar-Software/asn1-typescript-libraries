@@ -154,13 +154,10 @@ let _cached_decoder_for_DeleteResult: $.ASN1Decoder<DeleteResult> | null = null;
 export function _decode_DeleteResult(el: _Element) {
   if (!_cached_decoder_for_DeleteResult) {
     _cached_decoder_for_DeleteResult = function (el: _Element): DeleteResult {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let currentTime: OPTIONAL<GeneralizedTime>;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -174,7 +171,6 @@ export function _decode_DeleteResult(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -185,7 +181,7 @@ export function _decode_DeleteResult(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new DeleteResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new DeleteResult (
         managedObjectClass,
         managedObjectInstance,
         currentTime,

@@ -159,13 +159,10 @@ let _cached_decoder_for_Information: $.ASN1Decoder<Information> | null = null;
 export function _decode_Information(el: _Element) {
   if (!_cached_decoder_for_Information) {
     _cached_decoder_for_Information = function (el: _Element): Information {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let description!: HTMLString;
       let additionalInformation: OPTIONAL<HTMLString>;
       let firstRegistration: OPTIONAL<RegistrationDetails>;
       let currentRegistration: OPTIONAL<RegistrationDetails>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         description: (_el: _Element): void => {
           description = _decode_HTMLString(_el);
@@ -180,7 +177,6 @@ export function _decode_Information(el: _Element) {
           currentRegistration = _decode_RegistrationDetails(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -189,7 +185,7 @@ export function _decode_Information(el: _Element) {
         _root_component_type_list_2_spec_for_Information,
         undefined
       );
-      return new Information /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Information (
         description,
         additionalInformation,
         firstRegistration,

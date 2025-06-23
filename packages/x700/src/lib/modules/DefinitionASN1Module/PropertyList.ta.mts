@@ -278,7 +278,6 @@ export function _decode_PropertyList(el: _Element) {
         _cached_decoder_for_PropertyList = function (
             el: _Element
         ): PropertyList {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let replaceWithDefault: OPTIONAL<BOOLEAN> =
                 PropertyList._default_value_for_replaceWithDefault;
             let defaultValue: OPTIONAL<ValueSpecifier>;
@@ -290,8 +289,6 @@ export function _decode_PropertyList(el: _Element) {
             let setByCreate: OPTIONAL<BOOLEAN> =
                 PropertyList._default_value_for_setByCreate;
             let additionalProperties: OPTIONAL<AdditionalProperties>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 replaceWithDefault: (_el: _Element): void => {
                     replaceWithDefault = $._decode_implicit<BOOLEAN>(
@@ -339,7 +336,6 @@ export function _decode_PropertyList(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -348,7 +344,7 @@ export function _decode_PropertyList(el: _Element) {
                 _root_component_type_list_2_spec_for_PropertyList,
                 undefined
             );
-            return new PropertyList /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PropertyList (
                 replaceWithDefault,
                 defaultValue,
                 initialValue,

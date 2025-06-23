@@ -256,7 +256,6 @@ export function _decode_CPA_PPDU_normal_mode_parameters(el: _Element) {
         _cached_decoder_for_CPA_PPDU_normal_mode_parameters = function (
             el: _Element
         ): CPA_PPDU_normal_mode_parameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let protocol_version: OPTIONAL<Protocol_version> =
                 CPA_PPDU_normal_mode_parameters._default_value_for_protocol_version;
             let responding_presentation_selector: OPTIONAL<Responding_presentation_selector>;
@@ -267,8 +266,6 @@ export function _decode_CPA_PPDU_normal_mode_parameters(el: _Element) {
                 CPA_PPDU_normal_mode_parameters._default_value_for_protocol_options;
             let responders_nominated_context: OPTIONAL<Presentation_context_identifier>;
             let user_data: OPTIONAL<User_data>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'protocol-version': (_el: _Element): void => {
                     protocol_version = $._decode_implicit<Protocol_version>(
@@ -312,7 +309,6 @@ export function _decode_CPA_PPDU_normal_mode_parameters(el: _Element) {
                     user_data = _decode_User_data(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -321,7 +317,7 @@ export function _decode_CPA_PPDU_normal_mode_parameters(el: _Element) {
                 _root_component_type_list_2_spec_for_CPA_PPDU_normal_mode_parameters,
                 undefined
             );
-            return new CPA_PPDU_normal_mode_parameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CPA_PPDU_normal_mode_parameters (
                 protocol_version,
                 responding_presentation_selector,
                 presentation_context_definition_result_list,

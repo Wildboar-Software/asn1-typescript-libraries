@@ -148,14 +148,11 @@ export function _decode_GeneralSubtree(el: _Element) {
         _cached_decoder_for_GeneralSubtree = function (
             el: _Element
         ): GeneralSubtree {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let base!: GeneralName;
             let minimum: OPTIONAL<BaseDistance> =
                 GeneralSubtree._default_value_for_minimum;
             let maximum: OPTIONAL<BaseDistance>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 base: (_el: _Element): void => {
                     base = _decode_GeneralName(_el);
@@ -171,7 +168,6 @@ export function _decode_GeneralSubtree(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -183,7 +179,7 @@ export function _decode_GeneralSubtree(el: _Element) {
                 }
             );
             return new GeneralSubtree(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ base,
+                base,
                 minimum,
                 maximum,
                 _unrecognizedExtensionsList

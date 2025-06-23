@@ -129,12 +129,9 @@ export function _decode_AttributeValueIntegrityInfoContent(el: _Element) {
         _cached_decoder_for_AttributeValueIntegrityInfoContent = function (
             el: _Element
         ): AttributeValueIntegrityInfoContent {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signer: OPTIONAL<Signer>;
             let aVIHash!: AVIHash;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 signer: (_el: _Element): void => {
                     signer = _decode_Signer(_el);
@@ -143,7 +140,6 @@ export function _decode_AttributeValueIntegrityInfoContent(el: _Element) {
                     aVIHash = _decode_AVIHash(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_AttributeValueIntegrityInfoContent(el: _Element) {
                 }
             );
             return new AttributeValueIntegrityInfoContent(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ signer,
+                signer,
                 aVIHash,
                 _unrecognizedExtensionsList
             );

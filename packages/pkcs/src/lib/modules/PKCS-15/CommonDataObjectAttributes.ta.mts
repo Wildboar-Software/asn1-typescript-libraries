@@ -130,12 +130,9 @@ export function _decode_CommonDataObjectAttributes(el: _Element) {
         _cached_decoder_for_CommonDataObjectAttributes = function (
             el: _Element
         ): CommonDataObjectAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let applicationName: OPTIONAL<Label>;
             let applicationOID: OPTIONAL<OBJECT_IDENTIFIER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 applicationName: (_el: _Element): void => {
                     applicationName = _decode_Label(_el);
@@ -144,7 +141,6 @@ export function _decode_CommonDataObjectAttributes(el: _Element) {
                     applicationOID = $._decodeObjectIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_CommonDataObjectAttributes(el: _Element) {
                 }
             );
             return new CommonDataObjectAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ applicationName,
+                applicationName,
                 applicationOID,
                 _unrecognizedExtensionsList
             );

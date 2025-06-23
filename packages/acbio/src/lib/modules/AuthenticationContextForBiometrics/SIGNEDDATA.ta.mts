@@ -199,15 +199,12 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
     _decode_EncapsulatedContentInfo: $.ASN1Decoder<EncapsulatedContentInfo>
 ) {
     return function (el: _Element): SIGNEDDATA<EncapsulatedContentInfo> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let version!: CMSVersion;
         let digestAlgorithms!: DigestAlgorithmIdentifier[];
         let encapContentInfo!: EncapsulatedContentInfo;
         let certificates: OPTIONAL<CertificateSet>;
         let crls: OPTIONAL<RevocationInfoChoices>;
         let signerInfos!: SignerInfos;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             version: (_el: _Element): void => {
                 version = _decode_CMSVersion(_el);
@@ -234,7 +231,6 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
                 signerInfos = _decode_SignerInfos(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -243,7 +239,7 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
             _root_component_type_list_2_spec_for_SIGNEDDATA,
             undefined
         );
-        return new SIGNEDDATA /* SEQUENCE_CONSTRUCTOR_CALL */(
+        return new SIGNEDDATA (
             version,
             digestAlgorithms,
             encapContentInfo,

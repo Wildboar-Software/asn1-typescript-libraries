@@ -122,12 +122,9 @@ export function _decode_ContextInformation(el: _Element) {
         _cached_decoder_for_ContextInformation = function (
             el: _Element
         ): ContextInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let syntax!: UnboundedDirectoryString;
             let assertionSyntax: OPTIONAL<UnboundedDirectoryString>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 syntax: (_el: _Element): void => {
                     syntax = _decode_UnboundedDirectoryString(_el);
@@ -136,7 +133,6 @@ export function _decode_ContextInformation(el: _Element) {
                     assertionSyntax = _decode_UnboundedDirectoryString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -148,7 +144,7 @@ export function _decode_ContextInformation(el: _Element) {
                 }
             );
             return new ContextInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ syntax,
+                syntax,
                 assertionSyntax,
                 _unrecognizedExtensionsList
             );

@@ -379,7 +379,6 @@ export function _decode_CommonArguments(el: _Element) {
                 CommonArguments._default_value_for_familyGrouping;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 serviceControls: (_el: _Element): void => {
                     serviceControls = $._decode_explicit<ServiceControls>(
@@ -442,7 +441,6 @@ export function _decode_CommonArguments(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

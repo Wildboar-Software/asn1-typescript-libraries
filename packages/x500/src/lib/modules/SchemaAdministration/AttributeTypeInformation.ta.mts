@@ -272,7 +272,6 @@ export function _decode_AttributeTypeInformation(el: _Element) {
         _cached_decoder_for_AttributeTypeInformation = function (
             el: _Element
         ): AttributeTypeInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let derivation: OPTIONAL<OBJECT_IDENTIFIER>;
             let equalityMatch: OPTIONAL<OBJECT_IDENTIFIER>;
             let orderingMatch: OPTIONAL<OBJECT_IDENTIFIER>;
@@ -287,8 +286,6 @@ export function _decode_AttributeTypeInformation(el: _Element) {
             let application: OPTIONAL<AttributeUsage> =
                 AttributeTypeInformation._default_value_for_application;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 derivation: (_el: _Element): void => {
                     derivation = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -334,7 +331,6 @@ export function _decode_AttributeTypeInformation(el: _Element) {
                     application = _decode_AttributeUsage(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -346,7 +342,7 @@ export function _decode_AttributeTypeInformation(el: _Element) {
                 }
             );
             return new AttributeTypeInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ derivation,
+                derivation,
                 equalityMatch,
                 orderingMatch,
                 substringsMatch,

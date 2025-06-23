@@ -207,7 +207,6 @@ export function _decode_GUIEventRemoteSubscription(el: _Element) {
     _cached_decoder_for_GUIEventRemoteSubscription = function (
       el: _Element
     ): GUIEventRemoteSubscription {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let subscriberEndpointIRI!: EndpointIRI;
       let guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
       let bspProductUuid!: BioAPI_UUID;
@@ -215,8 +214,6 @@ export function _decode_GUIEventRemoteSubscription(el: _Element) {
       let guiSelectEventSubscribed!: BOOLEAN;
       let guiStateEventSubscribed!: BOOLEAN;
       let guiProgressEventSubscribed!: BOOLEAN;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         subscriberEndpointIRI: (_el: _Element): void => {
           subscriberEndpointIRI = _decode_EndpointIRI(_el);
@@ -240,7 +237,6 @@ export function _decode_GUIEventRemoteSubscription(el: _Element) {
           guiProgressEventSubscribed = $._decodeBoolean(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -249,7 +245,7 @@ export function _decode_GUIEventRemoteSubscription(el: _Element) {
         _root_component_type_list_2_spec_for_GUIEventRemoteSubscription,
         undefined
       );
-      return new GUIEventRemoteSubscription /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIEventRemoteSubscription (
         subscriberEndpointIRI,
         guiEventSubscriptionUuid,
         bspProductUuid,

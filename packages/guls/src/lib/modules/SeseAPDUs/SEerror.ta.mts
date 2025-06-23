@@ -126,11 +126,8 @@ let _cached_decoder_for_SEerror: $.ASN1Decoder<SEerror> | null = null;
 export function _decode_SEerror(el: _Element) {
   if (!_cached_decoder_for_SEerror) {
     _cached_decoder_for_SEerror = function (el: _Element): SEerror {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let errorCode: OPTIONAL<Identifier>;
       let errorParameter: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         errorCode: (_el: _Element): void => {
           errorCode = _decode_Identifier(_el);
@@ -139,7 +136,6 @@ export function _decode_SEerror(el: _Element) {
           errorParameter = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -148,7 +144,7 @@ export function _decode_SEerror(el: _Element) {
         _root_component_type_list_2_spec_for_SEerror,
         undefined
       );
-      return new SEerror /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SEerror (
         errorCode,
         errorParameter
       );

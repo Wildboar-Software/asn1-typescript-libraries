@@ -168,13 +168,10 @@ export function _decode_VerifyMatch_ResponseParams(el: _Element) {
     _cached_decoder_for_VerifyMatch_ResponseParams = function (
       el: _Element
     ): VerifyMatch_ResponseParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let adaptedBIR: OPTIONAL<BioAPI_BIR_HANDLE>;
       let result!: BOOLEAN;
       let fmrAchieved: OPTIONAL<BioAPI_FMR>;
       let payload: OPTIONAL<BioAPI_DATA>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         adaptedBIR: (_el: _Element): void => {
           adaptedBIR = _decode_BioAPI_BIR_HANDLE(_el);
@@ -189,7 +186,6 @@ export function _decode_VerifyMatch_ResponseParams(el: _Element) {
           payload = _decode_BioAPI_DATA(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -198,7 +194,7 @@ export function _decode_VerifyMatch_ResponseParams(el: _Element) {
         _root_component_type_list_2_spec_for_VerifyMatch_ResponseParams,
         undefined
       );
-      return new VerifyMatch_ResponseParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new VerifyMatch_ResponseParams (
         adaptedBIR,
         result,
         fmrAchieved,

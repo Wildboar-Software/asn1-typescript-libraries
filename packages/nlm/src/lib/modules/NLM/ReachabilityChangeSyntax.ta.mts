@@ -190,13 +190,10 @@ export function _decode_ReachabilityChangeSyntax(el: _Element) {
         _cached_decoder_for_ReachabilityChangeSyntax = function (
             el: _Element
         ): ReachabilityChangeSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let newState!: ReachabilityChangeSyntax_newState;
             let nAddresses!: NAddress[];
             let sNPAAddress: OPTIONAL<SNPAAddress>;
             let reason: OPTIONAL<ReachabilityChangeSyntax_reason>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 newState: (_el: _Element): void => {
                     newState = $._decode_implicit<ReachabilityChangeSyntax_newState>(
@@ -219,7 +216,6 @@ export function _decode_ReachabilityChangeSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -228,7 +224,7 @@ export function _decode_ReachabilityChangeSyntax(el: _Element) {
                 _root_component_type_list_2_spec_for_ReachabilityChangeSyntax,
                 undefined
             );
-            return new ReachabilityChangeSyntax /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ReachabilityChangeSyntax (
                 newState,
                 nAddresses,
                 sNPAAddress,

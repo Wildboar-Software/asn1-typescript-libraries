@@ -260,7 +260,6 @@ export const _extension_additions_list_spec_for_TBSAttributeCertificate: $.Compo
  * @returns {TBSAttributeCertificate} The decoded data structure.
  */
 export function _decode_TBSAttributeCertificate(el: _Element): TBSAttributeCertificate {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: AttCertVersion;
     let holder!: Holder;
     let issuer!: AttCertIssuer;
@@ -271,8 +270,6 @@ export function _decode_TBSAttributeCertificate(el: _Element): TBSAttributeCerti
     let issuerUniqueID: OPTIONAL<UniqueIdentifier>;
     let _unrecognizedExtensionsList: _Element[] = [];
     let extensions: OPTIONAL<Extensions>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         version: (_el: _Element): void => {
             version = _decode_AttCertVersion(_el);
@@ -304,7 +301,6 @@ export function _decode_TBSAttributeCertificate(el: _Element): TBSAttributeCerti
             extensions = _decode_Extensions(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -316,7 +312,7 @@ export function _decode_TBSAttributeCertificate(el: _Element): TBSAttributeCerti
         }
     );
     return new TBSAttributeCertificate(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+        version,
         holder,
         issuer,
         signature,

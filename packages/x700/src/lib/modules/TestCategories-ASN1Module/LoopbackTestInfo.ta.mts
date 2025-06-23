@@ -200,7 +200,6 @@ export function _decode_LoopbackTestInfo(el: _Element) {
         _cached_decoder_for_LoopbackTestInfo = function (
             el: _Element
         ): LoopbackTestInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let loopbackData: OPTIONAL<TestPatternSequence>;
             let testStartTime: OPTIONAL<GeneralizedTime>;
             let testIntervalTime: OPTIONAL<Timespec>;
@@ -208,8 +207,6 @@ export function _decode_LoopbackTestInfo(el: _Element) {
             let loopbackType: OPTIONAL<OBJECT_IDENTIFIER>;
             let loopbackTimeout: OPTIONAL<Timespec>;
             let loopbackErrorThreshold: OPTIONAL<LoopbackError>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 loopbackData: (_el: _Element): void => {
                     loopbackData = _decode_TestPatternSequence(_el);
@@ -239,7 +236,6 @@ export function _decode_LoopbackTestInfo(el: _Element) {
                     loopbackErrorThreshold = _decode_LoopbackError(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -248,7 +244,7 @@ export function _decode_LoopbackTestInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_LoopbackTestInfo,
                 undefined
             );
-            return new LoopbackTestInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new LoopbackTestInfo (
                 loopbackData,
                 testStartTime,
                 testIntervalTime,

@@ -116,7 +116,6 @@ export function _decode_Mode_selector(el: _Element) {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
             let mode_value!: Mode_selector_mode_value;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'mode-value': (_el: _Element): void => {
                     mode_value = $._decode_implicit<Mode_selector_mode_value>(
@@ -124,7 +123,6 @@ export function _decode_Mode_selector(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

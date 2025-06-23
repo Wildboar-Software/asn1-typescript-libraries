@@ -135,12 +135,9 @@ export function _decode_PKIStatusInfo(el: _Element) {
         _cached_decoder_for_PKIStatusInfo = function (
             el: _Element
         ): PKIStatusInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let status!: PKIStatus;
             let statusString: OPTIONAL<PKIFreeText>;
             let failInfo: OPTIONAL<PKIFailureInfo>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 status: (_el: _Element): void => {
                     status = _decode_PKIStatus(_el);
@@ -152,7 +149,6 @@ export function _decode_PKIStatusInfo(el: _Element) {
                     failInfo = _decode_PKIFailureInfo(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -162,7 +158,7 @@ export function _decode_PKIStatusInfo(el: _Element) {
                 undefined
             );
             return new PKIStatusInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ status,
+                status,
                 statusString,
                 failInfo
             );

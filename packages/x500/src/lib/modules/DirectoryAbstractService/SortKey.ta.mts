@@ -123,12 +123,9 @@ let _cached_decoder_for_SortKey: $.ASN1Decoder<SortKey> | null = null;
 export function _decode_SortKey(el: _Element) {
     if (!_cached_decoder_for_SortKey) {
         _cached_decoder_for_SortKey = function (el: _Element): SortKey {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let type_!: AttributeType;
             let orderingRule: OPTIONAL<OBJECT_IDENTIFIER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = _decode_AttributeType(_el);
@@ -137,7 +134,6 @@ export function _decode_SortKey(el: _Element) {
                     orderingRule = $._decodeObjectIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -149,7 +145,7 @@ export function _decode_SortKey(el: _Element) {
                 }
             );
             return new SortKey(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ type_,
+                type_,
                 orderingRule,
                 _unrecognizedExtensionsList
             );

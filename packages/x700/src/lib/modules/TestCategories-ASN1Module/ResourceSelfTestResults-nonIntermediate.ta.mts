@@ -148,13 +148,10 @@ export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element) {
         _cached_decoder_for_ResourceSelfTestResults_nonIntermediate = function (
             el: _Element
         ): ResourceSelfTestResults_nonIntermediate {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let phases!: INTEGER[];
             let iteration!: INTEGER;
             let timeoutPeriod!: TimeoutPeriod;
             let finalResponse: OPTIONAL<PrintableString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 phases: (_el: _Element): void => {
                     phases = $._decodeSetOf<INTEGER>(() => $._decodeInteger)(
@@ -175,7 +172,6 @@ export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element) {
                     finalResponse = $._decodePrintableString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -184,7 +180,7 @@ export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element) {
                 _root_component_type_list_2_spec_for_ResourceSelfTestResults_nonIntermediate,
                 undefined
             );
-            return new ResourceSelfTestResults_nonIntermediate /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ResourceSelfTestResults_nonIntermediate (
                 phases,
                 iteration,
                 timeoutPeriod,

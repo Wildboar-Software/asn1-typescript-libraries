@@ -288,7 +288,6 @@ let _cached_decoder_for_TokenInfo: $.ASN1Decoder<TokenInfo> | null = null;
 export function _decode_TokenInfo(el: _Element) {
     if (!_cached_decoder_for_TokenInfo) {
         _cached_decoder_for_TokenInfo = function (el: _Element): TokenInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: TokenInfo_version;
             let serialNumber!: OCTET_STRING;
             let manufacturerID: OPTIONAL<Label>;
@@ -302,8 +301,6 @@ export function _decode_TokenInfo(el: _Element) {
             let lastUpdate: OPTIONAL<LastUpdate>;
             let preferredLanguage: OPTIONAL<PrintableString>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_TokenInfo_version(_el);
@@ -357,7 +354,6 @@ export function _decode_TokenInfo(el: _Element) {
                     preferredLanguage = $._decodePrintableString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -369,7 +365,7 @@ export function _decode_TokenInfo(el: _Element) {
                 }
             );
             return new TokenInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 serialNumber,
                 manufacturerID,
                 label,

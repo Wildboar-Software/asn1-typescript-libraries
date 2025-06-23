@@ -196,7 +196,6 @@ export function _decode_IPN(el: _Element) {
             let notification_extensions: OPTIONAL<NotificationExtensionsField>;
             let choice!: IPN_choice;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'subject-ipm': (_el: _Element): void => {
                     subject_ipm = _decode_SubjectIPMField(_el);
@@ -225,7 +224,6 @@ export function _decode_IPN(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

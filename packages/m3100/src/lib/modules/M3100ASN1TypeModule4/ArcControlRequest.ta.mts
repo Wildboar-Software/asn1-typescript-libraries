@@ -162,13 +162,10 @@ export function _decode_ArcControlRequest(el: _Element) {
         _cached_decoder_for_ArcControlRequest = function (
             el: _Element
         ): ArcControlRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let time: OPTIONAL<ArcTime> =
                 ArcControlRequest._default_value_for_time;
             let newState!: ArcState;
             let additionalInfo: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 time: (_el: _Element): void => {
                     time = _decode_ArcTime(_el);
@@ -180,7 +177,6 @@ export function _decode_ArcControlRequest(el: _Element) {
                     additionalInfo = _decode_AdditionalInformation(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -189,7 +185,7 @@ export function _decode_ArcControlRequest(el: _Element) {
                 _root_component_type_list_2_spec_for_ArcControlRequest,
                 undefined
             );
-            return new ArcControlRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ArcControlRequest (
                 time,
                 newState,
                 additionalInfo

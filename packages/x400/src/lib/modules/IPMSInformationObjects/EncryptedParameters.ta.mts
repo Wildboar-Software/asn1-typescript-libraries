@@ -141,7 +141,6 @@ export function _decode_EncryptedParameters(el: _Element) {
             let originator_certificates: OPTIONAL<ExtendedCertificates>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'algorithm-identifier': (_el: _Element): void => {
                     algorithm_identifier = _decode_AlgorithmIdentifier(_el);
@@ -150,7 +149,6 @@ export function _decode_EncryptedParameters(el: _Element) {
                     originator_certificates = _decode_ExtendedCertificates(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -209,7 +209,6 @@ export function _decode_F_CREATE_response(el: _Element) {
     _cached_decoder_for_F_CREATE_response = function (
       el: _Element
     ): F_CREATE_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let state_result: OPTIONAL<State_Result> =
         F_CREATE_response._default_value_for_state_result;
       let action_result: OPTIONAL<Action_Result> =
@@ -217,8 +216,6 @@ export function _decode_F_CREATE_response(el: _Element) {
       let initial_attributes!: Create_Attributes;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let diagnostic: OPTIONAL<Diagnostic>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'state-result': (_el: _Element): void => {
           state_result = _decode_State_Result(_el);
@@ -236,7 +233,6 @@ export function _decode_F_CREATE_response(el: _Element) {
           diagnostic = _decode_Diagnostic(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -245,7 +241,7 @@ export function _decode_F_CREATE_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_CREATE_response,
         undefined
       );
-      return new F_CREATE_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_CREATE_response (
         state_result,
         action_result,
         initial_attributes,

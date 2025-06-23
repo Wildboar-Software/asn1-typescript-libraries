@@ -134,25 +134,21 @@ let _cached_decoder_for_RCASRnMsgContent: $.ASN1Decoder<RCASRnMsgContent> | null
 export
 function _decode_RCASRnMsgContent (el: _Element) {
     if (!_cached_decoder_for_RCASRnMsgContent) { _cached_decoder_for_RCASRnMsgContent = function (el: _Element): RCASRnMsgContent {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let downloadSchedule!: OCTET_STRING;
     let keyRequest_Req: OPTIONAL<BOOLEAN>;
     let purchaseReport_Req: OPTIONAL<BOOLEAN>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "downloadSchedule": (_el: _Element): void => { downloadSchedule = $._decodeOctetString(_el); },
         "keyRequest-Req": (_el: _Element): void => { keyRequest_Req = $._decodeBoolean(_el); },
         "purchaseReport-Req": (_el: _Element): void => { purchaseReport_Req = $._decodeBoolean(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_RCASRnMsgContent,
         _extension_additions_list_spec_for_RCASRnMsgContent,
         _root_component_type_list_2_spec_for_RCASRnMsgContent,
         undefined,
     );
-    return new RCASRnMsgContent( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new RCASRnMsgContent( 
         downloadSchedule,
         keyRequest_Req,
         purchaseReport_Req

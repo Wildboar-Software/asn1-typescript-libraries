@@ -180,14 +180,11 @@ let _cached_decoder_for_DataUnits: $.ASN1Decoder<DataUnits> | null = null;
 export function _decode_DataUnits(el: _Element) {
     if (!_cached_decoder_for_DataUnits) {
         _cached_decoder_for_DataUnits = function (el: _Element): DataUnits {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let dataType!: DataType;
             let dataCategory: OPTIONAL<DataCategory>;
             let dataSize: OPTIONAL<DataSize>;
             let dataNumber: OPTIONAL<UnitsTotal>;
             let dataRate: OPTIONAL<DataRate>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 dataType: (_el: _Element): void => {
                     dataType = $._decode_explicit<DataType>(
@@ -215,7 +212,6 @@ export function _decode_DataUnits(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -224,7 +220,7 @@ export function _decode_DataUnits(el: _Element) {
                 _root_component_type_list_2_spec_for_DataUnits,
                 undefined
             );
-            return new DataUnits /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DataUnits (
                 dataType,
                 dataCategory,
                 dataSize,

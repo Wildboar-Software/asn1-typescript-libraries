@@ -157,7 +157,6 @@ export function _decode_RedirectionProcessingInfo(el: _Element) {
             let original: OPTIONAL<ORName>;
             let redirected_to: OPTIONAL<ORName>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'redirection-reason': (_el: _Element): void => {
                     redirection_reason = $._decode_implicit<RedirectionReason>(
@@ -175,7 +174,6 @@ export function _decode_RedirectionProcessingInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

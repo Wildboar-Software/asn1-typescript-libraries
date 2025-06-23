@@ -133,11 +133,8 @@ export function _decode_BPUInformation(el: _Element) {
         _cached_decoder_for_BPUInformation = function (
             el: _Element
         ): BPUInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>;
             let bpuReportInformation!: BPUReportInformation;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bpuCertificateReferrerInformation: (_el: _Element): void => {
                     bpuCertificateReferrerInformation = _decode_BPUCertificateReferrerInformation(
@@ -148,7 +145,6 @@ export function _decode_BPUInformation(el: _Element) {
                     bpuReportInformation = _decode_BPUReportInformation(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_BPUInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_BPUInformation,
                 undefined
             );
-            return new BPUInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BPUInformation (
                 bpuCertificateReferrerInformation,
                 bpuReportInformation
             );

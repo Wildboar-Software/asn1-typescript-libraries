@@ -151,14 +151,11 @@ let _cached_decoder_for_EvidenceRecord: $.ASN1Decoder<EvidenceRecord> | null = n
 export
 function _decode_EvidenceRecord (el: _Element) {
     if (!_cached_decoder_for_EvidenceRecord) { _cached_decoder_for_EvidenceRecord = function (el: _Element): EvidenceRecord {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: EvidenceRecord_version;
     let digestAlgorithms!: AlgorithmIdentifier[];
     let cryptoInfos: OPTIONAL<CryptoInfos>;
     let encryptionInfo: OPTIONAL<EncryptionInfo>;
     let archiveTimeStampSequence!: ArchiveTimeStampSequence;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = _decode_EvidenceRecord_version(_el); },
         "digestAlgorithms": (_el: _Element): void => { digestAlgorithms = $._decodeSequenceOf<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(_el); },
@@ -166,14 +163,13 @@ function _decode_EvidenceRecord (el: _Element) {
         "encryptionInfo": (_el: _Element): void => { encryptionInfo = $._decode_implicit<EncryptionInfo>(() => _decode_EncryptionInfo)(_el); },
         "archiveTimeStampSequence": (_el: _Element): void => { archiveTimeStampSequence = _decode_ArchiveTimeStampSequence(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_EvidenceRecord,
         _extension_additions_list_spec_for_EvidenceRecord,
         _root_component_type_list_2_spec_for_EvidenceRecord,
         undefined,
     );
-    return new EvidenceRecord( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new EvidenceRecord( 
         version,
         digestAlgorithms,
         cryptoInfos,

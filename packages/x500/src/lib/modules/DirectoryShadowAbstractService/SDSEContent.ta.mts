@@ -191,7 +191,6 @@ let _cached_decoder_for_SDSEContent: $.ASN1Decoder<SDSEContent> | null = null;
 export function _decode_SDSEContent(el: _Element) {
     if (!_cached_decoder_for_SDSEContent) {
         _cached_decoder_for_SDSEContent = function (el: _Element): SDSEContent {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sDSEType!: SDSEType;
             let subComplete: OPTIONAL<BOOLEAN> =
                 SDSEContent._default_value_for_subComplete;
@@ -200,8 +199,6 @@ export function _decode_SDSEContent(el: _Element) {
             let attValIncomplete: OPTIONAL<AttributeType[]> =
                 SDSEContent._default_value_for_attValIncomplete;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sDSEType: (_el: _Element): void => {
                     sDSEType = _decode_SDSEType(_el);
@@ -227,7 +224,6 @@ export function _decode_SDSEContent(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -239,7 +235,7 @@ export function _decode_SDSEContent(el: _Element) {
                 }
             );
             return new SDSEContent(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ sDSEType,
+                sDSEType,
                 subComplete,
                 attComplete,
                 attributes,

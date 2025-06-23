@@ -126,7 +126,6 @@ export function _decode_Guide(el: _Element) {
             let criteria!: Criteria;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectClass: (_el: _Element): void => {
                     objectClass = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -139,7 +138,6 @@ export function _decode_Guide(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

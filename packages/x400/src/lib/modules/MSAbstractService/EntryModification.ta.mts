@@ -140,7 +140,6 @@ export function _decode_EntryModification(el: _Element) {
                 EntryModification._default_value_for_strict;
             let modification!: EntryModification_modification;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 strict: (_el: _Element): void => {
                     strict = $._decode_explicit<BOOLEAN>(
@@ -151,7 +150,6 @@ export function _decode_EntryModification(el: _Element) {
                     modification = _decode_EntryModification_modification(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -149,27 +149,23 @@ let _cached_decoder_for_ATSHashIndex: $.ASN1Decoder<ATSHashIndex> | null = null;
 export
 function _decode_ATSHashIndex (el: _Element) {
     if (!_cached_decoder_for_ATSHashIndex) { _cached_decoder_for_ATSHashIndex = function (el: _Element): ATSHashIndex {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier> = ATSHashIndex._default_value_for_hashIndAlgorithm;
     let certificatesHashIndex!: OCTET_STRING[];
     let crlsHashIndex!: OCTET_STRING[];
     let unsignedAttrsHashIndex!: OCTET_STRING[];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "hashIndAlgorithm": (_el: _Element): void => { hashIndAlgorithm = _decode_AlgorithmIdentifier(_el); },
         "certificatesHashIndex": (_el: _Element): void => { certificatesHashIndex = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "crlsHashIndex": (_el: _Element): void => { crlsHashIndex = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "unsignedAttrsHashIndex": (_el: _Element): void => { unsignedAttrsHashIndex = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ATSHashIndex,
         _extension_additions_list_spec_for_ATSHashIndex,
         _root_component_type_list_2_spec_for_ATSHashIndex,
         undefined,
     );
-    return new ATSHashIndex( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ATSHashIndex( 
         hashIndAlgorithm,
         certificatesHashIndex,
         crlsHashIndex,

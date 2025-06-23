@@ -192,7 +192,6 @@ export function _decode_MTSBindResult(el: _Element) {
                 MTSBindResult._default_value_for_extensions;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'responder-name': (_el: _Element): void => {
                     responder_name = _decode_ObjectName(_el);
@@ -215,7 +214,6 @@ export function _decode_MTSBindResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

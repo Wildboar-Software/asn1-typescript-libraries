@@ -142,12 +142,9 @@ export function _decode_DistributionCode(el: _Element) {
         _cached_decoder_for_DistributionCode = function (
             el: _Element
         ): DistributionCode {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let oid_code: OPTIONAL<OBJECT_IDENTIFIER>;
             let alphanumeric_code: OPTIONAL<AlphaCode>;
             let or_descriptor: OPTIONAL<ORDescriptor>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'oid-code': (_el: _Element): void => {
                     oid_code = $._decodeObjectIdentifier(_el);
@@ -161,7 +158,6 @@ export function _decode_DistributionCode(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_DistributionCode(el: _Element) {
                 _root_component_type_list_2_spec_for_DistributionCode,
                 undefined
             );
-            return new DistributionCode /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DistributionCode (
                 oid_code,
                 alphanumeric_code,
                 or_descriptor

@@ -130,11 +130,8 @@ export function _decode_RecipientReferenceField(el: _Element) {
         _cached_decoder_for_RecipientReferenceField = function (
             el: _Element
         ): RecipientReferenceField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let recipient_reference!: RecipientReference;
             let recipient_reference_qualifier: OPTIONAL<RecipientReferenceQualifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'recipient-reference': (_el: _Element): void => {
                     recipient_reference = $._decode_implicit<RecipientReference>(
@@ -147,7 +144,6 @@ export function _decode_RecipientReferenceField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_RecipientReferenceField(el: _Element) {
                 _root_component_type_list_2_spec_for_RecipientReferenceField,
                 undefined
             );
-            return new RecipientReferenceField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RecipientReferenceField (
                 recipient_reference,
                 recipient_reference_qualifier
             );

@@ -126,11 +126,8 @@ let _cached_decoder_for_ExternalSAID: $.ASN1Decoder<ExternalSAID> | null = null;
 export function _decode_ExternalSAID(el: _Element) {
   if (!_cached_decoder_for_ExternalSAID) {
     _cached_decoder_for_ExternalSAID = function (el: _Element): ExternalSAID {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let localSAID!: INTEGER;
       let assignerIdentity: OPTIONAL<SecurityIdentity>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         localSAID: (_el: _Element): void => {
           localSAID = $._decodeInteger(_el);
@@ -139,7 +136,6 @@ export function _decode_ExternalSAID(el: _Element) {
           assignerIdentity = _decode_SecurityIdentity(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -148,7 +144,7 @@ export function _decode_ExternalSAID(el: _Element) {
         _root_component_type_list_2_spec_for_ExternalSAID,
         undefined
       );
-      return new ExternalSAID /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ExternalSAID (
         localSAID,
         assignerIdentity
       );

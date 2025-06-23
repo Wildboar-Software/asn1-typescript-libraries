@@ -125,12 +125,9 @@ export function _decode_DeltaInformation(el: _Element) {
         _cached_decoder_for_DeltaInformation = function (
             el: _Element
         ): DeltaInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let deltaLocation!: GeneralName;
             let nextDelta: OPTIONAL<GeneralizedTime>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 deltaLocation: (_el: _Element): void => {
                     deltaLocation = _decode_GeneralName(_el);
@@ -139,7 +136,6 @@ export function _decode_DeltaInformation(el: _Element) {
                     nextDelta = $._decodeGeneralizedTime(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_DeltaInformation(el: _Element) {
                 }
             );
             return new DeltaInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ deltaLocation,
+                deltaLocation,
                 nextDelta,
                 _unrecognizedExtensionsList
             );

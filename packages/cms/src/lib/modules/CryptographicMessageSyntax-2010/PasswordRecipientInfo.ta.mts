@@ -164,13 +164,10 @@ export function _decode_PasswordRecipientInfo(el: _Element) {
         _cached_decoder_for_PasswordRecipientInfo = function (
             el: _Element
         ): PasswordRecipientInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let keyDerivationAlgorithm: OPTIONAL<KeyDerivationAlgorithmIdentifier>;
             let keyEncryptionAlgorithm!: KeyEncryptionAlgorithmIdentifier;
             let encryptedKey!: EncryptedKey;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -189,7 +186,6 @@ export function _decode_PasswordRecipientInfo(el: _Element) {
                     encryptedKey = _decode_EncryptedKey(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -198,7 +194,7 @@ export function _decode_PasswordRecipientInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_PasswordRecipientInfo,
                 undefined
             );
-            return new PasswordRecipientInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PasswordRecipientInfo (
                 version,
                 keyDerivationAlgorithm,
                 keyEncryptionAlgorithm,

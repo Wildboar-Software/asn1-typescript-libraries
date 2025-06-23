@@ -344,7 +344,6 @@ export function _decode_LdapArgumentData(el: _Element) {
         _cached_decoder_for_LdapArgumentData = function (
             el: _Element
         ): LdapArgumentData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let object!: DistinguishedName;
             let ldapMessage!: LDAPMessage;
             let linkId: OPTIONAL<LinkId>;
@@ -366,8 +365,6 @@ export function _decode_LdapArgumentData(el: _Element) {
             let operationContexts: OPTIONAL<ContextSelection>;
             let familyGrouping: OPTIONAL<FamilyGrouping> =
                 LdapArgumentData._default_value_for_familyGrouping;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 object: (_el: _Element): void => {
                     object = _decode_DistinguishedName(_el);
@@ -439,7 +436,6 @@ export function _decode_LdapArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -451,7 +447,7 @@ export function _decode_LdapArgumentData(el: _Element) {
                 }
             );
             return new LdapArgumentData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ object,
+                object,
                 ldapMessage,
                 linkId,
                 _unrecognizedExtensionsList,

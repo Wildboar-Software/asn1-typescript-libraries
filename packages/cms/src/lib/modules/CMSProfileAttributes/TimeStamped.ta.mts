@@ -119,11 +119,8 @@ let _cached_decoder_for_TimeStamped: $.ASN1Decoder<TimeStamped> | null = null;
 export function _decode_TimeStamped(el: _Element) {
     if (!_cached_decoder_for_TimeStamped) {
         _cached_decoder_for_TimeStamped = function (el: _Element): TimeStamped {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let timeStampValue!: TimeStamp;
             let timeStampService: OPTIONAL<URI>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 timeStampValue: (_el: _Element): void => {
                     timeStampValue = _decode_TimeStamp(_el);
@@ -132,7 +129,6 @@ export function _decode_TimeStamped(el: _Element) {
                     timeStampService = _decode_URI(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -141,7 +137,7 @@ export function _decode_TimeStamped(el: _Element) {
                 _root_component_type_list_2_spec_for_TimeStamped,
                 undefined
             );
-            return new TimeStamped /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TimeStamped (
                 timeStampValue,
                 timeStampService
             );

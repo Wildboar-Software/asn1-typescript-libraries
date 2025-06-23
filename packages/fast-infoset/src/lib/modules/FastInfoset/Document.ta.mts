@@ -270,7 +270,6 @@ let _cached_decoder_for_Document: $.ASN1Decoder<Document> | null = null;
 export function _decode_Document(el: _Element) {
   if (!_cached_decoder_for_Document) {
     _cached_decoder_for_Document = function (el: _Element): Document {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let additional_data: OPTIONAL<
         Document_additional_data_additional_datum[]
       >;
@@ -281,8 +280,6 @@ export function _decode_Document(el: _Element) {
       let standalone: OPTIONAL<BOOLEAN>;
       let version: OPTIONAL<NonIdentifyingStringOrIndex>;
       let children!: Document_children_Item[];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'additional-data': (_el: _Element): void => {
           additional_data = $._decodeSequenceOf<Document_additional_data_additional_datum>(
@@ -317,7 +314,6 @@ export function _decode_Document(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -326,7 +322,7 @@ export function _decode_Document(el: _Element) {
         _root_component_type_list_2_spec_for_Document,
         undefined
       );
-      return new Document /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Document (
         additional_data,
         initial_vocabulary,
         notations,

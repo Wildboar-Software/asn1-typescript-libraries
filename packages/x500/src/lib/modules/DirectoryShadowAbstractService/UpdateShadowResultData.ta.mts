@@ -189,7 +189,6 @@ export function _decode_UpdateShadowResultData(el: _Element) {
         _cached_decoder_for_UpdateShadowResultData = $._decode_implicit<UpdateShadowResultData>(
             () =>
                 function (el: _Element): UpdateShadowResultData {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let agreementID!: AgreementID;
                     let lastUpdate: OPTIONAL<Time>;
                     let _unrecognizedExtensionsList: _Element[] = [];
@@ -198,8 +197,6 @@ export function _decode_UpdateShadowResultData(el: _Element) {
                     let aliasDereferenced: OPTIONAL<BOOLEAN> =
                         UpdateShadowResultData._default_value_for_aliasDereferenced;
                     let notification: OPTIONAL<Attribute[]>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         agreementID: (_el: _Element): void => {
                             agreementID = _decode_AgreementID(_el);
@@ -230,7 +227,6 @@ export function _decode_UpdateShadowResultData(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -242,7 +238,7 @@ export function _decode_UpdateShadowResultData(el: _Element) {
                         }
                     );
                     return new UpdateShadowResultData(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ agreementID,
+                        agreementID,
                         lastUpdate,
                         _unrecognizedExtensionsList,
                         securityParameters,

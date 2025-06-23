@@ -131,7 +131,6 @@ export function _decode_receive_report_ArgumentType(el: _Element) {
             let envelope!: ReportDeliveryEnvelope;
             let undelivered_object: OPTIONAL<InformationObject>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 envelope: (_el: _Element): void => {
                     envelope = $._decode_implicit<ReportDeliveryEnvelope>(
@@ -144,7 +143,6 @@ export function _decode_receive_report_ArgumentType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

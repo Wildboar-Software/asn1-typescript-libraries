@@ -129,12 +129,9 @@ export function _decode_NameAndOptionalUID(el: _Element) {
         _cached_decoder_for_NameAndOptionalUID = function (
             el: _Element
         ): NameAndOptionalUID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let dn!: DistinguishedName;
             let uid: OPTIONAL<UniqueIdentifier>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 dn: (_el: _Element): void => {
                     dn = _decode_DistinguishedName(_el);
@@ -143,7 +140,6 @@ export function _decode_NameAndOptionalUID(el: _Element) {
                     uid = _decode_UniqueIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_NameAndOptionalUID(el: _Element) {
                 }
             );
             return new NameAndOptionalUID(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ dn,
+                dn,
                 uid,
                 _unrecognizedExtensionsList
             );

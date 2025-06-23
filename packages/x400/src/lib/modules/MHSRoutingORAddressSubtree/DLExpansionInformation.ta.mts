@@ -152,13 +152,10 @@ export function _decode_DLExpansionInformation(el: _Element) {
         _cached_decoder_for_DLExpansionInformation = function (
             el: _Element
         ): DLExpansionInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let dl_expansion_routing_collectives!: TargetRoutingCollective[];
             let dl_name: OPTIONAL<MHSDistributionListName>;
             let any_mta_may_expand: OPTIONAL<BOOLEAN> =
                 DLExpansionInformation._default_value_for_any_mta_may_expand;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'dl-expansion-routing-collectives': (_el: _Element): void => {
                     dl_expansion_routing_collectives = $._decode_implicit<
@@ -180,7 +177,6 @@ export function _decode_DLExpansionInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -189,7 +185,7 @@ export function _decode_DLExpansionInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_DLExpansionInformation,
                 undefined
             );
-            return new DLExpansionInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DLExpansionInformation (
                 dl_expansion_routing_collectives,
                 dl_name,
                 any_mta_may_expand

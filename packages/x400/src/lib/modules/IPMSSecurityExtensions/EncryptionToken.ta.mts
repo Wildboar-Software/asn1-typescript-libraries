@@ -217,7 +217,6 @@ export function _decode_EncryptionToken(el: _Element) {
             let originator_certificates: OPTIONAL<ExtendedCertificates>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'encryption-algorithm-identifier': (_el: _Element): void => {
                     encryption_algorithm_identifier = _decode_AlgorithmIdentifier(
@@ -250,7 +249,6 @@ export function _decode_EncryptionToken(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -156,13 +156,10 @@ export function _decode_ExecuteProgramReply(el: _Element) {
         _cached_decoder_for_ExecuteProgramReply = function (
             el: _Element
         ): ExecuteProgramReply {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let processId!: INTEGER;
             let processOwner!: Identity;
             let startTime!: GeneralizedTime;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 processId: (_el: _Element): void => {
                     processId = $._decodeInteger(_el);
@@ -179,7 +176,6 @@ export function _decode_ExecuteProgramReply(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_ExecuteProgramReply(el: _Element) {
                 _root_component_type_list_2_spec_for_ExecuteProgramReply,
                 undefined
             );
-            return new ExecuteProgramReply /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ExecuteProgramReply (
                 processId,
                 processOwner,
                 startTime,

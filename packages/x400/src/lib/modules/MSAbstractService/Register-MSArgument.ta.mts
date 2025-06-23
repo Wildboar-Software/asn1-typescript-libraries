@@ -321,7 +321,6 @@ export function _decode_Register_MSArgument(el: _Element) {
             let registration_status_request: OPTIONAL<RegistrationTypes>;
             let register_ms_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-action-registrations': (_el: _Element): void => {
                     auto_action_registrations = $._decode_explicit<
@@ -401,7 +400,6 @@ export function _decode_Register_MSArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

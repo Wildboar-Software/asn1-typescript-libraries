@@ -140,12 +140,9 @@ let _cached_decoder_for_CertStatus: $.ASN1Decoder<CertStatus> | null = null;
 export function _decode_CertStatus(el: _Element) {
   if (!_cached_decoder_for_CertStatus) {
     _cached_decoder_for_CertStatus = function (el: _Element): CertStatus {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let certHash!: OCTET_STRING;
       let certReqId!: INTEGER;
       let statusInfo: OPTIONAL<PKIStatusInfo>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         certHash: (_el: _Element): void => {
           certHash = $._decodeOctetString(_el);
@@ -157,7 +154,6 @@ export function _decode_CertStatus(el: _Element) {
           statusInfo = _decode_PKIStatusInfo(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -166,7 +162,7 @@ export function _decode_CertStatus(el: _Element) {
         _root_component_type_list_2_spec_for_CertStatus,
         undefined
       );
-      return new CertStatus /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CertStatus (
         certHash,
         certReqId,
         statusInfo

@@ -129,11 +129,8 @@ export function _decode_PwdResponseValue(el: _Element) {
         _cached_decoder_for_PwdResponseValue = function (
             el: _Element
         ): PwdResponseValue {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let warning: OPTIONAL<PwdResponseValue_warning>;
             let error: OPTIONAL<PwdResponseValue_error>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 warning: (_el: _Element): void => {
                     warning = _decode_PwdResponseValue_warning(_el);
@@ -142,7 +139,6 @@ export function _decode_PwdResponseValue(el: _Element) {
                     error = _decode_PwdResponseValue_error(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_PwdResponseValue(el: _Element) {
                 undefined
             );
             return new PwdResponseValue(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ warning,
+                warning,
                 error
             );
         };

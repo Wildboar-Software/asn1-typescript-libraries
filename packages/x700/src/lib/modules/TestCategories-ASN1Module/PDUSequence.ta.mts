@@ -158,13 +158,10 @@ let _cached_decoder_for_PDUSequence: $.ASN1Decoder<PDUSequence> | null = null;
 export function _decode_PDUSequence(el: _Element) {
     if (!_cached_decoder_for_PDUSequence) {
         _cached_decoder_for_PDUSequence = function (el: _Element): PDUSequence {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pDUType!: PDUType;
             let parameter!: Parameter;
             let contCond!: ContCond;
             let waitDuration: OPTIONAL<WaitDuration>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pDUType: (_el: _Element): void => {
                     pDUType = _decode_PDUType(_el);
@@ -179,7 +176,6 @@ export function _decode_PDUSequence(el: _Element) {
                     waitDuration = _decode_WaitDuration(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -188,7 +184,7 @@ export function _decode_PDUSequence(el: _Element) {
                 _root_component_type_list_2_spec_for_PDUSequence,
                 undefined
             );
-            return new PDUSequence /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PDUSequence (
                 pDUType,
                 parameter,
                 contCond,

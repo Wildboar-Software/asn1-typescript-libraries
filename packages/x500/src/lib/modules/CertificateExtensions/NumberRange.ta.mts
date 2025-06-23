@@ -132,13 +132,10 @@ let _cached_decoder_for_NumberRange: $.ASN1Decoder<NumberRange> | null = null;
 export function _decode_NumberRange(el: _Element) {
     if (!_cached_decoder_for_NumberRange) {
         _cached_decoder_for_NumberRange = function (el: _Element): NumberRange {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let startingNumber: OPTIONAL<OCTET_STRING>;
             let endingNumber: OPTIONAL<OCTET_STRING>;
             let modulus: OPTIONAL<OCTET_STRING>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 startingNumber: (_el: _Element): void => {
                     startingNumber = $._decode_implicit<OCTET_STRING>(
@@ -154,7 +151,6 @@ export function _decode_NumberRange(el: _Element) {
                     modulus = $._decodeBigInt(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -166,7 +162,7 @@ export function _decode_NumberRange(el: _Element) {
                 }
             );
             return new NumberRange(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ startingNumber,
+                startingNumber,
                 endingNumber,
                 modulus,
                 _unrecognizedExtensionsList

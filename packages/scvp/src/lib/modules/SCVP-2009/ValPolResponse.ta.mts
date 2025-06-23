@@ -421,7 +421,6 @@ export function _decode_ValPolResponse(el: _Element) {
     _cached_decoder_for_ValPolResponse = function (
       el: _Element
     ): ValPolResponse {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let vpResponseVersion!: INTEGER;
       let maxCVRequestVersion!: INTEGER;
       let maxVPRequestVersion!: INTEGER;
@@ -443,8 +442,6 @@ export function _decode_ValPolResponse(el: _Element) {
       let clockSkew: OPTIONAL<INTEGER> =
         ValPolResponse._default_value_for_clockSkew;
       let requestNonce: OPTIONAL<OCTET_STRING>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         vpResponseVersion: (_el: _Element): void => {
           vpResponseVersion = $._decodeInteger(_el);
@@ -521,7 +518,6 @@ export function _decode_ValPolResponse(el: _Element) {
           requestNonce = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -530,7 +526,7 @@ export function _decode_ValPolResponse(el: _Element) {
         _root_component_type_list_2_spec_for_ValPolResponse,
         undefined
       );
-      return new ValPolResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ValPolResponse (
         vpResponseVersion,
         maxCVRequestVersion,
         maxVPRequestVersion,

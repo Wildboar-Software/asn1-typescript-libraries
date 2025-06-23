@@ -142,12 +142,9 @@ export function _decode_OsiBindError_normal_mode_parameters_user_data_fully_enco
         _cached_decoder_for_OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item = function (
             el: _Element
         ): OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
             let presentation_context_identifier!: Presentation_context_identifier;
             let presentation_data_values!: OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "transfer-syntax-name": (_el: _Element): void => {
                     transfer_syntax_name = _decode_Transfer_syntax_name(_el);
@@ -163,7 +160,6 @@ export function _decode_OsiBindError_normal_mode_parameters_user_data_fully_enco
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_OsiBindError_normal_mode_parameters_user_data_fully_enco
                 undefined
             );
             return new OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ transfer_syntax_name,
+                transfer_syntax_name,
                 presentation_context_identifier,
                 presentation_data_values
             );

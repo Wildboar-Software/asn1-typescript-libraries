@@ -125,11 +125,8 @@ export function _decode_SigningCertificate(el: _Element) {
         _cached_decoder_for_SigningCertificate = function (
             el: _Element
         ): SigningCertificate {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let certs!: ESSCertID[];
             let policies: OPTIONAL<PolicyInformation[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 certs: (_el: _Element): void => {
                     certs = $._decodeSequenceOf<ESSCertID>(
@@ -142,7 +139,6 @@ export function _decode_SigningCertificate(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -152,7 +148,7 @@ export function _decode_SigningCertificate(el: _Element) {
                 undefined
             );
             return new SigningCertificate(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ certs,
+                certs,
                 policies
             );
         };

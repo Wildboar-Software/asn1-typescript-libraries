@@ -149,27 +149,23 @@ let _cached_decoder_for_TokenBA2: $.ASN1Decoder<TokenBA2> | null = null;
 export
 function _decode_TokenBA2 (el: _Element) {
     if (!_cached_decoder_for_TokenBA2) { _cached_decoder_for_TokenBA2 = function (el: _Element): TokenBA2 {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let randomC!: RandomNumber;
     let entityA: OPTIONAL<GeneralNames>;
     let certB!: CertData;
     let signature!: SIGNATURE;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "randomC": (_el: _Element): void => { randomC = _decode_RandomNumber(_el); },
         "entityA": (_el: _Element): void => { entityA = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
         "certB": (_el: _Element): void => { certB = $._decode_explicit<CertData>(() => _decode_CertData)(_el); },
         "signature": (_el: _Element): void => { signature = _decode_SIGNATURE(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TokenBA2,
         _extension_additions_list_spec_for_TokenBA2,
         _root_component_type_list_2_spec_for_TokenBA2,
         undefined,
     );
-    return new TokenBA2( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TokenBA2( 
         randomC,
         entityA,
         certB,

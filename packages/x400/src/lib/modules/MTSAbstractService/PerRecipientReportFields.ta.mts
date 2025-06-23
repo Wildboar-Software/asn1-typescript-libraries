@@ -150,12 +150,9 @@ export function _decode_PerRecipientReportFields(el: _Element) {
         _cached_decoder_for_PerRecipientReportFields = function (
             el: _Element
         ): PerRecipientReportFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let actual_recipient_name!: ActualRecipientName;
             let originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>;
             let report_type!: PerRecipientReportFields_report_type;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'actual-recipient-name': (_el: _Element): void => {
                     actual_recipient_name = _decode_ActualRecipientName(_el);
@@ -171,7 +168,6 @@ export function _decode_PerRecipientReportFields(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_PerRecipientReportFields(el: _Element) {
                 _root_component_type_list_2_spec_for_PerRecipientReportFields,
                 undefined
             );
-            return new PerRecipientReportFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PerRecipientReportFields (
                 actual_recipient_name,
                 originally_intended_recipient_name,
                 report_type

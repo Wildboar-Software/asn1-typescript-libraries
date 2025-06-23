@@ -152,15 +152,12 @@ let _cached_decoder_for_CertPathControls: $.ASN1Decoder<CertPathControls> | null
 export
 function _decode_CertPathControls (el: _Element) {
     if (!_cached_decoder_for_CertPathControls) { _cached_decoder_for_CertPathControls = function (el: _Element): CertPathControls {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let taName!: Name;
     let certificate: OPTIONAL<Certificate>;
     let policySet: OPTIONAL<CertificatePoliciesSyntax>;
     let policyFlags: OPTIONAL<CertPolicyFlags>;
     let nameConstr: OPTIONAL<NameConstraintsSyntax>;
     let pathLenConstraint: OPTIONAL<INTEGER>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "taName": (_el: _Element): void => { taName = _decode_Name(_el); },
         "certificate": (_el: _Element): void => { certificate = $._decode_implicit<Certificate>(() => _decode_Certificate)(_el); },
@@ -169,14 +166,13 @@ function _decode_CertPathControls (el: _Element) {
         "nameConstr": (_el: _Element): void => { nameConstr = $._decode_implicit<NameConstraintsSyntax>(() => _decode_NameConstraintsSyntax)(_el); },
         "pathLenConstraint": (_el: _Element): void => { pathLenConstraint = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CertPathControls,
         _extension_additions_list_spec_for_CertPathControls,
         _root_component_type_list_2_spec_for_CertPathControls,
         undefined,
     );
-    return new CertPathControls( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CertPathControls( 
         taName,
         certificate,
         policySet,

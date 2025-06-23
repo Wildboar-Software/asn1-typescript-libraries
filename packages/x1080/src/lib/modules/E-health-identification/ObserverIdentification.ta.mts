@@ -144,12 +144,9 @@ export function _decode_ObserverIdentification(el: _Element) {
         _cached_decoder_for_ObserverIdentification = function (
             el: _Element
         ): ObserverIdentification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scheme!: OBJECT_IDENTIFIER;
             let schemeName: OPTIONAL<SchemeName>;
             let observerId!: _Element;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scheme: (_el: _Element): void => {
                     scheme = $._decodeObjectIdentifier(_el);
@@ -161,7 +158,6 @@ export function _decode_ObserverIdentification(el: _Element) {
                     observerId = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_ObserverIdentification(el: _Element) {
                 _root_component_type_list_2_spec_for_ObserverIdentification,
                 undefined
             );
-            return new ObserverIdentification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ObserverIdentification (
                 scheme,
                 schemeName,
                 observerId

@@ -138,13 +138,10 @@ export function _decode_PeriodicStrategy(el: _Element) {
         _cached_decoder_for_PeriodicStrategy = function (
             el: _Element
         ): PeriodicStrategy {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let beginTime: OPTIONAL<Time>;
             let windowSize!: INTEGER;
             let updateInterval!: INTEGER;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 beginTime: (_el: _Element): void => {
                     beginTime = _decode_Time(_el);
@@ -156,7 +153,6 @@ export function _decode_PeriodicStrategy(el: _Element) {
                     updateInterval = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_PeriodicStrategy(el: _Element) {
                 }
             );
             return new PeriodicStrategy(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ beginTime,
+                beginTime,
                 windowSize,
                 updateInterval,
                 _unrecognizedExtensionsList

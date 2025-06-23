@@ -134,7 +134,6 @@ export function _decode_RecipientRedirection(el: _Element) {
             let redirection_classes: OPTIONAL<RedirectionClass[]>;
             let recipient_assigned_alternate_recipient: OPTIONAL<RecipientAssignedAlternateRecipient>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'redirection-classes': (_el: _Element): void => {
                     redirection_classes = $._decode_implicit<
@@ -153,7 +152,6 @@ export function _decode_RecipientRedirection(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

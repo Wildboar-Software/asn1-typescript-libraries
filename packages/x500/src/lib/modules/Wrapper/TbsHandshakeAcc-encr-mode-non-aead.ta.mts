@@ -115,11 +115,8 @@ export function _decode_TbsHandshakeAcc_encr_mode_non_aead(el: _Element) {
         _cached_decoder_for_TbsHandshakeAcc_encr_mode_non_aead = function (
             el: _Element
         ): TbsHandshakeAcc_encr_mode_non_aead {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let encr: OPTIONAL<AlgorithmIdentifier>;
             let icvAlgID!: AlgorithmIdentifier;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 encr: (_el: _Element): void => {
                     encr = $._decode_implicit<AlgorithmIdentifier>(
@@ -132,7 +129,6 @@ export function _decode_TbsHandshakeAcc_encr_mode_non_aead(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -142,7 +138,7 @@ export function _decode_TbsHandshakeAcc_encr_mode_non_aead(el: _Element) {
                 undefined
             );
             return new TbsHandshakeAcc_encr_mode_non_aead(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ encr,
+                encr,
                 icvAlgID
             );
         };

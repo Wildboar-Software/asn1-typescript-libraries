@@ -187,7 +187,6 @@ export function _decode_ReplaceAvlReq(el: _Element) {
         _cached_decoder_for_ReplaceAvlReq = function (
             el: _Element
         ): ReplaceAvlReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 ReplaceAvlReq._default_value_for_version;
             let timeStamp!: GeneralizedTime;
@@ -195,8 +194,6 @@ export function _decode_ReplaceAvlReq(el: _Element) {
             let old: OPTIONAL<AvlSerialNumber>;
             let new_!: CertAVL;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -214,7 +211,6 @@ export function _decode_ReplaceAvlReq(el: _Element) {
                     new_ = _decode_CertAVL(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -226,7 +222,7 @@ export function _decode_ReplaceAvlReq(el: _Element) {
                 }
             );
             return new ReplaceAvlReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 old,

@@ -128,11 +128,8 @@ export function _decode_EDIUserCapability(el: _Element) {
         _cached_decoder_for_EDIUserCapability = function (
             el: _Element
         ): EDIUserCapability {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let edi_bodypart_type: OPTIONAL<EDIBodyPartType>;
             let edi_processable_document: OPTIONAL<EDIProcessableDocument>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'edi-bodypart-type': (_el: _Element): void => {
                     edi_bodypart_type = $._decode_implicit<EDIBodyPartType>(
@@ -145,7 +142,6 @@ export function _decode_EDIUserCapability(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_EDIUserCapability(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIUserCapability,
                 undefined
             );
-            return new EDIUserCapability /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIUserCapability (
                 edi_bodypart_type,
                 edi_processable_document
             );

@@ -146,12 +146,9 @@ export function _decode_EDINReceiverField(el: _Element) {
         _cached_decoder_for_EDINReceiverField = function (
             el: _Element
         ): EDINReceiverField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let edin_receiver_name!: ORName;
             let original_edim_identifier: OPTIONAL<EDIMIdentifier>;
             let first_recipient: OPTIONAL<FirstRecipientField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'edin-receiver-name': (_el: _Element): void => {
                     edin_receiver_name = $._decode_implicit<ORName>(
@@ -169,7 +166,6 @@ export function _decode_EDINReceiverField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -178,7 +174,7 @@ export function _decode_EDINReceiverField(el: _Element) {
                 _root_component_type_list_2_spec_for_EDINReceiverField,
                 undefined
             );
-            return new EDINReceiverField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDINReceiverField (
                 edin_receiver_name,
                 original_edim_identifier,
                 first_recipient

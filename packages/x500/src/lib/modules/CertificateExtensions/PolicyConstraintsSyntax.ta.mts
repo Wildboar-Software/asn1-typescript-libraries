@@ -130,12 +130,9 @@ export function _decode_PolicyConstraintsSyntax(el: _Element) {
         _cached_decoder_for_PolicyConstraintsSyntax = function (
             el: _Element
         ): PolicyConstraintsSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let requireExplicitPolicy: OPTIONAL<SkipCerts>;
             let inhibitPolicyMapping: OPTIONAL<SkipCerts>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 requireExplicitPolicy: (_el: _Element): void => {
                     requireExplicitPolicy = $._decode_implicit<SkipCerts>(
@@ -148,7 +145,6 @@ export function _decode_PolicyConstraintsSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_PolicyConstraintsSyntax(el: _Element) {
                 }
             );
             return new PolicyConstraintsSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ requireExplicitPolicy,
+                requireExplicitPolicy,
                 inhibitPolicyMapping,
                 _unrecognizedExtensionsList
             );

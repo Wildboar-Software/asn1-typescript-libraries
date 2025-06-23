@@ -216,7 +216,6 @@ export function _decode_C_RECOVER_RC(el: _Element) {
     _cached_decoder_for_C_RECOVER_RC = $._decode_implicit<C_RECOVER_RC>(
       () =>
         function (el: _Element): C_RECOVER_RC {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let atomic_action_identifier!: ATOMIC_ACTION_IDENTIFIER;
           let branch_identifier!: BRANCH_IDENTIFIER;
           let recovery_state!: C_RECOVER_RC_recovery_state;
@@ -224,8 +223,6 @@ export function _decode_C_RECOVER_RC(el: _Element) {
             C_RECOVER_RC._default_value_for_reversed_branch;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_data: OPTIONAL<User_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'atomic-action-identifier': (_el: _Element): void => {
               atomic_action_identifier = $._decode_implicit<ATOMIC_ACTION_IDENTIFIER>(
@@ -251,7 +248,6 @@ export function _decode_C_RECOVER_RC(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -262,7 +258,7 @@ export function _decode_C_RECOVER_RC(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new C_RECOVER_RC /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new C_RECOVER_RC (
             atomic_action_identifier,
             branch_identifier,
             recovery_state,

@@ -218,7 +218,6 @@ export function _decode_EntryInformation(el: _Element) {
         _cached_decoder_for_EntryInformation = function (
             el: _Element
         ): EntryInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: Name;
             let fromEntry: OPTIONAL<BOOLEAN> =
                 EntryInformation._default_value_for_fromEntry;
@@ -230,8 +229,6 @@ export function _decode_EntryInformation(el: _Element) {
             let derivedEntry: OPTIONAL<BOOLEAN> =
                 EntryInformation._default_value_for_derivedEntry;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = _decode_Name(_el);
@@ -260,7 +257,6 @@ export function _decode_EntryInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -272,7 +268,7 @@ export function _decode_EntryInformation(el: _Element) {
                 }
             );
             return new EntryInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ name,
+                name,
                 fromEntry,
                 information,
                 incompleteEntry,

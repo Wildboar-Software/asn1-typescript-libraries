@@ -228,7 +228,6 @@ export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
         _cached_decoder_for_EstablishOperationalBindingArgumentData = function (
             el: _Element
         ): EstablishOperationalBindingArgumentData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bindingType!: OBJECT_IDENTIFIER;
             let bindingID: OPTIONAL<OperationalBindingID>;
             let accessPoint!: AccessPoint;
@@ -238,8 +237,6 @@ export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
                 EstablishOperationalBindingArgumentData._default_value_for_valid;
             let securityParameters: OPTIONAL<SecurityParameters>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bindingType: (_el: _Element): void => {
                     bindingType = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -277,7 +274,6 @@ export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -289,7 +285,7 @@ export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
                 }
             );
             return new EstablishOperationalBindingArgumentData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bindingType,
+                bindingType,
                 bindingID,
                 accessPoint,
                 initiator,

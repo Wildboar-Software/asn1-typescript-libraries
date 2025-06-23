@@ -148,12 +148,9 @@ export function _decode_PositiveNotificationFields(el: _Element) {
         _cached_decoder_for_PositiveNotificationFields = function (
             el: _Element
         ): PositiveNotificationFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pn_common_fields!: CommonFields;
             let pn_supplementary_information: OPTIONAL<EDISupplementaryInformation>;
             let pn_extensions: OPTIONAL<PNExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'pn-common-fields': (_el: _Element): void => {
                     pn_common_fields = $._decode_implicit<CommonFields>(
@@ -171,7 +168,6 @@ export function _decode_PositiveNotificationFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_PositiveNotificationFields(el: _Element) {
                 _root_component_type_list_2_spec_for_PositiveNotificationFields,
                 undefined
             );
-            return new PositiveNotificationFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PositiveNotificationFields (
                 pn_common_fields,
                 pn_supplementary_information,
                 pn_extensions

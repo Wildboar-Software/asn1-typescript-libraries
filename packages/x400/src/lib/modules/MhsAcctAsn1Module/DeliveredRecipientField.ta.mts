@@ -187,7 +187,6 @@ export function _decode_DeliveredRecipientField(el: _Element) {
             let conversion_statistics: OPTIONAL<ConversionStatistics>;
             let edirector_name: OPTIONAL<ORAddressAndOptionalDirectoryName>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'recipient-name': (_el: _Element): void => {
                     recipient_name = _decode_ORAddressAndOptionalDirectoryName(
@@ -213,7 +212,6 @@ export function _decode_DeliveredRecipientField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

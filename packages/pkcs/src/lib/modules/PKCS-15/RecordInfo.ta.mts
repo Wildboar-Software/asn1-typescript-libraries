@@ -183,7 +183,6 @@ let _cached_decoder_for_RecordInfo: $.ASN1Decoder<RecordInfo> | null = null;
 export function _decode_RecordInfo(el: _Element) {
     if (!_cached_decoder_for_RecordInfo) {
         _cached_decoder_for_RecordInfo = function (el: _Element): RecordInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let oDFRecordLength: OPTIONAL<INTEGER>;
             let prKDFRecordLength: OPTIONAL<INTEGER>;
             let puKDFRecordLength: OPTIONAL<INTEGER>;
@@ -191,8 +190,6 @@ export function _decode_RecordInfo(el: _Element) {
             let cDFRecordLength: OPTIONAL<INTEGER>;
             let dODFRecordLength: OPTIONAL<INTEGER>;
             let aODFRecordLength: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 oDFRecordLength: (_el: _Element): void => {
                     oDFRecordLength = $._decode_implicit<INTEGER>(
@@ -230,7 +227,6 @@ export function _decode_RecordInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -240,7 +236,7 @@ export function _decode_RecordInfo(el: _Element) {
                 undefined
             );
             return new RecordInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ oDFRecordLength,
+                oDFRecordLength,
                 prKDFRecordLength,
                 puKDFRecordLength,
                 sKDFRecordLength,

@@ -161,14 +161,11 @@ let _cached_decoder_for_OtherInfo: $.ASN1Decoder<OtherInfo> | null = null;
 export function _decode_OtherInfo(el: _Element) {
     if (!_cached_decoder_for_OtherInfo) {
         _cached_decoder_for_OtherInfo = function (el: _Element): OtherInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let keyInfo!: AlgorithmIdentifier;
             let partyUInfo: OPTIONAL<OCTET_STRING>;
             let partyVInfo: OPTIONAL<OCTET_STRING>;
             let suppPubInfo: OPTIONAL<OCTET_STRING>;
             let suppPrivInfo: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 keyInfo: (_el: _Element): void => {
                     keyInfo = _decode_AlgorithmIdentifier(_el);
@@ -194,7 +191,6 @@ export function _decode_OtherInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_OtherInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_OtherInfo,
                 undefined
             );
-            return new OtherInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new OtherInfo (
                 keyInfo,
                 partyUInfo,
                 partyVInfo,

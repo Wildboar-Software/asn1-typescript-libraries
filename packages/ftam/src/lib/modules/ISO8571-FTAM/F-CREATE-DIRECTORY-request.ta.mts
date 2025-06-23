@@ -190,14 +190,11 @@ export function _decode_F_CREATE_DIRECTORY_request(el: _Element) {
     _cached_decoder_for_F_CREATE_DIRECTORY_request = function (
       el: _Element
     ): F_CREATE_DIRECTORY_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let initial_attributes!: Create_Attributes;
       let create_password: OPTIONAL<Password>;
       let requested_access!: Access_Request;
       let shared_ASE_infonnation: OPTIONAL<Shared_ASE_Information>;
       let account: OPTIONAL<Account>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'initial-attributes': (_el: _Element): void => {
           initial_attributes = _decode_Create_Attributes(_el);
@@ -215,7 +212,6 @@ export function _decode_F_CREATE_DIRECTORY_request(el: _Element) {
           account = _decode_Account(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -224,7 +220,7 @@ export function _decode_F_CREATE_DIRECTORY_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_CREATE_DIRECTORY_request,
         undefined
       );
-      return new F_CREATE_DIRECTORY_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_CREATE_DIRECTORY_request (
         initial_attributes,
         create_password,
         requested_access,

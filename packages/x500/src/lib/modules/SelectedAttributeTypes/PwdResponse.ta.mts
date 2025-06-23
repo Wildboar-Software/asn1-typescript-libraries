@@ -127,11 +127,8 @@ let _cached_decoder_for_PwdResponse: $.ASN1Decoder<PwdResponse> | null = null;
 export function _decode_PwdResponse(el: _Element) {
     if (!_cached_decoder_for_PwdResponse) {
         _cached_decoder_for_PwdResponse = function (el: _Element): PwdResponse {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let warning: OPTIONAL<PwdResponse_warning>;
             let error: OPTIONAL<PwdResponse_error>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 warning: (_el: _Element): void => {
                     warning = _decode_PwdResponse_warning(_el);
@@ -140,7 +137,6 @@ export function _decode_PwdResponse(el: _Element) {
                     error = _decode_PwdResponse_error(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_PwdResponse(el: _Element) {
                 undefined
             );
             return new PwdResponse(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ warning,
+                warning,
                 error
             );
         };

@@ -149,12 +149,9 @@ export function _decode_SeverityIndicatingThreshold(el: _Element) {
         _cached_decoder_for_SeverityIndicatingThreshold = function (
             el: _Element
         ): SeverityIndicatingThreshold {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let threshold!: ObservedValue;
             let notifyOnOff!: BOOLEAN;
             let severityIndication: OPTIONAL<PerceivedSeverity>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 threshold: (_el: _Element): void => {
                     threshold = _decode_ObservedValue(_el);
@@ -166,7 +163,6 @@ export function _decode_SeverityIndicatingThreshold(el: _Element) {
                     severityIndication = _decode_PerceivedSeverity(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -175,7 +171,7 @@ export function _decode_SeverityIndicatingThreshold(el: _Element) {
                 _root_component_type_list_2_spec_for_SeverityIndicatingThreshold,
                 undefined
             );
-            return new SeverityIndicatingThreshold /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SeverityIndicatingThreshold (
                 threshold,
                 notifyOnOff,
                 severityIndication

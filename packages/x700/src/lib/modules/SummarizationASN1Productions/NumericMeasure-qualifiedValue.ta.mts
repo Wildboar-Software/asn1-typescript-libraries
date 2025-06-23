@@ -142,13 +142,10 @@ export function _decode_NumericMeasure_qualifiedValue(el: _Element) {
         _cached_decoder_for_NumericMeasure_qualifiedValue = function (
             el: _Element
         ): NumericMeasure_qualifiedValue {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let value!: ObservedValue;
             let timeStamp: OPTIONAL<TimePeriod>;
             let suspectFlag: OPTIONAL<BOOLEAN> =
                 NumericMeasure_qualifiedValue._default_value_for_suspectFlag;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 value: (_el: _Element): void => {
                     value = _decode_ObservedValue(_el);
@@ -160,7 +157,6 @@ export function _decode_NumericMeasure_qualifiedValue(el: _Element) {
                     suspectFlag = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -169,7 +165,7 @@ export function _decode_NumericMeasure_qualifiedValue(el: _Element) {
                 _root_component_type_list_2_spec_for_NumericMeasure_qualifiedValue,
                 undefined
             );
-            return new NumericMeasure_qualifiedValue /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NumericMeasure_qualifiedValue (
                 value,
                 timeStamp,
                 suspectFlag

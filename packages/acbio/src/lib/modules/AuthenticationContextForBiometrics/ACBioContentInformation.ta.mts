@@ -196,15 +196,12 @@ export function _decode_ACBioContentInformation(el: _Element) {
         _cached_decoder_for_ACBioContentInformation = $._decode_implicit<ACBioContentInformation>(
             () =>
                 function (el: _Element): ACBioContentInformation {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let version: OPTIONAL<Version> =
                         ACBioContentInformation._default_value_for_version;
                     let bpuInformation!: BPUInformation;
                     let controlValue!: OCTET_STRING;
                     let biometricProcess!: BiometricProcess;
                     let brtCertificateInformation: OPTIONAL<BRTCertificateInformation>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         version: (_el: _Element): void => {
                             version = _decode_Version(_el);
@@ -224,7 +221,6 @@ export function _decode_ACBioContentInformation(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -233,7 +229,7 @@ export function _decode_ACBioContentInformation(el: _Element) {
                         _root_component_type_list_2_spec_for_ACBioContentInformation,
                         undefined
                     );
-                    return new ACBioContentInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+                    return new ACBioContentInformation (
                         version,
                         bpuInformation,
                         controlValue,

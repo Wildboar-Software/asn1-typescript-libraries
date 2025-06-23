@@ -123,25 +123,21 @@ let _cached_decoder_for_CrlOcspRef: $.ASN1Decoder<CrlOcspRef> | null = null;
 export
 function _decode_CrlOcspRef (el: _Element) {
     if (!_cached_decoder_for_CrlOcspRef) { _cached_decoder_for_CrlOcspRef = function (el: _Element): CrlOcspRef {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let crlids: OPTIONAL<CRLListID>;
     let ocspids: OPTIONAL<OcspListID>;
     let otherRev: OPTIONAL<OtherRevRefs>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "crlids": (_el: _Element): void => { crlids = $._decode_explicit<CRLListID>(() => _decode_CRLListID)(_el); },
         "ocspids": (_el: _Element): void => { ocspids = $._decode_explicit<OcspListID>(() => _decode_OcspListID)(_el); },
         "otherRev": (_el: _Element): void => { otherRev = $._decode_explicit<OtherRevRefs>(() => _decode_OtherRevRefs)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CrlOcspRef,
         _extension_additions_list_spec_for_CrlOcspRef,
         _root_component_type_list_2_spec_for_CrlOcspRef,
         undefined,
     );
-    return new CrlOcspRef( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CrlOcspRef( 
         crlids,
         ocspids,
         otherRev

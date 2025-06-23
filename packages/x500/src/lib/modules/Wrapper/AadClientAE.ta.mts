@@ -169,7 +169,6 @@ let _cached_decoder_for_AadClientAE: $.ASN1Decoder<AadClientAE> | null = null;
 export function _decode_AadClientAE(el: _Element) {
     if (!_cached_decoder_for_AadClientAE) {
         _cached_decoder_for_AadClientAE = function (el: _Element): AadClientAE {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokeID: OPTIONAL<InvokeID>;
             let assoID!: AssoID;
             let time!: TimeStamp;
@@ -177,8 +176,6 @@ export function _decode_AadClientAE(el: _Element) {
             let keyEst: OPTIONAL<AlgoInvoke>;
             let encInvoke: OPTIONAL<AlgoInvoke>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokeID: (_el: _Element): void => {
                     invokeID = $._decode_implicit<InvokeID>(
@@ -205,7 +202,6 @@ export function _decode_AadClientAE(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -217,7 +213,7 @@ export function _decode_AadClientAE(el: _Element) {
                 }
             );
             return new AadClientAE(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ invokeID,
+                invokeID,
                 assoID,
                 time,
                 seq,

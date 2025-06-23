@@ -139,12 +139,9 @@ export function _get_decoder_for_EncryptedContentInfo<Type>(
     _decode_Type: $.ASN1Decoder<Type>
 ) {
     return function (el: _Element): EncryptedContentInfo<Type> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let contentType!: OBJECT_IDENTIFIER;
         let contentEncryptionAlgorithm!: AlgorithmIdentifier;
         let encryptedContent: OPTIONAL<OCTET_STRING>;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             contentType: (_el: _Element): void => {
                 contentType = $._decodeObjectIdentifier(_el);
@@ -158,7 +155,6 @@ export function _get_decoder_for_EncryptedContentInfo<Type>(
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -168,7 +164,7 @@ export function _get_decoder_for_EncryptedContentInfo<Type>(
             undefined
         );
         return new EncryptedContentInfo(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ contentType,
+            contentType,
             contentEncryptionAlgorithm,
             encryptedContent
         );

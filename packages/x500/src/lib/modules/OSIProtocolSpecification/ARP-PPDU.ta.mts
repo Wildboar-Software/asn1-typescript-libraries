@@ -116,11 +116,8 @@ let _cached_decoder_for_ARP_PPDU: $.ASN1Decoder<ARP_PPDU> | null = null;
 export function _decode_ARP_PPDU(el: _Element) {
     if (!_cached_decoder_for_ARP_PPDU) {
         _cached_decoder_for_ARP_PPDU = function (el: _Element): ARP_PPDU {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let provider_reason: OPTIONAL<Abort_reason>;
             let event_identifier: OPTIONAL<Event_identifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "provider-reason": (_el: _Element): void => {
                     provider_reason = $._decode_implicit<Abort_reason>(
@@ -133,7 +130,6 @@ export function _decode_ARP_PPDU(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_ARP_PPDU(el: _Element) {
                 undefined
             );
             return new ARP_PPDU(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ provider_reason,
+                provider_reason,
                 event_identifier
             );
         };

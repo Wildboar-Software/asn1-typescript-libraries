@@ -135,28 +135,24 @@ let _cached_decoder_for_BiometricPara_Item: $.ASN1Decoder<BiometricPara_Item> | 
 export
 function _decode_BiometricPara_Item (el: _Element) {
     if (!_cached_decoder_for_BiometricPara_Item) { _cached_decoder_for_BiometricPara_Item = function (el: _Element): BiometricPara_Item {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let biometricType!: BIT_STRING;
     let fMR_Value!: INTEGER;
     let trialNumber: OPTIONAL<INTEGER>;
     let requestQuality: OPTIONAL<INTEGER>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "biometricType": (_el: _Element): void => { biometricType = $._decodeBitString(_el); },
         "fMR-Value": (_el: _Element): void => { fMR_Value = $._decodeInteger(_el); },
         "trialNumber": (_el: _Element): void => { trialNumber = $._decodeInteger(_el); },
         "requestQuality": (_el: _Element): void => { requestQuality = $._decodeInteger(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BiometricPara_Item,
         _extension_additions_list_spec_for_BiometricPara_Item,
         _root_component_type_list_2_spec_for_BiometricPara_Item,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new BiometricPara_Item( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new BiometricPara_Item( 
         biometricType,
         fMR_Value,
         trialNumber,

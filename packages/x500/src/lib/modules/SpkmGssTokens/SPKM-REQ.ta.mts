@@ -134,12 +134,9 @@ let _cached_decoder_for_SPKM_REQ: $.ASN1Decoder<SPKM_REQ> | null = null;
 export function _decode_SPKM_REQ(el: _Element) {
     if (!_cached_decoder_for_SPKM_REQ) {
         _cached_decoder_for_SPKM_REQ = function (el: _Element): SPKM_REQ {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let requestToken!: REQ_TOKEN;
             let certif_data: OPTIONAL<CertificationData>;
             let auth_data: OPTIONAL<AuthorizationData>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 requestToken: (_el: _Element): void => {
                     requestToken = _decode_REQ_TOKEN(_el);
@@ -155,7 +152,6 @@ export function _decode_SPKM_REQ(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -165,7 +161,7 @@ export function _decode_SPKM_REQ(el: _Element) {
                 undefined
             );
             return new SPKM_REQ(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ requestToken,
+                requestToken,
                 certif_data,
                 auth_data
             );

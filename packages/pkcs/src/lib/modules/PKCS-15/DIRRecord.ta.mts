@@ -142,13 +142,10 @@ export function _decode_DIRRecord(el: _Element) {
         _cached_decoder_for_DIRRecord = $._decode_implicit<DIRRecord>(
             () =>
                 function (el: _Element): DIRRecord {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let aid!: OCTET_STRING;
                     let label: OPTIONAL<UTF8String>;
                     let path!: OCTET_STRING;
                     let ddo: OPTIONAL<DDO>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         aid: (_el: _Element): void => {
                             aid = $._decode_implicit<OCTET_STRING>(
@@ -171,7 +168,6 @@ export function _decode_DIRRecord(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -181,7 +177,7 @@ export function _decode_DIRRecord(el: _Element) {
                         undefined
                     );
                     return new DIRRecord(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ aid,
+                        aid,
                         label,
                         path,
                         ddo

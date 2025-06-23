@@ -207,7 +207,6 @@ export function _decode_ShadowErrorData(el: _Element) {
         _cached_decoder_for_ShadowErrorData = function (
             el: _Element
         ): ShadowErrorData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let problem!: ShadowProblem;
             let lastUpdate: OPTIONAL<Time>;
             let updateWindow: OPTIONAL<UpdateWindow>;
@@ -217,8 +216,6 @@ export function _decode_ShadowErrorData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 ShadowErrorData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = _decode_ShadowProblem(_el);
@@ -250,7 +247,6 @@ export function _decode_ShadowErrorData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -262,7 +258,7 @@ export function _decode_ShadowErrorData(el: _Element) {
                 }
             );
             return new ShadowErrorData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ problem,
+                problem,
                 lastUpdate,
                 updateWindow,
                 _unrecognizedExtensionsList,

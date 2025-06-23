@@ -182,7 +182,6 @@ export function _decode_ProbeSubmissionResult(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 ProbeSubmissionResult._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'probe-submission-identifier': (_el: _Element): void => {
                     probe_submission_identifier = _decode_ProbeSubmissionIdentifier(
@@ -205,7 +204,6 @@ export function _decode_ProbeSubmissionResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

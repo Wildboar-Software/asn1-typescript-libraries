@@ -208,7 +208,6 @@ export function _decode_SubSchemaSyntax_Item_subSchema(el: _Element) {
         _cached_decoder_for_SubSchemaSyntax_Item_subSchema = function (
             el: _Element
         ): SubSchemaSyntax_Item_subSchema {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let structureRules: OPTIONAL<DITStructureRuleDescription[]>;
             let contentRules: OPTIONAL<DITContentRuleDescription[]>;
             let matchingRules: OPTIONAL<MatchingRuleDescription[]>;
@@ -216,8 +215,6 @@ export function _decode_SubSchemaSyntax_Item_subSchema(el: _Element) {
             let objectClasses: OPTIONAL<ObjectClassDescription[]>;
             let nameForms: OPTIONAL<NameFormDescription[]>;
             let matchRuleUses: OPTIONAL<MatchingRuleUseDescription[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 structureRules: (_el: _Element): void => {
                     structureRules = $._decode_explicit<
@@ -281,7 +278,6 @@ export function _decode_SubSchemaSyntax_Item_subSchema(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -291,7 +287,7 @@ export function _decode_SubSchemaSyntax_Item_subSchema(el: _Element) {
                 undefined
             );
             return new SubSchemaSyntax_Item_subSchema(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ structureRules,
+                structureRules,
                 contentRules,
                 matchingRules,
                 attributeTypes,

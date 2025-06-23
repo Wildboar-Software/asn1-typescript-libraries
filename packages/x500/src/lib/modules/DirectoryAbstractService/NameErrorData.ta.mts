@@ -207,7 +207,6 @@ export function _decode_NameErrorData(el: _Element) {
                 NameErrorData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = $._decode_explicit<NameProblem>(
@@ -238,7 +237,6 @@ export function _decode_NameErrorData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

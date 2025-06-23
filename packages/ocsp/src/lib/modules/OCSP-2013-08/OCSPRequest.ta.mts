@@ -122,11 +122,8 @@ let _cached_decoder_for_OCSPRequest: $.ASN1Decoder<OCSPRequest> | null = null;
 export function _decode_OCSPRequest(el: _Element) {
     if (!_cached_decoder_for_OCSPRequest) {
         _cached_decoder_for_OCSPRequest = function (el: _Element): OCSPRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tbsRequest!: TBSRequest;
             let optionalSignature: OPTIONAL<Signature>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tbsRequest: (_el: _Element): void => {
                     tbsRequest = _decode_TBSRequest(_el);
@@ -137,7 +134,6 @@ export function _decode_OCSPRequest(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_OCSPRequest(el: _Element) {
                 undefined
             );
             return new OCSPRequest(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ tbsRequest,
+                tbsRequest,
                 optionalSignature
             );
         };

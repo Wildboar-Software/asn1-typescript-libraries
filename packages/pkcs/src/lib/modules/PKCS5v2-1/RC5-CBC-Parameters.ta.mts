@@ -151,13 +151,10 @@ export function _decode_RC5_CBC_Parameters(el: _Element) {
         _cached_decoder_for_RC5_CBC_Parameters = function (
             el: _Element
         ): RC5_CBC_Parameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: RC5_CBC_Parameters_version;
             let rounds!: INTEGER;
             let blockSizeInBits!: INTEGER;
             let iv: OPTIONAL<OCTET_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_RC5_CBC_Parameters_version(_el);
@@ -172,7 +169,6 @@ export function _decode_RC5_CBC_Parameters(el: _Element) {
                     iv = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -182,7 +178,7 @@ export function _decode_RC5_CBC_Parameters(el: _Element) {
                 undefined
             );
             return new RC5_CBC_Parameters(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 rounds,
                 blockSizeInBits,
                 iv

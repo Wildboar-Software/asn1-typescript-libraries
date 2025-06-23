@@ -322,7 +322,6 @@ export function _decode_GUIProgressEvent_NotificationParams(el: _Element) {
     _cached_decoder_for_GUIProgressEvent_NotificationParams = function (
       el: _Element
     ): GUIProgressEvent_NotificationParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
       let bspProductUuid!: BioAPI_UUID;
       let unitID!: BioAPI_UNIT_ID;
@@ -334,8 +333,6 @@ export function _decode_GUIProgressEvent_NotificationParams(el: _Element) {
       let suboperationProgress!: UnsignedByte;
       let bitmaps: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiEventSubscriptionUuid: (_el: _Element): void => {
           guiEventSubscriptionUuid = _decode_BioAPI_UUID(_el);
@@ -371,7 +368,6 @@ export function _decode_GUIProgressEvent_NotificationParams(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -380,7 +376,7 @@ export function _decode_GUIProgressEvent_NotificationParams(el: _Element) {
         _root_component_type_list_2_spec_for_GUIProgressEvent_NotificationParams,
         undefined
       );
-      return new GUIProgressEvent_NotificationParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIProgressEvent_NotificationParams (
         guiEventSubscriptionUuid,
         bspProductUuid,
         unitID,

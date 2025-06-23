@@ -139,12 +139,9 @@ let _cached_decoder_for_PFX: $.ASN1Decoder<PFX> | null = null;
 export function _decode_PFX(el: _Element) {
     if (!_cached_decoder_for_PFX) {
         _cached_decoder_for_PFX = function (el: _Element): PFX {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: PFX_version;
             let authSafe!: ContentInfo;
             let macData: OPTIONAL<MacData>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_PFX_version(_el);
@@ -156,7 +153,6 @@ export function _decode_PFX(el: _Element) {
                     macData = _decode_MacData(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -166,7 +162,7 @@ export function _decode_PFX(el: _Element) {
                 undefined
             );
             return new PFX(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 authSafe,
                 macData
             );

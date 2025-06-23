@@ -194,7 +194,6 @@ export function _decode_MSMessageSubmissionResult_mts_result(el: _Element) {
                 MSMessageSubmissionResult_mts_result._default_value_for_extensions;
             let ms_message_result: OPTIONAL<CommonSubmissionResults>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'message-submission-identifier': (_el: _Element): void => {
                     message_submission_identifier = _decode_MessageSubmissionIdentifier(
@@ -222,7 +221,6 @@ export function _decode_MSMessageSubmissionResult_mts_result(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

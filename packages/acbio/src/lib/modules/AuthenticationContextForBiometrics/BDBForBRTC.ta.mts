@@ -246,7 +246,6 @@ let _cached_decoder_for_BDBForBRTC: $.ASN1Decoder<BDBForBRTC> | null = null;
 export function _decode_BDBForBRTC(el: _Element) {
     if (!_cached_decoder_for_BDBForBRTC) {
         _cached_decoder_for_BDBForBRTC = function (el: _Element): BDBForBRTC {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<Version> =
                 BDBForBRTC._default_value_for_version;
             let originalBDBHashList!: HashList;
@@ -256,8 +255,6 @@ export function _decode_BDBForBRTC(el: _Element) {
             let userInformation: OPTIONAL<UserInformation>;
             let pkiCertificateInformation: OPTIONAL<PKICertificateInformation>;
             let enrolmentACBioInstances: OPTIONAL<SequenceOfACBioInstances>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_Version(_el);
@@ -288,7 +285,6 @@ export function _decode_BDBForBRTC(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -297,7 +293,7 @@ export function _decode_BDBForBRTC(el: _Element) {
                 _root_component_type_list_2_spec_for_BDBForBRTC,
                 undefined
             );
-            return new BDBForBRTC /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BDBForBRTC (
                 version,
                 originalBDBHashList,
                 originalBIRReferrer,

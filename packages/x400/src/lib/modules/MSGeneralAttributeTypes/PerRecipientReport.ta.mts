@@ -131,12 +131,9 @@ export function _decode_PerRecipientReport(el: _Element) {
         _cached_decoder_for_PerRecipientReport = function (
             el: _Element
         ): PerRecipientReport {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let report_entry!: SequenceNumber;
             let position: OPTIONAL<INTEGER> =
                 PerRecipientReport._default_value_for_position;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'report-entry': (_el: _Element): void => {
                     report_entry = $._decode_explicit<SequenceNumber>(
@@ -149,7 +146,6 @@ export function _decode_PerRecipientReport(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_PerRecipientReport(el: _Element) {
                 _root_component_type_list_2_spec_for_PerRecipientReport,
                 undefined
             );
-            return new PerRecipientReport /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PerRecipientReport (
                 report_entry,
                 position
             );

@@ -149,12 +149,9 @@ let _cached_decoder_for_PDV_list: $.ASN1Decoder<PDV_list> | null = null;
 export function _decode_PDV_list(el: _Element) {
   if (!_cached_decoder_for_PDV_list) {
     _cached_decoder_for_PDV_list = function (el: _Element): PDV_list {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
       let presentation_context_identifier!: Presentation_context_identifier;
       let presentation_data_values!: PDV_list_presentation_data_values;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'transfer-syntax-name': (_el: _Element): void => {
           transfer_syntax_name = _decode_Transfer_syntax_name(_el);
@@ -170,7 +167,6 @@ export function _decode_PDV_list(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -179,7 +175,7 @@ export function _decode_PDV_list(el: _Element) {
         _root_component_type_list_2_spec_for_PDV_list,
         undefined
       );
-      return new PDV_list /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new PDV_list (
         transfer_syntax_name,
         presentation_context_identifier,
         presentation_data_values

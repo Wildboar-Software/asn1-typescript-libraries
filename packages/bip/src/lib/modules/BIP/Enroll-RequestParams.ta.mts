@@ -260,7 +260,6 @@ export function _decode_Enroll_RequestParams(el: _Element) {
     _cached_decoder_for_Enroll_RequestParams = function (
       el: _Element
     ): Enroll_RequestParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let originalBSPHandle!: BioAPI_HANDLE;
       let purpose!: BioAPI_BIR_PURPOSE;
       let subtype!: BioAPI_BIR_SUBTYPE;
@@ -270,8 +269,6 @@ export function _decode_Enroll_RequestParams(el: _Element) {
       let timeout!: SignedInt;
       let no_auditData!: BOOLEAN;
       let no_templateUuid!: BOOLEAN;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         originalBSPHandle: (_el: _Element): void => {
           originalBSPHandle = _decode_BioAPI_HANDLE(_el);
@@ -301,7 +298,6 @@ export function _decode_Enroll_RequestParams(el: _Element) {
           no_templateUuid = $._decodeBoolean(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -310,7 +306,7 @@ export function _decode_Enroll_RequestParams(el: _Element) {
         _root_component_type_list_2_spec_for_Enroll_RequestParams,
         undefined
       );
-      return new Enroll_RequestParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Enroll_RequestParams (
         originalBSPHandle,
         purpose,
         subtype,

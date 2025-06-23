@@ -166,7 +166,6 @@ let _cached_decoder_for_SpecifiedECDomain: $.ASN1Decoder<SpecifiedECDomain> | nu
 export
 function _decode_SpecifiedECDomain (el: _Element) {
     if (!_cached_decoder_for_SpecifiedECDomain) { _cached_decoder_for_SpecifiedECDomain = function (el: _Element): SpecifiedECDomain {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: SpecifiedECDomainVersion;
     let fieldID!: FieldID;
     let curve!: Curve;
@@ -175,8 +174,6 @@ function _decode_SpecifiedECDomain (el: _Element) {
     let cofactor: OPTIONAL<INTEGER>;
     let hash: OPTIONAL<HashAlgorithm>;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = _decode_SpecifiedECDomainVersion(_el); },
         "fieldID": (_el: _Element): void => { fieldID = _decode_FieldID(_el); },
@@ -186,14 +183,13 @@ function _decode_SpecifiedECDomain (el: _Element) {
         "cofactor": (_el: _Element): void => { cofactor = $._decodeInteger(_el); },
         "hash": (_el: _Element): void => { hash = _decode_HashAlgorithm(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SpecifiedECDomain,
         _extension_additions_list_spec_for_SpecifiedECDomain,
         _root_component_type_list_2_spec_for_SpecifiedECDomain,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new SpecifiedECDomain( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new SpecifiedECDomain( 
         version,
         fieldID,
         curve,

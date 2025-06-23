@@ -123,11 +123,8 @@ let _cached_decoder_for_RDNInfo: $.ASN1Decoder<RDNInfo> | null = null;
 export function _decode_RDNInfo(el: _Element) {
     if (!_cached_decoder_for_RDNInfo) {
         _cached_decoder_for_RDNInfo = function (el: _Element): RDNInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdn!: RelativeDistinguishedName;
             let moClass: OPTIONAL<GdmoObjectClass>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdn: (_el: _Element): void => {
                     rdn = _decode_RelativeDistinguishedName(_el);
@@ -136,7 +133,6 @@ export function _decode_RDNInfo(el: _Element) {
                     moClass = _decode_GdmoObjectClass(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -145,7 +141,7 @@ export function _decode_RDNInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_RDNInfo,
                 undefined
             );
-            return new RDNInfo /* SEQUENCE_CONSTRUCTOR_CALL */(rdn, moClass);
+            return new RDNInfo (rdn, moClass);
         };
     }
     return _cached_decoder_for_RDNInfo(el);

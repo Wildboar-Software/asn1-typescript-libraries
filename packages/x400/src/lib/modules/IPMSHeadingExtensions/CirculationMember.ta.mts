@@ -133,7 +133,6 @@ export function _decode_CirculationMember(el: _Element) {
             let circulation_recipient!: RecipientSpecifier;
             let checked: OPTIONAL<Checkmark>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'circulation-recipient': (_el: _Element): void => {
                     circulation_recipient = _decode_RecipientSpecifier(_el);
@@ -142,7 +141,6 @@ export function _decode_CirculationMember(el: _Element) {
                     checked = _decode_Checkmark(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

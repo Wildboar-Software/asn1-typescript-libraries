@@ -164,14 +164,11 @@ let _cached_decoder_for_Discovery: $.ASN1Decoder<Discovery> | null = null;
 export function _decode_Discovery(el: _Element) {
   if (!_cached_decoder_for_Discovery) {
     _cached_decoder_for_Discovery = function (el: _Element): Discovery {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let protocolVersion!: ProtocolVersion;
       let masterEndpointAddress!: IPAddress;
       let masterEndPort: OPTIONAL<Port> =
         Discovery._default_value_for_masterEndPort;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         protocolVersion: (_el: _Element): void => {
           protocolVersion = _decode_ProtocolVersion(_el);
@@ -183,7 +180,6 @@ export function _decode_Discovery(el: _Element) {
           masterEndPort = _decode_Port(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -194,7 +190,7 @@ export function _decode_Discovery(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new Discovery /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Discovery (
         protocolVersion,
         masterEndpointAddress,
         masterEndPort,

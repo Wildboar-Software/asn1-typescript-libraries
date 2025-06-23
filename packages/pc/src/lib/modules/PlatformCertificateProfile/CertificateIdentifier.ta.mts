@@ -120,23 +120,19 @@ let _cached_decoder_for_CertificateIdentifier: $.ASN1Decoder<CertificateIdentifi
 export
 function _decode_CertificateIdentifier (el: _Element) {
     if (!_cached_decoder_for_CertificateIdentifier) { _cached_decoder_for_CertificateIdentifier = function (el: _Element): CertificateIdentifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let attributeCertIdentifier: OPTIONAL<AttributeCertificateIdentifier>;
     let genericCertIdentifier: OPTIONAL<IssuerSerial>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "attributeCertIdentifier": (_el: _Element): void => { attributeCertIdentifier = $._decode_implicit<AttributeCertificateIdentifier>(() => _decode_AttributeCertificateIdentifier)(_el); },
         "genericCertIdentifier": (_el: _Element): void => { genericCertIdentifier = $._decode_implicit<IssuerSerial>(() => _decode_IssuerSerial)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CertificateIdentifier,
         _extension_additions_list_spec_for_CertificateIdentifier,
         _root_component_type_list_2_spec_for_CertificateIdentifier,
         undefined,
     );
-    return new CertificateIdentifier( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CertificateIdentifier( 
         attributeCertIdentifier,
         genericCertIdentifier
     );

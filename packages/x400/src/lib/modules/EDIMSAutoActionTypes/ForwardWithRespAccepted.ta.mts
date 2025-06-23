@@ -135,7 +135,6 @@ export function _decode_ForwardWithRespAccepted(el: _Element) {
             let new_edin_receiver_name: OPTIONAL<RecipientField>;
             let per_recipient_heading_field!: NextRecipientFields[];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'new-edin-receiver-name': (_el: _Element): void => {
                     new_edin_receiver_name = $._decode_explicit<RecipientField>(
@@ -152,7 +151,6 @@ export function _decode_ForwardWithRespAccepted(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

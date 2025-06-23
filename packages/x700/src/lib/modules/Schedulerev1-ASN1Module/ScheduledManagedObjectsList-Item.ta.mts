@@ -123,11 +123,8 @@ export function _decode_ScheduledManagedObjectsList_Item(el: _Element) {
         _cached_decoder_for_ScheduledManagedObjectsList_Item = function (
             el: _Element
         ): ScheduledManagedObjectsList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objectInstance!: ObjectInstance;
             let activity: OPTIONAL<AttributeId>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objectInstance: (_el: _Element): void => {
                     objectInstance = _decode_ObjectInstance(_el);
@@ -136,7 +133,6 @@ export function _decode_ScheduledManagedObjectsList_Item(el: _Element) {
                     activity = _decode_AttributeId(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -145,7 +141,7 @@ export function _decode_ScheduledManagedObjectsList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_ScheduledManagedObjectsList_Item,
                 undefined
             );
-            return new ScheduledManagedObjectsList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ScheduledManagedObjectsList_Item (
                 objectInstance,
                 activity
             );

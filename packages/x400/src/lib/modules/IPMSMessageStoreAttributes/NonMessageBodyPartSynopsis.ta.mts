@@ -161,14 +161,11 @@ export function _decode_NonMessageBodyPartSynopsis(el: _Element) {
         _cached_decoder_for_NonMessageBodyPartSynopsis = function (
             el: _Element
         ): NonMessageBodyPartSynopsis {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let type_!: OBJECT_IDENTIFIER;
             let parameters: OPTIONAL<INSTANCE_OF>;
             let size!: INTEGER;
             let processed: OPTIONAL<BOOLEAN> =
                 NonMessageBodyPartSynopsis._default_value_for_processed;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = $._decode_implicit<OBJECT_IDENTIFIER>(
@@ -191,7 +188,6 @@ export function _decode_NonMessageBodyPartSynopsis(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -200,7 +196,7 @@ export function _decode_NonMessageBodyPartSynopsis(el: _Element) {
                 _root_component_type_list_2_spec_for_NonMessageBodyPartSynopsis,
                 undefined
             );
-            return new NonMessageBodyPartSynopsis /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NonMessageBodyPartSynopsis (
                 type_,
                 parameters,
                 size,

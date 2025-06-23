@@ -577,7 +577,6 @@ export function _decode_DLPolicy(el: _Element) {
             >;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'report-propagation': (_el: _Element): void => {
                     report_propagation = $._decode_implicit<DLPolicy_report_propagation>(
@@ -669,7 +668,6 @@ export function _decode_DLPolicy(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -146,12 +146,9 @@ export function _decode_SignalRateAndMappingList_Item(el: _Element) {
         _cached_decoder_for_SignalRateAndMappingList_Item = function (
             el: _Element
         ): SignalRateAndMappingList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signalRate!: SignalRate;
             let mappingList: OPTIONAL<MappingList>;
             let wavelength: OPTIONAL<WaveLength>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 signalRate: (_el: _Element): void => {
                     signalRate = _decode_SignalRate(_el);
@@ -163,7 +160,6 @@ export function _decode_SignalRateAndMappingList_Item(el: _Element) {
                     wavelength = _decode_WaveLength(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -172,7 +168,7 @@ export function _decode_SignalRateAndMappingList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_SignalRateAndMappingList_Item,
                 undefined
             );
-            return new SignalRateAndMappingList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SignalRateAndMappingList_Item (
                 signalRate,
                 mappingList,
                 wavelength

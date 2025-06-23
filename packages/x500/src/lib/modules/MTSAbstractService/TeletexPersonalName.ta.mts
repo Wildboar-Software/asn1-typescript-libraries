@@ -149,7 +149,6 @@ export function _decode_TeletexPersonalName(el: _Element) {
             let initials: OPTIONAL<TeletexString>;
             let generation_qualifier: OPTIONAL<TeletexString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 surname: (_el: _Element): void => {
                     surname = $._decode_implicit<TeletexString>(
@@ -172,7 +171,6 @@ export function _decode_TeletexPersonalName(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

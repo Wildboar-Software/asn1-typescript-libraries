@@ -235,7 +235,6 @@ export function _decode_MSBindArgument(el: _Element) {
             let ua_registration_identifier: OPTIONAL<RegistrationIdentifier>;
             let bind_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'initiator-name': (_el: _Element): void => {
                     initiator_name = _decode_ORAddressAndOrDirectoryName(_el);
@@ -271,7 +270,6 @@ export function _decode_MSBindArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

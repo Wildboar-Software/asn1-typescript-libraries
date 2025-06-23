@@ -163,14 +163,11 @@ let _cached_decoder_for_Vertex: $.ASN1Decoder<Vertex> | null = null;
 export function _decode_Vertex(el: _Element) {
     if (!_cached_decoder_for_Vertex) {
         _cached_decoder_for_Vertex = function (el: _Element): Vertex {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdn!: RelativeDistinguishedName;
             let admPointInfo: OPTIONAL<Attribute[]>;
             let subentries: OPTIONAL<SubentryInfo[]>;
             let accessPoints: OPTIONAL<MasterAndShadowAccessPoints>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdn: (_el: _Element): void => {
                     rdn = $._decode_explicit<RelativeDistinguishedName>(
@@ -193,7 +190,6 @@ export function _decode_Vertex(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -205,7 +201,7 @@ export function _decode_Vertex(el: _Element) {
                 }
             );
             return new Vertex(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rdn,
+                rdn,
                 admPointInfo,
                 subentries,
                 accessPoints,

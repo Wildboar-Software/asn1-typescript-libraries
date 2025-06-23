@@ -135,11 +135,8 @@ export function _decode_BPUSubprocessInformation(el: _Element) {
         _cached_decoder_for_BPUSubprocessInformation = function (
             el: _Element
         ): BPUSubprocessInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let functionDefinition!: FunctionDefinition;
             let qualityEvaluation: OPTIONAL<QualityEvaluation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 functionDefinition: (_el: _Element): void => {
                     functionDefinition = _decode_FunctionDefinition(_el);
@@ -148,7 +145,6 @@ export function _decode_BPUSubprocessInformation(el: _Element) {
                     qualityEvaluation = _decode_QualityEvaluation(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_BPUSubprocessInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_BPUSubprocessInformation,
                 undefined
             );
-            return new BPUSubprocessInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BPUSubprocessInformation (
                 functionDefinition,
                 qualityEvaluation
             );

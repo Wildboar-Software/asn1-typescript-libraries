@@ -121,11 +121,8 @@ export function _decode_ContentInformation(el: _Element) {
         _cached_decoder_for_ContentInformation = function (
             el: _Element
         ): ContentInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mode!: Mode;
             let content: OPTIONAL<Content>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mode: (_el: _Element): void => {
                     mode = _decode_Mode(_el);
@@ -134,7 +131,6 @@ export function _decode_ContentInformation(el: _Element) {
                     content = _decode_Content(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_ContentInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_ContentInformation,
                 undefined
             );
-            return new ContentInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ContentInformation (
                 mode,
                 content
             );

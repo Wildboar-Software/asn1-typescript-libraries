@@ -129,11 +129,8 @@ export function _decode_EDIM_ExtendedBodyPart(el: _Element) {
         _cached_decoder_for_EDIM_ExtendedBodyPart = function (
             el: _Element
         ): EDIM_ExtendedBodyPart {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let body_part_reference: OPTIONAL<BodyPartReference>;
             let extended_body_part!: ExtendedBodyPart;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'body-part-reference': (_el: _Element): void => {
                     body_part_reference = $._decode_implicit<BodyPartReference>(
@@ -146,7 +143,6 @@ export function _decode_EDIM_ExtendedBodyPart(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_EDIM_ExtendedBodyPart(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIM_ExtendedBodyPart,
                 undefined
             );
-            return new EDIM_ExtendedBodyPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIM_ExtendedBodyPart (
                 body_part_reference,
                 extended_body_part
             );

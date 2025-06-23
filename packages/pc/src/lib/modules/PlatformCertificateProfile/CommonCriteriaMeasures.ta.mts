@@ -199,7 +199,6 @@ let _cached_decoder_for_CommonCriteriaMeasures: $.ASN1Decoder<CommonCriteriaMeas
 export
 function _decode_CommonCriteriaMeasures (el: _Element) {
     if (!_cached_decoder_for_CommonCriteriaMeasures) { _cached_decoder_for_CommonCriteriaMeasures = function (el: _Element): CommonCriteriaMeasures {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let version!: IA5String;
     let assurancelevel!: EvaluationAssuranceLevel;
     let evaluationStatus!: EvaluationStatus;
@@ -209,8 +208,6 @@ function _decode_CommonCriteriaMeasures (el: _Element) {
     let profileUri: OPTIONAL<URIReference>;
     let targetOid: OPTIONAL<OBJECT_IDENTIFIER>;
     let targetUri: OPTIONAL<URIReference>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = $._decodeIA5String(_el); },
         "assurancelevel": (_el: _Element): void => { assurancelevel = _decode_EvaluationAssuranceLevel(_el); },
@@ -222,14 +219,13 @@ function _decode_CommonCriteriaMeasures (el: _Element) {
         "targetOid": (_el: _Element): void => { targetOid = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "targetUri": (_el: _Element): void => { targetUri = $._decode_implicit<URIReference>(() => _decode_URIReference)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CommonCriteriaMeasures,
         _extension_additions_list_spec_for_CommonCriteriaMeasures,
         _root_component_type_list_2_spec_for_CommonCriteriaMeasures,
         undefined,
     );
-    return new CommonCriteriaMeasures( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CommonCriteriaMeasures( 
         version,
         assurancelevel,
         evaluationStatus,

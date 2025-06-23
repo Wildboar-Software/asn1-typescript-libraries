@@ -128,11 +128,8 @@ export function _decode_FNUserReasonCodeField(el: _Element) {
         _cached_decoder_for_FNUserReasonCodeField = function (
             el: _Element
         ): FNUserReasonCodeField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let fn_user_basic_code!: FNUserBasicCodeField;
             let fn_user_diagnostic: OPTIONAL<FNUserDiagnosticField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'fn-user-basic-code': (_el: _Element): void => {
                     fn_user_basic_code = $._decode_implicit<FNUserBasicCodeField>(
@@ -145,7 +142,6 @@ export function _decode_FNUserReasonCodeField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_FNUserReasonCodeField(el: _Element) {
                 _root_component_type_list_2_spec_for_FNUserReasonCodeField,
                 undefined
             );
-            return new FNUserReasonCodeField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new FNUserReasonCodeField (
                 fn_user_basic_code,
                 fn_user_diagnostic
             );

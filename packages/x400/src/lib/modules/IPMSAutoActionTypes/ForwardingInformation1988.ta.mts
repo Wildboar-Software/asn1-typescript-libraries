@@ -150,7 +150,6 @@ export function _decode_ForwardingInformation1988(el: _Element) {
             let ia5_cover_note: OPTIONAL<IA5TextBodyPart>;
             let this_ipm_prefix: OPTIONAL<PrintableString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'auto-forwarding-comment': (_el: _Element): void => {
                     auto_forwarding_comment = $._decode_implicit<AutoForwardComment>(
@@ -168,7 +167,6 @@ export function _decode_ForwardingInformation1988(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

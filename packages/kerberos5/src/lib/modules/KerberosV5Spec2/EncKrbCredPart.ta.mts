@@ -201,15 +201,12 @@ export function _decode_EncKrbCredPart(el: _Element) {
     _cached_decoder_for_EncKrbCredPart = $._decode_implicit<EncKrbCredPart>(
       () =>
         function (el: _Element): EncKrbCredPart {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let ticket_info!: KrbCredInfo[];
           let nonce: OPTIONAL<UInt32>;
           let timestamp: OPTIONAL<KerberosTime>;
           let usec: OPTIONAL<Microseconds>;
           let s_address: OPTIONAL<HostAddress>;
           let r_address: OPTIONAL<HostAddress>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'ticket-info': (_el: _Element): void => {
               ticket_info = $._decode_explicit<KrbCredInfo[]>(() =>
@@ -240,7 +237,6 @@ export function _decode_EncKrbCredPart(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -249,7 +245,7 @@ export function _decode_EncKrbCredPart(el: _Element) {
             _root_component_type_list_2_spec_for_EncKrbCredPart,
             undefined
           );
-          return new EncKrbCredPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new EncKrbCredPart (
             ticket_info,
             nonce,
             timestamp,

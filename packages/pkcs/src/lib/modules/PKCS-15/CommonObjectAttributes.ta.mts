@@ -185,15 +185,12 @@ export function _decode_CommonObjectAttributes(el: _Element) {
         _cached_decoder_for_CommonObjectAttributes = function (
             el: _Element
         ): CommonObjectAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let label: OPTIONAL<Label>;
             let flags: OPTIONAL<CommonObjectFlags>;
             let authId: OPTIONAL<Identifier>;
             let userConsent: OPTIONAL<INTEGER>;
             let accessControlRules: OPTIONAL<AccessControlRule[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 label: (_el: _Element): void => {
                     label = _decode_Label(_el);
@@ -213,7 +210,6 @@ export function _decode_CommonObjectAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -225,7 +221,7 @@ export function _decode_CommonObjectAttributes(el: _Element) {
                 }
             );
             return new CommonObjectAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ label,
+                label,
                 flags,
                 authId,
                 userConsent,

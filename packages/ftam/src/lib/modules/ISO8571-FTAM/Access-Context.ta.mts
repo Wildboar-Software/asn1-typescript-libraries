@@ -134,11 +134,8 @@ export function _decode_Access_Context(el: _Element) {
     _cached_decoder_for_Access_Context = $._decode_implicit<Access_Context>(
       () =>
         function (el: _Element): Access_Context {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let access_context!: Access_Context_access_context;
           let level_number: OPTIONAL<INTEGER>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'access-context': (_el: _Element): void => {
               access_context = $._decode_implicit<Access_Context_access_context>(
@@ -151,7 +148,6 @@ export function _decode_Access_Context(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -160,7 +156,7 @@ export function _decode_Access_Context(el: _Element) {
             _root_component_type_list_2_spec_for_Access_Context,
             undefined
           );
-          return new Access_Context /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new Access_Context (
             access_context,
             level_number
           );

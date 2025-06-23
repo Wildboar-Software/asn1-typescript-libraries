@@ -155,12 +155,9 @@ export function _decode_SessionConnectionIdentifier(el: _Element) {
     _cached_decoder_for_SessionConnectionIdentifier = function (
       el: _Element
     ): SessionConnectionIdentifier {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let callingSSuserReference!: CallingSSuserReference;
       let commonReference!: CommonReference;
       let additionalReferenceInformation: OPTIONAL<AdditionalReferenceInformation>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         callingSSuserReference: (_el: _Element): void => {
           callingSSuserReference = _decode_CallingSSuserReference(_el);
@@ -174,7 +171,6 @@ export function _decode_SessionConnectionIdentifier(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -183,7 +179,7 @@ export function _decode_SessionConnectionIdentifier(el: _Element) {
         _root_component_type_list_2_spec_for_SessionConnectionIdentifier,
         undefined
       );
-      return new SessionConnectionIdentifier /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SessionConnectionIdentifier (
         callingSSuserReference,
         commonReference,
         additionalReferenceInformation

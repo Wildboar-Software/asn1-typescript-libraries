@@ -128,7 +128,6 @@ export function _decode_AutoActionError(el: _Element) {
             let error_code!: Code;
             let error_parameter: OPTIONAL<_Element>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'error-code': (_el: _Element): void => {
                     error_code = $._decode_explicit<Code>(() => _decode_Code)(
@@ -141,7 +140,6 @@ export function _decode_AutoActionError(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

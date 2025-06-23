@@ -136,7 +136,6 @@ export function _decode_MessagesWaiting(el: _Element) {
             let normal!: DeliveryQueue;
             let non_urgent!: DeliveryQueue;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 urgent: (_el: _Element): void => {
                     urgent = $._decode_implicit<DeliveryQueue>(
@@ -154,7 +153,6 @@ export function _decode_MessagesWaiting(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

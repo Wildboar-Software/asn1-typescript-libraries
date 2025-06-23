@@ -150,14 +150,11 @@ let _cached_decoder_for_IdmBind: $.ASN1Decoder<IdmBind> | null = null;
 export function _decode_IdmBind(el: _Element) {
     if (!_cached_decoder_for_IdmBind) {
         _cached_decoder_for_IdmBind = function (el: _Element): IdmBind {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let protocolID!: OBJECT_IDENTIFIER;
             let callingAETitle: OPTIONAL<GeneralName>;
             let calledAETitle: OPTIONAL<GeneralName>;
             let argument!: _Element;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 protocolID: (_el: _Element): void => {
                     protocolID = $._decodeObjectIdentifier(_el);
@@ -178,7 +175,6 @@ export function _decode_IdmBind(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -190,7 +186,7 @@ export function _decode_IdmBind(el: _Element) {
                 }
             );
             return new IdmBind(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ protocolID,
+                protocolID,
                 callingAETitle,
                 calledAETitle,
                 argument,

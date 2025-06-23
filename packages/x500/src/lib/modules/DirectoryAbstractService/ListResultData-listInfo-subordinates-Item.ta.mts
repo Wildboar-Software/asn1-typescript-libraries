@@ -159,15 +159,12 @@ export function _decode_ListResultData_listInfo_subordinates_Item(
         _cached_decoder_for_ListResultData_listInfo_subordinates_Item = function (
             el: _Element
         ): ListResultData_listInfo_subordinates_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rdn!: RelativeDistinguishedName;
             let aliasEntry: OPTIONAL<BOOLEAN> =
                 ListResultData_listInfo_subordinates_Item._default_value_for_aliasEntry;
             let fromEntry: OPTIONAL<BOOLEAN> =
                 ListResultData_listInfo_subordinates_Item._default_value_for_fromEntry;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rdn: (_el: _Element): void => {
                     rdn = _decode_RelativeDistinguishedName(_el);
@@ -183,7 +180,6 @@ export function _decode_ListResultData_listInfo_subordinates_Item(
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -195,7 +191,7 @@ export function _decode_ListResultData_listInfo_subordinates_Item(
                 }
             );
             return new ListResultData_listInfo_subordinates_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rdn,
+                rdn,
                 aliasEntry,
                 fromEntry,
                 _unrecognizedExtensionsList

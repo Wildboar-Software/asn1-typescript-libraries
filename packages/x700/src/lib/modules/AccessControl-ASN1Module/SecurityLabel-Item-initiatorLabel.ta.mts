@@ -116,11 +116,8 @@ export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element) {
         _cached_decoder_for_SecurityLabel_Item_initiatorLabel = function (
             el: _Element
         ): SecurityLabel_Item_initiatorLabel {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let clearance!: SecurityLabel_Item_initiatorLabel_clearance;
             let category: OPTIONAL<BIT_STRING>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 clearance: (_el: _Element): void => {
                     clearance = _decode_SecurityLabel_Item_initiatorLabel_clearance(
@@ -133,7 +130,6 @@ export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -142,7 +138,7 @@ export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element) {
                 _root_component_type_list_2_spec_for_SecurityLabel_Item_initiatorLabel,
                 undefined
             );
-            return new SecurityLabel_Item_initiatorLabel /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SecurityLabel_Item_initiatorLabel (
                 clearance,
                 category
             );

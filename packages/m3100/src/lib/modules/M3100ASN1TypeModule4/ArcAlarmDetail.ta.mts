@@ -173,13 +173,10 @@ export function _decode_ArcAlarmDetail(el: _Element) {
         _cached_decoder_for_ArcAlarmDetail = function (
             el: _Element
         ): ArcAlarmDetail {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let problem!: ProbableCause;
             let alarmStatus!: AlarmStatus;
             let perceivedSeverity: OPTIONAL<PerceivedSeverity>;
             let eventTime: OPTIONAL<EventTime>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problem: (_el: _Element): void => {
                     problem = _decode_ProbableCause(_el);
@@ -194,7 +191,6 @@ export function _decode_ArcAlarmDetail(el: _Element) {
                     eventTime = _decode_EventTime(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -203,7 +199,7 @@ export function _decode_ArcAlarmDetail(el: _Element) {
                 _root_component_type_list_2_spec_for_ArcAlarmDetail,
                 undefined
             );
-            return new ArcAlarmDetail /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ArcAlarmDetail (
                 problem,
                 alarmStatus,
                 perceivedSeverity,

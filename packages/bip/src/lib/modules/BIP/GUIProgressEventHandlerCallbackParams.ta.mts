@@ -340,7 +340,6 @@ export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
     _cached_decoder_for_GUIProgressEventHandlerCallbackParams = function (
       el: _Element
     ): GUIProgressEventHandlerCallbackParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiProgressEventHandlerAddress!: MemoryAddress;
       let guiProgressEventHandlerContext!: MemoryAddress;
       let bspUuid!: BioAPI_UUID;
@@ -353,8 +352,6 @@ export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
       let suboperationProgress!: UnsignedByte;
       let bitmaps: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiProgressEventHandlerAddress: (_el: _Element): void => {
           guiProgressEventHandlerAddress = _decode_MemoryAddress(_el);
@@ -393,7 +390,6 @@ export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -402,7 +398,7 @@ export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
         _root_component_type_list_2_spec_for_GUIProgressEventHandlerCallbackParams,
         undefined
       );
-      return new GUIProgressEventHandlerCallbackParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIProgressEventHandlerCallbackParams (
         guiProgressEventHandlerAddress,
         guiProgressEventHandlerContext,
         bspUuid,

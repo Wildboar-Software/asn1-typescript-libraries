@@ -191,14 +191,11 @@ export function _decode_MessageTokenSignedData(el: _Element) {
         _cached_decoder_for_MessageTokenSignedData = function (
             el: _Element
         ): MessageTokenSignedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let content_confidentiality_algorithm_identifier: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>;
             let content_integrity_check: OPTIONAL<ContentIntegrityCheck>;
             let message_security_label: OPTIONAL<MessageSecurityLabel>;
             let proof_of_delivery_request: OPTIONAL<ProofOfDeliveryRequest>;
             let message_sequence_number: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'content-confidentiality-algorithm-identifier': (
                     _el: _Element
@@ -228,7 +225,6 @@ export function _decode_MessageTokenSignedData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -237,7 +233,7 @@ export function _decode_MessageTokenSignedData(el: _Element) {
                 _root_component_type_list_2_spec_for_MessageTokenSignedData,
                 undefined
             );
-            return new MessageTokenSignedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new MessageTokenSignedData (
                 content_confidentiality_algorithm_identifier,
                 content_integrity_check,
                 message_security_label,

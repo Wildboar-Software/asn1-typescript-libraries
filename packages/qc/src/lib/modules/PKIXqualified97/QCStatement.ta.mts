@@ -114,11 +114,8 @@ let _cached_decoder_for_QCStatement: $.ASN1Decoder<QCStatement> | null = null;
 export function _decode_QCStatement(el: _Element) {
     if (!_cached_decoder_for_QCStatement) {
         _cached_decoder_for_QCStatement = function (el: _Element): QCStatement {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let statementId!: OBJECT_IDENTIFIER;
             let statementInfo: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 statementId: (_el: _Element): void => {
                     statementId = $._decodeObjectIdentifier(_el);
@@ -127,7 +124,6 @@ export function _decode_QCStatement(el: _Element) {
                     statementInfo = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -137,7 +133,7 @@ export function _decode_QCStatement(el: _Element) {
                 undefined
             );
             return new QCStatement(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ statementId,
+                statementId,
                 statementInfo
             );
         };

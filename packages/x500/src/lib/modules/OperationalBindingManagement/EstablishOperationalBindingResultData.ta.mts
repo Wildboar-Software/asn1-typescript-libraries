@@ -231,7 +231,6 @@ export function _decode_EstablishOperationalBindingResultData(el: _Element) {
         _cached_decoder_for_EstablishOperationalBindingResultData = function (
             el: _Element
         ): EstablishOperationalBindingResultData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bindingType!: OBJECT_IDENTIFIER;
             let bindingID: OPTIONAL<OperationalBindingID>;
             let accessPoint!: AccessPoint;
@@ -242,8 +241,6 @@ export function _decode_EstablishOperationalBindingResultData(el: _Element) {
             let aliasDereferenced: OPTIONAL<BOOLEAN> =
                 EstablishOperationalBindingResultData._default_value_for_aliasDereferenced;
             let notification: OPTIONAL<Attribute[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bindingType: (_el: _Element): void => {
                     bindingType = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -286,7 +283,6 @@ export function _decode_EstablishOperationalBindingResultData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -298,7 +294,7 @@ export function _decode_EstablishOperationalBindingResultData(el: _Element) {
                 }
             );
             return new EstablishOperationalBindingResultData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bindingType,
+                bindingType,
                 bindingID,
                 accessPoint,
                 initiator,

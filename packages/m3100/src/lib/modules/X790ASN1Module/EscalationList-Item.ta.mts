@@ -193,15 +193,12 @@ export function _decode_EscalationList_Item(el: _Element) {
         _cached_decoder_for_EscalationList_Item = function (
             el: _Element
         ): EscalationList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let state!: RequestState;
             let escTime!: EscalationTime;
             let requestPerson!: PersonReach;
             let level: OPTIONAL<OrgLevel>;
             let escPerson: OPTIONAL<PersonReach>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 state: (_el: _Element): void => {
                     state = _decode_RequestState(_el);
@@ -225,7 +222,6 @@ export function _decode_EscalationList_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -236,7 +232,7 @@ export function _decode_EscalationList_Item(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new EscalationList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EscalationList_Item (
                 state,
                 escTime,
                 requestPerson,

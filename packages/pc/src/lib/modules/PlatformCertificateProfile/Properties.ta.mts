@@ -128,25 +128,21 @@ let _cached_decoder_for_Properties: $.ASN1Decoder<Properties> | null = null;
 export
 function _decode_Properties (el: _Element) {
     if (!_cached_decoder_for_Properties) { _cached_decoder_for_Properties = function (el: _Element): Properties {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let propertyName!: UTF8String;
     let propertyValue!: UTF8String;
     let status: OPTIONAL<AttributeStatus>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "propertyName": (_el: _Element): void => { propertyName = $._decodeUTF8String(_el); },
         "propertyValue": (_el: _Element): void => { propertyValue = $._decodeUTF8String(_el); },
         "status": (_el: _Element): void => { status = $._decode_implicit<AttributeStatus>(() => _decode_AttributeStatus)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Properties,
         _extension_additions_list_spec_for_Properties,
         _root_component_type_list_2_spec_for_Properties,
         undefined,
     );
-    return new Properties( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new Properties( 
         propertyName,
         propertyValue,
         status

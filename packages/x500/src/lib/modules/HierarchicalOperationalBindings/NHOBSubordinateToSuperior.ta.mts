@@ -133,12 +133,9 @@ export function _decode_NHOBSubordinateToSuperior(el: _Element) {
         _cached_decoder_for_NHOBSubordinateToSuperior = function (
             el: _Element
         ): NHOBSubordinateToSuperior {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let accessPoints: OPTIONAL<MasterAndShadowAccessPoints>;
             let subentries: OPTIONAL<SubentryInfo[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 accessPoints: (_el: _Element): void => {
                     accessPoints = $._decode_explicit<MasterAndShadowAccessPoints>(
@@ -151,7 +148,6 @@ export function _decode_NHOBSubordinateToSuperior(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -163,7 +159,7 @@ export function _decode_NHOBSubordinateToSuperior(el: _Element) {
                 }
             );
             return new NHOBSubordinateToSuperior(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ accessPoints,
+                accessPoints,
                 subentries,
                 _unrecognizedExtensionsList
             );

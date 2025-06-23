@@ -135,11 +135,8 @@ let _cached_decoder_for_RevDetails: $.ASN1Decoder<RevDetails> | null = null;
 export function _decode_RevDetails(el: _Element) {
   if (!_cached_decoder_for_RevDetails) {
     _cached_decoder_for_RevDetails = function (el: _Element): RevDetails {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let certDetails!: CertTemplate;
       let crlEntryDetails: OPTIONAL<Extensions>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         certDetails: (_el: _Element): void => {
           certDetails = _decode_CertTemplate(_el);
@@ -148,7 +145,6 @@ export function _decode_RevDetails(el: _Element) {
           crlEntryDetails = _decode_Extensions(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -157,7 +153,7 @@ export function _decode_RevDetails(el: _Element) {
         _root_component_type_list_2_spec_for_RevDetails,
         undefined
       );
-      return new RevDetails /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new RevDetails (
         certDetails,
         crlEntryDetails
       );

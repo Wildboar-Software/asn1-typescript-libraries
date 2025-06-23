@@ -232,7 +232,6 @@ export function _decode_SchedulingConflictInfo(el: _Element) {
         _cached_decoder_for_SchedulingConflictInfo = function (
             el: _Element
         ): SchedulingConflictInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let testInvocationId!: TestInvocationId;
             let testSessionId: OPTIONAL<TestSessionId>;
             let startTime!: StartTime;
@@ -241,8 +240,6 @@ export function _decode_SchedulingConflictInfo(el: _Element) {
             let actualStopTime!: ActualStopTime;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 testInvocationId: (_el: _Element): void => {
                     testInvocationId = _decode_TestInvocationId(_el);
@@ -275,7 +272,6 @@ export function _decode_SchedulingConflictInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -284,7 +280,7 @@ export function _decode_SchedulingConflictInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_SchedulingConflictInfo,
                 undefined
             );
-            return new SchedulingConflictInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SchedulingConflictInfo (
                 testInvocationId,
                 testSessionId,
                 startTime,

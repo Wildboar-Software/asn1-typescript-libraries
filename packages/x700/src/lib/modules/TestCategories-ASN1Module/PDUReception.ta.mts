@@ -142,12 +142,9 @@ export function _decode_PDUReception(el: _Element) {
         _cached_decoder_for_PDUReception = function (
             el: _Element
         ): PDUReception {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pDUType!: PDUType;
             let parameter!: Parameter;
             let responseTimeout: OPTIONAL<ResponseTimeout>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pDUType: (_el: _Element): void => {
                     pDUType = _decode_PDUType(_el);
@@ -159,7 +156,6 @@ export function _decode_PDUReception(el: _Element) {
                     responseTimeout = _decode_ResponseTimeout(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_PDUReception(el: _Element) {
                 _root_component_type_list_2_spec_for_PDUReception,
                 undefined
             );
-            return new PDUReception /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PDUReception (
                 pDUType,
                 parameter,
                 responseTimeout

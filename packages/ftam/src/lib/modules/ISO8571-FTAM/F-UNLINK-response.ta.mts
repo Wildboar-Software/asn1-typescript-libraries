@@ -181,14 +181,11 @@ export function _decode_F_UNLINK_response(el: _Element) {
     _cached_decoder_for_F_UNLINK_response = function (
       el: _Element
     ): F_UNLINK_response {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let action_result: OPTIONAL<Action_Result> =
         F_UNLINK_response._default_value_for_action_result;
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let charging: OPTIONAL<Charging>;
       let diagnostic: OPTIONAL<Diagnostic>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'action-result': (_el: _Element): void => {
           action_result = _decode_Action_Result(_el);
@@ -203,7 +200,6 @@ export function _decode_F_UNLINK_response(el: _Element) {
           diagnostic = _decode_Diagnostic(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -212,7 +208,7 @@ export function _decode_F_UNLINK_response(el: _Element) {
         _root_component_type_list_2_spec_for_F_UNLINK_response,
         undefined
       );
-      return new F_UNLINK_response /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_UNLINK_response (
         action_result,
         shared_ASE_information,
         charging,

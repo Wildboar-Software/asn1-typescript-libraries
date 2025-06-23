@@ -119,11 +119,8 @@ let _cached_decoder_for_RevokedInfo: $.ASN1Decoder<RevokedInfo> | null = null;
 export function _decode_RevokedInfo(el: _Element) {
     if (!_cached_decoder_for_RevokedInfo) {
         _cached_decoder_for_RevokedInfo = function (el: _Element): RevokedInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let revocationTime!: GeneralizedTime;
             let revocationReason: OPTIONAL<CRLReason>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 revocationTime: (_el: _Element): void => {
                     revocationTime = $._decodeGeneralizedTime(_el);
@@ -134,7 +131,6 @@ export function _decode_RevokedInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_RevokedInfo(el: _Element) {
                 undefined
             );
             return new RevokedInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ revocationTime,
+                revocationTime,
                 revocationReason
             );
         };

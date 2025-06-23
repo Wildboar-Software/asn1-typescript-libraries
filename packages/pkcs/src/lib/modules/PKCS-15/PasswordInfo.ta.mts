@@ -132,12 +132,9 @@ export function _decode_PasswordInfo(el: _Element) {
         _cached_decoder_for_PasswordInfo = function (
             el: _Element
         ): PasswordInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hint: OPTIONAL<Label>;
             let algId!: AlgorithmIdentifier;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hint: (_el: _Element): void => {
                     hint = _decode_Label(_el);
@@ -146,7 +143,6 @@ export function _decode_PasswordInfo(el: _Element) {
                     algId = _decode_AlgorithmIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -158,7 +154,7 @@ export function _decode_PasswordInfo(el: _Element) {
                 }
             );
             return new PasswordInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ hint,
+                hint,
                 algId,
                 _unrecognizedExtensionsList
             );

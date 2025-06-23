@@ -198,7 +198,6 @@ export function _decode_ModifyRequest(el: _Element) {
         _cached_decoder_for_ModifyRequest = function (
             el: _Element
         ): ModifyRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let serviceId!: OBJECT_IDENTIFIER;
             let invokId!: INTEGER;
@@ -206,8 +205,6 @@ export function _decode_ModifyRequest(el: _Element) {
             let changes!: ObjectModification[];
             let select!: InformationSelection;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -236,7 +233,6 @@ export function _decode_ModifyRequest(el: _Element) {
                     select = _decode_InformationSelection(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -247,7 +243,7 @@ export function _decode_ModifyRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ModifyRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ModifyRequest (
                 attrCerts,
                 serviceId,
                 invokId,

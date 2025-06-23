@@ -125,11 +125,8 @@ let _cached_decoder_for_BackupReply: $.ASN1Decoder<BackupReply> | null = null;
 export function _decode_BackupReply(el: _Element) {
     if (!_cached_decoder_for_BackupReply) {
         _cached_decoder_for_BackupReply = function (el: _Element): BackupReply {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let reply!: BackupReply_reply;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 reply: (_el: _Element): void => {
                     reply = $._decode_explicit<BackupReply_reply>(
@@ -145,7 +142,6 @@ export function _decode_BackupReply(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_BackupReply(el: _Element) {
                 _root_component_type_list_2_spec_for_BackupReply,
                 undefined
             );
-            return new BackupReply /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BackupReply (
                 reply,
                 additionalInfo
             );

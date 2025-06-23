@@ -121,11 +121,8 @@ export function _decode_OtherKeyAttribute(el: _Element) {
         _cached_decoder_for_OtherKeyAttribute = function (
             el: _Element
         ): OtherKeyAttribute {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let keyAttributeIdentifier!: OBJECT_IDENTIFIER;
             let keyAttribute: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 keyAttributeIdentifier: (_el: _Element): void => {
                     keyAttributeIdentifier = $._decodeObjectIdentifier(_el);
@@ -134,7 +131,6 @@ export function _decode_OtherKeyAttribute(el: _Element) {
                     keyAttribute = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_OtherKeyAttribute(el: _Element) {
                 undefined
             );
             return new OtherKeyAttribute(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ keyAttributeIdentifier,
+                keyAttributeIdentifier,
                 keyAttribute
             );
         };

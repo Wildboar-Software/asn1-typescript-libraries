@@ -126,12 +126,9 @@ export function _decode_NameConstraintsSyntax(el: _Element) {
         _cached_decoder_for_NameConstraintsSyntax = function (
             el: _Element
         ): NameConstraintsSyntax {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let permittedSubtrees: OPTIONAL<GeneralSubtrees>;
             let excludedSubtrees: OPTIONAL<GeneralSubtrees>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 permittedSubtrees: (_el: _Element): void => {
                     permittedSubtrees = $._decode_implicit<GeneralSubtrees>(
@@ -144,7 +141,6 @@ export function _decode_NameConstraintsSyntax(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -156,7 +152,7 @@ export function _decode_NameConstraintsSyntax(el: _Element) {
                 }
             );
             return new NameConstraintsSyntax(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ permittedSubtrees,
+                permittedSubtrees,
                 excludedSubtrees,
                 _unrecognizedExtensionsList
             );

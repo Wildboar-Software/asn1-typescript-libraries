@@ -173,15 +173,12 @@ export function _decode_RegistrantContactDetails(el: _Element) {
     _cached_decoder_for_RegistrantContactDetails = function (
       el: _Element
     ): RegistrantContactDetails {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let familyNameOrOrganization: OPTIONAL<UTF8String>;
       let givenName: OPTIONAL<UTF8String>;
       let e_mailAddress: OPTIONAL<UTF8String>;
       let phone: OPTIONAL<IA5String>;
       let fax: OPTIONAL<IA5String>;
       let postalAddress: OPTIONAL<UTF8String[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         familyNameOrOrganization: (_el: _Element): void => {
           familyNameOrOrganization = $._decodeUTF8String(_el);
@@ -204,7 +201,6 @@ export function _decode_RegistrantContactDetails(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -213,7 +209,7 @@ export function _decode_RegistrantContactDetails(el: _Element) {
         _root_component_type_list_2_spec_for_RegistrantContactDetails,
         undefined
       );
-      return new RegistrantContactDetails /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new RegistrantContactDetails (
         familyNameOrOrganization,
         givenName,
         e_mailAddress,

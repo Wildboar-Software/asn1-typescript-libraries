@@ -129,11 +129,8 @@ export function _decode_TemplateLabel(el: _Element) {
         _cached_decoder_for_TemplateLabel = function (
             el: _Element
         ): TemplateLabel {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let localName!: TemplateName;
             let documentId: OPTIONAL<TemplateLabel_documentId>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 localName: (_el: _Element): void => {
                     localName = _decode_TemplateName(_el);
@@ -142,7 +139,6 @@ export function _decode_TemplateLabel(el: _Element) {
                     documentId = _decode_TemplateLabel_documentId(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_TemplateLabel(el: _Element) {
                 _root_component_type_list_2_spec_for_TemplateLabel,
                 undefined
             );
-            return new TemplateLabel /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TemplateLabel (
                 localName,
                 documentId
             );

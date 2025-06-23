@@ -129,11 +129,8 @@ export function _decode_ChangeOfAddressAdvice(el: _Element) {
         _cached_decoder_for_ChangeOfAddressAdvice = function (
             el: _Element
         ): ChangeOfAddressAdvice {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let new_address!: ORDescriptor;
             let effective_from: OPTIONAL<Time>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'new-address': (_el: _Element): void => {
                     new_address = $._decode_implicit<ORDescriptor>(
@@ -146,7 +143,6 @@ export function _decode_ChangeOfAddressAdvice(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_ChangeOfAddressAdvice(el: _Element) {
                 _root_component_type_list_2_spec_for_ChangeOfAddressAdvice,
                 undefined
             );
-            return new ChangeOfAddressAdvice /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ChangeOfAddressAdvice (
                 new_address,
                 effective_from
             );

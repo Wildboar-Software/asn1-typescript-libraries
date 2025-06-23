@@ -151,12 +151,9 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
         _cached_decoder_for_PerDomainBilateralInformation = function (
             el: _Element
         ): PerDomainBilateralInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let country_name!: CountryName;
             let domain!: BilateralDomain_domain
             let bilateral_information!: _Element;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'country-name': (_el: _Element): void => {
                     country_name = _decode_CountryName(_el);
@@ -168,7 +165,6 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
                     bilateral_information = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -177,7 +173,7 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_PerDomainBilateralInformation,
                 undefined
             );
-            return new PerDomainBilateralInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PerDomainBilateralInformation (
                 country_name,
                 domain,
                 bilateral_information

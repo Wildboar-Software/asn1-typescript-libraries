@@ -138,12 +138,9 @@ let _cached_decoder_for_Begin: $.ASN1Decoder<Begin> | null = null;
 export function _decode_Begin(el: _Element) {
   if (!_cached_decoder_for_Begin) {
     _cached_decoder_for_Begin = function (el: _Element): Begin {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let otid!: OrigTransactionID;
       let dialoguePortion: OPTIONAL<DialoguePortion>;
       let components: OPTIONAL<ComponentPortion>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         otid: (_el: _Element): void => {
           otid = _decode_OrigTransactionID(_el);
@@ -155,7 +152,6 @@ export function _decode_Begin(el: _Element) {
           components = _decode_ComponentPortion(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -164,7 +160,7 @@ export function _decode_Begin(el: _Element) {
         _root_component_type_list_2_spec_for_Begin,
         undefined
       );
-      return new Begin /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Begin (
         otid,
         dialoguePortion,
         components

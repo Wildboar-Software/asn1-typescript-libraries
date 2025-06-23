@@ -239,7 +239,6 @@ export function _decode_RequestContent_content(el: _Element) {
         _cached_decoder_for_RequestContent_content = function (
             el: _Element
         ): RequestContent_content {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokId: OPTIONAL<INTEGER>;
             let sessionType!: SessionType;
             let sessionId!: INTEGER;
@@ -251,8 +250,6 @@ export function _decode_RequestContent_content(el: _Element) {
             let exchangeMode: OPTIONAL<ExchangeMode> =
                 RequestContent_content._default_value_for_exchangeMode;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokId: (_el: _Element): void => {
                     invokId = $._decodeInteger(_el);
@@ -289,7 +286,6 @@ export function _decode_RequestContent_content(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -300,7 +296,7 @@ export function _decode_RequestContent_content(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new RequestContent_content /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RequestContent_content (
                 invokId,
                 sessionType,
                 sessionId,

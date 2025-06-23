@@ -179,7 +179,6 @@ export function _decode_MSSubmissionOptions(el: _Element) {
             let add_message_group_names: OPTIONAL<MessageGroupName[]>;
             let ms_submission_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'object-entry-class': (_el: _Element): void => {
                     object_entry_class = $._decode_explicit<EntryClass>(
@@ -206,7 +205,6 @@ export function _decode_MSSubmissionOptions(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

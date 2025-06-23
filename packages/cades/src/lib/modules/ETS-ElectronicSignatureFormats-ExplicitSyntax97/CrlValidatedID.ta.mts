@@ -114,23 +114,19 @@ let _cached_decoder_for_CrlValidatedID: $.ASN1Decoder<CrlValidatedID> | null = n
 export
 function _decode_CrlValidatedID (el: _Element) {
     if (!_cached_decoder_for_CrlValidatedID) { _cached_decoder_for_CrlValidatedID = function (el: _Element): CrlValidatedID {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let crlHash!: OtherHash;
     let crlIdentifier: OPTIONAL<CrlIdentifier>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "crlHash": (_el: _Element): void => { crlHash = _decode_OtherHash(_el); },
         "crlIdentifier": (_el: _Element): void => { crlIdentifier = _decode_CrlIdentifier(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_CrlValidatedID,
         _extension_additions_list_spec_for_CrlValidatedID,
         _root_component_type_list_2_spec_for_CrlValidatedID,
         undefined,
     );
-    return new CrlValidatedID( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new CrlValidatedID( 
         crlHash,
         crlIdentifier
     );

@@ -184,15 +184,12 @@ let _cached_decoder_for_CMIPUserInfo: $.ASN1Decoder<CMIPUserInfo> | null = null;
 export function _decode_CMIPUserInfo(el: _Element) {
   if (!_cached_decoder_for_CMIPUserInfo) {
     _cached_decoder_for_CMIPUserInfo = function (el: _Element): CMIPUserInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let protocolVersion: OPTIONAL<ProtocolVersion> =
         CMIPUserInfo._default_value_for_protocolVersion;
       let functionalUnits: OPTIONAL<FunctionalUnits> =
         CMIPUserInfo._default_value_for_functionalUnits;
       let accessControl: OPTIONAL<EXTERNAL>;
       let userInfo: OPTIONAL<EXTERNAL>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         protocolVersion: (_el: _Element): void => {
           protocolVersion = $._decode_implicit<ProtocolVersion>(
@@ -213,7 +210,6 @@ export function _decode_CMIPUserInfo(el: _Element) {
           userInfo = $._decode_explicit<EXTERNAL>(() => $._decodeExternal)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -222,7 +218,7 @@ export function _decode_CMIPUserInfo(el: _Element) {
         _root_component_type_list_2_spec_for_CMIPUserInfo,
         undefined
       );
-      return new CMIPUserInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CMIPUserInfo (
         protocolVersion,
         functionalUnits,
         accessControl,

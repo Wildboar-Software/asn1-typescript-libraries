@@ -184,14 +184,11 @@ export function _decode_ProtocolIntegrityTestInfo(el: _Element) {
         _cached_decoder_for_ProtocolIntegrityTestInfo = function (
             el: _Element
         ): ProtocolIntegrityTestInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pDUSequence!: PDUSequence;
             let pDUReception: OPTIONAL<PDUReception>;
             let waitingInterval: OPTIONAL<WaitingInterval>;
             let startTime: OPTIONAL<StartTime>;
             let stopTime: OPTIONAL<StopTime>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pDUSequence: (_el: _Element): void => {
                     pDUSequence = $._decode_implicit<PDUSequence>(
@@ -219,7 +216,6 @@ export function _decode_ProtocolIntegrityTestInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -228,7 +224,7 @@ export function _decode_ProtocolIntegrityTestInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ProtocolIntegrityTestInfo,
                 undefined
             );
-            return new ProtocolIntegrityTestInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ProtocolIntegrityTestInfo (
                 pDUSequence,
                 pDUReception,
                 waitingInterval,

@@ -166,13 +166,10 @@ export function _decode_KeyRecRepContent(el: _Element) {
     _cached_decoder_for_KeyRecRepContent = function (
       el: _Element
     ): KeyRecRepContent {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let status!: PKIStatusInfo;
       let newSigCert: OPTIONAL<CMPCertificate>;
       let caCerts: OPTIONAL<CMPCertificate[]>;
       let keyPairHist: OPTIONAL<CertifiedKeyPair[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         status: (_el: _Element): void => {
           status = _decode_PKIStatusInfo(_el);
@@ -195,7 +192,6 @@ export function _decode_KeyRecRepContent(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -204,7 +200,7 @@ export function _decode_KeyRecRepContent(el: _Element) {
         _root_component_type_list_2_spec_for_KeyRecRepContent,
         undefined
       );
-      return new KeyRecRepContent /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KeyRecRepContent (
         status,
         newSigCert,
         caCerts,

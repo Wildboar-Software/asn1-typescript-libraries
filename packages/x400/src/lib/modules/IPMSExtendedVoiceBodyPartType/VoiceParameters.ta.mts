@@ -135,12 +135,9 @@ export function _decode_VoiceParameters(el: _Element) {
         _cached_decoder_for_VoiceParameters = function (
             el: _Element
         ): VoiceParameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let voice_message_duration: OPTIONAL<INTEGER>;
             let voice_encoding_type!: OBJECT_IDENTIFIER;
             let supplementary_information: OPTIONAL<IA5String>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'voice-message-duration': (_el: _Element): void => {
                     voice_message_duration = $._decode_implicit<INTEGER>(
@@ -158,7 +155,6 @@ export function _decode_VoiceParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -167,7 +163,7 @@ export function _decode_VoiceParameters(el: _Element) {
                 _root_component_type_list_2_spec_for_VoiceParameters,
                 undefined
             );
-            return new VoiceParameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new VoiceParameters (
                 voice_message_duration,
                 voice_encoding_type,
                 supplementary_information

@@ -120,11 +120,8 @@ export function _decode_AssociatedObjects_Item_associatedObjectInfo(
         _cached_decoder_for_AssociatedObjects_Item_associatedObjectInfo = function (
             el: _Element
         ): AssociatedObjects_Item_associatedObjectInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let associatedObjectInfoId!: OBJECT_IDENTIFIER;
             let associatedObjectInform: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 associatedObjectInfoId: (_el: _Element): void => {
                     associatedObjectInfoId = $._decodeObjectIdentifier(_el);
@@ -133,7 +130,6 @@ export function _decode_AssociatedObjects_Item_associatedObjectInfo(
                     associatedObjectInform = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -142,7 +138,7 @@ export function _decode_AssociatedObjects_Item_associatedObjectInfo(
                 _root_component_type_list_2_spec_for_AssociatedObjects_Item_associatedObjectInfo,
                 undefined
             );
-            return new AssociatedObjects_Item_associatedObjectInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AssociatedObjects_Item_associatedObjectInfo (
                 associatedObjectInfoId,
                 associatedObjectInform
             );

@@ -131,7 +131,6 @@ export function _decode_AutoAlertErrorIndication(el: _Element) {
             let failing_alert_destination: OPTIONAL<AlertDestination>;
             let supplementary_information: OPTIONAL<GeneralString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'failing-alert-destination': (_el: _Element): void => {
                     failing_alert_destination = $._decode_explicit<AlertDestination>(
@@ -144,7 +143,6 @@ export function _decode_AutoAlertErrorIndication(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

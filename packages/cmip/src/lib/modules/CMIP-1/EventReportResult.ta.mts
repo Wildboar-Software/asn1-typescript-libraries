@@ -174,14 +174,11 @@ export function _decode_EventReportResult(el: _Element) {
     _cached_decoder_for_EventReportResult = function (
       el: _Element
     ): EventReportResult {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let currentTime: OPTIONAL<GeneralizedTime>;
       let eventReply: OPTIONAL<EventReply>;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -198,7 +195,6 @@ export function _decode_EventReportResult(el: _Element) {
           eventReply = _decode_EventReply(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -209,7 +205,7 @@ export function _decode_EventReportResult(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new EventReportResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new EventReportResult (
         managedObjectClass,
         managedObjectInstance,
         currentTime,

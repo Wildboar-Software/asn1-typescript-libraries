@@ -187,7 +187,6 @@ export function _decode_SummarizeArgument(el: _Element) {
             let summary_requests: OPTIONAL<AttributeType[]>;
             let summarize_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entry-class': (_el: _Element): void => {
                     entry_class = $._decode_explicit<EntryClass>(
@@ -212,7 +211,6 @@ export function _decode_SummarizeArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

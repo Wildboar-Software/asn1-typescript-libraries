@@ -230,7 +230,6 @@ export function _decode_RequestAttribute(el: _Element) {
         _cached_decoder_for_RequestAttribute = function (
             el: _Element
         ): RequestAttribute {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attributeType!: OBJECT_IDENTIFIER;
             let includeSubtypes: OPTIONAL<BOOLEAN> =
                 RequestAttribute._default_value_for_includeSubtypes;
@@ -241,8 +240,6 @@ export function _decode_RequestAttribute(el: _Element) {
                 RequestAttribute._default_value_for_contextCombination;
             let matchingUse: OPTIONAL<MatchingUse[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attributeType: (_el: _Element): void => {
                     attributeType = $._decodeObjectIdentifier(_el);
@@ -286,7 +283,6 @@ export function _decode_RequestAttribute(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -298,7 +294,7 @@ export function _decode_RequestAttribute(el: _Element) {
                 }
             );
             return new RequestAttribute(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ attributeType,
+                attributeType,
                 includeSubtypes,
                 selectedValues,
                 defaultValues,

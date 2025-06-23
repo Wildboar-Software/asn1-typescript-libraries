@@ -125,11 +125,8 @@ export function _decode_TestConditions(el: _Element) {
         _cached_decoder_for_TestConditions = function (
             el: _Element
         ): TestConditions {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let first!: TestConditions_first;
             let second: OPTIONAL<TestConditions_second>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 first: (_el: _Element): void => {
                     first = _decode_TestConditions_first(_el);
@@ -138,7 +135,6 @@ export function _decode_TestConditions(el: _Element) {
                     second = _decode_TestConditions_second(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_TestConditions(el: _Element) {
                 _root_component_type_list_2_spec_for_TestConditions,
                 undefined
             );
-            return new TestConditions /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestConditions (
                 first,
                 second
             );

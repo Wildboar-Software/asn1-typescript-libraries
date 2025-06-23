@@ -195,15 +195,12 @@ let _cached_decoder_for_SignedData: $.ASN1Decoder<SignedData> | null = null;
 export function _decode_SignedData(el: _Element) {
     if (!_cached_decoder_for_SignedData) {
         _cached_decoder_for_SignedData = function (el: _Element): SignedData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version!: CMSVersion;
             let digestAlgorithms!: AlgorithmIdentifier[];
             let encapContentInfo!: EncapsulatedContentInfo;
             let certificates: OPTIONAL<Certificate[]>;
             let signerInfos!: SignerInfos;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_CMSVersion(_el);
@@ -225,7 +222,6 @@ export function _decode_SignedData(el: _Element) {
                     signerInfos = _decode_SignerInfos(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -236,7 +232,7 @@ export function _decode_SignedData(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new SignedData /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SignedData (
                 version,
                 digestAlgorithms,
                 encapContentInfo,

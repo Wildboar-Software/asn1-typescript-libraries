@@ -143,7 +143,6 @@ export function _decode_AttributeSelection(el: _Element) {
             let from_: OPTIONAL<INTEGER>;
             let count: OPTIONAL<INTEGER>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 type: (_el: _Element): void => {
                     type_ = _decode_AttributeType(_el);
@@ -159,7 +158,6 @@ export function _decode_AttributeSelection(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

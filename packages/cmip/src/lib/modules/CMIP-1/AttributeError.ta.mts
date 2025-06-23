@@ -178,13 +178,10 @@ export function _decode_AttributeError(el: _Element) {
     _cached_decoder_for_AttributeError = function (
       el: _Element
     ): AttributeError {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let errorStatus!: AttributeError_errorStatus;
       let modifyOperator: OPTIONAL<ModifyOperator>;
       let attributeId!: AttributeId;
       let attributeValue: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         errorStatus: (_el: _Element): void => {
           errorStatus = _decode_AttributeError_errorStatus(_el);
@@ -201,7 +198,6 @@ export function _decode_AttributeError(el: _Element) {
           attributeValue = $._decodeAny(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -210,7 +206,7 @@ export function _decode_AttributeError(el: _Element) {
         _root_component_type_list_2_spec_for_AttributeError,
         undefined
       );
-      return new AttributeError /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new AttributeError (
         errorStatus,
         modifyOperator,
         attributeId,

@@ -142,12 +142,9 @@ export function _decode_RootedNameTree(el: _Element) {
         _cached_decoder_for_RootedNameTree = function (
             el: _Element
         ): RootedNameTree {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rootObject!: ObjectInstance;
             let classOfRoot: OPTIONAL<GdmoObjectClass>;
             let subordinates: OPTIONAL<NameTree[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rootObject: (_el: _Element): void => {
                     rootObject = _decode_ObjectInstance(_el);
@@ -161,7 +158,6 @@ export function _decode_RootedNameTree(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_RootedNameTree(el: _Element) {
                 _root_component_type_list_2_spec_for_RootedNameTree,
                 undefined
             );
-            return new RootedNameTree /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RootedNameTree (
                 rootObject,
                 classOfRoot,
                 subordinates

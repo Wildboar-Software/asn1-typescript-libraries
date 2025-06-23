@@ -170,13 +170,10 @@ export function _decode_BPUIOStaticInformation(el: _Element) {
         _cached_decoder_for_BPUIOStaticInformation = function (
             el: _Element
         ): BPUIOStaticInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let biometricType: OPTIONAL<BiometricType>;
             let biometricSubtype: OPTIONAL<BiometricSubtype>;
             let dataType!: DataType;
             let subprocessIOIndex!: IOIndex;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 biometricType: (_el: _Element): void => {
                     biometricType = _decode_BiometricType(_el);
@@ -191,7 +188,6 @@ export function _decode_BPUIOStaticInformation(el: _Element) {
                     subprocessIOIndex = _decode_IOIndex(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -200,7 +196,7 @@ export function _decode_BPUIOStaticInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_BPUIOStaticInformation,
                 undefined
             );
-            return new BPUIOStaticInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BPUIOStaticInformation (
                 biometricType,
                 biometricSubtype,
                 dataType,

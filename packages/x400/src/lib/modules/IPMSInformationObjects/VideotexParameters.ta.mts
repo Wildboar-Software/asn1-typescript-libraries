@@ -110,7 +110,6 @@ export function _decode_VideotexParameters(el: _Element) {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
             let syntax: OPTIONAL<VideotexSyntax>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 syntax: (_el: _Element): void => {
                     syntax = $._decode_implicit<VideotexSyntax>(
@@ -118,7 +117,6 @@ export function _decode_VideotexParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

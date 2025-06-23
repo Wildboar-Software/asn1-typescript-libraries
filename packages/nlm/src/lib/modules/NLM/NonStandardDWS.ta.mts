@@ -144,12 +144,9 @@ export function _decode_NonStandardDWS(el: _Element) {
         _cached_decoder_for_NonStandardDWS = function (
             el: _Element
         ): NonStandardDWS {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subscription!: BOOLEAN;
             let supportedWindowSizes: OPTIONAL<INTEGER[]>;
             let selectedWindowSizes: OPTIONAL<BidirectionalValues>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subscription: (_el: _Element): void => {
                     subscription = $._decode_implicit<BOOLEAN>(
@@ -167,7 +164,6 @@ export function _decode_NonStandardDWS(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -176,7 +172,7 @@ export function _decode_NonStandardDWS(el: _Element) {
                 _root_component_type_list_2_spec_for_NonStandardDWS,
                 undefined
             );
-            return new NonStandardDWS /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NonStandardDWS (
                 subscription,
                 supportedWindowSizes,
                 selectedWindowSizes

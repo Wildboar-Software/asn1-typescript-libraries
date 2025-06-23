@@ -147,13 +147,10 @@ export function _decode_ReplaceAvlReq(el: _Element) {
         _cached_decoder_for_ReplaceAvlReq = function (
             el: _Element
         ): ReplaceAvlReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let invokeID!: InvokeID;
             let old: OPTIONAL<AvlSerialNumber>;
             let new_!: CertAVL;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 invokeID: (_el: _Element): void => {
                     invokeID = _decode_InvokeID(_el);
@@ -165,7 +162,6 @@ export function _decode_ReplaceAvlReq(el: _Element) {
                     new_ = _decode_CertAVL(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -177,7 +173,7 @@ export function _decode_ReplaceAvlReq(el: _Element) {
                 }
             );
             return new ReplaceAvlReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ invokeID,
+                invokeID,
                 old,
                 new_,
                 _unrecognizedExtensionsList

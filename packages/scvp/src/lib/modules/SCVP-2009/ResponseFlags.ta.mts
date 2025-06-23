@@ -182,7 +182,6 @@ let _cached_decoder_for_ResponseFlags: $.ASN1Decoder<ResponseFlags> | null = nul
 export function _decode_ResponseFlags(el: _Element) {
   if (!_cached_decoder_for_ResponseFlags) {
     _cached_decoder_for_ResponseFlags = function (el: _Element): ResponseFlags {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let fullRequestInResponse: OPTIONAL<BOOLEAN> =
         ResponseFlags._default_value_for_fullRequestInResponse;
       let responseValidationPolByRef: OPTIONAL<BOOLEAN> =
@@ -191,8 +190,6 @@ export function _decode_ResponseFlags(el: _Element) {
         ResponseFlags._default_value_for_protectResponse;
       let cachedResponse: OPTIONAL<BOOLEAN> =
         ResponseFlags._default_value_for_cachedResponse;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         fullRequestInResponse: (_el: _Element): void => {
           fullRequestInResponse = $._decode_implicit<BOOLEAN>(
@@ -215,7 +212,6 @@ export function _decode_ResponseFlags(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -224,7 +220,7 @@ export function _decode_ResponseFlags(el: _Element) {
         _root_component_type_list_2_spec_for_ResponseFlags,
         undefined
       );
-      return new ResponseFlags /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ResponseFlags (
         fullRequestInResponse,
         responseValidationPolByRef,
         protectResponse,

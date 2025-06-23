@@ -156,7 +156,6 @@ export function _decode_NonBasicParameters(el: _Element) {
             let teletex: OPTIONAL<TeletexNonBasicParameters> =
                 NonBasicParameters._default_value_for_teletex;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'g3-facsimile': (_el: _Element): void => {
                     g3_facsimile = $._decode_implicit<G3FacsimileNonBasicParameters>(
@@ -169,7 +168,6 @@ export function _decode_NonBasicParameters(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

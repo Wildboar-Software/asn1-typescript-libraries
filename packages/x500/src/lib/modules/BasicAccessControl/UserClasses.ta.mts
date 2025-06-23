@@ -169,15 +169,12 @@ let _cached_decoder_for_UserClasses: $.ASN1Decoder<UserClasses> | null = null;
 export function _decode_UserClasses(el: _Element) {
     if (!_cached_decoder_for_UserClasses) {
         _cached_decoder_for_UserClasses = function (el: _Element): UserClasses {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let allUsers: OPTIONAL<NULL>;
             let thisEntry: OPTIONAL<NULL>;
             let name: OPTIONAL<NameAndOptionalUID[]>;
             let userGroup: OPTIONAL<NameAndOptionalUID[]>;
             let subtree: OPTIONAL<SubtreeSpecification[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 allUsers: (_el: _Element): void => {
                     allUsers = $._decode_explicit<NULL>(() => $._decodeNull)(
@@ -211,7 +208,6 @@ export function _decode_UserClasses(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -223,7 +219,7 @@ export function _decode_UserClasses(el: _Element) {
                 }
             );
             return new UserClasses(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ allUsers,
+                allUsers,
                 thisEntry,
                 name,
                 userGroup,

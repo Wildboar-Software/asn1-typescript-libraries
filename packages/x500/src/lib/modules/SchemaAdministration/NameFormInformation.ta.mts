@@ -133,13 +133,10 @@ export function _decode_NameFormInformation(el: _Element) {
         _cached_decoder_for_NameFormInformation = function (
             el: _Element
         ): NameFormInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subordinate!: OBJECT_IDENTIFIER;
             let namingMandatories!: OBJECT_IDENTIFIER[];
             let namingOptionals: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subordinate: (_el: _Element): void => {
                     subordinate = $._decodeObjectIdentifier(_el);
@@ -155,7 +152,6 @@ export function _decode_NameFormInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -167,7 +163,7 @@ export function _decode_NameFormInformation(el: _Element) {
                 }
             );
             return new NameFormInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ subordinate,
+                subordinate,
                 namingMandatories,
                 namingOptionals,
                 _unrecognizedExtensionsList

@@ -118,11 +118,8 @@ export function _decode_RC2_CBC_Parameter(el: _Element) {
         _cached_decoder_for_RC2_CBC_Parameter = function (
             el: _Element
         ): RC2_CBC_Parameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let rc2ParameterVersion: OPTIONAL<INTEGER>;
             let iv!: OCTET_STRING;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 rc2ParameterVersion: (_el: _Element): void => {
                     rc2ParameterVersion = $._decodeInteger(_el);
@@ -131,7 +128,6 @@ export function _decode_RC2_CBC_Parameter(el: _Element) {
                     iv = $._decodeOctetString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -141,7 +137,7 @@ export function _decode_RC2_CBC_Parameter(el: _Element) {
                 undefined
             );
             return new RC2_CBC_Parameter(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ rc2ParameterVersion,
+                rc2ParameterVersion,
                 iv
             );
         };

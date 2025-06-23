@@ -155,13 +155,10 @@ export function _decode_AARQ_apdu(el: _Element) {
         _cached_decoder_for_AARQ_apdu = $._decode_implicit<AARQ_apdu>(
             () =>
                 function (el: _Element): AARQ_apdu {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let protocol_version: OPTIONAL<AARQ_apdu_protocol_version> =
                         AARQ_apdu._default_value_for_protocol_version;
                     let application_context_name!: OBJECT_IDENTIFIER;
                     let user_information: OPTIONAL<EXTERNAL[]>;
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         'protocol-version': (_el: _Element): void => {
                             protocol_version = $._decode_implicit<AARQ_apdu_protocol_version>(
@@ -182,7 +179,6 @@ export function _decode_AARQ_apdu(el: _Element) {
                             )(_el);
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -191,7 +187,7 @@ export function _decode_AARQ_apdu(el: _Element) {
                         _root_component_type_list_2_spec_for_AARQ_apdu,
                         undefined
                     );
-                    return new AARQ_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+                    return new AARQ_apdu (
                         protocol_version,
                         application_context_name,
                         user_information

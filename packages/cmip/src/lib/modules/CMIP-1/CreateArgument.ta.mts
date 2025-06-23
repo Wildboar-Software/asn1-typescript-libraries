@@ -198,15 +198,12 @@ export function _decode_CreateArgument(el: _Element) {
     _cached_decoder_for_CreateArgument = function (
       el: _Element
     ): CreateArgument {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass!: ObjectClass;
       let managedOrSuperiorObjectInstance: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>;
       let accessControl: OPTIONAL<AccessControl>;
       let referenceObjectInstance: OPTIONAL<ObjectInstance>;
       let attributeList: OPTIONAL<Attribute[]>;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -232,7 +229,6 @@ export function _decode_CreateArgument(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -243,7 +239,7 @@ export function _decode_CreateArgument(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new CreateArgument /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CreateArgument (
         managedObjectClass,
         managedOrSuperiorObjectInstance,
         accessControl,

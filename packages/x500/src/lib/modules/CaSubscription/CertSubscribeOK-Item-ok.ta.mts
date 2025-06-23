@@ -164,13 +164,10 @@ export function _decode_CertSubscribeOK_Item_ok(el: _Element) {
         _cached_decoder_for_CertSubscribeOK_Item_ok = function (
             el: _Element
         ): CertSubscribeOK_Item_ok {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let cert!: Certificate;
             let status!: CertStatus;
             let revokeReason: OPTIONAL<CRLReason>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 cert: (_el: _Element): void => {
                     cert = _decode_Certificate(_el);
@@ -182,7 +179,6 @@ export function _decode_CertSubscribeOK_Item_ok(el: _Element) {
                     revokeReason = _decode_CRLReason(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -194,7 +190,7 @@ export function _decode_CertSubscribeOK_Item_ok(el: _Element) {
                 }
             );
             return new CertSubscribeOK_Item_ok(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ cert,
+                cert,
                 status,
                 revokeReason,
                 _unrecognizedExtensionsList

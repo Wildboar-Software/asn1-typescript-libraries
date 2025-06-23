@@ -212,15 +212,12 @@ export function _decode_UnitEventHandlerCallbackParams(el: _Element) {
     _cached_decoder_for_UnitEventHandlerCallbackParams = function (
       el: _Element
     ): UnitEventHandlerCallbackParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let unitEventHandlerAddress!: MemoryAddress;
       let unitEventHandlerContext!: MemoryAddress;
       let bspUuid!: BioAPI_UUID;
       let unitID!: BioAPI_UNIT_ID;
       let unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
       let unitEventType!: BioAPI_UNIT_EVENT_TYPE;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         unitEventHandlerAddress: (_el: _Element): void => {
           unitEventHandlerAddress = _decode_MemoryAddress(_el);
@@ -241,7 +238,6 @@ export function _decode_UnitEventHandlerCallbackParams(el: _Element) {
           unitEventType = _decode_BioAPI_UNIT_EVENT_TYPE(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -250,7 +246,7 @@ export function _decode_UnitEventHandlerCallbackParams(el: _Element) {
         _root_component_type_list_2_spec_for_UnitEventHandlerCallbackParams,
         undefined
       );
-      return new UnitEventHandlerCallbackParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new UnitEventHandlerCallbackParams (
         unitEventHandlerAddress,
         unitEventHandlerContext,
         bspUuid,

@@ -177,14 +177,11 @@ export function _decode_RLRQ_apdu(el: _Element) {
     _cached_decoder_for_RLRQ_apdu = $._decode_implicit<RLRQ_apdu>(
       () =>
         function (el: _Element): RLRQ_apdu {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let reason: OPTIONAL<Release_request_reason>;
           let aso_qualifier: OPTIONAL<ASO_qualifier>;
           let asoi_identifier: OPTIONAL<ASOI_identifier>;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_information: OPTIONAL<Association_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             reason: (_el: _Element): void => {
               reason = $._decode_implicit<Release_request_reason>(
@@ -207,7 +204,6 @@ export function _decode_RLRQ_apdu(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -218,7 +214,7 @@ export function _decode_RLRQ_apdu(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new RLRQ_apdu /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new RLRQ_apdu (
             reason,
             aso_qualifier,
             asoi_identifier,

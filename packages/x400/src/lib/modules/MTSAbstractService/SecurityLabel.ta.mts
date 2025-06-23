@@ -170,7 +170,6 @@ export function _decode_SecurityLabel(el: _Element) {
             let privacy_mark: OPTIONAL<PrivacyMark>;
             let security_categories: OPTIONAL<SecurityCategories>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'security-policy-identifier': (_el: _Element): void => {
                     security_policy_identifier = _decode_SecurityPolicyIdentifier(
@@ -189,7 +188,6 @@ export function _decode_SecurityLabel(el: _Element) {
                     security_categories = _decode_SecurityCategories(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

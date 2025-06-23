@@ -132,12 +132,9 @@ export function _get_decoder_for_EncryptedContentInfoType<
     return function (
         el: _Element
     ): EncryptedContentInfoType<AlgorithmIdentifierType> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let contentType!: OBJECT_IDENTIFIER;
         let contentEncryptionAlgorithm!: AlgorithmIdentifierType;
         let encryptedContent: OPTIONAL<OCTET_STRING>;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             contentType: (_el: _Element): void => {
                 contentType = $._decodeObjectIdentifier(_el);
@@ -153,7 +150,6 @@ export function _get_decoder_for_EncryptedContentInfoType<
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -162,7 +158,7 @@ export function _get_decoder_for_EncryptedContentInfoType<
             _root_component_type_list_2_spec_for_EncryptedContentInfoType,
             undefined
         );
-        return new EncryptedContentInfoType /* SEQUENCE_CONSTRUCTOR_CALL */(
+        return new EncryptedContentInfoType (
             contentType,
             contentEncryptionAlgorithm,
             encryptedContent

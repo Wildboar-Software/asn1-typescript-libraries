@@ -143,13 +143,10 @@ export function _decode_EpcFormat_fields_Item(el: _Element) {
         _cached_decoder_for_EpcFormat_fields_Item = function (
             el: _Element
         ): EpcFormat_fields_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bits!: INTEGER;
             let charField!: EpcFormat_fields_Item_charField;
             let result: OPTIONAL<EpcFormat_fields_Item_result> =
                 EpcFormat_fields_Item._default_value_for_result;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bits: (_el: _Element): void => {
                     bits = $._decodeInteger(_el);
@@ -161,7 +158,6 @@ export function _decode_EpcFormat_fields_Item(el: _Element) {
                     result = _decode_EpcFormat_fields_Item_result(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_EpcFormat_fields_Item(el: _Element) {
                 undefined
             );
             return new EpcFormat_fields_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bits,
+                bits,
                 charField,
                 result
             );

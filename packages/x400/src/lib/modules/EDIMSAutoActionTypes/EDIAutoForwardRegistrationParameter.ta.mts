@@ -211,7 +211,6 @@ export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
         _cached_decoder_for_EDIAutoForwardRegistrationParameter = function (
             el: _Element
         ): EDIAutoForwardRegistrationParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let filter: OPTIONAL<Filter>;
             let edi_supplementary_info: OPTIONAL<EDISupplementaryInformation>;
             let delete_after_forwarding: OPTIONAL<BOOLEAN> =
@@ -219,8 +218,6 @@ export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
             let edi_forwarding_mode!: EDIAutoForwardRegistrationParameter_edi_forwarding_mode;
             let forwarding_envelope!: MessageSubmissionEnvelope;
             let submission_options: OPTIONAL<MSSubmissionOptions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 filter: (_el: _Element): void => {
                     filter = $._decode_explicit<Filter>(() => _decode_Filter)(
@@ -253,7 +250,6 @@ export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -262,7 +258,7 @@ export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIAutoForwardRegistrationParameter,
                 undefined
             );
-            return new EDIAutoForwardRegistrationParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIAutoForwardRegistrationParameter (
                 filter,
                 edi_supplementary_info,
                 delete_after_forwarding,

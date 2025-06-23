@@ -148,12 +148,9 @@ export function _decode_InterchangeRecipientField(el: _Element) {
         _cached_decoder_for_InterchangeRecipientField = function (
             el: _Element
         ): InterchangeRecipientField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let recipient_identification!: IdentificationCode;
             let identification_code_qualifier: OPTIONAL<IdentificationCodeQualifier>;
             let routing_address: OPTIONAL<RoutingAddress>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'recipient-identification': (_el: _Element): void => {
                     recipient_identification = $._decode_implicit<IdentificationCode>(
@@ -171,7 +168,6 @@ export function _decode_InterchangeRecipientField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_InterchangeRecipientField(el: _Element) {
                 _root_component_type_list_2_spec_for_InterchangeRecipientField,
                 undefined
             );
-            return new InterchangeRecipientField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new InterchangeRecipientField (
                 recipient_identification,
                 identification_code_qualifier,
                 routing_address

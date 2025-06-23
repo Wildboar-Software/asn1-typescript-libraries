@@ -168,13 +168,10 @@ export function _decode_ProtectionStatusParameter(el: _Element) {
         _cached_decoder_for_ProtectionStatusParameter = function (
             el: _Element
         ): ProtectionStatusParameter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let oldProtectionStatus!: ProtectionStatus;
             let newProtectionStatus!: ProtectionStatus;
             let psDirection: OPTIONAL<ProtectionDirection> =
                 ProtectionStatusParameter._default_value_for_psDirection;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 oldProtectionStatus: (_el: _Element): void => {
                     oldProtectionStatus = _decode_ProtectionStatus(_el);
@@ -186,7 +183,6 @@ export function _decode_ProtectionStatusParameter(el: _Element) {
                     psDirection = _decode_ProtectionDirection(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -195,7 +191,7 @@ export function _decode_ProtectionStatusParameter(el: _Element) {
                 _root_component_type_list_2_spec_for_ProtectionStatusParameter,
                 undefined
             );
-            return new ProtectionStatusParameter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ProtectionStatusParameter (
                 oldProtectionStatus,
                 newProtectionStatus,
                 psDirection

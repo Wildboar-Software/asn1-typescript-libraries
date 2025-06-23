@@ -215,7 +215,6 @@ export function _decode_ConnectInformation_Item(el: _Element) {
         _cached_decoder_for_ConnectInformation_Item = function (
             el: _Element
         ): ConnectInformation_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let itemType!: ConnectInformation_Item_itemType;
             let administrativeState: OPTIONAL<AdministrativeState>;
             let namedCrossConnection: OPTIONAL<NamedCrossConnection>;
@@ -223,8 +222,6 @@ export function _decode_ConnectInformation_Item(el: _Element) {
             let redline: OPTIONAL<Boolean>;
             let _unrecognizedExtensionsList: _Element[] = [];
             let additionalInfo: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 itemType: (_el: _Element): void => {
                     itemType = _decode_ConnectInformation_Item_itemType(_el);
@@ -253,7 +250,6 @@ export function _decode_ConnectInformation_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -264,7 +260,7 @@ export function _decode_ConnectInformation_Item(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ConnectInformation_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ConnectInformation_Item (
                 itemType,
                 administrativeState,
                 namedCrossConnection,

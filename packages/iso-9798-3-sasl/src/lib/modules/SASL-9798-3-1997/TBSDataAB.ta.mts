@@ -143,27 +143,23 @@ let _cached_decoder_for_TBSDataAB: $.ASN1Decoder<TBSDataAB> | null = null;
 export
 function _decode_TBSDataAB (el: _Element) {
     if (!_cached_decoder_for_TBSDataAB) { _cached_decoder_for_TBSDataAB = function (el: _Element): TBSDataAB {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let randomA!: RandomNumber;
     let randomB!: RandomNumber;
     let entityB: OPTIONAL<GeneralNames>;
     let authID: OPTIONAL<GeneralNames>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "randomA": (_el: _Element): void => { randomA = _decode_RandomNumber(_el); },
         "randomB": (_el: _Element): void => { randomB = _decode_RandomNumber(_el); },
         "entityB": (_el: _Element): void => { entityB = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); },
         "authID": (_el: _Element): void => { authID = $._decode_implicit<GeneralNames>(() => _decode_GeneralNames)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TBSDataAB,
         _extension_additions_list_spec_for_TBSDataAB,
         _root_component_type_list_2_spec_for_TBSDataAB,
         undefined,
     );
-    return new TBSDataAB( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new TBSDataAB( 
         randomA,
         randomB,
         entityB,

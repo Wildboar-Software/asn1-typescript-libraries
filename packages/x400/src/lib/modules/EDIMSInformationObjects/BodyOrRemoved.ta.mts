@@ -128,11 +128,8 @@ export function _decode_BodyOrRemoved(el: _Element) {
         _cached_decoder_for_BodyOrRemoved = function (
             el: _Element
         ): BodyOrRemoved {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primary_or_removed!: PrimaryOrRemoved;
             let additional_body_parts: OPTIONAL<AdditionalBodyParts>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'primary-or-removed': (_el: _Element): void => {
                     primary_or_removed = _decode_PrimaryOrRemoved(_el);
@@ -141,7 +138,6 @@ export function _decode_BodyOrRemoved(el: _Element) {
                     additional_body_parts = _decode_AdditionalBodyParts(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_BodyOrRemoved(el: _Element) {
                 _root_component_type_list_2_spec_for_BodyOrRemoved,
                 undefined
             );
-            return new BodyOrRemoved /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BodyOrRemoved (
                 primary_or_removed,
                 additional_body_parts
             );

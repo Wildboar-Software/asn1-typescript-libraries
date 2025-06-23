@@ -149,13 +149,10 @@ export function _decode_CertificateListContent_revokedCertificates_Item(
         _cached_decoder_for_CertificateListContent_revokedCertificates_Item = function (
             el: _Element
         ): CertificateListContent_revokedCertificates_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let serialNumber!: CertificateSerialNumber;
             let revocationDate!: Time;
             let crlEntryExtensions: OPTIONAL<Extensions>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 serialNumber: (_el: _Element): void => {
                     serialNumber = _decode_CertificateSerialNumber(_el);
@@ -167,7 +164,6 @@ export function _decode_CertificateListContent_revokedCertificates_Item(
                     crlEntryExtensions = _decode_Extensions(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -179,7 +175,7 @@ export function _decode_CertificateListContent_revokedCertificates_Item(
                 }
             );
             return new CertificateListContent_revokedCertificates_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ serialNumber,
+                serialNumber,
                 revocationDate,
                 crlEntryExtensions,
                 _unrecognizedExtensionsList

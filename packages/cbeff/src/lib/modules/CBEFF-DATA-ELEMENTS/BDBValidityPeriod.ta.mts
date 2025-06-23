@@ -120,11 +120,8 @@ export function _decode_BDBValidityPeriod(el: _Element) {
     _cached_decoder_for_BDBValidityPeriod = function (
       el: _Element
     ): BDBValidityPeriod {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let not_valid_before: OPTIONAL<Date_Time>;
       let not_valid_after: OPTIONAL<Date_Time>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'not-valid-before': (_el: _Element): void => {
           not_valid_before = _decode_Date_Time(_el);
@@ -133,7 +130,6 @@ export function _decode_BDBValidityPeriod(el: _Element) {
           not_valid_after = _decode_Date_Time(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -142,7 +138,7 @@ export function _decode_BDBValidityPeriod(el: _Element) {
         _root_component_type_list_2_spec_for_BDBValidityPeriod,
         undefined
       );
-      return new BDBValidityPeriod /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new BDBValidityPeriod (
         not_valid_before,
         not_valid_after
       );

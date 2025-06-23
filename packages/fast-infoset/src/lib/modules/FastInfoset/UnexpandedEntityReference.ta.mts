@@ -138,12 +138,9 @@ export function _decode_UnexpandedEntityReference(el: _Element) {
     _cached_decoder_for_UnexpandedEntityReference = function (
       el: _Element
     ): UnexpandedEntityReference {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let name!: IdentifyingStringOrIndex;
       let system_identifier: OPTIONAL<IdentifyingStringOrIndex>;
       let public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         name: (_el: _Element): void => {
           name = _decode_IdentifyingStringOrIndex(_el);
@@ -155,7 +152,6 @@ export function _decode_UnexpandedEntityReference(el: _Element) {
           public_identifier = _decode_IdentifyingStringOrIndex(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -164,7 +160,7 @@ export function _decode_UnexpandedEntityReference(el: _Element) {
         _root_component_type_list_2_spec_for_UnexpandedEntityReference,
         undefined
       );
-      return new UnexpandedEntityReference /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new UnexpandedEntityReference (
         name,
         system_identifier,
         public_identifier

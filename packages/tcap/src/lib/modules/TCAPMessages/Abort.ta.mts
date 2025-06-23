@@ -118,11 +118,8 @@ let _cached_decoder_for_Abort: $.ASN1Decoder<Abort> | null = null;
 export function _decode_Abort(el: _Element) {
   if (!_cached_decoder_for_Abort) {
     _cached_decoder_for_Abort = function (el: _Element): Abort {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let dtid!: DestTransactionID;
       let reason: OPTIONAL<Abort_reason>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         dtid: (_el: _Element): void => {
           dtid = _decode_DestTransactionID(_el);
@@ -131,7 +128,6 @@ export function _decode_Abort(el: _Element) {
           reason = _decode_Abort_reason(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -140,7 +136,7 @@ export function _decode_Abort(el: _Element) {
         _root_component_type_list_2_spec_for_Abort,
         undefined
       );
-      return new Abort /* SEQUENCE_CONSTRUCTOR_CALL */(dtid, reason);
+      return new Abort (dtid, reason);
     };
   }
   return _cached_decoder_for_Abort(el);

@@ -190,7 +190,6 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
 ): $.ASN1Decoder<SIGNED<ToBeSigned>> {
     return function (el: _Element): SIGNED<ToBeSigned> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let toBeSigned!: ToBeSigned;
         let algorithmIdentifier!: AlgorithmIdentifier;
         let signature!: BIT_STRING;
@@ -198,8 +197,6 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
         let altSignature: OPTIONAL<BIT_STRING>;
         let _unrecognizedExtensionsList: _Element[] = [];
         const originalDER: Uint8Array = el.toBytes();
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             toBeSigned: (_el: _Element): void => {
                 toBeSigned = _decode_ToBeSigned(_el);
@@ -217,7 +214,6 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
                 altSignature = $._decodeBitString(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -229,7 +225,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
             }
         );
         const ret = new SIGNED(
-            /* SEQUENCE_CONSTRUCTOR_CALL */ toBeSigned,
+            toBeSigned,
             algorithmIdentifier,
             signature,
             altAlgorithmIdentifier,

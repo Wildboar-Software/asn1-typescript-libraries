@@ -126,11 +126,8 @@ export function _decode_PreferredSignatureAlgorithm(el: _Element) {
         _cached_decoder_for_PreferredSignatureAlgorithm = function (
             el: _Element
         ): PreferredSignatureAlgorithm {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let sigIdentifier!: AlgorithmIdentifier;
             let certIdentifier: OPTIONAL<AlgorithmIdentifier>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 sigIdentifier: (_el: _Element): void => {
                     sigIdentifier = _decode_AlgorithmIdentifier(_el);
@@ -139,7 +136,6 @@ export function _decode_PreferredSignatureAlgorithm(el: _Element) {
                     certIdentifier = _decode_AlgorithmIdentifier(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -149,7 +145,7 @@ export function _decode_PreferredSignatureAlgorithm(el: _Element) {
                 undefined
             );
             return new PreferredSignatureAlgorithm(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ sigIdentifier,
+                sigIdentifier,
                 certIdentifier
             );
         };

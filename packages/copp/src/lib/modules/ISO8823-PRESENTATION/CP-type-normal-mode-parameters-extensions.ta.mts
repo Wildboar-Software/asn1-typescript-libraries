@@ -107,12 +107,8 @@ export function _decode_CP_type_normal_mode_parameters_extensions(
         _cached_decoder_for_CP_type_normal_mode_parameters_extensions = function (
             el: _Element
         ): CP_type_normal_mode_parameters_extensions {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {};
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -123,7 +119,7 @@ export function _decode_CP_type_normal_mode_parameters_extensions(
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new CP_type_normal_mode_parameters_extensions /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CP_type_normal_mode_parameters_extensions (
                 _unrecognizedExtensionsList
             );
         };

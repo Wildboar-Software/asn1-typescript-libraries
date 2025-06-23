@@ -199,7 +199,6 @@ export function _decode_RSAPrivateKeyObject(el: _Element) {
         _cached_decoder_for_RSAPrivateKeyObject = function (
             el: _Element
         ): RSAPrivateKeyObject {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let modulus: OPTIONAL<INTEGER>;
             let publicExponent: OPTIONAL<INTEGER>;
             let privateExponent: OPTIONAL<INTEGER>;
@@ -208,8 +207,6 @@ export function _decode_RSAPrivateKeyObject(el: _Element) {
             let exponent1: OPTIONAL<INTEGER>;
             let exponent2: OPTIONAL<INTEGER>;
             let coefficient: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 modulus: (_el: _Element): void => {
                     modulus = $._decode_implicit<INTEGER>(
@@ -252,7 +249,6 @@ export function _decode_RSAPrivateKeyObject(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -262,7 +258,7 @@ export function _decode_RSAPrivateKeyObject(el: _Element) {
                 undefined
             );
             return new RSAPrivateKeyObject(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ modulus,
+                modulus,
                 publicExponent,
                 privateExponent,
                 prime1,

@@ -138,12 +138,9 @@ export function _decode_SchedulingData_Item(el: _Element) {
         _cached_decoder_for_SchedulingData_Item = function (
             el: _Element
         ): SchedulingData_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let indexOrOperSpec!: IndexOrOperSpec;
             let schedule!: Schedule;
             let priority: OPTIONAL<INTEGER>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 indexOrOperSpec: (_el: _Element): void => {
                     indexOrOperSpec = $._decode_explicit<IndexOrOperSpec>(
@@ -161,7 +158,6 @@ export function _decode_SchedulingData_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -170,7 +166,7 @@ export function _decode_SchedulingData_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_SchedulingData_Item,
                 undefined
             );
-            return new SchedulingData_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SchedulingData_Item (
                 indexOrOperSpec,
                 schedule,
                 priority

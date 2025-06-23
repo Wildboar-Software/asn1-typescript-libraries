@@ -160,13 +160,10 @@ export function _decode_ProcessingFailure(el: _Element) {
     _cached_decoder_for_ProcessingFailure = function (
       el: _Element
     ): ProcessingFailure {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass!: ObjectClass;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let specificErrorInfo!: SpecificErrorInfo;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -180,7 +177,6 @@ export function _decode_ProcessingFailure(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -191,7 +187,7 @@ export function _decode_ProcessingFailure(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new ProcessingFailure /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ProcessingFailure (
         managedObjectClass,
         managedObjectInstance,
         specificErrorInfo,

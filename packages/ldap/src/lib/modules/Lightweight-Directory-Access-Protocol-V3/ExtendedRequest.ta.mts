@@ -137,12 +137,9 @@ export function _decode_ExtendedRequest(el: _Element) {
     _cached_decoder_for_ExtendedRequest = $._decode_implicit<ExtendedRequest>(
       () =>
         function (el: _Element): ExtendedRequest {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let requestName!: LDAPOID;
           let requestValue: OPTIONAL<OCTET_STRING>;
           let _unrecognizedExtensionsList: _Element[] = [];
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             requestName: (_el: _Element): void => {
               requestName = $._decode_implicit<LDAPOID>(() => _decode_LDAPOID)(
@@ -155,7 +152,6 @@ export function _decode_ExtendedRequest(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -166,7 +162,7 @@ export function _decode_ExtendedRequest(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new ExtendedRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new ExtendedRequest (
             requestName,
             requestValue,
             _unrecognizedExtensionsList

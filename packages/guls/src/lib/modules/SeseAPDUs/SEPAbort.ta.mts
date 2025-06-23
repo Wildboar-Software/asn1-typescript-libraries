@@ -146,12 +146,9 @@ let _cached_decoder_for_SEPAbort: $.ASN1Decoder<SEPAbort> | null = null;
 export function _decode_SEPAbort(el: _Element) {
   if (!_cached_decoder_for_SEPAbort) {
     _cached_decoder_for_SEPAbort = function (el: _Element): SEPAbort {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let invocationId: OPTIONAL<InvocationId>;
       let itemIdentifier: OPTIONAL<_Element>;
       let problemCode!: ProblemCode;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         invocationId: (_el: _Element): void => {
           invocationId = _decode_InvocationId(_el);
@@ -163,7 +160,6 @@ export function _decode_SEPAbort(el: _Element) {
           problemCode = _decode_ProblemCode(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -172,7 +168,7 @@ export function _decode_SEPAbort(el: _Element) {
         _root_component_type_list_2_spec_for_SEPAbort,
         undefined
       );
-      return new SEPAbort /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SEPAbort (
         invocationId,
         itemIdentifier,
         problemCode

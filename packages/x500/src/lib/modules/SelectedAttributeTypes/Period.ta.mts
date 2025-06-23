@@ -301,15 +301,12 @@ let _cached_decoder_for_Period: $.ASN1Decoder<Period> | null = null;
 export function _decode_Period(el: _Element) {
     if (!_cached_decoder_for_Period) {
         _cached_decoder_for_Period = function (el: _Element): Period {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let timesOfDay: OPTIONAL<DayTimeBand[]>;
             let days: OPTIONAL<Period_days>;
             let weeks: OPTIONAL<Period_weeks>;
             let months: OPTIONAL<Period_months>;
             let years: OPTIONAL<INTEGER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 timesOfDay: (_el: _Element): void => {
                     timesOfDay = $._decode_explicit<DayTimeBand[]>(() =>
@@ -337,7 +334,6 @@ export function _decode_Period(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -349,7 +345,7 @@ export function _decode_Period(el: _Element) {
                 }
             );
             return new Period(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ timesOfDay,
+                timesOfDay,
                 days,
                 weeks,
                 months,

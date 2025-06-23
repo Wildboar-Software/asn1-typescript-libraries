@@ -130,7 +130,6 @@ export function _decode_ForwardedContentToken_Item(el: _Element) {
             let body_part_number!: BodyPartNumber;
             let body_part_choice!: ForwardedContentToken_Item_body_part_choice;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'body-part-number': (_el: _Element): void => {
                     body_part_number = _decode_BodyPartNumber(_el);
@@ -141,7 +140,6 @@ export function _decode_ForwardedContentToken_Item(el: _Element) {
                     );
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

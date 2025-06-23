@@ -157,13 +157,10 @@ let _cached_decoder_for_Continue: $.ASN1Decoder<Continue> | null = null;
 export function _decode_Continue(el: _Element) {
   if (!_cached_decoder_for_Continue) {
     _cached_decoder_for_Continue = function (el: _Element): Continue {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let otid!: OrigTransactionID;
       let dtid!: DestTransactionID;
       let dialoguePortion: OPTIONAL<DialoguePortion>;
       let components: OPTIONAL<ComponentPortion>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         otid: (_el: _Element): void => {
           otid = _decode_OrigTransactionID(_el);
@@ -178,7 +175,6 @@ export function _decode_Continue(el: _Element) {
           components = _decode_ComponentPortion(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -187,7 +183,7 @@ export function _decode_Continue(el: _Element) {
         _root_component_type_list_2_spec_for_Continue,
         undefined
       );
-      return new Continue /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Continue (
         otid,
         dtid,
         dialoguePortion,

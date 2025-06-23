@@ -161,13 +161,10 @@ let _cached_decoder_for_HeaderBlock: $.ASN1Decoder<HeaderBlock> | null = null;
 export function _decode_HeaderBlock(el: _Element) {
   if (!_cached_decoder_for_HeaderBlock) {
     _cached_decoder_for_HeaderBlock = function (el: _Element): HeaderBlock {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let mustUnderstand: OPTIONAL<BOOLEAN>;
       let relay: OPTIONAL<BOOLEAN>;
       let role: OPTIONAL<AnyURI> = HeaderBlock._default_value_for_role;
       let content!: Content;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         mustUnderstand: (_el: _Element): void => {
           mustUnderstand = $._decodeBoolean(_el);
@@ -182,7 +179,6 @@ export function _decode_HeaderBlock(el: _Element) {
           content = _decode_Content(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -191,7 +187,7 @@ export function _decode_HeaderBlock(el: _Element) {
         _root_component_type_list_2_spec_for_HeaderBlock,
         undefined
       );
-      return new HeaderBlock /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new HeaderBlock (
         mustUnderstand,
         relay,
         role,

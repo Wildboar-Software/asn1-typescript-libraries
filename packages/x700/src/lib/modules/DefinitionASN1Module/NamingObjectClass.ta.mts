@@ -137,12 +137,9 @@ export function _decode_NamingObjectClass(el: _Element) {
         _cached_decoder_for_NamingObjectClass = function (
             el: _Element
         ): NamingObjectClass {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let class_!: TemplateLabel;
             let andSubclasses: OPTIONAL<BOOLEAN> =
                 NamingObjectClass._default_value_for_andSubclasses;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 class: (_el: _Element): void => {
                     class_ = _decode_TemplateLabel(_el);
@@ -151,7 +148,6 @@ export function _decode_NamingObjectClass(el: _Element) {
                     andSubclasses = $._decodeBoolean(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_NamingObjectClass(el: _Element) {
                 _root_component_type_list_2_spec_for_NamingObjectClass,
                 undefined
             );
-            return new NamingObjectClass /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NamingObjectClass (
                 class_,
                 andSubclasses
             );

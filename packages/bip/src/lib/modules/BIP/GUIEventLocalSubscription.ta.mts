@@ -264,7 +264,6 @@ export function _decode_GUIEventLocalSubscription(el: _Element) {
     _cached_decoder_for_GUIEventLocalSubscription = function (
       el: _Element
     ): GUIEventLocalSubscription {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
       let hostingEndpointIRI!: EndpointIRI;
       let bspProductUuid!: BioAPI_UUID;
@@ -276,8 +275,6 @@ export function _decode_GUIEventLocalSubscription(el: _Element) {
       let guiStateEventHandlerContext!: MemoryAddress;
       let guiProgressEventHandlerAddress!: MemoryAddress;
       let guiProgressEventHandlerContext!: MemoryAddress;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiEventSubscriptionUuid: (_el: _Element): void => {
           guiEventSubscriptionUuid = _decode_BioAPI_UUID(_el);
@@ -313,7 +310,6 @@ export function _decode_GUIEventLocalSubscription(el: _Element) {
           guiProgressEventHandlerContext = _decode_MemoryAddress(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -322,7 +318,7 @@ export function _decode_GUIEventLocalSubscription(el: _Element) {
         _root_component_type_list_2_spec_for_GUIEventLocalSubscription,
         undefined
       );
-      return new GUIEventLocalSubscription /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUIEventLocalSubscription (
         guiEventSubscriptionUuid,
         hostingEndpointIRI,
         bspProductUuid,

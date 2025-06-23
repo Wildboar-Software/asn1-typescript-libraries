@@ -153,12 +153,9 @@ let _cached_decoder_for_Challenge: $.ASN1Decoder<Challenge> | null = null;
 export function _decode_Challenge(el: _Element) {
   if (!_cached_decoder_for_Challenge) {
     _cached_decoder_for_Challenge = function (el: _Element): Challenge {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let owf: OPTIONAL<AlgorithmIdentifier>;
       let witness!: OCTET_STRING;
       let challenge!: OCTET_STRING;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         owf: (_el: _Element): void => {
           owf = _decode_AlgorithmIdentifier(_el);
@@ -170,7 +167,6 @@ export function _decode_Challenge(el: _Element) {
           challenge = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -179,7 +175,7 @@ export function _decode_Challenge(el: _Element) {
         _root_component_type_list_2_spec_for_Challenge,
         undefined
       );
-      return new Challenge /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Challenge (
         owf,
         witness,
         challenge

@@ -226,7 +226,6 @@ export function _decode_DeliveryControlResult(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 DeliveryControlResult._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'waiting-operations': (_el: _Element): void => {
                     waiting_operations = $._decode_implicit<Operations>(
@@ -259,7 +258,6 @@ export function _decode_DeliveryControlResult(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

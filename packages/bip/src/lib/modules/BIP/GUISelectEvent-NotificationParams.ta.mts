@@ -319,7 +319,6 @@ export function _decode_GUISelectEvent_NotificationParams(el: _Element) {
     _cached_decoder_for_GUISelectEvent_NotificationParams = function (
       el: _Element
     ): GUISelectEvent_NotificationParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
       let bspProductUuid!: BioAPI_UUID;
       let unitID!: BioAPI_UNIT_ID;
@@ -332,8 +331,6 @@ export function _decode_GUISelectEvent_NotificationParams(el: _Element) {
       let selectableInstances!: BioAPI_BIR_SUBTYPE_MASK;
       let capturedInstances!: BioAPI_BIR_SUBTYPE_MASK;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiEventSubscriptionUuid: (_el: _Element): void => {
           guiEventSubscriptionUuid = _decode_BioAPI_UUID(_el);
@@ -372,7 +369,6 @@ export function _decode_GUISelectEvent_NotificationParams(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -381,7 +377,7 @@ export function _decode_GUISelectEvent_NotificationParams(el: _Element) {
         _root_component_type_list_2_spec_for_GUISelectEvent_NotificationParams,
         undefined
       );
-      return new GUISelectEvent_NotificationParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUISelectEvent_NotificationParams (
         guiEventSubscriptionUuid,
         bspProductUuid,
         unitID,

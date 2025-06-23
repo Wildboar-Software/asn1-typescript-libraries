@@ -123,11 +123,8 @@ export function _decode_TestSessionId(el: _Element) {
         _cached_decoder_for_TestSessionId = function (
             el: _Element
         ): TestSessionId {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let localId!: INTEGER;
             let globalRef: OPTIONAL<TestSessionId_globalRef>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 localId: (_el: _Element): void => {
                     localId = $._decodeInteger(_el);
@@ -138,7 +135,6 @@ export function _decode_TestSessionId(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -147,7 +143,7 @@ export function _decode_TestSessionId(el: _Element) {
                 _root_component_type_list_2_spec_for_TestSessionId,
                 undefined
             );
-            return new TestSessionId /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestSessionId (
                 localId,
                 globalRef
             );

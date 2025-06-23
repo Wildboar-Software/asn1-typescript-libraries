@@ -158,13 +158,10 @@ export function _decode_EncryptedContentInfo(el: _Element) {
         _cached_decoder_for_EncryptedContentInfo = function (
             el: _Element
         ): EncryptedContentInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let contentType!: OBJECT_IDENTIFIER;
             let contentEncryptionAlgorithm: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>;
             let encryptedContent: OPTIONAL<EncryptedContent>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 contentType: (_el: _Element): void => {
                     contentType = $._decodeObjectIdentifier(_el);
@@ -180,7 +177,6 @@ export function _decode_EncryptedContentInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -191,7 +187,7 @@ export function _decode_EncryptedContentInfo(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new EncryptedContentInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EncryptedContentInfo (
                 contentType,
                 contentEncryptionAlgorithm,
                 encryptedContent,

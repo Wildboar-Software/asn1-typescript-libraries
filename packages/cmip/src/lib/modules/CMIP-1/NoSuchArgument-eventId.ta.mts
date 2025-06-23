@@ -125,11 +125,8 @@ export function _decode_NoSuchArgument_eventId(el: _Element) {
     _cached_decoder_for_NoSuchArgument_eventId = function (
       el: _Element
     ): NoSuchArgument_eventId {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let eventType!: EventTypeId;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -138,7 +135,6 @@ export function _decode_NoSuchArgument_eventId(el: _Element) {
           eventType = _decode_EventTypeId(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -147,7 +143,7 @@ export function _decode_NoSuchArgument_eventId(el: _Element) {
         _root_component_type_list_2_spec_for_NoSuchArgument_eventId,
         undefined
       );
-      return new NoSuchArgument_eventId /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new NoSuchArgument_eventId (
         managedObjectClass,
         eventType
       );

@@ -175,15 +175,12 @@ export function _decode_RenameRequest(el: _Element) {
         _cached_decoder_for_RenameRequest = function (
             el: _Element
         ): RenameRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let serviceId!: OBJECT_IDENTIFIER;
             let invokId!: INTEGER;
             let object!: DistinguishedName;
             let new_!: DistinguishedName;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -207,7 +204,6 @@ export function _decode_RenameRequest(el: _Element) {
                     new_ = _decode_DistinguishedName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -218,7 +214,7 @@ export function _decode_RenameRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new RenameRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new RenameRequest (
                 attrCerts,
                 serviceId,
                 invokId,

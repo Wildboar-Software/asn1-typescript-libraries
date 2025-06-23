@@ -118,11 +118,8 @@ let _cached_decoder_for_SPKM_REP_TI: $.ASN1Decoder<SPKM_REP_TI> | null = null;
 export function _decode_SPKM_REP_TI(el: _Element) {
     if (!_cached_decoder_for_SPKM_REP_TI) {
         _cached_decoder_for_SPKM_REP_TI = function (el: _Element): SPKM_REP_TI {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let responseToken!: REP_TI_TOKEN;
             let certif_data: OPTIONAL<CertificationData>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 responseToken: (_el: _Element): void => {
                     responseToken = _decode_REP_TI_TOKEN(_el);
@@ -131,7 +128,6 @@ export function _decode_SPKM_REP_TI(el: _Element) {
                     certif_data = _decode_CertificationData(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -141,7 +137,7 @@ export function _decode_SPKM_REP_TI(el: _Element) {
                 undefined
             );
             return new SPKM_REP_TI(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ responseToken,
+                responseToken,
                 certif_data
             );
         };

@@ -182,7 +182,6 @@ let _cached_decoder_for_RenewInfoMsgContent: $.ASN1Decoder<RenewInfoMsgContent> 
 export
 function _decode_RenewInfoMsgContent (el: _Element) {
     if (!_cached_decoder_for_RenewInfoMsgContent) { _cached_decoder_for_RenewInfoMsgContent = function (el: _Element): RenewInfoMsgContent {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let sessionID!: OCTET_STRING;
     let clientType!: OCTET_STRING;
     let imageFlag!: OCTET_STRING;
@@ -191,8 +190,6 @@ function _decode_RenewInfoMsgContent (el: _Element) {
     let hashed_CCCI!: OCTET_STRING;
     let hashed_ICCI!: OCTET_STRING;
     let directives: OPTIONAL<OCTET_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "sessionID": (_el: _Element): void => { sessionID = $._decodeOctetString(_el); },
         "clientType": (_el: _Element): void => { clientType = $._decodeOctetString(_el); },
@@ -203,14 +200,13 @@ function _decode_RenewInfoMsgContent (el: _Element) {
         "hashed-ICCI": (_el: _Element): void => { hashed_ICCI = $._decodeOctetString(_el); },
         "directives": (_el: _Element): void => { directives = $._decodeOctetString(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_RenewInfoMsgContent,
         _extension_additions_list_spec_for_RenewInfoMsgContent,
         _root_component_type_list_2_spec_for_RenewInfoMsgContent,
         undefined,
     );
-    return new RenewInfoMsgContent( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new RenewInfoMsgContent( 
         sessionID,
         clientType,
         imageFlag,

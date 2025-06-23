@@ -176,14 +176,11 @@ export function _decode_F_CHANGE_PREFIX_request(el: _Element) {
     _cached_decoder_for_F_CHANGE_PREFIX_request = function (
       el: _Element
     ): F_CHANGE_PREFIX_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let reset: OPTIONAL<BOOLEAN> =
         F_CHANGE_PREFIX_request._default_value_for_reset;
       let destination_file_directory!: Destination_File_Directory;
       let access_passwords: OPTIONAL<Access_Passwords>;
       let path_access_passwords: OPTIONAL<Path_Access_Passwords>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         reset: (_el: _Element): void => {
           reset = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el);
@@ -198,7 +195,6 @@ export function _decode_F_CHANGE_PREFIX_request(el: _Element) {
           path_access_passwords = _decode_Path_Access_Passwords(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -207,7 +203,7 @@ export function _decode_F_CHANGE_PREFIX_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_CHANGE_PREFIX_request,
         undefined
       );
-      return new F_CHANGE_PREFIX_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_CHANGE_PREFIX_request (
         reset,
         destination_file_directory,
         access_passwords,

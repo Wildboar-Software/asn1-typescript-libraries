@@ -697,7 +697,6 @@ export function _decode_SearchArgumentData(el: _Element) {
             let familyGrouping: OPTIONAL<FamilyGrouping> =
                 SearchArgumentData._default_value_for_familyGrouping;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 baseObject: (_el: _Element): void => {
                     baseObject = $._decode_explicit<Name>(() => _decode_Name)(
@@ -837,7 +836,6 @@ export function _decode_SearchArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

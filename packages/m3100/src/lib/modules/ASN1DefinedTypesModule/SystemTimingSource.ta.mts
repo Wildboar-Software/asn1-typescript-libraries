@@ -129,11 +129,8 @@ export function _decode_SystemTimingSource(el: _Element) {
         _cached_decoder_for_SystemTimingSource = function (
             el: _Element
         ): SystemTimingSource {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primaryTimingSource!: SystemTiming;
             let secondaryTimingSource: OPTIONAL<SystemTiming>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 primaryTimingSource: (_el: _Element): void => {
                     primaryTimingSource = _decode_SystemTiming(_el);
@@ -142,7 +139,6 @@ export function _decode_SystemTimingSource(el: _Element) {
                     secondaryTimingSource = _decode_SystemTiming(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_SystemTimingSource(el: _Element) {
                 _root_component_type_list_2_spec_for_SystemTimingSource,
                 undefined
             );
-            return new SystemTimingSource /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SystemTimingSource (
                 primaryTimingSource,
                 secondaryTimingSource
             );

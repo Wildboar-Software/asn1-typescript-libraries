@@ -227,7 +227,6 @@ export function _decode_CommonFields(el: _Element) {
         _cached_decoder_for_CommonFields = function (
             el: _Element
         ): CommonFields {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subject_edim!: SubjectEDIMField;
             let edin_originator!: EDINOriginatorField;
             let first_recipient: OPTIONAL<FirstRecipientField>;
@@ -235,8 +234,6 @@ export function _decode_CommonFields(el: _Element) {
             let notification_security_elements: OPTIONAL<SecurityElementsField>;
             let edin_initiator!: EDINInitiatorField;
             let notifications_extensions: OPTIONAL<NotificationExtensionsField>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'subject-edim': (_el: _Element): void => {
                     subject_edim = $._decode_implicit<SubjectEDIMField>(
@@ -274,7 +271,6 @@ export function _decode_CommonFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -283,7 +279,7 @@ export function _decode_CommonFields(el: _Element) {
                 _root_component_type_list_2_spec_for_CommonFields,
                 undefined
             );
-            return new CommonFields /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CommonFields (
                 subject_edim,
                 edin_originator,
                 first_recipient,

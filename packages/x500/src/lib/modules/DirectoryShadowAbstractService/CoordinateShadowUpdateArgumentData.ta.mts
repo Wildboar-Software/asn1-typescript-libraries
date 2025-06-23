@@ -176,14 +176,11 @@ export function _decode_CoordinateShadowUpdateArgumentData(el: _Element) {
         _cached_decoder_for_CoordinateShadowUpdateArgumentData = $._decode_implicit<CoordinateShadowUpdateArgumentData>(
             () =>
                 function (el: _Element): CoordinateShadowUpdateArgumentData {
-                    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
                     let agreementID!: AgreementID;
                     let lastUpdate: OPTIONAL<Time>;
                     let updateStrategy!: CoordinateShadowUpdateArgumentData_updateStrategy;
                     let securityParameters: OPTIONAL<SecurityParameters>;
                     let _unrecognizedExtensionsList: _Element[] = [];
-                    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-                    /* START_OF_CALLBACKS_MAP */
                     const callbacks: $.DecodingMap = {
                         agreementID: (_el: _Element): void => {
                             agreementID = _decode_AgreementID(_el);
@@ -202,7 +199,6 @@ export function _decode_CoordinateShadowUpdateArgumentData(el: _Element) {
                             );
                         },
                     };
-                    /* END_OF_CALLBACKS_MAP */
                     $._parse_sequence(
                         el,
                         callbacks,
@@ -214,7 +210,7 @@ export function _decode_CoordinateShadowUpdateArgumentData(el: _Element) {
                         }
                     );
                     return new CoordinateShadowUpdateArgumentData(
-                        /* SEQUENCE_CONSTRUCTOR_CALL */ agreementID,
+                        agreementID,
                         lastUpdate,
                         updateStrategy,
                         securityParameters,

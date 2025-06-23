@@ -154,7 +154,6 @@ export function _decode_ChopSpecification(el: _Element) {
         _cached_decoder_for_ChopSpecification = function (
             el: _Element
         ): ChopSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let specificExclusions: OPTIONAL<
                 ChopSpecification_specificExclusions_Item[]
             >;
@@ -162,8 +161,6 @@ export function _decode_ChopSpecification(el: _Element) {
                 ChopSpecification._default_value_for_minimum;
             let maximum: OPTIONAL<BaseDistance>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 specificExclusions: (_el: _Element): void => {
                     specificExclusions = $._decode_explicit<
@@ -186,7 +183,6 @@ export function _decode_ChopSpecification(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -198,7 +194,7 @@ export function _decode_ChopSpecification(el: _Element) {
                 }
             );
             return new ChopSpecification(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ specificExclusions,
+                specificExclusions,
                 minimum,
                 maximum,
                 _unrecognizedExtensionsList

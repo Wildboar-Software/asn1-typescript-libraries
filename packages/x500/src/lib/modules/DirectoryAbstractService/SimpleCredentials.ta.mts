@@ -147,12 +147,9 @@ export function _decode_SimpleCredentials(el: _Element) {
         _cached_decoder_for_SimpleCredentials = function (
             el: _Element
         ): SimpleCredentials {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: DistinguishedName;
             let validity: OPTIONAL<SimpleCredentials_validity>;
             let password: OPTIONAL<SimpleCredentials_password>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = $._decode_explicit<DistinguishedName>(
@@ -170,7 +167,6 @@ export function _decode_SimpleCredentials(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_SimpleCredentials(el: _Element) {
                 undefined
             );
             return new SimpleCredentials(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ name,
+                name,
                 validity,
                 password
             );

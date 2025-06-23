@@ -131,12 +131,9 @@ let _cached_decoder_for_Mapping: $.ASN1Decoder<Mapping> | null = null;
 export function _decode_Mapping(el: _Element) {
     if (!_cached_decoder_for_Mapping) {
         _cached_decoder_for_Mapping = function (el: _Element): Mapping {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mappingFunction!: OBJECT_IDENTIFIER;
             let level: OPTIONAL<INTEGER> = Mapping._default_value_for_level;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mappingFunction: (_el: _Element): void => {
                     mappingFunction = $._decodeObjectIdentifier(_el);
@@ -145,7 +142,6 @@ export function _decode_Mapping(el: _Element) {
                     level = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_Mapping(el: _Element) {
                 }
             );
             return new Mapping(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mappingFunction,
+                mappingFunction,
                 level,
                 _unrecognizedExtensionsList
             );

@@ -124,12 +124,9 @@ export function _decode_SpecificallyIdentified(el: _Element) {
         _cached_decoder_for_SpecificallyIdentified = function (
             el: _Element
         ): SpecificallyIdentified {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: GeneralName;
             let issuer: OPTIONAL<GeneralName>;
             let serial: OPTIONAL<CertificateSerialNumber>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = _decode_GeneralName(_el);
@@ -141,7 +138,6 @@ export function _decode_SpecificallyIdentified(el: _Element) {
                     serial = _decode_CertificateSerialNumber(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -151,7 +147,7 @@ export function _decode_SpecificallyIdentified(el: _Element) {
                 undefined
             );
             return new SpecificallyIdentified(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ name,
+                name,
                 issuer,
                 serial
             );

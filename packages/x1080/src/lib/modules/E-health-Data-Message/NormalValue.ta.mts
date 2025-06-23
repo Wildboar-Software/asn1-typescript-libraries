@@ -133,11 +133,8 @@ let _cached_decoder_for_NormalValue: $.ASN1Decoder<NormalValue> | null = null;
 export function _decode_NormalValue(el: _Element) {
     if (!_cached_decoder_for_NormalValue) {
         _cached_decoder_for_NormalValue = function (el: _Element): NormalValue {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let value!: NormalValue_value;
             let conditions: OPTIONAL<Condition[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 value: (_el: _Element): void => {
                     value = _decode_NormalValue_value(_el);
@@ -148,7 +145,6 @@ export function _decode_NormalValue(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -157,7 +153,7 @@ export function _decode_NormalValue(el: _Element) {
                 _root_component_type_list_2_spec_for_NormalValue,
                 undefined
             );
-            return new NormalValue /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new NormalValue (
                 value,
                 conditions
             );

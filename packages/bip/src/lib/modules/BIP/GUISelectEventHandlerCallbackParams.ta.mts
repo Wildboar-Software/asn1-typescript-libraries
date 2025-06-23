@@ -337,7 +337,6 @@ export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
     _cached_decoder_for_GUISelectEventHandlerCallbackParams = function (
       el: _Element
     ): GUISelectEventHandlerCallbackParams {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let guiSelectEventHandlerAddress!: MemoryAddress;
       let guiSelectEventHandlerContext!: MemoryAddress;
       let bspUuid!: BioAPI_UUID;
@@ -351,8 +350,6 @@ export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
       let selectableInstances!: BioAPI_BIR_SUBTYPE_MASK;
       let capturedInstances!: BioAPI_BIR_SUBTYPE_MASK;
       let text: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         guiSelectEventHandlerAddress: (_el: _Element): void => {
           guiSelectEventHandlerAddress = _decode_MemoryAddress(_el);
@@ -394,7 +391,6 @@ export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
           text = $._decodeUTF8String(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -403,7 +399,7 @@ export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
         _root_component_type_list_2_spec_for_GUISelectEventHandlerCallbackParams,
         undefined
       );
-      return new GUISelectEventHandlerCallbackParams /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new GUISelectEventHandlerCallbackParams (
         guiSelectEventHandlerAddress,
         guiSelectEventHandlerContext,
         bspUuid,

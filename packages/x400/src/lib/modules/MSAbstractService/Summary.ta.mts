@@ -130,7 +130,6 @@ export function _decode_Summary(el: _Element) {
             let absent: OPTIONAL<INTEGER>;
             let present: OPTIONAL<Summary_present_Item[]>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 absent: (_el: _Element): void => {
                     absent = $._decode_explicit<INTEGER>(
@@ -145,7 +144,6 @@ export function _decode_Summary(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

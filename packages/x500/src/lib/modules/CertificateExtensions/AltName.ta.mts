@@ -112,11 +112,8 @@ let _cached_decoder_for_AltName: $.ASN1Decoder<AltName> | null = null;
 export function _decode_AltName(el: _Element) {
     if (!_cached_decoder_for_AltName) {
         _cached_decoder_for_AltName = function (el: _Element): AltName {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let altnameType!: AltNameType;
             let altNameValue: OPTIONAL<GeneralName>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 altnameType: (_el: _Element): void => {
                     altnameType = _decode_AltNameType(_el);
@@ -125,7 +122,6 @@ export function _decode_AltName(el: _Element) {
                     altNameValue = _decode_GeneralName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -135,7 +131,7 @@ export function _decode_AltName(el: _Element) {
                 undefined
             );
             return new AltName(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ altnameType,
+                altnameType,
                 altNameValue
             );
         };

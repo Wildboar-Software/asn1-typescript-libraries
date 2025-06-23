@@ -139,11 +139,8 @@ export function _decode_ResourceBoundaryTestInfo(el: _Element) {
         _cached_decoder_for_ResourceBoundaryTestInfo = function (
             el: _Element
         ): ResourceBoundaryTestInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let resultReportIndicator: OPTIONAL<ResultReportIndicator>;
             let sequenceOfEvents: OPTIONAL<SequenceOfEvents>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 resultReportIndicator: (_el: _Element): void => {
                     resultReportIndicator = $._decode_implicit<ResultReportIndicator>(
@@ -156,7 +153,6 @@ export function _decode_ResourceBoundaryTestInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -165,7 +161,7 @@ export function _decode_ResourceBoundaryTestInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ResourceBoundaryTestInfo,
                 undefined
             );
-            return new ResourceBoundaryTestInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ResourceBoundaryTestInfo (
                 resultReportIndicator,
                 sequenceOfEvents
             );

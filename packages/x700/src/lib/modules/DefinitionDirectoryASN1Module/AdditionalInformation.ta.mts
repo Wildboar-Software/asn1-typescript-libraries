@@ -122,11 +122,8 @@ export function _decode_AdditionalInformation(el: _Element) {
         _cached_decoder_for_AdditionalInformation = function (
             el: _Element
         ): AdditionalInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let creationDate: OPTIONAL<GeneralizedTime>;
             let comment: OPTIONAL<GraphicString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 creationDate: (_el: _Element): void => {
                     creationDate = $._decodeGeneralizedTime(_el);
@@ -135,7 +132,6 @@ export function _decode_AdditionalInformation(el: _Element) {
                     comment = $._decodeGraphicString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -144,7 +140,7 @@ export function _decode_AdditionalInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_AdditionalInformation,
                 undefined
             );
-            return new AdditionalInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AdditionalInformation (
                 creationDate,
                 comment
             );

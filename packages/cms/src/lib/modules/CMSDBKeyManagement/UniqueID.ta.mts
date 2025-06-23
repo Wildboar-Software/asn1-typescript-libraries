@@ -114,11 +114,8 @@ let _cached_decoder_for_UniqueID: $.ASN1Decoder<UniqueID> | null = null;
 export function _decode_UniqueID(el: _Element) {
     if (!_cached_decoder_for_UniqueID) {
         _cached_decoder_for_UniqueID = function (el: _Element): UniqueID {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: OBJECT_IDENTIFIER;
             let type_: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = $._decodeObjectIdentifier(_el);
@@ -127,7 +124,6 @@ export function _decode_UniqueID(el: _Element) {
                     type_ = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -136,7 +132,7 @@ export function _decode_UniqueID(el: _Element) {
                 _root_component_type_list_2_spec_for_UniqueID,
                 undefined
             );
-            return new UniqueID /* SEQUENCE_CONSTRUCTOR_CALL */(name, type_);
+            return new UniqueID (name, type_);
         };
     }
     return _cached_decoder_for_UniqueID(el);

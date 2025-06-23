@@ -224,7 +224,6 @@ export function _decode_JoinArgument(el: _Element) {
         _cached_decoder_for_JoinArgument = function (
             el: _Element
         ): JoinArgument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let joinBaseObject!: Name;
             let domainLocalID: OPTIONAL<DomainLocalID>;
             let joinSubset: OPTIONAL<JoinArgument_joinSubset> =
@@ -233,8 +232,6 @@ export function _decode_JoinArgument(el: _Element) {
             let joinAttributes: OPTIONAL<JoinAttPair[]>;
             let joinSelection!: EntryInformationSelection;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 joinBaseObject: (_el: _Element): void => {
                     joinBaseObject = $._decode_explicit<Name>(
@@ -269,7 +266,6 @@ export function _decode_JoinArgument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -281,7 +277,7 @@ export function _decode_JoinArgument(el: _Element) {
                 }
             );
             return new JoinArgument(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ joinBaseObject,
+                joinBaseObject,
                 domainLocalID,
                 joinSubset,
                 joinFilter,

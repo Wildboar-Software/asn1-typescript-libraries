@@ -162,14 +162,11 @@ export function _decode_DeleteRequest(el: _Element) {
         _cached_decoder_for_DeleteRequest = function (
             el: _Element
         ): DeleteRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let serviceId!: OBJECT_IDENTIFIER;
             let invokId!: INTEGER;
             let object!: DistinguishedName;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -190,7 +187,6 @@ export function _decode_DeleteRequest(el: _Element) {
                     object = _decode_DistinguishedName(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -201,7 +197,7 @@ export function _decode_DeleteRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new DeleteRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DeleteRequest (
                 attrCerts,
                 serviceId,
                 invokId,

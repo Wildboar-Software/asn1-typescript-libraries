@@ -122,11 +122,8 @@ let _cached_decoder_for_ActionInfo: $.ASN1Decoder<ActionInfo> | null = null;
 export function _decode_ActionInfo(el: _Element) {
   if (!_cached_decoder_for_ActionInfo) {
     _cached_decoder_for_ActionInfo = function (el: _Element): ActionInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let actionType!: ActionTypeId;
       let actionInfoArg: OPTIONAL<_Element>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         actionType: (_el: _Element): void => {
           actionType = _decode_ActionTypeId(_el);
@@ -135,7 +132,6 @@ export function _decode_ActionInfo(el: _Element) {
           actionInfoArg = $._decode_explicit<_Element>(() => $._decodeAny)(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -144,7 +140,7 @@ export function _decode_ActionInfo(el: _Element) {
         _root_component_type_list_2_spec_for_ActionInfo,
         undefined
       );
-      return new ActionInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new ActionInfo (
         actionType,
         actionInfoArg
       );

@@ -231,7 +231,6 @@ export function _decode_CommonCertificateAttributes(el: _Element) {
         _cached_decoder_for_CommonCertificateAttributes = function (
             el: _Element
         ): CommonCertificateAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let iD!: Identifier;
             let authority: OPTIONAL<BOOLEAN> =
                 CommonCertificateAttributes._default_value_for_authority;
@@ -242,8 +241,6 @@ export function _decode_CommonCertificateAttributes(el: _Element) {
             let implicitTrust: OPTIONAL<BOOLEAN> =
                 CommonCertificateAttributes._default_value_for_implicitTrust;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 iD: (_el: _Element): void => {
                     iD = _decode_Identifier(_el);
@@ -278,7 +275,6 @@ export function _decode_CommonCertificateAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -290,7 +286,7 @@ export function _decode_CommonCertificateAttributes(el: _Element) {
                 }
             );
             return new CommonCertificateAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ iD,
+                iD,
                 authority,
                 identifier,
                 certHash,

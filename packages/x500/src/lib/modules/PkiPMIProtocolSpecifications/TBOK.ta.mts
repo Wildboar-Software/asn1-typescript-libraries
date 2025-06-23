@@ -145,14 +145,11 @@ let _cached_decoder_for_TBOK: $.ASN1Decoder<TBOK> | null = null;
 export function _decode_TBOK(el: _Element) {
     if (!_cached_decoder_for_TBOK) {
         _cached_decoder_for_TBOK = function (el: _Element): TBOK {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let levelOfAssurance!: INTEGER;
             let confidenceLevel!: INTEGER;
             let validationTime!: UTCTime;
             let info: OPTIONAL<UTF8String>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 levelOfAssurance: (_el: _Element): void => {
                     levelOfAssurance = $._decode_explicit<INTEGER>(
@@ -173,7 +170,6 @@ export function _decode_TBOK(el: _Element) {
                     info = $._decodeUTF8String(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -185,7 +181,7 @@ export function _decode_TBOK(el: _Element) {
                 }
             );
             return new TBOK(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ levelOfAssurance,
+                levelOfAssurance,
                 confidenceLevel,
                 validationTime,
                 info,

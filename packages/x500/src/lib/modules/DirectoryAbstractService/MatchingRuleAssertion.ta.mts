@@ -164,15 +164,12 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
         _cached_decoder_for_MatchingRuleAssertion = function (
             el: _Element
         ): MatchingRuleAssertion {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let matchingRule!: OBJECT_IDENTIFIER[];
             let type_: OPTIONAL<AttributeType>;
             let matchValue!: _Element;
             let dnAttributes: OPTIONAL<BOOLEAN> =
                 MatchingRuleAssertion._default_value_for_dnAttributes;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 matchingRule: (_el: _Element): void => {
                     matchingRule = $._decode_explicit<OBJECT_IDENTIFIER[]>(() =>
@@ -197,7 +194,6 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -209,7 +205,7 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
                 }
             );
             return new MatchingRuleAssertion(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ matchingRule,
+                matchingRule,
                 type_,
                 matchValue,
                 dnAttributes,

@@ -116,11 +116,8 @@ export function _decode_TestDuration_signalLength(el: _Element) {
         _cached_decoder_for_TestDuration_signalLength = function (
             el: _Element
         ): TestDuration_signalLength {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let size!: INTEGER;
             let dataRate: OPTIONAL<DataRate>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 size: (_el: _Element): void => {
                     size = $._decodeInteger(_el);
@@ -129,7 +126,6 @@ export function _decode_TestDuration_signalLength(el: _Element) {
                     dataRate = _decode_DataRate(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -138,7 +134,7 @@ export function _decode_TestDuration_signalLength(el: _Element) {
                 _root_component_type_list_2_spec_for_TestDuration_signalLength,
                 undefined
             );
-            return new TestDuration_signalLength /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestDuration_signalLength (
                 size,
                 dataRate
             );

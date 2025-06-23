@@ -140,12 +140,9 @@ let _cached_decoder_for_MLData: $.ASN1Decoder<MLData> | null = null;
 export function _decode_MLData(el: _Element) {
     if (!_cached_decoder_for_MLData) {
         _cached_decoder_for_MLData = function (el: _Element): MLData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let mailListIdentifier!: EntityIdentifier;
             let expansionTime!: GeneralizedTime;
             let mlReceiptPolicy: OPTIONAL<MLReceiptPolicy>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 mailListIdentifier: (_el: _Element): void => {
                     mailListIdentifier = _decode_EntityIdentifier(_el);
@@ -157,7 +154,6 @@ export function _decode_MLData(el: _Element) {
                     mlReceiptPolicy = _decode_MLReceiptPolicy(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -167,7 +163,7 @@ export function _decode_MLData(el: _Element) {
                 undefined
             );
             return new MLData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ mailListIdentifier,
+                mailListIdentifier,
                 expansionTime,
                 mlReceiptPolicy
             );

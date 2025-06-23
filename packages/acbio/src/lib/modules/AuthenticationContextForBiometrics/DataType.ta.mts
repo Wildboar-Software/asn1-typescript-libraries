@@ -145,11 +145,8 @@ let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
 export function _decode_DataType(el: _Element) {
     if (!_cached_decoder_for_DataType) {
         _cached_decoder_for_DataType = function (el: _Element): DataType {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let processedLevel!: ProcessedLevel;
             let purpose: OPTIONAL<Purpose>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 processedLevel: (_el: _Element): void => {
                     processedLevel = _decode_ProcessedLevel(_el);
@@ -158,7 +155,6 @@ export function _decode_DataType(el: _Element) {
                     purpose = _decode_Purpose(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -167,7 +163,7 @@ export function _decode_DataType(el: _Element) {
                 _root_component_type_list_2_spec_for_DataType,
                 undefined
             );
-            return new DataType /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DataType (
                 processedLevel,
                 purpose
             );

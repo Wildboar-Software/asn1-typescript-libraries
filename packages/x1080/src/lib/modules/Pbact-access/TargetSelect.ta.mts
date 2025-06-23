@@ -143,12 +143,9 @@ export function _decode_TargetSelect(el: _Element) {
         _cached_decoder_for_TargetSelect = function (
             el: _Element
         ): TargetSelect {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let objOper: OPTIONAL<ObjectOperations>;
             let attrSel: OPTIONAL<AttributeSel>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 objOper: (_el: _Element): void => {
                     objOper = _decode_ObjectOperations(_el);
@@ -157,7 +154,6 @@ export function _decode_TargetSelect(el: _Element) {
                     attrSel = _decode_AttributeSel(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_TargetSelect(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TargetSelect /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TargetSelect (
                 objOper,
                 attrSel,
                 _unrecognizedExtensionsList

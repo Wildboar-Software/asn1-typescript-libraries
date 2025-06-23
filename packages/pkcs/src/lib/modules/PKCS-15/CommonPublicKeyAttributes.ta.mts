@@ -132,12 +132,9 @@ export function _decode_CommonPublicKeyAttributes(el: _Element) {
         _cached_decoder_for_CommonPublicKeyAttributes = function (
             el: _Element
         ): CommonPublicKeyAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subjectName: OPTIONAL<Name>;
             let trustedUsage: OPTIONAL<Usage>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subjectName: (_el: _Element): void => {
                     subjectName = _decode_Name(_el);
@@ -148,7 +145,6 @@ export function _decode_CommonPublicKeyAttributes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_CommonPublicKeyAttributes(el: _Element) {
                 }
             );
             return new CommonPublicKeyAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ subjectName,
+                subjectName,
                 trustedUsage,
                 _unrecognizedExtensionsList
             );

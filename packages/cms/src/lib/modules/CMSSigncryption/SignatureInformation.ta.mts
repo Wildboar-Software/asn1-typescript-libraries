@@ -164,13 +164,10 @@ export function _decode_SignatureInformation(el: _Element) {
         _cached_decoder_for_SignatureInformation = function (
             el: _Element
         ): SignatureInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signerIdentifier: OPTIONAL<SignerIdentifier>;
             let signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>;
             let toBeSigned!: ToBeSigned;
             let signatureValue!: SignatureValue;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 signerIdentifier: (_el: _Element): void => {
                     signerIdentifier = _decode_SignerIdentifier(_el);
@@ -187,7 +184,6 @@ export function _decode_SignatureInformation(el: _Element) {
                     signatureValue = _decode_SignatureValue(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -196,7 +192,7 @@ export function _decode_SignatureInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_SignatureInformation,
                 undefined
             );
-            return new SignatureInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new SignatureInformation (
                 signerIdentifier,
                 signatureAlgorithm,
                 toBeSigned,

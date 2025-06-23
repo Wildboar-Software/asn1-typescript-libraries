@@ -175,14 +175,11 @@ export function _decode_F_TRANSFER_END_request(el: _Element) {
     _cached_decoder_for_F_TRANSFER_END_request = function (
       el: _Element
     ): F_TRANSFER_END_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
       let request_type: OPTIONAL<Request_Type>;
       let transfer_number: OPTIONAL<INTEGER>;
       let last_transfer_end_read_response: OPTIONAL<INTEGER>;
       let last_transfer_end_write_response: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'shared-ASE-information': (_el: _Element): void => {
           shared_ASE_information = _decode_Shared_ASE_Information(_el);
@@ -206,7 +203,6 @@ export function _decode_F_TRANSFER_END_request(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -215,7 +211,7 @@ export function _decode_F_TRANSFER_END_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_TRANSFER_END_request,
         undefined
       );
-      return new F_TRANSFER_END_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_TRANSFER_END_request (
         shared_ASE_information,
         request_type,
         transfer_number,

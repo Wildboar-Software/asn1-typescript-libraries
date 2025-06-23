@@ -226,7 +226,6 @@ export function _decode_MasterOrShadowAccessPoint(el: _Element) {
                 MasterOrShadowAccessPoint._default_value_for_chainingRequired;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "ae-title": (_el: _Element): void => {
                     ae_title = $._decode_explicit<Name>(() => _decode_Name)(
@@ -258,7 +257,6 @@ export function _decode_MasterOrShadowAccessPoint(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

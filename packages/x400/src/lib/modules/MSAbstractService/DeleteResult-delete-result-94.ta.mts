@@ -131,7 +131,6 @@ export function _decode_DeleteResult_delete_result_94(el: _Element) {
             let entries_deleted: OPTIONAL<SequenceNumber[]>;
             let delete_result_extensions: OPTIONAL<MSExtensions>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'entries-deleted': (_el: _Element): void => {
                     entries_deleted = $._decode_explicit<SequenceNumber[]>(() =>
@@ -146,7 +145,6 @@ export function _decode_DeleteResult_delete_result_94(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

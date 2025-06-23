@@ -129,11 +129,8 @@ export function _decode_ARU_PPDU_normal_mode_parameters(el: _Element) {
         _cached_decoder_for_ARU_PPDU_normal_mode_parameters = function (
             el: _Element
         ): ARU_PPDU_normal_mode_parameters {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let presentation_context_identifier_list: OPTIONAL<Presentation_context_identifier_list>;
             let user_data: OPTIONAL<User_data>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'presentation-context-identifier-list': (
                     _el: _Element
@@ -146,7 +143,6 @@ export function _decode_ARU_PPDU_normal_mode_parameters(el: _Element) {
                     user_data = _decode_User_data(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -155,7 +151,7 @@ export function _decode_ARU_PPDU_normal_mode_parameters(el: _Element) {
                 _root_component_type_list_2_spec_for_ARU_PPDU_normal_mode_parameters,
                 undefined
             );
-            return new ARU_PPDU_normal_mode_parameters /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ARU_PPDU_normal_mode_parameters (
                 presentation_context_identifier_list,
                 user_data
             );

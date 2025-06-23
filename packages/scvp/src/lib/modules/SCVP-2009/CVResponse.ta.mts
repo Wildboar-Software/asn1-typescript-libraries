@@ -295,7 +295,6 @@ let _cached_decoder_for_CVResponse: $.ASN1Decoder<CVResponse> | null = null;
 export function _decode_CVResponse(el: _Element) {
   if (!_cached_decoder_for_CVResponse) {
     _cached_decoder_for_CVResponse = function (el: _Element): CVResponse {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let cvResponseVersion!: INTEGER;
       let serverConfigurationID!: INTEGER;
       let producedAt!: GeneralizedTime;
@@ -309,8 +308,6 @@ export function _decode_CVResponse(el: _Element) {
       let serverContextInfo: OPTIONAL<OCTET_STRING>;
       let cvResponseExtensions: OPTIONAL<Extensions>;
       let requestorText: OPTIONAL<UTF8String>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         cvResponseVersion: (_el: _Element): void => {
           cvResponseVersion = $._decodeInteger(_el);
@@ -370,7 +367,6 @@ export function _decode_CVResponse(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -379,7 +375,7 @@ export function _decode_CVResponse(el: _Element) {
         _root_component_type_list_2_spec_for_CVResponse,
         undefined
       );
-      return new CVResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CVResponse (
         cvResponseVersion,
         serverConfigurationID,
         producedAt,

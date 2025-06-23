@@ -142,12 +142,9 @@ let _cached_decoder_for_TBerror: $.ASN1Decoder<TBerror> | null = null;
 export function _decode_TBerror(el: _Element) {
     if (!_cached_decoder_for_TBerror) {
         _cached_decoder_for_TBerror = function (el: _Element): TBerror {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let code!: TBerror_code;
             let diagnostic: OPTIONAL<UTF8String>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 code: (_el: _Element): void => {
                     code = _decode_TBerror_code(_el);
@@ -156,7 +153,6 @@ export function _decode_TBerror(el: _Element) {
                     diagnostic = $._decodeUTF8String(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_TBerror(el: _Element) {
                 }
             );
             return new TBerror(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ code,
+                code,
                 diagnostic,
                 _unrecognizedExtensionsList
             );

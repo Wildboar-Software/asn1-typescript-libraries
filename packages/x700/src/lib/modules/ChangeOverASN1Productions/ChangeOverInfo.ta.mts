@@ -169,14 +169,11 @@ export function _decode_ChangeOverInfo(el: _Element) {
         _cached_decoder_for_ChangeOverInfo = function (
             el: _Element
         ): ChangeOverInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let primary!: ObjectInstance;
             let secondary: OPTIONAL<OptionalObject> =
                 ChangeOverInfo._default_value_for_secondary;
             let primaryChanges: OPTIONAL<ExpectedAttributeList>;
             let secondaryChanges: OPTIONAL<ExpectedAttributeList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 primary: (_el: _Element): void => {
                     primary = $._decode_explicit<ObjectInstance>(
@@ -199,7 +196,6 @@ export function _decode_ChangeOverInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -208,7 +204,7 @@ export function _decode_ChangeOverInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_ChangeOverInfo,
                 undefined
             );
-            return new ChangeOverInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ChangeOverInfo (
                 primary,
                 secondary,
                 primaryChanges,

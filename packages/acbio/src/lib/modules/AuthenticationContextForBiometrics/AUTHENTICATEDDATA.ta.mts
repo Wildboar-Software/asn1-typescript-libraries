@@ -245,7 +245,6 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
     _decode_EncapsulatedContentInfo: $.ASN1Decoder<EncapsulatedContentInfo>
 ) {
     return function (el: _Element): AUTHENTICATEDDATA<EncapsulatedContentInfo> {
-        /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let version!: CMSVersion;
         let originatorInfo: OPTIONAL<OriginatorInfo>;
         let recipientInfos!: RecipientInfos;
@@ -255,8 +254,6 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
         let authAttrs: OPTIONAL<AuthAttributes>;
         let mac!: MessageAuthenticationCode;
         let unauthAttrs: OPTIONAL<UnauthAttributes>;
-        /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-        /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             version: (_el: _Element): void => {
                 version = _decode_CMSVersion(_el);
@@ -294,7 +291,6 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
                 )(_el);
             },
         };
-        /* END_OF_CALLBACKS_MAP */
         $._parse_sequence(
             el,
             callbacks,
@@ -303,7 +299,7 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
             _root_component_type_list_2_spec_for_AUTHENTICATEDDATA,
             undefined
         );
-        return new AUTHENTICATEDDATA /* SEQUENCE_CONSTRUCTOR_CALL */(
+        return new AUTHENTICATEDDATA (
             version,
             originatorInfo,
             recipientInfos,

@@ -132,12 +132,9 @@ export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
   _decode_BaseType: $.ASN1Decoder<BaseType>
 ) {
   return function (el: _Element): PROTECTED_dirSign<BaseType> {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let baseType: OPTIONAL<BaseType>;
     let algorithmId!: AlgorithmIdentifier;
     let encipheredHash!: BIT_STRING;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
       baseType: (_el: _Element): void => {
         baseType = _decode_BaseType(_el);
@@ -149,7 +146,6 @@ export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
         encipheredHash = $._decodeBitString(_el);
       },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
       el,
       callbacks,
@@ -158,7 +154,7 @@ export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
       _root_component_type_list_2_spec_for_PROTECTED_dirSign,
       undefined
     );
-    return new PROTECTED_dirSign /* SEQUENCE_CONSTRUCTOR_CALL */(
+    return new PROTECTED_dirSign (
       baseType,
       algorithmId,
       encipheredHash

@@ -156,13 +156,10 @@ let _cached_decoder_for_ESSCertIDv2: $.ASN1Decoder<ESSCertIDv2> | null = null;
 export function _decode_ESSCertIDv2(el: _Element) {
     if (!_cached_decoder_for_ESSCertIDv2) {
         _cached_decoder_for_ESSCertIDv2 = function (el: _Element): ESSCertIDv2 {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let hashAlgorithm: OPTIONAL<AlgorithmIdentifier> =
                 ESSCertIDv2._default_value_for_hashAlgorithm;
             let certHash!: Hash;
             let issuerSerial: OPTIONAL<IssuerSerial>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 hashAlgorithm: (_el: _Element): void => {
                     hashAlgorithm = _decode_AlgorithmIdentifier(_el);
@@ -174,7 +171,6 @@ export function _decode_ESSCertIDv2(el: _Element) {
                     issuerSerial = _decode_IssuerSerial(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -184,7 +180,7 @@ export function _decode_ESSCertIDv2(el: _Element) {
                 undefined
             );
             return new ESSCertIDv2(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ hashAlgorithm,
+                hashAlgorithm,
                 certHash,
                 issuerSerial
             );

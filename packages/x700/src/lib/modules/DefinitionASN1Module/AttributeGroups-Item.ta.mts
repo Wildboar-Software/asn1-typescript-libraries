@@ -128,11 +128,8 @@ export function _decode_AttributeGroups_Item(el: _Element) {
         _cached_decoder_for_AttributeGroups_Item = function (
             el: _Element
         ): AttributeGroups_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let group!: TemplateLabel;
             let attributes: OPTIONAL<TemplateList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 group: (_el: _Element): void => {
                     group = _decode_TemplateLabel(_el);
@@ -141,7 +138,6 @@ export function _decode_AttributeGroups_Item(el: _Element) {
                     attributes = _decode_TemplateList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -150,7 +146,7 @@ export function _decode_AttributeGroups_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_AttributeGroups_Item,
                 undefined
             );
-            return new AttributeGroups_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AttributeGroups_Item (
                 group,
                 attributes
             );

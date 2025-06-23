@@ -147,13 +147,10 @@ export function _decode_ExpectedAttributeList_Item(el: _Element) {
         _cached_decoder_for_ExpectedAttributeList_Item = function (
             el: _Element
         ): ExpectedAttributeList_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let modifyOperator: OPTIONAL<ModifyOperator> =
                 ExpectedAttributeList_Item._default_value_for_modifyOperator;
             let attributeId!: AttributeId;
             let attributeValue: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 modifyOperator: (_el: _Element): void => {
                     modifyOperator = $._decode_implicit<ModifyOperator>(
@@ -171,7 +168,6 @@ export function _decode_ExpectedAttributeList_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -180,7 +176,7 @@ export function _decode_ExpectedAttributeList_Item(el: _Element) {
                 _root_component_type_list_2_spec_for_ExpectedAttributeList_Item,
                 undefined
             );
-            return new ExpectedAttributeList_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ExpectedAttributeList_Item (
                 modifyOperator,
                 attributeId,
                 attributeValue

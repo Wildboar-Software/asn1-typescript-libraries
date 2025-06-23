@@ -269,7 +269,6 @@ let _cached_decoder_for_KrbCredInfo: $.ASN1Decoder<KrbCredInfo> | null = null;
 export function _decode_KrbCredInfo(el: _Element) {
   if (!_cached_decoder_for_KrbCredInfo) {
     _cached_decoder_for_KrbCredInfo = function (el: _Element): KrbCredInfo {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let key!: EncryptionKey;
       let prealm: OPTIONAL<Realm>;
       let pname: OPTIONAL<PrincipalName>;
@@ -281,8 +280,6 @@ export function _decode_KrbCredInfo(el: _Element) {
       let srealm: OPTIONAL<Realm>;
       let sname: OPTIONAL<PrincipalName>;
       let caddr: OPTIONAL<HostAddresses>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         key: (_el: _Element): void => {
           key = $._decode_explicit<EncryptionKey>(() => _decode_EncryptionKey)(
@@ -336,7 +333,6 @@ export function _decode_KrbCredInfo(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -345,7 +341,7 @@ export function _decode_KrbCredInfo(el: _Element) {
         _root_component_type_list_2_spec_for_KrbCredInfo,
         undefined
       );
-      return new KrbCredInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new KrbCredInfo (
         key,
         prealm,
         pname,

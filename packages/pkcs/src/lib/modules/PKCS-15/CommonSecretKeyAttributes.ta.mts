@@ -117,17 +117,13 @@ export function _decode_CommonSecretKeyAttributes(el: _Element) {
         _cached_decoder_for_CommonSecretKeyAttributes = function (
             el: _Element
         ): CommonSecretKeyAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let keyLen: OPTIONAL<INTEGER>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 keyLen: (_el: _Element): void => {
                     keyLen = $._decodeInteger(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -139,7 +135,7 @@ export function _decode_CommonSecretKeyAttributes(el: _Element) {
                 }
             );
             return new CommonSecretKeyAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ keyLen,
+                keyLen,
                 _unrecognizedExtensionsList
             );
         };

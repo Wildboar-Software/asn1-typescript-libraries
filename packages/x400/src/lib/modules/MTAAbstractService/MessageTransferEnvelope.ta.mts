@@ -314,7 +314,6 @@ export function _decode_MessageTransferEnvelope(el: _Element) {
                 MessageTransferEnvelope._default_value_for_extensions;
             let per_recipient_fields!: PerRecipientMessageTransferFields[];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'message-identifier': (_el: _Element): void => {
                     message_identifier = _decode_MessageIdentifier(_el);
@@ -373,7 +372,6 @@ export function _decode_MessageTransferEnvelope(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

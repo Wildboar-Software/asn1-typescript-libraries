@@ -169,15 +169,12 @@ export function _decode_DeleteAvlReq(el: _Element) {
         _cached_decoder_for_DeleteAvlReq = function (
             el: _Element
         ): DeleteAvlReq {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let version: OPTIONAL<AVMPversion> =
                 DeleteAvlReq._default_value_for_version;
             let timeStamp!: GeneralizedTime;
             let sequence!: AVMPsequence;
             let avl_Id: OPTIONAL<AvlSerialNumber>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 version: (_el: _Element): void => {
                     version = _decode_AVMPversion(_el);
@@ -192,7 +189,6 @@ export function _decode_DeleteAvlReq(el: _Element) {
                     avl_Id = _decode_AvlSerialNumber(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -204,7 +200,7 @@ export function _decode_DeleteAvlReq(el: _Element) {
                 }
             );
             return new DeleteAvlReq(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+                version,
                 timeStamp,
                 sequence,
                 avl_Id,

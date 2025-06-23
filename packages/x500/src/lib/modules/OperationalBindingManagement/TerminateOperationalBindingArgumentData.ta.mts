@@ -194,15 +194,12 @@ export function _decode_TerminateOperationalBindingArgumentData(el: _Element) {
         _cached_decoder_for_TerminateOperationalBindingArgumentData = function (
             el: _Element
         ): TerminateOperationalBindingArgumentData {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let bindingType!: OBJECT_IDENTIFIER;
             let bindingID!: OperationalBindingID;
             let initiator: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>;
             let terminateAt: OPTIONAL<Time>;
             let securityParameters: OPTIONAL<SecurityParameters>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 bindingType: (_el: _Element): void => {
                     bindingType = $._decode_explicit<OBJECT_IDENTIFIER>(
@@ -230,7 +227,6 @@ export function _decode_TerminateOperationalBindingArgumentData(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -242,7 +238,7 @@ export function _decode_TerminateOperationalBindingArgumentData(el: _Element) {
                 }
             );
             return new TerminateOperationalBindingArgumentData(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ bindingType,
+                bindingType,
                 bindingID,
                 initiator,
                 terminateAt,

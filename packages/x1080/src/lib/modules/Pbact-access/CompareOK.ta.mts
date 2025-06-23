@@ -141,13 +141,10 @@ let _cached_decoder_for_CompareOK: $.ASN1Decoder<CompareOK> | null = null;
 export function _decode_CompareOK(el: _Element) {
     if (!_cached_decoder_for_CompareOK) {
         _cached_decoder_for_CompareOK = function (el: _Element): CompareOK {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let matched!: BOOLEAN;
             let matchedSubtype: OPTIONAL<BOOLEAN> =
                 CompareOK._default_value_for_matchedSubtype;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 matched: (_el: _Element): void => {
                     matched = $._decode_implicit<BOOLEAN>(
@@ -160,7 +157,6 @@ export function _decode_CompareOK(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -171,7 +167,7 @@ export function _decode_CompareOK(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new CompareOK /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new CompareOK (
                 matched,
                 matchedSubtype,
                 _unrecognizedExtensionsList

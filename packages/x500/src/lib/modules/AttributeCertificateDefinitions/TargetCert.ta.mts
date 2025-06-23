@@ -133,12 +133,9 @@ let _cached_decoder_for_TargetCert: $.ASN1Decoder<TargetCert> | null = null;
 export function _decode_TargetCert(el: _Element) {
     if (!_cached_decoder_for_TargetCert) {
         _cached_decoder_for_TargetCert = function (el: _Element): TargetCert {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let targetCertificate!: IssuerSerial;
             let targetName: OPTIONAL<GeneralName>;
             let certDigestInfo: OPTIONAL<ObjectDigestInfo>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 targetCertificate: (_el: _Element): void => {
                     targetCertificate = _decode_IssuerSerial(_el);
@@ -150,7 +147,6 @@ export function _decode_TargetCert(el: _Element) {
                     certDigestInfo = _decode_ObjectDigestInfo(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -160,7 +156,7 @@ export function _decode_TargetCert(el: _Element) {
                 undefined
             );
             return new TargetCert(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ targetCertificate,
+                targetCertificate,
                 targetName,
                 certDigestInfo
             );

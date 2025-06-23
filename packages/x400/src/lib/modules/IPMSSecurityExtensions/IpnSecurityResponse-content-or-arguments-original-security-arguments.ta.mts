@@ -153,7 +153,6 @@ export function _decode_IpnSecurityResponse_content_or_arguments_original_securi
             let original_message_origin_authentication_check: OPTIONAL<OriginalMessageOriginAuthenticationCheck>;
             let original_message_token: OPTIONAL<OriginalMessageToken>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'original-content-integrity-check': (_el: _Element): void => {
                     original_content_integrity_check = $._decode_implicit<OriginalContentIntegrityCheck>(
@@ -173,7 +172,6 @@ export function _decode_IpnSecurityResponse_content_or_arguments_original_securi
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

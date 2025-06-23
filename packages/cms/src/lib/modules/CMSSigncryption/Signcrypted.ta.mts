@@ -114,11 +114,8 @@ let _cached_decoder_for_Signcrypted: $.ASN1Decoder<Signcrypted> | null = null;
 export function _decode_Signcrypted(el: _Element) {
     if (!_cached_decoder_for_Signcrypted) {
         _cached_decoder_for_Signcrypted = function (el: _Element): Signcrypted {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let name!: OBJECT_IDENTIFIER;
             let parts: OPTIONAL<_Element>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 name: (_el: _Element): void => {
                     name = $._decodeObjectIdentifier(_el);
@@ -127,7 +124,6 @@ export function _decode_Signcrypted(el: _Element) {
                     parts = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -136,7 +132,7 @@ export function _decode_Signcrypted(el: _Element) {
                 _root_component_type_list_2_spec_for_Signcrypted,
                 undefined
             );
-            return new Signcrypted /* SEQUENCE_CONSTRUCTOR_CALL */(name, parts);
+            return new Signcrypted (name, parts);
         };
     }
     return _cached_decoder_for_Signcrypted(el);

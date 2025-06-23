@@ -132,7 +132,6 @@ export function _decode_NonDeliveryReport(el: _Element) {
             let non_delivery_reason_code!: NonDeliveryReasonCode;
             let non_delivery_diagnostic_code: OPTIONAL<NonDeliveryDiagnosticCode>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'non-delivery-reason-code': (_el: _Element): void => {
                     non_delivery_reason_code = $._decode_implicit<NonDeliveryReasonCode>(
@@ -145,7 +144,6 @@ export function _decode_NonDeliveryReport(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

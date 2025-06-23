@@ -143,12 +143,9 @@ export function _decode_PatientIdentification(el: _Element) {
         _cached_decoder_for_PatientIdentification = function (
             el: _Element
         ): PatientIdentification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scheme!: OBJECT_IDENTIFIER;
             let schemeName: OPTIONAL<SchemeName>;
             let patientId!: _Element;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scheme: (_el: _Element): void => {
                     scheme = $._decodeObjectIdentifier(_el);
@@ -160,7 +157,6 @@ export function _decode_PatientIdentification(el: _Element) {
                     patientId = $._decodeAny(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -169,7 +165,7 @@ export function _decode_PatientIdentification(el: _Element) {
                 _root_component_type_list_2_spec_for_PatientIdentification,
                 undefined
             );
-            return new PatientIdentification /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new PatientIdentification (
                 scheme,
                 schemeName,
                 patientId

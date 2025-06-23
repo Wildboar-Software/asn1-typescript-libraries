@@ -137,12 +137,9 @@ let _cached_decoder_for_Signature: $.ASN1Decoder<Signature> | null = null;
 export function _decode_Signature(el: _Element) {
     if (!_cached_decoder_for_Signature) {
         _cached_decoder_for_Signature = function (el: _Element): Signature {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let signatureAlgorithm!: AlgorithmIdentifier;
             let signature!: BIT_STRING;
             let certs: OPTIONAL<Certificate[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 signatureAlgorithm: (_el: _Element): void => {
                     signatureAlgorithm = _decode_AlgorithmIdentifier(_el);
@@ -158,7 +155,6 @@ export function _decode_Signature(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -168,7 +164,7 @@ export function _decode_Signature(el: _Element) {
                 undefined
             );
             return new Signature(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ signatureAlgorithm,
+                signatureAlgorithm,
                 signature,
                 certs
             );

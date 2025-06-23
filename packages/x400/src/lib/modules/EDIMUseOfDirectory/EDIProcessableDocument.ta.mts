@@ -218,7 +218,6 @@ export function _decode_EDIProcessableDocument(el: _Element) {
         _cached_decoder_for_EDIProcessableDocument = function (
             el: _Element
         ): EDIProcessableDocument {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let standardVersion: OPTIONAL<SyntaxVersion>;
             let standardSyntaxId: OPTIONAL<SyntaxIdentifier>;
             let documentType: OPTIONAL<EDIMessageTypeFieldSubField>;
@@ -226,8 +225,6 @@ export function _decode_EDIProcessableDocument(el: _Element) {
             let documentRelease: OPTIONAL<DocumentRelease>;
             let controllingAgency: OPTIONAL<ControllingAgency>;
             let associationAssignedCode: OPTIONAL<AssociationAssignedCode>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 standardVersion: (_el: _Element): void => {
                     standardVersion = $._decode_implicit<SyntaxVersion>(
@@ -265,7 +262,6 @@ export function _decode_EDIProcessableDocument(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -274,7 +270,7 @@ export function _decode_EDIProcessableDocument(el: _Element) {
                 _root_component_type_list_2_spec_for_EDIProcessableDocument,
                 undefined
             );
-            return new EDIProcessableDocument /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDIProcessableDocument (
                 standardVersion,
                 standardSyntaxId,
                 documentType,

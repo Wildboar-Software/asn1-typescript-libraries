@@ -110,7 +110,6 @@ export function _decode_auto_action_request_error_ParameterType(el: _Element) {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
             let problems!: auto_action_request_error_ParameterType_problems_Item[];
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 problems: (_el: _Element): void => {
                     problems = $._decode_explicit<
@@ -123,7 +122,6 @@ export function _decode_auto_action_request_error_ParameterType(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -130,11 +130,8 @@ export function _decode_Access_Control_Change_Attribute_actual_values(
     _cached_decoder_for_Access_Control_Change_Attribute_actual_values = function (
       el: _Element
     ): Access_Control_Change_Attribute_actual_values {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let insert_values: OPTIONAL<Access_Control_Element[]>;
       let delete_values: OPTIONAL<Access_Control_Element[]>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'insert-values': (_el: _Element): void => {
           insert_values = $._decode_implicit<Access_Control_Element[]>(() =>
@@ -151,7 +148,6 @@ export function _decode_Access_Control_Change_Attribute_actual_values(
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -160,7 +156,7 @@ export function _decode_Access_Control_Change_Attribute_actual_values(
         _root_component_type_list_2_spec_for_Access_Control_Change_Attribute_actual_values,
         undefined
       );
-      return new Access_Control_Change_Attribute_actual_values /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Access_Control_Change_Attribute_actual_values (
         insert_values,
         delete_values
       );

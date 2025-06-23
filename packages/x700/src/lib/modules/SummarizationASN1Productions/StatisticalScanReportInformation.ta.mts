@@ -224,7 +224,6 @@ export function _decode_StatisticalScanReportInformation(el: _Element) {
         _cached_decoder_for_StatisticalScanReportInformation = function (
             el: _Element
         ): StatisticalScanReportInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scanInitiationTime: OPTIONAL<GeneralizedTime>;
             let observationReportList: OPTIONAL<NonStatisticalReportInformation>;
             let algorithmOutputs!: AlgorithmOutputBuffer;
@@ -232,8 +231,6 @@ export function _decode_StatisticalScanReportInformation(el: _Element) {
             let incompleteScan: OPTIONAL<IncompleteScan>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scanInitiationTime: (_el: _Element): void => {
                     scanInitiationTime = $._decodeGeneralizedTime(_el);
@@ -269,7 +266,6 @@ export function _decode_StatisticalScanReportInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -278,7 +274,7 @@ export function _decode_StatisticalScanReportInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_StatisticalScanReportInformation,
                 undefined
             );
-            return new StatisticalScanReportInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new StatisticalScanReportInformation (
                 scanInitiationTime,
                 observationReportList,
                 algorithmOutputs,

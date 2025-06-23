@@ -151,7 +151,6 @@ export function _decode_RegistrationTypes(el: _Element) {
             let extended_registrations: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let restrict_message_groups: OPTIONAL<MessageGroupsRestriction>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 registrations: (_el: _Element): void => {
                     registrations = $._decode_explicit<RegistrationTypes_registrations>(
@@ -173,7 +172,6 @@ export function _decode_RegistrationTypes(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

@@ -327,7 +327,6 @@ export function _decode_F_OPEN_request(el: _Element) {
     _cached_decoder_for_F_OPEN_request = function (
       el: _Element
     ): F_OPEN_request {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let processing_mode: OPTIONAL<F_OPEN_request_processing_mode> =
         F_OPEN_request._default_value_for_processing_mode;
       let contents_type!: F_OPEN_request_contents_type;
@@ -342,8 +341,6 @@ export function _decode_F_OPEN_request(el: _Element) {
       let define_contexts: OPTIONAL<Abstract_Syntax_Name[]>;
       let degree_of_overlap: OPTIONAL<Degree_Of_Overlap>;
       let transfer_window: OPTIONAL<INTEGER>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'processing-mode': (_el: _Element): void => {
           processing_mode = $._decode_implicit<F_OPEN_request_processing_mode>(
@@ -397,7 +394,6 @@ export function _decode_F_OPEN_request(el: _Element) {
           );
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -406,7 +402,7 @@ export function _decode_F_OPEN_request(el: _Element) {
         _root_component_type_list_2_spec_for_F_OPEN_request,
         undefined
       );
-      return new F_OPEN_request /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new F_OPEN_request (
         processing_mode,
         contents_type,
         concurrency_control,

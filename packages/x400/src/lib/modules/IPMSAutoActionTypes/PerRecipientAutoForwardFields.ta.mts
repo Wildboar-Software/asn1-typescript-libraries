@@ -186,7 +186,6 @@ export function _decode_PerRecipientAutoForwardFields(el: _Element) {
             let extensions: OPTIONAL<ExtensionField[]> =
                 PerRecipientAutoForwardFields._default_value_for_extensions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'recipient-name': (_el: _Element): void => {
                     recipient_name = _decode_RecipientName(_el);
@@ -209,7 +208,6 @@ export function _decode_PerRecipientAutoForwardFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

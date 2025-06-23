@@ -115,11 +115,8 @@ export function _decode_UserAddress_x121(el: _Element) {
         _cached_decoder_for_UserAddress_x121 = function (
             el: _Element
         ): UserAddress_x121 {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let x121_address: OPTIONAL<NumericString>;
             let tsap_id: OPTIONAL<PrintableString>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'x121-address': (_el: _Element): void => {
                     x121_address = $._decodeNumericString(_el);
@@ -128,7 +125,6 @@ export function _decode_UserAddress_x121(el: _Element) {
                     tsap_id = $._decodePrintableString(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -137,7 +133,7 @@ export function _decode_UserAddress_x121(el: _Element) {
                 _root_component_type_list_2_spec_for_UserAddress_x121,
                 undefined
             );
-            return new UserAddress_x121 /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new UserAddress_x121 (
                 x121_address,
                 tsap_id
             );

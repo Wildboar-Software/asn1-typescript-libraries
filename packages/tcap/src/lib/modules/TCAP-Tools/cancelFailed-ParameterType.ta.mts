@@ -136,7 +136,6 @@ export function _decode_cancelFailed_ParameterType(el: _Element) {
       let problem!: CancelProblem;
       let invokeId!: $.Selection<TCInvokeIdSet, 'present'>;
       /* END_OF_SET_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         problem: (_el: _Element): void => {
           problem = $._decode_explicit<CancelProblem>(
@@ -149,7 +148,6 @@ export function _decode_cancelFailed_ParameterType(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_set(
         el,
         callbacks,

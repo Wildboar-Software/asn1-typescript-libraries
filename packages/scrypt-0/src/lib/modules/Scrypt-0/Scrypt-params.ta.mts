@@ -139,14 +139,11 @@ let _cached_decoder_for_Scrypt_params: $.ASN1Decoder<Scrypt_params> | null = nul
 export
 function _decode_Scrypt_params (el: _Element) {
     if (!_cached_decoder_for_Scrypt_params) { _cached_decoder_for_Scrypt_params = function (el: _Element): Scrypt_params {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let salt!: OCTET_STRING;
     let costParameter!: INTEGER;
     let blockSize!: INTEGER;
     let parallelizationParameter!: INTEGER;
     let keyLength: OPTIONAL<INTEGER>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "salt": (_el: _Element): void => { salt = $._decodeOctetString(_el); },
         "costParameter": (_el: _Element): void => { costParameter = $._decodeInteger(_el); },
@@ -154,14 +151,13 @@ function _decode_Scrypt_params (el: _Element) {
         "parallelizationParameter": (_el: _Element): void => { parallelizationParameter = $._decodeInteger(_el); },
         "keyLength": (_el: _Element): void => { keyLength = $._decodeInteger(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Scrypt_params,
         _extension_additions_list_spec_for_Scrypt_params,
         _root_component_type_list_2_spec_for_Scrypt_params,
         undefined,
     );
-    return new Scrypt_params( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new Scrypt_params( 
         salt,
         costParameter,
         blockSize,

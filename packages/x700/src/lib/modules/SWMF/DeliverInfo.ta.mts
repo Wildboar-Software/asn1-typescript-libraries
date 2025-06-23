@@ -181,14 +181,11 @@ let _cached_decoder_for_DeliverInfo: $.ASN1Decoder<DeliverInfo> | null = null;
 export function _decode_DeliverInfo(el: _Element) {
     if (!_cached_decoder_for_DeliverInfo) {
         _cached_decoder_for_DeliverInfo = function (el: _Element): DeliverInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let deliverId: OPTIONAL<DeliverId>;
             let targetSoftware!: DistributedSoftware[];
             let targetSystem: OPTIONAL<Destination>;
             let transferInfo: OPTIONAL<TransferInfo>;
             let additionalInfo: OPTIONAL<ManagementExtension[]>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 deliverId: (_el: _Element): void => {
                     deliverId = $._decode_explicit<DeliverId>(
@@ -219,7 +216,6 @@ export function _decode_DeliverInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -228,7 +224,7 @@ export function _decode_DeliverInfo(el: _Element) {
                 _root_component_type_list_2_spec_for_DeliverInfo,
                 undefined
             );
-            return new DeliverInfo /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DeliverInfo (
                 deliverId,
                 targetSoftware,
                 targetSystem,

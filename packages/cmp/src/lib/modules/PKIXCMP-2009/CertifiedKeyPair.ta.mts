@@ -153,12 +153,9 @@ export function _decode_CertifiedKeyPair(el: _Element) {
     _cached_decoder_for_CertifiedKeyPair = function (
       el: _Element
     ): CertifiedKeyPair {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let certOrEncCert!: CertOrEncCert;
       let privateKey: OPTIONAL<EncryptedValue>;
       let publicationInfo: OPTIONAL<PKIPublicationInfo>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         certOrEncCert: (_el: _Element): void => {
           certOrEncCert = _decode_CertOrEncCert(_el);
@@ -174,7 +171,6 @@ export function _decode_CertifiedKeyPair(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -183,7 +179,7 @@ export function _decode_CertifiedKeyPair(el: _Element) {
         _root_component_type_list_2_spec_for_CertifiedKeyPair,
         undefined
       );
-      return new CertifiedKeyPair /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new CertifiedKeyPair (
         certOrEncCert,
         privateKey,
         publicationInfo

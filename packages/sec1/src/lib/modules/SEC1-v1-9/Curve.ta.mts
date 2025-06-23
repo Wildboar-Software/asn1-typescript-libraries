@@ -125,25 +125,21 @@ let _cached_decoder_for_Curve: $.ASN1Decoder<Curve> | null = null;
 export
 function _decode_Curve (el: _Element) {
     if (!_cached_decoder_for_Curve) { _cached_decoder_for_Curve = function (el: _Element): Curve {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let a!: FieldElement;
     let b!: FieldElement;
     let seed: OPTIONAL<BIT_STRING>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "a": (_el: _Element): void => { a = _decode_FieldElement(_el); },
         "b": (_el: _Element): void => { b = _decode_FieldElement(_el); },
         "seed": (_el: _Element): void => { seed = $._decodeBitString(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Curve,
         _extension_additions_list_spec_for_Curve,
         _root_component_type_list_2_spec_for_Curve,
         undefined,
     );
-    return new Curve( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new Curve( 
         a,
         b,
         seed

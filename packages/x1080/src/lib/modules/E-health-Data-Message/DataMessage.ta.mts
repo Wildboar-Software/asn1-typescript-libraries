@@ -189,7 +189,6 @@ let _cached_decoder_for_DataMessage: $.ASN1Decoder<DataMessage> | null = null;
 export function _decode_DataMessage(el: _Element) {
     if (!_cached_decoder_for_DataMessage) {
         _cached_decoder_for_DataMessage = function (el: _Element): DataMessage {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let quantity!: OBJECT_IDENTIFIER;
             let unit: OPTIONAL<OBJECT_IDENTIFIER>;
             let symbol_: OPTIONAL<OBJECT_IDENTIFIER>;
@@ -197,8 +196,6 @@ export function _decode_DataMessage(el: _Element) {
             let value!: REAL;
             let normalValues: OPTIONAL<NormalValues>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 quantity: (_el: _Element): void => {
                     quantity = $._decodeObjectIdentifier(_el);
@@ -219,7 +216,6 @@ export function _decode_DataMessage(el: _Element) {
                     normalValues = _decode_NormalValues(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -230,7 +226,7 @@ export function _decode_DataMessage(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new DataMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DataMessage (
                 quantity,
                 unit,
                 symbol_,

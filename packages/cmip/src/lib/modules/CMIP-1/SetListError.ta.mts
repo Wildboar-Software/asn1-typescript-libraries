@@ -172,14 +172,11 @@ let _cached_decoder_for_SetListError: $.ASN1Decoder<SetListError> | null = null;
 export function _decode_SetListError(el: _Element) {
   if (!_cached_decoder_for_SetListError) {
     _cached_decoder_for_SetListError = function (el: _Element): SetListError {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let currentTime: OPTIONAL<GeneralizedTime>;
       let setInfoList!: SetInfoStatus[];
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -198,7 +195,6 @@ export function _decode_SetListError(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -209,7 +205,7 @@ export function _decode_SetListError(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new SetListError /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new SetListError (
         managedObjectClass,
         managedObjectInstance,
         currentTime,

@@ -158,14 +158,11 @@ export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] =
  * @returns {Extension} The decoded data structure.
  */
 export function _decode_Extension(el: _Element): Extension {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let extnId!: OBJECT_IDENTIFIER;
     let critical: OPTIONAL<BOOLEAN> =
         Extension._default_value_for_critical;
     let extnValue!: OCTET_STRING;
     let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         extnId: (_el: _Element): void => {
             extnId = $._decodeObjectIdentifier(_el);
@@ -177,7 +174,6 @@ export function _decode_Extension(el: _Element): Extension {
             extnValue = $._decodeOctetString(_el);
         },
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(
         el,
         callbacks,
@@ -189,7 +185,7 @@ export function _decode_Extension(el: _Element): Extension {
         }
     );
     return new Extension(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ extnId,
+        extnId,
         critical,
         extnValue,
         _unrecognizedExtensionsList

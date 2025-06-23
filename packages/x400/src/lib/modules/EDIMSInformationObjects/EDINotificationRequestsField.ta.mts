@@ -176,15 +176,12 @@ export function _decode_EDINotificationRequestsField(el: _Element) {
         _cached_decoder_for_EDINotificationRequestsField = function (
             el: _Element
         ): EDINotificationRequestsField {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let edi_notification_requests: OPTIONAL<EDINotificationRequests> =
                 EDINotificationRequestsField._default_value_for_edi_notification_requests;
             let edi_notification_security: OPTIONAL<EDINotificationSecurity> =
                 EDINotificationRequestsField._default_value_for_edi_notification_security;
             let edi_reception_security: OPTIONAL<EDIReceptionSecurity> =
                 EDINotificationRequestsField._default_value_for_edi_reception_security;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'edi-notification-requests': (_el: _Element): void => {
                     edi_notification_requests = $._decode_implicit<EDINotificationRequests>(
@@ -202,7 +199,6 @@ export function _decode_EDINotificationRequestsField(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -211,7 +207,7 @@ export function _decode_EDINotificationRequestsField(el: _Element) {
                 _root_component_type_list_2_spec_for_EDINotificationRequestsField,
                 undefined
             );
-            return new EDINotificationRequestsField /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new EDINotificationRequestsField (
                 edi_notification_requests,
                 edi_notification_security,
                 edi_reception_security

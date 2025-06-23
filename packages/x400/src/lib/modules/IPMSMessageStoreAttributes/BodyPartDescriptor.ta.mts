@@ -188,7 +188,6 @@ export function _decode_BodyPartDescriptor(el: _Element) {
         _cached_decoder_for_BodyPartDescriptor = function (
             el: _Element
         ): BodyPartDescriptor {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let data!: OBJECT_IDENTIFIER;
             let parameters: OPTIONAL<OBJECT_IDENTIFIER>;
             let this_child_entry: OPTIONAL<SequenceNumber>;
@@ -196,8 +195,6 @@ export function _decode_BodyPartDescriptor(el: _Element) {
             let size!: INTEGER;
             let processed: OPTIONAL<BOOLEAN> =
                 BodyPartDescriptor._default_value_for_processed;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 data: (_el: _Element): void => {
                     data = $._decode_implicit<OBJECT_IDENTIFIER>(
@@ -230,7 +227,6 @@ export function _decode_BodyPartDescriptor(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -239,7 +235,7 @@ export function _decode_BodyPartDescriptor(el: _Element) {
                 _root_component_type_list_2_spec_for_BodyPartDescriptor,
                 undefined
             );
-            return new BodyPartDescriptor /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new BodyPartDescriptor (
                 data,
                 parameters,
                 this_child_entry,

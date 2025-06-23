@@ -121,11 +121,8 @@ export function _decode_TestObjectResponse(el: _Element) {
         _cached_decoder_for_TestObjectResponse = function (
             el: _Element
         ): TestObjectResponse {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let tOName!: TOName;
             let tOAttributeList: OPTIONAL<AttributeList>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 tOName: (_el: _Element): void => {
                     tOName = _decode_TOName(_el);
@@ -134,7 +131,6 @@ export function _decode_TestObjectResponse(el: _Element) {
                     tOAttributeList = _decode_AttributeList(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_TestObjectResponse(el: _Element) {
                 _root_component_type_list_2_spec_for_TestObjectResponse,
                 undefined
             );
-            return new TestObjectResponse /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new TestObjectResponse (
                 tOName,
                 tOAttributeList
             );

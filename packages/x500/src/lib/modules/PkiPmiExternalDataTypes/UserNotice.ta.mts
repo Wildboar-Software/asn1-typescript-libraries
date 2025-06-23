@@ -120,11 +120,8 @@ let _cached_decoder_for_UserNotice: $.ASN1Decoder<UserNotice> | null = null;
 export function _decode_UserNotice(el: _Element) {
     if (!_cached_decoder_for_UserNotice) {
         _cached_decoder_for_UserNotice = function (el: _Element): UserNotice {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let noticeRef: OPTIONAL<NoticeReference>;
             let explicitText: OPTIONAL<DisplayText>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 noticeRef: (_el: _Element): void => {
                     noticeRef = _decode_NoticeReference(_el);
@@ -133,7 +130,6 @@ export function _decode_UserNotice(el: _Element) {
                     explicitText = _decode_DisplayText(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_UserNotice(el: _Element) {
                 undefined
             );
             return new UserNotice(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ noticeRef,
+                noticeRef,
                 explicitText
             );
         };

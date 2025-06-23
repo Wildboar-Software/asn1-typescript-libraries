@@ -182,14 +182,11 @@ let _cached_decoder_for_DeleteError: $.ASN1Decoder<DeleteError> | null = null;
 export function _decode_DeleteError(el: _Element) {
   if (!_cached_decoder_for_DeleteError) {
     _cached_decoder_for_DeleteError = function (el: _Element): DeleteError {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let managedObjectClass: OPTIONAL<ObjectClass>;
       let managedObjectInstance: OPTIONAL<ObjectInstance>;
       let currentTime: OPTIONAL<GeneralizedTime>;
       let deleteErrorInfo!: DeleteError_deleteErrorInfo;
       let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         managedObjectClass: (_el: _Element): void => {
           managedObjectClass = _decode_ObjectClass(_el);
@@ -208,7 +205,6 @@ export function _decode_DeleteError(el: _Element) {
           )(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -219,7 +215,7 @@ export function _decode_DeleteError(el: _Element) {
           _unrecognizedExtensionsList.push(ext);
         }
       );
-      return new DeleteError /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new DeleteError (
         managedObjectClass,
         managedObjectInstance,
         currentTime,

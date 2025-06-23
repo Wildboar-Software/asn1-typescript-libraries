@@ -175,7 +175,6 @@ export function _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1(
             let error!: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error;
             let securityParameters: OPTIONAL<SecurityParameters>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 versions: (_el: _Element): void => {
                     versions = $._decode_explicit<Versions>(
@@ -193,7 +192,6 @@ export function _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1(
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

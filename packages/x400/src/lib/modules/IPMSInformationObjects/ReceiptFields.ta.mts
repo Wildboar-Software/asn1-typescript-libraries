@@ -190,7 +190,6 @@ export function _decode_ReceiptFields(el: _Element) {
             let suppl_receipt_info: OPTIONAL<SupplReceiptInfoField>;
             let rn_extensions: OPTIONAL<RNExtensionsField>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'receipt-time': (_el: _Element): void => {
                     receipt_time = $._decode_implicit<ReceiptTimeField>(
@@ -213,7 +212,6 @@ export function _decode_ReceiptFields(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

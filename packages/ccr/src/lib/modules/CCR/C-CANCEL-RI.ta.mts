@@ -121,17 +121,13 @@ export function _decode_C_CANCEL_RI(el: _Element) {
     _cached_decoder_for_C_CANCEL_RI = $._decode_implicit<C_CANCEL_RI>(
       () =>
         function (el: _Element): C_CANCEL_RI {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_data: OPTIONAL<User_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'user-data': (_el: _Element): void => {
               user_data = _decode_User_data(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -142,7 +138,7 @@ export function _decode_C_CANCEL_RI(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new C_CANCEL_RI /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new C_CANCEL_RI (
             _unrecognizedExtensionsList,
             user_data
           );

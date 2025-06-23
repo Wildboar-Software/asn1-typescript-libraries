@@ -161,14 +161,11 @@ export function _decode_ActivityDuration_Item(el: _Element) {
         _cached_decoder_for_ActivityDuration_Item = function (
             el: _Element
         ): ActivityDuration_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let duration!: TimeInterval;
             let billable: OPTIONAL<BOOLEAN> =
                 ActivityDuration_Item._default_value_for_billable;
             let type_: OPTIONAL<ActivityType>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 duration: (_el: _Element): void => {
                     duration = $._decode_implicit<TimeInterval>(
@@ -186,7 +183,6 @@ export function _decode_ActivityDuration_Item(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -197,7 +193,7 @@ export function _decode_ActivityDuration_Item(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ActivityDuration_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ActivityDuration_Item (
                 duration,
                 billable,
                 type_,

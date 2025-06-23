@@ -178,15 +178,12 @@ let _cached_decoder_for_ReadRequest: $.ASN1Decoder<ReadRequest> | null = null;
 export function _decode_ReadRequest(el: _Element) {
     if (!_cached_decoder_for_ReadRequest) {
         _cached_decoder_for_ReadRequest = function (el: _Element): ReadRequest {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let attrCerts: OPTIONAL<AttributeCertificates>;
             let serviceId!: OBJECT_IDENTIFIER;
             let invokId!: INTEGER;
             let object!: DistinguishedName;
             let selection!: InformationSelection;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 attrCerts: (_el: _Element): void => {
                     attrCerts = $._decode_implicit<AttributeCertificates>(
@@ -214,7 +211,6 @@ export function _decode_ReadRequest(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -225,7 +221,7 @@ export function _decode_ReadRequest(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new ReadRequest /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ReadRequest (
                 attrCerts,
                 serviceId,
                 invokId,

@@ -254,7 +254,6 @@ export function _decode_PinAttributes(el: _Element) {
         _cached_decoder_for_PinAttributes = function (
             el: _Element
         ): PinAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pinFlags!: PinFlags;
             let pinType!: PinType;
             let minLength!: INTEGER;
@@ -266,8 +265,6 @@ export function _decode_PinAttributes(el: _Element) {
             let lastPinChange: OPTIONAL<GeneralizedTime>;
             let path: OPTIONAL<Path>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pinFlags: (_el: _Element): void => {
                     pinFlags = _decode_PinFlags(_el);
@@ -299,7 +296,6 @@ export function _decode_PinAttributes(el: _Element) {
                     path = _decode_Path(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -311,7 +307,7 @@ export function _decode_PinAttributes(el: _Element) {
                 }
             );
             return new PinAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ pinFlags,
+                pinFlags,
                 pinType,
                 minLength,
                 storedLength,

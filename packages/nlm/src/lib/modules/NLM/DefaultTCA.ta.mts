@@ -142,12 +142,9 @@ let _cached_decoder_for_DefaultTCA: $.ASN1Decoder<DefaultTCA> | null = null;
 export function _decode_DefaultTCA(el: _Element) {
     if (!_cached_decoder_for_DefaultTCA) {
         _cached_decoder_for_DefaultTCA = function (el: _Element): DefaultTCA {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subscription!: BOOLEAN;
             let supportedThroughClasses: OPTIONAL<INTEGER[]>;
             let selectedThroughputClasses: OPTIONAL<BidirectionalValues>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subscription: (_el: _Element): void => {
                     subscription = $._decode_implicit<BOOLEAN>(
@@ -165,7 +162,6 @@ export function _decode_DefaultTCA(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -174,7 +170,7 @@ export function _decode_DefaultTCA(el: _Element) {
                 _root_component_type_list_2_spec_for_DefaultTCA,
                 undefined
             );
-            return new DefaultTCA /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new DefaultTCA (
                 subscription,
                 supportedThroughClasses,
                 selectedThroughputClasses

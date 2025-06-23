@@ -152,7 +152,6 @@ export function _decode_ms_bind_error_ParameterType_qualified_error(
             let supplementary_information: OPTIONAL<GeneralString>;
             let bind_extension_errors: OPTIONAL<OBJECT_IDENTIFIER[]>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'bind-problem': (_el: _Element): void => {
                     bind_problem = $._decode_explicit<BindProblem>(
@@ -174,7 +173,6 @@ export function _decode_ms_bind_error_ParameterType_qualified_error(
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

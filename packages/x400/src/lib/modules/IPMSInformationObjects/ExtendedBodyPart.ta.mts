@@ -119,11 +119,8 @@ export function _decode_ExtendedBodyPart(el: _Element) {
         _cached_decoder_for_ExtendedBodyPart = function (
             el: _Element
         ): ExtendedBodyPart {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let parameters: OPTIONAL<INSTANCE_OF>;
             let data!: INSTANCE_OF;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 parameters: (_el: _Element): void => {
                     parameters = $._decode_implicit<INSTANCE_OF>(
@@ -134,7 +131,6 @@ export function _decode_ExtendedBodyPart(el: _Element) {
                     data = $._decodeInstanceOf(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -143,7 +139,7 @@ export function _decode_ExtendedBodyPart(el: _Element) {
                 _root_component_type_list_2_spec_for_ExtendedBodyPart,
                 undefined
             );
-            return new ExtendedBodyPart /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ExtendedBodyPart (
                 parameters,
                 data
             );

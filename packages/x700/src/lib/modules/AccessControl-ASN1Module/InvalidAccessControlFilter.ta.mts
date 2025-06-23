@@ -132,11 +132,8 @@ export function _decode_InvalidAccessControlFilter(el: _Element) {
         _cached_decoder_for_InvalidAccessControlFilter = function (
             el: _Element
         ): InvalidAccessControlFilter {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let errorId!: InvalidAccessControlFilter_errorId;
             let filter: OPTIONAL<CMISFilter>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 errorId: (_el: _Element): void => {
                     errorId = _decode_InvalidAccessControlFilter_errorId(_el);
@@ -145,7 +142,6 @@ export function _decode_InvalidAccessControlFilter(el: _Element) {
                     filter = _decode_CMISFilter(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -154,7 +150,7 @@ export function _decode_InvalidAccessControlFilter(el: _Element) {
                 _root_component_type_list_2_spec_for_InvalidAccessControlFilter,
                 undefined
             );
-            return new InvalidAccessControlFilter /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new InvalidAccessControlFilter (
                 errorId,
                 filter
             );

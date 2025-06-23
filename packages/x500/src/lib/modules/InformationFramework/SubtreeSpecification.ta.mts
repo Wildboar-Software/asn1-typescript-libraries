@@ -188,7 +188,6 @@ export function _decode_SubtreeSpecification(el: _Element) {
         _cached_decoder_for_SubtreeSpecification = function (
             el: _Element
         ): SubtreeSpecification {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let base: OPTIONAL<LocalName> =
                 SubtreeSpecification._default_value_for_base;
             let specificExclusions: OPTIONAL<
@@ -199,8 +198,6 @@ export function _decode_SubtreeSpecification(el: _Element) {
             let maximum: OPTIONAL<BaseDistance>;
             let specificationFilter: OPTIONAL<Refinement>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 base: (_el: _Element): void => {
                     base = $._decode_explicit<LocalName>(
@@ -233,7 +230,6 @@ export function _decode_SubtreeSpecification(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -245,7 +241,7 @@ export function _decode_SubtreeSpecification(el: _Element) {
                 }
             );
             return new SubtreeSpecification(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ base,
+                base,
                 specificExclusions,
                 minimum,
                 maximum,

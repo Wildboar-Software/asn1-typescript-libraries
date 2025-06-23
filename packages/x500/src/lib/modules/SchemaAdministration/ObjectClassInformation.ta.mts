@@ -170,15 +170,12 @@ export function _decode_ObjectClassInformation(el: _Element) {
         _cached_decoder_for_ObjectClassInformation = function (
             el: _Element
         ): ObjectClassInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let subclassOf: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let kind: OPTIONAL<ObjectClassKind> =
                 ObjectClassInformation._default_value_for_kind;
             let mandatories: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let optionals: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 subclassOf: (_el: _Element): void => {
                     subclassOf = $._decodeSetOf<OBJECT_IDENTIFIER>(
@@ -203,7 +200,6 @@ export function _decode_ObjectClassInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -215,7 +211,7 @@ export function _decode_ObjectClassInformation(el: _Element) {
                 }
             );
             return new ObjectClassInformation(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ subclassOf,
+                subclassOf,
                 kind,
                 mandatories,
                 optionals,

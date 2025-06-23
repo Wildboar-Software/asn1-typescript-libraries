@@ -154,7 +154,6 @@ export function _decode_UniversalPersonalName(el: _Element) {
             let initials: OPTIONAL<UniversalOrBMPString>;
             let generation_qualifier: OPTIONAL<UniversalOrBMPString>;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 surname: (_el: _Element): void => {
                     surname = $._decode_explicit<UniversalOrBMPString>(
@@ -177,7 +176,6 @@ export function _decode_UniversalPersonalName(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

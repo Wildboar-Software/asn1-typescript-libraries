@@ -199,15 +199,12 @@ export function _decode_ScanReportInformation(el: _Element) {
         _cached_decoder_for_ScanReportInformation = function (
             el: _Element
         ): ScanReportInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let scanInitiationTime: OPTIONAL<GeneralizedTime>;
             let onceReportAttributeList: OPTIONAL<OnceReportAttributeList>;
             let observationScanList!: ObservationScanList;
             let incompleteScan: OPTIONAL<IncompleteScan>;
             let additionalText: OPTIONAL<AdditionalText>;
             let additionalInformation: OPTIONAL<AdditionalInformation>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 scanInitiationTime: (_el: _Element): void => {
                     scanInitiationTime = $._decodeGeneralizedTime(_el);
@@ -236,7 +233,6 @@ export function _decode_ScanReportInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -245,7 +241,7 @@ export function _decode_ScanReportInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_ScanReportInformation,
                 undefined
             );
-            return new ScanReportInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new ScanReportInformation (
                 scanInitiationTime,
                 onceReportAttributeList,
                 observationScanList,

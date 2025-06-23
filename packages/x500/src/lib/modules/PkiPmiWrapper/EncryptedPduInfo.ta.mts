@@ -164,14 +164,11 @@ export function _decode_EncryptedPduInfo(el: _Element) {
         _cached_decoder_for_EncryptedPduInfo = function (
             el: _Element
         ): EncryptedPduInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let pduType!: OBJECT_IDENTIFIER;
             let encryptedKey: OPTIONAL<EncryptedKey>;
             let pduEncryptionAlgorithm: OPTIONAL<EncryptedPduInfo_pduEncryptionAlgorithm>;
             let encryptedPdu!: EncryptedPdu;
             let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 pduType: (_el: _Element): void => {
                     pduType = $._decodeObjectIdentifier(_el);
@@ -190,7 +187,6 @@ export function _decode_EncryptedPduInfo(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -202,7 +198,7 @@ export function _decode_EncryptedPduInfo(el: _Element) {
                 }
             );
             return new EncryptedPduInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ pduType,
+                pduType,
                 encryptedKey,
                 pduEncryptionAlgorithm,
                 encryptedPdu,

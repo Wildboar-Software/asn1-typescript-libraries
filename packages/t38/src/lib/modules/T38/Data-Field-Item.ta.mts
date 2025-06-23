@@ -133,11 +133,8 @@ export function _decode_Data_Field_Item(el: _Element) {
     _cached_decoder_for_Data_Field_Item = function (
       el: _Element
     ): Data_Field_Item {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
       let field_type!: Data_Field_Item_field_type;
       let field_data: OPTIONAL<OCTET_STRING>;
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
       const callbacks: $.DecodingMap = {
         'field-type': (_el: _Element): void => {
           field_type = _decode_Data_Field_Item_field_type(_el);
@@ -146,7 +143,6 @@ export function _decode_Data_Field_Item(el: _Element) {
           field_data = $._decodeOctetString(_el);
         },
       };
-      /* END_OF_CALLBACKS_MAP */
       $._parse_sequence(
         el,
         callbacks,
@@ -155,7 +151,7 @@ export function _decode_Data_Field_Item(el: _Element) {
         _root_component_type_list_2_spec_for_Data_Field_Item,
         undefined
       );
-      return new Data_Field_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
+      return new Data_Field_Item (
         field_type,
         field_data
       );

@@ -228,7 +228,6 @@ export function _decode_DomainSuppliedInformation(el: _Element) {
             let other_actions: OPTIONAL<OtherActions> =
                 DomainSuppliedInformation._default_value_for_other_actions;
             /* END_OF_SET_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'arrival-time': (_el: _Element): void => {
                     arrival_time = $._decode_implicit<ArrivalTime>(
@@ -261,7 +260,6 @@ export function _decode_DomainSuppliedInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_set(
                 el,
                 callbacks,

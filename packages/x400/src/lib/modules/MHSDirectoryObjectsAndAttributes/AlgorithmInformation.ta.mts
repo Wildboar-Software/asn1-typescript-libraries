@@ -141,12 +141,9 @@ export function _decode_AlgorithmInformation(el: _Element) {
         _cached_decoder_for_AlgorithmInformation = function (
             el: _Element
         ): AlgorithmInformation {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let algorithm_identifier!: AlgorithmIdentifier;
             let originator_certificate_selector: OPTIONAL<CertificateAssertion>;
             let recipient_certificate_selector: OPTIONAL<CertificateAssertion>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 'algorithm-identifier': (_el: _Element): void => {
                     algorithm_identifier = $._decode_implicit<AlgorithmIdentifier>(
@@ -164,7 +161,6 @@ export function _decode_AlgorithmInformation(el: _Element) {
                     )(_el);
                 },
             };
-            /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
                 el,
                 callbacks,
@@ -173,7 +169,7 @@ export function _decode_AlgorithmInformation(el: _Element) {
                 _root_component_type_list_2_spec_for_AlgorithmInformation,
                 undefined
             );
-            return new AlgorithmInformation /* SEQUENCE_CONSTRUCTOR_CALL */(
+            return new AlgorithmInformation (
                 algorithm_identifier,
                 originator_certificate_selector,
                 recipient_certificate_selector

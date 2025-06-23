@@ -166,13 +166,10 @@ export function _decode_C_NOCHANGE_RC(el: _Element) {
     _cached_decoder_for_C_NOCHANGE_RC = $._decode_implicit<C_NOCHANGE_RC>(
       () =>
         function (el: _Element): C_NOCHANGE_RC {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let outcome: OPTIONAL<C_NOCHANGE_RC_outcome> =
             C_NOCHANGE_RC._default_value_for_outcome;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_data: OPTIONAL<User_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             outcome: (_el: _Element): void => {
               outcome = $._decode_implicit<C_NOCHANGE_RC_outcome>(
@@ -183,7 +180,6 @@ export function _decode_C_NOCHANGE_RC(el: _Element) {
               user_data = _decode_User_data(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -194,7 +190,7 @@ export function _decode_C_NOCHANGE_RC(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new C_NOCHANGE_RC /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new C_NOCHANGE_RC (
             outcome,
             _unrecognizedExtensionsList,
             user_data

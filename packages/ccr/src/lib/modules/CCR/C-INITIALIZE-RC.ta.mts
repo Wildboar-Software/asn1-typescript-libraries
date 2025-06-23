@@ -218,7 +218,6 @@ export function _decode_C_INITIALIZE_RC(el: _Element) {
     _cached_decoder_for_C_INITIALIZE_RC = $._decode_implicit<C_INITIALIZE_RC>(
       () =>
         function (el: _Element): C_INITIALIZE_RC {
-          /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
           let version_number: OPTIONAL<C_INITIALIZE_RC_version_number> =
             C_INITIALIZE_RC._default_value_for_version_number;
           let ccr_requirements: OPTIONAL<Ccr_requirements> =
@@ -227,8 +226,6 @@ export function _decode_C_INITIALIZE_RC(el: _Element) {
             C_INITIALIZE_RC._default_value_for_ready_collision_reservation;
           let _unrecognizedExtensionsList: _Element[] = [];
           let user_data: OPTIONAL<User_data>;
-          /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-          /* START_OF_CALLBACKS_MAP */
           const callbacks: $.DecodingMap = {
             'version-number': (_el: _Element): void => {
               version_number = $._decode_implicit<C_INITIALIZE_RC_version_number>(
@@ -249,7 +246,6 @@ export function _decode_C_INITIALIZE_RC(el: _Element) {
               )(_el);
             },
           };
-          /* END_OF_CALLBACKS_MAP */
           $._parse_sequence(
             el,
             callbacks,
@@ -260,7 +256,7 @@ export function _decode_C_INITIALIZE_RC(el: _Element) {
               _unrecognizedExtensionsList.push(ext);
             }
           );
-          return new C_INITIALIZE_RC /* SEQUENCE_CONSTRUCTOR_CALL */(
+          return new C_INITIALIZE_RC (
             version_number,
             ccr_requirements,
             ready_collision_reservation,

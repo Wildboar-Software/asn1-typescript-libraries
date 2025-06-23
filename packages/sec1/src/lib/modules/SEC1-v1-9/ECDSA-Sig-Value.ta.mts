@@ -131,27 +131,23 @@ let _cached_decoder_for_ECDSA_Sig_Value: $.ASN1Decoder<ECDSA_Sig_Value> | null =
 export
 function _decode_ECDSA_Sig_Value (el: _Element) {
     if (!_cached_decoder_for_ECDSA_Sig_Value) { _cached_decoder_for_ECDSA_Sig_Value = function (el: _Element): ECDSA_Sig_Value {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
     let r!: INTEGER;
     let s!: INTEGER;
     let a: OPTIONAL<INTEGER>;
     let y: OPTIONAL<ECDSA_Sig_Value_y>;
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "r": (_el: _Element): void => { r = $._decodeInteger(_el); },
         "s": (_el: _Element): void => { s = $._decodeInteger(_el); },
         "a": (_el: _Element): void => { a = $._decodeInteger(_el); },
         "y": (_el: _Element): void => { y = _decode_ECDSA_Sig_Value_y(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ECDSA_Sig_Value,
         _extension_additions_list_spec_for_ECDSA_Sig_Value,
         _root_component_type_list_2_spec_for_ECDSA_Sig_Value,
         undefined,
     );
-    return new ECDSA_Sig_Value( /* SEQUENCE_CONSTRUCTOR_CALL */
+    return new ECDSA_Sig_Value( 
         r,
         s,
         a,
