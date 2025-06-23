@@ -48,7 +48,7 @@ let _cached_encoder_for_ScopeRestrictions: $.ASN1Encoder<ScopeRestrictions> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScopeRestrictions, encoded as an ASN.1 Element.
  */
-export function _encode_ScopeRestrictions(value: ScopeRestrictions, elGetter: $.ASN1Encoder<ScopeRestrictions>): _Element) {
+export function _encode_ScopeRestrictions(value: ScopeRestrictions, elGetter: $.ASN1Encoder<ScopeRestrictions>): _Element {
     if (!_cached_encoder_for_ScopeRestrictions) {
         _cached_encoder_for_ScopeRestrictions =
             $._encodeSequenceOf<ScopeRestriction>(
