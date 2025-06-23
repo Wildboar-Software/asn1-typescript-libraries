@@ -142,8 +142,7 @@ export function _decode_ScopeRestriction(el: _Element): ScopeRestriction {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScopeRestriction, encoded as an ASN.1 Element.
  */
-export function _encode_ScopeRestriction(
-    value: ScopeRestriction) {
+export function _encode_ScopeRestriction(value: ScopeRestriction): ScopeRestriction {
     const components: _Element[] = [
         $._encodeObjectIdentifier(value.id, $.BER),
         $._encodeAny(value.restriction, $.BER),

@@ -153,10 +153,8 @@ export function _decode_AttCertValidityPeriod(el: _Element): AttCertValidityPeri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttCertValidityPeriod, encoded as an ASN.1 Element.
  */
-export function _encode_AttCertValidityPeriod(
-    value: AttCertValidityPeriod,
-    _elGetter: $.ASN1Encoder<AttCertValidityPeriod>
-) {
+export function _encode_AttCertValidityPeriod(value: AttCertValidityPeriod,
+    _elGetter: $.ASN1Encoder<AttCertValidityPeriod>): AttCertValidityPeriod {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeGeneralizedTime(
             value.notBeforeTime,

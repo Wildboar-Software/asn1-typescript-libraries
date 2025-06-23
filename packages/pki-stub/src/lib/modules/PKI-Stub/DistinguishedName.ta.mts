@@ -39,10 +39,7 @@ export function _decode_DistinguishedName(el: _Element): DistinguishedName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DistinguishedName, encoded as an ASN.1 Element.
  */
-export function _encode_DistinguishedName(
-    value: DistinguishedName,
-    elGetter: $.ASN1Encoder<DistinguishedName>
-) {
+export function _encode_DistinguishedName(value: DistinguishedName, elGetter: $.ASN1Encoder<DistinguishedName>): DistinguishedName {
     return _encode_RDNSequence(value, elGetter);
 }
 

@@ -41,10 +41,7 @@ export function _decode_UniqueIdentifier(el: _Element): UniqueIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniqueIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_UniqueIdentifier(
-    value: UniqueIdentifier,
-    elGetter: $.ASN1Encoder<UniqueIdentifier>
-) {
+export function _encode_UniqueIdentifier(value: UniqueIdentifier, elGetter: $.ASN1Encoder<UniqueIdentifier>): UniqueIdentifier {
     return $._encodeBitString(value, elGetter);
 }
 

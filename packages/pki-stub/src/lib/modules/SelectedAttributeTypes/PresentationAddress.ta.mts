@@ -202,8 +202,7 @@ export function _decode_PresentationAddress(el: _Element): PresentationAddress {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PresentationAddress, encoded as an ASN.1 Element.
  */
-export function _encode_PresentationAddress(
-    value: PresentationAddress) {
+export function _encode_PresentationAddress(value: PresentationAddress) {
     const components: _Element[] = [];
     if (value.pSelector) {
         const c = $._encode_explicit(

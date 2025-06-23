@@ -55,10 +55,7 @@ let _cached_encoder_for_CountryName: $.ASN1Encoder<CountryName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CountryName, encoded as an ASN.1 Element.
  */
-export function _encode_CountryName(
-    value: CountryName,
-    elGetter: $.ASN1Encoder<CountryName>
-) {
+export function _encode_CountryName(value: CountryName, elGetter: $.ASN1Encoder<CountryName>): CountryName {
     if (!_cached_encoder_for_CountryName) {
         _cached_encoder_for_CountryName = $._encode_explicit(
             _TagClass.application,

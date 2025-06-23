@@ -54,10 +54,7 @@ let _cached_encoder_for_Extensions: $.ASN1Encoder<Extensions> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Extensions, encoded as an ASN.1 Element.
  */
-export function _encode_Extensions(
-    value: Extensions,
-    elGetter: $.ASN1Encoder<Extensions>
-) {
+export function _encode_Extensions(value: Extensions, elGetter: $.ASN1Encoder<Extensions>): Extensions {
     if (!_cached_encoder_for_Extensions) {
         _cached_encoder_for_Extensions = $._encodeSequenceOf<Extension>(
             () => _encode_Extension,

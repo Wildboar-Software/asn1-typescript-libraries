@@ -203,10 +203,7 @@ let _cached_encoder_for_PersonalName: $.ASN1Encoder<PersonalName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PersonalName, encoded as an ASN.1 Element.
  */
-export function _encode_PersonalName(
-    value: PersonalName,
-    elGetter: $.ASN1Encoder<PersonalName>
-) {
+export function _encode_PersonalName(value: PersonalName, elGetter: $.ASN1Encoder<PersonalName>): PersonalName {
     if (!_cached_encoder_for_PersonalName) {
         _cached_encoder_for_PersonalName = function (
             value: PersonalName        ): _Element {

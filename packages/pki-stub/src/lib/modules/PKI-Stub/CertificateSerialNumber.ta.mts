@@ -31,10 +31,7 @@ export function _decode_CertificateSerialNumber(el: _Element): CertificateSerial
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertificateSerialNumber, encoded as an ASN.1 Element.
  */
-export function _encode_CertificateSerialNumber(
-    value: CertificateSerialNumber,
-    elGetter: $.ASN1Encoder<CertificateSerialNumber>
-) {
+export function _encode_CertificateSerialNumber(value: CertificateSerialNumber, elGetter: $.ASN1Encoder<CertificateSerialNumber>): CertificateSerialNumber {
     return $._encodeBigInt(value, elGetter);
 }
 

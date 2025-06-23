@@ -218,10 +218,7 @@ let _cached_encoder_for_AttCertIssuer: $.ASN1Encoder<AttCertIssuer> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttCertIssuer, encoded as an ASN.1 Element.
  */
-export function _encode_AttCertIssuer(
-    value: AttCertIssuer,
-    elGetter: $.ASN1Encoder<AttCertIssuer>
-) {
+export function _encode_AttCertIssuer(value: AttCertIssuer, elGetter: $.ASN1Encoder<AttCertIssuer>): AttCertIssuer {
     if (!_cached_encoder_for_AttCertIssuer) {
         _cached_encoder_for_AttCertIssuer = $._encode_implicit(
             _TagClass.context,

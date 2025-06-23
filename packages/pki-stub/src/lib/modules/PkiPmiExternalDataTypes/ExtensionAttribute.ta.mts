@@ -144,8 +144,7 @@ export function _decode_ExtensionAttribute(el: _Element): ExtensionAttribute {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtensionAttribute, encoded as an ASN.1 Element.
  */
-export function _encode_ExtensionAttribute(
-    value: ExtensionAttribute) {
+export function _encode_ExtensionAttribute(value: ExtensionAttribute) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encode_explicit(
             _TagClass.context,

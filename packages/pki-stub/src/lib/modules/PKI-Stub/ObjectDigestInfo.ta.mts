@@ -224,10 +224,8 @@ export function _decode_ObjectDigestInfo(el: _Element): ObjectDigestInfo {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObjectDigestInfo, encoded as an ASN.1 Element.
  */
-export function _encode_ObjectDigestInfo(
-    value: ObjectDigestInfo,
-    _elGetter: $.ASN1Encoder<ObjectDigestInfo>
-) {
+export function _encode_ObjectDigestInfo(value: ObjectDigestInfo,
+    _elGetter: $.ASN1Encoder<ObjectDigestInfo>): ObjectDigestInfo {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_ObjectDigestInfo_digestedObjectType(
             value.digestedObjectType,

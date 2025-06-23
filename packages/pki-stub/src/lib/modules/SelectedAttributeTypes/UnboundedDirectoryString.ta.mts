@@ -69,10 +69,7 @@ const _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnboundedDirectoryString, encoded as an ASN.1 Element.
  */
-export function _encode_UnboundedDirectoryString(
-    value: UnboundedDirectoryString,
-    elGetter: $.ASN1Encoder<UnboundedDirectoryString>
-) {
+export function _encode_UnboundedDirectoryString(value: UnboundedDirectoryString, elGetter: $.ASN1Encoder<UnboundedDirectoryString>): UnboundedDirectoryString {
     return _cached_encoder_for_UnboundedDirectoryString(value, elGetter);
 }
 

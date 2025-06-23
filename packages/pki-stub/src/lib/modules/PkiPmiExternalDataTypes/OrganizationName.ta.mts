@@ -31,10 +31,7 @@ export function _decode_OrganizationName(el: _Element): OrganizationName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OrganizationName, encoded as an ASN.1 Element.
  */
-export function _encode_OrganizationName(
-    value: OrganizationName,
-    elGetter: $.ASN1Encoder<OrganizationName>
-) {
+export function _encode_OrganizationName(value: OrganizationName, elGetter: $.ASN1Encoder<OrganizationName>): OrganizationName {
     return $._encodePrintableString(value, elGetter);
 }
 

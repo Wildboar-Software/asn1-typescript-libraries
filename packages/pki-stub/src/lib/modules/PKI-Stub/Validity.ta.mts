@@ -147,10 +147,8 @@ export function _decode_Validity(el: _Element): Validity {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Validity, encoded as an ASN.1 Element.
  */
-export function _encode_Validity(
-    value: Validity,
-    _elGetter: $.ASN1Encoder<Validity>
-) {
+export function _encode_Validity(value: Validity,
+    _elGetter: $.ASN1Encoder<Validity>): Validity {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_Time(
             value.notBefore,

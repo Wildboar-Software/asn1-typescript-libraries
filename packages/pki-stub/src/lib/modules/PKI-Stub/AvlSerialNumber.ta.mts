@@ -31,10 +31,7 @@ export function _decode_AvlSerialNumber(el: _Element): AvlSerialNumber {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AvlSerialNumber, encoded as an ASN.1 Element.
  */
-export function _encode_AvlSerialNumber(
-    value: AvlSerialNumber,
-    elGetter: $.ASN1Encoder<AvlSerialNumber>
-) {
+export function _encode_AvlSerialNumber(value: AvlSerialNumber, elGetter: $.ASN1Encoder<AvlSerialNumber>): AvlSerialNumber {
     return $._encodeBigInt(value, elGetter);
 }
 

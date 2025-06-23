@@ -364,8 +364,7 @@ export function _decode_TBSCertificate(el: _Element): TBSCertificate {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSCertificate, encoded as an ASN.1 Element.
  */
-export function _encode_TBSCertificate(
-    value: TBSCertificate) {
+export function _encode_TBSCertificate(value: TBSCertificate) {
     const components: _Element[] = [];
     if (value.version != TBSCertificate._default_value_for_version) {
         const c = $._encode_explicit(
