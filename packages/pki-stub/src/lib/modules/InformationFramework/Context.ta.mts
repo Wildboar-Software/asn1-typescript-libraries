@@ -187,8 +187,7 @@ export function _decode_Context(el: _Element): Context {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Context, encoded as an ASN.1 Element.
  */
-export function _encode_Context(
-    value: Context) {
+export function _encode_Context(value: Context): _Element {value: Context) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.contextType,

@@ -180,10 +180,8 @@ export function _decode_ORAddress(el: _Element): ORAddress {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORAddress, encoded as an ASN.1 Element.
  */
-export function _encode_ORAddress(
-    value: ORAddress,
-    _elGetter: $.ASN1Encoder<ORAddress>
-) {
+export function _encode_ORAddress(value: ORAddress,
+    _elGetter: $.ASN1Encoder<ORAddress>): _Element) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_BuiltInStandardAttributes(
             value.built_in_standard_attributes,

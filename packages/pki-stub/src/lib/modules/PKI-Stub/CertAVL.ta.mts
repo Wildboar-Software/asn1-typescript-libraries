@@ -58,10 +58,7 @@ let _cached_encoder_for_CertAVL: $.ASN1Encoder<CertAVL> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertAVL, encoded as an ASN.1 Element.
  */
-export function _encode_CertAVL(
-    value: CertAVL,
-    elGetter: $.ASN1Encoder<CertAVL>
-) {
+export function _encode_CertAVL(value: CertAVL, elGetter: $.ASN1Encoder<CertAVL>): _Element) {
     if (!_cached_encoder_for_CertAVL) {
         _cached_encoder_for_CertAVL =
             _get_encoder_for_SIGNED<TBSCertAVL>(_encode_TBSCertAVL);

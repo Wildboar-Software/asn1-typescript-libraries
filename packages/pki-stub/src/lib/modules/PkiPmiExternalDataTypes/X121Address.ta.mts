@@ -31,10 +31,7 @@ export function _decode_X121Address(el: _Element): X121Address {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X121Address, encoded as an ASN.1 Element.
  */
-export function _encode_X121Address(
-    value: X121Address,
-    elGetter: $.ASN1Encoder<X121Address>
-) {
+export function _encode_X121Address(value: X121Address, elGetter: $.ASN1Encoder<X121Address>): _Element) {
     return $._encodeNumericString(value, elGetter);
 }
 

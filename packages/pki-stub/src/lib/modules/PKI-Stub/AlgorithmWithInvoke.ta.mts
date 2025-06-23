@@ -185,10 +185,8 @@ export function _decode_AlgorithmWithInvoke(el: _Element): AlgorithmWithInvoke {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlgorithmWithInvoke, encoded as an ASN.1 Element.
  */
-export function _encode_AlgorithmWithInvoke(
-    value: AlgorithmWithInvoke,
-    _elGetter: $.ASN1Encoder<AlgorithmWithInvoke>
-) {
+export function _encode_AlgorithmWithInvoke(value: AlgorithmWithInvoke,
+    _elGetter: $.ASN1Encoder<AlgorithmWithInvoke>): _Element) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.algorithm,

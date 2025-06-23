@@ -58,10 +58,7 @@ let _cached_encoder_for_Certificate: $.ASN1Encoder<Certificate> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Certificate, encoded as an ASN.1 Element.
  */
-export function _encode_Certificate(
-    value: Certificate,
-    elGetter: $.ASN1Encoder<Certificate>
-) {
+export function _encode_Certificate(value: Certificate, elGetter: $.ASN1Encoder<Certificate>): _Element) {
     if (!_cached_encoder_for_Certificate) {
         _cached_encoder_for_Certificate =
             _get_encoder_for_SIGNED<TBSCertificate>(_encode_TBSCertificate);

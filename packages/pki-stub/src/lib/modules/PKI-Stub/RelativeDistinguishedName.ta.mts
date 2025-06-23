@@ -48,10 +48,7 @@ let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDisting
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RelativeDistinguishedName, encoded as an ASN.1 Element.
  */
-export function _encode_RelativeDistinguishedName(
-    value: RelativeDistinguishedName,
-    elGetter: $.ASN1Encoder<RelativeDistinguishedName>
-) {
+export function _encode_RelativeDistinguishedName(value: RelativeDistinguishedName, elGetter: $.ASN1Encoder<RelativeDistinguishedName>): _Element) {
     if (!_cached_encoder_for_RelativeDistinguishedName) {
         _cached_encoder_for_RelativeDistinguishedName =
             $._encodeSetOf<AttributeTypeAndValue>(

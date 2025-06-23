@@ -165,8 +165,7 @@ export function _decode_EDIPartyName(el: _Element): EDIPartyName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIPartyName, encoded as an ASN.1 Element.
  */
-export function _encode_EDIPartyName(
-    value: EDIPartyName) {
+export function _encode_EDIPartyName(value: EDIPartyName): _Element {value: EDIPartyName) {
     const components: _Element[] = [
         /* IF_ABSENT  */ value.nameAssigner === undefined
             ? undefined

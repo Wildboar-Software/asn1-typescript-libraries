@@ -134,10 +134,7 @@ let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<Objec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObjectDigestInfo_digestedObjectType, encoded as an ASN.1 Element.
  */
-export function _encode_ObjectDigestInfo_digestedObjectType(
-    value: ObjectDigestInfo_digestedObjectType,
-    elGetter: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType>
-) {
+export function _encode_ObjectDigestInfo_digestedObjectType(value: ObjectDigestInfo_digestedObjectType, elGetter: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType>): _Element) {
     if (!_cached_encoder_for_ObjectDigestInfo_digestedObjectType) {
         _cached_encoder_for_ObjectDigestInfo_digestedObjectType =
             $._encodeEnumerated;
