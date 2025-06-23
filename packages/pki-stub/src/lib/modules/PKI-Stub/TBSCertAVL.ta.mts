@@ -153,7 +153,7 @@ export class TBSCertAVL {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return v1;
     }
 }

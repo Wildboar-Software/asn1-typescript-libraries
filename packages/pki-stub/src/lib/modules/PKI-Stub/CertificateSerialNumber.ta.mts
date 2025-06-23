@@ -20,9 +20,7 @@ export type CertificateSerialNumber = OCTET_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {CertificateSerialNumber} The decoded data structure.
  */
-export function _decode_CertificateSerialNumber(el: _Element): CertificateSerialNumber {
-    return $._decodeBigInt(el);
-}
+export const _decode_CertificateSerialNumber: $.ASN1Decoder<CertificateSerialNumber> = $._decodeBigInt;
 
 /**
  * @summary Encodes a(n) CertificateSerialNumber into an ASN.1 Element.
@@ -31,9 +29,6 @@ export function _decode_CertificateSerialNumber(el: _Element): CertificateSerial
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertificateSerialNumber, encoded as an ASN.1 Element.
  */
-export function _encode_CertificateSerialNumber(value: CertificateSerialNumber, elGetter: $.ASN1Encoder<CertificateSerialNumber>): _Element {
-    return $._encodeBigInt(value, elGetter);
-}
-
+export const _encode_CertificateSerialNumber: $.ASN1Encoder<CertificateSerialNumber> = $._encodeBigInt;
 
 /* eslint-enable */

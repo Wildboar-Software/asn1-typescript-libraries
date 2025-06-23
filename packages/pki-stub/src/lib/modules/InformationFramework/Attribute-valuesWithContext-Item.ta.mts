@@ -3,6 +3,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    BERElement,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -149,11 +150,8 @@ export function _decode_Attribute_valuesWithContext_Item(el: _Element): Attribut
  */
 export function _encode_Attribute_valuesWithContext_Item(value: Attribute_valuesWithContext_Item, elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>): _Element {
     const components: _Element[] = [
-        /* REQUIRED   */ $._encodeAny(value.value, $.BER),
-        /* REQUIRED   */ $._encodeSetOf<Context>(
-            () => _encode_Context,
-            $.BER
-        )(value.contextList, $.BER),
+        value.value,
+        $._encodeSetOf<Context>(() => _encode_Context, $.BER)(value.contextList, $.BER),
         ...value._unrecognizedExtensionsList ?? [],
     ];
     return $._encodeSequence(components, $.BER);

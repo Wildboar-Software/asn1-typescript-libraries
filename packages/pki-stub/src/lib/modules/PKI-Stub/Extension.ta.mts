@@ -91,7 +91,7 @@ export class Extension {
      * @static
      * @method
      */
-    public static get _default_value_for_critical() {
+    public static get _default_value_for_critical(): BOOLEAN {
         return false;
     }
 

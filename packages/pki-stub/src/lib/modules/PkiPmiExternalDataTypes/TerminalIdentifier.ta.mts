@@ -20,9 +20,7 @@ export type TerminalIdentifier = PrintableString; // PrintableString
  * @param {_Element} el The element being decoded.
  * @returns {TerminalIdentifier} The decoded data structure.
  */
-export function _decode_TerminalIdentifier(el: _Element): TerminalIdentifier {
-    return $._decodePrintableString(el);
-}
+export const _decode_TerminalIdentifier: $.ASN1Decoder<TerminalIdentifier> = $._decodePrintableString;
 
 /**
  * @summary Encodes a(n) TerminalIdentifier into an ASN.1 Element.
@@ -31,9 +29,6 @@ export function _decode_TerminalIdentifier(el: _Element): TerminalIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminalIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_TerminalIdentifier(value: TerminalIdentifier, elGetter: $.ASN1Encoder<TerminalIdentifier>): _Element {
-    return $._encodePrintableString(value, elGetter);
-}
-
+export const _encode_TerminalIdentifier: $.ASN1Encoder<TerminalIdentifier> = $._encodePrintableString;
 
 /* eslint-enable */

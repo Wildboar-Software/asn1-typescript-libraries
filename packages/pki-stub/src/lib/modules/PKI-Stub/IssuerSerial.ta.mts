@@ -151,40 +151,17 @@ export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] 
  * @returns {IssuerSerial} The decoded data structure.
  */
 export function _decode_IssuerSerial(el: _Element): IssuerSerial {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    let issuer!: GeneralNames;
-    let serial!: CertificateSerialNumber;
-    let issuerUID: OPTIONAL<UniqueIdentifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        issuer: (_el: _Element): void => {
-            issuer = _decode_GeneralNames(_el);
-        },
-        serial: (_el: _Element): void => {
-            serial = _decode_CertificateSerialNumber(_el);
-        },
-        issuerUID: (_el: _Element): void => {
-            issuerUID = _decode_UniqueIdentifier(_el);
-        },
-    };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_sequence(
-        el,
-        callbacks,
-        _root_component_type_list_1_spec_for_IssuerSerial,
-        _extension_additions_list_spec_for_IssuerSerial,
-        _root_component_type_list_2_spec_for_IssuerSerial,
-        (ext: _Element): void => {
-            _unrecognizedExtensionsList.push(ext);
-        }
-    );
+
+    const elements = el.sequence;
+    if (elements.length < 2) {
+        throw new _ConstructionError("IssuerSerial contained only " + elements.length.toString() + " elements.");
+    }
+    let [ issuer_el, serial_el, issuerUID_el, ...extensions ] = elements;
     return new IssuerSerial(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
-        serial,
-        issuerUID,
-        _unrecognizedExtensionsList
+        _decode_GeneralNames(issuer_el),
+        _decode_CertificateSerialNumber(serial_el),
+        issuerUID_el ? _decode_UniqueIdentifier(issuerUID_el) : undefined,
+        extensions
     );
 }
 

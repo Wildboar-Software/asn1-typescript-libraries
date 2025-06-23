@@ -31,36 +31,19 @@ export type UnboundedDirectoryString =
     | { universalString: UniversalString } /* CHOICE_ALT_ROOT */
     | { uTF8String: UTF8String } /* CHOICE_ALT_ROOT */;
 
-const _cached_decoder_for_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirectoryString> =
-    $._decode_inextensible_choice<UnboundedDirectoryString>({
-        "UNIVERSAL 20": ["teletexString", $._decodeTeletexString],
-        "UNIVERSAL 19": ["printableString", $._decodePrintableString],
-        "UNIVERSAL 30": ["bmpString", $._decodeBMPString],
-        "UNIVERSAL 28": ["universalString", $._decodeUniversalString],
-        "UNIVERSAL 12": ["uTF8String", $._decodeUTF8String],
-    });
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnboundedDirectoryString
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UnboundedDirectoryString} The decoded data structure.
  */
-export function _decode_UnboundedDirectoryString(el: _Element): UnboundedDirectoryString {
-    return _cached_decoder_for_UnboundedDirectoryString(el);
-}
-
-const _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirectoryString> =
-    $._encode_choice<UnboundedDirectoryString>(
-        {
-            teletexString: $._encodeTeletexString,
-            printableString: $._encodePrintableString,
-            bmpString: $._encodeBMPString,
-            universalString: $._encodeUniversalString,
-            uTF8String: $._encodeUTF8String,
-        },
-        $.BER
-    );
+export const _decode_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirectoryString> = $._decode_inextensible_choice<UnboundedDirectoryString>({
+    "UNIVERSAL 20": ["teletexString", $._decodeTeletexString],
+    "UNIVERSAL 19": ["printableString", $._decodePrintableString],
+    "UNIVERSAL 30": ["bmpString", $._decodeBMPString],
+    "UNIVERSAL 28": ["universalString", $._decodeUniversalString],
+    "UNIVERSAL 12": ["uTF8String", $._decodeUTF8String],
+});
 
 /**
  * @summary Encodes a(n) UnboundedDirectoryString into an ASN.1 Element.
@@ -69,9 +52,16 @@ const _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnboundedDirectoryString, encoded as an ASN.1 Element.
  */
-export function _encode_UnboundedDirectoryString(value: UnboundedDirectoryString, elGetter: $.ASN1Encoder<UnboundedDirectoryString>): _Element {
-    return _cached_encoder_for_UnboundedDirectoryString(value, elGetter);
-}
+export const _encode_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirectoryString> = $._encode_choice<UnboundedDirectoryString>(
+    {
+        teletexString: $._encodeTeletexString,
+        printableString: $._encodePrintableString,
+        bmpString: $._encodeBMPString,
+        universalString: $._encodeUniversalString,
+        uTF8String: $._encodeUTF8String,
+    },
+    $.BER
+);
 
 
 /* eslint-enable */

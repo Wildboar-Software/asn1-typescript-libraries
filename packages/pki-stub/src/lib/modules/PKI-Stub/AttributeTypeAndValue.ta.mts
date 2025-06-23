@@ -127,7 +127,7 @@ export function _decode_AttributeTypeAndValue(el: _Element): AttributeTypeAndVal
     let type_!: OBJECT_IDENTIFIER;
     let value!: _Element;
     type_ = $._decodeObjectIdentifier(sequence[0]);
-    value = $._decodeAny(sequence[1]);
+    value = sequence[1];
     return new AttributeTypeAndValue(type_, value, sequence.slice(2));
 }
 
@@ -140,11 +140,8 @@ export function _decode_AttributeTypeAndValue(el: _Element): AttributeTypeAndVal
  */
 export function _encode_AttributeTypeAndValue(value: AttributeTypeAndValue): _Element {
     const components: _Element[] = [
-        /* REQUIRED   */ $._encodeObjectIdentifier(
-            value.type_,
-            $.BER
-        ),
-        /* REQUIRED   */ $._encodeAny(value.value, $.BER),
+        $._encodeObjectIdentifier(value.type_, $.BER),
+        value.value,
         ...value._unrecognizedExtensionsList ?? [],
     ];
     return $._encodeSequence(components, $.BER);

@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
+    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -139,43 +140,20 @@ export const _extension_additions_list_spec_for_Attribute: $.ComponentSpec[] =
  * @returns {Attribute} The decoded data structure.
  */
 export function _decode_Attribute(el: _Element): Attribute {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    let type_!: OBJECT_IDENTIFIER;
-    let values!: _Element[];
-    let valuesWithContext: OPTIONAL<VWC[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        type: (_el: _Element): void => {
-            type_ = $._decodeObjectIdentifier(_el);
-        },
-        values: (_el: _Element): void => {
-            values = $._decodeSetOf<_Element>(() => $._decodeAny)(_el);
-        },
-        valuesWithContext: (_el: _Element): void => {
-            valuesWithContext =
-                $._decodeSetOf<VWC>(
-                    () => _decode_VWC
-                )(_el);
-        },
-    };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_sequence(
-        el,
-        callbacks,
-        _root_component_type_list_1_spec_for_Attribute,
-        _extension_additions_list_spec_for_Attribute,
-        _root_component_type_list_2_spec_for_Attribute,
-        (ext: _Element): void => {
-            _unrecognizedExtensionsList.push(ext);
-        }
-    );
+    const elements = el.sequence;
+    if (elements.length < 2) {
+        throw new _ConstructionError("Attribute contained only " + elements.length.toString() + " elements.");
+    }
+    let [ type_el, values_el, vwcs_el, ...extensions ] = elements;
+    const vwcs: VWC[] = [];
+    for (const vwc_el of vwcs_el?.setOf ?? []) {
+        vwcs.push(_decode_VWC(vwc_el));
+    }
     return new Attribute(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ type_,
-        values,
-        valuesWithContext,
-        _unrecognizedExtensionsList
+        $._decodeObjectIdentifier(type_el),
+        values_el.setOf,
+        vwcs.length === 0 ? undefined : vwcs,
+        extensions,
     );
 }
 

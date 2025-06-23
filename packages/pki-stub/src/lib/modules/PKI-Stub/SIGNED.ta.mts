@@ -188,7 +188,7 @@ export const _extension_additions_list_spec_for_SIGNED: $.ComponentSpec[] = [
  */
 export function _get_decoder_for_SIGNED<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
-) {
+): $.ASN1Decoder<SIGNED<ToBeSigned>> {
     return function (el: _Element): SIGNED<ToBeSigned> {
         /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         let toBeSigned!: ToBeSigned;
@@ -249,45 +249,34 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
  */
 export function _get_encoder_for_SIGNED<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
-) {
-    return function (
-        value: SIGNED<ToBeSigned>    ): _Element {
-        return $._encodeSequence(
-            ([] as (_Element | undefined)[])
-                .concat(
-                    [
-                        /* REQUIRED   */ _encode_ToBeSigned(
-                            value.toBeSigned,
-                            $.DER
-                        ),
-                        /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                            value.algorithmIdentifier,
-                            $.DER
-                        ),
-                        /* REQUIRED   */ $._encodeBitString(
-                            value.signature,
-                            $.DER
-                        ),
-                    ],
-                    [
-                        /* IF_ABSENT  */ value.altAlgorithmIdentifier ===
-                        undefined
-                            ? undefined
-                            : _encode_AlgorithmIdentifier(
-                                  value.altAlgorithmIdentifier,
-                                  $.DER
-                              ),
-                        /* IF_ABSENT  */ value.altSignature === undefined
-                            ? undefined
-                            : $._encodeBitString(value.altSignature, $.BER),
-                    ],
-                    value._unrecognizedExtensionsList
-                        ? value._unrecognizedExtensionsList
-                        : []
-                )
-                .filter((c: _Element | undefined): c is _Element => !!c),
-            $.DER
-        );
+): $.ASN1Encoder<SIGNED<ToBeSigned>> {
+    return function (value: SIGNED<ToBeSigned>): _Element {
+        const components: _Element[] = [
+            /* REQUIRED   */ _encode_ToBeSigned(
+                value.toBeSigned,
+                $.DER
+            ),
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(
+                value.algorithmIdentifier,
+                $.DER
+            ),
+            /* REQUIRED   */ $._encodeBitString(
+                value.signature,
+                $.DER
+            ),
+            /* IF_ABSENT  */ value.altAlgorithmIdentifier ===
+            undefined
+                ? undefined
+                : _encode_AlgorithmIdentifier(
+                        value.altAlgorithmIdentifier,
+                        $.DER
+                    ),
+            /* IF_ABSENT  */ value.altSignature === undefined
+                ? undefined
+                : $._encodeBitString(value.altSignature, $.BER),
+            ...value._unrecognizedExtensionsList ?? [],
+        ].filter((c: _Element | undefined): c is _Element => !!c);
+        return $._encodeSequence(components, $.DER);
     };
 }
 

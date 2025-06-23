@@ -21,9 +21,7 @@ export type OrganizationalUnitName = PrintableString; // PrintableString
  * @param {_Element} el The element being decoded.
  * @returns {OrganizationalUnitName} The decoded data structure.
  */
-export function _decode_OrganizationalUnitName(el: _Element): OrganizationalUnitName {
-    return $._decodePrintableString(el);
-}
+export const _decode_OrganizationalUnitName: $.ASN1Decoder<OrganizationalUnitName> = $._decodePrintableString;
 
 /**
  * @summary Encodes a(n) OrganizationalUnitName into an ASN.1 Element.
@@ -32,9 +30,6 @@ export function _decode_OrganizationalUnitName(el: _Element): OrganizationalUnit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OrganizationalUnitName, encoded as an ASN.1 Element.
  */
-export function _encode_OrganizationalUnitName(value: OrganizationalUnitName, elGetter: $.ASN1Encoder<OrganizationalUnitName>): _Element {
-    return $._encodePrintableString(value, elGetter);
-}
-
+export const _encode_OrganizationalUnitName: $.ASN1Encoder<OrganizationalUnitName> = $._encodePrintableString;
 
 /* eslint-enable */

@@ -72,9 +72,7 @@ export const v3: Version = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
  * @param {_Element} el The element being decoded.
  * @returns {Version} The decoded data structure.
  */
-export function _decode_Version(el: _Element): Version {
-    return $._decodeInteger(el);
-}
+export const _decode_Version: $.ASN1Decoder<Version> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) Version into an ASN.1 Element.
@@ -83,9 +81,6 @@ export function _decode_Version(el: _Element): Version {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Version, encoded as an ASN.1 Element.
  */
-export function _encode_Version(value: Version, elGetter: $.ASN1Encoder<Version>): _Element {
-    return $._encodeInteger(value, elGetter);
-}
-
+export const _encode_Version: $.ASN1Encoder<Version> = $._encodeInteger;
 
 /* eslint-enable */

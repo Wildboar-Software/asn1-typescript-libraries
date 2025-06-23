@@ -17,7 +17,7 @@ import {
  * ### ASN.1 Definition:
  *
  * ```asn1
- * DistinguishedName  ::=  RDNSequence
+ * DistinguishedName ::= RDNSequence
  * ```
  */
 export type DistinguishedName = RDNSequence; // DefinedType
@@ -28,9 +28,7 @@ export type DistinguishedName = RDNSequence; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {DistinguishedName} The decoded data structure.
  */
-export function _decode_DistinguishedName(el: _Element): DistinguishedName {
-    return _decode_RDNSequence(el);
-}
+export const _decode_DistinguishedName: $.ASN1Decoder<DistinguishedName> = _decode_RDNSequence;
 
 /**
  * @summary Encodes a(n) DistinguishedName into an ASN.1 Element.
@@ -39,9 +37,6 @@ export function _decode_DistinguishedName(el: _Element): DistinguishedName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DistinguishedName, encoded as an ASN.1 Element.
  */
-export function _encode_DistinguishedName(value: DistinguishedName, elGetter: $.ASN1Encoder<DistinguishedName>): _Element {
-    return _encode_RDNSequence(value, elGetter);
-}
-
+export const _encode_DistinguishedName: $.ASN1Encoder<DistinguishedName> = _encode_RDNSequence;
 
 /* eslint-enable */

@@ -30,9 +30,7 @@ export type UniqueIdentifier = BIT_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {UniqueIdentifier} The decoded data structure.
  */
-export function _decode_UniqueIdentifier(el: _Element): UniqueIdentifier {
-    return $._decodeBitString(el);
-}
+export const _decode_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> = $._decodeBitString;
 
 /**
  * @summary Encodes a(n) UniqueIdentifier into an ASN.1 Element.
@@ -41,9 +39,7 @@ export function _decode_UniqueIdentifier(el: _Element): UniqueIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniqueIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_UniqueIdentifier(value: UniqueIdentifier, elGetter: $.ASN1Encoder<UniqueIdentifier>): _Element {
-    return $._encodeBitString(value, elGetter);
-}
+export const _encode_UniqueIdentifier: $.ASN1Encoder<UniqueIdentifier> = $._encodeBitString;
 
 
 /* eslint-enable */

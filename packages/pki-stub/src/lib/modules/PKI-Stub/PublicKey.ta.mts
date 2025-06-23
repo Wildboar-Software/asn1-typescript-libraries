@@ -30,9 +30,7 @@ export type PublicKey = BIT_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {PublicKey} The decoded data structure.
  */
-export function _decode_PublicKey(el: _Element): PublicKey {
-    return $._decodeBitString(el);
-}
+export const _decode_PublicKey: $.ASN1Decoder<PublicKey> = $._decodeBitString;
 
 /**
  * @summary Encodes a(n) PublicKey into an ASN.1 Element.
@@ -41,9 +39,7 @@ export function _decode_PublicKey(el: _Element): PublicKey {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PublicKey, encoded as an ASN.1 Element.
  */
-export function _encode_PublicKey(value: PublicKey, elGetter: $.ASN1Encoder<PublicKey>): _Element {
-    return $._encodeBitString(value, elGetter);
-}
+export const _encode_PublicKey: $.ASN1Encoder<PublicKey> = $._encodeBitString;
 
 
 /* eslint-enable */

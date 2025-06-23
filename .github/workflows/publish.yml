@@ -12,17 +12,17 @@ jobs:
       matrix:
         package:
           # - "acbio"
-          # - "acse"
-          # - "ansi-x9-42"
-          # - "ansi-x9-62"
-          # - "asn1soap"
+          - "acse"
+          - "ansi-x9-42"
+          - "ansi-x9-62"
+          - "asn1soap"
           # - "attribute-asn1module"
-          # - "bip"
-          # - "cades"
-          # - "casscam"
-          # - "cbeff"
-          # - "ccr"
-          # - "cinf"
+          - "bip"
+          - "cades"
+          - "casscam"
+          - "cbeff"
+          - "ccr"
+          - "cinf"
           # - "clacse"
           # - "clearance-sponsor-attribute"
           # - "cmail"
@@ -42,7 +42,7 @@ jobs:
           # - "isis"
           # - "iso-9798-3-sasl"
           # - "kerberos5"
-          # - "ldap"
+          - "ldap"
           # - "m3100"
           # - "nlm"
           # - "ocsp"
@@ -82,6 +82,15 @@ jobs:
       - name: Install dependencies for ${{ matrix.package }}
         working-directory: packages/${{ matrix.package }}
         run: npm install
+      - name: Add commit hash to index.mts
+        working-directory: packages/${{ matrix.package }}
+        run: |
+          COMMIT_HASH=$(git rev-parse HEAD)
+          echo -e "\nexport const GIT_COMMIT_HASH = \"$COMMIT_HASH\";\n" >> src/index.mts
+          cat src/index.mts
       - name: Publish package ${{ matrix.package }}
         working-directory: packages/${{ matrix.package }}
+        # --allow-slow-types: because the generate code has way too many examples
+        # --verbose: for some reason, it hangs without this.
+        # --allow-dirty: just because of package-lock.json and the commit hash
         run: npx jsr publish --allow-slow-types --verbose --allow-dirty

@@ -124,35 +124,15 @@ export const _extension_additions_list_spec_for_AlgorithmIdentifier: $.Component
  * @returns {AlgorithmIdentifier} The decoded data structure.
  */
 export function _decode_AlgorithmIdentifier(el: _Element): AlgorithmIdentifier {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    let algorithm!: OBJECT_IDENTIFIER;
-    let parameters: OPTIONAL<_Element>;
-    let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        algorithm: (_el: _Element): void => {
-            algorithm = $._decodeObjectIdentifier(_el);
-        },
-        parameters: (_el: _Element): void => {
-            parameters = $._decodeAny(_el);
-        },
-    };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_sequence(
-        el,
-        callbacks,
-        _root_component_type_list_1_spec_for_AlgorithmIdentifier,
-        _extension_additions_list_spec_for_AlgorithmIdentifier,
-        _root_component_type_list_2_spec_for_AlgorithmIdentifier,
-        (ext: _Element): void => {
-            _unrecognizedExtensionsList.push(ext);
-        }
-    );
+    const elements = el.sequence;
+    if (elements.length < 1) {
+        throw new _ConstructionError("AlgorithmIdentifier contained no elements.");
+    }
+    let [ alg_el, param_el, ...extensions ] = elements;
     return new AlgorithmIdentifier(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
-        parameters,
-        _unrecognizedExtensionsList
+        $._decodeObjectIdentifier(alg_el),
+        param_el,
+        extensions
     );
 }
 
@@ -168,14 +148,14 @@ export function _encode_AlgorithmIdentifier(value: AlgorithmIdentifier,
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.algorithm,
-            $.BER
+            $.DER
         ),
     ];
     if (value.parameters) {
         components.push(value.parameters);
     }
     components.push(...value._unrecognizedExtensionsList ?? []);
-    return $._encodeSequence(components, $.BER);
+    return $._encodeSequence(components, $.DER);
 }
 
 

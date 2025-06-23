@@ -8,6 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    DERElement,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -37,15 +38,8 @@ let _cached_decoder_for_Extensions: $.ASN1Decoder<Extensions> | null = null;
  * @returns {Extensions} The decoded data structure.
  */
 export function _decode_Extensions(el: _Element): Extensions {
-    if (!_cached_decoder_for_Extensions) {
-        _cached_decoder_for_Extensions = $._decodeSequenceOf<Extension>(
-            () => _decode_Extension
-        );
-    }
-    return _cached_decoder_for_Extensions(el);
+    return el.sequenceOf.map((ext) => _decode_Extension(ext));
 }
-
-let _cached_encoder_for_Extensions: $.ASN1Encoder<Extensions> | null = null;
 
 /**
  * @summary Encodes a(n) Extensions into an ASN.1 Element.
@@ -55,13 +49,7 @@ let _cached_encoder_for_Extensions: $.ASN1Encoder<Extensions> | null = null;
  * @returns {_Element} The Extensions, encoded as an ASN.1 Element.
  */
 export function _encode_Extensions(value: Extensions, elGetter: $.ASN1Encoder<Extensions>): _Element {
-    if (!_cached_encoder_for_Extensions) {
-        _cached_encoder_for_Extensions = $._encodeSequenceOf<Extension>(
-            () => _encode_Extension,
-            $.BER
-        );
-    }
-    return _cached_encoder_for_Extensions(value, elGetter);
+    return DERElement.fromSequence(value.map(_encode_Extension));
 }
 
 

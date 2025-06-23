@@ -1,3 +1,25 @@
+/**
+ * TypeScript implementation of the ASN.1 data structures and PDUs defined in the
+ * PKI-Stub ASN.1 Module defined by the
+ * [International Telecommunication Union's (ITU)](https://www.itu.int/en/Pages/default.aspx)
+ * [recommendation X.510](https://www.itu.int/rec/T-REC-X.510/en).
+ * 
+ * Below is an example of how to decode and encode a certificate.
+ * 
+ * @example
+ * ```typescript
+ * import { DERElement } from "@wildboar/asn1";
+ * import { _decode_Certificate, _encode_Certificate } from "pki-stub";
+ * 
+ * const certificateElement = new DERElement();
+ * certificateElement.fromBytes(certificateBytes);
+ * const certificate = _decode_Certificate(certificateElement);
+ * const certificateElement2 = _encode_Certificate(certificate);
+ * const certificateBytes2 = certificateElement2.toBytes();
+ * ```
+ * 
+ * @module
+ */
 export * from "./lib/modules/AuthenticationFramework/SCOPE-RESTRICTION.oca.mjs";
 export * from "./lib/modules/AuthenticationFramework/ScopeRestrictions.ta.mjs";
 export * from "./lib/modules/AuthenticationFramework/ScopeRestriction.ta.mjs";

@@ -20,9 +20,7 @@ export type AvlSerialNumber = OCTET_STRING;
  * @param {_Element} el The element being decoded.
  * @returns {AvlSerialNumber} The decoded data structure.
  */
-export function _decode_AvlSerialNumber(el: _Element): AvlSerialNumber {
-    return $._decodeBigInt(el);
-}
+export const _decode_AvlSerialNumber: $.ASN1Decoder<AvlSerialNumber> = $._decodeBigInt;
 
 /**
  * @summary Encodes a(n) AvlSerialNumber into an ASN.1 Element.
@@ -31,9 +29,6 @@ export function _decode_AvlSerialNumber(el: _Element): AvlSerialNumber {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AvlSerialNumber, encoded as an ASN.1 Element.
  */
-export function _encode_AvlSerialNumber(value: AvlSerialNumber, elGetter: $.ASN1Encoder<AvlSerialNumber>): _Element {
-    return $._encodeBigInt(value, elGetter);
-}
-
+export const _encode_AvlSerialNumber: $.ASN1Encoder<AvlSerialNumber> = $._encodeBigInt;
 
 /* eslint-enable */

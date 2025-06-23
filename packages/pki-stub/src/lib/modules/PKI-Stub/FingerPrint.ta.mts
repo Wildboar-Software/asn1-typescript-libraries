@@ -129,7 +129,7 @@ export const _extension_additions_list_spec_for_FingerPrint: $.ComponentSpec[] =
  */
 export function _get_decoder_for_FingerPrint<ToBeFingerprinted>(
     _decode_ToBeFingerprinted: $.ASN1Decoder<ToBeFingerprinted>
-) {
+): $.ASN1Decoder<FingerPrint<ToBeFingerprinted>> {
     return function <ToBeFingerprinted>(
         el: _Element
     ): FingerPrint<ToBeFingerprinted> {
@@ -162,7 +162,7 @@ export function _get_decoder_for_FingerPrint<ToBeFingerprinted>(
  */
 export function _get_encoder_for_FingerPrint<ToBeFingerprinted>(
     _encode_ToBeFingerprinted: $.ASN1Encoder<ToBeFingerprinted>
-) {
+): $.ASN1Encoder<FingerPrint<ToBeFingerprinted>> {
     return function (
         value: FingerPrint<ToBeFingerprinted>,
         _elGetter: $.ASN1Encoder<FingerPrint<ToBeFingerprinted>>
@@ -178,7 +178,7 @@ export function _get_encoder_for_FingerPrint<ToBeFingerprinted>(
             ),
             ...value._unrecognizedExtensionsList ?? [],
         ];
-        return $._encodeSequence(components, $.BER);
+        return $._encodeSequence(components, $.DER);
     };
 }
 

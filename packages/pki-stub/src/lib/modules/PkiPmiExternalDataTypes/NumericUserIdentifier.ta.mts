@@ -13,12 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```
  */
 export type NumericUserIdentifier = NumericString; // NumericString
-
-
-export const _decode_NumericUserIdentifier = $._decodeNumericString;
-
-
-export const _encode_NumericUserIdentifier = $._encodeNumericString;
-
+export const _decode_NumericUserIdentifier: $.ASN1Decoder<NumericUserIdentifier> = $._decodeNumericString;
+export const _encode_NumericUserIdentifier: $.ASN1Encoder<NumericUserIdentifier> = $._encodeNumericString;
 
 /* eslint-enable */

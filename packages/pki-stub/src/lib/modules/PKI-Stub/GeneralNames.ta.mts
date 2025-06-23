@@ -8,6 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    DERElement,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -35,9 +36,7 @@ export type GeneralNames = GeneralName[]; // SequenceOfType
  * @returns {GeneralNames} The decoded data structure.
  */
 export function _decode_GeneralNames(el: _Element): GeneralNames {
-    return $._decodeSequenceOf<GeneralName>(
-        () => _decode_GeneralName
-    )(el);
+    return el.sequenceOf.map((x) => _decode_GeneralName(x));
 }
 
 /**
@@ -47,11 +46,8 @@ export function _decode_GeneralNames(el: _Element): GeneralNames {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeneralNames, encoded as an ASN.1 Element.
  */
-export function _encode_GeneralNames(value: GeneralNames, elGetter: $.ASN1Encoder<GeneralNames>): _Element {
-    return $._encodeSequenceOf<GeneralName>(
-        () => _encode_GeneralName,
-        $.BER
-    )(value, elGetter);
+export function _encode_GeneralNames(value: GeneralNames, _elGetter: $.ASN1Encoder<GeneralNames>): _Element {
+    return DERElement.fromSequence(value.map((x) => _encode_GeneralName(x, $.DER)));
 }
 
 

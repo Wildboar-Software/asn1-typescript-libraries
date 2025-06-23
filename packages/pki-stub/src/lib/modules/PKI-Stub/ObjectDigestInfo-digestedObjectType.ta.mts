@@ -107,25 +107,13 @@ export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: ObjectDigestI
 export const otherObjectTypes: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> | null =
-    null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectDigestInfo_digestedObjectType
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ObjectDigestInfo_digestedObjectType} The decoded data structure.
  */
-export function _decode_ObjectDigestInfo_digestedObjectType(el: _Element): ObjectDigestInfo_digestedObjectType {
-    if (!_cached_decoder_for_ObjectDigestInfo_digestedObjectType) {
-        _cached_decoder_for_ObjectDigestInfo_digestedObjectType =
-            $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ObjectDigestInfo_digestedObjectType(el);
-}
-
-let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> | null =
-    null;
+export const _decode_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ObjectDigestInfo_digestedObjectType into an ASN.1 Element.
@@ -134,16 +122,7 @@ let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<Objec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObjectDigestInfo_digestedObjectType, encoded as an ASN.1 Element.
  */
-export function _encode_ObjectDigestInfo_digestedObjectType(value: ObjectDigestInfo_digestedObjectType, elGetter: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType>): _Element {
-    if (!_cached_encoder_for_ObjectDigestInfo_digestedObjectType) {
-        _cached_encoder_for_ObjectDigestInfo_digestedObjectType =
-            $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ObjectDigestInfo_digestedObjectType(
-        value,
-        elGetter
-    );
-}
+export const _encode_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

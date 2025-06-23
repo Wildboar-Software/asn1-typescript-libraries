@@ -5,6 +5,7 @@ import {
     BOOLEAN,
     OBJECT_IDENTIFIER,
     OPTIONAL,
+    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,7 +83,7 @@ export class Context {
      * @static
      * @method
      */
-    public static get _default_value_for_fallback() {
+    public static get _default_value_for_fallback(): BOOLEAN {
         return false;
     }
 }
@@ -141,42 +142,16 @@ export const _extension_additions_list_spec_for_Context: $.ComponentSpec[] = [];
  * @returns {Context} The decoded data structure.
  */
 export function _decode_Context(el: _Element): Context {
-    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    let contextType!: OBJECT_IDENTIFIER;
-    let contextValues!: _Element[];
-    let fallback: OPTIONAL<BOOLEAN> = Context._default_value_for_fallback;
-    let _unrecognizedExtensionsList: _Element[] = [];
-    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        contextType: (_el: _Element): void => {
-            contextType = $._decodeObjectIdentifier(_el);
-        },
-        contextValues: (_el: _Element): void => {
-            contextValues = $._decodeSetOf<_Element>(
-                () => $._decodeAny
-            )(_el);
-        },
-        fallback: (_el: _Element): void => {
-            fallback = $._decodeBoolean(_el);
-        },
-    };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_sequence(
-        el,
-        callbacks,
-        _root_component_type_list_1_spec_for_Context,
-        _extension_additions_list_spec_for_Context,
-        _root_component_type_list_2_spec_for_Context,
-        (ext: _Element): void => {
-            _unrecognizedExtensionsList.push(ext);
-        }
-    );
+    const elements = el.sequence;
+    if (elements.length < 2) {
+        throw new _ConstructionError("Context contained only " + elements.length.toString() + " element(s).");
+    }
+    let [ type_el, values_el, fallback_el, ...extensions ] = elements;
     return new Context(
-        /* SEQUENCE_CONSTRUCTOR_CALL */ contextType,
-        contextValues,
-        fallback,
-        _unrecognizedExtensionsList
+        $._decodeObjectIdentifier(type_el),
+        values_el.setOf,
+        fallback_el?.boolean ?? Context._default_value_for_fallback,
+        extensions,
     );
 }
 

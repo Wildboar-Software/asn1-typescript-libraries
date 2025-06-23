@@ -20,9 +20,7 @@ export type OrganizationName = PrintableString; // PrintableString
  * @param {_Element} el The element being decoded.
  * @returns {OrganizationName} The decoded data structure.
  */
-export function _decode_OrganizationName(el: _Element): OrganizationName {
-    return $._decodePrintableString(el);
-}
+export const _decode_OrganizationName: $.ASN1Decoder<OrganizationName> = $._decodePrintableString;
 
 /**
  * @summary Encodes a(n) OrganizationName into an ASN.1 Element.
@@ -31,9 +29,6 @@ export function _decode_OrganizationName(el: _Element): OrganizationName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OrganizationName, encoded as an ASN.1 Element.
  */
-export function _encode_OrganizationName(value: OrganizationName, elGetter: $.ASN1Encoder<OrganizationName>): _Element {
-    return $._encodePrintableString(value, elGetter);
-}
-
+export const _encode_OrganizationName: $.ASN1Encoder<OrganizationName> = $._encodePrintableString;
 
 /* eslint-enable */

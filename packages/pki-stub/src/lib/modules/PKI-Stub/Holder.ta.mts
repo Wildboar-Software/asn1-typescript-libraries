@@ -190,7 +190,7 @@ export function _decode_Holder(el: _Element): Holder {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Holder, encoded as an ASN.1 Element.
  */
-export function _encode_Holder(value: Holder, _elGetter: $.ASN1Encoder<Holder>) {
+export function _encode_Holder(value: Holder, _elGetter: $.ASN1Encoder<Holder>): _Element {
     const components: _Element[] = [];
     if (value.baseCertificateID) {
         const c = $._encode_implicit(

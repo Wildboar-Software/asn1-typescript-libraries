@@ -20,9 +20,7 @@ export type X121Address = NumericString; // NumericString
  * @param {_Element} el The element being decoded.
  * @returns {X121Address} The decoded data structure.
  */
-export function _decode_X121Address(el: _Element): X121Address {
-    return $._decodeNumericString(el);
-}
+export const _decode_X121Address: $.ASN1Decoder<X121Address> = $._decodeNumericString;
 
 /**
  * @summary Encodes a(n) X121Address into an ASN.1 Element.
@@ -31,9 +29,6 @@ export function _decode_X121Address(el: _Element): X121Address {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X121Address, encoded as an ASN.1 Element.
  */
-export function _encode_X121Address(value: X121Address, elGetter: $.ASN1Encoder<X121Address>): _Element {
-    return $._encodeNumericString(value, elGetter);
-}
-
+export const _encode_X121Address: $.ASN1Encoder<X121Address> = $._encodeNumericString;
 
 /* eslint-enable */

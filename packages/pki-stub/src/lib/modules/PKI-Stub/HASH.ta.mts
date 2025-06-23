@@ -126,7 +126,7 @@ export const _extension_additions_list_spec_for_HASH: $.ComponentSpec[] = [];
  */
 export function _get_decoder_for_HASH<ToBeHashed>(
     _decode_ToBeHashed: $.ASN1Decoder<ToBeHashed>
-) {
+): $.ASN1Decoder<HASH<ToBeHashed>> {
     return function <ToBeHashed>(el: _Element): HASH<ToBeHashed> {
         const sequence: _Element[] = el.sequence;
         if (sequence.length < 2) {
@@ -157,31 +157,23 @@ export function _get_decoder_for_HASH<ToBeHashed>(
  */
 export function _get_encoder_for_HASH<ToBeHashed>(
     _encode_ToBeHashed: $.ASN1Encoder<ToBeHashed>
-) {
+): $.ASN1Encoder<HASH<ToBeHashed>> {
     return function (
         value: HASH<ToBeHashed>,
         _elGetter: $.ASN1Encoder<HASH<ToBeHashed>>
     ): _Element {
-        return $._encodeSequence(
-            ([] as (_Element | undefined)[])
-                .concat(
-                    [
-                        /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                            value.algorithmIdentifier,
-                            $.BER
-                        ),
-                        /* REQUIRED   */ $._encodeBitString(
-                            value.hashValue,
-                            $.BER
-                        ),
-                    ],
-                    value._unrecognizedExtensionsList
-                        ? value._unrecognizedExtensionsList
-                        : []
-                )
-                .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
-        );
+        const components: _Element[] = [
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(
+                value.algorithmIdentifier,
+                $.BER
+            ),
+            /* REQUIRED   */ $._encodeBitString(
+                value.hashValue,
+                $.BER
+            ),
+            ...value._unrecognizedExtensionsList ?? [],
+        ];
+        return $._encodeSequence(components, $.DER);
     };
 }
 

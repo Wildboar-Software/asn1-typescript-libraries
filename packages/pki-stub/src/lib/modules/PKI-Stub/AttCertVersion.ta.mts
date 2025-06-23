@@ -45,9 +45,7 @@ export const v2: AttCertVersion =
  * @param {_Element} el The element being decoded.
  * @returns {AttCertVersion} The decoded data structure.
  */
-export function _decode_AttCertVersion(el: _Element): AttCertVersion {
-    return $._decodeInteger(el);
-}
+export const _decode_AttCertVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) AttCertVersion into an ASN.1 Element.
@@ -56,9 +54,7 @@ export function _decode_AttCertVersion(el: _Element): AttCertVersion {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttCertVersion, encoded as an ASN.1 Element.
  */
-export function _encode_AttCertVersion(value: AttCertVersion, elGetter: $.ASN1Encoder<AttCertVersion>): _Element {
-    return $._encodeInteger(value, elGetter);
-}
+export const _encode_AttCertVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

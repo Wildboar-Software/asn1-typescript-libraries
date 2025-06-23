@@ -223,9 +223,7 @@ export const weakAlgorithmOrKey: CRLReason =
  * @param {_Element} el The element being decoded.
  * @returns {CRLReason} The decoded data structure.
  */
-export function _decode_CRLReason(el: _Element): CRLReason {
-    return $._decodeEnumerated(el);
-}
+export const _decode_CRLReason: $.ASN1Decoder<CRLReason> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CRLReason into an ASN.1 Element.
@@ -234,9 +232,7 @@ export function _decode_CRLReason(el: _Element): CRLReason {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CRLReason, encoded as an ASN.1 Element.
  */
-export function _encode_CRLReason(value: CRLReason, elGetter: $.ASN1Encoder<CRLReason>): _Element {
-    return $._encodeEnumerated(value, elGetter);
-}
+export const _encode_CRLReason: $.ASN1Encoder<CRLReason> = $._encodeEnumerated;
 
 
 /* eslint-enable */

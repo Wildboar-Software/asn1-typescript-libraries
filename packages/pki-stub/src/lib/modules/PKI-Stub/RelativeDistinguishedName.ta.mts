@@ -19,27 +19,15 @@ import {
  */
 export type RelativeDistinguishedName = AttributeTypeAndValue[]; // SetOfType
 
-let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDistinguishedName> | null =
-    null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RelativeDistinguishedName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RelativeDistinguishedName} The decoded data structure.
  */
-export function _decode_RelativeDistinguishedName(el: _Element): RelativeDistinguishedName {
-    if (!_cached_decoder_for_RelativeDistinguishedName) {
-        _cached_decoder_for_RelativeDistinguishedName =
-            $._decodeSetOf<AttributeTypeAndValue>(
-                () => _decode_AttributeTypeAndValue
-            );
-    }
-    return _cached_decoder_for_RelativeDistinguishedName(el);
-}
-
-let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> | null =
-    null;
+export const _decode_RelativeDistinguishedName: $.ASN1Decoder<RelativeDistinguishedName> = $._decodeSetOf<AttributeTypeAndValue>(
+    () => _decode_AttributeTypeAndValue
+);
 
 /**
  * @summary Encodes a(n) RelativeDistinguishedName into an ASN.1 Element.
@@ -48,16 +36,9 @@ let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDisting
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RelativeDistinguishedName, encoded as an ASN.1 Element.
  */
-export function _encode_RelativeDistinguishedName(value: RelativeDistinguishedName, elGetter: $.ASN1Encoder<RelativeDistinguishedName>): _Element {
-    if (!_cached_encoder_for_RelativeDistinguishedName) {
-        _cached_encoder_for_RelativeDistinguishedName =
-            $._encodeSetOf<AttributeTypeAndValue>(
-                () => _encode_AttributeTypeAndValue,
-                $.BER
-            );
-    }
-    return _cached_encoder_for_RelativeDistinguishedName(value, elGetter);
-}
-
+export const _encode_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> = $._encodeSetOf<AttributeTypeAndValue>(
+    () => _encode_AttributeTypeAndValue,
+    $.BER
+);
 
 /* eslint-enable */
