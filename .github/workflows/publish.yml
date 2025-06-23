@@ -84,4 +84,4 @@ jobs:
         run: npm install
       - name: Publish package ${{ matrix.package }}
         working-directory: packages/${{ matrix.package }}
-        run: npx jsr publish --allow-slow-types --verbose
+        run: npx jsr publish --allow-slow-types --verbose --allow-dirty
