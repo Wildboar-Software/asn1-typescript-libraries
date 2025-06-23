@@ -203,7 +203,7 @@ export function _decode_Extension(el: _Element): Extension {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Extension, encoded as an ASN.1 Element.
  */
-export function _encode_Extension(value: Extension): _Element {value: Extension) {
+export function _encode_Extension(value: Extension): _Element {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.extnId,

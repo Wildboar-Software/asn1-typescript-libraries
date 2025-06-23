@@ -336,7 +336,7 @@ export function _decode_TBSAttributeCertificate(el: _Element): TBSAttributeCerti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSAttributeCertificate, encoded as an ASN.1 Element.
  */
-export function _encode_TBSAttributeCertificate(value: TBSAttributeCertificate): _Element {value: TBSAttributeCertificate) {
+export function _encode_TBSAttributeCertificate(value: TBSAttributeCertificate): _Element {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_AttCertVersion(
             value.version,

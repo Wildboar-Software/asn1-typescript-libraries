@@ -300,7 +300,7 @@ export function _decode_TBSCertAVL(el: _Element): TBSCertAVL {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSCertAVL, encoded as an ASN.1 Element.
  */
-export function _encode_TBSCertAVL(value: TBSCertAVL): _Element {value: TBSCertAVL) {
+export function _encode_TBSCertAVL(value: TBSCertAVL): _Element {
     const components: _Element[] = [];
     if (value.version != TBSCertAVL._default_value_for_version) {
         const c = $._encode_implicit(
