@@ -5,8 +5,8 @@ import {
     BOOLEAN,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-} from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1@11/functional";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary Context

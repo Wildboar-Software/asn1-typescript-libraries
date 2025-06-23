@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1@11/functional";
+import { ASN1Element as _Element } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import {
     X121Address,
     _decode_X121Address,

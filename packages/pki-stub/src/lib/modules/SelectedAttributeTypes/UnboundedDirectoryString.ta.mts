@@ -6,8 +6,8 @@ import {
     TeletexString,
     UniversalString,
     UTF8String,
-} from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1@11/functional";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary UnboundedDirectoryString

@@ -10,8 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1@11/functional";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,

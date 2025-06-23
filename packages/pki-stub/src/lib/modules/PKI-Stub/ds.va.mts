@@ -10,7 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "jsr:@wildboar/asn1@11";
+} from "@wildboar/asn1";
 
 /**
  * @summary ds

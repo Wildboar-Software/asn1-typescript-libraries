@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element,
     NumericString,
     PrintableString,
-} from "jsr:@wildboar/asn1@11";
-import * as $ from "jsr:@wildboar/asn1@11/functional";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary PrivateDomainName
