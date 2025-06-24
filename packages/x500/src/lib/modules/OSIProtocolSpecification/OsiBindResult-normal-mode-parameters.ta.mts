@@ -7,10 +7,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-    _decode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-    _encode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta.mjs";
+    OsiBindResult_normal_mode_parameters_pres_context_result_list_Item,
+    _decode_OsiBindResult_normal_mode_parameters_pres_context_result_list_Item,
+    _encode_OsiBindResult_normal_mode_parameters_pres_context_result_list_Item,
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-pres-context-result-list-Item.ta.mjs";
 import {
     OsiBindResult_normal_mode_parameters_protocol_version,
     OsiBindResult_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -54,11 +54,11 @@ export class OsiBindResult_normal_mode_parameters {
          */
         readonly responding_presentation_selector: OPTIONAL<Presentation_selector>,
         /**
-         * @summary `presentation_context_definition_result_list`.
+         * @summary `pres_context_result_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_definition_result_list: OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item[],
+        readonly pres_context_result_list: OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[],
         /**
          * @summary `user_data`.
          * @public
@@ -87,7 +87,7 @@ export class OsiBindResult_normal_mode_parameters {
         return new OsiBindResult_normal_mode_parameters(
             _o.protocol_version,
             _o.responding_presentation_selector,
-            _o.presentation_context_definition_result_list,
+            _o.pres_context_result_list,
             _o.user_data
         );
     }
@@ -176,7 +176,7 @@ export function _decode_OsiBindResult_normal_mode_parameters(el: _Element) {
             let protocol_version: OPTIONAL<OsiBindResult_normal_mode_parameters_protocol_version> =
                 OsiBindResult_normal_mode_parameters._default_value_for_protocol_version;
             let responding_presentation_selector: OPTIONAL<Presentation_selector>;
-            let presentation_context_definition_result_list!: OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item[];
+            let pres_context_result_list!: OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[];
             let user_data!: OsiBindResult_normal_mode_parameters_user_data;
             const callbacks: $.DecodingMap = {
                 "protocol-version": (_el: _Element): void => {
@@ -193,12 +193,12 @@ export function _decode_OsiBindResult_normal_mode_parameters(el: _Element) {
                 "presentation-context-definition-result-list": (
                     _el: _Element
                 ): void => {
-                    presentation_context_definition_result_list = $._decode_implicit<
-                        OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item[]
+                    pres_context_result_list = $._decode_implicit<
+                        OsiBindResult_normal_mode_parameters_pres_context_result_list_Item[]
                     >(() =>
-                        $._decodeSequenceOf<OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item>(
+                        $._decodeSequenceOf<OsiBindResult_normal_mode_parameters_pres_context_result_list_Item>(
                             () =>
-                                _decode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item
+                                _decode_OsiBindResult_normal_mode_parameters_pres_context_result_list_Item
                         )
                     )(_el);
                 },
@@ -219,7 +219,7 @@ export function _decode_OsiBindResult_normal_mode_parameters(el: _Element) {
             return new OsiBindResult_normal_mode_parameters(
                 protocol_version,
                 responding_presentation_selector,
-                presentation_context_definition_result_list,
+                pres_context_result_list,
                 user_data
             );
         };
@@ -272,14 +272,14 @@ export function _encode_OsiBindResult_normal_mode_parameters(
                             _TagClass.context,
                             5,
                             () =>
-                                $._encodeSequenceOf<OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item>(
+                                $._encodeSequenceOf<OsiBindResult_normal_mode_parameters_pres_context_result_list_Item>(
                                     () =>
-                                        _encode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
+                                        _encode_OsiBindResult_normal_mode_parameters_pres_context_result_list_Item,
                                     $.DER
                                 ),
                             $.DER
                         )(
-                            value.presentation_context_definition_result_list,
+                            value.pres_context_result_list,
                             $.DER
                         ),
                         /* REQUIRED   */ _encode_OsiBindResult_normal_mode_parameters_user_data(

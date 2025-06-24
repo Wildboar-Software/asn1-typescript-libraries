@@ -86,7 +86,7 @@ export class AuthenticationLevel_basicLevels {
      * @static
      * @method
      */
-    public static get _default_value_for_signed() {
+    public static get _default_value_for_signed(): BOOLEAN {
         return false;
     }
     /**

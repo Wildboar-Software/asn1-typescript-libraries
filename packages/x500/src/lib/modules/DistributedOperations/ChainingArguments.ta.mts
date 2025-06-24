@@ -305,7 +305,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -317,7 +317,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
     /**
@@ -326,7 +326,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_returnCrossRefs() {
+    public static get _default_value_for_returnCrossRefs(): BOOLEAN {
         return false;
     }
     /**
@@ -335,7 +335,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_referenceType() {
+    public static get _default_value_for_referenceType(): ReferenceType {
         return ReferenceType_superior;
     }
     /**
@@ -344,7 +344,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_securityParameters() {
+    public static get _default_value_for_securityParameters(): SecurityParameters {
         return SecurityParameters._from_object({});
     }
     /**
@@ -353,7 +353,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -362,7 +362,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_excludeShadows() {
+    public static get _default_value_for_excludeShadows(): BOOLEAN {
         return false;
     }
     /**
@@ -371,7 +371,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -380,7 +380,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_dspPaging() {
+    public static get _default_value_for_dspPaging(): BOOLEAN {
         return false;
     }
     /**
@@ -389,7 +389,7 @@ export class ChainingArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_excludeWriteableCopies() {
+    public static get _default_value_for_excludeWriteableCopies(): BOOLEAN {
         return false;
     }
     /**

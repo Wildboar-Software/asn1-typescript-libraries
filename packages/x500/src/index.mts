@@ -1,5 +1,62 @@
-export default "hello";
-
+/**
+ * X.500 directory data structures and utilities
+ *
+ * This module exports the following:
+ *
+ * - Data structures for X.500 directory data
+ * - Utilities for working with X.500 directory data
+ * - Comparators for comparing X.500 directory data
+ * - Stringifiers for stringifying X.500 directory data
+ * - Types for implementing matching rules
+ * - Functions for implementing basic access control
+ * - Functions for implementing distributed operations
+ * - Functions for evaluating filters and entry information selection
+ * - Functions for PKI / PMI verification
+ * 
+ * Below is a very stripped down example of how to use the module to perform a
+ * `compare` operation.
+ * 
+ * @example
+ * ```typescript
+ * const reqData = new CompareArgumentData(
+ *     {
+ *         rdnSequence: dn, // The DN to compare: defined outside of this example
+ *     },
+ *     new AttributeValueAssertion(
+ *         commonName["&id"],
+ *         { utf8String: "hi mom" },
+ *     ),
+ * );
+ * const arg: CompareArgument = {
+ *     unsigned: reqData,
+ * };
+ * const compareArgumentEl = _encode_CompareArgument(arg);
+ * 
+ * const idmPdu: IDM_PDU = {
+ *     request: new Request(1, id_opcode_compare, compareArgumentEl),
+ * };
+ * const idmPduEl = _encode_IDM_PDU(idmPdu);
+ * const idmPduBytes = idmPduEl.toBytes();
+ * 
+ * // Frame idmPduBytes and send it to the server
+ * // Read response from IDM frame
+ * const idmResponseEl = new BERElement();
+ * idmResponseEl.fromBytes(idmPduResponseBytes);
+ * const outcome = _decode_IDM_PDU(idmResponseEl);
+ * if ("result" in outcome) {
+ *     // Obviously, in a real application, you would want to
+ *     // check that this is the result corresponding to the request.
+ *     const result = _decode_CompareResult(outcome.result.result);
+ *     const resultData = getOptionallyProtectedValue(result);
+ *     if (resultData.matched) {
+ *         console.log("we found the 'hi mom' entry");
+ *     }
+ * }
+ * 
+ * ```
+ * 
+ * @module
+ */
 export * from "./lib/errors.mjs";
 export type { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
 export type { ACDFTuple } from "./lib/types/ACDFTuple.mjs";

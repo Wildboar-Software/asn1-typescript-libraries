@@ -88,7 +88,7 @@ export class GeneralSubtree {
      * @static
      * @method
      */
-    public static get _default_value_for_minimum() {
+    public static get _default_value_for_minimum(): BaseDistance {
         return 0;
     }
 }

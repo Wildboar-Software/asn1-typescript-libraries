@@ -5,7 +5,7 @@ import {
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import compareGeneralName from "./compareGeneralName.mjs";
 
-const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum;
+const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum as number;
 
 /**
  * @summary Compare two `GeneralSubtree` values

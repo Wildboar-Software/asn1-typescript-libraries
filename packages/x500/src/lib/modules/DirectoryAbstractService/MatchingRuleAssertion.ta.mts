@@ -95,7 +95,7 @@ export class MatchingRuleAssertion {
      * @static
      * @method
      */
-    public static get _default_value_for_dnAttributes() {
+    public static get _default_value_for_dnAttributes(): BOOLEAN {
         return false;
     }
 }

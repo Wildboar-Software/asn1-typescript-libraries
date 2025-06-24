@@ -34,7 +34,7 @@ export * from "./AP-invocation-identifier.ta.mjs";
 export * from "./Application-context-name.ta.mjs";
 export * from "./ARP-PPDU.ta.mjs";
 export * from "./ARU-PPDU-normal-mode-parameters.ta.mjs";
-export * from "./ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+export * from "./ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 export * from "./ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
 export * from "./ARU-PPDU-normal-mode-parameters-user-data.ta.mjs";
 export * from "./ARU-PPDU.ta.mjs";
@@ -87,7 +87,7 @@ export {
     _encode_OsiBindError_normal_mode_parameters_protocol_version,
 } from "./OsiBindError-normal-mode-parameters-protocol-version.ta.mjs";
 export * from "./OsiBindError-normal-mode-parameters.ta.mjs";
-export * from "./OsiBindError-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+export * from "./OsiBindError-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 export * from "./OsiBindError-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
 export * from "./OsiBindError-normal-mode-parameters-user-data.ta.mjs";
 export * from "./OsiBindError.ta.mjs";
@@ -101,11 +101,11 @@ export {
     _encode_OsiBind_normal_mode_parameters_protocol_version,
 } from "./OsiBind-normal-mode-parameters-protocol-version.ta.mjs";
 export * from "./OsiBind-normal-mode-parameters.ta.mjs";
-export * from "./OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+export * from "./OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 export * from "./OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
 export * from "./OsiBind-normal-mode-parameters-user-data.ta.mjs";
 export * from "./OsiBindResult-mode-selector.ta.mjs";
-export * from "./OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta.mjs";
+export * from "./OsiBindResult-normal-mode-parameters-pres-context-result-list-Item.ta.mjs";
 export type {
     OsiBindResult_normal_mode_parameters_protocol_version,
 } from "./OsiBindResult-normal-mode-parameters-protocol-version.ta.mjs";
@@ -115,7 +115,7 @@ export {
     _encode_OsiBindResult_normal_mode_parameters_protocol_version,
 } from "./OsiBindResult-normal-mode-parameters-protocol-version.ta.mjs";
 export * from "./OsiBindResult-normal-mode-parameters.ta.mjs";
-export * from "./OsiBindResult-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+export * from "./OsiBindResult-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 export * from "./OsiBindResult-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
 export * from "./OsiBindResult-normal-mode-parameters-user-data.ta.mjs";
 export * from "./OsiBindResult.ta.mjs";

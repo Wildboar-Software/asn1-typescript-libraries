@@ -74,7 +74,7 @@ export class Mapping {
      * @static
      * @method
      */
-    public static get _default_value_for_level() {
+    public static get _default_value_for_level(): INTEGER {
         return 0;
     }
 }

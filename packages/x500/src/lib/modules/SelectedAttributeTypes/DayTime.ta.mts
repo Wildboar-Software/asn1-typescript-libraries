@@ -103,7 +103,7 @@ export class DayTime {
      * @static
      * @method
      */
-    public static get _default_value_for_minute() {
+    public static get _default_value_for_minute(): INTEGER {
         return 0;
     }
     /**
@@ -112,7 +112,7 @@ export class DayTime {
      * @static
      * @method
      */
-    public static get _default_value_for_second() {
+    public static get _default_value_for_second(): INTEGER {
         return 0;
     }
 }

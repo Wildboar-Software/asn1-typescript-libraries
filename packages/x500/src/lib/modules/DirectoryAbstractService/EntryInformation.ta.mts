@@ -116,7 +116,7 @@ export class EntryInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_fromEntry() {
+    public static get _default_value_for_fromEntry(): BOOLEAN {
         return true;
     }
     /**
@@ -125,7 +125,7 @@ export class EntryInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_incompleteEntry() {
+    public static get _default_value_for_incompleteEntry(): BOOLEAN {
         return false;
     }
     /**
@@ -134,7 +134,7 @@ export class EntryInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_partialName() {
+    public static get _default_value_for_partialName(): BOOLEAN {
         return false;
     }
     /**
@@ -143,7 +143,7 @@ export class EntryInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_derivedEntry() {
+    public static get _default_value_for_derivedEntry(): BOOLEAN {
         return false;
     }
 }

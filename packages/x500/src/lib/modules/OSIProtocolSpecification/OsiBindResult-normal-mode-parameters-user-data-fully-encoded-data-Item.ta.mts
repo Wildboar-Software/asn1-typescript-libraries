@@ -6,10 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _decode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _encode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+    OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    _decode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    _encode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 import {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
@@ -51,7 +51,7 @@ export class OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_I
          * @public
          * @readonly
          */
-        readonly presentation_data_values: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values
+        readonly presentation_data_values: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
     ) {}
 
     /**
@@ -144,7 +144,7 @@ export function _decode_OsiBindResult_normal_mode_parameters_user_data_fully_enc
         ): OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item {
             let transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
             let presentation_context_identifier!: Presentation_context_identifier;
-            let presentation_data_values!: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values;
+            let presentation_data_values!: OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv;
             const callbacks: $.DecodingMap = {
                 "transfer-syntax-name": (_el: _Element): void => {
                     transfer_syntax_name = _decode_Transfer_syntax_name(_el);
@@ -155,7 +155,7 @@ export function _decode_OsiBindResult_normal_mode_parameters_user_data_fully_enc
                     );
                 },
                 "presentation-data-values": (_el: _Element): void => {
-                    presentation_data_values = _decode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(
+                    presentation_data_values = _decode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv(
                         _el
                     );
                 },
@@ -212,7 +212,7 @@ export function _encode_OsiBindResult_normal_mode_parameters_user_data_fully_enc
                             value.presentation_context_identifier,
                             $.DER
                         ),
-                        /* REQUIRED   */ _encode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(
+                        /* REQUIRED   */ _encode_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv(
                             value.presentation_data_values,
                             $.DER
                         ),

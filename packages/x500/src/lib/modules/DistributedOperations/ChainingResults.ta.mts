@@ -106,7 +106,7 @@ export class ChainingResults {
      * @static
      * @method
      */
-    public static get _default_value_for_securityParameters() {
+    public static get _default_value_for_securityParameters(): SecurityParameters {
         return SecurityParameters._from_object({});
     }
 }

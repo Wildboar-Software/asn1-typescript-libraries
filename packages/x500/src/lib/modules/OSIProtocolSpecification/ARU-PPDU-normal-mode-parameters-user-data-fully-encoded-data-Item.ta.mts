@@ -6,10 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
+    ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 import {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
@@ -40,7 +40,7 @@ export class ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item {
          * @public
          * @readonly
          */
-        readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values
+        readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
     ) {}
 
     /**
@@ -136,11 +136,11 @@ export function _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_
             sequence[0].name = "presentation-context-identifier";
             sequence[1].name = "presentation-data-values";
             let presentation_context_identifier!: Presentation_context_identifier;
-            let presentation_data_values!: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values;
+            let presentation_data_values!: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv;
             presentation_context_identifier = _decode_Presentation_context_identifier(
                 sequence[0]
             );
-            presentation_data_values = _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(
+            presentation_data_values = _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv(
                 sequence[1]
             );
             return new ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item(
@@ -179,7 +179,7 @@ export function _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_
                             value.presentation_context_identifier,
                             $.DER
                         ),
-                        /* REQUIRED   */ _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(
+                        /* REQUIRED   */ _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv(
                             value.presentation_data_values,
                             $.DER
                         ),

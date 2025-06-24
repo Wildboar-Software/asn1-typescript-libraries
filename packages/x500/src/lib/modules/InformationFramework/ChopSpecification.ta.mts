@@ -3,6 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -90,7 +91,7 @@ export class ChopSpecification {
      * @static
      * @method
      */
-    public static get _default_value_for_minimum() {
+    public static get _default_value_for_minimum(): INTEGER {
         return 0;
     }
 }

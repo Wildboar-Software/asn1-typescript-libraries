@@ -135,7 +135,7 @@ export class AccessPointInformation implements MasterOrShadowAccessPoint {
      * @static
      * @method
      */
-    public static get _default_value_for_category() {
+    public static get _default_value_for_category(): MasterOrShadowAccessPoint_category {
         return MasterOrShadowAccessPoint_category_master;
     }
     /**
@@ -144,7 +144,7 @@ export class AccessPointInformation implements MasterOrShadowAccessPoint {
      * @static
      * @method
      */
-    public static get _default_value_for_chainingRequired() {
+    public static get _default_value_for_chainingRequired(): BOOLEAN {
         return false;
     }
     /**

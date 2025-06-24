@@ -75,7 +75,7 @@ export class DayTimeBand {
      * @static
      * @method
      */
-    public static get _default_value_for_startDayTime() {
+    public static get _default_value_for_startDayTime(): DayTime {
         return DayTime._from_object({ hour: 0 });
     }
     /**
@@ -84,7 +84,7 @@ export class DayTimeBand {
      * @static
      * @method
      */
-    public static get _default_value_for_endDayTime() {
+    public static get _default_value_for_endDayTime(): DayTime {
         return DayTime._from_object({ hour: 23, minute: 59, second: 59 });
     }
 }
