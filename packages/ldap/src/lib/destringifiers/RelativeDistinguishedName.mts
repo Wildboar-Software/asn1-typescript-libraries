@@ -2,6 +2,20 @@ import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndVal
 import type { StringDecoderGetter } from "../types/StringDecoderGetter.mjs";
 import atavFromString from "./AttributeTypeAndValue.mjs";
 
+/**
+ * @summary Parse an RDN from a string according to RFC 4514.
+ * @description
+ * 
+ * This function parses an RDN from a string according to
+ * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514).
+ * 
+ * @param str The string to parse.
+ * @param getStringDecoder A function that can be used to get a string decoder.
+ * @param escape The escape character.
+ * @param atavDelimiter The ATAV delimiter.
+ * @yields ATAVs from the RDN from left to right.
+ * @function
+ */
 export function* rdnFromString(
     str: string,
     getStringDecoder: StringDecoderGetter,

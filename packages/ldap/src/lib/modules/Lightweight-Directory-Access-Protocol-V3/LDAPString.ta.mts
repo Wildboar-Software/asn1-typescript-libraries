@@ -32,9 +32,7 @@ export type LDAPString = OCTET_STRING; // OctetStringType
  * @param {_Element} el The element being decoded.
  * @returns {LDAPString} The decoded data structure.
  */
-export function _decode_LDAPString(el: _Element): LDAPString {
-  return $._decodeOctetString(el);
-}
+export const _decode_LDAPString: $.ASN1Decoder<LDAPString> = $._decodeOctetString;
 
 
 /**
@@ -44,12 +42,6 @@ export function _decode_LDAPString(el: _Element): LDAPString {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPString, encoded as an ASN.1 Element.
  */
-export function _encode_LDAPString(
-  value: LDAPString,
-  elGetter: $.ASN1Encoder<LDAPString>
-): _Element {
-  return $._encodeOctetString(value, elGetter);
-}
-
+export const _encode_LDAPString: $.ASN1Encoder<LDAPString> = $._encodeOctetString;
 
 /* eslint-enable */

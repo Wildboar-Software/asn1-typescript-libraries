@@ -12,7 +12,6 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 /**
  * @summary LDAPOID
  * @description
@@ -25,17 +24,13 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type LDAPOID = OCTET_STRING; // OctetStringType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPOID
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LDAPOID} The decoded data structure.
  */
-export function _decode_LDAPOID(el: _Element): LDAPOID {
-  return $._decodeOctetString(el);
-}
-
+export const _decode_LDAPOID: $.ASN1Decoder<LDAPOID> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) LDAPOID into an ASN.1 Element.
@@ -44,12 +39,6 @@ export function _decode_LDAPOID(el: _Element): LDAPOID {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPOID, encoded as an ASN.1 Element.
  */
-export function _encode_LDAPOID(
-  value: LDAPOID,
-  elGetter: $.ASN1Encoder<LDAPOID>
-): _Element {
-  return $._encodeOctetString(value, elGetter);
-}
-
+export const _encode_LDAPOID: $.ASN1Encoder<LDAPOID> = $._encodeOctetString;
 
 /* eslint-enable */

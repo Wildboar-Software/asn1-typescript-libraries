@@ -12,13 +12,11 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 export enum _enum_for_SearchRequest_scope {
   baseObject = 0,
   singleLevel = 1,
   wholeSubtree = 2,
 }
-
 
 /**
  * @summary SearchRequest_scope
@@ -34,14 +32,12 @@ export enum _enum_for_SearchRequest_scope {
  */
 export type SearchRequest_scope = _enum_for_SearchRequest_scope | ENUMERATED;
 
-
 /**
  * @summary SearchRequest_scope_baseObject
  * @constant
  * @type {number}
  */
 export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-
 
 /**
  * @summary baseObject
@@ -50,14 +46,12 @@ export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NA
  */
 export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-
 /**
  * @summary SearchRequest_scope_singleLevel
  * @constant
  * @type {number}
  */
 export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-
 
 /**
  * @summary singleLevel
@@ -66,14 +60,12 @@ export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_N
  */
 export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-
 /**
  * @summary SearchRequest_scope_wholeSubtree
  * @constant
  * @type {number}
  */
 export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-
 
 /**
  * @summary wholeSubtree
@@ -82,17 +74,13 @@ export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_
  */
 export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest_scope
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest_scope} The decoded data structure.
  */
-export function _decode_SearchRequest_scope(el: _Element): SearchRequest_scope {
-  return $._decodeEnumerated(el);
-}
-
+export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SearchRequest_scope into an ASN.1 Element.
@@ -101,12 +89,6 @@ export function _decode_SearchRequest_scope(el: _Element): SearchRequest_scope {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SearchRequest_scope, encoded as an ASN.1 Element.
  */
-export function _encode_SearchRequest_scope(
-  value: SearchRequest_scope,
-  elGetter: $.ASN1Encoder<SearchRequest_scope>
-): _Element {
-  return $._encodeEnumerated(value, elGetter);
-}
-
+export const _encode_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> = $._encodeEnumerated;
 
 /* eslint-enable */

@@ -19,6 +19,17 @@ function escapedValue (value: Uint8Array): string {
         .join("");
 }
 
+/**
+ * @summary Stringify a filter according to RFC 4515.
+ * @description
+ * 
+ * This function stringifies a filter according to
+ * [IETF RFC 4515](https://www.rfc-editor.org/rfc/rfc4515).
+ * 
+ * @param filter The filter to stringify.
+ * @returns The stringified filter.
+ * @function
+ */
 export
 function stringifyFilter (filter: Filter): string {
     if ("and" in filter) {

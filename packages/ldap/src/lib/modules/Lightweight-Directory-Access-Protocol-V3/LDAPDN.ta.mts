@@ -31,17 +31,13 @@ import {
  */
 export type LDAPDN = LDAPString; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPDN
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LDAPDN} The decoded data structure.
  */
-export function _decode_LDAPDN(el: _Element): LDAPDN {
-  return _decode_LDAPString(el);
-}
-
+export const _decode_LDAPDN: $.ASN1Decoder<LDAPDN> = _decode_LDAPString;
 
 /**
  * @summary Encodes a(n) LDAPDN into an ASN.1 Element.
@@ -50,9 +46,6 @@ export function _decode_LDAPDN(el: _Element): LDAPDN {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPDN, encoded as an ASN.1 Element.
  */
-export function _encode_LDAPDN(value: LDAPDN, elGetter: $.ASN1Encoder<LDAPDN>): _Element {
-  return _encode_LDAPString(value, elGetter);
-}
-
+export const _encode_LDAPDN: $.ASN1Encoder<LDAPDN> = _encode_LDAPString;
 
 /* eslint-enable */

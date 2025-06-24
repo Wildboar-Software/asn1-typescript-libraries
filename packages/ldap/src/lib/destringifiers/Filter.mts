@@ -3,50 +3,23 @@ import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access
 import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
 
-const mustBeEscaped = new Set([
-    "\x00",
-    "(",
-    ")",
-    "*",
-    "\x7F",
-].map((char) => char.charCodeAt(0)));
-
-function escapedValue (value: Uint8Array): string {
-    return Array.from(value)
-        .map((byte: number) => (
-            mustBeEscaped.has(byte)
-                ? `\x7F${byte.toString(16).padStart(2, "0")}`
-                : String.fromCharCode(byte)
-        ))
-        .join("");
-}
-
 interface ParserState {
     readonly input: string;
     index: number;
     filter: Filter;
 }
 
-function isAttrChar (char: number): boolean {
-    return (
-        ((char >= 0x41) && (char <= 0x5A))
-        || ((char >= 0x61) && (char <= 0x7A))
-        || ((char >= 0x30) && (char <= 0x39))
-        || (char === 0x3B) // semi-colon
-        || (char === 0x2D) // hyphen
-        || (char === 0x2E) // period
-    );
-}
-
-function parseAttr (state: ParserState): ParserState {
-    let char = state.input.charCodeAt(state.index);
-    while (isAttrChar(char)) {
-        state.index++;
-        char = state.input.charCodeAt(state.index);
-    }
-    return state;
-}
-
+/**
+ * @summary Parse an LDAP Filter from a string according to RFC 4515.
+ * @description
+ * 
+ * This function parses an LDAP Filter from a string, according to
+ * [IETF RFC 4515](https://www.rfc-editor.org/rfc/rfc4515).
+ *
+ * @param state The parser state.
+ * @returns The parser state.
+ * @function
+ */
 export
 function parseFilter (state: ParserState): ParserState {
     state.index++;

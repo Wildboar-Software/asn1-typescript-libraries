@@ -28,9 +28,7 @@ import {
  */
 export type AttributeList = Attribute[]; // SequenceOfType
 
-
 let _cached_decoder_for_AttributeList: $.ASN1Decoder<AttributeList> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeList
@@ -47,9 +45,7 @@ export function _decode_AttributeList(el: _Element): AttributeList {
   return _cached_decoder_for_AttributeList(el);
 }
 
-
 let _cached_encoder_for_AttributeList: $.ASN1Encoder<AttributeList> | null = null;
-
 
 /**
  * @summary Encodes a(n) AttributeList into an ASN.1 Element.

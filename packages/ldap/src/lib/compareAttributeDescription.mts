@@ -3,6 +3,19 @@ import bytesToAscii from "./utils/bytesToAscii.mjs";
 
 const SEMI_COLON: number = ";".charCodeAt(0);
 
+/**
+ * @summary Compare two `AttributeDescription`s
+ * @description
+ * 
+ * This function compares two `AttributeDescription`s. These cannot be compared
+ * simply with `===` because they may contain options like ";binary", and they
+ * are case-insensitive.
+ * 
+ * @param a One `AttributeDescription`
+ * @param b The other
+ * @returns Whether they match
+ * @function
+ */
 export
 function compareAttributeDescription (a: AttributeDescription, b: AttributeDescription): boolean {
     const a_semi_index = a.indexOf(SEMI_COLON);

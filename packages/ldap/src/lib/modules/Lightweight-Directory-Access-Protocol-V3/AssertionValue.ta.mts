@@ -12,7 +12,6 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 /**
  * @summary AssertionValue
  * @description
@@ -25,17 +24,13 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type AssertionValue = OCTET_STRING; // OctetStringType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AssertionValue
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AssertionValue} The decoded data structure.
  */
-export function _decode_AssertionValue(el: _Element): AssertionValue {
-  return $._decodeOctetString(el);
-}
-
+export const _decode_AssertionValue: $.ASN1Decoder<AssertionValue> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) AssertionValue into an ASN.1 Element.
@@ -44,12 +39,6 @@ export function _decode_AssertionValue(el: _Element): AssertionValue {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssertionValue, encoded as an ASN.1 Element.
  */
-export function _encode_AssertionValue(
-  value: AssertionValue,
-  elGetter: $.ASN1Encoder<AssertionValue>
-): _Element {
-  return $._encodeOctetString(value, elGetter);
-}
-
+export const _encode_AssertionValue: $.ASN1Encoder<AssertionValue> = $._encodeOctetString;
 
 /* eslint-enable */

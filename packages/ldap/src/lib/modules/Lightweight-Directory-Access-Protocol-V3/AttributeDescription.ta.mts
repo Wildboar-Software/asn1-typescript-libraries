@@ -28,17 +28,13 @@ import {
  */
 export type AttributeDescription = LDAPString; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeDescription
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AttributeDescription} The decoded data structure.
  */
-export function _decode_AttributeDescription(el: _Element): AttributeDescription {
-  return _decode_LDAPString(el);
-}
-
+export const _decode_AttributeDescription: $.ASN1Decoder<AttributeDescription> = _decode_LDAPString;
 
 /**
  * @summary Encodes a(n) AttributeDescription into an ASN.1 Element.
@@ -47,12 +43,6 @@ export function _decode_AttributeDescription(el: _Element): AttributeDescription
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeDescription, encoded as an ASN.1 Element.
  */
-export function _encode_AttributeDescription(
-  value: AttributeDescription,
-  elGetter: $.ASN1Encoder<AttributeDescription>
-): _Element {
-  return _encode_LDAPString(value, elGetter);
-}
-
+export const _encode_AttributeDescription: $.ASN1Encoder<AttributeDescription> = _encode_LDAPString;
 
 /* eslint-enable */

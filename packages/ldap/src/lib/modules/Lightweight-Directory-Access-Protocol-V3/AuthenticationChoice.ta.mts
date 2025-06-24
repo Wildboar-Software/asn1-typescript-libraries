@@ -40,7 +40,6 @@ export type AuthenticationChoice =
 
 let _cached_decoder_for_AuthenticationChoice: $.ASN1Decoder<AuthenticationChoice> | null = null;
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationChoice
  * @function

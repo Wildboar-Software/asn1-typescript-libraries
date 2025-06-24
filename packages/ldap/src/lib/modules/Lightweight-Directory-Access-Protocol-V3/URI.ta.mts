@@ -28,17 +28,13 @@ import {
  */
 export type URI = LDAPString; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) URI
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {URI} The decoded data structure.
  */
-export function _decode_URI(el: _Element): URI {
-  return _decode_LDAPString(el);
-}
-
+export const _decode_URI: $.ASN1Decoder<URI> = _decode_LDAPString;
 
 /**
  * @summary Encodes a(n) URI into an ASN.1 Element.
@@ -47,9 +43,6 @@ export function _decode_URI(el: _Element): URI {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>): _Element {
-  return _encode_LDAPString(value, elGetter);
-}
-
+export const _encode_URI: $.ASN1Encoder<URI> = _encode_LDAPString;
 
 /* eslint-enable */

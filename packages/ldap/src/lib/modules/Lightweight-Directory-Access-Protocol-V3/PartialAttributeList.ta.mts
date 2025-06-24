@@ -8,6 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
+  BERElement,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -28,10 +29,6 @@ import {
  */
 export type PartialAttributeList = PartialAttribute[]; // SequenceOfType
 
-
-let _cached_decoder_for_PartialAttributeList: $.ASN1Decoder<PartialAttributeList> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialAttributeList
  * @function
@@ -39,17 +36,8 @@ let _cached_decoder_for_PartialAttributeList: $.ASN1Decoder<PartialAttributeList
  * @returns {PartialAttributeList} The decoded data structure.
  */
 export function _decode_PartialAttributeList(el: _Element): PartialAttributeList {
-  if (!_cached_decoder_for_PartialAttributeList) {
-    _cached_decoder_for_PartialAttributeList = $._decodeSequenceOf<PartialAttribute>(
-      () => _decode_PartialAttribute
-    );
-  }
-  return _cached_decoder_for_PartialAttributeList(el);
+  return el.sequenceOf.map((attr) => _decode_PartialAttribute(attr));
 }
-
-
-let _cached_encoder_for_PartialAttributeList: $.ASN1Encoder<PartialAttributeList> | null = null;
-
 
 /**
  * @summary Encodes a(n) PartialAttributeList into an ASN.1 Element.
@@ -62,13 +50,7 @@ export function _encode_PartialAttributeList(
   value: PartialAttributeList,
   elGetter: $.ASN1Encoder<PartialAttributeList>
 ): _Element {
-  if (!_cached_encoder_for_PartialAttributeList) {
-    _cached_encoder_for_PartialAttributeList = $._encodeSequenceOf<PartialAttribute>(
-      () => _encode_PartialAttribute,
-      $.BER
-    );
-  }
-  return _cached_encoder_for_PartialAttributeList(value, elGetter);
+  return BERElement.fromSequence(value.map((attr) => _encode_PartialAttribute(attr, $.BER)));
 }
 
 

@@ -8,6 +8,7 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
+  BERElement,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -28,10 +29,6 @@ import {
  */
 export type AttributeSelection = LDAPString[]; // SequenceOfType
 
-
-let _cached_decoder_for_AttributeSelection: $.ASN1Decoder<AttributeSelection> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSelection
  * @function
@@ -39,17 +36,8 @@ let _cached_decoder_for_AttributeSelection: $.ASN1Decoder<AttributeSelection> | 
  * @returns {AttributeSelection} The decoded data structure.
  */
 export function _decode_AttributeSelection(el: _Element): AttributeSelection {
-  if (!_cached_decoder_for_AttributeSelection) {
-    _cached_decoder_for_AttributeSelection = $._decodeSequenceOf<LDAPString>(
-      () => _decode_LDAPString
-    );
-  }
-  return _cached_decoder_for_AttributeSelection(el);
+  return el.sequenceOf.map((attr) => _decode_LDAPString(attr));
 }
-
-
-let _cached_encoder_for_AttributeSelection: $.ASN1Encoder<AttributeSelection> | null = null;
-
 
 /**
  * @summary Encodes a(n) AttributeSelection into an ASN.1 Element.
@@ -62,14 +50,7 @@ export function _encode_AttributeSelection(
   value: AttributeSelection,
   elGetter: $.ASN1Encoder<AttributeSelection>
 ): _Element {
-  if (!_cached_encoder_for_AttributeSelection) {
-    _cached_encoder_for_AttributeSelection = $._encodeSequenceOf<LDAPString>(
-      () => _encode_LDAPString,
-      $.BER
-    );
-  }
-  return _cached_encoder_for_AttributeSelection(value, elGetter);
+  return BERElement.fromSequence(value.map((attr) => _encode_LDAPString(attr, $.BER)));
 }
-
 
 /* eslint-enable */

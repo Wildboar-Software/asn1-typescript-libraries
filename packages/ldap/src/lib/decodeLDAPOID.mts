@@ -1,23 +1,10 @@
 import { OBJECT_IDENTIFIER, ObjectIdentifier } from "@wildboar/asn1";
 import type { LDAPOID } from "./modules/Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs";
+import bytesToAscii from "./utils/bytesToAscii.mjs";
 
 export
 function decodeLDAPOID (ldapoid: LDAPOID): OBJECT_IDENTIFIER {
-    const nodes: number[] = [
-        (ldapoid[0] - 0x30),
-    ];
-    let current: number = 0;
-    for (let i: number = 2; i < ldapoid.length; i++) {
-        if (ldapoid[i] === 0x2E) { // Period
-            nodes.push(current);
-            current = 0;
-        } else {
-            current *= 10;
-            current += (ldapoid[i] - 0x30);
-        }
-    }
-    nodes.push(current);
-    return ObjectIdentifier.fromParts(nodes);
+    return ObjectIdentifier.fromString(bytesToAscii(ldapoid));
 }
 
 export default decodeLDAPOID;

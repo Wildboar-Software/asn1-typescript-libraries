@@ -1,6 +1,8 @@
+import { Buffer } from "node:buffer";
+
 export
 function bytesToAscii (bytes: Uint8Array): string {
-    return Array.from(bytes).map((byte) => String.fromCharCode(byte)).join("");
+    return Buffer.from(bytes.buffer, bytes.byteOffset, bytes.byteLength).toString("ascii");
 }
 
 export default bytesToAscii;

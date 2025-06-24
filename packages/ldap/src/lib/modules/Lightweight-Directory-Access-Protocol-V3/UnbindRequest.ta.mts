@@ -12,7 +12,6 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 /**
  * @summary UnbindRequest
  * @description
@@ -25,28 +24,15 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type UnbindRequest = NULL; // NullType
 
-
-let _cached_decoder_for_UnbindRequest: $.ASN1Decoder<UnbindRequest> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnbindRequest
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UnbindRequest} The decoded data structure.
  */
-export function _decode_UnbindRequest(el: _Element): UnbindRequest {
-  if (!_cached_decoder_for_UnbindRequest) {
-    _cached_decoder_for_UnbindRequest = $._decode_implicit<UnbindRequest>(
-      () => $._decodeNull
-    );
-  }
-  return _cached_decoder_for_UnbindRequest(el);
-}
-
-
-let _cached_encoder_for_UnbindRequest: $.ASN1Encoder<UnbindRequest> | null = null;
-
+export const _decode_UnbindRequest: $.ASN1Decoder<UnbindRequest> = $._decode_implicit<UnbindRequest>(
+  () => $._decodeNull
+);
 
 /**
  * @summary Encodes a(n) UnbindRequest into an ASN.1 Element.
@@ -55,20 +41,11 @@ let _cached_encoder_for_UnbindRequest: $.ASN1Encoder<UnbindRequest> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnbindRequest, encoded as an ASN.1 Element.
  */
-export function _encode_UnbindRequest(
-  value: UnbindRequest,
-  elGetter: $.ASN1Encoder<UnbindRequest>
-): _Element {
-  if (!_cached_encoder_for_UnbindRequest) {
-    _cached_encoder_for_UnbindRequest = $._encode_implicit(
-      _TagClass.application,
-      2,
-      () => $._encodeNull,
-      $.BER
-    );
-  }
-  return _cached_encoder_for_UnbindRequest(value, elGetter);
-}
-
+export const _encode_UnbindRequest: $.ASN1Encoder<UnbindRequest> = $._encode_implicit(
+  _TagClass.application,
+  2,
+  () => $._encodeNull,
+  $.BER
+);
 
 /* eslint-enable */

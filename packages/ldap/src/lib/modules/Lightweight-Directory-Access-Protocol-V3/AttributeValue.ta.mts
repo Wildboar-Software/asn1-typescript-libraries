@@ -12,7 +12,6 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 /**
  * @summary AttributeValue
  * @description
@@ -25,17 +24,13 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type AttributeValue = OCTET_STRING; // OctetStringType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValue
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValue} The decoded data structure.
  */
-export function _decode_AttributeValue(el: _Element): AttributeValue {
-  return $._decodeOctetString(el);
-}
-
+export const _decode_AttributeValue: $.ASN1Decoder<AttributeValue> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) AttributeValue into an ASN.1 Element.
@@ -44,12 +39,6 @@ export function _decode_AttributeValue(el: _Element): AttributeValue {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeValue, encoded as an ASN.1 Element.
  */
-export function _encode_AttributeValue(
-  value: AttributeValue,
-  elGetter: $.ASN1Encoder<AttributeValue>
-): _Element {
-  return $._encodeOctetString(value, elGetter);
-}
-
+export const _encode_AttributeValue: $.ASN1Encoder<AttributeValue> = $._encodeOctetString;
 
 /* eslint-enable */

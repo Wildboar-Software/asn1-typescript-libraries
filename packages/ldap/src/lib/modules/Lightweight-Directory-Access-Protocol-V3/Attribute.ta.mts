@@ -31,17 +31,13 @@ import {
  */
 export type Attribute = PartialAttribute; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Attribute} The decoded data structure.
  */
-export function _decode_Attribute(el: _Element): Attribute {
-  return _decode_PartialAttribute(el);
-}
-
+export const _decode_Attribute: $.ASN1Decoder<Attribute> = _decode_PartialAttribute;
 
 /**
  * @summary Encodes a(n) Attribute into an ASN.1 Element.
@@ -50,12 +46,6 @@ export function _decode_Attribute(el: _Element): Attribute {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attribute, encoded as an ASN.1 Element.
  */
-export function _encode_Attribute(
-  value: Attribute,
-  elGetter: $.ASN1Encoder<Attribute>
-): _Element {
-  return _encode_PartialAttribute(value, elGetter);
-}
-
+export const _encode_Attribute: $.ASN1Encoder<Attribute> = _encode_PartialAttribute;
 
 /* eslint-enable */

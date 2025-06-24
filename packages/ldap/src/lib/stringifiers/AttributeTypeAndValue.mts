@@ -48,6 +48,16 @@ function escapeATAV (str: string): string {
     return ret;
 }
 
+/**
+ * @summary String encode an LDAP value when the syntax is not known.
+ * @description
+ * 
+ * This function encodes a default value.
+ * 
+ * @param value The value to encode.
+ * @returns The encoded value.
+ * @function
+ */
 export
 function defaultValueEncoder (value: ASN1Element): string {
     // FIXME: Why do you serialize then de-serialize?
@@ -58,6 +68,19 @@ function defaultValueEncoder (value: ASN1Element): string {
         .join("");
 }
 
+/**
+ * @summary Stringify an attribute type and value according to RFC 4514.
+ * @description
+ * 
+ * This function stringifies an attribute type and value according to
+ * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514).
+ * 
+ * @param atav The attribute type and value to stringify.
+ * @param getEncoder A function that can be used to get a string encoder.
+ * @param typeNameGetter A function that can be used to get an attribute type name.
+ * @returns The stringified attribute type and value.
+ * @function
+ */
 export
 function stringifyAttributeTypeAndValue (
     atav: AttributeTypeAndValue,

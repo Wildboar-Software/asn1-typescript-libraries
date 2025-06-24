@@ -44,6 +44,18 @@ function unescape (str: string): string {
     return ret;
 }
 
+/**
+ * @summary Decode an attribute type and value from a string according to RFC 4514.
+ * @description
+ * 
+ * This function decodes an attribute type and value from a string according to
+ * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514).
+ * 
+ * @param str The string to decode.
+ * @param getStringDecoder A function that can be used to get a string decoder.
+ * @returns The decoded attribute type and value.
+ * @function
+ */
 export function atavFromString(
     str: string,
     getStringDecoder: StringDecoderGetter,

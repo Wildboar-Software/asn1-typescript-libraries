@@ -4,6 +4,21 @@ import rdnFromString from "./RelativeDistinguishedName.mjs";
 
 type RDN = ATAV[];
 
+/**
+ * @summary Parse an RDN sequence from a string according to RFC 4514.
+ * @description
+ * 
+ * This function parses an RDN sequence from a string according to
+ * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514).
+ * 
+ * @param str The string to parse.
+ * @param getStringDecoder A function that can be used to get a string decoder.
+ * @param escape The escape character.
+ * @param rdnDelimiter The RDN delimiter.
+ * @param atavDelimiter The ATAV delimiter.
+ * @yields RDNs from the sequence from left to right.
+ * @function
+ */
 export default function* rdnSequenceFromString(
     str: string,
     getStringDecoder: StringDecoderGetter,

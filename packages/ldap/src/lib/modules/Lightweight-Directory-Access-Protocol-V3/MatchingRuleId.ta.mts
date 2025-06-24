@@ -28,17 +28,13 @@ import {
  */
 export type MatchingRuleId = LDAPString; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MatchingRuleId} The decoded data structure.
  */
-export function _decode_MatchingRuleId(el: _Element): MatchingRuleId {
-  return _decode_LDAPString(el);
-}
-
+export const _decode_MatchingRuleId: $.ASN1Decoder<MatchingRuleId> = _decode_LDAPString;
 
 /**
  * @summary Encodes a(n) MatchingRuleId into an ASN.1 Element.
@@ -47,12 +43,6 @@ export function _decode_MatchingRuleId(el: _Element): MatchingRuleId {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MatchingRuleId, encoded as an ASN.1 Element.
  */
-export function _encode_MatchingRuleId(
-  value: MatchingRuleId,
-  elGetter: $.ASN1Encoder<MatchingRuleId>
-): _Element {
-  return _encode_LDAPString(value, elGetter);
-}
-
+export const _encode_MatchingRuleId: $.ASN1Encoder<MatchingRuleId> = _encode_LDAPString;
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import type { LDAPOID } from "./modules/Lightweight-Directory-Access-Protocol-V3
 
 export
 function encodeLDAPOID (oid: OBJECT_IDENTIFIER): LDAPOID {
-    return new Uint8Array(Array.from(oid.dotDelimitedNotation).map((char) => char.charCodeAt(0)));
+    return Buffer.from(oid.dotDelimitedNotation, "ascii");
 }
 
 export default encodeLDAPOID;

@@ -29,17 +29,13 @@ import {
  */
 export type RelativeLDAPDN = LDAPString; // DefinedType
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RelativeLDAPDN
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RelativeLDAPDN} The decoded data structure.
  */
-export function _decode_RelativeLDAPDN(el: _Element): RelativeLDAPDN {
-  return _decode_LDAPString(el);
-}
-
+export const _decode_RelativeLDAPDN: $.ASN1Decoder<RelativeLDAPDN> = _decode_LDAPString;
 
 /**
  * @summary Encodes a(n) RelativeLDAPDN into an ASN.1 Element.
@@ -48,12 +44,6 @@ export function _decode_RelativeLDAPDN(el: _Element): RelativeLDAPDN {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RelativeLDAPDN, encoded as an ASN.1 Element.
  */
-export function _encode_RelativeLDAPDN(
-  value: RelativeLDAPDN,
-  elGetter: $.ASN1Encoder<RelativeLDAPDN>
-): _Element {
-  return _encode_LDAPString(value, elGetter);
-}
-
+export const _encode_RelativeLDAPDN: $.ASN1Encoder<RelativeLDAPDN> = _encode_LDAPString;
 
 /* eslint-enable */

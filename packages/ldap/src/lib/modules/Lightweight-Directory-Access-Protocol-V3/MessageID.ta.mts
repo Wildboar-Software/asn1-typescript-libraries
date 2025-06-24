@@ -12,7 +12,6 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-
 /**
  * @summary MessageID
  * @description
@@ -25,17 +24,13 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type MessageID = INTEGER;
 
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageID
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageID} The decoded data structure.
  */
-export function _decode_MessageID(el: _Element): MessageID {
-  return $._decodeInteger(el);
-}
-
+export const _decode_MessageID: $.ASN1Decoder<MessageID> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) MessageID into an ASN.1 Element.
@@ -44,12 +39,6 @@ export function _decode_MessageID(el: _Element): MessageID {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageID, encoded as an ASN.1 Element.
  */
-export function _encode_MessageID(
-  value: MessageID,
-  elGetter: $.ASN1Encoder<MessageID>
-): _Element {
-  return $._encodeInteger(value, elGetter);
-}
-
+export const _encode_MessageID: $.ASN1Encoder<MessageID> = $._encodeInteger;
 
 /* eslint-enable */
