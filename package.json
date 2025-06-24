@@ -10,7 +10,7 @@
   "private": true,
   "dependencies": {
     "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-    "date-fns": "4.x.x"
+    "date-fns": "^4.1.0"
   },
   "devDependencies": {
     "@nx/jest": "21.2.0",
