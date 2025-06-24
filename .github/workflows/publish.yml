@@ -69,7 +69,7 @@ jobs:
           # - "usm"
           # - "x1080"
           # - "x400"
-          # - "x500"
+          - "x500"
           # - "x700"
     permissions:
       contents: read

@@ -1,6 +1,6 @@
-# Lightweight Directory Access Protocol PDUs in TypeScript
+# Lightweight Directory Access Protocol (LDAP) in TypeScript
 
-ASN.1 data structures and PDUs based on the ASN.1 definitions in
+ASN.1 data structures based on the ASN.1 definitions in
 [IETF RFC 4511](https://datatracker.ietf.org/doc/html/rfc4511/), which defines
 the Lightweight Directory Access Protocol (LDAP).
 
@@ -20,7 +20,7 @@ import { BERElement } from "@wildboar/asn1";
 import { _decode_LDAPMessage } from "@wildboar/ldap";
 
 // Handle a request received over TCP.
-const el = new BERElement();;
+const el = new BERElement();
 el.fromBytes(requestBytes); // Throws if a full LDAPMessage is not received yet.
 // The above returns the number of bytes read.
 const request = _decode_LDAPMessage(el);
