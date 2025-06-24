@@ -1,7 +1,7 @@
 export type {
     NetworkAddress,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/NetworkAddress.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_NetworkAddress,
     _encode_NetworkAddress,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/NetworkAddress.ta.mjs";
+} from "@wildboar/pki-stub";

@@ -1,7 +1,7 @@
 export type {
     ScopeRestrictions,
-} from "@wildboar/pki-stub/src/lib/modules/AuthenticationFramework/ScopeRestrictions.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_ScopeRestrictions,
     _encode_ScopeRestrictions,
-} from "@wildboar/pki-stub/src/lib/modules/AuthenticationFramework/ScopeRestrictions.ta.mjs";
+} from "@wildboar/pki-stub";

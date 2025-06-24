@@ -1,7 +1,7 @@
 export type {
     NumericUserIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/NumericUserIdentifier.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_NumericUserIdentifier,
     _encode_NumericUserIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/NumericUserIdentifier.ta.mjs";
+} from "@wildboar/pki-stub";

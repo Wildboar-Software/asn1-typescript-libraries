@@ -1,7 +1,7 @@
 export type {
     CountryName,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/CountryName.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_CountryName,
     _encode_CountryName,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/CountryName.ta.mjs";
+} from "@wildboar/pki-stub";

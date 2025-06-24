@@ -1,7 +1,7 @@
 export type {
     OrganizationalUnitNames,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/OrganizationalUnitNames.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_OrganizationalUnitNames,
     _encode_OrganizationalUnitNames,
-} from "@wildboar/pki-stub/src/lib/modules/PkiPmiExternalDataTypes/OrganizationalUnitNames.ta.mjs";
+} from "@wildboar/pki-stub";
