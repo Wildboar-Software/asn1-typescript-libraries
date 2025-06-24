@@ -10,7 +10,7 @@ import {
     _decode_Payload23,
     _encode_Payload23,
 } from "../GenAlgo/Payload23.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
+import { ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary dhModpGr23Hkdf256Algo
  * @description

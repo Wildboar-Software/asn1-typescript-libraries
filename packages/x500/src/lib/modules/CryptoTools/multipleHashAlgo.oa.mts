@@ -5,7 +5,7 @@ import {
     _decode_MultipleHashAlgo,
     _encode_MultipleHashAlgo,
 } from "../CryptoTools/MultipleHashAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
+import { ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multipleHashAlgo
  * @description

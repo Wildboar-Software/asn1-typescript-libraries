@@ -1,7 +1,7 @@
 export type {
     RDNSequence,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/RDNSequence.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_RDNSequence,
     _encode_RDNSequence,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/RDNSequence.ta.mjs";
+} from "@wildboar/pki-stub";

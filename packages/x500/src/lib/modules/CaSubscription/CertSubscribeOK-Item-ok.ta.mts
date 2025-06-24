@@ -15,13 +15,13 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
+} from "@wildboar/pki-stub";
 /**
  * @summary CertSubscribeOK_Item_ok
  * @description

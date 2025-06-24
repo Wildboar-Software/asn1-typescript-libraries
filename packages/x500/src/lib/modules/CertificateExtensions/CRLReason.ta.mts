@@ -1,6 +1,6 @@
 export type {
     CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_CRLReason,
     _encode_CRLReason,
@@ -27,4 +27,4 @@ export {
     CRLReason_aACompromise,
     CRLReason_weakAlgorithmOrKey,
     _enum_for_CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
+} from "@wildboar/pki-stub";

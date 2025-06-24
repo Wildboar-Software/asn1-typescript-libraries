@@ -9,12 +9,12 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
+} from "@wildboar/pki-stub";
 /**
  * @summary CertReplaceReq_certs_Item
  * @description

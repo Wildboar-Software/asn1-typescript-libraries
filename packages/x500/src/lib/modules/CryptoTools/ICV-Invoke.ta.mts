@@ -10,7 +10,7 @@ import {
     AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.mjs";
+} from "@wildboar/pki-stub";
 /**
  * @summary ICV_Invoke
  * @description

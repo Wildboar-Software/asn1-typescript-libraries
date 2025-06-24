@@ -1,7 +1,7 @@
 export type {
     AvlSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
+} from "@wildboar/pki-stub";

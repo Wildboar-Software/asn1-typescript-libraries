@@ -1,3 +1,3 @@
 export {
     ExtensionSet,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ExtensionSet.osa.mjs";
+} from "@wildboar/pki-stub";

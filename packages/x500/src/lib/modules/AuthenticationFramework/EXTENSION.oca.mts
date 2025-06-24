@@ -1,3 +1,3 @@
 export type {
     EXTENSION,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.mjs";
+} from "@wildboar/pki-stub";

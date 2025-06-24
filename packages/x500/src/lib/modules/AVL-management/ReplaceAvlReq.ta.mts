@@ -14,12 +14,12 @@ import {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
+} from "@wildboar/pki-stub";
 /**
  * @summary ReplaceAvlReq
  * @description

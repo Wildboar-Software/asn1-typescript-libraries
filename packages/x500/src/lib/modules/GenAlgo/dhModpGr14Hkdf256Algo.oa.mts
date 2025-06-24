@@ -10,7 +10,7 @@ import {
     _decode_Payload14,
     _encode_Payload14,
 } from "../GenAlgo/Payload14.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
+import { ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary dhModpGr14Hkdf256Algo
  * @description

@@ -15,8 +15,8 @@ import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.mjs";
+} from "@wildboar/pki-stub";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
 /**
  * @summary CertUpdateReq_certs_Item
  * @description

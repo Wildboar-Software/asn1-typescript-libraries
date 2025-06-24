@@ -1,7 +1,7 @@
 export type {
     DistinguishedName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/DistinguishedName.ta.mjs";
+} from "@wildboar/pki-stub";
 export {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/DistinguishedName.ta.mjs";
+} from "@wildboar/pki-stub";

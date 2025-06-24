@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { id_wrprot } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-wrprot.va.mjs";
+import { id_wrprot } from "@wildboar/pki-stub";
 /**
  * @summary id_avlprot
  * @description
