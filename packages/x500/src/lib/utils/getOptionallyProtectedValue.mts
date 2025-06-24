@@ -1,4 +1,4 @@
-import type { OPTIONALLY_PROTECTED } from "@wildboar/x500/src/lib/modules/EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import type { OPTIONALLY_PROTECTED } from "../modules/EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 
 /**
  * @summary Where `op` is `OPTIONALLY_PROTECTED<T>`, get `T`

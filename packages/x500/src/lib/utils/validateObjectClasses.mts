@@ -4,8 +4,8 @@ import {
     ObjectClassKind_structural,
     ObjectClassKind_abstract,
     ObjectClassKind_auxiliary,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs";
+} from "../modules/InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../modules/InformationFramework/top.oa.mjs";
 
 function getAncestorObjectClasses (
     oc: OBJECT_IDENTIFIER,

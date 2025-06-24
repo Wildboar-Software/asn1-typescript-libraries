@@ -1,7 +1,7 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     RelativeDistinguishedName as RDN,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
+} from "../modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
 
 /**
  * @summary Evaluate the compliance of an RDN to a name form

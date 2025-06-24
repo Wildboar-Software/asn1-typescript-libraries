@@ -1,5 +1,5 @@
-import type { Filter } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Filter.ta.mjs";
-import type { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs";
+import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
+import type { AttributeType } from "../modules/InformationFramework/AttributeType.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 
 /**

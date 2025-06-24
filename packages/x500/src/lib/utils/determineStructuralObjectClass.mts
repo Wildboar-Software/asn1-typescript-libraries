@@ -1,10 +1,10 @@
 import { ObjectIdentifier, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs";
+import { top } from "../modules/InformationFramework/top.oa.mjs";
 import {
     ObjectClassKind,
     ObjectClassKind_structural,
     ObjectClassKind_abstract,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs";
+} from "../modules/InformationFramework/ObjectClassKind.ta.mjs";
 
 /**
  * @summary Determine the structural object class among a set of object classes

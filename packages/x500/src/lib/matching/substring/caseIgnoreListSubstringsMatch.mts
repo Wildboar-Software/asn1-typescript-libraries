@@ -7,7 +7,7 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 import {
     _decode_SubstringAssertion,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 
 // SubstringAssertion ::= SEQUENCE OF CHOICE {
 //     initial  [0]  UnboundedDirectoryString,

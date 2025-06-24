@@ -42,7 +42,7 @@ import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.mjs";
 import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
-import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta.mjs";
+import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
 

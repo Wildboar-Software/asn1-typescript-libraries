@@ -19,10 +19,10 @@ import compareDistinguishedName from "../comparators/compareDistinguishedName.mj
 import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import {
     EntryInformation,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta.mjs";
+} from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import {
     Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
+} from "../modules/InformationFramework/Attribute.ta.mjs";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
 
 /**
