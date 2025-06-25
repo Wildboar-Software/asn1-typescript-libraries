@@ -35,7 +35,7 @@ let _cached_decoder_for_ASO_context_name_list: $.ASN1Decoder<ASO_context_name_li
  * @param {_Element} el The element being decoded.
  * @returns {ASO_context_name_list} The decoded data structure.
  */
-export function _decode_ASO_context_name_list(el: _Element) {
+export function _decode_ASO_context_name_list(el: _Element): ASO_context_name_list {
   if (!_cached_decoder_for_ASO_context_name_list) {
     _cached_decoder_for_ASO_context_name_list = $._decodeSequenceOf<ASO_context_name>(
       () => _decode_ASO_context_name
@@ -56,7 +56,7 @@ let _cached_encoder_for_ASO_context_name_list: $.ASN1Encoder<ASO_context_name_li
 export function _encode_ASO_context_name_list(
   value: ASO_context_name_list,
   elGetter: $.ASN1Encoder<ASO_context_name_list>
-) {
+): _Element {
   if (!_cached_encoder_for_ASO_context_name_list) {
     _cached_encoder_for_ASO_context_name_list = $._encodeSequenceOf<ASO_context_name>(
       () => _encode_ASO_context_name,

@@ -32,7 +32,7 @@ let _cached_decoder_for_AP_title_form4: $.ASN1Decoder<AP_title_form4> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AP_title_form4} The decoded data structure.
  */
-export function _decode_AP_title_form4(el: _Element) {
+export function _decode_AP_title_form4(el: _Element): AP_title_form4 {
   if (!_cached_decoder_for_AP_title_form4) {
     _cached_decoder_for_AP_title_form4 = $._decode_implicit<AP_title_form4>(
       () => $._decodeRelativeOID
@@ -53,7 +53,7 @@ let _cached_encoder_for_AP_title_form4: $.ASN1Encoder<AP_title_form4> | null = n
 export function _encode_AP_title_form4(
   value: AP_title_form4,
   elGetter: $.ASN1Encoder<AP_title_form4>
-) {
+): _Element {
   if (!_cached_encoder_for_AP_title_form4) {
     _cached_encoder_for_AP_title_form4 = $._encode_implicit(
       _TagClass.context,

@@ -36,7 +36,7 @@ let _cached_decoder_for_ASO_qualifier_form1: $.ASN1Decoder<ASO_qualifier_form1> 
  * @param {_Element} el The element being decoded.
  * @returns {ASO_qualifier_form1} The decoded data structure.
  */
-export function _decode_ASO_qualifier_form1(el: _Element) {
+export function _decode_ASO_qualifier_form1(el: _Element): ASO_qualifier_form1 {
   if (!_cached_decoder_for_ASO_qualifier_form1) {
     _cached_decoder_for_ASO_qualifier_form1 = _decode_RelativeDistinguishedName;
   }
@@ -55,7 +55,7 @@ let _cached_encoder_for_ASO_qualifier_form1: $.ASN1Encoder<ASO_qualifier_form1> 
 export function _encode_ASO_qualifier_form1(
   value: ASO_qualifier_form1,
   elGetter: $.ASN1Encoder<ASO_qualifier_form1>
-) {
+): _Element {
   if (!_cached_encoder_for_ASO_qualifier_form1) {
     _cached_encoder_for_ASO_qualifier_form1 = _encode_RelativeDistinguishedName;
   }

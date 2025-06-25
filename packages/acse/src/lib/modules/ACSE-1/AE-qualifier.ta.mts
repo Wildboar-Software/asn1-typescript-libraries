@@ -35,7 +35,7 @@ let _cached_decoder_for_AE_qualifier: $.ASN1Decoder<AE_qualifier> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AE_qualifier} The decoded data structure.
  */
-export function _decode_AE_qualifier(el: _Element) {
+export function _decode_AE_qualifier(el: _Element): AE_qualifier {
   if (!_cached_decoder_for_AE_qualifier) {
     _cached_decoder_for_AE_qualifier = _decode_ASO_qualifier;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_AE_qualifier: $.ASN1Encoder<AE_qualifier> | null = null;
 export function _encode_AE_qualifier(
   value: AE_qualifier,
   elGetter: $.ASN1Encoder<AE_qualifier>
-) {
+): _Element {
   if (!_cached_encoder_for_AE_qualifier) {
     _cached_encoder_for_AE_qualifier = _encode_ASO_qualifier;
   }

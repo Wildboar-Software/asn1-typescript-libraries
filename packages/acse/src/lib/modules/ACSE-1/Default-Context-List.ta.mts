@@ -39,7 +39,7 @@ let _cached_decoder_for_Default_Context_List: $.ASN1Decoder<Default_Context_List
  * @param {_Element} el The element being decoded.
  * @returns {Default_Context_List} The decoded data structure.
  */
-export function _decode_Default_Context_List(el: _Element) {
+export function _decode_Default_Context_List(el: _Element): Default_Context_List {
   if (!_cached_decoder_for_Default_Context_List) {
     _cached_decoder_for_Default_Context_List = $._decodeSequenceOf<Default_Context_List_Item>(
       () => _decode_Default_Context_List_Item
@@ -60,7 +60,7 @@ let _cached_encoder_for_Default_Context_List: $.ASN1Encoder<Default_Context_List
 export function _encode_Default_Context_List(
   value: Default_Context_List,
   elGetter: $.ASN1Encoder<Default_Context_List>
-) {
+): _Element {
   if (!_cached_encoder_for_Default_Context_List) {
     _cached_encoder_for_Default_Context_List = $._encodeSequenceOf<Default_Context_List_Item>(
       () => _encode_Default_Context_List_Item,

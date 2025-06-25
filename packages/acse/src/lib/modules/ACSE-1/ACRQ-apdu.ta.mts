@@ -205,7 +205,7 @@ let _cached_decoder_for_ACRQ_apdu: $.ASN1Decoder<ACRQ_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACRQ_apdu} The decoded data structure.
  */
-export function _decode_ACRQ_apdu(el: _Element) {
+export function _decode_ACRQ_apdu(el: _Element): ACRQ_apdu {
   if (!_cached_decoder_for_ACRQ_apdu) {
     _cached_decoder_for_ACRQ_apdu = $._decode_implicit<ACRQ_apdu>(
       () =>
@@ -286,7 +286,7 @@ let _cached_encoder_for_ACRQ_apdu: $.ASN1Encoder<ACRQ_apdu> | null = null;
 export function _encode_ACRQ_apdu(
   value: ACRQ_apdu,
   elGetter: $.ASN1Encoder<ACRQ_apdu>
-) {
+): _Element {
   if (!_cached_encoder_for_ACRQ_apdu) {
     _cached_encoder_for_ACRQ_apdu = $._encode_implicit(
       _TagClass.application,

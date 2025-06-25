@@ -61,7 +61,7 @@ let _cached_decoder_for_AP_title: $.ASN1Decoder<AP_title> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AP_title} The decoded data structure.
  */
-export function _decode_AP_title(el: _Element) {
+export function _decode_AP_title(el: _Element): AP_title {
   if (!_cached_decoder_for_AP_title) {
     _cached_decoder_for_AP_title = $._decode_extensible_choice<AP_title>({
       'UNIVERSAL 16': ['ap_title_form1', _decode_AP_title_form1],
@@ -85,7 +85,7 @@ let _cached_encoder_for_AP_title: $.ASN1Encoder<AP_title> | null = null;
 export function _encode_AP_title(
   value: AP_title,
   elGetter: $.ASN1Encoder<AP_title>
-) {
+): _Element {
   if (!_cached_encoder_for_AP_title) {
     _cached_encoder_for_AP_title = $._encode_choice<AP_title>(
       {

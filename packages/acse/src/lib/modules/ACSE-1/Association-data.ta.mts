@@ -32,7 +32,7 @@ let _cached_decoder_for_Association_data: $.ASN1Decoder<Association_data> | null
  * @param {_Element} el The element being decoded.
  * @returns {Association_data} The decoded data structure.
  */
-export function _decode_Association_data(el: _Element) {
+export function _decode_Association_data(el: _Element): Association_data {
   if (!_cached_decoder_for_Association_data) {
     _cached_decoder_for_Association_data = $._decodeSequenceOf<EXTERNAL>(
       () => $._decodeExternal
@@ -53,7 +53,7 @@ let _cached_encoder_for_Association_data: $.ASN1Encoder<Association_data> | null
 export function _encode_Association_data(
   value: Association_data,
   elGetter: $.ASN1Encoder<Association_data>
-) {
+): _Element {
   if (!_cached_encoder_for_Association_data) {
     _cached_encoder_for_Association_data = $._encodeSequenceOf<EXTERNAL>(
       () => $._encodeExternal,

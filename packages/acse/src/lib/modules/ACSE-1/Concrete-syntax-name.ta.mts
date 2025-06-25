@@ -35,7 +35,7 @@ let _cached_decoder_for_Concrete_syntax_name: $.ASN1Decoder<Concrete_syntax_name
  * @param {_Element} el The element being decoded.
  * @returns {Concrete_syntax_name} The decoded data structure.
  */
-export function _decode_Concrete_syntax_name(el: _Element) {
+export function _decode_Concrete_syntax_name(el: _Element): Concrete_syntax_name {
   if (!_cached_decoder_for_Concrete_syntax_name) {
     _cached_decoder_for_Concrete_syntax_name = _decode_Transfer_syntax_name;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_Concrete_syntax_name: $.ASN1Encoder<Concrete_syntax_name
 export function _encode_Concrete_syntax_name(
   value: Concrete_syntax_name,
   elGetter: $.ASN1Encoder<Concrete_syntax_name>
-) {
+): _Element {
   if (!_cached_encoder_for_Concrete_syntax_name) {
     _cached_encoder_for_Concrete_syntax_name = _encode_Transfer_syntax_name;
   }

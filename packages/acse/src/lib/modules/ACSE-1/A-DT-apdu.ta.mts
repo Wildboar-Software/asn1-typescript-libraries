@@ -151,7 +151,7 @@ let _cached_decoder_for_A_DT_apdu: $.ASN1Decoder<A_DT_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {A_DT_apdu} The decoded data structure.
  */
-export function _decode_A_DT_apdu(el: _Element) {
+export function _decode_A_DT_apdu(el: _Element): A_DT_apdu {
   if (!_cached_decoder_for_A_DT_apdu) {
     _cached_decoder_for_A_DT_apdu = $._decode_implicit<A_DT_apdu>(
       () =>
@@ -211,7 +211,7 @@ let _cached_encoder_for_A_DT_apdu: $.ASN1Encoder<A_DT_apdu> | null = null;
 export function _encode_A_DT_apdu(
   value: A_DT_apdu,
   elGetter: $.ASN1Encoder<A_DT_apdu>
-) {
+): _Element {
   if (!_cached_encoder_for_A_DT_apdu) {
     _cached_encoder_for_A_DT_apdu = $._encode_implicit(
       _TagClass.application,

@@ -117,7 +117,7 @@ let _cached_decoder_for_ASOI_tag_Item: $.ASN1Decoder<ASOI_tag_Item> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ASOI_tag_Item} The decoded data structure.
  */
-export function _decode_ASOI_tag_Item(el: _Element) {
+export function _decode_ASOI_tag_Item(el: _Element): ASOI_tag_Item {
   if (!_cached_decoder_for_ASOI_tag_Item) {
     _cached_decoder_for_ASOI_tag_Item = function (el: _Element): ASOI_tag_Item {
       let qualifier: OPTIONAL<ASO_qualifier>;
@@ -163,7 +163,7 @@ let _cached_encoder_for_ASOI_tag_Item: $.ASN1Encoder<ASOI_tag_Item> | null = nul
 export function _encode_ASOI_tag_Item(
   value: ASOI_tag_Item,
   elGetter: $.ASN1Encoder<ASOI_tag_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_ASOI_tag_Item) {
     _cached_encoder_for_ASOI_tag_Item = function (
       value: ASOI_tag_Item    ): _Element {

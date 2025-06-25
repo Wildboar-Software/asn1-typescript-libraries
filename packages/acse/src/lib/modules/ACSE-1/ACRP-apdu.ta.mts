@@ -187,7 +187,7 @@ let _cached_decoder_for_ACRP_apdu: $.ASN1Decoder<ACRP_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACRP_apdu} The decoded data structure.
  */
-export function _decode_ACRP_apdu(el: _Element) {
+export function _decode_ACRP_apdu(el: _Element): ACRP_apdu {
   if (!_cached_decoder_for_ACRP_apdu) {
     _cached_decoder_for_ACRP_apdu = $._decode_implicit<ACRP_apdu>(
       () =>
@@ -261,7 +261,7 @@ let _cached_encoder_for_ACRP_apdu: $.ASN1Encoder<ACRP_apdu> | null = null;
 export function _encode_ACRP_apdu(
   value: ACRP_apdu,
   elGetter: $.ASN1Encoder<ACRP_apdu>
-) {
+): _Element {
   if (!_cached_encoder_for_ACRP_apdu) {
     _cached_encoder_for_ACRP_apdu = $._encode_implicit(
       _TagClass.application,

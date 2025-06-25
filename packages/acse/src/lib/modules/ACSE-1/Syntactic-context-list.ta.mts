@@ -45,7 +45,7 @@ let _cached_decoder_for_Syntactic_context_list: $.ASN1Decoder<Syntactic_context_
  * @param {_Element} el The element being decoded.
  * @returns {Syntactic_context_list} The decoded data structure.
  */
-export function _decode_Syntactic_context_list(el: _Element) {
+export function _decode_Syntactic_context_list(el: _Element): Syntactic_context_list {
   if (!_cached_decoder_for_Syntactic_context_list) {
     _cached_decoder_for_Syntactic_context_list = $._decode_inextensible_choice<Syntactic_context_list>(
       {
@@ -77,7 +77,7 @@ let _cached_encoder_for_Syntactic_context_list: $.ASN1Encoder<Syntactic_context_
 export function _encode_Syntactic_context_list(
   value: Syntactic_context_list,
   elGetter: $.ASN1Encoder<Syntactic_context_list>
-) {
+): _Element {
   if (!_cached_encoder_for_Syntactic_context_list) {
     _cached_encoder_for_Syntactic_context_list = $._encode_choice<Syntactic_context_list>(
       {

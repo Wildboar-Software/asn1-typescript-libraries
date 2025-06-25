@@ -52,7 +52,7 @@ let _cached_decoder_for_User_Data: $.ASN1Decoder<User_Data> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {User_Data} The decoded data structure.
  */
-export function _decode_User_Data(el: _Element) {
+export function _decode_User_Data(el: _Element): User_Data {
   if (!_cached_decoder_for_User_Data) {
     _cached_decoder_for_User_Data = $._decode_inextensible_choice<User_Data>({
       'UNIVERSAL 16': ['user_information', _decode_User_information],
@@ -78,7 +78,7 @@ let _cached_encoder_for_User_Data: $.ASN1Encoder<User_Data> | null = null;
 export function _encode_User_Data(
   value: User_Data,
   elGetter: $.ASN1Encoder<User_Data>
-) {
+): _Element {
   if (!_cached_encoder_for_User_Data) {
     _cached_encoder_for_User_Data = $._encode_choice<User_Data>(
       {

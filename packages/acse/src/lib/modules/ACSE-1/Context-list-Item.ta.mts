@@ -136,7 +136,7 @@ let _cached_decoder_for_Context_list_Item: $.ASN1Decoder<Context_list_Item> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Context_list_Item} The decoded data structure.
  */
-export function _decode_Context_list_Item(el: _Element) {
+export function _decode_Context_list_Item(el: _Element): Context_list_Item {
   if (!_cached_decoder_for_Context_list_Item) {
     _cached_decoder_for_Context_list_Item = function (
       el: _Element
@@ -178,7 +178,7 @@ let _cached_encoder_for_Context_list_Item: $.ASN1Encoder<Context_list_Item> | nu
 export function _encode_Context_list_Item(
   value: Context_list_Item,
   elGetter: $.ASN1Encoder<Context_list_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Context_list_Item) {
     _cached_encoder_for_Context_list_Item = function (
       value: Context_list_Item    ): _Element {

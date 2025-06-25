@@ -90,7 +90,7 @@ let _cached_decoder_for_ACSE_apdu: $.ASN1Decoder<ACSE_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACSE_apdu} The decoded data structure.
  */
-export function _decode_ACSE_apdu(el: _Element) {
+export function _decode_ACSE_apdu(el: _Element): ACSE_apdu {
   if (!_cached_decoder_for_ACSE_apdu) {
     _cached_decoder_for_ACSE_apdu = $._decode_extensible_choice<ACSE_apdu>({
       'APPLICATION 0': ['aarq', _decode_AARQ_apdu],
@@ -118,7 +118,7 @@ let _cached_encoder_for_ACSE_apdu: $.ASN1Encoder<ACSE_apdu> | null = null;
 export function _encode_ACSE_apdu(
   value: ACSE_apdu,
   elGetter: $.ASN1Encoder<ACSE_apdu>
-) {
+): _Element {
   if (!_cached_encoder_for_ACSE_apdu) {
     _cached_encoder_for_ACSE_apdu = $._encode_choice<ACSE_apdu>(
       {

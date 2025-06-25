@@ -35,7 +35,7 @@ let _cached_decoder_for_User_information: $.ASN1Decoder<User_information> | null
  * @param {_Element} el The element being decoded.
  * @returns {User_information} The decoded data structure.
  */
-export function _decode_User_information(el: _Element) {
+export function _decode_User_information(el: _Element): User_information {
   if (!_cached_decoder_for_User_information) {
     _cached_decoder_for_User_information = _decode_Association_data;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_User_information: $.ASN1Encoder<User_information> | null
 export function _encode_User_information(
   value: User_information,
   elGetter: $.ASN1Encoder<User_information>
-) {
+): _Element {
   if (!_cached_encoder_for_User_information) {
     _cached_encoder_for_User_information = _encode_Association_data;
   }

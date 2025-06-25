@@ -61,7 +61,7 @@ let _cached_decoder_for_ASO_qualifier: $.ASN1Decoder<ASO_qualifier> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ASO_qualifier} The decoded data structure.
  */
-export function _decode_ASO_qualifier(el: _Element) {
+export function _decode_ASO_qualifier(el: _Element): ASO_qualifier {
   if (!_cached_decoder_for_ASO_qualifier) {
     _cached_decoder_for_ASO_qualifier = $._decode_extensible_choice<ASO_qualifier>(
       {
@@ -87,7 +87,7 @@ let _cached_encoder_for_ASO_qualifier: $.ASN1Encoder<ASO_qualifier> | null = nul
 export function _encode_ASO_qualifier(
   value: ASO_qualifier,
   elGetter: $.ASN1Encoder<ASO_qualifier>
-) {
+): _Element {
   if (!_cached_encoder_for_ASO_qualifier) {
     _cached_encoder_for_ASO_qualifier = $._encode_choice<ASO_qualifier>(
       {

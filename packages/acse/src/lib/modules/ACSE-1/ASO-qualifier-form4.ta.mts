@@ -33,7 +33,7 @@ let _cached_decoder_for_ASO_qualifier_form4: $.ASN1Decoder<ASO_qualifier_form4> 
  * @param {_Element} el The element being decoded.
  * @returns {ASO_qualifier_form4} The decoded data structure.
  */
-export function _decode_ASO_qualifier_form4(el: _Element) {
+export function _decode_ASO_qualifier_form4(el: _Element): ASO_qualifier_form4 {
   if (!_cached_decoder_for_ASO_qualifier_form4) {
     _cached_decoder_for_ASO_qualifier_form4 = $._decode_implicit<ASO_qualifier_form4>(
       () => $._decodeRelativeOID
@@ -54,7 +54,7 @@ let _cached_encoder_for_ASO_qualifier_form4: $.ASN1Encoder<ASO_qualifier_form4> 
 export function _encode_ASO_qualifier_form4(
   value: ASO_qualifier_form4,
   elGetter: $.ASN1Encoder<ASO_qualifier_form4>
-) {
+): _Element {
   if (!_cached_encoder_for_ASO_qualifier_form4) {
     _cached_encoder_for_ASO_qualifier_form4 = $._encode_implicit(
       _TagClass.context,

@@ -112,7 +112,7 @@ let _cached_decoder_for_Authentication_value_other: $.ASN1Decoder<Authentication
  * @param {_Element} el The element being decoded.
  * @returns {Authentication_value_other} The decoded data structure.
  */
-export function _decode_Authentication_value_other(el: _Element) {
+export function _decode_Authentication_value_other(el: _Element): Authentication_value_other {
   if (!_cached_decoder_for_Authentication_value_other) {
     _cached_decoder_for_Authentication_value_other = function (
       el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_Authentication_value_other: $.ASN1Encoder<Authentication
 export function _encode_Authentication_value_other(
   value: Authentication_value_other,
   elGetter: $.ASN1Encoder<Authentication_value_other>
-) {
+): _Element {
   if (!_cached_encoder_for_Authentication_value_other) {
     _cached_encoder_for_Authentication_value_other = function (
       value: Authentication_value_other    ): _Element {

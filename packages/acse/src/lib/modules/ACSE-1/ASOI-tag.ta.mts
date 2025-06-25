@@ -38,7 +38,7 @@ let _cached_decoder_for_ASOI_tag: $.ASN1Decoder<ASOI_tag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ASOI_tag} The decoded data structure.
  */
-export function _decode_ASOI_tag(el: _Element) {
+export function _decode_ASOI_tag(el: _Element): ASOI_tag {
   if (!_cached_decoder_for_ASOI_tag) {
     _cached_decoder_for_ASOI_tag = $._decodeSequenceOf<ASOI_tag_Item>(
       () => _decode_ASOI_tag_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_ASOI_tag: $.ASN1Encoder<ASOI_tag> | null = null;
 export function _encode_ASOI_tag(
   value: ASOI_tag,
   elGetter: $.ASN1Encoder<ASOI_tag>
-) {
+): _Element {
   if (!_cached_encoder_for_ASOI_tag) {
     _cached_encoder_for_ASOI_tag = $._encodeSequenceOf<ASOI_tag_Item>(
       () => _encode_ASOI_tag_Item,

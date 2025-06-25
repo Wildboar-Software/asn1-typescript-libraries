@@ -90,7 +90,7 @@ let _cached_decoder_for_P_context_result_list_Item_provider_reason: $.ASN1Decode
  */
 export function _decode_P_context_result_list_Item_provider_reason(
   el: _Element
-) {
+): P_context_result_list_Item_provider_reason {
   if (!_cached_decoder_for_P_context_result_list_Item_provider_reason) {
     _cached_decoder_for_P_context_result_list_Item_provider_reason =
       $._decodeInteger;
@@ -110,7 +110,7 @@ let _cached_encoder_for_P_context_result_list_Item_provider_reason: $.ASN1Encode
 export function _encode_P_context_result_list_Item_provider_reason(
   value: P_context_result_list_Item_provider_reason,
   elGetter: $.ASN1Encoder<P_context_result_list_Item_provider_reason>
-) {
+): _Element {
   if (!_cached_encoder_for_P_context_result_list_Item_provider_reason) {
     _cached_encoder_for_P_context_result_list_Item_provider_reason =
       $._encodeInteger;

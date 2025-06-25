@@ -139,7 +139,7 @@ let _cached_decoder_for_P_context_result_list_Item: $.ASN1Decoder<P_context_resu
  * @param {_Element} el The element being decoded.
  * @returns {P_context_result_list_Item} The decoded data structure.
  */
-export function _decode_P_context_result_list_Item(el: _Element) {
+export function _decode_P_context_result_list_Item(el: _Element): P_context_result_list_Item {
   if (!_cached_decoder_for_P_context_result_list_Item) {
     _cached_decoder_for_P_context_result_list_Item = function (
       el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_P_context_result_list_Item: $.ASN1Encoder<P_context_resu
 export function _encode_P_context_result_list_Item(
   value: P_context_result_list_Item,
   elGetter: $.ASN1Encoder<P_context_result_list_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_P_context_result_list_Item) {
     _cached_encoder_for_P_context_result_list_Item = function (
       value: P_context_result_list_Item    ): _Element {
