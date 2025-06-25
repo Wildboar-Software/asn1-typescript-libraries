@@ -125,7 +125,7 @@ let _cached_decoder_for_PolicyConstraintsSyntax: $.ASN1Decoder<PolicyConstraints
  * @param {_Element} el The element being decoded.
  * @returns {PolicyConstraintsSyntax} The decoded data structure.
  */
-export function _decode_PolicyConstraintsSyntax(el: _Element) {
+export function _decode_PolicyConstraintsSyntax(el: _Element): PolicyConstraintsSyntax {
     if (!_cached_decoder_for_PolicyConstraintsSyntax) {
         _cached_decoder_for_PolicyConstraintsSyntax = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_PolicyConstraintsSyntax: $.ASN1Encoder<PolicyConstraints
 export function _encode_PolicyConstraintsSyntax(
     value: PolicyConstraintsSyntax,
     elGetter: $.ASN1Encoder<PolicyConstraintsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyConstraintsSyntax) {
         _cached_encoder_for_PolicyConstraintsSyntax = function (
             value: PolicyConstraintsSyntax        ): _Element {

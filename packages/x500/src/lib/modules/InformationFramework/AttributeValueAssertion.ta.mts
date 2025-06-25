@@ -139,7 +139,7 @@ let _cached_decoder_for_AttributeValueAssertion: $.ASN1Decoder<AttributeValueAss
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValueAssertion} The decoded data structure.
  */
-export function _decode_AttributeValueAssertion(el: _Element) {
+export function _decode_AttributeValueAssertion(el: _Element): AttributeValueAssertion {
     if (!_cached_decoder_for_AttributeValueAssertion) {
         _cached_decoder_for_AttributeValueAssertion = function (
             el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_AttributeValueAssertion: $.ASN1Encoder<AttributeValueAss
 export function _encode_AttributeValueAssertion(
     value: AttributeValueAssertion,
     elGetter: $.ASN1Encoder<AttributeValueAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeValueAssertion) {
         _cached_encoder_for_AttributeValueAssertion = function (
             value: AttributeValueAssertion        ): _Element {

@@ -118,7 +118,7 @@ let _cached_decoder_for_Presentation_context_identifier_list_Item: $.ASN1Decoder
  */
 export function _decode_Presentation_context_identifier_list_Item(
     el: _Element
-) {
+): Presentation_context_identifier_list_Item {
     if (!_cached_decoder_for_Presentation_context_identifier_list_Item) {
         _cached_decoder_for_Presentation_context_identifier_list_Item = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_Presentation_context_identifier_list_Item: $.ASN1Encoder
 export function _encode_Presentation_context_identifier_list_Item(
     value: Presentation_context_identifier_list_Item,
     elGetter: $.ASN1Encoder<Presentation_context_identifier_list_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Presentation_context_identifier_list_Item) {
         _cached_encoder_for_Presentation_context_identifier_list_Item = function (
             value: Presentation_context_identifier_list_Item        ): _Element {

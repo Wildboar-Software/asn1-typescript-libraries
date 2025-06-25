@@ -26,7 +26,7 @@ let _cached_decoder_for_SecurityCategories: $.ASN1Decoder<SecurityCategories> | 
  * @param {_Element} el The element being decoded.
  * @returns {SecurityCategories} The decoded data structure.
  */
-export function _decode_SecurityCategories(el: _Element) {
+export function _decode_SecurityCategories(el: _Element): SecurityCategories {
     if (!_cached_decoder_for_SecurityCategories) {
         _cached_decoder_for_SecurityCategories = $._decodeSetOf<SecurityCategory>(
             () => _decode_SecurityCategory
@@ -47,7 +47,7 @@ let _cached_encoder_for_SecurityCategories: $.ASN1Encoder<SecurityCategories> | 
 export function _encode_SecurityCategories(
     value: SecurityCategories,
     elGetter: $.ASN1Encoder<SecurityCategories>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityCategories) {
         _cached_encoder_for_SecurityCategories = $._encodeSetOf<SecurityCategory>(
             () => _encode_SecurityCategory,

@@ -34,7 +34,7 @@ let _cached_decoder_for_UpdateErrorData_attributeInfo_Item: $.ASN1Decoder<Update
  * @param {_Element} el The element being decoded.
  * @returns {UpdateErrorData_attributeInfo_Item} The decoded data structure.
  */
-export function _decode_UpdateErrorData_attributeInfo_Item(el: _Element) {
+export function _decode_UpdateErrorData_attributeInfo_Item(el: _Element): UpdateErrorData_attributeInfo_Item {
     if (!_cached_decoder_for_UpdateErrorData_attributeInfo_Item) {
         _cached_decoder_for_UpdateErrorData_attributeInfo_Item = $._decode_extensible_choice<UpdateErrorData_attributeInfo_Item>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_UpdateErrorData_attributeInfo_Item: $.ASN1Encoder<Update
 export function _encode_UpdateErrorData_attributeInfo_Item(
     value: UpdateErrorData_attributeInfo_Item,
     elGetter: $.ASN1Encoder<UpdateErrorData_attributeInfo_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateErrorData_attributeInfo_Item) {
         _cached_encoder_for_UpdateErrorData_attributeInfo_Item = $._encode_choice<UpdateErrorData_attributeInfo_Item>(
             {

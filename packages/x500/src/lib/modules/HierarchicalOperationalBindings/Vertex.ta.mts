@@ -160,7 +160,7 @@ let _cached_decoder_for_Vertex: $.ASN1Decoder<Vertex> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Vertex} The decoded data structure.
  */
-export function _decode_Vertex(el: _Element) {
+export function _decode_Vertex(el: _Element): Vertex {
     if (!_cached_decoder_for_Vertex) {
         _cached_decoder_for_Vertex = function (el: _Element): Vertex {
             let rdn!: RelativeDistinguishedName;
@@ -221,7 +221,7 @@ let _cached_encoder_for_Vertex: $.ASN1Encoder<Vertex> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Vertex, encoded as an ASN.1 Element.
  */
-export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
+export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>): _Element {
     if (!_cached_encoder_for_Vertex) {
         _cached_encoder_for_Vertex = function (
             value: Vertex        ): _Element {

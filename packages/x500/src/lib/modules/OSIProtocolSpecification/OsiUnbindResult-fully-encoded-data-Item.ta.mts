@@ -116,7 +116,7 @@ let _cached_decoder_for_OsiUnbindResult_fully_encoded_data_Item: $.ASN1Decoder<O
  * @param {_Element} el The element being decoded.
  * @returns {OsiUnbindResult_fully_encoded_data_Item} The decoded data structure.
  */
-export function _decode_OsiUnbindResult_fully_encoded_data_Item(el: _Element) {
+export function _decode_OsiUnbindResult_fully_encoded_data_Item(el: _Element): OsiUnbindResult_fully_encoded_data_Item {
     if (!_cached_decoder_for_OsiUnbindResult_fully_encoded_data_Item) {
         _cached_decoder_for_OsiUnbindResult_fully_encoded_data_Item = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item: $.ASN1Encoder<O
 export function _encode_OsiUnbindResult_fully_encoded_data_Item(
     value: OsiUnbindResult_fully_encoded_data_Item,
     elGetter: $.ASN1Encoder<OsiUnbindResult_fully_encoded_data_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item) {
         _cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item = function (
             value: OsiUnbindResult_fully_encoded_data_Item        ): _Element {

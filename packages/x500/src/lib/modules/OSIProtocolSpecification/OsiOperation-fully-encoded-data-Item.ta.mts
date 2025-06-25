@@ -116,7 +116,7 @@ let _cached_decoder_for_OsiOperation_fully_encoded_data_Item: $.ASN1Decoder<OsiO
  * @param {_Element} el The element being decoded.
  * @returns {OsiOperation_fully_encoded_data_Item} The decoded data structure.
  */
-export function _decode_OsiOperation_fully_encoded_data_Item(el: _Element) {
+export function _decode_OsiOperation_fully_encoded_data_Item(el: _Element): OsiOperation_fully_encoded_data_Item {
     if (!_cached_decoder_for_OsiOperation_fully_encoded_data_Item) {
         _cached_decoder_for_OsiOperation_fully_encoded_data_Item = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_OsiOperation_fully_encoded_data_Item: $.ASN1Encoder<OsiO
 export function _encode_OsiOperation_fully_encoded_data_Item(
     value: OsiOperation_fully_encoded_data_Item,
     elGetter: $.ASN1Encoder<OsiOperation_fully_encoded_data_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiOperation_fully_encoded_data_Item) {
         _cached_encoder_for_OsiOperation_fully_encoded_data_Item = function (
             value: OsiOperation_fully_encoded_data_Item        ): _Element {

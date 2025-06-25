@@ -28,7 +28,7 @@ let _cached_decoder_for_EpcFormat_fields_Item_charField: $.ASN1Decoder<EpcFormat
  * @param {_Element} el The element being decoded.
  * @returns {EpcFormat_fields_Item_charField} The decoded data structure.
  */
-export function _decode_EpcFormat_fields_Item_charField(el: _Element) {
+export function _decode_EpcFormat_fields_Item_charField(el: _Element): EpcFormat_fields_Item_charField {
     if (!_cached_decoder_for_EpcFormat_fields_Item_charField) {
         _cached_decoder_for_EpcFormat_fields_Item_charField = $._decode_inextensible_choice<EpcFormat_fields_Item_charField>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_EpcFormat_fields_Item_charField: $.ASN1Encoder<EpcFormat
 export function _encode_EpcFormat_fields_Item_charField(
     value: EpcFormat_fields_Item_charField,
     elGetter: $.ASN1Encoder<EpcFormat_fields_Item_charField>
-) {
+): _Element {
     if (!_cached_encoder_for_EpcFormat_fields_Item_charField) {
         _cached_encoder_for_EpcFormat_fields_Item_charField = $._encode_choice<EpcFormat_fields_Item_charField>(
             {

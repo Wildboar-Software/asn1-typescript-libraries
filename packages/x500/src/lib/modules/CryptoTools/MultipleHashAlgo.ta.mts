@@ -27,7 +27,7 @@ let _cached_decoder_for_MultipleHashAlgo: $.ASN1Decoder<MultipleHashAlgo> | null
  * @param {_Element} el The element being decoded.
  * @returns {MultipleHashAlgo} The decoded data structure.
  */
-export function _decode_MultipleHashAlgo(el: _Element) {
+export function _decode_MultipleHashAlgo(el: _Element): MultipleHashAlgo {
     if (!_cached_decoder_for_MultipleHashAlgo) {
         _cached_decoder_for_MultipleHashAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultipleHashAlgo: $.ASN1Encoder<MultipleHashAlgo> | null
 export function _encode_MultipleHashAlgo(
     value: MultipleHashAlgo,
     elGetter: $.ASN1Encoder<MultipleHashAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleHashAlgo) {
         _cached_encoder_for_MultipleHashAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

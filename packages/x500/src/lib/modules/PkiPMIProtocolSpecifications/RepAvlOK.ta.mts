@@ -100,7 +100,7 @@ let _cached_decoder_for_RepAvlOK: $.ASN1Decoder<RepAvlOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RepAvlOK} The decoded data structure.
  */
-export function _decode_RepAvlOK(el: _Element) {
+export function _decode_RepAvlOK(el: _Element): RepAvlOK {
     if (!_cached_decoder_for_RepAvlOK) {
         _cached_decoder_for_RepAvlOK = function (el: _Element): RepAvlOK {
             const sequence: _Element[] = el.sequence;
@@ -132,7 +132,7 @@ let _cached_encoder_for_RepAvlOK: $.ASN1Encoder<RepAvlOK> | null = null;
 export function _encode_RepAvlOK(
     value: RepAvlOK,
     elGetter: $.ASN1Encoder<RepAvlOK>
-) {
+): _Element {
     if (!_cached_encoder_for_RepAvlOK) {
         _cached_encoder_for_RepAvlOK = function (
             value: RepAvlOK        ): _Element {

@@ -34,7 +34,7 @@ let _cached_decoder_for_AttributeMappings: $.ASN1Decoder<AttributeMappings> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AttributeMappings} The decoded data structure.
  */
-export function _decode_AttributeMappings(el: _Element) {
+export function _decode_AttributeMappings(el: _Element): AttributeMappings {
     if (!_cached_decoder_for_AttributeMappings) {
         _cached_decoder_for_AttributeMappings = $._decodeSetOf<AttributeMappings_Item>(
             () => _decode_AttributeMappings_Item
@@ -55,7 +55,7 @@ let _cached_encoder_for_AttributeMappings: $.ASN1Encoder<AttributeMappings> | nu
 export function _encode_AttributeMappings(
     value: AttributeMappings,
     elGetter: $.ASN1Encoder<AttributeMappings>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeMappings) {
         _cached_encoder_for_AttributeMappings = $._encodeSetOf<AttributeMappings_Item>(
             () => _encode_AttributeMappings_Item,

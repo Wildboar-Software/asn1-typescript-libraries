@@ -110,7 +110,7 @@ let _cached_decoder_for_TbsHandshakeReq_encr_mode_non_aead: $.ASN1Decoder<TbsHan
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeReq_encr_mode_non_aead} The decoded data structure.
  */
-export function _decode_TbsHandshakeReq_encr_mode_non_aead(el: _Element) {
+export function _decode_TbsHandshakeReq_encr_mode_non_aead(el: _Element): TbsHandshakeReq_encr_mode_non_aead {
     if (!_cached_decoder_for_TbsHandshakeReq_encr_mode_non_aead) {
         _cached_decoder_for_TbsHandshakeReq_encr_mode_non_aead = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead: $.ASN1Encoder<TbsHan
 export function _encode_TbsHandshakeReq_encr_mode_non_aead(
     value: TbsHandshakeReq_encr_mode_non_aead,
     elGetter: $.ASN1Encoder<TbsHandshakeReq_encr_mode_non_aead>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead) {
         _cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead = function (
             value: TbsHandshakeReq_encr_mode_non_aead        ): _Element {

@@ -106,7 +106,7 @@ export class NameFormDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -181,7 +181,7 @@ let _cached_decoder_for_NameFormDescription: $.ASN1Decoder<NameFormDescription> 
  * @param {_Element} el The element being decoded.
  * @returns {NameFormDescription} The decoded data structure.
  */
-export function _decode_NameFormDescription(el: _Element) {
+export function _decode_NameFormDescription(el: _Element): NameFormDescription {
     if (!_cached_decoder_for_NameFormDescription) {
         _cached_decoder_for_NameFormDescription = function (
             el: _Element
@@ -249,7 +249,7 @@ let _cached_encoder_for_NameFormDescription: $.ASN1Encoder<NameFormDescription> 
 export function _encode_NameFormDescription(
     value: NameFormDescription,
     elGetter: $.ASN1Encoder<NameFormDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_NameFormDescription) {
         _cached_encoder_for_NameFormDescription = function (
             value: NameFormDescription        ): _Element {

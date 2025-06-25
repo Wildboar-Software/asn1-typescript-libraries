@@ -182,7 +182,7 @@ let _cached_decoder_for_UpdateShadowArgumentData: $.ASN1Decoder<UpdateShadowArgu
  * @param {_Element} el The element being decoded.
  * @returns {UpdateShadowArgumentData} The decoded data structure.
  */
-export function _decode_UpdateShadowArgumentData(el: _Element) {
+export function _decode_UpdateShadowArgumentData(el: _Element): UpdateShadowArgumentData {
     if (!_cached_decoder_for_UpdateShadowArgumentData) {
         _cached_decoder_for_UpdateShadowArgumentData = $._decode_implicit<UpdateShadowArgumentData>(
             () =>
@@ -248,7 +248,7 @@ let _cached_encoder_for_UpdateShadowArgumentData: $.ASN1Encoder<UpdateShadowArgu
 export function _encode_UpdateShadowArgumentData(
     value: UpdateShadowArgumentData,
     elGetter: $.ASN1Encoder<UpdateShadowArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateShadowArgumentData) {
         _cached_encoder_for_UpdateShadowArgumentData = $._encode_implicit(
             _TagClass.context,

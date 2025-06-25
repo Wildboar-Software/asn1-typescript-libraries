@@ -18,7 +18,7 @@ export type SupportedCurves = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_SupportedCurves: $.ASN1Decoder<SupportedCurves> | null = null;
 
-export function _decode_SupportedCurves(el: _Element) {
+export function _decode_SupportedCurves(el: _Element): OBJECT_IDENTIFIER {
     if (!_cached_decoder_for_SupportedCurves) {
         _cached_decoder_for_SupportedCurves = $._decodeObjectIdentifier;
     }
@@ -30,7 +30,7 @@ let _cached_encoder_for_SupportedCurves: $.ASN1Encoder<SupportedCurves> | null =
 export function _encode_SupportedCurves(
     value: SupportedCurves,
     elGetter: $.ASN1Encoder<SupportedCurves>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedCurves) {
         _cached_encoder_for_SupportedCurves = $._encodeObjectIdentifier;
     }

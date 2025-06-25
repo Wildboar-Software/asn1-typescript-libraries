@@ -26,7 +26,7 @@ let _cached_decoder_for_UniversalOrganizationName: $.ASN1Decoder<UniversalOrgani
  * @param {_Element} el The element being decoded.
  * @returns {UniversalOrganizationName} The decoded data structure.
  */
-export function _decode_UniversalOrganizationName(el: _Element) {
+export function _decode_UniversalOrganizationName(el: _Element): UniversalOrganizationName {
     if (!_cached_decoder_for_UniversalOrganizationName) {
         _cached_decoder_for_UniversalOrganizationName = _decode_UniversalOrBMPString;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_UniversalOrganizationName: $.ASN1Encoder<UniversalOrgani
 export function _encode_UniversalOrganizationName(
     value: UniversalOrganizationName,
     elGetter: $.ASN1Encoder<UniversalOrganizationName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalOrganizationName) {
         _cached_encoder_for_UniversalOrganizationName = _encode_UniversalOrBMPString;
     }

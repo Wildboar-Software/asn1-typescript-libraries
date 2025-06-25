@@ -131,7 +131,7 @@ let _cached_decoder_for_REQ_TOKEN: $.ASN1Decoder<REQ_TOKEN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {REQ_TOKEN} The decoded data structure.
  */
-export function _decode_REQ_TOKEN(el: _Element) {
+export function _decode_REQ_TOKEN(el: _Element): REQ_TOKEN {
     if (!_cached_decoder_for_REQ_TOKEN) {
         _cached_decoder_for_REQ_TOKEN = function (el: _Element): REQ_TOKEN {
             const sequence: _Element[] = el.sequence;
@@ -169,7 +169,7 @@ let _cached_encoder_for_REQ_TOKEN: $.ASN1Encoder<REQ_TOKEN> | null = null;
 export function _encode_REQ_TOKEN(
     value: REQ_TOKEN,
     elGetter: $.ASN1Encoder<REQ_TOKEN>
-) {
+): _Element {
     if (!_cached_encoder_for_REQ_TOKEN) {
         _cached_encoder_for_REQ_TOKEN = function (
             value: REQ_TOKEN        ): _Element {

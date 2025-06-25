@@ -82,7 +82,7 @@ export class DirectoryBindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_versions() {
+    public static get _default_value_for_versions(): Versions {
         return (() => {
             const _ret = new Uint8ClampedArray(2);
             _ret[Versions_v1] = TRUE_BIT;
@@ -140,7 +140,7 @@ let _cached_decoder_for_DirectoryBindArgument: $.ASN1Decoder<DirectoryBindArgume
  * @param {_Element} el The element being decoded.
  * @returns {DirectoryBindArgument} The decoded data structure.
  */
-export function _decode_DirectoryBindArgument(el: _Element) {
+export function _decode_DirectoryBindArgument(el: _Element): DirectoryBindArgument {
     if (!_cached_decoder_for_DirectoryBindArgument) {
         _cached_decoder_for_DirectoryBindArgument = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_DirectoryBindArgument: $.ASN1Encoder<DirectoryBindArgume
 export function _encode_DirectoryBindArgument(
     value: DirectoryBindArgument,
     elGetter: $.ASN1Encoder<DirectoryBindArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryBindArgument) {
         _cached_encoder_for_DirectoryBindArgument = function (
             value: DirectoryBindArgument        ): _Element {

@@ -147,7 +147,7 @@ export class PartialOutcomeQualifier {
      * @static
      * @method
      */
-    public static get _default_value_for_unavailableCriticalExtensions() {
+    public static get _default_value_for_unavailableCriticalExtensions(): BOOLEAN {
         return false;
     }
 }
@@ -235,7 +235,7 @@ let _cached_decoder_for_PartialOutcomeQualifier: $.ASN1Decoder<PartialOutcomeQua
  * @param {_Element} el The element being decoded.
  * @returns {PartialOutcomeQualifier} The decoded data structure.
  */
-export function _decode_PartialOutcomeQualifier(el: _Element) {
+export function _decode_PartialOutcomeQualifier(el: _Element): PartialOutcomeQualifier {
     if (!_cached_decoder_for_PartialOutcomeQualifier) {
         _cached_decoder_for_PartialOutcomeQualifier = function (
             el: _Element
@@ -331,7 +331,7 @@ let _cached_encoder_for_PartialOutcomeQualifier: $.ASN1Encoder<PartialOutcomeQua
 export function _encode_PartialOutcomeQualifier(
     value: PartialOutcomeQualifier,
     elGetter: $.ASN1Encoder<PartialOutcomeQualifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PartialOutcomeQualifier) {
         _cached_encoder_for_PartialOutcomeQualifier = function (
             value: PartialOutcomeQualifier        ): _Element {

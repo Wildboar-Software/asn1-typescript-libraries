@@ -24,7 +24,7 @@ let _cached_decoder_for_SimpleCredentials_validity_time1: $.ASN1Decoder<SimpleCr
  * @param {_Element} el The element being decoded.
  * @returns {SimpleCredentials_validity_time1} The decoded data structure.
  */
-export function _decode_SimpleCredentials_validity_time1(el: _Element) {
+export function _decode_SimpleCredentials_validity_time1(el: _Element): SimpleCredentials_validity_time1 {
     if (!_cached_decoder_for_SimpleCredentials_validity_time1) {
         _cached_decoder_for_SimpleCredentials_validity_time1 = $._decode_inextensible_choice<SimpleCredentials_validity_time1>(
             {
@@ -48,7 +48,7 @@ let _cached_encoder_for_SimpleCredentials_validity_time1: $.ASN1Encoder<SimpleCr
 export function _encode_SimpleCredentials_validity_time1(
     value: SimpleCredentials_validity_time1,
     elGetter: $.ASN1Encoder<SimpleCredentials_validity_time1>
-) {
+): _Element {
     if (!_cached_encoder_for_SimpleCredentials_validity_time1) {
         _cached_encoder_for_SimpleCredentials_validity_time1 = $._encode_choice<SimpleCredentials_validity_time1>(
             {

@@ -118,7 +118,7 @@ let _cached_decoder_for_PrivateKeyUsagePeriod: $.ASN1Decoder<PrivateKeyUsagePeri
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeyUsagePeriod} The decoded data structure.
  */
-export function _decode_PrivateKeyUsagePeriod(el: _Element) {
+export function _decode_PrivateKeyUsagePeriod(el: _Element): PrivateKeyUsagePeriod {
     if (!_cached_decoder_for_PrivateKeyUsagePeriod) {
         _cached_decoder_for_PrivateKeyUsagePeriod = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_PrivateKeyUsagePeriod: $.ASN1Encoder<PrivateKeyUsagePeri
 export function _encode_PrivateKeyUsagePeriod(
     value: PrivateKeyUsagePeriod,
     elGetter: $.ASN1Encoder<PrivateKeyUsagePeriod>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKeyUsagePeriod) {
         _cached_encoder_for_PrivateKeyUsagePeriod = function (
             value: PrivateKeyUsagePeriod        ): _Element {

@@ -211,7 +211,7 @@ let _cached_decoder_for_MasterOrShadowAccessPoint: $.ASN1Decoder<MasterOrShadowA
  * @param {_Element} el The element being decoded.
  * @returns {MasterOrShadowAccessPoint} The decoded data structure.
  */
-export function _decode_MasterOrShadowAccessPoint(el: _Element) {
+export function _decode_MasterOrShadowAccessPoint(el: _Element): MasterOrShadowAccessPoint {
     if (!_cached_decoder_for_MasterOrShadowAccessPoint) {
         _cached_decoder_for_MasterOrShadowAccessPoint = function (
             el: _Element
@@ -292,7 +292,7 @@ let _cached_encoder_for_MasterOrShadowAccessPoint: $.ASN1Encoder<MasterOrShadowA
 export function _encode_MasterOrShadowAccessPoint(
     value: MasterOrShadowAccessPoint,
     elGetter: $.ASN1Encoder<MasterOrShadowAccessPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_MasterOrShadowAccessPoint) {
         _cached_encoder_for_MasterOrShadowAccessPoint = function (
             value: MasterOrShadowAccessPoint        ): _Element {

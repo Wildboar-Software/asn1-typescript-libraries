@@ -230,7 +230,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_deleteOldRDN() {
+    public static get _default_value_for_deleteOldRDN(): BOOLEAN {
         return false;
     }
     /**
@@ -239,7 +239,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -248,7 +248,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -260,7 +260,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -269,7 +269,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -278,7 +278,7 @@ export class ModifyDNArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -361,7 +361,7 @@ let _cached_decoder_for_ModifyDNArgumentData: $.ASN1Decoder<ModifyDNArgumentData
  * @param {_Element} el The element being decoded.
  * @returns {ModifyDNArgumentData} The decoded data structure.
  */
-export function _decode_ModifyDNArgumentData(el: _Element) {
+export function _decode_ModifyDNArgumentData(el: _Element): ModifyDNArgumentData {
     if (!_cached_decoder_for_ModifyDNArgumentData) {
         _cached_decoder_for_ModifyDNArgumentData = function (
             el: _Element
@@ -519,7 +519,7 @@ let _cached_encoder_for_ModifyDNArgumentData: $.ASN1Encoder<ModifyDNArgumentData
 export function _encode_ModifyDNArgumentData(
     value: ModifyDNArgumentData,
     elGetter: $.ASN1Encoder<ModifyDNArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyDNArgumentData) {
         _cached_encoder_for_ModifyDNArgumentData = function (
             value: ModifyDNArgumentData        ): _Element {

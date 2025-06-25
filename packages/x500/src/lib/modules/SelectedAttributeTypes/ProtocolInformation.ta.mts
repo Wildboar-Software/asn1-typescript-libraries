@@ -106,7 +106,7 @@ let _cached_decoder_for_ProtocolInformation: $.ASN1Decoder<ProtocolInformation> 
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolInformation} The decoded data structure.
  */
-export function _decode_ProtocolInformation(el: _Element) {
+export function _decode_ProtocolInformation(el: _Element): ProtocolInformation {
     if (!_cached_decoder_for_ProtocolInformation) {
         _cached_decoder_for_ProtocolInformation = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ProtocolInformation: $.ASN1Encoder<ProtocolInformation> 
 export function _encode_ProtocolInformation(
     value: ProtocolInformation,
     elGetter: $.ASN1Encoder<ProtocolInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtocolInformation) {
         _cached_encoder_for_ProtocolInformation = function (
             value: ProtocolInformation        ): _Element {

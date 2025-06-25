@@ -112,7 +112,7 @@ let _cached_decoder_for_CertSubscribeErr: $.ASN1Decoder<CertSubscribeErr> | null
  * @param {_Element} el The element being decoded.
  * @returns {CertSubscribeErr} The decoded data structure.
  */
-export function _decode_CertSubscribeErr(el: _Element) {
+export function _decode_CertSubscribeErr(el: _Element): CertSubscribeErr {
     if (!_cached_decoder_for_CertSubscribeErr) {
         _cached_decoder_for_CertSubscribeErr = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_CertSubscribeErr: $.ASN1Encoder<CertSubscribeErr> | null
 export function _encode_CertSubscribeErr(
     value: CertSubscribeErr,
     elGetter: $.ASN1Encoder<CertSubscribeErr>
-) {
+): _Element {
     if (!_cached_encoder_for_CertSubscribeErr) {
         _cached_encoder_for_CertSubscribeErr = function (
             value: CertSubscribeErr        ): _Element {

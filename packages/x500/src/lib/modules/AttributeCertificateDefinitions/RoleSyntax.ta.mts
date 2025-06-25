@@ -124,7 +124,7 @@ let _cached_decoder_for_RoleSyntax: $.ASN1Decoder<RoleSyntax> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RoleSyntax} The decoded data structure.
  */
-export function _decode_RoleSyntax(el: _Element) {
+export function _decode_RoleSyntax(el: _Element): RoleSyntax {
     if (!_cached_decoder_for_RoleSyntax) {
         _cached_decoder_for_RoleSyntax = function (el: _Element): RoleSyntax {
             let roleAuthority: OPTIONAL<GeneralNames>;
@@ -174,7 +174,7 @@ let _cached_encoder_for_RoleSyntax: $.ASN1Encoder<RoleSyntax> | null = null;
 export function _encode_RoleSyntax(
     value: RoleSyntax,
     elGetter: $.ASN1Encoder<RoleSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_RoleSyntax) {
         _cached_encoder_for_RoleSyntax = function (
             value: RoleSyntax        ): _Element {

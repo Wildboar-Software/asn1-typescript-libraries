@@ -26,7 +26,7 @@ let _cached_decoder_for_AuthorityAttributeIdentifierSyntax: $.ASN1Decoder<Author
  * @param {_Element} el The element being decoded.
  * @returns {AuthorityAttributeIdentifierSyntax} The decoded data structure.
  */
-export function _decode_AuthorityAttributeIdentifierSyntax(el: _Element) {
+export function _decode_AuthorityAttributeIdentifierSyntax(el: _Element): AuthorityAttributeIdentifierSyntax {
     if (!_cached_decoder_for_AuthorityAttributeIdentifierSyntax) {
         _cached_decoder_for_AuthorityAttributeIdentifierSyntax = $._decodeSequenceOf<AuthAttId>(
             () => _decode_AuthAttId
@@ -47,7 +47,7 @@ let _cached_encoder_for_AuthorityAttributeIdentifierSyntax: $.ASN1Encoder<Author
 export function _encode_AuthorityAttributeIdentifierSyntax(
     value: AuthorityAttributeIdentifierSyntax,
     elGetter: $.ASN1Encoder<AuthorityAttributeIdentifierSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorityAttributeIdentifierSyntax) {
         _cached_encoder_for_AuthorityAttributeIdentifierSyntax = $._encodeSequenceOf<AuthAttId>(
             () => _encode_AuthAttId,

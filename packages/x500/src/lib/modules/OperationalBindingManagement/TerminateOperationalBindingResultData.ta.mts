@@ -140,7 +140,7 @@ export class TerminateOperationalBindingResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -201,7 +201,7 @@ let _cached_decoder_for_TerminateOperationalBindingResultData: $.ASN1Decoder<Ter
  * @param {_Element} el The element being decoded.
  * @returns {TerminateOperationalBindingResultData} The decoded data structure.
  */
-export function _decode_TerminateOperationalBindingResultData(el: _Element) {
+export function _decode_TerminateOperationalBindingResultData(el: _Element): TerminateOperationalBindingResultData {
     if (!_cached_decoder_for_TerminateOperationalBindingResultData) {
         _cached_decoder_for_TerminateOperationalBindingResultData = function (
             el: _Element
@@ -283,7 +283,7 @@ let _cached_encoder_for_TerminateOperationalBindingResultData: $.ASN1Encoder<Ter
 export function _encode_TerminateOperationalBindingResultData(
     value: TerminateOperationalBindingResultData,
     elGetter: $.ASN1Encoder<TerminateOperationalBindingResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_TerminateOperationalBindingResultData) {
         _cached_encoder_for_TerminateOperationalBindingResultData = function (
             value: TerminateOperationalBindingResultData        ): _Element {

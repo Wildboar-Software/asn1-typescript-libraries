@@ -26,7 +26,7 @@ let _cached_decoder_for_CRLDistPointsSyntax: $.ASN1Decoder<CRLDistPointsSyntax> 
  * @param {_Element} el The element being decoded.
  * @returns {CRLDistPointsSyntax} The decoded data structure.
  */
-export function _decode_CRLDistPointsSyntax(el: _Element) {
+export function _decode_CRLDistPointsSyntax(el: _Element): CRLDistPointsSyntax {
     if (!_cached_decoder_for_CRLDistPointsSyntax) {
         _cached_decoder_for_CRLDistPointsSyntax = $._decodeSequenceOf<DistributionPoint>(
             () => _decode_DistributionPoint
@@ -47,7 +47,7 @@ let _cached_encoder_for_CRLDistPointsSyntax: $.ASN1Encoder<CRLDistPointsSyntax> 
 export function _encode_CRLDistPointsSyntax(
     value: CRLDistPointsSyntax,
     elGetter: $.ASN1Encoder<CRLDistPointsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_CRLDistPointsSyntax) {
         _cached_encoder_for_CRLDistPointsSyntax = $._encodeSequenceOf<DistributionPoint>(
             () => _encode_DistributionPoint,

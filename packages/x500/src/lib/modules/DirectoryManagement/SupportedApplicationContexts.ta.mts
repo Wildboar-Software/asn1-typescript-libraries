@@ -22,7 +22,7 @@ let _cached_decoder_for_SupportedApplicationContexts: $.ASN1Decoder<SupportedApp
  * @param {_Element} el The element being decoded.
  * @returns {SupportedApplicationContexts} The decoded data structure.
  */
-export function _decode_SupportedApplicationContexts(el: _Element) {
+export function _decode_SupportedApplicationContexts(el: _Element): SupportedApplicationContexts {
     if (!_cached_decoder_for_SupportedApplicationContexts) {
         _cached_decoder_for_SupportedApplicationContexts = $._decodeSetOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -43,7 +43,7 @@ let _cached_encoder_for_SupportedApplicationContexts: $.ASN1Encoder<SupportedApp
 export function _encode_SupportedApplicationContexts(
     value: SupportedApplicationContexts,
     elGetter: $.ASN1Encoder<SupportedApplicationContexts>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedApplicationContexts) {
         _cached_encoder_for_SupportedApplicationContexts = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

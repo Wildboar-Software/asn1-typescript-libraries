@@ -126,7 +126,7 @@ let _cached_decoder_for_InfoSyntax_pointer: $.ASN1Decoder<InfoSyntax_pointer> | 
  * @param {_Element} el The element being decoded.
  * @returns {InfoSyntax_pointer} The decoded data structure.
  */
-export function _decode_InfoSyntax_pointer(el: _Element) {
+export function _decode_InfoSyntax_pointer(el: _Element): InfoSyntax_pointer {
     if (!_cached_decoder_for_InfoSyntax_pointer) {
         _cached_decoder_for_InfoSyntax_pointer = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_InfoSyntax_pointer: $.ASN1Encoder<InfoSyntax_pointer> | 
 export function _encode_InfoSyntax_pointer(
     value: InfoSyntax_pointer,
     elGetter: $.ASN1Encoder<InfoSyntax_pointer>
-) {
+): _Element {
     if (!_cached_encoder_for_InfoSyntax_pointer) {
         _cached_encoder_for_InfoSyntax_pointer = function (
             value: InfoSyntax_pointer        ): _Element {

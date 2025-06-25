@@ -34,7 +34,7 @@ let _cached_decoder_for_TbsHandshakeReq_encr_mode: $.ASN1Decoder<TbsHandshakeReq
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeReq_encr_mode} The decoded data structure.
  */
-export function _decode_TbsHandshakeReq_encr_mode(el: _Element) {
+export function _decode_TbsHandshakeReq_encr_mode(el: _Element): TbsHandshakeReq_encr_mode {
     if (!_cached_decoder_for_TbsHandshakeReq_encr_mode) {
         _cached_decoder_for_TbsHandshakeReq_encr_mode = $._decode_extensible_choice<TbsHandshakeReq_encr_mode>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_TbsHandshakeReq_encr_mode: $.ASN1Encoder<TbsHandshakeReq
 export function _encode_TbsHandshakeReq_encr_mode(
     value: TbsHandshakeReq_encr_mode,
     elGetter: $.ASN1Encoder<TbsHandshakeReq_encr_mode>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeReq_encr_mode) {
         _cached_encoder_for_TbsHandshakeReq_encr_mode = $._encode_choice<TbsHandshakeReq_encr_mode>(
             {

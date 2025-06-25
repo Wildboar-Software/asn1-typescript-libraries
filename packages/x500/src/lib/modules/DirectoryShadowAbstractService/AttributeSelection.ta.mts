@@ -26,7 +26,7 @@ let _cached_decoder_for_AttributeSelection: $.ASN1Decoder<AttributeSelection> | 
  * @param {_Element} el The element being decoded.
  * @returns {AttributeSelection} The decoded data structure.
  */
-export function _decode_AttributeSelection(el: _Element) {
+export function _decode_AttributeSelection(el: _Element): AttributeSelection {
     if (!_cached_decoder_for_AttributeSelection) {
         _cached_decoder_for_AttributeSelection = $._decodeSetOf<ClassAttributeSelection>(
             () => _decode_ClassAttributeSelection
@@ -47,7 +47,7 @@ let _cached_encoder_for_AttributeSelection: $.ASN1Encoder<AttributeSelection> | 
 export function _encode_AttributeSelection(
     value: AttributeSelection,
     elGetter: $.ASN1Encoder<AttributeSelection>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeSelection) {
         _cached_encoder_for_AttributeSelection = $._encodeSetOf<ClassAttributeSelection>(
             () => _encode_ClassAttributeSelection,

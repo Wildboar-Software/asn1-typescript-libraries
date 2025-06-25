@@ -77,7 +77,7 @@ export class SchedulingParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_othertimes() {
+    public static get _default_value_for_othertimes(): BOOLEAN {
         return false;
     }
 }
@@ -131,7 +131,7 @@ let _cached_decoder_for_SchedulingParameters: $.ASN1Decoder<SchedulingParameters
  * @param {_Element} el The element being decoded.
  * @returns {SchedulingParameters} The decoded data structure.
  */
-export function _decode_SchedulingParameters(el: _Element) {
+export function _decode_SchedulingParameters(el: _Element): SchedulingParameters {
     if (!_cached_decoder_for_SchedulingParameters) {
         _cached_decoder_for_SchedulingParameters = function (
             el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_SchedulingParameters: $.ASN1Encoder<SchedulingParameters
 export function _encode_SchedulingParameters(
     value: SchedulingParameters,
     elGetter: $.ASN1Encoder<SchedulingParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_SchedulingParameters) {
         _cached_encoder_for_SchedulingParameters = function (
             value: SchedulingParameters        ): _Element {

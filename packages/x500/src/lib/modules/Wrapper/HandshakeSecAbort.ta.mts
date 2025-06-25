@@ -31,7 +31,7 @@ let _cached_decoder_for_HandshakeSecAbort: $.ASN1Decoder<HandshakeSecAbort> | nu
  * @param {_Element} el The element being decoded.
  * @returns {HandshakeSecAbort} The decoded data structure.
  */
-export function _decode_HandshakeSecAbort(el: _Element) {
+export function _decode_HandshakeSecAbort(el: _Element): HandshakeSecAbort {
     if (!_cached_decoder_for_HandshakeSecAbort) {
         _cached_decoder_for_HandshakeSecAbort = _get_decoder_for_Signed<TbsHandshakeSecAbort>(
             _decode_TbsHandshakeSecAbort
@@ -52,7 +52,7 @@ let _cached_encoder_for_HandshakeSecAbort: $.ASN1Encoder<HandshakeSecAbort> | nu
 export function _encode_HandshakeSecAbort(
     value: HandshakeSecAbort,
     elGetter: $.ASN1Encoder<HandshakeSecAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_HandshakeSecAbort) {
         _cached_encoder_for_HandshakeSecAbort = _get_encoder_for_Signed<TbsHandshakeSecAbort>(
             _encode_TbsHandshakeSecAbort

@@ -28,7 +28,7 @@ let _cached_decoder_for_OsiBind_normal_mode_parameters_user_data: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {OsiBind_normal_mode_parameters_user_data} The decoded data structure.
  */
-export function _decode_OsiBind_normal_mode_parameters_user_data(el: _Element) {
+export function _decode_OsiBind_normal_mode_parameters_user_data(el: _Element): OsiBind_normal_mode_parameters_user_data {
     if (!_cached_decoder_for_OsiBind_normal_mode_parameters_user_data) {
         _cached_decoder_for_OsiBind_normal_mode_parameters_user_data = $._decode_inextensible_choice<OsiBind_normal_mode_parameters_user_data>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_OsiBind_normal_mode_parameters_user_data: $.ASN1Encoder<
 export function _encode_OsiBind_normal_mode_parameters_user_data(
     value: OsiBind_normal_mode_parameters_user_data,
     elGetter: $.ASN1Encoder<OsiBind_normal_mode_parameters_user_data>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBind_normal_mode_parameters_user_data) {
         _cached_encoder_for_OsiBind_normal_mode_parameters_user_data = $._encode_choice<OsiBind_normal_mode_parameters_user_data>(
             {

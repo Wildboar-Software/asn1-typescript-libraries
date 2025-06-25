@@ -124,7 +124,7 @@ let _cached_decoder_for_PolicyInformation: $.ASN1Decoder<PolicyInformation> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PolicyInformation} The decoded data structure.
  */
-export function _decode_PolicyInformation(el: _Element) {
+export function _decode_PolicyInformation(el: _Element): PolicyInformation {
     if (!_cached_decoder_for_PolicyInformation) {
         _cached_decoder_for_PolicyInformation = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_PolicyInformation: $.ASN1Encoder<PolicyInformation> | nu
 export function _encode_PolicyInformation(
     value: PolicyInformation,
     elGetter: $.ASN1Encoder<PolicyInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyInformation) {
         _cached_encoder_for_PolicyInformation = function (
             value: PolicyInformation        ): _Element {

@@ -30,7 +30,7 @@ let _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data: $.ASN1Decoder
  */
 export function _decode_ARU_PPDU_normal_mode_parameters_user_data(
     el: _Element
-) {
+): ARU_PPDU_normal_mode_parameters_user_data {
     if (!_cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data) {
         _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data = $._decode_inextensible_choice<ARU_PPDU_normal_mode_parameters_user_data>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data: $.ASN1Encoder
 export function _encode_ARU_PPDU_normal_mode_parameters_user_data(
     value: ARU_PPDU_normal_mode_parameters_user_data,
     elGetter: $.ASN1Encoder<ARU_PPDU_normal_mode_parameters_user_data>
-) {
+): _Element {
     if (!_cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data) {
         _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data = $._encode_choice<ARU_PPDU_normal_mode_parameters_user_data>(
             {

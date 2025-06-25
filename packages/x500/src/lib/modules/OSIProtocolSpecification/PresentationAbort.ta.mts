@@ -35,7 +35,7 @@ let _cached_decoder_for_PresentationAbort: $.ASN1Decoder<PresentationAbort> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PresentationAbort} The decoded data structure.
  */
-export function _decode_PresentationAbort(el: _Element) {
+export function _decode_PresentationAbort(el: _Element): PresentationAbort {
     if (!_cached_decoder_for_PresentationAbort) {
         _cached_decoder_for_PresentationAbort = $._decode_inextensible_choice<PresentationAbort>(
             {
@@ -59,7 +59,7 @@ let _cached_encoder_for_PresentationAbort: $.ASN1Encoder<PresentationAbort> | nu
 export function _encode_PresentationAbort(
     value: PresentationAbort,
     elGetter: $.ASN1Encoder<PresentationAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_PresentationAbort) {
         _cached_encoder_for_PresentationAbort = $._encode_choice<PresentationAbort>(
             {

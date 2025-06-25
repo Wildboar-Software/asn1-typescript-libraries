@@ -34,7 +34,7 @@ let _cached_decoder_for_TbpDataTransferClient_conf: $.ASN1Decoder<TbpDataTransfe
  * @param {_Element} el The element being decoded.
  * @returns {TbpDataTransferClient_conf} The decoded data structure.
  */
-export function _decode_TbpDataTransferClient_conf(el: _Element) {
+export function _decode_TbpDataTransferClient_conf(el: _Element): TbpDataTransferClient_conf {
     if (!_cached_decoder_for_TbpDataTransferClient_conf) {
         _cached_decoder_for_TbpDataTransferClient_conf = $._decode_extensible_choice<TbpDataTransferClient_conf>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_TbpDataTransferClient_conf: $.ASN1Encoder<TbpDataTransfe
 export function _encode_TbpDataTransferClient_conf(
     value: TbpDataTransferClient_conf,
     elGetter: $.ASN1Encoder<TbpDataTransferClient_conf>
-) {
+): _Element {
     if (!_cached_encoder_for_TbpDataTransferClient_conf) {
         _cached_encoder_for_TbpDataTransferClient_conf = $._encode_choice<TbpDataTransferClient_conf>(
             {

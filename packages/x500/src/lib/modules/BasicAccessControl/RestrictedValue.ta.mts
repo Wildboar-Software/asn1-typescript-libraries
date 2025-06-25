@@ -119,7 +119,7 @@ let _cached_decoder_for_RestrictedValue: $.ASN1Decoder<RestrictedValue> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RestrictedValue} The decoded data structure.
  */
-export function _decode_RestrictedValue(el: _Element) {
+export function _decode_RestrictedValue(el: _Element): RestrictedValue {
     if (!_cached_decoder_for_RestrictedValue) {
         _cached_decoder_for_RestrictedValue = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_RestrictedValue: $.ASN1Encoder<RestrictedValue> | null =
 export function _encode_RestrictedValue(
     value: RestrictedValue,
     elGetter: $.ASN1Encoder<RestrictedValue>
-) {
+): _Element {
     if (!_cached_encoder_for_RestrictedValue) {
         _cached_encoder_for_RestrictedValue = function (
             value: RestrictedValue        ): _Element {

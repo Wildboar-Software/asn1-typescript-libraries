@@ -26,7 +26,7 @@ let _cached_decoder_for_Intg_Algs: $.ASN1Decoder<Intg_Algs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Intg_Algs} The decoded data structure.
  */
-export function _decode_Intg_Algs(el: _Element) {
+export function _decode_Intg_Algs(el: _Element): Intg_Algs {
     if (!_cached_decoder_for_Intg_Algs) {
         _cached_decoder_for_Intg_Algs = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -47,7 +47,7 @@ let _cached_encoder_for_Intg_Algs: $.ASN1Encoder<Intg_Algs> | null = null;
 export function _encode_Intg_Algs(
     value: Intg_Algs,
     elGetter: $.ASN1Encoder<Intg_Algs>
-) {
+): _Element {
     if (!_cached_encoder_for_Intg_Algs) {
         _cached_encoder_for_Intg_Algs = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

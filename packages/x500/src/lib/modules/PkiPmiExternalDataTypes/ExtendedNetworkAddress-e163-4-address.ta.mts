@@ -110,7 +110,7 @@ let _cached_decoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Decoder<Ext
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedNetworkAddress_e163_4_address} The decoded data structure.
  */
-export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element) {
+export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element): ExtendedNetworkAddress_e163_4_address {
     if (!_cached_decoder_for_ExtendedNetworkAddress_e163_4_address) {
         _cached_decoder_for_ExtendedNetworkAddress_e163_4_address = function (
             el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Encoder<Ext
 export function _encode_ExtendedNetworkAddress_e163_4_address(
     value: ExtendedNetworkAddress_e163_4_address,
     elGetter: $.ASN1Encoder<ExtendedNetworkAddress_e163_4_address>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) {
         _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (
             value: ExtendedNetworkAddress_e163_4_address        ): _Element {

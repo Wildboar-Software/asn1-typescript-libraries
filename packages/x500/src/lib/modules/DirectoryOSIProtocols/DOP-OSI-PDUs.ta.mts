@@ -26,7 +26,7 @@ let _cached_decoder_for_DOP_OSI_PDUs: $.ASN1Decoder<DOP_OSI_PDUs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DOP_OSI_PDUs} The decoded data structure.
  */
-export function _decode_DOP_OSI_PDUs(el: _Element) {
+export function _decode_DOP_OSI_PDUs(el: _Element): DOP_OSI_PDUs {
     if (!_cached_decoder_for_DOP_OSI_PDUs) {
         _cached_decoder_for_DOP_OSI_PDUs = _decode_OSI_PDU;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_DOP_OSI_PDUs: $.ASN1Encoder<DOP_OSI_PDUs> | null = null;
 export function _encode_DOP_OSI_PDUs(
     value: DOP_OSI_PDUs,
     elGetter: $.ASN1Encoder<DOP_OSI_PDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_DOP_OSI_PDUs) {
         _cached_encoder_for_DOP_OSI_PDUs = _encode_OSI_PDU;
     }

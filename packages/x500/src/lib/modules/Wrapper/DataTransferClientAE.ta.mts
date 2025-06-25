@@ -31,7 +31,7 @@ let _cached_decoder_for_DataTransferClientAE: $.ASN1Decoder<DataTransferClientAE
  * @param {_Element} el The element being decoded.
  * @returns {DataTransferClientAE} The decoded data structure.
  */
-export function _decode_DataTransferClientAE(el: _Element) {
+export function _decode_DataTransferClientAE(el: _Element): DataTransferClientAE {
     if (!_cached_decoder_for_DataTransferClientAE) {
         _cached_decoder_for_DataTransferClientAE = _get_decoder_for_AUTHEN_ENCRYPT<
             AadClientAE,
@@ -53,7 +53,7 @@ let _cached_encoder_for_DataTransferClientAE: $.ASN1Encoder<DataTransferClientAE
 export function _encode_DataTransferClientAE(
     value: DataTransferClientAE,
     elGetter: $.ASN1Encoder<DataTransferClientAE>
-) {
+): _Element {
     if (!_cached_encoder_for_DataTransferClientAE) {
         _cached_encoder_for_DataTransferClientAE = _get_encoder_for_AUTHEN_ENCRYPT<
             AadClientAE,

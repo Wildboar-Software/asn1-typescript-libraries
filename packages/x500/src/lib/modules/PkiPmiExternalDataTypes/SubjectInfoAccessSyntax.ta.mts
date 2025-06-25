@@ -26,7 +26,7 @@ let _cached_decoder_for_SubjectInfoAccessSyntax: $.ASN1Decoder<SubjectInfoAccess
  * @param {_Element} el The element being decoded.
  * @returns {SubjectInfoAccessSyntax} The decoded data structure.
  */
-export function _decode_SubjectInfoAccessSyntax(el: _Element) {
+export function _decode_SubjectInfoAccessSyntax(el: _Element): SubjectInfoAccessSyntax {
     if (!_cached_decoder_for_SubjectInfoAccessSyntax) {
         _cached_decoder_for_SubjectInfoAccessSyntax = $._decodeSequenceOf<AccessDescription>(
             () => _decode_AccessDescription
@@ -47,7 +47,7 @@ let _cached_encoder_for_SubjectInfoAccessSyntax: $.ASN1Encoder<SubjectInfoAccess
 export function _encode_SubjectInfoAccessSyntax(
     value: SubjectInfoAccessSyntax,
     elGetter: $.ASN1Encoder<SubjectInfoAccessSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectInfoAccessSyntax) {
         _cached_encoder_for_SubjectInfoAccessSyntax = $._encodeSequenceOf<AccessDescription>(
             () => _encode_AccessDescription,

@@ -131,7 +131,7 @@ export class TbsHandshakeSecAbort {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[Version_v1] = TRUE_BIT;
@@ -216,7 +216,7 @@ let _cached_decoder_for_TbsHandshakeSecAbort: $.ASN1Decoder<TbsHandshakeSecAbort
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeSecAbort} The decoded data structure.
  */
-export function _decode_TbsHandshakeSecAbort(el: _Element) {
+export function _decode_TbsHandshakeSecAbort(el: _Element): TbsHandshakeSecAbort {
     if (!_cached_decoder_for_TbsHandshakeSecAbort) {
         _cached_decoder_for_TbsHandshakeSecAbort = function (
             el: _Element
@@ -285,7 +285,7 @@ let _cached_encoder_for_TbsHandshakeSecAbort: $.ASN1Encoder<TbsHandshakeSecAbort
 export function _encode_TbsHandshakeSecAbort(
     value: TbsHandshakeSecAbort,
     elGetter: $.ASN1Encoder<TbsHandshakeSecAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeSecAbort) {
         _cached_encoder_for_TbsHandshakeSecAbort = function (
             value: TbsHandshakeSecAbort        ): _Element {

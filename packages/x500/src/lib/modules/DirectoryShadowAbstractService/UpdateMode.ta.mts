@@ -37,7 +37,7 @@ let _cached_decoder_for_UpdateMode: $.ASN1Decoder<UpdateMode> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UpdateMode} The decoded data structure.
  */
-export function _decode_UpdateMode(el: _Element) {
+export function _decode_UpdateMode(el: _Element): UpdateMode {
     if (!_cached_decoder_for_UpdateMode) {
         _cached_decoder_for_UpdateMode = $._decode_extensible_choice<UpdateMode>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
 export function _encode_UpdateMode(
     value: UpdateMode,
     elGetter: $.ASN1Encoder<UpdateMode>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateMode) {
         _cached_encoder_for_UpdateMode = $._encode_choice<UpdateMode>(
             {

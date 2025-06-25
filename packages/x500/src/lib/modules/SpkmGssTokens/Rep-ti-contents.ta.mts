@@ -261,7 +261,7 @@ let _cached_decoder_for_Rep_ti_contents: $.ASN1Decoder<Rep_ti_contents> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Rep_ti_contents} The decoded data structure.
  */
-export function _decode_Rep_ti_contents(el: _Element) {
+export function _decode_Rep_ti_contents(el: _Element): Rep_ti_contents {
     if (!_cached_decoder_for_Rep_ti_contents) {
         _cached_decoder_for_Rep_ti_contents = function (
             el: _Element
@@ -361,7 +361,7 @@ let _cached_encoder_for_Rep_ti_contents: $.ASN1Encoder<Rep_ti_contents> | null =
 export function _encode_Rep_ti_contents(
     value: Rep_ti_contents,
     elGetter: $.ASN1Encoder<Rep_ti_contents>
-) {
+): _Element {
     if (!_cached_encoder_for_Rep_ti_contents) {
         _cached_encoder_for_Rep_ti_contents = function (
             value: Rep_ti_contents        ): _Element {

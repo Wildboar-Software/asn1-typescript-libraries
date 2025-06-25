@@ -99,7 +99,7 @@ export class PagedResultsRequest_newRequest {
      * @static
      * @method
      */
-    public static get _default_value_for_reverse() {
+    public static get _default_value_for_reverse(): BOOLEAN {
         return false;
     }
     /**
@@ -108,7 +108,7 @@ export class PagedResultsRequest_newRequest {
      * @static
      * @method
      */
-    public static get _default_value_for_unmerged() {
+    public static get _default_value_for_unmerged(): BOOLEAN {
         return false;
     }
 }
@@ -177,7 +177,7 @@ let _cached_decoder_for_PagedResultsRequest_newRequest: $.ASN1Decoder<PagedResul
  * @param {_Element} el The element being decoded.
  * @returns {PagedResultsRequest_newRequest} The decoded data structure.
  */
-export function _decode_PagedResultsRequest_newRequest(el: _Element) {
+export function _decode_PagedResultsRequest_newRequest(el: _Element): PagedResultsRequest_newRequest {
     if (!_cached_decoder_for_PagedResultsRequest_newRequest) {
         _cached_decoder_for_PagedResultsRequest_newRequest = function (
             el: _Element
@@ -250,7 +250,7 @@ let _cached_encoder_for_PagedResultsRequest_newRequest: $.ASN1Encoder<PagedResul
 export function _encode_PagedResultsRequest_newRequest(
     value: PagedResultsRequest_newRequest,
     elGetter: $.ASN1Encoder<PagedResultsRequest_newRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_PagedResultsRequest_newRequest) {
         _cached_encoder_for_PagedResultsRequest_newRequest = function (
             value: PagedResultsRequest_newRequest        ): _Element {

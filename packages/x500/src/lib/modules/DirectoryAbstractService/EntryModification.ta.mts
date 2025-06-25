@@ -52,7 +52,7 @@ let _cached_decoder_for_EntryModification: $.ASN1Decoder<EntryModification> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EntryModification} The decoded data structure.
  */
-export function _decode_EntryModification(el: _Element) {
+export function _decode_EntryModification(el: _Element): EntryModification {
     if (!_cached_decoder_for_EntryModification) {
         _cached_decoder_for_EntryModification = $._decode_extensible_choice<EntryModification>(
             {
@@ -108,7 +108,7 @@ let _cached_encoder_for_EntryModification: $.ASN1Encoder<EntryModification> | nu
 export function _encode_EntryModification(
     value: EntryModification,
     elGetter: $.ASN1Encoder<EntryModification>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryModification) {
         _cached_encoder_for_EntryModification = $._encode_choice<EntryModification>(
             {

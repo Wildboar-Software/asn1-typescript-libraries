@@ -82,7 +82,7 @@ export class DSABindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_versions() {
+    public static get _default_value_for_versions(): Versions {
         return (() => {
             const _ret = new Uint8ClampedArray(2);
             _ret[Versions_v1] = TRUE_BIT;
@@ -140,7 +140,7 @@ let _cached_decoder_for_DSABindArgument: $.ASN1Decoder<DSABindArgument> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DSABindArgument} The decoded data structure.
  */
-export function _decode_DSABindArgument(el: _Element) {
+export function _decode_DSABindArgument(el: _Element): DSABindArgument {
     if (!_cached_decoder_for_DSABindArgument) {
         _cached_decoder_for_DSABindArgument = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_DSABindArgument: $.ASN1Encoder<DSABindArgument> | null =
 export function _encode_DSABindArgument(
     value: DSABindArgument,
     elGetter: $.ASN1Encoder<DSABindArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_DSABindArgument) {
         _cached_encoder_for_DSABindArgument = function (
             value: DSABindArgument        ): _Element {

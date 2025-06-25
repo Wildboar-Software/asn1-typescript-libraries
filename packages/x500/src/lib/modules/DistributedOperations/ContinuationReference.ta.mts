@@ -162,7 +162,7 @@ export class ContinuationReference {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -171,7 +171,7 @@ export class ContinuationReference {
      * @static
      * @method
      */
-    public static get _default_value_for_returnToDUA() {
+    public static get _default_value_for_returnToDUA(): BOOLEAN {
         return false;
     }
     /**
@@ -180,7 +180,7 @@ export class ContinuationReference {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -281,7 +281,7 @@ let _cached_decoder_for_ContinuationReference: $.ASN1Decoder<ContinuationReferen
  * @param {_Element} el The element being decoded.
  * @returns {ContinuationReference} The decoded data structure.
  */
-export function _decode_ContinuationReference(el: _Element) {
+export function _decode_ContinuationReference(el: _Element): ContinuationReference {
     if (!_cached_decoder_for_ContinuationReference) {
         _cached_decoder_for_ContinuationReference = function (
             el: _Element
@@ -397,7 +397,7 @@ let _cached_encoder_for_ContinuationReference: $.ASN1Encoder<ContinuationReferen
 export function _encode_ContinuationReference(
     value: ContinuationReference,
     elGetter: $.ASN1Encoder<ContinuationReference>
-) {
+): _Element {
     if (!_cached_encoder_for_ContinuationReference) {
         _cached_encoder_for_ContinuationReference = function (
             value: ContinuationReference        ): _Element {

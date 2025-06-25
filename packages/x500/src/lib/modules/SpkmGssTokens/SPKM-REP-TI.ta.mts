@@ -115,7 +115,7 @@ let _cached_decoder_for_SPKM_REP_TI: $.ASN1Decoder<SPKM_REP_TI> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_REP_TI} The decoded data structure.
  */
-export function _decode_SPKM_REP_TI(el: _Element) {
+export function _decode_SPKM_REP_TI(el: _Element): SPKM_REP_TI {
     if (!_cached_decoder_for_SPKM_REP_TI) {
         _cached_decoder_for_SPKM_REP_TI = function (el: _Element): SPKM_REP_TI {
             let responseToken!: REP_TI_TOKEN;
@@ -157,7 +157,7 @@ let _cached_encoder_for_SPKM_REP_TI: $.ASN1Encoder<SPKM_REP_TI> | null = null;
 export function _encode_SPKM_REP_TI(
     value: SPKM_REP_TI,
     elGetter: $.ASN1Encoder<SPKM_REP_TI>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_REP_TI) {
         _cached_encoder_for_SPKM_REP_TI = function (
             value: SPKM_REP_TI        ): _Element {

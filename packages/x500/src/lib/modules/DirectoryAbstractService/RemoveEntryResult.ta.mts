@@ -39,7 +39,7 @@ let _cached_decoder_for_RemoveEntryResult: $.ASN1Decoder<RemoveEntryResult> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RemoveEntryResult} The decoded data structure.
  */
-export function _decode_RemoveEntryResult(el: _Element) {
+export function _decode_RemoveEntryResult(el: _Element): RemoveEntryResult {
     if (!_cached_decoder_for_RemoveEntryResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_RemoveEntryResult: $.ASN1Encoder<RemoveEntryResult> | nu
 export function _encode_RemoveEntryResult(
     value: RemoveEntryResult,
     elGetter: $.ASN1Encoder<RemoveEntryResult>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveEntryResult) {
         _cached_encoder_for_RemoveEntryResult = $._encode_choice<RemoveEntryResult>(
             {

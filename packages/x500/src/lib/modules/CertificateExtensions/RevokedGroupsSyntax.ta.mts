@@ -26,7 +26,7 @@ let _cached_decoder_for_RevokedGroupsSyntax: $.ASN1Decoder<RevokedGroupsSyntax> 
  * @param {_Element} el The element being decoded.
  * @returns {RevokedGroupsSyntax} The decoded data structure.
  */
-export function _decode_RevokedGroupsSyntax(el: _Element) {
+export function _decode_RevokedGroupsSyntax(el: _Element): RevokedGroupsSyntax {
     if (!_cached_decoder_for_RevokedGroupsSyntax) {
         _cached_decoder_for_RevokedGroupsSyntax = $._decodeSequenceOf<RevokedGroup>(
             () => _decode_RevokedGroup
@@ -47,7 +47,7 @@ let _cached_encoder_for_RevokedGroupsSyntax: $.ASN1Encoder<RevokedGroupsSyntax> 
 export function _encode_RevokedGroupsSyntax(
     value: RevokedGroupsSyntax,
     elGetter: $.ASN1Encoder<RevokedGroupsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_RevokedGroupsSyntax) {
         _cached_encoder_for_RevokedGroupsSyntax = $._encodeSequenceOf<RevokedGroup>(
             () => _encode_RevokedGroup,

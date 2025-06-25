@@ -27,7 +27,7 @@ let _cached_decoder_for_MultipleSymmetricKeyAlgo: $.ASN1Decoder<MultipleSymmetri
  * @param {_Element} el The element being decoded.
  * @returns {MultipleSymmetricKeyAlgo} The decoded data structure.
  */
-export function _decode_MultipleSymmetricKeyAlgo(el: _Element) {
+export function _decode_MultipleSymmetricKeyAlgo(el: _Element): MultipleSymmetricKeyAlgo {
     if (!_cached_decoder_for_MultipleSymmetricKeyAlgo) {
         _cached_decoder_for_MultipleSymmetricKeyAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultipleSymmetricKeyAlgo: $.ASN1Encoder<MultipleSymmetri
 export function _encode_MultipleSymmetricKeyAlgo(
     value: MultipleSymmetricKeyAlgo,
     elGetter: $.ASN1Encoder<MultipleSymmetricKeyAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleSymmetricKeyAlgo) {
         _cached_encoder_for_MultipleSymmetricKeyAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

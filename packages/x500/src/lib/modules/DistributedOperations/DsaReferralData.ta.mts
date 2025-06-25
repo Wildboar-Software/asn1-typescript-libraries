@@ -128,7 +128,7 @@ export class DsaReferralData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -187,7 +187,7 @@ let _cached_decoder_for_DsaReferralData: $.ASN1Decoder<DsaReferralData> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DsaReferralData} The decoded data structure.
  */
-export function _decode_DsaReferralData(el: _Element) {
+export function _decode_DsaReferralData(el: _Element): DsaReferralData {
     if (!_cached_decoder_for_DsaReferralData) {
         _cached_decoder_for_DsaReferralData = function (
             el: _Element
@@ -270,7 +270,7 @@ let _cached_encoder_for_DsaReferralData: $.ASN1Encoder<DsaReferralData> | null =
 export function _encode_DsaReferralData(
     value: DsaReferralData,
     elGetter: $.ASN1Encoder<DsaReferralData>
-) {
+): _Element {
     if (!_cached_encoder_for_DsaReferralData) {
         _cached_encoder_for_DsaReferralData = function (
             value: DsaReferralData        ): _Element {

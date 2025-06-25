@@ -109,7 +109,7 @@ export class ChangePasswordResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -154,7 +154,7 @@ let _cached_decoder_for_ChangePasswordResultData: $.ASN1Decoder<ChangePasswordRe
  * @param {_Element} el The element being decoded.
  * @returns {ChangePasswordResultData} The decoded data structure.
  */
-export function _decode_ChangePasswordResultData(el: _Element) {
+export function _decode_ChangePasswordResultData(el: _Element): ChangePasswordResultData {
     if (!_cached_decoder_for_ChangePasswordResultData) {
         _cached_decoder_for_ChangePasswordResultData = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_ChangePasswordResultData: $.ASN1Encoder<ChangePasswordRe
 export function _encode_ChangePasswordResultData(
     value: ChangePasswordResultData,
     elGetter: $.ASN1Encoder<ChangePasswordResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangePasswordResultData) {
         _cached_encoder_for_ChangePasswordResultData = function (
             value: ChangePasswordResultData        ): _Element {

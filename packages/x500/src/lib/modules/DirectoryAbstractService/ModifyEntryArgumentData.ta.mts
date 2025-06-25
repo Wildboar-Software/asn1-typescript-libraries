@@ -236,7 +236,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -245,7 +245,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -257,7 +257,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -266,7 +266,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -275,7 +275,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -353,7 +353,7 @@ let _cached_decoder_for_ModifyEntryArgumentData: $.ASN1Decoder<ModifyEntryArgume
  * @param {_Element} el The element being decoded.
  * @returns {ModifyEntryArgumentData} The decoded data structure.
  */
-export function _decode_ModifyEntryArgumentData(el: _Element) {
+export function _decode_ModifyEntryArgumentData(el: _Element): ModifyEntryArgumentData {
     if (!_cached_decoder_for_ModifyEntryArgumentData) {
         _cached_decoder_for_ModifyEntryArgumentData = function (
             el: _Element
@@ -503,7 +503,7 @@ let _cached_encoder_for_ModifyEntryArgumentData: $.ASN1Encoder<ModifyEntryArgume
 export function _encode_ModifyEntryArgumentData(
     value: ModifyEntryArgumentData,
     elGetter: $.ASN1Encoder<ModifyEntryArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyEntryArgumentData) {
         _cached_encoder_for_ModifyEntryArgumentData = function (
             value: ModifyEntryArgumentData        ): _Element {

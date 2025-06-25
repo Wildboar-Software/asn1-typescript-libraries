@@ -36,7 +36,7 @@ let _cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
  */
 export function _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error(
     el: _Element
-) {
+): DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error {
     if (
         !_cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
     ) {
@@ -74,7 +74,7 @@ let _cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
 export function _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error(
     value: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     elGetter: $.ASN1Encoder<DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error>
-) {
+): _Element {
     if (
         !_cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
     ) {

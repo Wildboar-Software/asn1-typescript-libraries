@@ -26,7 +26,7 @@ let _cached_decoder_for_SecondaryShadows: $.ASN1Decoder<SecondaryShadows> | null
  * @param {_Element} el The element being decoded.
  * @returns {SecondaryShadows} The decoded data structure.
  */
-export function _decode_SecondaryShadows(el: _Element) {
+export function _decode_SecondaryShadows(el: _Element): SecondaryShadows {
     if (!_cached_decoder_for_SecondaryShadows) {
         _cached_decoder_for_SecondaryShadows = $._decodeSetOf<SupplierAndConsumers>(
             () => _decode_SupplierAndConsumers
@@ -47,7 +47,7 @@ let _cached_encoder_for_SecondaryShadows: $.ASN1Encoder<SecondaryShadows> | null
 export function _encode_SecondaryShadows(
     value: SecondaryShadows,
     elGetter: $.ASN1Encoder<SecondaryShadows>
-) {
+): _Element {
     if (!_cached_encoder_for_SecondaryShadows) {
         _cached_encoder_for_SecondaryShadows = $._encodeSetOf<SupplierAndConsumers>(
             () => _encode_SupplierAndConsumers,

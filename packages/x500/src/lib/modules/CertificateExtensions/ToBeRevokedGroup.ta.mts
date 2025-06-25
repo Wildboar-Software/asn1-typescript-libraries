@@ -156,7 +156,7 @@ let _cached_decoder_for_ToBeRevokedGroup: $.ASN1Decoder<ToBeRevokedGroup> | null
  * @param {_Element} el The element being decoded.
  * @returns {ToBeRevokedGroup} The decoded data structure.
  */
-export function _decode_ToBeRevokedGroup(el: _Element) {
+export function _decode_ToBeRevokedGroup(el: _Element): ToBeRevokedGroup {
     if (!_cached_decoder_for_ToBeRevokedGroup) {
         _cached_decoder_for_ToBeRevokedGroup = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_ToBeRevokedGroup: $.ASN1Encoder<ToBeRevokedGroup> | null
 export function _encode_ToBeRevokedGroup(
     value: ToBeRevokedGroup,
     elGetter: $.ASN1Encoder<ToBeRevokedGroup>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeRevokedGroup) {
         _cached_encoder_for_ToBeRevokedGroup = function (
             value: ToBeRevokedGroup        ): _Element {

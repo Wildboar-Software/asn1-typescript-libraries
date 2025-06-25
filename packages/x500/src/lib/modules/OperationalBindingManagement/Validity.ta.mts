@@ -149,7 +149,7 @@ let _cached_decoder_for_Validity: $.ASN1Decoder<Validity> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Validity} The decoded data structure.
  */
-export function _decode_Validity(el: _Element) {
+export function _decode_Validity(el: _Element): Validity {
     if (!_cached_decoder_for_Validity) {
         _cached_decoder_for_Validity = function (el: _Element): Validity {
             let validFrom: OPTIONAL<Validity_validFrom> =
@@ -201,7 +201,7 @@ let _cached_encoder_for_Validity: $.ASN1Encoder<Validity> | null = null;
 export function _encode_Validity(
     value: Validity,
     elGetter: $.ASN1Encoder<Validity>
-) {
+): _Element {
     if (!_cached_encoder_for_Validity) {
         _cached_encoder_for_Validity = function (
             value: Validity        ): _Element {

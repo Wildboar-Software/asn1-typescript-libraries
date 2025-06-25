@@ -49,7 +49,7 @@ let _cached_decoder_for_NamedDay: $.ASN1Decoder<NamedDay> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NamedDay} The decoded data structure.
  */
-export function _decode_NamedDay(el: _Element) {
+export function _decode_NamedDay(el: _Element): NamedDay {
     if (!_cached_decoder_for_NamedDay) {
         _cached_decoder_for_NamedDay = $._decode_inextensible_choice<NamedDay>({
             "UNIVERSAL 10": ["intNamedDays", _decode_NamedDay_intNamedDays],
@@ -71,7 +71,7 @@ let _cached_encoder_for_NamedDay: $.ASN1Encoder<NamedDay> | null = null;
 export function _encode_NamedDay(
     value: NamedDay,
     elGetter: $.ASN1Encoder<NamedDay>
-) {
+): _Element {
     if (!_cached_encoder_for_NamedDay) {
         _cached_encoder_for_NamedDay = $._encode_choice<NamedDay>(
             {

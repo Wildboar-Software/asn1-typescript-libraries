@@ -118,7 +118,7 @@ let _cached_decoder_for_PkiPathMatchSyntax: $.ASN1Decoder<PkiPathMatchSyntax> | 
  * @param {_Element} el The element being decoded.
  * @returns {PkiPathMatchSyntax} The decoded data structure.
  */
-export function _decode_PkiPathMatchSyntax(el: _Element) {
+export function _decode_PkiPathMatchSyntax(el: _Element): PkiPathMatchSyntax {
     if (!_cached_decoder_for_PkiPathMatchSyntax) {
         _cached_decoder_for_PkiPathMatchSyntax = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_PkiPathMatchSyntax: $.ASN1Encoder<PkiPathMatchSyntax> | 
 export function _encode_PkiPathMatchSyntax(
     value: PkiPathMatchSyntax,
     elGetter: $.ASN1Encoder<PkiPathMatchSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_PkiPathMatchSyntax) {
         _cached_encoder_for_PkiPathMatchSyntax = function (
             value: PkiPathMatchSyntax        ): _Element {

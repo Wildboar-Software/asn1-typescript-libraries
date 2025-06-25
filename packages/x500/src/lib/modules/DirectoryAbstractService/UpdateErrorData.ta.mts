@@ -136,7 +136,7 @@ export class UpdateErrorData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -195,7 +195,7 @@ let _cached_decoder_for_UpdateErrorData: $.ASN1Decoder<UpdateErrorData> | null =
  * @param {_Element} el The element being decoded.
  * @returns {UpdateErrorData} The decoded data structure.
  */
-export function _decode_UpdateErrorData(el: _Element) {
+export function _decode_UpdateErrorData(el: _Element): UpdateErrorData {
     if (!_cached_decoder_for_UpdateErrorData) {
         _cached_decoder_for_UpdateErrorData = function (
             el: _Element
@@ -282,7 +282,7 @@ let _cached_encoder_for_UpdateErrorData: $.ASN1Encoder<UpdateErrorData> | null =
 export function _encode_UpdateErrorData(
     value: UpdateErrorData,
     elGetter: $.ASN1Encoder<UpdateErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateErrorData) {
         _cached_encoder_for_UpdateErrorData = function (
             value: UpdateErrorData        ): _Element {

@@ -120,7 +120,7 @@ export class ReferralData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -174,7 +174,7 @@ let _cached_decoder_for_ReferralData: $.ASN1Decoder<ReferralData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReferralData} The decoded data structure.
  */
-export function _decode_ReferralData(el: _Element) {
+export function _decode_ReferralData(el: _Element): ReferralData {
     if (!_cached_decoder_for_ReferralData) {
         _cached_decoder_for_ReferralData = function (
             el: _Element
@@ -250,7 +250,7 @@ let _cached_encoder_for_ReferralData: $.ASN1Encoder<ReferralData> | null = null;
 export function _encode_ReferralData(
     value: ReferralData,
     elGetter: $.ASN1Encoder<ReferralData>
-) {
+): _Element {
     if (!_cached_encoder_for_ReferralData) {
         _cached_encoder_for_ReferralData = function (
             value: ReferralData        ): _Element {

@@ -116,7 +116,7 @@ let _cached_decoder_for_EntryLimit: $.ASN1Decoder<EntryLimit> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EntryLimit} The decoded data structure.
  */
-export function _decode_EntryLimit(el: _Element) {
+export function _decode_EntryLimit(el: _Element): EntryLimit {
     if (!_cached_decoder_for_EntryLimit) {
         _cached_decoder_for_EntryLimit = function (el: _Element): EntryLimit {
             const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_EntryLimit: $.ASN1Encoder<EntryLimit> | null = null;
 export function _encode_EntryLimit(
     value: EntryLimit,
     elGetter: $.ASN1Encoder<EntryLimit>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryLimit) {
         _cached_encoder_for_EntryLimit = function (
             value: EntryLimit        ): _Element {

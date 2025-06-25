@@ -123,7 +123,7 @@ let _cached_decoder_for_OsiBind: $.ASN1Decoder<OsiBind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiBind} The decoded data structure.
  */
-export function _decode_OsiBind(el: _Element) {
+export function _decode_OsiBind(el: _Element): OsiBind {
     if (!_cached_decoder_for_OsiBind) {
         _cached_decoder_for_OsiBind = function (el: _Element): OsiBind {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -171,7 +171,7 @@ let _cached_encoder_for_OsiBind: $.ASN1Encoder<OsiBind> | null = null;
 export function _encode_OsiBind(
     value: OsiBind,
     elGetter: $.ASN1Encoder<OsiBind>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBind) {
         _cached_encoder_for_OsiBind = function (
             value: OsiBind        ): _Element {

@@ -118,7 +118,7 @@ export class AbandonResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -165,7 +165,7 @@ let _cached_decoder_for_AbandonResultData: $.ASN1Decoder<AbandonResultData> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AbandonResultData} The decoded data structure.
  */
-export function _decode_AbandonResultData(el: _Element) {
+export function _decode_AbandonResultData(el: _Element): AbandonResultData {
     if (!_cached_decoder_for_AbandonResultData) {
         _cached_decoder_for_AbandonResultData = function (
             el: _Element
@@ -237,7 +237,7 @@ let _cached_encoder_for_AbandonResultData: $.ASN1Encoder<AbandonResultData> | nu
 export function _encode_AbandonResultData(
     value: AbandonResultData,
     elGetter: $.ASN1Encoder<AbandonResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_AbandonResultData) {
         _cached_encoder_for_AbandonResultData = function (
             value: AbandonResultData        ): _Element {

@@ -124,7 +124,7 @@ let _cached_decoder_for_PwdResponseValue: $.ASN1Decoder<PwdResponseValue> | null
  * @param {_Element} el The element being decoded.
  * @returns {PwdResponseValue} The decoded data structure.
  */
-export function _decode_PwdResponseValue(el: _Element) {
+export function _decode_PwdResponseValue(el: _Element): PwdResponseValue {
     if (!_cached_decoder_for_PwdResponseValue) {
         _cached_decoder_for_PwdResponseValue = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_PwdResponseValue: $.ASN1Encoder<PwdResponseValue> | null
 export function _encode_PwdResponseValue(
     value: PwdResponseValue,
     elGetter: $.ASN1Encoder<PwdResponseValue>
-) {
+): _Element {
     if (!_cached_encoder_for_PwdResponseValue) {
         _cached_encoder_for_PwdResponseValue = function (
             value: PwdResponseValue        ): _Element {

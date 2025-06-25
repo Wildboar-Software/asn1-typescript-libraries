@@ -116,7 +116,7 @@ let _cached_decoder_for_Payload14: $.ASN1Decoder<Payload14> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Payload14} The decoded data structure.
  */
-export function _decode_Payload14(el: _Element) {
+export function _decode_Payload14(el: _Element): Payload14 {
     if (!_cached_decoder_for_Payload14) {
         _cached_decoder_for_Payload14 = function (el: _Element): Payload14 {
             const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_Payload14: $.ASN1Encoder<Payload14> | null = null;
 export function _encode_Payload14(
     value: Payload14,
     elGetter: $.ASN1Encoder<Payload14>
-) {
+): _Element {
     if (!_cached_encoder_for_Payload14) {
         _cached_encoder_for_Payload14 = function (
             value: Payload14        ): _Element {

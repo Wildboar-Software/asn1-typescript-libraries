@@ -28,7 +28,7 @@ let _cached_decoder_for_BuiltInDomainDefinedAttributes: $.ASN1Decoder<BuiltInDom
  * @param {_Element} el The element being decoded.
  * @returns {BuiltInDomainDefinedAttributes} The decoded data structure.
  */
-export function _decode_BuiltInDomainDefinedAttributes(el: _Element) {
+export function _decode_BuiltInDomainDefinedAttributes(el: _Element): BuiltInDomainDefinedAttributes {
     if (!_cached_decoder_for_BuiltInDomainDefinedAttributes) {
         _cached_decoder_for_BuiltInDomainDefinedAttributes = $._decodeSequenceOf<BuiltInDomainDefinedAttribute>(
             () => _decode_BuiltInDomainDefinedAttribute
@@ -49,7 +49,7 @@ let _cached_encoder_for_BuiltInDomainDefinedAttributes: $.ASN1Encoder<BuiltInDom
 export function _encode_BuiltInDomainDefinedAttributes(
     value: BuiltInDomainDefinedAttributes,
     elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_BuiltInDomainDefinedAttributes) {
         _cached_encoder_for_BuiltInDomainDefinedAttributes = $._encodeSequenceOf<BuiltInDomainDefinedAttribute>(
             () => _encode_BuiltInDomainDefinedAttribute,

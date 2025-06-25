@@ -93,7 +93,7 @@ export class EnhancedGuide {
      * @static
      * @method
      */
-    public static get _default_value_for_subset() {
+    public static get _default_value_for_subset(): EnhancedGuide_subset {
         return oneLevel;
     }
 }
@@ -152,7 +152,7 @@ let _cached_decoder_for_EnhancedGuide: $.ASN1Decoder<EnhancedGuide> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EnhancedGuide} The decoded data structure.
  */
-export function _decode_EnhancedGuide(el: _Element) {
+export function _decode_EnhancedGuide(el: _Element): EnhancedGuide {
     if (!_cached_decoder_for_EnhancedGuide) {
         _cached_decoder_for_EnhancedGuide = function (
             el: _Element
@@ -212,7 +212,7 @@ let _cached_encoder_for_EnhancedGuide: $.ASN1Encoder<EnhancedGuide> | null = nul
 export function _encode_EnhancedGuide(
     value: EnhancedGuide,
     elGetter: $.ASN1Encoder<EnhancedGuide>
-) {
+): _Element {
     if (!_cached_encoder_for_EnhancedGuide) {
         _cached_encoder_for_EnhancedGuide = function (
             value: EnhancedGuide        ): _Element {

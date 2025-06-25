@@ -152,7 +152,7 @@ let _cached_decoder_for_AuthenticationLevel_basicLevels: $.ASN1Decoder<Authentic
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticationLevel_basicLevels} The decoded data structure.
  */
-export function _decode_AuthenticationLevel_basicLevels(el: _Element) {
+export function _decode_AuthenticationLevel_basicLevels(el: _Element): AuthenticationLevel_basicLevels {
     if (!_cached_decoder_for_AuthenticationLevel_basicLevels) {
         _cached_decoder_for_AuthenticationLevel_basicLevels = function (
             el: _Element
@@ -206,7 +206,7 @@ let _cached_encoder_for_AuthenticationLevel_basicLevels: $.ASN1Encoder<Authentic
 export function _encode_AuthenticationLevel_basicLevels(
     value: AuthenticationLevel_basicLevels,
     elGetter: $.ASN1Encoder<AuthenticationLevel_basicLevels>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticationLevel_basicLevels) {
         _cached_encoder_for_AuthenticationLevel_basicLevels = function (
             value: AuthenticationLevel_basicLevels        ): _Element {

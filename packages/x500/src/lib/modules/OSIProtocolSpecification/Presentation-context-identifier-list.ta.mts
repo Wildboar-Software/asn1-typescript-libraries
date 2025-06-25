@@ -28,7 +28,7 @@ let _cached_decoder_for_Presentation_context_identifier_list: $.ASN1Decoder<Pres
  * @param {_Element} el The element being decoded.
  * @returns {Presentation_context_identifier_list} The decoded data structure.
  */
-export function _decode_Presentation_context_identifier_list(el: _Element) {
+export function _decode_Presentation_context_identifier_list(el: _Element): Presentation_context_identifier_list {
     if (!_cached_decoder_for_Presentation_context_identifier_list) {
         _cached_decoder_for_Presentation_context_identifier_list = $._decodeSequenceOf<Presentation_context_identifier_list_Item>(
             () => _decode_Presentation_context_identifier_list_Item
@@ -49,7 +49,7 @@ let _cached_encoder_for_Presentation_context_identifier_list: $.ASN1Encoder<Pres
 export function _encode_Presentation_context_identifier_list(
     value: Presentation_context_identifier_list,
     elGetter: $.ASN1Encoder<Presentation_context_identifier_list>
-) {
+): _Element {
     if (!_cached_encoder_for_Presentation_context_identifier_list) {
         _cached_encoder_for_Presentation_context_identifier_list = $._encodeSequenceOf<Presentation_context_identifier_list_Item>(
             () => _encode_Presentation_context_identifier_list_Item,

@@ -117,7 +117,7 @@ export class TbsReleaseReq {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[Version_v1] = TRUE_BIT;
@@ -190,7 +190,7 @@ let _cached_decoder_for_TbsReleaseReq: $.ASN1Decoder<TbsReleaseReq> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TbsReleaseReq} The decoded data structure.
  */
-export function _decode_TbsReleaseReq(el: _Element) {
+export function _decode_TbsReleaseReq(el: _Element): TbsReleaseReq {
     if (!_cached_decoder_for_TbsReleaseReq) {
         _cached_decoder_for_TbsReleaseReq = function (
             el: _Element
@@ -254,7 +254,7 @@ let _cached_encoder_for_TbsReleaseReq: $.ASN1Encoder<TbsReleaseReq> | null = nul
 export function _encode_TbsReleaseReq(
     value: TbsReleaseReq,
     elGetter: $.ASN1Encoder<TbsReleaseReq>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsReleaseReq) {
         _cached_encoder_for_TbsReleaseReq = function (
             value: TbsReleaseReq        ): _Element {

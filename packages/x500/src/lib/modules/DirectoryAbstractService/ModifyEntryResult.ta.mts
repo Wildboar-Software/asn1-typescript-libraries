@@ -39,7 +39,7 @@ let _cached_decoder_for_ModifyEntryResult: $.ASN1Decoder<ModifyEntryResult> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ModifyEntryResult} The decoded data structure.
  */
-export function _decode_ModifyEntryResult(el: _Element) {
+export function _decode_ModifyEntryResult(el: _Element): ModifyEntryResult {
     if (!_cached_decoder_for_ModifyEntryResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_ModifyEntryResult: $.ASN1Encoder<ModifyEntryResult> | nu
 export function _encode_ModifyEntryResult(
     value: ModifyEntryResult,
     elGetter: $.ASN1Encoder<ModifyEntryResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyEntryResult) {
         _cached_encoder_for_ModifyEntryResult = $._encode_choice<ModifyEntryResult>(
             {

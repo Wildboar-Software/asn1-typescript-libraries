@@ -137,7 +137,7 @@ let _cached_decoder_for_TeletexPersonalName: $.ASN1Decoder<TeletexPersonalName> 
  * @param {_Element} el The element being decoded.
  * @returns {TeletexPersonalName} The decoded data structure.
  */
-export function _decode_TeletexPersonalName(el: _Element) {
+export function _decode_TeletexPersonalName(el: _Element): TeletexPersonalName {
     if (!_cached_decoder_for_TeletexPersonalName) {
         _cached_decoder_for_TeletexPersonalName = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_TeletexPersonalName: $.ASN1Encoder<TeletexPersonalName> 
 export function _encode_TeletexPersonalName(
     value: TeletexPersonalName,
     elGetter: $.ASN1Encoder<TeletexPersonalName>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexPersonalName) {
         _cached_encoder_for_TeletexPersonalName = function (
             value: TeletexPersonalName        ): _Element {

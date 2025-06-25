@@ -32,7 +32,7 @@ let _cached_decoder_for_ModifyOperationalBindingArgument: $.ASN1Decoder<ModifyOp
  * @param {_Element} el The element being decoded.
  * @returns {ModifyOperationalBindingArgument} The decoded data structure.
  */
-export function _decode_ModifyOperationalBindingArgument(el: _Element) {
+export function _decode_ModifyOperationalBindingArgument(el: _Element): ModifyOperationalBindingArgument {
     if (!_cached_decoder_for_ModifyOperationalBindingArgument) {
         _cached_decoder_for_ModifyOperationalBindingArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<ModifyOperationalBindingArgumentData>(
             _decode_ModifyOperationalBindingArgumentData
@@ -53,7 +53,7 @@ let _cached_encoder_for_ModifyOperationalBindingArgument: $.ASN1Encoder<ModifyOp
 export function _encode_ModifyOperationalBindingArgument(
     value: ModifyOperationalBindingArgument,
     elGetter: $.ASN1Encoder<ModifyOperationalBindingArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyOperationalBindingArgument) {
         _cached_encoder_for_ModifyOperationalBindingArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<ModifyOperationalBindingArgumentData>(
             _encode_ModifyOperationalBindingArgumentData

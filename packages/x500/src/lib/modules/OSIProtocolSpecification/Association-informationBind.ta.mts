@@ -28,7 +28,7 @@ let _cached_decoder_for_Association_informationBind: $.ASN1Decoder<Association_i
  * @param {_Element} el The element being decoded.
  * @returns {Association_informationBind} The decoded data structure.
  */
-export function _decode_Association_informationBind(el: _Element) {
+export function _decode_Association_informationBind(el: _Element): Association_informationBind {
     if (!_cached_decoder_for_Association_informationBind) {
         _cached_decoder_for_Association_informationBind = $._decodeSequenceOf<EXTERNAL>(
             () => $._decodeExternal
@@ -49,7 +49,7 @@ let _cached_encoder_for_Association_informationBind: $.ASN1Encoder<Association_i
 export function _encode_Association_informationBind(
     value: Association_informationBind,
     elGetter: $.ASN1Encoder<Association_informationBind>
-) {
+): _Element {
     if (!_cached_encoder_for_Association_informationBind) {
         _cached_encoder_for_Association_informationBind = $._encodeSequenceOf<EXTERNAL>(
             () => $._encodeExternal,

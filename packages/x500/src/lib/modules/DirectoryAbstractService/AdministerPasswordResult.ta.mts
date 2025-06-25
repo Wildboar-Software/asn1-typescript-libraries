@@ -39,7 +39,7 @@ let _cached_decoder_for_AdministerPasswordResult: $.ASN1Decoder<AdministerPasswo
  * @param {_Element} el The element being decoded.
  * @returns {AdministerPasswordResult} The decoded data structure.
  */
-export function _decode_AdministerPasswordResult(el: _Element) {
+export function _decode_AdministerPasswordResult(el: _Element): AdministerPasswordResult {
     if (!_cached_decoder_for_AdministerPasswordResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_AdministerPasswordResult: $.ASN1Encoder<AdministerPasswo
 export function _encode_AdministerPasswordResult(
     value: AdministerPasswordResult,
     elGetter: $.ASN1Encoder<AdministerPasswordResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AdministerPasswordResult) {
         _cached_encoder_for_AdministerPasswordResult = $._encode_choice<AdministerPasswordResult>(
             {

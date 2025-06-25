@@ -37,7 +37,7 @@ let _cached_decoder_for_SenderDhInfo: $.ASN1Decoder<SenderDhInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SenderDhInfo} The decoded data structure.
  */
-export function _decode_SenderDhInfo(el: _Element) {
+export function _decode_SenderDhInfo(el: _Element): SenderDhInfo {
     if (!_cached_decoder_for_SenderDhInfo) {
         _cached_decoder_for_SenderDhInfo = $._decode_extensible_choice<SenderDhInfo>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_SenderDhInfo: $.ASN1Encoder<SenderDhInfo> | null = null;
 export function _encode_SenderDhInfo(
     value: SenderDhInfo,
     elGetter: $.ASN1Encoder<SenderDhInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SenderDhInfo) {
         _cached_encoder_for_SenderDhInfo = $._encode_choice<SenderDhInfo>(
             {

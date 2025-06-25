@@ -178,7 +178,7 @@ let _cached_decoder_for_AttributeDescriptorSyntax: $.ASN1Decoder<AttributeDescri
  * @param {_Element} el The element being decoded.
  * @returns {AttributeDescriptorSyntax} The decoded data structure.
  */
-export function _decode_AttributeDescriptorSyntax(el: _Element) {
+export function _decode_AttributeDescriptorSyntax(el: _Element): AttributeDescriptorSyntax {
     if (!_cached_decoder_for_AttributeDescriptorSyntax) {
         _cached_decoder_for_AttributeDescriptorSyntax = function (
             el: _Element
@@ -245,7 +245,7 @@ let _cached_encoder_for_AttributeDescriptorSyntax: $.ASN1Encoder<AttributeDescri
 export function _encode_AttributeDescriptorSyntax(
     value: AttributeDescriptorSyntax,
     elGetter: $.ASN1Encoder<AttributeDescriptorSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeDescriptorSyntax) {
         _cached_encoder_for_AttributeDescriptorSyntax = function (
             value: AttributeDescriptorSyntax        ): _Element {

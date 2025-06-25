@@ -104,7 +104,7 @@ let _cached_decoder_for_AuthorizationData_Item: $.ASN1Decoder<AuthorizationData_
  * @param {_Element} el The element being decoded.
  * @returns {AuthorizationData_Item} The decoded data structure.
  */
-export function _decode_AuthorizationData_Item(el: _Element) {
+export function _decode_AuthorizationData_Item(el: _Element): AuthorizationData_Item {
     if (!_cached_decoder_for_AuthorizationData_Item) {
         _cached_decoder_for_AuthorizationData_Item = function (
             el: _Element
@@ -141,7 +141,7 @@ let _cached_encoder_for_AuthorizationData_Item: $.ASN1Encoder<AuthorizationData_
 export function _encode_AuthorizationData_Item(
     value: AuthorizationData_Item,
     elGetter: $.ASN1Encoder<AuthorizationData_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorizationData_Item) {
         _cached_encoder_for_AuthorizationData_Item = function (
             value: AuthorizationData_Item        ): _Element {

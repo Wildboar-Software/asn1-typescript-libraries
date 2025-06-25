@@ -31,7 +31,7 @@ let _cached_decoder_for_HandshakeWrpRej: $.ASN1Decoder<HandshakeWrpRej> | null =
  * @param {_Element} el The element being decoded.
  * @returns {HandshakeWrpRej} The decoded data structure.
  */
-export function _decode_HandshakeWrpRej(el: _Element) {
+export function _decode_HandshakeWrpRej(el: _Element): HandshakeWrpRej {
     if (!_cached_decoder_for_HandshakeWrpRej) {
         _cached_decoder_for_HandshakeWrpRej = _get_decoder_for_Signed<TbsHandshakeWrpRej>(
             _decode_TbsHandshakeWrpRej
@@ -52,7 +52,7 @@ let _cached_encoder_for_HandshakeWrpRej: $.ASN1Encoder<HandshakeWrpRej> | null =
 export function _encode_HandshakeWrpRej(
     value: HandshakeWrpRej,
     elGetter: $.ASN1Encoder<HandshakeWrpRej>
-) {
+): _Element {
     if (!_cached_encoder_for_HandshakeWrpRej) {
         _cached_encoder_for_HandshakeWrpRej = _get_encoder_for_Signed<TbsHandshakeWrpRej>(
             _encode_TbsHandshakeWrpRej

@@ -133,7 +133,7 @@ export const _extension_additions_list_spec_for_ICV_Invoke: $.ComponentSpec[] = 
  */
 export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
     _decode_ToBeProtected: $.ASN1Decoder<ToBeProtected>
-) {
+): $.ASN1Decoder<ICV_Invoke<ToBeProtected>> {
     return function (el: _Element): ICV_Invoke<ToBeProtected> {
         let toBeProtected!: ToBeProtected;
         let dynParms: OPTIONAL<AlgoInvoke>;
@@ -178,7 +178,7 @@ export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
  */
 export function _get_encoder_for_ICV_Invoke<ToBeProtected>(
     _encode_ToBeProtected: $.ASN1Encoder<ToBeProtected>
-) {
+): $.ASN1Encoder<ICV_Invoke<ToBeProtected>> {
     return function (
         value: ICV_Invoke<ToBeProtected>    ): _Element {
         return $._encodeSequence(

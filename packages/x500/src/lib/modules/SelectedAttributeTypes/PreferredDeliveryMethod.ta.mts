@@ -36,7 +36,7 @@ let _cached_decoder_for_PreferredDeliveryMethod: $.ASN1Decoder<PreferredDelivery
  * @param {_Element} el The element being decoded.
  * @returns {PreferredDeliveryMethod} The decoded data structure.
  */
-export function _decode_PreferredDeliveryMethod(el: _Element) {
+export function _decode_PreferredDeliveryMethod(el: _Element): PreferredDeliveryMethod {
     if (!_cached_decoder_for_PreferredDeliveryMethod) {
         _cached_decoder_for_PreferredDeliveryMethod = $._decodeSequenceOf<PreferredDeliveryMethod_Item>(
             () => _decode_PreferredDeliveryMethod_Item
@@ -57,7 +57,7 @@ let _cached_encoder_for_PreferredDeliveryMethod: $.ASN1Encoder<PreferredDelivery
 export function _encode_PreferredDeliveryMethod(
     value: PreferredDeliveryMethod,
     elGetter: $.ASN1Encoder<PreferredDeliveryMethod>
-) {
+): _Element {
     if (!_cached_encoder_for_PreferredDeliveryMethod) {
         _cached_encoder_for_PreferredDeliveryMethod = $._encodeSequenceOf<PreferredDeliveryMethod_Item>(
             () => _encode_PreferredDeliveryMethod_Item,

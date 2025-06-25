@@ -125,7 +125,7 @@ let _cached_decoder_for_ACIItem_itemOrUserFirst_userFirst: $.ASN1Decoder<ACIItem
  * @param {_Element} el The element being decoded.
  * @returns {ACIItem_itemOrUserFirst_userFirst} The decoded data structure.
  */
-export function _decode_ACIItem_itemOrUserFirst_userFirst(el: _Element) {
+export function _decode_ACIItem_itemOrUserFirst_userFirst(el: _Element): ACIItem_itemOrUserFirst_userFirst {
     if (!_cached_decoder_for_ACIItem_itemOrUserFirst_userFirst) {
         _cached_decoder_for_ACIItem_itemOrUserFirst_userFirst = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_ACIItem_itemOrUserFirst_userFirst: $.ASN1Encoder<ACIItem
 export function _encode_ACIItem_itemOrUserFirst_userFirst(
     value: ACIItem_itemOrUserFirst_userFirst,
     elGetter: $.ASN1Encoder<ACIItem_itemOrUserFirst_userFirst>
-) {
+): _Element {
     if (!_cached_encoder_for_ACIItem_itemOrUserFirst_userFirst) {
         _cached_encoder_for_ACIItem_itemOrUserFirst_userFirst = function (
             value: ACIItem_itemOrUserFirst_userFirst        ): _Element {

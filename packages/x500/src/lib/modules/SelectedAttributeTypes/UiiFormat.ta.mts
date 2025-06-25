@@ -88,7 +88,7 @@ export class UiiFormat {
      * @static
      * @method
      */
-    public static get _default_value_for_subset() {
+    public static get _default_value_for_subset(): UiiFormat_subset {
         return UiiFormat_subset_baseObject;
     }
     /**
@@ -150,7 +150,7 @@ let _cached_decoder_for_UiiFormat: $.ASN1Decoder<UiiFormat> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UiiFormat} The decoded data structure.
  */
-export function _decode_UiiFormat(el: _Element) {
+export function _decode_UiiFormat(el: _Element): UiiFormat {
     if (!_cached_decoder_for_UiiFormat) {
         _cached_decoder_for_UiiFormat = function (el: _Element): UiiFormat {
             let baseObject: OPTIONAL<URI>;
@@ -198,7 +198,7 @@ let _cached_encoder_for_UiiFormat: $.ASN1Encoder<UiiFormat> | null = null;
 export function _encode_UiiFormat(
     value: UiiFormat,
     elGetter: $.ASN1Encoder<UiiFormat>
-) {
+): _Element {
     if (!_cached_encoder_for_UiiFormat) {
         _cached_encoder_for_UiiFormat = function (
             value: UiiFormat        ): _Element {

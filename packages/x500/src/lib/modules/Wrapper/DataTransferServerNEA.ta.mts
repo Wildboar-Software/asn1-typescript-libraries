@@ -31,7 +31,7 @@ let _cached_decoder_for_DataTransferServerNEA: $.ASN1Decoder<DataTransferServerN
  * @param {_Element} el The element being decoded.
  * @returns {DataTransferServerNEA} The decoded data structure.
  */
-export function _decode_DataTransferServerNEA(el: _Element) {
+export function _decode_DataTransferServerNEA(el: _Element): DataTransferServerNEA {
     if (!_cached_decoder_for_DataTransferServerNEA) {
         _cached_decoder_for_DataTransferServerNEA = _get_decoder_for_ICV_Invoke<TbpDataTransferServer>(
             _decode_TbpDataTransferServer
@@ -52,7 +52,7 @@ let _cached_encoder_for_DataTransferServerNEA: $.ASN1Encoder<DataTransferServerN
 export function _encode_DataTransferServerNEA(
     value: DataTransferServerNEA,
     elGetter: $.ASN1Encoder<DataTransferServerNEA>
-) {
+): _Element {
     if (!_cached_encoder_for_DataTransferServerNEA) {
         _cached_encoder_for_DataTransferServerNEA = _get_encoder_for_ICV_Invoke<TbpDataTransferServer>(
             _encode_TbpDataTransferServer

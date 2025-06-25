@@ -31,7 +31,7 @@ let _cached_decoder_for_AttribsHash: $.ASN1Decoder<AttribsHash> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AttribsHash} The decoded data structure.
  */
-export function _decode_AttribsHash(el: _Element) {
+export function _decode_AttribsHash(el: _Element): AttribsHash {
     if (!_cached_decoder_for_AttribsHash) {
         _cached_decoder_for_AttribsHash = _get_decoder_for_HASH<HashedAttributes>(
             _decode_HashedAttributes
@@ -52,7 +52,7 @@ let _cached_encoder_for_AttribsHash: $.ASN1Encoder<AttribsHash> | null = null;
 export function _encode_AttribsHash(
     value: AttribsHash,
     elGetter: $.ASN1Encoder<AttribsHash>
-) {
+): _Element {
     if (!_cached_encoder_for_AttribsHash) {
         _cached_encoder_for_AttribsHash = _get_encoder_for_HASH<HashedAttributes>(
             _encode_HashedAttributes

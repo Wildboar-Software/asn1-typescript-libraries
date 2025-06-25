@@ -124,7 +124,7 @@ let _cached_decoder_for_ACPathData: $.ASN1Decoder<ACPathData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACPathData} The decoded data structure.
  */
-export function _decode_ACPathData(el: _Element) {
+export function _decode_ACPathData(el: _Element): ACPathData {
     if (!_cached_decoder_for_ACPathData) {
         _cached_decoder_for_ACPathData = function (el: _Element): ACPathData {
             let certificate: OPTIONAL<Certificate>;
@@ -174,7 +174,7 @@ let _cached_encoder_for_ACPathData: $.ASN1Encoder<ACPathData> | null = null;
 export function _encode_ACPathData(
     value: ACPathData,
     elGetter: $.ASN1Encoder<ACPathData>
-) {
+): _Element {
     if (!_cached_encoder_for_ACPathData) {
         _cached_encoder_for_ACPathData = function (
             value: ACPathData        ): _Element {

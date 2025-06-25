@@ -142,7 +142,7 @@ let _cached_decoder_for_TBOK: $.ASN1Decoder<TBOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TBOK} The decoded data structure.
  */
-export function _decode_TBOK(el: _Element) {
+export function _decode_TBOK(el: _Element): TBOK {
     if (!_cached_decoder_for_TBOK) {
         _cached_decoder_for_TBOK = function (el: _Element): TBOK {
             let levelOfAssurance!: INTEGER;
@@ -203,7 +203,7 @@ let _cached_encoder_for_TBOK: $.ASN1Encoder<TBOK> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBOK, encoded as an ASN.1 Element.
  */
-export function _encode_TBOK(value: TBOK, elGetter: $.ASN1Encoder<TBOK>) {
+export function _encode_TBOK(value: TBOK, elGetter: $.ASN1Encoder<TBOK>): _Element {
     if (!_cached_encoder_for_TBOK) {
         _cached_encoder_for_TBOK = function (
             value: TBOK        ): _Element {

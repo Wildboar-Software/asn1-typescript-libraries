@@ -31,7 +31,7 @@ let _cached_decoder_for_PhysicalDeliveryCountryName: $.ASN1Decoder<PhysicalDeliv
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalDeliveryCountryName} The decoded data structure.
  */
-export function _decode_PhysicalDeliveryCountryName(el: _Element) {
+export function _decode_PhysicalDeliveryCountryName(el: _Element): PhysicalDeliveryCountryName {
     if (!_cached_decoder_for_PhysicalDeliveryCountryName) {
         _cached_decoder_for_PhysicalDeliveryCountryName = $._decode_inextensible_choice<PhysicalDeliveryCountryName>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_PhysicalDeliveryCountryName: $.ASN1Encoder<PhysicalDeliv
 export function _encode_PhysicalDeliveryCountryName(
     value: PhysicalDeliveryCountryName,
     elGetter: $.ASN1Encoder<PhysicalDeliveryCountryName>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalDeliveryCountryName) {
         _cached_encoder_for_PhysicalDeliveryCountryName = $._encode_choice<PhysicalDeliveryCountryName>(
             {

@@ -219,7 +219,7 @@ export class CompareArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -228,7 +228,7 @@ export class CompareArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -240,7 +240,7 @@ export class CompareArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -249,7 +249,7 @@ export class CompareArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -258,7 +258,7 @@ export class CompareArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -331,7 +331,7 @@ let _cached_decoder_for_CompareArgumentData: $.ASN1Decoder<CompareArgumentData> 
  * @param {_Element} el The element being decoded.
  * @returns {CompareArgumentData} The decoded data structure.
  */
-export function _decode_CompareArgumentData(el: _Element) {
+export function _decode_CompareArgumentData(el: _Element): CompareArgumentData {
     if (!_cached_decoder_for_CompareArgumentData) {
         _cached_decoder_for_CompareArgumentData = function (
             el: _Element
@@ -472,7 +472,7 @@ let _cached_encoder_for_CompareArgumentData: $.ASN1Encoder<CompareArgumentData> 
 export function _encode_CompareArgumentData(
     value: CompareArgumentData,
     elGetter: $.ASN1Encoder<CompareArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareArgumentData) {
         _cached_encoder_for_CompareArgumentData = function (
             value: CompareArgumentData        ): _Element {

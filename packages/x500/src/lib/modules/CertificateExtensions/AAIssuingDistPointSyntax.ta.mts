@@ -117,7 +117,7 @@ export class AAIssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_indirectCRL() {
+    public static get _default_value_for_indirectCRL(): BOOLEAN {
         return false;
     }
     /**
@@ -126,7 +126,7 @@ export class AAIssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_containsUserAttributeCerts() {
+    public static get _default_value_for_containsUserAttributeCerts(): BOOLEAN {
         return true;
     }
     /**
@@ -135,7 +135,7 @@ export class AAIssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_containsAACerts() {
+    public static get _default_value_for_containsAACerts(): BOOLEAN {
         return true;
     }
     /**
@@ -144,7 +144,7 @@ export class AAIssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_containsSOAPublicKeyCerts() {
+    public static get _default_value_for_containsSOAPublicKeyCerts(): BOOLEAN {
         return true;
     }
 }
@@ -218,7 +218,7 @@ let _cached_decoder_for_AAIssuingDistPointSyntax: $.ASN1Decoder<AAIssuingDistPoi
  * @param {_Element} el The element being decoded.
  * @returns {AAIssuingDistPointSyntax} The decoded data structure.
  */
-export function _decode_AAIssuingDistPointSyntax(el: _Element) {
+export function _decode_AAIssuingDistPointSyntax(el: _Element): AAIssuingDistPointSyntax {
     if (!_cached_decoder_for_AAIssuingDistPointSyntax) {
         _cached_decoder_for_AAIssuingDistPointSyntax = function (
             el: _Element
@@ -302,7 +302,7 @@ let _cached_encoder_for_AAIssuingDistPointSyntax: $.ASN1Encoder<AAIssuingDistPoi
 export function _encode_AAIssuingDistPointSyntax(
     value: AAIssuingDistPointSyntax,
     elGetter: $.ASN1Encoder<AAIssuingDistPointSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AAIssuingDistPointSyntax) {
         _cached_encoder_for_AAIssuingDistPointSyntax = function (
             value: AAIssuingDistPointSyntax        ): _Element {

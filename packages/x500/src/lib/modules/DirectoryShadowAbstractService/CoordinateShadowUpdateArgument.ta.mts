@@ -32,7 +32,7 @@ let _cached_decoder_for_CoordinateShadowUpdateArgument: $.ASN1Decoder<Coordinate
  * @param {_Element} el The element being decoded.
  * @returns {CoordinateShadowUpdateArgument} The decoded data structure.
  */
-export function _decode_CoordinateShadowUpdateArgument(el: _Element) {
+export function _decode_CoordinateShadowUpdateArgument(el: _Element): CoordinateShadowUpdateArgument {
     if (!_cached_decoder_for_CoordinateShadowUpdateArgument) {
         _cached_decoder_for_CoordinateShadowUpdateArgument = _get_decoder_for_OPTIONALLY_PROTECTED<CoordinateShadowUpdateArgumentData>(
             _decode_CoordinateShadowUpdateArgumentData
@@ -53,7 +53,7 @@ let _cached_encoder_for_CoordinateShadowUpdateArgument: $.ASN1Encoder<Coordinate
 export function _encode_CoordinateShadowUpdateArgument(
     value: CoordinateShadowUpdateArgument,
     elGetter: $.ASN1Encoder<CoordinateShadowUpdateArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_CoordinateShadowUpdateArgument) {
         _cached_encoder_for_CoordinateShadowUpdateArgument = _get_encoder_for_OPTIONALLY_PROTECTED<CoordinateShadowUpdateArgumentData>(
             _encode_CoordinateShadowUpdateArgumentData

@@ -172,7 +172,7 @@ let _cached_decoder_for_TbsHandshakeProRej: $.ASN1Decoder<TbsHandshakeProRej> | 
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeProRej} The decoded data structure.
  */
-export function _decode_TbsHandshakeProRej(el: _Element) {
+export function _decode_TbsHandshakeProRej(el: _Element): TbsHandshakeProRej {
     if (!_cached_decoder_for_TbsHandshakeProRej) {
         _cached_decoder_for_TbsHandshakeProRej = function (
             el: _Element
@@ -225,7 +225,7 @@ let _cached_encoder_for_TbsHandshakeProRej: $.ASN1Encoder<TbsHandshakeProRej> | 
 export function _encode_TbsHandshakeProRej(
     value: TbsHandshakeProRej,
     elGetter: $.ASN1Encoder<TbsHandshakeProRej>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeProRej) {
         _cached_encoder_for_TbsHandshakeProRej = function (
             value: TbsHandshakeProRej        ): _Element {

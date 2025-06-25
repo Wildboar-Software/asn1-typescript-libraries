@@ -170,7 +170,7 @@ let _cached_decoder_for_RequestShadowUpdateArgumentData: $.ASN1Decoder<RequestSh
  * @param {_Element} el The element being decoded.
  * @returns {RequestShadowUpdateArgumentData} The decoded data structure.
  */
-export function _decode_RequestShadowUpdateArgumentData(el: _Element) {
+export function _decode_RequestShadowUpdateArgumentData(el: _Element): RequestShadowUpdateArgumentData {
     if (!_cached_decoder_for_RequestShadowUpdateArgumentData) {
         _cached_decoder_for_RequestShadowUpdateArgumentData = $._decode_implicit<RequestShadowUpdateArgumentData>(
             () =>
@@ -233,7 +233,7 @@ let _cached_encoder_for_RequestShadowUpdateArgumentData: $.ASN1Encoder<RequestSh
 export function _encode_RequestShadowUpdateArgumentData(
     value: RequestShadowUpdateArgumentData,
     elGetter: $.ASN1Encoder<RequestShadowUpdateArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestShadowUpdateArgumentData) {
         _cached_encoder_for_RequestShadowUpdateArgumentData = $._encode_implicit(
             _TagClass.context,

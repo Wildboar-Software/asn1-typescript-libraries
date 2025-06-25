@@ -134,7 +134,7 @@ let _cached_decoder_for_DITStructureRule: $.ASN1Decoder<DITStructureRule> | null
  * @param {_Element} el The element being decoded.
  * @returns {DITStructureRule} The decoded data structure.
  */
-export function _decode_DITStructureRule(el: _Element) {
+export function _decode_DITStructureRule(el: _Element): DITStructureRule {
     if (!_cached_decoder_for_DITStructureRule) {
         _cached_decoder_for_DITStructureRule = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_DITStructureRule: $.ASN1Encoder<DITStructureRule> | null
 export function _encode_DITStructureRule(
     value: DITStructureRule,
     elGetter: $.ASN1Encoder<DITStructureRule>
-) {
+): _Element {
     if (!_cached_encoder_for_DITStructureRule) {
         _cached_encoder_for_DITStructureRule = function (
             value: DITStructureRule        ): _Element {

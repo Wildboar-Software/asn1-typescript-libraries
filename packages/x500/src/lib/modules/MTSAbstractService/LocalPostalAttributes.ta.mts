@@ -26,7 +26,7 @@ let _cached_decoder_for_LocalPostalAttributes: $.ASN1Decoder<LocalPostalAttribut
  * @param {_Element} el The element being decoded.
  * @returns {LocalPostalAttributes} The decoded data structure.
  */
-export function _decode_LocalPostalAttributes(el: _Element) {
+export function _decode_LocalPostalAttributes(el: _Element): LocalPostalAttributes {
     if (!_cached_decoder_for_LocalPostalAttributes) {
         _cached_decoder_for_LocalPostalAttributes = _decode_PDSParameter;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttribut
 export function _encode_LocalPostalAttributes(
     value: LocalPostalAttributes,
     elGetter: $.ASN1Encoder<LocalPostalAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_LocalPostalAttributes) {
         _cached_encoder_for_LocalPostalAttributes = _encode_PDSParameter;
     }

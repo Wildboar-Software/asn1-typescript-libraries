@@ -125,7 +125,7 @@ let _cached_decoder_for_IdmResult: $.ASN1Decoder<IdmResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IdmResult} The decoded data structure.
  */
-export function _decode_IdmResult(el: _Element) {
+export function _decode_IdmResult(el: _Element): IdmResult {
     if (!_cached_decoder_for_IdmResult) {
         _cached_decoder_for_IdmResult = function (el: _Element): IdmResult {
             const sequence: _Element[] = el.sequence;
@@ -163,7 +163,7 @@ let _cached_encoder_for_IdmResult: $.ASN1Encoder<IdmResult> | null = null;
 export function _encode_IdmResult(
     value: IdmResult,
     elGetter: $.ASN1Encoder<IdmResult>
-) {
+): _Element {
     if (!_cached_encoder_for_IdmResult) {
         _cached_encoder_for_IdmResult = function (
             value: IdmResult        ): _Element {

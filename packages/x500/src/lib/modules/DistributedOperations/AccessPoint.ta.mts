@@ -143,7 +143,7 @@ let _cached_decoder_for_AccessPoint: $.ASN1Decoder<AccessPoint> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AccessPoint} The decoded data structure.
  */
-export function _decode_AccessPoint(el: _Element) {
+export function _decode_AccessPoint(el: _Element): AccessPoint {
     if (!_cached_decoder_for_AccessPoint) {
         _cached_decoder_for_AccessPoint = function (el: _Element): AccessPoint {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -206,7 +206,7 @@ let _cached_encoder_for_AccessPoint: $.ASN1Encoder<AccessPoint> | null = null;
 export function _encode_AccessPoint(
     value: AccessPoint,
     elGetter: $.ASN1Encoder<AccessPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessPoint) {
         _cached_encoder_for_AccessPoint = function (
             value: AccessPoint        ): _Element {

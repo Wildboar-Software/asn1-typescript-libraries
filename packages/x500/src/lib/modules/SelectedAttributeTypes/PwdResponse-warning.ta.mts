@@ -29,7 +29,7 @@ let _cached_decoder_for_PwdResponse_warning: $.ASN1Decoder<PwdResponse_warning> 
  * @param {_Element} el The element being decoded.
  * @returns {PwdResponse_warning} The decoded data structure.
  */
-export function _decode_PwdResponse_warning(el: _Element) {
+export function _decode_PwdResponse_warning(el: _Element): PwdResponse_warning {
     if (!_cached_decoder_for_PwdResponse_warning) {
         _cached_decoder_for_PwdResponse_warning = $._decode_extensible_choice<PwdResponse_warning>(
             {
@@ -59,7 +59,7 @@ let _cached_encoder_for_PwdResponse_warning: $.ASN1Encoder<PwdResponse_warning> 
 export function _encode_PwdResponse_warning(
     value: PwdResponse_warning,
     elGetter: $.ASN1Encoder<PwdResponse_warning>
-) {
+): _Element {
     if (!_cached_encoder_for_PwdResponse_warning) {
         _cached_encoder_for_PwdResponse_warning = $._encode_choice<PwdResponse_warning>(
             {

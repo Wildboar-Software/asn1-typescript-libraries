@@ -26,7 +26,7 @@ let _cached_decoder_for_RemoteDSAList: $.ASN1Decoder<RemoteDSAList> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RemoteDSAList} The decoded data structure.
  */
-export function _decode_RemoteDSAList(el: _Element) {
+export function _decode_RemoteDSAList(el: _Element): RemoteDSAList {
     if (!_cached_decoder_for_RemoteDSAList) {
         _cached_decoder_for_RemoteDSAList = $._decodeSetOf<AccessPoint>(
             () => _decode_AccessPoint
@@ -47,7 +47,7 @@ let _cached_encoder_for_RemoteDSAList: $.ASN1Encoder<RemoteDSAList> | null = nul
 export function _encode_RemoteDSAList(
     value: RemoteDSAList,
     elGetter: $.ASN1Encoder<RemoteDSAList>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoteDSAList) {
         _cached_encoder_for_RemoteDSAList = $._encodeSetOf<AccessPoint>(
             () => _encode_AccessPoint,

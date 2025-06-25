@@ -49,7 +49,7 @@ let _cached_decoder_for_OsiDirectoryOperation: $.ASN1Decoder<OsiDirectoryOperati
  * @param {_Element} el The element being decoded.
  * @returns {OsiDirectoryOperation} The decoded data structure.
  */
-export function _decode_OsiDirectoryOperation(el: _Element) {
+export function _decode_OsiDirectoryOperation(el: _Element): OsiDirectoryOperation {
     if (!_cached_decoder_for_OsiDirectoryOperation) {
         _cached_decoder_for_OsiDirectoryOperation = $._decode_inextensible_choice<OsiDirectoryOperation>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_OsiDirectoryOperation: $.ASN1Encoder<OsiDirectoryOperati
 export function _encode_OsiDirectoryOperation(
     value: OsiDirectoryOperation,
     elGetter: $.ASN1Encoder<OsiDirectoryOperation>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiDirectoryOperation) {
         _cached_encoder_for_OsiDirectoryOperation = $._encode_choice<OsiDirectoryOperation>(
             {

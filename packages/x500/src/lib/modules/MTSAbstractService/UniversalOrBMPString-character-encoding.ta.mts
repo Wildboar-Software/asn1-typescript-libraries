@@ -24,7 +24,7 @@ let _cached_decoder_for_UniversalOrBMPString_character_encoding: $.ASN1Decoder<U
  * @param {_Element} el The element being decoded.
  * @returns {UniversalOrBMPString_character_encoding} The decoded data structure.
  */
-export function _decode_UniversalOrBMPString_character_encoding(el: _Element) {
+export function _decode_UniversalOrBMPString_character_encoding(el: _Element): UniversalOrBMPString_character_encoding {
     if (!_cached_decoder_for_UniversalOrBMPString_character_encoding) {
         _cached_decoder_for_UniversalOrBMPString_character_encoding = $._decode_inextensible_choice<UniversalOrBMPString_character_encoding>(
             {
@@ -48,7 +48,7 @@ let _cached_encoder_for_UniversalOrBMPString_character_encoding: $.ASN1Encoder<U
 export function _encode_UniversalOrBMPString_character_encoding(
     value: UniversalOrBMPString_character_encoding,
     elGetter: $.ASN1Encoder<UniversalOrBMPString_character_encoding>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalOrBMPString_character_encoding) {
         _cached_encoder_for_UniversalOrBMPString_character_encoding = $._encode_choice<UniversalOrBMPString_character_encoding>(
             {

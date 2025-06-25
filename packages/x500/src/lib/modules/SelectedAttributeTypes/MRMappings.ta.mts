@@ -26,7 +26,7 @@ let _cached_decoder_for_MRMappings: $.ASN1Decoder<MRMappings> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MRMappings} The decoded data structure.
  */
-export function _decode_MRMappings(el: _Element) {
+export function _decode_MRMappings(el: _Element): MRMappings {
     if (!_cached_decoder_for_MRMappings) {
         _cached_decoder_for_MRMappings = $._decodeSequenceOf<MRMapping>(
             () => _decode_MRMapping
@@ -47,7 +47,7 @@ let _cached_encoder_for_MRMappings: $.ASN1Encoder<MRMappings> | null = null;
 export function _encode_MRMappings(
     value: MRMappings,
     elGetter: $.ASN1Encoder<MRMappings>
-) {
+): _Element {
     if (!_cached_encoder_for_MRMappings) {
         _cached_encoder_for_MRMappings = $._encodeSequenceOf<MRMapping>(
             () => _encode_MRMapping,

@@ -28,7 +28,7 @@ let _cached_decoder_for_TbsHandshakeAcc_keyEstSel: $.ASN1Decoder<TbsHandshakeAcc
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeAcc_keyEstSel} The decoded data structure.
  */
-export function _decode_TbsHandshakeAcc_keyEstSel(el: _Element) {
+export function _decode_TbsHandshakeAcc_keyEstSel(el: _Element): TbsHandshakeAcc_keyEstSel {
     if (!_cached_decoder_for_TbsHandshakeAcc_keyEstSel) {
         _cached_decoder_for_TbsHandshakeAcc_keyEstSel = $._decode_inextensible_choice<TbsHandshakeAcc_keyEstSel>(
             {
@@ -57,7 +57,7 @@ let _cached_encoder_for_TbsHandshakeAcc_keyEstSel: $.ASN1Encoder<TbsHandshakeAcc
 export function _encode_TbsHandshakeAcc_keyEstSel(
     value: TbsHandshakeAcc_keyEstSel,
     elGetter: $.ASN1Encoder<TbsHandshakeAcc_keyEstSel>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeAcc_keyEstSel) {
         _cached_encoder_for_TbsHandshakeAcc_keyEstSel = $._encode_choice<TbsHandshakeAcc_keyEstSel>(
             {

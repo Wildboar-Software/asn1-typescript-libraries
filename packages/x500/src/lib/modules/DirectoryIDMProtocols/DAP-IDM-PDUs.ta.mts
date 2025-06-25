@@ -26,7 +26,7 @@ let _cached_decoder_for_DAP_IDM_PDUs: $.ASN1Decoder<DAP_IDM_PDUs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DAP_IDM_PDUs} The decoded data structure.
  */
-export function _decode_DAP_IDM_PDUs(el: _Element) {
+export function _decode_DAP_IDM_PDUs(el: _Element): DAP_IDM_PDUs {
     if (!_cached_decoder_for_DAP_IDM_PDUs) {
         _cached_decoder_for_DAP_IDM_PDUs = _decode_IDM_PDU;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_DAP_IDM_PDUs: $.ASN1Encoder<DAP_IDM_PDUs> | null = null;
 export function _encode_DAP_IDM_PDUs(
     value: DAP_IDM_PDUs,
     elGetter: $.ASN1Encoder<DAP_IDM_PDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_DAP_IDM_PDUs) {
         _cached_encoder_for_DAP_IDM_PDUs = _encode_IDM_PDU;
     }

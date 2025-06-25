@@ -124,7 +124,7 @@ let _cached_decoder_for_AreaSpecification: $.ASN1Decoder<AreaSpecification> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AreaSpecification} The decoded data structure.
  */
-export function _decode_AreaSpecification(el: _Element) {
+export function _decode_AreaSpecification(el: _Element): AreaSpecification {
     if (!_cached_decoder_for_AreaSpecification) {
         _cached_decoder_for_AreaSpecification = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_AreaSpecification: $.ASN1Encoder<AreaSpecification> | nu
 export function _encode_AreaSpecification(
     value: AreaSpecification,
     elGetter: $.ASN1Encoder<AreaSpecification>
-) {
+): _Element {
     if (!_cached_encoder_for_AreaSpecification) {
         _cached_encoder_for_AreaSpecification = function (
             value: AreaSpecification        ): _Element {

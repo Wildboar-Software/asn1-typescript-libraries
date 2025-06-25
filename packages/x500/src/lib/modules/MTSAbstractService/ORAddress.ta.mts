@@ -136,7 +136,7 @@ let _cached_decoder_for_ORAddress: $.ASN1Decoder<ORAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ORAddress} The decoded data structure.
  */
-export function _decode_ORAddress(el: _Element) {
+export function _decode_ORAddress(el: _Element): ORAddress {
     if (!_cached_decoder_for_ORAddress) {
         _cached_decoder_for_ORAddress = function (el: _Element): ORAddress {
             let built_in_standard_attributes!: BuiltInStandardAttributes;
@@ -187,7 +187,7 @@ let _cached_encoder_for_ORAddress: $.ASN1Encoder<ORAddress> | null = null;
 export function _encode_ORAddress(
     value: ORAddress,
     elGetter: $.ASN1Encoder<ORAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_ORAddress) {
         _cached_encoder_for_ORAddress = function (
             value: ORAddress        ): _Element {

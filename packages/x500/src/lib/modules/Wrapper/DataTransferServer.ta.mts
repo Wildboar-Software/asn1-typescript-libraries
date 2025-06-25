@@ -37,7 +37,7 @@ let _cached_decoder_for_DataTransferServer: $.ASN1Decoder<DataTransferServer> | 
  * @param {_Element} el The element being decoded.
  * @returns {DataTransferServer} The decoded data structure.
  */
-export function _decode_DataTransferServer(el: _Element) {
+export function _decode_DataTransferServer(el: _Element): DataTransferServer {
     if (!_cached_decoder_for_DataTransferServer) {
         _cached_decoder_for_DataTransferServer = $._decode_extensible_choice<DataTransferServer>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_DataTransferServer: $.ASN1Encoder<DataTransferServer> | 
 export function _encode_DataTransferServer(
     value: DataTransferServer,
     elGetter: $.ASN1Encoder<DataTransferServer>
-) {
+): _Element {
     if (!_cached_encoder_for_DataTransferServer) {
         _cached_encoder_for_DataTransferServer = $._encode_choice<DataTransferServer>(
             {

@@ -131,7 +131,7 @@ let _cached_decoder_for_SPKM_REP_IT: $.ASN1Decoder<SPKM_REP_IT> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_REP_IT} The decoded data structure.
  */
-export function _decode_SPKM_REP_IT(el: _Element) {
+export function _decode_SPKM_REP_IT(el: _Element): SPKM_REP_IT {
     if (!_cached_decoder_for_SPKM_REP_IT) {
         _cached_decoder_for_SPKM_REP_IT = function (el: _Element): SPKM_REP_IT {
             const sequence: _Element[] = el.sequence;
@@ -169,7 +169,7 @@ let _cached_encoder_for_SPKM_REP_IT: $.ASN1Encoder<SPKM_REP_IT> | null = null;
 export function _encode_SPKM_REP_IT(
     value: SPKM_REP_IT,
     elGetter: $.ASN1Encoder<SPKM_REP_IT>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_REP_IT) {
         _cached_encoder_for_SPKM_REP_IT = function (
             value: SPKM_REP_IT        ): _Element {

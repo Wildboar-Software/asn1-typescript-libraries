@@ -20,7 +20,7 @@ export type X509Curves = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_X509Curves: $.ASN1Decoder<X509Curves> | null = null;
 
-export function _decode_X509Curves(el: _Element) {
+export function _decode_X509Curves(el: _Element): OBJECT_IDENTIFIER {
     if (!_cached_decoder_for_X509Curves) {
         _cached_decoder_for_X509Curves = $._decodeObjectIdentifier;
     }
@@ -32,7 +32,7 @@ let _cached_encoder_for_X509Curves: $.ASN1Encoder<X509Curves> | null = null;
 export function _encode_X509Curves(
     value: X509Curves,
     elGetter: $.ASN1Encoder<X509Curves>
-) {
+): _Element {
     if (!_cached_encoder_for_X509Curves) {
         _cached_encoder_for_X509Curves = $._encodeObjectIdentifier;
     }

@@ -124,7 +124,7 @@ let _cached_decoder_for_DSS_Parms: $.ASN1Decoder<DSS_Parms> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DSS_Parms} The decoded data structure.
  */
-export function _decode_DSS_Parms(el: _Element) {
+export function _decode_DSS_Parms(el: _Element): DSS_Parms {
     if (!_cached_decoder_for_DSS_Parms) {
         _cached_decoder_for_DSS_Parms = function (el: _Element): DSS_Parms {
             const sequence: _Element[] = el.sequence;
@@ -162,7 +162,7 @@ let _cached_encoder_for_DSS_Parms: $.ASN1Encoder<DSS_Parms> | null = null;
 export function _encode_DSS_Parms(
     value: DSS_Parms,
     elGetter: $.ASN1Encoder<DSS_Parms>
-) {
+): _Element {
     if (!_cached_encoder_for_DSS_Parms) {
         _cached_encoder_for_DSS_Parms = function (
             value: DSS_Parms        ): _Element {

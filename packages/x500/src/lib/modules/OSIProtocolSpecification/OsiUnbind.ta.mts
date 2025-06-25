@@ -33,7 +33,7 @@ let _cached_decoder_for_OsiUnbind: $.ASN1Decoder<OsiUnbind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiUnbind} The decoded data structure.
  */
-export function _decode_OsiUnbind(el: _Element) {
+export function _decode_OsiUnbind(el: _Element): OsiUnbind {
     if (!_cached_decoder_for_OsiUnbind) {
         _cached_decoder_for_OsiUnbind = $._decode_inextensible_choice<OsiUnbind>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_OsiUnbind: $.ASN1Encoder<OsiUnbind> | null = null;
 export function _encode_OsiUnbind(
     value: OsiUnbind,
     elGetter: $.ASN1Encoder<OsiUnbind>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiUnbind) {
         _cached_encoder_for_OsiUnbind = $._encode_choice<OsiUnbind>(
             {

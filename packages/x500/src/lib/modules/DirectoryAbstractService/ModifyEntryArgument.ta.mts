@@ -31,7 +31,7 @@ let _cached_decoder_for_ModifyEntryArgument: $.ASN1Decoder<ModifyEntryArgument> 
  * @param {_Element} el The element being decoded.
  * @returns {ModifyEntryArgument} The decoded data structure.
  */
-export function _decode_ModifyEntryArgument(el: _Element) {
+export function _decode_ModifyEntryArgument(el: _Element): ModifyEntryArgument {
     if (!_cached_decoder_for_ModifyEntryArgument) {
         _cached_decoder_for_ModifyEntryArgument = _get_decoder_for_OPTIONALLY_PROTECTED<ModifyEntryArgumentData>(
             _decode_ModifyEntryArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_ModifyEntryArgument: $.ASN1Encoder<ModifyEntryArgument> 
 export function _encode_ModifyEntryArgument(
     value: ModifyEntryArgument,
     elGetter: $.ASN1Encoder<ModifyEntryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyEntryArgument) {
         _cached_encoder_for_ModifyEntryArgument = _get_encoder_for_OPTIONALLY_PROTECTED<ModifyEntryArgumentData>(
             _encode_ModifyEntryArgumentData

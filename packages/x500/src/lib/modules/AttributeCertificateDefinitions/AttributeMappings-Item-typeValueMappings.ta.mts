@@ -120,7 +120,7 @@ let _cached_decoder_for_AttributeMappings_Item_typeValueMappings: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {AttributeMappings_Item_typeValueMappings} The decoded data structure.
  */
-export function _decode_AttributeMappings_Item_typeValueMappings(el: _Element) {
+export function _decode_AttributeMappings_Item_typeValueMappings(el: _Element): AttributeMappings_Item_typeValueMappings {
     if (!_cached_decoder_for_AttributeMappings_Item_typeValueMappings) {
         _cached_decoder_for_AttributeMappings_Item_typeValueMappings = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_AttributeMappings_Item_typeValueMappings: $.ASN1Encoder<
 export function _encode_AttributeMappings_Item_typeValueMappings(
     value: AttributeMappings_Item_typeValueMappings,
     elGetter: $.ASN1Encoder<AttributeMappings_Item_typeValueMappings>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeMappings_Item_typeValueMappings) {
         _cached_encoder_for_AttributeMappings_Item_typeValueMappings = function (
             value: AttributeMappings_Item_typeValueMappings        ): _Element {

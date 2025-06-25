@@ -33,7 +33,7 @@ let _cached_decoder_for_Validity_validFrom: $.ASN1Decoder<Validity_validFrom> | 
  * @param {_Element} el The element being decoded.
  * @returns {Validity_validFrom} The decoded data structure.
  */
-export function _decode_Validity_validFrom(el: _Element) {
+export function _decode_Validity_validFrom(el: _Element): Validity_validFrom {
     if (!_cached_decoder_for_Validity_validFrom) {
         _cached_decoder_for_Validity_validFrom = $._decode_extensible_choice<Validity_validFrom>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_Validity_validFrom: $.ASN1Encoder<Validity_validFrom> | 
 export function _encode_Validity_validFrom(
     value: Validity_validFrom,
     elGetter: $.ASN1Encoder<Validity_validFrom>
-) {
+): _Element {
     if (!_cached_encoder_for_Validity_validFrom) {
         _cached_encoder_for_Validity_validFrom = $._encode_choice<Validity_validFrom>(
             {

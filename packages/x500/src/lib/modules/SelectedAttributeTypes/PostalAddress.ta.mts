@@ -26,7 +26,7 @@ let _cached_decoder_for_PostalAddress: $.ASN1Decoder<PostalAddress> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PostalAddress} The decoded data structure.
  */
-export function _decode_PostalAddress(el: _Element) {
+export function _decode_PostalAddress(el: _Element): PostalAddress {
     if (!_cached_decoder_for_PostalAddress) {
         _cached_decoder_for_PostalAddress = $._decodeSequenceOf<UnboundedDirectoryString>(
             () => _decode_UnboundedDirectoryString
@@ -47,7 +47,7 @@ let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = nul
 export function _encode_PostalAddress(
     value: PostalAddress,
     elGetter: $.ASN1Encoder<PostalAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PostalAddress) {
         _cached_encoder_for_PostalAddress = $._encodeSequenceOf<UnboundedDirectoryString>(
             () => _encode_UnboundedDirectoryString,

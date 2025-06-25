@@ -133,7 +133,7 @@ export const _extension_additions_list_spec_for_MULTY_SIGNED: $.ComponentSpec[] 
  */
 export function _get_decoder_for_MULTY_SIGNED<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
-) {
+): $.ASN1Decoder<MULTY_SIGNED<ToBeSigned>> {
     return function (el: _Element): MULTY_SIGNED<ToBeSigned> {
         const sequence: _Element[] = el.sequence;
         if (sequence.length < 3) {
@@ -174,7 +174,7 @@ export function _get_decoder_for_MULTY_SIGNED<ToBeSigned>(
  */
 export function _get_encoder_for_MULTY_SIGNED<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
-) {
+): $.ASN1Encoder<MULTY_SIGNED<ToBeSigned>> {
     return function (
         value: MULTY_SIGNED<ToBeSigned>    ): _Element {
         return $._encodeSequence(

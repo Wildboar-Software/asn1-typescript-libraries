@@ -34,7 +34,7 @@ let _cached_decoder_for_AddAvlRsp_result: $.ASN1Decoder<AddAvlRsp_result> | null
  * @param {_Element} el The element being decoded.
  * @returns {AddAvlRsp_result} The decoded data structure.
  */
-export function _decode_AddAvlRsp_result(el: _Element) {
+export function _decode_AddAvlRsp_result(el: _Element): AddAvlRsp_result {
     if (!_cached_decoder_for_AddAvlRsp_result) {
         _cached_decoder_for_AddAvlRsp_result = $._decode_extensible_choice<AddAvlRsp_result>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_AddAvlRsp_result: $.ASN1Encoder<AddAvlRsp_result> | null
 export function _encode_AddAvlRsp_result(
     value: AddAvlRsp_result,
     elGetter: $.ASN1Encoder<AddAvlRsp_result>
-) {
+): _Element {
     if (!_cached_encoder_for_AddAvlRsp_result) {
         _cached_encoder_for_AddAvlRsp_result = $._encode_choice<AddAvlRsp_result>(
             {

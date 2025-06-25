@@ -27,7 +27,7 @@ let _cached_decoder_for_MultiplePublicKeyAlgo: $.ASN1Decoder<MultiplePublicKeyAl
  * @param {_Element} el The element being decoded.
  * @returns {MultiplePublicKeyAlgo} The decoded data structure.
  */
-export function _decode_MultiplePublicKeyAlgo(el: _Element) {
+export function _decode_MultiplePublicKeyAlgo(el: _Element): MultiplePublicKeyAlgo {
     if (!_cached_decoder_for_MultiplePublicKeyAlgo) {
         _cached_decoder_for_MultiplePublicKeyAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultiplePublicKeyAlgo: $.ASN1Encoder<MultiplePublicKeyAl
 export function _encode_MultiplePublicKeyAlgo(
     value: MultiplePublicKeyAlgo,
     elGetter: $.ASN1Encoder<MultiplePublicKeyAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultiplePublicKeyAlgo) {
         _cached_encoder_for_MultiplePublicKeyAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

@@ -201,7 +201,7 @@ let _cached_decoder_for_TbsDtSecAbort: $.ASN1Decoder<TbsDtSecAbort> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TbsDtSecAbort} The decoded data structure.
  */
-export function _decode_TbsDtSecAbort(el: _Element) {
+export function _decode_TbsDtSecAbort(el: _Element): TbsDtSecAbort {
     if (!_cached_decoder_for_TbsDtSecAbort) {
         _cached_decoder_for_TbsDtSecAbort = function (
             el: _Element
@@ -269,7 +269,7 @@ let _cached_encoder_for_TbsDtSecAbort: $.ASN1Encoder<TbsDtSecAbort> | null = nul
 export function _encode_TbsDtSecAbort(
     value: TbsDtSecAbort,
     elGetter: $.ASN1Encoder<TbsDtSecAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsDtSecAbort) {
         _cached_encoder_for_TbsDtSecAbort = function (
             value: TbsDtSecAbort        ): _Element {

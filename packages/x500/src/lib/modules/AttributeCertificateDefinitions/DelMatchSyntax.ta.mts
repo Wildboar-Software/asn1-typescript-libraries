@@ -124,7 +124,7 @@ let _cached_decoder_for_DelMatchSyntax: $.ASN1Decoder<DelMatchSyntax> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {DelMatchSyntax} The decoded data structure.
  */
-export function _decode_DelMatchSyntax(el: _Element) {
+export function _decode_DelMatchSyntax(el: _Element): DelMatchSyntax {
     if (!_cached_decoder_for_DelMatchSyntax) {
         _cached_decoder_for_DelMatchSyntax = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_DelMatchSyntax: $.ASN1Encoder<DelMatchSyntax> | null = n
 export function _encode_DelMatchSyntax(
     value: DelMatchSyntax,
     elGetter: $.ASN1Encoder<DelMatchSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_DelMatchSyntax) {
         _cached_encoder_for_DelMatchSyntax = function (
             value: DelMatchSyntax        ): _Element {

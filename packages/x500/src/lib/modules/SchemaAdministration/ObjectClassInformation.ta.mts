@@ -94,7 +94,7 @@ export class ObjectClassInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_kind() {
+    public static get _default_value_for_kind(): ObjectClassKind {
         return ObjectClassKind_structural;
     }
     /**
@@ -165,7 +165,7 @@ let _cached_decoder_for_ObjectClassInformation: $.ASN1Decoder<ObjectClassInforma
  * @param {_Element} el The element being decoded.
  * @returns {ObjectClassInformation} The decoded data structure.
  */
-export function _decode_ObjectClassInformation(el: _Element) {
+export function _decode_ObjectClassInformation(el: _Element): ObjectClassInformation {
     if (!_cached_decoder_for_ObjectClassInformation) {
         _cached_decoder_for_ObjectClassInformation = function (
             el: _Element
@@ -234,7 +234,7 @@ let _cached_encoder_for_ObjectClassInformation: $.ASN1Encoder<ObjectClassInforma
 export function _encode_ObjectClassInformation(
     value: ObjectClassInformation,
     elGetter: $.ASN1Encoder<ObjectClassInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectClassInformation) {
         _cached_encoder_for_ObjectClassInformation = function (
             value: ObjectClassInformation        ): _Element {

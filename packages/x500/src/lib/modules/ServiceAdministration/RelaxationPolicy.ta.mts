@@ -100,7 +100,7 @@ export class RelaxationPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_basic() {
+    public static get _default_value_for_basic(): MRMapping {
         return MRMapping._from_object({});
     }
     /**
@@ -109,7 +109,7 @@ export class RelaxationPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_minimum() {
+    public static get _default_value_for_minimum(): INTEGER {
         return 1;
     }
 }
@@ -178,7 +178,7 @@ let _cached_decoder_for_RelaxationPolicy: $.ASN1Decoder<RelaxationPolicy> | null
  * @param {_Element} el The element being decoded.
  * @returns {RelaxationPolicy} The decoded data structure.
  */
-export function _decode_RelaxationPolicy(el: _Element) {
+export function _decode_RelaxationPolicy(el: _Element): RelaxationPolicy {
     if (!_cached_decoder_for_RelaxationPolicy) {
         _cached_decoder_for_RelaxationPolicy = function (
             el: _Element
@@ -253,7 +253,7 @@ let _cached_encoder_for_RelaxationPolicy: $.ASN1Encoder<RelaxationPolicy> | null
 export function _encode_RelaxationPolicy(
     value: RelaxationPolicy,
     elGetter: $.ASN1Encoder<RelaxationPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_RelaxationPolicy) {
         _cached_encoder_for_RelaxationPolicy = function (
             value: RelaxationPolicy        ): _Element {

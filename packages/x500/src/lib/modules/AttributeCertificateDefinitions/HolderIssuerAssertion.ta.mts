@@ -124,7 +124,7 @@ let _cached_decoder_for_HolderIssuerAssertion: $.ASN1Decoder<HolderIssuerAsserti
  * @param {_Element} el The element being decoded.
  * @returns {HolderIssuerAssertion} The decoded data structure.
  */
-export function _decode_HolderIssuerAssertion(el: _Element) {
+export function _decode_HolderIssuerAssertion(el: _Element): HolderIssuerAssertion {
     if (!_cached_decoder_for_HolderIssuerAssertion) {
         _cached_decoder_for_HolderIssuerAssertion = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_HolderIssuerAssertion: $.ASN1Encoder<HolderIssuerAsserti
 export function _encode_HolderIssuerAssertion(
     value: HolderIssuerAssertion,
     elGetter: $.ASN1Encoder<HolderIssuerAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_HolderIssuerAssertion) {
         _cached_encoder_for_HolderIssuerAssertion = function (
             value: HolderIssuerAssertion        ): _Element {

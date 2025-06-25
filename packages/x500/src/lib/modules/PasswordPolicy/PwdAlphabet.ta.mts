@@ -22,7 +22,7 @@ let _cached_decoder_for_PwdAlphabet: $.ASN1Decoder<PwdAlphabet> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PwdAlphabet} The decoded data structure.
  */
-export function _decode_PwdAlphabet(el: _Element) {
+export function _decode_PwdAlphabet(el: _Element): PwdAlphabet {
     if (!_cached_decoder_for_PwdAlphabet) {
         _cached_decoder_for_PwdAlphabet = $._decodeSequenceOf<UTF8String>(
             () => $._decodeUTF8String
@@ -43,7 +43,7 @@ let _cached_encoder_for_PwdAlphabet: $.ASN1Encoder<PwdAlphabet> | null = null;
 export function _encode_PwdAlphabet(
     value: PwdAlphabet,
     elGetter: $.ASN1Encoder<PwdAlphabet>
-) {
+): _Element {
     if (!_cached_encoder_for_PwdAlphabet) {
         _cached_encoder_for_PwdAlphabet = $._encodeSequenceOf<UTF8String>(
             () => $._encodeUTF8String,

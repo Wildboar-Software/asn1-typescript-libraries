@@ -39,7 +39,7 @@ let _cached_decoder_for_AddEntryResult: $.ASN1Decoder<AddEntryResult> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AddEntryResult} The decoded data structure.
  */
-export function _decode_AddEntryResult(el: _Element) {
+export function _decode_AddEntryResult(el: _Element): AddEntryResult {
     if (!_cached_decoder_for_AddEntryResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_AddEntryResult: $.ASN1Encoder<AddEntryResult> | null = n
 export function _encode_AddEntryResult(
     value: AddEntryResult,
     elGetter: $.ASN1Encoder<AddEntryResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AddEntryResult) {
         _cached_encoder_for_AddEntryResult = $._encode_choice<AddEntryResult>(
             {

@@ -203,7 +203,7 @@ export class TbsHandshakeReq {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[Version_v1] = TRUE_BIT;
@@ -307,7 +307,7 @@ let _cached_decoder_for_TbsHandshakeReq: $.ASN1Decoder<TbsHandshakeReq> | null =
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeReq} The decoded data structure.
  */
-export function _decode_TbsHandshakeReq(el: _Element) {
+export function _decode_TbsHandshakeReq(el: _Element): TbsHandshakeReq {
     if (!_cached_decoder_for_TbsHandshakeReq) {
         _cached_decoder_for_TbsHandshakeReq = function (
             el: _Element
@@ -412,7 +412,7 @@ let _cached_encoder_for_TbsHandshakeReq: $.ASN1Encoder<TbsHandshakeReq> | null =
 export function _encode_TbsHandshakeReq(
     value: TbsHandshakeReq,
     elGetter: $.ASN1Encoder<TbsHandshakeReq>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeReq) {
         _cached_encoder_for_TbsHandshakeReq = function (
             value: TbsHandshakeReq        ): _Element {

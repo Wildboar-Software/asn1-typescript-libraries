@@ -46,7 +46,7 @@ let _cached_decoder_for_OsiRej_problem: $.ASN1Decoder<OsiRej_problem> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OsiRej_problem} The decoded data structure.
  */
-export function _decode_OsiRej_problem(el: _Element) {
+export function _decode_OsiRej_problem(el: _Element): OsiRej_problem {
     if (!_cached_decoder_for_OsiRej_problem) {
         _cached_decoder_for_OsiRej_problem = $._decode_extensible_choice<OsiRej_problem>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_OsiRej_problem: $.ASN1Encoder<OsiRej_problem> | null = n
 export function _encode_OsiRej_problem(
     value: OsiRej_problem,
     elGetter: $.ASN1Encoder<OsiRej_problem>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiRej_problem) {
         _cached_encoder_for_OsiRej_problem = $._encode_choice<OsiRej_problem>(
             {

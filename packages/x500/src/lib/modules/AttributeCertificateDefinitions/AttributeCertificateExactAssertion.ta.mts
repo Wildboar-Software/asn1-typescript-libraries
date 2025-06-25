@@ -128,7 +128,7 @@ let _cached_decoder_for_AttributeCertificateExactAssertion: $.ASN1Decoder<Attrib
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCertificateExactAssertion} The decoded data structure.
  */
-export function _decode_AttributeCertificateExactAssertion(el: _Element) {
+export function _decode_AttributeCertificateExactAssertion(el: _Element): AttributeCertificateExactAssertion {
     if (!_cached_decoder_for_AttributeCertificateExactAssertion) {
         _cached_decoder_for_AttributeCertificateExactAssertion = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_AttributeCertificateExactAssertion: $.ASN1Encoder<Attrib
 export function _encode_AttributeCertificateExactAssertion(
     value: AttributeCertificateExactAssertion,
     elGetter: $.ASN1Encoder<AttributeCertificateExactAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeCertificateExactAssertion) {
         _cached_encoder_for_AttributeCertificateExactAssertion = function (
             value: AttributeCertificateExactAssertion        ): _Element {

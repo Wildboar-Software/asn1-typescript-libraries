@@ -35,7 +35,7 @@ let _cached_decoder_for_RevokedCertificateGroup: $.ASN1Decoder<RevokedCertificat
  * @param {_Element} el The element being decoded.
  * @returns {RevokedCertificateGroup} The decoded data structure.
  */
-export function _decode_RevokedCertificateGroup(el: _Element) {
+export function _decode_RevokedCertificateGroup(el: _Element): RevokedCertificateGroup {
     if (!_cached_decoder_for_RevokedCertificateGroup) {
         _cached_decoder_for_RevokedCertificateGroup = $._decode_inextensible_choice<RevokedCertificateGroup>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_RevokedCertificateGroup: $.ASN1Encoder<RevokedCertificat
 export function _encode_RevokedCertificateGroup(
     value: RevokedCertificateGroup,
     elGetter: $.ASN1Encoder<RevokedCertificateGroup>
-) {
+): _Element {
     if (!_cached_encoder_for_RevokedCertificateGroup) {
         _cached_encoder_for_RevokedCertificateGroup = $._encode_choice<RevokedCertificateGroup>(
             {

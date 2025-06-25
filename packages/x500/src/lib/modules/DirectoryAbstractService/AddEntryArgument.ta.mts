@@ -31,7 +31,7 @@ let _cached_decoder_for_AddEntryArgument: $.ASN1Decoder<AddEntryArgument> | null
  * @param {_Element} el The element being decoded.
  * @returns {AddEntryArgument} The decoded data structure.
  */
-export function _decode_AddEntryArgument(el: _Element) {
+export function _decode_AddEntryArgument(el: _Element): AddEntryArgument {
     if (!_cached_decoder_for_AddEntryArgument) {
         _cached_decoder_for_AddEntryArgument = _get_decoder_for_OPTIONALLY_PROTECTED<AddEntryArgumentData>(
             _decode_AddEntryArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_AddEntryArgument: $.ASN1Encoder<AddEntryArgument> | null
 export function _encode_AddEntryArgument(
     value: AddEntryArgument,
     elGetter: $.ASN1Encoder<AddEntryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_AddEntryArgument) {
         _cached_encoder_for_AddEntryArgument = _get_encoder_for_OPTIONALLY_PROTECTED<AddEntryArgumentData>(
             _encode_AddEntryArgumentData

@@ -39,7 +39,7 @@ let _cached_decoder_for_AbandonResult: $.ASN1Decoder<AbandonResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AbandonResult} The decoded data structure.
  */
-export function _decode_AbandonResult(el: _Element) {
+export function _decode_AbandonResult(el: _Element): AbandonResult {
     if (!_cached_decoder_for_AbandonResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_AbandonResult: $.ASN1Encoder<AbandonResult> | null = nul
 export function _encode_AbandonResult(
     value: AbandonResult,
     elGetter: $.ASN1Encoder<AbandonResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AbandonResult) {
         _cached_encoder_for_AbandonResult = $._encode_choice<AbandonResult>(
             {

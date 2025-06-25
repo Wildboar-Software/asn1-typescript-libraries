@@ -27,7 +27,7 @@ let _cached_decoder_for_MultipleAuthenEncryptAlgo: $.ASN1Decoder<MultipleAuthenE
  * @param {_Element} el The element being decoded.
  * @returns {MultipleAuthenEncryptAlgo} The decoded data structure.
  */
-export function _decode_MultipleAuthenEncryptAlgo(el: _Element) {
+export function _decode_MultipleAuthenEncryptAlgo(el: _Element): MultipleAuthenEncryptAlgo {
     if (!_cached_decoder_for_MultipleAuthenEncryptAlgo) {
         _cached_decoder_for_MultipleAuthenEncryptAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultipleAuthenEncryptAlgo: $.ASN1Encoder<MultipleAuthenE
 export function _encode_MultipleAuthenEncryptAlgo(
     value: MultipleAuthenEncryptAlgo,
     elGetter: $.ASN1Encoder<MultipleAuthenEncryptAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleAuthenEncryptAlgo) {
         _cached_encoder_for_MultipleAuthenEncryptAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

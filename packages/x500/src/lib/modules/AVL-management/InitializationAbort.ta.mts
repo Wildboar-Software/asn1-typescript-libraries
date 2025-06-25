@@ -115,7 +115,7 @@ let _cached_decoder_for_InitializationAbort: $.ASN1Decoder<InitializationAbort> 
  * @param {_Element} el The element being decoded.
  * @returns {InitializationAbort} The decoded data structure.
  */
-export function _decode_InitializationAbort(el: _Element) {
+export function _decode_InitializationAbort(el: _Element): InitializationAbort {
     if (!_cached_decoder_for_InitializationAbort) {
         _cached_decoder_for_InitializationAbort = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_InitializationAbort: $.ASN1Encoder<InitializationAbort> 
 export function _encode_InitializationAbort(
     value: InitializationAbort,
     elGetter: $.ASN1Encoder<InitializationAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_InitializationAbort) {
         _cached_encoder_for_InitializationAbort = function (
             value: InitializationAbort        ): _Element {

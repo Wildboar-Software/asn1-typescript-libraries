@@ -82,7 +82,7 @@ export class CASPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): CASPversion {
         return CASPversion_v1;
     }
     /**
@@ -143,7 +143,7 @@ let _cached_decoder_for_CASPcommonComponents: $.ASN1Decoder<CASPcommonComponents
  * @param {_Element} el The element being decoded.
  * @returns {CASPcommonComponents} The decoded data structure.
  */
-export function _decode_CASPcommonComponents(el: _Element) {
+export function _decode_CASPcommonComponents(el: _Element): CASPcommonComponents {
     if (!_cached_decoder_for_CASPcommonComponents) {
         _cached_decoder_for_CASPcommonComponents = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_CASPcommonComponents: $.ASN1Encoder<CASPcommonComponents
 export function _encode_CASPcommonComponents(
     value: CASPcommonComponents,
     elGetter: $.ASN1Encoder<CASPcommonComponents>
-) {
+): _Element {
     if (!_cached_encoder_for_CASPcommonComponents) {
         _cached_encoder_for_CASPcommonComponents = function (
             value: CASPcommonComponents        ): _Element {

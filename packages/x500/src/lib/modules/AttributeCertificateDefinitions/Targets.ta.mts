@@ -26,7 +26,7 @@ let _cached_decoder_for_Targets: $.ASN1Decoder<Targets> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Targets} The decoded data structure.
  */
-export function _decode_Targets(el: _Element) {
+export function _decode_Targets(el: _Element): Targets {
     if (!_cached_decoder_for_Targets) {
         _cached_decoder_for_Targets = $._decodeSequenceOf<Target>(
             () => _decode_Target
@@ -47,7 +47,7 @@ let _cached_encoder_for_Targets: $.ASN1Encoder<Targets> | null = null;
 export function _encode_Targets(
     value: Targets,
     elGetter: $.ASN1Encoder<Targets>
-) {
+): _Element {
     if (!_cached_encoder_for_Targets) {
         _cached_encoder_for_Targets = $._encodeSequenceOf<Target>(
             () => _encode_Target,

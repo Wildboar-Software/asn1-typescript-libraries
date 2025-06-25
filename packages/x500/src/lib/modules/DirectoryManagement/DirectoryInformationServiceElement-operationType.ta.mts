@@ -132,7 +132,7 @@ let _cached_decoder_for_DirectoryInformationServiceElement_operationType: $.ASN1
  */
 export function _decode_DirectoryInformationServiceElement_operationType(
     el: _Element
-) {
+): DirectoryInformationServiceElement_operationType {
     if (!_cached_decoder_for_DirectoryInformationServiceElement_operationType) {
         _cached_decoder_for_DirectoryInformationServiceElement_operationType =
             $._decodeBitString;
@@ -154,7 +154,7 @@ let _cached_encoder_for_DirectoryInformationServiceElement_operationType: $.ASN1
 export function _encode_DirectoryInformationServiceElement_operationType(
     value: DirectoryInformationServiceElement_operationType,
     elGetter: $.ASN1Encoder<DirectoryInformationServiceElement_operationType>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryInformationServiceElement_operationType) {
         _cached_encoder_for_DirectoryInformationServiceElement_operationType =
             $._encodeBitString;

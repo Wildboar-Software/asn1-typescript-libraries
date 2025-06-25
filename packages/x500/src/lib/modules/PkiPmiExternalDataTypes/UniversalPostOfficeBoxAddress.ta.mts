@@ -26,7 +26,7 @@ let _cached_decoder_for_UniversalPostOfficeBoxAddress: $.ASN1Decoder<UniversalPo
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPostOfficeBoxAddress} The decoded data structure.
  */
-export function _decode_UniversalPostOfficeBoxAddress(el: _Element) {
+export function _decode_UniversalPostOfficeBoxAddress(el: _Element): UniversalPostOfficeBoxAddress {
     if (!_cached_decoder_for_UniversalPostOfficeBoxAddress) {
         _cached_decoder_for_UniversalPostOfficeBoxAddress = _decode_UniversalPDSParameter;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_UniversalPostOfficeBoxAddress: $.ASN1Encoder<UniversalPo
 export function _encode_UniversalPostOfficeBoxAddress(
     value: UniversalPostOfficeBoxAddress,
     elGetter: $.ASN1Encoder<UniversalPostOfficeBoxAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPostOfficeBoxAddress) {
         _cached_encoder_for_UniversalPostOfficeBoxAddress = _encode_UniversalPDSParameter;
     }

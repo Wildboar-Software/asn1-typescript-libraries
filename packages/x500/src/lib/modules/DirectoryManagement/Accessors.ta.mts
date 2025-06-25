@@ -26,7 +26,7 @@ let _cached_decoder_for_Accessors: $.ASN1Decoder<Accessors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Accessors} The decoded data structure.
  */
-export function _decode_Accessors(el: _Element) {
+export function _decode_Accessors(el: _Element): Accessors {
     if (!_cached_decoder_for_Accessors) {
         _cached_decoder_for_Accessors = $._decodeSetOf<Name>(
             () => _decode_Name
@@ -47,7 +47,7 @@ let _cached_encoder_for_Accessors: $.ASN1Encoder<Accessors> | null = null;
 export function _encode_Accessors(
     value: Accessors,
     elGetter: $.ASN1Encoder<Accessors>
-) {
+): _Element {
     if (!_cached_encoder_for_Accessors) {
         _cached_encoder_for_Accessors = $._encodeSetOf<Name>(
             () => _encode_Name,

@@ -124,7 +124,7 @@ let _cached_decoder_for_MultipleMatchingLocalities: $.ASN1Decoder<MultipleMatchi
  * @param {_Element} el The element being decoded.
  * @returns {MultipleMatchingLocalities} The decoded data structure.
  */
-export function _decode_MultipleMatchingLocalities(el: _Element) {
+export function _decode_MultipleMatchingLocalities(el: _Element): MultipleMatchingLocalities {
     if (!_cached_decoder_for_MultipleMatchingLocalities) {
         _cached_decoder_for_MultipleMatchingLocalities = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_MultipleMatchingLocalities: $.ASN1Encoder<MultipleMatchi
 export function _encode_MultipleMatchingLocalities(
     value: MultipleMatchingLocalities,
     elGetter: $.ASN1Encoder<MultipleMatchingLocalities>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleMatchingLocalities) {
         _cached_encoder_for_MultipleMatchingLocalities = function (
             value: MultipleMatchingLocalities        ): _Element {

@@ -26,7 +26,7 @@ let _cached_decoder_for_SDSEType: $.ASN1Decoder<SDSEType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SDSEType} The decoded data structure.
  */
-export function _decode_SDSEType(el: _Element) {
+export function _decode_SDSEType(el: _Element): SDSEType {
     if (!_cached_decoder_for_SDSEType) {
         _cached_decoder_for_SDSEType = _decode_DSEType;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_SDSEType: $.ASN1Encoder<SDSEType> | null = null;
 export function _encode_SDSEType(
     value: SDSEType,
     elGetter: $.ASN1Encoder<SDSEType>
-) {
+): _Element {
     if (!_cached_encoder_for_SDSEType) {
         _cached_encoder_for_SDSEType = _encode_DSEType;
     }

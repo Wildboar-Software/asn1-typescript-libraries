@@ -26,7 +26,7 @@ let _cached_decoder_for_AcceptableCertPoliciesSyntax: $.ASN1Decoder<AcceptableCe
  * @param {_Element} el The element being decoded.
  * @returns {AcceptableCertPoliciesSyntax} The decoded data structure.
  */
-export function _decode_AcceptableCertPoliciesSyntax(el: _Element) {
+export function _decode_AcceptableCertPoliciesSyntax(el: _Element): AcceptableCertPoliciesSyntax {
     if (!_cached_decoder_for_AcceptableCertPoliciesSyntax) {
         _cached_decoder_for_AcceptableCertPoliciesSyntax = $._decodeSequenceOf<CertPolicyId>(
             () => _decode_CertPolicyId
@@ -47,7 +47,7 @@ let _cached_encoder_for_AcceptableCertPoliciesSyntax: $.ASN1Encoder<AcceptableCe
 export function _encode_AcceptableCertPoliciesSyntax(
     value: AcceptableCertPoliciesSyntax,
     elGetter: $.ASN1Encoder<AcceptableCertPoliciesSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AcceptableCertPoliciesSyntax) {
         _cached_encoder_for_AcceptableCertPoliciesSyntax = $._encodeSequenceOf<CertPolicyId>(
             () => _encode_CertPolicyId,

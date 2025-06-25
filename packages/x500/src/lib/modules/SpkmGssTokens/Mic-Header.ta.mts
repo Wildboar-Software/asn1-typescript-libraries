@@ -144,7 +144,7 @@ let _cached_decoder_for_Mic_Header: $.ASN1Decoder<Mic_Header> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Mic_Header} The decoded data structure.
  */
-export function _decode_Mic_Header(el: _Element) {
+export function _decode_Mic_Header(el: _Element): Mic_Header {
     if (!_cached_decoder_for_Mic_Header) {
         _cached_decoder_for_Mic_Header = function (el: _Element): Mic_Header {
             let tok_id!: INTEGER;
@@ -200,7 +200,7 @@ let _cached_encoder_for_Mic_Header: $.ASN1Encoder<Mic_Header> | null = null;
 export function _encode_Mic_Header(
     value: Mic_Header,
     elGetter: $.ASN1Encoder<Mic_Header>
-) {
+): _Element {
     if (!_cached_encoder_for_Mic_Header) {
         _cached_encoder_for_Mic_Header = function (
             value: Mic_Header        ): _Element {

@@ -36,7 +36,7 @@ let _cached_decoder_for_AuthenticationLevel: $.ASN1Decoder<AuthenticationLevel> 
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticationLevel} The decoded data structure.
  */
-export function _decode_AuthenticationLevel(el: _Element) {
+export function _decode_AuthenticationLevel(el: _Element): AuthenticationLevel {
     if (!_cached_decoder_for_AuthenticationLevel) {
         _cached_decoder_for_AuthenticationLevel = $._decode_extensible_choice<AuthenticationLevel>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_AuthenticationLevel: $.ASN1Encoder<AuthenticationLevel> 
 export function _encode_AuthenticationLevel(
     value: AuthenticationLevel,
     elGetter: $.ASN1Encoder<AuthenticationLevel>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticationLevel) {
         _cached_encoder_for_AuthenticationLevel = $._encode_choice<AuthenticationLevel>(
             {

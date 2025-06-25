@@ -363,7 +363,7 @@ let _cached_decoder_for_SearchRuleDescription: $.ASN1Decoder<SearchRuleDescripti
  * @param {_Element} el The element being decoded.
  * @returns {SearchRuleDescription} The decoded data structure.
  */
-export function _decode_SearchRuleDescription(el: _Element) {
+export function _decode_SearchRuleDescription(el: _Element): SearchRuleDescription {
     if (!_cached_decoder_for_SearchRuleDescription) {
         _cached_decoder_for_SearchRuleDescription = function (
             el: _Element
@@ -547,7 +547,7 @@ let _cached_encoder_for_SearchRuleDescription: $.ASN1Encoder<SearchRuleDescripti
 export function _encode_SearchRuleDescription(
     value: SearchRuleDescription,
     elGetter: $.ASN1Encoder<SearchRuleDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchRuleDescription) {
         _cached_encoder_for_SearchRuleDescription = function (
             value: SearchRuleDescription        ): _Element {

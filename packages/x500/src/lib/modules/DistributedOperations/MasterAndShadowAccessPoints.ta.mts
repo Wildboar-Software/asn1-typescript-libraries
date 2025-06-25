@@ -26,7 +26,7 @@ let _cached_decoder_for_MasterAndShadowAccessPoints: $.ASN1Decoder<MasterAndShad
  * @param {_Element} el The element being decoded.
  * @returns {MasterAndShadowAccessPoints} The decoded data structure.
  */
-export function _decode_MasterAndShadowAccessPoints(el: _Element) {
+export function _decode_MasterAndShadowAccessPoints(el: _Element): MasterAndShadowAccessPoints {
     if (!_cached_decoder_for_MasterAndShadowAccessPoints) {
         _cached_decoder_for_MasterAndShadowAccessPoints = $._decodeSetOf<MasterOrShadowAccessPoint>(
             () => _decode_MasterOrShadowAccessPoint
@@ -47,7 +47,7 @@ let _cached_encoder_for_MasterAndShadowAccessPoints: $.ASN1Encoder<MasterAndShad
 export function _encode_MasterAndShadowAccessPoints(
     value: MasterAndShadowAccessPoints,
     elGetter: $.ASN1Encoder<MasterAndShadowAccessPoints>
-) {
+): _Element {
     if (!_cached_encoder_for_MasterAndShadowAccessPoints) {
         _cached_encoder_for_MasterAndShadowAccessPoints = $._encodeSetOf<MasterOrShadowAccessPoint>(
             () => _encode_MasterOrShadowAccessPoint,

@@ -34,7 +34,7 @@ let _cached_decoder_for_EntryInformation_information_Item: $.ASN1Decoder<EntryIn
  * @param {_Element} el The element being decoded.
  * @returns {EntryInformation_information_Item} The decoded data structure.
  */
-export function _decode_EntryInformation_information_Item(el: _Element) {
+export function _decode_EntryInformation_information_Item(el: _Element): EntryInformation_information_Item {
     if (!_cached_decoder_for_EntryInformation_information_Item) {
         _cached_decoder_for_EntryInformation_information_Item = $._decode_extensible_choice<EntryInformation_information_Item>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_EntryInformation_information_Item: $.ASN1Encoder<EntryIn
 export function _encode_EntryInformation_information_Item(
     value: EntryInformation_information_Item,
     elGetter: $.ASN1Encoder<EntryInformation_information_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryInformation_information_Item) {
         _cached_encoder_for_EntryInformation_information_Item = $._encode_choice<EntryInformation_information_Item>(
             {

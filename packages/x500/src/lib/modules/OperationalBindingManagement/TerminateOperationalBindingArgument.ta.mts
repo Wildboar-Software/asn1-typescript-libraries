@@ -32,7 +32,7 @@ let _cached_decoder_for_TerminateOperationalBindingArgument: $.ASN1Decoder<Termi
  * @param {_Element} el The element being decoded.
  * @returns {TerminateOperationalBindingArgument} The decoded data structure.
  */
-export function _decode_TerminateOperationalBindingArgument(el: _Element) {
+export function _decode_TerminateOperationalBindingArgument(el: _Element): TerminateOperationalBindingArgument {
     if (!_cached_decoder_for_TerminateOperationalBindingArgument) {
         _cached_decoder_for_TerminateOperationalBindingArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<TerminateOperationalBindingArgumentData>(
             _decode_TerminateOperationalBindingArgumentData
@@ -53,7 +53,7 @@ let _cached_encoder_for_TerminateOperationalBindingArgument: $.ASN1Encoder<Termi
 export function _encode_TerminateOperationalBindingArgument(
     value: TerminateOperationalBindingArgument,
     elGetter: $.ASN1Encoder<TerminateOperationalBindingArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_TerminateOperationalBindingArgument) {
         _cached_encoder_for_TerminateOperationalBindingArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<TerminateOperationalBindingArgumentData>(
             _encode_TerminateOperationalBindingArgumentData

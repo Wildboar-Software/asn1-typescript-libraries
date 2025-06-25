@@ -181,7 +181,7 @@ export class AAREerr_apdu {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_version() {
+    public static get _default_value_for_protocol_version(): AAREerr_apdu_protocol_version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[AAREerr_apdu_protocol_version_version1] = TRUE_BIT;
@@ -279,7 +279,7 @@ let _cached_decoder_for_AAREerr_apdu: $.ASN1Decoder<AAREerr_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AAREerr_apdu} The decoded data structure.
  */
-export function _decode_AAREerr_apdu(el: _Element) {
+export function _decode_AAREerr_apdu(el: _Element): AAREerr_apdu {
     if (!_cached_decoder_for_AAREerr_apdu) {
         _cached_decoder_for_AAREerr_apdu = $._decode_implicit<AAREerr_apdu>(
             () =>
@@ -389,7 +389,7 @@ let _cached_encoder_for_AAREerr_apdu: $.ASN1Encoder<AAREerr_apdu> | null = null;
 export function _encode_AAREerr_apdu(
     value: AAREerr_apdu,
     elGetter: $.ASN1Encoder<AAREerr_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_AAREerr_apdu) {
         _cached_encoder_for_AAREerr_apdu = $._encode_implicit(
             _TagClass.application,

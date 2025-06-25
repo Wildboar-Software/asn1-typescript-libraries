@@ -32,7 +32,7 @@ let _cached_decoder_for_ContextSelection: $.ASN1Decoder<ContextSelection> | null
  * @param {_Element} el The element being decoded.
  * @returns {ContextSelection} The decoded data structure.
  */
-export function _decode_ContextSelection(el: _Element) {
+export function _decode_ContextSelection(el: _Element): ContextSelection {
     if (!_cached_decoder_for_ContextSelection) {
         _cached_decoder_for_ContextSelection = $._decode_extensible_choice<ContextSelection>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_ContextSelection: $.ASN1Encoder<ContextSelection> | null
 export function _encode_ContextSelection(
     value: ContextSelection,
     elGetter: $.ASN1Encoder<ContextSelection>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextSelection) {
         _cached_encoder_for_ContextSelection = $._encode_choice<ContextSelection>(
             {

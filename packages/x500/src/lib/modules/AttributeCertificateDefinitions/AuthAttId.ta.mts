@@ -26,7 +26,7 @@ let _cached_decoder_for_AuthAttId: $.ASN1Decoder<AuthAttId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AuthAttId} The decoded data structure.
  */
-export function _decode_AuthAttId(el: _Element) {
+export function _decode_AuthAttId(el: _Element): AuthAttId {
     if (!_cached_decoder_for_AuthAttId) {
         _cached_decoder_for_AuthAttId = _decode_IssuerSerial;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_AuthAttId: $.ASN1Encoder<AuthAttId> | null = null;
 export function _encode_AuthAttId(
     value: AuthAttId,
     elGetter: $.ASN1Encoder<AuthAttId>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthAttId) {
         _cached_encoder_for_AuthAttId = _encode_IssuerSerial;
     }

@@ -142,7 +142,7 @@ let _cached_decoder_for_DistributionPoint: $.ASN1Decoder<DistributionPoint> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DistributionPoint} The decoded data structure.
  */
-export function _decode_DistributionPoint(el: _Element) {
+export function _decode_DistributionPoint(el: _Element): DistributionPoint {
     if (!_cached_decoder_for_DistributionPoint) {
         _cached_decoder_for_DistributionPoint = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_DistributionPoint: $.ASN1Encoder<DistributionPoint> | nu
 export function _encode_DistributionPoint(
     value: DistributionPoint,
     elGetter: $.ASN1Encoder<DistributionPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_DistributionPoint) {
         _cached_encoder_for_DistributionPoint = function (
             value: DistributionPoint        ): _Element {

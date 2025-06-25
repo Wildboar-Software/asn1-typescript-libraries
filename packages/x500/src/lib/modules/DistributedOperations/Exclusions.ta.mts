@@ -26,7 +26,7 @@ let _cached_decoder_for_Exclusions: $.ASN1Decoder<Exclusions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Exclusions} The decoded data structure.
  */
-export function _decode_Exclusions(el: _Element) {
+export function _decode_Exclusions(el: _Element): Exclusions {
     if (!_cached_decoder_for_Exclusions) {
         _cached_decoder_for_Exclusions = $._decodeSetOf<RDNSequence>(
             () => _decode_RDNSequence
@@ -47,7 +47,7 @@ let _cached_encoder_for_Exclusions: $.ASN1Encoder<Exclusions> | null = null;
 export function _encode_Exclusions(
     value: Exclusions,
     elGetter: $.ASN1Encoder<Exclusions>
-) {
+): _Element {
     if (!_cached_encoder_for_Exclusions) {
         _cached_encoder_for_Exclusions = $._encodeSetOf<RDNSequence>(
             () => _encode_RDNSequence,

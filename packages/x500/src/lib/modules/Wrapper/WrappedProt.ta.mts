@@ -107,7 +107,7 @@ let _cached_decoder_for_WrappedProt: $.ASN1Decoder<WrappedProt> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WrappedProt} The decoded data structure.
  */
-export function _decode_WrappedProt(el: _Element) {
+export function _decode_WrappedProt(el: _Element): WrappedProt {
     if (!_cached_decoder_for_WrappedProt) {
         _cached_decoder_for_WrappedProt = function (el: _Element): WrappedProt {
             const sequence: _Element[] = el.sequence;
@@ -142,7 +142,7 @@ let _cached_encoder_for_WrappedProt: $.ASN1Encoder<WrappedProt> | null = null;
 export function _encode_WrappedProt(
     value: WrappedProt,
     elGetter: $.ASN1Encoder<WrappedProt>
-) {
+): _Element {
     if (!_cached_encoder_for_WrappedProt) {
         _cached_encoder_for_WrappedProt = function (
             value: WrappedProt        ): _Element {

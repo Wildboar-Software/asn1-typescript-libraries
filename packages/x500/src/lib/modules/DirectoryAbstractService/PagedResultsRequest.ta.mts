@@ -44,7 +44,7 @@ let _cached_decoder_for_PagedResultsRequest: $.ASN1Decoder<PagedResultsRequest> 
  * @param {_Element} el The element being decoded.
  * @returns {PagedResultsRequest} The decoded data structure.
  */
-export function _decode_PagedResultsRequest(el: _Element) {
+export function _decode_PagedResultsRequest(el: _Element): PagedResultsRequest {
     if (!_cached_decoder_for_PagedResultsRequest) {
         _cached_decoder_for_PagedResultsRequest = $._decode_extensible_choice<PagedResultsRequest>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_PagedResultsRequest: $.ASN1Encoder<PagedResultsRequest> 
 export function _encode_PagedResultsRequest(
     value: PagedResultsRequest,
     elGetter: $.ASN1Encoder<PagedResultsRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_PagedResultsRequest) {
         _cached_encoder_for_PagedResultsRequest = $._encode_choice<PagedResultsRequest>(
             {

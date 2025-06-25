@@ -169,7 +169,7 @@ let _cached_decoder_for_ACIItem: $.ASN1Decoder<ACIItem> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACIItem} The decoded data structure.
  */
-export function _decode_ACIItem(el: _Element) {
+export function _decode_ACIItem(el: _Element): ACIItem {
     if (!_cached_decoder_for_ACIItem) {
         _cached_decoder_for_ACIItem = function (el: _Element): ACIItem {
             const sequence: _Element[] = el.sequence;
@@ -216,7 +216,7 @@ let _cached_encoder_for_ACIItem: $.ASN1Encoder<ACIItem> | null = null;
 export function _encode_ACIItem(
     value: ACIItem,
     elGetter: $.ASN1Encoder<ACIItem>
-) {
+): _Element {
     if (!_cached_encoder_for_ACIItem) {
         _cached_encoder_for_ACIItem = function (
             value: ACIItem        ): _Element {

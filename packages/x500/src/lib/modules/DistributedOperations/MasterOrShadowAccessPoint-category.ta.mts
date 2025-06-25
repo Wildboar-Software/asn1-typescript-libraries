@@ -74,7 +74,7 @@ let _cached_decoder_for_MasterOrShadowAccessPoint_category: $.ASN1Decoder<Master
  * @param {_Element} el The element being decoded.
  * @returns {MasterOrShadowAccessPoint_category} The decoded data structure.
  */
-export function _decode_MasterOrShadowAccessPoint_category(el: _Element) {
+export function _decode_MasterOrShadowAccessPoint_category(el: _Element): MasterOrShadowAccessPoint_category {
     if (!_cached_decoder_for_MasterOrShadowAccessPoint_category) {
         _cached_decoder_for_MasterOrShadowAccessPoint_category =
             $._decodeEnumerated;
@@ -94,7 +94,7 @@ let _cached_encoder_for_MasterOrShadowAccessPoint_category: $.ASN1Encoder<Master
 export function _encode_MasterOrShadowAccessPoint_category(
     value: MasterOrShadowAccessPoint_category,
     elGetter: $.ASN1Encoder<MasterOrShadowAccessPoint_category>
-) {
+): _Element {
     if (!_cached_encoder_for_MasterOrShadowAccessPoint_category) {
         _cached_encoder_for_MasterOrShadowAccessPoint_category =
             $._encodeEnumerated;

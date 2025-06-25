@@ -26,7 +26,7 @@ let _cached_decoder_for_LocalName: $.ASN1Decoder<LocalName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LocalName} The decoded data structure.
  */
-export function _decode_LocalName(el: _Element) {
+export function _decode_LocalName(el: _Element): LocalName {
     if (!_cached_decoder_for_LocalName) {
         _cached_decoder_for_LocalName = _decode_RDNSequence;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_LocalName: $.ASN1Encoder<LocalName> | null = null;
 export function _encode_LocalName(
     value: LocalName,
     elGetter: $.ASN1Encoder<LocalName>
-) {
+): _Element {
     if (!_cached_encoder_for_LocalName) {
         _cached_encoder_for_LocalName = _encode_RDNSequence;
     }

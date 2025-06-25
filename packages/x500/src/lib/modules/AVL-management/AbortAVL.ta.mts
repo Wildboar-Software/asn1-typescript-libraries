@@ -133,7 +133,7 @@ let _cached_decoder_for_AbortAVL: $.ASN1Decoder<AbortAVL> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AbortAVL} The decoded data structure.
  */
-export function _decode_AbortAVL(el: _Element) {
+export function _decode_AbortAVL(el: _Element): AbortAVL {
     if (!_cached_decoder_for_AbortAVL) {
         _cached_decoder_for_AbortAVL = function (el: _Element): AbortAVL {
             const sequence: _Element[] = el.sequence;
@@ -168,7 +168,7 @@ let _cached_encoder_for_AbortAVL: $.ASN1Encoder<AbortAVL> | null = null;
 export function _encode_AbortAVL(
     value: AbortAVL,
     elGetter: $.ASN1Encoder<AbortAVL>
-) {
+): _Element {
     if (!_cached_encoder_for_AbortAVL) {
         _cached_encoder_for_AbortAVL = function (
             value: AbortAVL        ): _Element {

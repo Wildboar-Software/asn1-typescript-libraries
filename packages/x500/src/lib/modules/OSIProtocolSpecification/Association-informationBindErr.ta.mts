@@ -28,7 +28,7 @@ let _cached_decoder_for_Association_informationBindErr: $.ASN1Decoder<Associatio
  * @param {_Element} el The element being decoded.
  * @returns {Association_informationBindErr} The decoded data structure.
  */
-export function _decode_Association_informationBindErr(el: _Element) {
+export function _decode_Association_informationBindErr(el: _Element): Association_informationBindErr {
     if (!_cached_decoder_for_Association_informationBindErr) {
         _cached_decoder_for_Association_informationBindErr = $._decodeSequenceOf<EXTERNAL>(
             () => $._decodeExternal
@@ -49,7 +49,7 @@ let _cached_encoder_for_Association_informationBindErr: $.ASN1Encoder<Associatio
 export function _encode_Association_informationBindErr(
     value: Association_informationBindErr,
     elGetter: $.ASN1Encoder<Association_informationBindErr>
-) {
+): _Element {
     if (!_cached_encoder_for_Association_informationBindErr) {
         _cached_encoder_for_Association_informationBindErr = $._encodeSequenceOf<EXTERNAL>(
             () => $._encodeExternal,

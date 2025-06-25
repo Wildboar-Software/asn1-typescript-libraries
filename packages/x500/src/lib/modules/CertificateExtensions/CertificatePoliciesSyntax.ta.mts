@@ -26,7 +26,7 @@ let _cached_decoder_for_CertificatePoliciesSyntax: $.ASN1Decoder<CertificatePoli
  * @param {_Element} el The element being decoded.
  * @returns {CertificatePoliciesSyntax} The decoded data structure.
  */
-export function _decode_CertificatePoliciesSyntax(el: _Element) {
+export function _decode_CertificatePoliciesSyntax(el: _Element): CertificatePoliciesSyntax {
     if (!_cached_decoder_for_CertificatePoliciesSyntax) {
         _cached_decoder_for_CertificatePoliciesSyntax = $._decodeSequenceOf<PolicyInformation>(
             () => _decode_PolicyInformation
@@ -47,7 +47,7 @@ let _cached_encoder_for_CertificatePoliciesSyntax: $.ASN1Encoder<CertificatePoli
 export function _encode_CertificatePoliciesSyntax(
     value: CertificatePoliciesSyntax,
     elGetter: $.ASN1Encoder<CertificatePoliciesSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificatePoliciesSyntax) {
         _cached_encoder_for_CertificatePoliciesSyntax = $._encodeSequenceOf<PolicyInformation>(
             () => _encode_PolicyInformation,

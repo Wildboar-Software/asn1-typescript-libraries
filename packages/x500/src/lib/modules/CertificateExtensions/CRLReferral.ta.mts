@@ -183,7 +183,7 @@ let _cached_decoder_for_CRLReferral: $.ASN1Decoder<CRLReferral> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CRLReferral} The decoded data structure.
  */
-export function _decode_CRLReferral(el: _Element) {
+export function _decode_CRLReferral(el: _Element): CRLReferral {
     if (!_cached_decoder_for_CRLReferral) {
         _cached_decoder_for_CRLReferral = function (el: _Element): CRLReferral {
             let issuer: OPTIONAL<GeneralName>;
@@ -259,7 +259,7 @@ let _cached_encoder_for_CRLReferral: $.ASN1Encoder<CRLReferral> | null = null;
 export function _encode_CRLReferral(
     value: CRLReferral,
     elGetter: $.ASN1Encoder<CRLReferral>
-) {
+): _Element {
     if (!_cached_encoder_for_CRLReferral) {
         _cached_encoder_for_CRLReferral = function (
             value: CRLReferral        ): _Element {

@@ -120,7 +120,7 @@ let _cached_decoder_for_MaxValueCount: $.ASN1Decoder<MaxValueCount> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MaxValueCount} The decoded data structure.
  */
-export function _decode_MaxValueCount(el: _Element) {
+export function _decode_MaxValueCount(el: _Element): MaxValueCount {
     if (!_cached_decoder_for_MaxValueCount) {
         _cached_decoder_for_MaxValueCount = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_MaxValueCount: $.ASN1Encoder<MaxValueCount> | null = nul
 export function _encode_MaxValueCount(
     value: MaxValueCount,
     elGetter: $.ASN1Encoder<MaxValueCount>
-) {
+): _Element {
     if (!_cached_encoder_for_MaxValueCount) {
         _cached_encoder_for_MaxValueCount = function (
             value: MaxValueCount        ): _Element {

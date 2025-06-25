@@ -133,7 +133,7 @@ let _cached_decoder_for_OperationProgress: $.ASN1Decoder<OperationProgress> | nu
  * @param {_Element} el The element being decoded.
  * @returns {OperationProgress} The decoded data structure.
  */
-export function _decode_OperationProgress(el: _Element) {
+export function _decode_OperationProgress(el: _Element): OperationProgress {
     if (!_cached_decoder_for_OperationProgress) {
         _cached_decoder_for_OperationProgress = function (
             el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_OperationProgress: $.ASN1Encoder<OperationProgress> | nu
 export function _encode_OperationProgress(
     value: OperationProgress,
     elGetter: $.ASN1Encoder<OperationProgress>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationProgress) {
         _cached_encoder_for_OperationProgress = function (
             value: OperationProgress        ): _Element {

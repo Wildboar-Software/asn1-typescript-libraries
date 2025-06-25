@@ -94,7 +94,7 @@ export class TimeSpecification {
      * @static
      * @method
      */
-    public static get _default_value_for_notThisTime() {
+    public static get _default_value_for_notThisTime(): BOOLEAN {
         return false;
     }
 }
@@ -149,7 +149,7 @@ let _cached_decoder_for_TimeSpecification: $.ASN1Decoder<TimeSpecification> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TimeSpecification} The decoded data structure.
  */
-export function _decode_TimeSpecification(el: _Element) {
+export function _decode_TimeSpecification(el: _Element): TimeSpecification {
     if (!_cached_decoder_for_TimeSpecification) {
         _cached_decoder_for_TimeSpecification = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_TimeSpecification: $.ASN1Encoder<TimeSpecification> | nu
 export function _encode_TimeSpecification(
     value: TimeSpecification,
     elGetter: $.ASN1Encoder<TimeSpecification>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeSpecification) {
         _cached_encoder_for_TimeSpecification = function (
             value: TimeSpecification        ): _Element {

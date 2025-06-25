@@ -30,7 +30,7 @@ let _cached_decoder_for_OsiBindResult_normal_mode_parameters_user_data: $.ASN1De
  */
 export function _decode_OsiBindResult_normal_mode_parameters_user_data(
     el: _Element
-) {
+): OsiBindResult_normal_mode_parameters_user_data {
     if (!_cached_decoder_for_OsiBindResult_normal_mode_parameters_user_data) {
         _cached_decoder_for_OsiBindResult_normal_mode_parameters_user_data = $._decode_inextensible_choice<OsiBindResult_normal_mode_parameters_user_data>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_OsiBindResult_normal_mode_parameters_user_data: $.ASN1En
 export function _encode_OsiBindResult_normal_mode_parameters_user_data(
     value: OsiBindResult_normal_mode_parameters_user_data,
     elGetter: $.ASN1Encoder<OsiBindResult_normal_mode_parameters_user_data>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBindResult_normal_mode_parameters_user_data) {
         _cached_encoder_for_OsiBindResult_normal_mode_parameters_user_data = $._encode_choice<OsiBindResult_normal_mode_parameters_user_data>(
             {

@@ -32,7 +32,7 @@ let _cached_decoder_for_AllowedAttributeAssignments: $.ASN1Decoder<AllowedAttrib
  * @param {_Element} el The element being decoded.
  * @returns {AllowedAttributeAssignments} The decoded data structure.
  */
-export function _decode_AllowedAttributeAssignments(el: _Element) {
+export function _decode_AllowedAttributeAssignments(el: _Element): AllowedAttributeAssignments {
     if (!_cached_decoder_for_AllowedAttributeAssignments) {
         _cached_decoder_for_AllowedAttributeAssignments = $._decodeSetOf<AllowedAttributeAssignments_Item>(
             () => _decode_AllowedAttributeAssignments_Item
@@ -53,7 +53,7 @@ let _cached_encoder_for_AllowedAttributeAssignments: $.ASN1Encoder<AllowedAttrib
 export function _encode_AllowedAttributeAssignments(
     value: AllowedAttributeAssignments,
     elGetter: $.ASN1Encoder<AllowedAttributeAssignments>
-) {
+): _Element {
     if (!_cached_encoder_for_AllowedAttributeAssignments) {
         _cached_encoder_for_AllowedAttributeAssignments = $._encodeSetOf<AllowedAttributeAssignments_Item>(
             () => _encode_AllowedAttributeAssignments_Item,

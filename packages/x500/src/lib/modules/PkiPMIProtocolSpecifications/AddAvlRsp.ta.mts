@@ -110,7 +110,7 @@ export class AddAvlRsp implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -163,7 +163,7 @@ let _cached_decoder_for_AddAvlRsp: $.ASN1Decoder<AddAvlRsp> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddAvlRsp} The decoded data structure.
  */
-export function _decode_AddAvlRsp(el: _Element) {
+export function _decode_AddAvlRsp(el: _Element): AddAvlRsp {
     if (!_cached_decoder_for_AddAvlRsp) {
         _cached_decoder_for_AddAvlRsp = function (el: _Element): AddAvlRsp {
             let version: OPTIONAL<AVMPversion> =
@@ -220,7 +220,7 @@ let _cached_encoder_for_AddAvlRsp: $.ASN1Encoder<AddAvlRsp> | null = null;
 export function _encode_AddAvlRsp(
     value: AddAvlRsp,
     elGetter: $.ASN1Encoder<AddAvlRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_AddAvlRsp) {
         _cached_encoder_for_AddAvlRsp = function (
             value: AddAvlRsp        ): _Element {

@@ -34,7 +34,7 @@ let _cached_decoder_for_CertUnsubscribeRsp_result: $.ASN1Decoder<CertUnsubscribe
  * @param {_Element} el The element being decoded.
  * @returns {CertUnsubscribeRsp_result} The decoded data structure.
  */
-export function _decode_CertUnsubscribeRsp_result(el: _Element) {
+export function _decode_CertUnsubscribeRsp_result(el: _Element): CertUnsubscribeRsp_result {
     if (!_cached_decoder_for_CertUnsubscribeRsp_result) {
         _cached_decoder_for_CertUnsubscribeRsp_result = $._decode_extensible_choice<CertUnsubscribeRsp_result>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_CertUnsubscribeRsp_result: $.ASN1Encoder<CertUnsubscribe
 export function _encode_CertUnsubscribeRsp_result(
     value: CertUnsubscribeRsp_result,
     elGetter: $.ASN1Encoder<CertUnsubscribeRsp_result>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUnsubscribeRsp_result) {
         _cached_encoder_for_CertUnsubscribeRsp_result = $._encode_choice<CertUnsubscribeRsp_result>(
             {

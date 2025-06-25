@@ -26,7 +26,7 @@ let _cached_decoder_for_ForwardCertificationPath: $.ASN1Decoder<ForwardCertifica
  * @param {_Element} el The element being decoded.
  * @returns {ForwardCertificationPath} The decoded data structure.
  */
-export function _decode_ForwardCertificationPath(el: _Element) {
+export function _decode_ForwardCertificationPath(el: _Element): ForwardCertificationPath {
     if (!_cached_decoder_for_ForwardCertificationPath) {
         _cached_decoder_for_ForwardCertificationPath = $._decodeSequenceOf<CrossCertificates>(
             () => _decode_CrossCertificates
@@ -47,7 +47,7 @@ let _cached_encoder_for_ForwardCertificationPath: $.ASN1Encoder<ForwardCertifica
 export function _encode_ForwardCertificationPath(
     value: ForwardCertificationPath,
     elGetter: $.ASN1Encoder<ForwardCertificationPath>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardCertificationPath) {
         _cached_encoder_for_ForwardCertificationPath = $._encodeSequenceOf<CrossCertificates>(
             () => _encode_CrossCertificates,

@@ -35,7 +35,7 @@ let _cached_decoder_for_ContextCombination: $.ASN1Decoder<ContextCombination> | 
  * @param {_Element} el The element being decoded.
  * @returns {ContextCombination} The decoded data structure.
  */
-export function _decode_ContextCombination(el: _Element) {
+export function _decode_ContextCombination(el: _Element): ContextCombination {
     if (!_cached_decoder_for_ContextCombination) {
         _cached_decoder_for_ContextCombination = $._decode_extensible_choice<ContextCombination>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_ContextCombination: $.ASN1Encoder<ContextCombination> | 
 export function _encode_ContextCombination(
     value: ContextCombination,
     elGetter: $.ASN1Encoder<ContextCombination>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextCombination) {
         _cached_encoder_for_ContextCombination = $._encode_choice<ContextCombination>(
             {

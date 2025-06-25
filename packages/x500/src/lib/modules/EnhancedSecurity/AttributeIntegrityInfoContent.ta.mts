@@ -138,7 +138,7 @@ let _cached_decoder_for_AttributeIntegrityInfoContent: $.ASN1Decoder<AttributeIn
  * @param {_Element} el The element being decoded.
  * @returns {AttributeIntegrityInfoContent} The decoded data structure.
  */
-export function _decode_AttributeIntegrityInfoContent(el: _Element) {
+export function _decode_AttributeIntegrityInfoContent(el: _Element): AttributeIntegrityInfoContent {
     if (!_cached_decoder_for_AttributeIntegrityInfoContent) {
         _cached_decoder_for_AttributeIntegrityInfoContent = function (
             el: _Element
@@ -191,7 +191,7 @@ let _cached_encoder_for_AttributeIntegrityInfoContent: $.ASN1Encoder<AttributeIn
 export function _encode_AttributeIntegrityInfoContent(
     value: AttributeIntegrityInfoContent,
     elGetter: $.ASN1Encoder<AttributeIntegrityInfoContent>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeIntegrityInfoContent) {
         _cached_encoder_for_AttributeIntegrityInfoContent = function (
             value: AttributeIntegrityInfoContent        ): _Element {

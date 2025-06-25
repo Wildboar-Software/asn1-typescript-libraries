@@ -36,7 +36,7 @@ let _cached_decoder_for_AttributeCombination: $.ASN1Decoder<AttributeCombination
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCombination} The decoded data structure.
  */
-export function _decode_AttributeCombination(el: _Element) {
+export function _decode_AttributeCombination(el: _Element): AttributeCombination {
     if (!_cached_decoder_for_AttributeCombination) {
         _cached_decoder_for_AttributeCombination = $._decode_extensible_choice<AttributeCombination>(
             {
@@ -86,7 +86,7 @@ let _cached_encoder_for_AttributeCombination: $.ASN1Encoder<AttributeCombination
 export function _encode_AttributeCombination(
     value: AttributeCombination,
     elGetter: $.ASN1Encoder<AttributeCombination>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeCombination) {
         _cached_encoder_for_AttributeCombination = $._encode_choice<AttributeCombination>(
             {

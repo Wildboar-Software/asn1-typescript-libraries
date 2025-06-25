@@ -135,7 +135,7 @@ let _cached_decoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_d
  */
 export function _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item(
     el: _Element
-) {
+): OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item {
     if (
         !_cached_decoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item
     ) {
@@ -192,7 +192,7 @@ let _cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_d
 export function _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item(
     value: OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
     elGetter: $.ASN1Encoder<OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item>
-) {
+): _Element {
     if (
         !_cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item
     ) {

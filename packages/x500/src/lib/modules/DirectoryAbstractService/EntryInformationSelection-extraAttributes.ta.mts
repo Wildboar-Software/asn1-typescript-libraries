@@ -34,7 +34,7 @@ let _cached_decoder_for_EntryInformationSelection_extraAttributes: $.ASN1Decoder
  */
 export function _decode_EntryInformationSelection_extraAttributes(
     el: _Element
-) {
+): EntryInformationSelection_extraAttributes {
     if (!_cached_decoder_for_EntryInformationSelection_extraAttributes) {
         _cached_decoder_for_EntryInformationSelection_extraAttributes = $._decode_inextensible_choice<EntryInformationSelection_extraAttributes>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_EntryInformationSelection_extraAttributes: $.ASN1Encoder
 export function _encode_EntryInformationSelection_extraAttributes(
     value: EntryInformationSelection_extraAttributes,
     elGetter: $.ASN1Encoder<EntryInformationSelection_extraAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryInformationSelection_extraAttributes) {
         _cached_encoder_for_EntryInformationSelection_extraAttributes = $._encode_choice<EntryInformationSelection_extraAttributes>(
             {

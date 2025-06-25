@@ -30,7 +30,7 @@ let _cached_decoder_for_PartialOutcomeQualifier_entryCount: $.ASN1Decoder<Partia
  * @param {_Element} el The element being decoded.
  * @returns {PartialOutcomeQualifier_entryCount} The decoded data structure.
  */
-export function _decode_PartialOutcomeQualifier_entryCount(el: _Element) {
+export function _decode_PartialOutcomeQualifier_entryCount(el: _Element): PartialOutcomeQualifier_entryCount {
     if (!_cached_decoder_for_PartialOutcomeQualifier_entryCount) {
         _cached_decoder_for_PartialOutcomeQualifier_entryCount = $._decode_extensible_choice<PartialOutcomeQualifier_entryCount>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_PartialOutcomeQualifier_entryCount: $.ASN1Encoder<Partia
 export function _encode_PartialOutcomeQualifier_entryCount(
     value: PartialOutcomeQualifier_entryCount,
     elGetter: $.ASN1Encoder<PartialOutcomeQualifier_entryCount>
-) {
+): _Element {
     if (!_cached_encoder_for_PartialOutcomeQualifier_entryCount) {
         _cached_encoder_for_PartialOutcomeQualifier_entryCount = $._encode_choice<PartialOutcomeQualifier_entryCount>(
             {

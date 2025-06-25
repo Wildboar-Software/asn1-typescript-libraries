@@ -34,7 +34,7 @@ let _cached_decoder_for_AttributeCertificateAssertion_holder: $.ASN1Decoder<Attr
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCertificateAssertion_holder} The decoded data structure.
  */
-export function _decode_AttributeCertificateAssertion_holder(el: _Element) {
+export function _decode_AttributeCertificateAssertion_holder(el: _Element): AttributeCertificateAssertion_holder {
     if (!_cached_decoder_for_AttributeCertificateAssertion_holder) {
         _cached_decoder_for_AttributeCertificateAssertion_holder = $._decode_extensible_choice<AttributeCertificateAssertion_holder>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_AttributeCertificateAssertion_holder: $.ASN1Encoder<Attr
 export function _encode_AttributeCertificateAssertion_holder(
     value: AttributeCertificateAssertion_holder,
     elGetter: $.ASN1Encoder<AttributeCertificateAssertion_holder>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeCertificateAssertion_holder) {
         _cached_encoder_for_AttributeCertificateAssertion_holder = $._encode_choice<AttributeCertificateAssertion_holder>(
             {

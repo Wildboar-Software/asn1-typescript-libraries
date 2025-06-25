@@ -133,7 +133,7 @@ let _cached_decoder_for_MRSubstitution: $.ASN1Decoder<MRSubstitution> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {MRSubstitution} The decoded data structure.
  */
-export function _decode_MRSubstitution(el: _Element) {
+export function _decode_MRSubstitution(el: _Element): MRSubstitution {
     if (!_cached_decoder_for_MRSubstitution) {
         _cached_decoder_for_MRSubstitution = function (
             el: _Element
@@ -190,7 +190,7 @@ let _cached_encoder_for_MRSubstitution: $.ASN1Encoder<MRSubstitution> | null = n
 export function _encode_MRSubstitution(
     value: MRSubstitution,
     elGetter: $.ASN1Encoder<MRSubstitution>
-) {
+): _Element {
     if (!_cached_encoder_for_MRSubstitution) {
         _cached_encoder_for_MRSubstitution = function (
             value: MRSubstitution        ): _Element {

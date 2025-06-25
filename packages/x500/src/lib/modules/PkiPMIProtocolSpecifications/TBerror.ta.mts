@@ -139,7 +139,7 @@ let _cached_decoder_for_TBerror: $.ASN1Decoder<TBerror> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TBerror} The decoded data structure.
  */
-export function _decode_TBerror(el: _Element) {
+export function _decode_TBerror(el: _Element): TBerror {
     if (!_cached_decoder_for_TBerror) {
         _cached_decoder_for_TBerror = function (el: _Element): TBerror {
             let code!: TBerror_code;
@@ -185,7 +185,7 @@ let _cached_encoder_for_TBerror: $.ASN1Encoder<TBerror> | null = null;
 export function _encode_TBerror(
     value: TBerror,
     elGetter: $.ASN1Encoder<TBerror>
-) {
+): _Element {
     if (!_cached_encoder_for_TBerror) {
         _cached_encoder_for_TBerror = function (
             value: TBerror        ): _Element {

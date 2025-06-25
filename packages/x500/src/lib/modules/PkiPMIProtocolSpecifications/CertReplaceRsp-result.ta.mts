@@ -34,7 +34,7 @@ let _cached_decoder_for_CertReplaceRsp_result: $.ASN1Decoder<CertReplaceRsp_resu
  * @param {_Element} el The element being decoded.
  * @returns {CertReplaceRsp_result} The decoded data structure.
  */
-export function _decode_CertReplaceRsp_result(el: _Element) {
+export function _decode_CertReplaceRsp_result(el: _Element): CertReplaceRsp_result {
     if (!_cached_decoder_for_CertReplaceRsp_result) {
         _cached_decoder_for_CertReplaceRsp_result = $._decode_extensible_choice<CertReplaceRsp_result>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_CertReplaceRsp_result: $.ASN1Encoder<CertReplaceRsp_resu
 export function _encode_CertReplaceRsp_result(
     value: CertReplaceRsp_result,
     elGetter: $.ASN1Encoder<CertReplaceRsp_result>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReplaceRsp_result) {
         _cached_encoder_for_CertReplaceRsp_result = $._encode_choice<CertReplaceRsp_result>(
             {

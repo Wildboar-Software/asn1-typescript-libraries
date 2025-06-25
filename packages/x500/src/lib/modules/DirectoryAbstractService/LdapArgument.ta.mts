@@ -31,7 +31,7 @@ let _cached_decoder_for_LdapArgument: $.ASN1Decoder<LdapArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LdapArgument} The decoded data structure.
  */
-export function _decode_LdapArgument(el: _Element) {
+export function _decode_LdapArgument(el: _Element): LdapArgument {
     if (!_cached_decoder_for_LdapArgument) {
         _cached_decoder_for_LdapArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<LdapArgumentData>(
             _decode_LdapArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_LdapArgument: $.ASN1Encoder<LdapArgument> | null = null;
 export function _encode_LdapArgument(
     value: LdapArgument,
     elGetter: $.ASN1Encoder<LdapArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_LdapArgument) {
         _cached_encoder_for_LdapArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<LdapArgumentData>(
             _encode_LdapArgumentData

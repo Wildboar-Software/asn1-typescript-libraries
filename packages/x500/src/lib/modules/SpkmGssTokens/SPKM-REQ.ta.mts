@@ -131,7 +131,7 @@ let _cached_decoder_for_SPKM_REQ: $.ASN1Decoder<SPKM_REQ> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_REQ} The decoded data structure.
  */
-export function _decode_SPKM_REQ(el: _Element) {
+export function _decode_SPKM_REQ(el: _Element): SPKM_REQ {
     if (!_cached_decoder_for_SPKM_REQ) {
         _cached_decoder_for_SPKM_REQ = function (el: _Element): SPKM_REQ {
             let requestToken!: REQ_TOKEN;
@@ -182,7 +182,7 @@ let _cached_encoder_for_SPKM_REQ: $.ASN1Encoder<SPKM_REQ> | null = null;
 export function _encode_SPKM_REQ(
     value: SPKM_REQ,
     elGetter: $.ASN1Encoder<SPKM_REQ>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_REQ) {
         _cached_encoder_for_SPKM_REQ = function (
             value: SPKM_REQ        ): _Element {

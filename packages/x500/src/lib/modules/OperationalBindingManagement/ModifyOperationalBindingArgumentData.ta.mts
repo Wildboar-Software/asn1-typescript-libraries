@@ -234,7 +234,7 @@ let _cached_decoder_for_ModifyOperationalBindingArgumentData: $.ASN1Decoder<Modi
  * @param {_Element} el The element being decoded.
  * @returns {ModifyOperationalBindingArgumentData} The decoded data structure.
  */
-export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
+export function _decode_ModifyOperationalBindingArgumentData(el: _Element): ModifyOperationalBindingArgumentData {
     if (!_cached_decoder_for_ModifyOperationalBindingArgumentData) {
         _cached_decoder_for_ModifyOperationalBindingArgumentData = function (
             el: _Element
@@ -328,7 +328,7 @@ let _cached_encoder_for_ModifyOperationalBindingArgumentData: $.ASN1Encoder<Modi
 export function _encode_ModifyOperationalBindingArgumentData(
     value: ModifyOperationalBindingArgumentData,
     elGetter: $.ASN1Encoder<ModifyOperationalBindingArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyOperationalBindingArgumentData) {
         _cached_encoder_for_ModifyOperationalBindingArgumentData = function (
             value: ModifyOperationalBindingArgumentData        ): _Element {

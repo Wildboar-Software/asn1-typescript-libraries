@@ -33,7 +33,7 @@ let _cached_decoder_for_ModifiedValidity_validFrom: $.ASN1Decoder<ModifiedValidi
  * @param {_Element} el The element being decoded.
  * @returns {ModifiedValidity_validFrom} The decoded data structure.
  */
-export function _decode_ModifiedValidity_validFrom(el: _Element) {
+export function _decode_ModifiedValidity_validFrom(el: _Element): ModifiedValidity_validFrom {
     if (!_cached_decoder_for_ModifiedValidity_validFrom) {
         _cached_decoder_for_ModifiedValidity_validFrom = $._decode_extensible_choice<ModifiedValidity_validFrom>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_ModifiedValidity_validFrom: $.ASN1Encoder<ModifiedValidi
 export function _encode_ModifiedValidity_validFrom(
     value: ModifiedValidity_validFrom,
     elGetter: $.ASN1Encoder<ModifiedValidity_validFrom>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifiedValidity_validFrom) {
         _cached_encoder_for_ModifiedValidity_validFrom = $._encode_choice<ModifiedValidity_validFrom>(
             {

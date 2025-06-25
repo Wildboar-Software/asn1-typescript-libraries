@@ -144,7 +144,7 @@ let _cached_decoder_for_CertificateListContent_revokedCertificates_Item: $.ASN1D
  */
 export function _decode_CertificateListContent_revokedCertificates_Item(
     el: _Element
-) {
+): CertificateListContent_revokedCertificates_Item {
     if (!_cached_decoder_for_CertificateListContent_revokedCertificates_Item) {
         _cached_decoder_for_CertificateListContent_revokedCertificates_Item = function (
             el: _Element
@@ -199,7 +199,7 @@ let _cached_encoder_for_CertificateListContent_revokedCertificates_Item: $.ASN1E
 export function _encode_CertificateListContent_revokedCertificates_Item(
     value: CertificateListContent_revokedCertificates_Item,
     elGetter: $.ASN1Encoder<CertificateListContent_revokedCertificates_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateListContent_revokedCertificates_Item) {
         _cached_encoder_for_CertificateListContent_revokedCertificates_Item = function (
             value: CertificateListContent_revokedCertificates_Item        ): _Element {

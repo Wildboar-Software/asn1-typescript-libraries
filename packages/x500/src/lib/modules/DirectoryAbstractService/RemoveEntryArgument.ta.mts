@@ -31,7 +31,7 @@ let _cached_decoder_for_RemoveEntryArgument: $.ASN1Decoder<RemoveEntryArgument> 
  * @param {_Element} el The element being decoded.
  * @returns {RemoveEntryArgument} The decoded data structure.
  */
-export function _decode_RemoveEntryArgument(el: _Element) {
+export function _decode_RemoveEntryArgument(el: _Element): RemoveEntryArgument {
     if (!_cached_decoder_for_RemoveEntryArgument) {
         _cached_decoder_for_RemoveEntryArgument = _get_decoder_for_OPTIONALLY_PROTECTED<RemoveEntryArgumentData>(
             _decode_RemoveEntryArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_RemoveEntryArgument: $.ASN1Encoder<RemoveEntryArgument> 
 export function _encode_RemoveEntryArgument(
     value: RemoveEntryArgument,
     elGetter: $.ASN1Encoder<RemoveEntryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveEntryArgument) {
         _cached_encoder_for_RemoveEntryArgument = _get_encoder_for_OPTIONALLY_PROTECTED<RemoveEntryArgumentData>(
             _encode_RemoveEntryArgumentData

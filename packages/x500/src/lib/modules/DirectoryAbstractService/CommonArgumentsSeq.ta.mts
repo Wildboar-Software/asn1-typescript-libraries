@@ -197,7 +197,7 @@ export class CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -206,7 +206,7 @@ export class CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -218,7 +218,7 @@ export class CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return true;
     }
     /**
@@ -227,7 +227,7 @@ export class CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -236,7 +236,7 @@ export class CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -354,7 +354,7 @@ let _cached_decoder_for_CommonArgumentsSeq: $.ASN1Decoder<CommonArgumentsSeq> | 
  * @param {_Element} el The element being decoded.
  * @returns {CommonArgumentsSeq} The decoded data structure.
  */
-export function _decode_CommonArgumentsSeq(el: _Element) {
+export function _decode_CommonArgumentsSeq(el: _Element): CommonArgumentsSeq {
     if (!_cached_decoder_for_CommonArgumentsSeq) {
         _cached_decoder_for_CommonArgumentsSeq = function (
             el: _Element
@@ -481,7 +481,7 @@ let _cached_encoder_for_CommonArgumentsSeq: $.ASN1Encoder<CommonArgumentsSeq> | 
 export function _encode_CommonArgumentsSeq(
     value: CommonArgumentsSeq,
     elGetter: $.ASN1Encoder<CommonArgumentsSeq>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonArgumentsSeq) {
         _cached_encoder_for_CommonArgumentsSeq = function (
             value: CommonArgumentsSeq        ): _Element {

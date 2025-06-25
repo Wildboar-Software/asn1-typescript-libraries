@@ -109,7 +109,7 @@ let _cached_decoder_for_AccessDescription: $.ASN1Decoder<AccessDescription> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AccessDescription} The decoded data structure.
  */
-export function _decode_AccessDescription(el: _Element) {
+export function _decode_AccessDescription(el: _Element): AccessDescription {
     if (!_cached_decoder_for_AccessDescription) {
         _cached_decoder_for_AccessDescription = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_AccessDescription: $.ASN1Encoder<AccessDescription> | nu
 export function _encode_AccessDescription(
     value: AccessDescription,
     elGetter: $.ASN1Encoder<AccessDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessDescription) {
         _cached_encoder_for_AccessDescription = function (
             value: AccessDescription        ): _Element {

@@ -102,7 +102,7 @@ export class SubordinateToSuperior {
      * @static
      * @method
      */
-    public static get _default_value_for_alias() {
+    public static get _default_value_for_alias(): BOOLEAN {
         return false;
     }
 }
@@ -166,7 +166,7 @@ let _cached_decoder_for_SubordinateToSuperior: $.ASN1Decoder<SubordinateToSuperi
  * @param {_Element} el The element being decoded.
  * @returns {SubordinateToSuperior} The decoded data structure.
  */
-export function _decode_SubordinateToSuperior(el: _Element) {
+export function _decode_SubordinateToSuperior(el: _Element): SubordinateToSuperior {
     if (!_cached_decoder_for_SubordinateToSuperior) {
         _cached_decoder_for_SubordinateToSuperior = function (
             el: _Element
@@ -233,7 +233,7 @@ let _cached_encoder_for_SubordinateToSuperior: $.ASN1Encoder<SubordinateToSuperi
 export function _encode_SubordinateToSuperior(
     value: SubordinateToSuperior,
     elGetter: $.ASN1Encoder<SubordinateToSuperior>
-) {
+): _Element {
     if (!_cached_encoder_for_SubordinateToSuperior) {
         _cached_encoder_for_SubordinateToSuperior = function (
             value: SubordinateToSuperior        ): _Element {

@@ -31,7 +31,7 @@ let _cached_decoder_for_ReadArgument: $.ASN1Decoder<ReadArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReadArgument} The decoded data structure.
  */
-export function _decode_ReadArgument(el: _Element) {
+export function _decode_ReadArgument(el: _Element): ReadArgument {
     if (!_cached_decoder_for_ReadArgument) {
         _cached_decoder_for_ReadArgument = _get_decoder_for_OPTIONALLY_PROTECTED<ReadArgumentData>(
             _decode_ReadArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_ReadArgument: $.ASN1Encoder<ReadArgument> | null = null;
 export function _encode_ReadArgument(
     value: ReadArgument,
     elGetter: $.ASN1Encoder<ReadArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ReadArgument) {
         _cached_encoder_for_ReadArgument = _get_encoder_for_OPTIONALLY_PROTECTED<ReadArgumentData>(
             _encode_ReadArgumentData

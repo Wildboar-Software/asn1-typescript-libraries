@@ -123,7 +123,7 @@ let _cached_decoder_for_CertUpdateRsp: $.ASN1Decoder<CertUpdateRsp> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CertUpdateRsp} The decoded data structure.
  */
-export function _decode_CertUpdateRsp(el: _Element) {
+export function _decode_CertUpdateRsp(el: _Element): CertUpdateRsp {
     if (!_cached_decoder_for_CertUpdateRsp) {
         _cached_decoder_for_CertUpdateRsp = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_CertUpdateRsp: $.ASN1Encoder<CertUpdateRsp> | null = nul
 export function _encode_CertUpdateRsp(
     value: CertUpdateRsp,
     elGetter: $.ASN1Encoder<CertUpdateRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUpdateRsp) {
         _cached_encoder_for_CertUpdateRsp = function (
             value: CertUpdateRsp        ): _Element {

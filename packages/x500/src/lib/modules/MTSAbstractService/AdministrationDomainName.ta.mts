@@ -32,7 +32,7 @@ let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDo
  * @param {_Element} el The element being decoded.
  * @returns {AdministrationDomainName} The decoded data structure.
  */
-export function _decode_AdministrationDomainName(el: _Element) {
+export function _decode_AdministrationDomainName(el: _Element): AdministrationDomainName {
     if (!_cached_decoder_for_AdministrationDomainName) {
         _cached_decoder_for_AdministrationDomainName = $._decode_implicit<AdministrationDomainName>(
             () =>
@@ -57,7 +57,7 @@ let _cached_encoder_for_AdministrationDomainName: $.ASN1Encoder<AdministrationDo
 export function _encode_AdministrationDomainName(
     value: AdministrationDomainName,
     elGetter: $.ASN1Encoder<AdministrationDomainName>
-) {
+): _Element {
     if (!_cached_encoder_for_AdministrationDomainName) {
         _cached_encoder_for_AdministrationDomainName = $._encode_implicit(
             _TagClass.application,

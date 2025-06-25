@@ -143,7 +143,7 @@ let _cached_decoder_for_UserPermission: $.ASN1Decoder<UserPermission> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UserPermission} The decoded data structure.
  */
-export function _decode_UserPermission(el: _Element) {
+export function _decode_UserPermission(el: _Element): UserPermission {
     if (!_cached_decoder_for_UserPermission) {
         _cached_decoder_for_UserPermission = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_UserPermission: $.ASN1Encoder<UserPermission> | null = n
 export function _encode_UserPermission(
     value: UserPermission,
     elGetter: $.ASN1Encoder<UserPermission>
-) {
+): _Element {
     if (!_cached_encoder_for_UserPermission) {
         _cached_encoder_for_UserPermission = function (
             value: UserPermission        ): _Element {

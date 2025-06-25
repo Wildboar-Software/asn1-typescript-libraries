@@ -35,7 +35,7 @@ let _cached_decoder_for_Conf_Alg: $.ASN1Decoder<Conf_Alg> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Conf_Alg} The decoded data structure.
  */
-export function _decode_Conf_Alg(el: _Element) {
+export function _decode_Conf_Alg(el: _Element): Conf_Alg {
     if (!_cached_decoder_for_Conf_Alg) {
         _cached_decoder_for_Conf_Alg = $._decode_inextensible_choice<Conf_Alg>({
             "CONTEXT 0": [
@@ -65,7 +65,7 @@ let _cached_encoder_for_Conf_Alg: $.ASN1Encoder<Conf_Alg> | null = null;
 export function _encode_Conf_Alg(
     value: Conf_Alg,
     elGetter: $.ASN1Encoder<Conf_Alg>
-) {
+): _Element {
     if (!_cached_encoder_for_Conf_Alg) {
         _cached_encoder_for_Conf_Alg = $._encode_choice<Conf_Alg>(
             {

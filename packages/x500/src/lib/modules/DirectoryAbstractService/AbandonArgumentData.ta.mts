@@ -106,7 +106,7 @@ let _cached_decoder_for_AbandonArgumentData: $.ASN1Decoder<AbandonArgumentData> 
  * @param {_Element} el The element being decoded.
  * @returns {AbandonArgumentData} The decoded data structure.
  */
-export function _decode_AbandonArgumentData(el: _Element) {
+export function _decode_AbandonArgumentData(el: _Element): AbandonArgumentData {
     if (!_cached_decoder_for_AbandonArgumentData) {
         _cached_decoder_for_AbandonArgumentData = function (
             el: _Element
@@ -142,7 +142,7 @@ let _cached_encoder_for_AbandonArgumentData: $.ASN1Encoder<AbandonArgumentData> 
 export function _encode_AbandonArgumentData(
     value: AbandonArgumentData,
     elGetter: $.ASN1Encoder<AbandonArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_AbandonArgumentData) {
         _cached_encoder_for_AbandonArgumentData = function (
             value: AbandonArgumentData        ): _Element {

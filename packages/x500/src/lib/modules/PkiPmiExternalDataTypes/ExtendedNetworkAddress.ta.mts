@@ -40,7 +40,7 @@ let _cached_decoder_for_ExtendedNetworkAddress: $.ASN1Decoder<ExtendedNetworkAdd
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedNetworkAddress} The decoded data structure.
  */
-export function _decode_ExtendedNetworkAddress(el: _Element) {
+export function _decode_ExtendedNetworkAddress(el: _Element): ExtendedNetworkAddress {
     if (!_cached_decoder_for_ExtendedNetworkAddress) {
         _cached_decoder_for_ExtendedNetworkAddress = $._decode_inextensible_choice<ExtendedNetworkAddress>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_ExtendedNetworkAddress: $.ASN1Encoder<ExtendedNetworkAdd
 export function _encode_ExtendedNetworkAddress(
     value: ExtendedNetworkAddress,
     elGetter: $.ASN1Encoder<ExtendedNetworkAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedNetworkAddress) {
         _cached_encoder_for_ExtendedNetworkAddress = $._encode_choice<ExtendedNetworkAddress>(
             {

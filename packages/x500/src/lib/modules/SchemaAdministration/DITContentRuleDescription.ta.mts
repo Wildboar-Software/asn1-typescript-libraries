@@ -146,7 +146,7 @@ export class DITContentRuleDescription extends DITContentRule {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -212,7 +212,7 @@ let _cached_decoder_for_DITContentRuleDescription: $.ASN1Decoder<DITContentRuleD
  * @param {_Element} el The element being decoded.
  * @returns {DITContentRuleDescription} The decoded data structure.
  */
-export function _decode_DITContentRuleDescription(el: _Element) {
+export function _decode_DITContentRuleDescription(el: _Element): DITContentRuleDescription {
     if (!_cached_decoder_for_DITContentRuleDescription) {
         _cached_decoder_for_DITContentRuleDescription = function (
             el: _Element
@@ -309,7 +309,7 @@ let _cached_encoder_for_DITContentRuleDescription: $.ASN1Encoder<DITContentRuleD
 export function _encode_DITContentRuleDescription(
     value: DITContentRuleDescription,
     elGetter: $.ASN1Encoder<DITContentRuleDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_DITContentRuleDescription) {
         _cached_encoder_for_DITContentRuleDescription = function (
             value: DITContentRuleDescription        ): _Element {

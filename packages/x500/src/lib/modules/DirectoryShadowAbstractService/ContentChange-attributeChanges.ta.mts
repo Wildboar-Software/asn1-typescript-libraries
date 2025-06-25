@@ -33,7 +33,7 @@ let _cached_decoder_for_ContentChange_attributeChanges: $.ASN1Decoder<ContentCha
  * @param {_Element} el The element being decoded.
  * @returns {ContentChange_attributeChanges} The decoded data structure.
  */
-export function _decode_ContentChange_attributeChanges(el: _Element) {
+export function _decode_ContentChange_attributeChanges(el: _Element): ContentChange_attributeChanges {
     if (!_cached_decoder_for_ContentChange_attributeChanges) {
         _cached_decoder_for_ContentChange_attributeChanges = $._decode_inextensible_choice<ContentChange_attributeChanges>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_ContentChange_attributeChanges: $.ASN1Encoder<ContentCha
 export function _encode_ContentChange_attributeChanges(
     value: ContentChange_attributeChanges,
     elGetter: $.ASN1Encoder<ContentChange_attributeChanges>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentChange_attributeChanges) {
         _cached_encoder_for_ContentChange_attributeChanges = $._encode_choice<ContentChange_attributeChanges>(
             {

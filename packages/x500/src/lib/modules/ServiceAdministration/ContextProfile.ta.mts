@@ -116,7 +116,7 @@ let _cached_decoder_for_ContextProfile: $.ASN1Decoder<ContextProfile> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ContextProfile} The decoded data structure.
  */
-export function _decode_ContextProfile(el: _Element) {
+export function _decode_ContextProfile(el: _Element): ContextProfile {
     if (!_cached_decoder_for_ContextProfile) {
         _cached_decoder_for_ContextProfile = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_ContextProfile: $.ASN1Encoder<ContextProfile> | null = n
 export function _encode_ContextProfile(
     value: ContextProfile,
     elGetter: $.ASN1Encoder<ContextProfile>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextProfile) {
         _cached_encoder_for_ContextProfile = function (
             value: ContextProfile        ): _Element {

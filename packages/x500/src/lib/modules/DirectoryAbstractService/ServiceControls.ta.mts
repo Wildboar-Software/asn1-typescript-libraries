@@ -152,7 +152,7 @@ export class ServiceControls {
      * @static
      * @method
      */
-    public static get _default_value_for_options() {
+    public static get _default_value_for_options(): ServiceControlOptions {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -161,7 +161,7 @@ export class ServiceControls {
      * @static
      * @method
      */
-    public static get _default_value_for_priority() {
+    public static get _default_value_for_priority(): ServiceControls_priority {
         return medium;
     }
 }
@@ -250,7 +250,7 @@ let _cached_decoder_for_ServiceControls: $.ASN1Decoder<ServiceControls> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ServiceControls} The decoded data structure.
  */
-export function _decode_ServiceControls(el: _Element) {
+export function _decode_ServiceControls(el: _Element): ServiceControls {
     if (!_cached_decoder_for_ServiceControls) {
         _cached_decoder_for_ServiceControls = function (
             el: _Element
@@ -355,7 +355,7 @@ let _cached_encoder_for_ServiceControls: $.ASN1Encoder<ServiceControls> | null =
 export function _encode_ServiceControls(
     value: ServiceControls,
     elGetter: $.ASN1Encoder<ServiceControls>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceControls) {
         _cached_encoder_for_ServiceControls = function (
             value: ServiceControls        ): _Element {

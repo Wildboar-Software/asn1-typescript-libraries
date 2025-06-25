@@ -26,7 +26,7 @@ let _cached_decoder_for_AltSignatureAlgorithm: $.ASN1Decoder<AltSignatureAlgorit
  * @param {_Element} el The element being decoded.
  * @returns {AltSignatureAlgorithm} The decoded data structure.
  */
-export function _decode_AltSignatureAlgorithm(el: _Element) {
+export function _decode_AltSignatureAlgorithm(el: _Element): AltSignatureAlgorithm {
     if (!_cached_decoder_for_AltSignatureAlgorithm) {
         _cached_decoder_for_AltSignatureAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_AltSignatureAlgorithm: $.ASN1Encoder<AltSignatureAlgorit
 export function _encode_AltSignatureAlgorithm(
     value: AltSignatureAlgorithm,
     elGetter: $.ASN1Encoder<AltSignatureAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_AltSignatureAlgorithm) {
         _cached_encoder_for_AltSignatureAlgorithm = _encode_AlgorithmIdentifier;
     }

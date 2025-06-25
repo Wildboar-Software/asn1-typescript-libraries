@@ -149,7 +149,7 @@ export class CompareResultData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_fromEntry() {
+    public static get _default_value_for_fromEntry(): BOOLEAN {
         return true;
     }
     /**
@@ -158,7 +158,7 @@ export class CompareResultData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -227,7 +227,7 @@ let _cached_decoder_for_CompareResultData: $.ASN1Decoder<CompareResultData> | nu
  * @param {_Element} el The element being decoded.
  * @returns {CompareResultData} The decoded data structure.
  */
-export function _decode_CompareResultData(el: _Element) {
+export function _decode_CompareResultData(el: _Element): CompareResultData {
     if (!_cached_decoder_for_CompareResultData) {
         _cached_decoder_for_CompareResultData = function (
             el: _Element
@@ -323,7 +323,7 @@ let _cached_encoder_for_CompareResultData: $.ASN1Encoder<CompareResultData> | nu
 export function _encode_CompareResultData(
     value: CompareResultData,
     elGetter: $.ASN1Encoder<CompareResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareResultData) {
         _cached_encoder_for_CompareResultData = function (
             value: CompareResultData        ): _Element {

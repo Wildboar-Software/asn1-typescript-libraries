@@ -26,7 +26,7 @@ let _cached_decoder_for_DSABindResult: $.ASN1Decoder<DSABindResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DSABindResult} The decoded data structure.
  */
-export function _decode_DSABindResult(el: _Element) {
+export function _decode_DSABindResult(el: _Element): DSABindResult {
     if (!_cached_decoder_for_DSABindResult) {
         _cached_decoder_for_DSABindResult = _decode_DSABindArgument;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_DSABindResult: $.ASN1Encoder<DSABindResult> | null = nul
 export function _encode_DSABindResult(
     value: DSABindResult,
     elGetter: $.ASN1Encoder<DSABindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_DSABindResult) {
         _cached_encoder_for_DSABindResult = _encode_DSABindArgument;
     }

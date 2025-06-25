@@ -31,7 +31,7 @@ let _cached_decoder_for_ReleaseRsp: $.ASN1Decoder<ReleaseRsp> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReleaseRsp} The decoded data structure.
  */
-export function _decode_ReleaseRsp(el: _Element) {
+export function _decode_ReleaseRsp(el: _Element): ReleaseRsp {
     if (!_cached_decoder_for_ReleaseRsp) {
         _cached_decoder_for_ReleaseRsp = _get_decoder_for_Signed<TbsReleaseRsp>(
             _decode_TbsReleaseRsp
@@ -52,7 +52,7 @@ let _cached_encoder_for_ReleaseRsp: $.ASN1Encoder<ReleaseRsp> | null = null;
 export function _encode_ReleaseRsp(
     value: ReleaseRsp,
     elGetter: $.ASN1Encoder<ReleaseRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_ReleaseRsp) {
         _cached_encoder_for_ReleaseRsp = _get_encoder_for_Signed<TbsReleaseRsp>(
             _encode_TbsReleaseRsp

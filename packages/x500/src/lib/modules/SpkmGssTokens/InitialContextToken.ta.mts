@@ -114,7 +114,7 @@ let _cached_decoder_for_InitialContextToken: $.ASN1Decoder<InitialContextToken> 
  * @param {_Element} el The element being decoded.
  * @returns {InitialContextToken} The decoded data structure.
  */
-export function _decode_InitialContextToken(el: _Element) {
+export function _decode_InitialContextToken(el: _Element): InitialContextToken {
     if (!_cached_decoder_for_InitialContextToken) {
         _cached_decoder_for_InitialContextToken = $._decode_implicit<InitialContextToken>(
             () =>
@@ -154,7 +154,7 @@ let _cached_encoder_for_InitialContextToken: $.ASN1Encoder<InitialContextToken> 
 export function _encode_InitialContextToken(
     value: InitialContextToken,
     elGetter: $.ASN1Encoder<InitialContextToken>
-) {
+): _Element {
     if (!_cached_encoder_for_InitialContextToken) {
         _cached_encoder_for_InitialContextToken = $._encode_implicit(
             _TagClass.application,

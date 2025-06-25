@@ -128,7 +128,7 @@ let _cached_decoder_for_FacsimileTelephoneNumber: $.ASN1Decoder<FacsimileTelepho
  * @param {_Element} el The element being decoded.
  * @returns {FacsimileTelephoneNumber} The decoded data structure.
  */
-export function _decode_FacsimileTelephoneNumber(el: _Element) {
+export function _decode_FacsimileTelephoneNumber(el: _Element): FacsimileTelephoneNumber {
     if (!_cached_decoder_for_FacsimileTelephoneNumber) {
         _cached_decoder_for_FacsimileTelephoneNumber = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_FacsimileTelephoneNumber: $.ASN1Encoder<FacsimileTelepho
 export function _encode_FacsimileTelephoneNumber(
     value: FacsimileTelephoneNumber,
     elGetter: $.ASN1Encoder<FacsimileTelephoneNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_FacsimileTelephoneNumber) {
         _cached_encoder_for_FacsimileTelephoneNumber = function (
             value: FacsimileTelephoneNumber        ): _Element {

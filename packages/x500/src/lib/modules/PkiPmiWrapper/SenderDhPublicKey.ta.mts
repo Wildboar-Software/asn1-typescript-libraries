@@ -120,7 +120,7 @@ let _cached_decoder_for_SenderDhPublicKey: $.ASN1Decoder<SenderDhPublicKey> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SenderDhPublicKey} The decoded data structure.
  */
-export function _decode_SenderDhPublicKey(el: _Element) {
+export function _decode_SenderDhPublicKey(el: _Element): SenderDhPublicKey {
     if (!_cached_decoder_for_SenderDhPublicKey) {
         _cached_decoder_for_SenderDhPublicKey = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_SenderDhPublicKey: $.ASN1Encoder<SenderDhPublicKey> | nu
 export function _encode_SenderDhPublicKey(
     value: SenderDhPublicKey,
     elGetter: $.ASN1Encoder<SenderDhPublicKey>
-) {
+): _Element {
     if (!_cached_encoder_for_SenderDhPublicKey) {
         _cached_encoder_for_SenderDhPublicKey = function (
             value: SenderDhPublicKey        ): _Element {

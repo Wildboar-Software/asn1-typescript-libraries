@@ -84,7 +84,7 @@ export class ListResultData_listInfo_subordinates_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasEntry() {
+    public static get _default_value_for_aliasEntry(): BOOLEAN {
         return false;
     }
     /**
@@ -93,7 +93,7 @@ export class ListResultData_listInfo_subordinates_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_fromEntry() {
+    public static get _default_value_for_fromEntry(): BOOLEAN {
         return true;
     }
 }
@@ -154,7 +154,7 @@ let _cached_decoder_for_ListResultData_listInfo_subordinates_Item: $.ASN1Decoder
  */
 export function _decode_ListResultData_listInfo_subordinates_Item(
     el: _Element
-) {
+): ListResultData_listInfo_subordinates_Item {
     if (!_cached_decoder_for_ListResultData_listInfo_subordinates_Item) {
         _cached_decoder_for_ListResultData_listInfo_subordinates_Item = function (
             el: _Element
@@ -213,7 +213,7 @@ let _cached_encoder_for_ListResultData_listInfo_subordinates_Item: $.ASN1Encoder
 export function _encode_ListResultData_listInfo_subordinates_Item(
     value: ListResultData_listInfo_subordinates_Item,
     elGetter: $.ASN1Encoder<ListResultData_listInfo_subordinates_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ListResultData_listInfo_subordinates_Item) {
         _cached_encoder_for_ListResultData_listInfo_subordinates_Item = function (
             value: ListResultData_listInfo_subordinates_Item        ): _Element {

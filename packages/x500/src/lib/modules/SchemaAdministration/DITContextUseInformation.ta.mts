@@ -119,7 +119,7 @@ let _cached_decoder_for_DITContextUseInformation: $.ASN1Decoder<DITContextUseInf
  * @param {_Element} el The element being decoded.
  * @returns {DITContextUseInformation} The decoded data structure.
  */
-export function _decode_DITContextUseInformation(el: _Element) {
+export function _decode_DITContextUseInformation(el: _Element): DITContextUseInformation {
     if (!_cached_decoder_for_DITContextUseInformation) {
         _cached_decoder_for_DITContextUseInformation = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_DITContextUseInformation: $.ASN1Encoder<DITContextUseInf
 export function _encode_DITContextUseInformation(
     value: DITContextUseInformation,
     elGetter: $.ASN1Encoder<DITContextUseInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DITContextUseInformation) {
         _cached_encoder_for_DITContextUseInformation = function (
             value: DITContextUseInformation        ): _Element {

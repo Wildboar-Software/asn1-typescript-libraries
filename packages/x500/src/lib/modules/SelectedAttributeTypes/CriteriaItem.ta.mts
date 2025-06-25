@@ -38,7 +38,7 @@ let _cached_decoder_for_CriteriaItem: $.ASN1Decoder<CriteriaItem> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CriteriaItem} The decoded data structure.
  */
-export function _decode_CriteriaItem(el: _Element) {
+export function _decode_CriteriaItem(el: _Element): CriteriaItem {
     if (!_cached_decoder_for_CriteriaItem) {
         _cached_decoder_for_CriteriaItem = $._decode_extensible_choice<CriteriaItem>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_CriteriaItem: $.ASN1Encoder<CriteriaItem> | null = null;
 export function _encode_CriteriaItem(
     value: CriteriaItem,
     elGetter: $.ASN1Encoder<CriteriaItem>
-) {
+): _Element {
     if (!_cached_encoder_for_CriteriaItem) {
         _cached_encoder_for_CriteriaItem = $._encode_choice<CriteriaItem>(
             {

@@ -95,7 +95,7 @@ export class ControlOptions {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControlOptions {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -104,7 +104,7 @@ export class ControlOptions {
      * @static
      * @method
      */
-    public static get _default_value_for_searchOptions() {
+    public static get _default_value_for_searchOptions(): SearchControlOptions {
         return (() => {
             const _ret = new Uint8ClampedArray(12);
             _ret[SearchControlOptions_searchAliases] = TRUE_BIT;
@@ -167,7 +167,7 @@ let _cached_decoder_for_ControlOptions: $.ASN1Decoder<ControlOptions> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ControlOptions} The decoded data structure.
  */
-export function _decode_ControlOptions(el: _Element) {
+export function _decode_ControlOptions(el: _Element): ControlOptions {
     if (!_cached_decoder_for_ControlOptions) {
         _cached_decoder_for_ControlOptions = function (
             el: _Element
@@ -228,7 +228,7 @@ let _cached_encoder_for_ControlOptions: $.ASN1Encoder<ControlOptions> | null = n
 export function _encode_ControlOptions(
     value: ControlOptions,
     elGetter: $.ASN1Encoder<ControlOptions>
-) {
+): _Element {
     if (!_cached_encoder_for_ControlOptions) {
         _cached_encoder_for_ControlOptions = function (
             value: ControlOptions        ): _Element {

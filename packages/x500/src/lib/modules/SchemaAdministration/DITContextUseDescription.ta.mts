@@ -110,7 +110,7 @@ export class DITContextUseDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -185,7 +185,7 @@ let _cached_decoder_for_DITContextUseDescription: $.ASN1Decoder<DITContextUseDes
  * @param {_Element} el The element being decoded.
  * @returns {DITContextUseDescription} The decoded data structure.
  */
-export function _decode_DITContextUseDescription(el: _Element) {
+export function _decode_DITContextUseDescription(el: _Element): DITContextUseDescription {
     if (!_cached_decoder_for_DITContextUseDescription) {
         _cached_decoder_for_DITContextUseDescription = function (
             el: _Element
@@ -253,7 +253,7 @@ let _cached_encoder_for_DITContextUseDescription: $.ASN1Encoder<DITContextUseDes
 export function _encode_DITContextUseDescription(
     value: DITContextUseDescription,
     elGetter: $.ASN1Encoder<DITContextUseDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_DITContextUseDescription) {
         _cached_encoder_for_DITContextUseDescription = function (
             value: DITContextUseDescription        ): _Element {

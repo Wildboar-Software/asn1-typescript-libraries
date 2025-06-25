@@ -107,7 +107,7 @@ let _cached_decoder_for_PDSParameter: $.ASN1Decoder<PDSParameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PDSParameter} The decoded data structure.
  */
-export function _decode_PDSParameter(el: _Element) {
+export function _decode_PDSParameter(el: _Element): PDSParameter {
     if (!_cached_decoder_for_PDSParameter) {
         _cached_decoder_for_PDSParameter = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_PDSParameter: $.ASN1Encoder<PDSParameter> | null = null;
 export function _encode_PDSParameter(
     value: PDSParameter,
     elGetter: $.ASN1Encoder<PDSParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_PDSParameter) {
         _cached_encoder_for_PDSParameter = function (
             value: PDSParameter        ): _Element {

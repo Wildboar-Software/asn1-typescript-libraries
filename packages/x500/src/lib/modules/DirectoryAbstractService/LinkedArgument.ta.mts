@@ -31,7 +31,7 @@ let _cached_decoder_for_LinkedArgument: $.ASN1Decoder<LinkedArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {LinkedArgument} The decoded data structure.
  */
-export function _decode_LinkedArgument(el: _Element) {
+export function _decode_LinkedArgument(el: _Element): LinkedArgument {
     if (!_cached_decoder_for_LinkedArgument) {
         _cached_decoder_for_LinkedArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<LinkedArgumentData>(
             _decode_LinkedArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_LinkedArgument: $.ASN1Encoder<LinkedArgument> | null = n
 export function _encode_LinkedArgument(
     value: LinkedArgument,
     elGetter: $.ASN1Encoder<LinkedArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_LinkedArgument) {
         _cached_encoder_for_LinkedArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<LinkedArgumentData>(
             _encode_LinkedArgumentData

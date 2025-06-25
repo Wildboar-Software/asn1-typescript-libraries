@@ -26,7 +26,7 @@ let _cached_decoder_for_SelectedTypes: $.ASN1Decoder<SelectedTypes> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SelectedTypes} The decoded data structure.
  */
-export function _decode_SelectedTypes(el: _Element) {
+export function _decode_SelectedTypes(el: _Element): SelectedTypes {
     if (!_cached_decoder_for_SelectedTypes) {
         _cached_decoder_for_SelectedTypes = $._decodeSequenceOf<AttributeType>(
             () => _decode_AttributeType
@@ -47,7 +47,7 @@ let _cached_encoder_for_SelectedTypes: $.ASN1Encoder<SelectedTypes> | null = nul
 export function _encode_SelectedTypes(
     value: SelectedTypes,
     elGetter: $.ASN1Encoder<SelectedTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_SelectedTypes) {
         _cached_encoder_for_SelectedTypes = $._encodeSequenceOf<AttributeType>(
             () => _encode_AttributeType,

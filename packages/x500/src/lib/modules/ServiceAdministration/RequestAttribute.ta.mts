@@ -225,7 +225,7 @@ let _cached_decoder_for_RequestAttribute: $.ASN1Decoder<RequestAttribute> | null
  * @param {_Element} el The element being decoded.
  * @returns {RequestAttribute} The decoded data structure.
  */
-export function _decode_RequestAttribute(el: _Element) {
+export function _decode_RequestAttribute(el: _Element): RequestAttribute {
     if (!_cached_decoder_for_RequestAttribute) {
         _cached_decoder_for_RequestAttribute = function (
             el: _Element
@@ -320,7 +320,7 @@ let _cached_encoder_for_RequestAttribute: $.ASN1Encoder<RequestAttribute> | null
 export function _encode_RequestAttribute(
     value: RequestAttribute,
     elGetter: $.ASN1Encoder<RequestAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestAttribute) {
         _cached_encoder_for_RequestAttribute = function (
             value: RequestAttribute        ): _Element {

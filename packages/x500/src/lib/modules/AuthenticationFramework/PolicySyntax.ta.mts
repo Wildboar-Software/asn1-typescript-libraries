@@ -124,7 +124,7 @@ let _cached_decoder_for_PolicySyntax: $.ASN1Decoder<PolicySyntax> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PolicySyntax} The decoded data structure.
  */
-export function _decode_PolicySyntax(el: _Element) {
+export function _decode_PolicySyntax(el: _Element): PolicySyntax {
     if (!_cached_decoder_for_PolicySyntax) {
         _cached_decoder_for_PolicySyntax = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_PolicySyntax: $.ASN1Encoder<PolicySyntax> | null = null;
 export function _encode_PolicySyntax(
     value: PolicySyntax,
     elGetter: $.ASN1Encoder<PolicySyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicySyntax) {
         _cached_encoder_for_PolicySyntax = function (
             value: PolicySyntax        ): _Element {

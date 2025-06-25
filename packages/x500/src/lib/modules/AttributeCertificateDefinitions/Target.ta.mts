@@ -39,7 +39,7 @@ let _cached_decoder_for_Target: $.ASN1Decoder<Target> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Target} The decoded data structure.
  */
-export function _decode_Target(el: _Element) {
+export function _decode_Target(el: _Element): Target {
     if (!_cached_decoder_for_Target) {
         _cached_decoder_for_Target = $._decode_extensible_choice<Target>({
             "CONTEXT 0": [
@@ -68,7 +68,7 @@ let _cached_encoder_for_Target: $.ASN1Encoder<Target> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Target, encoded as an ASN.1 Element.
  */
-export function _encode_Target(value: Target, elGetter: $.ASN1Encoder<Target>) {
+export function _encode_Target(value: Target, elGetter: $.ASN1Encoder<Target>): _Element {
     if (!_cached_encoder_for_Target) {
         _cached_encoder_for_Target = $._encode_choice<Target>(
             {

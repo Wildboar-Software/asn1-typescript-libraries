@@ -124,7 +124,7 @@ let _cached_decoder_for_HierarchicalAgreement: $.ASN1Decoder<HierarchicalAgreeme
  * @param {_Element} el The element being decoded.
  * @returns {HierarchicalAgreement} The decoded data structure.
  */
-export function _decode_HierarchicalAgreement(el: _Element) {
+export function _decode_HierarchicalAgreement(el: _Element): HierarchicalAgreement {
     if (!_cached_decoder_for_HierarchicalAgreement) {
         _cached_decoder_for_HierarchicalAgreement = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_HierarchicalAgreement: $.ASN1Encoder<HierarchicalAgreeme
 export function _encode_HierarchicalAgreement(
     value: HierarchicalAgreement,
     elGetter: $.ASN1Encoder<HierarchicalAgreement>
-) {
+): _Element {
     if (!_cached_encoder_for_HierarchicalAgreement) {
         _cached_encoder_for_HierarchicalAgreement = function (
             value: HierarchicalAgreement        ): _Element {

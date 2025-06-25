@@ -216,7 +216,7 @@ let _cached_decoder_for_ContentChange: $.ASN1Decoder<ContentChange> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ContentChange} The decoded data structure.
  */
-export function _decode_ContentChange(el: _Element) {
+export function _decode_ContentChange(el: _Element): ContentChange {
     if (!_cached_decoder_for_ContentChange) {
         _cached_decoder_for_ContentChange = function (
             el: _Element
@@ -294,7 +294,7 @@ let _cached_encoder_for_ContentChange: $.ASN1Encoder<ContentChange> | null = nul
 export function _encode_ContentChange(
     value: ContentChange,
     elGetter: $.ASN1Encoder<ContentChange>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentChange) {
         _cached_encoder_for_ContentChange = function (
             value: ContentChange        ): _Element {

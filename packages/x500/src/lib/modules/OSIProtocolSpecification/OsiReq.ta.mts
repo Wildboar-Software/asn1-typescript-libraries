@@ -113,7 +113,7 @@ let _cached_decoder_for_OsiReq: $.ASN1Decoder<OsiReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiReq} The decoded data structure.
  */
-export function _decode_OsiReq(el: _Element) {
+export function _decode_OsiReq(el: _Element): OsiReq {
     if (!_cached_decoder_for_OsiReq) {
         _cached_decoder_for_OsiReq = $._decode_implicit<OsiReq>(
             () =>
@@ -151,7 +151,7 @@ let _cached_encoder_for_OsiReq: $.ASN1Encoder<OsiReq> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OsiReq, encoded as an ASN.1 Element.
  */
-export function _encode_OsiReq(value: OsiReq, elGetter: $.ASN1Encoder<OsiReq>) {
+export function _encode_OsiReq(value: OsiReq, elGetter: $.ASN1Encoder<OsiReq>): _Element {
     if (!_cached_encoder_for_OsiReq) {
         _cached_encoder_for_OsiReq = $._encode_implicit(
             _TagClass.context,

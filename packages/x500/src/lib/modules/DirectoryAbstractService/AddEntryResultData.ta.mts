@@ -105,7 +105,7 @@ export class AddEntryResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -150,7 +150,7 @@ let _cached_decoder_for_AddEntryResultData: $.ASN1Decoder<AddEntryResultData> | 
  * @param {_Element} el The element being decoded.
  * @returns {AddEntryResultData} The decoded data structure.
  */
-export function _decode_AddEntryResultData(el: _Element) {
+export function _decode_AddEntryResultData(el: _Element): AddEntryResultData {
     if (!_cached_decoder_for_AddEntryResultData) {
         _cached_decoder_for_AddEntryResultData = function (
             el: _Element
@@ -217,7 +217,7 @@ let _cached_encoder_for_AddEntryResultData: $.ASN1Encoder<AddEntryResultData> | 
 export function _encode_AddEntryResultData(
     value: AddEntryResultData,
     elGetter: $.ASN1Encoder<AddEntryResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_AddEntryResultData) {
         _cached_encoder_for_AddEntryResultData = function (
             value: AddEntryResultData        ): _Element {

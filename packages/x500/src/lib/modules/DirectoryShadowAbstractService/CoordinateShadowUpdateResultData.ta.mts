@@ -135,7 +135,7 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -191,7 +191,7 @@ let _cached_decoder_for_CoordinateShadowUpdateResultData: $.ASN1Decoder<Coordina
  * @param {_Element} el The element being decoded.
  * @returns {CoordinateShadowUpdateResultData} The decoded data structure.
  */
-export function _decode_CoordinateShadowUpdateResultData(el: _Element) {
+export function _decode_CoordinateShadowUpdateResultData(el: _Element): CoordinateShadowUpdateResultData {
     if (!_cached_decoder_for_CoordinateShadowUpdateResultData) {
         _cached_decoder_for_CoordinateShadowUpdateResultData = $._decode_implicit<CoordinateShadowUpdateResultData>(
             () =>
@@ -271,7 +271,7 @@ let _cached_encoder_for_CoordinateShadowUpdateResultData: $.ASN1Encoder<Coordina
 export function _encode_CoordinateShadowUpdateResultData(
     value: CoordinateShadowUpdateResultData,
     elGetter: $.ASN1Encoder<CoordinateShadowUpdateResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_CoordinateShadowUpdateResultData) {
         _cached_encoder_for_CoordinateShadowUpdateResultData = $._encode_implicit(
             _TagClass.context,

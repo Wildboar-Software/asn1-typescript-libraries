@@ -26,7 +26,7 @@ let _cached_decoder_for_OWF_Algs: $.ASN1Decoder<OWF_Algs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OWF_Algs} The decoded data structure.
  */
-export function _decode_OWF_Algs(el: _Element) {
+export function _decode_OWF_Algs(el: _Element): OWF_Algs {
     if (!_cached_decoder_for_OWF_Algs) {
         _cached_decoder_for_OWF_Algs = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -47,7 +47,7 @@ let _cached_encoder_for_OWF_Algs: $.ASN1Encoder<OWF_Algs> | null = null;
 export function _encode_OWF_Algs(
     value: OWF_Algs,
     elGetter: $.ASN1Encoder<OWF_Algs>
-) {
+): _Element {
     if (!_cached_encoder_for_OWF_Algs) {
         _cached_encoder_for_OWF_Algs = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

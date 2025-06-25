@@ -37,7 +37,7 @@ let _cached_decoder_for_DataTransferClient: $.ASN1Decoder<DataTransferClient> | 
  * @param {_Element} el The element being decoded.
  * @returns {DataTransferClient} The decoded data structure.
  */
-export function _decode_DataTransferClient(el: _Element) {
+export function _decode_DataTransferClient(el: _Element): DataTransferClient {
     if (!_cached_decoder_for_DataTransferClient) {
         _cached_decoder_for_DataTransferClient = $._decode_extensible_choice<DataTransferClient>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_DataTransferClient: $.ASN1Encoder<DataTransferClient> | 
 export function _encode_DataTransferClient(
     value: DataTransferClient,
     elGetter: $.ASN1Encoder<DataTransferClient>
-) {
+): _Element {
     if (!_cached_encoder_for_DataTransferClient) {
         _cached_encoder_for_DataTransferClient = $._encode_choice<DataTransferClient>(
             {

@@ -35,7 +35,7 @@ let _cached_decoder_for_UserPwd: $.ASN1Decoder<UserPwd> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UserPwd} The decoded data structure.
  */
-export function _decode_UserPwd(el: _Element) {
+export function _decode_UserPwd(el: _Element): UserPwd {
     if (!_cached_decoder_for_UserPwd) {
         _cached_decoder_for_UserPwd = $._decode_extensible_choice<UserPwd>({
             "UNIVERSAL 12": ["clear", $._decodeUTF8String],
@@ -57,7 +57,7 @@ let _cached_encoder_for_UserPwd: $.ASN1Encoder<UserPwd> | null = null;
 export function _encode_UserPwd(
     value: UserPwd,
     elGetter: $.ASN1Encoder<UserPwd>
-) {
+): _Element {
     if (!_cached_encoder_for_UserPwd) {
         _cached_encoder_for_UserPwd = $._encode_choice<UserPwd>(
             {

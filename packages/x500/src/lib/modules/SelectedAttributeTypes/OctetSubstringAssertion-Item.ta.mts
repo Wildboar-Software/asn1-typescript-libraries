@@ -30,7 +30,7 @@ let _cached_decoder_for_OctetSubstringAssertion_Item: $.ASN1Decoder<OctetSubstri
  * @param {_Element} el The element being decoded.
  * @returns {OctetSubstringAssertion_Item} The decoded data structure.
  */
-export function _decode_OctetSubstringAssertion_Item(el: _Element) {
+export function _decode_OctetSubstringAssertion_Item(el: _Element): OctetSubstringAssertion_Item {
     if (!_cached_decoder_for_OctetSubstringAssertion_Item) {
         _cached_decoder_for_OctetSubstringAssertion_Item = $._decode_extensible_choice<OctetSubstringAssertion_Item>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_OctetSubstringAssertion_Item: $.ASN1Encoder<OctetSubstri
 export function _encode_OctetSubstringAssertion_Item(
     value: OctetSubstringAssertion_Item,
     elGetter: $.ASN1Encoder<OctetSubstringAssertion_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_OctetSubstringAssertion_Item) {
         _cached_encoder_for_OctetSubstringAssertion_Item = $._encode_choice<OctetSubstringAssertion_Item>(
             {

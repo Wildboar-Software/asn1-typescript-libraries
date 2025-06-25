@@ -34,7 +34,7 @@ let _cached_decoder_for_ChopSpecification_specificExclusions_Item: $.ASN1Decoder
  */
 export function _decode_ChopSpecification_specificExclusions_Item(
     el: _Element
-) {
+): ChopSpecification_specificExclusions_Item {
     if (!_cached_decoder_for_ChopSpecification_specificExclusions_Item) {
         _cached_decoder_for_ChopSpecification_specificExclusions_Item = $._decode_extensible_choice<ChopSpecification_specificExclusions_Item>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_ChopSpecification_specificExclusions_Item: $.ASN1Encoder
 export function _encode_ChopSpecification_specificExclusions_Item(
     value: ChopSpecification_specificExclusions_Item,
     elGetter: $.ASN1Encoder<ChopSpecification_specificExclusions_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ChopSpecification_specificExclusions_Item) {
         _cached_encoder_for_ChopSpecification_specificExclusions_Item = $._encode_choice<ChopSpecification_specificExclusions_Item>(
             {

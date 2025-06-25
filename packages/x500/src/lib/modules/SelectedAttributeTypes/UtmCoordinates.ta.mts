@@ -118,7 +118,7 @@ let _cached_decoder_for_UtmCoordinates: $.ASN1Decoder<UtmCoordinates> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UtmCoordinates} The decoded data structure.
  */
-export function _decode_UtmCoordinates(el: _Element) {
+export function _decode_UtmCoordinates(el: _Element): UtmCoordinates {
     if (!_cached_decoder_for_UtmCoordinates) {
         _cached_decoder_for_UtmCoordinates = function (
             el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_UtmCoordinates: $.ASN1Encoder<UtmCoordinates> | null = n
 export function _encode_UtmCoordinates(
     value: UtmCoordinates,
     elGetter: $.ASN1Encoder<UtmCoordinates>
-) {
+): _Element {
     if (!_cached_encoder_for_UtmCoordinates) {
         _cached_encoder_for_UtmCoordinates = function (
             value: UtmCoordinates        ): _Element {

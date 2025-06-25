@@ -115,7 +115,7 @@ let _cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType: $.ASN1
  */
 export function _decode_supplierOrConsumerInformationMatch_AssertionType(
     el: _Element
-) {
+): supplierOrConsumerInformationMatch_AssertionType {
     if (!_cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType) {
         _cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType: $.ASN1
 export function _encode_supplierOrConsumerInformationMatch_AssertionType(
     value: supplierOrConsumerInformationMatch_AssertionType,
     elGetter: $.ASN1Encoder<supplierOrConsumerInformationMatch_AssertionType>
-) {
+): _Element {
     if (!_cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType) {
         _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType = function (
             value: supplierOrConsumerInformationMatch_AssertionType        ): _Element {

@@ -112,7 +112,7 @@ let _cached_decoder_for_RepAvlErr: $.ASN1Decoder<RepAvlErr> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RepAvlErr} The decoded data structure.
  */
-export function _decode_RepAvlErr(el: _Element) {
+export function _decode_RepAvlErr(el: _Element): RepAvlErr {
     if (!_cached_decoder_for_RepAvlErr) {
         _cached_decoder_for_RepAvlErr = function (el: _Element): RepAvlErr {
             const sequence: _Element[] = el.sequence;
@@ -144,7 +144,7 @@ let _cached_encoder_for_RepAvlErr: $.ASN1Encoder<RepAvlErr> | null = null;
 export function _encode_RepAvlErr(
     value: RepAvlErr,
     elGetter: $.ASN1Encoder<RepAvlErr>
-) {
+): _Element {
     if (!_cached_encoder_for_RepAvlErr) {
         _cached_encoder_for_RepAvlErr = function (
             value: RepAvlErr        ): _Element {

@@ -137,7 +137,7 @@ let _cached_decoder_for_JoinAttPair: $.ASN1Decoder<JoinAttPair> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {JoinAttPair} The decoded data structure.
  */
-export function _decode_JoinAttPair(el: _Element) {
+export function _decode_JoinAttPair(el: _Element): JoinAttPair {
     if (!_cached_decoder_for_JoinAttPair) {
         _cached_decoder_for_JoinAttPair = function (el: _Element): JoinAttPair {
             let baseAtt!: AttributeType;
@@ -190,7 +190,7 @@ let _cached_encoder_for_JoinAttPair: $.ASN1Encoder<JoinAttPair> | null = null;
 export function _encode_JoinAttPair(
     value: JoinAttPair,
     elGetter: $.ASN1Encoder<JoinAttPair>
-) {
+): _Element {
     if (!_cached_encoder_for_JoinAttPair) {
         _cached_encoder_for_JoinAttPair = function (
             value: JoinAttPair        ): _Element {

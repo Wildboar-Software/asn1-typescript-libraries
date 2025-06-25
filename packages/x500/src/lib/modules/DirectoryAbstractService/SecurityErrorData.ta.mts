@@ -146,7 +146,7 @@ export class SecurityErrorData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -210,7 +210,7 @@ let _cached_decoder_for_SecurityErrorData: $.ASN1Decoder<SecurityErrorData> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SecurityErrorData} The decoded data structure.
  */
-export function _decode_SecurityErrorData(el: _Element) {
+export function _decode_SecurityErrorData(el: _Element): SecurityErrorData {
     if (!_cached_decoder_for_SecurityErrorData) {
         _cached_decoder_for_SecurityErrorData = function (
             el: _Element
@@ -300,7 +300,7 @@ let _cached_encoder_for_SecurityErrorData: $.ASN1Encoder<SecurityErrorData> | nu
 export function _encode_SecurityErrorData(
     value: SecurityErrorData,
     elGetter: $.ASN1Encoder<SecurityErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityErrorData) {
         _cached_encoder_for_SecurityErrorData = function (
             value: SecurityErrorData        ): _Element {

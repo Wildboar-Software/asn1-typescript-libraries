@@ -142,7 +142,7 @@ let _cached_decoder_for_SupportedAlgorithm: $.ASN1Decoder<SupportedAlgorithm> | 
  * @param {_Element} el The element being decoded.
  * @returns {SupportedAlgorithm} The decoded data structure.
  */
-export function _decode_SupportedAlgorithm(el: _Element) {
+export function _decode_SupportedAlgorithm(el: _Element): SupportedAlgorithm {
     if (!_cached_decoder_for_SupportedAlgorithm) {
         _cached_decoder_for_SupportedAlgorithm = function (
             el: _Element
@@ -199,7 +199,7 @@ let _cached_encoder_for_SupportedAlgorithm: $.ASN1Encoder<SupportedAlgorithm> | 
 export function _encode_SupportedAlgorithm(
     value: SupportedAlgorithm,
     elGetter: $.ASN1Encoder<SupportedAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedAlgorithm) {
         _cached_encoder_for_SupportedAlgorithm = function (
             value: SupportedAlgorithm        ): _Element {

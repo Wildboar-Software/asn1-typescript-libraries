@@ -28,7 +28,7 @@ let _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Decoder
  */
 export function _decode_UniversalPhysicalDeliveryOrganizationName(
     el: _Element
-) {
+): UniversalPhysicalDeliveryOrganizationName {
     if (!_cached_decoder_for_UniversalPhysicalDeliveryOrganizationName) {
         _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName = _decode_UniversalPDSParameter;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Encoder
 export function _encode_UniversalPhysicalDeliveryOrganizationName(
     value: UniversalPhysicalDeliveryOrganizationName,
     elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryOrganizationName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPhysicalDeliveryOrganizationName) {
         _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName = _encode_UniversalPDSParameter;
     }

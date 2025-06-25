@@ -39,7 +39,7 @@ let _cached_decoder_for_IncrementalStepRefresh_sDSEChanges: $.ASN1Decoder<Increm
  * @param {_Element} el The element being decoded.
  * @returns {IncrementalStepRefresh_sDSEChanges} The decoded data structure.
  */
-export function _decode_IncrementalStepRefresh_sDSEChanges(el: _Element) {
+export function _decode_IncrementalStepRefresh_sDSEChanges(el: _Element): IncrementalStepRefresh_sDSEChanges {
     if (!_cached_decoder_for_IncrementalStepRefresh_sDSEChanges) {
         _cached_decoder_for_IncrementalStepRefresh_sDSEChanges = $._decode_extensible_choice<IncrementalStepRefresh_sDSEChanges>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_IncrementalStepRefresh_sDSEChanges: $.ASN1Encoder<Increm
 export function _encode_IncrementalStepRefresh_sDSEChanges(
     value: IncrementalStepRefresh_sDSEChanges,
     elGetter: $.ASN1Encoder<IncrementalStepRefresh_sDSEChanges>
-) {
+): _Element {
     if (!_cached_encoder_for_IncrementalStepRefresh_sDSEChanges) {
         _cached_encoder_for_IncrementalStepRefresh_sDSEChanges = $._encode_choice<IncrementalStepRefresh_sDSEChanges>(
             {

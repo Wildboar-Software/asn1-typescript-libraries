@@ -227,7 +227,7 @@ let _cached_decoder_for_PerAuthorityScope: $.ASN1Decoder<PerAuthorityScope> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PerAuthorityScope} The decoded data structure.
  */
-export function _decode_PerAuthorityScope(el: _Element) {
+export function _decode_PerAuthorityScope(el: _Element): PerAuthorityScope {
     if (!_cached_decoder_for_PerAuthorityScope) {
         _cached_decoder_for_PerAuthorityScope = function (
             el: _Element
@@ -321,7 +321,7 @@ let _cached_encoder_for_PerAuthorityScope: $.ASN1Encoder<PerAuthorityScope> | nu
 export function _encode_PerAuthorityScope(
     value: PerAuthorityScope,
     elGetter: $.ASN1Encoder<PerAuthorityScope>
-) {
+): _Element {
     if (!_cached_encoder_for_PerAuthorityScope) {
         _cached_encoder_for_PerAuthorityScope = function (
             value: PerAuthorityScope        ): _Element {

@@ -32,7 +32,7 @@ let _cached_decoder_for_AdministerPasswordArgument: $.ASN1Decoder<AdministerPass
  * @param {_Element} el The element being decoded.
  * @returns {AdministerPasswordArgument} The decoded data structure.
  */
-export function _decode_AdministerPasswordArgument(el: _Element) {
+export function _decode_AdministerPasswordArgument(el: _Element): AdministerPasswordArgument {
     if (!_cached_decoder_for_AdministerPasswordArgument) {
         _cached_decoder_for_AdministerPasswordArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<AdministerPasswordArgumentData>(
             _decode_AdministerPasswordArgumentData
@@ -53,7 +53,7 @@ let _cached_encoder_for_AdministerPasswordArgument: $.ASN1Encoder<AdministerPass
 export function _encode_AdministerPasswordArgument(
     value: AdministerPasswordArgument,
     elGetter: $.ASN1Encoder<AdministerPasswordArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_AdministerPasswordArgument) {
         _cached_encoder_for_AdministerPasswordArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<AdministerPasswordArgumentData>(
             _encode_AdministerPasswordArgumentData

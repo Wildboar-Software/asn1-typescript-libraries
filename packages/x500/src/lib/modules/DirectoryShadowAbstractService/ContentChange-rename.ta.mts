@@ -33,7 +33,7 @@ let _cached_decoder_for_ContentChange_rename: $.ASN1Decoder<ContentChange_rename
  * @param {_Element} el The element being decoded.
  * @returns {ContentChange_rename} The decoded data structure.
  */
-export function _decode_ContentChange_rename(el: _Element) {
+export function _decode_ContentChange_rename(el: _Element): ContentChange_rename {
     if (!_cached_decoder_for_ContentChange_rename) {
         _cached_decoder_for_ContentChange_rename = $._decode_inextensible_choice<ContentChange_rename>(
             {
@@ -57,7 +57,7 @@ let _cached_encoder_for_ContentChange_rename: $.ASN1Encoder<ContentChange_rename
 export function _encode_ContentChange_rename(
     value: ContentChange_rename,
     elGetter: $.ASN1Encoder<ContentChange_rename>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentChange_rename) {
         _cached_encoder_for_ContentChange_rename = $._encode_choice<ContentChange_rename>(
             {

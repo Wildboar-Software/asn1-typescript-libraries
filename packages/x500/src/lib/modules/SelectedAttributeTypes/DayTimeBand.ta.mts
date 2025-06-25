@@ -138,7 +138,7 @@ let _cached_decoder_for_DayTimeBand: $.ASN1Decoder<DayTimeBand> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DayTimeBand} The decoded data structure.
  */
-export function _decode_DayTimeBand(el: _Element) {
+export function _decode_DayTimeBand(el: _Element): DayTimeBand {
     if (!_cached_decoder_for_DayTimeBand) {
         _cached_decoder_for_DayTimeBand = function (el: _Element): DayTimeBand {
             let startDayTime: OPTIONAL<DayTime> =
@@ -190,7 +190,7 @@ let _cached_encoder_for_DayTimeBand: $.ASN1Encoder<DayTimeBand> | null = null;
 export function _encode_DayTimeBand(
     value: DayTimeBand,
     elGetter: $.ASN1Encoder<DayTimeBand>
-) {
+): _Element {
     if (!_cached_encoder_for_DayTimeBand) {
         _cached_encoder_for_DayTimeBand = function (
             value: DayTimeBand        ): _Element {

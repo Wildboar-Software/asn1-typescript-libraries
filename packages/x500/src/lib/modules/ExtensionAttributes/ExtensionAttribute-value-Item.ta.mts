@@ -79,7 +79,7 @@ export class ExtensionAttribute_value_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_mandatory() {
+    public static get _default_value_for_mandatory(): BOOLEAN {
         return false;
     }
     /**
@@ -88,7 +88,7 @@ export class ExtensionAttribute_value_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_critical() {
+    public static get _default_value_for_critical(): BOOLEAN {
         return false;
     }
 }
@@ -147,7 +147,7 @@ let _cached_decoder_for_ExtensionAttribute_value_Item: $.ASN1Decoder<ExtensionAt
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionAttribute_value_Item} The decoded data structure.
  */
-export function _decode_ExtensionAttribute_value_Item(el: _Element) {
+export function _decode_ExtensionAttribute_value_Item(el: _Element): ExtensionAttribute_value_Item {
     if (!_cached_decoder_for_ExtensionAttribute_value_Item) {
         _cached_decoder_for_ExtensionAttribute_value_Item = function (
             el: _Element
@@ -206,7 +206,7 @@ let _cached_encoder_for_ExtensionAttribute_value_Item: $.ASN1Encoder<ExtensionAt
 export function _encode_ExtensionAttribute_value_Item(
     value: ExtensionAttribute_value_Item,
     elGetter: $.ASN1Encoder<ExtensionAttribute_value_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionAttribute_value_Item) {
         _cached_encoder_for_ExtensionAttribute_value_Item = function (
             value: ExtensionAttribute_value_Item        ): _Element {

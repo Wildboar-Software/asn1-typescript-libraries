@@ -26,7 +26,7 @@ let _cached_decoder_for_ResultAuthenticationPolicy: $.ASN1Decoder<ResultAuthenti
  * @param {_Element} el The element being decoded.
  * @returns {ResultAuthenticationPolicy} The decoded data structure.
  */
-export function _decode_ResultAuthenticationPolicy(el: _Element) {
+export function _decode_ResultAuthenticationPolicy(el: _Element): ResultAuthenticationPolicy {
     if (!_cached_decoder_for_ResultAuthenticationPolicy) {
         _cached_decoder_for_ResultAuthenticationPolicy = _decode_RequestAuthenticationPolicy;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ResultAuthenticationPolicy: $.ASN1Encoder<ResultAuthenti
 export function _encode_ResultAuthenticationPolicy(
     value: ResultAuthenticationPolicy,
     elGetter: $.ASN1Encoder<ResultAuthenticationPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_ResultAuthenticationPolicy) {
         _cached_encoder_for_ResultAuthenticationPolicy = _encode_RequestAuthenticationPolicy;
     }

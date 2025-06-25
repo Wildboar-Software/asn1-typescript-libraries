@@ -112,7 +112,7 @@ let _cached_decoder_for_CertReplaceErr: $.ASN1Decoder<CertReplaceErr> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertReplaceErr} The decoded data structure.
  */
-export function _decode_CertReplaceErr(el: _Element) {
+export function _decode_CertReplaceErr(el: _Element): CertReplaceErr {
     if (!_cached_decoder_for_CertReplaceErr) {
         _cached_decoder_for_CertReplaceErr = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_CertReplaceErr: $.ASN1Encoder<CertReplaceErr> | null = n
 export function _encode_CertReplaceErr(
     value: CertReplaceErr,
     elGetter: $.ASN1Encoder<CertReplaceErr>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReplaceErr) {
         _cached_encoder_for_CertReplaceErr = function (
             value: CertReplaceErr        ): _Element {

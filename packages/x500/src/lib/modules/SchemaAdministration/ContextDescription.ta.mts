@@ -106,7 +106,7 @@ export class ContextDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -181,7 +181,7 @@ let _cached_decoder_for_ContextDescription: $.ASN1Decoder<ContextDescription> | 
  * @param {_Element} el The element being decoded.
  * @returns {ContextDescription} The decoded data structure.
  */
-export function _decode_ContextDescription(el: _Element) {
+export function _decode_ContextDescription(el: _Element): ContextDescription {
     if (!_cached_decoder_for_ContextDescription) {
         _cached_decoder_for_ContextDescription = function (
             el: _Element
@@ -249,7 +249,7 @@ let _cached_encoder_for_ContextDescription: $.ASN1Encoder<ContextDescription> | 
 export function _encode_ContextDescription(
     value: ContextDescription,
     elGetter: $.ASN1Encoder<ContextDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextDescription) {
         _cached_encoder_for_ContextDescription = function (
             value: ContextDescription        ): _Element {

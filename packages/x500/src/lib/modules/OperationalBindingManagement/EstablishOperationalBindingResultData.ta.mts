@@ -164,7 +164,7 @@ export class EstablishOperationalBindingResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -226,7 +226,7 @@ let _cached_decoder_for_EstablishOperationalBindingResultData: $.ASN1Decoder<Est
  * @param {_Element} el The element being decoded.
  * @returns {EstablishOperationalBindingResultData} The decoded data structure.
  */
-export function _decode_EstablishOperationalBindingResultData(el: _Element) {
+export function _decode_EstablishOperationalBindingResultData(el: _Element): EstablishOperationalBindingResultData {
     if (!_cached_decoder_for_EstablishOperationalBindingResultData) {
         _cached_decoder_for_EstablishOperationalBindingResultData = function (
             el: _Element
@@ -321,7 +321,7 @@ let _cached_encoder_for_EstablishOperationalBindingResultData: $.ASN1Encoder<Est
 export function _encode_EstablishOperationalBindingResultData(
     value: EstablishOperationalBindingResultData,
     elGetter: $.ASN1Encoder<EstablishOperationalBindingResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_EstablishOperationalBindingResultData) {
         _cached_encoder_for_EstablishOperationalBindingResultData = function (
             value: EstablishOperationalBindingResultData        ): _Element {

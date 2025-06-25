@@ -31,7 +31,7 @@ let _cached_decoder_for_ModifyDNArgument: $.ASN1Decoder<ModifyDNArgument> | null
  * @param {_Element} el The element being decoded.
  * @returns {ModifyDNArgument} The decoded data structure.
  */
-export function _decode_ModifyDNArgument(el: _Element) {
+export function _decode_ModifyDNArgument(el: _Element): ModifyDNArgument {
     if (!_cached_decoder_for_ModifyDNArgument) {
         _cached_decoder_for_ModifyDNArgument = _get_decoder_for_OPTIONALLY_PROTECTED<ModifyDNArgumentData>(
             _decode_ModifyDNArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_ModifyDNArgument: $.ASN1Encoder<ModifyDNArgument> | null
 export function _encode_ModifyDNArgument(
     value: ModifyDNArgument,
     elGetter: $.ASN1Encoder<ModifyDNArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyDNArgument) {
         _cached_encoder_for_ModifyDNArgument = _get_encoder_for_OPTIONALLY_PROTECTED<ModifyDNArgumentData>(
             _encode_ModifyDNArgumentData

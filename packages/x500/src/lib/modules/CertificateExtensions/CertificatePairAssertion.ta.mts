@@ -125,7 +125,7 @@ let _cached_decoder_for_CertificatePairAssertion: $.ASN1Decoder<CertificatePairA
  * @param {_Element} el The element being decoded.
  * @returns {CertificatePairAssertion} The decoded data structure.
  */
-export function _decode_CertificatePairAssertion(el: _Element) {
+export function _decode_CertificatePairAssertion(el: _Element): CertificatePairAssertion {
     if (!_cached_decoder_for_CertificatePairAssertion) {
         _cached_decoder_for_CertificatePairAssertion = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_CertificatePairAssertion: $.ASN1Encoder<CertificatePairA
 export function _encode_CertificatePairAssertion(
     value: CertificatePairAssertion,
     elGetter: $.ASN1Encoder<CertificatePairAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificatePairAssertion) {
         _cached_encoder_for_CertificatePairAssertion = function (
             value: CertificatePairAssertion        ): _Element {

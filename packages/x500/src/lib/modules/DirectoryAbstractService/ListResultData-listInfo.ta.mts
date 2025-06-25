@@ -144,7 +144,7 @@ export class ListResultData_listInfo implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -208,7 +208,7 @@ let _cached_decoder_for_ListResultData_listInfo: $.ASN1Decoder<ListResultData_li
  * @param {_Element} el The element being decoded.
  * @returns {ListResultData_listInfo} The decoded data structure.
  */
-export function _decode_ListResultData_listInfo(el: _Element) {
+export function _decode_ListResultData_listInfo(el: _Element): ListResultData_listInfo {
     if (!_cached_decoder_for_ListResultData_listInfo) {
         _cached_decoder_for_ListResultData_listInfo = function (
             el: _Element
@@ -301,7 +301,7 @@ let _cached_encoder_for_ListResultData_listInfo: $.ASN1Encoder<ListResultData_li
 export function _encode_ListResultData_listInfo(
     value: ListResultData_listInfo,
     elGetter: $.ASN1Encoder<ListResultData_listInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ListResultData_listInfo) {
         _cached_encoder_for_ListResultData_listInfo = function (
             value: ListResultData_listInfo        ): _Element {

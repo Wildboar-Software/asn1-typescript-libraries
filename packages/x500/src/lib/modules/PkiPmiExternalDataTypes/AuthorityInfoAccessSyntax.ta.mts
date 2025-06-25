@@ -26,7 +26,7 @@ let _cached_decoder_for_AuthorityInfoAccessSyntax: $.ASN1Decoder<AuthorityInfoAc
  * @param {_Element} el The element being decoded.
  * @returns {AuthorityInfoAccessSyntax} The decoded data structure.
  */
-export function _decode_AuthorityInfoAccessSyntax(el: _Element) {
+export function _decode_AuthorityInfoAccessSyntax(el: _Element): AuthorityInfoAccessSyntax {
     if (!_cached_decoder_for_AuthorityInfoAccessSyntax) {
         _cached_decoder_for_AuthorityInfoAccessSyntax = $._decodeSequenceOf<AccessDescription>(
             () => _decode_AccessDescription
@@ -47,7 +47,7 @@ let _cached_encoder_for_AuthorityInfoAccessSyntax: $.ASN1Encoder<AuthorityInfoAc
 export function _encode_AuthorityInfoAccessSyntax(
     value: AuthorityInfoAccessSyntax,
     elGetter: $.ASN1Encoder<AuthorityInfoAccessSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorityInfoAccessSyntax) {
         _cached_encoder_for_AuthorityInfoAccessSyntax = $._encodeSequenceOf<AccessDescription>(
             () => _encode_AccessDescription,

@@ -132,7 +132,7 @@ export class RequestShadowUpdateResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -188,7 +188,7 @@ let _cached_decoder_for_RequestShadowUpdateResultData: $.ASN1Decoder<RequestShad
  * @param {_Element} el The element being decoded.
  * @returns {RequestShadowUpdateResultData} The decoded data structure.
  */
-export function _decode_RequestShadowUpdateResultData(el: _Element) {
+export function _decode_RequestShadowUpdateResultData(el: _Element): RequestShadowUpdateResultData {
     if (!_cached_decoder_for_RequestShadowUpdateResultData) {
         _cached_decoder_for_RequestShadowUpdateResultData = $._decode_implicit<RequestShadowUpdateResultData>(
             () =>
@@ -268,7 +268,7 @@ let _cached_encoder_for_RequestShadowUpdateResultData: $.ASN1Encoder<RequestShad
 export function _encode_RequestShadowUpdateResultData(
     value: RequestShadowUpdateResultData,
     elGetter: $.ASN1Encoder<RequestShadowUpdateResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestShadowUpdateResultData) {
         _cached_encoder_for_RequestShadowUpdateResultData = $._encode_implicit(
             _TagClass.context,

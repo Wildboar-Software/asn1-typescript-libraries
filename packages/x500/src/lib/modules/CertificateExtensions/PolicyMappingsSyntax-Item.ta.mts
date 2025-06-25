@@ -120,7 +120,7 @@ let _cached_decoder_for_PolicyMappingsSyntax_Item: $.ASN1Decoder<PolicyMappingsS
  * @param {_Element} el The element being decoded.
  * @returns {PolicyMappingsSyntax_Item} The decoded data structure.
  */
-export function _decode_PolicyMappingsSyntax_Item(el: _Element) {
+export function _decode_PolicyMappingsSyntax_Item(el: _Element): PolicyMappingsSyntax_Item {
     if (!_cached_decoder_for_PolicyMappingsSyntax_Item) {
         _cached_decoder_for_PolicyMappingsSyntax_Item = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_PolicyMappingsSyntax_Item: $.ASN1Encoder<PolicyMappingsS
 export function _encode_PolicyMappingsSyntax_Item(
     value: PolicyMappingsSyntax_Item,
     elGetter: $.ASN1Encoder<PolicyMappingsSyntax_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyMappingsSyntax_Item) {
         _cached_encoder_for_PolicyMappingsSyntax_Item = function (
             value: PolicyMappingsSyntax_Item        ): _Element {

@@ -106,7 +106,7 @@ export class ObjectClassDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -181,7 +181,7 @@ let _cached_decoder_for_ObjectClassDescription: $.ASN1Decoder<ObjectClassDescrip
  * @param {_Element} el The element being decoded.
  * @returns {ObjectClassDescription} The decoded data structure.
  */
-export function _decode_ObjectClassDescription(el: _Element) {
+export function _decode_ObjectClassDescription(el: _Element): ObjectClassDescription {
     if (!_cached_decoder_for_ObjectClassDescription) {
         _cached_decoder_for_ObjectClassDescription = function (
             el: _Element
@@ -249,7 +249,7 @@ let _cached_encoder_for_ObjectClassDescription: $.ASN1Encoder<ObjectClassDescrip
 export function _encode_ObjectClassDescription(
     value: ObjectClassDescription,
     elGetter: $.ASN1Encoder<ObjectClassDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectClassDescription) {
         _cached_encoder_for_ObjectClassDescription = function (
             value: ObjectClassDescription        ): _Element {

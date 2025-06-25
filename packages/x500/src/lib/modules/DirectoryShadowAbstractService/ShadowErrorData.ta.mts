@@ -141,7 +141,7 @@ export class ShadowErrorData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -202,7 +202,7 @@ let _cached_decoder_for_ShadowErrorData: $.ASN1Decoder<ShadowErrorData> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ShadowErrorData} The decoded data structure.
  */
-export function _decode_ShadowErrorData(el: _Element) {
+export function _decode_ShadowErrorData(el: _Element): ShadowErrorData {
     if (!_cached_decoder_for_ShadowErrorData) {
         _cached_decoder_for_ShadowErrorData = function (
             el: _Element
@@ -284,7 +284,7 @@ let _cached_encoder_for_ShadowErrorData: $.ASN1Encoder<ShadowErrorData> | null =
 export function _encode_ShadowErrorData(
     value: ShadowErrorData,
     elGetter: $.ASN1Encoder<ShadowErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_ShadowErrorData) {
         _cached_encoder_for_ShadowErrorData = function (
             value: ShadowErrorData        ): _Element {

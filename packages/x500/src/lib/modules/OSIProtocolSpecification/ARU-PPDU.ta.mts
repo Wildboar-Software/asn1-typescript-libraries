@@ -36,7 +36,7 @@ let _cached_decoder_for_ARU_PPDU: $.ASN1Decoder<ARU_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ARU_PPDU} The decoded data structure.
  */
-export function _decode_ARU_PPDU(el: _Element) {
+export function _decode_ARU_PPDU(el: _Element): ARU_PPDU {
     if (!_cached_decoder_for_ARU_PPDU) {
         _cached_decoder_for_ARU_PPDU = $._decode_inextensible_choice<ARU_PPDU>({
             "CONTEXT 0": [
@@ -62,7 +62,7 @@ let _cached_encoder_for_ARU_PPDU: $.ASN1Encoder<ARU_PPDU> | null = null;
 export function _encode_ARU_PPDU(
     value: ARU_PPDU,
     elGetter: $.ASN1Encoder<ARU_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_ARU_PPDU) {
         _cached_encoder_for_ARU_PPDU = $._encode_choice<ARU_PPDU>(
             {

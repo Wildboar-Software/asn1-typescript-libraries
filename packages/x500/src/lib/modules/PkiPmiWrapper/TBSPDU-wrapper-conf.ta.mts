@@ -34,7 +34,7 @@ let _cached_decoder_for_TBSPDU_wrapper_conf: $.ASN1Decoder<TBSPDU_wrapper_conf> 
  * @param {_Element} el The element being decoded.
  * @returns {TBSPDU_wrapper_conf} The decoded data structure.
  */
-export function _decode_TBSPDU_wrapper_conf(el: _Element) {
+export function _decode_TBSPDU_wrapper_conf(el: _Element): TBSPDU_wrapper_conf {
     if (!_cached_decoder_for_TBSPDU_wrapper_conf) {
         _cached_decoder_for_TBSPDU_wrapper_conf = $._decode_extensible_choice<TBSPDU_wrapper_conf>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_TBSPDU_wrapper_conf: $.ASN1Encoder<TBSPDU_wrapper_conf> 
 export function _encode_TBSPDU_wrapper_conf(
     value: TBSPDU_wrapper_conf,
     elGetter: $.ASN1Encoder<TBSPDU_wrapper_conf>
-) {
+): _Element {
     if (!_cached_encoder_for_TBSPDU_wrapper_conf) {
         _cached_encoder_for_TBSPDU_wrapper_conf = $._encode_choice<TBSPDU_wrapper_conf>(
             {

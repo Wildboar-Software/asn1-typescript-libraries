@@ -50,7 +50,7 @@ let _cached_decoder_for_EntryInformationSelection_infoTypes: $.ASN1Decoder<Entry
  * @param {_Element} el The element being decoded.
  * @returns {EntryInformationSelection_infoTypes} The decoded data structure.
  */
-export function _decode_EntryInformationSelection_infoTypes(el: _Element) {
+export function _decode_EntryInformationSelection_infoTypes(el: _Element): EntryInformationSelection_infoTypes {
     if (!_cached_decoder_for_EntryInformationSelection_infoTypes) {
         _cached_decoder_for_EntryInformationSelection_infoTypes =
             $._decodeInteger;
@@ -70,7 +70,7 @@ let _cached_encoder_for_EntryInformationSelection_infoTypes: $.ASN1Encoder<Entry
 export function _encode_EntryInformationSelection_infoTypes(
     value: EntryInformationSelection_infoTypes,
     elGetter: $.ASN1Encoder<EntryInformationSelection_infoTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryInformationSelection_infoTypes) {
         _cached_encoder_for_EntryInformationSelection_infoTypes =
             $._encodeInteger;

@@ -26,7 +26,7 @@ let _cached_decoder_for_UniversalCommonName: $.ASN1Decoder<UniversalCommonName> 
  * @param {_Element} el The element being decoded.
  * @returns {UniversalCommonName} The decoded data structure.
  */
-export function _decode_UniversalCommonName(el: _Element) {
+export function _decode_UniversalCommonName(el: _Element): UniversalCommonName {
     if (!_cached_decoder_for_UniversalCommonName) {
         _cached_decoder_for_UniversalCommonName = _decode_UniversalOrBMPString;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_UniversalCommonName: $.ASN1Encoder<UniversalCommonName> 
 export function _encode_UniversalCommonName(
     value: UniversalCommonName,
     elGetter: $.ASN1Encoder<UniversalCommonName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalCommonName) {
         _cached_encoder_for_UniversalCommonName = _encode_UniversalOrBMPString;
     }

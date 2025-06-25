@@ -133,7 +133,7 @@ let _cached_decoder_for_CAsubscribeAbort: $.ASN1Decoder<CAsubscribeAbort> | null
  * @param {_Element} el The element being decoded.
  * @returns {CAsubscribeAbort} The decoded data structure.
  */
-export function _decode_CAsubscribeAbort(el: _Element) {
+export function _decode_CAsubscribeAbort(el: _Element): CAsubscribeAbort {
     if (!_cached_decoder_for_CAsubscribeAbort) {
         _cached_decoder_for_CAsubscribeAbort = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_CAsubscribeAbort: $.ASN1Encoder<CAsubscribeAbort> | null
 export function _encode_CAsubscribeAbort(
     value: CAsubscribeAbort,
     elGetter: $.ASN1Encoder<CAsubscribeAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_CAsubscribeAbort) {
         _cached_encoder_for_CAsubscribeAbort = function (
             value: CAsubscribeAbort        ): _Element {

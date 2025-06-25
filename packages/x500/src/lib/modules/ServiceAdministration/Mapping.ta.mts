@@ -128,7 +128,7 @@ let _cached_decoder_for_Mapping: $.ASN1Decoder<Mapping> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Mapping} The decoded data structure.
  */
-export function _decode_Mapping(el: _Element) {
+export function _decode_Mapping(el: _Element): Mapping {
     if (!_cached_decoder_for_Mapping) {
         _cached_decoder_for_Mapping = function (el: _Element): Mapping {
             let mappingFunction!: OBJECT_IDENTIFIER;
@@ -174,7 +174,7 @@ let _cached_encoder_for_Mapping: $.ASN1Encoder<Mapping> | null = null;
 export function _encode_Mapping(
     value: Mapping,
     elGetter: $.ASN1Encoder<Mapping>
-) {
+): _Element {
     if (!_cached_encoder_for_Mapping) {
         _cached_encoder_for_Mapping = function (
             value: Mapping        ): _Element {

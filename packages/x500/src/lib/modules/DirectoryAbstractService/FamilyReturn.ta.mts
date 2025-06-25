@@ -133,7 +133,7 @@ let _cached_decoder_for_FamilyReturn: $.ASN1Decoder<FamilyReturn> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FamilyReturn} The decoded data structure.
  */
-export function _decode_FamilyReturn(el: _Element) {
+export function _decode_FamilyReturn(el: _Element): FamilyReturn {
     if (!_cached_decoder_for_FamilyReturn) {
         _cached_decoder_for_FamilyReturn = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_FamilyReturn: $.ASN1Encoder<FamilyReturn> | null = null;
 export function _encode_FamilyReturn(
     value: FamilyReturn,
     elGetter: $.ASN1Encoder<FamilyReturn>
-) {
+): _Element {
     if (!_cached_encoder_for_FamilyReturn) {
         _cached_encoder_for_FamilyReturn = function (
             value: FamilyReturn        ): _Element {

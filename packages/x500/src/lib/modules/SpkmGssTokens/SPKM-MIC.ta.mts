@@ -109,7 +109,7 @@ let _cached_decoder_for_SPKM_MIC: $.ASN1Decoder<SPKM_MIC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_MIC} The decoded data structure.
  */
-export function _decode_SPKM_MIC(el: _Element) {
+export function _decode_SPKM_MIC(el: _Element): SPKM_MIC {
     if (!_cached_decoder_for_SPKM_MIC) {
         _cached_decoder_for_SPKM_MIC = function (el: _Element): SPKM_MIC {
             const sequence: _Element[] = el.sequence;
@@ -144,7 +144,7 @@ let _cached_encoder_for_SPKM_MIC: $.ASN1Encoder<SPKM_MIC> | null = null;
 export function _encode_SPKM_MIC(
     value: SPKM_MIC,
     elGetter: $.ASN1Encoder<SPKM_MIC>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_MIC) {
         _cached_encoder_for_SPKM_MIC = function (
             value: SPKM_MIC        ): _Element {

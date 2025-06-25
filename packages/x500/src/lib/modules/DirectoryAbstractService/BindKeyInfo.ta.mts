@@ -26,7 +26,7 @@ let _cached_decoder_for_BindKeyInfo: $.ASN1Decoder<BindKeyInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BindKeyInfo} The decoded data structure.
  */
-export function _decode_BindKeyInfo(el: _Element) {
+export function _decode_BindKeyInfo(el: _Element): BindKeyInfo {
     if (!_cached_decoder_for_BindKeyInfo) {
         _cached_decoder_for_BindKeyInfo = _get_decoder_for_ENCRYPTED<BIT_STRING>(
             $._decodeBitString
@@ -47,7 +47,7 @@ let _cached_encoder_for_BindKeyInfo: $.ASN1Encoder<BindKeyInfo> | null = null;
 export function _encode_BindKeyInfo(
     value: BindKeyInfo,
     elGetter: $.ASN1Encoder<BindKeyInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_BindKeyInfo) {
         _cached_encoder_for_BindKeyInfo = _get_encoder_for_ENCRYPTED<BIT_STRING>(
             $._encodeBitString

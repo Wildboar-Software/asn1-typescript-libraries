@@ -153,7 +153,7 @@ export class ModifyOperationalBindingResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -219,7 +219,7 @@ let _cached_decoder_for_ModifyOperationalBindingResultData: $.ASN1Decoder<Modify
  * @param {_Element} el The element being decoded.
  * @returns {ModifyOperationalBindingResultData} The decoded data structure.
  */
-export function _decode_ModifyOperationalBindingResultData(el: _Element) {
+export function _decode_ModifyOperationalBindingResultData(el: _Element): ModifyOperationalBindingResultData {
     if (!_cached_decoder_for_ModifyOperationalBindingResultData) {
         _cached_decoder_for_ModifyOperationalBindingResultData = function (
             el: _Element
@@ -306,7 +306,7 @@ let _cached_encoder_for_ModifyOperationalBindingResultData: $.ASN1Encoder<Modify
 export function _encode_ModifyOperationalBindingResultData(
     value: ModifyOperationalBindingResultData,
     elGetter: $.ASN1Encoder<ModifyOperationalBindingResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyOperationalBindingResultData) {
         _cached_encoder_for_ModifyOperationalBindingResultData = function (
             value: ModifyOperationalBindingResultData        ): _Element {

@@ -128,7 +128,7 @@ let _cached_decoder_for_DITContextUse: $.ASN1Decoder<DITContextUse> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DITContextUse} The decoded data structure.
  */
-export function _decode_DITContextUse(el: _Element) {
+export function _decode_DITContextUse(el: _Element): DITContextUse {
     if (!_cached_decoder_for_DITContextUse) {
         _cached_decoder_for_DITContextUse = function (
             el: _Element
@@ -191,7 +191,7 @@ let _cached_encoder_for_DITContextUse: $.ASN1Encoder<DITContextUse> | null = nul
 export function _encode_DITContextUse(
     value: DITContextUse,
     elGetter: $.ASN1Encoder<DITContextUse>
-) {
+): _Element {
     if (!_cached_encoder_for_DITContextUse) {
         _cached_encoder_for_DITContextUse = function (
             value: DITContextUse        ): _Element {

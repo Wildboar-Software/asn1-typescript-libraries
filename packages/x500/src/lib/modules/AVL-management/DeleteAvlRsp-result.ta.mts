@@ -34,7 +34,7 @@ let _cached_decoder_for_DeleteAvlRsp_result: $.ASN1Decoder<DeleteAvlRsp_result> 
  * @param {_Element} el The element being decoded.
  * @returns {DeleteAvlRsp_result} The decoded data structure.
  */
-export function _decode_DeleteAvlRsp_result(el: _Element) {
+export function _decode_DeleteAvlRsp_result(el: _Element): DeleteAvlRsp_result {
     if (!_cached_decoder_for_DeleteAvlRsp_result) {
         _cached_decoder_for_DeleteAvlRsp_result = $._decode_extensible_choice<DeleteAvlRsp_result>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_DeleteAvlRsp_result: $.ASN1Encoder<DeleteAvlRsp_result> 
 export function _encode_DeleteAvlRsp_result(
     value: DeleteAvlRsp_result,
     elGetter: $.ASN1Encoder<DeleteAvlRsp_result>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteAvlRsp_result) {
         _cached_encoder_for_DeleteAvlRsp_result = $._encode_choice<DeleteAvlRsp_result>(
             {

@@ -107,7 +107,7 @@ let _cached_decoder_for_WrapperPDU: $.ASN1Decoder<WrapperPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WrapperPDU} The decoded data structure.
  */
-export function _decode_WrapperPDU(el: _Element) {
+export function _decode_WrapperPDU(el: _Element): WrapperPDU {
     if (!_cached_decoder_for_WrapperPDU) {
         _cached_decoder_for_WrapperPDU = $._decode_extensible_choice<WrapperPDU>(
             {
@@ -193,7 +193,7 @@ let _cached_encoder_for_WrapperPDU: $.ASN1Encoder<WrapperPDU> | null = null;
 export function _encode_WrapperPDU(
     value: WrapperPDU,
     elGetter: $.ASN1Encoder<WrapperPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_WrapperPDU) {
         _cached_encoder_for_WrapperPDU = $._encode_choice<WrapperPDU>(
             {

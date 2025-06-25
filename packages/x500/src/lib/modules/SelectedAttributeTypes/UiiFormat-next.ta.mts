@@ -28,7 +28,7 @@ let _cached_decoder_for_UiiFormat_next: $.ASN1Decoder<UiiFormat_next> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UiiFormat_next} The decoded data structure.
  */
-export function _decode_UiiFormat_next(el: _Element) {
+export function _decode_UiiFormat_next(el: _Element): UiiFormat_next {
     if (!_cached_decoder_for_UiiFormat_next) {
         _cached_decoder_for_UiiFormat_next = $._decode_inextensible_choice<UiiFormat_next>(
             {
@@ -55,7 +55,7 @@ let _cached_encoder_for_UiiFormat_next: $.ASN1Encoder<UiiFormat_next> | null = n
 export function _encode_UiiFormat_next(
     value: UiiFormat_next,
     elGetter: $.ASN1Encoder<UiiFormat_next>
-) {
+): _Element {
     if (!_cached_encoder_for_UiiFormat_next) {
         _cached_encoder_for_UiiFormat_next = $._encode_choice<UiiFormat_next>(
             {

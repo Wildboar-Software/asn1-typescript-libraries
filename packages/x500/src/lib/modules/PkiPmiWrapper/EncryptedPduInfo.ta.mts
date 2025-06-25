@@ -159,7 +159,7 @@ let _cached_decoder_for_EncryptedPduInfo: $.ASN1Decoder<EncryptedPduInfo> | null
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedPduInfo} The decoded data structure.
  */
-export function _decode_EncryptedPduInfo(el: _Element) {
+export function _decode_EncryptedPduInfo(el: _Element): EncryptedPduInfo {
     if (!_cached_decoder_for_EncryptedPduInfo) {
         _cached_decoder_for_EncryptedPduInfo = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_EncryptedPduInfo: $.ASN1Encoder<EncryptedPduInfo> | null
 export function _encode_EncryptedPduInfo(
     value: EncryptedPduInfo,
     elGetter: $.ASN1Encoder<EncryptedPduInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedPduInfo) {
         _cached_encoder_for_EncryptedPduInfo = function (
             value: EncryptedPduInfo        ): _Element {

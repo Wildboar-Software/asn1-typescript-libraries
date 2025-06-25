@@ -34,7 +34,7 @@ let _cached_decoder_for_ModifiedValidity_validUntil: $.ASN1Decoder<ModifiedValid
  * @param {_Element} el The element being decoded.
  * @returns {ModifiedValidity_validUntil} The decoded data structure.
  */
-export function _decode_ModifiedValidity_validUntil(el: _Element) {
+export function _decode_ModifiedValidity_validUntil(el: _Element): ModifiedValidity_validUntil {
     if (!_cached_decoder_for_ModifiedValidity_validUntil) {
         _cached_decoder_for_ModifiedValidity_validUntil = $._decode_extensible_choice<ModifiedValidity_validUntil>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_ModifiedValidity_validUntil: $.ASN1Encoder<ModifiedValid
 export function _encode_ModifiedValidity_validUntil(
     value: ModifiedValidity_validUntil,
     elGetter: $.ASN1Encoder<ModifiedValidity_validUntil>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifiedValidity_validUntil) {
         _cached_encoder_for_ModifiedValidity_validUntil = $._encode_choice<ModifiedValidity_validUntil>(
             {

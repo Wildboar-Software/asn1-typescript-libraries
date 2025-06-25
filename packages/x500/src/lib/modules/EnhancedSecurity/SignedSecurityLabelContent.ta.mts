@@ -169,7 +169,7 @@ let _cached_decoder_for_SignedSecurityLabelContent: $.ASN1Decoder<SignedSecurity
  * @param {_Element} el The element being decoded.
  * @returns {SignedSecurityLabelContent} The decoded data structure.
  */
-export function _decode_SignedSecurityLabelContent(el: _Element) {
+export function _decode_SignedSecurityLabelContent(el: _Element): SignedSecurityLabelContent {
     if (!_cached_decoder_for_SignedSecurityLabelContent) {
         _cached_decoder_for_SignedSecurityLabelContent = function (
             el: _Element
@@ -229,7 +229,7 @@ let _cached_encoder_for_SignedSecurityLabelContent: $.ASN1Encoder<SignedSecurity
 export function _encode_SignedSecurityLabelContent(
     value: SignedSecurityLabelContent,
     elGetter: $.ASN1Encoder<SignedSecurityLabelContent>
-) {
+): _Element {
     if (!_cached_encoder_for_SignedSecurityLabelContent) {
         _cached_encoder_for_SignedSecurityLabelContent = function (
             value: SignedSecurityLabelContent        ): _Element {

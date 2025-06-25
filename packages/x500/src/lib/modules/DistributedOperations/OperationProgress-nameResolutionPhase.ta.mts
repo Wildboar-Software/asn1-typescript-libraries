@@ -74,7 +74,7 @@ let _cached_decoder_for_OperationProgress_nameResolutionPhase: $.ASN1Decoder<Ope
  * @param {_Element} el The element being decoded.
  * @returns {OperationProgress_nameResolutionPhase} The decoded data structure.
  */
-export function _decode_OperationProgress_nameResolutionPhase(el: _Element) {
+export function _decode_OperationProgress_nameResolutionPhase(el: _Element): OperationProgress_nameResolutionPhase {
     if (!_cached_decoder_for_OperationProgress_nameResolutionPhase) {
         _cached_decoder_for_OperationProgress_nameResolutionPhase =
             $._decodeEnumerated;
@@ -94,7 +94,7 @@ let _cached_encoder_for_OperationProgress_nameResolutionPhase: $.ASN1Encoder<Ope
 export function _encode_OperationProgress_nameResolutionPhase(
     value: OperationProgress_nameResolutionPhase,
     elGetter: $.ASN1Encoder<OperationProgress_nameResolutionPhase>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationProgress_nameResolutionPhase) {
         _cached_encoder_for_OperationProgress_nameResolutionPhase =
             $._encodeEnumerated;

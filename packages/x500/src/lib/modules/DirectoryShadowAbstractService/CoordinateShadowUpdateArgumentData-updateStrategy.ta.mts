@@ -33,7 +33,7 @@ let _cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy: $.ASN
  */
 export function _decode_CoordinateShadowUpdateArgumentData_updateStrategy(
     el: _Element
-) {
+): CoordinateShadowUpdateArgumentData_updateStrategy {
     if (
         !_cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy
     ) {
@@ -64,7 +64,7 @@ let _cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy: $.ASN
 export function _encode_CoordinateShadowUpdateArgumentData_updateStrategy(
     value: CoordinateShadowUpdateArgumentData_updateStrategy,
     elGetter: $.ASN1Encoder<CoordinateShadowUpdateArgumentData_updateStrategy>
-) {
+): _Element {
     if (
         !_cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy
     ) {

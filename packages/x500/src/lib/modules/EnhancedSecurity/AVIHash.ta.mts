@@ -31,7 +31,7 @@ let _cached_decoder_for_AVIHash: $.ASN1Decoder<AVIHash> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AVIHash} The decoded data structure.
  */
-export function _decode_AVIHash(el: _Element) {
+export function _decode_AVIHash(el: _Element): AVIHash {
     if (!_cached_decoder_for_AVIHash) {
         _cached_decoder_for_AVIHash = _get_decoder_for_HASH<AttributeTypeValueContexts>(
             _decode_AttributeTypeValueContexts
@@ -52,7 +52,7 @@ let _cached_encoder_for_AVIHash: $.ASN1Encoder<AVIHash> | null = null;
 export function _encode_AVIHash(
     value: AVIHash,
     elGetter: $.ASN1Encoder<AVIHash>
-) {
+): _Element {
     if (!_cached_encoder_for_AVIHash) {
         _cached_encoder_for_AVIHash = _get_encoder_for_HASH<AttributeTypeValueContexts>(
             _encode_AttributeTypeValueContexts

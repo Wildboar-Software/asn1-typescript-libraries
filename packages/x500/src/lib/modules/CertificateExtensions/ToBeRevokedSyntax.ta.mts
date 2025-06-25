@@ -26,7 +26,7 @@ let _cached_decoder_for_ToBeRevokedSyntax: $.ASN1Decoder<ToBeRevokedSyntax> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ToBeRevokedSyntax} The decoded data structure.
  */
-export function _decode_ToBeRevokedSyntax(el: _Element) {
+export function _decode_ToBeRevokedSyntax(el: _Element): ToBeRevokedSyntax {
     if (!_cached_decoder_for_ToBeRevokedSyntax) {
         _cached_decoder_for_ToBeRevokedSyntax = $._decodeSequenceOf<ToBeRevokedGroup>(
             () => _decode_ToBeRevokedGroup
@@ -47,7 +47,7 @@ let _cached_encoder_for_ToBeRevokedSyntax: $.ASN1Encoder<ToBeRevokedSyntax> | nu
 export function _encode_ToBeRevokedSyntax(
     value: ToBeRevokedSyntax,
     elGetter: $.ASN1Encoder<ToBeRevokedSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeRevokedSyntax) {
         _cached_encoder_for_ToBeRevokedSyntax = $._encodeSequenceOf<ToBeRevokedGroup>(
             () => _encode_ToBeRevokedGroup,

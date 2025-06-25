@@ -26,7 +26,7 @@ let _cached_decoder_for_TerminateOperationalBindingArgumentData_initiator: $.ASN
  */
 export function _decode_TerminateOperationalBindingArgumentData_initiator(
     el: _Element
-) {
+): TerminateOperationalBindingArgumentData_initiator {
     if (
         !_cached_decoder_for_TerminateOperationalBindingArgumentData_initiator
     ) {
@@ -64,7 +64,7 @@ let _cached_encoder_for_TerminateOperationalBindingArgumentData_initiator: $.ASN
 export function _encode_TerminateOperationalBindingArgumentData_initiator(
     value: TerminateOperationalBindingArgumentData_initiator,
     elGetter: $.ASN1Encoder<TerminateOperationalBindingArgumentData_initiator>
-) {
+): _Element {
     if (
         !_cached_encoder_for_TerminateOperationalBindingArgumentData_initiator
     ) {

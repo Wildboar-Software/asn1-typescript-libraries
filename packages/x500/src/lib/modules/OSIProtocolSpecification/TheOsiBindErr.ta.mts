@@ -22,7 +22,7 @@ export type TheOsiBindErr = _Element; // ObjectClassFieldType
  * @param {_Element} el The element being decoded.
  * @returns {TheOsiBindErr} The decoded data structure.
  */
-export function _decode_TheOsiBindErr(el: _Element) {
+export function _decode_TheOsiBindErr(el: _Element): TheOsiBindErr {
     return $._decode_explicit<TheOsiBindErr>(() => $._decodeAny)(el);
 }
 
@@ -36,7 +36,7 @@ export function _decode_TheOsiBindErr(el: _Element) {
 export function _encode_TheOsiBindErr(
     value: TheOsiBindErr,
     elGetter: $.ASN1Encoder<TheOsiBindErr>
-) {
+): _Element {
     return $._encode_explicit(
         _TagClass.context,
         18,

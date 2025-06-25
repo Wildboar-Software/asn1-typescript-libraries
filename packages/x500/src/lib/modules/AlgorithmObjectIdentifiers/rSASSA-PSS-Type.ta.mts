@@ -73,7 +73,7 @@ export class rSASSA_PSS_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_saltLength() {
+    public static get _default_value_for_saltLength(): INTEGER {
         return 20;
     }
     /**
@@ -82,7 +82,7 @@ export class rSASSA_PSS_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_trailerField() {
+    public static get _default_value_for_trailerField(): INTEGER {
         return 1;
     }
 }
@@ -141,7 +141,7 @@ let _cached_decoder_for_rSASSA_PSS_Type: $.ASN1Decoder<rSASSA_PSS_Type> | null =
  * @param {_Element} el The element being decoded.
  * @returns {rSASSA_PSS_Type} The decoded data structure.
  */
-export function _decode_rSASSA_PSS_Type(el: _Element) {
+export function _decode_rSASSA_PSS_Type(el: _Element): rSASSA_PSS_Type {
     if (!_cached_decoder_for_rSASSA_PSS_Type) {
         _cached_decoder_for_rSASSA_PSS_Type = function (
             el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_rSASSA_PSS_Type: $.ASN1Encoder<rSASSA_PSS_Type> | null =
 export function _encode_rSASSA_PSS_Type(
     value: rSASSA_PSS_Type,
     elGetter: $.ASN1Encoder<rSASSA_PSS_Type>
-) {
+): _Element {
     if (!_cached_encoder_for_rSASSA_PSS_Type) {
         _cached_encoder_for_rSASSA_PSS_Type = function (
             value: rSASSA_PSS_Type        ): _Element {

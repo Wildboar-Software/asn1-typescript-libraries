@@ -94,7 +94,7 @@ export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
      * @static
      * @method
      */
-    public static get _default_value_for_versions() {
+    public static get _default_value_for_versions(): Versions {
         return (() => {
             const _ret = new Uint8ClampedArray(2);
             _ret[Versions_v1] = TRUE_BIT;
@@ -162,7 +162,7 @@ let _cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1: $.AS
  */
 export function _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1(
     el: _Element
-) {
+): DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
     if (
         !_cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1
     ) {
@@ -224,7 +224,7 @@ let _cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1: $.AS
 export function _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1(
     value: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,
     elGetter: $.ASN1Encoder<DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1>
-) {
+): _Element {
     if (
         !_cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1
     ) {

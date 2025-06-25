@@ -129,7 +129,7 @@ let _cached_decoder_for_Subtree: $.ASN1Decoder<Subtree> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Subtree} The decoded data structure.
  */
-export function _decode_Subtree(el: _Element) {
+export function _decode_Subtree(el: _Element): Subtree {
     if (!_cached_decoder_for_Subtree) {
         _cached_decoder_for_Subtree = function (el: _Element): Subtree {
             let rdn!: RelativeDistinguishedName;
@@ -182,7 +182,7 @@ let _cached_encoder_for_Subtree: $.ASN1Encoder<Subtree> | null = null;
 export function _encode_Subtree(
     value: Subtree,
     elGetter: $.ASN1Encoder<Subtree>
-) {
+): _Element {
     if (!_cached_encoder_for_Subtree) {
         _cached_encoder_for_Subtree = function (
             value: Subtree        ): _Element {

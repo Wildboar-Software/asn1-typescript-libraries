@@ -26,7 +26,7 @@ let _cached_decoder_for_AttCertPath: $.ASN1Decoder<AttCertPath> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AttCertPath} The decoded data structure.
  */
-export function _decode_AttCertPath(el: _Element) {
+export function _decode_AttCertPath(el: _Element): AttCertPath {
     if (!_cached_decoder_for_AttCertPath) {
         _cached_decoder_for_AttCertPath = $._decodeSequenceOf<AttributeCertificate>(
             () => _decode_AttributeCertificate
@@ -47,7 +47,7 @@ let _cached_encoder_for_AttCertPath: $.ASN1Encoder<AttCertPath> | null = null;
 export function _encode_AttCertPath(
     value: AttCertPath,
     elGetter: $.ASN1Encoder<AttCertPath>
-) {
+): _Element {
     if (!_cached_encoder_for_AttCertPath) {
         _cached_encoder_for_AttCertPath = $._encodeSequenceOf<AttributeCertificate>(
             () => _encode_AttributeCertificate,

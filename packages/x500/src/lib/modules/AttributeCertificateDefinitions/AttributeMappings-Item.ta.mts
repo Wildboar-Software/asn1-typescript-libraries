@@ -37,7 +37,7 @@ let _cached_decoder_for_AttributeMappings_Item: $.ASN1Decoder<AttributeMappings_
  * @param {_Element} el The element being decoded.
  * @returns {AttributeMappings_Item} The decoded data structure.
  */
-export function _decode_AttributeMappings_Item(el: _Element) {
+export function _decode_AttributeMappings_Item(el: _Element): AttributeMappings_Item {
     if (!_cached_decoder_for_AttributeMappings_Item) {
         _cached_decoder_for_AttributeMappings_Item = $._decode_inextensible_choice<AttributeMappings_Item>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_AttributeMappings_Item: $.ASN1Encoder<AttributeMappings_
 export function _encode_AttributeMappings_Item(
     value: AttributeMappings_Item,
     elGetter: $.ASN1Encoder<AttributeMappings_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeMappings_Item) {
         _cached_encoder_for_AttributeMappings_Item = $._encode_choice<AttributeMappings_Item>(
             {

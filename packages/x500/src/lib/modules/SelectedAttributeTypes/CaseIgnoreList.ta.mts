@@ -26,7 +26,7 @@ let _cached_decoder_for_CaseIgnoreList: $.ASN1Decoder<CaseIgnoreList> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CaseIgnoreList} The decoded data structure.
  */
-export function _decode_CaseIgnoreList(el: _Element) {
+export function _decode_CaseIgnoreList(el: _Element): CaseIgnoreList {
     if (!_cached_decoder_for_CaseIgnoreList) {
         _cached_decoder_for_CaseIgnoreList = $._decodeSequenceOf<UnboundedDirectoryString>(
             () => _decode_UnboundedDirectoryString
@@ -47,7 +47,7 @@ let _cached_encoder_for_CaseIgnoreList: $.ASN1Encoder<CaseIgnoreList> | null = n
 export function _encode_CaseIgnoreList(
     value: CaseIgnoreList,
     elGetter: $.ASN1Encoder<CaseIgnoreList>
-) {
+): _Element {
     if (!_cached_encoder_for_CaseIgnoreList) {
         _cached_encoder_for_CaseIgnoreList = $._encodeSequenceOf<UnboundedDirectoryString>(
             () => _encode_UnboundedDirectoryString,

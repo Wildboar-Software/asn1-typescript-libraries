@@ -91,7 +91,7 @@ export class AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -157,7 +157,7 @@ let _cached_decoder_for_AVMPcommonComponents: $.ASN1Decoder<AVMPcommonComponents
  * @param {_Element} el The element being decoded.
  * @returns {AVMPcommonComponents} The decoded data structure.
  */
-export function _decode_AVMPcommonComponents(el: _Element) {
+export function _decode_AVMPcommonComponents(el: _Element): AVMPcommonComponents {
     if (!_cached_decoder_for_AVMPcommonComponents) {
         _cached_decoder_for_AVMPcommonComponents = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_AVMPcommonComponents: $.ASN1Encoder<AVMPcommonComponents
 export function _encode_AVMPcommonComponents(
     value: AVMPcommonComponents,
     elGetter: $.ASN1Encoder<AVMPcommonComponents>
-) {
+): _Element {
     if (!_cached_encoder_for_AVMPcommonComponents) {
         _cached_encoder_for_AVMPcommonComponents = function (
             value: AVMPcommonComponents        ): _Element {

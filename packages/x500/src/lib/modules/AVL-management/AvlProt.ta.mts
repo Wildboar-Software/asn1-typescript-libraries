@@ -114,7 +114,7 @@ let _cached_decoder_for_AvlProt: $.ASN1Decoder<AvlProt> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AvlProt} The decoded data structure.
  */
-export function _decode_AvlProt(el: _Element) {
+export function _decode_AvlProt(el: _Element): AvlProt {
     if (!_cached_decoder_for_AvlProt) {
         _cached_decoder_for_AvlProt = $._decode_extensible_choice<AvlProt>({
             "CONTEXT 0": [
@@ -194,7 +194,7 @@ let _cached_encoder_for_AvlProt: $.ASN1Encoder<AvlProt> | null = null;
 export function _encode_AvlProt(
     value: AvlProt,
     elGetter: $.ASN1Encoder<AvlProt>
-) {
+): _Element {
     if (!_cached_encoder_for_AvlProt) {
         _cached_encoder_for_AvlProt = $._encode_choice<AvlProt>(
             {

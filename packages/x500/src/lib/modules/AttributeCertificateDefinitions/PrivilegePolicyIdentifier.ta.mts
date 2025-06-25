@@ -128,7 +128,7 @@ let _cached_decoder_for_PrivilegePolicyIdentifier: $.ASN1Decoder<PrivilegePolicy
  * @param {_Element} el The element being decoded.
  * @returns {PrivilegePolicyIdentifier} The decoded data structure.
  */
-export function _decode_PrivilegePolicyIdentifier(el: _Element) {
+export function _decode_PrivilegePolicyIdentifier(el: _Element): PrivilegePolicyIdentifier {
     if (!_cached_decoder_for_PrivilegePolicyIdentifier) {
         _cached_decoder_for_PrivilegePolicyIdentifier = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_PrivilegePolicyIdentifier: $.ASN1Encoder<PrivilegePolicy
 export function _encode_PrivilegePolicyIdentifier(
     value: PrivilegePolicyIdentifier,
     elGetter: $.ASN1Encoder<PrivilegePolicyIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivilegePolicyIdentifier) {
         _cached_encoder_for_PrivilegePolicyIdentifier = function (
             value: PrivilegePolicyIdentifier        ): _Element {

@@ -63,7 +63,7 @@ let _cached_decoder_for_GeneralName: $.ASN1Decoder<GeneralName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GeneralName} The decoded data structure.
  */
-export function _decode_GeneralName(el: _Element) {
+export function _decode_GeneralName(el: _Element): GeneralName {
     if (!_cached_decoder_for_GeneralName) {
         _cached_decoder_for_GeneralName = $._decode_extensible_choice<GeneralName>(
             {
@@ -127,7 +127,7 @@ let _cached_encoder_for_GeneralName: $.ASN1Encoder<GeneralName> | null = null;
 export function _encode_GeneralName(
     value: GeneralName,
     elGetter: $.ASN1Encoder<GeneralName>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralName) {
         _cached_encoder_for_GeneralName = $._encode_choice<GeneralName>(
             {

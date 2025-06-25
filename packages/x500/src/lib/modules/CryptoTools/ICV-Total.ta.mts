@@ -161,7 +161,7 @@ export const _extension_additions_list_spec_for_ICV_Total: $.ComponentSpec[] = [
  */
 export function _get_decoder_for_ICV_Total<ToBeProtected>(
     _decode_ToBeProtected: $.ASN1Decoder<ToBeProtected>
-) {
+): $.ASN1Decoder<ICV_Total<ToBeProtected>> {
     return function (el: _Element): ICV_Total<ToBeProtected> {
         let toBeProtected!: ToBeProtected;
         let algorithmIdentifier!: AlgorithmWithInvoke;
@@ -218,7 +218,7 @@ export function _get_decoder_for_ICV_Total<ToBeProtected>(
  */
 export function _get_encoder_for_ICV_Total<ToBeProtected>(
     _encode_ToBeProtected: $.ASN1Encoder<ToBeProtected>
-) {
+): $.ASN1Encoder<ICV_Total<ToBeProtected>> {
     return function (
         value: ICV_Total<ToBeProtected>    ): _Element {
         return $._encodeSequence(

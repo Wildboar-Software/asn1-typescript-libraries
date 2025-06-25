@@ -134,7 +134,7 @@ export class SupplierInformation implements SupplierOrConsumer {
      * @static
      * @method
      */
-    public static get _default_value_for_supplier_is_master() {
+    public static get _default_value_for_supplier_is_master(): BOOLEAN {
         return true;
     }
 }
@@ -193,7 +193,7 @@ let _cached_decoder_for_SupplierInformation: $.ASN1Decoder<SupplierInformation> 
  * @param {_Element} el The element being decoded.
  * @returns {SupplierInformation} The decoded data structure.
  */
-export function _decode_SupplierInformation(el: _Element) {
+export function _decode_SupplierInformation(el: _Element): SupplierInformation {
     if (!_cached_decoder_for_SupplierInformation) {
         _cached_decoder_for_SupplierInformation = function (
             el: _Element
@@ -280,7 +280,7 @@ let _cached_encoder_for_SupplierInformation: $.ASN1Encoder<SupplierInformation> 
 export function _encode_SupplierInformation(
     value: SupplierInformation,
     elGetter: $.ASN1Encoder<SupplierInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_SupplierInformation) {
         _cached_encoder_for_SupplierInformation = function (
             value: SupplierInformation        ): _Element {

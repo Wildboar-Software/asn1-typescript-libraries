@@ -27,7 +27,7 @@ let _cached_decoder_for_UniversalUnformattedPostalAddress: $.ASN1Decoder<Univers
  * @param {_Element} el The element being decoded.
  * @returns {UniversalUnformattedPostalAddress} The decoded data structure.
  */
-export function _decode_UniversalUnformattedPostalAddress(el: _Element) {
+export function _decode_UniversalUnformattedPostalAddress(el: _Element): UniversalUnformattedPostalAddress {
     if (!_cached_decoder_for_UniversalUnformattedPostalAddress) {
         _cached_decoder_for_UniversalUnformattedPostalAddress = _decode_UniversalOrBMPString;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_UniversalUnformattedPostalAddress: $.ASN1Encoder<Univers
 export function _encode_UniversalUnformattedPostalAddress(
     value: UniversalUnformattedPostalAddress,
     elGetter: $.ASN1Encoder<UniversalUnformattedPostalAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalUnformattedPostalAddress) {
         _cached_encoder_for_UniversalUnformattedPostalAddress = _encode_UniversalOrBMPString;
     }

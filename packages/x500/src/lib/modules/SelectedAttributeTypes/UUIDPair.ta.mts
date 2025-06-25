@@ -119,7 +119,7 @@ let _cached_decoder_for_UUIDPair: $.ASN1Decoder<UUIDPair> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UUIDPair} The decoded data structure.
  */
-export function _decode_UUIDPair(el: _Element) {
+export function _decode_UUIDPair(el: _Element): UUIDPair {
     if (!_cached_decoder_for_UUIDPair) {
         _cached_decoder_for_UUIDPair = function (el: _Element): UUIDPair {
             const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_UUIDPair: $.ASN1Encoder<UUIDPair> | null = null;
 export function _encode_UUIDPair(
     value: UUIDPair,
     elGetter: $.ASN1Encoder<UUIDPair>
-) {
+): _Element {
     if (!_cached_encoder_for_UUIDPair) {
         _cached_encoder_for_UUIDPair = function (
             value: UUIDPair        ): _Element {

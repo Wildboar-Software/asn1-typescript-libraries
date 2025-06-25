@@ -114,7 +114,7 @@ let _cached_decoder_for_UnformattedPostalAddress: $.ASN1Decoder<UnformattedPosta
  * @param {_Element} el The element being decoded.
  * @returns {UnformattedPostalAddress} The decoded data structure.
  */
-export function _decode_UnformattedPostalAddress(el: _Element) {
+export function _decode_UnformattedPostalAddress(el: _Element): UnformattedPostalAddress {
     if (!_cached_decoder_for_UnformattedPostalAddress) {
         _cached_decoder_for_UnformattedPostalAddress = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_UnformattedPostalAddress: $.ASN1Encoder<UnformattedPosta
 export function _encode_UnformattedPostalAddress(
     value: UnformattedPostalAddress,
     elGetter: $.ASN1Encoder<UnformattedPostalAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UnformattedPostalAddress) {
         _cached_encoder_for_UnformattedPostalAddress = function (
             value: UnformattedPostalAddress        ): _Element {

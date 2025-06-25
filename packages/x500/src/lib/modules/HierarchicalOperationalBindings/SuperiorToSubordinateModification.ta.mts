@@ -27,7 +27,7 @@ let _cached_decoder_for_SuperiorToSubordinateModification: $.ASN1Decoder<Superio
  * @param {_Element} el The element being decoded.
  * @returns {SuperiorToSubordinateModification} The decoded data structure.
  */
-export function _decode_SuperiorToSubordinateModification(el: _Element) {
+export function _decode_SuperiorToSubordinateModification(el: _Element): SuperiorToSubordinateModification {
     if (!_cached_decoder_for_SuperiorToSubordinateModification) {
         _cached_decoder_for_SuperiorToSubordinateModification = _decode_SuperiorToSubordinate;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_SuperiorToSubordinateModification: $.ASN1Encoder<Superio
 export function _encode_SuperiorToSubordinateModification(
     value: SuperiorToSubordinateModification,
     elGetter: $.ASN1Encoder<SuperiorToSubordinateModification>
-) {
+): _Element {
     if (!_cached_encoder_for_SuperiorToSubordinateModification) {
         _cached_encoder_for_SuperiorToSubordinateModification = _encode_SuperiorToSubordinate;
     }

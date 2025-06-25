@@ -116,7 +116,7 @@ let _cached_decoder_for_RequestAttribute_defaultValues_Item: $.ASN1Decoder<Reque
  * @param {_Element} el The element being decoded.
  * @returns {RequestAttribute_defaultValues_Item} The decoded data structure.
  */
-export function _decode_RequestAttribute_defaultValues_Item(el: _Element) {
+export function _decode_RequestAttribute_defaultValues_Item(el: _Element): RequestAttribute_defaultValues_Item {
     if (!_cached_decoder_for_RequestAttribute_defaultValues_Item) {
         _cached_decoder_for_RequestAttribute_defaultValues_Item = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_RequestAttribute_defaultValues_Item: $.ASN1Encoder<Reque
 export function _encode_RequestAttribute_defaultValues_Item(
     value: RequestAttribute_defaultValues_Item,
     elGetter: $.ASN1Encoder<RequestAttribute_defaultValues_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestAttribute_defaultValues_Item) {
         _cached_encoder_for_RequestAttribute_defaultValues_Item = function (
             value: RequestAttribute_defaultValues_Item        ): _Element {

@@ -142,7 +142,7 @@ let _cached_decoder_for_SimpleCredentials: $.ASN1Decoder<SimpleCredentials> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SimpleCredentials} The decoded data structure.
  */
-export function _decode_SimpleCredentials(el: _Element) {
+export function _decode_SimpleCredentials(el: _Element): SimpleCredentials {
     if (!_cached_decoder_for_SimpleCredentials) {
         _cached_decoder_for_SimpleCredentials = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_SimpleCredentials: $.ASN1Encoder<SimpleCredentials> | nu
 export function _encode_SimpleCredentials(
     value: SimpleCredentials,
     elGetter: $.ASN1Encoder<SimpleCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_SimpleCredentials) {
         _cached_encoder_for_SimpleCredentials = function (
             value: SimpleCredentials        ): _Element {

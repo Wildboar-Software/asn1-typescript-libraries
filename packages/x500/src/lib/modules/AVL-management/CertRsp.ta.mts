@@ -123,7 +123,7 @@ let _cached_decoder_for_CertRsp: $.ASN1Decoder<CertRsp> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertRsp} The decoded data structure.
  */
-export function _decode_CertRsp(el: _Element) {
+export function _decode_CertRsp(el: _Element): CertRsp {
     if (!_cached_decoder_for_CertRsp) {
         _cached_decoder_for_CertRsp = function (el: _Element): CertRsp {
             const sequence: _Element[] = el.sequence;
@@ -158,7 +158,7 @@ let _cached_encoder_for_CertRsp: $.ASN1Encoder<CertRsp> | null = null;
 export function _encode_CertRsp(
     value: CertRsp,
     elGetter: $.ASN1Encoder<CertRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_CertRsp) {
         _cached_encoder_for_CertRsp = function (
             value: CertRsp        ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_ModifyRights: $.ASN1Decoder<ModifyRights> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ModifyRights} The decoded data structure.
  */
-export function _decode_ModifyRights(el: _Element) {
+export function _decode_ModifyRights(el: _Element): ModifyRights {
     if (!_cached_decoder_for_ModifyRights) {
         _cached_decoder_for_ModifyRights = $._decodeSetOf<ModifyRights_Item>(
             () => _decode_ModifyRights_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_ModifyRights: $.ASN1Encoder<ModifyRights> | null = null;
 export function _encode_ModifyRights(
     value: ModifyRights,
     elGetter: $.ASN1Encoder<ModifyRights>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyRights) {
         _cached_encoder_for_ModifyRights = $._encodeSetOf<ModifyRights_Item>(
             () => _encode_ModifyRights_Item,

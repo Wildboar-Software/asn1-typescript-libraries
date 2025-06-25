@@ -80,7 +80,7 @@ export class Knowledge {
      * @static
      * @method
      */
-    public static get _default_value_for_extendedKnowledge() {
+    public static get _default_value_for_extendedKnowledge(): BOOLEAN {
         return false;
     }
     /**
@@ -141,7 +141,7 @@ let _cached_decoder_for_Knowledge: $.ASN1Decoder<Knowledge> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Knowledge} The decoded data structure.
  */
-export function _decode_Knowledge(el: _Element) {
+export function _decode_Knowledge(el: _Element): Knowledge {
     if (!_cached_decoder_for_Knowledge) {
         _cached_decoder_for_Knowledge = function (el: _Element): Knowledge {
             let knowledgeType!: Knowledge_knowledgeType;
@@ -188,7 +188,7 @@ let _cached_encoder_for_Knowledge: $.ASN1Encoder<Knowledge> | null = null;
 export function _encode_Knowledge(
     value: Knowledge,
     elGetter: $.ASN1Encoder<Knowledge>
-) {
+): _Element {
     if (!_cached_encoder_for_Knowledge) {
         _cached_encoder_for_Knowledge = function (
             value: Knowledge        ): _Element {

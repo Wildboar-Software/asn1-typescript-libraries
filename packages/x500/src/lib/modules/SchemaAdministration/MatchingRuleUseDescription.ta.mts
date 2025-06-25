@@ -105,7 +105,7 @@ export class MatchingRuleUseDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -180,7 +180,7 @@ let _cached_decoder_for_MatchingRuleUseDescription: $.ASN1Decoder<MatchingRuleUs
  * @param {_Element} el The element being decoded.
  * @returns {MatchingRuleUseDescription} The decoded data structure.
  */
-export function _decode_MatchingRuleUseDescription(el: _Element) {
+export function _decode_MatchingRuleUseDescription(el: _Element): MatchingRuleUseDescription {
     if (!_cached_decoder_for_MatchingRuleUseDescription) {
         _cached_decoder_for_MatchingRuleUseDescription = function (
             el: _Element
@@ -250,7 +250,7 @@ let _cached_encoder_for_MatchingRuleUseDescription: $.ASN1Encoder<MatchingRuleUs
 export function _encode_MatchingRuleUseDescription(
     value: MatchingRuleUseDescription,
     elGetter: $.ASN1Encoder<MatchingRuleUseDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_MatchingRuleUseDescription) {
         _cached_encoder_for_MatchingRuleUseDescription = function (
             value: MatchingRuleUseDescription        ): _Element {

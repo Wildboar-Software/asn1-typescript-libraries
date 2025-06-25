@@ -146,7 +146,7 @@ let _cached_decoder_for_AuthorityKeyIdentifier: $.ASN1Decoder<AuthorityKeyIdenti
  * @param {_Element} el The element being decoded.
  * @returns {AuthorityKeyIdentifier} The decoded data structure.
  */
-export function _decode_AuthorityKeyIdentifier(el: _Element) {
+export function _decode_AuthorityKeyIdentifier(el: _Element): AuthorityKeyIdentifier {
     if (!_cached_decoder_for_AuthorityKeyIdentifier) {
         _cached_decoder_for_AuthorityKeyIdentifier = function (
             el: _Element
@@ -205,7 +205,7 @@ let _cached_encoder_for_AuthorityKeyIdentifier: $.ASN1Encoder<AuthorityKeyIdenti
 export function _encode_AuthorityKeyIdentifier(
     value: AuthorityKeyIdentifier,
     elGetter: $.ASN1Encoder<AuthorityKeyIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorityKeyIdentifier) {
         _cached_encoder_for_AuthorityKeyIdentifier = function (
             value: AuthorityKeyIdentifier        ): _Element {

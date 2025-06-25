@@ -34,7 +34,7 @@ let _cached_decoder_for_ACIItem_itemOrUserFirst: $.ASN1Decoder<ACIItem_itemOrUse
  * @param {_Element} el The element being decoded.
  * @returns {ACIItem_itemOrUserFirst} The decoded data structure.
  */
-export function _decode_ACIItem_itemOrUserFirst(el: _Element) {
+export function _decode_ACIItem_itemOrUserFirst(el: _Element): ACIItem_itemOrUserFirst {
     if (!_cached_decoder_for_ACIItem_itemOrUserFirst) {
         _cached_decoder_for_ACIItem_itemOrUserFirst = $._decode_extensible_choice<ACIItem_itemOrUserFirst>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_ACIItem_itemOrUserFirst: $.ASN1Encoder<ACIItem_itemOrUse
 export function _encode_ACIItem_itemOrUserFirst(
     value: ACIItem_itemOrUserFirst,
     elGetter: $.ASN1Encoder<ACIItem_itemOrUserFirst>
-) {
+): _Element {
     if (!_cached_encoder_for_ACIItem_itemOrUserFirst) {
         _cached_encoder_for_ACIItem_itemOrUserFirst = $._encode_choice<ACIItem_itemOrUserFirst>(
             {

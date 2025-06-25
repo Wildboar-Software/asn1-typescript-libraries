@@ -40,7 +40,7 @@ let _cached_decoder_for_InfoSyntax: $.ASN1Decoder<InfoSyntax> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {InfoSyntax} The decoded data structure.
  */
-export function _decode_InfoSyntax(el: _Element) {
+export function _decode_InfoSyntax(el: _Element): InfoSyntax {
     if (!_cached_decoder_for_InfoSyntax) {
         _cached_decoder_for_InfoSyntax = $._decode_extensible_choice<InfoSyntax>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_InfoSyntax: $.ASN1Encoder<InfoSyntax> | null = null;
 export function _encode_InfoSyntax(
     value: InfoSyntax,
     elGetter: $.ASN1Encoder<InfoSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_InfoSyntax) {
         _cached_encoder_for_InfoSyntax = $._encode_choice<InfoSyntax>(
             {

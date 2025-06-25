@@ -126,7 +126,7 @@ export class LdapResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_returnToClient() {
+    public static get _default_value_for_returnToClient(): BOOLEAN {
         return false;
     }
     /**
@@ -135,7 +135,7 @@ export class LdapResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -191,7 +191,7 @@ let _cached_decoder_for_LdapResultData: $.ASN1Decoder<LdapResultData> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {LdapResultData} The decoded data structure.
  */
-export function _decode_LdapResultData(el: _Element) {
+export function _decode_LdapResultData(el: _Element): LdapResultData {
     if (!_cached_decoder_for_LdapResultData) {
         _cached_decoder_for_LdapResultData = function (
             el: _Element
@@ -271,7 +271,7 @@ let _cached_encoder_for_LdapResultData: $.ASN1Encoder<LdapResultData> | null = n
 export function _encode_LdapResultData(
     value: LdapResultData,
     elGetter: $.ASN1Encoder<LdapResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_LdapResultData) {
         _cached_encoder_for_LdapResultData = function (
             value: LdapResultData        ): _Element {

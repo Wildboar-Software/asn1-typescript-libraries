@@ -26,7 +26,7 @@ let _cached_decoder_for_CertPolicySet: $.ASN1Decoder<CertPolicySet> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CertPolicySet} The decoded data structure.
  */
-export function _decode_CertPolicySet(el: _Element) {
+export function _decode_CertPolicySet(el: _Element): CertPolicySet {
     if (!_cached_decoder_for_CertPolicySet) {
         _cached_decoder_for_CertPolicySet = $._decodeSequenceOf<CertPolicyId>(
             () => _decode_CertPolicyId
@@ -47,7 +47,7 @@ let _cached_encoder_for_CertPolicySet: $.ASN1Encoder<CertPolicySet> | null = nul
 export function _encode_CertPolicySet(
     value: CertPolicySet,
     elGetter: $.ASN1Encoder<CertPolicySet>
-) {
+): _Element {
     if (!_cached_encoder_for_CertPolicySet) {
         _cached_encoder_for_CertPolicySet = $._encodeSequenceOf<CertPolicyId>(
             () => _encode_CertPolicyId,

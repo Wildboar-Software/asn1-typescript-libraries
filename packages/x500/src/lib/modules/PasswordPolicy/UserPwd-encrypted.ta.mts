@@ -117,7 +117,7 @@ let _cached_decoder_for_UserPwd_encrypted: $.ASN1Decoder<UserPwd_encrypted> | nu
  * @param {_Element} el The element being decoded.
  * @returns {UserPwd_encrypted} The decoded data structure.
  */
-export function _decode_UserPwd_encrypted(el: _Element) {
+export function _decode_UserPwd_encrypted(el: _Element): UserPwd_encrypted {
     if (!_cached_decoder_for_UserPwd_encrypted) {
         _cached_decoder_for_UserPwd_encrypted = function (
             el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_UserPwd_encrypted: $.ASN1Encoder<UserPwd_encrypted> | nu
 export function _encode_UserPwd_encrypted(
     value: UserPwd_encrypted,
     elGetter: $.ASN1Encoder<UserPwd_encrypted>
-) {
+): _Element {
     if (!_cached_encoder_for_UserPwd_encrypted) {
         _cached_encoder_for_UserPwd_encrypted = function (
             value: UserPwd_encrypted        ): _Element {

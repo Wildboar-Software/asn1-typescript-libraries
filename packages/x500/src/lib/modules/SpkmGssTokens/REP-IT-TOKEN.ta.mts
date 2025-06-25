@@ -180,7 +180,7 @@ let _cached_decoder_for_REP_IT_TOKEN: $.ASN1Decoder<REP_IT_TOKEN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {REP_IT_TOKEN} The decoded data structure.
  */
-export function _decode_REP_IT_TOKEN(el: _Element) {
+export function _decode_REP_IT_TOKEN(el: _Element): REP_IT_TOKEN {
     if (!_cached_decoder_for_REP_IT_TOKEN) {
         _cached_decoder_for_REP_IT_TOKEN = function (
             el: _Element
@@ -249,7 +249,7 @@ let _cached_encoder_for_REP_IT_TOKEN: $.ASN1Encoder<REP_IT_TOKEN> | null = null;
 export function _encode_REP_IT_TOKEN(
     value: REP_IT_TOKEN,
     elGetter: $.ASN1Encoder<REP_IT_TOKEN>
-) {
+): _Element {
     if (!_cached_encoder_for_REP_IT_TOKEN) {
         _cached_encoder_for_REP_IT_TOKEN = function (
             value: REP_IT_TOKEN        ): _Element {

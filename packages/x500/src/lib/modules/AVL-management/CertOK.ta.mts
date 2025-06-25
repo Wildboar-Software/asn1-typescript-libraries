@@ -103,7 +103,7 @@ let _cached_decoder_for_CertOK: $.ASN1Decoder<CertOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertOK} The decoded data structure.
  */
-export function _decode_CertOK(el: _Element) {
+export function _decode_CertOK(el: _Element): CertOK {
     if (!_cached_decoder_for_CertOK) {
         _cached_decoder_for_CertOK = function (el: _Element): CertOK {
             const sequence: _Element[] = el.sequence;
@@ -132,7 +132,7 @@ let _cached_encoder_for_CertOK: $.ASN1Encoder<CertOK> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertOK, encoded as an ASN.1 Element.
  */
-export function _encode_CertOK(value: CertOK, elGetter: $.ASN1Encoder<CertOK>) {
+export function _encode_CertOK(value: CertOK, elGetter: $.ASN1Encoder<CertOK>): _Element {
     if (!_cached_encoder_for_CertOK) {
         _cached_encoder_for_CertOK = function (
             value: CertOK        ): _Element {

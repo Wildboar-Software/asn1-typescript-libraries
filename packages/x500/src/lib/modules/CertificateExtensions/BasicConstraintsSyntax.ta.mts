@@ -73,7 +73,7 @@ export class BasicConstraintsSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_cA() {
+    public static get _default_value_for_cA(): BOOLEAN {
         return false;
     }
 }
@@ -127,7 +127,7 @@ let _cached_decoder_for_BasicConstraintsSyntax: $.ASN1Decoder<BasicConstraintsSy
  * @param {_Element} el The element being decoded.
  * @returns {BasicConstraintsSyntax} The decoded data structure.
  */
-export function _decode_BasicConstraintsSyntax(el: _Element) {
+export function _decode_BasicConstraintsSyntax(el: _Element): BasicConstraintsSyntax {
     if (!_cached_decoder_for_BasicConstraintsSyntax) {
         _cached_decoder_for_BasicConstraintsSyntax = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_BasicConstraintsSyntax: $.ASN1Encoder<BasicConstraintsSy
 export function _encode_BasicConstraintsSyntax(
     value: BasicConstraintsSyntax,
     elGetter: $.ASN1Encoder<BasicConstraintsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_BasicConstraintsSyntax) {
         _cached_encoder_for_BasicConstraintsSyntax = function (
             value: BasicConstraintsSyntax        ): _Element {

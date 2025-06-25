@@ -26,7 +26,7 @@ let _cached_decoder_for_HashedAttributes: $.ASN1Decoder<HashedAttributes> | null
  * @param {_Element} el The element being decoded.
  * @returns {HashedAttributes} The decoded data structure.
  */
-export function _decode_HashedAttributes(el: _Element) {
+export function _decode_HashedAttributes(el: _Element): HashedAttributes {
     if (!_cached_decoder_for_HashedAttributes) {
         _cached_decoder_for_HashedAttributes = $._decodeSequenceOf<Attribute>(
             () => _decode_Attribute
@@ -47,7 +47,7 @@ let _cached_encoder_for_HashedAttributes: $.ASN1Encoder<HashedAttributes> | null
 export function _encode_HashedAttributes(
     value: HashedAttributes,
     elGetter: $.ASN1Encoder<HashedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_HashedAttributes) {
         _cached_encoder_for_HashedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,

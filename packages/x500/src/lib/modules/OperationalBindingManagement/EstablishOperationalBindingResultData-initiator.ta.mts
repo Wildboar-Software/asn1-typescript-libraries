@@ -26,7 +26,7 @@ let _cached_decoder_for_EstablishOperationalBindingResultData_initiator: $.ASN1D
  */
 export function _decode_EstablishOperationalBindingResultData_initiator(
     el: _Element
-) {
+): EstablishOperationalBindingResultData_initiator {
     if (!_cached_decoder_for_EstablishOperationalBindingResultData_initiator) {
         _cached_decoder_for_EstablishOperationalBindingResultData_initiator = $._decode_inextensible_choice<EstablishOperationalBindingResultData_initiator>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_EstablishOperationalBindingResultData_initiator: $.ASN1E
 export function _encode_EstablishOperationalBindingResultData_initiator(
     value: EstablishOperationalBindingResultData_initiator,
     elGetter: $.ASN1Encoder<EstablishOperationalBindingResultData_initiator>
-) {
+): _Element {
     if (!_cached_encoder_for_EstablishOperationalBindingResultData_initiator) {
         _cached_encoder_for_EstablishOperationalBindingResultData_initiator = $._encode_choice<EstablishOperationalBindingResultData_initiator>(
             {

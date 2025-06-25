@@ -33,7 +33,7 @@ let _cached_decoder_for_TimeSpecification_time: $.ASN1Decoder<TimeSpecification_
  * @param {_Element} el The element being decoded.
  * @returns {TimeSpecification_time} The decoded data structure.
  */
-export function _decode_TimeSpecification_time(el: _Element) {
+export function _decode_TimeSpecification_time(el: _Element): TimeSpecification_time {
     if (!_cached_decoder_for_TimeSpecification_time) {
         _cached_decoder_for_TimeSpecification_time = $._decode_inextensible_choice<TimeSpecification_time>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_TimeSpecification_time: $.ASN1Encoder<TimeSpecification_
 export function _encode_TimeSpecification_time(
     value: TimeSpecification_time,
     elGetter: $.ASN1Encoder<TimeSpecification_time>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeSpecification_time) {
         _cached_encoder_for_TimeSpecification_time = $._encode_choice<TimeSpecification_time>(
             {

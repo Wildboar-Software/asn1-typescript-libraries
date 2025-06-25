@@ -24,7 +24,7 @@ let _cached_decoder_for_UnitOfReplication_supplyContexts: $.ASN1Decoder<UnitOfRe
  * @param {_Element} el The element being decoded.
  * @returns {UnitOfReplication_supplyContexts} The decoded data structure.
  */
-export function _decode_UnitOfReplication_supplyContexts(el: _Element) {
+export function _decode_UnitOfReplication_supplyContexts(el: _Element): UnitOfReplication_supplyContexts {
     if (!_cached_decoder_for_UnitOfReplication_supplyContexts) {
         _cached_decoder_for_UnitOfReplication_supplyContexts = $._decode_extensible_choice<UnitOfReplication_supplyContexts>(
             {
@@ -53,7 +53,7 @@ let _cached_encoder_for_UnitOfReplication_supplyContexts: $.ASN1Encoder<UnitOfRe
 export function _encode_UnitOfReplication_supplyContexts(
     value: UnitOfReplication_supplyContexts,
     elGetter: $.ASN1Encoder<UnitOfReplication_supplyContexts>
-) {
+): _Element {
     if (!_cached_encoder_for_UnitOfReplication_supplyContexts) {
         _cached_encoder_for_UnitOfReplication_supplyContexts = $._encode_choice<UnitOfReplication_supplyContexts>(
             {

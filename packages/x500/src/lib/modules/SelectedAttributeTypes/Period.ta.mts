@@ -298,7 +298,7 @@ let _cached_decoder_for_Period: $.ASN1Decoder<Period> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Period} The decoded data structure.
  */
-export function _decode_Period(el: _Element) {
+export function _decode_Period(el: _Element): Period {
     if (!_cached_decoder_for_Period) {
         _cached_decoder_for_Period = function (el: _Element): Period {
             let timesOfDay: OPTIONAL<DayTimeBand[]>;
@@ -366,7 +366,7 @@ let _cached_encoder_for_Period: $.ASN1Encoder<Period> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Period, encoded as an ASN.1 Element.
  */
-export function _encode_Period(value: Period, elGetter: $.ASN1Encoder<Period>) {
+export function _encode_Period(value: Period, elGetter: $.ASN1Encoder<Period>): _Element {
     if (!_cached_encoder_for_Period) {
         _cached_encoder_for_Period = function (
             value: Period        ): _Element {

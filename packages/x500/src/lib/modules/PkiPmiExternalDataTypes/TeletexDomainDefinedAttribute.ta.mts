@@ -109,7 +109,7 @@ let _cached_decoder_for_TeletexDomainDefinedAttribute: $.ASN1Decoder<TeletexDoma
  * @param {_Element} el The element being decoded.
  * @returns {TeletexDomainDefinedAttribute} The decoded data structure.
  */
-export function _decode_TeletexDomainDefinedAttribute(el: _Element) {
+export function _decode_TeletexDomainDefinedAttribute(el: _Element): TeletexDomainDefinedAttribute {
     if (!_cached_decoder_for_TeletexDomainDefinedAttribute) {
         _cached_decoder_for_TeletexDomainDefinedAttribute = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_TeletexDomainDefinedAttribute: $.ASN1Encoder<TeletexDoma
 export function _encode_TeletexDomainDefinedAttribute(
     value: TeletexDomainDefinedAttribute,
     elGetter: $.ASN1Encoder<TeletexDomainDefinedAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexDomainDefinedAttribute) {
         _cached_encoder_for_TeletexDomainDefinedAttribute = function (
             value: TeletexDomainDefinedAttribute        ): _Element {

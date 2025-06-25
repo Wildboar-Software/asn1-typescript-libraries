@@ -117,7 +117,7 @@ let _cached_decoder_for_CertUnsubscribeOK_Item_not_ok: $.ASN1Decoder<CertUnsubsc
  * @param {_Element} el The element being decoded.
  * @returns {CertUnsubscribeOK_Item_not_ok} The decoded data structure.
  */
-export function _decode_CertUnsubscribeOK_Item_not_ok(el: _Element) {
+export function _decode_CertUnsubscribeOK_Item_not_ok(el: _Element): CertUnsubscribeOK_Item_not_ok {
     if (!_cached_decoder_for_CertUnsubscribeOK_Item_not_ok) {
         _cached_decoder_for_CertUnsubscribeOK_Item_not_ok = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_CertUnsubscribeOK_Item_not_ok: $.ASN1Encoder<CertUnsubsc
 export function _encode_CertUnsubscribeOK_Item_not_ok(
     value: CertUnsubscribeOK_Item_not_ok,
     elGetter: $.ASN1Encoder<CertUnsubscribeOK_Item_not_ok>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUnsubscribeOK_Item_not_ok) {
         _cached_encoder_for_CertUnsubscribeOK_Item_not_ok = function (
             value: CertUnsubscribeOK_Item_not_ok        ): _Element {

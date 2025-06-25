@@ -26,7 +26,7 @@ let _cached_decoder_for_CrossCertificates: $.ASN1Decoder<CrossCertificates> | nu
  * @param {_Element} el The element being decoded.
  * @returns {CrossCertificates} The decoded data structure.
  */
-export function _decode_CrossCertificates(el: _Element) {
+export function _decode_CrossCertificates(el: _Element): CrossCertificates {
     if (!_cached_decoder_for_CrossCertificates) {
         _cached_decoder_for_CrossCertificates = $._decodeSetOf<Certificate>(
             () => _decode_Certificate
@@ -47,7 +47,7 @@ let _cached_encoder_for_CrossCertificates: $.ASN1Encoder<CrossCertificates> | nu
 export function _encode_CrossCertificates(
     value: CrossCertificates,
     elGetter: $.ASN1Encoder<CrossCertificates>
-) {
+): _Element {
     if (!_cached_encoder_for_CrossCertificates) {
         _cached_encoder_for_CrossCertificates = $._encodeSetOf<Certificate>(
             () => _encode_Certificate,

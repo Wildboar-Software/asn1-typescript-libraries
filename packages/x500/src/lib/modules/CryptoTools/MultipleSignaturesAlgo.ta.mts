@@ -27,7 +27,7 @@ let _cached_decoder_for_MultipleSignaturesAlgo: $.ASN1Decoder<MultipleSignatures
  * @param {_Element} el The element being decoded.
  * @returns {MultipleSignaturesAlgo} The decoded data structure.
  */
-export function _decode_MultipleSignaturesAlgo(el: _Element) {
+export function _decode_MultipleSignaturesAlgo(el: _Element): MultipleSignaturesAlgo {
     if (!_cached_decoder_for_MultipleSignaturesAlgo) {
         _cached_decoder_for_MultipleSignaturesAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultipleSignaturesAlgo: $.ASN1Encoder<MultipleSignatures
 export function _encode_MultipleSignaturesAlgo(
     value: MultipleSignaturesAlgo,
     elGetter: $.ASN1Encoder<MultipleSignaturesAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleSignaturesAlgo) {
         _cached_encoder_for_MultipleSignaturesAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

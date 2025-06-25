@@ -141,7 +141,7 @@ let _cached_decoder_for_ChangePasswordArgumentData: $.ASN1Decoder<ChangePassword
  * @param {_Element} el The element being decoded.
  * @returns {ChangePasswordArgumentData} The decoded data structure.
  */
-export function _decode_ChangePasswordArgumentData(el: _Element) {
+export function _decode_ChangePasswordArgumentData(el: _Element): ChangePasswordArgumentData {
     if (!_cached_decoder_for_ChangePasswordArgumentData) {
         _cached_decoder_for_ChangePasswordArgumentData = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_ChangePasswordArgumentData: $.ASN1Encoder<ChangePassword
 export function _encode_ChangePasswordArgumentData(
     value: ChangePasswordArgumentData,
     elGetter: $.ASN1Encoder<ChangePasswordArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangePasswordArgumentData) {
         _cached_encoder_for_ChangePasswordArgumentData = function (
             value: ChangePasswordArgumentData        ): _Element {

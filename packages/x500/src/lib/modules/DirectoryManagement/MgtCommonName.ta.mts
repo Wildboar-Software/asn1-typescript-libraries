@@ -26,7 +26,7 @@ let _cached_decoder_for_MgtCommonName: $.ASN1Decoder<MgtCommonName> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MgtCommonName} The decoded data structure.
  */
-export function _decode_MgtCommonName(el: _Element) {
+export function _decode_MgtCommonName(el: _Element): MgtCommonName {
     if (!_cached_decoder_for_MgtCommonName) {
         _cached_decoder_for_MgtCommonName = _decode_UnboundedDirectoryString;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_MgtCommonName: $.ASN1Encoder<MgtCommonName> | null = nul
 export function _encode_MgtCommonName(
     value: MgtCommonName,
     elGetter: $.ASN1Encoder<MgtCommonName>
-) {
+): _Element {
     if (!_cached_encoder_for_MgtCommonName) {
         _cached_encoder_for_MgtCommonName = _encode_UnboundedDirectoryString;
     }

@@ -26,7 +26,7 @@ let _cached_decoder_for_AttributeTypes: $.ASN1Decoder<AttributeTypes> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AttributeTypes} The decoded data structure.
  */
-export function _decode_AttributeTypes(el: _Element) {
+export function _decode_AttributeTypes(el: _Element): AttributeTypes {
     if (!_cached_decoder_for_AttributeTypes) {
         _cached_decoder_for_AttributeTypes = $._decodeSetOf<AttributeType>(
             () => _decode_AttributeType
@@ -47,7 +47,7 @@ let _cached_encoder_for_AttributeTypes: $.ASN1Encoder<AttributeTypes> | null = n
 export function _encode_AttributeTypes(
     value: AttributeTypes,
     elGetter: $.ASN1Encoder<AttributeTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeTypes) {
         _cached_encoder_for_AttributeTypes = $._encodeSetOf<AttributeType>(
             () => _encode_AttributeType,

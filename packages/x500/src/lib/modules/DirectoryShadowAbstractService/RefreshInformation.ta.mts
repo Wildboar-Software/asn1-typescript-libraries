@@ -46,7 +46,7 @@ let _cached_decoder_for_RefreshInformation: $.ASN1Decoder<RefreshInformation> | 
  * @param {_Element} el The element being decoded.
  * @returns {RefreshInformation} The decoded data structure.
  */
-export function _decode_RefreshInformation(el: _Element) {
+export function _decode_RefreshInformation(el: _Element): RefreshInformation {
     if (!_cached_decoder_for_RefreshInformation) {
         _cached_decoder_for_RefreshInformation = $._decode_extensible_choice<RefreshInformation>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_RefreshInformation: $.ASN1Encoder<RefreshInformation> | 
 export function _encode_RefreshInformation(
     value: RefreshInformation,
     elGetter: $.ASN1Encoder<RefreshInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_RefreshInformation) {
         _cached_encoder_for_RefreshInformation = $._encode_choice<RefreshInformation>(
             {

@@ -115,7 +115,7 @@ export const _extension_additions_list_spec_for_AUTHEN_ENCRYPT: $.ComponentSpec[
 export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
     _decode_ToBeAuth: $.ASN1Decoder<ToBeAuth>,
     _decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>
-) {
+): $.ASN1Decoder<AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>> {
     return function (el: _Element): AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
         let aad: OPTIONAL<ToBeAuth>;
         let encr!: ToBeEnciphered;
@@ -156,7 +156,7 @@ export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
 export function _get_encoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
     _encode_ToBeAuth: $.ASN1Encoder<ToBeAuth>,
     _encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>
-) {
+): $.ASN1Encoder<AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>> {
     return function (
         value: AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>    ): _Element {
         return $._encodeSequence(

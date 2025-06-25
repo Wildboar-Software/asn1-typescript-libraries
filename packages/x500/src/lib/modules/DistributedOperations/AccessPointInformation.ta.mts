@@ -205,7 +205,7 @@ let _cached_decoder_for_AccessPointInformation: $.ASN1Decoder<AccessPointInforma
  * @param {_Element} el The element being decoded.
  * @returns {AccessPointInformation} The decoded data structure.
  */
-export function _decode_AccessPointInformation(el: _Element) {
+export function _decode_AccessPointInformation(el: _Element): AccessPointInformation {
     if (!_cached_decoder_for_AccessPointInformation) {
         _cached_decoder_for_AccessPointInformation = function (
             el: _Element
@@ -293,7 +293,7 @@ let _cached_encoder_for_AccessPointInformation: $.ASN1Encoder<AccessPointInforma
 export function _encode_AccessPointInformation(
     value: AccessPointInformation,
     elGetter: $.ASN1Encoder<AccessPointInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessPointInformation) {
         _cached_encoder_for_AccessPointInformation = function (
             value: AccessPointInformation        ): _Element {

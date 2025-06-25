@@ -27,7 +27,7 @@ let _cached_decoder_for_UniversalOrganizationalUnitNames: $.ASN1Decoder<Universa
  * @param {_Element} el The element being decoded.
  * @returns {UniversalOrganizationalUnitNames} The decoded data structure.
  */
-export function _decode_UniversalOrganizationalUnitNames(el: _Element) {
+export function _decode_UniversalOrganizationalUnitNames(el: _Element): UniversalOrganizationalUnitNames {
     if (!_cached_decoder_for_UniversalOrganizationalUnitNames) {
         _cached_decoder_for_UniversalOrganizationalUnitNames = $._decodeSequenceOf<UniversalOrganizationalUnitName>(
             () => _decode_UniversalOrganizationalUnitName
@@ -48,7 +48,7 @@ let _cached_encoder_for_UniversalOrganizationalUnitNames: $.ASN1Encoder<Universa
 export function _encode_UniversalOrganizationalUnitNames(
     value: UniversalOrganizationalUnitNames,
     elGetter: $.ASN1Encoder<UniversalOrganizationalUnitNames>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalOrganizationalUnitNames) {
         _cached_encoder_for_UniversalOrganizationalUnitNames = $._encodeSequenceOf<UniversalOrganizationalUnitName>(
             () => _encode_UniversalOrganizationalUnitName,

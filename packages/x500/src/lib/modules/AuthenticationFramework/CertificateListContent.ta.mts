@@ -220,7 +220,7 @@ let _cached_decoder_for_CertificateListContent: $.ASN1Decoder<CertificateListCon
  * @param {_Element} el The element being decoded.
  * @returns {CertificateListContent} The decoded data structure.
  */
-export function _decode_CertificateListContent(el: _Element) {
+export function _decode_CertificateListContent(el: _Element): CertificateListContent {
     if (!_cached_decoder_for_CertificateListContent) {
         _cached_decoder_for_CertificateListContent = function (
             el: _Element
@@ -300,7 +300,7 @@ let _cached_encoder_for_CertificateListContent: $.ASN1Encoder<CertificateListCon
 export function _encode_CertificateListContent(
     value: CertificateListContent,
     elGetter: $.ASN1Encoder<CertificateListContent>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateListContent) {
         _cached_encoder_for_CertificateListContent = function (
             value: CertificateListContent        ): _Element {

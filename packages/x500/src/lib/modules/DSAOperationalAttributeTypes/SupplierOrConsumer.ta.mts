@@ -159,7 +159,7 @@ let _cached_decoder_for_SupplierOrConsumer: $.ASN1Decoder<SupplierOrConsumer> | 
  * @param {_Element} el The element being decoded.
  * @returns {SupplierOrConsumer} The decoded data structure.
  */
-export function _decode_SupplierOrConsumer(el: _Element) {
+export function _decode_SupplierOrConsumer(el: _Element): SupplierOrConsumer {
     if (!_cached_decoder_for_SupplierOrConsumer) {
         _cached_decoder_for_SupplierOrConsumer = function (
             el: _Element
@@ -231,7 +231,7 @@ let _cached_encoder_for_SupplierOrConsumer: $.ASN1Encoder<SupplierOrConsumer> | 
 export function _encode_SupplierOrConsumer(
     value: SupplierOrConsumer,
     elGetter: $.ASN1Encoder<SupplierOrConsumer>
-) {
+): _Element {
     if (!_cached_encoder_for_SupplierOrConsumer) {
         _cached_encoder_for_SupplierOrConsumer = function (
             value: SupplierOrConsumer        ): _Element {

@@ -144,7 +144,7 @@ let _cached_decoder_for_Del_Header: $.ASN1Decoder<Del_Header> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Del_Header} The decoded data structure.
  */
-export function _decode_Del_Header(el: _Element) {
+export function _decode_Del_Header(el: _Element): Del_Header {
     if (!_cached_decoder_for_Del_Header) {
         _cached_decoder_for_Del_Header = function (el: _Element): Del_Header {
             let tok_id!: INTEGER;
@@ -200,7 +200,7 @@ let _cached_encoder_for_Del_Header: $.ASN1Encoder<Del_Header> | null = null;
 export function _encode_Del_Header(
     value: Del_Header,
     elGetter: $.ASN1Encoder<Del_Header>
-) {
+): _Element {
     if (!_cached_encoder_for_Del_Header) {
         _cached_encoder_for_Del_Header = function (
             value: Del_Header        ): _Element {

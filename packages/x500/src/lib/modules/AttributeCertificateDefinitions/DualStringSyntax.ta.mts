@@ -119,7 +119,7 @@ let _cached_decoder_for_DualStringSyntax: $.ASN1Decoder<DualStringSyntax> | null
  * @param {_Element} el The element being decoded.
  * @returns {DualStringSyntax} The decoded data structure.
  */
-export function _decode_DualStringSyntax(el: _Element) {
+export function _decode_DualStringSyntax(el: _Element): DualStringSyntax {
     if (!_cached_decoder_for_DualStringSyntax) {
         _cached_decoder_for_DualStringSyntax = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_DualStringSyntax: $.ASN1Encoder<DualStringSyntax> | null
 export function _encode_DualStringSyntax(
     value: DualStringSyntax,
     elGetter: $.ASN1Encoder<DualStringSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_DualStringSyntax) {
         _cached_encoder_for_DualStringSyntax = function (
             value: DualStringSyntax        ): _Element {

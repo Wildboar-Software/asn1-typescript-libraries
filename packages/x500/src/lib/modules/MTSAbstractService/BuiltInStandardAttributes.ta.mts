@@ -251,7 +251,7 @@ let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandard
  * @param {_Element} el The element being decoded.
  * @returns {BuiltInStandardAttributes} The decoded data structure.
  */
-export function _decode_BuiltInStandardAttributes(el: _Element) {
+export function _decode_BuiltInStandardAttributes(el: _Element): BuiltInStandardAttributes {
     if (!_cached_decoder_for_BuiltInStandardAttributes) {
         _cached_decoder_for_BuiltInStandardAttributes = function (
             el: _Element
@@ -346,7 +346,7 @@ let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandard
 export function _encode_BuiltInStandardAttributes(
     value: BuiltInStandardAttributes,
     elGetter: $.ASN1Encoder<BuiltInStandardAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_BuiltInStandardAttributes) {
         _cached_encoder_for_BuiltInStandardAttributes = function (
             value: BuiltInStandardAttributes        ): _Element {

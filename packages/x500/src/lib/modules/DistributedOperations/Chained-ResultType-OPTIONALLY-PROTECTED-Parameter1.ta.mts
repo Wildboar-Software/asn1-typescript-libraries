@@ -113,7 +113,7 @@ let _cached_decoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1: $.AS
  */
 export function _decode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
     el: _Element
-) {
+): Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 {
     if (
         !_cached_decoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1
     ) {
@@ -165,7 +165,7 @@ let _cached_encoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1: $.AS
 export function _encode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
     value: Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
     elGetter: $.ASN1Encoder<Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1>
-) {
+): _Element {
     if (
         !_cached_encoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1
     ) {

@@ -26,7 +26,7 @@ let _cached_decoder_for_EstablishOperationalBindingArgumentData_initiator: $.ASN
  */
 export function _decode_EstablishOperationalBindingArgumentData_initiator(
     el: _Element
-) {
+): EstablishOperationalBindingArgumentData_initiator {
     if (
         !_cached_decoder_for_EstablishOperationalBindingArgumentData_initiator
     ) {
@@ -64,7 +64,7 @@ let _cached_encoder_for_EstablishOperationalBindingArgumentData_initiator: $.ASN
 export function _encode_EstablishOperationalBindingArgumentData_initiator(
     value: EstablishOperationalBindingArgumentData_initiator,
     elGetter: $.ASN1Encoder<EstablishOperationalBindingArgumentData_initiator>
-) {
+): _Element {
     if (
         !_cached_encoder_for_EstablishOperationalBindingArgumentData_initiator
     ) {

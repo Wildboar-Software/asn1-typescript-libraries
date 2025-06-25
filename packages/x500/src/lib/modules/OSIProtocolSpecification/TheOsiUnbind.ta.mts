@@ -96,7 +96,7 @@ let _cached_decoder_for_TheOsiUnbind: $.ASN1Decoder<TheOsiUnbind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TheOsiUnbind} The decoded data structure.
  */
-export function _decode_TheOsiUnbind(el: _Element) {
+export function _decode_TheOsiUnbind(el: _Element): TheOsiUnbind {
     if (!_cached_decoder_for_TheOsiUnbind) {
         _cached_decoder_for_TheOsiUnbind = $._decode_implicit<TheOsiUnbind>(
             () =>
@@ -138,7 +138,7 @@ let _cached_encoder_for_TheOsiUnbind: $.ASN1Encoder<TheOsiUnbind> | null = null;
 export function _encode_TheOsiUnbind(
     value: TheOsiUnbind,
     elGetter: $.ASN1Encoder<TheOsiUnbind>
-) {
+): _Element {
     if (!_cached_encoder_for_TheOsiUnbind) {
         _cached_encoder_for_TheOsiUnbind = $._encode_implicit(
             _TagClass.application,

@@ -38,7 +38,7 @@ let _cached_decoder_for_TimeAssertion: $.ASN1Decoder<TimeAssertion> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TimeAssertion} The decoded data structure.
  */
-export function _decode_TimeAssertion(el: _Element) {
+export function _decode_TimeAssertion(el: _Element): TimeAssertion {
     if (!_cached_decoder_for_TimeAssertion) {
         _cached_decoder_for_TimeAssertion = $._decode_extensible_choice<TimeAssertion>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_TimeAssertion: $.ASN1Encoder<TimeAssertion> | null = nul
 export function _encode_TimeAssertion(
     value: TimeAssertion,
     elGetter: $.ASN1Encoder<TimeAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeAssertion) {
         _cached_encoder_for_TimeAssertion = $._encode_choice<TimeAssertion>(
             {

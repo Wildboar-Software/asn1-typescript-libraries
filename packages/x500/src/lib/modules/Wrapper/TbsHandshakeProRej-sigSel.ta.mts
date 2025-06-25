@@ -28,7 +28,7 @@ let _cached_decoder_for_TbsHandshakeProRej_sigSel: $.ASN1Decoder<TbsHandshakePro
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeProRej_sigSel} The decoded data structure.
  */
-export function _decode_TbsHandshakeProRej_sigSel(el: _Element) {
+export function _decode_TbsHandshakeProRej_sigSel(el: _Element): TbsHandshakeProRej_sigSel {
     if (!_cached_decoder_for_TbsHandshakeProRej_sigSel) {
         _cached_decoder_for_TbsHandshakeProRej_sigSel = $._decode_inextensible_choice<TbsHandshakeProRej_sigSel>(
             {
@@ -57,7 +57,7 @@ let _cached_encoder_for_TbsHandshakeProRej_sigSel: $.ASN1Encoder<TbsHandshakePro
 export function _encode_TbsHandshakeProRej_sigSel(
     value: TbsHandshakeProRej_sigSel,
     elGetter: $.ASN1Encoder<TbsHandshakeProRej_sigSel>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeProRej_sigSel) {
         _cached_encoder_for_TbsHandshakeProRej_sigSel = $._encode_choice<TbsHandshakeProRej_sigSel>(
             {

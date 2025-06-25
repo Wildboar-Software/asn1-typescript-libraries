@@ -131,7 +131,7 @@ let _cached_decoder_for_TypeAndContextAssertion: $.ASN1Decoder<TypeAndContextAss
  * @param {_Element} el The element being decoded.
  * @returns {TypeAndContextAssertion} The decoded data structure.
  */
-export function _decode_TypeAndContextAssertion(el: _Element) {
+export function _decode_TypeAndContextAssertion(el: _Element): TypeAndContextAssertion {
     if (!_cached_decoder_for_TypeAndContextAssertion) {
         _cached_decoder_for_TypeAndContextAssertion = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_TypeAndContextAssertion: $.ASN1Encoder<TypeAndContextAss
 export function _encode_TypeAndContextAssertion(
     value: TypeAndContextAssertion,
     elGetter: $.ASN1Encoder<TypeAndContextAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_TypeAndContextAssertion) {
         _cached_encoder_for_TypeAndContextAssertion = function (
             value: TypeAndContextAssertion        ): _Element {

@@ -128,7 +128,7 @@ let _cached_decoder_for_NameFormInformation: $.ASN1Decoder<NameFormInformation> 
  * @param {_Element} el The element being decoded.
  * @returns {NameFormInformation} The decoded data structure.
  */
-export function _decode_NameFormInformation(el: _Element) {
+export function _decode_NameFormInformation(el: _Element): NameFormInformation {
     if (!_cached_decoder_for_NameFormInformation) {
         _cached_decoder_for_NameFormInformation = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_NameFormInformation: $.ASN1Encoder<NameFormInformation> 
 export function _encode_NameFormInformation(
     value: NameFormInformation,
     elGetter: $.ASN1Encoder<NameFormInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_NameFormInformation) {
         _cached_encoder_for_NameFormInformation = function (
             value: NameFormInformation        ): _Element {

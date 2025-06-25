@@ -107,7 +107,7 @@ export class DeleteAvlReq implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -164,7 +164,7 @@ let _cached_decoder_for_DeleteAvlReq: $.ASN1Decoder<DeleteAvlReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeleteAvlReq} The decoded data structure.
  */
-export function _decode_DeleteAvlReq(el: _Element) {
+export function _decode_DeleteAvlReq(el: _Element): DeleteAvlReq {
     if (!_cached_decoder_for_DeleteAvlReq) {
         _cached_decoder_for_DeleteAvlReq = function (
             el: _Element
@@ -223,7 +223,7 @@ let _cached_encoder_for_DeleteAvlReq: $.ASN1Encoder<DeleteAvlReq> | null = null;
 export function _encode_DeleteAvlReq(
     value: DeleteAvlReq,
     elGetter: $.ASN1Encoder<DeleteAvlReq>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteAvlReq) {
         _cached_encoder_for_DeleteAvlReq = function (
             value: DeleteAvlReq        ): _Element {

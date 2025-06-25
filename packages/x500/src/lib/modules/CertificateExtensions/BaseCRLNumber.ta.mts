@@ -26,7 +26,7 @@ let _cached_decoder_for_BaseCRLNumber: $.ASN1Decoder<BaseCRLNumber> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {BaseCRLNumber} The decoded data structure.
  */
-export function _decode_BaseCRLNumber(el: _Element) {
+export function _decode_BaseCRLNumber(el: _Element): BaseCRLNumber {
     if (!_cached_decoder_for_BaseCRLNumber) {
         _cached_decoder_for_BaseCRLNumber = _decode_CRLNumber;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_BaseCRLNumber: $.ASN1Encoder<BaseCRLNumber> | null = nul
 export function _encode_BaseCRLNumber(
     value: BaseCRLNumber,
     elGetter: $.ASN1Encoder<BaseCRLNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_BaseCRLNumber) {
         _cached_encoder_for_BaseCRLNumber = _encode_CRLNumber;
     }

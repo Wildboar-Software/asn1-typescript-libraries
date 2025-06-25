@@ -40,7 +40,7 @@ let _cached_decoder_for_RequestShadowUpdateResult: $.ASN1Decoder<RequestShadowUp
  * @param {_Element} el The element being decoded.
  * @returns {RequestShadowUpdateResult} The decoded data structure.
  */
-export function _decode_RequestShadowUpdateResult(el: _Element) {
+export function _decode_RequestShadowUpdateResult(el: _Element): RequestShadowUpdateResult {
     if (!_cached_decoder_for_RequestShadowUpdateResult) {
         _cached_decoder_for_RequestShadowUpdateResult = $._decode_extensible_choice<RequestShadowUpdateResult>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_RequestShadowUpdateResult: $.ASN1Encoder<RequestShadowUp
 export function _encode_RequestShadowUpdateResult(
     value: RequestShadowUpdateResult,
     elGetter: $.ASN1Encoder<RequestShadowUpdateResult>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestShadowUpdateResult) {
         _cached_encoder_for_RequestShadowUpdateResult = $._encode_choice<RequestShadowUpdateResult>(
             {

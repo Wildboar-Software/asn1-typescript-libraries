@@ -128,7 +128,7 @@ let _cached_decoder_for_AttributeCertificationPath: $.ASN1Decoder<AttributeCerti
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCertificationPath} The decoded data structure.
  */
-export function _decode_AttributeCertificationPath(el: _Element) {
+export function _decode_AttributeCertificationPath(el: _Element): AttributeCertificationPath {
     if (!_cached_decoder_for_AttributeCertificationPath) {
         _cached_decoder_for_AttributeCertificationPath = function (
             el: _Element
@@ -178,7 +178,7 @@ let _cached_encoder_for_AttributeCertificationPath: $.ASN1Encoder<AttributeCerti
 export function _encode_AttributeCertificationPath(
     value: AttributeCertificationPath,
     elGetter: $.ASN1Encoder<AttributeCertificationPath>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeCertificationPath) {
         _cached_encoder_for_AttributeCertificationPath = function (
             value: AttributeCertificationPath        ): _Element {

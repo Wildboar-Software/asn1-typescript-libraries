@@ -22,7 +22,7 @@ let _cached_decoder_for_SecurityPolicyIdentifier: $.ASN1Decoder<SecurityPolicyId
  * @param {_Element} el The element being decoded.
  * @returns {SecurityPolicyIdentifier} The decoded data structure.
  */
-export function _decode_SecurityPolicyIdentifier(el: _Element) {
+export function _decode_SecurityPolicyIdentifier(el: _Element): SecurityPolicyIdentifier {
     if (!_cached_decoder_for_SecurityPolicyIdentifier) {
         _cached_decoder_for_SecurityPolicyIdentifier =
             $._decodeObjectIdentifier;
@@ -42,7 +42,7 @@ let _cached_encoder_for_SecurityPolicyIdentifier: $.ASN1Encoder<SecurityPolicyId
 export function _encode_SecurityPolicyIdentifier(
     value: SecurityPolicyIdentifier,
     elGetter: $.ASN1Encoder<SecurityPolicyIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityPolicyIdentifier) {
         _cached_encoder_for_SecurityPolicyIdentifier =
             $._encodeObjectIdentifier;

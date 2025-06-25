@@ -26,7 +26,7 @@ let _cached_decoder_for_Key_Estb_Algs: $.ASN1Decoder<Key_Estb_Algs> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Key_Estb_Algs} The decoded data structure.
  */
-export function _decode_Key_Estb_Algs(el: _Element) {
+export function _decode_Key_Estb_Algs(el: _Element): Key_Estb_Algs {
     if (!_cached_decoder_for_Key_Estb_Algs) {
         _cached_decoder_for_Key_Estb_Algs = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -47,7 +47,7 @@ let _cached_encoder_for_Key_Estb_Algs: $.ASN1Encoder<Key_Estb_Algs> | null = nul
 export function _encode_Key_Estb_Algs(
     value: Key_Estb_Algs,
     elGetter: $.ASN1Encoder<Key_Estb_Algs>
-) {
+): _Element {
     if (!_cached_encoder_for_Key_Estb_Algs) {
         _cached_encoder_for_Key_Estb_Algs = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

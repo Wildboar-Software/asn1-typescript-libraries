@@ -111,7 +111,7 @@ let _cached_decoder_for_WrappedPDUInfo: $.ASN1Decoder<WrappedPDUInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {WrappedPDUInfo} The decoded data structure.
  */
-export function _decode_WrappedPDUInfo(el: _Element) {
+export function _decode_WrappedPDUInfo(el: _Element): WrappedPDUInfo {
     if (!_cached_decoder_for_WrappedPDUInfo) {
         _cached_decoder_for_WrappedPDUInfo = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_WrappedPDUInfo: $.ASN1Encoder<WrappedPDUInfo> | null = n
 export function _encode_WrappedPDUInfo(
     value: WrappedPDUInfo,
     elGetter: $.ASN1Encoder<WrappedPDUInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_WrappedPDUInfo) {
         _cached_encoder_for_WrappedPDUInfo = function (
             value: WrappedPDUInfo        ): _Element {

@@ -108,7 +108,7 @@ export class RejectAVL implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -172,7 +172,7 @@ let _cached_decoder_for_RejectAVL: $.ASN1Decoder<RejectAVL> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RejectAVL} The decoded data structure.
  */
-export function _decode_RejectAVL(el: _Element) {
+export function _decode_RejectAVL(el: _Element): RejectAVL {
     if (!_cached_decoder_for_RejectAVL) {
         _cached_decoder_for_RejectAVL = function (el: _Element): RejectAVL {
             let version: OPTIONAL<AVMPversion> =
@@ -229,7 +229,7 @@ let _cached_encoder_for_RejectAVL: $.ASN1Encoder<RejectAVL> | null = null;
 export function _encode_RejectAVL(
     value: RejectAVL,
     elGetter: $.ASN1Encoder<RejectAVL>
-) {
+): _Element {
     if (!_cached_encoder_for_RejectAVL) {
         _cached_encoder_for_RejectAVL = function (
             value: RejectAVL        ): _Element {

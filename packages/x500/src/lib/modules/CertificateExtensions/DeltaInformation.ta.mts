@@ -120,7 +120,7 @@ let _cached_decoder_for_DeltaInformation: $.ASN1Decoder<DeltaInformation> | null
  * @param {_Element} el The element being decoded.
  * @returns {DeltaInformation} The decoded data structure.
  */
-export function _decode_DeltaInformation(el: _Element) {
+export function _decode_DeltaInformation(el: _Element): DeltaInformation {
     if (!_cached_decoder_for_DeltaInformation) {
         _cached_decoder_for_DeltaInformation = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_DeltaInformation: $.ASN1Encoder<DeltaInformation> | null
 export function _encode_DeltaInformation(
     value: DeltaInformation,
     elGetter: $.ASN1Encoder<DeltaInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DeltaInformation) {
         _cached_encoder_for_DeltaInformation = function (
             value: DeltaInformation        ): _Element {

@@ -36,7 +36,7 @@ let _cached_decoder_for_StatusReferral: $.ASN1Decoder<StatusReferral> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {StatusReferral} The decoded data structure.
  */
-export function _decode_StatusReferral(el: _Element) {
+export function _decode_StatusReferral(el: _Element): StatusReferral {
     if (!_cached_decoder_for_StatusReferral) {
         _cached_decoder_for_StatusReferral = $._decode_extensible_choice<StatusReferral>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_StatusReferral: $.ASN1Encoder<StatusReferral> | null = n
 export function _encode_StatusReferral(
     value: StatusReferral,
     elGetter: $.ASN1Encoder<StatusReferral>
-) {
+): _Element {
     if (!_cached_encoder_for_StatusReferral) {
         _cached_encoder_for_StatusReferral = $._encode_choice<StatusReferral>(
             {

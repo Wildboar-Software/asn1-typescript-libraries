@@ -145,7 +145,7 @@ let _cached_decoder_for_FamilyEntry: $.ASN1Decoder<FamilyEntry> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FamilyEntry} The decoded data structure.
  */
-export function _decode_FamilyEntry(el: _Element) {
+export function _decode_FamilyEntry(el: _Element): FamilyEntry {
     if (!_cached_decoder_for_FamilyEntry) {
         _cached_decoder_for_FamilyEntry = function (el: _Element): FamilyEntry {
             let rdn!: RelativeDistinguishedName;
@@ -200,7 +200,7 @@ let _cached_encoder_for_FamilyEntry: $.ASN1Encoder<FamilyEntry> | null = null;
 export function _encode_FamilyEntry(
     value: FamilyEntry,
     elGetter: $.ASN1Encoder<FamilyEntry>
-) {
+): _Element {
     if (!_cached_encoder_for_FamilyEntry) {
         _cached_encoder_for_FamilyEntry = function (
             value: FamilyEntry        ): _Element {

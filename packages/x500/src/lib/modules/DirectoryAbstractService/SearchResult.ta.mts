@@ -31,7 +31,7 @@ let _cached_decoder_for_SearchResult: $.ASN1Decoder<SearchResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SearchResult} The decoded data structure.
  */
-export function _decode_SearchResult(el: _Element) {
+export function _decode_SearchResult(el: _Element): SearchResult {
     if (!_cached_decoder_for_SearchResult) {
         _cached_decoder_for_SearchResult = _get_decoder_for_OPTIONALLY_PROTECTED<SearchResultData>(
             _decode_SearchResultData
@@ -52,7 +52,7 @@ let _cached_encoder_for_SearchResult: $.ASN1Encoder<SearchResult> | null = null;
 export function _encode_SearchResult(
     value: SearchResult,
     elGetter: $.ASN1Encoder<SearchResult>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchResult) {
         _cached_encoder_for_SearchResult = _get_encoder_for_OPTIONALLY_PROTECTED<SearchResultData>(
             _encode_SearchResultData

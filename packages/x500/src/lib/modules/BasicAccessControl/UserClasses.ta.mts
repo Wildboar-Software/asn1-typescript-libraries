@@ -166,7 +166,7 @@ let _cached_decoder_for_UserClasses: $.ASN1Decoder<UserClasses> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UserClasses} The decoded data structure.
  */
-export function _decode_UserClasses(el: _Element) {
+export function _decode_UserClasses(el: _Element): UserClasses {
     if (!_cached_decoder_for_UserClasses) {
         _cached_decoder_for_UserClasses = function (el: _Element): UserClasses {
             let allUsers: OPTIONAL<NULL>;
@@ -243,7 +243,7 @@ let _cached_encoder_for_UserClasses: $.ASN1Encoder<UserClasses> | null = null;
 export function _encode_UserClasses(
     value: UserClasses,
     elGetter: $.ASN1Encoder<UserClasses>
-) {
+): _Element {
     if (!_cached_encoder_for_UserClasses) {
         _cached_encoder_for_UserClasses = function (
             value: UserClasses        ): _Element {

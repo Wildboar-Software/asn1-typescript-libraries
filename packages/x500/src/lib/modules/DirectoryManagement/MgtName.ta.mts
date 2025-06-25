@@ -26,7 +26,7 @@ let _cached_decoder_for_MgtName: $.ASN1Decoder<MgtName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MgtName} The decoded data structure.
  */
-export function _decode_MgtName(el: _Element) {
+export function _decode_MgtName(el: _Element): MgtName {
     if (!_cached_decoder_for_MgtName) {
         _cached_decoder_for_MgtName = _decode_Name;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_MgtName: $.ASN1Encoder<MgtName> | null = null;
 export function _encode_MgtName(
     value: MgtName,
     elGetter: $.ASN1Encoder<MgtName>
-) {
+): _Element {
     if (!_cached_encoder_for_MgtName) {
         _cached_encoder_for_MgtName = _encode_Name;
     }

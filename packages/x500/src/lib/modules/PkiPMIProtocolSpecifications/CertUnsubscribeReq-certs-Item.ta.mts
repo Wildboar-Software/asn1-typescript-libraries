@@ -121,7 +121,7 @@ let _cached_decoder_for_CertUnsubscribeReq_certs_Item: $.ASN1Decoder<CertUnsubsc
  * @param {_Element} el The element being decoded.
  * @returns {CertUnsubscribeReq_certs_Item} The decoded data structure.
  */
-export function _decode_CertUnsubscribeReq_certs_Item(el: _Element) {
+export function _decode_CertUnsubscribeReq_certs_Item(el: _Element): CertUnsubscribeReq_certs_Item {
     if (!_cached_decoder_for_CertUnsubscribeReq_certs_Item) {
         _cached_decoder_for_CertUnsubscribeReq_certs_Item = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_CertUnsubscribeReq_certs_Item: $.ASN1Encoder<CertUnsubsc
 export function _encode_CertUnsubscribeReq_certs_Item(
     value: CertUnsubscribeReq_certs_Item,
     elGetter: $.ASN1Encoder<CertUnsubscribeReq_certs_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUnsubscribeReq_certs_Item) {
         _cached_encoder_for_CertUnsubscribeReq_certs_Item = function (
             value: CertUnsubscribeReq_certs_Item        ): _Element {

@@ -50,7 +50,7 @@ let _cached_decoder_for_DSACredentials: $.ASN1Decoder<DSACredentials> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {DSACredentials} The decoded data structure.
  */
-export function _decode_DSACredentials(el: _Element) {
+export function _decode_DSACredentials(el: _Element): DSACredentials {
     if (!_cached_decoder_for_DSACredentials) {
         _cached_decoder_for_DSACredentials = $._decode_extensible_choice<DSACredentials>(
             {
@@ -94,7 +94,7 @@ let _cached_encoder_for_DSACredentials: $.ASN1Encoder<DSACredentials> | null = n
 export function _encode_DSACredentials(
     value: DSACredentials,
     elGetter: $.ASN1Encoder<DSACredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_DSACredentials) {
         _cached_encoder_for_DSACredentials = $._encode_choice<DSACredentials>(
             {

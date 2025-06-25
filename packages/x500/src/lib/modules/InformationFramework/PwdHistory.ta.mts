@@ -112,7 +112,7 @@ let _cached_decoder_for_PwdHistory: $.ASN1Decoder<PwdHistory> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PwdHistory} The decoded data structure.
  */
-export function _decode_PwdHistory(el: _Element) {
+export function _decode_PwdHistory(el: _Element): PwdHistory {
     if (!_cached_decoder_for_PwdHistory) {
         _cached_decoder_for_PwdHistory = function (el: _Element): PwdHistory {
             const sequence: _Element[] = el.sequence;
@@ -147,7 +147,7 @@ let _cached_encoder_for_PwdHistory: $.ASN1Encoder<PwdHistory> | null = null;
 export function _encode_PwdHistory(
     value: PwdHistory,
     elGetter: $.ASN1Encoder<PwdHistory>
-) {
+): _Element {
     if (!_cached_encoder_for_PwdHistory) {
         _cached_encoder_for_PwdHistory = function (
             value: PwdHistory        ): _Element {

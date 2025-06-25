@@ -124,7 +124,7 @@ let _cached_decoder_for_SubentryInfo: $.ASN1Decoder<SubentryInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SubentryInfo} The decoded data structure.
  */
-export function _decode_SubentryInfo(el: _Element) {
+export function _decode_SubentryInfo(el: _Element): SubentryInfo {
     if (!_cached_decoder_for_SubentryInfo) {
         _cached_decoder_for_SubentryInfo = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_SubentryInfo: $.ASN1Encoder<SubentryInfo> | null = null;
 export function _encode_SubentryInfo(
     value: SubentryInfo,
     elGetter: $.ASN1Encoder<SubentryInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SubentryInfo) {
         _cached_encoder_for_SubentryInfo = function (
             value: SubentryInfo        ): _Element {

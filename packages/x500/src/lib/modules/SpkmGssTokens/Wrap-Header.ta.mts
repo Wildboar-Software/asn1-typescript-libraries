@@ -167,7 +167,7 @@ let _cached_decoder_for_Wrap_Header: $.ASN1Decoder<Wrap_Header> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Wrap_Header} The decoded data structure.
  */
-export function _decode_Wrap_Header(el: _Element) {
+export function _decode_Wrap_Header(el: _Element): Wrap_Header {
     if (!_cached_decoder_for_Wrap_Header) {
         _cached_decoder_for_Wrap_Header = function (el: _Element): Wrap_Header {
             let tok_id!: INTEGER;
@@ -230,7 +230,7 @@ let _cached_encoder_for_Wrap_Header: $.ASN1Encoder<Wrap_Header> | null = null;
 export function _encode_Wrap_Header(
     value: Wrap_Header,
     elGetter: $.ASN1Encoder<Wrap_Header>
-) {
+): _Element {
     if (!_cached_encoder_for_Wrap_Header) {
         _cached_encoder_for_Wrap_Header = function (
             value: Wrap_Header        ): _Element {

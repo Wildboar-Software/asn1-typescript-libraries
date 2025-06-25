@@ -100,7 +100,7 @@ export class RejectCAsubscribe implements CASPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): CASPversion {
         return CASPversion_v1;
     }
     /**
@@ -164,7 +164,7 @@ let _cached_decoder_for_RejectCAsubscribe: $.ASN1Decoder<RejectCAsubscribe> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RejectCAsubscribe} The decoded data structure.
  */
-export function _decode_RejectCAsubscribe(el: _Element) {
+export function _decode_RejectCAsubscribe(el: _Element): RejectCAsubscribe {
     if (!_cached_decoder_for_RejectCAsubscribe) {
         _cached_decoder_for_RejectCAsubscribe = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_RejectCAsubscribe: $.ASN1Encoder<RejectCAsubscribe> | nu
 export function _encode_RejectCAsubscribe(
     value: RejectCAsubscribe,
     elGetter: $.ASN1Encoder<RejectCAsubscribe>
-) {
+): _Element {
     if (!_cached_encoder_for_RejectCAsubscribe) {
         _cached_encoder_for_RejectCAsubscribe = function (
             value: RejectCAsubscribe        ): _Element {

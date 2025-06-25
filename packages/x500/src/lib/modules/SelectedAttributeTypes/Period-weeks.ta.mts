@@ -30,7 +30,7 @@ let _cached_decoder_for_Period_weeks: $.ASN1Decoder<Period_weeks> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Period_weeks} The decoded data structure.
  */
-export function _decode_Period_weeks(el: _Element) {
+export function _decode_Period_weeks(el: _Element): Period_weeks {
     if (!_cached_decoder_for_Period_weeks) {
         _cached_decoder_for_Period_weeks = $._decode_extensible_choice<Period_weeks>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_Period_weeks: $.ASN1Encoder<Period_weeks> | null = null;
 export function _encode_Period_weeks(
     value: Period_weeks,
     elGetter: $.ASN1Encoder<Period_weeks>
-) {
+): _Element {
     if (!_cached_encoder_for_Period_weeks) {
         _cached_encoder_for_Period_weeks = $._encode_choice<Period_weeks>(
             {

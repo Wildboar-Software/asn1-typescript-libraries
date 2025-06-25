@@ -117,7 +117,7 @@ let _cached_decoder_for_TimeSpecification_time_absolute: $.ASN1Decoder<TimeSpeci
  * @param {_Element} el The element being decoded.
  * @returns {TimeSpecification_time_absolute} The decoded data structure.
  */
-export function _decode_TimeSpecification_time_absolute(el: _Element) {
+export function _decode_TimeSpecification_time_absolute(el: _Element): TimeSpecification_time_absolute {
     if (!_cached_decoder_for_TimeSpecification_time_absolute) {
         _cached_decoder_for_TimeSpecification_time_absolute = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_TimeSpecification_time_absolute: $.ASN1Encoder<TimeSpeci
 export function _encode_TimeSpecification_time_absolute(
     value: TimeSpecification_time_absolute,
     elGetter: $.ASN1Encoder<TimeSpecification_time_absolute>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeSpecification_time_absolute) {
         _cached_encoder_for_TimeSpecification_time_absolute = function (
             value: TimeSpecification_time_absolute        ): _Element {

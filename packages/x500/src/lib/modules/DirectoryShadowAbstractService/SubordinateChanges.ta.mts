@@ -124,7 +124,7 @@ let _cached_decoder_for_SubordinateChanges: $.ASN1Decoder<SubordinateChanges> | 
  * @param {_Element} el The element being decoded.
  * @returns {SubordinateChanges} The decoded data structure.
  */
-export function _decode_SubordinateChanges(el: _Element) {
+export function _decode_SubordinateChanges(el: _Element): SubordinateChanges {
     if (!_cached_decoder_for_SubordinateChanges) {
         _cached_decoder_for_SubordinateChanges = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_SubordinateChanges: $.ASN1Encoder<SubordinateChanges> | 
 export function _encode_SubordinateChanges(
     value: SubordinateChanges,
     elGetter: $.ASN1Encoder<SubordinateChanges>
-) {
+): _Element {
     if (!_cached_encoder_for_SubordinateChanges) {
         _cached_encoder_for_SubordinateChanges = function (
             value: SubordinateChanges        ): _Element {

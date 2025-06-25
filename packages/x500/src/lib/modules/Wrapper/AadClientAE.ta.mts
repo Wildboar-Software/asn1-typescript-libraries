@@ -166,7 +166,7 @@ let _cached_decoder_for_AadClientAE: $.ASN1Decoder<AadClientAE> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AadClientAE} The decoded data structure.
  */
-export function _decode_AadClientAE(el: _Element) {
+export function _decode_AadClientAE(el: _Element): AadClientAE {
     if (!_cached_decoder_for_AadClientAE) {
         _cached_decoder_for_AadClientAE = function (el: _Element): AadClientAE {
             let invokeID: OPTIONAL<InvokeID>;
@@ -238,7 +238,7 @@ let _cached_encoder_for_AadClientAE: $.ASN1Encoder<AadClientAE> | null = null;
 export function _encode_AadClientAE(
     value: AadClientAE,
     elGetter: $.ASN1Encoder<AadClientAE>
-) {
+): _Element {
     if (!_cached_encoder_for_AadClientAE) {
         _cached_encoder_for_AadClientAE = function (
             value: AadClientAE        ): _Element {

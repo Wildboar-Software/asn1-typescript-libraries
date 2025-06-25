@@ -110,7 +110,7 @@ export class AttributeTypeDescription {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -185,7 +185,7 @@ let _cached_decoder_for_AttributeTypeDescription: $.ASN1Decoder<AttributeTypeDes
  * @param {_Element} el The element being decoded.
  * @returns {AttributeTypeDescription} The decoded data structure.
  */
-export function _decode_AttributeTypeDescription(el: _Element) {
+export function _decode_AttributeTypeDescription(el: _Element): AttributeTypeDescription {
     if (!_cached_decoder_for_AttributeTypeDescription) {
         _cached_decoder_for_AttributeTypeDescription = function (
             el: _Element
@@ -253,7 +253,7 @@ let _cached_encoder_for_AttributeTypeDescription: $.ASN1Encoder<AttributeTypeDes
 export function _encode_AttributeTypeDescription(
     value: AttributeTypeDescription,
     elGetter: $.ASN1Encoder<AttributeTypeDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeTypeDescription) {
         _cached_encoder_for_AttributeTypeDescription = function (
             value: AttributeTypeDescription        ): _Element {

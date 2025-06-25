@@ -150,7 +150,7 @@ let _cached_decoder_for_ModifiedValidity: $.ASN1Decoder<ModifiedValidity> | null
  * @param {_Element} el The element being decoded.
  * @returns {ModifiedValidity} The decoded data structure.
  */
-export function _decode_ModifiedValidity(el: _Element) {
+export function _decode_ModifiedValidity(el: _Element): ModifiedValidity {
     if (!_cached_decoder_for_ModifiedValidity) {
         _cached_decoder_for_ModifiedValidity = function (
             el: _Element
@@ -204,7 +204,7 @@ let _cached_encoder_for_ModifiedValidity: $.ASN1Encoder<ModifiedValidity> | null
 export function _encode_ModifiedValidity(
     value: ModifiedValidity,
     elGetter: $.ASN1Encoder<ModifiedValidity>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifiedValidity) {
         _cached_encoder_for_ModifiedValidity = function (
             value: ModifiedValidity        ): _Element {

@@ -100,7 +100,7 @@ let _cached_decoder_for_AddAvlOK: $.ASN1Decoder<AddAvlOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddAvlOK} The decoded data structure.
  */
-export function _decode_AddAvlOK(el: _Element) {
+export function _decode_AddAvlOK(el: _Element): AddAvlOK {
     if (!_cached_decoder_for_AddAvlOK) {
         _cached_decoder_for_AddAvlOK = function (el: _Element): AddAvlOK {
             const sequence: _Element[] = el.sequence;
@@ -132,7 +132,7 @@ let _cached_encoder_for_AddAvlOK: $.ASN1Encoder<AddAvlOK> | null = null;
 export function _encode_AddAvlOK(
     value: AddAvlOK,
     elGetter: $.ASN1Encoder<AddAvlOK>
-) {
+): _Element {
     if (!_cached_encoder_for_AddAvlOK) {
         _cached_encoder_for_AddAvlOK = function (
             value: AddAvlOK        ): _Element {

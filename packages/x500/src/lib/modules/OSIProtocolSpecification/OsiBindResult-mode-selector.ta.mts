@@ -93,7 +93,7 @@ let _cached_decoder_for_OsiBindResult_mode_selector: $.ASN1Decoder<OsiBindResult
  * @param {_Element} el The element being decoded.
  * @returns {OsiBindResult_mode_selector} The decoded data structure.
  */
-export function _decode_OsiBindResult_mode_selector(el: _Element) {
+export function _decode_OsiBindResult_mode_selector(el: _Element): OsiBindResult_mode_selector {
     if (!_cached_decoder_for_OsiBindResult_mode_selector) {
         _cached_decoder_for_OsiBindResult_mode_selector = function (
             el: _Element
@@ -136,7 +136,7 @@ let _cached_encoder_for_OsiBindResult_mode_selector: $.ASN1Encoder<OsiBindResult
 export function _encode_OsiBindResult_mode_selector(
     value: OsiBindResult_mode_selector,
     elGetter: $.ASN1Encoder<OsiBindResult_mode_selector>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBindResult_mode_selector) {
         _cached_encoder_for_OsiBindResult_mode_selector = function (
             value: OsiBindResult_mode_selector        ): _Element {

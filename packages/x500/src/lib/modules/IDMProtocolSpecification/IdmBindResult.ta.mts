@@ -134,7 +134,7 @@ let _cached_decoder_for_IdmBindResult: $.ASN1Decoder<IdmBindResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {IdmBindResult} The decoded data structure.
  */
-export function _decode_IdmBindResult(el: _Element) {
+export function _decode_IdmBindResult(el: _Element): IdmBindResult {
     if (!_cached_decoder_for_IdmBindResult) {
         _cached_decoder_for_IdmBindResult = function (
             el: _Element
@@ -191,7 +191,7 @@ let _cached_encoder_for_IdmBindResult: $.ASN1Encoder<IdmBindResult> | null = nul
 export function _encode_IdmBindResult(
     value: IdmBindResult,
     elGetter: $.ASN1Encoder<IdmBindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_IdmBindResult) {
         _cached_encoder_for_IdmBindResult = function (
             value: IdmBindResult        ): _Element {

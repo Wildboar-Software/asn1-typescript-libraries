@@ -105,7 +105,7 @@ let _cached_decoder_for_UiiItem: $.ASN1Decoder<UiiItem> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UiiItem} The decoded data structure.
  */
-export function _decode_UiiItem(el: _Element) {
+export function _decode_UiiItem(el: _Element): UiiItem {
     if (!_cached_decoder_for_UiiItem) {
         _cached_decoder_for_UiiItem = function (el: _Element): UiiItem {
             let type_!: OBJECT_IDENTIFIER;
@@ -144,7 +144,7 @@ let _cached_encoder_for_UiiItem: $.ASN1Encoder<UiiItem> | null = null;
 export function _encode_UiiItem(
     value: UiiItem,
     elGetter: $.ASN1Encoder<UiiItem>
-) {
+): _Element {
     if (!_cached_encoder_for_UiiItem) {
         _cached_encoder_for_UiiItem = function (
             value: UiiItem        ): _Element {

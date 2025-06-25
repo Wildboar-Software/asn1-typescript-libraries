@@ -133,7 +133,7 @@ let _cached_decoder_for_PeriodicStrategy: $.ASN1Decoder<PeriodicStrategy> | null
  * @param {_Element} el The element being decoded.
  * @returns {PeriodicStrategy} The decoded data structure.
  */
-export function _decode_PeriodicStrategy(el: _Element) {
+export function _decode_PeriodicStrategy(el: _Element): PeriodicStrategy {
     if (!_cached_decoder_for_PeriodicStrategy) {
         _cached_decoder_for_PeriodicStrategy = function (
             el: _Element
@@ -186,7 +186,7 @@ let _cached_encoder_for_PeriodicStrategy: $.ASN1Encoder<PeriodicStrategy> | null
 export function _encode_PeriodicStrategy(
     value: PeriodicStrategy,
     elGetter: $.ASN1Encoder<PeriodicStrategy>
-) {
+): _Element {
     if (!_cached_encoder_for_PeriodicStrategy) {
         _cached_encoder_for_PeriodicStrategy = function (
             value: PeriodicStrategy        ): _Element {

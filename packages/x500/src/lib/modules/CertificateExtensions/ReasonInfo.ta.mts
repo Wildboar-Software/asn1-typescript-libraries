@@ -133,7 +133,7 @@ let _cached_decoder_for_ReasonInfo: $.ASN1Decoder<ReasonInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReasonInfo} The decoded data structure.
  */
-export function _decode_ReasonInfo(el: _Element) {
+export function _decode_ReasonInfo(el: _Element): ReasonInfo {
     if (!_cached_decoder_for_ReasonInfo) {
         _cached_decoder_for_ReasonInfo = function (el: _Element): ReasonInfo {
             let reasonCode!: CRLReason;
@@ -179,7 +179,7 @@ let _cached_encoder_for_ReasonInfo: $.ASN1Encoder<ReasonInfo> | null = null;
 export function _encode_ReasonInfo(
     value: ReasonInfo,
     elGetter: $.ASN1Encoder<ReasonInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ReasonInfo) {
         _cached_encoder_for_ReasonInfo = function (
             value: ReasonInfo        ): _Element {

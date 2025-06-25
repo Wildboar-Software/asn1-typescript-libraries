@@ -26,7 +26,7 @@ let _cached_decoder_for_UniversalLocalPostalAttributes: $.ASN1Decoder<UniversalL
  * @param {_Element} el The element being decoded.
  * @returns {UniversalLocalPostalAttributes} The decoded data structure.
  */
-export function _decode_UniversalLocalPostalAttributes(el: _Element) {
+export function _decode_UniversalLocalPostalAttributes(el: _Element): UniversalLocalPostalAttributes {
     if (!_cached_decoder_for_UniversalLocalPostalAttributes) {
         _cached_decoder_for_UniversalLocalPostalAttributes = _decode_UniversalPDSParameter;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_UniversalLocalPostalAttributes: $.ASN1Encoder<UniversalL
 export function _encode_UniversalLocalPostalAttributes(
     value: UniversalLocalPostalAttributes,
     elGetter: $.ASN1Encoder<UniversalLocalPostalAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalLocalPostalAttributes) {
         _cached_encoder_for_UniversalLocalPostalAttributes = _encode_UniversalPDSParameter;
     }

@@ -107,7 +107,7 @@ export class AddAvlReq implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -164,7 +164,7 @@ let _cached_decoder_for_AddAvlReq: $.ASN1Decoder<AddAvlReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddAvlReq} The decoded data structure.
  */
-export function _decode_AddAvlReq(el: _Element) {
+export function _decode_AddAvlReq(el: _Element): AddAvlReq {
     if (!_cached_decoder_for_AddAvlReq) {
         _cached_decoder_for_AddAvlReq = function (el: _Element): AddAvlReq {
             let version: OPTIONAL<AVMPversion> =
@@ -221,7 +221,7 @@ let _cached_encoder_for_AddAvlReq: $.ASN1Encoder<AddAvlReq> | null = null;
 export function _encode_AddAvlReq(
     value: AddAvlReq,
     elGetter: $.ASN1Encoder<AddAvlReq>
-) {
+): _Element {
     if (!_cached_encoder_for_AddAvlReq) {
         _cached_encoder_for_AddAvlReq = function (
             value: AddAvlReq        ): _Element {

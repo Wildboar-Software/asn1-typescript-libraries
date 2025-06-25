@@ -123,7 +123,7 @@ let _cached_decoder_for_ClassAttributeSelection: $.ASN1Decoder<ClassAttributeSel
  * @param {_Element} el The element being decoded.
  * @returns {ClassAttributeSelection} The decoded data structure.
  */
-export function _decode_ClassAttributeSelection(el: _Element) {
+export function _decode_ClassAttributeSelection(el: _Element): ClassAttributeSelection {
     if (!_cached_decoder_for_ClassAttributeSelection) {
         _cached_decoder_for_ClassAttributeSelection = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_ClassAttributeSelection: $.ASN1Encoder<ClassAttributeSel
 export function _encode_ClassAttributeSelection(
     value: ClassAttributeSelection,
     elGetter: $.ASN1Encoder<ClassAttributeSelection>
-) {
+): _Element {
     if (!_cached_encoder_for_ClassAttributeSelection) {
         _cached_encoder_for_ClassAttributeSelection = function (
             value: ClassAttributeSelection        ): _Element {

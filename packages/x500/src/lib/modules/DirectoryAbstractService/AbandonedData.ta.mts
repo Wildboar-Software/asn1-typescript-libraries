@@ -121,7 +121,7 @@ export class AbandonedData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
     /**
@@ -182,7 +182,7 @@ let _cached_decoder_for_AbandonedData: $.ASN1Decoder<AbandonedData> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AbandonedData} The decoded data structure.
  */
-export function _decode_AbandonedData(el: _Element) {
+export function _decode_AbandonedData(el: _Element): AbandonedData {
     if (!_cached_decoder_for_AbandonedData) {
         _cached_decoder_for_AbandonedData = function (
             el: _Element
@@ -256,7 +256,7 @@ let _cached_encoder_for_AbandonedData: $.ASN1Encoder<AbandonedData> | null = nul
 export function _encode_AbandonedData(
     value: AbandonedData,
     elGetter: $.ASN1Encoder<AbandonedData>
-) {
+): _Element {
     if (!_cached_encoder_for_AbandonedData) {
         _cached_encoder_for_AbandonedData = function (
             value: AbandonedData        ): _Element {

@@ -183,7 +183,7 @@ let _cached_decoder_for_SubtreeSpecification: $.ASN1Decoder<SubtreeSpecification
  * @param {_Element} el The element being decoded.
  * @returns {SubtreeSpecification} The decoded data structure.
  */
-export function _decode_SubtreeSpecification(el: _Element) {
+export function _decode_SubtreeSpecification(el: _Element): SubtreeSpecification {
     if (!_cached_decoder_for_SubtreeSpecification) {
         _cached_decoder_for_SubtreeSpecification = function (
             el: _Element
@@ -265,7 +265,7 @@ let _cached_encoder_for_SubtreeSpecification: $.ASN1Encoder<SubtreeSpecification
 export function _encode_SubtreeSpecification(
     value: SubtreeSpecification,
     elGetter: $.ASN1Encoder<SubtreeSpecification>
-) {
+): _Element {
     if (!_cached_encoder_for_SubtreeSpecification) {
         _cached_encoder_for_SubtreeSpecification = function (
             value: SubtreeSpecification        ): _Element {

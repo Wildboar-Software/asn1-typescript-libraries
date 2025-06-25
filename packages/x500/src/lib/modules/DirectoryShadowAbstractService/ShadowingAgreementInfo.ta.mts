@@ -94,7 +94,7 @@ export class ShadowingAgreementInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_updateMode() {
+    public static get _default_value_for_updateMode(): UpdateMode {
         return { supplierInitiated: { onChange: true } };
     }
     /**
@@ -103,7 +103,7 @@ export class ShadowingAgreementInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_secondaryShadows() {
+    public static get _default_value_for_secondaryShadows(): BOOLEAN {
         return false;
     }
 }
@@ -163,7 +163,7 @@ let _cached_decoder_for_ShadowingAgreementInfo: $.ASN1Decoder<ShadowingAgreement
  * @param {_Element} el The element being decoded.
  * @returns {ShadowingAgreementInfo} The decoded data structure.
  */
-export function _decode_ShadowingAgreementInfo(el: _Element) {
+export function _decode_ShadowingAgreementInfo(el: _Element): ShadowingAgreementInfo {
     if (!_cached_decoder_for_ShadowingAgreementInfo) {
         _cached_decoder_for_ShadowingAgreementInfo = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_ShadowingAgreementInfo: $.ASN1Encoder<ShadowingAgreement
 export function _encode_ShadowingAgreementInfo(
     value: ShadowingAgreementInfo,
     elGetter: $.ASN1Encoder<ShadowingAgreementInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ShadowingAgreementInfo) {
         _cached_encoder_for_ShadowingAgreementInfo = function (
             value: ShadowingAgreementInfo        ): _Element {

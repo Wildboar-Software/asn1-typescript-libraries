@@ -138,7 +138,7 @@ let _cached_decoder_for_BaseRevocationInfo: $.ASN1Decoder<BaseRevocationInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {BaseRevocationInfo} The decoded data structure.
  */
-export function _decode_BaseRevocationInfo(el: _Element) {
+export function _decode_BaseRevocationInfo(el: _Element): BaseRevocationInfo {
     if (!_cached_decoder_for_BaseRevocationInfo) {
         _cached_decoder_for_BaseRevocationInfo = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_BaseRevocationInfo: $.ASN1Encoder<BaseRevocationInfo> | 
 export function _encode_BaseRevocationInfo(
     value: BaseRevocationInfo,
     elGetter: $.ASN1Encoder<BaseRevocationInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_BaseRevocationInfo) {
         _cached_encoder_for_BaseRevocationInfo = function (
             value: BaseRevocationInfo        ): _Element {

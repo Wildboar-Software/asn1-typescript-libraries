@@ -110,7 +110,7 @@ export class DeleteAvlRsp implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -163,7 +163,7 @@ let _cached_decoder_for_DeleteAvlRsp: $.ASN1Decoder<DeleteAvlRsp> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeleteAvlRsp} The decoded data structure.
  */
-export function _decode_DeleteAvlRsp(el: _Element) {
+export function _decode_DeleteAvlRsp(el: _Element): DeleteAvlRsp {
     if (!_cached_decoder_for_DeleteAvlRsp) {
         _cached_decoder_for_DeleteAvlRsp = function (
             el: _Element
@@ -222,7 +222,7 @@ let _cached_encoder_for_DeleteAvlRsp: $.ASN1Encoder<DeleteAvlRsp> | null = null;
 export function _encode_DeleteAvlRsp(
     value: DeleteAvlRsp,
     elGetter: $.ASN1Encoder<DeleteAvlRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteAvlRsp) {
         _cached_encoder_for_DeleteAvlRsp = function (
             value: DeleteAvlRsp        ): _Element {

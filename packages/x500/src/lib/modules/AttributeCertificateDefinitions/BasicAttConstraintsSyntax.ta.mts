@@ -77,7 +77,7 @@ export class BasicAttConstraintsSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_authority() {
+    public static get _default_value_for_authority(): BOOLEAN {
         return false;
     }
 }
@@ -131,7 +131,7 @@ let _cached_decoder_for_BasicAttConstraintsSyntax: $.ASN1Decoder<BasicAttConstra
  * @param {_Element} el The element being decoded.
  * @returns {BasicAttConstraintsSyntax} The decoded data structure.
  */
-export function _decode_BasicAttConstraintsSyntax(el: _Element) {
+export function _decode_BasicAttConstraintsSyntax(el: _Element): BasicAttConstraintsSyntax {
     if (!_cached_decoder_for_BasicAttConstraintsSyntax) {
         _cached_decoder_for_BasicAttConstraintsSyntax = function (
             el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_BasicAttConstraintsSyntax: $.ASN1Encoder<BasicAttConstra
 export function _encode_BasicAttConstraintsSyntax(
     value: BasicAttConstraintsSyntax,
     elGetter: $.ASN1Encoder<BasicAttConstraintsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_BasicAttConstraintsSyntax) {
         _cached_encoder_for_BasicAttConstraintsSyntax = function (
             value: BasicAttConstraintsSyntax        ): _Element {

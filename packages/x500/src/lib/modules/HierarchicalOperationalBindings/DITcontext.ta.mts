@@ -26,7 +26,7 @@ let _cached_decoder_for_DITcontext: $.ASN1Decoder<DITcontext> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DITcontext} The decoded data structure.
  */
-export function _decode_DITcontext(el: _Element) {
+export function _decode_DITcontext(el: _Element): DITcontext {
     if (!_cached_decoder_for_DITcontext) {
         _cached_decoder_for_DITcontext = $._decodeSequenceOf<Vertex>(
             () => _decode_Vertex
@@ -47,7 +47,7 @@ let _cached_encoder_for_DITcontext: $.ASN1Encoder<DITcontext> | null = null;
 export function _encode_DITcontext(
     value: DITcontext,
     elGetter: $.ASN1Encoder<DITcontext>
-) {
+): _Element {
     if (!_cached_encoder_for_DITcontext) {
         _cached_encoder_for_DITcontext = $._encodeSequenceOf<Vertex>(
             () => _encode_Vertex,

@@ -35,7 +35,7 @@ let _cached_decoder_for_Refinement: $.ASN1Decoder<Refinement> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Refinement} The decoded data structure.
  */
-export function _decode_Refinement(el: _Element) {
+export function _decode_Refinement(el: _Element): Refinement {
     if (!_cached_decoder_for_Refinement) {
         _cached_decoder_for_Refinement = $._decode_extensible_choice<Refinement>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_Refinement: $.ASN1Encoder<Refinement> | null = null;
 export function _encode_Refinement(
     value: Refinement,
     elGetter: $.ASN1Encoder<Refinement>
-) {
+): _Element {
     if (!_cached_encoder_for_Refinement) {
         _cached_encoder_for_Refinement = $._encode_choice<Refinement>(
             {

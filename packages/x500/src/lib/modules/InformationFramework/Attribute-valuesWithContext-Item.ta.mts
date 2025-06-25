@@ -116,7 +116,7 @@ let _cached_decoder_for_Attribute_valuesWithContext_Item: $.ASN1Decoder<Attribut
  * @param {_Element} el The element being decoded.
  * @returns {Attribute_valuesWithContext_Item} The decoded data structure.
  */
-export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
+export function _decode_Attribute_valuesWithContext_Item(el: _Element): Attribute_valuesWithContext_Item {
     if (!_cached_decoder_for_Attribute_valuesWithContext_Item) {
         _cached_decoder_for_Attribute_valuesWithContext_Item = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_Attribute_valuesWithContext_Item: $.ASN1Encoder<Attribut
 export function _encode_Attribute_valuesWithContext_Item(
     value: Attribute_valuesWithContext_Item,
     elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Attribute_valuesWithContext_Item) {
         _cached_encoder_for_Attribute_valuesWithContext_Item = function (
             value: Attribute_valuesWithContext_Item        ): _Element {

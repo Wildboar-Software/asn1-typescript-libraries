@@ -129,7 +129,7 @@ let _cached_decoder_for_TelexNumber: $.ASN1Decoder<TelexNumber> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TelexNumber} The decoded data structure.
  */
-export function _decode_TelexNumber(el: _Element) {
+export function _decode_TelexNumber(el: _Element): TelexNumber {
     if (!_cached_decoder_for_TelexNumber) {
         _cached_decoder_for_TelexNumber = function (el: _Element): TelexNumber {
             const sequence: _Element[] = el.sequence;
@@ -172,7 +172,7 @@ let _cached_encoder_for_TelexNumber: $.ASN1Encoder<TelexNumber> | null = null;
 export function _encode_TelexNumber(
     value: TelexNumber,
     elGetter: $.ASN1Encoder<TelexNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_TelexNumber) {
         _cached_encoder_for_TelexNumber = function (
             value: TelexNumber        ): _Element {

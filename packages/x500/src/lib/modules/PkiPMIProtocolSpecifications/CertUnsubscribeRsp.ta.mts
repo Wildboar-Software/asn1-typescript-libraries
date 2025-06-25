@@ -102,7 +102,7 @@ export class CertUnsubscribeRsp implements CASPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): CASPversion {
         return CASPversion_v1;
     }
     /**
@@ -155,7 +155,7 @@ let _cached_decoder_for_CertUnsubscribeRsp: $.ASN1Decoder<CertUnsubscribeRsp> | 
  * @param {_Element} el The element being decoded.
  * @returns {CertUnsubscribeRsp} The decoded data structure.
  */
-export function _decode_CertUnsubscribeRsp(el: _Element) {
+export function _decode_CertUnsubscribeRsp(el: _Element): CertUnsubscribeRsp {
     if (!_cached_decoder_for_CertUnsubscribeRsp) {
         _cached_decoder_for_CertUnsubscribeRsp = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_CertUnsubscribeRsp: $.ASN1Encoder<CertUnsubscribeRsp> | 
 export function _encode_CertUnsubscribeRsp(
     value: CertUnsubscribeRsp,
     elGetter: $.ASN1Encoder<CertUnsubscribeRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUnsubscribeRsp) {
         _cached_encoder_for_CertUnsubscribeRsp = function (
             value: CertUnsubscribeRsp        ): _Element {

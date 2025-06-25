@@ -110,7 +110,7 @@ export class OsiBindError_normal_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_version() {
+    public static get _default_value_for_protocol_version(): OsiBindError_normal_mode_parameters_protocol_version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[
@@ -181,7 +181,7 @@ let _cached_decoder_for_OsiBindError_normal_mode_parameters: $.ASN1Decoder<OsiBi
  * @param {_Element} el The element being decoded.
  * @returns {OsiBindError_normal_mode_parameters} The decoded data structure.
  */
-export function _decode_OsiBindError_normal_mode_parameters(el: _Element) {
+export function _decode_OsiBindError_normal_mode_parameters(el: _Element): OsiBindError_normal_mode_parameters {
     if (!_cached_decoder_for_OsiBindError_normal_mode_parameters) {
         _cached_decoder_for_OsiBindError_normal_mode_parameters = function (
             el: _Element
@@ -254,7 +254,7 @@ let _cached_encoder_for_OsiBindError_normal_mode_parameters: $.ASN1Encoder<OsiBi
 export function _encode_OsiBindError_normal_mode_parameters(
     value: OsiBindError_normal_mode_parameters,
     elGetter: $.ASN1Encoder<OsiBindError_normal_mode_parameters>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBindError_normal_mode_parameters) {
         _cached_encoder_for_OsiBindError_normal_mode_parameters = function (
             value: OsiBindError_normal_mode_parameters        ): _Element {

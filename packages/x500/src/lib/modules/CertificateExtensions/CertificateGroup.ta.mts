@@ -44,7 +44,7 @@ let _cached_decoder_for_CertificateGroup: $.ASN1Decoder<CertificateGroup> | null
  * @param {_Element} el The element being decoded.
  * @returns {CertificateGroup} The decoded data structure.
  */
-export function _decode_CertificateGroup(el: _Element) {
+export function _decode_CertificateGroup(el: _Element): CertificateGroup {
     if (!_cached_decoder_for_CertificateGroup) {
         _cached_decoder_for_CertificateGroup = $._decode_extensible_choice<CertificateGroup>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_CertificateGroup: $.ASN1Encoder<CertificateGroup> | null
 export function _encode_CertificateGroup(
     value: CertificateGroup,
     elGetter: $.ASN1Encoder<CertificateGroup>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateGroup) {
         _cached_encoder_for_CertificateGroup = $._encode_choice<CertificateGroup>(
             {

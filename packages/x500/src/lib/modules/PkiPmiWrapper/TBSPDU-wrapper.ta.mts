@@ -123,7 +123,7 @@ export class TBSPDU_wrapper {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return v1;
     }
 }
@@ -188,7 +188,7 @@ let _cached_decoder_for_TBSPDU_wrapper: $.ASN1Decoder<TBSPDU_wrapper> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {TBSPDU_wrapper} The decoded data structure.
  */
-export function _decode_TBSPDU_wrapper(el: _Element) {
+export function _decode_TBSPDU_wrapper(el: _Element): TBSPDU_wrapper {
     if (!_cached_decoder_for_TBSPDU_wrapper) {
         _cached_decoder_for_TBSPDU_wrapper = function (
             el: _Element
@@ -256,7 +256,7 @@ let _cached_encoder_for_TBSPDU_wrapper: $.ASN1Encoder<TBSPDU_wrapper> | null = n
 export function _encode_TBSPDU_wrapper(
     value: TBSPDU_wrapper,
     elGetter: $.ASN1Encoder<TBSPDU_wrapper>
-) {
+): _Element {
     if (!_cached_encoder_for_TBSPDU_wrapper) {
         _cached_encoder_for_TBSPDU_wrapper = function (
             value: TBSPDU_wrapper        ): _Element {

@@ -116,7 +116,7 @@ let _cached_decoder_for_SubjectAltPublicKeyInfo: $.ASN1Decoder<SubjectAltPublicK
  * @param {_Element} el The element being decoded.
  * @returns {SubjectAltPublicKeyInfo} The decoded data structure.
  */
-export function _decode_SubjectAltPublicKeyInfo(el: _Element) {
+export function _decode_SubjectAltPublicKeyInfo(el: _Element): SubjectAltPublicKeyInfo {
     if (!_cached_decoder_for_SubjectAltPublicKeyInfo) {
         _cached_decoder_for_SubjectAltPublicKeyInfo = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_SubjectAltPublicKeyInfo: $.ASN1Encoder<SubjectAltPublicK
 export function _encode_SubjectAltPublicKeyInfo(
     value: SubjectAltPublicKeyInfo,
     elGetter: $.ASN1Encoder<SubjectAltPublicKeyInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectAltPublicKeyInfo) {
         _cached_encoder_for_SubjectAltPublicKeyInfo = function (
             value: SubjectAltPublicKeyInfo        ): _Element {

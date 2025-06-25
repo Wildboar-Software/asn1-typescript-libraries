@@ -102,7 +102,7 @@ export class RemoveEntryResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -147,7 +147,7 @@ let _cached_decoder_for_RemoveEntryResultData: $.ASN1Decoder<RemoveEntryResultDa
  * @param {_Element} el The element being decoded.
  * @returns {RemoveEntryResultData} The decoded data structure.
  */
-export function _decode_RemoveEntryResultData(el: _Element) {
+export function _decode_RemoveEntryResultData(el: _Element): RemoveEntryResultData {
     if (!_cached_decoder_for_RemoveEntryResultData) {
         _cached_decoder_for_RemoveEntryResultData = function (
             el: _Element
@@ -214,7 +214,7 @@ let _cached_encoder_for_RemoveEntryResultData: $.ASN1Encoder<RemoveEntryResultDa
 export function _encode_RemoveEntryResultData(
     value: RemoveEntryResultData,
     elGetter: $.ASN1Encoder<RemoveEntryResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveEntryResultData) {
         _cached_encoder_for_RemoveEntryResultData = function (
             value: RemoveEntryResultData        ): _Element {

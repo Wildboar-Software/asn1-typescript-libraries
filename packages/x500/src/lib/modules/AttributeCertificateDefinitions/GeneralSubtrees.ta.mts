@@ -26,7 +26,7 @@ let _cached_decoder_for_GeneralSubtrees: $.ASN1Decoder<GeneralSubtrees> | null =
  * @param {_Element} el The element being decoded.
  * @returns {GeneralSubtrees} The decoded data structure.
  */
-export function _decode_GeneralSubtrees(el: _Element) {
+export function _decode_GeneralSubtrees(el: _Element): GeneralSubtrees {
     if (!_cached_decoder_for_GeneralSubtrees) {
         _cached_decoder_for_GeneralSubtrees = $._decodeSequenceOf<GeneralSubtree>(
             () => _decode_GeneralSubtree
@@ -47,7 +47,7 @@ let _cached_encoder_for_GeneralSubtrees: $.ASN1Encoder<GeneralSubtrees> | null =
 export function _encode_GeneralSubtrees(
     value: GeneralSubtrees,
     elGetter: $.ASN1Encoder<GeneralSubtrees>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralSubtrees) {
         _cached_encoder_for_GeneralSubtrees = $._encodeSequenceOf<GeneralSubtree>(
             () => _encode_GeneralSubtree,

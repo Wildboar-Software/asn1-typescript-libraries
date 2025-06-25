@@ -110,7 +110,7 @@ let _cached_decoder_for_NonSpecificHierarchicalAgreement: $.ASN1Decoder<NonSpeci
  * @param {_Element} el The element being decoded.
  * @returns {NonSpecificHierarchicalAgreement} The decoded data structure.
  */
-export function _decode_NonSpecificHierarchicalAgreement(el: _Element) {
+export function _decode_NonSpecificHierarchicalAgreement(el: _Element): NonSpecificHierarchicalAgreement {
     if (!_cached_decoder_for_NonSpecificHierarchicalAgreement) {
         _cached_decoder_for_NonSpecificHierarchicalAgreement = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_NonSpecificHierarchicalAgreement: $.ASN1Encoder<NonSpeci
 export function _encode_NonSpecificHierarchicalAgreement(
     value: NonSpecificHierarchicalAgreement,
     elGetter: $.ASN1Encoder<NonSpecificHierarchicalAgreement>
-) {
+): _Element {
     if (!_cached_encoder_for_NonSpecificHierarchicalAgreement) {
         _cached_encoder_for_NonSpecificHierarchicalAgreement = function (
             value: NonSpecificHierarchicalAgreement        ): _Element {

@@ -29,7 +29,7 @@ let _cached_decoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs: $.ASN1
  */
 export function _decode_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs(
     el: _Element
-) {
+): ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs {
     if (!_cached_decoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs) {
         _cached_decoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs = _decode_OSI_PDU;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs: $.ASN1
 export function _encode_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs(
     value: ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs,
     elGetter: $.ASN1Encoder<ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs) {
         _cached_encoder_for_ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs = _encode_OSI_PDU;
     }

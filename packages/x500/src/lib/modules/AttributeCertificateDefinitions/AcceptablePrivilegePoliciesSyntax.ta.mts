@@ -26,7 +26,7 @@ let _cached_decoder_for_AcceptablePrivilegePoliciesSyntax: $.ASN1Decoder<Accepta
  * @param {_Element} el The element being decoded.
  * @returns {AcceptablePrivilegePoliciesSyntax} The decoded data structure.
  */
-export function _decode_AcceptablePrivilegePoliciesSyntax(el: _Element) {
+export function _decode_AcceptablePrivilegePoliciesSyntax(el: _Element): AcceptablePrivilegePoliciesSyntax {
     if (!_cached_decoder_for_AcceptablePrivilegePoliciesSyntax) {
         _cached_decoder_for_AcceptablePrivilegePoliciesSyntax = $._decodeSequenceOf<PrivilegePolicy>(
             () => _decode_PrivilegePolicy
@@ -47,7 +47,7 @@ let _cached_encoder_for_AcceptablePrivilegePoliciesSyntax: $.ASN1Encoder<Accepta
 export function _encode_AcceptablePrivilegePoliciesSyntax(
     value: AcceptablePrivilegePoliciesSyntax,
     elGetter: $.ASN1Encoder<AcceptablePrivilegePoliciesSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AcceptablePrivilegePoliciesSyntax) {
         _cached_encoder_for_AcceptablePrivilegePoliciesSyntax = $._encodeSequenceOf<PrivilegePolicy>(
             () => _encode_PrivilegePolicy,

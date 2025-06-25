@@ -31,7 +31,7 @@ let _cached_decoder_for_PostalCode: $.ASN1Decoder<PostalCode> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PostalCode} The decoded data structure.
  */
-export function _decode_PostalCode(el: _Element) {
+export function _decode_PostalCode(el: _Element): PostalCode {
     if (!_cached_decoder_for_PostalCode) {
         _cached_decoder_for_PostalCode = $._decode_inextensible_choice<PostalCode>(
             {
@@ -55,7 +55,7 @@ let _cached_encoder_for_PostalCode: $.ASN1Encoder<PostalCode> | null = null;
 export function _encode_PostalCode(
     value: PostalCode,
     elGetter: $.ASN1Encoder<PostalCode>
-) {
+): _Element {
     if (!_cached_encoder_for_PostalCode) {
         _cached_encoder_for_PostalCode = $._encode_choice<PostalCode>(
             {

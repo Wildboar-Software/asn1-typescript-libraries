@@ -178,7 +178,7 @@ let _cached_decoder_for_Associate_source_diagnostic_acse_service_user: $.ASN1Dec
  */
 export function _decode_Associate_source_diagnostic_acse_service_user(
     el: _Element
-) {
+): Associate_source_diagnostic_acse_service_user {
     if (!_cached_decoder_for_Associate_source_diagnostic_acse_service_user) {
         _cached_decoder_for_Associate_source_diagnostic_acse_service_user =
             $._decodeInteger;
@@ -200,7 +200,7 @@ let _cached_encoder_for_Associate_source_diagnostic_acse_service_user: $.ASN1Enc
 export function _encode_Associate_source_diagnostic_acse_service_user(
     value: Associate_source_diagnostic_acse_service_user,
     elGetter: $.ASN1Encoder<Associate_source_diagnostic_acse_service_user>
-) {
+): _Element {
     if (!_cached_encoder_for_Associate_source_diagnostic_acse_service_user) {
         _cached_encoder_for_Associate_source_diagnostic_acse_service_user =
             $._encodeInteger;

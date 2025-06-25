@@ -76,7 +76,7 @@ export class EpcFormat_fields_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_result() {
+    public static get _default_value_for_result(): EpcFormat_fields_Item_result {
         return EpcFormat_fields_Item_result_numericPad;
     }
     /**
@@ -138,7 +138,7 @@ let _cached_decoder_for_EpcFormat_fields_Item: $.ASN1Decoder<EpcFormat_fields_It
  * @param {_Element} el The element being decoded.
  * @returns {EpcFormat_fields_Item} The decoded data structure.
  */
-export function _decode_EpcFormat_fields_Item(el: _Element) {
+export function _decode_EpcFormat_fields_Item(el: _Element): EpcFormat_fields_Item {
     if (!_cached_decoder_for_EpcFormat_fields_Item) {
         _cached_decoder_for_EpcFormat_fields_Item = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_EpcFormat_fields_Item: $.ASN1Encoder<EpcFormat_fields_It
 export function _encode_EpcFormat_fields_Item(
     value: EpcFormat_fields_Item,
     elGetter: $.ASN1Encoder<EpcFormat_fields_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_EpcFormat_fields_Item) {
         _cached_encoder_for_EpcFormat_fields_Item = function (
             value: EpcFormat_fields_Item        ): _Element {

@@ -22,7 +22,7 @@ let _cached_decoder_for_AttributeOptionList: $.ASN1Decoder<AttributeOptionList> 
  * @param {_Element} el The element being decoded.
  * @returns {AttributeOptionList} The decoded data structure.
  */
-export function _decode_AttributeOptionList(el: _Element) {
+export function _decode_AttributeOptionList(el: _Element): AttributeOptionList {
     if (!_cached_decoder_for_AttributeOptionList) {
         _cached_decoder_for_AttributeOptionList = $._decodeSequenceOf<UTF8String>(
             () => $._decodeUTF8String
@@ -43,7 +43,7 @@ let _cached_encoder_for_AttributeOptionList: $.ASN1Encoder<AttributeOptionList> 
 export function _encode_AttributeOptionList(
     value: AttributeOptionList,
     elGetter: $.ASN1Encoder<AttributeOptionList>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeOptionList) {
         _cached_encoder_for_AttributeOptionList = $._encodeSequenceOf<UTF8String>(
             () => $._encodeUTF8String,

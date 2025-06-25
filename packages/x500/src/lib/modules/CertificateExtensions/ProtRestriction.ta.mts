@@ -22,7 +22,7 @@ let _cached_decoder_for_ProtRestriction: $.ASN1Decoder<ProtRestriction> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ProtRestriction} The decoded data structure.
  */
-export function _decode_ProtRestriction(el: _Element) {
+export function _decode_ProtRestriction(el: _Element): ProtRestriction {
     if (!_cached_decoder_for_ProtRestriction) {
         _cached_decoder_for_ProtRestriction = $._decodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -43,7 +43,7 @@ let _cached_encoder_for_ProtRestriction: $.ASN1Encoder<ProtRestriction> | null =
 export function _encode_ProtRestriction(
     value: ProtRestriction,
     elGetter: $.ASN1Encoder<ProtRestriction>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtRestriction) {
         _cached_encoder_for_ProtRestriction = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

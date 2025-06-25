@@ -125,7 +125,7 @@ export class DITStructureRuleDescription extends DITStructureRule {
      * @static
      * @method
      */
-    public static get _default_value_for_obsolete() {
+    public static get _default_value_for_obsolete(): BOOLEAN {
         return false;
     }
 }
@@ -191,7 +191,7 @@ let _cached_decoder_for_DITStructureRuleDescription: $.ASN1Decoder<DITStructureR
  * @param {_Element} el The element being decoded.
  * @returns {DITStructureRuleDescription} The decoded data structure.
  */
-export function _decode_DITStructureRuleDescription(el: _Element) {
+export function _decode_DITStructureRuleDescription(el: _Element): DITStructureRuleDescription {
     if (!_cached_decoder_for_DITStructureRuleDescription) {
         _cached_decoder_for_DITStructureRuleDescription = function (
             el: _Element
@@ -266,7 +266,7 @@ let _cached_encoder_for_DITStructureRuleDescription: $.ASN1Encoder<DITStructureR
 export function _encode_DITStructureRuleDescription(
     value: DITStructureRuleDescription,
     elGetter: $.ASN1Encoder<DITStructureRuleDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_DITStructureRuleDescription) {
         _cached_encoder_for_DITStructureRuleDescription = function (
             value: DITStructureRuleDescription        ): _Element {

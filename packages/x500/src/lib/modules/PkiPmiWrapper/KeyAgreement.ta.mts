@@ -127,7 +127,7 @@ let _cached_decoder_for_KeyAgreement: $.ASN1Decoder<KeyAgreement> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KeyAgreement} The decoded data structure.
  */
-export function _decode_KeyAgreement(el: _Element) {
+export function _decode_KeyAgreement(el: _Element): KeyAgreement {
     if (!_cached_decoder_for_KeyAgreement) {
         _cached_decoder_for_KeyAgreement = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_KeyAgreement: $.ASN1Encoder<KeyAgreement> | null = null;
 export function _encode_KeyAgreement(
     value: KeyAgreement,
     elGetter: $.ASN1Encoder<KeyAgreement>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyAgreement) {
         _cached_encoder_for_KeyAgreement = function (
             value: KeyAgreement        ): _Element {

@@ -36,7 +36,7 @@ let _cached_decoder_for_XDayOf: $.ASN1Decoder<XDayOf> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {XDayOf} The decoded data structure.
  */
-export function _decode_XDayOf(el: _Element) {
+export function _decode_XDayOf(el: _Element): XDayOf {
     if (!_cached_decoder_for_XDayOf) {
         _cached_decoder_for_XDayOf = $._decode_inextensible_choice<XDayOf>({
             "CONTEXT 1": [
@@ -73,7 +73,7 @@ let _cached_encoder_for_XDayOf: $.ASN1Encoder<XDayOf> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The XDayOf, encoded as an ASN.1 Element.
  */
-export function _encode_XDayOf(value: XDayOf, elGetter: $.ASN1Encoder<XDayOf>) {
+export function _encode_XDayOf(value: XDayOf, elGetter: $.ASN1Encoder<XDayOf>): _Element {
     if (!_cached_encoder_for_XDayOf) {
         _cached_encoder_for_XDayOf = $._encode_choice<XDayOf>(
             {

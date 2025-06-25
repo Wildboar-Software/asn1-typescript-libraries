@@ -43,7 +43,7 @@ let _cached_decoder_for_ModifyOperationalBindingResult: $.ASN1Decoder<ModifyOper
  * @param {_Element} el The element being decoded.
  * @returns {ModifyOperationalBindingResult} The decoded data structure.
  */
-export function _decode_ModifyOperationalBindingResult(el: _Element) {
+export function _decode_ModifyOperationalBindingResult(el: _Element): ModifyOperationalBindingResult {
     if (!_cached_decoder_for_ModifyOperationalBindingResult) {
         _cached_decoder_for_ModifyOperationalBindingResult = $._decode_extensible_choice<ModifyOperationalBindingResult>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ModifyOperationalBindingResult: $.ASN1Encoder<ModifyOper
 export function _encode_ModifyOperationalBindingResult(
     value: ModifyOperationalBindingResult,
     elGetter: $.ASN1Encoder<ModifyOperationalBindingResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyOperationalBindingResult) {
         _cached_encoder_for_ModifyOperationalBindingResult = $._encode_choice<ModifyOperationalBindingResult>(
             {

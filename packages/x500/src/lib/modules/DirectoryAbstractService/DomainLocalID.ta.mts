@@ -26,7 +26,7 @@ let _cached_decoder_for_DomainLocalID: $.ASN1Decoder<DomainLocalID> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DomainLocalID} The decoded data structure.
  */
-export function _decode_DomainLocalID(el: _Element) {
+export function _decode_DomainLocalID(el: _Element): DomainLocalID {
     if (!_cached_decoder_for_DomainLocalID) {
         _cached_decoder_for_DomainLocalID = _decode_UnboundedDirectoryString;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_DomainLocalID: $.ASN1Encoder<DomainLocalID> | null = nul
 export function _encode_DomainLocalID(
     value: DomainLocalID,
     elGetter: $.ASN1Encoder<DomainLocalID>
-) {
+): _Element {
     if (!_cached_encoder_for_DomainLocalID) {
         _cached_encoder_for_DomainLocalID = _encode_UnboundedDirectoryString;
     }

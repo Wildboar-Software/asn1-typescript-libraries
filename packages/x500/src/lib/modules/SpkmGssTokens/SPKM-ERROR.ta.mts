@@ -131,7 +131,7 @@ let _cached_decoder_for_SPKM_ERROR: $.ASN1Decoder<SPKM_ERROR> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_ERROR} The decoded data structure.
  */
-export function _decode_SPKM_ERROR(el: _Element) {
+export function _decode_SPKM_ERROR(el: _Element): SPKM_ERROR {
     if (!_cached_decoder_for_SPKM_ERROR) {
         _cached_decoder_for_SPKM_ERROR = function (el: _Element): SPKM_ERROR {
             const sequence: _Element[] = el.sequence;
@@ -169,7 +169,7 @@ let _cached_encoder_for_SPKM_ERROR: $.ASN1Encoder<SPKM_ERROR> | null = null;
 export function _encode_SPKM_ERROR(
     value: SPKM_ERROR,
     elGetter: $.ASN1Encoder<SPKM_ERROR>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_ERROR) {
         _cached_encoder_for_SPKM_ERROR = function (
             value: SPKM_ERROR        ): _Element {

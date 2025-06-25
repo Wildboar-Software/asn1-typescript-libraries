@@ -31,7 +31,7 @@ let _cached_decoder_for_SearchArgument: $.ASN1Decoder<SearchArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SearchArgument} The decoded data structure.
  */
-export function _decode_SearchArgument(el: _Element) {
+export function _decode_SearchArgument(el: _Element): SearchArgument {
     if (!_cached_decoder_for_SearchArgument) {
         _cached_decoder_for_SearchArgument = _get_decoder_for_OPTIONALLY_PROTECTED<SearchArgumentData>(
             _decode_SearchArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_SearchArgument: $.ASN1Encoder<SearchArgument> | null = n
 export function _encode_SearchArgument(
     value: SearchArgument,
     elGetter: $.ASN1Encoder<SearchArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchArgument) {
         _cached_encoder_for_SearchArgument = _get_encoder_for_OPTIONALLY_PROTECTED<SearchArgumentData>(
             _encode_SearchArgumentData

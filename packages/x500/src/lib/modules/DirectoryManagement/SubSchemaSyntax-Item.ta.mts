@@ -111,7 +111,7 @@ let _cached_decoder_for_SubSchemaSyntax_Item: $.ASN1Decoder<SubSchemaSyntax_Item
  * @param {_Element} el The element being decoded.
  * @returns {SubSchemaSyntax_Item} The decoded data structure.
  */
-export function _decode_SubSchemaSyntax_Item(el: _Element) {
+export function _decode_SubSchemaSyntax_Item(el: _Element): SubSchemaSyntax_Item {
     if (!_cached_decoder_for_SubSchemaSyntax_Item) {
         _cached_decoder_for_SubSchemaSyntax_Item = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_SubSchemaSyntax_Item: $.ASN1Encoder<SubSchemaSyntax_Item
 export function _encode_SubSchemaSyntax_Item(
     value: SubSchemaSyntax_Item,
     elGetter: $.ASN1Encoder<SubSchemaSyntax_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_SubSchemaSyntax_Item) {
         _cached_encoder_for_SubSchemaSyntax_Item = function (
             value: SubSchemaSyntax_Item        ): _Element {

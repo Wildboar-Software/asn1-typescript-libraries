@@ -39,7 +39,7 @@ let _cached_decoder_for_ChangePasswordResult: $.ASN1Decoder<ChangePasswordResult
  * @param {_Element} el The element being decoded.
  * @returns {ChangePasswordResult} The decoded data structure.
  */
-export function _decode_ChangePasswordResult(el: _Element) {
+export function _decode_ChangePasswordResult(el: _Element): ChangePasswordResult {
     if (!_cached_decoder_for_ChangePasswordResult) {
         /**
          * NOTE: This was manually modified to use `_decode_inextensible_choice`
@@ -73,7 +73,7 @@ let _cached_encoder_for_ChangePasswordResult: $.ASN1Encoder<ChangePasswordResult
 export function _encode_ChangePasswordResult(
     value: ChangePasswordResult,
     elGetter: $.ASN1Encoder<ChangePasswordResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangePasswordResult) {
         _cached_encoder_for_ChangePasswordResult = $._encode_choice<ChangePasswordResult>(
             {

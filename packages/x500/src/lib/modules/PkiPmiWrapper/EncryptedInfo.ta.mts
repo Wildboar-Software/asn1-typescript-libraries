@@ -124,7 +124,7 @@ let _cached_decoder_for_EncryptedInfo: $.ASN1Decoder<EncryptedInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedInfo} The decoded data structure.
  */
-export function _decode_EncryptedInfo(el: _Element) {
+export function _decode_EncryptedInfo(el: _Element): EncryptedInfo {
     if (!_cached_decoder_for_EncryptedInfo) {
         _cached_decoder_for_EncryptedInfo = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_EncryptedInfo: $.ASN1Encoder<EncryptedInfo> | null = nul
 export function _encode_EncryptedInfo(
     value: EncryptedInfo,
     elGetter: $.ASN1Encoder<EncryptedInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedInfo) {
         _cached_encoder_for_EncryptedInfo = function (
             value: EncryptedInfo        ): _Element {

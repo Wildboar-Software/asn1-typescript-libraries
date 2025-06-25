@@ -137,7 +137,7 @@ let _cached_decoder_for_TraceItem: $.ASN1Decoder<TraceItem> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TraceItem} The decoded data structure.
  */
-export function _decode_TraceItem(el: _Element) {
+export function _decode_TraceItem(el: _Element): TraceItem {
     if (!_cached_decoder_for_TraceItem) {
         _cached_decoder_for_TraceItem = function (el: _Element): TraceItem {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -194,7 +194,7 @@ let _cached_encoder_for_TraceItem: $.ASN1Encoder<TraceItem> | null = null;
 export function _encode_TraceItem(
     value: TraceItem,
     elGetter: $.ASN1Encoder<TraceItem>
-) {
+): _Element {
     if (!_cached_encoder_for_TraceItem) {
         _cached_encoder_for_TraceItem = function (
             value: TraceItem        ): _Element {

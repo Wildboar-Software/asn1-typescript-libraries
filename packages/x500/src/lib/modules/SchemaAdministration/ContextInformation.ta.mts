@@ -117,7 +117,7 @@ let _cached_decoder_for_ContextInformation: $.ASN1Decoder<ContextInformation> | 
  * @param {_Element} el The element being decoded.
  * @returns {ContextInformation} The decoded data structure.
  */
-export function _decode_ContextInformation(el: _Element) {
+export function _decode_ContextInformation(el: _Element): ContextInformation {
     if (!_cached_decoder_for_ContextInformation) {
         _cached_decoder_for_ContextInformation = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_ContextInformation: $.ASN1Encoder<ContextInformation> | 
 export function _encode_ContextInformation(
     value: ContextInformation,
     elGetter: $.ASN1Encoder<ContextInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextInformation) {
         _cached_encoder_for_ContextInformation = function (
             value: ContextInformation        ): _Element {

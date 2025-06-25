@@ -77,7 +77,7 @@ export class TimeAssertion_between {
      * @static
      * @method
      */
-    public static get _default_value_for_entirely() {
+    public static get _default_value_for_entirely(): BOOLEAN {
         return false;
     }
 }
@@ -136,7 +136,7 @@ let _cached_decoder_for_TimeAssertion_between: $.ASN1Decoder<TimeAssertion_betwe
  * @param {_Element} el The element being decoded.
  * @returns {TimeAssertion_between} The decoded data structure.
  */
-export function _decode_TimeAssertion_between(el: _Element) {
+export function _decode_TimeAssertion_between(el: _Element): TimeAssertion_between {
     if (!_cached_decoder_for_TimeAssertion_between) {
         _cached_decoder_for_TimeAssertion_between = function (
             el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_TimeAssertion_between: $.ASN1Encoder<TimeAssertion_betwe
 export function _encode_TimeAssertion_between(
     value: TimeAssertion_between,
     elGetter: $.ASN1Encoder<TimeAssertion_between>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeAssertion_between) {
         _cached_encoder_for_TimeAssertion_between = function (
             value: TimeAssertion_between        ): _Element {

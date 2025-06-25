@@ -41,7 +41,7 @@ let _cached_decoder_for_AltNameType: $.ASN1Decoder<AltNameType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AltNameType} The decoded data structure.
  */
-export function _decode_AltNameType(el: _Element) {
+export function _decode_AltNameType(el: _Element): AltNameType {
     if (!_cached_decoder_for_AltNameType) {
         _cached_decoder_for_AltNameType = $._decode_extensible_choice<AltNameType>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_AltNameType: $.ASN1Encoder<AltNameType> | null = null;
 export function _encode_AltNameType(
     value: AltNameType,
     elGetter: $.ASN1Encoder<AltNameType>
-) {
+): _Element {
     if (!_cached_encoder_for_AltNameType) {
         _cached_encoder_for_AltNameType = $._encode_choice<AltNameType>(
             {

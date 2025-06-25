@@ -118,7 +118,7 @@ let _cached_decoder_for_AvlId: $.ASN1Decoder<AvlId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AvlId} The decoded data structure.
  */
-export function _decode_AvlId(el: _Element) {
+export function _decode_AvlId(el: _Element): AvlId {
     if (!_cached_decoder_for_AvlId) {
         _cached_decoder_for_AvlId = function (el: _Element): AvlId {
             let issuer!: Name;
@@ -161,7 +161,7 @@ let _cached_encoder_for_AvlId: $.ASN1Encoder<AvlId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AvlId, encoded as an ASN.1 Element.
  */
-export function _encode_AvlId(value: AvlId, elGetter: $.ASN1Encoder<AvlId>) {
+export function _encode_AvlId(value: AvlId, elGetter: $.ASN1Encoder<AvlId>): _Element {
     if (!_cached_encoder_for_AvlId) {
         _cached_encoder_for_AvlId = function (
             value: AvlId        ): _Element {

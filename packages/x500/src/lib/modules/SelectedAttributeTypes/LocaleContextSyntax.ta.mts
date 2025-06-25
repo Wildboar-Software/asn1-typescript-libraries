@@ -32,7 +32,7 @@ let _cached_decoder_for_LocaleContextSyntax: $.ASN1Decoder<LocaleContextSyntax> 
  * @param {_Element} el The element being decoded.
  * @returns {LocaleContextSyntax} The decoded data structure.
  */
-export function _decode_LocaleContextSyntax(el: _Element) {
+export function _decode_LocaleContextSyntax(el: _Element): LocaleContextSyntax {
     if (!_cached_decoder_for_LocaleContextSyntax) {
         _cached_decoder_for_LocaleContextSyntax = $._decode_extensible_choice<LocaleContextSyntax>(
             {
@@ -60,7 +60,7 @@ let _cached_encoder_for_LocaleContextSyntax: $.ASN1Encoder<LocaleContextSyntax> 
 export function _encode_LocaleContextSyntax(
     value: LocaleContextSyntax,
     elGetter: $.ASN1Encoder<LocaleContextSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_LocaleContextSyntax) {
         _cached_encoder_for_LocaleContextSyntax = $._encode_choice<LocaleContextSyntax>(
             {

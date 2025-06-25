@@ -120,7 +120,7 @@ let _cached_decoder_for_FamilyEntries: $.ASN1Decoder<FamilyEntries> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {FamilyEntries} The decoded data structure.
  */
-export function _decode_FamilyEntries(el: _Element) {
+export function _decode_FamilyEntries(el: _Element): FamilyEntries {
     if (!_cached_decoder_for_FamilyEntries) {
         _cached_decoder_for_FamilyEntries = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_FamilyEntries: $.ASN1Encoder<FamilyEntries> | null = nul
 export function _encode_FamilyEntries(
     value: FamilyEntries,
     elGetter: $.ASN1Encoder<FamilyEntries>
-) {
+): _Element {
     if (!_cached_encoder_for_FamilyEntries) {
         _cached_encoder_for_FamilyEntries = function (
             value: FamilyEntries        ): _Element {

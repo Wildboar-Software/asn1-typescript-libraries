@@ -61,7 +61,7 @@ let _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy_standa
  */
 export function _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard(
     el: _Element
-) {
+): RequestShadowUpdateArgumentData_requestedStrategy_standard {
     if (
         !_cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy_standard
     ) {
@@ -85,7 +85,7 @@ let _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy_standa
 export function _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard(
     value: RequestShadowUpdateArgumentData_requestedStrategy_standard,
     elGetter: $.ASN1Encoder<RequestShadowUpdateArgumentData_requestedStrategy_standard>
-) {
+): _Element {
     if (
         !_cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy_standard
     ) {

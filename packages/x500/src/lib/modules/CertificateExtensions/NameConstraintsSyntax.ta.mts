@@ -121,7 +121,7 @@ let _cached_decoder_for_NameConstraintsSyntax: $.ASN1Decoder<NameConstraintsSynt
  * @param {_Element} el The element being decoded.
  * @returns {NameConstraintsSyntax} The decoded data structure.
  */
-export function _decode_NameConstraintsSyntax(el: _Element) {
+export function _decode_NameConstraintsSyntax(el: _Element): NameConstraintsSyntax {
     if (!_cached_decoder_for_NameConstraintsSyntax) {
         _cached_decoder_for_NameConstraintsSyntax = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_NameConstraintsSyntax: $.ASN1Encoder<NameConstraintsSynt
 export function _encode_NameConstraintsSyntax(
     value: NameConstraintsSyntax,
     elGetter: $.ASN1Encoder<NameConstraintsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_NameConstraintsSyntax) {
         _cached_encoder_for_NameConstraintsSyntax = function (
             value: NameConstraintsSyntax        ): _Element {

@@ -94,7 +94,7 @@ export class CertReq implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -146,7 +146,7 @@ let _cached_decoder_for_CertReq: $.ASN1Decoder<CertReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertReq} The decoded data structure.
  */
-export function _decode_CertReq(el: _Element) {
+export function _decode_CertReq(el: _Element): CertReq {
     if (!_cached_decoder_for_CertReq) {
         _cached_decoder_for_CertReq = function (el: _Element): CertReq {
             let version: OPTIONAL<AVMPversion> =
@@ -198,7 +198,7 @@ let _cached_encoder_for_CertReq: $.ASN1Encoder<CertReq> | null = null;
 export function _encode_CertReq(
     value: CertReq,
     elGetter: $.ASN1Encoder<CertReq>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReq) {
         _cached_encoder_for_CertReq = function (
             value: CertReq        ): _Element {

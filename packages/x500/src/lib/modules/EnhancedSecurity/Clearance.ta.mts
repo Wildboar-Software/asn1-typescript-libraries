@@ -91,7 +91,7 @@ export class Clearance {
      * @static
      * @method
      */
-    public static get _default_value_for_classList() {
+    public static get _default_value_for_classList(): ClassList {
         return (() => {
             const _ret = new Uint8ClampedArray(6);
             _ret[ClassList_unclassified] = TRUE_BIT;
@@ -154,7 +154,7 @@ let _cached_decoder_for_Clearance: $.ASN1Decoder<Clearance> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Clearance} The decoded data structure.
  */
-export function _decode_Clearance(el: _Element) {
+export function _decode_Clearance(el: _Element): Clearance {
     if (!_cached_decoder_for_Clearance) {
         _cached_decoder_for_Clearance = function (el: _Element): Clearance {
             let policyId!: OBJECT_IDENTIFIER;
@@ -208,7 +208,7 @@ let _cached_encoder_for_Clearance: $.ASN1Encoder<Clearance> | null = null;
 export function _encode_Clearance(
     value: Clearance,
     elGetter: $.ASN1Encoder<Clearance>
-) {
+): _Element {
     if (!_cached_encoder_for_Clearance) {
         _cached_encoder_for_Clearance = function (
             value: Clearance        ): _Element {

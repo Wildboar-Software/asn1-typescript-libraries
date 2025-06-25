@@ -120,7 +120,7 @@ let _cached_decoder_for_CertificateGroupNumberRange: $.ASN1Decoder<CertificateGr
  * @param {_Element} el The element being decoded.
  * @returns {CertificateGroupNumberRange} The decoded data structure.
  */
-export function _decode_CertificateGroupNumberRange(el: _Element) {
+export function _decode_CertificateGroupNumberRange(el: _Element): CertificateGroupNumberRange {
     if (!_cached_decoder_for_CertificateGroupNumberRange) {
         _cached_decoder_for_CertificateGroupNumberRange = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_CertificateGroupNumberRange: $.ASN1Encoder<CertificateGr
 export function _encode_CertificateGroupNumberRange(
     value: CertificateGroupNumberRange,
     elGetter: $.ASN1Encoder<CertificateGroupNumberRange>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateGroupNumberRange) {
         _cached_encoder_for_CertificateGroupNumberRange = function (
             value: CertificateGroupNumberRange        ): _Element {

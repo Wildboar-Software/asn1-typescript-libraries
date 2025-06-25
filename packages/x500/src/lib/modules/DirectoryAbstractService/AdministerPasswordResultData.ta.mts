@@ -109,7 +109,7 @@ export class AdministerPasswordResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -154,7 +154,7 @@ let _cached_decoder_for_AdministerPasswordResultData: $.ASN1Decoder<AdministerPa
  * @param {_Element} el The element being decoded.
  * @returns {AdministerPasswordResultData} The decoded data structure.
  */
-export function _decode_AdministerPasswordResultData(el: _Element) {
+export function _decode_AdministerPasswordResultData(el: _Element): AdministerPasswordResultData {
     if (!_cached_decoder_for_AdministerPasswordResultData) {
         _cached_decoder_for_AdministerPasswordResultData = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_AdministerPasswordResultData: $.ASN1Encoder<AdministerPa
 export function _encode_AdministerPasswordResultData(
     value: AdministerPasswordResultData,
     elGetter: $.ASN1Encoder<AdministerPasswordResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_AdministerPasswordResultData) {
         _cached_encoder_for_AdministerPasswordResultData = function (
             value: AdministerPasswordResultData        ): _Element {

@@ -106,7 +106,7 @@ let _cached_decoder_for_ModificationParameter: $.ASN1Decoder<ModificationParamet
  * @param {_Element} el The element being decoded.
  * @returns {ModificationParameter} The decoded data structure.
  */
-export function _decode_ModificationParameter(el: _Element) {
+export function _decode_ModificationParameter(el: _Element): ModificationParameter {
     if (!_cached_decoder_for_ModificationParameter) {
         _cached_decoder_for_ModificationParameter = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ModificationParameter: $.ASN1Encoder<ModificationParamet
 export function _encode_ModificationParameter(
     value: ModificationParameter,
     elGetter: $.ASN1Encoder<ModificationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ModificationParameter) {
         _cached_encoder_for_ModificationParameter = function (
             value: ModificationParameter        ): _Element {

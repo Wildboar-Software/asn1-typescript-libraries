@@ -26,7 +26,7 @@ let _cached_decoder_for_AgreementID: $.ASN1Decoder<AgreementID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AgreementID} The decoded data structure.
  */
-export function _decode_AgreementID(el: _Element) {
+export function _decode_AgreementID(el: _Element): AgreementID {
     if (!_cached_decoder_for_AgreementID) {
         _cached_decoder_for_AgreementID = _decode_OperationalBindingID;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_AgreementID: $.ASN1Encoder<AgreementID> | null = null;
 export function _encode_AgreementID(
     value: AgreementID,
     elGetter: $.ASN1Encoder<AgreementID>
-) {
+): _Element {
     if (!_cached_encoder_for_AgreementID) {
         _cached_encoder_for_AgreementID = _encode_OperationalBindingID;
     }

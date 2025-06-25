@@ -181,7 +181,7 @@ let _cached_decoder_for_Context_Data: $.ASN1Decoder<Context_Data> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Context_Data} The decoded data structure.
  */
-export function _decode_Context_Data(el: _Element) {
+export function _decode_Context_Data(el: _Element): Context_Data {
     if (!_cached_decoder_for_Context_Data) {
         _cached_decoder_for_Context_Data = function (
             el: _Element
@@ -245,7 +245,7 @@ let _cached_encoder_for_Context_Data: $.ASN1Encoder<Context_Data> | null = null;
 export function _encode_Context_Data(
     value: Context_Data,
     elGetter: $.ASN1Encoder<Context_Data>
-) {
+): _Element {
     if (!_cached_encoder_for_Context_Data) {
         _cached_encoder_for_Context_Data = function (
             value: Context_Data        ): _Element {

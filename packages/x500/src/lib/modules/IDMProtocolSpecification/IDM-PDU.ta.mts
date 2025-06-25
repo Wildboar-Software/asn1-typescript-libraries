@@ -100,7 +100,7 @@ let _cached_decoder_for_IDM_PDU: $.ASN1Decoder<IDM_PDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IDM_PDU} The decoded data structure.
  */
-export function _decode_IDM_PDU(el: _Element) {
+export function _decode_IDM_PDU(el: _Element): IDM_PDU {
     if (!_cached_decoder_for_IDM_PDU) {
         _cached_decoder_for_IDM_PDU = $._decode_extensible_choice<IDM_PDU>({
             "CONTEXT 0": [
@@ -164,7 +164,7 @@ let _cached_encoder_for_IDM_PDU: $.ASN1Encoder<IDM_PDU> | null = null;
 export function _encode_IDM_PDU(
     value: IDM_PDU,
     elGetter: $.ASN1Encoder<IDM_PDU>
-) {
+): _Element {
     if (!_cached_encoder_for_IDM_PDU) {
         _cached_encoder_for_IDM_PDU = $._encode_choice<IDM_PDU>(
             {

@@ -76,7 +76,7 @@ export class extensionSyntax_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_mandatory() {
+    public static get _default_value_for_mandatory(): BOOLEAN {
         return false;
     }
     /**
@@ -85,7 +85,7 @@ export class extensionSyntax_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_critical() {
+    public static get _default_value_for_critical(): BOOLEAN {
         return false;
     }
 }
@@ -144,7 +144,7 @@ let _cached_decoder_for_extensionSyntax_Type: $.ASN1Decoder<extensionSyntax_Type
  * @param {_Element} el The element being decoded.
  * @returns {extensionSyntax_Type} The decoded data structure.
  */
-export function _decode_extensionSyntax_Type(el: _Element) {
+export function _decode_extensionSyntax_Type(el: _Element): extensionSyntax_Type {
     if (!_cached_decoder_for_extensionSyntax_Type) {
         _cached_decoder_for_extensionSyntax_Type = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_extensionSyntax_Type: $.ASN1Encoder<extensionSyntax_Type
 export function _encode_extensionSyntax_Type(
     value: extensionSyntax_Type,
     elGetter: $.ASN1Encoder<extensionSyntax_Type>
-) {
+): _Element {
     if (!_cached_encoder_for_extensionSyntax_Type) {
         _cached_encoder_for_extensionSyntax_Type = function (
             value: extensionSyntax_Type        ): _Element {

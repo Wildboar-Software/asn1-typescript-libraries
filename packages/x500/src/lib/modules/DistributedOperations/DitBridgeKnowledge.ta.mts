@@ -130,7 +130,7 @@ let _cached_decoder_for_DitBridgeKnowledge: $.ASN1Decoder<DitBridgeKnowledge> | 
  * @param {_Element} el The element being decoded.
  * @returns {DitBridgeKnowledge} The decoded data structure.
  */
-export function _decode_DitBridgeKnowledge(el: _Element) {
+export function _decode_DitBridgeKnowledge(el: _Element): DitBridgeKnowledge {
     if (!_cached_decoder_for_DitBridgeKnowledge) {
         _cached_decoder_for_DitBridgeKnowledge = function (
             el: _Element
@@ -178,7 +178,7 @@ let _cached_encoder_for_DitBridgeKnowledge: $.ASN1Encoder<DitBridgeKnowledge> | 
 export function _encode_DitBridgeKnowledge(
     value: DitBridgeKnowledge,
     elGetter: $.ASN1Encoder<DitBridgeKnowledge>
-) {
+): _Element {
     if (!_cached_encoder_for_DitBridgeKnowledge) {
         _cached_encoder_for_DitBridgeKnowledge = function (
             value: DitBridgeKnowledge        ): _Element {

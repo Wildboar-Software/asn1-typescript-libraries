@@ -100,7 +100,7 @@ let _cached_decoder_for_DelAvlOK: $.ASN1Decoder<DelAvlOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DelAvlOK} The decoded data structure.
  */
-export function _decode_DelAvlOK(el: _Element) {
+export function _decode_DelAvlOK(el: _Element): DelAvlOK {
     if (!_cached_decoder_for_DelAvlOK) {
         _cached_decoder_for_DelAvlOK = function (el: _Element): DelAvlOK {
             const sequence: _Element[] = el.sequence;
@@ -132,7 +132,7 @@ let _cached_encoder_for_DelAvlOK: $.ASN1Encoder<DelAvlOK> | null = null;
 export function _encode_DelAvlOK(
     value: DelAvlOK,
     elGetter: $.ASN1Encoder<DelAvlOK>
-) {
+): _Element {
     if (!_cached_encoder_for_DelAvlOK) {
         _cached_encoder_for_DelAvlOK = function (
             value: DelAvlOK        ): _Element {

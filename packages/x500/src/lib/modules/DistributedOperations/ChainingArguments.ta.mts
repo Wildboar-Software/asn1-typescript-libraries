@@ -555,7 +555,7 @@ let _cached_decoder_for_ChainingArguments: $.ASN1Decoder<ChainingArguments> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ChainingArguments} The decoded data structure.
  */
-export function _decode_ChainingArguments(el: _Element) {
+export function _decode_ChainingArguments(el: _Element): ChainingArguments {
     if (!_cached_decoder_for_ChainingArguments) {
         _cached_decoder_for_ChainingArguments = function (
             el: _Element
@@ -766,7 +766,7 @@ let _cached_encoder_for_ChainingArguments: $.ASN1Encoder<ChainingArguments> | nu
 export function _encode_ChainingArguments(
     value: ChainingArguments,
     elGetter: $.ASN1Encoder<ChainingArguments>
-) {
+): _Element {
     if (!_cached_encoder_for_ChainingArguments) {
         _cached_encoder_for_ChainingArguments = function (
             value: ChainingArguments        ): _Element {

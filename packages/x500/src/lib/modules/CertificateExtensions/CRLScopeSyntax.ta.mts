@@ -26,7 +26,7 @@ let _cached_decoder_for_CRLScopeSyntax: $.ASN1Decoder<CRLScopeSyntax> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CRLScopeSyntax} The decoded data structure.
  */
-export function _decode_CRLScopeSyntax(el: _Element) {
+export function _decode_CRLScopeSyntax(el: _Element): CRLScopeSyntax {
     if (!_cached_decoder_for_CRLScopeSyntax) {
         _cached_decoder_for_CRLScopeSyntax = $._decodeSequenceOf<PerAuthorityScope>(
             () => _decode_PerAuthorityScope
@@ -47,7 +47,7 @@ let _cached_encoder_for_CRLScopeSyntax: $.ASN1Encoder<CRLScopeSyntax> | null = n
 export function _encode_CRLScopeSyntax(
     value: CRLScopeSyntax,
     elGetter: $.ASN1Encoder<CRLScopeSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_CRLScopeSyntax) {
         _cached_encoder_for_CRLScopeSyntax = $._encodeSequenceOf<PerAuthorityScope>(
             () => _encode_PerAuthorityScope,

@@ -119,7 +119,7 @@ let _cached_decoder_for_SpecificallyIdentified: $.ASN1Decoder<SpecificallyIdenti
  * @param {_Element} el The element being decoded.
  * @returns {SpecificallyIdentified} The decoded data structure.
  */
-export function _decode_SpecificallyIdentified(el: _Element) {
+export function _decode_SpecificallyIdentified(el: _Element): SpecificallyIdentified {
     if (!_cached_decoder_for_SpecificallyIdentified) {
         _cached_decoder_for_SpecificallyIdentified = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_SpecificallyIdentified: $.ASN1Encoder<SpecificallyIdenti
 export function _encode_SpecificallyIdentified(
     value: SpecificallyIdentified,
     elGetter: $.ASN1Encoder<SpecificallyIdentified>
-) {
+): _Element {
     if (!_cached_encoder_for_SpecificallyIdentified) {
         _cached_encoder_for_SpecificallyIdentified = function (
             value: SpecificallyIdentified        ): _Element {

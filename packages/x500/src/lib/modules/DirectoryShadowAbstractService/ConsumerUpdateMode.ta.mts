@@ -26,7 +26,7 @@ let _cached_decoder_for_ConsumerUpdateMode: $.ASN1Decoder<ConsumerUpdateMode> | 
  * @param {_Element} el The element being decoded.
  * @returns {ConsumerUpdateMode} The decoded data structure.
  */
-export function _decode_ConsumerUpdateMode(el: _Element) {
+export function _decode_ConsumerUpdateMode(el: _Element): ConsumerUpdateMode {
     if (!_cached_decoder_for_ConsumerUpdateMode) {
         _cached_decoder_for_ConsumerUpdateMode = _decode_SchedulingParameters;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ConsumerUpdateMode: $.ASN1Encoder<ConsumerUpdateMode> | 
 export function _encode_ConsumerUpdateMode(
     value: ConsumerUpdateMode,
     elGetter: $.ASN1Encoder<ConsumerUpdateMode>
-) {
+): _Element {
     if (!_cached_encoder_for_ConsumerUpdateMode) {
         _cached_encoder_for_ConsumerUpdateMode = _encode_SchedulingParameters;
     }

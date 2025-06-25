@@ -34,7 +34,7 @@ let _cached_decoder_for_CertUpdateOK: $.ASN1Decoder<CertUpdateOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertUpdateOK} The decoded data structure.
  */
-export function _decode_CertUpdateOK(el: _Element) {
+export function _decode_CertUpdateOK(el: _Element): CertUpdateOK {
     if (!_cached_decoder_for_CertUpdateOK) {
         _cached_decoder_for_CertUpdateOK = $._decodeSequenceOf<CertUpdateOK_Item>(
             () => _decode_CertUpdateOK_Item
@@ -55,7 +55,7 @@ let _cached_encoder_for_CertUpdateOK: $.ASN1Encoder<CertUpdateOK> | null = null;
 export function _encode_CertUpdateOK(
     value: CertUpdateOK,
     elGetter: $.ASN1Encoder<CertUpdateOK>
-) {
+): _Element {
     if (!_cached_encoder_for_CertUpdateOK) {
         _cached_encoder_for_CertUpdateOK = $._encodeSequenceOf<CertUpdateOK_Item>(
             () => _encode_CertUpdateOK_Item,

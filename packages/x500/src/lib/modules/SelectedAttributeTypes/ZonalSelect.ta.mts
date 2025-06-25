@@ -26,7 +26,7 @@ let _cached_decoder_for_ZonalSelect: $.ASN1Decoder<ZonalSelect> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ZonalSelect} The decoded data structure.
  */
-export function _decode_ZonalSelect(el: _Element) {
+export function _decode_ZonalSelect(el: _Element): ZonalSelect {
     if (!_cached_decoder_for_ZonalSelect) {
         _cached_decoder_for_ZonalSelect = $._decodeSequenceOf<AttributeType>(
             () => _decode_AttributeType
@@ -47,7 +47,7 @@ let _cached_encoder_for_ZonalSelect: $.ASN1Encoder<ZonalSelect> | null = null;
 export function _encode_ZonalSelect(
     value: ZonalSelect,
     elGetter: $.ASN1Encoder<ZonalSelect>
-) {
+): _Element {
     if (!_cached_encoder_for_ZonalSelect) {
         _cached_encoder_for_ZonalSelect = $._encodeSequenceOf<AttributeType>(
             () => _encode_AttributeType,

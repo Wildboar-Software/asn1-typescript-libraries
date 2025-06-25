@@ -49,7 +49,7 @@ let _cached_decoder_for_ListResultData: $.ASN1Decoder<ListResultData> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ListResultData} The decoded data structure.
  */
-export function _decode_ListResultData(el: _Element) {
+export function _decode_ListResultData(el: _Element): ListResultData {
     if (!_cached_decoder_for_ListResultData) {
         _cached_decoder_for_ListResultData = $._decode_extensible_choice<ListResultData>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_ListResultData: $.ASN1Encoder<ListResultData> | null = n
 export function _encode_ListResultData(
     value: ListResultData,
     elGetter: $.ASN1Encoder<ListResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_ListResultData) {
         _cached_encoder_for_ListResultData = $._encode_choice<ListResultData>(
             {

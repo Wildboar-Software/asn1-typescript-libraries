@@ -133,7 +133,7 @@ export class TbsHandshakeWrpRej {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[Version_v1] = TRUE_BIT;
@@ -214,7 +214,7 @@ let _cached_decoder_for_TbsHandshakeWrpRej: $.ASN1Decoder<TbsHandshakeWrpRej> | 
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeWrpRej} The decoded data structure.
  */
-export function _decode_TbsHandshakeWrpRej(el: _Element) {
+export function _decode_TbsHandshakeWrpRej(el: _Element): TbsHandshakeWrpRej {
     if (!_cached_decoder_for_TbsHandshakeWrpRej) {
         _cached_decoder_for_TbsHandshakeWrpRej = function (
             el: _Element
@@ -283,7 +283,7 @@ let _cached_encoder_for_TbsHandshakeWrpRej: $.ASN1Encoder<TbsHandshakeWrpRej> | 
 export function _encode_TbsHandshakeWrpRej(
     value: TbsHandshakeWrpRej,
     elGetter: $.ASN1Encoder<TbsHandshakeWrpRej>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeWrpRej) {
         _cached_encoder_for_TbsHandshakeWrpRej = function (
             value: TbsHandshakeWrpRej        ): _Element {

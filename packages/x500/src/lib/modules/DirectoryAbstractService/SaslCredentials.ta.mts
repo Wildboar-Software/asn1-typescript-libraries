@@ -85,7 +85,7 @@ export class SaslCredentials {
      * @static
      * @method
      */
-    public static get _default_value_for_saslAbort() {
+    public static get _default_value_for_saslAbort(): BOOLEAN {
         return false;
     }
 }
@@ -144,7 +144,7 @@ let _cached_decoder_for_SaslCredentials: $.ASN1Decoder<SaslCredentials> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SaslCredentials} The decoded data structure.
  */
-export function _decode_SaslCredentials(el: _Element) {
+export function _decode_SaslCredentials(el: _Element): SaslCredentials {
     if (!_cached_decoder_for_SaslCredentials) {
         _cached_decoder_for_SaslCredentials = function (
             el: _Element
@@ -204,7 +204,7 @@ let _cached_encoder_for_SaslCredentials: $.ASN1Encoder<SaslCredentials> | null =
 export function _encode_SaslCredentials(
     value: SaslCredentials,
     elGetter: $.ASN1Encoder<SaslCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_SaslCredentials) {
         _cached_encoder_for_SaslCredentials = function (
             value: SaslCredentials        ): _Element {

@@ -134,7 +134,7 @@ export class AadServerAE extends AadServer {
      * @static
      * @method
      */
-    public static override get _default_value_for_reqRekey() {
+    public static override get _default_value_for_reqRekey(): BOOLEAN {
         return false;
     }
     /**
@@ -143,7 +143,7 @@ export class AadServerAE extends AadServer {
      * @static
      * @method
      */
-    public static override get _default_value_for_changedKey() {
+    public static override get _default_value_for_changedKey(): BOOLEAN {
         return false;
     }
 }
@@ -193,7 +193,7 @@ let _cached_decoder_for_AadServerAE: $.ASN1Decoder<AadServerAE> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AadServerAE} The decoded data structure.
  */
-export function _decode_AadServerAE(el: _Element) {
+export function _decode_AadServerAE(el: _Element): AadServerAE {
     if (!_cached_decoder_for_AadServerAE) {
         _cached_decoder_for_AadServerAE = function (el: _Element): AadServerAE {
             let invokeID: OPTIONAL<InvokeID>;
@@ -274,7 +274,7 @@ let _cached_encoder_for_AadServerAE: $.ASN1Encoder<AadServerAE> | null = null;
 export function _encode_AadServerAE(
     value: AadServerAE,
     elGetter: $.ASN1Encoder<AadServerAE>
-) {
+): _Element {
     if (!_cached_encoder_for_AadServerAE) {
         _cached_encoder_for_AadServerAE = function (
             value: AadServerAE        ): _Element {

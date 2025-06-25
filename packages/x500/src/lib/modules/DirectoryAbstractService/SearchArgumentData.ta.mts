@@ -375,7 +375,7 @@ export class SearchArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_subset() {
+    public static get _default_value_for_subset(): SearchArgumentData_subset {
         return baseObject;
     }
     /**
@@ -648,7 +648,7 @@ let _cached_decoder_for_SearchArgumentData: $.ASN1Decoder<SearchArgumentData> | 
  * @param {_Element} el The element being decoded.
  * @returns {SearchArgumentData} The decoded data structure.
  */
-export function _decode_SearchArgumentData(el: _Element) {
+export function _decode_SearchArgumentData(el: _Element): SearchArgumentData {
     if (!_cached_decoder_for_SearchArgumentData) {
         _cached_decoder_for_SearchArgumentData = function (
             el: _Element
@@ -893,7 +893,7 @@ let _cached_encoder_for_SearchArgumentData: $.ASN1Encoder<SearchArgumentData> | 
 export function _encode_SearchArgumentData(
     value: SearchArgumentData,
     elGetter: $.ASN1Encoder<SearchArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchArgumentData) {
         _cached_encoder_for_SearchArgumentData = function (
             value: SearchArgumentData        ): _Element {

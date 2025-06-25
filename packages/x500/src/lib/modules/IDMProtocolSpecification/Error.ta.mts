@@ -124,7 +124,7 @@ let _cached_decoder_for_Error: $.ASN1Decoder<Error> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Error} The decoded data structure.
  */
-export function _decode_Error(el: _Element) {
+export function _decode_Error(el: _Element): Error {
     if (!_cached_decoder_for_Error) {
         _cached_decoder_for_Error = function (el: _Element): Error {
             const sequence: _Element[] = el.sequence;
@@ -159,7 +159,7 @@ let _cached_encoder_for_Error: $.ASN1Encoder<Error> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Error, encoded as an ASN.1 Element.
  */
-export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>) {
+export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>): _Element {
     if (!_cached_encoder_for_Error) {
         _cached_encoder_for_Error = function (
             value: Error        ): _Element {

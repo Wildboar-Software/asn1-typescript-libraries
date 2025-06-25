@@ -151,7 +151,7 @@ export class SearchResultData_searchInfo implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_altMatching() {
+    public static get _default_value_for_altMatching(): BOOLEAN {
         return false;
     }
     /**
@@ -160,7 +160,7 @@ export class SearchResultData_searchInfo implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -229,7 +229,7 @@ let _cached_decoder_for_SearchResultData_searchInfo: $.ASN1Decoder<SearchResultD
  * @param {_Element} el The element being decoded.
  * @returns {SearchResultData_searchInfo} The decoded data structure.
  */
-export function _decode_SearchResultData_searchInfo(el: _Element) {
+export function _decode_SearchResultData_searchInfo(el: _Element): SearchResultData_searchInfo {
     if (!_cached_decoder_for_SearchResultData_searchInfo) {
         _cached_decoder_for_SearchResultData_searchInfo = function (
             el: _Element
@@ -327,7 +327,7 @@ let _cached_encoder_for_SearchResultData_searchInfo: $.ASN1Encoder<SearchResultD
 export function _encode_SearchResultData_searchInfo(
     value: SearchResultData_searchInfo,
     elGetter: $.ASN1Encoder<SearchResultData_searchInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchResultData_searchInfo) {
         _cached_encoder_for_SearchResultData_searchInfo = function (
             value: SearchResultData_searchInfo        ): _Element {

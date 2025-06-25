@@ -119,7 +119,7 @@ let _cached_decoder_for_CertErr: $.ASN1Decoder<CertErr> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertErr} The decoded data structure.
  */
-export function _decode_CertErr(el: _Element) {
+export function _decode_CertErr(el: _Element): CertErr {
     if (!_cached_decoder_for_CertErr) {
         _cached_decoder_for_CertErr = function (el: _Element): CertErr {
             let notOK!: CertErr_notOK;
@@ -165,7 +165,7 @@ let _cached_encoder_for_CertErr: $.ASN1Encoder<CertErr> | null = null;
 export function _encode_CertErr(
     value: CertErr,
     elGetter: $.ASN1Encoder<CertErr>
-) {
+): _Element {
     if (!_cached_encoder_for_CertErr) {
         _cached_encoder_for_CertErr = function (
             value: CertErr        ): _Element {

@@ -183,7 +183,7 @@ let _cached_decoder_for_TbpDataTransferClient: $.ASN1Decoder<TbpDataTransferClie
  * @param {_Element} el The element being decoded.
  * @returns {TbpDataTransferClient} The decoded data structure.
  */
-export function _decode_TbpDataTransferClient(el: _Element) {
+export function _decode_TbpDataTransferClient(el: _Element): TbpDataTransferClient {
     if (!_cached_decoder_for_TbpDataTransferClient) {
         _cached_decoder_for_TbpDataTransferClient = function (
             el: _Element
@@ -262,7 +262,7 @@ let _cached_encoder_for_TbpDataTransferClient: $.ASN1Encoder<TbpDataTransferClie
 export function _encode_TbpDataTransferClient(
     value: TbpDataTransferClient,
     elGetter: $.ASN1Encoder<TbpDataTransferClient>
-) {
+): _Element {
     if (!_cached_encoder_for_TbpDataTransferClient) {
         _cached_encoder_for_TbpDataTransferClient = function (
             value: TbpDataTransferClient        ): _Element {

@@ -105,7 +105,7 @@ let _cached_decoder_for_Wrap_Body: $.ASN1Decoder<Wrap_Body> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Wrap_Body} The decoded data structure.
  */
-export function _decode_Wrap_Body(el: _Element) {
+export function _decode_Wrap_Body(el: _Element): Wrap_Body {
     if (!_cached_decoder_for_Wrap_Body) {
         _cached_decoder_for_Wrap_Body = function (el: _Element): Wrap_Body {
             const sequence: _Element[] = el.sequence;
@@ -140,7 +140,7 @@ let _cached_encoder_for_Wrap_Body: $.ASN1Encoder<Wrap_Body> | null = null;
 export function _encode_Wrap_Body(
     value: Wrap_Body,
     elGetter: $.ASN1Encoder<Wrap_Body>
-) {
+): _Element {
     if (!_cached_encoder_for_Wrap_Body) {
         _cached_encoder_for_Wrap_Body = function (
             value: Wrap_Body        ): _Element {

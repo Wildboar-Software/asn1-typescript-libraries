@@ -43,7 +43,7 @@ let _cached_decoder_for_OsiBindError: $.ASN1Decoder<OsiBindError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiBindError} The decoded data structure.
  */
-export function _decode_OsiBindError(el: _Element) {
+export function _decode_OsiBindError(el: _Element): OsiBindError {
     if (!_cached_decoder_for_OsiBindError) {
         _cached_decoder_for_OsiBindError = $._decode_inextensible_choice<OsiBindError>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_OsiBindError: $.ASN1Encoder<OsiBindError> | null = null;
 export function _encode_OsiBindError(
     value: OsiBindError,
     elGetter: $.ASN1Encoder<OsiBindError>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBindError) {
         _cached_encoder_for_OsiBindError = $._encode_choice<OsiBindError>(
             {

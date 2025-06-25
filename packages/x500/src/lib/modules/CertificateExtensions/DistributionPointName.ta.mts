@@ -39,7 +39,7 @@ let _cached_decoder_for_DistributionPointName: $.ASN1Decoder<DistributionPointNa
  * @param {_Element} el The element being decoded.
  * @returns {DistributionPointName} The decoded data structure.
  */
-export function _decode_DistributionPointName(el: _Element) {
+export function _decode_DistributionPointName(el: _Element): DistributionPointName {
     if (!_cached_decoder_for_DistributionPointName) {
         _cached_decoder_for_DistributionPointName = $._decode_extensible_choice<DistributionPointName>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_DistributionPointName: $.ASN1Encoder<DistributionPointNa
 export function _encode_DistributionPointName(
     value: DistributionPointName,
     elGetter: $.ASN1Encoder<DistributionPointName>
-) {
+): _Element {
     if (!_cached_encoder_for_DistributionPointName) {
         _cached_encoder_for_DistributionPointName = $._encode_choice<DistributionPointName>(
             {

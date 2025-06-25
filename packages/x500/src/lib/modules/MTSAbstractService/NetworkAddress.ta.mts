@@ -26,7 +26,7 @@ let _cached_decoder_for_NetworkAddress: $.ASN1Decoder<NetworkAddress> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {NetworkAddress} The decoded data structure.
  */
-export function _decode_NetworkAddress(el: _Element) {
+export function _decode_NetworkAddress(el: _Element): NetworkAddress {
     if (!_cached_decoder_for_NetworkAddress) {
         _cached_decoder_for_NetworkAddress = _decode_X121Address;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null = n
 export function _encode_NetworkAddress(
     value: NetworkAddress,
     elGetter: $.ASN1Encoder<NetworkAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_NetworkAddress) {
         _cached_encoder_for_NetworkAddress = _encode_X121Address;
     }

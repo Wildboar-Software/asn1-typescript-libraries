@@ -102,7 +102,7 @@ export class CertReplaceRsp implements CASPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): CASPversion {
         return CASPversion_v1;
     }
     /**
@@ -155,7 +155,7 @@ let _cached_decoder_for_CertReplaceRsp: $.ASN1Decoder<CertReplaceRsp> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertReplaceRsp} The decoded data structure.
  */
-export function _decode_CertReplaceRsp(el: _Element) {
+export function _decode_CertReplaceRsp(el: _Element): CertReplaceRsp {
     if (!_cached_decoder_for_CertReplaceRsp) {
         _cached_decoder_for_CertReplaceRsp = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_CertReplaceRsp: $.ASN1Encoder<CertReplaceRsp> | null = n
 export function _encode_CertReplaceRsp(
     value: CertReplaceRsp,
     elGetter: $.ASN1Encoder<CertReplaceRsp>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReplaceRsp) {
         _cached_encoder_for_CertReplaceRsp = function (
             value: CertReplaceRsp        ): _Element {

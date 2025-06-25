@@ -31,7 +31,7 @@ let _cached_decoder_for_DtSecAbort: $.ASN1Decoder<DtSecAbort> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DtSecAbort} The decoded data structure.
  */
-export function _decode_DtSecAbort(el: _Element) {
+export function _decode_DtSecAbort(el: _Element): DtSecAbort {
     if (!_cached_decoder_for_DtSecAbort) {
         _cached_decoder_for_DtSecAbort = _get_decoder_for_Signed<TbsDtSecAbort>(
             _decode_TbsDtSecAbort
@@ -52,7 +52,7 @@ let _cached_encoder_for_DtSecAbort: $.ASN1Encoder<DtSecAbort> | null = null;
 export function _encode_DtSecAbort(
     value: DtSecAbort,
     elGetter: $.ASN1Encoder<DtSecAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_DtSecAbort) {
         _cached_encoder_for_DtSecAbort = _get_encoder_for_Signed<TbsDtSecAbort>(
             _encode_TbsDtSecAbort

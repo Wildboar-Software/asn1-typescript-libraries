@@ -131,7 +131,7 @@ let _cached_decoder_for_REP_TI_TOKEN: $.ASN1Decoder<REP_TI_TOKEN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {REP_TI_TOKEN} The decoded data structure.
  */
-export function _decode_REP_TI_TOKEN(el: _Element) {
+export function _decode_REP_TI_TOKEN(el: _Element): REP_TI_TOKEN {
     if (!_cached_decoder_for_REP_TI_TOKEN) {
         _cached_decoder_for_REP_TI_TOKEN = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_REP_TI_TOKEN: $.ASN1Encoder<REP_TI_TOKEN> | null = null;
 export function _encode_REP_TI_TOKEN(
     value: REP_TI_TOKEN,
     elGetter: $.ASN1Encoder<REP_TI_TOKEN>
-) {
+): _Element {
     if (!_cached_encoder_for_REP_TI_TOKEN) {
         _cached_encoder_for_REP_TI_TOKEN = function (
             value: REP_TI_TOKEN        ): _Element {

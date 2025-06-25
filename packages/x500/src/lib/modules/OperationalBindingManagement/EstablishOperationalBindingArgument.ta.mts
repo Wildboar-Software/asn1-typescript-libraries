@@ -32,7 +32,7 @@ let _cached_decoder_for_EstablishOperationalBindingArgument: $.ASN1Decoder<Estab
  * @param {_Element} el The element being decoded.
  * @returns {EstablishOperationalBindingArgument} The decoded data structure.
  */
-export function _decode_EstablishOperationalBindingArgument(el: _Element) {
+export function _decode_EstablishOperationalBindingArgument(el: _Element): EstablishOperationalBindingArgument {
     if (!_cached_decoder_for_EstablishOperationalBindingArgument) {
         _cached_decoder_for_EstablishOperationalBindingArgument = _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<EstablishOperationalBindingArgumentData>(
             _decode_EstablishOperationalBindingArgumentData
@@ -53,7 +53,7 @@ let _cached_encoder_for_EstablishOperationalBindingArgument: $.ASN1Encoder<Estab
 export function _encode_EstablishOperationalBindingArgument(
     value: EstablishOperationalBindingArgument,
     elGetter: $.ASN1Encoder<EstablishOperationalBindingArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_EstablishOperationalBindingArgument) {
         _cached_encoder_for_EstablishOperationalBindingArgument = _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<EstablishOperationalBindingArgumentData>(
             _encode_EstablishOperationalBindingArgumentData

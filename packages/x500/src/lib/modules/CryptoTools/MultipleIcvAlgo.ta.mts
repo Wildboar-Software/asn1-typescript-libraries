@@ -27,7 +27,7 @@ let _cached_decoder_for_MultipleIcvAlgo: $.ASN1Decoder<MultipleIcvAlgo> | null =
  * @param {_Element} el The element being decoded.
  * @returns {MultipleIcvAlgo} The decoded data structure.
  */
-export function _decode_MultipleIcvAlgo(el: _Element) {
+export function _decode_MultipleIcvAlgo(el: _Element): MultipleIcvAlgo {
     if (!_cached_decoder_for_MultipleIcvAlgo) {
         _cached_decoder_for_MultipleIcvAlgo = $._decodeSequenceOf<AlgorithmIdentifier>(
             () => _decode_AlgorithmIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_MultipleIcvAlgo: $.ASN1Encoder<MultipleIcvAlgo> | null =
 export function _encode_MultipleIcvAlgo(
     value: MultipleIcvAlgo,
     elGetter: $.ASN1Encoder<MultipleIcvAlgo>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleIcvAlgo) {
         _cached_encoder_for_MultipleIcvAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,

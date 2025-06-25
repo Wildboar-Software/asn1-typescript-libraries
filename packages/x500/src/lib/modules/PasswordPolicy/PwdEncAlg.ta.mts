@@ -26,7 +26,7 @@ let _cached_decoder_for_PwdEncAlg: $.ASN1Decoder<PwdEncAlg> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PwdEncAlg} The decoded data structure.
  */
-export function _decode_PwdEncAlg(el: _Element) {
+export function _decode_PwdEncAlg(el: _Element): PwdEncAlg {
     if (!_cached_decoder_for_PwdEncAlg) {
         _cached_decoder_for_PwdEncAlg = _decode_AlgorithmIdentifier;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_PwdEncAlg: $.ASN1Encoder<PwdEncAlg> | null = null;
 export function _encode_PwdEncAlg(
     value: PwdEncAlg,
     elGetter: $.ASN1Encoder<PwdEncAlg>
-) {
+): _Element {
     if (!_cached_encoder_for_PwdEncAlg) {
         _cached_encoder_for_PwdEncAlg = _encode_AlgorithmIdentifier;
     }

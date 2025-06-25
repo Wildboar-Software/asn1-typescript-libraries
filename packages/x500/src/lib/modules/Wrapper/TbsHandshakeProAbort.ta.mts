@@ -174,7 +174,7 @@ let _cached_decoder_for_TbsHandshakeProAbort: $.ASN1Decoder<TbsHandshakeProAbort
  * @param {_Element} el The element being decoded.
  * @returns {TbsHandshakeProAbort} The decoded data structure.
  */
-export function _decode_TbsHandshakeProAbort(el: _Element) {
+export function _decode_TbsHandshakeProAbort(el: _Element): TbsHandshakeProAbort {
     if (!_cached_decoder_for_TbsHandshakeProAbort) {
         _cached_decoder_for_TbsHandshakeProAbort = function (
             el: _Element
@@ -227,7 +227,7 @@ let _cached_encoder_for_TbsHandshakeProAbort: $.ASN1Encoder<TbsHandshakeProAbort
 export function _encode_TbsHandshakeProAbort(
     value: TbsHandshakeProAbort,
     elGetter: $.ASN1Encoder<TbsHandshakeProAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_TbsHandshakeProAbort) {
         _cached_encoder_for_TbsHandshakeProAbort = function (
             value: TbsHandshakeProAbort        ): _Element {

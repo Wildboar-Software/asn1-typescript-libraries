@@ -144,7 +144,7 @@ let _cached_decoder_for_ResultAttribute: $.ASN1Decoder<ResultAttribute> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ResultAttribute} The decoded data structure.
  */
-export function _decode_ResultAttribute(el: _Element) {
+export function _decode_ResultAttribute(el: _Element): ResultAttribute {
     if (!_cached_decoder_for_ResultAttribute) {
         _cached_decoder_for_ResultAttribute = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_ResultAttribute: $.ASN1Encoder<ResultAttribute> | null =
 export function _encode_ResultAttribute(
     value: ResultAttribute,
     elGetter: $.ASN1Encoder<ResultAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_ResultAttribute) {
         _cached_encoder_for_ResultAttribute = function (
             value: ResultAttribute        ): _Element {

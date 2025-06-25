@@ -71,7 +71,7 @@ let _cached_decoder_for_SPKMInnerContextToken: $.ASN1Decoder<SPKMInnerContextTok
  * @param {_Element} el The element being decoded.
  * @returns {SPKMInnerContextToken} The decoded data structure.
  */
-export function _decode_SPKMInnerContextToken(el: _Element) {
+export function _decode_SPKMInnerContextToken(el: _Element): SPKMInnerContextToken {
     if (!_cached_decoder_for_SPKMInnerContextToken) {
         _cached_decoder_for_SPKMInnerContextToken = $._decode_inextensible_choice<SPKMInnerContextToken>(
             {
@@ -121,7 +121,7 @@ let _cached_encoder_for_SPKMInnerContextToken: $.ASN1Encoder<SPKMInnerContextTok
 export function _encode_SPKMInnerContextToken(
     value: SPKMInnerContextToken,
     elGetter: $.ASN1Encoder<SPKMInnerContextToken>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKMInnerContextToken) {
         _cached_encoder_for_SPKMInnerContextToken = $._encode_choice<SPKMInnerContextToken>(
             {

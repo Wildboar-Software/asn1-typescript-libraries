@@ -133,7 +133,7 @@ let _cached_decoder_for_AttributeTypeValueContexts: $.ASN1Decoder<AttributeTypeV
  * @param {_Element} el The element being decoded.
  * @returns {AttributeTypeValueContexts} The decoded data structure.
  */
-export function _decode_AttributeTypeValueContexts(el: _Element) {
+export function _decode_AttributeTypeValueContexts(el: _Element): AttributeTypeValueContexts {
     if (!_cached_decoder_for_AttributeTypeValueContexts) {
         _cached_decoder_for_AttributeTypeValueContexts = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_AttributeTypeValueContexts: $.ASN1Encoder<AttributeTypeV
 export function _encode_AttributeTypeValueContexts(
     value: AttributeTypeValueContexts,
     elGetter: $.ASN1Encoder<AttributeTypeValueContexts>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeTypeValueContexts) {
         _cached_encoder_for_AttributeTypeValueContexts = function (
             value: AttributeTypeValueContexts        ): _Element {

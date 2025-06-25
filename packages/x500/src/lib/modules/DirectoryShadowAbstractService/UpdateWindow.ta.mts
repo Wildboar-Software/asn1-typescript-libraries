@@ -119,7 +119,7 @@ let _cached_decoder_for_UpdateWindow: $.ASN1Decoder<UpdateWindow> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UpdateWindow} The decoded data structure.
  */
-export function _decode_UpdateWindow(el: _Element) {
+export function _decode_UpdateWindow(el: _Element): UpdateWindow {
     if (!_cached_decoder_for_UpdateWindow) {
         _cached_decoder_for_UpdateWindow = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_UpdateWindow: $.ASN1Encoder<UpdateWindow> | null = null;
 export function _encode_UpdateWindow(
     value: UpdateWindow,
     elGetter: $.ASN1Encoder<UpdateWindow>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateWindow) {
         _cached_encoder_for_UpdateWindow = function (
             value: UpdateWindow        ): _Element {

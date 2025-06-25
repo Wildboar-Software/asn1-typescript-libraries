@@ -38,7 +38,7 @@ let _cached_decoder_for_ClassAttributes: $.ASN1Decoder<ClassAttributes> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ClassAttributes} The decoded data structure.
  */
-export function _decode_ClassAttributes(el: _Element) {
+export function _decode_ClassAttributes(el: _Element): ClassAttributes {
     if (!_cached_decoder_for_ClassAttributes) {
         _cached_decoder_for_ClassAttributes = $._decode_extensible_choice<ClassAttributes>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ClassAttributes: $.ASN1Encoder<ClassAttributes> | null =
 export function _encode_ClassAttributes(
     value: ClassAttributes,
     elGetter: $.ASN1Encoder<ClassAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_ClassAttributes) {
         _cached_encoder_for_ClassAttributes = $._encode_choice<ClassAttributes>(
             {

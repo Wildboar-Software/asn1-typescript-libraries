@@ -39,7 +39,7 @@ let _cached_decoder_for_ModifyRights_Item_item: $.ASN1Decoder<ModifyRights_Item_
  * @param {_Element} el The element being decoded.
  * @returns {ModifyRights_Item_item} The decoded data structure.
  */
-export function _decode_ModifyRights_Item_item(el: _Element) {
+export function _decode_ModifyRights_Item_item(el: _Element): ModifyRights_Item_item {
     if (!_cached_decoder_for_ModifyRights_Item_item) {
         _cached_decoder_for_ModifyRights_Item_item = $._decode_extensible_choice<ModifyRights_Item_item>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_ModifyRights_Item_item: $.ASN1Encoder<ModifyRights_Item_
 export function _encode_ModifyRights_Item_item(
     value: ModifyRights_Item_item,
     elGetter: $.ASN1Encoder<ModifyRights_Item_item>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyRights_Item_item) {
         _cached_encoder_for_ModifyRights_Item_item = $._encode_choice<ModifyRights_Item_item>(
             {

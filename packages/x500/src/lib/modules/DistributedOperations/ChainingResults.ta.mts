@@ -170,7 +170,7 @@ let _cached_decoder_for_ChainingResults: $.ASN1Decoder<ChainingResults> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ChainingResults} The decoded data structure.
  */
-export function _decode_ChainingResults(el: _Element) {
+export function _decode_ChainingResults(el: _Element): ChainingResults {
     if (!_cached_decoder_for_ChainingResults) {
         _cached_decoder_for_ChainingResults = function (
             el: _Element
@@ -241,7 +241,7 @@ let _cached_encoder_for_ChainingResults: $.ASN1Encoder<ChainingResults> | null =
 export function _encode_ChainingResults(
     value: ChainingResults,
     elGetter: $.ASN1Encoder<ChainingResults>
-) {
+): _Element {
     if (!_cached_encoder_for_ChainingResults) {
         _cached_encoder_for_ChainingResults = function (
             value: ChainingResults        ): _Element {

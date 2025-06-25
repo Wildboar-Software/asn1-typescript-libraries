@@ -225,7 +225,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -234,7 +234,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -246,7 +246,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -255,7 +255,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -264,7 +264,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -339,7 +339,7 @@ let _cached_decoder_for_LdapArgumentData: $.ASN1Decoder<LdapArgumentData> | null
  * @param {_Element} el The element being decoded.
  * @returns {LdapArgumentData} The decoded data structure.
  */
-export function _decode_LdapArgumentData(el: _Element) {
+export function _decode_LdapArgumentData(el: _Element): LdapArgumentData {
     if (!_cached_decoder_for_LdapArgumentData) {
         _cached_decoder_for_LdapArgumentData = function (
             el: _Element
@@ -481,7 +481,7 @@ let _cached_encoder_for_LdapArgumentData: $.ASN1Encoder<LdapArgumentData> | null
 export function _encode_LdapArgumentData(
     value: LdapArgumentData,
     elGetter: $.ASN1Encoder<LdapArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_LdapArgumentData) {
         _cached_encoder_for_LdapArgumentData = function (
             value: LdapArgumentData        ): _Element {

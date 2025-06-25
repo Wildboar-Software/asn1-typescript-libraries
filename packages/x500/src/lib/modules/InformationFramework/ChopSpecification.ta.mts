@@ -150,7 +150,7 @@ let _cached_decoder_for_ChopSpecification: $.ASN1Decoder<ChopSpecification> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ChopSpecification} The decoded data structure.
  */
-export function _decode_ChopSpecification(el: _Element) {
+export function _decode_ChopSpecification(el: _Element): ChopSpecification {
     if (!_cached_decoder_for_ChopSpecification) {
         _cached_decoder_for_ChopSpecification = function (
             el: _Element
@@ -217,7 +217,7 @@ let _cached_encoder_for_ChopSpecification: $.ASN1Encoder<ChopSpecification> | nu
 export function _encode_ChopSpecification(
     value: ChopSpecification,
     elGetter: $.ASN1Encoder<ChopSpecification>
-) {
+): _Element {
     if (!_cached_encoder_for_ChopSpecification) {
         _cached_encoder_for_ChopSpecification = function (
             value: ChopSpecification        ): _Element {

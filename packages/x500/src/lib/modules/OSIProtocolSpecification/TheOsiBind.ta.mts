@@ -23,7 +23,7 @@ export type TheOsiBind = _Element; // ObjectClassFieldType
  * @param {_Element} el The element being decoded.
  * @returns {TheOsiBind} The decoded data structure.
  */
-export function _decode_TheOsiBind(el: _Element) {
+export function _decode_TheOsiBind(el: _Element): TheOsiBind {
     return $._decode_explicit<TheOsiBind>(() => $._decodeAny)(el);
 }
 
@@ -34,7 +34,7 @@ export function _decode_TheOsiBind(el: _Element) {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TheOsiBind, encoded as an ASN.1 Element.
  */
-export function _encode_TheOsiBind(value: TheOsiBind, elGetter: $.ASN1Encoder<TheOsiBind>) {
+export function _encode_TheOsiBind(value: TheOsiBind, elGetter: $.ASN1Encoder<TheOsiBind>): _Element {
     return $._encode_explicit(
         _TagClass.context,
         16,

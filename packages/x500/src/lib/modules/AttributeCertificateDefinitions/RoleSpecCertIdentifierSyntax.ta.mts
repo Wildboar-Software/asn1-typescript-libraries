@@ -27,7 +27,7 @@ let _cached_decoder_for_RoleSpecCertIdentifierSyntax: $.ASN1Decoder<RoleSpecCert
  * @param {_Element} el The element being decoded.
  * @returns {RoleSpecCertIdentifierSyntax} The decoded data structure.
  */
-export function _decode_RoleSpecCertIdentifierSyntax(el: _Element) {
+export function _decode_RoleSpecCertIdentifierSyntax(el: _Element): RoleSpecCertIdentifierSyntax {
     if (!_cached_decoder_for_RoleSpecCertIdentifierSyntax) {
         _cached_decoder_for_RoleSpecCertIdentifierSyntax = $._decodeSequenceOf<RoleSpecCertIdentifier>(
             () => _decode_RoleSpecCertIdentifier
@@ -48,7 +48,7 @@ let _cached_encoder_for_RoleSpecCertIdentifierSyntax: $.ASN1Encoder<RoleSpecCert
 export function _encode_RoleSpecCertIdentifierSyntax(
     value: RoleSpecCertIdentifierSyntax,
     elGetter: $.ASN1Encoder<RoleSpecCertIdentifierSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_RoleSpecCertIdentifierSyntax) {
         _cached_encoder_for_RoleSpecCertIdentifierSyntax = $._encodeSequenceOf<RoleSpecCertIdentifier>(
             () => _encode_RoleSpecCertIdentifier,

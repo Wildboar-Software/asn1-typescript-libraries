@@ -105,7 +105,7 @@ let _cached_decoder_for_EncryptedPduInfo_pduEncryptionAlgorithm: $.ASN1Decoder<E
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedPduInfo_pduEncryptionAlgorithm} The decoded data structure.
  */
-export function _decode_EncryptedPduInfo_pduEncryptionAlgorithm(el: _Element) {
+export function _decode_EncryptedPduInfo_pduEncryptionAlgorithm(el: _Element): EncryptedPduInfo_pduEncryptionAlgorithm {
     if (!_cached_decoder_for_EncryptedPduInfo_pduEncryptionAlgorithm) {
         _cached_decoder_for_EncryptedPduInfo_pduEncryptionAlgorithm = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_EncryptedPduInfo_pduEncryptionAlgorithm: $.ASN1Encoder<E
 export function _encode_EncryptedPduInfo_pduEncryptionAlgorithm(
     value: EncryptedPduInfo_pduEncryptionAlgorithm,
     elGetter: $.ASN1Encoder<EncryptedPduInfo_pduEncryptionAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedPduInfo_pduEncryptionAlgorithm) {
         _cached_encoder_for_EncryptedPduInfo_pduEncryptionAlgorithm = function (
             value: EncryptedPduInfo_pduEncryptionAlgorithm        ): _Element {

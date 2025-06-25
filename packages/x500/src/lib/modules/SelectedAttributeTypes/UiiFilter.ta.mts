@@ -34,7 +34,7 @@ let _cached_decoder_for_UiiFilter: $.ASN1Decoder<UiiFilter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UiiFilter} The decoded data structure.
  */
-export function _decode_UiiFilter(el: _Element) {
+export function _decode_UiiFilter(el: _Element): UiiFilter {
     if (!_cached_decoder_for_UiiFilter) {
         _cached_decoder_for_UiiFilter = $._decode_inextensible_choice<UiiFilter>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_UiiFilter: $.ASN1Encoder<UiiFilter> | null = null;
 export function _encode_UiiFilter(
     value: UiiFilter,
     elGetter: $.ASN1Encoder<UiiFilter>
-) {
+): _Element {
     if (!_cached_encoder_for_UiiFilter) {
         _cached_encoder_for_UiiFilter = $._encode_choice<UiiFilter>(
             {

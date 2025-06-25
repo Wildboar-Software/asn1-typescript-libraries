@@ -114,7 +114,7 @@ let _cached_decoder_for_InitializationRej: $.ASN1Decoder<InitializationRej> | nu
  * @param {_Element} el The element being decoded.
  * @returns {InitializationRej} The decoded data structure.
  */
-export function _decode_InitializationRej(el: _Element) {
+export function _decode_InitializationRej(el: _Element): InitializationRej {
     if (!_cached_decoder_for_InitializationRej) {
         _cached_decoder_for_InitializationRej = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_InitializationRej: $.ASN1Encoder<InitializationRej> | nu
 export function _encode_InitializationRej(
     value: InitializationRej,
     elGetter: $.ASN1Encoder<InitializationRej>
-) {
+): _Element {
     if (!_cached_encoder_for_InitializationRej) {
         _cached_encoder_for_InitializationRej = function (
             value: InitializationRej        ): _Element {

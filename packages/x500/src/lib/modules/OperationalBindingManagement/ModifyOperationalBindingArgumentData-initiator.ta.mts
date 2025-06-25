@@ -26,7 +26,7 @@ let _cached_decoder_for_ModifyOperationalBindingArgumentData_initiator: $.ASN1De
  */
 export function _decode_ModifyOperationalBindingArgumentData_initiator(
     el: _Element
-) {
+): ModifyOperationalBindingArgumentData_initiator {
     if (!_cached_decoder_for_ModifyOperationalBindingArgumentData_initiator) {
         _cached_decoder_for_ModifyOperationalBindingArgumentData_initiator = $._decode_inextensible_choice<ModifyOperationalBindingArgumentData_initiator>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_ModifyOperationalBindingArgumentData_initiator: $.ASN1En
 export function _encode_ModifyOperationalBindingArgumentData_initiator(
     value: ModifyOperationalBindingArgumentData_initiator,
     elGetter: $.ASN1Encoder<ModifyOperationalBindingArgumentData_initiator>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyOperationalBindingArgumentData_initiator) {
         _cached_encoder_for_ModifyOperationalBindingArgumentData_initiator = $._encode_choice<ModifyOperationalBindingArgumentData_initiator>(
             {

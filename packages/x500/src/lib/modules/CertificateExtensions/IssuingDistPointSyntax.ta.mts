@@ -115,7 +115,7 @@ export class IssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_onlyContainsUserPublicKeyCerts() {
+    public static get _default_value_for_onlyContainsUserPublicKeyCerts(): BOOLEAN {
         return false;
     }
     /**
@@ -124,7 +124,7 @@ export class IssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_onlyContainsCACerts() {
+    public static get _default_value_for_onlyContainsCACerts(): BOOLEAN {
         return false;
     }
     /**
@@ -133,7 +133,7 @@ export class IssuingDistPointSyntax {
      * @static
      * @method
      */
-    public static get _default_value_for_indirectCRL() {
+    public static get _default_value_for_indirectCRL(): BOOLEAN {
         return false;
     }
 }
@@ -207,7 +207,7 @@ let _cached_decoder_for_IssuingDistPointSyntax: $.ASN1Decoder<IssuingDistPointSy
  * @param {_Element} el The element being decoded.
  * @returns {IssuingDistPointSyntax} The decoded data structure.
  */
-export function _decode_IssuingDistPointSyntax(el: _Element) {
+export function _decode_IssuingDistPointSyntax(el: _Element): IssuingDistPointSyntax {
     if (!_cached_decoder_for_IssuingDistPointSyntax) {
         _cached_decoder_for_IssuingDistPointSyntax = function (
             el: _Element
@@ -290,7 +290,7 @@ let _cached_encoder_for_IssuingDistPointSyntax: $.ASN1Encoder<IssuingDistPointSy
 export function _encode_IssuingDistPointSyntax(
     value: IssuingDistPointSyntax,
     elGetter: $.ASN1Encoder<IssuingDistPointSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_IssuingDistPointSyntax) {
         _cached_encoder_for_IssuingDistPointSyntax = function (
             value: IssuingDistPointSyntax        ): _Element {

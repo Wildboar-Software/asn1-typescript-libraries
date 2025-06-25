@@ -23,7 +23,7 @@ let _cached_decoder_for_ResultAttribute_outputValues: $.ASN1Decoder<ResultAttrib
  * @param {_Element} el The element being decoded.
  * @returns {ResultAttribute_outputValues} The decoded data structure.
  */
-export function _decode_ResultAttribute_outputValues(el: _Element) {
+export function _decode_ResultAttribute_outputValues(el: _Element): ResultAttribute_outputValues {
     if (!_cached_decoder_for_ResultAttribute_outputValues) {
         _cached_decoder_for_ResultAttribute_outputValues = $._decode_inextensible_choice<ResultAttribute_outputValues>(
             {
@@ -50,7 +50,7 @@ let _cached_encoder_for_ResultAttribute_outputValues: $.ASN1Encoder<ResultAttrib
 export function _encode_ResultAttribute_outputValues(
     value: ResultAttribute_outputValues,
     elGetter: $.ASN1Encoder<ResultAttribute_outputValues>
-) {
+): _Element {
     if (!_cached_encoder_for_ResultAttribute_outputValues) {
         _cached_encoder_for_ResultAttribute_outputValues = $._encode_choice<ResultAttribute_outputValues>(
             {

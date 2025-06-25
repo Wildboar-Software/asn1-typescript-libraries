@@ -31,7 +31,7 @@ let _cached_decoder_for_TypeAndContextAssertion_contextAssertions: $.ASN1Decoder
  */
 export function _decode_TypeAndContextAssertion_contextAssertions(
     el: _Element
-) {
+): TypeAndContextAssertion_contextAssertions {
     if (!_cached_decoder_for_TypeAndContextAssertion_contextAssertions) {
         _cached_decoder_for_TypeAndContextAssertion_contextAssertions = $._decode_extensible_choice<TypeAndContextAssertion_contextAssertions>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_TypeAndContextAssertion_contextAssertions: $.ASN1Encoder
 export function _encode_TypeAndContextAssertion_contextAssertions(
     value: TypeAndContextAssertion_contextAssertions,
     elGetter: $.ASN1Encoder<TypeAndContextAssertion_contextAssertions>
-) {
+): _Element {
     if (!_cached_encoder_for_TypeAndContextAssertion_contextAssertions) {
         _cached_encoder_for_TypeAndContextAssertion_contextAssertions = $._encode_choice<TypeAndContextAssertion_contextAssertions>(
             {

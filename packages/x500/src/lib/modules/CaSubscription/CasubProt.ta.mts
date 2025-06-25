@@ -114,7 +114,7 @@ let _cached_decoder_for_CasubProt: $.ASN1Decoder<CasubProt> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CasubProt} The decoded data structure.
  */
-export function _decode_CasubProt(el: _Element) {
+export function _decode_CasubProt(el: _Element): CasubProt {
     if (!_cached_decoder_for_CasubProt) {
         _cached_decoder_for_CasubProt = $._decode_extensible_choice<CasubProt>({
             "CONTEXT 0": [
@@ -208,7 +208,7 @@ let _cached_encoder_for_CasubProt: $.ASN1Encoder<CasubProt> | null = null;
 export function _encode_CasubProt(
     value: CasubProt,
     elGetter: $.ASN1Encoder<CasubProt>
-) {
+): _Element {
     if (!_cached_encoder_for_CasubProt) {
         _cached_encoder_for_CasubProt = $._encode_choice<CasubProt>(
             {

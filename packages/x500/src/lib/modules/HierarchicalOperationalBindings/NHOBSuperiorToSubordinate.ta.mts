@@ -27,7 +27,7 @@ let _cached_decoder_for_NHOBSuperiorToSubordinate: $.ASN1Decoder<NHOBSuperiorToS
  * @param {_Element} el The element being decoded.
  * @returns {NHOBSuperiorToSubordinate} The decoded data structure.
  */
-export function _decode_NHOBSuperiorToSubordinate(el: _Element) {
+export function _decode_NHOBSuperiorToSubordinate(el: _Element): NHOBSuperiorToSubordinate {
     if (!_cached_decoder_for_NHOBSuperiorToSubordinate) {
         _cached_decoder_for_NHOBSuperiorToSubordinate = _decode_SuperiorToSubordinate;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_NHOBSuperiorToSubordinate: $.ASN1Encoder<NHOBSuperiorToS
 export function _encode_NHOBSuperiorToSubordinate(
     value: NHOBSuperiorToSubordinate,
     elGetter: $.ASN1Encoder<NHOBSuperiorToSubordinate>
-) {
+): _Element {
     if (!_cached_encoder_for_NHOBSuperiorToSubordinate) {
         _cached_encoder_for_NHOBSuperiorToSubordinate = _encode_SuperiorToSubordinate;
     }

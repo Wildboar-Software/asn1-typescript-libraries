@@ -144,7 +144,7 @@ export class AttributeTypeInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_multi_valued() {
+    public static get _default_value_for_multi_valued(): BOOLEAN {
         return true;
     }
     /**
@@ -153,7 +153,7 @@ export class AttributeTypeInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_collective() {
+    public static get _default_value_for_collective(): BOOLEAN {
         return false;
     }
     /**
@@ -162,7 +162,7 @@ export class AttributeTypeInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_userModifiable() {
+    public static get _default_value_for_userModifiable(): BOOLEAN {
         return true;
     }
     /**
@@ -171,7 +171,7 @@ export class AttributeTypeInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_application() {
+    public static get _default_value_for_application(): AttributeUsage {
         return AttributeUsage_userApplications;
     }
     /**
@@ -267,7 +267,7 @@ let _cached_decoder_for_AttributeTypeInformation: $.ASN1Decoder<AttributeTypeInf
  * @param {_Element} el The element being decoded.
  * @returns {AttributeTypeInformation} The decoded data structure.
  */
-export function _decode_AttributeTypeInformation(el: _Element) {
+export function _decode_AttributeTypeInformation(el: _Element): AttributeTypeInformation {
     if (!_cached_decoder_for_AttributeTypeInformation) {
         _cached_decoder_for_AttributeTypeInformation = function (
             el: _Element
@@ -370,7 +370,7 @@ let _cached_encoder_for_AttributeTypeInformation: $.ASN1Encoder<AttributeTypeInf
 export function _encode_AttributeTypeInformation(
     value: AttributeTypeInformation,
     elGetter: $.ASN1Encoder<AttributeTypeInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeTypeInformation) {
         _cached_encoder_for_AttributeTypeInformation = function (
             value: AttributeTypeInformation        ): _Element {

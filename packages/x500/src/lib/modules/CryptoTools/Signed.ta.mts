@@ -125,7 +125,7 @@ export const _extension_additions_list_spec_for_Signed: $.ComponentSpec[] = [];
  */
 export function _get_decoder_for_Signed<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
-) {
+): $.ASN1Decoder<Signed<ToBeSigned>> {
     return function (el: _Element): Signed<ToBeSigned> {
         let toBeSigned!: ToBeSigned;
         let signature!: BIT_STRING;
@@ -168,7 +168,7 @@ export function _get_decoder_for_Signed<ToBeSigned>(
  */
 export function _get_encoder_for_Signed<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
-) {
+): $.ASN1Encoder<Signed<ToBeSigned>> {
     return function (
         value: Signed<ToBeSigned>    ): _Element {
         return $._encodeSequence(

@@ -33,7 +33,7 @@ let _cached_decoder_for_OsiOperation: $.ASN1Decoder<OsiOperation> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiOperation} The decoded data structure.
  */
-export function _decode_OsiOperation(el: _Element) {
+export function _decode_OsiOperation(el: _Element): OsiOperation {
     if (!_cached_decoder_for_OsiOperation) {
         _cached_decoder_for_OsiOperation = $._decode_inextensible_choice<OsiOperation>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_OsiOperation: $.ASN1Encoder<OsiOperation> | null = null;
 export function _encode_OsiOperation(
     value: OsiOperation,
     elGetter: $.ASN1Encoder<OsiOperation>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiOperation) {
         _cached_encoder_for_OsiOperation = $._encode_choice<OsiOperation>(
             {

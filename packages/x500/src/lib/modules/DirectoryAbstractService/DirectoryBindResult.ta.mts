@@ -95,7 +95,7 @@ export class DirectoryBindResult {
      * @static
      * @method
      */
-    public static get _default_value_for_versions() {
+    public static get _default_value_for_versions(): Versions {
         return (() => {
             const _ret = new Uint8ClampedArray(2);
             _ret[Versions_v1] = TRUE_BIT;
@@ -159,7 +159,7 @@ let _cached_decoder_for_DirectoryBindResult: $.ASN1Decoder<DirectoryBindResult> 
  * @param {_Element} el The element being decoded.
  * @returns {DirectoryBindResult} The decoded data structure.
  */
-export function _decode_DirectoryBindResult(el: _Element) {
+export function _decode_DirectoryBindResult(el: _Element): DirectoryBindResult {
     if (!_cached_decoder_for_DirectoryBindResult) {
         _cached_decoder_for_DirectoryBindResult = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_DirectoryBindResult: $.ASN1Encoder<DirectoryBindResult> 
 export function _encode_DirectoryBindResult(
     value: DirectoryBindResult,
     elGetter: $.ASN1Encoder<DirectoryBindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryBindResult) {
         _cached_encoder_for_DirectoryBindResult = function (
             value: DirectoryBindResult        ): _Element {

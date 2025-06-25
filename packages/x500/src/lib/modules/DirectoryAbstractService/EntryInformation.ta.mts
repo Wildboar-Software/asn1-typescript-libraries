@@ -213,7 +213,7 @@ let _cached_decoder_for_EntryInformation: $.ASN1Decoder<EntryInformation> | null
  * @param {_Element} el The element being decoded.
  * @returns {EntryInformation} The decoded data structure.
  */
-export function _decode_EntryInformation(el: _Element) {
+export function _decode_EntryInformation(el: _Element): EntryInformation {
     if (!_cached_decoder_for_EntryInformation) {
         _cached_decoder_for_EntryInformation = function (
             el: _Element
@@ -293,7 +293,7 @@ let _cached_encoder_for_EntryInformation: $.ASN1Encoder<EntryInformation> | null
 export function _encode_EntryInformation(
     value: EntryInformation,
     elGetter: $.ASN1Encoder<EntryInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryInformation) {
         _cached_encoder_for_EntryInformation = function (
             value: EntryInformation        ): _Element {

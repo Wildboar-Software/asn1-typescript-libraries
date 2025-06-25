@@ -26,7 +26,7 @@ let _cached_decoder_for_ConsumerInformation: $.ASN1Decoder<ConsumerInformation> 
  * @param {_Element} el The element being decoded.
  * @returns {ConsumerInformation} The decoded data structure.
  */
-export function _decode_ConsumerInformation(el: _Element) {
+export function _decode_ConsumerInformation(el: _Element): ConsumerInformation {
     if (!_cached_decoder_for_ConsumerInformation) {
         _cached_decoder_for_ConsumerInformation = _decode_SupplierOrConsumer;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ConsumerInformation: $.ASN1Encoder<ConsumerInformation> 
 export function _encode_ConsumerInformation(
     value: ConsumerInformation,
     elGetter: $.ASN1Encoder<ConsumerInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ConsumerInformation) {
         _cached_encoder_for_ConsumerInformation = _encode_SupplierOrConsumer;
     }

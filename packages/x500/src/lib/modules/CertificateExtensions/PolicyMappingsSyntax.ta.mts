@@ -29,7 +29,7 @@ let _cached_decoder_for_PolicyMappingsSyntax: $.ASN1Decoder<PolicyMappingsSyntax
  * @param {_Element} el The element being decoded.
  * @returns {PolicyMappingsSyntax} The decoded data structure.
  */
-export function _decode_PolicyMappingsSyntax(el: _Element) {
+export function _decode_PolicyMappingsSyntax(el: _Element): PolicyMappingsSyntax {
     if (!_cached_decoder_for_PolicyMappingsSyntax) {
         _cached_decoder_for_PolicyMappingsSyntax = $._decodeSequenceOf<PolicyMappingsSyntax_Item>(
             () => _decode_PolicyMappingsSyntax_Item
@@ -50,7 +50,7 @@ let _cached_encoder_for_PolicyMappingsSyntax: $.ASN1Encoder<PolicyMappingsSyntax
 export function _encode_PolicyMappingsSyntax(
     value: PolicyMappingsSyntax,
     elGetter: $.ASN1Encoder<PolicyMappingsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyMappingsSyntax) {
         _cached_encoder_for_PolicyMappingsSyntax = $._encodeSequenceOf<PolicyMappingsSyntax_Item>(
             () => _encode_PolicyMappingsSyntax_Item,

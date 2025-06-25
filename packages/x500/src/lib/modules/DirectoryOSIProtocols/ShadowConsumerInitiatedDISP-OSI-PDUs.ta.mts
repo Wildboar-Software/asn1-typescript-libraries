@@ -26,7 +26,7 @@ let _cached_decoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs: $.ASN1Decoder<Shad
  * @param {_Element} el The element being decoded.
  * @returns {ShadowConsumerInitiatedDISP_OSI_PDUs} The decoded data structure.
  */
-export function _decode_ShadowConsumerInitiatedDISP_OSI_PDUs(el: _Element) {
+export function _decode_ShadowConsumerInitiatedDISP_OSI_PDUs(el: _Element): ShadowConsumerInitiatedDISP_OSI_PDUs {
     if (!_cached_decoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs) {
         _cached_decoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs = _decode_OSI_PDU;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs: $.ASN1Encoder<Shad
 export function _encode_ShadowConsumerInitiatedDISP_OSI_PDUs(
     value: ShadowConsumerInitiatedDISP_OSI_PDUs,
     elGetter: $.ASN1Encoder<ShadowConsumerInitiatedDISP_OSI_PDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs) {
         _cached_encoder_for_ShadowConsumerInitiatedDISP_OSI_PDUs = _encode_OSI_PDU;
     }

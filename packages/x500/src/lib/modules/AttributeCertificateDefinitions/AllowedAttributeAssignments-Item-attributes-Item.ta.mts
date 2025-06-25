@@ -36,7 +36,7 @@ let _cached_decoder_for_AllowedAttributeAssignments_Item_attributes_Item: $.ASN1
  */
 export function _decode_AllowedAttributeAssignments_Item_attributes_Item(
     el: _Element
-) {
+): AllowedAttributeAssignments_Item_attributes_Item {
     if (!_cached_decoder_for_AllowedAttributeAssignments_Item_attributes_Item) {
         _cached_decoder_for_AllowedAttributeAssignments_Item_attributes_Item = $._decode_extensible_choice<AllowedAttributeAssignments_Item_attributes_Item>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_AllowedAttributeAssignments_Item_attributes_Item: $.ASN1
 export function _encode_AllowedAttributeAssignments_Item_attributes_Item(
     value: AllowedAttributeAssignments_Item_attributes_Item,
     elGetter: $.ASN1Encoder<AllowedAttributeAssignments_Item_attributes_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AllowedAttributeAssignments_Item_attributes_Item) {
         _cached_encoder_for_AllowedAttributeAssignments_Item_attributes_Item = $._encode_choice<AllowedAttributeAssignments_Item_attributes_Item>(
             {

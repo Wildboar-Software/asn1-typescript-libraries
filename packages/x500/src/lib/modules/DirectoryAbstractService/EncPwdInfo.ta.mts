@@ -125,7 +125,7 @@ let _cached_decoder_for_EncPwdInfo: $.ASN1Decoder<EncPwdInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EncPwdInfo} The decoded data structure.
  */
-export function _decode_EncPwdInfo(el: _Element) {
+export function _decode_EncPwdInfo(el: _Element): EncPwdInfo {
     if (!_cached_decoder_for_EncPwdInfo) {
         _cached_decoder_for_EncPwdInfo = function (el: _Element): EncPwdInfo {
             let algorithms: OPTIONAL<AlgorithmIdentifier[]>;
@@ -181,7 +181,7 @@ let _cached_encoder_for_EncPwdInfo: $.ASN1Encoder<EncPwdInfo> | null = null;
 export function _encode_EncPwdInfo(
     value: EncPwdInfo,
     elGetter: $.ASN1Encoder<EncPwdInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_EncPwdInfo) {
         _cached_encoder_for_EncPwdInfo = function (
             value: EncPwdInfo        ): _Element {

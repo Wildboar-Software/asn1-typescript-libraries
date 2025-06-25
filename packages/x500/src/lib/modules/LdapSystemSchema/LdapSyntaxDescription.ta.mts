@@ -126,7 +126,7 @@ let _cached_decoder_for_LdapSyntaxDescription: $.ASN1Decoder<LdapSyntaxDescripti
  * @param {_Element} el The element being decoded.
  * @returns {LdapSyntaxDescription} The decoded data structure.
  */
-export function _decode_LdapSyntaxDescription(el: _Element) {
+export function _decode_LdapSyntaxDescription(el: _Element): LdapSyntaxDescription {
     if (!_cached_decoder_for_LdapSyntaxDescription) {
         _cached_decoder_for_LdapSyntaxDescription = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_LdapSyntaxDescription: $.ASN1Encoder<LdapSyntaxDescripti
 export function _encode_LdapSyntaxDescription(
     value: LdapSyntaxDescription,
     elGetter: $.ASN1Encoder<LdapSyntaxDescription>
-) {
+): _Element {
     if (!_cached_encoder_for_LdapSyntaxDescription) {
         _cached_encoder_for_LdapSyntaxDescription = function (
             value: LdapSyntaxDescription        ): _Element {

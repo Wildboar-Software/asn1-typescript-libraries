@@ -31,7 +31,7 @@ let _cached_decoder_for_ApplAbort: $.ASN1Decoder<ApplAbort> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ApplAbort} The decoded data structure.
  */
-export function _decode_ApplAbort(el: _Element) {
+export function _decode_ApplAbort(el: _Element): ApplAbort {
     if (!_cached_decoder_for_ApplAbort) {
         _cached_decoder_for_ApplAbort = _get_decoder_for_Signed<TbsApplAbort>(
             _decode_TbsApplAbort
@@ -52,7 +52,7 @@ let _cached_encoder_for_ApplAbort: $.ASN1Encoder<ApplAbort> | null = null;
 export function _encode_ApplAbort(
     value: ApplAbort,
     elGetter: $.ASN1Encoder<ApplAbort>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplAbort) {
         _cached_encoder_for_ApplAbort = _get_encoder_for_Signed<TbsApplAbort>(
             _encode_TbsApplAbort

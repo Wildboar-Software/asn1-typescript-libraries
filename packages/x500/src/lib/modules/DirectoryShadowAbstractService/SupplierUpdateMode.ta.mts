@@ -32,7 +32,7 @@ let _cached_decoder_for_SupplierUpdateMode: $.ASN1Decoder<SupplierUpdateMode> | 
  * @param {_Element} el The element being decoded.
  * @returns {SupplierUpdateMode} The decoded data structure.
  */
-export function _decode_SupplierUpdateMode(el: _Element) {
+export function _decode_SupplierUpdateMode(el: _Element): SupplierUpdateMode {
     if (!_cached_decoder_for_SupplierUpdateMode) {
         _cached_decoder_for_SupplierUpdateMode = $._decode_extensible_choice<SupplierUpdateMode>(
             {
@@ -56,7 +56,7 @@ let _cached_encoder_for_SupplierUpdateMode: $.ASN1Encoder<SupplierUpdateMode> | 
 export function _encode_SupplierUpdateMode(
     value: SupplierUpdateMode,
     elGetter: $.ASN1Encoder<SupplierUpdateMode>
-) {
+): _Element {
     if (!_cached_encoder_for_SupplierUpdateMode) {
         _cached_encoder_for_SupplierUpdateMode = $._encode_choice<SupplierUpdateMode>(
             {

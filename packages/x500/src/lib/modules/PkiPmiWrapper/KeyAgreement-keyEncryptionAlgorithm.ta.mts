@@ -112,7 +112,7 @@ let _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm: $.ASN1Decoder<KeyAg
  * @param {_Element} el The element being decoded.
  * @returns {KeyAgreement_keyEncryptionAlgorithm} The decoded data structure.
  */
-export function _decode_KeyAgreement_keyEncryptionAlgorithm(el: _Element) {
+export function _decode_KeyAgreement_keyEncryptionAlgorithm(el: _Element): KeyAgreement_keyEncryptionAlgorithm {
     if (!_cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm) {
         _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm: $.ASN1Encoder<KeyAg
 export function _encode_KeyAgreement_keyEncryptionAlgorithm(
     value: KeyAgreement_keyEncryptionAlgorithm,
     elGetter: $.ASN1Encoder<KeyAgreement_keyEncryptionAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm) {
         _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm = function (
             value: KeyAgreement_keyEncryptionAlgorithm        ): _Element {

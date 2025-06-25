@@ -144,7 +144,7 @@ let _cached_decoder_for_IdmReject: $.ASN1Decoder<IdmReject> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IdmReject} The decoded data structure.
  */
-export function _decode_IdmReject(el: _Element) {
+export function _decode_IdmReject(el: _Element): IdmReject {
     if (!_cached_decoder_for_IdmReject) {
         _cached_decoder_for_IdmReject = function (el: _Element): IdmReject {
             const sequence: _Element[] = el.sequence;
@@ -179,7 +179,7 @@ let _cached_encoder_for_IdmReject: $.ASN1Encoder<IdmReject> | null = null;
 export function _encode_IdmReject(
     value: IdmReject,
     elGetter: $.ASN1Encoder<IdmReject>
-) {
+): _Element {
     if (!_cached_encoder_for_IdmReject) {
         _cached_encoder_for_IdmReject = function (
             value: IdmReject        ): _Element {

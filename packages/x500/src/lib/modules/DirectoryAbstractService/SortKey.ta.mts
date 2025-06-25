@@ -120,7 +120,7 @@ let _cached_decoder_for_SortKey: $.ASN1Decoder<SortKey> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SortKey} The decoded data structure.
  */
-export function _decode_SortKey(el: _Element) {
+export function _decode_SortKey(el: _Element): SortKey {
     if (!_cached_decoder_for_SortKey) {
         _cached_decoder_for_SortKey = function (el: _Element): SortKey {
             let type_!: AttributeType;
@@ -166,7 +166,7 @@ let _cached_encoder_for_SortKey: $.ASN1Encoder<SortKey> | null = null;
 export function _encode_SortKey(
     value: SortKey,
     elGetter: $.ASN1Encoder<SortKey>
-) {
+): _Element {
     if (!_cached_encoder_for_SortKey) {
         _cached_encoder_for_SortKey = function (
             value: SortKey        ): _Element {

@@ -116,7 +116,7 @@ let _cached_decoder_for_ContextAssertion: $.ASN1Decoder<ContextAssertion> | null
  * @param {_Element} el The element being decoded.
  * @returns {ContextAssertion} The decoded data structure.
  */
-export function _decode_ContextAssertion(el: _Element) {
+export function _decode_ContextAssertion(el: _Element): ContextAssertion {
     if (!_cached_decoder_for_ContextAssertion) {
         _cached_decoder_for_ContextAssertion = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_ContextAssertion: $.ASN1Encoder<ContextAssertion> | null
 export function _encode_ContextAssertion(
     value: ContextAssertion,
     elGetter: $.ASN1Encoder<ContextAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_ContextAssertion) {
         _cached_encoder_for_ContextAssertion = function (
             value: ContextAssertion        ): _Element {

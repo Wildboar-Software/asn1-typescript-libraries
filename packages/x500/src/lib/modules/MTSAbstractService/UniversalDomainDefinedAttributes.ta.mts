@@ -28,7 +28,7 @@ let _cached_decoder_for_UniversalDomainDefinedAttributes: $.ASN1Decoder<Universa
  * @param {_Element} el The element being decoded.
  * @returns {UniversalDomainDefinedAttributes} The decoded data structure.
  */
-export function _decode_UniversalDomainDefinedAttributes(el: _Element) {
+export function _decode_UniversalDomainDefinedAttributes(el: _Element): UniversalDomainDefinedAttributes {
     if (!_cached_decoder_for_UniversalDomainDefinedAttributes) {
         _cached_decoder_for_UniversalDomainDefinedAttributes = $._decodeSequenceOf<UniversalDomainDefinedAttribute>(
             () => _decode_UniversalDomainDefinedAttribute
@@ -49,7 +49,7 @@ let _cached_encoder_for_UniversalDomainDefinedAttributes: $.ASN1Encoder<Universa
 export function _encode_UniversalDomainDefinedAttributes(
     value: UniversalDomainDefinedAttributes,
     elGetter: $.ASN1Encoder<UniversalDomainDefinedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalDomainDefinedAttributes) {
         _cached_encoder_for_UniversalDomainDefinedAttributes = $._encodeSequenceOf<UniversalDomainDefinedAttribute>(
             () => _encode_UniversalDomainDefinedAttribute,

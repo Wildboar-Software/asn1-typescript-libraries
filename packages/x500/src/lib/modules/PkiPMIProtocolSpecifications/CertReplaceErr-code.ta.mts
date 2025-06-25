@@ -40,7 +40,7 @@ let _cached_decoder_for_CertReplaceErr_code: $.ASN1Decoder<CertReplaceErr_code> 
  * @param {_Element} el The element being decoded.
  * @returns {CertReplaceErr_code} The decoded data structure.
  */
-export function _decode_CertReplaceErr_code(el: _Element) {
+export function _decode_CertReplaceErr_code(el: _Element): CertReplaceErr_code {
     if (!_cached_decoder_for_CertReplaceErr_code) {
         _cached_decoder_for_CertReplaceErr_code = $._decode_extensible_choice<CertReplaceErr_code>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_CertReplaceErr_code: $.ASN1Encoder<CertReplaceErr_code> 
 export function _encode_CertReplaceErr_code(
     value: CertReplaceErr_code,
     elGetter: $.ASN1Encoder<CertReplaceErr_code>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReplaceErr_code) {
         _cached_encoder_for_CertReplaceErr_code = $._encode_choice<CertReplaceErr_code>(
             {

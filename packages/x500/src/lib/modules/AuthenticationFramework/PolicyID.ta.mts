@@ -26,7 +26,7 @@ let _cached_decoder_for_PolicyID: $.ASN1Decoder<PolicyID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PolicyID} The decoded data structure.
  */
-export function _decode_PolicyID(el: _Element) {
+export function _decode_PolicyID(el: _Element): PolicyID {
     if (!_cached_decoder_for_PolicyID) {
         _cached_decoder_for_PolicyID = _decode_CertPolicyId;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_PolicyID: $.ASN1Encoder<PolicyID> | null = null;
 export function _encode_PolicyID(
     value: PolicyID,
     elGetter: $.ASN1Encoder<PolicyID>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyID) {
         _cached_encoder_for_PolicyID = _encode_CertPolicyId;
     }

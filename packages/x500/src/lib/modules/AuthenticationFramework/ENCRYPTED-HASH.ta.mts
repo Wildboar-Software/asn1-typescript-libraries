@@ -25,7 +25,7 @@ export type ENCRYPTED_HASH = BIT_STRING;
  */
 export function _get_decoder_for_ENCRYPTED_HASH<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
-) {
+): $.ASN1Decoder<BIT_STRING> {
     return $._decodeBitString;
 }
 
@@ -36,7 +36,7 @@ export function _get_decoder_for_ENCRYPTED_HASH<ToBeSigned>(
  */
 export function _get_encoder_for_ENCRYPTED_HASH<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
-) {
+): $.ASN1Encoder<BIT_STRING> {
     return $._encodeBitString;
 }
 

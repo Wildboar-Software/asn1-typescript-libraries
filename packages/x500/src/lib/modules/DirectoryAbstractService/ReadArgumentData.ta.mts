@@ -227,7 +227,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_selection() {
+    public static get _default_value_for_selection(): EntryInformationSelection {
         return EntryInformationSelection._from_object({});
     }
     /**
@@ -236,7 +236,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_modifyRightsRequest() {
+    public static get _default_value_for_modifyRightsRequest(): BOOLEAN {
         return false;
     }
     /**
@@ -245,7 +245,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -254,7 +254,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -266,7 +266,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -275,7 +275,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -284,7 +284,7 @@ export class ReadArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -362,7 +362,7 @@ let _cached_decoder_for_ReadArgumentData: $.ASN1Decoder<ReadArgumentData> | null
  * @param {_Element} el The element being decoded.
  * @returns {ReadArgumentData} The decoded data structure.
  */
-export function _decode_ReadArgumentData(el: _Element) {
+export function _decode_ReadArgumentData(el: _Element): ReadArgumentData {
     if (!_cached_decoder_for_ReadArgumentData) {
         _cached_decoder_for_ReadArgumentData = function (
             el: _Element
@@ -512,7 +512,7 @@ let _cached_encoder_for_ReadArgumentData: $.ASN1Encoder<ReadArgumentData> | null
 export function _encode_ReadArgumentData(
     value: ReadArgumentData,
     elGetter: $.ASN1Encoder<ReadArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ReadArgumentData) {
         _cached_encoder_for_ReadArgumentData = function (
             value: ReadArgumentData        ): _Element {

@@ -110,7 +110,7 @@ let _cached_decoder_for_ERROR_TOKEN: $.ASN1Decoder<ERROR_TOKEN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ERROR_TOKEN} The decoded data structure.
  */
-export function _decode_ERROR_TOKEN(el: _Element) {
+export function _decode_ERROR_TOKEN(el: _Element): ERROR_TOKEN {
     if (!_cached_decoder_for_ERROR_TOKEN) {
         _cached_decoder_for_ERROR_TOKEN = function (el: _Element): ERROR_TOKEN {
             const sequence: _Element[] = el.sequence;
@@ -145,7 +145,7 @@ let _cached_encoder_for_ERROR_TOKEN: $.ASN1Encoder<ERROR_TOKEN> | null = null;
 export function _encode_ERROR_TOKEN(
     value: ERROR_TOKEN,
     elGetter: $.ASN1Encoder<ERROR_TOKEN>
-) {
+): _Element {
     if (!_cached_encoder_for_ERROR_TOKEN) {
         _cached_encoder_for_ERROR_TOKEN = function (
             value: ERROR_TOKEN        ): _Element {

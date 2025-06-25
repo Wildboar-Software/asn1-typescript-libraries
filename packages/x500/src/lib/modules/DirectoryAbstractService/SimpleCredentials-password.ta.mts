@@ -39,7 +39,7 @@ let _cached_decoder_for_SimpleCredentials_password: $.ASN1Decoder<SimpleCredenti
  * @param {_Element} el The element being decoded.
  * @returns {SimpleCredentials_password} The decoded data structure.
  */
-export function _decode_SimpleCredentials_password(el: _Element) {
+export function _decode_SimpleCredentials_password(el: _Element): SimpleCredentials_password {
     if (!_cached_decoder_for_SimpleCredentials_password) {
         _cached_decoder_for_SimpleCredentials_password = $._decode_extensible_choice<SimpleCredentials_password>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_SimpleCredentials_password: $.ASN1Encoder<SimpleCredenti
 export function _encode_SimpleCredentials_password(
     value: SimpleCredentials_password,
     elGetter: $.ASN1Encoder<SimpleCredentials_password>
-) {
+): _Element {
     if (!_cached_encoder_for_SimpleCredentials_password) {
         _cached_encoder_for_SimpleCredentials_password = $._encode_choice<SimpleCredentials_password>(
             {

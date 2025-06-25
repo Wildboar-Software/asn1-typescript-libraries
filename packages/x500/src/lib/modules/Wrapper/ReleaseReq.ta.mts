@@ -31,7 +31,7 @@ let _cached_decoder_for_ReleaseReq: $.ASN1Decoder<ReleaseReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReleaseReq} The decoded data structure.
  */
-export function _decode_ReleaseReq(el: _Element) {
+export function _decode_ReleaseReq(el: _Element): ReleaseReq {
     if (!_cached_decoder_for_ReleaseReq) {
         _cached_decoder_for_ReleaseReq = _get_decoder_for_Signed<TbsReleaseReq>(
             _decode_TbsReleaseReq
@@ -52,7 +52,7 @@ let _cached_encoder_for_ReleaseReq: $.ASN1Encoder<ReleaseReq> | null = null;
 export function _encode_ReleaseReq(
     value: ReleaseReq,
     elGetter: $.ASN1Encoder<ReleaseReq>
-) {
+): _Element {
     if (!_cached_encoder_for_ReleaseReq) {
         _cached_encoder_for_ReleaseReq = _get_encoder_for_Signed<TbsReleaseReq>(
             _encode_TbsReleaseReq

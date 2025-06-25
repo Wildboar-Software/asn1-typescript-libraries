@@ -228,7 +228,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_listFamily() {
+    public static get _default_value_for_listFamily(): BOOLEAN {
         return false;
     }
     /**
@@ -237,7 +237,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -246,7 +246,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -258,7 +258,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -267,7 +267,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -276,7 +276,7 @@ export class ListArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -354,7 +354,7 @@ let _cached_decoder_for_ListArgumentData: $.ASN1Decoder<ListArgumentData> | null
  * @param {_Element} el The element being decoded.
  * @returns {ListArgumentData} The decoded data structure.
  */
-export function _decode_ListArgumentData(el: _Element) {
+export function _decode_ListArgumentData(el: _Element): ListArgumentData {
     if (!_cached_decoder_for_ListArgumentData) {
         _cached_decoder_for_ListArgumentData = function (
             el: _Element
@@ -503,7 +503,7 @@ let _cached_encoder_for_ListArgumentData: $.ASN1Encoder<ListArgumentData> | null
 export function _encode_ListArgumentData(
     value: ListArgumentData,
     elGetter: $.ASN1Encoder<ListArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_ListArgumentData) {
         _cached_encoder_for_ListArgumentData = function (
             value: ListArgumentData        ): _Element {

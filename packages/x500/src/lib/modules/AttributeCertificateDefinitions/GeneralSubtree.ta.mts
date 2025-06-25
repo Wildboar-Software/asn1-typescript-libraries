@@ -3,6 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -88,7 +89,7 @@ export class GeneralSubtree {
      * @static
      * @method
      */
-    public static get _default_value_for_minimum() {
+    public static get _default_value_for_minimum(): INTEGER {
         return 0;
     }
 }
@@ -143,7 +144,7 @@ let _cached_decoder_for_GeneralSubtree: $.ASN1Decoder<GeneralSubtree> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {GeneralSubtree} The decoded data structure.
  */
-export function _decode_GeneralSubtree(el: _Element) {
+export function _decode_GeneralSubtree(el: _Element): GeneralSubtree {
     if (!_cached_decoder_for_GeneralSubtree) {
         _cached_decoder_for_GeneralSubtree = function (
             el: _Element
@@ -201,7 +202,7 @@ let _cached_encoder_for_GeneralSubtree: $.ASN1Encoder<GeneralSubtree> | null = n
 export function _encode_GeneralSubtree(
     value: GeneralSubtree,
     elGetter: $.ASN1Encoder<GeneralSubtree>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralSubtree) {
         _cached_encoder_for_GeneralSubtree = function (
             value: GeneralSubtree        ): _Element {

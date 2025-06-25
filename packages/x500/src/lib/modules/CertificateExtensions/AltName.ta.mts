@@ -109,7 +109,7 @@ let _cached_decoder_for_AltName: $.ASN1Decoder<AltName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AltName} The decoded data structure.
  */
-export function _decode_AltName(el: _Element) {
+export function _decode_AltName(el: _Element): AltName {
     if (!_cached_decoder_for_AltName) {
         _cached_decoder_for_AltName = function (el: _Element): AltName {
             let altnameType!: AltNameType;
@@ -151,7 +151,7 @@ let _cached_encoder_for_AltName: $.ASN1Encoder<AltName> | null = null;
 export function _encode_AltName(
     value: AltName,
     elGetter: $.ASN1Encoder<AltName>
-) {
+): _Element {
     if (!_cached_encoder_for_AltName) {
         _cached_encoder_for_AltName = function (
             value: AltName        ): _Element {

@@ -36,7 +36,7 @@ let _cached_decoder_for_OsiBindResult_normal_mode_parameters_protocol_version: $
  */
 export function _decode_OsiBindResult_normal_mode_parameters_protocol_version(
     el: _Element
-) {
+): OsiBindResult_normal_mode_parameters_protocol_version {
     if (
         !_cached_decoder_for_OsiBindResult_normal_mode_parameters_protocol_version
     ) {
@@ -60,7 +60,7 @@ let _cached_encoder_for_OsiBindResult_normal_mode_parameters_protocol_version: $
 export function _encode_OsiBindResult_normal_mode_parameters_protocol_version(
     value: OsiBindResult_normal_mode_parameters_protocol_version,
     elGetter: $.ASN1Encoder<OsiBindResult_normal_mode_parameters_protocol_version>
-) {
+): _Element {
     if (
         !_cached_encoder_for_OsiBindResult_normal_mode_parameters_protocol_version
     ) {

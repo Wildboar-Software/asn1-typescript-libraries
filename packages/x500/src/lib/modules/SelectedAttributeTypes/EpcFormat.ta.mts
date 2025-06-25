@@ -147,7 +147,7 @@ let _cached_decoder_for_EpcFormat: $.ASN1Decoder<EpcFormat> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EpcFormat} The decoded data structure.
  */
-export function _decode_EpcFormat(el: _Element) {
+export function _decode_EpcFormat(el: _Element): EpcFormat {
     if (!_cached_decoder_for_EpcFormat) {
         _cached_decoder_for_EpcFormat = function (el: _Element): EpcFormat {
             let fields!: EpcFormat_fields_Item[];
@@ -205,7 +205,7 @@ let _cached_encoder_for_EpcFormat: $.ASN1Encoder<EpcFormat> | null = null;
 export function _encode_EpcFormat(
     value: EpcFormat,
     elGetter: $.ASN1Encoder<EpcFormat>
-) {
+): _Element {
     if (!_cached_encoder_for_EpcFormat) {
         _cached_encoder_for_EpcFormat = function (
             value: EpcFormat        ): _Element {

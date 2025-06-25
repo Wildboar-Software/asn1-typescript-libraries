@@ -31,7 +31,7 @@ let _cached_decoder_for_HandshakeAcc: $.ASN1Decoder<HandshakeAcc> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HandshakeAcc} The decoded data structure.
  */
-export function _decode_HandshakeAcc(el: _Element) {
+export function _decode_HandshakeAcc(el: _Element): HandshakeAcc {
     if (!_cached_decoder_for_HandshakeAcc) {
         _cached_decoder_for_HandshakeAcc = _get_decoder_for_Signed<TbsHandshakeAcc>(
             _decode_TbsHandshakeAcc
@@ -52,7 +52,7 @@ let _cached_encoder_for_HandshakeAcc: $.ASN1Encoder<HandshakeAcc> | null = null;
 export function _encode_HandshakeAcc(
     value: HandshakeAcc,
     elGetter: $.ASN1Encoder<HandshakeAcc>
-) {
+): _Element {
     if (!_cached_encoder_for_HandshakeAcc) {
         _cached_encoder_for_HandshakeAcc = _get_encoder_for_Signed<TbsHandshakeAcc>(
             _encode_TbsHandshakeAcc

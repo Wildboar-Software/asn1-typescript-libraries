@@ -31,7 +31,7 @@ let _cached_decoder_for_CompareArgument: $.ASN1Decoder<CompareArgument> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CompareArgument} The decoded data structure.
  */
-export function _decode_CompareArgument(el: _Element) {
+export function _decode_CompareArgument(el: _Element): CompareArgument {
     if (!_cached_decoder_for_CompareArgument) {
         _cached_decoder_for_CompareArgument = _get_decoder_for_OPTIONALLY_PROTECTED<CompareArgumentData>(
             _decode_CompareArgumentData
@@ -52,7 +52,7 @@ let _cached_encoder_for_CompareArgument: $.ASN1Encoder<CompareArgument> | null =
 export function _encode_CompareArgument(
     value: CompareArgument,
     elGetter: $.ASN1Encoder<CompareArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareArgument) {
         _cached_encoder_for_CompareArgument = _get_encoder_for_OPTIONALLY_PROTECTED<CompareArgumentData>(
             _encode_CompareArgumentData

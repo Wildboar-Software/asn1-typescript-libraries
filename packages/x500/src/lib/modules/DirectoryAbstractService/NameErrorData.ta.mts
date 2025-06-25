@@ -133,7 +133,7 @@ export class NameErrorData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -192,7 +192,7 @@ let _cached_decoder_for_NameErrorData: $.ASN1Decoder<NameErrorData> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {NameErrorData} The decoded data structure.
  */
-export function _decode_NameErrorData(el: _Element) {
+export function _decode_NameErrorData(el: _Element): NameErrorData {
     if (!_cached_decoder_for_NameErrorData) {
         _cached_decoder_for_NameErrorData = function (
             el: _Element
@@ -273,7 +273,7 @@ let _cached_encoder_for_NameErrorData: $.ASN1Encoder<NameErrorData> | null = nul
 export function _encode_NameErrorData(
     value: NameErrorData,
     elGetter: $.ASN1Encoder<NameErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_NameErrorData) {
         _cached_encoder_for_NameErrorData = function (
             value: NameErrorData        ): _Element {

@@ -142,7 +142,7 @@ let _cached_decoder_for_DirectoryInformationServiceElement: $.ASN1Decoder<Direct
  * @param {_Element} el The element being decoded.
  * @returns {DirectoryInformationServiceElement} The decoded data structure.
  */
-export function _decode_DirectoryInformationServiceElement(el: _Element) {
+export function _decode_DirectoryInformationServiceElement(el: _Element): DirectoryInformationServiceElement {
     if (!_cached_decoder_for_DirectoryInformationServiceElement) {
         _cached_decoder_for_DirectoryInformationServiceElement = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_DirectoryInformationServiceElement: $.ASN1Encoder<Direct
 export function _encode_DirectoryInformationServiceElement(
     value: DirectoryInformationServiceElement,
     elGetter: $.ASN1Encoder<DirectoryInformationServiceElement>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryInformationServiceElement) {
         _cached_encoder_for_DirectoryInformationServiceElement = function (
             value: DirectoryInformationServiceElement        ): _Element {

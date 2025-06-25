@@ -24,7 +24,7 @@ export type ENCRYPTED<_ToBeEnciphered> = BIT_STRING;
  */
 export function _get_decoder_for_ENCRYPTED<ToBeEnciphered>(
     _decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>
-) {
+): $.ASN1Decoder<BIT_STRING> {
     return $._decodeBitString;
 }
 
@@ -35,7 +35,7 @@ export function _get_decoder_for_ENCRYPTED<ToBeEnciphered>(
  */
 export function _get_encoder_for_ENCRYPTED<ToBeEnciphered>(
     _encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>
-) {
+): $.ASN1Encoder<BIT_STRING> {
     return $._encodeBitString;
 }
 

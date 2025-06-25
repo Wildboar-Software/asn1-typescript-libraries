@@ -272,7 +272,7 @@ let _cached_decoder_for_Req_contents: $.ASN1Decoder<Req_contents> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Req_contents} The decoded data structure.
  */
-export function _decode_Req_contents(el: _Element) {
+export function _decode_Req_contents(el: _Element): Req_contents {
     if (!_cached_decoder_for_Req_contents) {
         _cached_decoder_for_Req_contents = function (
             el: _Element
@@ -370,7 +370,7 @@ let _cached_encoder_for_Req_contents: $.ASN1Encoder<Req_contents> | null = null;
 export function _encode_Req_contents(
     value: Req_contents,
     elGetter: $.ASN1Encoder<Req_contents>
-) {
+): _Element {
     if (!_cached_encoder_for_Req_contents) {
         _cached_encoder_for_Req_contents = function (
             value: Req_contents        ): _Element {

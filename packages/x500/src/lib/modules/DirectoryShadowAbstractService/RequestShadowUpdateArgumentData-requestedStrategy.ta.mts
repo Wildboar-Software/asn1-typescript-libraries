@@ -33,7 +33,7 @@ let _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy: $.ASN
  */
 export function _decode_RequestShadowUpdateArgumentData_requestedStrategy(
     el: _Element
-) {
+): RequestShadowUpdateArgumentData_requestedStrategy {
     if (
         !_cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy
     ) {
@@ -64,7 +64,7 @@ let _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy: $.ASN
 export function _encode_RequestShadowUpdateArgumentData_requestedStrategy(
     value: RequestShadowUpdateArgumentData_requestedStrategy,
     elGetter: $.ASN1Encoder<RequestShadowUpdateArgumentData_requestedStrategy>
-) {
+): _Element {
     if (
         !_cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy
     ) {

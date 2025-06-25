@@ -121,7 +121,7 @@ let _cached_decoder_for_OsiRej: $.ASN1Decoder<OsiRej> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OsiRej} The decoded data structure.
  */
-export function _decode_OsiRej(el: _Element) {
+export function _decode_OsiRej(el: _Element): OsiRej {
     if (!_cached_decoder_for_OsiRej) {
         _cached_decoder_for_OsiRej = $._decode_implicit<OsiRej>(
             () =>
@@ -156,7 +156,7 @@ let _cached_encoder_for_OsiRej: $.ASN1Encoder<OsiRej> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OsiRej, encoded as an ASN.1 Element.
  */
-export function _encode_OsiRej(value: OsiRej, elGetter: $.ASN1Encoder<OsiRej>) {
+export function _encode_OsiRej(value: OsiRej, elGetter: $.ASN1Encoder<OsiRej>): _Element {
     if (!_cached_encoder_for_OsiRej) {
         _cached_encoder_for_OsiRej = $._encode_implicit(
             _TagClass.context,

@@ -32,7 +32,7 @@ let _cached_decoder_for_OidOrAttr: $.ASN1Decoder<OidOrAttr> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OidOrAttr} The decoded data structure.
  */
-export function _decode_OidOrAttr(el: _Element) {
+export function _decode_OidOrAttr(el: _Element): OidOrAttr {
     if (!_cached_decoder_for_OidOrAttr) {
         _cached_decoder_for_OidOrAttr = $._decode_extensible_choice<OidOrAttr>({
             "UNIVERSAL 6": ["oid", $._decodeObjectIdentifier],
@@ -54,7 +54,7 @@ let _cached_encoder_for_OidOrAttr: $.ASN1Encoder<OidOrAttr> | null = null;
 export function _encode_OidOrAttr(
     value: OidOrAttr,
     elGetter: $.ASN1Encoder<OidOrAttr>
-) {
+): _Element {
     if (!_cached_encoder_for_OidOrAttr) {
         _cached_encoder_for_OidOrAttr = $._encode_choice<OidOrAttr>(
             {

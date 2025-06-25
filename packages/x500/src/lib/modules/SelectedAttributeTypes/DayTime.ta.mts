@@ -171,7 +171,7 @@ let _cached_decoder_for_DayTime: $.ASN1Decoder<DayTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DayTime} The decoded data structure.
  */
-export function _decode_DayTime(el: _Element) {
+export function _decode_DayTime(el: _Element): DayTime {
     if (!_cached_decoder_for_DayTime) {
         _cached_decoder_for_DayTime = function (el: _Element): DayTime {
             let hour!: INTEGER;
@@ -228,7 +228,7 @@ let _cached_encoder_for_DayTime: $.ASN1Encoder<DayTime> | null = null;
 export function _encode_DayTime(
     value: DayTime,
     elGetter: $.ASN1Encoder<DayTime>
-) {
+): _Element {
     if (!_cached_encoder_for_DayTime) {
         _cached_encoder_for_DayTime = function (
             value: DayTime        ): _Element {

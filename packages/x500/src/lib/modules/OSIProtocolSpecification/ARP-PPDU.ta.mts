@@ -113,7 +113,7 @@ let _cached_decoder_for_ARP_PPDU: $.ASN1Decoder<ARP_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ARP_PPDU} The decoded data structure.
  */
-export function _decode_ARP_PPDU(el: _Element) {
+export function _decode_ARP_PPDU(el: _Element): ARP_PPDU {
     if (!_cached_decoder_for_ARP_PPDU) {
         _cached_decoder_for_ARP_PPDU = function (el: _Element): ARP_PPDU {
             let provider_reason: OPTIONAL<Abort_reason>;
@@ -159,7 +159,7 @@ let _cached_encoder_for_ARP_PPDU: $.ASN1Encoder<ARP_PPDU> | null = null;
 export function _encode_ARP_PPDU(
     value: ARP_PPDU,
     elGetter: $.ASN1Encoder<ARP_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_ARP_PPDU) {
         _cached_encoder_for_ARP_PPDU = function (
             value: ARP_PPDU        ): _Element {

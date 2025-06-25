@@ -113,7 +113,7 @@ let _cached_decoder_for_SPKM_WRAP: $.ASN1Decoder<SPKM_WRAP> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPKM_WRAP} The decoded data structure.
  */
-export function _decode_SPKM_WRAP(el: _Element) {
+export function _decode_SPKM_WRAP(el: _Element): SPKM_WRAP {
     if (!_cached_decoder_for_SPKM_WRAP) {
         _cached_decoder_for_SPKM_WRAP = function (el: _Element): SPKM_WRAP {
             const sequence: _Element[] = el.sequence;
@@ -148,7 +148,7 @@ let _cached_encoder_for_SPKM_WRAP: $.ASN1Encoder<SPKM_WRAP> | null = null;
 export function _encode_SPKM_WRAP(
     value: SPKM_WRAP,
     elGetter: $.ASN1Encoder<SPKM_WRAP>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKM_WRAP) {
         _cached_encoder_for_SPKM_WRAP = function (
             value: SPKM_WRAP        ): _Element {

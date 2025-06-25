@@ -32,7 +32,7 @@ let _cached_decoder_for_AttributeValueAssertion_assertedContexts: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValueAssertion_assertedContexts} The decoded data structure.
  */
-export function _decode_AttributeValueAssertion_assertedContexts(el: _Element) {
+export function _decode_AttributeValueAssertion_assertedContexts(el: _Element): AttributeValueAssertion_assertedContexts {
     if (!_cached_decoder_for_AttributeValueAssertion_assertedContexts) {
         _cached_decoder_for_AttributeValueAssertion_assertedContexts = $._decode_inextensible_choice<AttributeValueAssertion_assertedContexts>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_AttributeValueAssertion_assertedContexts: $.ASN1Encoder<
 export function _encode_AttributeValueAssertion_assertedContexts(
     value: AttributeValueAssertion_assertedContexts,
     elGetter: $.ASN1Encoder<AttributeValueAssertion_assertedContexts>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeValueAssertion_assertedContexts) {
         _cached_encoder_for_AttributeValueAssertion_assertedContexts = $._encode_choice<AttributeValueAssertion_assertedContexts>(
             {

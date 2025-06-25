@@ -124,7 +124,7 @@ let _cached_decoder_for_TotalRefresh: $.ASN1Decoder<TotalRefresh> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TotalRefresh} The decoded data structure.
  */
-export function _decode_TotalRefresh(el: _Element) {
+export function _decode_TotalRefresh(el: _Element): TotalRefresh {
     if (!_cached_decoder_for_TotalRefresh) {
         _cached_decoder_for_TotalRefresh = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_TotalRefresh: $.ASN1Encoder<TotalRefresh> | null = null;
 export function _encode_TotalRefresh(
     value: TotalRefresh,
     elGetter: $.ASN1Encoder<TotalRefresh>
-) {
+): _Element {
     if (!_cached_encoder_for_TotalRefresh) {
         _cached_encoder_for_TotalRefresh = function (
             value: TotalRefresh        ): _Element {

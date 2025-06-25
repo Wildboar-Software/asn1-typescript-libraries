@@ -37,7 +37,7 @@ let _cached_decoder_for_SpkmCredentials: $.ASN1Decoder<SpkmCredentials> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SpkmCredentials} The decoded data structure.
  */
-export function _decode_SpkmCredentials(el: _Element) {
+export function _decode_SpkmCredentials(el: _Element): SpkmCredentials {
     if (!_cached_decoder_for_SpkmCredentials) {
         _cached_decoder_for_SpkmCredentials = $._decode_extensible_choice<SpkmCredentials>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_SpkmCredentials: $.ASN1Encoder<SpkmCredentials> | null =
 export function _encode_SpkmCredentials(
     value: SpkmCredentials,
     elGetter: $.ASN1Encoder<SpkmCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_SpkmCredentials) {
         _cached_encoder_for_SpkmCredentials = $._encode_choice<SpkmCredentials>(
             {

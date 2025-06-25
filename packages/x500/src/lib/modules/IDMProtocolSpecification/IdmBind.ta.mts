@@ -147,7 +147,7 @@ let _cached_decoder_for_IdmBind: $.ASN1Decoder<IdmBind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IdmBind} The decoded data structure.
  */
-export function _decode_IdmBind(el: _Element) {
+export function _decode_IdmBind(el: _Element): IdmBind {
     if (!_cached_decoder_for_IdmBind) {
         _cached_decoder_for_IdmBind = function (el: _Element): IdmBind {
             let protocolID!: OBJECT_IDENTIFIER;
@@ -209,7 +209,7 @@ let _cached_encoder_for_IdmBind: $.ASN1Encoder<IdmBind> | null = null;
 export function _encode_IdmBind(
     value: IdmBind,
     elGetter: $.ASN1Encoder<IdmBind>
-) {
+): _Element {
     if (!_cached_encoder_for_IdmBind) {
         _cached_encoder_for_IdmBind = function (
             value: IdmBind        ): _Element {

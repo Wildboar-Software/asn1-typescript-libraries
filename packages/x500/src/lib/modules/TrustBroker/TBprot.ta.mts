@@ -65,7 +65,7 @@ let _cached_decoder_for_TBprot: $.ASN1Decoder<TBprot> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TBprot} The decoded data structure.
  */
-export function _decode_TBprot(el: _Element) {
+export function _decode_TBprot(el: _Element): TBprot {
     if (!_cached_decoder_for_TBprot) {
         _cached_decoder_for_TBprot = $._decode_extensible_choice<TBprot>({
             "CONTEXT 0": [
@@ -114,7 +114,7 @@ let _cached_encoder_for_TBprot: $.ASN1Encoder<TBprot> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBprot, encoded as an ASN.1 Element.
  */
-export function _encode_TBprot(value: TBprot, elGetter: $.ASN1Encoder<TBprot>) {
+export function _encode_TBprot(value: TBprot, elGetter: $.ASN1Encoder<TBprot>): _Element {
     if (!_cached_encoder_for_TBprot) {
         _cached_encoder_for_TBprot = $._encode_choice<TBprot>(
             {

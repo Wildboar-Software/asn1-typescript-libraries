@@ -24,7 +24,7 @@ export type ENCIPHERED<_ToBeEnciphered> = OCTET_STRING; // OctetStringType
  */
 export function _get_decoder_for_ENCIPHERED<ToBeEnciphered>(
     _decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>
-) {
+): $.ASN1Decoder<OCTET_STRING> {
     return $._decodeOctetString;
 }
 
@@ -35,7 +35,7 @@ export function _get_decoder_for_ENCIPHERED<ToBeEnciphered>(
  */
 export function _get_encoder_for_ENCIPHERED<ToBeEnciphered>(
     _encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>
-) {
+): $.ASN1Encoder<OCTET_STRING> {
     return $._encodeOctetString;
 }
 

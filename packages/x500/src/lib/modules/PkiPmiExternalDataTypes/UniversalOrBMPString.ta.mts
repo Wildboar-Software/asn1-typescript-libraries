@@ -117,7 +117,7 @@ let _cached_decoder_for_UniversalOrBMPString: $.ASN1Decoder<UniversalOrBMPString
  * @param {_Element} el The element being decoded.
  * @returns {UniversalOrBMPString} The decoded data structure.
  */
-export function _decode_UniversalOrBMPString(el: _Element) {
+export function _decode_UniversalOrBMPString(el: _Element): UniversalOrBMPString {
     if (!_cached_decoder_for_UniversalOrBMPString) {
         _cached_decoder_for_UniversalOrBMPString = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_UniversalOrBMPString: $.ASN1Encoder<UniversalOrBMPString
 export function _encode_UniversalOrBMPString(
     value: UniversalOrBMPString,
     elGetter: $.ASN1Encoder<UniversalOrBMPString>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalOrBMPString) {
         _cached_encoder_for_UniversalOrBMPString = function (
             value: UniversalOrBMPString        ): _Element {

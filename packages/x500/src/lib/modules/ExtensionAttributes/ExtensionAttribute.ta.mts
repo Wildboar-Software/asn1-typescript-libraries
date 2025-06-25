@@ -124,7 +124,7 @@ let _cached_decoder_for_ExtensionAttribute: $.ASN1Decoder<ExtensionAttribute> | 
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionAttribute} The decoded data structure.
  */
-export function _decode_ExtensionAttribute(el: _Element) {
+export function _decode_ExtensionAttribute(el: _Element): ExtensionAttribute {
     if (!_cached_decoder_for_ExtensionAttribute) {
         _cached_decoder_for_ExtensionAttribute = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_ExtensionAttribute: $.ASN1Encoder<ExtensionAttribute> | 
 export function _encode_ExtensionAttribute(
     value: ExtensionAttribute,
     elGetter: $.ASN1Encoder<ExtensionAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionAttribute) {
         _cached_encoder_for_ExtensionAttribute = function (
             value: ExtensionAttribute        ): _Element {

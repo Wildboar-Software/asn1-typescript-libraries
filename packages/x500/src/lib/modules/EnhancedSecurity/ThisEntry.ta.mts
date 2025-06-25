@@ -32,7 +32,7 @@ let _cached_decoder_for_ThisEntry: $.ASN1Decoder<ThisEntry> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ThisEntry} The decoded data structure.
  */
-export function _decode_ThisEntry(el: _Element) {
+export function _decode_ThisEntry(el: _Element): ThisEntry {
     if (!_cached_decoder_for_ThisEntry) {
         _cached_decoder_for_ThisEntry = $._decode_extensible_choice<ThisEntry>({
             "UNIVERSAL 5": ["onlyOne", $._decodeNull],
@@ -54,7 +54,7 @@ let _cached_encoder_for_ThisEntry: $.ASN1Encoder<ThisEntry> | null = null;
 export function _encode_ThisEntry(
     value: ThisEntry,
     elGetter: $.ASN1Encoder<ThisEntry>
-) {
+): _Element {
     if (!_cached_encoder_for_ThisEntry) {
         _cached_encoder_for_ThisEntry = $._encode_choice<ThisEntry>(
             {

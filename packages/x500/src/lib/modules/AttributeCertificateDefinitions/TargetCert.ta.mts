@@ -130,7 +130,7 @@ let _cached_decoder_for_TargetCert: $.ASN1Decoder<TargetCert> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TargetCert} The decoded data structure.
  */
-export function _decode_TargetCert(el: _Element) {
+export function _decode_TargetCert(el: _Element): TargetCert {
     if (!_cached_decoder_for_TargetCert) {
         _cached_decoder_for_TargetCert = function (el: _Element): TargetCert {
             let targetCertificate!: IssuerSerial;
@@ -177,7 +177,7 @@ let _cached_encoder_for_TargetCert: $.ASN1Encoder<TargetCert> | null = null;
 export function _encode_TargetCert(
     value: TargetCert,
     _elGetter: $.ASN1Encoder<TargetCert>
-) {
+): _Element {
     if (!_cached_encoder_for_TargetCert) {
         _cached_encoder_for_TargetCert = function (
             value: TargetCert        ): _Element {

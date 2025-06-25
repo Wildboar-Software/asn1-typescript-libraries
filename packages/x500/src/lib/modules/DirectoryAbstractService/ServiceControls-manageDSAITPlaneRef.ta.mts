@@ -121,7 +121,7 @@ let _cached_decoder_for_ServiceControls_manageDSAITPlaneRef: $.ASN1Decoder<Servi
  * @param {_Element} el The element being decoded.
  * @returns {ServiceControls_manageDSAITPlaneRef} The decoded data structure.
  */
-export function _decode_ServiceControls_manageDSAITPlaneRef(el: _Element) {
+export function _decode_ServiceControls_manageDSAITPlaneRef(el: _Element): ServiceControls_manageDSAITPlaneRef {
     if (!_cached_decoder_for_ServiceControls_manageDSAITPlaneRef) {
         _cached_decoder_for_ServiceControls_manageDSAITPlaneRef = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ServiceControls_manageDSAITPlaneRef: $.ASN1Encoder<Servi
 export function _encode_ServiceControls_manageDSAITPlaneRef(
     value: ServiceControls_manageDSAITPlaneRef,
     elGetter: $.ASN1Encoder<ServiceControls_manageDSAITPlaneRef>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceControls_manageDSAITPlaneRef) {
         _cached_encoder_for_ServiceControls_manageDSAITPlaneRef = function (
             value: ServiceControls_manageDSAITPlaneRef        ): _Element {

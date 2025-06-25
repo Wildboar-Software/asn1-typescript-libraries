@@ -116,7 +116,7 @@ let _cached_decoder_for_OperationalBindingID: $.ASN1Decoder<OperationalBindingID
  * @param {_Element} el The element being decoded.
  * @returns {OperationalBindingID} The decoded data structure.
  */
-export function _decode_OperationalBindingID(el: _Element) {
+export function _decode_OperationalBindingID(el: _Element): OperationalBindingID {
     if (!_cached_decoder_for_OperationalBindingID) {
         _cached_decoder_for_OperationalBindingID = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_OperationalBindingID: $.ASN1Encoder<OperationalBindingID
 export function _encode_OperationalBindingID(
     value: OperationalBindingID,
     elGetter: $.ASN1Encoder<OperationalBindingID>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationalBindingID) {
         _cached_encoder_for_OperationalBindingID = function (
             value: OperationalBindingID        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_CertSubscribeOK: $.ASN1Decoder<CertSubscribeOK> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CertSubscribeOK} The decoded data structure.
  */
-export function _decode_CertSubscribeOK(el: _Element) {
+export function _decode_CertSubscribeOK(el: _Element): CertSubscribeOK {
     if (!_cached_decoder_for_CertSubscribeOK) {
         _cached_decoder_for_CertSubscribeOK = $._decodeSequenceOf<CertSubscribeOK_Item>(
             () => _decode_CertSubscribeOK_Item
@@ -56,7 +56,7 @@ let _cached_encoder_for_CertSubscribeOK: $.ASN1Encoder<CertSubscribeOK> | null =
 export function _encode_CertSubscribeOK(
     value: CertSubscribeOK,
     elGetter: $.ASN1Encoder<CertSubscribeOK>
-) {
+): _Element {
     if (!_cached_encoder_for_CertSubscribeOK) {
         _cached_encoder_for_CertSubscribeOK = $._encodeSequenceOf<CertSubscribeOK_Item>(
             () => _encode_CertSubscribeOK_Item,

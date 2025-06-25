@@ -117,7 +117,7 @@ let _cached_decoder_for_FilterItem_substrings: $.ASN1Decoder<FilterItem_substrin
  * @param {_Element} el The element being decoded.
  * @returns {FilterItem_substrings} The decoded data structure.
  */
-export function _decode_FilterItem_substrings(el: _Element) {
+export function _decode_FilterItem_substrings(el: _Element): FilterItem_substrings {
     if (!_cached_decoder_for_FilterItem_substrings) {
         _cached_decoder_for_FilterItem_substrings = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_FilterItem_substrings: $.ASN1Encoder<FilterItem_substrin
 export function _encode_FilterItem_substrings(
     value: FilterItem_substrings,
     elGetter: $.ASN1Encoder<FilterItem_substrings>
-) {
+): _Element {
     if (!_cached_encoder_for_FilterItem_substrings) {
         _cached_encoder_for_FilterItem_substrings = function (
             value: FilterItem_substrings        ): _Element {

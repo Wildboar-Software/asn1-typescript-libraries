@@ -97,7 +97,7 @@ let _cached_decoder_for_OsiRes_result: $.ASN1Decoder<OsiRes_result> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {OsiRes_result} The decoded data structure.
  */
-export function _decode_OsiRes_result(el: _Element) {
+export function _decode_OsiRes_result(el: _Element): OsiRes_result {
     if (!_cached_decoder_for_OsiRes_result) {
         _cached_decoder_for_OsiRes_result = function (
             el: _Element
@@ -134,7 +134,7 @@ let _cached_encoder_for_OsiRes_result: $.ASN1Encoder<OsiRes_result> | null = nul
 export function _encode_OsiRes_result(
     value: OsiRes_result,
     elGetter: $.ASN1Encoder<OsiRes_result>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiRes_result) {
         _cached_encoder_for_OsiRes_result = function (
             value: OsiRes_result        ): _Element {

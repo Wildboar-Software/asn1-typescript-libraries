@@ -37,7 +37,7 @@ let _cached_decoder_for_Signer: $.ASN1Decoder<Signer> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Signer} The decoded data structure.
  */
-export function _decode_Signer(el: _Element) {
+export function _decode_Signer(el: _Element): Signer {
     if (!_cached_decoder_for_Signer) {
         _cached_decoder_for_Signer = $._decode_extensible_choice<Signer>({
             "CONTEXT 0": [
@@ -64,7 +64,7 @@ let _cached_encoder_for_Signer: $.ASN1Encoder<Signer> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Signer, encoded as an ASN.1 Element.
  */
-export function _encode_Signer(value: Signer, elGetter: $.ASN1Encoder<Signer>) {
+export function _encode_Signer(value: Signer, elGetter: $.ASN1Encoder<Signer>): _Element {
     if (!_cached_encoder_for_Signer) {
         _cached_encoder_for_Signer = $._encode_choice<Signer>(
             {

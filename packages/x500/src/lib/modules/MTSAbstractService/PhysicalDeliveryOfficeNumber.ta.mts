@@ -26,7 +26,7 @@ let _cached_decoder_for_PhysicalDeliveryOfficeNumber: $.ASN1Decoder<PhysicalDeli
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalDeliveryOfficeNumber} The decoded data structure.
  */
-export function _decode_PhysicalDeliveryOfficeNumber(el: _Element) {
+export function _decode_PhysicalDeliveryOfficeNumber(el: _Element): PhysicalDeliveryOfficeNumber {
     if (!_cached_decoder_for_PhysicalDeliveryOfficeNumber) {
         _cached_decoder_for_PhysicalDeliveryOfficeNumber = _decode_PDSParameter;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_PhysicalDeliveryOfficeNumber: $.ASN1Encoder<PhysicalDeli
 export function _encode_PhysicalDeliveryOfficeNumber(
     value: PhysicalDeliveryOfficeNumber,
     elGetter: $.ASN1Encoder<PhysicalDeliveryOfficeNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalDeliveryOfficeNumber) {
         _cached_encoder_for_PhysicalDeliveryOfficeNumber = _encode_PDSParameter;
     }

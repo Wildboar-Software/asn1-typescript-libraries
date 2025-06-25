@@ -30,7 +30,7 @@ export type OPTIONALLY_PROTECTED<Type> =
  */
 export function _get_decoder_for_OPTIONALLY_PROTECTED<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<OPTIONALLY_PROTECTED<Type>> {
     return $._decode_inextensible_choice<OPTIONALLY_PROTECTED<Type>>({
         "*": ["unsigned", _decode_Type],
         "UNIVERSAL 16": ["signed", _get_decoder_for_SIGNED<Type>(_decode_Type)],
@@ -44,7 +44,7 @@ export function _get_decoder_for_OPTIONALLY_PROTECTED<Type>(
  */
 export function _get_encoder_for_OPTIONALLY_PROTECTED<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<OPTIONALLY_PROTECTED<Type>> {
     return $._encode_choice<OPTIONALLY_PROTECTED<Type>>(
         {
             unsigned: _encode_Type,

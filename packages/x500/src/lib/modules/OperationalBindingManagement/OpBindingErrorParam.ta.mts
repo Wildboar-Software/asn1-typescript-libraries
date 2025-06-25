@@ -164,7 +164,7 @@ export class OpBindingErrorParam implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
     /**
@@ -237,7 +237,7 @@ let _cached_decoder_for_OpBindingErrorParam: $.ASN1Decoder<OpBindingErrorParam> 
  * @param {_Element} el The element being decoded.
  * @returns {OpBindingErrorParam} The decoded data structure.
  */
-export function _decode_OpBindingErrorParam(el: _Element) {
+export function _decode_OpBindingErrorParam(el: _Element): OpBindingErrorParam {
     if (!_cached_decoder_for_OpBindingErrorParam) {
         _cached_decoder_for_OpBindingErrorParam = function (
             el: _Element
@@ -330,7 +330,7 @@ let _cached_encoder_for_OpBindingErrorParam: $.ASN1Encoder<OpBindingErrorParam> 
 export function _encode_OpBindingErrorParam(
     value: OpBindingErrorParam,
     elGetter: $.ASN1Encoder<OpBindingErrorParam>
-) {
+): _Element {
     if (!_cached_encoder_for_OpBindingErrorParam) {
         _cached_encoder_for_OpBindingErrorParam = function (
             value: OpBindingErrorParam        ): _Element {

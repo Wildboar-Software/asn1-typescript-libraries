@@ -211,7 +211,7 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -220,7 +220,7 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -232,7 +232,7 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -241,7 +241,7 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -250,7 +250,7 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -318,7 +318,7 @@ let _cached_decoder_for_RemoveEntryArgumentData: $.ASN1Decoder<RemoveEntryArgume
  * @param {_Element} el The element being decoded.
  * @returns {RemoveEntryArgumentData} The decoded data structure.
  */
-export function _decode_RemoveEntryArgumentData(el: _Element) {
+export function _decode_RemoveEntryArgumentData(el: _Element): RemoveEntryArgumentData {
     if (!_cached_decoder_for_RemoveEntryArgumentData) {
         _cached_decoder_for_RemoveEntryArgumentData = function (
             el: _Element
@@ -452,7 +452,7 @@ let _cached_encoder_for_RemoveEntryArgumentData: $.ASN1Encoder<RemoveEntryArgume
 export function _encode_RemoveEntryArgumentData(
     value: RemoveEntryArgumentData,
     elGetter: $.ASN1Encoder<RemoveEntryArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveEntryArgumentData) {
         _cached_encoder_for_RemoveEntryArgumentData = function (
             value: RemoveEntryArgumentData        ): _Element {

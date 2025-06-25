@@ -66,7 +66,7 @@ let _cached_decoder_for_Associate_source_diagnostic_acse_service_provider: $.ASN
  */
 export function _decode_Associate_source_diagnostic_acse_service_provider(
     el: _Element
-) {
+): Associate_source_diagnostic_acse_service_provider {
     if (
         !_cached_decoder_for_Associate_source_diagnostic_acse_service_provider
     ) {
@@ -90,7 +90,7 @@ let _cached_encoder_for_Associate_source_diagnostic_acse_service_provider: $.ASN
 export function _encode_Associate_source_diagnostic_acse_service_provider(
     value: Associate_source_diagnostic_acse_service_provider,
     elGetter: $.ASN1Encoder<Associate_source_diagnostic_acse_service_provider>
-) {
+): _Element {
     if (
         !_cached_encoder_for_Associate_source_diagnostic_acse_service_provider
     ) {

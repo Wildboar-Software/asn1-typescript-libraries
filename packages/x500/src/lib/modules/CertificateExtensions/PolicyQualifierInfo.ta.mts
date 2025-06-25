@@ -112,7 +112,7 @@ let _cached_decoder_for_PolicyQualifierInfo: $.ASN1Decoder<PolicyQualifierInfo> 
  * @param {_Element} el The element being decoded.
  * @returns {PolicyQualifierInfo} The decoded data structure.
  */
-export function _decode_PolicyQualifierInfo(el: _Element) {
+export function _decode_PolicyQualifierInfo(el: _Element): PolicyQualifierInfo {
     if (!_cached_decoder_for_PolicyQualifierInfo) {
         _cached_decoder_for_PolicyQualifierInfo = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_PolicyQualifierInfo: $.ASN1Encoder<PolicyQualifierInfo> 
 export function _encode_PolicyQualifierInfo(
     value: PolicyQualifierInfo,
     elGetter: $.ASN1Encoder<PolicyQualifierInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyQualifierInfo) {
         _cached_encoder_for_PolicyQualifierInfo = function (
             value: PolicyQualifierInfo        ): _Element {

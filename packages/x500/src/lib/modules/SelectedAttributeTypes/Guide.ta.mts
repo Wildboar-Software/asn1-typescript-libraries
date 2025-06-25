@@ -118,7 +118,7 @@ let _cached_decoder_for_Guide: $.ASN1Decoder<Guide> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Guide} The decoded data structure.
  */
-export function _decode_Guide(el: _Element) {
+export function _decode_Guide(el: _Element): Guide {
     if (!_cached_decoder_for_Guide) {
         _cached_decoder_for_Guide = function (el: _Element): Guide {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -167,7 +167,7 @@ let _cached_encoder_for_Guide: $.ASN1Encoder<Guide> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Guide, encoded as an ASN.1 Element.
  */
-export function _encode_Guide(value: Guide, elGetter: $.ASN1Encoder<Guide>) {
+export function _encode_Guide(value: Guide, elGetter: $.ASN1Encoder<Guide>): _Element {
     if (!_cached_encoder_for_Guide) {
         _cached_encoder_for_Guide = function (
             value: Guide        ): _Element {

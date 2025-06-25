@@ -233,7 +233,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_returnToClient() {
+    public static get _default_value_for_returnToClient(): BOOLEAN {
         return false;
     }
     /**
@@ -242,7 +242,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -251,7 +251,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -263,7 +263,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -272,7 +272,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -281,7 +281,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -361,7 +361,7 @@ let _cached_decoder_for_LinkedArgumentData: $.ASN1Decoder<LinkedArgumentData> | 
  * @param {_Element} el The element being decoded.
  * @returns {LinkedArgumentData} The decoded data structure.
  */
-export function _decode_LinkedArgumentData(el: _Element) {
+export function _decode_LinkedArgumentData(el: _Element): LinkedArgumentData {
     if (!_cached_decoder_for_LinkedArgumentData) {
         _cached_decoder_for_LinkedArgumentData = function (
             el: _Element
@@ -509,7 +509,7 @@ let _cached_encoder_for_LinkedArgumentData: $.ASN1Encoder<LinkedArgumentData> | 
 export function _encode_LinkedArgumentData(
     value: LinkedArgumentData,
     elGetter: $.ASN1Encoder<LinkedArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_LinkedArgumentData) {
         _cached_encoder_for_LinkedArgumentData = function (
             value: LinkedArgumentData        ): _Element {

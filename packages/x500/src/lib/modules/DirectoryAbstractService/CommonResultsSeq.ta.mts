@@ -103,7 +103,7 @@ export class CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -167,7 +167,7 @@ let _cached_decoder_for_CommonResultsSeq: $.ASN1Decoder<CommonResultsSeq> | null
  * @param {_Element} el The element being decoded.
  * @returns {CommonResultsSeq} The decoded data structure.
  */
-export function _decode_CommonResultsSeq(el: _Element) {
+export function _decode_CommonResultsSeq(el: _Element): CommonResultsSeq {
     if (!_cached_decoder_for_CommonResultsSeq) {
         _cached_decoder_for_CommonResultsSeq = function (
             el: _Element
@@ -234,7 +234,7 @@ let _cached_encoder_for_CommonResultsSeq: $.ASN1Encoder<CommonResultsSeq> | null
 export function _encode_CommonResultsSeq(
     value: CommonResultsSeq,
     elGetter: $.ASN1Encoder<CommonResultsSeq>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonResultsSeq) {
         _cached_encoder_for_CommonResultsSeq = function (
             value: CommonResultsSeq        ): _Element {

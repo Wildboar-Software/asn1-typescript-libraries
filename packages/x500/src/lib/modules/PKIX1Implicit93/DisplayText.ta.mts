@@ -34,7 +34,7 @@ let _cached_decoder_for_DisplayText: $.ASN1Decoder<DisplayText> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DisplayText} The decoded data structure.
  */
-export function _decode_DisplayText(el: _Element) {
+export function _decode_DisplayText(el: _Element): DisplayText {
     if (!_cached_decoder_for_DisplayText) {
         _cached_decoder_for_DisplayText = $._decode_inextensible_choice<DisplayText>(
             {
@@ -59,7 +59,7 @@ let _cached_encoder_for_DisplayText: $.ASN1Encoder<DisplayText> | null = null;
 export function _encode_DisplayText(
     value: DisplayText,
     elGetter: $.ASN1Encoder<DisplayText>
-) {
+): _Element {
     if (!_cached_encoder_for_DisplayText) {
         _cached_encoder_for_DisplayText = $._encode_choice<DisplayText>(
             {

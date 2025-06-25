@@ -26,7 +26,7 @@ let _cached_decoder_for_TraceInformation: $.ASN1Decoder<TraceInformation> | null
  * @param {_Element} el The element being decoded.
  * @returns {TraceInformation} The decoded data structure.
  */
-export function _decode_TraceInformation(el: _Element) {
+export function _decode_TraceInformation(el: _Element): TraceInformation {
     if (!_cached_decoder_for_TraceInformation) {
         _cached_decoder_for_TraceInformation = $._decodeSequenceOf<TraceItem>(
             () => _decode_TraceItem
@@ -47,7 +47,7 @@ let _cached_encoder_for_TraceInformation: $.ASN1Encoder<TraceInformation> | null
 export function _encode_TraceInformation(
     value: TraceInformation,
     elGetter: $.ASN1Encoder<TraceInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_TraceInformation) {
         _cached_encoder_for_TraceInformation = $._encodeSequenceOf<TraceItem>(
             () => _encode_TraceItem,

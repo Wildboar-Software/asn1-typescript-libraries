@@ -39,7 +39,7 @@ let _cached_decoder_for_DirectoryString: $.ASN1Decoder<DirectoryString> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DirectoryString} The decoded data structure.
  */
-export function _decode_DirectoryString(el: _Element) {
+export function _decode_DirectoryString(el: _Element): DirectoryString {
     if (!_cached_decoder_for_DirectoryString) {
         _cached_decoder_for_DirectoryString = $._decode_inextensible_choice<DirectoryString>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_DirectoryString: $.ASN1Encoder<DirectoryString> | null =
 export function _encode_DirectoryString(
     value: DirectoryString,
     elGetter: $.ASN1Encoder<DirectoryString>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryString) {
         _cached_encoder_for_DirectoryString = $._encode_choice<DirectoryString>(
             {

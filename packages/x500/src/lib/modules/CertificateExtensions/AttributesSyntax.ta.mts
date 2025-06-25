@@ -26,7 +26,7 @@ let _cached_decoder_for_AttributesSyntax: $.ASN1Decoder<AttributesSyntax> | null
  * @param {_Element} el The element being decoded.
  * @returns {AttributesSyntax} The decoded data structure.
  */
-export function _decode_AttributesSyntax(el: _Element) {
+export function _decode_AttributesSyntax(el: _Element): AttributesSyntax {
     if (!_cached_decoder_for_AttributesSyntax) {
         _cached_decoder_for_AttributesSyntax = $._decodeSequenceOf<Attribute>(
             () => _decode_Attribute
@@ -47,7 +47,7 @@ let _cached_encoder_for_AttributesSyntax: $.ASN1Encoder<AttributesSyntax> | null
 export function _encode_AttributesSyntax(
     value: AttributesSyntax,
     elGetter: $.ASN1Encoder<AttributesSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributesSyntax) {
         _cached_encoder_for_AttributesSyntax = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,

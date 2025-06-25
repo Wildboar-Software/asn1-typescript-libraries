@@ -26,7 +26,7 @@ let _cached_decoder_for_CertificateSerialNumbers: $.ASN1Decoder<CertificateSeria
  * @param {_Element} el The element being decoded.
  * @returns {CertificateSerialNumbers} The decoded data structure.
  */
-export function _decode_CertificateSerialNumbers(el: _Element) {
+export function _decode_CertificateSerialNumbers(el: _Element): CertificateSerialNumbers {
     if (!_cached_decoder_for_CertificateSerialNumbers) {
         _cached_decoder_for_CertificateSerialNumbers = $._decodeSequenceOf<CertificateSerialNumber>(
             () => _decode_CertificateSerialNumber
@@ -47,7 +47,7 @@ let _cached_encoder_for_CertificateSerialNumbers: $.ASN1Encoder<CertificateSeria
 export function _encode_CertificateSerialNumbers(
     value: CertificateSerialNumbers,
     elGetter: $.ASN1Encoder<CertificateSerialNumbers>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateSerialNumbers) {
         _cached_encoder_for_CertificateSerialNumbers = $._encodeSequenceOf<CertificateSerialNumber>(
             () => _encode_CertificateSerialNumber,

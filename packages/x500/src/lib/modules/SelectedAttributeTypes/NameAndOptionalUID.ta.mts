@@ -124,7 +124,7 @@ let _cached_decoder_for_NameAndOptionalUID: $.ASN1Decoder<NameAndOptionalUID> | 
  * @param {_Element} el The element being decoded.
  * @returns {NameAndOptionalUID} The decoded data structure.
  */
-export function _decode_NameAndOptionalUID(el: _Element) {
+export function _decode_NameAndOptionalUID(el: _Element): NameAndOptionalUID {
     if (!_cached_decoder_for_NameAndOptionalUID) {
         _cached_decoder_for_NameAndOptionalUID = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_NameAndOptionalUID: $.ASN1Encoder<NameAndOptionalUID> | 
 export function _encode_NameAndOptionalUID(
     value: NameAndOptionalUID,
     elGetter: $.ASN1Encoder<NameAndOptionalUID>
-) {
+): _Element {
     if (!_cached_encoder_for_NameAndOptionalUID) {
         _cached_encoder_for_NameAndOptionalUID = function (
             value: NameAndOptionalUID        ): _Element {

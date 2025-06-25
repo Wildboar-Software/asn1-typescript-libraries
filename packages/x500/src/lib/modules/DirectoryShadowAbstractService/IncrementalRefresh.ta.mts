@@ -26,7 +26,7 @@ let _cached_decoder_for_IncrementalRefresh: $.ASN1Decoder<IncrementalRefresh> | 
  * @param {_Element} el The element being decoded.
  * @returns {IncrementalRefresh} The decoded data structure.
  */
-export function _decode_IncrementalRefresh(el: _Element) {
+export function _decode_IncrementalRefresh(el: _Element): IncrementalRefresh {
     if (!_cached_decoder_for_IncrementalRefresh) {
         _cached_decoder_for_IncrementalRefresh = $._decodeSequenceOf<IncrementalStepRefresh>(
             () => _decode_IncrementalStepRefresh
@@ -47,7 +47,7 @@ let _cached_encoder_for_IncrementalRefresh: $.ASN1Encoder<IncrementalRefresh> | 
 export function _encode_IncrementalRefresh(
     value: IncrementalRefresh,
     elGetter: $.ASN1Encoder<IncrementalRefresh>
-) {
+): _Element {
     if (!_cached_encoder_for_IncrementalRefresh) {
         _cached_encoder_for_IncrementalRefresh = $._encodeSequenceOf<IncrementalStepRefresh>(
             () => _encode_IncrementalStepRefresh,

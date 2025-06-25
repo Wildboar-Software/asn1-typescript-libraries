@@ -57,7 +57,7 @@ let _cached_decoder_for_Credentials: $.ASN1Decoder<Credentials> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Credentials} The decoded data structure.
  */
-export function _decode_Credentials(el: _Element) {
+export function _decode_Credentials(el: _Element): Credentials {
     if (!_cached_decoder_for_Credentials) {
         _cached_decoder_for_Credentials = $._decode_extensible_choice<Credentials>(
             {
@@ -107,7 +107,7 @@ let _cached_encoder_for_Credentials: $.ASN1Encoder<Credentials> | null = null;
 export function _encode_Credentials(
     value: Credentials,
     elGetter: $.ASN1Encoder<Credentials>
-) {
+): _Element {
     if (!_cached_encoder_for_Credentials) {
         _cached_encoder_for_Credentials = $._encode_choice<Credentials>(
             {

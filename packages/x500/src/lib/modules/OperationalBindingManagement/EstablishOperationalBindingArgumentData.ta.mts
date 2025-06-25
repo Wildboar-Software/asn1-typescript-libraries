@@ -148,7 +148,7 @@ export class EstablishOperationalBindingArgumentData {
      * @static
      * @method
      */
-    public static get _default_value_for_valid() {
+    public static get _default_value_for_valid(): Validity {
         return Validity._from_object({});
     }
 }
@@ -223,7 +223,7 @@ let _cached_decoder_for_EstablishOperationalBindingArgumentData: $.ASN1Decoder<E
  * @param {_Element} el The element being decoded.
  * @returns {EstablishOperationalBindingArgumentData} The decoded data structure.
  */
-export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
+export function _decode_EstablishOperationalBindingArgumentData(el: _Element): EstablishOperationalBindingArgumentData {
     if (!_cached_decoder_for_EstablishOperationalBindingArgumentData) {
         _cached_decoder_for_EstablishOperationalBindingArgumentData = function (
             el: _Element
@@ -311,7 +311,7 @@ let _cached_encoder_for_EstablishOperationalBindingArgumentData: $.ASN1Encoder<E
 export function _encode_EstablishOperationalBindingArgumentData(
     value: EstablishOperationalBindingArgumentData,
     elGetter: $.ASN1Encoder<EstablishOperationalBindingArgumentData>
-) {
+): _Element {
     if (!_cached_encoder_for_EstablishOperationalBindingArgumentData) {
         _cached_encoder_for_EstablishOperationalBindingArgumentData = function (
             value: EstablishOperationalBindingArgumentData        ): _Element {

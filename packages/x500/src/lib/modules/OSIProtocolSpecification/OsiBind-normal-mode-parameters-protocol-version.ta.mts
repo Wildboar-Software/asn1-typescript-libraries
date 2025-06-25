@@ -36,7 +36,7 @@ let _cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version: $.ASN1D
  */
 export function _decode_OsiBind_normal_mode_parameters_protocol_version(
     el: _Element
-) {
+): OsiBind_normal_mode_parameters_protocol_version {
     if (!_cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version) {
         _cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version =
             $._decodeBitString;
@@ -58,7 +58,7 @@ let _cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version: $.ASN1E
 export function _encode_OsiBind_normal_mode_parameters_protocol_version(
     value: OsiBind_normal_mode_parameters_protocol_version,
     elGetter: $.ASN1Encoder<OsiBind_normal_mode_parameters_protocol_version>
-) {
+): _Element {
     if (!_cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version) {
         _cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version =
             $._encodeBitString;

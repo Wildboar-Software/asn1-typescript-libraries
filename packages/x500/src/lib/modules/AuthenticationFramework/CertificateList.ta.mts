@@ -31,7 +31,7 @@ let _cached_decoder_for_CertificateList: $.ASN1Decoder<CertificateList> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CertificateList} The decoded data structure.
  */
-export function _decode_CertificateList(el: _Element) {
+export function _decode_CertificateList(el: _Element): CertificateList {
     if (!_cached_decoder_for_CertificateList) {
         _cached_decoder_for_CertificateList = _get_decoder_for_SIGNED<CertificateListContent>(
             _decode_CertificateListContent
@@ -52,7 +52,7 @@ let _cached_encoder_for_CertificateList: $.ASN1Encoder<CertificateList> | null =
 export function _encode_CertificateList(
     value: CertificateList,
     elGetter: $.ASN1Encoder<CertificateList>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateList) {
         _cached_encoder_for_CertificateList = _get_encoder_for_SIGNED<CertificateListContent>(
             _encode_CertificateListContent

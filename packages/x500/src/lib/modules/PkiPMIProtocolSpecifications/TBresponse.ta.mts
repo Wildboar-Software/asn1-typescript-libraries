@@ -37,7 +37,7 @@ let _cached_decoder_for_TBresponse: $.ASN1Decoder<TBresponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TBresponse} The decoded data structure.
  */
-export function _decode_TBresponse(el: _Element) {
+export function _decode_TBresponse(el: _Element): TBresponse {
     if (!_cached_decoder_for_TBresponse) {
         _cached_decoder_for_TBresponse = $._decode_extensible_choice<TBresponse>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_TBresponse: $.ASN1Encoder<TBresponse> | null = null;
 export function _encode_TBresponse(
     value: TBresponse,
     elGetter: $.ASN1Encoder<TBresponse>
-) {
+): _Element {
     if (!_cached_encoder_for_TBresponse) {
         _cached_encoder_for_TBresponse = $._encode_choice<TBresponse>(
             {

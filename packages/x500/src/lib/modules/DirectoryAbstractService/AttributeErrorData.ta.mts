@@ -137,7 +137,7 @@ export class AttributeErrorData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -196,7 +196,7 @@ let _cached_decoder_for_AttributeErrorData: $.ASN1Decoder<AttributeErrorData> | 
  * @param {_Element} el The element being decoded.
  * @returns {AttributeErrorData} The decoded data structure.
  */
-export function _decode_AttributeErrorData(el: _Element) {
+export function _decode_AttributeErrorData(el: _Element): AttributeErrorData {
     if (!_cached_decoder_for_AttributeErrorData) {
         _cached_decoder_for_AttributeErrorData = function (
             el: _Element
@@ -281,7 +281,7 @@ let _cached_encoder_for_AttributeErrorData: $.ASN1Encoder<AttributeErrorData> | 
 export function _encode_AttributeErrorData(
     value: AttributeErrorData,
     elGetter: $.ASN1Encoder<AttributeErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeErrorData) {
         _cached_encoder_for_AttributeErrorData = function (
             value: AttributeErrorData        ): _Element {

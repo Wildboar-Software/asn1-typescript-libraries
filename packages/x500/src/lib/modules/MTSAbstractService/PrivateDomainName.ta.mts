@@ -31,7 +31,7 @@ let _cached_decoder_for_PrivateDomainName: $.ASN1Decoder<PrivateDomainName> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PrivateDomainName} The decoded data structure.
  */
-export function _decode_PrivateDomainName(el: _Element) {
+export function _decode_PrivateDomainName(el: _Element): PrivateDomainName {
     if (!_cached_decoder_for_PrivateDomainName) {
         _cached_decoder_for_PrivateDomainName = $._decode_inextensible_choice<PrivateDomainName>(
             {
@@ -55,7 +55,7 @@ let _cached_encoder_for_PrivateDomainName: $.ASN1Encoder<PrivateDomainName> | nu
 export function _encode_PrivateDomainName(
     value: PrivateDomainName,
     elGetter: $.ASN1Encoder<PrivateDomainName>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateDomainName) {
         _cached_encoder_for_PrivateDomainName = $._encode_choice<PrivateDomainName>(
             {

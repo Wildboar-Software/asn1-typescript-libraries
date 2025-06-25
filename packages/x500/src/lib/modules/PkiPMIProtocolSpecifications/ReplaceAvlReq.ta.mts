@@ -120,7 +120,7 @@ export class ReplaceAvlReq implements AVMPcommonComponents {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): AVMPversion {
         return AVMPversion_v1;
     }
     /**
@@ -182,7 +182,7 @@ let _cached_decoder_for_ReplaceAvlReq: $.ASN1Decoder<ReplaceAvlReq> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ReplaceAvlReq} The decoded data structure.
  */
-export function _decode_ReplaceAvlReq(el: _Element) {
+export function _decode_ReplaceAvlReq(el: _Element): ReplaceAvlReq {
     if (!_cached_decoder_for_ReplaceAvlReq) {
         _cached_decoder_for_ReplaceAvlReq = function (
             el: _Element
@@ -246,7 +246,7 @@ let _cached_encoder_for_ReplaceAvlReq: $.ASN1Encoder<ReplaceAvlReq> | null = nul
 export function _encode_ReplaceAvlReq(
     value: ReplaceAvlReq,
     elGetter: $.ASN1Encoder<ReplaceAvlReq>
-) {
+): _Element {
     if (!_cached_encoder_for_ReplaceAvlReq) {
         _cached_encoder_for_ReplaceAvlReq = function (
             value: ReplaceAvlReq        ): _Element {

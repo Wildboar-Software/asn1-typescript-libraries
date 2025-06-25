@@ -396,7 +396,7 @@ let _cached_decoder_for_SearchRule: $.ASN1Decoder<SearchRule> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SearchRule} The decoded data structure.
  */
-export function _decode_SearchRule(el: _Element) {
+export function _decode_SearchRule(el: _Element): SearchRule {
     if (!_cached_decoder_for_SearchRule) {
         _cached_decoder_for_SearchRule = function (el: _Element): SearchRule {
             let id!: INTEGER;
@@ -562,7 +562,7 @@ let _cached_encoder_for_SearchRule: $.ASN1Encoder<SearchRule> | null = null;
 export function _encode_SearchRule(
     value: SearchRule,
     elGetter: $.ASN1Encoder<SearchRule>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchRule) {
         _cached_encoder_for_SearchRule = function (
             value: SearchRule        ): _Element {

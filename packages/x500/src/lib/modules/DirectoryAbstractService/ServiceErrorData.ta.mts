@@ -120,7 +120,7 @@ export class ServiceErrorData implements CommonResults {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -190,7 +190,7 @@ let _cached_decoder_for_ServiceErrorData: $.ASN1Decoder<ServiceErrorData> | null
  * @param {_Element} el The element being decoded.
  * @returns {ServiceErrorData} The decoded data structure.
  */
-export function _decode_ServiceErrorData(el: _Element) {
+export function _decode_ServiceErrorData(el: _Element): ServiceErrorData {
     if (!_cached_decoder_for_ServiceErrorData) {
         _cached_decoder_for_ServiceErrorData = function (
             el: _Element
@@ -266,7 +266,7 @@ let _cached_encoder_for_ServiceErrorData: $.ASN1Encoder<ServiceErrorData> | null
 export function _encode_ServiceErrorData(
     value: ServiceErrorData,
     elGetter: $.ASN1Encoder<ServiceErrorData>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceErrorData) {
         _cached_encoder_for_ServiceErrorData = function (
             value: ServiceErrorData        ): _Element {

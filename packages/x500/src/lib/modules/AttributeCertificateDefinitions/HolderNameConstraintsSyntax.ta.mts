@@ -123,7 +123,7 @@ let _cached_decoder_for_HolderNameConstraintsSyntax: $.ASN1Decoder<HolderNameCon
  * @param {_Element} el The element being decoded.
  * @returns {HolderNameConstraintsSyntax} The decoded data structure.
  */
-export function _decode_HolderNameConstraintsSyntax(el: _Element) {
+export function _decode_HolderNameConstraintsSyntax(el: _Element): HolderNameConstraintsSyntax {
     if (!_cached_decoder_for_HolderNameConstraintsSyntax) {
         _cached_decoder_for_HolderNameConstraintsSyntax = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_HolderNameConstraintsSyntax: $.ASN1Encoder<HolderNameCon
 export function _encode_HolderNameConstraintsSyntax(
     value: HolderNameConstraintsSyntax,
     elGetter: $.ASN1Encoder<HolderNameConstraintsSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_HolderNameConstraintsSyntax) {
         _cached_encoder_for_HolderNameConstraintsSyntax = function (
             value: HolderNameConstraintsSyntax        ): _Element {

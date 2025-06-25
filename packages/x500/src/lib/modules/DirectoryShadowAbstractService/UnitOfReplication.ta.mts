@@ -123,7 +123,7 @@ export class UnitOfReplication {
      * @static
      * @method
      */
-    public static get _default_value_for_subordinates() {
+    public static get _default_value_for_subordinates(): BOOLEAN {
         return false;
     }
 }
@@ -200,7 +200,7 @@ let _cached_decoder_for_UnitOfReplication: $.ASN1Decoder<UnitOfReplication> | nu
  * @param {_Element} el The element being decoded.
  * @returns {UnitOfReplication} The decoded data structure.
  */
-export function _decode_UnitOfReplication(el: _Element) {
+export function _decode_UnitOfReplication(el: _Element): UnitOfReplication {
     if (!_cached_decoder_for_UnitOfReplication) {
         _cached_decoder_for_UnitOfReplication = function (
             el: _Element
@@ -267,7 +267,7 @@ let _cached_encoder_for_UnitOfReplication: $.ASN1Encoder<UnitOfReplication> | nu
 export function _encode_UnitOfReplication(
     value: UnitOfReplication,
     elGetter: $.ASN1Encoder<UnitOfReplication>
-) {
+): _Element {
     if (!_cached_encoder_for_UnitOfReplication) {
         _cached_encoder_for_UnitOfReplication = function (
             value: UnitOfReplication        ): _Element {

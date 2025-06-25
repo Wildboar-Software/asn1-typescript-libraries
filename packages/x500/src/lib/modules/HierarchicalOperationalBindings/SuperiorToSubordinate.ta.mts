@@ -139,7 +139,7 @@ let _cached_decoder_for_SuperiorToSubordinate: $.ASN1Decoder<SuperiorToSubordina
  * @param {_Element} el The element being decoded.
  * @returns {SuperiorToSubordinate} The decoded data structure.
  */
-export function _decode_SuperiorToSubordinate(el: _Element) {
+export function _decode_SuperiorToSubordinate(el: _Element): SuperiorToSubordinate {
     if (!_cached_decoder_for_SuperiorToSubordinate) {
         _cached_decoder_for_SuperiorToSubordinate = function (
             el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_SuperiorToSubordinate: $.ASN1Encoder<SuperiorToSubordina
 export function _encode_SuperiorToSubordinate(
     value: SuperiorToSubordinate,
     elGetter: $.ASN1Encoder<SuperiorToSubordinate>
-) {
+): _Element {
     if (!_cached_encoder_for_SuperiorToSubordinate) {
         _cached_encoder_for_SuperiorToSubordinate = function (
             value: SuperiorToSubordinate        ): _Element {

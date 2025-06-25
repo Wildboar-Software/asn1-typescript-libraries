@@ -115,7 +115,7 @@ export class ModifyEntryResultData implements CommonResultsSeq {
      * @static
      * @method
      */
-    public static get _default_value_for_aliasDereferenced() {
+    public static get _default_value_for_aliasDereferenced(): BOOLEAN {
         return false;
     }
 }
@@ -166,7 +166,7 @@ let _cached_decoder_for_ModifyEntryResultData: $.ASN1Decoder<ModifyEntryResultDa
  * @param {_Element} el The element being decoded.
  * @returns {ModifyEntryResultData} The decoded data structure.
  */
-export function _decode_ModifyEntryResultData(el: _Element) {
+export function _decode_ModifyEntryResultData(el: _Element): ModifyEntryResultData {
     if (!_cached_decoder_for_ModifyEntryResultData) {
         _cached_decoder_for_ModifyEntryResultData = function (
             el: _Element
@@ -240,7 +240,7 @@ let _cached_encoder_for_ModifyEntryResultData: $.ASN1Encoder<ModifyEntryResultDa
 export function _encode_ModifyEntryResultData(
     value: ModifyEntryResultData,
     elGetter: $.ASN1Encoder<ModifyEntryResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyEntryResultData) {
         _cached_encoder_for_ModifyEntryResultData = function (
             value: ModifyEntryResultData        ): _Element {

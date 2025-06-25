@@ -165,7 +165,7 @@ let _cached_decoder_for_IdmBindError: $.ASN1Decoder<IdmBindError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IdmBindError} The decoded data structure.
  */
-export function _decode_IdmBindError(el: _Element) {
+export function _decode_IdmBindError(el: _Element): IdmBindError {
     if (!_cached_decoder_for_IdmBindError) {
         _cached_decoder_for_IdmBindError = function (
             el: _Element
@@ -227,7 +227,7 @@ let _cached_encoder_for_IdmBindError: $.ASN1Encoder<IdmBindError> | null = null;
 export function _encode_IdmBindError(
     value: IdmBindError,
     elGetter: $.ASN1Encoder<IdmBindError>
-) {
+): _Element {
     if (!_cached_encoder_for_IdmBindError) {
         _cached_encoder_for_IdmBindError = function (
             value: IdmBindError        ): _Element {

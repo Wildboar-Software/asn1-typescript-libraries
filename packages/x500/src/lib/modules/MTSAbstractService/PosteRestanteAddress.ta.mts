@@ -26,7 +26,7 @@ let _cached_decoder_for_PosteRestanteAddress: $.ASN1Decoder<PosteRestanteAddress
  * @param {_Element} el The element being decoded.
  * @returns {PosteRestanteAddress} The decoded data structure.
  */
-export function _decode_PosteRestanteAddress(el: _Element) {
+export function _decode_PosteRestanteAddress(el: _Element): PosteRestanteAddress {
     if (!_cached_decoder_for_PosteRestanteAddress) {
         _cached_decoder_for_PosteRestanteAddress = _decode_PDSParameter;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_PosteRestanteAddress: $.ASN1Encoder<PosteRestanteAddress
 export function _encode_PosteRestanteAddress(
     value: PosteRestanteAddress,
     elGetter: $.ASN1Encoder<PosteRestanteAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PosteRestanteAddress) {
         _cached_encoder_for_PosteRestanteAddress = _encode_PDSParameter;
     }

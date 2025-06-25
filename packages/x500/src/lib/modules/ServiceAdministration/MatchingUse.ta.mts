@@ -116,7 +116,7 @@ let _cached_decoder_for_MatchingUse: $.ASN1Decoder<MatchingUse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MatchingUse} The decoded data structure.
  */
-export function _decode_MatchingUse(el: _Element) {
+export function _decode_MatchingUse(el: _Element): MatchingUse {
     if (!_cached_decoder_for_MatchingUse) {
         _cached_decoder_for_MatchingUse = function (el: _Element): MatchingUse {
             const sequence: _Element[] = el.sequence;
@@ -155,7 +155,7 @@ let _cached_encoder_for_MatchingUse: $.ASN1Encoder<MatchingUse> | null = null;
 export function _encode_MatchingUse(
     value: MatchingUse,
     elGetter: $.ASN1Encoder<MatchingUse>
-) {
+): _Element {
     if (!_cached_encoder_for_MatchingUse) {
         _cached_encoder_for_MatchingUse = function (
             value: MatchingUse        ): _Element {

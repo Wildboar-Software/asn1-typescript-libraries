@@ -45,7 +45,7 @@ let _cached_decoder_for_SearchResultData: $.ASN1Decoder<SearchResultData> | null
  * @param {_Element} el The element being decoded.
  * @returns {SearchResultData} The decoded data structure.
  */
-export function _decode_SearchResultData(el: _Element) {
+export function _decode_SearchResultData(el: _Element): SearchResultData {
     if (!_cached_decoder_for_SearchResultData) {
         _cached_decoder_for_SearchResultData = $._decode_extensible_choice<SearchResultData>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_SearchResultData: $.ASN1Encoder<SearchResultData> | null
 export function _encode_SearchResultData(
     value: SearchResultData,
     elGetter: $.ASN1Encoder<SearchResultData>
-) {
+): _Element {
     if (!_cached_encoder_for_SearchResultData) {
         _cached_encoder_for_SearchResultData = $._encode_choice<SearchResultData>(
             {

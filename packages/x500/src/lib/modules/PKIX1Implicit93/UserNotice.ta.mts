@@ -120,7 +120,7 @@ let _cached_decoder_for_UserNotice: $.ASN1Decoder<UserNotice> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UserNotice} The decoded data structure.
  */
-export function _decode_UserNotice(el: _Element) {
+export function _decode_UserNotice(el: _Element): UserNotice {
     if (!_cached_decoder_for_UserNotice) {
         _cached_decoder_for_UserNotice = function (el: _Element): UserNotice {
             let noticeRef: OPTIONAL<NoticeReference>;
@@ -162,7 +162,7 @@ let _cached_encoder_for_UserNotice: $.ASN1Encoder<UserNotice> | null = null;
 export function _encode_UserNotice(
     value: UserNotice,
     elGetter: $.ASN1Encoder<UserNotice>
-) {
+): _Element {
     if (!_cached_encoder_for_UserNotice) {
         _cached_encoder_for_UserNotice = function (
             value: UserNotice        ): _Element {

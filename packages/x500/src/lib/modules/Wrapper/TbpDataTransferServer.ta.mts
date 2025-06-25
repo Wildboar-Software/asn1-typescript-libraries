@@ -150,7 +150,7 @@ export class TbpDataTransferServer extends AadServer {
      * @static
      * @method
      */
-    public static override get _default_value_for_reqRekey() {
+    public static override get _default_value_for_reqRekey(): BOOLEAN {
         return false;
     }
     /**
@@ -159,7 +159,7 @@ export class TbpDataTransferServer extends AadServer {
      * @static
      * @method
      */
-    public static override get _default_value_for_changedKey() {
+    public static override get _default_value_for_changedKey(): BOOLEAN {
         return false;
     }
 }
@@ -205,7 +205,7 @@ let _cached_decoder_for_TbpDataTransferServer: $.ASN1Decoder<TbpDataTransferServ
  * @param {_Element} el The element being decoded.
  * @returns {TbpDataTransferServer} The decoded data structure.
  */
-export function _decode_TbpDataTransferServer(el: _Element) {
+export function _decode_TbpDataTransferServer(el: _Element): TbpDataTransferServer {
     if (!_cached_decoder_for_TbpDataTransferServer) {
         _cached_decoder_for_TbpDataTransferServer = function (
             el: _Element
@@ -293,7 +293,7 @@ let _cached_encoder_for_TbpDataTransferServer: $.ASN1Encoder<TbpDataTransferServ
 export function _encode_TbpDataTransferServer(
     value: TbpDataTransferServer,
     elGetter: $.ASN1Encoder<TbpDataTransferServer>
-) {
+): _Element {
     if (!_cached_encoder_for_TbpDataTransferServer) {
         _cached_encoder_for_TbpDataTransferServer = function (
             value: TbpDataTransferServer        ): _Element {

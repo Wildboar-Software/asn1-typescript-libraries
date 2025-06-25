@@ -121,7 +121,7 @@ export const _extension_additions_list_spec_for_MULTY_SIGNED_parmeters_sign: $.C
  */
 export function _get_decoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
     _decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>
-) {
+): $.ASN1Decoder<MULTY_SIGNED_parmeters_sign<ToBeSigned>> {
     return function <ToBeSigned>(
         el: _Element
     ): MULTY_SIGNED_parmeters_sign<ToBeSigned> {
@@ -154,7 +154,7 @@ export function _get_decoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
  */
 export function _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
-) {
+): $.ASN1Encoder<MULTY_SIGNED_parmeters_sign<ToBeSigned>> {
     return function (
         value: MULTY_SIGNED_parmeters_sign<ToBeSigned>    ): _Element {
         return $._encodeSequence(

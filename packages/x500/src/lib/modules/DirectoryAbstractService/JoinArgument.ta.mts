@@ -138,7 +138,7 @@ export class JoinArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_joinSubset() {
+    public static get _default_value_for_joinSubset(): JoinArgument_joinSubset {
         return JoinArgument_joinSubset_baseObject;
     }
     /**
@@ -219,7 +219,7 @@ let _cached_decoder_for_JoinArgument: $.ASN1Decoder<JoinArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {JoinArgument} The decoded data structure.
  */
-export function _decode_JoinArgument(el: _Element) {
+export function _decode_JoinArgument(el: _Element): JoinArgument {
     if (!_cached_decoder_for_JoinArgument) {
         _cached_decoder_for_JoinArgument = function (
             el: _Element
@@ -302,7 +302,7 @@ let _cached_encoder_for_JoinArgument: $.ASN1Encoder<JoinArgument> | null = null;
 export function _encode_JoinArgument(
     value: JoinArgument,
     elGetter: $.ASN1Encoder<JoinArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_JoinArgument) {
         _cached_encoder_for_JoinArgument = function (
             value: JoinArgument        ): _Element {

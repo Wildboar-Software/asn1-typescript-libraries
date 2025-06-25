@@ -314,7 +314,7 @@ let _cached_decoder_for_EnhancedCertificateAssertion: $.ASN1Decoder<EnhancedCert
  * @param {_Element} el The element being decoded.
  * @returns {EnhancedCertificateAssertion} The decoded data structure.
  */
-export function _decode_EnhancedCertificateAssertion(el: _Element) {
+export function _decode_EnhancedCertificateAssertion(el: _Element): EnhancedCertificateAssertion {
     if (!_cached_decoder_for_EnhancedCertificateAssertion) {
         _cached_decoder_for_EnhancedCertificateAssertion = function (
             el: _Element
@@ -439,7 +439,7 @@ let _cached_encoder_for_EnhancedCertificateAssertion: $.ASN1Encoder<EnhancedCert
 export function _encode_EnhancedCertificateAssertion(
     value: EnhancedCertificateAssertion,
     elGetter: $.ASN1Encoder<EnhancedCertificateAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_EnhancedCertificateAssertion) {
         _cached_encoder_for_EnhancedCertificateAssertion = function (
             value: EnhancedCertificateAssertion        ): _Element {
