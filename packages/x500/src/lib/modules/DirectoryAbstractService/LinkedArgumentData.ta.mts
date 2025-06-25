@@ -60,7 +60,7 @@ import {
     LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
-} from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta.mjs";
+} from "@wildboar/ldap";
 import {
     CommonArgumentsSeq,
     _root_component_type_list_1_spec_for_CommonArgumentsSeq,
