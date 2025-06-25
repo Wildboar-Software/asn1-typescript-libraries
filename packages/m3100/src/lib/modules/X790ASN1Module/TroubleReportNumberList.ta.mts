@@ -35,7 +35,7 @@ let _cached_decoder_for_TroubleReportNumberList: $.ASN1Decoder<TroubleReportNumb
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportNumberList} The decoded data structure.
  */
-export function _decode_TroubleReportNumberList(el: _Element) {
+export function _decode_TroubleReportNumberList(el: _Element): TroubleReportNumberList {
     if (!_cached_decoder_for_TroubleReportNumberList) {
         _cached_decoder_for_TroubleReportNumberList = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_TroubleReportNumberList: $.ASN1Encoder<TroubleReportNumb
 export function _encode_TroubleReportNumberList(
     value: TroubleReportNumberList,
     elGetter: $.ASN1Encoder<TroubleReportNumberList>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportNumberList) {
         _cached_encoder_for_TroubleReportNumberList = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

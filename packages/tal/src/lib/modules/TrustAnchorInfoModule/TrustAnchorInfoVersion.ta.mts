@@ -50,7 +50,7 @@ const v1: TrustAnchorInfoVersion = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INT
  * @returns {TrustAnchorInfoVersion} The decoded data structure.
  */
 export
-function _decode_TrustAnchorInfoVersion (el: _Element) {
+function _decode_TrustAnchorInfoVersion (el: _Element): TrustAnchorInfoVersion {
     return $._decodeInteger(el);
 }
 
@@ -62,7 +62,7 @@ function _decode_TrustAnchorInfoVersion (el: _Element) {
  * @returns {_Element} The TrustAnchorInfoVersion, encoded as an ASN.1 Element.
  */
 export
-function _encode_TrustAnchorInfoVersion (value: TrustAnchorInfoVersion, elGetter: $.ASN1Encoder<TrustAnchorInfoVersion>) {
+function _encode_TrustAnchorInfoVersion (value: TrustAnchorInfoVersion, elGetter: $.ASN1Encoder<TrustAnchorInfoVersion>): _Element {
     return $._encodeInteger(value, elGetter);
 }
 

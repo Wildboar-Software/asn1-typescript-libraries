@@ -54,7 +54,7 @@ let _cached_decoder_for_NoSuchArgument: $.ASN1Decoder<NoSuchArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchArgument} The decoded data structure.
  */
-export function _decode_NoSuchArgument(el: _Element) {
+export function _decode_NoSuchArgument(el: _Element): NoSuchArgument {
   if (!_cached_decoder_for_NoSuchArgument) {
     _cached_decoder_for_NoSuchArgument = $._decode_inextensible_choice<NoSuchArgument>(
       {
@@ -90,7 +90,7 @@ let _cached_encoder_for_NoSuchArgument: $.ASN1Encoder<NoSuchArgument> | null = n
 export function _encode_NoSuchArgument(
   value: NoSuchArgument,
   elGetter: $.ASN1Encoder<NoSuchArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_NoSuchArgument) {
     _cached_encoder_for_NoSuchArgument = $._encode_choice<NoSuchArgument>(
       {

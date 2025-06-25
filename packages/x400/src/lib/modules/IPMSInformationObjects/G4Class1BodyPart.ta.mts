@@ -32,7 +32,7 @@ let _cached_decoder_for_G4Class1BodyPart: $.ASN1Decoder<G4Class1BodyPart> | null
  * @param {_Element} el The element being decoded.
  * @returns {G4Class1BodyPart} The decoded data structure.
  */
-export function _decode_G4Class1BodyPart(el: _Element) {
+export function _decode_G4Class1BodyPart(el: _Element): G4Class1BodyPart {
     if (!_cached_decoder_for_G4Class1BodyPart) {
         _cached_decoder_for_G4Class1BodyPart = $._decodeSequenceOf<ASN1Element>(
             () => $._decodeAny
@@ -53,7 +53,7 @@ let _cached_encoder_for_G4Class1BodyPart: $.ASN1Encoder<G4Class1BodyPart> | null
 export function _encode_G4Class1BodyPart(
     value: G4Class1BodyPart,
     elGetter: $.ASN1Encoder<G4Class1BodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_G4Class1BodyPart) {
         _cached_encoder_for_G4Class1BodyPart = $._encodeSequenceOf<ASN1Element>(
             () => $._encodeAny,

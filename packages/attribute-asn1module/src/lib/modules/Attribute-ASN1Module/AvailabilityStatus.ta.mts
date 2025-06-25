@@ -36,7 +36,7 @@ let _cached_decoder_for_AvailabilityStatus: $.ASN1Decoder<AvailabilityStatus> | 
  * @returns {AvailabilityStatus} The decoded data structure.
  */
 export
-function _decode_AvailabilityStatus (el: _Element) {
+function _decode_AvailabilityStatus (el: _Element): AvailabilityStatus {
     if (!_cached_decoder_for_AvailabilityStatus) { _cached_decoder_for_AvailabilityStatus = $._decodeSetOf<AvailabilityStatus_Item>(() => _decode_AvailabilityStatus_Item); }
     return _cached_decoder_for_AvailabilityStatus(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_AvailabilityStatus: $.ASN1Encoder<AvailabilityStatus> | 
  * @returns {_Element} The AvailabilityStatus, encoded as an ASN.1 Element.
  */
 export
-function _encode_AvailabilityStatus (value: AvailabilityStatus, elGetter: $.ASN1Encoder<AvailabilityStatus>) {
+function _encode_AvailabilityStatus (value: AvailabilityStatus, elGetter: $.ASN1Encoder<AvailabilityStatus>): _Element {
     if (!_cached_encoder_for_AvailabilityStatus) { _cached_encoder_for_AvailabilityStatus = $._encodeSetOf<AvailabilityStatus_Item>(() => _encode_AvailabilityStatus_Item, $.BER); }
     return _cached_encoder_for_AvailabilityStatus(value, elGetter);
 }

@@ -41,7 +41,7 @@ let _cached_decoder_for_Patch: $.ASN1Decoder<Patch> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Patch} The decoded data structure.
  */
-export function _decode_Patch(el: _Element) {
+export function _decode_Patch(el: _Element): Patch {
     if (!_cached_decoder_for_Patch) {
         _cached_decoder_for_Patch = $._decode_inextensible_choice<Patch>({
             'UNIVERSAL 25': ['patchId', $._decodeGraphicString],
@@ -62,7 +62,7 @@ let _cached_encoder_for_Patch: $.ASN1Encoder<Patch> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Patch, encoded as an ASN.1 Element.
  */
-export function _encode_Patch(value: Patch, elGetter: $.ASN1Encoder<Patch>) {
+export function _encode_Patch(value: Patch, elGetter: $.ASN1Encoder<Patch>): _Element {
     if (!_cached_encoder_for_Patch) {
         _cached_encoder_for_Patch = $._encode_choice<Patch>(
             {

@@ -116,7 +116,7 @@ let _cached_decoder_for_QueryGUIEventSubscriptions_ResponseParams: $.ASN1Decoder
  */
 export function _decode_QueryGUIEventSubscriptions_ResponseParams(
   el: _Element
-) {
+): QueryGUIEventSubscriptions_ResponseParams {
   if (!_cached_decoder_for_QueryGUIEventSubscriptions_ResponseParams) {
     _cached_decoder_for_QueryGUIEventSubscriptions_ResponseParams = function (
       el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_QueryGUIEventSubscriptions_ResponseParams: $.ASN1Encoder
 export function _encode_QueryGUIEventSubscriptions_ResponseParams(
   value: QueryGUIEventSubscriptions_ResponseParams,
   elGetter: $.ASN1Encoder<QueryGUIEventSubscriptions_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_QueryGUIEventSubscriptions_ResponseParams) {
     _cached_encoder_for_QueryGUIEventSubscriptions_ResponseParams = function (
       value: QueryGUIEventSubscriptions_ResponseParams    ): _Element {

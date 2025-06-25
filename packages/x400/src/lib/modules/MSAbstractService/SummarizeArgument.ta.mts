@@ -175,7 +175,7 @@ let _cached_decoder_for_SummarizeArgument: $.ASN1Decoder<SummarizeArgument> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SummarizeArgument} The decoded data structure.
  */
-export function _decode_SummarizeArgument(el: _Element) {
+export function _decode_SummarizeArgument(el: _Element): SummarizeArgument {
     if (!_cached_decoder_for_SummarizeArgument) {
         _cached_decoder_for_SummarizeArgument = function (
             el: _Element
@@ -242,7 +242,7 @@ let _cached_encoder_for_SummarizeArgument: $.ASN1Encoder<SummarizeArgument> | nu
 export function _encode_SummarizeArgument(
     value: SummarizeArgument,
     elGetter: $.ASN1Encoder<SummarizeArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_SummarizeArgument) {
         _cached_encoder_for_SummarizeArgument = function (
             value: SummarizeArgument        ): _Element {

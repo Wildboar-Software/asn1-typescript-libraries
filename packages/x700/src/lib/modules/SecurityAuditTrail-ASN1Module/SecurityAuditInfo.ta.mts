@@ -183,7 +183,7 @@ let _cached_decoder_for_SecurityAuditInfo: $.ASN1Decoder<SecurityAuditInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SecurityAuditInfo} The decoded data structure.
  */
-export function _decode_SecurityAuditInfo(el: _Element) {
+export function _decode_SecurityAuditInfo(el: _Element): SecurityAuditInfo {
     if (!_cached_decoder_for_SecurityAuditInfo) {
         _cached_decoder_for_SecurityAuditInfo = function (
             el: _Element
@@ -250,7 +250,7 @@ let _cached_encoder_for_SecurityAuditInfo: $.ASN1Encoder<SecurityAuditInfo> | nu
 export function _encode_SecurityAuditInfo(
     value: SecurityAuditInfo,
     elGetter: $.ASN1Encoder<SecurityAuditInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityAuditInfo) {
         _cached_encoder_for_SecurityAuditInfo = function (
             value: SecurityAuditInfo        ): _Element {

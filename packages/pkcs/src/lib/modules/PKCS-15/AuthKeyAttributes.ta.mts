@@ -137,7 +137,7 @@ let _cached_decoder_for_AuthKeyAttributes: $.ASN1Decoder<AuthKeyAttributes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AuthKeyAttributes} The decoded data structure.
  */
-export function _decode_AuthKeyAttributes(el: _Element) {
+export function _decode_AuthKeyAttributes(el: _Element): AuthKeyAttributes {
     if (!_cached_decoder_for_AuthKeyAttributes) {
         _cached_decoder_for_AuthKeyAttributes = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_AuthKeyAttributes: $.ASN1Encoder<AuthKeyAttributes> | nu
 export function _encode_AuthKeyAttributes(
     value: AuthKeyAttributes,
     elGetter: $.ASN1Encoder<AuthKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthKeyAttributes) {
         _cached_encoder_for_AuthKeyAttributes = function (
             value: AuthKeyAttributes        ): _Element {

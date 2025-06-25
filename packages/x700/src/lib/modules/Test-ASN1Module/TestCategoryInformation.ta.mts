@@ -35,7 +35,7 @@ let _cached_decoder_for_TestCategoryInformation: $.ASN1Decoder<TestCategoryInfor
  * @param {_Element} el The element being decoded.
  * @returns {TestCategoryInformation} The decoded data structure.
  */
-export function _decode_TestCategoryInformation(el: _Element) {
+export function _decode_TestCategoryInformation(el: _Element): TestCategoryInformation {
     if (!_cached_decoder_for_TestCategoryInformation) {
         _cached_decoder_for_TestCategoryInformation = _decode_AdditionalInformation;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TestCategoryInformation: $.ASN1Encoder<TestCategoryInfor
 export function _encode_TestCategoryInformation(
     value: TestCategoryInformation,
     elGetter: $.ASN1Encoder<TestCategoryInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_TestCategoryInformation) {
         _cached_encoder_for_TestCategoryInformation = _encode_AdditionalInformation;
     }

@@ -35,7 +35,7 @@ let _cached_decoder_for_RoutingCollectiveName: $.ASN1Decoder<RoutingCollectiveNa
  * @param {_Element} el The element being decoded.
  * @returns {RoutingCollectiveName} The decoded data structure.
  */
-export function _decode_RoutingCollectiveName(el: _Element) {
+export function _decode_RoutingCollectiveName(el: _Element): RoutingCollectiveName {
     if (!_cached_decoder_for_RoutingCollectiveName) {
         _cached_decoder_for_RoutingCollectiveName = _decode_DistinguishedName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RoutingCollectiveName: $.ASN1Encoder<RoutingCollectiveNa
 export function _encode_RoutingCollectiveName(
     value: RoutingCollectiveName,
     elGetter: $.ASN1Encoder<RoutingCollectiveName>
-) {
+): _Element {
     if (!_cached_encoder_for_RoutingCollectiveName) {
         _cached_encoder_for_RoutingCollectiveName = _encode_DistinguishedName;
     }

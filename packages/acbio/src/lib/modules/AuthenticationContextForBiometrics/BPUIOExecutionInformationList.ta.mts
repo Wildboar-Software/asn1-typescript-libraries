@@ -38,7 +38,7 @@ let _cached_decoder_for_BPUIOExecutionInformationList: $.ASN1Decoder<BPUIOExecut
  * @param {_Element} el The element being decoded.
  * @returns {BPUIOExecutionInformationList} The decoded data structure.
  */
-export function _decode_BPUIOExecutionInformationList(el: _Element) {
+export function _decode_BPUIOExecutionInformationList(el: _Element): BPUIOExecutionInformationList {
     if (!_cached_decoder_for_BPUIOExecutionInformationList) {
         _cached_decoder_for_BPUIOExecutionInformationList = $._decodeSequenceOf<BPUIOExecutionInformation>(
             () => _decode_BPUIOExecutionInformation
@@ -61,7 +61,7 @@ let _cached_encoder_for_BPUIOExecutionInformationList: $.ASN1Encoder<BPUIOExecut
 export function _encode_BPUIOExecutionInformationList(
     value: BPUIOExecutionInformationList,
     elGetter: $.ASN1Encoder<BPUIOExecutionInformationList>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUIOExecutionInformationList) {
         _cached_encoder_for_BPUIOExecutionInformationList = $._encodeSequenceOf<BPUIOExecutionInformation>(
             () => _encode_BPUIOExecutionInformation,

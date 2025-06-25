@@ -42,7 +42,7 @@ let _cached_decoder_for_IPMLocation: $.ASN1Decoder<IPMLocation> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPMLocation} The decoded data structure.
  */
-export function _decode_IPMLocation(el: _Element) {
+export function _decode_IPMLocation(el: _Element): IPMLocation {
     if (!_cached_decoder_for_IPMLocation) {
         _cached_decoder_for_IPMLocation = $._decode_extensible_choice<IPMLocation>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_IPMLocation: $.ASN1Encoder<IPMLocation> | null = null;
 export function _encode_IPMLocation(
     value: IPMLocation,
     elGetter: $.ASN1Encoder<IPMLocation>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMLocation) {
         _cached_encoder_for_IPMLocation = $._encode_choice<IPMLocation>(
             {

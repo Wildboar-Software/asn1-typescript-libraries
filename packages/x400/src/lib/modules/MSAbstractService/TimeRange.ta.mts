@@ -115,7 +115,7 @@ let _cached_decoder_for_TimeRange: $.ASN1Decoder<TimeRange> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TimeRange} The decoded data structure.
  */
-export function _decode_TimeRange(el: _Element) {
+export function _decode_TimeRange(el: _Element): TimeRange {
     if (!_cached_decoder_for_TimeRange) {
         _cached_decoder_for_TimeRange = function (el: _Element): TimeRange {
             let from_: OPTIONAL<CreationTime>;
@@ -158,7 +158,7 @@ let _cached_encoder_for_TimeRange: $.ASN1Encoder<TimeRange> | null = null;
 export function _encode_TimeRange(
     value: TimeRange,
     elGetter: $.ASN1Encoder<TimeRange>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeRange) {
         _cached_encoder_for_TimeRange = function (
             value: TimeRange        ): _Element {

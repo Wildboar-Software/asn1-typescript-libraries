@@ -128,7 +128,7 @@ let _cached_decoder_for_Default_context_name: $.ASN1Decoder<Default_context_name
  * @param {_Element} el The element being decoded.
  * @returns {Default_context_name} The decoded data structure.
  */
-export function _decode_Default_context_name(el: _Element) {
+export function _decode_Default_context_name(el: _Element): Default_context_name {
     if (!_cached_decoder_for_Default_context_name) {
         _cached_decoder_for_Default_context_name = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_Default_context_name: $.ASN1Encoder<Default_context_name
 export function _encode_Default_context_name(
     value: Default_context_name,
     elGetter: $.ASN1Encoder<Default_context_name>
-) {
+): _Element {
     if (!_cached_encoder_for_Default_context_name) {
         _cached_encoder_for_Default_context_name = function (
             value: Default_context_name        ): _Element {

@@ -41,7 +41,7 @@ let _cached_decoder_for_RegistrationInformation: $.ASN1Decoder<RegistrationInfor
  * @param {_Element} el The element being decoded.
  * @returns {RegistrationInformation} The decoded data structure.
  */
-export function _decode_RegistrationInformation(el: _Element) {
+export function _decode_RegistrationInformation(el: _Element): RegistrationInformation {
   if (!_cached_decoder_for_RegistrationInformation) {
     _cached_decoder_for_RegistrationInformation = $._decode_inextensible_choice<RegistrationInformation>(
       {
@@ -65,7 +65,7 @@ let _cached_encoder_for_RegistrationInformation: $.ASN1Encoder<RegistrationInfor
 export function _encode_RegistrationInformation(
   value: RegistrationInformation,
   elGetter: $.ASN1Encoder<RegistrationInformation>
-) {
+): _Element {
   if (!_cached_encoder_for_RegistrationInformation) {
     _cached_encoder_for_RegistrationInformation = $._encode_choice<RegistrationInformation>(
       {

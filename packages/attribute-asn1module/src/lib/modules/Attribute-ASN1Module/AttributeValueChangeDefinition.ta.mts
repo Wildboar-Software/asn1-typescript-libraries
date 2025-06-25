@@ -41,7 +41,7 @@ let _cached_decoder_for_AttributeValueChangeDefinition: $.ASN1Decoder<AttributeV
  * @returns {AttributeValueChangeDefinition} The decoded data structure.
  */
 export
-function _decode_AttributeValueChangeDefinition (el: _Element) {
+function _decode_AttributeValueChangeDefinition (el: _Element): AttributeValueChangeDefinition {
     if (!_cached_decoder_for_AttributeValueChangeDefinition) { _cached_decoder_for_AttributeValueChangeDefinition = $._decodeSetOf<AttributeValueChangeDefinition_Item>(() => _decode_AttributeValueChangeDefinition_Item); }
     return _cached_decoder_for_AttributeValueChangeDefinition(el);
 }
@@ -56,7 +56,7 @@ let _cached_encoder_for_AttributeValueChangeDefinition: $.ASN1Encoder<AttributeV
  * @returns {_Element} The AttributeValueChangeDefinition, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeValueChangeDefinition (value: AttributeValueChangeDefinition, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition>) {
+function _encode_AttributeValueChangeDefinition (value: AttributeValueChangeDefinition, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition>): _Element {
     if (!_cached_encoder_for_AttributeValueChangeDefinition) { _cached_encoder_for_AttributeValueChangeDefinition = $._encodeSetOf<AttributeValueChangeDefinition_Item>(() => _encode_AttributeValueChangeDefinition_Item, $.BER); }
     return _cached_encoder_for_AttributeValueChangeDefinition(value, elGetter);
 }

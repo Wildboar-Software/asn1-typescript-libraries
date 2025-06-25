@@ -141,7 +141,7 @@ let _cached_decoder_for_InterchangeSenderField: $.ASN1Decoder<InterchangeSenderF
  * @param {_Element} el The element being decoded.
  * @returns {InterchangeSenderField} The decoded data structure.
  */
-export function _decode_InterchangeSenderField(el: _Element) {
+export function _decode_InterchangeSenderField(el: _Element): InterchangeSenderField {
     if (!_cached_decoder_for_InterchangeSenderField) {
         _cached_decoder_for_InterchangeSenderField = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_InterchangeSenderField: $.ASN1Encoder<InterchangeSenderF
 export function _encode_InterchangeSenderField(
     value: InterchangeSenderField,
     elGetter: $.ASN1Encoder<InterchangeSenderField>
-) {
+): _Element {
     if (!_cached_encoder_for_InterchangeSenderField) {
         _cached_encoder_for_InterchangeSenderField = function (
             value: InterchangeSenderField        ): _Element {

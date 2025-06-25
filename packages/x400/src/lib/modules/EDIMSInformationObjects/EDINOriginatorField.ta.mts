@@ -35,7 +35,7 @@ let _cached_decoder_for_EDINOriginatorField: $.ASN1Decoder<EDINOriginatorField> 
  * @param {_Element} el The element being decoded.
  * @returns {EDINOriginatorField} The decoded data structure.
  */
-export function _decode_EDINOriginatorField(el: _Element) {
+export function _decode_EDINOriginatorField(el: _Element): EDINOriginatorField {
     if (!_cached_decoder_for_EDINOriginatorField) {
         _cached_decoder_for_EDINOriginatorField = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_EDINOriginatorField: $.ASN1Encoder<EDINOriginatorField> 
 export function _encode_EDINOriginatorField(
     value: EDINOriginatorField,
     elGetter: $.ASN1Encoder<EDINOriginatorField>
-) {
+): _Element {
     if (!_cached_encoder_for_EDINOriginatorField) {
         _cached_encoder_for_EDINOriginatorField = _encode_ORName;
     }

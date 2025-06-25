@@ -42,7 +42,7 @@ let _cached_decoder_for_DeleteArgument_items: $.ASN1Decoder<DeleteArgument_items
  * @param {_Element} el The element being decoded.
  * @returns {DeleteArgument_items} The decoded data structure.
  */
-export function _decode_DeleteArgument_items(el: _Element) {
+export function _decode_DeleteArgument_items(el: _Element): DeleteArgument_items {
     if (!_cached_decoder_for_DeleteArgument_items) {
         _cached_decoder_for_DeleteArgument_items = $._decode_inextensible_choice<DeleteArgument_items>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_DeleteArgument_items: $.ASN1Encoder<DeleteArgument_items
 export function _encode_DeleteArgument_items(
     value: DeleteArgument_items,
     elGetter: $.ASN1Encoder<DeleteArgument_items>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteArgument_items) {
         _cached_encoder_for_DeleteArgument_items = $._encode_choice<DeleteArgument_items>(
             {

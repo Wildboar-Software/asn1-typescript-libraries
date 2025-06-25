@@ -116,7 +116,7 @@ let _cached_decoder_for_EMailRedirections: $.ASN1Decoder<EMailRedirections> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EMailRedirections} The decoded data structure.
  */
-export function _decode_EMailRedirections(el: _Element) {
+export function _decode_EMailRedirections(el: _Element): EMailRedirections {
     if (!_cached_decoder_for_EMailRedirections) {
         _cached_decoder_for_EMailRedirections = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_EMailRedirections: $.ASN1Encoder<EMailRedirections> | nu
 export function _encode_EMailRedirections(
     value: EMailRedirections,
     elGetter: $.ASN1Encoder<EMailRedirections>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailRedirections) {
         _cached_encoder_for_EMailRedirections = function (
             value: EMailRedirections        ): _Element {

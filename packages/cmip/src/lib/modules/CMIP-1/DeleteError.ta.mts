@@ -179,7 +179,7 @@ let _cached_decoder_for_DeleteError: $.ASN1Decoder<DeleteError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeleteError} The decoded data structure.
  */
-export function _decode_DeleteError(el: _Element) {
+export function _decode_DeleteError(el: _Element): DeleteError {
   if (!_cached_decoder_for_DeleteError) {
     _cached_decoder_for_DeleteError = function (el: _Element): DeleteError {
       let managedObjectClass: OPTIONAL<ObjectClass>;
@@ -241,7 +241,7 @@ let _cached_encoder_for_DeleteError: $.ASN1Encoder<DeleteError> | null = null;
 export function _encode_DeleteError(
   value: DeleteError,
   elGetter: $.ASN1Encoder<DeleteError>
-) {
+): _Element {
   if (!_cached_encoder_for_DeleteError) {
     _cached_encoder_for_DeleteError = function (
       value: DeleteError    ): _Element {

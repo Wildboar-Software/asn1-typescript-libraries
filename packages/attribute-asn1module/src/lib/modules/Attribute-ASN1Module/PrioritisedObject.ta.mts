@@ -36,7 +36,7 @@ let _cached_decoder_for_PrioritisedObject: $.ASN1Decoder<PrioritisedObject> | nu
  * @returns {PrioritisedObject} The decoded data structure.
  */
 export
-function _decode_PrioritisedObject (el: _Element) {
+function _decode_PrioritisedObject (el: _Element): PrioritisedObject {
     if (!_cached_decoder_for_PrioritisedObject) { _cached_decoder_for_PrioritisedObject = $._decodeSetOf<PrioritisedObject_Item>(() => _decode_PrioritisedObject_Item); }
     return _cached_decoder_for_PrioritisedObject(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_PrioritisedObject: $.ASN1Encoder<PrioritisedObject> | nu
  * @returns {_Element} The PrioritisedObject, encoded as an ASN.1 Element.
  */
 export
-function _encode_PrioritisedObject (value: PrioritisedObject, elGetter: $.ASN1Encoder<PrioritisedObject>) {
+function _encode_PrioritisedObject (value: PrioritisedObject, elGetter: $.ASN1Encoder<PrioritisedObject>): _Element {
     if (!_cached_encoder_for_PrioritisedObject) { _cached_encoder_for_PrioritisedObject = $._encodeSetOf<PrioritisedObject_Item>(() => _encode_PrioritisedObject_Item, $.BER); }
     return _cached_encoder_for_PrioritisedObject(value, elGetter);
 }

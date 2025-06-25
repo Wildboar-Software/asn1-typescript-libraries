@@ -125,7 +125,7 @@ let _cached_decoder_for_DbDelete_RequestParams: $.ASN1Decoder<DbDelete_RequestPa
  * @param {_Element} el The element being decoded.
  * @returns {DbDelete_RequestParams} The decoded data structure.
  */
-export function _decode_DbDelete_RequestParams(el: _Element) {
+export function _decode_DbDelete_RequestParams(el: _Element): DbDelete_RequestParams {
   if (!_cached_decoder_for_DbDelete_RequestParams) {
     _cached_decoder_for_DbDelete_RequestParams = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_DbDelete_RequestParams: $.ASN1Encoder<DbDelete_RequestPa
 export function _encode_DbDelete_RequestParams(
   value: DbDelete_RequestParams,
   elGetter: $.ASN1Encoder<DbDelete_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbDelete_RequestParams) {
     _cached_encoder_for_DbDelete_RequestParams = function (
       value: DbDelete_RequestParams    ): _Element {

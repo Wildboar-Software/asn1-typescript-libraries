@@ -35,7 +35,7 @@ let _cached_decoder_for_UniquePostalName: $.ASN1Decoder<UniquePostalName> | null
  * @param {_Element} el The element being decoded.
  * @returns {UniquePostalName} The decoded data structure.
  */
-export function _decode_UniquePostalName(el: _Element) {
+export function _decode_UniquePostalName(el: _Element): UniquePostalName {
     if (!_cached_decoder_for_UniquePostalName) {
         _cached_decoder_for_UniquePostalName = _decode_PDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniquePostalName: $.ASN1Encoder<UniquePostalName> | null
 export function _encode_UniquePostalName(
     value: UniquePostalName,
     elGetter: $.ASN1Encoder<UniquePostalName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniquePostalName) {
         _cached_encoder_for_UniquePostalName = _encode_PDSParameter;
     }

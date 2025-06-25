@@ -62,7 +62,7 @@ let _cached_decoder_for_SystemsMgtOperation: $.ASN1Decoder<SystemsMgtOperation> 
  * @param {_Element} el The element being decoded.
  * @returns {SystemsMgtOperation} The decoded data structure.
  */
-export function _decode_SystemsMgtOperation(el: _Element) {
+export function _decode_SystemsMgtOperation(el: _Element): SystemsMgtOperation {
     if (!_cached_decoder_for_SystemsMgtOperation) {
         _cached_decoder_for_SystemsMgtOperation = $._decode_inextensible_choice<SystemsMgtOperation>(
             {
@@ -132,7 +132,7 @@ let _cached_encoder_for_SystemsMgtOperation: $.ASN1Encoder<SystemsMgtOperation> 
 export function _encode_SystemsMgtOperation(
     value: SystemsMgtOperation,
     elGetter: $.ASN1Encoder<SystemsMgtOperation>
-) {
+): _Element {
     if (!_cached_encoder_for_SystemsMgtOperation) {
         _cached_encoder_for_SystemsMgtOperation = $._encode_choice<SystemsMgtOperation>(
             {

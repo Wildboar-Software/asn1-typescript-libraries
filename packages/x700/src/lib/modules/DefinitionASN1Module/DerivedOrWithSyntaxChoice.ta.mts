@@ -48,7 +48,7 @@ let _cached_decoder_for_DerivedOrWithSyntaxChoice: $.ASN1Decoder<DerivedOrWithSy
  * @param {_Element} el The element being decoded.
  * @returns {DerivedOrWithSyntaxChoice} The decoded data structure.
  */
-export function _decode_DerivedOrWithSyntaxChoice(el: _Element) {
+export function _decode_DerivedOrWithSyntaxChoice(el: _Element): DerivedOrWithSyntaxChoice {
     if (!_cached_decoder_for_DerivedOrWithSyntaxChoice) {
         _cached_decoder_for_DerivedOrWithSyntaxChoice = $._decode_inextensible_choice<DerivedOrWithSyntaxChoice>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_DerivedOrWithSyntaxChoice: $.ASN1Encoder<DerivedOrWithSy
 export function _encode_DerivedOrWithSyntaxChoice(
     value: DerivedOrWithSyntaxChoice,
     elGetter: $.ASN1Encoder<DerivedOrWithSyntaxChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_DerivedOrWithSyntaxChoice) {
         _cached_encoder_for_DerivedOrWithSyntaxChoice = $._encode_choice<DerivedOrWithSyntaxChoice>(
             {

@@ -38,7 +38,7 @@ let _cached_decoder_for_RevReqContent: $.ASN1Decoder<RevReqContent> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RevReqContent} The decoded data structure.
  */
-export function _decode_RevReqContent(el: _Element) {
+export function _decode_RevReqContent(el: _Element): RevReqContent {
   if (!_cached_decoder_for_RevReqContent) {
     _cached_decoder_for_RevReqContent = $._decodeSequenceOf<RevDetails>(
       () => _decode_RevDetails
@@ -61,7 +61,7 @@ let _cached_encoder_for_RevReqContent: $.ASN1Encoder<RevReqContent> | null = nul
 export function _encode_RevReqContent(
   value: RevReqContent,
   elGetter: $.ASN1Encoder<RevReqContent>
-) {
+): _Element {
   if (!_cached_encoder_for_RevReqContent) {
     _cached_encoder_for_RevReqContent = $._encodeSequenceOf<RevDetails>(
       () => _encode_RevDetails,

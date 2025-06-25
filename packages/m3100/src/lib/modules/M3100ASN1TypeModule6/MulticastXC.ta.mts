@@ -120,7 +120,7 @@ let _cached_decoder_for_MulticastXC: $.ASN1Decoder<MulticastXC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MulticastXC} The decoded data structure.
  */
-export function _decode_MulticastXC(el: _Element) {
+export function _decode_MulticastXC(el: _Element): MulticastXC {
     if (!_cached_decoder_for_MulticastXC) {
         _cached_decoder_for_MulticastXC = function (el: _Element): MulticastXC {
             const sequence: _Element[] = el.sequence;
@@ -160,7 +160,7 @@ let _cached_encoder_for_MulticastXC: $.ASN1Encoder<MulticastXC> | null = null;
 export function _encode_MulticastXC(
     value: MulticastXC,
     elGetter: $.ASN1Encoder<MulticastXC>
-) {
+): _Element {
     if (!_cached_encoder_for_MulticastXC) {
         _cached_encoder_for_MulticastXC = function (
             value: MulticastXC        ): _Element {

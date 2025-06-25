@@ -29,7 +29,7 @@ let _cached_decoder_for_SafeContents: $.ASN1Decoder<SafeContents> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SafeContents} The decoded data structure.
  */
-export function _decode_SafeContents(el: _Element) {
+export function _decode_SafeContents(el: _Element): SafeContents {
     if (!_cached_decoder_for_SafeContents) {
         _cached_decoder_for_SafeContents = $._decodeSequenceOf<SafeBag>(
             () => _decode_SafeBag
@@ -52,7 +52,7 @@ let _cached_encoder_for_SafeContents: $.ASN1Encoder<SafeContents> | null = null;
 export function _encode_SafeContents(
     value: SafeContents,
     elGetter: $.ASN1Encoder<SafeContents>
-) {
+): _Element {
     if (!_cached_encoder_for_SafeContents) {
         _cached_encoder_for_SafeContents = $._encodeSequenceOf<SafeBag>(
             () => _encode_SafeBag,

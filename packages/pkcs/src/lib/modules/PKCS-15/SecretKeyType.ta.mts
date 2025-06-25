@@ -104,7 +104,7 @@ let _cached_decoder_for_SecretKeyType: $.ASN1Decoder<SecretKeyType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SecretKeyType} The decoded data structure.
  */
-export function _decode_SecretKeyType(el: _Element) {
+export function _decode_SecretKeyType(el: _Element): SecretKeyType {
     if (!_cached_decoder_for_SecretKeyType) {
         _cached_decoder_for_SecretKeyType = $._decode_extensible_choice<SecretKeyType>(
             {
@@ -278,7 +278,7 @@ let _cached_encoder_for_SecretKeyType: $.ASN1Encoder<SecretKeyType> | null = nul
 export function _encode_SecretKeyType(
     value: SecretKeyType,
     elGetter: $.ASN1Encoder<SecretKeyType>
-) {
+): _Element {
     if (!_cached_encoder_for_SecretKeyType) {
         _cached_encoder_for_SecretKeyType = $._encode_choice<SecretKeyType>(
             {

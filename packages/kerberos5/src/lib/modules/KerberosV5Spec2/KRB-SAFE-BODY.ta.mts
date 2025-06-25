@@ -192,7 +192,7 @@ let _cached_decoder_for_KRB_SAFE_BODY: $.ASN1Decoder<KRB_SAFE_BODY> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {KRB_SAFE_BODY} The decoded data structure.
  */
-export function _decode_KRB_SAFE_BODY(el: _Element) {
+export function _decode_KRB_SAFE_BODY(el: _Element): KRB_SAFE_BODY {
   if (!_cached_decoder_for_KRB_SAFE_BODY) {
     _cached_decoder_for_KRB_SAFE_BODY = function (el: _Element): KRB_SAFE_BODY {
       let user_data!: OCTET_STRING;
@@ -266,7 +266,7 @@ let _cached_encoder_for_KRB_SAFE_BODY: $.ASN1Encoder<KRB_SAFE_BODY> | null = nul
 export function _encode_KRB_SAFE_BODY(
   value: KRB_SAFE_BODY,
   elGetter: $.ASN1Encoder<KRB_SAFE_BODY>
-) {
+): _Element {
   if (!_cached_encoder_for_KRB_SAFE_BODY) {
     _cached_encoder_for_KRB_SAFE_BODY = function (
       value: KRB_SAFE_BODY    ): _Element {

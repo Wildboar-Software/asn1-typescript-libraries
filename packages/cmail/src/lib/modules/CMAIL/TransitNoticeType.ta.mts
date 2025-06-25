@@ -108,7 +108,7 @@ let _cached_decoder_for_TransitNoticeType: $.ASN1Decoder<TransitNoticeType> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TransitNoticeType} The decoded data structure.
  */
-export function _decode_TransitNoticeType(el: _Element) {
+export function _decode_TransitNoticeType(el: _Element): TransitNoticeType {
   if (!_cached_decoder_for_TransitNoticeType) {
     _cached_decoder_for_TransitNoticeType = function (
       el: _Element
@@ -144,7 +144,7 @@ let _cached_encoder_for_TransitNoticeType: $.ASN1Encoder<TransitNoticeType> | nu
 export function _encode_TransitNoticeType(
   value: TransitNoticeType,
   elGetter: $.ASN1Encoder<TransitNoticeType>
-) {
+): _Element {
   if (!_cached_encoder_for_TransitNoticeType) {
     _cached_encoder_for_TransitNoticeType = function (
       value: TransitNoticeType    ): _Element {

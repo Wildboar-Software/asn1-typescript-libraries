@@ -121,7 +121,7 @@ let _cached_decoder_for_AddTpsToGtpInformation_Item: $.ASN1Decoder<AddTpsToGtpIn
  * @param {_Element} el The element being decoded.
  * @returns {AddTpsToGtpInformation_Item} The decoded data structure.
  */
-export function _decode_AddTpsToGtpInformation_Item(el: _Element) {
+export function _decode_AddTpsToGtpInformation_Item(el: _Element): AddTpsToGtpInformation_Item {
     if (!_cached_decoder_for_AddTpsToGtpInformation_Item) {
         _cached_decoder_for_AddTpsToGtpInformation_Item = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_AddTpsToGtpInformation_Item: $.ASN1Encoder<AddTpsToGtpIn
 export function _encode_AddTpsToGtpInformation_Item(
     value: AddTpsToGtpInformation_Item,
     elGetter: $.ASN1Encoder<AddTpsToGtpInformation_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AddTpsToGtpInformation_Item) {
         _cached_encoder_for_AddTpsToGtpInformation_Item = function (
             value: AddTpsToGtpInformation_Item        ): _Element {

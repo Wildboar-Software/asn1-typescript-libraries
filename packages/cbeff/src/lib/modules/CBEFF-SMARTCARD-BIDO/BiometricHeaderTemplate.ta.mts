@@ -204,7 +204,7 @@ let _cached_decoder_for_BiometricHeaderTemplate: $.ASN1Decoder<BiometricHeaderTe
  * @returns {BiometricHeaderTemplate} The decoded data structure.
  */
 export
-function _decode_BiometricHeaderTemplate (el: _Element) {
+function _decode_BiometricHeaderTemplate (el: _Element): BiometricHeaderTemplate {
     if (!_cached_decoder_for_BiometricHeaderTemplate) { _cached_decoder_for_BiometricHeaderTemplate = function (el: _Element): BiometricHeaderTemplate {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
     let patronHeaderVersion: OPTIONAL<PatronHeaderVersion> = BiometricHeaderTemplate._default_value_for_patronHeaderVersion;
@@ -265,7 +265,7 @@ let _cached_encoder_for_BiometricHeaderTemplate: $.ASN1Encoder<BiometricHeaderTe
  * @returns {_Element} The BiometricHeaderTemplate, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>) {
+function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>): _Element {
     if (!_cached_encoder_for_BiometricHeaderTemplate) { _cached_encoder_for_BiometricHeaderTemplate = function (value: BiometricHeaderTemplate): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [

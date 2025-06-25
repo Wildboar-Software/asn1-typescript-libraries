@@ -253,7 +253,7 @@ let _cached_decoder_for_Change_Attributes: $.ASN1Decoder<Change_Attributes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Change_Attributes} The decoded data structure.
  */
-export function _decode_Change_Attributes(el: _Element) {
+export function _decode_Change_Attributes(el: _Element): Change_Attributes {
   if (!_cached_decoder_for_Change_Attributes) {
     _cached_decoder_for_Change_Attributes = $._decode_implicit<Change_Attributes>(
       () =>
@@ -351,7 +351,7 @@ let _cached_encoder_for_Change_Attributes: $.ASN1Encoder<Change_Attributes> | nu
 export function _encode_Change_Attributes(
   value: Change_Attributes,
   elGetter: $.ASN1Encoder<Change_Attributes>
-) {
+): _Element {
   if (!_cached_encoder_for_Change_Attributes) {
     _cached_encoder_for_Change_Attributes = $._encode_implicit(
       _TagClass.application,

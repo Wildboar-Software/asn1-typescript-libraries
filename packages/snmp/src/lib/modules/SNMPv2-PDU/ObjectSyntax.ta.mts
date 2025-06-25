@@ -38,7 +38,7 @@ let _cached_decoder_for_ObjectSyntax: $.ASN1Decoder<ObjectSyntax> | null = null;
  * @returns {ObjectSyntax} The decoded data structure.
  */
 export
-function _decode_ObjectSyntax (el: _Element) {
+function _decode_ObjectSyntax (el: _Element): ObjectSyntax {
     if (!_cached_decoder_for_ObjectSyntax) { _cached_decoder_for_ObjectSyntax = $._decode_inextensible_choice<ObjectSyntax>({
     "UNIVERSAL 2": [ "simple", _decode_SimpleSyntax ],
     "UNIVERSAL 4": [ "simple", _decode_SimpleSyntax ],
@@ -63,7 +63,7 @@ let _cached_encoder_for_ObjectSyntax: $.ASN1Encoder<ObjectSyntax> | null = null;
  * @returns {_Element} The ObjectSyntax, encoded as an ASN.1 Element.
  */
 export
-function _encode_ObjectSyntax (value: ObjectSyntax, elGetter: $.ASN1Encoder<ObjectSyntax>) {
+function _encode_ObjectSyntax (value: ObjectSyntax, elGetter: $.ASN1Encoder<ObjectSyntax>): _Element {
     if (!_cached_encoder_for_ObjectSyntax) { _cached_encoder_for_ObjectSyntax = $._encode_choice<ObjectSyntax>({
     "simple": _encode_SimpleSyntax,
     "application_wide": _encode_ApplicationSyntax,

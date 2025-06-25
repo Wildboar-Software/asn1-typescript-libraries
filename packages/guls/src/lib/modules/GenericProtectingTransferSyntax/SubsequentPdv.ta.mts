@@ -119,7 +119,7 @@ let _cached_decoder_for_SubsequentPdv: $.ASN1Decoder<SubsequentPdv> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SubsequentPdv} The decoded data structure.
  */
-export function _decode_SubsequentPdv(el: _Element) {
+export function _decode_SubsequentPdv(el: _Element): SubsequentPdv {
   if (!_cached_decoder_for_SubsequentPdv) {
     _cached_decoder_for_SubsequentPdv = function (el: _Element): SubsequentPdv {
       let dynamicUnprotParm: OPTIONAL<_Element>;
@@ -163,7 +163,7 @@ let _cached_encoder_for_SubsequentPdv: $.ASN1Encoder<SubsequentPdv> | null = nul
 export function _encode_SubsequentPdv(
   value: SubsequentPdv,
   elGetter: $.ASN1Encoder<SubsequentPdv>
-) {
+): _Element {
   if (!_cached_encoder_for_SubsequentPdv) {
     _cached_encoder_for_SubsequentPdv = function (
       value: SubsequentPdv    ): _Element {

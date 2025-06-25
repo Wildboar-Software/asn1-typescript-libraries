@@ -176,7 +176,7 @@ let _cached_decoder_for_Diagnostic_Item: $.ASN1Decoder<Diagnostic_Item> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Diagnostic_Item} The decoded data structure.
  */
-export function _decode_Diagnostic_Item(el: _Element) {
+export function _decode_Diagnostic_Item(el: _Element): Diagnostic_Item {
   if (!_cached_decoder_for_Diagnostic_Item) {
     _cached_decoder_for_Diagnostic_Item = function (
       el: _Element
@@ -254,7 +254,7 @@ let _cached_encoder_for_Diagnostic_Item: $.ASN1Encoder<Diagnostic_Item> | null =
 export function _encode_Diagnostic_Item(
   value: Diagnostic_Item,
   elGetter: $.ASN1Encoder<Diagnostic_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Diagnostic_Item) {
     _cached_encoder_for_Diagnostic_Item = function (
       value: Diagnostic_Item    ): _Element {

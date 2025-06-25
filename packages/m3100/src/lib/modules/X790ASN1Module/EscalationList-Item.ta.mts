@@ -188,7 +188,7 @@ let _cached_decoder_for_EscalationList_Item: $.ASN1Decoder<EscalationList_Item> 
  * @param {_Element} el The element being decoded.
  * @returns {EscalationList_Item} The decoded data structure.
  */
-export function _decode_EscalationList_Item(el: _Element) {
+export function _decode_EscalationList_Item(el: _Element): EscalationList_Item {
     if (!_cached_decoder_for_EscalationList_Item) {
         _cached_decoder_for_EscalationList_Item = function (
             el: _Element
@@ -259,7 +259,7 @@ let _cached_encoder_for_EscalationList_Item: $.ASN1Encoder<EscalationList_Item> 
 export function _encode_EscalationList_Item(
     value: EscalationList_Item,
     elGetter: $.ASN1Encoder<EscalationList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_EscalationList_Item) {
         _cached_encoder_for_EscalationList_Item = function (
             value: EscalationList_Item        ): _Element {

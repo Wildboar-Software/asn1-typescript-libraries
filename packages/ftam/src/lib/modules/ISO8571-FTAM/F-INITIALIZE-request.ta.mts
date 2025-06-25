@@ -372,7 +372,7 @@ let _cached_decoder_for_F_INITIALIZE_request: $.ASN1Decoder<F_INITIALIZE_request
  * @param {_Element} el The element being decoded.
  * @returns {F_INITIALIZE_request} The decoded data structure.
  */
-export function _decode_F_INITIALIZE_request(el: _Element) {
+export function _decode_F_INITIALIZE_request(el: _Element): F_INITIALIZE_request {
   if (!_cached_decoder_for_F_INITIALIZE_request) {
     _cached_decoder_for_F_INITIALIZE_request = function (
       el: _Element
@@ -482,7 +482,7 @@ let _cached_encoder_for_F_INITIALIZE_request: $.ASN1Encoder<F_INITIALIZE_request
 export function _encode_F_INITIALIZE_request(
   value: F_INITIALIZE_request,
   elGetter: $.ASN1Encoder<F_INITIALIZE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_INITIALIZE_request) {
     _cached_encoder_for_F_INITIALIZE_request = function (
       value: F_INITIALIZE_request    ): _Element {

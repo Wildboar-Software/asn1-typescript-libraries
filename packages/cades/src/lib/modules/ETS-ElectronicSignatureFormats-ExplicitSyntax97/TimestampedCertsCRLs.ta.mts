@@ -33,7 +33,7 @@ let _cached_decoder_for_TimestampedCertsCRLs: $.ASN1Decoder<TimestampedCertsCRLs
  * @returns {TimestampedCertsCRLs} The decoded data structure.
  */
 export
-function _decode_TimestampedCertsCRLs (el: _Element) {
+function _decode_TimestampedCertsCRLs (el: _Element): TimestampedCertsCRLs {
     if (!_cached_decoder_for_TimestampedCertsCRLs) { _cached_decoder_for_TimestampedCertsCRLs = _decode_TimeStampToken; }
     return _cached_decoder_for_TimestampedCertsCRLs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_TimestampedCertsCRLs: $.ASN1Encoder<TimestampedCertsCRLs
  * @returns {_Element} The TimestampedCertsCRLs, encoded as an ASN.1 Element.
  */
 export
-function _encode_TimestampedCertsCRLs (value: TimestampedCertsCRLs, elGetter: $.ASN1Encoder<TimestampedCertsCRLs>) {
+function _encode_TimestampedCertsCRLs (value: TimestampedCertsCRLs, elGetter: $.ASN1Encoder<TimestampedCertsCRLs>): _Element {
     if (!_cached_encoder_for_TimestampedCertsCRLs) { _cached_encoder_for_TimestampedCertsCRLs = _encode_TimeStampToken; }
     return _cached_encoder_for_TimestampedCertsCRLs(value, elGetter);
 }

@@ -35,7 +35,7 @@ let _cached_decoder_for_DataObjectsReferenceList: $.ASN1Decoder<DataObjectsRefer
  * @param {_Element} el The element being decoded.
  * @returns {DataObjectsReferenceList} The decoded data structure.
  */
-export function _decode_DataObjectsReferenceList(el: _Element) {
+export function _decode_DataObjectsReferenceList(el: _Element): DataObjectsReferenceList {
     if (!_cached_decoder_for_DataObjectsReferenceList) {
         _cached_decoder_for_DataObjectsReferenceList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_DataObjectsReferenceList: $.ASN1Encoder<DataObjectsRefer
 export function _encode_DataObjectsReferenceList(
     value: DataObjectsReferenceList,
     elGetter: $.ASN1Encoder<DataObjectsReferenceList>
-) {
+): _Element {
     if (!_cached_encoder_for_DataObjectsReferenceList) {
         _cached_encoder_for_DataObjectsReferenceList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

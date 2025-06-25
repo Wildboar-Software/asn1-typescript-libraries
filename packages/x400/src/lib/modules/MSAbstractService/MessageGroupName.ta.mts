@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageGroupName: $.ASN1Decoder<MessageGroupName> | null
  * @param {_Element} el The element being decoded.
  * @returns {MessageGroupName} The decoded data structure.
  */
-export function _decode_MessageGroupName(el: _Element) {
+export function _decode_MessageGroupName(el: _Element): MessageGroupName {
     if (!_cached_decoder_for_MessageGroupName) {
         _cached_decoder_for_MessageGroupName = $._decodeSequenceOf<GroupNamePart>(
             () => _decode_GroupNamePart
@@ -56,7 +56,7 @@ let _cached_encoder_for_MessageGroupName: $.ASN1Encoder<MessageGroupName> | null
 export function _encode_MessageGroupName(
     value: MessageGroupName,
     elGetter: $.ASN1Encoder<MessageGroupName>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageGroupName) {
         _cached_encoder_for_MessageGroupName = $._encodeSequenceOf<GroupNamePart>(
             () => _encode_GroupNamePart,

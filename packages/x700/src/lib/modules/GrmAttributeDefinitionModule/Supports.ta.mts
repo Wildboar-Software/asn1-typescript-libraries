@@ -35,7 +35,7 @@ let _cached_decoder_for_Supports: $.ASN1Decoder<Supports> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Supports} The decoded data structure.
  */
-export function _decode_Supports(el: _Element) {
+export function _decode_Supports(el: _Element): Supports {
     if (!_cached_decoder_for_Supports) {
         _cached_decoder_for_Supports = $._decodeSetOf<SupportedChoice>(
             () => _decode_SupportedChoice
@@ -56,7 +56,7 @@ let _cached_encoder_for_Supports: $.ASN1Encoder<Supports> | null = null;
 export function _encode_Supports(
     value: Supports,
     elGetter: $.ASN1Encoder<Supports>
-) {
+): _Element {
     if (!_cached_encoder_for_Supports) {
         _cached_encoder_for_Supports = $._encodeSetOf<SupportedChoice>(
             () => _encode_SupportedChoice,

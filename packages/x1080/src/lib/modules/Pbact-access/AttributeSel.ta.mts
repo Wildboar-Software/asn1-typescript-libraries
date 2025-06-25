@@ -118,7 +118,7 @@ let _cached_decoder_for_AttributeSel: $.ASN1Decoder<AttributeSel> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AttributeSel} The decoded data structure.
  */
-export function _decode_AttributeSel(el: _Element) {
+export function _decode_AttributeSel(el: _Element): AttributeSel {
     if (!_cached_decoder_for_AttributeSel) {
         _cached_decoder_for_AttributeSel = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_AttributeSel: $.ASN1Encoder<AttributeSel> | null = null;
 export function _encode_AttributeSel(
     value: AttributeSel,
     elGetter: $.ASN1Encoder<AttributeSel>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeSel) {
         _cached_encoder_for_AttributeSel = function (
             value: AttributeSel        ): _Element {

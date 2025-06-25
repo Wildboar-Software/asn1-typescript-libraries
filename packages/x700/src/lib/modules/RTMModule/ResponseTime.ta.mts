@@ -46,7 +46,7 @@ let _cached_decoder_for_ResponseTime: $.ASN1Decoder<ResponseTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ResponseTime} The decoded data structure.
  */
-export function _decode_ResponseTime(el: _Element) {
+export function _decode_ResponseTime(el: _Element): ResponseTime {
     if (!_cached_decoder_for_ResponseTime) {
         _cached_decoder_for_ResponseTime = $._decode_inextensible_choice<ResponseTime>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_ResponseTime: $.ASN1Encoder<ResponseTime> | null = null;
 export function _encode_ResponseTime(
     value: ResponseTime,
     elGetter: $.ASN1Encoder<ResponseTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponseTime) {
         _cached_encoder_for_ResponseTime = $._encode_choice<ResponseTime>(
             {

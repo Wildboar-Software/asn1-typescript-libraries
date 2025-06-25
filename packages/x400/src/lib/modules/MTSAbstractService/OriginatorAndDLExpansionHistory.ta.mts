@@ -36,7 +36,7 @@ let _cached_decoder_for_OriginatorAndDLExpansionHistory: $.ASN1Decoder<Originato
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorAndDLExpansionHistory} The decoded data structure.
  */
-export function _decode_OriginatorAndDLExpansionHistory(el: _Element) {
+export function _decode_OriginatorAndDLExpansionHistory(el: _Element): OriginatorAndDLExpansionHistory {
     if (!_cached_decoder_for_OriginatorAndDLExpansionHistory) {
         _cached_decoder_for_OriginatorAndDLExpansionHistory = $._decodeSequenceOf<OriginatorAndDLExpansion>(
             () => _decode_OriginatorAndDLExpansion
@@ -57,7 +57,7 @@ let _cached_encoder_for_OriginatorAndDLExpansionHistory: $.ASN1Encoder<Originato
 export function _encode_OriginatorAndDLExpansionHistory(
     value: OriginatorAndDLExpansionHistory,
     elGetter: $.ASN1Encoder<OriginatorAndDLExpansionHistory>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorAndDLExpansionHistory) {
         _cached_encoder_for_OriginatorAndDLExpansionHistory = $._encodeSequenceOf<OriginatorAndDLExpansion>(
             () => _encode_OriginatorAndDLExpansion,

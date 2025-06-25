@@ -147,7 +147,7 @@ let _cached_decoder_for_AttributeChoiceInteger: $.ASN1Decoder<AttributeChoiceInt
  * @param {_Element} el The element being decoded.
  * @returns {AttributeChoiceInteger} The decoded data structure.
  */
-export function _decode_AttributeChoiceInteger(el: _Element) {
+export function _decode_AttributeChoiceInteger(el: _Element): AttributeChoiceInteger {
     if (!_cached_decoder_for_AttributeChoiceInteger) {
         _cached_decoder_for_AttributeChoiceInteger = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_AttributeChoiceInteger: $.ASN1Encoder<AttributeChoiceInt
 export function _encode_AttributeChoiceInteger(
     value: AttributeChoiceInteger,
     elGetter: $.ASN1Encoder<AttributeChoiceInteger>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeChoiceInteger) {
         _cached_encoder_for_AttributeChoiceInteger = function (
             value: AttributeChoiceInteger        ): _Element {

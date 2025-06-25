@@ -84,7 +84,7 @@ let _cached_decoder_for_Degree_Of_Overlap: $.ASN1Decoder<Degree_Of_Overlap> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Degree_Of_Overlap} The decoded data structure.
  */
-export function _decode_Degree_Of_Overlap(el: _Element) {
+export function _decode_Degree_Of_Overlap(el: _Element): Degree_Of_Overlap {
   if (!_cached_decoder_for_Degree_Of_Overlap) {
     _cached_decoder_for_Degree_Of_Overlap = $._decode_implicit<Degree_Of_Overlap>(
       () => $._decodeInteger
@@ -107,7 +107,7 @@ let _cached_encoder_for_Degree_Of_Overlap: $.ASN1Encoder<Degree_Of_Overlap> | nu
 export function _encode_Degree_Of_Overlap(
   value: Degree_Of_Overlap,
   elGetter: $.ASN1Encoder<Degree_Of_Overlap>
-) {
+): _Element {
   if (!_cached_encoder_for_Degree_Of_Overlap) {
     _cached_encoder_for_Degree_Of_Overlap = $._encode_implicit(
       _TagClass.application,

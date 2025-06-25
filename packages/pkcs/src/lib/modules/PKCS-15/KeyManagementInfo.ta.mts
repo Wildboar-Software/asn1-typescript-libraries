@@ -35,7 +35,7 @@ let _cached_decoder_for_KeyManagementInfo: $.ASN1Decoder<KeyManagementInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {KeyManagementInfo} The decoded data structure.
  */
-export function _decode_KeyManagementInfo(el: _Element) {
+export function _decode_KeyManagementInfo(el: _Element): KeyManagementInfo {
     if (!_cached_decoder_for_KeyManagementInfo) {
         _cached_decoder_for_KeyManagementInfo = $._decodeSequenceOf<KeyManagementInfo_Item>(
             () => _decode_KeyManagementInfo_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_KeyManagementInfo: $.ASN1Encoder<KeyManagementInfo> | nu
 export function _encode_KeyManagementInfo(
     value: KeyManagementInfo,
     elGetter: $.ASN1Encoder<KeyManagementInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyManagementInfo) {
         _cached_encoder_for_KeyManagementInfo = $._encodeSequenceOf<KeyManagementInfo_Item>(
             () => _encode_KeyManagementInfo_Item,

@@ -114,7 +114,7 @@ let _cached_decoder_for_PolicyViolation: $.ASN1Decoder<PolicyViolation> | null =
  * @param {_Element} el The element being decoded.
  * @returns {PolicyViolation} The decoded data structure.
  */
-export function _decode_PolicyViolation(el: _Element) {
+export function _decode_PolicyViolation(el: _Element): PolicyViolation {
     if (!_cached_decoder_for_PolicyViolation) {
         _cached_decoder_for_PolicyViolation = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_PolicyViolation: $.ASN1Encoder<PolicyViolation> | null =
 export function _encode_PolicyViolation(
     value: PolicyViolation,
     elGetter: $.ASN1Encoder<PolicyViolation>
-) {
+): _Element {
     if (!_cached_encoder_for_PolicyViolation) {
         _cached_encoder_for_PolicyViolation = function (
             value: PolicyViolation        ): _Element {

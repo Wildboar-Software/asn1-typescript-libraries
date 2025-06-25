@@ -137,7 +137,7 @@ let _cached_decoder_for_MLData: $.ASN1Decoder<MLData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MLData} The decoded data structure.
  */
-export function _decode_MLData(el: _Element) {
+export function _decode_MLData(el: _Element): MLData {
     if (!_cached_decoder_for_MLData) {
         _cached_decoder_for_MLData = function (el: _Element): MLData {
             let mailListIdentifier!: EntityIdentifier;
@@ -183,7 +183,7 @@ let _cached_encoder_for_MLData: $.ASN1Encoder<MLData> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MLData, encoded as an ASN.1 Element.
  */
-export function _encode_MLData(value: MLData, elGetter: $.ASN1Encoder<MLData>) {
+export function _encode_MLData(value: MLData, elGetter: $.ASN1Encoder<MLData>): _Element {
     if (!_cached_encoder_for_MLData) {
         _cached_encoder_for_MLData = function (
             value: MLData        ): _Element {

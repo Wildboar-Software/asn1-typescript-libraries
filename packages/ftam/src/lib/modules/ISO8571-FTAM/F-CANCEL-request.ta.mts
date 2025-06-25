@@ -243,7 +243,7 @@ let _cached_decoder_for_F_CANCEL_request: $.ASN1Decoder<F_CANCEL_request> | null
  * @param {_Element} el The element being decoded.
  * @returns {F_CANCEL_request} The decoded data structure.
  */
-export function _decode_F_CANCEL_request(el: _Element) {
+export function _decode_F_CANCEL_request(el: _Element): F_CANCEL_request {
   if (!_cached_decoder_for_F_CANCEL_request) {
     _cached_decoder_for_F_CANCEL_request = function (
       el: _Element
@@ -335,7 +335,7 @@ let _cached_encoder_for_F_CANCEL_request: $.ASN1Encoder<F_CANCEL_request> | null
 export function _encode_F_CANCEL_request(
   value: F_CANCEL_request,
   elGetter: $.ASN1Encoder<F_CANCEL_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_CANCEL_request) {
     _cached_encoder_for_F_CANCEL_request = function (
       value: F_CANCEL_request    ): _Element {

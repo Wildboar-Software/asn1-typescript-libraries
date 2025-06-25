@@ -263,7 +263,7 @@ let _cached_decoder_for_MessageClass: $.ASN1Decoder<MessageClass> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MessageClass} The decoded data structure.
  */
-export function _decode_MessageClass(el: _Element) {
+export function _decode_MessageClass(el: _Element): MessageClass {
     if (!_cached_decoder_for_MessageClass) {
         _cached_decoder_for_MessageClass = function (
             el: _Element
@@ -363,7 +363,7 @@ let _cached_encoder_for_MessageClass: $.ASN1Encoder<MessageClass> | null = null;
 export function _encode_MessageClass(
     value: MessageClass,
     elGetter: $.ASN1Encoder<MessageClass>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageClass) {
         _cached_encoder_for_MessageClass = function (
             value: MessageClass        ): _Element {

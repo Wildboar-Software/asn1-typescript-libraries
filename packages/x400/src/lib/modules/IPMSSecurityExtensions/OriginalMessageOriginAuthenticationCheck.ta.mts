@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {OriginalMessageOriginAuthenticationCheck} The decoded data structure.
  */
-export function _decode_OriginalMessageOriginAuthenticationCheck(el: _Element) {
+export function _decode_OriginalMessageOriginAuthenticationCheck(el: _Element): OriginalMessageOriginAuthenticationCheck {
     if (!_cached_decoder_for_OriginalMessageOriginAuthenticationCheck) {
         _cached_decoder_for_OriginalMessageOriginAuthenticationCheck = _decode_MessageOriginAuthenticationCheck;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Encoder<
 export function _encode_OriginalMessageOriginAuthenticationCheck(
     value: OriginalMessageOriginAuthenticationCheck,
     elGetter: $.ASN1Encoder<OriginalMessageOriginAuthenticationCheck>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginalMessageOriginAuthenticationCheck) {
         _cached_encoder_for_OriginalMessageOriginAuthenticationCheck = _encode_MessageOriginAuthenticationCheck;
     }

@@ -34,7 +34,7 @@ let _cached_decoder_for_PublicKeys: $.ASN1Decoder<PublicKeys> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PublicKeys} The decoded data structure.
  */
-export function _decode_PublicKeys(el: _Element) {
+export function _decode_PublicKeys(el: _Element): PublicKeys {
     if (!_cached_decoder_for_PublicKeys) {
         _cached_decoder_for_PublicKeys = _get_decoder_for_PathOrObjects<PublicKeyType>(
             _decode_PublicKeyType
@@ -57,7 +57,7 @@ let _cached_encoder_for_PublicKeys: $.ASN1Encoder<PublicKeys> | null = null;
 export function _encode_PublicKeys(
     value: PublicKeys,
     elGetter: $.ASN1Encoder<PublicKeys>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicKeys) {
         _cached_encoder_for_PublicKeys = _get_encoder_for_PathOrObjects<PublicKeyType>(
             _encode_PublicKeyType

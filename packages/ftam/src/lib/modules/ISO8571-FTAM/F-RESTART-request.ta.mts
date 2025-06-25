@@ -191,7 +191,7 @@ let _cached_decoder_for_F_RESTART_request: $.ASN1Decoder<F_RESTART_request> | nu
  * @param {_Element} el The element being decoded.
  * @returns {F_RESTART_request} The decoded data structure.
  */
-export function _decode_F_RESTART_request(el: _Element) {
+export function _decode_F_RESTART_request(el: _Element): F_RESTART_request {
   if (!_cached_decoder_for_F_RESTART_request) {
     _cached_decoder_for_F_RESTART_request = function (
       el: _Element
@@ -274,7 +274,7 @@ let _cached_encoder_for_F_RESTART_request: $.ASN1Encoder<F_RESTART_request> | nu
 export function _encode_F_RESTART_request(
   value: F_RESTART_request,
   elGetter: $.ASN1Encoder<F_RESTART_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_RESTART_request) {
     _cached_encoder_for_F_RESTART_request = function (
       value: F_RESTART_request    ): _Element {

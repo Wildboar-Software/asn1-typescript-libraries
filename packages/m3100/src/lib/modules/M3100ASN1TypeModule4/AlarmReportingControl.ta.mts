@@ -170,7 +170,7 @@ let _cached_decoder_for_AlarmReportingControl: $.ASN1Decoder<AlarmReportingContr
  * @param {_Element} el The element being decoded.
  * @returns {AlarmReportingControl} The decoded data structure.
  */
-export function _decode_AlarmReportingControl(el: _Element) {
+export function _decode_AlarmReportingControl(el: _Element): AlarmReportingControl {
     if (!_cached_decoder_for_AlarmReportingControl) {
         _cached_decoder_for_AlarmReportingControl = function (
             el: _Element
@@ -228,7 +228,7 @@ let _cached_encoder_for_AlarmReportingControl: $.ASN1Encoder<AlarmReportingContr
 export function _encode_AlarmReportingControl(
     value: AlarmReportingControl,
     elGetter: $.ASN1Encoder<AlarmReportingControl>
-) {
+): _Element {
     if (!_cached_encoder_for_AlarmReportingControl) {
         _cached_encoder_for_AlarmReportingControl = function (
             value: AlarmReportingControl        ): _Element {

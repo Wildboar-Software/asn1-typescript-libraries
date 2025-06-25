@@ -29,7 +29,7 @@ let _cached_decoder_for_EquivalentLabels: $.ASN1Decoder<EquivalentLabels> | null
  * @param {_Element} el The element being decoded.
  * @returns {EquivalentLabels} The decoded data structure.
  */
-export function _decode_EquivalentLabels(el: _Element) {
+export function _decode_EquivalentLabels(el: _Element): EquivalentLabels {
     if (!_cached_decoder_for_EquivalentLabels) {
         _cached_decoder_for_EquivalentLabels = $._decodeSequenceOf<ESSSecurityLabel>(
             () => _decode_ESSSecurityLabel
@@ -52,7 +52,7 @@ let _cached_encoder_for_EquivalentLabels: $.ASN1Encoder<EquivalentLabels> | null
 export function _encode_EquivalentLabels(
     value: EquivalentLabels,
     elGetter: $.ASN1Encoder<EquivalentLabels>
-) {
+): _Element {
     if (!_cached_encoder_for_EquivalentLabels) {
         _cached_encoder_for_EquivalentLabels = $._encodeSequenceOf<ESSSecurityLabel>(
             () => _encode_ESSSecurityLabel,

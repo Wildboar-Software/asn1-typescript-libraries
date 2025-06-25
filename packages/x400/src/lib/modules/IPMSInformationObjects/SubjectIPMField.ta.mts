@@ -35,7 +35,7 @@ let _cached_decoder_for_SubjectIPMField: $.ASN1Decoder<SubjectIPMField> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SubjectIPMField} The decoded data structure.
  */
-export function _decode_SubjectIPMField(el: _Element) {
+export function _decode_SubjectIPMField(el: _Element): SubjectIPMField {
     if (!_cached_decoder_for_SubjectIPMField) {
         _cached_decoder_for_SubjectIPMField = _decode_IPMIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SubjectIPMField: $.ASN1Encoder<SubjectIPMField> | null =
 export function _encode_SubjectIPMField(
     value: SubjectIPMField,
     elGetter: $.ASN1Encoder<SubjectIPMField>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectIPMField) {
         _cached_encoder_for_SubjectIPMField = _encode_IPMIdentifier;
     }

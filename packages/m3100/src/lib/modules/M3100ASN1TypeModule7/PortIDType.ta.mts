@@ -173,7 +173,7 @@ let _cached_decoder_for_PortIDType: $.ASN1Decoder<PortIDType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PortIDType} The decoded data structure.
  */
-export function _decode_PortIDType(el: _Element) {
+export function _decode_PortIDType(el: _Element): PortIDType {
     if (!_cached_decoder_for_PortIDType) {
         _cached_decoder_for_PortIDType = function (el: _Element): PortIDType {
             let managedElement!: GraphicString;
@@ -249,7 +249,7 @@ let _cached_encoder_for_PortIDType: $.ASN1Encoder<PortIDType> | null = null;
 export function _encode_PortIDType(
     value: PortIDType,
     elGetter: $.ASN1Encoder<PortIDType>
-) {
+): _Element {
     if (!_cached_encoder_for_PortIDType) {
         _cached_encoder_for_PortIDType = function (
             value: PortIDType        ): _Element {

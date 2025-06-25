@@ -139,7 +139,7 @@ let _cached_decoder_for_NonStandardDPS: $.ASN1Decoder<NonStandardDPS> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {NonStandardDPS} The decoded data structure.
  */
-export function _decode_NonStandardDPS(el: _Element) {
+export function _decode_NonStandardDPS(el: _Element): NonStandardDPS {
     if (!_cached_decoder_for_NonStandardDPS) {
         _cached_decoder_for_NonStandardDPS = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_NonStandardDPS: $.ASN1Encoder<NonStandardDPS> | null = n
 export function _encode_NonStandardDPS(
     value: NonStandardDPS,
     elGetter: $.ASN1Encoder<NonStandardDPS>
-) {
+): _Element {
     if (!_cached_encoder_for_NonStandardDPS) {
         _cached_encoder_for_NonStandardDPS = function (
             value: NonStandardDPS        ): _Element {

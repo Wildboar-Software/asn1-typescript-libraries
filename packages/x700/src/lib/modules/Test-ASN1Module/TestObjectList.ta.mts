@@ -40,7 +40,7 @@ let _cached_decoder_for_TestObjectList: $.ASN1Decoder<TestObjectList> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {TestObjectList} The decoded data structure.
  */
-export function _decode_TestObjectList(el: _Element) {
+export function _decode_TestObjectList(el: _Element): TestObjectList {
     if (!_cached_decoder_for_TestObjectList) {
         _cached_decoder_for_TestObjectList = $._decodeSequenceOf<TestObjectList_Item>(
             () => _decode_TestObjectList_Item
@@ -61,7 +61,7 @@ let _cached_encoder_for_TestObjectList: $.ASN1Encoder<TestObjectList> | null = n
 export function _encode_TestObjectList(
     value: TestObjectList,
     elGetter: $.ASN1Encoder<TestObjectList>
-) {
+): _Element {
     if (!_cached_encoder_for_TestObjectList) {
         _cached_encoder_for_TestObjectList = $._encodeSequenceOf<TestObjectList_Item>(
             () => _encode_TestObjectList_Item,

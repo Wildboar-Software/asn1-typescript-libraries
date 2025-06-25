@@ -104,7 +104,7 @@ let _cached_decoder_for_Bulk_Data_PDU: $.ASN1Decoder<Bulk_Data_PDU> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Bulk_Data_PDU} The decoded data structure.
  */
-export function _decode_Bulk_Data_PDU(el: _Element) {
+export function _decode_Bulk_Data_PDU(el: _Element): Bulk_Data_PDU {
   if (!_cached_decoder_for_Bulk_Data_PDU) {
     _cached_decoder_for_Bulk_Data_PDU = $._decode_inextensible_choice<Bulk_Data_PDU>(
       {
@@ -176,7 +176,7 @@ let _cached_encoder_for_Bulk_Data_PDU: $.ASN1Encoder<Bulk_Data_PDU> | null = nul
 export function _encode_Bulk_Data_PDU(
   value: Bulk_Data_PDU,
   elGetter: $.ASN1Encoder<Bulk_Data_PDU>
-) {
+): _Element {
   if (!_cached_encoder_for_Bulk_Data_PDU) {
     _cached_encoder_for_Bulk_Data_PDU = $._encode_choice<Bulk_Data_PDU>(
       {

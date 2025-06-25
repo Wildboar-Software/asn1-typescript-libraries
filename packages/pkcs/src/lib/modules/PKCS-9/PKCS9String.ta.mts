@@ -35,7 +35,7 @@ let _cached_decoder_for_PKCS9String: $.ASN1Decoder<PKCS9String> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKCS9String} The decoded data structure.
  */
-export function _decode_PKCS9String(el: _Element) {
+export function _decode_PKCS9String(el: _Element): PKCS9String {
     if (!_cached_decoder_for_PKCS9String) {
         _cached_decoder_for_PKCS9String = $._decode_inextensible_choice<PKCS9String>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_PKCS9String: $.ASN1Encoder<PKCS9String> | null = null;
 export function _encode_PKCS9String(
     value: PKCS9String,
     elGetter: $.ASN1Encoder<PKCS9String>
-) {
+): _Element {
     if (!_cached_encoder_for_PKCS9String) {
         _cached_encoder_for_PKCS9String = $._encode_choice<PKCS9String>(
             {

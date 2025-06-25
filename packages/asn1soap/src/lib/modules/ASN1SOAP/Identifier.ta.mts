@@ -39,7 +39,7 @@ let _cached_decoder_for_Identifier: $.ASN1Decoder<Identifier> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Identifier} The decoded data structure.
  */
-export function _decode_Identifier(el: _Element) {
+export function _decode_Identifier(el: _Element): Identifier {
   if (!_cached_decoder_for_Identifier) {
     _cached_decoder_for_Identifier = $._decode_inextensible_choice<Identifier>({
       'CONTEXT 0': ['roid', $._decodeRelativeOID],
@@ -63,7 +63,7 @@ let _cached_encoder_for_Identifier: $.ASN1Encoder<Identifier> | null = null;
 export function _encode_Identifier(
   value: Identifier,
   elGetter: $.ASN1Encoder<Identifier>
-) {
+): _Element {
   if (!_cached_encoder_for_Identifier) {
     _cached_encoder_for_Identifier = $._encode_choice<Identifier>(
       {

@@ -26,7 +26,7 @@ let _cached_decoder_for_ECCAlgorithm: $.ASN1Decoder<ECCAlgorithm> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ECCAlgorithm} The decoded data structure.
  */
-export function _decode_ECCAlgorithm(el: _Element) {
+export function _decode_ECCAlgorithm(el: _Element): ECCAlgorithm {
     if (!_cached_decoder_for_ECCAlgorithm) {
         _cached_decoder_for_ECCAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ECCAlgorithm: $.ASN1Encoder<ECCAlgorithm> | null = null;
 export function _encode_ECCAlgorithm(
     value: ECCAlgorithm,
     elGetter: $.ASN1Encoder<ECCAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_ECCAlgorithm) {
         _cached_encoder_for_ECCAlgorithm = _encode_AlgorithmIdentifier;
     }

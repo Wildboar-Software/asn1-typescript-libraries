@@ -33,7 +33,7 @@ let _cached_decoder_for_AttributeIdentifierList: $.ASN1Decoder<AttributeIdentifi
  * @returns {AttributeIdentifierList} The decoded data structure.
  */
 export
-function _decode_AttributeIdentifierList (el: _Element) {
+function _decode_AttributeIdentifierList (el: _Element): AttributeIdentifierList {
     if (!_cached_decoder_for_AttributeIdentifierList) { _cached_decoder_for_AttributeIdentifierList = $._decodeSetOf<AttributeId>(() => _decode_AttributeId); }
     return _cached_decoder_for_AttributeIdentifierList(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AttributeIdentifierList: $.ASN1Encoder<AttributeIdentifi
  * @returns {_Element} The AttributeIdentifierList, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeIdentifierList (value: AttributeIdentifierList, elGetter: $.ASN1Encoder<AttributeIdentifierList>) {
+function _encode_AttributeIdentifierList (value: AttributeIdentifierList, elGetter: $.ASN1Encoder<AttributeIdentifierList>): _Element {
     if (!_cached_encoder_for_AttributeIdentifierList) { _cached_encoder_for_AttributeIdentifierList = $._encodeSetOf<AttributeId>(() => _encode_AttributeId, $.BER); }
     return _cached_encoder_for_AttributeIdentifierList(value, elGetter);
 }

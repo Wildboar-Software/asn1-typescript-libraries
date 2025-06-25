@@ -40,7 +40,7 @@ let _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1D
  */
 export function _decode_DeassignNetworkCTPFromLogicalLinkEndInformation(
     el: _Element
-) {
+): DeassignNetworkCTPFromLogicalLinkEndInformation {
     if (!_cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation) {
         _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation = _decode_CTPList;
     }
@@ -63,7 +63,7 @@ let _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1E
 export function _encode_DeassignNetworkCTPFromLogicalLinkEndInformation(
     value: DeassignNetworkCTPFromLogicalLinkEndInformation,
     elGetter: $.ASN1Encoder<DeassignNetworkCTPFromLogicalLinkEndInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation) {
         _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation = _encode_CTPList;
     }

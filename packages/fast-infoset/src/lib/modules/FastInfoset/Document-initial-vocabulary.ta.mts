@@ -260,7 +260,7 @@ let _cached_decoder_for_Document_initial_vocabulary: $.ASN1Decoder<Document_init
  * @param {_Element} el The element being decoded.
  * @returns {Document_initial_vocabulary} The decoded data structure.
  */
-export function _decode_Document_initial_vocabulary(el: _Element) {
+export function _decode_Document_initial_vocabulary(el: _Element): Document_initial_vocabulary {
   if (!_cached_decoder_for_Document_initial_vocabulary) {
     _cached_decoder_for_Document_initial_vocabulary = function (
       el: _Element
@@ -383,7 +383,7 @@ let _cached_encoder_for_Document_initial_vocabulary: $.ASN1Encoder<Document_init
 export function _encode_Document_initial_vocabulary(
   value: Document_initial_vocabulary,
   elGetter: $.ASN1Encoder<Document_initial_vocabulary>
-) {
+): _Element {
   if (!_cached_encoder_for_Document_initial_vocabulary) {
     _cached_encoder_for_Document_initial_vocabulary = function (
       value: Document_initial_vocabulary    ): _Element {

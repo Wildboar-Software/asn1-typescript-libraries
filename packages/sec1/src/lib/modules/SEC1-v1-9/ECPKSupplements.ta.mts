@@ -120,7 +120,7 @@ let _cached_decoder_for_ECPKSupplements: $.ASN1Decoder<ECPKSupplements> | null =
  * @returns {ECPKSupplements} The decoded data structure.
  */
 export
-function _decode_ECPKSupplements (el: _Element) {
+function _decode_ECPKSupplements (el: _Element): ECPKSupplements {
     if (!_cached_decoder_for_ECPKSupplements) { _cached_decoder_for_ECPKSupplements = function (el: _Element): ECPKSupplements {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_ECPKSupplements: $.ASN1Encoder<ECPKSupplements> | null =
  * @returns {_Element} The ECPKSupplements, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECPKSupplements (value: ECPKSupplements, elGetter: $.ASN1Encoder<ECPKSupplements>) {
+function _encode_ECPKSupplements (value: ECPKSupplements, elGetter: $.ASN1Encoder<ECPKSupplements>): _Element {
     if (!_cached_encoder_for_ECPKSupplements) { _cached_encoder_for_ECPKSupplements = function (value: ECPKSupplements): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

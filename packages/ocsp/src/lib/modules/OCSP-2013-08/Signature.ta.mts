@@ -134,7 +134,7 @@ let _cached_decoder_for_Signature: $.ASN1Decoder<Signature> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Signature} The decoded data structure.
  */
-export function _decode_Signature(el: _Element) {
+export function _decode_Signature(el: _Element): Signature {
     if (!_cached_decoder_for_Signature) {
         _cached_decoder_for_Signature = function (el: _Element): Signature {
             let signatureAlgorithm!: AlgorithmIdentifier;
@@ -187,7 +187,7 @@ let _cached_encoder_for_Signature: $.ASN1Encoder<Signature> | null = null;
 export function _encode_Signature(
     value: Signature,
     elGetter: $.ASN1Encoder<Signature>
-) {
+): _Element {
     if (!_cached_encoder_for_Signature) {
         _cached_encoder_for_Signature = function (
             value: Signature        ): _Element {

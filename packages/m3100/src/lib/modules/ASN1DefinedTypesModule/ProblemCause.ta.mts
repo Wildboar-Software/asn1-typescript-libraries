@@ -40,7 +40,7 @@ let _cached_decoder_for_ProblemCause: $.ASN1Decoder<ProblemCause> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ProblemCause} The decoded data structure.
  */
-export function _decode_ProblemCause(el: _Element) {
+export function _decode_ProblemCause(el: _Element): ProblemCause {
     if (!_cached_decoder_for_ProblemCause) {
         _cached_decoder_for_ProblemCause = $._decode_inextensible_choice<ProblemCause>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_ProblemCause: $.ASN1Encoder<ProblemCause> | null = null;
 export function _encode_ProblemCause(
     value: ProblemCause,
     elGetter: $.ASN1Encoder<ProblemCause>
-) {
+): _Element {
     if (!_cached_encoder_for_ProblemCause) {
         _cached_encoder_for_ProblemCause = $._encode_choice<ProblemCause>(
             {

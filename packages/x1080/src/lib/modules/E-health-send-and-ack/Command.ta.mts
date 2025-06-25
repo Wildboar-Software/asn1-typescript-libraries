@@ -146,7 +146,7 @@ let _cached_decoder_for_Command: $.ASN1Decoder<Command> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Command} The decoded data structure.
  */
-export function _decode_Command(el: _Element) {
+export function _decode_Command(el: _Element): Command {
     if (!_cached_decoder_for_Command) {
         _cached_decoder_for_Command = function (el: _Element): Command {
             const sequence: _Element[] = el.sequence;
@@ -186,7 +186,7 @@ let _cached_encoder_for_Command: $.ASN1Encoder<Command> | null = null;
 export function _encode_Command(
     value: Command,
     elGetter: $.ASN1Encoder<Command>
-) {
+): _Element {
     if (!_cached_encoder_for_Command) {
         _cached_encoder_for_Command = function (
             value: Command        ): _Element {

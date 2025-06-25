@@ -128,7 +128,7 @@ let _cached_decoder_for_SignedReceiptNoticeType: $.ASN1Decoder<SignedReceiptNoti
  * @param {_Element} el The element being decoded.
  * @returns {SignedReceiptNoticeType} The decoded data structure.
  */
-export function _decode_SignedReceiptNoticeType(el: _Element) {
+export function _decode_SignedReceiptNoticeType(el: _Element): SignedReceiptNoticeType {
   if (!_cached_decoder_for_SignedReceiptNoticeType) {
     _cached_decoder_for_SignedReceiptNoticeType = function (
       el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_SignedReceiptNoticeType: $.ASN1Encoder<SignedReceiptNoti
 export function _encode_SignedReceiptNoticeType(
   value: SignedReceiptNoticeType,
   elGetter: $.ASN1Encoder<SignedReceiptNoticeType>
-) {
+): _Element {
   if (!_cached_encoder_for_SignedReceiptNoticeType) {
     _cached_encoder_for_SignedReceiptNoticeType = function (
       value: SignedReceiptNoticeType    ): _Element {

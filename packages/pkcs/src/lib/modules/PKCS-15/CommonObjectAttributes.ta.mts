@@ -180,7 +180,7 @@ let _cached_decoder_for_CommonObjectAttributes: $.ASN1Decoder<CommonObjectAttrib
  * @param {_Element} el The element being decoded.
  * @returns {CommonObjectAttributes} The decoded data structure.
  */
-export function _decode_CommonObjectAttributes(el: _Element) {
+export function _decode_CommonObjectAttributes(el: _Element): CommonObjectAttributes {
     if (!_cached_decoder_for_CommonObjectAttributes) {
         _cached_decoder_for_CommonObjectAttributes = function (
             el: _Element
@@ -247,7 +247,7 @@ let _cached_encoder_for_CommonObjectAttributes: $.ASN1Encoder<CommonObjectAttrib
 export function _encode_CommonObjectAttributes(
     value: CommonObjectAttributes,
     elGetter: $.ASN1Encoder<CommonObjectAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonObjectAttributes) {
         _cached_encoder_for_CommonObjectAttributes = function (
             value: CommonObjectAttributes        ): _Element {

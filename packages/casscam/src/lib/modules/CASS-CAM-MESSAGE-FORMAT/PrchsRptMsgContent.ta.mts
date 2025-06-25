@@ -120,7 +120,7 @@ let _cached_decoder_for_PrchsRptMsgContent: $.ASN1Decoder<PrchsRptMsgContent> | 
  * @returns {PrchsRptMsgContent} The decoded data structure.
  */
 export
-function _decode_PrchsRptMsgContent (el: _Element) {
+function _decode_PrchsRptMsgContent (el: _Element): PrchsRptMsgContent {
     if (!_cached_decoder_for_PrchsRptMsgContent) { _cached_decoder_for_PrchsRptMsgContent = function (el: _Element): PrchsRptMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -153,7 +153,7 @@ let _cached_encoder_for_PrchsRptMsgContent: $.ASN1Encoder<PrchsRptMsgContent> | 
  * @returns {_Element} The PrchsRptMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_PrchsRptMsgContent (value: PrchsRptMsgContent, elGetter: $.ASN1Encoder<PrchsRptMsgContent>) {
+function _encode_PrchsRptMsgContent (value: PrchsRptMsgContent, elGetter: $.ASN1Encoder<PrchsRptMsgContent>): _Element {
     if (!_cached_encoder_for_PrchsRptMsgContent) { _cached_encoder_for_PrchsRptMsgContent = function (value: PrchsRptMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

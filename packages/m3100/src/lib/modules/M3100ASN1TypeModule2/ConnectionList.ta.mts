@@ -38,7 +38,7 @@ let _cached_decoder_for_ConnectionList: $.ASN1Decoder<ConnectionList> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ConnectionList} The decoded data structure.
  */
-export function _decode_ConnectionList(el: _Element) {
+export function _decode_ConnectionList(el: _Element): ConnectionList {
     if (!_cached_decoder_for_ConnectionList) {
         _cached_decoder_for_ConnectionList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ConnectionList: $.ASN1Encoder<ConnectionList> | null = n
 export function _encode_ConnectionList(
     value: ConnectionList,
     elGetter: $.ASN1Encoder<ConnectionList>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectionList) {
         _cached_encoder_for_ConnectionList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

@@ -44,7 +44,7 @@ let _cached_decoder_for_IndexOrOperSpec: $.ASN1Decoder<IndexOrOperSpec> | null =
  * @param {_Element} el The element being decoded.
  * @returns {IndexOrOperSpec} The decoded data structure.
  */
-export function _decode_IndexOrOperSpec(el: _Element) {
+export function _decode_IndexOrOperSpec(el: _Element): IndexOrOperSpec {
     if (!_cached_decoder_for_IndexOrOperSpec) {
         _cached_decoder_for_IndexOrOperSpec = $._decode_inextensible_choice<IndexOrOperSpec>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_IndexOrOperSpec: $.ASN1Encoder<IndexOrOperSpec> | null =
 export function _encode_IndexOrOperSpec(
     value: IndexOrOperSpec,
     elGetter: $.ASN1Encoder<IndexOrOperSpec>
-) {
+): _Element {
     if (!_cached_encoder_for_IndexOrOperSpec) {
         _cached_encoder_for_IndexOrOperSpec = $._encode_choice<IndexOrOperSpec>(
             {

@@ -278,7 +278,7 @@ let _cached_decoder_for_E_setupRequest: $.ASN1Decoder<E_setupRequest> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {E_setupRequest} The decoded data structure.
  */
-export function _decode_E_setupRequest(el: _Element) {
+export function _decode_E_setupRequest(el: _Element): E_setupRequest {
     if (!_cached_decoder_for_E_setupRequest) {
         _cached_decoder_for_E_setupRequest = function (
             el: _Element
@@ -372,7 +372,7 @@ let _cached_encoder_for_E_setupRequest: $.ASN1Encoder<E_setupRequest> | null = n
 export function _encode_E_setupRequest(
     value: E_setupRequest,
     elGetter: $.ASN1Encoder<E_setupRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_E_setupRequest) {
         _cached_encoder_for_E_setupRequest = function (
             value: E_setupRequest        ): _Element {

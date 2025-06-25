@@ -118,7 +118,7 @@ let _cached_decoder_for_SNPAAddress: $.ASN1Decoder<SNPAAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SNPAAddress} The decoded data structure.
  */
-export function _decode_SNPAAddress(el: _Element) {
+export function _decode_SNPAAddress(el: _Element): SNPAAddress {
     if (!_cached_decoder_for_SNPAAddress) {
         _cached_decoder_for_SNPAAddress = function (el: _Element): SNPAAddress {
             const sequence: _Element[] = el.sequence;
@@ -159,7 +159,7 @@ let _cached_encoder_for_SNPAAddress: $.ASN1Encoder<SNPAAddress> | null = null;
 export function _encode_SNPAAddress(
     value: SNPAAddress,
     elGetter: $.ASN1Encoder<SNPAAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_SNPAAddress) {
         _cached_encoder_for_SNPAAddress = function (
             value: SNPAAddress        ): _Element {

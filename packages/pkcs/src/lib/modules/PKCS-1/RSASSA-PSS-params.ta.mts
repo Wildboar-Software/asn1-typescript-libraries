@@ -195,7 +195,7 @@ let _cached_decoder_for_RSASSA_PSS_params: $.ASN1Decoder<RSASSA_PSS_params> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RSASSA_PSS_params} The decoded data structure.
  */
-export function _decode_RSASSA_PSS_params(el: _Element) {
+export function _decode_RSASSA_PSS_params(el: _Element): RSASSA_PSS_params {
     if (!_cached_decoder_for_RSASSA_PSS_params) {
         _cached_decoder_for_RSASSA_PSS_params = function (
             el: _Element
@@ -263,7 +263,7 @@ let _cached_encoder_for_RSASSA_PSS_params: $.ASN1Encoder<RSASSA_PSS_params> | nu
 export function _encode_RSASSA_PSS_params(
     value: RSASSA_PSS_params,
     elGetter: $.ASN1Encoder<RSASSA_PSS_params>
-) {
+): _Element {
     if (!_cached_encoder_for_RSASSA_PSS_params) {
         _cached_encoder_for_RSASSA_PSS_params = function (
             value: RSASSA_PSS_params        ): _Element {

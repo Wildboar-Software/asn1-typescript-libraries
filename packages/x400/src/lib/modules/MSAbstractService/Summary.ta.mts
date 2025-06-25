@@ -123,7 +123,7 @@ let _cached_decoder_for_Summary: $.ASN1Decoder<Summary> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Summary} The decoded data structure.
  */
-export function _decode_Summary(el: _Element) {
+export function _decode_Summary(el: _Element): Summary {
     if (!_cached_decoder_for_Summary) {
         _cached_decoder_for_Summary = function (el: _Element): Summary {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -170,7 +170,7 @@ let _cached_encoder_for_Summary: $.ASN1Encoder<Summary> | null = null;
 export function _encode_Summary(
     value: Summary,
     elGetter: $.ASN1Encoder<Summary>
-) {
+): _Element {
     if (!_cached_encoder_for_Summary) {
         _cached_encoder_for_Summary = function (
             value: Summary        ): _Element {

@@ -33,7 +33,7 @@ let _cached_decoder_for_GetBulkRequest_PDU: $.ASN1Decoder<GetBulkRequest_PDU> | 
  * @returns {GetBulkRequest_PDU} The decoded data structure.
  */
 export
-function _decode_GetBulkRequest_PDU (el: _Element) {
+function _decode_GetBulkRequest_PDU (el: _Element): GetBulkRequest_PDU {
     if (!_cached_decoder_for_GetBulkRequest_PDU) { _cached_decoder_for_GetBulkRequest_PDU = $._decode_implicit<GetBulkRequest_PDU>(() => _decode_BulkPDU); }
     return _cached_decoder_for_GetBulkRequest_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_GetBulkRequest_PDU: $.ASN1Encoder<GetBulkRequest_PDU> | 
  * @returns {_Element} The GetBulkRequest_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_GetBulkRequest_PDU (value: GetBulkRequest_PDU, elGetter: $.ASN1Encoder<GetBulkRequest_PDU>) {
+function _encode_GetBulkRequest_PDU (value: GetBulkRequest_PDU, elGetter: $.ASN1Encoder<GetBulkRequest_PDU>): _Element {
     if (!_cached_encoder_for_GetBulkRequest_PDU) { _cached_encoder_for_GetBulkRequest_PDU = $._encode_implicit(_TagClass.context, 5, () => _encode_BulkPDU, $.BER); }
     return _cached_encoder_for_GetBulkRequest_PDU(value, elGetter);
 }

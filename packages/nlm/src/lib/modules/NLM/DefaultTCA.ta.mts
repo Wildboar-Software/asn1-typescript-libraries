@@ -139,7 +139,7 @@ let _cached_decoder_for_DefaultTCA: $.ASN1Decoder<DefaultTCA> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DefaultTCA} The decoded data structure.
  */
-export function _decode_DefaultTCA(el: _Element) {
+export function _decode_DefaultTCA(el: _Element): DefaultTCA {
     if (!_cached_decoder_for_DefaultTCA) {
         _cached_decoder_for_DefaultTCA = function (el: _Element): DefaultTCA {
             let subscription!: BOOLEAN;
@@ -194,7 +194,7 @@ let _cached_encoder_for_DefaultTCA: $.ASN1Encoder<DefaultTCA> | null = null;
 export function _encode_DefaultTCA(
     value: DefaultTCA,
     elGetter: $.ASN1Encoder<DefaultTCA>
-) {
+): _Element {
     if (!_cached_encoder_for_DefaultTCA) {
         _cached_encoder_for_DefaultTCA = function (
             value: DefaultTCA        ): _Element {

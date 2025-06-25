@@ -38,7 +38,7 @@ let _cached_decoder_for_WeekMask: $.ASN1Decoder<WeekMask> | null = null;
  * @returns {WeekMask} The decoded data structure.
  */
 export
-function _decode_WeekMask (el: _Element) {
+function _decode_WeekMask (el: _Element): WeekMask {
     if (!_cached_decoder_for_WeekMask) { _cached_decoder_for_WeekMask = $._decodeSetOf<WeekMask_Item>(() => _decode_WeekMask_Item); }
     return _cached_decoder_for_WeekMask(el);
 }
@@ -53,7 +53,7 @@ let _cached_encoder_for_WeekMask: $.ASN1Encoder<WeekMask> | null = null;
  * @returns {_Element} The WeekMask, encoded as an ASN.1 Element.
  */
 export
-function _encode_WeekMask (value: WeekMask, elGetter: $.ASN1Encoder<WeekMask>) {
+function _encode_WeekMask (value: WeekMask, elGetter: $.ASN1Encoder<WeekMask>): _Element {
     if (!_cached_encoder_for_WeekMask) { _cached_encoder_for_WeekMask = $._encodeSetOf<WeekMask_Item>(() => _encode_WeekMask_Item, $.BER); }
     return _cached_encoder_for_WeekMask(value, elGetter);
 }

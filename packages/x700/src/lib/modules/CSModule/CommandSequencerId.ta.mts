@@ -35,7 +35,7 @@ let _cached_decoder_for_CommandSequencerId: $.ASN1Decoder<CommandSequencerId> | 
  * @param {_Element} el The element being decoded.
  * @returns {CommandSequencerId} The decoded data structure.
  */
-export function _decode_CommandSequencerId(el: _Element) {
+export function _decode_CommandSequencerId(el: _Element): CommandSequencerId {
     if (!_cached_decoder_for_CommandSequencerId) {
         _cached_decoder_for_CommandSequencerId = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_CommandSequencerId: $.ASN1Encoder<CommandSequencerId> | 
 export function _encode_CommandSequencerId(
     value: CommandSequencerId,
     elGetter: $.ASN1Encoder<CommandSequencerId>
-) {
+): _Element {
     if (!_cached_encoder_for_CommandSequencerId) {
         _cached_encoder_for_CommandSequencerId = _encode_ObjectInstance;
     }

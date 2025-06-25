@@ -120,7 +120,7 @@ let _cached_decoder_for_RestoreArgument: $.ASN1Decoder<RestoreArgument> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RestoreArgument} The decoded data structure.
  */
-export function _decode_RestoreArgument(el: _Element) {
+export function _decode_RestoreArgument(el: _Element): RestoreArgument {
     if (!_cached_decoder_for_RestoreArgument) {
         _cached_decoder_for_RestoreArgument = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_RestoreArgument: $.ASN1Encoder<RestoreArgument> | null =
 export function _encode_RestoreArgument(
     value: RestoreArgument,
     elGetter: $.ASN1Encoder<RestoreArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_RestoreArgument) {
         _cached_encoder_for_RestoreArgument = function (
             value: RestoreArgument        ): _Element {

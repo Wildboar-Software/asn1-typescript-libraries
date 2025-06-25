@@ -117,7 +117,7 @@ let _cached_decoder_for_EncryptionInfo: $.ASN1Decoder<EncryptionInfo> | null = n
  * @returns {EncryptionInfo} The decoded data structure.
  */
 export
-function _decode_EncryptionInfo (el: _Element) {
+function _decode_EncryptionInfo (el: _Element): EncryptionInfo {
     if (!_cached_decoder_for_EncryptionInfo) { _cached_decoder_for_EncryptionInfo = function (el: _Element): EncryptionInfo {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -150,7 +150,7 @@ let _cached_encoder_for_EncryptionInfo: $.ASN1Encoder<EncryptionInfo> | null = n
  * @returns {_Element} The EncryptionInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_EncryptionInfo (value: EncryptionInfo, elGetter: $.ASN1Encoder<EncryptionInfo>) {
+function _encode_EncryptionInfo (value: EncryptionInfo, elGetter: $.ASN1Encoder<EncryptionInfo>): _Element {
     if (!_cached_encoder_for_EncryptionInfo) { _cached_encoder_for_EncryptionInfo = function (value: EncryptionInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

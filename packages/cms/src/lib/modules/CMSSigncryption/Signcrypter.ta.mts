@@ -195,7 +195,7 @@ let _cached_decoder_for_Signcrypter: $.ASN1Decoder<Signcrypter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Signcrypter} The decoded data structure.
  */
-export function _decode_Signcrypter(el: _Element) {
+export function _decode_Signcrypter(el: _Element): Signcrypter {
     if (!_cached_decoder_for_Signcrypter) {
         _cached_decoder_for_Signcrypter = function (el: _Element): Signcrypter {
             let version!: CMSVersion;
@@ -263,7 +263,7 @@ let _cached_encoder_for_Signcrypter: $.ASN1Encoder<Signcrypter> | null = null;
 export function _encode_Signcrypter(
     value: Signcrypter,
     elGetter: $.ASN1Encoder<Signcrypter>
-) {
+): _Element {
     if (!_cached_encoder_for_Signcrypter) {
         _cached_encoder_for_Signcrypter = function (
             value: Signcrypter        ): _Element {

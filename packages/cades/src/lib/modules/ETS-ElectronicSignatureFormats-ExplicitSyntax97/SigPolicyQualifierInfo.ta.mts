@@ -112,7 +112,7 @@ let _cached_decoder_for_SigPolicyQualifierInfo: $.ASN1Decoder<SigPolicyQualifier
  * @returns {SigPolicyQualifierInfo} The decoded data structure.
  */
 export
-function _decode_SigPolicyQualifierInfo (el: _Element) {
+function _decode_SigPolicyQualifierInfo (el: _Element): SigPolicyQualifierInfo {
     if (!_cached_decoder_for_SigPolicyQualifierInfo) { _cached_decoder_for_SigPolicyQualifierInfo = function (el: _Element): SigPolicyQualifierInfo {
     let sigPolicyQualifierId!: OBJECT_IDENTIFIER;
     let qualifier: OPTIONAL<_Element>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_SigPolicyQualifierInfo: $.ASN1Encoder<SigPolicyQualifier
  * @returns {_Element} The SigPolicyQualifierInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_SigPolicyQualifierInfo (value: SigPolicyQualifierInfo, elGetter: $.ASN1Encoder<SigPolicyQualifierInfo>) {
+function _encode_SigPolicyQualifierInfo (value: SigPolicyQualifierInfo, elGetter: $.ASN1Encoder<SigPolicyQualifierInfo>): _Element {
     if (!_cached_encoder_for_SigPolicyQualifierInfo) { _cached_encoder_for_SigPolicyQualifierInfo = function (value: SigPolicyQualifierInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

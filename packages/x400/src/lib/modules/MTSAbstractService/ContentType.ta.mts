@@ -45,7 +45,7 @@ let _cached_decoder_for_ContentType: $.ASN1Decoder<ContentType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContentType} The decoded data structure.
  */
-export function _decode_ContentType(el: _Element) {
+export function _decode_ContentType(el: _Element): ContentType {
     if (!_cached_decoder_for_ContentType) {
         _cached_decoder_for_ContentType = $._decode_inextensible_choice<ContentType>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_ContentType: $.ASN1Encoder<ContentType> | null = null;
 export function _encode_ContentType(
     value: ContentType,
     elGetter: $.ASN1Encoder<ContentType>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentType) {
         _cached_encoder_for_ContentType = $._encode_choice<ContentType>(
             {

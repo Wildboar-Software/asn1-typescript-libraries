@@ -124,7 +124,7 @@ let _cached_decoder_for_EncryptedPrivateKeyInfo: $.ASN1Decoder<EncryptedPrivateK
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedPrivateKeyInfo} The decoded data structure.
  */
-export function _decode_EncryptedPrivateKeyInfo(el: _Element) {
+export function _decode_EncryptedPrivateKeyInfo(el: _Element): EncryptedPrivateKeyInfo {
     if (!_cached_decoder_for_EncryptedPrivateKeyInfo) {
         _cached_decoder_for_EncryptedPrivateKeyInfo = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_EncryptedPrivateKeyInfo: $.ASN1Encoder<EncryptedPrivateK
 export function _encode_EncryptedPrivateKeyInfo(
     value: EncryptedPrivateKeyInfo,
     elGetter: $.ASN1Encoder<EncryptedPrivateKeyInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedPrivateKeyInfo) {
         _cached_encoder_for_EncryptedPrivateKeyInfo = function (
             value: EncryptedPrivateKeyInfo        ): _Element {

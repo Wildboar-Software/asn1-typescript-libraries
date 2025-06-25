@@ -35,7 +35,7 @@ let _cached_decoder_for_User_data: $.ASN1Decoder<User_data> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {User_data} The decoded data structure.
  */
-export function _decode_User_data(el: _Element) {
+export function _decode_User_data(el: _Element): User_data {
   if (!_cached_decoder_for_User_data) {
     _cached_decoder_for_User_data = $._decode_implicit<User_data>(() =>
       $._decodeSequenceOf<EXTERNAL>(() => $._decodeExternal)
@@ -58,7 +58,7 @@ let _cached_encoder_for_User_data: $.ASN1Encoder<User_data> | null = null;
 export function _encode_User_data(
   value: User_data,
   elGetter: $.ASN1Encoder<User_data>
-) {
+): _Element {
   if (!_cached_encoder_for_User_data) {
     _cached_encoder_for_User_data = $._encode_implicit(
       _TagClass.context,

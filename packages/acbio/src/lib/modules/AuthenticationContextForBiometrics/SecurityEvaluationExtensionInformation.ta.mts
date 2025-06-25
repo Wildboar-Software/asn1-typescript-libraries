@@ -49,7 +49,7 @@ let _cached_decoder_for_SecurityEvaluationExtensionInformation: $.ASN1Decoder<Se
  * @param {_Element} el The element being decoded.
  * @returns {SecurityEvaluationExtensionInformation} The decoded data structure.
  */
-export function _decode_SecurityEvaluationExtensionInformation(el: _Element) {
+export function _decode_SecurityEvaluationExtensionInformation(el: _Element): SecurityEvaluationExtensionInformation {
     if (!_cached_decoder_for_SecurityEvaluationExtensionInformation) {
         _cached_decoder_for_SecurityEvaluationExtensionInformation = $._decode_inextensible_choice<SecurityEvaluationExtensionInformation>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_SecurityEvaluationExtensionInformation: $.ASN1Encoder<Se
 export function _encode_SecurityEvaluationExtensionInformation(
     value: SecurityEvaluationExtensionInformation,
     elGetter: $.ASN1Encoder<SecurityEvaluationExtensionInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityEvaluationExtensionInformation) {
         _cached_encoder_for_SecurityEvaluationExtensionInformation = $._encode_choice<SecurityEvaluationExtensionInformation>(
             {

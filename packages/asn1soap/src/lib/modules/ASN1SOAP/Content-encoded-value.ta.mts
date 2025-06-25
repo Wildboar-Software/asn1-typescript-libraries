@@ -130,7 +130,7 @@ let _cached_decoder_for_Content_encoded_value: $.ASN1Decoder<Content_encoded_val
  * @param {_Element} el The element being decoded.
  * @returns {Content_encoded_value} The decoded data structure.
  */
-export function _decode_Content_encoded_value(el: _Element) {
+export function _decode_Content_encoded_value(el: _Element): Content_encoded_value {
   if (!_cached_decoder_for_Content_encoded_value) {
     _cached_decoder_for_Content_encoded_value = function (
       el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_Content_encoded_value: $.ASN1Encoder<Content_encoded_val
 export function _encode_Content_encoded_value(
   value: Content_encoded_value,
   elGetter: $.ASN1Encoder<Content_encoded_value>
-) {
+): _Element {
   if (!_cached_encoder_for_Content_encoded_value) {
     _cached_encoder_for_Content_encoded_value = function (
       value: Content_encoded_value    ): _Element {

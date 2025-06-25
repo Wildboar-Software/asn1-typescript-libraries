@@ -22,7 +22,7 @@ let _cached_decoder_for_PKIFreeText: $.ASN1Decoder<PKIFreeText> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKIFreeText} The decoded data structure.
  */
-export function _decode_PKIFreeText(el: _Element) {
+export function _decode_PKIFreeText(el: _Element): PKIFreeText {
     if (!_cached_decoder_for_PKIFreeText) {
         _cached_decoder_for_PKIFreeText = $._decodeSequenceOf<UTF8String>(
             () => $._decodeUTF8String
@@ -43,7 +43,7 @@ let _cached_encoder_for_PKIFreeText: $.ASN1Encoder<PKIFreeText> | null = null;
 export function _encode_PKIFreeText(
     value: PKIFreeText,
     elGetter: $.ASN1Encoder<PKIFreeText>
-) {
+): _Element {
     if (!_cached_encoder_for_PKIFreeText) {
         _cached_encoder_for_PKIFreeText = $._encodeSequenceOf<UTF8String>(
             () => $._encodeUTF8String,

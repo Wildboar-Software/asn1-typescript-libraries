@@ -110,7 +110,7 @@ let _cached_decoder_for_CVCertificateAttributes: $.ASN1Decoder<CVCertificateAttr
  * @param {_Element} el The element being decoded.
  * @returns {CVCertificateAttributes} The decoded data structure.
  */
-export function _decode_CVCertificateAttributes(el: _Element) {
+export function _decode_CVCertificateAttributes(el: _Element): CVCertificateAttributes {
     if (!_cached_decoder_for_CVCertificateAttributes) {
         _cached_decoder_for_CVCertificateAttributes = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_CVCertificateAttributes: $.ASN1Encoder<CVCertificateAttr
 export function _encode_CVCertificateAttributes(
     value: CVCertificateAttributes,
     elGetter: $.ASN1Encoder<CVCertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CVCertificateAttributes) {
         _cached_encoder_for_CVCertificateAttributes = function (
             value: CVCertificateAttributes        ): _Element {

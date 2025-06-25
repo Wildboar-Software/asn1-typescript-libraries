@@ -124,7 +124,7 @@ let _cached_decoder_for_OriginatorAndDLExpansion: $.ASN1Decoder<OriginatorAndDLE
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorAndDLExpansion} The decoded data structure.
  */
-export function _decode_OriginatorAndDLExpansion(el: _Element) {
+export function _decode_OriginatorAndDLExpansion(el: _Element): OriginatorAndDLExpansion {
     if (!_cached_decoder_for_OriginatorAndDLExpansion) {
         _cached_decoder_for_OriginatorAndDLExpansion = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_OriginatorAndDLExpansion: $.ASN1Encoder<OriginatorAndDLE
 export function _encode_OriginatorAndDLExpansion(
     value: OriginatorAndDLExpansion,
     elGetter: $.ASN1Encoder<OriginatorAndDLExpansion>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorAndDLExpansion) {
         _cached_encoder_for_OriginatorAndDLExpansion = function (
             value: OriginatorAndDLExpansion        ): _Element {

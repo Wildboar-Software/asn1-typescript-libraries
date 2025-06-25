@@ -35,7 +35,7 @@ let _cached_decoder_for_RelatedIPMsSubfield: $.ASN1Decoder<RelatedIPMsSubfield> 
  * @param {_Element} el The element being decoded.
  * @returns {RelatedIPMsSubfield} The decoded data structure.
  */
-export function _decode_RelatedIPMsSubfield(el: _Element) {
+export function _decode_RelatedIPMsSubfield(el: _Element): RelatedIPMsSubfield {
     if (!_cached_decoder_for_RelatedIPMsSubfield) {
         _cached_decoder_for_RelatedIPMsSubfield = _decode_IPMIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RelatedIPMsSubfield: $.ASN1Encoder<RelatedIPMsSubfield> 
 export function _encode_RelatedIPMsSubfield(
     value: RelatedIPMsSubfield,
     elGetter: $.ASN1Encoder<RelatedIPMsSubfield>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedIPMsSubfield) {
         _cached_encoder_for_RelatedIPMsSubfield = _encode_IPMIdentifier;
     }

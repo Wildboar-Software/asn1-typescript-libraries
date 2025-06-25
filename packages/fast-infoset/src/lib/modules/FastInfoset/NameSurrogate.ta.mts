@@ -128,7 +128,7 @@ let _cached_decoder_for_NameSurrogate: $.ASN1Decoder<NameSurrogate> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {NameSurrogate} The decoded data structure.
  */
-export function _decode_NameSurrogate(el: _Element) {
+export function _decode_NameSurrogate(el: _Element): NameSurrogate {
   if (!_cached_decoder_for_NameSurrogate) {
     _cached_decoder_for_NameSurrogate = function (el: _Element): NameSurrogate {
       let prefix_string_index: OPTIONAL<INTEGER>;
@@ -175,7 +175,7 @@ let _cached_encoder_for_NameSurrogate: $.ASN1Encoder<NameSurrogate> | null = nul
 export function _encode_NameSurrogate(
   value: NameSurrogate,
   elGetter: $.ASN1Encoder<NameSurrogate>
-) {
+): _Element {
   if (!_cached_encoder_for_NameSurrogate) {
     _cached_encoder_for_NameSurrogate = function (
       value: NameSurrogate    ): _Element {

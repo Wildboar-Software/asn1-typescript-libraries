@@ -171,7 +171,7 @@ let _cached_decoder_for_BiometricInformationTemplate: $.ASN1Decoder<BiometricInf
  * @param {_Element} el The element being decoded.
  * @returns {BiometricInformationTemplate} The decoded data structure.
  */
-export function _decode_BiometricInformationTemplate(el: _Element) {
+export function _decode_BiometricInformationTemplate(el: _Element): BiometricInformationTemplate {
   if (!_cached_decoder_for_BiometricInformationTemplate) {
     _cached_decoder_for_BiometricInformationTemplate = $._decode_implicit<BiometricInformationTemplate>(
       () =>
@@ -245,7 +245,7 @@ let _cached_encoder_for_BiometricInformationTemplate: $.ASN1Encoder<BiometricInf
 export function _encode_BiometricInformationTemplate(
   value: BiometricInformationTemplate,
   elGetter: $.ASN1Encoder<BiometricInformationTemplate>
-) {
+): _Element {
   if (!_cached_encoder_for_BiometricInformationTemplate) {
     _cached_encoder_for_BiometricInformationTemplate = $._encode_implicit(
       _TagClass.application,

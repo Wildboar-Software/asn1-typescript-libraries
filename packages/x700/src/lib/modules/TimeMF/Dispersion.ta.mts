@@ -35,7 +35,7 @@ let _cached_decoder_for_Dispersion: $.ASN1Decoder<Dispersion> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Dispersion} The decoded data structure.
  */
-export function _decode_Dispersion(el: _Element) {
+export function _decode_Dispersion(el: _Element): Dispersion {
     if (!_cached_decoder_for_Dispersion) {
         _cached_decoder_for_Dispersion = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_Dispersion: $.ASN1Encoder<Dispersion> | null = null;
 export function _encode_Dispersion(
     value: Dispersion,
     elGetter: $.ASN1Encoder<Dispersion>
-) {
+): _Element {
     if (!_cached_encoder_for_Dispersion) {
         _cached_encoder_for_Dispersion = _encode_TimeInterval;
     }

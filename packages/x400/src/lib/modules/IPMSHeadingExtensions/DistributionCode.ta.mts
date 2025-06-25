@@ -137,7 +137,7 @@ let _cached_decoder_for_DistributionCode: $.ASN1Decoder<DistributionCode> | null
  * @param {_Element} el The element being decoded.
  * @returns {DistributionCode} The decoded data structure.
  */
-export function _decode_DistributionCode(el: _Element) {
+export function _decode_DistributionCode(el: _Element): DistributionCode {
     if (!_cached_decoder_for_DistributionCode) {
         _cached_decoder_for_DistributionCode = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_DistributionCode: $.ASN1Encoder<DistributionCode> | null
 export function _encode_DistributionCode(
     value: DistributionCode,
     elGetter: $.ASN1Encoder<DistributionCode>
-) {
+): _Element {
     if (!_cached_encoder_for_DistributionCode) {
         _cached_encoder_for_DistributionCode = function (
             value: DistributionCode        ): _Element {

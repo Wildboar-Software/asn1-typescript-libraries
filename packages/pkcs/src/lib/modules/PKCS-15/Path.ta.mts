@@ -123,7 +123,7 @@ let _cached_decoder_for_Path: $.ASN1Decoder<Path> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Path} The decoded data structure.
  */
-export function _decode_Path(el: _Element) {
+export function _decode_Path(el: _Element): Path {
     if (!_cached_decoder_for_Path) {
         _cached_decoder_for_Path = function (el: _Element): Path {
             let path!: OCTET_STRING;
@@ -171,7 +171,7 @@ let _cached_encoder_for_Path: $.ASN1Encoder<Path> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Path, encoded as an ASN.1 Element.
  */
-export function _encode_Path(value: Path, elGetter: $.ASN1Encoder<Path>) {
+export function _encode_Path(value: Path, elGetter: $.ASN1Encoder<Path>): _Element {
     if (!_cached_encoder_for_Path) {
         _cached_encoder_for_Path = function (
             value: Path        ): _Element {

@@ -42,7 +42,7 @@ let _cached_decoder_for_EDIMLocation: $.ASN1Decoder<EDIMLocation> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EDIMLocation} The decoded data structure.
  */
-export function _decode_EDIMLocation(el: _Element) {
+export function _decode_EDIMLocation(el: _Element): EDIMLocation {
     if (!_cached_decoder_for_EDIMLocation) {
         _cached_decoder_for_EDIMLocation = $._decode_extensible_choice<EDIMLocation>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_EDIMLocation: $.ASN1Encoder<EDIMLocation> | null = null;
 export function _encode_EDIMLocation(
     value: EDIMLocation,
     elGetter: $.ASN1Encoder<EDIMLocation>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIMLocation) {
         _cached_encoder_for_EDIMLocation = $._encode_choice<EDIMLocation>(
             {

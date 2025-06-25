@@ -113,7 +113,7 @@ let _cached_decoder_for_BDCReportContentInformation: $.ASN1Decoder<BDCReportCont
  * @returns {BDCReportContentInformation} The decoded data structure.
  */
 export
-function _decode_BDCReportContentInformation (el: _Element) {
+function _decode_BDCReportContentInformation (el: _Element): BDCReportContentInformation {
     if (!_cached_decoder_for_BDCReportContentInformation) { _cached_decoder_for_BDCReportContentInformation = function (el: _Element): BDCReportContentInformation {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -144,7 +144,7 @@ let _cached_encoder_for_BDCReportContentInformation: $.ASN1Encoder<BDCReportCont
  * @returns {_Element} The BDCReportContentInformation, encoded as an ASN.1 Element.
  */
 export
-function _encode_BDCReportContentInformation (value: BDCReportContentInformation, elGetter: $.ASN1Encoder<BDCReportContentInformation>) {
+function _encode_BDCReportContentInformation (value: BDCReportContentInformation, elGetter: $.ASN1Encoder<BDCReportContentInformation>): _Element {
     if (!_cached_encoder_for_BDCReportContentInformation) { _cached_encoder_for_BDCReportContentInformation = function (value: BDCReportContentInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

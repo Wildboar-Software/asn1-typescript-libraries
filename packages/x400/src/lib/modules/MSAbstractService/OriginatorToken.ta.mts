@@ -39,7 +39,7 @@ let _cached_decoder_for_OriginatorToken: $.ASN1Decoder<OriginatorToken> | null =
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorToken} The decoded data structure.
  */
-export function _decode_OriginatorToken(el: _Element) {
+export function _decode_OriginatorToken(el: _Element): OriginatorToken {
     if (!_cached_decoder_for_OriginatorToken) {
         _cached_decoder_for_OriginatorToken = _decode_MessageToken;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_OriginatorToken: $.ASN1Encoder<OriginatorToken> | null =
 export function _encode_OriginatorToken(
     value: OriginatorToken,
     elGetter: $.ASN1Encoder<OriginatorToken>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorToken) {
         _cached_encoder_for_OriginatorToken = _encode_MessageToken;
     }

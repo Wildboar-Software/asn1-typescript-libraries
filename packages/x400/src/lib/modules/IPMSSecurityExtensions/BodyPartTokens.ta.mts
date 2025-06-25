@@ -41,7 +41,7 @@ let _cached_decoder_for_BodyPartTokens: $.ASN1Decoder<BodyPartTokens> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartTokens} The decoded data structure.
  */
-export function _decode_BodyPartTokens(el: _Element) {
+export function _decode_BodyPartTokens(el: _Element): BodyPartTokens {
     if (!_cached_decoder_for_BodyPartTokens) {
         _cached_decoder_for_BodyPartTokens = $._decodeSetOf<BodyPartTokens_Item>(
             () => _decode_BodyPartTokens_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_BodyPartTokens: $.ASN1Encoder<BodyPartTokens> | null = n
 export function _encode_BodyPartTokens(
     value: BodyPartTokens,
     elGetter: $.ASN1Encoder<BodyPartTokens>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartTokens) {
         _cached_encoder_for_BodyPartTokens = $._encodeSetOf<BodyPartTokens_Item>(
             () => _encode_BodyPartTokens_Item,

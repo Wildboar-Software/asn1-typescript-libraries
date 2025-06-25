@@ -150,7 +150,7 @@ let _cached_decoder_for_StrongCredentials: $.ASN1Decoder<StrongCredentials> | nu
  * @param {_Element} el The element being decoded.
  * @returns {StrongCredentials} The decoded data structure.
  */
-export function _decode_StrongCredentials(el: _Element) {
+export function _decode_StrongCredentials(el: _Element): StrongCredentials {
     if (!_cached_decoder_for_StrongCredentials) {
         _cached_decoder_for_StrongCredentials = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_StrongCredentials: $.ASN1Encoder<StrongCredentials> | nu
 export function _encode_StrongCredentials(
     value: StrongCredentials,
     elGetter: $.ASN1Encoder<StrongCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_StrongCredentials) {
         _cached_encoder_for_StrongCredentials = function (
             value: StrongCredentials        ): _Element {

@@ -179,7 +179,7 @@ let _cached_decoder_for_TroubleReportChangeDenied: $.ASN1Decoder<TroubleReportCh
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportChangeDenied} The decoded data structure.
  */
-export function _decode_TroubleReportChangeDenied(el: _Element) {
+export function _decode_TroubleReportChangeDenied(el: _Element): TroubleReportChangeDenied {
     if (!_cached_decoder_for_TroubleReportChangeDenied) {
         _cached_decoder_for_TroubleReportChangeDenied = function (
             el: _Element
@@ -239,7 +239,7 @@ let _cached_encoder_for_TroubleReportChangeDenied: $.ASN1Encoder<TroubleReportCh
 export function _encode_TroubleReportChangeDenied(
     value: TroubleReportChangeDenied,
     elGetter: $.ASN1Encoder<TroubleReportChangeDenied>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportChangeDenied) {
         _cached_encoder_for_TroubleReportChangeDenied = function (
             value: TroubleReportChangeDenied        ): _Element {

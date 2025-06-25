@@ -42,7 +42,7 @@ let _cached_decoder_for_NameType: $.ASN1Decoder<NameType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NameType} The decoded data structure.
  */
-export function _decode_NameType(el: _Element) {
+export function _decode_NameType(el: _Element): NameType {
     if (!_cached_decoder_for_NameType) {
         _cached_decoder_for_NameType = $._decode_extensible_choice<NameType>({
             'UNIVERSAL 2': ['number_', $._decodeInteger],
@@ -66,7 +66,7 @@ let _cached_encoder_for_NameType: $.ASN1Encoder<NameType> | null = null;
 export function _encode_NameType(
     value: NameType,
     elGetter: $.ASN1Encoder<NameType>
-) {
+): _Element {
     if (!_cached_encoder_for_NameType) {
         _cached_encoder_for_NameType = $._encode_choice<NameType>(
             {

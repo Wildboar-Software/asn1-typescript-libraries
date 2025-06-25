@@ -46,7 +46,7 @@ let _cached_decoder_for_ACReference: $.ASN1Decoder<ACReference> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACReference} The decoded data structure.
  */
-export function _decode_ACReference(el: _Element) {
+export function _decode_ACReference(el: _Element): ACReference {
   if (!_cached_decoder_for_ACReference) {
     _cached_decoder_for_ACReference = $._decode_inextensible_choice<ACReference>(
       {
@@ -78,7 +78,7 @@ let _cached_encoder_for_ACReference: $.ASN1Encoder<ACReference> | null = null;
 export function _encode_ACReference(
   value: ACReference,
   elGetter: $.ASN1Encoder<ACReference>
-) {
+): _Element {
   if (!_cached_encoder_for_ACReference) {
     _cached_encoder_for_ACReference = $._encode_choice<ACReference>(
       {

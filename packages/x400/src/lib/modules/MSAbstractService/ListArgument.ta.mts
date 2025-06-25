@@ -171,7 +171,7 @@ let _cached_decoder_for_ListArgument: $.ASN1Decoder<ListArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ListArgument} The decoded data structure.
  */
-export function _decode_ListArgument(el: _Element) {
+export function _decode_ListArgument(el: _Element): ListArgument {
     if (!_cached_decoder_for_ListArgument) {
         _cached_decoder_for_ListArgument = function (
             el: _Element
@@ -236,7 +236,7 @@ let _cached_encoder_for_ListArgument: $.ASN1Encoder<ListArgument> | null = null;
 export function _encode_ListArgument(
     value: ListArgument,
     elGetter: $.ASN1Encoder<ListArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ListArgument) {
         _cached_encoder_for_ListArgument = function (
             value: ListArgument        ): _Element {

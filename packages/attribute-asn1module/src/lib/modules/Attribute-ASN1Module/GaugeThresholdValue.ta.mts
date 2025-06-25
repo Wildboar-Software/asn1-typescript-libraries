@@ -33,7 +33,7 @@ let _cached_decoder_for_GaugeThresholdValue: $.ASN1Decoder<GaugeThresholdValue> 
  * @returns {GaugeThresholdValue} The decoded data structure.
  */
 export
-function _decode_GaugeThresholdValue (el: _Element) {
+function _decode_GaugeThresholdValue (el: _Element): GaugeThresholdValue {
     if (!_cached_decoder_for_GaugeThresholdValue) { _cached_decoder_for_GaugeThresholdValue = _decode_ObservedValue; }
     return _cached_decoder_for_GaugeThresholdValue(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_GaugeThresholdValue: $.ASN1Encoder<GaugeThresholdValue> 
  * @returns {_Element} The GaugeThresholdValue, encoded as an ASN.1 Element.
  */
 export
-function _encode_GaugeThresholdValue (value: GaugeThresholdValue, elGetter: $.ASN1Encoder<GaugeThresholdValue>) {
+function _encode_GaugeThresholdValue (value: GaugeThresholdValue, elGetter: $.ASN1Encoder<GaugeThresholdValue>): _Element {
     if (!_cached_encoder_for_GaugeThresholdValue) { _cached_encoder_for_GaugeThresholdValue = _encode_ObservedValue; }
     return _cached_encoder_for_GaugeThresholdValue(value, elGetter);
 }

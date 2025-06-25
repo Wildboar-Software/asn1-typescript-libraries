@@ -139,7 +139,7 @@ let _cached_decoder_for_IndependentTestResponse: $.ASN1Decoder<IndependentTestRe
  * @param {_Element} el The element being decoded.
  * @returns {IndependentTestResponse} The decoded data structure.
  */
-export function _decode_IndependentTestResponse(el: _Element) {
+export function _decode_IndependentTestResponse(el: _Element): IndependentTestResponse {
     if (!_cached_decoder_for_IndependentTestResponse) {
         _cached_decoder_for_IndependentTestResponse = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_IndependentTestResponse: $.ASN1Encoder<IndependentTestRe
 export function _encode_IndependentTestResponse(
     value: IndependentTestResponse,
     elGetter: $.ASN1Encoder<IndependentTestResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_IndependentTestResponse) {
         _cached_encoder_for_IndependentTestResponse = function (
             value: IndependentTestResponse        ): _Element {

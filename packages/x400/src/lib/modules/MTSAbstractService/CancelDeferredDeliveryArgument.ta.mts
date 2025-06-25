@@ -35,7 +35,7 @@ let _cached_decoder_for_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDefe
  * @param {_Element} el The element being decoded.
  * @returns {CancelDeferredDeliveryArgument} The decoded data structure.
  */
-export function _decode_CancelDeferredDeliveryArgument(el: _Element) {
+export function _decode_CancelDeferredDeliveryArgument(el: _Element): CancelDeferredDeliveryArgument {
     if (!_cached_decoder_for_CancelDeferredDeliveryArgument) {
         _cached_decoder_for_CancelDeferredDeliveryArgument = _decode_MessageSubmissionIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDefe
 export function _encode_CancelDeferredDeliveryArgument(
     value: CancelDeferredDeliveryArgument,
     elGetter: $.ASN1Encoder<CancelDeferredDeliveryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_CancelDeferredDeliveryArgument) {
         _cached_encoder_for_CancelDeferredDeliveryArgument = _encode_MessageSubmissionIdentifier;
     }

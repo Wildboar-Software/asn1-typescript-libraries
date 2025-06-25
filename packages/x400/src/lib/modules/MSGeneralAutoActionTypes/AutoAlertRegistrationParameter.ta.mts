@@ -170,7 +170,7 @@ let _cached_decoder_for_AutoAlertRegistrationParameter: $.ASN1Decoder<AutoAlertR
  * @param {_Element} el The element being decoded.
  * @returns {AutoAlertRegistrationParameter} The decoded data structure.
  */
-export function _decode_AutoAlertRegistrationParameter(el: _Element) {
+export function _decode_AutoAlertRegistrationParameter(el: _Element): AutoAlertRegistrationParameter {
     if (!_cached_decoder_for_AutoAlertRegistrationParameter) {
         _cached_decoder_for_AutoAlertRegistrationParameter = function (
             el: _Element
@@ -238,7 +238,7 @@ let _cached_encoder_for_AutoAlertRegistrationParameter: $.ASN1Encoder<AutoAlertR
 export function _encode_AutoAlertRegistrationParameter(
     value: AutoAlertRegistrationParameter,
     elGetter: $.ASN1Encoder<AutoAlertRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoAlertRegistrationParameter) {
         _cached_encoder_for_AutoAlertRegistrationParameter = function (
             value: AutoAlertRegistrationParameter        ): _Element {

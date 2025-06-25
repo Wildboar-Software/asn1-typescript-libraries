@@ -172,7 +172,7 @@ let _cached_decoder_for_TBSRequest: $.ASN1Decoder<TBSRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TBSRequest} The decoded data structure.
  */
-export function _decode_TBSRequest(el: _Element) {
+export function _decode_TBSRequest(el: _Element): TBSRequest {
     if (!_cached_decoder_for_TBSRequest) {
         _cached_decoder_for_TBSRequest = function (el: _Element): TBSRequest {
             let version: OPTIONAL<Version> =
@@ -235,7 +235,7 @@ let _cached_encoder_for_TBSRequest: $.ASN1Encoder<TBSRequest> | null = null;
 export function _encode_TBSRequest(
     value: TBSRequest,
     elGetter: $.ASN1Encoder<TBSRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_TBSRequest) {
         _cached_encoder_for_TBSRequest = function (
             value: TBSRequest        ): _Element {

@@ -40,7 +40,7 @@ let _cached_decoder_for_DisconnectResult: $.ASN1Decoder<DisconnectResult> | null
  * @param {_Element} el The element being decoded.
  * @returns {DisconnectResult} The decoded data structure.
  */
-export function _decode_DisconnectResult(el: _Element) {
+export function _decode_DisconnectResult(el: _Element): DisconnectResult {
     if (!_cached_decoder_for_DisconnectResult) {
         _cached_decoder_for_DisconnectResult = $._decodeSequenceOf<DisconnectResult_Item>(
             () => _decode_DisconnectResult_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_DisconnectResult: $.ASN1Encoder<DisconnectResult> | null
 export function _encode_DisconnectResult(
     value: DisconnectResult,
     elGetter: $.ASN1Encoder<DisconnectResult>
-) {
+): _Element {
     if (!_cached_encoder_for_DisconnectResult) {
         _cached_encoder_for_DisconnectResult = $._encodeSequenceOf<DisconnectResult_Item>(
             () => _encode_DisconnectResult_Item,

@@ -33,7 +33,7 @@ let _cached_decoder_for_SymmetricEncryption: $.ASN1Decoder<SymmetricEncryption> 
  * @returns {SymmetricEncryption} The decoded data structure.
  */
 export
-function _decode_SymmetricEncryption (el: _Element) {
+function _decode_SymmetricEncryption (el: _Element): SymmetricEncryption {
     if (!_cached_decoder_for_SymmetricEncryption) { _cached_decoder_for_SymmetricEncryption = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_SymmetricEncryption(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SymmetricEncryption: $.ASN1Encoder<SymmetricEncryption> 
  * @returns {_Element} The SymmetricEncryption, encoded as an ASN.1 Element.
  */
 export
-function _encode_SymmetricEncryption (value: SymmetricEncryption, elGetter: $.ASN1Encoder<SymmetricEncryption>) {
+function _encode_SymmetricEncryption (value: SymmetricEncryption, elGetter: $.ASN1Encoder<SymmetricEncryption>): _Element {
     if (!_cached_encoder_for_SymmetricEncryption) { _cached_encoder_for_SymmetricEncryption = _encode_AlgorithmIdentifier; }
     return _cached_encoder_for_SymmetricEncryption(value, elGetter);
 }

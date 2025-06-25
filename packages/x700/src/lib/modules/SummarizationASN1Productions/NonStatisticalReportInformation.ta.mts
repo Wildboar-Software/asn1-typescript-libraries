@@ -35,7 +35,7 @@ let _cached_decoder_for_NonStatisticalReportInformation: $.ASN1Decoder<NonStatis
  * @param {_Element} el The element being decoded.
  * @returns {NonStatisticalReportInformation} The decoded data structure.
  */
-export function _decode_NonStatisticalReportInformation(el: _Element) {
+export function _decode_NonStatisticalReportInformation(el: _Element): NonStatisticalReportInformation {
     if (!_cached_decoder_for_NonStatisticalReportInformation) {
         _cached_decoder_for_NonStatisticalReportInformation = $._decodeSetOf<NonStatisticalScan>(
             () => _decode_NonStatisticalScan
@@ -56,7 +56,7 @@ let _cached_encoder_for_NonStatisticalReportInformation: $.ASN1Encoder<NonStatis
 export function _encode_NonStatisticalReportInformation(
     value: NonStatisticalReportInformation,
     elGetter: $.ASN1Encoder<NonStatisticalReportInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_NonStatisticalReportInformation) {
         _cached_encoder_for_NonStatisticalReportInformation = $._encodeSetOf<NonStatisticalScan>(
             () => _encode_NonStatisticalScan,

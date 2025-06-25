@@ -254,7 +254,7 @@ let _cached_decoder_for_CertTemplate: $.ASN1Decoder<CertTemplate> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertTemplate} The decoded data structure.
  */
-export function _decode_CertTemplate(el: _Element) {
+export function _decode_CertTemplate(el: _Element): CertTemplate {
     if (!_cached_decoder_for_CertTemplate) {
         _cached_decoder_for_CertTemplate = function (
             el: _Element
@@ -356,7 +356,7 @@ let _cached_encoder_for_CertTemplate: $.ASN1Encoder<CertTemplate> | null = null;
 export function _encode_CertTemplate(
     value: CertTemplate,
     elGetter: $.ASN1Encoder<CertTemplate>
-) {
+): _Element {
     if (!_cached_encoder_for_CertTemplate) {
         _cached_encoder_for_CertTemplate = function (
             value: CertTemplate        ): _Element {

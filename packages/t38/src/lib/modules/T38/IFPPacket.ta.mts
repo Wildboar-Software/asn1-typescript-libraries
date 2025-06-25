@@ -126,7 +126,7 @@ let _cached_decoder_for_IFPPacket: $.ASN1Decoder<IFPPacket> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IFPPacket} The decoded data structure.
  */
-export function _decode_IFPPacket(el: _Element) {
+export function _decode_IFPPacket(el: _Element): IFPPacket {
   if (!_cached_decoder_for_IFPPacket) {
     _cached_decoder_for_IFPPacket = function (el: _Element): IFPPacket {
       let type_of_msg!: Type_of_msg;
@@ -170,7 +170,7 @@ let _cached_encoder_for_IFPPacket: $.ASN1Encoder<IFPPacket> | null = null;
 export function _encode_IFPPacket(
   value: IFPPacket,
   elGetter: $.ASN1Encoder<IFPPacket>
-) {
+): _Element {
   if (!_cached_encoder_for_IFPPacket) {
     _cached_encoder_for_IFPPacket = function (
       value: IFPPacket    ): _Element {

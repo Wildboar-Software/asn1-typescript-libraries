@@ -123,7 +123,7 @@ let _cached_decoder_for_EncodedCharacterString: $.ASN1Decoder<EncodedCharacterSt
  * @param {_Element} el The element being decoded.
  * @returns {EncodedCharacterString} The decoded data structure.
  */
-export function _decode_EncodedCharacterString(el: _Element) {
+export function _decode_EncodedCharacterString(el: _Element): EncodedCharacterString {
   if (!_cached_decoder_for_EncodedCharacterString) {
     _cached_decoder_for_EncodedCharacterString = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_EncodedCharacterString: $.ASN1Encoder<EncodedCharacterSt
 export function _encode_EncodedCharacterString(
   value: EncodedCharacterString,
   elGetter: $.ASN1Encoder<EncodedCharacterString>
-) {
+): _Element {
   if (!_cached_encoder_for_EncodedCharacterString) {
     _cached_encoder_for_EncodedCharacterString = function (
       value: EncodedCharacterString    ): _Element {

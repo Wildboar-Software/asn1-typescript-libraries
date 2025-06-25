@@ -136,7 +136,7 @@ let _cached_decoder_for_LocationAddress: $.ASN1Decoder<LocationAddress> | null =
  * @param {_Element} el The element being decoded.
  * @returns {LocationAddress} The decoded data structure.
  */
-export function _decode_LocationAddress(el: _Element) {
+export function _decode_LocationAddress(el: _Element): LocationAddress {
     if (!_cached_decoder_for_LocationAddress) {
         _cached_decoder_for_LocationAddress = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_LocationAddress: $.ASN1Encoder<LocationAddress> | null =
 export function _encode_LocationAddress(
     value: LocationAddress,
     elGetter: $.ASN1Encoder<LocationAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_LocationAddress) {
         _cached_encoder_for_LocationAddress = function (
             value: LocationAddress        ): _Element {

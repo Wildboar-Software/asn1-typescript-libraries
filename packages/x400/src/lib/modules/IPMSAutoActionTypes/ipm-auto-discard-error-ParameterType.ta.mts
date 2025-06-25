@@ -102,7 +102,7 @@ let _cached_decoder_for_ipm_auto_discard_error_ParameterType: $.ASN1Decoder<ipm_
  * @param {_Element} el The element being decoded.
  * @returns {ipm_auto_discard_error_ParameterType} The decoded data structure.
  */
-export function _decode_ipm_auto_discard_error_ParameterType(el: _Element) {
+export function _decode_ipm_auto_discard_error_ParameterType(el: _Element): ipm_auto_discard_error_ParameterType {
     if (!_cached_decoder_for_ipm_auto_discard_error_ParameterType) {
         _cached_decoder_for_ipm_auto_discard_error_ParameterType = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ipm_auto_discard_error_ParameterType: $.ASN1Encoder<ipm_
 export function _encode_ipm_auto_discard_error_ParameterType(
     value: ipm_auto_discard_error_ParameterType,
     elGetter: $.ASN1Encoder<ipm_auto_discard_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_ipm_auto_discard_error_ParameterType) {
         _cached_encoder_for_ipm_auto_discard_error_ParameterType = function (
             value: ipm_auto_discard_error_ParameterType        ): _Element {

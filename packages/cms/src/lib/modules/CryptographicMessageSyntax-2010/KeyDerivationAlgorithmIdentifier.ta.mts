@@ -26,7 +26,7 @@ let _cached_decoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Decoder<KeyDeriv
  * @param {_Element} el The element being decoded.
  * @returns {KeyDerivationAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_KeyDerivationAlgorithmIdentifier(el: _Element) {
+export function _decode_KeyDerivationAlgorithmIdentifier(el: _Element): KeyDerivationAlgorithmIdentifier {
     if (!_cached_decoder_for_KeyDerivationAlgorithmIdentifier) {
         _cached_decoder_for_KeyDerivationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Encoder<KeyDeriv
 export function _encode_KeyDerivationAlgorithmIdentifier(
     value: KeyDerivationAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<KeyDerivationAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyDerivationAlgorithmIdentifier) {
         _cached_encoder_for_KeyDerivationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

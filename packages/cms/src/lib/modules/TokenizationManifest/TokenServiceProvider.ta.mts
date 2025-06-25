@@ -25,7 +25,7 @@ let _cached_decoder_for_TokenServiceProvider: $.ASN1Decoder<TokenServiceProvider
  * @param {_Element} el The element being decoded.
  * @returns {TokenServiceProvider} The decoded data structure.
  */
-export function _decode_TokenServiceProvider(el: _Element) {
+export function _decode_TokenServiceProvider(el: _Element): TokenServiceProvider {
     if (!_cached_decoder_for_TokenServiceProvider) {
         _cached_decoder_for_TokenServiceProvider = _decode_URI;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_TokenServiceProvider: $.ASN1Encoder<TokenServiceProvider
 export function _encode_TokenServiceProvider(
     value: TokenServiceProvider,
     elGetter: $.ASN1Encoder<TokenServiceProvider>
-) {
+): _Element {
     if (!_cached_encoder_for_TokenServiceProvider) {
         _cached_encoder_for_TokenServiceProvider = _encode_URI;
     }

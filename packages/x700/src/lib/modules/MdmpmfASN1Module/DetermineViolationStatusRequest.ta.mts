@@ -35,7 +35,7 @@ let _cached_decoder_for_DetermineViolationStatusRequest: $.ASN1Decoder<Determine
  * @param {_Element} el The element being decoded.
  * @returns {DetermineViolationStatusRequest} The decoded data structure.
  */
-export function _decode_DetermineViolationStatusRequest(el: _Element) {
+export function _decode_DetermineViolationStatusRequest(el: _Element): DetermineViolationStatusRequest {
     if (!_cached_decoder_for_DetermineViolationStatusRequest) {
         _cached_decoder_for_DetermineViolationStatusRequest = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DetermineViolationStatusRequest: $.ASN1Encoder<Determine
 export function _encode_DetermineViolationStatusRequest(
     value: DetermineViolationStatusRequest,
     elGetter: $.ASN1Encoder<DetermineViolationStatusRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_DetermineViolationStatusRequest) {
         _cached_encoder_for_DetermineViolationStatusRequest = _encode_ObjectInstance;
     }

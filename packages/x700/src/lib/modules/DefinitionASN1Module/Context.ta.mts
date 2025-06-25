@@ -53,7 +53,7 @@ let _cached_decoder_for_Context: $.ASN1Decoder<Context> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Context} The decoded data structure.
  */
-export function _decode_Context(el: _Element) {
+export function _decode_Context(el: _Element): Context {
     if (!_cached_decoder_for_Context) {
         _cached_decoder_for_Context = $._decode_inextensible_choice<Context>({
             'UNIVERSAL 16': ['keyword', _decode_Context_keyword],
@@ -77,7 +77,7 @@ let _cached_encoder_for_Context: $.ASN1Encoder<Context> | null = null;
 export function _encode_Context(
     value: Context,
     elGetter: $.ASN1Encoder<Context>
-) {
+): _Element {
     if (!_cached_encoder_for_Context) {
         _cached_encoder_for_Context = $._encode_choice<Context>(
             {

@@ -38,7 +38,7 @@ let _cached_decoder_for_TestTerminateError: $.ASN1Decoder<TestTerminateError> | 
  * @param {_Element} el The element being decoded.
  * @returns {TestTerminateError} The decoded data structure.
  */
-export function _decode_TestTerminateError(el: _Element) {
+export function _decode_TestTerminateError(el: _Element): TestTerminateError {
     if (!_cached_decoder_for_TestTerminateError) {
         _cached_decoder_for_TestTerminateError = $._decodeSetOf<TestTerminateError_Item>(
             () => _decode_TestTerminateError_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_TestTerminateError: $.ASN1Encoder<TestTerminateError> | 
 export function _encode_TestTerminateError(
     value: TestTerminateError,
     elGetter: $.ASN1Encoder<TestTerminateError>
-) {
+): _Element {
     if (!_cached_encoder_for_TestTerminateError) {
         _cached_encoder_for_TestTerminateError = $._encodeSetOf<TestTerminateError_Item>(
             () => _encode_TestTerminateError_Item,

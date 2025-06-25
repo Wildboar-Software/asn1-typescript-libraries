@@ -35,7 +35,7 @@ let _cached_decoder_for_ProtocolResetInfo: $.ASN1Decoder<ProtocolResetInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolResetInfo} The decoded data structure.
  */
-export function _decode_ProtocolResetInfo(el: _Element) {
+export function _decode_ProtocolResetInfo(el: _Element): ProtocolResetInfo {
     if (!_cached_decoder_for_ProtocolResetInfo) {
         _cached_decoder_for_ProtocolResetInfo = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -56,7 +56,7 @@ let _cached_encoder_for_ProtocolResetInfo: $.ASN1Encoder<ProtocolResetInfo> | nu
 export function _encode_ProtocolResetInfo(
     value: ProtocolResetInfo,
     elGetter: $.ASN1Encoder<ProtocolResetInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtocolResetInfo) {
         _cached_encoder_for_ProtocolResetInfo = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

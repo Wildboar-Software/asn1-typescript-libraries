@@ -51,7 +51,7 @@ let _cached_decoder_for_Attribute_Extensions_Pattern: $.ASN1Decoder<Attribute_Ex
  * @param {_Element} el The element being decoded.
  * @returns {Attribute_Extensions_Pattern} The decoded data structure.
  */
-export function _decode_Attribute_Extensions_Pattern(el: _Element) {
+export function _decode_Attribute_Extensions_Pattern(el: _Element): Attribute_Extensions_Pattern {
   if (!_cached_decoder_for_Attribute_Extensions_Pattern) {
     _cached_decoder_for_Attribute_Extensions_Pattern = $._decodeSequenceOf<Attribute_Extensions_Pattern_Item>(
       () => _decode_Attribute_Extensions_Pattern_Item
@@ -74,7 +74,7 @@ let _cached_encoder_for_Attribute_Extensions_Pattern: $.ASN1Encoder<Attribute_Ex
 export function _encode_Attribute_Extensions_Pattern(
   value: Attribute_Extensions_Pattern,
   elGetter: $.ASN1Encoder<Attribute_Extensions_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Attribute_Extensions_Pattern) {
     _cached_encoder_for_Attribute_Extensions_Pattern = $._encodeSequenceOf<Attribute_Extensions_Pattern_Item>(
       () => _encode_Attribute_Extensions_Pattern_Item,

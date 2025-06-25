@@ -121,7 +121,7 @@ let _cached_decoder_for_MTABindResult_authenticated: $.ASN1Decoder<MTABindResult
  * @param {_Element} el The element being decoded.
  * @returns {MTABindResult_authenticated} The decoded data structure.
  */
-export function _decode_MTABindResult_authenticated(el: _Element) {
+export function _decode_MTABindResult_authenticated(el: _Element): MTABindResult_authenticated {
     if (!_cached_decoder_for_MTABindResult_authenticated) {
         _cached_decoder_for_MTABindResult_authenticated = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_MTABindResult_authenticated: $.ASN1Encoder<MTABindResult
 export function _encode_MTABindResult_authenticated(
     value: MTABindResult_authenticated,
     elGetter: $.ASN1Encoder<MTABindResult_authenticated>
-) {
+): _Element {
     if (!_cached_encoder_for_MTABindResult_authenticated) {
         _cached_encoder_for_MTABindResult_authenticated = function (
             value: MTABindResult_authenticated        ): _Element {

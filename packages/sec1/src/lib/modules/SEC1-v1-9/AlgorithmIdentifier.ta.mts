@@ -112,7 +112,7 @@ let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> 
  * @returns {AlgorithmIdentifier} The decoded data structure.
  */
 export
-function _decode_AlgorithmIdentifier (el: _Element) {
+function _decode_AlgorithmIdentifier (el: _Element): AlgorithmIdentifier {
     if (!_cached_decoder_for_AlgorithmIdentifier) { _cached_decoder_for_AlgorithmIdentifier = function (el: _Element): AlgorithmIdentifier {
     let algorithm!: OBJECT_IDENTIFIER;
     let parameters: OPTIONAL<_Element>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_AlgorithmIdentifier: $.ASN1Encoder<AlgorithmIdentifier> 
  * @returns {_Element} The AlgorithmIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_AlgorithmIdentifier (value: AlgorithmIdentifier, elGetter: $.ASN1Encoder<AlgorithmIdentifier>) {
+function _encode_AlgorithmIdentifier (value: AlgorithmIdentifier, elGetter: $.ASN1Encoder<AlgorithmIdentifier>): _Element {
     if (!_cached_encoder_for_AlgorithmIdentifier) { _cached_encoder_for_AlgorithmIdentifier = function (value: AlgorithmIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

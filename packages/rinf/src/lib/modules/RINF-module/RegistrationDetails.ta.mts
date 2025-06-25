@@ -125,7 +125,7 @@ let _cached_decoder_for_RegistrationDetails: $.ASN1Decoder<RegistrationDetails> 
  * @param {_Element} el The element being decoded.
  * @returns {RegistrationDetails} The decoded data structure.
  */
-export function _decode_RegistrationDetails(el: _Element) {
+export function _decode_RegistrationDetails(el: _Element): RegistrationDetails {
   if (!_cached_decoder_for_RegistrationDetails) {
     _cached_decoder_for_RegistrationDetails = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_RegistrationDetails: $.ASN1Encoder<RegistrationDetails> 
 export function _encode_RegistrationDetails(
   value: RegistrationDetails,
   elGetter: $.ASN1Encoder<RegistrationDetails>
-) {
+): _Element {
   if (!_cached_encoder_for_RegistrationDetails) {
     _cached_encoder_for_RegistrationDetails = function (
       value: RegistrationDetails    ): _Element {

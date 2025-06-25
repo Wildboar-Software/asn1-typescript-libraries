@@ -39,7 +39,7 @@ let _cached_decoder_for_Day: $.ASN1Decoder<Day> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Day} The decoded data structure.
  */
-export function _decode_Day(el: _Element) {
+export function _decode_Day(el: _Element): Day {
   if (!_cached_decoder_for_Day) {
     _cached_decoder_for_Day = _decode_DateTimeType;
   }
@@ -57,7 +57,7 @@ let _cached_encoder_for_Day: $.ASN1Encoder<Day> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Day, encoded as an ASN.1 Element.
  */
-export function _encode_Day(value: Day, elGetter: $.ASN1Encoder<Day>) {
+export function _encode_Day(value: Day, elGetter: $.ASN1Encoder<Day>): _Element {
   if (!_cached_encoder_for_Day) {
     _cached_encoder_for_Day = _encode_DateTimeType;
   }

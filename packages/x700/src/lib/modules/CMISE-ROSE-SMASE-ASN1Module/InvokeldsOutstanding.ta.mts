@@ -32,7 +32,7 @@ let _cached_decoder_for_InvokeldsOutstanding: $.ASN1Decoder<InvokeldsOutstanding
  * @param {_Element} el The element being decoded.
  * @returns {InvokeldsOutstanding} The decoded data structure.
  */
-export function _decode_InvokeldsOutstanding(el: _Element) {
+export function _decode_InvokeldsOutstanding(el: _Element): InvokeldsOutstanding {
     if (!_cached_decoder_for_InvokeldsOutstanding) {
         _cached_decoder_for_InvokeldsOutstanding = $._decodeSetOf<INTEGER>(
             () => $._decodeInteger
@@ -53,7 +53,7 @@ let _cached_encoder_for_InvokeldsOutstanding: $.ASN1Encoder<InvokeldsOutstanding
 export function _encode_InvokeldsOutstanding(
     value: InvokeldsOutstanding,
     elGetter: $.ASN1Encoder<InvokeldsOutstanding>
-) {
+): _Element {
     if (!_cached_encoder_for_InvokeldsOutstanding) {
         _cached_encoder_for_InvokeldsOutstanding = $._encodeSetOf<INTEGER>(
             () => $._encodeInteger,

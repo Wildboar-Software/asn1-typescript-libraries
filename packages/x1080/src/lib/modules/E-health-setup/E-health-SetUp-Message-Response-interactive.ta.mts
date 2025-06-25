@@ -46,7 +46,7 @@ let _cached_decoder_for_E_health_SetUp_Message_Response_interactive: $.ASN1Decod
  */
 export function _decode_E_health_SetUp_Message_Response_interactive(
     el: _Element
-) {
+): E_health_SetUp_Message_Response_interactive {
     if (!_cached_decoder_for_E_health_SetUp_Message_Response_interactive) {
         _cached_decoder_for_E_health_SetUp_Message_Response_interactive = $._decode_inextensible_choice<E_health_SetUp_Message_Response_interactive>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_E_health_SetUp_Message_Response_interactive: $.ASN1Encod
 export function _encode_E_health_SetUp_Message_Response_interactive(
     value: E_health_SetUp_Message_Response_interactive,
     elGetter: $.ASN1Encoder<E_health_SetUp_Message_Response_interactive>
-) {
+): _Element {
     if (!_cached_encoder_for_E_health_SetUp_Message_Response_interactive) {
         _cached_encoder_for_E_health_SetUp_Message_Response_interactive = $._encode_choice<E_health_SetUp_Message_Response_interactive>(
             {

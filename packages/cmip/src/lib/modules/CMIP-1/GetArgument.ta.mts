@@ -258,7 +258,7 @@ let _cached_decoder_for_GetArgument: $.ASN1Decoder<GetArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GetArgument} The decoded data structure.
  */
-export function _decode_GetArgument(el: _Element) {
+export function _decode_GetArgument(el: _Element): GetArgument {
   if (!_cached_decoder_for_GetArgument) {
     _cached_decoder_for_GetArgument = function (el: _Element): GetArgument {
       let baseManagedObjectClass!: ObjectClass;
@@ -338,7 +338,7 @@ let _cached_encoder_for_GetArgument: $.ASN1Encoder<GetArgument> | null = null;
 export function _encode_GetArgument(
   value: GetArgument,
   elGetter: $.ASN1Encoder<GetArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_GetArgument) {
     _cached_encoder_for_GetArgument = function (
       value: GetArgument    ): _Element {

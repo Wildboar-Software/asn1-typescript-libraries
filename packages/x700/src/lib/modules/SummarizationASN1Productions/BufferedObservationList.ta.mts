@@ -35,7 +35,7 @@ let _cached_decoder_for_BufferedObservationList: $.ASN1Decoder<BufferedObservati
  * @param {_Element} el The element being decoded.
  * @returns {BufferedObservationList} The decoded data structure.
  */
-export function _decode_BufferedObservationList(el: _Element) {
+export function _decode_BufferedObservationList(el: _Element): BufferedObservationList {
     if (!_cached_decoder_for_BufferedObservationList) {
         _cached_decoder_for_BufferedObservationList = $._decodeSetOf<BufferedObservationScan>(
             () => _decode_BufferedObservationScan
@@ -56,7 +56,7 @@ let _cached_encoder_for_BufferedObservationList: $.ASN1Encoder<BufferedObservati
 export function _encode_BufferedObservationList(
     value: BufferedObservationList,
     elGetter: $.ASN1Encoder<BufferedObservationList>
-) {
+): _Element {
     if (!_cached_encoder_for_BufferedObservationList) {
         _cached_encoder_for_BufferedObservationList = $._encodeSetOf<BufferedObservationScan>(
             () => _encode_BufferedObservationScan,

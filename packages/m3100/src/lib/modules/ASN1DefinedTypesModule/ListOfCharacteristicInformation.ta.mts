@@ -38,7 +38,7 @@ let _cached_decoder_for_ListOfCharacteristicInformation: $.ASN1Decoder<ListOfCha
  * @param {_Element} el The element being decoded.
  * @returns {ListOfCharacteristicInformation} The decoded data structure.
  */
-export function _decode_ListOfCharacteristicInformation(el: _Element) {
+export function _decode_ListOfCharacteristicInformation(el: _Element): ListOfCharacteristicInformation {
     if (!_cached_decoder_for_ListOfCharacteristicInformation) {
         _cached_decoder_for_ListOfCharacteristicInformation = $._decodeSetOf<CharacteristicInformation>(
             () => _decode_CharacteristicInformation
@@ -61,7 +61,7 @@ let _cached_encoder_for_ListOfCharacteristicInformation: $.ASN1Encoder<ListOfCha
 export function _encode_ListOfCharacteristicInformation(
     value: ListOfCharacteristicInformation,
     elGetter: $.ASN1Encoder<ListOfCharacteristicInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ListOfCharacteristicInformation) {
         _cached_encoder_for_ListOfCharacteristicInformation = $._encodeSetOf<CharacteristicInformation>(
             () => _encode_CharacteristicInformation,

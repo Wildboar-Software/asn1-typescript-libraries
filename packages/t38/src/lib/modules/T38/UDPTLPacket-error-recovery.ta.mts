@@ -40,7 +40,7 @@ let _cached_decoder_for_UDPTLPacket_error_recovery: $.ASN1Decoder<UDPTLPacket_er
  * @param {_Element} el The element being decoded.
  * @returns {UDPTLPacket_error_recovery} The decoded data structure.
  */
-export function _decode_UDPTLPacket_error_recovery(el: _Element) {
+export function _decode_UDPTLPacket_error_recovery(el: _Element): UDPTLPacket_error_recovery {
   if (!_cached_decoder_for_UDPTLPacket_error_recovery) {
     _cached_decoder_for_UDPTLPacket_error_recovery = $._decode_inextensible_choice<UDPTLPacket_error_recovery>(
       {
@@ -69,7 +69,7 @@ let _cached_encoder_for_UDPTLPacket_error_recovery: $.ASN1Encoder<UDPTLPacket_er
 export function _encode_UDPTLPacket_error_recovery(
   value: UDPTLPacket_error_recovery,
   elGetter: $.ASN1Encoder<UDPTLPacket_error_recovery>
-) {
+): _Element {
   if (!_cached_encoder_for_UDPTLPacket_error_recovery) {
     _cached_encoder_for_UDPTLPacket_error_recovery = $._encode_choice<UDPTLPacket_error_recovery>(
       {

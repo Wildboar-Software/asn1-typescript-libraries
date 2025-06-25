@@ -118,7 +118,7 @@ let _cached_decoder_for_ConnectivityThreshold_time: $.ASN1Decoder<ConnectivityTh
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityThreshold_time} The decoded data structure.
  */
-export function _decode_ConnectivityThreshold_time(el: _Element) {
+export function _decode_ConnectivityThreshold_time(el: _Element): ConnectivityThreshold_time {
     if (!_cached_decoder_for_ConnectivityThreshold_time) {
         _cached_decoder_for_ConnectivityThreshold_time = function (
             el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_ConnectivityThreshold_time: $.ASN1Encoder<ConnectivityTh
 export function _encode_ConnectivityThreshold_time(
     value: ConnectivityThreshold_time,
     elGetter: $.ASN1Encoder<ConnectivityThreshold_time>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityThreshold_time) {
         _cached_encoder_for_ConnectivityThreshold_time = function (
             value: ConnectivityThreshold_time        ): _Element {

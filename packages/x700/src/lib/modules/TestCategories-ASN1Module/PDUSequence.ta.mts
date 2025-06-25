@@ -155,7 +155,7 @@ let _cached_decoder_for_PDUSequence: $.ASN1Decoder<PDUSequence> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PDUSequence} The decoded data structure.
  */
-export function _decode_PDUSequence(el: _Element) {
+export function _decode_PDUSequence(el: _Element): PDUSequence {
     if (!_cached_decoder_for_PDUSequence) {
         _cached_decoder_for_PDUSequence = function (el: _Element): PDUSequence {
             let pDUType!: PDUType;
@@ -207,7 +207,7 @@ let _cached_encoder_for_PDUSequence: $.ASN1Encoder<PDUSequence> | null = null;
 export function _encode_PDUSequence(
     value: PDUSequence,
     elGetter: $.ASN1Encoder<PDUSequence>
-) {
+): _Element {
     if (!_cached_encoder_for_PDUSequence) {
         _cached_encoder_for_PDUSequence = function (
             value: PDUSequence        ): _Element {

@@ -147,7 +147,7 @@ let _cached_decoder_for_TokenBA2: $.ASN1Decoder<TokenBA2> | null = null;
  * @returns {TokenBA2} The decoded data structure.
  */
 export
-function _decode_TokenBA2 (el: _Element) {
+function _decode_TokenBA2 (el: _Element): TokenBA2 {
     if (!_cached_decoder_for_TokenBA2) { _cached_decoder_for_TokenBA2 = function (el: _Element): TokenBA2 {
     let randomC!: RandomNumber;
     let entityA: OPTIONAL<GeneralNames>;
@@ -187,7 +187,7 @@ let _cached_encoder_for_TokenBA2: $.ASN1Encoder<TokenBA2> | null = null;
  * @returns {_Element} The TokenBA2, encoded as an ASN.1 Element.
  */
 export
-function _encode_TokenBA2 (value: TokenBA2, elGetter: $.ASN1Encoder<TokenBA2>) {
+function _encode_TokenBA2 (value: TokenBA2, elGetter: $.ASN1Encoder<TokenBA2>): _Element {
     if (!_cached_encoder_for_TokenBA2) { _cached_encoder_for_TokenBA2 = function (value: TokenBA2): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

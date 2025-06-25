@@ -116,7 +116,7 @@ let _cached_decoder_for_SecurityProcessingInfo: $.ASN1Decoder<SecurityProcessing
  * @param {_Element} el The element being decoded.
  * @returns {SecurityProcessingInfo} The decoded data structure.
  */
-export function _decode_SecurityProcessingInfo(el: _Element) {
+export function _decode_SecurityProcessingInfo(el: _Element): SecurityProcessingInfo {
     if (!_cached_decoder_for_SecurityProcessingInfo) {
         _cached_decoder_for_SecurityProcessingInfo = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_SecurityProcessingInfo: $.ASN1Encoder<SecurityProcessing
 export function _encode_SecurityProcessingInfo(
     value: SecurityProcessingInfo,
     elGetter: $.ASN1Encoder<SecurityProcessingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityProcessingInfo) {
         _cached_encoder_for_SecurityProcessingInfo = function (
             value: SecurityProcessingInfo        ): _Element {

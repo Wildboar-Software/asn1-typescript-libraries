@@ -118,7 +118,7 @@ let _cached_decoder_for_OtherSigningCertificate: $.ASN1Decoder<OtherSigningCerti
  * @returns {OtherSigningCertificate} The decoded data structure.
  */
 export
-function _decode_OtherSigningCertificate (el: _Element) {
+function _decode_OtherSigningCertificate (el: _Element): OtherSigningCertificate {
     if (!_cached_decoder_for_OtherSigningCertificate) { _cached_decoder_for_OtherSigningCertificate = function (el: _Element): OtherSigningCertificate {
     let certs!: OtherCertID[];
     let policies: OPTIONAL<PolicyInformation[]>;
@@ -150,7 +150,7 @@ let _cached_encoder_for_OtherSigningCertificate: $.ASN1Encoder<OtherSigningCerti
  * @returns {_Element} The OtherSigningCertificate, encoded as an ASN.1 Element.
  */
 export
-function _encode_OtherSigningCertificate (value: OtherSigningCertificate, elGetter: $.ASN1Encoder<OtherSigningCertificate>) {
+function _encode_OtherSigningCertificate (value: OtherSigningCertificate, elGetter: $.ASN1Encoder<OtherSigningCertificate>): _Element {
     if (!_cached_encoder_for_OtherSigningCertificate) { _cached_encoder_for_OtherSigningCertificate = function (value: OtherSigningCertificate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

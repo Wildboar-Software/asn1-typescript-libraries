@@ -186,7 +186,7 @@ let _cached_decoder_for_DataMessage: $.ASN1Decoder<DataMessage> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataMessage} The decoded data structure.
  */
-export function _decode_DataMessage(el: _Element) {
+export function _decode_DataMessage(el: _Element): DataMessage {
     if (!_cached_decoder_for_DataMessage) {
         _cached_decoder_for_DataMessage = function (el: _Element): DataMessage {
             let quantity!: OBJECT_IDENTIFIER;
@@ -254,7 +254,7 @@ let _cached_encoder_for_DataMessage: $.ASN1Encoder<DataMessage> | null = null;
 export function _encode_DataMessage(
     value: DataMessage,
     elGetter: $.ASN1Encoder<DataMessage>
-) {
+): _Element {
     if (!_cached_encoder_for_DataMessage) {
         _cached_encoder_for_DataMessage = function (
             value: DataMessage        ): _Element {

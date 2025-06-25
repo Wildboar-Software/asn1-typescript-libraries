@@ -45,7 +45,7 @@ let _cached_decoder_for_TerminationPointInformation: $.ASN1Decoder<TerminationPo
  * @param {_Element} el The element being decoded.
  * @returns {TerminationPointInformation} The decoded data structure.
  */
-export function _decode_TerminationPointInformation(el: _Element) {
+export function _decode_TerminationPointInformation(el: _Element): TerminationPointInformation {
     if (!_cached_decoder_for_TerminationPointInformation) {
         _cached_decoder_for_TerminationPointInformation = $._decode_inextensible_choice<TerminationPointInformation>(
             {
@@ -87,7 +87,7 @@ let _cached_encoder_for_TerminationPointInformation: $.ASN1Encoder<TerminationPo
 export function _encode_TerminationPointInformation(
     value: TerminationPointInformation,
     elGetter: $.ASN1Encoder<TerminationPointInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_TerminationPointInformation) {
         _cached_encoder_for_TerminationPointInformation = $._encode_choice<TerminationPointInformation>(
             {

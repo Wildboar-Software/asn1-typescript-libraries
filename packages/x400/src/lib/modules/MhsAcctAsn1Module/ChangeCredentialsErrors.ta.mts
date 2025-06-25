@@ -38,7 +38,7 @@ let _cached_decoder_for_ChangeCredentialsErrors: $.ASN1Decoder<ChangeCredentials
  * @param {_Element} el The element being decoded.
  * @returns {ChangeCredentialsErrors} The decoded data structure.
  */
-export function _decode_ChangeCredentialsErrors(el: _Element) {
+export function _decode_ChangeCredentialsErrors(el: _Element): ChangeCredentialsErrors {
     if (!_cached_decoder_for_ChangeCredentialsErrors) {
         _cached_decoder_for_ChangeCredentialsErrors = _decode_AdministrationError;
     }
@@ -57,7 +57,7 @@ let _cached_encoder_for_ChangeCredentialsErrors: $.ASN1Encoder<ChangeCredentials
 export function _encode_ChangeCredentialsErrors(
     value: ChangeCredentialsErrors,
     elGetter: $.ASN1Encoder<ChangeCredentialsErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangeCredentialsErrors) {
         _cached_encoder_for_ChangeCredentialsErrors = _encode_AdministrationError;
     }

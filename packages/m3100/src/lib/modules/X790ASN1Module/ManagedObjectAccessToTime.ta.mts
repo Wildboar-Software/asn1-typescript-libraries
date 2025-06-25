@@ -38,7 +38,7 @@ let _cached_decoder_for_ManagedObjectAccessToTime: $.ASN1Decoder<ManagedObjectAc
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectAccessToTime} The decoded data structure.
  */
-export function _decode_ManagedObjectAccessToTime(el: _Element) {
+export function _decode_ManagedObjectAccessToTime(el: _Element): ManagedObjectAccessToTime {
     if (!_cached_decoder_for_ManagedObjectAccessToTime) {
         _cached_decoder_for_ManagedObjectAccessToTime = _decode_StopTime;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ManagedObjectAccessToTime: $.ASN1Encoder<ManagedObjectAc
 export function _encode_ManagedObjectAccessToTime(
     value: ManagedObjectAccessToTime,
     elGetter: $.ASN1Encoder<ManagedObjectAccessToTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedObjectAccessToTime) {
         _cached_encoder_for_ManagedObjectAccessToTime = _encode_StopTime;
     }

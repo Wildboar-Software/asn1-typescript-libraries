@@ -53,7 +53,7 @@ let _cached_decoder_for_OperationSpecifications_Item_scheduledOperations: $.ASN1
  */
 export function _decode_OperationSpecifications_Item_scheduledOperations(
     el: _Element
-) {
+): OperationSpecifications_Item_scheduledOperations {
     if (!_cached_decoder_for_OperationSpecifications_Item_scheduledOperations) {
         _cached_decoder_for_OperationSpecifications_Item_scheduledOperations = $._decode_inextensible_choice<OperationSpecifications_Item_scheduledOperations>(
             {
@@ -93,7 +93,7 @@ let _cached_encoder_for_OperationSpecifications_Item_scheduledOperations: $.ASN1
 export function _encode_OperationSpecifications_Item_scheduledOperations(
     value: OperationSpecifications_Item_scheduledOperations,
     elGetter: $.ASN1Encoder<OperationSpecifications_Item_scheduledOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationSpecifications_Item_scheduledOperations) {
         _cached_encoder_for_OperationSpecifications_Item_scheduledOperations = $._encode_choice<OperationSpecifications_Item_scheduledOperations>(
             {

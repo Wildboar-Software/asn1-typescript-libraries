@@ -35,7 +35,7 @@ let _cached_decoder_for_AlphaCode: $.ASN1Decoder<AlphaCode> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AlphaCode} The decoded data structure.
  */
-export function _decode_AlphaCode(el: _Element) {
+export function _decode_AlphaCode(el: _Element): AlphaCode {
     if (!_cached_decoder_for_AlphaCode) {
         _cached_decoder_for_AlphaCode = _decode_UniversalOrBMPString;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_AlphaCode: $.ASN1Encoder<AlphaCode> | null = null;
 export function _encode_AlphaCode(
     value: AlphaCode,
     elGetter: $.ASN1Encoder<AlphaCode>
-) {
+): _Element {
     if (!_cached_encoder_for_AlphaCode) {
         _cached_encoder_for_AlphaCode = _encode_UniversalOrBMPString;
     }

@@ -141,7 +141,7 @@ let _cached_decoder_for_ObservationScan: $.ASN1Decoder<ObservationScan> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ObservationScan} The decoded data structure.
  */
-export function _decode_ObservationScan(el: _Element) {
+export function _decode_ObservationScan(el: _Element): ObservationScan {
     if (!_cached_decoder_for_ObservationScan) {
         _cached_decoder_for_ObservationScan = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_ObservationScan: $.ASN1Encoder<ObservationScan> | null =
 export function _encode_ObservationScan(
     value: ObservationScan,
     elGetter: $.ASN1Encoder<ObservationScan>
-) {
+): _Element {
     if (!_cached_encoder_for_ObservationScan) {
         _cached_encoder_for_ObservationScan = function (
             value: ObservationScan        ): _Element {

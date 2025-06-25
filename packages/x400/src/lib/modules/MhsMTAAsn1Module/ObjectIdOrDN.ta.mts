@@ -41,7 +41,7 @@ let _cached_decoder_for_ObjectIdOrDN: $.ASN1Decoder<ObjectIdOrDN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectIdOrDN} The decoded data structure.
  */
-export function _decode_ObjectIdOrDN(el: _Element) {
+export function _decode_ObjectIdOrDN(el: _Element): ObjectIdOrDN {
     if (!_cached_decoder_for_ObjectIdOrDN) {
         _cached_decoder_for_ObjectIdOrDN = $._decode_inextensible_choice<ObjectIdOrDN>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_ObjectIdOrDN: $.ASN1Encoder<ObjectIdOrDN> | null = null;
 export function _encode_ObjectIdOrDN(
     value: ObjectIdOrDN,
     elGetter: $.ASN1Encoder<ObjectIdOrDN>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectIdOrDN) {
         _cached_encoder_for_ObjectIdOrDN = $._encode_choice<ObjectIdOrDN>(
             {

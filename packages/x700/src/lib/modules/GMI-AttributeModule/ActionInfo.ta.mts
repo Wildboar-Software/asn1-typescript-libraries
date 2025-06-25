@@ -38,7 +38,7 @@ let _cached_decoder_for_ActionInfo: $.ASN1Decoder<ActionInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ActionInfo} The decoded data structure.
  */
-export function _decode_ActionInfo(el: _Element) {
+export function _decode_ActionInfo(el: _Element): ActionInfo {
     if (!_cached_decoder_for_ActionInfo) {
         _cached_decoder_for_ActionInfo = $._decodeSetOf<ManagementExtension>(
             () => _decode_ManagementExtension
@@ -61,7 +61,7 @@ let _cached_encoder_for_ActionInfo: $.ASN1Encoder<ActionInfo> | null = null;
 export function _encode_ActionInfo(
     value: ActionInfo,
     elGetter: $.ASN1Encoder<ActionInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ActionInfo) {
         _cached_encoder_for_ActionInfo = $._encodeSetOf<ManagementExtension>(
             () => _encode_ManagementExtension,

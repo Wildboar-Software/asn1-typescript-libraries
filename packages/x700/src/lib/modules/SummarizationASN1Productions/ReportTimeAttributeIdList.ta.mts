@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportTimeAttributeIdList: $.ASN1Decoder<ReportTimeAttri
  * @param {_Element} el The element being decoded.
  * @returns {ReportTimeAttributeIdList} The decoded data structure.
  */
-export function _decode_ReportTimeAttributeIdList(el: _Element) {
+export function _decode_ReportTimeAttributeIdList(el: _Element): ReportTimeAttributeIdList {
     if (!_cached_decoder_for_ReportTimeAttributeIdList) {
         _cached_decoder_for_ReportTimeAttributeIdList = $._decodeSetOf<AttributeId>(
             () => _decode_AttributeId
@@ -56,7 +56,7 @@ let _cached_encoder_for_ReportTimeAttributeIdList: $.ASN1Encoder<ReportTimeAttri
 export function _encode_ReportTimeAttributeIdList(
     value: ReportTimeAttributeIdList,
     elGetter: $.ASN1Encoder<ReportTimeAttributeIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportTimeAttributeIdList) {
         _cached_encoder_for_ReportTimeAttributeIdList = $._encodeSetOf<AttributeId>(
             () => _encode_AttributeId,

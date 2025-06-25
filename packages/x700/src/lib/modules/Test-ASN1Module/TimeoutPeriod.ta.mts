@@ -35,7 +35,7 @@ let _cached_decoder_for_TimeoutPeriod: $.ASN1Decoder<TimeoutPeriod> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TimeoutPeriod} The decoded data structure.
  */
-export function _decode_TimeoutPeriod(el: _Element) {
+export function _decode_TimeoutPeriod(el: _Element): TimeoutPeriod {
     if (!_cached_decoder_for_TimeoutPeriod) {
         _cached_decoder_for_TimeoutPeriod = _decode_Timespec;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TimeoutPeriod: $.ASN1Encoder<TimeoutPeriod> | null = nul
 export function _encode_TimeoutPeriod(
     value: TimeoutPeriod,
     elGetter: $.ASN1Encoder<TimeoutPeriod>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeoutPeriod) {
         _cached_encoder_for_TimeoutPeriod = _encode_Timespec;
     }

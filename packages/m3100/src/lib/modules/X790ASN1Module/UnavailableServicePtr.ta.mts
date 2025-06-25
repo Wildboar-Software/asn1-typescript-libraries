@@ -38,7 +38,7 @@ let _cached_decoder_for_UnavailableServicePtr: $.ASN1Decoder<UnavailableServiceP
  * @param {_Element} el The element being decoded.
  * @returns {UnavailableServicePtr} The decoded data structure.
  */
-export function _decode_UnavailableServicePtr(el: _Element) {
+export function _decode_UnavailableServicePtr(el: _Element): UnavailableServicePtr {
     if (!_cached_decoder_for_UnavailableServicePtr) {
         _cached_decoder_for_UnavailableServicePtr = _decode_RelatedObject;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_UnavailableServicePtr: $.ASN1Encoder<UnavailableServiceP
 export function _encode_UnavailableServicePtr(
     value: UnavailableServicePtr,
     elGetter: $.ASN1Encoder<UnavailableServicePtr>
-) {
+): _Element {
     if (!_cached_encoder_for_UnavailableServicePtr) {
         _cached_encoder_for_UnavailableServicePtr = _encode_RelatedObject;
     }

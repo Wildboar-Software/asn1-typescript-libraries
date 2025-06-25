@@ -35,7 +35,7 @@ let _cached_decoder_for_OnceReportAttributeIdList: $.ASN1Decoder<OnceReportAttri
  * @param {_Element} el The element being decoded.
  * @returns {OnceReportAttributeIdList} The decoded data structure.
  */
-export function _decode_OnceReportAttributeIdList(el: _Element) {
+export function _decode_OnceReportAttributeIdList(el: _Element): OnceReportAttributeIdList {
     if (!_cached_decoder_for_OnceReportAttributeIdList) {
         _cached_decoder_for_OnceReportAttributeIdList = $._decodeSetOf<AttributeId>(
             () => _decode_AttributeId
@@ -56,7 +56,7 @@ let _cached_encoder_for_OnceReportAttributeIdList: $.ASN1Encoder<OnceReportAttri
 export function _encode_OnceReportAttributeIdList(
     value: OnceReportAttributeIdList,
     elGetter: $.ASN1Encoder<OnceReportAttributeIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_OnceReportAttributeIdList) {
         _cached_encoder_for_OnceReportAttributeIdList = $._encodeSetOf<AttributeId>(
             () => _encode_AttributeId,

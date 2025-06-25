@@ -120,7 +120,7 @@ let _cached_decoder_for_Summary_present_Item: $.ASN1Decoder<Summary_present_Item
  * @param {_Element} el The element being decoded.
  * @returns {Summary_present_Item} The decoded data structure.
  */
-export function _decode_Summary_present_Item(el: _Element) {
+export function _decode_Summary_present_Item(el: _Element): Summary_present_Item {
     if (!_cached_decoder_for_Summary_present_Item) {
         _cached_decoder_for_Summary_present_Item = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_Summary_present_Item: $.ASN1Encoder<Summary_present_Item
 export function _encode_Summary_present_Item(
     value: Summary_present_Item,
     elGetter: $.ASN1Encoder<Summary_present_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Summary_present_Item) {
         _cached_encoder_for_Summary_present_Item = function (
             value: Summary_present_Item        ): _Element {

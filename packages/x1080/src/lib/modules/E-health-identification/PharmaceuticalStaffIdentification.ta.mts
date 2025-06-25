@@ -153,7 +153,7 @@ let _cached_decoder_for_PharmaceuticalStaffIdentification: $.ASN1Decoder<Pharmac
  * @param {_Element} el The element being decoded.
  * @returns {PharmaceuticalStaffIdentification} The decoded data structure.
  */
-export function _decode_PharmaceuticalStaffIdentification(el: _Element) {
+export function _decode_PharmaceuticalStaffIdentification(el: _Element): PharmaceuticalStaffIdentification {
     if (!_cached_decoder_for_PharmaceuticalStaffIdentification) {
         _cached_decoder_for_PharmaceuticalStaffIdentification = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_PharmaceuticalStaffIdentification: $.ASN1Encoder<Pharmac
 export function _encode_PharmaceuticalStaffIdentification(
     value: PharmaceuticalStaffIdentification,
     elGetter: $.ASN1Encoder<PharmaceuticalStaffIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_PharmaceuticalStaffIdentification) {
         _cached_encoder_for_PharmaceuticalStaffIdentification = function (
             value: PharmaceuticalStaffIdentification        ): _Element {

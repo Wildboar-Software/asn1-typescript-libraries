@@ -147,7 +147,7 @@ let _cached_decoder_for_ActionErrorInfo: $.ASN1Decoder<ActionErrorInfo> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ActionErrorInfo} The decoded data structure.
  */
-export function _decode_ActionErrorInfo(el: _Element) {
+export function _decode_ActionErrorInfo(el: _Element): ActionErrorInfo {
   if (!_cached_decoder_for_ActionErrorInfo) {
     _cached_decoder_for_ActionErrorInfo = function (
       el: _Element
@@ -186,7 +186,7 @@ let _cached_encoder_for_ActionErrorInfo: $.ASN1Encoder<ActionErrorInfo> | null =
 export function _encode_ActionErrorInfo(
   value: ActionErrorInfo,
   elGetter: $.ASN1Encoder<ActionErrorInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_ActionErrorInfo) {
     _cached_encoder_for_ActionErrorInfo = function (
       value: ActionErrorInfo    ): _Element {

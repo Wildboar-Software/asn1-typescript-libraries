@@ -38,7 +38,7 @@ let _cached_decoder_for_SmUserInfoReceived: $.ASN1Decoder<SmUserInfoReceived> | 
  * @param {_Element} el The element being decoded.
  * @returns {SmUserInfoReceived} The decoded data structure.
  */
-export function _decode_SmUserInfoReceived(el: _Element) {
+export function _decode_SmUserInfoReceived(el: _Element): SmUserInfoReceived {
     if (!_cached_decoder_for_SmUserInfoReceived) {
         _cached_decoder_for_SmUserInfoReceived = $._decode_inextensible_choice<SmUserInfoReceived>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_SmUserInfoReceived: $.ASN1Encoder<SmUserInfoReceived> | 
 export function _encode_SmUserInfoReceived(
     value: SmUserInfoReceived,
     elGetter: $.ASN1Encoder<SmUserInfoReceived>
-) {
+): _Element {
     if (!_cached_encoder_for_SmUserInfoReceived) {
         _cached_encoder_for_SmUserInfoReceived = $._encode_choice<SmUserInfoReceived>(
             {

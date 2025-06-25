@@ -32,7 +32,7 @@ let _cached_decoder_for_ResponsibilityPassingAllowedField: $.ASN1Decoder<Respons
  * @param {_Element} el The element being decoded.
  * @returns {ResponsibilityPassingAllowedField} The decoded data structure.
  */
-export function _decode_ResponsibilityPassingAllowedField(el: _Element) {
+export function _decode_ResponsibilityPassingAllowedField(el: _Element): ResponsibilityPassingAllowedField {
     if (!_cached_decoder_for_ResponsibilityPassingAllowedField) {
         _cached_decoder_for_ResponsibilityPassingAllowedField =
             $._decodeBoolean;
@@ -52,7 +52,7 @@ let _cached_encoder_for_ResponsibilityPassingAllowedField: $.ASN1Encoder<Respons
 export function _encode_ResponsibilityPassingAllowedField(
     value: ResponsibilityPassingAllowedField,
     elGetter: $.ASN1Encoder<ResponsibilityPassingAllowedField>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponsibilityPassingAllowedField) {
         _cached_encoder_for_ResponsibilityPassingAllowedField =
             $._encodeBoolean;

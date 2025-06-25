@@ -42,7 +42,7 @@ let _cached_decoder_for_ProtectionStatusR1_Item_lockout: $.ASN1Decoder<Protectio
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionStatusR1_Item_lockout} The decoded data structure.
  */
-export function _decode_ProtectionStatusR1_Item_lockout(el: _Element) {
+export function _decode_ProtectionStatusR1_Item_lockout(el: _Element): ProtectionStatusR1_Item_lockout {
     if (!_cached_decoder_for_ProtectionStatusR1_Item_lockout) {
         _cached_decoder_for_ProtectionStatusR1_Item_lockout = $._decode_inextensible_choice<ProtectionStatusR1_Item_lockout>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ProtectionStatusR1_Item_lockout: $.ASN1Encoder<Protectio
 export function _encode_ProtectionStatusR1_Item_lockout(
     value: ProtectionStatusR1_Item_lockout,
     elGetter: $.ASN1Encoder<ProtectionStatusR1_Item_lockout>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionStatusR1_Item_lockout) {
         _cached_encoder_for_ProtectionStatusR1_Item_lockout = $._encode_choice<ProtectionStatusR1_Item_lockout>(
             {

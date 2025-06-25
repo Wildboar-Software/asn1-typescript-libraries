@@ -34,7 +34,7 @@ let _cached_decoder_for_NOTATION: $.ASN1Decoder<NOTATION> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NOTATION} The decoded data structure.
  */
-export function _decode_NOTATION(el: _Element) {
+export function _decode_NOTATION(el: _Element): NOTATION {
   if (!_cached_decoder_for_NOTATION) {
     _cached_decoder_for_NOTATION = _decode_QName;
   }
@@ -55,7 +55,7 @@ let _cached_encoder_for_NOTATION: $.ASN1Encoder<NOTATION> | null = null;
 export function _encode_NOTATION(
   value: NOTATION,
   elGetter: $.ASN1Encoder<NOTATION>
-) {
+): _Element {
   if (!_cached_encoder_for_NOTATION) {
     _cached_encoder_for_NOTATION = _encode_QName;
   }

@@ -41,7 +41,7 @@ let _cached_decoder_for_SpecificIdentifier: $.ASN1Decoder<SpecificIdentifier> | 
  * @returns {SpecificIdentifier} The decoded data structure.
  */
 export
-function _decode_SpecificIdentifier (el: _Element) {
+function _decode_SpecificIdentifier (el: _Element): SpecificIdentifier {
     if (!_cached_decoder_for_SpecificIdentifier) { _cached_decoder_for_SpecificIdentifier = $._decode_inextensible_choice<SpecificIdentifier>({
     "UNIVERSAL 6": [ "oi", $._decodeObjectIdentifier ],
     "UNIVERSAL 2": [ "int", $._decodeInteger ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_SpecificIdentifier: $.ASN1Encoder<SpecificIdentifier> | 
  * @returns {_Element} The SpecificIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_SpecificIdentifier (value: SpecificIdentifier, elGetter: $.ASN1Encoder<SpecificIdentifier>) {
+function _encode_SpecificIdentifier (value: SpecificIdentifier, elGetter: $.ASN1Encoder<SpecificIdentifier>): _Element {
     if (!_cached_encoder_for_SpecificIdentifier) { _cached_encoder_for_SpecificIdentifier = $._encode_choice<SpecificIdentifier>({
     "oi": $._encodeObjectIdentifier,
     "int": $._encodeInteger,

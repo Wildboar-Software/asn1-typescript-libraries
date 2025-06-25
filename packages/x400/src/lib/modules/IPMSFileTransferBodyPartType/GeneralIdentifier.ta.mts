@@ -38,7 +38,7 @@ let _cached_decoder_for_GeneralIdentifier: $.ASN1Decoder<GeneralIdentifier> | nu
  * @param {_Element} el The element being decoded.
  * @returns {GeneralIdentifier} The decoded data structure.
  */
-export function _decode_GeneralIdentifier(el: _Element) {
+export function _decode_GeneralIdentifier(el: _Element): GeneralIdentifier {
     if (!_cached_decoder_for_GeneralIdentifier) {
         _cached_decoder_for_GeneralIdentifier = $._decode_inextensible_choice<GeneralIdentifier>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_GeneralIdentifier: $.ASN1Encoder<GeneralIdentifier> | nu
 export function _encode_GeneralIdentifier(
     value: GeneralIdentifier,
     elGetter: $.ASN1Encoder<GeneralIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralIdentifier) {
         _cached_encoder_for_GeneralIdentifier = $._encode_choice<GeneralIdentifier>(
             {

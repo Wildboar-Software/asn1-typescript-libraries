@@ -158,7 +158,7 @@ let _cached_decoder_for_DomainParameters: $.ASN1Decoder<DomainParameters> | null
  * @param {_Element} el The element being decoded.
  * @returns {DomainParameters} The decoded data structure.
  */
-export function _decode_DomainParameters(el: _Element) {
+export function _decode_DomainParameters(el: _Element): DomainParameters {
     if (!_cached_decoder_for_DomainParameters) {
         _cached_decoder_for_DomainParameters = function (
             el: _Element
@@ -219,7 +219,7 @@ let _cached_encoder_for_DomainParameters: $.ASN1Encoder<DomainParameters> | null
 export function _encode_DomainParameters(
     value: DomainParameters,
     elGetter: $.ASN1Encoder<DomainParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_DomainParameters) {
         _cached_encoder_for_DomainParameters = function (
             value: DomainParameters        ): _Element {

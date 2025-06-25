@@ -38,7 +38,7 @@ let _cached_decoder_for_DefinedAs: $.ASN1Decoder<DefinedAs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DefinedAs} The decoded data structure.
  */
-export function _decode_DefinedAs(el: _Element) {
+export function _decode_DefinedAs(el: _Element): DefinedAs {
     if (!_cached_decoder_for_DefinedAs) {
         _cached_decoder_for_DefinedAs = _decode_TextualRepresentation;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_DefinedAs: $.ASN1Encoder<DefinedAs> | null = null;
 export function _encode_DefinedAs(
     value: DefinedAs,
     elGetter: $.ASN1Encoder<DefinedAs>
-) {
+): _Element {
     if (!_cached_encoder_for_DefinedAs) {
         _cached_encoder_for_DefinedAs = _encode_TextualRepresentation;
     }

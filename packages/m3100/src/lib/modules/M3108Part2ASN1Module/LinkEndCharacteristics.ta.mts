@@ -129,7 +129,7 @@ let _cached_decoder_for_LinkEndCharacteristics: $.ASN1Decoder<LinkEndCharacteris
  * @param {_Element} el The element being decoded.
  * @returns {LinkEndCharacteristics} The decoded data structure.
  */
-export function _decode_LinkEndCharacteristics(el: _Element) {
+export function _decode_LinkEndCharacteristics(el: _Element): LinkEndCharacteristics {
     if (!_cached_decoder_for_LinkEndCharacteristics) {
         _cached_decoder_for_LinkEndCharacteristics = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_LinkEndCharacteristics: $.ASN1Encoder<LinkEndCharacteris
 export function _encode_LinkEndCharacteristics(
     value: LinkEndCharacteristics,
     elGetter: $.ASN1Encoder<LinkEndCharacteristics>
-) {
+): _Element {
     if (!_cached_encoder_for_LinkEndCharacteristics) {
         _cached_encoder_for_LinkEndCharacteristics = function (
             value: LinkEndCharacteristics        ): _Element {

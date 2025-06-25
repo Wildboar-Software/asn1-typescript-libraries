@@ -35,7 +35,7 @@ let _cached_decoder_for_EDIMSynopsis: $.ASN1Decoder<EDIMSynopsis> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EDIMSynopsis} The decoded data structure.
  */
-export function _decode_EDIMSynopsis(el: _Element) {
+export function _decode_EDIMSynopsis(el: _Element): EDIMSynopsis {
     if (!_cached_decoder_for_EDIMSynopsis) {
         _cached_decoder_for_EDIMSynopsis = $._decodeSequenceOf<BodyPartSynopsis>(
             () => _decode_BodyPartSynopsis
@@ -56,7 +56,7 @@ let _cached_encoder_for_EDIMSynopsis: $.ASN1Encoder<EDIMSynopsis> | null = null;
 export function _encode_EDIMSynopsis(
     value: EDIMSynopsis,
     elGetter: $.ASN1Encoder<EDIMSynopsis>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIMSynopsis) {
         _cached_encoder_for_EDIMSynopsis = $._encodeSequenceOf<BodyPartSynopsis>(
             () => _encode_BodyPartSynopsis,

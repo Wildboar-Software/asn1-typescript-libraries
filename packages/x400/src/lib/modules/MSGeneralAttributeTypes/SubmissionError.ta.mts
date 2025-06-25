@@ -88,7 +88,7 @@ let _cached_decoder_for_SubmissionError: $.ASN1Decoder<SubmissionError> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionError} The decoded data structure.
  */
-export function _decode_SubmissionError(el: _Element) {
+export function _decode_SubmissionError(el: _Element): SubmissionError {
     if (!_cached_decoder_for_SubmissionError) {
         _cached_decoder_for_SubmissionError = $._decode_inextensible_choice<SubmissionError>(
             {
@@ -170,7 +170,7 @@ let _cached_encoder_for_SubmissionError: $.ASN1Encoder<SubmissionError> | null =
 export function _encode_SubmissionError(
     value: SubmissionError,
     elGetter: $.ASN1Encoder<SubmissionError>
-) {
+): _Element {
     if (!_cached_encoder_for_SubmissionError) {
         _cached_encoder_for_SubmissionError = $._encode_choice<SubmissionError>(
             {

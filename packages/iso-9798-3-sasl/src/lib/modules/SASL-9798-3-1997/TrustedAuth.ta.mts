@@ -63,7 +63,7 @@ let _cached_decoder_for_TrustedAuth: $.ASN1Decoder<TrustedAuth> | null = null;
  * @returns {TrustedAuth} The decoded data structure.
  */
 export
-function _decode_TrustedAuth (el: _Element) {
+function _decode_TrustedAuth (el: _Element): TrustedAuth {
     if (!_cached_decoder_for_TrustedAuth) { _cached_decoder_for_TrustedAuth = $._decode_inextensible_choice<TrustedAuth>({
     "CONTEXT 0": [ "authorityName", $._decode_implicit<Name>(() => _decode_Name) ],
     "CONTEXT 1": [ "issuerNameHash", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
@@ -86,7 +86,7 @@ let _cached_encoder_for_TrustedAuth: $.ASN1Encoder<TrustedAuth> | null = null;
  * @returns {_Element} The TrustedAuth, encoded as an ASN.1 Element.
  */
 export
-function _encode_TrustedAuth (value: TrustedAuth, elGetter: $.ASN1Encoder<TrustedAuth>) {
+function _encode_TrustedAuth (value: TrustedAuth, elGetter: $.ASN1Encoder<TrustedAuth>): _Element {
     if (!_cached_encoder_for_TrustedAuth) { _cached_encoder_for_TrustedAuth = $._encode_choice<TrustedAuth>({
     "authorityName": $._encode_implicit(_TagClass.context, 0, () => _encode_Name, $.BER),
     "issuerNameHash": $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER),

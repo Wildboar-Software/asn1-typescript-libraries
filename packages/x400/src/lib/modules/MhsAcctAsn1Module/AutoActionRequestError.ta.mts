@@ -105,7 +105,7 @@ let _cached_decoder_for_AutoActionRequestError: $.ASN1Decoder<AutoActionRequestE
  * @param {_Element} el The element being decoded.
  * @returns {AutoActionRequestError} The decoded data structure.
  */
-export function _decode_AutoActionRequestError(el: _Element) {
+export function _decode_AutoActionRequestError(el: _Element): AutoActionRequestError {
     if (!_cached_decoder_for_AutoActionRequestError) {
         _cached_decoder_for_AutoActionRequestError = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_AutoActionRequestError: $.ASN1Encoder<AutoActionRequestE
 export function _encode_AutoActionRequestError(
     value: AutoActionRequestError,
     elGetter: $.ASN1Encoder<AutoActionRequestError>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoActionRequestError) {
         _cached_encoder_for_AutoActionRequestError = function (
             value: AutoActionRequestError        ): _Element {

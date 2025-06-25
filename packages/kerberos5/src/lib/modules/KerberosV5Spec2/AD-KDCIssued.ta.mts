@@ -165,7 +165,7 @@ let _cached_decoder_for_AD_KDCIssued: $.ASN1Decoder<AD_KDCIssued> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AD_KDCIssued} The decoded data structure.
  */
-export function _decode_AD_KDCIssued(el: _Element) {
+export function _decode_AD_KDCIssued(el: _Element): AD_KDCIssued {
   if (!_cached_decoder_for_AD_KDCIssued) {
     _cached_decoder_for_AD_KDCIssued = function (el: _Element): AD_KDCIssued {
       let ad_checksum!: Checksum;
@@ -225,7 +225,7 @@ let _cached_encoder_for_AD_KDCIssued: $.ASN1Encoder<AD_KDCIssued> | null = null;
 export function _encode_AD_KDCIssued(
   value: AD_KDCIssued,
   elGetter: $.ASN1Encoder<AD_KDCIssued>
-) {
+): _Element {
   if (!_cached_encoder_for_AD_KDCIssued) {
     _cached_encoder_for_AD_KDCIssued = function (
       value: AD_KDCIssued    ): _Element {

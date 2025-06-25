@@ -169,7 +169,7 @@ let _cached_decoder_for_EventReportResult: $.ASN1Decoder<EventReportResult> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EventReportResult} The decoded data structure.
  */
-export function _decode_EventReportResult(el: _Element) {
+export function _decode_EventReportResult(el: _Element): EventReportResult {
   if (!_cached_decoder_for_EventReportResult) {
     _cached_decoder_for_EventReportResult = function (
       el: _Element
@@ -231,7 +231,7 @@ let _cached_encoder_for_EventReportResult: $.ASN1Encoder<EventReportResult> | nu
 export function _encode_EventReportResult(
   value: EventReportResult,
   elGetter: $.ASN1Encoder<EventReportResult>
-) {
+): _Element {
   if (!_cached_encoder_for_EventReportResult) {
     _cached_encoder_for_EventReportResult = function (
       value: EventReportResult    ): _Element {

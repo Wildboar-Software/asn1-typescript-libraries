@@ -115,7 +115,7 @@ let _cached_decoder_for_OptionalValidity: $.ASN1Decoder<OptionalValidity> | null
  * @param {_Element} el The element being decoded.
  * @returns {OptionalValidity} The decoded data structure.
  */
-export function _decode_OptionalValidity(el: _Element) {
+export function _decode_OptionalValidity(el: _Element): OptionalValidity {
     if (!_cached_decoder_for_OptionalValidity) {
         _cached_decoder_for_OptionalValidity = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_OptionalValidity: $.ASN1Encoder<OptionalValidity> | null
 export function _encode_OptionalValidity(
     value: OptionalValidity,
     elGetter: $.ASN1Encoder<OptionalValidity>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalValidity) {
         _cached_encoder_for_OptionalValidity = function (
             value: OptionalValidity        ): _Element {

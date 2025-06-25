@@ -38,7 +38,7 @@ let _cached_decoder_for_APOptions: $.ASN1Decoder<APOptions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {APOptions} The decoded data structure.
  */
-export function _decode_APOptions(el: _Element) {
+export function _decode_APOptions(el: _Element): APOptions {
   if (!_cached_decoder_for_APOptions) {
     _cached_decoder_for_APOptions = _decode_KerberosFlags;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_APOptions: $.ASN1Encoder<APOptions> | null = null;
 export function _encode_APOptions(
   value: APOptions,
   elGetter: $.ASN1Encoder<APOptions>
-) {
+): _Element {
   if (!_cached_encoder_for_APOptions) {
     _cached_encoder_for_APOptions = _encode_KerberosFlags;
   }

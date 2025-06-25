@@ -217,7 +217,7 @@ let _cached_decoder_for_DeliveryControls88: $.ASN1Decoder<DeliveryControls88> | 
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryControls88} The decoded data structure.
  */
-export function _decode_DeliveryControls88(el: _Element) {
+export function _decode_DeliveryControls88(el: _Element): DeliveryControls88 {
     if (!_cached_decoder_for_DeliveryControls88) {
         _cached_decoder_for_DeliveryControls88 = function (
             el: _Element
@@ -312,7 +312,7 @@ let _cached_encoder_for_DeliveryControls88: $.ASN1Encoder<DeliveryControls88> | 
 export function _encode_DeliveryControls88(
     value: DeliveryControls88,
     elGetter: $.ASN1Encoder<DeliveryControls88>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryControls88) {
         _cached_encoder_for_DeliveryControls88 = function (
             value: DeliveryControls88        ): _Element {

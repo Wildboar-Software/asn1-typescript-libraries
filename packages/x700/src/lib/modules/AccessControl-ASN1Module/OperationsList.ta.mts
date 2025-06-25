@@ -36,7 +36,7 @@ let _cached_decoder_for_OperationsList: $.ASN1Decoder<OperationsList> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OperationsList} The decoded data structure.
  */
-export function _decode_OperationsList(el: _Element) {
+export function _decode_OperationsList(el: _Element): OperationsList {
     if (!_cached_decoder_for_OperationsList) {
         _cached_decoder_for_OperationsList = $._decodeSetOf<OperationType>(
             () => _decode_OperationType
@@ -57,7 +57,7 @@ let _cached_encoder_for_OperationsList: $.ASN1Encoder<OperationsList> | null = n
 export function _encode_OperationsList(
     value: OperationsList,
     elGetter: $.ASN1Encoder<OperationsList>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationsList) {
         _cached_encoder_for_OperationsList = $._encodeSetOf<OperationType>(
             () => _encode_OperationType,

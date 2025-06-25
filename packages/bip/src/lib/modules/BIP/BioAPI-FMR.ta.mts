@@ -38,7 +38,7 @@ let _cached_decoder_for_BioAPI_FMR: $.ASN1Decoder<BioAPI_FMR> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_FMR} The decoded data structure.
  */
-export function _decode_BioAPI_FMR(el: _Element) {
+export function _decode_BioAPI_FMR(el: _Element): BioAPI_FMR {
   if (!_cached_decoder_for_BioAPI_FMR) {
     _cached_decoder_for_BioAPI_FMR = _decode_SignedInt;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_BioAPI_FMR: $.ASN1Encoder<BioAPI_FMR> | null = null;
 export function _encode_BioAPI_FMR(
   value: BioAPI_FMR,
   elGetter: $.ASN1Encoder<BioAPI_FMR>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_FMR) {
     _cached_encoder_for_BioAPI_FMR = _encode_SignedInt;
   }

@@ -111,7 +111,7 @@ let _cached_decoder_for_ExplicitPtoP: $.ASN1Decoder<ExplicitPtoP> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ExplicitPtoP} The decoded data structure.
  */
-export function _decode_ExplicitPtoP(el: _Element) {
+export function _decode_ExplicitPtoP(el: _Element): ExplicitPtoP {
     if (!_cached_decoder_for_ExplicitPtoP) {
         _cached_decoder_for_ExplicitPtoP = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_ExplicitPtoP: $.ASN1Encoder<ExplicitPtoP> | null = null;
 export function _encode_ExplicitPtoP(
     value: ExplicitPtoP,
     elGetter: $.ASN1Encoder<ExplicitPtoP>
-) {
+): _Element {
     if (!_cached_encoder_for_ExplicitPtoP) {
         _cached_encoder_for_ExplicitPtoP = function (
             value: ExplicitPtoP        ): _Element {

@@ -158,7 +158,7 @@ let _cached_decoder_for_OtherInfo: $.ASN1Decoder<OtherInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OtherInfo} The decoded data structure.
  */
-export function _decode_OtherInfo(el: _Element) {
+export function _decode_OtherInfo(el: _Element): OtherInfo {
     if (!_cached_decoder_for_OtherInfo) {
         _cached_decoder_for_OtherInfo = function (el: _Element): OtherInfo {
             let keyInfo!: AlgorithmIdentifier;
@@ -225,7 +225,7 @@ let _cached_encoder_for_OtherInfo: $.ASN1Encoder<OtherInfo> | null = null;
 export function _encode_OtherInfo(
     value: OtherInfo,
     elGetter: $.ASN1Encoder<OtherInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherInfo) {
         _cached_encoder_for_OtherInfo = function (
             value: OtherInfo        ): _Element {

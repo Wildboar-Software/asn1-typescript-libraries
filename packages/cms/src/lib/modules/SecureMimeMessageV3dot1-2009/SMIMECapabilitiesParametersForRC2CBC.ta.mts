@@ -25,7 +25,7 @@ let _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC: $.ASN1Decoder<SMIM
  * @param {_Element} el The element being decoded.
  * @returns {SMIMECapabilitiesParametersForRC2CBC} The decoded data structure.
  */
-export function _decode_SMIMECapabilitiesParametersForRC2CBC(el: _Element) {
+export function _decode_SMIMECapabilitiesParametersForRC2CBC(el: _Element): SMIMECapabilitiesParametersForRC2CBC {
     if (!_cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC) {
         _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC =
             $._decodeInteger;
@@ -47,7 +47,7 @@ let _cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC: $.ASN1Encoder<SMIM
 export function _encode_SMIMECapabilitiesParametersForRC2CBC(
     value: SMIMECapabilitiesParametersForRC2CBC,
     elGetter: $.ASN1Encoder<SMIMECapabilitiesParametersForRC2CBC>
-) {
+): _Element {
     if (!_cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC) {
         _cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC =
             $._encodeInteger;

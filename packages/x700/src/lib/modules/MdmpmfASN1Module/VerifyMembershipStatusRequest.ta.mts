@@ -35,7 +35,7 @@ let _cached_decoder_for_VerifyMembershipStatusRequest: $.ASN1Decoder<VerifyMembe
  * @param {_Element} el The element being decoded.
  * @returns {VerifyMembershipStatusRequest} The decoded data structure.
  */
-export function _decode_VerifyMembershipStatusRequest(el: _Element) {
+export function _decode_VerifyMembershipStatusRequest(el: _Element): VerifyMembershipStatusRequest {
     if (!_cached_decoder_for_VerifyMembershipStatusRequest) {
         _cached_decoder_for_VerifyMembershipStatusRequest = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_VerifyMembershipStatusRequest: $.ASN1Encoder<VerifyMembe
 export function _encode_VerifyMembershipStatusRequest(
     value: VerifyMembershipStatusRequest,
     elGetter: $.ASN1Encoder<VerifyMembershipStatusRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_VerifyMembershipStatusRequest) {
         _cached_encoder_for_VerifyMembershipStatusRequest = _encode_ObjectInstance;
     }

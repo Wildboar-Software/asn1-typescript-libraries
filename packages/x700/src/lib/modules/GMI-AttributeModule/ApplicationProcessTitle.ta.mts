@@ -47,7 +47,7 @@ let _cached_decoder_for_ApplicationProcessTitle: $.ASN1Decoder<ApplicationProces
  * @param {_Element} el The element being decoded.
  * @returns {ApplicationProcessTitle} The decoded data structure.
  */
-export function _decode_ApplicationProcessTitle(el: _Element) {
+export function _decode_ApplicationProcessTitle(el: _Element): ApplicationProcessTitle {
     if (!_cached_decoder_for_ApplicationProcessTitle) {
         _cached_decoder_for_ApplicationProcessTitle = $._decode_inextensible_choice<ApplicationProcessTitle>(
             {
@@ -86,7 +86,7 @@ let _cached_encoder_for_ApplicationProcessTitle: $.ASN1Encoder<ApplicationProces
 export function _encode_ApplicationProcessTitle(
     value: ApplicationProcessTitle,
     elGetter: $.ASN1Encoder<ApplicationProcessTitle>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplicationProcessTitle) {
         _cached_encoder_for_ApplicationProcessTitle = $._encode_choice<ApplicationProcessTitle>(
             {

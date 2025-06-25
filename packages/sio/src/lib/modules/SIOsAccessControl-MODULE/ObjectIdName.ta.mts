@@ -29,7 +29,7 @@ let _cached_decoder_for_ObjectIdName: $.ASN1Decoder<ObjectIdName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectIdName} The decoded data structure.
  */
-export function _decode_ObjectIdName(el: _Element) {
+export function _decode_ObjectIdName(el: _Element): ObjectIdName {
     if (!_cached_decoder_for_ObjectIdName) {
         _cached_decoder_for_ObjectIdName = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_ObjectIdName: $.ASN1Encoder<ObjectIdName> | null = null;
 export function _encode_ObjectIdName(
     value: ObjectIdName,
     elGetter: $.ASN1Encoder<ObjectIdName>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectIdName) {
         _cached_encoder_for_ObjectIdName = _encode_DirectoryString;
     }

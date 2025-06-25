@@ -168,7 +168,7 @@ let _cached_decoder_for_ProtectedPassword: $.ASN1Decoder<ProtectedPassword> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ProtectedPassword} The decoded data structure.
  */
-export function _decode_ProtectedPassword(el: _Element) {
+export function _decode_ProtectedPassword(el: _Element): ProtectedPassword {
     if (!_cached_decoder_for_ProtectedPassword) {
         _cached_decoder_for_ProtectedPassword = function (
             el: _Element
@@ -237,7 +237,7 @@ let _cached_encoder_for_ProtectedPassword: $.ASN1Encoder<ProtectedPassword> | nu
 export function _encode_ProtectedPassword(
     value: ProtectedPassword,
     elGetter: $.ASN1Encoder<ProtectedPassword>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectedPassword) {
         _cached_encoder_for_ProtectedPassword = function (
             value: ProtectedPassword        ): _Element {

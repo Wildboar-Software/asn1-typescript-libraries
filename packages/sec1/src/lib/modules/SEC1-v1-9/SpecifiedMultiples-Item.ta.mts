@@ -109,7 +109,7 @@ let _cached_decoder_for_SpecifiedMultiples_Item: $.ASN1Decoder<SpecifiedMultiple
  * @returns {SpecifiedMultiples_Item} The decoded data structure.
  */
 export
-function _decode_SpecifiedMultiples_Item (el: _Element) {
+function _decode_SpecifiedMultiples_Item (el: _Element): SpecifiedMultiples_Item {
     if (!_cached_decoder_for_SpecifiedMultiples_Item) { _cached_decoder_for_SpecifiedMultiples_Item = function (el: _Element): SpecifiedMultiples_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -140,7 +140,7 @@ let _cached_encoder_for_SpecifiedMultiples_Item: $.ASN1Encoder<SpecifiedMultiple
  * @returns {_Element} The SpecifiedMultiples_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_SpecifiedMultiples_Item (value: SpecifiedMultiples_Item, elGetter: $.ASN1Encoder<SpecifiedMultiples_Item>) {
+function _encode_SpecifiedMultiples_Item (value: SpecifiedMultiples_Item, elGetter: $.ASN1Encoder<SpecifiedMultiples_Item>): _Element {
     if (!_cached_encoder_for_SpecifiedMultiples_Item) { _cached_encoder_for_SpecifiedMultiples_Item = function (value: SpecifiedMultiples_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

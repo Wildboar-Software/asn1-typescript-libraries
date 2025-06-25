@@ -29,7 +29,7 @@ let _cached_decoder_for_OtherPrimeInfos: $.ASN1Decoder<OtherPrimeInfos> | null =
  * @param {_Element} el The element being decoded.
  * @returns {OtherPrimeInfos} The decoded data structure.
  */
-export function _decode_OtherPrimeInfos(el: _Element) {
+export function _decode_OtherPrimeInfos(el: _Element): OtherPrimeInfos {
     if (!_cached_decoder_for_OtherPrimeInfos) {
         _cached_decoder_for_OtherPrimeInfos = $._decodeSequenceOf<OtherPrimeInfo>(
             () => _decode_OtherPrimeInfo
@@ -52,7 +52,7 @@ let _cached_encoder_for_OtherPrimeInfos: $.ASN1Encoder<OtherPrimeInfos> | null =
 export function _encode_OtherPrimeInfos(
     value: OtherPrimeInfos,
     elGetter: $.ASN1Encoder<OtherPrimeInfos>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherPrimeInfos) {
         _cached_encoder_for_OtherPrimeInfos = $._encodeSequenceOf<OtherPrimeInfo>(
             () => _encode_OtherPrimeInfo,

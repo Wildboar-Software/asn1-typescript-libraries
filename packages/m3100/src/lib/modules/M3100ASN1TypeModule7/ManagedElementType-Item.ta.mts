@@ -38,7 +38,7 @@ let _cached_decoder_for_ManagedElementType_Item: $.ASN1Decoder<ManagedElementTyp
  * @param {_Element} el The element being decoded.
  * @returns {ManagedElementType_Item} The decoded data structure.
  */
-export function _decode_ManagedElementType_Item(el: _Element) {
+export function _decode_ManagedElementType_Item(el: _Element): ManagedElementType_Item {
     if (!_cached_decoder_for_ManagedElementType_Item) {
         _cached_decoder_for_ManagedElementType_Item = $._decode_inextensible_choice<ManagedElementType_Item>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_ManagedElementType_Item: $.ASN1Encoder<ManagedElementTyp
 export function _encode_ManagedElementType_Item(
     value: ManagedElementType_Item,
     elGetter: $.ASN1Encoder<ManagedElementType_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedElementType_Item) {
         _cached_encoder_for_ManagedElementType_Item = $._encode_choice<ManagedElementType_Item>(
             {

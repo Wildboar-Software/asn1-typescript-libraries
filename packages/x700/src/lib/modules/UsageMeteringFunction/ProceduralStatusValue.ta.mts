@@ -35,7 +35,7 @@ let _cached_decoder_for_ProceduralStatusValue: $.ASN1Decoder<ProceduralStatusVal
  * @param {_Element} el The element being decoded.
  * @returns {ProceduralStatusValue} The decoded data structure.
  */
-export function _decode_ProceduralStatusValue(el: _Element) {
+export function _decode_ProceduralStatusValue(el: _Element): ProceduralStatusValue {
     if (!_cached_decoder_for_ProceduralStatusValue) {
         _cached_decoder_for_ProceduralStatusValue = _decode_ProceduralStatus;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ProceduralStatusValue: $.ASN1Encoder<ProceduralStatusVal
 export function _encode_ProceduralStatusValue(
     value: ProceduralStatusValue,
     elGetter: $.ASN1Encoder<ProceduralStatusValue>
-) {
+): _Element {
     if (!_cached_encoder_for_ProceduralStatusValue) {
         _cached_encoder_for_ProceduralStatusValue = _encode_ProceduralStatus;
     }

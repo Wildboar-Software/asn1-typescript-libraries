@@ -116,7 +116,7 @@ let _cached_decoder_for_IntermediateType_keyInformation: $.ASN1Decoder<Intermedi
  * @param {_Element} el The element being decoded.
  * @returns {IntermediateType_keyInformation} The decoded data structure.
  */
-export function _decode_IntermediateType_keyInformation(el: _Element) {
+export function _decode_IntermediateType_keyInformation(el: _Element): IntermediateType_keyInformation {
   if (!_cached_decoder_for_IntermediateType_keyInformation) {
     _cached_decoder_for_IntermediateType_keyInformation = function (
       el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_IntermediateType_keyInformation: $.ASN1Encoder<Intermedi
 export function _encode_IntermediateType_keyInformation(
   value: IntermediateType_keyInformation,
   elGetter: $.ASN1Encoder<IntermediateType_keyInformation>
-) {
+): _Element {
   if (!_cached_encoder_for_IntermediateType_keyInformation) {
     _cached_encoder_for_IntermediateType_keyInformation = function (
       value: IntermediateType_keyInformation    ): _Element {

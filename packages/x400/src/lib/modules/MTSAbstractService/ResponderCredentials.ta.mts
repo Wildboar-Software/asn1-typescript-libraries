@@ -35,7 +35,7 @@ let _cached_decoder_for_ResponderCredentials: $.ASN1Decoder<ResponderCredentials
  * @param {_Element} el The element being decoded.
  * @returns {ResponderCredentials} The decoded data structure.
  */
-export function _decode_ResponderCredentials(el: _Element) {
+export function _decode_ResponderCredentials(el: _Element): ResponderCredentials {
     if (!_cached_decoder_for_ResponderCredentials) {
         _cached_decoder_for_ResponderCredentials = _decode_Credentials;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ResponderCredentials: $.ASN1Encoder<ResponderCredentials
 export function _encode_ResponderCredentials(
     value: ResponderCredentials,
     elGetter: $.ASN1Encoder<ResponderCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponderCredentials) {
         _cached_encoder_for_ResponderCredentials = _encode_Credentials;
     }

@@ -39,7 +39,7 @@ let _cached_decoder_for_SubstringAssertion: $.ASN1Decoder<SubstringAssertion> | 
  * @param {_Element} el The element being decoded.
  * @returns {SubstringAssertion} The decoded data structure.
  */
-export function _decode_SubstringAssertion(el: _Element) {
+export function _decode_SubstringAssertion(el: _Element): SubstringAssertion {
     if (!_cached_decoder_for_SubstringAssertion) {
         _cached_decoder_for_SubstringAssertion = $._decodeSequenceOf<SubstringAssertion_Item>(
             () => _decode_SubstringAssertion_Item
@@ -60,7 +60,7 @@ let _cached_encoder_for_SubstringAssertion: $.ASN1Encoder<SubstringAssertion> | 
 export function _encode_SubstringAssertion(
     value: SubstringAssertion,
     elGetter: $.ASN1Encoder<SubstringAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_SubstringAssertion) {
         _cached_encoder_for_SubstringAssertion = $._encodeSequenceOf<SubstringAssertion_Item>(
             () => _encode_SubstringAssertion_Item,

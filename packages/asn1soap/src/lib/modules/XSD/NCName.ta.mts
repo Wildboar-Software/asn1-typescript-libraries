@@ -36,7 +36,7 @@ let _cached_decoder_for_NCName: $.ASN1Decoder<NCName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NCName} The decoded data structure.
  */
-export function _decode_NCName(el: _Element) {
+export function _decode_NCName(el: _Element): NCName {
   if (!_cached_decoder_for_NCName) {
     _cached_decoder_for_NCName = _decode_Name;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_NCName: $.ASN1Encoder<NCName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NCName, encoded as an ASN.1 Element.
  */
-export function _encode_NCName(value: NCName, elGetter: $.ASN1Encoder<NCName>) {
+export function _encode_NCName(value: NCName, elGetter: $.ASN1Encoder<NCName>): _Element {
   if (!_cached_encoder_for_NCName) {
     _cached_encoder_for_NCName = _encode_Name;
   }

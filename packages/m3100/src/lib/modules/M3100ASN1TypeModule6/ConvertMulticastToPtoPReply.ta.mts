@@ -40,7 +40,7 @@ let _cached_decoder_for_ConvertMulticastToPtoPReply: $.ASN1Decoder<ConvertMultic
  * @param {_Element} el The element being decoded.
  * @returns {ConvertMulticastToPtoPReply} The decoded data structure.
  */
-export function _decode_ConvertMulticastToPtoPReply(el: _Element) {
+export function _decode_ConvertMulticastToPtoPReply(el: _Element): ConvertMulticastToPtoPReply {
     if (!_cached_decoder_for_ConvertMulticastToPtoPReply) {
         _cached_decoder_for_ConvertMulticastToPtoPReply = $._decodeSequenceOf<ConvertMulticastToPtoPReply_Item>(
             () => _decode_ConvertMulticastToPtoPReply_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_ConvertMulticastToPtoPReply: $.ASN1Encoder<ConvertMultic
 export function _encode_ConvertMulticastToPtoPReply(
     value: ConvertMulticastToPtoPReply,
     elGetter: $.ASN1Encoder<ConvertMulticastToPtoPReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertMulticastToPtoPReply) {
         _cached_encoder_for_ConvertMulticastToPtoPReply = $._encodeSequenceOf<ConvertMulticastToPtoPReply_Item>(
             () => _encode_ConvertMulticastToPtoPReply_Item,

@@ -180,7 +180,7 @@ let _cached_decoder_for_EventReportArgument: $.ASN1Decoder<EventReportArgument> 
  * @param {_Element} el The element being decoded.
  * @returns {EventReportArgument} The decoded data structure.
  */
-export function _decode_EventReportArgument(el: _Element) {
+export function _decode_EventReportArgument(el: _Element): EventReportArgument {
   if (!_cached_decoder_for_EventReportArgument) {
     _cached_decoder_for_EventReportArgument = function (
       el: _Element
@@ -247,7 +247,7 @@ let _cached_encoder_for_EventReportArgument: $.ASN1Encoder<EventReportArgument> 
 export function _encode_EventReportArgument(
   value: EventReportArgument,
   elGetter: $.ASN1Encoder<EventReportArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_EventReportArgument) {
     _cached_encoder_for_EventReportArgument = function (
       value: EventReportArgument    ): _Element {

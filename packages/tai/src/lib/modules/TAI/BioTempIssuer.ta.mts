@@ -123,7 +123,7 @@ let _cached_decoder_for_BioTempIssuer: $.ASN1Decoder<BioTempIssuer> | null = nul
  * @returns {BioTempIssuer} The decoded data structure.
  */
 export
-function _decode_BioTempIssuer (el: _Element) {
+function _decode_BioTempIssuer (el: _Element): BioTempIssuer {
     if (!_cached_decoder_for_BioTempIssuer) { _cached_decoder_for_BioTempIssuer = $._decode_implicit<BioTempIssuer>(() => function (el: _Element): BioTempIssuer {
     let issuerName: OPTIONAL<GeneralNames>;
     let baseCertificateID: OPTIONAL<IssuerSerial>;
@@ -158,7 +158,7 @@ let _cached_encoder_for_BioTempIssuer: $.ASN1Encoder<BioTempIssuer> | null = nul
  * @returns {_Element} The BioTempIssuer, encoded as an ASN.1 Element.
  */
 export
-function _encode_BioTempIssuer (value: BioTempIssuer, elGetter: $.ASN1Encoder<BioTempIssuer>) {
+function _encode_BioTempIssuer (value: BioTempIssuer, elGetter: $.ASN1Encoder<BioTempIssuer>): _Element {
     if (!_cached_encoder_for_BioTempIssuer) { _cached_encoder_for_BioTempIssuer = $._encode_implicit(_TagClass.context, 0, () => function (value: BioTempIssuer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

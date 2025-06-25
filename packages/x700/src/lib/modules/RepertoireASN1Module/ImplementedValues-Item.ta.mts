@@ -147,7 +147,7 @@ let _cached_decoder_for_ImplementedValues_Item: $.ASN1Decoder<ImplementedValues_
  * @param {_Element} el The element being decoded.
  * @returns {ImplementedValues_Item} The decoded data structure.
  */
-export function _decode_ImplementedValues_Item(el: _Element) {
+export function _decode_ImplementedValues_Item(el: _Element): ImplementedValues_Item {
     if (!_cached_decoder_for_ImplementedValues_Item) {
         _cached_decoder_for_ImplementedValues_Item = function (
             el: _Element
@@ -214,7 +214,7 @@ let _cached_encoder_for_ImplementedValues_Item: $.ASN1Encoder<ImplementedValues_
 export function _encode_ImplementedValues_Item(
     value: ImplementedValues_Item,
     elGetter: $.ASN1Encoder<ImplementedValues_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ImplementedValues_Item) {
         _cached_encoder_for_ImplementedValues_Item = function (
             value: ImplementedValues_Item        ): _Element {

@@ -273,7 +273,7 @@ let _cached_decoder_for_PropertyList: $.ASN1Decoder<PropertyList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PropertyList} The decoded data structure.
  */
-export function _decode_PropertyList(el: _Element) {
+export function _decode_PropertyList(el: _Element): PropertyList {
     if (!_cached_decoder_for_PropertyList) {
         _cached_decoder_for_PropertyList = function (
             el: _Element
@@ -374,7 +374,7 @@ let _cached_encoder_for_PropertyList: $.ASN1Encoder<PropertyList> | null = null;
 export function _encode_PropertyList(
     value: PropertyList,
     elGetter: $.ASN1Encoder<PropertyList>
-) {
+): _Element {
     if (!_cached_encoder_for_PropertyList) {
         _cached_encoder_for_PropertyList = function (
             value: PropertyList        ): _Element {

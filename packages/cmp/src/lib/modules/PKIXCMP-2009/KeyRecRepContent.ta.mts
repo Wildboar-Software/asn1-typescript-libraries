@@ -161,7 +161,7 @@ let _cached_decoder_for_KeyRecRepContent: $.ASN1Decoder<KeyRecRepContent> | null
  * @param {_Element} el The element being decoded.
  * @returns {KeyRecRepContent} The decoded data structure.
  */
-export function _decode_KeyRecRepContent(el: _Element) {
+export function _decode_KeyRecRepContent(el: _Element): KeyRecRepContent {
   if (!_cached_decoder_for_KeyRecRepContent) {
     _cached_decoder_for_KeyRecRepContent = function (
       el: _Element
@@ -225,7 +225,7 @@ let _cached_encoder_for_KeyRecRepContent: $.ASN1Encoder<KeyRecRepContent> | null
 export function _encode_KeyRecRepContent(
   value: KeyRecRepContent,
   elGetter: $.ASN1Encoder<KeyRecRepContent>
-) {
+): _Element {
   if (!_cached_encoder_for_KeyRecRepContent) {
     _cached_encoder_for_KeyRecRepContent = function (
       value: KeyRecRepContent    ): _Element {

@@ -120,7 +120,7 @@ let _cached_decoder_for_RevertArgument: $.ASN1Decoder<RevertArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RevertArgument} The decoded data structure.
  */
-export function _decode_RevertArgument(el: _Element) {
+export function _decode_RevertArgument(el: _Element): RevertArgument {
     if (!_cached_decoder_for_RevertArgument) {
         _cached_decoder_for_RevertArgument = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_RevertArgument: $.ASN1Encoder<RevertArgument> | null = n
 export function _encode_RevertArgument(
     value: RevertArgument,
     elGetter: $.ASN1Encoder<RevertArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_RevertArgument) {
         _cached_encoder_for_RevertArgument = function (
             value: RevertArgument        ): _Element {

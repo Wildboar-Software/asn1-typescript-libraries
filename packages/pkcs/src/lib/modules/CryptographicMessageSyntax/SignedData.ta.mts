@@ -195,7 +195,7 @@ let _cached_decoder_for_SignedData: $.ASN1Decoder<SignedData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SignedData} The decoded data structure.
  */
-export function _decode_SignedData(el: _Element) {
+export function _decode_SignedData(el: _Element): SignedData {
     if (!_cached_decoder_for_SignedData) {
         _cached_decoder_for_SignedData = function (el: _Element): SignedData {
             let version!: CMSVersion;
@@ -263,7 +263,7 @@ let _cached_encoder_for_SignedData: $.ASN1Encoder<SignedData> | null = null;
 export function _encode_SignedData(
     value: SignedData,
     elGetter: $.ASN1Encoder<SignedData>
-) {
+): _Element {
     if (!_cached_encoder_for_SignedData) {
         _cached_encoder_for_SignedData = function (
             value: SignedData        ): _Element {

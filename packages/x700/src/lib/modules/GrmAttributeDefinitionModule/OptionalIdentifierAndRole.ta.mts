@@ -125,7 +125,7 @@ let _cached_decoder_for_OptionalIdentifierAndRole: $.ASN1Decoder<OptionalIdentif
  * @param {_Element} el The element being decoded.
  * @returns {OptionalIdentifierAndRole} The decoded data structure.
  */
-export function _decode_OptionalIdentifierAndRole(el: _Element) {
+export function _decode_OptionalIdentifierAndRole(el: _Element): OptionalIdentifierAndRole {
     if (!_cached_decoder_for_OptionalIdentifierAndRole) {
         _cached_decoder_for_OptionalIdentifierAndRole = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_OptionalIdentifierAndRole: $.ASN1Encoder<OptionalIdentif
 export function _encode_OptionalIdentifierAndRole(
     value: OptionalIdentifierAndRole,
     elGetter: $.ASN1Encoder<OptionalIdentifierAndRole>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalIdentifierAndRole) {
         _cached_encoder_for_OptionalIdentifierAndRole = function (
             value: OptionalIdentifierAndRole        ): _Element {

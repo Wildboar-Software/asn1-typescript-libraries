@@ -138,7 +138,7 @@ let _cached_decoder_for_TargetSelect: $.ASN1Decoder<TargetSelect> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TargetSelect} The decoded data structure.
  */
-export function _decode_TargetSelect(el: _Element) {
+export function _decode_TargetSelect(el: _Element): TargetSelect {
     if (!_cached_decoder_for_TargetSelect) {
         _cached_decoder_for_TargetSelect = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_TargetSelect: $.ASN1Encoder<TargetSelect> | null = null;
 export function _encode_TargetSelect(
     value: TargetSelect,
     elGetter: $.ASN1Encoder<TargetSelect>
-) {
+): _Element {
     if (!_cached_encoder_for_TargetSelect) {
         _cached_encoder_for_TargetSelect = function (
             value: TargetSelect        ): _Element {

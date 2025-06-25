@@ -117,7 +117,7 @@ let _cached_decoder_for_InvalidArgumentValue_eventValue: $.ASN1Decoder<InvalidAr
  * @param {_Element} el The element being decoded.
  * @returns {InvalidArgumentValue_eventValue} The decoded data structure.
  */
-export function _decode_InvalidArgumentValue_eventValue(el: _Element) {
+export function _decode_InvalidArgumentValue_eventValue(el: _Element): InvalidArgumentValue_eventValue {
   if (!_cached_decoder_for_InvalidArgumentValue_eventValue) {
     _cached_decoder_for_InvalidArgumentValue_eventValue = function (
       el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_InvalidArgumentValue_eventValue: $.ASN1Encoder<InvalidAr
 export function _encode_InvalidArgumentValue_eventValue(
   value: InvalidArgumentValue_eventValue,
   elGetter: $.ASN1Encoder<InvalidArgumentValue_eventValue>
-) {
+): _Element {
   if (!_cached_encoder_for_InvalidArgumentValue_eventValue) {
     _cached_encoder_for_InvalidArgumentValue_eventValue = function (
       value: InvalidArgumentValue_eventValue    ): _Element {

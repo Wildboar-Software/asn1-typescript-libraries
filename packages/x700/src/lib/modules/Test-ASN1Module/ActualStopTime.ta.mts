@@ -37,7 +37,7 @@ let _cached_decoder_for_ActualStopTime: $.ASN1Decoder<ActualStopTime> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ActualStopTime} The decoded data structure.
  */
-export function _decode_ActualStopTime(el: _Element) {
+export function _decode_ActualStopTime(el: _Element): ActualStopTime {
     if (!_cached_decoder_for_ActualStopTime) {
         _cached_decoder_for_ActualStopTime = $._decode_inextensible_choice<ActualStopTime>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_ActualStopTime: $.ASN1Encoder<ActualStopTime> | null = n
 export function _encode_ActualStopTime(
     value: ActualStopTime,
     elGetter: $.ASN1Encoder<ActualStopTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ActualStopTime) {
         _cached_encoder_for_ActualStopTime = $._encode_choice<ActualStopTime>(
             {

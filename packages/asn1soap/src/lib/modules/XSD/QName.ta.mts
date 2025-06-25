@@ -115,7 +115,7 @@ let _cached_decoder_for_QName: $.ASN1Decoder<QName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {QName} The decoded data structure.
  */
-export function _decode_QName(el: _Element) {
+export function _decode_QName(el: _Element): QName {
   if (!_cached_decoder_for_QName) {
     _cached_decoder_for_QName = function (el: _Element): QName {
       let uri: OPTIONAL<AnyURI>;
@@ -153,7 +153,7 @@ let _cached_encoder_for_QName: $.ASN1Encoder<QName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The QName, encoded as an ASN.1 Element.
  */
-export function _encode_QName(value: QName, elGetter: $.ASN1Encoder<QName>) {
+export function _encode_QName(value: QName, elGetter: $.ASN1Encoder<QName>): _Element {
   if (!_cached_encoder_for_QName) {
     _cached_encoder_for_QName = function (
       value: QName    ): _Element {

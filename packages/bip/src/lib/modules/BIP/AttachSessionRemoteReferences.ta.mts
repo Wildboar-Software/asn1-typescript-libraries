@@ -38,7 +38,7 @@ let _cached_decoder_for_AttachSessionRemoteReferences: $.ASN1Decoder<AttachSessi
  * @param {_Element} el The element being decoded.
  * @returns {AttachSessionRemoteReferences} The decoded data structure.
  */
-export function _decode_AttachSessionRemoteReferences(el: _Element) {
+export function _decode_AttachSessionRemoteReferences(el: _Element): AttachSessionRemoteReferences {
   if (!_cached_decoder_for_AttachSessionRemoteReferences) {
     _cached_decoder_for_AttachSessionRemoteReferences = $._decodeSetOf<AttachSessionRemoteReference>(
       () => _decode_AttachSessionRemoteReference
@@ -61,7 +61,7 @@ let _cached_encoder_for_AttachSessionRemoteReferences: $.ASN1Encoder<AttachSessi
 export function _encode_AttachSessionRemoteReferences(
   value: AttachSessionRemoteReferences,
   elGetter: $.ASN1Encoder<AttachSessionRemoteReferences>
-) {
+): _Element {
   if (!_cached_encoder_for_AttachSessionRemoteReferences) {
     _cached_encoder_for_AttachSessionRemoteReferences = $._encodeSetOf<AttachSessionRemoteReference>(
       () => _encode_AttachSessionRemoteReference,

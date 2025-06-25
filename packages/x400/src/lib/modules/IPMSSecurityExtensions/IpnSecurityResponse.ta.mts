@@ -131,7 +131,7 @@ let _cached_decoder_for_IpnSecurityResponse: $.ASN1Decoder<IpnSecurityResponse> 
  * @param {_Element} el The element being decoded.
  * @returns {IpnSecurityResponse} The decoded data structure.
  */
-export function _decode_IpnSecurityResponse(el: _Element) {
+export function _decode_IpnSecurityResponse(el: _Element): IpnSecurityResponse {
     if (!_cached_decoder_for_IpnSecurityResponse) {
         _cached_decoder_for_IpnSecurityResponse = function (
             el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_IpnSecurityResponse: $.ASN1Encoder<IpnSecurityResponse> 
 export function _encode_IpnSecurityResponse(
     value: IpnSecurityResponse,
     elGetter: $.ASN1Encoder<IpnSecurityResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_IpnSecurityResponse) {
         _cached_encoder_for_IpnSecurityResponse = function (
             value: IpnSecurityResponse        ): _Element {

@@ -150,7 +150,7 @@ let _cached_decoder_for_UniversalPersonalName: $.ASN1Decoder<UniversalPersonalNa
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPersonalName} The decoded data structure.
  */
-export function _decode_UniversalPersonalName(el: _Element) {
+export function _decode_UniversalPersonalName(el: _Element): UniversalPersonalName {
     if (!_cached_decoder_for_UniversalPersonalName) {
         _cached_decoder_for_UniversalPersonalName = function (
             el: _Element
@@ -214,7 +214,7 @@ let _cached_encoder_for_UniversalPersonalName: $.ASN1Encoder<UniversalPersonalNa
 export function _encode_UniversalPersonalName(
     value: UniversalPersonalName,
     elGetter: $.ASN1Encoder<UniversalPersonalName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPersonalName) {
         _cached_encoder_for_UniversalPersonalName = function (
             value: UniversalPersonalName        ): _Element {

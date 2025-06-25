@@ -50,7 +50,7 @@ let _cached_decoder_for_Path_Access_Passwords: $.ASN1Decoder<Path_Access_Passwor
  * @param {_Element} el The element being decoded.
  * @returns {Path_Access_Passwords} The decoded data structure.
  */
-export function _decode_Path_Access_Passwords(el: _Element) {
+export function _decode_Path_Access_Passwords(el: _Element): Path_Access_Passwords {
   if (!_cached_decoder_for_Path_Access_Passwords) {
     _cached_decoder_for_Path_Access_Passwords = $._decode_implicit<Path_Access_Passwords>(
       () =>
@@ -76,7 +76,7 @@ let _cached_encoder_for_Path_Access_Passwords: $.ASN1Encoder<Path_Access_Passwor
 export function _encode_Path_Access_Passwords(
   value: Path_Access_Passwords,
   elGetter: $.ASN1Encoder<Path_Access_Passwords>
-) {
+): _Element {
   if (!_cached_encoder_for_Path_Access_Passwords) {
     _cached_encoder_for_Path_Access_Passwords = $._encode_implicit(
       _TagClass.application,

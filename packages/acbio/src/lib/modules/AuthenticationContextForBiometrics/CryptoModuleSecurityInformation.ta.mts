@@ -47,7 +47,7 @@ let _cached_decoder_for_CryptoModuleSecurityInformation: $.ASN1Decoder<CryptoMod
  * @param {_Element} el The element being decoded.
  * @returns {CryptoModuleSecurityInformation} The decoded data structure.
  */
-export function _decode_CryptoModuleSecurityInformation(el: _Element) {
+export function _decode_CryptoModuleSecurityInformation(el: _Element): CryptoModuleSecurityInformation {
     if (!_cached_decoder_for_CryptoModuleSecurityInformation) {
         _cached_decoder_for_CryptoModuleSecurityInformation = $._decode_inextensible_choice<CryptoModuleSecurityInformation>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_CryptoModuleSecurityInformation: $.ASN1Encoder<CryptoMod
 export function _encode_CryptoModuleSecurityInformation(
     value: CryptoModuleSecurityInformation,
     elGetter: $.ASN1Encoder<CryptoModuleSecurityInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_CryptoModuleSecurityInformation) {
         _cached_encoder_for_CryptoModuleSecurityInformation = $._encode_choice<CryptoModuleSecurityInformation>(
             {

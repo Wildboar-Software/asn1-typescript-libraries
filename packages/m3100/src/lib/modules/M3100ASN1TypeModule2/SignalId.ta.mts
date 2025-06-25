@@ -51,7 +51,7 @@ let _cached_decoder_for_SignalId: $.ASN1Decoder<SignalId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SignalId} The decoded data structure.
  */
-export function _decode_SignalId(el: _Element) {
+export function _decode_SignalId(el: _Element): SignalId {
     if (!_cached_decoder_for_SignalId) {
         _cached_decoder_for_SignalId = $._decode_inextensible_choice<SignalId>({
             'CONTEXT 0': [
@@ -89,7 +89,7 @@ let _cached_encoder_for_SignalId: $.ASN1Encoder<SignalId> | null = null;
 export function _encode_SignalId(
     value: SignalId,
     elGetter: $.ASN1Encoder<SignalId>
-) {
+): _Element {
     if (!_cached_encoder_for_SignalId) {
         _cached_encoder_for_SignalId = $._encode_choice<SignalId>(
             {

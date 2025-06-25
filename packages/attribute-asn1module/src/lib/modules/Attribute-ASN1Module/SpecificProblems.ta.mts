@@ -33,7 +33,7 @@ let _cached_decoder_for_SpecificProblems: $.ASN1Decoder<SpecificProblems> | null
  * @returns {SpecificProblems} The decoded data structure.
  */
 export
-function _decode_SpecificProblems (el: _Element) {
+function _decode_SpecificProblems (el: _Element): SpecificProblems {
     if (!_cached_decoder_for_SpecificProblems) { _cached_decoder_for_SpecificProblems = $._decodeSetOf<SpecificIdentifier>(() => _decode_SpecificIdentifier); }
     return _cached_decoder_for_SpecificProblems(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SpecificProblems: $.ASN1Encoder<SpecificProblems> | null
  * @returns {_Element} The SpecificProblems, encoded as an ASN.1 Element.
  */
 export
-function _encode_SpecificProblems (value: SpecificProblems, elGetter: $.ASN1Encoder<SpecificProblems>) {
+function _encode_SpecificProblems (value: SpecificProblems, elGetter: $.ASN1Encoder<SpecificProblems>): _Element {
     if (!_cached_encoder_for_SpecificProblems) { _cached_encoder_for_SpecificProblems = $._encodeSetOf<SpecificIdentifier>(() => _encode_SpecificIdentifier, $.BER); }
     return _cached_encoder_for_SpecificProblems(value, elGetter);
 }

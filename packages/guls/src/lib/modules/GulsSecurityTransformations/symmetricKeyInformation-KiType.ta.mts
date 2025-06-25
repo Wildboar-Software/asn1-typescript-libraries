@@ -120,7 +120,7 @@ let _cached_decoder_for_symmetricKeyInformation_KiType: $.ASN1Decoder<symmetricK
  * @param {_Element} el The element being decoded.
  * @returns {symmetricKeyInformation_KiType} The decoded data structure.
  */
-export function _decode_symmetricKeyInformation_KiType(el: _Element) {
+export function _decode_symmetricKeyInformation_KiType(el: _Element): symmetricKeyInformation_KiType {
   if (!_cached_decoder_for_symmetricKeyInformation_KiType) {
     _cached_decoder_for_symmetricKeyInformation_KiType = function (
       el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_symmetricKeyInformation_KiType: $.ASN1Encoder<symmetricK
 export function _encode_symmetricKeyInformation_KiType(
   value: symmetricKeyInformation_KiType,
   elGetter: $.ASN1Encoder<symmetricKeyInformation_KiType>
-) {
+): _Element {
   if (!_cached_encoder_for_symmetricKeyInformation_KiType) {
     _cached_encoder_for_symmetricKeyInformation_KiType = function (
       value: symmetricKeyInformation_KiType    ): _Element {

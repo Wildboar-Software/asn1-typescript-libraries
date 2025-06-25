@@ -236,7 +236,7 @@ let _cached_decoder_for_CertReply: $.ASN1Decoder<CertReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertReply} The decoded data structure.
  */
-export function _decode_CertReply(el: _Element) {
+export function _decode_CertReply(el: _Element): CertReply {
   if (!_cached_decoder_for_CertReply) {
     _cached_decoder_for_CertReply = function (el: _Element): CertReply {
       let cert!: CertReference;
@@ -317,7 +317,7 @@ let _cached_encoder_for_CertReply: $.ASN1Encoder<CertReply> | null = null;
 export function _encode_CertReply(
   value: CertReply,
   elGetter: $.ASN1Encoder<CertReply>
-) {
+): _Element {
   if (!_cached_encoder_for_CertReply) {
     _cached_encoder_for_CertReply = function (
       value: CertReply    ): _Element {

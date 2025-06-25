@@ -35,7 +35,7 @@ let _cached_decoder_for_RepliedToIPMField: $.ASN1Decoder<RepliedToIPMField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RepliedToIPMField} The decoded data structure.
  */
-export function _decode_RepliedToIPMField(el: _Element) {
+export function _decode_RepliedToIPMField(el: _Element): RepliedToIPMField {
     if (!_cached_decoder_for_RepliedToIPMField) {
         _cached_decoder_for_RepliedToIPMField = _decode_IPMIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RepliedToIPMField: $.ASN1Encoder<RepliedToIPMField> | nu
 export function _encode_RepliedToIPMField(
     value: RepliedToIPMField,
     elGetter: $.ASN1Encoder<RepliedToIPMField>
-) {
+): _Element {
     if (!_cached_encoder_for_RepliedToIPMField) {
         _cached_encoder_for_RepliedToIPMField = _encode_IPMIdentifier;
     }

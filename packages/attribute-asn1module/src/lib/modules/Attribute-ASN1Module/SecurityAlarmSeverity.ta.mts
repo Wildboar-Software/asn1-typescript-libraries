@@ -34,7 +34,7 @@ let _cached_decoder_for_SecurityAlarmSeverity: $.ASN1Decoder<SecurityAlarmSeveri
  * @returns {SecurityAlarmSeverity} The decoded data structure.
  */
 export
-function _decode_SecurityAlarmSeverity (el: _Element) {
+function _decode_SecurityAlarmSeverity (el: _Element): SecurityAlarmSeverity {
     if (!_cached_decoder_for_SecurityAlarmSeverity) { _cached_decoder_for_SecurityAlarmSeverity = _decode_PerceivedSeverity; }
     return _cached_decoder_for_SecurityAlarmSeverity(el);
 }
@@ -49,7 +49,7 @@ let _cached_encoder_for_SecurityAlarmSeverity: $.ASN1Encoder<SecurityAlarmSeveri
  * @returns {_Element} The SecurityAlarmSeverity, encoded as an ASN.1 Element.
  */
 export
-function _encode_SecurityAlarmSeverity (value: SecurityAlarmSeverity, elGetter: $.ASN1Encoder<SecurityAlarmSeverity>) {
+function _encode_SecurityAlarmSeverity (value: SecurityAlarmSeverity, elGetter: $.ASN1Encoder<SecurityAlarmSeverity>): _Element {
     if (!_cached_encoder_for_SecurityAlarmSeverity) { _cached_encoder_for_SecurityAlarmSeverity = _encode_PerceivedSeverity; }
     return _cached_encoder_for_SecurityAlarmSeverity(value, elGetter);
 }

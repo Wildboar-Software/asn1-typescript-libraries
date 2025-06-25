@@ -116,7 +116,7 @@ let _cached_decoder_for_RevokedInfo: $.ASN1Decoder<RevokedInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RevokedInfo} The decoded data structure.
  */
-export function _decode_RevokedInfo(el: _Element) {
+export function _decode_RevokedInfo(el: _Element): RevokedInfo {
     if (!_cached_decoder_for_RevokedInfo) {
         _cached_decoder_for_RevokedInfo = function (el: _Element): RevokedInfo {
             let revocationTime!: GeneralizedTime;
@@ -162,7 +162,7 @@ let _cached_encoder_for_RevokedInfo: $.ASN1Encoder<RevokedInfo> | null = null;
 export function _encode_RevokedInfo(
     value: RevokedInfo,
     elGetter: $.ASN1Encoder<RevokedInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RevokedInfo) {
         _cached_encoder_for_RevokedInfo = function (
             value: RevokedInfo        ): _Element {

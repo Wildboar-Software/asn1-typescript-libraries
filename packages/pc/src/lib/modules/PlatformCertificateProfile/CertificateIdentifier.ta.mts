@@ -118,7 +118,7 @@ let _cached_decoder_for_CertificateIdentifier: $.ASN1Decoder<CertificateIdentifi
  * @returns {CertificateIdentifier} The decoded data structure.
  */
 export
-function _decode_CertificateIdentifier (el: _Element) {
+function _decode_CertificateIdentifier (el: _Element): CertificateIdentifier {
     if (!_cached_decoder_for_CertificateIdentifier) { _cached_decoder_for_CertificateIdentifier = function (el: _Element): CertificateIdentifier {
     let attributeCertIdentifier: OPTIONAL<AttributeCertificateIdentifier>;
     let genericCertIdentifier: OPTIONAL<IssuerSerial>;
@@ -150,7 +150,7 @@ let _cached_encoder_for_CertificateIdentifier: $.ASN1Encoder<CertificateIdentifi
  * @returns {_Element} The CertificateIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_CertificateIdentifier (value: CertificateIdentifier, elGetter: $.ASN1Encoder<CertificateIdentifier>) {
+function _encode_CertificateIdentifier (value: CertificateIdentifier, elGetter: $.ASN1Encoder<CertificateIdentifier>): _Element {
     if (!_cached_encoder_for_CertificateIdentifier) { _cached_encoder_for_CertificateIdentifier = function (value: CertificateIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

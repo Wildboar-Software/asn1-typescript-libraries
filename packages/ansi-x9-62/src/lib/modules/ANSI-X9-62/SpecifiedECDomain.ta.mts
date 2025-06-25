@@ -202,7 +202,7 @@ let _cached_decoder_for_SpecifiedECDomain: $.ASN1Decoder<SpecifiedECDomain> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SpecifiedECDomain} The decoded data structure.
  */
-export function _decode_SpecifiedECDomain(el: _Element) {
+export function _decode_SpecifiedECDomain(el: _Element): SpecifiedECDomain {
     if (!_cached_decoder_for_SpecifiedECDomain) {
         _cached_decoder_for_SpecifiedECDomain = function (
             el: _Element
@@ -275,7 +275,7 @@ let _cached_encoder_for_SpecifiedECDomain: $.ASN1Encoder<SpecifiedECDomain> | nu
 export function _encode_SpecifiedECDomain(
     value: SpecifiedECDomain,
     elGetter: $.ASN1Encoder<SpecifiedECDomain>
-) {
+): _Element {
     if (!_cached_encoder_for_SpecifiedECDomain) {
         _cached_encoder_for_SpecifiedECDomain = function (
             value: SpecifiedECDomain        ): _Element {

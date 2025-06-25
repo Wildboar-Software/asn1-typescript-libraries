@@ -40,7 +40,7 @@ let _cached_decoder_for_ROSEapdus: $.ASN1Decoder<ROSEapdus> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ROSEapdus} The decoded data structure.
  */
-export function _decode_ROSEapdus(el: _Element) {
+export function _decode_ROSEapdus(el: _Element): ROSEapdus {
   if (!_cached_decoder_for_ROSEapdus) {
     _cached_decoder_for_ROSEapdus = _decode_ROS;
   }
@@ -61,7 +61,7 @@ let _cached_encoder_for_ROSEapdus: $.ASN1Encoder<ROSEapdus> | null = null;
 export function _encode_ROSEapdus(
   value: ROSEapdus,
   elGetter: $.ASN1Encoder<ROSEapdus>
-) {
+): _Element {
   if (!_cached_encoder_for_ROSEapdus) {
     _cached_encoder_for_ROSEapdus = _encode_ROS;
   }

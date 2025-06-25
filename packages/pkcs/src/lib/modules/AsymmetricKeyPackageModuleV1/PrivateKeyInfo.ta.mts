@@ -29,7 +29,7 @@ let _cached_decoder_for_PrivateKeyInfo: $.ASN1Decoder<PrivateKeyInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeyInfo} The decoded data structure.
  */
-export function _decode_PrivateKeyInfo(el: _Element) {
+export function _decode_PrivateKeyInfo(el: _Element): PrivateKeyInfo {
     if (!_cached_decoder_for_PrivateKeyInfo) {
         _cached_decoder_for_PrivateKeyInfo = _decode_OneAsymmetricKey;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_PrivateKeyInfo: $.ASN1Encoder<PrivateKeyInfo> | null = n
 export function _encode_PrivateKeyInfo(
     value: PrivateKeyInfo,
     elGetter: $.ASN1Encoder<PrivateKeyInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKeyInfo) {
         _cached_encoder_for_PrivateKeyInfo = _encode_OneAsymmetricKey;
     }

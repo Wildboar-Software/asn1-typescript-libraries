@@ -35,7 +35,7 @@ let _cached_decoder_for_AuthorizingUsersField: $.ASN1Decoder<AuthorizingUsersFie
  * @param {_Element} el The element being decoded.
  * @returns {AuthorizingUsersField} The decoded data structure.
  */
-export function _decode_AuthorizingUsersField(el: _Element) {
+export function _decode_AuthorizingUsersField(el: _Element): AuthorizingUsersField {
     if (!_cached_decoder_for_AuthorizingUsersField) {
         _cached_decoder_for_AuthorizingUsersField = $._decodeSequenceOf<AuthorizingUsersSubfield>(
             () => _decode_AuthorizingUsersSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_AuthorizingUsersField: $.ASN1Encoder<AuthorizingUsersFie
 export function _encode_AuthorizingUsersField(
     value: AuthorizingUsersField,
     elGetter: $.ASN1Encoder<AuthorizingUsersField>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorizingUsersField) {
         _cached_encoder_for_AuthorizingUsersField = $._encodeSequenceOf<AuthorizingUsersSubfield>(
             () => _encode_AuthorizingUsersSubfield,

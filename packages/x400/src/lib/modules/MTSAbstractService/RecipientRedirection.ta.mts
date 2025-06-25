@@ -125,7 +125,7 @@ let _cached_decoder_for_RecipientRedirection: $.ASN1Decoder<RecipientRedirection
  * @param {_Element} el The element being decoded.
  * @returns {RecipientRedirection} The decoded data structure.
  */
-export function _decode_RecipientRedirection(el: _Element) {
+export function _decode_RecipientRedirection(el: _Element): RecipientRedirection {
     if (!_cached_decoder_for_RecipientRedirection) {
         _cached_decoder_for_RecipientRedirection = function (
             el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_RecipientRedirection: $.ASN1Encoder<RecipientRedirection
 export function _encode_RecipientRedirection(
     value: RecipientRedirection,
     elGetter: $.ASN1Encoder<RecipientRedirection>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientRedirection) {
         _cached_encoder_for_RecipientRedirection = function (
             value: RecipientRedirection        ): _Element {

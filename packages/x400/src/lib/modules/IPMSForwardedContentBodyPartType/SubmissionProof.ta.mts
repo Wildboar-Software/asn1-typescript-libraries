@@ -140,7 +140,7 @@ let _cached_decoder_for_SubmissionProof: $.ASN1Decoder<SubmissionProof> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionProof} The decoded data structure.
  */
-export function _decode_SubmissionProof(el: _Element) {
+export function _decode_SubmissionProof(el: _Element): SubmissionProof {
     if (!_cached_decoder_for_SubmissionProof) {
         _cached_decoder_for_SubmissionProof = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_SubmissionProof: $.ASN1Encoder<SubmissionProof> | null =
 export function _encode_SubmissionProof(
     value: SubmissionProof,
     elGetter: $.ASN1Encoder<SubmissionProof>
-) {
+): _Element {
     if (!_cached_encoder_for_SubmissionProof) {
         _cached_encoder_for_SubmissionProof = function (
             value: SubmissionProof        ): _Element {

@@ -138,7 +138,7 @@ let _cached_decoder_for_PatientIdentification: $.ASN1Decoder<PatientIdentificati
  * @param {_Element} el The element being decoded.
  * @returns {PatientIdentification} The decoded data structure.
  */
-export function _decode_PatientIdentification(el: _Element) {
+export function _decode_PatientIdentification(el: _Element): PatientIdentification {
     if (!_cached_decoder_for_PatientIdentification) {
         _cached_decoder_for_PatientIdentification = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_PatientIdentification: $.ASN1Encoder<PatientIdentificati
 export function _encode_PatientIdentification(
     value: PatientIdentification,
     elGetter: $.ASN1Encoder<PatientIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_PatientIdentification) {
         _cached_encoder_for_PatientIdentification = function (
             value: PatientIdentification        ): _Element {

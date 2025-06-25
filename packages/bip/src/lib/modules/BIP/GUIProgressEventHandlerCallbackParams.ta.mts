@@ -335,7 +335,7 @@ let _cached_decoder_for_GUIProgressEventHandlerCallbackParams: $.ASN1Decoder<GUI
  * @param {_Element} el The element being decoded.
  * @returns {GUIProgressEventHandlerCallbackParams} The decoded data structure.
  */
-export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
+export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element): GUIProgressEventHandlerCallbackParams {
   if (!_cached_decoder_for_GUIProgressEventHandlerCallbackParams) {
     _cached_decoder_for_GUIProgressEventHandlerCallbackParams = function (
       el: _Element
@@ -431,7 +431,7 @@ let _cached_encoder_for_GUIProgressEventHandlerCallbackParams: $.ASN1Encoder<GUI
 export function _encode_GUIProgressEventHandlerCallbackParams(
   value: GUIProgressEventHandlerCallbackParams,
   elGetter: $.ASN1Encoder<GUIProgressEventHandlerCallbackParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIProgressEventHandlerCallbackParams) {
     _cached_encoder_for_GUIProgressEventHandlerCallbackParams = function (
       value: GUIProgressEventHandlerCallbackParams    ): _Element {

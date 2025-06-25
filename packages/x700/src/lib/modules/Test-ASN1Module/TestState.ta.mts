@@ -168,7 +168,7 @@ let _cached_decoder_for_TestState: $.ASN1Decoder<TestState> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TestState} The decoded data structure.
  */
-export function _decode_TestState(el: _Element) {
+export function _decode_TestState(el: _Element): TestState {
     if (!_cached_decoder_for_TestState) {
         _cached_decoder_for_TestState = function (el: _Element): TestState {
             let operationalState!: OperationalState;
@@ -224,7 +224,7 @@ let _cached_encoder_for_TestState: $.ASN1Encoder<TestState> | null = null;
 export function _encode_TestState(
     value: TestState,
     elGetter: $.ASN1Encoder<TestState>
-) {
+): _Element {
     if (!_cached_encoder_for_TestState) {
         _cached_encoder_for_TestState = function (
             value: TestState        ): _Element {

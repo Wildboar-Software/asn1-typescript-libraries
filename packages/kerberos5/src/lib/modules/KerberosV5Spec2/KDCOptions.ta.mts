@@ -38,7 +38,7 @@ let _cached_decoder_for_KDCOptions: $.ASN1Decoder<KDCOptions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KDCOptions} The decoded data structure.
  */
-export function _decode_KDCOptions(el: _Element) {
+export function _decode_KDCOptions(el: _Element): KDCOptions {
   if (!_cached_decoder_for_KDCOptions) {
     _cached_decoder_for_KDCOptions = _decode_KerberosFlags;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_KDCOptions: $.ASN1Encoder<KDCOptions> | null = null;
 export function _encode_KDCOptions(
   value: KDCOptions,
   elGetter: $.ASN1Encoder<KDCOptions>
-) {
+): _Element {
   if (!_cached_encoder_for_KDCOptions) {
     _cached_encoder_for_KDCOptions = _encode_KerberosFlags;
   }

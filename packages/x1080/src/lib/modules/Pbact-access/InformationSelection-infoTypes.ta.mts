@@ -77,7 +77,7 @@ let _cached_decoder_for_InformationSelection_infoTypes: $.ASN1Decoder<Informatio
  * @param {_Element} el The element being decoded.
  * @returns {InformationSelection_infoTypes} The decoded data structure.
  */
-export function _decode_InformationSelection_infoTypes(el: _Element) {
+export function _decode_InformationSelection_infoTypes(el: _Element): InformationSelection_infoTypes {
     if (!_cached_decoder_for_InformationSelection_infoTypes) {
         _cached_decoder_for_InformationSelection_infoTypes =
             $._decodeEnumerated;
@@ -99,7 +99,7 @@ let _cached_encoder_for_InformationSelection_infoTypes: $.ASN1Encoder<Informatio
 export function _encode_InformationSelection_infoTypes(
     value: InformationSelection_infoTypes,
     elGetter: $.ASN1Encoder<InformationSelection_infoTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationSelection_infoTypes) {
         _cached_encoder_for_InformationSelection_infoTypes =
             $._encodeEnumerated;

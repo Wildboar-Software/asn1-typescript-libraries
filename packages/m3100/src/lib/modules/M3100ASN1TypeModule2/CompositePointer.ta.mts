@@ -39,7 +39,7 @@ let _cached_decoder_for_CompositePointer: $.ASN1Decoder<CompositePointer> | null
  * @param {_Element} el The element being decoded.
  * @returns {CompositePointer} The decoded data structure.
  */
-export function _decode_CompositePointer(el: _Element) {
+export function _decode_CompositePointer(el: _Element): CompositePointer {
     if (!_cached_decoder_for_CompositePointer) {
         _cached_decoder_for_CompositePointer = _decode_RelatedObjectInstance;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_CompositePointer: $.ASN1Encoder<CompositePointer> | null
 export function _encode_CompositePointer(
     value: CompositePointer,
     elGetter: $.ASN1Encoder<CompositePointer>
-) {
+): _Element {
     if (!_cached_encoder_for_CompositePointer) {
         _cached_encoder_for_CompositePointer = _encode_RelatedObjectInstance;
     }

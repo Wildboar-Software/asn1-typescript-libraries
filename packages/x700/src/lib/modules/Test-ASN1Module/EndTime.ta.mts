@@ -44,7 +44,7 @@ let _cached_decoder_for_EndTime: $.ASN1Decoder<EndTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EndTime} The decoded data structure.
  */
-export function _decode_EndTime(el: _Element) {
+export function _decode_EndTime(el: _Element): EndTime {
     if (!_cached_decoder_for_EndTime) {
         _cached_decoder_for_EndTime = $._decode_inextensible_choice<EndTime>({
             'UNIVERSAL 24': ['specific', $._decodeGeneralizedTime],
@@ -73,7 +73,7 @@ let _cached_encoder_for_EndTime: $.ASN1Encoder<EndTime> | null = null;
 export function _encode_EndTime(
     value: EndTime,
     elGetter: $.ASN1Encoder<EndTime>
-) {
+): _Element {
     if (!_cached_encoder_for_EndTime) {
         _cached_encoder_for_EndTime = $._encode_choice<EndTime>(
             {

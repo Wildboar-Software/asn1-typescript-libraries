@@ -52,7 +52,7 @@ let _cached_decoder_for_LastBackupDestination: $.ASN1Decoder<LastBackupDestinati
  * @param {_Element} el The element being decoded.
  * @returns {LastBackupDestination} The decoded data structure.
  */
-export function _decode_LastBackupDestination(el: _Element) {
+export function _decode_LastBackupDestination(el: _Element): LastBackupDestination {
     if (!_cached_decoder_for_LastBackupDestination) {
         _cached_decoder_for_LastBackupDestination = $._decode_inextensible_choice<LastBackupDestination>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_LastBackupDestination: $.ASN1Encoder<LastBackupDestinati
 export function _encode_LastBackupDestination(
     value: LastBackupDestination,
     elGetter: $.ASN1Encoder<LastBackupDestination>
-) {
+): _Element {
     if (!_cached_encoder_for_LastBackupDestination) {
         _cached_encoder_for_LastBackupDestination = $._encode_choice<LastBackupDestination>(
             {

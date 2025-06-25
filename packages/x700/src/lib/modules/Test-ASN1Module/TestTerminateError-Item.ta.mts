@@ -37,7 +37,7 @@ let _cached_decoder_for_TestTerminateError_Item: $.ASN1Decoder<TestTerminateErro
  * @param {_Element} el The element being decoded.
  * @returns {TestTerminateError_Item} The decoded data structure.
  */
-export function _decode_TestTerminateError_Item(el: _Element) {
+export function _decode_TestTerminateError_Item(el: _Element): TestTerminateError_Item {
     if (!_cached_decoder_for_TestTerminateError_Item) {
         _cached_decoder_for_TestTerminateError_Item = $._decode_inextensible_choice<TestTerminateError_Item>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_TestTerminateError_Item: $.ASN1Encoder<TestTerminateErro
 export function _encode_TestTerminateError_Item(
     value: TestTerminateError_Item,
     elGetter: $.ASN1Encoder<TestTerminateError_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_TestTerminateError_Item) {
         _cached_encoder_for_TestTerminateError_Item = $._encode_choice<TestTerminateError_Item>(
             {

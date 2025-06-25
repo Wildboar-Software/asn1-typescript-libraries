@@ -125,7 +125,7 @@ let _cached_decoder_for_DbClose_RequestParams: $.ASN1Decoder<DbClose_RequestPara
  * @param {_Element} el The element being decoded.
  * @returns {DbClose_RequestParams} The decoded data structure.
  */
-export function _decode_DbClose_RequestParams(el: _Element) {
+export function _decode_DbClose_RequestParams(el: _Element): DbClose_RequestParams {
   if (!_cached_decoder_for_DbClose_RequestParams) {
     _cached_decoder_for_DbClose_RequestParams = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_DbClose_RequestParams: $.ASN1Encoder<DbClose_RequestPara
 export function _encode_DbClose_RequestParams(
   value: DbClose_RequestParams,
   elGetter: $.ASN1Encoder<DbClose_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbClose_RequestParams) {
     _cached_encoder_for_DbClose_RequestParams = function (
       value: DbClose_RequestParams    ): _Element {

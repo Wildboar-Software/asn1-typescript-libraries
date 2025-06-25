@@ -35,7 +35,7 @@ let _cached_decoder_for_PSAPAddress: $.ASN1Decoder<PSAPAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PSAPAddress} The decoded data structure.
  */
-export function _decode_PSAPAddress(el: _Element) {
+export function _decode_PSAPAddress(el: _Element): PSAPAddress {
     if (!_cached_decoder_for_PSAPAddress) {
         _cached_decoder_for_PSAPAddress = _decode_PresentationAddress;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PSAPAddress: $.ASN1Encoder<PSAPAddress> | null = null;
 export function _encode_PSAPAddress(
     value: PSAPAddress,
     elGetter: $.ASN1Encoder<PSAPAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PSAPAddress) {
         _cached_encoder_for_PSAPAddress = _encode_PresentationAddress;
     }

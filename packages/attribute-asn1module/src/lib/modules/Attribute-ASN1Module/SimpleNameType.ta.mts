@@ -41,7 +41,7 @@ let _cached_decoder_for_SimpleNameType: $.ASN1Decoder<SimpleNameType> | null = n
  * @returns {SimpleNameType} The decoded data structure.
  */
 export
-function _decode_SimpleNameType (el: _Element) {
+function _decode_SimpleNameType (el: _Element): SimpleNameType {
     if (!_cached_decoder_for_SimpleNameType) { _cached_decoder_for_SimpleNameType = $._decode_inextensible_choice<SimpleNameType>({
     "UNIVERSAL 2": [ "number_", $._decodeInteger ],
     "UNIVERSAL 25": [ "string_", $._decodeGraphicString ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_SimpleNameType: $.ASN1Encoder<SimpleNameType> | null = n
  * @returns {_Element} The SimpleNameType, encoded as an ASN.1 Element.
  */
 export
-function _encode_SimpleNameType (value: SimpleNameType, elGetter: $.ASN1Encoder<SimpleNameType>) {
+function _encode_SimpleNameType (value: SimpleNameType, elGetter: $.ASN1Encoder<SimpleNameType>): _Element {
     if (!_cached_encoder_for_SimpleNameType) { _cached_encoder_for_SimpleNameType = $._encode_choice<SimpleNameType>({
     "number_": $._encodeInteger,
     "string_": $._encodeGraphicString,

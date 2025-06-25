@@ -110,7 +110,7 @@ let _cached_decoder_for_AuditInfo: $.ASN1Decoder<AuditInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AuditInfo} The decoded data structure.
  */
-export function _decode_AuditInfo(el: _Element) {
+export function _decode_AuditInfo(el: _Element): AuditInfo {
     if (!_cached_decoder_for_AuditInfo) {
         _cached_decoder_for_AuditInfo = function (el: _Element): AuditInfo {
             const sequence: _Element[] = el.sequence;
@@ -145,7 +145,7 @@ let _cached_encoder_for_AuditInfo: $.ASN1Encoder<AuditInfo> | null = null;
 export function _encode_AuditInfo(
     value: AuditInfo,
     elGetter: $.ASN1Encoder<AuditInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_AuditInfo) {
         _cached_encoder_for_AuditInfo = function (
             value: AuditInfo        ): _Element {

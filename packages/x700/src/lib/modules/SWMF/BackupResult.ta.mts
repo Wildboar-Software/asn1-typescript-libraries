@@ -63,7 +63,7 @@ let _cached_decoder_for_BackupResult: $.ASN1Decoder<BackupResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BackupResult} The decoded data structure.
  */
-export function _decode_BackupResult(el: _Element) {
+export function _decode_BackupResult(el: _Element): BackupResult {
     if (!_cached_decoder_for_BackupResult) {
         _cached_decoder_for_BackupResult = $._decode_inextensible_choice<BackupResult>(
             {
@@ -103,7 +103,7 @@ let _cached_encoder_for_BackupResult: $.ASN1Encoder<BackupResult> | null = null;
 export function _encode_BackupResult(
     value: BackupResult,
     elGetter: $.ASN1Encoder<BackupResult>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupResult) {
         _cached_encoder_for_BackupResult = $._encode_choice<BackupResult>(
             {

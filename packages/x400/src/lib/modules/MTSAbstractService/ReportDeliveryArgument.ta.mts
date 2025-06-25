@@ -206,7 +206,7 @@ let _cached_decoder_for_ReportDeliveryArgument: $.ASN1Decoder<ReportDeliveryArgu
  * @param {_Element} el The element being decoded.
  * @returns {ReportDeliveryArgument} The decoded data structure.
  */
-export function _decode_ReportDeliveryArgument(el: _Element) {
+export function _decode_ReportDeliveryArgument(el: _Element): ReportDeliveryArgument {
     if (!_cached_decoder_for_ReportDeliveryArgument) {
         _cached_decoder_for_ReportDeliveryArgument = function (
             el: _Element
@@ -290,7 +290,7 @@ let _cached_encoder_for_ReportDeliveryArgument: $.ASN1Encoder<ReportDeliveryArgu
 export function _encode_ReportDeliveryArgument(
     value: ReportDeliveryArgument,
     elGetter: $.ASN1Encoder<ReportDeliveryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportDeliveryArgument) {
         _cached_encoder_for_ReportDeliveryArgument = function (
             value: ReportDeliveryArgument        ): _Element {

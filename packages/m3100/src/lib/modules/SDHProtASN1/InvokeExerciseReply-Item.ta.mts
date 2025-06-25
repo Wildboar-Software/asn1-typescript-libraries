@@ -120,7 +120,7 @@ let _cached_decoder_for_InvokeExerciseReply_Item: $.ASN1Decoder<InvokeExerciseRe
  * @param {_Element} el The element being decoded.
  * @returns {InvokeExerciseReply_Item} The decoded data structure.
  */
-export function _decode_InvokeExerciseReply_Item(el: _Element) {
+export function _decode_InvokeExerciseReply_Item(el: _Element): InvokeExerciseReply_Item {
     if (!_cached_decoder_for_InvokeExerciseReply_Item) {
         _cached_decoder_for_InvokeExerciseReply_Item = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_InvokeExerciseReply_Item: $.ASN1Encoder<InvokeExerciseRe
 export function _encode_InvokeExerciseReply_Item(
     value: InvokeExerciseReply_Item,
     elGetter: $.ASN1Encoder<InvokeExerciseReply_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_InvokeExerciseReply_Item) {
         _cached_encoder_for_InvokeExerciseReply_Item = function (
             value: InvokeExerciseReply_Item        ): _Element {

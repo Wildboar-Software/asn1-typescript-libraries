@@ -36,7 +36,7 @@ let _cached_decoder_for_PermissibleEncodedInformationTypes: $.ASN1Decoder<Permis
  * @param {_Element} el The element being decoded.
  * @returns {PermissibleEncodedInformationTypes} The decoded data structure.
  */
-export function _decode_PermissibleEncodedInformationTypes(el: _Element) {
+export function _decode_PermissibleEncodedInformationTypes(el: _Element): PermissibleEncodedInformationTypes {
     if (!_cached_decoder_for_PermissibleEncodedInformationTypes) {
         _cached_decoder_for_PermissibleEncodedInformationTypes = _decode_EncodedInformationTypesConstraints;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_PermissibleEncodedInformationTypes: $.ASN1Encoder<Permis
 export function _encode_PermissibleEncodedInformationTypes(
     value: PermissibleEncodedInformationTypes,
     elGetter: $.ASN1Encoder<PermissibleEncodedInformationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_PermissibleEncodedInformationTypes) {
         _cached_encoder_for_PermissibleEncodedInformationTypes = _encode_EncodedInformationTypesConstraints;
     }

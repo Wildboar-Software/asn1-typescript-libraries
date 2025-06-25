@@ -35,7 +35,7 @@ let _cached_decoder_for_EDIApplicationSecurityExtensions: $.ASN1Decoder<EDIAppli
  * @param {_Element} el The element being decoded.
  * @returns {EDIApplicationSecurityExtensions} The decoded data structure.
  */
-export function _decode_EDIApplicationSecurityExtensions(el: _Element) {
+export function _decode_EDIApplicationSecurityExtensions(el: _Element): EDIApplicationSecurityExtensions {
     if (!_cached_decoder_for_EDIApplicationSecurityExtensions) {
         _cached_decoder_for_EDIApplicationSecurityExtensions = $._decodeSetOf<EDIApplicationSecurityExtension>(
             () => _decode_EDIApplicationSecurityExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_EDIApplicationSecurityExtensions: $.ASN1Encoder<EDIAppli
 export function _encode_EDIApplicationSecurityExtensions(
     value: EDIApplicationSecurityExtensions,
     elGetter: $.ASN1Encoder<EDIApplicationSecurityExtensions>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIApplicationSecurityExtensions) {
         _cached_encoder_for_EDIApplicationSecurityExtensions = $._encodeSetOf<EDIApplicationSecurityExtension>(
             () => _encode_EDIApplicationSecurityExtension,

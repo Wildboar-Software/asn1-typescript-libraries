@@ -120,7 +120,7 @@ let _cached_decoder_for_RelationshipObject: $.ASN1Decoder<RelationshipObject> | 
  * @param {_Element} el The element being decoded.
  * @returns {RelationshipObject} The decoded data structure.
  */
-export function _decode_RelationshipObject(el: _Element) {
+export function _decode_RelationshipObject(el: _Element): RelationshipObject {
     if (!_cached_decoder_for_RelationshipObject) {
         _cached_decoder_for_RelationshipObject = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_RelationshipObject: $.ASN1Encoder<RelationshipObject> | 
 export function _encode_RelationshipObject(
     value: RelationshipObject,
     elGetter: $.ASN1Encoder<RelationshipObject>
-) {
+): _Element {
     if (!_cached_encoder_for_RelationshipObject) {
         _cached_encoder_for_RelationshipObject = function (
             value: RelationshipObject        ): _Element {

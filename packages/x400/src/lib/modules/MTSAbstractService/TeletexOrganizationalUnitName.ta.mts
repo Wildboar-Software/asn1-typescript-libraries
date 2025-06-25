@@ -33,7 +33,7 @@ let _cached_decoder_for_TeletexOrganizationalUnitName: $.ASN1Decoder<TeletexOrga
  * @param {_Element} el The element being decoded.
  * @returns {TeletexOrganizationalUnitName} The decoded data structure.
  */
-export function _decode_TeletexOrganizationalUnitName(el: _Element) {
+export function _decode_TeletexOrganizationalUnitName(el: _Element): TeletexOrganizationalUnitName {
     if (!_cached_decoder_for_TeletexOrganizationalUnitName) {
         _cached_decoder_for_TeletexOrganizationalUnitName =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_TeletexOrganizationalUnitName: $.ASN1Encoder<TeletexOrga
 export function _encode_TeletexOrganizationalUnitName(
     value: TeletexOrganizationalUnitName,
     elGetter: $.ASN1Encoder<TeletexOrganizationalUnitName>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexOrganizationalUnitName) {
         _cached_encoder_for_TeletexOrganizationalUnitName =
             $._encodeTeletexString;

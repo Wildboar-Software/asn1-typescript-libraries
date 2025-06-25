@@ -33,7 +33,7 @@ let _cached_decoder_for_ECDomainParameters: $.ASN1Decoder<ECDomainParameters> | 
  * @param {_Element} el The element being decoded.
  * @returns {ECDomainParameters} The decoded data structure.
  */
-export function _decode_ECDomainParameters(el: _Element) {
+export function _decode_ECDomainParameters(el: _Element): ECDomainParameters {
     if (!_cached_decoder_for_ECDomainParameters) {
         _cached_decoder_for_ECDomainParameters = $._decode_inextensible_choice<ECDomainParameters>(
             {
@@ -58,7 +58,7 @@ let _cached_encoder_for_ECDomainParameters: $.ASN1Encoder<ECDomainParameters> | 
 export function _encode_ECDomainParameters(
     value: ECDomainParameters,
     elGetter: $.ASN1Encoder<ECDomainParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_ECDomainParameters) {
         _cached_encoder_for_ECDomainParameters = $._encode_choice<ECDomainParameters>(
             {

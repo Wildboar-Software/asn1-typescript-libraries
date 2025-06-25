@@ -41,7 +41,7 @@ let _cached_decoder_for_DistributedSoftware: $.ASN1Decoder<DistributedSoftware> 
  * @param {_Element} el The element being decoded.
  * @returns {DistributedSoftware} The decoded data structure.
  */
-export function _decode_DistributedSoftware(el: _Element) {
+export function _decode_DistributedSoftware(el: _Element): DistributedSoftware {
     if (!_cached_decoder_for_DistributedSoftware) {
         _cached_decoder_for_DistributedSoftware = $._decode_inextensible_choice<DistributedSoftware>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_DistributedSoftware: $.ASN1Encoder<DistributedSoftware> 
 export function _encode_DistributedSoftware(
     value: DistributedSoftware,
     elGetter: $.ASN1Encoder<DistributedSoftware>
-) {
+): _Element {
     if (!_cached_encoder_for_DistributedSoftware) {
         _cached_encoder_for_DistributedSoftware = $._encode_choice<DistributedSoftware>(
             {

@@ -176,7 +176,7 @@ let _cached_decoder_for_RevAnnContent: $.ASN1Decoder<RevAnnContent> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RevAnnContent} The decoded data structure.
  */
-export function _decode_RevAnnContent(el: _Element) {
+export function _decode_RevAnnContent(el: _Element): RevAnnContent {
   if (!_cached_decoder_for_RevAnnContent) {
     _cached_decoder_for_RevAnnContent = function (el: _Element): RevAnnContent {
       let status!: PKIStatus;
@@ -235,7 +235,7 @@ let _cached_encoder_for_RevAnnContent: $.ASN1Encoder<RevAnnContent> | null = nul
 export function _encode_RevAnnContent(
   value: RevAnnContent,
   elGetter: $.ASN1Encoder<RevAnnContent>
-) {
+): _Element {
   if (!_cached_encoder_for_RevAnnContent) {
     _cached_encoder_for_RevAnnContent = function (
       value: RevAnnContent    ): _Element {

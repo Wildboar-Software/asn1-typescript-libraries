@@ -141,7 +141,7 @@ let _cached_decoder_for_EDIApplicationSecurityElementsField: $.ASN1Decoder<EDIAp
  * @param {_Element} el The element being decoded.
  * @returns {EDIApplicationSecurityElementsField} The decoded data structure.
  */
-export function _decode_EDIApplicationSecurityElementsField(el: _Element) {
+export function _decode_EDIApplicationSecurityElementsField(el: _Element): EDIApplicationSecurityElementsField {
     if (!_cached_decoder_for_EDIApplicationSecurityElementsField) {
         _cached_decoder_for_EDIApplicationSecurityElementsField = function (
             el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_EDIApplicationSecurityElementsField: $.ASN1Encoder<EDIAp
 export function _encode_EDIApplicationSecurityElementsField(
     value: EDIApplicationSecurityElementsField,
     elGetter: $.ASN1Encoder<EDIApplicationSecurityElementsField>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIApplicationSecurityElementsField) {
         _cached_encoder_for_EDIApplicationSecurityElementsField = function (
             value: EDIApplicationSecurityElementsField        ): _Element {

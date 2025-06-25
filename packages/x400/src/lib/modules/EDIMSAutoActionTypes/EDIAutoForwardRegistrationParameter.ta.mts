@@ -206,7 +206,7 @@ let _cached_decoder_for_EDIAutoForwardRegistrationParameter: $.ASN1Decoder<EDIAu
  * @param {_Element} el The element being decoded.
  * @returns {EDIAutoForwardRegistrationParameter} The decoded data structure.
  */
-export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
+export function _decode_EDIAutoForwardRegistrationParameter(el: _Element): EDIAutoForwardRegistrationParameter {
     if (!_cached_decoder_for_EDIAutoForwardRegistrationParameter) {
         _cached_decoder_for_EDIAutoForwardRegistrationParameter = function (
             el: _Element
@@ -283,7 +283,7 @@ let _cached_encoder_for_EDIAutoForwardRegistrationParameter: $.ASN1Encoder<EDIAu
 export function _encode_EDIAutoForwardRegistrationParameter(
     value: EDIAutoForwardRegistrationParameter,
     elGetter: $.ASN1Encoder<EDIAutoForwardRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIAutoForwardRegistrationParameter) {
         _cached_encoder_for_EDIAutoForwardRegistrationParameter = function (
             value: EDIAutoForwardRegistrationParameter        ): _Element {

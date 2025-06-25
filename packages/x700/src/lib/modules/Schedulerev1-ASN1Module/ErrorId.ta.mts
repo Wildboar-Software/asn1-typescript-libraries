@@ -40,7 +40,7 @@ let _cached_decoder_for_ErrorId: $.ASN1Decoder<ErrorId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ErrorId} The decoded data structure.
  */
-export function _decode_ErrorId(el: _Element) {
+export function _decode_ErrorId(el: _Element): ErrorId {
     if (!_cached_decoder_for_ErrorId) {
         _cached_decoder_for_ErrorId = $._decode_inextensible_choice<ErrorId>({
             'UNIVERSAL 2': ['localValue', $._decodeInteger],
@@ -64,7 +64,7 @@ let _cached_encoder_for_ErrorId: $.ASN1Encoder<ErrorId> | null = null;
 export function _encode_ErrorId(
     value: ErrorId,
     elGetter: $.ASN1Encoder<ErrorId>
-) {
+): _Element {
     if (!_cached_encoder_for_ErrorId) {
         _cached_encoder_for_ErrorId = $._encode_choice<ErrorId>(
             {

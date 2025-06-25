@@ -41,7 +41,7 @@ let _cached_decoder_for_Relationship: $.ASN1Decoder<Relationship> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Relationship} The decoded data structure.
  */
-export function _decode_Relationship(el: _Element) {
+export function _decode_Relationship(el: _Element): Relationship {
     if (!_cached_decoder_for_Relationship) {
         _cached_decoder_for_Relationship = $._decode_inextensible_choice<Relationship>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Relationship: $.ASN1Encoder<Relationship> | null = null;
 export function _encode_Relationship(
     value: Relationship,
     elGetter: $.ASN1Encoder<Relationship>
-) {
+): _Element {
     if (!_cached_encoder_for_Relationship) {
         _cached_encoder_for_Relationship = $._encode_choice<Relationship>(
             {

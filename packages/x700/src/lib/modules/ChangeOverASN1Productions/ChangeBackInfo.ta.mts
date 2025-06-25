@@ -164,7 +164,7 @@ let _cached_decoder_for_ChangeBackInfo: $.ASN1Decoder<ChangeBackInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ChangeBackInfo} The decoded data structure.
  */
-export function _decode_ChangeBackInfo(el: _Element) {
+export function _decode_ChangeBackInfo(el: _Element): ChangeBackInfo {
     if (!_cached_decoder_for_ChangeBackInfo) {
         _cached_decoder_for_ChangeBackInfo = function (
             el: _Element
@@ -227,7 +227,7 @@ let _cached_encoder_for_ChangeBackInfo: $.ASN1Encoder<ChangeBackInfo> | null = n
 export function _encode_ChangeBackInfo(
     value: ChangeBackInfo,
     elGetter: $.ASN1Encoder<ChangeBackInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangeBackInfo) {
         _cached_encoder_for_ChangeBackInfo = function (
             value: ChangeBackInfo        ): _Element {

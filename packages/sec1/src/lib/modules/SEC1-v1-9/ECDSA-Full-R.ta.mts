@@ -112,7 +112,7 @@ let _cached_decoder_for_ECDSA_Full_R: $.ASN1Decoder<ECDSA_Full_R> | null = null;
  * @returns {ECDSA_Full_R} The decoded data structure.
  */
 export
-function _decode_ECDSA_Full_R (el: _Element) {
+function _decode_ECDSA_Full_R (el: _Element): ECDSA_Full_R {
     if (!_cached_decoder_for_ECDSA_Full_R) { _cached_decoder_for_ECDSA_Full_R = function (el: _Element): ECDSA_Full_R {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -143,7 +143,7 @@ let _cached_encoder_for_ECDSA_Full_R: $.ASN1Encoder<ECDSA_Full_R> | null = null;
  * @returns {_Element} The ECDSA_Full_R, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECDSA_Full_R (value: ECDSA_Full_R, elGetter: $.ASN1Encoder<ECDSA_Full_R>) {
+function _encode_ECDSA_Full_R (value: ECDSA_Full_R, elGetter: $.ASN1Encoder<ECDSA_Full_R>): _Element {
     if (!_cached_encoder_for_ECDSA_Full_R) { _cached_encoder_for_ECDSA_Full_R = function (value: ECDSA_Full_R): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

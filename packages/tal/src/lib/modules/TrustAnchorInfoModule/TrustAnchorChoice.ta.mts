@@ -43,7 +43,7 @@ let _cached_decoder_for_TrustAnchorChoice: $.ASN1Decoder<TrustAnchorChoice> | nu
  * @returns {TrustAnchorChoice} The decoded data structure.
  */
 export
-function _decode_TrustAnchorChoice (el: _Element) {
+function _decode_TrustAnchorChoice (el: _Element): TrustAnchorChoice {
     if (!_cached_decoder_for_TrustAnchorChoice) { _cached_decoder_for_TrustAnchorChoice = $._decode_inextensible_choice<TrustAnchorChoice>({
     "UNIVERSAL 16": [ "certificate", _decode_Certificate ],
     "CONTEXT 1": [ "tbsCert", $._decode_explicit<TBSCertificate>(() => _decode_TBSCertificate) ],
@@ -62,7 +62,7 @@ let _cached_encoder_for_TrustAnchorChoice: $.ASN1Encoder<TrustAnchorChoice> | nu
  * @returns {_Element} The TrustAnchorChoice, encoded as an ASN.1 Element.
  */
 export
-function _encode_TrustAnchorChoice (value: TrustAnchorChoice, elGetter: $.ASN1Encoder<TrustAnchorChoice>) {
+function _encode_TrustAnchorChoice (value: TrustAnchorChoice, elGetter: $.ASN1Encoder<TrustAnchorChoice>): _Element {
     if (!_cached_encoder_for_TrustAnchorChoice) { _cached_encoder_for_TrustAnchorChoice = $._encode_choice<TrustAnchorChoice>({
     "certificate": _encode_Certificate,
     "tbsCert": $._encode_explicit(_TagClass.context, 1, () => _encode_TBSCertificate, $.DER),

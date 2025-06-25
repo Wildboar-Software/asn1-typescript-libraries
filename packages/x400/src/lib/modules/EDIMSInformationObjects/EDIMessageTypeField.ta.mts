@@ -35,7 +35,7 @@ let _cached_decoder_for_EDIMessageTypeField: $.ASN1Decoder<EDIMessageTypeField> 
  * @param {_Element} el The element being decoded.
  * @returns {EDIMessageTypeField} The decoded data structure.
  */
-export function _decode_EDIMessageTypeField(el: _Element) {
+export function _decode_EDIMessageTypeField(el: _Element): EDIMessageTypeField {
     if (!_cached_decoder_for_EDIMessageTypeField) {
         _cached_decoder_for_EDIMessageTypeField = $._decodeSetOf<EDIMessageTypeFieldSubField>(
             () => _decode_EDIMessageTypeFieldSubField
@@ -56,7 +56,7 @@ let _cached_encoder_for_EDIMessageTypeField: $.ASN1Encoder<EDIMessageTypeField> 
 export function _encode_EDIMessageTypeField(
     value: EDIMessageTypeField,
     elGetter: $.ASN1Encoder<EDIMessageTypeField>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIMessageTypeField) {
         _cached_encoder_for_EDIMessageTypeField = $._encodeSetOf<EDIMessageTypeFieldSubField>(
             () => _encode_EDIMessageTypeFieldSubField,

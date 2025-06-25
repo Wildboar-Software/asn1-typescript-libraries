@@ -161,7 +161,7 @@ let _cached_decoder_for_C_NOCHANGE_RC: $.ASN1Decoder<C_NOCHANGE_RC> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {C_NOCHANGE_RC} The decoded data structure.
  */
-export function _decode_C_NOCHANGE_RC(el: _Element) {
+export function _decode_C_NOCHANGE_RC(el: _Element): C_NOCHANGE_RC {
   if (!_cached_decoder_for_C_NOCHANGE_RC) {
     _cached_decoder_for_C_NOCHANGE_RC = $._decode_implicit<C_NOCHANGE_RC>(
       () =>
@@ -215,7 +215,7 @@ let _cached_encoder_for_C_NOCHANGE_RC: $.ASN1Encoder<C_NOCHANGE_RC> | null = nul
 export function _encode_C_NOCHANGE_RC(
   value: C_NOCHANGE_RC,
   elGetter: $.ASN1Encoder<C_NOCHANGE_RC>
-) {
+): _Element {
   if (!_cached_encoder_for_C_NOCHANGE_RC) {
     _cached_encoder_for_C_NOCHANGE_RC = $._encode_implicit(
       _TagClass.context,

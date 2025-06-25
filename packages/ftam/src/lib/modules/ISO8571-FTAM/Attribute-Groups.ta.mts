@@ -92,7 +92,7 @@ let _cached_decoder_for_Attribute_Groups: $.ASN1Decoder<Attribute_Groups> | null
  * @param {_Element} el The element being decoded.
  * @returns {Attribute_Groups} The decoded data structure.
  */
-export function _decode_Attribute_Groups(el: _Element) {
+export function _decode_Attribute_Groups(el: _Element): Attribute_Groups {
   if (!_cached_decoder_for_Attribute_Groups) {
     _cached_decoder_for_Attribute_Groups = $._decode_implicit<Attribute_Groups>(
       () => $._decodeBitString
@@ -115,7 +115,7 @@ let _cached_encoder_for_Attribute_Groups: $.ASN1Encoder<Attribute_Groups> | null
 export function _encode_Attribute_Groups(
   value: Attribute_Groups,
   elGetter: $.ASN1Encoder<Attribute_Groups>
-) {
+): _Element {
   if (!_cached_encoder_for_Attribute_Groups) {
     _cached_encoder_for_Attribute_Groups = $._encode_implicit(
       _TagClass.context,

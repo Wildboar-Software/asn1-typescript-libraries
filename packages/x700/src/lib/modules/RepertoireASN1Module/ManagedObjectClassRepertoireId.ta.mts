@@ -35,7 +35,7 @@ let _cached_decoder_for_ManagedObjectClassRepertoireId: $.ASN1Decoder<ManagedObj
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectClassRepertoireId} The decoded data structure.
  */
-export function _decode_ManagedObjectClassRepertoireId(el: _Element) {
+export function _decode_ManagedObjectClassRepertoireId(el: _Element): ManagedObjectClassRepertoireId {
     if (!_cached_decoder_for_ManagedObjectClassRepertoireId) {
         _cached_decoder_for_ManagedObjectClassRepertoireId = _decode_GdmoObjectClass;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ManagedObjectClassRepertoireId: $.ASN1Encoder<ManagedObj
 export function _encode_ManagedObjectClassRepertoireId(
     value: ManagedObjectClassRepertoireId,
     elGetter: $.ASN1Encoder<ManagedObjectClassRepertoireId>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedObjectClassRepertoireId) {
         _cached_encoder_for_ManagedObjectClassRepertoireId = _encode_GdmoObjectClass;
     }

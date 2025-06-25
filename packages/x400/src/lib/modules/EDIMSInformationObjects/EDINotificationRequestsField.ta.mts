@@ -171,7 +171,7 @@ let _cached_decoder_for_EDINotificationRequestsField: $.ASN1Decoder<EDINotificat
  * @param {_Element} el The element being decoded.
  * @returns {EDINotificationRequestsField} The decoded data structure.
  */
-export function _decode_EDINotificationRequestsField(el: _Element) {
+export function _decode_EDINotificationRequestsField(el: _Element): EDINotificationRequestsField {
     if (!_cached_decoder_for_EDINotificationRequestsField) {
         _cached_decoder_for_EDINotificationRequestsField = function (
             el: _Element
@@ -229,7 +229,7 @@ let _cached_encoder_for_EDINotificationRequestsField: $.ASN1Encoder<EDINotificat
 export function _encode_EDINotificationRequestsField(
     value: EDINotificationRequestsField,
     elGetter: $.ASN1Encoder<EDINotificationRequestsField>
-) {
+): _Element {
     if (!_cached_encoder_for_EDINotificationRequestsField) {
         _cached_encoder_for_EDINotificationRequestsField = function (
             value: EDINotificationRequestsField        ): _Element {

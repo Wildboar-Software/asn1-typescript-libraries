@@ -29,7 +29,7 @@ let _cached_decoder_for_X520CommonName: $.ASN1Decoder<X520CommonName> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {X520CommonName} The decoded data structure.
  */
-export function _decode_X520CommonName(el: _Element) {
+export function _decode_X520CommonName(el: _Element): X520CommonName {
     if (!_cached_decoder_for_X520CommonName) {
         _cached_decoder_for_X520CommonName = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_X520CommonName: $.ASN1Encoder<X520CommonName> | null = n
 export function _encode_X520CommonName(
     value: X520CommonName,
     elGetter: $.ASN1Encoder<X520CommonName>
-) {
+): _Element {
     if (!_cached_encoder_for_X520CommonName) {
         _cached_encoder_for_X520CommonName = _encode_DirectoryString;
     }

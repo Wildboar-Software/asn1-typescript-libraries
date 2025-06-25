@@ -166,7 +166,7 @@ let _cached_decoder_for_DbSetMarker_RequestParams: $.ASN1Decoder<DbSetMarker_Req
  * @param {_Element} el The element being decoded.
  * @returns {DbSetMarker_RequestParams} The decoded data structure.
  */
-export function _decode_DbSetMarker_RequestParams(el: _Element) {
+export function _decode_DbSetMarker_RequestParams(el: _Element): DbSetMarker_RequestParams {
   if (!_cached_decoder_for_DbSetMarker_RequestParams) {
     _cached_decoder_for_DbSetMarker_RequestParams = function (
       el: _Element
@@ -216,7 +216,7 @@ let _cached_encoder_for_DbSetMarker_RequestParams: $.ASN1Encoder<DbSetMarker_Req
 export function _encode_DbSetMarker_RequestParams(
   value: DbSetMarker_RequestParams,
   elGetter: $.ASN1Encoder<DbSetMarker_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbSetMarker_RequestParams) {
     _cached_encoder_for_DbSetMarker_RequestParams = function (
       value: DbSetMarker_RequestParams    ): _Element {

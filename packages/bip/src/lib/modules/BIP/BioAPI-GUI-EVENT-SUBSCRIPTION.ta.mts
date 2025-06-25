@@ -170,7 +170,7 @@ let _cached_decoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION: $.ASN1Decoder<BioAPI_GUI_
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_GUI_EVENT_SUBSCRIPTION} The decoded data structure.
  */
-export function _decode_BioAPI_GUI_EVENT_SUBSCRIPTION(el: _Element) {
+export function _decode_BioAPI_GUI_EVENT_SUBSCRIPTION(el: _Element): BioAPI_GUI_EVENT_SUBSCRIPTION {
   if (!_cached_decoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION) {
     _cached_decoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION = function (
       el: _Element
@@ -224,7 +224,7 @@ let _cached_encoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION: $.ASN1Encoder<BioAPI_GUI_
 export function _encode_BioAPI_GUI_EVENT_SUBSCRIPTION(
   value: BioAPI_GUI_EVENT_SUBSCRIPTION,
   elGetter: $.ASN1Encoder<BioAPI_GUI_EVENT_SUBSCRIPTION>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION) {
     _cached_encoder_for_BioAPI_GUI_EVENT_SUBSCRIPTION = function (
       value: BioAPI_GUI_EVENT_SUBSCRIPTION    ): _Element {

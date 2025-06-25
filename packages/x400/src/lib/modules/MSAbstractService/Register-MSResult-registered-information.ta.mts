@@ -205,7 +205,7 @@ let _cached_decoder_for_Register_MSResult_registered_information: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {Register_MSResult_registered_information} The decoded data structure.
  */
-export function _decode_Register_MSResult_registered_information(el: _Element) {
+export function _decode_Register_MSResult_registered_information(el: _Element): Register_MSResult_registered_information {
     if (!_cached_decoder_for_Register_MSResult_registered_information) {
         _cached_decoder_for_Register_MSResult_registered_information = function (
             el: _Element
@@ -311,7 +311,7 @@ let _cached_encoder_for_Register_MSResult_registered_information: $.ASN1Encoder<
 export function _encode_Register_MSResult_registered_information(
     value: Register_MSResult_registered_information,
     elGetter: $.ASN1Encoder<Register_MSResult_registered_information>
-) {
+): _Element {
     if (!_cached_encoder_for_Register_MSResult_registered_information) {
         _cached_encoder_for_Register_MSResult_registered_information = function (
             value: Register_MSResult_registered_information        ): _Element {

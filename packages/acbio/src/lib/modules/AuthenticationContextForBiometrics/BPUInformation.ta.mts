@@ -128,7 +128,7 @@ let _cached_decoder_for_BPUInformation: $.ASN1Decoder<BPUInformation> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {BPUInformation} The decoded data structure.
  */
-export function _decode_BPUInformation(el: _Element) {
+export function _decode_BPUInformation(el: _Element): BPUInformation {
     if (!_cached_decoder_for_BPUInformation) {
         _cached_decoder_for_BPUInformation = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_BPUInformation: $.ASN1Encoder<BPUInformation> | null = n
 export function _encode_BPUInformation(
     value: BPUInformation,
     elGetter: $.ASN1Encoder<BPUInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUInformation) {
         _cached_encoder_for_BPUInformation = function (
             value: BPUInformation        ): _Element {

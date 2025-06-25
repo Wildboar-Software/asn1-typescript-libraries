@@ -35,7 +35,7 @@ let _cached_decoder_for_InternalAdditionalActions: $.ASN1Decoder<InternalAdditio
  * @param {_Element} el The element being decoded.
  * @returns {InternalAdditionalActions} The decoded data structure.
  */
-export function _decode_InternalAdditionalActions(el: _Element) {
+export function _decode_InternalAdditionalActions(el: _Element): InternalAdditionalActions {
     if (!_cached_decoder_for_InternalAdditionalActions) {
         _cached_decoder_for_InternalAdditionalActions = _decode_AdditionalActions;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_InternalAdditionalActions: $.ASN1Encoder<InternalAdditio
 export function _encode_InternalAdditionalActions(
     value: InternalAdditionalActions,
     elGetter: $.ASN1Encoder<InternalAdditionalActions>
-) {
+): _Element {
     if (!_cached_encoder_for_InternalAdditionalActions) {
         _cached_encoder_for_InternalAdditionalActions = _encode_AdditionalActions;
     }

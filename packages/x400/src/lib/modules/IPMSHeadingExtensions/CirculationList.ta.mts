@@ -36,7 +36,7 @@ let _cached_decoder_for_CirculationList: $.ASN1Decoder<CirculationList> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CirculationList} The decoded data structure.
  */
-export function _decode_CirculationList(el: _Element) {
+export function _decode_CirculationList(el: _Element): CirculationList {
     if (!_cached_decoder_for_CirculationList) {
         _cached_decoder_for_CirculationList = $._decodeSequenceOf<CirculationMember>(
             () => _decode_CirculationMember
@@ -57,7 +57,7 @@ let _cached_encoder_for_CirculationList: $.ASN1Encoder<CirculationList> | null =
 export function _encode_CirculationList(
     value: CirculationList,
     elGetter: $.ASN1Encoder<CirculationList>
-) {
+): _Element {
     if (!_cached_encoder_for_CirculationList) {
         _cached_encoder_for_CirculationList = $._encodeSequenceOf<CirculationMember>(
             () => _encode_CirculationMember,

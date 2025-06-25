@@ -35,7 +35,7 @@ let _cached_decoder_for_DeliverableContentTypes: $.ASN1Decoder<DeliverableConten
  * @param {_Element} el The element being decoded.
  * @returns {DeliverableContentTypes} The decoded data structure.
  */
-export function _decode_DeliverableContentTypes(el: _Element) {
+export function _decode_DeliverableContentTypes(el: _Element): DeliverableContentTypes {
     if (!_cached_decoder_for_DeliverableContentTypes) {
         _cached_decoder_for_DeliverableContentTypes = $._decodeSetOf<ContentType>(
             () => _decode_ContentType
@@ -56,7 +56,7 @@ let _cached_encoder_for_DeliverableContentTypes: $.ASN1Encoder<DeliverableConten
 export function _encode_DeliverableContentTypes(
     value: DeliverableContentTypes,
     elGetter: $.ASN1Encoder<DeliverableContentTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliverableContentTypes) {
         _cached_encoder_for_DeliverableContentTypes = $._encodeSetOf<ContentType>(
             () => _encode_ContentType,

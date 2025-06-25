@@ -38,7 +38,7 @@ let _cached_decoder_for_NWTPList: $.ASN1Decoder<NWTPList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NWTPList} The decoded data structure.
  */
-export function _decode_NWTPList(el: _Element) {
+export function _decode_NWTPList(el: _Element): NWTPList {
     if (!_cached_decoder_for_NWTPList) {
         _cached_decoder_for_NWTPList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_NWTPList: $.ASN1Encoder<NWTPList> | null = null;
 export function _encode_NWTPList(
     value: NWTPList,
     elGetter: $.ASN1Encoder<NWTPList>
-) {
+): _Element {
     if (!_cached_encoder_for_NWTPList) {
         _cached_encoder_for_NWTPList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

@@ -114,7 +114,7 @@ let _cached_decoder_for_ConversionStatistics: $.ASN1Decoder<ConversionStatistics
  * @param {_Element} el The element being decoded.
  * @returns {ConversionStatistics} The decoded data structure.
  */
-export function _decode_ConversionStatistics(el: _Element) {
+export function _decode_ConversionStatistics(el: _Element): ConversionStatistics {
     if (!_cached_decoder_for_ConversionStatistics) {
         _cached_decoder_for_ConversionStatistics = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_ConversionStatistics: $.ASN1Encoder<ConversionStatistics
 export function _encode_ConversionStatistics(
     value: ConversionStatistics,
     elGetter: $.ASN1Encoder<ConversionStatistics>
-) {
+): _Element {
     if (!_cached_encoder_for_ConversionStatistics) {
         _cached_encoder_for_ConversionStatistics = function (
             value: ConversionStatistics        ): _Element {

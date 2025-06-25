@@ -48,7 +48,7 @@ let _cached_decoder_for_Connected: $.ASN1Decoder<Connected> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Connected} The decoded data structure.
  */
-export function _decode_Connected(el: _Element) {
+export function _decode_Connected(el: _Element): Connected {
     if (!_cached_decoder_for_Connected) {
         _cached_decoder_for_Connected = $._decode_inextensible_choice<Connected>(
             {
@@ -84,7 +84,7 @@ let _cached_encoder_for_Connected: $.ASN1Encoder<Connected> | null = null;
 export function _encode_Connected(
     value: Connected,
     elGetter: $.ASN1Encoder<Connected>
-) {
+): _Element {
     if (!_cached_encoder_for_Connected) {
         _cached_encoder_for_Connected = $._encode_choice<Connected>(
             {

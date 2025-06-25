@@ -46,7 +46,7 @@ let _cached_decoder_for_ipm_auto_forward_RegistrationParameter: $.ASN1Decoder<ip
  * @param {_Element} el The element being decoded.
  * @returns {ipm_auto_forward_RegistrationParameter} The decoded data structure.
  */
-export function _decode_ipm_auto_forward_RegistrationParameter(el: _Element) {
+export function _decode_ipm_auto_forward_RegistrationParameter(el: _Element): ipm_auto_forward_RegistrationParameter {
     if (!_cached_decoder_for_ipm_auto_forward_RegistrationParameter) {
         _cached_decoder_for_ipm_auto_forward_RegistrationParameter = $._decode_inextensible_choice<ipm_auto_forward_RegistrationParameter>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ipm_auto_forward_RegistrationParameter: $.ASN1Encoder<ip
 export function _encode_ipm_auto_forward_RegistrationParameter(
     value: ipm_auto_forward_RegistrationParameter,
     elGetter: $.ASN1Encoder<ipm_auto_forward_RegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ipm_auto_forward_RegistrationParameter) {
         _cached_encoder_for_ipm_auto_forward_RegistrationParameter = $._encode_choice<ipm_auto_forward_RegistrationParameter>(
             {

@@ -42,7 +42,7 @@ let _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance: $.ASN1De
  */
 export function _decode_CreateArgument_managedOrSuperiorObjectInstance(
   el: _Element
-) {
+): CreateArgument_managedOrSuperiorObjectInstance {
   if (!_cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance) {
     _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance = $._decode_inextensible_choice<CreateArgument_managedOrSuperiorObjectInstance>(
       {
@@ -73,7 +73,7 @@ let _cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance: $.ASN1En
 export function _encode_CreateArgument_managedOrSuperiorObjectInstance(
   value: CreateArgument_managedOrSuperiorObjectInstance,
   elGetter: $.ASN1Encoder<CreateArgument_managedOrSuperiorObjectInstance>
-) {
+): _Element {
   if (!_cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance) {
     _cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance = $._encode_choice<CreateArgument_managedOrSuperiorObjectInstance>(
       {

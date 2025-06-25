@@ -204,7 +204,7 @@ let _cached_decoder_for_ObjectInfo: $.ASN1Decoder<ObjectInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectInfo} The decoded data structure.
  */
-export function _decode_ObjectInfo(el: _Element) {
+export function _decode_ObjectInfo(el: _Element): ObjectInfo {
     if (!_cached_decoder_for_ObjectInfo) {
         _cached_decoder_for_ObjectInfo = function (el: _Element): ObjectInfo {
             let sourceIndicator: OPTIONAL<SourceIndicator>;
@@ -272,7 +272,7 @@ let _cached_encoder_for_ObjectInfo: $.ASN1Encoder<ObjectInfo> | null = null;
 export function _encode_ObjectInfo(
     value: ObjectInfo,
     elGetter: $.ASN1Encoder<ObjectInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectInfo) {
         _cached_encoder_for_ObjectInfo = function (
             value: ObjectInfo        ): _Element {

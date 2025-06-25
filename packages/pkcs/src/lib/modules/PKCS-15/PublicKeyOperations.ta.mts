@@ -29,7 +29,7 @@ let _cached_decoder_for_PublicKeyOperations: $.ASN1Decoder<PublicKeyOperations> 
  * @param {_Element} el The element being decoded.
  * @returns {PublicKeyOperations} The decoded data structure.
  */
-export function _decode_PublicKeyOperations(el: _Element) {
+export function _decode_PublicKeyOperations(el: _Element): PublicKeyOperations {
     if (!_cached_decoder_for_PublicKeyOperations) {
         _cached_decoder_for_PublicKeyOperations = _decode_Operations;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_PublicKeyOperations: $.ASN1Encoder<PublicKeyOperations> 
 export function _encode_PublicKeyOperations(
     value: PublicKeyOperations,
     elGetter: $.ASN1Encoder<PublicKeyOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicKeyOperations) {
         _cached_encoder_for_PublicKeyOperations = _encode_Operations;
     }

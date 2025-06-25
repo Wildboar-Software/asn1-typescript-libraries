@@ -35,7 +35,7 @@ let _cached_decoder_for_BindAuthenticationCheck: $.ASN1Decoder<BindAuthenticatio
  * @param {_Element} el The element being decoded.
  * @returns {BindAuthenticationCheck} The decoded data structure.
  */
-export function _decode_BindAuthenticationCheck(el: _Element) {
+export function _decode_BindAuthenticationCheck(el: _Element): BindAuthenticationCheck {
     if (!_cached_decoder_for_BindAuthenticationCheck) {
         _cached_decoder_for_BindAuthenticationCheck = _decode_AuthenticationCheck;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_BindAuthenticationCheck: $.ASN1Encoder<BindAuthenticatio
 export function _encode_BindAuthenticationCheck(
     value: BindAuthenticationCheck,
     elGetter: $.ASN1Encoder<BindAuthenticationCheck>
-) {
+): _Element {
     if (!_cached_encoder_for_BindAuthenticationCheck) {
         _cached_encoder_for_BindAuthenticationCheck = _encode_AuthenticationCheck;
     }

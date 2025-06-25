@@ -35,7 +35,7 @@ let _cached_decoder_for_ExternalSchedulerName: $.ASN1Decoder<ExternalSchedulerNa
  * @param {_Element} el The element being decoded.
  * @returns {ExternalSchedulerName} The decoded data structure.
  */
-export function _decode_ExternalSchedulerName(el: _Element) {
+export function _decode_ExternalSchedulerName(el: _Element): ExternalSchedulerName {
     if (!_cached_decoder_for_ExternalSchedulerName) {
         _cached_decoder_for_ExternalSchedulerName = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExternalSchedulerName: $.ASN1Encoder<ExternalSchedulerNa
 export function _encode_ExternalSchedulerName(
     value: ExternalSchedulerName,
     elGetter: $.ASN1Encoder<ExternalSchedulerName>
-) {
+): _Element {
     if (!_cached_encoder_for_ExternalSchedulerName) {
         _cached_encoder_for_ExternalSchedulerName = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

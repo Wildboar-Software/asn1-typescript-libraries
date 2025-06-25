@@ -192,7 +192,7 @@ let _cached_decoder_for_EncodedInformationTypes: $.ASN1Decoder<EncodedInformatio
  * @param {_Element} el The element being decoded.
  * @returns {EncodedInformationTypes} The decoded data structure.
  */
-export function _decode_EncodedInformationTypes(el: _Element) {
+export function _decode_EncodedInformationTypes(el: _Element): EncodedInformationTypes {
     if (!_cached_decoder_for_EncodedInformationTypes) {
         _cached_decoder_for_EncodedInformationTypes = $._decode_implicit<EncodedInformationTypes>(
             () =>
@@ -263,7 +263,7 @@ let _cached_encoder_for_EncodedInformationTypes: $.ASN1Encoder<EncodedInformatio
 export function _encode_EncodedInformationTypes(
     value: EncodedInformationTypes,
     elGetter: $.ASN1Encoder<EncodedInformationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_EncodedInformationTypes) {
         _cached_encoder_for_EncodedInformationTypes = $._encode_implicit(
             _TagClass.application,

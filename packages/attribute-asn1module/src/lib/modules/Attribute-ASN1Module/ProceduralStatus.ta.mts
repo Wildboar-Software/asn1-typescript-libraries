@@ -36,7 +36,7 @@ let _cached_decoder_for_ProceduralStatus: $.ASN1Decoder<ProceduralStatus> | null
  * @returns {ProceduralStatus} The decoded data structure.
  */
 export
-function _decode_ProceduralStatus (el: _Element) {
+function _decode_ProceduralStatus (el: _Element): ProceduralStatus {
     if (!_cached_decoder_for_ProceduralStatus) { _cached_decoder_for_ProceduralStatus = $._decodeSetOf<ProceduralStatus_Item>(() => _decode_ProceduralStatus_Item); }
     return _cached_decoder_for_ProceduralStatus(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_ProceduralStatus: $.ASN1Encoder<ProceduralStatus> | null
  * @returns {_Element} The ProceduralStatus, encoded as an ASN.1 Element.
  */
 export
-function _encode_ProceduralStatus (value: ProceduralStatus, elGetter: $.ASN1Encoder<ProceduralStatus>) {
+function _encode_ProceduralStatus (value: ProceduralStatus, elGetter: $.ASN1Encoder<ProceduralStatus>): _Element {
     if (!_cached_encoder_for_ProceduralStatus) { _cached_encoder_for_ProceduralStatus = $._encodeSetOf<ProceduralStatus_Item>(() => _encode_ProceduralStatus_Item, $.BER); }
     return _cached_encoder_for_ProceduralStatus(value, elGetter);
 }

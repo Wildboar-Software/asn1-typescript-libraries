@@ -46,7 +46,7 @@ let _cached_decoder_for_PKIArchiveOptions: $.ASN1Decoder<PKIArchiveOptions> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PKIArchiveOptions} The decoded data structure.
  */
-export function _decode_PKIArchiveOptions(el: _Element) {
+export function _decode_PKIArchiveOptions(el: _Element): PKIArchiveOptions {
     if (!_cached_decoder_for_PKIArchiveOptions) {
         _cached_decoder_for_PKIArchiveOptions = $._decode_inextensible_choice<PKIArchiveOptions>(
             {
@@ -86,7 +86,7 @@ let _cached_encoder_for_PKIArchiveOptions: $.ASN1Encoder<PKIArchiveOptions> | nu
 export function _encode_PKIArchiveOptions(
     value: PKIArchiveOptions,
     elGetter: $.ASN1Encoder<PKIArchiveOptions>
-) {
+): _Element {
     if (!_cached_encoder_for_PKIArchiveOptions) {
         _cached_encoder_for_PKIArchiveOptions = $._encode_choice<PKIArchiveOptions>(
             {

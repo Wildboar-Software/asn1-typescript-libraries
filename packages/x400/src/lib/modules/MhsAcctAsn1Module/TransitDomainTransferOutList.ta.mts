@@ -35,7 +35,7 @@ let _cached_decoder_for_TransitDomainTransferOutList: $.ASN1Decoder<TransitDomai
  * @param {_Element} el The element being decoded.
  * @returns {TransitDomainTransferOutList} The decoded data structure.
  */
-export function _decode_TransitDomainTransferOutList(el: _Element) {
+export function _decode_TransitDomainTransferOutList(el: _Element): TransitDomainTransferOutList {
     if (!_cached_decoder_for_TransitDomainTransferOutList) {
         _cached_decoder_for_TransitDomainTransferOutList = $._decodeSetOf<TransferRecipientField>(
             () => _decode_TransferRecipientField
@@ -56,7 +56,7 @@ let _cached_encoder_for_TransitDomainTransferOutList: $.ASN1Encoder<TransitDomai
 export function _encode_TransitDomainTransferOutList(
     value: TransitDomainTransferOutList,
     elGetter: $.ASN1Encoder<TransitDomainTransferOutList>
-) {
+): _Element {
     if (!_cached_encoder_for_TransitDomainTransferOutList) {
         _cached_encoder_for_TransitDomainTransferOutList = $._encodeSetOf<TransferRecipientField>(
             () => _encode_TransferRecipientField,

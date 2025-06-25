@@ -52,7 +52,7 @@ let _cached_decoder_for_ReportingTriggers_Item: $.ASN1Decoder<ReportingTriggers_
  * @param {_Element} el The element being decoded.
  * @returns {ReportingTriggers_Item} The decoded data structure.
  */
-export function _decode_ReportingTriggers_Item(el: _Element) {
+export function _decode_ReportingTriggers_Item(el: _Element): ReportingTriggers_Item {
     if (!_cached_decoder_for_ReportingTriggers_Item) {
         _cached_decoder_for_ReportingTriggers_Item = $._decode_inextensible_choice<ReportingTriggers_Item>(
             {
@@ -94,7 +94,7 @@ let _cached_encoder_for_ReportingTriggers_Item: $.ASN1Encoder<ReportingTriggers_
 export function _encode_ReportingTriggers_Item(
     value: ReportingTriggers_Item,
     elGetter: $.ASN1Encoder<ReportingTriggers_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportingTriggers_Item) {
         _cached_encoder_for_ReportingTriggers_Item = $._encode_choice<ReportingTriggers_Item>(
             {

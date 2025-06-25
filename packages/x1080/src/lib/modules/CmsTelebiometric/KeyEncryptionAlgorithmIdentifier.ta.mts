@@ -39,7 +39,7 @@ let _cached_decoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Decoder<KeyEncry
  * @param {_Element} el The element being decoded.
  * @returns {KeyEncryptionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_KeyEncryptionAlgorithmIdentifier(el: _Element) {
+export function _decode_KeyEncryptionAlgorithmIdentifier(el: _Element): KeyEncryptionAlgorithmIdentifier {
     if (!_cached_decoder_for_KeyEncryptionAlgorithmIdentifier) {
         _cached_decoder_for_KeyEncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Encoder<KeyEncry
 export function _encode_KeyEncryptionAlgorithmIdentifier(
     value: KeyEncryptionAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<KeyEncryptionAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyEncryptionAlgorithmIdentifier) {
         _cached_encoder_for_KeyEncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

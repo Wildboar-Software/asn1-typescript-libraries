@@ -35,7 +35,7 @@ let _cached_decoder_for_ExtensionORAddressComponents: $.ASN1Decoder<ExtensionORA
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionORAddressComponents} The decoded data structure.
  */
-export function _decode_ExtensionORAddressComponents(el: _Element) {
+export function _decode_ExtensionORAddressComponents(el: _Element): ExtensionORAddressComponents {
     if (!_cached_decoder_for_ExtensionORAddressComponents) {
         _cached_decoder_for_ExtensionORAddressComponents = _decode_PDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ExtensionORAddressComponents: $.ASN1Encoder<ExtensionORA
 export function _encode_ExtensionORAddressComponents(
     value: ExtensionORAddressComponents,
     elGetter: $.ASN1Encoder<ExtensionORAddressComponents>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionORAddressComponents) {
         _cached_encoder_for_ExtensionORAddressComponents = _encode_PDSParameter;
     }

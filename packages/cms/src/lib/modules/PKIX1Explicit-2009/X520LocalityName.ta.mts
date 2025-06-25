@@ -29,7 +29,7 @@ let _cached_decoder_for_X520LocalityName: $.ASN1Decoder<X520LocalityName> | null
  * @param {_Element} el The element being decoded.
  * @returns {X520LocalityName} The decoded data structure.
  */
-export function _decode_X520LocalityName(el: _Element) {
+export function _decode_X520LocalityName(el: _Element): X520LocalityName {
     if (!_cached_decoder_for_X520LocalityName) {
         _cached_decoder_for_X520LocalityName = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_X520LocalityName: $.ASN1Encoder<X520LocalityName> | null
 export function _encode_X520LocalityName(
     value: X520LocalityName,
     elGetter: $.ASN1Encoder<X520LocalityName>
-) {
+): _Element {
     if (!_cached_encoder_for_X520LocalityName) {
         _cached_encoder_for_X520LocalityName = _encode_DirectoryString;
     }

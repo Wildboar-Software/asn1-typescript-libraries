@@ -75,7 +75,7 @@ let _cached_decoder_for_ProcessingDetail: $.ASN1Decoder<ProcessingDetail> | null
  * @param {_Element} el The element being decoded.
  * @returns {ProcessingDetail} The decoded data structure.
  */
-export function _decode_ProcessingDetail(el: _Element) {
+export function _decode_ProcessingDetail(el: _Element): ProcessingDetail {
     if (!_cached_decoder_for_ProcessingDetail) {
         _cached_decoder_for_ProcessingDetail = $._decode_inextensible_choice<ProcessingDetail>(
             {
@@ -133,7 +133,7 @@ let _cached_encoder_for_ProcessingDetail: $.ASN1Encoder<ProcessingDetail> | null
 export function _encode_ProcessingDetail(
     value: ProcessingDetail,
     elGetter: $.ASN1Encoder<ProcessingDetail>
-) {
+): _Element {
     if (!_cached_encoder_for_ProcessingDetail) {
         _cached_encoder_for_ProcessingDetail = $._encode_choice<ProcessingDetail>(
             {

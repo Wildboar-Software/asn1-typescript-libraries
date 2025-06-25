@@ -38,7 +38,7 @@ let _cached_decoder_for_OOBCert: $.ASN1Decoder<OOBCert> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OOBCert} The decoded data structure.
  */
-export function _decode_OOBCert(el: _Element) {
+export function _decode_OOBCert(el: _Element): OOBCert {
   if (!_cached_decoder_for_OOBCert) {
     _cached_decoder_for_OOBCert = _decode_CMPCertificate;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_OOBCert: $.ASN1Encoder<OOBCert> | null = null;
 export function _encode_OOBCert(
   value: OOBCert,
   elGetter: $.ASN1Encoder<OOBCert>
-) {
+): _Element {
   if (!_cached_encoder_for_OOBCert) {
     _cached_encoder_for_OOBCert = _encode_CMPCertificate;
   }

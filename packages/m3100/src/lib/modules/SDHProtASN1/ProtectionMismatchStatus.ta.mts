@@ -119,7 +119,7 @@ let _cached_decoder_for_ProtectionMismatchStatus: $.ASN1Decoder<ProtectionMismat
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionMismatchStatus} The decoded data structure.
  */
-export function _decode_ProtectionMismatchStatus(el: _Element) {
+export function _decode_ProtectionMismatchStatus(el: _Element): ProtectionMismatchStatus {
     if (!_cached_decoder_for_ProtectionMismatchStatus) {
         _cached_decoder_for_ProtectionMismatchStatus = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ProtectionMismatchStatus: $.ASN1Encoder<ProtectionMismat
 export function _encode_ProtectionMismatchStatus(
     value: ProtectionMismatchStatus,
     elGetter: $.ASN1Encoder<ProtectionMismatchStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionMismatchStatus) {
         _cached_encoder_for_ProtectionMismatchStatus = function (
             value: ProtectionMismatchStatus        ): _Element {

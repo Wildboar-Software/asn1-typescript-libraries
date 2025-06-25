@@ -35,7 +35,7 @@ let _cached_decoder_for_MORTs: $.ASN1Decoder<MORTs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MORTs} The decoded data structure.
  */
-export function _decode_MORTs(el: _Element) {
+export function _decode_MORTs(el: _Element): MORTs {
     if (!_cached_decoder_for_MORTs) {
         _cached_decoder_for_MORTs = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -53,7 +53,7 @@ let _cached_encoder_for_MORTs: $.ASN1Encoder<MORTs> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MORTs, encoded as an ASN.1 Element.
  */
-export function _encode_MORTs(value: MORTs, elGetter: $.ASN1Encoder<MORTs>) {
+export function _encode_MORTs(value: MORTs, elGetter: $.ASN1Encoder<MORTs>): _Element {
     if (!_cached_encoder_for_MORTs) {
         _cached_encoder_for_MORTs = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

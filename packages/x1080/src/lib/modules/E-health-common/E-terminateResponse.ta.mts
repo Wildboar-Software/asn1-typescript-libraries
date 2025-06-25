@@ -135,7 +135,7 @@ let _cached_decoder_for_E_terminateResponse: $.ASN1Decoder<E_terminateResponse> 
  * @param {_Element} el The element being decoded.
  * @returns {E_terminateResponse} The decoded data structure.
  */
-export function _decode_E_terminateResponse(el: _Element) {
+export function _decode_E_terminateResponse(el: _Element): E_terminateResponse {
     if (!_cached_decoder_for_E_terminateResponse) {
         _cached_decoder_for_E_terminateResponse = function (
             el: _Element
@@ -178,7 +178,7 @@ let _cached_encoder_for_E_terminateResponse: $.ASN1Encoder<E_terminateResponse> 
 export function _encode_E_terminateResponse(
     value: E_terminateResponse,
     elGetter: $.ASN1Encoder<E_terminateResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_E_terminateResponse) {
         _cached_encoder_for_E_terminateResponse = function (
             value: E_terminateResponse        ): _Element {

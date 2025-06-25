@@ -40,7 +40,7 @@ let _cached_decoder_for_MonthMask: $.ASN1Decoder<MonthMask> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MonthMask} The decoded data structure.
  */
-export function _decode_MonthMask(el: _Element) {
+export function _decode_MonthMask(el: _Element): MonthMask {
     if (!_cached_decoder_for_MonthMask) {
         _cached_decoder_for_MonthMask = $._decodeSetOf<MonthMask_Item>(
             () => _decode_MonthMask_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_MonthMask: $.ASN1Encoder<MonthMask> | null = null;
 export function _encode_MonthMask(
     value: MonthMask,
     elGetter: $.ASN1Encoder<MonthMask>
-) {
+): _Element {
     if (!_cached_encoder_for_MonthMask) {
         _cached_encoder_for_MonthMask = $._encodeSetOf<MonthMask_Item>(
             () => _encode_MonthMask_Item,

@@ -39,7 +39,7 @@ let _cached_decoder_for_ReceiptsFrom: $.ASN1Decoder<ReceiptsFrom> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReceiptsFrom} The decoded data structure.
  */
-export function _decode_ReceiptsFrom(el: _Element) {
+export function _decode_ReceiptsFrom(el: _Element): ReceiptsFrom {
     if (!_cached_decoder_for_ReceiptsFrom) {
         _cached_decoder_for_ReceiptsFrom = $._decode_inextensible_choice<ReceiptsFrom>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_ReceiptsFrom: $.ASN1Encoder<ReceiptsFrom> | null = null;
 export function _encode_ReceiptsFrom(
     value: ReceiptsFrom,
     elGetter: $.ASN1Encoder<ReceiptsFrom>
-) {
+): _Element {
     if (!_cached_encoder_for_ReceiptsFrom) {
         _cached_encoder_for_ReceiptsFrom = $._encode_choice<ReceiptsFrom>(
             {

@@ -36,7 +36,7 @@ let _cached_decoder_for_IntervalsOfDay: $.ASN1Decoder<IntervalsOfDay> | null = n
  * @returns {IntervalsOfDay} The decoded data structure.
  */
 export
-function _decode_IntervalsOfDay (el: _Element) {
+function _decode_IntervalsOfDay (el: _Element): IntervalsOfDay {
     if (!_cached_decoder_for_IntervalsOfDay) { _cached_decoder_for_IntervalsOfDay = $._decodeSetOf<IntervalsOfDay_Item>(() => _decode_IntervalsOfDay_Item); }
     return _cached_decoder_for_IntervalsOfDay(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_IntervalsOfDay: $.ASN1Encoder<IntervalsOfDay> | null = n
  * @returns {_Element} The IntervalsOfDay, encoded as an ASN.1 Element.
  */
 export
-function _encode_IntervalsOfDay (value: IntervalsOfDay, elGetter: $.ASN1Encoder<IntervalsOfDay>) {
+function _encode_IntervalsOfDay (value: IntervalsOfDay, elGetter: $.ASN1Encoder<IntervalsOfDay>): _Element {
     if (!_cached_encoder_for_IntervalsOfDay) { _cached_encoder_for_IntervalsOfDay = $._encodeSetOf<IntervalsOfDay_Item>(() => _encode_IntervalsOfDay_Item, $.BER); }
     return _cached_encoder_for_IntervalsOfDay(value, elGetter);
 }

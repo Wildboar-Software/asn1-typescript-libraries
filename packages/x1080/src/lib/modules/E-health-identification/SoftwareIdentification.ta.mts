@@ -152,7 +152,7 @@ let _cached_decoder_for_SoftwareIdentification: $.ASN1Decoder<SoftwareIdentifica
  * @param {_Element} el The element being decoded.
  * @returns {SoftwareIdentification} The decoded data structure.
  */
-export function _decode_SoftwareIdentification(el: _Element) {
+export function _decode_SoftwareIdentification(el: _Element): SoftwareIdentification {
     if (!_cached_decoder_for_SoftwareIdentification) {
         _cached_decoder_for_SoftwareIdentification = function (
             el: _Element
@@ -208,7 +208,7 @@ let _cached_encoder_for_SoftwareIdentification: $.ASN1Encoder<SoftwareIdentifica
 export function _encode_SoftwareIdentification(
     value: SoftwareIdentification,
     elGetter: $.ASN1Encoder<SoftwareIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_SoftwareIdentification) {
         _cached_encoder_for_SoftwareIdentification = function (
             value: SoftwareIdentification        ): _Element {

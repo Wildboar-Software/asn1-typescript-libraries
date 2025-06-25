@@ -35,7 +35,7 @@ let _cached_decoder_for_ORNamePattern: $.ASN1Decoder<ORNamePattern> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ORNamePattern} The decoded data structure.
  */
-export function _decode_ORNamePattern(el: _Element) {
+export function _decode_ORNamePattern(el: _Element): ORNamePattern {
     if (!_cached_decoder_for_ORNamePattern) {
         _cached_decoder_for_ORNamePattern = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ORNamePattern: $.ASN1Encoder<ORNamePattern> | null = nul
 export function _encode_ORNamePattern(
     value: ORNamePattern,
     elGetter: $.ASN1Encoder<ORNamePattern>
-) {
+): _Element {
     if (!_cached_encoder_for_ORNamePattern) {
         _cached_encoder_for_ORNamePattern = _encode_ORName;
     }

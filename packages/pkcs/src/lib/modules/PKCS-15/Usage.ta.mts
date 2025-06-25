@@ -115,7 +115,7 @@ let _cached_decoder_for_Usage: $.ASN1Decoder<Usage> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Usage} The decoded data structure.
  */
-export function _decode_Usage(el: _Element) {
+export function _decode_Usage(el: _Element): Usage {
     if (!_cached_decoder_for_Usage) {
         _cached_decoder_for_Usage = function (el: _Element): Usage {
             let keyUsage: OPTIONAL<KeyUsage>;
@@ -158,7 +158,7 @@ let _cached_encoder_for_Usage: $.ASN1Encoder<Usage> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Usage, encoded as an ASN.1 Element.
  */
-export function _encode_Usage(value: Usage, elGetter: $.ASN1Encoder<Usage>) {
+export function _encode_Usage(value: Usage, elGetter: $.ASN1Encoder<Usage>): _Element {
     if (!_cached_encoder_for_Usage) {
         _cached_encoder_for_Usage = function (
             value: Usage        ): _Element {

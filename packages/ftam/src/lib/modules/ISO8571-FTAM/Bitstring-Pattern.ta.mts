@@ -137,7 +137,7 @@ let _cached_decoder_for_Bitstring_Pattern: $.ASN1Decoder<Bitstring_Pattern> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Bitstring_Pattern} The decoded data structure.
  */
-export function _decode_Bitstring_Pattern(el: _Element) {
+export function _decode_Bitstring_Pattern(el: _Element): Bitstring_Pattern {
   if (!_cached_decoder_for_Bitstring_Pattern) {
     _cached_decoder_for_Bitstring_Pattern = function (
       el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_Bitstring_Pattern: $.ASN1Encoder<Bitstring_Pattern> | nu
 export function _encode_Bitstring_Pattern(
   value: Bitstring_Pattern,
   elGetter: $.ASN1Encoder<Bitstring_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Bitstring_Pattern) {
     _cached_encoder_for_Bitstring_Pattern = function (
       value: Bitstring_Pattern    ): _Element {

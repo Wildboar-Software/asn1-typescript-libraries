@@ -123,7 +123,7 @@ let _cached_decoder_for_VarBind: $.ASN1Decoder<VarBind> | null = null;
  * @returns {VarBind} The decoded data structure.
  */
 export
-function _decode_VarBind (el: _Element) {
+function _decode_VarBind (el: _Element): VarBind {
     if (!_cached_decoder_for_VarBind) { _cached_decoder_for_VarBind = function (el: _Element): VarBind {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -154,7 +154,7 @@ let _cached_encoder_for_VarBind: $.ASN1Encoder<VarBind> | null = null;
  * @returns {_Element} The VarBind, encoded as an ASN.1 Element.
  */
 export
-function _encode_VarBind (value: VarBind, elGetter: $.ASN1Encoder<VarBind>) {
+function _encode_VarBind (value: VarBind, elGetter: $.ASN1Encoder<VarBind>): _Element {
     if (!_cached_encoder_for_VarBind) { _cached_encoder_for_VarBind = function (value: VarBind): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

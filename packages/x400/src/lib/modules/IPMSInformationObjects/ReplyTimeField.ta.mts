@@ -35,7 +35,7 @@ let _cached_decoder_for_ReplyTimeField: $.ASN1Decoder<ReplyTimeField> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ReplyTimeField} The decoded data structure.
  */
-export function _decode_ReplyTimeField(el: _Element) {
+export function _decode_ReplyTimeField(el: _Element): ReplyTimeField {
     if (!_cached_decoder_for_ReplyTimeField) {
         _cached_decoder_for_ReplyTimeField = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReplyTimeField: $.ASN1Encoder<ReplyTimeField> | null = n
 export function _encode_ReplyTimeField(
     value: ReplyTimeField,
     elGetter: $.ASN1Encoder<ReplyTimeField>
-) {
+): _Element {
     if (!_cached_encoder_for_ReplyTimeField) {
         _cached_encoder_for_ReplyTimeField = _encode_Time;
     }

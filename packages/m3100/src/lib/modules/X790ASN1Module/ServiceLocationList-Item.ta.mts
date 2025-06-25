@@ -134,7 +134,7 @@ let _cached_decoder_for_ServiceLocationList_Item: $.ASN1Decoder<ServiceLocationL
  * @param {_Element} el The element being decoded.
  * @returns {ServiceLocationList_Item} The decoded data structure.
  */
-export function _decode_ServiceLocationList_Item(el: _Element) {
+export function _decode_ServiceLocationList_Item(el: _Element): ServiceLocationList_Item {
     if (!_cached_decoder_for_ServiceLocationList_Item) {
         _cached_decoder_for_ServiceLocationList_Item = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_ServiceLocationList_Item: $.ASN1Encoder<ServiceLocationL
 export function _encode_ServiceLocationList_Item(
     value: ServiceLocationList_Item,
     elGetter: $.ASN1Encoder<ServiceLocationList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceLocationList_Item) {
         _cached_encoder_for_ServiceLocationList_Item = function (
             value: ServiceLocationList_Item        ): _Element {

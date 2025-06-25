@@ -158,7 +158,7 @@ let _cached_decoder_for_ResultInfoFromThread: $.ASN1Decoder<ResultInfoFromThread
  * @param {_Element} el The element being decoded.
  * @returns {ResultInfoFromThread} The decoded data structure.
  */
-export function _decode_ResultInfoFromThread(el: _Element) {
+export function _decode_ResultInfoFromThread(el: _Element): ResultInfoFromThread {
     if (!_cached_decoder_for_ResultInfoFromThread) {
         _cached_decoder_for_ResultInfoFromThread = function (
             el: _Element
@@ -208,7 +208,7 @@ let _cached_encoder_for_ResultInfoFromThread: $.ASN1Encoder<ResultInfoFromThread
 export function _encode_ResultInfoFromThread(
     value: ResultInfoFromThread,
     elGetter: $.ASN1Encoder<ResultInfoFromThread>
-) {
+): _Element {
     if (!_cached_encoder_for_ResultInfoFromThread) {
         _cached_encoder_for_ResultInfoFromThread = function (
             value: ResultInfoFromThread        ): _Element {

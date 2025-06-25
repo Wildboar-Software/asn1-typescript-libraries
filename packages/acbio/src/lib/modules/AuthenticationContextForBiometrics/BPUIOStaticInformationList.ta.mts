@@ -38,7 +38,7 @@ let _cached_decoder_for_BPUIOStaticInformationList: $.ASN1Decoder<BPUIOStaticInf
  * @param {_Element} el The element being decoded.
  * @returns {BPUIOStaticInformationList} The decoded data structure.
  */
-export function _decode_BPUIOStaticInformationList(el: _Element) {
+export function _decode_BPUIOStaticInformationList(el: _Element): BPUIOStaticInformationList {
     if (!_cached_decoder_for_BPUIOStaticInformationList) {
         _cached_decoder_for_BPUIOStaticInformationList = $._decodeSequenceOf<BPUIOStaticInformation>(
             () => _decode_BPUIOStaticInformation
@@ -61,7 +61,7 @@ let _cached_encoder_for_BPUIOStaticInformationList: $.ASN1Encoder<BPUIOStaticInf
 export function _encode_BPUIOStaticInformationList(
     value: BPUIOStaticInformationList,
     elGetter: $.ASN1Encoder<BPUIOStaticInformationList>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUIOStaticInformationList) {
         _cached_encoder_for_BPUIOStaticInformationList = $._encodeSequenceOf<BPUIOStaticInformation>(
             () => _encode_BPUIOStaticInformation,

@@ -36,7 +36,7 @@ let _cached_decoder_for_DeliveryPortOperations: $.ASN1Decoder<DeliveryPortOperat
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryPortOperations} The decoded data structure.
  */
-export function _decode_DeliveryPortOperations(el: _Element) {
+export function _decode_DeliveryPortOperations(el: _Element): DeliveryPortOperations {
     if (!_cached_decoder_for_DeliveryPortOperations) {
         _cached_decoder_for_DeliveryPortOperations = _decode_EventTypeId;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_DeliveryPortOperations: $.ASN1Encoder<DeliveryPortOperat
 export function _encode_DeliveryPortOperations(
     value: DeliveryPortOperations,
     elGetter: $.ASN1Encoder<DeliveryPortOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryPortOperations) {
         _cached_encoder_for_DeliveryPortOperations = _encode_EventTypeId;
     }

@@ -116,7 +116,7 @@ let _cached_decoder_for_DigestInfo: $.ASN1Decoder<DigestInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DigestInfo} The decoded data structure.
  */
-export function _decode_DigestInfo(el: _Element) {
+export function _decode_DigestInfo(el: _Element): DigestInfo {
     if (!_cached_decoder_for_DigestInfo) {
         _cached_decoder_for_DigestInfo = function (el: _Element): DigestInfo {
             const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_DigestInfo: $.ASN1Encoder<DigestInfo> | null = null;
 export function _encode_DigestInfo(
     value: DigestInfo,
     elGetter: $.ASN1Encoder<DigestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DigestInfo) {
         _cached_encoder_for_DigestInfo = function (
             value: DigestInfo        ): _Element {

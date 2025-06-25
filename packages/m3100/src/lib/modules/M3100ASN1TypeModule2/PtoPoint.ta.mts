@@ -111,7 +111,7 @@ let _cached_decoder_for_PtoPoint: $.ASN1Decoder<PtoPoint> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PtoPoint} The decoded data structure.
  */
-export function _decode_PtoPoint(el: _Element) {
+export function _decode_PtoPoint(el: _Element): PtoPoint {
     if (!_cached_decoder_for_PtoPoint) {
         _cached_decoder_for_PtoPoint = function (el: _Element): PtoPoint {
             const sequence: _Element[] = el.sequence;
@@ -148,7 +148,7 @@ let _cached_encoder_for_PtoPoint: $.ASN1Encoder<PtoPoint> | null = null;
 export function _encode_PtoPoint(
     value: PtoPoint,
     elGetter: $.ASN1Encoder<PtoPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_PtoPoint) {
         _cached_encoder_for_PtoPoint = function (
             value: PtoPoint        ): _Element {

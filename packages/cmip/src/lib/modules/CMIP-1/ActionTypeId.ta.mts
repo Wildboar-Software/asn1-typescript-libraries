@@ -41,7 +41,7 @@ let _cached_decoder_for_ActionTypeId: $.ASN1Decoder<ActionTypeId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ActionTypeId} The decoded data structure.
  */
-export function _decode_ActionTypeId(el: _Element) {
+export function _decode_ActionTypeId(el: _Element): ActionTypeId {
   if (!_cached_decoder_for_ActionTypeId) {
     _cached_decoder_for_ActionTypeId = $._decode_inextensible_choice<ActionTypeId>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ActionTypeId: $.ASN1Encoder<ActionTypeId> | null = null;
 export function _encode_ActionTypeId(
   value: ActionTypeId,
   elGetter: $.ASN1Encoder<ActionTypeId>
-) {
+): _Element {
   if (!_cached_encoder_for_ActionTypeId) {
     _cached_encoder_for_ActionTypeId = $._encode_choice<ActionTypeId>(
       {

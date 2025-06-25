@@ -38,7 +38,7 @@ let _cached_decoder_for_TestSessionId_globalRef: $.ASN1Decoder<TestSessionId_glo
  * @param {_Element} el The element being decoded.
  * @returns {TestSessionId_globalRef} The decoded data structure.
  */
-export function _decode_TestSessionId_globalRef(el: _Element) {
+export function _decode_TestSessionId_globalRef(el: _Element): TestSessionId_globalRef {
     if (!_cached_decoder_for_TestSessionId_globalRef) {
         _cached_decoder_for_TestSessionId_globalRef = $._decode_inextensible_choice<TestSessionId_globalRef>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_TestSessionId_globalRef: $.ASN1Encoder<TestSessionId_glo
 export function _encode_TestSessionId_globalRef(
     value: TestSessionId_globalRef,
     elGetter: $.ASN1Encoder<TestSessionId_globalRef>
-) {
+): _Element {
     if (!_cached_encoder_for_TestSessionId_globalRef) {
         _cached_encoder_for_TestSessionId_globalRef = $._encode_choice<TestSessionId_globalRef>(
             {

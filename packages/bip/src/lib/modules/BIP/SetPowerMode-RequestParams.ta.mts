@@ -157,7 +157,7 @@ let _cached_decoder_for_SetPowerMode_RequestParams: $.ASN1Decoder<SetPowerMode_R
  * @param {_Element} el The element being decoded.
  * @returns {SetPowerMode_RequestParams} The decoded data structure.
  */
-export function _decode_SetPowerMode_RequestParams(el: _Element) {
+export function _decode_SetPowerMode_RequestParams(el: _Element): SetPowerMode_RequestParams {
   if (!_cached_decoder_for_SetPowerMode_RequestParams) {
     _cached_decoder_for_SetPowerMode_RequestParams = function (
       el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_SetPowerMode_RequestParams: $.ASN1Encoder<SetPowerMode_R
 export function _encode_SetPowerMode_RequestParams(
   value: SetPowerMode_RequestParams,
   elGetter: $.ASN1Encoder<SetPowerMode_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_SetPowerMode_RequestParams) {
     _cached_encoder_for_SetPowerMode_RequestParams = function (
       value: SetPowerMode_RequestParams    ): _Element {

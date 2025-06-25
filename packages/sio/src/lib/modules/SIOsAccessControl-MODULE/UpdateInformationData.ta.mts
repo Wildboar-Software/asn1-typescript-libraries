@@ -151,7 +151,7 @@ let _cached_decoder_for_UpdateInformationData: $.ASN1Decoder<UpdateInformationDa
  * @param {_Element} el The element being decoded.
  * @returns {UpdateInformationData} The decoded data structure.
  */
-export function _decode_UpdateInformationData(el: _Element) {
+export function _decode_UpdateInformationData(el: _Element): UpdateInformationData {
     if (!_cached_decoder_for_UpdateInformationData) {
         _cached_decoder_for_UpdateInformationData = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_UpdateInformationData: $.ASN1Encoder<UpdateInformationDa
 export function _encode_UpdateInformationData(
     value: UpdateInformationData,
     elGetter: $.ASN1Encoder<UpdateInformationData>
-) {
+): _Element {
     if (!_cached_encoder_for_UpdateInformationData) {
         _cached_encoder_for_UpdateInformationData = function (
             value: UpdateInformationData        ): _Element {

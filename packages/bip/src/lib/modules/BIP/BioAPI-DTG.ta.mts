@@ -124,7 +124,7 @@ let _cached_decoder_for_BioAPI_DTG: $.ASN1Decoder<BioAPI_DTG> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_DTG} The decoded data structure.
  */
-export function _decode_BioAPI_DTG(el: _Element) {
+export function _decode_BioAPI_DTG(el: _Element): BioAPI_DTG {
   if (!_cached_decoder_for_BioAPI_DTG) {
     _cached_decoder_for_BioAPI_DTG = function (el: _Element): BioAPI_DTG {
       const sequence: _Element[] = el.sequence;
@@ -161,7 +161,7 @@ let _cached_encoder_for_BioAPI_DTG: $.ASN1Encoder<BioAPI_DTG> | null = null;
 export function _encode_BioAPI_DTG(
   value: BioAPI_DTG,
   elGetter: $.ASN1Encoder<BioAPI_DTG>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_DTG) {
     _cached_encoder_for_BioAPI_DTG = function (
       value: BioAPI_DTG    ): _Element {

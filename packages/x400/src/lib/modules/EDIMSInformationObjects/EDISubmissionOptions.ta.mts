@@ -101,7 +101,7 @@ let _cached_decoder_for_EDISubmissionOptions: $.ASN1Decoder<EDISubmissionOptions
  * @param {_Element} el The element being decoded.
  * @returns {EDISubmissionOptions} The decoded data structure.
  */
-export function _decode_EDISubmissionOptions(el: _Element) {
+export function _decode_EDISubmissionOptions(el: _Element): EDISubmissionOptions {
     if (!_cached_decoder_for_EDISubmissionOptions) {
         _cached_decoder_for_EDISubmissionOptions = function (
             el: _Element
@@ -144,7 +144,7 @@ let _cached_encoder_for_EDISubmissionOptions: $.ASN1Encoder<EDISubmissionOptions
 export function _encode_EDISubmissionOptions(
     value: EDISubmissionOptions,
     elGetter: $.ASN1Encoder<EDISubmissionOptions>
-) {
+): _Element {
     if (!_cached_encoder_for_EDISubmissionOptions) {
         _cached_encoder_for_EDISubmissionOptions = function (
             value: EDISubmissionOptions        ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.A
  */
 export function _decode_UniversalExtensionPhysicalDeliveryAddressComponents(
     el: _Element
-) {
+): UniversalExtensionPhysicalDeliveryAddressComponents {
     if (
         !_cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents
     ) {
@@ -60,7 +60,7 @@ let _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.A
 export function _encode_UniversalExtensionPhysicalDeliveryAddressComponents(
     value: UniversalExtensionPhysicalDeliveryAddressComponents,
     elGetter: $.ASN1Encoder<UniversalExtensionPhysicalDeliveryAddressComponents>
-) {
+): _Element {
     if (
         !_cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents
     ) {

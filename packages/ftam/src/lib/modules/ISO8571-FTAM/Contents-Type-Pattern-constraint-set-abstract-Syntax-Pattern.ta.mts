@@ -125,7 +125,7 @@ let _cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
  */
 export function _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern(
   el: _Element
-) {
+): Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
   if (
     !_cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
   ) {
@@ -179,7 +179,7 @@ let _cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
 export function _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern(
   value: Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   elGetter: $.ASN1Encoder<Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern>
-) {
+): _Element {
   if (
     !_cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
   ) {

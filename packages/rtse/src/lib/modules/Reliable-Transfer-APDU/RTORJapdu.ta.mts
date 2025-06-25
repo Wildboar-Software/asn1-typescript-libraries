@@ -122,7 +122,7 @@ let _cached_decoder_for_RTORJapdu: $.ASN1Decoder<RTORJapdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RTORJapdu} The decoded data structure.
  */
-export function _decode_RTORJapdu(el: _Element) {
+export function _decode_RTORJapdu(el: _Element): RTORJapdu {
   if (!_cached_decoder_for_RTORJapdu) {
     _cached_decoder_for_RTORJapdu = function (el: _Element): RTORJapdu {
       /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -167,7 +167,7 @@ let _cached_encoder_for_RTORJapdu: $.ASN1Encoder<RTORJapdu> | null = null;
 export function _encode_RTORJapdu(
   value: RTORJapdu,
   elGetter: $.ASN1Encoder<RTORJapdu>
-) {
+): _Element {
   if (!_cached_encoder_for_RTORJapdu) {
     _cached_encoder_for_RTORJapdu = function (
       value: RTORJapdu    ): _Element {

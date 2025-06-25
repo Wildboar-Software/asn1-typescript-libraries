@@ -52,7 +52,7 @@ let _cached_decoder_for_FNReasonCodeField: $.ASN1Decoder<FNReasonCodeField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {FNReasonCodeField} The decoded data structure.
  */
-export function _decode_FNReasonCodeField(el: _Element) {
+export function _decode_FNReasonCodeField(el: _Element): FNReasonCodeField {
     if (!_cached_decoder_for_FNReasonCodeField) {
         _cached_decoder_for_FNReasonCodeField = $._decode_inextensible_choice<FNReasonCodeField>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_FNReasonCodeField: $.ASN1Encoder<FNReasonCodeField> | nu
 export function _encode_FNReasonCodeField(
     value: FNReasonCodeField,
     elGetter: $.ASN1Encoder<FNReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_FNReasonCodeField) {
         _cached_encoder_for_FNReasonCodeField = $._encode_choice<FNReasonCodeField>(
             {

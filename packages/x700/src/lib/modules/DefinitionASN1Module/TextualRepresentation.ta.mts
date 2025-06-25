@@ -35,7 +35,7 @@ let _cached_decoder_for_TextualRepresentation: $.ASN1Decoder<TextualRepresentati
  * @param {_Element} el The element being decoded.
  * @returns {TextualRepresentation} The decoded data structure.
  */
-export function _decode_TextualRepresentation(el: _Element) {
+export function _decode_TextualRepresentation(el: _Element): TextualRepresentation {
     if (!_cached_decoder_for_TextualRepresentation) {
         _cached_decoder_for_TextualRepresentation = $._decodeSequenceOf<LineImage>(
             () => _decode_LineImage
@@ -56,7 +56,7 @@ let _cached_encoder_for_TextualRepresentation: $.ASN1Encoder<TextualRepresentati
 export function _encode_TextualRepresentation(
     value: TextualRepresentation,
     elGetter: $.ASN1Encoder<TextualRepresentation>
-) {
+): _Element {
     if (!_cached_encoder_for_TextualRepresentation) {
         _cached_encoder_for_TextualRepresentation = $._encodeSequenceOf<LineImage>(
             () => _encode_LineImage,

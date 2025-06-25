@@ -85,7 +85,7 @@ let _cached_decoder_for_F_WRITE_request_file_access_data_unit_Operation: $.ASN1D
  */
 export function _decode_F_WRITE_request_file_access_data_unit_Operation(
   el: _Element
-) {
+): F_WRITE_request_file_access_data_unit_Operation {
   if (!_cached_decoder_for_F_WRITE_request_file_access_data_unit_Operation) {
     _cached_decoder_for_F_WRITE_request_file_access_data_unit_Operation =
       $._decodeInteger;
@@ -109,7 +109,7 @@ let _cached_encoder_for_F_WRITE_request_file_access_data_unit_Operation: $.ASN1E
 export function _encode_F_WRITE_request_file_access_data_unit_Operation(
   value: F_WRITE_request_file_access_data_unit_Operation,
   elGetter: $.ASN1Encoder<F_WRITE_request_file_access_data_unit_Operation>
-) {
+): _Element {
   if (!_cached_encoder_for_F_WRITE_request_file_access_data_unit_Operation) {
     _cached_encoder_for_F_WRITE_request_file_access_data_unit_Operation =
       $._encodeInteger;

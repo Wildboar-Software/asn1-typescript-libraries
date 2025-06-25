@@ -38,7 +38,7 @@ let _cached_decoder_for_AD_IF_RELEVANT: $.ASN1Decoder<AD_IF_RELEVANT> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AD_IF_RELEVANT} The decoded data structure.
  */
-export function _decode_AD_IF_RELEVANT(el: _Element) {
+export function _decode_AD_IF_RELEVANT(el: _Element): AD_IF_RELEVANT {
   if (!_cached_decoder_for_AD_IF_RELEVANT) {
     _cached_decoder_for_AD_IF_RELEVANT = _decode_AuthorizationData;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AD_IF_RELEVANT: $.ASN1Encoder<AD_IF_RELEVANT> | null = n
 export function _encode_AD_IF_RELEVANT(
   value: AD_IF_RELEVANT,
   elGetter: $.ASN1Encoder<AD_IF_RELEVANT>
-) {
+): _Element {
   if (!_cached_encoder_for_AD_IF_RELEVANT) {
     _cached_encoder_for_AD_IF_RELEVANT = _encode_AuthorizationData;
   }

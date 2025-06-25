@@ -134,7 +134,7 @@ let _cached_decoder_for_HashValue: $.ASN1Decoder<HashValue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HashValue} The decoded data structure.
  */
-export function _decode_HashValue(el: _Element) {
+export function _decode_HashValue(el: _Element): HashValue {
   if (!_cached_decoder_for_HashValue) {
     _cached_decoder_for_HashValue = function (el: _Element): HashValue {
       let algorithm: OPTIONAL<HashAlgorithm> =
@@ -174,7 +174,7 @@ let _cached_encoder_for_HashValue: $.ASN1Encoder<HashValue> | null = null;
 export function _encode_HashValue(
   value: HashValue,
   elGetter: $.ASN1Encoder<HashValue>
-) {
+): _Element {
   if (!_cached_encoder_for_HashValue) {
     _cached_encoder_for_HashValue = function (
       value: HashValue    ): _Element {

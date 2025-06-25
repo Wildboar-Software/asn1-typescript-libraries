@@ -33,7 +33,7 @@ let _cached_decoder_for_AttributesSyntax: $.ASN1Decoder<AttributesSyntax> | null
  * @returns {AttributesSyntax} The decoded data structure.
  */
 export
-function _decode_AttributesSyntax (el: _Element) {
+function _decode_AttributesSyntax (el: _Element): AttributesSyntax {
     if (!_cached_decoder_for_AttributesSyntax) { _cached_decoder_for_AttributesSyntax = $._decodeSequenceOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_AttributesSyntax(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AttributesSyntax: $.ASN1Encoder<AttributesSyntax> | null
  * @returns {_Element} The AttributesSyntax, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributesSyntax (value: AttributesSyntax, elGetter: $.ASN1Encoder<AttributesSyntax>) {
+function _encode_AttributesSyntax (value: AttributesSyntax, elGetter: $.ASN1Encoder<AttributesSyntax>): _Element {
     if (!_cached_encoder_for_AttributesSyntax) { _cached_encoder_for_AttributesSyntax = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.BER); }
     return _cached_encoder_for_AttributesSyntax(value, elGetter);
 }

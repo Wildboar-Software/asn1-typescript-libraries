@@ -116,7 +116,7 @@ let _cached_decoder_for_ProtocolVersion: $.ASN1Decoder<ProtocolVersion> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolVersion} The decoded data structure.
  */
-export function _decode_ProtocolVersion(el: _Element) {
+export function _decode_ProtocolVersion(el: _Element): ProtocolVersion {
   if (!_cached_decoder_for_ProtocolVersion) {
     _cached_decoder_for_ProtocolVersion = function (
       el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> | null =
 export function _encode_ProtocolVersion(
   value: ProtocolVersion,
   elGetter: $.ASN1Encoder<ProtocolVersion>
-) {
+): _Element {
   if (!_cached_encoder_for_ProtocolVersion) {
     _cached_encoder_for_ProtocolVersion = function (
       value: ProtocolVersion    ): _Element {

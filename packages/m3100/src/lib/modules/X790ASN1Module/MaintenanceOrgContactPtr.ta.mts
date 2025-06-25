@@ -46,7 +46,7 @@ let _cached_decoder_for_MaintenanceOrgContactPtr: $.ASN1Decoder<MaintenanceOrgCo
  * @param {_Element} el The element being decoded.
  * @returns {MaintenanceOrgContactPtr} The decoded data structure.
  */
-export function _decode_MaintenanceOrgContactPtr(el: _Element) {
+export function _decode_MaintenanceOrgContactPtr(el: _Element): MaintenanceOrgContactPtr {
     if (!_cached_decoder_for_MaintenanceOrgContactPtr) {
         _cached_decoder_for_MaintenanceOrgContactPtr = $._decode_extensible_choice<MaintenanceOrgContactPtr>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_MaintenanceOrgContactPtr: $.ASN1Encoder<MaintenanceOrgCo
 export function _encode_MaintenanceOrgContactPtr(
     value: MaintenanceOrgContactPtr,
     elGetter: $.ASN1Encoder<MaintenanceOrgContactPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_MaintenanceOrgContactPtr) {
         _cached_encoder_for_MaintenanceOrgContactPtr = $._encode_choice<MaintenanceOrgContactPtr>(
             {

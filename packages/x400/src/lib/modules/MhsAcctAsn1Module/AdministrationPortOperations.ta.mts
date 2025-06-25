@@ -35,7 +35,7 @@ let _cached_decoder_for_AdministrationPortOperations: $.ASN1Decoder<Administrati
  * @param {_Element} el The element being decoded.
  * @returns {AdministrationPortOperations} The decoded data structure.
  */
-export function _decode_AdministrationPortOperations(el: _Element) {
+export function _decode_AdministrationPortOperations(el: _Element): AdministrationPortOperations {
     if (!_cached_decoder_for_AdministrationPortOperations) {
         _cached_decoder_for_AdministrationPortOperations = _decode_EventTypeId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_AdministrationPortOperations: $.ASN1Encoder<Administrati
 export function _encode_AdministrationPortOperations(
     value: AdministrationPortOperations,
     elGetter: $.ASN1Encoder<AdministrationPortOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_AdministrationPortOperations) {
         _cached_encoder_for_AdministrationPortOperations = _encode_EventTypeId;
     }

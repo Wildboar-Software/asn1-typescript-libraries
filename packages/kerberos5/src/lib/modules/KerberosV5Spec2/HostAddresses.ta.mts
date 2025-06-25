@@ -41,7 +41,7 @@ let _cached_decoder_for_HostAddresses: $.ASN1Decoder<HostAddresses> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {HostAddresses} The decoded data structure.
  */
-export function _decode_HostAddresses(el: _Element) {
+export function _decode_HostAddresses(el: _Element): HostAddresses {
   if (!_cached_decoder_for_HostAddresses) {
     _cached_decoder_for_HostAddresses = $._decodeSequenceOf<HostAddress>(
       () => _decode_HostAddress
@@ -64,7 +64,7 @@ let _cached_encoder_for_HostAddresses: $.ASN1Encoder<HostAddresses> | null = nul
 export function _encode_HostAddresses(
   value: HostAddresses,
   elGetter: $.ASN1Encoder<HostAddresses>
-) {
+): _Element {
   if (!_cached_encoder_for_HostAddresses) {
     _cached_encoder_for_HostAddresses = $._encodeSequenceOf<HostAddress>(
       () => _encode_HostAddress,

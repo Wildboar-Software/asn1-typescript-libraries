@@ -48,7 +48,7 @@ let _cached_decoder_for_HolderStatus: $.ASN1Decoder<HolderStatus> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HolderStatus} The decoded data structure.
  */
-export function _decode_HolderStatus(el: _Element) {
+export function _decode_HolderStatus(el: _Element): HolderStatus {
     if (!_cached_decoder_for_HolderStatus) {
         _cached_decoder_for_HolderStatus = $._decode_inextensible_choice<HolderStatus>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_HolderStatus: $.ASN1Encoder<HolderStatus> | null = null;
 export function _encode_HolderStatus(
     value: HolderStatus,
     elGetter: $.ASN1Encoder<HolderStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_HolderStatus) {
         _cached_encoder_for_HolderStatus = $._encode_choice<HolderStatus>(
             {

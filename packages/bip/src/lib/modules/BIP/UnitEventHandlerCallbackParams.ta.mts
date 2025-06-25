@@ -207,7 +207,7 @@ let _cached_decoder_for_UnitEventHandlerCallbackParams: $.ASN1Decoder<UnitEventH
  * @param {_Element} el The element being decoded.
  * @returns {UnitEventHandlerCallbackParams} The decoded data structure.
  */
-export function _decode_UnitEventHandlerCallbackParams(el: _Element) {
+export function _decode_UnitEventHandlerCallbackParams(el: _Element): UnitEventHandlerCallbackParams {
   if (!_cached_decoder_for_UnitEventHandlerCallbackParams) {
     _cached_decoder_for_UnitEventHandlerCallbackParams = function (
       el: _Element
@@ -273,7 +273,7 @@ let _cached_encoder_for_UnitEventHandlerCallbackParams: $.ASN1Encoder<UnitEventH
 export function _encode_UnitEventHandlerCallbackParams(
   value: UnitEventHandlerCallbackParams,
   elGetter: $.ASN1Encoder<UnitEventHandlerCallbackParams>
-) {
+): _Element {
   if (!_cached_encoder_for_UnitEventHandlerCallbackParams) {
     _cached_encoder_for_UnitEventHandlerCallbackParams = function (
       value: UnitEventHandlerCallbackParams    ): _Element {

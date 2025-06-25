@@ -38,7 +38,7 @@ let _cached_decoder_for_ExtendedCertificateOrCertificate: $.ASN1Decoder<Extended
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedCertificateOrCertificate} The decoded data structure.
  */
-export function _decode_ExtendedCertificateOrCertificate(el: _Element) {
+export function _decode_ExtendedCertificateOrCertificate(el: _Element): ExtendedCertificateOrCertificate {
     if (!_cached_decoder_for_ExtendedCertificateOrCertificate) {
         _cached_decoder_for_ExtendedCertificateOrCertificate = $._decode_inextensible_choice<ExtendedCertificateOrCertificate>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_ExtendedCertificateOrCertificate: $.ASN1Encoder<Extended
 export function _encode_ExtendedCertificateOrCertificate(
     value: ExtendedCertificateOrCertificate,
     elGetter: $.ASN1Encoder<ExtendedCertificateOrCertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedCertificateOrCertificate) {
         _cached_encoder_for_ExtendedCertificateOrCertificate = $._encode_choice<ExtendedCertificateOrCertificate>(
             {

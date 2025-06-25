@@ -144,7 +144,7 @@ let _cached_decoder_for_UnparsedEntity: $.ASN1Decoder<UnparsedEntity> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UnparsedEntity} The decoded data structure.
  */
-export function _decode_UnparsedEntity(el: _Element) {
+export function _decode_UnparsedEntity(el: _Element): UnparsedEntity {
   if (!_cached_decoder_for_UnparsedEntity) {
     _cached_decoder_for_UnparsedEntity = function (
       el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_UnparsedEntity: $.ASN1Encoder<UnparsedEntity> | null = n
 export function _encode_UnparsedEntity(
   value: UnparsedEntity,
   elGetter: $.ASN1Encoder<UnparsedEntity>
-) {
+): _Element {
   if (!_cached_encoder_for_UnparsedEntity) {
     _cached_encoder_for_UnparsedEntity = function (
       value: UnparsedEntity    ): _Element {

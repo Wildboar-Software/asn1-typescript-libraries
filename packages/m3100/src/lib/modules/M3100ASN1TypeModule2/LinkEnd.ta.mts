@@ -45,7 +45,7 @@ let _cached_decoder_for_LinkEnd: $.ASN1Decoder<LinkEnd> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LinkEnd} The decoded data structure.
  */
-export function _decode_LinkEnd(el: _Element) {
+export function _decode_LinkEnd(el: _Element): LinkEnd {
     if (!_cached_decoder_for_LinkEnd) {
         _cached_decoder_for_LinkEnd = $._decode_inextensible_choice<LinkEnd>({
             'CONTEXT 0': [
@@ -85,7 +85,7 @@ let _cached_encoder_for_LinkEnd: $.ASN1Encoder<LinkEnd> | null = null;
 export function _encode_LinkEnd(
     value: LinkEnd,
     elGetter: $.ASN1Encoder<LinkEnd>
-) {
+): _Element {
     if (!_cached_encoder_for_LinkEnd) {
         _cached_encoder_for_LinkEnd = $._encode_choice<LinkEnd>(
             {

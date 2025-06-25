@@ -127,7 +127,7 @@ let _cached_decoder_for_InvalidAccessControlFilter: $.ASN1Decoder<InvalidAccessC
  * @param {_Element} el The element being decoded.
  * @returns {InvalidAccessControlFilter} The decoded data structure.
  */
-export function _decode_InvalidAccessControlFilter(el: _Element) {
+export function _decode_InvalidAccessControlFilter(el: _Element): InvalidAccessControlFilter {
     if (!_cached_decoder_for_InvalidAccessControlFilter) {
         _cached_decoder_for_InvalidAccessControlFilter = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_InvalidAccessControlFilter: $.ASN1Encoder<InvalidAccessC
 export function _encode_InvalidAccessControlFilter(
     value: InvalidAccessControlFilter,
     elGetter: $.ASN1Encoder<InvalidAccessControlFilter>
-) {
+): _Element {
     if (!_cached_encoder_for_InvalidAccessControlFilter) {
         _cached_encoder_for_InvalidAccessControlFilter = function (
             value: InvalidAccessControlFilter        ): _Element {

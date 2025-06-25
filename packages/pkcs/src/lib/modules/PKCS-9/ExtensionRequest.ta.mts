@@ -30,7 +30,7 @@ let _cached_decoder_for_ExtensionRequest: $.ASN1Decoder<ExtensionRequest> | null
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionRequest} The decoded data structure.
  */
-export function _decode_ExtensionRequest(el: _Element) {
+export function _decode_ExtensionRequest(el: _Element): ExtensionRequest {
     if (!_cached_decoder_for_ExtensionRequest) {
         _cached_decoder_for_ExtensionRequest = _decode_Extensions;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_ExtensionRequest: $.ASN1Encoder<ExtensionRequest> | null
 export function _encode_ExtensionRequest(
     value: ExtensionRequest,
     elGetter: $.ASN1Encoder<ExtensionRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionRequest) {
         _cached_encoder_for_ExtensionRequest = _encode_Extensions;
     }

@@ -123,7 +123,7 @@ let _cached_decoder_for_NNPDAUReasonCodeField: $.ASN1Decoder<NNPDAUReasonCodeFie
  * @param {_Element} el The element being decoded.
  * @returns {NNPDAUReasonCodeField} The decoded data structure.
  */
-export function _decode_NNPDAUReasonCodeField(el: _Element) {
+export function _decode_NNPDAUReasonCodeField(el: _Element): NNPDAUReasonCodeField {
     if (!_cached_decoder_for_NNPDAUReasonCodeField) {
         _cached_decoder_for_NNPDAUReasonCodeField = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_NNPDAUReasonCodeField: $.ASN1Encoder<NNPDAUReasonCodeFie
 export function _encode_NNPDAUReasonCodeField(
     value: NNPDAUReasonCodeField,
     elGetter: $.ASN1Encoder<NNPDAUReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_NNPDAUReasonCodeField) {
         _cached_encoder_for_NNPDAUReasonCodeField = function (
             value: NNPDAUReasonCodeField        ): _Element {

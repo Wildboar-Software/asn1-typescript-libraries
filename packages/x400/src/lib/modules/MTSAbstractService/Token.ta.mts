@@ -109,7 +109,7 @@ let _cached_decoder_for_Token: $.ASN1Decoder<Token> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Token} The decoded data structure.
  */
-export function _decode_Token(el: _Element) {
+export function _decode_Token(el: _Element): Token {
     if (!_cached_decoder_for_Token) {
         _cached_decoder_for_Token = function (el: _Element): Token {
             const sequence: _Element[] = el.sequence;
@@ -145,7 +145,7 @@ let _cached_encoder_for_Token: $.ASN1Encoder<Token> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Token, encoded as an ASN.1 Element.
  */
-export function _encode_Token(value: Token, elGetter: $.ASN1Encoder<Token>) {
+export function _encode_Token(value: Token, elGetter: $.ASN1Encoder<Token>): _Element {
     if (!_cached_encoder_for_Token) {
         _cached_encoder_for_Token = function (
             value: Token        ): _Element {

@@ -45,7 +45,7 @@ let _cached_decoder_for_OriginatorIdentifierOrKey: $.ASN1Decoder<OriginatorIdent
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorIdentifierOrKey} The decoded data structure.
  */
-export function _decode_OriginatorIdentifierOrKey(el: _Element) {
+export function _decode_OriginatorIdentifierOrKey(el: _Element): OriginatorIdentifierOrKey {
     if (!_cached_decoder_for_OriginatorIdentifierOrKey) {
         _cached_decoder_for_OriginatorIdentifierOrKey = $._decode_inextensible_choice<OriginatorIdentifierOrKey>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_OriginatorIdentifierOrKey: $.ASN1Encoder<OriginatorIdent
 export function _encode_OriginatorIdentifierOrKey(
     value: OriginatorIdentifierOrKey,
     elGetter: $.ASN1Encoder<OriginatorIdentifierOrKey>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorIdentifierOrKey) {
         _cached_encoder_for_OriginatorIdentifierOrKey = $._encode_choice<OriginatorIdentifierOrKey>(
             {

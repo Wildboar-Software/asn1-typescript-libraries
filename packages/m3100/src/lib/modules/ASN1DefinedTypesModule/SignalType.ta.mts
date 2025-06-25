@@ -50,7 +50,7 @@ let _cached_decoder_for_SignalType: $.ASN1Decoder<SignalType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SignalType} The decoded data structure.
  */
-export function _decode_SignalType(el: _Element) {
+export function _decode_SignalType(el: _Element): SignalType {
     if (!_cached_decoder_for_SignalType) {
         _cached_decoder_for_SignalType = $._decode_inextensible_choice<SignalType>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_SignalType: $.ASN1Encoder<SignalType> | null = null;
 export function _encode_SignalType(
     value: SignalType,
     elGetter: $.ASN1Encoder<SignalType>
-) {
+): _Element {
     if (!_cached_encoder_for_SignalType) {
         _cached_encoder_for_SignalType = $._encode_choice<SignalType>(
             {

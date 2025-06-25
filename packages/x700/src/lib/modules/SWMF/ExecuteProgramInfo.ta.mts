@@ -35,7 +35,7 @@ let _cached_decoder_for_ExecuteProgramInfo: $.ASN1Decoder<ExecuteProgramInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {ExecuteProgramInfo} The decoded data structure.
  */
-export function _decode_ExecuteProgramInfo(el: _Element) {
+export function _decode_ExecuteProgramInfo(el: _Element): ExecuteProgramInfo {
     if (!_cached_decoder_for_ExecuteProgramInfo) {
         _cached_decoder_for_ExecuteProgramInfo = $._decodeSetOf<ManagementExtension>(
             () => _decode_ManagementExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExecuteProgramInfo: $.ASN1Encoder<ExecuteProgramInfo> | 
 export function _encode_ExecuteProgramInfo(
     value: ExecuteProgramInfo,
     elGetter: $.ASN1Encoder<ExecuteProgramInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecuteProgramInfo) {
         _cached_encoder_for_ExecuteProgramInfo = $._encodeSetOf<ManagementExtension>(
             () => _encode_ManagementExtension,

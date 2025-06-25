@@ -37,7 +37,7 @@ let _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier: $.ASN1Deco
  */
 export function _decode_ProbeOriginAuthenticationAlgorithmIdentifier(
     el: _Element
-) {
+): ProbeOriginAuthenticationAlgorithmIdentifier {
     if (!_cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier) {
         _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -56,7 +56,7 @@ let _cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier: $.ASN1Enco
 export function _encode_ProbeOriginAuthenticationAlgorithmIdentifier(
     value: ProbeOriginAuthenticationAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ProbeOriginAuthenticationAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier) {
         _cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

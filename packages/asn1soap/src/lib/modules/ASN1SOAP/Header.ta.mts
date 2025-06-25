@@ -38,7 +38,7 @@ let _cached_decoder_for_Header: $.ASN1Decoder<Header> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Header} The decoded data structure.
  */
-export function _decode_Header(el: _Element) {
+export function _decode_Header(el: _Element): Header {
   if (!_cached_decoder_for_Header) {
     _cached_decoder_for_Header = $._decodeSequenceOf<HeaderBlock>(
       () => _decode_HeaderBlock
@@ -58,7 +58,7 @@ let _cached_encoder_for_Header: $.ASN1Encoder<Header> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Header, encoded as an ASN.1 Element.
  */
-export function _encode_Header(value: Header, elGetter: $.ASN1Encoder<Header>) {
+export function _encode_Header(value: Header, elGetter: $.ASN1Encoder<Header>): _Element {
   if (!_cached_encoder_for_Header) {
     _cached_encoder_for_Header = $._encodeSequenceOf<HeaderBlock>(
       () => _encode_HeaderBlock,

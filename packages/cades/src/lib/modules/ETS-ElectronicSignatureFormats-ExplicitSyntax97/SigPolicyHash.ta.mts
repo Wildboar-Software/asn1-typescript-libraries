@@ -33,7 +33,7 @@ let _cached_decoder_for_SigPolicyHash: $.ASN1Decoder<SigPolicyHash> | null = nul
  * @returns {SigPolicyHash} The decoded data structure.
  */
 export
-function _decode_SigPolicyHash (el: _Element) {
+function _decode_SigPolicyHash (el: _Element): SigPolicyHash {
     if (!_cached_decoder_for_SigPolicyHash) { _cached_decoder_for_SigPolicyHash = _decode_OtherHashAlgAndValue; }
     return _cached_decoder_for_SigPolicyHash(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SigPolicyHash: $.ASN1Encoder<SigPolicyHash> | null = nul
  * @returns {_Element} The SigPolicyHash, encoded as an ASN.1 Element.
  */
 export
-function _encode_SigPolicyHash (value: SigPolicyHash, elGetter: $.ASN1Encoder<SigPolicyHash>) {
+function _encode_SigPolicyHash (value: SigPolicyHash, elGetter: $.ASN1Encoder<SigPolicyHash>): _Element {
     if (!_cached_encoder_for_SigPolicyHash) { _cached_encoder_for_SigPolicyHash = _encode_OtherHashAlgAndValue; }
     return _cached_encoder_for_SigPolicyHash(value, elGetter);
 }

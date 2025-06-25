@@ -36,7 +36,7 @@ let _cached_decoder_for_TCConsumerAS: $.ASN1Decoder<TCConsumerAS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TCConsumerAS} The decoded data structure.
  */
-export function _decode_TCConsumerAS(el: _Element) {
+export function _decode_TCConsumerAS(el: _Element): TCConsumerAS {
     if (!_cached_decoder_for_TCConsumerAS) {
         _cached_decoder_for_TCConsumerAS = _decode_TCMessage;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_TCConsumerAS: $.ASN1Encoder<TCConsumerAS> | null = null;
 export function _encode_TCConsumerAS(
     value: TCConsumerAS,
     elGetter: $.ASN1Encoder<TCConsumerAS>
-) {
+): _Element {
     if (!_cached_encoder_for_TCConsumerAS) {
         _cached_encoder_for_TCConsumerAS = _encode_TCMessage;
     }

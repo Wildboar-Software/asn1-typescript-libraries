@@ -134,7 +134,7 @@ let _cached_decoder_for_Restrictions: $.ASN1Decoder<Restrictions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Restrictions} The decoded data structure.
  */
-export function _decode_Restrictions(el: _Element) {
+export function _decode_Restrictions(el: _Element): Restrictions {
     if (!_cached_decoder_for_Restrictions) {
         _cached_decoder_for_Restrictions = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_Restrictions: $.ASN1Encoder<Restrictions> | null = null;
 export function _encode_Restrictions(
     value: Restrictions,
     elGetter: $.ASN1Encoder<Restrictions>
-) {
+): _Element {
     if (!_cached_encoder_for_Restrictions) {
         _cached_encoder_for_Restrictions = function (
             value: Restrictions        ): _Element {

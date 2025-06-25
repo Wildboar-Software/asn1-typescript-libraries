@@ -113,7 +113,7 @@ let _cached_decoder_for_PBEParameter: $.ASN1Decoder<PBEParameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PBEParameter} The decoded data structure.
  */
-export function _decode_PBEParameter(el: _Element) {
+export function _decode_PBEParameter(el: _Element): PBEParameter {
     if (!_cached_decoder_for_PBEParameter) {
         _cached_decoder_for_PBEParameter = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_PBEParameter: $.ASN1Encoder<PBEParameter> | null = null;
 export function _encode_PBEParameter(
     value: PBEParameter,
     elGetter: $.ASN1Encoder<PBEParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_PBEParameter) {
         _cached_encoder_for_PBEParameter = function (
             value: PBEParameter        ): _Element {

@@ -29,7 +29,7 @@ let _cached_decoder_for_Signcrypters: $.ASN1Decoder<Signcrypters> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Signcrypters} The decoded data structure.
  */
-export function _decode_Signcrypters(el: _Element) {
+export function _decode_Signcrypters(el: _Element): Signcrypters {
     if (!_cached_decoder_for_Signcrypters) {
         _cached_decoder_for_Signcrypters = $._decodeSequenceOf<Signcrypter>(
             () => _decode_Signcrypter
@@ -52,7 +52,7 @@ let _cached_encoder_for_Signcrypters: $.ASN1Encoder<Signcrypters> | null = null;
 export function _encode_Signcrypters(
     value: Signcrypters,
     elGetter: $.ASN1Encoder<Signcrypters>
-) {
+): _Element {
     if (!_cached_encoder_for_Signcrypters) {
         _cached_encoder_for_Signcrypters = $._encodeSequenceOf<Signcrypter>(
             () => _encode_Signcrypter,

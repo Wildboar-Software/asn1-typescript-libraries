@@ -110,7 +110,7 @@ let _cached_decoder_for_UserAddress_x121: $.ASN1Decoder<UserAddress_x121> | null
  * @param {_Element} el The element being decoded.
  * @returns {UserAddress_x121} The decoded data structure.
  */
-export function _decode_UserAddress_x121(el: _Element) {
+export function _decode_UserAddress_x121(el: _Element): UserAddress_x121 {
     if (!_cached_decoder_for_UserAddress_x121) {
         _cached_decoder_for_UserAddress_x121 = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_UserAddress_x121: $.ASN1Encoder<UserAddress_x121> | null
 export function _encode_UserAddress_x121(
     value: UserAddress_x121,
     elGetter: $.ASN1Encoder<UserAddress_x121>
-) {
+): _Element {
     if (!_cached_encoder_for_UserAddress_x121) {
         _cached_encoder_for_UserAddress_x121 = function (
             value: UserAddress_x121        ): _Element {

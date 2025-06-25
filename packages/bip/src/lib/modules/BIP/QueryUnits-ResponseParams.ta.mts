@@ -111,7 +111,7 @@ let _cached_decoder_for_QueryUnits_ResponseParams: $.ASN1Decoder<QueryUnits_Resp
  * @param {_Element} el The element being decoded.
  * @returns {QueryUnits_ResponseParams} The decoded data structure.
  */
-export function _decode_QueryUnits_ResponseParams(el: _Element) {
+export function _decode_QueryUnits_ResponseParams(el: _Element): QueryUnits_ResponseParams {
   if (!_cached_decoder_for_QueryUnits_ResponseParams) {
     _cached_decoder_for_QueryUnits_ResponseParams = function (
       el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_QueryUnits_ResponseParams: $.ASN1Encoder<QueryUnits_Resp
 export function _encode_QueryUnits_ResponseParams(
   value: QueryUnits_ResponseParams,
   elGetter: $.ASN1Encoder<QueryUnits_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_QueryUnits_ResponseParams) {
     _cached_encoder_for_QueryUnits_ResponseParams = function (
       value: QueryUnits_ResponseParams    ): _Element {

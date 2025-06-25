@@ -35,7 +35,7 @@ let _cached_decoder_for_SubjectIntermediateTraceInformation: $.ASN1Decoder<Subje
  * @param {_Element} el The element being decoded.
  * @returns {SubjectIntermediateTraceInformation} The decoded data structure.
  */
-export function _decode_SubjectIntermediateTraceInformation(el: _Element) {
+export function _decode_SubjectIntermediateTraceInformation(el: _Element): SubjectIntermediateTraceInformation {
     if (!_cached_decoder_for_SubjectIntermediateTraceInformation) {
         _cached_decoder_for_SubjectIntermediateTraceInformation = _decode_TraceInformation;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SubjectIntermediateTraceInformation: $.ASN1Encoder<Subje
 export function _encode_SubjectIntermediateTraceInformation(
     value: SubjectIntermediateTraceInformation,
     elGetter: $.ASN1Encoder<SubjectIntermediateTraceInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectIntermediateTraceInformation) {
         _cached_encoder_for_SubjectIntermediateTraceInformation = _encode_TraceInformation;
     }

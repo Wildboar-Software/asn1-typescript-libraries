@@ -136,7 +136,7 @@ let _cached_decoder_for_KeyRspMsgContent: $.ASN1Decoder<KeyRspMsgContent> | null
  * @returns {KeyRspMsgContent} The decoded data structure.
  */
 export
-function _decode_KeyRspMsgContent (el: _Element) {
+function _decode_KeyRspMsgContent (el: _Element): KeyRspMsgContent {
     if (!_cached_decoder_for_KeyRspMsgContent) { _cached_decoder_for_KeyRspMsgContent = function (el: _Element): KeyRspMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -177,7 +177,7 @@ let _cached_encoder_for_KeyRspMsgContent: $.ASN1Encoder<KeyRspMsgContent> | null
  * @returns {_Element} The KeyRspMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_KeyRspMsgContent (value: KeyRspMsgContent, elGetter: $.ASN1Encoder<KeyRspMsgContent>) {
+function _encode_KeyRspMsgContent (value: KeyRspMsgContent, elGetter: $.ASN1Encoder<KeyRspMsgContent>): _Element {
     if (!_cached_encoder_for_KeyRspMsgContent) { _cached_encoder_for_KeyRspMsgContent = function (value: KeyRspMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -183,7 +183,7 @@ let _cached_decoder_for_BodyPartDescriptor: $.ASN1Decoder<BodyPartDescriptor> | 
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartDescriptor} The decoded data structure.
  */
-export function _decode_BodyPartDescriptor(el: _Element) {
+export function _decode_BodyPartDescriptor(el: _Element): BodyPartDescriptor {
     if (!_cached_decoder_for_BodyPartDescriptor) {
         _cached_decoder_for_BodyPartDescriptor = function (
             el: _Element
@@ -260,7 +260,7 @@ let _cached_encoder_for_BodyPartDescriptor: $.ASN1Encoder<BodyPartDescriptor> | 
 export function _encode_BodyPartDescriptor(
     value: BodyPartDescriptor,
     elGetter: $.ASN1Encoder<BodyPartDescriptor>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartDescriptor) {
         _cached_encoder_for_BodyPartDescriptor = function (
             value: BodyPartDescriptor        ): _Element {

@@ -50,7 +50,7 @@ let _cached_decoder_for_Duration: $.ASN1Decoder<Duration> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Duration} The decoded data structure.
  */
-export function _decode_Duration(el: _Element) {
+export function _decode_Duration(el: _Element): Duration {
   if (!_cached_decoder_for_Duration) {
     _cached_decoder_for_Duration = _get_decoder_for_GenericTimeTypeChoice<
       DURATION,
@@ -74,7 +74,7 @@ let _cached_encoder_for_Duration: $.ASN1Encoder<Duration> | null = null;
 export function _encode_Duration(
   value: Duration,
   elGetter: $.ASN1Encoder<Duration>
-) {
+): _Element {
   if (!_cached_encoder_for_Duration) {
     _cached_encoder_for_Duration = _get_encoder_for_GenericTimeTypeChoice<
       DURATION,

@@ -112,7 +112,7 @@ let _cached_decoder_for_SpecificErrorInfo: $.ASN1Decoder<SpecificErrorInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SpecificErrorInfo} The decoded data structure.
  */
-export function _decode_SpecificErrorInfo(el: _Element) {
+export function _decode_SpecificErrorInfo(el: _Element): SpecificErrorInfo {
   if (!_cached_decoder_for_SpecificErrorInfo) {
     _cached_decoder_for_SpecificErrorInfo = function (
       el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_SpecificErrorInfo: $.ASN1Encoder<SpecificErrorInfo> | nu
 export function _encode_SpecificErrorInfo(
   value: SpecificErrorInfo,
   elGetter: $.ASN1Encoder<SpecificErrorInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_SpecificErrorInfo) {
     _cached_encoder_for_SpecificErrorInfo = function (
       value: SpecificErrorInfo    ): _Element {

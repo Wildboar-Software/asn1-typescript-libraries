@@ -112,7 +112,7 @@ let _cached_decoder_for_BackupResult_local: $.ASN1Decoder<BackupResult_local> | 
  * @param {_Element} el The element being decoded.
  * @returns {BackupResult_local} The decoded data structure.
  */
-export function _decode_BackupResult_local(el: _Element) {
+export function _decode_BackupResult_local(el: _Element): BackupResult_local {
     if (!_cached_decoder_for_BackupResult_local) {
         _cached_decoder_for_BackupResult_local = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_BackupResult_local: $.ASN1Encoder<BackupResult_local> | 
 export function _encode_BackupResult_local(
     value: BackupResult_local,
     elGetter: $.ASN1Encoder<BackupResult_local>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupResult_local) {
         _cached_encoder_for_BackupResult_local = function (
             value: BackupResult_local        ): _Element {

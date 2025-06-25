@@ -40,7 +40,7 @@ let _cached_decoder_for_Unbind: $.ASN1Decoder<Unbind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Unbind} The decoded data structure.
  */
-export function _decode_Unbind(el: _Element) {
+export function _decode_Unbind(el: _Element): Unbind {
   if (!_cached_decoder_for_Unbind) {
     _cached_decoder_for_Unbind = $._decode_inextensible_choice<Unbind>({
       'CONTEXT 19': [
@@ -71,7 +71,7 @@ let _cached_encoder_for_Unbind: $.ASN1Encoder<Unbind> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Unbind, encoded as an ASN.1 Element.
  */
-export function _encode_Unbind(value: Unbind, elGetter: $.ASN1Encoder<Unbind>) {
+export function _encode_Unbind(value: Unbind, elGetter: $.ASN1Encoder<Unbind>): _Element {
   if (!_cached_encoder_for_Unbind) {
     _cached_encoder_for_Unbind = $._encode_choice<Unbind>(
       {

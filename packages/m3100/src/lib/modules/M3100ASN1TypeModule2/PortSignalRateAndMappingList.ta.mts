@@ -42,7 +42,7 @@ let _cached_decoder_for_PortSignalRateAndMappingList: $.ASN1Decoder<PortSignalRa
  * @param {_Element} el The element being decoded.
  * @returns {PortSignalRateAndMappingList} The decoded data structure.
  */
-export function _decode_PortSignalRateAndMappingList(el: _Element) {
+export function _decode_PortSignalRateAndMappingList(el: _Element): PortSignalRateAndMappingList {
     if (!_cached_decoder_for_PortSignalRateAndMappingList) {
         _cached_decoder_for_PortSignalRateAndMappingList = $._decodeSetOf<PortSignalRateAndMappingList_Item>(
             () => _decode_PortSignalRateAndMappingList_Item
@@ -65,7 +65,7 @@ let _cached_encoder_for_PortSignalRateAndMappingList: $.ASN1Encoder<PortSignalRa
 export function _encode_PortSignalRateAndMappingList(
     value: PortSignalRateAndMappingList,
     elGetter: $.ASN1Encoder<PortSignalRateAndMappingList>
-) {
+): _Element {
     if (!_cached_encoder_for_PortSignalRateAndMappingList) {
         _cached_encoder_for_PortSignalRateAndMappingList = $._encodeSetOf<PortSignalRateAndMappingList_Item>(
             () => _encode_PortSignalRateAndMappingList_Item,

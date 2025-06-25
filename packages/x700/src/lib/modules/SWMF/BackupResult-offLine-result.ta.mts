@@ -35,7 +35,7 @@ let _cached_decoder_for_BackupResult_offLine_result: $.ASN1Decoder<BackupResult_
  * @param {_Element} el The element being decoded.
  * @returns {BackupResult_offLine_result} The decoded data structure.
  */
-export function _decode_BackupResult_offLine_result(el: _Element) {
+export function _decode_BackupResult_offLine_result(el: _Element): BackupResult_offLine_result {
     if (!_cached_decoder_for_BackupResult_offLine_result) {
         _cached_decoder_for_BackupResult_offLine_result = $._decode_inextensible_choice<BackupResult_offLine_result>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_BackupResult_offLine_result: $.ASN1Encoder<BackupResult_
 export function _encode_BackupResult_offLine_result(
     value: BackupResult_offLine_result,
     elGetter: $.ASN1Encoder<BackupResult_offLine_result>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupResult_offLine_result) {
         _cached_encoder_for_BackupResult_offLine_result = $._encode_choice<BackupResult_offLine_result>(
             {

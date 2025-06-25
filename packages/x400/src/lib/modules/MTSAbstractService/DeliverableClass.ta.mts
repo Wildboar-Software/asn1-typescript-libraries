@@ -44,7 +44,7 @@ let _cached_decoder_for_DeliverableClass: $.ASN1Decoder<DeliverableClass> | null
  * @param {_Element} el The element being decoded.
  * @returns {DeliverableClass} The decoded data structure.
  */
-export function _decode_DeliverableClass(el: _Element) {
+export function _decode_DeliverableClass(el: _Element): DeliverableClass {
     if (!_cached_decoder_for_DeliverableClass) {
         _cached_decoder_for_DeliverableClass = _decode_MessageClass;
     }
@@ -63,7 +63,7 @@ let _cached_encoder_for_DeliverableClass: $.ASN1Encoder<DeliverableClass> | null
 export function _encode_DeliverableClass(
     value: DeliverableClass,
     elGetter: $.ASN1Encoder<DeliverableClass>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliverableClass) {
         _cached_encoder_for_DeliverableClass = _encode_MessageClass;
     }

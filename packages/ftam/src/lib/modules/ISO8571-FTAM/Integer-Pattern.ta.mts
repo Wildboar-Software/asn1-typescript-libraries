@@ -121,7 +121,7 @@ let _cached_decoder_for_Integer_Pattern: $.ASN1Decoder<Integer_Pattern> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Integer_Pattern} The decoded data structure.
  */
-export function _decode_Integer_Pattern(el: _Element) {
+export function _decode_Integer_Pattern(el: _Element): Integer_Pattern {
   if (!_cached_decoder_for_Integer_Pattern) {
     _cached_decoder_for_Integer_Pattern = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_Integer_Pattern: $.ASN1Encoder<Integer_Pattern> | null =
 export function _encode_Integer_Pattern(
   value: Integer_Pattern,
   elGetter: $.ASN1Encoder<Integer_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Integer_Pattern) {
     _cached_encoder_for_Integer_Pattern = function (
       value: Integer_Pattern    ): _Element {

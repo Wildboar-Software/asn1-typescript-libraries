@@ -120,7 +120,7 @@ let _cached_decoder_for_LabelAndParameters: $.ASN1Decoder<LabelAndParameters> | 
  * @param {_Element} el The element being decoded.
  * @returns {LabelAndParameters} The decoded data structure.
  */
-export function _decode_LabelAndParameters(el: _Element) {
+export function _decode_LabelAndParameters(el: _Element): LabelAndParameters {
     if (!_cached_decoder_for_LabelAndParameters) {
         _cached_decoder_for_LabelAndParameters = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_LabelAndParameters: $.ASN1Encoder<LabelAndParameters> | 
 export function _encode_LabelAndParameters(
     value: LabelAndParameters,
     elGetter: $.ASN1Encoder<LabelAndParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_LabelAndParameters) {
         _cached_encoder_for_LabelAndParameters = function (
             value: LabelAndParameters        ): _Element {

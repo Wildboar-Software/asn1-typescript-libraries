@@ -45,7 +45,7 @@ let _cached_decoder_for_AddTpsToTpPoolResult_Item: $.ASN1Decoder<AddTpsToTpPoolR
  * @param {_Element} el The element being decoded.
  * @returns {AddTpsToTpPoolResult_Item} The decoded data structure.
  */
-export function _decode_AddTpsToTpPoolResult_Item(el: _Element) {
+export function _decode_AddTpsToTpPoolResult_Item(el: _Element): AddTpsToTpPoolResult_Item {
     if (!_cached_decoder_for_AddTpsToTpPoolResult_Item) {
         _cached_decoder_for_AddTpsToTpPoolResult_Item = $._decode_inextensible_choice<AddTpsToTpPoolResult_Item>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_AddTpsToTpPoolResult_Item: $.ASN1Encoder<AddTpsToTpPoolR
 export function _encode_AddTpsToTpPoolResult_Item(
     value: AddTpsToTpPoolResult_Item,
     elGetter: $.ASN1Encoder<AddTpsToTpPoolResult_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AddTpsToTpPoolResult_Item) {
         _cached_encoder_for_AddTpsToTpPoolResult_Item = $._encode_choice<AddTpsToTpPoolResult_Item>(
             {

@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginalEncodedInformationTypes: $.ASN1Decoder<OriginalE
  * @param {_Element} el The element being decoded.
  * @returns {OriginalEncodedInformationTypes} The decoded data structure.
  */
-export function _decode_OriginalEncodedInformationTypes(el: _Element) {
+export function _decode_OriginalEncodedInformationTypes(el: _Element): OriginalEncodedInformationTypes {
     if (!_cached_decoder_for_OriginalEncodedInformationTypes) {
         _cached_decoder_for_OriginalEncodedInformationTypes = _decode_EncodedInformationTypes;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginalEncodedInformationTypes: $.ASN1Encoder<OriginalE
 export function _encode_OriginalEncodedInformationTypes(
     value: OriginalEncodedInformationTypes,
     elGetter: $.ASN1Encoder<OriginalEncodedInformationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginalEncodedInformationTypes) {
         _cached_encoder_for_OriginalEncodedInformationTypes = _encode_EncodedInformationTypes;
     }

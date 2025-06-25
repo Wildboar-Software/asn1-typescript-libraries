@@ -345,7 +345,7 @@ let _cached_decoder_for_BioAPI_UNIT_SCHEMA: $.ASN1Decoder<BioAPI_UNIT_SCHEMA> | 
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_UNIT_SCHEMA} The decoded data structure.
  */
-export function _decode_BioAPI_UNIT_SCHEMA(el: _Element) {
+export function _decode_BioAPI_UNIT_SCHEMA(el: _Element): BioAPI_UNIT_SCHEMA {
   if (!_cached_decoder_for_BioAPI_UNIT_SCHEMA) {
     _cached_decoder_for_BioAPI_UNIT_SCHEMA = function (
       el: _Element
@@ -443,7 +443,7 @@ let _cached_encoder_for_BioAPI_UNIT_SCHEMA: $.ASN1Encoder<BioAPI_UNIT_SCHEMA> | 
 export function _encode_BioAPI_UNIT_SCHEMA(
   value: BioAPI_UNIT_SCHEMA,
   elGetter: $.ASN1Encoder<BioAPI_UNIT_SCHEMA>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_UNIT_SCHEMA) {
     _cached_encoder_for_BioAPI_UNIT_SCHEMA = function (
       value: BioAPI_UNIT_SCHEMA    ): _Element {

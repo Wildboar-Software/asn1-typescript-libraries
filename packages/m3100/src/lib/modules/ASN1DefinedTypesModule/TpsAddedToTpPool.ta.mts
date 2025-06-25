@@ -116,7 +116,7 @@ let _cached_decoder_for_TpsAddedToTpPool: $.ASN1Decoder<TpsAddedToTpPool> | null
  * @param {_Element} el The element being decoded.
  * @returns {TpsAddedToTpPool} The decoded data structure.
  */
-export function _decode_TpsAddedToTpPool(el: _Element) {
+export function _decode_TpsAddedToTpPool(el: _Element): TpsAddedToTpPool {
     if (!_cached_decoder_for_TpsAddedToTpPool) {
         _cached_decoder_for_TpsAddedToTpPool = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_TpsAddedToTpPool: $.ASN1Encoder<TpsAddedToTpPool> | null
 export function _encode_TpsAddedToTpPool(
     value: TpsAddedToTpPool,
     elGetter: $.ASN1Encoder<TpsAddedToTpPool>
-) {
+): _Element {
     if (!_cached_encoder_for_TpsAddedToTpPool) {
         _cached_encoder_for_TpsAddedToTpPool = function (
             value: TpsAddedToTpPool        ): _Element {

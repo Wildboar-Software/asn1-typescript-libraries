@@ -216,7 +216,7 @@ let _cached_decoder_for_Register88: $.ASN1Decoder<Register88> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Register88} The decoded data structure.
  */
-export function _decode_Register88(el: _Element) {
+export function _decode_Register88(el: _Element): Register88 {
     if (!_cached_decoder_for_Register88) {
         _cached_decoder_for_Register88 = function (el: _Element): Register88 {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -303,7 +303,7 @@ let _cached_encoder_for_Register88: $.ASN1Encoder<Register88> | null = null;
 export function _encode_Register88(
     value: Register88,
     elGetter: $.ASN1Encoder<Register88>
-) {
+): _Element {
     if (!_cached_encoder_for_Register88) {
         _cached_encoder_for_Register88 = function (
             value: Register88        ): _Element {

@@ -33,7 +33,7 @@ let _cached_decoder_for_UnscheduledLogAvailability: $.ASN1Decoder<UnscheduledLog
  * @returns {UnscheduledLogAvailability} The decoded data structure.
  */
 export
-function _decode_UnscheduledLogAvailability (el: _Element) {
+function _decode_UnscheduledLogAvailability (el: _Element): UnscheduledLogAvailability {
     if (!_cached_decoder_for_UnscheduledLogAvailability) { _cached_decoder_for_UnscheduledLogAvailability = _decode_AvailabilityStatus; }
     return _cached_decoder_for_UnscheduledLogAvailability(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_UnscheduledLogAvailability: $.ASN1Encoder<UnscheduledLog
  * @returns {_Element} The UnscheduledLogAvailability, encoded as an ASN.1 Element.
  */
 export
-function _encode_UnscheduledLogAvailability (value: UnscheduledLogAvailability, elGetter: $.ASN1Encoder<UnscheduledLogAvailability>) {
+function _encode_UnscheduledLogAvailability (value: UnscheduledLogAvailability, elGetter: $.ASN1Encoder<UnscheduledLogAvailability>): _Element {
     if (!_cached_encoder_for_UnscheduledLogAvailability) { _cached_encoder_for_UnscheduledLogAvailability = _encode_AvailabilityStatus; }
     return _cached_encoder_for_UnscheduledLogAvailability(value, elGetter);
 }

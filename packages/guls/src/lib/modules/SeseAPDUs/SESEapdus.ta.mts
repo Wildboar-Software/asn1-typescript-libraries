@@ -60,7 +60,7 @@ let _cached_decoder_for_SESEapdus: $.ASN1Decoder<SESEapdus> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SESEapdus} The decoded data structure.
  */
-export function _decode_SESEapdus(el: _Element) {
+export function _decode_SESEapdus(el: _Element): SESEapdus {
   if (!_cached_decoder_for_SESEapdus) {
     _cached_decoder_for_SESEapdus = $._decode_inextensible_choice<SESEapdus>({
       'CONTEXT 0': ['se_transfer', _decode_SETransfer],
@@ -85,7 +85,7 @@ let _cached_encoder_for_SESEapdus: $.ASN1Encoder<SESEapdus> | null = null;
 export function _encode_SESEapdus(
   value: SESEapdus,
   elGetter: $.ASN1Encoder<SESEapdus>
-) {
+): _Element {
   if (!_cached_encoder_for_SESEapdus) {
     _cached_encoder_for_SESEapdus = $._encode_choice<SESEapdus>(
       {

@@ -47,7 +47,7 @@ let _cached_decoder_for_Result_list: $.ASN1Decoder<Result_list> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Result_list} The decoded data structure.
  */
-export function _decode_Result_list(el: _Element) {
+export function _decode_Result_list(el: _Element): Result_list {
     if (!_cached_decoder_for_Result_list) {
         _cached_decoder_for_Result_list = $._decodeSequenceOf<Result_list_Item>(
             () => _decode_Result_list_Item
@@ -70,7 +70,7 @@ let _cached_encoder_for_Result_list: $.ASN1Encoder<Result_list> | null = null;
 export function _encode_Result_list(
     value: Result_list,
     elGetter: $.ASN1Encoder<Result_list>
-) {
+): _Element {
     if (!_cached_encoder_for_Result_list) {
         _cached_encoder_for_Result_list = $._encodeSequenceOf<Result_list_Item>(
             () => _encode_Result_list_Item,

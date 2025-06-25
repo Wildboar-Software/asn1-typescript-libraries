@@ -131,7 +131,7 @@ let _cached_decoder_for_CommunicationsInformation: $.ASN1Decoder<CommunicationsI
  * @param {_Element} el The element being decoded.
  * @returns {CommunicationsInformation} The decoded data structure.
  */
-export function _decode_CommunicationsInformation(el: _Element) {
+export function _decode_CommunicationsInformation(el: _Element): CommunicationsInformation {
     if (!_cached_decoder_for_CommunicationsInformation) {
         _cached_decoder_for_CommunicationsInformation = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_CommunicationsInformation: $.ASN1Encoder<CommunicationsI
 export function _encode_CommunicationsInformation(
     value: CommunicationsInformation,
     elGetter: $.ASN1Encoder<CommunicationsInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_CommunicationsInformation) {
         _cached_encoder_for_CommunicationsInformation = function (
             value: CommunicationsInformation        ): _Element {

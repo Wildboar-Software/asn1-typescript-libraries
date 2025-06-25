@@ -77,7 +77,7 @@ let _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side: $.ASN1Decoder<BR
  * @param {_Element} el The element being decoded.
  * @returns {BRANCH_IDENTIFIER_initiators_name_side} The decoded data structure.
  */
-export function _decode_BRANCH_IDENTIFIER_initiators_name_side(el: _Element) {
+export function _decode_BRANCH_IDENTIFIER_initiators_name_side(el: _Element): BRANCH_IDENTIFIER_initiators_name_side {
   if (!_cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side) {
     _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side =
       $._decodeEnumerated;
@@ -99,7 +99,7 @@ let _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side: $.ASN1Encoder<BR
 export function _encode_BRANCH_IDENTIFIER_initiators_name_side(
   value: BRANCH_IDENTIFIER_initiators_name_side,
   elGetter: $.ASN1Encoder<BRANCH_IDENTIFIER_initiators_name_side>
-) {
+): _Element {
   if (!_cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side) {
     _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side =
       $._encodeEnumerated;

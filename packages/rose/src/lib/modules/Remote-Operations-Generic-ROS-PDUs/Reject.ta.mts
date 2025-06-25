@@ -125,7 +125,7 @@ let _cached_decoder_for_Reject: $.ASN1Decoder<Reject> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Reject} The decoded data structure.
  */
-export function _decode_Reject(el: _Element) {
+export function _decode_Reject(el: _Element): Reject {
   if (!_cached_decoder_for_Reject) {
     _cached_decoder_for_Reject = function (el: _Element): Reject {
       const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_Reject: $.ASN1Encoder<Reject> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Reject, encoded as an ASN.1 Element.
  */
-export function _encode_Reject(value: Reject, elGetter: $.ASN1Encoder<Reject>) {
+export function _encode_Reject(value: Reject, elGetter: $.ASN1Encoder<Reject>): _Element {
   if (!_cached_encoder_for_Reject) {
     _cached_encoder_for_Reject = function (
       value: Reject    ): _Element {

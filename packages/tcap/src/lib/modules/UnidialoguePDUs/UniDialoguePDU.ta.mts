@@ -38,7 +38,7 @@ let _cached_decoder_for_UniDialoguePDU: $.ASN1Decoder<UniDialoguePDU> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UniDialoguePDU} The decoded data structure.
  */
-export function _decode_UniDialoguePDU(el: _Element) {
+export function _decode_UniDialoguePDU(el: _Element): UniDialoguePDU {
     if (!_cached_decoder_for_UniDialoguePDU) {
         _cached_decoder_for_UniDialoguePDU = $._decode_inextensible_choice<UniDialoguePDU>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_UniDialoguePDU: $.ASN1Encoder<UniDialoguePDU> | null = n
 export function _encode_UniDialoguePDU(
     value: UniDialoguePDU,
     elGetter: $.ASN1Encoder<UniDialoguePDU>
-) {
+): _Element {
     if (!_cached_encoder_for_UniDialoguePDU) {
         _cached_encoder_for_UniDialoguePDU = $._encode_choice<UniDialoguePDU>(
             {

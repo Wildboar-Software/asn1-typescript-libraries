@@ -121,7 +121,7 @@ let _cached_decoder_for_ForwardedContentToken_Item: $.ASN1Decoder<ForwardedConte
  * @param {_Element} el The element being decoded.
  * @returns {ForwardedContentToken_Item} The decoded data structure.
  */
-export function _decode_ForwardedContentToken_Item(el: _Element) {
+export function _decode_ForwardedContentToken_Item(el: _Element): ForwardedContentToken_Item {
     if (!_cached_decoder_for_ForwardedContentToken_Item) {
         _cached_decoder_for_ForwardedContentToken_Item = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_ForwardedContentToken_Item: $.ASN1Encoder<ForwardedConte
 export function _encode_ForwardedContentToken_Item(
     value: ForwardedContentToken_Item,
     elGetter: $.ASN1Encoder<ForwardedContentToken_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardedContentToken_Item) {
         _cached_encoder_for_ForwardedContentToken_Item = function (
             value: ForwardedContentToken_Item        ): _Element {

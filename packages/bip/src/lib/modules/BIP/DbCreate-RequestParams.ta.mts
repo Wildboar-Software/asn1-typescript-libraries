@@ -164,7 +164,7 @@ let _cached_decoder_for_DbCreate_RequestParams: $.ASN1Decoder<DbCreate_RequestPa
  * @param {_Element} el The element being decoded.
  * @returns {DbCreate_RequestParams} The decoded data structure.
  */
-export function _decode_DbCreate_RequestParams(el: _Element) {
+export function _decode_DbCreate_RequestParams(el: _Element): DbCreate_RequestParams {
   if (!_cached_decoder_for_DbCreate_RequestParams) {
     _cached_decoder_for_DbCreate_RequestParams = function (
       el: _Element
@@ -214,7 +214,7 @@ let _cached_encoder_for_DbCreate_RequestParams: $.ASN1Encoder<DbCreate_RequestPa
 export function _encode_DbCreate_RequestParams(
   value: DbCreate_RequestParams,
   elGetter: $.ASN1Encoder<DbCreate_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbCreate_RequestParams) {
     _cached_encoder_for_DbCreate_RequestParams = function (
       value: DbCreate_RequestParams    ): _Element {

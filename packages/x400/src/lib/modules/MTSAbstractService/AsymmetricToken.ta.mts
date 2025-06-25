@@ -43,7 +43,7 @@ let _cached_decoder_for_AsymmetricToken: $.ASN1Decoder<AsymmetricToken> | null =
  * @param {_Element} el The element being decoded.
  * @returns {AsymmetricToken} The decoded data structure.
  */
-export function _decode_AsymmetricToken(el: _Element) {
+export function _decode_AsymmetricToken(el: _Element): AsymmetricToken {
     if (!_cached_decoder_for_AsymmetricToken) {
         _cached_decoder_for_AsymmetricToken = _get_decoder_for_SIGNED<TBSAsymmetricToken>(
             _decode_TBSAsymmetricToken
@@ -64,7 +64,7 @@ let _cached_encoder_for_AsymmetricToken: $.ASN1Encoder<AsymmetricToken> | null =
 export function _encode_AsymmetricToken(
     value: AsymmetricToken,
     elGetter: $.ASN1Encoder<AsymmetricToken>
-) {
+): _Element {
     if (!_cached_encoder_for_AsymmetricToken) {
         _cached_encoder_for_AsymmetricToken = _get_encoder_for_SIGNED<TBSAsymmetricToken>(
             _encode_TBSAsymmetricToken

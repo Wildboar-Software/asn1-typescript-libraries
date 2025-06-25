@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportingMTACertificate: $.ASN1Decoder<ReportingMTACerti
  * @param {_Element} el The element being decoded.
  * @returns {ReportingMTACertificate} The decoded data structure.
  */
-export function _decode_ReportingMTACertificate(el: _Element) {
+export function _decode_ReportingMTACertificate(el: _Element): ReportingMTACertificate {
     if (!_cached_decoder_for_ReportingMTACertificate) {
         _cached_decoder_for_ReportingMTACertificate = _decode_Certificates;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReportingMTACertificate: $.ASN1Encoder<ReportingMTACerti
 export function _encode_ReportingMTACertificate(
     value: ReportingMTACertificate,
     elGetter: $.ASN1Encoder<ReportingMTACertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportingMTACertificate) {
         _cached_encoder_for_ReportingMTACertificate = _encode_Certificates;
     }

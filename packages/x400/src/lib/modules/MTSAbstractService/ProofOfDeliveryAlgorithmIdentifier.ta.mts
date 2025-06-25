@@ -35,7 +35,7 @@ let _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier: $.ASN1Decoder<ProofO
  * @param {_Element} el The element being decoded.
  * @returns {ProofOfDeliveryAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_ProofOfDeliveryAlgorithmIdentifier(el: _Element) {
+export function _decode_ProofOfDeliveryAlgorithmIdentifier(el: _Element): ProofOfDeliveryAlgorithmIdentifier {
     if (!_cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier) {
         _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier: $.ASN1Encoder<ProofO
 export function _encode_ProofOfDeliveryAlgorithmIdentifier(
     value: ProofOfDeliveryAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ProofOfDeliveryAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier) {
         _cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatingDomainTransferOutList: $.ASN1Decoder<Originat
  * @param {_Element} el The element being decoded.
  * @returns {OriginatingDomainTransferOutList} The decoded data structure.
  */
-export function _decode_OriginatingDomainTransferOutList(el: _Element) {
+export function _decode_OriginatingDomainTransferOutList(el: _Element): OriginatingDomainTransferOutList {
     if (!_cached_decoder_for_OriginatingDomainTransferOutList) {
         _cached_decoder_for_OriginatingDomainTransferOutList = $._decodeSetOf<TransferRecipientField>(
             () => _decode_TransferRecipientField
@@ -56,7 +56,7 @@ let _cached_encoder_for_OriginatingDomainTransferOutList: $.ASN1Encoder<Originat
 export function _encode_OriginatingDomainTransferOutList(
     value: OriginatingDomainTransferOutList,
     elGetter: $.ASN1Encoder<OriginatingDomainTransferOutList>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatingDomainTransferOutList) {
         _cached_encoder_for_OriginatingDomainTransferOutList = $._encodeSetOf<TransferRecipientField>(
             () => _encode_TransferRecipientField,

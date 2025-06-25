@@ -35,7 +35,7 @@ let _cached_decoder_for_DestinationADMD: $.ASN1Decoder<DestinationADMD> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DestinationADMD} The decoded data structure.
  */
-export function _decode_DestinationADMD(el: _Element) {
+export function _decode_DestinationADMD(el: _Element): DestinationADMD {
     if (!_cached_decoder_for_DestinationADMD) {
         _cached_decoder_for_DestinationADMD = _decode_AdministrationDomainName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DestinationADMD: $.ASN1Encoder<DestinationADMD> | null =
 export function _encode_DestinationADMD(
     value: DestinationADMD,
     elGetter: $.ASN1Encoder<DestinationADMD>
-) {
+): _Element {
     if (!_cached_encoder_for_DestinationADMD) {
         _cached_encoder_for_DestinationADMD = _encode_AdministrationDomainName;
     }

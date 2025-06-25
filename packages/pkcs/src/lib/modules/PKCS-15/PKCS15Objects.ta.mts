@@ -75,7 +75,7 @@ let _cached_decoder_for_PKCS15Objects: $.ASN1Decoder<PKCS15Objects> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PKCS15Objects} The decoded data structure.
  */
-export function _decode_PKCS15Objects(el: _Element) {
+export function _decode_PKCS15Objects(el: _Element): PKCS15Objects {
     if (!_cached_decoder_for_PKCS15Objects) {
         _cached_decoder_for_PKCS15Objects = $._decode_extensible_choice<PKCS15Objects>(
             {
@@ -141,7 +141,7 @@ let _cached_encoder_for_PKCS15Objects: $.ASN1Encoder<PKCS15Objects> | null = nul
 export function _encode_PKCS15Objects(
     value: PKCS15Objects,
     elGetter: $.ASN1Encoder<PKCS15Objects>
-) {
+): _Element {
     if (!_cached_encoder_for_PKCS15Objects) {
         _cached_encoder_for_PKCS15Objects = $._encode_choice<PKCS15Objects>(
             {

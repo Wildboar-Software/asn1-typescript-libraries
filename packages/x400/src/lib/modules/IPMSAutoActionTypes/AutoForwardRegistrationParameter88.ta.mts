@@ -167,7 +167,7 @@ let _cached_decoder_for_AutoForwardRegistrationParameter88: $.ASN1Decoder<AutoFo
  * @param {_Element} el The element being decoded.
  * @returns {AutoForwardRegistrationParameter88} The decoded data structure.
  */
-export function _decode_AutoForwardRegistrationParameter88(el: _Element) {
+export function _decode_AutoForwardRegistrationParameter88(el: _Element): AutoForwardRegistrationParameter88 {
     if (!_cached_decoder_for_AutoForwardRegistrationParameter88) {
         _cached_decoder_for_AutoForwardRegistrationParameter88 = function (
             el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_AutoForwardRegistrationParameter88: $.ASN1Encoder<AutoFo
 export function _encode_AutoForwardRegistrationParameter88(
     value: AutoForwardRegistrationParameter88,
     elGetter: $.ASN1Encoder<AutoForwardRegistrationParameter88>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoForwardRegistrationParameter88) {
         _cached_encoder_for_AutoForwardRegistrationParameter88 = function (
             value: AutoForwardRegistrationParameter88        ): _Element {

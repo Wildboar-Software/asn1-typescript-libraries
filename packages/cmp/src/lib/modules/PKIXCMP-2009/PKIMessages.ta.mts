@@ -38,7 +38,7 @@ let _cached_decoder_for_PKIMessages: $.ASN1Decoder<PKIMessages> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKIMessages} The decoded data structure.
  */
-export function _decode_PKIMessages(el: _Element) {
+export function _decode_PKIMessages(el: _Element): PKIMessages {
   if (!_cached_decoder_for_PKIMessages) {
     _cached_decoder_for_PKIMessages = $._decodeSequenceOf<PKIMessage>(
       () => _decode_PKIMessage
@@ -61,7 +61,7 @@ let _cached_encoder_for_PKIMessages: $.ASN1Encoder<PKIMessages> | null = null;
 export function _encode_PKIMessages(
   value: PKIMessages,
   elGetter: $.ASN1Encoder<PKIMessages>
-) {
+): _Element {
   if (!_cached_encoder_for_PKIMessages) {
     _cached_encoder_for_PKIMessages = $._encodeSequenceOf<PKIMessage>(
       () => _encode_PKIMessage,

@@ -39,7 +39,7 @@ let _cached_decoder_for_PostalAddress: $.ASN1Decoder<PostalAddress> | null = nul
  * @returns {PostalAddress} The decoded data structure.
  */
 export
-function _decode_PostalAddress (el: _Element) {
+function _decode_PostalAddress (el: _Element): PostalAddress {
     if (!_cached_decoder_for_PostalAddress) { _cached_decoder_for_PostalAddress = $._decodeSequenceOf<DirectoryString>(() => _decode_DirectoryString); }
     return _cached_decoder_for_PostalAddress(el);
 }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = nul
  * @returns {_Element} The PostalAddress, encoded as an ASN.1 Element.
  */
 export
-function _encode_PostalAddress (value: PostalAddress, elGetter: $.ASN1Encoder<PostalAddress>) {
+function _encode_PostalAddress (value: PostalAddress, elGetter: $.ASN1Encoder<PostalAddress>): _Element {
     if (!_cached_encoder_for_PostalAddress) { _cached_encoder_for_PostalAddress = $._encodeSequenceOf<DirectoryString>(() => _encode_DirectoryString, $.DER); }
     return _cached_encoder_for_PostalAddress(value, elGetter);
 }

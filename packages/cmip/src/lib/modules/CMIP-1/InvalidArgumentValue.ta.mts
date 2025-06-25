@@ -53,7 +53,7 @@ let _cached_decoder_for_InvalidArgumentValue: $.ASN1Decoder<InvalidArgumentValue
  * @param {_Element} el The element being decoded.
  * @returns {InvalidArgumentValue} The decoded data structure.
  */
-export function _decode_InvalidArgumentValue(el: _Element) {
+export function _decode_InvalidArgumentValue(el: _Element): InvalidArgumentValue {
   if (!_cached_decoder_for_InvalidArgumentValue) {
     _cached_decoder_for_InvalidArgumentValue = $._decode_inextensible_choice<InvalidArgumentValue>(
       {
@@ -87,7 +87,7 @@ let _cached_encoder_for_InvalidArgumentValue: $.ASN1Encoder<InvalidArgumentValue
 export function _encode_InvalidArgumentValue(
   value: InvalidArgumentValue,
   elGetter: $.ASN1Encoder<InvalidArgumentValue>
-) {
+): _Element {
   if (!_cached_encoder_for_InvalidArgumentValue) {
     _cached_encoder_for_InvalidArgumentValue = $._encode_choice<InvalidArgumentValue>(
       {

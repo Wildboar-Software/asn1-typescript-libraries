@@ -121,7 +121,7 @@ let _cached_decoder_for_NamedCrossConnection: $.ASN1Decoder<NamedCrossConnection
  * @param {_Element} el The element being decoded.
  * @returns {NamedCrossConnection} The decoded data structure.
  */
-export function _decode_NamedCrossConnection(el: _Element) {
+export function _decode_NamedCrossConnection(el: _Element): NamedCrossConnection {
     if (!_cached_decoder_for_NamedCrossConnection) {
         _cached_decoder_for_NamedCrossConnection = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_NamedCrossConnection: $.ASN1Encoder<NamedCrossConnection
 export function _encode_NamedCrossConnection(
     value: NamedCrossConnection,
     elGetter: $.ASN1Encoder<NamedCrossConnection>
-) {
+): _Element {
     if (!_cached_encoder_for_NamedCrossConnection) {
         _cached_encoder_for_NamedCrossConnection = function (
             value: NamedCrossConnection        ): _Element {

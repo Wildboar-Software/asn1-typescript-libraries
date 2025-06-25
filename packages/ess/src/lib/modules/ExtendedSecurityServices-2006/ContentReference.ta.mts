@@ -137,7 +137,7 @@ let _cached_decoder_for_ContentReference: $.ASN1Decoder<ContentReference> | null
  * @param {_Element} el The element being decoded.
  * @returns {ContentReference} The decoded data structure.
  */
-export function _decode_ContentReference(el: _Element) {
+export function _decode_ContentReference(el: _Element): ContentReference {
     if (!_cached_decoder_for_ContentReference) {
         _cached_decoder_for_ContentReference = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_ContentReference: $.ASN1Encoder<ContentReference> | null
 export function _encode_ContentReference(
     value: ContentReference,
     elGetter: $.ASN1Encoder<ContentReference>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentReference) {
         _cached_encoder_for_ContentReference = function (
             value: ContentReference        ): _Element {

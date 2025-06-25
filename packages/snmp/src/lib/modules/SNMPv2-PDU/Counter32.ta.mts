@@ -36,7 +36,7 @@ let _cached_decoder_for_Counter32: $.ASN1Decoder<Counter32> | null = null;
  * @returns {Counter32} The decoded data structure.
  */
 export
-function _decode_Counter32 (el: _Element) {
+function _decode_Counter32 (el: _Element): Counter32 {
     if (!_cached_decoder_for_Counter32) { _cached_decoder_for_Counter32 = $._decode_implicit<Counter32>(() => $._decodeInteger); }
     return _cached_decoder_for_Counter32(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Counter32: $.ASN1Encoder<Counter32> | null = null;
  * @returns {_Element} The Counter32, encoded as an ASN.1 Element.
  */
 export
-function _encode_Counter32 (value: Counter32, elGetter: $.ASN1Encoder<Counter32>) {
+function _encode_Counter32 (value: Counter32, elGetter: $.ASN1Encoder<Counter32>): _Element {
     if (!_cached_encoder_for_Counter32) { _cached_encoder_for_Counter32 = $._encode_implicit(_TagClass.application, 1, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_Counter32(value, elGetter);
 }

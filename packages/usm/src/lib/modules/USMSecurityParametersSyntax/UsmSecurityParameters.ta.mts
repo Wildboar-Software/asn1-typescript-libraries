@@ -155,7 +155,7 @@ let _cached_decoder_for_UsmSecurityParameters: $.ASN1Decoder<UsmSecurityParamete
  * @returns {UsmSecurityParameters} The decoded data structure.
  */
 export
-function _decode_UsmSecurityParameters (el: _Element) {
+function _decode_UsmSecurityParameters (el: _Element): UsmSecurityParameters {
     if (!_cached_decoder_for_UsmSecurityParameters) { _cached_decoder_for_UsmSecurityParameters = function (el: _Element): UsmSecurityParameters {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 6) {
@@ -204,7 +204,7 @@ let _cached_encoder_for_UsmSecurityParameters: $.ASN1Encoder<UsmSecurityParamete
  * @returns {_Element} The UsmSecurityParameters, encoded as an ASN.1 Element.
  */
 export
-function _encode_UsmSecurityParameters (value: UsmSecurityParameters, elGetter: $.ASN1Encoder<UsmSecurityParameters>) {
+function _encode_UsmSecurityParameters (value: UsmSecurityParameters, elGetter: $.ASN1Encoder<UsmSecurityParameters>): _Element {
     if (!_cached_encoder_for_UsmSecurityParameters) { _cached_encoder_for_UsmSecurityParameters = function (value: UsmSecurityParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -152,7 +152,7 @@ let _cached_decoder_for_CASSInfo: $.ASN1Decoder<CASSInfo> | null = null;
  * @returns {CASSInfo} The decoded data structure.
  */
 export
-function _decode_CASSInfo (el: _Element) {
+function _decode_CASSInfo (el: _Element): CASSInfo {
     if (!_cached_decoder_for_CASSInfo) { _cached_decoder_for_CASSInfo = function (el: _Element): CASSInfo {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 5) {
@@ -197,7 +197,7 @@ let _cached_encoder_for_CASSInfo: $.ASN1Encoder<CASSInfo> | null = null;
  * @returns {_Element} The CASSInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_CASSInfo (value: CASSInfo, elGetter: $.ASN1Encoder<CASSInfo>) {
+function _encode_CASSInfo (value: CASSInfo, elGetter: $.ASN1Encoder<CASSInfo>): _Element {
     if (!_cached_encoder_for_CASSInfo) { _cached_encoder_for_CASSInfo = function (value: CASSInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

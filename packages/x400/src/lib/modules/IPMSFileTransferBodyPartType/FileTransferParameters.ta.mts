@@ -224,7 +224,7 @@ let _cached_decoder_for_FileTransferParameters: $.ASN1Decoder<FileTransferParame
  * @param {_Element} el The element being decoded.
  * @returns {FileTransferParameters} The decoded data structure.
  */
-export function _decode_FileTransferParameters(el: _Element) {
+export function _decode_FileTransferParameters(el: _Element): FileTransferParameters {
     if (!_cached_decoder_for_FileTransferParameters) {
         _cached_decoder_for_FileTransferParameters = function (
             el: _Element
@@ -301,7 +301,7 @@ let _cached_encoder_for_FileTransferParameters: $.ASN1Encoder<FileTransferParame
 export function _encode_FileTransferParameters(
     value: FileTransferParameters,
     elGetter: $.ASN1Encoder<FileTransferParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_FileTransferParameters) {
         _cached_encoder_for_FileTransferParameters = function (
             value: FileTransferParameters        ): _Element {

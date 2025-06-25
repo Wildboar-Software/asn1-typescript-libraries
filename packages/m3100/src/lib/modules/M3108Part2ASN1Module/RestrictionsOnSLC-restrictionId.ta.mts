@@ -145,7 +145,7 @@ let _cached_decoder_for_RestrictionsOnSLC_restrictionId: $.ASN1Decoder<Restricti
  * @param {_Element} el The element being decoded.
  * @returns {RestrictionsOnSLC_restrictionId} The decoded data structure.
  */
-export function _decode_RestrictionsOnSLC_restrictionId(el: _Element) {
+export function _decode_RestrictionsOnSLC_restrictionId(el: _Element): RestrictionsOnSLC_restrictionId {
     if (!_cached_decoder_for_RestrictionsOnSLC_restrictionId) {
         _cached_decoder_for_RestrictionsOnSLC_restrictionId =
             $._decodeEnumerated;
@@ -167,7 +167,7 @@ let _cached_encoder_for_RestrictionsOnSLC_restrictionId: $.ASN1Encoder<Restricti
 export function _encode_RestrictionsOnSLC_restrictionId(
     value: RestrictionsOnSLC_restrictionId,
     elGetter: $.ASN1Encoder<RestrictionsOnSLC_restrictionId>
-) {
+): _Element {
     if (!_cached_encoder_for_RestrictionsOnSLC_restrictionId) {
         _cached_encoder_for_RestrictionsOnSLC_restrictionId =
             $._encodeEnumerated;

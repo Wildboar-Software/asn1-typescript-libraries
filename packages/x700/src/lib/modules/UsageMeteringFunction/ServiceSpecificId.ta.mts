@@ -110,7 +110,7 @@ let _cached_decoder_for_ServiceSpecificId: $.ASN1Decoder<ServiceSpecificId> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ServiceSpecificId} The decoded data structure.
  */
-export function _decode_ServiceSpecificId(el: _Element) {
+export function _decode_ServiceSpecificId(el: _Element): ServiceSpecificId {
     if (!_cached_decoder_for_ServiceSpecificId) {
         _cached_decoder_for_ServiceSpecificId = function (
             el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_ServiceSpecificId: $.ASN1Encoder<ServiceSpecificId> | nu
 export function _encode_ServiceSpecificId(
     value: ServiceSpecificId,
     elGetter: $.ASN1Encoder<ServiceSpecificId>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceSpecificId) {
         _cached_encoder_for_ServiceSpecificId = function (
             value: ServiceSpecificId        ): _Element {

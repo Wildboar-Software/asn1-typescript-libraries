@@ -37,7 +37,7 @@ let _cached_decoder_for_DSAPublicKeyChoice: $.ASN1Decoder<DSAPublicKeyChoice> | 
  * @param {_Element} el The element being decoded.
  * @returns {DSAPublicKeyChoice} The decoded data structure.
  */
-export function _decode_DSAPublicKeyChoice(el: _Element) {
+export function _decode_DSAPublicKeyChoice(el: _Element): DSAPublicKeyChoice {
     if (!_cached_decoder_for_DSAPublicKeyChoice) {
         _cached_decoder_for_DSAPublicKeyChoice = $._decode_extensible_choice<DSAPublicKeyChoice>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_DSAPublicKeyChoice: $.ASN1Encoder<DSAPublicKeyChoice> | 
 export function _encode_DSAPublicKeyChoice(
     value: DSAPublicKeyChoice,
     elGetter: $.ASN1Encoder<DSAPublicKeyChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_DSAPublicKeyChoice) {
         _cached_encoder_for_DSAPublicKeyChoice = $._encode_choice<DSAPublicKeyChoice>(
             {

@@ -111,7 +111,7 @@ let _cached_decoder_for_FieldID: $.ASN1Decoder<FieldID> | null = null;
  * @returns {FieldID} The decoded data structure.
  */
 export
-function _decode_FieldID (el: _Element) {
+function _decode_FieldID (el: _Element): FieldID {
     if (!_cached_decoder_for_FieldID) { _cached_decoder_for_FieldID = function (el: _Element): FieldID {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_FieldID: $.ASN1Encoder<FieldID> | null = null;
  * @returns {_Element} The FieldID, encoded as an ASN.1 Element.
  */
 export
-function _encode_FieldID (value: FieldID, elGetter: $.ASN1Encoder<FieldID>) {
+function _encode_FieldID (value: FieldID, elGetter: $.ASN1Encoder<FieldID>): _Element {
     if (!_cached_encoder_for_FieldID) { _cached_encoder_for_FieldID = function (value: FieldID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -243,7 +243,7 @@ let _cached_decoder_for_BDBForBRTC: $.ASN1Decoder<BDBForBRTC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BDBForBRTC} The decoded data structure.
  */
-export function _decode_BDBForBRTC(el: _Element) {
+export function _decode_BDBForBRTC(el: _Element): BDBForBRTC {
     if (!_cached_decoder_for_BDBForBRTC) {
         _cached_decoder_for_BDBForBRTC = function (el: _Element): BDBForBRTC {
             let version: OPTIONAL<Version> =
@@ -322,7 +322,7 @@ let _cached_encoder_for_BDBForBRTC: $.ASN1Encoder<BDBForBRTC> | null = null;
 export function _encode_BDBForBRTC(
     value: BDBForBRTC,
     elGetter: $.ASN1Encoder<BDBForBRTC>
-) {
+): _Element {
     if (!_cached_encoder_for_BDBForBRTC) {
         _cached_encoder_for_BDBForBRTC = function (
             value: BDBForBRTC        ): _Element {

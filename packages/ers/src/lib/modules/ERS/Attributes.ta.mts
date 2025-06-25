@@ -46,7 +46,7 @@ let _cached_decoder_for_Attributes: $.ASN1Decoder<Attributes> | null = null;
  * @returns {Attributes} The decoded data structure.
  */
 export
-function _decode_Attributes (el: _Element) {
+function _decode_Attributes (el: _Element): Attributes {
     if (!_cached_decoder_for_Attributes) { _cached_decoder_for_Attributes = $._decodeSetOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_Attributes(el);
 }
@@ -63,7 +63,7 @@ let _cached_encoder_for_Attributes: $.ASN1Encoder<Attributes> | null = null;
  * @returns {_Element} The Attributes, encoded as an ASN.1 Element.
  */
 export
-function _encode_Attributes (value: Attributes, elGetter: $.ASN1Encoder<Attributes>) {
+function _encode_Attributes (value: Attributes, elGetter: $.ASN1Encoder<Attributes>): _Element {
     if (!_cached_encoder_for_Attributes) { _cached_encoder_for_Attributes = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_Attributes(value, elGetter);
 }

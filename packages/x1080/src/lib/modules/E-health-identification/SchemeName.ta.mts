@@ -42,7 +42,7 @@ let _cached_decoder_for_SchemeName: $.ASN1Decoder<SchemeName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SchemeName} The decoded data structure.
  */
-export function _decode_SchemeName(el: _Element) {
+export function _decode_SchemeName(el: _Element): SchemeName {
     if (!_cached_decoder_for_SchemeName) {
         _cached_decoder_for_SchemeName = $._decode_extensible_choice<SchemeName>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_SchemeName: $.ASN1Encoder<SchemeName> | null = null;
 export function _encode_SchemeName(
     value: SchemeName,
     elGetter: $.ASN1Encoder<SchemeName>
-) {
+): _Element {
     if (!_cached_encoder_for_SchemeName) {
         _cached_encoder_for_SchemeName = $._encode_choice<SchemeName>(
             {

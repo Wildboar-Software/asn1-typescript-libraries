@@ -151,7 +151,7 @@ let _cached_decoder_for_ModifyErrorParameter: $.ASN1Decoder<ModifyErrorParameter
  * @param {_Element} el The element being decoded.
  * @returns {ModifyErrorParameter} The decoded data structure.
  */
-export function _decode_ModifyErrorParameter(el: _Element) {
+export function _decode_ModifyErrorParameter(el: _Element): ModifyErrorParameter {
     if (!_cached_decoder_for_ModifyErrorParameter) {
         _cached_decoder_for_ModifyErrorParameter = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_ModifyErrorParameter: $.ASN1Encoder<ModifyErrorParameter
 export function _encode_ModifyErrorParameter(
     value: ModifyErrorParameter,
     elGetter: $.ASN1Encoder<ModifyErrorParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyErrorParameter) {
         _cached_encoder_for_ModifyErrorParameter = function (
             value: ModifyErrorParameter        ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_DisconnectInformation: $.ASN1Decoder<DisconnectInformati
  * @param {_Element} el The element being decoded.
  * @returns {DisconnectInformation} The decoded data structure.
  */
-export function _decode_DisconnectInformation(el: _Element) {
+export function _decode_DisconnectInformation(el: _Element): DisconnectInformation {
     if (!_cached_decoder_for_DisconnectInformation) {
         _cached_decoder_for_DisconnectInformation = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_DisconnectInformation: $.ASN1Encoder<DisconnectInformati
 export function _encode_DisconnectInformation(
     value: DisconnectInformation,
     elGetter: $.ASN1Encoder<DisconnectInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DisconnectInformation) {
         _cached_encoder_for_DisconnectInformation = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

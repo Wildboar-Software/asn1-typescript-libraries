@@ -43,7 +43,7 @@ let _cached_decoder_for_AnyURI: $.ASN1Decoder<AnyURI> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AnyURI} The decoded data structure.
  */
-export function _decode_AnyURI(el: _Element) {
+export function _decode_AnyURI(el: _Element): AnyURI {
   if (!_cached_decoder_for_AnyURI) {
     _cached_decoder_for_AnyURI = _decode_XMLStringWithNoCRLFHT;
   }
@@ -61,7 +61,7 @@ let _cached_encoder_for_AnyURI: $.ASN1Encoder<AnyURI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AnyURI, encoded as an ASN.1 Element.
  */
-export function _encode_AnyURI(value: AnyURI, elGetter: $.ASN1Encoder<AnyURI>) {
+export function _encode_AnyURI(value: AnyURI, elGetter: $.ASN1Encoder<AnyURI>): _Element {
   if (!_cached_encoder_for_AnyURI) {
     _cached_encoder_for_AnyURI = _encode_XMLStringWithNoCRLFHT;
   }

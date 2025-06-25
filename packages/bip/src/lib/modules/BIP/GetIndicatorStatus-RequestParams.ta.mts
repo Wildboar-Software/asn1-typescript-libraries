@@ -130,7 +130,7 @@ let _cached_decoder_for_GetIndicatorStatus_RequestParams: $.ASN1Decoder<GetIndic
  * @param {_Element} el The element being decoded.
  * @returns {GetIndicatorStatus_RequestParams} The decoded data structure.
  */
-export function _decode_GetIndicatorStatus_RequestParams(el: _Element) {
+export function _decode_GetIndicatorStatus_RequestParams(el: _Element): GetIndicatorStatus_RequestParams {
   if (!_cached_decoder_for_GetIndicatorStatus_RequestParams) {
     _cached_decoder_for_GetIndicatorStatus_RequestParams = function (
       el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_GetIndicatorStatus_RequestParams: $.ASN1Encoder<GetIndic
 export function _encode_GetIndicatorStatus_RequestParams(
   value: GetIndicatorStatus_RequestParams,
   elGetter: $.ASN1Encoder<GetIndicatorStatus_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GetIndicatorStatus_RequestParams) {
     _cached_encoder_for_GetIndicatorStatus_RequestParams = function (
       value: GetIndicatorStatus_RequestParams    ): _Element {

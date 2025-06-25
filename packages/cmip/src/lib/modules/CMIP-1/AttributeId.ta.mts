@@ -41,7 +41,7 @@ let _cached_decoder_for_AttributeId: $.ASN1Decoder<AttributeId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AttributeId} The decoded data structure.
  */
-export function _decode_AttributeId(el: _Element) {
+export function _decode_AttributeId(el: _Element): AttributeId {
   if (!_cached_decoder_for_AttributeId) {
     _cached_decoder_for_AttributeId = $._decode_inextensible_choice<AttributeId>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_AttributeId: $.ASN1Encoder<AttributeId> | null = null;
 export function _encode_AttributeId(
   value: AttributeId,
   elGetter: $.ASN1Encoder<AttributeId>
-) {
+): _Element {
   if (!_cached_encoder_for_AttributeId) {
     _cached_encoder_for_AttributeId = $._encode_choice<AttributeId>(
       {

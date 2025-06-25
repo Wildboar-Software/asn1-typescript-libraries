@@ -38,7 +38,7 @@ let _cached_decoder_for_RevertInfo_Item: $.ASN1Decoder<RevertInfo_Item> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RevertInfo_Item} The decoded data structure.
  */
-export function _decode_RevertInfo_Item(el: _Element) {
+export function _decode_RevertInfo_Item(el: _Element): RevertInfo_Item {
     if (!_cached_decoder_for_RevertInfo_Item) {
         _cached_decoder_for_RevertInfo_Item = $._decode_inextensible_choice<RevertInfo_Item>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_RevertInfo_Item: $.ASN1Encoder<RevertInfo_Item> | null =
 export function _encode_RevertInfo_Item(
     value: RevertInfo_Item,
     elGetter: $.ASN1Encoder<RevertInfo_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RevertInfo_Item) {
         _cached_encoder_for_RevertInfo_Item = $._encode_choice<RevertInfo_Item>(
             {

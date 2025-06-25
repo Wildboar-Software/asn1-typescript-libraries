@@ -33,7 +33,7 @@ let _cached_decoder_for_VarBindList: $.ASN1Decoder<VarBindList> | null = null;
  * @returns {VarBindList} The decoded data structure.
  */
 export
-function _decode_VarBindList (el: _Element) {
+function _decode_VarBindList (el: _Element): VarBindList {
     if (!_cached_decoder_for_VarBindList) { _cached_decoder_for_VarBindList = $._decodeSequenceOf<VarBind>(() => _decode_VarBind); }
     return _cached_decoder_for_VarBindList(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_VarBindList: $.ASN1Encoder<VarBindList> | null = null;
  * @returns {_Element} The VarBindList, encoded as an ASN.1 Element.
  */
 export
-function _encode_VarBindList (value: VarBindList, elGetter: $.ASN1Encoder<VarBindList>) {
+function _encode_VarBindList (value: VarBindList, elGetter: $.ASN1Encoder<VarBindList>): _Element {
     if (!_cached_encoder_for_VarBindList) { _cached_encoder_for_VarBindList = $._encodeSequenceOf<VarBind>(() => _encode_VarBind, $.BER); }
     return _cached_encoder_for_VarBindList(value, elGetter);
 }

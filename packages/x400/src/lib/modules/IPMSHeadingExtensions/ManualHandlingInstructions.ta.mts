@@ -37,7 +37,7 @@ let _cached_decoder_for_ManualHandlingInstructions: $.ASN1Decoder<ManualHandling
  * @param {_Element} el The element being decoded.
  * @returns {ManualHandlingInstructions} The decoded data structure.
  */
-export function _decode_ManualHandlingInstructions(el: _Element) {
+export function _decode_ManualHandlingInstructions(el: _Element): ManualHandlingInstructions {
     if (!_cached_decoder_for_ManualHandlingInstructions) {
         _cached_decoder_for_ManualHandlingInstructions = $._decodeSequenceOf<ManualHandlingInstruction>(
             () => _decode_ManualHandlingInstruction
@@ -58,7 +58,7 @@ let _cached_encoder_for_ManualHandlingInstructions: $.ASN1Encoder<ManualHandling
 export function _encode_ManualHandlingInstructions(
     value: ManualHandlingInstructions,
     elGetter: $.ASN1Encoder<ManualHandlingInstructions>
-) {
+): _Element {
     if (!_cached_encoder_for_ManualHandlingInstructions) {
         _cached_encoder_for_ManualHandlingInstructions = $._encodeSequenceOf<ManualHandlingInstruction>(
             () => _encode_ManualHandlingInstruction,

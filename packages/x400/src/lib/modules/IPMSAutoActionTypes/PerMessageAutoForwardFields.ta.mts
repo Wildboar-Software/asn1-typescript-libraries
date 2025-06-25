@@ -218,7 +218,7 @@ let _cached_decoder_for_PerMessageAutoForwardFields: $.ASN1Decoder<PerMessageAut
  * @param {_Element} el The element being decoded.
  * @returns {PerMessageAutoForwardFields} The decoded data structure.
  */
-export function _decode_PerMessageAutoForwardFields(el: _Element) {
+export function _decode_PerMessageAutoForwardFields(el: _Element): PerMessageAutoForwardFields {
     if (!_cached_decoder_for_PerMessageAutoForwardFields) {
         _cached_decoder_for_PerMessageAutoForwardFields = function (
             el: _Element
@@ -291,7 +291,7 @@ let _cached_encoder_for_PerMessageAutoForwardFields: $.ASN1Encoder<PerMessageAut
 export function _encode_PerMessageAutoForwardFields(
     value: PerMessageAutoForwardFields,
     elGetter: $.ASN1Encoder<PerMessageAutoForwardFields>
-) {
+): _Element {
     if (!_cached_encoder_for_PerMessageAutoForwardFields) {
         _cached_encoder_for_PerMessageAutoForwardFields = function (
             value: PerMessageAutoForwardFields        ): _Element {

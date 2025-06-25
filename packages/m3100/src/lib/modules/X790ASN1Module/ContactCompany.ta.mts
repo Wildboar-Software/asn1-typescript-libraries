@@ -38,7 +38,7 @@ let _cached_decoder_for_ContactCompany: $.ASN1Decoder<ContactCompany> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ContactCompany} The decoded data structure.
  */
-export function _decode_ContactCompany(el: _Element) {
+export function _decode_ContactCompany(el: _Element): ContactCompany {
     if (!_cached_decoder_for_ContactCompany) {
         _cached_decoder_for_ContactCompany = _decode_GraphicStringBase;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ContactCompany: $.ASN1Encoder<ContactCompany> | null = n
 export function _encode_ContactCompany(
     value: ContactCompany,
     elGetter: $.ASN1Encoder<ContactCompany>
-) {
+): _Element {
     if (!_cached_encoder_for_ContactCompany) {
         _cached_encoder_for_ContactCompany = _encode_GraphicStringBase;
     }

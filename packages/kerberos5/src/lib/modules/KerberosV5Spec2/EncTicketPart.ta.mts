@@ -278,7 +278,7 @@ let _cached_decoder_for_EncTicketPart: $.ASN1Decoder<EncTicketPart> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EncTicketPart} The decoded data structure.
  */
-export function _decode_EncTicketPart(el: _Element) {
+export function _decode_EncTicketPart(el: _Element): EncTicketPart {
   if (!_cached_decoder_for_EncTicketPart) {
     _cached_decoder_for_EncTicketPart = $._decode_implicit<EncTicketPart>(
       () =>
@@ -390,7 +390,7 @@ let _cached_encoder_for_EncTicketPart: $.ASN1Encoder<EncTicketPart> | null = nul
 export function _encode_EncTicketPart(
   value: EncTicketPart,
   elGetter: $.ASN1Encoder<EncTicketPart>
-) {
+): _Element {
   if (!_cached_encoder_for_EncTicketPart) {
     _cached_encoder_for_EncTicketPart = $._encode_implicit(
       _TagClass.application,

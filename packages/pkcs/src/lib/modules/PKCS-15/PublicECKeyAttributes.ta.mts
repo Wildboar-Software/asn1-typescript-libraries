@@ -135,7 +135,7 @@ let _cached_decoder_for_PublicECKeyAttributes: $.ASN1Decoder<PublicECKeyAttribut
  * @param {_Element} el The element being decoded.
  * @returns {PublicECKeyAttributes} The decoded data structure.
  */
-export function _decode_PublicECKeyAttributes(el: _Element) {
+export function _decode_PublicECKeyAttributes(el: _Element): PublicECKeyAttributes {
     if (!_cached_decoder_for_PublicECKeyAttributes) {
         _cached_decoder_for_PublicECKeyAttributes = function (
             el: _Element
@@ -193,7 +193,7 @@ let _cached_encoder_for_PublicECKeyAttributes: $.ASN1Encoder<PublicECKeyAttribut
 export function _encode_PublicECKeyAttributes(
     value: PublicECKeyAttributes,
     elGetter: $.ASN1Encoder<PublicECKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicECKeyAttributes) {
         _cached_encoder_for_PublicECKeyAttributes = function (
             value: PublicECKeyAttributes        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_CharacteristicInformation: $.ASN1Decoder<CharacteristicI
  * @param {_Element} el The element being decoded.
  * @returns {CharacteristicInformation} The decoded data structure.
  */
-export function _decode_CharacteristicInformation(el: _Element) {
+export function _decode_CharacteristicInformation(el: _Element): CharacteristicInformation {
     if (!_cached_decoder_for_CharacteristicInformation) {
         _cached_decoder_for_CharacteristicInformation =
             $._decodeObjectIdentifier;
@@ -57,7 +57,7 @@ let _cached_encoder_for_CharacteristicInformation: $.ASN1Encoder<CharacteristicI
 export function _encode_CharacteristicInformation(
     value: CharacteristicInformation,
     elGetter: $.ASN1Encoder<CharacteristicInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_CharacteristicInformation) {
         _cached_encoder_for_CharacteristicInformation =
             $._encodeObjectIdentifier;

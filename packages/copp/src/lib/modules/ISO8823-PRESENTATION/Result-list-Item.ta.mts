@@ -143,7 +143,7 @@ let _cached_decoder_for_Result_list_Item: $.ASN1Decoder<Result_list_Item> | null
  * @param {_Element} el The element being decoded.
  * @returns {Result_list_Item} The decoded data structure.
  */
-export function _decode_Result_list_Item(el: _Element) {
+export function _decode_Result_list_Item(el: _Element): Result_list_Item {
     if (!_cached_decoder_for_Result_list_Item) {
         _cached_decoder_for_Result_list_Item = function (
             el: _Element
@@ -200,7 +200,7 @@ let _cached_encoder_for_Result_list_Item: $.ASN1Encoder<Result_list_Item> | null
 export function _encode_Result_list_Item(
     value: Result_list_Item,
     elGetter: $.ASN1Encoder<Result_list_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Result_list_Item) {
         _cached_encoder_for_Result_list_Item = function (
             value: Result_list_Item        ): _Element {

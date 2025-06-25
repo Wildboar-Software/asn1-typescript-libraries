@@ -171,7 +171,7 @@ let _cached_decoder_for_WeekMask: $.ASN1Decoder<WeekMask> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WeekMask} The decoded data structure.
  */
-export function _decode_WeekMask(el: _Element) {
+export function _decode_WeekMask(el: _Element): WeekMask {
     if (!_cached_decoder_for_WeekMask) {
         _cached_decoder_for_WeekMask = function (el: _Element): WeekMask {
             let daysOfWeek: OPTIONAL<WeekMask_daysOfWeek> =
@@ -223,7 +223,7 @@ let _cached_encoder_for_WeekMask: $.ASN1Encoder<WeekMask> | null = null;
 export function _encode_WeekMask(
     value: WeekMask,
     elGetter: $.ASN1Encoder<WeekMask>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekMask) {
         _cached_encoder_for_WeekMask = function (
             value: WeekMask        ): _Element {

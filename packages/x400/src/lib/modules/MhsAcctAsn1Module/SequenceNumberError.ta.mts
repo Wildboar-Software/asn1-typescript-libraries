@@ -105,7 +105,7 @@ let _cached_decoder_for_SequenceNumberError: $.ASN1Decoder<SequenceNumberError> 
  * @param {_Element} el The element being decoded.
  * @returns {SequenceNumberError} The decoded data structure.
  */
-export function _decode_SequenceNumberError(el: _Element) {
+export function _decode_SequenceNumberError(el: _Element): SequenceNumberError {
     if (!_cached_decoder_for_SequenceNumberError) {
         _cached_decoder_for_SequenceNumberError = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_SequenceNumberError: $.ASN1Encoder<SequenceNumberError> 
 export function _encode_SequenceNumberError(
     value: SequenceNumberError,
     elGetter: $.ASN1Encoder<SequenceNumberError>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceNumberError) {
         _cached_encoder_for_SequenceNumberError = function (
             value: SequenceNumberError        ): _Element {

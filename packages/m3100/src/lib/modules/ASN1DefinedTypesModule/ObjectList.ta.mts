@@ -38,7 +38,7 @@ let _cached_decoder_for_ObjectList: $.ASN1Decoder<ObjectList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectList} The decoded data structure.
  */
-export function _decode_ObjectList(el: _Element) {
+export function _decode_ObjectList(el: _Element): ObjectList {
     if (!_cached_decoder_for_ObjectList) {
         _cached_decoder_for_ObjectList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ObjectList: $.ASN1Encoder<ObjectList> | null = null;
 export function _encode_ObjectList(
     value: ObjectList,
     elGetter: $.ASN1Encoder<ObjectList>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectList) {
         _cached_encoder_for_ObjectList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

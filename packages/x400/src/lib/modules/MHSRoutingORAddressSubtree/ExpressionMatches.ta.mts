@@ -35,7 +35,7 @@ let _cached_decoder_for_ExpressionMatches: $.ASN1Decoder<ExpressionMatches> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ExpressionMatches} The decoded data structure.
  */
-export function _decode_ExpressionMatches(el: _Element) {
+export function _decode_ExpressionMatches(el: _Element): ExpressionMatches {
     if (!_cached_decoder_for_ExpressionMatches) {
         _cached_decoder_for_ExpressionMatches = $._decodeSequenceOf<ExpressionMatch>(
             () => _decode_ExpressionMatch
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExpressionMatches: $.ASN1Encoder<ExpressionMatches> | nu
 export function _encode_ExpressionMatches(
     value: ExpressionMatches,
     elGetter: $.ASN1Encoder<ExpressionMatches>
-) {
+): _Element {
     if (!_cached_encoder_for_ExpressionMatches) {
         _cached_encoder_for_ExpressionMatches = $._encodeSequenceOf<ExpressionMatch>(
             () => _encode_ExpressionMatch,

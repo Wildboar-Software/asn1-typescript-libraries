@@ -38,7 +38,7 @@ let _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Decoder<R
  * @param {_Element} el The element being decoded.
  * @returns {RemoveCapacityFromTopologicalLinkResult} The decoded data structure.
  */
-export function _decode_RemoveCapacityFromTopologicalLinkResult(el: _Element) {
+export function _decode_RemoveCapacityFromTopologicalLinkResult(el: _Element): RemoveCapacityFromTopologicalLinkResult {
     if (!_cached_decoder_for_RemoveCapacityFromTopologicalLinkResult) {
         _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult = _decode_Capacity;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Encoder<R
 export function _encode_RemoveCapacityFromTopologicalLinkResult(
     value: RemoveCapacityFromTopologicalLinkResult,
     elGetter: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkResult>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveCapacityFromTopologicalLinkResult) {
         _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult = _encode_Capacity;
     }

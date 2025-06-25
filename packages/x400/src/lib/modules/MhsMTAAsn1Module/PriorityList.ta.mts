@@ -35,7 +35,7 @@ let _cached_decoder_for_PriorityList: $.ASN1Decoder<PriorityList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PriorityList} The decoded data structure.
  */
-export function _decode_PriorityList(el: _Element) {
+export function _decode_PriorityList(el: _Element): PriorityList {
     if (!_cached_decoder_for_PriorityList) {
         _cached_decoder_for_PriorityList = $._decodeSetOf<Priority>(
             () => _decode_Priority
@@ -56,7 +56,7 @@ let _cached_encoder_for_PriorityList: $.ASN1Encoder<PriorityList> | null = null;
 export function _encode_PriorityList(
     value: PriorityList,
     elGetter: $.ASN1Encoder<PriorityList>
-) {
+): _Element {
     if (!_cached_encoder_for_PriorityList) {
         _cached_encoder_for_PriorityList = $._encodeSetOf<Priority>(
             () => _encode_Priority,

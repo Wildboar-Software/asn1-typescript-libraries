@@ -268,7 +268,7 @@ let _cached_decoder_for_SetArgument: $.ASN1Decoder<SetArgument> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SetArgument} The decoded data structure.
  */
-export function _decode_SetArgument(el: _Element) {
+export function _decode_SetArgument(el: _Element): SetArgument {
   if (!_cached_decoder_for_SetArgument) {
     _cached_decoder_for_SetArgument = function (el: _Element): SetArgument {
       let baseManagedObjectClass!: ObjectClass;
@@ -352,7 +352,7 @@ let _cached_encoder_for_SetArgument: $.ASN1Encoder<SetArgument> | null = null;
 export function _encode_SetArgument(
   value: SetArgument,
   elGetter: $.ASN1Encoder<SetArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_SetArgument) {
     _cached_encoder_for_SetArgument = function (
       value: SetArgument    ): _Element {

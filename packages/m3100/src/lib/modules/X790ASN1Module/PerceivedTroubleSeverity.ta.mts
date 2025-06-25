@@ -50,7 +50,7 @@ let _cached_decoder_for_PerceivedTroubleSeverity: $.ASN1Decoder<PerceivedTrouble
  * @param {_Element} el The element being decoded.
  * @returns {PerceivedTroubleSeverity} The decoded data structure.
  */
-export function _decode_PerceivedTroubleSeverity(el: _Element) {
+export function _decode_PerceivedTroubleSeverity(el: _Element): PerceivedTroubleSeverity {
     if (!_cached_decoder_for_PerceivedTroubleSeverity) {
         _cached_decoder_for_PerceivedTroubleSeverity = $._decode_extensible_choice<PerceivedTroubleSeverity>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_PerceivedTroubleSeverity: $.ASN1Encoder<PerceivedTrouble
 export function _encode_PerceivedTroubleSeverity(
     value: PerceivedTroubleSeverity,
     elGetter: $.ASN1Encoder<PerceivedTroubleSeverity>
-) {
+): _Element {
     if (!_cached_encoder_for_PerceivedTroubleSeverity) {
         _cached_encoder_for_PerceivedTroubleSeverity = $._encode_choice<PerceivedTroubleSeverity>(
             {

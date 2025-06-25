@@ -118,7 +118,7 @@ let _cached_decoder_for_PortAssociation: $.ASN1Decoder<PortAssociation> | null =
  * @param {_Element} el The element being decoded.
  * @returns {PortAssociation} The decoded data structure.
  */
-export function _decode_PortAssociation(el: _Element) {
+export function _decode_PortAssociation(el: _Element): PortAssociation {
     if (!_cached_decoder_for_PortAssociation) {
         _cached_decoder_for_PortAssociation = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_PortAssociation: $.ASN1Encoder<PortAssociation> | null =
 export function _encode_PortAssociation(
     value: PortAssociation,
     elGetter: $.ASN1Encoder<PortAssociation>
-) {
+): _Element {
     if (!_cached_encoder_for_PortAssociation) {
         _cached_encoder_for_PortAssociation = function (
             value: PortAssociation        ): _Element {

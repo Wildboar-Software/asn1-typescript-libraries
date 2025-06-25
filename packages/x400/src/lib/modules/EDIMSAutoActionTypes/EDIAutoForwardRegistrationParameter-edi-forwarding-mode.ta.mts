@@ -48,7 +48,7 @@ let _cached_decoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode:
  */
 export function _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode(
     el: _Element
-) {
+): EDIAutoForwardRegistrationParameter_edi_forwarding_mode {
     if (
         !_cached_decoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode
     ) {
@@ -86,7 +86,7 @@ let _cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode:
 export function _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode(
     value: EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     elGetter: $.ASN1Encoder<EDIAutoForwardRegistrationParameter_edi_forwarding_mode>
-) {
+): _Element {
     if (
         !_cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode
     ) {

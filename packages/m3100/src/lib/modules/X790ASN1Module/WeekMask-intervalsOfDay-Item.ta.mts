@@ -122,7 +122,7 @@ let _cached_decoder_for_WeekMask_intervalsOfDay_Item: $.ASN1Decoder<WeekMask_int
  * @param {_Element} el The element being decoded.
  * @returns {WeekMask_intervalsOfDay_Item} The decoded data structure.
  */
-export function _decode_WeekMask_intervalsOfDay_Item(el: _Element) {
+export function _decode_WeekMask_intervalsOfDay_Item(el: _Element): WeekMask_intervalsOfDay_Item {
     if (!_cached_decoder_for_WeekMask_intervalsOfDay_Item) {
         _cached_decoder_for_WeekMask_intervalsOfDay_Item = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_WeekMask_intervalsOfDay_Item: $.ASN1Encoder<WeekMask_int
 export function _encode_WeekMask_intervalsOfDay_Item(
     value: WeekMask_intervalsOfDay_Item,
     elGetter: $.ASN1Encoder<WeekMask_intervalsOfDay_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekMask_intervalsOfDay_Item) {
         _cached_encoder_for_WeekMask_intervalsOfDay_Item = function (
             value: WeekMask_intervalsOfDay_Item        ): _Element {

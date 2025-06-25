@@ -33,7 +33,7 @@ let _cached_decoder_for_EDISupplementaryInformation: $.ASN1Decoder<EDISupplement
  * @param {_Element} el The element being decoded.
  * @returns {EDISupplementaryInformation} The decoded data structure.
  */
-export function _decode_EDISupplementaryInformation(el: _Element) {
+export function _decode_EDISupplementaryInformation(el: _Element): EDISupplementaryInformation {
     if (!_cached_decoder_for_EDISupplementaryInformation) {
         _cached_decoder_for_EDISupplementaryInformation =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_EDISupplementaryInformation: $.ASN1Encoder<EDISupplement
 export function _encode_EDISupplementaryInformation(
     value: EDISupplementaryInformation,
     elGetter: $.ASN1Encoder<EDISupplementaryInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_EDISupplementaryInformation) {
         _cached_encoder_for_EDISupplementaryInformation =
             $._encodeTeletexString;

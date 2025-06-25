@@ -38,7 +38,7 @@ let _cached_decoder_for_SignedTransitNotice: $.ASN1Decoder<SignedTransitNotice> 
  * @param {_Element} el The element being decoded.
  * @returns {SignedTransitNotice} The decoded data structure.
  */
-export function _decode_SignedTransitNotice(el: _Element) {
+export function _decode_SignedTransitNotice(el: _Element): SignedTransitNotice {
   if (!_cached_decoder_for_SignedTransitNotice) {
     _cached_decoder_for_SignedTransitNotice = _decode_SignedTransitNoticeType;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_SignedTransitNotice: $.ASN1Encoder<SignedTransitNotice> 
 export function _encode_SignedTransitNotice(
   value: SignedTransitNotice,
   elGetter: $.ASN1Encoder<SignedTransitNotice>
-) {
+): _Element {
   if (!_cached_encoder_for_SignedTransitNotice) {
     _cached_encoder_for_SignedTransitNotice = _encode_SignedTransitNoticeType;
   }

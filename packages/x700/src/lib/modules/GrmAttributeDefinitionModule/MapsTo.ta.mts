@@ -35,7 +35,7 @@ let _cached_decoder_for_MapsTo: $.ASN1Decoder<MapsTo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MapsTo} The decoded data structure.
  */
-export function _decode_MapsTo(el: _Element) {
+export function _decode_MapsTo(el: _Element): MapsTo {
     if (!_cached_decoder_for_MapsTo) {
         _cached_decoder_for_MapsTo = $._decodeSetOf<MapsToPair>(
             () => _decode_MapsToPair
@@ -53,7 +53,7 @@ let _cached_encoder_for_MapsTo: $.ASN1Encoder<MapsTo> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MapsTo, encoded as an ASN.1 Element.
  */
-export function _encode_MapsTo(value: MapsTo, elGetter: $.ASN1Encoder<MapsTo>) {
+export function _encode_MapsTo(value: MapsTo, elGetter: $.ASN1Encoder<MapsTo>): _Element {
     if (!_cached_encoder_for_MapsTo) {
         _cached_encoder_for_MapsTo = $._encodeSetOf<MapsToPair>(
             () => _encode_MapsToPair,

@@ -115,7 +115,7 @@ let _cached_decoder_for_AssociatedObjects_Item_associatedObjectInfo: $.ASN1Decod
  */
 export function _decode_AssociatedObjects_Item_associatedObjectInfo(
     el: _Element
-) {
+): AssociatedObjects_Item_associatedObjectInfo {
     if (!_cached_decoder_for_AssociatedObjects_Item_associatedObjectInfo) {
         _cached_decoder_for_AssociatedObjects_Item_associatedObjectInfo = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_AssociatedObjects_Item_associatedObjectInfo: $.ASN1Encod
 export function _encode_AssociatedObjects_Item_associatedObjectInfo(
     value: AssociatedObjects_Item_associatedObjectInfo,
     elGetter: $.ASN1Encoder<AssociatedObjects_Item_associatedObjectInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_AssociatedObjects_Item_associatedObjectInfo) {
         _cached_encoder_for_AssociatedObjects_Item_associatedObjectInfo = function (
             value: AssociatedObjects_Item_associatedObjectInfo        ): _Element {

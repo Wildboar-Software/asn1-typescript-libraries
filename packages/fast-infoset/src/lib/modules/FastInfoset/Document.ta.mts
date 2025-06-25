@@ -267,7 +267,7 @@ let _cached_decoder_for_Document: $.ASN1Decoder<Document> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Document} The decoded data structure.
  */
-export function _decode_Document(el: _Element) {
+export function _decode_Document(el: _Element): Document {
   if (!_cached_decoder_for_Document) {
     _cached_decoder_for_Document = function (el: _Element): Document {
       let additional_data: OPTIONAL<
@@ -349,7 +349,7 @@ let _cached_encoder_for_Document: $.ASN1Encoder<Document> | null = null;
 export function _encode_Document(
   value: Document,
   elGetter: $.ASN1Encoder<Document>
-) {
+): _Element {
   if (!_cached_encoder_for_Document) {
     _cached_encoder_for_Document = function (
       value: Document    ): _Element {

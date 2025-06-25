@@ -45,7 +45,7 @@ let _cached_decoder_for_GYear: $.ASN1Decoder<GYear> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GYear} The decoded data structure.
  */
-export function _decode_GYear(el: _Element) {
+export function _decode_GYear(el: _Element): GYear {
   if (!_cached_decoder_for_GYear) {
     _cached_decoder_for_GYear = _get_decoder_for_GenericTimeTypeChoice<
       TIME,
@@ -66,7 +66,7 @@ let _cached_encoder_for_GYear: $.ASN1Encoder<GYear> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GYear, encoded as an ASN.1 Element.
  */
-export function _encode_GYear(value: GYear, elGetter: $.ASN1Encoder<GYear>) {
+export function _encode_GYear(value: GYear, elGetter: $.ASN1Encoder<GYear>): _Element {
   if (!_cached_encoder_for_GYear) {
     _cached_encoder_for_GYear = _get_encoder_for_GenericTimeTypeChoice<
       TIME,

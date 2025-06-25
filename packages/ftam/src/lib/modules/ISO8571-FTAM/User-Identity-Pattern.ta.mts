@@ -38,7 +38,7 @@ let _cached_decoder_for_User_Identity_Pattern: $.ASN1Decoder<User_Identity_Patte
  * @param {_Element} el The element being decoded.
  * @returns {User_Identity_Pattern} The decoded data structure.
  */
-export function _decode_User_Identity_Pattern(el: _Element) {
+export function _decode_User_Identity_Pattern(el: _Element): User_Identity_Pattern {
   if (!_cached_decoder_for_User_Identity_Pattern) {
     _cached_decoder_for_User_Identity_Pattern = _decode_String_Pattern;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_User_Identity_Pattern: $.ASN1Encoder<User_Identity_Patte
 export function _encode_User_Identity_Pattern(
   value: User_Identity_Pattern,
   elGetter: $.ASN1Encoder<User_Identity_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_User_Identity_Pattern) {
     _cached_encoder_for_User_Identity_Pattern = _encode_String_Pattern;
   }

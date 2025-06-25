@@ -46,7 +46,7 @@ let _cached_decoder_for_ForwardedContentToken_Item_body_part_choice: $.ASN1Decod
  */
 export function _decode_ForwardedContentToken_Item_body_part_choice(
     el: _Element
-) {
+): ForwardedContentToken_Item_body_part_choice {
     if (!_cached_decoder_for_ForwardedContentToken_Item_body_part_choice) {
         _cached_decoder_for_ForwardedContentToken_Item_body_part_choice = $._decode_inextensible_choice<ForwardedContentToken_Item_body_part_choice>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ForwardedContentToken_Item_body_part_choice: $.ASN1Encod
 export function _encode_ForwardedContentToken_Item_body_part_choice(
     value: ForwardedContentToken_Item_body_part_choice,
     elGetter: $.ASN1Encoder<ForwardedContentToken_Item_body_part_choice>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardedContentToken_Item_body_part_choice) {
         _cached_encoder_for_ForwardedContentToken_Item_body_part_choice = $._encode_choice<ForwardedContentToken_Item_body_part_choice>(
             {

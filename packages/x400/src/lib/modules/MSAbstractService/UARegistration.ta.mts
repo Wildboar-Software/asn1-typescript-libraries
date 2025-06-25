@@ -177,7 +177,7 @@ let _cached_decoder_for_UARegistration: $.ASN1Decoder<UARegistration> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UARegistration} The decoded data structure.
  */
-export function _decode_UARegistration(el: _Element) {
+export function _decode_UARegistration(el: _Element): UARegistration {
     if (!_cached_decoder_for_UARegistration) {
         _cached_decoder_for_UARegistration = function (
             el: _Element
@@ -256,7 +256,7 @@ let _cached_encoder_for_UARegistration: $.ASN1Encoder<UARegistration> | null = n
 export function _encode_UARegistration(
     value: UARegistration,
     elGetter: $.ASN1Encoder<UARegistration>
-) {
+): _Element {
     if (!_cached_encoder_for_UARegistration) {
         _cached_encoder_for_UARegistration = function (
             value: UARegistration        ): _Element {

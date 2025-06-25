@@ -43,7 +43,7 @@ let _cached_decoder_for_AuthenticatedDataACBio: $.ASN1Decoder<AuthenticatedDataA
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticatedDataACBio} The decoded data structure.
  */
-export function _decode_AuthenticatedDataACBio(el: _Element) {
+export function _decode_AuthenticatedDataACBio(el: _Element): AuthenticatedDataACBio {
     if (!_cached_decoder_for_AuthenticatedDataACBio) {
         _cached_decoder_for_AuthenticatedDataACBio = _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfoACBio>(
             _decode_EncapsulatedContentInfoACBio
@@ -66,7 +66,7 @@ let _cached_encoder_for_AuthenticatedDataACBio: $.ASN1Encoder<AuthenticatedDataA
 export function _encode_AuthenticatedDataACBio(
     value: AuthenticatedDataACBio,
     elGetter: $.ASN1Encoder<AuthenticatedDataACBio>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticatedDataACBio) {
         _cached_encoder_for_AuthenticatedDataACBio = _get_encoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfoACBio>(
             _encode_EncapsulatedContentInfoACBio

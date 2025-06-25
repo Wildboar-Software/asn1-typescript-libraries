@@ -29,7 +29,7 @@ let _cached_decoder_for_SigningTime: $.ASN1Decoder<SigningTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SigningTime} The decoded data structure.
  */
-export function _decode_SigningTime(el: _Element) {
+export function _decode_SigningTime(el: _Element): SigningTime {
     if (!_cached_decoder_for_SigningTime) {
         _cached_decoder_for_SigningTime = _decode_Time;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SigningTime: $.ASN1Encoder<SigningTime> | null = null;
 export function _encode_SigningTime(
     value: SigningTime,
     elGetter: $.ASN1Encoder<SigningTime>
-) {
+): _Element {
     if (!_cached_encoder_for_SigningTime) {
         _cached_encoder_for_SigningTime = _encode_Time;
     }

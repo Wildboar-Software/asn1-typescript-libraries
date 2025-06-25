@@ -107,7 +107,7 @@ let _cached_decoder_for_SchemeIdentifier: $.ASN1Decoder<SchemeIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {SchemeIdentifier} The decoded data structure.
  */
-export function _decode_SchemeIdentifier(el: _Element) {
+export function _decode_SchemeIdentifier(el: _Element): SchemeIdentifier {
     if (!_cached_decoder_for_SchemeIdentifier) {
         _cached_decoder_for_SchemeIdentifier = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_SchemeIdentifier: $.ASN1Encoder<SchemeIdentifier> | null
 export function _encode_SchemeIdentifier(
     value: SchemeIdentifier,
     elGetter: $.ASN1Encoder<SchemeIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SchemeIdentifier) {
         _cached_encoder_for_SchemeIdentifier = function (
             value: SchemeIdentifier        ): _Element {

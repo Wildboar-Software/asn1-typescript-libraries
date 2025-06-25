@@ -142,7 +142,7 @@ let _cached_decoder_for_MacData: $.ASN1Decoder<MacData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MacData} The decoded data structure.
  */
-export function _decode_MacData(el: _Element) {
+export function _decode_MacData(el: _Element): MacData {
     if (!_cached_decoder_for_MacData) {
         _cached_decoder_for_MacData = function (el: _Element): MacData {
             let mac!: DigestInfo;
@@ -192,7 +192,7 @@ let _cached_encoder_for_MacData: $.ASN1Encoder<MacData> | null = null;
 export function _encode_MacData(
     value: MacData,
     elGetter: $.ASN1Encoder<MacData>
-) {
+): _Element {
     if (!_cached_encoder_for_MacData) {
         _cached_encoder_for_MacData = function (
             value: MacData        ): _Element {

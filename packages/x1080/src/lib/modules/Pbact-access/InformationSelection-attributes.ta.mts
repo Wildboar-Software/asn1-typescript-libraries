@@ -38,7 +38,7 @@ let _cached_decoder_for_InformationSelection_attributes: $.ASN1Decoder<Informati
  * @param {_Element} el The element being decoded.
  * @returns {InformationSelection_attributes} The decoded data structure.
  */
-export function _decode_InformationSelection_attributes(el: _Element) {
+export function _decode_InformationSelection_attributes(el: _Element): InformationSelection_attributes {
     if (!_cached_decoder_for_InformationSelection_attributes) {
         _cached_decoder_for_InformationSelection_attributes = $._decode_extensible_choice<InformationSelection_attributes>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_InformationSelection_attributes: $.ASN1Encoder<Informati
 export function _encode_InformationSelection_attributes(
     value: InformationSelection_attributes,
     elGetter: $.ASN1Encoder<InformationSelection_attributes>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationSelection_attributes) {
         _cached_encoder_for_InformationSelection_attributes = $._encode_choice<InformationSelection_attributes>(
             {

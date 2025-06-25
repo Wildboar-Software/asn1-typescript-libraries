@@ -106,7 +106,7 @@ let _cached_decoder_for_OtherRevInfo: $.ASN1Decoder<OtherRevInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OtherRevInfo} The decoded data structure.
  */
-export function _decode_OtherRevInfo(el: _Element) {
+export function _decode_OtherRevInfo(el: _Element): OtherRevInfo {
   if (!_cached_decoder_for_OtherRevInfo) {
     _cached_decoder_for_OtherRevInfo = function (el: _Element): OtherRevInfo {
       const sequence: _Element[] = el.sequence;
@@ -141,7 +141,7 @@ let _cached_encoder_for_OtherRevInfo: $.ASN1Encoder<OtherRevInfo> | null = null;
 export function _encode_OtherRevInfo(
   value: OtherRevInfo,
   elGetter: $.ASN1Encoder<OtherRevInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_OtherRevInfo) {
     _cached_encoder_for_OtherRevInfo = function (
       value: OtherRevInfo    ): _Element {

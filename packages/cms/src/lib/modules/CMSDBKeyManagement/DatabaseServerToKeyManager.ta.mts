@@ -123,7 +123,7 @@ let _cached_decoder_for_DatabaseServerToKeyManager: $.ASN1Decoder<DatabaseServer
  * @param {_Element} el The element being decoded.
  * @returns {DatabaseServerToKeyManager} The decoded data structure.
  */
-export function _decode_DatabaseServerToKeyManager(el: _Element) {
+export function _decode_DatabaseServerToKeyManager(el: _Element): DatabaseServerToKeyManager {
     if (!_cached_decoder_for_DatabaseServerToKeyManager) {
         _cached_decoder_for_DatabaseServerToKeyManager = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_DatabaseServerToKeyManager: $.ASN1Encoder<DatabaseServer
 export function _encode_DatabaseServerToKeyManager(
     value: DatabaseServerToKeyManager,
     elGetter: $.ASN1Encoder<DatabaseServerToKeyManager>
-) {
+): _Element {
     if (!_cached_encoder_for_DatabaseServerToKeyManager) {
         _cached_encoder_for_DatabaseServerToKeyManager = function (
             value: DatabaseServerToKeyManager        ): _Element {

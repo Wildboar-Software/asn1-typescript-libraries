@@ -33,7 +33,7 @@ let _cached_decoder_for_AttributeList: $.ASN1Decoder<AttributeList> | null = nul
  * @returns {AttributeList} The decoded data structure.
  */
 export
-function _decode_AttributeList (el: _Element) {
+function _decode_AttributeList (el: _Element): AttributeList {
     if (!_cached_decoder_for_AttributeList) { _cached_decoder_for_AttributeList = $._decodeSetOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_AttributeList(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AttributeList: $.ASN1Encoder<AttributeList> | null = nul
  * @returns {_Element} The AttributeList, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeList (value: AttributeList, elGetter: $.ASN1Encoder<AttributeList>) {
+function _encode_AttributeList (value: AttributeList, elGetter: $.ASN1Encoder<AttributeList>): _Element {
     if (!_cached_encoder_for_AttributeList) { _cached_encoder_for_AttributeList = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.BER); }
     return _cached_encoder_for_AttributeList(value, elGetter);
 }

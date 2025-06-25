@@ -38,7 +38,7 @@ let _cached_decoder_for_AnySimpleType: $.ASN1Decoder<AnySimpleType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AnySimpleType} The decoded data structure.
  */
-export function _decode_AnySimpleType(el: _Element) {
+export function _decode_AnySimpleType(el: _Element): AnySimpleType {
   if (!_cached_decoder_for_AnySimpleType) {
     _cached_decoder_for_AnySimpleType = _decode_XMLCompatibleString;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AnySimpleType: $.ASN1Encoder<AnySimpleType> | null = nul
 export function _encode_AnySimpleType(
   value: AnySimpleType,
   elGetter: $.ASN1Encoder<AnySimpleType>
-) {
+): _Element {
   if (!_cached_encoder_for_AnySimpleType) {
     _cached_encoder_for_AnySimpleType = _encode_XMLCompatibleString;
   }

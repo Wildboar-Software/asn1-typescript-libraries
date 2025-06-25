@@ -134,7 +134,7 @@ let _cached_decoder_for_DeliveryReport: $.ASN1Decoder<DeliveryReport> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryReport} The decoded data structure.
  */
-export function _decode_DeliveryReport(el: _Element) {
+export function _decode_DeliveryReport(el: _Element): DeliveryReport {
     if (!_cached_decoder_for_DeliveryReport) {
         _cached_decoder_for_DeliveryReport = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_DeliveryReport: $.ASN1Encoder<DeliveryReport> | null = n
 export function _encode_DeliveryReport(
     value: DeliveryReport,
     elGetter: $.ASN1Encoder<DeliveryReport>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryReport) {
         _cached_encoder_for_DeliveryReport = function (
             value: DeliveryReport        ): _Element {

@@ -40,7 +40,7 @@ let _cached_decoder_for_RoutingInformation: $.ASN1Decoder<RoutingInformation> | 
  * @param {_Element} el The element being decoded.
  * @returns {RoutingInformation} The decoded data structure.
  */
-export function _decode_RoutingInformation(el: _Element) {
+export function _decode_RoutingInformation(el: _Element): RoutingInformation {
     if (!_cached_decoder_for_RoutingInformation) {
         _cached_decoder_for_RoutingInformation = $._decode_inextensible_choice<RoutingInformation>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_RoutingInformation: $.ASN1Encoder<RoutingInformation> | 
 export function _encode_RoutingInformation(
     value: RoutingInformation,
     elGetter: $.ASN1Encoder<RoutingInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_RoutingInformation) {
         _cached_encoder_for_RoutingInformation = $._encode_choice<RoutingInformation>(
             {

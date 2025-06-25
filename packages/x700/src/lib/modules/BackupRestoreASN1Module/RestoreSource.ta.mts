@@ -44,7 +44,7 @@ let _cached_decoder_for_RestoreSource: $.ASN1Decoder<RestoreSource> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RestoreSource} The decoded data structure.
  */
-export function _decode_RestoreSource(el: _Element) {
+export function _decode_RestoreSource(el: _Element): RestoreSource {
     if (!_cached_decoder_for_RestoreSource) {
         _cached_decoder_for_RestoreSource = $._decode_inextensible_choice<RestoreSource>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_RestoreSource: $.ASN1Encoder<RestoreSource> | null = nul
 export function _encode_RestoreSource(
     value: RestoreSource,
     elGetter: $.ASN1Encoder<RestoreSource>
-) {
+): _Element {
     if (!_cached_encoder_for_RestoreSource) {
         _cached_encoder_for_RestoreSource = $._encode_choice<RestoreSource>(
             {

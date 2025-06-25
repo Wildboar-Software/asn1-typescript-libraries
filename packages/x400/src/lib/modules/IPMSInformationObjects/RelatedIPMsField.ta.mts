@@ -35,7 +35,7 @@ let _cached_decoder_for_RelatedIPMsField: $.ASN1Decoder<RelatedIPMsField> | null
  * @param {_Element} el The element being decoded.
  * @returns {RelatedIPMsField} The decoded data structure.
  */
-export function _decode_RelatedIPMsField(el: _Element) {
+export function _decode_RelatedIPMsField(el: _Element): RelatedIPMsField {
     if (!_cached_decoder_for_RelatedIPMsField) {
         _cached_decoder_for_RelatedIPMsField = $._decodeSequenceOf<RelatedIPMsSubfield>(
             () => _decode_RelatedIPMsSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_RelatedIPMsField: $.ASN1Encoder<RelatedIPMsField> | null
 export function _encode_RelatedIPMsField(
     value: RelatedIPMsField,
     elGetter: $.ASN1Encoder<RelatedIPMsField>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedIPMsField) {
         _cached_encoder_for_RelatedIPMsField = $._encodeSequenceOf<RelatedIPMsSubfield>(
             () => _encode_RelatedIPMsSubfield,

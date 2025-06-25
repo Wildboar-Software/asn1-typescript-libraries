@@ -33,7 +33,7 @@ let _cached_decoder_for_AttributeRevocationRefs: $.ASN1Decoder<AttributeRevocati
  * @returns {AttributeRevocationRefs} The decoded data structure.
  */
 export
-function _decode_AttributeRevocationRefs (el: _Element) {
+function _decode_AttributeRevocationRefs (el: _Element): AttributeRevocationRefs {
     if (!_cached_decoder_for_AttributeRevocationRefs) { _cached_decoder_for_AttributeRevocationRefs = $._decodeSequenceOf<CrlOcspRef>(() => _decode_CrlOcspRef); }
     return _cached_decoder_for_AttributeRevocationRefs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AttributeRevocationRefs: $.ASN1Encoder<AttributeRevocati
  * @returns {_Element} The AttributeRevocationRefs, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeRevocationRefs (value: AttributeRevocationRefs, elGetter: $.ASN1Encoder<AttributeRevocationRefs>) {
+function _encode_AttributeRevocationRefs (value: AttributeRevocationRefs, elGetter: $.ASN1Encoder<AttributeRevocationRefs>): _Element {
     if (!_cached_encoder_for_AttributeRevocationRefs) { _cached_encoder_for_AttributeRevocationRefs = $._encodeSequenceOf<CrlOcspRef>(() => _encode_CrlOcspRef, $.DER); }
     return _cached_encoder_for_AttributeRevocationRefs(value, elGetter);
 }

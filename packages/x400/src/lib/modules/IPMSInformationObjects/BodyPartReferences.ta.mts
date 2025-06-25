@@ -35,7 +35,7 @@ let _cached_decoder_for_BodyPartReferences: $.ASN1Decoder<BodyPartReferences> | 
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartReferences} The decoded data structure.
  */
-export function _decode_BodyPartReferences(el: _Element) {
+export function _decode_BodyPartReferences(el: _Element): BodyPartReferences {
     if (!_cached_decoder_for_BodyPartReferences) {
         _cached_decoder_for_BodyPartReferences = $._decodeSequenceOf<BodyPartReference>(
             () => _decode_BodyPartReference
@@ -56,7 +56,7 @@ let _cached_encoder_for_BodyPartReferences: $.ASN1Encoder<BodyPartReferences> | 
 export function _encode_BodyPartReferences(
     value: BodyPartReferences,
     elGetter: $.ASN1Encoder<BodyPartReferences>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartReferences) {
         _cached_encoder_for_BodyPartReferences = $._encodeSequenceOf<BodyPartReference>(
             () => _encode_BodyPartReference,

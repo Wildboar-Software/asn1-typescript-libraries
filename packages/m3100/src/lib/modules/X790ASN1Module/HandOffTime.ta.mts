@@ -42,7 +42,7 @@ let _cached_decoder_for_HandOffTime: $.ASN1Decoder<HandOffTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HandOffTime} The decoded data structure.
  */
-export function _decode_HandOffTime(el: _Element) {
+export function _decode_HandOffTime(el: _Element): HandOffTime {
     if (!_cached_decoder_for_HandOffTime) {
         _cached_decoder_for_HandOffTime = $._decode_extensible_choice<HandOffTime>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_HandOffTime: $.ASN1Encoder<HandOffTime> | null = null;
 export function _encode_HandOffTime(
     value: HandOffTime,
     elGetter: $.ASN1Encoder<HandOffTime>
-) {
+): _Element {
     if (!_cached_encoder_for_HandOffTime) {
         _cached_encoder_for_HandOffTime = $._encode_choice<HandOffTime>(
             {

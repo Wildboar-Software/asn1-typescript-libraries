@@ -54,7 +54,7 @@ let _cached_decoder_for_DLSubmitPermission: $.ASN1Decoder<DLSubmitPermission> | 
  * @param {_Element} el The element being decoded.
  * @returns {DLSubmitPermission} The decoded data structure.
  */
-export function _decode_DLSubmitPermission(el: _Element) {
+export function _decode_DLSubmitPermission(el: _Element): DLSubmitPermission {
     if (!_cached_decoder_for_DLSubmitPermission) {
         _cached_decoder_for_DLSubmitPermission = $._decode_inextensible_choice<DLSubmitPermission>(
             {
@@ -94,7 +94,7 @@ let _cached_encoder_for_DLSubmitPermission: $.ASN1Encoder<DLSubmitPermission> | 
 export function _encode_DLSubmitPermission(
     value: DLSubmitPermission,
     elGetter: $.ASN1Encoder<DLSubmitPermission>
-) {
+): _Element {
     if (!_cached_encoder_for_DLSubmitPermission) {
         _cached_encoder_for_DLSubmitPermission = $._encode_choice<DLSubmitPermission>(
             {

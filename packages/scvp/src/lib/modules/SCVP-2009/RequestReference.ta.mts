@@ -44,7 +44,7 @@ let _cached_decoder_for_RequestReference: $.ASN1Decoder<RequestReference> | null
  * @param {_Element} el The element being decoded.
  * @returns {RequestReference} The decoded data structure.
  */
-export function _decode_RequestReference(el: _Element) {
+export function _decode_RequestReference(el: _Element): RequestReference {
   if (!_cached_decoder_for_RequestReference) {
     _cached_decoder_for_RequestReference = $._decode_inextensible_choice<RequestReference>(
       {
@@ -74,7 +74,7 @@ let _cached_encoder_for_RequestReference: $.ASN1Encoder<RequestReference> | null
 export function _encode_RequestReference(
   value: RequestReference,
   elGetter: $.ASN1Encoder<RequestReference>
-) {
+): _Element {
   if (!_cached_encoder_for_RequestReference) {
     _cached_encoder_for_RequestReference = $._encode_choice<RequestReference>(
       {

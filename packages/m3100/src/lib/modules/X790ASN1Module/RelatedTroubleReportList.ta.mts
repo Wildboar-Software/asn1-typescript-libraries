@@ -38,7 +38,7 @@ let _cached_decoder_for_RelatedTroubleReportList: $.ASN1Decoder<RelatedTroubleRe
  * @param {_Element} el The element being decoded.
  * @returns {RelatedTroubleReportList} The decoded data structure.
  */
-export function _decode_RelatedTroubleReportList(el: _Element) {
+export function _decode_RelatedTroubleReportList(el: _Element): RelatedTroubleReportList {
     if (!_cached_decoder_for_RelatedTroubleReportList) {
         _cached_decoder_for_RelatedTroubleReportList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_RelatedTroubleReportList: $.ASN1Encoder<RelatedTroubleRe
 export function _encode_RelatedTroubleReportList(
     value: RelatedTroubleReportList,
     elGetter: $.ASN1Encoder<RelatedTroubleReportList>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedTroubleReportList) {
         _cached_encoder_for_RelatedTroubleReportList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

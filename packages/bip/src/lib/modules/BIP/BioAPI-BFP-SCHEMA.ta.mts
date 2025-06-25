@@ -300,7 +300,7 @@ let _cached_decoder_for_BioAPI_BFP_SCHEMA: $.ASN1Decoder<BioAPI_BFP_SCHEMA> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BFP_SCHEMA} The decoded data structure.
  */
-export function _decode_BioAPI_BFP_SCHEMA(el: _Element) {
+export function _decode_BioAPI_BFP_SCHEMA(el: _Element): BioAPI_BFP_SCHEMA {
   if (!_cached_decoder_for_BioAPI_BFP_SCHEMA) {
     _cached_decoder_for_BioAPI_BFP_SCHEMA = function (
       el: _Element
@@ -384,7 +384,7 @@ let _cached_encoder_for_BioAPI_BFP_SCHEMA: $.ASN1Encoder<BioAPI_BFP_SCHEMA> | nu
 export function _encode_BioAPI_BFP_SCHEMA(
   value: BioAPI_BFP_SCHEMA,
   elGetter: $.ASN1Encoder<BioAPI_BFP_SCHEMA>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BFP_SCHEMA) {
     _cached_encoder_for_BioAPI_BFP_SCHEMA = function (
       value: BioAPI_BFP_SCHEMA    ): _Element {

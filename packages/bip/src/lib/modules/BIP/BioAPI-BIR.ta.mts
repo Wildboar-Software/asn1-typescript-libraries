@@ -137,7 +137,7 @@ let _cached_decoder_for_BioAPI_BIR: $.ASN1Decoder<BioAPI_BIR> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR} The decoded data structure.
  */
-export function _decode_BioAPI_BIR(el: _Element) {
+export function _decode_BioAPI_BIR(el: _Element): BioAPI_BIR {
   if (!_cached_decoder_for_BioAPI_BIR) {
     _cached_decoder_for_BioAPI_BIR = function (el: _Element): BioAPI_BIR {
       const sequence: _Element[] = el.sequence;
@@ -177,7 +177,7 @@ let _cached_encoder_for_BioAPI_BIR: $.ASN1Encoder<BioAPI_BIR> | null = null;
 export function _encode_BioAPI_BIR(
   value: BioAPI_BIR,
   elGetter: $.ASN1Encoder<BioAPI_BIR>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR) {
     _cached_encoder_for_BioAPI_BIR = function (
       value: BioAPI_BIR    ): _Element {

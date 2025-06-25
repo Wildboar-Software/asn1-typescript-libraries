@@ -40,7 +40,7 @@ let _cached_decoder_for_BdcPKCInformation: $.ASN1Decoder<BdcPKCInformation> | nu
  * @returns {BdcPKCInformation} The decoded data structure.
  */
 export
-function _decode_BdcPKCInformation (el: _Element) {
+function _decode_BdcPKCInformation (el: _Element): BdcPKCInformation {
     if (!_cached_decoder_for_BdcPKCInformation) { _cached_decoder_for_BdcPKCInformation = $._decode_inextensible_choice<BdcPKCInformation>({
     "CONTEXT 0": [ "bdcPublicKeyCertificate", _decode_Certificate ],
     "CONTEXT 1": [ "bpuCertificateReference", _decode_URI ]
@@ -58,7 +58,7 @@ let _cached_encoder_for_BdcPKCInformation: $.ASN1Encoder<BdcPKCInformation> | nu
  * @returns {_Element} The BdcPKCInformation, encoded as an ASN.1 Element.
  */
 export
-function _encode_BdcPKCInformation (value: BdcPKCInformation, elGetter: $.ASN1Encoder<BdcPKCInformation>) {
+function _encode_BdcPKCInformation (value: BdcPKCInformation, elGetter: $.ASN1Encoder<BdcPKCInformation>): _Element {
     if (!_cached_encoder_for_BdcPKCInformation) { _cached_encoder_for_BdcPKCInformation = $._encode_choice<BdcPKCInformation>({
     "bdcPublicKeyCertificate": _encode_Certificate,
     "bpuCertificateReference": _encode_URI,

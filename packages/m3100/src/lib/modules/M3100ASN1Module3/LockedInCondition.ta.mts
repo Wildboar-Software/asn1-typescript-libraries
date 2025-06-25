@@ -133,7 +133,7 @@ let _cached_decoder_for_LockedInCondition: $.ASN1Decoder<LockedInCondition> | nu
  * @param {_Element} el The element being decoded.
  * @returns {LockedInCondition} The decoded data structure.
  */
-export function _decode_LockedInCondition(el: _Element) {
+export function _decode_LockedInCondition(el: _Element): LockedInCondition {
     if (!_cached_decoder_for_LockedInCondition) {
         _cached_decoder_for_LockedInCondition = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_LockedInCondition: $.ASN1Encoder<LockedInCondition> | nu
 export function _encode_LockedInCondition(
     value: LockedInCondition,
     elGetter: $.ASN1Encoder<LockedInCondition>
-) {
+): _Element {
     if (!_cached_encoder_for_LockedInCondition) {
         _cached_encoder_for_LockedInCondition = function (
             value: LockedInCondition        ): _Element {

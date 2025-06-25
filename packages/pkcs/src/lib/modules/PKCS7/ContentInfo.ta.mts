@@ -116,7 +116,7 @@ let _cached_decoder_for_ContentInfo: $.ASN1Decoder<ContentInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContentInfo} The decoded data structure.
  */
-export function _decode_ContentInfo(el: _Element) {
+export function _decode_ContentInfo(el: _Element): ContentInfo {
     if (!_cached_decoder_for_ContentInfo) {
         _cached_decoder_for_ContentInfo = function (el: _Element): ContentInfo {
             let content_type!: OBJECT_IDENTIFIER;
@@ -162,7 +162,7 @@ let _cached_encoder_for_ContentInfo: $.ASN1Encoder<ContentInfo> | null = null;
 export function _encode_ContentInfo(
     value: ContentInfo,
     elGetter: $.ASN1Encoder<ContentInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentInfo) {
         _cached_encoder_for_ContentInfo = function (
             value: ContentInfo        ): _Element {

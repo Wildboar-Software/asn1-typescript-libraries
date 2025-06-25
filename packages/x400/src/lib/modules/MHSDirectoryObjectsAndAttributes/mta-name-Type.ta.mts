@@ -116,7 +116,7 @@ let _cached_decoder_for_mta_name_Type: $.ASN1Decoder<mta_name_Type> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {mta_name_Type} The decoded data structure.
  */
-export function _decode_mta_name_Type(el: _Element) {
+export function _decode_mta_name_Type(el: _Element): mta_name_Type {
     if (!_cached_decoder_for_mta_name_Type) {
         _cached_decoder_for_mta_name_Type = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_mta_name_Type: $.ASN1Encoder<mta_name_Type> | null = nul
 export function _encode_mta_name_Type(
     value: mta_name_Type,
     elGetter: $.ASN1Encoder<mta_name_Type>
-) {
+): _Element {
     if (!_cached_encoder_for_mta_name_Type) {
         _cached_encoder_for_mta_name_Type = function (
             value: mta_name_Type        ): _Element {

@@ -157,7 +157,7 @@ let _cached_decoder_for_KeyEncryptionKeyRecipientInfo: $.ASN1Decoder<KeyEncrypti
  * @param {_Element} el The element being decoded.
  * @returns {KeyEncryptionKeyRecipientInfo} The decoded data structure.
  */
-export function _decode_KeyEncryptionKeyRecipientInfo(el: _Element) {
+export function _decode_KeyEncryptionKeyRecipientInfo(el: _Element): KeyEncryptionKeyRecipientInfo {
     if (!_cached_decoder_for_KeyEncryptionKeyRecipientInfo) {
         _cached_decoder_for_KeyEncryptionKeyRecipientInfo = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_KeyEncryptionKeyRecipientInfo: $.ASN1Encoder<KeyEncrypti
 export function _encode_KeyEncryptionKeyRecipientInfo(
     value: KeyEncryptionKeyRecipientInfo,
     elGetter: $.ASN1Encoder<KeyEncryptionKeyRecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyEncryptionKeyRecipientInfo) {
         _cached_encoder_for_KeyEncryptionKeyRecipientInfo = function (
             value: KeyEncryptionKeyRecipientInfo        ): _Element {

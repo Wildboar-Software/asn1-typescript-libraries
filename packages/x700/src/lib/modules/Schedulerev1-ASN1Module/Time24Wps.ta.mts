@@ -180,7 +180,7 @@ let _cached_decoder_for_Time24Wps: $.ASN1Decoder<Time24Wps> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Time24Wps} The decoded data structure.
  */
-export function _decode_Time24Wps(el: _Element) {
+export function _decode_Time24Wps(el: _Element): Time24Wps {
     if (!_cached_decoder_for_Time24Wps) {
         _cached_decoder_for_Time24Wps = function (el: _Element): Time24Wps {
             let hour!: INTEGER;
@@ -261,7 +261,7 @@ let _cached_encoder_for_Time24Wps: $.ASN1Encoder<Time24Wps> | null = null;
 export function _encode_Time24Wps(
     value: Time24Wps,
     elGetter: $.ASN1Encoder<Time24Wps>
-) {
+): _Element {
     if (!_cached_encoder_for_Time24Wps) {
         _cached_encoder_for_Time24Wps = function (
             value: Time24Wps        ): _Element {

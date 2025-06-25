@@ -52,7 +52,7 @@ let _cached_decoder_for_NNReasonCodeField: $.ASN1Decoder<NNReasonCodeField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NNReasonCodeField} The decoded data structure.
  */
-export function _decode_NNReasonCodeField(el: _Element) {
+export function _decode_NNReasonCodeField(el: _Element): NNReasonCodeField {
     if (!_cached_decoder_for_NNReasonCodeField) {
         _cached_decoder_for_NNReasonCodeField = $._decode_inextensible_choice<NNReasonCodeField>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_NNReasonCodeField: $.ASN1Encoder<NNReasonCodeField> | nu
 export function _encode_NNReasonCodeField(
     value: NNReasonCodeField,
     elGetter: $.ASN1Encoder<NNReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_NNReasonCodeField) {
         _cached_encoder_for_NNReasonCodeField = $._encode_choice<NNReasonCodeField>(
             {

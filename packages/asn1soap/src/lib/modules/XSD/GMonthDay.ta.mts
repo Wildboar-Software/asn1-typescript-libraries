@@ -38,7 +38,7 @@ let _cached_decoder_for_GMonthDay: $.ASN1Decoder<GMonthDay> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GMonthDay} The decoded data structure.
  */
-export function _decode_GMonthDay(el: _Element) {
+export function _decode_GMonthDay(el: _Element): GMonthDay {
   if (!_cached_decoder_for_GMonthDay) {
     _cached_decoder_for_GMonthDay = _decode_DateTimeType;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_GMonthDay: $.ASN1Encoder<GMonthDay> | null = null;
 export function _encode_GMonthDay(
   value: GMonthDay,
   elGetter: $.ASN1Encoder<GMonthDay>
-) {
+): _Element {
   if (!_cached_encoder_for_GMonthDay) {
     _cached_encoder_for_GMonthDay = _encode_DateTimeType;
   }

@@ -42,7 +42,7 @@ let _cached_decoder_for_BodyPartTokens_Item_body_part_choice: $.ASN1Decoder<Body
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartTokens_Item_body_part_choice} The decoded data structure.
  */
-export function _decode_BodyPartTokens_Item_body_part_choice(el: _Element) {
+export function _decode_BodyPartTokens_Item_body_part_choice(el: _Element): BodyPartTokens_Item_body_part_choice {
     if (!_cached_decoder_for_BodyPartTokens_Item_body_part_choice) {
         _cached_decoder_for_BodyPartTokens_Item_body_part_choice = $._decode_inextensible_choice<BodyPartTokens_Item_body_part_choice>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_BodyPartTokens_Item_body_part_choice: $.ASN1Encoder<Body
 export function _encode_BodyPartTokens_Item_body_part_choice(
     value: BodyPartTokens_Item_body_part_choice,
     elGetter: $.ASN1Encoder<BodyPartTokens_Item_body_part_choice>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartTokens_Item_body_part_choice) {
         _cached_encoder_for_BodyPartTokens_Item_body_part_choice = $._encode_choice<BodyPartTokens_Item_body_part_choice>(
             {

@@ -120,7 +120,7 @@ let _cached_decoder_for_IPMIdentifier: $.ASN1Decoder<IPMIdentifier> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {IPMIdentifier} The decoded data structure.
  */
-export function _decode_IPMIdentifier(el: _Element) {
+export function _decode_IPMIdentifier(el: _Element): IPMIdentifier {
     if (!_cached_decoder_for_IPMIdentifier) {
         _cached_decoder_for_IPMIdentifier = $._decode_implicit<IPMIdentifier>(
             () =>
@@ -169,7 +169,7 @@ let _cached_encoder_for_IPMIdentifier: $.ASN1Encoder<IPMIdentifier> | null = nul
 export function _encode_IPMIdentifier(
     value: IPMIdentifier,
     elGetter: $.ASN1Encoder<IPMIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMIdentifier) {
         _cached_encoder_for_IPMIdentifier = $._encode_implicit(
             _TagClass.application,

@@ -116,7 +116,7 @@ let _cached_decoder_for_C_BEGIN_RC: $.ASN1Decoder<C_BEGIN_RC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {C_BEGIN_RC} The decoded data structure.
  */
-export function _decode_C_BEGIN_RC(el: _Element) {
+export function _decode_C_BEGIN_RC(el: _Element): C_BEGIN_RC {
   if (!_cached_decoder_for_C_BEGIN_RC) {
     _cached_decoder_for_C_BEGIN_RC = $._decode_implicit<C_BEGIN_RC>(
       () =>
@@ -162,7 +162,7 @@ let _cached_encoder_for_C_BEGIN_RC: $.ASN1Encoder<C_BEGIN_RC> | null = null;
 export function _encode_C_BEGIN_RC(
   value: C_BEGIN_RC,
   elGetter: $.ASN1Encoder<C_BEGIN_RC>
-) {
+): _Element {
   if (!_cached_encoder_for_C_BEGIN_RC) {
     _cached_encoder_for_C_BEGIN_RC = $._encode_implicit(
       _TagClass.context,

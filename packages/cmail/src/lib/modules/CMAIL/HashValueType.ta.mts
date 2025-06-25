@@ -120,7 +120,7 @@ let _cached_decoder_for_HashValueType: $.ASN1Decoder<HashValueType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {HashValueType} The decoded data structure.
  */
-export function _decode_HashValueType(el: _Element) {
+export function _decode_HashValueType(el: _Element): HashValueType {
   if (!_cached_decoder_for_HashValueType) {
     _cached_decoder_for_HashValueType = function (el: _Element): HashValueType {
       const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_HashValueType: $.ASN1Encoder<HashValueType> | null = nul
 export function _encode_HashValueType(
   value: HashValueType,
   elGetter: $.ASN1Encoder<HashValueType>
-) {
+): _Element {
   if (!_cached_encoder_for_HashValueType) {
     _cached_encoder_for_HashValueType = function (
       value: HashValueType    ): _Element {

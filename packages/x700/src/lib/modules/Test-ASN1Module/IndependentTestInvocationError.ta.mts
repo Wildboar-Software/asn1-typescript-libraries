@@ -38,7 +38,7 @@ let _cached_decoder_for_IndependentTestInvocationError: $.ASN1Decoder<Independen
  * @param {_Element} el The element being decoded.
  * @returns {IndependentTestInvocationError} The decoded data structure.
  */
-export function _decode_IndependentTestInvocationError(el: _Element) {
+export function _decode_IndependentTestInvocationError(el: _Element): IndependentTestInvocationError {
     if (!_cached_decoder_for_IndependentTestInvocationError) {
         _cached_decoder_for_IndependentTestInvocationError = $._decodeSequenceOf<IndependentTestInvocationError_Item>(
             () => _decode_IndependentTestInvocationError_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_IndependentTestInvocationError: $.ASN1Encoder<Independen
 export function _encode_IndependentTestInvocationError(
     value: IndependentTestInvocationError,
     elGetter: $.ASN1Encoder<IndependentTestInvocationError>
-) {
+): _Element {
     if (!_cached_encoder_for_IndependentTestInvocationError) {
         _cached_encoder_for_IndependentTestInvocationError = $._encodeSequenceOf<IndependentTestInvocationError_Item>(
             () => _encode_IndependentTestInvocationError_Item,

@@ -40,7 +40,7 @@ let _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Decod
  */
 export function _decode_AssignNetworkCTPOnLogicalLinkEndInformation(
     el: _Element
-) {
+): AssignNetworkCTPOnLogicalLinkEndInformation {
     if (!_cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation) {
         _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation = _decode_CTPList;
     }
@@ -61,7 +61,7 @@ let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Encod
 export function _encode_AssignNetworkCTPOnLogicalLinkEndInformation(
     value: AssignNetworkCTPOnLogicalLinkEndInformation,
     elGetter: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation) {
         _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation = _encode_CTPList;
     }

@@ -115,7 +115,7 @@ let _cached_decoder_for_CommonAuthenticationObjectAttributes: $.ASN1Decoder<Comm
  * @param {_Element} el The element being decoded.
  * @returns {CommonAuthenticationObjectAttributes} The decoded data structure.
  */
-export function _decode_CommonAuthenticationObjectAttributes(el: _Element) {
+export function _decode_CommonAuthenticationObjectAttributes(el: _Element): CommonAuthenticationObjectAttributes {
     if (!_cached_decoder_for_CommonAuthenticationObjectAttributes) {
         _cached_decoder_for_CommonAuthenticationObjectAttributes = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_CommonAuthenticationObjectAttributes: $.ASN1Encoder<Comm
 export function _encode_CommonAuthenticationObjectAttributes(
     value: CommonAuthenticationObjectAttributes,
     elGetter: $.ASN1Encoder<CommonAuthenticationObjectAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonAuthenticationObjectAttributes) {
         _cached_encoder_for_CommonAuthenticationObjectAttributes = function (
             value: CommonAuthenticationObjectAttributes        ): _Element {

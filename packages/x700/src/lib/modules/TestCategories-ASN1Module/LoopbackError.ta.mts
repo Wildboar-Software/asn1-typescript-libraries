@@ -37,7 +37,7 @@ let _cached_decoder_for_LoopbackError: $.ASN1Decoder<LoopbackError> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {LoopbackError} The decoded data structure.
  */
-export function _decode_LoopbackError(el: _Element) {
+export function _decode_LoopbackError(el: _Element): LoopbackError {
     if (!_cached_decoder_for_LoopbackError) {
         _cached_decoder_for_LoopbackError = $._decode_inextensible_choice<LoopbackError>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_LoopbackError: $.ASN1Encoder<LoopbackError> | null = nul
 export function _encode_LoopbackError(
     value: LoopbackError,
     elGetter: $.ASN1Encoder<LoopbackError>
-) {
+): _Element {
     if (!_cached_encoder_for_LoopbackError) {
         _cached_encoder_for_LoopbackError = $._encode_choice<LoopbackError>(
             {

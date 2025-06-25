@@ -34,7 +34,7 @@ let _cached_decoder_for_ID: $.ASN1Decoder<ID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ID} The decoded data structure.
  */
-export function _decode_ID(el: _Element) {
+export function _decode_ID(el: _Element): ID {
   if (!_cached_decoder_for_ID) {
     _cached_decoder_for_ID = _decode_NCName;
   }
@@ -52,7 +52,7 @@ let _cached_encoder_for_ID: $.ASN1Encoder<ID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ID, encoded as an ASN.1 Element.
  */
-export function _encode_ID(value: ID, elGetter: $.ASN1Encoder<ID>) {
+export function _encode_ID(value: ID, elGetter: $.ASN1Encoder<ID>): _Element {
   if (!_cached_encoder_for_ID) {
     _cached_encoder_for_ID = _encode_NCName;
   }

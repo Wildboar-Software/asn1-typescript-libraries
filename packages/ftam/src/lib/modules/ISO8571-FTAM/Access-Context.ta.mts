@@ -129,7 +129,7 @@ let _cached_decoder_for_Access_Context: $.ASN1Decoder<Access_Context> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Access_Context} The decoded data structure.
  */
-export function _decode_Access_Context(el: _Element) {
+export function _decode_Access_Context(el: _Element): Access_Context {
   if (!_cached_decoder_for_Access_Context) {
     _cached_decoder_for_Access_Context = $._decode_implicit<Access_Context>(
       () =>
@@ -180,7 +180,7 @@ let _cached_encoder_for_Access_Context: $.ASN1Encoder<Access_Context> | null = n
 export function _encode_Access_Context(
   value: Access_Context,
   elGetter: $.ASN1Encoder<Access_Context>
-) {
+): _Element {
   if (!_cached_encoder_for_Access_Context) {
     _cached_encoder_for_Access_Context = $._encode_implicit(
       _TagClass.application,

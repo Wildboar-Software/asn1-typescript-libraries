@@ -45,7 +45,7 @@ let _cached_decoder_for_MSBindUnbindPDUs88: $.ASN1Decoder<MSBindUnbindPDUs88> | 
  * @param {_Element} el The element being decoded.
  * @returns {MSBindUnbindPDUs88} The decoded data structure.
  */
-export function _decode_MSBindUnbindPDUs88(el: _Element) {
+export function _decode_MSBindUnbindPDUs88(el: _Element): MSBindUnbindPDUs88 {
     if (!_cached_decoder_for_MSBindUnbindPDUs88) {
         _cached_decoder_for_MSBindUnbindPDUs88 = $._decode_inextensible_choice<MSBindUnbindPDUs88>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_MSBindUnbindPDUs88: $.ASN1Encoder<MSBindUnbindPDUs88> | 
 export function _encode_MSBindUnbindPDUs88(
     value: MSBindUnbindPDUs88,
     elGetter: $.ASN1Encoder<MSBindUnbindPDUs88>
-) {
+): _Element {
     if (!_cached_encoder_for_MSBindUnbindPDUs88) {
         _cached_encoder_for_MSBindUnbindPDUs88 = $._encode_choice<MSBindUnbindPDUs88>(
             {

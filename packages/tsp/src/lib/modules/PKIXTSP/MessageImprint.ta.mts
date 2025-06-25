@@ -110,7 +110,7 @@ let _cached_decoder_for_MessageImprint: $.ASN1Decoder<MessageImprint> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {MessageImprint} The decoded data structure.
  */
-export function _decode_MessageImprint(el: _Element) {
+export function _decode_MessageImprint(el: _Element): MessageImprint {
     if (!_cached_decoder_for_MessageImprint) {
         _cached_decoder_for_MessageImprint = function (
             el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_MessageImprint: $.ASN1Encoder<MessageImprint> | null = n
 export function _encode_MessageImprint(
     value: MessageImprint,
     elGetter: $.ASN1Encoder<MessageImprint>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageImprint) {
         _cached_encoder_for_MessageImprint = function (
             value: MessageImprint        ): _Element {

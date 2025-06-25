@@ -31,7 +31,7 @@ let _cached_decoder_for_AppliedPatches: $.ASN1Decoder<AppliedPatches> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {AppliedPatches} The decoded data structure.
  */
-export function _decode_AppliedPatches(el: _Element) {
+export function _decode_AppliedPatches(el: _Element): AppliedPatches {
     if (!_cached_decoder_for_AppliedPatches) {
         _cached_decoder_for_AppliedPatches = $._decodeSequenceOf<Patch>(
             () => _decode_Patch
@@ -52,7 +52,7 @@ let _cached_encoder_for_AppliedPatches: $.ASN1Encoder<AppliedPatches> | null = n
 export function _encode_AppliedPatches(
     value: AppliedPatches,
     elGetter: $.ASN1Encoder<AppliedPatches>
-) {
+): _Element {
     if (!_cached_encoder_for_AppliedPatches) {
         _cached_encoder_for_AppliedPatches = $._encodeSequenceOf<Patch>(
             () => _encode_Patch,

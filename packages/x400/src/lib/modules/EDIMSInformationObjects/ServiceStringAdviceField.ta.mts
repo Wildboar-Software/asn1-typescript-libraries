@@ -197,7 +197,7 @@ let _cached_decoder_for_ServiceStringAdviceField: $.ASN1Decoder<ServiceStringAdv
  * @param {_Element} el The element being decoded.
  * @returns {ServiceStringAdviceField} The decoded data structure.
  */
-export function _decode_ServiceStringAdviceField(el: _Element) {
+export function _decode_ServiceStringAdviceField(el: _Element): ServiceStringAdviceField {
     if (!_cached_decoder_for_ServiceStringAdviceField) {
         _cached_decoder_for_ServiceStringAdviceField = function (
             el: _Element
@@ -273,7 +273,7 @@ let _cached_encoder_for_ServiceStringAdviceField: $.ASN1Encoder<ServiceStringAdv
 export function _encode_ServiceStringAdviceField(
     value: ServiceStringAdviceField,
     elGetter: $.ASN1Encoder<ServiceStringAdviceField>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceStringAdviceField) {
         _cached_encoder_for_ServiceStringAdviceField = function (
             value: ServiceStringAdviceField        ): _Element {

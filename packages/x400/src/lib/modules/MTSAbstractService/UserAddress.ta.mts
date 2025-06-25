@@ -50,7 +50,7 @@ let _cached_decoder_for_UserAddress: $.ASN1Decoder<UserAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UserAddress} The decoded data structure.
  */
-export function _decode_UserAddress(el: _Element) {
+export function _decode_UserAddress(el: _Element): UserAddress {
     if (!_cached_decoder_for_UserAddress) {
         _cached_decoder_for_UserAddress = $._decode_inextensible_choice<UserAddress>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_UserAddress: $.ASN1Encoder<UserAddress> | null = null;
 export function _encode_UserAddress(
     value: UserAddress,
     elGetter: $.ASN1Encoder<UserAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UserAddress) {
         _cached_encoder_for_UserAddress = $._encode_choice<UserAddress>(
             {

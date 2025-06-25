@@ -37,7 +37,7 @@ let _cached_decoder_for_ComponentPortion: $.ASN1Decoder<ComponentPortion> | null
  * @param {_Element} el The element being decoded.
  * @returns {ComponentPortion} The decoded data structure.
  */
-export function _decode_ComponentPortion(el: _Element) {
+export function _decode_ComponentPortion(el: _Element): ComponentPortion {
   if (!_cached_decoder_for_ComponentPortion) {
     _cached_decoder_for_ComponentPortion = $._decode_implicit<ComponentPortion>(
       () => $._decodeSequenceOf<Component>(() => _decode_Component)
@@ -58,7 +58,7 @@ let _cached_encoder_for_ComponentPortion: $.ASN1Encoder<ComponentPortion> | null
 export function _encode_ComponentPortion(
   value: ComponentPortion,
   elGetter: $.ASN1Encoder<ComponentPortion>
-) {
+): _Element {
   if (!_cached_encoder_for_ComponentPortion) {
     _cached_encoder_for_ComponentPortion = $._encode_implicit(
       _TagClass.application,

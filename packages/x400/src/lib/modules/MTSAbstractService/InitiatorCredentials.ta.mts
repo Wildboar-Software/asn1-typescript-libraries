@@ -35,7 +35,7 @@ let _cached_decoder_for_InitiatorCredentials: $.ASN1Decoder<InitiatorCredentials
  * @param {_Element} el The element being decoded.
  * @returns {InitiatorCredentials} The decoded data structure.
  */
-export function _decode_InitiatorCredentials(el: _Element) {
+export function _decode_InitiatorCredentials(el: _Element): InitiatorCredentials {
     if (!_cached_decoder_for_InitiatorCredentials) {
         _cached_decoder_for_InitiatorCredentials = _decode_Credentials;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_InitiatorCredentials: $.ASN1Encoder<InitiatorCredentials
 export function _encode_InitiatorCredentials(
     value: InitiatorCredentials,
     elGetter: $.ASN1Encoder<InitiatorCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_InitiatorCredentials) {
         _cached_encoder_for_InitiatorCredentials = _encode_Credentials;
     }

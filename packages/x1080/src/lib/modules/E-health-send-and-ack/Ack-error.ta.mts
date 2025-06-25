@@ -113,7 +113,7 @@ let _cached_decoder_for_Ack_error: $.ASN1Decoder<Ack_error> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Ack_error} The decoded data structure.
  */
-export function _decode_Ack_error(el: _Element) {
+export function _decode_Ack_error(el: _Element): Ack_error {
     if (!_cached_decoder_for_Ack_error) {
         _cached_decoder_for_Ack_error = function (el: _Element): Ack_error {
             const sequence: _Element[] = el.sequence;
@@ -150,7 +150,7 @@ let _cached_encoder_for_Ack_error: $.ASN1Encoder<Ack_error> | null = null;
 export function _encode_Ack_error(
     value: Ack_error,
     elGetter: $.ASN1Encoder<Ack_error>
-) {
+): _Element {
     if (!_cached_encoder_for_Ack_error) {
         _cached_encoder_for_Ack_error = function (
             value: Ack_error        ): _Element {

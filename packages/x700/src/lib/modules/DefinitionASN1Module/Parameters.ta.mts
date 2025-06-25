@@ -38,7 +38,7 @@ let _cached_decoder_for_Parameters: $.ASN1Decoder<Parameters> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Parameters} The decoded data structure.
  */
-export function _decode_Parameters(el: _Element) {
+export function _decode_Parameters(el: _Element): Parameters {
     if (!_cached_decoder_for_Parameters) {
         _cached_decoder_for_Parameters = _decode_TemplateList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Parameters: $.ASN1Encoder<Parameters> | null = null;
 export function _encode_Parameters(
     value: Parameters,
     elGetter: $.ASN1Encoder<Parameters>
-) {
+): _Element {
     if (!_cached_encoder_for_Parameters) {
         _cached_encoder_for_Parameters = _encode_TemplateList;
     }

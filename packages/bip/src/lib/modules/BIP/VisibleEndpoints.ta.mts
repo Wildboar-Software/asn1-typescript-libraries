@@ -38,7 +38,7 @@ let _cached_decoder_for_VisibleEndpoints: $.ASN1Decoder<VisibleEndpoints> | null
  * @param {_Element} el The element being decoded.
  * @returns {VisibleEndpoints} The decoded data structure.
  */
-export function _decode_VisibleEndpoints(el: _Element) {
+export function _decode_VisibleEndpoints(el: _Element): VisibleEndpoints {
   if (!_cached_decoder_for_VisibleEndpoints) {
     _cached_decoder_for_VisibleEndpoints = $._decodeSetOf<VisibleEndpoint>(
       () => _decode_VisibleEndpoint
@@ -61,7 +61,7 @@ let _cached_encoder_for_VisibleEndpoints: $.ASN1Encoder<VisibleEndpoints> | null
 export function _encode_VisibleEndpoints(
   value: VisibleEndpoints,
   elGetter: $.ASN1Encoder<VisibleEndpoints>
-) {
+): _Element {
   if (!_cached_encoder_for_VisibleEndpoints) {
     _cached_encoder_for_VisibleEndpoints = $._encodeSetOf<VisibleEndpoint>(
       () => _encode_VisibleEndpoint,

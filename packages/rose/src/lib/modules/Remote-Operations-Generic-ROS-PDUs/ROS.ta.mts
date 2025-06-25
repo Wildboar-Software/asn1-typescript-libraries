@@ -73,7 +73,7 @@ let _cached_decoder_for_ROS: $.ASN1Decoder<ROS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ROS} The decoded data structure.
  */
-export function _decode_ROS(el: _Element) {
+export function _decode_ROS(el: _Element): ROS {
   if (!_cached_decoder_for_ROS) {
     _cached_decoder_for_ROS = $._decode_inextensible_choice<ROS>({
       'CONTEXT 1': ['invoke', $._decode_implicit<Invoke>(() => _decode_Invoke)],
@@ -102,7 +102,7 @@ let _cached_encoder_for_ROS: $.ASN1Encoder<ROS> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ROS, encoded as an ASN.1 Element.
  */
-export function _encode_ROS(value: ROS, elGetter: $.ASN1Encoder<ROS>) {
+export function _encode_ROS(value: ROS, elGetter: $.ASN1Encoder<ROS>): _Element {
   if (!_cached_encoder_for_ROS) {
     _cached_encoder_for_ROS = $._encode_choice<ROS>(
       {

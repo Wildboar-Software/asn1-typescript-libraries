@@ -159,7 +159,7 @@ let _cached_decoder_for_BufferedObservationId: $.ASN1Decoder<BufferedObservation
  * @param {_Element} el The element being decoded.
  * @returns {BufferedObservationId} The decoded data structure.
  */
-export function _decode_BufferedObservationId(el: _Element) {
+export function _decode_BufferedObservationId(el: _Element): BufferedObservationId {
     if (!_cached_decoder_for_BufferedObservationId) {
         _cached_decoder_for_BufferedObservationId = function (
             el: _Element
@@ -222,7 +222,7 @@ let _cached_encoder_for_BufferedObservationId: $.ASN1Encoder<BufferedObservation
 export function _encode_BufferedObservationId(
     value: BufferedObservationId,
     elGetter: $.ASN1Encoder<BufferedObservationId>
-) {
+): _Element {
     if (!_cached_encoder_for_BufferedObservationId) {
         _cached_encoder_for_BufferedObservationId = function (
             value: BufferedObservationId        ): _Element {

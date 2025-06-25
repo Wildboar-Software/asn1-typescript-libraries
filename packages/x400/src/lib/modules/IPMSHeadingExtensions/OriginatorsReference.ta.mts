@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatorsReference: $.ASN1Decoder<OriginatorsReference
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorsReference} The decoded data structure.
  */
-export function _decode_OriginatorsReference(el: _Element) {
+export function _decode_OriginatorsReference(el: _Element): OriginatorsReference {
     if (!_cached_decoder_for_OriginatorsReference) {
         _cached_decoder_for_OriginatorsReference = _decode_UniversalOrBMPString;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatorsReference: $.ASN1Encoder<OriginatorsReference
 export function _encode_OriginatorsReference(
     value: OriginatorsReference,
     elGetter: $.ASN1Encoder<OriginatorsReference>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorsReference) {
         _cached_encoder_for_OriginatorsReference = _encode_UniversalOrBMPString;
     }

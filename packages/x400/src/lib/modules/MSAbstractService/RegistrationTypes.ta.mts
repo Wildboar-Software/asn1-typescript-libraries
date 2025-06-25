@@ -141,7 +141,7 @@ let _cached_decoder_for_RegistrationTypes: $.ASN1Decoder<RegistrationTypes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RegistrationTypes} The decoded data structure.
  */
-export function _decode_RegistrationTypes(el: _Element) {
+export function _decode_RegistrationTypes(el: _Element): RegistrationTypes {
     if (!_cached_decoder_for_RegistrationTypes) {
         _cached_decoder_for_RegistrationTypes = function (
             el: _Element
@@ -202,7 +202,7 @@ let _cached_encoder_for_RegistrationTypes: $.ASN1Encoder<RegistrationTypes> | nu
 export function _encode_RegistrationTypes(
     value: RegistrationTypes,
     elGetter: $.ASN1Encoder<RegistrationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_RegistrationTypes) {
         _cached_encoder_for_RegistrationTypes = function (
             value: RegistrationTypes        ): _Element {

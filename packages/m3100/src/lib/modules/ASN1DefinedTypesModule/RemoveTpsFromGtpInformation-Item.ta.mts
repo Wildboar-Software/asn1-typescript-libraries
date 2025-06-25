@@ -115,7 +115,7 @@ let _cached_decoder_for_RemoveTpsFromGtpInformation_Item: $.ASN1Decoder<RemoveTp
  * @param {_Element} el The element being decoded.
  * @returns {RemoveTpsFromGtpInformation_Item} The decoded data structure.
  */
-export function _decode_RemoveTpsFromGtpInformation_Item(el: _Element) {
+export function _decode_RemoveTpsFromGtpInformation_Item(el: _Element): RemoveTpsFromGtpInformation_Item {
     if (!_cached_decoder_for_RemoveTpsFromGtpInformation_Item) {
         _cached_decoder_for_RemoveTpsFromGtpInformation_Item = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_RemoveTpsFromGtpInformation_Item: $.ASN1Encoder<RemoveTp
 export function _encode_RemoveTpsFromGtpInformation_Item(
     value: RemoveTpsFromGtpInformation_Item,
     elGetter: $.ASN1Encoder<RemoveTpsFromGtpInformation_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveTpsFromGtpInformation_Item) {
         _cached_encoder_for_RemoveTpsFromGtpInformation_Item = function (
             value: RemoveTpsFromGtpInformation_Item        ): _Element {

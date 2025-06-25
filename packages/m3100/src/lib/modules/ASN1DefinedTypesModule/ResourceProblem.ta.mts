@@ -40,7 +40,7 @@ let _cached_decoder_for_ResourceProblem: $.ASN1Decoder<ResourceProblem> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ResourceProblem} The decoded data structure.
  */
-export function _decode_ResourceProblem(el: _Element) {
+export function _decode_ResourceProblem(el: _Element): ResourceProblem {
     if (!_cached_decoder_for_ResourceProblem) {
         _cached_decoder_for_ResourceProblem = $._decode_inextensible_choice<ResourceProblem>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_ResourceProblem: $.ASN1Encoder<ResourceProblem> | null =
 export function _encode_ResourceProblem(
     value: ResourceProblem,
     elGetter: $.ASN1Encoder<ResourceProblem>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourceProblem) {
         _cached_encoder_for_ResourceProblem = $._encode_choice<ResourceProblem>(
             {

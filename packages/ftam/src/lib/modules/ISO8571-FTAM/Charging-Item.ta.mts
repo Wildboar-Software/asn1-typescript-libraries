@@ -130,7 +130,7 @@ let _cached_decoder_for_Charging_Item: $.ASN1Decoder<Charging_Item> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Charging_Item} The decoded data structure.
  */
-export function _decode_Charging_Item(el: _Element) {
+export function _decode_Charging_Item(el: _Element): Charging_Item {
   if (!_cached_decoder_for_Charging_Item) {
     _cached_decoder_for_Charging_Item = function (el: _Element): Charging_Item {
       const sequence: _Element[] = el.sequence;
@@ -180,7 +180,7 @@ let _cached_encoder_for_Charging_Item: $.ASN1Encoder<Charging_Item> | null = nul
 export function _encode_Charging_Item(
   value: Charging_Item,
   elGetter: $.ASN1Encoder<Charging_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Charging_Item) {
     _cached_encoder_for_Charging_Item = function (
       value: Charging_Item    ): _Element {

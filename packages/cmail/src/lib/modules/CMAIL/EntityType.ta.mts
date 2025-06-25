@@ -195,7 +195,7 @@ let _cached_decoder_for_EntityType: $.ASN1Decoder<EntityType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EntityType} The decoded data structure.
  */
-export function _decode_EntityType(el: _Element) {
+export function _decode_EntityType(el: _Element): EntityType {
   if (!_cached_decoder_for_EntityType) {
     _cached_decoder_for_EntityType = function (el: _Element): EntityType {
       const sequence: _Element[] = el.sequence;
@@ -247,7 +247,7 @@ let _cached_encoder_for_EntityType: $.ASN1Encoder<EntityType> | null = null;
 export function _encode_EntityType(
   value: EntityType,
   elGetter: $.ASN1Encoder<EntityType>
-) {
+): _Element {
   if (!_cached_encoder_for_EntityType) {
     _cached_encoder_for_EntityType = function (
       value: EntityType    ): _Element {

@@ -111,7 +111,7 @@ let _cached_decoder_for_Span: $.ASN1Decoder<Span> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Span} The decoded data structure.
  */
-export function _decode_Span(el: _Element) {
+export function _decode_Span(el: _Element): Span {
     if (!_cached_decoder_for_Span) {
         _cached_decoder_for_Span = function (el: _Element): Span {
             const sequence: _Element[] = el.sequence;
@@ -147,7 +147,7 @@ let _cached_encoder_for_Span: $.ASN1Encoder<Span> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Span, encoded as an ASN.1 Element.
  */
-export function _encode_Span(value: Span, elGetter: $.ASN1Encoder<Span>) {
+export function _encode_Span(value: Span, elGetter: $.ASN1Encoder<Span>): _Element {
     if (!_cached_encoder_for_Span) {
         _cached_encoder_for_Span = function (
             value: Span        ): _Element {

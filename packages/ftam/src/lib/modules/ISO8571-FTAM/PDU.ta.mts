@@ -62,7 +62,7 @@ let _cached_decoder_for_PDU: $.ASN1Decoder<PDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PDU} The decoded data structure.
  */
-export function _decode_PDU(el: _Element) {
+export function _decode_PDU(el: _Element): PDU {
   if (!_cached_decoder_for_PDU) {
     _cached_decoder_for_PDU = $._decode_inextensible_choice<PDU>({
       'CONTEXT 0': ['fTAM_Regime_PDU', _decode_FTAM_Regime_PDU],
@@ -154,7 +154,7 @@ let _cached_encoder_for_PDU: $.ASN1Encoder<PDU> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDU, encoded as an ASN.1 Element.
  */
-export function _encode_PDU(value: PDU, elGetter: $.ASN1Encoder<PDU>) {
+export function _encode_PDU(value: PDU, elGetter: $.ASN1Encoder<PDU>): _Element {
   if (!_cached_encoder_for_PDU) {
     _cached_encoder_for_PDU = $._encode_choice<PDU>(
       {

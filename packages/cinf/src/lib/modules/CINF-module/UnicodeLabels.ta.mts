@@ -121,7 +121,7 @@ let _cached_decoder_for_UnicodeLabels: $.ASN1Decoder<UnicodeLabels> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {UnicodeLabels} The decoded data structure.
  */
-export function _decode_UnicodeLabels(el: _Element) {
+export function _decode_UnicodeLabels(el: _Element): UnicodeLabels {
   if (!_cached_decoder_for_UnicodeLabels) {
     _cached_decoder_for_UnicodeLabels = function (el: _Element): UnicodeLabels {
       const sequence: _Element[] = el.sequence;
@@ -160,7 +160,7 @@ let _cached_encoder_for_UnicodeLabels: $.ASN1Encoder<UnicodeLabels> | null = nul
 export function _encode_UnicodeLabels(
   value: UnicodeLabels,
   elGetter: $.ASN1Encoder<UnicodeLabels>
-) {
+): _Element {
   if (!_cached_encoder_for_UnicodeLabels) {
     _cached_encoder_for_UnicodeLabels = function (
       value: UnicodeLabels    ): _Element {

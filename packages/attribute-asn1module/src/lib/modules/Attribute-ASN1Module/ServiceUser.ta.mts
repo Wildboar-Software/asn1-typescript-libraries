@@ -111,7 +111,7 @@ let _cached_decoder_for_ServiceUser: $.ASN1Decoder<ServiceUser> | null = null;
  * @returns {ServiceUser} The decoded data structure.
  */
 export
-function _decode_ServiceUser (el: _Element) {
+function _decode_ServiceUser (el: _Element): ServiceUser {
     if (!_cached_decoder_for_ServiceUser) { _cached_decoder_for_ServiceUser = function (el: _Element): ServiceUser {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_ServiceUser: $.ASN1Encoder<ServiceUser> | null = null;
  * @returns {_Element} The ServiceUser, encoded as an ASN.1 Element.
  */
 export
-function _encode_ServiceUser (value: ServiceUser, elGetter: $.ASN1Encoder<ServiceUser>) {
+function _encode_ServiceUser (value: ServiceUser, elGetter: $.ASN1Encoder<ServiceUser>): _Element {
     if (!_cached_encoder_for_ServiceUser) { _cached_encoder_for_ServiceUser = function (value: ServiceUser): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

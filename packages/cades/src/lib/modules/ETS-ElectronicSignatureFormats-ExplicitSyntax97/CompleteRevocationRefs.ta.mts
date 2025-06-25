@@ -33,7 +33,7 @@ let _cached_decoder_for_CompleteRevocationRefs: $.ASN1Decoder<CompleteRevocation
  * @returns {CompleteRevocationRefs} The decoded data structure.
  */
 export
-function _decode_CompleteRevocationRefs (el: _Element) {
+function _decode_CompleteRevocationRefs (el: _Element): CompleteRevocationRefs {
     if (!_cached_decoder_for_CompleteRevocationRefs) { _cached_decoder_for_CompleteRevocationRefs = $._decodeSequenceOf<CrlOcspRef>(() => _decode_CrlOcspRef); }
     return _cached_decoder_for_CompleteRevocationRefs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_CompleteRevocationRefs: $.ASN1Encoder<CompleteRevocation
  * @returns {_Element} The CompleteRevocationRefs, encoded as an ASN.1 Element.
  */
 export
-function _encode_CompleteRevocationRefs (value: CompleteRevocationRefs, elGetter: $.ASN1Encoder<CompleteRevocationRefs>) {
+function _encode_CompleteRevocationRefs (value: CompleteRevocationRefs, elGetter: $.ASN1Encoder<CompleteRevocationRefs>): _Element {
     if (!_cached_encoder_for_CompleteRevocationRefs) { _cached_encoder_for_CompleteRevocationRefs = $._encodeSequenceOf<CrlOcspRef>(() => _encode_CrlOcspRef, $.DER); }
     return _cached_encoder_for_CompleteRevocationRefs(value, elGetter);
 }

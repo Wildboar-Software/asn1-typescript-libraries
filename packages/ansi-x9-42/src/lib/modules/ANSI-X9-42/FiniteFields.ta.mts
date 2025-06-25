@@ -29,7 +29,7 @@ let _cached_decoder_for_FiniteFields: $.ASN1Decoder<FiniteFields> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FiniteFields} The decoded data structure.
  */
-export function _decode_FiniteFields(el: _Element) {
+export function _decode_FiniteFields(el: _Element): FiniteFields {
     if (!_cached_decoder_for_FiniteFields) {
         _cached_decoder_for_FiniteFields = _decode_FieldID;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_FiniteFields: $.ASN1Encoder<FiniteFields> | null = null;
 export function _encode_FiniteFields(
     value: FiniteFields,
     elGetter: $.ASN1Encoder<FiniteFields>
-) {
+): _Element {
     if (!_cached_encoder_for_FiniteFields) {
         _cached_encoder_for_FiniteFields = _encode_FieldID;
     }

@@ -119,7 +119,7 @@ let _cached_decoder_for_EncapsulatedContentInfoBRTCertificate: $.ASN1Decoder<Enc
  * @param {_Element} el The element being decoded.
  * @returns {EncapsulatedContentInfoBRTCertificate} The decoded data structure.
  */
-export function _decode_EncapsulatedContentInfoBRTCertificate(el: _Element) {
+export function _decode_EncapsulatedContentInfoBRTCertificate(el: _Element): EncapsulatedContentInfoBRTCertificate {
     if (!_cached_decoder_for_EncapsulatedContentInfoBRTCertificate) {
         _cached_decoder_for_EncapsulatedContentInfoBRTCertificate = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_EncapsulatedContentInfoBRTCertificate: $.ASN1Encoder<Enc
 export function _encode_EncapsulatedContentInfoBRTCertificate(
     value: EncapsulatedContentInfoBRTCertificate,
     elGetter: $.ASN1Encoder<EncapsulatedContentInfoBRTCertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_EncapsulatedContentInfoBRTCertificate) {
         _cached_encoder_for_EncapsulatedContentInfoBRTCertificate = function (
             value: EncapsulatedContentInfoBRTCertificate        ): _Element {

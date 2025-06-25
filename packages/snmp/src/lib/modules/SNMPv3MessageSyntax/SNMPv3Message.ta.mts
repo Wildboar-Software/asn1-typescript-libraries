@@ -137,7 +137,7 @@ let _cached_decoder_for_SNMPv3Message: $.ASN1Decoder<SNMPv3Message> | null = nul
  * @returns {SNMPv3Message} The decoded data structure.
  */
 export
-function _decode_SNMPv3Message (el: _Element) {
+function _decode_SNMPv3Message (el: _Element): SNMPv3Message {
     if (!_cached_decoder_for_SNMPv3Message) { _cached_decoder_for_SNMPv3Message = function (el: _Element): SNMPv3Message {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -176,7 +176,7 @@ let _cached_encoder_for_SNMPv3Message: $.ASN1Encoder<SNMPv3Message> | null = nul
  * @returns {_Element} The SNMPv3Message, encoded as an ASN.1 Element.
  */
 export
-function _encode_SNMPv3Message (value: SNMPv3Message, elGetter: $.ASN1Encoder<SNMPv3Message>) {
+function _encode_SNMPv3Message (value: SNMPv3Message, elGetter: $.ASN1Encoder<SNMPv3Message>): _Element {
     if (!_cached_encoder_for_SNMPv3Message) { _cached_encoder_for_SNMPv3Message = function (value: SNMPv3Message): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

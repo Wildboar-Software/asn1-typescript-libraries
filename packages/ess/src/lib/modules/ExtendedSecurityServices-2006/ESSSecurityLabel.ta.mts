@@ -160,7 +160,7 @@ let _cached_decoder_for_ESSSecurityLabel: $.ASN1Decoder<ESSSecurityLabel> | null
  * @param {_Element} el The element being decoded.
  * @returns {ESSSecurityLabel} The decoded data structure.
  */
-export function _decode_ESSSecurityLabel(el: _Element) {
+export function _decode_ESSSecurityLabel(el: _Element): ESSSecurityLabel {
     if (!_cached_decoder_for_ESSSecurityLabel) {
         _cached_decoder_for_ESSSecurityLabel = function (
             el: _Element
@@ -222,7 +222,7 @@ let _cached_encoder_for_ESSSecurityLabel: $.ASN1Encoder<ESSSecurityLabel> | null
 export function _encode_ESSSecurityLabel(
     value: ESSSecurityLabel,
     elGetter: $.ASN1Encoder<ESSSecurityLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_ESSSecurityLabel) {
         _cached_encoder_for_ESSSecurityLabel = function (
             value: ESSSecurityLabel        ): _Element {

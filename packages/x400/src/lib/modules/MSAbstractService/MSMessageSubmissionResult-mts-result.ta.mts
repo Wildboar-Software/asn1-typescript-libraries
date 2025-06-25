@@ -181,7 +181,7 @@ let _cached_decoder_for_MSMessageSubmissionResult_mts_result: $.ASN1Decoder<MSMe
  * @param {_Element} el The element being decoded.
  * @returns {MSMessageSubmissionResult_mts_result} The decoded data structure.
  */
-export function _decode_MSMessageSubmissionResult_mts_result(el: _Element) {
+export function _decode_MSMessageSubmissionResult_mts_result(el: _Element): MSMessageSubmissionResult_mts_result {
     if (!_cached_decoder_for_MSMessageSubmissionResult_mts_result) {
         _cached_decoder_for_MSMessageSubmissionResult_mts_result = function (
             el: _Element
@@ -253,7 +253,7 @@ let _cached_encoder_for_MSMessageSubmissionResult_mts_result: $.ASN1Encoder<MSMe
 export function _encode_MSMessageSubmissionResult_mts_result(
     value: MSMessageSubmissionResult_mts_result,
     elGetter: $.ASN1Encoder<MSMessageSubmissionResult_mts_result>
-) {
+): _Element {
     if (!_cached_encoder_for_MSMessageSubmissionResult_mts_result) {
         _cached_encoder_for_MSMessageSubmissionResult_mts_result = function (
             value: MSMessageSubmissionResult_mts_result        ): _Element {

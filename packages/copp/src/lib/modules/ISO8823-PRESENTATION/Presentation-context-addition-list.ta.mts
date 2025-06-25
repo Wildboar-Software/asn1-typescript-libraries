@@ -38,7 +38,7 @@ let _cached_decoder_for_Presentation_context_addition_list: $.ASN1Decoder<Presen
  * @param {_Element} el The element being decoded.
  * @returns {Presentation_context_addition_list} The decoded data structure.
  */
-export function _decode_Presentation_context_addition_list(el: _Element) {
+export function _decode_Presentation_context_addition_list(el: _Element): Presentation_context_addition_list {
     if (!_cached_decoder_for_Presentation_context_addition_list) {
         _cached_decoder_for_Presentation_context_addition_list = _decode_Context_list;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Presentation_context_addition_list: $.ASN1Encoder<Presen
 export function _encode_Presentation_context_addition_list(
     value: Presentation_context_addition_list,
     elGetter: $.ASN1Encoder<Presentation_context_addition_list>
-) {
+): _Element {
     if (!_cached_encoder_for_Presentation_context_addition_list) {
         _cached_encoder_for_Presentation_context_addition_list = _encode_Context_list;
     }

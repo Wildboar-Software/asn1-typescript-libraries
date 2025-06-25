@@ -122,7 +122,7 @@ let _cached_decoder_for_BDCCertificateReferer: $.ASN1Decoder<BDCCertificateRefer
  * @returns {BDCCertificateReferer} The decoded data structure.
  */
 export
-function _decode_BDCCertificateReferer (el: _Element) {
+function _decode_BDCCertificateReferer (el: _Element): BDCCertificateReferer {
     if (!_cached_decoder_for_BDCCertificateReferer) { _cached_decoder_for_BDCCertificateReferer = function (el: _Element): BDCCertificateReferer {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -157,7 +157,7 @@ let _cached_encoder_for_BDCCertificateReferer: $.ASN1Encoder<BDCCertificateRefer
  * @returns {_Element} The BDCCertificateReferer, encoded as an ASN.1 Element.
  */
 export
-function _encode_BDCCertificateReferer (value: BDCCertificateReferer, elGetter: $.ASN1Encoder<BDCCertificateReferer>) {
+function _encode_BDCCertificateReferer (value: BDCCertificateReferer, elGetter: $.ASN1Encoder<BDCCertificateReferer>): _Element {
     if (!_cached_encoder_for_BDCCertificateReferer) { _cached_encoder_for_BDCCertificateReferer = function (value: BDCCertificateReferer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -32,7 +32,7 @@ let _cached_decoder_for_InvokeIdsPerforming: $.ASN1Decoder<InvokeIdsPerforming> 
  * @param {_Element} el The element being decoded.
  * @returns {InvokeIdsPerforming} The decoded data structure.
  */
-export function _decode_InvokeIdsPerforming(el: _Element) {
+export function _decode_InvokeIdsPerforming(el: _Element): InvokeIdsPerforming {
     if (!_cached_decoder_for_InvokeIdsPerforming) {
         _cached_decoder_for_InvokeIdsPerforming = $._decodeSetOf<INTEGER>(
             () => $._decodeInteger
@@ -53,7 +53,7 @@ let _cached_encoder_for_InvokeIdsPerforming: $.ASN1Encoder<InvokeIdsPerforming> 
 export function _encode_InvokeIdsPerforming(
     value: InvokeIdsPerforming,
     elGetter: $.ASN1Encoder<InvokeIdsPerforming>
-) {
+): _Element {
     if (!_cached_encoder_for_InvokeIdsPerforming) {
         _cached_encoder_for_InvokeIdsPerforming = $._encodeSetOf<INTEGER>(
             () => $._encodeInteger,

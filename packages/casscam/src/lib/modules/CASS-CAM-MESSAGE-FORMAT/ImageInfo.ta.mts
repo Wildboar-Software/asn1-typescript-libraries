@@ -139,7 +139,7 @@ let _cached_decoder_for_ImageInfo: $.ASN1Decoder<ImageInfo> | null = null;
  * @returns {ImageInfo} The decoded data structure.
  */
 export
-function _decode_ImageInfo (el: _Element) {
+function _decode_ImageInfo (el: _Element): ImageInfo {
     if (!_cached_decoder_for_ImageInfo) { _cached_decoder_for_ImageInfo = function (el: _Element): ImageInfo {
     let dSIP: OPTIONAL<OCTET_STRING>;
     let tm!: OCTET_STRING;
@@ -176,7 +176,7 @@ let _cached_encoder_for_ImageInfo: $.ASN1Encoder<ImageInfo> | null = null;
  * @returns {_Element} The ImageInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_ImageInfo (value: ImageInfo, elGetter: $.ASN1Encoder<ImageInfo>) {
+function _encode_ImageInfo (value: ImageInfo, elGetter: $.ASN1Encoder<ImageInfo>): _Element {
     if (!_cached_encoder_for_ImageInfo) { _cached_encoder_for_ImageInfo = function (value: ImageInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

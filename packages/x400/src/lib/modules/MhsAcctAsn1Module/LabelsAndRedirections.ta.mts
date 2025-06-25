@@ -36,7 +36,7 @@ let _cached_decoder_for_LabelsAndRedirections: $.ASN1Decoder<LabelsAndRedirectio
  * @param {_Element} el The element being decoded.
  * @returns {LabelsAndRedirections} The decoded data structure.
  */
-export function _decode_LabelsAndRedirections(el: _Element) {
+export function _decode_LabelsAndRedirections(el: _Element): LabelsAndRedirections {
     if (!_cached_decoder_for_LabelsAndRedirections) {
         _cached_decoder_for_LabelsAndRedirections = $._decodeSetOf<LabelAndRedirection>(
             () => _decode_LabelAndRedirection
@@ -57,7 +57,7 @@ let _cached_encoder_for_LabelsAndRedirections: $.ASN1Encoder<LabelsAndRedirectio
 export function _encode_LabelsAndRedirections(
     value: LabelsAndRedirections,
     elGetter: $.ASN1Encoder<LabelsAndRedirections>
-) {
+): _Element {
     if (!_cached_encoder_for_LabelsAndRedirections) {
         _cached_encoder_for_LabelsAndRedirections = $._encodeSetOf<LabelAndRedirection>(
             () => _encode_LabelAndRedirection,

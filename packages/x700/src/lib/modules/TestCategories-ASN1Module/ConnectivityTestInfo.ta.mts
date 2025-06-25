@@ -121,7 +121,7 @@ let _cached_decoder_for_ConnectivityTestInfo: $.ASN1Decoder<ConnectivityTestInfo
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityTestInfo} The decoded data structure.
  */
-export function _decode_ConnectivityTestInfo(el: _Element) {
+export function _decode_ConnectivityTestInfo(el: _Element): ConnectivityTestInfo {
     if (!_cached_decoder_for_ConnectivityTestInfo) {
         _cached_decoder_for_ConnectivityTestInfo = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ConnectivityTestInfo: $.ASN1Encoder<ConnectivityTestInfo
 export function _encode_ConnectivityTestInfo(
     value: ConnectivityTestInfo,
     elGetter: $.ASN1Encoder<ConnectivityTestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityTestInfo) {
         _cached_encoder_for_ConnectivityTestInfo = function (
             value: ConnectivityTestInfo        ): _Element {

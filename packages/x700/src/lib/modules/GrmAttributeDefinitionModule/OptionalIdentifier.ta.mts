@@ -40,7 +40,7 @@ let _cached_decoder_for_OptionalIdentifier: $.ASN1Decoder<OptionalIdentifier> | 
  * @param {_Element} el The element being decoded.
  * @returns {OptionalIdentifier} The decoded data structure.
  */
-export function _decode_OptionalIdentifier(el: _Element) {
+export function _decode_OptionalIdentifier(el: _Element): OptionalIdentifier {
     if (!_cached_decoder_for_OptionalIdentifier) {
         _cached_decoder_for_OptionalIdentifier = $._decode_inextensible_choice<OptionalIdentifier>(
             {
@@ -64,7 +64,7 @@ let _cached_encoder_for_OptionalIdentifier: $.ASN1Encoder<OptionalIdentifier> | 
 export function _encode_OptionalIdentifier(
     value: OptionalIdentifier,
     elGetter: $.ASN1Encoder<OptionalIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalIdentifier) {
         _cached_encoder_for_OptionalIdentifier = $._encode_choice<OptionalIdentifier>(
             {

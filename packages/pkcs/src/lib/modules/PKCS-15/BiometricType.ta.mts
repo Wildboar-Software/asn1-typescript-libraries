@@ -49,7 +49,7 @@ let _cached_decoder_for_BiometricType: $.ASN1Decoder<BiometricType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {BiometricType} The decoded data structure.
  */
-export function _decode_BiometricType(el: _Element) {
+export function _decode_BiometricType(el: _Element): BiometricType {
     if (!_cached_decoder_for_BiometricType) {
         _cached_decoder_for_BiometricType = $._decode_extensible_choice<BiometricType>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = nul
 export function _encode_BiometricType(
     value: BiometricType,
     elGetter: $.ASN1Encoder<BiometricType>
-) {
+): _Element {
     if (!_cached_encoder_for_BiometricType) {
         _cached_encoder_for_BiometricType = $._encode_choice<BiometricType>(
             {

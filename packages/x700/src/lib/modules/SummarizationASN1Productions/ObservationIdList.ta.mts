@@ -35,7 +35,7 @@ let _cached_decoder_for_ObservationIdList: $.ASN1Decoder<ObservationIdList> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ObservationIdList} The decoded data structure.
  */
-export function _decode_ObservationIdList(el: _Element) {
+export function _decode_ObservationIdList(el: _Element): ObservationIdList {
     if (!_cached_decoder_for_ObservationIdList) {
         _cached_decoder_for_ObservationIdList = $._decodeSetOf<ObservationId>(
             () => _decode_ObservationId
@@ -56,7 +56,7 @@ let _cached_encoder_for_ObservationIdList: $.ASN1Encoder<ObservationIdList> | nu
 export function _encode_ObservationIdList(
     value: ObservationIdList,
     elGetter: $.ASN1Encoder<ObservationIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_ObservationIdList) {
         _cached_encoder_for_ObservationIdList = $._encodeSetOf<ObservationId>(
             () => _encode_ObservationId,

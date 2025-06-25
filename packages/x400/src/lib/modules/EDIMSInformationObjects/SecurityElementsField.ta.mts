@@ -160,7 +160,7 @@ let _cached_decoder_for_SecurityElementsField: $.ASN1Decoder<SecurityElementsFie
  * @param {_Element} el The element being decoded.
  * @returns {SecurityElementsField} The decoded data structure.
  */
-export function _decode_SecurityElementsField(el: _Element) {
+export function _decode_SecurityElementsField(el: _Element): SecurityElementsField {
     if (!_cached_decoder_for_SecurityElementsField) {
         _cached_decoder_for_SecurityElementsField = function (
             el: _Element
@@ -222,7 +222,7 @@ let _cached_encoder_for_SecurityElementsField: $.ASN1Encoder<SecurityElementsFie
 export function _encode_SecurityElementsField(
     value: SecurityElementsField,
     elGetter: $.ASN1Encoder<SecurityElementsField>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityElementsField) {
         _cached_encoder_for_SecurityElementsField = function (
             value: SecurityElementsField        ): _Element {

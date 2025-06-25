@@ -146,7 +146,7 @@ let _cached_decoder_for_EnvironmentParameter: $.ASN1Decoder<EnvironmentParameter
  * @param {_Element} el The element being decoded.
  * @returns {EnvironmentParameter} The decoded data structure.
  */
-export function _decode_EnvironmentParameter(el: _Element) {
+export function _decode_EnvironmentParameter(el: _Element): EnvironmentParameter {
     if (!_cached_decoder_for_EnvironmentParameter) {
         _cached_decoder_for_EnvironmentParameter = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_EnvironmentParameter: $.ASN1Encoder<EnvironmentParameter
 export function _encode_EnvironmentParameter(
     value: EnvironmentParameter,
     elGetter: $.ASN1Encoder<EnvironmentParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_EnvironmentParameter) {
         _cached_encoder_for_EnvironmentParameter = function (
             value: EnvironmentParameter        ): _Element {

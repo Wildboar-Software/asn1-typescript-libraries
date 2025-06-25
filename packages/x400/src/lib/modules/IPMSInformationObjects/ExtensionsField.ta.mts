@@ -35,7 +35,7 @@ let _cached_decoder_for_ExtensionsField: $.ASN1Decoder<ExtensionsField> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionsField} The decoded data structure.
  */
-export function _decode_ExtensionsField(el: _Element) {
+export function _decode_ExtensionsField(el: _Element): ExtensionsField {
     if (!_cached_decoder_for_ExtensionsField) {
         _cached_decoder_for_ExtensionsField = $._decodeSetOf<IPMSExtension>(
             () => _decode_IPMSExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExtensionsField: $.ASN1Encoder<ExtensionsField> | null =
 export function _encode_ExtensionsField(
     value: ExtensionsField,
     elGetter: $.ASN1Encoder<ExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionsField) {
         _cached_encoder_for_ExtensionsField = $._encodeSetOf<IPMSExtension>(
             () => _encode_IPMSExtension,

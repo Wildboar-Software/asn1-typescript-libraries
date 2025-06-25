@@ -144,7 +144,7 @@ let _cached_decoder_for_RunningBSPRemoteReference: $.ASN1Decoder<RunningBSPRemot
  * @param {_Element} el The element being decoded.
  * @returns {RunningBSPRemoteReference} The decoded data structure.
  */
-export function _decode_RunningBSPRemoteReference(el: _Element) {
+export function _decode_RunningBSPRemoteReference(el: _Element): RunningBSPRemoteReference {
   if (!_cached_decoder_for_RunningBSPRemoteReference) {
     _cached_decoder_for_RunningBSPRemoteReference = function (
       el: _Element
@@ -190,7 +190,7 @@ let _cached_encoder_for_RunningBSPRemoteReference: $.ASN1Encoder<RunningBSPRemot
 export function _encode_RunningBSPRemoteReference(
   value: RunningBSPRemoteReference,
   elGetter: $.ASN1Encoder<RunningBSPRemoteReference>
-) {
+): _Element {
   if (!_cached_encoder_for_RunningBSPRemoteReference) {
     _cached_encoder_for_RunningBSPRemoteReference = function (
       value: RunningBSPRemoteReference    ): _Element {

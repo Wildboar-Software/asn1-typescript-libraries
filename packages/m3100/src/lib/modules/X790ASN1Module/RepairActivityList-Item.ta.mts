@@ -161,7 +161,7 @@ let _cached_decoder_for_RepairActivityList_Item: $.ASN1Decoder<RepairActivityLis
  * @param {_Element} el The element being decoded.
  * @returns {RepairActivityList_Item} The decoded data structure.
  */
-export function _decode_RepairActivityList_Item(el: _Element) {
+export function _decode_RepairActivityList_Item(el: _Element): RepairActivityList_Item {
     if (!_cached_decoder_for_RepairActivityList_Item) {
         _cached_decoder_for_RepairActivityList_Item = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_RepairActivityList_Item: $.ASN1Encoder<RepairActivityLis
 export function _encode_RepairActivityList_Item(
     value: RepairActivityList_Item,
     elGetter: $.ASN1Encoder<RepairActivityList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RepairActivityList_Item) {
         _cached_encoder_for_RepairActivityList_Item = function (
             value: RepairActivityList_Item        ): _Element {

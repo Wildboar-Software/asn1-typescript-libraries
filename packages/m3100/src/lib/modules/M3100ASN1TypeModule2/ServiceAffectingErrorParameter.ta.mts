@@ -61,7 +61,7 @@ let _cached_decoder_for_ServiceAffectingErrorParameter: $.ASN1Decoder<ServiceAff
  * @param {_Element} el The element being decoded.
  * @returns {ServiceAffectingErrorParameter} The decoded data structure.
  */
-export function _decode_ServiceAffectingErrorParameter(el: _Element) {
+export function _decode_ServiceAffectingErrorParameter(el: _Element): ServiceAffectingErrorParameter {
     if (!_cached_decoder_for_ServiceAffectingErrorParameter) {
         _cached_decoder_for_ServiceAffectingErrorParameter =
             $._decodeEnumerated;
@@ -83,7 +83,7 @@ let _cached_encoder_for_ServiceAffectingErrorParameter: $.ASN1Encoder<ServiceAff
 export function _encode_ServiceAffectingErrorParameter(
     value: ServiceAffectingErrorParameter,
     elGetter: $.ASN1Encoder<ServiceAffectingErrorParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceAffectingErrorParameter) {
         _cached_encoder_for_ServiceAffectingErrorParameter =
             $._encodeEnumerated;

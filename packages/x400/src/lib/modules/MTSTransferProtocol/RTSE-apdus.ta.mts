@@ -73,7 +73,7 @@ let _cached_decoder_for_RTSE_apdus: $.ASN1Decoder<RTSE_apdus> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RTSE_apdus} The decoded data structure.
  */
-export function _decode_RTSE_apdus(el: _Element) {
+export function _decode_RTSE_apdus(el: _Element): RTSE_apdus {
     if (!_cached_decoder_for_RTSE_apdus) {
         _cached_decoder_for_RTSE_apdus = $._decode_inextensible_choice<RTSE_apdus>(
             {
@@ -113,7 +113,7 @@ let _cached_encoder_for_RTSE_apdus: $.ASN1Encoder<RTSE_apdus> | null = null;
 export function _encode_RTSE_apdus(
     value: RTSE_apdus,
     elGetter: $.ASN1Encoder<RTSE_apdus>
-) {
+): _Element {
     if (!_cached_encoder_for_RTSE_apdus) {
         _cached_encoder_for_RTSE_apdus = $._encode_choice<RTSE_apdus>(
             {

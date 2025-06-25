@@ -151,7 +151,7 @@ let _cached_decoder_for_Content: $.ASN1Decoder<Content> | null = null;
  * @returns {Content} The decoded data structure.
  */
 export
-function _decode_Content (el: _Element) {
+function _decode_Content (el: _Element): Content {
     if (!_cached_decoder_for_Content) { _cached_decoder_for_Content = function (el: _Element): Content {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 6) {
@@ -200,7 +200,7 @@ let _cached_encoder_for_Content: $.ASN1Encoder<Content> | null = null;
  * @returns {_Element} The Content, encoded as an ASN.1 Element.
  */
 export
-function _encode_Content (value: Content, elGetter: $.ASN1Encoder<Content>) {
+function _encode_Content (value: Content, elGetter: $.ASN1Encoder<Content>): _Element {
     if (!_cached_encoder_for_Content) { _cached_encoder_for_Content = function (value: Content): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

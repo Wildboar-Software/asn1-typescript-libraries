@@ -38,7 +38,7 @@ let _cached_decoder_for_ETYPE_INFO: $.ASN1Decoder<ETYPE_INFO> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ETYPE_INFO} The decoded data structure.
  */
-export function _decode_ETYPE_INFO(el: _Element) {
+export function _decode_ETYPE_INFO(el: _Element): ETYPE_INFO {
   if (!_cached_decoder_for_ETYPE_INFO) {
     _cached_decoder_for_ETYPE_INFO = $._decodeSequenceOf<ETYPE_INFO_ENTRY>(
       () => _decode_ETYPE_INFO_ENTRY
@@ -61,7 +61,7 @@ let _cached_encoder_for_ETYPE_INFO: $.ASN1Encoder<ETYPE_INFO> | null = null;
 export function _encode_ETYPE_INFO(
   value: ETYPE_INFO,
   elGetter: $.ASN1Encoder<ETYPE_INFO>
-) {
+): _Element {
   if (!_cached_encoder_for_ETYPE_INFO) {
     _cached_encoder_for_ETYPE_INFO = $._encodeSequenceOf<ETYPE_INFO_ENTRY>(
       () => _encode_ETYPE_INFO_ENTRY,

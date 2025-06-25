@@ -116,7 +116,7 @@ let _cached_decoder_for_PtoTPPool: $.ASN1Decoder<PtoTPPool> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PtoTPPool} The decoded data structure.
  */
-export function _decode_PtoTPPool(el: _Element) {
+export function _decode_PtoTPPool(el: _Element): PtoTPPool {
     if (!_cached_decoder_for_PtoTPPool) {
         _cached_decoder_for_PtoTPPool = function (el: _Element): PtoTPPool {
             const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_PtoTPPool: $.ASN1Encoder<PtoTPPool> | null = null;
 export function _encode_PtoTPPool(
     value: PtoTPPool,
     elGetter: $.ASN1Encoder<PtoTPPool>
-) {
+): _Element {
     if (!_cached_encoder_for_PtoTPPool) {
         _cached_encoder_for_PtoTPPool = function (
             value: PtoTPPool        ): _Element {

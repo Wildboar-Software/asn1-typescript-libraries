@@ -114,7 +114,7 @@ let _cached_decoder_for_DeleteCmLeasedCircuitServiceError: $.ASN1Decoder<DeleteC
  * @param {_Element} el The element being decoded.
  * @returns {DeleteCmLeasedCircuitServiceError} The decoded data structure.
  */
-export function _decode_DeleteCmLeasedCircuitServiceError(el: _Element) {
+export function _decode_DeleteCmLeasedCircuitServiceError(el: _Element): DeleteCmLeasedCircuitServiceError {
     if (!_cached_decoder_for_DeleteCmLeasedCircuitServiceError) {
         _cached_decoder_for_DeleteCmLeasedCircuitServiceError =
             $._decodeEnumerated;
@@ -136,7 +136,7 @@ let _cached_encoder_for_DeleteCmLeasedCircuitServiceError: $.ASN1Encoder<DeleteC
 export function _encode_DeleteCmLeasedCircuitServiceError(
     value: DeleteCmLeasedCircuitServiceError,
     elGetter: $.ASN1Encoder<DeleteCmLeasedCircuitServiceError>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteCmLeasedCircuitServiceError) {
         _cached_encoder_for_DeleteCmLeasedCircuitServiceError =
             $._encodeEnumerated;

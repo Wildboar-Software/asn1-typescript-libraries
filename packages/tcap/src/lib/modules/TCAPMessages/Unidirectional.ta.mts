@@ -120,7 +120,7 @@ let _cached_decoder_for_Unidirectional: $.ASN1Decoder<Unidirectional> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Unidirectional} The decoded data structure.
  */
-export function _decode_Unidirectional(el: _Element) {
+export function _decode_Unidirectional(el: _Element): Unidirectional {
   if (!_cached_decoder_for_Unidirectional) {
     _cached_decoder_for_Unidirectional = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_Unidirectional: $.ASN1Encoder<Unidirectional> | null = n
 export function _encode_Unidirectional(
   value: Unidirectional,
   elGetter: $.ASN1Encoder<Unidirectional>
-) {
+): _Element {
   if (!_cached_encoder_for_Unidirectional) {
     _cached_encoder_for_Unidirectional = function (
       value: Unidirectional    ): _Element {

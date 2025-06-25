@@ -110,7 +110,7 @@ let _cached_decoder_for_WTLSCertificateAttributes: $.ASN1Decoder<WTLSCertificate
  * @param {_Element} el The element being decoded.
  * @returns {WTLSCertificateAttributes} The decoded data structure.
  */
-export function _decode_WTLSCertificateAttributes(el: _Element) {
+export function _decode_WTLSCertificateAttributes(el: _Element): WTLSCertificateAttributes {
     if (!_cached_decoder_for_WTLSCertificateAttributes) {
         _cached_decoder_for_WTLSCertificateAttributes = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_WTLSCertificateAttributes: $.ASN1Encoder<WTLSCertificate
 export function _encode_WTLSCertificateAttributes(
     value: WTLSCertificateAttributes,
     elGetter: $.ASN1Encoder<WTLSCertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_WTLSCertificateAttributes) {
         _cached_encoder_for_WTLSCertificateAttributes = function (
             value: WTLSCertificateAttributes        ): _Element {

@@ -39,7 +39,7 @@ let _cached_decoder_for_SubNetworkConnectionPointerList: $.ASN1Decoder<SubNetwor
  * @param {_Element} el The element being decoded.
  * @returns {SubNetworkConnectionPointerList} The decoded data structure.
  */
-export function _decode_SubNetworkConnectionPointerList(el: _Element) {
+export function _decode_SubNetworkConnectionPointerList(el: _Element): SubNetworkConnectionPointerList {
     if (!_cached_decoder_for_SubNetworkConnectionPointerList) {
         _cached_decoder_for_SubNetworkConnectionPointerList = $._decodeSequenceOf<RelatedObjectInstance>(
             () => _decode_RelatedObjectInstance
@@ -62,7 +62,7 @@ let _cached_encoder_for_SubNetworkConnectionPointerList: $.ASN1Encoder<SubNetwor
 export function _encode_SubNetworkConnectionPointerList(
     value: SubNetworkConnectionPointerList,
     elGetter: $.ASN1Encoder<SubNetworkConnectionPointerList>
-) {
+): _Element {
     if (!_cached_encoder_for_SubNetworkConnectionPointerList) {
         _cached_encoder_for_SubNetworkConnectionPointerList = $._encodeSequenceOf<RelatedObjectInstance>(
             () => _encode_RelatedObjectInstance,

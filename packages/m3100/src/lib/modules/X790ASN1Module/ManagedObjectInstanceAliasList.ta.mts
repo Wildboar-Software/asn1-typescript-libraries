@@ -35,7 +35,7 @@ let _cached_decoder_for_ManagedObjectInstanceAliasList: $.ASN1Decoder<ManagedObj
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectInstanceAliasList} The decoded data structure.
  */
-export function _decode_ManagedObjectInstanceAliasList(el: _Element) {
+export function _decode_ManagedObjectInstanceAliasList(el: _Element): ManagedObjectInstanceAliasList {
     if (!_cached_decoder_for_ManagedObjectInstanceAliasList) {
         _cached_decoder_for_ManagedObjectInstanceAliasList = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_ManagedObjectInstanceAliasList: $.ASN1Encoder<ManagedObj
 export function _encode_ManagedObjectInstanceAliasList(
     value: ManagedObjectInstanceAliasList,
     elGetter: $.ASN1Encoder<ManagedObjectInstanceAliasList>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedObjectInstanceAliasList) {
         _cached_encoder_for_ManagedObjectInstanceAliasList = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

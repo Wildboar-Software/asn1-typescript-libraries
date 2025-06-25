@@ -141,7 +141,7 @@ let _cached_decoder_for_HeaderData: $.ASN1Decoder<HeaderData> | null = null;
  * @returns {HeaderData} The decoded data structure.
  */
 export
-function _decode_HeaderData (el: _Element) {
+function _decode_HeaderData (el: _Element): HeaderData {
     if (!_cached_decoder_for_HeaderData) { _cached_decoder_for_HeaderData = function (el: _Element): HeaderData {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -180,7 +180,7 @@ let _cached_encoder_for_HeaderData: $.ASN1Encoder<HeaderData> | null = null;
  * @returns {_Element} The HeaderData, encoded as an ASN.1 Element.
  */
 export
-function _encode_HeaderData (value: HeaderData, elGetter: $.ASN1Encoder<HeaderData>) {
+function _encode_HeaderData (value: HeaderData, elGetter: $.ASN1Encoder<HeaderData>): _Element {
     if (!_cached_encoder_for_HeaderData) { _cached_encoder_for_HeaderData = function (value: HeaderData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

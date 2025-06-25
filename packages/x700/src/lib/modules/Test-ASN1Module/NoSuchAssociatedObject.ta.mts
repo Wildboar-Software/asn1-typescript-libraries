@@ -35,7 +35,7 @@ let _cached_decoder_for_NoSuchAssociatedObject: $.ASN1Decoder<NoSuchAssociatedOb
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchAssociatedObject} The decoded data structure.
  */
-export function _decode_NoSuchAssociatedObject(el: _Element) {
+export function _decode_NoSuchAssociatedObject(el: _Element): NoSuchAssociatedObject {
     if (!_cached_decoder_for_NoSuchAssociatedObject) {
         _cached_decoder_for_NoSuchAssociatedObject = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_NoSuchAssociatedObject: $.ASN1Encoder<NoSuchAssociatedOb
 export function _encode_NoSuchAssociatedObject(
     value: NoSuchAssociatedObject,
     elGetter: $.ASN1Encoder<NoSuchAssociatedObject>
-) {
+): _Element {
     if (!_cached_encoder_for_NoSuchAssociatedObject) {
         _cached_encoder_for_NoSuchAssociatedObject = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

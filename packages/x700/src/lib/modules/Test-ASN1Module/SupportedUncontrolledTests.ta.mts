@@ -32,7 +32,7 @@ let _cached_decoder_for_SupportedUncontrolledTests: $.ASN1Decoder<SupportedUncon
  * @param {_Element} el The element being decoded.
  * @returns {SupportedUncontrolledTests} The decoded data structure.
  */
-export function _decode_SupportedUncontrolledTests(el: _Element) {
+export function _decode_SupportedUncontrolledTests(el: _Element): SupportedUncontrolledTests {
     if (!_cached_decoder_for_SupportedUncontrolledTests) {
         _cached_decoder_for_SupportedUncontrolledTests = $._decodeSetOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -53,7 +53,7 @@ let _cached_encoder_for_SupportedUncontrolledTests: $.ASN1Encoder<SupportedUncon
 export function _encode_SupportedUncontrolledTests(
     value: SupportedUncontrolledTests,
     elGetter: $.ASN1Encoder<SupportedUncontrolledTests>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedUncontrolledTests) {
         _cached_encoder_for_SupportedUncontrolledTests = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

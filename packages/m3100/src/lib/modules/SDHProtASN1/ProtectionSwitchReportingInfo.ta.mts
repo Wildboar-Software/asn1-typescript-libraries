@@ -130,7 +130,7 @@ let _cached_decoder_for_ProtectionSwitchReportingInfo: $.ASN1Decoder<ProtectionS
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionSwitchReportingInfo} The decoded data structure.
  */
-export function _decode_ProtectionSwitchReportingInfo(el: _Element) {
+export function _decode_ProtectionSwitchReportingInfo(el: _Element): ProtectionSwitchReportingInfo {
     if (!_cached_decoder_for_ProtectionSwitchReportingInfo) {
         _cached_decoder_for_ProtectionSwitchReportingInfo = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_ProtectionSwitchReportingInfo: $.ASN1Encoder<ProtectionS
 export function _encode_ProtectionSwitchReportingInfo(
     value: ProtectionSwitchReportingInfo,
     elGetter: $.ASN1Encoder<ProtectionSwitchReportingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionSwitchReportingInfo) {
         _cached_encoder_for_ProtectionSwitchReportingInfo = function (
             value: ProtectionSwitchReportingInfo        ): _Element {

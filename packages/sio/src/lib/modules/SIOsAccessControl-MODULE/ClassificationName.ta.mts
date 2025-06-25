@@ -30,7 +30,7 @@ let _cached_decoder_for_ClassificationName: $.ASN1Decoder<ClassificationName> | 
  * @param {_Element} el The element being decoded.
  * @returns {ClassificationName} The decoded data structure.
  */
-export function _decode_ClassificationName(el: _Element) {
+export function _decode_ClassificationName(el: _Element): ClassificationName {
     if (!_cached_decoder_for_ClassificationName) {
         _cached_decoder_for_ClassificationName = _decode_DirectoryString;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_ClassificationName: $.ASN1Encoder<ClassificationName> | 
 export function _encode_ClassificationName(
     value: ClassificationName,
     elGetter: $.ASN1Encoder<ClassificationName>
-) {
+): _Element {
     if (!_cached_encoder_for_ClassificationName) {
         _cached_encoder_for_ClassificationName = _encode_DirectoryString;
     }

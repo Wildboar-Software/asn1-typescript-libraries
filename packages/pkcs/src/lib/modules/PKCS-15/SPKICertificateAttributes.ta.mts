@@ -110,7 +110,7 @@ let _cached_decoder_for_SPKICertificateAttributes: $.ASN1Decoder<SPKICertificate
  * @param {_Element} el The element being decoded.
  * @returns {SPKICertificateAttributes} The decoded data structure.
  */
-export function _decode_SPKICertificateAttributes(el: _Element) {
+export function _decode_SPKICertificateAttributes(el: _Element): SPKICertificateAttributes {
     if (!_cached_decoder_for_SPKICertificateAttributes) {
         _cached_decoder_for_SPKICertificateAttributes = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_SPKICertificateAttributes: $.ASN1Encoder<SPKICertificate
 export function _encode_SPKICertificateAttributes(
     value: SPKICertificateAttributes,
     elGetter: $.ASN1Encoder<SPKICertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_SPKICertificateAttributes) {
         _cached_encoder_for_SPKICertificateAttributes = function (
             value: SPKICertificateAttributes        ): _Element {

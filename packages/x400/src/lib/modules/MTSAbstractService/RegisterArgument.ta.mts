@@ -243,7 +243,7 @@ let _cached_decoder_for_RegisterArgument: $.ASN1Decoder<RegisterArgument> | null
  * @param {_Element} el The element being decoded.
  * @returns {RegisterArgument} The decoded data structure.
  */
-export function _decode_RegisterArgument(el: _Element) {
+export function _decode_RegisterArgument(el: _Element): RegisterArgument {
     if (!_cached_decoder_for_RegisterArgument) {
         _cached_decoder_for_RegisterArgument = function (
             el: _Element
@@ -336,7 +336,7 @@ let _cached_encoder_for_RegisterArgument: $.ASN1Encoder<RegisterArgument> | null
 export function _encode_RegisterArgument(
     value: RegisterArgument,
     elGetter: $.ASN1Encoder<RegisterArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_RegisterArgument) {
         _cached_encoder_for_RegisterArgument = function (
             value: RegisterArgument        ): _Element {

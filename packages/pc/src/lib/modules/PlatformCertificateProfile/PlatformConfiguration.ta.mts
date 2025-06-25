@@ -129,7 +129,7 @@ let _cached_decoder_for_PlatformConfiguration: $.ASN1Decoder<PlatformConfigurati
  * @returns {PlatformConfiguration} The decoded data structure.
  */
 export
-function _decode_PlatformConfiguration (el: _Element) {
+function _decode_PlatformConfiguration (el: _Element): PlatformConfiguration {
     if (!_cached_decoder_for_PlatformConfiguration) { _cached_decoder_for_PlatformConfiguration = function (el: _Element): PlatformConfiguration {
     let componentIdentifiers: OPTIONAL<ComponentIdentifier[]>;
     let componentIdentifiersUri: OPTIONAL<URIReference>;
@@ -167,7 +167,7 @@ let _cached_encoder_for_PlatformConfiguration: $.ASN1Encoder<PlatformConfigurati
  * @returns {_Element} The PlatformConfiguration, encoded as an ASN.1 Element.
  */
 export
-function _encode_PlatformConfiguration (value: PlatformConfiguration, elGetter: $.ASN1Encoder<PlatformConfiguration>) {
+function _encode_PlatformConfiguration (value: PlatformConfiguration, elGetter: $.ASN1Encoder<PlatformConfiguration>): _Element {
     if (!_cached_encoder_for_PlatformConfiguration) { _cached_encoder_for_PlatformConfiguration = function (value: PlatformConfiguration): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

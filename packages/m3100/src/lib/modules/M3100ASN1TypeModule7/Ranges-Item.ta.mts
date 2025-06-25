@@ -45,7 +45,7 @@ let _cached_decoder_for_Ranges_Item: $.ASN1Decoder<Ranges_Item> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Ranges_Item} The decoded data structure.
  */
-export function _decode_Ranges_Item(el: _Element) {
+export function _decode_Ranges_Item(el: _Element): Ranges_Item {
     if (!_cached_decoder_for_Ranges_Item) {
         _cached_decoder_for_Ranges_Item = $._decode_inextensible_choice<Ranges_Item>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_Ranges_Item: $.ASN1Encoder<Ranges_Item> | null = null;
 export function _encode_Ranges_Item(
     value: Ranges_Item,
     elGetter: $.ASN1Encoder<Ranges_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Ranges_Item) {
         _cached_encoder_for_Ranges_Item = $._encode_choice<Ranges_Item>(
             {

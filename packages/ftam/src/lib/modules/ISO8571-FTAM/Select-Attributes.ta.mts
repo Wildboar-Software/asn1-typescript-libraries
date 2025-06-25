@@ -105,7 +105,7 @@ let _cached_decoder_for_Select_Attributes: $.ASN1Decoder<Select_Attributes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Select_Attributes} The decoded data structure.
  */
-export function _decode_Select_Attributes(el: _Element) {
+export function _decode_Select_Attributes(el: _Element): Select_Attributes {
   if (!_cached_decoder_for_Select_Attributes) {
     _cached_decoder_for_Select_Attributes = $._decode_implicit<Select_Attributes>(
       () =>
@@ -142,7 +142,7 @@ let _cached_encoder_for_Select_Attributes: $.ASN1Encoder<Select_Attributes> | nu
 export function _encode_Select_Attributes(
   value: Select_Attributes,
   elGetter: $.ASN1Encoder<Select_Attributes>
-) {
+): _Element {
   if (!_cached_encoder_for_Select_Attributes) {
     _cached_encoder_for_Select_Attributes = $._encode_implicit(
       _TagClass.application,

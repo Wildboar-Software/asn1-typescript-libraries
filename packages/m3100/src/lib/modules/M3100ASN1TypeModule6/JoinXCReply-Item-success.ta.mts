@@ -45,7 +45,7 @@ let _cached_decoder_for_JoinXCReply_Item_success: $.ASN1Decoder<JoinXCReply_Item
  * @param {_Element} el The element being decoded.
  * @returns {JoinXCReply_Item_success} The decoded data structure.
  */
-export function _decode_JoinXCReply_Item_success(el: _Element) {
+export function _decode_JoinXCReply_Item_success(el: _Element): JoinXCReply_Item_success {
     if (!_cached_decoder_for_JoinXCReply_Item_success) {
         _cached_decoder_for_JoinXCReply_Item_success = $._decode_inextensible_choice<JoinXCReply_Item_success>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_JoinXCReply_Item_success: $.ASN1Encoder<JoinXCReply_Item
 export function _encode_JoinXCReply_Item_success(
     value: JoinXCReply_Item_success,
     elGetter: $.ASN1Encoder<JoinXCReply_Item_success>
-) {
+): _Element {
     if (!_cached_encoder_for_JoinXCReply_Item_success) {
         _cached_encoder_for_JoinXCReply_Item_success = $._encode_choice<JoinXCReply_Item_success>(
             {

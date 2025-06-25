@@ -39,7 +39,7 @@ let _cached_decoder_for_MessageSubmissionErrors: $.ASN1Decoder<MessageSubmission
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionErrors} The decoded data structure.
  */
-export function _decode_MessageSubmissionErrors(el: _Element) {
+export function _decode_MessageSubmissionErrors(el: _Element): MessageSubmissionErrors {
     if (!_cached_decoder_for_MessageSubmissionErrors) {
         _cached_decoder_for_MessageSubmissionErrors = _decode_SubmissionError;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_MessageSubmissionErrors: $.ASN1Encoder<MessageSubmission
 export function _encode_MessageSubmissionErrors(
     value: MessageSubmissionErrors,
     elGetter: $.ASN1Encoder<MessageSubmissionErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageSubmissionErrors) {
         _cached_encoder_for_MessageSubmissionErrors = _encode_SubmissionError;
     }

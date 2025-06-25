@@ -127,7 +127,7 @@ let _cached_decoder_for_CalibrateSensor_RequestParams: $.ASN1Decoder<CalibrateSe
  * @param {_Element} el The element being decoded.
  * @returns {CalibrateSensor_RequestParams} The decoded data structure.
  */
-export function _decode_CalibrateSensor_RequestParams(el: _Element) {
+export function _decode_CalibrateSensor_RequestParams(el: _Element): CalibrateSensor_RequestParams {
   if (!_cached_decoder_for_CalibrateSensor_RequestParams) {
     _cached_decoder_for_CalibrateSensor_RequestParams = function (
       el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_CalibrateSensor_RequestParams: $.ASN1Encoder<CalibrateSe
 export function _encode_CalibrateSensor_RequestParams(
   value: CalibrateSensor_RequestParams,
   elGetter: $.ASN1Encoder<CalibrateSensor_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_CalibrateSensor_RequestParams) {
     _cached_encoder_for_CalibrateSensor_RequestParams = function (
       value: CalibrateSensor_RequestParams    ): _Element {

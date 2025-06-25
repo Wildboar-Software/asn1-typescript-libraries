@@ -159,7 +159,7 @@ let _cached_decoder_for_SignatureInformation: $.ASN1Decoder<SignatureInformation
  * @param {_Element} el The element being decoded.
  * @returns {SignatureInformation} The decoded data structure.
  */
-export function _decode_SignatureInformation(el: _Element) {
+export function _decode_SignatureInformation(el: _Element): SignatureInformation {
     if (!_cached_decoder_for_SignatureInformation) {
         _cached_decoder_for_SignatureInformation = function (
             el: _Element
@@ -217,7 +217,7 @@ let _cached_encoder_for_SignatureInformation: $.ASN1Encoder<SignatureInformation
 export function _encode_SignatureInformation(
     value: SignatureInformation,
     elGetter: $.ASN1Encoder<SignatureInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_SignatureInformation) {
         _cached_encoder_for_SignatureInformation = function (
             value: SignatureInformation        ): _Element {

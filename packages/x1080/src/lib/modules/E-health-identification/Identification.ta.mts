@@ -115,7 +115,7 @@ let _cached_decoder_for_Identification: $.ASN1Decoder<Identification> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Identification} The decoded data structure.
  */
-export function _decode_Identification(el: _Element) {
+export function _decode_Identification(el: _Element): Identification {
     if (!_cached_decoder_for_Identification) {
         _cached_decoder_for_Identification = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_Identification: $.ASN1Encoder<Identification> | null = n
 export function _encode_Identification(
     value: Identification,
     elGetter: $.ASN1Encoder<Identification>
-) {
+): _Element {
     if (!_cached_encoder_for_Identification) {
         _cached_encoder_for_Identification = function (
             value: Identification        ): _Element {

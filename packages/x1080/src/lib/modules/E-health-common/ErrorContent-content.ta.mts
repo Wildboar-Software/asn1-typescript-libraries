@@ -150,7 +150,7 @@ let _cached_decoder_for_ErrorContent_content: $.ASN1Decoder<ErrorContent_content
  * @param {_Element} el The element being decoded.
  * @returns {ErrorContent_content} The decoded data structure.
  */
-export function _decode_ErrorContent_content(el: _Element) {
+export function _decode_ErrorContent_content(el: _Element): ErrorContent_content {
     if (!_cached_decoder_for_ErrorContent_content) {
         _cached_decoder_for_ErrorContent_content = function (
             el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_ErrorContent_content: $.ASN1Encoder<ErrorContent_content
 export function _encode_ErrorContent_content(
     value: ErrorContent_content,
     elGetter: $.ASN1Encoder<ErrorContent_content>
-) {
+): _Element {
     if (!_cached_encoder_for_ErrorContent_content) {
         _cached_encoder_for_ErrorContent_content = function (
             value: ErrorContent_content        ): _Element {

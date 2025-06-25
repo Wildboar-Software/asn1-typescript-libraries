@@ -38,7 +38,7 @@ let _cached_decoder_for_ORAddressFilter_attribute_type: $.ASN1Decoder<ORAddressF
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressFilter_attribute_type} The decoded data structure.
  */
-export function _decode_ORAddressFilter_attribute_type(el: _Element) {
+export function _decode_ORAddressFilter_attribute_type(el: _Element): ORAddressFilter_attribute_type {
     if (!_cached_decoder_for_ORAddressFilter_attribute_type) {
         _cached_decoder_for_ORAddressFilter_attribute_type = $._decode_inextensible_choice<ORAddressFilter_attribute_type>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_ORAddressFilter_attribute_type: $.ASN1Encoder<ORAddressF
 export function _encode_ORAddressFilter_attribute_type(
     value: ORAddressFilter_attribute_type,
     elGetter: $.ASN1Encoder<ORAddressFilter_attribute_type>
-) {
+): _Element {
     if (!_cached_encoder_for_ORAddressFilter_attribute_type) {
         _cached_encoder_for_ORAddressFilter_attribute_type = $._encode_choice<ORAddressFilter_attribute_type>(
             {

@@ -128,7 +128,7 @@ let _cached_decoder_for_SafeBag: $.ASN1Decoder<SafeBag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SafeBag} The decoded data structure.
  */
-export function _decode_SafeBag(el: _Element) {
+export function _decode_SafeBag(el: _Element): SafeBag {
     if (!_cached_decoder_for_SafeBag) {
         _cached_decoder_for_SafeBag = function (el: _Element): SafeBag {
             let bagId!: OBJECT_IDENTIFIER;
@@ -181,7 +181,7 @@ let _cached_encoder_for_SafeBag: $.ASN1Encoder<SafeBag> | null = null;
 export function _encode_SafeBag(
     value: SafeBag,
     elGetter: $.ASN1Encoder<SafeBag>
-) {
+): _Element {
     if (!_cached_encoder_for_SafeBag) {
         _cached_encoder_for_SafeBag = function (
             value: SafeBag        ): _Element {

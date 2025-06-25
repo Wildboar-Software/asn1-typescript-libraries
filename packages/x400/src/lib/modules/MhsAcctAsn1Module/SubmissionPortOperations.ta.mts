@@ -38,7 +38,7 @@ let _cached_decoder_for_SubmissionPortOperations: $.ASN1Decoder<SubmissionPortOp
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionPortOperations} The decoded data structure.
  */
-export function _decode_SubmissionPortOperations(el: _Element) {
+export function _decode_SubmissionPortOperations(el: _Element): SubmissionPortOperations {
     if (!_cached_decoder_for_SubmissionPortOperations) {
         _cached_decoder_for_SubmissionPortOperations = _decode_EventTypeId;
     }
@@ -57,7 +57,7 @@ let _cached_encoder_for_SubmissionPortOperations: $.ASN1Encoder<SubmissionPortOp
 export function _encode_SubmissionPortOperations(
     value: SubmissionPortOperations,
     elGetter: $.ASN1Encoder<SubmissionPortOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_SubmissionPortOperations) {
         _cached_encoder_for_SubmissionPortOperations = _encode_EventTypeId;
     }

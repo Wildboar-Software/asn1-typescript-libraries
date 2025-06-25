@@ -153,7 +153,7 @@ let _cached_decoder_for_ResponseContent_content: $.ASN1Decoder<ResponseContent_c
  * @param {_Element} el The element being decoded.
  * @returns {ResponseContent_content} The decoded data structure.
  */
-export function _decode_ResponseContent_content(el: _Element) {
+export function _decode_ResponseContent_content(el: _Element): ResponseContent_content {
     if (!_cached_decoder_for_ResponseContent_content) {
         _cached_decoder_for_ResponseContent_content = function (
             el: _Element
@@ -213,7 +213,7 @@ let _cached_encoder_for_ResponseContent_content: $.ASN1Encoder<ResponseContent_c
 export function _encode_ResponseContent_content(
     value: ResponseContent_content,
     elGetter: $.ASN1Encoder<ResponseContent_content>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponseContent_content) {
         _cached_encoder_for_ResponseContent_content = function (
             value: ResponseContent_content        ): _Element {

@@ -176,7 +176,7 @@ let _cached_decoder_for_AddRequest: $.ASN1Decoder<AddRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddRequest} The decoded data structure.
  */
-export function _decode_AddRequest(el: _Element) {
+export function _decode_AddRequest(el: _Element): AddRequest {
     if (!_cached_decoder_for_AddRequest) {
         _cached_decoder_for_AddRequest = function (el: _Element): AddRequest {
             let attrCerts: OPTIONAL<AttributeCertificates>;
@@ -249,7 +249,7 @@ let _cached_encoder_for_AddRequest: $.ASN1Encoder<AddRequest> | null = null;
 export function _encode_AddRequest(
     value: AddRequest,
     elGetter: $.ASN1Encoder<AddRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_AddRequest) {
         _cached_encoder_for_AddRequest = function (
             value: AddRequest        ): _Element {

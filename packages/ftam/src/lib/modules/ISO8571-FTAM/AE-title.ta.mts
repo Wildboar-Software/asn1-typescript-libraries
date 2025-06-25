@@ -116,7 +116,7 @@ let _cached_decoder_for_AE_title: $.ASN1Decoder<AE_title> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AE_title} The decoded data structure.
  */
-export function _decode_AE_title(el: _Element) {
+export function _decode_AE_title(el: _Element): AE_title {
   if (!_cached_decoder_for_AE_title) {
     _cached_decoder_for_AE_title = function (el: _Element): AE_title {
       const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_AE_title: $.ASN1Encoder<AE_title> | null = null;
 export function _encode_AE_title(
   value: AE_title,
   elGetter: $.ASN1Encoder<AE_title>
-) {
+): _Element {
   if (!_cached_encoder_for_AE_title) {
     _cached_encoder_for_AE_title = function (
       value: AE_title    ): _Element {

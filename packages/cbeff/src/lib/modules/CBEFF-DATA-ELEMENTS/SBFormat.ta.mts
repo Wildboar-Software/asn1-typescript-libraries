@@ -112,7 +112,7 @@ let _cached_decoder_for_SBFormat: $.ASN1Decoder<SBFormat> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SBFormat} The decoded data structure.
  */
-export function _decode_SBFormat(el: _Element) {
+export function _decode_SBFormat(el: _Element): SBFormat {
   if (!_cached_decoder_for_SBFormat) {
     _cached_decoder_for_SBFormat = function (el: _Element): SBFormat {
       let sb_owner: OPTIONAL<INTEGER>;
@@ -151,7 +151,7 @@ let _cached_encoder_for_SBFormat: $.ASN1Encoder<SBFormat> | null = null;
 export function _encode_SBFormat(
   value: SBFormat,
   elGetter: $.ASN1Encoder<SBFormat>
-) {
+): _Element {
   if (!_cached_encoder_for_SBFormat) {
     _cached_encoder_for_SBFormat = function (
       value: SBFormat    ): _Element {

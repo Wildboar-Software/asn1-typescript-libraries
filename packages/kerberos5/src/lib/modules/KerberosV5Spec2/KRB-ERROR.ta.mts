@@ -294,7 +294,7 @@ let _cached_decoder_for_KRB_ERROR: $.ASN1Decoder<KRB_ERROR> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KRB_ERROR} The decoded data structure.
  */
-export function _decode_KRB_ERROR(el: _Element) {
+export function _decode_KRB_ERROR(el: _Element): KRB_ERROR {
   if (!_cached_decoder_for_KRB_ERROR) {
     _cached_decoder_for_KRB_ERROR = $._decode_implicit<KRB_ERROR>(
       () =>
@@ -414,7 +414,7 @@ let _cached_encoder_for_KRB_ERROR: $.ASN1Encoder<KRB_ERROR> | null = null;
 export function _encode_KRB_ERROR(
   value: KRB_ERROR,
   elGetter: $.ASN1Encoder<KRB_ERROR>
-) {
+): _Element {
   if (!_cached_encoder_for_KRB_ERROR) {
     _cached_encoder_for_KRB_ERROR = $._encode_implicit(
       _TagClass.application,

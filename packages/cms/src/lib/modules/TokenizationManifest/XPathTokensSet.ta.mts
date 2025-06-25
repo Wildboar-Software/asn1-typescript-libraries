@@ -120,7 +120,7 @@ let _cached_decoder_for_XPathTokensSet: $.ASN1Decoder<XPathTokensSet> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {XPathTokensSet} The decoded data structure.
  */
-export function _decode_XPathTokensSet(el: _Element) {
+export function _decode_XPathTokensSet(el: _Element): XPathTokensSet {
     if (!_cached_decoder_for_XPathTokensSet) {
         _cached_decoder_for_XPathTokensSet = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_XPathTokensSet: $.ASN1Encoder<XPathTokensSet> | null = n
 export function _encode_XPathTokensSet(
     value: XPathTokensSet,
     elGetter: $.ASN1Encoder<XPathTokensSet>
-) {
+): _Element {
     if (!_cached_encoder_for_XPathTokensSet) {
         _cached_encoder_for_XPathTokensSet = function (
             value: XPathTokensSet        ): _Element {

@@ -139,7 +139,7 @@ let _cached_decoder_for_EquivalentClassification: $.ASN1Decoder<EquivalentClassi
  * @param {_Element} el The element being decoded.
  * @returns {EquivalentClassification} The decoded data structure.
  */
-export function _decode_EquivalentClassification(el: _Element) {
+export function _decode_EquivalentClassification(el: _Element): EquivalentClassification {
     if (!_cached_decoder_for_EquivalentClassification) {
         _cached_decoder_for_EquivalentClassification = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_EquivalentClassification: $.ASN1Encoder<EquivalentClassi
 export function _encode_EquivalentClassification(
     value: EquivalentClassification,
     elGetter: $.ASN1Encoder<EquivalentClassification>
-) {
+): _Element {
     if (!_cached_encoder_for_EquivalentClassification) {
         _cached_encoder_for_EquivalentClassification = function (
             value: EquivalentClassification        ): _Element {

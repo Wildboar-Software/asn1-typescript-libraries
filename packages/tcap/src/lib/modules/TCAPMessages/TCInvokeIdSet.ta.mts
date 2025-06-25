@@ -37,7 +37,7 @@ let _cached_decoder_for_TCInvokeIdSet: $.ASN1Decoder<TCInvokeIdSet> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TCInvokeIdSet} The decoded data structure.
  */
-export function _decode_TCInvokeIdSet(el: _Element) {
+export function _decode_TCInvokeIdSet(el: _Element): TCInvokeIdSet {
   if (!_cached_decoder_for_TCInvokeIdSet) {
     _cached_decoder_for_TCInvokeIdSet = _decode_InvokeId;
   }
@@ -56,7 +56,7 @@ let _cached_encoder_for_TCInvokeIdSet: $.ASN1Encoder<TCInvokeIdSet> | null = nul
 export function _encode_TCInvokeIdSet(
   value: TCInvokeIdSet,
   elGetter: $.ASN1Encoder<TCInvokeIdSet>
-) {
+): _Element {
   if (!_cached_encoder_for_TCInvokeIdSet) {
     _cached_encoder_for_TCInvokeIdSet = _encode_InvokeId;
   }

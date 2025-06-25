@@ -35,7 +35,7 @@ let _cached_decoder_for_ClockMaximumError: $.ASN1Decoder<ClockMaximumError> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ClockMaximumError} The decoded data structure.
  */
-export function _decode_ClockMaximumError(el: _Element) {
+export function _decode_ClockMaximumError(el: _Element): ClockMaximumError {
     if (!_cached_decoder_for_ClockMaximumError) {
         _cached_decoder_for_ClockMaximumError = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ClockMaximumError: $.ASN1Encoder<ClockMaximumError> | nu
 export function _encode_ClockMaximumError(
     value: ClockMaximumError,
     elGetter: $.ASN1Encoder<ClockMaximumError>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockMaximumError) {
         _cached_encoder_for_ClockMaximumError = _encode_TimeInterval;
     }

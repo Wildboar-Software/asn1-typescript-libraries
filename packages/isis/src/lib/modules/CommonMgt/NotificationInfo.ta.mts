@@ -35,7 +35,7 @@ let _cached_decoder_for_NotificationInfo: $.ASN1Decoder<NotificationInfo> | null
  * @param {_Element} el The element being decoded.
  * @returns {NotificationInfo} The decoded data structure.
  */
-export function _decode_NotificationInfo(el: _Element) {
+export function _decode_NotificationInfo(el: _Element): NotificationInfo {
   if (!_cached_decoder_for_NotificationInfo) {
     _cached_decoder_for_NotificationInfo = $._decodeSetOf<Parameter>(
       () => _decode_Parameter
@@ -56,7 +56,7 @@ let _cached_encoder_for_NotificationInfo: $.ASN1Encoder<NotificationInfo> | null
 export function _encode_NotificationInfo(
   value: NotificationInfo,
   elGetter: $.ASN1Encoder<NotificationInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_NotificationInfo) {
     _cached_encoder_for_NotificationInfo = $._encodeSetOf<Parameter>(
       () => _encode_Parameter,

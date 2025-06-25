@@ -48,7 +48,7 @@ let _cached_decoder_for_CMISFilter: $.ASN1Decoder<CMISFilter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CMISFilter} The decoded data structure.
  */
-export function _decode_CMISFilter(el: _Element) {
+export function _decode_CMISFilter(el: _Element): CMISFilter {
   if (!_cached_decoder_for_CMISFilter) {
     _cached_decoder_for_CMISFilter = $._decode_inextensible_choice<CMISFilter>({
       'CONTEXT 8': [
@@ -90,7 +90,7 @@ let _cached_encoder_for_CMISFilter: $.ASN1Encoder<CMISFilter> | null = null;
 export function _encode_CMISFilter(
   value: CMISFilter,
   elGetter: $.ASN1Encoder<CMISFilter>
-) {
+): _Element {
   if (!_cached_encoder_for_CMISFilter) {
     _cached_encoder_for_CMISFilter = $._encode_choice<CMISFilter>(
       {

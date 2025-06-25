@@ -119,7 +119,7 @@ let _cached_decoder_for_DLExpansion: $.ASN1Decoder<DLExpansion> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DLExpansion} The decoded data structure.
  */
-export function _decode_DLExpansion(el: _Element) {
+export function _decode_DLExpansion(el: _Element): DLExpansion {
     if (!_cached_decoder_for_DLExpansion) {
         _cached_decoder_for_DLExpansion = function (el: _Element): DLExpansion {
             const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_DLExpansion: $.ASN1Encoder<DLExpansion> | null = null;
 export function _encode_DLExpansion(
     value: DLExpansion,
     elGetter: $.ASN1Encoder<DLExpansion>
-) {
+): _Element {
     if (!_cached_encoder_for_DLExpansion) {
         _cached_encoder_for_DLExpansion = function (
             value: DLExpansion        ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Decoder<Ca
  * @param {_Element} el The element being decoded.
  * @returns {CancelDeferredDeliverySubmissionErrors} The decoded data structure.
  */
-export function _decode_CancelDeferredDeliverySubmissionErrors(el: _Element) {
+export function _decode_CancelDeferredDeliverySubmissionErrors(el: _Element): CancelDeferredDeliverySubmissionErrors {
     if (!_cached_decoder_for_CancelDeferredDeliverySubmissionErrors) {
         _cached_decoder_for_CancelDeferredDeliverySubmissionErrors = _decode_SubmissionError;
     }
@@ -57,7 +57,7 @@ let _cached_encoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Encoder<Ca
 export function _encode_CancelDeferredDeliverySubmissionErrors(
     value: CancelDeferredDeliverySubmissionErrors,
     elGetter: $.ASN1Encoder<CancelDeferredDeliverySubmissionErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_CancelDeferredDeliverySubmissionErrors) {
         _cached_encoder_for_CancelDeferredDeliverySubmissionErrors = _encode_SubmissionError;
     }

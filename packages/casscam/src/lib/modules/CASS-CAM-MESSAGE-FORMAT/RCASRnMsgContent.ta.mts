@@ -132,7 +132,7 @@ let _cached_decoder_for_RCASRnMsgContent: $.ASN1Decoder<RCASRnMsgContent> | null
  * @returns {RCASRnMsgContent} The decoded data structure.
  */
 export
-function _decode_RCASRnMsgContent (el: _Element) {
+function _decode_RCASRnMsgContent (el: _Element): RCASRnMsgContent {
     if (!_cached_decoder_for_RCASRnMsgContent) { _cached_decoder_for_RCASRnMsgContent = function (el: _Element): RCASRnMsgContent {
     let downloadSchedule!: OCTET_STRING;
     let keyRequest_Req: OPTIONAL<BOOLEAN>;
@@ -169,7 +169,7 @@ let _cached_encoder_for_RCASRnMsgContent: $.ASN1Encoder<RCASRnMsgContent> | null
  * @returns {_Element} The RCASRnMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_RCASRnMsgContent (value: RCASRnMsgContent, elGetter: $.ASN1Encoder<RCASRnMsgContent>) {
+function _encode_RCASRnMsgContent (value: RCASRnMsgContent, elGetter: $.ASN1Encoder<RCASRnMsgContent>): _Element {
     if (!_cached_encoder_for_RCASRnMsgContent) { _cached_encoder_for_RCASRnMsgContent = function (value: RCASRnMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -38,7 +38,7 @@ let _cached_decoder_for_UsageMeteringControlObjectId: $.ASN1Decoder<UsageMeterin
  * @param {_Element} el The element being decoded.
  * @returns {UsageMeteringControlObjectId} The decoded data structure.
  */
-export function _decode_UsageMeteringControlObjectId(el: _Element) {
+export function _decode_UsageMeteringControlObjectId(el: _Element): UsageMeteringControlObjectId {
     if (!_cached_decoder_for_UsageMeteringControlObjectId) {
         _cached_decoder_for_UsageMeteringControlObjectId = _decode_SimpleNameType;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_UsageMeteringControlObjectId: $.ASN1Encoder<UsageMeterin
 export function _encode_UsageMeteringControlObjectId(
     value: UsageMeteringControlObjectId,
     elGetter: $.ASN1Encoder<UsageMeteringControlObjectId>
-) {
+): _Element {
     if (!_cached_encoder_for_UsageMeteringControlObjectId) {
         _cached_encoder_for_UsageMeteringControlObjectId = _encode_SimpleNameType;
     }

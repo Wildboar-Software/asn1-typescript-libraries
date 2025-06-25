@@ -35,7 +35,7 @@ let _cached_decoder_for_SynchronizedClock: $.ASN1Decoder<SynchronizedClock> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizedClock} The decoded data structure.
  */
-export function _decode_SynchronizedClock(el: _Element) {
+export function _decode_SynchronizedClock(el: _Element): SynchronizedClock {
     if (!_cached_decoder_for_SynchronizedClock) {
         _cached_decoder_for_SynchronizedClock = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SynchronizedClock: $.ASN1Encoder<SynchronizedClock> | nu
 export function _encode_SynchronizedClock(
     value: SynchronizedClock,
     elGetter: $.ASN1Encoder<SynchronizedClock>
-) {
+): _Element {
     if (!_cached_encoder_for_SynchronizedClock) {
         _cached_encoder_for_SynchronizedClock = _encode_ObjectInstance;
     }

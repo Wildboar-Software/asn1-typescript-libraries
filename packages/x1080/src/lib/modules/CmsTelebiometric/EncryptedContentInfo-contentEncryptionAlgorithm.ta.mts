@@ -116,7 +116,7 @@ let _cached_decoder_for_EncryptedContentInfo_contentEncryptionAlgorithm: $.ASN1D
  */
 export function _decode_EncryptedContentInfo_contentEncryptionAlgorithm(
     el: _Element
-) {
+): EncryptedContentInfo_contentEncryptionAlgorithm {
     if (!_cached_decoder_for_EncryptedContentInfo_contentEncryptionAlgorithm) {
         _cached_decoder_for_EncryptedContentInfo_contentEncryptionAlgorithm = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_EncryptedContentInfo_contentEncryptionAlgorithm: $.ASN1E
 export function _encode_EncryptedContentInfo_contentEncryptionAlgorithm(
     value: EncryptedContentInfo_contentEncryptionAlgorithm,
     elGetter: $.ASN1Encoder<EncryptedContentInfo_contentEncryptionAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedContentInfo_contentEncryptionAlgorithm) {
         _cached_encoder_for_EncryptedContentInfo_contentEncryptionAlgorithm = function (
             value: EncryptedContentInfo_contentEncryptionAlgorithm        ): _Element {

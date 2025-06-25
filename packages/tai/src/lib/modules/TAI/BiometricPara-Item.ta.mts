@@ -133,7 +133,7 @@ let _cached_decoder_for_BiometricPara_Item: $.ASN1Decoder<BiometricPara_Item> | 
  * @returns {BiometricPara_Item} The decoded data structure.
  */
 export
-function _decode_BiometricPara_Item (el: _Element) {
+function _decode_BiometricPara_Item (el: _Element): BiometricPara_Item {
     if (!_cached_decoder_for_BiometricPara_Item) { _cached_decoder_for_BiometricPara_Item = function (el: _Element): BiometricPara_Item {
     let biometricType!: BIT_STRING;
     let fMR_Value!: INTEGER;
@@ -173,7 +173,7 @@ let _cached_encoder_for_BiometricPara_Item: $.ASN1Encoder<BiometricPara_Item> | 
  * @returns {_Element} The BiometricPara_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricPara_Item (value: BiometricPara_Item, elGetter: $.ASN1Encoder<BiometricPara_Item>) {
+function _encode_BiometricPara_Item (value: BiometricPara_Item, elGetter: $.ASN1Encoder<BiometricPara_Item>): _Element {
     if (!_cached_encoder_for_BiometricPara_Item) { _cached_encoder_for_BiometricPara_Item = function (value: BiometricPara_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

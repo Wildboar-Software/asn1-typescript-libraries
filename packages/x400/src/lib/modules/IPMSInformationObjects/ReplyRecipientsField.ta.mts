@@ -35,7 +35,7 @@ let _cached_decoder_for_ReplyRecipientsField: $.ASN1Decoder<ReplyRecipientsField
  * @param {_Element} el The element being decoded.
  * @returns {ReplyRecipientsField} The decoded data structure.
  */
-export function _decode_ReplyRecipientsField(el: _Element) {
+export function _decode_ReplyRecipientsField(el: _Element): ReplyRecipientsField {
     if (!_cached_decoder_for_ReplyRecipientsField) {
         _cached_decoder_for_ReplyRecipientsField = $._decodeSequenceOf<ReplyRecipientsSubfield>(
             () => _decode_ReplyRecipientsSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_ReplyRecipientsField: $.ASN1Encoder<ReplyRecipientsField
 export function _encode_ReplyRecipientsField(
     value: ReplyRecipientsField,
     elGetter: $.ASN1Encoder<ReplyRecipientsField>
-) {
+): _Element {
     if (!_cached_encoder_for_ReplyRecipientsField) {
         _cached_encoder_for_ReplyRecipientsField = $._encodeSequenceOf<ReplyRecipientsSubfield>(
             () => _encode_ReplyRecipientsSubfield,

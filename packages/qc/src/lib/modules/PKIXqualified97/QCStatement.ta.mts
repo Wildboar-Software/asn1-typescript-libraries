@@ -111,7 +111,7 @@ let _cached_decoder_for_QCStatement: $.ASN1Decoder<QCStatement> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {QCStatement} The decoded data structure.
  */
-export function _decode_QCStatement(el: _Element) {
+export function _decode_QCStatement(el: _Element): QCStatement {
     if (!_cached_decoder_for_QCStatement) {
         _cached_decoder_for_QCStatement = function (el: _Element): QCStatement {
             let statementId!: OBJECT_IDENTIFIER;
@@ -155,7 +155,7 @@ let _cached_encoder_for_QCStatement: $.ASN1Encoder<QCStatement> | null = null;
 export function _encode_QCStatement(
     value: QCStatement,
     elGetter: $.ASN1Encoder<QCStatement>
-) {
+): _Element {
     if (!_cached_encoder_for_QCStatement) {
         _cached_encoder_for_QCStatement = function (
             value: QCStatement        ): _Element {

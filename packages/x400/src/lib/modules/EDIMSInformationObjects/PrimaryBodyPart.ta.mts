@@ -45,7 +45,7 @@ let _cached_decoder_for_PrimaryBodyPart: $.ASN1Decoder<PrimaryBodyPart> | null =
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryBodyPart} The decoded data structure.
  */
-export function _decode_PrimaryBodyPart(el: _Element) {
+export function _decode_PrimaryBodyPart(el: _Element): PrimaryBodyPart {
     if (!_cached_decoder_for_PrimaryBodyPart) {
         _cached_decoder_for_PrimaryBodyPart = $._decode_inextensible_choice<PrimaryBodyPart>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_PrimaryBodyPart: $.ASN1Encoder<PrimaryBodyPart> | null =
 export function _encode_PrimaryBodyPart(
     value: PrimaryBodyPart,
     elGetter: $.ASN1Encoder<PrimaryBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryBodyPart) {
         _cached_encoder_for_PrimaryBodyPart = $._encode_choice<PrimaryBodyPart>(
             {

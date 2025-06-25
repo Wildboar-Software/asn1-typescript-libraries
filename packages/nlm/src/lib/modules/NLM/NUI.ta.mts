@@ -38,7 +38,7 @@ let _cached_decoder_for_NUI: $.ASN1Decoder<NUI> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NUI} The decoded data structure.
  */
-export function _decode_NUI(el: _Element) {
+export function _decode_NUI(el: _Element): NUI {
     if (!_cached_decoder_for_NUI) {
         _cached_decoder_for_NUI = _decode_OctetString;
     }
@@ -56,7 +56,7 @@ let _cached_encoder_for_NUI: $.ASN1Encoder<NUI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NUI, encoded as an ASN.1 Element.
  */
-export function _encode_NUI(value: NUI, elGetter: $.ASN1Encoder<NUI>) {
+export function _encode_NUI(value: NUI, elGetter: $.ASN1Encoder<NUI>): _Element {
     if (!_cached_encoder_for_NUI) {
         _cached_encoder_for_NUI = _encode_OctetString;
     }

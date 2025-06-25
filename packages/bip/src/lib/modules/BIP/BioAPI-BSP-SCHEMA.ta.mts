@@ -423,7 +423,7 @@ let _cached_decoder_for_BioAPI_BSP_SCHEMA: $.ASN1Decoder<BioAPI_BSP_SCHEMA> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BSP_SCHEMA} The decoded data structure.
  */
-export function _decode_BioAPI_BSP_SCHEMA(el: _Element) {
+export function _decode_BioAPI_BSP_SCHEMA(el: _Element): BioAPI_BSP_SCHEMA {
   if (!_cached_decoder_for_BioAPI_BSP_SCHEMA) {
     _cached_decoder_for_BioAPI_BSP_SCHEMA = function (
       el: _Element
@@ -543,7 +543,7 @@ let _cached_encoder_for_BioAPI_BSP_SCHEMA: $.ASN1Encoder<BioAPI_BSP_SCHEMA> | nu
 export function _encode_BioAPI_BSP_SCHEMA(
   value: BioAPI_BSP_SCHEMA,
   elGetter: $.ASN1Encoder<BioAPI_BSP_SCHEMA>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BSP_SCHEMA) {
     _cached_encoder_for_BioAPI_BSP_SCHEMA = function (
       value: BioAPI_BSP_SCHEMA    ): _Element {

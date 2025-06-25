@@ -35,7 +35,7 @@ let _cached_decoder_for_OtherRecipientName: $.ASN1Decoder<OtherRecipientName> | 
  * @param {_Element} el The element being decoded.
  * @returns {OtherRecipientName} The decoded data structure.
  */
-export function _decode_OtherRecipientName(el: _Element) {
+export function _decode_OtherRecipientName(el: _Element): OtherRecipientName {
     if (!_cached_decoder_for_OtherRecipientName) {
         _cached_decoder_for_OtherRecipientName = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OtherRecipientName: $.ASN1Encoder<OtherRecipientName> | 
 export function _encode_OtherRecipientName(
     value: OtherRecipientName,
     elGetter: $.ASN1Encoder<OtherRecipientName>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherRecipientName) {
         _cached_encoder_for_OtherRecipientName = _encode_ORAddressAndOptionalDirectoryName;
     }

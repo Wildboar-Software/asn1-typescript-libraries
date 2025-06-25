@@ -44,7 +44,7 @@ let _cached_decoder_for_ArcTime: $.ASN1Decoder<ArcTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ArcTime} The decoded data structure.
  */
-export function _decode_ArcTime(el: _Element) {
+export function _decode_ArcTime(el: _Element): ArcTime {
     if (!_cached_decoder_for_ArcTime) {
         _cached_decoder_for_ArcTime = $._decode_inextensible_choice<ArcTime>({
             'CONTEXT 0': [
@@ -74,7 +74,7 @@ let _cached_encoder_for_ArcTime: $.ASN1Encoder<ArcTime> | null = null;
 export function _encode_ArcTime(
     value: ArcTime,
     elGetter: $.ASN1Encoder<ArcTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcTime) {
         _cached_encoder_for_ArcTime = $._encode_choice<ArcTime>(
             {

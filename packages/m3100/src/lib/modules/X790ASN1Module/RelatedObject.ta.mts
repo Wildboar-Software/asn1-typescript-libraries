@@ -45,7 +45,7 @@ let _cached_decoder_for_RelatedObject: $.ASN1Decoder<RelatedObject> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RelatedObject} The decoded data structure.
  */
-export function _decode_RelatedObject(el: _Element) {
+export function _decode_RelatedObject(el: _Element): RelatedObject {
     if (!_cached_decoder_for_RelatedObject) {
         _cached_decoder_for_RelatedObject = $._decode_extensible_choice<RelatedObject>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_RelatedObject: $.ASN1Encoder<RelatedObject> | null = nul
 export function _encode_RelatedObject(
     value: RelatedObject,
     elGetter: $.ASN1Encoder<RelatedObject>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedObject) {
         _cached_encoder_for_RelatedObject = $._encode_choice<RelatedObject>(
             {

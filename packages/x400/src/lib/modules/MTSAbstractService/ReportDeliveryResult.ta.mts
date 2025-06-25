@@ -44,7 +44,7 @@ let _cached_decoder_for_ReportDeliveryResult: $.ASN1Decoder<ReportDeliveryResult
  * @param {_Element} el The element being decoded.
  * @returns {ReportDeliveryResult} The decoded data structure.
  */
-export function _decode_ReportDeliveryResult(el: _Element) {
+export function _decode_ReportDeliveryResult(el: _Element): ReportDeliveryResult {
     if (!_cached_decoder_for_ReportDeliveryResult) {
         _cached_decoder_for_ReportDeliveryResult = $._decode_extensible_choice<ReportDeliveryResult>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ReportDeliveryResult: $.ASN1Encoder<ReportDeliveryResult
 export function _encode_ReportDeliveryResult(
     value: ReportDeliveryResult,
     elGetter: $.ASN1Encoder<ReportDeliveryResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportDeliveryResult) {
         _cached_encoder_for_ReportDeliveryResult = $._encode_choice<ReportDeliveryResult>(
             {

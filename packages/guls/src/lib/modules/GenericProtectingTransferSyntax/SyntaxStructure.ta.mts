@@ -65,7 +65,7 @@ let _cached_decoder_for_SyntaxStructure: $.ASN1Decoder<SyntaxStructure> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SyntaxStructure} The decoded data structure.
  */
-export function _decode_SyntaxStructure(el: _Element) {
+export function _decode_SyntaxStructure(el: _Element): SyntaxStructure {
   if (!_cached_decoder_for_SyntaxStructure) {
     _cached_decoder_for_SyntaxStructure = $._decode_inextensible_choice<SyntaxStructure>(
       {
@@ -92,7 +92,7 @@ let _cached_encoder_for_SyntaxStructure: $.ASN1Encoder<SyntaxStructure> | null =
 export function _encode_SyntaxStructure(
   value: SyntaxStructure,
   elGetter: $.ASN1Encoder<SyntaxStructure>
-) {
+): _Element {
   if (!_cached_encoder_for_SyntaxStructure) {
     _cached_encoder_for_SyntaxStructure = $._encode_choice<SyntaxStructure>(
       {

@@ -44,7 +44,7 @@ let _cached_decoder_for_PointCapacity: $.ASN1Decoder<PointCapacity> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PointCapacity} The decoded data structure.
  */
-export function _decode_PointCapacity(el: _Element) {
+export function _decode_PointCapacity(el: _Element): PointCapacity {
     if (!_cached_decoder_for_PointCapacity) {
         _cached_decoder_for_PointCapacity = $._decode_inextensible_choice<PointCapacity>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_PointCapacity: $.ASN1Encoder<PointCapacity> | null = nul
 export function _encode_PointCapacity(
     value: PointCapacity,
     elGetter: $.ASN1Encoder<PointCapacity>
-) {
+): _Element {
     if (!_cached_encoder_for_PointCapacity) {
         _cached_encoder_for_PointCapacity = $._encode_choice<PointCapacity>(
             {

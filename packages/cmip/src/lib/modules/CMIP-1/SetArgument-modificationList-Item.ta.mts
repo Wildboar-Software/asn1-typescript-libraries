@@ -148,7 +148,7 @@ let _cached_decoder_for_SetArgument_modificationList_Item: $.ASN1Decoder<SetArgu
  * @param {_Element} el The element being decoded.
  * @returns {SetArgument_modificationList_Item} The decoded data structure.
  */
-export function _decode_SetArgument_modificationList_Item(el: _Element) {
+export function _decode_SetArgument_modificationList_Item(el: _Element): SetArgument_modificationList_Item {
   if (!_cached_decoder_for_SetArgument_modificationList_Item) {
     _cached_decoder_for_SetArgument_modificationList_Item = function (
       el: _Element
@@ -202,7 +202,7 @@ let _cached_encoder_for_SetArgument_modificationList_Item: $.ASN1Encoder<SetArgu
 export function _encode_SetArgument_modificationList_Item(
   value: SetArgument_modificationList_Item,
   elGetter: $.ASN1Encoder<SetArgument_modificationList_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_SetArgument_modificationList_Item) {
     _cached_encoder_for_SetArgument_modificationList_Item = function (
       value: SetArgument_modificationList_Item    ): _Element {

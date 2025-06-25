@@ -112,7 +112,7 @@ let _cached_decoder_for_InternalResourceTestResults: $.ASN1Decoder<InternalResou
  * @param {_Element} el The element being decoded.
  * @returns {InternalResourceTestResults} The decoded data structure.
  */
-export function _decode_InternalResourceTestResults(el: _Element) {
+export function _decode_InternalResourceTestResults(el: _Element): InternalResourceTestResults {
     if (!_cached_decoder_for_InternalResourceTestResults) {
         _cached_decoder_for_InternalResourceTestResults = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_InternalResourceTestResults: $.ASN1Encoder<InternalResou
 export function _encode_InternalResourceTestResults(
     value: InternalResourceTestResults,
     elGetter: $.ASN1Encoder<InternalResourceTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_InternalResourceTestResults) {
         _cached_encoder_for_InternalResourceTestResults = function (
             value: InternalResourceTestResults        ): _Element {

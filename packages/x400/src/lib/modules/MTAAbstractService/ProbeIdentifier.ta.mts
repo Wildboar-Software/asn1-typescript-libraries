@@ -35,7 +35,7 @@ let _cached_decoder_for_ProbeIdentifier: $.ASN1Decoder<ProbeIdentifier> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ProbeIdentifier} The decoded data structure.
  */
-export function _decode_ProbeIdentifier(el: _Element) {
+export function _decode_ProbeIdentifier(el: _Element): ProbeIdentifier {
     if (!_cached_decoder_for_ProbeIdentifier) {
         _cached_decoder_for_ProbeIdentifier = _decode_MTSIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ProbeIdentifier: $.ASN1Encoder<ProbeIdentifier> | null =
 export function _encode_ProbeIdentifier(
     value: ProbeIdentifier,
     elGetter: $.ASN1Encoder<ProbeIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ProbeIdentifier) {
         _cached_encoder_for_ProbeIdentifier = _encode_MTSIdentifier;
     }

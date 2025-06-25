@@ -36,7 +36,7 @@ let _cached_decoder_for_KeyManagementInfo_Item_keyInfo: $.ASN1Decoder<KeyManagem
  * @param {_Element} el The element being decoded.
  * @returns {KeyManagementInfo_Item_keyInfo} The decoded data structure.
  */
-export function _decode_KeyManagementInfo_Item_keyInfo(el: _Element) {
+export function _decode_KeyManagementInfo_Item_keyInfo(el: _Element): KeyManagementInfo_Item_keyInfo {
     if (!_cached_decoder_for_KeyManagementInfo_Item_keyInfo) {
         _cached_decoder_for_KeyManagementInfo_Item_keyInfo = $._decode_inextensible_choice<KeyManagementInfo_Item_keyInfo>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_KeyManagementInfo_Item_keyInfo: $.ASN1Encoder<KeyManagem
 export function _encode_KeyManagementInfo_Item_keyInfo(
     value: KeyManagementInfo_Item_keyInfo,
     elGetter: $.ASN1Encoder<KeyManagementInfo_Item_keyInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyManagementInfo_Item_keyInfo) {
         _cached_encoder_for_KeyManagementInfo_Item_keyInfo = $._encode_choice<KeyManagementInfo_Item_keyInfo>(
             {

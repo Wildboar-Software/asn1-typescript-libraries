@@ -36,7 +36,7 @@ let _cached_decoder_for_DistributionCodes: $.ASN1Decoder<DistributionCodes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DistributionCodes} The decoded data structure.
  */
-export function _decode_DistributionCodes(el: _Element) {
+export function _decode_DistributionCodes(el: _Element): DistributionCodes {
     if (!_cached_decoder_for_DistributionCodes) {
         _cached_decoder_for_DistributionCodes = $._decodeSequenceOf<DistributionCode>(
             () => _decode_DistributionCode
@@ -57,7 +57,7 @@ let _cached_encoder_for_DistributionCodes: $.ASN1Encoder<DistributionCodes> | nu
 export function _encode_DistributionCodes(
     value: DistributionCodes,
     elGetter: $.ASN1Encoder<DistributionCodes>
-) {
+): _Element {
     if (!_cached_encoder_for_DistributionCodes) {
         _cached_encoder_for_DistributionCodes = $._encodeSequenceOf<DistributionCode>(
             () => _encode_DistributionCode,

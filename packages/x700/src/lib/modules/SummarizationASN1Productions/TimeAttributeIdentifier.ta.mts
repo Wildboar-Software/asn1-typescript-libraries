@@ -35,7 +35,7 @@ let _cached_decoder_for_TimeAttributeIdentifier: $.ASN1Decoder<TimeAttributeIden
  * @param {_Element} el The element being decoded.
  * @returns {TimeAttributeIdentifier} The decoded data structure.
  */
-export function _decode_TimeAttributeIdentifier(el: _Element) {
+export function _decode_TimeAttributeIdentifier(el: _Element): TimeAttributeIdentifier {
     if (!_cached_decoder_for_TimeAttributeIdentifier) {
         _cached_decoder_for_TimeAttributeIdentifier = _decode_AttributeId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TimeAttributeIdentifier: $.ASN1Encoder<TimeAttributeIden
 export function _encode_TimeAttributeIdentifier(
     value: TimeAttributeIdentifier,
     elGetter: $.ASN1Encoder<TimeAttributeIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeAttributeIdentifier) {
         _cached_encoder_for_TimeAttributeIdentifier = _encode_AttributeId;
     }

@@ -116,7 +116,7 @@ let _cached_decoder_for_AddedTps: $.ASN1Decoder<AddedTps> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddedTps} The decoded data structure.
  */
-export function _decode_AddedTps(el: _Element) {
+export function _decode_AddedTps(el: _Element): AddedTps {
     if (!_cached_decoder_for_AddedTps) {
         _cached_decoder_for_AddedTps = function (el: _Element): AddedTps {
             const sequence: _Element[] = el.sequence;
@@ -155,7 +155,7 @@ let _cached_encoder_for_AddedTps: $.ASN1Encoder<AddedTps> | null = null;
 export function _encode_AddedTps(
     value: AddedTps,
     elGetter: $.ASN1Encoder<AddedTps>
-) {
+): _Element {
     if (!_cached_encoder_for_AddedTps) {
         _cached_encoder_for_AddedTps = function (
             value: AddedTps        ): _Element {

@@ -47,7 +47,7 @@ let _cached_decoder_for_Scope: $.ASN1Decoder<Scope> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Scope} The decoded data structure.
  */
-export function _decode_Scope(el: _Element) {
+export function _decode_Scope(el: _Element): Scope {
   if (!_cached_decoder_for_Scope) {
     _cached_decoder_for_Scope = $._decode_inextensible_choice<Scope>({
       'UNIVERSAL 2': ['namedNumbers', _decode_Scope_namedNumbers],
@@ -75,7 +75,7 @@ let _cached_encoder_for_Scope: $.ASN1Encoder<Scope> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Scope, encoded as an ASN.1 Element.
  */
-export function _encode_Scope(value: Scope, elGetter: $.ASN1Encoder<Scope>) {
+export function _encode_Scope(value: Scope, elGetter: $.ASN1Encoder<Scope>): _Element {
   if (!_cached_encoder_for_Scope) {
     _cached_encoder_for_Scope = $._encode_choice<Scope>(
       {

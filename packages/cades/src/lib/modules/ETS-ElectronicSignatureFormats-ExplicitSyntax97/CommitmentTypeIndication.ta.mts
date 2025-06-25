@@ -112,7 +112,7 @@ let _cached_decoder_for_CommitmentTypeIndication: $.ASN1Decoder<CommitmentTypeIn
  * @returns {CommitmentTypeIndication} The decoded data structure.
  */
 export
-function _decode_CommitmentTypeIndication (el: _Element) {
+function _decode_CommitmentTypeIndication (el: _Element): CommitmentTypeIndication {
     if (!_cached_decoder_for_CommitmentTypeIndication) { _cached_decoder_for_CommitmentTypeIndication = function (el: _Element): CommitmentTypeIndication {
     let commitmentTypeId!: CommitmentTypeIdentifier;
     let commitmentTypeQualifier: OPTIONAL<CommitmentTypeQualifier[]>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_CommitmentTypeIndication: $.ASN1Encoder<CommitmentTypeIn
  * @returns {_Element} The CommitmentTypeIndication, encoded as an ASN.1 Element.
  */
 export
-function _encode_CommitmentTypeIndication (value: CommitmentTypeIndication, elGetter: $.ASN1Encoder<CommitmentTypeIndication>) {
+function _encode_CommitmentTypeIndication (value: CommitmentTypeIndication, elGetter: $.ASN1Encoder<CommitmentTypeIndication>): _Element {
     if (!_cached_encoder_for_CommitmentTypeIndication) { _cached_encoder_for_CommitmentTypeIndication = function (value: CommitmentTypeIndication): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

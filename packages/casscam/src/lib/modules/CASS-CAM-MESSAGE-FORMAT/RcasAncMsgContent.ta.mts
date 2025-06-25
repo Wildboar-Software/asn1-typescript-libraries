@@ -132,7 +132,7 @@ let _cached_decoder_for_RcasAncMsgContent: $.ASN1Decoder<RcasAncMsgContent> | nu
  * @returns {RcasAncMsgContent} The decoded data structure.
  */
 export
-function _decode_RcasAncMsgContent (el: _Element) {
+function _decode_RcasAncMsgContent (el: _Element): RcasAncMsgContent {
     if (!_cached_decoder_for_RcasAncMsgContent) { _cached_decoder_for_RcasAncMsgContent = function (el: _Element): RcasAncMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -169,7 +169,7 @@ let _cached_encoder_for_RcasAncMsgContent: $.ASN1Encoder<RcasAncMsgContent> | nu
  * @returns {_Element} The RcasAncMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_RcasAncMsgContent (value: RcasAncMsgContent, elGetter: $.ASN1Encoder<RcasAncMsgContent>) {
+function _encode_RcasAncMsgContent (value: RcasAncMsgContent, elGetter: $.ASN1Encoder<RcasAncMsgContent>): _Element {
     if (!_cached_encoder_for_RcasAncMsgContent) { _cached_encoder_for_RcasAncMsgContent = function (value: RcasAncMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

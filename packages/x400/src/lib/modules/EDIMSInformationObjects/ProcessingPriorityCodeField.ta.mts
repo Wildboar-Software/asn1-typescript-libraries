@@ -33,7 +33,7 @@ let _cached_decoder_for_ProcessingPriorityCodeField: $.ASN1Decoder<ProcessingPri
  * @param {_Element} el The element being decoded.
  * @returns {ProcessingPriorityCodeField} The decoded data structure.
  */
-export function _decode_ProcessingPriorityCodeField(el: _Element) {
+export function _decode_ProcessingPriorityCodeField(el: _Element): ProcessingPriorityCodeField {
     if (!_cached_decoder_for_ProcessingPriorityCodeField) {
         _cached_decoder_for_ProcessingPriorityCodeField =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_ProcessingPriorityCodeField: $.ASN1Encoder<ProcessingPri
 export function _encode_ProcessingPriorityCodeField(
     value: ProcessingPriorityCodeField,
     elGetter: $.ASN1Encoder<ProcessingPriorityCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_ProcessingPriorityCodeField) {
         _cached_encoder_for_ProcessingPriorityCodeField =
             $._encodeTeletexString;

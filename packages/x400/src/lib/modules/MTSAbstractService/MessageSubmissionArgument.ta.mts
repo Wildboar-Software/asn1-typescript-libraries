@@ -121,7 +121,7 @@ let _cached_decoder_for_MessageSubmissionArgument: $.ASN1Decoder<MessageSubmissi
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionArgument} The decoded data structure.
  */
-export function _decode_MessageSubmissionArgument(el: _Element) {
+export function _decode_MessageSubmissionArgument(el: _Element): MessageSubmissionArgument {
     if (!_cached_decoder_for_MessageSubmissionArgument) {
         _cached_decoder_for_MessageSubmissionArgument = function (
             el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_MessageSubmissionArgument: $.ASN1Encoder<MessageSubmissi
 export function _encode_MessageSubmissionArgument(
     value: MessageSubmissionArgument,
     elGetter: $.ASN1Encoder<MessageSubmissionArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageSubmissionArgument) {
         _cached_encoder_for_MessageSubmissionArgument = function (
             value: MessageSubmissionArgument        ): _Element {

@@ -226,7 +226,7 @@ let _cached_decoder_for_CommonCertificateAttributes: $.ASN1Decoder<CommonCertifi
  * @param {_Element} el The element being decoded.
  * @returns {CommonCertificateAttributes} The decoded data structure.
  */
-export function _decode_CommonCertificateAttributes(el: _Element) {
+export function _decode_CommonCertificateAttributes(el: _Element): CommonCertificateAttributes {
     if (!_cached_decoder_for_CommonCertificateAttributes) {
         _cached_decoder_for_CommonCertificateAttributes = function (
             el: _Element
@@ -314,7 +314,7 @@ let _cached_encoder_for_CommonCertificateAttributes: $.ASN1Encoder<CommonCertifi
 export function _encode_CommonCertificateAttributes(
     value: CommonCertificateAttributes,
     elGetter: $.ASN1Encoder<CommonCertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonCertificateAttributes) {
         _cached_encoder_for_CommonCertificateAttributes = function (
             value: CommonCertificateAttributes        ): _Element {

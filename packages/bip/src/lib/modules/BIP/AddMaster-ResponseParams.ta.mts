@@ -149,7 +149,7 @@ let _cached_decoder_for_AddMaster_ResponseParams: $.ASN1Decoder<AddMaster_Respon
  * @param {_Element} el The element being decoded.
  * @returns {AddMaster_ResponseParams} The decoded data structure.
  */
-export function _decode_AddMaster_ResponseParams(el: _Element) {
+export function _decode_AddMaster_ResponseParams(el: _Element): AddMaster_ResponseParams {
   if (!_cached_decoder_for_AddMaster_ResponseParams) {
     _cached_decoder_for_AddMaster_ResponseParams = function (
       el: _Element
@@ -204,7 +204,7 @@ let _cached_encoder_for_AddMaster_ResponseParams: $.ASN1Encoder<AddMaster_Respon
 export function _encode_AddMaster_ResponseParams(
   value: AddMaster_ResponseParams,
   elGetter: $.ASN1Encoder<AddMaster_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_AddMaster_ResponseParams) {
     _cached_encoder_for_AddMaster_ResponseParams = function (
       value: AddMaster_ResponseParams    ): _Element {

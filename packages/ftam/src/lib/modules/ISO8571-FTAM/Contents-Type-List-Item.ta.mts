@@ -45,7 +45,7 @@ let _cached_decoder_for_Contents_Type_List_Item: $.ASN1Decoder<Contents_Type_Lis
  * @param {_Element} el The element being decoded.
  * @returns {Contents_Type_List_Item} The decoded data structure.
  */
-export function _decode_Contents_Type_List_Item(el: _Element) {
+export function _decode_Contents_Type_List_Item(el: _Element): Contents_Type_List_Item {
   if (!_cached_decoder_for_Contents_Type_List_Item) {
     _cached_decoder_for_Contents_Type_List_Item = $._decode_inextensible_choice<Contents_Type_List_Item>(
       {
@@ -71,7 +71,7 @@ let _cached_encoder_for_Contents_Type_List_Item: $.ASN1Encoder<Contents_Type_Lis
 export function _encode_Contents_Type_List_Item(
   value: Contents_Type_List_Item,
   elGetter: $.ASN1Encoder<Contents_Type_List_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Contents_Type_List_Item) {
     _cached_encoder_for_Contents_Type_List_Item = $._encode_choice<Contents_Type_List_Item>(
       {

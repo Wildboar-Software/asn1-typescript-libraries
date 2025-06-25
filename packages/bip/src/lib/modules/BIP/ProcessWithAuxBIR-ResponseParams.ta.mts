@@ -109,7 +109,7 @@ let _cached_decoder_for_ProcessWithAuxBIR_ResponseParams: $.ASN1Decoder<ProcessW
  * @param {_Element} el The element being decoded.
  * @returns {ProcessWithAuxBIR_ResponseParams} The decoded data structure.
  */
-export function _decode_ProcessWithAuxBIR_ResponseParams(el: _Element) {
+export function _decode_ProcessWithAuxBIR_ResponseParams(el: _Element): ProcessWithAuxBIR_ResponseParams {
   if (!_cached_decoder_for_ProcessWithAuxBIR_ResponseParams) {
     _cached_decoder_for_ProcessWithAuxBIR_ResponseParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ProcessWithAuxBIR_ResponseParams: $.ASN1Encoder<ProcessW
 export function _encode_ProcessWithAuxBIR_ResponseParams(
   value: ProcessWithAuxBIR_ResponseParams,
   elGetter: $.ASN1Encoder<ProcessWithAuxBIR_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_ProcessWithAuxBIR_ResponseParams) {
     _cached_encoder_for_ProcessWithAuxBIR_ResponseParams = function (
       value: ProcessWithAuxBIR_ResponseParams    ): _Element {

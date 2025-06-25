@@ -33,7 +33,7 @@ let _cached_decoder_for_ServiceProvider: $.ASN1Decoder<ServiceProvider> | null =
  * @returns {ServiceProvider} The decoded data structure.
  */
 export
-function _decode_ServiceProvider (el: _Element) {
+function _decode_ServiceProvider (el: _Element): ServiceProvider {
     if (!_cached_decoder_for_ServiceProvider) { _cached_decoder_for_ServiceProvider = _decode_ServiceUser; }
     return _cached_decoder_for_ServiceProvider(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_ServiceProvider: $.ASN1Encoder<ServiceProvider> | null =
  * @returns {_Element} The ServiceProvider, encoded as an ASN.1 Element.
  */
 export
-function _encode_ServiceProvider (value: ServiceProvider, elGetter: $.ASN1Encoder<ServiceProvider>) {
+function _encode_ServiceProvider (value: ServiceProvider, elGetter: $.ASN1Encoder<ServiceProvider>): _Element {
     if (!_cached_encoder_for_ServiceProvider) { _cached_encoder_for_ServiceProvider = _encode_ServiceUser; }
     return _cached_encoder_for_ServiceProvider(value, elGetter);
 }

@@ -35,7 +35,7 @@ let _cached_decoder_for_ScanAttributeIdList: $.ASN1Decoder<ScanAttributeIdList> 
  * @param {_Element} el The element being decoded.
  * @returns {ScanAttributeIdList} The decoded data structure.
  */
-export function _decode_ScanAttributeIdList(el: _Element) {
+export function _decode_ScanAttributeIdList(el: _Element): ScanAttributeIdList {
     if (!_cached_decoder_for_ScanAttributeIdList) {
         _cached_decoder_for_ScanAttributeIdList = $._decodeSetOf<AttributeId>(
             () => _decode_AttributeId
@@ -56,7 +56,7 @@ let _cached_encoder_for_ScanAttributeIdList: $.ASN1Encoder<ScanAttributeIdList> 
 export function _encode_ScanAttributeIdList(
     value: ScanAttributeIdList,
     elGetter: $.ASN1Encoder<ScanAttributeIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_ScanAttributeIdList) {
         _cached_encoder_for_ScanAttributeIdList = $._encodeSetOf<AttributeId>(
             () => _encode_AttributeId,

@@ -130,7 +130,7 @@ let _cached_decoder_for_KeyReqMsgContent: $.ASN1Decoder<KeyReqMsgContent> | null
  * @returns {KeyReqMsgContent} The decoded data structure.
  */
 export
-function _decode_KeyReqMsgContent (el: _Element) {
+function _decode_KeyReqMsgContent (el: _Element): KeyReqMsgContent {
     if (!_cached_decoder_for_KeyReqMsgContent) { _cached_decoder_for_KeyReqMsgContent = function (el: _Element): KeyReqMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -167,7 +167,7 @@ let _cached_encoder_for_KeyReqMsgContent: $.ASN1Encoder<KeyReqMsgContent> | null
  * @returns {_Element} The KeyReqMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_KeyReqMsgContent (value: KeyReqMsgContent, elGetter: $.ASN1Encoder<KeyReqMsgContent>) {
+function _encode_KeyReqMsgContent (value: KeyReqMsgContent, elGetter: $.ASN1Encoder<KeyReqMsgContent>): _Element {
     if (!_cached_encoder_for_KeyReqMsgContent) { _cached_encoder_for_KeyReqMsgContent = function (value: KeyReqMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

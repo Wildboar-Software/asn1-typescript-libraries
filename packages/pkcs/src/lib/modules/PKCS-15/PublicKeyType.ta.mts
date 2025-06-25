@@ -77,7 +77,7 @@ let _cached_decoder_for_PublicKeyType: $.ASN1Decoder<PublicKeyType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PublicKeyType} The decoded data structure.
  */
-export function _decode_PublicKeyType(el: _Element) {
+export function _decode_PublicKeyType(el: _Element): PublicKeyType {
     if (!_cached_decoder_for_PublicKeyType) {
         _cached_decoder_for_PublicKeyType = $._decode_extensible_choice<PublicKeyType>(
             {
@@ -143,7 +143,7 @@ let _cached_encoder_for_PublicKeyType: $.ASN1Encoder<PublicKeyType> | null = nul
 export function _encode_PublicKeyType(
     value: PublicKeyType,
     elGetter: $.ASN1Encoder<PublicKeyType>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicKeyType) {
         _cached_encoder_for_PublicKeyType = $._encode_choice<PublicKeyType>(
             {

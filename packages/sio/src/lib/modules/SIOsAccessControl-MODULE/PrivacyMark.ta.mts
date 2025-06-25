@@ -30,7 +30,7 @@ let _cached_decoder_for_PrivacyMark: $.ASN1Decoder<PrivacyMark> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PrivacyMark} The decoded data structure.
  */
-export function _decode_PrivacyMark(el: _Element) {
+export function _decode_PrivacyMark(el: _Element): PrivacyMark {
     if (!_cached_decoder_for_PrivacyMark) {
         _cached_decoder_for_PrivacyMark = $._decode_inextensible_choice<PrivacyMark>(
             {
@@ -56,7 +56,7 @@ let _cached_encoder_for_PrivacyMark: $.ASN1Encoder<PrivacyMark> | null = null;
 export function _encode_PrivacyMark(
     value: PrivacyMark,
     elGetter: $.ASN1Encoder<PrivacyMark>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivacyMark) {
         _cached_encoder_for_PrivacyMark = $._encode_choice<PrivacyMark>(
             {

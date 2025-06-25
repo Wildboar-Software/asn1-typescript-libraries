@@ -38,7 +38,7 @@ let _cached_decoder_for_ExtensionType: $.ASN1Decoder<ExtensionType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionType} The decoded data structure.
  */
-export function _decode_ExtensionType(el: _Element) {
+export function _decode_ExtensionType(el: _Element): ExtensionType {
     if (!_cached_decoder_for_ExtensionType) {
         _cached_decoder_for_ExtensionType = $._decode_inextensible_choice<ExtensionType>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_ExtensionType: $.ASN1Encoder<ExtensionType> | null = nul
 export function _encode_ExtensionType(
     value: ExtensionType,
     elGetter: $.ASN1Encoder<ExtensionType>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionType) {
         _cached_encoder_for_ExtensionType = $._encode_choice<ExtensionType>(
             {

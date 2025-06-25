@@ -113,7 +113,7 @@ let _cached_decoder_for_OtherHashAlgAndValue: $.ASN1Decoder<OtherHashAlgAndValue
  * @returns {OtherHashAlgAndValue} The decoded data structure.
  */
 export
-function _decode_OtherHashAlgAndValue (el: _Element) {
+function _decode_OtherHashAlgAndValue (el: _Element): OtherHashAlgAndValue {
     if (!_cached_decoder_for_OtherHashAlgAndValue) { _cached_decoder_for_OtherHashAlgAndValue = function (el: _Element): OtherHashAlgAndValue {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -144,7 +144,7 @@ let _cached_encoder_for_OtherHashAlgAndValue: $.ASN1Encoder<OtherHashAlgAndValue
  * @returns {_Element} The OtherHashAlgAndValue, encoded as an ASN.1 Element.
  */
 export
-function _encode_OtherHashAlgAndValue (value: OtherHashAlgAndValue, elGetter: $.ASN1Encoder<OtherHashAlgAndValue>) {
+function _encode_OtherHashAlgAndValue (value: OtherHashAlgAndValue, elGetter: $.ASN1Encoder<OtherHashAlgAndValue>): _Element {
     if (!_cached_encoder_for_OtherHashAlgAndValue) { _cached_encoder_for_OtherHashAlgAndValue = function (value: OtherHashAlgAndValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

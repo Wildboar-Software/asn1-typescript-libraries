@@ -38,7 +38,7 @@ let _cached_decoder_for_BPUSubprocessInformationList: $.ASN1Decoder<BPUSubproces
  * @param {_Element} el The element being decoded.
  * @returns {BPUSubprocessInformationList} The decoded data structure.
  */
-export function _decode_BPUSubprocessInformationList(el: _Element) {
+export function _decode_BPUSubprocessInformationList(el: _Element): BPUSubprocessInformationList {
     if (!_cached_decoder_for_BPUSubprocessInformationList) {
         _cached_decoder_for_BPUSubprocessInformationList = $._decodeSequenceOf<BPUSubprocessInformation>(
             () => _decode_BPUSubprocessInformation
@@ -61,7 +61,7 @@ let _cached_encoder_for_BPUSubprocessInformationList: $.ASN1Encoder<BPUSubproces
 export function _encode_BPUSubprocessInformationList(
     value: BPUSubprocessInformationList,
     elGetter: $.ASN1Encoder<BPUSubprocessInformationList>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUSubprocessInformationList) {
         _cached_encoder_for_BPUSubprocessInformationList = $._encodeSequenceOf<BPUSubprocessInformation>(
             () => _encode_BPUSubprocessInformation,

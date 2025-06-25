@@ -31,7 +31,7 @@ let _cached_decoder_for_DigestAlgorithm: $.ASN1Decoder<DigestAlgorithm> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DigestAlgorithm} The decoded data structure.
  */
-export function _decode_DigestAlgorithm(el: _Element) {
+export function _decode_DigestAlgorithm(el: _Element): DigestAlgorithm {
     if (!_cached_decoder_for_DigestAlgorithm) {
         _cached_decoder_for_DigestAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -52,7 +52,7 @@ let _cached_encoder_for_DigestAlgorithm: $.ASN1Encoder<DigestAlgorithm> | null =
 export function _encode_DigestAlgorithm(
     value: DigestAlgorithm,
     elGetter: $.ASN1Encoder<DigestAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_DigestAlgorithm) {
         _cached_encoder_for_DigestAlgorithm = _encode_AlgorithmIdentifier;
     }

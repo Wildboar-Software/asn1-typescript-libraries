@@ -45,7 +45,7 @@ let _cached_decoder_for_ReportType: $.ASN1Decoder<ReportType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReportType} The decoded data structure.
  */
-export function _decode_ReportType(el: _Element) {
+export function _decode_ReportType(el: _Element): ReportType {
     if (!_cached_decoder_for_ReportType) {
         _cached_decoder_for_ReportType = $._decode_inextensible_choice<ReportType>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_ReportType: $.ASN1Encoder<ReportType> | null = null;
 export function _encode_ReportType(
     value: ReportType,
     elGetter: $.ASN1Encoder<ReportType>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportType) {
         _cached_encoder_for_ReportType = $._encode_choice<ReportType>(
             {

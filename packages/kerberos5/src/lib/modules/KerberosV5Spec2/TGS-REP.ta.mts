@@ -38,7 +38,7 @@ let _cached_decoder_for_TGS_REP: $.ASN1Decoder<TGS_REP> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TGS_REP} The decoded data structure.
  */
-export function _decode_TGS_REP(el: _Element) {
+export function _decode_TGS_REP(el: _Element): TGS_REP {
   if (!_cached_decoder_for_TGS_REP) {
     _cached_decoder_for_TGS_REP = $._decode_implicit<TGS_REP>(
       () => _decode_KDC_REP
@@ -61,7 +61,7 @@ let _cached_encoder_for_TGS_REP: $.ASN1Encoder<TGS_REP> | null = null;
 export function _encode_TGS_REP(
   value: TGS_REP,
   elGetter: $.ASN1Encoder<TGS_REP>
-) {
+): _Element {
   if (!_cached_encoder_for_TGS_REP) {
     _cached_encoder_for_TGS_REP = $._encode_implicit(
       _TagClass.application,

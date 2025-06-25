@@ -35,7 +35,7 @@ let _cached_decoder_for_PNExtensionsSubField: $.ASN1Decoder<PNExtensionsSubField
  * @param {_Element} el The element being decoded.
  * @returns {PNExtensionsSubField} The decoded data structure.
  */
-export function _decode_PNExtensionsSubField(el: _Element) {
+export function _decode_PNExtensionsSubField(el: _Element): PNExtensionsSubField {
     if (!_cached_decoder_for_PNExtensionsSubField) {
         _cached_decoder_for_PNExtensionsSubField = _decode_ExtensionField;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PNExtensionsSubField: $.ASN1Encoder<PNExtensionsSubField
 export function _encode_PNExtensionsSubField(
     value: PNExtensionsSubField,
     elGetter: $.ASN1Encoder<PNExtensionsSubField>
-) {
+): _Element {
     if (!_cached_encoder_for_PNExtensionsSubField) {
         _cached_encoder_for_PNExtensionsSubField = _encode_ExtensionField;
     }

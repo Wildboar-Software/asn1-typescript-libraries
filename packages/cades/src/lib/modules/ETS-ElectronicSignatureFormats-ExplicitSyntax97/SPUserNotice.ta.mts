@@ -112,7 +112,7 @@ let _cached_decoder_for_SPUserNotice: $.ASN1Decoder<SPUserNotice> | null = null;
  * @returns {SPUserNotice} The decoded data structure.
  */
 export
-function _decode_SPUserNotice (el: _Element) {
+function _decode_SPUserNotice (el: _Element): SPUserNotice {
     if (!_cached_decoder_for_SPUserNotice) { _cached_decoder_for_SPUserNotice = function (el: _Element): SPUserNotice {
     let noticeRef: OPTIONAL<NoticeReference>;
     let explicitText: OPTIONAL<DisplayText>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_SPUserNotice: $.ASN1Encoder<SPUserNotice> | null = null;
  * @returns {_Element} The SPUserNotice, encoded as an ASN.1 Element.
  */
 export
-function _encode_SPUserNotice (value: SPUserNotice, elGetter: $.ASN1Encoder<SPUserNotice>) {
+function _encode_SPUserNotice (value: SPUserNotice, elGetter: $.ASN1Encoder<SPUserNotice>): _Element {
     if (!_cached_encoder_for_SPUserNotice) { _cached_encoder_for_SPUserNotice = function (value: SPUserNotice): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -68,7 +68,7 @@ let _cached_decoder_for_EntryClassErrorParameter_problem: $.ASN1Decoder<EntryCla
  * @param {_Element} el The element being decoded.
  * @returns {EntryClassErrorParameter_problem} The decoded data structure.
  */
-export function _decode_EntryClassErrorParameter_problem(el: _Element) {
+export function _decode_EntryClassErrorParameter_problem(el: _Element): EntryClassErrorParameter_problem {
     if (!_cached_decoder_for_EntryClassErrorParameter_problem) {
         _cached_decoder_for_EntryClassErrorParameter_problem =
             $._decodeBitString;
@@ -88,7 +88,7 @@ let _cached_encoder_for_EntryClassErrorParameter_problem: $.ASN1Encoder<EntryCla
 export function _encode_EntryClassErrorParameter_problem(
     value: EntryClassErrorParameter_problem,
     elGetter: $.ASN1Encoder<EntryClassErrorParameter_problem>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryClassErrorParameter_problem) {
         _cached_encoder_for_EntryClassErrorParameter_problem =
             $._encodeBitString;

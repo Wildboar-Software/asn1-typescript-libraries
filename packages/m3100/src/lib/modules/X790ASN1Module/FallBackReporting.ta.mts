@@ -42,7 +42,7 @@ let _cached_decoder_for_FallBackReporting: $.ASN1Decoder<FallBackReporting> | nu
  * @param {_Element} el The element being decoded.
  * @returns {FallBackReporting} The decoded data structure.
  */
-export function _decode_FallBackReporting(el: _Element) {
+export function _decode_FallBackReporting(el: _Element): FallBackReporting {
     if (!_cached_decoder_for_FallBackReporting) {
         _cached_decoder_for_FallBackReporting = $._decode_extensible_choice<FallBackReporting>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_FallBackReporting: $.ASN1Encoder<FallBackReporting> | nu
 export function _encode_FallBackReporting(
     value: FallBackReporting,
     elGetter: $.ASN1Encoder<FallBackReporting>
-) {
+): _Element {
     if (!_cached_encoder_for_FallBackReporting) {
         _cached_encoder_for_FallBackReporting = $._encode_choice<FallBackReporting>(
             {

@@ -126,7 +126,7 @@ let _cached_decoder_for_Properties: $.ASN1Decoder<Properties> | null = null;
  * @returns {Properties} The decoded data structure.
  */
 export
-function _decode_Properties (el: _Element) {
+function _decode_Properties (el: _Element): Properties {
     if (!_cached_decoder_for_Properties) { _cached_decoder_for_Properties = function (el: _Element): Properties {
     let propertyName!: UTF8String;
     let propertyValue!: UTF8String;
@@ -161,7 +161,7 @@ let _cached_encoder_for_Properties: $.ASN1Encoder<Properties> | null = null;
  * @returns {_Element} The Properties, encoded as an ASN.1 Element.
  */
 export
-function _encode_Properties (value: Properties, elGetter: $.ASN1Encoder<Properties>) {
+function _encode_Properties (value: Properties, elGetter: $.ASN1Encoder<Properties>): _Element {
     if (!_cached_encoder_for_Properties) { _cached_encoder_for_Properties = function (value: Properties): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

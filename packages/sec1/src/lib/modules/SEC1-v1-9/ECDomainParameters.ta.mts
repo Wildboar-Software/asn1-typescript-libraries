@@ -42,7 +42,7 @@ let _cached_decoder_for_ECDomainParameters: $.ASN1Decoder<ECDomainParameters> | 
  * @returns {ECDomainParameters} The decoded data structure.
  */
 export
-function _decode_ECDomainParameters (el: _Element) {
+function _decode_ECDomainParameters (el: _Element): ECDomainParameters {
     if (!_cached_decoder_for_ECDomainParameters) { _cached_decoder_for_ECDomainParameters = $._decode_inextensible_choice<ECDomainParameters>({
     "UNIVERSAL 16": [ "specified", _decode_SpecifiedECDomain ],
     "UNIVERSAL 6": [ "named", $._decodeObjectIdentifier ],
@@ -61,7 +61,7 @@ let _cached_encoder_for_ECDomainParameters: $.ASN1Encoder<ECDomainParameters> | 
  * @returns {_Element} The ECDomainParameters, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECDomainParameters (value: ECDomainParameters, elGetter: $.ASN1Encoder<ECDomainParameters>) {
+function _encode_ECDomainParameters (value: ECDomainParameters, elGetter: $.ASN1Encoder<ECDomainParameters>): _Element {
     if (!_cached_encoder_for_ECDomainParameters) { _cached_encoder_for_ECDomainParameters = $._encode_choice<ECDomainParameters>({
     "specified": _encode_SpecifiedECDomain,
     "named": $._encodeObjectIdentifier,

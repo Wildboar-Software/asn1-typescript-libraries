@@ -118,7 +118,7 @@ let _cached_decoder_for_PublicKeyAndChallenge: $.ASN1Decoder<PublicKeyAndChallen
  * @param {_Element} el The element being decoded.
  * @returns {PublicKeyAndChallenge} The decoded data structure.
  */
-export function _decode_PublicKeyAndChallenge(el: _Element) {
+export function _decode_PublicKeyAndChallenge(el: _Element): PublicKeyAndChallenge {
     if (!_cached_decoder_for_PublicKeyAndChallenge) {
         _cached_decoder_for_PublicKeyAndChallenge = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_PublicKeyAndChallenge: $.ASN1Encoder<PublicKeyAndChallen
 export function _encode_PublicKeyAndChallenge(
     value: PublicKeyAndChallenge,
     elGetter: $.ASN1Encoder<PublicKeyAndChallenge>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicKeyAndChallenge) {
         _cached_encoder_for_PublicKeyAndChallenge = function (
             value: PublicKeyAndChallenge        ): _Element {

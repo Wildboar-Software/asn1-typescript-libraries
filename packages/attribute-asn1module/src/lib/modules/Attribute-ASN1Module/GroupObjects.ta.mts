@@ -33,7 +33,7 @@ let _cached_decoder_for_GroupObjects: $.ASN1Decoder<GroupObjects> | null = null;
  * @returns {GroupObjects} The decoded data structure.
  */
 export
-function _decode_GroupObjects (el: _Element) {
+function _decode_GroupObjects (el: _Element): GroupObjects {
     if (!_cached_decoder_for_GroupObjects) { _cached_decoder_for_GroupObjects = $._decodeSetOf<ObjectInstance>(() => _decode_ObjectInstance); }
     return _cached_decoder_for_GroupObjects(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_GroupObjects: $.ASN1Encoder<GroupObjects> | null = null;
  * @returns {_Element} The GroupObjects, encoded as an ASN.1 Element.
  */
 export
-function _encode_GroupObjects (value: GroupObjects, elGetter: $.ASN1Encoder<GroupObjects>) {
+function _encode_GroupObjects (value: GroupObjects, elGetter: $.ASN1Encoder<GroupObjects>): _Element {
     if (!_cached_encoder_for_GroupObjects) { _cached_encoder_for_GroupObjects = $._encodeSetOf<ObjectInstance>(() => _encode_ObjectInstance, $.BER); }
     return _cached_encoder_for_GroupObjects(value, elGetter);
 }

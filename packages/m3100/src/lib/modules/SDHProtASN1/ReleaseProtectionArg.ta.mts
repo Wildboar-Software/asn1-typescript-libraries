@@ -156,7 +156,7 @@ let _cached_decoder_for_ReleaseProtectionArg: $.ASN1Decoder<ReleaseProtectionArg
  * @param {_Element} el The element being decoded.
  * @returns {ReleaseProtectionArg} The decoded data structure.
  */
-export function _decode_ReleaseProtectionArg(el: _Element) {
+export function _decode_ReleaseProtectionArg(el: _Element): ReleaseProtectionArg {
     if (!_cached_decoder_for_ReleaseProtectionArg) {
         _cached_decoder_for_ReleaseProtectionArg = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_ReleaseProtectionArg: $.ASN1Encoder<ReleaseProtectionArg
 export function _encode_ReleaseProtectionArg(
     value: ReleaseProtectionArg,
     elGetter: $.ASN1Encoder<ReleaseProtectionArg>
-) {
+): _Element {
     if (!_cached_encoder_for_ReleaseProtectionArg) {
         _cached_encoder_for_ReleaseProtectionArg = function (
             value: ReleaseProtectionArg        ): _Element {

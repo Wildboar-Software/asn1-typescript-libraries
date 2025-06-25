@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfTypeOfDays: $.ASN1Decoder<SequenceOfTypeOfDays
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfTypeOfDays} The decoded data structure.
  */
-export function _decode_SequenceOfTypeOfDays(el: _Element) {
+export function _decode_SequenceOfTypeOfDays(el: _Element): SequenceOfTypeOfDays {
     if (!_cached_decoder_for_SequenceOfTypeOfDays) {
         _cached_decoder_for_SequenceOfTypeOfDays = $._decodeSequenceOf<TypeOfDaysMaskWps>(
             () => _decode_TypeOfDaysMaskWps
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfTypeOfDays: $.ASN1Encoder<SequenceOfTypeOfDays
 export function _encode_SequenceOfTypeOfDays(
     value: SequenceOfTypeOfDays,
     elGetter: $.ASN1Encoder<SequenceOfTypeOfDays>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfTypeOfDays) {
         _cached_encoder_for_SequenceOfTypeOfDays = $._encodeSequenceOf<TypeOfDaysMaskWps>(
             () => _encode_TypeOfDaysMaskWps,

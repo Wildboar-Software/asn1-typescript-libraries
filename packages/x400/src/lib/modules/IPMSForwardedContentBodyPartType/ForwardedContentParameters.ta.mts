@@ -161,7 +161,7 @@ let _cached_decoder_for_ForwardedContentParameters: $.ASN1Decoder<ForwardedConte
  * @param {_Element} el The element being decoded.
  * @returns {ForwardedContentParameters} The decoded data structure.
  */
-export function _decode_ForwardedContentParameters(el: _Element) {
+export function _decode_ForwardedContentParameters(el: _Element): ForwardedContentParameters {
     if (!_cached_decoder_for_ForwardedContentParameters) {
         _cached_decoder_for_ForwardedContentParameters = function (
             el: _Element
@@ -225,7 +225,7 @@ let _cached_encoder_for_ForwardedContentParameters: $.ASN1Encoder<ForwardedConte
 export function _encode_ForwardedContentParameters(
     value: ForwardedContentParameters,
     elGetter: $.ASN1Encoder<ForwardedContentParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardedContentParameters) {
         _cached_encoder_for_ForwardedContentParameters = function (
             value: ForwardedContentParameters        ): _Element {

@@ -108,7 +108,7 @@ let _cached_decoder_for_Transform_ResponseParams: $.ASN1Decoder<Transform_Respon
  * @param {_Element} el The element being decoded.
  * @returns {Transform_ResponseParams} The decoded data structure.
  */
-export function _decode_Transform_ResponseParams(el: _Element) {
+export function _decode_Transform_ResponseParams(el: _Element): Transform_ResponseParams {
   if (!_cached_decoder_for_Transform_ResponseParams) {
     _cached_decoder_for_Transform_ResponseParams = function (
       el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_Transform_ResponseParams: $.ASN1Encoder<Transform_Respon
 export function _encode_Transform_ResponseParams(
   value: Transform_ResponseParams,
   elGetter: $.ASN1Encoder<Transform_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Transform_ResponseParams) {
     _cached_encoder_for_Transform_ResponseParams = function (
       value: Transform_ResponseParams    ): _Element {

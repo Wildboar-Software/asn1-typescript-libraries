@@ -42,7 +42,7 @@ let _cached_decoder_for_SignerIdentifier: $.ASN1Decoder<SignerIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {SignerIdentifier} The decoded data structure.
  */
-export function _decode_SignerIdentifier(el: _Element) {
+export function _decode_SignerIdentifier(el: _Element): SignerIdentifier {
     if (!_cached_decoder_for_SignerIdentifier) {
         _cached_decoder_for_SignerIdentifier = $._decode_extensible_choice<SignerIdentifier>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_SignerIdentifier: $.ASN1Encoder<SignerIdentifier> | null
 export function _encode_SignerIdentifier(
     value: SignerIdentifier,
     elGetter: $.ASN1Encoder<SignerIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SignerIdentifier) {
         _cached_encoder_for_SignerIdentifier = $._encode_choice<SignerIdentifier>(
             {

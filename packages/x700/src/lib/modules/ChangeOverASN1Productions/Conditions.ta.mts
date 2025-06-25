@@ -115,7 +115,7 @@ let _cached_decoder_for_Conditions: $.ASN1Decoder<Conditions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Conditions} The decoded data structure.
  */
-export function _decode_Conditions(el: _Element) {
+export function _decode_Conditions(el: _Element): Conditions {
     if (!_cached_decoder_for_Conditions) {
         _cached_decoder_for_Conditions = function (el: _Element): Conditions {
             let primary: OPTIONAL<Condition>;
@@ -161,7 +161,7 @@ let _cached_encoder_for_Conditions: $.ASN1Encoder<Conditions> | null = null;
 export function _encode_Conditions(
     value: Conditions,
     elGetter: $.ASN1Encoder<Conditions>
-) {
+): _Element {
     if (!_cached_encoder_for_Conditions) {
         _cached_encoder_for_Conditions = function (
             value: Conditions        ): _Element {

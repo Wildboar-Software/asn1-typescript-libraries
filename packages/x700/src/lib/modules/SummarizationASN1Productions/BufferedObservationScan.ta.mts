@@ -159,7 +159,7 @@ let _cached_decoder_for_BufferedObservationScan: $.ASN1Decoder<BufferedObservati
  * @param {_Element} el The element being decoded.
  * @returns {BufferedObservationScan} The decoded data structure.
  */
-export function _decode_BufferedObservationScan(el: _Element) {
+export function _decode_BufferedObservationScan(el: _Element): BufferedObservationScan {
     if (!_cached_decoder_for_BufferedObservationScan) {
         _cached_decoder_for_BufferedObservationScan = function (
             el: _Element
@@ -234,7 +234,7 @@ let _cached_encoder_for_BufferedObservationScan: $.ASN1Encoder<BufferedObservati
 export function _encode_BufferedObservationScan(
     value: BufferedObservationScan,
     elGetter: $.ASN1Encoder<BufferedObservationScan>
-) {
+): _Element {
     if (!_cached_encoder_for_BufferedObservationScan) {
         _cached_encoder_for_BufferedObservationScan = function (
             value: BufferedObservationScan        ): _Element {

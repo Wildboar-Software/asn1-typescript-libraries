@@ -38,7 +38,7 @@ let _cached_decoder_for_TrafficDescriptor: $.ASN1Decoder<TrafficDescriptor> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TrafficDescriptor} The decoded data structure.
  */
-export function _decode_TrafficDescriptor(el: _Element) {
+export function _decode_TrafficDescriptor(el: _Element): TrafficDescriptor {
     if (!_cached_decoder_for_TrafficDescriptor) {
         _cached_decoder_for_TrafficDescriptor = _decode_ObjectInstance;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TrafficDescriptor: $.ASN1Encoder<TrafficDescriptor> | nu
 export function _encode_TrafficDescriptor(
     value: TrafficDescriptor,
     elGetter: $.ASN1Encoder<TrafficDescriptor>
-) {
+): _Element {
     if (!_cached_encoder_for_TrafficDescriptor) {
         _cached_encoder_for_TrafficDescriptor = _encode_ObjectInstance;
     }

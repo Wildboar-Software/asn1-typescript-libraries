@@ -141,7 +141,7 @@ let _cached_decoder_for_EDINReceiverField: $.ASN1Decoder<EDINReceiverField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EDINReceiverField} The decoded data structure.
  */
-export function _decode_EDINReceiverField(el: _Element) {
+export function _decode_EDINReceiverField(el: _Element): EDINReceiverField {
     if (!_cached_decoder_for_EDINReceiverField) {
         _cached_decoder_for_EDINReceiverField = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_EDINReceiverField: $.ASN1Encoder<EDINReceiverField> | nu
 export function _encode_EDINReceiverField(
     value: EDINReceiverField,
     elGetter: $.ASN1Encoder<EDINReceiverField>
-) {
+): _Element {
     if (!_cached_encoder_for_EDINReceiverField) {
         _cached_encoder_for_EDINReceiverField = function (
             value: EDINReceiverField        ): _Element {

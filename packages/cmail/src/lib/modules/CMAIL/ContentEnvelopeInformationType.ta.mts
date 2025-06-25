@@ -140,7 +140,7 @@ let _cached_decoder_for_ContentEnvelopeInformationType: $.ASN1Decoder<ContentEnv
  * @param {_Element} el The element being decoded.
  * @returns {ContentEnvelopeInformationType} The decoded data structure.
  */
-export function _decode_ContentEnvelopeInformationType(el: _Element) {
+export function _decode_ContentEnvelopeInformationType(el: _Element): ContentEnvelopeInformationType {
   if (!_cached_decoder_for_ContentEnvelopeInformationType) {
     _cached_decoder_for_ContentEnvelopeInformationType = function (
       el: _Element
@@ -186,7 +186,7 @@ let _cached_encoder_for_ContentEnvelopeInformationType: $.ASN1Encoder<ContentEnv
 export function _encode_ContentEnvelopeInformationType(
   value: ContentEnvelopeInformationType,
   elGetter: $.ASN1Encoder<ContentEnvelopeInformationType>
-) {
+): _Element {
   if (!_cached_encoder_for_ContentEnvelopeInformationType) {
     _cached_encoder_for_ContentEnvelopeInformationType = function (
       value: ContentEnvelopeInformationType    ): _Element {

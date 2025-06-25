@@ -185,7 +185,7 @@ let _cached_decoder_for_ReachabilityChangeSyntax: $.ASN1Decoder<ReachabilityChan
  * @param {_Element} el The element being decoded.
  * @returns {ReachabilityChangeSyntax} The decoded data structure.
  */
-export function _decode_ReachabilityChangeSyntax(el: _Element) {
+export function _decode_ReachabilityChangeSyntax(el: _Element): ReachabilityChangeSyntax {
     if (!_cached_decoder_for_ReachabilityChangeSyntax) {
         _cached_decoder_for_ReachabilityChangeSyntax = function (
             el: _Element
@@ -249,7 +249,7 @@ let _cached_encoder_for_ReachabilityChangeSyntax: $.ASN1Encoder<ReachabilityChan
 export function _encode_ReachabilityChangeSyntax(
     value: ReachabilityChangeSyntax,
     elGetter: $.ASN1Encoder<ReachabilityChangeSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_ReachabilityChangeSyntax) {
         _cached_encoder_for_ReachabilityChangeSyntax = function (
             value: ReachabilityChangeSyntax        ): _Element {

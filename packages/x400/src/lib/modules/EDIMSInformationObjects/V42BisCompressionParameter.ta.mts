@@ -158,7 +158,7 @@ let _cached_decoder_for_V42BisCompressionParameter: $.ASN1Decoder<V42BisCompress
  * @param {_Element} el The element being decoded.
  * @returns {V42BisCompressionParameter} The decoded data structure.
  */
-export function _decode_V42BisCompressionParameter(el: _Element) {
+export function _decode_V42BisCompressionParameter(el: _Element): V42BisCompressionParameter {
     if (!_cached_decoder_for_V42BisCompressionParameter) {
         _cached_decoder_for_V42BisCompressionParameter = function (
             el: _Element
@@ -216,7 +216,7 @@ let _cached_encoder_for_V42BisCompressionParameter: $.ASN1Encoder<V42BisCompress
 export function _encode_V42BisCompressionParameter(
     value: V42BisCompressionParameter,
     elGetter: $.ASN1Encoder<V42BisCompressionParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_V42BisCompressionParameter) {
         _cached_encoder_for_V42BisCompressionParameter = function (
             value: V42BisCompressionParameter        ): _Element {

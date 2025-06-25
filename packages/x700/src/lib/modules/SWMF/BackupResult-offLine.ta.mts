@@ -108,7 +108,7 @@ let _cached_decoder_for_BackupResult_offLine: $.ASN1Decoder<BackupResult_offLine
  * @param {_Element} el The element being decoded.
  * @returns {BackupResult_offLine} The decoded data structure.
  */
-export function _decode_BackupResult_offLine(el: _Element) {
+export function _decode_BackupResult_offLine(el: _Element): BackupResult_offLine {
     if (!_cached_decoder_for_BackupResult_offLine) {
         _cached_decoder_for_BackupResult_offLine = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_BackupResult_offLine: $.ASN1Encoder<BackupResult_offLine
 export function _encode_BackupResult_offLine(
     value: BackupResult_offLine,
     elGetter: $.ASN1Encoder<BackupResult_offLine>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupResult_offLine) {
         _cached_encoder_for_BackupResult_offLine = function (
             value: BackupResult_offLine        ): _Element {

@@ -122,7 +122,7 @@ let _cached_decoder_for_MapsToPair: $.ASN1Decoder<MapsToPair> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MapsToPair} The decoded data structure.
  */
-export function _decode_MapsToPair(el: _Element) {
+export function _decode_MapsToPair(el: _Element): MapsToPair {
     if (!_cached_decoder_for_MapsToPair) {
         _cached_decoder_for_MapsToPair = function (el: _Element): MapsToPair {
             const sequence: _Element[] = el.sequence;
@@ -162,7 +162,7 @@ let _cached_encoder_for_MapsToPair: $.ASN1Encoder<MapsToPair> | null = null;
 export function _encode_MapsToPair(
     value: MapsToPair,
     elGetter: $.ASN1Encoder<MapsToPair>
-) {
+): _Element {
     if (!_cached_encoder_for_MapsToPair) {
         _cached_encoder_for_MapsToPair = function (
             value: MapsToPair        ): _Element {

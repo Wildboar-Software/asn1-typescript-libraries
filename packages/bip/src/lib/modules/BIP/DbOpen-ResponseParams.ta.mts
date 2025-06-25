@@ -125,7 +125,7 @@ let _cached_decoder_for_DbOpen_ResponseParams: $.ASN1Decoder<DbOpen_ResponsePara
  * @param {_Element} el The element being decoded.
  * @returns {DbOpen_ResponseParams} The decoded data structure.
  */
-export function _decode_DbOpen_ResponseParams(el: _Element) {
+export function _decode_DbOpen_ResponseParams(el: _Element): DbOpen_ResponseParams {
   if (!_cached_decoder_for_DbOpen_ResponseParams) {
     _cached_decoder_for_DbOpen_ResponseParams = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_DbOpen_ResponseParams: $.ASN1Encoder<DbOpen_ResponsePara
 export function _encode_DbOpen_ResponseParams(
   value: DbOpen_ResponseParams,
   elGetter: $.ASN1Encoder<DbOpen_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbOpen_ResponseParams) {
     _cached_encoder_for_DbOpen_ResponseParams = function (
       value: DbOpen_ResponseParams    ): _Element {

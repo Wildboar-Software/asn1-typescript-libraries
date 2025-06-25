@@ -41,7 +41,7 @@ let _cached_decoder_for_CirculationSignature: $.ASN1Decoder<CirculationSignature
  * @param {_Element} el The element being decoded.
  * @returns {CirculationSignature} The decoded data structure.
  */
-export function _decode_CirculationSignature(el: _Element) {
+export function _decode_CirculationSignature(el: _Element): CirculationSignature {
     if (!_cached_decoder_for_CirculationSignature) {
         _cached_decoder_for_CirculationSignature = _get_decoder_for_SIGNED<TBSCirculationSignature>(
             _decode_TBSCirculationSignature
@@ -62,7 +62,7 @@ let _cached_encoder_for_CirculationSignature: $.ASN1Encoder<CirculationSignature
 export function _encode_CirculationSignature(
     value: CirculationSignature,
     elGetter: $.ASN1Encoder<CirculationSignature>
-) {
+): _Element {
     if (!_cached_encoder_for_CirculationSignature) {
         _cached_encoder_for_CirculationSignature = _get_encoder_for_SIGNED<TBSCirculationSignature>(
             _encode_TBSCirculationSignature

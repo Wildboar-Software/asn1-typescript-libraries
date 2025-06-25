@@ -109,7 +109,7 @@ let _cached_decoder_for_WeekMask_Item: $.ASN1Decoder<WeekMask_Item> | null = nul
  * @returns {WeekMask_Item} The decoded data structure.
  */
 export
-function _decode_WeekMask_Item (el: _Element) {
+function _decode_WeekMask_Item (el: _Element): WeekMask_Item {
     if (!_cached_decoder_for_WeekMask_Item) { _cached_decoder_for_WeekMask_Item = function (el: _Element): WeekMask_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -140,7 +140,7 @@ let _cached_encoder_for_WeekMask_Item: $.ASN1Encoder<WeekMask_Item> | null = nul
  * @returns {_Element} The WeekMask_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_WeekMask_Item (value: WeekMask_Item, elGetter: $.ASN1Encoder<WeekMask_Item>) {
+function _encode_WeekMask_Item (value: WeekMask_Item, elGetter: $.ASN1Encoder<WeekMask_Item>): _Element {
     if (!_cached_encoder_for_WeekMask_Item) { _cached_encoder_for_WeekMask_Item = function (value: WeekMask_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

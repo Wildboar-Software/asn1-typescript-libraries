@@ -136,7 +136,7 @@ let _cached_decoder_for_CipheredEnvelopeKeyType: $.ASN1Decoder<CipheredEnvelopeK
  * @param {_Element} el The element being decoded.
  * @returns {CipheredEnvelopeKeyType} The decoded data structure.
  */
-export function _decode_CipheredEnvelopeKeyType(el: _Element) {
+export function _decode_CipheredEnvelopeKeyType(el: _Element): CipheredEnvelopeKeyType {
   if (!_cached_decoder_for_CipheredEnvelopeKeyType) {
     _cached_decoder_for_CipheredEnvelopeKeyType = function (
       el: _Element
@@ -186,7 +186,7 @@ let _cached_encoder_for_CipheredEnvelopeKeyType: $.ASN1Encoder<CipheredEnvelopeK
 export function _encode_CipheredEnvelopeKeyType(
   value: CipheredEnvelopeKeyType,
   elGetter: $.ASN1Encoder<CipheredEnvelopeKeyType>
-) {
+): _Element {
   if (!_cached_encoder_for_CipheredEnvelopeKeyType) {
     _cached_encoder_for_CipheredEnvelopeKeyType = function (
       value: CipheredEnvelopeKeyType    ): _Element {

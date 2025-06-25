@@ -288,7 +288,7 @@ let _cached_decoder_for_CreateCmLeasedCircuitServiceError: $.ASN1Decoder<CreateC
  * @param {_Element} el The element being decoded.
  * @returns {CreateCmLeasedCircuitServiceError} The decoded data structure.
  */
-export function _decode_CreateCmLeasedCircuitServiceError(el: _Element) {
+export function _decode_CreateCmLeasedCircuitServiceError(el: _Element): CreateCmLeasedCircuitServiceError {
     if (!_cached_decoder_for_CreateCmLeasedCircuitServiceError) {
         _cached_decoder_for_CreateCmLeasedCircuitServiceError =
             $._decodeEnumerated;
@@ -310,7 +310,7 @@ let _cached_encoder_for_CreateCmLeasedCircuitServiceError: $.ASN1Encoder<CreateC
 export function _encode_CreateCmLeasedCircuitServiceError(
     value: CreateCmLeasedCircuitServiceError,
     elGetter: $.ASN1Encoder<CreateCmLeasedCircuitServiceError>
-) {
+): _Element {
     if (!_cached_encoder_for_CreateCmLeasedCircuitServiceError) {
         _cached_encoder_for_CreateCmLeasedCircuitServiceError =
             $._encodeEnumerated;

@@ -155,7 +155,7 @@ let _cached_decoder_for_Receipt: $.ASN1Decoder<Receipt> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Receipt} The decoded data structure.
  */
-export function _decode_Receipt(el: _Element) {
+export function _decode_Receipt(el: _Element): Receipt {
     if (!_cached_decoder_for_Receipt) {
         _cached_decoder_for_Receipt = function (el: _Element): Receipt {
             const sequence: _Element[] = el.sequence;
@@ -203,7 +203,7 @@ let _cached_encoder_for_Receipt: $.ASN1Encoder<Receipt> | null = null;
 export function _encode_Receipt(
     value: Receipt,
     elGetter: $.ASN1Encoder<Receipt>
-) {
+): _Element {
     if (!_cached_encoder_for_Receipt) {
         _cached_encoder_for_Receipt = function (
             value: Receipt        ): _Element {

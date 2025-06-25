@@ -149,7 +149,7 @@ let _cached_decoder_for_Capacities: $.ASN1Decoder<Capacities> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Capacities} The decoded data structure.
  */
-export function _decode_Capacities(el: _Element) {
+export function _decode_Capacities(el: _Element): Capacities {
     if (!_cached_decoder_for_Capacities) {
         _cached_decoder_for_Capacities = function (el: _Element): Capacities {
             const sequence: _Element[] = el.sequence;
@@ -197,7 +197,7 @@ let _cached_encoder_for_Capacities: $.ASN1Encoder<Capacities> | null = null;
 export function _encode_Capacities(
     value: Capacities,
     elGetter: $.ASN1Encoder<Capacities>
-) {
+): _Element {
     if (!_cached_encoder_for_Capacities) {
         _cached_encoder_for_Capacities = function (
             value: Capacities        ): _Element {

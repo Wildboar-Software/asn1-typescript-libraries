@@ -94,7 +94,7 @@ let _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation: $.ASN1Decoder<Br
  * @param {_Element} el The element being decoded.
  * @returns {BridgeRollArg_Item_bridgeRollOperation} The decoded data structure.
  */
-export function _decode_BridgeRollArg_Item_bridgeRollOperation(el: _Element) {
+export function _decode_BridgeRollArg_Item_bridgeRollOperation(el: _Element): BridgeRollArg_Item_bridgeRollOperation {
     if (!_cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation) {
         _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation =
             $._decodeEnumerated;
@@ -116,7 +116,7 @@ let _cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation: $.ASN1Encoder<Br
 export function _encode_BridgeRollArg_Item_bridgeRollOperation(
     value: BridgeRollArg_Item_bridgeRollOperation,
     elGetter: $.ASN1Encoder<BridgeRollArg_Item_bridgeRollOperation>
-) {
+): _Element {
     if (!_cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation) {
         _cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation =
             $._encodeEnumerated;

@@ -44,7 +44,7 @@ let _cached_decoder_for_CertStatus: $.ASN1Decoder<CertStatus> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertStatus} The decoded data structure.
  */
-export function _decode_CertStatus(el: _Element) {
+export function _decode_CertStatus(el: _Element): CertStatus {
     if (!_cached_decoder_for_CertStatus) {
         _cached_decoder_for_CertStatus = $._decode_inextensible_choice<CertStatus>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_CertStatus: $.ASN1Encoder<CertStatus> | null = null;
 export function _encode_CertStatus(
     value: CertStatus,
     elGetter: $.ASN1Encoder<CertStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_CertStatus) {
         _cached_encoder_for_CertStatus = $._encode_choice<CertStatus>(
             {

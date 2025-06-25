@@ -42,7 +42,7 @@ let _cached_decoder_for_ScriptList: $.ASN1Decoder<ScriptList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ScriptList} The decoded data structure.
  */
-export function _decode_ScriptList(el: _Element) {
+export function _decode_ScriptList(el: _Element): ScriptList {
     if (!_cached_decoder_for_ScriptList) {
         _cached_decoder_for_ScriptList = $._decode_inextensible_choice<ScriptList>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ScriptList: $.ASN1Encoder<ScriptList> | null = null;
 export function _encode_ScriptList(
     value: ScriptList,
     elGetter: $.ASN1Encoder<ScriptList>
-) {
+): _Element {
     if (!_cached_encoder_for_ScriptList) {
         _cached_encoder_for_ScriptList = $._encode_choice<ScriptList>(
             {

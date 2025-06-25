@@ -25,7 +25,7 @@ let _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_PRF
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_PRFsAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_PBKDF2_PRFsAlgorithmIdentifier(el: _Element) {
+export function _decode_PBKDF2_PRFsAlgorithmIdentifier(el: _Element): PBKDF2_PRFsAlgorithmIdentifier {
     if (!_cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier) {
         _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_PRF
 export function _encode_PBKDF2_PRFsAlgorithmIdentifier(
     value: PBKDF2_PRFsAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<PBKDF2_PRFsAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier) {
         _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

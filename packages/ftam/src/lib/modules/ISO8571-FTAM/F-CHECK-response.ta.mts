@@ -117,7 +117,7 @@ let _cached_decoder_for_F_CHECK_response: $.ASN1Decoder<F_CHECK_response> | null
  * @param {_Element} el The element being decoded.
  * @returns {F_CHECK_response} The decoded data structure.
  */
-export function _decode_F_CHECK_response(el: _Element) {
+export function _decode_F_CHECK_response(el: _Element): F_CHECK_response {
   if (!_cached_decoder_for_F_CHECK_response) {
     _cached_decoder_for_F_CHECK_response = function (
       el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_F_CHECK_response: $.ASN1Encoder<F_CHECK_response> | null
 export function _encode_F_CHECK_response(
   value: F_CHECK_response,
   elGetter: $.ASN1Encoder<F_CHECK_response>
-) {
+): _Element {
   if (!_cached_encoder_for_F_CHECK_response) {
     _cached_encoder_for_F_CHECK_response = function (
       value: F_CHECK_response    ): _Element {

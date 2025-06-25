@@ -46,7 +46,7 @@ let _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice: $.ASN1Decod
  */
 export function _decode_DynamicSimpleScanArgument_scopeOrListChoice(
     el: _Element
-) {
+): DynamicSimpleScanArgument_scopeOrListChoice {
     if (!_cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice) {
         _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice = $._decode_inextensible_choice<DynamicSimpleScanArgument_scopeOrListChoice>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice: $.ASN1Encod
 export function _encode_DynamicSimpleScanArgument_scopeOrListChoice(
     value: DynamicSimpleScanArgument_scopeOrListChoice,
     elGetter: $.ASN1Encoder<DynamicSimpleScanArgument_scopeOrListChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice) {
         _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice = $._encode_choice<DynamicSimpleScanArgument_scopeOrListChoice>(
             {

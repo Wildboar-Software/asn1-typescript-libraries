@@ -116,7 +116,7 @@ let _cached_decoder_for_NameTree: $.ASN1Decoder<NameTree> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NameTree} The decoded data structure.
  */
-export function _decode_NameTree(el: _Element) {
+export function _decode_NameTree(el: _Element): NameTree {
     if (!_cached_decoder_for_NameTree) {
         _cached_decoder_for_NameTree = function (el: _Element): NameTree {
             let rdnInfo!: RDNInfo;
@@ -160,7 +160,7 @@ let _cached_encoder_for_NameTree: $.ASN1Encoder<NameTree> | null = null;
 export function _encode_NameTree(
     value: NameTree,
     elGetter: $.ASN1Encoder<NameTree>
-) {
+): _Element {
     if (!_cached_encoder_for_NameTree) {
         _cached_encoder_for_NameTree = function (
             value: NameTree        ): _Element {

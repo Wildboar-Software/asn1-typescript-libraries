@@ -161,7 +161,7 @@ let _cached_decoder_for_NegativeNotificationFields: $.ASN1Decoder<NegativeNotifi
  * @param {_Element} el The element being decoded.
  * @returns {NegativeNotificationFields} The decoded data structure.
  */
-export function _decode_NegativeNotificationFields(el: _Element) {
+export function _decode_NegativeNotificationFields(el: _Element): NegativeNotificationFields {
     if (!_cached_decoder_for_NegativeNotificationFields) {
         _cached_decoder_for_NegativeNotificationFields = function (
             el: _Element
@@ -223,7 +223,7 @@ let _cached_encoder_for_NegativeNotificationFields: $.ASN1Encoder<NegativeNotifi
 export function _encode_NegativeNotificationFields(
     value: NegativeNotificationFields,
     elGetter: $.ASN1Encoder<NegativeNotificationFields>
-) {
+): _Element {
     if (!_cached_encoder_for_NegativeNotificationFields) {
         _cached_encoder_for_NegativeNotificationFields = function (
             value: NegativeNotificationFields        ): _Element {

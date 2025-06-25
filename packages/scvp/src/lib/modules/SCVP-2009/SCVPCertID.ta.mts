@@ -153,7 +153,7 @@ let _cached_decoder_for_SCVPCertID: $.ASN1Decoder<SCVPCertID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SCVPCertID} The decoded data structure.
  */
-export function _decode_SCVPCertID(el: _Element) {
+export function _decode_SCVPCertID(el: _Element): SCVPCertID {
   if (!_cached_decoder_for_SCVPCertID) {
     _cached_decoder_for_SCVPCertID = function (el: _Element): SCVPCertID {
       let certHash!: OCTET_STRING;
@@ -201,7 +201,7 @@ let _cached_encoder_for_SCVPCertID: $.ASN1Encoder<SCVPCertID> | null = null;
 export function _encode_SCVPCertID(
   value: SCVPCertID,
   elGetter: $.ASN1Encoder<SCVPCertID>
-) {
+): _Element {
   if (!_cached_encoder_for_SCVPCertID) {
     _cached_encoder_for_SCVPCertID = function (
       value: SCVPCertID    ): _Element {

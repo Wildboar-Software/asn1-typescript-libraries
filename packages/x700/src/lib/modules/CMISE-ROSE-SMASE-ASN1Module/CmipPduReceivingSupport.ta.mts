@@ -35,7 +35,7 @@ let _cached_decoder_for_CmipPduReceivingSupport: $.ASN1Decoder<CmipPduReceivingS
  * @param {_Element} el The element being decoded.
  * @returns {CmipPduReceivingSupport} The decoded data structure.
  */
-export function _decode_CmipPduReceivingSupport(el: _Element) {
+export function _decode_CmipPduReceivingSupport(el: _Element): CmipPduReceivingSupport {
     if (!_cached_decoder_for_CmipPduReceivingSupport) {
         _cached_decoder_for_CmipPduReceivingSupport = _decode_CmipPduType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_CmipPduReceivingSupport: $.ASN1Encoder<CmipPduReceivingS
 export function _encode_CmipPduReceivingSupport(
     value: CmipPduReceivingSupport,
     elGetter: $.ASN1Encoder<CmipPduReceivingSupport>
-) {
+): _Element {
     if (!_cached_encoder_for_CmipPduReceivingSupport) {
         _cached_encoder_for_CmipPduReceivingSupport = _encode_CmipPduType;
     }

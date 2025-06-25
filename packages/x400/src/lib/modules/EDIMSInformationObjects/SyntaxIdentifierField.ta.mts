@@ -122,7 +122,7 @@ let _cached_decoder_for_SyntaxIdentifierField: $.ASN1Decoder<SyntaxIdentifierFie
  * @param {_Element} el The element being decoded.
  * @returns {SyntaxIdentifierField} The decoded data structure.
  */
-export function _decode_SyntaxIdentifierField(el: _Element) {
+export function _decode_SyntaxIdentifierField(el: _Element): SyntaxIdentifierField {
     if (!_cached_decoder_for_SyntaxIdentifierField) {
         _cached_decoder_for_SyntaxIdentifierField = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_SyntaxIdentifierField: $.ASN1Encoder<SyntaxIdentifierFie
 export function _encode_SyntaxIdentifierField(
     value: SyntaxIdentifierField,
     elGetter: $.ASN1Encoder<SyntaxIdentifierField>
-) {
+): _Element {
     if (!_cached_encoder_for_SyntaxIdentifierField) {
         _cached_encoder_for_SyntaxIdentifierField = function (
             value: SyntaxIdentifierField        ): _Element {

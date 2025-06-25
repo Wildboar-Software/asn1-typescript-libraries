@@ -137,7 +137,7 @@ let _cached_decoder_for_DIRRecord: $.ASN1Decoder<DIRRecord> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DIRRecord} The decoded data structure.
  */
-export function _decode_DIRRecord(el: _Element) {
+export function _decode_DIRRecord(el: _Element): DIRRecord {
     if (!_cached_decoder_for_DIRRecord) {
         _cached_decoder_for_DIRRecord = $._decode_implicit<DIRRecord>(
             () =>
@@ -202,7 +202,7 @@ let _cached_encoder_for_DIRRecord: $.ASN1Encoder<DIRRecord> | null = null;
 export function _encode_DIRRecord(
     value: DIRRecord,
     elGetter: $.ASN1Encoder<DIRRecord>
-) {
+): _Element {
     if (!_cached_encoder_for_DIRRecord) {
         _cached_encoder_for_DIRRecord = $._encode_implicit(
             _TagClass.application,

@@ -39,7 +39,7 @@ let _cached_decoder_for_UserIdentifier: $.ASN1Decoder<UserIdentifier> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {UserIdentifier} The decoded data structure.
  */
-export function _decode_UserIdentifier(el: _Element) {
+export function _decode_UserIdentifier(el: _Element): UserIdentifier {
     if (!_cached_decoder_for_UserIdentifier) {
         _cached_decoder_for_UserIdentifier = _decode_NameType;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_UserIdentifier: $.ASN1Encoder<UserIdentifier> | null = n
 export function _encode_UserIdentifier(
     value: UserIdentifier,
     elGetter: $.ASN1Encoder<UserIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_UserIdentifier) {
         _cached_encoder_for_UserIdentifier = _encode_NameType;
     }

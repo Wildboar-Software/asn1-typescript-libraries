@@ -50,7 +50,7 @@ let _cached_decoder_for_SEC1_PDU: $.ASN1Decoder<SEC1_PDU> | null = null;
  * @returns {SEC1_PDU} The decoded data structure.
  */
 export
-function _decode_SEC1_PDU (el: _Element) {
+function _decode_SEC1_PDU (el: _Element): SEC1_PDU {
     if (!_cached_decoder_for_SEC1_PDU) { _cached_decoder_for_SEC1_PDU = $._decode_extensible_choice<SEC1_PDU>({
     "CONTEXT 0": [ "privateKey", $._decode_implicit<ECPrivateKey>(() => _decode_ECPrivateKey) ],
     "CONTEXT 1": [ "spki", $._decode_implicit<SubjectPublicKeyInfo>(() => _decode_SubjectPublicKeyInfo) ],
@@ -71,7 +71,7 @@ let _cached_encoder_for_SEC1_PDU: $.ASN1Encoder<SEC1_PDU> | null = null;
  * @returns {_Element} The SEC1_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_SEC1_PDU (value: SEC1_PDU, elGetter: $.ASN1Encoder<SEC1_PDU>) {
+function _encode_SEC1_PDU (value: SEC1_PDU, elGetter: $.ASN1Encoder<SEC1_PDU>): _Element {
     if (!_cached_encoder_for_SEC1_PDU) { _cached_encoder_for_SEC1_PDU = $._encode_choice<SEC1_PDU>({
     "privateKey": $._encode_implicit(_TagClass.context, 0, () => _encode_ECPrivateKey, $.DER),
     "spki": $._encode_implicit(_TagClass.context, 1, () => _encode_SubjectPublicKeyInfo, $.DER),

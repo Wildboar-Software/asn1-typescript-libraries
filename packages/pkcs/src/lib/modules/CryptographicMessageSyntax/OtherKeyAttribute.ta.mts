@@ -116,7 +116,7 @@ let _cached_decoder_for_OtherKeyAttribute: $.ASN1Decoder<OtherKeyAttribute> | nu
  * @param {_Element} el The element being decoded.
  * @returns {OtherKeyAttribute} The decoded data structure.
  */
-export function _decode_OtherKeyAttribute(el: _Element) {
+export function _decode_OtherKeyAttribute(el: _Element): OtherKeyAttribute {
     if (!_cached_decoder_for_OtherKeyAttribute) {
         _cached_decoder_for_OtherKeyAttribute = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_OtherKeyAttribute: $.ASN1Encoder<OtherKeyAttribute> | nu
 export function _encode_OtherKeyAttribute(
     value: OtherKeyAttribute,
     elGetter: $.ASN1Encoder<OtherKeyAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherKeyAttribute) {
         _cached_encoder_for_OtherKeyAttribute = function (
             value: OtherKeyAttribute        ): _Element {

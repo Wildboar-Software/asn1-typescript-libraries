@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageDeliveryTime: $.ASN1Decoder<MessageDeliveryTime> 
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryTime} The decoded data structure.
  */
-export function _decode_MessageDeliveryTime(el: _Element) {
+export function _decode_MessageDeliveryTime(el: _Element): MessageDeliveryTime {
     if (!_cached_decoder_for_MessageDeliveryTime) {
         _cached_decoder_for_MessageDeliveryTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageDeliveryTime: $.ASN1Encoder<MessageDeliveryTime> 
 export function _encode_MessageDeliveryTime(
     value: MessageDeliveryTime,
     elGetter: $.ASN1Encoder<MessageDeliveryTime>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageDeliveryTime) {
         _cached_encoder_for_MessageDeliveryTime = _encode_Time;
     }

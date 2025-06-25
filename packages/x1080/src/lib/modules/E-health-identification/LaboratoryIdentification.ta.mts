@@ -142,7 +142,7 @@ let _cached_decoder_for_LaboratoryIdentification: $.ASN1Decoder<LaboratoryIdenti
  * @param {_Element} el The element being decoded.
  * @returns {LaboratoryIdentification} The decoded data structure.
  */
-export function _decode_LaboratoryIdentification(el: _Element) {
+export function _decode_LaboratoryIdentification(el: _Element): LaboratoryIdentification {
     if (!_cached_decoder_for_LaboratoryIdentification) {
         _cached_decoder_for_LaboratoryIdentification = function (
             el: _Element
@@ -193,7 +193,7 @@ let _cached_encoder_for_LaboratoryIdentification: $.ASN1Encoder<LaboratoryIdenti
 export function _encode_LaboratoryIdentification(
     value: LaboratoryIdentification,
     elGetter: $.ASN1Encoder<LaboratoryIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_LaboratoryIdentification) {
         _cached_encoder_for_LaboratoryIdentification = function (
             value: LaboratoryIdentification        ): _Element {

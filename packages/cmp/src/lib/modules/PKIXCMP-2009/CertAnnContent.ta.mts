@@ -38,7 +38,7 @@ let _cached_decoder_for_CertAnnContent: $.ASN1Decoder<CertAnnContent> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertAnnContent} The decoded data structure.
  */
-export function _decode_CertAnnContent(el: _Element) {
+export function _decode_CertAnnContent(el: _Element): CertAnnContent {
   if (!_cached_decoder_for_CertAnnContent) {
     _cached_decoder_for_CertAnnContent = _decode_CMPCertificate;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_CertAnnContent: $.ASN1Encoder<CertAnnContent> | null = n
 export function _encode_CertAnnContent(
   value: CertAnnContent,
   elGetter: $.ASN1Encoder<CertAnnContent>
-) {
+): _Element {
   if (!_cached_encoder_for_CertAnnContent) {
     _cached_encoder_for_CertAnnContent = _encode_CMPCertificate;
   }

@@ -47,7 +47,7 @@ let _cached_decoder_for_NeAssignmentPointer: $.ASN1Decoder<NeAssignmentPointer> 
  * @param {_Element} el The element being decoded.
  * @returns {NeAssignmentPointer} The decoded data structure.
  */
-export function _decode_NeAssignmentPointer(el: _Element) {
+export function _decode_NeAssignmentPointer(el: _Element): NeAssignmentPointer {
     if (!_cached_decoder_for_NeAssignmentPointer) {
         _cached_decoder_for_NeAssignmentPointer = $._decode_inextensible_choice<NeAssignmentPointer>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_NeAssignmentPointer: $.ASN1Encoder<NeAssignmentPointer> 
 export function _encode_NeAssignmentPointer(
     value: NeAssignmentPointer,
     elGetter: $.ASN1Encoder<NeAssignmentPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_NeAssignmentPointer) {
         _cached_encoder_for_NeAssignmentPointer = $._encode_choice<NeAssignmentPointer>(
             {

@@ -212,7 +212,7 @@ let _cached_decoder_for_DynamicSimpleScanArgument: $.ASN1Decoder<DynamicSimpleSc
  * @param {_Element} el The element being decoded.
  * @returns {DynamicSimpleScanArgument} The decoded data structure.
  */
-export function _decode_DynamicSimpleScanArgument(el: _Element) {
+export function _decode_DynamicSimpleScanArgument(el: _Element): DynamicSimpleScanArgument {
     if (!_cached_decoder_for_DynamicSimpleScanArgument) {
         _cached_decoder_for_DynamicSimpleScanArgument = function (
             el: _Element
@@ -286,7 +286,7 @@ let _cached_encoder_for_DynamicSimpleScanArgument: $.ASN1Encoder<DynamicSimpleSc
 export function _encode_DynamicSimpleScanArgument(
     value: DynamicSimpleScanArgument,
     elGetter: $.ASN1Encoder<DynamicSimpleScanArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_DynamicSimpleScanArgument) {
         _cached_encoder_for_DynamicSimpleScanArgument = function (
             value: DynamicSimpleScanArgument        ): _Element {

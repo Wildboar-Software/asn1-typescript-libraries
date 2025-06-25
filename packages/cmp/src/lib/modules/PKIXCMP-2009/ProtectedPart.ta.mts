@@ -120,7 +120,7 @@ let _cached_decoder_for_ProtectedPart: $.ASN1Decoder<ProtectedPart> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ProtectedPart} The decoded data structure.
  */
-export function _decode_ProtectedPart(el: _Element) {
+export function _decode_ProtectedPart(el: _Element): ProtectedPart {
   if (!_cached_decoder_for_ProtectedPart) {
     _cached_decoder_for_ProtectedPart = function (el: _Element): ProtectedPart {
       const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_ProtectedPart: $.ASN1Encoder<ProtectedPart> | null = nul
 export function _encode_ProtectedPart(
   value: ProtectedPart,
   elGetter: $.ASN1Encoder<ProtectedPart>
-) {
+): _Element {
   if (!_cached_encoder_for_ProtectedPart) {
     _cached_encoder_for_ProtectedPart = function (
       value: ProtectedPart    ): _Element {

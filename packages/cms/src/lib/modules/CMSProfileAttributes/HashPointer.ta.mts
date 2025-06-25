@@ -121,7 +121,7 @@ let _cached_decoder_for_HashPointer: $.ASN1Decoder<HashPointer> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HashPointer} The decoded data structure.
  */
-export function _decode_HashPointer(el: _Element) {
+export function _decode_HashPointer(el: _Element): HashPointer {
     if (!_cached_decoder_for_HashPointer) {
         _cached_decoder_for_HashPointer = function (el: _Element): HashPointer {
             let hash: OPTIONAL<DigestedData>;
@@ -165,7 +165,7 @@ let _cached_encoder_for_HashPointer: $.ASN1Encoder<HashPointer> | null = null;
 export function _encode_HashPointer(
     value: HashPointer,
     elGetter: $.ASN1Encoder<HashPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_HashPointer) {
         _cached_encoder_for_HashPointer = function (
             value: HashPointer        ): _Element {

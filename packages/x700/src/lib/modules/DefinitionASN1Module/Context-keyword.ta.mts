@@ -122,7 +122,7 @@ let _cached_decoder_for_Context_keyword: $.ASN1Decoder<Context_keyword> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Context_keyword} The decoded data structure.
  */
-export function _decode_Context_keyword(el: _Element) {
+export function _decode_Context_keyword(el: _Element): Context_keyword {
     if (!_cached_decoder_for_Context_keyword) {
         _cached_decoder_for_Context_keyword = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_Context_keyword: $.ASN1Encoder<Context_keyword> | null =
 export function _encode_Context_keyword(
     value: Context_keyword,
     elGetter: $.ASN1Encoder<Context_keyword>
-) {
+): _Element {
     if (!_cached_encoder_for_Context_keyword) {
         _cached_encoder_for_Context_keyword = function (
             value: Context_keyword        ): _Element {

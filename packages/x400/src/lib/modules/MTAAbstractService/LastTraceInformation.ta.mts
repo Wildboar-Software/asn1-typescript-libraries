@@ -142,7 +142,7 @@ let _cached_decoder_for_LastTraceInformation: $.ASN1Decoder<LastTraceInformation
  * @param {_Element} el The element being decoded.
  * @returns {LastTraceInformation} The decoded data structure.
  */
-export function _decode_LastTraceInformation(el: _Element) {
+export function _decode_LastTraceInformation(el: _Element): LastTraceInformation {
     if (!_cached_decoder_for_LastTraceInformation) {
         _cached_decoder_for_LastTraceInformation = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_LastTraceInformation: $.ASN1Encoder<LastTraceInformation
 export function _encode_LastTraceInformation(
     value: LastTraceInformation,
     elGetter: $.ASN1Encoder<LastTraceInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_LastTraceInformation) {
         _cached_encoder_for_LastTraceInformation = function (
             value: LastTraceInformation        ): _Element {

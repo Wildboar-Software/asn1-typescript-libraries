@@ -38,7 +38,7 @@ let _cached_decoder_for_CharacterizedBy: $.ASN1Decoder<CharacterizedBy> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CharacterizedBy} The decoded data structure.
  */
-export function _decode_CharacterizedBy(el: _Element) {
+export function _decode_CharacterizedBy(el: _Element): CharacterizedBy {
     if (!_cached_decoder_for_CharacterizedBy) {
         _cached_decoder_for_CharacterizedBy = _decode_TemplateList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_CharacterizedBy: $.ASN1Encoder<CharacterizedBy> | null =
 export function _encode_CharacterizedBy(
     value: CharacterizedBy,
     elGetter: $.ASN1Encoder<CharacterizedBy>
-) {
+): _Element {
     if (!_cached_encoder_for_CharacterizedBy) {
         _cached_encoder_for_CharacterizedBy = _encode_TemplateList;
     }

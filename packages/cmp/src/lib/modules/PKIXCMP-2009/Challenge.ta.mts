@@ -150,7 +150,7 @@ let _cached_decoder_for_Challenge: $.ASN1Decoder<Challenge> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Challenge} The decoded data structure.
  */
-export function _decode_Challenge(el: _Element) {
+export function _decode_Challenge(el: _Element): Challenge {
   if (!_cached_decoder_for_Challenge) {
     _cached_decoder_for_Challenge = function (el: _Element): Challenge {
       let owf: OPTIONAL<AlgorithmIdentifier>;
@@ -199,7 +199,7 @@ let _cached_encoder_for_Challenge: $.ASN1Encoder<Challenge> | null = null;
 export function _encode_Challenge(
   value: Challenge,
   elGetter: $.ASN1Encoder<Challenge>
-) {
+): _Element {
   if (!_cached_encoder_for_Challenge) {
     _cached_encoder_for_Challenge = function (
       value: Challenge    ): _Element {

@@ -129,7 +129,7 @@ let _cached_decoder_for_F_GROUP_DELETE_request: $.ASN1Decoder<F_GROUP_DELETE_req
  * @param {_Element} el The element being decoded.
  * @returns {F_GROUP_DELETE_request} The decoded data structure.
  */
-export function _decode_F_GROUP_DELETE_request(el: _Element) {
+export function _decode_F_GROUP_DELETE_request(el: _Element): F_GROUP_DELETE_request {
   if (!_cached_decoder_for_F_GROUP_DELETE_request) {
     _cached_decoder_for_F_GROUP_DELETE_request = function (
       el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_F_GROUP_DELETE_request: $.ASN1Encoder<F_GROUP_DELETE_req
 export function _encode_F_GROUP_DELETE_request(
   value: F_GROUP_DELETE_request,
   elGetter: $.ASN1Encoder<F_GROUP_DELETE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_GROUP_DELETE_request) {
     _cached_encoder_for_F_GROUP_DELETE_request = function (
       value: F_GROUP_DELETE_request    ): _Element {

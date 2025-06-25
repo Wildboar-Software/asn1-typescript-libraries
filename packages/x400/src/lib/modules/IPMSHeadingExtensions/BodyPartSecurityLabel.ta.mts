@@ -41,7 +41,7 @@ let _cached_decoder_for_BodyPartSecurityLabel: $.ASN1Decoder<BodyPartSecurityLab
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartSecurityLabel} The decoded data structure.
  */
-export function _decode_BodyPartSecurityLabel(el: _Element) {
+export function _decode_BodyPartSecurityLabel(el: _Element): BodyPartSecurityLabel {
     if (!_cached_decoder_for_BodyPartSecurityLabel) {
         _cached_decoder_for_BodyPartSecurityLabel = $._decode_inextensible_choice<BodyPartSecurityLabel>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_BodyPartSecurityLabel: $.ASN1Encoder<BodyPartSecurityLab
 export function _encode_BodyPartSecurityLabel(
     value: BodyPartSecurityLabel,
     elGetter: $.ASN1Encoder<BodyPartSecurityLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartSecurityLabel) {
         _cached_encoder_for_BodyPartSecurityLabel = $._encode_choice<BodyPartSecurityLabel>(
             {

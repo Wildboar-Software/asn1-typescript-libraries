@@ -255,7 +255,7 @@ let _cached_decoder_for_F_LINK_request: $.ASN1Decoder<F_LINK_request> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {F_LINK_request} The decoded data structure.
  */
-export function _decode_F_LINK_request(el: _Element) {
+export function _decode_F_LINK_request(el: _Element): F_LINK_request {
   if (!_cached_decoder_for_F_LINK_request) {
     _cached_decoder_for_F_LINK_request = function (
       el: _Element
@@ -336,7 +336,7 @@ let _cached_encoder_for_F_LINK_request: $.ASN1Encoder<F_LINK_request> | null = n
 export function _encode_F_LINK_request(
   value: F_LINK_request,
   elGetter: $.ASN1Encoder<F_LINK_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_LINK_request) {
     _cached_encoder_for_F_LINK_request = function (
       value: F_LINK_request    ): _Element {

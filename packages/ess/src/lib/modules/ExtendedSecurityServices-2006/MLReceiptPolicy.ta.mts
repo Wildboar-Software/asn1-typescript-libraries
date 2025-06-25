@@ -41,7 +41,7 @@ let _cached_decoder_for_MLReceiptPolicy: $.ASN1Decoder<MLReceiptPolicy> | null =
  * @param {_Element} el The element being decoded.
  * @returns {MLReceiptPolicy} The decoded data structure.
  */
-export function _decode_MLReceiptPolicy(el: _Element) {
+export function _decode_MLReceiptPolicy(el: _Element): MLReceiptPolicy {
     if (!_cached_decoder_for_MLReceiptPolicy) {
         _cached_decoder_for_MLReceiptPolicy = $._decode_inextensible_choice<MLReceiptPolicy>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_MLReceiptPolicy: $.ASN1Encoder<MLReceiptPolicy> | null =
 export function _encode_MLReceiptPolicy(
     value: MLReceiptPolicy,
     elGetter: $.ASN1Encoder<MLReceiptPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_MLReceiptPolicy) {
         _cached_encoder_for_MLReceiptPolicy = $._encode_choice<MLReceiptPolicy>(
             {

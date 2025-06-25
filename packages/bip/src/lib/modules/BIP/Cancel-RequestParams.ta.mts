@@ -107,7 +107,7 @@ let _cached_decoder_for_Cancel_RequestParams: $.ASN1Decoder<Cancel_RequestParams
  * @param {_Element} el The element being decoded.
  * @returns {Cancel_RequestParams} The decoded data structure.
  */
-export function _decode_Cancel_RequestParams(el: _Element) {
+export function _decode_Cancel_RequestParams(el: _Element): Cancel_RequestParams {
   if (!_cached_decoder_for_Cancel_RequestParams) {
     _cached_decoder_for_Cancel_RequestParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_Cancel_RequestParams: $.ASN1Encoder<Cancel_RequestParams
 export function _encode_Cancel_RequestParams(
   value: Cancel_RequestParams,
   elGetter: $.ASN1Encoder<Cancel_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Cancel_RequestParams) {
     _cached_encoder_for_Cancel_RequestParams = function (
       value: Cancel_RequestParams    ): _Element {

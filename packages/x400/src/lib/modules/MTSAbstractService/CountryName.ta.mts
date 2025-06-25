@@ -38,7 +38,7 @@ let _cached_decoder_for_CountryName: $.ASN1Decoder<CountryName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CountryName} The decoded data structure.
  */
-export function _decode_CountryName(el: _Element) {
+export function _decode_CountryName(el: _Element): CountryName {
     if (!_cached_decoder_for_CountryName) {
         _cached_decoder_for_CountryName = $._decode_explicit<CountryName>(() =>
             $._decode_inextensible_choice<CountryName>({
@@ -65,7 +65,7 @@ let _cached_encoder_for_CountryName: $.ASN1Encoder<CountryName> | null = null;
 export function _encode_CountryName(
     value: CountryName,
     elGetter: $.ASN1Encoder<CountryName>
-) {
+): _Element {
     if (!_cached_encoder_for_CountryName) {
         _cached_encoder_for_CountryName = $._encode_explicit(
             _TagClass.application,

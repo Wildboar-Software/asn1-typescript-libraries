@@ -35,7 +35,7 @@ let _cached_decoder_for_Implementation_Information: $.ASN1Decoder<Implementation
  * @param {_Element} el The element being decoded.
  * @returns {Implementation_Information} The decoded data structure.
  */
-export function _decode_Implementation_Information(el: _Element) {
+export function _decode_Implementation_Information(el: _Element): Implementation_Information {
   if (!_cached_decoder_for_Implementation_Information) {
     _cached_decoder_for_Implementation_Information = $._decode_implicit<Implementation_Information>(
       () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_Implementation_Information: $.ASN1Encoder<Implementation
 export function _encode_Implementation_Information(
   value: Implementation_Information,
   elGetter: $.ASN1Encoder<Implementation_Information>
-) {
+): _Element {
   if (!_cached_encoder_for_Implementation_Information) {
     _cached_encoder_for_Implementation_Information = $._encode_implicit(
       _TagClass.context,

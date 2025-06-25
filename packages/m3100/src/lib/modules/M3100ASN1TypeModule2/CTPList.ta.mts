@@ -38,7 +38,7 @@ let _cached_decoder_for_CTPList: $.ASN1Decoder<CTPList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CTPList} The decoded data structure.
  */
-export function _decode_CTPList(el: _Element) {
+export function _decode_CTPList(el: _Element): CTPList {
     if (!_cached_decoder_for_CTPList) {
         _cached_decoder_for_CTPList = _decode_NWTPList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_CTPList: $.ASN1Encoder<CTPList> | null = null;
 export function _encode_CTPList(
     value: CTPList,
     elGetter: $.ASN1Encoder<CTPList>
-) {
+): _Element {
     if (!_cached_encoder_for_CTPList) {
         _cached_encoder_for_CTPList = _encode_NWTPList;
     }

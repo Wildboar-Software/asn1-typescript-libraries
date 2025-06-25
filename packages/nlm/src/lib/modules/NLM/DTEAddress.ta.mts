@@ -130,7 +130,7 @@ let _cached_decoder_for_DTEAddress: $.ASN1Decoder<DTEAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DTEAddress} The decoded data structure.
  */
-export function _decode_DTEAddress(el: _Element) {
+export function _decode_DTEAddress(el: _Element): DTEAddress {
     if (!_cached_decoder_for_DTEAddress) {
         _cached_decoder_for_DTEAddress = function (el: _Element): DTEAddress {
             const sequence: _Element[] = el.sequence;
@@ -171,7 +171,7 @@ let _cached_encoder_for_DTEAddress: $.ASN1Encoder<DTEAddress> | null = null;
 export function _encode_DTEAddress(
     value: DTEAddress,
     elGetter: $.ASN1Encoder<DTEAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_DTEAddress) {
         _cached_encoder_for_DTEAddress = function (
             value: DTEAddress        ): _Element {

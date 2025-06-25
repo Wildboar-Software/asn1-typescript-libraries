@@ -148,7 +148,7 @@ let _cached_decoder_for_PKICertificateInformation: $.ASN1Decoder<PKICertificateI
  * @param {_Element} el The element being decoded.
  * @returns {PKICertificateInformation} The decoded data structure.
  */
-export function _decode_PKICertificateInformation(el: _Element) {
+export function _decode_PKICertificateInformation(el: _Element): PKICertificateInformation {
     if (!_cached_decoder_for_PKICertificateInformation) {
         _cached_decoder_for_PKICertificateInformation = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_PKICertificateInformation: $.ASN1Encoder<PKICertificateI
 export function _encode_PKICertificateInformation(
     value: PKICertificateInformation,
     elGetter: $.ASN1Encoder<PKICertificateInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_PKICertificateInformation) {
         _cached_encoder_for_PKICertificateInformation = function (
             value: PKICertificateInformation        ): _Element {

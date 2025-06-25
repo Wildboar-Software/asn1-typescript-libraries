@@ -58,7 +58,7 @@ let _cached_decoder_for_NotificationCause: $.ASN1Decoder<NotificationCause> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NotificationCause} The decoded data structure.
  */
-export function _decode_NotificationCause(el: _Element) {
+export function _decode_NotificationCause(el: _Element): NotificationCause {
     if (!_cached_decoder_for_NotificationCause) {
         _cached_decoder_for_NotificationCause = $._decode_inextensible_choice<NotificationCause>(
             {
@@ -100,7 +100,7 @@ let _cached_encoder_for_NotificationCause: $.ASN1Encoder<NotificationCause> | nu
 export function _encode_NotificationCause(
     value: NotificationCause,
     elGetter: $.ASN1Encoder<NotificationCause>
-) {
+): _Element {
     if (!_cached_encoder_for_NotificationCause) {
         _cached_encoder_for_NotificationCause = $._encode_choice<NotificationCause>(
             {

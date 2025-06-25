@@ -121,7 +121,7 @@ let _cached_decoder_for_gulsSignatureTransformation_XformedDataType_keyInformati
  */
 export function _decode_gulsSignatureTransformation_XformedDataType_keyInformation(
   el: _Element
-) {
+): gulsSignatureTransformation_XformedDataType_keyInformation {
   if (
     !_cached_decoder_for_gulsSignatureTransformation_XformedDataType_keyInformation
   ) {
@@ -170,7 +170,7 @@ let _cached_encoder_for_gulsSignatureTransformation_XformedDataType_keyInformati
 export function _encode_gulsSignatureTransformation_XformedDataType_keyInformation(
   value: gulsSignatureTransformation_XformedDataType_keyInformation,
   elGetter: $.ASN1Encoder<gulsSignatureTransformation_XformedDataType_keyInformation>
-) {
+): _Element {
   if (
     !_cached_encoder_for_gulsSignatureTransformation_XformedDataType_keyInformation
   ) {

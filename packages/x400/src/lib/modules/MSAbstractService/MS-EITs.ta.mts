@@ -35,7 +35,7 @@ let _cached_decoder_for_MS_EITs: $.ASN1Decoder<MS_EITs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MS_EITs} The decoded data structure.
  */
-export function _decode_MS_EITs(el: _Element) {
+export function _decode_MS_EITs(el: _Element): MS_EITs {
     if (!_cached_decoder_for_MS_EITs) {
         _cached_decoder_for_MS_EITs = $._decodeSetOf<MS_EIT>(
             () => _decode_MS_EIT
@@ -56,7 +56,7 @@ let _cached_encoder_for_MS_EITs: $.ASN1Encoder<MS_EITs> | null = null;
 export function _encode_MS_EITs(
     value: MS_EITs,
     elGetter: $.ASN1Encoder<MS_EITs>
-) {
+): _Element {
     if (!_cached_encoder_for_MS_EITs) {
         _cached_encoder_for_MS_EITs = $._encodeSetOf<MS_EIT>(
             () => _encode_MS_EIT,

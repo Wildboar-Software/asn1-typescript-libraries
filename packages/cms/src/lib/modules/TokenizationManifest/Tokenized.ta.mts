@@ -111,7 +111,7 @@ let _cached_decoder_for_Tokenized: $.ASN1Decoder<Tokenized> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Tokenized} The decoded data structure.
  */
-export function _decode_Tokenized(el: _Element) {
+export function _decode_Tokenized(el: _Element): Tokenized {
     if (!_cached_decoder_for_Tokenized) {
         _cached_decoder_for_Tokenized = function (el: _Element): Tokenized {
             let name!: OBJECT_IDENTIFIER;
@@ -152,7 +152,7 @@ let _cached_encoder_for_Tokenized: $.ASN1Encoder<Tokenized> | null = null;
 export function _encode_Tokenized(
     value: Tokenized,
     elGetter: $.ASN1Encoder<Tokenized>
-) {
+): _Element {
     if (!_cached_encoder_for_Tokenized) {
         _cached_encoder_for_Tokenized = function (
             value: Tokenized        ): _Element {

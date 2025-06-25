@@ -125,7 +125,7 @@ let _cached_decoder_for_DHParameter: $.ASN1Decoder<DHParameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DHParameter} The decoded data structure.
  */
-export function _decode_DHParameter(el: _Element) {
+export function _decode_DHParameter(el: _Element): DHParameter {
     if (!_cached_decoder_for_DHParameter) {
         _cached_decoder_for_DHParameter = function (el: _Element): DHParameter {
             let prime!: OCTET_STRING;
@@ -174,7 +174,7 @@ let _cached_encoder_for_DHParameter: $.ASN1Encoder<DHParameter> | null = null;
 export function _encode_DHParameter(
     value: DHParameter,
     elGetter: $.ASN1Encoder<DHParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_DHParameter) {
         _cached_encoder_for_DHParameter = function (
             value: DHParameter        ): _Element {

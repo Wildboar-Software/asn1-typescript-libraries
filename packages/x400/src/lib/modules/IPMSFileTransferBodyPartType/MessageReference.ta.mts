@@ -117,7 +117,7 @@ let _cached_decoder_for_MessageReference: $.ASN1Decoder<MessageReference> | null
  * @param {_Element} el The element being decoded.
  * @returns {MessageReference} The decoded data structure.
  */
-export function _decode_MessageReference(el: _Element) {
+export function _decode_MessageReference(el: _Element): MessageReference {
     if (!_cached_decoder_for_MessageReference) {
         _cached_decoder_for_MessageReference = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_MessageReference: $.ASN1Encoder<MessageReference> | null
 export function _encode_MessageReference(
     value: MessageReference,
     elGetter: $.ASN1Encoder<MessageReference>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageReference) {
         _cached_encoder_for_MessageReference = function (
             value: MessageReference        ): _Element {

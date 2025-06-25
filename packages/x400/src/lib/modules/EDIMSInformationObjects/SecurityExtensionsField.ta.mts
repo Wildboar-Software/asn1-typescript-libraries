@@ -35,7 +35,7 @@ let _cached_decoder_for_SecurityExtensionsField: $.ASN1Decoder<SecurityExtension
  * @param {_Element} el The element being decoded.
  * @returns {SecurityExtensionsField} The decoded data structure.
  */
-export function _decode_SecurityExtensionsField(el: _Element) {
+export function _decode_SecurityExtensionsField(el: _Element): SecurityExtensionsField {
     if (!_cached_decoder_for_SecurityExtensionsField) {
         _cached_decoder_for_SecurityExtensionsField = $._decodeSetOf<SecurityExtensionsSubField>(
             () => _decode_SecurityExtensionsSubField
@@ -56,7 +56,7 @@ let _cached_encoder_for_SecurityExtensionsField: $.ASN1Encoder<SecurityExtension
 export function _encode_SecurityExtensionsField(
     value: SecurityExtensionsField,
     elGetter: $.ASN1Encoder<SecurityExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityExtensionsField) {
         _cached_encoder_for_SecurityExtensionsField = $._encodeSetOf<SecurityExtensionsSubField>(
             () => _encode_SecurityExtensionsSubField,

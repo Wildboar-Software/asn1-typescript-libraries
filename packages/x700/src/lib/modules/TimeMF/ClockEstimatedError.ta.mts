@@ -35,7 +35,7 @@ let _cached_decoder_for_ClockEstimatedError: $.ASN1Decoder<ClockEstimatedError> 
  * @param {_Element} el The element being decoded.
  * @returns {ClockEstimatedError} The decoded data structure.
  */
-export function _decode_ClockEstimatedError(el: _Element) {
+export function _decode_ClockEstimatedError(el: _Element): ClockEstimatedError {
     if (!_cached_decoder_for_ClockEstimatedError) {
         _cached_decoder_for_ClockEstimatedError = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ClockEstimatedError: $.ASN1Encoder<ClockEstimatedError> 
 export function _encode_ClockEstimatedError(
     value: ClockEstimatedError,
     elGetter: $.ASN1Encoder<ClockEstimatedError>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockEstimatedError) {
         _cached_encoder_for_ClockEstimatedError = _encode_TimeInterval;
     }

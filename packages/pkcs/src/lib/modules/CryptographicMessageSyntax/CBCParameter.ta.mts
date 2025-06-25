@@ -29,7 +29,7 @@ let _cached_decoder_for_CBCParameter: $.ASN1Decoder<CBCParameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CBCParameter} The decoded data structure.
  */
-export function _decode_CBCParameter(el: _Element) {
+export function _decode_CBCParameter(el: _Element): CBCParameter {
     if (!_cached_decoder_for_CBCParameter) {
         _cached_decoder_for_CBCParameter = _decode_IV;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_CBCParameter: $.ASN1Encoder<CBCParameter> | null = null;
 export function _encode_CBCParameter(
     value: CBCParameter,
     elGetter: $.ASN1Encoder<CBCParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_CBCParameter) {
         _cached_encoder_for_CBCParameter = _encode_IV;
     }

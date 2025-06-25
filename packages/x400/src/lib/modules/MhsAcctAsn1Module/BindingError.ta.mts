@@ -48,7 +48,7 @@ let _cached_decoder_for_BindingError: $.ASN1Decoder<BindingError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BindingError} The decoded data structure.
  */
-export function _decode_BindingError(el: _Element) {
+export function _decode_BindingError(el: _Element): BindingError {
     if (!_cached_decoder_for_BindingError) {
         _cached_decoder_for_BindingError = $._decode_inextensible_choice<BindingError>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_BindingError: $.ASN1Encoder<BindingError> | null = null;
 export function _encode_BindingError(
     value: BindingError,
     elGetter: $.ASN1Encoder<BindingError>
-) {
+): _Element {
     if (!_cached_encoder_for_BindingError) {
         _cached_encoder_for_BindingError = $._encode_choice<BindingError>(
             {

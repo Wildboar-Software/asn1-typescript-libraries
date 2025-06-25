@@ -302,7 +302,7 @@ let _cached_decoder_for_CP_type_normal_mode_parameters: $.ASN1Decoder<CP_type_no
  * @param {_Element} el The element being decoded.
  * @returns {CP_type_normal_mode_parameters} The decoded data structure.
  */
-export function _decode_CP_type_normal_mode_parameters(el: _Element) {
+export function _decode_CP_type_normal_mode_parameters(el: _Element): CP_type_normal_mode_parameters {
     if (!_cached_decoder_for_CP_type_normal_mode_parameters) {
         _cached_decoder_for_CP_type_normal_mode_parameters = function (
             el: _Element
@@ -417,7 +417,7 @@ let _cached_encoder_for_CP_type_normal_mode_parameters: $.ASN1Encoder<CP_type_no
 export function _encode_CP_type_normal_mode_parameters(
     value: CP_type_normal_mode_parameters,
     elGetter: $.ASN1Encoder<CP_type_normal_mode_parameters>
-) {
+): _Element {
     if (!_cached_encoder_for_CP_type_normal_mode_parameters) {
         _cached_encoder_for_CP_type_normal_mode_parameters = function (
             value: CP_type_normal_mode_parameters        ): _Element {

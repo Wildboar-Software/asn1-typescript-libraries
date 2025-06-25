@@ -147,7 +147,7 @@ let _cached_decoder_for_Restriction: $.ASN1Decoder<Restriction> | null = null;
  * @returns {Restriction} The decoded data structure.
  */
 export
-function _decode_Restriction (el: _Element) {
+function _decode_Restriction (el: _Element): Restriction {
     if (!_cached_decoder_for_Restriction) { _cached_decoder_for_Restriction = function (el: _Element): Restriction {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
     let permitted: OPTIONAL<BOOLEAN> = Restriction._default_value_for_permitted;
@@ -184,7 +184,7 @@ let _cached_encoder_for_Restriction: $.ASN1Encoder<Restriction> | null = null;
  * @returns {_Element} The Restriction, encoded as an ASN.1 Element.
  */
 export
-function _encode_Restriction (value: Restriction, elGetter: $.ASN1Encoder<Restriction>) {
+function _encode_Restriction (value: Restriction, elGetter: $.ASN1Encoder<Restriction>): _Element {
     if (!_cached_encoder_for_Restriction) { _cached_encoder_for_Restriction = function (value: Restriction): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [

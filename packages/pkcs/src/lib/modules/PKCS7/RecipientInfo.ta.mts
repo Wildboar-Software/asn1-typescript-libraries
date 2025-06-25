@@ -52,7 +52,7 @@ let _cached_decoder_for_RecipientInfo: $.ASN1Decoder<RecipientInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RecipientInfo} The decoded data structure.
  */
-export function _decode_RecipientInfo(el: _Element) {
+export function _decode_RecipientInfo(el: _Element): RecipientInfo {
     if (!_cached_decoder_for_RecipientInfo) {
         _cached_decoder_for_RecipientInfo = $._decode_inextensible_choice<RecipientInfo>(
             {
@@ -92,7 +92,7 @@ let _cached_encoder_for_RecipientInfo: $.ASN1Encoder<RecipientInfo> | null = nul
 export function _encode_RecipientInfo(
     value: RecipientInfo,
     elGetter: $.ASN1Encoder<RecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientInfo) {
         _cached_encoder_for_RecipientInfo = $._encode_choice<RecipientInfo>(
             {

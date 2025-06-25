@@ -114,7 +114,7 @@ let _cached_decoder_for_ToTPPools_Item: $.ASN1Decoder<ToTPPools_Item> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ToTPPools_Item} The decoded data structure.
  */
-export function _decode_ToTPPools_Item(el: _Element) {
+export function _decode_ToTPPools_Item(el: _Element): ToTPPools_Item {
     if (!_cached_decoder_for_ToTPPools_Item) {
         _cached_decoder_for_ToTPPools_Item = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_ToTPPools_Item: $.ASN1Encoder<ToTPPools_Item> | null = n
 export function _encode_ToTPPools_Item(
     value: ToTPPools_Item,
     elGetter: $.ASN1Encoder<ToTPPools_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ToTPPools_Item) {
         _cached_encoder_for_ToTPPools_Item = function (
             value: ToTPPools_Item        ): _Element {

@@ -141,7 +141,7 @@ let _cached_decoder_for_TBSDataAB: $.ASN1Decoder<TBSDataAB> | null = null;
  * @returns {TBSDataAB} The decoded data structure.
  */
 export
-function _decode_TBSDataAB (el: _Element) {
+function _decode_TBSDataAB (el: _Element): TBSDataAB {
     if (!_cached_decoder_for_TBSDataAB) { _cached_decoder_for_TBSDataAB = function (el: _Element): TBSDataAB {
     let randomA!: RandomNumber;
     let randomB!: RandomNumber;
@@ -181,7 +181,7 @@ let _cached_encoder_for_TBSDataAB: $.ASN1Encoder<TBSDataAB> | null = null;
  * @returns {_Element} The TBSDataAB, encoded as an ASN.1 Element.
  */
 export
-function _encode_TBSDataAB (value: TBSDataAB, elGetter: $.ASN1Encoder<TBSDataAB>) {
+function _encode_TBSDataAB (value: TBSDataAB, elGetter: $.ASN1Encoder<TBSDataAB>): _Element {
     if (!_cached_encoder_for_TBSDataAB) { _cached_encoder_for_TBSDataAB = function (value: TBSDataAB): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

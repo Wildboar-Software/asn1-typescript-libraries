@@ -120,7 +120,7 @@ let _cached_decoder_for_TestConditions: $.ASN1Decoder<TestConditions> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {TestConditions} The decoded data structure.
  */
-export function _decode_TestConditions(el: _Element) {
+export function _decode_TestConditions(el: _Element): TestConditions {
     if (!_cached_decoder_for_TestConditions) {
         _cached_decoder_for_TestConditions = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_TestConditions: $.ASN1Encoder<TestConditions> | null = n
 export function _encode_TestConditions(
     value: TestConditions,
     elGetter: $.ASN1Encoder<TestConditions>
-) {
+): _Element {
     if (!_cached_encoder_for_TestConditions) {
         _cached_encoder_for_TestConditions = function (
             value: TestConditions        ): _Element {

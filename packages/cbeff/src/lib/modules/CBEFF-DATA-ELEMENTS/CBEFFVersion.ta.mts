@@ -119,7 +119,7 @@ let _cached_decoder_for_CBEFFVersion: $.ASN1Decoder<CBEFFVersion> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CBEFFVersion} The decoded data structure.
  */
-export function _decode_CBEFFVersion(el: _Element) {
+export function _decode_CBEFFVersion(el: _Element): CBEFFVersion {
   if (!_cached_decoder_for_CBEFFVersion) {
     _cached_decoder_for_CBEFFVersion = function (el: _Element): CBEFFVersion {
       const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_CBEFFVersion: $.ASN1Encoder<CBEFFVersion> | null = null;
 export function _encode_CBEFFVersion(
   value: CBEFFVersion,
   elGetter: $.ASN1Encoder<CBEFFVersion>
-) {
+): _Element {
   if (!_cached_encoder_for_CBEFFVersion) {
     _cached_encoder_for_CBEFFVersion = function (
       value: CBEFFVersion    ): _Element {

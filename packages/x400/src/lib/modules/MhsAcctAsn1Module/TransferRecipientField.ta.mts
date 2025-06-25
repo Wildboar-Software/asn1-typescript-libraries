@@ -35,7 +35,7 @@ let _cached_decoder_for_TransferRecipientField: $.ASN1Decoder<TransferRecipientF
  * @param {_Element} el The element being decoded.
  * @returns {TransferRecipientField} The decoded data structure.
  */
-export function _decode_TransferRecipientField(el: _Element) {
+export function _decode_TransferRecipientField(el: _Element): TransferRecipientField {
     if (!_cached_decoder_for_TransferRecipientField) {
         _cached_decoder_for_TransferRecipientField = _decode_MTAName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TransferRecipientField: $.ASN1Encoder<TransferRecipientF
 export function _encode_TransferRecipientField(
     value: TransferRecipientField,
     elGetter: $.ASN1Encoder<TransferRecipientField>
-) {
+): _Element {
     if (!_cached_encoder_for_TransferRecipientField) {
         _cached_encoder_for_TransferRecipientField = _encode_MTAName;
     }

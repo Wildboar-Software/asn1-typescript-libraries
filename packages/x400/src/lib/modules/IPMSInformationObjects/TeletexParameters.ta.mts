@@ -143,7 +143,7 @@ let _cached_decoder_for_TeletexParameters: $.ASN1Decoder<TeletexParameters> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TeletexParameters} The decoded data structure.
  */
-export function _decode_TeletexParameters(el: _Element) {
+export function _decode_TeletexParameters(el: _Element): TeletexParameters {
     if (!_cached_decoder_for_TeletexParameters) {
         _cached_decoder_for_TeletexParameters = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_TeletexParameters: $.ASN1Encoder<TeletexParameters> | nu
 export function _encode_TeletexParameters(
     value: TeletexParameters,
     elGetter: $.ASN1Encoder<TeletexParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexParameters) {
         _cached_encoder_for_TeletexParameters = function (
             value: TeletexParameters        ): _Element {

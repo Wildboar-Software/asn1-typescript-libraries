@@ -131,7 +131,7 @@ let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER: $.ASN1Decoder<ATOMIC_ACTION_ID
  * @param {_Element} el The element being decoded.
  * @returns {ATOMIC_ACTION_IDENTIFIER} The decoded data structure.
  */
-export function _decode_ATOMIC_ACTION_IDENTIFIER(el: _Element) {
+export function _decode_ATOMIC_ACTION_IDENTIFIER(el: _Element): ATOMIC_ACTION_IDENTIFIER {
   if (!_cached_decoder_for_ATOMIC_ACTION_IDENTIFIER) {
     _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER = function (
       el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER: $.ASN1Encoder<ATOMIC_ACTION_ID
 export function _encode_ATOMIC_ACTION_IDENTIFIER(
   value: ATOMIC_ACTION_IDENTIFIER,
   elGetter: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER>
-) {
+): _Element {
   if (!_cached_encoder_for_ATOMIC_ACTION_IDENTIFIER) {
     _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER = function (
       value: ATOMIC_ACTION_IDENTIFIER    ): _Element {

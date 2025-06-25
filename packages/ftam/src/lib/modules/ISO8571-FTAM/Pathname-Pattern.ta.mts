@@ -128,7 +128,7 @@ let _cached_decoder_for_Pathname_Pattern: $.ASN1Decoder<Pathname_Pattern> | null
  * @param {_Element} el The element being decoded.
  * @returns {Pathname_Pattern} The decoded data structure.
  */
-export function _decode_Pathname_Pattern(el: _Element) {
+export function _decode_Pathname_Pattern(el: _Element): Pathname_Pattern {
   if (!_cached_decoder_for_Pathname_Pattern) {
     _cached_decoder_for_Pathname_Pattern = function (
       el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_Pathname_Pattern: $.ASN1Encoder<Pathname_Pattern> | null
 export function _encode_Pathname_Pattern(
   value: Pathname_Pattern,
   elGetter: $.ASN1Encoder<Pathname_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Pathname_Pattern) {
     _cached_encoder_for_Pathname_Pattern = function (
       value: Pathname_Pattern    ): _Element {

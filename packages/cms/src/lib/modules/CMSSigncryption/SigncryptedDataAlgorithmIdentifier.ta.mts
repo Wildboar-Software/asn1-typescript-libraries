@@ -26,7 +26,7 @@ let _cached_decoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Decoder<Signcr
  * @param {_Element} el The element being decoded.
  * @returns {SigncryptedDataAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_SigncryptedDataAlgorithmIdentifier(el: _Element) {
+export function _decode_SigncryptedDataAlgorithmIdentifier(el: _Element): SigncryptedDataAlgorithmIdentifier {
     if (!_cached_decoder_for_SigncryptedDataAlgorithmIdentifier) {
         _cached_decoder_for_SigncryptedDataAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Encoder<Signcr
 export function _encode_SigncryptedDataAlgorithmIdentifier(
     value: SigncryptedDataAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<SigncryptedDataAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SigncryptedDataAlgorithmIdentifier) {
         _cached_encoder_for_SigncryptedDataAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

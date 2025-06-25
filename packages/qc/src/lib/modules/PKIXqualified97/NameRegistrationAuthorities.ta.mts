@@ -30,7 +30,7 @@ let _cached_decoder_for_NameRegistrationAuthorities: $.ASN1Decoder<NameRegistrat
  * @param {_Element} el The element being decoded.
  * @returns {NameRegistrationAuthorities} The decoded data structure.
  */
-export function _decode_NameRegistrationAuthorities(el: _Element) {
+export function _decode_NameRegistrationAuthorities(el: _Element): NameRegistrationAuthorities {
     if (!_cached_decoder_for_NameRegistrationAuthorities) {
         _cached_decoder_for_NameRegistrationAuthorities = $._decodeSequenceOf<GeneralName>(
             () => _decode_GeneralName
@@ -53,7 +53,7 @@ let _cached_encoder_for_NameRegistrationAuthorities: $.ASN1Encoder<NameRegistrat
 export function _encode_NameRegistrationAuthorities(
     value: NameRegistrationAuthorities,
     elGetter: $.ASN1Encoder<NameRegistrationAuthorities>
-) {
+): _Element {
     if (!_cached_encoder_for_NameRegistrationAuthorities) {
         _cached_encoder_for_NameRegistrationAuthorities = $._encodeSequenceOf<GeneralName>(
             () => _encode_GeneralName,

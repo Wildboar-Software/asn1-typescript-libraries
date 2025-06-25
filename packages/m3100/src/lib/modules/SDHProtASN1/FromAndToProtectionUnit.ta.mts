@@ -47,7 +47,7 @@ let _cached_decoder_for_FromAndToProtectionUnit: $.ASN1Decoder<FromAndToProtecti
  * @param {_Element} el The element being decoded.
  * @returns {FromAndToProtectionUnit} The decoded data structure.
  */
-export function _decode_FromAndToProtectionUnit(el: _Element) {
+export function _decode_FromAndToProtectionUnit(el: _Element): FromAndToProtectionUnit {
     if (!_cached_decoder_for_FromAndToProtectionUnit) {
         _cached_decoder_for_FromAndToProtectionUnit = $._decode_inextensible_choice<FromAndToProtectionUnit>(
             {
@@ -83,7 +83,7 @@ let _cached_encoder_for_FromAndToProtectionUnit: $.ASN1Encoder<FromAndToProtecti
 export function _encode_FromAndToProtectionUnit(
     value: FromAndToProtectionUnit,
     elGetter: $.ASN1Encoder<FromAndToProtectionUnit>
-) {
+): _Element {
     if (!_cached_encoder_for_FromAndToProtectionUnit) {
         _cached_encoder_for_FromAndToProtectionUnit = $._encode_choice<FromAndToProtectionUnit>(
             {

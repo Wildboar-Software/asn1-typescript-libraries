@@ -55,7 +55,7 @@ let _cached_decoder_for_DataIntegrityTestResults: $.ASN1Decoder<DataIntegrityTes
  * @param {_Element} el The element being decoded.
  * @returns {DataIntegrityTestResults} The decoded data structure.
  */
-export function _decode_DataIntegrityTestResults(el: _Element) {
+export function _decode_DataIntegrityTestResults(el: _Element): DataIntegrityTestResults {
     if (!_cached_decoder_for_DataIntegrityTestResults) {
         _cached_decoder_for_DataIntegrityTestResults = $._decode_inextensible_choice<DataIntegrityTestResults>(
             {
@@ -95,7 +95,7 @@ let _cached_encoder_for_DataIntegrityTestResults: $.ASN1Encoder<DataIntegrityTes
 export function _encode_DataIntegrityTestResults(
     value: DataIntegrityTestResults,
     elGetter: $.ASN1Encoder<DataIntegrityTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_DataIntegrityTestResults) {
         _cached_encoder_for_DataIntegrityTestResults = $._encode_choice<DataIntegrityTestResults>(
             {

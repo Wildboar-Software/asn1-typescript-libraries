@@ -42,7 +42,7 @@ let _cached_decoder_for_OperationResult: $.ASN1Decoder<OperationResult> | null =
  * @param {_Element} el The element being decoded.
  * @returns {OperationResult} The decoded data structure.
  */
-export function _decode_OperationResult(el: _Element) {
+export function _decode_OperationResult(el: _Element): OperationResult {
     if (!_cached_decoder_for_OperationResult) {
         _cached_decoder_for_OperationResult = $._decodeSetOf<OperationResult_Item>(
             () => _decode_OperationResult_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_OperationResult: $.ASN1Encoder<OperationResult> | null =
 export function _encode_OperationResult(
     value: OperationResult,
     elGetter: $.ASN1Encoder<OperationResult>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationResult) {
         _cached_encoder_for_OperationResult = $._encodeSetOf<OperationResult_Item>(
             () => _encode_OperationResult_Item,

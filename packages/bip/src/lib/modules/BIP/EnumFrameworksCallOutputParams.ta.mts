@@ -38,7 +38,7 @@ let _cached_decoder_for_EnumFrameworksCallOutputParams: $.ASN1Decoder<EnumFramew
  * @param {_Element} el The element being decoded.
  * @returns {EnumFrameworksCallOutputParams} The decoded data structure.
  */
-export function _decode_EnumFrameworksCallOutputParams(el: _Element) {
+export function _decode_EnumFrameworksCallOutputParams(el: _Element): EnumFrameworksCallOutputParams {
   if (!_cached_decoder_for_EnumFrameworksCallOutputParams) {
     _cached_decoder_for_EnumFrameworksCallOutputParams = $._decodeSequenceOf<BioAPI_FRAMEWORK_SCHEMA>(
       () => _decode_BioAPI_FRAMEWORK_SCHEMA
@@ -61,7 +61,7 @@ let _cached_encoder_for_EnumFrameworksCallOutputParams: $.ASN1Encoder<EnumFramew
 export function _encode_EnumFrameworksCallOutputParams(
   value: EnumFrameworksCallOutputParams,
   elGetter: $.ASN1Encoder<EnumFrameworksCallOutputParams>
-) {
+): _Element {
   if (!_cached_encoder_for_EnumFrameworksCallOutputParams) {
     _cached_encoder_for_EnumFrameworksCallOutputParams = $._encodeSequenceOf<BioAPI_FRAMEWORK_SCHEMA>(
       () => _encode_BioAPI_FRAMEWORK_SCHEMA,

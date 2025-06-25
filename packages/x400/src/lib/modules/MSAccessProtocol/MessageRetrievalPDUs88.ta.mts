@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageRetrievalPDUs88: $.ASN1Decoder<MessageRetrievalPD
  * @param {_Element} el The element being decoded.
  * @returns {MessageRetrievalPDUs88} The decoded data structure.
  */
-export function _decode_MessageRetrievalPDUs88(el: _Element) {
+export function _decode_MessageRetrievalPDUs88(el: _Element): MessageRetrievalPDUs88 {
     if (!_cached_decoder_for_MessageRetrievalPDUs88) {
         _cached_decoder_for_MessageRetrievalPDUs88 = _decode_ROS_SingleAS;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageRetrievalPDUs88: $.ASN1Encoder<MessageRetrievalPD
 export function _encode_MessageRetrievalPDUs88(
     value: MessageRetrievalPDUs88,
     elGetter: $.ASN1Encoder<MessageRetrievalPDUs88>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageRetrievalPDUs88) {
         _cached_encoder_for_MessageRetrievalPDUs88 = _encode_ROS_SingleAS;
     }

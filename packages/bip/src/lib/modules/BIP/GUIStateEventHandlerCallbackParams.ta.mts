@@ -353,7 +353,7 @@ let _cached_decoder_for_GUIStateEventHandlerCallbackParams: $.ASN1Decoder<GUISta
  * @param {_Element} el The element being decoded.
  * @returns {GUIStateEventHandlerCallbackParams} The decoded data structure.
  */
-export function _decode_GUIStateEventHandlerCallbackParams(el: _Element) {
+export function _decode_GUIStateEventHandlerCallbackParams(el: _Element): GUIStateEventHandlerCallbackParams {
   if (!_cached_decoder_for_GUIStateEventHandlerCallbackParams) {
     _cached_decoder_for_GUIStateEventHandlerCallbackParams = function (
       el: _Element
@@ -454,7 +454,7 @@ let _cached_encoder_for_GUIStateEventHandlerCallbackParams: $.ASN1Encoder<GUISta
 export function _encode_GUIStateEventHandlerCallbackParams(
   value: GUIStateEventHandlerCallbackParams,
   elGetter: $.ASN1Encoder<GUIStateEventHandlerCallbackParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIStateEventHandlerCallbackParams) {
     _cached_encoder_for_GUIStateEventHandlerCallbackParams = function (
       value: GUIStateEventHandlerCallbackParams    ): _Element {

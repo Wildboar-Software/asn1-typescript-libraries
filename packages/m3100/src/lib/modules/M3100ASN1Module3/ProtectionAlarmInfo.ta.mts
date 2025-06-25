@@ -125,7 +125,7 @@ let _cached_decoder_for_ProtectionAlarmInfo: $.ASN1Decoder<ProtectionAlarmInfo> 
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionAlarmInfo} The decoded data structure.
  */
-export function _decode_ProtectionAlarmInfo(el: _Element) {
+export function _decode_ProtectionAlarmInfo(el: _Element): ProtectionAlarmInfo {
     if (!_cached_decoder_for_ProtectionAlarmInfo) {
         _cached_decoder_for_ProtectionAlarmInfo = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_ProtectionAlarmInfo: $.ASN1Encoder<ProtectionAlarmInfo> 
 export function _encode_ProtectionAlarmInfo(
     value: ProtectionAlarmInfo,
     elGetter: $.ASN1Encoder<ProtectionAlarmInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionAlarmInfo) {
         _cached_encoder_for_ProtectionAlarmInfo = function (
             value: ProtectionAlarmInfo        ): _Element {

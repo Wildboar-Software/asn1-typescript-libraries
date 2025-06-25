@@ -192,7 +192,7 @@ let _cached_decoder_for_UnitEventInfo: $.ASN1Decoder<UnitEventInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {UnitEventInfo} The decoded data structure.
  */
-export function _decode_UnitEventInfo(el: _Element) {
+export function _decode_UnitEventInfo(el: _Element): UnitEventInfo {
   if (!_cached_decoder_for_UnitEventInfo) {
     _cached_decoder_for_UnitEventInfo = function (el: _Element): UnitEventInfo {
       let hostingEndpointIRI!: EndpointIRI;
@@ -251,7 +251,7 @@ let _cached_encoder_for_UnitEventInfo: $.ASN1Encoder<UnitEventInfo> | null = nul
 export function _encode_UnitEventInfo(
   value: UnitEventInfo,
   elGetter: $.ASN1Encoder<UnitEventInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_UnitEventInfo) {
     _cached_encoder_for_UnitEventInfo = function (
       value: UnitEventInfo    ): _Element {

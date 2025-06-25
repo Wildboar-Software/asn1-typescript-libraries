@@ -110,7 +110,7 @@ let _cached_decoder_for_TokenData: $.ASN1Decoder<TokenData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TokenData} The decoded data structure.
  */
-export function _decode_TokenData(el: _Element) {
+export function _decode_TokenData(el: _Element): TokenData {
     if (!_cached_decoder_for_TokenData) {
         _cached_decoder_for_TokenData = function (el: _Element): TokenData {
             const sequence: _Element[] = el.sequence;
@@ -149,7 +149,7 @@ let _cached_encoder_for_TokenData: $.ASN1Encoder<TokenData> | null = null;
 export function _encode_TokenData(
     value: TokenData,
     elGetter: $.ASN1Encoder<TokenData>
-) {
+): _Element {
     if (!_cached_encoder_for_TokenData) {
         _cached_encoder_for_TokenData = function (
             value: TokenData        ): _Element {

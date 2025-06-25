@@ -46,7 +46,7 @@ let _cached_decoder_for_SupportedChoice: $.ASN1Decoder<SupportedChoice> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SupportedChoice} The decoded data structure.
  */
-export function _decode_SupportedChoice(el: _Element) {
+export function _decode_SupportedChoice(el: _Element): SupportedChoice {
     if (!_cached_decoder_for_SupportedChoice) {
         _cached_decoder_for_SupportedChoice = $._decode_inextensible_choice<SupportedChoice>(
             {
@@ -98,7 +98,7 @@ let _cached_encoder_for_SupportedChoice: $.ASN1Encoder<SupportedChoice> | null =
 export function _encode_SupportedChoice(
     value: SupportedChoice,
     elGetter: $.ASN1Encoder<SupportedChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedChoice) {
         _cached_encoder_for_SupportedChoice = $._encode_choice<SupportedChoice>(
             {

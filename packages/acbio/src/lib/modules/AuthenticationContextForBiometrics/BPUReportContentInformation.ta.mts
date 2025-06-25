@@ -129,7 +129,7 @@ let _cached_decoder_for_BPUReportContentInformation: $.ASN1Decoder<BPUReportCont
  * @param {_Element} el The element being decoded.
  * @returns {BPUReportContentInformation} The decoded data structure.
  */
-export function _decode_BPUReportContentInformation(el: _Element) {
+export function _decode_BPUReportContentInformation(el: _Element): BPUReportContentInformation {
     if (!_cached_decoder_for_BPUReportContentInformation) {
         _cached_decoder_for_BPUReportContentInformation = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_BPUReportContentInformation: $.ASN1Encoder<BPUReportCont
 export function _encode_BPUReportContentInformation(
     value: BPUReportContentInformation,
     elGetter: $.ASN1Encoder<BPUReportContentInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUReportContentInformation) {
         _cached_encoder_for_BPUReportContentInformation = function (
             value: BPUReportContentInformation        ): _Element {

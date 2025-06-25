@@ -35,7 +35,7 @@ let _cached_decoder_for_Redirections: $.ASN1Decoder<Redirections> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Redirections} The decoded data structure.
  */
-export function _decode_Redirections(el: _Element) {
+export function _decode_Redirections(el: _Element): Redirections {
     if (!_cached_decoder_for_Redirections) {
         _cached_decoder_for_Redirections = $._decodeSequenceOf<RecipientRedirection>(
             () => _decode_RecipientRedirection
@@ -56,7 +56,7 @@ let _cached_encoder_for_Redirections: $.ASN1Encoder<Redirections> | null = null;
 export function _encode_Redirections(
     value: Redirections,
     elGetter: $.ASN1Encoder<Redirections>
-) {
+): _Element {
     if (!_cached_encoder_for_Redirections) {
         _cached_encoder_for_Redirections = $._encodeSequenceOf<RecipientRedirection>(
             () => _encode_RecipientRedirection,

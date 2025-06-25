@@ -35,7 +35,7 @@ let _cached_decoder_for_SynchronizingClocks: $.ASN1Decoder<SynchronizingClocks> 
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizingClocks} The decoded data structure.
  */
-export function _decode_SynchronizingClocks(el: _Element) {
+export function _decode_SynchronizingClocks(el: _Element): SynchronizingClocks {
     if (!_cached_decoder_for_SynchronizingClocks) {
         _cached_decoder_for_SynchronizingClocks = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_SynchronizingClocks: $.ASN1Encoder<SynchronizingClocks> 
 export function _encode_SynchronizingClocks(
     value: SynchronizingClocks,
     elGetter: $.ASN1Encoder<SynchronizingClocks>
-) {
+): _Element {
     if (!_cached_encoder_for_SynchronizingClocks) {
         _cached_encoder_for_SynchronizingClocks = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

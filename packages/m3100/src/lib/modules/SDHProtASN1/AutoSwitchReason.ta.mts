@@ -42,7 +42,7 @@ let _cached_decoder_for_AutoSwitchReason: $.ASN1Decoder<AutoSwitchReason> | null
  * @param {_Element} el The element being decoded.
  * @returns {AutoSwitchReason} The decoded data structure.
  */
-export function _decode_AutoSwitchReason(el: _Element) {
+export function _decode_AutoSwitchReason(el: _Element): AutoSwitchReason {
     if (!_cached_decoder_for_AutoSwitchReason) {
         _cached_decoder_for_AutoSwitchReason = $._decode_inextensible_choice<AutoSwitchReason>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_AutoSwitchReason: $.ASN1Encoder<AutoSwitchReason> | null
 export function _encode_AutoSwitchReason(
     value: AutoSwitchReason,
     elGetter: $.ASN1Encoder<AutoSwitchReason>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoSwitchReason) {
         _cached_encoder_for_AutoSwitchReason = $._encode_choice<AutoSwitchReason>(
             {

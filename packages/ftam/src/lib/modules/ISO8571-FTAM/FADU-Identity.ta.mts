@@ -67,7 +67,7 @@ let _cached_decoder_for_FADU_Identity: $.ASN1Decoder<FADU_Identity> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {FADU_Identity} The decoded data structure.
  */
-export function _decode_FADU_Identity(el: _Element) {
+export function _decode_FADU_Identity(el: _Element): FADU_Identity {
   if (!_cached_decoder_for_FADU_Identity) {
     _cached_decoder_for_FADU_Identity = $._decode_explicit<FADU_Identity>(() =>
       $._decode_inextensible_choice<FADU_Identity>({
@@ -123,7 +123,7 @@ let _cached_encoder_for_FADU_Identity: $.ASN1Encoder<FADU_Identity> | null = nul
 export function _encode_FADU_Identity(
   value: FADU_Identity,
   elGetter: $.ASN1Encoder<FADU_Identity>
-) {
+): _Element {
   if (!_cached_encoder_for_FADU_Identity) {
     _cached_encoder_for_FADU_Identity = $._encode_explicit(
       _TagClass.application,

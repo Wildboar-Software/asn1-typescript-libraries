@@ -162,7 +162,7 @@ let _cached_decoder_for_CertResponse: $.ASN1Decoder<CertResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertResponse} The decoded data structure.
  */
-export function _decode_CertResponse(el: _Element) {
+export function _decode_CertResponse(el: _Element): CertResponse {
   if (!_cached_decoder_for_CertResponse) {
     _cached_decoder_for_CertResponse = function (el: _Element): CertResponse {
       let certReqId!: INTEGER;
@@ -216,7 +216,7 @@ let _cached_encoder_for_CertResponse: $.ASN1Encoder<CertResponse> | null = null;
 export function _encode_CertResponse(
   value: CertResponse,
   elGetter: $.ASN1Encoder<CertResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_CertResponse) {
     _cached_encoder_for_CertResponse = function (
       value: CertResponse    ): _Element {

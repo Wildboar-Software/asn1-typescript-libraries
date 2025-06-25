@@ -35,7 +35,7 @@ let _cached_decoder_for_SecurityContext: $.ASN1Decoder<SecurityContext> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SecurityContext} The decoded data structure.
  */
-export function _decode_SecurityContext(el: _Element) {
+export function _decode_SecurityContext(el: _Element): SecurityContext {
     if (!_cached_decoder_for_SecurityContext) {
         _cached_decoder_for_SecurityContext = $._decodeSetOf<SecurityLabel>(
             () => _decode_SecurityLabel
@@ -56,7 +56,7 @@ let _cached_encoder_for_SecurityContext: $.ASN1Encoder<SecurityContext> | null =
 export function _encode_SecurityContext(
     value: SecurityContext,
     elGetter: $.ASN1Encoder<SecurityContext>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityContext) {
         _cached_encoder_for_SecurityContext = $._encodeSetOf<SecurityLabel>(
             () => _encode_SecurityLabel,

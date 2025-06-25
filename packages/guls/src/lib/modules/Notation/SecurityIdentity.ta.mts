@@ -45,7 +45,7 @@ let _cached_decoder_for_SecurityIdentity: $.ASN1Decoder<SecurityIdentity> | null
  * @param {_Element} el The element being decoded.
  * @returns {SecurityIdentity} The decoded data structure.
  */
-export function _decode_SecurityIdentity(el: _Element) {
+export function _decode_SecurityIdentity(el: _Element): SecurityIdentity {
   if (!_cached_decoder_for_SecurityIdentity) {
     _cached_decoder_for_SecurityIdentity = $._decode_inextensible_choice<SecurityIdentity>(
       {
@@ -71,7 +71,7 @@ let _cached_encoder_for_SecurityIdentity: $.ASN1Encoder<SecurityIdentity> | null
 export function _encode_SecurityIdentity(
   value: SecurityIdentity,
   elGetter: $.ASN1Encoder<SecurityIdentity>
-) {
+): _Element {
   if (!_cached_encoder_for_SecurityIdentity) {
     _cached_encoder_for_SecurityIdentity = $._encode_choice<SecurityIdentity>(
       {

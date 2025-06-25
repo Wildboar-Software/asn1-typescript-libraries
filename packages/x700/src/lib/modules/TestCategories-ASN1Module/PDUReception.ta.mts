@@ -137,7 +137,7 @@ let _cached_decoder_for_PDUReception: $.ASN1Decoder<PDUReception> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PDUReception} The decoded data structure.
  */
-export function _decode_PDUReception(el: _Element) {
+export function _decode_PDUReception(el: _Element): PDUReception {
     if (!_cached_decoder_for_PDUReception) {
         _cached_decoder_for_PDUReception = function (
             el: _Element
@@ -186,7 +186,7 @@ let _cached_encoder_for_PDUReception: $.ASN1Encoder<PDUReception> | null = null;
 export function _encode_PDUReception(
     value: PDUReception,
     elGetter: $.ASN1Encoder<PDUReception>
-) {
+): _Element {
     if (!_cached_encoder_for_PDUReception) {
         _cached_encoder_for_PDUReception = function (
             value: PDUReception        ): _Element {

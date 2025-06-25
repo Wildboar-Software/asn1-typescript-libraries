@@ -148,7 +148,7 @@ let _cached_decoder_for_SuspectObject: $.ASN1Decoder<SuspectObject> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SuspectObject} The decoded data structure.
  */
-export function _decode_SuspectObject(el: _Element) {
+export function _decode_SuspectObject(el: _Element): SuspectObject {
     if (!_cached_decoder_for_SuspectObject) {
         _cached_decoder_for_SuspectObject = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_SuspectObject: $.ASN1Encoder<SuspectObject> | null = nul
 export function _encode_SuspectObject(
     value: SuspectObject,
     elGetter: $.ASN1Encoder<SuspectObject>
-) {
+): _Element {
     if (!_cached_encoder_for_SuspectObject) {
         _cached_encoder_for_SuspectObject = function (
             value: SuspectObject        ): _Element {

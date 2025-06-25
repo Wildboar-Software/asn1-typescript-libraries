@@ -111,7 +111,7 @@ let _cached_decoder_for_TCGPlatformSpecification: $.ASN1Decoder<TCGPlatformSpeci
  * @returns {TCGPlatformSpecification} The decoded data structure.
  */
 export
-function _decode_TCGPlatformSpecification (el: _Element) {
+function _decode_TCGPlatformSpecification (el: _Element): TCGPlatformSpecification {
     if (!_cached_decoder_for_TCGPlatformSpecification) { _cached_decoder_for_TCGPlatformSpecification = function (el: _Element): TCGPlatformSpecification {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_TCGPlatformSpecification: $.ASN1Encoder<TCGPlatformSpeci
  * @returns {_Element} The TCGPlatformSpecification, encoded as an ASN.1 Element.
  */
 export
-function _encode_TCGPlatformSpecification (value: TCGPlatformSpecification, elGetter: $.ASN1Encoder<TCGPlatformSpecification>) {
+function _encode_TCGPlatformSpecification (value: TCGPlatformSpecification, elGetter: $.ASN1Encoder<TCGPlatformSpecification>): _Element {
     if (!_cached_encoder_for_TCGPlatformSpecification) { _cached_encoder_for_TCGPlatformSpecification = function (value: TCGPlatformSpecification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -162,7 +162,7 @@ let _cached_decoder_for_E_terminateError: $.ASN1Decoder<E_terminateError> | null
  * @param {_Element} el The element being decoded.
  * @returns {E_terminateError} The decoded data structure.
  */
-export function _decode_E_terminateError(el: _Element) {
+export function _decode_E_terminateError(el: _Element): E_terminateError {
     if (!_cached_decoder_for_E_terminateError) {
         _cached_decoder_for_E_terminateError = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_E_terminateError: $.ASN1Encoder<E_terminateError> | null
 export function _encode_E_terminateError(
     value: E_terminateError,
     elGetter: $.ASN1Encoder<E_terminateError>
-) {
+): _Element {
     if (!_cached_encoder_for_E_terminateError) {
         _cached_encoder_for_E_terminateError = function (
             value: E_terminateError        ): _Element {

@@ -110,7 +110,7 @@ let _cached_decoder_for_BioAPI_BIR_ARRAY_POPULATION: $.ASN1Decoder<BioAPI_BIR_AR
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_ARRAY_POPULATION} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_ARRAY_POPULATION(el: _Element) {
+export function _decode_BioAPI_BIR_ARRAY_POPULATION(el: _Element): BioAPI_BIR_ARRAY_POPULATION {
   if (!_cached_decoder_for_BioAPI_BIR_ARRAY_POPULATION) {
     _cached_decoder_for_BioAPI_BIR_ARRAY_POPULATION = function (
       el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_BioAPI_BIR_ARRAY_POPULATION: $.ASN1Encoder<BioAPI_BIR_AR
 export function _encode_BioAPI_BIR_ARRAY_POPULATION(
   value: BioAPI_BIR_ARRAY_POPULATION,
   elGetter: $.ASN1Encoder<BioAPI_BIR_ARRAY_POPULATION>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_ARRAY_POPULATION) {
     _cached_encoder_for_BioAPI_BIR_ARRAY_POPULATION = function (
       value: BioAPI_BIR_ARRAY_POPULATION    ): _Element {

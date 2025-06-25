@@ -60,7 +60,7 @@ let _cached_decoder_for_CPR_PPDU: $.ASN1Decoder<CPR_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CPR_PPDU} The decoded data structure.
  */
-export function _decode_CPR_PPDU(el: _Element) {
+export function _decode_CPR_PPDU(el: _Element): CPR_PPDU {
     if (!_cached_decoder_for_CPR_PPDU) {
         _cached_decoder_for_CPR_PPDU = $._decode_inextensible_choice<CPR_PPDU>({
             'UNIVERSAL 17': [
@@ -90,7 +90,7 @@ let _cached_encoder_for_CPR_PPDU: $.ASN1Encoder<CPR_PPDU> | null = null;
 export function _encode_CPR_PPDU(
     value: CPR_PPDU,
     elGetter: $.ASN1Encoder<CPR_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_CPR_PPDU) {
         _cached_encoder_for_CPR_PPDU = $._encode_choice<CPR_PPDU>(
             {

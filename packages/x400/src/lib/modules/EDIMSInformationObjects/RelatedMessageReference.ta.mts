@@ -41,7 +41,7 @@ let _cached_decoder_for_RelatedMessageReference: $.ASN1Decoder<RelatedMessageRef
  * @param {_Element} el The element being decoded.
  * @returns {RelatedMessageReference} The decoded data structure.
  */
-export function _decode_RelatedMessageReference(el: _Element) {
+export function _decode_RelatedMessageReference(el: _Element): RelatedMessageReference {
     if (!_cached_decoder_for_RelatedMessageReference) {
         _cached_decoder_for_RelatedMessageReference = $._decode_inextensible_choice<RelatedMessageReference>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_RelatedMessageReference: $.ASN1Encoder<RelatedMessageRef
 export function _encode_RelatedMessageReference(
     value: RelatedMessageReference,
     elGetter: $.ASN1Encoder<RelatedMessageReference>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedMessageReference) {
         _cached_encoder_for_RelatedMessageReference = $._encode_choice<RelatedMessageReference>(
             {

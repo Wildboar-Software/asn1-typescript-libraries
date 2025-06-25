@@ -45,7 +45,7 @@ let _cached_decoder_for_OutageDuration: $.ASN1Decoder<OutageDuration> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OutageDuration} The decoded data structure.
  */
-export function _decode_OutageDuration(el: _Element) {
+export function _decode_OutageDuration(el: _Element): OutageDuration {
     if (!_cached_decoder_for_OutageDuration) {
         _cached_decoder_for_OutageDuration = $._decode_extensible_choice<OutageDuration>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_OutageDuration: $.ASN1Encoder<OutageDuration> | null = n
 export function _encode_OutageDuration(
     value: OutageDuration,
     elGetter: $.ASN1Encoder<OutageDuration>
-) {
+): _Element {
     if (!_cached_encoder_for_OutageDuration) {
         _cached_encoder_for_OutageDuration = $._encode_choice<OutageDuration>(
             {

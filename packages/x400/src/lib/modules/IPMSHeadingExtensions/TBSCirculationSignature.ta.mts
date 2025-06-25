@@ -141,7 +141,7 @@ let _cached_decoder_for_TBSCirculationSignature: $.ASN1Decoder<TBSCirculationSig
  * @param {_Element} el The element being decoded.
  * @returns {TBSCirculationSignature} The decoded data structure.
  */
-export function _decode_TBSCirculationSignature(el: _Element) {
+export function _decode_TBSCirculationSignature(el: _Element): TBSCirculationSignature {
     if (!_cached_decoder_for_TBSCirculationSignature) {
         _cached_decoder_for_TBSCirculationSignature = function (
             el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_TBSCirculationSignature: $.ASN1Encoder<TBSCirculationSig
 export function _encode_TBSCirculationSignature(
     value: TBSCirculationSignature,
     elGetter: $.ASN1Encoder<TBSCirculationSignature>
-) {
+): _Element {
     if (!_cached_encoder_for_TBSCirculationSignature) {
         _cached_encoder_for_TBSCirculationSignature = function (
             value: TBSCirculationSignature        ): _Element {

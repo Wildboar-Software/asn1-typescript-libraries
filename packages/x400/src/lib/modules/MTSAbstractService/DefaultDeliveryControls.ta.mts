@@ -44,7 +44,7 @@ let _cached_decoder_for_DefaultDeliveryControls: $.ASN1Decoder<DefaultDeliveryCo
  * @param {_Element} el The element being decoded.
  * @returns {DefaultDeliveryControls} The decoded data structure.
  */
-export function _decode_DefaultDeliveryControls(el: _Element) {
+export function _decode_DefaultDeliveryControls(el: _Element): DefaultDeliveryControls {
     if (!_cached_decoder_for_DefaultDeliveryControls) {
         _cached_decoder_for_DefaultDeliveryControls = _decode_Controls;
     }
@@ -63,7 +63,7 @@ let _cached_encoder_for_DefaultDeliveryControls: $.ASN1Encoder<DefaultDeliveryCo
 export function _encode_DefaultDeliveryControls(
     value: DefaultDeliveryControls,
     elGetter: $.ASN1Encoder<DefaultDeliveryControls>
-) {
+): _Element {
     if (!_cached_encoder_for_DefaultDeliveryControls) {
         _cached_encoder_for_DefaultDeliveryControls = _encode_Controls;
     }

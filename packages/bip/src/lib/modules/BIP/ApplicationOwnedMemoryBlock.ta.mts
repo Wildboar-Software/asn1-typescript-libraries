@@ -109,7 +109,7 @@ let _cached_decoder_for_ApplicationOwnedMemoryBlock: $.ASN1Decoder<ApplicationOw
  * @param {_Element} el The element being decoded.
  * @returns {ApplicationOwnedMemoryBlock} The decoded data structure.
  */
-export function _decode_ApplicationOwnedMemoryBlock(el: _Element) {
+export function _decode_ApplicationOwnedMemoryBlock(el: _Element): ApplicationOwnedMemoryBlock {
   if (!_cached_decoder_for_ApplicationOwnedMemoryBlock) {
     _cached_decoder_for_ApplicationOwnedMemoryBlock = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ApplicationOwnedMemoryBlock: $.ASN1Encoder<ApplicationOw
 export function _encode_ApplicationOwnedMemoryBlock(
   value: ApplicationOwnedMemoryBlock,
   elGetter: $.ASN1Encoder<ApplicationOwnedMemoryBlock>
-) {
+): _Element {
   if (!_cached_encoder_for_ApplicationOwnedMemoryBlock) {
     _cached_encoder_for_ApplicationOwnedMemoryBlock = function (
       value: ApplicationOwnedMemoryBlock    ): _Element {

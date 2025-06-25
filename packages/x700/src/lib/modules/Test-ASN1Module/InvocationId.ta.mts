@@ -114,7 +114,7 @@ let _cached_decoder_for_InvocationId: $.ASN1Decoder<InvocationId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {InvocationId} The decoded data structure.
  */
-export function _decode_InvocationId(el: _Element) {
+export function _decode_InvocationId(el: _Element): InvocationId {
     if (!_cached_decoder_for_InvocationId) {
         _cached_decoder_for_InvocationId = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_InvocationId: $.ASN1Encoder<InvocationId> | null = null;
 export function _encode_InvocationId(
     value: InvocationId,
     elGetter: $.ASN1Encoder<InvocationId>
-) {
+): _Element {
     if (!_cached_encoder_for_InvocationId) {
         _cached_encoder_for_InvocationId = function (
             value: InvocationId        ): _Element {

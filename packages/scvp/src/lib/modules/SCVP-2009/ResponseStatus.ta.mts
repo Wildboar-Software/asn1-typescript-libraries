@@ -135,7 +135,7 @@ let _cached_decoder_for_ResponseStatus: $.ASN1Decoder<ResponseStatus> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ResponseStatus} The decoded data structure.
  */
-export function _decode_ResponseStatus(el: _Element) {
+export function _decode_ResponseStatus(el: _Element): ResponseStatus {
   if (!_cached_decoder_for_ResponseStatus) {
     _cached_decoder_for_ResponseStatus = function (
       el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_ResponseStatus: $.ASN1Encoder<ResponseStatus> | null = n
 export function _encode_ResponseStatus(
   value: ResponseStatus,
   elGetter: $.ASN1Encoder<ResponseStatus>
-) {
+): _Element {
   if (!_cached_encoder_for_ResponseStatus) {
     _cached_encoder_for_ResponseStatus = function (
       value: ResponseStatus    ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_FilterList: $.ASN1Decoder<FilterList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FilterList} The decoded data structure.
  */
-export function _decode_FilterList(el: _Element) {
+export function _decode_FilterList(el: _Element): FilterList {
     if (!_cached_decoder_for_FilterList) {
         _cached_decoder_for_FilterList = $._decodeSetOf<CMISFilter>(
             () => _decode_CMISFilter
@@ -56,7 +56,7 @@ let _cached_encoder_for_FilterList: $.ASN1Encoder<FilterList> | null = null;
 export function _encode_FilterList(
     value: FilterList,
     elGetter: $.ASN1Encoder<FilterList>
-) {
+): _Element {
     if (!_cached_encoder_for_FilterList) {
         _cached_encoder_for_FilterList = $._encodeSetOf<CMISFilter>(
             () => _encode_CMISFilter,

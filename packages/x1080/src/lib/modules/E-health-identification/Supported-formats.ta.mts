@@ -39,7 +39,7 @@ let _cached_decoder_for_Supported_formats: $.ASN1Decoder<Supported_formats> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Supported_formats} The decoded data structure.
  */
-export function _decode_Supported_formats(el: _Element) {
+export function _decode_Supported_formats(el: _Element): Supported_formats {
     if (!_cached_decoder_for_Supported_formats) {
         _cached_decoder_for_Supported_formats = $._decode_extensible_choice<Supported_formats>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_Supported_formats: $.ASN1Encoder<Supported_formats> | nu
 export function _encode_Supported_formats(
     value: Supported_formats,
     elGetter: $.ASN1Encoder<Supported_formats>
-) {
+): _Element {
     if (!_cached_encoder_for_Supported_formats) {
         _cached_encoder_for_Supported_formats = $._encode_choice<Supported_formats>(
             {

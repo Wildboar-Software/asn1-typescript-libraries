@@ -38,7 +38,7 @@ let _cached_decoder_for_Attribute_Value_Assertions: $.ASN1Decoder<Attribute_Valu
  * @param {_Element} el The element being decoded.
  * @returns {Attribute_Value_Assertions} The decoded data structure.
  */
-export function _decode_Attribute_Value_Assertions(el: _Element) {
+export function _decode_Attribute_Value_Assertions(el: _Element): Attribute_Value_Assertions {
   if (!_cached_decoder_for_Attribute_Value_Assertions) {
     _cached_decoder_for_Attribute_Value_Assertions = $._decode_implicit<Attribute_Value_Assertions>(
       () => _decode_OR_Set
@@ -61,7 +61,7 @@ let _cached_encoder_for_Attribute_Value_Assertions: $.ASN1Encoder<Attribute_Valu
 export function _encode_Attribute_Value_Assertions(
   value: Attribute_Value_Assertions,
   elGetter: $.ASN1Encoder<Attribute_Value_Assertions>
-) {
+): _Element {
   if (!_cached_encoder_for_Attribute_Value_Assertions) {
     _cached_encoder_for_Attribute_Value_Assertions = $._encode_implicit(
       _TagClass.application,

@@ -41,7 +41,7 @@ let _cached_decoder_for_ECDSA_Signature: $.ASN1Decoder<ECDSA_Signature> | null =
  * @returns {ECDSA_Signature} The decoded data structure.
  */
 export
-function _decode_ECDSA_Signature (el: _Element) {
+function _decode_ECDSA_Signature (el: _Element): ECDSA_Signature {
     if (!_cached_decoder_for_ECDSA_Signature) { _cached_decoder_for_ECDSA_Signature = $._decode_extensible_choice<ECDSA_Signature>({
     "UNIVERSAL 16": [ "two_ints_plus", _decode_ECDSA_Sig_Value ],
     "CONTEXT 0": [ "point_int", $._decode_implicit<ECDSA_Full_R>(() => _decode_ECDSA_Full_R) ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_ECDSA_Signature: $.ASN1Encoder<ECDSA_Signature> | null =
  * @returns {_Element} The ECDSA_Signature, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECDSA_Signature (value: ECDSA_Signature, elGetter: $.ASN1Encoder<ECDSA_Signature>) {
+function _encode_ECDSA_Signature (value: ECDSA_Signature, elGetter: $.ASN1Encoder<ECDSA_Signature>): _Element {
     if (!_cached_encoder_for_ECDSA_Signature) { _cached_encoder_for_ECDSA_Signature = $._encode_choice<ECDSA_Signature>({
     "two_ints_plus": _encode_ECDSA_Sig_Value,
     "point_int": $._encode_implicit(_TagClass.context, 0, () => _encode_ECDSA_Full_R, $.DER),

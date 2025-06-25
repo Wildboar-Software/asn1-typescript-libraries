@@ -185,7 +185,7 @@ let _cached_decoder_for_TimeDifference: $.ASN1Decoder<TimeDifference> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {TimeDifference} The decoded data structure.
  */
-export function _decode_TimeDifference(el: _Element) {
+export function _decode_TimeDifference(el: _Element): TimeDifference {
     if (!_cached_decoder_for_TimeDifference) {
         _cached_decoder_for_TimeDifference = function (
             el: _Element
@@ -237,7 +237,7 @@ let _cached_encoder_for_TimeDifference: $.ASN1Encoder<TimeDifference> | null = n
 export function _encode_TimeDifference(
     value: TimeDifference,
     elGetter: $.ASN1Encoder<TimeDifference>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeDifference) {
         _cached_encoder_for_TimeDifference = function (
             value: TimeDifference        ): _Element {

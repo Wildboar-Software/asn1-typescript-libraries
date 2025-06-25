@@ -136,7 +136,7 @@ let _cached_decoder_for_BioAPI_BIR_DATA_TYPE: $.ASN1Decoder<BioAPI_BIR_DATA_TYPE
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_DATA_TYPE} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_DATA_TYPE(el: _Element) {
+export function _decode_BioAPI_BIR_DATA_TYPE(el: _Element): BioAPI_BIR_DATA_TYPE {
   if (!_cached_decoder_for_BioAPI_BIR_DATA_TYPE) {
     _cached_decoder_for_BioAPI_BIR_DATA_TYPE = function (
       el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_BioAPI_BIR_DATA_TYPE: $.ASN1Encoder<BioAPI_BIR_DATA_TYPE
 export function _encode_BioAPI_BIR_DATA_TYPE(
   value: BioAPI_BIR_DATA_TYPE,
   elGetter: $.ASN1Encoder<BioAPI_BIR_DATA_TYPE>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_DATA_TYPE) {
     _cached_encoder_for_BioAPI_BIR_DATA_TYPE = function (
       value: BioAPI_BIR_DATA_TYPE    ): _Element {

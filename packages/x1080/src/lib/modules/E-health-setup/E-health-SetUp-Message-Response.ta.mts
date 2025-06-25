@@ -56,7 +56,7 @@ let _cached_decoder_for_E_health_SetUp_Message_Response: $.ASN1Decoder<E_health_
  * @param {_Element} el The element being decoded.
  * @returns {E_health_SetUp_Message_Response} The decoded data structure.
  */
-export function _decode_E_health_SetUp_Message_Response(el: _Element) {
+export function _decode_E_health_SetUp_Message_Response(el: _Element): E_health_SetUp_Message_Response {
     if (!_cached_decoder_for_E_health_SetUp_Message_Response) {
         _cached_decoder_for_E_health_SetUp_Message_Response = $._decode_inextensible_choice<E_health_SetUp_Message_Response>(
             {
@@ -87,7 +87,7 @@ let _cached_encoder_for_E_health_SetUp_Message_Response: $.ASN1Encoder<E_health_
 export function _encode_E_health_SetUp_Message_Response(
     value: E_health_SetUp_Message_Response,
     elGetter: $.ASN1Encoder<E_health_SetUp_Message_Response>
-) {
+): _Element {
     if (!_cached_encoder_for_E_health_SetUp_Message_Response) {
         _cached_encoder_for_E_health_SetUp_Message_Response = $._encode_choice<E_health_SetUp_Message_Response>(
             {

@@ -26,7 +26,7 @@ let _cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Decoder<PBK
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_SaltSourcesAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_PBKDF2_SaltSourcesAlgorithmIdentifier(el: _Element) {
+export function _decode_PBKDF2_SaltSourcesAlgorithmIdentifier(el: _Element): PBKDF2_SaltSourcesAlgorithmIdentifier {
     if (!_cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier) {
         _cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Encoder<PBK
 export function _encode_PBKDF2_SaltSourcesAlgorithmIdentifier(
     value: PBKDF2_SaltSourcesAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<PBKDF2_SaltSourcesAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier) {
         _cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

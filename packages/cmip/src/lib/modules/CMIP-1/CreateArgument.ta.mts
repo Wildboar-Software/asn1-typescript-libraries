@@ -193,7 +193,7 @@ let _cached_decoder_for_CreateArgument: $.ASN1Decoder<CreateArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CreateArgument} The decoded data structure.
  */
-export function _decode_CreateArgument(el: _Element) {
+export function _decode_CreateArgument(el: _Element): CreateArgument {
   if (!_cached_decoder_for_CreateArgument) {
     _cached_decoder_for_CreateArgument = function (
       el: _Element
@@ -266,7 +266,7 @@ let _cached_encoder_for_CreateArgument: $.ASN1Encoder<CreateArgument> | null = n
 export function _encode_CreateArgument(
   value: CreateArgument,
   elGetter: $.ASN1Encoder<CreateArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_CreateArgument) {
     _cached_encoder_for_CreateArgument = function (
       value: CreateArgument    ): _Element {

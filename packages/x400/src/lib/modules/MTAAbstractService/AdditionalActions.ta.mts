@@ -152,7 +152,7 @@ let _cached_decoder_for_AdditionalActions: $.ASN1Decoder<AdditionalActions> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AdditionalActions} The decoded data structure.
  */
-export function _decode_AdditionalActions(el: _Element) {
+export function _decode_AdditionalActions(el: _Element): AdditionalActions {
     if (!_cached_decoder_for_AdditionalActions) {
         _cached_decoder_for_AdditionalActions = function (
             el: _Element
@@ -212,7 +212,7 @@ let _cached_encoder_for_AdditionalActions: $.ASN1Encoder<AdditionalActions> | nu
 export function _encode_AdditionalActions(
     value: AdditionalActions,
     elGetter: $.ASN1Encoder<AdditionalActions>
-) {
+): _Element {
     if (!_cached_encoder_for_AdditionalActions) {
         _cached_encoder_for_AdditionalActions = function (
             value: AdditionalActions        ): _Element {

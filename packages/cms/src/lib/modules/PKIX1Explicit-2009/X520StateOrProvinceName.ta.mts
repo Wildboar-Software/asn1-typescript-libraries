@@ -29,7 +29,7 @@ let _cached_decoder_for_X520StateOrProvinceName: $.ASN1Decoder<X520StateOrProvin
  * @param {_Element} el The element being decoded.
  * @returns {X520StateOrProvinceName} The decoded data structure.
  */
-export function _decode_X520StateOrProvinceName(el: _Element) {
+export function _decode_X520StateOrProvinceName(el: _Element): X520StateOrProvinceName {
     if (!_cached_decoder_for_X520StateOrProvinceName) {
         _cached_decoder_for_X520StateOrProvinceName = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_X520StateOrProvinceName: $.ASN1Encoder<X520StateOrProvin
 export function _encode_X520StateOrProvinceName(
     value: X520StateOrProvinceName,
     elGetter: $.ASN1Encoder<X520StateOrProvinceName>
-) {
+): _Element {
     if (!_cached_encoder_for_X520StateOrProvinceName) {
         _cached_encoder_for_X520StateOrProvinceName = _encode_DirectoryString;
     }

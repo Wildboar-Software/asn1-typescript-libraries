@@ -38,7 +38,7 @@ let _cached_decoder_for_SupportedProtocols: $.ASN1Decoder<SupportedProtocols> | 
  * @param {_Element} el The element being decoded.
  * @returns {SupportedProtocols} The decoded data structure.
  */
-export function _decode_SupportedProtocols(el: _Element) {
+export function _decode_SupportedProtocols(el: _Element): SupportedProtocols {
     if (!_cached_decoder_for_SupportedProtocols) {
         _cached_decoder_for_SupportedProtocols = $._decodeSetOf<SupportedProtocol>(
             () => _decode_SupportedProtocol
@@ -61,7 +61,7 @@ let _cached_encoder_for_SupportedProtocols: $.ASN1Encoder<SupportedProtocols> | 
 export function _encode_SupportedProtocols(
     value: SupportedProtocols,
     elGetter: $.ASN1Encoder<SupportedProtocols>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedProtocols) {
         _cached_encoder_for_SupportedProtocols = $._encodeSetOf<SupportedProtocol>(
             () => _encode_SupportedProtocol,

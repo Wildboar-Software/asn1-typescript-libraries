@@ -151,7 +151,7 @@ let _cached_decoder_for_NotificationDataSyntax: $.ASN1Decoder<NotificationDataSy
  * @param {_Element} el The element being decoded.
  * @returns {NotificationDataSyntax} The decoded data structure.
  */
-export function _decode_NotificationDataSyntax(el: _Element) {
+export function _decode_NotificationDataSyntax(el: _Element): NotificationDataSyntax {
     if (!_cached_decoder_for_NotificationDataSyntax) {
         _cached_decoder_for_NotificationDataSyntax = function (
             el: _Element
@@ -215,7 +215,7 @@ let _cached_encoder_for_NotificationDataSyntax: $.ASN1Encoder<NotificationDataSy
 export function _encode_NotificationDataSyntax(
     value: NotificationDataSyntax,
     elGetter: $.ASN1Encoder<NotificationDataSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_NotificationDataSyntax) {
         _cached_encoder_for_NotificationDataSyntax = function (
             value: NotificationDataSyntax        ): _Element {

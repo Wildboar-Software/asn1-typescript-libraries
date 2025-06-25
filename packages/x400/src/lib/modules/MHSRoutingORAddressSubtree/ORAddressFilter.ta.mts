@@ -123,7 +123,7 @@ let _cached_decoder_for_ORAddressFilter: $.ASN1Decoder<ORAddressFilter> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressFilter} The decoded data structure.
  */
-export function _decode_ORAddressFilter(el: _Element) {
+export function _decode_ORAddressFilter(el: _Element): ORAddressFilter {
     if (!_cached_decoder_for_ORAddressFilter) {
         _cached_decoder_for_ORAddressFilter = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ORAddressFilter: $.ASN1Encoder<ORAddressFilter> | null =
 export function _encode_ORAddressFilter(
     value: ORAddressFilter,
     elGetter: $.ASN1Encoder<ORAddressFilter>
-) {
+): _Element {
     if (!_cached_encoder_for_ORAddressFilter) {
         _cached_encoder_for_ORAddressFilter = function (
             value: ORAddressFilter        ): _Element {

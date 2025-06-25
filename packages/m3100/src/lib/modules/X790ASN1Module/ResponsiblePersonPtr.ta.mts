@@ -46,7 +46,7 @@ let _cached_decoder_for_ResponsiblePersonPtr: $.ASN1Decoder<ResponsiblePersonPtr
  * @param {_Element} el The element being decoded.
  * @returns {ResponsiblePersonPtr} The decoded data structure.
  */
-export function _decode_ResponsiblePersonPtr(el: _Element) {
+export function _decode_ResponsiblePersonPtr(el: _Element): ResponsiblePersonPtr {
     if (!_cached_decoder_for_ResponsiblePersonPtr) {
         _cached_decoder_for_ResponsiblePersonPtr = $._decode_extensible_choice<ResponsiblePersonPtr>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_ResponsiblePersonPtr: $.ASN1Encoder<ResponsiblePersonPtr
 export function _encode_ResponsiblePersonPtr(
     value: ResponsiblePersonPtr,
     elGetter: $.ASN1Encoder<ResponsiblePersonPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponsiblePersonPtr) {
         _cached_encoder_for_ResponsiblePersonPtr = $._encode_choice<ResponsiblePersonPtr>(
             {

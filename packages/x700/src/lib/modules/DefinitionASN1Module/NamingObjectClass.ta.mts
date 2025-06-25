@@ -132,7 +132,7 @@ let _cached_decoder_for_NamingObjectClass: $.ASN1Decoder<NamingObjectClass> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NamingObjectClass} The decoded data structure.
  */
-export function _decode_NamingObjectClass(el: _Element) {
+export function _decode_NamingObjectClass(el: _Element): NamingObjectClass {
     if (!_cached_decoder_for_NamingObjectClass) {
         _cached_decoder_for_NamingObjectClass = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_NamingObjectClass: $.ASN1Encoder<NamingObjectClass> | nu
 export function _encode_NamingObjectClass(
     value: NamingObjectClass,
     elGetter: $.ASN1Encoder<NamingObjectClass>
-) {
+): _Element {
     if (!_cached_encoder_for_NamingObjectClass) {
         _cached_encoder_for_NamingObjectClass = function (
             value: NamingObjectClass        ): _Element {

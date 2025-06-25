@@ -30,7 +30,7 @@ let _cached_decoder_for_PKCS8ShroudedKeyBag: $.ASN1Decoder<PKCS8ShroudedKeyBag> 
  * @param {_Element} el The element being decoded.
  * @returns {PKCS8ShroudedKeyBag} The decoded data structure.
  */
-export function _decode_PKCS8ShroudedKeyBag(el: _Element) {
+export function _decode_PKCS8ShroudedKeyBag(el: _Element): PKCS8ShroudedKeyBag {
     if (!_cached_decoder_for_PKCS8ShroudedKeyBag) {
         _cached_decoder_for_PKCS8ShroudedKeyBag = _decode_EncryptedPrivateKeyInfo;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_PKCS8ShroudedKeyBag: $.ASN1Encoder<PKCS8ShroudedKeyBag> 
 export function _encode_PKCS8ShroudedKeyBag(
     value: PKCS8ShroudedKeyBag,
     elGetter: $.ASN1Encoder<PKCS8ShroudedKeyBag>
-) {
+): _Element {
     if (!_cached_encoder_for_PKCS8ShroudedKeyBag) {
         _cached_encoder_for_PKCS8ShroudedKeyBag = _encode_EncryptedPrivateKeyInfo;
     }

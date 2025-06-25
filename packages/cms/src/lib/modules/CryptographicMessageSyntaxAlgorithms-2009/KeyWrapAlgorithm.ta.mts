@@ -25,7 +25,7 @@ let _cached_decoder_for_KeyWrapAlgorithm: $.ASN1Decoder<KeyWrapAlgorithm> | null
  * @param {_Element} el The element being decoded.
  * @returns {KeyWrapAlgorithm} The decoded data structure.
  */
-export function _decode_KeyWrapAlgorithm(el: _Element) {
+export function _decode_KeyWrapAlgorithm(el: _Element): KeyWrapAlgorithm {
     if (!_cached_decoder_for_KeyWrapAlgorithm) {
         _cached_decoder_for_KeyWrapAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_KeyWrapAlgorithm: $.ASN1Encoder<KeyWrapAlgorithm> | null
 export function _encode_KeyWrapAlgorithm(
     value: KeyWrapAlgorithm,
     elGetter: $.ASN1Encoder<KeyWrapAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyWrapAlgorithm) {
         _cached_encoder_for_KeyWrapAlgorithm = _encode_AlgorithmIdentifier;
     }

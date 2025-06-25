@@ -30,7 +30,7 @@ let _cached_decoder_for_ProtocolEncrKey: $.ASN1Decoder<ProtocolEncrKey> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolEncrKey} The decoded data structure.
  */
-export function _decode_ProtocolEncrKey(el: _Element) {
+export function _decode_ProtocolEncrKey(el: _Element): ProtocolEncrKey {
     if (!_cached_decoder_for_ProtocolEncrKey) {
         _cached_decoder_for_ProtocolEncrKey = _decode_SubjectPublicKeyInfo;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_ProtocolEncrKey: $.ASN1Encoder<ProtocolEncrKey> | null =
 export function _encode_ProtocolEncrKey(
     value: ProtocolEncrKey,
     elGetter: $.ASN1Encoder<ProtocolEncrKey>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtocolEncrKey) {
         _cached_encoder_for_ProtocolEncrKey = _encode_SubjectPublicKeyInfo;
     }

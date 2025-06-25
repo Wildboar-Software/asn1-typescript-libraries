@@ -101,7 +101,7 @@ let _cached_decoder_for_RangeError: $.ASN1Decoder<RangeError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RangeError} The decoded data structure.
  */
-export function _decode_RangeError(el: _Element) {
+export function _decode_RangeError(el: _Element): RangeError {
     if (!_cached_decoder_for_RangeError) {
         _cached_decoder_for_RangeError = function (el: _Element): RangeError {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -140,7 +140,7 @@ let _cached_encoder_for_RangeError: $.ASN1Encoder<RangeError> | null = null;
 export function _encode_RangeError(
     value: RangeError,
     elGetter: $.ASN1Encoder<RangeError>
-) {
+): _Element {
     if (!_cached_encoder_for_RangeError) {
         _cached_encoder_for_RangeError = function (
             value: RangeError        ): _Element {

@@ -67,7 +67,7 @@ let _cached_decoder_for_Request_Type: $.ASN1Decoder<Request_Type> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Request_Type} The decoded data structure.
  */
-export function _decode_Request_Type(el: _Element) {
+export function _decode_Request_Type(el: _Element): Request_Type {
   if (!_cached_decoder_for_Request_Type) {
     _cached_decoder_for_Request_Type = $._decode_implicit<Request_Type>(
       () => $._decodeInteger
@@ -90,7 +90,7 @@ let _cached_encoder_for_Request_Type: $.ASN1Encoder<Request_Type> | null = null;
 export function _encode_Request_Type(
   value: Request_Type,
   elGetter: $.ASN1Encoder<Request_Type>
-) {
+): _Element {
   if (!_cached_encoder_for_Request_Type) {
     _cached_encoder_for_Request_Type = $._encode_implicit(
       _TagClass.application,

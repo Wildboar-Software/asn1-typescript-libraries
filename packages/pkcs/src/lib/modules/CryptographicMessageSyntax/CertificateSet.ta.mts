@@ -29,7 +29,7 @@ let _cached_decoder_for_CertificateSet: $.ASN1Decoder<CertificateSet> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertificateSet} The decoded data structure.
  */
-export function _decode_CertificateSet(el: _Element) {
+export function _decode_CertificateSet(el: _Element): CertificateSet {
     if (!_cached_decoder_for_CertificateSet) {
         _cached_decoder_for_CertificateSet = $._decodeSetOf<CertificateChoices>(
             () => _decode_CertificateChoices
@@ -52,7 +52,7 @@ let _cached_encoder_for_CertificateSet: $.ASN1Encoder<CertificateSet> | null = n
 export function _encode_CertificateSet(
     value: CertificateSet,
     elGetter: $.ASN1Encoder<CertificateSet>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateSet) {
         _cached_encoder_for_CertificateSet = $._encodeSetOf<CertificateChoices>(
             () => _encode_CertificateChoices,

@@ -41,7 +41,7 @@ let _cached_decoder_for_TYPED_DATA: $.ASN1Decoder<TYPED_DATA> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TYPED_DATA} The decoded data structure.
  */
-export function _decode_TYPED_DATA(el: _Element) {
+export function _decode_TYPED_DATA(el: _Element): TYPED_DATA {
   if (!_cached_decoder_for_TYPED_DATA) {
     _cached_decoder_for_TYPED_DATA = $._decodeSequenceOf<TYPED_DATA_Item>(
       () => _decode_TYPED_DATA_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_TYPED_DATA: $.ASN1Encoder<TYPED_DATA> | null = null;
 export function _encode_TYPED_DATA(
   value: TYPED_DATA,
   elGetter: $.ASN1Encoder<TYPED_DATA>
-) {
+): _Element {
   if (!_cached_encoder_for_TYPED_DATA) {
     _cached_encoder_for_TYPED_DATA = $._encodeSequenceOf<TYPED_DATA_Item>(
       () => _encode_TYPED_DATA_Item,

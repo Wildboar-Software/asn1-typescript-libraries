@@ -120,7 +120,7 @@ let _cached_decoder_for_ECIES_Ciphertext_Value: $.ASN1Decoder<ECIES_Ciphertext_V
  * @returns {ECIES_Ciphertext_Value} The decoded data structure.
  */
 export
-function _decode_ECIES_Ciphertext_Value (el: _Element) {
+function _decode_ECIES_Ciphertext_Value (el: _Element): ECIES_Ciphertext_Value {
     if (!_cached_decoder_for_ECIES_Ciphertext_Value) { _cached_decoder_for_ECIES_Ciphertext_Value = function (el: _Element): ECIES_Ciphertext_Value {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_ECIES_Ciphertext_Value: $.ASN1Encoder<ECIES_Ciphertext_V
  * @returns {_Element} The ECIES_Ciphertext_Value, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECIES_Ciphertext_Value (value: ECIES_Ciphertext_Value, elGetter: $.ASN1Encoder<ECIES_Ciphertext_Value>) {
+function _encode_ECIES_Ciphertext_Value (value: ECIES_Ciphertext_Value, elGetter: $.ASN1Encoder<ECIES_Ciphertext_Value>): _Element {
     if (!_cached_encoder_for_ECIES_Ciphertext_Value) { _cached_encoder_for_ECIES_Ciphertext_Value = function (value: ECIES_Ciphertext_Value): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

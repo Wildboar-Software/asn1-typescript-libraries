@@ -115,7 +115,7 @@ let _cached_decoder_for_SinglePeerClock: $.ASN1Decoder<SinglePeerClock> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SinglePeerClock} The decoded data structure.
  */
-export function _decode_SinglePeerClock(el: _Element) {
+export function _decode_SinglePeerClock(el: _Element): SinglePeerClock {
     if (!_cached_decoder_for_SinglePeerClock) {
         _cached_decoder_for_SinglePeerClock = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_SinglePeerClock: $.ASN1Encoder<SinglePeerClock> | null =
 export function _encode_SinglePeerClock(
     value: SinglePeerClock,
     elGetter: $.ASN1Encoder<SinglePeerClock>
-) {
+): _Element {
     if (!_cached_encoder_for_SinglePeerClock) {
         _cached_encoder_for_SinglePeerClock = function (
             value: SinglePeerClock        ): _Element {

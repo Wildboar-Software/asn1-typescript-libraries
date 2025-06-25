@@ -123,7 +123,7 @@ let _cached_decoder_for_BodyOrRemoved: $.ASN1Decoder<BodyOrRemoved> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {BodyOrRemoved} The decoded data structure.
  */
-export function _decode_BodyOrRemoved(el: _Element) {
+export function _decode_BodyOrRemoved(el: _Element): BodyOrRemoved {
     if (!_cached_decoder_for_BodyOrRemoved) {
         _cached_decoder_for_BodyOrRemoved = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_BodyOrRemoved: $.ASN1Encoder<BodyOrRemoved> | null = nul
 export function _encode_BodyOrRemoved(
     value: BodyOrRemoved,
     elGetter: $.ASN1Encoder<BodyOrRemoved>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyOrRemoved) {
         _cached_encoder_for_BodyOrRemoved = function (
             value: BodyOrRemoved        ): _Element {

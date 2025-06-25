@@ -50,7 +50,7 @@ let _cached_decoder_for_Diagnostic: $.ASN1Decoder<Diagnostic> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Diagnostic} The decoded data structure.
  */
-export function _decode_Diagnostic(el: _Element) {
+export function _decode_Diagnostic(el: _Element): Diagnostic {
   if (!_cached_decoder_for_Diagnostic) {
     _cached_decoder_for_Diagnostic = $._decode_implicit<Diagnostic>(() =>
       $._decodeSequenceOf<Diagnostic_Item>(() => _decode_Diagnostic_Item)
@@ -73,7 +73,7 @@ let _cached_encoder_for_Diagnostic: $.ASN1Encoder<Diagnostic> | null = null;
 export function _encode_Diagnostic(
   value: Diagnostic,
   elGetter: $.ASN1Encoder<Diagnostic>
-) {
+): _Element {
   if (!_cached_encoder_for_Diagnostic) {
     _cached_encoder_for_Diagnostic = $._encode_implicit(
       _TagClass.application,

@@ -132,7 +132,7 @@ let _cached_decoder_for_RegisterResult_non_empty_result: $.ASN1Decoder<RegisterR
  * @param {_Element} el The element being decoded.
  * @returns {RegisterResult_non_empty_result} The decoded data structure.
  */
-export function _decode_RegisterResult_non_empty_result(el: _Element) {
+export function _decode_RegisterResult_non_empty_result(el: _Element): RegisterResult_non_empty_result {
     if (!_cached_decoder_for_RegisterResult_non_empty_result) {
         _cached_decoder_for_RegisterResult_non_empty_result = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_RegisterResult_non_empty_result: $.ASN1Encoder<RegisterR
 export function _encode_RegisterResult_non_empty_result(
     value: RegisterResult_non_empty_result,
     elGetter: $.ASN1Encoder<RegisterResult_non_empty_result>
-) {
+): _Element {
     if (!_cached_encoder_for_RegisterResult_non_empty_result) {
         _cached_encoder_for_RegisterResult_non_empty_result = function (
             value: RegisterResult_non_empty_result        ): _Element {

@@ -148,7 +148,7 @@ let _cached_decoder_for_ExtensionField: $.ASN1Decoder<ExtensionField> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionField} The decoded data structure.
  */
-export function _decode_ExtensionField(el: _Element) {
+export function _decode_ExtensionField(el: _Element): ExtensionField {
     if (!_cached_decoder_for_ExtensionField) {
         _cached_decoder_for_ExtensionField = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_ExtensionField: $.ASN1Encoder<ExtensionField> | null = n
 export function _encode_ExtensionField(
     value: ExtensionField,
     elGetter: $.ASN1Encoder<ExtensionField>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionField) {
         _cached_encoder_for_ExtensionField = function (
             value: ExtensionField        ): _Element {

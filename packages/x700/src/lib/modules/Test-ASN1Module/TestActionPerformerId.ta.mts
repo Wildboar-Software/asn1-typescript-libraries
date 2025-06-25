@@ -35,7 +35,7 @@ let _cached_decoder_for_TestActionPerformerId: $.ASN1Decoder<TestActionPerformer
  * @param {_Element} el The element being decoded.
  * @returns {TestActionPerformerId} The decoded data structure.
  */
-export function _decode_TestActionPerformerId(el: _Element) {
+export function _decode_TestActionPerformerId(el: _Element): TestActionPerformerId {
     if (!_cached_decoder_for_TestActionPerformerId) {
         _cached_decoder_for_TestActionPerformerId = _decode_SimpleNameType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TestActionPerformerId: $.ASN1Encoder<TestActionPerformer
 export function _encode_TestActionPerformerId(
     value: TestActionPerformerId,
     elGetter: $.ASN1Encoder<TestActionPerformerId>
-) {
+): _Element {
     if (!_cached_encoder_for_TestActionPerformerId) {
         _cached_encoder_for_TestActionPerformerId = _encode_SimpleNameType;
     }

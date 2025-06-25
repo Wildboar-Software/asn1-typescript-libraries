@@ -39,7 +39,7 @@ let _cached_decoder_for_ECCSupplements: $.ASN1Decoder<ECCSupplements> | null = n
  * @returns {ECCSupplements} The decoded data structure.
  */
 export
-function _decode_ECCSupplements (el: _Element) {
+function _decode_ECCSupplements (el: _Element): ECCSupplements {
     if (!_cached_decoder_for_ECCSupplements) { _cached_decoder_for_ECCSupplements = $._decode_inextensible_choice<ECCSupplements>({
     "CONTEXT 0": [ "namedMultiples", $._decode_implicit<NamedMultiples>(() => _decode_NamedMultiples) ],
     "CONTEXT 1": [ "specifiedMultiples", $._decode_implicit<SpecifiedMultiples>(() => _decode_SpecifiedMultiples) ]
@@ -57,7 +57,7 @@ let _cached_encoder_for_ECCSupplements: $.ASN1Encoder<ECCSupplements> | null = n
  * @returns {_Element} The ECCSupplements, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECCSupplements (value: ECCSupplements, elGetter: $.ASN1Encoder<ECCSupplements>) {
+function _encode_ECCSupplements (value: ECCSupplements, elGetter: $.ASN1Encoder<ECCSupplements>): _Element {
     if (!_cached_encoder_for_ECCSupplements) { _cached_encoder_for_ECCSupplements = $._encode_choice<ECCSupplements>({
     "namedMultiples": $._encode_implicit(_TagClass.context, 0, () => _encode_NamedMultiples, $.DER),
     "specifiedMultiples": $._encode_implicit(_TagClass.context, 1, () => _encode_SpecifiedMultiples, $.DER),

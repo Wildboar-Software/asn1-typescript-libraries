@@ -97,7 +97,7 @@ let _cached_decoder_for_LinkedReplyArgument: $.ASN1Decoder<LinkedReplyArgument> 
  * @param {_Element} el The element being decoded.
  * @returns {LinkedReplyArgument} The decoded data structure.
  */
-export function _decode_LinkedReplyArgument(el: _Element) {
+export function _decode_LinkedReplyArgument(el: _Element): LinkedReplyArgument {
   if (!_cached_decoder_for_LinkedReplyArgument) {
     _cached_decoder_for_LinkedReplyArgument = $._decode_inextensible_choice<LinkedReplyArgument>(
       {
@@ -159,7 +159,7 @@ let _cached_encoder_for_LinkedReplyArgument: $.ASN1Encoder<LinkedReplyArgument> 
 export function _encode_LinkedReplyArgument(
   value: LinkedReplyArgument,
   elGetter: $.ASN1Encoder<LinkedReplyArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_LinkedReplyArgument) {
     _cached_encoder_for_LinkedReplyArgument = $._encode_choice<LinkedReplyArgument>(
       {

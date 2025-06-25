@@ -125,7 +125,7 @@ let _cached_decoder_for_ProtectionStatusParameterR1: $.ASN1Decoder<ProtectionSta
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionStatusParameterR1} The decoded data structure.
  */
-export function _decode_ProtectionStatusParameterR1(el: _Element) {
+export function _decode_ProtectionStatusParameterR1(el: _Element): ProtectionStatusParameterR1 {
     if (!_cached_decoder_for_ProtectionStatusParameterR1) {
         _cached_decoder_for_ProtectionStatusParameterR1 = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_ProtectionStatusParameterR1: $.ASN1Encoder<ProtectionSta
 export function _encode_ProtectionStatusParameterR1(
     value: ProtectionStatusParameterR1,
     elGetter: $.ASN1Encoder<ProtectionStatusParameterR1>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionStatusParameterR1) {
         _cached_encoder_for_ProtectionStatusParameterR1 = function (
             value: ProtectionStatusParameterR1        ): _Element {

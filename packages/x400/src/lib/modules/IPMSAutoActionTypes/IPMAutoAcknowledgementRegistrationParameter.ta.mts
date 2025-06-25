@@ -127,7 +127,7 @@ let _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter: $.ASN1Decod
  */
 export function _decode_IPMAutoAcknowledgementRegistrationParameter(
     el: _Element
-) {
+): IPMAutoAcknowledgementRegistrationParameter {
     if (!_cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter) {
         _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter: $.ASN1Encod
 export function _encode_IPMAutoAcknowledgementRegistrationParameter(
     value: IPMAutoAcknowledgementRegistrationParameter,
     elGetter: $.ASN1Encoder<IPMAutoAcknowledgementRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter) {
         _cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter = function (
             value: IPMAutoAcknowledgementRegistrationParameter        ): _Element {

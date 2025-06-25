@@ -36,7 +36,7 @@ let _cached_decoder_for_LocalDistinguishedName: $.ASN1Decoder<LocalDistinguished
  * @param {_Element} el The element being decoded.
  * @returns {LocalDistinguishedName} The decoded data structure.
  */
-export function _decode_LocalDistinguishedName(el: _Element) {
+export function _decode_LocalDistinguishedName(el: _Element): LocalDistinguishedName {
   if (!_cached_decoder_for_LocalDistinguishedName) {
     _cached_decoder_for_LocalDistinguishedName = _decode_BaseManagedObjectId;
   }
@@ -55,7 +55,7 @@ let _cached_encoder_for_LocalDistinguishedName: $.ASN1Encoder<LocalDistinguished
 export function _encode_LocalDistinguishedName(
   value: LocalDistinguishedName,
   elGetter: $.ASN1Encoder<LocalDistinguishedName>
-) {
+): _Element {
   if (!_cached_encoder_for_LocalDistinguishedName) {
     _cached_encoder_for_LocalDistinguishedName = _encode_BaseManagedObjectId;
   }

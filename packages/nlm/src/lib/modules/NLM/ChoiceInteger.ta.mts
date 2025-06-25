@@ -41,7 +41,7 @@ let _cached_decoder_for_ChoiceInteger: $.ASN1Decoder<ChoiceInteger> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ChoiceInteger} The decoded data structure.
  */
-export function _decode_ChoiceInteger(el: _Element) {
+export function _decode_ChoiceInteger(el: _Element): ChoiceInteger {
     if (!_cached_decoder_for_ChoiceInteger) {
         _cached_decoder_for_ChoiceInteger = $._decode_inextensible_choice<ChoiceInteger>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ChoiceInteger: $.ASN1Encoder<ChoiceInteger> | null = nul
 export function _encode_ChoiceInteger(
     value: ChoiceInteger,
     elGetter: $.ASN1Encoder<ChoiceInteger>
-) {
+): _Element {
     if (!_cached_encoder_for_ChoiceInteger) {
         _cached_encoder_for_ChoiceInteger = $._encode_choice<ChoiceInteger>(
             {

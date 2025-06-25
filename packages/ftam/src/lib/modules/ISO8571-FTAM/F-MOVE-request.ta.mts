@@ -214,7 +214,7 @@ let _cached_decoder_for_F_MOVE_request: $.ASN1Decoder<F_MOVE_request> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {F_MOVE_request} The decoded data structure.
  */
-export function _decode_F_MOVE_request(el: _Element) {
+export function _decode_F_MOVE_request(el: _Element): F_MOVE_request {
   if (!_cached_decoder_for_F_MOVE_request) {
     _cached_decoder_for_F_MOVE_request = function (
       el: _Element
@@ -281,7 +281,7 @@ let _cached_encoder_for_F_MOVE_request: $.ASN1Encoder<F_MOVE_request> | null = n
 export function _encode_F_MOVE_request(
   value: F_MOVE_request,
   elGetter: $.ASN1Encoder<F_MOVE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_MOVE_request) {
     _cached_encoder_for_F_MOVE_request = function (
       value: F_MOVE_request    ): _Element {

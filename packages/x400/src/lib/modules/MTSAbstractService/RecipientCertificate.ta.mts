@@ -35,7 +35,7 @@ let _cached_decoder_for_RecipientCertificate: $.ASN1Decoder<RecipientCertificate
  * @param {_Element} el The element being decoded.
  * @returns {RecipientCertificate} The decoded data structure.
  */
-export function _decode_RecipientCertificate(el: _Element) {
+export function _decode_RecipientCertificate(el: _Element): RecipientCertificate {
     if (!_cached_decoder_for_RecipientCertificate) {
         _cached_decoder_for_RecipientCertificate = _decode_Certificates;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RecipientCertificate: $.ASN1Encoder<RecipientCertificate
 export function _encode_RecipientCertificate(
     value: RecipientCertificate,
     elGetter: $.ASN1Encoder<RecipientCertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientCertificate) {
         _cached_encoder_for_RecipientCertificate = _encode_Certificates;
     }

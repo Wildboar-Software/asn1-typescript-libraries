@@ -142,7 +142,7 @@ let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataType} The decoded data structure.
  */
-export function _decode_DataType(el: _Element) {
+export function _decode_DataType(el: _Element): DataType {
     if (!_cached_decoder_for_DataType) {
         _cached_decoder_for_DataType = function (el: _Element): DataType {
             let processedLevel!: ProcessedLevel;
@@ -186,7 +186,7 @@ let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
 export function _encode_DataType(
     value: DataType,
     elGetter: $.ASN1Encoder<DataType>
-) {
+): _Element {
     if (!_cached_encoder_for_DataType) {
         _cached_encoder_for_DataType = function (
             value: DataType        ): _Element {

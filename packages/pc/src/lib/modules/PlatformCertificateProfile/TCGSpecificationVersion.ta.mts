@@ -121,7 +121,7 @@ let _cached_decoder_for_TCGSpecificationVersion: $.ASN1Decoder<TCGSpecificationV
  * @returns {TCGSpecificationVersion} The decoded data structure.
  */
 export
-function _decode_TCGSpecificationVersion (el: _Element) {
+function _decode_TCGSpecificationVersion (el: _Element): TCGSpecificationVersion {
     if (!_cached_decoder_for_TCGSpecificationVersion) { _cached_decoder_for_TCGSpecificationVersion = function (el: _Element): TCGSpecificationVersion {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -156,7 +156,7 @@ let _cached_encoder_for_TCGSpecificationVersion: $.ASN1Encoder<TCGSpecificationV
  * @returns {_Element} The TCGSpecificationVersion, encoded as an ASN.1 Element.
  */
 export
-function _encode_TCGSpecificationVersion (value: TCGSpecificationVersion, elGetter: $.ASN1Encoder<TCGSpecificationVersion>) {
+function _encode_TCGSpecificationVersion (value: TCGSpecificationVersion, elGetter: $.ASN1Encoder<TCGSpecificationVersion>): _Element {
     if (!_cached_encoder_for_TCGSpecificationVersion) { _cached_encoder_for_TCGSpecificationVersion = function (value: TCGSpecificationVersion): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

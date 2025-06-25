@@ -380,7 +380,7 @@ let _cached_decoder_for_TroubleHistoryInfo: $.ASN1Decoder<TroubleHistoryInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {TroubleHistoryInfo} The decoded data structure.
  */
-export function _decode_TroubleHistoryInfo(el: _Element) {
+export function _decode_TroubleHistoryInfo(el: _Element): TroubleHistoryInfo {
     if (!_cached_decoder_for_TroubleHistoryInfo) {
         _cached_decoder_for_TroubleHistoryInfo = function (
             el: _Element
@@ -532,7 +532,7 @@ let _cached_encoder_for_TroubleHistoryInfo: $.ASN1Encoder<TroubleHistoryInfo> | 
 export function _encode_TroubleHistoryInfo(
     value: TroubleHistoryInfo,
     elGetter: $.ASN1Encoder<TroubleHistoryInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleHistoryInfo) {
         _cached_encoder_for_TroubleHistoryInfo = function (
             value: TroubleHistoryInfo        ): _Element {

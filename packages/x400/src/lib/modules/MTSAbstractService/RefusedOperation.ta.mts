@@ -121,7 +121,7 @@ let _cached_decoder_for_RefusedOperation: $.ASN1Decoder<RefusedOperation> | null
  * @param {_Element} el The element being decoded.
  * @returns {RefusedOperation} The decoded data structure.
  */
-export function _decode_RefusedOperation(el: _Element) {
+export function _decode_RefusedOperation(el: _Element): RefusedOperation {
     if (!_cached_decoder_for_RefusedOperation) {
         _cached_decoder_for_RefusedOperation = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_RefusedOperation: $.ASN1Encoder<RefusedOperation> | null
 export function _encode_RefusedOperation(
     value: RefusedOperation,
     elGetter: $.ASN1Encoder<RefusedOperation>
-) {
+): _Element {
     if (!_cached_encoder_for_RefusedOperation) {
         _cached_encoder_for_RefusedOperation = function (
             value: RefusedOperation        ): _Element {

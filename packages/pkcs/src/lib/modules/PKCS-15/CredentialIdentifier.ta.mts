@@ -107,7 +107,7 @@ let _cached_decoder_for_CredentialIdentifier: $.ASN1Decoder<CredentialIdentifier
  * @param {_Element} el The element being decoded.
  * @returns {CredentialIdentifier} The decoded data structure.
  */
-export function _decode_CredentialIdentifier(el: _Element) {
+export function _decode_CredentialIdentifier(el: _Element): CredentialIdentifier {
     if (!_cached_decoder_for_CredentialIdentifier) {
         _cached_decoder_for_CredentialIdentifier = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_CredentialIdentifier: $.ASN1Encoder<CredentialIdentifier
 export function _encode_CredentialIdentifier(
     value: CredentialIdentifier,
     elGetter: $.ASN1Encoder<CredentialIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_CredentialIdentifier) {
         _cached_encoder_for_CredentialIdentifier = function (
             value: CredentialIdentifier        ): _Element {

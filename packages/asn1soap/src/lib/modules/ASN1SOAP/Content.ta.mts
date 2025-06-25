@@ -53,7 +53,7 @@ let _cached_decoder_for_Content: $.ASN1Decoder<Content> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Content} The decoded data structure.
  */
-export function _decode_Content(el: _Element) {
+export function _decode_Content(el: _Element): Content {
   if (!_cached_decoder_for_Content) {
     _cached_decoder_for_Content = $._decode_inextensible_choice<Content>({
       'CONTEXT 0': ['encoded_value', _decode_Content_encoded_value],
@@ -77,7 +77,7 @@ let _cached_encoder_for_Content: $.ASN1Encoder<Content> | null = null;
 export function _encode_Content(
   value: Content,
   elGetter: $.ASN1Encoder<Content>
-) {
+): _Element {
   if (!_cached_encoder_for_Content) {
     _cached_encoder_for_Content = $._encode_choice<Content>(
       {

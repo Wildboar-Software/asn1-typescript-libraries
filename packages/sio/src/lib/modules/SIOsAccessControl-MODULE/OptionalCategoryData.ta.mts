@@ -111,7 +111,7 @@ let _cached_decoder_for_OptionalCategoryData: $.ASN1Decoder<OptionalCategoryData
  * @param {_Element} el The element being decoded.
  * @returns {OptionalCategoryData} The decoded data structure.
  */
-export function _decode_OptionalCategoryData(el: _Element) {
+export function _decode_OptionalCategoryData(el: _Element): OptionalCategoryData {
     if (!_cached_decoder_for_OptionalCategoryData) {
         _cached_decoder_for_OptionalCategoryData = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_OptionalCategoryData: $.ASN1Encoder<OptionalCategoryData
 export function _encode_OptionalCategoryData(
     value: OptionalCategoryData,
     elGetter: $.ASN1Encoder<OptionalCategoryData>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalCategoryData) {
         _cached_encoder_for_OptionalCategoryData = function (
             value: OptionalCategoryData        ): _Element {

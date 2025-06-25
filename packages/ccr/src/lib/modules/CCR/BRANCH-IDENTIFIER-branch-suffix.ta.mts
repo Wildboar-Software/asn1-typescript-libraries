@@ -39,7 +39,7 @@ let _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix: $.ASN1Decoder<BRANCH_ID
  * @param {_Element} el The element being decoded.
  * @returns {BRANCH_IDENTIFIER_branch_suffix} The decoded data structure.
  */
-export function _decode_BRANCH_IDENTIFIER_branch_suffix(el: _Element) {
+export function _decode_BRANCH_IDENTIFIER_branch_suffix(el: _Element): BRANCH_IDENTIFIER_branch_suffix {
   if (!_cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix) {
     _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix = $._decode_extensible_choice<BRANCH_IDENTIFIER_branch_suffix>(
       {
@@ -71,7 +71,7 @@ let _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix: $.ASN1Encoder<BRANCH_ID
 export function _encode_BRANCH_IDENTIFIER_branch_suffix(
   value: BRANCH_IDENTIFIER_branch_suffix,
   elGetter: $.ASN1Encoder<BRANCH_IDENTIFIER_branch_suffix>
-) {
+): _Element {
   if (!_cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix) {
     _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix = $._encode_choice<BRANCH_IDENTIFIER_branch_suffix>(
       {

@@ -39,7 +39,7 @@ let _cached_decoder_for_MonthDay: $.ASN1Decoder<MonthDay> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MonthDay} The decoded data structure.
  */
-export function _decode_MonthDay(el: _Element) {
+export function _decode_MonthDay(el: _Element): MonthDay {
   if (!_cached_decoder_for_MonthDay) {
     _cached_decoder_for_MonthDay = _decode_DateTimeType;
   }
@@ -60,7 +60,7 @@ let _cached_encoder_for_MonthDay: $.ASN1Encoder<MonthDay> | null = null;
 export function _encode_MonthDay(
   value: MonthDay,
   elGetter: $.ASN1Encoder<MonthDay>
-) {
+): _Element {
   if (!_cached_encoder_for_MonthDay) {
     _cached_encoder_for_MonthDay = _encode_DateTimeType;
   }

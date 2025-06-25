@@ -38,7 +38,7 @@ let _cached_decoder_for_MaxActiveCircuits: $.ASN1Decoder<MaxActiveCircuits> | nu
  * @param {_Element} el The element being decoded.
  * @returns {MaxActiveCircuits} The decoded data structure.
  */
-export function _decode_MaxActiveCircuits(el: _Element) {
+export function _decode_MaxActiveCircuits(el: _Element): MaxActiveCircuits {
     if (!_cached_decoder_for_MaxActiveCircuits) {
         _cached_decoder_for_MaxActiveCircuits = _decode_ChoiceInteger;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_MaxActiveCircuits: $.ASN1Encoder<MaxActiveCircuits> | nu
 export function _encode_MaxActiveCircuits(
     value: MaxActiveCircuits,
     elGetter: $.ASN1Encoder<MaxActiveCircuits>
-) {
+): _Element {
     if (!_cached_encoder_for_MaxActiveCircuits) {
         _cached_encoder_for_MaxActiveCircuits = _encode_ChoiceInteger;
     }

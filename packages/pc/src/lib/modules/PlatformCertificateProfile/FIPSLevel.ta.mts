@@ -133,7 +133,7 @@ let _cached_decoder_for_FIPSLevel: $.ASN1Decoder<FIPSLevel> | null = null;
  * @returns {FIPSLevel} The decoded data structure.
  */
 export
-function _decode_FIPSLevel (el: _Element) {
+function _decode_FIPSLevel (el: _Element): FIPSLevel {
     if (!_cached_decoder_for_FIPSLevel) { _cached_decoder_for_FIPSLevel = function (el: _Element): FIPSLevel {
     let version!: IA5String;
     let level!: SecurityLevel;
@@ -168,7 +168,7 @@ let _cached_encoder_for_FIPSLevel: $.ASN1Encoder<FIPSLevel> | null = null;
  * @returns {_Element} The FIPSLevel, encoded as an ASN.1 Element.
  */
 export
-function _encode_FIPSLevel (value: FIPSLevel, elGetter: $.ASN1Encoder<FIPSLevel>) {
+function _encode_FIPSLevel (value: FIPSLevel, elGetter: $.ASN1Encoder<FIPSLevel>): _Element {
     if (!_cached_encoder_for_FIPSLevel) { _cached_encoder_for_FIPSLevel = function (value: FIPSLevel): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

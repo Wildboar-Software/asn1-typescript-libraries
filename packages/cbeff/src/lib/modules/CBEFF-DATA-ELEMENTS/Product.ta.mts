@@ -112,7 +112,7 @@ let _cached_decoder_for_Product: $.ASN1Decoder<Product> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Product} The decoded data structure.
  */
-export function _decode_Product(el: _Element) {
+export function _decode_Product(el: _Element): Product {
   if (!_cached_decoder_for_Product) {
     _cached_decoder_for_Product = function (el: _Element): Product {
       let product_owner: OPTIONAL<INTEGER>;
@@ -154,7 +154,7 @@ let _cached_encoder_for_Product: $.ASN1Encoder<Product> | null = null;
 export function _encode_Product(
   value: Product,
   elGetter: $.ASN1Encoder<Product>
-) {
+): _Element {
   if (!_cached_encoder_for_Product) {
     _cached_encoder_for_Product = function (
       value: Product    ): _Element {

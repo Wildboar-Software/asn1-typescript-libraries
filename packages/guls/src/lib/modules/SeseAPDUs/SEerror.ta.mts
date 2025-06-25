@@ -123,7 +123,7 @@ let _cached_decoder_for_SEerror: $.ASN1Decoder<SEerror> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SEerror} The decoded data structure.
  */
-export function _decode_SEerror(el: _Element) {
+export function _decode_SEerror(el: _Element): SEerror {
   if (!_cached_decoder_for_SEerror) {
     _cached_decoder_for_SEerror = function (el: _Element): SEerror {
       let errorCode: OPTIONAL<Identifier>;
@@ -167,7 +167,7 @@ let _cached_encoder_for_SEerror: $.ASN1Encoder<SEerror> | null = null;
 export function _encode_SEerror(
   value: SEerror,
   elGetter: $.ASN1Encoder<SEerror>
-) {
+): _Element {
   if (!_cached_encoder_for_SEerror) {
     _cached_encoder_for_SEerror = function (
       value: SEerror    ): _Element {

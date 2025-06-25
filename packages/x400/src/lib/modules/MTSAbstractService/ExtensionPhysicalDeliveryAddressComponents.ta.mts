@@ -37,7 +37,7 @@ let _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents: $.ASN1Decode
  */
 export function _decode_ExtensionPhysicalDeliveryAddressComponents(
     el: _Element
-) {
+): ExtensionPhysicalDeliveryAddressComponents {
     if (!_cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents) {
         _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents = _decode_PDSParameter;
     }
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents: $.ASN1Encode
 export function _encode_ExtensionPhysicalDeliveryAddressComponents(
     value: ExtensionPhysicalDeliveryAddressComponents,
     elGetter: $.ASN1Encoder<ExtensionPhysicalDeliveryAddressComponents>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents) {
         _cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents = _encode_PDSParameter;
     }

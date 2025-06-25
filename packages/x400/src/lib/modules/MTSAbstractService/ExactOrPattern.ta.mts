@@ -40,7 +40,7 @@ let _cached_decoder_for_ExactOrPattern: $.ASN1Decoder<ExactOrPattern> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ExactOrPattern} The decoded data structure.
  */
-export function _decode_ExactOrPattern(el: _Element) {
+export function _decode_ExactOrPattern(el: _Element): ExactOrPattern {
     if (!_cached_decoder_for_ExactOrPattern) {
         _cached_decoder_for_ExactOrPattern = $._decode_inextensible_choice<ExactOrPattern>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_ExactOrPattern: $.ASN1Encoder<ExactOrPattern> | null = n
 export function _encode_ExactOrPattern(
     value: ExactOrPattern,
     elGetter: $.ASN1Encoder<ExactOrPattern>
-) {
+): _Element {
     if (!_cached_encoder_for_ExactOrPattern) {
         _cached_encoder_for_ExactOrPattern = $._encode_choice<ExactOrPattern>(
             {

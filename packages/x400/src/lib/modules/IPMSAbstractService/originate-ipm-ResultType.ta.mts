@@ -121,7 +121,7 @@ let _cached_decoder_for_originate_ipm_ResultType: $.ASN1Decoder<originate_ipm_Re
  * @param {_Element} el The element being decoded.
  * @returns {originate_ipm_ResultType} The decoded data structure.
  */
-export function _decode_originate_ipm_ResultType(el: _Element) {
+export function _decode_originate_ipm_ResultType(el: _Element): originate_ipm_ResultType {
     if (!_cached_decoder_for_originate_ipm_ResultType) {
         _cached_decoder_for_originate_ipm_ResultType = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_originate_ipm_ResultType: $.ASN1Encoder<originate_ipm_Re
 export function _encode_originate_ipm_ResultType(
     value: originate_ipm_ResultType,
     elGetter: $.ASN1Encoder<originate_ipm_ResultType>
-) {
+): _Element {
     if (!_cached_encoder_for_originate_ipm_ResultType) {
         _cached_encoder_for_originate_ipm_ResultType = function (
             value: originate_ipm_ResultType        ): _Element {

@@ -43,7 +43,7 @@ let _cached_decoder_for_MultipleConnections: $.ASN1Decoder<MultipleConnections> 
  * @param {_Element} el The element being decoded.
  * @returns {MultipleConnections} The decoded data structure.
  */
-export function _decode_MultipleConnections(el: _Element) {
+export function _decode_MultipleConnections(el: _Element): MultipleConnections {
     if (!_cached_decoder_for_MultipleConnections) {
         _cached_decoder_for_MultipleConnections = $._decodeSetOf<MultipleConnections_Item>(
             () => _decode_MultipleConnections_Item
@@ -66,7 +66,7 @@ let _cached_encoder_for_MultipleConnections: $.ASN1Encoder<MultipleConnections> 
 export function _encode_MultipleConnections(
     value: MultipleConnections,
     elGetter: $.ASN1Encoder<MultipleConnections>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleConnections) {
         _cached_encoder_for_MultipleConnections = $._encodeSetOf<MultipleConnections_Item>(
             () => _encode_MultipleConnections_Item,

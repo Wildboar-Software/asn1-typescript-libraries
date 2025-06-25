@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatorName: $.ASN1Decoder<OriginatorName> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorName} The decoded data structure.
  */
-export function _decode_OriginatorName(el: _Element) {
+export function _decode_OriginatorName(el: _Element): OriginatorName {
     if (!_cached_decoder_for_OriginatorName) {
         _cached_decoder_for_OriginatorName = _decode_ORAddressAndOrDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatorName: $.ASN1Encoder<OriginatorName> | null = n
 export function _encode_OriginatorName(
     value: OriginatorName,
     elGetter: $.ASN1Encoder<OriginatorName>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorName) {
         _cached_encoder_for_OriginatorName = _encode_ORAddressAndOrDirectoryName;
     }

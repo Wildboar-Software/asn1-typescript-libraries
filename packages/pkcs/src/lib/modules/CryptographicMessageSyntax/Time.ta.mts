@@ -29,7 +29,7 @@ let _cached_decoder_for_Time: $.ASN1Decoder<Time> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Time} The decoded data structure.
  */
-export function _decode_Time(el: _Element) {
+export function _decode_Time(el: _Element): Time {
     if (!_cached_decoder_for_Time) {
         _cached_decoder_for_Time = $._decode_inextensible_choice<Time>({
             "UNIVERSAL 23": ["utcTime", $._decodeUTCTime],
@@ -50,7 +50,7 @@ let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Time, encoded as an ASN.1 Element.
  */
-export function _encode_Time(value: Time, elGetter: $.ASN1Encoder<Time>) {
+export function _encode_Time(value: Time, elGetter: $.ASN1Encoder<Time>): _Element {
     if (!_cached_encoder_for_Time) {
         _cached_encoder_for_Time = $._encode_choice<Time>(
             {

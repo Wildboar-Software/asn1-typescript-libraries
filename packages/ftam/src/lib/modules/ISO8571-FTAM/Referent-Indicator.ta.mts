@@ -35,7 +35,7 @@ let _cached_decoder_for_Referent_Indicator: $.ASN1Decoder<Referent_Indicator> | 
  * @param {_Element} el The element being decoded.
  * @returns {Referent_Indicator} The decoded data structure.
  */
-export function _decode_Referent_Indicator(el: _Element) {
+export function _decode_Referent_Indicator(el: _Element): Referent_Indicator {
   if (!_cached_decoder_for_Referent_Indicator) {
     _cached_decoder_for_Referent_Indicator = $._decode_implicit<Referent_Indicator>(
       () => $._decodeBoolean
@@ -58,7 +58,7 @@ let _cached_encoder_for_Referent_Indicator: $.ASN1Encoder<Referent_Indicator> | 
 export function _encode_Referent_Indicator(
   value: Referent_Indicator,
   elGetter: $.ASN1Encoder<Referent_Indicator>
-) {
+): _Element {
   if (!_cached_encoder_for_Referent_Indicator) {
     _cached_encoder_for_Referent_Indicator = $._encode_implicit(
       _TagClass.application,

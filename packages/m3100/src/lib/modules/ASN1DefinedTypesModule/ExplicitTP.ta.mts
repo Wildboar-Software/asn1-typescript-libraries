@@ -43,7 +43,7 @@ let _cached_decoder_for_ExplicitTP: $.ASN1Decoder<ExplicitTP> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ExplicitTP} The decoded data structure.
  */
-export function _decode_ExplicitTP(el: _Element) {
+export function _decode_ExplicitTP(el: _Element): ExplicitTP {
     if (!_cached_decoder_for_ExplicitTP) {
         _cached_decoder_for_ExplicitTP = $._decode_inextensible_choice<ExplicitTP>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ExplicitTP: $.ASN1Encoder<ExplicitTP> | null = null;
 export function _encode_ExplicitTP(
     value: ExplicitTP,
     elGetter: $.ASN1Encoder<ExplicitTP>
-) {
+): _Element {
     if (!_cached_encoder_for_ExplicitTP) {
         _cached_encoder_for_ExplicitTP = $._encode_choice<ExplicitTP>(
             {

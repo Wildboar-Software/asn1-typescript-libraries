@@ -107,7 +107,7 @@ let _cached_decoder_for_Control_ResponseParams: $.ASN1Decoder<Control_ResponsePa
  * @param {_Element} el The element being decoded.
  * @returns {Control_ResponseParams} The decoded data structure.
  */
-export function _decode_Control_ResponseParams(el: _Element) {
+export function _decode_Control_ResponseParams(el: _Element): Control_ResponseParams {
   if (!_cached_decoder_for_Control_ResponseParams) {
     _cached_decoder_for_Control_ResponseParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_Control_ResponseParams: $.ASN1Encoder<Control_ResponsePa
 export function _encode_Control_ResponseParams(
   value: Control_ResponseParams,
   elGetter: $.ASN1Encoder<Control_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Control_ResponseParams) {
     _cached_encoder_for_Control_ResponseParams = function (
       value: Control_ResponseParams    ): _Element {

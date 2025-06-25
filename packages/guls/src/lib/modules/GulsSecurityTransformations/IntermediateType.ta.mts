@@ -207,7 +207,7 @@ let _cached_decoder_for_IntermediateType: $.ASN1Decoder<IntermediateType> | null
  * @param {_Element} el The element being decoded.
  * @returns {IntermediateType} The decoded data structure.
  */
-export function _decode_IntermediateType(el: _Element) {
+export function _decode_IntermediateType(el: _Element): IntermediateType {
   if (!_cached_decoder_for_IntermediateType) {
     _cached_decoder_for_IntermediateType = function (
       el: _Element
@@ -269,7 +269,7 @@ let _cached_encoder_for_IntermediateType: $.ASN1Encoder<IntermediateType> | null
 export function _encode_IntermediateType(
   value: IntermediateType,
   elGetter: $.ASN1Encoder<IntermediateType>
-) {
+): _Element {
   if (!_cached_encoder_for_IntermediateType) {
     _cached_encoder_for_IntermediateType = function (
       value: IntermediateType    ): _Element {

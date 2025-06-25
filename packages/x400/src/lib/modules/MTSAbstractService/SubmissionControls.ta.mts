@@ -41,7 +41,7 @@ let _cached_decoder_for_SubmissionControls: $.ASN1Decoder<SubmissionControls> | 
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionControls} The decoded data structure.
  */
-export function _decode_SubmissionControls(el: _Element) {
+export function _decode_SubmissionControls(el: _Element): SubmissionControls {
     if (!_cached_decoder_for_SubmissionControls) {
         _cached_decoder_for_SubmissionControls = _decode_Controls;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_SubmissionControls: $.ASN1Encoder<SubmissionControls> | 
 export function _encode_SubmissionControls(
     value: SubmissionControls,
     elGetter: $.ASN1Encoder<SubmissionControls>
-) {
+): _Element {
     if (!_cached_encoder_for_SubmissionControls) {
         _cached_encoder_for_SubmissionControls = _encode_Controls;
     }

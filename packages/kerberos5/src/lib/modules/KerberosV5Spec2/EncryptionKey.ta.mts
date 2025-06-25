@@ -121,7 +121,7 @@ let _cached_decoder_for_EncryptionKey: $.ASN1Decoder<EncryptionKey> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EncryptionKey} The decoded data structure.
  */
-export function _decode_EncryptionKey(el: _Element) {
+export function _decode_EncryptionKey(el: _Element): EncryptionKey {
   if (!_cached_decoder_for_EncryptionKey) {
     _cached_decoder_for_EncryptionKey = function (el: _Element): EncryptionKey {
       const sequence: _Element[] = el.sequence;
@@ -160,7 +160,7 @@ let _cached_encoder_for_EncryptionKey: $.ASN1Encoder<EncryptionKey> | null = nul
 export function _encode_EncryptionKey(
   value: EncryptionKey,
   elGetter: $.ASN1Encoder<EncryptionKey>
-) {
+): _Element {
   if (!_cached_encoder_for_EncryptionKey) {
     _cached_encoder_for_EncryptionKey = function (
       value: EncryptionKey    ): _Element {

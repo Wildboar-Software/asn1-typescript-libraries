@@ -35,7 +35,7 @@ let _cached_decoder_for_ProtocolError: $.ASN1Decoder<ProtocolError> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolError} The decoded data structure.
  */
-export function _decode_ProtocolError(el: _Element) {
+export function _decode_ProtocolError(el: _Element): ProtocolError {
     if (!_cached_decoder_for_ProtocolError) {
         _cached_decoder_for_ProtocolError = $._decodeSetOf<ManagementExtension>(
             () => _decode_ManagementExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_ProtocolError: $.ASN1Encoder<ProtocolError> | null = nul
 export function _encode_ProtocolError(
     value: ProtocolError,
     elGetter: $.ASN1Encoder<ProtocolError>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtocolError) {
         _cached_encoder_for_ProtocolError = $._encodeSetOf<ManagementExtension>(
             () => _encode_ManagementExtension,

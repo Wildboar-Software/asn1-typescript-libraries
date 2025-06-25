@@ -35,7 +35,7 @@ let _cached_decoder_for_MSInvokeIds: $.ASN1Decoder<MSInvokeIds> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MSInvokeIds} The decoded data structure.
  */
-export function _decode_MSInvokeIds(el: _Element) {
+export function _decode_MSInvokeIds(el: _Element): MSInvokeIds {
     if (!_cached_decoder_for_MSInvokeIds) {
         _cached_decoder_for_MSInvokeIds = _decode_InvokeId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MSInvokeIds: $.ASN1Encoder<MSInvokeIds> | null = null;
 export function _encode_MSInvokeIds(
     value: MSInvokeIds,
     elGetter: $.ASN1Encoder<MSInvokeIds>
-) {
+): _Element {
     if (!_cached_encoder_for_MSInvokeIds) {
         _cached_encoder_for_MSInvokeIds = _encode_InvokeId;
     }

@@ -35,7 +35,7 @@ let _cached_decoder_for_ElectronicMailAddressRange: $.ASN1Decoder<ElectronicMail
  * @param {_Element} el The element being decoded.
  * @returns {ElectronicMailAddressRange} The decoded data structure.
  */
-export function _decode_ElectronicMailAddressRange(el: _Element) {
+export function _decode_ElectronicMailAddressRange(el: _Element): ElectronicMailAddressRange {
     if (!_cached_decoder_for_ElectronicMailAddressRange) {
         _cached_decoder_for_ElectronicMailAddressRange = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_ElectronicMailAddressRange: $.ASN1Encoder<ElectronicMail
 export function _encode_ElectronicMailAddressRange(
     value: ElectronicMailAddressRange,
     elGetter: $.ASN1Encoder<ElectronicMailAddressRange>
-) {
+): _Element {
     if (!_cached_encoder_for_ElectronicMailAddressRange) {
         _cached_encoder_for_ElectronicMailAddressRange = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

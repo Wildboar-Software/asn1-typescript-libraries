@@ -35,7 +35,7 @@ let _cached_decoder_for_POPODecKeyRespContent: $.ASN1Decoder<POPODecKeyRespConte
  * @param {_Element} el The element being decoded.
  * @returns {POPODecKeyRespContent} The decoded data structure.
  */
-export function _decode_POPODecKeyRespContent(el: _Element) {
+export function _decode_POPODecKeyRespContent(el: _Element): POPODecKeyRespContent {
   if (!_cached_decoder_for_POPODecKeyRespContent) {
     _cached_decoder_for_POPODecKeyRespContent = $._decodeSequenceOf<INTEGER>(
       () => $._decodeInteger
@@ -58,7 +58,7 @@ let _cached_encoder_for_POPODecKeyRespContent: $.ASN1Encoder<POPODecKeyRespConte
 export function _encode_POPODecKeyRespContent(
   value: POPODecKeyRespContent,
   elGetter: $.ASN1Encoder<POPODecKeyRespContent>
-) {
+): _Element {
   if (!_cached_encoder_for_POPODecKeyRespContent) {
     _cached_encoder_for_POPODecKeyRespContent = $._encodeSequenceOf<INTEGER>(
       () => $._encodeInteger,

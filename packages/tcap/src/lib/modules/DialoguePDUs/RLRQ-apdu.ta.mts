@@ -116,7 +116,7 @@ let _cached_decoder_for_RLRQ_apdu: $.ASN1Decoder<RLRQ_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RLRQ_apdu} The decoded data structure.
  */
-export function _decode_RLRQ_apdu(el: _Element) {
+export function _decode_RLRQ_apdu(el: _Element): RLRQ_apdu {
     if (!_cached_decoder_for_RLRQ_apdu) {
         _cached_decoder_for_RLRQ_apdu = $._decode_implicit<RLRQ_apdu>(
             () =>
@@ -168,7 +168,7 @@ let _cached_encoder_for_RLRQ_apdu: $.ASN1Encoder<RLRQ_apdu> | null = null;
 export function _encode_RLRQ_apdu(
     value: RLRQ_apdu,
     elGetter: $.ASN1Encoder<RLRQ_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_RLRQ_apdu) {
         _cached_encoder_for_RLRQ_apdu = $._encode_implicit(
             _TagClass.application,

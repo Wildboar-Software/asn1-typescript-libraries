@@ -35,7 +35,7 @@ let _cached_decoder_for_UserSecurityLabel: $.ASN1Decoder<UserSecurityLabel> | nu
  * @param {_Element} el The element being decoded.
  * @returns {UserSecurityLabel} The decoded data structure.
  */
-export function _decode_UserSecurityLabel(el: _Element) {
+export function _decode_UserSecurityLabel(el: _Element): UserSecurityLabel {
     if (!_cached_decoder_for_UserSecurityLabel) {
         _cached_decoder_for_UserSecurityLabel = _decode_SecurityLabel;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UserSecurityLabel: $.ASN1Encoder<UserSecurityLabel> | nu
 export function _encode_UserSecurityLabel(
     value: UserSecurityLabel,
     elGetter: $.ASN1Encoder<UserSecurityLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_UserSecurityLabel) {
         _cached_encoder_for_UserSecurityLabel = _encode_SecurityLabel;
     }

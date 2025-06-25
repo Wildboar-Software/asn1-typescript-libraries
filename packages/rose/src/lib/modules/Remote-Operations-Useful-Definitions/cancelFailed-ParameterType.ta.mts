@@ -133,7 +133,7 @@ let _cached_decoder_for_cancelFailed_ParameterType: $.ASN1Decoder<cancelFailed_P
  * @param {_Element} el The element being decoded.
  * @returns {cancelFailed_ParameterType} The decoded data structure.
  */
-export function _decode_cancelFailed_ParameterType(el: _Element) {
+export function _decode_cancelFailed_ParameterType(el: _Element): cancelFailed_ParameterType {
   if (!_cached_decoder_for_cancelFailed_ParameterType) {
     _cached_decoder_for_cancelFailed_ParameterType = function (
       el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_cancelFailed_ParameterType: $.ASN1Encoder<cancelFailed_P
 export function _encode_cancelFailed_ParameterType(
   value: cancelFailed_ParameterType,
   elGetter: $.ASN1Encoder<cancelFailed_ParameterType>
-) {
+): _Element {
   if (!_cached_encoder_for_cancelFailed_ParameterType) {
     _cached_encoder_for_cancelFailed_ParameterType = function (
       value: cancelFailed_ParameterType    ): _Element {

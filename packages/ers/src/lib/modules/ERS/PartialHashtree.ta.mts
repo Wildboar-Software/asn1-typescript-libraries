@@ -39,7 +39,7 @@ let _cached_decoder_for_PartialHashtree: $.ASN1Decoder<PartialHashtree> | null =
  * @returns {PartialHashtree} The decoded data structure.
  */
 export
-function _decode_PartialHashtree (el: _Element) {
+function _decode_PartialHashtree (el: _Element): PartialHashtree {
     if (!_cached_decoder_for_PartialHashtree) { _cached_decoder_for_PartialHashtree = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString); }
     return _cached_decoder_for_PartialHashtree(el);
 }
@@ -56,7 +56,7 @@ let _cached_encoder_for_PartialHashtree: $.ASN1Encoder<PartialHashtree> | null =
  * @returns {_Element} The PartialHashtree, encoded as an ASN.1 Element.
  */
 export
-function _encode_PartialHashtree (value: PartialHashtree, elGetter: $.ASN1Encoder<PartialHashtree>) {
+function _encode_PartialHashtree (value: PartialHashtree, elGetter: $.ASN1Encoder<PartialHashtree>): _Element {
     if (!_cached_encoder_for_PartialHashtree) { _cached_encoder_for_PartialHashtree = $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.DER); }
     return _cached_encoder_for_PartialHashtree(value, elGetter);
 }

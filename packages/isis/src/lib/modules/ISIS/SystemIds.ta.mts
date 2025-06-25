@@ -35,7 +35,7 @@ let _cached_decoder_for_SystemIds: $.ASN1Decoder<SystemIds> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SystemIds} The decoded data structure.
  */
-export function _decode_SystemIds(el: _Element) {
+export function _decode_SystemIds(el: _Element): SystemIds {
   if (!_cached_decoder_for_SystemIds) {
     _cached_decoder_for_SystemIds = $._decodeSetOf<SystemId>(
       () => _decode_SystemId
@@ -56,7 +56,7 @@ let _cached_encoder_for_SystemIds: $.ASN1Encoder<SystemIds> | null = null;
 export function _encode_SystemIds(
   value: SystemIds,
   elGetter: $.ASN1Encoder<SystemIds>
-) {
+): _Element {
   if (!_cached_encoder_for_SystemIds) {
     _cached_encoder_for_SystemIds = $._encodeSetOf<SystemId>(
       () => _encode_SystemId,

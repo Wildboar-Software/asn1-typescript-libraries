@@ -44,7 +44,7 @@ let _cached_decoder_for_TBSAsymmetricToken_name: $.ASN1Decoder<TBSAsymmetricToke
  * @param {_Element} el The element being decoded.
  * @returns {TBSAsymmetricToken_name} The decoded data structure.
  */
-export function _decode_TBSAsymmetricToken_name(el: _Element) {
+export function _decode_TBSAsymmetricToken_name(el: _Element): TBSAsymmetricToken_name {
     if (!_cached_decoder_for_TBSAsymmetricToken_name) {
         _cached_decoder_for_TBSAsymmetricToken_name = $._decode_inextensible_choice<TBSAsymmetricToken_name>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_TBSAsymmetricToken_name: $.ASN1Encoder<TBSAsymmetricToke
 export function _encode_TBSAsymmetricToken_name(
     value: TBSAsymmetricToken_name,
     elGetter: $.ASN1Encoder<TBSAsymmetricToken_name>
-) {
+): _Element {
     if (!_cached_encoder_for_TBSAsymmetricToken_name) {
         _cached_encoder_for_TBSAsymmetricToken_name = $._encode_choice<TBSAsymmetricToken_name>(
             {

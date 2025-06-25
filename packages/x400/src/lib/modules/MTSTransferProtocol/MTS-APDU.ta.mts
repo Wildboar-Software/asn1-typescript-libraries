@@ -52,7 +52,7 @@ let _cached_decoder_for_MTS_APDU: $.ASN1Decoder<MTS_APDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MTS_APDU} The decoded data structure.
  */
-export function _decode_MTS_APDU(el: _Element) {
+export function _decode_MTS_APDU(el: _Element): MTS_APDU {
     if (!_cached_decoder_for_MTS_APDU) {
         _cached_decoder_for_MTS_APDU = $._decode_inextensible_choice<MTS_APDU>({
             'CONTEXT 0': [
@@ -84,7 +84,7 @@ let _cached_encoder_for_MTS_APDU: $.ASN1Encoder<MTS_APDU> | null = null;
 export function _encode_MTS_APDU(
     value: MTS_APDU,
     elGetter: $.ASN1Encoder<MTS_APDU>
-) {
+): _Element {
     if (!_cached_encoder_for_MTS_APDU) {
         _cached_encoder_for_MTS_APDU = $._encode_choice<MTS_APDU>(
             {

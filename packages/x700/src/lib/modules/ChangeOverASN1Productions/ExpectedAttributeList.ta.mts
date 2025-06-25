@@ -41,7 +41,7 @@ let _cached_decoder_for_ExpectedAttributeList: $.ASN1Decoder<ExpectedAttributeLi
  * @param {_Element} el The element being decoded.
  * @returns {ExpectedAttributeList} The decoded data structure.
  */
-export function _decode_ExpectedAttributeList(el: _Element) {
+export function _decode_ExpectedAttributeList(el: _Element): ExpectedAttributeList {
     if (!_cached_decoder_for_ExpectedAttributeList) {
         _cached_decoder_for_ExpectedAttributeList = $._decodeSetOf<ExpectedAttributeList_Item>(
             () => _decode_ExpectedAttributeList_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_ExpectedAttributeList: $.ASN1Encoder<ExpectedAttributeLi
 export function _encode_ExpectedAttributeList(
     value: ExpectedAttributeList,
     elGetter: $.ASN1Encoder<ExpectedAttributeList>
-) {
+): _Element {
     if (!_cached_encoder_for_ExpectedAttributeList) {
         _cached_encoder_for_ExpectedAttributeList = $._encodeSetOf<ExpectedAttributeList_Item>(
             () => _encode_ExpectedAttributeList_Item,

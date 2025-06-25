@@ -39,7 +39,7 @@ let _cached_decoder_for_DLPolicy_requested_delivery_method: $.ASN1Decoder<DLPoli
  * @param {_Element} el The element being decoded.
  * @returns {DLPolicy_requested_delivery_method} The decoded data structure.
  */
-export function _decode_DLPolicy_requested_delivery_method(el: _Element) {
+export function _decode_DLPolicy_requested_delivery_method(el: _Element): DLPolicy_requested_delivery_method {
     if (!_cached_decoder_for_DLPolicy_requested_delivery_method) {
         _cached_decoder_for_DLPolicy_requested_delivery_method = $._decode_inextensible_choice<DLPolicy_requested_delivery_method>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_DLPolicy_requested_delivery_method: $.ASN1Encoder<DLPoli
 export function _encode_DLPolicy_requested_delivery_method(
     value: DLPolicy_requested_delivery_method,
     elGetter: $.ASN1Encoder<DLPolicy_requested_delivery_method>
-) {
+): _Element {
     if (!_cached_encoder_for_DLPolicy_requested_delivery_method) {
         _cached_encoder_for_DLPolicy_requested_delivery_method = $._encode_choice<DLPolicy_requested_delivery_method>(
             {

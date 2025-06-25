@@ -35,7 +35,7 @@ let _cached_decoder_for_RestrictedDelivery: $.ASN1Decoder<RestrictedDelivery> | 
  * @param {_Element} el The element being decoded.
  * @returns {RestrictedDelivery} The decoded data structure.
  */
-export function _decode_RestrictedDelivery(el: _Element) {
+export function _decode_RestrictedDelivery(el: _Element): RestrictedDelivery {
     if (!_cached_decoder_for_RestrictedDelivery) {
         _cached_decoder_for_RestrictedDelivery = $._decodeSequenceOf<Restriction>(
             () => _decode_Restriction
@@ -56,7 +56,7 @@ let _cached_encoder_for_RestrictedDelivery: $.ASN1Encoder<RestrictedDelivery> | 
 export function _encode_RestrictedDelivery(
     value: RestrictedDelivery,
     elGetter: $.ASN1Encoder<RestrictedDelivery>
-) {
+): _Element {
     if (!_cached_encoder_for_RestrictedDelivery) {
         _cached_encoder_for_RestrictedDelivery = $._encodeSequenceOf<Restriction>(
             () => _encode_Restriction,

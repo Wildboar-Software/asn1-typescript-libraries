@@ -124,7 +124,7 @@ let _cached_decoder_for_DSA_Params: $.ASN1Decoder<DSA_Params> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DSA_Params} The decoded data structure.
  */
-export function _decode_DSA_Params(el: _Element) {
+export function _decode_DSA_Params(el: _Element): DSA_Params {
     if (!_cached_decoder_for_DSA_Params) {
         _cached_decoder_for_DSA_Params = function (el: _Element): DSA_Params {
             const sequence: _Element[] = el.sequence;
@@ -164,7 +164,7 @@ let _cached_encoder_for_DSA_Params: $.ASN1Encoder<DSA_Params> | null = null;
 export function _encode_DSA_Params(
     value: DSA_Params,
     elGetter: $.ASN1Encoder<DSA_Params>
-) {
+): _Element {
     if (!_cached_encoder_for_DSA_Params) {
         _cached_encoder_for_DSA_Params = function (
             value: DSA_Params        ): _Element {

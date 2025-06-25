@@ -50,7 +50,7 @@ let _cached_decoder_for_DownstreamConnectivityPointer: $.ASN1Decoder<DownstreamC
  * @param {_Element} el The element being decoded.
  * @returns {DownstreamConnectivityPointer} The decoded data structure.
  */
-export function _decode_DownstreamConnectivityPointer(el: _Element) {
+export function _decode_DownstreamConnectivityPointer(el: _Element): DownstreamConnectivityPointer {
     if (!_cached_decoder_for_DownstreamConnectivityPointer) {
         _cached_decoder_for_DownstreamConnectivityPointer = $._decode_inextensible_choice<DownstreamConnectivityPointer>(
             {
@@ -100,7 +100,7 @@ let _cached_encoder_for_DownstreamConnectivityPointer: $.ASN1Encoder<DownstreamC
 export function _encode_DownstreamConnectivityPointer(
     value: DownstreamConnectivityPointer,
     elGetter: $.ASN1Encoder<DownstreamConnectivityPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_DownstreamConnectivityPointer) {
         _cached_encoder_for_DownstreamConnectivityPointer = $._encode_choice<DownstreamConnectivityPointer>(
             {

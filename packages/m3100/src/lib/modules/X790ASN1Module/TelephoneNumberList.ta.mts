@@ -38,7 +38,7 @@ let _cached_decoder_for_TelephoneNumberList: $.ASN1Decoder<TelephoneNumberList> 
  * @param {_Element} el The element being decoded.
  * @returns {TelephoneNumberList} The decoded data structure.
  */
-export function _decode_TelephoneNumberList(el: _Element) {
+export function _decode_TelephoneNumberList(el: _Element): TelephoneNumberList {
     if (!_cached_decoder_for_TelephoneNumberList) {
         _cached_decoder_for_TelephoneNumberList = $._decodeSetOf<TelephoneNumber>(
             () => _decode_TelephoneNumber
@@ -61,7 +61,7 @@ let _cached_encoder_for_TelephoneNumberList: $.ASN1Encoder<TelephoneNumberList> 
 export function _encode_TelephoneNumberList(
     value: TelephoneNumberList,
     elGetter: $.ASN1Encoder<TelephoneNumberList>
-) {
+): _Element {
     if (!_cached_encoder_for_TelephoneNumberList) {
         _cached_encoder_for_TelephoneNumberList = $._encodeSetOf<TelephoneNumber>(
             () => _encode_TelephoneNumber,

@@ -110,7 +110,7 @@ let _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {QueryGUIEventSubscriptions_RequestParams} The decoded data structure.
  */
-export function _decode_QueryGUIEventSubscriptions_RequestParams(el: _Element) {
+export function _decode_QueryGUIEventSubscriptions_RequestParams(el: _Element): QueryGUIEventSubscriptions_RequestParams {
   if (!_cached_decoder_for_QueryGUIEventSubscriptions_RequestParams) {
     _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams = function (
       el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_QueryGUIEventSubscriptions_RequestParams: $.ASN1Encoder<
 export function _encode_QueryGUIEventSubscriptions_RequestParams(
   value: QueryGUIEventSubscriptions_RequestParams,
   elGetter: $.ASN1Encoder<QueryGUIEventSubscriptions_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_QueryGUIEventSubscriptions_RequestParams) {
     _cached_encoder_for_QueryGUIEventSubscriptions_RequestParams = function (
       value: QueryGUIEventSubscriptions_RequestParams    ): _Element {

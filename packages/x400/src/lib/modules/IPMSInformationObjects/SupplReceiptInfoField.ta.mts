@@ -35,7 +35,7 @@ let _cached_decoder_for_SupplReceiptInfoField: $.ASN1Decoder<SupplReceiptInfoFie
  * @param {_Element} el The element being decoded.
  * @returns {SupplReceiptInfoField} The decoded data structure.
  */
-export function _decode_SupplReceiptInfoField(el: _Element) {
+export function _decode_SupplReceiptInfoField(el: _Element): SupplReceiptInfoField {
     if (!_cached_decoder_for_SupplReceiptInfoField) {
         _cached_decoder_for_SupplReceiptInfoField = _decode_SupplementaryInformation;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SupplReceiptInfoField: $.ASN1Encoder<SupplReceiptInfoFie
 export function _encode_SupplReceiptInfoField(
     value: SupplReceiptInfoField,
     elGetter: $.ASN1Encoder<SupplReceiptInfoField>
-) {
+): _Element {
     if (!_cached_encoder_for_SupplReceiptInfoField) {
         _cached_encoder_for_SupplReceiptInfoField = _encode_SupplementaryInformation;
     }

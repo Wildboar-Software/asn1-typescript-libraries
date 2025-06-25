@@ -42,7 +42,7 @@ let _cached_decoder_for_DHPublicKeyChoice: $.ASN1Decoder<DHPublicKeyChoice> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DHPublicKeyChoice} The decoded data structure.
  */
-export function _decode_DHPublicKeyChoice(el: _Element) {
+export function _decode_DHPublicKeyChoice(el: _Element): DHPublicKeyChoice {
     if (!_cached_decoder_for_DHPublicKeyChoice) {
         _cached_decoder_for_DHPublicKeyChoice = $._decode_extensible_choice<DHPublicKeyChoice>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_DHPublicKeyChoice: $.ASN1Encoder<DHPublicKeyChoice> | nu
 export function _encode_DHPublicKeyChoice(
     value: DHPublicKeyChoice,
     elGetter: $.ASN1Encoder<DHPublicKeyChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_DHPublicKeyChoice) {
         _cached_encoder_for_DHPublicKeyChoice = $._encode_choice<DHPublicKeyChoice>(
             {

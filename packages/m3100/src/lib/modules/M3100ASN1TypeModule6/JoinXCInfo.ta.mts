@@ -38,7 +38,7 @@ let _cached_decoder_for_JoinXCInfo: $.ASN1Decoder<JoinXCInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {JoinXCInfo} The decoded data structure.
  */
-export function _decode_JoinXCInfo(el: _Element) {
+export function _decode_JoinXCInfo(el: _Element): JoinXCInfo {
     if (!_cached_decoder_for_JoinXCInfo) {
         _cached_decoder_for_JoinXCInfo = $._decodeSequenceOf<CoincidentUnidirectionalConnections>(
             () => _decode_CoincidentUnidirectionalConnections
@@ -61,7 +61,7 @@ let _cached_encoder_for_JoinXCInfo: $.ASN1Encoder<JoinXCInfo> | null = null;
 export function _encode_JoinXCInfo(
     value: JoinXCInfo,
     elGetter: $.ASN1Encoder<JoinXCInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_JoinXCInfo) {
         _cached_encoder_for_JoinXCInfo = $._encodeSequenceOf<CoincidentUnidirectionalConnections>(
             () => _encode_CoincidentUnidirectionalConnections,

@@ -108,7 +108,7 @@ let _cached_decoder_for_ReceiptNoticeType: $.ASN1Decoder<ReceiptNoticeType> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ReceiptNoticeType} The decoded data structure.
  */
-export function _decode_ReceiptNoticeType(el: _Element) {
+export function _decode_ReceiptNoticeType(el: _Element): ReceiptNoticeType {
   if (!_cached_decoder_for_ReceiptNoticeType) {
     _cached_decoder_for_ReceiptNoticeType = function (
       el: _Element
@@ -144,7 +144,7 @@ let _cached_encoder_for_ReceiptNoticeType: $.ASN1Encoder<ReceiptNoticeType> | nu
 export function _encode_ReceiptNoticeType(
   value: ReceiptNoticeType,
   elGetter: $.ASN1Encoder<ReceiptNoticeType>
-) {
+): _Element {
   if (!_cached_encoder_for_ReceiptNoticeType) {
     _cached_encoder_for_ReceiptNoticeType = function (
       value: ReceiptNoticeType    ): _Element {

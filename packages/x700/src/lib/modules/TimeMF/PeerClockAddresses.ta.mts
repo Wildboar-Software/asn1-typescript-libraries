@@ -35,7 +35,7 @@ let _cached_decoder_for_PeerClockAddresses: $.ASN1Decoder<PeerClockAddresses> | 
  * @param {_Element} el The element being decoded.
  * @returns {PeerClockAddresses} The decoded data structure.
  */
-export function _decode_PeerClockAddresses(el: _Element) {
+export function _decode_PeerClockAddresses(el: _Element): PeerClockAddresses {
     if (!_cached_decoder_for_PeerClockAddresses) {
         _cached_decoder_for_PeerClockAddresses = $._decodeSetOf<SinglePeerClock>(
             () => _decode_SinglePeerClock
@@ -56,7 +56,7 @@ let _cached_encoder_for_PeerClockAddresses: $.ASN1Encoder<PeerClockAddresses> | 
 export function _encode_PeerClockAddresses(
     value: PeerClockAddresses,
     elGetter: $.ASN1Encoder<PeerClockAddresses>
-) {
+): _Element {
     if (!_cached_encoder_for_PeerClockAddresses) {
         _cached_encoder_for_PeerClockAddresses = $._encodeSetOf<SinglePeerClock>(
             () => _encode_SinglePeerClock,

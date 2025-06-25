@@ -40,7 +40,7 @@ let _cached_decoder_for_InvokeId: $.ASN1Decoder<InvokeId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {InvokeId} The decoded data structure.
  */
-export function _decode_InvokeId(el: _Element) {
+export function _decode_InvokeId(el: _Element): InvokeId {
   if (!_cached_decoder_for_InvokeId) {
     _cached_decoder_for_InvokeId = $._decode_inextensible_choice<InvokeId>({
       'UNIVERSAL 2': ['present', $._decodeInteger],
@@ -64,7 +64,7 @@ let _cached_encoder_for_InvokeId: $.ASN1Encoder<InvokeId> | null = null;
 export function _encode_InvokeId(
   value: InvokeId,
   elGetter: $.ASN1Encoder<InvokeId>
-) {
+): _Element {
   if (!_cached_encoder_for_InvokeId) {
     _cached_encoder_for_InvokeId = $._encode_choice<InvokeId>(
       {

@@ -43,7 +43,7 @@ let _cached_decoder_for_Delete: $.ASN1Decoder<Delete> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Delete} The decoded data structure.
  */
-export function _decode_Delete(el: _Element) {
+export function _decode_Delete(el: _Element): Delete {
     if (!_cached_decoder_for_Delete) {
         _cached_decoder_for_Delete = $._decode_inextensible_choice<Delete>({
             'UNIVERSAL 16': ['present', _decode_DeleteSpecification],
@@ -64,7 +64,7 @@ let _cached_encoder_for_Delete: $.ASN1Encoder<Delete> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Delete, encoded as an ASN.1 Element.
  */
-export function _encode_Delete(value: Delete, elGetter: $.ASN1Encoder<Delete>) {
+export function _encode_Delete(value: Delete, elGetter: $.ASN1Encoder<Delete>): _Element {
     if (!_cached_encoder_for_Delete) {
         _cached_encoder_for_Delete = $._encode_choice<Delete>(
             {

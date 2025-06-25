@@ -29,7 +29,7 @@ let _cached_decoder_for_OptionalCategoryGroups: $.ASN1Decoder<OptionalCategoryGr
  * @param {_Element} el The element being decoded.
  * @returns {OptionalCategoryGroups} The decoded data structure.
  */
-export function _decode_OptionalCategoryGroups(el: _Element) {
+export function _decode_OptionalCategoryGroups(el: _Element): OptionalCategoryGroups {
     if (!_cached_decoder_for_OptionalCategoryGroups) {
         _cached_decoder_for_OptionalCategoryGroups = $._decodeSequenceOf<OptionalCategoryGroup>(
             () => _decode_OptionalCategoryGroup
@@ -52,7 +52,7 @@ let _cached_encoder_for_OptionalCategoryGroups: $.ASN1Encoder<OptionalCategoryGr
 export function _encode_OptionalCategoryGroups(
     value: OptionalCategoryGroups,
     elGetter: $.ASN1Encoder<OptionalCategoryGroups>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalCategoryGroups) {
         _cached_encoder_for_OptionalCategoryGroups = $._encodeSequenceOf<OptionalCategoryGroup>(
             () => _encode_OptionalCategoryGroup,

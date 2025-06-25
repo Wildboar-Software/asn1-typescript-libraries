@@ -122,7 +122,7 @@ let _cached_decoder_for_RelatedTestResponse: $.ASN1Decoder<RelatedTestResponse> 
  * @param {_Element} el The element being decoded.
  * @returns {RelatedTestResponse} The decoded data structure.
  */
-export function _decode_RelatedTestResponse(el: _Element) {
+export function _decode_RelatedTestResponse(el: _Element): RelatedTestResponse {
     if (!_cached_decoder_for_RelatedTestResponse) {
         _cached_decoder_for_RelatedTestResponse = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_RelatedTestResponse: $.ASN1Encoder<RelatedTestResponse> 
 export function _encode_RelatedTestResponse(
     value: RelatedTestResponse,
     elGetter: $.ASN1Encoder<RelatedTestResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedTestResponse) {
         _cached_encoder_for_RelatedTestResponse = function (
             value: RelatedTestResponse        ): _Element {

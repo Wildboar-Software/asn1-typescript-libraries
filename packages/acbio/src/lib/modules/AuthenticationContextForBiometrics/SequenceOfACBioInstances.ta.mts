@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfACBioInstances: $.ASN1Decoder<SequenceOfACBioI
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfACBioInstances} The decoded data structure.
  */
-export function _decode_SequenceOfACBioInstances(el: _Element) {
+export function _decode_SequenceOfACBioInstances(el: _Element): SequenceOfACBioInstances {
     if (!_cached_decoder_for_SequenceOfACBioInstances) {
         _cached_decoder_for_SequenceOfACBioInstances = $._decodeSequenceOf<ACBioInstance>(
             () => _decode_ACBioInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfACBioInstances: $.ASN1Encoder<SequenceOfACBioI
 export function _encode_SequenceOfACBioInstances(
     value: SequenceOfACBioInstances,
     elGetter: $.ASN1Encoder<SequenceOfACBioInstances>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfACBioInstances) {
         _cached_encoder_for_SequenceOfACBioInstances = $._encodeSequenceOf<ACBioInstance>(
             () => _encode_ACBioInstance,

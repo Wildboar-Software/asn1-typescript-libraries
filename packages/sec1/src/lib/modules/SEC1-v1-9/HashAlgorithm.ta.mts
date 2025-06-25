@@ -33,7 +33,7 @@ let _cached_decoder_for_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> | null = nul
  * @returns {HashAlgorithm} The decoded data structure.
  */
 export
-function _decode_HashAlgorithm (el: _Element) {
+function _decode_HashAlgorithm (el: _Element): HashAlgorithm {
     if (!_cached_decoder_for_HashAlgorithm) { _cached_decoder_for_HashAlgorithm = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_HashAlgorithm(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> | null = nul
  * @returns {_Element} The HashAlgorithm, encoded as an ASN.1 Element.
  */
 export
-function _encode_HashAlgorithm (value: HashAlgorithm, elGetter: $.ASN1Encoder<HashAlgorithm>) {
+function _encode_HashAlgorithm (value: HashAlgorithm, elGetter: $.ASN1Encoder<HashAlgorithm>): _Element {
     if (!_cached_encoder_for_HashAlgorithm) { _cached_encoder_for_HashAlgorithm = _encode_AlgorithmIdentifier; }
     return _cached_encoder_for_HashAlgorithm(value, elGetter);
 }

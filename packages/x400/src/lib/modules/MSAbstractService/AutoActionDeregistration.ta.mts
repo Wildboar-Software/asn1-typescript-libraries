@@ -132,7 +132,7 @@ let _cached_decoder_for_AutoActionDeregistration: $.ASN1Decoder<AutoActionDeregi
  * @param {_Element} el The element being decoded.
  * @returns {AutoActionDeregistration} The decoded data structure.
  */
-export function _decode_AutoActionDeregistration(el: _Element) {
+export function _decode_AutoActionDeregistration(el: _Element): AutoActionDeregistration {
     if (!_cached_decoder_for_AutoActionDeregistration) {
         _cached_decoder_for_AutoActionDeregistration = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_AutoActionDeregistration: $.ASN1Encoder<AutoActionDeregi
 export function _encode_AutoActionDeregistration(
     value: AutoActionDeregistration,
     elGetter: $.ASN1Encoder<AutoActionDeregistration>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoActionDeregistration) {
         _cached_encoder_for_AutoActionDeregistration = function (
             value: AutoActionDeregistration        ): _Element {

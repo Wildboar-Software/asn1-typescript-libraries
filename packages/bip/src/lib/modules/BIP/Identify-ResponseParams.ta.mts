@@ -127,7 +127,7 @@ let _cached_decoder_for_Identify_ResponseParams: $.ASN1Decoder<Identify_Response
  * @param {_Element} el The element being decoded.
  * @returns {Identify_ResponseParams} The decoded data structure.
  */
-export function _decode_Identify_ResponseParams(el: _Element) {
+export function _decode_Identify_ResponseParams(el: _Element): Identify_ResponseParams {
   if (!_cached_decoder_for_Identify_ResponseParams) {
     _cached_decoder_for_Identify_ResponseParams = function (
       el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_Identify_ResponseParams: $.ASN1Encoder<Identify_Response
 export function _encode_Identify_ResponseParams(
   value: Identify_ResponseParams,
   elGetter: $.ASN1Encoder<Identify_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Identify_ResponseParams) {
     _cached_encoder_for_Identify_ResponseParams = function (
       value: Identify_ResponseParams    ): _Element {

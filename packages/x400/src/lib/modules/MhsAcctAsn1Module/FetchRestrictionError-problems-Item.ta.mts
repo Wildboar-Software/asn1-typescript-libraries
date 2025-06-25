@@ -121,7 +121,7 @@ let _cached_decoder_for_FetchRestrictionError_problems_Item: $.ASN1Decoder<Fetch
  * @param {_Element} el The element being decoded.
  * @returns {FetchRestrictionError_problems_Item} The decoded data structure.
  */
-export function _decode_FetchRestrictionError_problems_Item(el: _Element) {
+export function _decode_FetchRestrictionError_problems_Item(el: _Element): FetchRestrictionError_problems_Item {
     if (!_cached_decoder_for_FetchRestrictionError_problems_Item) {
         _cached_decoder_for_FetchRestrictionError_problems_Item = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_FetchRestrictionError_problems_Item: $.ASN1Encoder<Fetch
 export function _encode_FetchRestrictionError_problems_Item(
     value: FetchRestrictionError_problems_Item,
     elGetter: $.ASN1Encoder<FetchRestrictionError_problems_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchRestrictionError_problems_Item) {
         _cached_encoder_for_FetchRestrictionError_problems_Item = function (
             value: FetchRestrictionError_problems_Item        ): _Element {

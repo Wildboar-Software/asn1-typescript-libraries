@@ -33,7 +33,7 @@ let _cached_decoder_for_IdentificationCodeQualifier: $.ASN1Decoder<Identificatio
  * @param {_Element} el The element being decoded.
  * @returns {IdentificationCodeQualifier} The decoded data structure.
  */
-export function _decode_IdentificationCodeQualifier(el: _Element) {
+export function _decode_IdentificationCodeQualifier(el: _Element): IdentificationCodeQualifier {
     if (!_cached_decoder_for_IdentificationCodeQualifier) {
         _cached_decoder_for_IdentificationCodeQualifier =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_IdentificationCodeQualifier: $.ASN1Encoder<Identificatio
 export function _encode_IdentificationCodeQualifier(
     value: IdentificationCodeQualifier,
     elGetter: $.ASN1Encoder<IdentificationCodeQualifier>
-) {
+): _Element {
     if (!_cached_encoder_for_IdentificationCodeQualifier) {
         _cached_encoder_for_IdentificationCodeQualifier =
             $._encodeTeletexString;

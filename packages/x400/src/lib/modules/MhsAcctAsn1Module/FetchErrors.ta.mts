@@ -36,7 +36,7 @@ let _cached_decoder_for_FetchErrors: $.ASN1Decoder<FetchErrors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FetchErrors} The decoded data structure.
  */
-export function _decode_FetchErrors(el: _Element) {
+export function _decode_FetchErrors(el: _Element): FetchErrors {
     if (!_cached_decoder_for_FetchErrors) {
         _cached_decoder_for_FetchErrors = _decode_RetrievalError;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_FetchErrors: $.ASN1Encoder<FetchErrors> | null = null;
 export function _encode_FetchErrors(
     value: FetchErrors,
     elGetter: $.ASN1Encoder<FetchErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchErrors) {
         _cached_encoder_for_FetchErrors = _encode_RetrievalError;
     }

@@ -137,7 +137,7 @@ let _cached_decoder_for_NumericMeasure_qualifiedValue: $.ASN1Decoder<NumericMeas
  * @param {_Element} el The element being decoded.
  * @returns {NumericMeasure_qualifiedValue} The decoded data structure.
  */
-export function _decode_NumericMeasure_qualifiedValue(el: _Element) {
+export function _decode_NumericMeasure_qualifiedValue(el: _Element): NumericMeasure_qualifiedValue {
     if (!_cached_decoder_for_NumericMeasure_qualifiedValue) {
         _cached_decoder_for_NumericMeasure_qualifiedValue = function (
             el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_NumericMeasure_qualifiedValue: $.ASN1Encoder<NumericMeas
 export function _encode_NumericMeasure_qualifiedValue(
     value: NumericMeasure_qualifiedValue,
     elGetter: $.ASN1Encoder<NumericMeasure_qualifiedValue>
-) {
+): _Element {
     if (!_cached_encoder_for_NumericMeasure_qualifiedValue) {
         _cached_encoder_for_NumericMeasure_qualifiedValue = function (
             value: NumericMeasure_qualifiedValue        ): _Element {

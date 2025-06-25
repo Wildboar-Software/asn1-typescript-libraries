@@ -107,7 +107,7 @@ let _cached_decoder_for_Parameter: $.ASN1Decoder<Parameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Parameter} The decoded data structure.
  */
-export function _decode_Parameter(el: _Element) {
+export function _decode_Parameter(el: _Element): Parameter {
     if (!_cached_decoder_for_Parameter) {
         _cached_decoder_for_Parameter = function (el: _Element): Parameter {
             const sequence: _Element[] = el.sequence;
@@ -142,7 +142,7 @@ let _cached_encoder_for_Parameter: $.ASN1Encoder<Parameter> | null = null;
 export function _encode_Parameter(
     value: Parameter,
     elGetter: $.ASN1Encoder<Parameter>
-) {
+): _Element {
     if (!_cached_encoder_for_Parameter) {
         _cached_encoder_for_Parameter = function (
             value: Parameter        ): _Element {

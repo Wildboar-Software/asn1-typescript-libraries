@@ -147,7 +147,7 @@ let _cached_decoder_for_DLExpansionInformation: $.ASN1Decoder<DLExpansionInforma
  * @param {_Element} el The element being decoded.
  * @returns {DLExpansionInformation} The decoded data structure.
  */
-export function _decode_DLExpansionInformation(el: _Element) {
+export function _decode_DLExpansionInformation(el: _Element): DLExpansionInformation {
     if (!_cached_decoder_for_DLExpansionInformation) {
         _cached_decoder_for_DLExpansionInformation = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_DLExpansionInformation: $.ASN1Encoder<DLExpansionInforma
 export function _encode_DLExpansionInformation(
     value: DLExpansionInformation,
     elGetter: $.ASN1Encoder<DLExpansionInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DLExpansionInformation) {
         _cached_encoder_for_DLExpansionInformation = function (
             value: DLExpansionInformation        ): _Element {

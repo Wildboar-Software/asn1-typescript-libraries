@@ -39,7 +39,7 @@ let _cached_decoder_for_MessageGroupRegistrations: $.ASN1Decoder<MessageGroupReg
  * @param {_Element} el The element being decoded.
  * @returns {MessageGroupRegistrations} The decoded data structure.
  */
-export function _decode_MessageGroupRegistrations(el: _Element) {
+export function _decode_MessageGroupRegistrations(el: _Element): MessageGroupRegistrations {
     if (!_cached_decoder_for_MessageGroupRegistrations) {
         _cached_decoder_for_MessageGroupRegistrations = $._decodeSequenceOf<MessageGroupRegistrations_Item>(
             () => _decode_MessageGroupRegistrations_Item
@@ -60,7 +60,7 @@ let _cached_encoder_for_MessageGroupRegistrations: $.ASN1Encoder<MessageGroupReg
 export function _encode_MessageGroupRegistrations(
     value: MessageGroupRegistrations,
     elGetter: $.ASN1Encoder<MessageGroupRegistrations>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageGroupRegistrations) {
         _cached_encoder_for_MessageGroupRegistrations = $._encodeSequenceOf<MessageGroupRegistrations_Item>(
             () => _encode_MessageGroupRegistrations_Item,

@@ -38,7 +38,7 @@ let _cached_decoder_for_PersonLocation: $.ASN1Decoder<PersonLocation> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {PersonLocation} The decoded data structure.
  */
-export function _decode_PersonLocation(el: _Element) {
+export function _decode_PersonLocation(el: _Element): PersonLocation {
     if (!_cached_decoder_for_PersonLocation) {
         _cached_decoder_for_PersonLocation = _decode_PremisesAddress;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_PersonLocation: $.ASN1Encoder<PersonLocation> | null = n
 export function _encode_PersonLocation(
     value: PersonLocation,
     elGetter: $.ASN1Encoder<PersonLocation>
-) {
+): _Element {
     if (!_cached_encoder_for_PersonLocation) {
         _cached_encoder_for_PersonLocation = _encode_PremisesAddress;
     }

@@ -38,7 +38,7 @@ let _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Decoder<R
  * @param {_Element} el The element being decoded.
  * @returns {RemoveCapacityFromTopLinkEndInformation} The decoded data structure.
  */
-export function _decode_RemoveCapacityFromTopLinkEndInformation(el: _Element) {
+export function _decode_RemoveCapacityFromTopLinkEndInformation(el: _Element): RemoveCapacityFromTopLinkEndInformation {
     if (!_cached_decoder_for_RemoveCapacityFromTopLinkEndInformation) {
         _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation = _decode_RequestedPointCapacity;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Encoder<R
 export function _encode_RemoveCapacityFromTopLinkEndInformation(
     value: RemoveCapacityFromTopLinkEndInformation,
     elGetter: $.ASN1Encoder<RemoveCapacityFromTopLinkEndInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveCapacityFromTopLinkEndInformation) {
         _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation = _encode_RequestedPointCapacity;
     }

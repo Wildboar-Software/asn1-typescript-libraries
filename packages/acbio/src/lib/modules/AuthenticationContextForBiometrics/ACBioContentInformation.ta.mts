@@ -191,7 +191,7 @@ let _cached_decoder_for_ACBioContentInformation: $.ASN1Decoder<ACBioContentInfor
  * @param {_Element} el The element being decoded.
  * @returns {ACBioContentInformation} The decoded data structure.
  */
-export function _decode_ACBioContentInformation(el: _Element) {
+export function _decode_ACBioContentInformation(el: _Element): ACBioContentInformation {
     if (!_cached_decoder_for_ACBioContentInformation) {
         _cached_decoder_for_ACBioContentInformation = $._decode_implicit<ACBioContentInformation>(
             () =>
@@ -256,7 +256,7 @@ let _cached_encoder_for_ACBioContentInformation: $.ASN1Encoder<ACBioContentInfor
 export function _encode_ACBioContentInformation(
     value: ACBioContentInformation,
     elGetter: $.ASN1Encoder<ACBioContentInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ACBioContentInformation) {
         _cached_encoder_for_ACBioContentInformation = $._encode_implicit(
             _TagClass.context,

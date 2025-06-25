@@ -47,7 +47,7 @@ let _cached_decoder_for_BridgeRollArg: $.ASN1Decoder<BridgeRollArg> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {BridgeRollArg} The decoded data structure.
  */
-export function _decode_BridgeRollArg(el: _Element) {
+export function _decode_BridgeRollArg(el: _Element): BridgeRollArg {
     if (!_cached_decoder_for_BridgeRollArg) {
         _cached_decoder_for_BridgeRollArg = $._decodeSequenceOf<BridgeRollArg_Item>(
             () => _decode_BridgeRollArg_Item
@@ -70,7 +70,7 @@ let _cached_encoder_for_BridgeRollArg: $.ASN1Encoder<BridgeRollArg> | null = nul
 export function _encode_BridgeRollArg(
     value: BridgeRollArg,
     elGetter: $.ASN1Encoder<BridgeRollArg>
-) {
+): _Element {
     if (!_cached_encoder_for_BridgeRollArg) {
         _cached_encoder_for_BridgeRollArg = $._encodeSequenceOf<BridgeRollArg_Item>(
             () => _encode_BridgeRollArg_Item,

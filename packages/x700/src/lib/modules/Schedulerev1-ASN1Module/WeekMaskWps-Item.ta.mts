@@ -116,7 +116,7 @@ let _cached_decoder_for_WeekMaskWps_Item: $.ASN1Decoder<WeekMaskWps_Item> | null
  * @param {_Element} el The element being decoded.
  * @returns {WeekMaskWps_Item} The decoded data structure.
  */
-export function _decode_WeekMaskWps_Item(el: _Element) {
+export function _decode_WeekMaskWps_Item(el: _Element): WeekMaskWps_Item {
     if (!_cached_decoder_for_WeekMaskWps_Item) {
         _cached_decoder_for_WeekMaskWps_Item = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_WeekMaskWps_Item: $.ASN1Encoder<WeekMaskWps_Item> | null
 export function _encode_WeekMaskWps_Item(
     value: WeekMaskWps_Item,
     elGetter: $.ASN1Encoder<WeekMaskWps_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekMaskWps_Item) {
         _cached_encoder_for_WeekMaskWps_Item = function (
             value: WeekMaskWps_Item        ): _Element {

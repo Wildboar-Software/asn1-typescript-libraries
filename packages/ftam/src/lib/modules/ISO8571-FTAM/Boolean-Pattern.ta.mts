@@ -121,7 +121,7 @@ let _cached_decoder_for_Boolean_Pattern: $.ASN1Decoder<Boolean_Pattern> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Boolean_Pattern} The decoded data structure.
  */
-export function _decode_Boolean_Pattern(el: _Element) {
+export function _decode_Boolean_Pattern(el: _Element): Boolean_Pattern {
   if (!_cached_decoder_for_Boolean_Pattern) {
     _cached_decoder_for_Boolean_Pattern = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_Boolean_Pattern: $.ASN1Encoder<Boolean_Pattern> | null =
 export function _encode_Boolean_Pattern(
   value: Boolean_Pattern,
   elGetter: $.ASN1Encoder<Boolean_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Boolean_Pattern) {
     _cached_encoder_for_Boolean_Pattern = function (
       value: Boolean_Pattern    ): _Element {

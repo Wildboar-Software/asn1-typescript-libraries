@@ -37,7 +37,7 @@ let _cached_decoder_for_KEAPublicKeyChoice: $.ASN1Decoder<KEAPublicKeyChoice> | 
  * @param {_Element} el The element being decoded.
  * @returns {KEAPublicKeyChoice} The decoded data structure.
  */
-export function _decode_KEAPublicKeyChoice(el: _Element) {
+export function _decode_KEAPublicKeyChoice(el: _Element): KEAPublicKeyChoice {
     if (!_cached_decoder_for_KEAPublicKeyChoice) {
         _cached_decoder_for_KEAPublicKeyChoice = $._decode_extensible_choice<KEAPublicKeyChoice>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_KEAPublicKeyChoice: $.ASN1Encoder<KEAPublicKeyChoice> | 
 export function _encode_KEAPublicKeyChoice(
     value: KEAPublicKeyChoice,
     elGetter: $.ASN1Encoder<KEAPublicKeyChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_KEAPublicKeyChoice) {
         _cached_encoder_for_KEAPublicKeyChoice = $._encode_choice<KEAPublicKeyChoice>(
             {

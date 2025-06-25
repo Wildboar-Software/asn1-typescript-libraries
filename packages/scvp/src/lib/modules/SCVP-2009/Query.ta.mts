@@ -266,7 +266,7 @@ let _cached_decoder_for_Query: $.ASN1Decoder<Query> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Query} The decoded data structure.
  */
-export function _decode_Query(el: _Element) {
+export function _decode_Query(el: _Element): Query {
   if (!_cached_decoder_for_Query) {
     _cached_decoder_for_Query = function (el: _Element): Query {
       let queriedCerts!: CertReferences;
@@ -362,7 +362,7 @@ let _cached_encoder_for_Query: $.ASN1Encoder<Query> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Query, encoded as an ASN.1 Element.
  */
-export function _encode_Query(value: Query, elGetter: $.ASN1Encoder<Query>) {
+export function _encode_Query(value: Query, elGetter: $.ASN1Encoder<Query>): _Element {
   if (!_cached_encoder_for_Query) {
     _cached_encoder_for_Query = function (
       value: Query    ): _Element {

@@ -118,7 +118,7 @@ let _cached_decoder_for_Identified_Command_Response_command: $.ASN1Decoder<Ident
  * @param {_Element} el The element being decoded.
  * @returns {Identified_Command_Response_command} The decoded data structure.
  */
-export function _decode_Identified_Command_Response_command(el: _Element) {
+export function _decode_Identified_Command_Response_command(el: _Element): Identified_Command_Response_command {
     if (!_cached_decoder_for_Identified_Command_Response_command) {
         _cached_decoder_for_Identified_Command_Response_command = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_Identified_Command_Response_command: $.ASN1Encoder<Ident
 export function _encode_Identified_Command_Response_command(
     value: Identified_Command_Response_command,
     elGetter: $.ASN1Encoder<Identified_Command_Response_command>
-) {
+): _Element {
     if (!_cached_encoder_for_Identified_Command_Response_command) {
         _cached_encoder_for_Identified_Command_Response_command = function (
             value: Identified_Command_Response_command        ): _Element {

@@ -47,7 +47,7 @@ let _cached_decoder_for_TestRequestControlledResponse: $.ASN1Decoder<TestRequest
  * @param {_Element} el The element being decoded.
  * @returns {TestRequestControlledResponse} The decoded data structure.
  */
-export function _decode_TestRequestControlledResponse(el: _Element) {
+export function _decode_TestRequestControlledResponse(el: _Element): TestRequestControlledResponse {
     if (!_cached_decoder_for_TestRequestControlledResponse) {
         _cached_decoder_for_TestRequestControlledResponse = $._decode_inextensible_choice<TestRequestControlledResponse>(
             {
@@ -83,7 +83,7 @@ let _cached_encoder_for_TestRequestControlledResponse: $.ASN1Encoder<TestRequest
 export function _encode_TestRequestControlledResponse(
     value: TestRequestControlledResponse,
     elGetter: $.ASN1Encoder<TestRequestControlledResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_TestRequestControlledResponse) {
         _cached_encoder_for_TestRequestControlledResponse = $._encode_choice<TestRequestControlledResponse>(
             {

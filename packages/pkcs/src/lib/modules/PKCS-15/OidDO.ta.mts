@@ -110,7 +110,7 @@ let _cached_decoder_for_OidDO: $.ASN1Decoder<OidDO> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OidDO} The decoded data structure.
  */
-export function _decode_OidDO(el: _Element) {
+export function _decode_OidDO(el: _Element): OidDO {
     if (!_cached_decoder_for_OidDO) {
         _cached_decoder_for_OidDO = function (el: _Element): OidDO {
             const sequence: _Element[] = el.sequence;
@@ -146,7 +146,7 @@ let _cached_encoder_for_OidDO: $.ASN1Encoder<OidDO> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OidDO, encoded as an ASN.1 Element.
  */
-export function _encode_OidDO(value: OidDO, elGetter: $.ASN1Encoder<OidDO>) {
+export function _encode_OidDO(value: OidDO, elGetter: $.ASN1Encoder<OidDO>): _Element {
     if (!_cached_encoder_for_OidDO) {
         _cached_encoder_for_OidDO = function (
             value: OidDO        ): _Element {

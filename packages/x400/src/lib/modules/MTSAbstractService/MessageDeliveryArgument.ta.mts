@@ -155,7 +155,7 @@ let _cached_decoder_for_MessageDeliveryArgument: $.ASN1Decoder<MessageDeliveryAr
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryArgument} The decoded data structure.
  */
-export function _decode_MessageDeliveryArgument(el: _Element) {
+export function _decode_MessageDeliveryArgument(el: _Element): MessageDeliveryArgument {
     if (!_cached_decoder_for_MessageDeliveryArgument) {
         _cached_decoder_for_MessageDeliveryArgument = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_MessageDeliveryArgument: $.ASN1Encoder<MessageDeliveryAr
 export function _encode_MessageDeliveryArgument(
     value: MessageDeliveryArgument,
     elGetter: $.ASN1Encoder<MessageDeliveryArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageDeliveryArgument) {
         _cached_encoder_for_MessageDeliveryArgument = function (
             value: MessageDeliveryArgument        ): _Element {

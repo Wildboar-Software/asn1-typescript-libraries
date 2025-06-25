@@ -41,7 +41,7 @@ let _cached_decoder_for_CorrelatedDeliveredEDINs: $.ASN1Decoder<CorrelatedDelive
  * @param {_Element} el The element being decoded.
  * @returns {CorrelatedDeliveredEDINs} The decoded data structure.
  */
-export function _decode_CorrelatedDeliveredEDINs(el: _Element) {
+export function _decode_CorrelatedDeliveredEDINs(el: _Element): CorrelatedDeliveredEDINs {
     if (!_cached_decoder_for_CorrelatedDeliveredEDINs) {
         _cached_decoder_for_CorrelatedDeliveredEDINs = $._decode_inextensible_choice<CorrelatedDeliveredEDINs>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_CorrelatedDeliveredEDINs: $.ASN1Encoder<CorrelatedDelive
 export function _encode_CorrelatedDeliveredEDINs(
     value: CorrelatedDeliveredEDINs,
     elGetter: $.ASN1Encoder<CorrelatedDeliveredEDINs>
-) {
+): _Element {
     if (!_cached_encoder_for_CorrelatedDeliveredEDINs) {
         _cached_encoder_for_CorrelatedDeliveredEDINs = $._encode_choice<CorrelatedDeliveredEDINs>(
             {

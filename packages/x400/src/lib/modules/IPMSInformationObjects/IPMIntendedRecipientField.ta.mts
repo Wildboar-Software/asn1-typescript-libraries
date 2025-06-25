@@ -35,7 +35,7 @@ let _cached_decoder_for_IPMIntendedRecipientField: $.ASN1Decoder<IPMIntendedReci
  * @param {_Element} el The element being decoded.
  * @returns {IPMIntendedRecipientField} The decoded data structure.
  */
-export function _decode_IPMIntendedRecipientField(el: _Element) {
+export function _decode_IPMIntendedRecipientField(el: _Element): IPMIntendedRecipientField {
     if (!_cached_decoder_for_IPMIntendedRecipientField) {
         _cached_decoder_for_IPMIntendedRecipientField = _decode_ORDescriptor;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_IPMIntendedRecipientField: $.ASN1Encoder<IPMIntendedReci
 export function _encode_IPMIntendedRecipientField(
     value: IPMIntendedRecipientField,
     elGetter: $.ASN1Encoder<IPMIntendedRecipientField>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMIntendedRecipientField) {
         _cached_encoder_for_IPMIntendedRecipientField = _encode_ORDescriptor;
     }

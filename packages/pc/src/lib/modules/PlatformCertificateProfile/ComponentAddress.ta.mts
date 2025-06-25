@@ -111,7 +111,7 @@ let _cached_decoder_for_ComponentAddress: $.ASN1Decoder<ComponentAddress> | null
  * @returns {ComponentAddress} The decoded data structure.
  */
 export
-function _decode_ComponentAddress (el: _Element) {
+function _decode_ComponentAddress (el: _Element): ComponentAddress {
     if (!_cached_decoder_for_ComponentAddress) { _cached_decoder_for_ComponentAddress = function (el: _Element): ComponentAddress {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_ComponentAddress: $.ASN1Encoder<ComponentAddress> | null
  * @returns {_Element} The ComponentAddress, encoded as an ASN.1 Element.
  */
 export
-function _encode_ComponentAddress (value: ComponentAddress, elGetter: $.ASN1Encoder<ComponentAddress>) {
+function _encode_ComponentAddress (value: ComponentAddress, elGetter: $.ASN1Encoder<ComponentAddress>): _Element {
     if (!_cached_encoder_for_ComponentAddress) { _cached_encoder_for_ComponentAddress = function (value: ComponentAddress): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -105,7 +105,7 @@ let _cached_decoder_for_RealizationParameter_realization_type: $.ASN1Decoder<Rea
  * @param {_Element} el The element being decoded.
  * @returns {RealizationParameter_realization_type} The decoded data structure.
  */
-export function _decode_RealizationParameter_realization_type(el: _Element) {
+export function _decode_RealizationParameter_realization_type(el: _Element): RealizationParameter_realization_type {
   if (!_cached_decoder_for_RealizationParameter_realization_type) {
     _cached_decoder_for_RealizationParameter_realization_type =
       $._decodeEnumerated;
@@ -127,7 +127,7 @@ let _cached_encoder_for_RealizationParameter_realization_type: $.ASN1Encoder<Rea
 export function _encode_RealizationParameter_realization_type(
   value: RealizationParameter_realization_type,
   elGetter: $.ASN1Encoder<RealizationParameter_realization_type>
-) {
+): _Element {
   if (!_cached_encoder_for_RealizationParameter_realization_type) {
     _cached_encoder_for_RealizationParameter_realization_type =
       $._encodeEnumerated;

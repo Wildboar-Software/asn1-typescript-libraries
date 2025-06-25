@@ -122,7 +122,7 @@ let _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm: $.ASN1Decoder<C
  * @param {_Element} el The element being decoded.
  * @returns {CapabilityIdentitiesList_Item_knownForm} The decoded data structure.
  */
-export function _decode_CapabilityIdentitiesList_Item_knownForm(el: _Element) {
+export function _decode_CapabilityIdentitiesList_Item_knownForm(el: _Element): CapabilityIdentitiesList_Item_knownForm {
     if (!_cached_decoder_for_CapabilityIdentitiesList_Item_knownForm) {
         _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_CapabilityIdentitiesList_Item_knownForm: $.ASN1Encoder<C
 export function _encode_CapabilityIdentitiesList_Item_knownForm(
     value: CapabilityIdentitiesList_Item_knownForm,
     elGetter: $.ASN1Encoder<CapabilityIdentitiesList_Item_knownForm>
-) {
+): _Element {
     if (!_cached_encoder_for_CapabilityIdentitiesList_Item_knownForm) {
         _cached_encoder_for_CapabilityIdentitiesList_Item_knownForm = function (
             value: CapabilityIdentitiesList_Item_knownForm        ): _Element {

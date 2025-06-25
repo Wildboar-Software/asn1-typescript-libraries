@@ -145,7 +145,7 @@ let _cached_decoder_for_NonBasicParameters: $.ASN1Decoder<NonBasicParameters> | 
  * @param {_Element} el The element being decoded.
  * @returns {NonBasicParameters} The decoded data structure.
  */
-export function _decode_NonBasicParameters(el: _Element) {
+export function _decode_NonBasicParameters(el: _Element): NonBasicParameters {
     if (!_cached_decoder_for_NonBasicParameters) {
         _cached_decoder_for_NonBasicParameters = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_NonBasicParameters: $.ASN1Encoder<NonBasicParameters> | 
 export function _encode_NonBasicParameters(
     value: NonBasicParameters,
     elGetter: $.ASN1Encoder<NonBasicParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_NonBasicParameters) {
         _cached_encoder_for_NonBasicParameters = function (
             value: NonBasicParameters        ): _Element {

@@ -148,7 +148,7 @@ let _cached_decoder_for_PublicRSAKeyAttributes: $.ASN1Decoder<PublicRSAKeyAttrib
  * @param {_Element} el The element being decoded.
  * @returns {PublicRSAKeyAttributes} The decoded data structure.
  */
-export function _decode_PublicRSAKeyAttributes(el: _Element) {
+export function _decode_PublicRSAKeyAttributes(el: _Element): PublicRSAKeyAttributes {
     if (!_cached_decoder_for_PublicRSAKeyAttributes) {
         _cached_decoder_for_PublicRSAKeyAttributes = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_PublicRSAKeyAttributes: $.ASN1Encoder<PublicRSAKeyAttrib
 export function _encode_PublicRSAKeyAttributes(
     value: PublicRSAKeyAttributes,
     elGetter: $.ASN1Encoder<PublicRSAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicRSAKeyAttributes) {
         _cached_encoder_for_PublicRSAKeyAttributes = function (
             value: PublicRSAKeyAttributes        ): _Element {

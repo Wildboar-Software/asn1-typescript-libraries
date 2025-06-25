@@ -34,7 +34,7 @@ let _cached_decoder_for_DataObjects: $.ASN1Decoder<DataObjects> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataObjects} The decoded data structure.
  */
-export function _decode_DataObjects(el: _Element) {
+export function _decode_DataObjects(el: _Element): DataObjects {
     if (!_cached_decoder_for_DataObjects) {
         _cached_decoder_for_DataObjects = _get_decoder_for_PathOrObjects<DataType>(
             _decode_DataType
@@ -57,7 +57,7 @@ let _cached_encoder_for_DataObjects: $.ASN1Encoder<DataObjects> | null = null;
 export function _encode_DataObjects(
     value: DataObjects,
     elGetter: $.ASN1Encoder<DataObjects>
-) {
+): _Element {
     if (!_cached_encoder_for_DataObjects) {
         _cached_encoder_for_DataObjects = _get_encoder_for_PathOrObjects<DataType>(
             _encode_DataType

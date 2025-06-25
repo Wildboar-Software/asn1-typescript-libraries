@@ -116,7 +116,7 @@ let _cached_decoder_for_ContentHints: $.ASN1Decoder<ContentHints> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContentHints} The decoded data structure.
  */
-export function _decode_ContentHints(el: _Element) {
+export function _decode_ContentHints(el: _Element): ContentHints {
     if (!_cached_decoder_for_ContentHints) {
         _cached_decoder_for_ContentHints = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ContentHints: $.ASN1Encoder<ContentHints> | null = null;
 export function _encode_ContentHints(
     value: ContentHints,
     elGetter: $.ASN1Encoder<ContentHints>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentHints) {
         _cached_encoder_for_ContentHints = function (
             value: ContentHints        ): _Element {

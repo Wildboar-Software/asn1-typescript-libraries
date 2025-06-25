@@ -116,7 +116,7 @@ let _cached_decoder_for_ServiceLocator: $.ASN1Decoder<ServiceLocator> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ServiceLocator} The decoded data structure.
  */
-export function _decode_ServiceLocator(el: _Element) {
+export function _decode_ServiceLocator(el: _Element): ServiceLocator {
     if (!_cached_decoder_for_ServiceLocator) {
         _cached_decoder_for_ServiceLocator = function (
             el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_ServiceLocator: $.ASN1Encoder<ServiceLocator> | null = n
 export function _encode_ServiceLocator(
     value: ServiceLocator,
     elGetter: $.ASN1Encoder<ServiceLocator>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceLocator) {
         _cached_encoder_for_ServiceLocator = function (
             value: ServiceLocator        ): _Element {

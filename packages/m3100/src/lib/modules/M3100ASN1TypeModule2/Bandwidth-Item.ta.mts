@@ -114,7 +114,7 @@ let _cached_decoder_for_Bandwidth_Item: $.ASN1Decoder<Bandwidth_Item> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Bandwidth_Item} The decoded data structure.
  */
-export function _decode_Bandwidth_Item(el: _Element) {
+export function _decode_Bandwidth_Item(el: _Element): Bandwidth_Item {
     if (!_cached_decoder_for_Bandwidth_Item) {
         _cached_decoder_for_Bandwidth_Item = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_Bandwidth_Item: $.ASN1Encoder<Bandwidth_Item> | null = n
 export function _encode_Bandwidth_Item(
     value: Bandwidth_Item,
     elGetter: $.ASN1Encoder<Bandwidth_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Bandwidth_Item) {
         _cached_encoder_for_Bandwidth_Item = function (
             value: Bandwidth_Item        ): _Element {

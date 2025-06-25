@@ -113,7 +113,7 @@ let _cached_decoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Decoder<D
  * @param {_Element} el The element being decoded.
  * @returns {DLPolicy_implicit_conversion_prohibited} The decoded data structure.
  */
-export function _decode_DLPolicy_implicit_conversion_prohibited(el: _Element) {
+export function _decode_DLPolicy_implicit_conversion_prohibited(el: _Element): DLPolicy_implicit_conversion_prohibited {
     if (!_cached_decoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_decoder_for_DLPolicy_implicit_conversion_prohibited =
             $._decodeEnumerated;
@@ -133,7 +133,7 @@ let _cached_encoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Encoder<D
 export function _encode_DLPolicy_implicit_conversion_prohibited(
     value: DLPolicy_implicit_conversion_prohibited,
     elGetter: $.ASN1Encoder<DLPolicy_implicit_conversion_prohibited>
-) {
+): _Element {
     if (!_cached_encoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_encoder_for_DLPolicy_implicit_conversion_prohibited =
             $._encodeEnumerated;

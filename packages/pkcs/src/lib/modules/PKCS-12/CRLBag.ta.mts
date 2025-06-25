@@ -111,7 +111,7 @@ let _cached_decoder_for_CRLBag: $.ASN1Decoder<CRLBag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CRLBag} The decoded data structure.
  */
-export function _decode_CRLBag(el: _Element) {
+export function _decode_CRLBag(el: _Element): CRLBag {
     if (!_cached_decoder_for_CRLBag) {
         _cached_decoder_for_CRLBag = function (el: _Element): CRLBag {
             const sequence: _Element[] = el.sequence;
@@ -147,7 +147,7 @@ let _cached_encoder_for_CRLBag: $.ASN1Encoder<CRLBag> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CRLBag, encoded as an ASN.1 Element.
  */
-export function _encode_CRLBag(value: CRLBag, elGetter: $.ASN1Encoder<CRLBag>) {
+export function _encode_CRLBag(value: CRLBag, elGetter: $.ASN1Encoder<CRLBag>): _Element {
     if (!_cached_encoder_for_CRLBag) {
         _cached_encoder_for_CRLBag = function (
             value: CRLBag        ): _Element {

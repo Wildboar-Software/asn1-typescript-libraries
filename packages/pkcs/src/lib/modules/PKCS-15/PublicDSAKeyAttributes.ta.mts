@@ -137,7 +137,7 @@ let _cached_decoder_for_PublicDSAKeyAttributes: $.ASN1Decoder<PublicDSAKeyAttrib
  * @param {_Element} el The element being decoded.
  * @returns {PublicDSAKeyAttributes} The decoded data structure.
  */
-export function _decode_PublicDSAKeyAttributes(el: _Element) {
+export function _decode_PublicDSAKeyAttributes(el: _Element): PublicDSAKeyAttributes {
     if (!_cached_decoder_for_PublicDSAKeyAttributes) {
         _cached_decoder_for_PublicDSAKeyAttributes = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_PublicDSAKeyAttributes: $.ASN1Encoder<PublicDSAKeyAttrib
 export function _encode_PublicDSAKeyAttributes(
     value: PublicDSAKeyAttributes,
     elGetter: $.ASN1Encoder<PublicDSAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicDSAKeyAttributes) {
         _cached_encoder_for_PublicDSAKeyAttributes = function (
             value: PublicDSAKeyAttributes        ): _Element {

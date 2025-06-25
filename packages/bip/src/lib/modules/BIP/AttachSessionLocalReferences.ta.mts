@@ -38,7 +38,7 @@ let _cached_decoder_for_AttachSessionLocalReferences: $.ASN1Decoder<AttachSessio
  * @param {_Element} el The element being decoded.
  * @returns {AttachSessionLocalReferences} The decoded data structure.
  */
-export function _decode_AttachSessionLocalReferences(el: _Element) {
+export function _decode_AttachSessionLocalReferences(el: _Element): AttachSessionLocalReferences {
   if (!_cached_decoder_for_AttachSessionLocalReferences) {
     _cached_decoder_for_AttachSessionLocalReferences = $._decodeSetOf<AttachSessionLocalReference>(
       () => _decode_AttachSessionLocalReference
@@ -61,7 +61,7 @@ let _cached_encoder_for_AttachSessionLocalReferences: $.ASN1Encoder<AttachSessio
 export function _encode_AttachSessionLocalReferences(
   value: AttachSessionLocalReferences,
   elGetter: $.ASN1Encoder<AttachSessionLocalReferences>
-) {
+): _Element {
   if (!_cached_encoder_for_AttachSessionLocalReferences) {
     _cached_encoder_for_AttachSessionLocalReferences = $._encodeSetOf<AttachSessionLocalReference>(
       () => _encode_AttachSessionLocalReference,

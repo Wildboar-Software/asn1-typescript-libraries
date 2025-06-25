@@ -122,7 +122,7 @@ let _cached_decoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID: $.ASN1Decoder<BioAPI_BI
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_BIOMETRIC_PRODUCT_ID} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_BIOMETRIC_PRODUCT_ID(el: _Element) {
+export function _decode_BioAPI_BIR_BIOMETRIC_PRODUCT_ID(el: _Element): BioAPI_BIR_BIOMETRIC_PRODUCT_ID {
   if (!_cached_decoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID) {
     _cached_decoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID = function (
       el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID: $.ASN1Encoder<BioAPI_BI
 export function _encode_BioAPI_BIR_BIOMETRIC_PRODUCT_ID(
   value: BioAPI_BIR_BIOMETRIC_PRODUCT_ID,
   elGetter: $.ASN1Encoder<BioAPI_BIR_BIOMETRIC_PRODUCT_ID>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID) {
     _cached_encoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID = function (
       value: BioAPI_BIR_BIOMETRIC_PRODUCT_ID    ): _Element {

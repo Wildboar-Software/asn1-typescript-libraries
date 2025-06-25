@@ -131,7 +131,7 @@ let _cached_decoder_for_PointToMultipoint: $.ASN1Decoder<PointToMultipoint> | nu
  * @param {_Element} el The element being decoded.
  * @returns {PointToMultipoint} The decoded data structure.
  */
-export function _decode_PointToMultipoint(el: _Element) {
+export function _decode_PointToMultipoint(el: _Element): PointToMultipoint {
     if (!_cached_decoder_for_PointToMultipoint) {
         _cached_decoder_for_PointToMultipoint = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_PointToMultipoint: $.ASN1Encoder<PointToMultipoint> | nu
 export function _encode_PointToMultipoint(
     value: PointToMultipoint,
     elGetter: $.ASN1Encoder<PointToMultipoint>
-) {
+): _Element {
     if (!_cached_encoder_for_PointToMultipoint) {
         _cached_encoder_for_PointToMultipoint = function (
             value: PointToMultipoint        ): _Element {

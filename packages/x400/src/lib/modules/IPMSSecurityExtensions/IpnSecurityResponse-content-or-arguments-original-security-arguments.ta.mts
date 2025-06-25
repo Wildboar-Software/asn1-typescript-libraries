@@ -141,7 +141,7 @@ let _cached_decoder_for_IpnSecurityResponse_content_or_arguments_original_securi
  */
 export function _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments(
     el: _Element
-) {
+): IpnSecurityResponse_content_or_arguments_original_security_arguments {
     if (
         !_cached_decoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments
     ) {
@@ -204,7 +204,7 @@ let _cached_encoder_for_IpnSecurityResponse_content_or_arguments_original_securi
 export function _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments(
     value: IpnSecurityResponse_content_or_arguments_original_security_arguments,
     elGetter: $.ASN1Encoder<IpnSecurityResponse_content_or_arguments_original_security_arguments>
-) {
+): _Element {
     if (
         !_cached_encoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments
     ) {

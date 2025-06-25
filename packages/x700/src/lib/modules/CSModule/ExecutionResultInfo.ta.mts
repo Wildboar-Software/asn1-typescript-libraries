@@ -182,7 +182,7 @@ let _cached_decoder_for_ExecutionResultInfo: $.ASN1Decoder<ExecutionResultInfo> 
  * @param {_Element} el The element being decoded.
  * @returns {ExecutionResultInfo} The decoded data structure.
  */
-export function _decode_ExecutionResultInfo(el: _Element) {
+export function _decode_ExecutionResultInfo(el: _Element): ExecutionResultInfo {
     if (!_cached_decoder_for_ExecutionResultInfo) {
         _cached_decoder_for_ExecutionResultInfo = function (
             el: _Element
@@ -240,7 +240,7 @@ let _cached_encoder_for_ExecutionResultInfo: $.ASN1Encoder<ExecutionResultInfo> 
 export function _encode_ExecutionResultInfo(
     value: ExecutionResultInfo,
     elGetter: $.ASN1Encoder<ExecutionResultInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecutionResultInfo) {
         _cached_encoder_for_ExecutionResultInfo = function (
             value: ExecutionResultInfo        ): _Element {

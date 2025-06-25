@@ -150,7 +150,7 @@ let _cached_decoder_for_SMASEUserData: $.ASN1Decoder<SMASEUserData> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SMASEUserData} The decoded data structure.
  */
-export function _decode_SMASEUserData(el: _Element) {
+export function _decode_SMASEUserData(el: _Element): SMASEUserData {
     if (!_cached_decoder_for_SMASEUserData) {
         _cached_decoder_for_SMASEUserData = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_SMASEUserData: $.ASN1Encoder<SMASEUserData> | null = nul
 export function _encode_SMASEUserData(
     value: SMASEUserData,
     elGetter: $.ASN1Encoder<SMASEUserData>
-) {
+): _Element {
     if (!_cached_encoder_for_SMASEUserData) {
         _cached_encoder_for_SMASEUserData = function (
             value: SMASEUserData        ): _Element {

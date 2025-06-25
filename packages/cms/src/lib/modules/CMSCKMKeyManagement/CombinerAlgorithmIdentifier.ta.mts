@@ -26,7 +26,7 @@ let _cached_decoder_for_CombinerAlgorithmIdentifier: $.ASN1Decoder<CombinerAlgor
  * @param {_Element} el The element being decoded.
  * @returns {CombinerAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_CombinerAlgorithmIdentifier(el: _Element) {
+export function _decode_CombinerAlgorithmIdentifier(el: _Element): CombinerAlgorithmIdentifier {
     if (!_cached_decoder_for_CombinerAlgorithmIdentifier) {
         _cached_decoder_for_CombinerAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_CombinerAlgorithmIdentifier: $.ASN1Encoder<CombinerAlgor
 export function _encode_CombinerAlgorithmIdentifier(
     value: CombinerAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<CombinerAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_CombinerAlgorithmIdentifier) {
         _cached_encoder_for_CombinerAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

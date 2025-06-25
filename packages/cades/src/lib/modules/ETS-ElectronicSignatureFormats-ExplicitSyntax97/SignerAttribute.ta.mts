@@ -35,7 +35,7 @@ let _cached_decoder_for_SignerAttribute: $.ASN1Decoder<SignerAttribute> | null =
  * @returns {SignerAttribute} The decoded data structure.
  */
 export
-function _decode_SignerAttribute (el: _Element) {
+function _decode_SignerAttribute (el: _Element): SignerAttribute {
     if (!_cached_decoder_for_SignerAttribute) { _cached_decoder_for_SignerAttribute = $._decodeSequenceOf<SignerAttribute_Item>(() => _decode_SignerAttribute_Item); }
     return _cached_decoder_for_SignerAttribute(el);
 }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SignerAttribute: $.ASN1Encoder<SignerAttribute> | null =
  * @returns {_Element} The SignerAttribute, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignerAttribute (value: SignerAttribute, elGetter: $.ASN1Encoder<SignerAttribute>) {
+function _encode_SignerAttribute (value: SignerAttribute, elGetter: $.ASN1Encoder<SignerAttribute>): _Element {
     if (!_cached_encoder_for_SignerAttribute) { _cached_encoder_for_SignerAttribute = $._encodeSequenceOf<SignerAttribute_Item>(() => _encode_SignerAttribute_Item, $.DER); }
     return _cached_encoder_for_SignerAttribute(value, elGetter);
 }

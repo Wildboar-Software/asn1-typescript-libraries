@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalPosteRestanteAddress: $.ASN1Decoder<UniversalPo
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPosteRestanteAddress} The decoded data structure.
  */
-export function _decode_UniversalPosteRestanteAddress(el: _Element) {
+export function _decode_UniversalPosteRestanteAddress(el: _Element): UniversalPosteRestanteAddress {
     if (!_cached_decoder_for_UniversalPosteRestanteAddress) {
         _cached_decoder_for_UniversalPosteRestanteAddress = _decode_UniversalPDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalPosteRestanteAddress: $.ASN1Encoder<UniversalPo
 export function _encode_UniversalPosteRestanteAddress(
     value: UniversalPosteRestanteAddress,
     elGetter: $.ASN1Encoder<UniversalPosteRestanteAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPosteRestanteAddress) {
         _cached_encoder_for_UniversalPosteRestanteAddress = _encode_UniversalPDSParameter;
     }

@@ -35,7 +35,7 @@ let _cached_decoder_for_ConversionEITsField: $.ASN1Decoder<ConversionEITsField> 
  * @param {_Element} el The element being decoded.
  * @returns {ConversionEITsField} The decoded data structure.
  */
-export function _decode_ConversionEITsField(el: _Element) {
+export function _decode_ConversionEITsField(el: _Element): ConversionEITsField {
     if (!_cached_decoder_for_ConversionEITsField) {
         _cached_decoder_for_ConversionEITsField = _decode_EncodedInformationTypes;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ConversionEITsField: $.ASN1Encoder<ConversionEITsField> 
 export function _encode_ConversionEITsField(
     value: ConversionEITsField,
     elGetter: $.ASN1Encoder<ConversionEITsField>
-) {
+): _Element {
     if (!_cached_encoder_for_ConversionEITsField) {
         _cached_encoder_for_ConversionEITsField = _encode_EncodedInformationTypes;
     }

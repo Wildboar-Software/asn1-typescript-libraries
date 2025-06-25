@@ -56,7 +56,7 @@ let _cached_decoder_for_Access_Control_Change_Attribute: $.ASN1Decoder<Access_Co
  * @param {_Element} el The element being decoded.
  * @returns {Access_Control_Change_Attribute} The decoded data structure.
  */
-export function _decode_Access_Control_Change_Attribute(el: _Element) {
+export function _decode_Access_Control_Change_Attribute(el: _Element): Access_Control_Change_Attribute {
   if (!_cached_decoder_for_Access_Control_Change_Attribute) {
     _cached_decoder_for_Access_Control_Change_Attribute = $._decode_inextensible_choice<Access_Control_Change_Attribute>(
       {
@@ -90,7 +90,7 @@ let _cached_encoder_for_Access_Control_Change_Attribute: $.ASN1Encoder<Access_Co
 export function _encode_Access_Control_Change_Attribute(
   value: Access_Control_Change_Attribute,
   elGetter: $.ASN1Encoder<Access_Control_Change_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Access_Control_Change_Attribute) {
     _cached_encoder_for_Access_Control_Change_Attribute = $._encode_choice<Access_Control_Change_Attribute>(
       {

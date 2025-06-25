@@ -36,7 +36,7 @@ let _cached_decoder_for_SmaseFunctionalUnits: $.ASN1Decoder<SmaseFunctionalUnits
  * @param {_Element} el The element being decoded.
  * @returns {SmaseFunctionalUnits} The decoded data structure.
  */
-export function _decode_SmaseFunctionalUnits(el: _Element) {
+export function _decode_SmaseFunctionalUnits(el: _Element): SmaseFunctionalUnits {
     if (!_cached_decoder_for_SmaseFunctionalUnits) {
         _cached_decoder_for_SmaseFunctionalUnits = $._decodeSetOf<FunctionalUnitPackage>(
             () => _decode_FunctionalUnitPackage
@@ -57,7 +57,7 @@ let _cached_encoder_for_SmaseFunctionalUnits: $.ASN1Encoder<SmaseFunctionalUnits
 export function _encode_SmaseFunctionalUnits(
     value: SmaseFunctionalUnits,
     elGetter: $.ASN1Encoder<SmaseFunctionalUnits>
-) {
+): _Element {
     if (!_cached_encoder_for_SmaseFunctionalUnits) {
         _cached_encoder_for_SmaseFunctionalUnits = $._encodeSetOf<FunctionalUnitPackage>(
             () => _encode_FunctionalUnitPackage,

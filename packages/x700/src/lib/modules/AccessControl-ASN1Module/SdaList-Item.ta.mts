@@ -120,7 +120,7 @@ let _cached_decoder_for_SdaList_Item: $.ASN1Decoder<SdaList_Item> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SdaList_Item} The decoded data structure.
  */
-export function _decode_SdaList_Item(el: _Element) {
+export function _decode_SdaList_Item(el: _Element): SdaList_Item {
     if (!_cached_decoder_for_SdaList_Item) {
         _cached_decoder_for_SdaList_Item = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_SdaList_Item: $.ASN1Encoder<SdaList_Item> | null = null;
 export function _encode_SdaList_Item(
     value: SdaList_Item,
     elGetter: $.ASN1Encoder<SdaList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_SdaList_Item) {
         _cached_encoder_for_SdaList_Item = function (
             value: SdaList_Item        ): _Element {

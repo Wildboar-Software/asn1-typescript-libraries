@@ -40,7 +40,7 @@ let _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation: $.ASN1Decode
  */
 export function _decode_AddCapacityToTopologicalLinkEndInformation(
     el: _Element
-) {
+): AddCapacityToTopologicalLinkEndInformation {
     if (!_cached_decoder_for_AddCapacityToTopologicalLinkEndInformation) {
         _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation = _decode_RequestedPointCapacity;
     }
@@ -61,7 +61,7 @@ let _cached_encoder_for_AddCapacityToTopologicalLinkEndInformation: $.ASN1Encode
 export function _encode_AddCapacityToTopologicalLinkEndInformation(
     value: AddCapacityToTopologicalLinkEndInformation,
     elGetter: $.ASN1Encoder<AddCapacityToTopologicalLinkEndInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AddCapacityToTopologicalLinkEndInformation) {
         _cached_encoder_for_AddCapacityToTopologicalLinkEndInformation = _encode_RequestedPointCapacity;
     }

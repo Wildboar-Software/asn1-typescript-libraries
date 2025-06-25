@@ -115,7 +115,7 @@ let _cached_decoder_for_BDBValidityPeriod: $.ASN1Decoder<BDBValidityPeriod> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BDBValidityPeriod} The decoded data structure.
  */
-export function _decode_BDBValidityPeriod(el: _Element) {
+export function _decode_BDBValidityPeriod(el: _Element): BDBValidityPeriod {
   if (!_cached_decoder_for_BDBValidityPeriod) {
     _cached_decoder_for_BDBValidityPeriod = function (
       el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_BDBValidityPeriod: $.ASN1Encoder<BDBValidityPeriod> | nu
 export function _encode_BDBValidityPeriod(
   value: BDBValidityPeriod,
   elGetter: $.ASN1Encoder<BDBValidityPeriod>
-) {
+): _Element {
   if (!_cached_encoder_for_BDBValidityPeriod) {
     _cached_encoder_for_BDBValidityPeriod = function (
       value: BDBValidityPeriod    ): _Element {

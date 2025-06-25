@@ -79,7 +79,7 @@ let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side: $.ASN1Decoder
  */
 export function _decode_ATOMIC_ACTION_IDENTIFIER_owners_name_side(
   el: _Element
-) {
+): ATOMIC_ACTION_IDENTIFIER_owners_name_side {
   if (!_cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side) {
     _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side =
       $._decodeEnumerated;
@@ -101,7 +101,7 @@ let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side: $.ASN1Encoder
 export function _encode_ATOMIC_ACTION_IDENTIFIER_owners_name_side(
   value: ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   elGetter: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER_owners_name_side>
-) {
+): _Element {
   if (!_cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side) {
     _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side =
       $._encodeEnumerated;

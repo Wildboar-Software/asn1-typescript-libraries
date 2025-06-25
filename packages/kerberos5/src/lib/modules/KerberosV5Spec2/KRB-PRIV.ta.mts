@@ -134,7 +134,7 @@ let _cached_decoder_for_KRB_PRIV: $.ASN1Decoder<KRB_PRIV> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KRB_PRIV} The decoded data structure.
  */
-export function _decode_KRB_PRIV(el: _Element) {
+export function _decode_KRB_PRIV(el: _Element): KRB_PRIV {
   if (!_cached_decoder_for_KRB_PRIV) {
     _cached_decoder_for_KRB_PRIV = $._decode_implicit<KRB_PRIV>(
       () =>
@@ -183,7 +183,7 @@ let _cached_encoder_for_KRB_PRIV: $.ASN1Encoder<KRB_PRIV> | null = null;
 export function _encode_KRB_PRIV(
   value: KRB_PRIV,
   elGetter: $.ASN1Encoder<KRB_PRIV>
-) {
+): _Element {
   if (!_cached_encoder_for_KRB_PRIV) {
     _cached_encoder_for_KRB_PRIV = $._encode_implicit(
       _TagClass.application,

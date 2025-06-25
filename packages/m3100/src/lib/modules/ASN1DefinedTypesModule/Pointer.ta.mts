@@ -38,7 +38,7 @@ let _cached_decoder_for_Pointer: $.ASN1Decoder<Pointer> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Pointer} The decoded data structure.
  */
-export function _decode_Pointer(el: _Element) {
+export function _decode_Pointer(el: _Element): Pointer {
     if (!_cached_decoder_for_Pointer) {
         _cached_decoder_for_Pointer = _decode_ObjectInstance;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Pointer: $.ASN1Encoder<Pointer> | null = null;
 export function _encode_Pointer(
     value: Pointer,
     elGetter: $.ASN1Encoder<Pointer>
-) {
+): _Element {
     if (!_cached_encoder_for_Pointer) {
         _cached_encoder_for_Pointer = _encode_ObjectInstance;
     }

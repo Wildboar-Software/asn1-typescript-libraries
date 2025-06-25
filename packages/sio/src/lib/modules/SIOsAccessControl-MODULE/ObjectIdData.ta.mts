@@ -116,7 +116,7 @@ let _cached_decoder_for_ObjectIdData: $.ASN1Decoder<ObjectIdData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectIdData} The decoded data structure.
  */
-export function _decode_ObjectIdData(el: _Element) {
+export function _decode_ObjectIdData(el: _Element): ObjectIdData {
     if (!_cached_decoder_for_ObjectIdData) {
         _cached_decoder_for_ObjectIdData = function (
             el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_ObjectIdData: $.ASN1Encoder<ObjectIdData> | null = null;
 export function _encode_ObjectIdData(
     value: ObjectIdData,
     elGetter: $.ASN1Encoder<ObjectIdData>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectIdData) {
         _cached_encoder_for_ObjectIdData = function (
             value: ObjectIdData        ): _Element {

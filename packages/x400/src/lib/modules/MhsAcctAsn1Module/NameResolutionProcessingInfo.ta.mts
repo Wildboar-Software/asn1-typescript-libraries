@@ -35,7 +35,7 @@ let _cached_decoder_for_NameResolutionProcessingInfo: $.ASN1Decoder<NameResoluti
  * @param {_Element} el The element being decoded.
  * @returns {NameResolutionProcessingInfo} The decoded data structure.
  */
-export function _decode_NameResolutionProcessingInfo(el: _Element) {
+export function _decode_NameResolutionProcessingInfo(el: _Element): NameResolutionProcessingInfo {
     if (!_cached_decoder_for_NameResolutionProcessingInfo) {
         _cached_decoder_for_NameResolutionProcessingInfo = _decode_DirectoryNameAndOptionalORAddress;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_NameResolutionProcessingInfo: $.ASN1Encoder<NameResoluti
 export function _encode_NameResolutionProcessingInfo(
     value: NameResolutionProcessingInfo,
     elGetter: $.ASN1Encoder<NameResolutionProcessingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_NameResolutionProcessingInfo) {
         _cached_encoder_for_NameResolutionProcessingInfo = _encode_DirectoryNameAndOptionalORAddress;
     }

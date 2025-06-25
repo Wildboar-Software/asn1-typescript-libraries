@@ -38,7 +38,7 @@ let _cached_decoder_for_GraphicString64: $.ASN1Decoder<GraphicString64> | null =
  * @param {_Element} el The element being decoded.
  * @returns {GraphicString64} The decoded data structure.
  */
-export function _decode_GraphicString64(el: _Element) {
+export function _decode_GraphicString64(el: _Element): GraphicString64 {
     if (!_cached_decoder_for_GraphicString64) {
         _cached_decoder_for_GraphicString64 = _decode_GraphicStringBase;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null =
 export function _encode_GraphicString64(
     value: GraphicString64,
     elGetter: $.ASN1Encoder<GraphicString64>
-) {
+): _Element {
     if (!_cached_encoder_for_GraphicString64) {
         _cached_encoder_for_GraphicString64 = _encode_GraphicStringBase;
     }

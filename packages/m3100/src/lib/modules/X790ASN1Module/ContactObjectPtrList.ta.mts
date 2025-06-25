@@ -38,7 +38,7 @@ let _cached_decoder_for_ContactObjectPtrList: $.ASN1Decoder<ContactObjectPtrList
  * @param {_Element} el The element being decoded.
  * @returns {ContactObjectPtrList} The decoded data structure.
  */
-export function _decode_ContactObjectPtrList(el: _Element) {
+export function _decode_ContactObjectPtrList(el: _Element): ContactObjectPtrList {
     if (!_cached_decoder_for_ContactObjectPtrList) {
         _cached_decoder_for_ContactObjectPtrList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ContactObjectPtrList: $.ASN1Encoder<ContactObjectPtrList
 export function _encode_ContactObjectPtrList(
     value: ContactObjectPtrList,
     elGetter: $.ASN1Encoder<ContactObjectPtrList>
-) {
+): _Element {
     if (!_cached_encoder_for_ContactObjectPtrList) {
         _cached_encoder_for_ContactObjectPtrList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

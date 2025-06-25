@@ -211,7 +211,7 @@ let _cached_decoder_for_Announcement: $.ASN1Decoder<Announcement> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Announcement} The decoded data structure.
  */
-export function _decode_Announcement(el: _Element) {
+export function _decode_Announcement(el: _Element): Announcement {
   if (!_cached_decoder_for_Announcement) {
     _cached_decoder_for_Announcement = function (el: _Element): Announcement {
       let protocolVersion!: ProtocolVersion;
@@ -282,7 +282,7 @@ let _cached_encoder_for_Announcement: $.ASN1Encoder<Announcement> | null = null;
 export function _encode_Announcement(
   value: Announcement,
   elGetter: $.ASN1Encoder<Announcement>
-) {
+): _Element {
   if (!_cached_encoder_for_Announcement) {
     _cached_encoder_for_Announcement = function (
       value: Announcement    ): _Element {

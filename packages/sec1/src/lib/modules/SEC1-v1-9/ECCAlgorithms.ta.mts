@@ -33,7 +33,7 @@ let _cached_decoder_for_ECCAlgorithms: $.ASN1Decoder<ECCAlgorithms> | null = nul
  * @returns {ECCAlgorithms} The decoded data structure.
  */
 export
-function _decode_ECCAlgorithms (el: _Element) {
+function _decode_ECCAlgorithms (el: _Element): ECCAlgorithms {
     if (!_cached_decoder_for_ECCAlgorithms) { _cached_decoder_for_ECCAlgorithms = $._decodeSequenceOf<ECCAlgorithm>(() => _decode_ECCAlgorithm); }
     return _cached_decoder_for_ECCAlgorithms(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_ECCAlgorithms: $.ASN1Encoder<ECCAlgorithms> | null = nul
  * @returns {_Element} The ECCAlgorithms, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECCAlgorithms (value: ECCAlgorithms, elGetter: $.ASN1Encoder<ECCAlgorithms>) {
+function _encode_ECCAlgorithms (value: ECCAlgorithms, elGetter: $.ASN1Encoder<ECCAlgorithms>): _Element {
     if (!_cached_encoder_for_ECCAlgorithms) { _cached_encoder_for_ECCAlgorithms = $._encodeSequenceOf<ECCAlgorithm>(() => _encode_ECCAlgorithm, $.DER); }
     return _cached_encoder_for_ECCAlgorithms(value, elGetter);
 }

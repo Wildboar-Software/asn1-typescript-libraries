@@ -38,7 +38,7 @@ let _cached_decoder_for_Specification: $.ASN1Decoder<Specification> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Specification} The decoded data structure.
  */
-export function _decode_Specification(el: _Element) {
+export function _decode_Specification(el: _Element): Specification {
     if (!_cached_decoder_for_Specification) {
         _cached_decoder_for_Specification = _decode_TextualRepresentation;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Specification: $.ASN1Encoder<Specification> | null = nul
 export function _encode_Specification(
     value: Specification,
     elGetter: $.ASN1Encoder<Specification>
-) {
+): _Element {
     if (!_cached_encoder_for_Specification) {
         _cached_encoder_for_Specification = _encode_TextualRepresentation;
     }

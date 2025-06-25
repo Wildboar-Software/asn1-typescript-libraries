@@ -123,7 +123,7 @@ let _cached_decoder_for_BSPRegistrationEvent_NotificationParams: $.ASN1Decoder<B
  * @param {_Element} el The element being decoded.
  * @returns {BSPRegistrationEvent_NotificationParams} The decoded data structure.
  */
-export function _decode_BSPRegistrationEvent_NotificationParams(el: _Element) {
+export function _decode_BSPRegistrationEvent_NotificationParams(el: _Element): BSPRegistrationEvent_NotificationParams {
   if (!_cached_decoder_for_BSPRegistrationEvent_NotificationParams) {
     _cached_decoder_for_BSPRegistrationEvent_NotificationParams = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_BSPRegistrationEvent_NotificationParams: $.ASN1Encoder<B
 export function _encode_BSPRegistrationEvent_NotificationParams(
   value: BSPRegistrationEvent_NotificationParams,
   elGetter: $.ASN1Encoder<BSPRegistrationEvent_NotificationParams>
-) {
+): _Element {
   if (!_cached_encoder_for_BSPRegistrationEvent_NotificationParams) {
     _cached_encoder_for_BSPRegistrationEvent_NotificationParams = function (
       value: BSPRegistrationEvent_NotificationParams    ): _Element {

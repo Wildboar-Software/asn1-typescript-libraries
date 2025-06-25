@@ -35,7 +35,7 @@ let _cached_decoder_for_ReplyWantBacks: $.ASN1Decoder<ReplyWantBacks> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ReplyWantBacks} The decoded data structure.
  */
-export function _decode_ReplyWantBacks(el: _Element) {
+export function _decode_ReplyWantBacks(el: _Element): ReplyWantBacks {
   if (!_cached_decoder_for_ReplyWantBacks) {
     _cached_decoder_for_ReplyWantBacks = $._decodeSequenceOf<ReplyWantBack>(
       () => _decode_ReplyWantBack
@@ -56,7 +56,7 @@ let _cached_encoder_for_ReplyWantBacks: $.ASN1Encoder<ReplyWantBacks> | null = n
 export function _encode_ReplyWantBacks(
   value: ReplyWantBacks,
   elGetter: $.ASN1Encoder<ReplyWantBacks>
-) {
+): _Element {
   if (!_cached_encoder_for_ReplyWantBacks) {
     _cached_encoder_for_ReplyWantBacks = $._encodeSequenceOf<ReplyWantBack>(
       () => _encode_ReplyWantBack,

@@ -35,7 +35,7 @@ let _cached_decoder_for_RelationshipInstance: $.ASN1Decoder<RelationshipInstance
  * @param {_Element} el The element being decoded.
  * @returns {RelationshipInstance} The decoded data structure.
  */
-export function _decode_RelationshipInstance(el: _Element) {
+export function _decode_RelationshipInstance(el: _Element): RelationshipInstance {
     if (!_cached_decoder_for_RelationshipInstance) {
         _cached_decoder_for_RelationshipInstance = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_RelationshipInstance: $.ASN1Encoder<RelationshipInstance
 export function _encode_RelationshipInstance(
     value: RelationshipInstance,
     elGetter: $.ASN1Encoder<RelationshipInstance>
-) {
+): _Element {
     if (!_cached_encoder_for_RelationshipInstance) {
         _cached_encoder_for_RelationshipInstance = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

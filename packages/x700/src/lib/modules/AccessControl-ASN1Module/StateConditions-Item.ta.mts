@@ -112,7 +112,7 @@ let _cached_decoder_for_StateConditions_Item: $.ASN1Decoder<StateConditions_Item
  * @param {_Element} el The element being decoded.
  * @returns {StateConditions_Item} The decoded data structure.
  */
-export function _decode_StateConditions_Item(el: _Element) {
+export function _decode_StateConditions_Item(el: _Element): StateConditions_Item {
     if (!_cached_decoder_for_StateConditions_Item) {
         _cached_decoder_for_StateConditions_Item = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_StateConditions_Item: $.ASN1Encoder<StateConditions_Item
 export function _encode_StateConditions_Item(
     value: StateConditions_Item,
     elGetter: $.ASN1Encoder<StateConditions_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_StateConditions_Item) {
         _cached_encoder_for_StateConditions_Item = function (
             value: StateConditions_Item        ): _Element {

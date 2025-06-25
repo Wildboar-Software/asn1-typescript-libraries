@@ -118,7 +118,7 @@ let _cached_decoder_for_Message: $.ASN1Decoder<Message> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Message} The decoded data structure.
  */
-export function _decode_Message(el: _Element) {
+export function _decode_Message(el: _Element): Message {
     if (!_cached_decoder_for_Message) {
         _cached_decoder_for_Message = function (el: _Element): Message {
             const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_Message: $.ASN1Encoder<Message> | null = null;
 export function _encode_Message(
     value: Message,
     elGetter: $.ASN1Encoder<Message>
-) {
+): _Element {
     if (!_cached_encoder_for_Message) {
         _cached_encoder_for_Message = function (
             value: Message        ): _Element {

@@ -111,7 +111,7 @@ let _cached_decoder_for_UniqueID: $.ASN1Decoder<UniqueID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UniqueID} The decoded data structure.
  */
-export function _decode_UniqueID(el: _Element) {
+export function _decode_UniqueID(el: _Element): UniqueID {
     if (!_cached_decoder_for_UniqueID) {
         _cached_decoder_for_UniqueID = function (el: _Element): UniqueID {
             let name!: OBJECT_IDENTIFIER;
@@ -152,7 +152,7 @@ let _cached_encoder_for_UniqueID: $.ASN1Encoder<UniqueID> | null = null;
 export function _encode_UniqueID(
     value: UniqueID,
     elGetter: $.ASN1Encoder<UniqueID>
-) {
+): _Element {
     if (!_cached_encoder_for_UniqueID) {
         _cached_encoder_for_UniqueID = function (
             value: UniqueID        ): _Element {

@@ -33,7 +33,7 @@ let _cached_decoder_for_AuthorizationInformationQualifier: $.ASN1Decoder<Authori
  * @param {_Element} el The element being decoded.
  * @returns {AuthorizationInformationQualifier} The decoded data structure.
  */
-export function _decode_AuthorizationInformationQualifier(el: _Element) {
+export function _decode_AuthorizationInformationQualifier(el: _Element): AuthorizationInformationQualifier {
     if (!_cached_decoder_for_AuthorizationInformationQualifier) {
         _cached_decoder_for_AuthorizationInformationQualifier =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_AuthorizationInformationQualifier: $.ASN1Encoder<Authori
 export function _encode_AuthorizationInformationQualifier(
     value: AuthorizationInformationQualifier,
     elGetter: $.ASN1Encoder<AuthorizationInformationQualifier>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorizationInformationQualifier) {
         _cached_encoder_for_AuthorizationInformationQualifier =
             $._encodeTeletexString;

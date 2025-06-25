@@ -137,7 +137,7 @@ let _cached_decoder_for_ProtectedChangeCredentials: $.ASN1Decoder<ProtectedChang
  * @param {_Element} el The element being decoded.
  * @returns {ProtectedChangeCredentials} The decoded data structure.
  */
-export function _decode_ProtectedChangeCredentials(el: _Element) {
+export function _decode_ProtectedChangeCredentials(el: _Element): ProtectedChangeCredentials {
     if (!_cached_decoder_for_ProtectedChangeCredentials) {
         _cached_decoder_for_ProtectedChangeCredentials = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_ProtectedChangeCredentials: $.ASN1Encoder<ProtectedChang
 export function _encode_ProtectedChangeCredentials(
     value: ProtectedChangeCredentials,
     elGetter: $.ASN1Encoder<ProtectedChangeCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectedChangeCredentials) {
         _cached_encoder_for_ProtectedChangeCredentials = function (
             value: ProtectedChangeCredentials        ): _Element {

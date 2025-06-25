@@ -156,7 +156,7 @@ let _cached_decoder_for_MedicalStaffIdentification: $.ASN1Decoder<MedicalStaffId
  * @param {_Element} el The element being decoded.
  * @returns {MedicalStaffIdentification} The decoded data structure.
  */
-export function _decode_MedicalStaffIdentification(el: _Element) {
+export function _decode_MedicalStaffIdentification(el: _Element): MedicalStaffIdentification {
     if (!_cached_decoder_for_MedicalStaffIdentification) {
         _cached_decoder_for_MedicalStaffIdentification = function (
             el: _Element
@@ -212,7 +212,7 @@ let _cached_encoder_for_MedicalStaffIdentification: $.ASN1Encoder<MedicalStaffId
 export function _encode_MedicalStaffIdentification(
     value: MedicalStaffIdentification,
     elGetter: $.ASN1Encoder<MedicalStaffIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_MedicalStaffIdentification) {
         _cached_encoder_for_MedicalStaffIdentification = function (
             value: MedicalStaffIdentification        ): _Element {

@@ -107,7 +107,7 @@ let _cached_decoder_for_F_ERASE_request: $.ASN1Decoder<F_ERASE_request> | null =
  * @param {_Element} el The element being decoded.
  * @returns {F_ERASE_request} The decoded data structure.
  */
-export function _decode_F_ERASE_request(el: _Element) {
+export function _decode_F_ERASE_request(el: _Element): F_ERASE_request {
   if (!_cached_decoder_for_F_ERASE_request) {
     _cached_decoder_for_F_ERASE_request = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_F_ERASE_request: $.ASN1Encoder<F_ERASE_request> | null =
 export function _encode_F_ERASE_request(
   value: F_ERASE_request,
   elGetter: $.ASN1Encoder<F_ERASE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_ERASE_request) {
     _cached_encoder_for_F_ERASE_request = function (
       value: F_ERASE_request    ): _Element {

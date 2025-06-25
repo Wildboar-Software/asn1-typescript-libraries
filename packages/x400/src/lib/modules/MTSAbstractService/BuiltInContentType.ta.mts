@@ -120,7 +120,7 @@ let _cached_decoder_for_BuiltInContentType: $.ASN1Decoder<BuiltInContentType> | 
  * @param {_Element} el The element being decoded.
  * @returns {BuiltInContentType} The decoded data structure.
  */
-export function _decode_BuiltInContentType(el: _Element) {
+export function _decode_BuiltInContentType(el: _Element): BuiltInContentType {
     if (!_cached_decoder_for_BuiltInContentType) {
         _cached_decoder_for_BuiltInContentType = $._decode_implicit<BuiltInContentType>(
             () => $._decodeInteger
@@ -141,7 +141,7 @@ let _cached_encoder_for_BuiltInContentType: $.ASN1Encoder<BuiltInContentType> | 
 export function _encode_BuiltInContentType(
     value: BuiltInContentType,
     elGetter: $.ASN1Encoder<BuiltInContentType>
-) {
+): _Element {
     if (!_cached_encoder_for_BuiltInContentType) {
         _cached_encoder_for_BuiltInContentType = $._encode_implicit(
             _TagClass.application,

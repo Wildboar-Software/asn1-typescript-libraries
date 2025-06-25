@@ -124,7 +124,7 @@ let _cached_decoder_for_DHBMParameter: $.ASN1Decoder<DHBMParameter> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DHBMParameter} The decoded data structure.
  */
-export function _decode_DHBMParameter(el: _Element) {
+export function _decode_DHBMParameter(el: _Element): DHBMParameter {
   if (!_cached_decoder_for_DHBMParameter) {
     _cached_decoder_for_DHBMParameter = function (el: _Element): DHBMParameter {
       const sequence: _Element[] = el.sequence;
@@ -161,7 +161,7 @@ let _cached_encoder_for_DHBMParameter: $.ASN1Encoder<DHBMParameter> | null = nul
 export function _encode_DHBMParameter(
   value: DHBMParameter,
   elGetter: $.ASN1Encoder<DHBMParameter>
-) {
+): _Element {
   if (!_cached_encoder_for_DHBMParameter) {
     _cached_encoder_for_DHBMParameter = function (
       value: DHBMParameter    ): _Element {

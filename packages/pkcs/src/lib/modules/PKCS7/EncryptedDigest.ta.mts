@@ -34,7 +34,7 @@ let _cached_decoder_for_EncryptedDigest: $.ASN1Decoder<EncryptedDigest> | null =
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedDigest} The decoded data structure.
  */
-export function _decode_EncryptedDigest(el: _Element) {
+export function _decode_EncryptedDigest(el: _Element): EncryptedDigest {
     if (!_cached_decoder_for_EncryptedDigest) {
         _cached_decoder_for_EncryptedDigest = _get_decoder_for_ENCRYPTED<DigestInfo>(
             _decode_DigestInfo
@@ -57,7 +57,7 @@ let _cached_encoder_for_EncryptedDigest: $.ASN1Encoder<EncryptedDigest> | null =
 export function _encode_EncryptedDigest(
     value: EncryptedDigest,
     elGetter: $.ASN1Encoder<EncryptedDigest>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedDigest) {
         _cached_encoder_for_EncryptedDigest = _get_encoder_for_ENCRYPTED<DigestInfo>(
             _encode_DigestInfo

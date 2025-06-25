@@ -68,7 +68,7 @@ let _cached_decoder_for_Request_Operation_Result: $.ASN1Decoder<Request_Operatio
  * @param {_Element} el The element being decoded.
  * @returns {Request_Operation_Result} The decoded data structure.
  */
-export function _decode_Request_Operation_Result(el: _Element) {
+export function _decode_Request_Operation_Result(el: _Element): Request_Operation_Result {
   if (!_cached_decoder_for_Request_Operation_Result) {
     _cached_decoder_for_Request_Operation_Result = $._decode_implicit<Request_Operation_Result>(
       () => $._decodeInteger
@@ -91,7 +91,7 @@ let _cached_encoder_for_Request_Operation_Result: $.ASN1Encoder<Request_Operatio
 export function _encode_Request_Operation_Result(
   value: Request_Operation_Result,
   elGetter: $.ASN1Encoder<Request_Operation_Result>
-) {
+): _Element {
   if (!_cached_encoder_for_Request_Operation_Result) {
     _cached_encoder_for_Request_Operation_Result = $._encode_implicit(
       _TagClass.application,

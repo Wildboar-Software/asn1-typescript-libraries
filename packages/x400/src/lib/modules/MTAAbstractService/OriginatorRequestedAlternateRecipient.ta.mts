@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Decoder<Ori
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorRequestedAlternateRecipient} The decoded data structure.
  */
-export function _decode_OriginatorRequestedAlternateRecipient(el: _Element) {
+export function _decode_OriginatorRequestedAlternateRecipient(el: _Element): OriginatorRequestedAlternateRecipient {
     if (!_cached_decoder_for_OriginatorRequestedAlternateRecipient) {
         _cached_decoder_for_OriginatorRequestedAlternateRecipient = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Encoder<Ori
 export function _encode_OriginatorRequestedAlternateRecipient(
     value: OriginatorRequestedAlternateRecipient,
     elGetter: $.ASN1Encoder<OriginatorRequestedAlternateRecipient>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorRequestedAlternateRecipient) {
         _cached_encoder_for_OriginatorRequestedAlternateRecipient = _encode_ORAddressAndOptionalDirectoryName;
     }

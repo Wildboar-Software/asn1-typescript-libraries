@@ -285,7 +285,7 @@ let _cached_decoder_for_TokenInfo: $.ASN1Decoder<TokenInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TokenInfo} The decoded data structure.
  */
-export function _decode_TokenInfo(el: _Element) {
+export function _decode_TokenInfo(el: _Element): TokenInfo {
     if (!_cached_decoder_for_TokenInfo) {
         _cached_decoder_for_TokenInfo = function (el: _Element): TokenInfo {
             let version!: TokenInfo_version;
@@ -398,7 +398,7 @@ let _cached_encoder_for_TokenInfo: $.ASN1Encoder<TokenInfo> | null = null;
 export function _encode_TokenInfo(
     value: TokenInfo,
     elGetter: $.ASN1Encoder<TokenInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TokenInfo) {
         _cached_encoder_for_TokenInfo = function (
             value: TokenInfo        ): _Element {

@@ -102,7 +102,7 @@ let _cached_decoder_for_range_error_ParameterType: $.ASN1Decoder<range_error_Par
  * @param {_Element} el The element being decoded.
  * @returns {range_error_ParameterType} The decoded data structure.
  */
-export function _decode_range_error_ParameterType(el: _Element) {
+export function _decode_range_error_ParameterType(el: _Element): range_error_ParameterType {
     if (!_cached_decoder_for_range_error_ParameterType) {
         _cached_decoder_for_range_error_ParameterType = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_range_error_ParameterType: $.ASN1Encoder<range_error_Par
 export function _encode_range_error_ParameterType(
     value: range_error_ParameterType,
     elGetter: $.ASN1Encoder<range_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_range_error_ParameterType) {
         _cached_encoder_for_range_error_ParameterType = function (
             value: range_error_ParameterType        ): _Element {

@@ -43,7 +43,7 @@ let _cached_decoder_for_CallBackInfoList: $.ASN1Decoder<CallBackInfoList> | null
  * @param {_Element} el The element being decoded.
  * @returns {CallBackInfoList} The decoded data structure.
  */
-export function _decode_CallBackInfoList(el: _Element) {
+export function _decode_CallBackInfoList(el: _Element): CallBackInfoList {
     if (!_cached_decoder_for_CallBackInfoList) {
         _cached_decoder_for_CallBackInfoList = $._decodeSetOf<CallBackInfoList_Item>(
             () => _decode_CallBackInfoList_Item
@@ -66,7 +66,7 @@ let _cached_encoder_for_CallBackInfoList: $.ASN1Encoder<CallBackInfoList> | null
 export function _encode_CallBackInfoList(
     value: CallBackInfoList,
     elGetter: $.ASN1Encoder<CallBackInfoList>
-) {
+): _Element {
     if (!_cached_encoder_for_CallBackInfoList) {
         _cached_encoder_for_CallBackInfoList = $._encodeSetOf<CallBackInfoList_Item>(
             () => _encode_CallBackInfoList_Item,

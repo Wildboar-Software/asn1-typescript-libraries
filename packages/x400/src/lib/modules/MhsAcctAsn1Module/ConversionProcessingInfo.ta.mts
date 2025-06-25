@@ -35,7 +35,7 @@ let _cached_decoder_for_ConversionProcessingInfo: $.ASN1Decoder<ConversionProces
  * @param {_Element} el The element being decoded.
  * @returns {ConversionProcessingInfo} The decoded data structure.
  */
-export function _decode_ConversionProcessingInfo(el: _Element) {
+export function _decode_ConversionProcessingInfo(el: _Element): ConversionProcessingInfo {
     if (!_cached_decoder_for_ConversionProcessingInfo) {
         _cached_decoder_for_ConversionProcessingInfo = $._decodeSetOf<EMailFromToEIT>(
             () => _decode_EMailFromToEIT
@@ -56,7 +56,7 @@ let _cached_encoder_for_ConversionProcessingInfo: $.ASN1Encoder<ConversionProces
 export function _encode_ConversionProcessingInfo(
     value: ConversionProcessingInfo,
     elGetter: $.ASN1Encoder<ConversionProcessingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ConversionProcessingInfo) {
         _cached_encoder_for_ConversionProcessingInfo = $._encodeSetOf<EMailFromToEIT>(
             () => _encode_EMailFromToEIT,

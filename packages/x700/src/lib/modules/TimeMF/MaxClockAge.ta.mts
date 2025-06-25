@@ -35,7 +35,7 @@ let _cached_decoder_for_MaxClockAge: $.ASN1Decoder<MaxClockAge> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MaxClockAge} The decoded data structure.
  */
-export function _decode_MaxClockAge(el: _Element) {
+export function _decode_MaxClockAge(el: _Element): MaxClockAge {
     if (!_cached_decoder_for_MaxClockAge) {
         _cached_decoder_for_MaxClockAge = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MaxClockAge: $.ASN1Encoder<MaxClockAge> | null = null;
 export function _encode_MaxClockAge(
     value: MaxClockAge,
     elGetter: $.ASN1Encoder<MaxClockAge>
-) {
+): _Element {
     if (!_cached_encoder_for_MaxClockAge) {
         _cached_encoder_for_MaxClockAge = _encode_TimeInterval;
     }

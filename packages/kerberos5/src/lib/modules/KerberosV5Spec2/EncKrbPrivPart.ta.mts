@@ -192,7 +192,7 @@ let _cached_decoder_for_EncKrbPrivPart: $.ASN1Decoder<EncKrbPrivPart> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {EncKrbPrivPart} The decoded data structure.
  */
-export function _decode_EncKrbPrivPart(el: _Element) {
+export function _decode_EncKrbPrivPart(el: _Element): EncKrbPrivPart {
   if (!_cached_decoder_for_EncKrbPrivPart) {
     _cached_decoder_for_EncKrbPrivPart = $._decode_implicit<EncKrbPrivPart>(
       () =>
@@ -271,7 +271,7 @@ let _cached_encoder_for_EncKrbPrivPart: $.ASN1Encoder<EncKrbPrivPart> | null = n
 export function _encode_EncKrbPrivPart(
   value: EncKrbPrivPart,
   elGetter: $.ASN1Encoder<EncKrbPrivPart>
-) {
+): _Element {
   if (!_cached_encoder_for_EncKrbPrivPart) {
     _cached_encoder_for_EncKrbPrivPart = $._encode_implicit(
       _TagClass.application,

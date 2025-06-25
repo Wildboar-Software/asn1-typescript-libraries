@@ -129,7 +129,7 @@ let _cached_decoder_for_Bandwidth: $.ASN1Decoder<Bandwidth> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Bandwidth} The decoded data structure.
  */
-export function _decode_Bandwidth(el: _Element) {
+export function _decode_Bandwidth(el: _Element): Bandwidth {
     if (!_cached_decoder_for_Bandwidth) {
         _cached_decoder_for_Bandwidth = function (el: _Element): Bandwidth {
             let peakBandwidth: OPTIONAL<INTEGER>;
@@ -181,7 +181,7 @@ let _cached_encoder_for_Bandwidth: $.ASN1Encoder<Bandwidth> | null = null;
 export function _encode_Bandwidth(
     value: Bandwidth,
     elGetter: $.ASN1Encoder<Bandwidth>
-) {
+): _Element {
     if (!_cached_encoder_for_Bandwidth) {
         _cached_encoder_for_Bandwidth = function (
             value: Bandwidth        ): _Element {

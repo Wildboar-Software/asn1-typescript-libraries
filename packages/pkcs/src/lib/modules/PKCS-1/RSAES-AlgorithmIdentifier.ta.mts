@@ -31,7 +31,7 @@ let _cached_decoder_for_RSAES_AlgorithmIdentifier: $.ASN1Decoder<RSAES_Algorithm
  * @param {_Element} el The element being decoded.
  * @returns {RSAES_AlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_RSAES_AlgorithmIdentifier(el: _Element) {
+export function _decode_RSAES_AlgorithmIdentifier(el: _Element): RSAES_AlgorithmIdentifier {
     if (!_cached_decoder_for_RSAES_AlgorithmIdentifier) {
         _cached_decoder_for_RSAES_AlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -52,7 +52,7 @@ let _cached_encoder_for_RSAES_AlgorithmIdentifier: $.ASN1Encoder<RSAES_Algorithm
 export function _encode_RSAES_AlgorithmIdentifier(
     value: RSAES_AlgorithmIdentifier,
     elGetter: $.ASN1Encoder<RSAES_AlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RSAES_AlgorithmIdentifier) {
         _cached_encoder_for_RSAES_AlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

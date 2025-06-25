@@ -141,7 +141,7 @@ let _cached_decoder_for_NonDeliveryInformation: $.ASN1Decoder<NonDeliveryInforma
  * @param {_Element} el The element being decoded.
  * @returns {NonDeliveryInformation} The decoded data structure.
  */
-export function _decode_NonDeliveryInformation(el: _Element) {
+export function _decode_NonDeliveryInformation(el: _Element): NonDeliveryInformation {
     if (!_cached_decoder_for_NonDeliveryInformation) {
         _cached_decoder_for_NonDeliveryInformation = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_NonDeliveryInformation: $.ASN1Encoder<NonDeliveryInforma
 export function _encode_NonDeliveryInformation(
     value: NonDeliveryInformation,
     elGetter: $.ASN1Encoder<NonDeliveryInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_NonDeliveryInformation) {
         _cached_encoder_for_NonDeliveryInformation = function (
             value: NonDeliveryInformation        ): _Element {

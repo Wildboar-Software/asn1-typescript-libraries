@@ -45,7 +45,7 @@ let _cached_decoder_for_EMailConversionType: $.ASN1Decoder<EMailConversionType> 
  * @param {_Element} el The element being decoded.
  * @returns {EMailConversionType} The decoded data structure.
  */
-export function _decode_EMailConversionType(el: _Element) {
+export function _decode_EMailConversionType(el: _Element): EMailConversionType {
     if (!_cached_decoder_for_EMailConversionType) {
         _cached_decoder_for_EMailConversionType = $._decode_inextensible_choice<EMailConversionType>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_EMailConversionType: $.ASN1Encoder<EMailConversionType> 
 export function _encode_EMailConversionType(
     value: EMailConversionType,
     elGetter: $.ASN1Encoder<EMailConversionType>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailConversionType) {
         _cached_encoder_for_EMailConversionType = $._encode_choice<EMailConversionType>(
             {

@@ -35,7 +35,7 @@ let _cached_decoder_for_ROASequence: $.ASN1Decoder<ROASequence> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ROASequence} The decoded data structure.
  */
-export function _decode_ROASequence(el: _Element) {
+export function _decode_ROASequence(el: _Element): ROASequence {
     if (!_cached_decoder_for_ROASequence) {
         _cached_decoder_for_ROASequence = $._decodeSequenceOf<NumericString>(
             () => $._decodeNumericString
@@ -58,7 +58,7 @@ let _cached_encoder_for_ROASequence: $.ASN1Encoder<ROASequence> | null = null;
 export function _encode_ROASequence(
     value: ROASequence,
     elGetter: $.ASN1Encoder<ROASequence>
-) {
+): _Element {
     if (!_cached_encoder_for_ROASequence) {
         _cached_encoder_for_ROASequence = $._encodeSequenceOf<NumericString>(
             () => $._encodeNumericString,

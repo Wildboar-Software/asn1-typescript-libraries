@@ -160,7 +160,7 @@ let _cached_decoder_for_ComplexityLimitation: $.ASN1Decoder<ComplexityLimitation
  * @param {_Element} el The element being decoded.
  * @returns {ComplexityLimitation} The decoded data structure.
  */
-export function _decode_ComplexityLimitation(el: _Element) {
+export function _decode_ComplexityLimitation(el: _Element): ComplexityLimitation {
   if (!_cached_decoder_for_ComplexityLimitation) {
     _cached_decoder_for_ComplexityLimitation = function (
       el: _Element
@@ -219,7 +219,7 @@ let _cached_encoder_for_ComplexityLimitation: $.ASN1Encoder<ComplexityLimitation
 export function _encode_ComplexityLimitation(
   value: ComplexityLimitation,
   elGetter: $.ASN1Encoder<ComplexityLimitation>
-) {
+): _Element {
   if (!_cached_encoder_for_ComplexityLimitation) {
     _cached_encoder_for_ComplexityLimitation = function (
       value: ComplexityLimitation    ): _Element {

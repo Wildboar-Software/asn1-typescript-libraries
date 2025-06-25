@@ -131,7 +131,7 @@ let _cached_decoder_for_ECPrivateKey: $.ASN1Decoder<ECPrivateKey> | null = null;
  * @returns {ECPrivateKey} The decoded data structure.
  */
 export
-function _decode_ECPrivateKey (el: _Element) {
+function _decode_ECPrivateKey (el: _Element): ECPrivateKey {
     if (!_cached_decoder_for_ECPrivateKey) { _cached_decoder_for_ECPrivateKey = function (el: _Element): ECPrivateKey {
     let version!: ECPrivateKey_version;
     let privateKey!: OCTET_STRING;
@@ -169,7 +169,7 @@ let _cached_encoder_for_ECPrivateKey: $.ASN1Encoder<ECPrivateKey> | null = null;
  * @returns {_Element} The ECPrivateKey, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECPrivateKey (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPrivateKey>) {
+function _encode_ECPrivateKey (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPrivateKey>): _Element {
     if (!_cached_encoder_for_ECPrivateKey) { _cached_encoder_for_ECPrivateKey = function (value: ECPrivateKey): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

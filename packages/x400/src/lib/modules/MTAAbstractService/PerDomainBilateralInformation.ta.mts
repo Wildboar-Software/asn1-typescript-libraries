@@ -146,7 +146,7 @@ let _cached_decoder_for_PerDomainBilateralInformation: $.ASN1Decoder<PerDomainBi
  * @param {_Element} el The element being decoded.
  * @returns {PerDomainBilateralInformation} The decoded data structure.
  */
-export function _decode_PerDomainBilateralInformation(el: _Element) {
+export function _decode_PerDomainBilateralInformation(el: _Element): PerDomainBilateralInformation {
     if (!_cached_decoder_for_PerDomainBilateralInformation) {
         _cached_decoder_for_PerDomainBilateralInformation = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_PerDomainBilateralInformation: $.ASN1Encoder<PerDomainBi
 export function _encode_PerDomainBilateralInformation(
     value: PerDomainBilateralInformation,
     elGetter: $.ASN1Encoder<PerDomainBilateralInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_PerDomainBilateralInformation) {
         _cached_encoder_for_PerDomainBilateralInformation = function (
             value: PerDomainBilateralInformation        ): _Element {

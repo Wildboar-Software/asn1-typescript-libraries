@@ -29,7 +29,7 @@ let _cached_decoder_for_UnauthAttributes: $.ASN1Decoder<UnauthAttributes> | null
  * @param {_Element} el The element being decoded.
  * @returns {UnauthAttributes} The decoded data structure.
  */
-export function _decode_UnauthAttributes(el: _Element) {
+export function _decode_UnauthAttributes(el: _Element): UnauthAttributes {
     if (!_cached_decoder_for_UnauthAttributes) {
         _cached_decoder_for_UnauthAttributes = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -52,7 +52,7 @@ let _cached_encoder_for_UnauthAttributes: $.ASN1Encoder<UnauthAttributes> | null
 export function _encode_UnauthAttributes(
     value: UnauthAttributes,
     elGetter: $.ASN1Encoder<UnauthAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UnauthAttributes) {
         _cached_encoder_for_UnauthAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

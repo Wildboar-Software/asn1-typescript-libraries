@@ -115,7 +115,7 @@ let _cached_decoder_for_PBES2_params: $.ASN1Decoder<PBES2_params> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PBES2_params} The decoded data structure.
  */
-export function _decode_PBES2_params(el: _Element) {
+export function _decode_PBES2_params(el: _Element): PBES2_params {
     if (!_cached_decoder_for_PBES2_params) {
         _cached_decoder_for_PBES2_params = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_PBES2_params: $.ASN1Encoder<PBES2_params> | null = null;
 export function _encode_PBES2_params(
     value: PBES2_params,
     elGetter: $.ASN1Encoder<PBES2_params>
-) {
+): _Element {
     if (!_cached_encoder_for_PBES2_params) {
         _cached_encoder_for_PBES2_params = function (
             value: PBES2_params        ): _Element {

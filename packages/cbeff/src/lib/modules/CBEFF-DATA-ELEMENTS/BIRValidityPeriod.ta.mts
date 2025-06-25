@@ -115,7 +115,7 @@ let _cached_decoder_for_BIRValidityPeriod: $.ASN1Decoder<BIRValidityPeriod> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BIRValidityPeriod} The decoded data structure.
  */
-export function _decode_BIRValidityPeriod(el: _Element) {
+export function _decode_BIRValidityPeriod(el: _Element): BIRValidityPeriod {
   if (!_cached_decoder_for_BIRValidityPeriod) {
     _cached_decoder_for_BIRValidityPeriod = function (
       el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_BIRValidityPeriod: $.ASN1Encoder<BIRValidityPeriod> | nu
 export function _encode_BIRValidityPeriod(
   value: BIRValidityPeriod,
   elGetter: $.ASN1Encoder<BIRValidityPeriod>
-) {
+): _Element {
   if (!_cached_encoder_for_BIRValidityPeriod) {
     _cached_encoder_for_BIRValidityPeriod = function (
       value: BIRValidityPeriod    ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_EMailRedirections_address: $.ASN1Decoder<EMailRedirectio
  * @param {_Element} el The element being decoded.
  * @returns {EMailRedirections_address} The decoded data structure.
  */
-export function _decode_EMailRedirections_address(el: _Element) {
+export function _decode_EMailRedirections_address(el: _Element): EMailRedirections_address {
     if (!_cached_decoder_for_EMailRedirections_address) {
         _cached_decoder_for_EMailRedirections_address = $._decode_inextensible_choice<EMailRedirections_address>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_EMailRedirections_address: $.ASN1Encoder<EMailRedirectio
 export function _encode_EMailRedirections_address(
     value: EMailRedirections_address,
     elGetter: $.ASN1Encoder<EMailRedirections_address>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailRedirections_address) {
         _cached_encoder_for_EMailRedirections_address = $._encode_choice<EMailRedirections_address>(
             {

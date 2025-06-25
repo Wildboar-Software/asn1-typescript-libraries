@@ -131,7 +131,7 @@ let _cached_decoder_for_AttributeSel_attSelect_attributes_Item: $.ASN1Decoder<At
  * @param {_Element} el The element being decoded.
  * @returns {AttributeSel_attSelect_attributes_Item} The decoded data structure.
  */
-export function _decode_AttributeSel_attSelect_attributes_Item(el: _Element) {
+export function _decode_AttributeSel_attSelect_attributes_Item(el: _Element): AttributeSel_attSelect_attributes_Item {
     if (!_cached_decoder_for_AttributeSel_attSelect_attributes_Item) {
         _cached_decoder_for_AttributeSel_attSelect_attributes_Item = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_AttributeSel_attSelect_attributes_Item: $.ASN1Encoder<At
 export function _encode_AttributeSel_attSelect_attributes_Item(
     value: AttributeSel_attSelect_attributes_Item,
     elGetter: $.ASN1Encoder<AttributeSel_attSelect_attributes_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeSel_attSelect_attributes_Item) {
         _cached_encoder_for_AttributeSel_attSelect_attributes_Item = function (
             value: AttributeSel_attSelect_attributes_Item        ): _Element {

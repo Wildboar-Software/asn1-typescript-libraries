@@ -32,7 +32,7 @@ let _cached_decoder_for_SynchronizationProtocolType: $.ASN1Decoder<Synchronizati
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizationProtocolType} The decoded data structure.
  */
-export function _decode_SynchronizationProtocolType(el: _Element) {
+export function _decode_SynchronizationProtocolType(el: _Element): SynchronizationProtocolType {
     if (!_cached_decoder_for_SynchronizationProtocolType) {
         _cached_decoder_for_SynchronizationProtocolType =
             $._decodeObjectIdentifier;
@@ -52,7 +52,7 @@ let _cached_encoder_for_SynchronizationProtocolType: $.ASN1Encoder<Synchronizati
 export function _encode_SynchronizationProtocolType(
     value: SynchronizationProtocolType,
     elGetter: $.ASN1Encoder<SynchronizationProtocolType>
-) {
+): _Element {
     if (!_cached_encoder_for_SynchronizationProtocolType) {
         _cached_encoder_for_SynchronizationProtocolType =
             $._encodeObjectIdentifier;

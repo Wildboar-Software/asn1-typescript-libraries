@@ -36,7 +36,7 @@ let _cached_decoder_for_ExtendedRegularExpression: $.ASN1Decoder<ExtendedRegular
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedRegularExpression} The decoded data structure.
  */
-export function _decode_ExtendedRegularExpression(el: _Element) {
+export function _decode_ExtendedRegularExpression(el: _Element): ExtendedRegularExpression {
     if (!_cached_decoder_for_ExtendedRegularExpression) {
         _cached_decoder_for_ExtendedRegularExpression = _decode_UniversalOrBMPString;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_ExtendedRegularExpression: $.ASN1Encoder<ExtendedRegular
 export function _encode_ExtendedRegularExpression(
     value: ExtendedRegularExpression,
     elGetter: $.ASN1Encoder<ExtendedRegularExpression>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedRegularExpression) {
         _cached_encoder_for_ExtendedRegularExpression = _encode_UniversalOrBMPString;
     }

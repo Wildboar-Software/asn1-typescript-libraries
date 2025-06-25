@@ -36,7 +36,7 @@ let _cached_decoder_for_ExtendedEncodedInformationTypes: $.ASN1Decoder<ExtendedE
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedEncodedInformationTypes} The decoded data structure.
  */
-export function _decode_ExtendedEncodedInformationTypes(el: _Element) {
+export function _decode_ExtendedEncodedInformationTypes(el: _Element): ExtendedEncodedInformationTypes {
     if (!_cached_decoder_for_ExtendedEncodedInformationTypes) {
         _cached_decoder_for_ExtendedEncodedInformationTypes = $._decodeSetOf<ExtendedEncodedInformationType>(
             () => _decode_ExtendedEncodedInformationType
@@ -57,7 +57,7 @@ let _cached_encoder_for_ExtendedEncodedInformationTypes: $.ASN1Encoder<ExtendedE
 export function _encode_ExtendedEncodedInformationTypes(
     value: ExtendedEncodedInformationTypes,
     elGetter: $.ASN1Encoder<ExtendedEncodedInformationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedEncodedInformationTypes) {
         _cached_encoder_for_ExtendedEncodedInformationTypes = $._encodeSetOf<ExtendedEncodedInformationType>(
             () => _encode_ExtendedEncodedInformationType,

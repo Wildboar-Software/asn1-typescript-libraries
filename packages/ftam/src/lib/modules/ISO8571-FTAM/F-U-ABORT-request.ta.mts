@@ -137,7 +137,7 @@ let _cached_decoder_for_F_U_ABORT_request: $.ASN1Decoder<F_U_ABORT_request> | nu
  * @param {_Element} el The element being decoded.
  * @returns {F_U_ABORT_request} The decoded data structure.
  */
-export function _decode_F_U_ABORT_request(el: _Element) {
+export function _decode_F_U_ABORT_request(el: _Element): F_U_ABORT_request {
   if (!_cached_decoder_for_F_U_ABORT_request) {
     _cached_decoder_for_F_U_ABORT_request = function (
       el: _Element
@@ -184,7 +184,7 @@ let _cached_encoder_for_F_U_ABORT_request: $.ASN1Encoder<F_U_ABORT_request> | nu
 export function _encode_F_U_ABORT_request(
   value: F_U_ABORT_request,
   elGetter: $.ASN1Encoder<F_U_ABORT_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_U_ABORT_request) {
     _cached_encoder_for_F_U_ABORT_request = function (
       value: F_U_ABORT_request    ): _Element {

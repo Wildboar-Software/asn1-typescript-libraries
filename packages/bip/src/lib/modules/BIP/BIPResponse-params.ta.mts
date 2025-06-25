@@ -386,7 +386,7 @@ let _cached_decoder_for_BIPResponse_params: $.ASN1Decoder<BIPResponse_params> | 
  * @param {_Element} el The element being decoded.
  * @returns {BIPResponse_params} The decoded data structure.
  */
-export function _decode_BIPResponse_params(el: _Element) {
+export function _decode_BIPResponse_params(el: _Element): BIPResponse_params {
   if (!_cached_decoder_for_BIPResponse_params) {
     _cached_decoder_for_BIPResponse_params = $._decode_extensible_choice<BIPResponse_params>(
       {
@@ -515,7 +515,7 @@ let _cached_encoder_for_BIPResponse_params: $.ASN1Encoder<BIPResponse_params> | 
 export function _encode_BIPResponse_params(
   value: BIPResponse_params,
   elGetter: $.ASN1Encoder<BIPResponse_params>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPResponse_params) {
     _cached_encoder_for_BIPResponse_params = $._encode_choice<BIPResponse_params>(
       {

@@ -38,7 +38,7 @@ let _cached_decoder_for_ArcProbableCauseList: $.ASN1Decoder<ArcProbableCauseList
  * @param {_Element} el The element being decoded.
  * @returns {ArcProbableCauseList} The decoded data structure.
  */
-export function _decode_ArcProbableCauseList(el: _Element) {
+export function _decode_ArcProbableCauseList(el: _Element): ArcProbableCauseList {
     if (!_cached_decoder_for_ArcProbableCauseList) {
         _cached_decoder_for_ArcProbableCauseList = $._decodeSetOf<ProbableCause>(
             () => _decode_ProbableCause
@@ -61,7 +61,7 @@ let _cached_encoder_for_ArcProbableCauseList: $.ASN1Encoder<ArcProbableCauseList
 export function _encode_ArcProbableCauseList(
     value: ArcProbableCauseList,
     elGetter: $.ASN1Encoder<ArcProbableCauseList>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcProbableCauseList) {
         _cached_encoder_for_ArcProbableCauseList = $._encodeSetOf<ProbableCause>(
             () => _encode_ProbableCause,

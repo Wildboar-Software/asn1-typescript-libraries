@@ -148,7 +148,7 @@ let _cached_decoder_for_DbDeleteBIR_RequestParams: $.ASN1Decoder<DbDeleteBIR_Req
  * @param {_Element} el The element being decoded.
  * @returns {DbDeleteBIR_RequestParams} The decoded data structure.
  */
-export function _decode_DbDeleteBIR_RequestParams(el: _Element) {
+export function _decode_DbDeleteBIR_RequestParams(el: _Element): DbDeleteBIR_RequestParams {
   if (!_cached_decoder_for_DbDeleteBIR_RequestParams) {
     _cached_decoder_for_DbDeleteBIR_RequestParams = function (
       el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_DbDeleteBIR_RequestParams: $.ASN1Encoder<DbDeleteBIR_Req
 export function _encode_DbDeleteBIR_RequestParams(
   value: DbDeleteBIR_RequestParams,
   elGetter: $.ASN1Encoder<DbDeleteBIR_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbDeleteBIR_RequestParams) {
     _cached_encoder_for_DbDeleteBIR_RequestParams = function (
       value: DbDeleteBIR_RequestParams    ): _Element {

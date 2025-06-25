@@ -121,7 +121,7 @@ let _cached_decoder_for_ProtectionEntity: $.ASN1Decoder<ProtectionEntity> | null
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionEntity} The decoded data structure.
  */
-export function _decode_ProtectionEntity(el: _Element) {
+export function _decode_ProtectionEntity(el: _Element): ProtectionEntity {
     if (!_cached_decoder_for_ProtectionEntity) {
         _cached_decoder_for_ProtectionEntity = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_ProtectionEntity: $.ASN1Encoder<ProtectionEntity> | null
 export function _encode_ProtectionEntity(
     value: ProtectionEntity,
     elGetter: $.ASN1Encoder<ProtectionEntity>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionEntity) {
         _cached_encoder_for_ProtectionEntity = function (
             value: ProtectionEntity        ): _Element {

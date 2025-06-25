@@ -152,7 +152,7 @@ let _cached_decoder_for_TroubleReportAlreadyExists: $.ASN1Decoder<TroubleReportA
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportAlreadyExists} The decoded data structure.
  */
-export function _decode_TroubleReportAlreadyExists(el: _Element) {
+export function _decode_TroubleReportAlreadyExists(el: _Element): TroubleReportAlreadyExists {
     if (!_cached_decoder_for_TroubleReportAlreadyExists) {
         _cached_decoder_for_TroubleReportAlreadyExists = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_TroubleReportAlreadyExists: $.ASN1Encoder<TroubleReportA
 export function _encode_TroubleReportAlreadyExists(
     value: TroubleReportAlreadyExists,
     elGetter: $.ASN1Encoder<TroubleReportAlreadyExists>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportAlreadyExists) {
         _cached_encoder_for_TroubleReportAlreadyExists = function (
             value: TroubleReportAlreadyExists        ): _Element {

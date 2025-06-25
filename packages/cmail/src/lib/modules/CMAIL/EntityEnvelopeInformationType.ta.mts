@@ -148,7 +148,7 @@ let _cached_decoder_for_EntityEnvelopeInformationType: $.ASN1Decoder<EntityEnvel
  * @param {_Element} el The element being decoded.
  * @returns {EntityEnvelopeInformationType} The decoded data structure.
  */
-export function _decode_EntityEnvelopeInformationType(el: _Element) {
+export function _decode_EntityEnvelopeInformationType(el: _Element): EntityEnvelopeInformationType {
   if (!_cached_decoder_for_EntityEnvelopeInformationType) {
     _cached_decoder_for_EntityEnvelopeInformationType = function (
       el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_EntityEnvelopeInformationType: $.ASN1Encoder<EntityEnvel
 export function _encode_EntityEnvelopeInformationType(
   value: EntityEnvelopeInformationType,
   elGetter: $.ASN1Encoder<EntityEnvelopeInformationType>
-) {
+): _Element {
   if (!_cached_encoder_for_EntityEnvelopeInformationType) {
     _cached_encoder_for_EntityEnvelopeInformationType = function (
       value: EntityEnvelopeInformationType    ): _Element {

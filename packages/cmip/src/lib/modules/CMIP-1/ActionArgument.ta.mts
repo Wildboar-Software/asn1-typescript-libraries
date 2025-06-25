@@ -258,7 +258,7 @@ let _cached_decoder_for_ActionArgument: $.ASN1Decoder<ActionArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ActionArgument} The decoded data structure.
  */
-export function _decode_ActionArgument(el: _Element) {
+export function _decode_ActionArgument(el: _Element): ActionArgument {
   if (!_cached_decoder_for_ActionArgument) {
     _cached_decoder_for_ActionArgument = function (
       el: _Element
@@ -341,7 +341,7 @@ let _cached_encoder_for_ActionArgument: $.ASN1Encoder<ActionArgument> | null = n
 export function _encode_ActionArgument(
   value: ActionArgument,
   elGetter: $.ASN1Encoder<ActionArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_ActionArgument) {
     _cached_encoder_for_ActionArgument = function (
       value: ActionArgument    ): _Element {

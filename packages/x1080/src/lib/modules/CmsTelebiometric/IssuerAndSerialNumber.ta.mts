@@ -124,7 +124,7 @@ let _cached_decoder_for_IssuerAndSerialNumber: $.ASN1Decoder<IssuerAndSerialNumb
  * @param {_Element} el The element being decoded.
  * @returns {IssuerAndSerialNumber} The decoded data structure.
  */
-export function _decode_IssuerAndSerialNumber(el: _Element) {
+export function _decode_IssuerAndSerialNumber(el: _Element): IssuerAndSerialNumber {
     if (!_cached_decoder_for_IssuerAndSerialNumber) {
         _cached_decoder_for_IssuerAndSerialNumber = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_IssuerAndSerialNumber: $.ASN1Encoder<IssuerAndSerialNumb
 export function _encode_IssuerAndSerialNumber(
     value: IssuerAndSerialNumber,
     elGetter: $.ASN1Encoder<IssuerAndSerialNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_IssuerAndSerialNumber) {
         _cached_encoder_for_IssuerAndSerialNumber = function (
             value: IssuerAndSerialNumber        ): _Element {

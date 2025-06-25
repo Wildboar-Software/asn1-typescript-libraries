@@ -39,7 +39,7 @@ let _cached_decoder_for_KeyConstructionRecipient: $.ASN1Decoder<KeyConstructionR
  * @param {_Element} el The element being decoded.
  * @returns {KeyConstructionRecipient} The decoded data structure.
  */
-export function _decode_KeyConstructionRecipient(el: _Element) {
+export function _decode_KeyConstructionRecipient(el: _Element): KeyConstructionRecipient {
     if (!_cached_decoder_for_KeyConstructionRecipient) {
         _cached_decoder_for_KeyConstructionRecipient = $._decode_inextensible_choice<KeyConstructionRecipient>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_KeyConstructionRecipient: $.ASN1Encoder<KeyConstructionR
 export function _encode_KeyConstructionRecipient(
     value: KeyConstructionRecipient,
     elGetter: $.ASN1Encoder<KeyConstructionRecipient>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyConstructionRecipient) {
         _cached_encoder_for_KeyConstructionRecipient = $._encode_choice<KeyConstructionRecipient>(
             {

@@ -176,7 +176,7 @@ let _cached_decoder_for_CPA_PPDU: $.ASN1Decoder<CPA_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CPA_PPDU} The decoded data structure.
  */
-export function _decode_CPA_PPDU(el: _Element) {
+export function _decode_CPA_PPDU(el: _Element): CPA_PPDU {
     if (!_cached_decoder_for_CPA_PPDU) {
         _cached_decoder_for_CPA_PPDU = function (el: _Element): CPA_PPDU {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -233,7 +233,7 @@ let _cached_encoder_for_CPA_PPDU: $.ASN1Encoder<CPA_PPDU> | null = null;
 export function _encode_CPA_PPDU(
     value: CPA_PPDU,
     elGetter: $.ASN1Encoder<CPA_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_CPA_PPDU) {
         _cached_encoder_for_CPA_PPDU = function (
             value: CPA_PPDU        ): _Element {

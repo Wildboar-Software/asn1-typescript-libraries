@@ -101,7 +101,7 @@ let _cached_decoder_for_Comment: $.ASN1Decoder<Comment> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Comment} The decoded data structure.
  */
-export function _decode_Comment(el: _Element) {
+export function _decode_Comment(el: _Element): Comment {
   if (!_cached_decoder_for_Comment) {
     _cached_decoder_for_Comment = function (el: _Element): Comment {
       const sequence: _Element[] = el.sequence;
@@ -131,7 +131,7 @@ let _cached_encoder_for_Comment: $.ASN1Encoder<Comment> | null = null;
 export function _encode_Comment(
   value: Comment,
   elGetter: $.ASN1Encoder<Comment>
-) {
+): _Element {
   if (!_cached_encoder_for_Comment) {
     _cached_encoder_for_Comment = function (
       value: Comment    ): _Element {

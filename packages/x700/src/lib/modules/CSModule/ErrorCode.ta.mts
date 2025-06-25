@@ -40,7 +40,7 @@ let _cached_decoder_for_ErrorCode: $.ASN1Decoder<ErrorCode> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ErrorCode} The decoded data structure.
  */
-export function _decode_ErrorCode(el: _Element) {
+export function _decode_ErrorCode(el: _Element): ErrorCode {
     if (!_cached_decoder_for_ErrorCode) {
         _cached_decoder_for_ErrorCode = $._decodeSetOf<ErrorCode_Item>(
             () => _decode_ErrorCode_Item
@@ -61,7 +61,7 @@ let _cached_encoder_for_ErrorCode: $.ASN1Encoder<ErrorCode> | null = null;
 export function _encode_ErrorCode(
     value: ErrorCode,
     elGetter: $.ASN1Encoder<ErrorCode>
-) {
+): _Element {
     if (!_cached_encoder_for_ErrorCode) {
         _cached_encoder_for_ErrorCode = $._encodeSetOf<ErrorCode_Item>(
             () => _encode_ErrorCode_Item,

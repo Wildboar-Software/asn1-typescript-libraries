@@ -126,7 +126,7 @@ let _cached_decoder_for_MessagesWaiting: $.ASN1Decoder<MessagesWaiting> | null =
  * @param {_Element} el The element being decoded.
  * @returns {MessagesWaiting} The decoded data structure.
  */
-export function _decode_MessagesWaiting(el: _Element) {
+export function _decode_MessagesWaiting(el: _Element): MessagesWaiting {
     if (!_cached_decoder_for_MessagesWaiting) {
         _cached_decoder_for_MessagesWaiting = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_MessagesWaiting: $.ASN1Encoder<MessagesWaiting> | null =
 export function _encode_MessagesWaiting(
     value: MessagesWaiting,
     elGetter: $.ASN1Encoder<MessagesWaiting>
-) {
+): _Element {
     if (!_cached_encoder_for_MessagesWaiting) {
         _cached_encoder_for_MessagesWaiting = function (
             value: MessagesWaiting        ): _Element {

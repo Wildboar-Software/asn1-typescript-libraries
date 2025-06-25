@@ -141,7 +141,7 @@ let _cached_decoder_for_ReceiptRequest: $.ASN1Decoder<ReceiptRequest> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ReceiptRequest} The decoded data structure.
  */
-export function _decode_ReceiptRequest(el: _Element) {
+export function _decode_ReceiptRequest(el: _Element): ReceiptRequest {
     if (!_cached_decoder_for_ReceiptRequest) {
         _cached_decoder_for_ReceiptRequest = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_ReceiptRequest: $.ASN1Encoder<ReceiptRequest> | null = n
 export function _encode_ReceiptRequest(
     value: ReceiptRequest,
     elGetter: $.ASN1Encoder<ReceiptRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_ReceiptRequest) {
         _cached_encoder_for_ReceiptRequest = function (
             value: ReceiptRequest        ): _Element {

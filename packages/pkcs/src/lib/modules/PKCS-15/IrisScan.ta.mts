@@ -119,7 +119,7 @@ let _cached_decoder_for_IrisScan: $.ASN1Decoder<IrisScan> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IrisScan} The decoded data structure.
  */
-export function _decode_IrisScan(el: _Element) {
+export function _decode_IrisScan(el: _Element): IrisScan {
     if (!_cached_decoder_for_IrisScan) {
         _cached_decoder_for_IrisScan = function (el: _Element): IrisScan {
             const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_IrisScan: $.ASN1Encoder<IrisScan> | null = null;
 export function _encode_IrisScan(
     value: IrisScan,
     elGetter: $.ASN1Encoder<IrisScan>
-) {
+): _Element {
     if (!_cached_encoder_for_IrisScan) {
         _cached_encoder_for_IrisScan = function (
             value: IrisScan        ): _Element {

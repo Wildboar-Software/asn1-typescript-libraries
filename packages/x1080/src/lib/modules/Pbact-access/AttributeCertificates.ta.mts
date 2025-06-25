@@ -39,7 +39,7 @@ let _cached_decoder_for_AttributeCertificates: $.ASN1Decoder<AttributeCertificat
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCertificates} The decoded data structure.
  */
-export function _decode_AttributeCertificates(el: _Element) {
+export function _decode_AttributeCertificates(el: _Element): AttributeCertificates {
     if (!_cached_decoder_for_AttributeCertificates) {
         _cached_decoder_for_AttributeCertificates = $._decodeSequenceOf<AttributeCertificate>(
             () => _decode_AttributeCertificate
@@ -62,7 +62,7 @@ let _cached_encoder_for_AttributeCertificates: $.ASN1Encoder<AttributeCertificat
 export function _encode_AttributeCertificates(
     value: AttributeCertificates,
     elGetter: $.ASN1Encoder<AttributeCertificates>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeCertificates) {
         _cached_encoder_for_AttributeCertificates = $._encodeSequenceOf<AttributeCertificate>(
             () => _encode_AttributeCertificate,

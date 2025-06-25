@@ -50,7 +50,7 @@ let _cached_decoder_for_CrossConnectionObjectPointer: $.ASN1Decoder<CrossConnect
  * @param {_Element} el The element being decoded.
  * @returns {CrossConnectionObjectPointer} The decoded data structure.
  */
-export function _decode_CrossConnectionObjectPointer(el: _Element) {
+export function _decode_CrossConnectionObjectPointer(el: _Element): CrossConnectionObjectPointer {
     if (!_cached_decoder_for_CrossConnectionObjectPointer) {
         _cached_decoder_for_CrossConnectionObjectPointer = $._decode_inextensible_choice<CrossConnectionObjectPointer>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_CrossConnectionObjectPointer: $.ASN1Encoder<CrossConnect
 export function _encode_CrossConnectionObjectPointer(
     value: CrossConnectionObjectPointer,
     elGetter: $.ASN1Encoder<CrossConnectionObjectPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_CrossConnectionObjectPointer) {
         _cached_encoder_for_CrossConnectionObjectPointer = $._encode_choice<CrossConnectionObjectPointer>(
             {

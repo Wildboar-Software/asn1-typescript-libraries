@@ -35,7 +35,7 @@ let _cached_decoder_for_LimitValidityDate: $.ASN1Decoder<LimitValidityDate> | nu
  * @param {_Element} el The element being decoded.
  * @returns {LimitValidityDate} The decoded data structure.
  */
-export function _decode_LimitValidityDate(el: _Element) {
+export function _decode_LimitValidityDate(el: _Element): LimitValidityDate {
     if (!_cached_decoder_for_LimitValidityDate) {
         _cached_decoder_for_LimitValidityDate = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_LimitValidityDate: $.ASN1Encoder<LimitValidityDate> | nu
 export function _encode_LimitValidityDate(
     value: LimitValidityDate,
     elGetter: $.ASN1Encoder<LimitValidityDate>
-) {
+): _Element {
     if (!_cached_encoder_for_LimitValidityDate) {
         _cached_encoder_for_LimitValidityDate = _encode_Time;
     }

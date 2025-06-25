@@ -37,7 +37,7 @@ let _cached_decoder_for_WeekDayTranslationList: $.ASN1Decoder<WeekDayTranslation
  * @param {_Element} el The element being decoded.
  * @returns {WeekDayTranslationList} The decoded data structure.
  */
-export function _decode_WeekDayTranslationList(el: _Element) {
+export function _decode_WeekDayTranslationList(el: _Element): WeekDayTranslationList {
     if (!_cached_decoder_for_WeekDayTranslationList) {
         _cached_decoder_for_WeekDayTranslationList = $._decodeSetOf<WeekDayTranslationList_Item>(
             () => _decode_WeekDayTranslationList_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_WeekDayTranslationList: $.ASN1Encoder<WeekDayTranslation
 export function _encode_WeekDayTranslationList(
     value: WeekDayTranslationList,
     elGetter: $.ASN1Encoder<WeekDayTranslationList>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekDayTranslationList) {
         _cached_encoder_for_WeekDayTranslationList = $._encodeSetOf<WeekDayTranslationList_Item>(
             () => _encode_WeekDayTranslationList_Item,

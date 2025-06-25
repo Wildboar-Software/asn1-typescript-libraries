@@ -41,7 +41,7 @@ let _cached_decoder_for_DataErrors: $.ASN1Decoder<DataErrors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataErrors} The decoded data structure.
  */
-export function _decode_DataErrors(el: _Element) {
+export function _decode_DataErrors(el: _Element): DataErrors {
     if (!_cached_decoder_for_DataErrors) {
         _cached_decoder_for_DataErrors = $._decode_inextensible_choice<DataErrors>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_DataErrors: $.ASN1Encoder<DataErrors> | null = null;
 export function _encode_DataErrors(
     value: DataErrors,
     elGetter: $.ASN1Encoder<DataErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_DataErrors) {
         _cached_encoder_for_DataErrors = $._encode_choice<DataErrors>(
             {

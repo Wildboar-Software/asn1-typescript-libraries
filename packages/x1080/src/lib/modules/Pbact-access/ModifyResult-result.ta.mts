@@ -46,7 +46,7 @@ let _cached_decoder_for_ModifyResult_result: $.ASN1Decoder<ModifyResult_result> 
  * @param {_Element} el The element being decoded.
  * @returns {ModifyResult_result} The decoded data structure.
  */
-export function _decode_ModifyResult_result(el: _Element) {
+export function _decode_ModifyResult_result(el: _Element): ModifyResult_result {
     if (!_cached_decoder_for_ModifyResult_result) {
         _cached_decoder_for_ModifyResult_result = $._decode_extensible_choice<ModifyResult_result>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_ModifyResult_result: $.ASN1Encoder<ModifyResult_result> 
 export function _encode_ModifyResult_result(
     value: ModifyResult_result,
     elGetter: $.ASN1Encoder<ModifyResult_result>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyResult_result) {
         _cached_encoder_for_ModifyResult_result = $._encode_choice<ModifyResult_result>(
             {

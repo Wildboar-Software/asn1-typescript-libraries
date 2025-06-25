@@ -46,7 +46,7 @@ let _cached_decoder_for_BioAPI_CANDIDATE_bir: $.ASN1Decoder<BioAPI_CANDIDATE_bir
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_CANDIDATE_bir} The decoded data structure.
  */
-export function _decode_BioAPI_CANDIDATE_bir(el: _Element) {
+export function _decode_BioAPI_CANDIDATE_bir(el: _Element): BioAPI_CANDIDATE_bir {
   if (!_cached_decoder_for_BioAPI_CANDIDATE_bir) {
     _cached_decoder_for_BioAPI_CANDIDATE_bir = $._decode_inextensible_choice<BioAPI_CANDIDATE_bir>(
       {
@@ -73,7 +73,7 @@ let _cached_encoder_for_BioAPI_CANDIDATE_bir: $.ASN1Encoder<BioAPI_CANDIDATE_bir
 export function _encode_BioAPI_CANDIDATE_bir(
   value: BioAPI_CANDIDATE_bir,
   elGetter: $.ASN1Encoder<BioAPI_CANDIDATE_bir>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_CANDIDATE_bir) {
     _cached_encoder_for_BioAPI_CANDIDATE_bir = $._encode_choice<BioAPI_CANDIDATE_bir>(
       {

@@ -151,7 +151,7 @@ let _cached_decoder_for_FNUAMSReasonCodeField: $.ASN1Decoder<FNUAMSReasonCodeFie
  * @param {_Element} el The element being decoded.
  * @returns {FNUAMSReasonCodeField} The decoded data structure.
  */
-export function _decode_FNUAMSReasonCodeField(el: _Element) {
+export function _decode_FNUAMSReasonCodeField(el: _Element): FNUAMSReasonCodeField {
     if (!_cached_decoder_for_FNUAMSReasonCodeField) {
         _cached_decoder_for_FNUAMSReasonCodeField = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_FNUAMSReasonCodeField: $.ASN1Encoder<FNUAMSReasonCodeFie
 export function _encode_FNUAMSReasonCodeField(
     value: FNUAMSReasonCodeField,
     elGetter: $.ASN1Encoder<FNUAMSReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_FNUAMSReasonCodeField) {
         _cached_encoder_for_FNUAMSReasonCodeField = function (
             value: FNUAMSReasonCodeField        ): _Element {

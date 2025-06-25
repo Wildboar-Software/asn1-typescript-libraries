@@ -38,7 +38,7 @@ let _cached_decoder_for_GroupElements: $.ASN1Decoder<GroupElements> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {GroupElements} The decoded data structure.
  */
-export function _decode_GroupElements(el: _Element) {
+export function _decode_GroupElements(el: _Element): GroupElements {
     if (!_cached_decoder_for_GroupElements) {
         _cached_decoder_for_GroupElements = _decode_TemplateList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_GroupElements: $.ASN1Encoder<GroupElements> | null = nul
 export function _encode_GroupElements(
     value: GroupElements,
     elGetter: $.ASN1Encoder<GroupElements>
-) {
+): _Element {
     if (!_cached_encoder_for_GroupElements) {
         _cached_encoder_for_GroupElements = _encode_TemplateList;
     }

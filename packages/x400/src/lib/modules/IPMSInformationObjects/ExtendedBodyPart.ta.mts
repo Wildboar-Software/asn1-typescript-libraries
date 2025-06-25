@@ -114,7 +114,7 @@ let _cached_decoder_for_ExtendedBodyPart: $.ASN1Decoder<ExtendedBodyPart> | null
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedBodyPart} The decoded data structure.
  */
-export function _decode_ExtendedBodyPart(el: _Element) {
+export function _decode_ExtendedBodyPart(el: _Element): ExtendedBodyPart {
     if (!_cached_decoder_for_ExtendedBodyPart) {
         _cached_decoder_for_ExtendedBodyPart = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_ExtendedBodyPart: $.ASN1Encoder<ExtendedBodyPart> | null
 export function _encode_ExtendedBodyPart(
     value: ExtendedBodyPart,
     elGetter: $.ASN1Encoder<ExtendedBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedBodyPart) {
         _cached_encoder_for_ExtendedBodyPart = function (
             value: ExtendedBodyPart        ): _Element {

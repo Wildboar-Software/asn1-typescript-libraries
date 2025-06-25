@@ -42,7 +42,7 @@ let _cached_decoder_for_SystemTitle: $.ASN1Decoder<SystemTitle> | null = null;
  * @returns {SystemTitle} The decoded data structure.
  */
 export
-function _decode_SystemTitle (el: _Element) {
+function _decode_SystemTitle (el: _Element): SystemTitle {
     if (!_cached_decoder_for_SystemTitle) { _cached_decoder_for_SystemTitle = $._decode_inextensible_choice<SystemTitle>({
     "UNIVERSAL 16": [ "distinguishedName", _decode_DistinguishedName ],
     "UNIVERSAL 6": [ "oid", $._decodeObjectIdentifier ],
@@ -61,7 +61,7 @@ let _cached_encoder_for_SystemTitle: $.ASN1Encoder<SystemTitle> | null = null;
  * @returns {_Element} The SystemTitle, encoded as an ASN.1 Element.
  */
 export
-function _encode_SystemTitle (value: SystemTitle, elGetter: $.ASN1Encoder<SystemTitle>) {
+function _encode_SystemTitle (value: SystemTitle, elGetter: $.ASN1Encoder<SystemTitle>): _Element {
     if (!_cached_encoder_for_SystemTitle) { _cached_encoder_for_SystemTitle = $._encode_choice<SystemTitle>({
     "distinguishedName": _encode_DistinguishedName,
     "oid": $._encodeObjectIdentifier,

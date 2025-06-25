@@ -123,7 +123,7 @@ let _cached_decoder_for_sequence_number_error_ParameterType_problems_Item: $.ASN
  */
 export function _decode_sequence_number_error_ParameterType_problems_Item(
     el: _Element
-) {
+): sequence_number_error_ParameterType_problems_Item {
     if (
         !_cached_decoder_for_sequence_number_error_ParameterType_problems_Item
     ) {
@@ -177,7 +177,7 @@ let _cached_encoder_for_sequence_number_error_ParameterType_problems_Item: $.ASN
 export function _encode_sequence_number_error_ParameterType_problems_Item(
     value: sequence_number_error_ParameterType_problems_Item,
     elGetter: $.ASN1Encoder<sequence_number_error_ParameterType_problems_Item>
-) {
+): _Element {
     if (
         !_cached_encoder_for_sequence_number_error_ParameterType_problems_Item
     ) {

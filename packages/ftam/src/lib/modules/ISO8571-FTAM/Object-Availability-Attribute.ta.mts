@@ -49,7 +49,7 @@ let _cached_decoder_for_Object_Availability_Attribute: $.ASN1Decoder<Object_Avai
  * @param {_Element} el The element being decoded.
  * @returns {Object_Availability_Attribute} The decoded data structure.
  */
-export function _decode_Object_Availability_Attribute(el: _Element) {
+export function _decode_Object_Availability_Attribute(el: _Element): Object_Availability_Attribute {
   if (!_cached_decoder_for_Object_Availability_Attribute) {
     _cached_decoder_for_Object_Availability_Attribute = $._decode_inextensible_choice<Object_Availability_Attribute>(
       {
@@ -83,7 +83,7 @@ let _cached_encoder_for_Object_Availability_Attribute: $.ASN1Encoder<Object_Avai
 export function _encode_Object_Availability_Attribute(
   value: Object_Availability_Attribute,
   elGetter: $.ASN1Encoder<Object_Availability_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Object_Availability_Attribute) {
     _cached_encoder_for_Object_Availability_Attribute = $._encode_choice<Object_Availability_Attribute>(
       {

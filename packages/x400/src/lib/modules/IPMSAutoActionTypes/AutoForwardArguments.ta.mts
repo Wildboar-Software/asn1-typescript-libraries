@@ -208,7 +208,7 @@ let _cached_decoder_for_AutoForwardArguments: $.ASN1Decoder<AutoForwardArguments
  * @param {_Element} el The element being decoded.
  * @returns {AutoForwardArguments} The decoded data structure.
  */
-export function _decode_AutoForwardArguments(el: _Element) {
+export function _decode_AutoForwardArguments(el: _Element): AutoForwardArguments {
     if (!_cached_decoder_for_AutoForwardArguments) {
         _cached_decoder_for_AutoForwardArguments = function (
             el: _Element
@@ -292,7 +292,7 @@ let _cached_encoder_for_AutoForwardArguments: $.ASN1Encoder<AutoForwardArguments
 export function _encode_AutoForwardArguments(
     value: AutoForwardArguments,
     elGetter: $.ASN1Encoder<AutoForwardArguments>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoForwardArguments) {
         _cached_encoder_for_AutoForwardArguments = function (
             value: AutoForwardArguments        ): _Element {

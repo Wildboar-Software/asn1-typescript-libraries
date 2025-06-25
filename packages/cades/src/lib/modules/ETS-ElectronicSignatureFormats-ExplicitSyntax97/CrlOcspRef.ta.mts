@@ -121,7 +121,7 @@ let _cached_decoder_for_CrlOcspRef: $.ASN1Decoder<CrlOcspRef> | null = null;
  * @returns {CrlOcspRef} The decoded data structure.
  */
 export
-function _decode_CrlOcspRef (el: _Element) {
+function _decode_CrlOcspRef (el: _Element): CrlOcspRef {
     if (!_cached_decoder_for_CrlOcspRef) { _cached_decoder_for_CrlOcspRef = function (el: _Element): CrlOcspRef {
     let crlids: OPTIONAL<CRLListID>;
     let ocspids: OPTIONAL<OcspListID>;
@@ -156,7 +156,7 @@ let _cached_encoder_for_CrlOcspRef: $.ASN1Encoder<CrlOcspRef> | null = null;
  * @returns {_Element} The CrlOcspRef, encoded as an ASN.1 Element.
  */
 export
-function _encode_CrlOcspRef (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspRef>) {
+function _encode_CrlOcspRef (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspRef>): _Element {
     if (!_cached_encoder_for_CrlOcspRef) { _cached_encoder_for_CrlOcspRef = function (value: CrlOcspRef): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -135,7 +135,7 @@ let _cached_decoder_for_AnyType: $.ASN1Decoder<AnyType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AnyType} The decoded data structure.
  */
-export function _decode_AnyType(el: _Element) {
+export function _decode_AnyType(el: _Element): AnyType {
   if (!_cached_decoder_for_AnyType) {
     _cached_decoder_for_AnyType = function (el: _Element): AnyType {
       const sequence: _Element[] = el.sequence;
@@ -177,7 +177,7 @@ let _cached_encoder_for_AnyType: $.ASN1Encoder<AnyType> | null = null;
 export function _encode_AnyType(
   value: AnyType,
   elGetter: $.ASN1Encoder<AnyType>
-) {
+): _Element {
   if (!_cached_encoder_for_AnyType) {
     _cached_encoder_for_AnyType = function (
       value: AnyType    ): _Element {

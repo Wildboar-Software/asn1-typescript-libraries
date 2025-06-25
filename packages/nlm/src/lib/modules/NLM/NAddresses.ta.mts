@@ -38,7 +38,7 @@ let _cached_decoder_for_NAddresses: $.ASN1Decoder<NAddresses> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NAddresses} The decoded data structure.
  */
-export function _decode_NAddresses(el: _Element) {
+export function _decode_NAddresses(el: _Element): NAddresses {
     if (!_cached_decoder_for_NAddresses) {
         _cached_decoder_for_NAddresses = $._decodeSetOf<NAddress>(
             () => _decode_NAddress
@@ -61,7 +61,7 @@ let _cached_encoder_for_NAddresses: $.ASN1Encoder<NAddresses> | null = null;
 export function _encode_NAddresses(
     value: NAddresses,
     elGetter: $.ASN1Encoder<NAddresses>
-) {
+): _Element {
     if (!_cached_encoder_for_NAddresses) {
         _cached_encoder_for_NAddresses = $._encodeSetOf<NAddress>(
             () => _encode_NAddress,

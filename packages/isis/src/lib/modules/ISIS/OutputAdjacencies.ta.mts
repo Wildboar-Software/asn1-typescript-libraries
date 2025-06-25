@@ -35,7 +35,7 @@ let _cached_decoder_for_OutputAdjacencies: $.ASN1Decoder<OutputAdjacencies> | nu
  * @param {_Element} el The element being decoded.
  * @returns {OutputAdjacencies} The decoded data structure.
  */
-export function _decode_OutputAdjacencies(el: _Element) {
+export function _decode_OutputAdjacencies(el: _Element): OutputAdjacencies {
   if (!_cached_decoder_for_OutputAdjacencies) {
     _cached_decoder_for_OutputAdjacencies = $._decodeSetOf<LocalDistinguishedName>(
       () => _decode_LocalDistinguishedName
@@ -56,7 +56,7 @@ let _cached_encoder_for_OutputAdjacencies: $.ASN1Encoder<OutputAdjacencies> | nu
 export function _encode_OutputAdjacencies(
   value: OutputAdjacencies,
   elGetter: $.ASN1Encoder<OutputAdjacencies>
-) {
+): _Element {
   if (!_cached_encoder_for_OutputAdjacencies) {
     _cached_encoder_for_OutputAdjacencies = $._encodeSetOf<LocalDistinguishedName>(
       () => _encode_LocalDistinguishedName,

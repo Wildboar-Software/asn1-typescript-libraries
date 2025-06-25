@@ -38,7 +38,7 @@ let _cached_decoder_for_METHOD_DATA: $.ASN1Decoder<METHOD_DATA> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {METHOD_DATA} The decoded data structure.
  */
-export function _decode_METHOD_DATA(el: _Element) {
+export function _decode_METHOD_DATA(el: _Element): METHOD_DATA {
   if (!_cached_decoder_for_METHOD_DATA) {
     _cached_decoder_for_METHOD_DATA = $._decodeSequenceOf<PA_DATA>(
       () => _decode_PA_DATA
@@ -61,7 +61,7 @@ let _cached_encoder_for_METHOD_DATA: $.ASN1Encoder<METHOD_DATA> | null = null;
 export function _encode_METHOD_DATA(
   value: METHOD_DATA,
   elGetter: $.ASN1Encoder<METHOD_DATA>
-) {
+): _Element {
   if (!_cached_encoder_for_METHOD_DATA) {
     _cached_encoder_for_METHOD_DATA = $._encodeSequenceOf<PA_DATA>(
       () => _encode_PA_DATA,

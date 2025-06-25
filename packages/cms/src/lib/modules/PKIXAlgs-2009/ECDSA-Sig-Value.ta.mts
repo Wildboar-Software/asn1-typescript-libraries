@@ -112,7 +112,7 @@ let _cached_decoder_for_ECDSA_Sig_Value: $.ASN1Decoder<ECDSA_Sig_Value> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ECDSA_Sig_Value} The decoded data structure.
  */
-export function _decode_ECDSA_Sig_Value(el: _Element) {
+export function _decode_ECDSA_Sig_Value(el: _Element): ECDSA_Sig_Value {
     if (!_cached_decoder_for_ECDSA_Sig_Value) {
         _cached_decoder_for_ECDSA_Sig_Value = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_ECDSA_Sig_Value: $.ASN1Encoder<ECDSA_Sig_Value> | null =
 export function _encode_ECDSA_Sig_Value(
     value: ECDSA_Sig_Value,
     elGetter: $.ASN1Encoder<ECDSA_Sig_Value>
-) {
+): _Element {
     if (!_cached_encoder_for_ECDSA_Sig_Value) {
         _cached_encoder_for_ECDSA_Sig_Value = function (
             value: ECDSA_Sig_Value        ): _Element {

@@ -179,7 +179,7 @@ let _cached_decoder_for_ProtectionStatus_Item_autoSwitch: $.ASN1Decoder<Protecti
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionStatus_Item_autoSwitch} The decoded data structure.
  */
-export function _decode_ProtectionStatus_Item_autoSwitch(el: _Element) {
+export function _decode_ProtectionStatus_Item_autoSwitch(el: _Element): ProtectionStatus_Item_autoSwitch {
     if (!_cached_decoder_for_ProtectionStatus_Item_autoSwitch) {
         _cached_decoder_for_ProtectionStatus_Item_autoSwitch = function (
             el: _Element
@@ -243,7 +243,7 @@ let _cached_encoder_for_ProtectionStatus_Item_autoSwitch: $.ASN1Encoder<Protecti
 export function _encode_ProtectionStatus_Item_autoSwitch(
     value: ProtectionStatus_Item_autoSwitch,
     elGetter: $.ASN1Encoder<ProtectionStatus_Item_autoSwitch>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionStatus_Item_autoSwitch) {
         _cached_encoder_for_ProtectionStatus_Item_autoSwitch = function (
             value: ProtectionStatus_Item_autoSwitch        ): _Element {

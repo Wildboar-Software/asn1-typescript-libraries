@@ -36,7 +36,7 @@ let _cached_decoder_for_AlarmStatus: $.ASN1Decoder<AlarmStatus> | null = null;
  * @returns {AlarmStatus} The decoded data structure.
  */
 export
-function _decode_AlarmStatus (el: _Element) {
+function _decode_AlarmStatus (el: _Element): AlarmStatus {
     if (!_cached_decoder_for_AlarmStatus) { _cached_decoder_for_AlarmStatus = $._decodeSetOf<AlarmStatus_Item>(() => _decode_AlarmStatus_Item); }
     return _cached_decoder_for_AlarmStatus(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_AlarmStatus: $.ASN1Encoder<AlarmStatus> | null = null;
  * @returns {_Element} The AlarmStatus, encoded as an ASN.1 Element.
  */
 export
-function _encode_AlarmStatus (value: AlarmStatus, elGetter: $.ASN1Encoder<AlarmStatus>) {
+function _encode_AlarmStatus (value: AlarmStatus, elGetter: $.ASN1Encoder<AlarmStatus>): _Element {
     if (!_cached_encoder_for_AlarmStatus) { _cached_encoder_for_AlarmStatus = $._encodeSetOf<AlarmStatus_Item>(() => _encode_AlarmStatus_Item, $.BER); }
     return _cached_encoder_for_AlarmStatus(value, elGetter);
 }

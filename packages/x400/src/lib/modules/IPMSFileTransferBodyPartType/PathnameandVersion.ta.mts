@@ -116,7 +116,7 @@ let _cached_decoder_for_PathnameandVersion: $.ASN1Decoder<PathnameandVersion> | 
  * @param {_Element} el The element being decoded.
  * @returns {PathnameandVersion} The decoded data structure.
  */
-export function _decode_PathnameandVersion(el: _Element) {
+export function _decode_PathnameandVersion(el: _Element): PathnameandVersion {
     if (!_cached_decoder_for_PathnameandVersion) {
         _cached_decoder_for_PathnameandVersion = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_PathnameandVersion: $.ASN1Encoder<PathnameandVersion> | 
 export function _encode_PathnameandVersion(
     value: PathnameandVersion,
     elGetter: $.ASN1Encoder<PathnameandVersion>
-) {
+): _Element {
     if (!_cached_encoder_for_PathnameandVersion) {
         _cached_encoder_for_PathnameandVersion = function (
             value: PathnameandVersion        ): _Element {

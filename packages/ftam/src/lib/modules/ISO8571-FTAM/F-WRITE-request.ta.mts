@@ -163,7 +163,7 @@ let _cached_decoder_for_F_WRITE_request: $.ASN1Decoder<F_WRITE_request> | null =
  * @param {_Element} el The element being decoded.
  * @returns {F_WRITE_request} The decoded data structure.
  */
-export function _decode_F_WRITE_request(el: _Element) {
+export function _decode_F_WRITE_request(el: _Element): F_WRITE_request {
   if (!_cached_decoder_for_F_WRITE_request) {
     _cached_decoder_for_F_WRITE_request = function (
       el: _Element
@@ -223,7 +223,7 @@ let _cached_encoder_for_F_WRITE_request: $.ASN1Encoder<F_WRITE_request> | null =
 export function _encode_F_WRITE_request(
   value: F_WRITE_request,
   elGetter: $.ASN1Encoder<F_WRITE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_WRITE_request) {
     _cached_encoder_for_F_WRITE_request = function (
       value: F_WRITE_request    ): _Element {

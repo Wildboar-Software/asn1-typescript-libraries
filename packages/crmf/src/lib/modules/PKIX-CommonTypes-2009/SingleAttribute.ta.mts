@@ -108,7 +108,7 @@ let _cached_decoder_for_SingleAttribute: $.ASN1Decoder<SingleAttribute> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SingleAttribute} The decoded data structure.
  */
-export function _decode_SingleAttribute(el: _Element) {
+export function _decode_SingleAttribute(el: _Element): SingleAttribute {
     if (!_cached_decoder_for_SingleAttribute) {
         _cached_decoder_for_SingleAttribute = function (
             el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_SingleAttribute: $.ASN1Encoder<SingleAttribute> | null =
 export function _encode_SingleAttribute(
     value: SingleAttribute,
     elGetter: $.ASN1Encoder<SingleAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_SingleAttribute) {
         _cached_encoder_for_SingleAttribute = function (
             value: SingleAttribute        ): _Element {

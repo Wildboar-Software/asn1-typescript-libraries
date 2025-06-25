@@ -128,7 +128,7 @@ let _cached_decoder_for_BaseManagedObjectId: $.ASN1Decoder<BaseManagedObjectId> 
  * @param {_Element} el The element being decoded.
  * @returns {BaseManagedObjectId} The decoded data structure.
  */
-export function _decode_BaseManagedObjectId(el: _Element) {
+export function _decode_BaseManagedObjectId(el: _Element): BaseManagedObjectId {
   if (!_cached_decoder_for_BaseManagedObjectId) {
     _cached_decoder_for_BaseManagedObjectId = function (
       el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_BaseManagedObjectId: $.ASN1Encoder<BaseManagedObjectId> 
 export function _encode_BaseManagedObjectId(
   value: BaseManagedObjectId,
   elGetter: $.ASN1Encoder<BaseManagedObjectId>
-) {
+): _Element {
   if (!_cached_encoder_for_BaseManagedObjectId) {
     _cached_encoder_for_BaseManagedObjectId = function (
       value: BaseManagedObjectId    ): _Element {

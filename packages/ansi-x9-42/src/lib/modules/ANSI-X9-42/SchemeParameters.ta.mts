@@ -29,7 +29,7 @@ let _cached_decoder_for_SchemeParameters: $.ASN1Decoder<SchemeParameters> | null
  * @param {_Element} el The element being decoded.
  * @returns {SchemeParameters} The decoded data structure.
  */
-export function _decode_SchemeParameters(el: _Element) {
+export function _decode_SchemeParameters(el: _Element): SchemeParameters {
     if (!_cached_decoder_for_SchemeParameters) {
         _cached_decoder_for_SchemeParameters = _decode_AlgorithmIdentifier;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SchemeParameters: $.ASN1Encoder<SchemeParameters> | null
 export function _encode_SchemeParameters(
     value: SchemeParameters,
     elGetter: $.ASN1Encoder<SchemeParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_SchemeParameters) {
         _cached_encoder_for_SchemeParameters = _encode_AlgorithmIdentifier;
     }

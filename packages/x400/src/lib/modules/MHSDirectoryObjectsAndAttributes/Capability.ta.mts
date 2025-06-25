@@ -169,7 +169,7 @@ let _cached_decoder_for_Capability: $.ASN1Decoder<Capability> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Capability} The decoded data structure.
  */
-export function _decode_Capability(el: _Element) {
+export function _decode_Capability(el: _Element): Capability {
     if (!_cached_decoder_for_Capability) {
         _cached_decoder_for_Capability = function (el: _Element): Capability {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -240,7 +240,7 @@ let _cached_encoder_for_Capability: $.ASN1Encoder<Capability> | null = null;
 export function _encode_Capability(
     value: Capability,
     elGetter: $.ASN1Encoder<Capability>
-) {
+): _Element {
     if (!_cached_encoder_for_Capability) {
         _cached_encoder_for_Capability = function (
             value: Capability        ): _Element {

@@ -46,7 +46,7 @@ let _cached_decoder_for_ConvertMulticastToPtoPReply_Item: $.ASN1Decoder<ConvertM
  * @param {_Element} el The element being decoded.
  * @returns {ConvertMulticastToPtoPReply_Item} The decoded data structure.
  */
-export function _decode_ConvertMulticastToPtoPReply_Item(el: _Element) {
+export function _decode_ConvertMulticastToPtoPReply_Item(el: _Element): ConvertMulticastToPtoPReply_Item {
     if (!_cached_decoder_for_ConvertMulticastToPtoPReply_Item) {
         _cached_decoder_for_ConvertMulticastToPtoPReply_Item = $._decode_inextensible_choice<ConvertMulticastToPtoPReply_Item>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_ConvertMulticastToPtoPReply_Item: $.ASN1Encoder<ConvertM
 export function _encode_ConvertMulticastToPtoPReply_Item(
     value: ConvertMulticastToPtoPReply_Item,
     elGetter: $.ASN1Encoder<ConvertMulticastToPtoPReply_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertMulticastToPtoPReply_Item) {
         _cached_encoder_for_ConvertMulticastToPtoPReply_Item = $._encode_choice<ConvertMulticastToPtoPReply_Item>(
             {

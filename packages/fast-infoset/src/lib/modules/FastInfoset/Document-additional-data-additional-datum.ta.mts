@@ -116,7 +116,7 @@ let _cached_decoder_for_Document_additional_data_additional_datum: $.ASN1Decoder
  */
 export function _decode_Document_additional_data_additional_datum(
   el: _Element
-) {
+): Document_additional_data_additional_datum {
   if (!_cached_decoder_for_Document_additional_data_additional_datum) {
     _cached_decoder_for_Document_additional_data_additional_datum = function (
       el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_Document_additional_data_additional_datum: $.ASN1Encoder
 export function _encode_Document_additional_data_additional_datum(
   value: Document_additional_data_additional_datum,
   elGetter: $.ASN1Encoder<Document_additional_data_additional_datum>
-) {
+): _Element {
   if (!_cached_encoder_for_Document_additional_data_additional_datum) {
     _cached_encoder_for_Document_additional_data_additional_datum = function (
       value: Document_additional_data_additional_datum    ): _Element {

@@ -135,7 +135,7 @@ let _cached_decoder_for_End: $.ASN1Decoder<End> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {End} The decoded data structure.
  */
-export function _decode_End(el: _Element) {
+export function _decode_End(el: _Element): End {
   if (!_cached_decoder_for_End) {
     _cached_decoder_for_End = function (el: _Element): End {
       let dtid!: DestTransactionID;
@@ -179,7 +179,7 @@ let _cached_encoder_for_End: $.ASN1Encoder<End> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The End, encoded as an ASN.1 Element.
  */
-export function _encode_End(value: End, elGetter: $.ASN1Encoder<End>) {
+export function _encode_End(value: End, elGetter: $.ASN1Encoder<End>): _Element {
   if (!_cached_encoder_for_End) {
     _cached_encoder_for_End = function (
       value: End    ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalStreetAddress: $.ASN1Decoder<UniversalStreetAdd
  * @param {_Element} el The element being decoded.
  * @returns {UniversalStreetAddress} The decoded data structure.
  */
-export function _decode_UniversalStreetAddress(el: _Element) {
+export function _decode_UniversalStreetAddress(el: _Element): UniversalStreetAddress {
     if (!_cached_decoder_for_UniversalStreetAddress) {
         _cached_decoder_for_UniversalStreetAddress = _decode_UniversalPDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalStreetAddress: $.ASN1Encoder<UniversalStreetAdd
 export function _encode_UniversalStreetAddress(
     value: UniversalStreetAddress,
     elGetter: $.ASN1Encoder<UniversalStreetAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalStreetAddress) {
         _cached_encoder_for_UniversalStreetAddress = _encode_UniversalPDSParameter;
     }

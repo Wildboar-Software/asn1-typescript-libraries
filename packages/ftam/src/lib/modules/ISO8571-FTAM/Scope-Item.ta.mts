@@ -123,7 +123,7 @@ let _cached_decoder_for_Scope_Item: $.ASN1Decoder<Scope_Item> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Scope_Item} The decoded data structure.
  */
-export function _decode_Scope_Item(el: _Element) {
+export function _decode_Scope_Item(el: _Element): Scope_Item {
   if (!_cached_decoder_for_Scope_Item) {
     _cached_decoder_for_Scope_Item = function (el: _Element): Scope_Item {
       let root_directory: OPTIONAL<Pathname_Attribute>;
@@ -171,7 +171,7 @@ let _cached_encoder_for_Scope_Item: $.ASN1Encoder<Scope_Item> | null = null;
 export function _encode_Scope_Item(
   value: Scope_Item,
   elGetter: $.ASN1Encoder<Scope_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Scope_Item) {
     _cached_encoder_for_Scope_Item = function (
       value: Scope_Item    ): _Element {

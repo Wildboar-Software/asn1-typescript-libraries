@@ -130,7 +130,7 @@ let _cached_decoder_for_DbFreeMarker_RequestParams: $.ASN1Decoder<DbFreeMarker_R
  * @param {_Element} el The element being decoded.
  * @returns {DbFreeMarker_RequestParams} The decoded data structure.
  */
-export function _decode_DbFreeMarker_RequestParams(el: _Element) {
+export function _decode_DbFreeMarker_RequestParams(el: _Element): DbFreeMarker_RequestParams {
   if (!_cached_decoder_for_DbFreeMarker_RequestParams) {
     _cached_decoder_for_DbFreeMarker_RequestParams = function (
       el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_DbFreeMarker_RequestParams: $.ASN1Encoder<DbFreeMarker_R
 export function _encode_DbFreeMarker_RequestParams(
   value: DbFreeMarker_RequestParams,
   elGetter: $.ASN1Encoder<DbFreeMarker_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbFreeMarker_RequestParams) {
     _cached_encoder_for_DbFreeMarker_RequestParams = function (
       value: DbFreeMarker_RequestParams    ): _Element {

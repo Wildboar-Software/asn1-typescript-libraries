@@ -175,7 +175,7 @@ let _cached_decoder_for_ReadRequest: $.ASN1Decoder<ReadRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReadRequest} The decoded data structure.
  */
-export function _decode_ReadRequest(el: _Element) {
+export function _decode_ReadRequest(el: _Element): ReadRequest {
     if (!_cached_decoder_for_ReadRequest) {
         _cached_decoder_for_ReadRequest = function (el: _Element): ReadRequest {
             let attrCerts: OPTIONAL<AttributeCertificates>;
@@ -248,7 +248,7 @@ let _cached_encoder_for_ReadRequest: $.ASN1Encoder<ReadRequest> | null = null;
 export function _encode_ReadRequest(
     value: ReadRequest,
     elGetter: $.ASN1Encoder<ReadRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_ReadRequest) {
         _cached_encoder_for_ReadRequest = function (
             value: ReadRequest        ): _Element {

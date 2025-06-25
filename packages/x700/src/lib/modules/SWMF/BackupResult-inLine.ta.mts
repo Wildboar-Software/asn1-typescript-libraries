@@ -37,7 +37,7 @@ let _cached_decoder_for_BackupResult_inLine: $.ASN1Decoder<BackupResult_inLine> 
  * @param {_Element} el The element being decoded.
  * @returns {BackupResult_inLine} The decoded data structure.
  */
-export function _decode_BackupResult_inLine(el: _Element) {
+export function _decode_BackupResult_inLine(el: _Element): BackupResult_inLine {
     if (!_cached_decoder_for_BackupResult_inLine) {
         _cached_decoder_for_BackupResult_inLine = $._decode_inextensible_choice<BackupResult_inLine>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_BackupResult_inLine: $.ASN1Encoder<BackupResult_inLine> 
 export function _encode_BackupResult_inLine(
     value: BackupResult_inLine,
     elGetter: $.ASN1Encoder<BackupResult_inLine>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupResult_inLine) {
         _cached_encoder_for_BackupResult_inLine = $._encode_choice<BackupResult_inLine>(
             {

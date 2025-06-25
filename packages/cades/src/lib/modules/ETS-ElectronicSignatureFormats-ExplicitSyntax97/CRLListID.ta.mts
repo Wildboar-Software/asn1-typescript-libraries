@@ -102,7 +102,7 @@ let _cached_decoder_for_CRLListID: $.ASN1Decoder<CRLListID> | null = null;
  * @returns {CRLListID} The decoded data structure.
  */
 export
-function _decode_CRLListID (el: _Element) {
+function _decode_CRLListID (el: _Element): CRLListID {
     if (!_cached_decoder_for_CRLListID) { _cached_decoder_for_CRLListID = function (el: _Element): CRLListID {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 1) {
@@ -129,7 +129,7 @@ let _cached_encoder_for_CRLListID: $.ASN1Encoder<CRLListID> | null = null;
  * @returns {_Element} The CRLListID, encoded as an ASN.1 Element.
  */
 export
-function _encode_CRLListID (value: CRLListID, elGetter: $.ASN1Encoder<CRLListID>) {
+function _encode_CRLListID (value: CRLListID, elGetter: $.ASN1Encoder<CRLListID>): _Element {
     if (!_cached_encoder_for_CRLListID) { _cached_encoder_for_CRLListID = function (value: CRLListID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

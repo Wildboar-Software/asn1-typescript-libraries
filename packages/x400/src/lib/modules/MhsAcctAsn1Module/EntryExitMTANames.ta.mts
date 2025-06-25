@@ -35,7 +35,7 @@ let _cached_decoder_for_EntryExitMTANames: $.ASN1Decoder<EntryExitMTANames> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EntryExitMTANames} The decoded data structure.
  */
-export function _decode_EntryExitMTANames(el: _Element) {
+export function _decode_EntryExitMTANames(el: _Element): EntryExitMTANames {
     if (!_cached_decoder_for_EntryExitMTANames) {
         _cached_decoder_for_EntryExitMTANames = $._decodeSequenceOf<MTAName>(
             () => _decode_MTAName
@@ -56,7 +56,7 @@ let _cached_encoder_for_EntryExitMTANames: $.ASN1Encoder<EntryExitMTANames> | nu
 export function _encode_EntryExitMTANames(
     value: EntryExitMTANames,
     elGetter: $.ASN1Encoder<EntryExitMTANames>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryExitMTANames) {
         _cached_encoder_for_EntryExitMTANames = $._encodeSequenceOf<MTAName>(
             () => _encode_MTAName,

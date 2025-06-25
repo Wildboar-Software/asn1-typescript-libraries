@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageSecurityLabel: $.ASN1Decoder<MessageSecurityLabel
  * @param {_Element} el The element being decoded.
  * @returns {MessageSecurityLabel} The decoded data structure.
  */
-export function _decode_MessageSecurityLabel(el: _Element) {
+export function _decode_MessageSecurityLabel(el: _Element): MessageSecurityLabel {
     if (!_cached_decoder_for_MessageSecurityLabel) {
         _cached_decoder_for_MessageSecurityLabel = _decode_SecurityLabel;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageSecurityLabel: $.ASN1Encoder<MessageSecurityLabel
 export function _encode_MessageSecurityLabel(
     value: MessageSecurityLabel,
     elGetter: $.ASN1Encoder<MessageSecurityLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageSecurityLabel) {
         _cached_encoder_for_MessageSecurityLabel = _encode_SecurityLabel;
     }

@@ -32,7 +32,7 @@ let _cached_decoder_for_PhysicalRenditionAttributes: $.ASN1Decoder<PhysicalRendi
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalRenditionAttributes} The decoded data structure.
  */
-export function _decode_PhysicalRenditionAttributes(el: _Element) {
+export function _decode_PhysicalRenditionAttributes(el: _Element): PhysicalRenditionAttributes {
     if (!_cached_decoder_for_PhysicalRenditionAttributes) {
         _cached_decoder_for_PhysicalRenditionAttributes =
             $._decodeObjectIdentifier;
@@ -52,7 +52,7 @@ let _cached_encoder_for_PhysicalRenditionAttributes: $.ASN1Encoder<PhysicalRendi
 export function _encode_PhysicalRenditionAttributes(
     value: PhysicalRenditionAttributes,
     elGetter: $.ASN1Encoder<PhysicalRenditionAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalRenditionAttributes) {
         _cached_encoder_for_PhysicalRenditionAttributes =
             $._encodeObjectIdentifier;

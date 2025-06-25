@@ -121,7 +121,7 @@ let _cached_decoder_for_IA5TextParameters: $.ASN1Decoder<IA5TextParameters> | nu
  * @param {_Element} el The element being decoded.
  * @returns {IA5TextParameters} The decoded data structure.
  */
-export function _decode_IA5TextParameters(el: _Element) {
+export function _decode_IA5TextParameters(el: _Element): IA5TextParameters {
     if (!_cached_decoder_for_IA5TextParameters) {
         _cached_decoder_for_IA5TextParameters = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_IA5TextParameters: $.ASN1Encoder<IA5TextParameters> | nu
 export function _encode_IA5TextParameters(
     value: IA5TextParameters,
     elGetter: $.ASN1Encoder<IA5TextParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_IA5TextParameters) {
         _cached_encoder_for_IA5TextParameters = function (
             value: IA5TextParameters        ): _Element {

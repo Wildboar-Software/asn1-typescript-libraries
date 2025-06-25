@@ -38,7 +38,7 @@ let _cached_decoder_for_AlarmRecordPtrList: $.ASN1Decoder<AlarmRecordPtrList> | 
  * @param {_Element} el The element being decoded.
  * @returns {AlarmRecordPtrList} The decoded data structure.
  */
-export function _decode_AlarmRecordPtrList(el: _Element) {
+export function _decode_AlarmRecordPtrList(el: _Element): AlarmRecordPtrList {
     if (!_cached_decoder_for_AlarmRecordPtrList) {
         _cached_decoder_for_AlarmRecordPtrList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_AlarmRecordPtrList: $.ASN1Encoder<AlarmRecordPtrList> | 
 export function _encode_AlarmRecordPtrList(
     value: AlarmRecordPtrList,
     elGetter: $.ASN1Encoder<AlarmRecordPtrList>
-) {
+): _Element {
     if (!_cached_encoder_for_AlarmRecordPtrList) {
         _cached_encoder_for_AlarmRecordPtrList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

@@ -35,7 +35,7 @@ let _cached_decoder_for_ObsoletedEDIMsField: $.ASN1Decoder<ObsoletedEDIMsField> 
  * @param {_Element} el The element being decoded.
  * @returns {ObsoletedEDIMsField} The decoded data structure.
  */
-export function _decode_ObsoletedEDIMsField(el: _Element) {
+export function _decode_ObsoletedEDIMsField(el: _Element): ObsoletedEDIMsField {
     if (!_cached_decoder_for_ObsoletedEDIMsField) {
         _cached_decoder_for_ObsoletedEDIMsField = $._decodeSequenceOf<ObsoletedEDIMsSubfield>(
             () => _decode_ObsoletedEDIMsSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_ObsoletedEDIMsField: $.ASN1Encoder<ObsoletedEDIMsField> 
 export function _encode_ObsoletedEDIMsField(
     value: ObsoletedEDIMsField,
     elGetter: $.ASN1Encoder<ObsoletedEDIMsField>
-) {
+): _Element {
     if (!_cached_encoder_for_ObsoletedEDIMsField) {
         _cached_encoder_for_ObsoletedEDIMsField = $._encodeSequenceOf<ObsoletedEDIMsSubfield>(
             () => _encode_ObsoletedEDIMsSubfield,

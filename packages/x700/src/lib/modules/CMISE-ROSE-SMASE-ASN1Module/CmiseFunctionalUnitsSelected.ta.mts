@@ -35,7 +35,7 @@ let _cached_decoder_for_CmiseFunctionalUnitsSelected: $.ASN1Decoder<CmiseFunctio
  * @param {_Element} el The element being decoded.
  * @returns {CmiseFunctionalUnitsSelected} The decoded data structure.
  */
-export function _decode_CmiseFunctionalUnitsSelected(el: _Element) {
+export function _decode_CmiseFunctionalUnitsSelected(el: _Element): CmiseFunctionalUnitsSelected {
     if (!_cached_decoder_for_CmiseFunctionalUnitsSelected) {
         _cached_decoder_for_CmiseFunctionalUnitsSelected = _decode_FunctionalUnits;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_CmiseFunctionalUnitsSelected: $.ASN1Encoder<CmiseFunctio
 export function _encode_CmiseFunctionalUnitsSelected(
     value: CmiseFunctionalUnitsSelected,
     elGetter: $.ASN1Encoder<CmiseFunctionalUnitsSelected>
-) {
+): _Element {
     if (!_cached_encoder_for_CmiseFunctionalUnitsSelected) {
         _cached_encoder_for_CmiseFunctionalUnitsSelected = _encode_FunctionalUnits;
     }

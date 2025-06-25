@@ -34,7 +34,7 @@ let _cached_decoder_for_NotUnderstood: $.ASN1Decoder<NotUnderstood> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {NotUnderstood} The decoded data structure.
  */
-export function _decode_NotUnderstood(el: _Element) {
+export function _decode_NotUnderstood(el: _Element): NotUnderstood {
   if (!_cached_decoder_for_NotUnderstood) {
     _cached_decoder_for_NotUnderstood = _decode_QName;
   }
@@ -55,7 +55,7 @@ let _cached_encoder_for_NotUnderstood: $.ASN1Encoder<NotUnderstood> | null = nul
 export function _encode_NotUnderstood(
   value: NotUnderstood,
   elGetter: $.ASN1Encoder<NotUnderstood>
-) {
+): _Element {
   if (!_cached_encoder_for_NotUnderstood) {
     _cached_encoder_for_NotUnderstood = _encode_QName;
   }

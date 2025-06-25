@@ -38,7 +38,7 @@ let _cached_decoder_for_Channels: $.ASN1Decoder<Channels> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Channels} The decoded data structure.
  */
-export function _decode_Channels(el: _Element) {
+export function _decode_Channels(el: _Element): Channels {
     if (!_cached_decoder_for_Channels) {
         _cached_decoder_for_Channels = $._decodeSetOf<Channel>(
             () => _decode_Channel
@@ -61,7 +61,7 @@ let _cached_encoder_for_Channels: $.ASN1Encoder<Channels> | null = null;
 export function _encode_Channels(
     value: Channels,
     elGetter: $.ASN1Encoder<Channels>
-) {
+): _Element {
     if (!_cached_encoder_for_Channels) {
         _cached_encoder_for_Channels = $._encodeSetOf<Channel>(
             () => _encode_Channel,

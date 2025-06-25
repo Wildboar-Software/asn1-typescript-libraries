@@ -38,7 +38,7 @@ let _cached_decoder_for_TpsInGtpList: $.ASN1Decoder<TpsInGtpList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TpsInGtpList} The decoded data structure.
  */
-export function _decode_TpsInGtpList(el: _Element) {
+export function _decode_TpsInGtpList(el: _Element): TpsInGtpList {
     if (!_cached_decoder_for_TpsInGtpList) {
         _cached_decoder_for_TpsInGtpList = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_TpsInGtpList: $.ASN1Encoder<TpsInGtpList> | null = null;
 export function _encode_TpsInGtpList(
     value: TpsInGtpList,
     elGetter: $.ASN1Encoder<TpsInGtpList>
-) {
+): _Element {
     if (!_cached_encoder_for_TpsInGtpList) {
         _cached_encoder_for_TpsInGtpList = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

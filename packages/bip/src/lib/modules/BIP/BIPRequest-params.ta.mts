@@ -382,7 +382,7 @@ let _cached_decoder_for_BIPRequest_params: $.ASN1Decoder<BIPRequest_params> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BIPRequest_params} The decoded data structure.
  */
-export function _decode_BIPRequest_params(el: _Element) {
+export function _decode_BIPRequest_params(el: _Element): BIPRequest_params {
   if (!_cached_decoder_for_BIPRequest_params) {
     _cached_decoder_for_BIPRequest_params = $._decode_extensible_choice<BIPRequest_params>(
       {
@@ -511,7 +511,7 @@ let _cached_encoder_for_BIPRequest_params: $.ASN1Encoder<BIPRequest_params> | nu
 export function _encode_BIPRequest_params(
   value: BIPRequest_params,
   elGetter: $.ASN1Encoder<BIPRequest_params>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPRequest_params) {
     _cached_encoder_for_BIPRequest_params = $._encode_choice<BIPRequest_params>(
       {

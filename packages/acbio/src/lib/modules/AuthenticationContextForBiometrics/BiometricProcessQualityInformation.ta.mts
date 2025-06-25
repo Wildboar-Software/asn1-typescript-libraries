@@ -47,7 +47,7 @@ let _cached_decoder_for_BiometricProcessQualityInformation: $.ASN1Decoder<Biomet
  * @param {_Element} el The element being decoded.
  * @returns {BiometricProcessQualityInformation} The decoded data structure.
  */
-export function _decode_BiometricProcessQualityInformation(el: _Element) {
+export function _decode_BiometricProcessQualityInformation(el: _Element): BiometricProcessQualityInformation {
     if (!_cached_decoder_for_BiometricProcessQualityInformation) {
         _cached_decoder_for_BiometricProcessQualityInformation = $._decode_inextensible_choice<BiometricProcessQualityInformation>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_BiometricProcessQualityInformation: $.ASN1Encoder<Biomet
 export function _encode_BiometricProcessQualityInformation(
     value: BiometricProcessQualityInformation,
     elGetter: $.ASN1Encoder<BiometricProcessQualityInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BiometricProcessQualityInformation) {
         _cached_encoder_for_BiometricProcessQualityInformation = $._encode_choice<BiometricProcessQualityInformation>(
             {

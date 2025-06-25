@@ -36,7 +36,7 @@ let _cached_decoder_for_TestPatternSequence: $.ASN1Decoder<TestPatternSequence> 
  * @param {_Element} el The element being decoded.
  * @returns {TestPatternSequence} The decoded data structure.
  */
-export function _decode_TestPatternSequence(el: _Element) {
+export function _decode_TestPatternSequence(el: _Element): TestPatternSequence {
     if (!_cached_decoder_for_TestPatternSequence) {
         _cached_decoder_for_TestPatternSequence = $._decodeSequenceOf<TestPattern>(
             () => _decode_TestPattern
@@ -57,7 +57,7 @@ let _cached_encoder_for_TestPatternSequence: $.ASN1Encoder<TestPatternSequence> 
 export function _encode_TestPatternSequence(
     value: TestPatternSequence,
     elGetter: $.ASN1Encoder<TestPatternSequence>
-) {
+): _Element {
     if (!_cached_encoder_for_TestPatternSequence) {
         _cached_encoder_for_TestPatternSequence = $._encodeSequenceOf<TestPattern>(
             () => _encode_TestPattern,

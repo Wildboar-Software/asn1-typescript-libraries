@@ -45,7 +45,7 @@ let _cached_decoder_for_SecurityDomainAuthorityName: $.ASN1Decoder<SecurityDomai
  * @param {_Element} el The element being decoded.
  * @returns {SecurityDomainAuthorityName} The decoded data structure.
  */
-export function _decode_SecurityDomainAuthorityName(el: _Element) {
+export function _decode_SecurityDomainAuthorityName(el: _Element): SecurityDomainAuthorityName {
     if (!_cached_decoder_for_SecurityDomainAuthorityName) {
         _cached_decoder_for_SecurityDomainAuthorityName = $._decode_inextensible_choice<SecurityDomainAuthorityName>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_SecurityDomainAuthorityName: $.ASN1Encoder<SecurityDomai
 export function _encode_SecurityDomainAuthorityName(
     value: SecurityDomainAuthorityName,
     elGetter: $.ASN1Encoder<SecurityDomainAuthorityName>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityDomainAuthorityName) {
         _cached_encoder_for_SecurityDomainAuthorityName = $._encode_choice<SecurityDomainAuthorityName>(
             {

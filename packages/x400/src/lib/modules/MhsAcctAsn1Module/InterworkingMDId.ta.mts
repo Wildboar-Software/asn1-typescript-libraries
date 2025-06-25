@@ -35,7 +35,7 @@ let _cached_decoder_for_InterworkingMDId: $.ASN1Decoder<InterworkingMDId> | null
  * @param {_Element} el The element being decoded.
  * @returns {InterworkingMDId} The decoded data structure.
  */
-export function _decode_InterworkingMDId(el: _Element) {
+export function _decode_InterworkingMDId(el: _Element): InterworkingMDId {
     if (!_cached_decoder_for_InterworkingMDId) {
         _cached_decoder_for_InterworkingMDId = _decode_SimpleNameType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_InterworkingMDId: $.ASN1Encoder<InterworkingMDId> | null
 export function _encode_InterworkingMDId(
     value: InterworkingMDId,
     elGetter: $.ASN1Encoder<InterworkingMDId>
-) {
+): _Element {
     if (!_cached_encoder_for_InterworkingMDId) {
         _cached_encoder_for_InterworkingMDId = _encode_SimpleNameType;
     }

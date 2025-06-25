@@ -33,7 +33,7 @@ let _cached_decoder_for_SNMPv2_Trap_PDU: $.ASN1Decoder<SNMPv2_Trap_PDU> | null =
  * @returns {SNMPv2_Trap_PDU} The decoded data structure.
  */
 export
-function _decode_SNMPv2_Trap_PDU (el: _Element) {
+function _decode_SNMPv2_Trap_PDU (el: _Element): SNMPv2_Trap_PDU {
     if (!_cached_decoder_for_SNMPv2_Trap_PDU) { _cached_decoder_for_SNMPv2_Trap_PDU = $._decode_implicit<SNMPv2_Trap_PDU>(() => _decode_PDU); }
     return _cached_decoder_for_SNMPv2_Trap_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SNMPv2_Trap_PDU: $.ASN1Encoder<SNMPv2_Trap_PDU> | null =
  * @returns {_Element} The SNMPv2_Trap_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_SNMPv2_Trap_PDU (value: SNMPv2_Trap_PDU, elGetter: $.ASN1Encoder<SNMPv2_Trap_PDU>) {
+function _encode_SNMPv2_Trap_PDU (value: SNMPv2_Trap_PDU, elGetter: $.ASN1Encoder<SNMPv2_Trap_PDU>): _Element {
     if (!_cached_encoder_for_SNMPv2_Trap_PDU) { _cached_encoder_for_SNMPv2_Trap_PDU = $._encode_implicit(_TagClass.context, 7, () => _encode_PDU, $.BER); }
     return _cached_encoder_for_SNMPv2_Trap_PDU(value, elGetter);
 }

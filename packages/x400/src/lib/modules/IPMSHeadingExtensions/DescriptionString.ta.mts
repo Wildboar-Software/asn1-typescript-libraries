@@ -35,7 +35,7 @@ let _cached_decoder_for_DescriptionString: $.ASN1Decoder<DescriptionString> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DescriptionString} The decoded data structure.
  */
-export function _decode_DescriptionString(el: _Element) {
+export function _decode_DescriptionString(el: _Element): DescriptionString {
     if (!_cached_decoder_for_DescriptionString) {
         _cached_decoder_for_DescriptionString = _decode_UniversalOrBMPString;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DescriptionString: $.ASN1Encoder<DescriptionString> | nu
 export function _encode_DescriptionString(
     value: DescriptionString,
     elGetter: $.ASN1Encoder<DescriptionString>
-) {
+): _Element {
     if (!_cached_encoder_for_DescriptionString) {
         _cached_encoder_for_DescriptionString = _encode_UniversalOrBMPString;
     }

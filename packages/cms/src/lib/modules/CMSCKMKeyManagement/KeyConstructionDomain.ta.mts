@@ -142,7 +142,7 @@ let _cached_decoder_for_KeyConstructionDomain: $.ASN1Decoder<KeyConstructionDoma
  * @param {_Element} el The element being decoded.
  * @returns {KeyConstructionDomain} The decoded data structure.
  */
-export function _decode_KeyConstructionDomain(el: _Element) {
+export function _decode_KeyConstructionDomain(el: _Element): KeyConstructionDomain {
     if (!_cached_decoder_for_KeyConstructionDomain) {
         _cached_decoder_for_KeyConstructionDomain = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_KeyConstructionDomain: $.ASN1Encoder<KeyConstructionDoma
 export function _encode_KeyConstructionDomain(
     value: KeyConstructionDomain,
     elGetter: $.ASN1Encoder<KeyConstructionDomain>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyConstructionDomain) {
         _cached_encoder_for_KeyConstructionDomain = function (
             value: KeyConstructionDomain        ): _Element {

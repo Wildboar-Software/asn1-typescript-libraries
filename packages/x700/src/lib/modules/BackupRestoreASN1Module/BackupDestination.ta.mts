@@ -44,7 +44,7 @@ let _cached_decoder_for_BackupDestination: $.ASN1Decoder<BackupDestination> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BackupDestination} The decoded data structure.
  */
-export function _decode_BackupDestination(el: _Element) {
+export function _decode_BackupDestination(el: _Element): BackupDestination {
     if (!_cached_decoder_for_BackupDestination) {
         _cached_decoder_for_BackupDestination = $._decode_inextensible_choice<BackupDestination>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_BackupDestination: $.ASN1Encoder<BackupDestination> | nu
 export function _encode_BackupDestination(
     value: BackupDestination,
     elGetter: $.ASN1Encoder<BackupDestination>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupDestination) {
         _cached_encoder_for_BackupDestination = $._encode_choice<BackupDestination>(
             {

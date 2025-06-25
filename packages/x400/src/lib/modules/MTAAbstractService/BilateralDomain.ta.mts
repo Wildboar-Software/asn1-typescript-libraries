@@ -121,7 +121,7 @@ let _cached_decoder_for_BilateralDomain: $.ASN1Decoder<BilateralDomain> | null =
  * @param {_Element} el The element being decoded.
  * @returns {BilateralDomain} The decoded data structure.
  */
-export function _decode_BilateralDomain(el: _Element) {
+export function _decode_BilateralDomain(el: _Element): BilateralDomain {
     if (!_cached_decoder_for_BilateralDomain) {
         _cached_decoder_for_BilateralDomain = function (
             el: _Element
@@ -158,7 +158,7 @@ let _cached_encoder_for_BilateralDomain: $.ASN1Encoder<BilateralDomain> | null =
 export function _encode_BilateralDomain(
     value: BilateralDomain,
     elGetter: $.ASN1Encoder<BilateralDomain>
-) {
+): _Element {
     if (!_cached_encoder_for_BilateralDomain) {
         _cached_encoder_for_BilateralDomain = function (
             value: BilateralDomain        ): _Element {

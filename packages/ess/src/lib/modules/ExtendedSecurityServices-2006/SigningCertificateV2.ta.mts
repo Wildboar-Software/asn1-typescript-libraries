@@ -120,7 +120,7 @@ let _cached_decoder_for_SigningCertificateV2: $.ASN1Decoder<SigningCertificateV2
  * @param {_Element} el The element being decoded.
  * @returns {SigningCertificateV2} The decoded data structure.
  */
-export function _decode_SigningCertificateV2(el: _Element) {
+export function _decode_SigningCertificateV2(el: _Element): SigningCertificateV2 {
     if (!_cached_decoder_for_SigningCertificateV2) {
         _cached_decoder_for_SigningCertificateV2 = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_SigningCertificateV2: $.ASN1Encoder<SigningCertificateV2
 export function _encode_SigningCertificateV2(
     value: SigningCertificateV2,
     elGetter: $.ASN1Encoder<SigningCertificateV2>
-) {
+): _Element {
     if (!_cached_encoder_for_SigningCertificateV2) {
         _cached_encoder_for_SigningCertificateV2 = function (
             value: SigningCertificateV2        ): _Element {

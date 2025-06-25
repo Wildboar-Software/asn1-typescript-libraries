@@ -42,7 +42,7 @@ let _cached_decoder_for_TroubleDetectionTime: $.ASN1Decoder<TroubleDetectionTime
  * @param {_Element} el The element being decoded.
  * @returns {TroubleDetectionTime} The decoded data structure.
  */
-export function _decode_TroubleDetectionTime(el: _Element) {
+export function _decode_TroubleDetectionTime(el: _Element): TroubleDetectionTime {
     if (!_cached_decoder_for_TroubleDetectionTime) {
         _cached_decoder_for_TroubleDetectionTime = $._decode_extensible_choice<TroubleDetectionTime>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_TroubleDetectionTime: $.ASN1Encoder<TroubleDetectionTime
 export function _encode_TroubleDetectionTime(
     value: TroubleDetectionTime,
     elGetter: $.ASN1Encoder<TroubleDetectionTime>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleDetectionTime) {
         _cached_encoder_for_TroubleDetectionTime = $._encode_choice<TroubleDetectionTime>(
             {

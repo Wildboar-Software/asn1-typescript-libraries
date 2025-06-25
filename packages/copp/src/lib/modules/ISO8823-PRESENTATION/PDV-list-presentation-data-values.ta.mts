@@ -39,7 +39,7 @@ let _cached_decoder_for_PDV_list_presentation_data_values: $.ASN1Decoder<PDV_lis
  * @param {_Element} el The element being decoded.
  * @returns {PDV_list_presentation_data_values} The decoded data structure.
  */
-export function _decode_PDV_list_presentation_data_values(el: _Element) {
+export function _decode_PDV_list_presentation_data_values(el: _Element): PDV_list_presentation_data_values {
     if (!_cached_decoder_for_PDV_list_presentation_data_values) {
         _cached_decoder_for_PDV_list_presentation_data_values = $._decode_inextensible_choice<PDV_list_presentation_data_values>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_PDV_list_presentation_data_values: $.ASN1Encoder<PDV_lis
 export function _encode_PDV_list_presentation_data_values(
     value: PDV_list_presentation_data_values,
     elGetter: $.ASN1Encoder<PDV_list_presentation_data_values>
-) {
+): _Element {
     if (!_cached_encoder_for_PDV_list_presentation_data_values) {
         _cached_encoder_for_PDV_list_presentation_data_values = $._encode_choice<PDV_list_presentation_data_values>(
             {

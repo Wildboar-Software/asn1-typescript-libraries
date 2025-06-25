@@ -52,7 +52,7 @@ let _cached_decoder_for_ActionErrorInfo_errorInfo: $.ASN1Decoder<ActionErrorInfo
  * @param {_Element} el The element being decoded.
  * @returns {ActionErrorInfo_errorInfo} The decoded data structure.
  */
-export function _decode_ActionErrorInfo_errorInfo(el: _Element) {
+export function _decode_ActionErrorInfo_errorInfo(el: _Element): ActionErrorInfo_errorInfo {
   if (!_cached_decoder_for_ActionErrorInfo_errorInfo) {
     _cached_decoder_for_ActionErrorInfo_errorInfo = $._decode_inextensible_choice<ActionErrorInfo_errorInfo>(
       {
@@ -87,7 +87,7 @@ let _cached_encoder_for_ActionErrorInfo_errorInfo: $.ASN1Encoder<ActionErrorInfo
 export function _encode_ActionErrorInfo_errorInfo(
   value: ActionErrorInfo_errorInfo,
   elGetter: $.ASN1Encoder<ActionErrorInfo_errorInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_ActionErrorInfo_errorInfo) {
     _cached_encoder_for_ActionErrorInfo_errorInfo = $._encode_choice<ActionErrorInfo_errorInfo>(
       {

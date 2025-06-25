@@ -139,7 +139,7 @@ let _cached_decoder_for_GUISelectEvent_AcknowledgementParams: $.ASN1Decoder<GUIS
  * @param {_Element} el The element being decoded.
  * @returns {GUISelectEvent_AcknowledgementParams} The decoded data structure.
  */
-export function _decode_GUISelectEvent_AcknowledgementParams(el: _Element) {
+export function _decode_GUISelectEvent_AcknowledgementParams(el: _Element): GUISelectEvent_AcknowledgementParams {
   if (!_cached_decoder_for_GUISelectEvent_AcknowledgementParams) {
     _cached_decoder_for_GUISelectEvent_AcknowledgementParams = function (
       el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_GUISelectEvent_AcknowledgementParams: $.ASN1Encoder<GUIS
 export function _encode_GUISelectEvent_AcknowledgementParams(
   value: GUISelectEvent_AcknowledgementParams,
   elGetter: $.ASN1Encoder<GUISelectEvent_AcknowledgementParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUISelectEvent_AcknowledgementParams) {
     _cached_encoder_for_GUISelectEvent_AcknowledgementParams = function (
       value: GUISelectEvent_AcknowledgementParams    ): _Element {

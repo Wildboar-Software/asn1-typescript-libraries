@@ -37,7 +37,7 @@ let _cached_decoder_for_NormalizedString: $.ASN1Decoder<NormalizedString> | null
  * @param {_Element} el The element being decoded.
  * @returns {NormalizedString} The decoded data structure.
  */
-export function _decode_NormalizedString(el: _Element) {
+export function _decode_NormalizedString(el: _Element): NormalizedString {
   if (!_cached_decoder_for_NormalizedString) {
     _cached_decoder_for_NormalizedString = _decode_String;
   }
@@ -58,7 +58,7 @@ let _cached_encoder_for_NormalizedString: $.ASN1Encoder<NormalizedString> | null
 export function _encode_NormalizedString(
   value: NormalizedString,
   elGetter: $.ASN1Encoder<NormalizedString>
-) {
+): _Element {
   if (!_cached_encoder_for_NormalizedString) {
     _cached_encoder_for_NormalizedString = _encode_String;
   }

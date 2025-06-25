@@ -120,7 +120,7 @@ let _cached_decoder_for_EDIMBodyPart: $.ASN1Decoder<EDIMBodyPart> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EDIMBodyPart} The decoded data structure.
  */
-export function _decode_EDIMBodyPart(el: _Element) {
+export function _decode_EDIMBodyPart(el: _Element): EDIMBodyPart {
     if (!_cached_decoder_for_EDIMBodyPart) {
         _cached_decoder_for_EDIMBodyPart = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_EDIMBodyPart: $.ASN1Encoder<EDIMBodyPart> | null = null;
 export function _encode_EDIMBodyPart(
     value: EDIMBodyPart,
     elGetter: $.ASN1Encoder<EDIMBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIMBodyPart) {
         _cached_encoder_for_EDIMBodyPart = function (
             value: EDIMBodyPart        ): _Element {

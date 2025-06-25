@@ -223,7 +223,7 @@ let _cached_decoder_for_Path_Access_Passwords_Item: $.ASN1Decoder<Path_Access_Pa
  * @param {_Element} el The element being decoded.
  * @returns {Path_Access_Passwords_Item} The decoded data structure.
  */
-export function _decode_Path_Access_Passwords_Item(el: _Element) {
+export function _decode_Path_Access_Passwords_Item(el: _Element): Path_Access_Passwords_Item {
   if (!_cached_decoder_for_Path_Access_Passwords_Item) {
     _cached_decoder_for_Path_Access_Passwords_Item = function (
       el: _Element
@@ -317,7 +317,7 @@ let _cached_encoder_for_Path_Access_Passwords_Item: $.ASN1Encoder<Path_Access_Pa
 export function _encode_Path_Access_Passwords_Item(
   value: Path_Access_Passwords_Item,
   elGetter: $.ASN1Encoder<Path_Access_Passwords_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Path_Access_Passwords_Item) {
     _cached_encoder_for_Path_Access_Passwords_Item = function (
       value: Path_Access_Passwords_Item    ): _Element {

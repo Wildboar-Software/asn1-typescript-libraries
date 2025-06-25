@@ -45,7 +45,7 @@ let _cached_decoder_for_IndicatedTests: $.ASN1Decoder<IndicatedTests> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {IndicatedTests} The decoded data structure.
  */
-export function _decode_IndicatedTests(el: _Element) {
+export function _decode_IndicatedTests(el: _Element): IndicatedTests {
     if (!_cached_decoder_for_IndicatedTests) {
         _cached_decoder_for_IndicatedTests = $._decode_inextensible_choice<IndicatedTests>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_IndicatedTests: $.ASN1Encoder<IndicatedTests> | null = n
 export function _encode_IndicatedTests(
     value: IndicatedTests,
     elGetter: $.ASN1Encoder<IndicatedTests>
-) {
+): _Element {
     if (!_cached_encoder_for_IndicatedTests) {
         _cached_encoder_for_IndicatedTests = $._encode_choice<IndicatedTests>(
             {

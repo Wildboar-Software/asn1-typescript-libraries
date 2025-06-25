@@ -120,7 +120,7 @@ let _cached_decoder_for_ToBeSigned: $.ASN1Decoder<ToBeSigned> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ToBeSigned} The decoded data structure.
  */
-export function _decode_ToBeSigned(el: _Element) {
+export function _decode_ToBeSigned(el: _Element): ToBeSigned {
     if (!_cached_decoder_for_ToBeSigned) {
         _cached_decoder_for_ToBeSigned = function (el: _Element): ToBeSigned {
             const sequence: _Element[] = el.sequence;
@@ -159,7 +159,7 @@ let _cached_encoder_for_ToBeSigned: $.ASN1Encoder<ToBeSigned> | null = null;
 export function _encode_ToBeSigned(
     value: ToBeSigned,
     elGetter: $.ASN1Encoder<ToBeSigned>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeSigned) {
         _cached_encoder_for_ToBeSigned = function (
             value: ToBeSigned        ): _Element {

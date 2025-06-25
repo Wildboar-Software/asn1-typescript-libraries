@@ -117,7 +117,7 @@ let _cached_decoder_for_IPMSExtension: $.ASN1Decoder<IPMSExtension> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {IPMSExtension} The decoded data structure.
  */
-export function _decode_IPMSExtension(el: _Element) {
+export function _decode_IPMSExtension(el: _Element): IPMSExtension {
     if (!_cached_decoder_for_IPMSExtension) {
         _cached_decoder_for_IPMSExtension = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_IPMSExtension: $.ASN1Encoder<IPMSExtension> | null = nul
 export function _encode_IPMSExtension(
     value: IPMSExtension,
     elGetter: $.ASN1Encoder<IPMSExtension>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMSExtension) {
         _cached_encoder_for_IPMSExtension = function (
             value: IPMSExtension        ): _Element {

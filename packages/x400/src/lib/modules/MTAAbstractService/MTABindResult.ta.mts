@@ -49,7 +49,7 @@ let _cached_decoder_for_MTABindResult: $.ASN1Decoder<MTABindResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MTABindResult} The decoded data structure.
  */
-export function _decode_MTABindResult(el: _Element) {
+export function _decode_MTABindResult(el: _Element): MTABindResult {
     if (!_cached_decoder_for_MTABindResult) {
         _cached_decoder_for_MTABindResult = $._decode_inextensible_choice<MTABindResult>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_MTABindResult: $.ASN1Encoder<MTABindResult> | null = nul
 export function _encode_MTABindResult(
     value: MTABindResult,
     elGetter: $.ASN1Encoder<MTABindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_MTABindResult) {
         _cached_encoder_for_MTABindResult = $._encode_choice<MTABindResult>(
             {

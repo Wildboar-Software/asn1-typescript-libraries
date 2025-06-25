@@ -116,7 +116,7 @@ let _cached_decoder_for_BioAPI_VERSION: $.ASN1Decoder<BioAPI_VERSION> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_VERSION} The decoded data structure.
  */
-export function _decode_BioAPI_VERSION(el: _Element) {
+export function _decode_BioAPI_VERSION(el: _Element): BioAPI_VERSION {
   if (!_cached_decoder_for_BioAPI_VERSION) {
     _cached_decoder_for_BioAPI_VERSION = function (
       el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_BioAPI_VERSION: $.ASN1Encoder<BioAPI_VERSION> | null = n
 export function _encode_BioAPI_VERSION(
   value: BioAPI_VERSION,
   elGetter: $.ASN1Encoder<BioAPI_VERSION>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_VERSION) {
     _cached_encoder_for_BioAPI_VERSION = function (
       value: BioAPI_VERSION    ): _Element {

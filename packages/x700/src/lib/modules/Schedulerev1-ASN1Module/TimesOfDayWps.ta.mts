@@ -45,7 +45,7 @@ let _cached_decoder_for_TimesOfDayWps: $.ASN1Decoder<TimesOfDayWps> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TimesOfDayWps} The decoded data structure.
  */
-export function _decode_TimesOfDayWps(el: _Element) {
+export function _decode_TimesOfDayWps(el: _Element): TimesOfDayWps {
     if (!_cached_decoder_for_TimesOfDayWps) {
         _cached_decoder_for_TimesOfDayWps = $._decode_inextensible_choice<TimesOfDayWps>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_TimesOfDayWps: $.ASN1Encoder<TimesOfDayWps> | null = nul
 export function _encode_TimesOfDayWps(
     value: TimesOfDayWps,
     elGetter: $.ASN1Encoder<TimesOfDayWps>
-) {
+): _Element {
     if (!_cached_encoder_for_TimesOfDayWps) {
         _cached_encoder_for_TimesOfDayWps = $._encode_choice<TimesOfDayWps>(
             {

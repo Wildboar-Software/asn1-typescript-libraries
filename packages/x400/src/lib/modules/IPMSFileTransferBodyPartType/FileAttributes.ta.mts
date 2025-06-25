@@ -388,7 +388,7 @@ let _cached_decoder_for_FileAttributes: $.ASN1Decoder<FileAttributes> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {FileAttributes} The decoded data structure.
  */
-export function _decode_FileAttributes(el: _Element) {
+export function _decode_FileAttributes(el: _Element): FileAttributes {
     if (!_cached_decoder_for_FileAttributes) {
         _cached_decoder_for_FileAttributes = function (
             el: _Element
@@ -550,7 +550,7 @@ let _cached_encoder_for_FileAttributes: $.ASN1Encoder<FileAttributes> | null = n
 export function _encode_FileAttributes(
     value: FileAttributes,
     elGetter: $.ASN1Encoder<FileAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_FileAttributes) {
         _cached_encoder_for_FileAttributes = function (
             value: FileAttributes        ): _Element {

@@ -243,7 +243,7 @@ let _cached_decoder_for_MSProbeSubmissionArgument: $.ASN1Decoder<MSProbeSubmissi
  * @param {_Element} el The element being decoded.
  * @returns {MSProbeSubmissionArgument} The decoded data structure.
  */
-export function _decode_MSProbeSubmissionArgument(el: _Element) {
+export function _decode_MSProbeSubmissionArgument(el: _Element): MSProbeSubmissionArgument {
     if (!_cached_decoder_for_MSProbeSubmissionArgument) {
         _cached_decoder_for_MSProbeSubmissionArgument = function (
             el: _Element
@@ -342,7 +342,7 @@ let _cached_encoder_for_MSProbeSubmissionArgument: $.ASN1Encoder<MSProbeSubmissi
 export function _encode_MSProbeSubmissionArgument(
     value: MSProbeSubmissionArgument,
     elGetter: $.ASN1Encoder<MSProbeSubmissionArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_MSProbeSubmissionArgument) {
         _cached_encoder_for_MSProbeSubmissionArgument = function (
             value: MSProbeSubmissionArgument        ): _Element {

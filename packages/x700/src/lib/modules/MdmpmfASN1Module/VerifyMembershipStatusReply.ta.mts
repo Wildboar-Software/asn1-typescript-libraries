@@ -129,7 +129,7 @@ let _cached_decoder_for_VerifyMembershipStatusReply: $.ASN1Decoder<VerifyMembers
  * @param {_Element} el The element being decoded.
  * @returns {VerifyMembershipStatusReply} The decoded data structure.
  */
-export function _decode_VerifyMembershipStatusReply(el: _Element) {
+export function _decode_VerifyMembershipStatusReply(el: _Element): VerifyMembershipStatusReply {
     if (!_cached_decoder_for_VerifyMembershipStatusReply) {
         _cached_decoder_for_VerifyMembershipStatusReply = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_VerifyMembershipStatusReply: $.ASN1Encoder<VerifyMembers
 export function _encode_VerifyMembershipStatusReply(
     value: VerifyMembershipStatusReply,
     elGetter: $.ASN1Encoder<VerifyMembershipStatusReply>
-) {
+): _Element {
     if (!_cached_encoder_for_VerifyMembershipStatusReply) {
         _cached_encoder_for_VerifyMembershipStatusReply = function (
             value: VerifyMembershipStatusReply        ): _Element {

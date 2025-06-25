@@ -50,7 +50,7 @@ let _cached_decoder_for_ManagerSearchKey: $.ASN1Decoder<ManagerSearchKey> | null
  * @param {_Element} el The element being decoded.
  * @returns {ManagerSearchKey} The decoded data structure.
  */
-export function _decode_ManagerSearchKey(el: _Element) {
+export function _decode_ManagerSearchKey(el: _Element): ManagerSearchKey {
     if (!_cached_decoder_for_ManagerSearchKey) {
         _cached_decoder_for_ManagerSearchKey = $._decode_extensible_choice<ManagerSearchKey>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_ManagerSearchKey: $.ASN1Encoder<ManagerSearchKey> | null
 export function _encode_ManagerSearchKey(
     value: ManagerSearchKey,
     elGetter: $.ASN1Encoder<ManagerSearchKey>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagerSearchKey) {
         _cached_encoder_for_ManagerSearchKey = $._encode_choice<ManagerSearchKey>(
             {

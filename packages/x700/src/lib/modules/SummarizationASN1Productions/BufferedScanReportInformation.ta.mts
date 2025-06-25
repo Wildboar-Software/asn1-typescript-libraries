@@ -225,7 +225,7 @@ let _cached_decoder_for_BufferedScanReportInformation: $.ASN1Decoder<BufferedSca
  * @param {_Element} el The element being decoded.
  * @returns {BufferedScanReportInformation} The decoded data structure.
  */
-export function _decode_BufferedScanReportInformation(el: _Element) {
+export function _decode_BufferedScanReportInformation(el: _Element): BufferedScanReportInformation {
     if (!_cached_decoder_for_BufferedScanReportInformation) {
         _cached_decoder_for_BufferedScanReportInformation = function (
             el: _Element
@@ -307,7 +307,7 @@ let _cached_encoder_for_BufferedScanReportInformation: $.ASN1Encoder<BufferedSca
 export function _encode_BufferedScanReportInformation(
     value: BufferedScanReportInformation,
     elGetter: $.ASN1Encoder<BufferedScanReportInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BufferedScanReportInformation) {
         _cached_encoder_for_BufferedScanReportInformation = function (
             value: BufferedScanReportInformation        ): _Element {

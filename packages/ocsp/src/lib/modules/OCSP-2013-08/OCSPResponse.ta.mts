@@ -128,7 +128,7 @@ let _cached_decoder_for_OCSPResponse: $.ASN1Decoder<OCSPResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OCSPResponse} The decoded data structure.
  */
-export function _decode_OCSPResponse(el: _Element) {
+export function _decode_OCSPResponse(el: _Element): OCSPResponse {
     if (!_cached_decoder_for_OCSPResponse) {
         _cached_decoder_for_OCSPResponse = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_OCSPResponse: $.ASN1Encoder<OCSPResponse> | null = null;
 export function _encode_OCSPResponse(
     value: OCSPResponse,
     elGetter: $.ASN1Encoder<OCSPResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_OCSPResponse) {
         _cached_encoder_for_OCSPResponse = function (
             value: OCSPResponse        ): _Element {

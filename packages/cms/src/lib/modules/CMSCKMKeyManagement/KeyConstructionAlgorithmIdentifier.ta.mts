@@ -26,7 +26,7 @@ let _cached_decoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Decoder<KeyCon
  * @param {_Element} el The element being decoded.
  * @returns {KeyConstructionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_KeyConstructionAlgorithmIdentifier(el: _Element) {
+export function _decode_KeyConstructionAlgorithmIdentifier(el: _Element): KeyConstructionAlgorithmIdentifier {
     if (!_cached_decoder_for_KeyConstructionAlgorithmIdentifier) {
         _cached_decoder_for_KeyConstructionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Encoder<KeyCon
 export function _encode_KeyConstructionAlgorithmIdentifier(
     value: KeyConstructionAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<KeyConstructionAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyConstructionAlgorithmIdentifier) {
         _cached_encoder_for_KeyConstructionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

@@ -165,7 +165,7 @@ let _cached_decoder_for_Element: $.ASN1Decoder<Element> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Element} The decoded data structure.
  */
-export function _decode_Element(el: _Element) {
+export function _decode_Element(el: _Element): Element {
   if (!_cached_decoder_for_Element) {
     _cached_decoder_for_Element = function (el: _Element): Element {
       let namespace_attributes: OPTIONAL<NamespaceAttribute[]>;
@@ -223,7 +223,7 @@ let _cached_encoder_for_Element: $.ASN1Encoder<Element> | null = null;
 export function _encode_Element(
   value: Element,
   elGetter: $.ASN1Encoder<Element>
-) {
+): _Element {
   if (!_cached_encoder_for_Element) {
     _cached_encoder_for_Element = function (
       value: Element    ): _Element {

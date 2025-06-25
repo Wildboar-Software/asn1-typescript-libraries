@@ -107,7 +107,7 @@ let _cached_decoder_for_DbCreate_ResponseParams: $.ASN1Decoder<DbCreate_Response
  * @param {_Element} el The element being decoded.
  * @returns {DbCreate_ResponseParams} The decoded data structure.
  */
-export function _decode_DbCreate_ResponseParams(el: _Element) {
+export function _decode_DbCreate_ResponseParams(el: _Element): DbCreate_ResponseParams {
   if (!_cached_decoder_for_DbCreate_ResponseParams) {
     _cached_decoder_for_DbCreate_ResponseParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_DbCreate_ResponseParams: $.ASN1Encoder<DbCreate_Response
 export function _encode_DbCreate_ResponseParams(
   value: DbCreate_ResponseParams,
   elGetter: $.ASN1Encoder<DbCreate_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbCreate_ResponseParams) {
     _cached_encoder_for_DbCreate_ResponseParams = function (
       value: DbCreate_ResponseParams    ): _Element {

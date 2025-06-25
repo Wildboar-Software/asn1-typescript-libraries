@@ -41,7 +41,7 @@ let _cached_decoder_for_TestSuspendResumeError_Item: $.ASN1Decoder<TestSuspendRe
  * @param {_Element} el The element being decoded.
  * @returns {TestSuspendResumeError_Item} The decoded data structure.
  */
-export function _decode_TestSuspendResumeError_Item(el: _Element) {
+export function _decode_TestSuspendResumeError_Item(el: _Element): TestSuspendResumeError_Item {
     if (!_cached_decoder_for_TestSuspendResumeError_Item) {
         _cached_decoder_for_TestSuspendResumeError_Item = $._decode_inextensible_choice<TestSuspendResumeError_Item>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_TestSuspendResumeError_Item: $.ASN1Encoder<TestSuspendRe
 export function _encode_TestSuspendResumeError_Item(
     value: TestSuspendResumeError_Item,
     elGetter: $.ASN1Encoder<TestSuspendResumeError_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_TestSuspendResumeError_Item) {
         _cached_encoder_for_TestSuspendResumeError_Item = $._encode_choice<TestSuspendResumeError_Item>(
             {

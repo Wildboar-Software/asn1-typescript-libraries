@@ -66,7 +66,7 @@ let _cached_decoder_for_OperationResult_Item: $.ASN1Decoder<OperationResult_Item
  * @param {_Element} el The element being decoded.
  * @returns {OperationResult_Item} The decoded data structure.
  */
-export function _decode_OperationResult_Item(el: _Element) {
+export function _decode_OperationResult_Item(el: _Element): OperationResult_Item {
     if (!_cached_decoder_for_OperationResult_Item) {
         _cached_decoder_for_OperationResult_Item = $._decode_inextensible_choice<OperationResult_Item>(
             {
@@ -118,7 +118,7 @@ let _cached_encoder_for_OperationResult_Item: $.ASN1Encoder<OperationResult_Item
 export function _encode_OperationResult_Item(
     value: OperationResult_Item,
     elGetter: $.ASN1Encoder<OperationResult_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationResult_Item) {
         _cached_encoder_for_OperationResult_Item = $._encode_choice<OperationResult_Item>(
             {

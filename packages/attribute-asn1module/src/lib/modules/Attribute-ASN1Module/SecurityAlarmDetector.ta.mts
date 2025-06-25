@@ -42,7 +42,7 @@ let _cached_decoder_for_SecurityAlarmDetector: $.ASN1Decoder<SecurityAlarmDetect
  * @returns {SecurityAlarmDetector} The decoded data structure.
  */
 export
-function _decode_SecurityAlarmDetector (el: _Element) {
+function _decode_SecurityAlarmDetector (el: _Element): SecurityAlarmDetector {
     if (!_cached_decoder_for_SecurityAlarmDetector) { _cached_decoder_for_SecurityAlarmDetector = $._decode_inextensible_choice<SecurityAlarmDetector>({
     "CONTEXT 0": [ "mechanism", $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier) ],
     "CONTEXT 1": [ "object", $._decode_explicit<ObjectInstance>(() => _decode_ObjectInstance) ],
@@ -61,7 +61,7 @@ let _cached_encoder_for_SecurityAlarmDetector: $.ASN1Encoder<SecurityAlarmDetect
  * @returns {_Element} The SecurityAlarmDetector, encoded as an ASN.1 Element.
  */
 export
-function _encode_SecurityAlarmDetector (value: SecurityAlarmDetector, elGetter: $.ASN1Encoder<SecurityAlarmDetector>) {
+function _encode_SecurityAlarmDetector (value: SecurityAlarmDetector, elGetter: $.ASN1Encoder<SecurityAlarmDetector>): _Element {
     if (!_cached_encoder_for_SecurityAlarmDetector) { _cached_encoder_for_SecurityAlarmDetector = $._encode_choice<SecurityAlarmDetector>({
     "mechanism": $._encode_implicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER),
     "object": $._encode_explicit(_TagClass.context, 1, () => _encode_ObjectInstance, $.BER),

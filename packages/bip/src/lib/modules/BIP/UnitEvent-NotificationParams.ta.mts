@@ -176,7 +176,7 @@ let _cached_decoder_for_UnitEvent_NotificationParams: $.ASN1Decoder<UnitEvent_No
  * @param {_Element} el The element being decoded.
  * @returns {UnitEvent_NotificationParams} The decoded data structure.
  */
-export function _decode_UnitEvent_NotificationParams(el: _Element) {
+export function _decode_UnitEvent_NotificationParams(el: _Element): UnitEvent_NotificationParams {
   if (!_cached_decoder_for_UnitEvent_NotificationParams) {
     _cached_decoder_for_UnitEvent_NotificationParams = function (
       el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_UnitEvent_NotificationParams: $.ASN1Encoder<UnitEvent_No
 export function _encode_UnitEvent_NotificationParams(
   value: UnitEvent_NotificationParams,
   elGetter: $.ASN1Encoder<UnitEvent_NotificationParams>
-) {
+): _Element {
   if (!_cached_encoder_for_UnitEvent_NotificationParams) {
     _cached_encoder_for_UnitEvent_NotificationParams = function (
       value: UnitEvent_NotificationParams    ): _Element {

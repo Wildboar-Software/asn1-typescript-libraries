@@ -129,7 +129,7 @@ let _cached_decoder_for_SignerLocation: $.ASN1Decoder<SignerLocation> | null = n
  * @returns {SignerLocation} The decoded data structure.
  */
 export
-function _decode_SignerLocation (el: _Element) {
+function _decode_SignerLocation (el: _Element): SignerLocation {
     if (!_cached_decoder_for_SignerLocation) { _cached_decoder_for_SignerLocation = function (el: _Element): SignerLocation {
     let countryName: OPTIONAL<DirectoryString>;
     let localityName: OPTIONAL<DirectoryString>;
@@ -164,7 +164,7 @@ let _cached_encoder_for_SignerLocation: $.ASN1Encoder<SignerLocation> | null = n
  * @returns {_Element} The SignerLocation, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignerLocation (value: SignerLocation, elGetter: $.ASN1Encoder<SignerLocation>) {
+function _encode_SignerLocation (value: SignerLocation, elGetter: $.ASN1Encoder<SignerLocation>): _Element {
     if (!_cached_encoder_for_SignerLocation) { _cached_encoder_for_SignerLocation = function (value: SignerLocation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

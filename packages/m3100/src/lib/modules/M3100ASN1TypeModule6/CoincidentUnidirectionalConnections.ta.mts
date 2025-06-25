@@ -52,7 +52,7 @@ let _cached_decoder_for_CoincidentUnidirectionalConnections: $.ASN1Decoder<Coinc
  * @param {_Element} el The element being decoded.
  * @returns {CoincidentUnidirectionalConnections} The decoded data structure.
  */
-export function _decode_CoincidentUnidirectionalConnections(el: _Element) {
+export function _decode_CoincidentUnidirectionalConnections(el: _Element): CoincidentUnidirectionalConnections {
     if (!_cached_decoder_for_CoincidentUnidirectionalConnections) {
         _cached_decoder_for_CoincidentUnidirectionalConnections = $._decode_inextensible_choice<CoincidentUnidirectionalConnections>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_CoincidentUnidirectionalConnections: $.ASN1Encoder<Coinc
 export function _encode_CoincidentUnidirectionalConnections(
     value: CoincidentUnidirectionalConnections,
     elGetter: $.ASN1Encoder<CoincidentUnidirectionalConnections>
-) {
+): _Element {
     if (!_cached_encoder_for_CoincidentUnidirectionalConnections) {
         _cached_encoder_for_CoincidentUnidirectionalConnections = $._encode_choice<CoincidentUnidirectionalConnections>(
             {

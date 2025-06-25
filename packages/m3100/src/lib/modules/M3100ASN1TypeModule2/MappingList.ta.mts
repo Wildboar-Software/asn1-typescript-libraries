@@ -38,7 +38,7 @@ let _cached_decoder_for_MappingList: $.ASN1Decoder<MappingList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MappingList} The decoded data structure.
  */
-export function _decode_MappingList(el: _Element) {
+export function _decode_MappingList(el: _Element): MappingList {
     if (!_cached_decoder_for_MappingList) {
         _cached_decoder_for_MappingList = $._decodeSequenceOf<PayloadLevel>(
             () => _decode_PayloadLevel
@@ -61,7 +61,7 @@ let _cached_encoder_for_MappingList: $.ASN1Encoder<MappingList> | null = null;
 export function _encode_MappingList(
     value: MappingList,
     elGetter: $.ASN1Encoder<MappingList>
-) {
+): _Element {
     if (!_cached_encoder_for_MappingList) {
         _cached_encoder_for_MappingList = $._encodeSequenceOf<PayloadLevel>(
             () => _encode_PayloadLevel,

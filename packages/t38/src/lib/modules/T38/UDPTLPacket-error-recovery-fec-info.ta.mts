@@ -120,7 +120,7 @@ let _cached_decoder_for_UDPTLPacket_error_recovery_fec_info: $.ASN1Decoder<UDPTL
  * @param {_Element} el The element being decoded.
  * @returns {UDPTLPacket_error_recovery_fec_info} The decoded data structure.
  */
-export function _decode_UDPTLPacket_error_recovery_fec_info(el: _Element) {
+export function _decode_UDPTLPacket_error_recovery_fec_info(el: _Element): UDPTLPacket_error_recovery_fec_info {
   if (!_cached_decoder_for_UDPTLPacket_error_recovery_fec_info) {
     _cached_decoder_for_UDPTLPacket_error_recovery_fec_info = function (
       el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_UDPTLPacket_error_recovery_fec_info: $.ASN1Encoder<UDPTL
 export function _encode_UDPTLPacket_error_recovery_fec_info(
   value: UDPTLPacket_error_recovery_fec_info,
   elGetter: $.ASN1Encoder<UDPTLPacket_error_recovery_fec_info>
-) {
+): _Element {
   if (!_cached_encoder_for_UDPTLPacket_error_recovery_fec_info) {
     _cached_encoder_for_UDPTLPacket_error_recovery_fec_info = function (
       value: UDPTLPacket_error_recovery_fec_info    ): _Element {

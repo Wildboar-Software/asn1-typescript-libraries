@@ -142,7 +142,7 @@ let _cached_decoder_for_LongTermValidation: $.ASN1Decoder<LongTermValidation> | 
  * @returns {LongTermValidation} The decoded data structure.
  */
 export
-function _decode_LongTermValidation (el: _Element) {
+function _decode_LongTermValidation (el: _Element): LongTermValidation {
     if (!_cached_decoder_for_LongTermValidation) { _cached_decoder_for_LongTermValidation = function (el: _Element): LongTermValidation {
     let poeDate!: GeneralizedTime;
     let poeValue: OPTIONAL<LongTermValidation_poeValue>;
@@ -180,7 +180,7 @@ let _cached_encoder_for_LongTermValidation: $.ASN1Encoder<LongTermValidation> | 
  * @returns {_Element} The LongTermValidation, encoded as an ASN.1 Element.
  */
 export
-function _encode_LongTermValidation (value: LongTermValidation, elGetter: $.ASN1Encoder<LongTermValidation>) {
+function _encode_LongTermValidation (value: LongTermValidation, elGetter: $.ASN1Encoder<LongTermValidation>): _Element {
     if (!_cached_encoder_for_LongTermValidation) { _cached_encoder_for_LongTermValidation = function (value: LongTermValidation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

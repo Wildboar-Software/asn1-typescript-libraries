@@ -42,7 +42,7 @@ let _cached_decoder_for_ECPublicKeyChoice: $.ASN1Decoder<ECPublicKeyChoice> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ECPublicKeyChoice} The decoded data structure.
  */
-export function _decode_ECPublicKeyChoice(el: _Element) {
+export function _decode_ECPublicKeyChoice(el: _Element): ECPublicKeyChoice {
     if (!_cached_decoder_for_ECPublicKeyChoice) {
         _cached_decoder_for_ECPublicKeyChoice = $._decode_extensible_choice<ECPublicKeyChoice>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_ECPublicKeyChoice: $.ASN1Encoder<ECPublicKeyChoice> | nu
 export function _encode_ECPublicKeyChoice(
     value: ECPublicKeyChoice,
     elGetter: $.ASN1Encoder<ECPublicKeyChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_ECPublicKeyChoice) {
         _cached_encoder_for_ECPublicKeyChoice = $._encode_choice<ECPublicKeyChoice>(
             {

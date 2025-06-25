@@ -46,7 +46,7 @@ let _cached_decoder_for_AgentContactObjectPtr: $.ASN1Decoder<AgentContactObjectP
  * @param {_Element} el The element being decoded.
  * @returns {AgentContactObjectPtr} The decoded data structure.
  */
-export function _decode_AgentContactObjectPtr(el: _Element) {
+export function _decode_AgentContactObjectPtr(el: _Element): AgentContactObjectPtr {
     if (!_cached_decoder_for_AgentContactObjectPtr) {
         _cached_decoder_for_AgentContactObjectPtr = $._decode_extensible_choice<AgentContactObjectPtr>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_AgentContactObjectPtr: $.ASN1Encoder<AgentContactObjectP
 export function _encode_AgentContactObjectPtr(
     value: AgentContactObjectPtr,
     elGetter: $.ASN1Encoder<AgentContactObjectPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_AgentContactObjectPtr) {
         _cached_encoder_for_AgentContactObjectPtr = $._encode_choice<AgentContactObjectPtr>(
             {

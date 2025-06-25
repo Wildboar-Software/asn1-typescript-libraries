@@ -113,7 +113,7 @@ let _cached_decoder_for_RenameResult: $.ASN1Decoder<RenameResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RenameResult} The decoded data structure.
  */
-export function _decode_RenameResult(el: _Element) {
+export function _decode_RenameResult(el: _Element): RenameResult {
     if (!_cached_decoder_for_RenameResult) {
         _cached_decoder_for_RenameResult = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_RenameResult: $.ASN1Encoder<RenameResult> | null = null;
 export function _encode_RenameResult(
     value: RenameResult,
     elGetter: $.ASN1Encoder<RenameResult>
-) {
+): _Element {
     if (!_cached_encoder_for_RenameResult) {
         _cached_encoder_for_RenameResult = function (
             value: RenameResult        ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_BindingOperations: $.ASN1Decoder<BindingOperations> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BindingOperations} The decoded data structure.
  */
-export function _decode_BindingOperations(el: _Element) {
+export function _decode_BindingOperations(el: _Element): BindingOperations {
     if (!_cached_decoder_for_BindingOperations) {
         _cached_decoder_for_BindingOperations = _decode_EventTypeId;
     }
@@ -56,7 +56,7 @@ let _cached_encoder_for_BindingOperations: $.ASN1Encoder<BindingOperations> | nu
 export function _encode_BindingOperations(
     value: BindingOperations,
     elGetter: $.ASN1Encoder<BindingOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_BindingOperations) {
         _cached_encoder_for_BindingOperations = _encode_EventTypeId;
     }

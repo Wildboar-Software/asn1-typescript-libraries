@@ -136,7 +136,7 @@ let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<Servic
  * @param {_Element} el The element being decoded.
  * @returns {ServiceProviderErrorResponseReason} The decoded data structure.
  */
-export function _decode_ServiceProviderErrorResponseReason(el: _Element) {
+export function _decode_ServiceProviderErrorResponseReason(el: _Element): ServiceProviderErrorResponseReason {
     if (!_cached_decoder_for_ServiceProviderErrorResponseReason) {
         _cached_decoder_for_ServiceProviderErrorResponseReason =
             $._decodeEnumerated;
@@ -156,7 +156,7 @@ let _cached_encoder_for_ServiceProviderErrorResponseReason: $.ASN1Encoder<Servic
 export function _encode_ServiceProviderErrorResponseReason(
     value: ServiceProviderErrorResponseReason,
     elGetter: $.ASN1Encoder<ServiceProviderErrorResponseReason>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceProviderErrorResponseReason) {
         _cached_encoder_for_ServiceProviderErrorResponseReason =
             $._encodeEnumerated;

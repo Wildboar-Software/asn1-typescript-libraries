@@ -133,7 +133,7 @@ let _cached_decoder_for_WeekDayTranslationList_Item: $.ASN1Decoder<WeekDayTransl
  * @param {_Element} el The element being decoded.
  * @returns {WeekDayTranslationList_Item} The decoded data structure.
  */
-export function _decode_WeekDayTranslationList_Item(el: _Element) {
+export function _decode_WeekDayTranslationList_Item(el: _Element): WeekDayTranslationList_Item {
     if (!_cached_decoder_for_WeekDayTranslationList_Item) {
         _cached_decoder_for_WeekDayTranslationList_Item = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_WeekDayTranslationList_Item: $.ASN1Encoder<WeekDayTransl
 export function _encode_WeekDayTranslationList_Item(
     value: WeekDayTranslationList_Item,
     elGetter: $.ASN1Encoder<WeekDayTranslationList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekDayTranslationList_Item) {
         _cached_encoder_for_WeekDayTranslationList_Item = function (
             value: WeekDayTranslationList_Item        ): _Element {

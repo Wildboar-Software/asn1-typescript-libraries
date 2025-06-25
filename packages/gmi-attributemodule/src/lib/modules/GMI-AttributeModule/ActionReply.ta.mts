@@ -42,7 +42,7 @@ let _cached_decoder_for_ActionReply: $.ASN1Decoder<ActionReply> | null = null;
  * @returns {ActionReply} The decoded data structure.
  */
 export
-function _decode_ActionReply (el: _Element) {
+function _decode_ActionReply (el: _Element): ActionReply {
     if (!_cached_decoder_for_ActionReply) { _cached_decoder_for_ActionReply = $._decodeSetOf<ManagementExtension>(() => _decode_ManagementExtension); }
     return _cached_decoder_for_ActionReply(el);
 }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ActionReply: $.ASN1Encoder<ActionReply> | null = null;
  * @returns {_Element} The ActionReply, encoded as an ASN.1 Element.
  */
 export
-function _encode_ActionReply (value: ActionReply, elGetter: $.ASN1Encoder<ActionReply>) {
+function _encode_ActionReply (value: ActionReply, elGetter: $.ASN1Encoder<ActionReply>): _Element {
     if (!_cached_encoder_for_ActionReply) { _cached_encoder_for_ActionReply = $._encodeSetOf<ManagementExtension>(() => _encode_ManagementExtension, $.BER); }
     return _cached_encoder_for_ActionReply(value, elGetter);
 }

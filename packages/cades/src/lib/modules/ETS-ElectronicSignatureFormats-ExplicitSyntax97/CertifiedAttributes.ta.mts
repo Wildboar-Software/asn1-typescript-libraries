@@ -38,7 +38,7 @@ let _cached_decoder_for_CertifiedAttributes: $.ASN1Decoder<CertifiedAttributes> 
  * @returns {CertifiedAttributes} The decoded data structure.
  */
 export
-function _decode_CertifiedAttributes (el: _Element) {
+function _decode_CertifiedAttributes (el: _Element): CertifiedAttributes {
     if (!_cached_decoder_for_CertifiedAttributes) { _cached_decoder_for_CertifiedAttributes = _decode_AttributeCertificate; }
     return _cached_decoder_for_CertifiedAttributes(el);
 }
@@ -53,7 +53,7 @@ let _cached_encoder_for_CertifiedAttributes: $.ASN1Encoder<CertifiedAttributes> 
  * @returns {_Element} The CertifiedAttributes, encoded as an ASN.1 Element.
  */
 export
-function _encode_CertifiedAttributes (value: CertifiedAttributes, elGetter: $.ASN1Encoder<CertifiedAttributes>) {
+function _encode_CertifiedAttributes (value: CertifiedAttributes, elGetter: $.ASN1Encoder<CertifiedAttributes>): _Element {
     if (!_cached_encoder_for_CertifiedAttributes) { _cached_encoder_for_CertifiedAttributes = _encode_AttributeCertificate; }
     return _cached_encoder_for_CertifiedAttributes(value, elGetter);
 }

@@ -32,7 +32,7 @@ type TrustAnchorTitle = UTF8String; // UTF8String
  * @returns {TrustAnchorTitle} The decoded data structure.
  */
 export
-function _decode_TrustAnchorTitle (el: _Element) {
+function _decode_TrustAnchorTitle (el: _Element): TrustAnchorTitle {
     return $._decodeUTF8String(el);
 }
 
@@ -44,7 +44,7 @@ function _decode_TrustAnchorTitle (el: _Element) {
  * @returns {_Element} The TrustAnchorTitle, encoded as an ASN.1 Element.
  */
 export
-function _encode_TrustAnchorTitle (value: TrustAnchorTitle, elGetter: $.ASN1Encoder<TrustAnchorTitle>) {
+function _encode_TrustAnchorTitle (value: TrustAnchorTitle, elGetter: $.ASN1Encoder<TrustAnchorTitle>): _Element {
     return $._encodeUTF8String(value, elGetter);
 }
 

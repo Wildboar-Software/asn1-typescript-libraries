@@ -40,7 +40,7 @@ let _cached_decoder_for_Presentation_context_addition_result_list: $.ASN1Decoder
  */
 export function _decode_Presentation_context_addition_result_list(
     el: _Element
-) {
+): Presentation_context_addition_result_list {
     if (!_cached_decoder_for_Presentation_context_addition_result_list) {
         _cached_decoder_for_Presentation_context_addition_result_list = _decode_Result_list;
     }
@@ -61,7 +61,7 @@ let _cached_encoder_for_Presentation_context_addition_result_list: $.ASN1Encoder
 export function _encode_Presentation_context_addition_result_list(
     value: Presentation_context_addition_result_list,
     elGetter: $.ASN1Encoder<Presentation_context_addition_result_list>
-) {
+): _Element {
     if (!_cached_encoder_for_Presentation_context_addition_result_list) {
         _cached_encoder_for_Presentation_context_addition_result_list = _encode_Result_list;
     }

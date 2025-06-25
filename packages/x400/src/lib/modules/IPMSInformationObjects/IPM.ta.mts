@@ -116,7 +116,7 @@ let _cached_decoder_for_IPM: $.ASN1Decoder<IPM> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPM} The decoded data structure.
  */
-export function _decode_IPM(el: _Element) {
+export function _decode_IPM(el: _Element): IPM {
     if (!_cached_decoder_for_IPM) {
         _cached_decoder_for_IPM = function (el: _Element): IPM {
             const sequence: _Element[] = el.sequence;
@@ -148,7 +148,7 @@ let _cached_encoder_for_IPM: $.ASN1Encoder<IPM> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPM, encoded as an ASN.1 Element.
  */
-export function _encode_IPM(value: IPM, elGetter: $.ASN1Encoder<IPM>) {
+export function _encode_IPM(value: IPM, elGetter: $.ASN1Encoder<IPM>): _Element {
     if (!_cached_encoder_for_IPM) {
         _cached_encoder_for_IPM = function (
             value: IPM        ): _Element {

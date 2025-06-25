@@ -29,7 +29,7 @@ let _cached_decoder_for_SecurityPolicyName: $.ASN1Decoder<SecurityPolicyName> | 
  * @param {_Element} el The element being decoded.
  * @returns {SecurityPolicyName} The decoded data structure.
  */
-export function _decode_SecurityPolicyName(el: _Element) {
+export function _decode_SecurityPolicyName(el: _Element): SecurityPolicyName {
     if (!_cached_decoder_for_SecurityPolicyName) {
         _cached_decoder_for_SecurityPolicyName = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SecurityPolicyName: $.ASN1Encoder<SecurityPolicyName> | 
 export function _encode_SecurityPolicyName(
     value: SecurityPolicyName,
     elGetter: $.ASN1Encoder<SecurityPolicyName>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityPolicyName) {
         _cached_encoder_for_SecurityPolicyName = _encode_DirectoryString;
     }

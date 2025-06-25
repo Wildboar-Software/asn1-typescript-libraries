@@ -35,7 +35,7 @@ let _cached_decoder_for_NNExtensionsField: $.ASN1Decoder<NNExtensionsField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NNExtensionsField} The decoded data structure.
  */
-export function _decode_NNExtensionsField(el: _Element) {
+export function _decode_NNExtensionsField(el: _Element): NNExtensionsField {
     if (!_cached_decoder_for_NNExtensionsField) {
         _cached_decoder_for_NNExtensionsField = $._decodeSetOf<NNExtensionsSubField>(
             () => _decode_NNExtensionsSubField
@@ -56,7 +56,7 @@ let _cached_encoder_for_NNExtensionsField: $.ASN1Encoder<NNExtensionsField> | nu
 export function _encode_NNExtensionsField(
     value: NNExtensionsField,
     elGetter: $.ASN1Encoder<NNExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_NNExtensionsField) {
         _cached_encoder_for_NNExtensionsField = $._encodeSetOf<NNExtensionsSubField>(
             () => _encode_NNExtensionsSubField,

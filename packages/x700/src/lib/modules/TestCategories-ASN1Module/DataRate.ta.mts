@@ -37,7 +37,7 @@ let _cached_decoder_for_DataRate: $.ASN1Decoder<DataRate> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataRate} The decoded data structure.
  */
-export function _decode_DataRate(el: _Element) {
+export function _decode_DataRate(el: _Element): DataRate {
     if (!_cached_decoder_for_DataRate) {
         _cached_decoder_for_DataRate = $._decode_inextensible_choice<DataRate>({
             'UNIVERSAL 9': ['real', $._decodeReal],
@@ -59,7 +59,7 @@ let _cached_encoder_for_DataRate: $.ASN1Encoder<DataRate> | null = null;
 export function _encode_DataRate(
     value: DataRate,
     elGetter: $.ASN1Encoder<DataRate>
-) {
+): _Element {
     if (!_cached_encoder_for_DataRate) {
         _cached_encoder_for_DataRate = $._encode_choice<DataRate>(
             {

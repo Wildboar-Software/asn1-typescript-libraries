@@ -29,7 +29,7 @@ let _cached_decoder_for_EquivalentPolicies: $.ASN1Decoder<EquivalentPolicies> | 
  * @param {_Element} el The element being decoded.
  * @returns {EquivalentPolicies} The decoded data structure.
  */
-export function _decode_EquivalentPolicies(el: _Element) {
+export function _decode_EquivalentPolicies(el: _Element): EquivalentPolicies {
     if (!_cached_decoder_for_EquivalentPolicies) {
         _cached_decoder_for_EquivalentPolicies = $._decodeSequenceOf<EquivalentPolicy>(
             () => _decode_EquivalentPolicy
@@ -52,7 +52,7 @@ let _cached_encoder_for_EquivalentPolicies: $.ASN1Encoder<EquivalentPolicies> | 
 export function _encode_EquivalentPolicies(
     value: EquivalentPolicies,
     elGetter: $.ASN1Encoder<EquivalentPolicies>
-) {
+): _Element {
     if (!_cached_encoder_for_EquivalentPolicies) {
         _cached_encoder_for_EquivalentPolicies = $._encodeSequenceOf<EquivalentPolicy>(
             () => _encode_EquivalentPolicy,

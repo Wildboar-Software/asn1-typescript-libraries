@@ -35,7 +35,7 @@ let _cached_decoder_for_WaitDuration: $.ASN1Decoder<WaitDuration> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WaitDuration} The decoded data structure.
  */
-export function _decode_WaitDuration(el: _Element) {
+export function _decode_WaitDuration(el: _Element): WaitDuration {
     if (!_cached_decoder_for_WaitDuration) {
         _cached_decoder_for_WaitDuration = _decode_Timespec;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_WaitDuration: $.ASN1Encoder<WaitDuration> | null = null;
 export function _encode_WaitDuration(
     value: WaitDuration,
     elGetter: $.ASN1Encoder<WaitDuration>
-) {
+): _Element {
     if (!_cached_encoder_for_WaitDuration) {
         _cached_encoder_for_WaitDuration = _encode_Timespec;
     }

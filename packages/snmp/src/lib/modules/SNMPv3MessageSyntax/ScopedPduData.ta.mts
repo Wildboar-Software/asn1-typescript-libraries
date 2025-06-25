@@ -39,7 +39,7 @@ let _cached_decoder_for_ScopedPduData: $.ASN1Decoder<ScopedPduData> | null = nul
  * @returns {ScopedPduData} The decoded data structure.
  */
 export
-function _decode_ScopedPduData (el: _Element) {
+function _decode_ScopedPduData (el: _Element): ScopedPduData {
     if (!_cached_decoder_for_ScopedPduData) { _cached_decoder_for_ScopedPduData = $._decode_inextensible_choice<ScopedPduData>({
     "UNIVERSAL 16": [ "plaintext", _decode_ScopedPDU ],
     "UNIVERSAL 4": [ "encryptedPDU", $._decodeOctetString ]
@@ -57,7 +57,7 @@ let _cached_encoder_for_ScopedPduData: $.ASN1Encoder<ScopedPduData> | null = nul
  * @returns {_Element} The ScopedPduData, encoded as an ASN.1 Element.
  */
 export
-function _encode_ScopedPduData (value: ScopedPduData, elGetter: $.ASN1Encoder<ScopedPduData>) {
+function _encode_ScopedPduData (value: ScopedPduData, elGetter: $.ASN1Encoder<ScopedPduData>): _Element {
     if (!_cached_encoder_for_ScopedPduData) { _cached_encoder_for_ScopedPduData = $._encode_choice<ScopedPduData>({
     "plaintext": _encode_ScopedPDU,
     "encryptedPDU": $._encodeOctetString,

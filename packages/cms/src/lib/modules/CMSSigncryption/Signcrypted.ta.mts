@@ -111,7 +111,7 @@ let _cached_decoder_for_Signcrypted: $.ASN1Decoder<Signcrypted> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Signcrypted} The decoded data structure.
  */
-export function _decode_Signcrypted(el: _Element) {
+export function _decode_Signcrypted(el: _Element): Signcrypted {
     if (!_cached_decoder_for_Signcrypted) {
         _cached_decoder_for_Signcrypted = function (el: _Element): Signcrypted {
             let name!: OBJECT_IDENTIFIER;
@@ -152,7 +152,7 @@ let _cached_encoder_for_Signcrypted: $.ASN1Encoder<Signcrypted> | null = null;
 export function _encode_Signcrypted(
     value: Signcrypted,
     elGetter: $.ASN1Encoder<Signcrypted>
-) {
+): _Element {
     if (!_cached_encoder_for_Signcrypted) {
         _cached_encoder_for_Signcrypted = function (
             value: Signcrypted        ): _Element {

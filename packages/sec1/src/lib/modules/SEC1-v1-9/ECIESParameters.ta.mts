@@ -122,7 +122,7 @@ let _cached_decoder_for_ECIESParameters: $.ASN1Decoder<ECIESParameters> | null =
  * @returns {ECIESParameters} The decoded data structure.
  */
 export
-function _decode_ECIESParameters (el: _Element) {
+function _decode_ECIESParameters (el: _Element): ECIESParameters {
     if (!_cached_decoder_for_ECIESParameters) { _cached_decoder_for_ECIESParameters = function (el: _Element): ECIESParameters {
     let kdf: OPTIONAL<KeyDerivationFunction>;
     let sym: OPTIONAL<SymmetricEncryption>;
@@ -157,7 +157,7 @@ let _cached_encoder_for_ECIESParameters: $.ASN1Encoder<ECIESParameters> | null =
  * @returns {_Element} The ECIESParameters, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECIESParameters (value: ECIESParameters, elGetter: $.ASN1Encoder<ECIESParameters>) {
+function _encode_ECIESParameters (value: ECIESParameters, elGetter: $.ASN1Encoder<ECIESParameters>): _Element {
     if (!_cached_encoder_for_ECIESParameters) { _cached_encoder_for_ECIESParameters = function (value: ECIESParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

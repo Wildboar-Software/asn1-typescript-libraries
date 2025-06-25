@@ -113,7 +113,7 @@ let _cached_decoder_for_KeyManagementInfo_Item: $.ASN1Decoder<KeyManagementInfo_
  * @param {_Element} el The element being decoded.
  * @returns {KeyManagementInfo_Item} The decoded data structure.
  */
-export function _decode_KeyManagementInfo_Item(el: _Element) {
+export function _decode_KeyManagementInfo_Item(el: _Element): KeyManagementInfo_Item {
     if (!_cached_decoder_for_KeyManagementInfo_Item) {
         _cached_decoder_for_KeyManagementInfo_Item = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_KeyManagementInfo_Item: $.ASN1Encoder<KeyManagementInfo_
 export function _encode_KeyManagementInfo_Item(
     value: KeyManagementInfo_Item,
     elGetter: $.ASN1Encoder<KeyManagementInfo_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyManagementInfo_Item) {
         _cached_encoder_for_KeyManagementInfo_Item = function (
             value: KeyManagementInfo_Item        ): _Element {

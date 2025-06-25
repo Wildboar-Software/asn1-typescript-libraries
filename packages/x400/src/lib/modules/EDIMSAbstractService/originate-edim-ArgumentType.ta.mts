@@ -118,7 +118,7 @@ let _cached_decoder_for_originate_edim_ArgumentType: $.ASN1Decoder<originate_edi
  * @param {_Element} el The element being decoded.
  * @returns {originate_edim_ArgumentType} The decoded data structure.
  */
-export function _decode_originate_edim_ArgumentType(el: _Element) {
+export function _decode_originate_edim_ArgumentType(el: _Element): originate_edim_ArgumentType {
     if (!_cached_decoder_for_originate_edim_ArgumentType) {
         _cached_decoder_for_originate_edim_ArgumentType = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_originate_edim_ArgumentType: $.ASN1Encoder<originate_edi
 export function _encode_originate_edim_ArgumentType(
     value: originate_edim_ArgumentType,
     elGetter: $.ASN1Encoder<originate_edim_ArgumentType>
-) {
+): _Element {
     if (!_cached_encoder_for_originate_edim_ArgumentType) {
         _cached_encoder_for_originate_edim_ArgumentType = function (
             value: originate_edim_ArgumentType        ): _Element {

@@ -46,7 +46,7 @@ let _cached_decoder_for_ServiceType: $.ASN1Decoder<ServiceType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ServiceType} The decoded data structure.
  */
-export function _decode_ServiceType(el: _Element) {
+export function _decode_ServiceType(el: _Element): ServiceType {
     if (!_cached_decoder_for_ServiceType) {
         _cached_decoder_for_ServiceType = $._decode_extensible_choice<ServiceType>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ServiceType: $.ASN1Encoder<ServiceType> | null = null;
 export function _encode_ServiceType(
     value: ServiceType,
     elGetter: $.ASN1Encoder<ServiceType>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceType) {
         _cached_encoder_for_ServiceType = $._encode_choice<ServiceType>(
             {

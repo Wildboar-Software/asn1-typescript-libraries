@@ -112,7 +112,7 @@ let _cached_decoder_for_GenericMessageId: $.ASN1Decoder<GenericMessageId> | null
  * @param {_Element} el The element being decoded.
  * @returns {GenericMessageId} The decoded data structure.
  */
-export function _decode_GenericMessageId(el: _Element) {
+export function _decode_GenericMessageId(el: _Element): GenericMessageId {
     if (!_cached_decoder_for_GenericMessageId) {
         _cached_decoder_for_GenericMessageId = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_GenericMessageId: $.ASN1Encoder<GenericMessageId> | null
 export function _encode_GenericMessageId(
     value: GenericMessageId,
     elGetter: $.ASN1Encoder<GenericMessageId>
-) {
+): _Element {
     if (!_cached_encoder_for_GenericMessageId) {
         _cached_encoder_for_GenericMessageId = function (
             value: GenericMessageId        ): _Element {

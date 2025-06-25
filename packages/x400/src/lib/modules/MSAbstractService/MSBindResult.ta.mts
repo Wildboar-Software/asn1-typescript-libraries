@@ -320,7 +320,7 @@ let _cached_decoder_for_MSBindResult: $.ASN1Decoder<MSBindResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MSBindResult} The decoded data structure.
  */
-export function _decode_MSBindResult(el: _Element) {
+export function _decode_MSBindResult(el: _Element): MSBindResult {
     if (!_cached_decoder_for_MSBindResult) {
         _cached_decoder_for_MSBindResult = function (
             el: _Element
@@ -470,7 +470,7 @@ let _cached_encoder_for_MSBindResult: $.ASN1Encoder<MSBindResult> | null = null;
 export function _encode_MSBindResult(
     value: MSBindResult,
     elGetter: $.ASN1Encoder<MSBindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_MSBindResult) {
         _cached_encoder_for_MSBindResult = function (
             value: MSBindResult        ): _Element {

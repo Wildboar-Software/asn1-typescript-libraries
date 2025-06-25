@@ -212,7 +212,7 @@ let _cached_decoder_for_GUIEventRedirector: $.ASN1Decoder<GUIEventRedirector> | 
  * @param {_Element} el The element being decoded.
  * @returns {GUIEventRedirector} The decoded data structure.
  */
-export function _decode_GUIEventRedirector(el: _Element) {
+export function _decode_GUIEventRedirector(el: _Element): GUIEventRedirector {
   if (!_cached_decoder_for_GUIEventRedirector) {
     _cached_decoder_for_GUIEventRedirector = function (
       el: _Element
@@ -278,7 +278,7 @@ let _cached_encoder_for_GUIEventRedirector: $.ASN1Encoder<GUIEventRedirector> | 
 export function _encode_GUIEventRedirector(
   value: GUIEventRedirector,
   elGetter: $.ASN1Encoder<GUIEventRedirector>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIEventRedirector) {
     _cached_encoder_for_GUIEventRedirector = function (
       value: GUIEventRedirector    ): _Element {

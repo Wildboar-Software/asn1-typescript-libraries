@@ -40,7 +40,7 @@ let _cached_decoder_for_SignaturePolicyIdentifier: $.ASN1Decoder<SignaturePolicy
  * @returns {SignaturePolicyIdentifier} The decoded data structure.
  */
 export
-function _decode_SignaturePolicyIdentifier (el: _Element) {
+function _decode_SignaturePolicyIdentifier (el: _Element): SignaturePolicyIdentifier {
     if (!_cached_decoder_for_SignaturePolicyIdentifier) { _cached_decoder_for_SignaturePolicyIdentifier = $._decode_inextensible_choice<SignaturePolicyIdentifier>({
     "UNIVERSAL 16": [ "signaturePolicyId", _decode_SignaturePolicyId ],
     "UNIVERSAL 5": [ "signaturePolicyImplied", _decode_SignaturePolicyImplied ]
@@ -58,7 +58,7 @@ let _cached_encoder_for_SignaturePolicyIdentifier: $.ASN1Encoder<SignaturePolicy
  * @returns {_Element} The SignaturePolicyIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignaturePolicyIdentifier (value: SignaturePolicyIdentifier, elGetter: $.ASN1Encoder<SignaturePolicyIdentifier>) {
+function _encode_SignaturePolicyIdentifier (value: SignaturePolicyIdentifier, elGetter: $.ASN1Encoder<SignaturePolicyIdentifier>): _Element {
     if (!_cached_encoder_for_SignaturePolicyIdentifier) { _cached_encoder_for_SignaturePolicyIdentifier = $._encode_choice<SignaturePolicyIdentifier>({
     "signaturePolicyId": _encode_SignaturePolicyId,
     "signaturePolicyImplied": _encode_SignaturePolicyImplied,

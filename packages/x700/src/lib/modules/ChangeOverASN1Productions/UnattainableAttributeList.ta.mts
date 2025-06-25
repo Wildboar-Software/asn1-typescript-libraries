@@ -120,7 +120,7 @@ let _cached_decoder_for_UnattainableAttributeList: $.ASN1Decoder<UnattainableAtt
  * @param {_Element} el The element being decoded.
  * @returns {UnattainableAttributeList} The decoded data structure.
  */
-export function _decode_UnattainableAttributeList(el: _Element) {
+export function _decode_UnattainableAttributeList(el: _Element): UnattainableAttributeList {
     if (!_cached_decoder_for_UnattainableAttributeList) {
         _cached_decoder_for_UnattainableAttributeList = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_UnattainableAttributeList: $.ASN1Encoder<UnattainableAtt
 export function _encode_UnattainableAttributeList(
     value: UnattainableAttributeList,
     elGetter: $.ASN1Encoder<UnattainableAttributeList>
-) {
+): _Element {
     if (!_cached_encoder_for_UnattainableAttributeList) {
         _cached_encoder_for_UnattainableAttributeList = function (
             value: UnattainableAttributeList        ): _Element {

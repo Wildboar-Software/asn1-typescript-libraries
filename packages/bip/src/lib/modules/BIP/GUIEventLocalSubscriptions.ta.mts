@@ -38,7 +38,7 @@ let _cached_decoder_for_GUIEventLocalSubscriptions: $.ASN1Decoder<GUIEventLocalS
  * @param {_Element} el The element being decoded.
  * @returns {GUIEventLocalSubscriptions} The decoded data structure.
  */
-export function _decode_GUIEventLocalSubscriptions(el: _Element) {
+export function _decode_GUIEventLocalSubscriptions(el: _Element): GUIEventLocalSubscriptions {
   if (!_cached_decoder_for_GUIEventLocalSubscriptions) {
     _cached_decoder_for_GUIEventLocalSubscriptions = $._decodeSetOf<GUIEventLocalSubscription>(
       () => _decode_GUIEventLocalSubscription
@@ -61,7 +61,7 @@ let _cached_encoder_for_GUIEventLocalSubscriptions: $.ASN1Encoder<GUIEventLocalS
 export function _encode_GUIEventLocalSubscriptions(
   value: GUIEventLocalSubscriptions,
   elGetter: $.ASN1Encoder<GUIEventLocalSubscriptions>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIEventLocalSubscriptions) {
     _cached_encoder_for_GUIEventLocalSubscriptions = $._encodeSetOf<GUIEventLocalSubscription>(
       () => _encode_GUIEventLocalSubscription,

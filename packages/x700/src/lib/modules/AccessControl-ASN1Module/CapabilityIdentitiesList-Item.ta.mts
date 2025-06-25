@@ -46,7 +46,7 @@ let _cached_decoder_for_CapabilityIdentitiesList_Item: $.ASN1Decoder<CapabilityI
  * @param {_Element} el The element being decoded.
  * @returns {CapabilityIdentitiesList_Item} The decoded data structure.
  */
-export function _decode_CapabilityIdentitiesList_Item(el: _Element) {
+export function _decode_CapabilityIdentitiesList_Item(el: _Element): CapabilityIdentitiesList_Item {
     if (!_cached_decoder_for_CapabilityIdentitiesList_Item) {
         _cached_decoder_for_CapabilityIdentitiesList_Item = $._decode_inextensible_choice<CapabilityIdentitiesList_Item>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_CapabilityIdentitiesList_Item: $.ASN1Encoder<CapabilityI
 export function _encode_CapabilityIdentitiesList_Item(
     value: CapabilityIdentitiesList_Item,
     elGetter: $.ASN1Encoder<CapabilityIdentitiesList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_CapabilityIdentitiesList_Item) {
         _cached_encoder_for_CapabilityIdentitiesList_Item = $._encode_choice<CapabilityIdentitiesList_Item>(
             {

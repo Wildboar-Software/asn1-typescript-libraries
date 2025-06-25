@@ -146,7 +146,7 @@ let _cached_decoder_for_CommonReqComp: $.ASN1Decoder<CommonReqComp> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CommonReqComp} The decoded data structure.
  */
-export function _decode_CommonReqComp(el: _Element) {
+export function _decode_CommonReqComp(el: _Element): CommonReqComp {
     if (!_cached_decoder_for_CommonReqComp) {
         _cached_decoder_for_CommonReqComp = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_CommonReqComp: $.ASN1Encoder<CommonReqComp> | null = nul
 export function _encode_CommonReqComp(
     value: CommonReqComp,
     elGetter: $.ASN1Encoder<CommonReqComp>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonReqComp) {
         _cached_encoder_for_CommonReqComp = function (
             value: CommonReqComp        ): _Element {

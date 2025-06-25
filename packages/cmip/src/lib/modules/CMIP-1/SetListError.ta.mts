@@ -169,7 +169,7 @@ let _cached_decoder_for_SetListError: $.ASN1Decoder<SetListError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SetListError} The decoded data structure.
  */
-export function _decode_SetListError(el: _Element) {
+export function _decode_SetListError(el: _Element): SetListError {
   if (!_cached_decoder_for_SetListError) {
     _cached_decoder_for_SetListError = function (el: _Element): SetListError {
       let managedObjectClass: OPTIONAL<ObjectClass>;
@@ -231,7 +231,7 @@ let _cached_encoder_for_SetListError: $.ASN1Encoder<SetListError> | null = null;
 export function _encode_SetListError(
   value: SetListError,
   elGetter: $.ASN1Encoder<SetListError>
-) {
+): _Element {
   if (!_cached_encoder_for_SetListError) {
     _cached_encoder_for_SetListError = function (
       value: SetListError    ): _Element {

@@ -116,7 +116,7 @@ let _cached_decoder_for_ABRT_apdu: $.ASN1Decoder<ABRT_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ABRT_apdu} The decoded data structure.
  */
-export function _decode_ABRT_apdu(el: _Element) {
+export function _decode_ABRT_apdu(el: _Element): ABRT_apdu {
     if (!_cached_decoder_for_ABRT_apdu) {
         _cached_decoder_for_ABRT_apdu = $._decode_implicit<ABRT_apdu>(
             () =>
@@ -168,7 +168,7 @@ let _cached_encoder_for_ABRT_apdu: $.ASN1Encoder<ABRT_apdu> | null = null;
 export function _encode_ABRT_apdu(
     value: ABRT_apdu,
     elGetter: $.ASN1Encoder<ABRT_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_ABRT_apdu) {
         _cached_encoder_for_ABRT_apdu = $._encode_implicit(
             _TagClass.application,

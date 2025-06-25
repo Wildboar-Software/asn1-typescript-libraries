@@ -142,7 +142,7 @@ let _cached_decoder_for_LoopbackControl: $.ASN1Decoder<LoopbackControl> | null =
  * @param {_Element} el The element being decoded.
  * @returns {LoopbackControl} The decoded data structure.
  */
-export function _decode_LoopbackControl(el: _Element) {
+export function _decode_LoopbackControl(el: _Element): LoopbackControl {
     if (!_cached_decoder_for_LoopbackControl) {
         _cached_decoder_for_LoopbackControl = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_LoopbackControl: $.ASN1Encoder<LoopbackControl> | null =
 export function _encode_LoopbackControl(
     value: LoopbackControl,
     elGetter: $.ASN1Encoder<LoopbackControl>
-) {
+): _Element {
     if (!_cached_encoder_for_LoopbackControl) {
         _cached_encoder_for_LoopbackControl = function (
             value: LoopbackControl        ): _Element {

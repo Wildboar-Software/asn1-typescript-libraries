@@ -42,7 +42,7 @@ let _cached_decoder_for_NRN: $.ASN1Decoder<NRN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NRN} The decoded data structure.
  */
-export function _decode_NRN(el: _Element) {
+export function _decode_NRN(el: _Element): NRN {
     if (!_cached_decoder_for_NRN) {
         _cached_decoder_for_NRN = _decode_IPN;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_NRN: $.ASN1Encoder<NRN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NRN, encoded as an ASN.1 Element.
  */
-export function _encode_NRN(value: NRN, elGetter: $.ASN1Encoder<NRN>) {
+export function _encode_NRN(value: NRN, elGetter: $.ASN1Encoder<NRN>): _Element {
     if (!_cached_encoder_for_NRN) {
         _cached_encoder_for_NRN = _encode_IPN;
     }

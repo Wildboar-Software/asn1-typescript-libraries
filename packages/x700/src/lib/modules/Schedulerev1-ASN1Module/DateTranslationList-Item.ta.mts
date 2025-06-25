@@ -124,7 +124,7 @@ let _cached_decoder_for_DateTranslationList_Item: $.ASN1Decoder<DateTranslationL
  * @param {_Element} el The element being decoded.
  * @returns {DateTranslationList_Item} The decoded data structure.
  */
-export function _decode_DateTranslationList_Item(el: _Element) {
+export function _decode_DateTranslationList_Item(el: _Element): DateTranslationList_Item {
     if (!_cached_decoder_for_DateTranslationList_Item) {
         _cached_decoder_for_DateTranslationList_Item = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_DateTranslationList_Item: $.ASN1Encoder<DateTranslationL
 export function _encode_DateTranslationList_Item(
     value: DateTranslationList_Item,
     elGetter: $.ASN1Encoder<DateTranslationList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_DateTranslationList_Item) {
         _cached_encoder_for_DateTranslationList_Item = function (
             value: DateTranslationList_Item        ): _Element {

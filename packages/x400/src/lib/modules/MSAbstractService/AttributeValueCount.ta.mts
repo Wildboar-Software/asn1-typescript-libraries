@@ -116,7 +116,7 @@ let _cached_decoder_for_AttributeValueCount: $.ASN1Decoder<AttributeValueCount> 
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValueCount} The decoded data structure.
  */
-export function _decode_AttributeValueCount(el: _Element) {
+export function _decode_AttributeValueCount(el: _Element): AttributeValueCount {
     if (!_cached_decoder_for_AttributeValueCount) {
         _cached_decoder_for_AttributeValueCount = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_AttributeValueCount: $.ASN1Encoder<AttributeValueCount> 
 export function _encode_AttributeValueCount(
     value: AttributeValueCount,
     elGetter: $.ASN1Encoder<AttributeValueCount>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeValueCount) {
         _cached_encoder_for_AttributeValueCount = function (
             value: AttributeValueCount        ): _Element {

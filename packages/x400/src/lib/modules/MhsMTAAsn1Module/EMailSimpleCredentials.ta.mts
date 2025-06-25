@@ -35,7 +35,7 @@ let _cached_decoder_for_EMailSimpleCredentials: $.ASN1Decoder<EMailSimpleCredent
  * @param {_Element} el The element being decoded.
  * @returns {EMailSimpleCredentials} The decoded data structure.
  */
-export function _decode_EMailSimpleCredentials(el: _Element) {
+export function _decode_EMailSimpleCredentials(el: _Element): EMailSimpleCredentials {
     if (!_cached_decoder_for_EMailSimpleCredentials) {
         _cached_decoder_for_EMailSimpleCredentials = _decode_Password;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_EMailSimpleCredentials: $.ASN1Encoder<EMailSimpleCredent
 export function _encode_EMailSimpleCredentials(
     value: EMailSimpleCredentials,
     elGetter: $.ASN1Encoder<EMailSimpleCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailSimpleCredentials) {
         _cached_encoder_for_EMailSimpleCredentials = _encode_Password;
     }

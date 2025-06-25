@@ -116,7 +116,7 @@ let _cached_decoder_for_InformationCategory: $.ASN1Decoder<InformationCategory> 
  * @param {_Element} el The element being decoded.
  * @returns {InformationCategory} The decoded data structure.
  */
-export function _decode_InformationCategory(el: _Element) {
+export function _decode_InformationCategory(el: _Element): InformationCategory {
     if (!_cached_decoder_for_InformationCategory) {
         _cached_decoder_for_InformationCategory = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_InformationCategory: $.ASN1Encoder<InformationCategory> 
 export function _encode_InformationCategory(
     value: InformationCategory,
     elGetter: $.ASN1Encoder<InformationCategory>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationCategory) {
         _cached_encoder_for_InformationCategory = function (
             value: InformationCategory        ): _Element {

@@ -124,7 +124,7 @@ let _cached_decoder_for_BRTCContentInformation: $.ASN1Decoder<BRTCContentInforma
  * @param {_Element} el The element being decoded.
  * @returns {BRTCContentInformation} The decoded data structure.
  */
-export function _decode_BRTCContentInformation(el: _Element) {
+export function _decode_BRTCContentInformation(el: _Element): BRTCContentInformation {
     if (!_cached_decoder_for_BRTCContentInformation) {
         _cached_decoder_for_BRTCContentInformation = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_BRTCContentInformation: $.ASN1Encoder<BRTCContentInforma
 export function _encode_BRTCContentInformation(
     value: BRTCContentInformation,
     elGetter: $.ASN1Encoder<BRTCContentInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BRTCContentInformation) {
         _cached_encoder_for_BRTCContentInformation = function (
             value: BRTCContentInformation        ): _Element {

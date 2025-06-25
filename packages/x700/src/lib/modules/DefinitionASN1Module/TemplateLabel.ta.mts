@@ -124,7 +124,7 @@ let _cached_decoder_for_TemplateLabel: $.ASN1Decoder<TemplateLabel> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TemplateLabel} The decoded data structure.
  */
-export function _decode_TemplateLabel(el: _Element) {
+export function _decode_TemplateLabel(el: _Element): TemplateLabel {
     if (!_cached_decoder_for_TemplateLabel) {
         _cached_decoder_for_TemplateLabel = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_TemplateLabel: $.ASN1Encoder<TemplateLabel> | null = nul
 export function _encode_TemplateLabel(
     value: TemplateLabel,
     elGetter: $.ASN1Encoder<TemplateLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_TemplateLabel) {
         _cached_encoder_for_TemplateLabel = function (
             value: TemplateLabel        ): _Element {

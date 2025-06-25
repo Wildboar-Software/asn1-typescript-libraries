@@ -146,7 +146,7 @@ let _cached_decoder_for_UnusedSpace: $.ASN1Decoder<UnusedSpace> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UnusedSpace} The decoded data structure.
  */
-export function _decode_UnusedSpace(el: _Element) {
+export function _decode_UnusedSpace(el: _Element): UnusedSpace {
     if (!_cached_decoder_for_UnusedSpace) {
         _cached_decoder_for_UnusedSpace = function (el: _Element): UnusedSpace {
             let path!: Path;
@@ -201,7 +201,7 @@ let _cached_encoder_for_UnusedSpace: $.ASN1Encoder<UnusedSpace> | null = null;
 export function _encode_UnusedSpace(
     value: UnusedSpace,
     elGetter: $.ASN1Encoder<UnusedSpace>
-) {
+): _Element {
     if (!_cached_encoder_for_UnusedSpace) {
         _cached_encoder_for_UnusedSpace = function (
             value: UnusedSpace        ): _Element {

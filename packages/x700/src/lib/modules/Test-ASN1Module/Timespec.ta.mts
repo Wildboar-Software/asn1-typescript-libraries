@@ -48,7 +48,7 @@ let _cached_decoder_for_Timespec: $.ASN1Decoder<Timespec> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Timespec} The decoded data structure.
  */
-export function _decode_Timespec(el: _Element) {
+export function _decode_Timespec(el: _Element): Timespec {
     if (!_cached_decoder_for_Timespec) {
         _cached_decoder_for_Timespec = $._decode_inextensible_choice<Timespec>({
             'CONTEXT 22': [
@@ -96,7 +96,7 @@ let _cached_encoder_for_Timespec: $.ASN1Encoder<Timespec> | null = null;
 export function _encode_Timespec(
     value: Timespec,
     elGetter: $.ASN1Encoder<Timespec>
-) {
+): _Element {
     if (!_cached_encoder_for_Timespec) {
         _cached_encoder_for_Timespec = $._encode_choice<Timespec>(
             {

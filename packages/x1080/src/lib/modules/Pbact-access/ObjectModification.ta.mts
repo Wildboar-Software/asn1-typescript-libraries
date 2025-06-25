@@ -55,7 +55,7 @@ let _cached_decoder_for_ObjectModification: $.ASN1Decoder<ObjectModification> | 
  * @param {_Element} el The element being decoded.
  * @returns {ObjectModification} The decoded data structure.
  */
-export function _decode_ObjectModification(el: _Element) {
+export function _decode_ObjectModification(el: _Element): ObjectModification {
     if (!_cached_decoder_for_ObjectModification) {
         _cached_decoder_for_ObjectModification = $._decode_extensible_choice<ObjectModification>(
             {
@@ -101,7 +101,7 @@ let _cached_encoder_for_ObjectModification: $.ASN1Encoder<ObjectModification> | 
 export function _encode_ObjectModification(
     value: ObjectModification,
     elGetter: $.ASN1Encoder<ObjectModification>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectModification) {
         _cached_encoder_for_ObjectModification = $._encode_choice<ObjectModification>(
             {

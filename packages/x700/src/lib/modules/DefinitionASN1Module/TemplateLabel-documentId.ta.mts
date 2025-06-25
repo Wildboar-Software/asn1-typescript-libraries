@@ -47,7 +47,7 @@ let _cached_decoder_for_TemplateLabel_documentId: $.ASN1Decoder<TemplateLabel_do
  * @param {_Element} el The element being decoded.
  * @returns {TemplateLabel_documentId} The decoded data structure.
  */
-export function _decode_TemplateLabel_documentId(el: _Element) {
+export function _decode_TemplateLabel_documentId(el: _Element): TemplateLabel_documentId {
     if (!_cached_decoder_for_TemplateLabel_documentId) {
         _cached_decoder_for_TemplateLabel_documentId = $._decode_inextensible_choice<TemplateLabel_documentId>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_TemplateLabel_documentId: $.ASN1Encoder<TemplateLabel_do
 export function _encode_TemplateLabel_documentId(
     value: TemplateLabel_documentId,
     elGetter: $.ASN1Encoder<TemplateLabel_documentId>
-) {
+): _Element {
     if (!_cached_encoder_for_TemplateLabel_documentId) {
         _cached_encoder_for_TemplateLabel_documentId = $._encode_choice<TemplateLabel_documentId>(
             {

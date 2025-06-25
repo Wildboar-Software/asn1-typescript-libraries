@@ -134,7 +134,7 @@ let _cached_decoder_for_CurrentProblem: $.ASN1Decoder<CurrentProblem> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CurrentProblem} The decoded data structure.
  */
-export function _decode_CurrentProblem(el: _Element) {
+export function _decode_CurrentProblem(el: _Element): CurrentProblem {
     if (!_cached_decoder_for_CurrentProblem) {
         _cached_decoder_for_CurrentProblem = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_CurrentProblem: $.ASN1Encoder<CurrentProblem> | null = n
 export function _encode_CurrentProblem(
     value: CurrentProblem,
     elGetter: $.ASN1Encoder<CurrentProblem>
-) {
+): _Element {
     if (!_cached_encoder_for_CurrentProblem) {
         _cached_encoder_for_CurrentProblem = function (
             value: CurrentProblem        ): _Element {

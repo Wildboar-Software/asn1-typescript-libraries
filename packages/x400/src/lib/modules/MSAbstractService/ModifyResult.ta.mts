@@ -124,7 +124,7 @@ let _cached_decoder_for_ModifyResult: $.ASN1Decoder<ModifyResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ModifyResult} The decoded data structure.
  */
-export function _decode_ModifyResult(el: _Element) {
+export function _decode_ModifyResult(el: _Element): ModifyResult {
     if (!_cached_decoder_for_ModifyResult) {
         _cached_decoder_for_ModifyResult = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_ModifyResult: $.ASN1Encoder<ModifyResult> | null = null;
 export function _encode_ModifyResult(
     value: ModifyResult,
     elGetter: $.ASN1Encoder<ModifyResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyResult) {
         _cached_encoder_for_ModifyResult = function (
             value: ModifyResult        ): _Element {

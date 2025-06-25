@@ -178,7 +178,7 @@ let _cached_decoder_for_ControlInfo: $.ASN1Decoder<ControlInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ControlInfo} The decoded data structure.
  */
-export function _decode_ControlInfo(el: _Element) {
+export function _decode_ControlInfo(el: _Element): ControlInfo {
     if (!_cached_decoder_for_ControlInfo) {
         _cached_decoder_for_ControlInfo = function (el: _Element): ControlInfo {
             let actionResponse!: ActionResponse;
@@ -247,7 +247,7 @@ let _cached_encoder_for_ControlInfo: $.ASN1Encoder<ControlInfo> | null = null;
 export function _encode_ControlInfo(
     value: ControlInfo,
     elGetter: $.ASN1Encoder<ControlInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ControlInfo) {
         _cached_encoder_for_ControlInfo = function (
             value: ControlInfo        ): _Element {

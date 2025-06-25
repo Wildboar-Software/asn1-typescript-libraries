@@ -35,7 +35,7 @@ let _cached_decoder_for_BackUpObject: $.ASN1Decoder<BackUpObject> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BackUpObject} The decoded data structure.
  */
-export function _decode_BackUpObject(el: _Element) {
+export function _decode_BackUpObject(el: _Element): BackUpObject {
     if (!_cached_decoder_for_BackUpObject) {
         _cached_decoder_for_BackUpObject = _decode_OptionalObject;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_BackUpObject: $.ASN1Encoder<BackUpObject> | null = null;
 export function _encode_BackUpObject(
     value: BackUpObject,
     elGetter: $.ASN1Encoder<BackUpObject>
-) {
+): _Element {
     if (!_cached_encoder_for_BackUpObject) {
         _cached_encoder_for_BackUpObject = _encode_OptionalObject;
     }

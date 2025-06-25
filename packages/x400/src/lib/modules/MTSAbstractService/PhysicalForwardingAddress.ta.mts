@@ -35,7 +35,7 @@ let _cached_decoder_for_PhysicalForwardingAddress: $.ASN1Decoder<PhysicalForward
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalForwardingAddress} The decoded data structure.
  */
-export function _decode_PhysicalForwardingAddress(el: _Element) {
+export function _decode_PhysicalForwardingAddress(el: _Element): PhysicalForwardingAddress {
     if (!_cached_decoder_for_PhysicalForwardingAddress) {
         _cached_decoder_for_PhysicalForwardingAddress = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PhysicalForwardingAddress: $.ASN1Encoder<PhysicalForward
 export function _encode_PhysicalForwardingAddress(
     value: PhysicalForwardingAddress,
     elGetter: $.ASN1Encoder<PhysicalForwardingAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalForwardingAddress) {
         _cached_encoder_for_PhysicalForwardingAddress = _encode_ORAddressAndOptionalDirectoryName;
     }

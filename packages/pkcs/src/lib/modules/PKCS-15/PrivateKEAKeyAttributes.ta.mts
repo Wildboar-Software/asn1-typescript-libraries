@@ -139,7 +139,7 @@ let _cached_decoder_for_PrivateKEAKeyAttributes: $.ASN1Decoder<PrivateKEAKeyAttr
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKEAKeyAttributes} The decoded data structure.
  */
-export function _decode_PrivateKEAKeyAttributes(el: _Element) {
+export function _decode_PrivateKEAKeyAttributes(el: _Element): PrivateKEAKeyAttributes {
     if (!_cached_decoder_for_PrivateKEAKeyAttributes) {
         _cached_decoder_for_PrivateKEAKeyAttributes = function (
             el: _Element
@@ -199,7 +199,7 @@ let _cached_encoder_for_PrivateKEAKeyAttributes: $.ASN1Encoder<PrivateKEAKeyAttr
 export function _encode_PrivateKEAKeyAttributes(
     value: PrivateKEAKeyAttributes,
     elGetter: $.ASN1Encoder<PrivateKEAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKEAKeyAttributes) {
         _cached_encoder_for_PrivateKEAKeyAttributes = function (
             value: PrivateKEAKeyAttributes        ): _Element {

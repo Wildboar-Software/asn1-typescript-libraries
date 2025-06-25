@@ -38,7 +38,7 @@ let _cached_decoder_for_AvailableSignalRateList: $.ASN1Decoder<AvailableSignalRa
  * @param {_Element} el The element being decoded.
  * @returns {AvailableSignalRateList} The decoded data structure.
  */
-export function _decode_AvailableSignalRateList(el: _Element) {
+export function _decode_AvailableSignalRateList(el: _Element): AvailableSignalRateList {
     if (!_cached_decoder_for_AvailableSignalRateList) {
         _cached_decoder_for_AvailableSignalRateList = $._decodeSetOf<SignalRate>(
             () => _decode_SignalRate
@@ -61,7 +61,7 @@ let _cached_encoder_for_AvailableSignalRateList: $.ASN1Encoder<AvailableSignalRa
 export function _encode_AvailableSignalRateList(
     value: AvailableSignalRateList,
     elGetter: $.ASN1Encoder<AvailableSignalRateList>
-) {
+): _Element {
     if (!_cached_encoder_for_AvailableSignalRateList) {
         _cached_encoder_for_AvailableSignalRateList = $._encodeSetOf<SignalRate>(
             () => _encode_SignalRate,

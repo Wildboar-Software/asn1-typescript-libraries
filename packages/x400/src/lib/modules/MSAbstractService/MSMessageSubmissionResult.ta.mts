@@ -50,7 +50,7 @@ let _cached_decoder_for_MSMessageSubmissionResult: $.ASN1Decoder<MSMessageSubmis
  * @param {_Element} el The element being decoded.
  * @returns {MSMessageSubmissionResult} The decoded data structure.
  */
-export function _decode_MSMessageSubmissionResult(el: _Element) {
+export function _decode_MSMessageSubmissionResult(el: _Element): MSMessageSubmissionResult {
     if (!_cached_decoder_for_MSMessageSubmissionResult) {
         _cached_decoder_for_MSMessageSubmissionResult = $._decode_inextensible_choice<MSMessageSubmissionResult>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_MSMessageSubmissionResult: $.ASN1Encoder<MSMessageSubmis
 export function _encode_MSMessageSubmissionResult(
     value: MSMessageSubmissionResult,
     elGetter: $.ASN1Encoder<MSMessageSubmissionResult>
-) {
+): _Element {
     if (!_cached_encoder_for_MSMessageSubmissionResult) {
         _cached_encoder_for_MSMessageSubmissionResult = $._encode_choice<MSMessageSubmissionResult>(
             {

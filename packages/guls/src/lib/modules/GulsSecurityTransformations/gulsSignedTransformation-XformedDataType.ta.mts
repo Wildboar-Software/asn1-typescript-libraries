@@ -120,7 +120,7 @@ let _cached_decoder_for_gulsSignedTransformation_XformedDataType: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {gulsSignedTransformation_XformedDataType} The decoded data structure.
  */
-export function _decode_gulsSignedTransformation_XformedDataType(el: _Element) {
+export function _decode_gulsSignedTransformation_XformedDataType(el: _Element): gulsSignedTransformation_XformedDataType {
   if (!_cached_decoder_for_gulsSignedTransformation_XformedDataType) {
     _cached_decoder_for_gulsSignedTransformation_XformedDataType = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_gulsSignedTransformation_XformedDataType: $.ASN1Encoder<
 export function _encode_gulsSignedTransformation_XformedDataType(
   value: gulsSignedTransformation_XformedDataType,
   elGetter: $.ASN1Encoder<gulsSignedTransformation_XformedDataType>
-) {
+): _Element {
   if (!_cached_encoder_for_gulsSignedTransformation_XformedDataType) {
     _cached_encoder_for_gulsSignedTransformation_XformedDataType = function (
       value: gulsSignedTransformation_XformedDataType    ): _Element {

@@ -130,7 +130,7 @@ let _cached_decoder_for_VoiceParameters: $.ASN1Decoder<VoiceParameters> | null =
  * @param {_Element} el The element being decoded.
  * @returns {VoiceParameters} The decoded data structure.
  */
-export function _decode_VoiceParameters(el: _Element) {
+export function _decode_VoiceParameters(el: _Element): VoiceParameters {
     if (!_cached_decoder_for_VoiceParameters) {
         _cached_decoder_for_VoiceParameters = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_VoiceParameters: $.ASN1Encoder<VoiceParameters> | null =
 export function _encode_VoiceParameters(
     value: VoiceParameters,
     elGetter: $.ASN1Encoder<VoiceParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_VoiceParameters) {
         _cached_encoder_for_VoiceParameters = function (
             value: VoiceParameters        ): _Element {

@@ -111,7 +111,7 @@ let _cached_decoder_for_NotifyThreshold: $.ASN1Decoder<NotifyThreshold> | null =
  * @returns {NotifyThreshold} The decoded data structure.
  */
 export
-function _decode_NotifyThreshold (el: _Element) {
+function _decode_NotifyThreshold (el: _Element): NotifyThreshold {
     if (!_cached_decoder_for_NotifyThreshold) { _cached_decoder_for_NotifyThreshold = function (el: _Element): NotifyThreshold {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_NotifyThreshold: $.ASN1Encoder<NotifyThreshold> | null =
  * @returns {_Element} The NotifyThreshold, encoded as an ASN.1 Element.
  */
 export
-function _encode_NotifyThreshold (value: NotifyThreshold, elGetter: $.ASN1Encoder<NotifyThreshold>) {
+function _encode_NotifyThreshold (value: NotifyThreshold, elGetter: $.ASN1Encoder<NotifyThreshold>): _Element {
     if (!_cached_encoder_for_NotifyThreshold) { _cached_encoder_for_NotifyThreshold = function (value: NotifyThreshold): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

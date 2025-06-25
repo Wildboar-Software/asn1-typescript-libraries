@@ -143,7 +143,7 @@ let _cached_decoder_for_SEPAbort: $.ASN1Decoder<SEPAbort> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SEPAbort} The decoded data structure.
  */
-export function _decode_SEPAbort(el: _Element) {
+export function _decode_SEPAbort(el: _Element): SEPAbort {
   if (!_cached_decoder_for_SEPAbort) {
     _cached_decoder_for_SEPAbort = function (el: _Element): SEPAbort {
       let invocationId: OPTIONAL<InvocationId>;
@@ -192,7 +192,7 @@ let _cached_encoder_for_SEPAbort: $.ASN1Encoder<SEPAbort> | null = null;
 export function _encode_SEPAbort(
   value: SEPAbort,
   elGetter: $.ASN1Encoder<SEPAbort>
-) {
+): _Element {
   if (!_cached_encoder_for_SEPAbort) {
     _cached_encoder_for_SEPAbort = function (
       value: SEPAbort    ): _Element {

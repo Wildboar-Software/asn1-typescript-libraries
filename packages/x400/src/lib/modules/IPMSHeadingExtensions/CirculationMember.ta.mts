@@ -124,7 +124,7 @@ let _cached_decoder_for_CirculationMember: $.ASN1Decoder<CirculationMember> | nu
  * @param {_Element} el The element being decoded.
  * @returns {CirculationMember} The decoded data structure.
  */
-export function _decode_CirculationMember(el: _Element) {
+export function _decode_CirculationMember(el: _Element): CirculationMember {
     if (!_cached_decoder_for_CirculationMember) {
         _cached_decoder_for_CirculationMember = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_CirculationMember: $.ASN1Encoder<CirculationMember> | nu
 export function _encode_CirculationMember(
     value: CirculationMember,
     elGetter: $.ASN1Encoder<CirculationMember>
-) {
+): _Element {
     if (!_cached_encoder_for_CirculationMember) {
         _cached_encoder_for_CirculationMember = function (
             value: CirculationMember        ): _Element {

@@ -41,7 +41,7 @@ let _cached_decoder_for_AutoActionErrorIndication: $.ASN1Decoder<AutoActionError
  * @param {_Element} el The element being decoded.
  * @returns {AutoActionErrorIndication} The decoded data structure.
  */
-export function _decode_AutoActionErrorIndication(el: _Element) {
+export function _decode_AutoActionErrorIndication(el: _Element): AutoActionErrorIndication {
     if (!_cached_decoder_for_AutoActionErrorIndication) {
         _cached_decoder_for_AutoActionErrorIndication = $._decode_inextensible_choice<AutoActionErrorIndication>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_AutoActionErrorIndication: $.ASN1Encoder<AutoActionError
 export function _encode_AutoActionErrorIndication(
     value: AutoActionErrorIndication,
     elGetter: $.ASN1Encoder<AutoActionErrorIndication>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoActionErrorIndication) {
         _cached_encoder_for_AutoActionErrorIndication = $._encode_choice<AutoActionErrorIndication>(
             {

@@ -118,7 +118,7 @@ let _cached_decoder_for_change_auto_acknowledgment_ArgumentType: $.ASN1Decoder<c
  * @param {_Element} el The element being decoded.
  * @returns {change_auto_acknowledgment_ArgumentType} The decoded data structure.
  */
-export function _decode_change_auto_acknowledgment_ArgumentType(el: _Element) {
+export function _decode_change_auto_acknowledgment_ArgumentType(el: _Element): change_auto_acknowledgment_ArgumentType {
     if (!_cached_decoder_for_change_auto_acknowledgment_ArgumentType) {
         _cached_decoder_for_change_auto_acknowledgment_ArgumentType = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_change_auto_acknowledgment_ArgumentType: $.ASN1Encoder<c
 export function _encode_change_auto_acknowledgment_ArgumentType(
     value: change_auto_acknowledgment_ArgumentType,
     elGetter: $.ASN1Encoder<change_auto_acknowledgment_ArgumentType>
-) {
+): _Element {
     if (!_cached_encoder_for_change_auto_acknowledgment_ArgumentType) {
         _cached_encoder_for_change_auto_acknowledgment_ArgumentType = function (
             value: change_auto_acknowledgment_ArgumentType        ): _Element {

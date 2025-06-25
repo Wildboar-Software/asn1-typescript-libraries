@@ -38,7 +38,7 @@ let _cached_decoder_for_Destination_File_Directory: $.ASN1Decoder<Destination_Fi
  * @param {_Element} el The element being decoded.
  * @returns {Destination_File_Directory} The decoded data structure.
  */
-export function _decode_Destination_File_Directory(el: _Element) {
+export function _decode_Destination_File_Directory(el: _Element): Destination_File_Directory {
   if (!_cached_decoder_for_Destination_File_Directory) {
     _cached_decoder_for_Destination_File_Directory = $._decode_explicit<Destination_File_Directory>(
       () => _decode_Pathname_Attribute
@@ -61,7 +61,7 @@ let _cached_encoder_for_Destination_File_Directory: $.ASN1Encoder<Destination_Fi
 export function _encode_Destination_File_Directory(
   value: Destination_File_Directory,
   elGetter: $.ASN1Encoder<Destination_File_Directory>
-) {
+): _Element {
   if (!_cached_encoder_for_Destination_File_Directory) {
     _cached_encoder_for_Destination_File_Directory = $._encode_explicit(
       _TagClass.application,

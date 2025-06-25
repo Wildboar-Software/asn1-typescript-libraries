@@ -119,7 +119,7 @@ let _cached_decoder_for_EncKeyWithID: $.ASN1Decoder<EncKeyWithID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EncKeyWithID} The decoded data structure.
  */
-export function _decode_EncKeyWithID(el: _Element) {
+export function _decode_EncKeyWithID(el: _Element): EncKeyWithID {
     if (!_cached_decoder_for_EncKeyWithID) {
         _cached_decoder_for_EncKeyWithID = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_EncKeyWithID: $.ASN1Encoder<EncKeyWithID> | null = null;
 export function _encode_EncKeyWithID(
     value: EncKeyWithID,
     elGetter: $.ASN1Encoder<EncKeyWithID>
-) {
+): _Element {
     if (!_cached_encoder_for_EncKeyWithID) {
         _cached_encoder_for_EncKeyWithID = function (
             value: EncKeyWithID        ): _Element {

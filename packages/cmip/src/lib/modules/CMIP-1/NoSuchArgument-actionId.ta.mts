@@ -120,7 +120,7 @@ let _cached_decoder_for_NoSuchArgument_actionId: $.ASN1Decoder<NoSuchArgument_ac
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchArgument_actionId} The decoded data structure.
  */
-export function _decode_NoSuchArgument_actionId(el: _Element) {
+export function _decode_NoSuchArgument_actionId(el: _Element): NoSuchArgument_actionId {
   if (!_cached_decoder_for_NoSuchArgument_actionId) {
     _cached_decoder_for_NoSuchArgument_actionId = function (
       el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_NoSuchArgument_actionId: $.ASN1Encoder<NoSuchArgument_ac
 export function _encode_NoSuchArgument_actionId(
   value: NoSuchArgument_actionId,
   elGetter: $.ASN1Encoder<NoSuchArgument_actionId>
-) {
+): _Element {
   if (!_cached_encoder_for_NoSuchArgument_actionId) {
     _cached_encoder_for_NoSuchArgument_actionId = function (
       value: NoSuchArgument_actionId    ): _Element {

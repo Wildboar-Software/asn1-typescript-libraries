@@ -44,7 +44,7 @@ let _cached_decoder_for_TestThreshold: $.ASN1Decoder<TestThreshold> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TestThreshold} The decoded data structure.
  */
-export function _decode_TestThreshold(el: _Element) {
+export function _decode_TestThreshold(el: _Element): TestThreshold {
     if (!_cached_decoder_for_TestThreshold) {
         _cached_decoder_for_TestThreshold = $._decode_inextensible_choice<TestThreshold>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_TestThreshold: $.ASN1Encoder<TestThreshold> | null = nul
 export function _encode_TestThreshold(
     value: TestThreshold,
     elGetter: $.ASN1Encoder<TestThreshold>
-) {
+): _Element {
     if (!_cached_encoder_for_TestThreshold) {
         _cached_encoder_for_TestThreshold = $._encode_choice<TestThreshold>(
             {

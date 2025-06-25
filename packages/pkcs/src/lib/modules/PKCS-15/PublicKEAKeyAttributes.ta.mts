@@ -137,7 +137,7 @@ let _cached_decoder_for_PublicKEAKeyAttributes: $.ASN1Decoder<PublicKEAKeyAttrib
  * @param {_Element} el The element being decoded.
  * @returns {PublicKEAKeyAttributes} The decoded data structure.
  */
-export function _decode_PublicKEAKeyAttributes(el: _Element) {
+export function _decode_PublicKEAKeyAttributes(el: _Element): PublicKEAKeyAttributes {
     if (!_cached_decoder_for_PublicKEAKeyAttributes) {
         _cached_decoder_for_PublicKEAKeyAttributes = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_PublicKEAKeyAttributes: $.ASN1Encoder<PublicKEAKeyAttrib
 export function _encode_PublicKEAKeyAttributes(
     value: PublicKEAKeyAttributes,
     elGetter: $.ASN1Encoder<PublicKEAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicKEAKeyAttributes) {
         _cached_encoder_for_PublicKEAKeyAttributes = function (
             value: PublicKEAKeyAttributes        ): _Element {

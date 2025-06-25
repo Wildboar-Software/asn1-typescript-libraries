@@ -41,7 +41,7 @@ let _cached_decoder_for_ObjectClass: $.ASN1Decoder<ObjectClass> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectClass} The decoded data structure.
  */
-export function _decode_ObjectClass(el: _Element) {
+export function _decode_ObjectClass(el: _Element): ObjectClass {
   if (!_cached_decoder_for_ObjectClass) {
     _cached_decoder_for_ObjectClass = $._decode_inextensible_choice<ObjectClass>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ObjectClass: $.ASN1Encoder<ObjectClass> | null = null;
 export function _encode_ObjectClass(
   value: ObjectClass,
   elGetter: $.ASN1Encoder<ObjectClass>
-) {
+): _Element {
   if (!_cached_encoder_for_ObjectClass) {
     _cached_encoder_for_ObjectClass = $._encode_choice<ObjectClass>(
       {

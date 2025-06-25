@@ -36,7 +36,7 @@ let _cached_decoder_for_IpAddress: $.ASN1Decoder<IpAddress> | null = null;
  * @returns {IpAddress} The decoded data structure.
  */
 export
-function _decode_IpAddress (el: _Element) {
+function _decode_IpAddress (el: _Element): IpAddress {
     if (!_cached_decoder_for_IpAddress) { _cached_decoder_for_IpAddress = $._decode_implicit<IpAddress>(() => $._decodeOctetString); }
     return _cached_decoder_for_IpAddress(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_IpAddress: $.ASN1Encoder<IpAddress> | null = null;
  * @returns {_Element} The IpAddress, encoded as an ASN.1 Element.
  */
 export
-function _encode_IpAddress (value: IpAddress, elGetter: $.ASN1Encoder<IpAddress>) {
+function _encode_IpAddress (value: IpAddress, elGetter: $.ASN1Encoder<IpAddress>): _Element {
     if (!_cached_encoder_for_IpAddress) { _cached_encoder_for_IpAddress = $._encode_implicit(_TagClass.application, 0, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_IpAddress(value, elGetter);
 }

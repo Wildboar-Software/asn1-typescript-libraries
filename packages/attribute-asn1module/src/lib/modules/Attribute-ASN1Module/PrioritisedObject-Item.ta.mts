@@ -109,7 +109,7 @@ let _cached_decoder_for_PrioritisedObject_Item: $.ASN1Decoder<PrioritisedObject_
  * @returns {PrioritisedObject_Item} The decoded data structure.
  */
 export
-function _decode_PrioritisedObject_Item (el: _Element) {
+function _decode_PrioritisedObject_Item (el: _Element): PrioritisedObject_Item {
     if (!_cached_decoder_for_PrioritisedObject_Item) { _cached_decoder_for_PrioritisedObject_Item = function (el: _Element): PrioritisedObject_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -140,7 +140,7 @@ let _cached_encoder_for_PrioritisedObject_Item: $.ASN1Encoder<PrioritisedObject_
  * @returns {_Element} The PrioritisedObject_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_PrioritisedObject_Item (value: PrioritisedObject_Item, elGetter: $.ASN1Encoder<PrioritisedObject_Item>) {
+function _encode_PrioritisedObject_Item (value: PrioritisedObject_Item, elGetter: $.ASN1Encoder<PrioritisedObject_Item>): _Element {
     if (!_cached_encoder_for_PrioritisedObject_Item) { _cached_encoder_for_PrioritisedObject_Item = function (value: PrioritisedObject_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

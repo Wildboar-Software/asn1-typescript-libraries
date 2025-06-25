@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfMonths: $.ASN1Decoder<SequenceOfMonths> | null
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfMonths} The decoded data structure.
  */
-export function _decode_SequenceOfMonths(el: _Element) {
+export function _decode_SequenceOfMonths(el: _Element): SequenceOfMonths {
     if (!_cached_decoder_for_SequenceOfMonths) {
         _cached_decoder_for_SequenceOfMonths = $._decodeSequenceOf<MonthMask>(
             () => _decode_MonthMask
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfMonths: $.ASN1Encoder<SequenceOfMonths> | null
 export function _encode_SequenceOfMonths(
     value: SequenceOfMonths,
     elGetter: $.ASN1Encoder<SequenceOfMonths>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfMonths) {
         _cached_encoder_for_SequenceOfMonths = $._encodeSequenceOf<MonthMask>(
             () => _encode_MonthMask,

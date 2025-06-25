@@ -111,7 +111,7 @@ let _cached_decoder_for_CommitmentTypeQualifier: $.ASN1Decoder<CommitmentTypeQua
  * @returns {CommitmentTypeQualifier} The decoded data structure.
  */
 export
-function _decode_CommitmentTypeQualifier (el: _Element) {
+function _decode_CommitmentTypeQualifier (el: _Element): CommitmentTypeQualifier {
     if (!_cached_decoder_for_CommitmentTypeQualifier) { _cached_decoder_for_CommitmentTypeQualifier = function (el: _Element): CommitmentTypeQualifier {
     let commitmentQualifierId!: OBJECT_IDENTIFIER;
     let qualifier: OPTIONAL<_Element>;
@@ -143,7 +143,7 @@ let _cached_encoder_for_CommitmentTypeQualifier: $.ASN1Encoder<CommitmentTypeQua
  * @returns {_Element} The CommitmentTypeQualifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_CommitmentTypeQualifier (value: CommitmentTypeQualifier, elGetter: $.ASN1Encoder<CommitmentTypeQualifier>) {
+function _encode_CommitmentTypeQualifier (value: CommitmentTypeQualifier, elGetter: $.ASN1Encoder<CommitmentTypeQualifier>): _Element {
     if (!_cached_encoder_for_CommitmentTypeQualifier) { _cached_encoder_for_CommitmentTypeQualifier = function (value: CommitmentTypeQualifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -126,7 +126,7 @@ let _cached_decoder_for_Default_P_context: $.ASN1Decoder<Default_P_context> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Default_P_context} The decoded data structure.
  */
-export function _decode_Default_P_context(el: _Element) {
+export function _decode_Default_P_context(el: _Element): Default_P_context {
     if (!_cached_decoder_for_Default_P_context) {
         _cached_decoder_for_Default_P_context = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_Default_P_context: $.ASN1Encoder<Default_P_context> | nu
 export function _encode_Default_P_context(
     value: Default_P_context,
     elGetter: $.ASN1Encoder<Default_P_context>
-) {
+): _Element {
     if (!_cached_encoder_for_Default_P_context) {
         _cached_encoder_for_Default_P_context = function (
             value: Default_P_context        ): _Element {

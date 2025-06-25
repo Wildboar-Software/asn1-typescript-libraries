@@ -133,7 +133,7 @@ let _cached_decoder_for_MatchingRuleAssertion: $.ASN1Decoder<MatchingRuleAsserti
  * @param {_Element} el The element being decoded.
  * @returns {MatchingRuleAssertion} The decoded data structure.
  */
-export function _decode_MatchingRuleAssertion(el: _Element) {
+export function _decode_MatchingRuleAssertion(el: _Element): MatchingRuleAssertion {
     if (!_cached_decoder_for_MatchingRuleAssertion) {
         _cached_decoder_for_MatchingRuleAssertion = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_MatchingRuleAssertion: $.ASN1Encoder<MatchingRuleAsserti
 export function _encode_MatchingRuleAssertion(
     value: MatchingRuleAssertion,
     elGetter: $.ASN1Encoder<MatchingRuleAssertion>
-) {
+): _Element {
     if (!_cached_encoder_for_MatchingRuleAssertion) {
         _cached_encoder_for_MatchingRuleAssertion = function (
             value: MatchingRuleAssertion        ): _Element {

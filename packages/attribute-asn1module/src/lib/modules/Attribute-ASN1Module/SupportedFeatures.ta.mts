@@ -39,7 +39,7 @@ let _cached_decoder_for_SupportedFeatures: $.ASN1Decoder<SupportedFeatures> | nu
  * @returns {SupportedFeatures} The decoded data structure.
  */
 export
-function _decode_SupportedFeatures (el: _Element) {
+function _decode_SupportedFeatures (el: _Element): SupportedFeatures {
     if (!_cached_decoder_for_SupportedFeatures) { _cached_decoder_for_SupportedFeatures = $._decodeSetOf<SupportedFeatures_Item>(() => _decode_SupportedFeatures_Item); }
     return _cached_decoder_for_SupportedFeatures(el);
 }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SupportedFeatures: $.ASN1Encoder<SupportedFeatures> | nu
  * @returns {_Element} The SupportedFeatures, encoded as an ASN.1 Element.
  */
 export
-function _encode_SupportedFeatures (value: SupportedFeatures, elGetter: $.ASN1Encoder<SupportedFeatures>) {
+function _encode_SupportedFeatures (value: SupportedFeatures, elGetter: $.ASN1Encoder<SupportedFeatures>): _Element {
     if (!_cached_encoder_for_SupportedFeatures) { _cached_encoder_for_SupportedFeatures = $._encodeSetOf<SupportedFeatures_Item>(() => _encode_SupportedFeatures_Item, $.BER); }
     return _cached_encoder_for_SupportedFeatures(value, elGetter);
 }

@@ -121,7 +121,7 @@ let _cached_decoder_for_EntityChallengeType: $.ASN1Decoder<EntityChallengeType> 
  * @param {_Element} el The element being decoded.
  * @returns {EntityChallengeType} The decoded data structure.
  */
-export function _decode_EntityChallengeType(el: _Element) {
+export function _decode_EntityChallengeType(el: _Element): EntityChallengeType {
   if (!_cached_decoder_for_EntityChallengeType) {
     _cached_decoder_for_EntityChallengeType = function (
       el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_EntityChallengeType: $.ASN1Encoder<EntityChallengeType> 
 export function _encode_EntityChallengeType(
   value: EntityChallengeType,
   elGetter: $.ASN1Encoder<EntityChallengeType>
-) {
+): _Element {
   if (!_cached_encoder_for_EntityChallengeType) {
     _cached_encoder_for_EntityChallengeType = function (
       value: EntityChallengeType    ): _Element {

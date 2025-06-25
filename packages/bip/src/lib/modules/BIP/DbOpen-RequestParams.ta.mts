@@ -146,7 +146,7 @@ let _cached_decoder_for_DbOpen_RequestParams: $.ASN1Decoder<DbOpen_RequestParams
  * @param {_Element} el The element being decoded.
  * @returns {DbOpen_RequestParams} The decoded data structure.
  */
-export function _decode_DbOpen_RequestParams(el: _Element) {
+export function _decode_DbOpen_RequestParams(el: _Element): DbOpen_RequestParams {
   if (!_cached_decoder_for_DbOpen_RequestParams) {
     _cached_decoder_for_DbOpen_RequestParams = function (
       el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_DbOpen_RequestParams: $.ASN1Encoder<DbOpen_RequestParams
 export function _encode_DbOpen_RequestParams(
   value: DbOpen_RequestParams,
   elGetter: $.ASN1Encoder<DbOpen_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbOpen_RequestParams) {
     _cached_encoder_for_DbOpen_RequestParams = function (
       value: DbOpen_RequestParams    ): _Element {

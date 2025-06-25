@@ -38,7 +38,7 @@ let _cached_decoder_for_Realm: $.ASN1Decoder<Realm> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Realm} The decoded data structure.
  */
-export function _decode_Realm(el: _Element) {
+export function _decode_Realm(el: _Element): Realm {
   if (!_cached_decoder_for_Realm) {
     _cached_decoder_for_Realm = _decode_KerberosString;
   }
@@ -56,7 +56,7 @@ let _cached_encoder_for_Realm: $.ASN1Encoder<Realm> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Realm, encoded as an ASN.1 Element.
  */
-export function _encode_Realm(value: Realm, elGetter: $.ASN1Encoder<Realm>) {
+export function _encode_Realm(value: Realm, elGetter: $.ASN1Encoder<Realm>): _Element {
   if (!_cached_encoder_for_Realm) {
     _cached_encoder_for_Realm = _encode_KerberosString;
   }

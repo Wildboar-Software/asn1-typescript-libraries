@@ -126,7 +126,7 @@ let _cached_decoder_for_RS_PPDU: $.ASN1Decoder<RS_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RS_PPDU} The decoded data structure.
  */
-export function _decode_RS_PPDU(el: _Element) {
+export function _decode_RS_PPDU(el: _Element): RS_PPDU {
     if (!_cached_decoder_for_RS_PPDU) {
         _cached_decoder_for_RS_PPDU = function (el: _Element): RS_PPDU {
             let presentation_context_identifier_list: OPTIONAL<Presentation_context_identifier_list>;
@@ -174,7 +174,7 @@ let _cached_encoder_for_RS_PPDU: $.ASN1Encoder<RS_PPDU> | null = null;
 export function _encode_RS_PPDU(
     value: RS_PPDU,
     elGetter: $.ASN1Encoder<RS_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_RS_PPDU) {
         _cached_encoder_for_RS_PPDU = function (
             value: RS_PPDU        ): _Element {

@@ -123,7 +123,7 @@ let _cached_decoder_for_ChangeCredentialsArgument: $.ASN1Decoder<ChangeCredentia
  * @param {_Element} el The element being decoded.
  * @returns {ChangeCredentialsArgument} The decoded data structure.
  */
-export function _decode_ChangeCredentialsArgument(el: _Element) {
+export function _decode_ChangeCredentialsArgument(el: _Element): ChangeCredentialsArgument {
     if (!_cached_decoder_for_ChangeCredentialsArgument) {
         _cached_decoder_for_ChangeCredentialsArgument = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_ChangeCredentialsArgument: $.ASN1Encoder<ChangeCredentia
 export function _encode_ChangeCredentialsArgument(
     value: ChangeCredentialsArgument,
     elGetter: $.ASN1Encoder<ChangeCredentialsArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangeCredentialsArgument) {
         _cached_encoder_for_ChangeCredentialsArgument = function (
             value: ChangeCredentialsArgument        ): _Element {

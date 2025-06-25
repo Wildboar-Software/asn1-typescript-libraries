@@ -106,7 +106,7 @@ let _cached_decoder_for_OtherRecipientInfo: $.ASN1Decoder<OtherRecipientInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {OtherRecipientInfo} The decoded data structure.
  */
-export function _decode_OtherRecipientInfo(el: _Element) {
+export function _decode_OtherRecipientInfo(el: _Element): OtherRecipientInfo {
     if (!_cached_decoder_for_OtherRecipientInfo) {
         _cached_decoder_for_OtherRecipientInfo = function (
             el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_OtherRecipientInfo: $.ASN1Encoder<OtherRecipientInfo> | 
 export function _encode_OtherRecipientInfo(
     value: OtherRecipientInfo,
     elGetter: $.ASN1Encoder<OtherRecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherRecipientInfo) {
         _cached_encoder_for_OtherRecipientInfo = function (
             value: OtherRecipientInfo        ): _Element {

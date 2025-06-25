@@ -36,7 +36,7 @@ let _cached_decoder_for_DeliveryControlErrors: $.ASN1Decoder<DeliveryControlErro
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryControlErrors} The decoded data structure.
  */
-export function _decode_DeliveryControlErrors(el: _Element) {
+export function _decode_DeliveryControlErrors(el: _Element): DeliveryControlErrors {
     if (!_cached_decoder_for_DeliveryControlErrors) {
         _cached_decoder_for_DeliveryControlErrors = _decode_DeliveryError;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_DeliveryControlErrors: $.ASN1Encoder<DeliveryControlErro
 export function _encode_DeliveryControlErrors(
     value: DeliveryControlErrors,
     elGetter: $.ASN1Encoder<DeliveryControlErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryControlErrors) {
         _cached_encoder_for_DeliveryControlErrors = _encode_DeliveryError;
     }

@@ -111,7 +111,7 @@ let _cached_decoder_for_IdentifyMatch_ResponseParams: $.ASN1Decoder<IdentifyMatc
  * @param {_Element} el The element being decoded.
  * @returns {IdentifyMatch_ResponseParams} The decoded data structure.
  */
-export function _decode_IdentifyMatch_ResponseParams(el: _Element) {
+export function _decode_IdentifyMatch_ResponseParams(el: _Element): IdentifyMatch_ResponseParams {
   if (!_cached_decoder_for_IdentifyMatch_ResponseParams) {
     _cached_decoder_for_IdentifyMatch_ResponseParams = function (
       el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_IdentifyMatch_ResponseParams: $.ASN1Encoder<IdentifyMatc
 export function _encode_IdentifyMatch_ResponseParams(
   value: IdentifyMatch_ResponseParams,
   elGetter: $.ASN1Encoder<IdentifyMatch_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_IdentifyMatch_ResponseParams) {
     _cached_encoder_for_IdentifyMatch_ResponseParams = function (
       value: IdentifyMatch_ResponseParams    ): _Element {

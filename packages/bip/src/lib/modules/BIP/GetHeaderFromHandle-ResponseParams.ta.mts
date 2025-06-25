@@ -109,7 +109,7 @@ let _cached_decoder_for_GetHeaderFromHandle_ResponseParams: $.ASN1Decoder<GetHea
  * @param {_Element} el The element being decoded.
  * @returns {GetHeaderFromHandle_ResponseParams} The decoded data structure.
  */
-export function _decode_GetHeaderFromHandle_ResponseParams(el: _Element) {
+export function _decode_GetHeaderFromHandle_ResponseParams(el: _Element): GetHeaderFromHandle_ResponseParams {
   if (!_cached_decoder_for_GetHeaderFromHandle_ResponseParams) {
     _cached_decoder_for_GetHeaderFromHandle_ResponseParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_GetHeaderFromHandle_ResponseParams: $.ASN1Encoder<GetHea
 export function _encode_GetHeaderFromHandle_ResponseParams(
   value: GetHeaderFromHandle_ResponseParams,
   elGetter: $.ASN1Encoder<GetHeaderFromHandle_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GetHeaderFromHandle_ResponseParams) {
     _cached_encoder_for_GetHeaderFromHandle_ResponseParams = function (
       value: GetHeaderFromHandle_ResponseParams    ): _Element {

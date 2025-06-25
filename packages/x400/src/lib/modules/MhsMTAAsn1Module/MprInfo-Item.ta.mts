@@ -128,7 +128,7 @@ let _cached_decoder_for_MprInfo_Item: $.ASN1Decoder<MprInfo_Item> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MprInfo_Item} The decoded data structure.
  */
-export function _decode_MprInfo_Item(el: _Element) {
+export function _decode_MprInfo_Item(el: _Element): MprInfo_Item {
     if (!_cached_decoder_for_MprInfo_Item) {
         _cached_decoder_for_MprInfo_Item = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_MprInfo_Item: $.ASN1Encoder<MprInfo_Item> | null = null;
 export function _encode_MprInfo_Item(
     value: MprInfo_Item,
     elGetter: $.ASN1Encoder<MprInfo_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_MprInfo_Item) {
         _cached_encoder_for_MprInfo_Item = function (
             value: MprInfo_Item        ): _Element {

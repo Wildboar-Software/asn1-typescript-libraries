@@ -38,7 +38,7 @@ let _cached_decoder_for_ActionFilterList: $.ASN1Decoder<ActionFilterList> | null
  * @param {_Element} el The element being decoded.
  * @returns {ActionFilterList} The decoded data structure.
  */
-export function _decode_ActionFilterList(el: _Element) {
+export function _decode_ActionFilterList(el: _Element): ActionFilterList {
     if (!_cached_decoder_for_ActionFilterList) {
         _cached_decoder_for_ActionFilterList = $._decodeSetOf<ActionFilterList_Item>(
             () => _decode_ActionFilterList_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_ActionFilterList: $.ASN1Encoder<ActionFilterList> | null
 export function _encode_ActionFilterList(
     value: ActionFilterList,
     elGetter: $.ASN1Encoder<ActionFilterList>
-) {
+): _Element {
     if (!_cached_encoder_for_ActionFilterList) {
         _cached_encoder_for_ActionFilterList = $._encodeSetOf<ActionFilterList_Item>(
             () => _encode_ActionFilterList_Item,

@@ -141,7 +141,7 @@ let _cached_decoder_for_ReportingMTAName: $.ASN1Decoder<ReportingMTAName> | null
  * @param {_Element} el The element being decoded.
  * @returns {ReportingMTAName} The decoded data structure.
  */
-export function _decode_ReportingMTAName(el: _Element) {
+export function _decode_ReportingMTAName(el: _Element): ReportingMTAName {
     if (!_cached_decoder_for_ReportingMTAName) {
         _cached_decoder_for_ReportingMTAName = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_ReportingMTAName: $.ASN1Encoder<ReportingMTAName> | null
 export function _encode_ReportingMTAName(
     value: ReportingMTAName,
     elGetter: $.ASN1Encoder<ReportingMTAName>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportingMTAName) {
         _cached_encoder_for_ReportingMTAName = function (
             value: ReportingMTAName        ): _Element {

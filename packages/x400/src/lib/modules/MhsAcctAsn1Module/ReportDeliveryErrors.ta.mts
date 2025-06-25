@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportDeliveryErrors: $.ASN1Decoder<ReportDeliveryErrors
  * @param {_Element} el The element being decoded.
  * @returns {ReportDeliveryErrors} The decoded data structure.
  */
-export function _decode_ReportDeliveryErrors(el: _Element) {
+export function _decode_ReportDeliveryErrors(el: _Element): ReportDeliveryErrors {
     if (!_cached_decoder_for_ReportDeliveryErrors) {
         _cached_decoder_for_ReportDeliveryErrors = _decode_MessageDeliveryErrors;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReportDeliveryErrors: $.ASN1Encoder<ReportDeliveryErrors
 export function _encode_ReportDeliveryErrors(
     value: ReportDeliveryErrors,
     elGetter: $.ASN1Encoder<ReportDeliveryErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportDeliveryErrors) {
         _cached_encoder_for_ReportDeliveryErrors = _encode_MessageDeliveryErrors;
     }

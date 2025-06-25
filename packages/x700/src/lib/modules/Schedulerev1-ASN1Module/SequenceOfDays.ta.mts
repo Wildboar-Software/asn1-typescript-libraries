@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfDays: $.ASN1Decoder<SequenceOfDays> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfDays} The decoded data structure.
  */
-export function _decode_SequenceOfDays(el: _Element) {
+export function _decode_SequenceOfDays(el: _Element): SequenceOfDays {
     if (!_cached_decoder_for_SequenceOfDays) {
         _cached_decoder_for_SequenceOfDays = $._decodeSequenceOf<TimesOfDayWps>(
             () => _decode_TimesOfDayWps
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfDays: $.ASN1Encoder<SequenceOfDays> | null = n
 export function _encode_SequenceOfDays(
     value: SequenceOfDays,
     elGetter: $.ASN1Encoder<SequenceOfDays>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfDays) {
         _cached_encoder_for_SequenceOfDays = $._encodeSequenceOf<TimesOfDayWps>(
             () => _encode_TimesOfDayWps,

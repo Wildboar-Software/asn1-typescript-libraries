@@ -49,7 +49,7 @@ let _cached_decoder_for_BiometricProcessSecurityInformation: $.ASN1Decoder<Biome
  * @param {_Element} el The element being decoded.
  * @returns {BiometricProcessSecurityInformation} The decoded data structure.
  */
-export function _decode_BiometricProcessSecurityInformation(el: _Element) {
+export function _decode_BiometricProcessSecurityInformation(el: _Element): BiometricProcessSecurityInformation {
     if (!_cached_decoder_for_BiometricProcessSecurityInformation) {
         _cached_decoder_for_BiometricProcessSecurityInformation = $._decode_inextensible_choice<BiometricProcessSecurityInformation>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_BiometricProcessSecurityInformation: $.ASN1Encoder<Biome
 export function _encode_BiometricProcessSecurityInformation(
     value: BiometricProcessSecurityInformation,
     elGetter: $.ASN1Encoder<BiometricProcessSecurityInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BiometricProcessSecurityInformation) {
         _cached_encoder_for_BiometricProcessSecurityInformation = $._encode_choice<BiometricProcessSecurityInformation>(
             {

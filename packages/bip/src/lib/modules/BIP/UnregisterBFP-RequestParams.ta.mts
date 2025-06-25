@@ -109,7 +109,7 @@ let _cached_decoder_for_UnregisterBFP_RequestParams: $.ASN1Decoder<UnregisterBFP
  * @param {_Element} el The element being decoded.
  * @returns {UnregisterBFP_RequestParams} The decoded data structure.
  */
-export function _decode_UnregisterBFP_RequestParams(el: _Element) {
+export function _decode_UnregisterBFP_RequestParams(el: _Element): UnregisterBFP_RequestParams {
   if (!_cached_decoder_for_UnregisterBFP_RequestParams) {
     _cached_decoder_for_UnregisterBFP_RequestParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_UnregisterBFP_RequestParams: $.ASN1Encoder<UnregisterBFP
 export function _encode_UnregisterBFP_RequestParams(
   value: UnregisterBFP_RequestParams,
   elGetter: $.ASN1Encoder<UnregisterBFP_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_UnregisterBFP_RequestParams) {
     _cached_encoder_for_UnregisterBFP_RequestParams = function (
       value: UnregisterBFP_RequestParams    ): _Element {

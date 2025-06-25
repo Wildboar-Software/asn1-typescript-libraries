@@ -188,7 +188,7 @@ let _cached_decoder_for_Waiting: $.ASN1Decoder<Waiting> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Waiting} The decoded data structure.
  */
-export function _decode_Waiting(el: _Element) {
+export function _decode_Waiting(el: _Element): Waiting {
     if (!_cached_decoder_for_Waiting) {
         _cached_decoder_for_Waiting = function (el: _Element): Waiting {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -256,7 +256,7 @@ let _cached_encoder_for_Waiting: $.ASN1Encoder<Waiting> | null = null;
 export function _encode_Waiting(
     value: Waiting,
     elGetter: $.ASN1Encoder<Waiting>
-) {
+): _Element {
     if (!_cached_encoder_for_Waiting) {
         _cached_encoder_for_Waiting = function (
             value: Waiting        ): _Element {

@@ -246,7 +246,7 @@ let _cached_decoder_for_BIPResponse: $.ASN1Decoder<BIPResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BIPResponse} The decoded data structure.
  */
-export function _decode_BIPResponse(el: _Element) {
+export function _decode_BIPResponse(el: _Element): BIPResponse {
   if (!_cached_decoder_for_BIPResponse) {
     _cached_decoder_for_BIPResponse = function (el: _Element): BIPResponse {
       const sequence: _Element[] = el.sequence;
@@ -302,7 +302,7 @@ let _cached_encoder_for_BIPResponse: $.ASN1Encoder<BIPResponse> | null = null;
 export function _encode_BIPResponse(
   value: BIPResponse,
   elGetter: $.ASN1Encoder<BIPResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPResponse) {
     _cached_encoder_for_BIPResponse = function (
       value: BIPResponse    ): _Element {

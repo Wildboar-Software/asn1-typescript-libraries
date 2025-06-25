@@ -188,7 +188,7 @@ let _cached_decoder_for_RedirectGUIEvents_RequestParams: $.ASN1Decoder<RedirectG
  * @param {_Element} el The element being decoded.
  * @returns {RedirectGUIEvents_RequestParams} The decoded data structure.
  */
-export function _decode_RedirectGUIEvents_RequestParams(el: _Element) {
+export function _decode_RedirectGUIEvents_RequestParams(el: _Element): RedirectGUIEvents_RequestParams {
   if (!_cached_decoder_for_RedirectGUIEvents_RequestParams) {
     _cached_decoder_for_RedirectGUIEvents_RequestParams = function (
       el: _Element
@@ -246,7 +246,7 @@ let _cached_encoder_for_RedirectGUIEvents_RequestParams: $.ASN1Encoder<RedirectG
 export function _encode_RedirectGUIEvents_RequestParams(
   value: RedirectGUIEvents_RequestParams,
   elGetter: $.ASN1Encoder<RedirectGUIEvents_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_RedirectGUIEvents_RequestParams) {
     _cached_encoder_for_RedirectGUIEvents_RequestParams = function (
       value: RedirectGUIEvents_RequestParams    ): _Element {

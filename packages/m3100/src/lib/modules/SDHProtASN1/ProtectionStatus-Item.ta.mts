@@ -64,7 +64,7 @@ let _cached_decoder_for_ProtectionStatus_Item: $.ASN1Decoder<ProtectionStatus_It
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionStatus_Item} The decoded data structure.
  */
-export function _decode_ProtectionStatus_Item(el: _Element) {
+export function _decode_ProtectionStatus_Item(el: _Element): ProtectionStatus_Item {
     if (!_cached_decoder_for_ProtectionStatus_Item) {
         _cached_decoder_for_ProtectionStatus_Item = $._decode_inextensible_choice<ProtectionStatus_Item>(
             {
@@ -132,7 +132,7 @@ let _cached_encoder_for_ProtectionStatus_Item: $.ASN1Encoder<ProtectionStatus_It
 export function _encode_ProtectionStatus_Item(
     value: ProtectionStatus_Item,
     elGetter: $.ASN1Encoder<ProtectionStatus_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionStatus_Item) {
         _cached_encoder_for_ProtectionStatus_Item = $._encode_choice<ProtectionStatus_Item>(
             {

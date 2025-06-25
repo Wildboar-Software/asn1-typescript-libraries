@@ -45,7 +45,7 @@ let _cached_decoder_for_CTPUpstreamPointer: $.ASN1Decoder<CTPUpstreamPointer> | 
  * @param {_Element} el The element being decoded.
  * @returns {CTPUpstreamPointer} The decoded data structure.
  */
-export function _decode_CTPUpstreamPointer(el: _Element) {
+export function _decode_CTPUpstreamPointer(el: _Element): CTPUpstreamPointer {
     if (!_cached_decoder_for_CTPUpstreamPointer) {
         _cached_decoder_for_CTPUpstreamPointer = _decode_ConnectivityPointer;
     }
@@ -66,7 +66,7 @@ let _cached_encoder_for_CTPUpstreamPointer: $.ASN1Encoder<CTPUpstreamPointer> | 
 export function _encode_CTPUpstreamPointer(
     value: CTPUpstreamPointer,
     elGetter: $.ASN1Encoder<CTPUpstreamPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_CTPUpstreamPointer) {
         _cached_encoder_for_CTPUpstreamPointer = _encode_ConnectivityPointer;
     }

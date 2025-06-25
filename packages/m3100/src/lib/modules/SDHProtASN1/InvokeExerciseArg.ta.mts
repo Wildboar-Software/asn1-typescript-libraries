@@ -126,7 +126,7 @@ let _cached_decoder_for_InvokeExerciseArg: $.ASN1Decoder<InvokeExerciseArg> | nu
  * @param {_Element} el The element being decoded.
  * @returns {InvokeExerciseArg} The decoded data structure.
  */
-export function _decode_InvokeExerciseArg(el: _Element) {
+export function _decode_InvokeExerciseArg(el: _Element): InvokeExerciseArg {
     if (!_cached_decoder_for_InvokeExerciseArg) {
         _cached_decoder_for_InvokeExerciseArg = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_InvokeExerciseArg: $.ASN1Encoder<InvokeExerciseArg> | nu
 export function _encode_InvokeExerciseArg(
     value: InvokeExerciseArg,
     elGetter: $.ASN1Encoder<InvokeExerciseArg>
-) {
+): _Element {
     if (!_cached_encoder_for_InvokeExerciseArg) {
         _cached_encoder_for_InvokeExerciseArg = function (
             value: InvokeExerciseArg        ): _Element {

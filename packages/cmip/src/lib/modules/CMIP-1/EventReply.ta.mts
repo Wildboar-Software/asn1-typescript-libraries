@@ -118,7 +118,7 @@ let _cached_decoder_for_EventReply: $.ASN1Decoder<EventReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EventReply} The decoded data structure.
  */
-export function _decode_EventReply(el: _Element) {
+export function _decode_EventReply(el: _Element): EventReply {
   if (!_cached_decoder_for_EventReply) {
     _cached_decoder_for_EventReply = function (el: _Element): EventReply {
       let eventType!: EventTypeId;
@@ -164,7 +164,7 @@ let _cached_encoder_for_EventReply: $.ASN1Encoder<EventReply> | null = null;
 export function _encode_EventReply(
   value: EventReply,
   elGetter: $.ASN1Encoder<EventReply>
-) {
+): _Element {
   if (!_cached_encoder_for_EventReply) {
     _cached_encoder_for_EventReply = function (
       value: EventReply    ): _Element {

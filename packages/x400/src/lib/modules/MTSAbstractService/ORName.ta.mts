@@ -154,7 +154,7 @@ let _cached_decoder_for_ORName: $.ASN1Decoder<ORName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ORName} The decoded data structure.
  */
-export function _decode_ORName(el: _Element) {
+export function _decode_ORName(el: _Element): ORName {
     if (!_cached_decoder_for_ORName) {
         _cached_decoder_for_ORName = $._decode_implicit<ORName>(
             () =>
@@ -218,7 +218,7 @@ let _cached_encoder_for_ORName: $.ASN1Encoder<ORName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORName, encoded as an ASN.1 Element.
  */
-export function _encode_ORName(value: ORName, elGetter: $.ASN1Encoder<ORName>) {
+export function _encode_ORName(value: ORName, elGetter: $.ASN1Encoder<ORName>): _Element {
     if (!_cached_encoder_for_ORName) {
         _cached_encoder_for_ORName = $._encode_implicit(
             _TagClass.application,

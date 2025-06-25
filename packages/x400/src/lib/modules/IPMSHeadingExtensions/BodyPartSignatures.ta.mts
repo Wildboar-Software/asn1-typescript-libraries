@@ -41,7 +41,7 @@ let _cached_decoder_for_BodyPartSignatures: $.ASN1Decoder<BodyPartSignatures> | 
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartSignatures} The decoded data structure.
  */
-export function _decode_BodyPartSignatures(el: _Element) {
+export function _decode_BodyPartSignatures(el: _Element): BodyPartSignatures {
     if (!_cached_decoder_for_BodyPartSignatures) {
         _cached_decoder_for_BodyPartSignatures = $._decodeSetOf<BodyPartSignatures_Item>(
             () => _decode_BodyPartSignatures_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_BodyPartSignatures: $.ASN1Encoder<BodyPartSignatures> | 
 export function _encode_BodyPartSignatures(
     value: BodyPartSignatures,
     elGetter: $.ASN1Encoder<BodyPartSignatures>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartSignatures) {
         _cached_encoder_for_BodyPartSignatures = $._encodeSetOf<BodyPartSignatures_Item>(
             () => _encode_BodyPartSignatures_Item,

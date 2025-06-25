@@ -121,7 +121,7 @@ let _cached_decoder_for_TestSuspendResumeElement: $.ASN1Decoder<TestSuspendResum
  * @param {_Element} el The element being decoded.
  * @returns {TestSuspendResumeElement} The decoded data structure.
  */
-export function _decode_TestSuspendResumeElement(el: _Element) {
+export function _decode_TestSuspendResumeElement(el: _Element): TestSuspendResumeElement {
     if (!_cached_decoder_for_TestSuspendResumeElement) {
         _cached_decoder_for_TestSuspendResumeElement = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_TestSuspendResumeElement: $.ASN1Encoder<TestSuspendResum
 export function _encode_TestSuspendResumeElement(
     value: TestSuspendResumeElement,
     elGetter: $.ASN1Encoder<TestSuspendResumeElement>
-) {
+): _Element {
     if (!_cached_encoder_for_TestSuspendResumeElement) {
         _cached_encoder_for_TestSuspendResumeElement = function (
             value: TestSuspendResumeElement        ): _Element {

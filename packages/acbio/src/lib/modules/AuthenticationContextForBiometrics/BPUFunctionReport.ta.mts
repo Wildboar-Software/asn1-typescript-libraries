@@ -141,7 +141,7 @@ let _cached_decoder_for_BPUFunctionReport: $.ASN1Decoder<BPUFunctionReport> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BPUFunctionReport} The decoded data structure.
  */
-export function _decode_BPUFunctionReport(el: _Element) {
+export function _decode_BPUFunctionReport(el: _Element): BPUFunctionReport {
     if (!_cached_decoder_for_BPUFunctionReport) {
         _cached_decoder_for_BPUFunctionReport = function (
             el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_BPUFunctionReport: $.ASN1Encoder<BPUFunctionReport> | nu
 export function _encode_BPUFunctionReport(
     value: BPUFunctionReport,
     elGetter: $.ASN1Encoder<BPUFunctionReport>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUFunctionReport) {
         _cached_encoder_for_BPUFunctionReport = function (
             value: BPUFunctionReport        ): _Element {

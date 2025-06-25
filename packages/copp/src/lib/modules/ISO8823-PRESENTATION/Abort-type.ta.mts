@@ -48,7 +48,7 @@ let _cached_decoder_for_Abort_type: $.ASN1Decoder<Abort_type> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Abort_type} The decoded data structure.
  */
-export function _decode_Abort_type(el: _Element) {
+export function _decode_Abort_type(el: _Element): Abort_type {
     if (!_cached_decoder_for_Abort_type) {
         _cached_decoder_for_Abort_type = $._decode_inextensible_choice<Abort_type>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Abort_type: $.ASN1Encoder<Abort_type> | null = null;
 export function _encode_Abort_type(
     value: Abort_type,
     elGetter: $.ASN1Encoder<Abort_type>
-) {
+): _Element {
     if (!_cached_encoder_for_Abort_type) {
         _cached_encoder_for_Abort_type = $._encode_choice<Abort_type>(
             {

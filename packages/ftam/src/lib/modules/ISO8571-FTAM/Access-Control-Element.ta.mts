@@ -183,7 +183,7 @@ let _cached_decoder_for_Access_Control_Element: $.ASN1Decoder<Access_Control_Ele
  * @param {_Element} el The element being decoded.
  * @returns {Access_Control_Element} The decoded data structure.
  */
-export function _decode_Access_Control_Element(el: _Element) {
+export function _decode_Access_Control_Element(el: _Element): Access_Control_Element {
   if (!_cached_decoder_for_Access_Control_Element) {
     _cached_decoder_for_Access_Control_Element = function (
       el: _Element
@@ -254,7 +254,7 @@ let _cached_encoder_for_Access_Control_Element: $.ASN1Encoder<Access_Control_Ele
 export function _encode_Access_Control_Element(
   value: Access_Control_Element,
   elGetter: $.ASN1Encoder<Access_Control_Element>
-) {
+): _Element {
   if (!_cached_encoder_for_Access_Control_Element) {
     _cached_encoder_for_Access_Control_Element = function (
       value: Access_Control_Element    ): _Element {

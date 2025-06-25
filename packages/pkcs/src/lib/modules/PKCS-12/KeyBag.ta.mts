@@ -30,7 +30,7 @@ let _cached_decoder_for_KeyBag: $.ASN1Decoder<KeyBag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KeyBag} The decoded data structure.
  */
-export function _decode_KeyBag(el: _Element) {
+export function _decode_KeyBag(el: _Element): KeyBag {
     if (!_cached_decoder_for_KeyBag) {
         _cached_decoder_for_KeyBag = _decode_PrivateKeyInfo;
     }
@@ -48,7 +48,7 @@ let _cached_encoder_for_KeyBag: $.ASN1Encoder<KeyBag> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyBag, encoded as an ASN.1 Element.
  */
-export function _encode_KeyBag(value: KeyBag, elGetter: $.ASN1Encoder<KeyBag>) {
+export function _encode_KeyBag(value: KeyBag, elGetter: $.ASN1Encoder<KeyBag>): _Element {
     if (!_cached_encoder_for_KeyBag) {
         _cached_encoder_for_KeyBag = _encode_PrivateKeyInfo;
     }

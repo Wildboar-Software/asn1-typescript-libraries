@@ -52,7 +52,7 @@ let _cached_decoder_for_RegisterResult: $.ASN1Decoder<RegisterResult> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RegisterResult} The decoded data structure.
  */
-export function _decode_RegisterResult(el: _Element) {
+export function _decode_RegisterResult(el: _Element): RegisterResult {
     if (!_cached_decoder_for_RegisterResult) {
         _cached_decoder_for_RegisterResult = $._decode_inextensible_choice<RegisterResult>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_RegisterResult: $.ASN1Encoder<RegisterResult> | null = n
 export function _encode_RegisterResult(
     value: RegisterResult,
     elGetter: $.ASN1Encoder<RegisterResult>
-) {
+): _Element {
     if (!_cached_encoder_for_RegisterResult) {
         _cached_encoder_for_RegisterResult = $._encode_choice<RegisterResult>(
             {

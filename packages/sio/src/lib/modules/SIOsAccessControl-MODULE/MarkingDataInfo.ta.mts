@@ -29,7 +29,7 @@ let _cached_decoder_for_MarkingDataInfo: $.ASN1Decoder<MarkingDataInfo> | null =
  * @param {_Element} el The element being decoded.
  * @returns {MarkingDataInfo} The decoded data structure.
  */
-export function _decode_MarkingDataInfo(el: _Element) {
+export function _decode_MarkingDataInfo(el: _Element): MarkingDataInfo {
     if (!_cached_decoder_for_MarkingDataInfo) {
         _cached_decoder_for_MarkingDataInfo = $._decodeSequenceOf<MarkingData>(
             () => _decode_MarkingData
@@ -52,7 +52,7 @@ let _cached_encoder_for_MarkingDataInfo: $.ASN1Encoder<MarkingDataInfo> | null =
 export function _encode_MarkingDataInfo(
     value: MarkingDataInfo,
     elGetter: $.ASN1Encoder<MarkingDataInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_MarkingDataInfo) {
         _cached_encoder_for_MarkingDataInfo = $._encodeSequenceOf<MarkingData>(
             () => _encode_MarkingData,

@@ -44,7 +44,7 @@ let _cached_decoder_for_TCPIPBIPMessage_content: $.ASN1Decoder<TCPIPBIPMessage_c
  * @param {_Element} el The element being decoded.
  * @returns {TCPIPBIPMessage_content} The decoded data structure.
  */
-export function _decode_TCPIPBIPMessage_content(el: _Element) {
+export function _decode_TCPIPBIPMessage_content(el: _Element): TCPIPBIPMessage_content {
   if (!_cached_decoder_for_TCPIPBIPMessage_content) {
     _cached_decoder_for_TCPIPBIPMessage_content = $._decode_inextensible_choice<TCPIPBIPMessage_content>(
       {
@@ -72,7 +72,7 @@ let _cached_encoder_for_TCPIPBIPMessage_content: $.ASN1Encoder<TCPIPBIPMessage_c
 export function _encode_TCPIPBIPMessage_content(
   value: TCPIPBIPMessage_content,
   elGetter: $.ASN1Encoder<TCPIPBIPMessage_content>
-) {
+): _Element {
   if (!_cached_encoder_for_TCPIPBIPMessage_content) {
     _cached_encoder_for_TCPIPBIPMessage_content = $._encode_choice<TCPIPBIPMessage_content>(
       {

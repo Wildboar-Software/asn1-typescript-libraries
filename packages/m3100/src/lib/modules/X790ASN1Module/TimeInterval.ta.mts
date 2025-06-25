@@ -214,7 +214,7 @@ let _cached_decoder_for_TimeInterval: $.ASN1Decoder<TimeInterval> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TimeInterval} The decoded data structure.
  */
-export function _decode_TimeInterval(el: _Element) {
+export function _decode_TimeInterval(el: _Element): TimeInterval {
     if (!_cached_decoder_for_TimeInterval) {
         _cached_decoder_for_TimeInterval = function (
             el: _Element
@@ -291,7 +291,7 @@ let _cached_encoder_for_TimeInterval: $.ASN1Encoder<TimeInterval> | null = null;
 export function _encode_TimeInterval(
     value: TimeInterval,
     elGetter: $.ASN1Encoder<TimeInterval>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeInterval) {
         _cached_encoder_for_TimeInterval = function (
             value: TimeInterval        ): _Element {

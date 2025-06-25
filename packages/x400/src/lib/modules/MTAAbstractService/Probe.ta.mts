@@ -35,7 +35,7 @@ let _cached_decoder_for_Probe: $.ASN1Decoder<Probe> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Probe} The decoded data structure.
  */
-export function _decode_Probe(el: _Element) {
+export function _decode_Probe(el: _Element): Probe {
     if (!_cached_decoder_for_Probe) {
         _cached_decoder_for_Probe = _decode_ProbeTransferEnvelope;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Probe: $.ASN1Encoder<Probe> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Probe, encoded as an ASN.1 Element.
  */
-export function _encode_Probe(value: Probe, elGetter: $.ASN1Encoder<Probe>) {
+export function _encode_Probe(value: Probe, elGetter: $.ASN1Encoder<Probe>): _Element {
     if (!_cached_encoder_for_Probe) {
         _cached_encoder_for_Probe = _encode_ProbeTransferEnvelope;
     }

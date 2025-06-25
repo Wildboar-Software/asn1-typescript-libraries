@@ -61,7 +61,7 @@ let _cached_decoder_for_Identified_Command_Response: $.ASN1Decoder<Identified_Co
  * @param {_Element} el The element being decoded.
  * @returns {Identified_Command_Response} The decoded data structure.
  */
-export function _decode_Identified_Command_Response(el: _Element) {
+export function _decode_Identified_Command_Response(el: _Element): Identified_Command_Response {
     if (!_cached_decoder_for_Identified_Command_Response) {
         _cached_decoder_for_Identified_Command_Response = $._decode_inextensible_choice<Identified_Command_Response>(
             {
@@ -93,7 +93,7 @@ let _cached_encoder_for_Identified_Command_Response: $.ASN1Encoder<Identified_Co
 export function _encode_Identified_Command_Response(
     value: Identified_Command_Response,
     elGetter: $.ASN1Encoder<Identified_Command_Response>
-) {
+): _Element {
     if (!_cached_encoder_for_Identified_Command_Response) {
         _cached_encoder_for_Identified_Command_Response = $._encode_choice<Identified_Command_Response>(
             {

@@ -38,7 +38,7 @@ let _cached_decoder_for_ArcAffectedObjectList: $.ASN1Decoder<ArcAffectedObjectLi
  * @param {_Element} el The element being decoded.
  * @returns {ArcAffectedObjectList} The decoded data structure.
  */
-export function _decode_ArcAffectedObjectList(el: _Element) {
+export function _decode_ArcAffectedObjectList(el: _Element): ArcAffectedObjectList {
     if (!_cached_decoder_for_ArcAffectedObjectList) {
         _cached_decoder_for_ArcAffectedObjectList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ArcAffectedObjectList: $.ASN1Encoder<ArcAffectedObjectLi
 export function _encode_ArcAffectedObjectList(
     value: ArcAffectedObjectList,
     elGetter: $.ASN1Encoder<ArcAffectedObjectList>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcAffectedObjectList) {
         _cached_encoder_for_ArcAffectedObjectList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

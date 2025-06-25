@@ -54,7 +54,7 @@ let _cached_decoder_for_BodyPartReference: $.ASN1Decoder<BodyPartReference> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartReference} The decoded data structure.
  */
-export function _decode_BodyPartReference(el: _Element) {
+export function _decode_BodyPartReference(el: _Element): BodyPartReference {
     if (!_cached_decoder_for_BodyPartReference) {
         _cached_decoder_for_BodyPartReference = $._decode_inextensible_choice<BodyPartReference>(
             {
@@ -98,7 +98,7 @@ let _cached_encoder_for_BodyPartReference: $.ASN1Encoder<BodyPartReference> | nu
 export function _encode_BodyPartReference(
     value: BodyPartReference,
     elGetter: $.ASN1Encoder<BodyPartReference>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartReference) {
         _cached_encoder_for_BodyPartReference = $._encode_choice<BodyPartReference>(
             {

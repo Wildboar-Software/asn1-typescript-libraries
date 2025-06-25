@@ -114,7 +114,7 @@ let _cached_decoder_for_DkgExtensionDataSyntax: $.ASN1Decoder<DkgExtensionDataSy
  * @returns {DkgExtensionDataSyntax} The decoded data structure.
  */
 export
-function _decode_DkgExtensionDataSyntax (el: _Element) {
+function _decode_DkgExtensionDataSyntax (el: _Element): DkgExtensionDataSyntax {
     if (!_cached_decoder_for_DkgExtensionDataSyntax) { _cached_decoder_for_DkgExtensionDataSyntax = function (el: _Element): DkgExtensionDataSyntax {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -145,7 +145,7 @@ let _cached_encoder_for_DkgExtensionDataSyntax: $.ASN1Encoder<DkgExtensionDataSy
  * @returns {_Element} The DkgExtensionDataSyntax, encoded as an ASN.1 Element.
  */
 export
-function _encode_DkgExtensionDataSyntax (value: DkgExtensionDataSyntax, elGetter: $.ASN1Encoder<DkgExtensionDataSyntax>) {
+function _encode_DkgExtensionDataSyntax (value: DkgExtensionDataSyntax, elGetter: $.ASN1Encoder<DkgExtensionDataSyntax>): _Element {
     if (!_cached_encoder_for_DkgExtensionDataSyntax) { _cached_encoder_for_DkgExtensionDataSyntax = function (value: DkgExtensionDataSyntax): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -141,7 +141,7 @@ let _cached_decoder_for_DeliveryService: $.ASN1Decoder<DeliveryService> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryService} The decoded data structure.
  */
-export function _decode_DeliveryService(el: _Element) {
+export function _decode_DeliveryService(el: _Element): DeliveryService {
     if (!_cached_decoder_for_DeliveryService) {
         _cached_decoder_for_DeliveryService = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_DeliveryService: $.ASN1Encoder<DeliveryService> | null =
 export function _encode_DeliveryService(
     value: DeliveryService,
     elGetter: $.ASN1Encoder<DeliveryService>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryService) {
         _cached_encoder_for_DeliveryService = function (
             value: DeliveryService        ): _Element {

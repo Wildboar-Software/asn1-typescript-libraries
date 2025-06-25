@@ -130,7 +130,7 @@ let _cached_decoder_for_AddCapacityToTopologicalLinkResult: $.ASN1Decoder<AddCap
  * @param {_Element} el The element being decoded.
  * @returns {AddCapacityToTopologicalLinkResult} The decoded data structure.
  */
-export function _decode_AddCapacityToTopologicalLinkResult(el: _Element) {
+export function _decode_AddCapacityToTopologicalLinkResult(el: _Element): AddCapacityToTopologicalLinkResult {
     if (!_cached_decoder_for_AddCapacityToTopologicalLinkResult) {
         _cached_decoder_for_AddCapacityToTopologicalLinkResult = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_AddCapacityToTopologicalLinkResult: $.ASN1Encoder<AddCap
 export function _encode_AddCapacityToTopologicalLinkResult(
     value: AddCapacityToTopologicalLinkResult,
     elGetter: $.ASN1Encoder<AddCapacityToTopologicalLinkResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AddCapacityToTopologicalLinkResult) {
         _cached_encoder_for_AddCapacityToTopologicalLinkResult = function (
             value: AddCapacityToTopologicalLinkResult        ): _Element {

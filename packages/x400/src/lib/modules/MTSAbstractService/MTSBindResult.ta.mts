@@ -179,7 +179,7 @@ let _cached_decoder_for_MTSBindResult: $.ASN1Decoder<MTSBindResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MTSBindResult} The decoded data structure.
  */
-export function _decode_MTSBindResult(el: _Element) {
+export function _decode_MTSBindResult(el: _Element): MTSBindResult {
     if (!_cached_decoder_for_MTSBindResult) {
         _cached_decoder_for_MTSBindResult = function (
             el: _Element
@@ -248,7 +248,7 @@ let _cached_encoder_for_MTSBindResult: $.ASN1Encoder<MTSBindResult> | null = nul
 export function _encode_MTSBindResult(
     value: MTSBindResult,
     elGetter: $.ASN1Encoder<MTSBindResult>
-) {
+): _Element {
     if (!_cached_encoder_for_MTSBindResult) {
         _cached_encoder_for_MTSBindResult = function (
             value: MTSBindResult        ): _Element {

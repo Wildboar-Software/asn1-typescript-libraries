@@ -42,7 +42,7 @@ let _cached_decoder_for_ManagerSearchKeyList: $.ASN1Decoder<ManagerSearchKeyList
  * @param {_Element} el The element being decoded.
  * @returns {ManagerSearchKeyList} The decoded data structure.
  */
-export function _decode_ManagerSearchKeyList(el: _Element) {
+export function _decode_ManagerSearchKeyList(el: _Element): ManagerSearchKeyList {
     if (!_cached_decoder_for_ManagerSearchKeyList) {
         _cached_decoder_for_ManagerSearchKeyList = $._decodeSetOf<ManagerSearchKeyList_Item>(
             () => _decode_ManagerSearchKeyList_Item
@@ -65,7 +65,7 @@ let _cached_encoder_for_ManagerSearchKeyList: $.ASN1Encoder<ManagerSearchKeyList
 export function _encode_ManagerSearchKeyList(
     value: ManagerSearchKeyList,
     elGetter: $.ASN1Encoder<ManagerSearchKeyList>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagerSearchKeyList) {
         _cached_encoder_for_ManagerSearchKeyList = $._encodeSetOf<ManagerSearchKeyList_Item>(
             () => _encode_ManagerSearchKeyList_Item,

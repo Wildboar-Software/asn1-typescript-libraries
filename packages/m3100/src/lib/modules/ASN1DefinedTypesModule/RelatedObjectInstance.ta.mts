@@ -44,7 +44,7 @@ let _cached_decoder_for_RelatedObjectInstance: $.ASN1Decoder<RelatedObjectInstan
  * @param {_Element} el The element being decoded.
  * @returns {RelatedObjectInstance} The decoded data structure.
  */
-export function _decode_RelatedObjectInstance(el: _Element) {
+export function _decode_RelatedObjectInstance(el: _Element): RelatedObjectInstance {
     if (!_cached_decoder_for_RelatedObjectInstance) {
         _cached_decoder_for_RelatedObjectInstance = $._decode_inextensible_choice<RelatedObjectInstance>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_RelatedObjectInstance: $.ASN1Encoder<RelatedObjectInstan
 export function _encode_RelatedObjectInstance(
     value: RelatedObjectInstance,
     elGetter: $.ASN1Encoder<RelatedObjectInstance>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedObjectInstance) {
         _cached_encoder_for_RelatedObjectInstance = $._encode_choice<RelatedObjectInstance>(
             {

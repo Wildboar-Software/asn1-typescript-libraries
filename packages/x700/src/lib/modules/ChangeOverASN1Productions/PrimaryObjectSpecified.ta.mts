@@ -35,7 +35,7 @@ let _cached_decoder_for_PrimaryObjectSpecified: $.ASN1Decoder<PrimaryObjectSpeci
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryObjectSpecified} The decoded data structure.
  */
-export function _decode_PrimaryObjectSpecified(el: _Element) {
+export function _decode_PrimaryObjectSpecified(el: _Element): PrimaryObjectSpecified {
     if (!_cached_decoder_for_PrimaryObjectSpecified) {
         _cached_decoder_for_PrimaryObjectSpecified = _decode_OptionalObject;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PrimaryObjectSpecified: $.ASN1Encoder<PrimaryObjectSpeci
 export function _encode_PrimaryObjectSpecified(
     value: PrimaryObjectSpecified,
     elGetter: $.ASN1Encoder<PrimaryObjectSpecified>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryObjectSpecified) {
         _cached_encoder_for_PrimaryObjectSpecified = _encode_OptionalObject;
     }

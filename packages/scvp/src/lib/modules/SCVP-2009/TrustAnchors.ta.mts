@@ -35,7 +35,7 @@ let _cached_decoder_for_TrustAnchors: $.ASN1Decoder<TrustAnchors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TrustAnchors} The decoded data structure.
  */
-export function _decode_TrustAnchors(el: _Element) {
+export function _decode_TrustAnchors(el: _Element): TrustAnchors {
   if (!_cached_decoder_for_TrustAnchors) {
     _cached_decoder_for_TrustAnchors = $._decodeSequenceOf<PKCReference>(
       () => _decode_PKCReference
@@ -56,7 +56,7 @@ let _cached_encoder_for_TrustAnchors: $.ASN1Encoder<TrustAnchors> | null = null;
 export function _encode_TrustAnchors(
   value: TrustAnchors,
   elGetter: $.ASN1Encoder<TrustAnchors>
-) {
+): _Element {
   if (!_cached_encoder_for_TrustAnchors) {
     _cached_encoder_for_TrustAnchors = $._encodeSequenceOf<PKCReference>(
       () => _encode_PKCReference,

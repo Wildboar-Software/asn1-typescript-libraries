@@ -120,7 +120,7 @@ let _cached_decoder_for_TideMarkInfo: $.ASN1Decoder<TideMarkInfo> | null = null;
  * @returns {TideMarkInfo} The decoded data structure.
  */
 export
-function _decode_TideMarkInfo (el: _Element) {
+function _decode_TideMarkInfo (el: _Element): TideMarkInfo {
     if (!_cached_decoder_for_TideMarkInfo) { _cached_decoder_for_TideMarkInfo = function (el: _Element): TideMarkInfo {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_TideMarkInfo: $.ASN1Encoder<TideMarkInfo> | null = null;
  * @returns {_Element} The TideMarkInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_TideMarkInfo (value: TideMarkInfo, elGetter: $.ASN1Encoder<TideMarkInfo>) {
+function _encode_TideMarkInfo (value: TideMarkInfo, elGetter: $.ASN1Encoder<TideMarkInfo>): _Element {
     if (!_cached_encoder_for_TideMarkInfo) { _cached_encoder_for_TideMarkInfo = function (value: TideMarkInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

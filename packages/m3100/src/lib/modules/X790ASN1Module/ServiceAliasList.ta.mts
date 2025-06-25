@@ -35,7 +35,7 @@ let _cached_decoder_for_ServiceAliasList: $.ASN1Decoder<ServiceAliasList> | null
  * @param {_Element} el The element being decoded.
  * @returns {ServiceAliasList} The decoded data structure.
  */
-export function _decode_ServiceAliasList(el: _Element) {
+export function _decode_ServiceAliasList(el: _Element): ServiceAliasList {
     if (!_cached_decoder_for_ServiceAliasList) {
         _cached_decoder_for_ServiceAliasList = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_ServiceAliasList: $.ASN1Encoder<ServiceAliasList> | null
 export function _encode_ServiceAliasList(
     value: ServiceAliasList,
     elGetter: $.ASN1Encoder<ServiceAliasList>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceAliasList) {
         _cached_encoder_for_ServiceAliasList = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

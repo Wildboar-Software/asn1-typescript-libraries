@@ -130,7 +130,7 @@ let _cached_decoder_for_TroubleType: $.ASN1Decoder<TroubleType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TroubleType} The decoded data structure.
  */
-export function _decode_TroubleType(el: _Element) {
+export function _decode_TroubleType(el: _Element): TroubleType {
     if (!_cached_decoder_for_TroubleType) {
         _cached_decoder_for_TroubleType = $._decode_extensible_choice<TroubleType>(
             {
@@ -156,7 +156,7 @@ let _cached_encoder_for_TroubleType: $.ASN1Encoder<TroubleType> | null = null;
 export function _encode_TroubleType(
     value: TroubleType,
     elGetter: $.ASN1Encoder<TroubleType>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleType) {
         _cached_encoder_for_TroubleType = $._encode_choice<TroubleType>(
             {

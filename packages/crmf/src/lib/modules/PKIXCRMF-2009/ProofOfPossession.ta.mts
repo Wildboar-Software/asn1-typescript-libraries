@@ -48,7 +48,7 @@ let _cached_decoder_for_ProofOfPossession: $.ASN1Decoder<ProofOfPossession> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ProofOfPossession} The decoded data structure.
  */
-export function _decode_ProofOfPossession(el: _Element) {
+export function _decode_ProofOfPossession(el: _Element): ProofOfPossession {
     if (!_cached_decoder_for_ProofOfPossession) {
         _cached_decoder_for_ProofOfPossession = $._decode_inextensible_choice<ProofOfPossession>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_ProofOfPossession: $.ASN1Encoder<ProofOfPossession> | nu
 export function _encode_ProofOfPossession(
     value: ProofOfPossession,
     elGetter: $.ASN1Encoder<ProofOfPossession>
-) {
+): _Element {
     if (!_cached_encoder_for_ProofOfPossession) {
         _cached_encoder_for_ProofOfPossession = $._encode_choice<ProofOfPossession>(
             {

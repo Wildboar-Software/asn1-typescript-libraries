@@ -153,7 +153,7 @@ let _cached_decoder_for_RTOACapdu: $.ASN1Decoder<RTOACapdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RTOACapdu} The decoded data structure.
  */
-export function _decode_RTOACapdu(el: _Element) {
+export function _decode_RTOACapdu(el: _Element): RTOACapdu {
   if (!_cached_decoder_for_RTOACapdu) {
     _cached_decoder_for_RTOACapdu = function (el: _Element): RTOACapdu {
       /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -210,7 +210,7 @@ let _cached_encoder_for_RTOACapdu: $.ASN1Encoder<RTOACapdu> | null = null;
 export function _encode_RTOACapdu(
   value: RTOACapdu,
   elGetter: $.ASN1Encoder<RTOACapdu>
-) {
+): _Element {
   if (!_cached_encoder_for_RTOACapdu) {
     _cached_encoder_for_RTOACapdu = function (
       value: RTOACapdu    ): _Element {

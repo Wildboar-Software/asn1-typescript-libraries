@@ -35,7 +35,7 @@ let _cached_decoder_for_BCBiometricInformationTemplate: $.ASN1Decoder<BCBiometri
  * @returns {BCBiometricInformationTemplate} The decoded data structure.
  */
 export
-function _decode_BCBiometricInformationTemplate (el: _Element) {
+function _decode_BCBiometricInformationTemplate (el: _Element): BCBiometricInformationTemplate {
     if (!_cached_decoder_for_BCBiometricInformationTemplate) { _cached_decoder_for_BCBiometricInformationTemplate = _get_decoder_for_SIGNED<BCBiometricInformationTemplateContent>(_decode_BCBiometricInformationTemplateContent); }
     return _cached_decoder_for_BCBiometricInformationTemplate(el);
 }
@@ -50,7 +50,7 @@ let _cached_encoder_for_BCBiometricInformationTemplate: $.ASN1Encoder<BCBiometri
  * @returns {_Element} The BCBiometricInformationTemplate, encoded as an ASN.1 Element.
  */
 export
-function _encode_BCBiometricInformationTemplate (value: BCBiometricInformationTemplate, elGetter: $.ASN1Encoder<BCBiometricInformationTemplate>) {
+function _encode_BCBiometricInformationTemplate (value: BCBiometricInformationTemplate, elGetter: $.ASN1Encoder<BCBiometricInformationTemplate>): _Element {
     if (!_cached_encoder_for_BCBiometricInformationTemplate) { _cached_encoder_for_BCBiometricInformationTemplate = _get_encoder_for_SIGNED<BCBiometricInformationTemplateContent>(_encode_BCBiometricInformationTemplateContent); }
     return _cached_encoder_for_BCBiometricInformationTemplate(value, elGetter);
 }

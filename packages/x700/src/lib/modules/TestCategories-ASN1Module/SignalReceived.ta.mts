@@ -41,7 +41,7 @@ let _cached_decoder_for_SignalReceived: $.ASN1Decoder<SignalReceived> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SignalReceived} The decoded data structure.
  */
-export function _decode_SignalReceived(el: _Element) {
+export function _decode_SignalReceived(el: _Element): SignalReceived {
     if (!_cached_decoder_for_SignalReceived) {
         _cached_decoder_for_SignalReceived = $._decodeSetOf<SignalReceived_Item>(
             () => _decode_SignalReceived_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_SignalReceived: $.ASN1Encoder<SignalReceived> | null = n
 export function _encode_SignalReceived(
     value: SignalReceived,
     elGetter: $.ASN1Encoder<SignalReceived>
-) {
+): _Element {
     if (!_cached_encoder_for_SignalReceived) {
         _cached_encoder_for_SignalReceived = $._encodeSetOf<SignalReceived_Item>(
             () => _encode_SignalReceived_Item,

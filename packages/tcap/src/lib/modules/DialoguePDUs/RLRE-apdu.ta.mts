@@ -116,7 +116,7 @@ let _cached_decoder_for_RLRE_apdu: $.ASN1Decoder<RLRE_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RLRE_apdu} The decoded data structure.
  */
-export function _decode_RLRE_apdu(el: _Element) {
+export function _decode_RLRE_apdu(el: _Element): RLRE_apdu {
     if (!_cached_decoder_for_RLRE_apdu) {
         _cached_decoder_for_RLRE_apdu = $._decode_implicit<RLRE_apdu>(
             () =>
@@ -168,7 +168,7 @@ let _cached_encoder_for_RLRE_apdu: $.ASN1Encoder<RLRE_apdu> | null = null;
 export function _encode_RLRE_apdu(
     value: RLRE_apdu,
     elGetter: $.ASN1Encoder<RLRE_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_RLRE_apdu) {
         _cached_encoder_for_RLRE_apdu = $._encode_implicit(
             _TagClass.application,

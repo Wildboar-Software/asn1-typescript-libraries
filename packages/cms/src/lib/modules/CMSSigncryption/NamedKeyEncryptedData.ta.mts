@@ -156,7 +156,7 @@ let _cached_decoder_for_NamedKeyEncryptedData: $.ASN1Decoder<NamedKeyEncryptedDa
  * @param {_Element} el The element being decoded.
  * @returns {NamedKeyEncryptedData} The decoded data structure.
  */
-export function _decode_NamedKeyEncryptedData(el: _Element) {
+export function _decode_NamedKeyEncryptedData(el: _Element): NamedKeyEncryptedData {
     if (!_cached_decoder_for_NamedKeyEncryptedData) {
         _cached_decoder_for_NamedKeyEncryptedData = function (
             el: _Element
@@ -216,7 +216,7 @@ let _cached_encoder_for_NamedKeyEncryptedData: $.ASN1Encoder<NamedKeyEncryptedDa
 export function _encode_NamedKeyEncryptedData(
     value: NamedKeyEncryptedData,
     elGetter: $.ASN1Encoder<NamedKeyEncryptedData>
-) {
+): _Element {
     if (!_cached_encoder_for_NamedKeyEncryptedData) {
         _cached_encoder_for_NamedKeyEncryptedData = function (
             value: NamedKeyEncryptedData        ): _Element {

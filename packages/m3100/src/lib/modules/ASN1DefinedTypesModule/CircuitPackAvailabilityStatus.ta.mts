@@ -39,7 +39,7 @@ let _cached_decoder_for_CircuitPackAvailabilityStatus: $.ASN1Decoder<CircuitPack
  * @param {_Element} el The element being decoded.
  * @returns {CircuitPackAvailabilityStatus} The decoded data structure.
  */
-export function _decode_CircuitPackAvailabilityStatus(el: _Element) {
+export function _decode_CircuitPackAvailabilityStatus(el: _Element): CircuitPackAvailabilityStatus {
     if (!_cached_decoder_for_CircuitPackAvailabilityStatus) {
         _cached_decoder_for_CircuitPackAvailabilityStatus = _decode_AvailabilityStatus;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_CircuitPackAvailabilityStatus: $.ASN1Encoder<CircuitPack
 export function _encode_CircuitPackAvailabilityStatus(
     value: CircuitPackAvailabilityStatus,
     elGetter: $.ASN1Encoder<CircuitPackAvailabilityStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_CircuitPackAvailabilityStatus) {
         _cached_encoder_for_CircuitPackAvailabilityStatus = _encode_AvailabilityStatus;
     }

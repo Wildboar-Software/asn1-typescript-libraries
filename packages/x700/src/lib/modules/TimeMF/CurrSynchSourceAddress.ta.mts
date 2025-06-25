@@ -45,7 +45,7 @@ let _cached_decoder_for_CurrSynchSourceAddress: $.ASN1Decoder<CurrSynchSourceAdd
  * @param {_Element} el The element being decoded.
  * @returns {CurrSynchSourceAddress} The decoded data structure.
  */
-export function _decode_CurrSynchSourceAddress(el: _Element) {
+export function _decode_CurrSynchSourceAddress(el: _Element): CurrSynchSourceAddress {
     if (!_cached_decoder_for_CurrSynchSourceAddress) {
         _cached_decoder_for_CurrSynchSourceAddress = $._decode_inextensible_choice<CurrSynchSourceAddress>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_CurrSynchSourceAddress: $.ASN1Encoder<CurrSynchSourceAdd
 export function _encode_CurrSynchSourceAddress(
     value: CurrSynchSourceAddress,
     elGetter: $.ASN1Encoder<CurrSynchSourceAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_CurrSynchSourceAddress) {
         _cached_encoder_for_CurrSynchSourceAddress = $._encode_choice<CurrSynchSourceAddress>(
             {

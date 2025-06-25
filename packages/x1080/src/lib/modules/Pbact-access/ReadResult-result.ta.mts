@@ -46,7 +46,7 @@ let _cached_decoder_for_ReadResult_result: $.ASN1Decoder<ReadResult_result> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ReadResult_result} The decoded data structure.
  */
-export function _decode_ReadResult_result(el: _Element) {
+export function _decode_ReadResult_result(el: _Element): ReadResult_result {
     if (!_cached_decoder_for_ReadResult_result) {
         _cached_decoder_for_ReadResult_result = $._decode_extensible_choice<ReadResult_result>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_ReadResult_result: $.ASN1Encoder<ReadResult_result> | nu
 export function _encode_ReadResult_result(
     value: ReadResult_result,
     elGetter: $.ASN1Encoder<ReadResult_result>
-) {
+): _Element {
     if (!_cached_encoder_for_ReadResult_result) {
         _cached_encoder_for_ReadResult_result = $._encode_choice<ReadResult_result>(
             {

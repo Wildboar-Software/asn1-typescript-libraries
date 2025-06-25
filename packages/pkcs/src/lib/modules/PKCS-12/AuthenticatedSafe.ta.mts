@@ -30,7 +30,7 @@ let _cached_decoder_for_AuthenticatedSafe: $.ASN1Decoder<AuthenticatedSafe> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticatedSafe} The decoded data structure.
  */
-export function _decode_AuthenticatedSafe(el: _Element) {
+export function _decode_AuthenticatedSafe(el: _Element): AuthenticatedSafe {
     if (!_cached_decoder_for_AuthenticatedSafe) {
         _cached_decoder_for_AuthenticatedSafe = $._decodeSequenceOf<ContentInfo>(
             () => _decode_ContentInfo
@@ -53,7 +53,7 @@ let _cached_encoder_for_AuthenticatedSafe: $.ASN1Encoder<AuthenticatedSafe> | nu
 export function _encode_AuthenticatedSafe(
     value: AuthenticatedSafe,
     elGetter: $.ASN1Encoder<AuthenticatedSafe>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticatedSafe) {
         _cached_encoder_for_AuthenticatedSafe = $._encodeSequenceOf<ContentInfo>(
             () => _encode_ContentInfo,

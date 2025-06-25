@@ -169,7 +169,7 @@ let _cached_decoder_for_FetchArgument: $.ASN1Decoder<FetchArgument> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {FetchArgument} The decoded data structure.
  */
-export function _decode_FetchArgument(el: _Element) {
+export function _decode_FetchArgument(el: _Element): FetchArgument {
     if (!_cached_decoder_for_FetchArgument) {
         _cached_decoder_for_FetchArgument = function (
             el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_FetchArgument: $.ASN1Encoder<FetchArgument> | null = nul
 export function _encode_FetchArgument(
     value: FetchArgument,
     elGetter: $.ASN1Encoder<FetchArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchArgument) {
         _cached_encoder_for_FetchArgument = function (
             value: FetchArgument        ): _Element {

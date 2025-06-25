@@ -201,7 +201,7 @@ let _cached_decoder_for_Concurrency_Access: $.ASN1Decoder<Concurrency_Access> | 
  * @param {_Element} el The element being decoded.
  * @returns {Concurrency_Access} The decoded data structure.
  */
-export function _decode_Concurrency_Access(el: _Element) {
+export function _decode_Concurrency_Access(el: _Element): Concurrency_Access {
   if (!_cached_decoder_for_Concurrency_Access) {
     _cached_decoder_for_Concurrency_Access = function (
       el: _Element
@@ -283,7 +283,7 @@ let _cached_encoder_for_Concurrency_Access: $.ASN1Encoder<Concurrency_Access> | 
 export function _encode_Concurrency_Access(
   value: Concurrency_Access,
   elGetter: $.ASN1Encoder<Concurrency_Access>
-) {
+): _Element {
   if (!_cached_encoder_for_Concurrency_Access) {
     _cached_encoder_for_Concurrency_Access = function (
       value: Concurrency_Access    ): _Element {

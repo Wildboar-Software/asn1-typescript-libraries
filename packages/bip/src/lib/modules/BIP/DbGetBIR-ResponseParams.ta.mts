@@ -125,7 +125,7 @@ let _cached_decoder_for_DbGetBIR_ResponseParams: $.ASN1Decoder<DbGetBIR_Response
  * @param {_Element} el The element being decoded.
  * @returns {DbGetBIR_ResponseParams} The decoded data structure.
  */
-export function _decode_DbGetBIR_ResponseParams(el: _Element) {
+export function _decode_DbGetBIR_ResponseParams(el: _Element): DbGetBIR_ResponseParams {
   if (!_cached_decoder_for_DbGetBIR_ResponseParams) {
     _cached_decoder_for_DbGetBIR_ResponseParams = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_DbGetBIR_ResponseParams: $.ASN1Encoder<DbGetBIR_Response
 export function _encode_DbGetBIR_ResponseParams(
   value: DbGetBIR_ResponseParams,
   elGetter: $.ASN1Encoder<DbGetBIR_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbGetBIR_ResponseParams) {
     _cached_encoder_for_DbGetBIR_ResponseParams = function (
       value: DbGetBIR_ResponseParams    ): _Element {

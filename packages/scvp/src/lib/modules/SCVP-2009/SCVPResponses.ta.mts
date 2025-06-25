@@ -36,7 +36,7 @@ let _cached_decoder_for_SCVPResponses: $.ASN1Decoder<SCVPResponses> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SCVPResponses} The decoded data structure.
  */
-export function _decode_SCVPResponses(el: _Element) {
+export function _decode_SCVPResponses(el: _Element): SCVPResponses {
   if (!_cached_decoder_for_SCVPResponses) {
     _cached_decoder_for_SCVPResponses = $._decodeSequenceOf<ContentInfo>(
       () => _decode_ContentInfo
@@ -57,7 +57,7 @@ let _cached_encoder_for_SCVPResponses: $.ASN1Encoder<SCVPResponses> | null = nul
 export function _encode_SCVPResponses(
   value: SCVPResponses,
   elGetter: $.ASN1Encoder<SCVPResponses>
-) {
+): _Element {
   if (!_cached_encoder_for_SCVPResponses) {
     _cached_encoder_for_SCVPResponses = $._encodeSequenceOf<ContentInfo>(
       () => _encode_ContentInfo,

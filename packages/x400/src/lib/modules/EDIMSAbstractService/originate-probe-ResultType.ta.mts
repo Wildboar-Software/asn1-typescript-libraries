@@ -121,7 +121,7 @@ let _cached_decoder_for_originate_probe_ResultType: $.ASN1Decoder<originate_prob
  * @param {_Element} el The element being decoded.
  * @returns {originate_probe_ResultType} The decoded data structure.
  */
-export function _decode_originate_probe_ResultType(el: _Element) {
+export function _decode_originate_probe_ResultType(el: _Element): originate_probe_ResultType {
     if (!_cached_decoder_for_originate_probe_ResultType) {
         _cached_decoder_for_originate_probe_ResultType = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_originate_probe_ResultType: $.ASN1Encoder<originate_prob
 export function _encode_originate_probe_ResultType(
     value: originate_probe_ResultType,
     elGetter: $.ASN1Encoder<originate_probe_ResultType>
-) {
+): _Element {
     if (!_cached_encoder_for_originate_probe_ResultType) {
         _cached_encoder_for_originate_probe_ResultType = function (
             value: originate_probe_ResultType        ): _Element {

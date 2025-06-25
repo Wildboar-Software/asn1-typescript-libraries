@@ -38,7 +38,7 @@ let _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult: $.ASN1Decoder<A
  * @param {_Element} el The element being decoded.
  * @returns {AssignLinkConnectionOnLogicalLinkResult} The decoded data structure.
  */
-export function _decode_AssignLinkConnectionOnLogicalLinkResult(el: _Element) {
+export function _decode_AssignLinkConnectionOnLogicalLinkResult(el: _Element): AssignLinkConnectionOnLogicalLinkResult {
     if (!_cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult) {
         _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult = _decode_LinkConnectionList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult: $.ASN1Encoder<A
 export function _encode_AssignLinkConnectionOnLogicalLinkResult(
     value: AssignLinkConnectionOnLogicalLinkResult,
     elGetter: $.ASN1Encoder<AssignLinkConnectionOnLogicalLinkResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult) {
         _cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult = _encode_LinkConnectionList;
     }

@@ -41,7 +41,7 @@ let _cached_decoder_for_CorrelatedDeliveredIPNs: $.ASN1Decoder<CorrelatedDeliver
  * @param {_Element} el The element being decoded.
  * @returns {CorrelatedDeliveredIPNs} The decoded data structure.
  */
-export function _decode_CorrelatedDeliveredIPNs(el: _Element) {
+export function _decode_CorrelatedDeliveredIPNs(el: _Element): CorrelatedDeliveredIPNs {
     if (!_cached_decoder_for_CorrelatedDeliveredIPNs) {
         _cached_decoder_for_CorrelatedDeliveredIPNs = $._decode_inextensible_choice<CorrelatedDeliveredIPNs>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_CorrelatedDeliveredIPNs: $.ASN1Encoder<CorrelatedDeliver
 export function _encode_CorrelatedDeliveredIPNs(
     value: CorrelatedDeliveredIPNs,
     elGetter: $.ASN1Encoder<CorrelatedDeliveredIPNs>
-) {
+): _Element {
     if (!_cached_encoder_for_CorrelatedDeliveredIPNs) {
         _cached_encoder_for_CorrelatedDeliveredIPNs = $._encode_choice<CorrelatedDeliveredIPNs>(
             {

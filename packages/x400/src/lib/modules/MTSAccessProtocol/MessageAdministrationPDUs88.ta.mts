@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageAdministrationPDUs88: $.ASN1Decoder<MessageAdmini
  * @param {_Element} el The element being decoded.
  * @returns {MessageAdministrationPDUs88} The decoded data structure.
  */
-export function _decode_MessageAdministrationPDUs88(el: _Element) {
+export function _decode_MessageAdministrationPDUs88(el: _Element): MessageAdministrationPDUs88 {
     if (!_cached_decoder_for_MessageAdministrationPDUs88) {
         _cached_decoder_for_MessageAdministrationPDUs88 = _decode_ROS_SingleAS;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageAdministrationPDUs88: $.ASN1Encoder<MessageAdmini
 export function _encode_MessageAdministrationPDUs88(
     value: MessageAdministrationPDUs88,
     elGetter: $.ASN1Encoder<MessageAdministrationPDUs88>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageAdministrationPDUs88) {
         _cached_encoder_for_MessageAdministrationPDUs88 = _encode_ROS_SingleAS;
     }

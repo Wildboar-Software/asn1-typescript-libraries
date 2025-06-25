@@ -136,7 +136,7 @@ let _cached_decoder_for_dirSignedTransformation_XformedDataType: $.ASN1Decoder<d
  * @param {_Element} el The element being decoded.
  * @returns {dirSignedTransformation_XformedDataType} The decoded data structure.
  */
-export function _decode_dirSignedTransformation_XformedDataType(el: _Element) {
+export function _decode_dirSignedTransformation_XformedDataType(el: _Element): dirSignedTransformation_XformedDataType {
   if (!_cached_decoder_for_dirSignedTransformation_XformedDataType) {
     _cached_decoder_for_dirSignedTransformation_XformedDataType = function (
       el: _Element
@@ -182,7 +182,7 @@ let _cached_encoder_for_dirSignedTransformation_XformedDataType: $.ASN1Encoder<d
 export function _encode_dirSignedTransformation_XformedDataType(
   value: dirSignedTransformation_XformedDataType,
   elGetter: $.ASN1Encoder<dirSignedTransformation_XformedDataType>
-) {
+): _Element {
   if (!_cached_encoder_for_dirSignedTransformation_XformedDataType) {
     _cached_encoder_for_dirSignedTransformation_XformedDataType = function (
       value: dirSignedTransformation_XformedDataType    ): _Element {

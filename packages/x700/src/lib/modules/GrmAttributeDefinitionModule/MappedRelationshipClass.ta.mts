@@ -35,7 +35,7 @@ let _cached_decoder_for_MappedRelationshipClass: $.ASN1Decoder<MappedRelationshi
  * @param {_Element} el The element being decoded.
  * @returns {MappedRelationshipClass} The decoded data structure.
  */
-export function _decode_MappedRelationshipClass(el: _Element) {
+export function _decode_MappedRelationshipClass(el: _Element): MappedRelationshipClass {
     if (!_cached_decoder_for_MappedRelationshipClass) {
         _cached_decoder_for_MappedRelationshipClass = _decode_TemplateLabel;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MappedRelationshipClass: $.ASN1Encoder<MappedRelationshi
 export function _encode_MappedRelationshipClass(
     value: MappedRelationshipClass,
     elGetter: $.ASN1Encoder<MappedRelationshipClass>
-) {
+): _Element {
     if (!_cached_encoder_for_MappedRelationshipClass) {
         _cached_encoder_for_MappedRelationshipClass = _encode_TemplateLabel;
     }

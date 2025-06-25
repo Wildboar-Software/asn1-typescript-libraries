@@ -176,7 +176,7 @@ let _cached_decoder_for_AlarmSeverityAssignment: $.ASN1Decoder<AlarmSeverityAssi
  * @param {_Element} el The element being decoded.
  * @returns {AlarmSeverityAssignment} The decoded data structure.
  */
-export function _decode_AlarmSeverityAssignment(el: _Element) {
+export function _decode_AlarmSeverityAssignment(el: _Element): AlarmSeverityAssignment {
     if (!_cached_decoder_for_AlarmSeverityAssignment) {
         _cached_decoder_for_AlarmSeverityAssignment = function (
             el: _Element
@@ -238,7 +238,7 @@ let _cached_encoder_for_AlarmSeverityAssignment: $.ASN1Encoder<AlarmSeverityAssi
 export function _encode_AlarmSeverityAssignment(
     value: AlarmSeverityAssignment,
     elGetter: $.ASN1Encoder<AlarmSeverityAssignment>
-) {
+): _Element {
     if (!_cached_encoder_for_AlarmSeverityAssignment) {
         _cached_encoder_for_AlarmSeverityAssignment = function (
             value: AlarmSeverityAssignment        ): _Element {

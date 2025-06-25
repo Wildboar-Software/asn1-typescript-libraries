@@ -35,7 +35,7 @@ let _cached_decoder_for_NoSuchTestSessionId: $.ASN1Decoder<NoSuchTestSessionId> 
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchTestSessionId} The decoded data structure.
  */
-export function _decode_NoSuchTestSessionId(el: _Element) {
+export function _decode_NoSuchTestSessionId(el: _Element): NoSuchTestSessionId {
     if (!_cached_decoder_for_NoSuchTestSessionId) {
         _cached_decoder_for_NoSuchTestSessionId = _decode_TestSessionId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_NoSuchTestSessionId: $.ASN1Encoder<NoSuchTestSessionId> 
 export function _encode_NoSuchTestSessionId(
     value: NoSuchTestSessionId,
     elGetter: $.ASN1Encoder<NoSuchTestSessionId>
-) {
+): _Element {
     if (!_cached_encoder_for_NoSuchTestSessionId) {
         _cached_encoder_for_NoSuchTestSessionId = _encode_TestSessionId;
     }

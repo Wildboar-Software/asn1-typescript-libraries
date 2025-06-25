@@ -35,7 +35,7 @@ let _cached_decoder_for_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndO
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressAndOrDirectoryName} The decoded data structure.
  */
-export function _decode_ORAddressAndOrDirectoryName(el: _Element) {
+export function _decode_ORAddressAndOrDirectoryName(el: _Element): ORAddressAndOrDirectoryName {
     if (!_cached_decoder_for_ORAddressAndOrDirectoryName) {
         _cached_decoder_for_ORAddressAndOrDirectoryName = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndO
 export function _encode_ORAddressAndOrDirectoryName(
     value: ORAddressAndOrDirectoryName,
     elGetter: $.ASN1Encoder<ORAddressAndOrDirectoryName>
-) {
+): _Element {
     if (!_cached_encoder_for_ORAddressAndOrDirectoryName) {
         _cached_encoder_for_ORAddressAndOrDirectoryName = _encode_ORName;
     }

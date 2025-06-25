@@ -162,7 +162,7 @@ let _cached_decoder_for_E_setupError: $.ASN1Decoder<E_setupError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {E_setupError} The decoded data structure.
  */
-export function _decode_E_setupError(el: _Element) {
+export function _decode_E_setupError(el: _Element): E_setupError {
     if (!_cached_decoder_for_E_setupError) {
         _cached_decoder_for_E_setupError = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_E_setupError: $.ASN1Encoder<E_setupError> | null = null;
 export function _encode_E_setupError(
     value: E_setupError,
     elGetter: $.ASN1Encoder<E_setupError>
-) {
+): _Element {
     if (!_cached_encoder_for_E_setupError) {
         _cached_encoder_for_E_setupError = function (
             value: E_setupError        ): _Element {

@@ -134,7 +134,7 @@ let _cached_decoder_for_BulkPDU: $.ASN1Decoder<BulkPDU> | null = null;
  * @returns {BulkPDU} The decoded data structure.
  */
 export
-function _decode_BulkPDU (el: _Element) {
+function _decode_BulkPDU (el: _Element): BulkPDU {
     if (!_cached_decoder_for_BulkPDU) { _cached_decoder_for_BulkPDU = function (el: _Element): BulkPDU {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -173,7 +173,7 @@ let _cached_encoder_for_BulkPDU: $.ASN1Encoder<BulkPDU> | null = null;
  * @returns {_Element} The BulkPDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_BulkPDU (value: BulkPDU, elGetter: $.ASN1Encoder<BulkPDU>) {
+function _encode_BulkPDU (value: BulkPDU, elGetter: $.ASN1Encoder<BulkPDU>): _Element {
     if (!_cached_encoder_for_BulkPDU) { _cached_encoder_for_BulkPDU = function (value: BulkPDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

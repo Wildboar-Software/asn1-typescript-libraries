@@ -114,7 +114,7 @@ let _cached_decoder_for_Characteristic_two: $.ASN1Decoder<Characteristic_two> | 
  * @param {_Element} el The element being decoded.
  * @returns {Characteristic_two} The decoded data structure.
  */
-export function _decode_Characteristic_two(el: _Element) {
+export function _decode_Characteristic_two(el: _Element): Characteristic_two {
     if (!_cached_decoder_for_Characteristic_two) {
         _cached_decoder_for_Characteristic_two = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_Characteristic_two: $.ASN1Encoder<Characteristic_two> | 
 export function _encode_Characteristic_two(
     value: Characteristic_two,
     elGetter: $.ASN1Encoder<Characteristic_two>
-) {
+): _Element {
     if (!_cached_encoder_for_Characteristic_two) {
         _cached_encoder_for_Characteristic_two = function (
             value: Characteristic_two        ): _Element {

@@ -45,7 +45,7 @@ let _cached_decoder_for_ROS_ConsumerAS: $.ASN1Decoder<ROS_ConsumerAS> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ROS_ConsumerAS} The decoded data structure.
  */
-export function _decode_ROS_ConsumerAS(el: _Element) {
+export function _decode_ROS_ConsumerAS(el: _Element): ROS_ConsumerAS {
   if (!_cached_decoder_for_ROS_ConsumerAS) {
     _cached_decoder_for_ROS_ConsumerAS = _decode_ROS;
   }
@@ -66,7 +66,7 @@ let _cached_encoder_for_ROS_ConsumerAS: $.ASN1Encoder<ROS_ConsumerAS> | null = n
 export function _encode_ROS_ConsumerAS(
   value: ROS_ConsumerAS,
   elGetter: $.ASN1Encoder<ROS_ConsumerAS>
-) {
+): _Element {
   if (!_cached_encoder_for_ROS_ConsumerAS) {
     _cached_encoder_for_ROS_ConsumerAS = _encode_ROS;
   }

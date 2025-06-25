@@ -222,7 +222,7 @@ let _cached_decoder_for_Controls: $.ASN1Decoder<Controls> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Controls} The decoded data structure.
  */
-export function _decode_Controls(el: _Element) {
+export function _decode_Controls(el: _Element): Controls {
     if (!_cached_decoder_for_Controls) {
         _cached_decoder_for_Controls = function (el: _Element): Controls {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -306,7 +306,7 @@ let _cached_encoder_for_Controls: $.ASN1Encoder<Controls> | null = null;
 export function _encode_Controls(
     value: Controls,
     elGetter: $.ASN1Encoder<Controls>
-) {
+): _Element {
     if (!_cached_encoder_for_Controls) {
         _cached_encoder_for_Controls = function (
             value: Controls        ): _Element {

@@ -335,7 +335,7 @@ let _cached_decoder_for_GUIStateEvent_NotificationParams: $.ASN1Decoder<GUIState
  * @param {_Element} el The element being decoded.
  * @returns {GUIStateEvent_NotificationParams} The decoded data structure.
  */
-export function _decode_GUIStateEvent_NotificationParams(el: _Element) {
+export function _decode_GUIStateEvent_NotificationParams(el: _Element): GUIStateEvent_NotificationParams {
   if (!_cached_decoder_for_GUIStateEvent_NotificationParams) {
     _cached_decoder_for_GUIStateEvent_NotificationParams = function (
       el: _Element
@@ -431,7 +431,7 @@ let _cached_encoder_for_GUIStateEvent_NotificationParams: $.ASN1Encoder<GUIState
 export function _encode_GUIStateEvent_NotificationParams(
   value: GUIStateEvent_NotificationParams,
   elGetter: $.ASN1Encoder<GUIStateEvent_NotificationParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIStateEvent_NotificationParams) {
     _cached_encoder_for_GUIStateEvent_NotificationParams = function (
       value: GUIStateEvent_NotificationParams    ): _Element {

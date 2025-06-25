@@ -57,7 +57,7 @@ let _cached_decoder_for_POPOPrivKey: $.ASN1Decoder<POPOPrivKey> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {POPOPrivKey} The decoded data structure.
  */
-export function _decode_POPOPrivKey(el: _Element) {
+export function _decode_POPOPrivKey(el: _Element): POPOPrivKey {
     if (!_cached_decoder_for_POPOPrivKey) {
         _cached_decoder_for_POPOPrivKey = $._decode_inextensible_choice<POPOPrivKey>(
             {
@@ -105,7 +105,7 @@ let _cached_encoder_for_POPOPrivKey: $.ASN1Encoder<POPOPrivKey> | null = null;
 export function _encode_POPOPrivKey(
     value: POPOPrivKey,
     elGetter: $.ASN1Encoder<POPOPrivKey>
-) {
+): _Element {
     if (!_cached_encoder_for_POPOPrivKey) {
         _cached_encoder_for_POPOPrivKey = $._encode_choice<POPOPrivKey>(
             {

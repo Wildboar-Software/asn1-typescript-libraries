@@ -165,7 +165,7 @@ let _cached_decoder_for_IPMAutoDiscardRegistrationParameter: $.ASN1Decoder<IPMAu
  * @param {_Element} el The element being decoded.
  * @returns {IPMAutoDiscardRegistrationParameter} The decoded data structure.
  */
-export function _decode_IPMAutoDiscardRegistrationParameter(el: _Element) {
+export function _decode_IPMAutoDiscardRegistrationParameter(el: _Element): IPMAutoDiscardRegistrationParameter {
     if (!_cached_decoder_for_IPMAutoDiscardRegistrationParameter) {
         _cached_decoder_for_IPMAutoDiscardRegistrationParameter = function (
             el: _Element
@@ -236,7 +236,7 @@ let _cached_encoder_for_IPMAutoDiscardRegistrationParameter: $.ASN1Encoder<IPMAu
 export function _encode_IPMAutoDiscardRegistrationParameter(
     value: IPMAutoDiscardRegistrationParameter,
     elGetter: $.ASN1Encoder<IPMAutoDiscardRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMAutoDiscardRegistrationParameter) {
         _cached_encoder_for_IPMAutoDiscardRegistrationParameter = function (
             value: IPMAutoDiscardRegistrationParameter        ): _Element {

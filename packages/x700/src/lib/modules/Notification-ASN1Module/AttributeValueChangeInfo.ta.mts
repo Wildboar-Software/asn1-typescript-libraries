@@ -224,7 +224,7 @@ let _cached_decoder_for_AttributeValueChangeInfo: $.ASN1Decoder<AttributeValueCh
  * @param {_Element} el The element being decoded.
  * @returns {AttributeValueChangeInfo} The decoded data structure.
  */
-export function _decode_AttributeValueChangeInfo(el: _Element) {
+export function _decode_AttributeValueChangeInfo(el: _Element): AttributeValueChangeInfo {
     if (!_cached_decoder_for_AttributeValueChangeInfo) {
         _cached_decoder_for_AttributeValueChangeInfo = function (
             el: _Element
@@ -303,7 +303,7 @@ let _cached_encoder_for_AttributeValueChangeInfo: $.ASN1Encoder<AttributeValueCh
 export function _encode_AttributeValueChangeInfo(
     value: AttributeValueChangeInfo,
     elGetter: $.ASN1Encoder<AttributeValueChangeInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeValueChangeInfo) {
         _cached_encoder_for_AttributeValueChangeInfo = function (
             value: AttributeValueChangeInfo        ): _Element {

@@ -48,7 +48,7 @@ let _cached_decoder_for_ToTermSpecifier: $.ASN1Decoder<ToTermSpecifier> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ToTermSpecifier} The decoded data structure.
  */
-export function _decode_ToTermSpecifier(el: _Element) {
+export function _decode_ToTermSpecifier(el: _Element): ToTermSpecifier {
     if (!_cached_decoder_for_ToTermSpecifier) {
         _cached_decoder_for_ToTermSpecifier = $._decode_inextensible_choice<ToTermSpecifier>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_ToTermSpecifier: $.ASN1Encoder<ToTermSpecifier> | null =
 export function _encode_ToTermSpecifier(
     value: ToTermSpecifier,
     elGetter: $.ASN1Encoder<ToTermSpecifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ToTermSpecifier) {
         _cached_encoder_for_ToTermSpecifier = $._encode_choice<ToTermSpecifier>(
             {

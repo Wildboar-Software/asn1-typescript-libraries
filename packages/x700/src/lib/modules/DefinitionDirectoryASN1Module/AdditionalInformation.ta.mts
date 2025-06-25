@@ -117,7 +117,7 @@ let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformati
  * @param {_Element} el The element being decoded.
  * @returns {AdditionalInformation} The decoded data structure.
  */
-export function _decode_AdditionalInformation(el: _Element) {
+export function _decode_AdditionalInformation(el: _Element): AdditionalInformation {
     if (!_cached_decoder_for_AdditionalInformation) {
         _cached_decoder_for_AdditionalInformation = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformati
 export function _encode_AdditionalInformation(
     value: AdditionalInformation,
     elGetter: $.ASN1Encoder<AdditionalInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AdditionalInformation) {
         _cached_encoder_for_AdditionalInformation = function (
             value: AdditionalInformation        ): _Element {

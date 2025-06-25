@@ -134,7 +134,7 @@ let _cached_decoder_for_DataIntegrityTestResults_testResult: $.ASN1Decoder<DataI
  * @param {_Element} el The element being decoded.
  * @returns {DataIntegrityTestResults_testResult} The decoded data structure.
  */
-export function _decode_DataIntegrityTestResults_testResult(el: _Element) {
+export function _decode_DataIntegrityTestResults_testResult(el: _Element): DataIntegrityTestResults_testResult {
     if (!_cached_decoder_for_DataIntegrityTestResults_testResult) {
         _cached_decoder_for_DataIntegrityTestResults_testResult = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_DataIntegrityTestResults_testResult: $.ASN1Encoder<DataI
 export function _encode_DataIntegrityTestResults_testResult(
     value: DataIntegrityTestResults_testResult,
     elGetter: $.ASN1Encoder<DataIntegrityTestResults_testResult>
-) {
+): _Element {
     if (!_cached_encoder_for_DataIntegrityTestResults_testResult) {
         _cached_encoder_for_DataIntegrityTestResults_testResult = function (
             value: DataIntegrityTestResults_testResult        ): _Element {

@@ -140,7 +140,7 @@ let _cached_decoder_for_ForwardingInformation1988: $.ASN1Decoder<ForwardingInfor
  * @param {_Element} el The element being decoded.
  * @returns {ForwardingInformation1988} The decoded data structure.
  */
-export function _decode_ForwardingInformation1988(el: _Element) {
+export function _decode_ForwardingInformation1988(el: _Element): ForwardingInformation1988 {
     if (!_cached_decoder_for_ForwardingInformation1988) {
         _cached_decoder_for_ForwardingInformation1988 = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_ForwardingInformation1988: $.ASN1Encoder<ForwardingInfor
 export function _encode_ForwardingInformation1988(
     value: ForwardingInformation1988,
     elGetter: $.ASN1Encoder<ForwardingInformation1988>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardingInformation1988) {
         _cached_encoder_for_ForwardingInformation1988 = function (
             value: ForwardingInformation1988        ): _Element {

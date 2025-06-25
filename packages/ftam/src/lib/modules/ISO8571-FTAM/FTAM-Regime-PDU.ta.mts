@@ -76,7 +76,7 @@ let _cached_decoder_for_FTAM_Regime_PDU: $.ASN1Decoder<FTAM_Regime_PDU> | null =
  * @param {_Element} el The element being decoded.
  * @returns {FTAM_Regime_PDU} The decoded data structure.
  */
-export function _decode_FTAM_Regime_PDU(el: _Element) {
+export function _decode_FTAM_Regime_PDU(el: _Element): FTAM_Regime_PDU {
   if (!_cached_decoder_for_FTAM_Regime_PDU) {
     _cached_decoder_for_FTAM_Regime_PDU = $._decode_inextensible_choice<FTAM_Regime_PDU>(
       {
@@ -136,7 +136,7 @@ let _cached_encoder_for_FTAM_Regime_PDU: $.ASN1Encoder<FTAM_Regime_PDU> | null =
 export function _encode_FTAM_Regime_PDU(
   value: FTAM_Regime_PDU,
   elGetter: $.ASN1Encoder<FTAM_Regime_PDU>
-) {
+): _Element {
   if (!_cached_encoder_for_FTAM_Regime_PDU) {
     _cached_encoder_for_FTAM_Regime_PDU = $._encode_choice<FTAM_Regime_PDU>(
       {

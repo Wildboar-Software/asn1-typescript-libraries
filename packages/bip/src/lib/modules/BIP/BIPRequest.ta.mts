@@ -228,7 +228,7 @@ let _cached_decoder_for_BIPRequest: $.ASN1Decoder<BIPRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BIPRequest} The decoded data structure.
  */
-export function _decode_BIPRequest(el: _Element) {
+export function _decode_BIPRequest(el: _Element): BIPRequest {
   if (!_cached_decoder_for_BIPRequest) {
     _cached_decoder_for_BIPRequest = function (el: _Element): BIPRequest {
       const sequence: _Element[] = el.sequence;
@@ -280,7 +280,7 @@ let _cached_encoder_for_BIPRequest: $.ASN1Encoder<BIPRequest> | null = null;
 export function _encode_BIPRequest(
   value: BIPRequest,
   elGetter: $.ASN1Encoder<BIPRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPRequest) {
     _cached_encoder_for_BIPRequest = function (
       value: BIPRequest    ): _Element {

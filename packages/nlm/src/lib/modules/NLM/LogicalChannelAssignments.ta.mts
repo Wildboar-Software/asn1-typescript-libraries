@@ -157,7 +157,7 @@ let _cached_decoder_for_LogicalChannelAssignments: $.ASN1Decoder<LogicalChannelA
  * @param {_Element} el The element being decoded.
  * @returns {LogicalChannelAssignments} The decoded data structure.
  */
-export function _decode_LogicalChannelAssignments(el: _Element) {
+export function _decode_LogicalChannelAssignments(el: _Element): LogicalChannelAssignments {
     if (!_cached_decoder_for_LogicalChannelAssignments) {
         _cached_decoder_for_LogicalChannelAssignments = function (
             el: _Element
@@ -223,7 +223,7 @@ let _cached_encoder_for_LogicalChannelAssignments: $.ASN1Encoder<LogicalChannelA
 export function _encode_LogicalChannelAssignments(
     value: LogicalChannelAssignments,
     elGetter: $.ASN1Encoder<LogicalChannelAssignments>
-) {
+): _Element {
     if (!_cached_encoder_for_LogicalChannelAssignments) {
         _cached_encoder_for_LogicalChannelAssignments = function (
             value: LogicalChannelAssignments        ): _Element {

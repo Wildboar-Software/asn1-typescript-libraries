@@ -35,7 +35,7 @@ let _cached_decoder_for_AlertErrors: $.ASN1Decoder<AlertErrors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AlertErrors} The decoded data structure.
  */
-export function _decode_AlertErrors(el: _Element) {
+export function _decode_AlertErrors(el: _Element): AlertErrors {
     if (!_cached_decoder_for_AlertErrors) {
         _cached_decoder_for_AlertErrors = _decode_RetrievalError;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_AlertErrors: $.ASN1Encoder<AlertErrors> | null = null;
 export function _encode_AlertErrors(
     value: AlertErrors,
     elGetter: $.ASN1Encoder<AlertErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_AlertErrors) {
         _cached_encoder_for_AlertErrors = _encode_RetrievalError;
     }

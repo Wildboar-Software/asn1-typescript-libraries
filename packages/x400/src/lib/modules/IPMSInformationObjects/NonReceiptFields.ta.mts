@@ -194,7 +194,7 @@ let _cached_decoder_for_NonReceiptFields: $.ASN1Decoder<NonReceiptFields> | null
  * @param {_Element} el The element being decoded.
  * @returns {NonReceiptFields} The decoded data structure.
  */
-export function _decode_NonReceiptFields(el: _Element) {
+export function _decode_NonReceiptFields(el: _Element): NonReceiptFields {
     if (!_cached_decoder_for_NonReceiptFields) {
         _cached_decoder_for_NonReceiptFields = function (
             el: _Element
@@ -265,7 +265,7 @@ let _cached_encoder_for_NonReceiptFields: $.ASN1Encoder<NonReceiptFields> | null
 export function _encode_NonReceiptFields(
     value: NonReceiptFields,
     elGetter: $.ASN1Encoder<NonReceiptFields>
-) {
+): _Element {
     if (!_cached_encoder_for_NonReceiptFields) {
         _cached_encoder_for_NonReceiptFields = function (
             value: NonReceiptFields        ): _Element {

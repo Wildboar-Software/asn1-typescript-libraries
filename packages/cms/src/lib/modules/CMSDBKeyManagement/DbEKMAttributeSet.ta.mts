@@ -30,7 +30,7 @@ let _cached_decoder_for_DbEKMAttributeSet: $.ASN1Decoder<DbEKMAttributeSet> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DbEKMAttributeSet} The decoded data structure.
  */
-export function _decode_DbEKMAttributeSet(el: _Element) {
+export function _decode_DbEKMAttributeSet(el: _Element): DbEKMAttributeSet {
     if (!_cached_decoder_for_DbEKMAttributeSet) {
         _cached_decoder_for_DbEKMAttributeSet = $._decodeSequenceOf<Attribute>(
             () => _decode_Attribute
@@ -53,7 +53,7 @@ let _cached_encoder_for_DbEKMAttributeSet: $.ASN1Encoder<DbEKMAttributeSet> | nu
 export function _encode_DbEKMAttributeSet(
     value: DbEKMAttributeSet,
     elGetter: $.ASN1Encoder<DbEKMAttributeSet>
-) {
+): _Element {
     if (!_cached_encoder_for_DbEKMAttributeSet) {
         _cached_encoder_for_DbEKMAttributeSet = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,

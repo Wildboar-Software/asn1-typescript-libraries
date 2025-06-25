@@ -115,7 +115,7 @@ let _cached_decoder_for_Abort: $.ASN1Decoder<Abort> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Abort} The decoded data structure.
  */
-export function _decode_Abort(el: _Element) {
+export function _decode_Abort(el: _Element): Abort {
   if (!_cached_decoder_for_Abort) {
     _cached_decoder_for_Abort = function (el: _Element): Abort {
       let dtid!: DestTransactionID;
@@ -151,7 +151,7 @@ let _cached_encoder_for_Abort: $.ASN1Encoder<Abort> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Abort, encoded as an ASN.1 Element.
  */
-export function _encode_Abort(value: Abort, elGetter: $.ASN1Encoder<Abort>) {
+export function _encode_Abort(value: Abort, elGetter: $.ASN1Encoder<Abort>): _Element {
   if (!_cached_encoder_for_Abort) {
     _cached_encoder_for_Abort = function (
       value: Abort    ): _Element {

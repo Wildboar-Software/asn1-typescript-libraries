@@ -50,7 +50,7 @@ let _cached_decoder_for_ApplicationSyntax: $.ASN1Decoder<ApplicationSyntax> | nu
  * @returns {ApplicationSyntax} The decoded data structure.
  */
 export
-function _decode_ApplicationSyntax (el: _Element) {
+function _decode_ApplicationSyntax (el: _Element): ApplicationSyntax {
     if (!_cached_decoder_for_ApplicationSyntax) { _cached_decoder_for_ApplicationSyntax = $._decode_inextensible_choice<ApplicationSyntax>({
     "APPLICATION 0": [ "ipAddress_value", _decode_IpAddress ],
     "APPLICATION 1": [ "counter_value", _decode_Counter32 ],
@@ -72,7 +72,7 @@ let _cached_encoder_for_ApplicationSyntax: $.ASN1Encoder<ApplicationSyntax> | nu
  * @returns {_Element} The ApplicationSyntax, encoded as an ASN.1 Element.
  */
 export
-function _encode_ApplicationSyntax (value: ApplicationSyntax, elGetter: $.ASN1Encoder<ApplicationSyntax>) {
+function _encode_ApplicationSyntax (value: ApplicationSyntax, elGetter: $.ASN1Encoder<ApplicationSyntax>): _Element {
     if (!_cached_encoder_for_ApplicationSyntax) { _cached_encoder_for_ApplicationSyntax = $._encode_choice<ApplicationSyntax>({
     "ipAddress_value": _encode_IpAddress,
     "counter_value": _encode_Counter32,

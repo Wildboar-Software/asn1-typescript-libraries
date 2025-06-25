@@ -39,7 +39,7 @@ let _cached_decoder_for_Objects_Attributes_List: $.ASN1Decoder<Objects_Attribute
  * @param {_Element} el The element being decoded.
  * @returns {Objects_Attributes_List} The decoded data structure.
  */
-export function _decode_Objects_Attributes_List(el: _Element) {
+export function _decode_Objects_Attributes_List(el: _Element): Objects_Attributes_List {
   if (!_cached_decoder_for_Objects_Attributes_List) {
     _cached_decoder_for_Objects_Attributes_List = $._decode_implicit<Objects_Attributes_List>(
       () => $._decodeSequenceOf<Read_Attributes>(() => _decode_Read_Attributes)
@@ -62,7 +62,7 @@ let _cached_encoder_for_Objects_Attributes_List: $.ASN1Encoder<Objects_Attribute
 export function _encode_Objects_Attributes_List(
   value: Objects_Attributes_List,
   elGetter: $.ASN1Encoder<Objects_Attributes_List>
-) {
+): _Element {
   if (!_cached_encoder_for_Objects_Attributes_List) {
     _cached_encoder_for_Objects_Attributes_List = $._encode_implicit(
       _TagClass.application,

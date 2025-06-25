@@ -46,7 +46,7 @@ let _cached_decoder_for_ConnectivityThreshold: $.ASN1Decoder<ConnectivityThresho
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityThreshold} The decoded data structure.
  */
-export function _decode_ConnectivityThreshold(el: _Element) {
+export function _decode_ConnectivityThreshold(el: _Element): ConnectivityThreshold {
     if (!_cached_decoder_for_ConnectivityThreshold) {
         _cached_decoder_for_ConnectivityThreshold = $._decode_inextensible_choice<ConnectivityThreshold>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_ConnectivityThreshold: $.ASN1Encoder<ConnectivityThresho
 export function _encode_ConnectivityThreshold(
     value: ConnectivityThreshold,
     elGetter: $.ASN1Encoder<ConnectivityThreshold>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityThreshold) {
         _cached_encoder_for_ConnectivityThreshold = $._encode_choice<ConnectivityThreshold>(
             {

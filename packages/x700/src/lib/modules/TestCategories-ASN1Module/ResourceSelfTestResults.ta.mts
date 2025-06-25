@@ -52,7 +52,7 @@ let _cached_decoder_for_ResourceSelfTestResults: $.ASN1Decoder<ResourceSelfTestR
  * @param {_Element} el The element being decoded.
  * @returns {ResourceSelfTestResults} The decoded data structure.
  */
-export function _decode_ResourceSelfTestResults(el: _Element) {
+export function _decode_ResourceSelfTestResults(el: _Element): ResourceSelfTestResults {
     if (!_cached_decoder_for_ResourceSelfTestResults) {
         _cached_decoder_for_ResourceSelfTestResults = $._decode_inextensible_choice<ResourceSelfTestResults>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_ResourceSelfTestResults: $.ASN1Encoder<ResourceSelfTestR
 export function _encode_ResourceSelfTestResults(
     value: ResourceSelfTestResults,
     elGetter: $.ASN1Encoder<ResourceSelfTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourceSelfTestResults) {
         _cached_encoder_for_ResourceSelfTestResults = $._encode_choice<ResourceSelfTestResults>(
             {

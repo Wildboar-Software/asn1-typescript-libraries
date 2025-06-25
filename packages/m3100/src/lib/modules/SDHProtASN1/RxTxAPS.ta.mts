@@ -116,7 +116,7 @@ let _cached_decoder_for_RxTxAPS: $.ASN1Decoder<RxTxAPS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RxTxAPS} The decoded data structure.
  */
-export function _decode_RxTxAPS(el: _Element) {
+export function _decode_RxTxAPS(el: _Element): RxTxAPS {
     if (!_cached_decoder_for_RxTxAPS) {
         _cached_decoder_for_RxTxAPS = function (el: _Element): RxTxAPS {
             const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_RxTxAPS: $.ASN1Encoder<RxTxAPS> | null = null;
 export function _encode_RxTxAPS(
     value: RxTxAPS,
     elGetter: $.ASN1Encoder<RxTxAPS>
-) {
+): _Element {
     if (!_cached_encoder_for_RxTxAPS) {
         _cached_encoder_for_RxTxAPS = function (
             value: RxTxAPS        ): _Element {

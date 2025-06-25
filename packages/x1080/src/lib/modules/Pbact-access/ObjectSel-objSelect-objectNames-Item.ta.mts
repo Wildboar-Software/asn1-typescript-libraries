@@ -130,7 +130,7 @@ let _cached_decoder_for_ObjectSel_objSelect_objectNames_Item: $.ASN1Decoder<Obje
  * @param {_Element} el The element being decoded.
  * @returns {ObjectSel_objSelect_objectNames_Item} The decoded data structure.
  */
-export function _decode_ObjectSel_objSelect_objectNames_Item(el: _Element) {
+export function _decode_ObjectSel_objSelect_objectNames_Item(el: _Element): ObjectSel_objSelect_objectNames_Item {
     if (!_cached_decoder_for_ObjectSel_objSelect_objectNames_Item) {
         _cached_decoder_for_ObjectSel_objSelect_objectNames_Item = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_ObjectSel_objSelect_objectNames_Item: $.ASN1Encoder<Obje
 export function _encode_ObjectSel_objSelect_objectNames_Item(
     value: ObjectSel_objSelect_objectNames_Item,
     elGetter: $.ASN1Encoder<ObjectSel_objSelect_objectNames_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectSel_objSelect_objectNames_Item) {
         _cached_encoder_for_ObjectSel_objSelect_objectNames_Item = function (
             value: ObjectSel_objSelect_objectNames_Item        ): _Element {

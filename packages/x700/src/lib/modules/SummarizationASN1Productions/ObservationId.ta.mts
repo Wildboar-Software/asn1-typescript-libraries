@@ -141,7 +141,7 @@ let _cached_decoder_for_ObservationId: $.ASN1Decoder<ObservationId> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ObservationId} The decoded data structure.
  */
-export function _decode_ObservationId(el: _Element) {
+export function _decode_ObservationId(el: _Element): ObservationId {
     if (!_cached_decoder_for_ObservationId) {
         _cached_decoder_for_ObservationId = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_ObservationId: $.ASN1Encoder<ObservationId> | null = nul
 export function _encode_ObservationId(
     value: ObservationId,
     elGetter: $.ASN1Encoder<ObservationId>
-) {
+): _Element {
     if (!_cached_encoder_for_ObservationId) {
         _cached_encoder_for_ObservationId = function (
             value: ObservationId        ): _Element {

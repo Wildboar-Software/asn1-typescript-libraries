@@ -49,7 +49,7 @@ let _cached_decoder_for_Name: $.ASN1Decoder<Name> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Name} The decoded data structure.
  */
-export function _decode_Name(el: _Element) {
+export function _decode_Name(el: _Element): Name {
     if (!_cached_decoder_for_Name) {
         _cached_decoder_for_Name = $._decode_extensible_choice<Name>({
             'UNIVERSAL 5': ['null_', $._decodeNull],
@@ -70,7 +70,7 @@ let _cached_encoder_for_Name: $.ASN1Encoder<Name> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Name, encoded as an ASN.1 Element.
  */
-export function _encode_Name(value: Name, elGetter: $.ASN1Encoder<Name>) {
+export function _encode_Name(value: Name, elGetter: $.ASN1Encoder<Name>): _Element {
     if (!_cached_encoder_for_Name) {
         _cached_encoder_for_Name = $._encode_choice<Name>(
             {

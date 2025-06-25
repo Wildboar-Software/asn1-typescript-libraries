@@ -227,7 +227,7 @@ let _cached_decoder_for_SubscribeToGUIEventsCallParams: $.ASN1Decoder<SubscribeT
  * @param {_Element} el The element being decoded.
  * @returns {SubscribeToGUIEventsCallParams} The decoded data structure.
  */
-export function _decode_SubscribeToGUIEventsCallParams(el: _Element) {
+export function _decode_SubscribeToGUIEventsCallParams(el: _Element): SubscribeToGUIEventsCallParams {
   if (!_cached_decoder_for_SubscribeToGUIEventsCallParams) {
     _cached_decoder_for_SubscribeToGUIEventsCallParams = function (
       el: _Element
@@ -308,7 +308,7 @@ let _cached_encoder_for_SubscribeToGUIEventsCallParams: $.ASN1Encoder<SubscribeT
 export function _encode_SubscribeToGUIEventsCallParams(
   value: SubscribeToGUIEventsCallParams,
   elGetter: $.ASN1Encoder<SubscribeToGUIEventsCallParams>
-) {
+): _Element {
   if (!_cached_encoder_for_SubscribeToGUIEventsCallParams) {
     _cached_encoder_for_SubscribeToGUIEventsCallParams = function (
       value: SubscribeToGUIEventsCallParams    ): _Element {

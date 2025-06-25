@@ -142,7 +142,7 @@ let _cached_decoder_for_FirstPdvExternal: $.ASN1Decoder<FirstPdvExternal> | null
  * @param {_Element} el The element being decoded.
  * @returns {FirstPdvExternal} The decoded data structure.
  */
-export function _decode_FirstPdvExternal(el: _Element) {
+export function _decode_FirstPdvExternal(el: _Element): FirstPdvExternal {
   if (!_cached_decoder_for_FirstPdvExternal) {
     _cached_decoder_for_FirstPdvExternal = function (
       el: _Element
@@ -193,7 +193,7 @@ let _cached_encoder_for_FirstPdvExternal: $.ASN1Encoder<FirstPdvExternal> | null
 export function _encode_FirstPdvExternal(
   value: FirstPdvExternal,
   elGetter: $.ASN1Encoder<FirstPdvExternal>
-) {
+): _Element {
   if (!_cached_encoder_for_FirstPdvExternal) {
     _cached_encoder_for_FirstPdvExternal = function (
       value: FirstPdvExternal    ): _Element {

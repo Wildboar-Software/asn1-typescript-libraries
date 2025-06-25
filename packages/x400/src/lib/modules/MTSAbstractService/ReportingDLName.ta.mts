@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportingDLName: $.ASN1Decoder<ReportingDLName> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ReportingDLName} The decoded data structure.
  */
-export function _decode_ReportingDLName(el: _Element) {
+export function _decode_ReportingDLName(el: _Element): ReportingDLName {
     if (!_cached_decoder_for_ReportingDLName) {
         _cached_decoder_for_ReportingDLName = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReportingDLName: $.ASN1Encoder<ReportingDLName> | null =
 export function _encode_ReportingDLName(
     value: ReportingDLName,
     elGetter: $.ASN1Encoder<ReportingDLName>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportingDLName) {
         _cached_encoder_for_ReportingDLName = _encode_ORAddressAndOptionalDirectoryName;
     }

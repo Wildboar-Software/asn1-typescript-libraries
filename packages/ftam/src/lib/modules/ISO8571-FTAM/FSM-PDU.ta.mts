@@ -276,7 +276,7 @@ let _cached_decoder_for_FSM_PDU: $.ASN1Decoder<FSM_PDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FSM_PDU} The decoded data structure.
  */
-export function _decode_FSM_PDU(el: _Element) {
+export function _decode_FSM_PDU(el: _Element): FSM_PDU {
   if (!_cached_decoder_for_FSM_PDU) {
     _cached_decoder_for_FSM_PDU = $._decode_inextensible_choice<FSM_PDU>({
       'CONTEXT 41': [
@@ -470,7 +470,7 @@ let _cached_encoder_for_FSM_PDU: $.ASN1Encoder<FSM_PDU> | null = null;
 export function _encode_FSM_PDU(
   value: FSM_PDU,
   elGetter: $.ASN1Encoder<FSM_PDU>
-) {
+): _Element {
   if (!_cached_encoder_for_FSM_PDU) {
     _cached_encoder_for_FSM_PDU = $._encode_choice<FSM_PDU>(
       {

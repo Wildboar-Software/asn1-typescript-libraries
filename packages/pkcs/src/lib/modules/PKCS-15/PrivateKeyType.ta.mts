@@ -77,7 +77,7 @@ let _cached_decoder_for_PrivateKeyType: $.ASN1Decoder<PrivateKeyType> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeyType} The decoded data structure.
  */
-export function _decode_PrivateKeyType(el: _Element) {
+export function _decode_PrivateKeyType(el: _Element): PrivateKeyType {
     if (!_cached_decoder_for_PrivateKeyType) {
         _cached_decoder_for_PrivateKeyType = $._decode_extensible_choice<PrivateKeyType>(
             {
@@ -147,7 +147,7 @@ let _cached_encoder_for_PrivateKeyType: $.ASN1Encoder<PrivateKeyType> | null = n
 export function _encode_PrivateKeyType(
     value: PrivateKeyType,
     elGetter: $.ASN1Encoder<PrivateKeyType>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKeyType) {
         _cached_encoder_for_PrivateKeyType = $._encode_choice<PrivateKeyType>(
             {

@@ -38,7 +38,7 @@ let _cached_decoder_for_EncASRepPart: $.ASN1Decoder<EncASRepPart> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EncASRepPart} The decoded data structure.
  */
-export function _decode_EncASRepPart(el: _Element) {
+export function _decode_EncASRepPart(el: _Element): EncASRepPart {
   if (!_cached_decoder_for_EncASRepPart) {
     _cached_decoder_for_EncASRepPart = $._decode_implicit<EncASRepPart>(
       () => _decode_EncKDCRepPart
@@ -61,7 +61,7 @@ let _cached_encoder_for_EncASRepPart: $.ASN1Encoder<EncASRepPart> | null = null;
 export function _encode_EncASRepPart(
   value: EncASRepPart,
   elGetter: $.ASN1Encoder<EncASRepPart>
-) {
+): _Element {
   if (!_cached_encoder_for_EncASRepPart) {
     _cached_encoder_for_EncASRepPart = $._encode_implicit(
       _TagClass.application,

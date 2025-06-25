@@ -29,7 +29,7 @@ let _cached_decoder_for_KeyConstructionLabels: $.ASN1Decoder<KeyConstructionLabe
  * @param {_Element} el The element being decoded.
  * @returns {KeyConstructionLabels} The decoded data structure.
  */
-export function _decode_KeyConstructionLabels(el: _Element) {
+export function _decode_KeyConstructionLabels(el: _Element): KeyConstructionLabels {
     if (!_cached_decoder_for_KeyConstructionLabels) {
         _cached_decoder_for_KeyConstructionLabels = $._decodeSequenceOf<KeyConstructionLabel>(
             () => _decode_KeyConstructionLabel
@@ -52,7 +52,7 @@ let _cached_encoder_for_KeyConstructionLabels: $.ASN1Encoder<KeyConstructionLabe
 export function _encode_KeyConstructionLabels(
     value: KeyConstructionLabels,
     elGetter: $.ASN1Encoder<KeyConstructionLabels>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyConstructionLabels) {
         _cached_encoder_for_KeyConstructionLabels = $._encodeSequenceOf<KeyConstructionLabel>(
             () => _encode_KeyConstructionLabel,

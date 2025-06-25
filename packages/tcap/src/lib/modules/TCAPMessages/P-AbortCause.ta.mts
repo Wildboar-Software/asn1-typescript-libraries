@@ -105,7 +105,7 @@ let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {P_AbortCause} The decoded data structure.
  */
-export function _decode_P_AbortCause(el: _Element) {
+export function _decode_P_AbortCause(el: _Element): P_AbortCause {
   if (!_cached_decoder_for_P_AbortCause) {
     _cached_decoder_for_P_AbortCause = $._decode_implicit<P_AbortCause>(
       () => $._decodeInteger
@@ -126,7 +126,7 @@ let _cached_encoder_for_P_AbortCause: $.ASN1Encoder<P_AbortCause> | null = null;
 export function _encode_P_AbortCause(
   value: P_AbortCause,
   elGetter: $.ASN1Encoder<P_AbortCause>
-) {
+): _Element {
   if (!_cached_encoder_for_P_AbortCause) {
     _cached_encoder_for_P_AbortCause = $._encode_implicit(
       _TagClass.application,

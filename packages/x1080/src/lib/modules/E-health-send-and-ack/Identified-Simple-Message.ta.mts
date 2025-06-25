@@ -118,7 +118,7 @@ let _cached_decoder_for_Identified_Simple_Message: $.ASN1Decoder<Identified_Simp
  * @param {_Element} el The element being decoded.
  * @returns {Identified_Simple_Message} The decoded data structure.
  */
-export function _decode_Identified_Simple_Message(el: _Element) {
+export function _decode_Identified_Simple_Message(el: _Element): Identified_Simple_Message {
     if (!_cached_decoder_for_Identified_Simple_Message) {
         _cached_decoder_for_Identified_Simple_Message = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_Identified_Simple_Message: $.ASN1Encoder<Identified_Simp
 export function _encode_Identified_Simple_Message(
     value: Identified_Simple_Message,
     elGetter: $.ASN1Encoder<Identified_Simple_Message>
-) {
+): _Element {
     if (!_cached_encoder_for_Identified_Simple_Message) {
         _cached_encoder_for_Identified_Simple_Message = function (
             value: Identified_Simple_Message        ): _Element {

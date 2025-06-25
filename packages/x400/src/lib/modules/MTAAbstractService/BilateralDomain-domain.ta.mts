@@ -46,7 +46,7 @@ let _cached_decoder_for_BilateralDomain_domain: $.ASN1Decoder<BilateralDomain_do
  * @param {_Element} el The element being decoded.
  * @returns {BilateralDomain_domain} The decoded data structure.
  */
-export function _decode_BilateralDomain_domain(el: _Element) {
+export function _decode_BilateralDomain_domain(el: _Element): BilateralDomain_domain {
     if (!_cached_decoder_for_BilateralDomain_domain) {
         _cached_decoder_for_BilateralDomain_domain = $._decode_inextensible_choice<BilateralDomain_domain>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_BilateralDomain_domain: $.ASN1Encoder<BilateralDomain_do
 export function _encode_BilateralDomain_domain(
     value: BilateralDomain_domain,
     elGetter: $.ASN1Encoder<BilateralDomain_domain>
-) {
+): _Element {
     if (!_cached_encoder_for_BilateralDomain_domain) {
         _cached_encoder_for_BilateralDomain_domain = $._encode_choice<BilateralDomain_domain>(
             {

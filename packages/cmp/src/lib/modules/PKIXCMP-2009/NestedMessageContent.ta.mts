@@ -38,7 +38,7 @@ let _cached_decoder_for_NestedMessageContent: $.ASN1Decoder<NestedMessageContent
  * @param {_Element} el The element being decoded.
  * @returns {NestedMessageContent} The decoded data structure.
  */
-export function _decode_NestedMessageContent(el: _Element) {
+export function _decode_NestedMessageContent(el: _Element): NestedMessageContent {
   if (!_cached_decoder_for_NestedMessageContent) {
     _cached_decoder_for_NestedMessageContent = _decode_PKIMessages;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_NestedMessageContent: $.ASN1Encoder<NestedMessageContent
 export function _encode_NestedMessageContent(
   value: NestedMessageContent,
   elGetter: $.ASN1Encoder<NestedMessageContent>
-) {
+): _Element {
   if (!_cached_encoder_for_NestedMessageContent) {
     _cached_encoder_for_NestedMessageContent = _encode_PKIMessages;
   }

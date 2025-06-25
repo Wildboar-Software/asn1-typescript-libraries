@@ -213,7 +213,7 @@ let _cached_decoder_for_UsageDataInfo: $.ASN1Decoder<UsageDataInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {UsageDataInfo} The decoded data structure.
  */
-export function _decode_UsageDataInfo(el: _Element) {
+export function _decode_UsageDataInfo(el: _Element): UsageDataInfo {
     if (!_cached_decoder_for_UsageDataInfo) {
         _cached_decoder_for_UsageDataInfo = function (
             el: _Element
@@ -300,7 +300,7 @@ let _cached_encoder_for_UsageDataInfo: $.ASN1Encoder<UsageDataInfo> | null = nul
 export function _encode_UsageDataInfo(
     value: UsageDataInfo,
     elGetter: $.ASN1Encoder<UsageDataInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_UsageDataInfo) {
         _cached_encoder_for_UsageDataInfo = function (
             value: UsageDataInfo        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_CertBundles: $.ASN1Decoder<CertBundles> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertBundles} The decoded data structure.
  */
-export function _decode_CertBundles(el: _Element) {
+export function _decode_CertBundles(el: _Element): CertBundles {
   if (!_cached_decoder_for_CertBundles) {
     _cached_decoder_for_CertBundles = $._decodeSequenceOf<CertBundle>(
       () => _decode_CertBundle
@@ -56,7 +56,7 @@ let _cached_encoder_for_CertBundles: $.ASN1Encoder<CertBundles> | null = null;
 export function _encode_CertBundles(
   value: CertBundles,
   elGetter: $.ASN1Encoder<CertBundles>
-) {
+): _Element {
   if (!_cached_encoder_for_CertBundles) {
     _cached_encoder_for_CertBundles = $._encodeSequenceOf<CertBundle>(
       () => _encode_CertBundle,

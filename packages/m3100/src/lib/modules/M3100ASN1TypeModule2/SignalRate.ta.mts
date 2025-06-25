@@ -47,7 +47,7 @@ let _cached_decoder_for_SignalRate: $.ASN1Decoder<SignalRate> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SignalRate} The decoded data structure.
  */
-export function _decode_SignalRate(el: _Element) {
+export function _decode_SignalRate(el: _Element): SignalRate {
     if (!_cached_decoder_for_SignalRate) {
         _cached_decoder_for_SignalRate = $._decode_inextensible_choice<SignalRate>(
             {
@@ -83,7 +83,7 @@ let _cached_encoder_for_SignalRate: $.ASN1Encoder<SignalRate> | null = null;
 export function _encode_SignalRate(
     value: SignalRate,
     elGetter: $.ASN1Encoder<SignalRate>
-) {
+): _Element {
     if (!_cached_encoder_for_SignalRate) {
         _cached_encoder_for_SignalRate = $._encode_choice<SignalRate>(
             {

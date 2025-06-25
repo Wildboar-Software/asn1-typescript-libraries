@@ -120,7 +120,7 @@ let _cached_decoder_for_SlcEnds: $.ASN1Decoder<SlcEnds> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SlcEnds} The decoded data structure.
  */
-export function _decode_SlcEnds(el: _Element) {
+export function _decode_SlcEnds(el: _Element): SlcEnds {
     if (!_cached_decoder_for_SlcEnds) {
         _cached_decoder_for_SlcEnds = function (el: _Element): SlcEnds {
             const sequence: _Element[] = el.sequence;
@@ -161,7 +161,7 @@ let _cached_encoder_for_SlcEnds: $.ASN1Encoder<SlcEnds> | null = null;
 export function _encode_SlcEnds(
     value: SlcEnds,
     elGetter: $.ASN1Encoder<SlcEnds>
-) {
+): _Element {
     if (!_cached_encoder_for_SlcEnds) {
         _cached_encoder_for_SlcEnds = function (
             value: SlcEnds        ): _Element {

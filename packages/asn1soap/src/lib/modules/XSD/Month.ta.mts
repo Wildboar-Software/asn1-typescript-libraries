@@ -39,7 +39,7 @@ let _cached_decoder_for_Month: $.ASN1Decoder<Month> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Month} The decoded data structure.
  */
-export function _decode_Month(el: _Element) {
+export function _decode_Month(el: _Element): Month {
   if (!_cached_decoder_for_Month) {
     _cached_decoder_for_Month = _decode_DateTimeType;
   }
@@ -57,7 +57,7 @@ let _cached_encoder_for_Month: $.ASN1Encoder<Month> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Month, encoded as an ASN.1 Element.
  */
-export function _encode_Month(value: Month, elGetter: $.ASN1Encoder<Month>) {
+export function _encode_Month(value: Month, elGetter: $.ASN1Encoder<Month>): _Element {
   if (!_cached_encoder_for_Month) {
     _cached_encoder_for_Month = _encode_DateTimeType;
   }

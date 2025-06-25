@@ -120,7 +120,7 @@ let _cached_decoder_for_MessageParameters: $.ASN1Decoder<MessageParameters> | nu
  * @param {_Element} el The element being decoded.
  * @returns {MessageParameters} The decoded data structure.
  */
-export function _decode_MessageParameters(el: _Element) {
+export function _decode_MessageParameters(el: _Element): MessageParameters {
     if (!_cached_decoder_for_MessageParameters) {
         _cached_decoder_for_MessageParameters = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_MessageParameters: $.ASN1Encoder<MessageParameters> | nu
 export function _encode_MessageParameters(
     value: MessageParameters,
     elGetter: $.ASN1Encoder<MessageParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageParameters) {
         _cached_encoder_for_MessageParameters = function (
             value: MessageParameters        ): _Element {

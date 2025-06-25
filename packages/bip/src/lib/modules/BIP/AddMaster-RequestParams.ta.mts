@@ -107,7 +107,7 @@ let _cached_decoder_for_AddMaster_RequestParams: $.ASN1Decoder<AddMaster_Request
  * @param {_Element} el The element being decoded.
  * @returns {AddMaster_RequestParams} The decoded data structure.
  */
-export function _decode_AddMaster_RequestParams(el: _Element) {
+export function _decode_AddMaster_RequestParams(el: _Element): AddMaster_RequestParams {
   if (!_cached_decoder_for_AddMaster_RequestParams) {
     _cached_decoder_for_AddMaster_RequestParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_AddMaster_RequestParams: $.ASN1Encoder<AddMaster_Request
 export function _encode_AddMaster_RequestParams(
   value: AddMaster_RequestParams,
   elGetter: $.ASN1Encoder<AddMaster_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_AddMaster_RequestParams) {
     _cached_encoder_for_AddMaster_RequestParams = function (
       value: AddMaster_RequestParams    ): _Element {

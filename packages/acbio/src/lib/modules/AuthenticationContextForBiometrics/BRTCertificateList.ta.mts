@@ -38,7 +38,7 @@ let _cached_decoder_for_BRTCertificateList: $.ASN1Decoder<BRTCertificateList> | 
  * @param {_Element} el The element being decoded.
  * @returns {BRTCertificateList} The decoded data structure.
  */
-export function _decode_BRTCertificateList(el: _Element) {
+export function _decode_BRTCertificateList(el: _Element): BRTCertificateList {
     if (!_cached_decoder_for_BRTCertificateList) {
         _cached_decoder_for_BRTCertificateList = $._decodeSequenceOf<BRTCertificate>(
             () => _decode_BRTCertificate
@@ -61,7 +61,7 @@ let _cached_encoder_for_BRTCertificateList: $.ASN1Encoder<BRTCertificateList> | 
 export function _encode_BRTCertificateList(
     value: BRTCertificateList,
     elGetter: $.ASN1Encoder<BRTCertificateList>
-) {
+): _Element {
     if (!_cached_encoder_for_BRTCertificateList) {
         _cached_encoder_for_BRTCertificateList = $._encodeSequenceOf<BRTCertificate>(
             () => _encode_BRTCertificate,

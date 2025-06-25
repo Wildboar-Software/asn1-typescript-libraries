@@ -129,7 +129,7 @@ let _cached_decoder_for_RequestArgument: $.ASN1Decoder<RequestArgument> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RequestArgument} The decoded data structure.
  */
-export function _decode_RequestArgument(el: _Element) {
+export function _decode_RequestArgument(el: _Element): RequestArgument {
     if (!_cached_decoder_for_RequestArgument) {
         _cached_decoder_for_RequestArgument = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_RequestArgument: $.ASN1Encoder<RequestArgument> | null =
 export function _encode_RequestArgument(
     value: RequestArgument,
     elGetter: $.ASN1Encoder<RequestArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestArgument) {
         _cached_encoder_for_RequestArgument = function (
             value: RequestArgument        ): _Element {

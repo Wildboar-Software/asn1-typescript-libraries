@@ -39,7 +39,7 @@ let _cached_decoder_for_PayloadLevel: $.ASN1Decoder<PayloadLevel> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PayloadLevel} The decoded data structure.
  */
-export function _decode_PayloadLevel(el: _Element) {
+export function _decode_PayloadLevel(el: _Element): PayloadLevel {
     if (!_cached_decoder_for_PayloadLevel) {
         _cached_decoder_for_PayloadLevel = _decode_CharacteristicInformation;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_PayloadLevel: $.ASN1Encoder<PayloadLevel> | null = null;
 export function _encode_PayloadLevel(
     value: PayloadLevel,
     elGetter: $.ASN1Encoder<PayloadLevel>
-) {
+): _Element {
     if (!_cached_encoder_for_PayloadLevel) {
         _cached_encoder_for_PayloadLevel = _encode_CharacteristicInformation;
     }

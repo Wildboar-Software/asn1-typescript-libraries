@@ -137,7 +137,7 @@ let _cached_decoder_for_PrivateDHKeyAttributes: $.ASN1Decoder<PrivateDHKeyAttrib
  * @param {_Element} el The element being decoded.
  * @returns {PrivateDHKeyAttributes} The decoded data structure.
  */
-export function _decode_PrivateDHKeyAttributes(el: _Element) {
+export function _decode_PrivateDHKeyAttributes(el: _Element): PrivateDHKeyAttributes {
     if (!_cached_decoder_for_PrivateDHKeyAttributes) {
         _cached_decoder_for_PrivateDHKeyAttributes = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_PrivateDHKeyAttributes: $.ASN1Encoder<PrivateDHKeyAttrib
 export function _encode_PrivateDHKeyAttributes(
     value: PrivateDHKeyAttributes,
     elGetter: $.ASN1Encoder<PrivateDHKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateDHKeyAttributes) {
         _cached_encoder_for_PrivateDHKeyAttributes = function (
             value: PrivateDHKeyAttributes        ): _Element {

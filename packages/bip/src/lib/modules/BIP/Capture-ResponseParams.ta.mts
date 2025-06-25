@@ -121,7 +121,7 @@ let _cached_decoder_for_Capture_ResponseParams: $.ASN1Decoder<Capture_ResponsePa
  * @param {_Element} el The element being decoded.
  * @returns {Capture_ResponseParams} The decoded data structure.
  */
-export function _decode_Capture_ResponseParams(el: _Element) {
+export function _decode_Capture_ResponseParams(el: _Element): Capture_ResponseParams {
   if (!_cached_decoder_for_Capture_ResponseParams) {
     _cached_decoder_for_Capture_ResponseParams = function (
       el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_Capture_ResponseParams: $.ASN1Encoder<Capture_ResponsePa
 export function _encode_Capture_ResponseParams(
   value: Capture_ResponseParams,
   elGetter: $.ASN1Encoder<Capture_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Capture_ResponseParams) {
     _cached_encoder_for_Capture_ResponseParams = function (
       value: Capture_ResponseParams    ): _Element {

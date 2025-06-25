@@ -102,7 +102,7 @@ let _cached_decoder_for_CP_type_normal_mode_parameters_extensions: $.ASN1Decoder
  */
 export function _decode_CP_type_normal_mode_parameters_extensions(
     el: _Element
-) {
+): CP_type_normal_mode_parameters_extensions {
     if (!_cached_decoder_for_CP_type_normal_mode_parameters_extensions) {
         _cached_decoder_for_CP_type_normal_mode_parameters_extensions = function (
             el: _Element
@@ -141,7 +141,7 @@ let _cached_encoder_for_CP_type_normal_mode_parameters_extensions: $.ASN1Encoder
 export function _encode_CP_type_normal_mode_parameters_extensions(
     value: CP_type_normal_mode_parameters_extensions,
     elGetter: $.ASN1Encoder<CP_type_normal_mode_parameters_extensions>
-) {
+): _Element {
     if (!_cached_encoder_for_CP_type_normal_mode_parameters_extensions) {
         _cached_encoder_for_CP_type_normal_mode_parameters_extensions = function (
             value: CP_type_normal_mode_parameters_extensions        ): _Element {

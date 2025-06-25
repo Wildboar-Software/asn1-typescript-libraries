@@ -125,7 +125,7 @@ let _cached_decoder_for_PrincipalName: $.ASN1Decoder<PrincipalName> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PrincipalName} The decoded data structure.
  */
-export function _decode_PrincipalName(el: _Element) {
+export function _decode_PrincipalName(el: _Element): PrincipalName {
   if (!_cached_decoder_for_PrincipalName) {
     _cached_decoder_for_PrincipalName = function (el: _Element): PrincipalName {
       const sequence: _Element[] = el.sequence;
@@ -164,7 +164,7 @@ let _cached_encoder_for_PrincipalName: $.ASN1Encoder<PrincipalName> | null = nul
 export function _encode_PrincipalName(
   value: PrincipalName,
   elGetter: $.ASN1Encoder<PrincipalName>
-) {
+): _Element {
   if (!_cached_encoder_for_PrincipalName) {
     _cached_encoder_for_PrincipalName = function (
       value: PrincipalName    ): _Element {

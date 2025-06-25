@@ -186,7 +186,7 @@ let _cached_decoder_for_MessageTokenSignedData: $.ASN1Decoder<MessageTokenSigned
  * @param {_Element} el The element being decoded.
  * @returns {MessageTokenSignedData} The decoded data structure.
  */
-export function _decode_MessageTokenSignedData(el: _Element) {
+export function _decode_MessageTokenSignedData(el: _Element): MessageTokenSignedData {
     if (!_cached_decoder_for_MessageTokenSignedData) {
         _cached_decoder_for_MessageTokenSignedData = function (
             el: _Element
@@ -257,7 +257,7 @@ let _cached_encoder_for_MessageTokenSignedData: $.ASN1Encoder<MessageTokenSigned
 export function _encode_MessageTokenSignedData(
     value: MessageTokenSignedData,
     elGetter: $.ASN1Encoder<MessageTokenSignedData>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageTokenSignedData) {
         _cached_encoder_for_MessageTokenSignedData = function (
             value: MessageTokenSignedData        ): _Element {

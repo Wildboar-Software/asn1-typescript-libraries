@@ -46,7 +46,7 @@ let _cached_decoder_for_AlternateManagerContactObjectPtr: $.ASN1Decoder<Alternat
  * @param {_Element} el The element being decoded.
  * @returns {AlternateManagerContactObjectPtr} The decoded data structure.
  */
-export function _decode_AlternateManagerContactObjectPtr(el: _Element) {
+export function _decode_AlternateManagerContactObjectPtr(el: _Element): AlternateManagerContactObjectPtr {
     if (!_cached_decoder_for_AlternateManagerContactObjectPtr) {
         _cached_decoder_for_AlternateManagerContactObjectPtr = $._decode_extensible_choice<AlternateManagerContactObjectPtr>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_AlternateManagerContactObjectPtr: $.ASN1Encoder<Alternat
 export function _encode_AlternateManagerContactObjectPtr(
     value: AlternateManagerContactObjectPtr,
     elGetter: $.ASN1Encoder<AlternateManagerContactObjectPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_AlternateManagerContactObjectPtr) {
         _cached_encoder_for_AlternateManagerContactObjectPtr = $._encode_choice<AlternateManagerContactObjectPtr>(
             {

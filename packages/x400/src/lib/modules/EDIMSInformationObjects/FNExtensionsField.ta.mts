@@ -35,7 +35,7 @@ let _cached_decoder_for_FNExtensionsField: $.ASN1Decoder<FNExtensionsField> | nu
  * @param {_Element} el The element being decoded.
  * @returns {FNExtensionsField} The decoded data structure.
  */
-export function _decode_FNExtensionsField(el: _Element) {
+export function _decode_FNExtensionsField(el: _Element): FNExtensionsField {
     if (!_cached_decoder_for_FNExtensionsField) {
         _cached_decoder_for_FNExtensionsField = $._decodeSetOf<FNExtensionsSubField>(
             () => _decode_FNExtensionsSubField
@@ -56,7 +56,7 @@ let _cached_encoder_for_FNExtensionsField: $.ASN1Encoder<FNExtensionsField> | nu
 export function _encode_FNExtensionsField(
     value: FNExtensionsField,
     elGetter: $.ASN1Encoder<FNExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_FNExtensionsField) {
         _cached_encoder_for_FNExtensionsField = $._encodeSetOf<FNExtensionsSubField>(
             () => _encode_FNExtensionsSubField,

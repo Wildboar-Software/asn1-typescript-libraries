@@ -110,7 +110,7 @@ let _cached_decoder_for_SecurityCategory: $.ASN1Decoder<SecurityCategory> | null
  * @param {_Element} el The element being decoded.
  * @returns {SecurityCategory} The decoded data structure.
  */
-export function _decode_SecurityCategory(el: _Element) {
+export function _decode_SecurityCategory(el: _Element): SecurityCategory {
     if (!_cached_decoder_for_SecurityCategory) {
         _cached_decoder_for_SecurityCategory = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_SecurityCategory: $.ASN1Encoder<SecurityCategory> | null
 export function _encode_SecurityCategory(
     value: SecurityCategory,
     elGetter: $.ASN1Encoder<SecurityCategory>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityCategory) {
         _cached_encoder_for_SecurityCategory = function (
             value: SecurityCategory        ): _Element {

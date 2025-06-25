@@ -35,7 +35,7 @@ let _cached_decoder_for_AreaAddresses: $.ASN1Decoder<AreaAddresses> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AreaAddresses} The decoded data structure.
  */
-export function _decode_AreaAddresses(el: _Element) {
+export function _decode_AreaAddresses(el: _Element): AreaAddresses {
   if (!_cached_decoder_for_AreaAddresses) {
     _cached_decoder_for_AreaAddresses = $._decodeSetOf<AreaAddress>(
       () => _decode_AreaAddress
@@ -56,7 +56,7 @@ let _cached_encoder_for_AreaAddresses: $.ASN1Encoder<AreaAddresses> | null = nul
 export function _encode_AreaAddresses(
   value: AreaAddresses,
   elGetter: $.ASN1Encoder<AreaAddresses>
-) {
+): _Element {
   if (!_cached_encoder_for_AreaAddresses) {
     _cached_encoder_for_AreaAddresses = $._encodeSetOf<AreaAddress>(
       () => _encode_AreaAddress,

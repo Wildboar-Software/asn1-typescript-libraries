@@ -197,7 +197,7 @@ let _cached_decoder_for_CommonCriteriaMeasures: $.ASN1Decoder<CommonCriteriaMeas
  * @returns {CommonCriteriaMeasures} The decoded data structure.
  */
 export
-function _decode_CommonCriteriaMeasures (el: _Element) {
+function _decode_CommonCriteriaMeasures (el: _Element): CommonCriteriaMeasures {
     if (!_cached_decoder_for_CommonCriteriaMeasures) { _cached_decoder_for_CommonCriteriaMeasures = function (el: _Element): CommonCriteriaMeasures {
     let version!: IA5String;
     let assurancelevel!: EvaluationAssuranceLevel;
@@ -250,7 +250,7 @@ let _cached_encoder_for_CommonCriteriaMeasures: $.ASN1Encoder<CommonCriteriaMeas
  * @returns {_Element} The CommonCriteriaMeasures, encoded as an ASN.1 Element.
  */
 export
-function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<CommonCriteriaMeasures>) {
+function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<CommonCriteriaMeasures>): _Element {
     if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

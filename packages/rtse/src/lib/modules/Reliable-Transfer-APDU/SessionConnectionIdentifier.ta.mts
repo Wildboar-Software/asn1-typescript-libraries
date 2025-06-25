@@ -150,7 +150,7 @@ let _cached_decoder_for_SessionConnectionIdentifier: $.ASN1Decoder<SessionConnec
  * @param {_Element} el The element being decoded.
  * @returns {SessionConnectionIdentifier} The decoded data structure.
  */
-export function _decode_SessionConnectionIdentifier(el: _Element) {
+export function _decode_SessionConnectionIdentifier(el: _Element): SessionConnectionIdentifier {
   if (!_cached_decoder_for_SessionConnectionIdentifier) {
     _cached_decoder_for_SessionConnectionIdentifier = function (
       el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_SessionConnectionIdentifier: $.ASN1Encoder<SessionConnec
 export function _encode_SessionConnectionIdentifier(
   value: SessionConnectionIdentifier,
   elGetter: $.ASN1Encoder<SessionConnectionIdentifier>
-) {
+): _Element {
   if (!_cached_encoder_for_SessionConnectionIdentifier) {
     _cached_encoder_for_SessionConnectionIdentifier = function (
       value: SessionConnectionIdentifier    ): _Element {

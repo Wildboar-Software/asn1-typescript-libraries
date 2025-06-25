@@ -172,7 +172,7 @@ let _cached_decoder_for_RSAES_OAEP_params: $.ASN1Decoder<RSAES_OAEP_params> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RSAES_OAEP_params} The decoded data structure.
  */
-export function _decode_RSAES_OAEP_params(el: _Element) {
+export function _decode_RSAES_OAEP_params(el: _Element): RSAES_OAEP_params {
     if (!_cached_decoder_for_RSAES_OAEP_params) {
         _cached_decoder_for_RSAES_OAEP_params = function (
             el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_RSAES_OAEP_params: $.ASN1Encoder<RSAES_OAEP_params> | nu
 export function _encode_RSAES_OAEP_params(
     value: RSAES_OAEP_params,
     elGetter: $.ASN1Encoder<RSAES_OAEP_params>
-) {
+): _Element {
     if (!_cached_encoder_for_RSAES_OAEP_params) {
         _cached_encoder_for_RSAES_OAEP_params = function (
             value: RSAES_OAEP_params        ): _Element {

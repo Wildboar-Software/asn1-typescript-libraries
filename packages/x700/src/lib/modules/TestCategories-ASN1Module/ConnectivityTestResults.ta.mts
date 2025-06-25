@@ -55,7 +55,7 @@ let _cached_decoder_for_ConnectivityTestResults: $.ASN1Decoder<ConnectivityTestR
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityTestResults} The decoded data structure.
  */
-export function _decode_ConnectivityTestResults(el: _Element) {
+export function _decode_ConnectivityTestResults(el: _Element): ConnectivityTestResults {
     if (!_cached_decoder_for_ConnectivityTestResults) {
         _cached_decoder_for_ConnectivityTestResults = $._decode_inextensible_choice<ConnectivityTestResults>(
             {
@@ -99,7 +99,7 @@ let _cached_encoder_for_ConnectivityTestResults: $.ASN1Encoder<ConnectivityTestR
 export function _encode_ConnectivityTestResults(
     value: ConnectivityTestResults,
     elGetter: $.ASN1Encoder<ConnectivityTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityTestResults) {
         _cached_encoder_for_ConnectivityTestResults = $._encode_choice<ConnectivityTestResults>(
             {

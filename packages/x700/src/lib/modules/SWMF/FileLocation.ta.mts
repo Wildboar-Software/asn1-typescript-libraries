@@ -32,7 +32,7 @@ let _cached_decoder_for_FileLocation: $.ASN1Decoder<FileLocation> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FileLocation} The decoded data structure.
  */
-export function _decode_FileLocation(el: _Element) {
+export function _decode_FileLocation(el: _Element): FileLocation {
     if (!_cached_decoder_for_FileLocation) {
         _cached_decoder_for_FileLocation = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -53,7 +53,7 @@ let _cached_encoder_for_FileLocation: $.ASN1Encoder<FileLocation> | null = null;
 export function _encode_FileLocation(
     value: FileLocation,
     elGetter: $.ASN1Encoder<FileLocation>
-) {
+): _Element {
     if (!_cached_encoder_for_FileLocation) {
         _cached_encoder_for_FileLocation = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

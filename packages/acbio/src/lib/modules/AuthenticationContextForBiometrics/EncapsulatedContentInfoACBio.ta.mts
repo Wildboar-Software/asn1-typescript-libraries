@@ -116,7 +116,7 @@ let _cached_decoder_for_EncapsulatedContentInfoACBio: $.ASN1Decoder<Encapsulated
  * @param {_Element} el The element being decoded.
  * @returns {EncapsulatedContentInfoACBio} The decoded data structure.
  */
-export function _decode_EncapsulatedContentInfoACBio(el: _Element) {
+export function _decode_EncapsulatedContentInfoACBio(el: _Element): EncapsulatedContentInfoACBio {
     if (!_cached_decoder_for_EncapsulatedContentInfoACBio) {
         _cached_decoder_for_EncapsulatedContentInfoACBio = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_EncapsulatedContentInfoACBio: $.ASN1Encoder<Encapsulated
 export function _encode_EncapsulatedContentInfoACBio(
     value: EncapsulatedContentInfoACBio,
     elGetter: $.ASN1Encoder<EncapsulatedContentInfoACBio>
-) {
+): _Element {
     if (!_cached_encoder_for_EncapsulatedContentInfoACBio) {
         _cached_encoder_for_EncapsulatedContentInfoACBio = function (
             value: EncapsulatedContentInfoACBio        ): _Element {

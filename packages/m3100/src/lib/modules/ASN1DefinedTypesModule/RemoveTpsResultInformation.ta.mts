@@ -123,7 +123,7 @@ let _cached_decoder_for_RemoveTpsResultInformation: $.ASN1Decoder<RemoveTpsResul
  * @param {_Element} el The element being decoded.
  * @returns {RemoveTpsResultInformation} The decoded data structure.
  */
-export function _decode_RemoveTpsResultInformation(el: _Element) {
+export function _decode_RemoveTpsResultInformation(el: _Element): RemoveTpsResultInformation {
     if (!_cached_decoder_for_RemoveTpsResultInformation) {
         _cached_decoder_for_RemoveTpsResultInformation = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_RemoveTpsResultInformation: $.ASN1Encoder<RemoveTpsResul
 export function _encode_RemoveTpsResultInformation(
     value: RemoveTpsResultInformation,
     elGetter: $.ASN1Encoder<RemoveTpsResultInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveTpsResultInformation) {
         _cached_encoder_for_RemoveTpsResultInformation = function (
             value: RemoveTpsResultInformation        ): _Element {

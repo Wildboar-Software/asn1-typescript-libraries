@@ -127,7 +127,7 @@ let _cached_decoder_for_Notation: $.ASN1Decoder<Notation> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Notation} The decoded data structure.
  */
-export function _decode_Notation(el: _Element) {
+export function _decode_Notation(el: _Element): Notation {
   if (!_cached_decoder_for_Notation) {
     _cached_decoder_for_Notation = function (el: _Element): Notation {
       let name!: IdentifyingStringOrIndex;
@@ -174,7 +174,7 @@ let _cached_encoder_for_Notation: $.ASN1Encoder<Notation> | null = null;
 export function _encode_Notation(
   value: Notation,
   elGetter: $.ASN1Encoder<Notation>
-) {
+): _Element {
   if (!_cached_encoder_for_Notation) {
     _cached_encoder_for_Notation = function (
       value: Notation    ): _Element {

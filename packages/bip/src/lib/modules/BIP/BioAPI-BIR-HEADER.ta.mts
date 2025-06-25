@@ -137,7 +137,7 @@ let _cached_decoder_for_BioAPI_BIR_HEADER: $.ASN1Decoder<BioAPI_BIR_HEADER> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_HEADER} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_HEADER(el: _Element) {
+export function _decode_BioAPI_BIR_HEADER(el: _Element): BioAPI_BIR_HEADER {
   if (!_cached_decoder_for_BioAPI_BIR_HEADER) {
     _cached_decoder_for_BioAPI_BIR_HEADER = function (
       el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_BioAPI_BIR_HEADER: $.ASN1Encoder<BioAPI_BIR_HEADER> | nu
 export function _encode_BioAPI_BIR_HEADER(
   value: BioAPI_BIR_HEADER,
   elGetter: $.ASN1Encoder<BioAPI_BIR_HEADER>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_HEADER) {
     _cached_encoder_for_BioAPI_BIR_HEADER = function (
       value: BioAPI_BIR_HEADER    ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_BindTokenSignedData: $.ASN1Decoder<BindTokenSignedData> 
  * @param {_Element} el The element being decoded.
  * @returns {BindTokenSignedData} The decoded data structure.
  */
-export function _decode_BindTokenSignedData(el: _Element) {
+export function _decode_BindTokenSignedData(el: _Element): BindTokenSignedData {
     if (!_cached_decoder_for_BindTokenSignedData) {
         _cached_decoder_for_BindTokenSignedData = _decode_RandomNumber;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_BindTokenSignedData: $.ASN1Encoder<BindTokenSignedData> 
 export function _encode_BindTokenSignedData(
     value: BindTokenSignedData,
     elGetter: $.ASN1Encoder<BindTokenSignedData>
-) {
+): _Element {
     if (!_cached_encoder_for_BindTokenSignedData) {
         _cached_encoder_for_BindTokenSignedData = _encode_RandomNumber;
     }

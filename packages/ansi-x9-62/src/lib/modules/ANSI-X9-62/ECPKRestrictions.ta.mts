@@ -112,7 +112,7 @@ let _cached_decoder_for_ECPKRestrictions: $.ASN1Decoder<ECPKRestrictions> | null
  * @param {_Element} el The element being decoded.
  * @returns {ECPKRestrictions} The decoded data structure.
  */
-export function _decode_ECPKRestrictions(el: _Element) {
+export function _decode_ECPKRestrictions(el: _Element): ECPKRestrictions {
     if (!_cached_decoder_for_ECPKRestrictions) {
         _cached_decoder_for_ECPKRestrictions = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_ECPKRestrictions: $.ASN1Encoder<ECPKRestrictions> | null
 export function _encode_ECPKRestrictions(
     value: ECPKRestrictions,
     elGetter: $.ASN1Encoder<ECPKRestrictions>
-) {
+): _Element {
     if (!_cached_encoder_for_ECPKRestrictions) {
         _cached_encoder_for_ECPKRestrictions = function (
             value: ECPKRestrictions        ): _Element {

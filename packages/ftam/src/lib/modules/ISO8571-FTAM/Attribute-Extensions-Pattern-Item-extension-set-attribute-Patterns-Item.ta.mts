@@ -120,7 +120,7 @@ let _cached_decoder_for_Attribute_Extensions_Pattern_Item_extension_set_attribut
  */
 export function _decode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item(
   el: _Element
-) {
+): Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item {
   if (
     !_cached_decoder_for_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item
   ) {
@@ -166,7 +166,7 @@ let _cached_encoder_for_Attribute_Extensions_Pattern_Item_extension_set_attribut
 export function _encode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item(
   value: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
   elGetter: $.ASN1Encoder<Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item>
-) {
+): _Element {
   if (
     !_cached_encoder_for_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item
   ) {

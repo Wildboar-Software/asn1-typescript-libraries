@@ -125,7 +125,7 @@ let _cached_decoder_for_EnableCallParams: $.ASN1Decoder<EnableCallParams> | null
  * @param {_Element} el The element being decoded.
  * @returns {EnableCallParams} The decoded data structure.
  */
-export function _decode_EnableCallParams(el: _Element) {
+export function _decode_EnableCallParams(el: _Element): EnableCallParams {
   if (!_cached_decoder_for_EnableCallParams) {
     _cached_decoder_for_EnableCallParams = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_EnableCallParams: $.ASN1Encoder<EnableCallParams> | null
 export function _encode_EnableCallParams(
   value: EnableCallParams,
   elGetter: $.ASN1Encoder<EnableCallParams>
-) {
+): _Element {
   if (!_cached_encoder_for_EnableCallParams) {
     _cached_encoder_for_EnableCallParams = function (
       value: EnableCallParams    ): _Element {

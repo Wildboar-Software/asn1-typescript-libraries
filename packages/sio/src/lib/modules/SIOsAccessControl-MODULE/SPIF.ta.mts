@@ -262,7 +262,7 @@ let _cached_decoder_for_SPIF: $.ASN1Decoder<SPIF> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SPIF} The decoded data structure.
  */
-export function _decode_SPIF(el: _Element) {
+export function _decode_SPIF(el: _Element): SPIF {
     if (!_cached_decoder_for_SPIF) {
         _cached_decoder_for_SPIF = function (el: _Element): SPIF {
             let versionInformation: OPTIONAL<VersionInformationData> =
@@ -354,7 +354,7 @@ let _cached_encoder_for_SPIF: $.ASN1Encoder<SPIF> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SPIF, encoded as an ASN.1 Element.
  */
-export function _encode_SPIF(value: SPIF, elGetter: $.ASN1Encoder<SPIF>) {
+export function _encode_SPIF(value: SPIF, elGetter: $.ASN1Encoder<SPIF>): _Element {
     if (!_cached_encoder_for_SPIF) {
         _cached_encoder_for_SPIF = function (
             value: SPIF        ): _Element {

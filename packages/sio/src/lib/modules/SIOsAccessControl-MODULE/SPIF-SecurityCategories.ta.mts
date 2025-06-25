@@ -29,7 +29,7 @@ let _cached_decoder_for_SPIF_SecurityCategories: $.ASN1Decoder<SPIF_SecurityCate
  * @param {_Element} el The element being decoded.
  * @returns {SPIF_SecurityCategories} The decoded data structure.
  */
-export function _decode_SPIF_SecurityCategories(el: _Element) {
+export function _decode_SPIF_SecurityCategories(el: _Element): SPIF_SecurityCategories {
     if (!_cached_decoder_for_SPIF_SecurityCategories) {
         _cached_decoder_for_SPIF_SecurityCategories = $._decodeSequenceOf<SecurityCategory>(
             () => _decode_SecurityCategory
@@ -52,7 +52,7 @@ let _cached_encoder_for_SPIF_SecurityCategories: $.ASN1Encoder<SPIF_SecurityCate
 export function _encode_SPIF_SecurityCategories(
     value: SPIF_SecurityCategories,
     elGetter: $.ASN1Encoder<SPIF_SecurityCategories>
-) {
+): _Element {
     if (!_cached_encoder_for_SPIF_SecurityCategories) {
         _cached_encoder_for_SPIF_SecurityCategories = $._encodeSequenceOf<SecurityCategory>(
             () => _encode_SecurityCategory,

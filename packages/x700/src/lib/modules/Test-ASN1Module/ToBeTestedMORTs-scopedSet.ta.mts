@@ -147,7 +147,7 @@ let _cached_decoder_for_ToBeTestedMORTs_scopedSet: $.ASN1Decoder<ToBeTestedMORTs
  * @param {_Element} el The element being decoded.
  * @returns {ToBeTestedMORTs_scopedSet} The decoded data structure.
  */
-export function _decode_ToBeTestedMORTs_scopedSet(el: _Element) {
+export function _decode_ToBeTestedMORTs_scopedSet(el: _Element): ToBeTestedMORTs_scopedSet {
     if (!_cached_decoder_for_ToBeTestedMORTs_scopedSet) {
         _cached_decoder_for_ToBeTestedMORTs_scopedSet = function (
             el: _Element
@@ -200,7 +200,7 @@ let _cached_encoder_for_ToBeTestedMORTs_scopedSet: $.ASN1Encoder<ToBeTestedMORTs
 export function _encode_ToBeTestedMORTs_scopedSet(
     value: ToBeTestedMORTs_scopedSet,
     elGetter: $.ASN1Encoder<ToBeTestedMORTs_scopedSet>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeTestedMORTs_scopedSet) {
         _cached_encoder_for_ToBeTestedMORTs_scopedSet = function (
             value: ToBeTestedMORTs_scopedSet        ): _Element {

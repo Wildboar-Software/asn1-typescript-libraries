@@ -124,7 +124,7 @@ let _cached_decoder_for_SystemTimingSource: $.ASN1Decoder<SystemTimingSource> | 
  * @param {_Element} el The element being decoded.
  * @returns {SystemTimingSource} The decoded data structure.
  */
-export function _decode_SystemTimingSource(el: _Element) {
+export function _decode_SystemTimingSource(el: _Element): SystemTimingSource {
     if (!_cached_decoder_for_SystemTimingSource) {
         _cached_decoder_for_SystemTimingSource = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_SystemTimingSource: $.ASN1Encoder<SystemTimingSource> | 
 export function _encode_SystemTimingSource(
     value: SystemTimingSource,
     elGetter: $.ASN1Encoder<SystemTimingSource>
-) {
+): _Element {
     if (!_cached_encoder_for_SystemTimingSource) {
         _cached_encoder_for_SystemTimingSource = function (
             value: SystemTimingSource        ): _Element {

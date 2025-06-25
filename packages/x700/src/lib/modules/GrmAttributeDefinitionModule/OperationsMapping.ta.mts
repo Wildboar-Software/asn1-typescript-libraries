@@ -35,7 +35,7 @@ let _cached_decoder_for_OperationsMapping: $.ASN1Decoder<OperationsMapping> | nu
  * @param {_Element} el The element being decoded.
  * @returns {OperationsMapping} The decoded data structure.
  */
-export function _decode_OperationsMapping(el: _Element) {
+export function _decode_OperationsMapping(el: _Element): OperationsMapping {
     if (!_cached_decoder_for_OperationsMapping) {
         _cached_decoder_for_OperationsMapping = $._decodeSetOf<MappingPair>(
             () => _decode_MappingPair
@@ -56,7 +56,7 @@ let _cached_encoder_for_OperationsMapping: $.ASN1Encoder<OperationsMapping> | nu
 export function _encode_OperationsMapping(
     value: OperationsMapping,
     elGetter: $.ASN1Encoder<OperationsMapping>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationsMapping) {
         _cached_encoder_for_OperationsMapping = $._encodeSetOf<MappingPair>(
             () => _encode_MappingPair,

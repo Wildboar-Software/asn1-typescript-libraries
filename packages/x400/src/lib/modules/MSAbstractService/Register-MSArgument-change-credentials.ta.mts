@@ -116,7 +116,7 @@ let _cached_decoder_for_Register_MSArgument_change_credentials: $.ASN1Decoder<Re
  * @param {_Element} el The element being decoded.
  * @returns {Register_MSArgument_change_credentials} The decoded data structure.
  */
-export function _decode_Register_MSArgument_change_credentials(el: _Element) {
+export function _decode_Register_MSArgument_change_credentials(el: _Element): Register_MSArgument_change_credentials {
     if (!_cached_decoder_for_Register_MSArgument_change_credentials) {
         _cached_decoder_for_Register_MSArgument_change_credentials = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_Register_MSArgument_change_credentials: $.ASN1Encoder<Re
 export function _encode_Register_MSArgument_change_credentials(
     value: Register_MSArgument_change_credentials,
     elGetter: $.ASN1Encoder<Register_MSArgument_change_credentials>
-) {
+): _Element {
     if (!_cached_encoder_for_Register_MSArgument_change_credentials) {
         _cached_encoder_for_Register_MSArgument_change_credentials = function (
             value: Register_MSArgument_change_credentials        ): _Element {

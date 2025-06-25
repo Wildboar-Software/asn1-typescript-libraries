@@ -120,7 +120,7 @@ let _cached_decoder_for_ESSCertID: $.ASN1Decoder<ESSCertID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ESSCertID} The decoded data structure.
  */
-export function _decode_ESSCertID(el: _Element) {
+export function _decode_ESSCertID(el: _Element): ESSCertID {
     if (!_cached_decoder_for_ESSCertID) {
         _cached_decoder_for_ESSCertID = function (el: _Element): ESSCertID {
             let certHash!: Hash;
@@ -164,7 +164,7 @@ let _cached_encoder_for_ESSCertID: $.ASN1Encoder<ESSCertID> | null = null;
 export function _encode_ESSCertID(
     value: ESSCertID,
     elGetter: $.ASN1Encoder<ESSCertID>
-) {
+): _Element {
     if (!_cached_encoder_for_ESSCertID) {
         _cached_encoder_for_ESSCertID = function (
             value: ESSCertID        ): _Element {

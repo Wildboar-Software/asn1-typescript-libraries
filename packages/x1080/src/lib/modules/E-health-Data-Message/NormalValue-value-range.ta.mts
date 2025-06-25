@@ -116,7 +116,7 @@ let _cached_decoder_for_NormalValue_value_range: $.ASN1Decoder<NormalValue_value
  * @param {_Element} el The element being decoded.
  * @returns {NormalValue_value_range} The decoded data structure.
  */
-export function _decode_NormalValue_value_range(el: _Element) {
+export function _decode_NormalValue_value_range(el: _Element): NormalValue_value_range {
     if (!_cached_decoder_for_NormalValue_value_range) {
         _cached_decoder_for_NormalValue_value_range = function (
             el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_NormalValue_value_range: $.ASN1Encoder<NormalValue_value
 export function _encode_NormalValue_value_range(
     value: NormalValue_value_range,
     elGetter: $.ASN1Encoder<NormalValue_value_range>
-) {
+): _Element {
     if (!_cached_encoder_for_NormalValue_value_range) {
         _cached_encoder_for_NormalValue_value_range = function (
             value: NormalValue_value_range        ): _Element {

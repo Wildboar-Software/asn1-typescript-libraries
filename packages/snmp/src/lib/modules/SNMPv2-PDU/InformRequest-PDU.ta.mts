@@ -33,7 +33,7 @@ let _cached_decoder_for_InformRequest_PDU: $.ASN1Decoder<InformRequest_PDU> | nu
  * @returns {InformRequest_PDU} The decoded data structure.
  */
 export
-function _decode_InformRequest_PDU (el: _Element) {
+function _decode_InformRequest_PDU (el: _Element): InformRequest_PDU {
     if (!_cached_decoder_for_InformRequest_PDU) { _cached_decoder_for_InformRequest_PDU = $._decode_implicit<InformRequest_PDU>(() => _decode_PDU); }
     return _cached_decoder_for_InformRequest_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_InformRequest_PDU: $.ASN1Encoder<InformRequest_PDU> | nu
  * @returns {_Element} The InformRequest_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_InformRequest_PDU (value: InformRequest_PDU, elGetter: $.ASN1Encoder<InformRequest_PDU>) {
+function _encode_InformRequest_PDU (value: InformRequest_PDU, elGetter: $.ASN1Encoder<InformRequest_PDU>): _Element {
     if (!_cached_encoder_for_InformRequest_PDU) { _cached_encoder_for_InformRequest_PDU = $._encode_implicit(_TagClass.context, 6, () => _encode_PDU, $.BER); }
     return _cached_encoder_for_InformRequest_PDU(value, elGetter);
 }

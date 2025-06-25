@@ -35,7 +35,7 @@ let _cached_decoder_for_ExtendedCertificates: $.ASN1Decoder<ExtendedCertificates
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedCertificates} The decoded data structure.
  */
-export function _decode_ExtendedCertificates(el: _Element) {
+export function _decode_ExtendedCertificates(el: _Element): ExtendedCertificates {
     if (!_cached_decoder_for_ExtendedCertificates) {
         _cached_decoder_for_ExtendedCertificates = $._decodeSetOf<ExtendedCertificate>(
             () => _decode_ExtendedCertificate
@@ -56,7 +56,7 @@ let _cached_encoder_for_ExtendedCertificates: $.ASN1Encoder<ExtendedCertificates
 export function _encode_ExtendedCertificates(
     value: ExtendedCertificates,
     elGetter: $.ASN1Encoder<ExtendedCertificates>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedCertificates) {
         _cached_encoder_for_ExtendedCertificates = $._encodeSetOf<ExtendedCertificate>(
             () => _encode_ExtendedCertificate,

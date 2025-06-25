@@ -35,7 +35,7 @@ let _cached_decoder_for_MaxDistance: $.ASN1Decoder<MaxDistance> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MaxDistance} The decoded data structure.
  */
-export function _decode_MaxDistance(el: _Element) {
+export function _decode_MaxDistance(el: _Element): MaxDistance {
     if (!_cached_decoder_for_MaxDistance) {
         _cached_decoder_for_MaxDistance = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MaxDistance: $.ASN1Encoder<MaxDistance> | null = null;
 export function _encode_MaxDistance(
     value: MaxDistance,
     elGetter: $.ASN1Encoder<MaxDistance>
-) {
+): _Element {
     if (!_cached_encoder_for_MaxDistance) {
         _cached_encoder_for_MaxDistance = _encode_TimeInterval;
     }

@@ -45,7 +45,7 @@ let _cached_decoder_for_SyntaxOrAttribute: $.ASN1Decoder<SyntaxOrAttribute> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SyntaxOrAttribute} The decoded data structure.
  */
-export function _decode_SyntaxOrAttribute(el: _Element) {
+export function _decode_SyntaxOrAttribute(el: _Element): SyntaxOrAttribute {
     if (!_cached_decoder_for_SyntaxOrAttribute) {
         _cached_decoder_for_SyntaxOrAttribute = $._decode_inextensible_choice<SyntaxOrAttribute>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_SyntaxOrAttribute: $.ASN1Encoder<SyntaxOrAttribute> | nu
 export function _encode_SyntaxOrAttribute(
     value: SyntaxOrAttribute,
     elGetter: $.ASN1Encoder<SyntaxOrAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_SyntaxOrAttribute) {
         _cached_encoder_for_SyntaxOrAttribute = $._encode_choice<SyntaxOrAttribute>(
             {

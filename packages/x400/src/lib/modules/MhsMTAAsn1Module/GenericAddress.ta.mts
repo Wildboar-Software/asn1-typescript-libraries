@@ -111,7 +111,7 @@ let _cached_decoder_for_GenericAddress: $.ASN1Decoder<GenericAddress> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {GenericAddress} The decoded data structure.
  */
-export function _decode_GenericAddress(el: _Element) {
+export function _decode_GenericAddress(el: _Element): GenericAddress {
     if (!_cached_decoder_for_GenericAddress) {
         _cached_decoder_for_GenericAddress = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_GenericAddress: $.ASN1Encoder<GenericAddress> | null = n
 export function _encode_GenericAddress(
     value: GenericAddress,
     elGetter: $.ASN1Encoder<GenericAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_GenericAddress) {
         _cached_encoder_for_GenericAddress = function (
             value: GenericAddress        ): _Element {

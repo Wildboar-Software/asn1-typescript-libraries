@@ -143,7 +143,7 @@ let _cached_decoder_for_AnyType_nillable: $.ASN1Decoder<AnyType_nillable> | null
  * @param {_Element} el The element being decoded.
  * @returns {AnyType_nillable} The decoded data structure.
  */
-export function _decode_AnyType_nillable(el: _Element) {
+export function _decode_AnyType_nillable(el: _Element): AnyType_nillable {
   if (!_cached_decoder_for_AnyType_nillable) {
     _cached_decoder_for_AnyType_nillable = function (
       el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_AnyType_nillable: $.ASN1Encoder<AnyType_nillable> | null
 export function _encode_AnyType_nillable(
   value: AnyType_nillable,
   elGetter: $.ASN1Encoder<AnyType_nillable>
-) {
+): _Element {
   if (!_cached_encoder_for_AnyType_nillable) {
     _cached_encoder_for_AnyType_nillable = function (
       value: AnyType_nillable    ): _Element {

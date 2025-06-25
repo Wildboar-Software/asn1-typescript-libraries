@@ -35,7 +35,7 @@ let _cached_decoder_for_RecipientName: $.ASN1Decoder<RecipientName> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RecipientName} The decoded data structure.
  */
-export function _decode_RecipientName(el: _Element) {
+export function _decode_RecipientName(el: _Element): RecipientName {
     if (!_cached_decoder_for_RecipientName) {
         _cached_decoder_for_RecipientName = _decode_ORAddressAndOrDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RecipientName: $.ASN1Encoder<RecipientName> | null = nul
 export function _encode_RecipientName(
     value: RecipientName,
     elGetter: $.ASN1Encoder<RecipientName>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientName) {
         _cached_encoder_for_RecipientName = _encode_ORAddressAndOrDirectoryName;
     }

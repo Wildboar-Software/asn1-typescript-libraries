@@ -165,7 +165,7 @@ let _cached_decoder_for_DigestedData: $.ASN1Decoder<DigestedData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DigestedData} The decoded data structure.
  */
-export function _decode_DigestedData(el: _Element) {
+export function _decode_DigestedData(el: _Element): DigestedData {
     if (!_cached_decoder_for_DigestedData) {
         _cached_decoder_for_DigestedData = function (
             el: _Element
@@ -216,7 +216,7 @@ let _cached_encoder_for_DigestedData: $.ASN1Encoder<DigestedData> | null = null;
 export function _encode_DigestedData(
     value: DigestedData,
     elGetter: $.ASN1Encoder<DigestedData>
-) {
+): _Element {
     if (!_cached_encoder_for_DigestedData) {
         _cached_encoder_for_DigestedData = function (
             value: DigestedData        ): _Element {

@@ -41,7 +41,7 @@ let _cached_decoder_for_EventTypeId: $.ASN1Decoder<EventTypeId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EventTypeId} The decoded data structure.
  */
-export function _decode_EventTypeId(el: _Element) {
+export function _decode_EventTypeId(el: _Element): EventTypeId {
   if (!_cached_decoder_for_EventTypeId) {
     _cached_decoder_for_EventTypeId = $._decode_inextensible_choice<EventTypeId>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_EventTypeId: $.ASN1Encoder<EventTypeId> | null = null;
 export function _encode_EventTypeId(
   value: EventTypeId,
   elGetter: $.ASN1Encoder<EventTypeId>
-) {
+): _Element {
   if (!_cached_encoder_for_EventTypeId) {
     _cached_encoder_for_EventTypeId = $._encode_choice<EventTypeId>(
       {

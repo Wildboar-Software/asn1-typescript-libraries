@@ -158,7 +158,7 @@ let _cached_decoder_for_Fault: $.ASN1Decoder<Fault> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Fault} The decoded data structure.
  */
-export function _decode_Fault(el: _Element) {
+export function _decode_Fault(el: _Element): Fault {
   if (!_cached_decoder_for_Fault) {
     _cached_decoder_for_Fault = function (el: _Element): Fault {
       let code!: Code;
@@ -214,7 +214,7 @@ let _cached_encoder_for_Fault: $.ASN1Encoder<Fault> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Fault, encoded as an ASN.1 Element.
  */
-export function _encode_Fault(value: Fault, elGetter: $.ASN1Encoder<Fault>) {
+export function _encode_Fault(value: Fault, elGetter: $.ASN1Encoder<Fault>): _Element {
   if (!_cached_encoder_for_Fault) {
     _cached_encoder_for_Fault = function (
       value: Fault    ): _Element {

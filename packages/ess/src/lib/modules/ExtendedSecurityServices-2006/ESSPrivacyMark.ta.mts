@@ -30,7 +30,7 @@ let _cached_decoder_for_ESSPrivacyMark: $.ASN1Decoder<ESSPrivacyMark> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ESSPrivacyMark} The decoded data structure.
  */
-export function _decode_ESSPrivacyMark(el: _Element) {
+export function _decode_ESSPrivacyMark(el: _Element): ESSPrivacyMark {
     if (!_cached_decoder_for_ESSPrivacyMark) {
         _cached_decoder_for_ESSPrivacyMark = $._decode_inextensible_choice<ESSPrivacyMark>(
             {
@@ -56,7 +56,7 @@ let _cached_encoder_for_ESSPrivacyMark: $.ASN1Encoder<ESSPrivacyMark> | null = n
 export function _encode_ESSPrivacyMark(
     value: ESSPrivacyMark,
     elGetter: $.ASN1Encoder<ESSPrivacyMark>
-) {
+): _Element {
     if (!_cached_encoder_for_ESSPrivacyMark) {
         _cached_encoder_for_ESSPrivacyMark = $._encode_choice<ESSPrivacyMark>(
             {

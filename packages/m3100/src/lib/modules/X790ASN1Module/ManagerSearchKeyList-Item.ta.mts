@@ -46,7 +46,7 @@ let _cached_decoder_for_ManagerSearchKeyList_Item: $.ASN1Decoder<ManagerSearchKe
  * @param {_Element} el The element being decoded.
  * @returns {ManagerSearchKeyList_Item} The decoded data structure.
  */
-export function _decode_ManagerSearchKeyList_Item(el: _Element) {
+export function _decode_ManagerSearchKeyList_Item(el: _Element): ManagerSearchKeyList_Item {
     if (!_cached_decoder_for_ManagerSearchKeyList_Item) {
         _cached_decoder_for_ManagerSearchKeyList_Item = $._decode_extensible_choice<ManagerSearchKeyList_Item>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_ManagerSearchKeyList_Item: $.ASN1Encoder<ManagerSearchKe
 export function _encode_ManagerSearchKeyList_Item(
     value: ManagerSearchKeyList_Item,
     elGetter: $.ASN1Encoder<ManagerSearchKeyList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagerSearchKeyList_Item) {
         _cached_encoder_for_ManagerSearchKeyList_Item = $._encode_choice<ManagerSearchKeyList_Item>(
             {

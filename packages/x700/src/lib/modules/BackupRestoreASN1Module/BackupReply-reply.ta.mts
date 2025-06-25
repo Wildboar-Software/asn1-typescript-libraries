@@ -35,7 +35,7 @@ let _cached_decoder_for_BackupReply_reply: $.ASN1Decoder<BackupReply_reply> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BackupReply_reply} The decoded data structure.
  */
-export function _decode_BackupReply_reply(el: _Element) {
+export function _decode_BackupReply_reply(el: _Element): BackupReply_reply {
     if (!_cached_decoder_for_BackupReply_reply) {
         _cached_decoder_for_BackupReply_reply = $._decode_inextensible_choice<BackupReply_reply>(
             {
@@ -59,7 +59,7 @@ let _cached_encoder_for_BackupReply_reply: $.ASN1Encoder<BackupReply_reply> | nu
 export function _encode_BackupReply_reply(
     value: BackupReply_reply,
     elGetter: $.ASN1Encoder<BackupReply_reply>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupReply_reply) {
         _cached_encoder_for_BackupReply_reply = $._encode_choice<BackupReply_reply>(
             {

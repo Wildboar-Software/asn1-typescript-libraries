@@ -115,7 +115,7 @@ let _cached_decoder_for_NoSuchParticipant: $.ASN1Decoder<NoSuchParticipant> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchParticipant} The decoded data structure.
  */
-export function _decode_NoSuchParticipant(el: _Element) {
+export function _decode_NoSuchParticipant(el: _Element): NoSuchParticipant {
     if (!_cached_decoder_for_NoSuchParticipant) {
         _cached_decoder_for_NoSuchParticipant = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_NoSuchParticipant: $.ASN1Encoder<NoSuchParticipant> | nu
 export function _encode_NoSuchParticipant(
     value: NoSuchParticipant,
     elGetter: $.ASN1Encoder<NoSuchParticipant>
-) {
+): _Element {
     if (!_cached_encoder_for_NoSuchParticipant) {
         _cached_encoder_for_NoSuchParticipant = function (
             value: NoSuchParticipant        ): _Element {

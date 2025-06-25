@@ -123,7 +123,7 @@ let _cached_decoder_for_CrlID: $.ASN1Decoder<CrlID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CrlID} The decoded data structure.
  */
-export function _decode_CrlID(el: _Element) {
+export function _decode_CrlID(el: _Element): CrlID {
     if (!_cached_decoder_for_CrlID) {
         _cached_decoder_for_CrlID = function (el: _Element): CrlID {
             let crlUrl: OPTIONAL<IA5String>;
@@ -175,7 +175,7 @@ let _cached_encoder_for_CrlID: $.ASN1Encoder<CrlID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CrlID, encoded as an ASN.1 Element.
  */
-export function _encode_CrlID(value: CrlID, elGetter: $.ASN1Encoder<CrlID>) {
+export function _encode_CrlID(value: CrlID, elGetter: $.ASN1Encoder<CrlID>): _Element {
     if (!_cached_encoder_for_CrlID) {
         _cached_encoder_for_CrlID = function (
             value: CrlID        ): _Element {

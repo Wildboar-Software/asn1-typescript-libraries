@@ -42,7 +42,7 @@ let _cached_decoder_for_RecipientIdentifier: $.ASN1Decoder<RecipientIdentifier> 
  * @param {_Element} el The element being decoded.
  * @returns {RecipientIdentifier} The decoded data structure.
  */
-export function _decode_RecipientIdentifier(el: _Element) {
+export function _decode_RecipientIdentifier(el: _Element): RecipientIdentifier {
     if (!_cached_decoder_for_RecipientIdentifier) {
         _cached_decoder_for_RecipientIdentifier = $._decode_extensible_choice<RecipientIdentifier>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_RecipientIdentifier: $.ASN1Encoder<RecipientIdentifier> 
 export function _encode_RecipientIdentifier(
     value: RecipientIdentifier,
     elGetter: $.ASN1Encoder<RecipientIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientIdentifier) {
         _cached_encoder_for_RecipientIdentifier = $._encode_choice<RecipientIdentifier>(
             {

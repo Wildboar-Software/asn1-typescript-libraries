@@ -43,7 +43,7 @@ let _cached_decoder_for_ContentBPUReport: $.ASN1Decoder<ContentBPUReport> | null
  * @param {_Element} el The element being decoded.
  * @returns {ContentBPUReport} The decoded data structure.
  */
-export function _decode_ContentBPUReport(el: _Element) {
+export function _decode_ContentBPUReport(el: _Element): ContentBPUReport {
     if (!_cached_decoder_for_ContentBPUReport) {
         _cached_decoder_for_ContentBPUReport = _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfoBPUReport>(
             _decode_EncapsulatedContentInfoBPUReport
@@ -66,7 +66,7 @@ let _cached_encoder_for_ContentBPUReport: $.ASN1Encoder<ContentBPUReport> | null
 export function _encode_ContentBPUReport(
     value: ContentBPUReport,
     elGetter: $.ASN1Encoder<ContentBPUReport>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentBPUReport) {
         _cached_encoder_for_ContentBPUReport = _get_encoder_for_SIGNEDDATA<EncapsulatedContentInfoBPUReport>(
             _encode_EncapsulatedContentInfoBPUReport

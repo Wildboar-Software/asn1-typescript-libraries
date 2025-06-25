@@ -46,7 +46,7 @@ let _cached_decoder_for_SMIMEEncryptionKeyPreference: $.ASN1Decoder<SMIMEEncrypt
  * @param {_Element} el The element being decoded.
  * @returns {SMIMEEncryptionKeyPreference} The decoded data structure.
  */
-export function _decode_SMIMEEncryptionKeyPreference(el: _Element) {
+export function _decode_SMIMEEncryptionKeyPreference(el: _Element): SMIMEEncryptionKeyPreference {
     if (!_cached_decoder_for_SMIMEEncryptionKeyPreference) {
         _cached_decoder_for_SMIMEEncryptionKeyPreference = $._decode_inextensible_choice<SMIMEEncryptionKeyPreference>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_SMIMEEncryptionKeyPreference: $.ASN1Encoder<SMIMEEncrypt
 export function _encode_SMIMEEncryptionKeyPreference(
     value: SMIMEEncryptionKeyPreference,
     elGetter: $.ASN1Encoder<SMIMEEncryptionKeyPreference>
-) {
+): _Element {
     if (!_cached_encoder_for_SMIMEEncryptionKeyPreference) {
         _cached_encoder_for_SMIMEEncryptionKeyPreference = $._encode_choice<SMIMEEncryptionKeyPreference>(
             {

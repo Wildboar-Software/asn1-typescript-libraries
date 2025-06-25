@@ -41,7 +41,7 @@ let _cached_decoder_for_PollRepContent: $.ASN1Decoder<PollRepContent> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {PollRepContent} The decoded data structure.
  */
-export function _decode_PollRepContent(el: _Element) {
+export function _decode_PollRepContent(el: _Element): PollRepContent {
   if (!_cached_decoder_for_PollRepContent) {
     _cached_decoder_for_PollRepContent = $._decodeSequenceOf<PollRepContent_Item>(
       () => _decode_PollRepContent_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_PollRepContent: $.ASN1Encoder<PollRepContent> | null = n
 export function _encode_PollRepContent(
   value: PollRepContent,
   elGetter: $.ASN1Encoder<PollRepContent>
-) {
+): _Element {
   if (!_cached_encoder_for_PollRepContent) {
     _cached_encoder_for_PollRepContent = $._encodeSequenceOf<PollRepContent_Item>(
       () => _encode_PollRepContent_Item,

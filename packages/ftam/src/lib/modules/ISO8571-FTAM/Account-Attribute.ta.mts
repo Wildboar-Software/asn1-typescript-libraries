@@ -46,7 +46,7 @@ let _cached_decoder_for_Account_Attribute: $.ASN1Decoder<Account_Attribute> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Account_Attribute} The decoded data structure.
  */
-export function _decode_Account_Attribute(el: _Element) {
+export function _decode_Account_Attribute(el: _Element): Account_Attribute {
   if (!_cached_decoder_for_Account_Attribute) {
     _cached_decoder_for_Account_Attribute = $._decode_inextensible_choice<Account_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Account_Attribute: $.ASN1Encoder<Account_Attribute> | nu
 export function _encode_Account_Attribute(
   value: Account_Attribute,
   elGetter: $.ASN1Encoder<Account_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Account_Attribute) {
     _cached_encoder_for_Account_Attribute = $._encode_choice<Account_Attribute>(
       {

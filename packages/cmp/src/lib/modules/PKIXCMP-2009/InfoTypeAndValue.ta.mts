@@ -113,7 +113,7 @@ let _cached_decoder_for_InfoTypeAndValue: $.ASN1Decoder<InfoTypeAndValue> | null
  * @param {_Element} el The element being decoded.
  * @returns {InfoTypeAndValue} The decoded data structure.
  */
-export function _decode_InfoTypeAndValue(el: _Element) {
+export function _decode_InfoTypeAndValue(el: _Element): InfoTypeAndValue {
   if (!_cached_decoder_for_InfoTypeAndValue) {
     _cached_decoder_for_InfoTypeAndValue = function (
       el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_InfoTypeAndValue: $.ASN1Encoder<InfoTypeAndValue> | null
 export function _encode_InfoTypeAndValue(
   value: InfoTypeAndValue,
   elGetter: $.ASN1Encoder<InfoTypeAndValue>
-) {
+): _Element {
   if (!_cached_encoder_for_InfoTypeAndValue) {
     _cached_encoder_for_InfoTypeAndValue = function (
       value: InfoTypeAndValue    ): _Element {

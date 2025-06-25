@@ -115,7 +115,7 @@ let _cached_decoder_for_PointToMultipoint_toTps_Item: $.ASN1Decoder<PointToMulti
  * @param {_Element} el The element being decoded.
  * @returns {PointToMultipoint_toTps_Item} The decoded data structure.
  */
-export function _decode_PointToMultipoint_toTps_Item(el: _Element) {
+export function _decode_PointToMultipoint_toTps_Item(el: _Element): PointToMultipoint_toTps_Item {
     if (!_cached_decoder_for_PointToMultipoint_toTps_Item) {
         _cached_decoder_for_PointToMultipoint_toTps_Item = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_PointToMultipoint_toTps_Item: $.ASN1Encoder<PointToMulti
 export function _encode_PointToMultipoint_toTps_Item(
     value: PointToMultipoint_toTps_Item,
     elGetter: $.ASN1Encoder<PointToMultipoint_toTps_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_PointToMultipoint_toTps_Item) {
         _cached_encoder_for_PointToMultipoint_toTps_Item = function (
             value: PointToMultipoint_toTps_Item        ): _Element {

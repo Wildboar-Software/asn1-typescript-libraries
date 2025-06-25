@@ -161,7 +161,7 @@ let _cached_decoder_for_PBKDF2_params: $.ASN1Decoder<PBKDF2_params> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_params} The decoded data structure.
  */
-export function _decode_PBKDF2_params(el: _Element) {
+export function _decode_PBKDF2_params(el: _Element): PBKDF2_params {
     if (!_cached_decoder_for_PBKDF2_params) {
         _cached_decoder_for_PBKDF2_params = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_PBKDF2_params: $.ASN1Encoder<PBKDF2_params> | null = nul
 export function _encode_PBKDF2_params(
     value: PBKDF2_params,
     elGetter: $.ASN1Encoder<PBKDF2_params>
-) {
+): _Element {
     if (!_cached_encoder_for_PBKDF2_params) {
         _cached_encoder_for_PBKDF2_params = function (
             value: PBKDF2_params        ): _Element {

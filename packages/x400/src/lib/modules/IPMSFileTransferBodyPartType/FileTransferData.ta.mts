@@ -32,7 +32,7 @@ let _cached_decoder_for_FileTransferData: $.ASN1Decoder<FileTransferData> | null
  * @param {_Element} el The element being decoded.
  * @returns {FileTransferData} The decoded data structure.
  */
-export function _decode_FileTransferData(el: _Element) {
+export function _decode_FileTransferData(el: _Element): FileTransferData {
     if (!_cached_decoder_for_FileTransferData) {
         _cached_decoder_for_FileTransferData = $._decodeSequenceOf<EXTERNAL>(
             () => $._decodeExternal
@@ -53,7 +53,7 @@ let _cached_encoder_for_FileTransferData: $.ASN1Encoder<FileTransferData> | null
 export function _encode_FileTransferData(
     value: FileTransferData,
     elGetter: $.ASN1Encoder<FileTransferData>
-) {
+): _Element {
     if (!_cached_encoder_for_FileTransferData) {
         _cached_encoder_for_FileTransferData = $._encodeSequenceOf<EXTERNAL>(
             () => $._encodeExternal,

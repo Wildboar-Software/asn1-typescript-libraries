@@ -43,7 +43,7 @@ let _cached_decoder_for_Date_and_Time_Attribute: $.ASN1Decoder<Date_and_Time_Att
  * @param {_Element} el The element being decoded.
  * @returns {Date_and_Time_Attribute} The decoded data structure.
  */
-export function _decode_Date_and_Time_Attribute(el: _Element) {
+export function _decode_Date_and_Time_Attribute(el: _Element): Date_and_Time_Attribute {
   if (!_cached_decoder_for_Date_and_Time_Attribute) {
     _cached_decoder_for_Date_and_Time_Attribute = $._decode_inextensible_choice<Date_and_Time_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Date_and_Time_Attribute: $.ASN1Encoder<Date_and_Time_Att
 export function _encode_Date_and_Time_Attribute(
   value: Date_and_Time_Attribute,
   elGetter: $.ASN1Encoder<Date_and_Time_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Date_and_Time_Attribute) {
     _cached_encoder_for_Date_and_Time_Attribute = $._encode_choice<Date_and_Time_Attribute>(
       {

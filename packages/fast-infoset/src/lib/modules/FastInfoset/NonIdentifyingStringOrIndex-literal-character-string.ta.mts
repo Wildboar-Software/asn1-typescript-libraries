@@ -119,7 +119,7 @@ let _cached_decoder_for_NonIdentifyingStringOrIndex_literal_character_string: $.
  */
 export function _decode_NonIdentifyingStringOrIndex_literal_character_string(
   el: _Element
-) {
+): NonIdentifyingStringOrIndex_literal_character_string {
   if (
     !_cached_decoder_for_NonIdentifyingStringOrIndex_literal_character_string
   ) {
@@ -163,7 +163,7 @@ let _cached_encoder_for_NonIdentifyingStringOrIndex_literal_character_string: $.
 export function _encode_NonIdentifyingStringOrIndex_literal_character_string(
   value: NonIdentifyingStringOrIndex_literal_character_string,
   elGetter: $.ASN1Encoder<NonIdentifyingStringOrIndex_literal_character_string>
-) {
+): _Element {
   if (
     !_cached_encoder_for_NonIdentifyingStringOrIndex_literal_character_string
   ) {

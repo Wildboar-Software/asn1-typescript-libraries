@@ -35,7 +35,7 @@ let _cached_decoder_for_StartUpDate: $.ASN1Decoder<StartUpDate> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {StartUpDate} The decoded data structure.
  */
-export function _decode_StartUpDate(el: _Element) {
+export function _decode_StartUpDate(el: _Element): StartUpDate {
     if (!_cached_decoder_for_StartUpDate) {
         _cached_decoder_for_StartUpDate = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_StartUpDate: $.ASN1Encoder<StartUpDate> | null = null;
 export function _encode_StartUpDate(
     value: StartUpDate,
     elGetter: $.ASN1Encoder<StartUpDate>
-) {
+): _Element {
     if (!_cached_encoder_for_StartUpDate) {
         _cached_encoder_for_StartUpDate = _encode_Time;
     }

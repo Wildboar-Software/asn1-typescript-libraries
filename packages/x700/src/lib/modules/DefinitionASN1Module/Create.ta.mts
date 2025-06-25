@@ -43,7 +43,7 @@ let _cached_decoder_for_Create: $.ASN1Decoder<Create> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Create} The decoded data structure.
  */
-export function _decode_Create(el: _Element) {
+export function _decode_Create(el: _Element): Create {
     if (!_cached_decoder_for_Create) {
         _cached_decoder_for_Create = $._decode_inextensible_choice<Create>({
             'UNIVERSAL 16': ['present', _decode_CreateSpecification],
@@ -64,7 +64,7 @@ let _cached_encoder_for_Create: $.ASN1Encoder<Create> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Create, encoded as an ASN.1 Element.
  */
-export function _encode_Create(value: Create, elGetter: $.ASN1Encoder<Create>) {
+export function _encode_Create(value: Create, elGetter: $.ASN1Encoder<Create>): _Element {
     if (!_cached_encoder_for_Create) {
         _cached_encoder_for_Create = $._encode_choice<Create>(
             {

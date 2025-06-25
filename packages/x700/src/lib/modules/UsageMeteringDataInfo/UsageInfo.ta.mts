@@ -106,7 +106,7 @@ let _cached_decoder_for_UsageInfo: $.ASN1Decoder<UsageInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UsageInfo} The decoded data structure.
  */
-export function _decode_UsageInfo(el: _Element) {
+export function _decode_UsageInfo(el: _Element): UsageInfo {
     if (!_cached_decoder_for_UsageInfo) {
         _cached_decoder_for_UsageInfo = function (el: _Element): UsageInfo {
             const sequence: _Element[] = el.sequence;
@@ -141,7 +141,7 @@ let _cached_encoder_for_UsageInfo: $.ASN1Encoder<UsageInfo> | null = null;
 export function _encode_UsageInfo(
     value: UsageInfo,
     elGetter: $.ASN1Encoder<UsageInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_UsageInfo) {
         _cached_encoder_for_UsageInfo = function (
             value: UsageInfo        ): _Element {

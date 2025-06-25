@@ -222,7 +222,7 @@ let _cached_decoder_for_RelationshipChangeInfo: $.ASN1Decoder<RelationshipChange
  * @param {_Element} el The element being decoded.
  * @returns {RelationshipChangeInfo} The decoded data structure.
  */
-export function _decode_RelationshipChangeInfo(el: _Element) {
+export function _decode_RelationshipChangeInfo(el: _Element): RelationshipChangeInfo {
     if (!_cached_decoder_for_RelationshipChangeInfo) {
         _cached_decoder_for_RelationshipChangeInfo = function (
             el: _Element
@@ -301,7 +301,7 @@ let _cached_encoder_for_RelationshipChangeInfo: $.ASN1Encoder<RelationshipChange
 export function _encode_RelationshipChangeInfo(
     value: RelationshipChangeInfo,
     elGetter: $.ASN1Encoder<RelationshipChangeInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RelationshipChangeInfo) {
         _cached_encoder_for_RelationshipChangeInfo = function (
             value: RelationshipChangeInfo        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportDestinationName: $.ASN1Decoder<ReportDestinationNa
  * @param {_Element} el The element being decoded.
  * @returns {ReportDestinationName} The decoded data structure.
  */
-export function _decode_ReportDestinationName(el: _Element) {
+export function _decode_ReportDestinationName(el: _Element): ReportDestinationName {
     if (!_cached_decoder_for_ReportDestinationName) {
         _cached_decoder_for_ReportDestinationName = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReportDestinationName: $.ASN1Encoder<ReportDestinationNa
 export function _encode_ReportDestinationName(
     value: ReportDestinationName,
     elGetter: $.ASN1Encoder<ReportDestinationName>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportDestinationName) {
         _cached_encoder_for_ReportDestinationName = _encode_ORAddressAndOptionalDirectoryName;
     }

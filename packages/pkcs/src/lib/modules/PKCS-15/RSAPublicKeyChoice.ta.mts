@@ -42,7 +42,7 @@ let _cached_decoder_for_RSAPublicKeyChoice: $.ASN1Decoder<RSAPublicKeyChoice> | 
  * @param {_Element} el The element being decoded.
  * @returns {RSAPublicKeyChoice} The decoded data structure.
  */
-export function _decode_RSAPublicKeyChoice(el: _Element) {
+export function _decode_RSAPublicKeyChoice(el: _Element): RSAPublicKeyChoice {
     if (!_cached_decoder_for_RSAPublicKeyChoice) {
         _cached_decoder_for_RSAPublicKeyChoice = $._decode_extensible_choice<RSAPublicKeyChoice>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_RSAPublicKeyChoice: $.ASN1Encoder<RSAPublicKeyChoice> | 
 export function _encode_RSAPublicKeyChoice(
     value: RSAPublicKeyChoice,
     elGetter: $.ASN1Encoder<RSAPublicKeyChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_RSAPublicKeyChoice) {
         _cached_encoder_for_RSAPublicKeyChoice = $._encode_choice<RSAPublicKeyChoice>(
             {

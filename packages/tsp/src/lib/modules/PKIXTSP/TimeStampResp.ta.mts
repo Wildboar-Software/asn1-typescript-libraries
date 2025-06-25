@@ -113,7 +113,7 @@ let _cached_decoder_for_TimeStampResp: $.ASN1Decoder<TimeStampResp> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {TimeStampResp} The decoded data structure.
  */
-export function _decode_TimeStampResp(el: _Element) {
+export function _decode_TimeStampResp(el: _Element): TimeStampResp {
     if (!_cached_decoder_for_TimeStampResp) {
         _cached_decoder_for_TimeStampResp = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_TimeStampResp: $.ASN1Encoder<TimeStampResp> | null = nul
 export function _encode_TimeStampResp(
     value: TimeStampResp,
     elGetter: $.ASN1Encoder<TimeStampResp>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeStampResp) {
         _cached_encoder_for_TimeStampResp = function (
             value: TimeStampResp        ): _Element {

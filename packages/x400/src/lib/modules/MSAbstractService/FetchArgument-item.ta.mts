@@ -42,7 +42,7 @@ let _cached_decoder_for_FetchArgument_item: $.ASN1Decoder<FetchArgument_item> | 
  * @param {_Element} el The element being decoded.
  * @returns {FetchArgument_item} The decoded data structure.
  */
-export function _decode_FetchArgument_item(el: _Element) {
+export function _decode_FetchArgument_item(el: _Element): FetchArgument_item {
     if (!_cached_decoder_for_FetchArgument_item) {
         _cached_decoder_for_FetchArgument_item = $._decode_inextensible_choice<FetchArgument_item>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_FetchArgument_item: $.ASN1Encoder<FetchArgument_item> | 
 export function _encode_FetchArgument_item(
     value: FetchArgument_item,
     elGetter: $.ASN1Encoder<FetchArgument_item>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchArgument_item) {
         _cached_encoder_for_FetchArgument_item = $._encode_choice<FetchArgument_item>(
             {

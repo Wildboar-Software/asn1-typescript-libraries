@@ -289,7 +289,7 @@ let _cached_decoder_for_EncKDCRepPart: $.ASN1Decoder<EncKDCRepPart> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EncKDCRepPart} The decoded data structure.
  */
-export function _decode_EncKDCRepPart(el: _Element) {
+export function _decode_EncKDCRepPart(el: _Element): EncKDCRepPart {
   if (!_cached_decoder_for_EncKDCRepPart) {
     _cached_decoder_for_EncKDCRepPart = function (el: _Element): EncKDCRepPart {
       let key!: EncryptionKey;
@@ -401,7 +401,7 @@ let _cached_encoder_for_EncKDCRepPart: $.ASN1Encoder<EncKDCRepPart> | null = nul
 export function _encode_EncKDCRepPart(
   value: EncKDCRepPart,
   elGetter: $.ASN1Encoder<EncKDCRepPart>
-) {
+): _Element {
   if (!_cached_encoder_for_EncKDCRepPart) {
     _cached_encoder_for_EncKDCRepPart = function (
       value: EncKDCRepPart    ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_SettlementPolicy: $.ASN1Decoder<SettlementPolicy> | null
  * @param {_Element} el The element being decoded.
  * @returns {SettlementPolicy} The decoded data structure.
  */
-export function _decode_SettlementPolicy(el: _Element) {
+export function _decode_SettlementPolicy(el: _Element): SettlementPolicy {
     if (!_cached_decoder_for_SettlementPolicy) {
         _cached_decoder_for_SettlementPolicy = $._decode_inextensible_choice<SettlementPolicy>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_SettlementPolicy: $.ASN1Encoder<SettlementPolicy> | null
 export function _encode_SettlementPolicy(
     value: SettlementPolicy,
     elGetter: $.ASN1Encoder<SettlementPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_SettlementPolicy) {
         _cached_encoder_for_SettlementPolicy = $._encode_choice<SettlementPolicy>(
             {

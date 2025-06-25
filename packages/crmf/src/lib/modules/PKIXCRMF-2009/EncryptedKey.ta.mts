@@ -39,7 +39,7 @@ let _cached_decoder_for_EncryptedKey: $.ASN1Decoder<EncryptedKey> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedKey} The decoded data structure.
  */
-export function _decode_EncryptedKey(el: _Element) {
+export function _decode_EncryptedKey(el: _Element): EncryptedKey {
     if (!_cached_decoder_for_EncryptedKey) {
         _cached_decoder_for_EncryptedKey = $._decode_inextensible_choice<EncryptedKey>(
             {
@@ -70,7 +70,7 @@ let _cached_encoder_for_EncryptedKey: $.ASN1Encoder<EncryptedKey> | null = null;
 export function _encode_EncryptedKey(
     value: EncryptedKey,
     elGetter: $.ASN1Encoder<EncryptedKey>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedKey) {
         _cached_encoder_for_EncryptedKey = $._encode_choice<EncryptedKey>(
             {

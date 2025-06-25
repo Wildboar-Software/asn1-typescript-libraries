@@ -41,7 +41,7 @@ let _cached_decoder_for_Ranges: $.ASN1Decoder<Ranges> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Ranges} The decoded data structure.
  */
-export function _decode_Ranges(el: _Element) {
+export function _decode_Ranges(el: _Element): Ranges {
     if (!_cached_decoder_for_Ranges) {
         _cached_decoder_for_Ranges = $._decodeSetOf<Ranges_Item>(
             () => _decode_Ranges_Item
@@ -61,7 +61,7 @@ let _cached_encoder_for_Ranges: $.ASN1Encoder<Ranges> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ranges, encoded as an ASN.1 Element.
  */
-export function _encode_Ranges(value: Ranges, elGetter: $.ASN1Encoder<Ranges>) {
+export function _encode_Ranges(value: Ranges, elGetter: $.ASN1Encoder<Ranges>): _Element {
     if (!_cached_encoder_for_Ranges) {
         _cached_encoder_for_Ranges = $._encodeSetOf<Ranges_Item>(
             () => _encode_Ranges_Item,

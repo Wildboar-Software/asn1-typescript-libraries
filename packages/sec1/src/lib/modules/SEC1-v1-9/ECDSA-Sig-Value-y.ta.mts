@@ -36,7 +36,7 @@ let _cached_decoder_for_ECDSA_Sig_Value_y: $.ASN1Decoder<ECDSA_Sig_Value_y> | nu
  * @returns {ECDSA_Sig_Value_y} The decoded data structure.
  */
 export
-function _decode_ECDSA_Sig_Value_y (el: _Element) {
+function _decode_ECDSA_Sig_Value_y (el: _Element): ECDSA_Sig_Value_y {
     if (!_cached_decoder_for_ECDSA_Sig_Value_y) { _cached_decoder_for_ECDSA_Sig_Value_y = $._decode_inextensible_choice<ECDSA_Sig_Value_y>({
     "UNIVERSAL 1": [ "b", $._decodeBoolean ],
     "UNIVERSAL 4": [ "f", _decode_FieldElement ]
@@ -54,7 +54,7 @@ let _cached_encoder_for_ECDSA_Sig_Value_y: $.ASN1Encoder<ECDSA_Sig_Value_y> | nu
  * @returns {_Element} The ECDSA_Sig_Value_y, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECDSA_Sig_Value_y (value: ECDSA_Sig_Value_y, elGetter: $.ASN1Encoder<ECDSA_Sig_Value_y>) {
+function _encode_ECDSA_Sig_Value_y (value: ECDSA_Sig_Value_y, elGetter: $.ASN1Encoder<ECDSA_Sig_Value_y>): _Element {
     if (!_cached_encoder_for_ECDSA_Sig_Value_y) { _cached_encoder_for_ECDSA_Sig_Value_y = $._encode_choice<ECDSA_Sig_Value_y>({
     "b": $._encodeBoolean,
     "f": _encode_FieldElement,

@@ -52,7 +52,7 @@ let _cached_decoder_for_ApplyOperationToMembershipRequest: $.ASN1Decoder<ApplyOp
  * @param {_Element} el The element being decoded.
  * @returns {ApplyOperationToMembershipRequest} The decoded data structure.
  */
-export function _decode_ApplyOperationToMembershipRequest(el: _Element) {
+export function _decode_ApplyOperationToMembershipRequest(el: _Element): ApplyOperationToMembershipRequest {
     if (!_cached_decoder_for_ApplyOperationToMembershipRequest) {
         _cached_decoder_for_ApplyOperationToMembershipRequest = $._decode_inextensible_choice<ApplyOperationToMembershipRequest>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_ApplyOperationToMembershipRequest: $.ASN1Encoder<ApplyOp
 export function _encode_ApplyOperationToMembershipRequest(
     value: ApplyOperationToMembershipRequest,
     elGetter: $.ASN1Encoder<ApplyOperationToMembershipRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplyOperationToMembershipRequest) {
         _cached_encoder_for_ApplyOperationToMembershipRequest = $._encode_choice<ApplyOperationToMembershipRequest>(
             {

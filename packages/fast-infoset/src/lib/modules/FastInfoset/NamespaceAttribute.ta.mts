@@ -115,7 +115,7 @@ let _cached_decoder_for_NamespaceAttribute: $.ASN1Decoder<NamespaceAttribute> | 
  * @param {_Element} el The element being decoded.
  * @returns {NamespaceAttribute} The decoded data structure.
  */
-export function _decode_NamespaceAttribute(el: _Element) {
+export function _decode_NamespaceAttribute(el: _Element): NamespaceAttribute {
   if (!_cached_decoder_for_NamespaceAttribute) {
     _cached_decoder_for_NamespaceAttribute = function (
       el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_NamespaceAttribute: $.ASN1Encoder<NamespaceAttribute> | 
 export function _encode_NamespaceAttribute(
   value: NamespaceAttribute,
   elGetter: $.ASN1Encoder<NamespaceAttribute>
-) {
+): _Element {
   if (!_cached_encoder_for_NamespaceAttribute) {
     _cached_encoder_for_NamespaceAttribute = function (
       value: NamespaceAttribute    ): _Element {

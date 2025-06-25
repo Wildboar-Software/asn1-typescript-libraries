@@ -118,7 +118,7 @@ let _cached_decoder_for_AutoActionRequestError_problems_Item: $.ASN1Decoder<Auto
  * @param {_Element} el The element being decoded.
  * @returns {AutoActionRequestError_problems_Item} The decoded data structure.
  */
-export function _decode_AutoActionRequestError_problems_Item(el: _Element) {
+export function _decode_AutoActionRequestError_problems_Item(el: _Element): AutoActionRequestError_problems_Item {
     if (!_cached_decoder_for_AutoActionRequestError_problems_Item) {
         _cached_decoder_for_AutoActionRequestError_problems_Item = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_AutoActionRequestError_problems_Item: $.ASN1Encoder<Auto
 export function _encode_AutoActionRequestError_problems_Item(
     value: AutoActionRequestError_problems_Item,
     elGetter: $.ASN1Encoder<AutoActionRequestError_problems_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoActionRequestError_problems_Item) {
         _cached_encoder_for_AutoActionRequestError_problems_Item = function (
             value: AutoActionRequestError_problems_Item        ): _Element {

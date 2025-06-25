@@ -38,7 +38,7 @@ let _cached_decoder_for_TroubleReportFormatObjectPtr: $.ASN1Decoder<TroubleRepor
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportFormatObjectPtr} The decoded data structure.
  */
-export function _decode_TroubleReportFormatObjectPtr(el: _Element) {
+export function _decode_TroubleReportFormatObjectPtr(el: _Element): TroubleReportFormatObjectPtr {
     if (!_cached_decoder_for_TroubleReportFormatObjectPtr) {
         _cached_decoder_for_TroubleReportFormatObjectPtr = _decode_ObjectInstance;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TroubleReportFormatObjectPtr: $.ASN1Encoder<TroubleRepor
 export function _encode_TroubleReportFormatObjectPtr(
     value: TroubleReportFormatObjectPtr,
     elGetter: $.ASN1Encoder<TroubleReportFormatObjectPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportFormatObjectPtr) {
         _cached_encoder_for_TroubleReportFormatObjectPtr = _encode_ObjectInstance;
     }

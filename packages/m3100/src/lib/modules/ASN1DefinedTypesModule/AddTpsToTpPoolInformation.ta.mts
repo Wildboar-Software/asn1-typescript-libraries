@@ -41,7 +41,7 @@ let _cached_decoder_for_AddTpsToTpPoolInformation: $.ASN1Decoder<AddTpsToTpPoolI
  * @param {_Element} el The element being decoded.
  * @returns {AddTpsToTpPoolInformation} The decoded data structure.
  */
-export function _decode_AddTpsToTpPoolInformation(el: _Element) {
+export function _decode_AddTpsToTpPoolInformation(el: _Element): AddTpsToTpPoolInformation {
     if (!_cached_decoder_for_AddTpsToTpPoolInformation) {
         _cached_decoder_for_AddTpsToTpPoolInformation = $._decodeSequenceOf<AddTpsToTpPoolInformation_Item>(
             () => _decode_AddTpsToTpPoolInformation_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_AddTpsToTpPoolInformation: $.ASN1Encoder<AddTpsToTpPoolI
 export function _encode_AddTpsToTpPoolInformation(
     value: AddTpsToTpPoolInformation,
     elGetter: $.ASN1Encoder<AddTpsToTpPoolInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AddTpsToTpPoolInformation) {
         _cached_encoder_for_AddTpsToTpPoolInformation = $._encodeSequenceOf<AddTpsToTpPoolInformation_Item>(
             () => _encode_AddTpsToTpPoolInformation_Item,

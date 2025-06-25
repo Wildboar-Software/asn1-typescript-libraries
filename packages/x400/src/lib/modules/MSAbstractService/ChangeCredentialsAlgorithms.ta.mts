@@ -32,7 +32,7 @@ let _cached_decoder_for_ChangeCredentialsAlgorithms: $.ASN1Decoder<ChangeCredent
  * @param {_Element} el The element being decoded.
  * @returns {ChangeCredentialsAlgorithms} The decoded data structure.
  */
-export function _decode_ChangeCredentialsAlgorithms(el: _Element) {
+export function _decode_ChangeCredentialsAlgorithms(el: _Element): ChangeCredentialsAlgorithms {
     if (!_cached_decoder_for_ChangeCredentialsAlgorithms) {
         _cached_decoder_for_ChangeCredentialsAlgorithms = $._decodeSetOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -53,7 +53,7 @@ let _cached_encoder_for_ChangeCredentialsAlgorithms: $.ASN1Encoder<ChangeCredent
 export function _encode_ChangeCredentialsAlgorithms(
     value: ChangeCredentialsAlgorithms,
     elGetter: $.ASN1Encoder<ChangeCredentialsAlgorithms>
-) {
+): _Element {
     if (!_cached_encoder_for_ChangeCredentialsAlgorithms) {
         _cached_encoder_for_ChangeCredentialsAlgorithms = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

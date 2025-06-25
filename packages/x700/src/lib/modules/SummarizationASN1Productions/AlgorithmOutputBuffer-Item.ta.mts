@@ -121,7 +121,7 @@ let _cached_decoder_for_AlgorithmOutputBuffer_Item: $.ASN1Decoder<AlgorithmOutpu
  * @param {_Element} el The element being decoded.
  * @returns {AlgorithmOutputBuffer_Item} The decoded data structure.
  */
-export function _decode_AlgorithmOutputBuffer_Item(el: _Element) {
+export function _decode_AlgorithmOutputBuffer_Item(el: _Element): AlgorithmOutputBuffer_Item {
     if (!_cached_decoder_for_AlgorithmOutputBuffer_Item) {
         _cached_decoder_for_AlgorithmOutputBuffer_Item = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_AlgorithmOutputBuffer_Item: $.ASN1Encoder<AlgorithmOutpu
 export function _encode_AlgorithmOutputBuffer_Item(
     value: AlgorithmOutputBuffer_Item,
     elGetter: $.ASN1Encoder<AlgorithmOutputBuffer_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AlgorithmOutputBuffer_Item) {
         _cached_encoder_for_AlgorithmOutputBuffer_Item = function (
             value: AlgorithmOutputBuffer_Item        ): _Element {

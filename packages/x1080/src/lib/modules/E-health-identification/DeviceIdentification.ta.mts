@@ -170,7 +170,7 @@ let _cached_decoder_for_DeviceIdentification: $.ASN1Decoder<DeviceIdentification
  * @param {_Element} el The element being decoded.
  * @returns {DeviceIdentification} The decoded data structure.
  */
-export function _decode_DeviceIdentification(el: _Element) {
+export function _decode_DeviceIdentification(el: _Element): DeviceIdentification {
     if (!_cached_decoder_for_DeviceIdentification) {
         _cached_decoder_for_DeviceIdentification = function (
             el: _Element
@@ -231,7 +231,7 @@ let _cached_encoder_for_DeviceIdentification: $.ASN1Encoder<DeviceIdentification
 export function _encode_DeviceIdentification(
     value: DeviceIdentification,
     elGetter: $.ASN1Encoder<DeviceIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_DeviceIdentification) {
         _cached_encoder_for_DeviceIdentification = function (
             value: DeviceIdentification        ): _Element {

@@ -150,7 +150,7 @@ let _cached_decoder_for_KeyAgreePublicKey: $.ASN1Decoder<KeyAgreePublicKey> | nu
  * @param {_Element} el The element being decoded.
  * @returns {KeyAgreePublicKey} The decoded data structure.
  */
-export function _decode_KeyAgreePublicKey(el: _Element) {
+export function _decode_KeyAgreePublicKey(el: _Element): KeyAgreePublicKey {
   if (!_cached_decoder_for_KeyAgreePublicKey) {
     _cached_decoder_for_KeyAgreePublicKey = function (
       el: _Element
@@ -204,7 +204,7 @@ let _cached_encoder_for_KeyAgreePublicKey: $.ASN1Encoder<KeyAgreePublicKey> | nu
 export function _encode_KeyAgreePublicKey(
   value: KeyAgreePublicKey,
   elGetter: $.ASN1Encoder<KeyAgreePublicKey>
-) {
+): _Element {
   if (!_cached_encoder_for_KeyAgreePublicKey) {
     _cached_encoder_for_KeyAgreePublicKey = function (
       value: KeyAgreePublicKey    ): _Element {

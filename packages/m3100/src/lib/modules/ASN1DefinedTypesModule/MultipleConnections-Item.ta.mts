@@ -42,7 +42,7 @@ let _cached_decoder_for_MultipleConnections_Item: $.ASN1Decoder<MultipleConnecti
  * @param {_Element} el The element being decoded.
  * @returns {MultipleConnections_Item} The decoded data structure.
  */
-export function _decode_MultipleConnections_Item(el: _Element) {
+export function _decode_MultipleConnections_Item(el: _Element): MultipleConnections_Item {
     if (!_cached_decoder_for_MultipleConnections_Item) {
         _cached_decoder_for_MultipleConnections_Item = $._decode_inextensible_choice<MultipleConnections_Item>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_MultipleConnections_Item: $.ASN1Encoder<MultipleConnecti
 export function _encode_MultipleConnections_Item(
     value: MultipleConnections_Item,
     elGetter: $.ASN1Encoder<MultipleConnections_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_MultipleConnections_Item) {
         _cached_encoder_for_MultipleConnections_Item = $._encode_choice<MultipleConnections_Item>(
             {

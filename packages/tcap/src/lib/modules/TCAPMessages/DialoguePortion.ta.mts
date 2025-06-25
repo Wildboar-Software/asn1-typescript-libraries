@@ -32,7 +32,7 @@ let _cached_decoder_for_DialoguePortion: $.ASN1Decoder<DialoguePortion> | null =
  * @param {_Element} el The element being decoded.
  * @returns {DialoguePortion} The decoded data structure.
  */
-export function _decode_DialoguePortion(el: _Element) {
+export function _decode_DialoguePortion(el: _Element): DialoguePortion {
   if (!_cached_decoder_for_DialoguePortion) {
     _cached_decoder_for_DialoguePortion = $._decode_explicit<DialoguePortion>(
       () => $._decodeExternal
@@ -53,7 +53,7 @@ let _cached_encoder_for_DialoguePortion: $.ASN1Encoder<DialoguePortion> | null =
 export function _encode_DialoguePortion(
   value: DialoguePortion,
   elGetter: $.ASN1Encoder<DialoguePortion>
-) {
+): _Element {
   if (!_cached_encoder_for_DialoguePortion) {
     _cached_encoder_for_DialoguePortion = $._encode_explicit(
       _TagClass.application,

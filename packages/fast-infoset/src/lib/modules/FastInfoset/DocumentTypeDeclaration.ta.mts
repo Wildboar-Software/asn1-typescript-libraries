@@ -136,7 +136,7 @@ let _cached_decoder_for_DocumentTypeDeclaration: $.ASN1Decoder<DocumentTypeDecla
  * @param {_Element} el The element being decoded.
  * @returns {DocumentTypeDeclaration} The decoded data structure.
  */
-export function _decode_DocumentTypeDeclaration(el: _Element) {
+export function _decode_DocumentTypeDeclaration(el: _Element): DocumentTypeDeclaration {
   if (!_cached_decoder_for_DocumentTypeDeclaration) {
     _cached_decoder_for_DocumentTypeDeclaration = function (
       el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_DocumentTypeDeclaration: $.ASN1Encoder<DocumentTypeDecla
 export function _encode_DocumentTypeDeclaration(
   value: DocumentTypeDeclaration,
   elGetter: $.ASN1Encoder<DocumentTypeDeclaration>
-) {
+): _Element {
   if (!_cached_encoder_for_DocumentTypeDeclaration) {
     _cached_encoder_for_DocumentTypeDeclaration = function (
       value: DocumentTypeDeclaration    ): _Element {

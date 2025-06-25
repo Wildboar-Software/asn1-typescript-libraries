@@ -197,7 +197,7 @@ let _cached_decoder_for_BiometricAttributes: $.ASN1Decoder<BiometricAttributes> 
  * @param {_Element} el The element being decoded.
  * @returns {BiometricAttributes} The decoded data structure.
  */
-export function _decode_BiometricAttributes(el: _Element) {
+export function _decode_BiometricAttributes(el: _Element): BiometricAttributes {
     if (!_cached_decoder_for_BiometricAttributes) {
         _cached_decoder_for_BiometricAttributes = function (
             el: _Element
@@ -268,7 +268,7 @@ let _cached_encoder_for_BiometricAttributes: $.ASN1Encoder<BiometricAttributes> 
 export function _encode_BiometricAttributes(
     value: BiometricAttributes,
     elGetter: $.ASN1Encoder<BiometricAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_BiometricAttributes) {
         _cached_encoder_for_BiometricAttributes = function (
             value: BiometricAttributes        ): _Element {

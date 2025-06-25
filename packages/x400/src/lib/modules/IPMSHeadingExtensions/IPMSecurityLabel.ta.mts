@@ -136,7 +136,7 @@ let _cached_decoder_for_IPMSecurityLabel: $.ASN1Decoder<IPMSecurityLabel> | null
  * @param {_Element} el The element being decoded.
  * @returns {IPMSecurityLabel} The decoded data structure.
  */
-export function _decode_IPMSecurityLabel(el: _Element) {
+export function _decode_IPMSecurityLabel(el: _Element): IPMSecurityLabel {
     if (!_cached_decoder_for_IPMSecurityLabel) {
         _cached_decoder_for_IPMSecurityLabel = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_IPMSecurityLabel: $.ASN1Encoder<IPMSecurityLabel> | null
 export function _encode_IPMSecurityLabel(
     value: IPMSecurityLabel,
     elGetter: $.ASN1Encoder<IPMSecurityLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMSecurityLabel) {
         _cached_encoder_for_IPMSecurityLabel = function (
             value: IPMSecurityLabel        ): _Element {

@@ -112,7 +112,7 @@ let _cached_decoder_for_PKCS12Attribute: $.ASN1Decoder<PKCS12Attribute> | null =
  * @param {_Element} el The element being decoded.
  * @returns {PKCS12Attribute} The decoded data structure.
  */
-export function _decode_PKCS12Attribute(el: _Element) {
+export function _decode_PKCS12Attribute(el: _Element): PKCS12Attribute {
     if (!_cached_decoder_for_PKCS12Attribute) {
         _cached_decoder_for_PKCS12Attribute = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_PKCS12Attribute: $.ASN1Encoder<PKCS12Attribute> | null =
 export function _encode_PKCS12Attribute(
     value: PKCS12Attribute,
     elGetter: $.ASN1Encoder<PKCS12Attribute>
-) {
+): _Element {
     if (!_cached_encoder_for_PKCS12Attribute) {
         _cached_encoder_for_PKCS12Attribute = function (
             value: PKCS12Attribute        ): _Element {

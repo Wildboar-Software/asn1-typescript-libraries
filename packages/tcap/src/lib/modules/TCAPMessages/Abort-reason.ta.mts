@@ -42,7 +42,7 @@ let _cached_decoder_for_Abort_reason: $.ASN1Decoder<Abort_reason> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Abort_reason} The decoded data structure.
  */
-export function _decode_Abort_reason(el: _Element) {
+export function _decode_Abort_reason(el: _Element): Abort_reason {
   if (!_cached_decoder_for_Abort_reason) {
     _cached_decoder_for_Abort_reason = $._decode_inextensible_choice<Abort_reason>(
       {
@@ -66,7 +66,7 @@ let _cached_encoder_for_Abort_reason: $.ASN1Encoder<Abort_reason> | null = null;
 export function _encode_Abort_reason(
   value: Abort_reason,
   elGetter: $.ASN1Encoder<Abort_reason>
-) {
+): _Element {
   if (!_cached_encoder_for_Abort_reason) {
     _cached_encoder_for_Abort_reason = $._encode_choice<Abort_reason>(
       {

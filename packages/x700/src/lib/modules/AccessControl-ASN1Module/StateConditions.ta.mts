@@ -38,7 +38,7 @@ let _cached_decoder_for_StateConditions: $.ASN1Decoder<StateConditions> | null =
  * @param {_Element} el The element being decoded.
  * @returns {StateConditions} The decoded data structure.
  */
-export function _decode_StateConditions(el: _Element) {
+export function _decode_StateConditions(el: _Element): StateConditions {
     if (!_cached_decoder_for_StateConditions) {
         _cached_decoder_for_StateConditions = $._decodeSetOf<StateConditions_Item>(
             () => _decode_StateConditions_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_StateConditions: $.ASN1Encoder<StateConditions> | null =
 export function _encode_StateConditions(
     value: StateConditions,
     elGetter: $.ASN1Encoder<StateConditions>
-) {
+): _Element {
     if (!_cached_encoder_for_StateConditions) {
         _cached_encoder_for_StateConditions = $._encodeSetOf<StateConditions_Item>(
             () => _encode_StateConditions_Item,

@@ -119,7 +119,7 @@ let _cached_decoder_for_MappingPair: $.ASN1Decoder<MappingPair> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MappingPair} The decoded data structure.
  */
-export function _decode_MappingPair(el: _Element) {
+export function _decode_MappingPair(el: _Element): MappingPair {
     if (!_cached_decoder_for_MappingPair) {
         _cached_decoder_for_MappingPair = function (el: _Element): MappingPair {
             const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_MappingPair: $.ASN1Encoder<MappingPair> | null = null;
 export function _encode_MappingPair(
     value: MappingPair,
     elGetter: $.ASN1Encoder<MappingPair>
-) {
+): _Element {
     if (!_cached_encoder_for_MappingPair) {
         _cached_encoder_for_MappingPair = function (
             value: MappingPair        ): _Element {

@@ -109,7 +109,7 @@ let _cached_decoder_for_BioAPI_GUI_BITMAP_ARRAY: $.ASN1Decoder<BioAPI_GUI_BITMAP
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_GUI_BITMAP_ARRAY} The decoded data structure.
  */
-export function _decode_BioAPI_GUI_BITMAP_ARRAY(el: _Element) {
+export function _decode_BioAPI_GUI_BITMAP_ARRAY(el: _Element): BioAPI_GUI_BITMAP_ARRAY {
   if (!_cached_decoder_for_BioAPI_GUI_BITMAP_ARRAY) {
     _cached_decoder_for_BioAPI_GUI_BITMAP_ARRAY = function (
       el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_BioAPI_GUI_BITMAP_ARRAY: $.ASN1Encoder<BioAPI_GUI_BITMAP
 export function _encode_BioAPI_GUI_BITMAP_ARRAY(
   value: BioAPI_GUI_BITMAP_ARRAY,
   elGetter: $.ASN1Encoder<BioAPI_GUI_BITMAP_ARRAY>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_GUI_BITMAP_ARRAY) {
     _cached_encoder_for_BioAPI_GUI_BITMAP_ARRAY = function (
       value: BioAPI_GUI_BITMAP_ARRAY    ): _Element {

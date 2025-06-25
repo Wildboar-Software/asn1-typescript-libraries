@@ -33,7 +33,7 @@ let _cached_decoder_for_CompleteCertificateRefs: $.ASN1Decoder<CompleteCertifica
  * @returns {CompleteCertificateRefs} The decoded data structure.
  */
 export
-function _decode_CompleteCertificateRefs (el: _Element) {
+function _decode_CompleteCertificateRefs (el: _Element): CompleteCertificateRefs {
     if (!_cached_decoder_for_CompleteCertificateRefs) { _cached_decoder_for_CompleteCertificateRefs = $._decodeSequenceOf<OtherCertID>(() => _decode_OtherCertID); }
     return _cached_decoder_for_CompleteCertificateRefs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_CompleteCertificateRefs: $.ASN1Encoder<CompleteCertifica
  * @returns {_Element} The CompleteCertificateRefs, encoded as an ASN.1 Element.
  */
 export
-function _encode_CompleteCertificateRefs (value: CompleteCertificateRefs, elGetter: $.ASN1Encoder<CompleteCertificateRefs>) {
+function _encode_CompleteCertificateRefs (value: CompleteCertificateRefs, elGetter: $.ASN1Encoder<CompleteCertificateRefs>): _Element {
     if (!_cached_encoder_for_CompleteCertificateRefs) { _cached_encoder_for_CompleteCertificateRefs = $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.DER); }
     return _cached_encoder_for_CompleteCertificateRefs(value, elGetter);
 }

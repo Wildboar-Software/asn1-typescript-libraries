@@ -40,7 +40,7 @@ let _cached_decoder_for_SecurityCondition: $.ASN1Decoder<SecurityCondition> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SecurityCondition} The decoded data structure.
  */
-export function _decode_SecurityCondition(el: _Element) {
+export function _decode_SecurityCondition(el: _Element): SecurityCondition {
     if (!_cached_decoder_for_SecurityCondition) {
         _cached_decoder_for_SecurityCondition = $._decode_extensible_choice<SecurityCondition>(
             {
@@ -87,7 +87,7 @@ let _cached_encoder_for_SecurityCondition: $.ASN1Encoder<SecurityCondition> | nu
 export function _encode_SecurityCondition(
     value: SecurityCondition,
     elGetter: $.ASN1Encoder<SecurityCondition>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityCondition) {
         _cached_encoder_for_SecurityCondition = $._encode_choice<SecurityCondition>(
             {

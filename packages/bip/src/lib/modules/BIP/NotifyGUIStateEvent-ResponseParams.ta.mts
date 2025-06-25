@@ -139,7 +139,7 @@ let _cached_decoder_for_NotifyGUIStateEvent_ResponseParams: $.ASN1Decoder<Notify
  * @param {_Element} el The element being decoded.
  * @returns {NotifyGUIStateEvent_ResponseParams} The decoded data structure.
  */
-export function _decode_NotifyGUIStateEvent_ResponseParams(el: _Element) {
+export function _decode_NotifyGUIStateEvent_ResponseParams(el: _Element): NotifyGUIStateEvent_ResponseParams {
   if (!_cached_decoder_for_NotifyGUIStateEvent_ResponseParams) {
     _cached_decoder_for_NotifyGUIStateEvent_ResponseParams = function (
       el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_NotifyGUIStateEvent_ResponseParams: $.ASN1Encoder<Notify
 export function _encode_NotifyGUIStateEvent_ResponseParams(
   value: NotifyGUIStateEvent_ResponseParams,
   elGetter: $.ASN1Encoder<NotifyGUIStateEvent_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_NotifyGUIStateEvent_ResponseParams) {
     _cached_encoder_for_NotifyGUIStateEvent_ResponseParams = function (
       value: NotifyGUIStateEvent_ResponseParams    ): _Element {

@@ -123,7 +123,7 @@ let _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item: $.A
  */
 export function _decode_fetch_restriction_error_ParameterType_problems_Item(
     el: _Element
-) {
+): fetch_restriction_error_ParameterType_problems_Item {
     if (
         !_cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item
     ) {
@@ -177,7 +177,7 @@ let _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item: $.A
 export function _encode_fetch_restriction_error_ParameterType_problems_Item(
     value: fetch_restriction_error_ParameterType_problems_Item,
     elGetter: $.ASN1Encoder<fetch_restriction_error_ParameterType_problems_Item>
-) {
+): _Element {
     if (
         !_cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item
     ) {

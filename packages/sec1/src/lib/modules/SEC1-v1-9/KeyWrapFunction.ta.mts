@@ -33,7 +33,7 @@ let _cached_decoder_for_KeyWrapFunction: $.ASN1Decoder<KeyWrapFunction> | null =
  * @returns {KeyWrapFunction} The decoded data structure.
  */
 export
-function _decode_KeyWrapFunction (el: _Element) {
+function _decode_KeyWrapFunction (el: _Element): KeyWrapFunction {
     if (!_cached_decoder_for_KeyWrapFunction) { _cached_decoder_for_KeyWrapFunction = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_KeyWrapFunction(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_KeyWrapFunction: $.ASN1Encoder<KeyWrapFunction> | null =
  * @returns {_Element} The KeyWrapFunction, encoded as an ASN.1 Element.
  */
 export
-function _encode_KeyWrapFunction (value: KeyWrapFunction, elGetter: $.ASN1Encoder<KeyWrapFunction>) {
+function _encode_KeyWrapFunction (value: KeyWrapFunction, elGetter: $.ASN1Encoder<KeyWrapFunction>): _Element {
     if (!_cached_encoder_for_KeyWrapFunction) { _cached_encoder_for_KeyWrapFunction = _encode_AlgorithmIdentifier; }
     return _cached_encoder_for_KeyWrapFunction(value, elGetter);
 }

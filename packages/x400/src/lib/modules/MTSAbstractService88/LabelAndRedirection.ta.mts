@@ -124,7 +124,7 @@ let _cached_decoder_for_LabelAndRedirection: $.ASN1Decoder<LabelAndRedirection> 
  * @param {_Element} el The element being decoded.
  * @returns {LabelAndRedirection} The decoded data structure.
  */
-export function _decode_LabelAndRedirection(el: _Element) {
+export function _decode_LabelAndRedirection(el: _Element): LabelAndRedirection {
     if (!_cached_decoder_for_LabelAndRedirection) {
         _cached_decoder_for_LabelAndRedirection = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_LabelAndRedirection: $.ASN1Encoder<LabelAndRedirection> 
 export function _encode_LabelAndRedirection(
     value: LabelAndRedirection,
     elGetter: $.ASN1Encoder<LabelAndRedirection>
-) {
+): _Element {
     if (!_cached_encoder_for_LabelAndRedirection) {
         _cached_encoder_for_LabelAndRedirection = function (
             value: LabelAndRedirection        ): _Element {

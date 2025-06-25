@@ -40,7 +40,7 @@ let _cached_decoder_for_OptionalObject: $.ASN1Decoder<OptionalObject> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OptionalObject} The decoded data structure.
  */
-export function _decode_OptionalObject(el: _Element) {
+export function _decode_OptionalObject(el: _Element): OptionalObject {
     if (!_cached_decoder_for_OptionalObject) {
         _cached_decoder_for_OptionalObject = $._decode_inextensible_choice<OptionalObject>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_OptionalObject: $.ASN1Encoder<OptionalObject> | null = n
 export function _encode_OptionalObject(
     value: OptionalObject,
     elGetter: $.ASN1Encoder<OptionalObject>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalObject) {
         _cached_encoder_for_OptionalObject = $._encode_choice<OptionalObject>(
             {

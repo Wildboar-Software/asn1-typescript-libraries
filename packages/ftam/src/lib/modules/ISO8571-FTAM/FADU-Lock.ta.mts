@@ -67,7 +67,7 @@ let _cached_decoder_for_FADU_Lock: $.ASN1Decoder<FADU_Lock> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FADU_Lock} The decoded data structure.
  */
-export function _decode_FADU_Lock(el: _Element) {
+export function _decode_FADU_Lock(el: _Element): FADU_Lock {
   if (!_cached_decoder_for_FADU_Lock) {
     _cached_decoder_for_FADU_Lock = $._decode_implicit<FADU_Lock>(
       () => $._decodeInteger
@@ -90,7 +90,7 @@ let _cached_encoder_for_FADU_Lock: $.ASN1Encoder<FADU_Lock> | null = null;
 export function _encode_FADU_Lock(
   value: FADU_Lock,
   elGetter: $.ASN1Encoder<FADU_Lock>
-) {
+): _Element {
   if (!_cached_encoder_for_FADU_Lock) {
     _cached_encoder_for_FADU_Lock = $._encode_implicit(
       _TagClass.application,

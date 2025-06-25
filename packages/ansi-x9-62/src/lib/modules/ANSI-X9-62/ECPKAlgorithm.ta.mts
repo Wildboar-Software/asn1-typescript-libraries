@@ -26,7 +26,7 @@ let _cached_decoder_for_ECPKAlgorithm: $.ASN1Decoder<ECPKAlgorithm> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ECPKAlgorithm} The decoded data structure.
  */
-export function _decode_ECPKAlgorithm(el: _Element) {
+export function _decode_ECPKAlgorithm(el: _Element): ECPKAlgorithm {
     if (!_cached_decoder_for_ECPKAlgorithm) {
         _cached_decoder_for_ECPKAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -45,7 +45,7 @@ let _cached_encoder_for_ECPKAlgorithm: $.ASN1Encoder<ECPKAlgorithm> | null = nul
 export function _encode_ECPKAlgorithm(
     value: ECPKAlgorithm,
     elGetter: $.ASN1Encoder<ECPKAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_ECPKAlgorithm) {
         _cached_encoder_for_ECPKAlgorithm = _encode_AlgorithmIdentifier;
     }

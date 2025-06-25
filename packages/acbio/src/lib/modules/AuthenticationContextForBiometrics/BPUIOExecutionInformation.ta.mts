@@ -160,7 +160,7 @@ let _cached_decoder_for_BPUIOExecutionInformation: $.ASN1Decoder<BPUIOExecutionI
  * @param {_Element} el The element being decoded.
  * @returns {BPUIOExecutionInformation} The decoded data structure.
  */
-export function _decode_BPUIOExecutionInformation(el: _Element) {
+export function _decode_BPUIOExecutionInformation(el: _Element): BPUIOExecutionInformation {
     if (!_cached_decoder_for_BPUIOExecutionInformation) {
         _cached_decoder_for_BPUIOExecutionInformation = function (
             el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_BPUIOExecutionInformation: $.ASN1Encoder<BPUIOExecutionI
 export function _encode_BPUIOExecutionInformation(
     value: BPUIOExecutionInformation,
     elGetter: $.ASN1Encoder<BPUIOExecutionInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUIOExecutionInformation) {
         _cached_encoder_for_BPUIOExecutionInformation = function (
             value: BPUIOExecutionInformation        ): _Element {

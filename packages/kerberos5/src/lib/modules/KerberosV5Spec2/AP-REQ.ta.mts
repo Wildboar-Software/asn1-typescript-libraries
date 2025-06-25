@@ -171,7 +171,7 @@ let _cached_decoder_for_AP_REQ: $.ASN1Decoder<AP_REQ> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AP_REQ} The decoded data structure.
  */
-export function _decode_AP_REQ(el: _Element) {
+export function _decode_AP_REQ(el: _Element): AP_REQ {
   if (!_cached_decoder_for_AP_REQ) {
     _cached_decoder_for_AP_REQ = $._decode_implicit<AP_REQ>(
       () =>
@@ -227,7 +227,7 @@ let _cached_encoder_for_AP_REQ: $.ASN1Encoder<AP_REQ> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AP_REQ, encoded as an ASN.1 Element.
  */
-export function _encode_AP_REQ(value: AP_REQ, elGetter: $.ASN1Encoder<AP_REQ>) {
+export function _encode_AP_REQ(value: AP_REQ, elGetter: $.ASN1Encoder<AP_REQ>): _Element {
   if (!_cached_encoder_for_AP_REQ) {
     _cached_encoder_for_AP_REQ = $._encode_implicit(
       _TagClass.application,

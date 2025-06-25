@@ -36,7 +36,7 @@ let _cached_decoder_for_CapacityAlarmThreshold: $.ASN1Decoder<CapacityAlarmThres
  * @returns {CapacityAlarmThreshold} The decoded data structure.
  */
 export
-function _decode_CapacityAlarmThreshold (el: _Element) {
+function _decode_CapacityAlarmThreshold (el: _Element): CapacityAlarmThreshold {
     if (!_cached_decoder_for_CapacityAlarmThreshold) { _cached_decoder_for_CapacityAlarmThreshold = $._decodeSetOf<INTEGER>(() => $._decodeInteger); }
     return _cached_decoder_for_CapacityAlarmThreshold(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_CapacityAlarmThreshold: $.ASN1Encoder<CapacityAlarmThres
  * @returns {_Element} The CapacityAlarmThreshold, encoded as an ASN.1 Element.
  */
 export
-function _encode_CapacityAlarmThreshold (value: CapacityAlarmThreshold, elGetter: $.ASN1Encoder<CapacityAlarmThreshold>) {
+function _encode_CapacityAlarmThreshold (value: CapacityAlarmThreshold, elGetter: $.ASN1Encoder<CapacityAlarmThreshold>): _Element {
     if (!_cached_encoder_for_CapacityAlarmThreshold) { _cached_encoder_for_CapacityAlarmThreshold = $._encodeSetOf<INTEGER>(() => $._encodeInteger, $.BER); }
     return _cached_encoder_for_CapacityAlarmThreshold(value, elGetter);
 }

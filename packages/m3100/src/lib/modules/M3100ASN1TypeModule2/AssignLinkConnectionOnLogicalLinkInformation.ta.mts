@@ -132,7 +132,7 @@ let _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation: $.ASN1Deco
  */
 export function _decode_AssignLinkConnectionOnLogicalLinkInformation(
     el: _Element
-) {
+): AssignLinkConnectionOnLogicalLinkInformation {
     if (!_cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation) {
         _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation: $.ASN1Enco
 export function _encode_AssignLinkConnectionOnLogicalLinkInformation(
     value: AssignLinkConnectionOnLogicalLinkInformation,
     elGetter: $.ASN1Encoder<AssignLinkConnectionOnLogicalLinkInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation) {
         _cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation = function (
             value: AssignLinkConnectionOnLogicalLinkInformation        ): _Element {

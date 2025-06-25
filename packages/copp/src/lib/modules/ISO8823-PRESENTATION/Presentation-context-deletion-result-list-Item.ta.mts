@@ -69,7 +69,7 @@ let _cached_decoder_for_Presentation_context_deletion_result_list_Item: $.ASN1De
  */
 export function _decode_Presentation_context_deletion_result_list_Item(
     el: _Element
-) {
+): Presentation_context_deletion_result_list_Item {
     if (!_cached_decoder_for_Presentation_context_deletion_result_list_Item) {
         _cached_decoder_for_Presentation_context_deletion_result_list_Item =
             $._decodeInteger;
@@ -93,7 +93,7 @@ let _cached_encoder_for_Presentation_context_deletion_result_list_Item: $.ASN1En
 export function _encode_Presentation_context_deletion_result_list_Item(
     value: Presentation_context_deletion_result_list_Item,
     elGetter: $.ASN1Encoder<Presentation_context_deletion_result_list_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_Presentation_context_deletion_result_list_Item) {
         _cached_encoder_for_Presentation_context_deletion_result_list_Item =
             $._encodeInteger;

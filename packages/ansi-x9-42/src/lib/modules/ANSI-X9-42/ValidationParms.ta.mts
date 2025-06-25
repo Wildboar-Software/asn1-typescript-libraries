@@ -113,7 +113,7 @@ let _cached_decoder_for_ValidationParms: $.ASN1Decoder<ValidationParms> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ValidationParms} The decoded data structure.
  */
-export function _decode_ValidationParms(el: _Element) {
+export function _decode_ValidationParms(el: _Element): ValidationParms {
     if (!_cached_decoder_for_ValidationParms) {
         _cached_decoder_for_ValidationParms = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_ValidationParms: $.ASN1Encoder<ValidationParms> | null =
 export function _encode_ValidationParms(
     value: ValidationParms,
     elGetter: $.ASN1Encoder<ValidationParms>
-) {
+): _Element {
     if (!_cached_encoder_for_ValidationParms) {
         _cached_encoder_for_ValidationParms = function (
             value: ValidationParms        ): _Element {

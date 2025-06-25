@@ -129,7 +129,7 @@ let _cached_decoder_for_Contents_Type_Attribute_constraint_set_and_abstract_Synt
  */
 export function _decode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax(
   el: _Element
-) {
+): Contents_Type_Attribute_constraint_set_and_abstract_Syntax {
   if (
     !_cached_decoder_for_Contents_Type_Attribute_constraint_set_and_abstract_Syntax
   ) {
@@ -175,7 +175,7 @@ let _cached_encoder_for_Contents_Type_Attribute_constraint_set_and_abstract_Synt
 export function _encode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax(
   value: Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
   elGetter: $.ASN1Encoder<Contents_Type_Attribute_constraint_set_and_abstract_Syntax>
-) {
+): _Element {
   if (
     !_cached_encoder_for_Contents_Type_Attribute_constraint_set_and_abstract_Syntax
   ) {

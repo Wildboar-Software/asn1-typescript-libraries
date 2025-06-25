@@ -180,7 +180,7 @@ let _cached_decoder_for_RenewInfoMsgContent: $.ASN1Decoder<RenewInfoMsgContent> 
  * @returns {RenewInfoMsgContent} The decoded data structure.
  */
 export
-function _decode_RenewInfoMsgContent (el: _Element) {
+function _decode_RenewInfoMsgContent (el: _Element): RenewInfoMsgContent {
     if (!_cached_decoder_for_RenewInfoMsgContent) { _cached_decoder_for_RenewInfoMsgContent = function (el: _Element): RenewInfoMsgContent {
     let sessionID!: OCTET_STRING;
     let clientType!: OCTET_STRING;
@@ -232,7 +232,7 @@ let _cached_encoder_for_RenewInfoMsgContent: $.ASN1Encoder<RenewInfoMsgContent> 
  * @returns {_Element} The RenewInfoMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_RenewInfoMsgContent (value: RenewInfoMsgContent, elGetter: $.ASN1Encoder<RenewInfoMsgContent>) {
+function _encode_RenewInfoMsgContent (value: RenewInfoMsgContent, elGetter: $.ASN1Encoder<RenewInfoMsgContent>): _Element {
     if (!_cached_encoder_for_RenewInfoMsgContent) { _cached_encoder_for_RenewInfoMsgContent = function (value: RenewInfoMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

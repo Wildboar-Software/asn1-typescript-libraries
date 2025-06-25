@@ -126,7 +126,7 @@ let _cached_decoder_for_ForwardWithRespAccepted: $.ASN1Decoder<ForwardWithRespAc
  * @param {_Element} el The element being decoded.
  * @returns {ForwardWithRespAccepted} The decoded data structure.
  */
-export function _decode_ForwardWithRespAccepted(el: _Element) {
+export function _decode_ForwardWithRespAccepted(el: _Element): ForwardWithRespAccepted {
     if (!_cached_decoder_for_ForwardWithRespAccepted) {
         _cached_decoder_for_ForwardWithRespAccepted = function (
             el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_ForwardWithRespAccepted: $.ASN1Encoder<ForwardWithRespAc
 export function _encode_ForwardWithRespAccepted(
     value: ForwardWithRespAccepted,
     elGetter: $.ASN1Encoder<ForwardWithRespAccepted>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardWithRespAccepted) {
         _cached_encoder_for_ForwardWithRespAccepted = function (
             value: ForwardWithRespAccepted        ): _Element {

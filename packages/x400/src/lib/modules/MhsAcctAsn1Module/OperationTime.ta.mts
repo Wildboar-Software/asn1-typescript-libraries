@@ -35,7 +35,7 @@ let _cached_decoder_for_OperationTime: $.ASN1Decoder<OperationTime> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {OperationTime} The decoded data structure.
  */
-export function _decode_OperationTime(el: _Element) {
+export function _decode_OperationTime(el: _Element): OperationTime {
     if (!_cached_decoder_for_OperationTime) {
         _cached_decoder_for_OperationTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OperationTime: $.ASN1Encoder<OperationTime> | null = nul
 export function _encode_OperationTime(
     value: OperationTime,
     elGetter: $.ASN1Encoder<OperationTime>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationTime) {
         _cached_encoder_for_OperationTime = _encode_Time;
     }

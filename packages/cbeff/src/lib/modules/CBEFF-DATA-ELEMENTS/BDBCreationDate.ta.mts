@@ -36,7 +36,7 @@ let _cached_decoder_for_BDBCreationDate: $.ASN1Decoder<BDBCreationDate> | null =
  * @param {_Element} el The element being decoded.
  * @returns {BDBCreationDate} The decoded data structure.
  */
-export function _decode_BDBCreationDate(el: _Element) {
+export function _decode_BDBCreationDate(el: _Element): BDBCreationDate {
   if (!_cached_decoder_for_BDBCreationDate) {
     _cached_decoder_for_BDBCreationDate = _decode_Date_Time;
   }
@@ -55,7 +55,7 @@ let _cached_encoder_for_BDBCreationDate: $.ASN1Encoder<BDBCreationDate> | null =
 export function _encode_BDBCreationDate(
   value: BDBCreationDate,
   elGetter: $.ASN1Encoder<BDBCreationDate>
-) {
+): _Element {
   if (!_cached_encoder_for_BDBCreationDate) {
     _cached_encoder_for_BDBCreationDate = _encode_Date_Time;
   }

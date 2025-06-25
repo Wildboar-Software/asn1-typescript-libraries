@@ -170,7 +170,7 @@ let _cached_decoder_for_ModifyArgument: $.ASN1Decoder<ModifyArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ModifyArgument} The decoded data structure.
  */
-export function _decode_ModifyArgument(el: _Element) {
+export function _decode_ModifyArgument(el: _Element): ModifyArgument {
     if (!_cached_decoder_for_ModifyArgument) {
         _cached_decoder_for_ModifyArgument = function (
             el: _Element
@@ -236,7 +236,7 @@ let _cached_encoder_for_ModifyArgument: $.ASN1Encoder<ModifyArgument> | null = n
 export function _encode_ModifyArgument(
     value: ModifyArgument,
     elGetter: $.ASN1Encoder<ModifyArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyArgument) {
         _cached_encoder_for_ModifyArgument = function (
             value: ModifyArgument        ): _Element {

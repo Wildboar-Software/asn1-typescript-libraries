@@ -112,7 +112,7 @@ let _cached_decoder_for_BFPUnregistrationEvent_NotificationParams: $.ASN1Decoder
  */
 export function _decode_BFPUnregistrationEvent_NotificationParams(
   el: _Element
-) {
+): BFPUnregistrationEvent_NotificationParams {
   if (!_cached_decoder_for_BFPUnregistrationEvent_NotificationParams) {
     _cached_decoder_for_BFPUnregistrationEvent_NotificationParams = function (
       el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_BFPUnregistrationEvent_NotificationParams: $.ASN1Encoder
 export function _encode_BFPUnregistrationEvent_NotificationParams(
   value: BFPUnregistrationEvent_NotificationParams,
   elGetter: $.ASN1Encoder<BFPUnregistrationEvent_NotificationParams>
-) {
+): _Element {
   if (!_cached_encoder_for_BFPUnregistrationEvent_NotificationParams) {
     _cached_encoder_for_BFPUnregistrationEvent_NotificationParams = function (
       value: BFPUnregistrationEvent_NotificationParams    ): _Element {

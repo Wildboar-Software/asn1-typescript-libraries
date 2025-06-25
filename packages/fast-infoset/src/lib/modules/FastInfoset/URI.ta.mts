@@ -35,7 +35,7 @@ let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {URI} The decoded data structure.
  */
-export function _decode_URI(el: _Element) {
+export function _decode_URI(el: _Element): URI {
   if (!_cached_decoder_for_URI) {
     _cached_decoder_for_URI = _decode_NonEmptyOctetString;
   }
@@ -51,7 +51,7 @@ let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>) {
+export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>): _Element {
   if (!_cached_encoder_for_URI) {
     _cached_encoder_for_URI = _encode_NonEmptyOctetString;
   }

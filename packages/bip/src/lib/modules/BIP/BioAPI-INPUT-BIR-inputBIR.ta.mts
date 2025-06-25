@@ -51,7 +51,7 @@ let _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR: $.ASN1Decoder<BioAPI_INPUT_BI
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_INPUT_BIR_inputBIR} The decoded data structure.
  */
-export function _decode_BioAPI_INPUT_BIR_inputBIR(el: _Element) {
+export function _decode_BioAPI_INPUT_BIR_inputBIR(el: _Element): BioAPI_INPUT_BIR_inputBIR {
   if (!_cached_decoder_for_BioAPI_INPUT_BIR_inputBIR) {
     _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR = $._decode_inextensible_choice<BioAPI_INPUT_BIR_inputBIR>(
       {
@@ -78,7 +78,7 @@ let _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR: $.ASN1Encoder<BioAPI_INPUT_BI
 export function _encode_BioAPI_INPUT_BIR_inputBIR(
   value: BioAPI_INPUT_BIR_inputBIR,
   elGetter: $.ASN1Encoder<BioAPI_INPUT_BIR_inputBIR>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_INPUT_BIR_inputBIR) {
     _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR = $._encode_choice<BioAPI_INPUT_BIR_inputBIR>(
       {

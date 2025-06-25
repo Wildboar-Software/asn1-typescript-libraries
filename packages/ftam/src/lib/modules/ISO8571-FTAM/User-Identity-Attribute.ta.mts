@@ -46,7 +46,7 @@ let _cached_decoder_for_User_Identity_Attribute: $.ASN1Decoder<User_Identity_Att
  * @param {_Element} el The element being decoded.
  * @returns {User_Identity_Attribute} The decoded data structure.
  */
-export function _decode_User_Identity_Attribute(el: _Element) {
+export function _decode_User_Identity_Attribute(el: _Element): User_Identity_Attribute {
   if (!_cached_decoder_for_User_Identity_Attribute) {
     _cached_decoder_for_User_Identity_Attribute = $._decode_inextensible_choice<User_Identity_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_User_Identity_Attribute: $.ASN1Encoder<User_Identity_Att
 export function _encode_User_Identity_Attribute(
   value: User_Identity_Attribute,
   elGetter: $.ASN1Encoder<User_Identity_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_User_Identity_Attribute) {
     _cached_encoder_for_User_Identity_Attribute = $._encode_choice<User_Identity_Attribute>(
       {

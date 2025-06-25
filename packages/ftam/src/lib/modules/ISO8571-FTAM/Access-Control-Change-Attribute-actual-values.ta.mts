@@ -125,7 +125,7 @@ let _cached_decoder_for_Access_Control_Change_Attribute_actual_values: $.ASN1Dec
  */
 export function _decode_Access_Control_Change_Attribute_actual_values(
   el: _Element
-) {
+): Access_Control_Change_Attribute_actual_values {
   if (!_cached_decoder_for_Access_Control_Change_Attribute_actual_values) {
     _cached_decoder_for_Access_Control_Change_Attribute_actual_values = function (
       el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_Access_Control_Change_Attribute_actual_values: $.ASN1Enc
 export function _encode_Access_Control_Change_Attribute_actual_values(
   value: Access_Control_Change_Attribute_actual_values,
   elGetter: $.ASN1Encoder<Access_Control_Change_Attribute_actual_values>
-) {
+): _Element {
   if (!_cached_encoder_for_Access_Control_Change_Attribute_actual_values) {
     _cached_encoder_for_Access_Control_Change_Attribute_actual_values = function (
       value: Access_Control_Change_Attribute_actual_values    ): _Element {

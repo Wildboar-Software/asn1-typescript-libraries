@@ -32,7 +32,7 @@ let _cached_decoder_for_MistypedTestCategoryInformation: $.ASN1Decoder<MistypedT
  * @param {_Element} el The element being decoded.
  * @returns {MistypedTestCategoryInformation} The decoded data structure.
  */
-export function _decode_MistypedTestCategoryInformation(el: _Element) {
+export function _decode_MistypedTestCategoryInformation(el: _Element): MistypedTestCategoryInformation {
     if (!_cached_decoder_for_MistypedTestCategoryInformation) {
         _cached_decoder_for_MistypedTestCategoryInformation =
             $._decodeObjectIdentifier;
@@ -52,7 +52,7 @@ let _cached_encoder_for_MistypedTestCategoryInformation: $.ASN1Encoder<MistypedT
 export function _encode_MistypedTestCategoryInformation(
     value: MistypedTestCategoryInformation,
     elGetter: $.ASN1Encoder<MistypedTestCategoryInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_MistypedTestCategoryInformation) {
         _cached_encoder_for_MistypedTestCategoryInformation =
             $._encodeObjectIdentifier;

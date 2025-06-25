@@ -112,7 +112,7 @@ let _cached_decoder_for_CertBasedAuthenticationAttributes: $.ASN1Decoder<CertBas
  * @param {_Element} el The element being decoded.
  * @returns {CertBasedAuthenticationAttributes} The decoded data structure.
  */
-export function _decode_CertBasedAuthenticationAttributes(el: _Element) {
+export function _decode_CertBasedAuthenticationAttributes(el: _Element): CertBasedAuthenticationAttributes {
     if (!_cached_decoder_for_CertBasedAuthenticationAttributes) {
         _cached_decoder_for_CertBasedAuthenticationAttributes = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_CertBasedAuthenticationAttributes: $.ASN1Encoder<CertBas
 export function _encode_CertBasedAuthenticationAttributes(
     value: CertBasedAuthenticationAttributes,
     elGetter: $.ASN1Encoder<CertBasedAuthenticationAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CertBasedAuthenticationAttributes) {
         _cached_encoder_for_CertBasedAuthenticationAttributes = function (
             value: CertBasedAuthenticationAttributes        ): _Element {

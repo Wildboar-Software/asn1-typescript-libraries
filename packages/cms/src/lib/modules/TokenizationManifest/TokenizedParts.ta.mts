@@ -29,7 +29,7 @@ let _cached_decoder_for_TokenizedParts: $.ASN1Decoder<TokenizedParts> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {TokenizedParts} The decoded data structure.
  */
-export function _decode_TokenizedParts(el: _Element) {
+export function _decode_TokenizedParts(el: _Element): TokenizedParts {
     if (!_cached_decoder_for_TokenizedParts) {
         _cached_decoder_for_TokenizedParts = _decode_Tokenized;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_TokenizedParts: $.ASN1Encoder<TokenizedParts> | null = n
 export function _encode_TokenizedParts(
     value: TokenizedParts,
     elGetter: $.ASN1Encoder<TokenizedParts>
-) {
+): _Element {
     if (!_cached_encoder_for_TokenizedParts) {
         _cached_encoder_for_TokenizedParts = _encode_Tokenized;
     }

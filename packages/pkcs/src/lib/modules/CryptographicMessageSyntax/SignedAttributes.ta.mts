@@ -29,7 +29,7 @@ let _cached_decoder_for_SignedAttributes: $.ASN1Decoder<SignedAttributes> | null
  * @param {_Element} el The element being decoded.
  * @returns {SignedAttributes} The decoded data structure.
  */
-export function _decode_SignedAttributes(el: _Element) {
+export function _decode_SignedAttributes(el: _Element): SignedAttributes {
     if (!_cached_decoder_for_SignedAttributes) {
         _cached_decoder_for_SignedAttributes = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -52,7 +52,7 @@ let _cached_encoder_for_SignedAttributes: $.ASN1Encoder<SignedAttributes> | null
 export function _encode_SignedAttributes(
     value: SignedAttributes,
     elGetter: $.ASN1Encoder<SignedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_SignedAttributes) {
         _cached_encoder_for_SignedAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

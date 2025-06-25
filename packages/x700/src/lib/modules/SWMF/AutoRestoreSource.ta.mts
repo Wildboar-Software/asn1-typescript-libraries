@@ -41,7 +41,7 @@ let _cached_decoder_for_AutoRestoreSource: $.ASN1Decoder<AutoRestoreSource> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AutoRestoreSource} The decoded data structure.
  */
-export function _decode_AutoRestoreSource(el: _Element) {
+export function _decode_AutoRestoreSource(el: _Element): AutoRestoreSource {
     if (!_cached_decoder_for_AutoRestoreSource) {
         _cached_decoder_for_AutoRestoreSource = $._decode_inextensible_choice<AutoRestoreSource>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_AutoRestoreSource: $.ASN1Encoder<AutoRestoreSource> | nu
 export function _encode_AutoRestoreSource(
     value: AutoRestoreSource,
     elGetter: $.ASN1Encoder<AutoRestoreSource>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoRestoreSource) {
         _cached_encoder_for_AutoRestoreSource = $._encode_choice<AutoRestoreSource>(
             {

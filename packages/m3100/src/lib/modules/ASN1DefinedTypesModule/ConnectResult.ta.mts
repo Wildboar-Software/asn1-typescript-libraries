@@ -39,7 +39,7 @@ let _cached_decoder_for_ConnectResult: $.ASN1Decoder<ConnectResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ConnectResult} The decoded data structure.
  */
-export function _decode_ConnectResult(el: _Element) {
+export function _decode_ConnectResult(el: _Element): ConnectResult {
     if (!_cached_decoder_for_ConnectResult) {
         _cached_decoder_for_ConnectResult = $._decodeSequenceOf<ConnectResult_Item>(
             () => _decode_ConnectResult_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_ConnectResult: $.ASN1Encoder<ConnectResult> | null = nul
 export function _encode_ConnectResult(
     value: ConnectResult,
     elGetter: $.ASN1Encoder<ConnectResult>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectResult) {
         _cached_encoder_for_ConnectResult = $._encodeSequenceOf<ConnectResult_Item>(
             () => _encode_ConnectResult_Item,

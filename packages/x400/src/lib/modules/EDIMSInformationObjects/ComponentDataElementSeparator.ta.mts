@@ -32,7 +32,7 @@ let _cached_decoder_for_ComponentDataElementSeparator: $.ASN1Decoder<ComponentDa
  * @param {_Element} el The element being decoded.
  * @returns {ComponentDataElementSeparator} The decoded data structure.
  */
-export function _decode_ComponentDataElementSeparator(el: _Element) {
+export function _decode_ComponentDataElementSeparator(el: _Element): ComponentDataElementSeparator {
     if (!_cached_decoder_for_ComponentDataElementSeparator) {
         _cached_decoder_for_ComponentDataElementSeparator =
             $._decodeOctetString;
@@ -52,7 +52,7 @@ let _cached_encoder_for_ComponentDataElementSeparator: $.ASN1Encoder<ComponentDa
 export function _encode_ComponentDataElementSeparator(
     value: ComponentDataElementSeparator,
     elGetter: $.ASN1Encoder<ComponentDataElementSeparator>
-) {
+): _Element {
     if (!_cached_encoder_for_ComponentDataElementSeparator) {
         _cached_encoder_for_ComponentDataElementSeparator =
             $._encodeOctetString;

@@ -156,7 +156,7 @@ let _cached_decoder_for_EnvelopedData: $.ASN1Decoder<EnvelopedData> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EnvelopedData} The decoded data structure.
  */
-export function _decode_EnvelopedData(el: _Element) {
+export function _decode_EnvelopedData(el: _Element): EnvelopedData {
     if (!_cached_decoder_for_EnvelopedData) {
         _cached_decoder_for_EnvelopedData = function (
             el: _Element
@@ -211,7 +211,7 @@ let _cached_encoder_for_EnvelopedData: $.ASN1Encoder<EnvelopedData> | null = nul
 export function _encode_EnvelopedData(
     value: EnvelopedData,
     elGetter: $.ASN1Encoder<EnvelopedData>
-) {
+): _Element {
     if (!_cached_encoder_for_EnvelopedData) {
         _cached_encoder_for_EnvelopedData = function (
             value: EnvelopedData        ): _Element {

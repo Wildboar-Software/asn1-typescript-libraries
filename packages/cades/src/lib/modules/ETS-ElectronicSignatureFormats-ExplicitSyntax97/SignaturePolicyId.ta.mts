@@ -121,7 +121,7 @@ let _cached_decoder_for_SignaturePolicyId: $.ASN1Decoder<SignaturePolicyId> | nu
  * @returns {SignaturePolicyId} The decoded data structure.
  */
 export
-function _decode_SignaturePolicyId (el: _Element) {
+function _decode_SignaturePolicyId (el: _Element): SignaturePolicyId {
     if (!_cached_decoder_for_SignaturePolicyId) { _cached_decoder_for_SignaturePolicyId = function (el: _Element): SignaturePolicyId {
     let sigPolicyId!: SigPolicyId;
     let sigPolicyHash!: SigPolicyHash;
@@ -156,7 +156,7 @@ let _cached_encoder_for_SignaturePolicyId: $.ASN1Encoder<SignaturePolicyId> | nu
  * @returns {_Element} The SignaturePolicyId, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignaturePolicyId (value: SignaturePolicyId, elGetter: $.ASN1Encoder<SignaturePolicyId>) {
+function _encode_SignaturePolicyId (value: SignaturePolicyId, elGetter: $.ASN1Encoder<SignaturePolicyId>): _Element {
     if (!_cached_encoder_for_SignaturePolicyId) { _cached_encoder_for_SignaturePolicyId = function (value: SignaturePolicyId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

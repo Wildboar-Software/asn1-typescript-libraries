@@ -164,7 +164,7 @@ let _cached_decoder_for_SpecifiedECDomain: $.ASN1Decoder<SpecifiedECDomain> | nu
  * @returns {SpecifiedECDomain} The decoded data structure.
  */
 export
-function _decode_SpecifiedECDomain (el: _Element) {
+function _decode_SpecifiedECDomain (el: _Element): SpecifiedECDomain {
     if (!_cached_decoder_for_SpecifiedECDomain) { _cached_decoder_for_SpecifiedECDomain = function (el: _Element): SpecifiedECDomain {
     let version!: SpecifiedECDomainVersion;
     let fieldID!: FieldID;
@@ -213,7 +213,7 @@ let _cached_encoder_for_SpecifiedECDomain: $.ASN1Encoder<SpecifiedECDomain> | nu
  * @returns {_Element} The SpecifiedECDomain, encoded as an ASN.1 Element.
  */
 export
-function _encode_SpecifiedECDomain (value: SpecifiedECDomain, elGetter: $.ASN1Encoder<SpecifiedECDomain>) {
+function _encode_SpecifiedECDomain (value: SpecifiedECDomain, elGetter: $.ASN1Encoder<SpecifiedECDomain>): _Element {
     if (!_cached_encoder_for_SpecifiedECDomain) { _cached_encoder_for_SpecifiedECDomain = function (value: SpecifiedECDomain): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

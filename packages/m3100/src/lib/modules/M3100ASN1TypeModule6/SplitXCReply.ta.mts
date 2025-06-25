@@ -41,7 +41,7 @@ let _cached_decoder_for_SplitXCReply: $.ASN1Decoder<SplitXCReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SplitXCReply} The decoded data structure.
  */
-export function _decode_SplitXCReply(el: _Element) {
+export function _decode_SplitXCReply(el: _Element): SplitXCReply {
     if (!_cached_decoder_for_SplitXCReply) {
         _cached_decoder_for_SplitXCReply = $._decodeSequenceOf<SplitXCReply_Item>(
             () => _decode_SplitXCReply_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_SplitXCReply: $.ASN1Encoder<SplitXCReply> | null = null;
 export function _encode_SplitXCReply(
     value: SplitXCReply,
     elGetter: $.ASN1Encoder<SplitXCReply>
-) {
+): _Element {
     if (!_cached_encoder_for_SplitXCReply) {
         _cached_encoder_for_SplitXCReply = $._encodeSequenceOf<SplitXCReply_Item>(
             () => _encode_SplitXCReply_Item,

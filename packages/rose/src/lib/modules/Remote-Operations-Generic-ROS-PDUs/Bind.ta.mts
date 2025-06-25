@@ -40,7 +40,7 @@ let _cached_decoder_for_Bind: $.ASN1Decoder<Bind> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Bind} The decoded data structure.
  */
-export function _decode_Bind(el: _Element) {
+export function _decode_Bind(el: _Element): Bind {
   if (!_cached_decoder_for_Bind) {
     _cached_decoder_for_Bind = $._decode_inextensible_choice<Bind>({
       'CONTEXT 16': [
@@ -71,7 +71,7 @@ let _cached_encoder_for_Bind: $.ASN1Encoder<Bind> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Bind, encoded as an ASN.1 Element.
  */
-export function _encode_Bind(value: Bind, elGetter: $.ASN1Encoder<Bind>) {
+export function _encode_Bind(value: Bind, elGetter: $.ASN1Encoder<Bind>): _Element {
   if (!_cached_encoder_for_Bind) {
     _cached_encoder_for_Bind = $._encode_choice<Bind>(
       {

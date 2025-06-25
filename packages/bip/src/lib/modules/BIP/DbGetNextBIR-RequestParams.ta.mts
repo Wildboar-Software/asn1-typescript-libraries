@@ -148,7 +148,7 @@ let _cached_decoder_for_DbGetNextBIR_RequestParams: $.ASN1Decoder<DbGetNextBIR_R
  * @param {_Element} el The element being decoded.
  * @returns {DbGetNextBIR_RequestParams} The decoded data structure.
  */
-export function _decode_DbGetNextBIR_RequestParams(el: _Element) {
+export function _decode_DbGetNextBIR_RequestParams(el: _Element): DbGetNextBIR_RequestParams {
   if (!_cached_decoder_for_DbGetNextBIR_RequestParams) {
     _cached_decoder_for_DbGetNextBIR_RequestParams = function (
       el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_DbGetNextBIR_RequestParams: $.ASN1Encoder<DbGetNextBIR_R
 export function _encode_DbGetNextBIR_RequestParams(
   value: DbGetNextBIR_RequestParams,
   elGetter: $.ASN1Encoder<DbGetNextBIR_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbGetNextBIR_RequestParams) {
     _cached_encoder_for_DbGetNextBIR_RequestParams = function (
       value: DbGetNextBIR_RequestParams    ): _Element {

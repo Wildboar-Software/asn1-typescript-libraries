@@ -128,7 +128,7 @@ let _cached_decoder_for_CreateTemplate_ResponseParams: $.ASN1Decoder<CreateTempl
  * @param {_Element} el The element being decoded.
  * @returns {CreateTemplate_ResponseParams} The decoded data structure.
  */
-export function _decode_CreateTemplate_ResponseParams(el: _Element) {
+export function _decode_CreateTemplate_ResponseParams(el: _Element): CreateTemplate_ResponseParams {
   if (!_cached_decoder_for_CreateTemplate_ResponseParams) {
     _cached_decoder_for_CreateTemplate_ResponseParams = function (
       el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_CreateTemplate_ResponseParams: $.ASN1Encoder<CreateTempl
 export function _encode_CreateTemplate_ResponseParams(
   value: CreateTemplate_ResponseParams,
   elGetter: $.ASN1Encoder<CreateTemplate_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_CreateTemplate_ResponseParams) {
     _cached_encoder_for_CreateTemplate_ResponseParams = function (
       value: CreateTemplate_ResponseParams    ): _Element {

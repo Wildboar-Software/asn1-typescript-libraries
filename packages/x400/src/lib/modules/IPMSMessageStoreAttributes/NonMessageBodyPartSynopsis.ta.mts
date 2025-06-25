@@ -156,7 +156,7 @@ let _cached_decoder_for_NonMessageBodyPartSynopsis: $.ASN1Decoder<NonMessageBody
  * @param {_Element} el The element being decoded.
  * @returns {NonMessageBodyPartSynopsis} The decoded data structure.
  */
-export function _decode_NonMessageBodyPartSynopsis(el: _Element) {
+export function _decode_NonMessageBodyPartSynopsis(el: _Element): NonMessageBodyPartSynopsis {
     if (!_cached_decoder_for_NonMessageBodyPartSynopsis) {
         _cached_decoder_for_NonMessageBodyPartSynopsis = function (
             el: _Element
@@ -219,7 +219,7 @@ let _cached_encoder_for_NonMessageBodyPartSynopsis: $.ASN1Encoder<NonMessageBody
 export function _encode_NonMessageBodyPartSynopsis(
     value: NonMessageBodyPartSynopsis,
     elGetter: $.ASN1Encoder<NonMessageBodyPartSynopsis>
-) {
+): _Element {
     if (!_cached_encoder_for_NonMessageBodyPartSynopsis) {
         _cached_encoder_for_NonMessageBodyPartSynopsis = function (
             value: NonMessageBodyPartSynopsis        ): _Element {

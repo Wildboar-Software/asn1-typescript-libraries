@@ -41,7 +41,7 @@ let _cached_decoder_for_BiometricInformationTemplateorPointer: $.ASN1Decoder<Bio
  * @returns {BiometricInformationTemplateorPointer} The decoded data structure.
  */
 export
-function _decode_BiometricInformationTemplateorPointer (el: _Element) {
+function _decode_BiometricInformationTemplateorPointer (el: _Element): BiometricInformationTemplateorPointer {
     if (!_cached_decoder_for_BiometricInformationTemplateorPointer) { _cached_decoder_for_BiometricInformationTemplateorPointer = $._decode_extensible_choice<BiometricInformationTemplateorPointer>({
     "CONTEXT 0": [ "bcBiometricInformationTemplate", _decode_BCBiometricInformationTemplate ],
     "CONTEXT 1": [ "referenceToBCBiometricInformationTemplate", _decode_URI ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_BiometricInformationTemplateorPointer: $.ASN1Encoder<Bio
  * @returns {_Element} The BiometricInformationTemplateorPointer, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricInformationTemplateorPointer (value: BiometricInformationTemplateorPointer, elGetter: $.ASN1Encoder<BiometricInformationTemplateorPointer>) {
+function _encode_BiometricInformationTemplateorPointer (value: BiometricInformationTemplateorPointer, elGetter: $.ASN1Encoder<BiometricInformationTemplateorPointer>): _Element {
     if (!_cached_encoder_for_BiometricInformationTemplateorPointer) { _cached_encoder_for_BiometricInformationTemplateorPointer = $._encode_choice<BiometricInformationTemplateorPointer>({
     "bcBiometricInformationTemplate": _encode_BCBiometricInformationTemplate,
     "referenceToBCBiometricInformationTemplate": _encode_URI,

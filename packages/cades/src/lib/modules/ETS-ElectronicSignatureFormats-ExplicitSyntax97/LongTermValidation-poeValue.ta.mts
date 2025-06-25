@@ -36,7 +36,7 @@ let _cached_decoder_for_LongTermValidation_poeValue: $.ASN1Decoder<LongTermValid
  * @returns {LongTermValidation_poeValue} The decoded data structure.
  */
 export
-function _decode_LongTermValidation_poeValue (el: _Element) {
+function _decode_LongTermValidation_poeValue (el: _Element): LongTermValidation_poeValue {
     if (!_cached_decoder_for_LongTermValidation_poeValue) { _cached_decoder_for_LongTermValidation_poeValue = $._decode_inextensible_choice<LongTermValidation_poeValue>({
     "CONTEXT 0": [ "timeStamp", $._decode_explicit<TimeStampToken>(() => _decode_TimeStampToken) ],
     "CONTEXT 1": [ "evidenceRecord", $._decode_explicit<EvidenceRecord>(() => _decode_EvidenceRecord) ]
@@ -54,7 +54,7 @@ let _cached_encoder_for_LongTermValidation_poeValue: $.ASN1Encoder<LongTermValid
  * @returns {_Element} The LongTermValidation_poeValue, encoded as an ASN.1 Element.
  */
 export
-function _encode_LongTermValidation_poeValue (value: LongTermValidation_poeValue, elGetter: $.ASN1Encoder<LongTermValidation_poeValue>) {
+function _encode_LongTermValidation_poeValue (value: LongTermValidation_poeValue, elGetter: $.ASN1Encoder<LongTermValidation_poeValue>): _Element {
     if (!_cached_encoder_for_LongTermValidation_poeValue) { _cached_encoder_for_LongTermValidation_poeValue = $._encode_choice<LongTermValidation_poeValue>({
     "timeStamp": $._encode_explicit(_TagClass.context, 0, () => _encode_TimeStampToken, $.DER),
     "evidenceRecord": $._encode_explicit(_TagClass.context, 1, () => _encode_EvidenceRecord, $.DER),

@@ -139,7 +139,7 @@ let _cached_decoder_for_PrivateDSAKeyAttributes: $.ASN1Decoder<PrivateDSAKeyAttr
  * @param {_Element} el The element being decoded.
  * @returns {PrivateDSAKeyAttributes} The decoded data structure.
  */
-export function _decode_PrivateDSAKeyAttributes(el: _Element) {
+export function _decode_PrivateDSAKeyAttributes(el: _Element): PrivateDSAKeyAttributes {
     if (!_cached_decoder_for_PrivateDSAKeyAttributes) {
         _cached_decoder_for_PrivateDSAKeyAttributes = function (
             el: _Element
@@ -199,7 +199,7 @@ let _cached_encoder_for_PrivateDSAKeyAttributes: $.ASN1Encoder<PrivateDSAKeyAttr
 export function _encode_PrivateDSAKeyAttributes(
     value: PrivateDSAKeyAttributes,
     elGetter: $.ASN1Encoder<PrivateDSAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateDSAKeyAttributes) {
         _cached_encoder_for_PrivateDSAKeyAttributes = function (
             value: PrivateDSAKeyAttributes        ): _Element {

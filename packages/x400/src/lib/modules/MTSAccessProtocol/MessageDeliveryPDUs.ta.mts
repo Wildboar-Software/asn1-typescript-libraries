@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageDeliveryPDUs: $.ASN1Decoder<MessageDeliveryPDUs> 
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryPDUs} The decoded data structure.
  */
-export function _decode_MessageDeliveryPDUs(el: _Element) {
+export function _decode_MessageDeliveryPDUs(el: _Element): MessageDeliveryPDUs {
     if (!_cached_decoder_for_MessageDeliveryPDUs) {
         _cached_decoder_for_MessageDeliveryPDUs = _decode_ROS_SingleAS;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageDeliveryPDUs: $.ASN1Encoder<MessageDeliveryPDUs> 
 export function _encode_MessageDeliveryPDUs(
     value: MessageDeliveryPDUs,
     elGetter: $.ASN1Encoder<MessageDeliveryPDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageDeliveryPDUs) {
         _cached_encoder_for_MessageDeliveryPDUs = _encode_ROS_SingleAS;
     }

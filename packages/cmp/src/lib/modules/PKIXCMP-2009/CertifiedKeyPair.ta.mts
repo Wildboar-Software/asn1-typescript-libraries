@@ -148,7 +148,7 @@ let _cached_decoder_for_CertifiedKeyPair: $.ASN1Decoder<CertifiedKeyPair> | null
  * @param {_Element} el The element being decoded.
  * @returns {CertifiedKeyPair} The decoded data structure.
  */
-export function _decode_CertifiedKeyPair(el: _Element) {
+export function _decode_CertifiedKeyPair(el: _Element): CertifiedKeyPair {
   if (!_cached_decoder_for_CertifiedKeyPair) {
     _cached_decoder_for_CertifiedKeyPair = function (
       el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_CertifiedKeyPair: $.ASN1Encoder<CertifiedKeyPair> | null
 export function _encode_CertifiedKeyPair(
   value: CertifiedKeyPair,
   elGetter: $.ASN1Encoder<CertifiedKeyPair>
-) {
+): _Element {
   if (!_cached_encoder_for_CertifiedKeyPair) {
     _cached_encoder_for_CertifiedKeyPair = function (
       value: CertifiedKeyPair    ): _Element {

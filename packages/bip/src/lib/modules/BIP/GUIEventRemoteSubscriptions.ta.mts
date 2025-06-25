@@ -38,7 +38,7 @@ let _cached_decoder_for_GUIEventRemoteSubscriptions: $.ASN1Decoder<GUIEventRemot
  * @param {_Element} el The element being decoded.
  * @returns {GUIEventRemoteSubscriptions} The decoded data structure.
  */
-export function _decode_GUIEventRemoteSubscriptions(el: _Element) {
+export function _decode_GUIEventRemoteSubscriptions(el: _Element): GUIEventRemoteSubscriptions {
   if (!_cached_decoder_for_GUIEventRemoteSubscriptions) {
     _cached_decoder_for_GUIEventRemoteSubscriptions = $._decodeSetOf<GUIEventRemoteSubscription>(
       () => _decode_GUIEventRemoteSubscription
@@ -61,7 +61,7 @@ let _cached_encoder_for_GUIEventRemoteSubscriptions: $.ASN1Encoder<GUIEventRemot
 export function _encode_GUIEventRemoteSubscriptions(
   value: GUIEventRemoteSubscriptions,
   elGetter: $.ASN1Encoder<GUIEventRemoteSubscriptions>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIEventRemoteSubscriptions) {
     _cached_encoder_for_GUIEventRemoteSubscriptions = $._encodeSetOf<GUIEventRemoteSubscription>(
       () => _encode_GUIEventRemoteSubscription,

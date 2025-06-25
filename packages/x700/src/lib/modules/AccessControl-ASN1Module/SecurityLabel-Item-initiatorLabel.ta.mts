@@ -111,7 +111,7 @@ let _cached_decoder_for_SecurityLabel_Item_initiatorLabel: $.ASN1Decoder<Securit
  * @param {_Element} el The element being decoded.
  * @returns {SecurityLabel_Item_initiatorLabel} The decoded data structure.
  */
-export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element) {
+export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element): SecurityLabel_Item_initiatorLabel {
     if (!_cached_decoder_for_SecurityLabel_Item_initiatorLabel) {
         _cached_decoder_for_SecurityLabel_Item_initiatorLabel = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_SecurityLabel_Item_initiatorLabel: $.ASN1Encoder<Securit
 export function _encode_SecurityLabel_Item_initiatorLabel(
     value: SecurityLabel_Item_initiatorLabel,
     elGetter: $.ASN1Encoder<SecurityLabel_Item_initiatorLabel>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityLabel_Item_initiatorLabel) {
         _cached_encoder_for_SecurityLabel_Item_initiatorLabel = function (
             value: SecurityLabel_Item_initiatorLabel        ): _Element {

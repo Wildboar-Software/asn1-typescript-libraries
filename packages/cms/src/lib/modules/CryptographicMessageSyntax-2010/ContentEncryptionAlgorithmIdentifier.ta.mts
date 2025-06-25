@@ -26,7 +26,7 @@ let _cached_decoder_for_ContentEncryptionAlgorithmIdentifier: $.ASN1Decoder<Cont
  * @param {_Element} el The element being decoded.
  * @returns {ContentEncryptionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_ContentEncryptionAlgorithmIdentifier(el: _Element) {
+export function _decode_ContentEncryptionAlgorithmIdentifier(el: _Element): ContentEncryptionAlgorithmIdentifier {
     if (!_cached_decoder_for_ContentEncryptionAlgorithmIdentifier) {
         _cached_decoder_for_ContentEncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_ContentEncryptionAlgorithmIdentifier: $.ASN1Encoder<Cont
 export function _encode_ContentEncryptionAlgorithmIdentifier(
     value: ContentEncryptionAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ContentEncryptionAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentEncryptionAlgorithmIdentifier) {
         _cached_encoder_for_ContentEncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

@@ -115,7 +115,7 @@ let _cached_decoder_for_Timer: $.ASN1Decoder<Timer> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Timer} The decoded data structure.
  */
-export function _decode_Timer(el: _Element) {
+export function _decode_Timer(el: _Element): Timer {
     if (!_cached_decoder_for_Timer) {
         _cached_decoder_for_Timer = function (el: _Element): Timer {
             const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_Timer: $.ASN1Encoder<Timer> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Timer, encoded as an ASN.1 Element.
  */
-export function _encode_Timer(value: Timer, elGetter: $.ASN1Encoder<Timer>) {
+export function _encode_Timer(value: Timer, elGetter: $.ASN1Encoder<Timer>): _Element {
     if (!_cached_encoder_for_Timer) {
         _cached_encoder_for_Timer = function (
             value: Timer        ): _Element {

@@ -115,7 +115,7 @@ let _cached_decoder_for_SigncrypterIDs: $.ASN1Decoder<SigncrypterIDs> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SigncrypterIDs} The decoded data structure.
  */
-export function _decode_SigncrypterIDs(el: _Element) {
+export function _decode_SigncrypterIDs(el: _Element): SigncrypterIDs {
     if (!_cached_decoder_for_SigncrypterIDs) {
         _cached_decoder_for_SigncrypterIDs = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_SigncrypterIDs: $.ASN1Encoder<SigncrypterIDs> | null = n
 export function _encode_SigncrypterIDs(
     value: SigncrypterIDs,
     elGetter: $.ASN1Encoder<SigncrypterIDs>
-) {
+): _Element {
     if (!_cached_encoder_for_SigncrypterIDs) {
         _cached_encoder_for_SigncrypterIDs = function (
             value: SigncrypterIDs        ): _Element {

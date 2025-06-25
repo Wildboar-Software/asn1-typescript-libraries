@@ -39,7 +39,7 @@ let _cached_decoder_for_VarBind_valueType: $.ASN1Decoder<VarBind_valueType> | nu
  * @returns {VarBind_valueType} The decoded data structure.
  */
 export
-function _decode_VarBind_valueType (el: _Element) {
+function _decode_VarBind_valueType (el: _Element): VarBind_valueType {
     if (!_cached_decoder_for_VarBind_valueType) { _cached_decoder_for_VarBind_valueType = $._decode_inextensible_choice<VarBind_valueType>({
     "UNIVERSAL 2": [ "value", _decode_ObjectSyntax ],
     "UNIVERSAL 4": [ "value", _decode_ObjectSyntax ],
@@ -68,7 +68,7 @@ let _cached_encoder_for_VarBind_valueType: $.ASN1Encoder<VarBind_valueType> | nu
  * @returns {_Element} The VarBind_valueType, encoded as an ASN.1 Element.
  */
 export
-function _encode_VarBind_valueType (value: VarBind_valueType, elGetter: $.ASN1Encoder<VarBind_valueType>) {
+function _encode_VarBind_valueType (value: VarBind_valueType, elGetter: $.ASN1Encoder<VarBind_valueType>): _Element {
     if (!_cached_encoder_for_VarBind_valueType) { _cached_encoder_for_VarBind_valueType = $._encode_choice<VarBind_valueType>({
     "value": _encode_ObjectSyntax,
     "unSpecified": $._encodeNull,

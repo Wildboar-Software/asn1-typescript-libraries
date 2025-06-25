@@ -44,7 +44,7 @@ let _cached_decoder_for_AuthorizationList: $.ASN1Decoder<AuthorizationList> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AuthorizationList} The decoded data structure.
  */
-export function _decode_AuthorizationList(el: _Element) {
+export function _decode_AuthorizationList(el: _Element): AuthorizationList {
     if (!_cached_decoder_for_AuthorizationList) {
         _cached_decoder_for_AuthorizationList = $._decodeSetOf<AuthorizationList_Item>(
             () => _decode_AuthorizationList_Item
@@ -67,7 +67,7 @@ let _cached_encoder_for_AuthorizationList: $.ASN1Encoder<AuthorizationList> | nu
 export function _encode_AuthorizationList(
     value: AuthorizationList,
     elGetter: $.ASN1Encoder<AuthorizationList>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorizationList) {
         _cached_encoder_for_AuthorizationList = $._encodeSetOf<AuthorizationList_Item>(
             () => _encode_AuthorizationList_Item,

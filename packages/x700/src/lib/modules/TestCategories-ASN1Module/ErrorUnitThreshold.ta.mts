@@ -119,7 +119,7 @@ let _cached_decoder_for_ErrorUnitThreshold: $.ASN1Decoder<ErrorUnitThreshold> | 
  * @param {_Element} el The element being decoded.
  * @returns {ErrorUnitThreshold} The decoded data structure.
  */
-export function _decode_ErrorUnitThreshold(el: _Element) {
+export function _decode_ErrorUnitThreshold(el: _Element): ErrorUnitThreshold {
     if (!_cached_decoder_for_ErrorUnitThreshold) {
         _cached_decoder_for_ErrorUnitThreshold = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_ErrorUnitThreshold: $.ASN1Encoder<ErrorUnitThreshold> | 
 export function _encode_ErrorUnitThreshold(
     value: ErrorUnitThreshold,
     elGetter: $.ASN1Encoder<ErrorUnitThreshold>
-) {
+): _Element {
     if (!_cached_encoder_for_ErrorUnitThreshold) {
         _cached_encoder_for_ErrorUnitThreshold = function (
             value: ErrorUnitThreshold        ): _Element {

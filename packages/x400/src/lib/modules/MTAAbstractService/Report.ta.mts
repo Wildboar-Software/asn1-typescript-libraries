@@ -119,7 +119,7 @@ let _cached_decoder_for_Report: $.ASN1Decoder<Report> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Report} The decoded data structure.
  */
-export function _decode_Report(el: _Element) {
+export function _decode_Report(el: _Element): Report {
     if (!_cached_decoder_for_Report) {
         _cached_decoder_for_Report = function (el: _Element): Report {
             const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_Report: $.ASN1Encoder<Report> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Report, encoded as an ASN.1 Element.
  */
-export function _encode_Report(value: Report, elGetter: $.ASN1Encoder<Report>) {
+export function _encode_Report(value: Report, elGetter: $.ASN1Encoder<Report>): _Element {
     if (!_cached_encoder_for_Report) {
         _cached_encoder_for_Report = function (
             value: Report        ): _Element {

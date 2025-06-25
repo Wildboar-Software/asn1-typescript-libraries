@@ -128,7 +128,7 @@ let _cached_decoder_for_ListMembershipReply: $.ASN1Decoder<ListMembershipReply> 
  * @param {_Element} el The element being decoded.
  * @returns {ListMembershipReply} The decoded data structure.
  */
-export function _decode_ListMembershipReply(el: _Element) {
+export function _decode_ListMembershipReply(el: _Element): ListMembershipReply {
     if (!_cached_decoder_for_ListMembershipReply) {
         _cached_decoder_for_ListMembershipReply = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_ListMembershipReply: $.ASN1Encoder<ListMembershipReply> 
 export function _encode_ListMembershipReply(
     value: ListMembershipReply,
     elGetter: $.ASN1Encoder<ListMembershipReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ListMembershipReply) {
         _cached_encoder_for_ListMembershipReply = function (
             value: ListMembershipReply        ): _Element {

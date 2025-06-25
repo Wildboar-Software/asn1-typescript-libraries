@@ -364,7 +364,7 @@ let _cached_decoder_for_GUIStateEventInfo: $.ASN1Decoder<GUIStateEventInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {GUIStateEventInfo} The decoded data structure.
  */
-export function _decode_GUIStateEventInfo(el: _Element) {
+export function _decode_GUIStateEventInfo(el: _Element): GUIStateEventInfo {
   if (!_cached_decoder_for_GUIStateEventInfo) {
     _cached_decoder_for_GUIStateEventInfo = function (
       el: _Element
@@ -470,7 +470,7 @@ let _cached_encoder_for_GUIStateEventInfo: $.ASN1Encoder<GUIStateEventInfo> | nu
 export function _encode_GUIStateEventInfo(
   value: GUIStateEventInfo,
   elGetter: $.ASN1Encoder<GUIStateEventInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIStateEventInfo) {
     _cached_encoder_for_GUIStateEventInfo = function (
       value: GUIStateEventInfo    ): _Element {

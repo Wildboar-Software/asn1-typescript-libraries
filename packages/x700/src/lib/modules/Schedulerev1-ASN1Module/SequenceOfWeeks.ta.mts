@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfWeeks: $.ASN1Decoder<SequenceOfWeeks> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfWeeks} The decoded data structure.
  */
-export function _decode_SequenceOfWeeks(el: _Element) {
+export function _decode_SequenceOfWeeks(el: _Element): SequenceOfWeeks {
     if (!_cached_decoder_for_SequenceOfWeeks) {
         _cached_decoder_for_SequenceOfWeeks = $._decodeSequenceOf<WeekMaskWps>(
             () => _decode_WeekMaskWps
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfWeeks: $.ASN1Encoder<SequenceOfWeeks> | null =
 export function _encode_SequenceOfWeeks(
     value: SequenceOfWeeks,
     elGetter: $.ASN1Encoder<SequenceOfWeeks>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfWeeks) {
         _cached_encoder_for_SequenceOfWeeks = $._encodeSequenceOf<WeekMaskWps>(
             () => _encode_WeekMaskWps,

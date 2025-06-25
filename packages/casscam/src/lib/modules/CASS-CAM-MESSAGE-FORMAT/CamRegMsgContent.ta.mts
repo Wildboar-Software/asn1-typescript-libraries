@@ -154,7 +154,7 @@ let _cached_decoder_for_CamRegMsgContent: $.ASN1Decoder<CamRegMsgContent> | null
  * @returns {CamRegMsgContent} The decoded data structure.
  */
 export
-function _decode_CamRegMsgContent (el: _Element) {
+function _decode_CamRegMsgContent (el: _Element): CamRegMsgContent {
     if (!_cached_decoder_for_CamRegMsgContent) { _cached_decoder_for_CamRegMsgContent = function (el: _Element): CamRegMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 6) {
@@ -203,7 +203,7 @@ let _cached_encoder_for_CamRegMsgContent: $.ASN1Encoder<CamRegMsgContent> | null
  * @returns {_Element} The CamRegMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_CamRegMsgContent (value: CamRegMsgContent, elGetter: $.ASN1Encoder<CamRegMsgContent>) {
+function _encode_CamRegMsgContent (value: CamRegMsgContent, elGetter: $.ASN1Encoder<CamRegMsgContent>): _Element {
     if (!_cached_encoder_for_CamRegMsgContent) { _cached_encoder_for_CamRegMsgContent = function (value: CamRegMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

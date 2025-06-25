@@ -35,7 +35,7 @@ let _cached_decoder_for_ReturnedIPMField: $.ASN1Decoder<ReturnedIPMField> | null
  * @param {_Element} el The element being decoded.
  * @returns {ReturnedIPMField} The decoded data structure.
  */
-export function _decode_ReturnedIPMField(el: _Element) {
+export function _decode_ReturnedIPMField(el: _Element): ReturnedIPMField {
     if (!_cached_decoder_for_ReturnedIPMField) {
         _cached_decoder_for_ReturnedIPMField = _decode_IPM;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReturnedIPMField: $.ASN1Encoder<ReturnedIPMField> | null
 export function _encode_ReturnedIPMField(
     value: ReturnedIPMField,
     elGetter: $.ASN1Encoder<ReturnedIPMField>
-) {
+): _Element {
     if (!_cached_encoder_for_ReturnedIPMField) {
         _cached_encoder_for_ReturnedIPMField = _encode_IPM;
     }

@@ -301,7 +301,7 @@ let _cached_decoder_for_KDC_REQ_BODY: $.ASN1Decoder<KDC_REQ_BODY> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KDC_REQ_BODY} The decoded data structure.
  */
-export function _decode_KDC_REQ_BODY(el: _Element) {
+export function _decode_KDC_REQ_BODY(el: _Element): KDC_REQ_BODY {
   if (!_cached_decoder_for_KDC_REQ_BODY) {
     _cached_decoder_for_KDC_REQ_BODY = function (el: _Element): KDC_REQ_BODY {
       let kdc_options!: KDCOptions;
@@ -415,7 +415,7 @@ let _cached_encoder_for_KDC_REQ_BODY: $.ASN1Encoder<KDC_REQ_BODY> | null = null;
 export function _encode_KDC_REQ_BODY(
   value: KDC_REQ_BODY,
   elGetter: $.ASN1Encoder<KDC_REQ_BODY>
-) {
+): _Element {
   if (!_cached_encoder_for_KDC_REQ_BODY) {
     _cached_encoder_for_KDC_REQ_BODY = function (
       value: KDC_REQ_BODY    ): _Element {

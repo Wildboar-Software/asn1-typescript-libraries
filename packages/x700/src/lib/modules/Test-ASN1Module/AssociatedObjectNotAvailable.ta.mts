@@ -35,7 +35,7 @@ let _cached_decoder_for_AssociatedObjectNotAvailable: $.ASN1Decoder<AssociatedOb
  * @param {_Element} el The element being decoded.
  * @returns {AssociatedObjectNotAvailable} The decoded data structure.
  */
-export function _decode_AssociatedObjectNotAvailable(el: _Element) {
+export function _decode_AssociatedObjectNotAvailable(el: _Element): AssociatedObjectNotAvailable {
     if (!_cached_decoder_for_AssociatedObjectNotAvailable) {
         _cached_decoder_for_AssociatedObjectNotAvailable = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_AssociatedObjectNotAvailable: $.ASN1Encoder<AssociatedOb
 export function _encode_AssociatedObjectNotAvailable(
     value: AssociatedObjectNotAvailable,
     elGetter: $.ASN1Encoder<AssociatedObjectNotAvailable>
-) {
+): _Element {
     if (!_cached_encoder_for_AssociatedObjectNotAvailable) {
         _cached_encoder_for_AssociatedObjectNotAvailable = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

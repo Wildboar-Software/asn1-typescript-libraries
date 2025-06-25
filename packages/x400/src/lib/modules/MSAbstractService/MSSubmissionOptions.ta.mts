@@ -167,7 +167,7 @@ let _cached_decoder_for_MSSubmissionOptions: $.ASN1Decoder<MSSubmissionOptions> 
  * @param {_Element} el The element being decoded.
  * @returns {MSSubmissionOptions} The decoded data structure.
  */
-export function _decode_MSSubmissionOptions(el: _Element) {
+export function _decode_MSSubmissionOptions(el: _Element): MSSubmissionOptions {
     if (!_cached_decoder_for_MSSubmissionOptions) {
         _cached_decoder_for_MSSubmissionOptions = function (
             el: _Element
@@ -236,7 +236,7 @@ let _cached_encoder_for_MSSubmissionOptions: $.ASN1Encoder<MSSubmissionOptions> 
 export function _encode_MSSubmissionOptions(
     value: MSSubmissionOptions,
     elGetter: $.ASN1Encoder<MSSubmissionOptions>
-) {
+): _Element {
     if (!_cached_encoder_for_MSSubmissionOptions) {
         _cached_encoder_for_MSSubmissionOptions = function (
             value: MSSubmissionOptions        ): _Element {

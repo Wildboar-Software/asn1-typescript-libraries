@@ -31,7 +31,7 @@ let _cached_decoder_for_PBKDF2_params_salt: $.ASN1Decoder<PBKDF2_params_salt> | 
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_params_salt} The decoded data structure.
  */
-export function _decode_PBKDF2_params_salt(el: _Element) {
+export function _decode_PBKDF2_params_salt(el: _Element): PBKDF2_params_salt {
     if (!_cached_decoder_for_PBKDF2_params_salt) {
         _cached_decoder_for_PBKDF2_params_salt = $._decode_inextensible_choice<PBKDF2_params_salt>(
             {
@@ -57,7 +57,7 @@ let _cached_encoder_for_PBKDF2_params_salt: $.ASN1Encoder<PBKDF2_params_salt> | 
 export function _encode_PBKDF2_params_salt(
     value: PBKDF2_params_salt,
     elGetter: $.ASN1Encoder<PBKDF2_params_salt>
-) {
+): _Element {
     if (!_cached_encoder_for_PBKDF2_params_salt) {
         _cached_encoder_for_PBKDF2_params_salt = $._encode_choice<PBKDF2_params_salt>(
             {

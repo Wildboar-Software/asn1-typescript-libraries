@@ -35,7 +35,7 @@ let _cached_decoder_for_ProbeSubmissionTime: $.ASN1Decoder<ProbeSubmissionTime> 
  * @param {_Element} el The element being decoded.
  * @returns {ProbeSubmissionTime} The decoded data structure.
  */
-export function _decode_ProbeSubmissionTime(el: _Element) {
+export function _decode_ProbeSubmissionTime(el: _Element): ProbeSubmissionTime {
     if (!_cached_decoder_for_ProbeSubmissionTime) {
         _cached_decoder_for_ProbeSubmissionTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ProbeSubmissionTime: $.ASN1Encoder<ProbeSubmissionTime> 
 export function _encode_ProbeSubmissionTime(
     value: ProbeSubmissionTime,
     elGetter: $.ASN1Encoder<ProbeSubmissionTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ProbeSubmissionTime) {
         _cached_encoder_for_ProbeSubmissionTime = _encode_Time;
     }

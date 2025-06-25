@@ -42,7 +42,7 @@ let _cached_decoder_for_SchedulingData: $.ASN1Decoder<SchedulingData> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SchedulingData} The decoded data structure.
  */
-export function _decode_SchedulingData(el: _Element) {
+export function _decode_SchedulingData(el: _Element): SchedulingData {
     if (!_cached_decoder_for_SchedulingData) {
         _cached_decoder_for_SchedulingData = $._decodeSetOf<SchedulingData_Item>(
             () => _decode_SchedulingData_Item
@@ -65,7 +65,7 @@ let _cached_encoder_for_SchedulingData: $.ASN1Encoder<SchedulingData> | null = n
 export function _encode_SchedulingData(
     value: SchedulingData,
     elGetter: $.ASN1Encoder<SchedulingData>
-) {
+): _Element {
     if (!_cached_encoder_for_SchedulingData) {
         _cached_encoder_for_SchedulingData = $._encodeSetOf<SchedulingData_Item>(
             () => _encode_SchedulingData_Item,

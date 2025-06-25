@@ -35,7 +35,7 @@ let _cached_decoder_for_StateTransitionTimeInterval: $.ASN1Decoder<StateTransiti
  * @param {_Element} el The element being decoded.
  * @returns {StateTransitionTimeInterval} The decoded data structure.
  */
-export function _decode_StateTransitionTimeInterval(el: _Element) {
+export function _decode_StateTransitionTimeInterval(el: _Element): StateTransitionTimeInterval {
     if (!_cached_decoder_for_StateTransitionTimeInterval) {
         _cached_decoder_for_StateTransitionTimeInterval = _decode_Timespec;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_StateTransitionTimeInterval: $.ASN1Encoder<StateTransiti
 export function _encode_StateTransitionTimeInterval(
     value: StateTransitionTimeInterval,
     elGetter: $.ASN1Encoder<StateTransitionTimeInterval>
-) {
+): _Element {
     if (!_cached_encoder_for_StateTransitionTimeInterval) {
         _cached_encoder_for_StateTransitionTimeInterval = _encode_Timespec;
     }

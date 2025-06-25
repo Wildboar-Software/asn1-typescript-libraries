@@ -31,7 +31,7 @@ let _cached_decoder_for_ExternalIDO: $.ASN1Decoder<ExternalIDO> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ExternalIDO} The decoded data structure.
  */
-export function _decode_ExternalIDO(el: _Element) {
+export function _decode_ExternalIDO(el: _Element): ExternalIDO {
     if (!_cached_decoder_for_ExternalIDO) {
         _cached_decoder_for_ExternalIDO = _get_decoder_for_ObjectValue<_Element>(
             $._decodeAny
@@ -54,7 +54,7 @@ let _cached_encoder_for_ExternalIDO: $.ASN1Encoder<ExternalIDO> | null = null;
 export function _encode_ExternalIDO(
     value: ExternalIDO,
     elGetter: $.ASN1Encoder<ExternalIDO>
-) {
+): _Element {
     if (!_cached_encoder_for_ExternalIDO) {
         _cached_encoder_for_ExternalIDO = _get_encoder_for_ObjectValue<_Element>(
             $._encodeAny

@@ -111,7 +111,7 @@ let _cached_decoder_for_OriginatorPublicKey: $.ASN1Decoder<OriginatorPublicKey> 
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorPublicKey} The decoded data structure.
  */
-export function _decode_OriginatorPublicKey(el: _Element) {
+export function _decode_OriginatorPublicKey(el: _Element): OriginatorPublicKey {
     if (!_cached_decoder_for_OriginatorPublicKey) {
         _cached_decoder_for_OriginatorPublicKey = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_OriginatorPublicKey: $.ASN1Encoder<OriginatorPublicKey> 
 export function _encode_OriginatorPublicKey(
     value: OriginatorPublicKey,
     elGetter: $.ASN1Encoder<OriginatorPublicKey>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorPublicKey) {
         _cached_encoder_for_OriginatorPublicKey = function (
             value: OriginatorPublicKey        ): _Element {

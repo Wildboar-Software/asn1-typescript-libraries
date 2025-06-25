@@ -50,7 +50,7 @@ let _cached_decoder_for_InitiatorName: $.ASN1Decoder<InitiatorName> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {InitiatorName} The decoded data structure.
  */
-export function _decode_InitiatorName(el: _Element) {
+export function _decode_InitiatorName(el: _Element): InitiatorName {
     if (!_cached_decoder_for_InitiatorName) {
         _cached_decoder_for_InitiatorName = $._decode_inextensible_choice<InitiatorName>(
             {
@@ -94,7 +94,7 @@ let _cached_encoder_for_InitiatorName: $.ASN1Encoder<InitiatorName> | null = nul
 export function _encode_InitiatorName(
     value: InitiatorName,
     elGetter: $.ASN1Encoder<InitiatorName>
-) {
+): _Element {
     if (!_cached_encoder_for_InitiatorName) {
         _cached_encoder_for_InitiatorName = $._encode_choice<InitiatorName>(
             {

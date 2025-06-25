@@ -117,7 +117,7 @@ let _cached_decoder_for_Attribute: $.ASN1Decoder<Attribute> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Attribute} The decoded data structure.
  */
-export function _decode_Attribute(el: _Element) {
+export function _decode_Attribute(el: _Element): Attribute {
     if (!_cached_decoder_for_Attribute) {
         _cached_decoder_for_Attribute = function (el: _Element): Attribute {
             const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_Attribute: $.ASN1Encoder<Attribute> | null = null;
 export function _encode_Attribute(
     value: Attribute,
     elGetter: $.ASN1Encoder<Attribute>
-) {
+): _Element {
     if (!_cached_encoder_for_Attribute) {
         _cached_encoder_for_Attribute = function (
             value: Attribute        ): _Element {

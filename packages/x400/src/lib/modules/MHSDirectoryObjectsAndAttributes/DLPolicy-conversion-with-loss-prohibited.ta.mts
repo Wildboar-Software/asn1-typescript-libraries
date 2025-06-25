@@ -113,7 +113,7 @@ let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {DLPolicy_conversion_with_loss_prohibited} The decoded data structure.
  */
-export function _decode_DLPolicy_conversion_with_loss_prohibited(el: _Element) {
+export function _decode_DLPolicy_conversion_with_loss_prohibited(el: _Element): DLPolicy_conversion_with_loss_prohibited {
     if (!_cached_decoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited =
             $._decodeEnumerated;
@@ -133,7 +133,7 @@ let _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Encoder<
 export function _encode_DLPolicy_conversion_with_loss_prohibited(
     value: DLPolicy_conversion_with_loss_prohibited,
     elGetter: $.ASN1Encoder<DLPolicy_conversion_with_loss_prohibited>
-) {
+): _Element {
     if (!_cached_encoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited =
             $._encodeEnumerated;

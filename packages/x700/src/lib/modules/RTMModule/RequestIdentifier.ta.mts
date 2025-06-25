@@ -43,7 +43,7 @@ let _cached_decoder_for_RequestIdentifier: $.ASN1Decoder<RequestIdentifier> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RequestIdentifier} The decoded data structure.
  */
-export function _decode_RequestIdentifier(el: _Element) {
+export function _decode_RequestIdentifier(el: _Element): RequestIdentifier {
     if (!_cached_decoder_for_RequestIdentifier) {
         _cached_decoder_for_RequestIdentifier = $._decode_inextensible_choice<RequestIdentifier>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_RequestIdentifier: $.ASN1Encoder<RequestIdentifier> | nu
 export function _encode_RequestIdentifier(
     value: RequestIdentifier,
     elGetter: $.ASN1Encoder<RequestIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestIdentifier) {
         _cached_encoder_for_RequestIdentifier = $._encode_choice<RequestIdentifier>(
             {

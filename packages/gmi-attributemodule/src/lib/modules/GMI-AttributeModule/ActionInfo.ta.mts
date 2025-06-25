@@ -42,7 +42,7 @@ let _cached_decoder_for_ActionInfo: $.ASN1Decoder<ActionInfo> | null = null;
  * @returns {ActionInfo} The decoded data structure.
  */
 export
-function _decode_ActionInfo (el: _Element) {
+function _decode_ActionInfo (el: _Element): ActionInfo {
     if (!_cached_decoder_for_ActionInfo) { _cached_decoder_for_ActionInfo = $._decodeSetOf<ManagementExtension>(() => _decode_ManagementExtension); }
     return _cached_decoder_for_ActionInfo(el);
 }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ActionInfo: $.ASN1Encoder<ActionInfo> | null = null;
  * @returns {_Element} The ActionInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_ActionInfo (value: ActionInfo, elGetter: $.ASN1Encoder<ActionInfo>) {
+function _encode_ActionInfo (value: ActionInfo, elGetter: $.ASN1Encoder<ActionInfo>): _Element {
     if (!_cached_encoder_for_ActionInfo) { _cached_encoder_for_ActionInfo = $._encodeSetOf<ManagementExtension>(() => _encode_ManagementExtension, $.BER); }
     return _cached_encoder_for_ActionInfo(value, elGetter);
 }

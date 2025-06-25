@@ -42,7 +42,7 @@ let _cached_decoder_for_Contents_Type_List: $.ASN1Decoder<Contents_Type_List> | 
  * @param {_Element} el The element being decoded.
  * @returns {Contents_Type_List} The decoded data structure.
  */
-export function _decode_Contents_Type_List(el: _Element) {
+export function _decode_Contents_Type_List(el: _Element): Contents_Type_List {
   if (!_cached_decoder_for_Contents_Type_List) {
     _cached_decoder_for_Contents_Type_List = $._decode_implicit<Contents_Type_List>(
       () =>
@@ -68,7 +68,7 @@ let _cached_encoder_for_Contents_Type_List: $.ASN1Encoder<Contents_Type_List> | 
 export function _encode_Contents_Type_List(
   value: Contents_Type_List,
   elGetter: $.ASN1Encoder<Contents_Type_List>
-) {
+): _Element {
   if (!_cached_encoder_for_Contents_Type_List) {
     _cached_encoder_for_Contents_Type_List = $._encode_implicit(
       _TagClass.context,

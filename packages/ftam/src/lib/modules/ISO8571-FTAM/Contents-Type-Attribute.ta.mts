@@ -60,7 +60,7 @@ let _cached_decoder_for_Contents_Type_Attribute: $.ASN1Decoder<Contents_Type_Att
  * @param {_Element} el The element being decoded.
  * @returns {Contents_Type_Attribute} The decoded data structure.
  */
-export function _decode_Contents_Type_Attribute(el: _Element) {
+export function _decode_Contents_Type_Attribute(el: _Element): Contents_Type_Attribute {
   if (!_cached_decoder_for_Contents_Type_Attribute) {
     _cached_decoder_for_Contents_Type_Attribute = $._decode_inextensible_choice<Contents_Type_Attribute>(
       {
@@ -97,7 +97,7 @@ let _cached_encoder_for_Contents_Type_Attribute: $.ASN1Encoder<Contents_Type_Att
 export function _encode_Contents_Type_Attribute(
   value: Contents_Type_Attribute,
   elGetter: $.ASN1Encoder<Contents_Type_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Contents_Type_Attribute) {
     _cached_encoder_for_Contents_Type_Attribute = $._encode_choice<Contents_Type_Attribute>(
       {

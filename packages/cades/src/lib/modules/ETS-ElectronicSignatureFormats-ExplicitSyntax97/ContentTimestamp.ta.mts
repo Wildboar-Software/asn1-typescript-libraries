@@ -33,7 +33,7 @@ let _cached_decoder_for_ContentTimestamp: $.ASN1Decoder<ContentTimestamp> | null
  * @returns {ContentTimestamp} The decoded data structure.
  */
 export
-function _decode_ContentTimestamp (el: _Element) {
+function _decode_ContentTimestamp (el: _Element): ContentTimestamp {
     if (!_cached_decoder_for_ContentTimestamp) { _cached_decoder_for_ContentTimestamp = _decode_TimeStampToken; }
     return _cached_decoder_for_ContentTimestamp(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_ContentTimestamp: $.ASN1Encoder<ContentTimestamp> | null
  * @returns {_Element} The ContentTimestamp, encoded as an ASN.1 Element.
  */
 export
-function _encode_ContentTimestamp (value: ContentTimestamp, elGetter: $.ASN1Encoder<ContentTimestamp>) {
+function _encode_ContentTimestamp (value: ContentTimestamp, elGetter: $.ASN1Encoder<ContentTimestamp>): _Element {
     if (!_cached_encoder_for_ContentTimestamp) { _cached_encoder_for_ContentTimestamp = _encode_TimeStampToken; }
     return _cached_encoder_for_ContentTimestamp(value, elGetter);
 }

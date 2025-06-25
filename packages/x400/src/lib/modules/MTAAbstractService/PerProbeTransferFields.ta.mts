@@ -291,7 +291,7 @@ let _cached_decoder_for_PerProbeTransferFields: $.ASN1Decoder<PerProbeTransferFi
  * @param {_Element} el The element being decoded.
  * @returns {PerProbeTransferFields} The decoded data structure.
  */
-export function _decode_PerProbeTransferFields(el: _Element) {
+export function _decode_PerProbeTransferFields(el: _Element): PerProbeTransferFields {
     if (!_cached_decoder_for_PerProbeTransferFields) {
         _cached_decoder_for_PerProbeTransferFields = function (
             el: _Element
@@ -395,7 +395,7 @@ let _cached_encoder_for_PerProbeTransferFields: $.ASN1Encoder<PerProbeTransferFi
 export function _encode_PerProbeTransferFields(
     value: PerProbeTransferFields,
     elGetter: $.ASN1Encoder<PerProbeTransferFields>
-) {
+): _Element {
     if (!_cached_encoder_for_PerProbeTransferFields) {
         _cached_encoder_for_PerProbeTransferFields = function (
             value: PerProbeTransferFields        ): _Element {

@@ -111,7 +111,7 @@ let _cached_decoder_for_NamedMultiples: $.ASN1Decoder<NamedMultiples> | null = n
  * @returns {NamedMultiples} The decoded data structure.
  */
 export
-function _decode_NamedMultiples (el: _Element) {
+function _decode_NamedMultiples (el: _Element): NamedMultiples {
     if (!_cached_decoder_for_NamedMultiples) { _cached_decoder_for_NamedMultiples = function (el: _Element): NamedMultiples {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_NamedMultiples: $.ASN1Encoder<NamedMultiples> | null = n
  * @returns {_Element} The NamedMultiples, encoded as an ASN.1 Element.
  */
 export
-function _encode_NamedMultiples (value: NamedMultiples, elGetter: $.ASN1Encoder<NamedMultiples>) {
+function _encode_NamedMultiples (value: NamedMultiples, elGetter: $.ASN1Encoder<NamedMultiples>): _Element {
     if (!_cached_encoder_for_NamedMultiples) { _cached_encoder_for_NamedMultiples = function (value: NamedMultiples): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

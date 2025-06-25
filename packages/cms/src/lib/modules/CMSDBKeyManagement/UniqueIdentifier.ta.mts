@@ -29,7 +29,7 @@ let _cached_decoder_for_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {UniqueIdentifier} The decoded data structure.
  */
-export function _decode_UniqueIdentifier(el: _Element) {
+export function _decode_UniqueIdentifier(el: _Element): UniqueIdentifier {
     if (!_cached_decoder_for_UniqueIdentifier) {
         _cached_decoder_for_UniqueIdentifier = _decode_UniqueID;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_UniqueIdentifier: $.ASN1Encoder<UniqueIdentifier> | null
 export function _encode_UniqueIdentifier(
     value: UniqueIdentifier,
     elGetter: $.ASN1Encoder<UniqueIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_UniqueIdentifier) {
         _cached_encoder_for_UniqueIdentifier = _encode_UniqueID;
     }

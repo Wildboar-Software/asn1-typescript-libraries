@@ -35,7 +35,7 @@ let _cached_decoder_for_Negotiation_SEI: $.ASN1Decoder<Negotiation_SEI> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Negotiation_SEI} The decoded data structure.
  */
-export function _decode_Negotiation_SEI(el: _Element) {
+export function _decode_Negotiation_SEI(el: _Element): Negotiation_SEI {
   if (!_cached_decoder_for_Negotiation_SEI) {
     _cached_decoder_for_Negotiation_SEI = $._decodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._decodeObjectIdentifier
@@ -58,7 +58,7 @@ let _cached_encoder_for_Negotiation_SEI: $.ASN1Encoder<Negotiation_SEI> | null =
 export function _encode_Negotiation_SEI(
   value: Negotiation_SEI,
   elGetter: $.ASN1Encoder<Negotiation_SEI>
-) {
+): _Element {
   if (!_cached_encoder_for_Negotiation_SEI) {
     _cached_encoder_for_Negotiation_SEI = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._encodeObjectIdentifier,

@@ -120,7 +120,7 @@ let _cached_decoder_for_PointToPoint: $.ASN1Decoder<PointToPoint> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PointToPoint} The decoded data structure.
  */
-export function _decode_PointToPoint(el: _Element) {
+export function _decode_PointToPoint(el: _Element): PointToPoint {
     if (!_cached_decoder_for_PointToPoint) {
         _cached_decoder_for_PointToPoint = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_PointToPoint: $.ASN1Encoder<PointToPoint> | null = null;
 export function _encode_PointToPoint(
     value: PointToPoint,
     elGetter: $.ASN1Encoder<PointToPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_PointToPoint) {
         _cached_encoder_for_PointToPoint = function (
             value: PointToPoint        ): _Element {

@@ -150,7 +150,7 @@ let _cached_decoder_for_KRB_SAFE: $.ASN1Decoder<KRB_SAFE> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KRB_SAFE} The decoded data structure.
  */
-export function _decode_KRB_SAFE(el: _Element) {
+export function _decode_KRB_SAFE(el: _Element): KRB_SAFE {
   if (!_cached_decoder_for_KRB_SAFE) {
     _cached_decoder_for_KRB_SAFE = $._decode_implicit<KRB_SAFE>(
       () =>
@@ -204,7 +204,7 @@ let _cached_encoder_for_KRB_SAFE: $.ASN1Encoder<KRB_SAFE> | null = null;
 export function _encode_KRB_SAFE(
   value: KRB_SAFE,
   elGetter: $.ASN1Encoder<KRB_SAFE>
-) {
+): _Element {
   if (!_cached_encoder_for_KRB_SAFE) {
     _cached_encoder_for_KRB_SAFE = $._encode_implicit(
       _TagClass.application,

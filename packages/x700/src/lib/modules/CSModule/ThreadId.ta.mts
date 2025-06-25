@@ -35,7 +35,7 @@ let _cached_decoder_for_ThreadId: $.ASN1Decoder<ThreadId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ThreadId} The decoded data structure.
  */
-export function _decode_ThreadId(el: _Element) {
+export function _decode_ThreadId(el: _Element): ThreadId {
     if (!_cached_decoder_for_ThreadId) {
         _cached_decoder_for_ThreadId = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ThreadId: $.ASN1Encoder<ThreadId> | null = null;
 export function _encode_ThreadId(
     value: ThreadId,
     elGetter: $.ASN1Encoder<ThreadId>
-) {
+): _Element {
     if (!_cached_encoder_for_ThreadId) {
         _cached_encoder_for_ThreadId = _encode_ObjectInstance;
     }

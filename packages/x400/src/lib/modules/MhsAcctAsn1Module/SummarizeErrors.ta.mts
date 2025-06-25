@@ -38,7 +38,7 @@ let _cached_decoder_for_SummarizeErrors: $.ASN1Decoder<SummarizeErrors> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SummarizeErrors} The decoded data structure.
  */
-export function _decode_SummarizeErrors(el: _Element) {
+export function _decode_SummarizeErrors(el: _Element): SummarizeErrors {
     if (!_cached_decoder_for_SummarizeErrors) {
         _cached_decoder_for_SummarizeErrors = _decode_RetrievalError;
     }
@@ -57,7 +57,7 @@ let _cached_encoder_for_SummarizeErrors: $.ASN1Encoder<SummarizeErrors> | null =
 export function _encode_SummarizeErrors(
     value: SummarizeErrors,
     elGetter: $.ASN1Encoder<SummarizeErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_SummarizeErrors) {
         _cached_encoder_for_SummarizeErrors = _encode_RetrievalError;
     }

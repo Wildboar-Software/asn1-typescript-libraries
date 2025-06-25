@@ -42,7 +42,7 @@ let _cached_decoder_for_ConvertPtoPToMulticastReply: $.ASN1Decoder<ConvertPtoPTo
  * @param {_Element} el The element being decoded.
  * @returns {ConvertPtoPToMulticastReply} The decoded data structure.
  */
-export function _decode_ConvertPtoPToMulticastReply(el: _Element) {
+export function _decode_ConvertPtoPToMulticastReply(el: _Element): ConvertPtoPToMulticastReply {
     if (!_cached_decoder_for_ConvertPtoPToMulticastReply) {
         _cached_decoder_for_ConvertPtoPToMulticastReply = $._decodeSequenceOf<ConvertPtoPToMulticastReply_Item>(
             () => _decode_ConvertPtoPToMulticastReply_Item
@@ -65,7 +65,7 @@ let _cached_encoder_for_ConvertPtoPToMulticastReply: $.ASN1Encoder<ConvertPtoPTo
 export function _encode_ConvertPtoPToMulticastReply(
     value: ConvertPtoPToMulticastReply,
     elGetter: $.ASN1Encoder<ConvertPtoPToMulticastReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertPtoPToMulticastReply) {
         _cached_encoder_for_ConvertPtoPToMulticastReply = $._encodeSequenceOf<ConvertPtoPToMulticastReply_Item>(
             () => _encode_ConvertPtoPToMulticastReply_Item,

@@ -51,7 +51,7 @@ let _cached_decoder_for_ApplicationProcessTitle: $.ASN1Decoder<ApplicationProces
  * @returns {ApplicationProcessTitle} The decoded data structure.
  */
 export
-function _decode_ApplicationProcessTitle (el: _Element) {
+function _decode_ApplicationProcessTitle (el: _Element): ApplicationProcessTitle {
     if (!_cached_decoder_for_ApplicationProcessTitle) { _cached_decoder_for_ApplicationProcessTitle = $._decode_inextensible_choice<ApplicationProcessTitle>({
     "CONTEXT 0": [ "directory", $._decode_implicit<RelativeDistinguishedName[]>(() => $._decodeSequenceOf<RelativeDistinguishedName>(() => _decode_RelativeDistinguishedName)) ],
     "CONTEXT 1": [ "oid", $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier) ],
@@ -72,7 +72,7 @@ let _cached_encoder_for_ApplicationProcessTitle: $.ASN1Encoder<ApplicationProces
  * @returns {_Element} The ApplicationProcessTitle, encoded as an ASN.1 Element.
  */
 export
-function _encode_ApplicationProcessTitle (value: ApplicationProcessTitle, elGetter: $.ASN1Encoder<ApplicationProcessTitle>) {
+function _encode_ApplicationProcessTitle (value: ApplicationProcessTitle, elGetter: $.ASN1Encoder<ApplicationProcessTitle>): _Element {
     if (!_cached_encoder_for_ApplicationProcessTitle) { _cached_encoder_for_ApplicationProcessTitle = $._encode_choice<ApplicationProcessTitle>({
     "directory": $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<RelativeDistinguishedName>(() => _encode_RelativeDistinguishedName, $.BER), $.BER),
     "oid": $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER),

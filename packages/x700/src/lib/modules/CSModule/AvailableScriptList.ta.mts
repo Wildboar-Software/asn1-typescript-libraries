@@ -35,7 +35,7 @@ let _cached_decoder_for_AvailableScriptList: $.ASN1Decoder<AvailableScriptList> 
  * @param {_Element} el The element being decoded.
  * @returns {AvailableScriptList} The decoded data structure.
  */
-export function _decode_AvailableScriptList(el: _Element) {
+export function _decode_AvailableScriptList(el: _Element): AvailableScriptList {
     if (!_cached_decoder_for_AvailableScriptList) {
         _cached_decoder_for_AvailableScriptList = $._decodeSetOf<ScriptList>(
             () => _decode_ScriptList
@@ -56,7 +56,7 @@ let _cached_encoder_for_AvailableScriptList: $.ASN1Encoder<AvailableScriptList> 
 export function _encode_AvailableScriptList(
     value: AvailableScriptList,
     elGetter: $.ASN1Encoder<AvailableScriptList>
-) {
+): _Element {
     if (!_cached_encoder_for_AvailableScriptList) {
         _cached_encoder_for_AvailableScriptList = $._encodeSetOf<ScriptList>(
             () => _encode_ScriptList,

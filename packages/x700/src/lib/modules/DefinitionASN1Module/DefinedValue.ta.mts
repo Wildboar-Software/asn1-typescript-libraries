@@ -115,7 +115,7 @@ let _cached_decoder_for_DefinedValue: $.ASN1Decoder<DefinedValue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DefinedValue} The decoded data structure.
  */
-export function _decode_DefinedValue(el: _Element) {
+export function _decode_DefinedValue(el: _Element): DefinedValue {
     if (!_cached_decoder_for_DefinedValue) {
         _cached_decoder_for_DefinedValue = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_DefinedValue: $.ASN1Encoder<DefinedValue> | null = null;
 export function _encode_DefinedValue(
     value: DefinedValue,
     elGetter: $.ASN1Encoder<DefinedValue>
-) {
+): _Element {
     if (!_cached_encoder_for_DefinedValue) {
         _cached_encoder_for_DefinedValue = function (
             value: DefinedValue        ): _Element {

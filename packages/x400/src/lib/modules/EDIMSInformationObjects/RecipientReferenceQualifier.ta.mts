@@ -33,7 +33,7 @@ let _cached_decoder_for_RecipientReferenceQualifier: $.ASN1Decoder<RecipientRefe
  * @param {_Element} el The element being decoded.
  * @returns {RecipientReferenceQualifier} The decoded data structure.
  */
-export function _decode_RecipientReferenceQualifier(el: _Element) {
+export function _decode_RecipientReferenceQualifier(el: _Element): RecipientReferenceQualifier {
     if (!_cached_decoder_for_RecipientReferenceQualifier) {
         _cached_decoder_for_RecipientReferenceQualifier =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_RecipientReferenceQualifier: $.ASN1Encoder<RecipientRefe
 export function _encode_RecipientReferenceQualifier(
     value: RecipientReferenceQualifier,
     elGetter: $.ASN1Encoder<RecipientReferenceQualifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientReferenceQualifier) {
         _cached_encoder_for_RecipientReferenceQualifier =
             $._encodeTeletexString;

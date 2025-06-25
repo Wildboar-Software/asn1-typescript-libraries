@@ -478,7 +478,7 @@ let _cached_decoder_for_Heading: $.ASN1Decoder<Heading> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Heading} The decoded data structure.
  */
-export function _decode_Heading(el: _Element) {
+export function _decode_Heading(el: _Element): Heading {
     if (!_cached_decoder_for_Heading) {
         _cached_decoder_for_Heading = function (el: _Element): Heading {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -636,7 +636,7 @@ let _cached_encoder_for_Heading: $.ASN1Encoder<Heading> | null = null;
 export function _encode_Heading(
     value: Heading,
     elGetter: $.ASN1Encoder<Heading>
-) {
+): _Element {
     if (!_cached_encoder_for_Heading) {
         _cached_encoder_for_Heading = function (
             value: Heading        ): _Element {

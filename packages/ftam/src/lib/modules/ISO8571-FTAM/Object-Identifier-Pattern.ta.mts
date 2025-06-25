@@ -126,7 +126,7 @@ let _cached_decoder_for_Object_Identifier_Pattern: $.ASN1Decoder<Object_Identifi
  * @param {_Element} el The element being decoded.
  * @returns {Object_Identifier_Pattern} The decoded data structure.
  */
-export function _decode_Object_Identifier_Pattern(el: _Element) {
+export function _decode_Object_Identifier_Pattern(el: _Element): Object_Identifier_Pattern {
   if (!_cached_decoder_for_Object_Identifier_Pattern) {
     _cached_decoder_for_Object_Identifier_Pattern = function (
       el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_Object_Identifier_Pattern: $.ASN1Encoder<Object_Identifi
 export function _encode_Object_Identifier_Pattern(
   value: Object_Identifier_Pattern,
   elGetter: $.ASN1Encoder<Object_Identifier_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Object_Identifier_Pattern) {
     _cached_encoder_for_Object_Identifier_Pattern = function (
       value: Object_Identifier_Pattern    ): _Element {

@@ -157,7 +157,7 @@ let _cached_decoder_for_ArcControlRequest: $.ASN1Decoder<ArcControlRequest> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ArcControlRequest} The decoded data structure.
  */
-export function _decode_ArcControlRequest(el: _Element) {
+export function _decode_ArcControlRequest(el: _Element): ArcControlRequest {
     if (!_cached_decoder_for_ArcControlRequest) {
         _cached_decoder_for_ArcControlRequest = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_ArcControlRequest: $.ASN1Encoder<ArcControlRequest> | nu
 export function _encode_ArcControlRequest(
     value: ArcControlRequest,
     elGetter: $.ASN1Encoder<ArcControlRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcControlRequest) {
         _cached_encoder_for_ArcControlRequest = function (
             value: ArcControlRequest        ): _Element {

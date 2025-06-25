@@ -32,7 +32,7 @@ let _cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Deco
  */
 export function _decode_MessageAuthenticationCodeAlgorithmIdentifier(
     el: _Element
-) {
+): MessageAuthenticationCodeAlgorithmIdentifier {
     if (!_cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier) {
         _cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -53,7 +53,7 @@ let _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Enco
 export function _encode_MessageAuthenticationCodeAlgorithmIdentifier(
     value: MessageAuthenticationCodeAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<MessageAuthenticationCodeAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier) {
         _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

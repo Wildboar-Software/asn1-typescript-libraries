@@ -122,7 +122,7 @@ let _cached_decoder_for_DeleteResult_delete_result_94: $.ASN1Decoder<DeleteResul
  * @param {_Element} el The element being decoded.
  * @returns {DeleteResult_delete_result_94} The decoded data structure.
  */
-export function _decode_DeleteResult_delete_result_94(el: _Element) {
+export function _decode_DeleteResult_delete_result_94(el: _Element): DeleteResult_delete_result_94 {
     if (!_cached_decoder_for_DeleteResult_delete_result_94) {
         _cached_decoder_for_DeleteResult_delete_result_94 = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_DeleteResult_delete_result_94: $.ASN1Encoder<DeleteResul
 export function _encode_DeleteResult_delete_result_94(
     value: DeleteResult_delete_result_94,
     elGetter: $.ASN1Encoder<DeleteResult_delete_result_94>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteResult_delete_result_94) {
         _cached_encoder_for_DeleteResult_delete_result_94 = function (
             value: DeleteResult_delete_result_94        ): _Element {

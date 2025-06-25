@@ -38,7 +38,7 @@ let _cached_decoder_for_String: $.ASN1Decoder<String> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {String} The decoded data structure.
  */
-export function _decode_String(el: _Element) {
+export function _decode_String(el: _Element): String {
   if (!_cached_decoder_for_String) {
     _cached_decoder_for_String = _decode_XMLCompatibleString;
   }
@@ -56,7 +56,7 @@ let _cached_encoder_for_String: $.ASN1Encoder<String> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The String, encoded as an ASN.1 Element.
  */
-export function _encode_String(value: String, elGetter: $.ASN1Encoder<String>) {
+export function _encode_String(value: String, elGetter: $.ASN1Encoder<String>): _Element {
   if (!_cached_encoder_for_String) {
     _cached_encoder_for_String = _encode_XMLCompatibleString;
   }

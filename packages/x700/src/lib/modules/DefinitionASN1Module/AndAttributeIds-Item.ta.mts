@@ -122,7 +122,7 @@ let _cached_decoder_for_AndAttributeIds_Item: $.ASN1Decoder<AndAttributeIds_Item
  * @param {_Element} el The element being decoded.
  * @returns {AndAttributeIds_Item} The decoded data structure.
  */
-export function _decode_AndAttributeIds_Item(el: _Element) {
+export function _decode_AndAttributeIds_Item(el: _Element): AndAttributeIds_Item {
     if (!_cached_decoder_for_AndAttributeIds_Item) {
         _cached_decoder_for_AndAttributeIds_Item = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_AndAttributeIds_Item: $.ASN1Encoder<AndAttributeIds_Item
 export function _encode_AndAttributeIds_Item(
     value: AndAttributeIds_Item,
     elGetter: $.ASN1Encoder<AndAttributeIds_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AndAttributeIds_Item) {
         _cached_encoder_for_AndAttributeIds_Item = function (
             value: AndAttributeIds_Item        ): _Element {

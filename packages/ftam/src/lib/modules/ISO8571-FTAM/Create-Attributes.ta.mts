@@ -320,7 +320,7 @@ let _cached_decoder_for_Create_Attributes: $.ASN1Decoder<Create_Attributes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {Create_Attributes} The decoded data structure.
  */
-export function _decode_Create_Attributes(el: _Element) {
+export function _decode_Create_Attributes(el: _Element): Create_Attributes {
   if (!_cached_decoder_for_Create_Attributes) {
     _cached_decoder_for_Create_Attributes = $._decode_implicit<Create_Attributes>(
       () =>
@@ -440,7 +440,7 @@ let _cached_encoder_for_Create_Attributes: $.ASN1Encoder<Create_Attributes> | nu
 export function _encode_Create_Attributes(
   value: Create_Attributes,
   elGetter: $.ASN1Encoder<Create_Attributes>
-) {
+): _Element {
   if (!_cached_encoder_for_Create_Attributes) {
     _cached_encoder_for_Create_Attributes = $._encode_implicit(
       _TagClass.application,

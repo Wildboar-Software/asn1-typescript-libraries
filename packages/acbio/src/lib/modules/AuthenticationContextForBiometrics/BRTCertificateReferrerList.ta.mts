@@ -38,7 +38,7 @@ let _cached_decoder_for_BRTCertificateReferrerList: $.ASN1Decoder<BRTCertificate
  * @param {_Element} el The element being decoded.
  * @returns {BRTCertificateReferrerList} The decoded data structure.
  */
-export function _decode_BRTCertificateReferrerList(el: _Element) {
+export function _decode_BRTCertificateReferrerList(el: _Element): BRTCertificateReferrerList {
     if (!_cached_decoder_for_BRTCertificateReferrerList) {
         _cached_decoder_for_BRTCertificateReferrerList = $._decodeSequenceOf<URI>(
             () => _decode_URI
@@ -61,7 +61,7 @@ let _cached_encoder_for_BRTCertificateReferrerList: $.ASN1Encoder<BRTCertificate
 export function _encode_BRTCertificateReferrerList(
     value: BRTCertificateReferrerList,
     elGetter: $.ASN1Encoder<BRTCertificateReferrerList>
-) {
+): _Element {
     if (!_cached_encoder_for_BRTCertificateReferrerList) {
         _cached_encoder_for_BRTCertificateReferrerList = $._encodeSequenceOf<URI>(
             () => _encode_URI,

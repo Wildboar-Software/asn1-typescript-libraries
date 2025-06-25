@@ -113,7 +113,7 @@ let _cached_decoder_for_ECWKTParameters: $.ASN1Decoder<ECWKTParameters> | null =
  * @returns {ECWKTParameters} The decoded data structure.
  */
 export
-function _decode_ECWKTParameters (el: _Element) {
+function _decode_ECWKTParameters (el: _Element): ECWKTParameters {
     if (!_cached_decoder_for_ECWKTParameters) { _cached_decoder_for_ECWKTParameters = function (el: _Element): ECWKTParameters {
     let kdf: OPTIONAL<KeyDerivationFunction>;
     let wrap: OPTIONAL<KeyWrapFunction>;
@@ -145,7 +145,7 @@ let _cached_encoder_for_ECWKTParameters: $.ASN1Encoder<ECWKTParameters> | null =
  * @returns {_Element} The ECWKTParameters, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECWKTParameters (value: ECWKTParameters, elGetter: $.ASN1Encoder<ECWKTParameters>) {
+function _encode_ECWKTParameters (value: ECWKTParameters, elGetter: $.ASN1Encoder<ECWKTParameters>): _Element {
     if (!_cached_encoder_for_ECWKTParameters) { _cached_encoder_for_ECWKTParameters = function (value: ECWKTParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

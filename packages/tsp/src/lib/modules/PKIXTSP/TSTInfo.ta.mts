@@ -260,7 +260,7 @@ let _cached_decoder_for_TSTInfo: $.ASN1Decoder<TSTInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TSTInfo} The decoded data structure.
  */
-export function _decode_TSTInfo(el: _Element) {
+export function _decode_TSTInfo(el: _Element): TSTInfo {
     if (!_cached_decoder_for_TSTInfo) {
         _cached_decoder_for_TSTInfo = function (el: _Element): TSTInfo {
             let version!: TSTInfo_version;
@@ -347,7 +347,7 @@ let _cached_encoder_for_TSTInfo: $.ASN1Encoder<TSTInfo> | null = null;
 export function _encode_TSTInfo(
     value: TSTInfo,
     elGetter: $.ASN1Encoder<TSTInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TSTInfo) {
         _cached_encoder_for_TSTInfo = function (
             value: TSTInfo        ): _Element {

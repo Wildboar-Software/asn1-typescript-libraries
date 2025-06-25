@@ -29,7 +29,7 @@ let _cached_decoder_for_CertReqMessages: $.ASN1Decoder<CertReqMessages> | null =
  * @param {_Element} el The element being decoded.
  * @returns {CertReqMessages} The decoded data structure.
  */
-export function _decode_CertReqMessages(el: _Element) {
+export function _decode_CertReqMessages(el: _Element): CertReqMessages {
     if (!_cached_decoder_for_CertReqMessages) {
         _cached_decoder_for_CertReqMessages = $._decodeSequenceOf<CertReqMsg>(
             () => _decode_CertReqMsg
@@ -52,7 +52,7 @@ let _cached_encoder_for_CertReqMessages: $.ASN1Encoder<CertReqMessages> | null =
 export function _encode_CertReqMessages(
     value: CertReqMessages,
     elGetter: $.ASN1Encoder<CertReqMessages>
-) {
+): _Element {
     if (!_cached_encoder_for_CertReqMessages) {
         _cached_encoder_for_CertReqMessages = $._encodeSequenceOf<CertReqMsg>(
             () => _encode_CertReqMsg,

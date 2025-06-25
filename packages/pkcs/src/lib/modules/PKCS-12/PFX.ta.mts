@@ -136,7 +136,7 @@ let _cached_decoder_for_PFX: $.ASN1Decoder<PFX> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PFX} The decoded data structure.
  */
-export function _decode_PFX(el: _Element) {
+export function _decode_PFX(el: _Element): PFX {
     if (!_cached_decoder_for_PFX) {
         _cached_decoder_for_PFX = function (el: _Element): PFX {
             let version!: PFX_version;
@@ -182,7 +182,7 @@ let _cached_encoder_for_PFX: $.ASN1Encoder<PFX> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PFX, encoded as an ASN.1 Element.
  */
-export function _encode_PFX(value: PFX, elGetter: $.ASN1Encoder<PFX>) {
+export function _encode_PFX(value: PFX, elGetter: $.ASN1Encoder<PFX>): _Element {
     if (!_cached_encoder_for_PFX) {
         _cached_encoder_for_PFX = function (
             value: PFX        ): _Element {

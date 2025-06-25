@@ -38,7 +38,7 @@ let _cached_decoder_for_ManagedObjectAccessHours: $.ASN1Decoder<ManagedObjectAcc
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectAccessHours} The decoded data structure.
  */
-export function _decode_ManagedObjectAccessHours(el: _Element) {
+export function _decode_ManagedObjectAccessHours(el: _Element): ManagedObjectAccessHours {
     if (!_cached_decoder_for_ManagedObjectAccessHours) {
         _cached_decoder_for_ManagedObjectAccessHours = $._decodeSetOf<WeekMask>(
             () => _decode_WeekMask
@@ -61,7 +61,7 @@ let _cached_encoder_for_ManagedObjectAccessHours: $.ASN1Encoder<ManagedObjectAcc
 export function _encode_ManagedObjectAccessHours(
     value: ManagedObjectAccessHours,
     elGetter: $.ASN1Encoder<ManagedObjectAccessHours>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedObjectAccessHours) {
         _cached_encoder_for_ManagedObjectAccessHours = $._encodeSetOf<WeekMask>(
             () => _encode_WeekMask,

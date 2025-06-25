@@ -33,7 +33,7 @@ let _cached_decoder_for_MessageAuthenticationCode: $.ASN1Decoder<MessageAuthenti
  * @returns {MessageAuthenticationCode} The decoded data structure.
  */
 export
-function _decode_MessageAuthenticationCode (el: _Element) {
+function _decode_MessageAuthenticationCode (el: _Element): MessageAuthenticationCode {
     if (!_cached_decoder_for_MessageAuthenticationCode) { _cached_decoder_for_MessageAuthenticationCode = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_MessageAuthenticationCode(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_MessageAuthenticationCode: $.ASN1Encoder<MessageAuthenti
  * @returns {_Element} The MessageAuthenticationCode, encoded as an ASN.1 Element.
  */
 export
-function _encode_MessageAuthenticationCode (value: MessageAuthenticationCode, elGetter: $.ASN1Encoder<MessageAuthenticationCode>) {
+function _encode_MessageAuthenticationCode (value: MessageAuthenticationCode, elGetter: $.ASN1Encoder<MessageAuthenticationCode>): _Element {
     if (!_cached_encoder_for_MessageAuthenticationCode) { _cached_encoder_for_MessageAuthenticationCode = _encode_AlgorithmIdentifier; }
     return _cached_encoder_for_MessageAuthenticationCode(value, elGetter);
 }

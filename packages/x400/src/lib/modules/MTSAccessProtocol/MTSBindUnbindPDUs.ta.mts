@@ -45,7 +45,7 @@ let _cached_decoder_for_MTSBindUnbindPDUs: $.ASN1Decoder<MTSBindUnbindPDUs> | nu
  * @param {_Element} el The element being decoded.
  * @returns {MTSBindUnbindPDUs} The decoded data structure.
  */
-export function _decode_MTSBindUnbindPDUs(el: _Element) {
+export function _decode_MTSBindUnbindPDUs(el: _Element): MTSBindUnbindPDUs {
     if (!_cached_decoder_for_MTSBindUnbindPDUs) {
         _cached_decoder_for_MTSBindUnbindPDUs = $._decode_inextensible_choice<MTSBindUnbindPDUs>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_MTSBindUnbindPDUs: $.ASN1Encoder<MTSBindUnbindPDUs> | nu
 export function _encode_MTSBindUnbindPDUs(
     value: MTSBindUnbindPDUs,
     elGetter: $.ASN1Encoder<MTSBindUnbindPDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_MTSBindUnbindPDUs) {
         _cached_encoder_for_MTSBindUnbindPDUs = $._encode_choice<MTSBindUnbindPDUs>(
             {

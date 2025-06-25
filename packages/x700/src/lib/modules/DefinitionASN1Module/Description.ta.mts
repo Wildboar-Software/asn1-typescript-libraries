@@ -38,7 +38,7 @@ let _cached_decoder_for_Description: $.ASN1Decoder<Description> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Description} The decoded data structure.
  */
-export function _decode_Description(el: _Element) {
+export function _decode_Description(el: _Element): Description {
     if (!_cached_decoder_for_Description) {
         _cached_decoder_for_Description = _decode_TextualRepresentation;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Description: $.ASN1Encoder<Description> | null = null;
 export function _encode_Description(
     value: Description,
     elGetter: $.ASN1Encoder<Description>
-) {
+): _Element {
     if (!_cached_encoder_for_Description) {
         _cached_encoder_for_Description = _encode_TextualRepresentation;
     }

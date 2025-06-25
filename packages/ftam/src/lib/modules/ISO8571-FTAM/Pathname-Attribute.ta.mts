@@ -43,7 +43,7 @@ let _cached_decoder_for_Pathname_Attribute: $.ASN1Decoder<Pathname_Attribute> | 
  * @param {_Element} el The element being decoded.
  * @returns {Pathname_Attribute} The decoded data structure.
  */
-export function _decode_Pathname_Attribute(el: _Element) {
+export function _decode_Pathname_Attribute(el: _Element): Pathname_Attribute {
   if (!_cached_decoder_for_Pathname_Attribute) {
     _cached_decoder_for_Pathname_Attribute = $._decode_inextensible_choice<Pathname_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Pathname_Attribute: $.ASN1Encoder<Pathname_Attribute> | 
 export function _encode_Pathname_Attribute(
   value: Pathname_Attribute,
   elGetter: $.ASN1Encoder<Pathname_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Pathname_Attribute) {
     _cached_encoder_for_Pathname_Attribute = $._encode_choice<Pathname_Attribute>(
       {

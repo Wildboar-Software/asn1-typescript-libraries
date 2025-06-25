@@ -41,7 +41,7 @@ let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix: $.ASN1Dec
  */
 export function _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix(
   el: _Element
-) {
+): ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix {
   if (!_cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix) {
     _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix = $._decode_extensible_choice<ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix>(
       {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix: $.ASN1Enc
 export function _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix(
   value: ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   elGetter: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix>
-) {
+): _Element {
   if (!_cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix) {
     _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix = $._encode_choice<ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix>(
       {

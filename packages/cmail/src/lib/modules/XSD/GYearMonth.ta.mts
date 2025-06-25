@@ -45,7 +45,7 @@ let _cached_decoder_for_GYearMonth: $.ASN1Decoder<GYearMonth> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GYearMonth} The decoded data structure.
  */
-export function _decode_GYearMonth(el: _Element) {
+export function _decode_GYearMonth(el: _Element): GYearMonth {
   if (!_cached_decoder_for_GYearMonth) {
     _cached_decoder_for_GYearMonth = _get_decoder_for_GenericTimeTypeChoice<
       TIME,
@@ -69,7 +69,7 @@ let _cached_encoder_for_GYearMonth: $.ASN1Encoder<GYearMonth> | null = null;
 export function _encode_GYearMonth(
   value: GYearMonth,
   elGetter: $.ASN1Encoder<GYearMonth>
-) {
+): _Element {
   if (!_cached_encoder_for_GYearMonth) {
     _cached_encoder_for_GYearMonth = _get_encoder_for_GenericTimeTypeChoice<
       TIME,

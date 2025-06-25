@@ -219,7 +219,7 @@ let _cached_decoder_for_SignedAndEnvelopedData: $.ASN1Decoder<SignedAndEnveloped
  * @param {_Element} el The element being decoded.
  * @returns {SignedAndEnvelopedData} The decoded data structure.
  */
-export function _decode_SignedAndEnvelopedData(el: _Element) {
+export function _decode_SignedAndEnvelopedData(el: _Element): SignedAndEnvelopedData {
     if (!_cached_decoder_for_SignedAndEnvelopedData) {
         _cached_decoder_for_SignedAndEnvelopedData = function (
             el: _Element
@@ -298,7 +298,7 @@ let _cached_encoder_for_SignedAndEnvelopedData: $.ASN1Encoder<SignedAndEnveloped
 export function _encode_SignedAndEnvelopedData(
     value: SignedAndEnvelopedData,
     elGetter: $.ASN1Encoder<SignedAndEnvelopedData>
-) {
+): _Element {
     if (!_cached_encoder_for_SignedAndEnvelopedData) {
         _cached_encoder_for_SignedAndEnvelopedData = function (
             value: SignedAndEnvelopedData        ): _Element {

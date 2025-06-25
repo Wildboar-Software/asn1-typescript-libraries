@@ -329,7 +329,7 @@ let _cached_decoder_for_OtherMessageDeliveryFields: $.ASN1Decoder<OtherMessageDe
  * @param {_Element} el The element being decoded.
  * @returns {OtherMessageDeliveryFields} The decoded data structure.
  */
-export function _decode_OtherMessageDeliveryFields(el: _Element) {
+export function _decode_OtherMessageDeliveryFields(el: _Element): OtherMessageDeliveryFields {
     if (!_cached_decoder_for_OtherMessageDeliveryFields) {
         _cached_decoder_for_OtherMessageDeliveryFields = function (
             el: _Element
@@ -449,7 +449,7 @@ let _cached_encoder_for_OtherMessageDeliveryFields: $.ASN1Encoder<OtherMessageDe
 export function _encode_OtherMessageDeliveryFields(
     value: OtherMessageDeliveryFields,
     elGetter: $.ASN1Encoder<OtherMessageDeliveryFields>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherMessageDeliveryFields) {
         _cached_encoder_for_OtherMessageDeliveryFields = function (
             value: OtherMessageDeliveryFields        ): _Element {

@@ -29,7 +29,7 @@ let _cached_decoder_for_MarkingPhrase: $.ASN1Decoder<MarkingPhrase> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MarkingPhrase} The decoded data structure.
  */
-export function _decode_MarkingPhrase(el: _Element) {
+export function _decode_MarkingPhrase(el: _Element): MarkingPhrase {
     if (!_cached_decoder_for_MarkingPhrase) {
         _cached_decoder_for_MarkingPhrase = _decode_DirectoryString;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_MarkingPhrase: $.ASN1Encoder<MarkingPhrase> | null = nul
 export function _encode_MarkingPhrase(
     value: MarkingPhrase,
     elGetter: $.ASN1Encoder<MarkingPhrase>
-) {
+): _Element {
     if (!_cached_encoder_for_MarkingPhrase) {
         _cached_encoder_for_MarkingPhrase = _encode_DirectoryString;
     }

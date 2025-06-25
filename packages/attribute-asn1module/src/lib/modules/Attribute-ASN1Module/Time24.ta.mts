@@ -113,7 +113,7 @@ let _cached_decoder_for_Time24: $.ASN1Decoder<Time24> | null = null;
  * @returns {Time24} The decoded data structure.
  */
 export
-function _decode_Time24 (el: _Element) {
+function _decode_Time24 (el: _Element): Time24 {
     if (!_cached_decoder_for_Time24) { _cached_decoder_for_Time24 = function (el: _Element): Time24 {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -144,7 +144,7 @@ let _cached_encoder_for_Time24: $.ASN1Encoder<Time24> | null = null;
  * @returns {_Element} The Time24, encoded as an ASN.1 Element.
  */
 export
-function _encode_Time24 (value: Time24, elGetter: $.ASN1Encoder<Time24>) {
+function _encode_Time24 (value: Time24, elGetter: $.ASN1Encoder<Time24>): _Element {
     if (!_cached_encoder_for_Time24) { _cached_encoder_for_Time24 = function (value: Time24): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

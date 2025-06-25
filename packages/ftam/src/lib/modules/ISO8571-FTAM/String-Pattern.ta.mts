@@ -131,7 +131,7 @@ let _cached_decoder_for_String_Pattern: $.ASN1Decoder<String_Pattern> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {String_Pattern} The decoded data structure.
  */
-export function _decode_String_Pattern(el: _Element) {
+export function _decode_String_Pattern(el: _Element): String_Pattern {
   if (!_cached_decoder_for_String_Pattern) {
     _cached_decoder_for_String_Pattern = function (
       el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_String_Pattern: $.ASN1Encoder<String_Pattern> | null = n
 export function _encode_String_Pattern(
   value: String_Pattern,
   elGetter: $.ASN1Encoder<String_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_String_Pattern) {
     _cached_encoder_for_String_Pattern = function (
       value: String_Pattern    ): _Element {

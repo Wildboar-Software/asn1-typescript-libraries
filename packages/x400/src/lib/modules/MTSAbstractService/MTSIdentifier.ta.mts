@@ -122,7 +122,7 @@ let _cached_decoder_for_MTSIdentifier: $.ASN1Decoder<MTSIdentifier> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {MTSIdentifier} The decoded data structure.
  */
-export function _decode_MTSIdentifier(el: _Element) {
+export function _decode_MTSIdentifier(el: _Element): MTSIdentifier {
     if (!_cached_decoder_for_MTSIdentifier) {
         _cached_decoder_for_MTSIdentifier = $._decode_implicit<MTSIdentifier>(
             () =>
@@ -165,7 +165,7 @@ let _cached_encoder_for_MTSIdentifier: $.ASN1Encoder<MTSIdentifier> | null = nul
 export function _encode_MTSIdentifier(
     value: MTSIdentifier,
     elGetter: $.ASN1Encoder<MTSIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MTSIdentifier) {
         _cached_encoder_for_MTSIdentifier = $._encode_implicit(
             _TagClass.application,

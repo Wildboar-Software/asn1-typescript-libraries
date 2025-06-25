@@ -38,7 +38,7 @@ let _cached_decoder_for_EncTGSRepPart: $.ASN1Decoder<EncTGSRepPart> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {EncTGSRepPart} The decoded data structure.
  */
-export function _decode_EncTGSRepPart(el: _Element) {
+export function _decode_EncTGSRepPart(el: _Element): EncTGSRepPart {
   if (!_cached_decoder_for_EncTGSRepPart) {
     _cached_decoder_for_EncTGSRepPart = $._decode_implicit<EncTGSRepPart>(
       () => _decode_EncKDCRepPart
@@ -61,7 +61,7 @@ let _cached_encoder_for_EncTGSRepPart: $.ASN1Encoder<EncTGSRepPart> | null = nul
 export function _encode_EncTGSRepPart(
   value: EncTGSRepPart,
   elGetter: $.ASN1Encoder<EncTGSRepPart>
-) {
+): _Element {
   if (!_cached_encoder_for_EncTGSRepPart) {
     _cached_encoder_for_EncTGSRepPart = $._encode_implicit(
       _TagClass.application,

@@ -147,7 +147,7 @@ let _cached_decoder_for_DDO: $.ASN1Decoder<DDO> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DDO} The decoded data structure.
  */
-export function _decode_DDO(el: _Element) {
+export function _decode_DDO(el: _Element): DDO {
     if (!_cached_decoder_for_DDO) {
         _cached_decoder_for_DDO = function (el: _Element): DDO {
             let oid!: OBJECT_IDENTIFIER;
@@ -206,7 +206,7 @@ let _cached_encoder_for_DDO: $.ASN1Encoder<DDO> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DDO, encoded as an ASN.1 Element.
  */
-export function _encode_DDO(value: DDO, elGetter: $.ASN1Encoder<DDO>) {
+export function _encode_DDO(value: DDO, elGetter: $.ASN1Encoder<DDO>): _Element {
     if (!_cached_encoder_for_DDO) {
         _cached_encoder_for_DDO = function (
             value: DDO        ): _Element {

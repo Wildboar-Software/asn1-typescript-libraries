@@ -47,7 +47,7 @@ let _cached_decoder_for_Ack: $.ASN1Decoder<Ack> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Ack} The decoded data structure.
  */
-export function _decode_Ack(el: _Element) {
+export function _decode_Ack(el: _Element): Ack {
     if (!_cached_decoder_for_Ack) {
         _cached_decoder_for_Ack = $._decode_inextensible_choice<Ack>({
             'CONTEXT 0': ['ok', $._decodeNull],
@@ -68,7 +68,7 @@ let _cached_encoder_for_Ack: $.ASN1Encoder<Ack> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ack, encoded as an ASN.1 Element.
  */
-export function _encode_Ack(value: Ack, elGetter: $.ASN1Encoder<Ack>) {
+export function _encode_Ack(value: Ack, elGetter: $.ASN1Encoder<Ack>): _Element {
     if (!_cached_encoder_for_Ack) {
         _cached_encoder_for_Ack = $._encode_choice<Ack>(
             {

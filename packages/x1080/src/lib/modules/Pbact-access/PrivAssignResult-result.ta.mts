@@ -41,7 +41,7 @@ let _cached_decoder_for_PrivAssignResult_result: $.ASN1Decoder<PrivAssignResult_
  * @param {_Element} el The element being decoded.
  * @returns {PrivAssignResult_result} The decoded data structure.
  */
-export function _decode_PrivAssignResult_result(el: _Element) {
+export function _decode_PrivAssignResult_result(el: _Element): PrivAssignResult_result {
     if (!_cached_decoder_for_PrivAssignResult_result) {
         _cached_decoder_for_PrivAssignResult_result = $._decode_inextensible_choice<PrivAssignResult_result>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_PrivAssignResult_result: $.ASN1Encoder<PrivAssignResult_
 export function _encode_PrivAssignResult_result(
     value: PrivAssignResult_result,
     elGetter: $.ASN1Encoder<PrivAssignResult_result>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivAssignResult_result) {
         _cached_encoder_for_PrivAssignResult_result = $._encode_choice<PrivAssignResult_result>(
             {

@@ -94,7 +94,7 @@ let _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel: $.ASN1Decoder<BioAP
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_DATA_TYPE_processedLevel} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_DATA_TYPE_processedLevel(el: _Element) {
+export function _decode_BioAPI_BIR_DATA_TYPE_processedLevel(el: _Element): BioAPI_BIR_DATA_TYPE_processedLevel {
   if (!_cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel) {
     _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel =
       $._decodeEnumerated;
@@ -116,7 +116,7 @@ let _cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel: $.ASN1Encoder<BioAP
 export function _encode_BioAPI_BIR_DATA_TYPE_processedLevel(
   value: BioAPI_BIR_DATA_TYPE_processedLevel,
   elGetter: $.ASN1Encoder<BioAPI_BIR_DATA_TYPE_processedLevel>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel) {
     _cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel =
       $._encodeEnumerated;

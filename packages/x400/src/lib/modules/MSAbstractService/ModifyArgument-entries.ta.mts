@@ -42,7 +42,7 @@ let _cached_decoder_for_ModifyArgument_entries: $.ASN1Decoder<ModifyArgument_ent
  * @param {_Element} el The element being decoded.
  * @returns {ModifyArgument_entries} The decoded data structure.
  */
-export function _decode_ModifyArgument_entries(el: _Element) {
+export function _decode_ModifyArgument_entries(el: _Element): ModifyArgument_entries {
     if (!_cached_decoder_for_ModifyArgument_entries) {
         _cached_decoder_for_ModifyArgument_entries = $._decode_inextensible_choice<ModifyArgument_entries>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ModifyArgument_entries: $.ASN1Encoder<ModifyArgument_ent
 export function _encode_ModifyArgument_entries(
     value: ModifyArgument_entries,
     elGetter: $.ASN1Encoder<ModifyArgument_entries>
-) {
+): _Element {
     if (!_cached_encoder_for_ModifyArgument_entries) {
         _cached_encoder_for_ModifyArgument_entries = $._encode_choice<ModifyArgument_entries>(
             {

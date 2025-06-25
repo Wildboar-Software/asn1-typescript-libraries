@@ -174,7 +174,7 @@ let _cached_decoder_for_PerRecipientAutoForwardFields: $.ASN1Decoder<PerRecipien
  * @param {_Element} el The element being decoded.
  * @returns {PerRecipientAutoForwardFields} The decoded data structure.
  */
-export function _decode_PerRecipientAutoForwardFields(el: _Element) {
+export function _decode_PerRecipientAutoForwardFields(el: _Element): PerRecipientAutoForwardFields {
     if (!_cached_decoder_for_PerRecipientAutoForwardFields) {
         _cached_decoder_for_PerRecipientAutoForwardFields = function (
             el: _Element
@@ -239,7 +239,7 @@ let _cached_encoder_for_PerRecipientAutoForwardFields: $.ASN1Encoder<PerRecipien
 export function _encode_PerRecipientAutoForwardFields(
     value: PerRecipientAutoForwardFields,
     elGetter: $.ASN1Encoder<PerRecipientAutoForwardFields>
-) {
+): _Element {
     if (!_cached_encoder_for_PerRecipientAutoForwardFields) {
         _cached_encoder_for_PerRecipientAutoForwardFields = function (
             value: PerRecipientAutoForwardFields        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_NotificationExtensionsField: $.ASN1Decoder<NotificationE
  * @param {_Element} el The element being decoded.
  * @returns {NotificationExtensionsField} The decoded data structure.
  */
-export function _decode_NotificationExtensionsField(el: _Element) {
+export function _decode_NotificationExtensionsField(el: _Element): NotificationExtensionsField {
     if (!_cached_decoder_for_NotificationExtensionsField) {
         _cached_decoder_for_NotificationExtensionsField = $._decodeSetOf<IPMSExtension>(
             () => _decode_IPMSExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_NotificationExtensionsField: $.ASN1Encoder<NotificationE
 export function _encode_NotificationExtensionsField(
     value: NotificationExtensionsField,
     elGetter: $.ASN1Encoder<NotificationExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_NotificationExtensionsField) {
         _cached_encoder_for_NotificationExtensionsField = $._encodeSetOf<IPMSExtension>(
             () => _encode_IPMSExtension,

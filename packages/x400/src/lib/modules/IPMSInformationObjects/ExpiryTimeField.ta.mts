@@ -35,7 +35,7 @@ let _cached_decoder_for_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ExpiryTimeField} The decoded data structure.
  */
-export function _decode_ExpiryTimeField(el: _Element) {
+export function _decode_ExpiryTimeField(el: _Element): ExpiryTimeField {
     if (!_cached_decoder_for_ExpiryTimeField) {
         _cached_decoder_for_ExpiryTimeField = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ExpiryTimeField: $.ASN1Encoder<ExpiryTimeField> | null =
 export function _encode_ExpiryTimeField(
     value: ExpiryTimeField,
     elGetter: $.ASN1Encoder<ExpiryTimeField>
-) {
+): _Element {
     if (!_cached_encoder_for_ExpiryTimeField) {
         _cached_encoder_for_ExpiryTimeField = _encode_Time;
     }

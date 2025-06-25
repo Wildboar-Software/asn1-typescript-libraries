@@ -158,7 +158,7 @@ let _cached_decoder_for_PBMParameter: $.ASN1Decoder<PBMParameter> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PBMParameter} The decoded data structure.
  */
-export function _decode_PBMParameter(el: _Element) {
+export function _decode_PBMParameter(el: _Element): PBMParameter {
   if (!_cached_decoder_for_PBMParameter) {
     _cached_decoder_for_PBMParameter = function (el: _Element): PBMParameter {
       const sequence: _Element[] = el.sequence;
@@ -201,7 +201,7 @@ let _cached_encoder_for_PBMParameter: $.ASN1Encoder<PBMParameter> | null = null;
 export function _encode_PBMParameter(
   value: PBMParameter,
   elGetter: $.ASN1Encoder<PBMParameter>
-) {
+): _Element {
   if (!_cached_encoder_for_PBMParameter) {
     _cached_encoder_for_PBMParameter = function (
       value: PBMParameter    ): _Element {

@@ -36,7 +36,7 @@ let _cached_decoder_for_ProviderObjects: $.ASN1Decoder<ProviderObjects> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ProviderObjects} The decoded data structure.
  */
-export function _decode_ProviderObjects(el: _Element) {
+export function _decode_ProviderObjects(el: _Element): ProviderObjects {
   if (!_cached_decoder_for_ProviderObjects) {
     _cached_decoder_for_ProviderObjects = $._decodeSetOf<BaseManagedObjectId>(
       () => _decode_BaseManagedObjectId
@@ -57,7 +57,7 @@ let _cached_encoder_for_ProviderObjects: $.ASN1Encoder<ProviderObjects> | null =
 export function _encode_ProviderObjects(
   value: ProviderObjects,
   elGetter: $.ASN1Encoder<ProviderObjects>
-) {
+): _Element {
   if (!_cached_encoder_for_ProviderObjects) {
     _cached_encoder_for_ProviderObjects = $._encodeSetOf<BaseManagedObjectId>(
       () => _encode_BaseManagedObjectId,

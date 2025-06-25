@@ -35,7 +35,7 @@ let _cached_decoder_for_DLExemptedRecipients: $.ASN1Decoder<DLExemptedRecipients
  * @param {_Element} el The element being decoded.
  * @returns {DLExemptedRecipients} The decoded data structure.
  */
-export function _decode_DLExemptedRecipients(el: _Element) {
+export function _decode_DLExemptedRecipients(el: _Element): DLExemptedRecipients {
     if (!_cached_decoder_for_DLExemptedRecipients) {
         _cached_decoder_for_DLExemptedRecipients = $._decodeSetOf<ORAddressAndOrDirectoryName>(
             () => _decode_ORAddressAndOrDirectoryName
@@ -56,7 +56,7 @@ let _cached_encoder_for_DLExemptedRecipients: $.ASN1Encoder<DLExemptedRecipients
 export function _encode_DLExemptedRecipients(
     value: DLExemptedRecipients,
     elGetter: $.ASN1Encoder<DLExemptedRecipients>
-) {
+): _Element {
     if (!_cached_encoder_for_DLExemptedRecipients) {
         _cached_encoder_for_DLExemptedRecipients = $._encodeSetOf<ORAddressAndOrDirectoryName>(
             () => _encode_ORAddressAndOrDirectoryName,

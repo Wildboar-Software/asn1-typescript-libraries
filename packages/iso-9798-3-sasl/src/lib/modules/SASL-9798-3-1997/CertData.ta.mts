@@ -50,7 +50,7 @@ let _cached_decoder_for_CertData: $.ASN1Decoder<CertData> | null = null;
  * @returns {CertData} The decoded data structure.
  */
 export
-function _decode_CertData (el: _Element) {
+function _decode_CertData (el: _Element): CertData {
     if (!_cached_decoder_for_CertData) { _cached_decoder_for_CertData = $._decode_extensible_choice<CertData>({
     "UNIVERSAL 17": [ "certificateSet", $._decodeSetOf<Certificate>(() => _decode_Certificate) ],
     "UNIVERSAL 22": [ "certURL", $._decodeIA5String ]
@@ -70,7 +70,7 @@ let _cached_encoder_for_CertData: $.ASN1Encoder<CertData> | null = null;
  * @returns {_Element} The CertData, encoded as an ASN.1 Element.
  */
 export
-function _encode_CertData (value: CertData, elGetter: $.ASN1Encoder<CertData>) {
+function _encode_CertData (value: CertData, elGetter: $.ASN1Encoder<CertData>): _Element {
     if (!_cached_encoder_for_CertData) { _cached_encoder_for_CertData = $._encode_choice<CertData>({
     "certificateSet": $._encodeSetOf<Certificate>(() => _encode_Certificate, $.BER),
     "certURL": $._encodeIA5String,

@@ -35,7 +35,7 @@ let _cached_decoder_for_RegisterErrors: $.ASN1Decoder<RegisterErrors> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RegisterErrors} The decoded data structure.
  */
-export function _decode_RegisterErrors(el: _Element) {
+export function _decode_RegisterErrors(el: _Element): RegisterErrors {
     if (!_cached_decoder_for_RegisterErrors) {
         _cached_decoder_for_RegisterErrors = _decode_AdministrationError;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RegisterErrors: $.ASN1Encoder<RegisterErrors> | null = n
 export function _encode_RegisterErrors(
     value: RegisterErrors,
     elGetter: $.ASN1Encoder<RegisterErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_RegisterErrors) {
         _cached_encoder_for_RegisterErrors = _encode_AdministrationError;
     }

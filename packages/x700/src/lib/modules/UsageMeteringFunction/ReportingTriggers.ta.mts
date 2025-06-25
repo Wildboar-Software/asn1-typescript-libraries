@@ -40,7 +40,7 @@ let _cached_decoder_for_ReportingTriggers: $.ASN1Decoder<ReportingTriggers> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ReportingTriggers} The decoded data structure.
  */
-export function _decode_ReportingTriggers(el: _Element) {
+export function _decode_ReportingTriggers(el: _Element): ReportingTriggers {
     if (!_cached_decoder_for_ReportingTriggers) {
         _cached_decoder_for_ReportingTriggers = $._decodeSetOf<ReportingTriggers_Item>(
             () => _decode_ReportingTriggers_Item
@@ -61,7 +61,7 @@ let _cached_encoder_for_ReportingTriggers: $.ASN1Encoder<ReportingTriggers> | nu
 export function _encode_ReportingTriggers(
     value: ReportingTriggers,
     elGetter: $.ASN1Encoder<ReportingTriggers>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportingTriggers) {
         _cached_encoder_for_ReportingTriggers = $._encodeSetOf<ReportingTriggers_Item>(
             () => _encode_ReportingTriggers_Item,

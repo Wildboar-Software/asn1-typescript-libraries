@@ -38,7 +38,7 @@ let _cached_decoder_for_SDHMSPriority: $.ASN1Decoder<SDHMSPriority> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SDHMSPriority} The decoded data structure.
  */
-export function _decode_SDHMSPriority(el: _Element) {
+export function _decode_SDHMSPriority(el: _Element): SDHMSPriority {
     if (!_cached_decoder_for_SDHMSPriority) {
         _cached_decoder_for_SDHMSPriority = _decode_Integer;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_SDHMSPriority: $.ASN1Encoder<SDHMSPriority> | null = nul
 export function _encode_SDHMSPriority(
     value: SDHMSPriority,
     elGetter: $.ASN1Encoder<SDHMSPriority>
-) {
+): _Element {
     if (!_cached_encoder_for_SDHMSPriority) {
         _cached_encoder_for_SDHMSPriority = _encode_Integer;
     }

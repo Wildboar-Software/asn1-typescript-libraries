@@ -37,7 +37,7 @@ let _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Decoder
  */
 export function _decode_ContentConfidentialityAlgorithmIdentifier(
     el: _Element
-) {
+): ContentConfidentialityAlgorithmIdentifier {
     if (!_cached_decoder_for_ContentConfidentialityAlgorithmIdentifier) {
         _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -56,7 +56,7 @@ let _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Encoder
 export function _encode_ContentConfidentialityAlgorithmIdentifier(
     value: ContentConfidentialityAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ContentConfidentialityAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentConfidentialityAlgorithmIdentifier) {
         _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

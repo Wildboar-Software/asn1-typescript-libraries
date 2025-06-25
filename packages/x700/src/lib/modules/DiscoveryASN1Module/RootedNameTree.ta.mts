@@ -137,7 +137,7 @@ let _cached_decoder_for_RootedNameTree: $.ASN1Decoder<RootedNameTree> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RootedNameTree} The decoded data structure.
  */
-export function _decode_RootedNameTree(el: _Element) {
+export function _decode_RootedNameTree(el: _Element): RootedNameTree {
     if (!_cached_decoder_for_RootedNameTree) {
         _cached_decoder_for_RootedNameTree = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_RootedNameTree: $.ASN1Encoder<RootedNameTree> | null = n
 export function _encode_RootedNameTree(
     value: RootedNameTree,
     elGetter: $.ASN1Encoder<RootedNameTree>
-) {
+): _Element {
     if (!_cached_encoder_for_RootedNameTree) {
         _cached_encoder_for_RootedNameTree = function (
             value: RootedNameTree        ): _Element {

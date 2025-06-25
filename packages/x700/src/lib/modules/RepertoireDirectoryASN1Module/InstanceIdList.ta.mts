@@ -36,7 +36,7 @@ let _cached_decoder_for_InstanceIdList: $.ASN1Decoder<InstanceIdList> | null =
  * @param {_Element} el The element being decoded.
  * @returns {InstanceIdList} The decoded data structure.
  */
-export function _decode_InstanceIdList(el: _Element) {
+export function _decode_InstanceIdList(el: _Element): InstanceIdList {
     if (!_cached_decoder_for_InstanceIdList) {
         _cached_decoder_for_InstanceIdList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -58,7 +58,7 @@ let _cached_encoder_for_InstanceIdList: $.ASN1Encoder<InstanceIdList> | null =
 export function _encode_InstanceIdList(
     value: InstanceIdList,
     elGetter: $.ASN1Encoder<InstanceIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_InstanceIdList) {
         _cached_encoder_for_InstanceIdList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

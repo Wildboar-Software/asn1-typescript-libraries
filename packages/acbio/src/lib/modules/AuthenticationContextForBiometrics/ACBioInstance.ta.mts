@@ -114,7 +114,7 @@ let _cached_decoder_for_ACBioInstance: $.ASN1Decoder<ACBioInstance> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ACBioInstance} The decoded data structure.
  */
-export function _decode_ACBioInstance(el: _Element) {
+export function _decode_ACBioInstance(el: _Element): ACBioInstance {
     if (!_cached_decoder_for_ACBioInstance) {
         _cached_decoder_for_ACBioInstance = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_ACBioInstance: $.ASN1Encoder<ACBioInstance> | null = nul
 export function _encode_ACBioInstance(
     value: ACBioInstance,
     elGetter: $.ASN1Encoder<ACBioInstance>
-) {
+): _Element {
     if (!_cached_encoder_for_ACBioInstance) {
         _cached_encoder_for_ACBioInstance = function (
             value: ACBioInstance        ): _Element {

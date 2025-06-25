@@ -139,7 +139,7 @@ let _cached_decoder_for_NotifyGUISelectEvent_ResponseParams: $.ASN1Decoder<Notif
  * @param {_Element} el The element being decoded.
  * @returns {NotifyGUISelectEvent_ResponseParams} The decoded data structure.
  */
-export function _decode_NotifyGUISelectEvent_ResponseParams(el: _Element) {
+export function _decode_NotifyGUISelectEvent_ResponseParams(el: _Element): NotifyGUISelectEvent_ResponseParams {
   if (!_cached_decoder_for_NotifyGUISelectEvent_ResponseParams) {
     _cached_decoder_for_NotifyGUISelectEvent_ResponseParams = function (
       el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_NotifyGUISelectEvent_ResponseParams: $.ASN1Encoder<Notif
 export function _encode_NotifyGUISelectEvent_ResponseParams(
   value: NotifyGUISelectEvent_ResponseParams,
   elGetter: $.ASN1Encoder<NotifyGUISelectEvent_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_NotifyGUISelectEvent_ResponseParams) {
     _cached_encoder_for_NotifyGUISelectEvent_ResponseParams = function (
       value: NotifyGUISelectEvent_ResponseParams    ): _Element {

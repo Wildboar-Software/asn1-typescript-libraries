@@ -35,7 +35,7 @@ let _cached_decoder_for_PermissibleSecurityContext: $.ASN1Decoder<PermissibleSec
  * @param {_Element} el The element being decoded.
  * @returns {PermissibleSecurityContext} The decoded data structure.
  */
-export function _decode_PermissibleSecurityContext(el: _Element) {
+export function _decode_PermissibleSecurityContext(el: _Element): PermissibleSecurityContext {
     if (!_cached_decoder_for_PermissibleSecurityContext) {
         _cached_decoder_for_PermissibleSecurityContext = $._decodeSetOf<SecurityContext>(
             () => _decode_SecurityContext
@@ -56,7 +56,7 @@ let _cached_encoder_for_PermissibleSecurityContext: $.ASN1Encoder<PermissibleSec
 export function _encode_PermissibleSecurityContext(
     value: PermissibleSecurityContext,
     elGetter: $.ASN1Encoder<PermissibleSecurityContext>
-) {
+): _Element {
     if (!_cached_encoder_for_PermissibleSecurityContext) {
         _cached_encoder_for_PermissibleSecurityContext = $._encodeSetOf<SecurityContext>(
             () => _encode_SecurityContext,

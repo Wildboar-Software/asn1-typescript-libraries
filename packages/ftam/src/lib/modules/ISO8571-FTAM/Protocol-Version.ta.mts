@@ -64,7 +64,7 @@ let _cached_decoder_for_Protocol_Version: $.ASN1Decoder<Protocol_Version> | null
  * @param {_Element} el The element being decoded.
  * @returns {Protocol_Version} The decoded data structure.
  */
-export function _decode_Protocol_Version(el: _Element) {
+export function _decode_Protocol_Version(el: _Element): Protocol_Version {
   if (!_cached_decoder_for_Protocol_Version) {
     _cached_decoder_for_Protocol_Version = $._decode_implicit<Protocol_Version>(
       () => $._decodeBitString
@@ -87,7 +87,7 @@ let _cached_encoder_for_Protocol_Version: $.ASN1Encoder<Protocol_Version> | null
 export function _encode_Protocol_Version(
   value: Protocol_Version,
   elGetter: $.ASN1Encoder<Protocol_Version>
-) {
+): _Element {
   if (!_cached_encoder_for_Protocol_Version) {
     _cached_encoder_for_Protocol_Version = $._encode_implicit(
       _TagClass.context,

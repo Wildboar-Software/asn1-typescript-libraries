@@ -45,7 +45,7 @@ let _cached_decoder_for_ROS_SupplierAS: $.ASN1Decoder<ROS_SupplierAS> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ROS_SupplierAS} The decoded data structure.
  */
-export function _decode_ROS_SupplierAS(el: _Element) {
+export function _decode_ROS_SupplierAS(el: _Element): ROS_SupplierAS {
   if (!_cached_decoder_for_ROS_SupplierAS) {
     _cached_decoder_for_ROS_SupplierAS = _decode_ROS;
   }
@@ -66,7 +66,7 @@ let _cached_encoder_for_ROS_SupplierAS: $.ASN1Encoder<ROS_SupplierAS> | null = n
 export function _encode_ROS_SupplierAS(
   value: ROS_SupplierAS,
   elGetter: $.ASN1Encoder<ROS_SupplierAS>
-) {
+): _Element {
   if (!_cached_encoder_for_ROS_SupplierAS) {
     _cached_encoder_for_ROS_SupplierAS = _encode_ROS;
   }

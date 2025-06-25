@@ -37,7 +37,7 @@ let _cached_decoder_for_Destination: $.ASN1Decoder<Destination> | null = null;
  * @returns {Destination} The decoded data structure.
  */
 export
-function _decode_Destination (el: _Element) {
+function _decode_Destination (el: _Element): Destination {
     if (!_cached_decoder_for_Destination) { _cached_decoder_for_Destination = $._decode_inextensible_choice<Destination>({
     "UNIVERSAL 6": [ "single", _decode_AE_title ],
     "UNIVERSAL 17": [ "multiple", $._decodeSetOf<AE_title>(() => _decode_AE_title) ]
@@ -55,7 +55,7 @@ let _cached_encoder_for_Destination: $.ASN1Encoder<Destination> | null = null;
  * @returns {_Element} The Destination, encoded as an ASN.1 Element.
  */
 export
-function _encode_Destination (value: Destination, elGetter: $.ASN1Encoder<Destination>) {
+function _encode_Destination (value: Destination, elGetter: $.ASN1Encoder<Destination>): _Element {
     if (!_cached_encoder_for_Destination) { _cached_encoder_for_Destination = $._encode_choice<Destination>({
     "single": _encode_AE_title,
     "multiple": $._encodeSetOf<AE_title>(() => _encode_AE_title, $.BER),

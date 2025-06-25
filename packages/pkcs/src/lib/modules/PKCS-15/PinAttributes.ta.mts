@@ -249,7 +249,7 @@ let _cached_decoder_for_PinAttributes: $.ASN1Decoder<PinAttributes> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PinAttributes} The decoded data structure.
  */
-export function _decode_PinAttributes(el: _Element) {
+export function _decode_PinAttributes(el: _Element): PinAttributes {
     if (!_cached_decoder_for_PinAttributes) {
         _cached_decoder_for_PinAttributes = function (
             el: _Element
@@ -337,7 +337,7 @@ let _cached_encoder_for_PinAttributes: $.ASN1Encoder<PinAttributes> | null = nul
 export function _encode_PinAttributes(
     value: PinAttributes,
     elGetter: $.ASN1Encoder<PinAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PinAttributes) {
         _cached_encoder_for_PinAttributes = function (
             value: PinAttributes        ): _Element {

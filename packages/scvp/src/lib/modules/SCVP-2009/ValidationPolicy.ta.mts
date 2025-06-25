@@ -246,7 +246,7 @@ let _cached_decoder_for_ValidationPolicy: $.ASN1Decoder<ValidationPolicy> | null
  * @param {_Element} el The element being decoded.
  * @returns {ValidationPolicy} The decoded data structure.
  */
-export function _decode_ValidationPolicy(el: _Element) {
+export function _decode_ValidationPolicy(el: _Element): ValidationPolicy {
   if (!_cached_decoder_for_ValidationPolicy) {
     _cached_decoder_for_ValidationPolicy = function (
       el: _Element
@@ -350,7 +350,7 @@ let _cached_encoder_for_ValidationPolicy: $.ASN1Encoder<ValidationPolicy> | null
 export function _encode_ValidationPolicy(
   value: ValidationPolicy,
   elGetter: $.ASN1Encoder<ValidationPolicy>
-) {
+): _Element {
   if (!_cached_encoder_for_ValidationPolicy) {
     _cached_encoder_for_ValidationPolicy = function (
       value: ValidationPolicy    ): _Element {

@@ -49,7 +49,7 @@ let _cached_decoder_for_BRTCertificateInformation: $.ASN1Decoder<BRTCertificateI
  * @param {_Element} el The element being decoded.
  * @returns {BRTCertificateInformation} The decoded data structure.
  */
-export function _decode_BRTCertificateInformation(el: _Element) {
+export function _decode_BRTCertificateInformation(el: _Element): BRTCertificateInformation {
     if (!_cached_decoder_for_BRTCertificateInformation) {
         _cached_decoder_for_BRTCertificateInformation = $._decode_inextensible_choice<BRTCertificateInformation>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_BRTCertificateInformation: $.ASN1Encoder<BRTCertificateI
 export function _encode_BRTCertificateInformation(
     value: BRTCertificateInformation,
     elGetter: $.ASN1Encoder<BRTCertificateInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BRTCertificateInformation) {
         _cached_encoder_for_BRTCertificateInformation = $._encode_choice<BRTCertificateInformation>(
             {

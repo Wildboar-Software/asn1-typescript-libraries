@@ -35,7 +35,7 @@ let _cached_decoder_for_ListErrors: $.ASN1Decoder<ListErrors> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ListErrors} The decoded data structure.
  */
-export function _decode_ListErrors(el: _Element) {
+export function _decode_ListErrors(el: _Element): ListErrors {
     if (!_cached_decoder_for_ListErrors) {
         _cached_decoder_for_ListErrors = _decode_SummarizeErrors;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ListErrors: $.ASN1Encoder<ListErrors> | null = null;
 export function _encode_ListErrors(
     value: ListErrors,
     elGetter: $.ASN1Encoder<ListErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_ListErrors) {
         _cached_encoder_for_ListErrors = _encode_SummarizeErrors;
     }

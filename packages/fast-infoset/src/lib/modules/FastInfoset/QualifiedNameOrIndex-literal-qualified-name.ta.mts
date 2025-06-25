@@ -131,7 +131,7 @@ let _cached_decoder_for_QualifiedNameOrIndex_literal_qualified_name: $.ASN1Decod
  */
 export function _decode_QualifiedNameOrIndex_literal_qualified_name(
   el: _Element
-) {
+): QualifiedNameOrIndex_literal_qualified_name {
   if (!_cached_decoder_for_QualifiedNameOrIndex_literal_qualified_name) {
     _cached_decoder_for_QualifiedNameOrIndex_literal_qualified_name = function (
       el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_QualifiedNameOrIndex_literal_qualified_name: $.ASN1Encod
 export function _encode_QualifiedNameOrIndex_literal_qualified_name(
   value: QualifiedNameOrIndex_literal_qualified_name,
   elGetter: $.ASN1Encoder<QualifiedNameOrIndex_literal_qualified_name>
-) {
+): _Element {
   if (!_cached_encoder_for_QualifiedNameOrIndex_literal_qualified_name) {
     _cached_encoder_for_QualifiedNameOrIndex_literal_qualified_name = function (
       value: QualifiedNameOrIndex_literal_qualified_name    ): _Element {

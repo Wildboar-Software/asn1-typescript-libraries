@@ -107,7 +107,7 @@ let _cached_decoder_for_UnlinkCallParams: $.ASN1Decoder<UnlinkCallParams> | null
  * @param {_Element} el The element being decoded.
  * @returns {UnlinkCallParams} The decoded data structure.
  */
-export function _decode_UnlinkCallParams(el: _Element) {
+export function _decode_UnlinkCallParams(el: _Element): UnlinkCallParams {
   if (!_cached_decoder_for_UnlinkCallParams) {
     _cached_decoder_for_UnlinkCallParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_UnlinkCallParams: $.ASN1Encoder<UnlinkCallParams> | null
 export function _encode_UnlinkCallParams(
   value: UnlinkCallParams,
   elGetter: $.ASN1Encoder<UnlinkCallParams>
-) {
+): _Element {
   if (!_cached_encoder_for_UnlinkCallParams) {
     _cached_encoder_for_UnlinkCallParams = function (
       value: UnlinkCallParams    ): _Element {

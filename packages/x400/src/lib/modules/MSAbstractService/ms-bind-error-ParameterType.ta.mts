@@ -45,7 +45,7 @@ let _cached_decoder_for_ms_bind_error_ParameterType: $.ASN1Decoder<ms_bind_error
  * @param {_Element} el The element being decoded.
  * @returns {ms_bind_error_ParameterType} The decoded data structure.
  */
-export function _decode_ms_bind_error_ParameterType(el: _Element) {
+export function _decode_ms_bind_error_ParameterType(el: _Element): ms_bind_error_ParameterType {
     if (!_cached_decoder_for_ms_bind_error_ParameterType) {
         _cached_decoder_for_ms_bind_error_ParameterType = $._decode_inextensible_choice<ms_bind_error_ParameterType>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_ms_bind_error_ParameterType: $.ASN1Encoder<ms_bind_error
 export function _encode_ms_bind_error_ParameterType(
     value: ms_bind_error_ParameterType,
     elGetter: $.ASN1Encoder<ms_bind_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_ms_bind_error_ParameterType) {
         _cached_encoder_for_ms_bind_error_ParameterType = $._encode_choice<ms_bind_error_ParameterType>(
             {

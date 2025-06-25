@@ -37,7 +37,7 @@ let _cached_decoder_for_Date: $.ASN1Decoder<Date> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Date} The decoded data structure.
  */
-export function _decode_Date(el: _Element) {
+export function _decode_Date(el: _Element): Date {
     if (!_cached_decoder_for_Date) {
         _cached_decoder_for_Date = $._decode_inextensible_choice<Date>({
             'UNIVERSAL 24': ['time', $._decodeGeneralizedTime],
@@ -56,7 +56,7 @@ let _cached_encoder_for_Date: $.ASN1Encoder<Date> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Date, encoded as an ASN.1 Element.
  */
-export function _encode_Date(value: Date, elGetter: $.ASN1Encoder<Date>) {
+export function _encode_Date(value: Date, elGetter: $.ASN1Encoder<Date>): _Element {
     if (!_cached_encoder_for_Date) {
         _cached_encoder_for_Date = $._encode_choice<Date>(
             {

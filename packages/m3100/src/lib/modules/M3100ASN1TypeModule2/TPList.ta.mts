@@ -38,7 +38,7 @@ let _cached_decoder_for_TPList: $.ASN1Decoder<TPList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TPList} The decoded data structure.
  */
-export function _decode_TPList(el: _Element) {
+export function _decode_TPList(el: _Element): TPList {
     if (!_cached_decoder_for_TPList) {
         _cached_decoder_for_TPList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -58,7 +58,7 @@ let _cached_encoder_for_TPList: $.ASN1Encoder<TPList> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TPList, encoded as an ASN.1 Element.
  */
-export function _encode_TPList(value: TPList, elGetter: $.ASN1Encoder<TPList>) {
+export function _encode_TPList(value: TPList, elGetter: $.ASN1Encoder<TPList>): _Element {
     if (!_cached_encoder_for_TPList) {
         _cached_encoder_for_TPList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

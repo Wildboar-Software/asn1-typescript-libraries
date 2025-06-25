@@ -39,7 +39,7 @@ let _cached_decoder_for_BackUpRelationshipObject: $.ASN1Decoder<BackUpRelationsh
  * @returns {BackUpRelationshipObject} The decoded data structure.
  */
 export
-function _decode_BackUpRelationshipObject (el: _Element) {
+function _decode_BackUpRelationshipObject (el: _Element): BackUpRelationshipObject {
     if (!_cached_decoder_for_BackUpRelationshipObject) { _cached_decoder_for_BackUpRelationshipObject = $._decode_inextensible_choice<BackUpRelationshipObject>({
     "CONTEXT 2": [ "objectName", _decode_ObjectInstance ],
     "CONTEXT 3": [ "objectName", _decode_ObjectInstance ],
@@ -59,7 +59,7 @@ let _cached_encoder_for_BackUpRelationshipObject: $.ASN1Encoder<BackUpRelationsh
  * @returns {_Element} The BackUpRelationshipObject, encoded as an ASN.1 Element.
  */
 export
-function _encode_BackUpRelationshipObject (value: BackUpRelationshipObject, elGetter: $.ASN1Encoder<BackUpRelationshipObject>) {
+function _encode_BackUpRelationshipObject (value: BackUpRelationshipObject, elGetter: $.ASN1Encoder<BackUpRelationshipObject>): _Element {
     if (!_cached_encoder_for_BackUpRelationshipObject) { _cached_encoder_for_BackUpRelationshipObject = $._encode_choice<BackUpRelationshipObject>({
     "objectName": _encode_ObjectInstance,
     "noObject": $._encodeNull,

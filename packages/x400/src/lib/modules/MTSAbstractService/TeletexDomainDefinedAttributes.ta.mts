@@ -37,7 +37,7 @@ let _cached_decoder_for_TeletexDomainDefinedAttributes: $.ASN1Decoder<TeletexDom
  * @param {_Element} el The element being decoded.
  * @returns {TeletexDomainDefinedAttributes} The decoded data structure.
  */
-export function _decode_TeletexDomainDefinedAttributes(el: _Element) {
+export function _decode_TeletexDomainDefinedAttributes(el: _Element): TeletexDomainDefinedAttributes {
     if (!_cached_decoder_for_TeletexDomainDefinedAttributes) {
         _cached_decoder_for_TeletexDomainDefinedAttributes = $._decodeSequenceOf<TeletexDomainDefinedAttribute>(
             () => _decode_TeletexDomainDefinedAttribute
@@ -58,7 +58,7 @@ let _cached_encoder_for_TeletexDomainDefinedAttributes: $.ASN1Encoder<TeletexDom
 export function _encode_TeletexDomainDefinedAttributes(
     value: TeletexDomainDefinedAttributes,
     elGetter: $.ASN1Encoder<TeletexDomainDefinedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexDomainDefinedAttributes) {
         _cached_encoder_for_TeletexDomainDefinedAttributes = $._encodeSequenceOf<TeletexDomainDefinedAttribute>(
             () => _encode_TeletexDomainDefinedAttribute,

@@ -37,7 +37,7 @@ let _cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier: $.ASN1Dec
  */
 export function _decode_ReportOriginAuthenticationAlgorithmIdentifier(
     el: _Element
-) {
+): ReportOriginAuthenticationAlgorithmIdentifier {
     if (!_cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier) {
         _cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier: $.ASN1Enc
 export function _encode_ReportOriginAuthenticationAlgorithmIdentifier(
     value: ReportOriginAuthenticationAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ReportOriginAuthenticationAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier) {
         _cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

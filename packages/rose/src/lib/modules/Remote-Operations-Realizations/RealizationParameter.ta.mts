@@ -140,7 +140,7 @@ let _cached_decoder_for_RealizationParameter: $.ASN1Decoder<RealizationParameter
  * @param {_Element} el The element being decoded.
  * @returns {RealizationParameter} The decoded data structure.
  */
-export function _decode_RealizationParameter(el: _Element) {
+export function _decode_RealizationParameter(el: _Element): RealizationParameter {
   if (!_cached_decoder_for_RealizationParameter) {
     _cached_decoder_for_RealizationParameter = function (
       el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_RealizationParameter: $.ASN1Encoder<RealizationParameter
 export function _encode_RealizationParameter(
   value: RealizationParameter,
   elGetter: $.ASN1Encoder<RealizationParameter>
-) {
+): _Element {
   if (!_cached_encoder_for_RealizationParameter) {
     _cached_encoder_for_RealizationParameter = function (
       value: RealizationParameter    ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_TriggerTimes: $.ASN1Decoder<TriggerTimes> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TriggerTimes} The decoded data structure.
  */
-export function _decode_TriggerTimes(el: _Element) {
+export function _decode_TriggerTimes(el: _Element): TriggerTimes {
     if (!_cached_decoder_for_TriggerTimes) {
         _cached_decoder_for_TriggerTimes = $._decodeSetOf<Time24Wps>(
             () => _decode_Time24Wps
@@ -56,7 +56,7 @@ let _cached_encoder_for_TriggerTimes: $.ASN1Encoder<TriggerTimes> | null = null;
 export function _encode_TriggerTimes(
     value: TriggerTimes,
     elGetter: $.ASN1Encoder<TriggerTimes>
-) {
+): _Element {
     if (!_cached_encoder_for_TriggerTimes) {
         _cached_encoder_for_TriggerTimes = $._encodeSetOf<Time24Wps>(
             () => _encode_Time24Wps,

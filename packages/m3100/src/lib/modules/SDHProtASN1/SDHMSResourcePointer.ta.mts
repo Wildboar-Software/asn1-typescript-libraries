@@ -42,7 +42,7 @@ let _cached_decoder_for_SDHMSResourcePointer: $.ASN1Decoder<SDHMSResourcePointer
  * @param {_Element} el The element being decoded.
  * @returns {SDHMSResourcePointer} The decoded data structure.
  */
-export function _decode_SDHMSResourcePointer(el: _Element) {
+export function _decode_SDHMSResourcePointer(el: _Element): SDHMSResourcePointer {
     if (!_cached_decoder_for_SDHMSResourcePointer) {
         _cached_decoder_for_SDHMSResourcePointer = _decode_ResourcePointer;
     }
@@ -63,7 +63,7 @@ let _cached_encoder_for_SDHMSResourcePointer: $.ASN1Encoder<SDHMSResourcePointer
 export function _encode_SDHMSResourcePointer(
     value: SDHMSResourcePointer,
     elGetter: $.ASN1Encoder<SDHMSResourcePointer>
-) {
+): _Element {
     if (!_cached_encoder_for_SDHMSResourcePointer) {
         _cached_encoder_for_SDHMSResourcePointer = _encode_ResourcePointer;
     }

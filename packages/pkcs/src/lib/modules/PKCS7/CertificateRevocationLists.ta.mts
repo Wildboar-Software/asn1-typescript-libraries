@@ -30,7 +30,7 @@ let _cached_decoder_for_CertificateRevocationLists: $.ASN1Decoder<CertificateRev
  * @param {_Element} el The element being decoded.
  * @returns {CertificateRevocationLists} The decoded data structure.
  */
-export function _decode_CertificateRevocationLists(el: _Element) {
+export function _decode_CertificateRevocationLists(el: _Element): CertificateRevocationLists {
     if (!_cached_decoder_for_CertificateRevocationLists) {
         _cached_decoder_for_CertificateRevocationLists = $._decodeSetOf<CertificateList>(
             () => _decode_CertificateList
@@ -53,7 +53,7 @@ let _cached_encoder_for_CertificateRevocationLists: $.ASN1Encoder<CertificateRev
 export function _encode_CertificateRevocationLists(
     value: CertificateRevocationLists,
     elGetter: $.ASN1Encoder<CertificateRevocationLists>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificateRevocationLists) {
         _cached_encoder_for_CertificateRevocationLists = $._encodeSetOf<CertificateList>(
             () => _encode_CertificateList,

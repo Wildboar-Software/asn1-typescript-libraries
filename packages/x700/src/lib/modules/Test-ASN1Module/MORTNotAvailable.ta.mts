@@ -35,7 +35,7 @@ let _cached_decoder_for_MORTNotAvailable: $.ASN1Decoder<MORTNotAvailable> | null
  * @param {_Element} el The element being decoded.
  * @returns {MORTNotAvailable} The decoded data structure.
  */
-export function _decode_MORTNotAvailable(el: _Element) {
+export function _decode_MORTNotAvailable(el: _Element): MORTNotAvailable {
     if (!_cached_decoder_for_MORTNotAvailable) {
         _cached_decoder_for_MORTNotAvailable = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_MORTNotAvailable: $.ASN1Encoder<MORTNotAvailable> | null
 export function _encode_MORTNotAvailable(
     value: MORTNotAvailable,
     elGetter: $.ASN1Encoder<MORTNotAvailable>
-) {
+): _Element {
     if (!_cached_encoder_for_MORTNotAvailable) {
         _cached_encoder_for_MORTNotAvailable = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

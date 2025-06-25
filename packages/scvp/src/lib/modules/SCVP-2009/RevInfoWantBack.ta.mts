@@ -120,7 +120,7 @@ let _cached_decoder_for_RevInfoWantBack: $.ASN1Decoder<RevInfoWantBack> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RevInfoWantBack} The decoded data structure.
  */
-export function _decode_RevInfoWantBack(el: _Element) {
+export function _decode_RevInfoWantBack(el: _Element): RevInfoWantBack {
   if (!_cached_decoder_for_RevInfoWantBack) {
     _cached_decoder_for_RevInfoWantBack = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_RevInfoWantBack: $.ASN1Encoder<RevInfoWantBack> | null =
 export function _encode_RevInfoWantBack(
   value: RevInfoWantBack,
   elGetter: $.ASN1Encoder<RevInfoWantBack>
-) {
+): _Element {
   if (!_cached_encoder_for_RevInfoWantBack) {
     _cached_encoder_for_RevInfoWantBack = function (
       value: RevInfoWantBack    ): _Element {

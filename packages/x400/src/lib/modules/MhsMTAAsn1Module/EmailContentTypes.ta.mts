@@ -35,7 +35,7 @@ let _cached_decoder_for_EmailContentTypes: $.ASN1Decoder<EmailContentTypes> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EmailContentTypes} The decoded data structure.
  */
-export function _decode_EmailContentTypes(el: _Element) {
+export function _decode_EmailContentTypes(el: _Element): EmailContentTypes {
     if (!_cached_decoder_for_EmailContentTypes) {
         _cached_decoder_for_EmailContentTypes = $._decodeSetOf<EMailContentType>(
             () => _decode_EMailContentType
@@ -56,7 +56,7 @@ let _cached_encoder_for_EmailContentTypes: $.ASN1Encoder<EmailContentTypes> | nu
 export function _encode_EmailContentTypes(
     value: EmailContentTypes,
     elGetter: $.ASN1Encoder<EmailContentTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_EmailContentTypes) {
         _cached_encoder_for_EmailContentTypes = $._encodeSetOf<EMailContentType>(
             () => _encode_EMailContentType,

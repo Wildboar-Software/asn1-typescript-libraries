@@ -261,7 +261,7 @@ let _cached_decoder_for_SecurityAlarmInfo: $.ASN1Decoder<SecurityAlarmInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SecurityAlarmInfo} The decoded data structure.
  */
-export function _decode_SecurityAlarmInfo(el: _Element) {
+export function _decode_SecurityAlarmInfo(el: _Element): SecurityAlarmInfo {
     if (!_cached_decoder_for_SecurityAlarmInfo) {
         _cached_decoder_for_SecurityAlarmInfo = function (
             el: _Element
@@ -346,7 +346,7 @@ let _cached_encoder_for_SecurityAlarmInfo: $.ASN1Encoder<SecurityAlarmInfo> | nu
 export function _encode_SecurityAlarmInfo(
     value: SecurityAlarmInfo,
     elGetter: $.ASN1Encoder<SecurityAlarmInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityAlarmInfo) {
         _cached_encoder_for_SecurityAlarmInfo = function (
             value: SecurityAlarmInfo        ): _Element {

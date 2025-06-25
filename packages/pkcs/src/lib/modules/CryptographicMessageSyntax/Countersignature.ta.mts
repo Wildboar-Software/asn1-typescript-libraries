@@ -29,7 +29,7 @@ let _cached_decoder_for_Countersignature: $.ASN1Decoder<Countersignature> | null
  * @param {_Element} el The element being decoded.
  * @returns {Countersignature} The decoded data structure.
  */
-export function _decode_Countersignature(el: _Element) {
+export function _decode_Countersignature(el: _Element): Countersignature {
     if (!_cached_decoder_for_Countersignature) {
         _cached_decoder_for_Countersignature = _decode_SignerInfo;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_Countersignature: $.ASN1Encoder<Countersignature> | null
 export function _encode_Countersignature(
     value: Countersignature,
     elGetter: $.ASN1Encoder<Countersignature>
-) {
+): _Element {
     if (!_cached_encoder_for_Countersignature) {
         _cached_encoder_for_Countersignature = _encode_SignerInfo;
     }

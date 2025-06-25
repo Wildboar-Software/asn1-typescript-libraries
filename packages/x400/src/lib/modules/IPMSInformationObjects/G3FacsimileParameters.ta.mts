@@ -119,7 +119,7 @@ let _cached_decoder_for_G3FacsimileParameters: $.ASN1Decoder<G3FacsimileParamete
  * @param {_Element} el The element being decoded.
  * @returns {G3FacsimileParameters} The decoded data structure.
  */
-export function _decode_G3FacsimileParameters(el: _Element) {
+export function _decode_G3FacsimileParameters(el: _Element): G3FacsimileParameters {
     if (!_cached_decoder_for_G3FacsimileParameters) {
         _cached_decoder_for_G3FacsimileParameters = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_G3FacsimileParameters: $.ASN1Encoder<G3FacsimileParamete
 export function _encode_G3FacsimileParameters(
     value: G3FacsimileParameters,
     elGetter: $.ASN1Encoder<G3FacsimileParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_G3FacsimileParameters) {
         _cached_encoder_for_G3FacsimileParameters = function (
             value: G3FacsimileParameters        ): _Element {

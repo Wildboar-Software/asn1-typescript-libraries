@@ -42,7 +42,7 @@ let _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod: $.ASN1Decoder<Connec
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityTestInfo_timeoutPeriod} The decoded data structure.
  */
-export function _decode_ConnectivityTestInfo_timeoutPeriod(el: _Element) {
+export function _decode_ConnectivityTestInfo_timeoutPeriod(el: _Element): ConnectivityTestInfo_timeoutPeriod {
     if (!_cached_decoder_for_ConnectivityTestInfo_timeoutPeriod) {
         _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod = $._decode_inextensible_choice<ConnectivityTestInfo_timeoutPeriod>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_ConnectivityTestInfo_timeoutPeriod: $.ASN1Encoder<Connec
 export function _encode_ConnectivityTestInfo_timeoutPeriod(
     value: ConnectivityTestInfo_timeoutPeriod,
     elGetter: $.ASN1Encoder<ConnectivityTestInfo_timeoutPeriod>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityTestInfo_timeoutPeriod) {
         _cached_encoder_for_ConnectivityTestInfo_timeoutPeriod = $._encode_choice<ConnectivityTestInfo_timeoutPeriod>(
             {

@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginalMessageToken: $.ASN1Decoder<OriginalMessageToken
  * @param {_Element} el The element being decoded.
  * @returns {OriginalMessageToken} The decoded data structure.
  */
-export function _decode_OriginalMessageToken(el: _Element) {
+export function _decode_OriginalMessageToken(el: _Element): OriginalMessageToken {
     if (!_cached_decoder_for_OriginalMessageToken) {
         _cached_decoder_for_OriginalMessageToken = _decode_MessageToken;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginalMessageToken: $.ASN1Encoder<OriginalMessageToken
 export function _encode_OriginalMessageToken(
     value: OriginalMessageToken,
     elGetter: $.ASN1Encoder<OriginalMessageToken>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginalMessageToken) {
         _cached_encoder_for_OriginalMessageToken = _encode_MessageToken;
     }

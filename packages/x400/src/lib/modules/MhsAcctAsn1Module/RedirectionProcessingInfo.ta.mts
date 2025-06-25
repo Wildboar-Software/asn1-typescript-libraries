@@ -147,7 +147,7 @@ let _cached_decoder_for_RedirectionProcessingInfo: $.ASN1Decoder<RedirectionProc
  * @param {_Element} el The element being decoded.
  * @returns {RedirectionProcessingInfo} The decoded data structure.
  */
-export function _decode_RedirectionProcessingInfo(el: _Element) {
+export function _decode_RedirectionProcessingInfo(el: _Element): RedirectionProcessingInfo {
     if (!_cached_decoder_for_RedirectionProcessingInfo) {
         _cached_decoder_for_RedirectionProcessingInfo = function (
             el: _Element
@@ -204,7 +204,7 @@ let _cached_encoder_for_RedirectionProcessingInfo: $.ASN1Encoder<RedirectionProc
 export function _encode_RedirectionProcessingInfo(
     value: RedirectionProcessingInfo,
     elGetter: $.ASN1Encoder<RedirectionProcessingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RedirectionProcessingInfo) {
         _cached_encoder_for_RedirectionProcessingInfo = function (
             value: RedirectionProcessingInfo        ): _Element {

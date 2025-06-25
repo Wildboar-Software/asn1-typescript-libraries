@@ -72,7 +72,7 @@ let _cached_decoder_for_RoutingAdvice: $.ASN1Decoder<RoutingAdvice> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RoutingAdvice} The decoded data structure.
  */
-export function _decode_RoutingAdvice(el: _Element) {
+export function _decode_RoutingAdvice(el: _Element): RoutingAdvice {
     if (!_cached_decoder_for_RoutingAdvice) {
         _cached_decoder_for_RoutingAdvice = $._decode_extensible_choice<RoutingAdvice>(
             {
@@ -124,7 +124,7 @@ let _cached_encoder_for_RoutingAdvice: $.ASN1Encoder<RoutingAdvice> | null = nul
 export function _encode_RoutingAdvice(
     value: RoutingAdvice,
     elGetter: $.ASN1Encoder<RoutingAdvice>
-) {
+): _Element {
     if (!_cached_encoder_for_RoutingAdvice) {
         _cached_encoder_for_RoutingAdvice = $._encode_choice<RoutingAdvice>(
             {

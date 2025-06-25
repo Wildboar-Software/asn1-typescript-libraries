@@ -121,7 +121,7 @@ let _cached_decoder_for_MessageGroupErrorParameter: $.ASN1Decoder<MessageGroupEr
  * @param {_Element} el The element being decoded.
  * @returns {MessageGroupErrorParameter} The decoded data structure.
  */
-export function _decode_MessageGroupErrorParameter(el: _Element) {
+export function _decode_MessageGroupErrorParameter(el: _Element): MessageGroupErrorParameter {
     if (!_cached_decoder_for_MessageGroupErrorParameter) {
         _cached_decoder_for_MessageGroupErrorParameter = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_MessageGroupErrorParameter: $.ASN1Encoder<MessageGroupEr
 export function _encode_MessageGroupErrorParameter(
     value: MessageGroupErrorParameter,
     elGetter: $.ASN1Encoder<MessageGroupErrorParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageGroupErrorParameter) {
         _cached_encoder_for_MessageGroupErrorParameter = function (
             value: MessageGroupErrorParameter        ): _Element {

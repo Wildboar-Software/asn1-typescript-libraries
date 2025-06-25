@@ -38,7 +38,7 @@ let _cached_decoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Decoder<AD_MANDATORY_FOR_KDC
  * @param {_Element} el The element being decoded.
  * @returns {AD_MANDATORY_FOR_KDC} The decoded data structure.
  */
-export function _decode_AD_MANDATORY_FOR_KDC(el: _Element) {
+export function _decode_AD_MANDATORY_FOR_KDC(el: _Element): AD_MANDATORY_FOR_KDC {
   if (!_cached_decoder_for_AD_MANDATORY_FOR_KDC) {
     _cached_decoder_for_AD_MANDATORY_FOR_KDC = _decode_AuthorizationData;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Encoder<AD_MANDATORY_FOR_KDC
 export function _encode_AD_MANDATORY_FOR_KDC(
   value: AD_MANDATORY_FOR_KDC,
   elGetter: $.ASN1Encoder<AD_MANDATORY_FOR_KDC>
-) {
+): _Element {
   if (!_cached_encoder_for_AD_MANDATORY_FOR_KDC) {
     _cached_encoder_for_AD_MANDATORY_FOR_KDC = _encode_AuthorizationData;
   }

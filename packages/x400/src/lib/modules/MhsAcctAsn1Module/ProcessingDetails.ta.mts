@@ -35,7 +35,7 @@ let _cached_decoder_for_ProcessingDetails: $.ASN1Decoder<ProcessingDetails> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ProcessingDetails} The decoded data structure.
  */
-export function _decode_ProcessingDetails(el: _Element) {
+export function _decode_ProcessingDetails(el: _Element): ProcessingDetails {
     if (!_cached_decoder_for_ProcessingDetails) {
         _cached_decoder_for_ProcessingDetails = $._decodeSequenceOf<ProcessingDetail>(
             () => _decode_ProcessingDetail
@@ -56,7 +56,7 @@ let _cached_encoder_for_ProcessingDetails: $.ASN1Encoder<ProcessingDetails> | nu
 export function _encode_ProcessingDetails(
     value: ProcessingDetails,
     elGetter: $.ASN1Encoder<ProcessingDetails>
-) {
+): _Element {
     if (!_cached_encoder_for_ProcessingDetails) {
         _cached_encoder_for_ProcessingDetails = $._encodeSequenceOf<ProcessingDetail>(
             () => _encode_ProcessingDetail,

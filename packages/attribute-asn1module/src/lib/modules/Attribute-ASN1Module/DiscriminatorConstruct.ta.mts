@@ -34,7 +34,7 @@ let _cached_decoder_for_DiscriminatorConstruct: $.ASN1Decoder<DiscriminatorConst
  * @returns {DiscriminatorConstruct} The decoded data structure.
  */
 export
-function _decode_DiscriminatorConstruct (el: _Element) {
+function _decode_DiscriminatorConstruct (el: _Element): DiscriminatorConstruct {
     if (!_cached_decoder_for_DiscriminatorConstruct) { _cached_decoder_for_DiscriminatorConstruct = _decode_CMISFilter; }
     return _cached_decoder_for_DiscriminatorConstruct(el);
 }
@@ -49,7 +49,7 @@ let _cached_encoder_for_DiscriminatorConstruct: $.ASN1Encoder<DiscriminatorConst
  * @returns {_Element} The DiscriminatorConstruct, encoded as an ASN.1 Element.
  */
 export
-function _encode_DiscriminatorConstruct (value: DiscriminatorConstruct, elGetter: $.ASN1Encoder<DiscriminatorConstruct>) {
+function _encode_DiscriminatorConstruct (value: DiscriminatorConstruct, elGetter: $.ASN1Encoder<DiscriminatorConstruct>): _Element {
     if (!_cached_encoder_for_DiscriminatorConstruct) { _cached_encoder_for_DiscriminatorConstruct = _encode_CMISFilter; }
     return _cached_encoder_for_DiscriminatorConstruct(value, elGetter);
 }

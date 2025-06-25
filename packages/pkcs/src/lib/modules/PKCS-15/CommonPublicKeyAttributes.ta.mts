@@ -127,7 +127,7 @@ let _cached_decoder_for_CommonPublicKeyAttributes: $.ASN1Decoder<CommonPublicKey
  * @param {_Element} el The element being decoded.
  * @returns {CommonPublicKeyAttributes} The decoded data structure.
  */
-export function _decode_CommonPublicKeyAttributes(el: _Element) {
+export function _decode_CommonPublicKeyAttributes(el: _Element): CommonPublicKeyAttributes {
     if (!_cached_decoder_for_CommonPublicKeyAttributes) {
         _cached_decoder_for_CommonPublicKeyAttributes = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_CommonPublicKeyAttributes: $.ASN1Encoder<CommonPublicKey
 export function _encode_CommonPublicKeyAttributes(
     value: CommonPublicKeyAttributes,
     elGetter: $.ASN1Encoder<CommonPublicKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonPublicKeyAttributes) {
         _cached_encoder_for_CommonPublicKeyAttributes = function (
             value: CommonPublicKeyAttributes        ): _Element {

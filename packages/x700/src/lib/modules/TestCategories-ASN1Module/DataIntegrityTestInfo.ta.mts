@@ -35,7 +35,7 @@ let _cached_decoder_for_DataIntegrityTestInfo: $.ASN1Decoder<DataIntegrityTestIn
  * @param {_Element} el The element being decoded.
  * @returns {DataIntegrityTestInfo} The decoded data structure.
  */
-export function _decode_DataIntegrityTestInfo(el: _Element) {
+export function _decode_DataIntegrityTestInfo(el: _Element): DataIntegrityTestInfo {
     if (!_cached_decoder_for_DataIntegrityTestInfo) {
         _cached_decoder_for_DataIntegrityTestInfo = $._decodeSequenceOf<DataUnits>(
             () => _decode_DataUnits
@@ -56,7 +56,7 @@ let _cached_encoder_for_DataIntegrityTestInfo: $.ASN1Encoder<DataIntegrityTestIn
 export function _encode_DataIntegrityTestInfo(
     value: DataIntegrityTestInfo,
     elGetter: $.ASN1Encoder<DataIntegrityTestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DataIntegrityTestInfo) {
         _cached_encoder_for_DataIntegrityTestInfo = $._encodeSequenceOf<DataUnits>(
             () => _encode_DataUnits,

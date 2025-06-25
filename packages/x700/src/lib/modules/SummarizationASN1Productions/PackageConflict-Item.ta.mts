@@ -37,7 +37,7 @@ let _cached_decoder_for_PackageConflict_Item: $.ASN1Decoder<PackageConflict_Item
  * @param {_Element} el The element being decoded.
  * @returns {PackageConflict_Item} The decoded data structure.
  */
-export function _decode_PackageConflict_Item(el: _Element) {
+export function _decode_PackageConflict_Item(el: _Element): PackageConflict_Item {
     if (!_cached_decoder_for_PackageConflict_Item) {
         _cached_decoder_for_PackageConflict_Item = $._decode_inextensible_choice<PackageConflict_Item>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_PackageConflict_Item: $.ASN1Encoder<PackageConflict_Item
 export function _encode_PackageConflict_Item(
     value: PackageConflict_Item,
     elGetter: $.ASN1Encoder<PackageConflict_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_PackageConflict_Item) {
         _cached_encoder_for_PackageConflict_Item = $._encode_choice<PackageConflict_Item>(
             {

@@ -58,7 +58,7 @@ let _cached_decoder_for_EDIN: $.ASN1Decoder<EDIN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EDIN} The decoded data structure.
  */
-export function _decode_EDIN(el: _Element) {
+export function _decode_EDIN(el: _Element): EDIN {
     if (!_cached_decoder_for_EDIN) {
         _cached_decoder_for_EDIN = $._decode_inextensible_choice<EDIN>({
             'CONTEXT 0': [
@@ -93,7 +93,7 @@ let _cached_encoder_for_EDIN: $.ASN1Encoder<EDIN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIN, encoded as an ASN.1 Element.
  */
-export function _encode_EDIN(value: EDIN, elGetter: $.ASN1Encoder<EDIN>) {
+export function _encode_EDIN(value: EDIN, elGetter: $.ASN1Encoder<EDIN>): _Element {
     if (!_cached_encoder_for_EDIN) {
         _cached_encoder_for_EDIN = $._encode_choice<EDIN>(
             {

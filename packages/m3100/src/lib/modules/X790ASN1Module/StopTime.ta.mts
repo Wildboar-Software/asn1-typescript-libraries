@@ -42,7 +42,7 @@ let _cached_decoder_for_StopTime: $.ASN1Decoder<StopTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {StopTime} The decoded data structure.
  */
-export function _decode_StopTime(el: _Element) {
+export function _decode_StopTime(el: _Element): StopTime {
     if (!_cached_decoder_for_StopTime) {
         _cached_decoder_for_StopTime = $._decode_extensible_choice<StopTime>({
             'UNIVERSAL 24': ['specific', $._decodeGeneralizedTime],
@@ -66,7 +66,7 @@ let _cached_encoder_for_StopTime: $.ASN1Encoder<StopTime> | null = null;
 export function _encode_StopTime(
     value: StopTime,
     elGetter: $.ASN1Encoder<StopTime>
-) {
+): _Element {
     if (!_cached_encoder_for_StopTime) {
         _cached_encoder_for_StopTime = $._encode_choice<StopTime>(
             {

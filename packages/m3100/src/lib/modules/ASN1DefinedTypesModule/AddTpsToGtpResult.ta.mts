@@ -40,7 +40,7 @@ let _cached_decoder_for_AddTpsToGtpResult: $.ASN1Decoder<AddTpsToGtpResult> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AddTpsToGtpResult} The decoded data structure.
  */
-export function _decode_AddTpsToGtpResult(el: _Element) {
+export function _decode_AddTpsToGtpResult(el: _Element): AddTpsToGtpResult {
     if (!_cached_decoder_for_AddTpsToGtpResult) {
         _cached_decoder_for_AddTpsToGtpResult = $._decodeSequenceOf<AddTpsToGtpResult_Item>(
             () => _decode_AddTpsToGtpResult_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_AddTpsToGtpResult: $.ASN1Encoder<AddTpsToGtpResult> | nu
 export function _encode_AddTpsToGtpResult(
     value: AddTpsToGtpResult,
     elGetter: $.ASN1Encoder<AddTpsToGtpResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AddTpsToGtpResult) {
         _cached_encoder_for_AddTpsToGtpResult = $._encodeSequenceOf<AddTpsToGtpResult_Item>(
             () => _encode_AddTpsToGtpResult_Item,

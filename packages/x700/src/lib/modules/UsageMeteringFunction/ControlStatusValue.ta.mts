@@ -35,7 +35,7 @@ let _cached_decoder_for_ControlStatusValue: $.ASN1Decoder<ControlStatusValue> | 
  * @param {_Element} el The element being decoded.
  * @returns {ControlStatusValue} The decoded data structure.
  */
-export function _decode_ControlStatusValue(el: _Element) {
+export function _decode_ControlStatusValue(el: _Element): ControlStatusValue {
     if (!_cached_decoder_for_ControlStatusValue) {
         _cached_decoder_for_ControlStatusValue = _decode_ControlStatus;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ControlStatusValue: $.ASN1Encoder<ControlStatusValue> | 
 export function _encode_ControlStatusValue(
     value: ControlStatusValue,
     elGetter: $.ASN1Encoder<ControlStatusValue>
-) {
+): _Element {
     if (!_cached_encoder_for_ControlStatusValue) {
         _cached_encoder_for_ControlStatusValue = _encode_ControlStatus;
     }

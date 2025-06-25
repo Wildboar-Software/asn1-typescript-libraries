@@ -101,7 +101,7 @@ let _cached_decoder_for_FTAM_Quality_of_Service: $.ASN1Decoder<FTAM_Quality_of_S
  * @param {_Element} el The element being decoded.
  * @returns {FTAM_Quality_of_Service} The decoded data structure.
  */
-export function _decode_FTAM_Quality_of_Service(el: _Element) {
+export function _decode_FTAM_Quality_of_Service(el: _Element): FTAM_Quality_of_Service {
   if (!_cached_decoder_for_FTAM_Quality_of_Service) {
     _cached_decoder_for_FTAM_Quality_of_Service = $._decode_implicit<FTAM_Quality_of_Service>(
       () => $._decodeInteger
@@ -124,7 +124,7 @@ let _cached_encoder_for_FTAM_Quality_of_Service: $.ASN1Encoder<FTAM_Quality_of_S
 export function _encode_FTAM_Quality_of_Service(
   value: FTAM_Quality_of_Service,
   elGetter: $.ASN1Encoder<FTAM_Quality_of_Service>
-) {
+): _Element {
   if (!_cached_encoder_for_FTAM_Quality_of_Service) {
     _cached_encoder_for_FTAM_Quality_of_Service = $._encode_implicit(
       _TagClass.context,

@@ -38,7 +38,7 @@ let _cached_decoder_for_SwitchOverInformation: $.ASN1Decoder<SwitchOverInformati
  * @param {_Element} el The element being decoded.
  * @returns {SwitchOverInformation} The decoded data structure.
  */
-export function _decode_SwitchOverInformation(el: _Element) {
+export function _decode_SwitchOverInformation(el: _Element): SwitchOverInformation {
     if (!_cached_decoder_for_SwitchOverInformation) {
         _cached_decoder_for_SwitchOverInformation = $._decodeSequenceOf<IndividualSwitchOver>(
             () => _decode_IndividualSwitchOver
@@ -61,7 +61,7 @@ let _cached_encoder_for_SwitchOverInformation: $.ASN1Encoder<SwitchOverInformati
 export function _encode_SwitchOverInformation(
     value: SwitchOverInformation,
     elGetter: $.ASN1Encoder<SwitchOverInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_SwitchOverInformation) {
         _cached_encoder_for_SwitchOverInformation = $._encodeSequenceOf<IndividualSwitchOver>(
             () => _encode_IndividualSwitchOver,

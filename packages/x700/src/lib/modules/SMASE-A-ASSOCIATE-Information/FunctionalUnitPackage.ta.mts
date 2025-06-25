@@ -153,7 +153,7 @@ let _cached_decoder_for_FunctionalUnitPackage: $.ASN1Decoder<FunctionalUnitPacka
  * @param {_Element} el The element being decoded.
  * @returns {FunctionalUnitPackage} The decoded data structure.
  */
-export function _decode_FunctionalUnitPackage(el: _Element) {
+export function _decode_FunctionalUnitPackage(el: _Element): FunctionalUnitPackage {
     if (!_cached_decoder_for_FunctionalUnitPackage) {
         _cached_decoder_for_FunctionalUnitPackage = function (
             el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_FunctionalUnitPackage: $.ASN1Encoder<FunctionalUnitPacka
 export function _encode_FunctionalUnitPackage(
     value: FunctionalUnitPackage,
     elGetter: $.ASN1Encoder<FunctionalUnitPackage>
-) {
+): _Element {
     if (!_cached_encoder_for_FunctionalUnitPackage) {
         _cached_encoder_for_FunctionalUnitPackage = function (
             value: FunctionalUnitPackage        ): _Element {

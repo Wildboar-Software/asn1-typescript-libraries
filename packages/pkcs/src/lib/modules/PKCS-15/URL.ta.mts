@@ -41,7 +41,7 @@ let _cached_decoder_for_URL: $.ASN1Decoder<URL> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {URL} The decoded data structure.
  */
-export function _decode_URL(el: _Element) {
+export function _decode_URL(el: _Element): URL {
     if (!_cached_decoder_for_URL) {
         _cached_decoder_for_URL = $._decode_inextensible_choice<URL>({
             "UNIVERSAL 19": ["url", $._decodePrintableString],
@@ -67,7 +67,7 @@ let _cached_encoder_for_URL: $.ASN1Encoder<URL> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URL, encoded as an ASN.1 Element.
  */
-export function _encode_URL(value: URL, elGetter: $.ASN1Encoder<URL>) {
+export function _encode_URL(value: URL, elGetter: $.ASN1Encoder<URL>): _Element {
     if (!_cached_encoder_for_URL) {
         _cached_encoder_for_URL = $._encode_choice<URL>(
             {

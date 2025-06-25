@@ -25,7 +25,7 @@ let _cached_decoder_for_TripleDES: $.ASN1Decoder<TripleDES> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TripleDES} The decoded data structure.
  */
-export function _decode_TripleDES(el: _Element) {
+export function _decode_TripleDES(el: _Element): TripleDES {
     if (!_cached_decoder_for_TripleDES) {
         _cached_decoder_for_TripleDES = $._decodeSequenceOf<INTEGER>(
             () => $._decodeInteger
@@ -48,7 +48,7 @@ let _cached_encoder_for_TripleDES: $.ASN1Encoder<TripleDES> | null = null;
 export function _encode_TripleDES(
     value: TripleDES,
     elGetter: $.ASN1Encoder<TripleDES>
-) {
+): _Element {
     if (!_cached_encoder_for_TripleDES) {
         _cached_encoder_for_TripleDES = $._encodeSequenceOf<INTEGER>(
             () => $._encodeInteger,

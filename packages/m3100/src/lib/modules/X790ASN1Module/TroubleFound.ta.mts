@@ -76,7 +76,7 @@ let _cached_decoder_for_TroubleFound: $.ASN1Decoder<TroubleFound> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TroubleFound} The decoded data structure.
  */
-export function _decode_TroubleFound(el: _Element) {
+export function _decode_TroubleFound(el: _Element): TroubleFound {
     if (!_cached_decoder_for_TroubleFound) {
         _cached_decoder_for_TroubleFound = $._decode_extensible_choice<TroubleFound>(
             {
@@ -103,7 +103,7 @@ let _cached_encoder_for_TroubleFound: $.ASN1Encoder<TroubleFound> | null = null;
 export function _encode_TroubleFound(
     value: TroubleFound,
     elGetter: $.ASN1Encoder<TroubleFound>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleFound) {
         _cached_encoder_for_TroubleFound = $._encode_choice<TroubleFound>(
             {

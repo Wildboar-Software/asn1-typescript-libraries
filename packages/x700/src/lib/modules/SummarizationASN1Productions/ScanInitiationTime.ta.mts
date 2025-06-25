@@ -35,7 +35,7 @@ let _cached_decoder_for_ScanInitiationTime: $.ASN1Decoder<ScanInitiationTime> | 
  * @param {_Element} el The element being decoded.
  * @returns {ScanInitiationTime} The decoded data structure.
  */
-export function _decode_ScanInitiationTime(el: _Element) {
+export function _decode_ScanInitiationTime(el: _Element): ScanInitiationTime {
     if (!_cached_decoder_for_ScanInitiationTime) {
         _cached_decoder_for_ScanInitiationTime = _decode_GlobalTime;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ScanInitiationTime: $.ASN1Encoder<ScanInitiationTime> | 
 export function _encode_ScanInitiationTime(
     value: ScanInitiationTime,
     elGetter: $.ASN1Encoder<ScanInitiationTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ScanInitiationTime) {
         _cached_encoder_for_ScanInitiationTime = _encode_GlobalTime;
     }

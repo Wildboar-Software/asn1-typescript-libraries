@@ -45,7 +45,7 @@ let _cached_decoder_for_DeleteResult: $.ASN1Decoder<DeleteResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeleteResult} The decoded data structure.
  */
-export function _decode_DeleteResult(el: _Element) {
+export function _decode_DeleteResult(el: _Element): DeleteResult {
     if (!_cached_decoder_for_DeleteResult) {
         _cached_decoder_for_DeleteResult = $._decode_inextensible_choice<DeleteResult>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_DeleteResult: $.ASN1Encoder<DeleteResult> | null = null;
 export function _encode_DeleteResult(
     value: DeleteResult,
     elGetter: $.ASN1Encoder<DeleteResult>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteResult) {
         _cached_encoder_for_DeleteResult = $._encode_choice<DeleteResult>(
             {

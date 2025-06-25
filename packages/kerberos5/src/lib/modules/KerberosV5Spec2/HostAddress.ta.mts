@@ -121,7 +121,7 @@ let _cached_decoder_for_HostAddress: $.ASN1Decoder<HostAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HostAddress} The decoded data structure.
  */
-export function _decode_HostAddress(el: _Element) {
+export function _decode_HostAddress(el: _Element): HostAddress {
   if (!_cached_decoder_for_HostAddress) {
     _cached_decoder_for_HostAddress = function (el: _Element): HostAddress {
       const sequence: _Element[] = el.sequence;
@@ -160,7 +160,7 @@ let _cached_encoder_for_HostAddress: $.ASN1Encoder<HostAddress> | null = null;
 export function _encode_HostAddress(
   value: HostAddress,
   elGetter: $.ASN1Encoder<HostAddress>
-) {
+): _Element {
   if (!_cached_encoder_for_HostAddress) {
     _cached_encoder_for_HostAddress = function (
       value: HostAddress    ): _Element {

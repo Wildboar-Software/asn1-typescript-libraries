@@ -125,7 +125,7 @@ let _cached_decoder_for_AD_AND_OR: $.ASN1Decoder<AD_AND_OR> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AD_AND_OR} The decoded data structure.
  */
-export function _decode_AD_AND_OR(el: _Element) {
+export function _decode_AD_AND_OR(el: _Element): AD_AND_OR {
   if (!_cached_decoder_for_AD_AND_OR) {
     _cached_decoder_for_AD_AND_OR = function (el: _Element): AD_AND_OR {
       const sequence: _Element[] = el.sequence;
@@ -166,7 +166,7 @@ let _cached_encoder_for_AD_AND_OR: $.ASN1Encoder<AD_AND_OR> | null = null;
 export function _encode_AD_AND_OR(
   value: AD_AND_OR,
   elGetter: $.ASN1Encoder<AD_AND_OR>
-) {
+): _Element {
   if (!_cached_encoder_for_AD_AND_OR) {
     _cached_encoder_for_AD_AND_OR = function (
       value: AD_AND_OR    ): _Element {

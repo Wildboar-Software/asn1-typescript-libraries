@@ -35,7 +35,7 @@ let _cached_decoder_for_PrimaryObject: $.ASN1Decoder<PrimaryObject> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryObject} The decoded data structure.
  */
-export function _decode_PrimaryObject(el: _Element) {
+export function _decode_PrimaryObject(el: _Element): PrimaryObject {
     if (!_cached_decoder_for_PrimaryObject) {
         _cached_decoder_for_PrimaryObject = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PrimaryObject: $.ASN1Encoder<PrimaryObject> | null = nul
 export function _encode_PrimaryObject(
     value: PrimaryObject,
     elGetter: $.ASN1Encoder<PrimaryObject>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryObject) {
         _cached_encoder_for_PrimaryObject = _encode_ObjectInstance;
     }

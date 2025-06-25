@@ -48,7 +48,7 @@ let _cached_decoder_for_TestPattern: $.ASN1Decoder<TestPattern> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TestPattern} The decoded data structure.
  */
-export function _decode_TestPattern(el: _Element) {
+export function _decode_TestPattern(el: _Element): TestPattern {
     if (!_cached_decoder_for_TestPattern) {
         _cached_decoder_for_TestPattern = $._decode_inextensible_choice<TestPattern>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_TestPattern: $.ASN1Encoder<TestPattern> | null = null;
 export function _encode_TestPattern(
     value: TestPattern,
     elGetter: $.ASN1Encoder<TestPattern>
-) {
+): _Element {
     if (!_cached_encoder_for_TestPattern) {
         _cached_encoder_for_TestPattern = $._encode_choice<TestPattern>(
             {

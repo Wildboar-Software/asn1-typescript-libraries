@@ -123,7 +123,7 @@ let _cached_decoder_for_ExternalSAID: $.ASN1Decoder<ExternalSAID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ExternalSAID} The decoded data structure.
  */
-export function _decode_ExternalSAID(el: _Element) {
+export function _decode_ExternalSAID(el: _Element): ExternalSAID {
   if (!_cached_decoder_for_ExternalSAID) {
     _cached_decoder_for_ExternalSAID = function (el: _Element): ExternalSAID {
       let localSAID!: INTEGER;
@@ -167,7 +167,7 @@ let _cached_encoder_for_ExternalSAID: $.ASN1Encoder<ExternalSAID> | null = null;
 export function _encode_ExternalSAID(
   value: ExternalSAID,
   elGetter: $.ASN1Encoder<ExternalSAID>
-) {
+): _Element {
   if (!_cached_encoder_for_ExternalSAID) {
     _cached_encoder_for_ExternalSAID = function (
       value: ExternalSAID    ): _Element {

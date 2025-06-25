@@ -36,7 +36,7 @@ let _cached_decoder_for_RetrievalPortOperations: $.ASN1Decoder<RetrievalPortOper
  * @param {_Element} el The element being decoded.
  * @returns {RetrievalPortOperations} The decoded data structure.
  */
-export function _decode_RetrievalPortOperations(el: _Element) {
+export function _decode_RetrievalPortOperations(el: _Element): RetrievalPortOperations {
     if (!_cached_decoder_for_RetrievalPortOperations) {
         _cached_decoder_for_RetrievalPortOperations = _decode_EventTypeId;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_RetrievalPortOperations: $.ASN1Encoder<RetrievalPortOper
 export function _encode_RetrievalPortOperations(
     value: RetrievalPortOperations,
     elGetter: $.ASN1Encoder<RetrievalPortOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_RetrievalPortOperations) {
         _cached_encoder_for_RetrievalPortOperations = _encode_EventTypeId;
     }

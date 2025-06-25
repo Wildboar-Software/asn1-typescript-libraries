@@ -35,7 +35,7 @@ let _cached_decoder_for_User_Identity: $.ASN1Decoder<User_Identity> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {User_Identity} The decoded data structure.
  */
-export function _decode_User_Identity(el: _Element) {
+export function _decode_User_Identity(el: _Element): User_Identity {
   if (!_cached_decoder_for_User_Identity) {
     _cached_decoder_for_User_Identity = $._decode_implicit<User_Identity>(
       () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_User_Identity: $.ASN1Encoder<User_Identity> | null = nul
 export function _encode_User_Identity(
   value: User_Identity,
   elGetter: $.ASN1Encoder<User_Identity>
-) {
+): _Element {
   if (!_cached_encoder_for_User_Identity) {
     _cached_encoder_for_User_Identity = $._encode_implicit(
       _TagClass.application,

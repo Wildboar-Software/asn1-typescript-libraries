@@ -118,7 +118,7 @@ let _cached_decoder_for_OtherCertID: $.ASN1Decoder<OtherCertID> | null = null;
  * @returns {OtherCertID} The decoded data structure.
  */
 export
-function _decode_OtherCertID (el: _Element) {
+function _decode_OtherCertID (el: _Element): OtherCertID {
     if (!_cached_decoder_for_OtherCertID) { _cached_decoder_for_OtherCertID = function (el: _Element): OtherCertID {
     let otherCertHash!: OtherHash;
     let issuerSerial: OPTIONAL<IssuerSerial>;
@@ -150,7 +150,7 @@ let _cached_encoder_for_OtherCertID: $.ASN1Encoder<OtherCertID> | null = null;
  * @returns {_Element} The OtherCertID, encoded as an ASN.1 Element.
  */
 export
-function _encode_OtherCertID (value: OtherCertID, elGetter: $.ASN1Encoder<OtherCertID>) {
+function _encode_OtherCertID (value: OtherCertID, elGetter: $.ASN1Encoder<OtherCertID>): _Element {
     if (!_cached_encoder_for_OtherCertID) { _cached_encoder_for_OtherCertID = function (value: OtherCertID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

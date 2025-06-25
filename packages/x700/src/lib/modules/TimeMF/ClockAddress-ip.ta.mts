@@ -109,7 +109,7 @@ let _cached_decoder_for_ClockAddress_ip: $.ASN1Decoder<ClockAddress_ip> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ClockAddress_ip} The decoded data structure.
  */
-export function _decode_ClockAddress_ip(el: _Element) {
+export function _decode_ClockAddress_ip(el: _Element): ClockAddress_ip {
     if (!_cached_decoder_for_ClockAddress_ip) {
         _cached_decoder_for_ClockAddress_ip = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_ClockAddress_ip: $.ASN1Encoder<ClockAddress_ip> | null =
 export function _encode_ClockAddress_ip(
     value: ClockAddress_ip,
     elGetter: $.ASN1Encoder<ClockAddress_ip>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockAddress_ip) {
         _cached_encoder_for_ClockAddress_ip = function (
             value: ClockAddress_ip        ): _Element {

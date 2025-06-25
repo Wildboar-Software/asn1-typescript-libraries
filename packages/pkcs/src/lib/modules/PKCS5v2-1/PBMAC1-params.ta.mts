@@ -115,7 +115,7 @@ let _cached_decoder_for_PBMAC1_params: $.ASN1Decoder<PBMAC1_params> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PBMAC1_params} The decoded data structure.
  */
-export function _decode_PBMAC1_params(el: _Element) {
+export function _decode_PBMAC1_params(el: _Element): PBMAC1_params {
     if (!_cached_decoder_for_PBMAC1_params) {
         _cached_decoder_for_PBMAC1_params = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_PBMAC1_params: $.ASN1Encoder<PBMAC1_params> | null = nul
 export function _encode_PBMAC1_params(
     value: PBMAC1_params,
     elGetter: $.ASN1Encoder<PBMAC1_params>
-) {
+): _Element {
     if (!_cached_encoder_for_PBMAC1_params) {
         _cached_encoder_for_PBMAC1_params = function (
             value: PBMAC1_params        ): _Element {

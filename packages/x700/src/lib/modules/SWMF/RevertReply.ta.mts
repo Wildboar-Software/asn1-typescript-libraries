@@ -120,7 +120,7 @@ let _cached_decoder_for_RevertReply: $.ASN1Decoder<RevertReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RevertReply} The decoded data structure.
  */
-export function _decode_RevertReply(el: _Element) {
+export function _decode_RevertReply(el: _Element): RevertReply {
     if (!_cached_decoder_for_RevertReply) {
         _cached_decoder_for_RevertReply = function (el: _Element): RevertReply {
             let revertedPatches!: AppliedPatches;
@@ -169,7 +169,7 @@ let _cached_encoder_for_RevertReply: $.ASN1Encoder<RevertReply> | null = null;
 export function _encode_RevertReply(
     value: RevertReply,
     elGetter: $.ASN1Encoder<RevertReply>
-) {
+): _Element {
     if (!_cached_encoder_for_RevertReply) {
         _cached_encoder_for_RevertReply = function (
             value: RevertReply        ): _Element {

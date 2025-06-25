@@ -201,7 +201,7 @@ let _cached_decoder_for_VerifyMatch_RequestParams: $.ASN1Decoder<VerifyMatch_Req
  * @param {_Element} el The element being decoded.
  * @returns {VerifyMatch_RequestParams} The decoded data structure.
  */
-export function _decode_VerifyMatch_RequestParams(el: _Element) {
+export function _decode_VerifyMatch_RequestParams(el: _Element): VerifyMatch_RequestParams {
   if (!_cached_decoder_for_VerifyMatch_RequestParams) {
     _cached_decoder_for_VerifyMatch_RequestParams = function (
       el: _Element
@@ -263,7 +263,7 @@ let _cached_encoder_for_VerifyMatch_RequestParams: $.ASN1Encoder<VerifyMatch_Req
 export function _encode_VerifyMatch_RequestParams(
   value: VerifyMatch_RequestParams,
   elGetter: $.ASN1Encoder<VerifyMatch_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_VerifyMatch_RequestParams) {
     _cached_encoder_for_VerifyMatch_RequestParams = function (
       value: VerifyMatch_RequestParams    ): _Element {

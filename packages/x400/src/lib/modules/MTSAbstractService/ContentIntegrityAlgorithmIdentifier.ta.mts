@@ -35,7 +35,7 @@ let _cached_decoder_for_ContentIntegrityAlgorithmIdentifier: $.ASN1Decoder<Conte
  * @param {_Element} el The element being decoded.
  * @returns {ContentIntegrityAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_ContentIntegrityAlgorithmIdentifier(el: _Element) {
+export function _decode_ContentIntegrityAlgorithmIdentifier(el: _Element): ContentIntegrityAlgorithmIdentifier {
     if (!_cached_decoder_for_ContentIntegrityAlgorithmIdentifier) {
         _cached_decoder_for_ContentIntegrityAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ContentIntegrityAlgorithmIdentifier: $.ASN1Encoder<Conte
 export function _encode_ContentIntegrityAlgorithmIdentifier(
     value: ContentIntegrityAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ContentIntegrityAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentIntegrityAlgorithmIdentifier) {
         _cached_encoder_for_ContentIntegrityAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

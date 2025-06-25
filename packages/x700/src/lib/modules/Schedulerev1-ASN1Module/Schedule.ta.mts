@@ -62,7 +62,7 @@ let _cached_decoder_for_Schedule: $.ASN1Decoder<Schedule> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Schedule} The decoded data structure.
  */
-export function _decode_Schedule(el: _Element) {
+export function _decode_Schedule(el: _Element): Schedule {
     if (!_cached_decoder_for_Schedule) {
         _cached_decoder_for_Schedule = $._decode_inextensible_choice<Schedule>({
             'CONTEXT 0': [
@@ -108,7 +108,7 @@ let _cached_encoder_for_Schedule: $.ASN1Encoder<Schedule> | null = null;
 export function _encode_Schedule(
     value: Schedule,
     elGetter: $.ASN1Encoder<Schedule>
-) {
+): _Element {
     if (!_cached_encoder_for_Schedule) {
         _cached_encoder_for_Schedule = $._encode_choice<Schedule>(
             {

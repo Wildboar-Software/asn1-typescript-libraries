@@ -118,7 +118,7 @@ let _cached_decoder_for_MitMo: $.ASN1Decoder<MitMo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MitMo} The decoded data structure.
  */
-export function _decode_MitMo(el: _Element) {
+export function _decode_MitMo(el: _Element): MitMo {
     if (!_cached_decoder_for_MitMo) {
         _cached_decoder_for_MitMo = function (el: _Element): MitMo {
             let objectClass!: GdmoObjectClass;
@@ -157,7 +157,7 @@ let _cached_encoder_for_MitMo: $.ASN1Encoder<MitMo> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MitMo, encoded as an ASN.1 Element.
  */
-export function _encode_MitMo(value: MitMo, elGetter: $.ASN1Encoder<MitMo>) {
+export function _encode_MitMo(value: MitMo, elGetter: $.ASN1Encoder<MitMo>): _Element {
     if (!_cached_encoder_for_MitMo) {
         _cached_encoder_for_MitMo = function (
             value: MitMo        ): _Element {

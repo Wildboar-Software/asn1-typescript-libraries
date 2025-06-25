@@ -154,7 +154,7 @@ let _cached_decoder_for_AutoModifyRegistrationParameter: $.ASN1Decoder<AutoModif
  * @param {_Element} el The element being decoded.
  * @returns {AutoModifyRegistrationParameter} The decoded data structure.
  */
-export function _decode_AutoModifyRegistrationParameter(el: _Element) {
+export function _decode_AutoModifyRegistrationParameter(el: _Element): AutoModifyRegistrationParameter {
     if (!_cached_decoder_for_AutoModifyRegistrationParameter) {
         _cached_decoder_for_AutoModifyRegistrationParameter = function (
             el: _Element
@@ -215,7 +215,7 @@ let _cached_encoder_for_AutoModifyRegistrationParameter: $.ASN1Encoder<AutoModif
 export function _encode_AutoModifyRegistrationParameter(
     value: AutoModifyRegistrationParameter,
     elGetter: $.ASN1Encoder<AutoModifyRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoModifyRegistrationParameter) {
         _cached_encoder_for_AutoModifyRegistrationParameter = function (
             value: AutoModifyRegistrationParameter        ): _Element {

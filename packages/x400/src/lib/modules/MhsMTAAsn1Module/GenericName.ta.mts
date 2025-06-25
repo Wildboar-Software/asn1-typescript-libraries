@@ -111,7 +111,7 @@ let _cached_decoder_for_GenericName: $.ASN1Decoder<GenericName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GenericName} The decoded data structure.
  */
-export function _decode_GenericName(el: _Element) {
+export function _decode_GenericName(el: _Element): GenericName {
     if (!_cached_decoder_for_GenericName) {
         _cached_decoder_for_GenericName = function (el: _Element): GenericName {
             const sequence: _Element[] = el.sequence;
@@ -146,7 +146,7 @@ let _cached_encoder_for_GenericName: $.ASN1Encoder<GenericName> | null = null;
 export function _encode_GenericName(
     value: GenericName,
     elGetter: $.ASN1Encoder<GenericName>
-) {
+): _Element {
     if (!_cached_encoder_for_GenericName) {
         _cached_encoder_for_GenericName = function (
             value: GenericName        ): _Element {

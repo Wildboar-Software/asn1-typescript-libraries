@@ -179,7 +179,7 @@ let _cached_decoder_for_ForwardedNotificationFields: $.ASN1Decoder<ForwardedNoti
  * @param {_Element} el The element being decoded.
  * @returns {ForwardedNotificationFields} The decoded data structure.
  */
-export function _decode_ForwardedNotificationFields(el: _Element) {
+export function _decode_ForwardedNotificationFields(el: _Element): ForwardedNotificationFields {
     if (!_cached_decoder_for_ForwardedNotificationFields) {
         _cached_decoder_for_ForwardedNotificationFields = function (
             el: _Element
@@ -248,7 +248,7 @@ let _cached_encoder_for_ForwardedNotificationFields: $.ASN1Encoder<ForwardedNoti
 export function _encode_ForwardedNotificationFields(
     value: ForwardedNotificationFields,
     elGetter: $.ASN1Encoder<ForwardedNotificationFields>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardedNotificationFields) {
         _cached_encoder_for_ForwardedNotificationFields = function (
             value: ForwardedNotificationFields        ): _Element {

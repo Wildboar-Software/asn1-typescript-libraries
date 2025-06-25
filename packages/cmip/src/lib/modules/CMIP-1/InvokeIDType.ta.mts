@@ -39,7 +39,7 @@ let _cached_decoder_for_InvokeIDType: $.ASN1Decoder<InvokeIDType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {InvokeIDType} The decoded data structure.
  */
-export function _decode_InvokeIDType(el: _Element) {
+export function _decode_InvokeIDType(el: _Element): InvokeIDType {
   if (!_cached_decoder_for_InvokeIDType) {
     _cached_decoder_for_InvokeIDType = _decode_InvokeId;
   }
@@ -60,7 +60,7 @@ let _cached_encoder_for_InvokeIDType: $.ASN1Encoder<InvokeIDType> | null = null;
 export function _encode_InvokeIDType(
   value: InvokeIDType,
   elGetter: $.ASN1Encoder<InvokeIDType>
-) {
+): _Element {
   if (!_cached_encoder_for_InvokeIDType) {
     _cached_encoder_for_InvokeIDType = _encode_InvokeId;
   }

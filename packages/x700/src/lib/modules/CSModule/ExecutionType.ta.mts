@@ -42,7 +42,7 @@ let _cached_decoder_for_ExecutionType: $.ASN1Decoder<ExecutionType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ExecutionType} The decoded data structure.
  */
-export function _decode_ExecutionType(el: _Element) {
+export function _decode_ExecutionType(el: _Element): ExecutionType {
     if (!_cached_decoder_for_ExecutionType) {
         _cached_decoder_for_ExecutionType = $._decode_inextensible_choice<ExecutionType>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_ExecutionType: $.ASN1Encoder<ExecutionType> | null = nul
 export function _encode_ExecutionType(
     value: ExecutionType,
     elGetter: $.ASN1Encoder<ExecutionType>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecutionType) {
         _cached_encoder_for_ExecutionType = $._encode_choice<ExecutionType>(
             {

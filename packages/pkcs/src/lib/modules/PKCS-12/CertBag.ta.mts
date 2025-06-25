@@ -111,7 +111,7 @@ let _cached_decoder_for_CertBag: $.ASN1Decoder<CertBag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertBag} The decoded data structure.
  */
-export function _decode_CertBag(el: _Element) {
+export function _decode_CertBag(el: _Element): CertBag {
     if (!_cached_decoder_for_CertBag) {
         _cached_decoder_for_CertBag = function (el: _Element): CertBag {
             const sequence: _Element[] = el.sequence;
@@ -150,7 +150,7 @@ let _cached_encoder_for_CertBag: $.ASN1Encoder<CertBag> | null = null;
 export function _encode_CertBag(
     value: CertBag,
     elGetter: $.ASN1Encoder<CertBag>
-) {
+): _Element {
     if (!_cached_encoder_for_CertBag) {
         _cached_encoder_for_CertBag = function (
             value: CertBag        ): _Element {

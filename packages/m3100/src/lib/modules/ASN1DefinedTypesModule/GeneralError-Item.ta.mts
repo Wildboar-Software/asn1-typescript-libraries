@@ -152,7 +152,7 @@ let _cached_decoder_for_GeneralError_Item: $.ASN1Decoder<GeneralError_Item> | nu
  * @param {_Element} el The element being decoded.
  * @returns {GeneralError_Item} The decoded data structure.
  */
-export function _decode_GeneralError_Item(el: _Element) {
+export function _decode_GeneralError_Item(el: _Element): GeneralError_Item {
     if (!_cached_decoder_for_GeneralError_Item) {
         _cached_decoder_for_GeneralError_Item = function (
             el: _Element
@@ -214,7 +214,7 @@ let _cached_encoder_for_GeneralError_Item: $.ASN1Encoder<GeneralError_Item> | nu
 export function _encode_GeneralError_Item(
     value: GeneralError_Item,
     elGetter: $.ASN1Encoder<GeneralError_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralError_Item) {
         _cached_encoder_for_GeneralError_Item = function (
             value: GeneralError_Item        ): _Element {

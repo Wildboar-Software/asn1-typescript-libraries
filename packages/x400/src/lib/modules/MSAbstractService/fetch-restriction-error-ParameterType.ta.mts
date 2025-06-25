@@ -102,7 +102,7 @@ let _cached_decoder_for_fetch_restriction_error_ParameterType: $.ASN1Decoder<fet
  * @param {_Element} el The element being decoded.
  * @returns {fetch_restriction_error_ParameterType} The decoded data structure.
  */
-export function _decode_fetch_restriction_error_ParameterType(el: _Element) {
+export function _decode_fetch_restriction_error_ParameterType(el: _Element): fetch_restriction_error_ParameterType {
     if (!_cached_decoder_for_fetch_restriction_error_ParameterType) {
         _cached_decoder_for_fetch_restriction_error_ParameterType = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_fetch_restriction_error_ParameterType: $.ASN1Encoder<fet
 export function _encode_fetch_restriction_error_ParameterType(
     value: fetch_restriction_error_ParameterType,
     elGetter: $.ASN1Encoder<fetch_restriction_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_fetch_restriction_error_ParameterType) {
         _cached_encoder_for_fetch_restriction_error_ParameterType = function (
             value: fetch_restriction_error_ParameterType        ): _Element {

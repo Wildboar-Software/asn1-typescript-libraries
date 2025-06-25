@@ -46,7 +46,7 @@ let _cached_decoder_for_BridgeRollReply_Item: $.ASN1Decoder<BridgeRollReply_Item
  * @param {_Element} el The element being decoded.
  * @returns {BridgeRollReply_Item} The decoded data structure.
  */
-export function _decode_BridgeRollReply_Item(el: _Element) {
+export function _decode_BridgeRollReply_Item(el: _Element): BridgeRollReply_Item {
     if (!_cached_decoder_for_BridgeRollReply_Item) {
         _cached_decoder_for_BridgeRollReply_Item = $._decode_inextensible_choice<BridgeRollReply_Item>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_BridgeRollReply_Item: $.ASN1Encoder<BridgeRollReply_Item
 export function _encode_BridgeRollReply_Item(
     value: BridgeRollReply_Item,
     elGetter: $.ASN1Encoder<BridgeRollReply_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_BridgeRollReply_Item) {
         _cached_encoder_for_BridgeRollReply_Item = $._encode_choice<BridgeRollReply_Item>(
             {

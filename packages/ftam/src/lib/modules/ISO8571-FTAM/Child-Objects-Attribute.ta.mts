@@ -35,7 +35,7 @@ let _cached_decoder_for_Child_Objects_Attribute: $.ASN1Decoder<Child_Objects_Att
  * @param {_Element} el The element being decoded.
  * @returns {Child_Objects_Attribute} The decoded data structure.
  */
-export function _decode_Child_Objects_Attribute(el: _Element) {
+export function _decode_Child_Objects_Attribute(el: _Element): Child_Objects_Attribute {
   if (!_cached_decoder_for_Child_Objects_Attribute) {
     _cached_decoder_for_Child_Objects_Attribute = $._decodeSetOf<GraphicString>(
       () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_Child_Objects_Attribute: $.ASN1Encoder<Child_Objects_Att
 export function _encode_Child_Objects_Attribute(
   value: Child_Objects_Attribute,
   elGetter: $.ASN1Encoder<Child_Objects_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Child_Objects_Attribute) {
     _cached_encoder_for_Child_Objects_Attribute = $._encodeSetOf<GraphicString>(
       () => $._encodeGraphicString,

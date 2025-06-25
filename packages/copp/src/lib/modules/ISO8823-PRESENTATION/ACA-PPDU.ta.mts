@@ -145,7 +145,7 @@ let _cached_decoder_for_ACA_PPDU: $.ASN1Decoder<ACA_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ACA_PPDU} The decoded data structure.
  */
-export function _decode_ACA_PPDU(el: _Element) {
+export function _decode_ACA_PPDU(el: _Element): ACA_PPDU {
     if (!_cached_decoder_for_ACA_PPDU) {
         _cached_decoder_for_ACA_PPDU = function (el: _Element): ACA_PPDU {
             let presentation_context_addition_result_list: OPTIONAL<Presentation_context_addition_result_list>;
@@ -202,7 +202,7 @@ let _cached_encoder_for_ACA_PPDU: $.ASN1Encoder<ACA_PPDU> | null = null;
 export function _encode_ACA_PPDU(
     value: ACA_PPDU,
     elGetter: $.ASN1Encoder<ACA_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_ACA_PPDU) {
         _cached_encoder_for_ACA_PPDU = function (
             value: ACA_PPDU        ): _Element {

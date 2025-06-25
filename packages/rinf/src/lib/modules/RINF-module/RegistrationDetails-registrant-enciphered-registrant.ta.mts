@@ -120,7 +120,7 @@ let _cached_decoder_for_RegistrationDetails_registrant_enciphered_registrant: $.
  */
 export function _decode_RegistrationDetails_registrant_enciphered_registrant(
   el: _Element
-) {
+): RegistrationDetails_registrant_enciphered_registrant {
   if (
     !_cached_decoder_for_RegistrationDetails_registrant_enciphered_registrant
   ) {
@@ -164,7 +164,7 @@ let _cached_encoder_for_RegistrationDetails_registrant_enciphered_registrant: $.
 export function _encode_RegistrationDetails_registrant_enciphered_registrant(
   value: RegistrationDetails_registrant_enciphered_registrant,
   elGetter: $.ASN1Encoder<RegistrationDetails_registrant_enciphered_registrant>
-) {
+): _Element {
   if (
     !_cached_encoder_for_RegistrationDetails_registrant_enciphered_registrant
   ) {

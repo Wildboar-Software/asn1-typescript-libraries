@@ -137,7 +137,7 @@ let _cached_decoder_for_RTABapdu: $.ASN1Decoder<RTABapdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RTABapdu} The decoded data structure.
  */
-export function _decode_RTABapdu(el: _Element) {
+export function _decode_RTABapdu(el: _Element): RTABapdu {
   if (!_cached_decoder_for_RTABapdu) {
     _cached_decoder_for_RTABapdu = function (el: _Element): RTABapdu {
       /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -192,7 +192,7 @@ let _cached_encoder_for_RTABapdu: $.ASN1Encoder<RTABapdu> | null = null;
 export function _encode_RTABapdu(
   value: RTABapdu,
   elGetter: $.ASN1Encoder<RTABapdu>
-) {
+): _Element {
   if (!_cached_encoder_for_RTABapdu) {
     _cached_encoder_for_RTABapdu = function (
       value: RTABapdu    ): _Element {

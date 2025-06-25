@@ -107,7 +107,7 @@ let _cached_decoder_for_Process_ResponseParams: $.ASN1Decoder<Process_ResponsePa
  * @param {_Element} el The element being decoded.
  * @returns {Process_ResponseParams} The decoded data structure.
  */
-export function _decode_Process_ResponseParams(el: _Element) {
+export function _decode_Process_ResponseParams(el: _Element): Process_ResponseParams {
   if (!_cached_decoder_for_Process_ResponseParams) {
     _cached_decoder_for_Process_ResponseParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_Process_ResponseParams: $.ASN1Encoder<Process_ResponsePa
 export function _encode_Process_ResponseParams(
   value: Process_ResponseParams,
   elGetter: $.ASN1Encoder<Process_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Process_ResponseParams) {
     _cached_encoder_for_Process_ResponseParams = function (
       value: Process_ResponseParams    ): _Element {

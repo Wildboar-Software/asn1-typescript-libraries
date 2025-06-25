@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalPDSParameter: $.ASN1Decoder<UniversalPDSParamet
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPDSParameter} The decoded data structure.
  */
-export function _decode_UniversalPDSParameter(el: _Element) {
+export function _decode_UniversalPDSParameter(el: _Element): UniversalPDSParameter {
     if (!_cached_decoder_for_UniversalPDSParameter) {
         _cached_decoder_for_UniversalPDSParameter = _decode_UniversalOrBMPString;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalPDSParameter: $.ASN1Encoder<UniversalPDSParamet
 export function _encode_UniversalPDSParameter(
     value: UniversalPDSParameter,
     elGetter: $.ASN1Encoder<UniversalPDSParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPDSParameter) {
         _cached_encoder_for_UniversalPDSParameter = _encode_UniversalOrBMPString;
     }

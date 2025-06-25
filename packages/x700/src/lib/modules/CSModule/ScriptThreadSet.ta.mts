@@ -110,7 +110,7 @@ let _cached_decoder_for_ScriptThreadSet: $.ASN1Decoder<ScriptThreadSet> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ScriptThreadSet} The decoded data structure.
  */
-export function _decode_ScriptThreadSet(el: _Element) {
+export function _decode_ScriptThreadSet(el: _Element): ScriptThreadSet {
     if (!_cached_decoder_for_ScriptThreadSet) {
         _cached_decoder_for_ScriptThreadSet = function (
             el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_ScriptThreadSet: $.ASN1Encoder<ScriptThreadSet> | null =
 export function _encode_ScriptThreadSet(
     value: ScriptThreadSet,
     elGetter: $.ASN1Encoder<ScriptThreadSet>
-) {
+): _Element {
     if (!_cached_encoder_for_ScriptThreadSet) {
         _cached_encoder_for_ScriptThreadSet = function (
             value: ScriptThreadSet        ): _Element {

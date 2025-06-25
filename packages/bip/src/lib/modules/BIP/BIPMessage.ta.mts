@@ -119,7 +119,7 @@ let _cached_decoder_for_BIPMessage: $.ASN1Decoder<BIPMessage> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BIPMessage} The decoded data structure.
  */
-export function _decode_BIPMessage(el: _Element) {
+export function _decode_BIPMessage(el: _Element): BIPMessage {
   if (!_cached_decoder_for_BIPMessage) {
     _cached_decoder_for_BIPMessage = function (el: _Element): BIPMessage {
       const sequence: _Element[] = el.sequence;
@@ -153,7 +153,7 @@ let _cached_encoder_for_BIPMessage: $.ASN1Encoder<BIPMessage> | null = null;
 export function _encode_BIPMessage(
   value: BIPMessage,
   elGetter: $.ASN1Encoder<BIPMessage>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPMessage) {
     _cached_encoder_for_BIPMessage = function (
       value: BIPMessage    ): _Element {

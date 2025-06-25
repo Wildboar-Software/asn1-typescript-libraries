@@ -120,7 +120,7 @@ let _cached_decoder_for_AutoBackupReportInfo: $.ASN1Decoder<AutoBackupReportInfo
  * @param {_Element} el The element being decoded.
  * @returns {AutoBackupReportInfo} The decoded data structure.
  */
-export function _decode_AutoBackupReportInfo(el: _Element) {
+export function _decode_AutoBackupReportInfo(el: _Element): AutoBackupReportInfo {
     if (!_cached_decoder_for_AutoBackupReportInfo) {
         _cached_decoder_for_AutoBackupReportInfo = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_AutoBackupReportInfo: $.ASN1Encoder<AutoBackupReportInfo
 export function _encode_AutoBackupReportInfo(
     value: AutoBackupReportInfo,
     elGetter: $.ASN1Encoder<AutoBackupReportInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoBackupReportInfo) {
         _cached_encoder_for_AutoBackupReportInfo = function (
             value: AutoBackupReportInfo        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_ReceiptTimeField: $.ASN1Decoder<ReceiptTimeField> | null
  * @param {_Element} el The element being decoded.
  * @returns {ReceiptTimeField} The decoded data structure.
  */
-export function _decode_ReceiptTimeField(el: _Element) {
+export function _decode_ReceiptTimeField(el: _Element): ReceiptTimeField {
     if (!_cached_decoder_for_ReceiptTimeField) {
         _cached_decoder_for_ReceiptTimeField = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReceiptTimeField: $.ASN1Encoder<ReceiptTimeField> | null
 export function _encode_ReceiptTimeField(
     value: ReceiptTimeField,
     elGetter: $.ASN1Encoder<ReceiptTimeField>
-) {
+): _Element {
     if (!_cached_encoder_for_ReceiptTimeField) {
         _cached_encoder_for_ReceiptTimeField = _encode_Time;
     }

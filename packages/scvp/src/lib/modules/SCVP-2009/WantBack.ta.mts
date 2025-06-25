@@ -32,7 +32,7 @@ let _cached_decoder_for_WantBack: $.ASN1Decoder<WantBack> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WantBack} The decoded data structure.
  */
-export function _decode_WantBack(el: _Element) {
+export function _decode_WantBack(el: _Element): WantBack {
   if (!_cached_decoder_for_WantBack) {
     _cached_decoder_for_WantBack = $._decodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._decodeObjectIdentifier
@@ -53,7 +53,7 @@ let _cached_encoder_for_WantBack: $.ASN1Encoder<WantBack> | null = null;
 export function _encode_WantBack(
   value: WantBack,
   elGetter: $.ASN1Encoder<WantBack>
-) {
+): _Element {
   if (!_cached_encoder_for_WantBack) {
     _cached_encoder_for_WantBack = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._encodeObjectIdentifier,

@@ -34,7 +34,7 @@ let _cached_decoder_for_ENTITY: $.ASN1Decoder<ENTITY> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ENTITY} The decoded data structure.
  */
-export function _decode_ENTITY(el: _Element) {
+export function _decode_ENTITY(el: _Element): ENTITY {
   if (!_cached_decoder_for_ENTITY) {
     _cached_decoder_for_ENTITY = _decode_NCName;
   }
@@ -52,7 +52,7 @@ let _cached_encoder_for_ENTITY: $.ASN1Encoder<ENTITY> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ENTITY, encoded as an ASN.1 Element.
  */
-export function _encode_ENTITY(value: ENTITY, elGetter: $.ASN1Encoder<ENTITY>) {
+export function _encode_ENTITY(value: ENTITY, elGetter: $.ASN1Encoder<ENTITY>): _Element {
   if (!_cached_encoder_for_ENTITY) {
     _cached_encoder_for_ENTITY = _encode_NCName;
   }

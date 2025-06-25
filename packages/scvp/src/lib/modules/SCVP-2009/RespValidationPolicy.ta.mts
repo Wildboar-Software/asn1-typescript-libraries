@@ -35,7 +35,7 @@ let _cached_decoder_for_RespValidationPolicy: $.ASN1Decoder<RespValidationPolicy
  * @param {_Element} el The element being decoded.
  * @returns {RespValidationPolicy} The decoded data structure.
  */
-export function _decode_RespValidationPolicy(el: _Element) {
+export function _decode_RespValidationPolicy(el: _Element): RespValidationPolicy {
   if (!_cached_decoder_for_RespValidationPolicy) {
     _cached_decoder_for_RespValidationPolicy = _decode_ValidationPolicy;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RespValidationPolicy: $.ASN1Encoder<RespValidationPolicy
 export function _encode_RespValidationPolicy(
   value: RespValidationPolicy,
   elGetter: $.ASN1Encoder<RespValidationPolicy>
-) {
+): _Element {
   if (!_cached_encoder_for_RespValidationPolicy) {
     _cached_encoder_for_RespValidationPolicy = _encode_ValidationPolicy;
   }

@@ -120,7 +120,7 @@ let _cached_decoder_for_LogicalChannelRange: $.ASN1Decoder<LogicalChannelRange> 
  * @param {_Element} el The element being decoded.
  * @returns {LogicalChannelRange} The decoded data structure.
  */
-export function _decode_LogicalChannelRange(el: _Element) {
+export function _decode_LogicalChannelRange(el: _Element): LogicalChannelRange {
     if (!_cached_decoder_for_LogicalChannelRange) {
         _cached_decoder_for_LogicalChannelRange = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_LogicalChannelRange: $.ASN1Encoder<LogicalChannelRange> 
 export function _encode_LogicalChannelRange(
     value: LogicalChannelRange,
     elGetter: $.ASN1Encoder<LogicalChannelRange>
-) {
+): _Element {
     if (!_cached_encoder_for_LogicalChannelRange) {
         _cached_encoder_for_LogicalChannelRange = function (
             value: LogicalChannelRange        ): _Element {

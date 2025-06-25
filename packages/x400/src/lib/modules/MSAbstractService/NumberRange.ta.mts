@@ -115,7 +115,7 @@ let _cached_decoder_for_NumberRange: $.ASN1Decoder<NumberRange> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NumberRange} The decoded data structure.
  */
-export function _decode_NumberRange(el: _Element) {
+export function _decode_NumberRange(el: _Element): NumberRange {
     if (!_cached_decoder_for_NumberRange) {
         _cached_decoder_for_NumberRange = function (el: _Element): NumberRange {
             let from_: OPTIONAL<SequenceNumber>;
@@ -158,7 +158,7 @@ let _cached_encoder_for_NumberRange: $.ASN1Encoder<NumberRange> | null = null;
 export function _encode_NumberRange(
     value: NumberRange,
     elGetter: $.ASN1Encoder<NumberRange>
-) {
+): _Element {
     if (!_cached_encoder_for_NumberRange) {
         _cached_encoder_for_NumberRange = function (
             value: NumberRange        ): _Element {

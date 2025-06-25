@@ -42,7 +42,7 @@ let _cached_decoder_for_NormalValue_value: $.ASN1Decoder<NormalValue_value> | nu
  * @param {_Element} el The element being decoded.
  * @returns {NormalValue_value} The decoded data structure.
  */
-export function _decode_NormalValue_value(el: _Element) {
+export function _decode_NormalValue_value(el: _Element): NormalValue_value {
     if (!_cached_decoder_for_NormalValue_value) {
         _cached_decoder_for_NormalValue_value = $._decode_inextensible_choice<NormalValue_value>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_NormalValue_value: $.ASN1Encoder<NormalValue_value> | nu
 export function _encode_NormalValue_value(
     value: NormalValue_value,
     elGetter: $.ASN1Encoder<NormalValue_value>
-) {
+): _Element {
     if (!_cached_encoder_for_NormalValue_value) {
         _cached_encoder_for_NormalValue_value = $._encode_choice<NormalValue_value>(
             {

@@ -49,7 +49,7 @@ let _cached_decoder_for_ActivityCode: $.ASN1Decoder<ActivityCode> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ActivityCode} The decoded data structure.
  */
-export function _decode_ActivityCode(el: _Element) {
+export function _decode_ActivityCode(el: _Element): ActivityCode {
     if (!_cached_decoder_for_ActivityCode) {
         _cached_decoder_for_ActivityCode = $._decode_extensible_choice<ActivityCode>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ActivityCode: $.ASN1Encoder<ActivityCode> | null = null;
 export function _encode_ActivityCode(
     value: ActivityCode,
     elGetter: $.ASN1Encoder<ActivityCode>
-) {
+): _Element {
     if (!_cached_encoder_for_ActivityCode) {
         _cached_encoder_for_ActivityCode = $._encode_choice<ActivityCode>(
             {

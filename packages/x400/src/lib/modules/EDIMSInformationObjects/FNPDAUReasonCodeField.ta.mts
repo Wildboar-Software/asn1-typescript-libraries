@@ -123,7 +123,7 @@ let _cached_decoder_for_FNPDAUReasonCodeField: $.ASN1Decoder<FNPDAUReasonCodeFie
  * @param {_Element} el The element being decoded.
  * @returns {FNPDAUReasonCodeField} The decoded data structure.
  */
-export function _decode_FNPDAUReasonCodeField(el: _Element) {
+export function _decode_FNPDAUReasonCodeField(el: _Element): FNPDAUReasonCodeField {
     if (!_cached_decoder_for_FNPDAUReasonCodeField) {
         _cached_decoder_for_FNPDAUReasonCodeField = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_FNPDAUReasonCodeField: $.ASN1Encoder<FNPDAUReasonCodeFie
 export function _encode_FNPDAUReasonCodeField(
     value: FNPDAUReasonCodeField,
     elGetter: $.ASN1Encoder<FNPDAUReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_FNPDAUReasonCodeField) {
         _cached_encoder_for_FNPDAUReasonCodeField = function (
             value: FNPDAUReasonCodeField        ): _Element {

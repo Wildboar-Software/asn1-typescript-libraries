@@ -38,7 +38,7 @@ let _cached_decoder_for_AccountContactList: $.ASN1Decoder<AccountContactList> | 
  * @param {_Element} el The element being decoded.
  * @returns {AccountContactList} The decoded data structure.
  */
-export function _decode_AccountContactList(el: _Element) {
+export function _decode_AccountContactList(el: _Element): AccountContactList {
     if (!_cached_decoder_for_AccountContactList) {
         _cached_decoder_for_AccountContactList = $._decodeSetOf<PersonReach>(
             () => _decode_PersonReach
@@ -61,7 +61,7 @@ let _cached_encoder_for_AccountContactList: $.ASN1Encoder<AccountContactList> | 
 export function _encode_AccountContactList(
     value: AccountContactList,
     elGetter: $.ASN1Encoder<AccountContactList>
-) {
+): _Element {
     if (!_cached_encoder_for_AccountContactList) {
         _cached_encoder_for_AccountContactList = $._encodeSetOf<PersonReach>(
             () => _encode_PersonReach,

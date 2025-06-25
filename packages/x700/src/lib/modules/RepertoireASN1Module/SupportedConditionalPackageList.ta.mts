@@ -35,7 +35,7 @@ let _cached_decoder_for_SupportedConditionalPackageList: $.ASN1Decoder<Supported
  * @param {_Element} el The element being decoded.
  * @returns {SupportedConditionalPackageList} The decoded data structure.
  */
-export function _decode_SupportedConditionalPackageList(el: _Element) {
+export function _decode_SupportedConditionalPackageList(el: _Element): SupportedConditionalPackageList {
     if (!_cached_decoder_for_SupportedConditionalPackageList) {
         _cached_decoder_for_SupportedConditionalPackageList = _decode_Packages;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SupportedConditionalPackageList: $.ASN1Encoder<Supported
 export function _encode_SupportedConditionalPackageList(
     value: SupportedConditionalPackageList,
     elGetter: $.ASN1Encoder<SupportedConditionalPackageList>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedConditionalPackageList) {
         _cached_encoder_for_SupportedConditionalPackageList = _encode_Packages;
     }

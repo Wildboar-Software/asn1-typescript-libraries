@@ -121,7 +121,7 @@ let _cached_decoder_for_LogRcAMessageContent: $.ASN1Decoder<LogRcAMessageContent
  * @returns {LogRcAMessageContent} The decoded data structure.
  */
 export
-function _decode_LogRcAMessageContent (el: _Element) {
+function _decode_LogRcAMessageContent (el: _Element): LogRcAMessageContent {
     if (!_cached_decoder_for_LogRcAMessageContent) { _cached_decoder_for_LogRcAMessageContent = function (el: _Element): LogRcAMessageContent {
     let sessionID!: OCTET_STRING;
     let logResponseInfo: OPTIONAL<OCTET_STRING>;
@@ -155,7 +155,7 @@ let _cached_encoder_for_LogRcAMessageContent: $.ASN1Encoder<LogRcAMessageContent
  * @returns {_Element} The LogRcAMessageContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_LogRcAMessageContent (value: LogRcAMessageContent, elGetter: $.ASN1Encoder<LogRcAMessageContent>) {
+function _encode_LogRcAMessageContent (value: LogRcAMessageContent, elGetter: $.ASN1Encoder<LogRcAMessageContent>): _Element {
     if (!_cached_encoder_for_LogRcAMessageContent) { _cached_encoder_for_LogRcAMessageContent = function (value: LogRcAMessageContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

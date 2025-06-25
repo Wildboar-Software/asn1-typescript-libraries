@@ -105,7 +105,7 @@ let _cached_decoder_for_RequestType: $.ASN1Decoder<RequestType> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RequestType} The decoded data structure.
  */
-export function _decode_RequestType(el: _Element) {
+export function _decode_RequestType(el: _Element): RequestType {
   if (!_cached_decoder_for_RequestType) {
     _cached_decoder_for_RequestType = function (el: _Element): RequestType {
       const sequence: _Element[] = el.sequence;
@@ -139,7 +139,7 @@ let _cached_encoder_for_RequestType: $.ASN1Encoder<RequestType> | null = null;
 export function _encode_RequestType(
   value: RequestType,
   elGetter: $.ASN1Encoder<RequestType>
-) {
+): _Element {
   if (!_cached_encoder_for_RequestType) {
     _cached_encoder_for_RequestType = function (
       value: RequestType    ): _Element {

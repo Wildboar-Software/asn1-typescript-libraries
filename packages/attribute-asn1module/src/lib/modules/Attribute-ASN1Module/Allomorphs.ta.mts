@@ -33,7 +33,7 @@ let _cached_decoder_for_Allomorphs: $.ASN1Decoder<Allomorphs> | null = null;
  * @returns {Allomorphs} The decoded data structure.
  */
 export
-function _decode_Allomorphs (el: _Element) {
+function _decode_Allomorphs (el: _Element): Allomorphs {
     if (!_cached_decoder_for_Allomorphs) { _cached_decoder_for_Allomorphs = $._decodeSetOf<ObjectClass>(() => _decode_ObjectClass); }
     return _cached_decoder_for_Allomorphs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_Allomorphs: $.ASN1Encoder<Allomorphs> | null = null;
  * @returns {_Element} The Allomorphs, encoded as an ASN.1 Element.
  */
 export
-function _encode_Allomorphs (value: Allomorphs, elGetter: $.ASN1Encoder<Allomorphs>) {
+function _encode_Allomorphs (value: Allomorphs, elGetter: $.ASN1Encoder<Allomorphs>): _Element {
     if (!_cached_encoder_for_Allomorphs) { _cached_encoder_for_Allomorphs = $._encodeSetOf<ObjectClass>(() => _encode_ObjectClass, $.BER); }
     return _cached_encoder_for_Allomorphs(value, elGetter);
 }

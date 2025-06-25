@@ -123,7 +123,7 @@ let _cached_decoder_for_ConstructionAlgorithms: $.ASN1Decoder<ConstructionAlgori
  * @param {_Element} el The element being decoded.
  * @returns {ConstructionAlgorithms} The decoded data structure.
  */
-export function _decode_ConstructionAlgorithms(el: _Element) {
+export function _decode_ConstructionAlgorithms(el: _Element): ConstructionAlgorithms {
     if (!_cached_decoder_for_ConstructionAlgorithms) {
         _cached_decoder_for_ConstructionAlgorithms = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_ConstructionAlgorithms: $.ASN1Encoder<ConstructionAlgori
 export function _encode_ConstructionAlgorithms(
     value: ConstructionAlgorithms,
     elGetter: $.ASN1Encoder<ConstructionAlgorithms>
-) {
+): _Element {
     if (!_cached_encoder_for_ConstructionAlgorithms) {
         _cached_encoder_for_ConstructionAlgorithms = function (
             value: ConstructionAlgorithms        ): _Element {

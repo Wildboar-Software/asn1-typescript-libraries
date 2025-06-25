@@ -147,7 +147,7 @@ let _cached_decoder_for_Process_RequestParams: $.ASN1Decoder<Process_RequestPara
  * @param {_Element} el The element being decoded.
  * @returns {Process_RequestParams} The decoded data structure.
  */
-export function _decode_Process_RequestParams(el: _Element) {
+export function _decode_Process_RequestParams(el: _Element): Process_RequestParams {
   if (!_cached_decoder_for_Process_RequestParams) {
     _cached_decoder_for_Process_RequestParams = function (
       el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_Process_RequestParams: $.ASN1Encoder<Process_RequestPara
 export function _encode_Process_RequestParams(
   value: Process_RequestParams,
   elGetter: $.ASN1Encoder<Process_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Process_RequestParams) {
     _cached_encoder_for_Process_RequestParams = function (
       value: Process_RequestParams    ): _Element {

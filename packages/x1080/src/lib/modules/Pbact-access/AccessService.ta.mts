@@ -131,7 +131,7 @@ let _cached_decoder_for_AccessService: $.ASN1Decoder<AccessService> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AccessService} The decoded data structure.
  */
-export function _decode_AccessService(el: _Element) {
+export function _decode_AccessService(el: _Element): AccessService {
     if (!_cached_decoder_for_AccessService) {
         _cached_decoder_for_AccessService = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_AccessService: $.ASN1Encoder<AccessService> | null = nul
 export function _encode_AccessService(
     value: AccessService,
     elGetter: $.ASN1Encoder<AccessService>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessService) {
         _cached_encoder_for_AccessService = function (
             value: AccessService        ): _Element {

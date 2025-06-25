@@ -44,7 +44,7 @@ let _cached_decoder_for_InformationObject: $.ASN1Decoder<InformationObject> | nu
  * @param {_Element} el The element being decoded.
  * @returns {InformationObject} The decoded data structure.
  */
-export function _decode_InformationObject(el: _Element) {
+export function _decode_InformationObject(el: _Element): InformationObject {
     if (!_cached_decoder_for_InformationObject) {
         _cached_decoder_for_InformationObject = $._decode_inextensible_choice<InformationObject>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_InformationObject: $.ASN1Encoder<InformationObject> | nu
 export function _encode_InformationObject(
     value: InformationObject,
     elGetter: $.ASN1Encoder<InformationObject>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationObject) {
         _cached_encoder_for_InformationObject = $._encode_choice<InformationObject>(
             {

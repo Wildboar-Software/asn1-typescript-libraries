@@ -150,7 +150,7 @@ let _cached_decoder_for_KRB_CRED: $.ASN1Decoder<KRB_CRED> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KRB_CRED} The decoded data structure.
  */
-export function _decode_KRB_CRED(el: _Element) {
+export function _decode_KRB_CRED(el: _Element): KRB_CRED {
   if (!_cached_decoder_for_KRB_CRED) {
     _cached_decoder_for_KRB_CRED = $._decode_implicit<KRB_CRED>(
       () =>
@@ -204,7 +204,7 @@ let _cached_encoder_for_KRB_CRED: $.ASN1Encoder<KRB_CRED> | null = null;
 export function _encode_KRB_CRED(
   value: KRB_CRED,
   elGetter: $.ASN1Encoder<KRB_CRED>
-) {
+): _Element {
   if (!_cached_encoder_for_KRB_CRED) {
     _cached_encoder_for_KRB_CRED = $._encode_implicit(
       _TagClass.application,

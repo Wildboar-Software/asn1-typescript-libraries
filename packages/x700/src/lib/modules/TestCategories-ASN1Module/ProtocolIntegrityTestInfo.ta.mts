@@ -179,7 +179,7 @@ let _cached_decoder_for_ProtocolIntegrityTestInfo: $.ASN1Decoder<ProtocolIntegri
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolIntegrityTestInfo} The decoded data structure.
  */
-export function _decode_ProtocolIntegrityTestInfo(el: _Element) {
+export function _decode_ProtocolIntegrityTestInfo(el: _Element): ProtocolIntegrityTestInfo {
     if (!_cached_decoder_for_ProtocolIntegrityTestInfo) {
         _cached_decoder_for_ProtocolIntegrityTestInfo = function (
             el: _Element
@@ -248,7 +248,7 @@ let _cached_encoder_for_ProtocolIntegrityTestInfo: $.ASN1Encoder<ProtocolIntegri
 export function _encode_ProtocolIntegrityTestInfo(
     value: ProtocolIntegrityTestInfo,
     elGetter: $.ASN1Encoder<ProtocolIntegrityTestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtocolIntegrityTestInfo) {
         _cached_encoder_for_ProtocolIntegrityTestInfo = function (
             value: ProtocolIntegrityTestInfo        ): _Element {

@@ -151,7 +151,7 @@ let _cached_decoder_for_CertID: $.ASN1Decoder<CertID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertID} The decoded data structure.
  */
-export function _decode_CertID(el: _Element) {
+export function _decode_CertID(el: _Element): CertID {
     if (!_cached_decoder_for_CertID) {
         _cached_decoder_for_CertID = function (el: _Element): CertID {
             const sequence: _Element[] = el.sequence;
@@ -196,7 +196,7 @@ let _cached_encoder_for_CertID: $.ASN1Encoder<CertID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertID, encoded as an ASN.1 Element.
  */
-export function _encode_CertID(value: CertID, elGetter: $.ASN1Encoder<CertID>) {
+export function _encode_CertID(value: CertID, elGetter: $.ASN1Encoder<CertID>): _Element {
     if (!_cached_encoder_for_CertID) {
         _cached_encoder_for_CertID = function (
             value: CertID        ): _Element {

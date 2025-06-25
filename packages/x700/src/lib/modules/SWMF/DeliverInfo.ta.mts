@@ -178,7 +178,7 @@ let _cached_decoder_for_DeliverInfo: $.ASN1Decoder<DeliverInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeliverInfo} The decoded data structure.
  */
-export function _decode_DeliverInfo(el: _Element) {
+export function _decode_DeliverInfo(el: _Element): DeliverInfo {
     if (!_cached_decoder_for_DeliverInfo) {
         _cached_decoder_for_DeliverInfo = function (el: _Element): DeliverInfo {
             let deliverId: OPTIONAL<DeliverId>;
@@ -248,7 +248,7 @@ let _cached_encoder_for_DeliverInfo: $.ASN1Encoder<DeliverInfo> | null = null;
 export function _encode_DeliverInfo(
     value: DeliverInfo,
     elGetter: $.ASN1Encoder<DeliverInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliverInfo) {
         _cached_encoder_for_DeliverInfo = function (
             value: DeliverInfo        ): _Element {

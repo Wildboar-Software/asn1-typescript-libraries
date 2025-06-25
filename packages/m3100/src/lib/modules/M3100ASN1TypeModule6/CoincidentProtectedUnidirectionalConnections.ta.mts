@@ -132,7 +132,7 @@ let _cached_decoder_for_CoincidentProtectedUnidirectionalConnections: $.ASN1Deco
  */
 export function _decode_CoincidentProtectedUnidirectionalConnections(
     el: _Element
-) {
+): CoincidentProtectedUnidirectionalConnections {
     if (!_cached_decoder_for_CoincidentProtectedUnidirectionalConnections) {
         _cached_decoder_for_CoincidentProtectedUnidirectionalConnections = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_CoincidentProtectedUnidirectionalConnections: $.ASN1Enco
 export function _encode_CoincidentProtectedUnidirectionalConnections(
     value: CoincidentProtectedUnidirectionalConnections,
     elGetter: $.ASN1Encoder<CoincidentProtectedUnidirectionalConnections>
-) {
+): _Element {
     if (!_cached_encoder_for_CoincidentProtectedUnidirectionalConnections) {
         _cached_encoder_for_CoincidentProtectedUnidirectionalConnections = function (
             value: CoincidentProtectedUnidirectionalConnections        ): _Element {

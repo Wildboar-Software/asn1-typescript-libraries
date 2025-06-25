@@ -35,7 +35,7 @@ let _cached_decoder_for_NoSuchMORT: $.ASN1Decoder<NoSuchMORT> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchMORT} The decoded data structure.
  */
-export function _decode_NoSuchMORT(el: _Element) {
+export function _decode_NoSuchMORT(el: _Element): NoSuchMORT {
     if (!_cached_decoder_for_NoSuchMORT) {
         _cached_decoder_for_NoSuchMORT = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_NoSuchMORT: $.ASN1Encoder<NoSuchMORT> | null = null;
 export function _encode_NoSuchMORT(
     value: NoSuchMORT,
     elGetter: $.ASN1Encoder<NoSuchMORT>
-) {
+): _Element {
     if (!_cached_encoder_for_NoSuchMORT) {
         _cached_encoder_for_NoSuchMORT = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

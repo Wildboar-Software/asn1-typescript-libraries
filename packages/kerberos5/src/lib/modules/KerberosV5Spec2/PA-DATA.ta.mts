@@ -122,7 +122,7 @@ let _cached_decoder_for_PA_DATA: $.ASN1Decoder<PA_DATA> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PA_DATA} The decoded data structure.
  */
-export function _decode_PA_DATA(el: _Element) {
+export function _decode_PA_DATA(el: _Element): PA_DATA {
   if (!_cached_decoder_for_PA_DATA) {
     _cached_decoder_for_PA_DATA = function (el: _Element): PA_DATA {
       const sequence: _Element[] = el.sequence;
@@ -159,7 +159,7 @@ let _cached_encoder_for_PA_DATA: $.ASN1Encoder<PA_DATA> | null = null;
 export function _encode_PA_DATA(
   value: PA_DATA,
   elGetter: $.ASN1Encoder<PA_DATA>
-) {
+): _Element {
   if (!_cached_encoder_for_PA_DATA) {
     _cached_encoder_for_PA_DATA = function (
       value: PA_DATA    ): _Element {

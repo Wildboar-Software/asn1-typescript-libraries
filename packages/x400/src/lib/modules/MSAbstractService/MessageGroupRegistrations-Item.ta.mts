@@ -45,7 +45,7 @@ let _cached_decoder_for_MessageGroupRegistrations_Item: $.ASN1Decoder<MessageGro
  * @param {_Element} el The element being decoded.
  * @returns {MessageGroupRegistrations_Item} The decoded data structure.
  */
-export function _decode_MessageGroupRegistrations_Item(el: _Element) {
+export function _decode_MessageGroupRegistrations_Item(el: _Element): MessageGroupRegistrations_Item {
     if (!_cached_decoder_for_MessageGroupRegistrations_Item) {
         _cached_decoder_for_MessageGroupRegistrations_Item = $._decode_inextensible_choice<MessageGroupRegistrations_Item>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_MessageGroupRegistrations_Item: $.ASN1Encoder<MessageGro
 export function _encode_MessageGroupRegistrations_Item(
     value: MessageGroupRegistrations_Item,
     elGetter: $.ASN1Encoder<MessageGroupRegistrations_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageGroupRegistrations_Item) {
         _cached_encoder_for_MessageGroupRegistrations_Item = $._encode_choice<MessageGroupRegistrations_Item>(
             {

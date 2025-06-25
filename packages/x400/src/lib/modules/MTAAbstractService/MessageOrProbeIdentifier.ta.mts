@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageOrProbeIdentifier: $.ASN1Decoder<MessageOrProbeId
  * @param {_Element} el The element being decoded.
  * @returns {MessageOrProbeIdentifier} The decoded data structure.
  */
-export function _decode_MessageOrProbeIdentifier(el: _Element) {
+export function _decode_MessageOrProbeIdentifier(el: _Element): MessageOrProbeIdentifier {
     if (!_cached_decoder_for_MessageOrProbeIdentifier) {
         _cached_decoder_for_MessageOrProbeIdentifier = _decode_MTSIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageOrProbeIdentifier: $.ASN1Encoder<MessageOrProbeId
 export function _encode_MessageOrProbeIdentifier(
     value: MessageOrProbeIdentifier,
     elGetter: $.ASN1Encoder<MessageOrProbeIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageOrProbeIdentifier) {
         _cached_encoder_for_MessageOrProbeIdentifier = _encode_MTSIdentifier;
     }

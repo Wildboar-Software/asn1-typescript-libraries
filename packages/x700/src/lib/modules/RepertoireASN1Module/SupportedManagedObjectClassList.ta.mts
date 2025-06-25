@@ -35,7 +35,7 @@ let _cached_decoder_for_SupportedManagedObjectClassList: $.ASN1Decoder<Supported
  * @param {_Element} el The element being decoded.
  * @returns {SupportedManagedObjectClassList} The decoded data structure.
  */
-export function _decode_SupportedManagedObjectClassList(el: _Element) {
+export function _decode_SupportedManagedObjectClassList(el: _Element): SupportedManagedObjectClassList {
     if (!_cached_decoder_for_SupportedManagedObjectClassList) {
         _cached_decoder_for_SupportedManagedObjectClassList = $._decodeSetOf<GdmoObjectClass>(
             () => _decode_GdmoObjectClass
@@ -56,7 +56,7 @@ let _cached_encoder_for_SupportedManagedObjectClassList: $.ASN1Encoder<Supported
 export function _encode_SupportedManagedObjectClassList(
     value: SupportedManagedObjectClassList,
     elGetter: $.ASN1Encoder<SupportedManagedObjectClassList>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedManagedObjectClassList) {
         _cached_encoder_for_SupportedManagedObjectClassList = $._encodeSetOf<GdmoObjectClass>(
             () => _encode_GdmoObjectClass,

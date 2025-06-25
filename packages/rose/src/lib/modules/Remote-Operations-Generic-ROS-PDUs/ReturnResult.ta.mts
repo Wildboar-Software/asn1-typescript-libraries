@@ -141,7 +141,7 @@ let _cached_decoder_for_ReturnResult: $.ASN1Decoder<ReturnResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReturnResult} The decoded data structure.
  */
-export function _decode_ReturnResult(el: _Element) {
+export function _decode_ReturnResult(el: _Element): ReturnResult {
   if (!_cached_decoder_for_ReturnResult) {
     _cached_decoder_for_ReturnResult = function (el: _Element): ReturnResult {
       let invokeId!: InvokeId;
@@ -182,7 +182,7 @@ let _cached_encoder_for_ReturnResult: $.ASN1Encoder<ReturnResult> | null = null;
 export function _encode_ReturnResult(
   value: ReturnResult,
   elGetter: $.ASN1Encoder<ReturnResult>
-) {
+): _Element {
   if (!_cached_encoder_for_ReturnResult) {
     _cached_encoder_for_ReturnResult = function (
       value: ReturnResult    ): _Element {

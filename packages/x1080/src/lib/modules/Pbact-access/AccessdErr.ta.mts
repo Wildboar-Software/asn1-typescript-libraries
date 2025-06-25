@@ -51,7 +51,7 @@ let _cached_decoder_for_AccessdErr: $.ASN1Decoder<AccessdErr> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AccessdErr} The decoded data structure.
  */
-export function _decode_AccessdErr(el: _Element) {
+export function _decode_AccessdErr(el: _Element): AccessdErr {
     if (!_cached_decoder_for_AccessdErr) {
         _cached_decoder_for_AccessdErr = $._decode_extensible_choice<AccessdErr>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_AccessdErr: $.ASN1Encoder<AccessdErr> | null = null;
 export function _encode_AccessdErr(
     value: AccessdErr,
     elGetter: $.ASN1Encoder<AccessdErr>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessdErr) {
         _cached_encoder_for_AccessdErr = $._encode_choice<AccessdErr>(
             {

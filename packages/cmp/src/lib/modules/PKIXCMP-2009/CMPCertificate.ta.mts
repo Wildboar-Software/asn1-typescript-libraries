@@ -41,7 +41,7 @@ let _cached_decoder_for_CMPCertificate: $.ASN1Decoder<CMPCertificate> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CMPCertificate} The decoded data structure.
  */
-export function _decode_CMPCertificate(el: _Element) {
+export function _decode_CMPCertificate(el: _Element): CMPCertificate {
   if (!_cached_decoder_for_CMPCertificate) {
     _cached_decoder_for_CMPCertificate = $._decode_extensible_choice<CMPCertificate>(
       {
@@ -66,7 +66,7 @@ let _cached_encoder_for_CMPCertificate: $.ASN1Encoder<CMPCertificate> | null = n
 export function _encode_CMPCertificate(
   value: CMPCertificate,
   elGetter: $.ASN1Encoder<CMPCertificate>
-) {
+): _Element {
   if (!_cached_encoder_for_CMPCertificate) {
     _cached_encoder_for_CMPCertificate = $._encode_choice<CMPCertificate>(
       {

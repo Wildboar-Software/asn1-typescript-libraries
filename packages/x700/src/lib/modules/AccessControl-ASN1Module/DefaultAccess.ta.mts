@@ -388,7 +388,7 @@ let _cached_decoder_for_DefaultAccess: $.ASN1Decoder<DefaultAccess> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DefaultAccess} The decoded data structure.
  */
-export function _decode_DefaultAccess(el: _Element) {
+export function _decode_DefaultAccess(el: _Element): DefaultAccess {
     if (!_cached_decoder_for_DefaultAccess) {
         _cached_decoder_for_DefaultAccess = function (
             el: _Element
@@ -502,7 +502,7 @@ let _cached_encoder_for_DefaultAccess: $.ASN1Encoder<DefaultAccess> | null = nul
 export function _encode_DefaultAccess(
     value: DefaultAccess,
     elGetter: $.ASN1Encoder<DefaultAccess>
-) {
+): _Element {
     if (!_cached_encoder_for_DefaultAccess) {
         _cached_encoder_for_DefaultAccess = function (
             value: DefaultAccess        ): _Element {

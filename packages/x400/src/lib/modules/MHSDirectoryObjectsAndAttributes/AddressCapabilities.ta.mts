@@ -137,7 +137,7 @@ let _cached_decoder_for_AddressCapabilities: $.ASN1Decoder<AddressCapabilities> 
  * @param {_Element} el The element being decoded.
  * @returns {AddressCapabilities} The decoded data structure.
  */
-export function _decode_AddressCapabilities(el: _Element) {
+export function _decode_AddressCapabilities(el: _Element): AddressCapabilities {
     if (!_cached_decoder_for_AddressCapabilities) {
         _cached_decoder_for_AddressCapabilities = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_AddressCapabilities: $.ASN1Encoder<AddressCapabilities> 
 export function _encode_AddressCapabilities(
     value: AddressCapabilities,
     elGetter: $.ASN1Encoder<AddressCapabilities>
-) {
+): _Element {
     if (!_cached_encoder_for_AddressCapabilities) {
         _cached_encoder_for_AddressCapabilities = function (
             value: AddressCapabilities        ): _Element {

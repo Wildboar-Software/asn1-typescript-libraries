@@ -122,7 +122,7 @@ let _cached_decoder_for_PublicKeyCert: $.ASN1Decoder<PublicKeyCert> | null = nul
  * @returns {PublicKeyCert} The decoded data structure.
  */
 export
-function _decode_PublicKeyCert (el: _Element) {
+function _decode_PublicKeyCert (el: _Element): PublicKeyCert {
     if (!_cached_decoder_for_PublicKeyCert) { _cached_decoder_for_PublicKeyCert = function (el: _Element): PublicKeyCert {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -157,7 +157,7 @@ let _cached_encoder_for_PublicKeyCert: $.ASN1Encoder<PublicKeyCert> | null = nul
  * @returns {_Element} The PublicKeyCert, encoded as an ASN.1 Element.
  */
 export
-function _encode_PublicKeyCert (value: PublicKeyCert, elGetter: $.ASN1Encoder<PublicKeyCert>) {
+function _encode_PublicKeyCert (value: PublicKeyCert, elGetter: $.ASN1Encoder<PublicKeyCert>): _Element {
     if (!_cached_encoder_for_PublicKeyCert) { _cached_encoder_for_PublicKeyCert = function (value: PublicKeyCert): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

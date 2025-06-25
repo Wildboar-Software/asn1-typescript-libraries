@@ -139,7 +139,7 @@ let _cached_decoder_for_MasterKeyEncryptedHMACkey: $.ASN1Decoder<MasterKeyEncryp
  * @param {_Element} el The element being decoded.
  * @returns {MasterKeyEncryptedHMACkey} The decoded data structure.
  */
-export function _decode_MasterKeyEncryptedHMACkey(el: _Element) {
+export function _decode_MasterKeyEncryptedHMACkey(el: _Element): MasterKeyEncryptedHMACkey {
     if (!_cached_decoder_for_MasterKeyEncryptedHMACkey) {
         _cached_decoder_for_MasterKeyEncryptedHMACkey = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_MasterKeyEncryptedHMACkey: $.ASN1Encoder<MasterKeyEncryp
 export function _encode_MasterKeyEncryptedHMACkey(
     value: MasterKeyEncryptedHMACkey,
     elGetter: $.ASN1Encoder<MasterKeyEncryptedHMACkey>
-) {
+): _Element {
     if (!_cached_encoder_for_MasterKeyEncryptedHMACkey) {
         _cached_encoder_for_MasterKeyEncryptedHMACkey = function (
             value: MasterKeyEncryptedHMACkey        ): _Element {

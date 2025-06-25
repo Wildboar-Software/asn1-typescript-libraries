@@ -35,7 +35,7 @@ let _cached_decoder_for_ForwardedTo: $.ASN1Decoder<ForwardedTo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ForwardedTo} The decoded data structure.
  */
-export function _decode_ForwardedTo(el: _Element) {
+export function _decode_ForwardedTo(el: _Element): ForwardedTo {
     if (!_cached_decoder_for_ForwardedTo) {
         _cached_decoder_for_ForwardedTo = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ForwardedTo: $.ASN1Encoder<ForwardedTo> | null = null;
 export function _encode_ForwardedTo(
     value: ForwardedTo,
     elGetter: $.ASN1Encoder<ForwardedTo>
-) {
+): _Element {
     if (!_cached_encoder_for_ForwardedTo) {
         _cached_encoder_for_ForwardedTo = _encode_ORName;
     }

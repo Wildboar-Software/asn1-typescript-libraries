@@ -38,7 +38,7 @@ let _cached_decoder_for_AlarmReportingControlList: $.ASN1Decoder<AlarmReportingC
  * @param {_Element} el The element being decoded.
  * @returns {AlarmReportingControlList} The decoded data structure.
  */
-export function _decode_AlarmReportingControlList(el: _Element) {
+export function _decode_AlarmReportingControlList(el: _Element): AlarmReportingControlList {
     if (!_cached_decoder_for_AlarmReportingControlList) {
         _cached_decoder_for_AlarmReportingControlList = $._decodeSetOf<AlarmReportingControl>(
             () => _decode_AlarmReportingControl
@@ -61,7 +61,7 @@ let _cached_encoder_for_AlarmReportingControlList: $.ASN1Encoder<AlarmReportingC
 export function _encode_AlarmReportingControlList(
     value: AlarmReportingControlList,
     elGetter: $.ASN1Encoder<AlarmReportingControlList>
-) {
+): _Element {
     if (!_cached_encoder_for_AlarmReportingControlList) {
         _cached_encoder_for_AlarmReportingControlList = $._encodeSetOf<AlarmReportingControl>(
             () => _encode_AlarmReportingControl,

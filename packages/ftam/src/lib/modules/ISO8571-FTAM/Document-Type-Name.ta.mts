@@ -35,7 +35,7 @@ let _cached_decoder_for_Document_Type_Name: $.ASN1Decoder<Document_Type_Name> | 
  * @param {_Element} el The element being decoded.
  * @returns {Document_Type_Name} The decoded data structure.
  */
-export function _decode_Document_Type_Name(el: _Element) {
+export function _decode_Document_Type_Name(el: _Element): Document_Type_Name {
   if (!_cached_decoder_for_Document_Type_Name) {
     _cached_decoder_for_Document_Type_Name = $._decode_implicit<Document_Type_Name>(
       () => $._decodeObjectIdentifier
@@ -58,7 +58,7 @@ let _cached_encoder_for_Document_Type_Name: $.ASN1Encoder<Document_Type_Name> | 
 export function _encode_Document_Type_Name(
   value: Document_Type_Name,
   elGetter: $.ASN1Encoder<Document_Type_Name>
-) {
+): _Element {
   if (!_cached_encoder_for_Document_Type_Name) {
     _cached_encoder_for_Document_Type_Name = $._encode_implicit(
       _TagClass.application,

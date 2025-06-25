@@ -194,7 +194,7 @@ let _cached_decoder_for_BIPAcknowledgement: $.ASN1Decoder<BIPAcknowledgement> | 
  * @param {_Element} el The element being decoded.
  * @returns {BIPAcknowledgement} The decoded data structure.
  */
-export function _decode_BIPAcknowledgement(el: _Element) {
+export function _decode_BIPAcknowledgement(el: _Element): BIPAcknowledgement {
   if (!_cached_decoder_for_BIPAcknowledgement) {
     _cached_decoder_for_BIPAcknowledgement = function (
       el: _Element
@@ -252,7 +252,7 @@ let _cached_encoder_for_BIPAcknowledgement: $.ASN1Encoder<BIPAcknowledgement> | 
 export function _encode_BIPAcknowledgement(
   value: BIPAcknowledgement,
   elGetter: $.ASN1Encoder<BIPAcknowledgement>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPAcknowledgement) {
     _cached_encoder_for_BIPAcknowledgement = function (
       value: BIPAcknowledgement    ): _Element {

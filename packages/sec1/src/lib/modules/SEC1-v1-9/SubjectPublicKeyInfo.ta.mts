@@ -113,7 +113,7 @@ let _cached_decoder_for_SubjectPublicKeyInfo: $.ASN1Decoder<SubjectPublicKeyInfo
  * @returns {SubjectPublicKeyInfo} The decoded data structure.
  */
 export
-function _decode_SubjectPublicKeyInfo (el: _Element) {
+function _decode_SubjectPublicKeyInfo (el: _Element): SubjectPublicKeyInfo {
     if (!_cached_decoder_for_SubjectPublicKeyInfo) { _cached_decoder_for_SubjectPublicKeyInfo = function (el: _Element): SubjectPublicKeyInfo {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -144,7 +144,7 @@ let _cached_encoder_for_SubjectPublicKeyInfo: $.ASN1Encoder<SubjectPublicKeyInfo
  * @returns {_Element} The SubjectPublicKeyInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_SubjectPublicKeyInfo (value: SubjectPublicKeyInfo, elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>) {
+function _encode_SubjectPublicKeyInfo (value: SubjectPublicKeyInfo, elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>): _Element {
     if (!_cached_encoder_for_SubjectPublicKeyInfo) { _cached_encoder_for_SubjectPublicKeyInfo = function (value: SubjectPublicKeyInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

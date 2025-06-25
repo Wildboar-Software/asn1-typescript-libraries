@@ -43,7 +43,7 @@ let _cached_decoder_for_BiometricPolicyCertificateInfo: $.ASN1Decoder<BiometricP
  * @returns {BiometricPolicyCertificateInfo} The decoded data structure.
  */
 export
-function _decode_BiometricPolicyCertificateInfo (el: _Element) {
+function _decode_BiometricPolicyCertificateInfo (el: _Element): BiometricPolicyCertificateInfo {
     if (!_cached_decoder_for_BiometricPolicyCertificateInfo) { _cached_decoder_for_BiometricPolicyCertificateInfo = _decode_AttributeCertificateInfo; }
     return _cached_decoder_for_BiometricPolicyCertificateInfo(el);
 }
@@ -58,7 +58,7 @@ let _cached_encoder_for_BiometricPolicyCertificateInfo: $.ASN1Encoder<BiometricP
  * @returns {_Element} The BiometricPolicyCertificateInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricPolicyCertificateInfo (value: BiometricPolicyCertificateInfo, elGetter: $.ASN1Encoder<BiometricPolicyCertificateInfo>) {
+function _encode_BiometricPolicyCertificateInfo (value: BiometricPolicyCertificateInfo, elGetter: $.ASN1Encoder<BiometricPolicyCertificateInfo>): _Element {
     if (!_cached_encoder_for_BiometricPolicyCertificateInfo) { _cached_encoder_for_BiometricPolicyCertificateInfo = _encode_AttributeCertificateInfo; }
     return _cached_encoder_for_BiometricPolicyCertificateInfo(value, elGetter);
 }

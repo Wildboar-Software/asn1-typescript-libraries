@@ -118,7 +118,7 @@ let _cached_decoder_for_Body: $.ASN1Decoder<Body> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Body} The decoded data structure.
  */
-export function _decode_Body(el: _Element) {
+export function _decode_Body(el: _Element): Body {
     if (!_cached_decoder_for_Body) {
         _cached_decoder_for_Body = function (el: _Element): Body {
             let primary_body_part!: PrimaryBodyPart;
@@ -157,7 +157,7 @@ let _cached_encoder_for_Body: $.ASN1Encoder<Body> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Body, encoded as an ASN.1 Element.
  */
-export function _encode_Body(value: Body, elGetter: $.ASN1Encoder<Body>) {
+export function _encode_Body(value: Body, elGetter: $.ASN1Encoder<Body>): _Element {
     if (!_cached_encoder_for_Body) {
         _cached_encoder_for_Body = function (
             value: Body        ): _Element {

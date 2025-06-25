@@ -42,7 +42,7 @@ let _cached_decoder_for_MTASuppliedInformation_attempted: $.ASN1Decoder<MTASuppl
  * @param {_Element} el The element being decoded.
  * @returns {MTASuppliedInformation_attempted} The decoded data structure.
  */
-export function _decode_MTASuppliedInformation_attempted(el: _Element) {
+export function _decode_MTASuppliedInformation_attempted(el: _Element): MTASuppliedInformation_attempted {
     if (!_cached_decoder_for_MTASuppliedInformation_attempted) {
         _cached_decoder_for_MTASuppliedInformation_attempted = $._decode_inextensible_choice<MTASuppliedInformation_attempted>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_MTASuppliedInformation_attempted: $.ASN1Encoder<MTASuppl
 export function _encode_MTASuppliedInformation_attempted(
     value: MTASuppliedInformation_attempted,
     elGetter: $.ASN1Encoder<MTASuppliedInformation_attempted>
-) {
+): _Element {
     if (!_cached_encoder_for_MTASuppliedInformation_attempted) {
         _cached_encoder_for_MTASuppliedInformation_attempted = $._encode_choice<MTASuppliedInformation_attempted>(
             {

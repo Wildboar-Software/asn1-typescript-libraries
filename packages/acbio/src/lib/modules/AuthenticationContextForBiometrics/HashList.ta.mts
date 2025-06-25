@@ -38,7 +38,7 @@ let _cached_decoder_for_HashList: $.ASN1Decoder<HashList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HashList} The decoded data structure.
  */
-export function _decode_HashList(el: _Element) {
+export function _decode_HashList(el: _Element): HashList {
     if (!_cached_decoder_for_HashList) {
         _cached_decoder_for_HashList = $._decodeSequenceOf<Hash>(
             () => _decode_Hash
@@ -61,7 +61,7 @@ let _cached_encoder_for_HashList: $.ASN1Encoder<HashList> | null = null;
 export function _encode_HashList(
     value: HashList,
     elGetter: $.ASN1Encoder<HashList>
-) {
+): _Element {
     if (!_cached_encoder_for_HashList) {
         _cached_encoder_for_HashList = $._encodeSequenceOf<Hash>(
             () => _encode_Hash,

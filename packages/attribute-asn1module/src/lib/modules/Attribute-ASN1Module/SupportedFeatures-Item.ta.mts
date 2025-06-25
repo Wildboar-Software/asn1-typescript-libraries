@@ -108,7 +108,7 @@ let _cached_decoder_for_SupportedFeatures_Item: $.ASN1Decoder<SupportedFeatures_
  * @returns {SupportedFeatures_Item} The decoded data structure.
  */
 export
-function _decode_SupportedFeatures_Item (el: _Element) {
+function _decode_SupportedFeatures_Item (el: _Element): SupportedFeatures_Item {
     if (!_cached_decoder_for_SupportedFeatures_Item) { _cached_decoder_for_SupportedFeatures_Item = function (el: _Element): SupportedFeatures_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -139,7 +139,7 @@ let _cached_encoder_for_SupportedFeatures_Item: $.ASN1Encoder<SupportedFeatures_
  * @returns {_Element} The SupportedFeatures_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_SupportedFeatures_Item (value: SupportedFeatures_Item, elGetter: $.ASN1Encoder<SupportedFeatures_Item>) {
+function _encode_SupportedFeatures_Item (value: SupportedFeatures_Item, elGetter: $.ASN1Encoder<SupportedFeatures_Item>): _Element {
     if (!_cached_encoder_for_SupportedFeatures_Item) { _cached_encoder_for_SupportedFeatures_Item = function (value: SupportedFeatures_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

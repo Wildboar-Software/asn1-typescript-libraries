@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginallyIntendedRecipientName: $.ASN1Decoder<Originall
  * @param {_Element} el The element being decoded.
  * @returns {OriginallyIntendedRecipientName} The decoded data structure.
  */
-export function _decode_OriginallyIntendedRecipientName(el: _Element) {
+export function _decode_OriginallyIntendedRecipientName(el: _Element): OriginallyIntendedRecipientName {
     if (!_cached_decoder_for_OriginallyIntendedRecipientName) {
         _cached_decoder_for_OriginallyIntendedRecipientName = _decode_ORAddressAndOptionalDirectoryName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginallyIntendedRecipientName: $.ASN1Encoder<Originall
 export function _encode_OriginallyIntendedRecipientName(
     value: OriginallyIntendedRecipientName,
     elGetter: $.ASN1Encoder<OriginallyIntendedRecipientName>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginallyIntendedRecipientName) {
         _cached_encoder_for_OriginallyIntendedRecipientName = _encode_ORAddressAndOptionalDirectoryName;
     }

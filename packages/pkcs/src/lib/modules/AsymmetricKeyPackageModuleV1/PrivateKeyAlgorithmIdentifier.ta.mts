@@ -32,7 +32,7 @@ let _cached_decoder_for_PrivateKeyAlgorithmIdentifier: $.ASN1Decoder<PrivateKeyA
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeyAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_PrivateKeyAlgorithmIdentifier(el: _Element) {
+export function _decode_PrivateKeyAlgorithmIdentifier(el: _Element): PrivateKeyAlgorithmIdentifier {
     if (!_cached_decoder_for_PrivateKeyAlgorithmIdentifier) {
         _cached_decoder_for_PrivateKeyAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -53,7 +53,7 @@ let _cached_encoder_for_PrivateKeyAlgorithmIdentifier: $.ASN1Encoder<PrivateKeyA
 export function _encode_PrivateKeyAlgorithmIdentifier(
     value: PrivateKeyAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<PrivateKeyAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKeyAlgorithmIdentifier) {
         _cached_encoder_for_PrivateKeyAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

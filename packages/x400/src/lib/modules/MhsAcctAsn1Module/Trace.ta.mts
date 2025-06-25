@@ -35,7 +35,7 @@ let _cached_decoder_for_Trace: $.ASN1Decoder<Trace> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Trace} The decoded data structure.
  */
-export function _decode_Trace(el: _Element) {
+export function _decode_Trace(el: _Element): Trace {
     if (!_cached_decoder_for_Trace) {
         _cached_decoder_for_Trace = _decode_TraceInformation;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Trace: $.ASN1Encoder<Trace> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Trace, encoded as an ASN.1 Element.
  */
-export function _encode_Trace(value: Trace, elGetter: $.ASN1Encoder<Trace>) {
+export function _encode_Trace(value: Trace, elGetter: $.ASN1Encoder<Trace>): _Element {
     if (!_cached_encoder_for_Trace) {
         _cached_encoder_for_Trace = _encode_TraceInformation;
     }

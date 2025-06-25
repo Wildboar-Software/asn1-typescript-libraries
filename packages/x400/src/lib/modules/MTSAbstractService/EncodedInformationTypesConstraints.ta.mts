@@ -133,7 +133,7 @@ let _cached_decoder_for_EncodedInformationTypesConstraints: $.ASN1Decoder<Encode
  * @param {_Element} el The element being decoded.
  * @returns {EncodedInformationTypesConstraints} The decoded data structure.
  */
-export function _decode_EncodedInformationTypesConstraints(el: _Element) {
+export function _decode_EncodedInformationTypesConstraints(el: _Element): EncodedInformationTypesConstraints {
     if (!_cached_decoder_for_EncodedInformationTypesConstraints) {
         _cached_decoder_for_EncodedInformationTypesConstraints = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_EncodedInformationTypesConstraints: $.ASN1Encoder<Encode
 export function _encode_EncodedInformationTypesConstraints(
     value: EncodedInformationTypesConstraints,
     elGetter: $.ASN1Encoder<EncodedInformationTypesConstraints>
-) {
+): _Element {
     if (!_cached_encoder_for_EncodedInformationTypesConstraints) {
         _cached_encoder_for_EncodedInformationTypesConstraints = function (
             value: EncodedInformationTypesConstraints        ): _Element {

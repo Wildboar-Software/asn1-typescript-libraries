@@ -112,7 +112,7 @@ let _cached_decoder_for_OcspResponsesID: $.ASN1Decoder<OcspResponsesID> | null =
  * @returns {OcspResponsesID} The decoded data structure.
  */
 export
-function _decode_OcspResponsesID (el: _Element) {
+function _decode_OcspResponsesID (el: _Element): OcspResponsesID {
     if (!_cached_decoder_for_OcspResponsesID) { _cached_decoder_for_OcspResponsesID = function (el: _Element): OcspResponsesID {
     let ocspIdentifier!: OcspIdentifier;
     let ocspRepHash: OPTIONAL<OtherHash>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_OcspResponsesID: $.ASN1Encoder<OcspResponsesID> | null =
  * @returns {_Element} The OcspResponsesID, encoded as an ASN.1 Element.
  */
 export
-function _encode_OcspResponsesID (value: OcspResponsesID, elGetter: $.ASN1Encoder<OcspResponsesID>) {
+function _encode_OcspResponsesID (value: OcspResponsesID, elGetter: $.ASN1Encoder<OcspResponsesID>): _Element {
     if (!_cached_encoder_for_OcspResponsesID) { _cached_encoder_for_OcspResponsesID = function (value: OcspResponsesID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

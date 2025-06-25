@@ -113,7 +113,7 @@ let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<Invali
  * @param {_Element} el The element being decoded.
  * @returns {InvalidAccessControlFilter_errorId} The decoded data structure.
  */
-export function _decode_InvalidAccessControlFilter_errorId(el: _Element) {
+export function _decode_InvalidAccessControlFilter_errorId(el: _Element): InvalidAccessControlFilter_errorId {
     if (!_cached_decoder_for_InvalidAccessControlFilter_errorId) {
         _cached_decoder_for_InvalidAccessControlFilter_errorId =
             $._decodeEnumerated;
@@ -133,7 +133,7 @@ let _cached_encoder_for_InvalidAccessControlFilter_errorId: $.ASN1Encoder<Invali
 export function _encode_InvalidAccessControlFilter_errorId(
     value: InvalidAccessControlFilter_errorId,
     elGetter: $.ASN1Encoder<InvalidAccessControlFilter_errorId>
-) {
+): _Element {
     if (!_cached_encoder_for_InvalidAccessControlFilter_errorId) {
         _cached_encoder_for_InvalidAccessControlFilter_errorId =
             $._encodeEnumerated;

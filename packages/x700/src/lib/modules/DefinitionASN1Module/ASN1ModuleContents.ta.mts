@@ -38,7 +38,7 @@ let _cached_decoder_for_ASN1ModuleContents: $.ASN1Decoder<ASN1ModuleContents> | 
  * @param {_Element} el The element being decoded.
  * @returns {ASN1ModuleContents} The decoded data structure.
  */
-export function _decode_ASN1ModuleContents(el: _Element) {
+export function _decode_ASN1ModuleContents(el: _Element): ASN1ModuleContents {
     if (!_cached_decoder_for_ASN1ModuleContents) {
         _cached_decoder_for_ASN1ModuleContents = _decode_TextualRepresentation;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ASN1ModuleContents: $.ASN1Encoder<ASN1ModuleContents> | 
 export function _encode_ASN1ModuleContents(
     value: ASN1ModuleContents,
     elGetter: $.ASN1Encoder<ASN1ModuleContents>
-) {
+): _Element {
     if (!_cached_encoder_for_ASN1ModuleContents) {
         _cached_encoder_for_ASN1ModuleContents = _encode_TextualRepresentation;
     }

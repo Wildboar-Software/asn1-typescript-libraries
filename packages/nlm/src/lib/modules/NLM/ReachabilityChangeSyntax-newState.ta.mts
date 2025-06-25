@@ -105,7 +105,7 @@ let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<Reachab
  * @param {_Element} el The element being decoded.
  * @returns {ReachabilityChangeSyntax_newState} The decoded data structure.
  */
-export function _decode_ReachabilityChangeSyntax_newState(el: _Element) {
+export function _decode_ReachabilityChangeSyntax_newState(el: _Element): ReachabilityChangeSyntax_newState {
     if (!_cached_decoder_for_ReachabilityChangeSyntax_newState) {
         _cached_decoder_for_ReachabilityChangeSyntax_newState =
             $._decodeEnumerated;
@@ -127,7 +127,7 @@ let _cached_encoder_for_ReachabilityChangeSyntax_newState: $.ASN1Encoder<Reachab
 export function _encode_ReachabilityChangeSyntax_newState(
     value: ReachabilityChangeSyntax_newState,
     elGetter: $.ASN1Encoder<ReachabilityChangeSyntax_newState>
-) {
+): _Element {
     if (!_cached_encoder_for_ReachabilityChangeSyntax_newState) {
         _cached_encoder_for_ReachabilityChangeSyntax_newState =
             $._encodeEnumerated;

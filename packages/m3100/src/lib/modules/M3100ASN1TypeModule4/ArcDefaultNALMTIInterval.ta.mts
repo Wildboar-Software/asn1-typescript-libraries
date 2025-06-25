@@ -38,7 +38,7 @@ let _cached_decoder_for_ArcDefaultNALMTIInterval: $.ASN1Decoder<ArcDefaultNALMTI
  * @param {_Element} el The element being decoded.
  * @returns {ArcDefaultNALMTIInterval} The decoded data structure.
  */
-export function _decode_ArcDefaultNALMTIInterval(el: _Element) {
+export function _decode_ArcDefaultNALMTIInterval(el: _Element): ArcDefaultNALMTIInterval {
     if (!_cached_decoder_for_ArcDefaultNALMTIInterval) {
         _cached_decoder_for_ArcDefaultNALMTIInterval = _decode_ArcTime;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ArcDefaultNALMTIInterval: $.ASN1Encoder<ArcDefaultNALMTI
 export function _encode_ArcDefaultNALMTIInterval(
     value: ArcDefaultNALMTIInterval,
     elGetter: $.ASN1Encoder<ArcDefaultNALMTIInterval>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcDefaultNALMTIInterval) {
         _cached_encoder_for_ArcDefaultNALMTIInterval = _encode_ArcTime;
     }

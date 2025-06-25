@@ -35,7 +35,7 @@ let _cached_decoder_for_SynchronizationProtocolID: $.ASN1Decoder<Synchronization
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizationProtocolID} The decoded data structure.
  */
-export function _decode_SynchronizationProtocolID(el: _Element) {
+export function _decode_SynchronizationProtocolID(el: _Element): SynchronizationProtocolID {
     if (!_cached_decoder_for_SynchronizationProtocolID) {
         _cached_decoder_for_SynchronizationProtocolID = _decode_SimpleNameType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SynchronizationProtocolID: $.ASN1Encoder<Synchronization
 export function _encode_SynchronizationProtocolID(
     value: SynchronizationProtocolID,
     elGetter: $.ASN1Encoder<SynchronizationProtocolID>
-) {
+): _Element {
     if (!_cached_encoder_for_SynchronizationProtocolID) {
         _cached_encoder_for_SynchronizationProtocolID = _encode_SimpleNameType;
     }

@@ -29,7 +29,7 @@ let _cached_decoder_for_Sidechains: $.ASN1Decoder<Sidechains> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Sidechains} The decoded data structure.
  */
-export function _decode_Sidechains(el: _Element) {
+export function _decode_Sidechains(el: _Element): Sidechains {
     if (!_cached_decoder_for_Sidechains) {
         _cached_decoder_for_Sidechains = $._decodeSequenceOf<Sidechain>(
             () => _decode_Sidechain
@@ -52,7 +52,7 @@ let _cached_encoder_for_Sidechains: $.ASN1Encoder<Sidechains> | null = null;
 export function _encode_Sidechains(
     value: Sidechains,
     elGetter: $.ASN1Encoder<Sidechains>
-) {
+): _Element {
     if (!_cached_encoder_for_Sidechains) {
         _cached_encoder_for_Sidechains = $._encodeSequenceOf<Sidechain>(
             () => _encode_Sidechain,

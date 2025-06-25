@@ -62,7 +62,7 @@ let _cached_decoder_for_ConnectionType: $.ASN1Decoder<ConnectionType> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ConnectionType} The decoded data structure.
  */
-export function _decode_ConnectionType(el: _Element) {
+export function _decode_ConnectionType(el: _Element): ConnectionType {
     if (!_cached_decoder_for_ConnectionType) {
         _cached_decoder_for_ConnectionType = $._decode_inextensible_choice<ConnectionType>(
             {
@@ -106,7 +106,7 @@ let _cached_encoder_for_ConnectionType: $.ASN1Encoder<ConnectionType> | null = n
 export function _encode_ConnectionType(
     value: ConnectionType,
     elGetter: $.ASN1Encoder<ConnectionType>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectionType) {
         _cached_encoder_for_ConnectionType = $._encode_choice<ConnectionType>(
             {

@@ -150,7 +150,7 @@ let _cached_decoder_for_CertPathControls: $.ASN1Decoder<CertPathControls> | null
  * @returns {CertPathControls} The decoded data structure.
  */
 export
-function _decode_CertPathControls (el: _Element) {
+function _decode_CertPathControls (el: _Element): CertPathControls {
     if (!_cached_decoder_for_CertPathControls) { _cached_decoder_for_CertPathControls = function (el: _Element): CertPathControls {
     let taName!: Name;
     let certificate: OPTIONAL<Certificate>;
@@ -194,7 +194,7 @@ let _cached_encoder_for_CertPathControls: $.ASN1Encoder<CertPathControls> | null
  * @returns {_Element} The CertPathControls, encoded as an ASN.1 Element.
  */
 export
-function _encode_CertPathControls (value: CertPathControls, elGetter: $.ASN1Encoder<CertPathControls>) {
+function _encode_CertPathControls (value: CertPathControls, elGetter: $.ASN1Encoder<CertPathControls>): _Element {
     if (!_cached_encoder_for_CertPathControls) { _cached_encoder_for_CertPathControls = function (value: CertPathControls): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

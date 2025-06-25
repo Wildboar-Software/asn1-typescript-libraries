@@ -154,7 +154,7 @@ let _cached_decoder_for_Continue: $.ASN1Decoder<Continue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Continue} The decoded data structure.
  */
-export function _decode_Continue(el: _Element) {
+export function _decode_Continue(el: _Element): Continue {
   if (!_cached_decoder_for_Continue) {
     _cached_decoder_for_Continue = function (el: _Element): Continue {
       let otid!: OrigTransactionID;
@@ -206,7 +206,7 @@ let _cached_encoder_for_Continue: $.ASN1Encoder<Continue> | null = null;
 export function _encode_Continue(
   value: Continue,
   elGetter: $.ASN1Encoder<Continue>
-) {
+): _Element {
   if (!_cached_encoder_for_Continue) {
     _cached_encoder_for_Continue = function (
       value: Continue    ): _Element {

@@ -180,7 +180,7 @@ let _cached_decoder_for_RecordInfo: $.ASN1Decoder<RecordInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RecordInfo} The decoded data structure.
  */
-export function _decode_RecordInfo(el: _Element) {
+export function _decode_RecordInfo(el: _Element): RecordInfo {
     if (!_cached_decoder_for_RecordInfo) {
         _cached_decoder_for_RecordInfo = function (el: _Element): RecordInfo {
             let oDFRecordLength: OPTIONAL<INTEGER>;
@@ -263,7 +263,7 @@ let _cached_encoder_for_RecordInfo: $.ASN1Encoder<RecordInfo> | null = null;
 export function _encode_RecordInfo(
     value: RecordInfo,
     elGetter: $.ASN1Encoder<RecordInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RecordInfo) {
         _cached_encoder_for_RecordInfo = function (
             value: RecordInfo        ): _Element {

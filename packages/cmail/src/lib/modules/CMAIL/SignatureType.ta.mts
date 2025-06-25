@@ -39,7 +39,7 @@ let _cached_decoder_for_SignatureType: $.ASN1Decoder<SignatureType> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SignatureType} The decoded data structure.
  */
-export function _decode_SignatureType(el: _Element) {
+export function _decode_SignatureType(el: _Element): SignatureType {
   if (!_cached_decoder_for_SignatureType) {
     _cached_decoder_for_SignatureType = _decode_String;
   }
@@ -60,7 +60,7 @@ let _cached_encoder_for_SignatureType: $.ASN1Encoder<SignatureType> | null = nul
 export function _encode_SignatureType(
   value: SignatureType,
   elGetter: $.ASN1Encoder<SignatureType>
-) {
+): _Element {
   if (!_cached_encoder_for_SignatureType) {
     _cached_encoder_for_SignatureType = _encode_String;
   }

@@ -32,7 +32,7 @@ let _cached_decoder_for_PrecedencePolicyIdentifier: $.ASN1Decoder<PrecedencePoli
  * @param {_Element} el The element being decoded.
  * @returns {PrecedencePolicyIdentifier} The decoded data structure.
  */
-export function _decode_PrecedencePolicyIdentifier(el: _Element) {
+export function _decode_PrecedencePolicyIdentifier(el: _Element): PrecedencePolicyIdentifier {
     if (!_cached_decoder_for_PrecedencePolicyIdentifier) {
         _cached_decoder_for_PrecedencePolicyIdentifier =
             $._decodeObjectIdentifier;
@@ -52,7 +52,7 @@ let _cached_encoder_for_PrecedencePolicyIdentifier: $.ASN1Encoder<PrecedencePoli
 export function _encode_PrecedencePolicyIdentifier(
     value: PrecedencePolicyIdentifier,
     elGetter: $.ASN1Encoder<PrecedencePolicyIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PrecedencePolicyIdentifier) {
         _cached_encoder_for_PrecedencePolicyIdentifier =
             $._encodeObjectIdentifier;

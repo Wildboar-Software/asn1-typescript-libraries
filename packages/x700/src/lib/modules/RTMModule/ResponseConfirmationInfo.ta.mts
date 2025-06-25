@@ -361,7 +361,7 @@ let _cached_decoder_for_ResponseConfirmationInfo: $.ASN1Decoder<ResponseConfirma
  * @param {_Element} el The element being decoded.
  * @returns {ResponseConfirmationInfo} The decoded data structure.
  */
-export function _decode_ResponseConfirmationInfo(el: _Element) {
+export function _decode_ResponseConfirmationInfo(el: _Element): ResponseConfirmationInfo {
     if (!_cached_decoder_for_ResponseConfirmationInfo) {
         _cached_decoder_for_ResponseConfirmationInfo = function (
             el: _Element
@@ -495,7 +495,7 @@ let _cached_encoder_for_ResponseConfirmationInfo: $.ASN1Encoder<ResponseConfirma
 export function _encode_ResponseConfirmationInfo(
     value: ResponseConfirmationInfo,
     elGetter: $.ASN1Encoder<ResponseConfirmationInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponseConfirmationInfo) {
         _cached_encoder_for_ResponseConfirmationInfo = function (
             value: ResponseConfirmationInfo        ): _Element {

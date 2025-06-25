@@ -35,7 +35,7 @@ let _cached_decoder_for_EstablishmentTime: $.ASN1Decoder<EstablishmentTime> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EstablishmentTime} The decoded data structure.
  */
-export function _decode_EstablishmentTime(el: _Element) {
+export function _decode_EstablishmentTime(el: _Element): EstablishmentTime {
     if (!_cached_decoder_for_EstablishmentTime) {
         _cached_decoder_for_EstablishmentTime = _decode_Timespec;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_EstablishmentTime: $.ASN1Encoder<EstablishmentTime> | nu
 export function _encode_EstablishmentTime(
     value: EstablishmentTime,
     elGetter: $.ASN1Encoder<EstablishmentTime>
-) {
+): _Element {
     if (!_cached_encoder_for_EstablishmentTime) {
         _cached_encoder_for_EstablishmentTime = _encode_Timespec;
     }

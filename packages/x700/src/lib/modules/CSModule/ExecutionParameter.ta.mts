@@ -115,7 +115,7 @@ let _cached_decoder_for_ExecutionParameter: $.ASN1Decoder<ExecutionParameter> | 
  * @param {_Element} el The element being decoded.
  * @returns {ExecutionParameter} The decoded data structure.
  */
-export function _decode_ExecutionParameter(el: _Element) {
+export function _decode_ExecutionParameter(el: _Element): ExecutionParameter {
     if (!_cached_decoder_for_ExecutionParameter) {
         _cached_decoder_for_ExecutionParameter = function (
             el: _Element
@@ -154,7 +154,7 @@ let _cached_encoder_for_ExecutionParameter: $.ASN1Encoder<ExecutionParameter> | 
 export function _encode_ExecutionParameter(
     value: ExecutionParameter,
     elGetter: $.ASN1Encoder<ExecutionParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecutionParameter) {
         _cached_encoder_for_ExecutionParameter = function (
             value: ExecutionParameter        ): _Element {

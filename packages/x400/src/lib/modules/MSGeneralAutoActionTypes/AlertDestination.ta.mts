@@ -113,7 +113,7 @@ let _cached_decoder_for_AlertDestination: $.ASN1Decoder<AlertDestination> | null
  * @param {_Element} el The element being decoded.
  * @returns {AlertDestination} The decoded data structure.
  */
-export function _decode_AlertDestination(el: _Element) {
+export function _decode_AlertDestination(el: _Element): AlertDestination {
     if (!_cached_decoder_for_AlertDestination) {
         _cached_decoder_for_AlertDestination = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_AlertDestination: $.ASN1Encoder<AlertDestination> | null
 export function _encode_AlertDestination(
     value: AlertDestination,
     elGetter: $.ASN1Encoder<AlertDestination>
-) {
+): _Element {
     if (!_cached_encoder_for_AlertDestination) {
         _cached_encoder_for_AlertDestination = function (
             value: AlertDestination        ): _Element {

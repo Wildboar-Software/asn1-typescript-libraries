@@ -128,7 +128,7 @@ let _cached_decoder_for_QualityEvaluation: $.ASN1Decoder<QualityEvaluation> | nu
  * @param {_Element} el The element being decoded.
  * @returns {QualityEvaluation} The decoded data structure.
  */
-export function _decode_QualityEvaluation(el: _Element) {
+export function _decode_QualityEvaluation(el: _Element): QualityEvaluation {
     if (!_cached_decoder_for_QualityEvaluation) {
         _cached_decoder_for_QualityEvaluation = function (
             el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_QualityEvaluation: $.ASN1Encoder<QualityEvaluation> | nu
 export function _encode_QualityEvaluation(
     value: QualityEvaluation,
     elGetter: $.ASN1Encoder<QualityEvaluation>
-) {
+): _Element {
     if (!_cached_encoder_for_QualityEvaluation) {
         _cached_encoder_for_QualityEvaluation = function (
             value: QualityEvaluation        ): _Element {

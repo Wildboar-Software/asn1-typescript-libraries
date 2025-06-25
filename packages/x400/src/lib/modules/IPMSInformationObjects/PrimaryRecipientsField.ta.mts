@@ -35,7 +35,7 @@ let _cached_decoder_for_PrimaryRecipientsField: $.ASN1Decoder<PrimaryRecipientsF
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryRecipientsField} The decoded data structure.
  */
-export function _decode_PrimaryRecipientsField(el: _Element) {
+export function _decode_PrimaryRecipientsField(el: _Element): PrimaryRecipientsField {
     if (!_cached_decoder_for_PrimaryRecipientsField) {
         _cached_decoder_for_PrimaryRecipientsField = $._decodeSequenceOf<PrimaryRecipientsSubfield>(
             () => _decode_PrimaryRecipientsSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_PrimaryRecipientsField: $.ASN1Encoder<PrimaryRecipientsF
 export function _encode_PrimaryRecipientsField(
     value: PrimaryRecipientsField,
     elGetter: $.ASN1Encoder<PrimaryRecipientsField>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryRecipientsField) {
         _cached_encoder_for_PrimaryRecipientsField = $._encodeSequenceOf<PrimaryRecipientsSubfield>(
             () => _encode_PrimaryRecipientsSubfield,

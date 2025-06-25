@@ -149,7 +149,7 @@ let _cached_decoder_for_ResourceBoundaryTestResults: $.ASN1Decoder<ResourceBound
  * @param {_Element} el The element being decoded.
  * @returns {ResourceBoundaryTestResults} The decoded data structure.
  */
-export function _decode_ResourceBoundaryTestResults(el: _Element) {
+export function _decode_ResourceBoundaryTestResults(el: _Element): ResourceBoundaryTestResults {
     if (!_cached_decoder_for_ResourceBoundaryTestResults) {
         _cached_decoder_for_ResourceBoundaryTestResults = function (
             el: _Element
@@ -206,7 +206,7 @@ let _cached_encoder_for_ResourceBoundaryTestResults: $.ASN1Encoder<ResourceBound
 export function _encode_ResourceBoundaryTestResults(
     value: ResourceBoundaryTestResults,
     elGetter: $.ASN1Encoder<ResourceBoundaryTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourceBoundaryTestResults) {
         _cached_encoder_for_ResourceBoundaryTestResults = function (
             value: ResourceBoundaryTestResults        ): _Element {

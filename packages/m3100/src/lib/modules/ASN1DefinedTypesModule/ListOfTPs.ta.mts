@@ -38,7 +38,7 @@ let _cached_decoder_for_ListOfTPs: $.ASN1Decoder<ListOfTPs> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ListOfTPs} The decoded data structure.
  */
-export function _decode_ListOfTPs(el: _Element) {
+export function _decode_ListOfTPs(el: _Element): ListOfTPs {
     if (!_cached_decoder_for_ListOfTPs) {
         _cached_decoder_for_ListOfTPs = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ListOfTPs: $.ASN1Encoder<ListOfTPs> | null = null;
 export function _encode_ListOfTPs(
     value: ListOfTPs,
     elGetter: $.ASN1Encoder<ListOfTPs>
-) {
+): _Element {
     if (!_cached_encoder_for_ListOfTPs) {
         _cached_encoder_for_ListOfTPs = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

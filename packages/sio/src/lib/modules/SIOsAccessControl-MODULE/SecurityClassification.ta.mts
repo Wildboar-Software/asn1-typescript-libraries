@@ -215,7 +215,7 @@ let _cached_decoder_for_SecurityClassification: $.ASN1Decoder<SecurityClassifica
  * @param {_Element} el The element being decoded.
  * @returns {SecurityClassification} The decoded data structure.
  */
-export function _decode_SecurityClassification(el: _Element) {
+export function _decode_SecurityClassification(el: _Element): SecurityClassification {
     if (!_cached_decoder_for_SecurityClassification) {
         _cached_decoder_for_SecurityClassification = function (
             el: _Element
@@ -293,7 +293,7 @@ let _cached_encoder_for_SecurityClassification: $.ASN1Encoder<SecurityClassifica
 export function _encode_SecurityClassification(
     value: SecurityClassification,
     elGetter: $.ASN1Encoder<SecurityClassification>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityClassification) {
         _cached_encoder_for_SecurityClassification = function (
             value: SecurityClassification        ): _Element {

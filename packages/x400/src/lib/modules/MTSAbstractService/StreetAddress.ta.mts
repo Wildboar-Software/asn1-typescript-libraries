@@ -35,7 +35,7 @@ let _cached_decoder_for_StreetAddress: $.ASN1Decoder<StreetAddress> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {StreetAddress} The decoded data structure.
  */
-export function _decode_StreetAddress(el: _Element) {
+export function _decode_StreetAddress(el: _Element): StreetAddress {
     if (!_cached_decoder_for_StreetAddress) {
         _cached_decoder_for_StreetAddress = _decode_PDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_StreetAddress: $.ASN1Encoder<StreetAddress> | null = nul
 export function _encode_StreetAddress(
     value: StreetAddress,
     elGetter: $.ASN1Encoder<StreetAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_StreetAddress) {
         _cached_encoder_for_StreetAddress = _encode_PDSParameter;
     }

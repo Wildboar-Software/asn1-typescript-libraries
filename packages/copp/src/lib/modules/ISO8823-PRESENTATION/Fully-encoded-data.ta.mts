@@ -38,7 +38,7 @@ let _cached_decoder_for_Fully_encoded_data: $.ASN1Decoder<Fully_encoded_data> | 
  * @param {_Element} el The element being decoded.
  * @returns {Fully_encoded_data} The decoded data structure.
  */
-export function _decode_Fully_encoded_data(el: _Element) {
+export function _decode_Fully_encoded_data(el: _Element): Fully_encoded_data {
     if (!_cached_decoder_for_Fully_encoded_data) {
         _cached_decoder_for_Fully_encoded_data = $._decodeSequenceOf<PDV_list>(
             () => _decode_PDV_list
@@ -61,7 +61,7 @@ let _cached_encoder_for_Fully_encoded_data: $.ASN1Encoder<Fully_encoded_data> | 
 export function _encode_Fully_encoded_data(
     value: Fully_encoded_data,
     elGetter: $.ASN1Encoder<Fully_encoded_data>
-) {
+): _Element {
     if (!_cached_encoder_for_Fully_encoded_data) {
         _cached_encoder_for_Fully_encoded_data = $._encodeSequenceOf<PDV_list>(
             () => _encode_PDV_list,

@@ -112,7 +112,7 @@ let _cached_decoder_for_CrlValidatedID: $.ASN1Decoder<CrlValidatedID> | null = n
  * @returns {CrlValidatedID} The decoded data structure.
  */
 export
-function _decode_CrlValidatedID (el: _Element) {
+function _decode_CrlValidatedID (el: _Element): CrlValidatedID {
     if (!_cached_decoder_for_CrlValidatedID) { _cached_decoder_for_CrlValidatedID = function (el: _Element): CrlValidatedID {
     let crlHash!: OtherHash;
     let crlIdentifier: OPTIONAL<CrlIdentifier>;
@@ -144,7 +144,7 @@ let _cached_encoder_for_CrlValidatedID: $.ASN1Encoder<CrlValidatedID> | null = n
  * @returns {_Element} The CrlValidatedID, encoded as an ASN.1 Element.
  */
 export
-function _encode_CrlValidatedID (value: CrlValidatedID, elGetter: $.ASN1Encoder<CrlValidatedID>) {
+function _encode_CrlValidatedID (value: CrlValidatedID, elGetter: $.ASN1Encoder<CrlValidatedID>): _Element {
     if (!_cached_encoder_for_CrlValidatedID) { _cached_encoder_for_CrlValidatedID = function (value: CrlValidatedID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

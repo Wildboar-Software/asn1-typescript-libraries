@@ -128,7 +128,7 @@ let _cached_decoder_for_ManagementExtension: $.ASN1Decoder<ManagementExtension> 
  * @returns {ManagementExtension} The decoded data structure.
  */
 export
-function _decode_ManagementExtension (el: _Element) {
+function _decode_ManagementExtension (el: _Element): ManagementExtension {
     if (!_cached_decoder_for_ManagementExtension) { _cached_decoder_for_ManagementExtension = function (el: _Element): ManagementExtension {
     let identifier!: OBJECT_IDENTIFIER;
     let significance: OPTIONAL<BOOLEAN> = ManagementExtension._default_value_for_significance;
@@ -163,7 +163,7 @@ let _cached_encoder_for_ManagementExtension: $.ASN1Encoder<ManagementExtension> 
  * @returns {_Element} The ManagementExtension, encoded as an ASN.1 Element.
  */
 export
-function _encode_ManagementExtension (value: ManagementExtension, elGetter: $.ASN1Encoder<ManagementExtension>) {
+function _encode_ManagementExtension (value: ManagementExtension, elGetter: $.ASN1Encoder<ManagementExtension>): _Element {
     if (!_cached_encoder_for_ManagementExtension) { _cached_encoder_for_ManagementExtension = function (value: ManagementExtension): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

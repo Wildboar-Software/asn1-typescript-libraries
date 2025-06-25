@@ -42,7 +42,7 @@ let _cached_decoder_for_RestoredTime: $.ASN1Decoder<RestoredTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RestoredTime} The decoded data structure.
  */
-export function _decode_RestoredTime(el: _Element) {
+export function _decode_RestoredTime(el: _Element): RestoredTime {
     if (!_cached_decoder_for_RestoredTime) {
         _cached_decoder_for_RestoredTime = $._decode_extensible_choice<RestoredTime>(
             {
@@ -68,7 +68,7 @@ let _cached_encoder_for_RestoredTime: $.ASN1Encoder<RestoredTime> | null = null;
 export function _encode_RestoredTime(
     value: RestoredTime,
     elGetter: $.ASN1Encoder<RestoredTime>
-) {
+): _Element {
     if (!_cached_encoder_for_RestoredTime) {
         _cached_encoder_for_RestoredTime = $._encode_choice<RestoredTime>(
             {

@@ -35,7 +35,7 @@ let _cached_decoder_for_IPNOriginatorField: $.ASN1Decoder<IPNOriginatorField> | 
  * @param {_Element} el The element being decoded.
  * @returns {IPNOriginatorField} The decoded data structure.
  */
-export function _decode_IPNOriginatorField(el: _Element) {
+export function _decode_IPNOriginatorField(el: _Element): IPNOriginatorField {
     if (!_cached_decoder_for_IPNOriginatorField) {
         _cached_decoder_for_IPNOriginatorField = _decode_ORDescriptor;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_IPNOriginatorField: $.ASN1Encoder<IPNOriginatorField> | 
 export function _encode_IPNOriginatorField(
     value: IPNOriginatorField,
     elGetter: $.ASN1Encoder<IPNOriginatorField>
-) {
+): _Element {
     if (!_cached_encoder_for_IPNOriginatorField) {
         _cached_encoder_for_IPNOriginatorField = _encode_ORDescriptor;
     }

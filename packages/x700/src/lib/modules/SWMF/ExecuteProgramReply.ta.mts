@@ -151,7 +151,7 @@ let _cached_decoder_for_ExecuteProgramReply: $.ASN1Decoder<ExecuteProgramReply> 
  * @param {_Element} el The element being decoded.
  * @returns {ExecuteProgramReply} The decoded data structure.
  */
-export function _decode_ExecuteProgramReply(el: _Element) {
+export function _decode_ExecuteProgramReply(el: _Element): ExecuteProgramReply {
     if (!_cached_decoder_for_ExecuteProgramReply) {
         _cached_decoder_for_ExecuteProgramReply = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_ExecuteProgramReply: $.ASN1Encoder<ExecuteProgramReply> 
 export function _encode_ExecuteProgramReply(
     value: ExecuteProgramReply,
     elGetter: $.ASN1Encoder<ExecuteProgramReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecuteProgramReply) {
         _cached_encoder_for_ExecuteProgramReply = function (
             value: ExecuteProgramReply        ): _Element {

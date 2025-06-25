@@ -96,7 +96,7 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
  * @param {_Element} el The element being decoded.
  * @returns {Priority} The decoded data structure.
  */
- export function _decode_Priority (el: _Element) {
+ export function _decode_Priority (el: _Element): Priority {
     return $._decodeEnumerated(el);
 }
 
@@ -110,7 +110,7 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
 export function _encode_Priority(
     value: Priority,
     elGetter: $.ASN1Encoder<Priority>
-) {
+): _Element {
     return $._encode_implicit(
         _TagClass.application,
         7,

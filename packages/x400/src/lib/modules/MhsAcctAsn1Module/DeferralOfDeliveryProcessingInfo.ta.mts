@@ -35,7 +35,7 @@ let _cached_decoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Decoder<Deferral
  * @param {_Element} el The element being decoded.
  * @returns {DeferralOfDeliveryProcessingInfo} The decoded data structure.
  */
-export function _decode_DeferralOfDeliveryProcessingInfo(el: _Element) {
+export function _decode_DeferralOfDeliveryProcessingInfo(el: _Element): DeferralOfDeliveryProcessingInfo {
     if (!_cached_decoder_for_DeferralOfDeliveryProcessingInfo) {
         _cached_decoder_for_DeferralOfDeliveryProcessingInfo = _decode_DeferredDeliveryTime;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Encoder<Deferral
 export function _encode_DeferralOfDeliveryProcessingInfo(
     value: DeferralOfDeliveryProcessingInfo,
     elGetter: $.ASN1Encoder<DeferralOfDeliveryProcessingInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DeferralOfDeliveryProcessingInfo) {
         _cached_encoder_for_DeferralOfDeliveryProcessingInfo = _encode_DeferredDeliveryTime;
     }

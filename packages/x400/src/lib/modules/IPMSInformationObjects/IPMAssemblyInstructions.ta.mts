@@ -103,7 +103,7 @@ let _cached_decoder_for_IPMAssemblyInstructions: $.ASN1Decoder<IPMAssemblyInstru
  * @param {_Element} el The element being decoded.
  * @returns {IPMAssemblyInstructions} The decoded data structure.
  */
-export function _decode_IPMAssemblyInstructions(el: _Element) {
+export function _decode_IPMAssemblyInstructions(el: _Element): IPMAssemblyInstructions {
     if (!_cached_decoder_for_IPMAssemblyInstructions) {
         _cached_decoder_for_IPMAssemblyInstructions = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_IPMAssemblyInstructions: $.ASN1Encoder<IPMAssemblyInstru
 export function _encode_IPMAssemblyInstructions(
     value: IPMAssemblyInstructions,
     elGetter: $.ASN1Encoder<IPMAssemblyInstructions>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMAssemblyInstructions) {
         _cached_encoder_for_IPMAssemblyInstructions = function (
             value: IPMAssemblyInstructions        ): _Element {

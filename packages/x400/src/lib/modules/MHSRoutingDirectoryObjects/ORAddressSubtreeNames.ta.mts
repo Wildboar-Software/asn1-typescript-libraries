@@ -35,7 +35,7 @@ let _cached_decoder_for_ORAddressSubtreeNames: $.ASN1Decoder<ORAddressSubtreeNam
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressSubtreeNames} The decoded data structure.
  */
-export function _decode_ORAddressSubtreeNames(el: _Element) {
+export function _decode_ORAddressSubtreeNames(el: _Element): ORAddressSubtreeNames {
     if (!_cached_decoder_for_ORAddressSubtreeNames) {
         _cached_decoder_for_ORAddressSubtreeNames = $._decodeSequenceOf<DistinguishedName>(
             () => _decode_DistinguishedName
@@ -56,7 +56,7 @@ let _cached_encoder_for_ORAddressSubtreeNames: $.ASN1Encoder<ORAddressSubtreeNam
 export function _encode_ORAddressSubtreeNames(
     value: ORAddressSubtreeNames,
     elGetter: $.ASN1Encoder<ORAddressSubtreeNames>
-) {
+): _Element {
     if (!_cached_encoder_for_ORAddressSubtreeNames) {
         _cached_encoder_for_ORAddressSubtreeNames = $._encodeSequenceOf<DistinguishedName>(
             () => _encode_DistinguishedName,

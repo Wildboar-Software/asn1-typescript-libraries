@@ -169,7 +169,7 @@ let _cached_decoder_for_ActionResult: $.ASN1Decoder<ActionResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ActionResult} The decoded data structure.
  */
-export function _decode_ActionResult(el: _Element) {
+export function _decode_ActionResult(el: _Element): ActionResult {
   if (!_cached_decoder_for_ActionResult) {
     _cached_decoder_for_ActionResult = function (el: _Element): ActionResult {
       let managedObjectClass: OPTIONAL<ObjectClass>;
@@ -231,7 +231,7 @@ let _cached_encoder_for_ActionResult: $.ASN1Encoder<ActionResult> | null = null;
 export function _encode_ActionResult(
   value: ActionResult,
   elGetter: $.ASN1Encoder<ActionResult>
-) {
+): _Element {
   if (!_cached_encoder_for_ActionResult) {
     _cached_encoder_for_ActionResult = function (
       value: ActionResult    ): _Element {

@@ -113,7 +113,7 @@ let _cached_decoder_for_ObjectClassList_Item: $.ASN1Decoder<ObjectClassList_Item
  * @param {_Element} el The element being decoded.
  * @returns {ObjectClassList_Item} The decoded data structure.
  */
-export function _decode_ObjectClassList_Item(el: _Element) {
+export function _decode_ObjectClassList_Item(el: _Element): ObjectClassList_Item {
     if (!_cached_decoder_for_ObjectClassList_Item) {
         _cached_decoder_for_ObjectClassList_Item = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_ObjectClassList_Item: $.ASN1Encoder<ObjectClassList_Item
 export function _encode_ObjectClassList_Item(
     value: ObjectClassList_Item,
     elGetter: $.ASN1Encoder<ObjectClassList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectClassList_Item) {
         _cached_encoder_for_ObjectClassList_Item = function (
             value: ObjectClassList_Item        ): _Element {

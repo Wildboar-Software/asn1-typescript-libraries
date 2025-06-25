@@ -40,7 +40,7 @@ let _cached_decoder_for_EntityIdentifier: $.ASN1Decoder<EntityIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {EntityIdentifier} The decoded data structure.
  */
-export function _decode_EntityIdentifier(el: _Element) {
+export function _decode_EntityIdentifier(el: _Element): EntityIdentifier {
     if (!_cached_decoder_for_EntityIdentifier) {
         _cached_decoder_for_EntityIdentifier = $._decode_inextensible_choice<EntityIdentifier>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_EntityIdentifier: $.ASN1Encoder<EntityIdentifier> | null
 export function _encode_EntityIdentifier(
     value: EntityIdentifier,
     elGetter: $.ASN1Encoder<EntityIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_EntityIdentifier) {
         _cached_encoder_for_EntityIdentifier = $._encode_choice<EntityIdentifier>(
             {

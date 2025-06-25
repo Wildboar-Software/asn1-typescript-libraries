@@ -230,7 +230,7 @@ let _cached_decoder_for_ErrorInfo: $.ASN1Decoder<ErrorInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ErrorInfo} The decoded data structure.
  */
-export function _decode_ErrorInfo(el: _Element) {
+export function _decode_ErrorInfo(el: _Element): ErrorInfo {
     if (!_cached_decoder_for_ErrorInfo) {
         _cached_decoder_for_ErrorInfo = function (el: _Element): ErrorInfo {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -313,7 +313,7 @@ let _cached_encoder_for_ErrorInfo: $.ASN1Encoder<ErrorInfo> | null = null;
 export function _encode_ErrorInfo(
     value: ErrorInfo,
     elGetter: $.ASN1Encoder<ErrorInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ErrorInfo) {
         _cached_encoder_for_ErrorInfo = function (
             value: ErrorInfo        ): _Element {

@@ -126,7 +126,7 @@ let _cached_decoder_for_PA_ENC_TS_ENC: $.ASN1Decoder<PA_ENC_TS_ENC> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PA_ENC_TS_ENC} The decoded data structure.
  */
-export function _decode_PA_ENC_TS_ENC(el: _Element) {
+export function _decode_PA_ENC_TS_ENC(el: _Element): PA_ENC_TS_ENC {
   if (!_cached_decoder_for_PA_ENC_TS_ENC) {
     _cached_decoder_for_PA_ENC_TS_ENC = function (el: _Element): PA_ENC_TS_ENC {
       let patimestamp!: KerberosTime;
@@ -174,7 +174,7 @@ let _cached_encoder_for_PA_ENC_TS_ENC: $.ASN1Encoder<PA_ENC_TS_ENC> | null = nul
 export function _encode_PA_ENC_TS_ENC(
   value: PA_ENC_TS_ENC,
   elGetter: $.ASN1Encoder<PA_ENC_TS_ENC>
-) {
+): _Element {
   if (!_cached_encoder_for_PA_ENC_TS_ENC) {
     _cached_encoder_for_PA_ENC_TS_ENC = function (
       value: PA_ENC_TS_ENC    ): _Element {

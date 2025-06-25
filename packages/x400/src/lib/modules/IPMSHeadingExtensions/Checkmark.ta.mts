@@ -48,7 +48,7 @@ let _cached_decoder_for_Checkmark: $.ASN1Decoder<Checkmark> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Checkmark} The decoded data structure.
  */
-export function _decode_Checkmark(el: _Element) {
+export function _decode_Checkmark(el: _Element): Checkmark {
     if (!_cached_decoder_for_Checkmark) {
         _cached_decoder_for_Checkmark = $._decode_inextensible_choice<Checkmark>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_Checkmark: $.ASN1Encoder<Checkmark> | null = null;
 export function _encode_Checkmark(
     value: Checkmark,
     elGetter: $.ASN1Encoder<Checkmark>
-) {
+): _Element {
     if (!_cached_encoder_for_Checkmark) {
         _cached_encoder_for_Checkmark = $._encode_choice<Checkmark>(
             {

@@ -33,7 +33,7 @@ let _cached_decoder_for_AttributeCertificateRefs: $.ASN1Decoder<AttributeCertifi
  * @returns {AttributeCertificateRefs} The decoded data structure.
  */
 export
-function _decode_AttributeCertificateRefs (el: _Element) {
+function _decode_AttributeCertificateRefs (el: _Element): AttributeCertificateRefs {
     if (!_cached_decoder_for_AttributeCertificateRefs) { _cached_decoder_for_AttributeCertificateRefs = $._decodeSequenceOf<OtherCertID>(() => _decode_OtherCertID); }
     return _cached_decoder_for_AttributeCertificateRefs(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AttributeCertificateRefs: $.ASN1Encoder<AttributeCertifi
  * @returns {_Element} The AttributeCertificateRefs, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeCertificateRefs (value: AttributeCertificateRefs, elGetter: $.ASN1Encoder<AttributeCertificateRefs>) {
+function _encode_AttributeCertificateRefs (value: AttributeCertificateRefs, elGetter: $.ASN1Encoder<AttributeCertificateRefs>): _Element {
     if (!_cached_encoder_for_AttributeCertificateRefs) { _cached_encoder_for_AttributeCertificateRefs = $._encodeSequenceOf<OtherCertID>(() => _encode_OtherCertID, $.DER); }
     return _cached_encoder_for_AttributeCertificateRefs(value, elGetter);
 }

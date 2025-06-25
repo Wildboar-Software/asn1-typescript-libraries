@@ -33,7 +33,7 @@ let _cached_decoder_for_CertChecks: $.ASN1Decoder<CertChecks> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CertChecks} The decoded data structure.
  */
-export function _decode_CertChecks(el: _Element) {
+export function _decode_CertChecks(el: _Element): CertChecks {
   if (!_cached_decoder_for_CertChecks) {
     _cached_decoder_for_CertChecks = $._decodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._decodeObjectIdentifier
@@ -54,7 +54,7 @@ let _cached_encoder_for_CertChecks: $.ASN1Encoder<CertChecks> | null = null;
 export function _encode_CertChecks(
   value: CertChecks,
   elGetter: $.ASN1Encoder<CertChecks>
-) {
+): _Element {
   if (!_cached_encoder_for_CertChecks) {
     _cached_encoder_for_CertChecks = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
       () => $._encodeObjectIdentifier,

@@ -41,7 +41,7 @@ let _cached_decoder_for_Pathname_Pattern_pathname_value_Item: $.ASN1Decoder<Path
  * @param {_Element} el The element being decoded.
  * @returns {Pathname_Pattern_pathname_value_Item} The decoded data structure.
  */
-export function _decode_Pathname_Pattern_pathname_value_Item(el: _Element) {
+export function _decode_Pathname_Pattern_pathname_value_Item(el: _Element): Pathname_Pattern_pathname_value_Item {
   if (!_cached_decoder_for_Pathname_Pattern_pathname_value_Item) {
     _cached_decoder_for_Pathname_Pattern_pathname_value_Item = $._decode_inextensible_choice<Pathname_Pattern_pathname_value_Item>(
       {
@@ -73,7 +73,7 @@ let _cached_encoder_for_Pathname_Pattern_pathname_value_Item: $.ASN1Encoder<Path
 export function _encode_Pathname_Pattern_pathname_value_Item(
   value: Pathname_Pattern_pathname_value_Item,
   elGetter: $.ASN1Encoder<Pathname_Pattern_pathname_value_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Pathname_Pattern_pathname_value_Item) {
     _cached_encoder_for_Pathname_Pattern_pathname_value_Item = $._encode_choice<Pathname_Pattern_pathname_value_Item>(
       {

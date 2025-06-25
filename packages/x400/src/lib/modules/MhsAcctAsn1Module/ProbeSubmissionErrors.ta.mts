@@ -39,7 +39,7 @@ let _cached_decoder_for_ProbeSubmissionErrors: $.ASN1Decoder<ProbeSubmissionErro
  * @param {_Element} el The element being decoded.
  * @returns {ProbeSubmissionErrors} The decoded data structure.
  */
-export function _decode_ProbeSubmissionErrors(el: _Element) {
+export function _decode_ProbeSubmissionErrors(el: _Element): ProbeSubmissionErrors {
     if (!_cached_decoder_for_ProbeSubmissionErrors) {
         _cached_decoder_for_ProbeSubmissionErrors = _decode_SubmissionError;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_ProbeSubmissionErrors: $.ASN1Encoder<ProbeSubmissionErro
 export function _encode_ProbeSubmissionErrors(
     value: ProbeSubmissionErrors,
     elGetter: $.ASN1Encoder<ProbeSubmissionErrors>
-) {
+): _Element {
     if (!_cached_encoder_for_ProbeSubmissionErrors) {
         _cached_encoder_for_ProbeSubmissionErrors = _encode_SubmissionError;
     }

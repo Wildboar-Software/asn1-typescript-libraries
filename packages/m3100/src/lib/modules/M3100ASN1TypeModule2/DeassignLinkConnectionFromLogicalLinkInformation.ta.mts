@@ -40,7 +40,7 @@ let _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1
  */
 export function _decode_DeassignLinkConnectionFromLogicalLinkInformation(
     el: _Element
-) {
+): DeassignLinkConnectionFromLogicalLinkInformation {
     if (!_cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation) {
         _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation = _decode_LinkConnectionList;
     }
@@ -63,7 +63,7 @@ let _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1
 export function _encode_DeassignLinkConnectionFromLogicalLinkInformation(
     value: DeassignLinkConnectionFromLogicalLinkInformation,
     elGetter: $.ASN1Encoder<DeassignLinkConnectionFromLogicalLinkInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation) {
         _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation = _encode_LinkConnectionList;
     }

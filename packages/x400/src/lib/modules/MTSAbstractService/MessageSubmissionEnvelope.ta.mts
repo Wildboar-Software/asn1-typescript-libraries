@@ -253,7 +253,7 @@ let _cached_decoder_for_MessageSubmissionEnvelope: $.ASN1Decoder<MessageSubmissi
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionEnvelope} The decoded data structure.
  */
-export function _decode_MessageSubmissionEnvelope(el: _Element) {
+export function _decode_MessageSubmissionEnvelope(el: _Element): MessageSubmissionEnvelope {
     if (!_cached_decoder_for_MessageSubmissionEnvelope) {
         _cached_decoder_for_MessageSubmissionEnvelope = function (
             el: _Element
@@ -351,7 +351,7 @@ let _cached_encoder_for_MessageSubmissionEnvelope: $.ASN1Encoder<MessageSubmissi
 export function _encode_MessageSubmissionEnvelope(
     value: MessageSubmissionEnvelope,
     elGetter: $.ASN1Encoder<MessageSubmissionEnvelope>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageSubmissionEnvelope) {
         _cached_encoder_for_MessageSubmissionEnvelope = function (
             value: MessageSubmissionEnvelope        ): _Element {

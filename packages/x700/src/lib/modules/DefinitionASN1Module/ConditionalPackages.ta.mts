@@ -40,7 +40,7 @@ let _cached_decoder_for_ConditionalPackages: $.ASN1Decoder<ConditionalPackages> 
  * @param {_Element} el The element being decoded.
  * @returns {ConditionalPackages} The decoded data structure.
  */
-export function _decode_ConditionalPackages(el: _Element) {
+export function _decode_ConditionalPackages(el: _Element): ConditionalPackages {
     if (!_cached_decoder_for_ConditionalPackages) {
         _cached_decoder_for_ConditionalPackages = $._decodeSetOf<ConditionalPackages_Item>(
             () => _decode_ConditionalPackages_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_ConditionalPackages: $.ASN1Encoder<ConditionalPackages> 
 export function _encode_ConditionalPackages(
     value: ConditionalPackages,
     elGetter: $.ASN1Encoder<ConditionalPackages>
-) {
+): _Element {
     if (!_cached_encoder_for_ConditionalPackages) {
         _cached_encoder_for_ConditionalPackages = $._encodeSetOf<ConditionalPackages_Item>(
             () => _encode_ConditionalPackages_Item,

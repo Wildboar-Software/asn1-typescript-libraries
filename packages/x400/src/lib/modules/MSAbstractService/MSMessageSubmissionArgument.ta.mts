@@ -144,7 +144,7 @@ let _cached_decoder_for_MSMessageSubmissionArgument: $.ASN1Decoder<MSMessageSubm
  * @param {_Element} el The element being decoded.
  * @returns {MSMessageSubmissionArgument} The decoded data structure.
  */
-export function _decode_MSMessageSubmissionArgument(el: _Element) {
+export function _decode_MSMessageSubmissionArgument(el: _Element): MSMessageSubmissionArgument {
     if (!_cached_decoder_for_MSMessageSubmissionArgument) {
         _cached_decoder_for_MSMessageSubmissionArgument = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_MSMessageSubmissionArgument: $.ASN1Encoder<MSMessageSubm
 export function _encode_MSMessageSubmissionArgument(
     value: MSMessageSubmissionArgument,
     elGetter: $.ASN1Encoder<MSMessageSubmissionArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_MSMessageSubmissionArgument) {
         _cached_encoder_for_MSMessageSubmissionArgument = function (
             value: MSMessageSubmissionArgument        ): _Element {

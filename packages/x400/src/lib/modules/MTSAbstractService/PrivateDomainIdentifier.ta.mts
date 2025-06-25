@@ -38,7 +38,7 @@ let _cached_decoder_for_PrivateDomainIdentifier: $.ASN1Decoder<PrivateDomainIden
  * @param {_Element} el The element being decoded.
  * @returns {PrivateDomainIdentifier} The decoded data structure.
  */
-export function _decode_PrivateDomainIdentifier(el: _Element) {
+export function _decode_PrivateDomainIdentifier(el: _Element): PrivateDomainIdentifier {
     if (!_cached_decoder_for_PrivateDomainIdentifier) {
         _cached_decoder_for_PrivateDomainIdentifier = $._decode_inextensible_choice<PrivateDomainIdentifier>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_PrivateDomainIdentifier: $.ASN1Encoder<PrivateDomainIden
 export function _encode_PrivateDomainIdentifier(
     value: PrivateDomainIdentifier,
     elGetter: $.ASN1Encoder<PrivateDomainIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateDomainIdentifier) {
         _cached_encoder_for_PrivateDomainIdentifier = $._encode_choice<PrivateDomainIdentifier>(
             {

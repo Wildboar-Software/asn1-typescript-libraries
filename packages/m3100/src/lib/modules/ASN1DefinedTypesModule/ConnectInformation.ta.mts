@@ -51,7 +51,7 @@ let _cached_decoder_for_ConnectInformation: $.ASN1Decoder<ConnectInformation> | 
  * @param {_Element} el The element being decoded.
  * @returns {ConnectInformation} The decoded data structure.
  */
-export function _decode_ConnectInformation(el: _Element) {
+export function _decode_ConnectInformation(el: _Element): ConnectInformation {
     if (!_cached_decoder_for_ConnectInformation) {
         _cached_decoder_for_ConnectInformation = $._decodeSequenceOf<ConnectInformation_Item>(
             () => _decode_ConnectInformation_Item
@@ -74,7 +74,7 @@ let _cached_encoder_for_ConnectInformation: $.ASN1Encoder<ConnectInformation> | 
 export function _encode_ConnectInformation(
     value: ConnectInformation,
     elGetter: $.ASN1Encoder<ConnectInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectInformation) {
         _cached_encoder_for_ConnectInformation = $._encodeSequenceOf<ConnectInformation_Item>(
             () => _encode_ConnectInformation_Item,

@@ -37,7 +37,7 @@ let _cached_decoder_for_Envelope_body_or_fault: $.ASN1Decoder<Envelope_body_or_f
  * @param {_Element} el The element being decoded.
  * @returns {Envelope_body_or_fault} The decoded data structure.
  */
-export function _decode_Envelope_body_or_fault(el: _Element) {
+export function _decode_Envelope_body_or_fault(el: _Element): Envelope_body_or_fault {
   if (!_cached_decoder_for_Envelope_body_or_fault) {
     _cached_decoder_for_Envelope_body_or_fault = $._decode_inextensible_choice<Envelope_body_or_fault>(
       {
@@ -63,7 +63,7 @@ let _cached_encoder_for_Envelope_body_or_fault: $.ASN1Encoder<Envelope_body_or_f
 export function _encode_Envelope_body_or_fault(
   value: Envelope_body_or_fault,
   elGetter: $.ASN1Encoder<Envelope_body_or_fault>
-) {
+): _Element {
   if (!_cached_encoder_for_Envelope_body_or_fault) {
     _cached_encoder_for_Envelope_body_or_fault = $._encode_choice<Envelope_body_or_fault>(
       {

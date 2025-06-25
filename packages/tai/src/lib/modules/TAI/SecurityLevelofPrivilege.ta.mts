@@ -106,7 +106,7 @@ let _cached_decoder_for_SecurityLevelofPrivilege: $.ASN1Decoder<SecurityLevelofP
  * @returns {SecurityLevelofPrivilege} The decoded data structure.
  */
 export
-function _decode_SecurityLevelofPrivilege (el: _Element) {
+function _decode_SecurityLevelofPrivilege (el: _Element): SecurityLevelofPrivilege {
     if (!_cached_decoder_for_SecurityLevelofPrivilege) { _cached_decoder_for_SecurityLevelofPrivilege = function (el: _Element): SecurityLevelofPrivilege {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 1) {
@@ -133,7 +133,7 @@ let _cached_encoder_for_SecurityLevelofPrivilege: $.ASN1Encoder<SecurityLevelofP
  * @returns {_Element} The SecurityLevelofPrivilege, encoded as an ASN.1 Element.
  */
 export
-function _encode_SecurityLevelofPrivilege (value: SecurityLevelofPrivilege, elGetter: $.ASN1Encoder<SecurityLevelofPrivilege>) {
+function _encode_SecurityLevelofPrivilege (value: SecurityLevelofPrivilege, elGetter: $.ASN1Encoder<SecurityLevelofPrivilege>): _Element {
     if (!_cached_encoder_for_SecurityLevelofPrivilege) { _cached_encoder_for_SecurityLevelofPrivilege = function (value: SecurityLevelofPrivilege): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

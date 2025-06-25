@@ -116,7 +116,7 @@ let _cached_decoder_for_TimeStamped: $.ASN1Decoder<TimeStamped> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TimeStamped} The decoded data structure.
  */
-export function _decode_TimeStamped(el: _Element) {
+export function _decode_TimeStamped(el: _Element): TimeStamped {
     if (!_cached_decoder_for_TimeStamped) {
         _cached_decoder_for_TimeStamped = function (el: _Element): TimeStamped {
             let timeStampValue!: TimeStamp;
@@ -160,7 +160,7 @@ let _cached_encoder_for_TimeStamped: $.ASN1Encoder<TimeStamped> | null = null;
 export function _encode_TimeStamped(
     value: TimeStamped,
     elGetter: $.ASN1Encoder<TimeStamped>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeStamped) {
         _cached_encoder_for_TimeStamped = function (
             value: TimeStamped        ): _Element {

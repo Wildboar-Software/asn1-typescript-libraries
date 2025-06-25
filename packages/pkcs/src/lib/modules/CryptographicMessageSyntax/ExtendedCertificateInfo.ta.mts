@@ -144,7 +144,7 @@ let _cached_decoder_for_ExtendedCertificateInfo: $.ASN1Decoder<ExtendedCertifica
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedCertificateInfo} The decoded data structure.
  */
-export function _decode_ExtendedCertificateInfo(el: _Element) {
+export function _decode_ExtendedCertificateInfo(el: _Element): ExtendedCertificateInfo {
     if (!_cached_decoder_for_ExtendedCertificateInfo) {
         _cached_decoder_for_ExtendedCertificateInfo = function (
             el: _Element
@@ -190,7 +190,7 @@ let _cached_encoder_for_ExtendedCertificateInfo: $.ASN1Encoder<ExtendedCertifica
 export function _encode_ExtendedCertificateInfo(
     value: ExtendedCertificateInfo,
     elGetter: $.ASN1Encoder<ExtendedCertificateInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedCertificateInfo) {
         _cached_encoder_for_ExtendedCertificateInfo = function (
             value: ExtendedCertificateInfo        ): _Element {

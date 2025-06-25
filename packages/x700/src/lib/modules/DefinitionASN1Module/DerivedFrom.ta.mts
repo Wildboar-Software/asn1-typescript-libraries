@@ -35,7 +35,7 @@ let _cached_decoder_for_DerivedFrom: $.ASN1Decoder<DerivedFrom> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DerivedFrom} The decoded data structure.
  */
-export function _decode_DerivedFrom(el: _Element) {
+export function _decode_DerivedFrom(el: _Element): DerivedFrom {
     if (!_cached_decoder_for_DerivedFrom) {
         _cached_decoder_for_DerivedFrom = _decode_TemplateList;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DerivedFrom: $.ASN1Encoder<DerivedFrom> | null = null;
 export function _encode_DerivedFrom(
     value: DerivedFrom,
     elGetter: $.ASN1Encoder<DerivedFrom>
-) {
+): _Element {
     if (!_cached_encoder_for_DerivedFrom) {
         _cached_encoder_for_DerivedFrom = _encode_TemplateList;
     }

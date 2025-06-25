@@ -178,7 +178,7 @@ let _cached_decoder_for_F_GROUP_CHANGE_ATTRIB_response: $.ASN1Decoder<F_GROUP_CH
  * @param {_Element} el The element being decoded.
  * @returns {F_GROUP_CHANGE_ATTRIB_response} The decoded data structure.
  */
-export function _decode_F_GROUP_CHANGE_ATTRIB_response(el: _Element) {
+export function _decode_F_GROUP_CHANGE_ATTRIB_response(el: _Element): F_GROUP_CHANGE_ATTRIB_response {
   if (!_cached_decoder_for_F_GROUP_CHANGE_ATTRIB_response) {
     _cached_decoder_for_F_GROUP_CHANGE_ATTRIB_response = function (
       el: _Element
@@ -235,7 +235,7 @@ let _cached_encoder_for_F_GROUP_CHANGE_ATTRIB_response: $.ASN1Encoder<F_GROUP_CH
 export function _encode_F_GROUP_CHANGE_ATTRIB_response(
   value: F_GROUP_CHANGE_ATTRIB_response,
   elGetter: $.ASN1Encoder<F_GROUP_CHANGE_ATTRIB_response>
-) {
+): _Element {
   if (!_cached_encoder_for_F_GROUP_CHANGE_ATTRIB_response) {
     _cached_encoder_for_F_GROUP_CHANGE_ATTRIB_response = function (
       value: F_GROUP_CHANGE_ATTRIB_response    ): _Element {

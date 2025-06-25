@@ -125,7 +125,7 @@ let _cached_decoder_for_AddLeg: $.ASN1Decoder<AddLeg> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddLeg} The decoded data structure.
  */
-export function _decode_AddLeg(el: _Element) {
+export function _decode_AddLeg(el: _Element): AddLeg {
     if (!_cached_decoder_for_AddLeg) {
         _cached_decoder_for_AddLeg = function (el: _Element): AddLeg {
             const sequence: _Element[] = el.sequence;
@@ -161,7 +161,7 @@ let _cached_encoder_for_AddLeg: $.ASN1Encoder<AddLeg> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AddLeg, encoded as an ASN.1 Element.
  */
-export function _encode_AddLeg(value: AddLeg, elGetter: $.ASN1Encoder<AddLeg>) {
+export function _encode_AddLeg(value: AddLeg, elGetter: $.ASN1Encoder<AddLeg>): _Element {
     if (!_cached_encoder_for_AddLeg) {
         _cached_encoder_for_AddLeg = function (
             value: AddLeg        ): _Element {

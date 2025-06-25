@@ -41,7 +41,7 @@ let _cached_decoder_for_DomainIdentity: $.ASN1Decoder<DomainIdentity> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {DomainIdentity} The decoded data structure.
  */
-export function _decode_DomainIdentity(el: _Element) {
+export function _decode_DomainIdentity(el: _Element): DomainIdentity {
     if (!_cached_decoder_for_DomainIdentity) {
         _cached_decoder_for_DomainIdentity = $._decode_inextensible_choice<DomainIdentity>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_DomainIdentity: $.ASN1Encoder<DomainIdentity> | null = n
 export function _encode_DomainIdentity(
     value: DomainIdentity,
     elGetter: $.ASN1Encoder<DomainIdentity>
-) {
+): _Element {
     if (!_cached_encoder_for_DomainIdentity) {
         _cached_encoder_for_DomainIdentity = $._encode_choice<DomainIdentity>(
             {

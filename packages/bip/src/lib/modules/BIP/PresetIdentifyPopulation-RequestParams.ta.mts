@@ -130,7 +130,7 @@ let _cached_decoder_for_PresetIdentifyPopulation_RequestParams: $.ASN1Decoder<Pr
  * @param {_Element} el The element being decoded.
  * @returns {PresetIdentifyPopulation_RequestParams} The decoded data structure.
  */
-export function _decode_PresetIdentifyPopulation_RequestParams(el: _Element) {
+export function _decode_PresetIdentifyPopulation_RequestParams(el: _Element): PresetIdentifyPopulation_RequestParams {
   if (!_cached_decoder_for_PresetIdentifyPopulation_RequestParams) {
     _cached_decoder_for_PresetIdentifyPopulation_RequestParams = function (
       el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_PresetIdentifyPopulation_RequestParams: $.ASN1Encoder<Pr
 export function _encode_PresetIdentifyPopulation_RequestParams(
   value: PresetIdentifyPopulation_RequestParams,
   elGetter: $.ASN1Encoder<PresetIdentifyPopulation_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_PresetIdentifyPopulation_RequestParams) {
     _cached_encoder_for_PresetIdentifyPopulation_RequestParams = function (
       value: PresetIdentifyPopulation_RequestParams    ): _Element {

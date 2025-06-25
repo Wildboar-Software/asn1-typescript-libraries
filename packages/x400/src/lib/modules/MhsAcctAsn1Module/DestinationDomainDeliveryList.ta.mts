@@ -35,7 +35,7 @@ let _cached_decoder_for_DestinationDomainDeliveryList: $.ASN1Decoder<Destination
  * @param {_Element} el The element being decoded.
  * @returns {DestinationDomainDeliveryList} The decoded data structure.
  */
-export function _decode_DestinationDomainDeliveryList(el: _Element) {
+export function _decode_DestinationDomainDeliveryList(el: _Element): DestinationDomainDeliveryList {
     if (!_cached_decoder_for_DestinationDomainDeliveryList) {
         _cached_decoder_for_DestinationDomainDeliveryList = $._decodeSetOf<DeliveredRecipientField>(
             () => _decode_DeliveredRecipientField
@@ -56,7 +56,7 @@ let _cached_encoder_for_DestinationDomainDeliveryList: $.ASN1Encoder<Destination
 export function _encode_DestinationDomainDeliveryList(
     value: DestinationDomainDeliveryList,
     elGetter: $.ASN1Encoder<DestinationDomainDeliveryList>
-) {
+): _Element {
     if (!_cached_encoder_for_DestinationDomainDeliveryList) {
         _cached_encoder_for_DestinationDomainDeliveryList = $._encodeSetOf<DeliveredRecipientField>(
             () => _encode_DeliveredRecipientField,

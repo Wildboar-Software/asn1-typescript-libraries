@@ -146,7 +146,7 @@ let _cached_decoder_for_InformationSelection: $.ASN1Decoder<InformationSelection
  * @param {_Element} el The element being decoded.
  * @returns {InformationSelection} The decoded data structure.
  */
-export function _decode_InformationSelection(el: _Element) {
+export function _decode_InformationSelection(el: _Element): InformationSelection {
     if (!_cached_decoder_for_InformationSelection) {
         _cached_decoder_for_InformationSelection = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_InformationSelection: $.ASN1Encoder<InformationSelection
 export function _encode_InformationSelection(
     value: InformationSelection,
     elGetter: $.ASN1Encoder<InformationSelection>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationSelection) {
         _cached_encoder_for_InformationSelection = function (
             value: InformationSelection        ): _Element {

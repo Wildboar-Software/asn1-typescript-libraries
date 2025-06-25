@@ -38,7 +38,7 @@ let _cached_decoder_for_VisibleBFPRegistrations: $.ASN1Decoder<VisibleBFPRegistr
  * @param {_Element} el The element being decoded.
  * @returns {VisibleBFPRegistrations} The decoded data structure.
  */
-export function _decode_VisibleBFPRegistrations(el: _Element) {
+export function _decode_VisibleBFPRegistrations(el: _Element): VisibleBFPRegistrations {
   if (!_cached_decoder_for_VisibleBFPRegistrations) {
     _cached_decoder_for_VisibleBFPRegistrations = $._decodeSetOf<VisibleBFPRegistration>(
       () => _decode_VisibleBFPRegistration
@@ -61,7 +61,7 @@ let _cached_encoder_for_VisibleBFPRegistrations: $.ASN1Encoder<VisibleBFPRegistr
 export function _encode_VisibleBFPRegistrations(
   value: VisibleBFPRegistrations,
   elGetter: $.ASN1Encoder<VisibleBFPRegistrations>
-) {
+): _Element {
   if (!_cached_encoder_for_VisibleBFPRegistrations) {
     _cached_encoder_for_VisibleBFPRegistrations = $._encodeSetOf<VisibleBFPRegistration>(
       () => _encode_VisibleBFPRegistration,

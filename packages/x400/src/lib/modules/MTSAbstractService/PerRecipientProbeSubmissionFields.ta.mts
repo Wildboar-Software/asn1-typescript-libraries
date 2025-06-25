@@ -173,7 +173,7 @@ let _cached_decoder_for_PerRecipientProbeSubmissionFields: $.ASN1Decoder<PerReci
  * @param {_Element} el The element being decoded.
  * @returns {PerRecipientProbeSubmissionFields} The decoded data structure.
  */
-export function _decode_PerRecipientProbeSubmissionFields(el: _Element) {
+export function _decode_PerRecipientProbeSubmissionFields(el: _Element): PerRecipientProbeSubmissionFields {
     if (!_cached_decoder_for_PerRecipientProbeSubmissionFields) {
         _cached_decoder_for_PerRecipientProbeSubmissionFields = function (
             el: _Element
@@ -238,7 +238,7 @@ let _cached_encoder_for_PerRecipientProbeSubmissionFields: $.ASN1Encoder<PerReci
 export function _encode_PerRecipientProbeSubmissionFields(
     value: PerRecipientProbeSubmissionFields,
     elGetter: $.ASN1Encoder<PerRecipientProbeSubmissionFields>
-) {
+): _Element {
     if (!_cached_encoder_for_PerRecipientProbeSubmissionFields) {
         _cached_encoder_for_PerRecipientProbeSubmissionFields = function (
             value: PerRecipientProbeSubmissionFields        ): _Element {

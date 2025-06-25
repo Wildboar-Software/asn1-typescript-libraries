@@ -128,7 +128,7 @@ let _cached_decoder_for_LeapSecondInfo: $.ASN1Decoder<LeapSecondInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {LeapSecondInfo} The decoded data structure.
  */
-export function _decode_LeapSecondInfo(el: _Element) {
+export function _decode_LeapSecondInfo(el: _Element): LeapSecondInfo {
     if (!_cached_decoder_for_LeapSecondInfo) {
         _cached_decoder_for_LeapSecondInfo = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_LeapSecondInfo: $.ASN1Encoder<LeapSecondInfo> | null = n
 export function _encode_LeapSecondInfo(
     value: LeapSecondInfo,
     elGetter: $.ASN1Encoder<LeapSecondInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_LeapSecondInfo) {
         _cached_encoder_for_LeapSecondInfo = function (
             value: LeapSecondInfo        ): _Element {

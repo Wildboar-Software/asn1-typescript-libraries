@@ -46,7 +46,7 @@ let _cached_decoder_for_ValidateInfo: $.ASN1Decoder<ValidateInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ValidateInfo} The decoded data structure.
  */
-export function _decode_ValidateInfo(el: _Element) {
+export function _decode_ValidateInfo(el: _Element): ValidateInfo {
     if (!_cached_decoder_for_ValidateInfo) {
         _cached_decoder_for_ValidateInfo = $._decode_inextensible_choice<ValidateInfo>(
             {
@@ -86,7 +86,7 @@ let _cached_encoder_for_ValidateInfo: $.ASN1Encoder<ValidateInfo> | null = null;
 export function _encode_ValidateInfo(
     value: ValidateInfo,
     elGetter: $.ASN1Encoder<ValidateInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ValidateInfo) {
         _cached_encoder_for_ValidateInfo = $._encode_choice<ValidateInfo>(
             {

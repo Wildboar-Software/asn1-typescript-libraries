@@ -26,7 +26,7 @@ let _cached_decoder_for_MasterKeyAlgorithmIdentifier: $.ASN1Decoder<MasterKeyAlg
  * @param {_Element} el The element being decoded.
  * @returns {MasterKeyAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_MasterKeyAlgorithmIdentifier(el: _Element) {
+export function _decode_MasterKeyAlgorithmIdentifier(el: _Element): MasterKeyAlgorithmIdentifier {
     if (!_cached_decoder_for_MasterKeyAlgorithmIdentifier) {
         _cached_decoder_for_MasterKeyAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_MasterKeyAlgorithmIdentifier: $.ASN1Encoder<MasterKeyAlg
 export function _encode_MasterKeyAlgorithmIdentifier(
     value: MasterKeyAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<MasterKeyAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MasterKeyAlgorithmIdentifier) {
         _cached_encoder_for_MasterKeyAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

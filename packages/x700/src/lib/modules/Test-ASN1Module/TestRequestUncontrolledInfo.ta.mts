@@ -179,7 +179,7 @@ let _cached_decoder_for_TestRequestUncontrolledInfo: $.ASN1Decoder<TestRequestUn
  * @param {_Element} el The element being decoded.
  * @returns {TestRequestUncontrolledInfo} The decoded data structure.
  */
-export function _decode_TestRequestUncontrolledInfo(el: _Element) {
+export function _decode_TestRequestUncontrolledInfo(el: _Element): TestRequestUncontrolledInfo {
     if (!_cached_decoder_for_TestRequestUncontrolledInfo) {
         _cached_decoder_for_TestRequestUncontrolledInfo = function (
             el: _Element
@@ -244,7 +244,7 @@ let _cached_encoder_for_TestRequestUncontrolledInfo: $.ASN1Encoder<TestRequestUn
 export function _encode_TestRequestUncontrolledInfo(
     value: TestRequestUncontrolledInfo,
     elGetter: $.ASN1Encoder<TestRequestUncontrolledInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TestRequestUncontrolledInfo) {
         _cached_encoder_for_TestRequestUncontrolledInfo = function (
             value: TestRequestUncontrolledInfo        ): _Element {

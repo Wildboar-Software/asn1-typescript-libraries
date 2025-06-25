@@ -38,7 +38,7 @@ let _cached_decoder_for_AS_REQ: $.ASN1Decoder<AS_REQ> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AS_REQ} The decoded data structure.
  */
-export function _decode_AS_REQ(el: _Element) {
+export function _decode_AS_REQ(el: _Element): AS_REQ {
   if (!_cached_decoder_for_AS_REQ) {
     _cached_decoder_for_AS_REQ = $._decode_implicit<AS_REQ>(
       () => _decode_KDC_REQ
@@ -58,7 +58,7 @@ let _cached_encoder_for_AS_REQ: $.ASN1Encoder<AS_REQ> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AS_REQ, encoded as an ASN.1 Element.
  */
-export function _encode_AS_REQ(value: AS_REQ, elGetter: $.ASN1Encoder<AS_REQ>) {
+export function _encode_AS_REQ(value: AS_REQ, elGetter: $.ASN1Encoder<AS_REQ>): _Element {
   if (!_cached_encoder_for_AS_REQ) {
     _cached_encoder_for_AS_REQ = $._encode_implicit(
       _TagClass.application,

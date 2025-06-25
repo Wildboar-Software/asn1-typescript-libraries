@@ -139,7 +139,7 @@ let _cached_decoder_for_SupportedProtocol: $.ASN1Decoder<SupportedProtocol> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SupportedProtocol} The decoded data structure.
  */
-export function _decode_SupportedProtocol(el: _Element) {
+export function _decode_SupportedProtocol(el: _Element): SupportedProtocol {
     if (!_cached_decoder_for_SupportedProtocol) {
         _cached_decoder_for_SupportedProtocol = function (
             el: _Element
@@ -201,7 +201,7 @@ let _cached_encoder_for_SupportedProtocol: $.ASN1Encoder<SupportedProtocol> | nu
 export function _encode_SupportedProtocol(
     value: SupportedProtocol,
     elGetter: $.ASN1Encoder<SupportedProtocol>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedProtocol) {
         _cached_encoder_for_SupportedProtocol = function (
             value: SupportedProtocol        ): _Element {

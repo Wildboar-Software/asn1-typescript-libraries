@@ -111,7 +111,7 @@ let _cached_decoder_for_TestDuration_signalLength: $.ASN1Decoder<TestDuration_si
  * @param {_Element} el The element being decoded.
  * @returns {TestDuration_signalLength} The decoded data structure.
  */
-export function _decode_TestDuration_signalLength(el: _Element) {
+export function _decode_TestDuration_signalLength(el: _Element): TestDuration_signalLength {
     if (!_cached_decoder_for_TestDuration_signalLength) {
         _cached_decoder_for_TestDuration_signalLength = function (
             el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_TestDuration_signalLength: $.ASN1Encoder<TestDuration_si
 export function _encode_TestDuration_signalLength(
     value: TestDuration_signalLength,
     elGetter: $.ASN1Encoder<TestDuration_signalLength>
-) {
+): _Element {
     if (!_cached_encoder_for_TestDuration_signalLength) {
         _cached_encoder_for_TestDuration_signalLength = function (
             value: TestDuration_signalLength        ): _Element {

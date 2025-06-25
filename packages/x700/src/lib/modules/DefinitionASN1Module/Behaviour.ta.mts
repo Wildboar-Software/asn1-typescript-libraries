@@ -38,7 +38,7 @@ let _cached_decoder_for_Behaviour: $.ASN1Decoder<Behaviour> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Behaviour} The decoded data structure.
  */
-export function _decode_Behaviour(el: _Element) {
+export function _decode_Behaviour(el: _Element): Behaviour {
     if (!_cached_decoder_for_Behaviour) {
         _cached_decoder_for_Behaviour = _decode_TemplateList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Behaviour: $.ASN1Encoder<Behaviour> | null = null;
 export function _encode_Behaviour(
     value: Behaviour,
     elGetter: $.ASN1Encoder<Behaviour>
-) {
+): _Element {
     if (!_cached_encoder_for_Behaviour) {
         _cached_encoder_for_Behaviour = _encode_TemplateList;
     }

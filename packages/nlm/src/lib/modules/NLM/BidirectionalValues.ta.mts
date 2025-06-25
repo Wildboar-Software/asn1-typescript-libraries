@@ -120,7 +120,7 @@ let _cached_decoder_for_BidirectionalValues: $.ASN1Decoder<BidirectionalValues> 
  * @param {_Element} el The element being decoded.
  * @returns {BidirectionalValues} The decoded data structure.
  */
-export function _decode_BidirectionalValues(el: _Element) {
+export function _decode_BidirectionalValues(el: _Element): BidirectionalValues {
     if (!_cached_decoder_for_BidirectionalValues) {
         _cached_decoder_for_BidirectionalValues = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_BidirectionalValues: $.ASN1Encoder<BidirectionalValues> 
 export function _encode_BidirectionalValues(
     value: BidirectionalValues,
     elGetter: $.ASN1Encoder<BidirectionalValues>
-) {
+): _Element {
     if (!_cached_encoder_for_BidirectionalValues) {
         _cached_encoder_for_BidirectionalValues = function (
             value: BidirectionalValues        ): _Element {

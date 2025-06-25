@@ -33,7 +33,7 @@ let _cached_decoder_for_MonitoredAttributes: $.ASN1Decoder<MonitoredAttributes> 
  * @returns {MonitoredAttributes} The decoded data structure.
  */
 export
-function _decode_MonitoredAttributes (el: _Element) {
+function _decode_MonitoredAttributes (el: _Element): MonitoredAttributes {
     if (!_cached_decoder_for_MonitoredAttributes) { _cached_decoder_for_MonitoredAttributes = $._decodeSetOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_MonitoredAttributes(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_MonitoredAttributes: $.ASN1Encoder<MonitoredAttributes> 
  * @returns {_Element} The MonitoredAttributes, encoded as an ASN.1 Element.
  */
 export
-function _encode_MonitoredAttributes (value: MonitoredAttributes, elGetter: $.ASN1Encoder<MonitoredAttributes>) {
+function _encode_MonitoredAttributes (value: MonitoredAttributes, elGetter: $.ASN1Encoder<MonitoredAttributes>): _Element {
     if (!_cached_encoder_for_MonitoredAttributes) { _cached_encoder_for_MonitoredAttributes = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.BER); }
     return _cached_encoder_for_MonitoredAttributes(value, elGetter);
 }

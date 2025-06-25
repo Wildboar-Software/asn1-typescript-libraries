@@ -124,7 +124,7 @@ let _cached_decoder_for_Date_and_Time_Pattern: $.ASN1Decoder<Date_and_Time_Patte
  * @param {_Element} el The element being decoded.
  * @returns {Date_and_Time_Pattern} The decoded data structure.
  */
-export function _decode_Date_and_Time_Pattern(el: _Element) {
+export function _decode_Date_and_Time_Pattern(el: _Element): Date_and_Time_Pattern {
   if (!_cached_decoder_for_Date_and_Time_Pattern) {
     _cached_decoder_for_Date_and_Time_Pattern = function (
       el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_Date_and_Time_Pattern: $.ASN1Encoder<Date_and_Time_Patte
 export function _encode_Date_and_Time_Pattern(
   value: Date_and_Time_Pattern,
   elGetter: $.ASN1Encoder<Date_and_Time_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Date_and_Time_Pattern) {
     _cached_encoder_for_Date_and_Time_Pattern = function (
       value: Date_and_Time_Pattern    ): _Element {

@@ -123,7 +123,7 @@ let _cached_decoder_for_EntryClassErrorParameter: $.ASN1Decoder<EntryClassErrorP
  * @param {_Element} el The element being decoded.
  * @returns {EntryClassErrorParameter} The decoded data structure.
  */
-export function _decode_EntryClassErrorParameter(el: _Element) {
+export function _decode_EntryClassErrorParameter(el: _Element): EntryClassErrorParameter {
     if (!_cached_decoder_for_EntryClassErrorParameter) {
         _cached_decoder_for_EntryClassErrorParameter = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_EntryClassErrorParameter: $.ASN1Encoder<EntryClassErrorP
 export function _encode_EntryClassErrorParameter(
     value: EntryClassErrorParameter,
     elGetter: $.ASN1Encoder<EntryClassErrorParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_EntryClassErrorParameter) {
         _cached_encoder_for_EntryClassErrorParameter = function (
             value: EntryClassErrorParameter        ): _Element {

@@ -44,7 +44,7 @@ let _cached_decoder_for_OperationSpecifications: $.ASN1Decoder<OperationSpecific
  * @param {_Element} el The element being decoded.
  * @returns {OperationSpecifications} The decoded data structure.
  */
-export function _decode_OperationSpecifications(el: _Element) {
+export function _decode_OperationSpecifications(el: _Element): OperationSpecifications {
     if (!_cached_decoder_for_OperationSpecifications) {
         _cached_decoder_for_OperationSpecifications = $._decodeSetOf<OperationSpecifications_Item>(
             () => _decode_OperationSpecifications_Item
@@ -67,7 +67,7 @@ let _cached_encoder_for_OperationSpecifications: $.ASN1Encoder<OperationSpecific
 export function _encode_OperationSpecifications(
     value: OperationSpecifications,
     elGetter: $.ASN1Encoder<OperationSpecifications>
-) {
+): _Element {
     if (!_cached_encoder_for_OperationSpecifications) {
         _cached_encoder_for_OperationSpecifications = $._encodeSetOf<OperationSpecifications_Item>(
             () => _encode_OperationSpecifications_Item,

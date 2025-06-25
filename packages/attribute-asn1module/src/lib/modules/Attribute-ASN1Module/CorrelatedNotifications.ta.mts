@@ -36,7 +36,7 @@ let _cached_decoder_for_CorrelatedNotifications: $.ASN1Decoder<CorrelatedNotific
  * @returns {CorrelatedNotifications} The decoded data structure.
  */
 export
-function _decode_CorrelatedNotifications (el: _Element) {
+function _decode_CorrelatedNotifications (el: _Element): CorrelatedNotifications {
     if (!_cached_decoder_for_CorrelatedNotifications) { _cached_decoder_for_CorrelatedNotifications = $._decodeSetOf<CorrelatedNotifications_Item>(() => _decode_CorrelatedNotifications_Item); }
     return _cached_decoder_for_CorrelatedNotifications(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_CorrelatedNotifications: $.ASN1Encoder<CorrelatedNotific
  * @returns {_Element} The CorrelatedNotifications, encoded as an ASN.1 Element.
  */
 export
-function _encode_CorrelatedNotifications (value: CorrelatedNotifications, elGetter: $.ASN1Encoder<CorrelatedNotifications>) {
+function _encode_CorrelatedNotifications (value: CorrelatedNotifications, elGetter: $.ASN1Encoder<CorrelatedNotifications>): _Element {
     if (!_cached_encoder_for_CorrelatedNotifications) { _cached_encoder_for_CorrelatedNotifications = $._encodeSetOf<CorrelatedNotifications_Item>(() => _encode_CorrelatedNotifications_Item, $.BER); }
     return _cached_encoder_for_CorrelatedNotifications(value, elGetter);
 }

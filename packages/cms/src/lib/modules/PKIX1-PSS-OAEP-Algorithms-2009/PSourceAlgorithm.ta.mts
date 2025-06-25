@@ -25,7 +25,7 @@ let _cached_decoder_for_PSourceAlgorithm: $.ASN1Decoder<PSourceAlgorithm> | null
  * @param {_Element} el The element being decoded.
  * @returns {PSourceAlgorithm} The decoded data structure.
  */
-export function _decode_PSourceAlgorithm(el: _Element) {
+export function _decode_PSourceAlgorithm(el: _Element): PSourceAlgorithm {
     if (!_cached_decoder_for_PSourceAlgorithm) {
         _cached_decoder_for_PSourceAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_PSourceAlgorithm: $.ASN1Encoder<PSourceAlgorithm> | null
 export function _encode_PSourceAlgorithm(
     value: PSourceAlgorithm,
     elGetter: $.ASN1Encoder<PSourceAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_PSourceAlgorithm) {
         _cached_encoder_for_PSourceAlgorithm = _encode_AlgorithmIdentifier;
     }

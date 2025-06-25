@@ -42,7 +42,7 @@ let _cached_decoder_for_ExecutionParameterList: $.ASN1Decoder<ExecutionParameter
  * @param {_Element} el The element being decoded.
  * @returns {ExecutionParameterList} The decoded data structure.
  */
-export function _decode_ExecutionParameterList(el: _Element) {
+export function _decode_ExecutionParameterList(el: _Element): ExecutionParameterList {
     if (!_cached_decoder_for_ExecutionParameterList) {
         _cached_decoder_for_ExecutionParameterList = $._decode_inextensible_choice<ExecutionParameterList>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_ExecutionParameterList: $.ASN1Encoder<ExecutionParameter
 export function _encode_ExecutionParameterList(
     value: ExecutionParameterList,
     elGetter: $.ASN1Encoder<ExecutionParameterList>
-) {
+): _Element {
     if (!_cached_encoder_for_ExecutionParameterList) {
         _cached_encoder_for_ExecutionParameterList = $._encode_choice<ExecutionParameterList>(
             {

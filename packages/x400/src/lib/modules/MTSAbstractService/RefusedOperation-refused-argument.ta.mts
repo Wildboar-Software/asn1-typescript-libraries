@@ -43,7 +43,7 @@ let _cached_decoder_for_RefusedOperation_refused_argument: $.ASN1Decoder<Refused
  * @param {_Element} el The element being decoded.
  * @returns {RefusedOperation_refused_argument} The decoded data structure.
  */
-export function _decode_RefusedOperation_refused_argument(el: _Element) {
+export function _decode_RefusedOperation_refused_argument(el: _Element): RefusedOperation_refused_argument {
     if (!_cached_decoder_for_RefusedOperation_refused_argument) {
         _cached_decoder_for_RefusedOperation_refused_argument = $._decode_inextensible_choice<RefusedOperation_refused_argument>(
             {
@@ -72,7 +72,7 @@ let _cached_encoder_for_RefusedOperation_refused_argument: $.ASN1Encoder<Refused
 export function _encode_RefusedOperation_refused_argument(
     value: RefusedOperation_refused_argument,
     elGetter: $.ASN1Encoder<RefusedOperation_refused_argument>
-) {
+): _Element {
     if (!_cached_encoder_for_RefusedOperation_refused_argument) {
         _cached_encoder_for_RefusedOperation_refused_argument = $._encode_choice<RefusedOperation_refused_argument>(
             {

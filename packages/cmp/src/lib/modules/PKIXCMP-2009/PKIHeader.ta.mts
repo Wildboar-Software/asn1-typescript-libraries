@@ -294,7 +294,7 @@ let _cached_decoder_for_PKIHeader: $.ASN1Decoder<PKIHeader> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKIHeader} The decoded data structure.
  */
-export function _decode_PKIHeader(el: _Element) {
+export function _decode_PKIHeader(el: _Element): PKIHeader {
   if (!_cached_decoder_for_PKIHeader) {
     _cached_decoder_for_PKIHeader = function (el: _Element): PKIHeader {
       let pvno!: PKIHeader_pvno;
@@ -408,7 +408,7 @@ let _cached_encoder_for_PKIHeader: $.ASN1Encoder<PKIHeader> | null = null;
 export function _encode_PKIHeader(
   value: PKIHeader,
   elGetter: $.ASN1Encoder<PKIHeader>
-) {
+): _Element {
   if (!_cached_encoder_for_PKIHeader) {
     _cached_encoder_for_PKIHeader = function (
       value: PKIHeader    ): _Element {

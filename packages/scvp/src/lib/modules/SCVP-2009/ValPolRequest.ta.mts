@@ -123,7 +123,7 @@ let _cached_decoder_for_ValPolRequest: $.ASN1Decoder<ValPolRequest> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ValPolRequest} The decoded data structure.
  */
-export function _decode_ValPolRequest(el: _Element) {
+export function _decode_ValPolRequest(el: _Element): ValPolRequest {
   if (!_cached_decoder_for_ValPolRequest) {
     _cached_decoder_for_ValPolRequest = function (el: _Element): ValPolRequest {
       let vpRequestVersion: OPTIONAL<INTEGER> =
@@ -166,7 +166,7 @@ let _cached_encoder_for_ValPolRequest: $.ASN1Encoder<ValPolRequest> | null = nul
 export function _encode_ValPolRequest(
   value: ValPolRequest,
   elGetter: $.ASN1Encoder<ValPolRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_ValPolRequest) {
     _cached_encoder_for_ValPolRequest = function (
       value: ValPolRequest    ): _Element {

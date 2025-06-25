@@ -109,7 +109,7 @@ let _cached_decoder_for_ControlUnit_ResponseParams: $.ASN1Decoder<ControlUnit_Re
  * @param {_Element} el The element being decoded.
  * @returns {ControlUnit_ResponseParams} The decoded data structure.
  */
-export function _decode_ControlUnit_ResponseParams(el: _Element) {
+export function _decode_ControlUnit_ResponseParams(el: _Element): ControlUnit_ResponseParams {
   if (!_cached_decoder_for_ControlUnit_ResponseParams) {
     _cached_decoder_for_ControlUnit_ResponseParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_ControlUnit_ResponseParams: $.ASN1Encoder<ControlUnit_Re
 export function _encode_ControlUnit_ResponseParams(
   value: ControlUnit_ResponseParams,
   elGetter: $.ASN1Encoder<ControlUnit_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_ControlUnit_ResponseParams) {
     _cached_encoder_for_ControlUnit_ResponseParams = function (
       value: ControlUnit_ResponseParams    ): _Element {

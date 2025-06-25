@@ -48,7 +48,7 @@ let _cached_decoder_for_SetInfoStatus: $.ASN1Decoder<SetInfoStatus> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SetInfoStatus} The decoded data structure.
  */
-export function _decode_SetInfoStatus(el: _Element) {
+export function _decode_SetInfoStatus(el: _Element): SetInfoStatus {
   if (!_cached_decoder_for_SetInfoStatus) {
     _cached_decoder_for_SetInfoStatus = $._decode_inextensible_choice<SetInfoStatus>(
       {
@@ -80,7 +80,7 @@ let _cached_encoder_for_SetInfoStatus: $.ASN1Encoder<SetInfoStatus> | null = nul
 export function _encode_SetInfoStatus(
   value: SetInfoStatus,
   elGetter: $.ASN1Encoder<SetInfoStatus>
-) {
+): _Element {
   if (!_cached_encoder_for_SetInfoStatus) {
     _cached_encoder_for_SetInfoStatus = $._encode_choice<SetInfoStatus>(
       {

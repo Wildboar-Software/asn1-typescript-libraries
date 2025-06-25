@@ -46,7 +46,7 @@ let _cached_decoder_for_SplitXCReply_Item: $.ASN1Decoder<SplitXCReply_Item> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SplitXCReply_Item} The decoded data structure.
  */
-export function _decode_SplitXCReply_Item(el: _Element) {
+export function _decode_SplitXCReply_Item(el: _Element): SplitXCReply_Item {
     if (!_cached_decoder_for_SplitXCReply_Item) {
         _cached_decoder_for_SplitXCReply_Item = $._decode_inextensible_choice<SplitXCReply_Item>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_SplitXCReply_Item: $.ASN1Encoder<SplitXCReply_Item> | nu
 export function _encode_SplitXCReply_Item(
     value: SplitXCReply_Item,
     elGetter: $.ASN1Encoder<SplitXCReply_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_SplitXCReply_Item) {
         _cached_encoder_for_SplitXCReply_Item = $._encode_choice<SplitXCReply_Item>(
             {

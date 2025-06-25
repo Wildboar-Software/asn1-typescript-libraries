@@ -169,7 +169,7 @@ let _cached_decoder_for_GetListError: $.ASN1Decoder<GetListError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GetListError} The decoded data structure.
  */
-export function _decode_GetListError(el: _Element) {
+export function _decode_GetListError(el: _Element): GetListError {
   if (!_cached_decoder_for_GetListError) {
     _cached_decoder_for_GetListError = function (el: _Element): GetListError {
       let managedObjectClass: OPTIONAL<ObjectClass>;
@@ -231,7 +231,7 @@ let _cached_encoder_for_GetListError: $.ASN1Encoder<GetListError> | null = null;
 export function _encode_GetListError(
   value: GetListError,
   elGetter: $.ASN1Encoder<GetListError>
-) {
+): _Element {
   if (!_cached_encoder_for_GetListError) {
     _cached_encoder_for_GetListError = function (
       value: GetListError    ): _Element {

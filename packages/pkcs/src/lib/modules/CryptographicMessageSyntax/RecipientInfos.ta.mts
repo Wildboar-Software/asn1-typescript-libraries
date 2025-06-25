@@ -29,7 +29,7 @@ let _cached_decoder_for_RecipientInfos: $.ASN1Decoder<RecipientInfos> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RecipientInfos} The decoded data structure.
  */
-export function _decode_RecipientInfos(el: _Element) {
+export function _decode_RecipientInfos(el: _Element): RecipientInfos {
     if (!_cached_decoder_for_RecipientInfos) {
         _cached_decoder_for_RecipientInfos = $._decodeSetOf<RecipientInfo>(
             () => _decode_RecipientInfo
@@ -52,7 +52,7 @@ let _cached_encoder_for_RecipientInfos: $.ASN1Encoder<RecipientInfos> | null = n
 export function _encode_RecipientInfos(
     value: RecipientInfos,
     elGetter: $.ASN1Encoder<RecipientInfos>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientInfos) {
         _cached_encoder_for_RecipientInfos = $._encodeSetOf<RecipientInfo>(
             () => _encode_RecipientInfo,

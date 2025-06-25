@@ -114,7 +114,7 @@ let _cached_decoder_for_Condition: $.ASN1Decoder<Condition> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Condition} The decoded data structure.
  */
-export function _decode_Condition(el: _Element) {
+export function _decode_Condition(el: _Element): Condition {
     if (!_cached_decoder_for_Condition) {
         _cached_decoder_for_Condition = function (el: _Element): Condition {
             const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_Condition: $.ASN1Encoder<Condition> | null = null;
 export function _encode_Condition(
     value: Condition,
     elGetter: $.ASN1Encoder<Condition>
-) {
+): _Element {
     if (!_cached_encoder_for_Condition) {
         _cached_encoder_for_Condition = function (
             value: Condition        ): _Element {

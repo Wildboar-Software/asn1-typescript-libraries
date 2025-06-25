@@ -34,7 +34,7 @@ let _cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType: $.ASN1Dec
  */
 export function _decode_ComponentRatesPerOctetsPerDeliveryServiceType(
     el: _Element
-) {
+): ComponentRatesPerOctetsPerDeliveryServiceType {
     if (!_cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType) {
         _cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType = $._decodeSetOf<REAL>(
             () => $._decodeReal
@@ -57,7 +57,7 @@ let _cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType: $.ASN1Enc
 export function _encode_ComponentRatesPerOctetsPerDeliveryServiceType(
     value: ComponentRatesPerOctetsPerDeliveryServiceType,
     elGetter: $.ASN1Encoder<ComponentRatesPerOctetsPerDeliveryServiceType>
-) {
+): _Element {
     if (!_cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType) {
         _cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType = $._encodeSetOf<REAL>(
             () => $._encodeReal,

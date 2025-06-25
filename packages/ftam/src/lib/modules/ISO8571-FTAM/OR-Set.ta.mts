@@ -38,7 +38,7 @@ let _cached_decoder_for_OR_Set: $.ASN1Decoder<OR_Set> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OR_Set} The decoded data structure.
  */
-export function _decode_OR_Set(el: _Element) {
+export function _decode_OR_Set(el: _Element): OR_Set {
   if (!_cached_decoder_for_OR_Set) {
     _cached_decoder_for_OR_Set = $._decodeSequenceOf<AND_Set>(
       () => _decode_AND_Set
@@ -58,7 +58,7 @@ let _cached_encoder_for_OR_Set: $.ASN1Encoder<OR_Set> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OR_Set, encoded as an ASN.1 Element.
  */
-export function _encode_OR_Set(value: OR_Set, elGetter: $.ASN1Encoder<OR_Set>) {
+export function _encode_OR_Set(value: OR_Set, elGetter: $.ASN1Encoder<OR_Set>): _Element {
   if (!_cached_encoder_for_OR_Set) {
     _cached_encoder_for_OR_Set = $._encodeSequenceOf<AND_Set>(
       () => _encode_AND_Set,

@@ -141,7 +141,7 @@ let _cached_decoder_for_CCR_APDUS: $.ASN1Decoder<CCR_APDUS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CCR_APDUS} The decoded data structure.
  */
-export function _decode_CCR_APDUS(el: _Element) {
+export function _decode_CCR_APDUS(el: _Element): CCR_APDUS {
   if (!_cached_decoder_for_CCR_APDUS) {
     _cached_decoder_for_CCR_APDUS = $._decode_extensible_choice<CCR_APDUS>({
       'CONTEXT 11': ['c_INITIALIZE_RI', _decode_C_INITIALIZE_RI],
@@ -178,7 +178,7 @@ let _cached_encoder_for_CCR_APDUS: $.ASN1Encoder<CCR_APDUS> | null = null;
 export function _encode_CCR_APDUS(
   value: CCR_APDUS,
   elGetter: $.ASN1Encoder<CCR_APDUS>
-) {
+): _Element {
   if (!_cached_encoder_for_CCR_APDUS) {
     _cached_encoder_for_CCR_APDUS = $._encode_choice<CCR_APDUS>(
       {

@@ -35,7 +35,7 @@ let _cached_decoder_for_SecurityLabels: $.ASN1Decoder<SecurityLabels> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SecurityLabels} The decoded data structure.
  */
-export function _decode_SecurityLabels(el: _Element) {
+export function _decode_SecurityLabels(el: _Element): SecurityLabels {
     if (!_cached_decoder_for_SecurityLabels) {
         _cached_decoder_for_SecurityLabels = $._decodeSetOf<SecurityLabel>(
             () => _decode_SecurityLabel
@@ -56,7 +56,7 @@ let _cached_encoder_for_SecurityLabels: $.ASN1Encoder<SecurityLabels> | null = n
 export function _encode_SecurityLabels(
     value: SecurityLabels,
     elGetter: $.ASN1Encoder<SecurityLabels>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityLabels) {
         _cached_encoder_for_SecurityLabels = $._encodeSetOf<SecurityLabel>(
             () => _encode_SecurityLabel,

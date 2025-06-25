@@ -88,7 +88,7 @@ let _cached_decoder_for_AND_Set: $.ASN1Decoder<AND_Set> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AND_Set} The decoded data structure.
  */
-export function _decode_AND_Set(el: _Element) {
+export function _decode_AND_Set(el: _Element): AND_Set {
   if (!_cached_decoder_for_AND_Set) {
     _cached_decoder_for_AND_Set = $._decodeSequenceOf<AND_Set_Item>(
       () => _decode_AND_Set_Item
@@ -111,7 +111,7 @@ let _cached_encoder_for_AND_Set: $.ASN1Encoder<AND_Set> | null = null;
 export function _encode_AND_Set(
   value: AND_Set,
   elGetter: $.ASN1Encoder<AND_Set>
-) {
+): _Element {
   if (!_cached_encoder_for_AND_Set) {
     _cached_encoder_for_AND_Set = $._encodeSequenceOf<AND_Set_Item>(
       () => _encode_AND_Set_Item,

@@ -122,7 +122,7 @@ let _cached_decoder_for_BackupReply: $.ASN1Decoder<BackupReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BackupReply} The decoded data structure.
  */
-export function _decode_BackupReply(el: _Element) {
+export function _decode_BackupReply(el: _Element): BackupReply {
     if (!_cached_decoder_for_BackupReply) {
         _cached_decoder_for_BackupReply = function (el: _Element): BackupReply {
             let reply!: BackupReply_reply;
@@ -171,7 +171,7 @@ let _cached_encoder_for_BackupReply: $.ASN1Encoder<BackupReply> | null = null;
 export function _encode_BackupReply(
     value: BackupReply,
     elGetter: $.ASN1Encoder<BackupReply>
-) {
+): _Element {
     if (!_cached_encoder_for_BackupReply) {
         _cached_encoder_for_BackupReply = function (
             value: BackupReply        ): _Element {

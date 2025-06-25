@@ -120,7 +120,7 @@ let _cached_decoder_for_Characteristic_two: $.ASN1Decoder<Characteristic_two> | 
  * @returns {Characteristic_two} The decoded data structure.
  */
 export
-function _decode_Characteristic_two (el: _Element) {
+function _decode_Characteristic_two (el: _Element): Characteristic_two {
     if (!_cached_decoder_for_Characteristic_two) { _cached_decoder_for_Characteristic_two = function (el: _Element): Characteristic_two {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_Characteristic_two: $.ASN1Encoder<Characteristic_two> | 
  * @returns {_Element} The Characteristic_two, encoded as an ASN.1 Element.
  */
 export
-function _encode_Characteristic_two (value: Characteristic_two, elGetter: $.ASN1Encoder<Characteristic_two>) {
+function _encode_Characteristic_two (value: Characteristic_two, elGetter: $.ASN1Encoder<Characteristic_two>): _Element {
     if (!_cached_encoder_for_Characteristic_two) { _cached_encoder_for_Characteristic_two = function (value: Characteristic_two): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

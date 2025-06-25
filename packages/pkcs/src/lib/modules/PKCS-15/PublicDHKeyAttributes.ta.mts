@@ -137,7 +137,7 @@ let _cached_decoder_for_PublicDHKeyAttributes: $.ASN1Decoder<PublicDHKeyAttribut
  * @param {_Element} el The element being decoded.
  * @returns {PublicDHKeyAttributes} The decoded data structure.
  */
-export function _decode_PublicDHKeyAttributes(el: _Element) {
+export function _decode_PublicDHKeyAttributes(el: _Element): PublicDHKeyAttributes {
     if (!_cached_decoder_for_PublicDHKeyAttributes) {
         _cached_decoder_for_PublicDHKeyAttributes = function (
             el: _Element
@@ -197,7 +197,7 @@ let _cached_encoder_for_PublicDHKeyAttributes: $.ASN1Encoder<PublicDHKeyAttribut
 export function _encode_PublicDHKeyAttributes(
     value: PublicDHKeyAttributes,
     elGetter: $.ASN1Encoder<PublicDHKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PublicDHKeyAttributes) {
         _cached_encoder_for_PublicDHKeyAttributes = function (
             value: PublicDHKeyAttributes        ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance: $.ASN1Decod
  */
 export function _decode_SecurityLabel_Item_initiatorLabel_clearance(
     el: _Element
-) {
+): SecurityLabel_Item_initiatorLabel_clearance {
     if (!_cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance) {
         _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance = $._decode_inextensible_choice<SecurityLabel_Item_initiatorLabel_clearance>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance: $.ASN1Encod
 export function _encode_SecurityLabel_Item_initiatorLabel_clearance(
     value: SecurityLabel_Item_initiatorLabel_clearance,
     elGetter: $.ASN1Encoder<SecurityLabel_Item_initiatorLabel_clearance>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance) {
         _cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance = $._encode_choice<SecurityLabel_Item_initiatorLabel_clearance>(
             {

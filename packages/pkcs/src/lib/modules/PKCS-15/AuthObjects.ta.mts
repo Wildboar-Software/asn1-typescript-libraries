@@ -34,7 +34,7 @@ let _cached_decoder_for_AuthObjects: $.ASN1Decoder<AuthObjects> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AuthObjects} The decoded data structure.
  */
-export function _decode_AuthObjects(el: _Element) {
+export function _decode_AuthObjects(el: _Element): AuthObjects {
     if (!_cached_decoder_for_AuthObjects) {
         _cached_decoder_for_AuthObjects = _get_decoder_for_PathOrObjects<AuthenticationType>(
             _decode_AuthenticationType
@@ -57,7 +57,7 @@ let _cached_encoder_for_AuthObjects: $.ASN1Encoder<AuthObjects> | null = null;
 export function _encode_AuthObjects(
     value: AuthObjects,
     elGetter: $.ASN1Encoder<AuthObjects>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthObjects) {
         _cached_encoder_for_AuthObjects = _get_encoder_for_PathOrObjects<AuthenticationType>(
             _encode_AuthenticationType

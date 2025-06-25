@@ -113,7 +113,7 @@ let _cached_decoder_for_ResponseBytes: $.ASN1Decoder<ResponseBytes> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ResponseBytes} The decoded data structure.
  */
-export function _decode_ResponseBytes(el: _Element) {
+export function _decode_ResponseBytes(el: _Element): ResponseBytes {
     if (!_cached_decoder_for_ResponseBytes) {
         _cached_decoder_for_ResponseBytes = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_ResponseBytes: $.ASN1Encoder<ResponseBytes> | null = nul
 export function _encode_ResponseBytes(
     value: ResponseBytes,
     elGetter: $.ASN1Encoder<ResponseBytes>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponseBytes) {
         _cached_encoder_for_ResponseBytes = function (
             value: ResponseBytes        ): _Element {

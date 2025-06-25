@@ -38,7 +38,7 @@ let _cached_decoder_for_CurrentProblemList: $.ASN1Decoder<CurrentProblemList> | 
  * @param {_Element} el The element being decoded.
  * @returns {CurrentProblemList} The decoded data structure.
  */
-export function _decode_CurrentProblemList(el: _Element) {
+export function _decode_CurrentProblemList(el: _Element): CurrentProblemList {
     if (!_cached_decoder_for_CurrentProblemList) {
         _cached_decoder_for_CurrentProblemList = $._decodeSetOf<CurrentProblem>(
             () => _decode_CurrentProblem
@@ -61,7 +61,7 @@ let _cached_encoder_for_CurrentProblemList: $.ASN1Encoder<CurrentProblemList> | 
 export function _encode_CurrentProblemList(
     value: CurrentProblemList,
     elGetter: $.ASN1Encoder<CurrentProblemList>
-) {
+): _Element {
     if (!_cached_encoder_for_CurrentProblemList) {
         _cached_encoder_for_CurrentProblemList = $._encodeSetOf<CurrentProblem>(
             () => _encode_CurrentProblem,

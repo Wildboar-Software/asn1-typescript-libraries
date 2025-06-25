@@ -35,7 +35,7 @@ let _cached_decoder_for_AdditionalTroubleStatusInfo: $.ASN1Decoder<AdditionalTro
  * @param {_Element} el The element being decoded.
  * @returns {AdditionalTroubleStatusInfo} The decoded data structure.
  */
-export function _decode_AdditionalTroubleStatusInfo(el: _Element) {
+export function _decode_AdditionalTroubleStatusInfo(el: _Element): AdditionalTroubleStatusInfo {
     if (!_cached_decoder_for_AdditionalTroubleStatusInfo) {
         _cached_decoder_for_AdditionalTroubleStatusInfo = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_AdditionalTroubleStatusInfo: $.ASN1Encoder<AdditionalTro
 export function _encode_AdditionalTroubleStatusInfo(
     value: AdditionalTroubleStatusInfo,
     elGetter: $.ASN1Encoder<AdditionalTroubleStatusInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_AdditionalTroubleStatusInfo) {
         _cached_encoder_for_AdditionalTroubleStatusInfo = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

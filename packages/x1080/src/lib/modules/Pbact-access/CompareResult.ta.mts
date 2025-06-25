@@ -134,7 +134,7 @@ let _cached_decoder_for_CompareResult: $.ASN1Decoder<CompareResult> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CompareResult} The decoded data structure.
  */
-export function _decode_CompareResult(el: _Element) {
+export function _decode_CompareResult(el: _Element): CompareResult {
     if (!_cached_decoder_for_CompareResult) {
         _cached_decoder_for_CompareResult = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_CompareResult: $.ASN1Encoder<CompareResult> | null = nul
 export function _encode_CompareResult(
     value: CompareResult,
     elGetter: $.ASN1Encoder<CompareResult>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareResult) {
         _cached_encoder_for_CompareResult = function (
             value: CompareResult        ): _Element {

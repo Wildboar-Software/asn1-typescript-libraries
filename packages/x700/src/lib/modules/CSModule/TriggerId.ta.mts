@@ -35,7 +35,7 @@ let _cached_decoder_for_TriggerId: $.ASN1Decoder<TriggerId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TriggerId} The decoded data structure.
  */
-export function _decode_TriggerId(el: _Element) {
+export function _decode_TriggerId(el: _Element): TriggerId {
     if (!_cached_decoder_for_TriggerId) {
         _cached_decoder_for_TriggerId = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TriggerId: $.ASN1Encoder<TriggerId> | null = null;
 export function _encode_TriggerId(
     value: TriggerId,
     elGetter: $.ASN1Encoder<TriggerId>
-) {
+): _Element {
     if (!_cached_encoder_for_TriggerId) {
         _cached_encoder_for_TriggerId = _encode_ObjectInstance;
     }

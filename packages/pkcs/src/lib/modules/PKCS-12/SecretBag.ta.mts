@@ -112,7 +112,7 @@ let _cached_decoder_for_SecretBag: $.ASN1Decoder<SecretBag> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SecretBag} The decoded data structure.
  */
-export function _decode_SecretBag(el: _Element) {
+export function _decode_SecretBag(el: _Element): SecretBag {
     if (!_cached_decoder_for_SecretBag) {
         _cached_decoder_for_SecretBag = function (el: _Element): SecretBag {
             const sequence: _Element[] = el.sequence;
@@ -151,7 +151,7 @@ let _cached_encoder_for_SecretBag: $.ASN1Encoder<SecretBag> | null = null;
 export function _encode_SecretBag(
     value: SecretBag,
     elGetter: $.ASN1Encoder<SecretBag>
-) {
+): _Element {
     if (!_cached_encoder_for_SecretBag) {
         _cached_encoder_for_SecretBag = function (
             value: SecretBag        ): _Element {

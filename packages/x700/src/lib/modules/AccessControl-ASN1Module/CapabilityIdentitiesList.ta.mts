@@ -47,7 +47,7 @@ let _cached_decoder_for_CapabilityIdentitiesList: $.ASN1Decoder<CapabilityIdenti
  * @param {_Element} el The element being decoded.
  * @returns {CapabilityIdentitiesList} The decoded data structure.
  */
-export function _decode_CapabilityIdentitiesList(el: _Element) {
+export function _decode_CapabilityIdentitiesList(el: _Element): CapabilityIdentitiesList {
     if (!_cached_decoder_for_CapabilityIdentitiesList) {
         _cached_decoder_for_CapabilityIdentitiesList = $._decodeSetOf<CapabilityIdentitiesList_Item>(
             () => _decode_CapabilityIdentitiesList_Item
@@ -68,7 +68,7 @@ let _cached_encoder_for_CapabilityIdentitiesList: $.ASN1Encoder<CapabilityIdenti
 export function _encode_CapabilityIdentitiesList(
     value: CapabilityIdentitiesList,
     elGetter: $.ASN1Encoder<CapabilityIdentitiesList>
-) {
+): _Element {
     if (!_cached_encoder_for_CapabilityIdentitiesList) {
         _cached_encoder_for_CapabilityIdentitiesList = $._encodeSetOf<CapabilityIdentitiesList_Item>(
             () => _encode_CapabilityIdentitiesList_Item,

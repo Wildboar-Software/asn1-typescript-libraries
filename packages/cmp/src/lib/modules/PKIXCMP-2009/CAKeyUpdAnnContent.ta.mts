@@ -120,7 +120,7 @@ let _cached_decoder_for_CAKeyUpdAnnContent: $.ASN1Decoder<CAKeyUpdAnnContent> | 
  * @param {_Element} el The element being decoded.
  * @returns {CAKeyUpdAnnContent} The decoded data structure.
  */
-export function _decode_CAKeyUpdAnnContent(el: _Element) {
+export function _decode_CAKeyUpdAnnContent(el: _Element): CAKeyUpdAnnContent {
   if (!_cached_decoder_for_CAKeyUpdAnnContent) {
     _cached_decoder_for_CAKeyUpdAnnContent = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_CAKeyUpdAnnContent: $.ASN1Encoder<CAKeyUpdAnnContent> | 
 export function _encode_CAKeyUpdAnnContent(
   value: CAKeyUpdAnnContent,
   elGetter: $.ASN1Encoder<CAKeyUpdAnnContent>
-) {
+): _Element {
   if (!_cached_encoder_for_CAKeyUpdAnnContent) {
     _cached_encoder_for_CAKeyUpdAnnContent = function (
       value: CAKeyUpdAnnContent    ): _Element {

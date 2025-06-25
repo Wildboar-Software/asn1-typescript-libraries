@@ -45,7 +45,7 @@ let _cached_decoder_for_FileIdentifier: $.ASN1Decoder<FileIdentifier> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {FileIdentifier} The decoded data structure.
  */
-export function _decode_FileIdentifier(el: _Element) {
+export function _decode_FileIdentifier(el: _Element): FileIdentifier {
     if (!_cached_decoder_for_FileIdentifier) {
         _cached_decoder_for_FileIdentifier = $._decode_inextensible_choice<FileIdentifier>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_FileIdentifier: $.ASN1Encoder<FileIdentifier> | null = n
 export function _encode_FileIdentifier(
     value: FileIdentifier,
     elGetter: $.ASN1Encoder<FileIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_FileIdentifier) {
         _cached_encoder_for_FileIdentifier = $._encode_choice<FileIdentifier>(
             {

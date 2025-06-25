@@ -162,7 +162,7 @@ let _cached_decoder_for_X509CertificateAttributes: $.ASN1Decoder<X509Certificate
  * @param {_Element} el The element being decoded.
  * @returns {X509CertificateAttributes} The decoded data structure.
  */
-export function _decode_X509CertificateAttributes(el: _Element) {
+export function _decode_X509CertificateAttributes(el: _Element): X509CertificateAttributes {
     if (!_cached_decoder_for_X509CertificateAttributes) {
         _cached_decoder_for_X509CertificateAttributes = function (
             el: _Element
@@ -224,7 +224,7 @@ let _cached_encoder_for_X509CertificateAttributes: $.ASN1Encoder<X509Certificate
 export function _encode_X509CertificateAttributes(
     value: X509CertificateAttributes,
     elGetter: $.ASN1Encoder<X509CertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_X509CertificateAttributes) {
         _cached_encoder_for_X509CertificateAttributes = function (
             value: X509CertificateAttributes        ): _Element {

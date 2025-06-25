@@ -251,7 +251,7 @@ let _cached_decoder_for_Authenticator: $.ASN1Decoder<Authenticator> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Authenticator} The decoded data structure.
  */
-export function _decode_Authenticator(el: _Element) {
+export function _decode_Authenticator(el: _Element): Authenticator {
   if (!_cached_decoder_for_Authenticator) {
     _cached_decoder_for_Authenticator = $._decode_implicit<Authenticator>(
       () =>
@@ -347,7 +347,7 @@ let _cached_encoder_for_Authenticator: $.ASN1Encoder<Authenticator> | null = nul
 export function _encode_Authenticator(
   value: Authenticator,
   elGetter: $.ASN1Encoder<Authenticator>
-) {
+): _Element {
   if (!_cached_encoder_for_Authenticator) {
     _cached_encoder_for_Authenticator = $._encode_implicit(
       _TagClass.application,

@@ -35,7 +35,7 @@ let _cached_decoder_for_DirectoryNameAndOptionalORAddress: $.ASN1Decoder<Directo
  * @param {_Element} el The element being decoded.
  * @returns {DirectoryNameAndOptionalORAddress} The decoded data structure.
  */
-export function _decode_DirectoryNameAndOptionalORAddress(el: _Element) {
+export function _decode_DirectoryNameAndOptionalORAddress(el: _Element): DirectoryNameAndOptionalORAddress {
     if (!_cached_decoder_for_DirectoryNameAndOptionalORAddress) {
         _cached_decoder_for_DirectoryNameAndOptionalORAddress = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DirectoryNameAndOptionalORAddress: $.ASN1Encoder<Directo
 export function _encode_DirectoryNameAndOptionalORAddress(
     value: DirectoryNameAndOptionalORAddress,
     elGetter: $.ASN1Encoder<DirectoryNameAndOptionalORAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_DirectoryNameAndOptionalORAddress) {
         _cached_encoder_for_DirectoryNameAndOptionalORAddress = _encode_ORName;
     }

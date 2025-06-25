@@ -37,7 +37,7 @@ let _cached_decoder_for_ActiveDestination: $.ASN1Decoder<ActiveDestination> | nu
  * @returns {ActiveDestination} The decoded data structure.
  */
 export
-function _decode_ActiveDestination (el: _Element) {
+function _decode_ActiveDestination (el: _Element): ActiveDestination {
     if (!_cached_decoder_for_ActiveDestination) { _cached_decoder_for_ActiveDestination = _decode_Destination; }
     return _cached_decoder_for_ActiveDestination(el);
 }
@@ -52,7 +52,7 @@ let _cached_encoder_for_ActiveDestination: $.ASN1Encoder<ActiveDestination> | nu
  * @returns {_Element} The ActiveDestination, encoded as an ASN.1 Element.
  */
 export
-function _encode_ActiveDestination (value: ActiveDestination, elGetter: $.ASN1Encoder<ActiveDestination>) {
+function _encode_ActiveDestination (value: ActiveDestination, elGetter: $.ASN1Encoder<ActiveDestination>): _Element {
     if (!_cached_encoder_for_ActiveDestination) { _cached_encoder_for_ActiveDestination = _encode_Destination; }
     return _cached_encoder_for_ActiveDestination(value, elGetter);
 }

@@ -34,7 +34,7 @@ let _cached_decoder_for_IDREFS: $.ASN1Decoder<IDREFS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IDREFS} The decoded data structure.
  */
-export function _decode_IDREFS(el: _Element) {
+export function _decode_IDREFS(el: _Element): IDREFS {
   if (!_cached_decoder_for_IDREFS) {
     _cached_decoder_for_IDREFS = $._decodeSequenceOf<IDREF>(
       () => _decode_IDREF
@@ -54,7 +54,7 @@ let _cached_encoder_for_IDREFS: $.ASN1Encoder<IDREFS> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IDREFS, encoded as an ASN.1 Element.
  */
-export function _encode_IDREFS(value: IDREFS, elGetter: $.ASN1Encoder<IDREFS>) {
+export function _encode_IDREFS(value: IDREFS, elGetter: $.ASN1Encoder<IDREFS>): _Element {
   if (!_cached_encoder_for_IDREFS) {
     _cached_encoder_for_IDREFS = $._encodeSequenceOf<IDREF>(
       () => _encode_IDREF,

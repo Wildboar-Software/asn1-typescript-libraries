@@ -34,7 +34,7 @@ let _cached_decoder_for_ENTITIES: $.ASN1Decoder<ENTITIES> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ENTITIES} The decoded data structure.
  */
-export function _decode_ENTITIES(el: _Element) {
+export function _decode_ENTITIES(el: _Element): ENTITIES {
   if (!_cached_decoder_for_ENTITIES) {
     _cached_decoder_for_ENTITIES = $._decodeSequenceOf<ENTITY>(
       () => _decode_ENTITY
@@ -57,7 +57,7 @@ let _cached_encoder_for_ENTITIES: $.ASN1Encoder<ENTITIES> | null = null;
 export function _encode_ENTITIES(
   value: ENTITIES,
   elGetter: $.ASN1Encoder<ENTITIES>
-) {
+): _Element {
   if (!_cached_encoder_for_ENTITIES) {
     _cached_encoder_for_ENTITIES = $._encodeSequenceOf<ENTITY>(
       () => _encode_ENTITY,

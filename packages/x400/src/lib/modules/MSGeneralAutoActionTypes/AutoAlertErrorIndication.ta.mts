@@ -122,7 +122,7 @@ let _cached_decoder_for_AutoAlertErrorIndication: $.ASN1Decoder<AutoAlertErrorIn
  * @param {_Element} el The element being decoded.
  * @returns {AutoAlertErrorIndication} The decoded data structure.
  */
-export function _decode_AutoAlertErrorIndication(el: _Element) {
+export function _decode_AutoAlertErrorIndication(el: _Element): AutoAlertErrorIndication {
     if (!_cached_decoder_for_AutoAlertErrorIndication) {
         _cached_decoder_for_AutoAlertErrorIndication = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_AutoAlertErrorIndication: $.ASN1Encoder<AutoAlertErrorIn
 export function _encode_AutoAlertErrorIndication(
     value: AutoAlertErrorIndication,
     elGetter: $.ASN1Encoder<AutoAlertErrorIndication>
-) {
+): _Element {
     if (!_cached_encoder_for_AutoAlertErrorIndication) {
         _cached_encoder_for_AutoAlertErrorIndication = function (
             value: AutoAlertErrorIndication        ): _Element {

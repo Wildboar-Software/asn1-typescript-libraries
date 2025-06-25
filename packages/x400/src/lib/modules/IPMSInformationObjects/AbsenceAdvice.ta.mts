@@ -116,7 +116,7 @@ let _cached_decoder_for_AbsenceAdvice: $.ASN1Decoder<AbsenceAdvice> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AbsenceAdvice} The decoded data structure.
  */
-export function _decode_AbsenceAdvice(el: _Element) {
+export function _decode_AbsenceAdvice(el: _Element): AbsenceAdvice {
     if (!_cached_decoder_for_AbsenceAdvice) {
         _cached_decoder_for_AbsenceAdvice = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_AbsenceAdvice: $.ASN1Encoder<AbsenceAdvice> | null = nul
 export function _encode_AbsenceAdvice(
     value: AbsenceAdvice,
     elGetter: $.ASN1Encoder<AbsenceAdvice>
-) {
+): _Element {
     if (!_cached_encoder_for_AbsenceAdvice) {
         _cached_encoder_for_AbsenceAdvice = function (
             value: AbsenceAdvice        ): _Element {

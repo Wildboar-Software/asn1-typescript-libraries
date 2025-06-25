@@ -225,7 +225,7 @@ let _cached_decoder_for_IPMAutoForwardRegistrationParameter: $.ASN1Decoder<IPMAu
  * @param {_Element} el The element being decoded.
  * @returns {IPMAutoForwardRegistrationParameter} The decoded data structure.
  */
-export function _decode_IPMAutoForwardRegistrationParameter(el: _Element) {
+export function _decode_IPMAutoForwardRegistrationParameter(el: _Element): IPMAutoForwardRegistrationParameter {
     if (!_cached_decoder_for_IPMAutoForwardRegistrationParameter) {
         _cached_decoder_for_IPMAutoForwardRegistrationParameter = function (
             el: _Element
@@ -309,7 +309,7 @@ let _cached_encoder_for_IPMAutoForwardRegistrationParameter: $.ASN1Encoder<IPMAu
 export function _encode_IPMAutoForwardRegistrationParameter(
     value: IPMAutoForwardRegistrationParameter,
     elGetter: $.ASN1Encoder<IPMAutoForwardRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMAutoForwardRegistrationParameter) {
         _cached_encoder_for_IPMAutoForwardRegistrationParameter = function (
             value: IPMAutoForwardRegistrationParameter        ): _Element {

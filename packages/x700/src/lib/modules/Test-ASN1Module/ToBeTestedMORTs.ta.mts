@@ -48,7 +48,7 @@ let _cached_decoder_for_ToBeTestedMORTs: $.ASN1Decoder<ToBeTestedMORTs> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ToBeTestedMORTs} The decoded data structure.
  */
-export function _decode_ToBeTestedMORTs(el: _Element) {
+export function _decode_ToBeTestedMORTs(el: _Element): ToBeTestedMORTs {
     if (!_cached_decoder_for_ToBeTestedMORTs) {
         _cached_decoder_for_ToBeTestedMORTs = $._decode_inextensible_choice<ToBeTestedMORTs>(
             {
@@ -84,7 +84,7 @@ let _cached_encoder_for_ToBeTestedMORTs: $.ASN1Encoder<ToBeTestedMORTs> | null =
 export function _encode_ToBeTestedMORTs(
     value: ToBeTestedMORTs,
     elGetter: $.ASN1Encoder<ToBeTestedMORTs>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeTestedMORTs) {
         _cached_encoder_for_ToBeTestedMORTs = $._encode_choice<ToBeTestedMORTs>(
             {

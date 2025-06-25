@@ -41,7 +41,7 @@ let _cached_decoder_for_ProbableCause: $.ASN1Decoder<ProbableCause> | null = nul
  * @returns {ProbableCause} The decoded data structure.
  */
 export
-function _decode_ProbableCause (el: _Element) {
+function _decode_ProbableCause (el: _Element): ProbableCause {
     if (!_cached_decoder_for_ProbableCause) { _cached_decoder_for_ProbableCause = $._decode_inextensible_choice<ProbableCause>({
     "UNIVERSAL 6": [ "globalValue", $._decodeObjectIdentifier ],
     "UNIVERSAL 2": [ "localValue", $._decodeInteger ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_ProbableCause: $.ASN1Encoder<ProbableCause> | null = nul
  * @returns {_Element} The ProbableCause, encoded as an ASN.1 Element.
  */
 export
-function _encode_ProbableCause (value: ProbableCause, elGetter: $.ASN1Encoder<ProbableCause>) {
+function _encode_ProbableCause (value: ProbableCause, elGetter: $.ASN1Encoder<ProbableCause>): _Element {
     if (!_cached_encoder_for_ProbableCause) { _cached_encoder_for_ProbableCause = $._encode_choice<ProbableCause>({
     "globalValue": $._encodeObjectIdentifier,
     "localValue": $._encodeInteger,

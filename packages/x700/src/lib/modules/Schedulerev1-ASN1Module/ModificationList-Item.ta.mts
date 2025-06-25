@@ -140,7 +140,7 @@ let _cached_decoder_for_ModificationList_Item: $.ASN1Decoder<ModificationList_It
  * @param {_Element} el The element being decoded.
  * @returns {ModificationList_Item} The decoded data structure.
  */
-export function _decode_ModificationList_Item(el: _Element) {
+export function _decode_ModificationList_Item(el: _Element): ModificationList_Item {
     if (!_cached_decoder_for_ModificationList_Item) {
         _cached_decoder_for_ModificationList_Item = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_ModificationList_Item: $.ASN1Encoder<ModificationList_It
 export function _encode_ModificationList_Item(
     value: ModificationList_Item,
     elGetter: $.ASN1Encoder<ModificationList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ModificationList_Item) {
         _cached_encoder_for_ModificationList_Item = function (
             value: ModificationList_Item        ): _Element {

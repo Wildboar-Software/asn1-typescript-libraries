@@ -126,7 +126,7 @@ let _cached_decoder_for_StcAMsgContent: $.ASN1Decoder<StcAMsgContent> | null = n
  * @returns {StcAMsgContent} The decoded data structure.
  */
 export
-function _decode_StcAMsgContent (el: _Element) {
+function _decode_StcAMsgContent (el: _Element): StcAMsgContent {
     if (!_cached_decoder_for_StcAMsgContent) { _cached_decoder_for_StcAMsgContent = function (el: _Element): StcAMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -159,7 +159,7 @@ let _cached_encoder_for_StcAMsgContent: $.ASN1Encoder<StcAMsgContent> | null = n
  * @returns {_Element} The StcAMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_StcAMsgContent (value: StcAMsgContent, elGetter: $.ASN1Encoder<StcAMsgContent>) {
+function _encode_StcAMsgContent (value: StcAMsgContent, elGetter: $.ASN1Encoder<StcAMsgContent>): _Element {
     if (!_cached_encoder_for_StcAMsgContent) { _cached_encoder_for_StcAMsgContent = function (value: StcAMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -37,7 +37,7 @@ let _cached_decoder_for_SMIMECapabilities: $.ASN1Decoder<SMIMECapabilities> | nu
  * @returns {SMIMECapabilities} The decoded data structure.
  */
 export
-function _decode_SMIMECapabilities (el: _Element) {
+function _decode_SMIMECapabilities (el: _Element): SMIMECapabilities {
     if (!_cached_decoder_for_SMIMECapabilities) { _cached_decoder_for_SMIMECapabilities = $._decodeSequenceOf<SMIMECapability>(() => _decode_SMIMECapability); }
     return _cached_decoder_for_SMIMECapabilities(el);
 }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SMIMECapabilities: $.ASN1Encoder<SMIMECapabilities> | nu
  * @returns {_Element} The SMIMECapabilities, encoded as an ASN.1 Element.
  */
 export
-function _encode_SMIMECapabilities (value: SMIMECapabilities, elGetter: $.ASN1Encoder<SMIMECapabilities>) {
+function _encode_SMIMECapabilities (value: SMIMECapabilities, elGetter: $.ASN1Encoder<SMIMECapabilities>): _Element {
     if (!_cached_encoder_for_SMIMECapabilities) { _cached_encoder_for_SMIMECapabilities = $._encodeSequenceOf<SMIMECapability>(() => _encode_SMIMECapability, $.DER); }
     return _cached_encoder_for_SMIMECapabilities(value, elGetter);
 }

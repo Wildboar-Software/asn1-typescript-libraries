@@ -43,7 +43,7 @@ let _cached_decoder_for_Charging: $.ASN1Decoder<Charging> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Charging} The decoded data structure.
  */
-export function _decode_Charging(el: _Element) {
+export function _decode_Charging(el: _Element): Charging {
   if (!_cached_decoder_for_Charging) {
     _cached_decoder_for_Charging = $._decode_implicit<Charging>(() =>
       $._decodeSequenceOf<Charging_Item>(() => _decode_Charging_Item)
@@ -66,7 +66,7 @@ let _cached_encoder_for_Charging: $.ASN1Encoder<Charging> | null = null;
 export function _encode_Charging(
   value: Charging,
   elGetter: $.ASN1Encoder<Charging>
-) {
+): _Element {
   if (!_cached_encoder_for_Charging) {
     _cached_encoder_for_Charging = $._encode_implicit(
       _TagClass.application,

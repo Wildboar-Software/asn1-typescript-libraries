@@ -45,7 +45,7 @@ let _cached_decoder_for_DisconnectResult_Item: $.ASN1Decoder<DisconnectResult_It
  * @param {_Element} el The element being decoded.
  * @returns {DisconnectResult_Item} The decoded data structure.
  */
-export function _decode_DisconnectResult_Item(el: _Element) {
+export function _decode_DisconnectResult_Item(el: _Element): DisconnectResult_Item {
     if (!_cached_decoder_for_DisconnectResult_Item) {
         _cached_decoder_for_DisconnectResult_Item = $._decode_inextensible_choice<DisconnectResult_Item>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_DisconnectResult_Item: $.ASN1Encoder<DisconnectResult_It
 export function _encode_DisconnectResult_Item(
     value: DisconnectResult_Item,
     elGetter: $.ASN1Encoder<DisconnectResult_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_DisconnectResult_Item) {
         _cached_encoder_for_DisconnectResult_Item = $._encode_choice<DisconnectResult_Item>(
             {

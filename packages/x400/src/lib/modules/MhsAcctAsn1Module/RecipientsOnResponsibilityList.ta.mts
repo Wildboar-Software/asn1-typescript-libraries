@@ -35,7 +35,7 @@ let _cached_decoder_for_RecipientsOnResponsibilityList: $.ASN1Decoder<Recipients
  * @param {_Element} el The element being decoded.
  * @returns {RecipientsOnResponsibilityList} The decoded data structure.
  */
-export function _decode_RecipientsOnResponsibilityList(el: _Element) {
+export function _decode_RecipientsOnResponsibilityList(el: _Element): RecipientsOnResponsibilityList {
     if (!_cached_decoder_for_RecipientsOnResponsibilityList) {
         _cached_decoder_for_RecipientsOnResponsibilityList = _decode_RecipientName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RecipientsOnResponsibilityList: $.ASN1Encoder<Recipients
 export function _encode_RecipientsOnResponsibilityList(
     value: RecipientsOnResponsibilityList,
     elGetter: $.ASN1Encoder<RecipientsOnResponsibilityList>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientsOnResponsibilityList) {
         _cached_encoder_for_RecipientsOnResponsibilityList = _encode_RecipientName;
     }

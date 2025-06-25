@@ -48,7 +48,7 @@ let _cached_decoder_for_ObjectSel_objSelect: $.ASN1Decoder<ObjectSel_objSelect> 
  * @param {_Element} el The element being decoded.
  * @returns {ObjectSel_objSelect} The decoded data structure.
  */
-export function _decode_ObjectSel_objSelect(el: _Element) {
+export function _decode_ObjectSel_objSelect(el: _Element): ObjectSel_objSelect {
     if (!_cached_decoder_for_ObjectSel_objSelect) {
         _cached_decoder_for_ObjectSel_objSelect = $._decode_extensible_choice<ObjectSel_objSelect>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_ObjectSel_objSelect: $.ASN1Encoder<ObjectSel_objSelect> 
 export function _encode_ObjectSel_objSelect(
     value: ObjectSel_objSelect,
     elGetter: $.ASN1Encoder<ObjectSel_objSelect>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectSel_objSelect) {
         _cached_encoder_for_ObjectSel_objSelect = $._encode_choice<ObjectSel_objSelect>(
             {

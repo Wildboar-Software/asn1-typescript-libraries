@@ -141,7 +141,7 @@ let _cached_decoder_for_PKCS15Token: $.ASN1Decoder<PKCS15Token> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKCS15Token} The decoded data structure.
  */
-export function _decode_PKCS15Token(el: _Element) {
+export function _decode_PKCS15Token(el: _Element): PKCS15Token {
     if (!_cached_decoder_for_PKCS15Token) {
         _cached_decoder_for_PKCS15Token = function (el: _Element): PKCS15Token {
             let version!: PKCS15Token_version;
@@ -194,7 +194,7 @@ let _cached_encoder_for_PKCS15Token: $.ASN1Encoder<PKCS15Token> | null = null;
 export function _encode_PKCS15Token(
     value: PKCS15Token,
     elGetter: $.ASN1Encoder<PKCS15Token>
-) {
+): _Element {
     if (!_cached_encoder_for_PKCS15Token) {
         _cached_encoder_for_PKCS15Token = function (
             value: PKCS15Token        ): _Element {

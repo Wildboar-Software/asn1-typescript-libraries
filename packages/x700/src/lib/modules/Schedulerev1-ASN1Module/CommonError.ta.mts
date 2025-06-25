@@ -150,7 +150,7 @@ let _cached_decoder_for_CommonError: $.ASN1Decoder<CommonError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CommonError} The decoded data structure.
  */
-export function _decode_CommonError(el: _Element) {
+export function _decode_CommonError(el: _Element): CommonError {
     if (!_cached_decoder_for_CommonError) {
         _cached_decoder_for_CommonError = function (el: _Element): CommonError {
             let managedObjectClass!: ObjectClass;
@@ -204,7 +204,7 @@ let _cached_encoder_for_CommonError: $.ASN1Encoder<CommonError> | null = null;
 export function _encode_CommonError(
     value: CommonError,
     elGetter: $.ASN1Encoder<CommonError>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonError) {
         _cached_encoder_for_CommonError = function (
             value: CommonError        ): _Element {

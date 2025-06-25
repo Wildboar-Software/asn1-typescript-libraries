@@ -122,7 +122,7 @@ let _cached_decoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT: $.ASN1Decoder<BioAPI_B
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_SECURITY_BLOCK_FORMAT} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_SECURITY_BLOCK_FORMAT(el: _Element) {
+export function _decode_BioAPI_BIR_SECURITY_BLOCK_FORMAT(el: _Element): BioAPI_BIR_SECURITY_BLOCK_FORMAT {
   if (!_cached_decoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT) {
     _cached_decoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT = function (
       el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT: $.ASN1Encoder<BioAPI_B
 export function _encode_BioAPI_BIR_SECURITY_BLOCK_FORMAT(
   value: BioAPI_BIR_SECURITY_BLOCK_FORMAT,
   elGetter: $.ASN1Encoder<BioAPI_BIR_SECURITY_BLOCK_FORMAT>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT) {
     _cached_encoder_for_BioAPI_BIR_SECURITY_BLOCK_FORMAT = function (
       value: BioAPI_BIR_SECURITY_BLOCK_FORMAT    ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Decoder<A
  * @param {_Element} el The element being decoded.
  * @returns {AddCapacityToTopologicalLinkInformation} The decoded data structure.
  */
-export function _decode_AddCapacityToTopologicalLinkInformation(el: _Element) {
+export function _decode_AddCapacityToTopologicalLinkInformation(el: _Element): AddCapacityToTopologicalLinkInformation {
     if (!_cached_decoder_for_AddCapacityToTopologicalLinkInformation) {
         _cached_decoder_for_AddCapacityToTopologicalLinkInformation = _decode_RequestedCapacity;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Encoder<A
 export function _encode_AddCapacityToTopologicalLinkInformation(
     value: AddCapacityToTopologicalLinkInformation,
     elGetter: $.ASN1Encoder<AddCapacityToTopologicalLinkInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AddCapacityToTopologicalLinkInformation) {
         _cached_encoder_for_AddCapacityToTopologicalLinkInformation = _encode_RequestedCapacity;
     }

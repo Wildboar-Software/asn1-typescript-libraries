@@ -153,7 +153,7 @@ let _cached_decoder_for_KDC_REQ: $.ASN1Decoder<KDC_REQ> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KDC_REQ} The decoded data structure.
  */
-export function _decode_KDC_REQ(el: _Element) {
+export function _decode_KDC_REQ(el: _Element): KDC_REQ {
   if (!_cached_decoder_for_KDC_REQ) {
     _cached_decoder_for_KDC_REQ = function (el: _Element): KDC_REQ {
       let pvno!: INTEGER;
@@ -211,7 +211,7 @@ let _cached_encoder_for_KDC_REQ: $.ASN1Encoder<KDC_REQ> | null = null;
 export function _encode_KDC_REQ(
   value: KDC_REQ,
   elGetter: $.ASN1Encoder<KDC_REQ>
-) {
+): _Element {
   if (!_cached_encoder_for_KDC_REQ) {
     _cached_encoder_for_KDC_REQ = function (
       value: KDC_REQ    ): _Element {

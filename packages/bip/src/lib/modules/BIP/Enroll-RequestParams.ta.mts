@@ -255,7 +255,7 @@ let _cached_decoder_for_Enroll_RequestParams: $.ASN1Decoder<Enroll_RequestParams
  * @param {_Element} el The element being decoded.
  * @returns {Enroll_RequestParams} The decoded data structure.
  */
-export function _decode_Enroll_RequestParams(el: _Element) {
+export function _decode_Enroll_RequestParams(el: _Element): Enroll_RequestParams {
   if (!_cached_decoder_for_Enroll_RequestParams) {
     _cached_decoder_for_Enroll_RequestParams = function (
       el: _Element
@@ -336,7 +336,7 @@ let _cached_encoder_for_Enroll_RequestParams: $.ASN1Encoder<Enroll_RequestParams
 export function _encode_Enroll_RequestParams(
   value: Enroll_RequestParams,
   elGetter: $.ASN1Encoder<Enroll_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Enroll_RequestParams) {
     _cached_encoder_for_Enroll_RequestParams = function (
       value: Enroll_RequestParams    ): _Element {

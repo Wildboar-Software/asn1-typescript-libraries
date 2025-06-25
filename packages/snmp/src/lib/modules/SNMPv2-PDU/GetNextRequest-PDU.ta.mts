@@ -33,7 +33,7 @@ let _cached_decoder_for_GetNextRequest_PDU: $.ASN1Decoder<GetNextRequest_PDU> | 
  * @returns {GetNextRequest_PDU} The decoded data structure.
  */
 export
-function _decode_GetNextRequest_PDU (el: _Element) {
+function _decode_GetNextRequest_PDU (el: _Element): GetNextRequest_PDU {
     if (!_cached_decoder_for_GetNextRequest_PDU) { _cached_decoder_for_GetNextRequest_PDU = $._decode_implicit<GetNextRequest_PDU>(() => _decode_PDU); }
     return _cached_decoder_for_GetNextRequest_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_GetNextRequest_PDU: $.ASN1Encoder<GetNextRequest_PDU> | 
  * @returns {_Element} The GetNextRequest_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_GetNextRequest_PDU (value: GetNextRequest_PDU, elGetter: $.ASN1Encoder<GetNextRequest_PDU>) {
+function _encode_GetNextRequest_PDU (value: GetNextRequest_PDU, elGetter: $.ASN1Encoder<GetNextRequest_PDU>): _Element {
     if (!_cached_encoder_for_GetNextRequest_PDU) { _cached_encoder_for_GetNextRequest_PDU = $._encode_implicit(_TagClass.context, 1, () => _encode_PDU, $.BER); }
     return _cached_encoder_for_GetNextRequest_PDU(value, elGetter);
 }

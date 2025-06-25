@@ -220,7 +220,7 @@ let _cached_decoder_for_MSBindArgument: $.ASN1Decoder<MSBindArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {MSBindArgument} The decoded data structure.
  */
-export function _decode_MSBindArgument(el: _Element) {
+export function _decode_MSBindArgument(el: _Element): MSBindArgument {
     if (!_cached_decoder_for_MSBindArgument) {
         _cached_decoder_for_MSBindArgument = function (
             el: _Element
@@ -304,7 +304,7 @@ let _cached_encoder_for_MSBindArgument: $.ASN1Encoder<MSBindArgument> | null = n
 export function _encode_MSBindArgument(
     value: MSBindArgument,
     elGetter: $.ASN1Encoder<MSBindArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_MSBindArgument) {
         _cached_encoder_for_MSBindArgument = function (
             value: MSBindArgument        ): _Element {

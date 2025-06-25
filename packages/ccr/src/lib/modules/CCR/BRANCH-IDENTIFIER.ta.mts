@@ -131,7 +131,7 @@ let _cached_decoder_for_BRANCH_IDENTIFIER: $.ASN1Decoder<BRANCH_IDENTIFIER> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BRANCH_IDENTIFIER} The decoded data structure.
  */
-export function _decode_BRANCH_IDENTIFIER(el: _Element) {
+export function _decode_BRANCH_IDENTIFIER(el: _Element): BRANCH_IDENTIFIER {
   if (!_cached_decoder_for_BRANCH_IDENTIFIER) {
     _cached_decoder_for_BRANCH_IDENTIFIER = function (
       el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_BRANCH_IDENTIFIER: $.ASN1Encoder<BRANCH_IDENTIFIER> | nu
 export function _encode_BRANCH_IDENTIFIER(
   value: BRANCH_IDENTIFIER,
   elGetter: $.ASN1Encoder<BRANCH_IDENTIFIER>
-) {
+): _Element {
   if (!_cached_encoder_for_BRANCH_IDENTIFIER) {
     _cached_encoder_for_BRANCH_IDENTIFIER = function (
       value: BRANCH_IDENTIFIER    ): _Element {

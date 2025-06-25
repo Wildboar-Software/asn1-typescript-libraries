@@ -119,7 +119,7 @@ let _cached_decoder_for_EncapsulatedContentInfoBPUReport: $.ASN1Decoder<Encapsul
  * @param {_Element} el The element being decoded.
  * @returns {EncapsulatedContentInfoBPUReport} The decoded data structure.
  */
-export function _decode_EncapsulatedContentInfoBPUReport(el: _Element) {
+export function _decode_EncapsulatedContentInfoBPUReport(el: _Element): EncapsulatedContentInfoBPUReport {
     if (!_cached_decoder_for_EncapsulatedContentInfoBPUReport) {
         _cached_decoder_for_EncapsulatedContentInfoBPUReport = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_EncapsulatedContentInfoBPUReport: $.ASN1Encoder<Encapsul
 export function _encode_EncapsulatedContentInfoBPUReport(
     value: EncapsulatedContentInfoBPUReport,
     elGetter: $.ASN1Encoder<EncapsulatedContentInfoBPUReport>
-) {
+): _Element {
     if (!_cached_encoder_for_EncapsulatedContentInfoBPUReport) {
         _cached_encoder_for_EncapsulatedContentInfoBPUReport = function (
             value: EncapsulatedContentInfoBPUReport        ): _Element {

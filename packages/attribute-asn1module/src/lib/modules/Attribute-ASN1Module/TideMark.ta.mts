@@ -38,7 +38,7 @@ let _cached_decoder_for_TideMark: $.ASN1Decoder<TideMark> | null = null;
  * @returns {TideMark} The decoded data structure.
  */
 export
-function _decode_TideMark (el: _Element) {
+function _decode_TideMark (el: _Element): TideMark {
     if (!_cached_decoder_for_TideMark) { _cached_decoder_for_TideMark = $._decode_inextensible_choice<TideMark>({
     "CONTEXT 0": [ "maxTideMar", $._decode_explicit<ObservedValue>(() => _decode_ObservedValue) ],
     "CONTEXT 1": [ "minTideMark", $._decode_explicit<ObservedValue>(() => _decode_ObservedValue) ]
@@ -56,7 +56,7 @@ let _cached_encoder_for_TideMark: $.ASN1Encoder<TideMark> | null = null;
  * @returns {_Element} The TideMark, encoded as an ASN.1 Element.
  */
 export
-function _encode_TideMark (value: TideMark, elGetter: $.ASN1Encoder<TideMark>) {
+function _encode_TideMark (value: TideMark, elGetter: $.ASN1Encoder<TideMark>): _Element {
     if (!_cached_encoder_for_TideMark) { _cached_encoder_for_TideMark = $._encode_choice<TideMark>({
     "maxTideMar": $._encode_explicit(_TagClass.context, 0, () => _encode_ObservedValue, $.BER),
     "minTideMark": $._encode_explicit(_TagClass.context, 1, () => _encode_ObservedValue, $.BER),

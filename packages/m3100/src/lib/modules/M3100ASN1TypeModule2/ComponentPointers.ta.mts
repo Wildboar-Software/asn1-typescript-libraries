@@ -38,7 +38,7 @@ let _cached_decoder_for_ComponentPointers: $.ASN1Decoder<ComponentPointers> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ComponentPointers} The decoded data structure.
  */
-export function _decode_ComponentPointers(el: _Element) {
+export function _decode_ComponentPointers(el: _Element): ComponentPointers {
     if (!_cached_decoder_for_ComponentPointers) {
         _cached_decoder_for_ComponentPointers = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ComponentPointers: $.ASN1Encoder<ComponentPointers> | nu
 export function _encode_ComponentPointers(
     value: ComponentPointers,
     elGetter: $.ASN1Encoder<ComponentPointers>
-) {
+): _Element {
     if (!_cached_encoder_for_ComponentPointers) {
         _cached_encoder_for_ComponentPointers = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

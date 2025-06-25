@@ -119,7 +119,7 @@ let _cached_decoder_for_TeletexBodyPart: $.ASN1Decoder<TeletexBodyPart> | null =
  * @param {_Element} el The element being decoded.
  * @returns {TeletexBodyPart} The decoded data structure.
  */
-export function _decode_TeletexBodyPart(el: _Element) {
+export function _decode_TeletexBodyPart(el: _Element): TeletexBodyPart {
     if (!_cached_decoder_for_TeletexBodyPart) {
         _cached_decoder_for_TeletexBodyPart = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_TeletexBodyPart: $.ASN1Encoder<TeletexBodyPart> | null =
 export function _encode_TeletexBodyPart(
     value: TeletexBodyPart,
     elGetter: $.ASN1Encoder<TeletexBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexBodyPart) {
         _cached_encoder_for_TeletexBodyPart = function (
             value: TeletexBodyPart        ): _Element {

@@ -131,7 +131,7 @@ let _cached_decoder_for_DeleteSpecification: $.ASN1Decoder<DeleteSpecification> 
  * @param {_Element} el The element being decoded.
  * @returns {DeleteSpecification} The decoded data structure.
  */
-export function _decode_DeleteSpecification(el: _Element) {
+export function _decode_DeleteSpecification(el: _Element): DeleteSpecification {
     if (!_cached_decoder_for_DeleteSpecification) {
         _cached_decoder_for_DeleteSpecification = function (
             el: _Element
@@ -177,7 +177,7 @@ let _cached_encoder_for_DeleteSpecification: $.ASN1Encoder<DeleteSpecification> 
 export function _encode_DeleteSpecification(
     value: DeleteSpecification,
     elGetter: $.ASN1Encoder<DeleteSpecification>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteSpecification) {
         _cached_encoder_for_DeleteSpecification = function (
             value: DeleteSpecification        ): _Element {

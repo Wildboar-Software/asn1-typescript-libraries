@@ -45,7 +45,7 @@ let _cached_decoder_for_EMailMtaName: $.ASN1Decoder<EMailMtaName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EMailMtaName} The decoded data structure.
  */
-export function _decode_EMailMtaName(el: _Element) {
+export function _decode_EMailMtaName(el: _Element): EMailMtaName {
     if (!_cached_decoder_for_EMailMtaName) {
         _cached_decoder_for_EMailMtaName = $._decode_inextensible_choice<EMailMtaName>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_EMailMtaName: $.ASN1Encoder<EMailMtaName> | null = null;
 export function _encode_EMailMtaName(
     value: EMailMtaName,
     elGetter: $.ASN1Encoder<EMailMtaName>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailMtaName) {
         _cached_encoder_for_EMailMtaName = $._encode_choice<EMailMtaName>(
             {

@@ -129,7 +129,7 @@ let _cached_decoder_for_E_health_SetUp_Message_Response_interactive_conditional_
  * @returns {E_health_SetUp_Message_Response_interactive_conditional_accept} The decoded data structure.
  */
 export
-function _decode_E_health_SetUp_Message_Response_interactive_conditional_accept (el: _Element) {
+function _decode_E_health_SetUp_Message_Response_interactive_conditional_accept (el: _Element): E_health_SetUp_Message_Response_interactive_conditional_accept {
     if (!_cached_decoder_for_E_health_SetUp_Message_Response_interactive_conditional_accept) { _cached_decoder_for_E_health_SetUp_Message_Response_interactive_conditional_accept = function (el: _Element): E_health_SetUp_Message_Response_interactive_conditional_accept {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -169,7 +169,7 @@ let _cached_encoder_for_E_health_SetUp_Message_Response_interactive_conditional_
  * @returns {_Element} The E_health_SetUp_Message_Response_interactive_conditional_accept, encoded as an ASN.1 Element.
  */
 export
-function _encode_E_health_SetUp_Message_Response_interactive_conditional_accept (value: E_health_SetUp_Message_Response_interactive_conditional_accept, elGetter: $.ASN1Encoder<E_health_SetUp_Message_Response_interactive_conditional_accept>) {
+function _encode_E_health_SetUp_Message_Response_interactive_conditional_accept (value: E_health_SetUp_Message_Response_interactive_conditional_accept, elGetter: $.ASN1Encoder<E_health_SetUp_Message_Response_interactive_conditional_accept>): _Element {
     if (!_cached_encoder_for_E_health_SetUp_Message_Response_interactive_conditional_accept) { _cached_encoder_for_E_health_SetUp_Message_Response_interactive_conditional_accept = function (value: E_health_SetUp_Message_Response_interactive_conditional_accept): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

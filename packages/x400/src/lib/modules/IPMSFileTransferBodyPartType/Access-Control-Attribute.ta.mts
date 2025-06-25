@@ -42,7 +42,7 @@ let _cached_decoder_for_Access_Control_Attribute: $.ASN1Decoder<Access_Control_A
  * @param {_Element} el The element being decoded.
  * @returns {Access_Control_Attribute} The decoded data structure.
  */
-export function _decode_Access_Control_Attribute(el: _Element) {
+export function _decode_Access_Control_Attribute(el: _Element): Access_Control_Attribute {
     if (!_cached_decoder_for_Access_Control_Attribute) {
         _cached_decoder_for_Access_Control_Attribute = $._decode_inextensible_choice<Access_Control_Attribute>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_Access_Control_Attribute: $.ASN1Encoder<Access_Control_A
 export function _encode_Access_Control_Attribute(
     value: Access_Control_Attribute,
     elGetter: $.ASN1Encoder<Access_Control_Attribute>
-) {
+): _Element {
     if (!_cached_encoder_for_Access_Control_Attribute) {
         _cached_encoder_for_Access_Control_Attribute = $._encode_choice<Access_Control_Attribute>(
             {

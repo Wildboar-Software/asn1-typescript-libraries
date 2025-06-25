@@ -29,7 +29,7 @@ let _cached_decoder_for_MLExpansionHistory: $.ASN1Decoder<MLExpansionHistory> | 
  * @param {_Element} el The element being decoded.
  * @returns {MLExpansionHistory} The decoded data structure.
  */
-export function _decode_MLExpansionHistory(el: _Element) {
+export function _decode_MLExpansionHistory(el: _Element): MLExpansionHistory {
     if (!_cached_decoder_for_MLExpansionHistory) {
         _cached_decoder_for_MLExpansionHistory = $._decodeSequenceOf<MLData>(
             () => _decode_MLData
@@ -52,7 +52,7 @@ let _cached_encoder_for_MLExpansionHistory: $.ASN1Encoder<MLExpansionHistory> | 
 export function _encode_MLExpansionHistory(
     value: MLExpansionHistory,
     elGetter: $.ASN1Encoder<MLExpansionHistory>
-) {
+): _Element {
     if (!_cached_encoder_for_MLExpansionHistory) {
         _cached_encoder_for_MLExpansionHistory = $._encodeSequenceOf<MLData>(
             () => _encode_MLData,

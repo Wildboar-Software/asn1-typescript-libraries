@@ -41,7 +41,7 @@ let _cached_decoder_for_AllPackagesAS: $.ASN1Decoder<AllPackagesAS> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {AllPackagesAS} The decoded data structure.
  */
-export function _decode_AllPackagesAS(el: _Element) {
+export function _decode_AllPackagesAS(el: _Element): AllPackagesAS {
     if (!_cached_decoder_for_AllPackagesAS) {
         _cached_decoder_for_AllPackagesAS = _decode_TCSingleAS;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_AllPackagesAS: $.ASN1Encoder<AllPackagesAS> | null = nul
 export function _encode_AllPackagesAS(
     value: AllPackagesAS,
     elGetter: $.ASN1Encoder<AllPackagesAS>
-) {
+): _Element {
     if (!_cached_encoder_for_AllPackagesAS) {
         _cached_encoder_for_AllPackagesAS = _encode_TCSingleAS;
     }

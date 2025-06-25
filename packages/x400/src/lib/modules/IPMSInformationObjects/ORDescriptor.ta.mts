@@ -141,7 +141,7 @@ let _cached_decoder_for_ORDescriptor: $.ASN1Decoder<ORDescriptor> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ORDescriptor} The decoded data structure.
  */
-export function _decode_ORDescriptor(el: _Element) {
+export function _decode_ORDescriptor(el: _Element): ORDescriptor {
     if (!_cached_decoder_for_ORDescriptor) {
         _cached_decoder_for_ORDescriptor = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_ORDescriptor: $.ASN1Encoder<ORDescriptor> | null = null;
 export function _encode_ORDescriptor(
     value: ORDescriptor,
     elGetter: $.ASN1Encoder<ORDescriptor>
-) {
+): _Element {
     if (!_cached_encoder_for_ORDescriptor) {
         _cached_encoder_for_ORDescriptor = function (
             value: ORDescriptor        ): _Element {

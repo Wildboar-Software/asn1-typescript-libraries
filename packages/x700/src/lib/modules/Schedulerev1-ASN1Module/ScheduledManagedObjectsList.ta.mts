@@ -38,7 +38,7 @@ let _cached_decoder_for_ScheduledManagedObjectsList: $.ASN1Decoder<ScheduledMana
  * @param {_Element} el The element being decoded.
  * @returns {ScheduledManagedObjectsList} The decoded data structure.
  */
-export function _decode_ScheduledManagedObjectsList(el: _Element) {
+export function _decode_ScheduledManagedObjectsList(el: _Element): ScheduledManagedObjectsList {
     if (!_cached_decoder_for_ScheduledManagedObjectsList) {
         _cached_decoder_for_ScheduledManagedObjectsList = $._decodeSetOf<ScheduledManagedObjectsList_Item>(
             () => _decode_ScheduledManagedObjectsList_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_ScheduledManagedObjectsList: $.ASN1Encoder<ScheduledMana
 export function _encode_ScheduledManagedObjectsList(
     value: ScheduledManagedObjectsList,
     elGetter: $.ASN1Encoder<ScheduledManagedObjectsList>
-) {
+): _Element {
     if (!_cached_encoder_for_ScheduledManagedObjectsList) {
         _cached_encoder_for_ScheduledManagedObjectsList = $._encodeSetOf<ScheduledManagedObjectsList_Item>(
             () => _encode_ScheduledManagedObjectsList_Item,

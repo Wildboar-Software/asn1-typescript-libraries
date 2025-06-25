@@ -36,7 +36,7 @@ let _cached_decoder_for_Opaque: $.ASN1Decoder<Opaque> | null = null;
  * @returns {Opaque} The decoded data structure.
  */
 export
-function _decode_Opaque (el: _Element) {
+function _decode_Opaque (el: _Element): Opaque {
     if (!_cached_decoder_for_Opaque) { _cached_decoder_for_Opaque = $._decode_implicit<Opaque>(() => $._decodeOctetString); }
     return _cached_decoder_for_Opaque(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Opaque: $.ASN1Encoder<Opaque> | null = null;
  * @returns {_Element} The Opaque, encoded as an ASN.1 Element.
  */
 export
-function _encode_Opaque (value: Opaque, elGetter: $.ASN1Encoder<Opaque>) {
+function _encode_Opaque (value: Opaque, elGetter: $.ASN1Encoder<Opaque>): _Element {
     if (!_cached_encoder_for_Opaque) { _cached_encoder_for_Opaque = $._encode_implicit(_TagClass.application, 4, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_Opaque(value, elGetter);
 }

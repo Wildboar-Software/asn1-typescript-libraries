@@ -116,7 +116,7 @@ let _cached_decoder_for_AttributeValueChangeDefinition_Item: $.ASN1Decoder<Attri
  * @returns {AttributeValueChangeDefinition_Item} The decoded data structure.
  */
 export
-function _decode_AttributeValueChangeDefinition_Item (el: _Element) {
+function _decode_AttributeValueChangeDefinition_Item (el: _Element): AttributeValueChangeDefinition_Item {
     if (!_cached_decoder_for_AttributeValueChangeDefinition_Item) { _cached_decoder_for_AttributeValueChangeDefinition_Item = function (el: _Element): AttributeValueChangeDefinition_Item {
     let attributeId!: AttributeId;
     let oldAttributeValue: OPTIONAL<_Element>;
@@ -151,7 +151,7 @@ let _cached_encoder_for_AttributeValueChangeDefinition_Item: $.ASN1Encoder<Attri
  * @returns {_Element} The AttributeValueChangeDefinition_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeValueChangeDefinition_Item (value: AttributeValueChangeDefinition_Item, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition_Item>) {
+function _encode_AttributeValueChangeDefinition_Item (value: AttributeValueChangeDefinition_Item, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition_Item>): _Element {
     if (!_cached_encoder_for_AttributeValueChangeDefinition_Item) { _cached_encoder_for_AttributeValueChangeDefinition_Item = function (value: AttributeValueChangeDefinition_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

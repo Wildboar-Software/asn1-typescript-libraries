@@ -33,7 +33,7 @@ let _cached_decoder_for_CommunicationsAgreementIdField: $.ASN1Decoder<Communicat
  * @param {_Element} el The element being decoded.
  * @returns {CommunicationsAgreementIdField} The decoded data structure.
  */
-export function _decode_CommunicationsAgreementIdField(el: _Element) {
+export function _decode_CommunicationsAgreementIdField(el: _Element): CommunicationsAgreementIdField {
     if (!_cached_decoder_for_CommunicationsAgreementIdField) {
         _cached_decoder_for_CommunicationsAgreementIdField =
             $._decodeTeletexString;
@@ -53,7 +53,7 @@ let _cached_encoder_for_CommunicationsAgreementIdField: $.ASN1Encoder<Communicat
 export function _encode_CommunicationsAgreementIdField(
     value: CommunicationsAgreementIdField,
     elGetter: $.ASN1Encoder<CommunicationsAgreementIdField>
-) {
+): _Element {
     if (!_cached_encoder_for_CommunicationsAgreementIdField) {
         _cached_encoder_for_CommunicationsAgreementIdField =
             $._encodeTeletexString;

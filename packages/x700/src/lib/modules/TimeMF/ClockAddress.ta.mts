@@ -42,7 +42,7 @@ let _cached_decoder_for_ClockAddress: $.ASN1Decoder<ClockAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ClockAddress} The decoded data structure.
  */
-export function _decode_ClockAddress(el: _Element) {
+export function _decode_ClockAddress(el: _Element): ClockAddress {
     if (!_cached_decoder_for_ClockAddress) {
         _cached_decoder_for_ClockAddress = $._decode_inextensible_choice<ClockAddress>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_ClockAddress: $.ASN1Encoder<ClockAddress> | null = null;
 export function _encode_ClockAddress(
     value: ClockAddress,
     elGetter: $.ASN1Encoder<ClockAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockAddress) {
         _cached_encoder_for_ClockAddress = $._encode_choice<ClockAddress>(
             {

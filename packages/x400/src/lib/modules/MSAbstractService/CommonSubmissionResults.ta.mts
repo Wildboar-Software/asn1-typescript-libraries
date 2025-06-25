@@ -143,7 +143,7 @@ let _cached_decoder_for_CommonSubmissionResults: $.ASN1Decoder<CommonSubmissionR
  * @param {_Element} el The element being decoded.
  * @returns {CommonSubmissionResults} The decoded data structure.
  */
-export function _decode_CommonSubmissionResults(el: _Element) {
+export function _decode_CommonSubmissionResults(el: _Element): CommonSubmissionResults {
     if (!_cached_decoder_for_CommonSubmissionResults) {
         _cached_decoder_for_CommonSubmissionResults = function (
             el: _Element
@@ -200,7 +200,7 @@ let _cached_encoder_for_CommonSubmissionResults: $.ASN1Encoder<CommonSubmissionR
 export function _encode_CommonSubmissionResults(
     value: CommonSubmissionResults,
     elGetter: $.ASN1Encoder<CommonSubmissionResults>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonSubmissionResults) {
         _cached_encoder_for_CommonSubmissionResults = function (
             value: CommonSubmissionResults        ): _Element {

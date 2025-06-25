@@ -332,7 +332,7 @@ let _cached_decoder_for_GUISelectEventHandlerCallbackParams: $.ASN1Decoder<GUISe
  * @param {_Element} el The element being decoded.
  * @returns {GUISelectEventHandlerCallbackParams} The decoded data structure.
  */
-export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
+export function _decode_GUISelectEventHandlerCallbackParams(el: _Element): GUISelectEventHandlerCallbackParams {
   if (!_cached_decoder_for_GUISelectEventHandlerCallbackParams) {
     _cached_decoder_for_GUISelectEventHandlerCallbackParams = function (
       el: _Element
@@ -433,7 +433,7 @@ let _cached_encoder_for_GUISelectEventHandlerCallbackParams: $.ASN1Encoder<GUISe
 export function _encode_GUISelectEventHandlerCallbackParams(
   value: GUISelectEventHandlerCallbackParams,
   elGetter: $.ASN1Encoder<GUISelectEventHandlerCallbackParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUISelectEventHandlerCallbackParams) {
     _cached_encoder_for_GUISelectEventHandlerCallbackParams = function (
       value: GUISelectEventHandlerCallbackParams    ): _Element {

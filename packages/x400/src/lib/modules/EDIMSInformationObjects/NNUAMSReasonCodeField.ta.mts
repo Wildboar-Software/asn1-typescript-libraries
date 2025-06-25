@@ -123,7 +123,7 @@ let _cached_decoder_for_NNUAMSReasonCodeField: $.ASN1Decoder<NNUAMSReasonCodeFie
  * @param {_Element} el The element being decoded.
  * @returns {NNUAMSReasonCodeField} The decoded data structure.
  */
-export function _decode_NNUAMSReasonCodeField(el: _Element) {
+export function _decode_NNUAMSReasonCodeField(el: _Element): NNUAMSReasonCodeField {
     if (!_cached_decoder_for_NNUAMSReasonCodeField) {
         _cached_decoder_for_NNUAMSReasonCodeField = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_NNUAMSReasonCodeField: $.ASN1Encoder<NNUAMSReasonCodeFie
 export function _encode_NNUAMSReasonCodeField(
     value: NNUAMSReasonCodeField,
     elGetter: $.ASN1Encoder<NNUAMSReasonCodeField>
-) {
+): _Element {
     if (!_cached_encoder_for_NNUAMSReasonCodeField) {
         _cached_encoder_for_NNUAMSReasonCodeField = function (
             value: NNUAMSReasonCodeField        ): _Element {

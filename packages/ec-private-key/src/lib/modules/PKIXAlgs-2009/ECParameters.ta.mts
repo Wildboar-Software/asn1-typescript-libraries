@@ -47,7 +47,7 @@ let _cached_decoder_for_ECParameters: $.ASN1Decoder<ECParameters> | null = null;
  * @returns {ECParameters} The decoded data structure.
  */
 export
-function _decode_ECParameters (el: _Element) {
+function _decode_ECParameters (el: _Element): ECParameters {
     if (!_cached_decoder_for_ECParameters) { _cached_decoder_for_ECParameters = $._decode_inextensible_choice<ECParameters>({
     "UNIVERSAL 6": [ "namedCurve", $._decodeObjectIdentifier ]
 }); }
@@ -66,7 +66,7 @@ let _cached_encoder_for_ECParameters: $.ASN1Encoder<ECParameters> | null = null;
  * @returns {_Element} The ECParameters, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECParameters (value: ECParameters, elGetter: $.ASN1Encoder<ECParameters>) {
+function _encode_ECParameters (value: ECParameters, elGetter: $.ASN1Encoder<ECParameters>): _Element {
     if (!_cached_encoder_for_ECParameters) { _cached_encoder_for_ECParameters = $._encode_choice<ECParameters>({
     "namedCurve": $._encodeObjectIdentifier,
 }, $.DER); }

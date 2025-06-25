@@ -36,7 +36,7 @@ let _cached_decoder_for_SNPAAddresses: $.ASN1Decoder<SNPAAddresses> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SNPAAddresses} The decoded data structure.
  */
-export function _decode_SNPAAddresses(el: _Element) {
+export function _decode_SNPAAddresses(el: _Element): SNPAAddresses {
   if (!_cached_decoder_for_SNPAAddresses) {
     _cached_decoder_for_SNPAAddresses = $._decodeSetOf<SNPAAddress>(
       () => _decode_SNPAAddress
@@ -57,7 +57,7 @@ let _cached_encoder_for_SNPAAddresses: $.ASN1Encoder<SNPAAddresses> | null = nul
 export function _encode_SNPAAddresses(
   value: SNPAAddresses,
   elGetter: $.ASN1Encoder<SNPAAddresses>
-) {
+): _Element {
   if (!_cached_encoder_for_SNPAAddresses) {
     _cached_encoder_for_SNPAAddresses = $._encodeSetOf<SNPAAddress>(
       () => _encode_SNPAAddress,

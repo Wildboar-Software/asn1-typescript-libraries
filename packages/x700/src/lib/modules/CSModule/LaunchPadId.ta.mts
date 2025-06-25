@@ -35,7 +35,7 @@ let _cached_decoder_for_LaunchPadId: $.ASN1Decoder<LaunchPadId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LaunchPadId} The decoded data structure.
  */
-export function _decode_LaunchPadId(el: _Element) {
+export function _decode_LaunchPadId(el: _Element): LaunchPadId {
     if (!_cached_decoder_for_LaunchPadId) {
         _cached_decoder_for_LaunchPadId = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_LaunchPadId: $.ASN1Encoder<LaunchPadId> | null = null;
 export function _encode_LaunchPadId(
     value: LaunchPadId,
     elGetter: $.ASN1Encoder<LaunchPadId>
-) {
+): _Element {
     if (!_cached_encoder_for_LaunchPadId) {
         _cached_encoder_for_LaunchPadId = _encode_ObjectInstance;
     }

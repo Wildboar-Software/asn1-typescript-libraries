@@ -190,7 +190,7 @@ let _cached_decoder_for_OneAsymmetricKey: $.ASN1Decoder<OneAsymmetricKey> | null
  * @param {_Element} el The element being decoded.
  * @returns {OneAsymmetricKey} The decoded data structure.
  */
-export function _decode_OneAsymmetricKey(el: _Element) {
+export function _decode_OneAsymmetricKey(el: _Element): OneAsymmetricKey {
     if (!_cached_decoder_for_OneAsymmetricKey) {
         _cached_decoder_for_OneAsymmetricKey = function (
             el: _Element
@@ -261,7 +261,7 @@ let _cached_encoder_for_OneAsymmetricKey: $.ASN1Encoder<OneAsymmetricKey> | null
 export function _encode_OneAsymmetricKey(
     value: OneAsymmetricKey,
     elGetter: $.ASN1Encoder<OneAsymmetricKey>
-) {
+): _Element {
     if (!_cached_encoder_for_OneAsymmetricKey) {
         _cached_encoder_for_OneAsymmetricKey = function (
             value: OneAsymmetricKey        ): _Element {

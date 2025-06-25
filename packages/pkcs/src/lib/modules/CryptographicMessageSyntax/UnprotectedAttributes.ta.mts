@@ -29,7 +29,7 @@ let _cached_decoder_for_UnprotectedAttributes: $.ASN1Decoder<UnprotectedAttribut
  * @param {_Element} el The element being decoded.
  * @returns {UnprotectedAttributes} The decoded data structure.
  */
-export function _decode_UnprotectedAttributes(el: _Element) {
+export function _decode_UnprotectedAttributes(el: _Element): UnprotectedAttributes {
     if (!_cached_decoder_for_UnprotectedAttributes) {
         _cached_decoder_for_UnprotectedAttributes = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -52,7 +52,7 @@ let _cached_encoder_for_UnprotectedAttributes: $.ASN1Encoder<UnprotectedAttribut
 export function _encode_UnprotectedAttributes(
     value: UnprotectedAttributes,
     elGetter: $.ASN1Encoder<UnprotectedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UnprotectedAttributes) {
         _cached_encoder_for_UnprotectedAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

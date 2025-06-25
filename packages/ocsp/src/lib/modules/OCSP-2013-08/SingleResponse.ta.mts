@@ -167,7 +167,7 @@ let _cached_decoder_for_SingleResponse: $.ASN1Decoder<SingleResponse> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {SingleResponse} The decoded data structure.
  */
-export function _decode_SingleResponse(el: _Element) {
+export function _decode_SingleResponse(el: _Element): SingleResponse {
     if (!_cached_decoder_for_SingleResponse) {
         _cached_decoder_for_SingleResponse = function (
             el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_SingleResponse: $.ASN1Encoder<SingleResponse> | null = n
 export function _encode_SingleResponse(
     value: SingleResponse,
     elGetter: $.ASN1Encoder<SingleResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_SingleResponse) {
         _cached_encoder_for_SingleResponse = function (
             value: SingleResponse        ): _Element {

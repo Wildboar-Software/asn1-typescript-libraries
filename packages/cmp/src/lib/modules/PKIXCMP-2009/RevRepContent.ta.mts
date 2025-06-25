@@ -148,7 +148,7 @@ let _cached_decoder_for_RevRepContent: $.ASN1Decoder<RevRepContent> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RevRepContent} The decoded data structure.
  */
-export function _decode_RevRepContent(el: _Element) {
+export function _decode_RevRepContent(el: _Element): RevRepContent {
   if (!_cached_decoder_for_RevRepContent) {
     _cached_decoder_for_RevRepContent = function (el: _Element): RevRepContent {
       let status!: PKIStatusInfo[];
@@ -203,7 +203,7 @@ let _cached_encoder_for_RevRepContent: $.ASN1Encoder<RevRepContent> | null = nul
 export function _encode_RevRepContent(
   value: RevRepContent,
   elGetter: $.ASN1Encoder<RevRepContent>
-) {
+): _Element {
   if (!_cached_encoder_for_RevRepContent) {
     _cached_encoder_for_RevRepContent = function (
       value: RevRepContent    ): _Element {

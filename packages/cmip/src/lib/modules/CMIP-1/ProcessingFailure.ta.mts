@@ -155,7 +155,7 @@ let _cached_decoder_for_ProcessingFailure: $.ASN1Decoder<ProcessingFailure> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ProcessingFailure} The decoded data structure.
  */
-export function _decode_ProcessingFailure(el: _Element) {
+export function _decode_ProcessingFailure(el: _Element): ProcessingFailure {
   if (!_cached_decoder_for_ProcessingFailure) {
     _cached_decoder_for_ProcessingFailure = function (
       el: _Element
@@ -212,7 +212,7 @@ let _cached_encoder_for_ProcessingFailure: $.ASN1Encoder<ProcessingFailure> | nu
 export function _encode_ProcessingFailure(
   value: ProcessingFailure,
   elGetter: $.ASN1Encoder<ProcessingFailure>
-) {
+): _Element {
   if (!_cached_encoder_for_ProcessingFailure) {
     _cached_encoder_for_ProcessingFailure = function (
       value: ProcessingFailure    ): _Element {

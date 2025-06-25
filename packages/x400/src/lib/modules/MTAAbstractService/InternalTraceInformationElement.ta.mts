@@ -142,7 +142,7 @@ let _cached_decoder_for_InternalTraceInformationElement: $.ASN1Decoder<InternalT
  * @param {_Element} el The element being decoded.
  * @returns {InternalTraceInformationElement} The decoded data structure.
  */
-export function _decode_InternalTraceInformationElement(el: _Element) {
+export function _decode_InternalTraceInformationElement(el: _Element): InternalTraceInformationElement {
     if (!_cached_decoder_for_InternalTraceInformationElement) {
         _cached_decoder_for_InternalTraceInformationElement = function (
             el: _Element
@@ -190,7 +190,7 @@ let _cached_encoder_for_InternalTraceInformationElement: $.ASN1Encoder<InternalT
 export function _encode_InternalTraceInformationElement(
     value: InternalTraceInformationElement,
     elGetter: $.ASN1Encoder<InternalTraceInformationElement>
-) {
+): _Element {
     if (!_cached_encoder_for_InternalTraceInformationElement) {
         _cached_encoder_for_InternalTraceInformationElement = function (
             value: InternalTraceInformationElement        ): _Element {

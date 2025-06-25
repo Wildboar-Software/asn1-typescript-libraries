@@ -138,7 +138,7 @@ let _cached_decoder_for_POPOSigningKey: $.ASN1Decoder<POPOSigningKey> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {POPOSigningKey} The decoded data structure.
  */
-export function _decode_POPOSigningKey(el: _Element) {
+export function _decode_POPOSigningKey(el: _Element): POPOSigningKey {
     if (!_cached_decoder_for_POPOSigningKey) {
         _cached_decoder_for_POPOSigningKey = function (
             el: _Element
@@ -191,7 +191,7 @@ let _cached_encoder_for_POPOSigningKey: $.ASN1Encoder<POPOSigningKey> | null = n
 export function _encode_POPOSigningKey(
     value: POPOSigningKey,
     elGetter: $.ASN1Encoder<POPOSigningKey>
-) {
+): _Element {
     if (!_cached_encoder_for_POPOSigningKey) {
         _cached_encoder_for_POPOSigningKey = function (
             value: POPOSigningKey        ): _Element {

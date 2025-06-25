@@ -38,7 +38,7 @@ let _cached_decoder_for_Application_Entity_Title: $.ASN1Decoder<Application_Enti
  * @param {_Element} el The element being decoded.
  * @returns {Application_Entity_Title} The decoded data structure.
  */
-export function _decode_Application_Entity_Title(el: _Element) {
+export function _decode_Application_Entity_Title(el: _Element): Application_Entity_Title {
   if (!_cached_decoder_for_Application_Entity_Title) {
     _cached_decoder_for_Application_Entity_Title = $._decode_implicit<Application_Entity_Title>(
       () => _decode_AE_title
@@ -61,7 +61,7 @@ let _cached_encoder_for_Application_Entity_Title: $.ASN1Encoder<Application_Enti
 export function _encode_Application_Entity_Title(
   value: Application_Entity_Title,
   elGetter: $.ASN1Encoder<Application_Entity_Title>
-) {
+): _Element {
   if (!_cached_encoder_for_Application_Entity_Title) {
     _cached_encoder_for_Application_Entity_Title = $._encode_implicit(
       _TagClass.application,

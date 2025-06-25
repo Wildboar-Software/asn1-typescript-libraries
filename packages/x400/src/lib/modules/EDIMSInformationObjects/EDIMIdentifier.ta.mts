@@ -119,7 +119,7 @@ let _cached_decoder_for_EDIMIdentifier: $.ASN1Decoder<EDIMIdentifier> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {EDIMIdentifier} The decoded data structure.
  */
-export function _decode_EDIMIdentifier(el: _Element) {
+export function _decode_EDIMIdentifier(el: _Element): EDIMIdentifier {
     if (!_cached_decoder_for_EDIMIdentifier) {
         _cached_decoder_for_EDIMIdentifier = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_EDIMIdentifier: $.ASN1Encoder<EDIMIdentifier> | null = n
 export function _encode_EDIMIdentifier(
     value: EDIMIdentifier,
     elGetter: $.ASN1Encoder<EDIMIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIMIdentifier) {
         _cached_encoder_for_EDIMIdentifier = function (
             value: EDIMIdentifier        ): _Element {

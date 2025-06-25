@@ -148,7 +148,7 @@ let _cached_decoder_for_RestrictionsOnSLC: $.ASN1Decoder<RestrictionsOnSLC> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RestrictionsOnSLC} The decoded data structure.
  */
-export function _decode_RestrictionsOnSLC(el: _Element) {
+export function _decode_RestrictionsOnSLC(el: _Element): RestrictionsOnSLC {
     if (!_cached_decoder_for_RestrictionsOnSLC) {
         _cached_decoder_for_RestrictionsOnSLC = function (
             el: _Element
@@ -202,7 +202,7 @@ let _cached_encoder_for_RestrictionsOnSLC: $.ASN1Encoder<RestrictionsOnSLC> | nu
 export function _encode_RestrictionsOnSLC(
     value: RestrictionsOnSLC,
     elGetter: $.ASN1Encoder<RestrictionsOnSLC>
-) {
+): _Element {
     if (!_cached_encoder_for_RestrictionsOnSLC) {
         _cached_encoder_for_RestrictionsOnSLC = function (
             value: RestrictionsOnSLC        ): _Element {

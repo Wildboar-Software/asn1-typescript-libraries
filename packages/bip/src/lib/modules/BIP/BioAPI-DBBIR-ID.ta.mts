@@ -124,7 +124,7 @@ let _cached_decoder_for_BioAPI_DBBIR_ID: $.ASN1Decoder<BioAPI_DBBIR_ID> | null =
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_DBBIR_ID} The decoded data structure.
  */
-export function _decode_BioAPI_DBBIR_ID(el: _Element) {
+export function _decode_BioAPI_DBBIR_ID(el: _Element): BioAPI_DBBIR_ID {
   if (!_cached_decoder_for_BioAPI_DBBIR_ID) {
     _cached_decoder_for_BioAPI_DBBIR_ID = function (
       el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_BioAPI_DBBIR_ID: $.ASN1Encoder<BioAPI_DBBIR_ID> | null =
 export function _encode_BioAPI_DBBIR_ID(
   value: BioAPI_DBBIR_ID,
   elGetter: $.ASN1Encoder<BioAPI_DBBIR_ID>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_DBBIR_ID) {
     _cached_encoder_for_BioAPI_DBBIR_ID = function (
       value: BioAPI_DBBIR_ID    ): _Element {

@@ -217,7 +217,7 @@ let _cached_decoder_for_SBHForBRTC: $.ASN1Decoder<SBHForBRTC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SBHForBRTC} The decoded data structure.
  */
-export function _decode_SBHForBRTC(el: _Element) {
+export function _decode_SBHForBRTC(el: _Element): SBHForBRTC {
     if (!_cached_decoder_for_SBHForBRTC) {
         _cached_decoder_for_SBHForBRTC = function (el: _Element): SBHForBRTC {
             const sequence: _Element[] = el.sequence;
@@ -277,7 +277,7 @@ let _cached_encoder_for_SBHForBRTC: $.ASN1Encoder<SBHForBRTC> | null = null;
 export function _encode_SBHForBRTC(
     value: SBHForBRTC,
     elGetter: $.ASN1Encoder<SBHForBRTC>
-) {
+): _Element {
     if (!_cached_encoder_for_SBHForBRTC) {
         _cached_encoder_for_SBHForBRTC = function (
             value: SBHForBRTC        ): _Element {

@@ -182,7 +182,7 @@ let _cached_decoder_for_Selector: $.ASN1Decoder<Selector> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Selector} The decoded data structure.
  */
-export function _decode_Selector(el: _Element) {
+export function _decode_Selector(el: _Element): Selector {
     if (!_cached_decoder_for_Selector) {
         _cached_decoder_for_Selector = function (el: _Element): Selector {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -250,7 +250,7 @@ let _cached_encoder_for_Selector: $.ASN1Encoder<Selector> | null = null;
 export function _encode_Selector(
     value: Selector,
     elGetter: $.ASN1Encoder<Selector>
-) {
+): _Element {
     if (!_cached_encoder_for_Selector) {
         _cached_encoder_for_Selector = function (
             value: Selector        ): _Element {

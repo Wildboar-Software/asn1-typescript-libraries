@@ -35,7 +35,7 @@ let _cached_decoder_for_DiscardOperations: $.ASN1Decoder<DiscardOperations> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DiscardOperations} The decoded data structure.
  */
-export function _decode_DiscardOperations(el: _Element) {
+export function _decode_DiscardOperations(el: _Element): DiscardOperations {
     if (!_cached_decoder_for_DiscardOperations) {
         _cached_decoder_for_DiscardOperations = _decode_EventTypeId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DiscardOperations: $.ASN1Encoder<DiscardOperations> | nu
 export function _encode_DiscardOperations(
     value: DiscardOperations,
     elGetter: $.ASN1Encoder<DiscardOperations>
-) {
+): _Element {
     if (!_cached_encoder_for_DiscardOperations) {
         _cached_encoder_for_DiscardOperations = _encode_EventTypeId;
     }

@@ -44,7 +44,7 @@ let _cached_decoder_for_ResourcePointer: $.ASN1Decoder<ResourcePointer> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ResourcePointer} The decoded data structure.
  */
-export function _decode_ResourcePointer(el: _Element) {
+export function _decode_ResourcePointer(el: _Element): ResourcePointer {
     if (!_cached_decoder_for_ResourcePointer) {
         _cached_decoder_for_ResourcePointer = $._decode_inextensible_choice<ResourcePointer>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ResourcePointer: $.ASN1Encoder<ResourcePointer> | null =
 export function _encode_ResourcePointer(
     value: ResourcePointer,
     elGetter: $.ASN1Encoder<ResourcePointer>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourcePointer) {
         _cached_encoder_for_ResourcePointer = $._encode_choice<ResourcePointer>(
             {

@@ -131,7 +131,7 @@ let _cached_decoder_for_AccessControlRule: $.ASN1Decoder<AccessControlRule> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AccessControlRule} The decoded data structure.
  */
-export function _decode_AccessControlRule(el: _Element) {
+export function _decode_AccessControlRule(el: _Element): AccessControlRule {
     if (!_cached_decoder_for_AccessControlRule) {
         _cached_decoder_for_AccessControlRule = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_AccessControlRule: $.ASN1Encoder<AccessControlRule> | nu
 export function _encode_AccessControlRule(
     value: AccessControlRule,
     elGetter: $.ASN1Encoder<AccessControlRule>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessControlRule) {
         _cached_encoder_for_AccessControlRule = function (
             value: AccessControlRule        ): _Element {

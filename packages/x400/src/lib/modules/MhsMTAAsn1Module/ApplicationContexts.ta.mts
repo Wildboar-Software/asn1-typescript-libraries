@@ -35,7 +35,7 @@ let _cached_decoder_for_ApplicationContexts: $.ASN1Decoder<ApplicationContexts> 
  * @param {_Element} el The element being decoded.
  * @returns {ApplicationContexts} The decoded data structure.
  */
-export function _decode_ApplicationContexts(el: _Element) {
+export function _decode_ApplicationContexts(el: _Element): ApplicationContexts {
     if (!_cached_decoder_for_ApplicationContexts) {
         _cached_decoder_for_ApplicationContexts = $._decodeSetOf<ApplicationContext>(
             () => _decode_ApplicationContext
@@ -56,7 +56,7 @@ let _cached_encoder_for_ApplicationContexts: $.ASN1Encoder<ApplicationContexts> 
 export function _encode_ApplicationContexts(
     value: ApplicationContexts,
     elGetter: $.ASN1Encoder<ApplicationContexts>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplicationContexts) {
         _cached_encoder_for_ApplicationContexts = $._encodeSetOf<ApplicationContext>(
             () => _encode_ApplicationContext,

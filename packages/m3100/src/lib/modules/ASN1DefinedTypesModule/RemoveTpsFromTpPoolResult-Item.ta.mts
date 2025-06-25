@@ -45,7 +45,7 @@ let _cached_decoder_for_RemoveTpsFromTpPoolResult_Item: $.ASN1Decoder<RemoveTpsF
  * @param {_Element} el The element being decoded.
  * @returns {RemoveTpsFromTpPoolResult_Item} The decoded data structure.
  */
-export function _decode_RemoveTpsFromTpPoolResult_Item(el: _Element) {
+export function _decode_RemoveTpsFromTpPoolResult_Item(el: _Element): RemoveTpsFromTpPoolResult_Item {
     if (!_cached_decoder_for_RemoveTpsFromTpPoolResult_Item) {
         _cached_decoder_for_RemoveTpsFromTpPoolResult_Item = $._decode_inextensible_choice<RemoveTpsFromTpPoolResult_Item>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_RemoveTpsFromTpPoolResult_Item: $.ASN1Encoder<RemoveTpsF
 export function _encode_RemoveTpsFromTpPoolResult_Item(
     value: RemoveTpsFromTpPoolResult_Item,
     elGetter: $.ASN1Encoder<RemoveTpsFromTpPoolResult_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveTpsFromTpPoolResult_Item) {
         _cached_encoder_for_RemoveTpsFromTpPoolResult_Item = $._encode_choice<RemoveTpsFromTpPoolResult_Item>(
             {

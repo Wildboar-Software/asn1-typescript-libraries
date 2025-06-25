@@ -45,7 +45,7 @@ let _cached_decoder_for_EMailMpduIdentifier: $.ASN1Decoder<EMailMpduIdentifier> 
  * @param {_Element} el The element being decoded.
  * @returns {EMailMpduIdentifier} The decoded data structure.
  */
-export function _decode_EMailMpduIdentifier(el: _Element) {
+export function _decode_EMailMpduIdentifier(el: _Element): EMailMpduIdentifier {
     if (!_cached_decoder_for_EMailMpduIdentifier) {
         _cached_decoder_for_EMailMpduIdentifier = $._decode_inextensible_choice<EMailMpduIdentifier>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_EMailMpduIdentifier: $.ASN1Encoder<EMailMpduIdentifier> 
 export function _encode_EMailMpduIdentifier(
     value: EMailMpduIdentifier,
     elGetter: $.ASN1Encoder<EMailMpduIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailMpduIdentifier) {
         _cached_encoder_for_EMailMpduIdentifier = $._encode_choice<EMailMpduIdentifier>(
             {

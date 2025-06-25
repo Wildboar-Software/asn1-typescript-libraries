@@ -101,7 +101,7 @@ let _cached_decoder_for_CharacterChunk: $.ASN1Decoder<CharacterChunk> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CharacterChunk} The decoded data structure.
  */
-export function _decode_CharacterChunk(el: _Element) {
+export function _decode_CharacterChunk(el: _Element): CharacterChunk {
   if (!_cached_decoder_for_CharacterChunk) {
     _cached_decoder_for_CharacterChunk = function (
       el: _Element
@@ -135,7 +135,7 @@ let _cached_encoder_for_CharacterChunk: $.ASN1Encoder<CharacterChunk> | null = n
 export function _encode_CharacterChunk(
   value: CharacterChunk,
   elGetter: $.ASN1Encoder<CharacterChunk>
-) {
+): _Element {
   if (!_cached_encoder_for_CharacterChunk) {
     _cached_encoder_for_CharacterChunk = function (
       value: CharacterChunk    ): _Element {

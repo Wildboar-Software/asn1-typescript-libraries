@@ -43,7 +43,7 @@ let _cached_decoder_for_SignedDataACBio: $.ASN1Decoder<SignedDataACBio> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SignedDataACBio} The decoded data structure.
  */
-export function _decode_SignedDataACBio(el: _Element) {
+export function _decode_SignedDataACBio(el: _Element): SignedDataACBio {
     if (!_cached_decoder_for_SignedDataACBio) {
         _cached_decoder_for_SignedDataACBio = _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfoACBio>(
             _decode_EncapsulatedContentInfoACBio
@@ -66,7 +66,7 @@ let _cached_encoder_for_SignedDataACBio: $.ASN1Encoder<SignedDataACBio> | null =
 export function _encode_SignedDataACBio(
     value: SignedDataACBio,
     elGetter: $.ASN1Encoder<SignedDataACBio>
-) {
+): _Element {
     if (!_cached_encoder_for_SignedDataACBio) {
         _cached_encoder_for_SignedDataACBio = _get_encoder_for_SIGNEDDATA<EncapsulatedContentInfoACBio>(
             _encode_EncapsulatedContentInfoACBio

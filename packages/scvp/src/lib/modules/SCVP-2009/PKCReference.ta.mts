@@ -46,7 +46,7 @@ let _cached_decoder_for_PKCReference: $.ASN1Decoder<PKCReference> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKCReference} The decoded data structure.
  */
-export function _decode_PKCReference(el: _Element) {
+export function _decode_PKCReference(el: _Element): PKCReference {
   if (!_cached_decoder_for_PKCReference) {
     _cached_decoder_for_PKCReference = $._decode_inextensible_choice<PKCReference>(
       {
@@ -76,7 +76,7 @@ let _cached_encoder_for_PKCReference: $.ASN1Encoder<PKCReference> | null = null;
 export function _encode_PKCReference(
   value: PKCReference,
   elGetter: $.ASN1Encoder<PKCReference>
-) {
+): _Element {
   if (!_cached_encoder_for_PKCReference) {
     _cached_encoder_for_PKCReference = $._encode_choice<PKCReference>(
       {

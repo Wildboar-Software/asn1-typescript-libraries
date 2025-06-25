@@ -90,7 +90,7 @@ let _cached_decoder_for_F_END_GROUP_request: $.ASN1Decoder<F_END_GROUP_request> 
  * @param {_Element} el The element being decoded.
  * @returns {F_END_GROUP_request} The decoded data structure.
  */
-export function _decode_F_END_GROUP_request(el: _Element) {
+export function _decode_F_END_GROUP_request(el: _Element): F_END_GROUP_request {
   if (!_cached_decoder_for_F_END_GROUP_request) {
     _cached_decoder_for_F_END_GROUP_request = function (
       el: _Element
@@ -124,7 +124,7 @@ let _cached_encoder_for_F_END_GROUP_request: $.ASN1Encoder<F_END_GROUP_request> 
 export function _encode_F_END_GROUP_request(
   value: F_END_GROUP_request,
   elGetter: $.ASN1Encoder<F_END_GROUP_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_END_GROUP_request) {
     _cached_encoder_for_F_END_GROUP_request = function (
           ): _Element {

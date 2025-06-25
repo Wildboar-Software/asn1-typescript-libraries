@@ -35,7 +35,7 @@ let _cached_decoder_for_CirculationSignatureAlgorithmIdentifier: $.ASN1Decoder<C
  * @param {_Element} el The element being decoded.
  * @returns {CirculationSignatureAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_CirculationSignatureAlgorithmIdentifier(el: _Element) {
+export function _decode_CirculationSignatureAlgorithmIdentifier(el: _Element): CirculationSignatureAlgorithmIdentifier {
     if (!_cached_decoder_for_CirculationSignatureAlgorithmIdentifier) {
         _cached_decoder_for_CirculationSignatureAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_CirculationSignatureAlgorithmIdentifier: $.ASN1Encoder<C
 export function _encode_CirculationSignatureAlgorithmIdentifier(
     value: CirculationSignatureAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<CirculationSignatureAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_CirculationSignatureAlgorithmIdentifier) {
         _cached_encoder_for_CirculationSignatureAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

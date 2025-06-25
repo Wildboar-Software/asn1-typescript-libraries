@@ -41,7 +41,7 @@ let _cached_decoder_for_StopTime: $.ASN1Decoder<StopTime> | null = null;
  * @returns {StopTime} The decoded data structure.
  */
 export
-function _decode_StopTime (el: _Element) {
+function _decode_StopTime (el: _Element): StopTime {
     if (!_cached_decoder_for_StopTime) { _cached_decoder_for_StopTime = $._decode_inextensible_choice<StopTime>({
     "UNIVERSAL 24": [ "specific", $._decodeGeneralizedTime ],
     "UNIVERSAL 5": [ "continual", $._decodeNull ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_StopTime: $.ASN1Encoder<StopTime> | null = null;
  * @returns {_Element} The StopTime, encoded as an ASN.1 Element.
  */
 export
-function _encode_StopTime (value: StopTime, elGetter: $.ASN1Encoder<StopTime>) {
+function _encode_StopTime (value: StopTime, elGetter: $.ASN1Encoder<StopTime>): _Element {
     if (!_cached_encoder_for_StopTime) { _cached_encoder_for_StopTime = $._encode_choice<StopTime>({
     "specific": $._encodeGeneralizedTime,
     "continual": $._encodeNull,

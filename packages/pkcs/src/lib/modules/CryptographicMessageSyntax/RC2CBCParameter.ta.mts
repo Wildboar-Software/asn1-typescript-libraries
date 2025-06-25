@@ -113,7 +113,7 @@ let _cached_decoder_for_RC2CBCParameter: $.ASN1Decoder<RC2CBCParameter> | null =
  * @param {_Element} el The element being decoded.
  * @returns {RC2CBCParameter} The decoded data structure.
  */
-export function _decode_RC2CBCParameter(el: _Element) {
+export function _decode_RC2CBCParameter(el: _Element): RC2CBCParameter {
     if (!_cached_decoder_for_RC2CBCParameter) {
         _cached_decoder_for_RC2CBCParameter = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_RC2CBCParameter: $.ASN1Encoder<RC2CBCParameter> | null =
 export function _encode_RC2CBCParameter(
     value: RC2CBCParameter,
     elGetter: $.ASN1Encoder<RC2CBCParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_RC2CBCParameter) {
         _cached_encoder_for_RC2CBCParameter = function (
             value: RC2CBCParameter        ): _Element {

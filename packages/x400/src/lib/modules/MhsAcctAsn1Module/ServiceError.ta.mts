@@ -101,7 +101,7 @@ let _cached_decoder_for_ServiceError: $.ASN1Decoder<ServiceError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ServiceError} The decoded data structure.
  */
-export function _decode_ServiceError(el: _Element) {
+export function _decode_ServiceError(el: _Element): ServiceError {
     if (!_cached_decoder_for_ServiceError) {
         _cached_decoder_for_ServiceError = function (
             el: _Element
@@ -142,7 +142,7 @@ let _cached_encoder_for_ServiceError: $.ASN1Encoder<ServiceError> | null = null;
 export function _encode_ServiceError(
     value: ServiceError,
     elGetter: $.ASN1Encoder<ServiceError>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceError) {
         _cached_encoder_for_ServiceError = function (
             value: ServiceError        ): _Element {

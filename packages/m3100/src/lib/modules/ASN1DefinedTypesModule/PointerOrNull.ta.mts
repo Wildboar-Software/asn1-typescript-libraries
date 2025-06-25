@@ -43,7 +43,7 @@ let _cached_decoder_for_PointerOrNull: $.ASN1Decoder<PointerOrNull> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PointerOrNull} The decoded data structure.
  */
-export function _decode_PointerOrNull(el: _Element) {
+export function _decode_PointerOrNull(el: _Element): PointerOrNull {
     if (!_cached_decoder_for_PointerOrNull) {
         _cached_decoder_for_PointerOrNull = $._decode_inextensible_choice<PointerOrNull>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_PointerOrNull: $.ASN1Encoder<PointerOrNull> | null = nul
 export function _encode_PointerOrNull(
     value: PointerOrNull,
     elGetter: $.ASN1Encoder<PointerOrNull>
-) {
+): _Element {
     if (!_cached_encoder_for_PointerOrNull) {
         _cached_encoder_for_PointerOrNull = $._encode_choice<PointerOrNull>(
             {

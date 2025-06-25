@@ -108,7 +108,7 @@ let _cached_decoder_for_QueryBFPs_ResponseParams: $.ASN1Decoder<QueryBFPs_Respon
  * @param {_Element} el The element being decoded.
  * @returns {QueryBFPs_ResponseParams} The decoded data structure.
  */
-export function _decode_QueryBFPs_ResponseParams(el: _Element) {
+export function _decode_QueryBFPs_ResponseParams(el: _Element): QueryBFPs_ResponseParams {
   if (!_cached_decoder_for_QueryBFPs_ResponseParams) {
     _cached_decoder_for_QueryBFPs_ResponseParams = function (
       el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_QueryBFPs_ResponseParams: $.ASN1Encoder<QueryBFPs_Respon
 export function _encode_QueryBFPs_ResponseParams(
   value: QueryBFPs_ResponseParams,
   elGetter: $.ASN1Encoder<QueryBFPs_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_QueryBFPs_ResponseParams) {
     _cached_encoder_for_QueryBFPs_ResponseParams = function (
       value: QueryBFPs_ResponseParams    ): _Element {

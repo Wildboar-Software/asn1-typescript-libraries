@@ -124,7 +124,7 @@ let _cached_decoder_for_EDIM_ExtendedBodyPart: $.ASN1Decoder<EDIM_ExtendedBodyPa
  * @param {_Element} el The element being decoded.
  * @returns {EDIM_ExtendedBodyPart} The decoded data structure.
  */
-export function _decode_EDIM_ExtendedBodyPart(el: _Element) {
+export function _decode_EDIM_ExtendedBodyPart(el: _Element): EDIM_ExtendedBodyPart {
     if (!_cached_decoder_for_EDIM_ExtendedBodyPart) {
         _cached_decoder_for_EDIM_ExtendedBodyPart = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_EDIM_ExtendedBodyPart: $.ASN1Encoder<EDIM_ExtendedBodyPa
 export function _encode_EDIM_ExtendedBodyPart(
     value: EDIM_ExtendedBodyPart,
     elGetter: $.ASN1Encoder<EDIM_ExtendedBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIM_ExtendedBodyPart) {
         _cached_encoder_for_EDIM_ExtendedBodyPart = function (
             value: EDIM_ExtendedBodyPart        ): _Element {

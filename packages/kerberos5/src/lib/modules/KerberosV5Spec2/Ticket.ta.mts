@@ -153,7 +153,7 @@ let _cached_decoder_for_Ticket: $.ASN1Decoder<Ticket> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Ticket} The decoded data structure.
  */
-export function _decode_Ticket(el: _Element) {
+export function _decode_Ticket(el: _Element): Ticket {
   if (!_cached_decoder_for_Ticket) {
     _cached_decoder_for_Ticket = $._decode_implicit<Ticket>(
       () =>
@@ -202,7 +202,7 @@ let _cached_encoder_for_Ticket: $.ASN1Encoder<Ticket> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ticket, encoded as an ASN.1 Element.
  */
-export function _encode_Ticket(value: Ticket, elGetter: $.ASN1Encoder<Ticket>) {
+export function _encode_Ticket(value: Ticket, elGetter: $.ASN1Encoder<Ticket>): _Element {
   if (!_cached_encoder_for_Ticket) {
     _cached_encoder_for_Ticket = $._encode_implicit(
       _TagClass.application,

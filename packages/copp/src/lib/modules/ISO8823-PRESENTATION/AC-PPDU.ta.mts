@@ -145,7 +145,7 @@ let _cached_decoder_for_AC_PPDU: $.ASN1Decoder<AC_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AC_PPDU} The decoded data structure.
  */
-export function _decode_AC_PPDU(el: _Element) {
+export function _decode_AC_PPDU(el: _Element): AC_PPDU {
     if (!_cached_decoder_for_AC_PPDU) {
         _cached_decoder_for_AC_PPDU = function (el: _Element): AC_PPDU {
             let presentation_context_addition_list: OPTIONAL<Presentation_context_addition_list>;
@@ -198,7 +198,7 @@ let _cached_encoder_for_AC_PPDU: $.ASN1Encoder<AC_PPDU> | null = null;
 export function _encode_AC_PPDU(
     value: AC_PPDU,
     elGetter: $.ASN1Encoder<AC_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_AC_PPDU) {
         _cached_encoder_for_AC_PPDU = function (
             value: AC_PPDU        ): _Element {

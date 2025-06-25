@@ -44,7 +44,7 @@ let _cached_decoder_for_DisplayText: $.ASN1Decoder<DisplayText> | null = null;
  * @returns {DisplayText} The decoded data structure.
  */
 export
-function _decode_DisplayText (el: _Element) {
+function _decode_DisplayText (el: _Element): DisplayText {
     if (!_cached_decoder_for_DisplayText) { _cached_decoder_for_DisplayText = $._decode_inextensible_choice<DisplayText>({
     "UNIVERSAL 26": [ "visibleString", $._decodeVisibleString ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ],
@@ -63,7 +63,7 @@ let _cached_encoder_for_DisplayText: $.ASN1Encoder<DisplayText> | null = null;
  * @returns {_Element} The DisplayText, encoded as an ASN.1 Element.
  */
 export
-function _encode_DisplayText (value: DisplayText, elGetter: $.ASN1Encoder<DisplayText>) {
+function _encode_DisplayText (value: DisplayText, elGetter: $.ASN1Encoder<DisplayText>): _Element {
     if (!_cached_encoder_for_DisplayText) { _cached_encoder_for_DisplayText = $._encode_choice<DisplayText>({
     "visibleString": $._encodeVisibleString,
     "bmpString": $._encodeBMPString,

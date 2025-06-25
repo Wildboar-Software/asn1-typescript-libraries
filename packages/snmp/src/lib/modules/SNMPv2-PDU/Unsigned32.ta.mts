@@ -36,7 +36,7 @@ let _cached_decoder_for_Unsigned32: $.ASN1Decoder<Unsigned32> | null = null;
  * @returns {Unsigned32} The decoded data structure.
  */
 export
-function _decode_Unsigned32 (el: _Element) {
+function _decode_Unsigned32 (el: _Element): Unsigned32 {
     if (!_cached_decoder_for_Unsigned32) { _cached_decoder_for_Unsigned32 = $._decode_implicit<Unsigned32>(() => $._decodeInteger); }
     return _cached_decoder_for_Unsigned32(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Unsigned32: $.ASN1Encoder<Unsigned32> | null = null;
  * @returns {_Element} The Unsigned32, encoded as an ASN.1 Element.
  */
 export
-function _encode_Unsigned32 (value: Unsigned32, elGetter: $.ASN1Encoder<Unsigned32>) {
+function _encode_Unsigned32 (value: Unsigned32, elGetter: $.ASN1Encoder<Unsigned32>): _Element {
     if (!_cached_encoder_for_Unsigned32) { _cached_encoder_for_Unsigned32 = $._encode_implicit(_TagClass.application, 2, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_Unsigned32(value, elGetter);
 }

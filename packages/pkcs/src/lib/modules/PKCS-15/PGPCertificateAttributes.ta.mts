@@ -110,7 +110,7 @@ let _cached_decoder_for_PGPCertificateAttributes: $.ASN1Decoder<PGPCertificateAt
  * @param {_Element} el The element being decoded.
  * @returns {PGPCertificateAttributes} The decoded data structure.
  */
-export function _decode_PGPCertificateAttributes(el: _Element) {
+export function _decode_PGPCertificateAttributes(el: _Element): PGPCertificateAttributes {
     if (!_cached_decoder_for_PGPCertificateAttributes) {
         _cached_decoder_for_PGPCertificateAttributes = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_PGPCertificateAttributes: $.ASN1Encoder<PGPCertificateAt
 export function _encode_PGPCertificateAttributes(
     value: PGPCertificateAttributes,
     elGetter: $.ASN1Encoder<PGPCertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PGPCertificateAttributes) {
         _cached_encoder_for_PGPCertificateAttributes = function (
             value: PGPCertificateAttributes        ): _Element {

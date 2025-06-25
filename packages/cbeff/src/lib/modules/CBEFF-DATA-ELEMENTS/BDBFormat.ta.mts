@@ -111,7 +111,7 @@ let _cached_decoder_for_BDBFormat: $.ASN1Decoder<BDBFormat> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BDBFormat} The decoded data structure.
  */
-export function _decode_BDBFormat(el: _Element) {
+export function _decode_BDBFormat(el: _Element): BDBFormat {
   if (!_cached_decoder_for_BDBFormat) {
     _cached_decoder_for_BDBFormat = function (el: _Element): BDBFormat {
       const sequence: _Element[] = el.sequence;
@@ -146,7 +146,7 @@ let _cached_encoder_for_BDBFormat: $.ASN1Encoder<BDBFormat> | null = null;
 export function _encode_BDBFormat(
   value: BDBFormat,
   elGetter: $.ASN1Encoder<BDBFormat>
-) {
+): _Element {
   if (!_cached_encoder_for_BDBFormat) {
     _cached_encoder_for_BDBFormat = function (
       value: BDBFormat    ): _Element {

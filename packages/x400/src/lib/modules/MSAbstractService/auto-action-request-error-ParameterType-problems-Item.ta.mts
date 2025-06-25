@@ -124,7 +124,7 @@ let _cached_decoder_for_auto_action_request_error_ParameterType_problems_Item: $
  */
 export function _decode_auto_action_request_error_ParameterType_problems_Item(
     el: _Element
-) {
+): auto_action_request_error_ParameterType_problems_Item {
     if (
         !_cached_decoder_for_auto_action_request_error_ParameterType_problems_Item
     ) {
@@ -178,7 +178,7 @@ let _cached_encoder_for_auto_action_request_error_ParameterType_problems_Item: $
 export function _encode_auto_action_request_error_ParameterType_problems_Item(
     value: auto_action_request_error_ParameterType_problems_Item,
     elGetter: $.ASN1Encoder<auto_action_request_error_ParameterType_problems_Item>
-) {
+): _Element {
     if (
         !_cached_encoder_for_auto_action_request_error_ParameterType_problems_Item
     ) {

@@ -104,12 +104,8 @@ export class TBSCertAVL_entries_Item {
 export const _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] =
     [
         new $.ComponentSpec("idType", false, $.hasAnyTag),
-        ,
-        /* FIXME: scope COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
-            "entryExtensions",
-            true,
-            $.hasTag(_TagClass.context, 1)
-        ),
+        new $.ComponentSpec("scope", true, $.hasTag(_TagClass.context, 0)),
+        new $.ComponentSpec("entryExtensions", true, $.hasTag(_TagClass.context, 1)),
     ];
 
 /**

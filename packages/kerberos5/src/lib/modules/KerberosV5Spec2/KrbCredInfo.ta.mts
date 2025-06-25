@@ -266,7 +266,7 @@ let _cached_decoder_for_KrbCredInfo: $.ASN1Decoder<KrbCredInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {KrbCredInfo} The decoded data structure.
  */
-export function _decode_KrbCredInfo(el: _Element) {
+export function _decode_KrbCredInfo(el: _Element): KrbCredInfo {
   if (!_cached_decoder_for_KrbCredInfo) {
     _cached_decoder_for_KrbCredInfo = function (el: _Element): KrbCredInfo {
       let key!: EncryptionKey;
@@ -373,7 +373,7 @@ let _cached_encoder_for_KrbCredInfo: $.ASN1Encoder<KrbCredInfo> | null = null;
 export function _encode_KrbCredInfo(
   value: KrbCredInfo,
   elGetter: $.ASN1Encoder<KrbCredInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_KrbCredInfo) {
     _cached_encoder_for_KrbCredInfo = function (
       value: KrbCredInfo    ): _Element {

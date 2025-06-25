@@ -136,7 +136,7 @@ let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<I
  * @param {_Element} el The element being decoded.
  * @returns {IntermediateResourceBoundaryTestOutcome} The decoded data structure.
  */
-export function _decode_IntermediateResourceBoundaryTestOutcome(el: _Element) {
+export function _decode_IntermediateResourceBoundaryTestOutcome(el: _Element): IntermediateResourceBoundaryTestOutcome {
     if (!_cached_decoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_decoder_for_IntermediateResourceBoundaryTestOutcome =
             $._decodeEnumerated;
@@ -156,7 +156,7 @@ let _cached_encoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Encoder<I
 export function _encode_IntermediateResourceBoundaryTestOutcome(
     value: IntermediateResourceBoundaryTestOutcome,
     elGetter: $.ASN1Encoder<IntermediateResourceBoundaryTestOutcome>
-) {
+): _Element {
     if (!_cached_encoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_encoder_for_IntermediateResourceBoundaryTestOutcome =
             $._encodeEnumerated;

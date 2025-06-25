@@ -38,7 +38,7 @@ let _cached_decoder_for_TRMustBePresentAttributeMissing: $.ASN1Decoder<TRMustBeP
  * @param {_Element} el The element being decoded.
  * @returns {TRMustBePresentAttributeMissing} The decoded data structure.
  */
-export function _decode_TRMustBePresentAttributeMissing(el: _Element) {
+export function _decode_TRMustBePresentAttributeMissing(el: _Element): TRMustBePresentAttributeMissing {
     if (!_cached_decoder_for_TRMustBePresentAttributeMissing) {
         _cached_decoder_for_TRMustBePresentAttributeMissing = _decode_AttributeIDList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TRMustBePresentAttributeMissing: $.ASN1Encoder<TRMustBeP
 export function _encode_TRMustBePresentAttributeMissing(
     value: TRMustBePresentAttributeMissing,
     elGetter: $.ASN1Encoder<TRMustBePresentAttributeMissing>
-) {
+): _Element {
     if (!_cached_encoder_for_TRMustBePresentAttributeMissing) {
         _cached_encoder_for_TRMustBePresentAttributeMissing = _encode_AttributeIDList;
     }

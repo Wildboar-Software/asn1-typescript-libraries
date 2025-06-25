@@ -129,7 +129,7 @@ let _cached_decoder_for_BioAPI_TIME: $.ASN1Decoder<BioAPI_TIME> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_TIME} The decoded data structure.
  */
-export function _decode_BioAPI_TIME(el: _Element) {
+export function _decode_BioAPI_TIME(el: _Element): BioAPI_TIME {
   if (!_cached_decoder_for_BioAPI_TIME) {
     _cached_decoder_for_BioAPI_TIME = function (el: _Element): BioAPI_TIME {
       const sequence: _Element[] = el.sequence;
@@ -169,7 +169,7 @@ let _cached_encoder_for_BioAPI_TIME: $.ASN1Encoder<BioAPI_TIME> | null = null;
 export function _encode_BioAPI_TIME(
   value: BioAPI_TIME,
   elGetter: $.ASN1Encoder<BioAPI_TIME>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_TIME) {
     _cached_encoder_for_BioAPI_TIME = function (
       value: BioAPI_TIME    ): _Element {

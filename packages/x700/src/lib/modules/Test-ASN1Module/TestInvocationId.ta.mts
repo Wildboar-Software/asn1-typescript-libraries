@@ -45,7 +45,7 @@ let _cached_decoder_for_TestInvocationId: $.ASN1Decoder<TestInvocationId> | null
  * @param {_Element} el The element being decoded.
  * @returns {TestInvocationId} The decoded data structure.
  */
-export function _decode_TestInvocationId(el: _Element) {
+export function _decode_TestInvocationId(el: _Element): TestInvocationId {
     if (!_cached_decoder_for_TestInvocationId) {
         _cached_decoder_for_TestInvocationId = $._decode_inextensible_choice<TestInvocationId>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_TestInvocationId: $.ASN1Encoder<TestInvocationId> | null
 export function _encode_TestInvocationId(
     value: TestInvocationId,
     elGetter: $.ASN1Encoder<TestInvocationId>
-) {
+): _Element {
     if (!_cached_encoder_for_TestInvocationId) {
         _cached_encoder_for_TestInvocationId = $._encode_choice<TestInvocationId>(
             {

@@ -133,7 +133,7 @@ let _cached_decoder_for_CrossReference: $.ASN1Decoder<CrossReference> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CrossReference} The decoded data structure.
  */
-export function _decode_CrossReference(el: _Element) {
+export function _decode_CrossReference(el: _Element): CrossReference {
     if (!_cached_decoder_for_CrossReference) {
         _cached_decoder_for_CrossReference = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_CrossReference: $.ASN1Encoder<CrossReference> | null = n
 export function _encode_CrossReference(
     value: CrossReference,
     elGetter: $.ASN1Encoder<CrossReference>
-) {
+): _Element {
     if (!_cached_encoder_for_CrossReference) {
         _cached_encoder_for_CrossReference = function (
             value: CrossReference        ): _Element {

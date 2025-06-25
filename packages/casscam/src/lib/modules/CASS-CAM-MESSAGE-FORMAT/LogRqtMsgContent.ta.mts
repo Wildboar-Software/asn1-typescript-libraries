@@ -122,7 +122,7 @@ let _cached_decoder_for_LogRqtMsgContent: $.ASN1Decoder<LogRqtMsgContent> | null
  * @returns {LogRqtMsgContent} The decoded data structure.
  */
 export
-function _decode_LogRqtMsgContent (el: _Element) {
+function _decode_LogRqtMsgContent (el: _Element): LogRqtMsgContent {
     if (!_cached_decoder_for_LogRqtMsgContent) { _cached_decoder_for_LogRqtMsgContent = function (el: _Element): LogRqtMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_LogRqtMsgContent: $.ASN1Encoder<LogRqtMsgContent> | null
  * @returns {_Element} The LogRqtMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_LogRqtMsgContent (value: LogRqtMsgContent, elGetter: $.ASN1Encoder<LogRqtMsgContent>) {
+function _encode_LogRqtMsgContent (value: LogRqtMsgContent, elGetter: $.ASN1Encoder<LogRqtMsgContent>): _Element {
     if (!_cached_encoder_for_LogRqtMsgContent) { _cached_encoder_for_LogRqtMsgContent = function (value: LogRqtMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

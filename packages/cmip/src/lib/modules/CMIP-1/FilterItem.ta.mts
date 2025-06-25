@@ -69,7 +69,7 @@ let _cached_decoder_for_FilterItem: $.ASN1Decoder<FilterItem> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FilterItem} The decoded data structure.
  */
-export function _decode_FilterItem(el: _Element) {
+export function _decode_FilterItem(el: _Element): FilterItem {
   if (!_cached_decoder_for_FilterItem) {
     _cached_decoder_for_FilterItem = $._decode_inextensible_choice<FilterItem>({
       'CONTEXT 0': [
@@ -127,7 +127,7 @@ let _cached_encoder_for_FilterItem: $.ASN1Encoder<FilterItem> | null = null;
 export function _encode_FilterItem(
   value: FilterItem,
   elGetter: $.ASN1Encoder<FilterItem>
-) {
+): _Element {
   if (!_cached_encoder_for_FilterItem) {
     _cached_encoder_for_FilterItem = $._encode_choice<FilterItem>(
       {

@@ -111,7 +111,7 @@ let _cached_decoder_for_GenericSecretKeyAttributes: $.ASN1Decoder<GenericSecretK
  * @param {_Element} el The element being decoded.
  * @returns {GenericSecretKeyAttributes} The decoded data structure.
  */
-export function _decode_GenericSecretKeyAttributes(el: _Element) {
+export function _decode_GenericSecretKeyAttributes(el: _Element): GenericSecretKeyAttributes {
     if (!_cached_decoder_for_GenericSecretKeyAttributes) {
         _cached_decoder_for_GenericSecretKeyAttributes = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_GenericSecretKeyAttributes: $.ASN1Encoder<GenericSecretK
 export function _encode_GenericSecretKeyAttributes(
     value: GenericSecretKeyAttributes,
     elGetter: $.ASN1Encoder<GenericSecretKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_GenericSecretKeyAttributes) {
         _cached_encoder_for_GenericSecretKeyAttributes = function (
             value: GenericSecretKeyAttributes        ): _Element {

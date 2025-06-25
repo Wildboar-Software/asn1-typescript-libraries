@@ -40,7 +40,7 @@ let _cached_decoder_for_DomainParams: $.ASN1Decoder<DomainParams> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DomainParams} The decoded data structure.
  */
-export function _decode_DomainParams(el: _Element) {
+export function _decode_DomainParams(el: _Element): DomainParams {
     if (!_cached_decoder_for_DomainParams) {
         _cached_decoder_for_DomainParams = $._decode_inextensible_choice<DomainParams>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_DomainParams: $.ASN1Encoder<DomainParams> | null = null;
 export function _encode_DomainParams(
     value: DomainParams,
     elGetter: $.ASN1Encoder<DomainParams>
-) {
+): _Element {
     if (!_cached_encoder_for_DomainParams) {
         _cached_encoder_for_DomainParams = $._encode_choice<DomainParams>(
             {

@@ -119,7 +119,7 @@ let _cached_decoder_for_ProcessingInstruction: $.ASN1Decoder<ProcessingInstructi
  * @param {_Element} el The element being decoded.
  * @returns {ProcessingInstruction} The decoded data structure.
  */
-export function _decode_ProcessingInstruction(el: _Element) {
+export function _decode_ProcessingInstruction(el: _Element): ProcessingInstruction {
   if (!_cached_decoder_for_ProcessingInstruction) {
     _cached_decoder_for_ProcessingInstruction = function (
       el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_ProcessingInstruction: $.ASN1Encoder<ProcessingInstructi
 export function _encode_ProcessingInstruction(
   value: ProcessingInstruction,
   elGetter: $.ASN1Encoder<ProcessingInstruction>
-) {
+): _Element {
   if (!_cached_encoder_for_ProcessingInstruction) {
     _cached_encoder_for_ProcessingInstruction = function (
       value: ProcessingInstruction    ): _Element {

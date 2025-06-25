@@ -44,7 +44,7 @@ let _cached_decoder_for_SystemId: $.ASN1Decoder<SystemId> | null = null;
  * @returns {SystemId} The decoded data structure.
  */
 export
-function _decode_SystemId (el: _Element) {
+function _decode_SystemId (el: _Element): SystemId {
     if (!_cached_decoder_for_SystemId) { _cached_decoder_for_SystemId = $._decode_inextensible_choice<SystemId>({
     "UNIVERSAL 25": [ "name", $._decodeGraphicString ],
     "UNIVERSAL 2": [ "number_", $._decodeInteger ],
@@ -63,7 +63,7 @@ let _cached_encoder_for_SystemId: $.ASN1Encoder<SystemId> | null = null;
  * @returns {_Element} The SystemId, encoded as an ASN.1 Element.
  */
 export
-function _encode_SystemId (value: SystemId, elGetter: $.ASN1Encoder<SystemId>) {
+function _encode_SystemId (value: SystemId, elGetter: $.ASN1Encoder<SystemId>): _Element {
     if (!_cached_encoder_for_SystemId) { _cached_encoder_for_SystemId = $._encode_choice<SystemId>({
     "name": $._encodeGraphicString,
     "number_": $._encodeInteger,

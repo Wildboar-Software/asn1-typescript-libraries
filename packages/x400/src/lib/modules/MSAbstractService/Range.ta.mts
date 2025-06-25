@@ -45,7 +45,7 @@ let _cached_decoder_for_Range: $.ASN1Decoder<Range> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Range} The decoded data structure.
  */
-export function _decode_Range(el: _Element) {
+export function _decode_Range(el: _Element): Range {
     if (!_cached_decoder_for_Range) {
         _cached_decoder_for_Range = $._decode_inextensible_choice<Range>({
             'CONTEXT 0': [
@@ -70,7 +70,7 @@ let _cached_encoder_for_Range: $.ASN1Encoder<Range> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Range, encoded as an ASN.1 Element.
  */
-export function _encode_Range(value: Range, elGetter: $.ASN1Encoder<Range>) {
+export function _encode_Range(value: Range, elGetter: $.ASN1Encoder<Range>): _Element {
     if (!_cached_encoder_for_Range) {
         _cached_encoder_for_Range = $._encode_choice<Range>(
             {

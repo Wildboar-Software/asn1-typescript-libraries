@@ -26,7 +26,7 @@ let _cached_decoder_for_SignatureAlgorithmIdentifier: $.ASN1Decoder<SignatureAlg
  * @param {_Element} el The element being decoded.
  * @returns {SignatureAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_SignatureAlgorithmIdentifier(el: _Element) {
+export function _decode_SignatureAlgorithmIdentifier(el: _Element): SignatureAlgorithmIdentifier {
     if (!_cached_decoder_for_SignatureAlgorithmIdentifier) {
         _cached_decoder_for_SignatureAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -47,7 +47,7 @@ let _cached_encoder_for_SignatureAlgorithmIdentifier: $.ASN1Encoder<SignatureAlg
 export function _encode_SignatureAlgorithmIdentifier(
     value: SignatureAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<SignatureAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SignatureAlgorithmIdentifier) {
         _cached_encoder_for_SignatureAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

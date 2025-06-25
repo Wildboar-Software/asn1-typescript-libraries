@@ -121,7 +121,7 @@ let _cached_decoder_for_PDUOtherErrorSyntax: $.ASN1Decoder<PDUOtherErrorSyntax> 
  * @param {_Element} el The element being decoded.
  * @returns {PDUOtherErrorSyntax} The decoded data structure.
  */
-export function _decode_PDUOtherErrorSyntax(el: _Element) {
+export function _decode_PDUOtherErrorSyntax(el: _Element): PDUOtherErrorSyntax {
     if (!_cached_decoder_for_PDUOtherErrorSyntax) {
         _cached_decoder_for_PDUOtherErrorSyntax = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_PDUOtherErrorSyntax: $.ASN1Encoder<PDUOtherErrorSyntax> 
 export function _encode_PDUOtherErrorSyntax(
     value: PDUOtherErrorSyntax,
     elGetter: $.ASN1Encoder<PDUOtherErrorSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_PDUOtherErrorSyntax) {
         _cached_encoder_for_PDUOtherErrorSyntax = function (
             value: PDUOtherErrorSyntax        ): _Element {

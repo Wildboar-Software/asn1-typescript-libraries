@@ -32,7 +32,7 @@ let _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType: $.ASN1Decoder<Nu
  * @param {_Element} el The element being decoded.
  * @returns {NumberOfMessagesPerDeliveryServiceType} The decoded data structure.
  */
-export function _decode_NumberOfMessagesPerDeliveryServiceType(el: _Element) {
+export function _decode_NumberOfMessagesPerDeliveryServiceType(el: _Element): NumberOfMessagesPerDeliveryServiceType {
     if (!_cached_decoder_for_NumberOfMessagesPerDeliveryServiceType) {
         _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType = $._decodeSetOf<INTEGER>(
             () => $._decodeInteger
@@ -53,7 +53,7 @@ let _cached_encoder_for_NumberOfMessagesPerDeliveryServiceType: $.ASN1Encoder<Nu
 export function _encode_NumberOfMessagesPerDeliveryServiceType(
     value: NumberOfMessagesPerDeliveryServiceType,
     elGetter: $.ASN1Encoder<NumberOfMessagesPerDeliveryServiceType>
-) {
+): _Element {
     if (!_cached_encoder_for_NumberOfMessagesPerDeliveryServiceType) {
         _cached_encoder_for_NumberOfMessagesPerDeliveryServiceType = $._encodeSetOf<INTEGER>(
             () => $._encodeInteger,

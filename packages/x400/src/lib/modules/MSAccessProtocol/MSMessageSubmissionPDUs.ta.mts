@@ -35,7 +35,7 @@ let _cached_decoder_for_MSMessageSubmissionPDUs: $.ASN1Decoder<MSMessageSubmissi
  * @param {_Element} el The element being decoded.
  * @returns {MSMessageSubmissionPDUs} The decoded data structure.
  */
-export function _decode_MSMessageSubmissionPDUs(el: _Element) {
+export function _decode_MSMessageSubmissionPDUs(el: _Element): MSMessageSubmissionPDUs {
     if (!_cached_decoder_for_MSMessageSubmissionPDUs) {
         _cached_decoder_for_MSMessageSubmissionPDUs = _decode_ROS_SingleAS;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MSMessageSubmissionPDUs: $.ASN1Encoder<MSMessageSubmissi
 export function _encode_MSMessageSubmissionPDUs(
     value: MSMessageSubmissionPDUs,
     elGetter: $.ASN1Encoder<MSMessageSubmissionPDUs>
-) {
+): _Element {
     if (!_cached_encoder_for_MSMessageSubmissionPDUs) {
         _cached_encoder_for_MSMessageSubmissionPDUs = _encode_ROS_SingleAS;
     }

@@ -126,7 +126,7 @@ let _cached_decoder_for_AliasRedirection: $.ASN1Decoder<AliasRedirection> | null
  * @param {_Element} el The element being decoded.
  * @returns {AliasRedirection} The decoded data structure.
  */
-export function _decode_AliasRedirection(el: _Element) {
+export function _decode_AliasRedirection(el: _Element): AliasRedirection {
     if (!_cached_decoder_for_AliasRedirection) {
         _cached_decoder_for_AliasRedirection = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_AliasRedirection: $.ASN1Encoder<AliasRedirection> | null
 export function _encode_AliasRedirection(
     value: AliasRedirection,
     elGetter: $.ASN1Encoder<AliasRedirection>
-) {
+): _Element {
     if (!_cached_encoder_for_AliasRedirection) {
         _cached_encoder_for_AliasRedirection = function (
             value: AliasRedirection        ): _Element {

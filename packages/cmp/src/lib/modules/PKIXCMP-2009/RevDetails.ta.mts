@@ -132,7 +132,7 @@ let _cached_decoder_for_RevDetails: $.ASN1Decoder<RevDetails> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RevDetails} The decoded data structure.
  */
-export function _decode_RevDetails(el: _Element) {
+export function _decode_RevDetails(el: _Element): RevDetails {
   if (!_cached_decoder_for_RevDetails) {
     _cached_decoder_for_RevDetails = function (el: _Element): RevDetails {
       let certDetails!: CertTemplate;
@@ -176,7 +176,7 @@ let _cached_encoder_for_RevDetails: $.ASN1Encoder<RevDetails> | null = null;
 export function _encode_RevDetails(
   value: RevDetails,
   elGetter: $.ASN1Encoder<RevDetails>
-) {
+): _Element {
   if (!_cached_encoder_for_RevDetails) {
     _cached_encoder_for_RevDetails = function (
       value: RevDetails    ): _Element {

@@ -234,7 +234,7 @@ let _cached_decoder_for_SignatureVerificationStatus: $.ASN1Decoder<SignatureVeri
  * @param {_Element} el The element being decoded.
  * @returns {SignatureVerificationStatus} The decoded data structure.
  */
-export function _decode_SignatureVerificationStatus(el: _Element) {
+export function _decode_SignatureVerificationStatus(el: _Element): SignatureVerificationStatus {
     if (!_cached_decoder_for_SignatureVerificationStatus) {
         _cached_decoder_for_SignatureVerificationStatus = function (
             el: _Element
@@ -320,7 +320,7 @@ let _cached_encoder_for_SignatureVerificationStatus: $.ASN1Encoder<SignatureVeri
 export function _encode_SignatureVerificationStatus(
     value: SignatureVerificationStatus,
     elGetter: $.ASN1Encoder<SignatureVerificationStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_SignatureVerificationStatus) {
         _cached_encoder_for_SignatureVerificationStatus = function (
             value: SignatureVerificationStatus        ): _Element {

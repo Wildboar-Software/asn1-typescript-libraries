@@ -41,7 +41,7 @@ let _cached_decoder_for_F_OPEN_request_contents_type: $.ASN1Decoder<F_OPEN_reque
  * @param {_Element} el The element being decoded.
  * @returns {F_OPEN_request_contents_type} The decoded data structure.
  */
-export function _decode_F_OPEN_request_contents_type(el: _Element) {
+export function _decode_F_OPEN_request_contents_type(el: _Element): F_OPEN_request_contents_type {
   if (!_cached_decoder_for_F_OPEN_request_contents_type) {
     _cached_decoder_for_F_OPEN_request_contents_type = $._decode_inextensible_choice<F_OPEN_request_contents_type>(
       {
@@ -72,7 +72,7 @@ let _cached_encoder_for_F_OPEN_request_contents_type: $.ASN1Encoder<F_OPEN_reque
 export function _encode_F_OPEN_request_contents_type(
   value: F_OPEN_request_contents_type,
   elGetter: $.ASN1Encoder<F_OPEN_request_contents_type>
-) {
+): _Element {
   if (!_cached_encoder_for_F_OPEN_request_contents_type) {
     _cached_encoder_for_F_OPEN_request_contents_type = $._encode_choice<F_OPEN_request_contents_type>(
       {

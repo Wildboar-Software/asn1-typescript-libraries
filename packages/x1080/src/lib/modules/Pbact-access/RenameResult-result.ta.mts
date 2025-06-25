@@ -42,7 +42,7 @@ let _cached_decoder_for_RenameResult_result: $.ASN1Decoder<RenameResult_result> 
  * @param {_Element} el The element being decoded.
  * @returns {RenameResult_result} The decoded data structure.
  */
-export function _decode_RenameResult_result(el: _Element) {
+export function _decode_RenameResult_result(el: _Element): RenameResult_result {
     if (!_cached_decoder_for_RenameResult_result) {
         _cached_decoder_for_RenameResult_result = $._decode_extensible_choice<RenameResult_result>(
             {
@@ -74,7 +74,7 @@ let _cached_encoder_for_RenameResult_result: $.ASN1Encoder<RenameResult_result> 
 export function _encode_RenameResult_result(
     value: RenameResult_result,
     elGetter: $.ASN1Encoder<RenameResult_result>
-) {
+): _Element {
     if (!_cached_encoder_for_RenameResult_result) {
         _cached_encoder_for_RenameResult_result = $._encode_choice<RenameResult_result>(
             {

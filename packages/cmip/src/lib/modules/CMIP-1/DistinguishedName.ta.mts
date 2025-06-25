@@ -38,7 +38,7 @@ let _cached_decoder_for_DistinguishedName: $.ASN1Decoder<DistinguishedName> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DistinguishedName} The decoded data structure.
  */
-export function _decode_DistinguishedName(el: _Element) {
+export function _decode_DistinguishedName(el: _Element): DistinguishedName {
   if (!_cached_decoder_for_DistinguishedName) {
     _cached_decoder_for_DistinguishedName = _decode_RDNSequence;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_DistinguishedName: $.ASN1Encoder<DistinguishedName> | nu
 export function _encode_DistinguishedName(
   value: DistinguishedName,
   elGetter: $.ASN1Encoder<DistinguishedName>
-) {
+): _Element {
   if (!_cached_encoder_for_DistinguishedName) {
     _cached_encoder_for_DistinguishedName = _encode_RDNSequence;
   }

@@ -35,7 +35,7 @@ let _cached_decoder_for_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MTSInvokeIds} The decoded data structure.
  */
-export function _decode_MTSInvokeIds(el: _Element) {
+export function _decode_MTSInvokeIds(el: _Element): MTSInvokeIds {
     if (!_cached_decoder_for_MTSInvokeIds) {
         _cached_decoder_for_MTSInvokeIds = _decode_InvokeId;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> | null = null;
 export function _encode_MTSInvokeIds(
     value: MTSInvokeIds,
     elGetter: $.ASN1Encoder<MTSInvokeIds>
-) {
+): _Element {
     if (!_cached_encoder_for_MTSInvokeIds) {
         _cached_encoder_for_MTSInvokeIds = _encode_InvokeId;
     }

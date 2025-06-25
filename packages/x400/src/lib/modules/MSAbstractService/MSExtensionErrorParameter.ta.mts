@@ -41,7 +41,7 @@ let _cached_decoder_for_MSExtensionErrorParameter: $.ASN1Decoder<MSExtensionErro
  * @param {_Element} el The element being decoded.
  * @returns {MSExtensionErrorParameter} The decoded data structure.
  */
-export function _decode_MSExtensionErrorParameter(el: _Element) {
+export function _decode_MSExtensionErrorParameter(el: _Element): MSExtensionErrorParameter {
     if (!_cached_decoder_for_MSExtensionErrorParameter) {
         _cached_decoder_for_MSExtensionErrorParameter = $._decode_inextensible_choice<MSExtensionErrorParameter>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_MSExtensionErrorParameter: $.ASN1Encoder<MSExtensionErro
 export function _encode_MSExtensionErrorParameter(
     value: MSExtensionErrorParameter,
     elGetter: $.ASN1Encoder<MSExtensionErrorParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_MSExtensionErrorParameter) {
         _cached_encoder_for_MSExtensionErrorParameter = $._encode_choice<MSExtensionErrorParameter>(
             {

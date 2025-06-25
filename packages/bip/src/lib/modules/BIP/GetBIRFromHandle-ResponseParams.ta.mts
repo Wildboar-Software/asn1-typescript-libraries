@@ -109,7 +109,7 @@ let _cached_decoder_for_GetBIRFromHandle_ResponseParams: $.ASN1Decoder<GetBIRFro
  * @param {_Element} el The element being decoded.
  * @returns {GetBIRFromHandle_ResponseParams} The decoded data structure.
  */
-export function _decode_GetBIRFromHandle_ResponseParams(el: _Element) {
+export function _decode_GetBIRFromHandle_ResponseParams(el: _Element): GetBIRFromHandle_ResponseParams {
   if (!_cached_decoder_for_GetBIRFromHandle_ResponseParams) {
     _cached_decoder_for_GetBIRFromHandle_ResponseParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_GetBIRFromHandle_ResponseParams: $.ASN1Encoder<GetBIRFro
 export function _encode_GetBIRFromHandle_ResponseParams(
   value: GetBIRFromHandle_ResponseParams,
   elGetter: $.ASN1Encoder<GetBIRFromHandle_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GetBIRFromHandle_ResponseParams) {
     _cached_encoder_for_GetBIRFromHandle_ResponseParams = function (
       value: GetBIRFromHandle_ResponseParams    ): _Element {

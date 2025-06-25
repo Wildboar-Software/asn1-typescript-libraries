@@ -37,7 +37,7 @@ let _cached_decoder_for_RSAEncryptedContent: $.ASN1Decoder<RSAEncryptedContent> 
  * @returns {RSAEncryptedContent} The decoded data structure.
  */
 export
-function _decode_RSAEncryptedContent (el: _Element) {
+function _decode_RSAEncryptedContent (el: _Element): RSAEncryptedContent {
     if (!_cached_decoder_for_RSAEncryptedContent) { _cached_decoder_for_RSAEncryptedContent = _get_decoder_for_RSAENCRYPTED<Content>(_decode_Content); }
     return _cached_decoder_for_RSAEncryptedContent(el);
 }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RSAEncryptedContent: $.ASN1Encoder<RSAEncryptedContent> 
  * @returns {_Element} The RSAEncryptedContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_RSAEncryptedContent (value: RSAEncryptedContent, elGetter: $.ASN1Encoder<RSAEncryptedContent>) {
+function _encode_RSAEncryptedContent (value: RSAEncryptedContent, elGetter: $.ASN1Encoder<RSAEncryptedContent>): _Element {
     if (!_cached_encoder_for_RSAEncryptedContent) { _cached_encoder_for_RSAEncryptedContent = _get_encoder_for_RSAENCRYPTED<Content>(_encode_Content); }
     return _cached_encoder_for_RSAEncryptedContent(value, elGetter);
 }

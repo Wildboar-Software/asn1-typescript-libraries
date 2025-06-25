@@ -121,7 +121,7 @@ let _cached_decoder_for_Bundle: $.ASN1Decoder<Bundle> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Bundle} The decoded data structure.
  */
-export function _decode_Bundle(el: _Element) {
+export function _decode_Bundle(el: _Element): Bundle {
     if (!_cached_decoder_for_Bundle) {
         _cached_decoder_for_Bundle = function (el: _Element): Bundle {
             const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_Bundle: $.ASN1Encoder<Bundle> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Bundle, encoded as an ASN.1 Element.
  */
-export function _encode_Bundle(value: Bundle, elGetter: $.ASN1Encoder<Bundle>) {
+export function _encode_Bundle(value: Bundle, elGetter: $.ASN1Encoder<Bundle>): _Element {
     if (!_cached_encoder_for_Bundle) {
         _cached_encoder_for_Bundle = function (
             value: Bundle        ): _Element {

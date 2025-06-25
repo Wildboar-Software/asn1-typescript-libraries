@@ -29,7 +29,7 @@ let _cached_decoder_for_OldCertId: $.ASN1Decoder<OldCertId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OldCertId} The decoded data structure.
  */
-export function _decode_OldCertId(el: _Element) {
+export function _decode_OldCertId(el: _Element): OldCertId {
     if (!_cached_decoder_for_OldCertId) {
         _cached_decoder_for_OldCertId = _decode_CertId;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_OldCertId: $.ASN1Encoder<OldCertId> | null = null;
 export function _encode_OldCertId(
     value: OldCertId,
     elGetter: $.ASN1Encoder<OldCertId>
-) {
+): _Element {
     if (!_cached_encoder_for_OldCertId) {
         _cached_encoder_for_OldCertId = _encode_CertId;
     }

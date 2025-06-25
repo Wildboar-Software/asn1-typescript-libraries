@@ -120,7 +120,7 @@ let _cached_decoder_for_OriginatorInfo: $.ASN1Decoder<OriginatorInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorInfo} The decoded data structure.
  */
-export function _decode_OriginatorInfo(el: _Element) {
+export function _decode_OriginatorInfo(el: _Element): OriginatorInfo {
     if (!_cached_decoder_for_OriginatorInfo) {
         _cached_decoder_for_OriginatorInfo = function (
             el: _Element
@@ -170,7 +170,7 @@ let _cached_encoder_for_OriginatorInfo: $.ASN1Encoder<OriginatorInfo> | null = n
 export function _encode_OriginatorInfo(
     value: OriginatorInfo,
     elGetter: $.ASN1Encoder<OriginatorInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorInfo) {
         _cached_encoder_for_OriginatorInfo = function (
             value: OriginatorInfo        ): _Element {

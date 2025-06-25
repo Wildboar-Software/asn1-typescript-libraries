@@ -38,7 +38,7 @@ let _cached_decoder_for_ManualISSNPAAddress: $.ASN1Decoder<ManualISSNPAAddress> 
  * @param {_Element} el The element being decoded.
  * @returns {ManualISSNPAAddress} The decoded data structure.
  */
-export function _decode_ManualISSNPAAddress(el: _Element) {
+export function _decode_ManualISSNPAAddress(el: _Element): ManualISSNPAAddress {
     if (!_cached_decoder_for_ManualISSNPAAddress) {
         _cached_decoder_for_ManualISSNPAAddress = $._decodeSetOf<SNPAAddress>(
             () => _decode_SNPAAddress
@@ -61,7 +61,7 @@ let _cached_encoder_for_ManualISSNPAAddress: $.ASN1Encoder<ManualISSNPAAddress> 
 export function _encode_ManualISSNPAAddress(
     value: ManualISSNPAAddress,
     elGetter: $.ASN1Encoder<ManualISSNPAAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_ManualISSNPAAddress) {
         _cached_encoder_for_ManualISSNPAAddress = $._encodeSetOf<SNPAAddress>(
             () => _encode_SNPAAddress,

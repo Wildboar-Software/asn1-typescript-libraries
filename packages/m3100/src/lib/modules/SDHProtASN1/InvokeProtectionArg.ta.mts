@@ -156,7 +156,7 @@ let _cached_decoder_for_InvokeProtectionArg: $.ASN1Decoder<InvokeProtectionArg> 
  * @param {_Element} el The element being decoded.
  * @returns {InvokeProtectionArg} The decoded data structure.
  */
-export function _decode_InvokeProtectionArg(el: _Element) {
+export function _decode_InvokeProtectionArg(el: _Element): InvokeProtectionArg {
     if (!_cached_decoder_for_InvokeProtectionArg) {
         _cached_decoder_for_InvokeProtectionArg = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_InvokeProtectionArg: $.ASN1Encoder<InvokeProtectionArg> 
 export function _encode_InvokeProtectionArg(
     value: InvokeProtectionArg,
     elGetter: $.ASN1Encoder<InvokeProtectionArg>
-) {
+): _Element {
     if (!_cached_encoder_for_InvokeProtectionArg) {
         _cached_encoder_for_InvokeProtectionArg = function (
             value: InvokeProtectionArg        ): _Element {

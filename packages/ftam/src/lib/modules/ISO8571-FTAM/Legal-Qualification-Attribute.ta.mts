@@ -43,7 +43,7 @@ let _cached_decoder_for_Legal_Qualification_Attribute: $.ASN1Decoder<Legal_Quali
  * @param {_Element} el The element being decoded.
  * @returns {Legal_Qualification_Attribute} The decoded data structure.
  */
-export function _decode_Legal_Qualification_Attribute(el: _Element) {
+export function _decode_Legal_Qualification_Attribute(el: _Element): Legal_Qualification_Attribute {
   if (!_cached_decoder_for_Legal_Qualification_Attribute) {
     _cached_decoder_for_Legal_Qualification_Attribute = $._decode_inextensible_choice<Legal_Qualification_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Legal_Qualification_Attribute: $.ASN1Encoder<Legal_Quali
 export function _encode_Legal_Qualification_Attribute(
   value: Legal_Qualification_Attribute,
   elGetter: $.ASN1Encoder<Legal_Qualification_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Legal_Qualification_Attribute) {
     _cached_encoder_for_Legal_Qualification_Attribute = $._encode_choice<Legal_Qualification_Attribute>(
       {

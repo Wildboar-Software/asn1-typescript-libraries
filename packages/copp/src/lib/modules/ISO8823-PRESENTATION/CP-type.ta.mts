@@ -183,7 +183,7 @@ let _cached_decoder_for_CP_type: $.ASN1Decoder<CP_type> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CP_type} The decoded data structure.
  */
-export function _decode_CP_type(el: _Element) {
+export function _decode_CP_type(el: _Element): CP_type {
     if (!_cached_decoder_for_CP_type) {
         _cached_decoder_for_CP_type = function (el: _Element): CP_type {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -240,7 +240,7 @@ let _cached_encoder_for_CP_type: $.ASN1Encoder<CP_type> | null = null;
 export function _encode_CP_type(
     value: CP_type,
     elGetter: $.ASN1Encoder<CP_type>
-) {
+): _Element {
     if (!_cached_encoder_for_CP_type) {
         _cached_encoder_for_CP_type = function (
             value: CP_type        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_BlindCopyRecipientsField: $.ASN1Decoder<BlindCopyRecipie
  * @param {_Element} el The element being decoded.
  * @returns {BlindCopyRecipientsField} The decoded data structure.
  */
-export function _decode_BlindCopyRecipientsField(el: _Element) {
+export function _decode_BlindCopyRecipientsField(el: _Element): BlindCopyRecipientsField {
     if (!_cached_decoder_for_BlindCopyRecipientsField) {
         _cached_decoder_for_BlindCopyRecipientsField = $._decodeSequenceOf<BlindCopyRecipientsSubfield>(
             () => _decode_BlindCopyRecipientsSubfield
@@ -56,7 +56,7 @@ let _cached_encoder_for_BlindCopyRecipientsField: $.ASN1Encoder<BlindCopyRecipie
 export function _encode_BlindCopyRecipientsField(
     value: BlindCopyRecipientsField,
     elGetter: $.ASN1Encoder<BlindCopyRecipientsField>
-) {
+): _Element {
     if (!_cached_encoder_for_BlindCopyRecipientsField) {
         _cached_encoder_for_BlindCopyRecipientsField = $._encodeSequenceOf<BlindCopyRecipientsSubfield>(
             () => _encode_BlindCopyRecipientsSubfield,

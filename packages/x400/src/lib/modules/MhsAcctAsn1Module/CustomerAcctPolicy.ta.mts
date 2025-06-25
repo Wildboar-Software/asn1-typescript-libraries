@@ -38,7 +38,7 @@ let _cached_decoder_for_CustomerAcctPolicy: $.ASN1Decoder<CustomerAcctPolicy> | 
  * @param {_Element} el The element being decoded.
  * @returns {CustomerAcctPolicy} The decoded data structure.
  */
-export function _decode_CustomerAcctPolicy(el: _Element) {
+export function _decode_CustomerAcctPolicy(el: _Element): CustomerAcctPolicy {
     if (!_cached_decoder_for_CustomerAcctPolicy) {
         _cached_decoder_for_CustomerAcctPolicy = $._decode_inextensible_choice<CustomerAcctPolicy>(
             {
@@ -62,7 +62,7 @@ let _cached_encoder_for_CustomerAcctPolicy: $.ASN1Encoder<CustomerAcctPolicy> | 
 export function _encode_CustomerAcctPolicy(
     value: CustomerAcctPolicy,
     elGetter: $.ASN1Encoder<CustomerAcctPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_CustomerAcctPolicy) {
         _cached_encoder_for_CustomerAcctPolicy = $._encode_choice<CustomerAcctPolicy>(
             {

@@ -112,7 +112,7 @@ let _cached_decoder_for_PatronFormat: $.ASN1Decoder<PatronFormat> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PatronFormat} The decoded data structure.
  */
-export function _decode_PatronFormat(el: _Element) {
+export function _decode_PatronFormat(el: _Element): PatronFormat {
   if (!_cached_decoder_for_PatronFormat) {
     _cached_decoder_for_PatronFormat = function (el: _Element): PatronFormat {
       let patron_format_owner: OPTIONAL<INTEGER>;
@@ -154,7 +154,7 @@ let _cached_encoder_for_PatronFormat: $.ASN1Encoder<PatronFormat> | null = null;
 export function _encode_PatronFormat(
   value: PatronFormat,
   elGetter: $.ASN1Encoder<PatronFormat>
-) {
+): _Element {
   if (!_cached_encoder_for_PatronFormat) {
     _cached_encoder_for_PatronFormat = function (
       value: PatronFormat    ): _Element {

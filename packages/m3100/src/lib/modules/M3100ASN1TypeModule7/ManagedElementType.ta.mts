@@ -40,7 +40,7 @@ let _cached_decoder_for_ManagedElementType: $.ASN1Decoder<ManagedElementType> | 
  * @param {_Element} el The element being decoded.
  * @returns {ManagedElementType} The decoded data structure.
  */
-export function _decode_ManagedElementType(el: _Element) {
+export function _decode_ManagedElementType(el: _Element): ManagedElementType {
     if (!_cached_decoder_for_ManagedElementType) {
         _cached_decoder_for_ManagedElementType = $._decodeSetOf<ManagedElementType_Item>(
             () => _decode_ManagedElementType_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_ManagedElementType: $.ASN1Encoder<ManagedElementType> | 
 export function _encode_ManagedElementType(
     value: ManagedElementType,
     elGetter: $.ASN1Encoder<ManagedElementType>
-) {
+): _Element {
     if (!_cached_encoder_for_ManagedElementType) {
         _cached_encoder_for_ManagedElementType = $._encodeSetOf<ManagedElementType_Item>(
             () => _encode_ManagedElementType_Item,

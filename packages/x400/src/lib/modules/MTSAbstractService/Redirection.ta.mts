@@ -131,7 +131,7 @@ let _cached_decoder_for_Redirection: $.ASN1Decoder<Redirection> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Redirection} The decoded data structure.
  */
-export function _decode_Redirection(el: _Element) {
+export function _decode_Redirection(el: _Element): Redirection {
     if (!_cached_decoder_for_Redirection) {
         _cached_decoder_for_Redirection = function (el: _Element): Redirection {
             const sequence: _Element[] = el.sequence;
@@ -168,7 +168,7 @@ let _cached_encoder_for_Redirection: $.ASN1Encoder<Redirection> | null = null;
 export function _encode_Redirection(
     value: Redirection,
     elGetter: $.ASN1Encoder<Redirection>
-) {
+): _Element {
     if (!_cached_encoder_for_Redirection) {
         _cached_encoder_for_Redirection = function (
             value: Redirection        ): _Element {

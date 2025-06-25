@@ -251,7 +251,7 @@ let _cached_decoder_for_Functional_Units: $.ASN1Decoder<Functional_Units> | null
  * @param {_Element} el The element being decoded.
  * @returns {Functional_Units} The decoded data structure.
  */
-export function _decode_Functional_Units(el: _Element) {
+export function _decode_Functional_Units(el: _Element): Functional_Units {
   if (!_cached_decoder_for_Functional_Units) {
     _cached_decoder_for_Functional_Units = $._decode_implicit<Functional_Units>(
       () => $._decodeBitString
@@ -274,7 +274,7 @@ let _cached_encoder_for_Functional_Units: $.ASN1Encoder<Functional_Units> | null
 export function _encode_Functional_Units(
   value: Functional_Units,
   elGetter: $.ASN1Encoder<Functional_Units>
-) {
+): _Element {
   if (!_cached_encoder_for_Functional_Units) {
     _cached_encoder_for_Functional_Units = $._encode_implicit(
       _TagClass.context,

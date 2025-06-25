@@ -116,7 +116,7 @@ let _cached_decoder_for_EDIM: $.ASN1Decoder<EDIM> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {EDIM} The decoded data structure.
  */
-export function _decode_EDIM(el: _Element) {
+export function _decode_EDIM(el: _Element): EDIM {
     if (!_cached_decoder_for_EDIM) {
         _cached_decoder_for_EDIM = function (el: _Element): EDIM {
             const sequence: _Element[] = el.sequence;
@@ -148,7 +148,7 @@ let _cached_encoder_for_EDIM: $.ASN1Encoder<EDIM> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIM, encoded as an ASN.1 Element.
  */
-export function _encode_EDIM(value: EDIM, elGetter: $.ASN1Encoder<EDIM>) {
+export function _encode_EDIM(value: EDIM, elGetter: $.ASN1Encoder<EDIM>): _Element {
     if (!_cached_encoder_for_EDIM) {
         _cached_encoder_for_EDIM = function (
             value: EDIM        ): _Element {

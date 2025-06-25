@@ -187,7 +187,7 @@ let _cached_decoder_for_Import_RequestParams: $.ASN1Decoder<Import_RequestParams
  * @param {_Element} el The element being decoded.
  * @returns {Import_RequestParams} The decoded data structure.
  */
-export function _decode_Import_RequestParams(el: _Element) {
+export function _decode_Import_RequestParams(el: _Element): Import_RequestParams {
   if (!_cached_decoder_for_Import_RequestParams) {
     _cached_decoder_for_Import_RequestParams = function (
       el: _Element
@@ -248,7 +248,7 @@ let _cached_encoder_for_Import_RequestParams: $.ASN1Encoder<Import_RequestParams
 export function _encode_Import_RequestParams(
   value: Import_RequestParams,
   elGetter: $.ASN1Encoder<Import_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Import_RequestParams) {
     _cached_encoder_for_Import_RequestParams = function (
       value: Import_RequestParams    ): _Element {

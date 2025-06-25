@@ -34,7 +34,7 @@ let _cached_decoder_for_SecretKeys: $.ASN1Decoder<SecretKeys> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SecretKeys} The decoded data structure.
  */
-export function _decode_SecretKeys(el: _Element) {
+export function _decode_SecretKeys(el: _Element): SecretKeys {
     if (!_cached_decoder_for_SecretKeys) {
         _cached_decoder_for_SecretKeys = _get_decoder_for_PathOrObjects<SecretKeyType>(
             _decode_SecretKeyType
@@ -57,7 +57,7 @@ let _cached_encoder_for_SecretKeys: $.ASN1Encoder<SecretKeys> | null = null;
 export function _encode_SecretKeys(
     value: SecretKeys,
     elGetter: $.ASN1Encoder<SecretKeys>
-) {
+): _Element {
     if (!_cached_encoder_for_SecretKeys) {
         _cached_encoder_for_SecretKeys = _get_encoder_for_PathOrObjects<SecretKeyType>(
             _encode_SecretKeyType

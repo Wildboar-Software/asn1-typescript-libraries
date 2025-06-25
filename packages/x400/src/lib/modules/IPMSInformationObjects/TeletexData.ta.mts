@@ -32,7 +32,7 @@ let _cached_decoder_for_TeletexData: $.ASN1Decoder<TeletexData> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TeletexData} The decoded data structure.
  */
-export function _decode_TeletexData(el: _Element) {
+export function _decode_TeletexData(el: _Element): TeletexData {
     if (!_cached_decoder_for_TeletexData) {
         _cached_decoder_for_TeletexData = $._decodeSequenceOf<TeletexString>(
             () => $._decodeTeletexString
@@ -53,7 +53,7 @@ let _cached_encoder_for_TeletexData: $.ASN1Encoder<TeletexData> | null = null;
 export function _encode_TeletexData(
     value: TeletexData,
     elGetter: $.ASN1Encoder<TeletexData>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexData) {
         _cached_encoder_for_TeletexData = $._encodeSequenceOf<TeletexString>(
             () => $._encodeTeletexString,

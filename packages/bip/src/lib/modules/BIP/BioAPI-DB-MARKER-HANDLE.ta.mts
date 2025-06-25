@@ -38,7 +38,7 @@ let _cached_decoder_for_BioAPI_DB_MARKER_HANDLE: $.ASN1Decoder<BioAPI_DB_MARKER_
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_DB_MARKER_HANDLE} The decoded data structure.
  */
-export function _decode_BioAPI_DB_MARKER_HANDLE(el: _Element) {
+export function _decode_BioAPI_DB_MARKER_HANDLE(el: _Element): BioAPI_DB_MARKER_HANDLE {
   if (!_cached_decoder_for_BioAPI_DB_MARKER_HANDLE) {
     _cached_decoder_for_BioAPI_DB_MARKER_HANDLE = _decode_UnsignedInt;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_BioAPI_DB_MARKER_HANDLE: $.ASN1Encoder<BioAPI_DB_MARKER_
 export function _encode_BioAPI_DB_MARKER_HANDLE(
   value: BioAPI_DB_MARKER_HANDLE,
   elGetter: $.ASN1Encoder<BioAPI_DB_MARKER_HANDLE>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_DB_MARKER_HANDLE) {
     _cached_encoder_for_BioAPI_DB_MARKER_HANDLE = _encode_UnsignedInt;
   }

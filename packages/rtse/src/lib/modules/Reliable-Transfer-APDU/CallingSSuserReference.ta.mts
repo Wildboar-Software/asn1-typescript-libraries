@@ -41,7 +41,7 @@ let _cached_decoder_for_CallingSSuserReference: $.ASN1Decoder<CallingSSuserRefer
  * @param {_Element} el The element being decoded.
  * @returns {CallingSSuserReference} The decoded data structure.
  */
-export function _decode_CallingSSuserReference(el: _Element) {
+export function _decode_CallingSSuserReference(el: _Element): CallingSSuserReference {
   if (!_cached_decoder_for_CallingSSuserReference) {
     _cached_decoder_for_CallingSSuserReference = $._decode_inextensible_choice<CallingSSuserReference>(
       {
@@ -67,7 +67,7 @@ let _cached_encoder_for_CallingSSuserReference: $.ASN1Encoder<CallingSSuserRefer
 export function _encode_CallingSSuserReference(
   value: CallingSSuserReference,
   elGetter: $.ASN1Encoder<CallingSSuserReference>
-) {
+): _Element {
   if (!_cached_encoder_for_CallingSSuserReference) {
     _cached_encoder_for_CallingSSuserReference = $._encode_choice<CallingSSuserReference>(
       {

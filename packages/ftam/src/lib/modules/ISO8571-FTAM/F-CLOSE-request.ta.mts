@@ -158,7 +158,7 @@ let _cached_decoder_for_F_CLOSE_request: $.ASN1Decoder<F_CLOSE_request> | null =
  * @param {_Element} el The element being decoded.
  * @returns {F_CLOSE_request} The decoded data structure.
  */
-export function _decode_F_CLOSE_request(el: _Element) {
+export function _decode_F_CLOSE_request(el: _Element): F_CLOSE_request {
   if (!_cached_decoder_for_F_CLOSE_request) {
     _cached_decoder_for_F_CLOSE_request = function (
       el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_F_CLOSE_request: $.ASN1Encoder<F_CLOSE_request> | null =
 export function _encode_F_CLOSE_request(
   value: F_CLOSE_request,
   elGetter: $.ASN1Encoder<F_CLOSE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_CLOSE_request) {
     _cached_encoder_for_F_CLOSE_request = function (
       value: F_CLOSE_request    ): _Element {

@@ -179,7 +179,7 @@ let _cached_decoder_for_ResponseFlags: $.ASN1Decoder<ResponseFlags> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ResponseFlags} The decoded data structure.
  */
-export function _decode_ResponseFlags(el: _Element) {
+export function _decode_ResponseFlags(el: _Element): ResponseFlags {
   if (!_cached_decoder_for_ResponseFlags) {
     _cached_decoder_for_ResponseFlags = function (el: _Element): ResponseFlags {
       let fullRequestInResponse: OPTIONAL<BOOLEAN> =
@@ -243,7 +243,7 @@ let _cached_encoder_for_ResponseFlags: $.ASN1Encoder<ResponseFlags> | null = nul
 export function _encode_ResponseFlags(
   value: ResponseFlags,
   elGetter: $.ASN1Encoder<ResponseFlags>
-) {
+): _Element {
   if (!_cached_encoder_for_ResponseFlags) {
     _cached_encoder_for_ResponseFlags = function (
       value: ResponseFlags    ): _Element {

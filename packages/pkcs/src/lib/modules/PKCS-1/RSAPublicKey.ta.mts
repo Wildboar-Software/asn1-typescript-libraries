@@ -112,7 +112,7 @@ let _cached_decoder_for_RSAPublicKey: $.ASN1Decoder<RSAPublicKey> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RSAPublicKey} The decoded data structure.
  */
-export function _decode_RSAPublicKey(el: _Element) {
+export function _decode_RSAPublicKey(el: _Element): RSAPublicKey {
     if (!_cached_decoder_for_RSAPublicKey) {
         _cached_decoder_for_RSAPublicKey = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_RSAPublicKey: $.ASN1Encoder<RSAPublicKey> | null = null;
 export function _encode_RSAPublicKey(
     value: RSAPublicKey,
     elGetter: $.ASN1Encoder<RSAPublicKey>
-) {
+): _Element {
     if (!_cached_encoder_for_RSAPublicKey) {
         _cached_encoder_for_RSAPublicKey = function (
             value: RSAPublicKey        ): _Element {

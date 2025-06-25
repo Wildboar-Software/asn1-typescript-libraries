@@ -128,7 +128,7 @@ let _cached_decoder_for_DigestInfoWithDefault: $.ASN1Decoder<DigestInfoWithDefau
  * @param {_Element} el The element being decoded.
  * @returns {DigestInfoWithDefault} The decoded data structure.
  */
-export function _decode_DigestInfoWithDefault(el: _Element) {
+export function _decode_DigestInfoWithDefault(el: _Element): DigestInfoWithDefault {
     if (!_cached_decoder_for_DigestInfoWithDefault) {
         _cached_decoder_for_DigestInfoWithDefault = function (
             el: _Element
@@ -175,7 +175,7 @@ let _cached_encoder_for_DigestInfoWithDefault: $.ASN1Encoder<DigestInfoWithDefau
 export function _encode_DigestInfoWithDefault(
     value: DigestInfoWithDefault,
     elGetter: $.ASN1Encoder<DigestInfoWithDefault>
-) {
+): _Element {
     if (!_cached_encoder_for_DigestInfoWithDefault) {
         _cached_encoder_for_DigestInfoWithDefault = function (
             value: DigestInfoWithDefault        ): _Element {

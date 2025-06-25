@@ -121,7 +121,7 @@ let _cached_decoder_for_BilateralDomain_domain_private_domain: $.ASN1Decoder<Bil
  * @param {_Element} el The element being decoded.
  * @returns {BilateralDomain_domain_private_domain} The decoded data structure.
  */
-export function _decode_BilateralDomain_domain_private_domain(el: _Element) {
+export function _decode_BilateralDomain_domain_private_domain(el: _Element): BilateralDomain_domain_private_domain {
     if (!_cached_decoder_for_BilateralDomain_domain_private_domain) {
         _cached_decoder_for_BilateralDomain_domain_private_domain = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_BilateralDomain_domain_private_domain: $.ASN1Encoder<Bil
 export function _encode_BilateralDomain_domain_private_domain(
     value: BilateralDomain_domain_private_domain,
     elGetter: $.ASN1Encoder<BilateralDomain_domain_private_domain>
-) {
+): _Element {
     if (!_cached_encoder_for_BilateralDomain_domain_private_domain) {
         _cached_encoder_for_BilateralDomain_domain_private_domain = function (
             value: BilateralDomain_domain_private_domain        ): _Element {

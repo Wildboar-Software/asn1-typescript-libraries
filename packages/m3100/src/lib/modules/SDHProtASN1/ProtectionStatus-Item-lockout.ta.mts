@@ -145,7 +145,7 @@ let _cached_decoder_for_ProtectionStatus_Item_lockout: $.ASN1Decoder<ProtectionS
  * @param {_Element} el The element being decoded.
  * @returns {ProtectionStatus_Item_lockout} The decoded data structure.
  */
-export function _decode_ProtectionStatus_Item_lockout(el: _Element) {
+export function _decode_ProtectionStatus_Item_lockout(el: _Element): ProtectionStatus_Item_lockout {
     if (!_cached_decoder_for_ProtectionStatus_Item_lockout) {
         _cached_decoder_for_ProtectionStatus_Item_lockout = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_ProtectionStatus_Item_lockout: $.ASN1Encoder<ProtectionS
 export function _encode_ProtectionStatus_Item_lockout(
     value: ProtectionStatus_Item_lockout,
     elGetter: $.ASN1Encoder<ProtectionStatus_Item_lockout>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectionStatus_Item_lockout) {
         _cached_encoder_for_ProtectionStatus_Item_lockout = function (
             value: ProtectionStatus_Item_lockout        ): _Element {

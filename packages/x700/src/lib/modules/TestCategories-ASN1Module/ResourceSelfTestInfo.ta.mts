@@ -145,7 +145,7 @@ let _cached_decoder_for_ResourceSelfTestInfo: $.ASN1Decoder<ResourceSelfTestInfo
  * @param {_Element} el The element being decoded.
  * @returns {ResourceSelfTestInfo} The decoded data structure.
  */
-export function _decode_ResourceSelfTestInfo(el: _Element) {
+export function _decode_ResourceSelfTestInfo(el: _Element): ResourceSelfTestInfo {
     if (!_cached_decoder_for_ResourceSelfTestInfo) {
         _cached_decoder_for_ResourceSelfTestInfo = function (
             el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_ResourceSelfTestInfo: $.ASN1Encoder<ResourceSelfTestInfo
 export function _encode_ResourceSelfTestInfo(
     value: ResourceSelfTestInfo,
     elGetter: $.ASN1Encoder<ResourceSelfTestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourceSelfTestInfo) {
         _cached_encoder_for_ResourceSelfTestInfo = function (
             value: ResourceSelfTestInfo        ): _Element {

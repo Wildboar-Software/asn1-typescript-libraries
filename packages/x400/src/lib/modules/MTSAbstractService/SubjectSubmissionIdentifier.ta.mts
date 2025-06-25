@@ -35,7 +35,7 @@ let _cached_decoder_for_SubjectSubmissionIdentifier: $.ASN1Decoder<SubjectSubmis
  * @param {_Element} el The element being decoded.
  * @returns {SubjectSubmissionIdentifier} The decoded data structure.
  */
-export function _decode_SubjectSubmissionIdentifier(el: _Element) {
+export function _decode_SubjectSubmissionIdentifier(el: _Element): SubjectSubmissionIdentifier {
     if (!_cached_decoder_for_SubjectSubmissionIdentifier) {
         _cached_decoder_for_SubjectSubmissionIdentifier = _decode_MTSIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SubjectSubmissionIdentifier: $.ASN1Encoder<SubjectSubmis
 export function _encode_SubjectSubmissionIdentifier(
     value: SubjectSubmissionIdentifier,
     elGetter: $.ASN1Encoder<SubjectSubmissionIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectSubmissionIdentifier) {
         _cached_encoder_for_SubjectSubmissionIdentifier = _encode_MTSIdentifier;
     }

@@ -142,7 +142,7 @@ let _cached_decoder_for_MessageDeliveryEnvelope: $.ASN1Decoder<MessageDeliveryEn
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryEnvelope} The decoded data structure.
  */
-export function _decode_MessageDeliveryEnvelope(el: _Element) {
+export function _decode_MessageDeliveryEnvelope(el: _Element): MessageDeliveryEnvelope {
     if (!_cached_decoder_for_MessageDeliveryEnvelope) {
         _cached_decoder_for_MessageDeliveryEnvelope = function (
             el: _Element
@@ -188,7 +188,7 @@ let _cached_encoder_for_MessageDeliveryEnvelope: $.ASN1Encoder<MessageDeliveryEn
 export function _encode_MessageDeliveryEnvelope(
     value: MessageDeliveryEnvelope,
     elGetter: $.ASN1Encoder<MessageDeliveryEnvelope>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageDeliveryEnvelope) {
         _cached_encoder_for_MessageDeliveryEnvelope = function (
             value: MessageDeliveryEnvelope        ): _Element {

@@ -123,7 +123,7 @@ let _cached_decoder_for_EDIUserCapability: $.ASN1Decoder<EDIUserCapability> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EDIUserCapability} The decoded data structure.
  */
-export function _decode_EDIUserCapability(el: _Element) {
+export function _decode_EDIUserCapability(el: _Element): EDIUserCapability {
     if (!_cached_decoder_for_EDIUserCapability) {
         _cached_decoder_for_EDIUserCapability = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_EDIUserCapability: $.ASN1Encoder<EDIUserCapability> | nu
 export function _encode_EDIUserCapability(
     value: EDIUserCapability,
     elGetter: $.ASN1Encoder<EDIUserCapability>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIUserCapability) {
         _cached_encoder_for_EDIUserCapability = function (
             value: EDIUserCapability        ): _Element {

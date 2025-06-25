@@ -46,7 +46,7 @@ let _cached_decoder_for_LastAttemptResult: $.ASN1Decoder<LastAttemptResult> | nu
  * @param {_Element} el The element being decoded.
  * @returns {LastAttemptResult} The decoded data structure.
  */
-export function _decode_LastAttemptResult(el: _Element) {
+export function _decode_LastAttemptResult(el: _Element): LastAttemptResult {
     if (!_cached_decoder_for_LastAttemptResult) {
         _cached_decoder_for_LastAttemptResult = $._decode_inextensible_choice<LastAttemptResult>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_LastAttemptResult: $.ASN1Encoder<LastAttemptResult> | nu
 export function _encode_LastAttemptResult(
     value: LastAttemptResult,
     elGetter: $.ASN1Encoder<LastAttemptResult>
-) {
+): _Element {
     if (!_cached_encoder_for_LastAttemptResult) {
         _cached_encoder_for_LastAttemptResult = $._encode_choice<LastAttemptResult>(
             {

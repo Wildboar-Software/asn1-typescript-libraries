@@ -41,7 +41,7 @@ let _cached_decoder_for_Actions: $.ASN1Decoder<Actions> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Actions} The decoded data structure.
  */
-export function _decode_Actions(el: _Element) {
+export function _decode_Actions(el: _Element): Actions {
     if (!_cached_decoder_for_Actions) {
         _cached_decoder_for_Actions = $._decodeSetOf<Actions_Item>(
             () => _decode_Actions_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_Actions: $.ASN1Encoder<Actions> | null = null;
 export function _encode_Actions(
     value: Actions,
     elGetter: $.ASN1Encoder<Actions>
-) {
+): _Element {
     if (!_cached_encoder_for_Actions) {
         _cached_encoder_for_Actions = $._encodeSetOf<Actions_Item>(
             () => _encode_Actions_Item,

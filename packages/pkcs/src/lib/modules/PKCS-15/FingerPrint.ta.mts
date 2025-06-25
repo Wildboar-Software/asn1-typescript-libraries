@@ -148,7 +148,7 @@ let _cached_decoder_for_FingerPrint: $.ASN1Decoder<FingerPrint> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FingerPrint} The decoded data structure.
  */
-export function _decode_FingerPrint(el: _Element) {
+export function _decode_FingerPrint(el: _Element): FingerPrint {
     if (!_cached_decoder_for_FingerPrint) {
         _cached_decoder_for_FingerPrint = function (el: _Element): FingerPrint {
             const sequence: _Element[] = el.sequence;
@@ -185,7 +185,7 @@ let _cached_encoder_for_FingerPrint: $.ASN1Encoder<FingerPrint> | null = null;
 export function _encode_FingerPrint(
     value: FingerPrint,
     elGetter: $.ASN1Encoder<FingerPrint>
-) {
+): _Element {
     if (!_cached_encoder_for_FingerPrint) {
         _cached_encoder_for_FingerPrint = function (
             value: FingerPrint        ): _Element {

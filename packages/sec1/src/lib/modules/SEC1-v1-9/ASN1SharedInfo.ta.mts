@@ -137,7 +137,7 @@ let _cached_decoder_for_ASN1SharedInfo: $.ASN1Decoder<ASN1SharedInfo> | null = n
  * @returns {ASN1SharedInfo} The decoded data structure.
  */
 export
-function _decode_ASN1SharedInfo (el: _Element) {
+function _decode_ASN1SharedInfo (el: _Element): ASN1SharedInfo {
     if (!_cached_decoder_for_ASN1SharedInfo) { _cached_decoder_for_ASN1SharedInfo = function (el: _Element): ASN1SharedInfo {
     let keyInfo!: AlgorithmIdentifier;
     let entityUInfo: OPTIONAL<OCTET_STRING>;
@@ -178,7 +178,7 @@ let _cached_encoder_for_ASN1SharedInfo: $.ASN1Encoder<ASN1SharedInfo> | null = n
  * @returns {_Element} The ASN1SharedInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_ASN1SharedInfo (value: ASN1SharedInfo, elGetter: $.ASN1Encoder<ASN1SharedInfo>) {
+function _encode_ASN1SharedInfo (value: ASN1SharedInfo, elGetter: $.ASN1Encoder<ASN1SharedInfo>): _Element {
     if (!_cached_encoder_for_ASN1SharedInfo) { _cached_encoder_for_ASN1SharedInfo = function (value: ASN1SharedInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

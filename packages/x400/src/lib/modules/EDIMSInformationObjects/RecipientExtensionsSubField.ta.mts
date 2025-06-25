@@ -35,7 +35,7 @@ let _cached_decoder_for_RecipientExtensionsSubField: $.ASN1Decoder<RecipientExte
  * @param {_Element} el The element being decoded.
  * @returns {RecipientExtensionsSubField} The decoded data structure.
  */
-export function _decode_RecipientExtensionsSubField(el: _Element) {
+export function _decode_RecipientExtensionsSubField(el: _Element): RecipientExtensionsSubField {
     if (!_cached_decoder_for_RecipientExtensionsSubField) {
         _cached_decoder_for_RecipientExtensionsSubField = _decode_ExtensionField;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RecipientExtensionsSubField: $.ASN1Encoder<RecipientExte
 export function _encode_RecipientExtensionsSubField(
     value: RecipientExtensionsSubField,
     elGetter: $.ASN1Encoder<RecipientExtensionsSubField>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientExtensionsSubField) {
         _cached_encoder_for_RecipientExtensionsSubField = _encode_ExtensionField;
     }

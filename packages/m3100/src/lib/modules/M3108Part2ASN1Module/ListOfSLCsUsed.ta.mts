@@ -38,7 +38,7 @@ let _cached_decoder_for_ListOfSLCsUsed: $.ASN1Decoder<ListOfSLCsUsed> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ListOfSLCsUsed} The decoded data structure.
  */
-export function _decode_ListOfSLCsUsed(el: _Element) {
+export function _decode_ListOfSLCsUsed(el: _Element): ListOfSLCsUsed {
     if (!_cached_decoder_for_ListOfSLCsUsed) {
         _cached_decoder_for_ListOfSLCsUsed = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ListOfSLCsUsed: $.ASN1Encoder<ListOfSLCsUsed> | null = n
 export function _encode_ListOfSLCsUsed(
     value: ListOfSLCsUsed,
     elGetter: $.ASN1Encoder<ListOfSLCsUsed>
-) {
+): _Element {
     if (!_cached_encoder_for_ListOfSLCsUsed) {
         _cached_encoder_for_ListOfSLCsUsed = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

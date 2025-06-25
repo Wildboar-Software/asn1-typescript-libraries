@@ -196,7 +196,7 @@ let _cached_decoder_for_InformationTransferCapabilities: $.ASN1Decoder<Informati
  * @param {_Element} el The element being decoded.
  * @returns {InformationTransferCapabilities} The decoded data structure.
  */
-export function _decode_InformationTransferCapabilities(el: _Element) {
+export function _decode_InformationTransferCapabilities(el: _Element): InformationTransferCapabilities {
     if (!_cached_decoder_for_InformationTransferCapabilities) {
         _cached_decoder_for_InformationTransferCapabilities =
             $._decodeEnumerated;
@@ -218,7 +218,7 @@ let _cached_encoder_for_InformationTransferCapabilities: $.ASN1Encoder<Informati
 export function _encode_InformationTransferCapabilities(
     value: InformationTransferCapabilities,
     elGetter: $.ASN1Encoder<InformationTransferCapabilities>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationTransferCapabilities) {
         _cached_encoder_for_InformationTransferCapabilities =
             $._encodeEnumerated;

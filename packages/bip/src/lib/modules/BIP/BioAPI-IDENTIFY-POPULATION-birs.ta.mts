@@ -47,7 +47,7 @@ let _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs: $.ASN1Decoder<BioAPI_ID
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_IDENTIFY_POPULATION_birs} The decoded data structure.
  */
-export function _decode_BioAPI_IDENTIFY_POPULATION_birs(el: _Element) {
+export function _decode_BioAPI_IDENTIFY_POPULATION_birs(el: _Element): BioAPI_IDENTIFY_POPULATION_birs {
   if (!_cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs) {
     _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs = $._decode_inextensible_choice<BioAPI_IDENTIFY_POPULATION_birs>(
       {
@@ -74,7 +74,7 @@ let _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs: $.ASN1Encoder<BioAPI_ID
 export function _encode_BioAPI_IDENTIFY_POPULATION_birs(
   value: BioAPI_IDENTIFY_POPULATION_birs,
   elGetter: $.ASN1Encoder<BioAPI_IDENTIFY_POPULATION_birs>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs) {
     _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs = $._encode_choice<BioAPI_IDENTIFY_POPULATION_birs>(
       {

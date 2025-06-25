@@ -216,7 +216,7 @@ let _cached_decoder_for_RoleSpecifier: $.ASN1Decoder<RoleSpecifier> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {RoleSpecifier} The decoded data structure.
  */
-export function _decode_RoleSpecifier(el: _Element) {
+export function _decode_RoleSpecifier(el: _Element): RoleSpecifier {
     if (!_cached_decoder_for_RoleSpecifier) {
         _cached_decoder_for_RoleSpecifier = function (
             el: _Element
@@ -302,7 +302,7 @@ let _cached_encoder_for_RoleSpecifier: $.ASN1Encoder<RoleSpecifier> | null = nul
 export function _encode_RoleSpecifier(
     value: RoleSpecifier,
     elGetter: $.ASN1Encoder<RoleSpecifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RoleSpecifier) {
         _cached_encoder_for_RoleSpecifier = function (
             value: RoleSpecifier        ): _Element {

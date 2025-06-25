@@ -51,7 +51,7 @@ let _cached_decoder_for_PrivAssignErr: $.ASN1Decoder<PrivAssignErr> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PrivAssignErr} The decoded data structure.
  */
-export function _decode_PrivAssignErr(el: _Element) {
+export function _decode_PrivAssignErr(el: _Element): PrivAssignErr {
     if (!_cached_decoder_for_PrivAssignErr) {
         _cached_decoder_for_PrivAssignErr = $._decode_extensible_choice<PrivAssignErr>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_PrivAssignErr: $.ASN1Encoder<PrivAssignErr> | null = nul
 export function _encode_PrivAssignErr(
     value: PrivAssignErr,
     elGetter: $.ASN1Encoder<PrivAssignErr>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivAssignErr) {
         _cached_encoder_for_PrivAssignErr = $._encode_choice<PrivAssignErr>(
             {

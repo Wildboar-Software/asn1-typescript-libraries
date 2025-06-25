@@ -119,7 +119,7 @@ let _cached_decoder_for_IA5TextBodyPart: $.ASN1Decoder<IA5TextBodyPart> | null =
  * @param {_Element} el The element being decoded.
  * @returns {IA5TextBodyPart} The decoded data structure.
  */
-export function _decode_IA5TextBodyPart(el: _Element) {
+export function _decode_IA5TextBodyPart(el: _Element): IA5TextBodyPart {
     if (!_cached_decoder_for_IA5TextBodyPart) {
         _cached_decoder_for_IA5TextBodyPart = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_IA5TextBodyPart: $.ASN1Encoder<IA5TextBodyPart> | null =
 export function _encode_IA5TextBodyPart(
     value: IA5TextBodyPart,
     elGetter: $.ASN1Encoder<IA5TextBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_IA5TextBodyPart) {
         _cached_encoder_for_IA5TextBodyPart = function (
             value: IA5TextBodyPart        ): _Element {

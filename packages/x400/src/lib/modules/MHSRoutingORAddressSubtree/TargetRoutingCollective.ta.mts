@@ -126,7 +126,7 @@ let _cached_decoder_for_TargetRoutingCollective: $.ASN1Decoder<TargetRoutingColl
  * @param {_Element} el The element being decoded.
  * @returns {TargetRoutingCollective} The decoded data structure.
  */
-export function _decode_TargetRoutingCollective(el: _Element) {
+export function _decode_TargetRoutingCollective(el: _Element): TargetRoutingCollective {
     if (!_cached_decoder_for_TargetRoutingCollective) {
         _cached_decoder_for_TargetRoutingCollective = function (
             el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_TargetRoutingCollective: $.ASN1Encoder<TargetRoutingColl
 export function _encode_TargetRoutingCollective(
     value: TargetRoutingCollective,
     elGetter: $.ASN1Encoder<TargetRoutingCollective>
-) {
+): _Element {
     if (!_cached_encoder_for_TargetRoutingCollective) {
         _cached_encoder_for_TargetRoutingCollective = function (
             value: TargetRoutingCollective        ): _Element {

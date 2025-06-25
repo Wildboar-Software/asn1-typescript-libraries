@@ -37,7 +37,7 @@ let _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1De
  */
 export function _decode_MessageOriginAuthenticationAlgorithmIdentifier(
     el: _Element
-) {
+): MessageOriginAuthenticationAlgorithmIdentifier {
     if (!_cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier) {
         _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1En
 export function _encode_MessageOriginAuthenticationAlgorithmIdentifier(
     value: MessageOriginAuthenticationAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<MessageOriginAuthenticationAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier) {
         _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

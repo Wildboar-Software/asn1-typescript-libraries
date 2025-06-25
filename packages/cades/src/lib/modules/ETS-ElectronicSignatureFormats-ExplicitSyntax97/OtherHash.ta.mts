@@ -38,7 +38,7 @@ let _cached_decoder_for_OtherHash: $.ASN1Decoder<OtherHash> | null = null;
  * @returns {OtherHash} The decoded data structure.
  */
 export
-function _decode_OtherHash (el: _Element) {
+function _decode_OtherHash (el: _Element): OtherHash {
     if (!_cached_decoder_for_OtherHash) { _cached_decoder_for_OtherHash = $._decode_inextensible_choice<OtherHash>({
     "UNIVERSAL 4": [ "sha1Hash", _decode_OtherHashValue ],
     "UNIVERSAL 16": [ "otherHash", _decode_OtherHashAlgAndValue ]
@@ -56,7 +56,7 @@ let _cached_encoder_for_OtherHash: $.ASN1Encoder<OtherHash> | null = null;
  * @returns {_Element} The OtherHash, encoded as an ASN.1 Element.
  */
 export
-function _encode_OtherHash (value: OtherHash, elGetter: $.ASN1Encoder<OtherHash>) {
+function _encode_OtherHash (value: OtherHash, elGetter: $.ASN1Encoder<OtherHash>): _Element {
     if (!_cached_encoder_for_OtherHash) { _cached_encoder_for_OtherHash = $._encode_choice<OtherHash>({
     "sha1Hash": _encode_OtherHashValue,
     "otherHash": _encode_OtherHashAlgAndValue,

@@ -234,7 +234,7 @@ let _cached_decoder_for_RequestContent_content: $.ASN1Decoder<RequestContent_con
  * @param {_Element} el The element being decoded.
  * @returns {RequestContent_content} The decoded data structure.
  */
-export function _decode_RequestContent_content(el: _Element) {
+export function _decode_RequestContent_content(el: _Element): RequestContent_content {
     if (!_cached_decoder_for_RequestContent_content) {
         _cached_decoder_for_RequestContent_content = function (
             el: _Element
@@ -326,7 +326,7 @@ let _cached_encoder_for_RequestContent_content: $.ASN1Encoder<RequestContent_con
 export function _encode_RequestContent_content(
     value: RequestContent_content,
     elGetter: $.ASN1Encoder<RequestContent_content>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestContent_content) {
         _cached_encoder_for_RequestContent_content = function (
             value: RequestContent_content        ): _Element {

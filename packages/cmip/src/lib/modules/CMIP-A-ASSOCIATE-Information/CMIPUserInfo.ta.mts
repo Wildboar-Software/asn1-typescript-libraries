@@ -181,7 +181,7 @@ let _cached_decoder_for_CMIPUserInfo: $.ASN1Decoder<CMIPUserInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CMIPUserInfo} The decoded data structure.
  */
-export function _decode_CMIPUserInfo(el: _Element) {
+export function _decode_CMIPUserInfo(el: _Element): CMIPUserInfo {
   if (!_cached_decoder_for_CMIPUserInfo) {
     _cached_decoder_for_CMIPUserInfo = function (el: _Element): CMIPUserInfo {
       let protocolVersion: OPTIONAL<ProtocolVersion> =
@@ -243,7 +243,7 @@ let _cached_encoder_for_CMIPUserInfo: $.ASN1Encoder<CMIPUserInfo> | null = null;
 export function _encode_CMIPUserInfo(
   value: CMIPUserInfo,
   elGetter: $.ASN1Encoder<CMIPUserInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_CMIPUserInfo) {
     _cached_encoder_for_CMIPUserInfo = function (
       value: CMIPUserInfo    ): _Element {

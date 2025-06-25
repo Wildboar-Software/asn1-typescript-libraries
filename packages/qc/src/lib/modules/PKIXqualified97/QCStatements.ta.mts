@@ -29,7 +29,7 @@ let _cached_decoder_for_QCStatements: $.ASN1Decoder<QCStatements> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {QCStatements} The decoded data structure.
  */
-export function _decode_QCStatements(el: _Element) {
+export function _decode_QCStatements(el: _Element): QCStatements {
     if (!_cached_decoder_for_QCStatements) {
         _cached_decoder_for_QCStatements = $._decodeSequenceOf<QCStatement>(
             () => _decode_QCStatement
@@ -52,7 +52,7 @@ let _cached_encoder_for_QCStatements: $.ASN1Encoder<QCStatements> | null = null;
 export function _encode_QCStatements(
     value: QCStatements,
     elGetter: $.ASN1Encoder<QCStatements>
-) {
+): _Element {
     if (!_cached_encoder_for_QCStatements) {
         _cached_encoder_for_QCStatements = $._encodeSequenceOf<QCStatement>(
             () => _encode_QCStatement,

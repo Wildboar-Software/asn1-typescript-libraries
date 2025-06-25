@@ -62,7 +62,7 @@ let _cached_decoder_for_AllValues: $.ASN1Decoder<AllValues> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AllValues} The decoded data structure.
  */
-export function _decode_AllValues(el: _Element) {
+export function _decode_AllValues(el: _Element): AllValues {
   if (!_cached_decoder_for_AllValues) {
     _cached_decoder_for_AllValues = $._decode_inextensible_choice<AllValues>({
       'CONTEXT 16': ['bind', _decode_Bind],
@@ -94,7 +94,7 @@ let _cached_encoder_for_AllValues: $.ASN1Encoder<AllValues> | null = null;
 export function _encode_AllValues(
   value: AllValues,
   elGetter: $.ASN1Encoder<AllValues>
-) {
+): _Element {
   if (!_cached_encoder_for_AllValues) {
     _cached_encoder_for_AllValues = $._encode_choice<AllValues>(
       {

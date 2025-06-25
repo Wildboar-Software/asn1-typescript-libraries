@@ -36,7 +36,7 @@ let _cached_decoder_for_InternalTraceInformation: $.ASN1Decoder<InternalTraceInf
  * @param {_Element} el The element being decoded.
  * @returns {InternalTraceInformation} The decoded data structure.
  */
-export function _decode_InternalTraceInformation(el: _Element) {
+export function _decode_InternalTraceInformation(el: _Element): InternalTraceInformation {
     if (!_cached_decoder_for_InternalTraceInformation) {
         _cached_decoder_for_InternalTraceInformation = $._decodeSequenceOf<InternalTraceInformationElement>(
             () => _decode_InternalTraceInformationElement
@@ -57,7 +57,7 @@ let _cached_encoder_for_InternalTraceInformation: $.ASN1Encoder<InternalTraceInf
 export function _encode_InternalTraceInformation(
     value: InternalTraceInformation,
     elGetter: $.ASN1Encoder<InternalTraceInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_InternalTraceInformation) {
         _cached_encoder_for_InternalTraceInformation = $._encodeSequenceOf<InternalTraceInformationElement>(
             () => _encode_InternalTraceInformationElement,

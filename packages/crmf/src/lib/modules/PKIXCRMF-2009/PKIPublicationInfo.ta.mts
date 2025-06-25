@@ -121,7 +121,7 @@ let _cached_decoder_for_PKIPublicationInfo: $.ASN1Decoder<PKIPublicationInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {PKIPublicationInfo} The decoded data structure.
  */
-export function _decode_PKIPublicationInfo(el: _Element) {
+export function _decode_PKIPublicationInfo(el: _Element): PKIPublicationInfo {
     if (!_cached_decoder_for_PKIPublicationInfo) {
         _cached_decoder_for_PKIPublicationInfo = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_PKIPublicationInfo: $.ASN1Encoder<PKIPublicationInfo> | 
 export function _encode_PKIPublicationInfo(
     value: PKIPublicationInfo,
     elGetter: $.ASN1Encoder<PKIPublicationInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_PKIPublicationInfo) {
         _cached_encoder_for_PKIPublicationInfo = function (
             value: PKIPublicationInfo        ): _Element {

@@ -108,7 +108,7 @@ let _cached_decoder_for_DepositNoticeType: $.ASN1Decoder<DepositNoticeType> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DepositNoticeType} The decoded data structure.
  */
-export function _decode_DepositNoticeType(el: _Element) {
+export function _decode_DepositNoticeType(el: _Element): DepositNoticeType {
   if (!_cached_decoder_for_DepositNoticeType) {
     _cached_decoder_for_DepositNoticeType = function (
       el: _Element
@@ -144,7 +144,7 @@ let _cached_encoder_for_DepositNoticeType: $.ASN1Encoder<DepositNoticeType> | nu
 export function _encode_DepositNoticeType(
   value: DepositNoticeType,
   elGetter: $.ASN1Encoder<DepositNoticeType>
-) {
+): _Element {
   if (!_cached_encoder_for_DepositNoticeType) {
     _cached_encoder_for_DepositNoticeType = function (
       value: DepositNoticeType    ): _Element {

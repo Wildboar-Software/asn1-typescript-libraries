@@ -47,7 +47,7 @@ let _cached_decoder_for_IndividualResult: $.ASN1Decoder<IndividualResult> | null
  * @param {_Element} el The element being decoded.
  * @returns {IndividualResult} The decoded data structure.
  */
-export function _decode_IndividualResult(el: _Element) {
+export function _decode_IndividualResult(el: _Element): IndividualResult {
     if (!_cached_decoder_for_IndividualResult) {
         _cached_decoder_for_IndividualResult = $._decode_inextensible_choice<IndividualResult>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_IndividualResult: $.ASN1Encoder<IndividualResult> | null
 export function _encode_IndividualResult(
     value: IndividualResult,
     elGetter: $.ASN1Encoder<IndividualResult>
-) {
+): _Element {
     if (!_cached_encoder_for_IndividualResult) {
         _cached_encoder_for_IndividualResult = $._encode_choice<IndividualResult>(
             {

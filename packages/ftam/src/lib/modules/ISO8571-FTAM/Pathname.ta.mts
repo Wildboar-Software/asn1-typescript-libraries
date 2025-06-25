@@ -35,7 +35,7 @@ let _cached_decoder_for_Pathname: $.ASN1Decoder<Pathname> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Pathname} The decoded data structure.
  */
-export function _decode_Pathname(el: _Element) {
+export function _decode_Pathname(el: _Element): Pathname {
   if (!_cached_decoder_for_Pathname) {
     _cached_decoder_for_Pathname = $._decodeSequenceOf<GraphicString>(
       () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_Pathname: $.ASN1Encoder<Pathname> | null = null;
 export function _encode_Pathname(
   value: Pathname,
   elGetter: $.ASN1Encoder<Pathname>
-) {
+): _Element {
   if (!_cached_encoder_for_Pathname) {
     _cached_encoder_for_Pathname = $._encodeSequenceOf<GraphicString>(
       () => $._encodeGraphicString,

@@ -40,7 +40,7 @@ let _cached_decoder_for_ToTPPools: $.ASN1Decoder<ToTPPools> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ToTPPools} The decoded data structure.
  */
-export function _decode_ToTPPools(el: _Element) {
+export function _decode_ToTPPools(el: _Element): ToTPPools {
     if (!_cached_decoder_for_ToTPPools) {
         _cached_decoder_for_ToTPPools = $._decodeSetOf<ToTPPools_Item>(
             () => _decode_ToTPPools_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_ToTPPools: $.ASN1Encoder<ToTPPools> | null = null;
 export function _encode_ToTPPools(
     value: ToTPPools,
     elGetter: $.ASN1Encoder<ToTPPools>
-) {
+): _Element {
     if (!_cached_encoder_for_ToTPPools) {
         _cached_encoder_for_ToTPPools = $._encodeSetOf<ToTPPools_Item>(
             () => _encode_ToTPPools_Item,

@@ -119,7 +119,7 @@ let _cached_decoder_for_AddNWTTPsToAccessGroupInformation: $.ASN1Decoder<AddNWTT
  * @param {_Element} el The element being decoded.
  * @returns {AddNWTTPsToAccessGroupInformation} The decoded data structure.
  */
-export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element) {
+export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element): AddNWTTPsToAccessGroupInformation {
     if (!_cached_decoder_for_AddNWTTPsToAccessGroupInformation) {
         _cached_decoder_for_AddNWTTPsToAccessGroupInformation = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_AddNWTTPsToAccessGroupInformation: $.ASN1Encoder<AddNWTT
 export function _encode_AddNWTTPsToAccessGroupInformation(
     value: AddNWTTPsToAccessGroupInformation,
     elGetter: $.ASN1Encoder<AddNWTTPsToAccessGroupInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_AddNWTTPsToAccessGroupInformation) {
         _cached_encoder_for_AddNWTTPsToAccessGroupInformation = function (
             value: AddNWTTPsToAccessGroupInformation        ): _Element {

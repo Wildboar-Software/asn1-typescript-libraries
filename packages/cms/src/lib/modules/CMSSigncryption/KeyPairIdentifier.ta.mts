@@ -29,7 +29,7 @@ let _cached_decoder_for_KeyPairIdentifier: $.ASN1Decoder<KeyPairIdentifier> | nu
  * @param {_Element} el The element being decoded.
  * @returns {KeyPairIdentifier} The decoded data structure.
  */
-export function _decode_KeyPairIdentifier(el: _Element) {
+export function _decode_KeyPairIdentifier(el: _Element): KeyPairIdentifier {
     if (!_cached_decoder_for_KeyPairIdentifier) {
         _cached_decoder_for_KeyPairIdentifier = _decode_SignerIdentifier;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_KeyPairIdentifier: $.ASN1Encoder<KeyPairIdentifier> | nu
 export function _encode_KeyPairIdentifier(
     value: KeyPairIdentifier,
     elGetter: $.ASN1Encoder<KeyPairIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyPairIdentifier) {
         _cached_encoder_for_KeyPairIdentifier = _encode_SignerIdentifier;
     }

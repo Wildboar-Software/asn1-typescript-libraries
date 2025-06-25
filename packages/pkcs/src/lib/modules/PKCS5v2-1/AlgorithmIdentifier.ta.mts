@@ -107,7 +107,7 @@ let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> 
  * @param {_Element} el The element being decoded.
  * @returns {AlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_AlgorithmIdentifier(el: _Element) {
+export function _decode_AlgorithmIdentifier(el: _Element): AlgorithmIdentifier {
     if (!_cached_decoder_for_AlgorithmIdentifier) {
         _cached_decoder_for_AlgorithmIdentifier = function (
             el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_AlgorithmIdentifier: $.ASN1Encoder<AlgorithmIdentifier> 
 export function _encode_AlgorithmIdentifier(
     value: AlgorithmIdentifier,
     elGetter: $.ASN1Encoder<AlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_AlgorithmIdentifier) {
         _cached_encoder_for_AlgorithmIdentifier = function (
             value: AlgorithmIdentifier        ): _Element {

@@ -52,7 +52,7 @@ let _cached_decoder_for_PhysicalPortSignalRateAndMappingList: $.ASN1Decoder<Phys
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalPortSignalRateAndMappingList} The decoded data structure.
  */
-export function _decode_PhysicalPortSignalRateAndMappingList(el: _Element) {
+export function _decode_PhysicalPortSignalRateAndMappingList(el: _Element): PhysicalPortSignalRateAndMappingList {
     if (!_cached_decoder_for_PhysicalPortSignalRateAndMappingList) {
         _cached_decoder_for_PhysicalPortSignalRateAndMappingList = $._decode_inextensible_choice<PhysicalPortSignalRateAndMappingList>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_PhysicalPortSignalRateAndMappingList: $.ASN1Encoder<Phys
 export function _encode_PhysicalPortSignalRateAndMappingList(
     value: PhysicalPortSignalRateAndMappingList,
     elGetter: $.ASN1Encoder<PhysicalPortSignalRateAndMappingList>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalPortSignalRateAndMappingList) {
         _cached_encoder_for_PhysicalPortSignalRateAndMappingList = $._encode_choice<PhysicalPortSignalRateAndMappingList>(
             {

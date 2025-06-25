@@ -35,7 +35,7 @@ let _cached_decoder_for_NumericAttributeIdList: $.ASN1Decoder<NumericAttributeId
  * @param {_Element} el The element being decoded.
  * @returns {NumericAttributeIdList} The decoded data structure.
  */
-export function _decode_NumericAttributeIdList(el: _Element) {
+export function _decode_NumericAttributeIdList(el: _Element): NumericAttributeIdList {
     if (!_cached_decoder_for_NumericAttributeIdList) {
         _cached_decoder_for_NumericAttributeIdList = $._decodeSetOf<AttributeId>(
             () => _decode_AttributeId
@@ -56,7 +56,7 @@ let _cached_encoder_for_NumericAttributeIdList: $.ASN1Encoder<NumericAttributeId
 export function _encode_NumericAttributeIdList(
     value: NumericAttributeIdList,
     elGetter: $.ASN1Encoder<NumericAttributeIdList>
-) {
+): _Element {
     if (!_cached_encoder_for_NumericAttributeIdList) {
         _cached_encoder_for_NumericAttributeIdList = $._encodeSetOf<AttributeId>(
             () => _encode_AttributeId,

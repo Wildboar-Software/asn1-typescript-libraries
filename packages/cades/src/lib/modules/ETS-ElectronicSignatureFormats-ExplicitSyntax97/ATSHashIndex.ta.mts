@@ -147,7 +147,7 @@ let _cached_decoder_for_ATSHashIndex: $.ASN1Decoder<ATSHashIndex> | null = null;
  * @returns {ATSHashIndex} The decoded data structure.
  */
 export
-function _decode_ATSHashIndex (el: _Element) {
+function _decode_ATSHashIndex (el: _Element): ATSHashIndex {
     if (!_cached_decoder_for_ATSHashIndex) { _cached_decoder_for_ATSHashIndex = function (el: _Element): ATSHashIndex {
     let hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier> = ATSHashIndex._default_value_for_hashIndAlgorithm;
     let certificatesHashIndex!: OCTET_STRING[];
@@ -185,7 +185,7 @@ let _cached_encoder_for_ATSHashIndex: $.ASN1Encoder<ATSHashIndex> | null = null;
  * @returns {_Element} The ATSHashIndex, encoded as an ASN.1 Element.
  */
 export
-function _encode_ATSHashIndex (value: ATSHashIndex, elGetter: $.ASN1Encoder<ATSHashIndex>) {
+function _encode_ATSHashIndex (value: ATSHashIndex, elGetter: $.ASN1Encoder<ATSHashIndex>): _Element {
     if (!_cached_encoder_for_ATSHashIndex) { _cached_encoder_for_ATSHashIndex = function (value: ATSHashIndex): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -34,7 +34,7 @@ let _cached_decoder_for_Names: $.ASN1Decoder<Names> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Names} The decoded data structure.
  */
-export function _decode_Names(el: _Element) {
+export function _decode_Names(el: _Element): Names {
     if (!_cached_decoder_for_Names) {
         _cached_decoder_for_Names = $._decodeSetOf<Name>(() => _decode_Name);
     }
@@ -52,7 +52,7 @@ let _cached_encoder_for_Names: $.ASN1Encoder<Names> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Names, encoded as an ASN.1 Element.
  */
-export function _encode_Names(value: Names, elGetter: $.ASN1Encoder<Names>) {
+export function _encode_Names(value: Names, elGetter: $.ASN1Encoder<Names>): _Element {
     if (!_cached_encoder_for_Names) {
         _cached_encoder_for_Names = $._encodeSetOf<Name>(
             () => _encode_Name,

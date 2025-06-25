@@ -45,7 +45,7 @@ let _cached_decoder_for_BodyPartSynopsis: $.ASN1Decoder<BodyPartSynopsis> | null
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartSynopsis} The decoded data structure.
  */
-export function _decode_BodyPartSynopsis(el: _Element) {
+export function _decode_BodyPartSynopsis(el: _Element): BodyPartSynopsis {
     if (!_cached_decoder_for_BodyPartSynopsis) {
         _cached_decoder_for_BodyPartSynopsis = $._decode_inextensible_choice<BodyPartSynopsis>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_BodyPartSynopsis: $.ASN1Encoder<BodyPartSynopsis> | null
 export function _encode_BodyPartSynopsis(
     value: BodyPartSynopsis,
     elGetter: $.ASN1Encoder<BodyPartSynopsis>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartSynopsis) {
         _cached_encoder_for_BodyPartSynopsis = $._encode_choice<BodyPartSynopsis>(
             {

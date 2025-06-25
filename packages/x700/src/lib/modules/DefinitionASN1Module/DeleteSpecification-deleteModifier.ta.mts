@@ -105,7 +105,7 @@ let _cached_decoder_for_DeleteSpecification_deleteModifier: $.ASN1Decoder<Delete
  * @param {_Element} el The element being decoded.
  * @returns {DeleteSpecification_deleteModifier} The decoded data structure.
  */
-export function _decode_DeleteSpecification_deleteModifier(el: _Element) {
+export function _decode_DeleteSpecification_deleteModifier(el: _Element): DeleteSpecification_deleteModifier {
     if (!_cached_decoder_for_DeleteSpecification_deleteModifier) {
         _cached_decoder_for_DeleteSpecification_deleteModifier =
             $._decodeEnumerated;
@@ -127,7 +127,7 @@ let _cached_encoder_for_DeleteSpecification_deleteModifier: $.ASN1Encoder<Delete
 export function _encode_DeleteSpecification_deleteModifier(
     value: DeleteSpecification_deleteModifier,
     elGetter: $.ASN1Encoder<DeleteSpecification_deleteModifier>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteSpecification_deleteModifier) {
         _cached_encoder_for_DeleteSpecification_deleteModifier =
             $._encodeEnumerated;

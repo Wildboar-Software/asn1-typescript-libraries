@@ -39,7 +39,7 @@ let _cached_decoder_for_C_BEGIN_RI_branch_suffix: $.ASN1Decoder<C_BEGIN_RI_branc
  * @param {_Element} el The element being decoded.
  * @returns {C_BEGIN_RI_branch_suffix} The decoded data structure.
  */
-export function _decode_C_BEGIN_RI_branch_suffix(el: _Element) {
+export function _decode_C_BEGIN_RI_branch_suffix(el: _Element): C_BEGIN_RI_branch_suffix {
   if (!_cached_decoder_for_C_BEGIN_RI_branch_suffix) {
     _cached_decoder_for_C_BEGIN_RI_branch_suffix = $._decode_extensible_choice<C_BEGIN_RI_branch_suffix>(
       {
@@ -71,7 +71,7 @@ let _cached_encoder_for_C_BEGIN_RI_branch_suffix: $.ASN1Encoder<C_BEGIN_RI_branc
 export function _encode_C_BEGIN_RI_branch_suffix(
   value: C_BEGIN_RI_branch_suffix,
   elGetter: $.ASN1Encoder<C_BEGIN_RI_branch_suffix>
-) {
+): _Element {
   if (!_cached_encoder_for_C_BEGIN_RI_branch_suffix) {
     _cached_encoder_for_C_BEGIN_RI_branch_suffix = $._encode_choice<C_BEGIN_RI_branch_suffix>(
       {

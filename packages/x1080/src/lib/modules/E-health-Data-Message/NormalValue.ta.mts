@@ -130,7 +130,7 @@ let _cached_decoder_for_NormalValue: $.ASN1Decoder<NormalValue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NormalValue} The decoded data structure.
  */
-export function _decode_NormalValue(el: _Element) {
+export function _decode_NormalValue(el: _Element): NormalValue {
     if (!_cached_decoder_for_NormalValue) {
         _cached_decoder_for_NormalValue = function (el: _Element): NormalValue {
             let value!: NormalValue_value;
@@ -176,7 +176,7 @@ let _cached_encoder_for_NormalValue: $.ASN1Encoder<NormalValue> | null = null;
 export function _encode_NormalValue(
     value: NormalValue,
     elGetter: $.ASN1Encoder<NormalValue>
-) {
+): _Element {
     if (!_cached_encoder_for_NormalValue) {
         _cached_encoder_for_NormalValue = function (
             value: NormalValue        ): _Element {

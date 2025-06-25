@@ -121,7 +121,7 @@ let _cached_decoder_for_OtherKey: $.ASN1Decoder<OtherKey> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OtherKey} The decoded data structure.
  */
-export function _decode_OtherKey(el: _Element) {
+export function _decode_OtherKey(el: _Element): OtherKey {
     if (!_cached_decoder_for_OtherKey) {
         _cached_decoder_for_OtherKey = function (el: _Element): OtherKey {
             const sequence: _Element[] = el.sequence;
@@ -160,7 +160,7 @@ let _cached_encoder_for_OtherKey: $.ASN1Encoder<OtherKey> | null = null;
 export function _encode_OtherKey(
     value: OtherKey,
     elGetter: $.ASN1Encoder<OtherKey>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherKey) {
         _cached_encoder_for_OtherKey = function (
             value: OtherKey        ): _Element {

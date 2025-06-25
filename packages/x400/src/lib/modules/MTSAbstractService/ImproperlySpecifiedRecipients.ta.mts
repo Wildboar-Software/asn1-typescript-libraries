@@ -36,7 +36,7 @@ let _cached_decoder_for_ImproperlySpecifiedRecipients: $.ASN1Decoder<ImproperlyS
  * @param {_Element} el The element being decoded.
  * @returns {ImproperlySpecifiedRecipients} The decoded data structure.
  */
-export function _decode_ImproperlySpecifiedRecipients(el: _Element) {
+export function _decode_ImproperlySpecifiedRecipients(el: _Element): ImproperlySpecifiedRecipients {
     if (!_cached_decoder_for_ImproperlySpecifiedRecipients) {
         _cached_decoder_for_ImproperlySpecifiedRecipients = $._decodeSequenceOf<RecipientName>(
             () => _decode_RecipientName
@@ -57,7 +57,7 @@ let _cached_encoder_for_ImproperlySpecifiedRecipients: $.ASN1Encoder<ImproperlyS
 export function _encode_ImproperlySpecifiedRecipients(
     value: ImproperlySpecifiedRecipients,
     elGetter: $.ASN1Encoder<ImproperlySpecifiedRecipients>
-) {
+): _Element {
     if (!_cached_encoder_for_ImproperlySpecifiedRecipients) {
         _cached_encoder_for_ImproperlySpecifiedRecipients = $._encodeSequenceOf<RecipientName>(
             () => _encode_RecipientName,

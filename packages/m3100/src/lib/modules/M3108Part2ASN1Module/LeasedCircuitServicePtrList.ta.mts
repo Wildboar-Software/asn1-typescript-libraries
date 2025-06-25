@@ -38,7 +38,7 @@ let _cached_decoder_for_LeasedCircuitServicePtrList: $.ASN1Decoder<LeasedCircuit
  * @param {_Element} el The element being decoded.
  * @returns {LeasedCircuitServicePtrList} The decoded data structure.
  */
-export function _decode_LeasedCircuitServicePtrList(el: _Element) {
+export function _decode_LeasedCircuitServicePtrList(el: _Element): LeasedCircuitServicePtrList {
     if (!_cached_decoder_for_LeasedCircuitServicePtrList) {
         _cached_decoder_for_LeasedCircuitServicePtrList = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_LeasedCircuitServicePtrList: $.ASN1Encoder<LeasedCircuit
 export function _encode_LeasedCircuitServicePtrList(
     value: LeasedCircuitServicePtrList,
     elGetter: $.ASN1Encoder<LeasedCircuitServicePtrList>
-) {
+): _Element {
     if (!_cached_encoder_for_LeasedCircuitServicePtrList) {
         _cached_encoder_for_LeasedCircuitServicePtrList = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

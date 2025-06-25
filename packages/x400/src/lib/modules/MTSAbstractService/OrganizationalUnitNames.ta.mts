@@ -36,7 +36,7 @@ let _cached_decoder_for_OrganizationalUnitNames: $.ASN1Decoder<OrganizationalUni
  * @param {_Element} el The element being decoded.
  * @returns {OrganizationalUnitNames} The decoded data structure.
  */
-export function _decode_OrganizationalUnitNames(el: _Element) {
+export function _decode_OrganizationalUnitNames(el: _Element): OrganizationalUnitNames {
     if (!_cached_decoder_for_OrganizationalUnitNames) {
         _cached_decoder_for_OrganizationalUnitNames = $._decodeSequenceOf<OrganizationalUnitName>(
             () => _decode_OrganizationalUnitName
@@ -57,7 +57,7 @@ let _cached_encoder_for_OrganizationalUnitNames: $.ASN1Encoder<OrganizationalUni
 export function _encode_OrganizationalUnitNames(
     value: OrganizationalUnitNames,
     elGetter: $.ASN1Encoder<OrganizationalUnitNames>
-) {
+): _Element {
     if (!_cached_encoder_for_OrganizationalUnitNames) {
         _cached_encoder_for_OrganizationalUnitNames = $._encodeSequenceOf<OrganizationalUnitName>(
             () => _encode_OrganizationalUnitName,

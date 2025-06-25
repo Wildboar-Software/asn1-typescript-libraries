@@ -128,7 +128,7 @@ let _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter: $.ASN1Decod
  */
 export function _decode_EDIAutoAcknowledgementRegistrationParameter(
     el: _Element
-) {
+): EDIAutoAcknowledgementRegistrationParameter {
     if (!_cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter) {
         _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter = function (
             el: _Element
@@ -180,7 +180,7 @@ let _cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter: $.ASN1Encod
 export function _encode_EDIAutoAcknowledgementRegistrationParameter(
     value: EDIAutoAcknowledgementRegistrationParameter,
     elGetter: $.ASN1Encoder<EDIAutoAcknowledgementRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter) {
         _cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter = function (
             value: EDIAutoAcknowledgementRegistrationParameter        ): _Element {

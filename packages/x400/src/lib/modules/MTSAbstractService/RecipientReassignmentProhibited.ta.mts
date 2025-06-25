@@ -102,7 +102,7 @@ let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<Recipient
  * @param {_Element} el The element being decoded.
  * @returns {RecipientReassignmentProhibited} The decoded data structure.
  */
-export function _decode_RecipientReassignmentProhibited(el: _Element) {
+export function _decode_RecipientReassignmentProhibited(el: _Element): RecipientReassignmentProhibited {
     if (!_cached_decoder_for_RecipientReassignmentProhibited) {
         _cached_decoder_for_RecipientReassignmentProhibited =
             $._decodeEnumerated;
@@ -122,7 +122,7 @@ let _cached_encoder_for_RecipientReassignmentProhibited: $.ASN1Encoder<Recipient
 export function _encode_RecipientReassignmentProhibited(
     value: RecipientReassignmentProhibited,
     elGetter: $.ASN1Encoder<RecipientReassignmentProhibited>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientReassignmentProhibited) {
         _cached_encoder_for_RecipientReassignmentProhibited =
             $._encodeEnumerated;

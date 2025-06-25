@@ -38,7 +38,7 @@ let _cached_decoder_for_RelatedTOError_Item: $.ASN1Decoder<RelatedTOError_Item> 
  * @param {_Element} el The element being decoded.
  * @returns {RelatedTOError_Item} The decoded data structure.
  */
-export function _decode_RelatedTOError_Item(el: _Element) {
+export function _decode_RelatedTOError_Item(el: _Element): RelatedTOError_Item {
     if (!_cached_decoder_for_RelatedTOError_Item) {
         _cached_decoder_for_RelatedTOError_Item = $._decode_inextensible_choice<RelatedTOError_Item>(
             {
@@ -63,7 +63,7 @@ let _cached_encoder_for_RelatedTOError_Item: $.ASN1Encoder<RelatedTOError_Item> 
 export function _encode_RelatedTOError_Item(
     value: RelatedTOError_Item,
     elGetter: $.ASN1Encoder<RelatedTOError_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedTOError_Item) {
         _cached_encoder_for_RelatedTOError_Item = $._encode_choice<RelatedTOError_Item>(
             {

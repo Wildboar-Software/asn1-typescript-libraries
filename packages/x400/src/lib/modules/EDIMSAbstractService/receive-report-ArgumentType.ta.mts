@@ -122,7 +122,7 @@ let _cached_decoder_for_receive_report_ArgumentType: $.ASN1Decoder<receive_repor
  * @param {_Element} el The element being decoded.
  * @returns {receive_report_ArgumentType} The decoded data structure.
  */
-export function _decode_receive_report_ArgumentType(el: _Element) {
+export function _decode_receive_report_ArgumentType(el: _Element): receive_report_ArgumentType {
     if (!_cached_decoder_for_receive_report_ArgumentType) {
         _cached_decoder_for_receive_report_ArgumentType = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_receive_report_ArgumentType: $.ASN1Encoder<receive_repor
 export function _encode_receive_report_ArgumentType(
     value: receive_report_ArgumentType,
     elGetter: $.ASN1Encoder<receive_report_ArgumentType>
-) {
+): _Element {
     if (!_cached_encoder_for_receive_report_ArgumentType) {
         _cached_encoder_for_receive_report_ArgumentType = function (
             value: receive_report_ArgumentType        ): _Element {

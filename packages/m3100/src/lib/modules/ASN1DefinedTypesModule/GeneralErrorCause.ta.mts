@@ -41,7 +41,7 @@ let _cached_decoder_for_GeneralErrorCause: $.ASN1Decoder<GeneralErrorCause> | nu
  * @param {_Element} el The element being decoded.
  * @returns {GeneralErrorCause} The decoded data structure.
  */
-export function _decode_GeneralErrorCause(el: _Element) {
+export function _decode_GeneralErrorCause(el: _Element): GeneralErrorCause {
     if (!_cached_decoder_for_GeneralErrorCause) {
         _cached_decoder_for_GeneralErrorCause = $._decode_inextensible_choice<GeneralErrorCause>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_GeneralErrorCause: $.ASN1Encoder<GeneralErrorCause> | nu
 export function _encode_GeneralErrorCause(
     value: GeneralErrorCause,
     elGetter: $.ASN1Encoder<GeneralErrorCause>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralErrorCause) {
         _cached_encoder_for_GeneralErrorCause = $._encode_choice<GeneralErrorCause>(
             {

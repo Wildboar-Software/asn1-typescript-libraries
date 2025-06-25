@@ -43,7 +43,7 @@ let _cached_decoder_for_ExternalAuthObjectAttributes: $.ASN1Decoder<ExternalAuth
  * @param {_Element} el The element being decoded.
  * @returns {ExternalAuthObjectAttributes} The decoded data structure.
  */
-export function _decode_ExternalAuthObjectAttributes(el: _Element) {
+export function _decode_ExternalAuthObjectAttributes(el: _Element): ExternalAuthObjectAttributes {
     if (!_cached_decoder_for_ExternalAuthObjectAttributes) {
         _cached_decoder_for_ExternalAuthObjectAttributes = $._decode_extensible_choice<ExternalAuthObjectAttributes>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_ExternalAuthObjectAttributes: $.ASN1Encoder<ExternalAuth
 export function _encode_ExternalAuthObjectAttributes(
     value: ExternalAuthObjectAttributes,
     elGetter: $.ASN1Encoder<ExternalAuthObjectAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_ExternalAuthObjectAttributes) {
         _cached_encoder_for_ExternalAuthObjectAttributes = $._encode_choice<ExternalAuthObjectAttributes>(
             {

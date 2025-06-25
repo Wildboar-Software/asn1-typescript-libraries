@@ -38,7 +38,7 @@ let _cached_decoder_for_ApplicableManagedObjectInstanceList: $.ASN1Decoder<Appli
  * @param {_Element} el The element being decoded.
  * @returns {ApplicableManagedObjectInstanceList} The decoded data structure.
  */
-export function _decode_ApplicableManagedObjectInstanceList(el: _Element) {
+export function _decode_ApplicableManagedObjectInstanceList(el: _Element): ApplicableManagedObjectInstanceList {
     if (!_cached_decoder_for_ApplicableManagedObjectInstanceList) {
         _cached_decoder_for_ApplicableManagedObjectInstanceList = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ApplicableManagedObjectInstanceList: $.ASN1Encoder<Appli
 export function _encode_ApplicableManagedObjectInstanceList(
     value: ApplicableManagedObjectInstanceList,
     elGetter: $.ASN1Encoder<ApplicableManagedObjectInstanceList>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplicableManagedObjectInstanceList) {
         _cached_encoder_for_ApplicableManagedObjectInstanceList = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

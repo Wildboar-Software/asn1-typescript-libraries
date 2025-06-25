@@ -42,7 +42,7 @@ let _cached_decoder_for_ON: $.ASN1Decoder<ON> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ON} The decoded data structure.
  */
-export function _decode_ON(el: _Element) {
+export function _decode_ON(el: _Element): ON {
     if (!_cached_decoder_for_ON) {
         _cached_decoder_for_ON = _decode_IPN;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_ON: $.ASN1Encoder<ON> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ON, encoded as an ASN.1 Element.
  */
-export function _encode_ON(value: ON, elGetter: $.ASN1Encoder<ON>) {
+export function _encode_ON(value: ON, elGetter: $.ASN1Encoder<ON>): _Element {
     if (!_cached_encoder_for_ON) {
         _cached_encoder_for_ON = _encode_IPN;
     }

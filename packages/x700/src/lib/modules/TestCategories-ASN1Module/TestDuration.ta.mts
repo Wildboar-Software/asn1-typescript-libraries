@@ -46,7 +46,7 @@ let _cached_decoder_for_TestDuration: $.ASN1Decoder<TestDuration> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TestDuration} The decoded data structure.
  */
-export function _decode_TestDuration(el: _Element) {
+export function _decode_TestDuration(el: _Element): TestDuration {
     if (!_cached_decoder_for_TestDuration) {
         _cached_decoder_for_TestDuration = $._decode_inextensible_choice<TestDuration>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_TestDuration: $.ASN1Encoder<TestDuration> | null = null;
 export function _encode_TestDuration(
     value: TestDuration,
     elGetter: $.ASN1Encoder<TestDuration>
-) {
+): _Element {
     if (!_cached_encoder_for_TestDuration) {
         _cached_encoder_for_TestDuration = $._encode_choice<TestDuration>(
             {

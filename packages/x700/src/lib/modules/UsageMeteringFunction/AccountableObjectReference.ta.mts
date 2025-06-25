@@ -35,7 +35,7 @@ let _cached_decoder_for_AccountableObjectReference: $.ASN1Decoder<AccountableObj
  * @param {_Element} el The element being decoded.
  * @returns {AccountableObjectReference} The decoded data structure.
  */
-export function _decode_AccountableObjectReference(el: _Element) {
+export function _decode_AccountableObjectReference(el: _Element): AccountableObjectReference {
     if (!_cached_decoder_for_AccountableObjectReference) {
         _cached_decoder_for_AccountableObjectReference = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_AccountableObjectReference: $.ASN1Encoder<AccountableObj
 export function _encode_AccountableObjectReference(
     value: AccountableObjectReference,
     elGetter: $.ASN1Encoder<AccountableObjectReference>
-) {
+): _Element {
     if (!_cached_encoder_for_AccountableObjectReference) {
         _cached_encoder_for_AccountableObjectReference = _encode_ObjectInstance;
     }

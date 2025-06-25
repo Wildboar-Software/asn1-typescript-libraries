@@ -107,7 +107,7 @@ let _cached_decoder_for_ValidationPolRef: $.ASN1Decoder<ValidationPolRef> | null
  * @param {_Element} el The element being decoded.
  * @returns {ValidationPolRef} The decoded data structure.
  */
-export function _decode_ValidationPolRef(el: _Element) {
+export function _decode_ValidationPolRef(el: _Element): ValidationPolRef {
   if (!_cached_decoder_for_ValidationPolRef) {
     _cached_decoder_for_ValidationPolRef = function (
       el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_ValidationPolRef: $.ASN1Encoder<ValidationPolRef> | null
 export function _encode_ValidationPolRef(
   value: ValidationPolRef,
   elGetter: $.ASN1Encoder<ValidationPolRef>
-) {
+): _Element {
   if (!_cached_encoder_for_ValidationPolRef) {
     _cached_encoder_for_ValidationPolRef = function (
       value: ValidationPolRef    ): _Element {

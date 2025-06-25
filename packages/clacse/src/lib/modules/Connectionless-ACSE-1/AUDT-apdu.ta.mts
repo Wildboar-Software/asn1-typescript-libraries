@@ -365,7 +365,7 @@ let _cached_decoder_for_AUDT_apdu: $.ASN1Decoder<AUDT_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AUDT_apdu} The decoded data structure.
  */
-export function _decode_AUDT_apdu(el: _Element) {
+export function _decode_AUDT_apdu(el: _Element): AUDT_apdu {
     if (!_cached_decoder_for_AUDT_apdu) {
         _cached_decoder_for_AUDT_apdu = $._decode_implicit<AUDT_apdu>(
             () =>
@@ -517,7 +517,7 @@ let _cached_encoder_for_AUDT_apdu: $.ASN1Encoder<AUDT_apdu> | null = null;
 export function _encode_AUDT_apdu(
     value: AUDT_apdu,
     elGetter: $.ASN1Encoder<AUDT_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_AUDT_apdu) {
         _cached_encoder_for_AUDT_apdu = $._encode_implicit(
             _TagClass.application,

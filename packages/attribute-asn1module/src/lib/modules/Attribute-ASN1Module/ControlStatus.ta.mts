@@ -36,7 +36,7 @@ let _cached_decoder_for_ControlStatus: $.ASN1Decoder<ControlStatus> | null = nul
  * @returns {ControlStatus} The decoded data structure.
  */
 export
-function _decode_ControlStatus (el: _Element) {
+function _decode_ControlStatus (el: _Element): ControlStatus {
     if (!_cached_decoder_for_ControlStatus) { _cached_decoder_for_ControlStatus = $._decodeSetOf<ControlStatus_Item>(() => _decode_ControlStatus_Item); }
     return _cached_decoder_for_ControlStatus(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_ControlStatus: $.ASN1Encoder<ControlStatus> | null = nul
  * @returns {_Element} The ControlStatus, encoded as an ASN.1 Element.
  */
 export
-function _encode_ControlStatus (value: ControlStatus, elGetter: $.ASN1Encoder<ControlStatus>) {
+function _encode_ControlStatus (value: ControlStatus, elGetter: $.ASN1Encoder<ControlStatus>): _Element {
     if (!_cached_encoder_for_ControlStatus) { _cached_encoder_for_ControlStatus = $._encodeSetOf<ControlStatus_Item>(() => _encode_ControlStatus_Item, $.BER); }
     return _cached_encoder_for_ControlStatus(value, elGetter);
 }

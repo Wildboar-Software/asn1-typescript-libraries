@@ -39,7 +39,7 @@ let _cached_decoder_for_DBEKMRecipientInfo: $.ASN1Decoder<DBEKMRecipientInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {DBEKMRecipientInfo} The decoded data structure.
  */
-export function _decode_DBEKMRecipientInfo(el: _Element) {
+export function _decode_DBEKMRecipientInfo(el: _Element): DBEKMRecipientInfo {
     if (!_cached_decoder_for_DBEKMRecipientInfo) {
         _cached_decoder_for_DBEKMRecipientInfo = $._decode_inextensible_choice<DBEKMRecipientInfo>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_DBEKMRecipientInfo: $.ASN1Encoder<DBEKMRecipientInfo> | 
 export function _encode_DBEKMRecipientInfo(
     value: DBEKMRecipientInfo,
     elGetter: $.ASN1Encoder<DBEKMRecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DBEKMRecipientInfo) {
         _cached_encoder_for_DBEKMRecipientInfo = $._encode_choice<DBEKMRecipientInfo>(
             {

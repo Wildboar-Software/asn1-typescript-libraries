@@ -117,7 +117,7 @@ let _cached_decoder_for_IntervalsOfDayWps_Item: $.ASN1Decoder<IntervalsOfDayWps_
  * @param {_Element} el The element being decoded.
  * @returns {IntervalsOfDayWps_Item} The decoded data structure.
  */
-export function _decode_IntervalsOfDayWps_Item(el: _Element) {
+export function _decode_IntervalsOfDayWps_Item(el: _Element): IntervalsOfDayWps_Item {
     if (!_cached_decoder_for_IntervalsOfDayWps_Item) {
         _cached_decoder_for_IntervalsOfDayWps_Item = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_IntervalsOfDayWps_Item: $.ASN1Encoder<IntervalsOfDayWps_
 export function _encode_IntervalsOfDayWps_Item(
     value: IntervalsOfDayWps_Item,
     elGetter: $.ASN1Encoder<IntervalsOfDayWps_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_IntervalsOfDayWps_Item) {
         _cached_encoder_for_IntervalsOfDayWps_Item = function (
             value: IntervalsOfDayWps_Item        ): _Element {

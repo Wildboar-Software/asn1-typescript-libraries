@@ -157,7 +157,7 @@ let _cached_decoder_for_FetchResult: $.ASN1Decoder<FetchResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {FetchResult} The decoded data structure.
  */
-export function _decode_FetchResult(el: _Element) {
+export function _decode_FetchResult(el: _Element): FetchResult {
     if (!_cached_decoder_for_FetchResult) {
         _cached_decoder_for_FetchResult = function (el: _Element): FetchResult {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -221,7 +221,7 @@ let _cached_encoder_for_FetchResult: $.ASN1Encoder<FetchResult> | null = null;
 export function _encode_FetchResult(
     value: FetchResult,
     elGetter: $.ASN1Encoder<FetchResult>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchResult) {
         _cached_encoder_for_FetchResult = function (
             value: FetchResult        ): _Element {

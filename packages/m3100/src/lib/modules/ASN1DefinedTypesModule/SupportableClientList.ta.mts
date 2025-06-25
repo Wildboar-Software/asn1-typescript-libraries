@@ -38,7 +38,7 @@ let _cached_decoder_for_SupportableClientList: $.ASN1Decoder<SupportableClientLi
  * @param {_Element} el The element being decoded.
  * @returns {SupportableClientList} The decoded data structure.
  */
-export function _decode_SupportableClientList(el: _Element) {
+export function _decode_SupportableClientList(el: _Element): SupportableClientList {
     if (!_cached_decoder_for_SupportableClientList) {
         _cached_decoder_for_SupportableClientList = $._decodeSetOf<ObjectClass>(
             () => _decode_ObjectClass
@@ -61,7 +61,7 @@ let _cached_encoder_for_SupportableClientList: $.ASN1Encoder<SupportableClientLi
 export function _encode_SupportableClientList(
     value: SupportableClientList,
     elGetter: $.ASN1Encoder<SupportableClientList>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportableClientList) {
         _cached_encoder_for_SupportableClientList = $._encodeSetOf<ObjectClass>(
             () => _encode_ObjectClass,

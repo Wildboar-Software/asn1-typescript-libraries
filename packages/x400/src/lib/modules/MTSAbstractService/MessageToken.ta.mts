@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageToken: $.ASN1Decoder<MessageToken> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MessageToken} The decoded data structure.
  */
-export function _decode_MessageToken(el: _Element) {
+export function _decode_MessageToken(el: _Element): MessageToken {
     if (!_cached_decoder_for_MessageToken) {
         _cached_decoder_for_MessageToken = _decode_Token;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageToken: $.ASN1Encoder<MessageToken> | null = null;
 export function _encode_MessageToken(
     value: MessageToken,
     elGetter: $.ASN1Encoder<MessageToken>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageToken) {
         _cached_encoder_for_MessageToken = _encode_Token;
     }

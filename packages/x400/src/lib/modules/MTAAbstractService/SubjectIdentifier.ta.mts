@@ -35,7 +35,7 @@ let _cached_decoder_for_SubjectIdentifier: $.ASN1Decoder<SubjectIdentifier> | nu
  * @param {_Element} el The element being decoded.
  * @returns {SubjectIdentifier} The decoded data structure.
  */
-export function _decode_SubjectIdentifier(el: _Element) {
+export function _decode_SubjectIdentifier(el: _Element): SubjectIdentifier {
     if (!_cached_decoder_for_SubjectIdentifier) {
         _cached_decoder_for_SubjectIdentifier = _decode_MessageOrProbeIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SubjectIdentifier: $.ASN1Encoder<SubjectIdentifier> | nu
 export function _encode_SubjectIdentifier(
     value: SubjectIdentifier,
     elGetter: $.ASN1Encoder<SubjectIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectIdentifier) {
         _cached_encoder_for_SubjectIdentifier = _encode_MessageOrProbeIdentifier;
     }

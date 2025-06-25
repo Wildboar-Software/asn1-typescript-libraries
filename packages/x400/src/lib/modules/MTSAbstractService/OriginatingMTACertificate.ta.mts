@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatingMTACertificate: $.ASN1Decoder<OriginatingMTAC
  * @param {_Element} el The element being decoded.
  * @returns {OriginatingMTACertificate} The decoded data structure.
  */
-export function _decode_OriginatingMTACertificate(el: _Element) {
+export function _decode_OriginatingMTACertificate(el: _Element): OriginatingMTACertificate {
     if (!_cached_decoder_for_OriginatingMTACertificate) {
         _cached_decoder_for_OriginatingMTACertificate = _decode_Certificates;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatingMTACertificate: $.ASN1Encoder<OriginatingMTAC
 export function _encode_OriginatingMTACertificate(
     value: OriginatingMTACertificate,
     elGetter: $.ASN1Encoder<OriginatingMTACertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatingMTACertificate) {
         _cached_encoder_for_OriginatingMTACertificate = _encode_Certificates;
     }

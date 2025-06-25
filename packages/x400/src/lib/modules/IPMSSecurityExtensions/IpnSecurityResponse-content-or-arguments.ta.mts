@@ -44,7 +44,7 @@ let _cached_decoder_for_IpnSecurityResponse_content_or_arguments: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {IpnSecurityResponse_content_or_arguments} The decoded data structure.
  */
-export function _decode_IpnSecurityResponse_content_or_arguments(el: _Element) {
+export function _decode_IpnSecurityResponse_content_or_arguments(el: _Element): IpnSecurityResponse_content_or_arguments {
     if (!_cached_decoder_for_IpnSecurityResponse_content_or_arguments) {
         _cached_decoder_for_IpnSecurityResponse_content_or_arguments = $._decode_inextensible_choice<IpnSecurityResponse_content_or_arguments>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_IpnSecurityResponse_content_or_arguments: $.ASN1Encoder<
 export function _encode_IpnSecurityResponse_content_or_arguments(
     value: IpnSecurityResponse_content_or_arguments,
     elGetter: $.ASN1Encoder<IpnSecurityResponse_content_or_arguments>
-) {
+): _Element {
     if (!_cached_encoder_for_IpnSecurityResponse_content_or_arguments) {
         _cached_encoder_for_IpnSecurityResponse_content_or_arguments = $._encode_choice<IpnSecurityResponse_content_or_arguments>(
             {

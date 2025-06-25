@@ -38,7 +38,7 @@ let _cached_decoder_for_BioAPI_UNIT_ID: $.ASN1Decoder<BioAPI_UNIT_ID> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_UNIT_ID} The decoded data structure.
  */
-export function _decode_BioAPI_UNIT_ID(el: _Element) {
+export function _decode_BioAPI_UNIT_ID(el: _Element): BioAPI_UNIT_ID {
   if (!_cached_decoder_for_BioAPI_UNIT_ID) {
     _cached_decoder_for_BioAPI_UNIT_ID = _decode_UnsignedInt;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_BioAPI_UNIT_ID: $.ASN1Encoder<BioAPI_UNIT_ID> | null = n
 export function _encode_BioAPI_UNIT_ID(
   value: BioAPI_UNIT_ID,
   elGetter: $.ASN1Encoder<BioAPI_UNIT_ID>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_UNIT_ID) {
     _cached_encoder_for_BioAPI_UNIT_ID = _encode_UnsignedInt;
   }

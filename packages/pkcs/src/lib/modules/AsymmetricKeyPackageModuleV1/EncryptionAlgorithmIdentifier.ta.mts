@@ -32,7 +32,7 @@ let _cached_decoder_for_EncryptionAlgorithmIdentifier: $.ASN1Decoder<EncryptionA
  * @param {_Element} el The element being decoded.
  * @returns {EncryptionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_EncryptionAlgorithmIdentifier(el: _Element) {
+export function _decode_EncryptionAlgorithmIdentifier(el: _Element): EncryptionAlgorithmIdentifier {
     if (!_cached_decoder_for_EncryptionAlgorithmIdentifier) {
         _cached_decoder_for_EncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -53,7 +53,7 @@ let _cached_encoder_for_EncryptionAlgorithmIdentifier: $.ASN1Encoder<EncryptionA
 export function _encode_EncryptionAlgorithmIdentifier(
     value: EncryptionAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<EncryptionAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptionAlgorithmIdentifier) {
         _cached_encoder_for_EncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

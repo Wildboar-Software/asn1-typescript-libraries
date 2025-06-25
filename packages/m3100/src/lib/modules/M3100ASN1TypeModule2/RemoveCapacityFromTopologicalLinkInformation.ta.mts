@@ -40,7 +40,7 @@ let _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Deco
  */
 export function _decode_RemoveCapacityFromTopologicalLinkInformation(
     el: _Element
-) {
+): RemoveCapacityFromTopologicalLinkInformation {
     if (!_cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation) {
         _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation = _decode_RequestedCapacity;
     }
@@ -61,7 +61,7 @@ let _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Enco
 export function _encode_RemoveCapacityFromTopologicalLinkInformation(
     value: RemoveCapacityFromTopologicalLinkInformation,
     elGetter: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation) {
         _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation = _encode_RequestedCapacity;
     }

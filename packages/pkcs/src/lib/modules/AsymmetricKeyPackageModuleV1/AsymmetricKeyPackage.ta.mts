@@ -29,7 +29,7 @@ let _cached_decoder_for_AsymmetricKeyPackage: $.ASN1Decoder<AsymmetricKeyPackage
  * @param {_Element} el The element being decoded.
  * @returns {AsymmetricKeyPackage} The decoded data structure.
  */
-export function _decode_AsymmetricKeyPackage(el: _Element) {
+export function _decode_AsymmetricKeyPackage(el: _Element): AsymmetricKeyPackage {
     if (!_cached_decoder_for_AsymmetricKeyPackage) {
         _cached_decoder_for_AsymmetricKeyPackage = $._decodeSequenceOf<OneAsymmetricKey>(
             () => _decode_OneAsymmetricKey
@@ -52,7 +52,7 @@ let _cached_encoder_for_AsymmetricKeyPackage: $.ASN1Encoder<AsymmetricKeyPackage
 export function _encode_AsymmetricKeyPackage(
     value: AsymmetricKeyPackage,
     elGetter: $.ASN1Encoder<AsymmetricKeyPackage>
-) {
+): _Element {
     if (!_cached_encoder_for_AsymmetricKeyPackage) {
         _cached_encoder_for_AsymmetricKeyPackage = $._encodeSequenceOf<OneAsymmetricKey>(
             () => _encode_OneAsymmetricKey,

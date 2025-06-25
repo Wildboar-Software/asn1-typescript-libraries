@@ -48,7 +48,7 @@ let _cached_decoder_for_Failed: $.ASN1Decoder<Failed> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Failed} The decoded data structure.
  */
-export function _decode_Failed(el: _Element) {
+export function _decode_Failed(el: _Element): Failed {
     if (!_cached_decoder_for_Failed) {
         _cached_decoder_for_Failed = $._decode_inextensible_choice<Failed>({
             'UNIVERSAL 16': ['logicalProblem', _decode_LogicalProblem],
@@ -70,7 +70,7 @@ let _cached_encoder_for_Failed: $.ASN1Encoder<Failed> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Failed, encoded as an ASN.1 Element.
  */
-export function _encode_Failed(value: Failed, elGetter: $.ASN1Encoder<Failed>) {
+export function _encode_Failed(value: Failed, elGetter: $.ASN1Encoder<Failed>): _Element {
     if (!_cached_encoder_for_Failed) {
         _cached_encoder_for_Failed = $._encode_choice<Failed>(
             {

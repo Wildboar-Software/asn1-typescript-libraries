@@ -137,7 +137,7 @@ let _cached_decoder_for_TroubleProgressInfo: $.ASN1Decoder<TroubleProgressInfo> 
  * @param {_Element} el The element being decoded.
  * @returns {TroubleProgressInfo} The decoded data structure.
  */
-export function _decode_TroubleProgressInfo(el: _Element) {
+export function _decode_TroubleProgressInfo(el: _Element): TroubleProgressInfo {
     if (!_cached_decoder_for_TroubleProgressInfo) {
         _cached_decoder_for_TroubleProgressInfo = function (
             el: _Element
@@ -191,7 +191,7 @@ let _cached_encoder_for_TroubleProgressInfo: $.ASN1Encoder<TroubleProgressInfo> 
 export function _encode_TroubleProgressInfo(
     value: TroubleProgressInfo,
     elGetter: $.ASN1Encoder<TroubleProgressInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleProgressInfo) {
         _cached_encoder_for_TroubleProgressInfo = function (
             value: TroubleProgressInfo        ): _Element {

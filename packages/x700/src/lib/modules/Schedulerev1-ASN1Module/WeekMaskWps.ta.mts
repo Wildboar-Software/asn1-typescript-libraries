@@ -40,7 +40,7 @@ let _cached_decoder_for_WeekMaskWps: $.ASN1Decoder<WeekMaskWps> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WeekMaskWps} The decoded data structure.
  */
-export function _decode_WeekMaskWps(el: _Element) {
+export function _decode_WeekMaskWps(el: _Element): WeekMaskWps {
     if (!_cached_decoder_for_WeekMaskWps) {
         _cached_decoder_for_WeekMaskWps = $._decodeSetOf<WeekMaskWps_Item>(
             () => _decode_WeekMaskWps_Item
@@ -63,7 +63,7 @@ let _cached_encoder_for_WeekMaskWps: $.ASN1Encoder<WeekMaskWps> | null = null;
 export function _encode_WeekMaskWps(
     value: WeekMaskWps,
     elGetter: $.ASN1Encoder<WeekMaskWps>
-) {
+): _Element {
     if (!_cached_encoder_for_WeekMaskWps) {
         _cached_encoder_for_WeekMaskWps = $._encodeSetOf<WeekMaskWps_Item>(
             () => _encode_WeekMaskWps_Item,

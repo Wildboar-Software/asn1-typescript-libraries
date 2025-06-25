@@ -37,7 +37,7 @@ let _cached_decoder_for_AccessControlList: $.ASN1Decoder<AccessControlList> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AccessControlList} The decoded data structure.
  */
-export function _decode_AccessControlList(el: _Element) {
+export function _decode_AccessControlList(el: _Element): AccessControlList {
     if (!_cached_decoder_for_AccessControlList) {
         _cached_decoder_for_AccessControlList = $._decodeSetOf<AccessControlList_Item>(
             () => _decode_AccessControlList_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_AccessControlList: $.ASN1Encoder<AccessControlList> | nu
 export function _encode_AccessControlList(
     value: AccessControlList,
     elGetter: $.ASN1Encoder<AccessControlList>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessControlList) {
         _cached_encoder_for_AccessControlList = $._encodeSetOf<AccessControlList_Item>(
             () => _encode_AccessControlList_Item,

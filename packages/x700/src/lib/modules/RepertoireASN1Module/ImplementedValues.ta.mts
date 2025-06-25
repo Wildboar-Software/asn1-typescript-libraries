@@ -50,7 +50,7 @@ let _cached_decoder_for_ImplementedValues: $.ASN1Decoder<ImplementedValues> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ImplementedValues} The decoded data structure.
  */
-export function _decode_ImplementedValues(el: _Element) {
+export function _decode_ImplementedValues(el: _Element): ImplementedValues {
     if (!_cached_decoder_for_ImplementedValues) {
         _cached_decoder_for_ImplementedValues = $._decodeSetOf<ImplementedValues_Item>(
             () => _decode_ImplementedValues_Item
@@ -71,7 +71,7 @@ let _cached_encoder_for_ImplementedValues: $.ASN1Encoder<ImplementedValues> | nu
 export function _encode_ImplementedValues(
     value: ImplementedValues,
     elGetter: $.ASN1Encoder<ImplementedValues>
-) {
+): _Element {
     if (!_cached_encoder_for_ImplementedValues) {
         _cached_encoder_for_ImplementedValues = $._encodeSetOf<ImplementedValues_Item>(
             () => _encode_ImplementedValues_Item,

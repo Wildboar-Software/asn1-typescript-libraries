@@ -143,7 +143,7 @@ let _cached_decoder_for_ReturnError: $.ASN1Decoder<ReturnError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReturnError} The decoded data structure.
  */
-export function _decode_ReturnError(el: _Element) {
+export function _decode_ReturnError(el: _Element): ReturnError {
   if (!_cached_decoder_for_ReturnError) {
     _cached_decoder_for_ReturnError = function (el: _Element): ReturnError {
       let invokeId!: InvokeId;
@@ -192,7 +192,7 @@ let _cached_encoder_for_ReturnError: $.ASN1Encoder<ReturnError> | null = null;
 export function _encode_ReturnError(
   value: ReturnError,
   elGetter: $.ASN1Encoder<ReturnError>
-) {
+): _Element {
   if (!_cached_encoder_for_ReturnError) {
     _cached_encoder_for_ReturnError = function (
       value: ReturnError    ): _Element {

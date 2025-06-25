@@ -134,7 +134,7 @@ let _cached_decoder_for_TerminateValidationArgument: $.ASN1Decoder<TerminateVali
  * @param {_Element} el The element being decoded.
  * @returns {TerminateValidationArgument} The decoded data structure.
  */
-export function _decode_TerminateValidationArgument(el: _Element) {
+export function _decode_TerminateValidationArgument(el: _Element): TerminateValidationArgument {
     if (!_cached_decoder_for_TerminateValidationArgument) {
         _cached_decoder_for_TerminateValidationArgument = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_TerminateValidationArgument: $.ASN1Encoder<TerminateVali
 export function _encode_TerminateValidationArgument(
     value: TerminateValidationArgument,
     elGetter: $.ASN1Encoder<TerminateValidationArgument>
-) {
+): _Element {
     if (!_cached_encoder_for_TerminateValidationArgument) {
         _cached_encoder_for_TerminateValidationArgument = function (
             value: TerminateValidationArgument        ): _Element {

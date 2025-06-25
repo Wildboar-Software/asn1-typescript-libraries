@@ -38,7 +38,7 @@ let _cached_decoder_for_ConvertMulticastToPtoPInfo: $.ASN1Decoder<ConvertMultica
  * @param {_Element} el The element being decoded.
  * @returns {ConvertMulticastToPtoPInfo} The decoded data structure.
  */
-export function _decode_ConvertMulticastToPtoPInfo(el: _Element) {
+export function _decode_ConvertMulticastToPtoPInfo(el: _Element): ConvertMulticastToPtoPInfo {
     if (!_cached_decoder_for_ConvertMulticastToPtoPInfo) {
         _cached_decoder_for_ConvertMulticastToPtoPInfo = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ConvertMulticastToPtoPInfo: $.ASN1Encoder<ConvertMultica
 export function _encode_ConvertMulticastToPtoPInfo(
     value: ConvertMulticastToPtoPInfo,
     elGetter: $.ASN1Encoder<ConvertMulticastToPtoPInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertMulticastToPtoPInfo) {
         _cached_encoder_for_ConvertMulticastToPtoPInfo = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

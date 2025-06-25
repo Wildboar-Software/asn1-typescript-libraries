@@ -194,7 +194,7 @@ let _cached_decoder_for_RSAPrivateKeyObject: $.ASN1Decoder<RSAPrivateKeyObject> 
  * @param {_Element} el The element being decoded.
  * @returns {RSAPrivateKeyObject} The decoded data structure.
  */
-export function _decode_RSAPrivateKeyObject(el: _Element) {
+export function _decode_RSAPrivateKeyObject(el: _Element): RSAPrivateKeyObject {
     if (!_cached_decoder_for_RSAPrivateKeyObject) {
         _cached_decoder_for_RSAPrivateKeyObject = function (
             el: _Element
@@ -286,7 +286,7 @@ let _cached_encoder_for_RSAPrivateKeyObject: $.ASN1Encoder<RSAPrivateKeyObject> 
 export function _encode_RSAPrivateKeyObject(
     value: RSAPrivateKeyObject,
     elGetter: $.ASN1Encoder<RSAPrivateKeyObject>
-) {
+): _Element {
     if (!_cached_encoder_for_RSAPrivateKeyObject) {
         _cached_encoder_for_RSAPrivateKeyObject = function (
             value: RSAPrivateKeyObject        ): _Element {

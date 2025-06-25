@@ -45,7 +45,7 @@ let _cached_decoder_for_CertReferences: $.ASN1Decoder<CertReferences> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertReferences} The decoded data structure.
  */
-export function _decode_CertReferences(el: _Element) {
+export function _decode_CertReferences(el: _Element): CertReferences {
   if (!_cached_decoder_for_CertReferences) {
     _cached_decoder_for_CertReferences = $._decode_inextensible_choice<CertReferences>(
       {
@@ -79,7 +79,7 @@ let _cached_encoder_for_CertReferences: $.ASN1Encoder<CertReferences> | null = n
 export function _encode_CertReferences(
   value: CertReferences,
   elGetter: $.ASN1Encoder<CertReferences>
-) {
+): _Element {
   if (!_cached_encoder_for_CertReferences) {
     _cached_encoder_for_CertReferences = $._encode_choice<CertReferences>(
       {

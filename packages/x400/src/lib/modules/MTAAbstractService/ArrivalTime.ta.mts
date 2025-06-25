@@ -35,7 +35,7 @@ let _cached_decoder_for_ArrivalTime: $.ASN1Decoder<ArrivalTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ArrivalTime} The decoded data structure.
  */
-export function _decode_ArrivalTime(el: _Element) {
+export function _decode_ArrivalTime(el: _Element): ArrivalTime {
     if (!_cached_decoder_for_ArrivalTime) {
         _cached_decoder_for_ArrivalTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ArrivalTime: $.ASN1Encoder<ArrivalTime> | null = null;
 export function _encode_ArrivalTime(
     value: ArrivalTime,
     elGetter: $.ASN1Encoder<ArrivalTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ArrivalTime) {
         _cached_encoder_for_ArrivalTime = _encode_Time;
     }

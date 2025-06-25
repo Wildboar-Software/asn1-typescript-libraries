@@ -120,7 +120,7 @@ let _cached_decoder_for_PtoMPools: $.ASN1Decoder<PtoMPools> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PtoMPools} The decoded data structure.
  */
-export function _decode_PtoMPools(el: _Element) {
+export function _decode_PtoMPools(el: _Element): PtoMPools {
     if (!_cached_decoder_for_PtoMPools) {
         _cached_decoder_for_PtoMPools = function (el: _Element): PtoMPools {
             const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_PtoMPools: $.ASN1Encoder<PtoMPools> | null = null;
 export function _encode_PtoMPools(
     value: PtoMPools,
     elGetter: $.ASN1Encoder<PtoMPools>
-) {
+): _Element {
     if (!_cached_encoder_for_PtoMPools) {
         _cached_encoder_for_PtoMPools = function (
             value: PtoMPools        ): _Element {

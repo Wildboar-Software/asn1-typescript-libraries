@@ -346,7 +346,7 @@ let _cached_decoder_for_GUIProgressEventInfo: $.ASN1Decoder<GUIProgressEventInfo
  * @param {_Element} el The element being decoded.
  * @returns {GUIProgressEventInfo} The decoded data structure.
  */
-export function _decode_GUIProgressEventInfo(el: _Element) {
+export function _decode_GUIProgressEventInfo(el: _Element): GUIProgressEventInfo {
   if (!_cached_decoder_for_GUIProgressEventInfo) {
     _cached_decoder_for_GUIProgressEventInfo = function (
       el: _Element
@@ -447,7 +447,7 @@ let _cached_encoder_for_GUIProgressEventInfo: $.ASN1Encoder<GUIProgressEventInfo
 export function _encode_GUIProgressEventInfo(
   value: GUIProgressEventInfo,
   elGetter: $.ASN1Encoder<GUIProgressEventInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIProgressEventInfo) {
     _cached_encoder_for_GUIProgressEventInfo = function (
       value: GUIProgressEventInfo    ): _Element {

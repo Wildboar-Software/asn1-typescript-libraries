@@ -168,7 +168,7 @@ let _cached_decoder_for_ArcAlarmDetail: $.ASN1Decoder<ArcAlarmDetail> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ArcAlarmDetail} The decoded data structure.
  */
-export function _decode_ArcAlarmDetail(el: _Element) {
+export function _decode_ArcAlarmDetail(el: _Element): ArcAlarmDetail {
     if (!_cached_decoder_for_ArcAlarmDetail) {
         _cached_decoder_for_ArcAlarmDetail = function (
             el: _Element
@@ -224,7 +224,7 @@ let _cached_encoder_for_ArcAlarmDetail: $.ASN1Encoder<ArcAlarmDetail> | null = n
 export function _encode_ArcAlarmDetail(
     value: ArcAlarmDetail,
     elGetter: $.ASN1Encoder<ArcAlarmDetail>
-) {
+): _Element {
     if (!_cached_encoder_for_ArcAlarmDetail) {
         _cached_encoder_for_ArcAlarmDetail = function (
             value: ArcAlarmDetail        ): _Element {

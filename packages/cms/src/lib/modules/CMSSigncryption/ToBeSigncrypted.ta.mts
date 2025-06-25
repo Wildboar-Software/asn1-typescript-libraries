@@ -120,7 +120,7 @@ let _cached_decoder_for_ToBeSigncrypted: $.ASN1Decoder<ToBeSigncrypted> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ToBeSigncrypted} The decoded data structure.
  */
-export function _decode_ToBeSigncrypted(el: _Element) {
+export function _decode_ToBeSigncrypted(el: _Element): ToBeSigncrypted {
     if (!_cached_decoder_for_ToBeSigncrypted) {
         _cached_decoder_for_ToBeSigncrypted = function (
             el: _Element
@@ -159,7 +159,7 @@ let _cached_encoder_for_ToBeSigncrypted: $.ASN1Encoder<ToBeSigncrypted> | null =
 export function _encode_ToBeSigncrypted(
     value: ToBeSigncrypted,
     elGetter: $.ASN1Encoder<ToBeSigncrypted>
-) {
+): _Element {
     if (!_cached_encoder_for_ToBeSigncrypted) {
         _cached_encoder_for_ToBeSigncrypted = function (
             value: ToBeSigncrypted        ): _Element {

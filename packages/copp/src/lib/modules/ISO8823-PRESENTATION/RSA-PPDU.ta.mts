@@ -126,7 +126,7 @@ let _cached_decoder_for_RSA_PPDU: $.ASN1Decoder<RSA_PPDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RSA_PPDU} The decoded data structure.
  */
-export function _decode_RSA_PPDU(el: _Element) {
+export function _decode_RSA_PPDU(el: _Element): RSA_PPDU {
     if (!_cached_decoder_for_RSA_PPDU) {
         _cached_decoder_for_RSA_PPDU = function (el: _Element): RSA_PPDU {
             let presentation_context_identifier_list: OPTIONAL<Presentation_context_identifier_list>;
@@ -174,7 +174,7 @@ let _cached_encoder_for_RSA_PPDU: $.ASN1Encoder<RSA_PPDU> | null = null;
 export function _encode_RSA_PPDU(
     value: RSA_PPDU,
     elGetter: $.ASN1Encoder<RSA_PPDU>
-) {
+): _Element {
     if (!_cached_encoder_for_RSA_PPDU) {
         _cached_encoder_for_RSA_PPDU = function (
             value: RSA_PPDU        ): _Element {

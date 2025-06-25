@@ -121,7 +121,7 @@ let _cached_decoder_for_PreferredSignatureAlgorithm: $.ASN1Decoder<PreferredSign
  * @param {_Element} el The element being decoded.
  * @returns {PreferredSignatureAlgorithm} The decoded data structure.
  */
-export function _decode_PreferredSignatureAlgorithm(el: _Element) {
+export function _decode_PreferredSignatureAlgorithm(el: _Element): PreferredSignatureAlgorithm {
     if (!_cached_decoder_for_PreferredSignatureAlgorithm) {
         _cached_decoder_for_PreferredSignatureAlgorithm = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_PreferredSignatureAlgorithm: $.ASN1Encoder<PreferredSign
 export function _encode_PreferredSignatureAlgorithm(
     value: PreferredSignatureAlgorithm,
     elGetter: $.ASN1Encoder<PreferredSignatureAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_PreferredSignatureAlgorithm) {
         _cached_encoder_for_PreferredSignatureAlgorithm = function (
             value: PreferredSignatureAlgorithm        ): _Element {

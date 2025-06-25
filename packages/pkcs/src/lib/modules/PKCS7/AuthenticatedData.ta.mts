@@ -240,7 +240,7 @@ let _cached_decoder_for_AuthenticatedData: $.ASN1Decoder<AuthenticatedData> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticatedData} The decoded data structure.
  */
-export function _decode_AuthenticatedData(el: _Element) {
+export function _decode_AuthenticatedData(el: _Element): AuthenticatedData {
     if (!_cached_decoder_for_AuthenticatedData) {
         _cached_decoder_for_AuthenticatedData = function (
             el: _Element
@@ -333,7 +333,7 @@ let _cached_encoder_for_AuthenticatedData: $.ASN1Encoder<AuthenticatedData> | nu
 export function _encode_AuthenticatedData(
     value: AuthenticatedData,
     elGetter: $.ASN1Encoder<AuthenticatedData>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticatedData) {
         _cached_encoder_for_AuthenticatedData = function (
             value: AuthenticatedData        ): _Element {

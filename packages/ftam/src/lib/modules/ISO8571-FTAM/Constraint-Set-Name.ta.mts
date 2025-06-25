@@ -35,7 +35,7 @@ let _cached_decoder_for_Constraint_Set_Name: $.ASN1Decoder<Constraint_Set_Name> 
  * @param {_Element} el The element being decoded.
  * @returns {Constraint_Set_Name} The decoded data structure.
  */
-export function _decode_Constraint_Set_Name(el: _Element) {
+export function _decode_Constraint_Set_Name(el: _Element): Constraint_Set_Name {
   if (!_cached_decoder_for_Constraint_Set_Name) {
     _cached_decoder_for_Constraint_Set_Name = $._decode_implicit<Constraint_Set_Name>(
       () => $._decodeObjectIdentifier
@@ -58,7 +58,7 @@ let _cached_encoder_for_Constraint_Set_Name: $.ASN1Encoder<Constraint_Set_Name> 
 export function _encode_Constraint_Set_Name(
   value: Constraint_Set_Name,
   elGetter: $.ASN1Encoder<Constraint_Set_Name>
-) {
+): _Element {
   if (!_cached_encoder_for_Constraint_Set_Name) {
     _cached_encoder_for_Constraint_Set_Name = $._encode_implicit(
       _TagClass.application,

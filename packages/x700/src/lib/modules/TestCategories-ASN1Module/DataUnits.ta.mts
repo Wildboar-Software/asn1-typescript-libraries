@@ -177,7 +177,7 @@ let _cached_decoder_for_DataUnits: $.ASN1Decoder<DataUnits> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DataUnits} The decoded data structure.
  */
-export function _decode_DataUnits(el: _Element) {
+export function _decode_DataUnits(el: _Element): DataUnits {
     if (!_cached_decoder_for_DataUnits) {
         _cached_decoder_for_DataUnits = function (el: _Element): DataUnits {
             let dataType!: DataType;
@@ -244,7 +244,7 @@ let _cached_encoder_for_DataUnits: $.ASN1Encoder<DataUnits> | null = null;
 export function _encode_DataUnits(
     value: DataUnits,
     elGetter: $.ASN1Encoder<DataUnits>
-) {
+): _Element {
     if (!_cached_encoder_for_DataUnits) {
         _cached_encoder_for_DataUnits = function (
             value: DataUnits        ): _Element {

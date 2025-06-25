@@ -41,7 +41,7 @@ let _cached_decoder_for_RequestedDeliveryMethod: $.ASN1Decoder<RequestedDelivery
  * @param {_Element} el The element being decoded.
  * @returns {RequestedDeliveryMethod} The decoded data structure.
  */
-export function _decode_RequestedDeliveryMethod(el: _Element) {
+export function _decode_RequestedDeliveryMethod(el: _Element): RequestedDeliveryMethod {
     if (!_cached_decoder_for_RequestedDeliveryMethod) {
         _cached_decoder_for_RequestedDeliveryMethod = $._decodeSequenceOf<RequestedDeliveryMethod_Item>(
             () => _decode_RequestedDeliveryMethod_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_RequestedDeliveryMethod: $.ASN1Encoder<RequestedDelivery
 export function _encode_RequestedDeliveryMethod(
     value: RequestedDeliveryMethod,
     elGetter: $.ASN1Encoder<RequestedDeliveryMethod>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestedDeliveryMethod) {
         _cached_encoder_for_RequestedDeliveryMethod = $._encodeSequenceOf<RequestedDeliveryMethod_Item>(
             () => _encode_RequestedDeliveryMethod_Item,

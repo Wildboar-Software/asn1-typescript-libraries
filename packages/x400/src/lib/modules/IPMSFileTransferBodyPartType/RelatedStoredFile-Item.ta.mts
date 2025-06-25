@@ -131,7 +131,7 @@ let _cached_decoder_for_RelatedStoredFile_Item: $.ASN1Decoder<RelatedStoredFile_
  * @param {_Element} el The element being decoded.
  * @returns {RelatedStoredFile_Item} The decoded data structure.
  */
-export function _decode_RelatedStoredFile_Item(el: _Element) {
+export function _decode_RelatedStoredFile_Item(el: _Element): RelatedStoredFile_Item {
     if (!_cached_decoder_for_RelatedStoredFile_Item) {
         _cached_decoder_for_RelatedStoredFile_Item = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_RelatedStoredFile_Item: $.ASN1Encoder<RelatedStoredFile_
 export function _encode_RelatedStoredFile_Item(
     value: RelatedStoredFile_Item,
     elGetter: $.ASN1Encoder<RelatedStoredFile_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedStoredFile_Item) {
         _cached_encoder_for_RelatedStoredFile_Item = function (
             value: RelatedStoredFile_Item        ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_TemplateDefinition: $.ASN1Decoder<TemplateDefinition> | 
  * @param {_Element} el The element being decoded.
  * @returns {TemplateDefinition} The decoded data structure.
  */
-export function _decode_TemplateDefinition(el: _Element) {
+export function _decode_TemplateDefinition(el: _Element): TemplateDefinition {
     if (!_cached_decoder_for_TemplateDefinition) {
         _cached_decoder_for_TemplateDefinition = _decode_TextualRepresentation;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TemplateDefinition: $.ASN1Encoder<TemplateDefinition> | 
 export function _encode_TemplateDefinition(
     value: TemplateDefinition,
     elGetter: $.ASN1Encoder<TemplateDefinition>
-) {
+): _Element {
     if (!_cached_encoder_for_TemplateDefinition) {
         _cached_encoder_for_TemplateDefinition = _encode_TextualRepresentation;
     }

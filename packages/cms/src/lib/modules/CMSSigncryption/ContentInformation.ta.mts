@@ -116,7 +116,7 @@ let _cached_decoder_for_ContentInformation: $.ASN1Decoder<ContentInformation> | 
  * @param {_Element} el The element being decoded.
  * @returns {ContentInformation} The decoded data structure.
  */
-export function _decode_ContentInformation(el: _Element) {
+export function _decode_ContentInformation(el: _Element): ContentInformation {
     if (!_cached_decoder_for_ContentInformation) {
         _cached_decoder_for_ContentInformation = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_ContentInformation: $.ASN1Encoder<ContentInformation> | 
 export function _encode_ContentInformation(
     value: ContentInformation,
     elGetter: $.ASN1Encoder<ContentInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentInformation) {
         _cached_encoder_for_ContentInformation = function (
             value: ContentInformation        ): _Element {

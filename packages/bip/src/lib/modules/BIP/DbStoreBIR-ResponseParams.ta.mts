@@ -109,7 +109,7 @@ let _cached_decoder_for_DbStoreBIR_ResponseParams: $.ASN1Decoder<DbStoreBIR_Resp
  * @param {_Element} el The element being decoded.
  * @returns {DbStoreBIR_ResponseParams} The decoded data structure.
  */
-export function _decode_DbStoreBIR_ResponseParams(el: _Element) {
+export function _decode_DbStoreBIR_ResponseParams(el: _Element): DbStoreBIR_ResponseParams {
   if (!_cached_decoder_for_DbStoreBIR_ResponseParams) {
     _cached_decoder_for_DbStoreBIR_ResponseParams = function (
       el: _Element
@@ -145,7 +145,7 @@ let _cached_encoder_for_DbStoreBIR_ResponseParams: $.ASN1Encoder<DbStoreBIR_Resp
 export function _encode_DbStoreBIR_ResponseParams(
   value: DbStoreBIR_ResponseParams,
   elGetter: $.ASN1Encoder<DbStoreBIR_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_DbStoreBIR_ResponseParams) {
     _cached_encoder_for_DbStoreBIR_ResponseParams = function (
       value: DbStoreBIR_ResponseParams    ): _Element {

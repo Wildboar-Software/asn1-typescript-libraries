@@ -35,7 +35,7 @@ let _cached_decoder_for_DeferredTime: $.ASN1Decoder<DeferredTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeferredTime} The decoded data structure.
  */
-export function _decode_DeferredTime(el: _Element) {
+export function _decode_DeferredTime(el: _Element): DeferredTime {
     if (!_cached_decoder_for_DeferredTime) {
         _cached_decoder_for_DeferredTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_DeferredTime: $.ASN1Encoder<DeferredTime> | null = null;
 export function _encode_DeferredTime(
     value: DeferredTime,
     elGetter: $.ASN1Encoder<DeferredTime>
-) {
+): _Element {
     if (!_cached_encoder_for_DeferredTime) {
         _cached_encoder_for_DeferredTime = _encode_Time;
     }

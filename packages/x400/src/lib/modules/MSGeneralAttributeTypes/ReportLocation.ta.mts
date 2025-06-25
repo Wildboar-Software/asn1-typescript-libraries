@@ -41,7 +41,7 @@ let _cached_decoder_for_ReportLocation: $.ASN1Decoder<ReportLocation> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ReportLocation} The decoded data structure.
  */
-export function _decode_ReportLocation(el: _Element) {
+export function _decode_ReportLocation(el: _Element): ReportLocation {
     if (!_cached_decoder_for_ReportLocation) {
         _cached_decoder_for_ReportLocation = $._decode_inextensible_choice<ReportLocation>(
             {
@@ -75,7 +75,7 @@ let _cached_encoder_for_ReportLocation: $.ASN1Encoder<ReportLocation> | null = n
 export function _encode_ReportLocation(
     value: ReportLocation,
     elGetter: $.ASN1Encoder<ReportLocation>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportLocation) {
         _cached_encoder_for_ReportLocation = $._encode_choice<ReportLocation>(
             {

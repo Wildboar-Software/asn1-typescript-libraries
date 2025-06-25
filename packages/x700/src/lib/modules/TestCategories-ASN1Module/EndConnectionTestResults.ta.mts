@@ -35,7 +35,7 @@ let _cached_decoder_for_EndConnectionTestResults: $.ASN1Decoder<EndConnectionTes
  * @param {_Element} el The element being decoded.
  * @returns {EndConnectionTestResults} The decoded data structure.
  */
-export function _decode_EndConnectionTestResults(el: _Element) {
+export function _decode_EndConnectionTestResults(el: _Element): EndConnectionTestResults {
     if (!_cached_decoder_for_EndConnectionTestResults) {
         _cached_decoder_for_EndConnectionTestResults = _decode_ConnectionTestResults;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_EndConnectionTestResults: $.ASN1Encoder<EndConnectionTes
 export function _encode_EndConnectionTestResults(
     value: EndConnectionTestResults,
     elGetter: $.ASN1Encoder<EndConnectionTestResults>
-) {
+): _Element {
     if (!_cached_encoder_for_EndConnectionTestResults) {
         _cached_encoder_for_EndConnectionTestResults = _encode_ConnectionTestResults;
     }

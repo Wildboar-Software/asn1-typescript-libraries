@@ -258,7 +258,7 @@ let _cached_decoder_for_CVRequest: $.ASN1Decoder<CVRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CVRequest} The decoded data structure.
  */
-export function _decode_CVRequest(el: _Element) {
+export function _decode_CVRequest(el: _Element): CVRequest {
   if (!_cached_decoder_for_CVRequest) {
     _cached_decoder_for_CVRequest = function (el: _Element): CVRequest {
       let cvRequestVersion: OPTIONAL<INTEGER> =
@@ -357,7 +357,7 @@ let _cached_encoder_for_CVRequest: $.ASN1Encoder<CVRequest> | null = null;
 export function _encode_CVRequest(
   value: CVRequest,
   elGetter: $.ASN1Encoder<CVRequest>
-) {
+): _Element {
   if (!_cached_encoder_for_CVRequest) {
     _cached_encoder_for_CVRequest = function (
       value: CVRequest    ): _Element {

@@ -107,7 +107,7 @@ let _cached_decoder_for_LinkCallParams: $.ASN1Decoder<LinkCallParams> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {LinkCallParams} The decoded data structure.
  */
-export function _decode_LinkCallParams(el: _Element) {
+export function _decode_LinkCallParams(el: _Element): LinkCallParams {
   if (!_cached_decoder_for_LinkCallParams) {
     _cached_decoder_for_LinkCallParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_LinkCallParams: $.ASN1Encoder<LinkCallParams> | null = n
 export function _encode_LinkCallParams(
   value: LinkCallParams,
   elGetter: $.ASN1Encoder<LinkCallParams>
-) {
+): _Element {
   if (!_cached_encoder_for_LinkCallParams) {
     _cached_encoder_for_LinkCallParams = function (
       value: LinkCallParams    ): _Element {

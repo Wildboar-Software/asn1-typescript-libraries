@@ -162,23 +162,26 @@ export function _decode_EDIPartyName(el: _Element): EDIPartyName {
  * @returns {_Element} The EDIPartyName, encoded as an ASN.1 Element.
  */
 export function _encode_EDIPartyName(value: EDIPartyName): _Element {
-    const components: _Element[] = [
-        /* IF_ABSENT  */ value.nameAssigner === undefined
-            ? undefined
-            : $._encode_explicit(
-                    _TagClass.context,
-                    0,
-                    () => _encode_UnboundedDirectoryString,
-                    $.BER
-                )(value.nameAssigner, $.BER),
-        /* REQUIRED   */ $._encode_explicit(
+    const components: _Element[] = [];
+    if (value.nameAssigner !== undefined) {
+        components.push(
+            $._encode_explicit(
+                _TagClass.context,
+                0,
+                () => _encode_UnboundedDirectoryString,
+                $.BER
+            )(value.nameAssigner, $.BER)
+        );
+    }
+    components.push(
+        $._encode_explicit(
             _TagClass.context,
             1,
             () => _encode_UnboundedDirectoryString,
             $.BER
-        )(value.partyName, $.BER),
-        ...value._unrecognizedExtensionsList ?? [],
-    ];
+        )(value.partyName, $.BER)
+    );
+    components.push(...value._unrecognizedExtensionsList ?? []);
     return $._encodeSequence(components, $.BER);
 }
 

@@ -45,7 +45,7 @@ let _cached_decoder_for_Invoke_linkedId: $.ASN1Decoder<Invoke_linkedId> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Invoke_linkedId} The decoded data structure.
  */
-export function _decode_Invoke_linkedId(el: _Element) {
+export function _decode_Invoke_linkedId(el: _Element): Invoke_linkedId {
   if (!_cached_decoder_for_Invoke_linkedId) {
     _cached_decoder_for_Invoke_linkedId = $._decode_inextensible_choice<Invoke_linkedId>(
       {
@@ -76,7 +76,7 @@ let _cached_encoder_for_Invoke_linkedId: $.ASN1Encoder<Invoke_linkedId> | null =
 export function _encode_Invoke_linkedId(
   value: Invoke_linkedId,
   elGetter: $.ASN1Encoder<Invoke_linkedId>
-) {
+): _Element {
   if (!_cached_encoder_for_Invoke_linkedId) {
     _cached_encoder_for_Invoke_linkedId = $._encode_choice<Invoke_linkedId>(
       {

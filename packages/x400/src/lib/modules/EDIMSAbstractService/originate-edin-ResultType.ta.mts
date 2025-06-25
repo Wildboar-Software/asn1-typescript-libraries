@@ -121,7 +121,7 @@ let _cached_decoder_for_originate_edin_ResultType: $.ASN1Decoder<originate_edin_
  * @param {_Element} el The element being decoded.
  * @returns {originate_edin_ResultType} The decoded data structure.
  */
-export function _decode_originate_edin_ResultType(el: _Element) {
+export function _decode_originate_edin_ResultType(el: _Element): originate_edin_ResultType {
     if (!_cached_decoder_for_originate_edin_ResultType) {
         _cached_decoder_for_originate_edin_ResultType = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_originate_edin_ResultType: $.ASN1Encoder<originate_edin_
 export function _encode_originate_edin_ResultType(
     value: originate_edin_ResultType,
     elGetter: $.ASN1Encoder<originate_edin_ResultType>
-) {
+): _Element {
     if (!_cached_encoder_for_originate_edin_ResultType) {
         _cached_encoder_for_originate_edin_ResultType = function (
             value: originate_edin_ResultType        ): _Element {

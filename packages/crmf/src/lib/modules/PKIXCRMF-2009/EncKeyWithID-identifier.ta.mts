@@ -32,7 +32,7 @@ let _cached_decoder_for_EncKeyWithID_identifier: $.ASN1Decoder<EncKeyWithID_iden
  * @param {_Element} el The element being decoded.
  * @returns {EncKeyWithID_identifier} The decoded data structure.
  */
-export function _decode_EncKeyWithID_identifier(el: _Element) {
+export function _decode_EncKeyWithID_identifier(el: _Element): EncKeyWithID_identifier {
     if (!_cached_decoder_for_EncKeyWithID_identifier) {
         _cached_decoder_for_EncKeyWithID_identifier = $._decode_inextensible_choice<EncKeyWithID_identifier>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_EncKeyWithID_identifier: $.ASN1Encoder<EncKeyWithID_iden
 export function _encode_EncKeyWithID_identifier(
     value: EncKeyWithID_identifier,
     elGetter: $.ASN1Encoder<EncKeyWithID_identifier>
-) {
+): _Element {
     if (!_cached_encoder_for_EncKeyWithID_identifier) {
         _cached_encoder_for_EncKeyWithID_identifier = $._encode_choice<EncKeyWithID_identifier>(
             {

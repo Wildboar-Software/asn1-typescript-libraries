@@ -39,7 +39,7 @@ let _cached_decoder_for_KeyAgreementRecipientIdentifier: $.ASN1Decoder<KeyAgreem
  * @param {_Element} el The element being decoded.
  * @returns {KeyAgreementRecipientIdentifier} The decoded data structure.
  */
-export function _decode_KeyAgreementRecipientIdentifier(el: _Element) {
+export function _decode_KeyAgreementRecipientIdentifier(el: _Element): KeyAgreementRecipientIdentifier {
     if (!_cached_decoder_for_KeyAgreementRecipientIdentifier) {
         _cached_decoder_for_KeyAgreementRecipientIdentifier = $._decode_inextensible_choice<KeyAgreementRecipientIdentifier>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_KeyAgreementRecipientIdentifier: $.ASN1Encoder<KeyAgreem
 export function _encode_KeyAgreementRecipientIdentifier(
     value: KeyAgreementRecipientIdentifier,
     elGetter: $.ASN1Encoder<KeyAgreementRecipientIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyAgreementRecipientIdentifier) {
         _cached_encoder_for_KeyAgreementRecipientIdentifier = $._encode_choice<KeyAgreementRecipientIdentifier>(
             {

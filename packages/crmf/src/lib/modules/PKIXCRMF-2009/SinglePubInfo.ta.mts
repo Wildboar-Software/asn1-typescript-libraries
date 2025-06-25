@@ -121,7 +121,7 @@ let _cached_decoder_for_SinglePubInfo: $.ASN1Decoder<SinglePubInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {SinglePubInfo} The decoded data structure.
  */
-export function _decode_SinglePubInfo(el: _Element) {
+export function _decode_SinglePubInfo(el: _Element): SinglePubInfo {
     if (!_cached_decoder_for_SinglePubInfo) {
         _cached_decoder_for_SinglePubInfo = function (
             el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_SinglePubInfo: $.ASN1Encoder<SinglePubInfo> | null = nul
 export function _encode_SinglePubInfo(
     value: SinglePubInfo,
     elGetter: $.ASN1Encoder<SinglePubInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SinglePubInfo) {
         _cached_encoder_for_SinglePubInfo = function (
             value: SinglePubInfo        ): _Element {

@@ -195,7 +195,7 @@ let _cached_decoder_for_FunctionDefinition: $.ASN1Decoder<FunctionDefinition> | 
  * @param {_Element} el The element being decoded.
  * @returns {FunctionDefinition} The decoded data structure.
  */
-export function _decode_FunctionDefinition(el: _Element) {
+export function _decode_FunctionDefinition(el: _Element): FunctionDefinition {
     if (!_cached_decoder_for_FunctionDefinition) {
         _cached_decoder_for_FunctionDefinition = function (
             el: _Element
@@ -261,7 +261,7 @@ let _cached_encoder_for_FunctionDefinition: $.ASN1Encoder<FunctionDefinition> | 
 export function _encode_FunctionDefinition(
     value: FunctionDefinition,
     elGetter: $.ASN1Encoder<FunctionDefinition>
-) {
+): _Element {
     if (!_cached_encoder_for_FunctionDefinition) {
         _cached_encoder_for_FunctionDefinition = function (
             value: FunctionDefinition        ): _Element {

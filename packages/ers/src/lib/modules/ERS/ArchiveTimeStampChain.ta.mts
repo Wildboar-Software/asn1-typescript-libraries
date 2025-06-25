@@ -36,7 +36,7 @@ let _cached_decoder_for_ArchiveTimeStampChain: $.ASN1Decoder<ArchiveTimeStampCha
  * @returns {ArchiveTimeStampChain} The decoded data structure.
  */
 export
-function _decode_ArchiveTimeStampChain (el: _Element) {
+function _decode_ArchiveTimeStampChain (el: _Element): ArchiveTimeStampChain {
     if (!_cached_decoder_for_ArchiveTimeStampChain) { _cached_decoder_for_ArchiveTimeStampChain = $._decodeSequenceOf<ArchiveTimeStamp>(() => _decode_ArchiveTimeStamp); }
     return _cached_decoder_for_ArchiveTimeStampChain(el);
 }
@@ -53,7 +53,7 @@ let _cached_encoder_for_ArchiveTimeStampChain: $.ASN1Encoder<ArchiveTimeStampCha
  * @returns {_Element} The ArchiveTimeStampChain, encoded as an ASN.1 Element.
  */
 export
-function _encode_ArchiveTimeStampChain (value: ArchiveTimeStampChain, elGetter: $.ASN1Encoder<ArchiveTimeStampChain>) {
+function _encode_ArchiveTimeStampChain (value: ArchiveTimeStampChain, elGetter: $.ASN1Encoder<ArchiveTimeStampChain>): _Element {
     if (!_cached_encoder_for_ArchiveTimeStampChain) { _cached_encoder_for_ArchiveTimeStampChain = $._encodeSequenceOf<ArchiveTimeStamp>(() => _encode_ArchiveTimeStamp, $.DER); }
     return _cached_encoder_for_ArchiveTimeStampChain(value, elGetter);
 }

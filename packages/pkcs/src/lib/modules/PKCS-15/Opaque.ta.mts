@@ -29,7 +29,7 @@ let _cached_decoder_for_Opaque: $.ASN1Decoder<Opaque> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Opaque} The decoded data structure.
  */
-export function _decode_Opaque(el: _Element) {
+export function _decode_Opaque(el: _Element): Opaque {
     if (!_cached_decoder_for_Opaque) {
         _cached_decoder_for_Opaque = _get_decoder_for_ObjectValue<_Element>(
             $._decodeAny
@@ -49,7 +49,7 @@ let _cached_encoder_for_Opaque: $.ASN1Encoder<Opaque> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Opaque, encoded as an ASN.1 Element.
  */
-export function _encode_Opaque(value: Opaque, elGetter: $.ASN1Encoder<Opaque>) {
+export function _encode_Opaque(value: Opaque, elGetter: $.ASN1Encoder<Opaque>): _Element {
     if (!_cached_encoder_for_Opaque) {
         _cached_encoder_for_Opaque = _get_encoder_for_ObjectValue<_Element>(
             $._encodeAny

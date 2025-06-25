@@ -116,7 +116,7 @@ let _cached_decoder_for_NameValidationAlgParams: $.ASN1Decoder<NameValidationAlg
  * @param {_Element} el The element being decoded.
  * @returns {NameValidationAlgParams} The decoded data structure.
  */
-export function _decode_NameValidationAlgParams(el: _Element) {
+export function _decode_NameValidationAlgParams(el: _Element): NameValidationAlgParams {
   if (!_cached_decoder_for_NameValidationAlgParams) {
     _cached_decoder_for_NameValidationAlgParams = function (
       el: _Element
@@ -153,7 +153,7 @@ let _cached_encoder_for_NameValidationAlgParams: $.ASN1Encoder<NameValidationAlg
 export function _encode_NameValidationAlgParams(
   value: NameValidationAlgParams,
   elGetter: $.ASN1Encoder<NameValidationAlgParams>
-) {
+): _Element {
   if (!_cached_encoder_for_NameValidationAlgParams) {
     _cached_encoder_for_NameValidationAlgParams = function (
       value: NameValidationAlgParams    ): _Element {

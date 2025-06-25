@@ -46,7 +46,7 @@ let _cached_decoder_for_CompareResult_result: $.ASN1Decoder<CompareResult_result
  * @param {_Element} el The element being decoded.
  * @returns {CompareResult_result} The decoded data structure.
  */
-export function _decode_CompareResult_result(el: _Element) {
+export function _decode_CompareResult_result(el: _Element): CompareResult_result {
     if (!_cached_decoder_for_CompareResult_result) {
         _cached_decoder_for_CompareResult_result = $._decode_extensible_choice<CompareResult_result>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_CompareResult_result: $.ASN1Encoder<CompareResult_result
 export function _encode_CompareResult_result(
     value: CompareResult_result,
     elGetter: $.ASN1Encoder<CompareResult_result>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareResult_result) {
         _cached_encoder_for_CompareResult_result = $._encode_choice<CompareResult_result>(
             {

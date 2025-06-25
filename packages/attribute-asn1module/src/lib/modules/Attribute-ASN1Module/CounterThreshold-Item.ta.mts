@@ -119,7 +119,7 @@ let _cached_decoder_for_CounterThreshold_Item: $.ASN1Decoder<CounterThreshold_It
  * @returns {CounterThreshold_Item} The decoded data structure.
  */
 export
-function _decode_CounterThreshold_Item (el: _Element) {
+function _decode_CounterThreshold_Item (el: _Element): CounterThreshold_Item {
     if (!_cached_decoder_for_CounterThreshold_Item) { _cached_decoder_for_CounterThreshold_Item = function (el: _Element): CounterThreshold_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -154,7 +154,7 @@ let _cached_encoder_for_CounterThreshold_Item: $.ASN1Encoder<CounterThreshold_It
  * @returns {_Element} The CounterThreshold_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_CounterThreshold_Item (value: CounterThreshold_Item, elGetter: $.ASN1Encoder<CounterThreshold_Item>) {
+function _encode_CounterThreshold_Item (value: CounterThreshold_Item, elGetter: $.ASN1Encoder<CounterThreshold_Item>): _Element {
     if (!_cached_encoder_for_CounterThreshold_Item) { _cached_encoder_for_CounterThreshold_Item = function (value: CounterThreshold_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

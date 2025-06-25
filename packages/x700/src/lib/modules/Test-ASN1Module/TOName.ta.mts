@@ -41,7 +41,7 @@ let _cached_decoder_for_TOName: $.ASN1Decoder<TOName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TOName} The decoded data structure.
  */
-export function _decode_TOName(el: _Element) {
+export function _decode_TOName(el: _Element): TOName {
     if (!_cached_decoder_for_TOName) {
         _cached_decoder_for_TOName = $._decode_inextensible_choice<TOName>({
             'UNIVERSAL 5': ['conductorProvidedName', $._decodeNull],
@@ -62,7 +62,7 @@ let _cached_encoder_for_TOName: $.ASN1Encoder<TOName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TOName, encoded as an ASN.1 Element.
  */
-export function _encode_TOName(value: TOName, elGetter: $.ASN1Encoder<TOName>) {
+export function _encode_TOName(value: TOName, elGetter: $.ASN1Encoder<TOName>): _Element {
     if (!_cached_encoder_for_TOName) {
         _cached_encoder_for_TOName = $._encode_choice<TOName>(
             {

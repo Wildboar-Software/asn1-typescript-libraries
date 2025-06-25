@@ -56,7 +56,7 @@ let _cached_decoder_for_PDUs: $.ASN1Decoder<PDUs> | null = null;
  * @returns {PDUs} The decoded data structure.
  */
 export
-function _decode_PDUs (el: _Element) {
+function _decode_PDUs (el: _Element): PDUs {
     if (!_cached_decoder_for_PDUs) { _cached_decoder_for_PDUs = $._decode_inextensible_choice<PDUs>({
     "CONTEXT 0": [ "get_request", _decode_GetRequest_PDU ],
     "CONTEXT 1": [ "get_next_request", _decode_GetNextRequest_PDU ],
@@ -80,7 +80,7 @@ let _cached_encoder_for_PDUs: $.ASN1Encoder<PDUs> | null = null;
  * @returns {_Element} The PDUs, encoded as an ASN.1 Element.
  */
 export
-function _encode_PDUs (value: PDUs, elGetter: $.ASN1Encoder<PDUs>) {
+function _encode_PDUs (value: PDUs, elGetter: $.ASN1Encoder<PDUs>): _Element {
     if (!_cached_encoder_for_PDUs) { _cached_encoder_for_PDUs = $._encode_choice<PDUs>({
     "get_request": _encode_GetRequest_PDU,
     "get_next_request": _encode_GetNextRequest_PDU,

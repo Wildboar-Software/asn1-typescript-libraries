@@ -35,7 +35,7 @@ let _cached_decoder_for_ElectronicMailAddress: $.ASN1Decoder<ElectronicMailAddre
  * @param {_Element} el The element being decoded.
  * @returns {ElectronicMailAddress} The decoded data structure.
  */
-export function _decode_ElectronicMailAddress(el: _Element) {
+export function _decode_ElectronicMailAddress(el: _Element): ElectronicMailAddress {
     if (!_cached_decoder_for_ElectronicMailAddress) {
         _cached_decoder_for_ElectronicMailAddress = $._decodeSetOf<IA5String>(
             () => $._decodeIA5String
@@ -58,7 +58,7 @@ let _cached_encoder_for_ElectronicMailAddress: $.ASN1Encoder<ElectronicMailAddre
 export function _encode_ElectronicMailAddress(
     value: ElectronicMailAddress,
     elGetter: $.ASN1Encoder<ElectronicMailAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_ElectronicMailAddress) {
         _cached_encoder_for_ElectronicMailAddress = $._encodeSetOf<IA5String>(
             () => $._encodeIA5String,

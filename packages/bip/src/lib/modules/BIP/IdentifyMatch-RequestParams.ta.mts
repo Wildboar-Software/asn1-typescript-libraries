@@ -229,7 +229,7 @@ let _cached_decoder_for_IdentifyMatch_RequestParams: $.ASN1Decoder<IdentifyMatch
  * @param {_Element} el The element being decoded.
  * @returns {IdentifyMatch_RequestParams} The decoded data structure.
  */
-export function _decode_IdentifyMatch_RequestParams(el: _Element) {
+export function _decode_IdentifyMatch_RequestParams(el: _Element): IdentifyMatch_RequestParams {
   if (!_cached_decoder_for_IdentifyMatch_RequestParams) {
     _cached_decoder_for_IdentifyMatch_RequestParams = function (
       el: _Element
@@ -295,7 +295,7 @@ let _cached_encoder_for_IdentifyMatch_RequestParams: $.ASN1Encoder<IdentifyMatch
 export function _encode_IdentifyMatch_RequestParams(
   value: IdentifyMatch_RequestParams,
   elGetter: $.ASN1Encoder<IdentifyMatch_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_IdentifyMatch_RequestParams) {
     _cached_encoder_for_IdentifyMatch_RequestParams = function (
       value: IdentifyMatch_RequestParams    ): _Element {

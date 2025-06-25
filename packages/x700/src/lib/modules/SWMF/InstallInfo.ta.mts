@@ -119,7 +119,7 @@ let _cached_decoder_for_InstallInfo: $.ASN1Decoder<InstallInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {InstallInfo} The decoded data structure.
  */
-export function _decode_InstallInfo(el: _Element) {
+export function _decode_InstallInfo(el: _Element): InstallInfo {
     if (!_cached_decoder_for_InstallInfo) {
         _cached_decoder_for_InstallInfo = function (el: _Element): InstallInfo {
             const sequence: _Element[] = el.sequence;
@@ -158,7 +158,7 @@ let _cached_encoder_for_InstallInfo: $.ASN1Encoder<InstallInfo> | null = null;
 export function _encode_InstallInfo(
     value: InstallInfo,
     elGetter: $.ASN1Encoder<InstallInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_InstallInfo) {
         _cached_encoder_for_InstallInfo = function (
             value: InstallInfo        ): _Element {

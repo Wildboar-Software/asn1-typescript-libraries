@@ -186,7 +186,7 @@ let _cached_decoder_for_AARE_apdu: $.ASN1Decoder<AARE_apdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AARE_apdu} The decoded data structure.
  */
-export function _decode_AARE_apdu(el: _Element) {
+export function _decode_AARE_apdu(el: _Element): AARE_apdu {
     if (!_cached_decoder_for_AARE_apdu) {
         _cached_decoder_for_AARE_apdu = $._decode_implicit<AARE_apdu>(
             () =>
@@ -260,7 +260,7 @@ let _cached_encoder_for_AARE_apdu: $.ASN1Encoder<AARE_apdu> | null = null;
 export function _encode_AARE_apdu(
     value: AARE_apdu,
     elGetter: $.ASN1Encoder<AARE_apdu>
-) {
+): _Element {
     if (!_cached_encoder_for_AARE_apdu) {
         _cached_encoder_for_AARE_apdu = $._encode_implicit(
             _TagClass.application,

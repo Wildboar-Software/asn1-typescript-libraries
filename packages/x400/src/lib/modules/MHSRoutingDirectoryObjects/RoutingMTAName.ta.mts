@@ -35,7 +35,7 @@ let _cached_decoder_for_RoutingMTAName: $.ASN1Decoder<RoutingMTAName> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RoutingMTAName} The decoded data structure.
  */
-export function _decode_RoutingMTAName(el: _Element) {
+export function _decode_RoutingMTAName(el: _Element): RoutingMTAName {
     if (!_cached_decoder_for_RoutingMTAName) {
         _cached_decoder_for_RoutingMTAName = _decode_RoutingCollectiveName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RoutingMTAName: $.ASN1Encoder<RoutingMTAName> | null = n
 export function _encode_RoutingMTAName(
     value: RoutingMTAName,
     elGetter: $.ASN1Encoder<RoutingMTAName>
-) {
+): _Element {
     if (!_cached_encoder_for_RoutingMTAName) {
         _cached_encoder_for_RoutingMTAName = _encode_RoutingCollectiveName;
     }

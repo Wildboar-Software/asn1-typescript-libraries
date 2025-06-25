@@ -38,7 +38,7 @@ let _cached_decoder_for_QofConnectivityService: $.ASN1Decoder<QofConnectivitySer
  * @param {_Element} el The element being decoded.
  * @returns {QofConnectivityService} The decoded data structure.
  */
-export function _decode_QofConnectivityService(el: _Element) {
+export function _decode_QofConnectivityService(el: _Element): QofConnectivityService {
     if (!_cached_decoder_for_QofConnectivityService) {
         _cached_decoder_for_QofConnectivityService = _decode_ObjectInstance;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_QofConnectivityService: $.ASN1Encoder<QofConnectivitySer
 export function _encode_QofConnectivityService(
     value: QofConnectivityService,
     elGetter: $.ASN1Encoder<QofConnectivityService>
-) {
+): _Element {
     if (!_cached_encoder_for_QofConnectivityService) {
         _cached_encoder_for_QofConnectivityService = _encode_ObjectInstance;
     }

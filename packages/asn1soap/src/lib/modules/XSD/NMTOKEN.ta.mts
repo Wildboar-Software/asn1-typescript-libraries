@@ -36,7 +36,7 @@ let _cached_decoder_for_NMTOKEN: $.ASN1Decoder<NMTOKEN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NMTOKEN} The decoded data structure.
  */
-export function _decode_NMTOKEN(el: _Element) {
+export function _decode_NMTOKEN(el: _Element): NMTOKEN {
   if (!_cached_decoder_for_NMTOKEN) {
     _cached_decoder_for_NMTOKEN = _decode_Token;
   }
@@ -57,7 +57,7 @@ let _cached_encoder_for_NMTOKEN: $.ASN1Encoder<NMTOKEN> | null = null;
 export function _encode_NMTOKEN(
   value: NMTOKEN,
   elGetter: $.ASN1Encoder<NMTOKEN>
-) {
+): _Element {
   if (!_cached_encoder_for_NMTOKEN) {
     _cached_encoder_for_NMTOKEN = _encode_Token;
   }

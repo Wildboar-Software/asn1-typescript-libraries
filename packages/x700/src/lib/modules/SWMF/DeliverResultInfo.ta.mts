@@ -141,7 +141,7 @@ let _cached_decoder_for_DeliverResultInfo: $.ASN1Decoder<DeliverResultInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DeliverResultInfo} The decoded data structure.
  */
-export function _decode_DeliverResultInfo(el: _Element) {
+export function _decode_DeliverResultInfo(el: _Element): DeliverResultInfo {
     if (!_cached_decoder_for_DeliverResultInfo) {
         _cached_decoder_for_DeliverResultInfo = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_DeliverResultInfo: $.ASN1Encoder<DeliverResultInfo> | nu
 export function _encode_DeliverResultInfo(
     value: DeliverResultInfo,
     elGetter: $.ASN1Encoder<DeliverResultInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliverResultInfo) {
         _cached_encoder_for_DeliverResultInfo = function (
             value: DeliverResultInfo        ): _Element {

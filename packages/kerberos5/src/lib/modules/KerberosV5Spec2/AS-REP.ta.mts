@@ -38,7 +38,7 @@ let _cached_decoder_for_AS_REP: $.ASN1Decoder<AS_REP> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AS_REP} The decoded data structure.
  */
-export function _decode_AS_REP(el: _Element) {
+export function _decode_AS_REP(el: _Element): AS_REP {
   if (!_cached_decoder_for_AS_REP) {
     _cached_decoder_for_AS_REP = $._decode_implicit<AS_REP>(
       () => _decode_KDC_REP
@@ -58,7 +58,7 @@ let _cached_encoder_for_AS_REP: $.ASN1Encoder<AS_REP> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AS_REP, encoded as an ASN.1 Element.
  */
-export function _encode_AS_REP(value: AS_REP, elGetter: $.ASN1Encoder<AS_REP>) {
+export function _encode_AS_REP(value: AS_REP, elGetter: $.ASN1Encoder<AS_REP>): _Element {
   if (!_cached_encoder_for_AS_REP) {
     _cached_encoder_for_AS_REP = $._encode_implicit(
       _TagClass.application,

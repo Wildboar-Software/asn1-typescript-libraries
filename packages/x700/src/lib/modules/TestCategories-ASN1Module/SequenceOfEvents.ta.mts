@@ -208,7 +208,7 @@ let _cached_decoder_for_SequenceOfEvents: $.ASN1Decoder<SequenceOfEvents> | null
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfEvents} The decoded data structure.
  */
-export function _decode_SequenceOfEvents(el: _Element) {
+export function _decode_SequenceOfEvents(el: _Element): SequenceOfEvents {
     if (!_cached_decoder_for_SequenceOfEvents) {
         _cached_decoder_for_SequenceOfEvents = function (
             el: _Element
@@ -268,7 +268,7 @@ let _cached_encoder_for_SequenceOfEvents: $.ASN1Encoder<SequenceOfEvents> | null
 export function _encode_SequenceOfEvents(
     value: SequenceOfEvents,
     elGetter: $.ASN1Encoder<SequenceOfEvents>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfEvents) {
         _cached_encoder_for_SequenceOfEvents = function (
             value: SequenceOfEvents        ): _Element {

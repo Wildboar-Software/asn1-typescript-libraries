@@ -154,7 +154,7 @@ let _cached_decoder_for_PremisesAddress: $.ASN1Decoder<PremisesAddress> | null =
  * @param {_Element} el The element being decoded.
  * @returns {PremisesAddress} The decoded data structure.
  */
-export function _decode_PremisesAddress(el: _Element) {
+export function _decode_PremisesAddress(el: _Element): PremisesAddress {
     if (!_cached_decoder_for_PremisesAddress) {
         _cached_decoder_for_PremisesAddress = function (
             el: _Element
@@ -205,7 +205,7 @@ let _cached_encoder_for_PremisesAddress: $.ASN1Encoder<PremisesAddress> | null =
 export function _encode_PremisesAddress(
     value: PremisesAddress,
     elGetter: $.ASN1Encoder<PremisesAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PremisesAddress) {
         _cached_encoder_for_PremisesAddress = function (
             value: PremisesAddress        ): _Element {

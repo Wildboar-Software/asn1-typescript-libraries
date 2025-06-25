@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatorReturnAddress: $.ASN1Decoder<OriginatorReturnA
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorReturnAddress} The decoded data structure.
  */
-export function _decode_OriginatorReturnAddress(el: _Element) {
+export function _decode_OriginatorReturnAddress(el: _Element): OriginatorReturnAddress {
     if (!_cached_decoder_for_OriginatorReturnAddress) {
         _cached_decoder_for_OriginatorReturnAddress = _decode_ORAddress;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatorReturnAddress: $.ASN1Encoder<OriginatorReturnA
 export function _encode_OriginatorReturnAddress(
     value: OriginatorReturnAddress,
     elGetter: $.ASN1Encoder<OriginatorReturnAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorReturnAddress) {
         _cached_encoder_for_OriginatorReturnAddress = _encode_ORAddress;
     }

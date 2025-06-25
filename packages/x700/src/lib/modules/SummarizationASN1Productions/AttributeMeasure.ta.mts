@@ -161,7 +161,7 @@ let _cached_decoder_for_AttributeMeasure: $.ASN1Decoder<AttributeMeasure> | null
  * @param {_Element} el The element being decoded.
  * @returns {AttributeMeasure} The decoded data structure.
  */
-export function _decode_AttributeMeasure(el: _Element) {
+export function _decode_AttributeMeasure(el: _Element): AttributeMeasure {
     if (!_cached_decoder_for_AttributeMeasure) {
         _cached_decoder_for_AttributeMeasure = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_AttributeMeasure: $.ASN1Encoder<AttributeMeasure> | null
 export function _encode_AttributeMeasure(
     value: AttributeMeasure,
     elGetter: $.ASN1Encoder<AttributeMeasure>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeMeasure) {
         _cached_encoder_for_AttributeMeasure = function (
             value: AttributeMeasure        ): _Element {

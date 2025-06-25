@@ -53,7 +53,7 @@ let _cached_decoder_for_Associate_source_diagnostic: $.ASN1Decoder<Associate_sou
  * @param {_Element} el The element being decoded.
  * @returns {Associate_source_diagnostic} The decoded data structure.
  */
-export function _decode_Associate_source_diagnostic(el: _Element) {
+export function _decode_Associate_source_diagnostic(el: _Element): Associate_source_diagnostic {
     if (!_cached_decoder_for_Associate_source_diagnostic) {
         _cached_decoder_for_Associate_source_diagnostic = $._decode_inextensible_choice<Associate_source_diagnostic>(
             {
@@ -89,7 +89,7 @@ let _cached_encoder_for_Associate_source_diagnostic: $.ASN1Encoder<Associate_sou
 export function _encode_Associate_source_diagnostic(
     value: Associate_source_diagnostic,
     elGetter: $.ASN1Encoder<Associate_source_diagnostic>
-) {
+): _Element {
     if (!_cached_encoder_for_Associate_source_diagnostic) {
         _cached_encoder_for_Associate_source_diagnostic = $._encode_choice<Associate_source_diagnostic>(
             {

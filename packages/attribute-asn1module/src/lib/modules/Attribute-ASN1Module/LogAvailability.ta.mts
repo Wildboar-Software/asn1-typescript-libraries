@@ -33,7 +33,7 @@ let _cached_decoder_for_LogAvailability: $.ASN1Decoder<LogAvailability> | null =
  * @returns {LogAvailability} The decoded data structure.
  */
 export
-function _decode_LogAvailability (el: _Element) {
+function _decode_LogAvailability (el: _Element): LogAvailability {
     if (!_cached_decoder_for_LogAvailability) { _cached_decoder_for_LogAvailability = _decode_AvailabilityStatus; }
     return _cached_decoder_for_LogAvailability(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_LogAvailability: $.ASN1Encoder<LogAvailability> | null =
  * @returns {_Element} The LogAvailability, encoded as an ASN.1 Element.
  */
 export
-function _encode_LogAvailability (value: LogAvailability, elGetter: $.ASN1Encoder<LogAvailability>) {
+function _encode_LogAvailability (value: LogAvailability, elGetter: $.ASN1Encoder<LogAvailability>): _Element {
     if (!_cached_encoder_for_LogAvailability) { _cached_encoder_for_LogAvailability = _encode_AvailabilityStatus; }
     return _cached_encoder_for_LogAvailability(value, elGetter);
 }

@@ -49,7 +49,7 @@ let _cached_decoder_for_TONotCreated: $.ASN1Decoder<TONotCreated> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TONotCreated} The decoded data structure.
  */
-export function _decode_TONotCreated(el: _Element) {
+export function _decode_TONotCreated(el: _Element): TONotCreated {
     if (!_cached_decoder_for_TONotCreated) {
         _cached_decoder_for_TONotCreated = $._decode_inextensible_choice<TONotCreated>(
             {
@@ -76,7 +76,7 @@ let _cached_encoder_for_TONotCreated: $.ASN1Encoder<TONotCreated> | null = null;
 export function _encode_TONotCreated(
     value: TONotCreated,
     elGetter: $.ASN1Encoder<TONotCreated>
-) {
+): _Element {
     if (!_cached_encoder_for_TONotCreated) {
         _cached_encoder_for_TONotCreated = $._encode_choice<TONotCreated>(
             {

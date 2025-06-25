@@ -124,7 +124,7 @@ let _cached_decoder_for_POPOSigningKeyInput: $.ASN1Decoder<POPOSigningKeyInput> 
  * @param {_Element} el The element being decoded.
  * @returns {POPOSigningKeyInput} The decoded data structure.
  */
-export function _decode_POPOSigningKeyInput(el: _Element) {
+export function _decode_POPOSigningKeyInput(el: _Element): POPOSigningKeyInput {
     if (!_cached_decoder_for_POPOSigningKeyInput) {
         _cached_decoder_for_POPOSigningKeyInput = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_POPOSigningKeyInput: $.ASN1Encoder<POPOSigningKeyInput> 
 export function _encode_POPOSigningKeyInput(
     value: POPOSigningKeyInput,
     elGetter: $.ASN1Encoder<POPOSigningKeyInput>
-) {
+): _Element {
     if (!_cached_encoder_for_POPOSigningKeyInput) {
         _cached_encoder_for_POPOSigningKeyInput = function (
             value: POPOSigningKeyInput        ): _Element {

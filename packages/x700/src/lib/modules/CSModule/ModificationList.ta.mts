@@ -41,7 +41,7 @@ let _cached_decoder_for_ModificationList: $.ASN1Decoder<ModificationList> | null
  * @param {_Element} el The element being decoded.
  * @returns {ModificationList} The decoded data structure.
  */
-export function _decode_ModificationList(el: _Element) {
+export function _decode_ModificationList(el: _Element): ModificationList {
     if (!_cached_decoder_for_ModificationList) {
         _cached_decoder_for_ModificationList = $._decodeSetOf<ModificationList_Item>(
             () => _decode_ModificationList_Item
@@ -62,7 +62,7 @@ let _cached_encoder_for_ModificationList: $.ASN1Encoder<ModificationList> | null
 export function _encode_ModificationList(
     value: ModificationList,
     elGetter: $.ASN1Encoder<ModificationList>
-) {
+): _Element {
     if (!_cached_encoder_for_ModificationList) {
         _cached_encoder_for_ModificationList = $._encodeSetOf<ModificationList_Item>(
             () => _encode_ModificationList_Item,

@@ -38,7 +38,7 @@ let _cached_decoder_for_RunningBSPLocalReferences: $.ASN1Decoder<RunningBSPLocal
  * @param {_Element} el The element being decoded.
  * @returns {RunningBSPLocalReferences} The decoded data structure.
  */
-export function _decode_RunningBSPLocalReferences(el: _Element) {
+export function _decode_RunningBSPLocalReferences(el: _Element): RunningBSPLocalReferences {
   if (!_cached_decoder_for_RunningBSPLocalReferences) {
     _cached_decoder_for_RunningBSPLocalReferences = $._decodeSetOf<RunningBSPLocalReference>(
       () => _decode_RunningBSPLocalReference
@@ -61,7 +61,7 @@ let _cached_encoder_for_RunningBSPLocalReferences: $.ASN1Encoder<RunningBSPLocal
 export function _encode_RunningBSPLocalReferences(
   value: RunningBSPLocalReferences,
   elGetter: $.ASN1Encoder<RunningBSPLocalReferences>
-) {
+): _Element {
   if (!_cached_encoder_for_RunningBSPLocalReferences) {
     _cached_encoder_for_RunningBSPLocalReferences = $._encodeSetOf<RunningBSPLocalReference>(
       () => _encode_RunningBSPLocalReference,

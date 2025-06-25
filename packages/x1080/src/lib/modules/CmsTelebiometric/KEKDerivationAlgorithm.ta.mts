@@ -124,7 +124,7 @@ let _cached_decoder_for_KEKDerivationAlgorithm: $.ASN1Decoder<KEKDerivationAlgor
  * @param {_Element} el The element being decoded.
  * @returns {KEKDerivationAlgorithm} The decoded data structure.
  */
-export function _decode_KEKDerivationAlgorithm(el: _Element) {
+export function _decode_KEKDerivationAlgorithm(el: _Element): KEKDerivationAlgorithm {
     if (!_cached_decoder_for_KEKDerivationAlgorithm) {
         _cached_decoder_for_KEKDerivationAlgorithm = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_KEKDerivationAlgorithm: $.ASN1Encoder<KEKDerivationAlgor
 export function _encode_KEKDerivationAlgorithm(
     value: KEKDerivationAlgorithm,
     elGetter: $.ASN1Encoder<KEKDerivationAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_KEKDerivationAlgorithm) {
         _cached_encoder_for_KEKDerivationAlgorithm = function (
             value: KEKDerivationAlgorithm        ): _Element {

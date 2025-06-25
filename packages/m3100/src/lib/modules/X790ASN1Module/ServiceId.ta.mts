@@ -38,7 +38,7 @@ let _cached_decoder_for_ServiceId: $.ASN1Decoder<ServiceId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ServiceId} The decoded data structure.
  */
-export function _decode_ServiceId(el: _Element) {
+export function _decode_ServiceId(el: _Element): ServiceId {
     if (!_cached_decoder_for_ServiceId) {
         _cached_decoder_for_ServiceId = _decode_NameType;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ServiceId: $.ASN1Encoder<ServiceId> | null = null;
 export function _encode_ServiceId(
     value: ServiceId,
     elGetter: $.ASN1Encoder<ServiceId>
-) {
+): _Element {
     if (!_cached_encoder_for_ServiceId) {
         _cached_encoder_for_ServiceId = _encode_NameType;
     }

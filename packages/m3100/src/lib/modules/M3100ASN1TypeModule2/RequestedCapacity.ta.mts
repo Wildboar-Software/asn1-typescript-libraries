@@ -48,7 +48,7 @@ let _cached_decoder_for_RequestedCapacity: $.ASN1Decoder<RequestedCapacity> | nu
  * @param {_Element} el The element being decoded.
  * @returns {RequestedCapacity} The decoded data structure.
  */
-export function _decode_RequestedCapacity(el: _Element) {
+export function _decode_RequestedCapacity(el: _Element): RequestedCapacity {
     if (!_cached_decoder_for_RequestedCapacity) {
         _cached_decoder_for_RequestedCapacity = $._decode_inextensible_choice<RequestedCapacity>(
             {
@@ -82,7 +82,7 @@ let _cached_encoder_for_RequestedCapacity: $.ASN1Encoder<RequestedCapacity> | nu
 export function _encode_RequestedCapacity(
     value: RequestedCapacity,
     elGetter: $.ASN1Encoder<RequestedCapacity>
-) {
+): _Element {
     if (!_cached_encoder_for_RequestedCapacity) {
         _cached_encoder_for_RequestedCapacity = $._encode_choice<RequestedCapacity>(
             {

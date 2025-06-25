@@ -121,7 +121,7 @@ let _cached_decoder_for_TransitedEncoding: $.ASN1Decoder<TransitedEncoding> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TransitedEncoding} The decoded data structure.
  */
-export function _decode_TransitedEncoding(el: _Element) {
+export function _decode_TransitedEncoding(el: _Element): TransitedEncoding {
   if (!_cached_decoder_for_TransitedEncoding) {
     _cached_decoder_for_TransitedEncoding = function (
       el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_TransitedEncoding: $.ASN1Encoder<TransitedEncoding> | nu
 export function _encode_TransitedEncoding(
   value: TransitedEncoding,
   elGetter: $.ASN1Encoder<TransitedEncoding>
-) {
+): _Element {
   if (!_cached_encoder_for_TransitedEncoding) {
     _cached_encoder_for_TransitedEncoding = function (
       value: TransitedEncoding    ): _Element {

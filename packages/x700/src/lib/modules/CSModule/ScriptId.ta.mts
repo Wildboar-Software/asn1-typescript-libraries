@@ -35,7 +35,7 @@ let _cached_decoder_for_ScriptId: $.ASN1Decoder<ScriptId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ScriptId} The decoded data structure.
  */
-export function _decode_ScriptId(el: _Element) {
+export function _decode_ScriptId(el: _Element): ScriptId {
     if (!_cached_decoder_for_ScriptId) {
         _cached_decoder_for_ScriptId = _decode_ObjectInstance;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ScriptId: $.ASN1Encoder<ScriptId> | null = null;
 export function _encode_ScriptId(
     value: ScriptId,
     elGetter: $.ASN1Encoder<ScriptId>
-) {
+): _Element {
     if (!_cached_encoder_for_ScriptId) {
         _cached_encoder_for_ScriptId = _encode_ObjectInstance;
     }

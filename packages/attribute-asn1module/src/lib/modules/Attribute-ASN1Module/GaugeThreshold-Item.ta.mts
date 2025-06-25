@@ -108,7 +108,7 @@ let _cached_decoder_for_GaugeThreshold_Item: $.ASN1Decoder<GaugeThreshold_Item> 
  * @returns {GaugeThreshold_Item} The decoded data structure.
  */
 export
-function _decode_GaugeThreshold_Item (el: _Element) {
+function _decode_GaugeThreshold_Item (el: _Element): GaugeThreshold_Item {
     if (!_cached_decoder_for_GaugeThreshold_Item) { _cached_decoder_for_GaugeThreshold_Item = function (el: _Element): GaugeThreshold_Item {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -139,7 +139,7 @@ let _cached_encoder_for_GaugeThreshold_Item: $.ASN1Encoder<GaugeThreshold_Item> 
  * @returns {_Element} The GaugeThreshold_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_GaugeThreshold_Item (value: GaugeThreshold_Item, elGetter: $.ASN1Encoder<GaugeThreshold_Item>) {
+function _encode_GaugeThreshold_Item (value: GaugeThreshold_Item, elGetter: $.ASN1Encoder<GaugeThreshold_Item>): _Element {
     if (!_cached_encoder_for_GaugeThreshold_Item) { _cached_encoder_for_GaugeThreshold_Item = function (value: GaugeThreshold_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

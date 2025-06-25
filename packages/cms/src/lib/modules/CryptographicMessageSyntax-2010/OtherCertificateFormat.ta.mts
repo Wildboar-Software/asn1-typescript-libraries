@@ -107,7 +107,7 @@ let _cached_decoder_for_OtherCertificateFormat: $.ASN1Decoder<OtherCertificateFo
  * @param {_Element} el The element being decoded.
  * @returns {OtherCertificateFormat} The decoded data structure.
  */
-export function _decode_OtherCertificateFormat(el: _Element) {
+export function _decode_OtherCertificateFormat(el: _Element): OtherCertificateFormat {
     if (!_cached_decoder_for_OtherCertificateFormat) {
         _cached_decoder_for_OtherCertificateFormat = function (
             el: _Element
@@ -146,7 +146,7 @@ let _cached_encoder_for_OtherCertificateFormat: $.ASN1Encoder<OtherCertificateFo
 export function _encode_OtherCertificateFormat(
     value: OtherCertificateFormat,
     elGetter: $.ASN1Encoder<OtherCertificateFormat>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherCertificateFormat) {
         _cached_encoder_for_OtherCertificateFormat = function (
             value: OtherCertificateFormat        ): _Element {

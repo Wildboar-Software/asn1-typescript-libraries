@@ -35,7 +35,7 @@ let _cached_decoder_for_ContentsTypeParameter: $.ASN1Decoder<ContentsTypeParamet
  * @param {_Element} el The element being decoded.
  * @returns {ContentsTypeParameter} The decoded data structure.
  */
-export function _decode_ContentsTypeParameter(el: _Element) {
+export function _decode_ContentsTypeParameter(el: _Element): ContentsTypeParameter {
     if (!_cached_decoder_for_ContentsTypeParameter) {
         _cached_decoder_for_ContentsTypeParameter = _decode_Contents_Type_Attribute;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ContentsTypeParameter: $.ASN1Encoder<ContentsTypeParamet
 export function _encode_ContentsTypeParameter(
     value: ContentsTypeParameter,
     elGetter: $.ASN1Encoder<ContentsTypeParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentsTypeParameter) {
         _cached_encoder_for_ContentsTypeParameter = _encode_Contents_Type_Attribute;
     }

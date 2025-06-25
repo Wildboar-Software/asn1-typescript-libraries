@@ -35,7 +35,7 @@ let _cached_decoder_for_ResponseTimeout: $.ASN1Decoder<ResponseTimeout> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ResponseTimeout} The decoded data structure.
  */
-export function _decode_ResponseTimeout(el: _Element) {
+export function _decode_ResponseTimeout(el: _Element): ResponseTimeout {
     if (!_cached_decoder_for_ResponseTimeout) {
         _cached_decoder_for_ResponseTimeout = _decode_TimeoutPeriod;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ResponseTimeout: $.ASN1Encoder<ResponseTimeout> | null =
 export function _encode_ResponseTimeout(
     value: ResponseTimeout,
     elGetter: $.ASN1Encoder<ResponseTimeout>
-) {
+): _Element {
     if (!_cached_encoder_for_ResponseTimeout) {
         _cached_encoder_for_ResponseTimeout = _encode_TimeoutPeriod;
     }

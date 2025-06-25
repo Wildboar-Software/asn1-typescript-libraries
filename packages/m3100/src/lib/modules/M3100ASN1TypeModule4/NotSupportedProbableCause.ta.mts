@@ -38,7 +38,7 @@ let _cached_decoder_for_NotSupportedProbableCause: $.ASN1Decoder<NotSupportedPro
  * @param {_Element} el The element being decoded.
  * @returns {NotSupportedProbableCause} The decoded data structure.
  */
-export function _decode_NotSupportedProbableCause(el: _Element) {
+export function _decode_NotSupportedProbableCause(el: _Element): NotSupportedProbableCause {
     if (!_cached_decoder_for_NotSupportedProbableCause) {
         _cached_decoder_for_NotSupportedProbableCause = $._decodeSetOf<ProbableCause>(
             () => _decode_ProbableCause
@@ -61,7 +61,7 @@ let _cached_encoder_for_NotSupportedProbableCause: $.ASN1Encoder<NotSupportedPro
 export function _encode_NotSupportedProbableCause(
     value: NotSupportedProbableCause,
     elGetter: $.ASN1Encoder<NotSupportedProbableCause>
-) {
+): _Element {
     if (!_cached_encoder_for_NotSupportedProbableCause) {
         _cached_encoder_for_NotSupportedProbableCause = $._encodeSetOf<ProbableCause>(
             () => _encode_ProbableCause,

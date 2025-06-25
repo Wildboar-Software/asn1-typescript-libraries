@@ -54,7 +54,7 @@ let _cached_decoder_for_BioAPI_BIR_SUBTYPE: $.ASN1Decoder<BioAPI_BIR_SUBTYPE> | 
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_SUBTYPE} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_SUBTYPE(el: _Element) {
+export function _decode_BioAPI_BIR_SUBTYPE(el: _Element): BioAPI_BIR_SUBTYPE {
   if (!_cached_decoder_for_BioAPI_BIR_SUBTYPE) {
     _cached_decoder_for_BioAPI_BIR_SUBTYPE = $._decode_inextensible_choice<BioAPI_BIR_SUBTYPE>(
       {
@@ -83,7 +83,7 @@ let _cached_encoder_for_BioAPI_BIR_SUBTYPE: $.ASN1Encoder<BioAPI_BIR_SUBTYPE> | 
 export function _encode_BioAPI_BIR_SUBTYPE(
   value: BioAPI_BIR_SUBTYPE,
   elGetter: $.ASN1Encoder<BioAPI_BIR_SUBTYPE>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_SUBTYPE) {
     _cached_encoder_for_BioAPI_BIR_SUBTYPE = $._encode_choice<BioAPI_BIR_SUBTYPE>(
       {

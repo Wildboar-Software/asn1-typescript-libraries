@@ -102,7 +102,7 @@ let _cached_decoder_for_VideotexParameters: $.ASN1Decoder<VideotexParameters> | 
  * @param {_Element} el The element being decoded.
  * @returns {VideotexParameters} The decoded data structure.
  */
-export function _decode_VideotexParameters(el: _Element) {
+export function _decode_VideotexParameters(el: _Element): VideotexParameters {
     if (!_cached_decoder_for_VideotexParameters) {
         _cached_decoder_for_VideotexParameters = function (
             el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_VideotexParameters: $.ASN1Encoder<VideotexParameters> | 
 export function _encode_VideotexParameters(
     value: VideotexParameters,
     elGetter: $.ASN1Encoder<VideotexParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_VideotexParameters) {
         _cached_encoder_for_VideotexParameters = function (
             value: VideotexParameters        ): _Element {

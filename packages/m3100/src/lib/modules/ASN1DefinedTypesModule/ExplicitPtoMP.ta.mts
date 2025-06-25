@@ -115,7 +115,7 @@ let _cached_decoder_for_ExplicitPtoMP: $.ASN1Decoder<ExplicitPtoMP> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ExplicitPtoMP} The decoded data structure.
  */
-export function _decode_ExplicitPtoMP(el: _Element) {
+export function _decode_ExplicitPtoMP(el: _Element): ExplicitPtoMP {
     if (!_cached_decoder_for_ExplicitPtoMP) {
         _cached_decoder_for_ExplicitPtoMP = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_ExplicitPtoMP: $.ASN1Encoder<ExplicitPtoMP> | null = nul
 export function _encode_ExplicitPtoMP(
     value: ExplicitPtoMP,
     elGetter: $.ASN1Encoder<ExplicitPtoMP>
-) {
+): _Element {
     if (!_cached_encoder_for_ExplicitPtoMP) {
         _cached_encoder_for_ExplicitPtoMP = function (
             value: ExplicitPtoMP        ): _Element {

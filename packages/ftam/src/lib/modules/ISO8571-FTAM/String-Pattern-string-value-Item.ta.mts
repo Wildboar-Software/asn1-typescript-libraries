@@ -40,7 +40,7 @@ let _cached_decoder_for_String_Pattern_string_value_Item: $.ASN1Decoder<String_P
  * @param {_Element} el The element being decoded.
  * @returns {String_Pattern_string_value_Item} The decoded data structure.
  */
-export function _decode_String_Pattern_string_value_Item(el: _Element) {
+export function _decode_String_Pattern_string_value_Item(el: _Element): String_Pattern_string_value_Item {
   if (!_cached_decoder_for_String_Pattern_string_value_Item) {
     _cached_decoder_for_String_Pattern_string_value_Item = $._decode_inextensible_choice<String_Pattern_string_value_Item>(
       {
@@ -76,7 +76,7 @@ let _cached_encoder_for_String_Pattern_string_value_Item: $.ASN1Encoder<String_P
 export function _encode_String_Pattern_string_value_Item(
   value: String_Pattern_string_value_Item,
   elGetter: $.ASN1Encoder<String_Pattern_string_value_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_String_Pattern_string_value_Item) {
     _cached_encoder_for_String_Pattern_string_value_Item = $._encode_choice<String_Pattern_string_value_Item>(
       {

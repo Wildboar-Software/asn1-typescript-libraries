@@ -136,7 +136,7 @@ let _cached_decoder_for_ClockTime: $.ASN1Decoder<ClockTime> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ClockTime} The decoded data structure.
  */
-export function _decode_ClockTime(el: _Element) {
+export function _decode_ClockTime(el: _Element): ClockTime {
     if (!_cached_decoder_for_ClockTime) {
         _cached_decoder_for_ClockTime = function (el: _Element): ClockTime {
             const sequence: _Element[] = el.sequence;
@@ -174,7 +174,7 @@ let _cached_encoder_for_ClockTime: $.ASN1Encoder<ClockTime> | null = null;
 export function _encode_ClockTime(
     value: ClockTime,
     elGetter: $.ASN1Encoder<ClockTime>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockTime) {
         _cached_encoder_for_ClockTime = function (
             value: ClockTime        ): _Element {

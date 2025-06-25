@@ -35,7 +35,7 @@ let _cached_decoder_for_HeadingExtensionsField: $.ASN1Decoder<HeadingExtensionsF
  * @param {_Element} el The element being decoded.
  * @returns {HeadingExtensionsField} The decoded data structure.
  */
-export function _decode_HeadingExtensionsField(el: _Element) {
+export function _decode_HeadingExtensionsField(el: _Element): HeadingExtensionsField {
     if (!_cached_decoder_for_HeadingExtensionsField) {
         _cached_decoder_for_HeadingExtensionsField = $._decodeSetOf<HeadingExtensionsSubField>(
             () => _decode_HeadingExtensionsSubField
@@ -56,7 +56,7 @@ let _cached_encoder_for_HeadingExtensionsField: $.ASN1Encoder<HeadingExtensionsF
 export function _encode_HeadingExtensionsField(
     value: HeadingExtensionsField,
     elGetter: $.ASN1Encoder<HeadingExtensionsField>
-) {
+): _Element {
     if (!_cached_encoder_for_HeadingExtensionsField) {
         _cached_encoder_for_HeadingExtensionsField = $._encodeSetOf<HeadingExtensionsSubField>(
             () => _encode_HeadingExtensionsSubField,

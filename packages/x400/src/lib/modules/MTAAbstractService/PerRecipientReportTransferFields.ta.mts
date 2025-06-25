@@ -229,7 +229,7 @@ let _cached_decoder_for_PerRecipientReportTransferFields: $.ASN1Decoder<PerRecip
  * @param {_Element} el The element being decoded.
  * @returns {PerRecipientReportTransferFields} The decoded data structure.
  */
-export function _decode_PerRecipientReportTransferFields(el: _Element) {
+export function _decode_PerRecipientReportTransferFields(el: _Element): PerRecipientReportTransferFields {
     if (!_cached_decoder_for_PerRecipientReportTransferFields) {
         _cached_decoder_for_PerRecipientReportTransferFields = function (
             el: _Element
@@ -319,7 +319,7 @@ let _cached_encoder_for_PerRecipientReportTransferFields: $.ASN1Encoder<PerRecip
 export function _encode_PerRecipientReportTransferFields(
     value: PerRecipientReportTransferFields,
     elGetter: $.ASN1Encoder<PerRecipientReportTransferFields>
-) {
+): _Element {
     if (!_cached_encoder_for_PerRecipientReportTransferFields) {
         _cached_encoder_for_PerRecipientReportTransferFields = function (
             value: PerRecipientReportTransferFields        ): _Element {

@@ -112,7 +112,7 @@ let _cached_decoder_for_ECPKRestrictions: $.ASN1Decoder<ECPKRestrictions> | null
  * @returns {ECPKRestrictions} The decoded data structure.
  */
 export
-function _decode_ECPKRestrictions (el: _Element) {
+function _decode_ECPKRestrictions (el: _Element): ECPKRestrictions {
     if (!_cached_decoder_for_ECPKRestrictions) { _cached_decoder_for_ECPKRestrictions = function (el: _Element): ECPKRestrictions {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -143,7 +143,7 @@ let _cached_encoder_for_ECPKRestrictions: $.ASN1Encoder<ECPKRestrictions> | null
  * @returns {_Element} The ECPKRestrictions, encoded as an ASN.1 Element.
  */
 export
-function _encode_ECPKRestrictions (value: ECPKRestrictions, elGetter: $.ASN1Encoder<ECPKRestrictions>) {
+function _encode_ECPKRestrictions (value: ECPKRestrictions, elGetter: $.ASN1Encoder<ECPKRestrictions>): _Element {
     if (!_cached_encoder_for_ECPKRestrictions) { _cached_encoder_for_ECPKRestrictions = function (value: ECPKRestrictions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

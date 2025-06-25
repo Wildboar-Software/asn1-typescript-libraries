@@ -124,7 +124,7 @@ let _cached_decoder_for_ProtectedXC: $.ASN1Decoder<ProtectedXC> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ProtectedXC} The decoded data structure.
  */
-export function _decode_ProtectedXC(el: _Element) {
+export function _decode_ProtectedXC(el: _Element): ProtectedXC {
     if (!_cached_decoder_for_ProtectedXC) {
         _cached_decoder_for_ProtectedXC = function (el: _Element): ProtectedXC {
             const sequence: _Element[] = el.sequence;
@@ -164,7 +164,7 @@ let _cached_encoder_for_ProtectedXC: $.ASN1Encoder<ProtectedXC> | null = null;
 export function _encode_ProtectedXC(
     value: ProtectedXC,
     elGetter: $.ASN1Encoder<ProtectedXC>
-) {
+): _Element {
     if (!_cached_encoder_for_ProtectedXC) {
         _cached_encoder_for_ProtectedXC = function (
             value: ProtectedXC        ): _Element {

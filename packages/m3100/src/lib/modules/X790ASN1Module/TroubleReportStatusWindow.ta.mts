@@ -38,7 +38,7 @@ let _cached_decoder_for_TroubleReportStatusWindow: $.ASN1Decoder<TroubleReportSt
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportStatusWindow} The decoded data structure.
  */
-export function _decode_TroubleReportStatusWindow(el: _Element) {
+export function _decode_TroubleReportStatusWindow(el: _Element): TroubleReportStatusWindow {
     if (!_cached_decoder_for_TroubleReportStatusWindow) {
         _cached_decoder_for_TroubleReportStatusWindow = _decode_TimeInterval;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TroubleReportStatusWindow: $.ASN1Encoder<TroubleReportSt
 export function _encode_TroubleReportStatusWindow(
     value: TroubleReportStatusWindow,
     elGetter: $.ASN1Encoder<TroubleReportStatusWindow>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportStatusWindow) {
         _cached_encoder_for_TroubleReportStatusWindow = _encode_TimeInterval;
     }

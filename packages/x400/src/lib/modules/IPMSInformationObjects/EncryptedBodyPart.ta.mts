@@ -119,7 +119,7 @@ let _cached_decoder_for_EncryptedBodyPart: $.ASN1Decoder<EncryptedBodyPart> | nu
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedBodyPart} The decoded data structure.
  */
-export function _decode_EncryptedBodyPart(el: _Element) {
+export function _decode_EncryptedBodyPart(el: _Element): EncryptedBodyPart {
     if (!_cached_decoder_for_EncryptedBodyPart) {
         _cached_decoder_for_EncryptedBodyPart = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_EncryptedBodyPart: $.ASN1Encoder<EncryptedBodyPart> | nu
 export function _encode_EncryptedBodyPart(
     value: EncryptedBodyPart,
     elGetter: $.ASN1Encoder<EncryptedBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedBodyPart) {
         _cached_encoder_for_EncryptedBodyPart = function (
             value: EncryptedBodyPart        ): _Element {

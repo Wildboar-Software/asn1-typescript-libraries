@@ -141,7 +141,7 @@ let _cached_decoder_for_GlobalDomainIdentifier: $.ASN1Decoder<GlobalDomainIdenti
  * @param {_Element} el The element being decoded.
  * @returns {GlobalDomainIdentifier} The decoded data structure.
  */
-export function _decode_GlobalDomainIdentifier(el: _Element) {
+export function _decode_GlobalDomainIdentifier(el: _Element): GlobalDomainIdentifier {
     if (!_cached_decoder_for_GlobalDomainIdentifier) {
         _cached_decoder_for_GlobalDomainIdentifier = $._decode_implicit<GlobalDomainIdentifier>(
             () =>
@@ -195,7 +195,7 @@ let _cached_encoder_for_GlobalDomainIdentifier: $.ASN1Encoder<GlobalDomainIdenti
 export function _encode_GlobalDomainIdentifier(
     value: GlobalDomainIdentifier,
     elGetter: $.ASN1Encoder<GlobalDomainIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_GlobalDomainIdentifier) {
         _cached_encoder_for_GlobalDomainIdentifier = $._encode_implicit(
             _TagClass.application,

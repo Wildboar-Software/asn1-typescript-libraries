@@ -240,7 +240,7 @@ let _cached_decoder_for_Identify_RequestParams: $.ASN1Decoder<Identify_RequestPa
  * @param {_Element} el The element being decoded.
  * @returns {Identify_RequestParams} The decoded data structure.
  */
-export function _decode_Identify_RequestParams(el: _Element) {
+export function _decode_Identify_RequestParams(el: _Element): Identify_RequestParams {
   if (!_cached_decoder_for_Identify_RequestParams) {
     _cached_decoder_for_Identify_RequestParams = function (
       el: _Element
@@ -310,7 +310,7 @@ let _cached_encoder_for_Identify_RequestParams: $.ASN1Encoder<Identify_RequestPa
 export function _encode_Identify_RequestParams(
   value: Identify_RequestParams,
   elGetter: $.ASN1Encoder<Identify_RequestParams>
-) {
+): _Element {
   if (!_cached_encoder_for_Identify_RequestParams) {
     _cached_encoder_for_Identify_RequestParams = function (
       value: Identify_RequestParams    ): _Element {

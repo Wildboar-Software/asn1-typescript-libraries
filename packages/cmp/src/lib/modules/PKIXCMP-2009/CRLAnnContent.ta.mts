@@ -39,7 +39,7 @@ let _cached_decoder_for_CRLAnnContent: $.ASN1Decoder<CRLAnnContent> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CRLAnnContent} The decoded data structure.
  */
-export function _decode_CRLAnnContent(el: _Element) {
+export function _decode_CRLAnnContent(el: _Element): CRLAnnContent {
   if (!_cached_decoder_for_CRLAnnContent) {
     _cached_decoder_for_CRLAnnContent = $._decodeSequenceOf<CertificateList>(
       () => _decode_CertificateList
@@ -62,7 +62,7 @@ let _cached_encoder_for_CRLAnnContent: $.ASN1Encoder<CRLAnnContent> | null = nul
 export function _encode_CRLAnnContent(
   value: CRLAnnContent,
   elGetter: $.ASN1Encoder<CRLAnnContent>
-) {
+): _Element {
   if (!_cached_encoder_for_CRLAnnContent) {
     _cached_encoder_for_CRLAnnContent = $._encodeSequenceOf<CertificateList>(
       () => _encode_CertificateList,

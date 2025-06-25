@@ -35,7 +35,7 @@ let _cached_decoder_for_TestTerminateInfo: $.ASN1Decoder<TestTerminateInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TestTerminateInfo} The decoded data structure.
  */
-export function _decode_TestTerminateInfo(el: _Element) {
+export function _decode_TestTerminateInfo(el: _Element): TestTerminateInfo {
     if (!_cached_decoder_for_TestTerminateInfo) {
         _cached_decoder_for_TestTerminateInfo = _decode_IndicatedTests;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_TestTerminateInfo: $.ASN1Encoder<TestTerminateInfo> | nu
 export function _encode_TestTerminateInfo(
     value: TestTerminateInfo,
     elGetter: $.ASN1Encoder<TestTerminateInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TestTerminateInfo) {
         _cached_encoder_for_TestTerminateInfo = _encode_IndicatedTests;
     }

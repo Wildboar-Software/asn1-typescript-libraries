@@ -35,7 +35,7 @@ let _cached_decoder_for_Extension_Attribute_identifier: $.ASN1Decoder<Extension_
  * @param {_Element} el The element being decoded.
  * @returns {Extension_Attribute_identifier} The decoded data structure.
  */
-export function _decode_Extension_Attribute_identifier(el: _Element) {
+export function _decode_Extension_Attribute_identifier(el: _Element): Extension_Attribute_identifier {
   if (!_cached_decoder_for_Extension_Attribute_identifier) {
     _cached_decoder_for_Extension_Attribute_identifier =
       $._decodeObjectIdentifier;
@@ -57,7 +57,7 @@ let _cached_encoder_for_Extension_Attribute_identifier: $.ASN1Encoder<Extension_
 export function _encode_Extension_Attribute_identifier(
   value: Extension_Attribute_identifier,
   elGetter: $.ASN1Encoder<Extension_Attribute_identifier>
-) {
+): _Element {
   if (!_cached_encoder_for_Extension_Attribute_identifier) {
     _cached_encoder_for_Extension_Attribute_identifier =
       $._encodeObjectIdentifier;

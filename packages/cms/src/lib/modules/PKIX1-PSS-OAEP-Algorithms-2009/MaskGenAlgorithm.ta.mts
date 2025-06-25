@@ -25,7 +25,7 @@ let _cached_decoder_for_MaskGenAlgorithm: $.ASN1Decoder<MaskGenAlgorithm> | null
  * @param {_Element} el The element being decoded.
  * @returns {MaskGenAlgorithm} The decoded data structure.
  */
-export function _decode_MaskGenAlgorithm(el: _Element) {
+export function _decode_MaskGenAlgorithm(el: _Element): MaskGenAlgorithm {
     if (!_cached_decoder_for_MaskGenAlgorithm) {
         _cached_decoder_for_MaskGenAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -46,7 +46,7 @@ let _cached_encoder_for_MaskGenAlgorithm: $.ASN1Encoder<MaskGenAlgorithm> | null
 export function _encode_MaskGenAlgorithm(
     value: MaskGenAlgorithm,
     elGetter: $.ASN1Encoder<MaskGenAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_MaskGenAlgorithm) {
         _cached_encoder_for_MaskGenAlgorithm = _encode_AlgorithmIdentifier;
     }

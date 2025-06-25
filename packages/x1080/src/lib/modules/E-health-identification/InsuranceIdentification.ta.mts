@@ -166,7 +166,7 @@ let _cached_decoder_for_InsuranceIdentification: $.ASN1Decoder<InsuranceIdentifi
  * @param {_Element} el The element being decoded.
  * @returns {InsuranceIdentification} The decoded data structure.
  */
-export function _decode_InsuranceIdentification(el: _Element) {
+export function _decode_InsuranceIdentification(el: _Element): InsuranceIdentification {
     if (!_cached_decoder_for_InsuranceIdentification) {
         _cached_decoder_for_InsuranceIdentification = function (
             el: _Element
@@ -227,7 +227,7 @@ let _cached_encoder_for_InsuranceIdentification: $.ASN1Encoder<InsuranceIdentifi
 export function _encode_InsuranceIdentification(
     value: InsuranceIdentification,
     elGetter: $.ASN1Encoder<InsuranceIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_InsuranceIdentification) {
         _cached_encoder_for_InsuranceIdentification = function (
             value: InsuranceIdentification        ): _Element {

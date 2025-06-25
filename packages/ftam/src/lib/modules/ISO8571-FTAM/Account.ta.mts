@@ -35,7 +35,7 @@ let _cached_decoder_for_Account: $.ASN1Decoder<Account> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Account} The decoded data structure.
  */
-export function _decode_Account(el: _Element) {
+export function _decode_Account(el: _Element): Account {
   if (!_cached_decoder_for_Account) {
     _cached_decoder_for_Account = $._decode_implicit<Account>(
       () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_Account: $.ASN1Encoder<Account> | null = null;
 export function _encode_Account(
   value: Account,
   elGetter: $.ASN1Encoder<Account>
-) {
+): _Element {
   if (!_cached_encoder_for_Account) {
     _cached_encoder_for_Account = $._encode_implicit(
       _TagClass.application,

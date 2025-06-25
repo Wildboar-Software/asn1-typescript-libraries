@@ -35,7 +35,7 @@ let _cached_decoder_for_Abstract_Syntax_Name: $.ASN1Decoder<Abstract_Syntax_Name
  * @param {_Element} el The element being decoded.
  * @returns {Abstract_Syntax_Name} The decoded data structure.
  */
-export function _decode_Abstract_Syntax_Name(el: _Element) {
+export function _decode_Abstract_Syntax_Name(el: _Element): Abstract_Syntax_Name {
   if (!_cached_decoder_for_Abstract_Syntax_Name) {
     _cached_decoder_for_Abstract_Syntax_Name = $._decode_implicit<Abstract_Syntax_Name>(
       () => $._decodeObjectIdentifier
@@ -58,7 +58,7 @@ let _cached_encoder_for_Abstract_Syntax_Name: $.ASN1Encoder<Abstract_Syntax_Name
 export function _encode_Abstract_Syntax_Name(
   value: Abstract_Syntax_Name,
   elGetter: $.ASN1Encoder<Abstract_Syntax_Name>
-) {
+): _Element {
   if (!_cached_encoder_for_Abstract_Syntax_Name) {
     _cached_encoder_for_Abstract_Syntax_Name = $._encode_implicit(
       _TagClass.application,

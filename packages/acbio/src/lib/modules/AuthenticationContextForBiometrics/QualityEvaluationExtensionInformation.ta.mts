@@ -49,7 +49,7 @@ let _cached_decoder_for_QualityEvaluationExtensionInformation: $.ASN1Decoder<Qua
  * @param {_Element} el The element being decoded.
  * @returns {QualityEvaluationExtensionInformation} The decoded data structure.
  */
-export function _decode_QualityEvaluationExtensionInformation(el: _Element) {
+export function _decode_QualityEvaluationExtensionInformation(el: _Element): QualityEvaluationExtensionInformation {
     if (!_cached_decoder_for_QualityEvaluationExtensionInformation) {
         _cached_decoder_for_QualityEvaluationExtensionInformation = $._decode_inextensible_choice<QualityEvaluationExtensionInformation>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_QualityEvaluationExtensionInformation: $.ASN1Encoder<Qua
 export function _encode_QualityEvaluationExtensionInformation(
     value: QualityEvaluationExtensionInformation,
     elGetter: $.ASN1Encoder<QualityEvaluationExtensionInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_QualityEvaluationExtensionInformation) {
         _cached_encoder_for_QualityEvaluationExtensionInformation = $._encode_choice<QualityEvaluationExtensionInformation>(
             {

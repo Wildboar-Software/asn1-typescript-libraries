@@ -132,7 +132,7 @@ let _cached_decoder_for_NoSuchRelationship: $.ASN1Decoder<NoSuchRelationship> | 
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchRelationship} The decoded data structure.
  */
-export function _decode_NoSuchRelationship(el: _Element) {
+export function _decode_NoSuchRelationship(el: _Element): NoSuchRelationship {
     if (!_cached_decoder_for_NoSuchRelationship) {
         _cached_decoder_for_NoSuchRelationship = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_NoSuchRelationship: $.ASN1Encoder<NoSuchRelationship> | 
 export function _encode_NoSuchRelationship(
     value: NoSuchRelationship,
     elGetter: $.ASN1Encoder<NoSuchRelationship>
-) {
+): _Element {
     if (!_cached_encoder_for_NoSuchRelationship) {
         _cached_encoder_for_NoSuchRelationship = function (
             value: NoSuchRelationship        ): _Element {

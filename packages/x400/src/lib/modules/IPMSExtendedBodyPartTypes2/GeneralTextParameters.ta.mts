@@ -35,7 +35,7 @@ let _cached_decoder_for_GeneralTextParameters: $.ASN1Decoder<GeneralTextParamete
  * @param {_Element} el The element being decoded.
  * @returns {GeneralTextParameters} The decoded data structure.
  */
-export function _decode_GeneralTextParameters(el: _Element) {
+export function _decode_GeneralTextParameters(el: _Element): GeneralTextParameters {
     if (!_cached_decoder_for_GeneralTextParameters) {
         _cached_decoder_for_GeneralTextParameters = $._decodeSetOf<CharacterSetRegistration>(
             () => _decode_CharacterSetRegistration
@@ -56,7 +56,7 @@ let _cached_encoder_for_GeneralTextParameters: $.ASN1Encoder<GeneralTextParamete
 export function _encode_GeneralTextParameters(
     value: GeneralTextParameters,
     elGetter: $.ASN1Encoder<GeneralTextParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralTextParameters) {
         _cached_encoder_for_GeneralTextParameters = $._encodeSetOf<CharacterSetRegistration>(
             () => _encode_CharacterSetRegistration,

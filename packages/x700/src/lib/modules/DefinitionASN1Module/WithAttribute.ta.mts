@@ -35,7 +35,7 @@ let _cached_decoder_for_WithAttribute: $.ASN1Decoder<WithAttribute> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {WithAttribute} The decoded data structure.
  */
-export function _decode_WithAttribute(el: _Element) {
+export function _decode_WithAttribute(el: _Element): WithAttribute {
     if (!_cached_decoder_for_WithAttribute) {
         _cached_decoder_for_WithAttribute = _decode_TemplateLabel;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_WithAttribute: $.ASN1Encoder<WithAttribute> | null = nul
 export function _encode_WithAttribute(
     value: WithAttribute,
     elGetter: $.ASN1Encoder<WithAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_WithAttribute) {
         _cached_encoder_for_WithAttribute = _encode_TemplateLabel;
     }

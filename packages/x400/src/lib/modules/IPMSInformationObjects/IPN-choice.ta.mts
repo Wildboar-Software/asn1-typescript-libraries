@@ -50,7 +50,7 @@ let _cached_decoder_for_IPN_choice: $.ASN1Decoder<IPN_choice> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPN_choice} The decoded data structure.
  */
-export function _decode_IPN_choice(el: _Element) {
+export function _decode_IPN_choice(el: _Element): IPN_choice {
     if (!_cached_decoder_for_IPN_choice) {
         _cached_decoder_for_IPN_choice = $._decode_inextensible_choice<IPN_choice>(
             {
@@ -90,7 +90,7 @@ let _cached_encoder_for_IPN_choice: $.ASN1Encoder<IPN_choice> | null = null;
 export function _encode_IPN_choice(
     value: IPN_choice,
     elGetter: $.ASN1Encoder<IPN_choice>
-) {
+): _Element {
     if (!_cached_encoder_for_IPN_choice) {
         _cached_encoder_for_IPN_choice = $._encode_choice<IPN_choice>(
             {

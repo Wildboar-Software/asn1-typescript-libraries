@@ -196,7 +196,7 @@ let _cached_decoder_for_AuthEnvelopedData: $.ASN1Decoder<AuthEnvelopedData> | nu
  * @param {_Element} el The element being decoded.
  * @returns {AuthEnvelopedData} The decoded data structure.
  */
-export function _decode_AuthEnvelopedData(el: _Element) {
+export function _decode_AuthEnvelopedData(el: _Element): AuthEnvelopedData {
     if (!_cached_decoder_for_AuthEnvelopedData) {
         _cached_decoder_for_AuthEnvelopedData = function (
             el: _Element
@@ -268,7 +268,7 @@ let _cached_encoder_for_AuthEnvelopedData: $.ASN1Encoder<AuthEnvelopedData> | nu
 export function _encode_AuthEnvelopedData(
     value: AuthEnvelopedData,
     elGetter: $.ASN1Encoder<AuthEnvelopedData>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthEnvelopedData) {
         _cached_encoder_for_AuthEnvelopedData = function (
             value: AuthEnvelopedData        ): _Element {

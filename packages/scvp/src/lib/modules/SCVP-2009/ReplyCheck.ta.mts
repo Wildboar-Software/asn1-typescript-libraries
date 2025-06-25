@@ -123,7 +123,7 @@ let _cached_decoder_for_ReplyCheck: $.ASN1Decoder<ReplyCheck> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReplyCheck} The decoded data structure.
  */
-export function _decode_ReplyCheck(el: _Element) {
+export function _decode_ReplyCheck(el: _Element): ReplyCheck {
   if (!_cached_decoder_for_ReplyCheck) {
     _cached_decoder_for_ReplyCheck = function (el: _Element): ReplyCheck {
       let check!: OBJECT_IDENTIFIER;
@@ -162,7 +162,7 @@ let _cached_encoder_for_ReplyCheck: $.ASN1Encoder<ReplyCheck> | null = null;
 export function _encode_ReplyCheck(
   value: ReplyCheck,
   elGetter: $.ASN1Encoder<ReplyCheck>
-) {
+): _Element {
   if (!_cached_encoder_for_ReplyCheck) {
     _cached_encoder_for_ReplyCheck = function (
       value: ReplyCheck    ): _Element {

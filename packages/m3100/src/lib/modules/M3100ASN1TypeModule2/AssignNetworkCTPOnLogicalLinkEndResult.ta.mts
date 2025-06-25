@@ -38,7 +38,7 @@ let _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Decoder<As
  * @param {_Element} el The element being decoded.
  * @returns {AssignNetworkCTPOnLogicalLinkEndResult} The decoded data structure.
  */
-export function _decode_AssignNetworkCTPOnLogicalLinkEndResult(el: _Element) {
+export function _decode_AssignNetworkCTPOnLogicalLinkEndResult(el: _Element): AssignNetworkCTPOnLogicalLinkEndResult {
     if (!_cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult) {
         _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult = _decode_CTPList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Encoder<As
 export function _encode_AssignNetworkCTPOnLogicalLinkEndResult(
     value: AssignNetworkCTPOnLogicalLinkEndResult,
     elGetter: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult) {
         _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult = _encode_CTPList;
     }

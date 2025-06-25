@@ -35,7 +35,7 @@ let _cached_decoder_for_RelatedMessagesField: $.ASN1Decoder<RelatedMessagesField
  * @param {_Element} el The element being decoded.
  * @returns {RelatedMessagesField} The decoded data structure.
  */
-export function _decode_RelatedMessagesField(el: _Element) {
+export function _decode_RelatedMessagesField(el: _Element): RelatedMessagesField {
     if (!_cached_decoder_for_RelatedMessagesField) {
         _cached_decoder_for_RelatedMessagesField = $._decodeSequenceOf<RelatedMessageReference>(
             () => _decode_RelatedMessageReference
@@ -56,7 +56,7 @@ let _cached_encoder_for_RelatedMessagesField: $.ASN1Encoder<RelatedMessagesField
 export function _encode_RelatedMessagesField(
     value: RelatedMessagesField,
     elGetter: $.ASN1Encoder<RelatedMessagesField>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedMessagesField) {
         _cached_encoder_for_RelatedMessagesField = $._encodeSequenceOf<RelatedMessageReference>(
             () => _encode_RelatedMessageReference,

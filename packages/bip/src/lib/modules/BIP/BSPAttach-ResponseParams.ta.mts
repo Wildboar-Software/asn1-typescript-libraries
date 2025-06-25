@@ -107,7 +107,7 @@ let _cached_decoder_for_BSPAttach_ResponseParams: $.ASN1Decoder<BSPAttach_Respon
  * @param {_Element} el The element being decoded.
  * @returns {BSPAttach_ResponseParams} The decoded data structure.
  */
-export function _decode_BSPAttach_ResponseParams(el: _Element) {
+export function _decode_BSPAttach_ResponseParams(el: _Element): BSPAttach_ResponseParams {
   if (!_cached_decoder_for_BSPAttach_ResponseParams) {
     _cached_decoder_for_BSPAttach_ResponseParams = function (
       el: _Element
@@ -143,7 +143,7 @@ let _cached_encoder_for_BSPAttach_ResponseParams: $.ASN1Encoder<BSPAttach_Respon
 export function _encode_BSPAttach_ResponseParams(
   value: BSPAttach_ResponseParams,
   elGetter: $.ASN1Encoder<BSPAttach_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_BSPAttach_ResponseParams) {
     _cached_encoder_for_BSPAttach_ResponseParams = function (
       value: BSPAttach_ResponseParams    ): _Element {

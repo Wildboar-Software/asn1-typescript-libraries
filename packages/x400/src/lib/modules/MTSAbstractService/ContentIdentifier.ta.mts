@@ -33,7 +33,7 @@ let _cached_decoder_for_ContentIdentifier: $.ASN1Decoder<ContentIdentifier> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ContentIdentifier} The decoded data structure.
  */
-export function _decode_ContentIdentifier(el: _Element) {
+export function _decode_ContentIdentifier(el: _Element): ContentIdentifier {
     if (!_cached_decoder_for_ContentIdentifier) {
         _cached_decoder_for_ContentIdentifier = $._decode_implicit<ContentIdentifier>(
             () => $._decodePrintableString
@@ -54,7 +54,7 @@ let _cached_encoder_for_ContentIdentifier: $.ASN1Encoder<ContentIdentifier> | nu
 export function _encode_ContentIdentifier(
     value: ContentIdentifier,
     elGetter: $.ASN1Encoder<ContentIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentIdentifier) {
         _cached_encoder_for_ContentIdentifier = $._encode_implicit(
             _TagClass.application,

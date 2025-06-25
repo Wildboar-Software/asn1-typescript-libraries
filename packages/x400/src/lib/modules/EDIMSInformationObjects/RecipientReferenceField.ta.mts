@@ -125,7 +125,7 @@ let _cached_decoder_for_RecipientReferenceField: $.ASN1Decoder<RecipientReferenc
  * @param {_Element} el The element being decoded.
  * @returns {RecipientReferenceField} The decoded data structure.
  */
-export function _decode_RecipientReferenceField(el: _Element) {
+export function _decode_RecipientReferenceField(el: _Element): RecipientReferenceField {
     if (!_cached_decoder_for_RecipientReferenceField) {
         _cached_decoder_for_RecipientReferenceField = function (
             el: _Element
@@ -173,7 +173,7 @@ let _cached_encoder_for_RecipientReferenceField: $.ASN1Encoder<RecipientReferenc
 export function _encode_RecipientReferenceField(
     value: RecipientReferenceField,
     elGetter: $.ASN1Encoder<RecipientReferenceField>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientReferenceField) {
         _cached_encoder_for_RecipientReferenceField = function (
             value: RecipientReferenceField        ): _Element {

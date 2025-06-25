@@ -240,7 +240,7 @@ let _cached_decoder_for_DeleteArgument: $.ASN1Decoder<DeleteArgument> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {DeleteArgument} The decoded data structure.
  */
-export function _decode_DeleteArgument(el: _Element) {
+export function _decode_DeleteArgument(el: _Element): DeleteArgument {
   if (!_cached_decoder_for_DeleteArgument) {
     _cached_decoder_for_DeleteArgument = function (
       el: _Element
@@ -316,7 +316,7 @@ let _cached_encoder_for_DeleteArgument: $.ASN1Encoder<DeleteArgument> | null = n
 export function _encode_DeleteArgument(
   value: DeleteArgument,
   elGetter: $.ASN1Encoder<DeleteArgument>
-) {
+): _Element {
   if (!_cached_encoder_for_DeleteArgument) {
     _cached_encoder_for_DeleteArgument = function (
       value: DeleteArgument    ): _Element {

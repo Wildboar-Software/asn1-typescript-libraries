@@ -36,7 +36,7 @@ let _cached_decoder_for_Packages: $.ASN1Decoder<Packages> | null = null;
  * @returns {Packages} The decoded data structure.
  */
 export
-function _decode_Packages (el: _Element) {
+function _decode_Packages (el: _Element): Packages {
     if (!_cached_decoder_for_Packages) { _cached_decoder_for_Packages = $._decodeSetOf<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier); }
     return _cached_decoder_for_Packages(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_Packages: $.ASN1Encoder<Packages> | null = null;
  * @returns {_Element} The Packages, encoded as an ASN.1 Element.
  */
 export
-function _encode_Packages (value: Packages, elGetter: $.ASN1Encoder<Packages>) {
+function _encode_Packages (value: Packages, elGetter: $.ASN1Encoder<Packages>): _Element {
     if (!_cached_encoder_for_Packages) { _cached_encoder_for_Packages = $._encodeSetOf<OBJECT_IDENTIFIER>(() => $._encodeObjectIdentifier, $.BER); }
     return _cached_encoder_for_Packages(value, elGetter);
 }

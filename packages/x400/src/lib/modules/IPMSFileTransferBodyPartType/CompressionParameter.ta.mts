@@ -116,7 +116,7 @@ let _cached_decoder_for_CompressionParameter: $.ASN1Decoder<CompressionParameter
  * @param {_Element} el The element being decoded.
  * @returns {CompressionParameter} The decoded data structure.
  */
-export function _decode_CompressionParameter(el: _Element) {
+export function _decode_CompressionParameter(el: _Element): CompressionParameter {
     if (!_cached_decoder_for_CompressionParameter) {
         _cached_decoder_for_CompressionParameter = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_CompressionParameter: $.ASN1Encoder<CompressionParameter
 export function _encode_CompressionParameter(
     value: CompressionParameter,
     elGetter: $.ASN1Encoder<CompressionParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_CompressionParameter) {
         _cached_encoder_for_CompressionParameter = function (
             value: CompressionParameter        ): _Element {

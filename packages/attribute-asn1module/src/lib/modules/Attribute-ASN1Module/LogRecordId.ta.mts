@@ -37,7 +37,7 @@ let _cached_decoder_for_LogRecordId: $.ASN1Decoder<LogRecordId> | null = null;
  * @returns {LogRecordId} The decoded data structure.
  */
 export
-function _decode_LogRecordId (el: _Element) {
+function _decode_LogRecordId (el: _Element): LogRecordId {
     if (!_cached_decoder_for_LogRecordId) { _cached_decoder_for_LogRecordId = _decode_SimpleNameType; }
     return _cached_decoder_for_LogRecordId(el);
 }
@@ -52,7 +52,7 @@ let _cached_encoder_for_LogRecordId: $.ASN1Encoder<LogRecordId> | null = null;
  * @returns {_Element} The LogRecordId, encoded as an ASN.1 Element.
  */
 export
-function _encode_LogRecordId (value: LogRecordId, elGetter: $.ASN1Encoder<LogRecordId>) {
+function _encode_LogRecordId (value: LogRecordId, elGetter: $.ASN1Encoder<LogRecordId>): _Element {
     if (!_cached_encoder_for_LogRecordId) { _cached_encoder_for_LogRecordId = _encode_SimpleNameType; }
     return _cached_encoder_for_LogRecordId(value, elGetter);
 }

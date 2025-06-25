@@ -36,7 +36,7 @@ let _cached_decoder_for_Precision: $.ASN1Decoder<Precision> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Precision} The decoded data structure.
  */
-export function _decode_Precision(el: _Element) {
+export function _decode_Precision(el: _Element): Precision {
     if (!_cached_decoder_for_Precision) {
         _cached_decoder_for_Precision = _decode_TimeInterval;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_Precision: $.ASN1Encoder<Precision> | null = null;
 export function _encode_Precision(
     value: Precision,
     elGetter: $.ASN1Encoder<Precision>
-) {
+): _Element {
     if (!_cached_encoder_for_Precision) {
         _cached_encoder_for_Precision = _encode_TimeInterval;
     }

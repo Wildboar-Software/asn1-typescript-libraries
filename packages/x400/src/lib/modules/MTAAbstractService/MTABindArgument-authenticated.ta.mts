@@ -139,7 +139,7 @@ let _cached_decoder_for_MTABindArgument_authenticated: $.ASN1Decoder<MTABindArgu
  * @param {_Element} el The element being decoded.
  * @returns {MTABindArgument_authenticated} The decoded data structure.
  */
-export function _decode_MTABindArgument_authenticated(el: _Element) {
+export function _decode_MTABindArgument_authenticated(el: _Element): MTABindArgument_authenticated {
     if (!_cached_decoder_for_MTABindArgument_authenticated) {
         _cached_decoder_for_MTABindArgument_authenticated = function (
             el: _Element
@@ -196,7 +196,7 @@ let _cached_encoder_for_MTABindArgument_authenticated: $.ASN1Encoder<MTABindArgu
 export function _encode_MTABindArgument_authenticated(
     value: MTABindArgument_authenticated,
     elGetter: $.ASN1Encoder<MTABindArgument_authenticated>
-) {
+): _Element {
     if (!_cached_encoder_for_MTABindArgument_authenticated) {
         _cached_encoder_for_MTABindArgument_authenticated = function (
             value: MTABindArgument_authenticated        ): _Element {

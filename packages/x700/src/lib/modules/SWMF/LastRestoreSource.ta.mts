@@ -52,7 +52,7 @@ let _cached_decoder_for_LastRestoreSource: $.ASN1Decoder<LastRestoreSource> | nu
  * @param {_Element} el The element being decoded.
  * @returns {LastRestoreSource} The decoded data structure.
  */
-export function _decode_LastRestoreSource(el: _Element) {
+export function _decode_LastRestoreSource(el: _Element): LastRestoreSource {
     if (!_cached_decoder_for_LastRestoreSource) {
         _cached_decoder_for_LastRestoreSource = $._decode_inextensible_choice<LastRestoreSource>(
             {
@@ -80,7 +80,7 @@ let _cached_encoder_for_LastRestoreSource: $.ASN1Encoder<LastRestoreSource> | nu
 export function _encode_LastRestoreSource(
     value: LastRestoreSource,
     elGetter: $.ASN1Encoder<LastRestoreSource>
-) {
+): _Element {
     if (!_cached_encoder_for_LastRestoreSource) {
         _cached_encoder_for_LastRestoreSource = $._encode_choice<LastRestoreSource>(
             {

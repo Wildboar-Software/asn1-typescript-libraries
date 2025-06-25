@@ -47,7 +47,7 @@ let _cached_decoder_for_MSString: $.ASN1Decoder<MSString> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MSString} The decoded data structure.
  */
-export function _decode_MSString(el: _Element) {
+export function _decode_MSString(el: _Element): MSString {
     if (!_cached_decoder_for_MSString) {
         _cached_decoder_for_MSString = $._decode_inextensible_choice<MSString>({
             'UNIVERSAL 19': ['printable', $._decodePrintableString],
@@ -72,7 +72,7 @@ let _cached_encoder_for_MSString: $.ASN1Encoder<MSString> | null = null;
 export function _encode_MSString(
     value: MSString,
     elGetter: $.ASN1Encoder<MSString>
-) {
+): _Element {
     if (!_cached_encoder_for_MSString) {
         _cached_encoder_for_MSString = $._encode_choice<MSString>(
             {

@@ -37,7 +37,7 @@ let _cached_decoder_for_CertificateValues: $.ASN1Decoder<CertificateValues> | nu
  * @returns {CertificateValues} The decoded data structure.
  */
 export
-function _decode_CertificateValues (el: _Element) {
+function _decode_CertificateValues (el: _Element): CertificateValues {
     if (!_cached_decoder_for_CertificateValues) { _cached_decoder_for_CertificateValues = $._decodeSequenceOf<Certificate>(() => _decode_Certificate); }
     return _cached_decoder_for_CertificateValues(el);
 }
@@ -52,7 +52,7 @@ let _cached_encoder_for_CertificateValues: $.ASN1Encoder<CertificateValues> | nu
  * @returns {_Element} The CertificateValues, encoded as an ASN.1 Element.
  */
 export
-function _encode_CertificateValues (value: CertificateValues, elGetter: $.ASN1Encoder<CertificateValues>) {
+function _encode_CertificateValues (value: CertificateValues, elGetter: $.ASN1Encoder<CertificateValues>): _Element {
     if (!_cached_encoder_for_CertificateValues) { _cached_encoder_for_CertificateValues = $._encodeSequenceOf<Certificate>(() => _encode_Certificate, $.DER); }
     return _cached_encoder_for_CertificateValues(value, elGetter);
 }

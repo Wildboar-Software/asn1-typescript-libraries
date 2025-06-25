@@ -185,7 +185,7 @@ let _cached_decoder_for_IPN: $.ASN1Decoder<IPN> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPN} The decoded data structure.
  */
-export function _decode_IPN(el: _Element) {
+export function _decode_IPN(el: _Element): IPN {
     if (!_cached_decoder_for_IPN) {
         _cached_decoder_for_IPN = function (el: _Element): IPN {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -254,7 +254,7 @@ let _cached_encoder_for_IPN: $.ASN1Encoder<IPN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPN, encoded as an ASN.1 Element.
  */
-export function _encode_IPN(value: IPN, elGetter: $.ASN1Encoder<IPN>) {
+export function _encode_IPN(value: IPN, elGetter: $.ASN1Encoder<IPN>): _Element {
     if (!_cached_encoder_for_IPN) {
         _cached_encoder_for_IPN = function (
             value: IPN        ): _Element {

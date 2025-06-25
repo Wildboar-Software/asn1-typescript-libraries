@@ -196,7 +196,7 @@ let _cached_decoder_for_ComponentIdentifier: $.ASN1Decoder<ComponentIdentifier> 
  * @returns {ComponentIdentifier} The decoded data structure.
  */
 export
-function _decode_ComponentIdentifier (el: _Element) {
+function _decode_ComponentIdentifier (el: _Element): ComponentIdentifier {
     if (!_cached_decoder_for_ComponentIdentifier) { _cached_decoder_for_ComponentIdentifier = function (el: _Element): ComponentIdentifier {
     let componentClass!: ComponentClass;
     let componentManufacturer!: UTF8String;
@@ -255,7 +255,7 @@ let _cached_encoder_for_ComponentIdentifier: $.ASN1Encoder<ComponentIdentifier> 
  * @returns {_Element} The ComponentIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_ComponentIdentifier (value: ComponentIdentifier, elGetter: $.ASN1Encoder<ComponentIdentifier>) {
+function _encode_ComponentIdentifier (value: ComponentIdentifier, elGetter: $.ASN1Encoder<ComponentIdentifier>): _Element {
     if (!_cached_encoder_for_ComponentIdentifier) { _cached_encoder_for_ComponentIdentifier = function (value: ComponentIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

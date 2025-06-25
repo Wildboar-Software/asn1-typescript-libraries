@@ -32,7 +32,7 @@ let _cached_decoder_for_MixedModeBodyPart: $.ASN1Decoder<MixedModeBodyPart> | nu
  * @param {_Element} el The element being decoded.
  * @returns {MixedModeBodyPart} The decoded data structure.
  */
-export function _decode_MixedModeBodyPart(el: _Element) {
+export function _decode_MixedModeBodyPart(el: _Element): MixedModeBodyPart {
     if (!_cached_decoder_for_MixedModeBodyPart) {
         _cached_decoder_for_MixedModeBodyPart = $._decodeSequenceOf<ASN1Element>(
             () => $._decodeAny
@@ -53,7 +53,7 @@ let _cached_encoder_for_MixedModeBodyPart: $.ASN1Encoder<MixedModeBodyPart> | nu
 export function _encode_MixedModeBodyPart(
     value: MixedModeBodyPart,
     elGetter: $.ASN1Encoder<MixedModeBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_MixedModeBodyPart) {
         _cached_encoder_for_MixedModeBodyPart = $._encodeSequenceOf<ASN1Element>(
             () => $._encodeAny,

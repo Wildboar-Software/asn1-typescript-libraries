@@ -132,7 +132,7 @@ let _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelect
  */
 export function _decode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection(
     el: _Element
-) {
+): DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection {
     if (
         !_cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection
     ) {
@@ -180,7 +180,7 @@ let _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelect
 export function _encode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection(
     value: DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
     elGetter: $.ASN1Encoder<DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection>
-) {
+): _Element {
     if (
         !_cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection
     ) {

@@ -227,7 +227,7 @@ let _cached_decoder_for_SchedulingConflictInfo: $.ASN1Decoder<SchedulingConflict
  * @param {_Element} el The element being decoded.
  * @returns {SchedulingConflictInfo} The decoded data structure.
  */
-export function _decode_SchedulingConflictInfo(el: _Element) {
+export function _decode_SchedulingConflictInfo(el: _Element): SchedulingConflictInfo {
     if (!_cached_decoder_for_SchedulingConflictInfo) {
         _cached_decoder_for_SchedulingConflictInfo = function (
             el: _Element
@@ -307,7 +307,7 @@ let _cached_encoder_for_SchedulingConflictInfo: $.ASN1Encoder<SchedulingConflict
 export function _encode_SchedulingConflictInfo(
     value: SchedulingConflictInfo,
     elGetter: $.ASN1Encoder<SchedulingConflictInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SchedulingConflictInfo) {
         _cached_encoder_for_SchedulingConflictInfo = function (
             value: SchedulingConflictInfo        ): _Element {

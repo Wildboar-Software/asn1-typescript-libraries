@@ -123,7 +123,7 @@ let _cached_decoder_for_AttributeGroups_Item: $.ASN1Decoder<AttributeGroups_Item
  * @param {_Element} el The element being decoded.
  * @returns {AttributeGroups_Item} The decoded data structure.
  */
-export function _decode_AttributeGroups_Item(el: _Element) {
+export function _decode_AttributeGroups_Item(el: _Element): AttributeGroups_Item {
     if (!_cached_decoder_for_AttributeGroups_Item) {
         _cached_decoder_for_AttributeGroups_Item = function (
             el: _Element
@@ -169,7 +169,7 @@ let _cached_encoder_for_AttributeGroups_Item: $.ASN1Encoder<AttributeGroups_Item
 export function _encode_AttributeGroups_Item(
     value: AttributeGroups_Item,
     elGetter: $.ASN1Encoder<AttributeGroups_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeGroups_Item) {
         _cached_encoder_for_AttributeGroups_Item = function (
             value: AttributeGroups_Item        ): _Element {

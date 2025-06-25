@@ -35,7 +35,7 @@ let _cached_decoder_for_dl_administrator_annotation_Type: $.ASN1Decoder<dl_admin
  * @param {_Element} el The element being decoded.
  * @returns {dl_administrator_annotation_Type} The decoded data structure.
  */
-export function _decode_dl_administrator_annotation_Type(el: _Element) {
+export function _decode_dl_administrator_annotation_Type(el: _Element): dl_administrator_annotation_Type {
     if (!_cached_decoder_for_dl_administrator_annotation_Type) {
         _cached_decoder_for_dl_administrator_annotation_Type = $._decode_inextensible_choice<dl_administrator_annotation_Type>(
             {
@@ -59,7 +59,7 @@ let _cached_encoder_for_dl_administrator_annotation_Type: $.ASN1Encoder<dl_admin
 export function _encode_dl_administrator_annotation_Type(
     value: dl_administrator_annotation_Type,
     elGetter: $.ASN1Encoder<dl_administrator_annotation_Type>
-) {
+): _Element {
     if (!_cached_encoder_for_dl_administrator_annotation_Type) {
         _cached_encoder_for_dl_administrator_annotation_Type = $._encode_choice<dl_administrator_annotation_Type>(
             {

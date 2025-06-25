@@ -35,7 +35,7 @@ let _cached_decoder_for_MHSDistributionListName: $.ASN1Decoder<MHSDistributionLi
  * @param {_Element} el The element being decoded.
  * @returns {MHSDistributionListName} The decoded data structure.
  */
-export function _decode_MHSDistributionListName(el: _Element) {
+export function _decode_MHSDistributionListName(el: _Element): MHSDistributionListName {
     if (!_cached_decoder_for_MHSDistributionListName) {
         _cached_decoder_for_MHSDistributionListName = _decode_DistinguishedName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MHSDistributionListName: $.ASN1Encoder<MHSDistributionLi
 export function _encode_MHSDistributionListName(
     value: MHSDistributionListName,
     elGetter: $.ASN1Encoder<MHSDistributionListName>
-) {
+): _Element {
     if (!_cached_encoder_for_MHSDistributionListName) {
         _cached_encoder_for_MHSDistributionListName = _encode_DistinguishedName;
     }

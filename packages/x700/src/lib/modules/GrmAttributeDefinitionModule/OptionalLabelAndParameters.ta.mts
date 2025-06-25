@@ -122,7 +122,7 @@ let _cached_decoder_for_OptionalLabelAndParameters: $.ASN1Decoder<OptionalLabelA
  * @param {_Element} el The element being decoded.
  * @returns {OptionalLabelAndParameters} The decoded data structure.
  */
-export function _decode_OptionalLabelAndParameters(el: _Element) {
+export function _decode_OptionalLabelAndParameters(el: _Element): OptionalLabelAndParameters {
     if (!_cached_decoder_for_OptionalLabelAndParameters) {
         _cached_decoder_for_OptionalLabelAndParameters = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_OptionalLabelAndParameters: $.ASN1Encoder<OptionalLabelA
 export function _encode_OptionalLabelAndParameters(
     value: OptionalLabelAndParameters,
     elGetter: $.ASN1Encoder<OptionalLabelAndParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionalLabelAndParameters) {
         _cached_encoder_for_OptionalLabelAndParameters = function (
             value: OptionalLabelAndParameters        ): _Element {

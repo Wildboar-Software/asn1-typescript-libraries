@@ -39,7 +39,7 @@ let _cached_decoder_for_Sap2Address: $.ASN1Decoder<Sap2Address> | null = null;
  * @returns {Sap2Address} The decoded data structure.
  */
 export
-function _decode_Sap2Address (el: _Element) {
+function _decode_Sap2Address (el: _Element): Sap2Address {
     if (!_cached_decoder_for_Sap2Address) { _cached_decoder_for_Sap2Address = $._decodeSetOf<OCTET_STRING>(() => $._decodeOctetString); }
     return _cached_decoder_for_Sap2Address(el);
 }
@@ -56,7 +56,7 @@ let _cached_encoder_for_Sap2Address: $.ASN1Encoder<Sap2Address> | null = null;
  * @returns {_Element} The Sap2Address, encoded as an ASN.1 Element.
  */
 export
-function _encode_Sap2Address (value: Sap2Address, elGetter: $.ASN1Encoder<Sap2Address>) {
+function _encode_Sap2Address (value: Sap2Address, elGetter: $.ASN1Encoder<Sap2Address>): _Element {
     if (!_cached_encoder_for_Sap2Address) { _cached_encoder_for_Sap2Address = $._encodeSetOf<OCTET_STRING>(() => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_Sap2Address(value, elGetter);
 }

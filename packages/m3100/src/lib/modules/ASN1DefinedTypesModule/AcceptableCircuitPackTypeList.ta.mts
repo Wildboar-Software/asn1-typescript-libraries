@@ -35,7 +35,7 @@ let _cached_decoder_for_AcceptableCircuitPackTypeList: $.ASN1Decoder<AcceptableC
  * @param {_Element} el The element being decoded.
  * @returns {AcceptableCircuitPackTypeList} The decoded data structure.
  */
-export function _decode_AcceptableCircuitPackTypeList(el: _Element) {
+export function _decode_AcceptableCircuitPackTypeList(el: _Element): AcceptableCircuitPackTypeList {
     if (!_cached_decoder_for_AcceptableCircuitPackTypeList) {
         _cached_decoder_for_AcceptableCircuitPackTypeList = $._decodeSetOf<PrintableString>(
             () => $._decodePrintableString
@@ -58,7 +58,7 @@ let _cached_encoder_for_AcceptableCircuitPackTypeList: $.ASN1Encoder<AcceptableC
 export function _encode_AcceptableCircuitPackTypeList(
     value: AcceptableCircuitPackTypeList,
     elGetter: $.ASN1Encoder<AcceptableCircuitPackTypeList>
-) {
+): _Element {
     if (!_cached_encoder_for_AcceptableCircuitPackTypeList) {
         _cached_encoder_for_AcceptableCircuitPackTypeList = $._encodeSetOf<PrintableString>(
             () => $._encodePrintableString,

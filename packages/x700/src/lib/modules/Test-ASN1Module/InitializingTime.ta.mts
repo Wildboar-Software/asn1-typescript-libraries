@@ -41,7 +41,7 @@ let _cached_decoder_for_InitializingTime: $.ASN1Decoder<InitializingTime> | null
  * @param {_Element} el The element being decoded.
  * @returns {InitializingTime} The decoded data structure.
  */
-export function _decode_InitializingTime(el: _Element) {
+export function _decode_InitializingTime(el: _Element): InitializingTime {
     if (!_cached_decoder_for_InitializingTime) {
         _cached_decoder_for_InitializingTime = $._decode_inextensible_choice<InitializingTime>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_InitializingTime: $.ASN1Encoder<InitializingTime> | null
 export function _encode_InitializingTime(
     value: InitializingTime,
     elGetter: $.ASN1Encoder<InitializingTime>
-) {
+): _Element {
     if (!_cached_encoder_for_InitializingTime) {
         _cached_encoder_for_InitializingTime = $._encode_choice<InitializingTime>(
             {

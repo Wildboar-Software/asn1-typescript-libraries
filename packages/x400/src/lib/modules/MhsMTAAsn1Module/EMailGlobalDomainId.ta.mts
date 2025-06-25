@@ -45,7 +45,7 @@ let _cached_decoder_for_EMailGlobalDomainId: $.ASN1Decoder<EMailGlobalDomainId> 
  * @param {_Element} el The element being decoded.
  * @returns {EMailGlobalDomainId} The decoded data structure.
  */
-export function _decode_EMailGlobalDomainId(el: _Element) {
+export function _decode_EMailGlobalDomainId(el: _Element): EMailGlobalDomainId {
     if (!_cached_decoder_for_EMailGlobalDomainId) {
         _cached_decoder_for_EMailGlobalDomainId = $._decode_inextensible_choice<EMailGlobalDomainId>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_EMailGlobalDomainId: $.ASN1Encoder<EMailGlobalDomainId> 
 export function _encode_EMailGlobalDomainId(
     value: EMailGlobalDomainId,
     elGetter: $.ASN1Encoder<EMailGlobalDomainId>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailGlobalDomainId) {
         _cached_encoder_for_EMailGlobalDomainId = $._encode_choice<EMailGlobalDomainId>(
             {

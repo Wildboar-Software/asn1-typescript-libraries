@@ -36,7 +36,7 @@ let _cached_decoder_for_TCSupplierAS: $.ASN1Decoder<TCSupplierAS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TCSupplierAS} The decoded data structure.
  */
-export function _decode_TCSupplierAS(el: _Element) {
+export function _decode_TCSupplierAS(el: _Element): TCSupplierAS {
     if (!_cached_decoder_for_TCSupplierAS) {
         _cached_decoder_for_TCSupplierAS = _decode_TCMessage;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_TCSupplierAS: $.ASN1Encoder<TCSupplierAS> | null = null;
 export function _encode_TCSupplierAS(
     value: TCSupplierAS,
     elGetter: $.ASN1Encoder<TCSupplierAS>
-) {
+): _Element {
     if (!_cached_encoder_for_TCSupplierAS) {
         _cached_encoder_for_TCSupplierAS = _encode_TCMessage;
     }

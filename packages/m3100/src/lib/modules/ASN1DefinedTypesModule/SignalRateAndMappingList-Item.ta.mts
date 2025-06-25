@@ -141,7 +141,7 @@ let _cached_decoder_for_SignalRateAndMappingList_Item: $.ASN1Decoder<SignalRateA
  * @param {_Element} el The element being decoded.
  * @returns {SignalRateAndMappingList_Item} The decoded data structure.
  */
-export function _decode_SignalRateAndMappingList_Item(el: _Element) {
+export function _decode_SignalRateAndMappingList_Item(el: _Element): SignalRateAndMappingList_Item {
     if (!_cached_decoder_for_SignalRateAndMappingList_Item) {
         _cached_decoder_for_SignalRateAndMappingList_Item = function (
             el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_SignalRateAndMappingList_Item: $.ASN1Encoder<SignalRateA
 export function _encode_SignalRateAndMappingList_Item(
     value: SignalRateAndMappingList_Item,
     elGetter: $.ASN1Encoder<SignalRateAndMappingList_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_SignalRateAndMappingList_Item) {
         _cached_encoder_for_SignalRateAndMappingList_Item = function (
             value: SignalRateAndMappingList_Item        ): _Element {

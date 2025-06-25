@@ -130,7 +130,7 @@ let _cached_decoder_for_PKIStatusInfo: $.ASN1Decoder<PKIStatusInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {PKIStatusInfo} The decoded data structure.
  */
-export function _decode_PKIStatusInfo(el: _Element) {
+export function _decode_PKIStatusInfo(el: _Element): PKIStatusInfo {
     if (!_cached_decoder_for_PKIStatusInfo) {
         _cached_decoder_for_PKIStatusInfo = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_PKIStatusInfo: $.ASN1Encoder<PKIStatusInfo> | null = nul
 export function _encode_PKIStatusInfo(
     value: PKIStatusInfo,
     elGetter: $.ASN1Encoder<PKIStatusInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_PKIStatusInfo) {
         _cached_encoder_for_PKIStatusInfo = function (
             value: PKIStatusInfo        ): _Element {

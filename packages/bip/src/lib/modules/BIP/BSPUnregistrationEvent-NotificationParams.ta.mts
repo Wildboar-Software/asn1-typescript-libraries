@@ -112,7 +112,7 @@ let _cached_decoder_for_BSPUnregistrationEvent_NotificationParams: $.ASN1Decoder
  */
 export function _decode_BSPUnregistrationEvent_NotificationParams(
   el: _Element
-) {
+): BSPUnregistrationEvent_NotificationParams {
   if (!_cached_decoder_for_BSPUnregistrationEvent_NotificationParams) {
     _cached_decoder_for_BSPUnregistrationEvent_NotificationParams = function (
       el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_BSPUnregistrationEvent_NotificationParams: $.ASN1Encoder
 export function _encode_BSPUnregistrationEvent_NotificationParams(
   value: BSPUnregistrationEvent_NotificationParams,
   elGetter: $.ASN1Encoder<BSPUnregistrationEvent_NotificationParams>
-) {
+): _Element {
   if (!_cached_encoder_for_BSPUnregistrationEvent_NotificationParams) {
     _cached_encoder_for_BSPUnregistrationEvent_NotificationParams = function (
       value: BSPUnregistrationEvent_NotificationParams    ): _Element {

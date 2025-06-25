@@ -35,7 +35,7 @@ let _cached_decoder_for_ClockResetInfo: $.ASN1Decoder<ClockResetInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ClockResetInfo} The decoded data structure.
  */
-export function _decode_ClockResetInfo(el: _Element) {
+export function _decode_ClockResetInfo(el: _Element): ClockResetInfo {
     if (!_cached_decoder_for_ClockResetInfo) {
         _cached_decoder_for_ClockResetInfo = _decode_ClockValue;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ClockResetInfo: $.ASN1Encoder<ClockResetInfo> | null = n
 export function _encode_ClockResetInfo(
     value: ClockResetInfo,
     elGetter: $.ASN1Encoder<ClockResetInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockResetInfo) {
         _cached_encoder_for_ClockResetInfo = _encode_ClockValue;
     }

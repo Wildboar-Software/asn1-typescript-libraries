@@ -114,7 +114,7 @@ let _cached_decoder_for_TriggerResultInfo: $.ASN1Decoder<TriggerResultInfo> | nu
  * @param {_Element} el The element being decoded.
  * @returns {TriggerResultInfo} The decoded data structure.
  */
-export function _decode_TriggerResultInfo(el: _Element) {
+export function _decode_TriggerResultInfo(el: _Element): TriggerResultInfo {
     if (!_cached_decoder_for_TriggerResultInfo) {
         _cached_decoder_for_TriggerResultInfo = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_TriggerResultInfo: $.ASN1Encoder<TriggerResultInfo> | nu
 export function _encode_TriggerResultInfo(
     value: TriggerResultInfo,
     elGetter: $.ASN1Encoder<TriggerResultInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TriggerResultInfo) {
         _cached_encoder_for_TriggerResultInfo = function (
             value: TriggerResultInfo        ): _Element {

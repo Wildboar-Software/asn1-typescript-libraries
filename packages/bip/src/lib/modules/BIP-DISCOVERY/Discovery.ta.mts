@@ -161,7 +161,7 @@ let _cached_decoder_for_Discovery: $.ASN1Decoder<Discovery> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Discovery} The decoded data structure.
  */
-export function _decode_Discovery(el: _Element) {
+export function _decode_Discovery(el: _Element): Discovery {
   if (!_cached_decoder_for_Discovery) {
     _cached_decoder_for_Discovery = function (el: _Element): Discovery {
       let protocolVersion!: ProtocolVersion;
@@ -215,7 +215,7 @@ let _cached_encoder_for_Discovery: $.ASN1Encoder<Discovery> | null = null;
 export function _encode_Discovery(
   value: Discovery,
   elGetter: $.ASN1Encoder<Discovery>
-) {
+): _Element {
   if (!_cached_encoder_for_Discovery) {
     _cached_encoder_for_Discovery = function (
       value: Discovery    ): _Element {

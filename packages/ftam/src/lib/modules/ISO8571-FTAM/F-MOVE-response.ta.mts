@@ -176,7 +176,7 @@ let _cached_decoder_for_F_MOVE_response: $.ASN1Decoder<F_MOVE_response> | null =
  * @param {_Element} el The element being decoded.
  * @returns {F_MOVE_response} The decoded data structure.
  */
-export function _decode_F_MOVE_response(el: _Element) {
+export function _decode_F_MOVE_response(el: _Element): F_MOVE_response {
   if (!_cached_decoder_for_F_MOVE_response) {
     _cached_decoder_for_F_MOVE_response = function (
       el: _Element
@@ -233,7 +233,7 @@ let _cached_encoder_for_F_MOVE_response: $.ASN1Encoder<F_MOVE_response> | null =
 export function _encode_F_MOVE_response(
   value: F_MOVE_response,
   elGetter: $.ASN1Encoder<F_MOVE_response>
-) {
+): _Element {
   if (!_cached_encoder_for_F_MOVE_response) {
     _cached_encoder_for_F_MOVE_response = function (
       value: F_MOVE_response    ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_CertConfirmContent: $.ASN1Decoder<CertConfirmContent> | 
  * @param {_Element} el The element being decoded.
  * @returns {CertConfirmContent} The decoded data structure.
  */
-export function _decode_CertConfirmContent(el: _Element) {
+export function _decode_CertConfirmContent(el: _Element): CertConfirmContent {
   if (!_cached_decoder_for_CertConfirmContent) {
     _cached_decoder_for_CertConfirmContent = $._decodeSequenceOf<CertStatus>(
       () => _decode_CertStatus
@@ -61,7 +61,7 @@ let _cached_encoder_for_CertConfirmContent: $.ASN1Encoder<CertConfirmContent> | 
 export function _encode_CertConfirmContent(
   value: CertConfirmContent,
   elGetter: $.ASN1Encoder<CertConfirmContent>
-) {
+): _Element {
   if (!_cached_encoder_for_CertConfirmContent) {
     _cached_encoder_for_CertConfirmContent = $._encodeSequenceOf<CertStatus>(
       () => _encode_CertStatus,

@@ -51,7 +51,7 @@ let _cached_decoder_for_ObjectInstance: $.ASN1Decoder<ObjectInstance> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ObjectInstance} The decoded data structure.
  */
-export function _decode_ObjectInstance(el: _Element) {
+export function _decode_ObjectInstance(el: _Element): ObjectInstance {
   if (!_cached_decoder_for_ObjectInstance) {
     _cached_decoder_for_ObjectInstance = $._decode_inextensible_choice<ObjectInstance>(
       {
@@ -89,7 +89,7 @@ let _cached_encoder_for_ObjectInstance: $.ASN1Encoder<ObjectInstance> | null = n
 export function _encode_ObjectInstance(
   value: ObjectInstance,
   elGetter: $.ASN1Encoder<ObjectInstance>
-) {
+): _Element {
   if (!_cached_encoder_for_ObjectInstance) {
     _cached_encoder_for_ObjectInstance = $._encode_choice<ObjectInstance>(
       {

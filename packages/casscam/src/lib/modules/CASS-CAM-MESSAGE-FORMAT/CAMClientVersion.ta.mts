@@ -128,7 +128,7 @@ let _cached_decoder_for_CAMClientVersion: $.ASN1Decoder<CAMClientVersion> | null
  * @returns {CAMClientVersion} The decoded data structure.
  */
 export
-function _decode_CAMClientVersion (el: _Element) {
+function _decode_CAMClientVersion (el: _Element): CAMClientVersion {
     if (!_cached_decoder_for_CAMClientVersion) { _cached_decoder_for_CAMClientVersion = function (el: _Element): CAMClientVersion {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -165,7 +165,7 @@ let _cached_encoder_for_CAMClientVersion: $.ASN1Encoder<CAMClientVersion> | null
  * @returns {_Element} The CAMClientVersion, encoded as an ASN.1 Element.
  */
 export
-function _encode_CAMClientVersion (value: CAMClientVersion, elGetter: $.ASN1Encoder<CAMClientVersion>) {
+function _encode_CAMClientVersion (value: CAMClientVersion, elGetter: $.ASN1Encoder<CAMClientVersion>): _Element {
     if (!_cached_encoder_for_CAMClientVersion) { _cached_encoder_for_CAMClientVersion = function (value: CAMClientVersion): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

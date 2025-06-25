@@ -44,7 +44,7 @@ let _cached_decoder_for_ContCond: $.ASN1Decoder<ContCond> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContCond} The decoded data structure.
  */
-export function _decode_ContCond(el: _Element) {
+export function _decode_ContCond(el: _Element): ContCond {
     if (!_cached_decoder_for_ContCond) {
         _cached_decoder_for_ContCond = $._decode_inextensible_choice<ContCond>({
             'CONTEXT 22': ['intervalTime', _decode_Timespec],
@@ -72,7 +72,7 @@ let _cached_encoder_for_ContCond: $.ASN1Encoder<ContCond> | null = null;
 export function _encode_ContCond(
     value: ContCond,
     elGetter: $.ASN1Encoder<ContCond>
-) {
+): _Element {
     if (!_cached_encoder_for_ContCond) {
         _cached_encoder_for_ContCond = $._encode_choice<ContCond>(
             {

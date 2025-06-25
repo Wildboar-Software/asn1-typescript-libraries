@@ -35,7 +35,7 @@ let _cached_decoder_for_RedirectionHistory: $.ASN1Decoder<RedirectionHistory> | 
  * @param {_Element} el The element being decoded.
  * @returns {RedirectionHistory} The decoded data structure.
  */
-export function _decode_RedirectionHistory(el: _Element) {
+export function _decode_RedirectionHistory(el: _Element): RedirectionHistory {
     if (!_cached_decoder_for_RedirectionHistory) {
         _cached_decoder_for_RedirectionHistory = $._decodeSequenceOf<Redirection>(
             () => _decode_Redirection
@@ -56,7 +56,7 @@ let _cached_encoder_for_RedirectionHistory: $.ASN1Encoder<RedirectionHistory> | 
 export function _encode_RedirectionHistory(
     value: RedirectionHistory,
     elGetter: $.ASN1Encoder<RedirectionHistory>
-) {
+): _Element {
     if (!_cached_encoder_for_RedirectionHistory) {
         _cached_encoder_for_RedirectionHistory = $._encodeSequenceOf<Redirection>(
             () => _encode_Redirection,

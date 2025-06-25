@@ -35,7 +35,7 @@ let _cached_decoder_for_LatestDeliveryTime: $.ASN1Decoder<LatestDeliveryTime> | 
  * @param {_Element} el The element being decoded.
  * @returns {LatestDeliveryTime} The decoded data structure.
  */
-export function _decode_LatestDeliveryTime(el: _Element) {
+export function _decode_LatestDeliveryTime(el: _Element): LatestDeliveryTime {
     if (!_cached_decoder_for_LatestDeliveryTime) {
         _cached_decoder_for_LatestDeliveryTime = _decode_Time;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_LatestDeliveryTime: $.ASN1Encoder<LatestDeliveryTime> | 
 export function _encode_LatestDeliveryTime(
     value: LatestDeliveryTime,
     elGetter: $.ASN1Encoder<LatestDeliveryTime>
-) {
+): _Element {
     if (!_cached_encoder_for_LatestDeliveryTime) {
         _cached_encoder_for_LatestDeliveryTime = _encode_Time;
     }

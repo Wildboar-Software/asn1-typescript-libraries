@@ -33,7 +33,7 @@ let _cached_decoder_for_BackUpDestinationList: $.ASN1Decoder<BackUpDestinationLi
  * @returns {BackUpDestinationList} The decoded data structure.
  */
 export
-function _decode_BackUpDestinationList (el: _Element) {
+function _decode_BackUpDestinationList (el: _Element): BackUpDestinationList {
     if (!_cached_decoder_for_BackUpDestinationList) { _cached_decoder_for_BackUpDestinationList = $._decodeSequenceOf<AE_title>(() => _decode_AE_title); }
     return _cached_decoder_for_BackUpDestinationList(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_BackUpDestinationList: $.ASN1Encoder<BackUpDestinationLi
  * @returns {_Element} The BackUpDestinationList, encoded as an ASN.1 Element.
  */
 export
-function _encode_BackUpDestinationList (value: BackUpDestinationList, elGetter: $.ASN1Encoder<BackUpDestinationList>) {
+function _encode_BackUpDestinationList (value: BackUpDestinationList, elGetter: $.ASN1Encoder<BackUpDestinationList>): _Element {
     if (!_cached_encoder_for_BackUpDestinationList) { _cached_encoder_for_BackUpDestinationList = $._encodeSequenceOf<AE_title>(() => _encode_AE_title, $.BER); }
     return _cached_encoder_for_BackUpDestinationList(value, elGetter);
 }

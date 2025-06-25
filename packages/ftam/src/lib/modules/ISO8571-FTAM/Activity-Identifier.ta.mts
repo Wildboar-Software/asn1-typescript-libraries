@@ -35,7 +35,7 @@ let _cached_decoder_for_Activity_Identifier: $.ASN1Decoder<Activity_Identifier> 
  * @param {_Element} el The element being decoded.
  * @returns {Activity_Identifier} The decoded data structure.
  */
-export function _decode_Activity_Identifier(el: _Element) {
+export function _decode_Activity_Identifier(el: _Element): Activity_Identifier {
   if (!_cached_decoder_for_Activity_Identifier) {
     _cached_decoder_for_Activity_Identifier = $._decode_implicit<Activity_Identifier>(
       () => $._decodeInteger
@@ -58,7 +58,7 @@ let _cached_encoder_for_Activity_Identifier: $.ASN1Encoder<Activity_Identifier> 
 export function _encode_Activity_Identifier(
   value: Activity_Identifier,
   elGetter: $.ASN1Encoder<Activity_Identifier>
-) {
+): _Element {
   if (!_cached_encoder_for_Activity_Identifier) {
     _cached_encoder_for_Activity_Identifier = $._encode_implicit(
       _TagClass.application,

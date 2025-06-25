@@ -130,7 +130,7 @@ let _cached_decoder_for_CommonPrivateKeyAttributes: $.ASN1Decoder<CommonPrivateK
  * @param {_Element} el The element being decoded.
  * @returns {CommonPrivateKeyAttributes} The decoded data structure.
  */
-export function _decode_CommonPrivateKeyAttributes(el: _Element) {
+export function _decode_CommonPrivateKeyAttributes(el: _Element): CommonPrivateKeyAttributes {
     if (!_cached_decoder_for_CommonPrivateKeyAttributes) {
         _cached_decoder_for_CommonPrivateKeyAttributes = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_CommonPrivateKeyAttributes: $.ASN1Encoder<CommonPrivateK
 export function _encode_CommonPrivateKeyAttributes(
     value: CommonPrivateKeyAttributes,
     elGetter: $.ASN1Encoder<CommonPrivateKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonPrivateKeyAttributes) {
         _cached_encoder_for_CommonPrivateKeyAttributes = function (
             value: CommonPrivateKeyAttributes        ): _Element {

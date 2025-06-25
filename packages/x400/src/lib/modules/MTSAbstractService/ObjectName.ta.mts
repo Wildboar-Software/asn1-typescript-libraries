@@ -49,7 +49,7 @@ let _cached_decoder_for_ObjectName: $.ASN1Decoder<ObjectName> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectName} The decoded data structure.
  */
-export function _decode_ObjectName(el: _Element) {
+export function _decode_ObjectName(el: _Element): ObjectName {
     if (!_cached_decoder_for_ObjectName) {
         _cached_decoder_for_ObjectName = $._decode_inextensible_choice<ObjectName>(
             {
@@ -85,7 +85,7 @@ let _cached_encoder_for_ObjectName: $.ASN1Encoder<ObjectName> | null = null;
 export function _encode_ObjectName(
     value: ObjectName,
     elGetter: $.ASN1Encoder<ObjectName>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectName) {
         _cached_encoder_for_ObjectName = $._encode_choice<ObjectName>(
             {

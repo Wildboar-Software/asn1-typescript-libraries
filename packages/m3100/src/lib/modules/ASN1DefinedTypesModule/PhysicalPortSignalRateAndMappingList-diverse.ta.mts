@@ -124,7 +124,7 @@ let _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse: $.ASN1Deco
  */
 export function _decode_PhysicalPortSignalRateAndMappingList_diverse(
     el: _Element
-) {
+): PhysicalPortSignalRateAndMappingList_diverse {
     if (!_cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse) {
         _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse: $.ASN1Enco
 export function _encode_PhysicalPortSignalRateAndMappingList_diverse(
     value: PhysicalPortSignalRateAndMappingList_diverse,
     elGetter: $.ASN1Encoder<PhysicalPortSignalRateAndMappingList_diverse>
-) {
+): _Element {
     if (!_cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse) {
         _cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse = function (
             value: PhysicalPortSignalRateAndMappingList_diverse        ): _Element {

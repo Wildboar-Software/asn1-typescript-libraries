@@ -343,7 +343,7 @@ let _cached_decoder_for_GUISelectEventInfo: $.ASN1Decoder<GUISelectEventInfo> | 
  * @param {_Element} el The element being decoded.
  * @returns {GUISelectEventInfo} The decoded data structure.
  */
-export function _decode_GUISelectEventInfo(el: _Element) {
+export function _decode_GUISelectEventInfo(el: _Element): GUISelectEventInfo {
   if (!_cached_decoder_for_GUISelectEventInfo) {
     _cached_decoder_for_GUISelectEventInfo = function (
       el: _Element
@@ -449,7 +449,7 @@ let _cached_encoder_for_GUISelectEventInfo: $.ASN1Encoder<GUISelectEventInfo> | 
 export function _encode_GUISelectEventInfo(
   value: GUISelectEventInfo,
   elGetter: $.ASN1Encoder<GUISelectEventInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_GUISelectEventInfo) {
     _cached_encoder_for_GUISelectEventInfo = function (
       value: GUISelectEventInfo    ): _Element {

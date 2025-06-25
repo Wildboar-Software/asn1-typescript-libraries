@@ -45,7 +45,7 @@ let _cached_decoder_for_CommitmentTime: $.ASN1Decoder<CommitmentTime> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CommitmentTime} The decoded data structure.
  */
-export function _decode_CommitmentTime(el: _Element) {
+export function _decode_CommitmentTime(el: _Element): CommitmentTime {
     if (!_cached_decoder_for_CommitmentTime) {
         _cached_decoder_for_CommitmentTime = $._decode_extensible_choice<CommitmentTime>(
             {
@@ -87,7 +87,7 @@ let _cached_encoder_for_CommitmentTime: $.ASN1Encoder<CommitmentTime> | null = n
 export function _encode_CommitmentTime(
     value: CommitmentTime,
     elGetter: $.ASN1Encoder<CommitmentTime>
-) {
+): _Element {
     if (!_cached_encoder_for_CommitmentTime) {
         _cached_encoder_for_CommitmentTime = $._encode_choice<CommitmentTime>(
             {

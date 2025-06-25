@@ -35,7 +35,7 @@ let _cached_decoder_for_RedirectionClass: $.ASN1Decoder<RedirectionClass> | null
  * @param {_Element} el The element being decoded.
  * @returns {RedirectionClass} The decoded data structure.
  */
-export function _decode_RedirectionClass(el: _Element) {
+export function _decode_RedirectionClass(el: _Element): RedirectionClass {
     if (!_cached_decoder_for_RedirectionClass) {
         _cached_decoder_for_RedirectionClass = _decode_MessageClass;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_RedirectionClass: $.ASN1Encoder<RedirectionClass> | null
 export function _encode_RedirectionClass(
     value: RedirectionClass,
     elGetter: $.ASN1Encoder<RedirectionClass>
-) {
+): _Element {
     if (!_cached_encoder_for_RedirectionClass) {
         _cached_encoder_for_RedirectionClass = _encode_MessageClass;
     }

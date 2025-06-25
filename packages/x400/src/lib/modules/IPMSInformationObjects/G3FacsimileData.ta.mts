@@ -32,7 +32,7 @@ let _cached_decoder_for_G3FacsimileData: $.ASN1Decoder<G3FacsimileData> | null =
  * @param {_Element} el The element being decoded.
  * @returns {G3FacsimileData} The decoded data structure.
  */
-export function _decode_G3FacsimileData(el: _Element) {
+export function _decode_G3FacsimileData(el: _Element): G3FacsimileData {
     if (!_cached_decoder_for_G3FacsimileData) {
         _cached_decoder_for_G3FacsimileData = $._decodeSequenceOf<BIT_STRING>(
             () => $._decodeBitString
@@ -53,7 +53,7 @@ let _cached_encoder_for_G3FacsimileData: $.ASN1Encoder<G3FacsimileData> | null =
 export function _encode_G3FacsimileData(
     value: G3FacsimileData,
     elGetter: $.ASN1Encoder<G3FacsimileData>
-) {
+): _Element {
     if (!_cached_encoder_for_G3FacsimileData) {
         _cached_encoder_for_G3FacsimileData = $._encodeSequenceOf<BIT_STRING>(
             () => $._encodeBitString,

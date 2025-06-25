@@ -111,7 +111,7 @@ let _cached_decoder_for_DaysOfMonth: $.ASN1Decoder<DaysOfMonth> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DaysOfMonth} The decoded data structure.
  */
-export function _decode_DaysOfMonth(el: _Element) {
+export function _decode_DaysOfMonth(el: _Element): DaysOfMonth {
     if (!_cached_decoder_for_DaysOfMonth) {
         _cached_decoder_for_DaysOfMonth = function (el: _Element): DaysOfMonth {
             const sequence: _Element[] = el.sequence;
@@ -150,7 +150,7 @@ let _cached_encoder_for_DaysOfMonth: $.ASN1Encoder<DaysOfMonth> | null = null;
 export function _encode_DaysOfMonth(
     value: DaysOfMonth,
     elGetter: $.ASN1Encoder<DaysOfMonth>
-) {
+): _Element {
     if (!_cached_encoder_for_DaysOfMonth) {
         _cached_encoder_for_DaysOfMonth = function (
             value: DaysOfMonth        ): _Element {

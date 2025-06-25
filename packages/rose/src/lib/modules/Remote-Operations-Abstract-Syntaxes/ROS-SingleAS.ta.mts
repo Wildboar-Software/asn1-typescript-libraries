@@ -43,7 +43,7 @@ let _cached_decoder_for_ROS_SingleAS: $.ASN1Decoder<ROS_SingleAS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ROS_SingleAS} The decoded data structure.
  */
-export function _decode_ROS_SingleAS(el: _Element) {
+export function _decode_ROS_SingleAS(el: _Element): ROS_SingleAS {
   if (!_cached_decoder_for_ROS_SingleAS) {
     _cached_decoder_for_ROS_SingleAS = _decode_ROS;
   }
@@ -64,7 +64,7 @@ let _cached_encoder_for_ROS_SingleAS: $.ASN1Encoder<ROS_SingleAS> | null = null;
 export function _encode_ROS_SingleAS(
   value: ROS_SingleAS,
   elGetter: $.ASN1Encoder<ROS_SingleAS>
-) {
+): _Element {
   if (!_cached_encoder_for_ROS_SingleAS) {
     _cached_encoder_for_ROS_SingleAS = _encode_ROS;
   }

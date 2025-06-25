@@ -142,7 +142,7 @@ let _cached_decoder_for_UDPTLPacket: $.ASN1Decoder<UDPTLPacket> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UDPTLPacket} The decoded data structure.
  */
-export function _decode_UDPTLPacket(el: _Element) {
+export function _decode_UDPTLPacket(el: _Element): UDPTLPacket {
   if (!_cached_decoder_for_UDPTLPacket) {
     _cached_decoder_for_UDPTLPacket = function (el: _Element): UDPTLPacket {
       const sequence: _Element[] = el.sequence;
@@ -182,7 +182,7 @@ let _cached_encoder_for_UDPTLPacket: $.ASN1Encoder<UDPTLPacket> | null = null;
 export function _encode_UDPTLPacket(
   value: UDPTLPacket,
   elGetter: $.ASN1Encoder<UDPTLPacket>
-) {
+): _Element {
   if (!_cached_encoder_for_UDPTLPacket) {
     _cached_encoder_for_UDPTLPacket = function (
       value: UDPTLPacket    ): _Element {

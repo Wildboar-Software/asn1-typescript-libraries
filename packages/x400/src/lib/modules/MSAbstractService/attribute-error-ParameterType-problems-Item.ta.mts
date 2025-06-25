@@ -138,7 +138,7 @@ let _cached_decoder_for_attribute_error_ParameterType_problems_Item: $.ASN1Decod
  */
 export function _decode_attribute_error_ParameterType_problems_Item(
     el: _Element
-) {
+): attribute_error_ParameterType_problems_Item {
     if (!_cached_decoder_for_attribute_error_ParameterType_problems_Item) {
         _cached_decoder_for_attribute_error_ParameterType_problems_Item = function (
             el: _Element
@@ -195,7 +195,7 @@ let _cached_encoder_for_attribute_error_ParameterType_problems_Item: $.ASN1Encod
 export function _encode_attribute_error_ParameterType_problems_Item(
     value: attribute_error_ParameterType_problems_Item,
     elGetter: $.ASN1Encoder<attribute_error_ParameterType_problems_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_attribute_error_ParameterType_problems_Item) {
         _cached_encoder_for_attribute_error_ParameterType_problems_Item = function (
             value: attribute_error_ParameterType_problems_Item        ): _Element {

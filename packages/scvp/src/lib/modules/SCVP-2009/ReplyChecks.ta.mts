@@ -35,7 +35,7 @@ let _cached_decoder_for_ReplyChecks: $.ASN1Decoder<ReplyChecks> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ReplyChecks} The decoded data structure.
  */
-export function _decode_ReplyChecks(el: _Element) {
+export function _decode_ReplyChecks(el: _Element): ReplyChecks {
   if (!_cached_decoder_for_ReplyChecks) {
     _cached_decoder_for_ReplyChecks = $._decodeSequenceOf<ReplyCheck>(
       () => _decode_ReplyCheck
@@ -56,7 +56,7 @@ let _cached_encoder_for_ReplyChecks: $.ASN1Encoder<ReplyChecks> | null = null;
 export function _encode_ReplyChecks(
   value: ReplyChecks,
   elGetter: $.ASN1Encoder<ReplyChecks>
-) {
+): _Element {
   if (!_cached_encoder_for_ReplyChecks) {
     _cached_encoder_for_ReplyChecks = $._encodeSequenceOf<ReplyCheck>(
       () => _encode_ReplyCheck,

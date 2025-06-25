@@ -35,7 +35,7 @@ let _cached_decoder_for_ContactId: $.ASN1Decoder<ContactId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContactId} The decoded data structure.
  */
-export function _decode_ContactId(el: _Element) {
+export function _decode_ContactId(el: _Element): ContactId {
     if (!_cached_decoder_for_ContactId) {
         _cached_decoder_for_ContactId = _decode_SimpleNameType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ContactId: $.ASN1Encoder<ContactId> | null = null;
 export function _encode_ContactId(
     value: ContactId,
     elGetter: $.ASN1Encoder<ContactId>
-) {
+): _Element {
     if (!_cached_encoder_for_ContactId) {
         _cached_encoder_for_ContactId = _encode_SimpleNameType;
     }

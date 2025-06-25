@@ -111,7 +111,7 @@ let _cached_decoder_for_ComponentClass: $.ASN1Decoder<ComponentClass> | null = n
  * @returns {ComponentClass} The decoded data structure.
  */
 export
-function _decode_ComponentClass (el: _Element) {
+function _decode_ComponentClass (el: _Element): ComponentClass {
     if (!_cached_decoder_for_ComponentClass) { _cached_decoder_for_ComponentClass = function (el: _Element): ComponentClass {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_ComponentClass: $.ASN1Encoder<ComponentClass> | null = n
  * @returns {_Element} The ComponentClass, encoded as an ASN.1 Element.
  */
 export
-function _encode_ComponentClass (value: ComponentClass, elGetter: $.ASN1Encoder<ComponentClass>) {
+function _encode_ComponentClass (value: ComponentClass, elGetter: $.ASN1Encoder<ComponentClass>): _Element {
     if (!_cached_encoder_for_ComponentClass) { _cached_encoder_for_ComponentClass = function (value: ComponentClass): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

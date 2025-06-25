@@ -36,7 +36,7 @@ let _cached_decoder_for_LastUpdate: $.ASN1Decoder<LastUpdate> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LastUpdate} The decoded data structure.
  */
-export function _decode_LastUpdate(el: _Element) {
+export function _decode_LastUpdate(el: _Element): LastUpdate {
     if (!_cached_decoder_for_LastUpdate) {
         _cached_decoder_for_LastUpdate = $._decode_extensible_choice<LastUpdate>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_LastUpdate: $.ASN1Encoder<LastUpdate> | null = null;
 export function _encode_LastUpdate(
     value: LastUpdate,
     elGetter: $.ASN1Encoder<LastUpdate>
-) {
+): _Element {
     if (!_cached_encoder_for_LastUpdate) {
         _cached_encoder_for_LastUpdate = $._encode_choice<LastUpdate>(
             {

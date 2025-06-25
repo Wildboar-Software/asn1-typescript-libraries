@@ -33,7 +33,7 @@ let _cached_decoder_for_FilterItem_substrings_strings_Item: $.ASN1Decoder<Filter
  * @param {_Element} el The element being decoded.
  * @returns {FilterItem_substrings_strings_Item} The decoded data structure.
  */
-export function _decode_FilterItem_substrings_strings_Item(el: _Element) {
+export function _decode_FilterItem_substrings_strings_Item(el: _Element): FilterItem_substrings_strings_Item {
     if (!_cached_decoder_for_FilterItem_substrings_strings_Item) {
         _cached_decoder_for_FilterItem_substrings_strings_Item = $._decode_inextensible_choice<FilterItem_substrings_strings_Item>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_FilterItem_substrings_strings_Item: $.ASN1Encoder<Filter
 export function _encode_FilterItem_substrings_strings_Item(
     value: FilterItem_substrings_strings_Item,
     elGetter: $.ASN1Encoder<FilterItem_substrings_strings_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_FilterItem_substrings_strings_Item) {
         _cached_encoder_for_FilterItem_substrings_strings_Item = $._encode_choice<FilterItem_substrings_strings_Item>(
             {

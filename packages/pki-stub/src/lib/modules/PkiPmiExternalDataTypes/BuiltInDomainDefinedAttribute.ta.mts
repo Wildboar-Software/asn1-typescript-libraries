@@ -49,13 +49,7 @@ export class BuiltInDomainDefinedAttribute {
      * @param {Object} _o An object having all of the keys and values of a `BuiltInDomainDefinedAttribute`.
      * @returns {BuiltInDomainDefinedAttribute}
      */
-    public static _from_object(
-        _o: Partial<
-            {
-                [_K in keyof BuiltInDomainDefinedAttribute]: BuiltInDomainDefinedAttribute[_K];
-            }
-        >
-    ): BuiltInDomainDefinedAttribute {
+    public static _from_object(_o: { type_: PrintableString, value: PrintableString }): BuiltInDomainDefinedAttribute {
         return new BuiltInDomainDefinedAttribute(_o.type_, _o.value);
     }
 }

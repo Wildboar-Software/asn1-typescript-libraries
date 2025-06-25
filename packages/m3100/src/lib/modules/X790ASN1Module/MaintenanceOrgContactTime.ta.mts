@@ -43,7 +43,7 @@ let _cached_decoder_for_MaintenanceOrgContactTime: $.ASN1Decoder<MaintenanceOrgC
  * @param {_Element} el The element being decoded.
  * @returns {MaintenanceOrgContactTime} The decoded data structure.
  */
-export function _decode_MaintenanceOrgContactTime(el: _Element) {
+export function _decode_MaintenanceOrgContactTime(el: _Element): MaintenanceOrgContactTime {
     if (!_cached_decoder_for_MaintenanceOrgContactTime) {
         _cached_decoder_for_MaintenanceOrgContactTime = $._decode_extensible_choice<MaintenanceOrgContactTime>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_MaintenanceOrgContactTime: $.ASN1Encoder<MaintenanceOrgC
 export function _encode_MaintenanceOrgContactTime(
     value: MaintenanceOrgContactTime,
     elGetter: $.ASN1Encoder<MaintenanceOrgContactTime>
-) {
+): _Element {
     if (!_cached_encoder_for_MaintenanceOrgContactTime) {
         _cached_encoder_for_MaintenanceOrgContactTime = $._encode_choice<MaintenanceOrgContactTime>(
             {

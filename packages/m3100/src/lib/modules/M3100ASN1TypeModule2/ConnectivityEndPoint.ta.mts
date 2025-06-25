@@ -45,7 +45,7 @@ let _cached_decoder_for_ConnectivityEndPoint: $.ASN1Decoder<ConnectivityEndPoint
  * @param {_Element} el The element being decoded.
  * @returns {ConnectivityEndPoint} The decoded data structure.
  */
-export function _decode_ConnectivityEndPoint(el: _Element) {
+export function _decode_ConnectivityEndPoint(el: _Element): ConnectivityEndPoint {
     if (!_cached_decoder_for_ConnectivityEndPoint) {
         _cached_decoder_for_ConnectivityEndPoint = $._decode_inextensible_choice<ConnectivityEndPoint>(
             {
@@ -87,7 +87,7 @@ let _cached_encoder_for_ConnectivityEndPoint: $.ASN1Encoder<ConnectivityEndPoint
 export function _encode_ConnectivityEndPoint(
     value: ConnectivityEndPoint,
     elGetter: $.ASN1Encoder<ConnectivityEndPoint>
-) {
+): _Element {
     if (!_cached_encoder_for_ConnectivityEndPoint) {
         _cached_encoder_for_ConnectivityEndPoint = $._encode_choice<ConnectivityEndPoint>(
             {

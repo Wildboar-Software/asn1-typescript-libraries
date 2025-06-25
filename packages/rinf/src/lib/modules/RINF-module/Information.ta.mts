@@ -156,7 +156,7 @@ let _cached_decoder_for_Information: $.ASN1Decoder<Information> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Information} The decoded data structure.
  */
-export function _decode_Information(el: _Element) {
+export function _decode_Information(el: _Element): Information {
   if (!_cached_decoder_for_Information) {
     _cached_decoder_for_Information = function (el: _Element): Information {
       let description!: HTMLString;
@@ -210,7 +210,7 @@ let _cached_encoder_for_Information: $.ASN1Encoder<Information> | null = null;
 export function _encode_Information(
   value: Information,
   elGetter: $.ASN1Encoder<Information>
-) {
+): _Element {
   if (!_cached_encoder_for_Information) {
     _cached_encoder_for_Information = function (
       value: Information    ): _Element {

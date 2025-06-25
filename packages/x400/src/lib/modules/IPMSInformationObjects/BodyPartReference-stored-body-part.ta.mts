@@ -117,7 +117,7 @@ let _cached_decoder_for_BodyPartReference_stored_body_part: $.ASN1Decoder<BodyPa
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartReference_stored_body_part} The decoded data structure.
  */
-export function _decode_BodyPartReference_stored_body_part(el: _Element) {
+export function _decode_BodyPartReference_stored_body_part(el: _Element): BodyPartReference_stored_body_part {
     if (!_cached_decoder_for_BodyPartReference_stored_body_part) {
         _cached_decoder_for_BodyPartReference_stored_body_part = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_BodyPartReference_stored_body_part: $.ASN1Encoder<BodyPa
 export function _encode_BodyPartReference_stored_body_part(
     value: BodyPartReference_stored_body_part,
     elGetter: $.ASN1Encoder<BodyPartReference_stored_body_part>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartReference_stored_body_part) {
         _cached_encoder_for_BodyPartReference_stored_body_part = function (
             value: BodyPartReference_stored_body_part        ): _Element {

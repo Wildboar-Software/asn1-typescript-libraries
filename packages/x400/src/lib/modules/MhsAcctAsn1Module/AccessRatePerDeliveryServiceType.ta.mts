@@ -32,7 +32,7 @@ let _cached_decoder_for_AccessRatePerDeliveryServiceType: $.ASN1Decoder<AccessRa
  * @param {_Element} el The element being decoded.
  * @returns {AccessRatePerDeliveryServiceType} The decoded data structure.
  */
-export function _decode_AccessRatePerDeliveryServiceType(el: _Element) {
+export function _decode_AccessRatePerDeliveryServiceType(el: _Element): AccessRatePerDeliveryServiceType {
     if (!_cached_decoder_for_AccessRatePerDeliveryServiceType) {
         _cached_decoder_for_AccessRatePerDeliveryServiceType = $._decodeSetOf<REAL>(
             () => $._decodeReal
@@ -53,7 +53,7 @@ let _cached_encoder_for_AccessRatePerDeliveryServiceType: $.ASN1Encoder<AccessRa
 export function _encode_AccessRatePerDeliveryServiceType(
     value: AccessRatePerDeliveryServiceType,
     elGetter: $.ASN1Encoder<AccessRatePerDeliveryServiceType>
-) {
+): _Element {
     if (!_cached_encoder_for_AccessRatePerDeliveryServiceType) {
         _cached_encoder_for_AccessRatePerDeliveryServiceType = $._encodeSetOf<REAL>(
             () => $._encodeReal,

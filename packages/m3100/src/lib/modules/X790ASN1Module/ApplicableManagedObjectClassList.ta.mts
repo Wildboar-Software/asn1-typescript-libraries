@@ -38,7 +38,7 @@ let _cached_decoder_for_ApplicableManagedObjectClassList: $.ASN1Decoder<Applicab
  * @param {_Element} el The element being decoded.
  * @returns {ApplicableManagedObjectClassList} The decoded data structure.
  */
-export function _decode_ApplicableManagedObjectClassList(el: _Element) {
+export function _decode_ApplicableManagedObjectClassList(el: _Element): ApplicableManagedObjectClassList {
     if (!_cached_decoder_for_ApplicableManagedObjectClassList) {
         _cached_decoder_for_ApplicableManagedObjectClassList = $._decodeSetOf<ObjectClass>(
             () => _decode_ObjectClass
@@ -61,7 +61,7 @@ let _cached_encoder_for_ApplicableManagedObjectClassList: $.ASN1Encoder<Applicab
 export function _encode_ApplicableManagedObjectClassList(
     value: ApplicableManagedObjectClassList,
     elGetter: $.ASN1Encoder<ApplicableManagedObjectClassList>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplicableManagedObjectClassList) {
         _cached_encoder_for_ApplicableManagedObjectClassList = $._encodeSetOf<ObjectClass>(
             () => _encode_ObjectClass,

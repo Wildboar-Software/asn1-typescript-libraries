@@ -38,7 +38,7 @@ let _cached_decoder_for_ActivityPerson: $.ASN1Decoder<ActivityPerson> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ActivityPerson} The decoded data structure.
  */
-export function _decode_ActivityPerson(el: _Element) {
+export function _decode_ActivityPerson(el: _Element): ActivityPerson {
     if (!_cached_decoder_for_ActivityPerson) {
         _cached_decoder_for_ActivityPerson = _decode_PersonReach;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_ActivityPerson: $.ASN1Encoder<ActivityPerson> | null = n
 export function _encode_ActivityPerson(
     value: ActivityPerson,
     elGetter: $.ASN1Encoder<ActivityPerson>
-) {
+): _Element {
     if (!_cached_encoder_for_ActivityPerson) {
         _cached_encoder_for_ActivityPerson = _encode_PersonReach;
     }

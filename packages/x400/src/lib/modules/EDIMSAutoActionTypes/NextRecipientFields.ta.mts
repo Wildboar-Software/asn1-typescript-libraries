@@ -185,7 +185,7 @@ let _cached_decoder_for_NextRecipientFields: $.ASN1Decoder<NextRecipientFields> 
  * @param {_Element} el The element being decoded.
  * @returns {NextRecipientFields} The decoded data structure.
  */
-export function _decode_NextRecipientFields(el: _Element) {
+export function _decode_NextRecipientFields(el: _Element): NextRecipientFields {
     if (!_cached_decoder_for_NextRecipientFields) {
         _cached_decoder_for_NextRecipientFields = function (
             el: _Element
@@ -253,7 +253,7 @@ let _cached_encoder_for_NextRecipientFields: $.ASN1Encoder<NextRecipientFields> 
 export function _encode_NextRecipientFields(
     value: NextRecipientFields,
     elGetter: $.ASN1Encoder<NextRecipientFields>
-) {
+): _Element {
     if (!_cached_encoder_for_NextRecipientFields) {
         _cached_encoder_for_NextRecipientFields = function (
             value: NextRecipientFields        ): _Element {

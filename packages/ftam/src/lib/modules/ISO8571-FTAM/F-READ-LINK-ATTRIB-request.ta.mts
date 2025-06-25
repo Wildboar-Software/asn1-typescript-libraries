@@ -131,7 +131,7 @@ let _cached_decoder_for_F_READ_LINK_ATTRIB_request: $.ASN1Decoder<F_READ_LINK_AT
  * @param {_Element} el The element being decoded.
  * @returns {F_READ_LINK_ATTRIB_request} The decoded data structure.
  */
-export function _decode_F_READ_LINK_ATTRIB_request(el: _Element) {
+export function _decode_F_READ_LINK_ATTRIB_request(el: _Element): F_READ_LINK_ATTRIB_request {
   if (!_cached_decoder_for_F_READ_LINK_ATTRIB_request) {
     _cached_decoder_for_F_READ_LINK_ATTRIB_request = function (
       el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_F_READ_LINK_ATTRIB_request: $.ASN1Encoder<F_READ_LINK_AT
 export function _encode_F_READ_LINK_ATTRIB_request(
   value: F_READ_LINK_ATTRIB_request,
   elGetter: $.ASN1Encoder<F_READ_LINK_ATTRIB_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_READ_LINK_ATTRIB_request) {
     _cached_encoder_for_F_READ_LINK_ATTRIB_request = function (
       value: F_READ_LINK_ATTRIB_request    ): _Element {

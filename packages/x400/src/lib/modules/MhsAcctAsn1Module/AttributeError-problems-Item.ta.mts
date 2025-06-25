@@ -118,7 +118,7 @@ let _cached_decoder_for_AttributeError_problems_Item: $.ASN1Decoder<AttributeErr
  * @param {_Element} el The element being decoded.
  * @returns {AttributeError_problems_Item} The decoded data structure.
  */
-export function _decode_AttributeError_problems_Item(el: _Element) {
+export function _decode_AttributeError_problems_Item(el: _Element): AttributeError_problems_Item {
     if (!_cached_decoder_for_AttributeError_problems_Item) {
         _cached_decoder_for_AttributeError_problems_Item = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_AttributeError_problems_Item: $.ASN1Encoder<AttributeErr
 export function _encode_AttributeError_problems_Item(
     value: AttributeError_problems_Item,
     elGetter: $.ASN1Encoder<AttributeError_problems_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeError_problems_Item) {
         _cached_encoder_for_AttributeError_problems_Item = function (
             value: AttributeError_problems_Item        ): _Element {

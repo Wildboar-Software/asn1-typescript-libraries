@@ -143,7 +143,7 @@ let _cached_decoder_for_OOBCertHash: $.ASN1Decoder<OOBCertHash> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OOBCertHash} The decoded data structure.
  */
-export function _decode_OOBCertHash(el: _Element) {
+export function _decode_OOBCertHash(el: _Element): OOBCertHash {
   if (!_cached_decoder_for_OOBCertHash) {
     _cached_decoder_for_OOBCertHash = function (el: _Element): OOBCertHash {
       let hashAlg: OPTIONAL<AlgorithmIdentifier>;
@@ -194,7 +194,7 @@ let _cached_encoder_for_OOBCertHash: $.ASN1Encoder<OOBCertHash> | null = null;
 export function _encode_OOBCertHash(
   value: OOBCertHash,
   elGetter: $.ASN1Encoder<OOBCertHash>
-) {
+): _Element {
   if (!_cached_encoder_for_OOBCertHash) {
     _cached_encoder_for_OOBCertHash = function (
       value: OOBCertHash    ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_SwitchOverResult: $.ASN1Decoder<SwitchOverResult> | null
  * @param {_Element} el The element being decoded.
  * @returns {SwitchOverResult} The decoded data structure.
  */
-export function _decode_SwitchOverResult(el: _Element) {
+export function _decode_SwitchOverResult(el: _Element): SwitchOverResult {
     if (!_cached_decoder_for_SwitchOverResult) {
         _cached_decoder_for_SwitchOverResult = $._decodeSequenceOf<IndividualResult>(
             () => _decode_IndividualResult
@@ -61,7 +61,7 @@ let _cached_encoder_for_SwitchOverResult: $.ASN1Encoder<SwitchOverResult> | null
 export function _encode_SwitchOverResult(
     value: SwitchOverResult,
     elGetter: $.ASN1Encoder<SwitchOverResult>
-) {
+): _Element {
     if (!_cached_encoder_for_SwitchOverResult) {
         _cached_encoder_for_SwitchOverResult = $._encodeSequenceOf<IndividualResult>(
             () => _encode_IndividualResult,

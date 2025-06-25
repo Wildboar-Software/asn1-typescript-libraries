@@ -184,7 +184,7 @@ let _cached_decoder_for_ECParameters: $.ASN1Decoder<ECParameters> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ECParameters} The decoded data structure.
  */
-export function _decode_ECParameters(el: _Element) {
+export function _decode_ECParameters(el: _Element): ECParameters {
     if (!_cached_decoder_for_ECParameters) {
         _cached_decoder_for_ECParameters = function (
             el: _Element
@@ -252,7 +252,7 @@ let _cached_encoder_for_ECParameters: $.ASN1Encoder<ECParameters> | null = null;
 export function _encode_ECParameters(
     value: ECParameters,
     elGetter: $.ASN1Encoder<ECParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_ECParameters) {
         _cached_encoder_for_ECParameters = function (
             value: ECParameters        ): _Element {

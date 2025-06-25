@@ -35,7 +35,7 @@ let _cached_decoder_for_OtherBodyParts: $.ASN1Decoder<OtherBodyParts> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OtherBodyParts} The decoded data structure.
  */
-export function _decode_OtherBodyParts(el: _Element) {
+export function _decode_OtherBodyParts(el: _Element): OtherBodyParts {
     if (!_cached_decoder_for_OtherBodyParts) {
         _cached_decoder_for_OtherBodyParts = $._decodeSequenceOf<EDIM_ExtendedBodyPart>(
             () => _decode_EDIM_ExtendedBodyPart
@@ -56,7 +56,7 @@ let _cached_encoder_for_OtherBodyParts: $.ASN1Encoder<OtherBodyParts> | null = n
 export function _encode_OtherBodyParts(
     value: OtherBodyParts,
     elGetter: $.ASN1Encoder<OtherBodyParts>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherBodyParts) {
         _cached_encoder_for_OtherBodyParts = $._encodeSequenceOf<EDIM_ExtendedBodyPart>(
             () => _encode_EDIM_ExtendedBodyPart,

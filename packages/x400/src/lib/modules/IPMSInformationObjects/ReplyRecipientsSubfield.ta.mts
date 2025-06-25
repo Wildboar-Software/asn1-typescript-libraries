@@ -39,7 +39,7 @@ let _cached_decoder_for_ReplyRecipientsSubfield: $.ASN1Decoder<ReplyRecipientsSu
  * @param {_Element} el The element being decoded.
  * @returns {ReplyRecipientsSubfield} The decoded data structure.
  */
-export function _decode_ReplyRecipientsSubfield(el: _Element) {
+export function _decode_ReplyRecipientsSubfield(el: _Element): ReplyRecipientsSubfield {
     if (!_cached_decoder_for_ReplyRecipientsSubfield) {
         _cached_decoder_for_ReplyRecipientsSubfield = _decode_ORDescriptor;
     }
@@ -58,7 +58,7 @@ let _cached_encoder_for_ReplyRecipientsSubfield: $.ASN1Encoder<ReplyRecipientsSu
 export function _encode_ReplyRecipientsSubfield(
     value: ReplyRecipientsSubfield,
     elGetter: $.ASN1Encoder<ReplyRecipientsSubfield>
-) {
+): _Element {
     if (!_cached_encoder_for_ReplyRecipientsSubfield) {
         _cached_encoder_for_ReplyRecipientsSubfield = _encode_ORDescriptor;
     }

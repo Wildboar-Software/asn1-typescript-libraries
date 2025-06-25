@@ -116,7 +116,7 @@ let _cached_decoder_for_C_ROLLBACK_RC: $.ASN1Decoder<C_ROLLBACK_RC> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {C_ROLLBACK_RC} The decoded data structure.
  */
-export function _decode_C_ROLLBACK_RC(el: _Element) {
+export function _decode_C_ROLLBACK_RC(el: _Element): C_ROLLBACK_RC {
   if (!_cached_decoder_for_C_ROLLBACK_RC) {
     _cached_decoder_for_C_ROLLBACK_RC = $._decode_implicit<C_ROLLBACK_RC>(
       () =>
@@ -162,7 +162,7 @@ let _cached_encoder_for_C_ROLLBACK_RC: $.ASN1Encoder<C_ROLLBACK_RC> | null = nul
 export function _encode_C_ROLLBACK_RC(
   value: C_ROLLBACK_RC,
   elGetter: $.ASN1Encoder<C_ROLLBACK_RC>
-) {
+): _Element {
   if (!_cached_encoder_for_C_ROLLBACK_RC) {
     _cached_encoder_for_C_ROLLBACK_RC = $._encode_implicit(
       _TagClass.context,

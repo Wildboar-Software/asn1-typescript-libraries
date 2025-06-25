@@ -164,7 +164,7 @@ let _cached_decoder_for_PDU: $.ASN1Decoder<PDU> | null = null;
  * @returns {PDU} The decoded data structure.
  */
 export
-function _decode_PDU (el: _Element) {
+function _decode_PDU (el: _Element): PDU {
     if (!_cached_decoder_for_PDU) { _cached_decoder_for_PDU = function (el: _Element): PDU {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 4) {
@@ -203,7 +203,7 @@ let _cached_encoder_for_PDU: $.ASN1Encoder<PDU> | null = null;
  * @returns {_Element} The PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_PDU (value: PDU, elGetter: $.ASN1Encoder<PDU>) {
+function _encode_PDU (value: PDU, elGetter: $.ASN1Encoder<PDU>): _Element {
     if (!_cached_encoder_for_PDU) { _cached_encoder_for_PDU = function (value: PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

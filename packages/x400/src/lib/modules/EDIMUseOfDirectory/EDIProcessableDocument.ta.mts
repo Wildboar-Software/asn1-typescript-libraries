@@ -213,7 +213,7 @@ let _cached_decoder_for_EDIProcessableDocument: $.ASN1Decoder<EDIProcessableDocu
  * @param {_Element} el The element being decoded.
  * @returns {EDIProcessableDocument} The decoded data structure.
  */
-export function _decode_EDIProcessableDocument(el: _Element) {
+export function _decode_EDIProcessableDocument(el: _Element): EDIProcessableDocument {
     if (!_cached_decoder_for_EDIProcessableDocument) {
         _cached_decoder_for_EDIProcessableDocument = function (
             el: _Element
@@ -296,7 +296,7 @@ let _cached_encoder_for_EDIProcessableDocument: $.ASN1Encoder<EDIProcessableDocu
 export function _encode_EDIProcessableDocument(
     value: EDIProcessableDocument,
     elGetter: $.ASN1Encoder<EDIProcessableDocument>
-) {
+): _Element {
     if (!_cached_encoder_for_EDIProcessableDocument) {
         _cached_encoder_for_EDIProcessableDocument = function (
             value: EDIProcessableDocument        ): _Element {

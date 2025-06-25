@@ -36,7 +36,7 @@ let _cached_decoder_for_UserObjects: $.ASN1Decoder<UserObjects> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {UserObjects} The decoded data structure.
  */
-export function _decode_UserObjects(el: _Element) {
+export function _decode_UserObjects(el: _Element): UserObjects {
   if (!_cached_decoder_for_UserObjects) {
     _cached_decoder_for_UserObjects = $._decodeSetOf<BaseManagedObjectId>(
       () => _decode_BaseManagedObjectId
@@ -57,7 +57,7 @@ let _cached_encoder_for_UserObjects: $.ASN1Encoder<UserObjects> | null = null;
 export function _encode_UserObjects(
   value: UserObjects,
   elGetter: $.ASN1Encoder<UserObjects>
-) {
+): _Element {
   if (!_cached_encoder_for_UserObjects) {
     _cached_encoder_for_UserObjects = $._encodeSetOf<BaseManagedObjectId>(
       () => _encode_BaseManagedObjectId,

@@ -29,7 +29,7 @@ let _cached_decoder_for_XPathSet: $.ASN1Decoder<XPathSet> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {XPathSet} The decoded data structure.
  */
-export function _decode_XPathSet(el: _Element) {
+export function _decode_XPathSet(el: _Element): XPathSet {
     if (!_cached_decoder_for_XPathSet) {
         _cached_decoder_for_XPathSet = $._decodeSequenceOf<XPath>(
             () => _decode_XPath
@@ -52,7 +52,7 @@ let _cached_encoder_for_XPathSet: $.ASN1Encoder<XPathSet> | null = null;
 export function _encode_XPathSet(
     value: XPathSet,
     elGetter: $.ASN1Encoder<XPathSet>
-) {
+): _Element {
     if (!_cached_encoder_for_XPathSet) {
         _cached_encoder_for_XPathSet = $._encodeSequenceOf<XPath>(
             () => _encode_XPath,

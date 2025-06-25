@@ -35,7 +35,7 @@ let _cached_decoder_for_SupportedNameBindingList: $.ASN1Decoder<SupportedNameBin
  * @param {_Element} el The element being decoded.
  * @returns {SupportedNameBindingList} The decoded data structure.
  */
-export function _decode_SupportedNameBindingList(el: _Element) {
+export function _decode_SupportedNameBindingList(el: _Element): SupportedNameBindingList {
     if (!_cached_decoder_for_SupportedNameBindingList) {
         _cached_decoder_for_SupportedNameBindingList = $._decodeSetOf<NameBinding>(
             () => _decode_NameBinding
@@ -56,7 +56,7 @@ let _cached_encoder_for_SupportedNameBindingList: $.ASN1Encoder<SupportedNameBin
 export function _encode_SupportedNameBindingList(
     value: SupportedNameBindingList,
     elGetter: $.ASN1Encoder<SupportedNameBindingList>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedNameBindingList) {
         _cached_encoder_for_SupportedNameBindingList = $._encodeSetOf<NameBinding>(
             () => _encode_NameBinding,

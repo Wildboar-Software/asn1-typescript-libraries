@@ -38,7 +38,7 @@ let _cached_decoder_for_Default_context_result: $.ASN1Decoder<Default_context_re
  * @param {_Element} el The element being decoded.
  * @returns {Default_context_result} The decoded data structure.
  */
-export function _decode_Default_context_result(el: _Element) {
+export function _decode_Default_context_result(el: _Element): Default_context_result {
     if (!_cached_decoder_for_Default_context_result) {
         _cached_decoder_for_Default_context_result = _decode_Result;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Default_context_result: $.ASN1Encoder<Default_context_re
 export function _encode_Default_context_result(
     value: Default_context_result,
     elGetter: $.ASN1Encoder<Default_context_result>
-) {
+): _Element {
     if (!_cached_encoder_for_Default_context_result) {
         _cached_encoder_for_Default_context_result = _encode_Result;
     }

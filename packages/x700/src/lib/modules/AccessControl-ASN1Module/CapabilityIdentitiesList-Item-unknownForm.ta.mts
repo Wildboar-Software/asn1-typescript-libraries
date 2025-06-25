@@ -110,7 +110,7 @@ let _cached_decoder_for_CapabilityIdentitiesList_Item_unknownForm: $.ASN1Decoder
  */
 export function _decode_CapabilityIdentitiesList_Item_unknownForm(
     el: _Element
-) {
+): CapabilityIdentitiesList_Item_unknownForm {
     if (!_cached_decoder_for_CapabilityIdentitiesList_Item_unknownForm) {
         _cached_decoder_for_CapabilityIdentitiesList_Item_unknownForm = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_CapabilityIdentitiesList_Item_unknownForm: $.ASN1Encoder
 export function _encode_CapabilityIdentitiesList_Item_unknownForm(
     value: CapabilityIdentitiesList_Item_unknownForm,
     elGetter: $.ASN1Encoder<CapabilityIdentitiesList_Item_unknownForm>
-) {
+): _Element {
     if (!_cached_encoder_for_CapabilityIdentitiesList_Item_unknownForm) {
         _cached_encoder_for_CapabilityIdentitiesList_Item_unknownForm = function (
             value: CapabilityIdentitiesList_Item_unknownForm        ): _Element {

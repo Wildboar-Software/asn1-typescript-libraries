@@ -122,7 +122,7 @@ let _cached_decoder_for_MonthMask_Item: $.ASN1Decoder<MonthMask_Item> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {MonthMask_Item} The decoded data structure.
  */
-export function _decode_MonthMask_Item(el: _Element) {
+export function _decode_MonthMask_Item(el: _Element): MonthMask_Item {
     if (!_cached_decoder_for_MonthMask_Item) {
         _cached_decoder_for_MonthMask_Item = function (
             el: _Element
@@ -161,7 +161,7 @@ let _cached_encoder_for_MonthMask_Item: $.ASN1Encoder<MonthMask_Item> | null = n
 export function _encode_MonthMask_Item(
     value: MonthMask_Item,
     elGetter: $.ASN1Encoder<MonthMask_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_MonthMask_Item) {
         _cached_encoder_for_MonthMask_Item = function (
             value: MonthMask_Item        ): _Element {

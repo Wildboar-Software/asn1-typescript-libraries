@@ -201,7 +201,7 @@ let _cached_decoder_for_Concurrency_Control: $.ASN1Decoder<Concurrency_Control> 
  * @param {_Element} el The element being decoded.
  * @returns {Concurrency_Control} The decoded data structure.
  */
-export function _decode_Concurrency_Control(el: _Element) {
+export function _decode_Concurrency_Control(el: _Element): Concurrency_Control {
   if (!_cached_decoder_for_Concurrency_Control) {
     _cached_decoder_for_Concurrency_Control = $._decode_implicit<Concurrency_Control>(
       () =>
@@ -274,7 +274,7 @@ let _cached_encoder_for_Concurrency_Control: $.ASN1Encoder<Concurrency_Control> 
 export function _encode_Concurrency_Control(
   value: Concurrency_Control,
   elGetter: $.ASN1Encoder<Concurrency_Control>
-) {
+): _Element {
   if (!_cached_encoder_for_Concurrency_Control) {
     _cached_encoder_for_Concurrency_Control = $._encode_implicit(
       _TagClass.application,

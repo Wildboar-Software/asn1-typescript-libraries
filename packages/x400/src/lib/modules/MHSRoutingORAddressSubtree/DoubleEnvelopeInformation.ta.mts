@@ -182,7 +182,7 @@ let _cached_decoder_for_DoubleEnvelopeInformation: $.ASN1Decoder<DoubleEnvelopeI
  * @param {_Element} el The element being decoded.
  * @returns {DoubleEnvelopeInformation} The decoded data structure.
  */
-export function _decode_DoubleEnvelopeInformation(el: _Element) {
+export function _decode_DoubleEnvelopeInformation(el: _Element): DoubleEnvelopeInformation {
     if (!_cached_decoder_for_DoubleEnvelopeInformation) {
         _cached_decoder_for_DoubleEnvelopeInformation = function (
             el: _Element
@@ -285,7 +285,7 @@ let _cached_encoder_for_DoubleEnvelopeInformation: $.ASN1Encoder<DoubleEnvelopeI
 export function _encode_DoubleEnvelopeInformation(
     value: DoubleEnvelopeInformation,
     elGetter: $.ASN1Encoder<DoubleEnvelopeInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_DoubleEnvelopeInformation) {
         _cached_encoder_for_DoubleEnvelopeInformation = function (
             value: DoubleEnvelopeInformation        ): _Element {

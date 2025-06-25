@@ -38,7 +38,7 @@ let _cached_decoder_for_NormalValues: $.ASN1Decoder<NormalValues> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NormalValues} The decoded data structure.
  */
-export function _decode_NormalValues(el: _Element) {
+export function _decode_NormalValues(el: _Element): NormalValues {
     if (!_cached_decoder_for_NormalValues) {
         _cached_decoder_for_NormalValues = $._decodeSequenceOf<NormalValue>(
             () => _decode_NormalValue
@@ -61,7 +61,7 @@ let _cached_encoder_for_NormalValues: $.ASN1Encoder<NormalValues> | null = null;
 export function _encode_NormalValues(
     value: NormalValues,
     elGetter: $.ASN1Encoder<NormalValues>
-) {
+): _Element {
     if (!_cached_encoder_for_NormalValues) {
         _cached_encoder_for_NormalValues = $._encodeSequenceOf<NormalValue>(
             () => _encode_NormalValue,

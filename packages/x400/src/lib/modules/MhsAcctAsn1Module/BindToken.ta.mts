@@ -45,7 +45,7 @@ let _cached_decoder_for_BindToken: $.ASN1Decoder<BindToken> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {BindToken} The decoded data structure.
  */
-export function _decode_BindToken(el: _Element) {
+export function _decode_BindToken(el: _Element): BindToken {
     if (!_cached_decoder_for_BindToken) {
         _cached_decoder_for_BindToken = $._decode_inextensible_choice<BindToken>(
             {
@@ -79,7 +79,7 @@ let _cached_encoder_for_BindToken: $.ASN1Encoder<BindToken> | null = null;
 export function _encode_BindToken(
     value: BindToken,
     elGetter: $.ASN1Encoder<BindToken>
-) {
+): _Element {
     if (!_cached_encoder_for_BindToken) {
         _cached_encoder_for_BindToken = $._encode_choice<BindToken>(
             {

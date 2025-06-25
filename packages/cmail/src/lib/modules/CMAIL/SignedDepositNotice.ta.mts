@@ -38,7 +38,7 @@ let _cached_decoder_for_SignedDepositNotice: $.ASN1Decoder<SignedDepositNotice> 
  * @param {_Element} el The element being decoded.
  * @returns {SignedDepositNotice} The decoded data structure.
  */
-export function _decode_SignedDepositNotice(el: _Element) {
+export function _decode_SignedDepositNotice(el: _Element): SignedDepositNotice {
   if (!_cached_decoder_for_SignedDepositNotice) {
     _cached_decoder_for_SignedDepositNotice = _decode_SignedDepositNoticeType;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_SignedDepositNotice: $.ASN1Encoder<SignedDepositNotice> 
 export function _encode_SignedDepositNotice(
   value: SignedDepositNotice,
   elGetter: $.ASN1Encoder<SignedDepositNotice>
-) {
+): _Element {
   if (!_cached_encoder_for_SignedDepositNotice) {
     _cached_encoder_for_SignedDepositNotice = _encode_SignedDepositNoticeType;
   }

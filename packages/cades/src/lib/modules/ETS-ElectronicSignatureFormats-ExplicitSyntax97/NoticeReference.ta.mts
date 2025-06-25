@@ -111,7 +111,7 @@ let _cached_decoder_for_NoticeReference: $.ASN1Decoder<NoticeReference> | null =
  * @returns {NoticeReference} The decoded data structure.
  */
 export
-function _decode_NoticeReference (el: _Element) {
+function _decode_NoticeReference (el: _Element): NoticeReference {
     if (!_cached_decoder_for_NoticeReference) { _cached_decoder_for_NoticeReference = function (el: _Element): NoticeReference {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_NoticeReference: $.ASN1Encoder<NoticeReference> | null =
  * @returns {_Element} The NoticeReference, encoded as an ASN.1 Element.
  */
 export
-function _encode_NoticeReference (value: NoticeReference, elGetter: $.ASN1Encoder<NoticeReference>) {
+function _encode_NoticeReference (value: NoticeReference, elGetter: $.ASN1Encoder<NoticeReference>): _Element {
     if (!_cached_encoder_for_NoticeReference) { _cached_encoder_for_NoticeReference = function (value: NoticeReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

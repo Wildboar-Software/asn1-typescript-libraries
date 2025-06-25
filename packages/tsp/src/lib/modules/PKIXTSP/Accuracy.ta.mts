@@ -117,7 +117,7 @@ let _cached_decoder_for_Accuracy: $.ASN1Decoder<Accuracy> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Accuracy} The decoded data structure.
  */
-export function _decode_Accuracy(el: _Element) {
+export function _decode_Accuracy(el: _Element): Accuracy {
     if (!_cached_decoder_for_Accuracy) {
         _cached_decoder_for_Accuracy = function (el: _Element): Accuracy {
             let seconds: OPTIONAL<INTEGER>;
@@ -168,7 +168,7 @@ let _cached_encoder_for_Accuracy: $.ASN1Encoder<Accuracy> | null = null;
 export function _encode_Accuracy(
     value: Accuracy,
     elGetter: $.ASN1Encoder<Accuracy>
-) {
+): _Element {
     if (!_cached_encoder_for_Accuracy) {
         _cached_encoder_for_Accuracy = function (
             value: Accuracy        ): _Element {

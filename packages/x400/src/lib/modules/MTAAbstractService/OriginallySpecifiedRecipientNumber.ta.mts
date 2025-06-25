@@ -32,7 +32,7 @@ let _cached_decoder_for_OriginallySpecifiedRecipientNumber: $.ASN1Decoder<Origin
  * @param {_Element} el The element being decoded.
  * @returns {OriginallySpecifiedRecipientNumber} The decoded data structure.
  */
-export function _decode_OriginallySpecifiedRecipientNumber(el: _Element) {
+export function _decode_OriginallySpecifiedRecipientNumber(el: _Element): OriginallySpecifiedRecipientNumber {
     if (!_cached_decoder_for_OriginallySpecifiedRecipientNumber) {
         _cached_decoder_for_OriginallySpecifiedRecipientNumber =
             $._decodeInteger;
@@ -52,7 +52,7 @@ let _cached_encoder_for_OriginallySpecifiedRecipientNumber: $.ASN1Encoder<Origin
 export function _encode_OriginallySpecifiedRecipientNumber(
     value: OriginallySpecifiedRecipientNumber,
     elGetter: $.ASN1Encoder<OriginallySpecifiedRecipientNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginallySpecifiedRecipientNumber) {
         _cached_encoder_for_OriginallySpecifiedRecipientNumber =
             $._encodeInteger;

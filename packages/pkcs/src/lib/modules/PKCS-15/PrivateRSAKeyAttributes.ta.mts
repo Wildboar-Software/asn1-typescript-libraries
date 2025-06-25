@@ -150,7 +150,7 @@ let _cached_decoder_for_PrivateRSAKeyAttributes: $.ASN1Decoder<PrivateRSAKeyAttr
  * @param {_Element} el The element being decoded.
  * @returns {PrivateRSAKeyAttributes} The decoded data structure.
  */
-export function _decode_PrivateRSAKeyAttributes(el: _Element) {
+export function _decode_PrivateRSAKeyAttributes(el: _Element): PrivateRSAKeyAttributes {
     if (!_cached_decoder_for_PrivateRSAKeyAttributes) {
         _cached_decoder_for_PrivateRSAKeyAttributes = function (
             el: _Element
@@ -213,7 +213,7 @@ let _cached_encoder_for_PrivateRSAKeyAttributes: $.ASN1Encoder<PrivateRSAKeyAttr
 export function _encode_PrivateRSAKeyAttributes(
     value: PrivateRSAKeyAttributes,
     elGetter: $.ASN1Encoder<PrivateRSAKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateRSAKeyAttributes) {
         _cached_encoder_for_PrivateRSAKeyAttributes = function (
             value: PrivateRSAKeyAttributes        ): _Element {

@@ -55,7 +55,7 @@ let _cached_decoder_for_Typed_data_type: $.ASN1Decoder<Typed_data_type> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Typed_data_type} The decoded data structure.
  */
-export function _decode_Typed_data_type(el: _Element) {
+export function _decode_Typed_data_type(el: _Element): Typed_data_type {
     if (!_cached_decoder_for_Typed_data_type) {
         _cached_decoder_for_Typed_data_type = $._decode_inextensible_choice<Typed_data_type>(
             {
@@ -89,7 +89,7 @@ let _cached_encoder_for_Typed_data_type: $.ASN1Encoder<Typed_data_type> | null =
 export function _encode_Typed_data_type(
     value: Typed_data_type,
     elGetter: $.ASN1Encoder<Typed_data_type>
-) {
+): _Element {
     if (!_cached_encoder_for_Typed_data_type) {
         _cached_encoder_for_Typed_data_type = $._encode_choice<Typed_data_type>(
             {

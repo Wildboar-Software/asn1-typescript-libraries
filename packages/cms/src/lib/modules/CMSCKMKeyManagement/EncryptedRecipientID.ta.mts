@@ -128,7 +128,7 @@ let _cached_decoder_for_EncryptedRecipientID: $.ASN1Decoder<EncryptedRecipientID
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedRecipientID} The decoded data structure.
  */
-export function _decode_EncryptedRecipientID(el: _Element) {
+export function _decode_EncryptedRecipientID(el: _Element): EncryptedRecipientID {
     if (!_cached_decoder_for_EncryptedRecipientID) {
         _cached_decoder_for_EncryptedRecipientID = function (
             el: _Element
@@ -183,7 +183,7 @@ let _cached_encoder_for_EncryptedRecipientID: $.ASN1Encoder<EncryptedRecipientID
 export function _encode_EncryptedRecipientID(
     value: EncryptedRecipientID,
     elGetter: $.ASN1Encoder<EncryptedRecipientID>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedRecipientID) {
         _cached_encoder_for_EncryptedRecipientID = function (
             value: EncryptedRecipientID        ): _Element {

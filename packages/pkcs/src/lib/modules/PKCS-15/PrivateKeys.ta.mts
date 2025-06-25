@@ -34,7 +34,7 @@ let _cached_decoder_for_PrivateKeys: $.ASN1Decoder<PrivateKeys> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeys} The decoded data structure.
  */
-export function _decode_PrivateKeys(el: _Element) {
+export function _decode_PrivateKeys(el: _Element): PrivateKeys {
     if (!_cached_decoder_for_PrivateKeys) {
         _cached_decoder_for_PrivateKeys = _get_decoder_for_PathOrObjects<PrivateKeyType>(
             _decode_PrivateKeyType
@@ -57,7 +57,7 @@ let _cached_encoder_for_PrivateKeys: $.ASN1Encoder<PrivateKeys> | null = null;
 export function _encode_PrivateKeys(
     value: PrivateKeys,
     elGetter: $.ASN1Encoder<PrivateKeys>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateKeys) {
         _cached_encoder_for_PrivateKeys = _get_encoder_for_PathOrObjects<PrivateKeyType>(
             _encode_PrivateKeyType

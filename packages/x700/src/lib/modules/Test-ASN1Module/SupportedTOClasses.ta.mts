@@ -32,7 +32,7 @@ let _cached_decoder_for_SupportedTOClasses: $.ASN1Decoder<SupportedTOClasses> | 
  * @param {_Element} el The element being decoded.
  * @returns {SupportedTOClasses} The decoded data structure.
  */
-export function _decode_SupportedTOClasses(el: _Element) {
+export function _decode_SupportedTOClasses(el: _Element): SupportedTOClasses {
     if (!_cached_decoder_for_SupportedTOClasses) {
         _cached_decoder_for_SupportedTOClasses = $._decodeSetOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -53,7 +53,7 @@ let _cached_encoder_for_SupportedTOClasses: $.ASN1Encoder<SupportedTOClasses> | 
 export function _encode_SupportedTOClasses(
     value: SupportedTOClasses,
     elGetter: $.ASN1Encoder<SupportedTOClasses>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedTOClasses) {
         _cached_encoder_for_SupportedTOClasses = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

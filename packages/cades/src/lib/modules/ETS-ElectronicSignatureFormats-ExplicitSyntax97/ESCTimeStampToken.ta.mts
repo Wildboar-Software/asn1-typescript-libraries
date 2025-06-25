@@ -33,7 +33,7 @@ let _cached_decoder_for_ESCTimeStampToken: $.ASN1Decoder<ESCTimeStampToken> | nu
  * @returns {ESCTimeStampToken} The decoded data structure.
  */
 export
-function _decode_ESCTimeStampToken (el: _Element) {
+function _decode_ESCTimeStampToken (el: _Element): ESCTimeStampToken {
     if (!_cached_decoder_for_ESCTimeStampToken) { _cached_decoder_for_ESCTimeStampToken = _decode_TimeStampToken; }
     return _cached_decoder_for_ESCTimeStampToken(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_ESCTimeStampToken: $.ASN1Encoder<ESCTimeStampToken> | nu
  * @returns {_Element} The ESCTimeStampToken, encoded as an ASN.1 Element.
  */
 export
-function _encode_ESCTimeStampToken (value: ESCTimeStampToken, elGetter: $.ASN1Encoder<ESCTimeStampToken>) {
+function _encode_ESCTimeStampToken (value: ESCTimeStampToken, elGetter: $.ASN1Encoder<ESCTimeStampToken>): _Element {
     if (!_cached_encoder_for_ESCTimeStampToken) { _cached_encoder_for_ESCTimeStampToken = _encode_TimeStampToken; }
     return _cached_encoder_for_ESCTimeStampToken(value, elGetter);
 }

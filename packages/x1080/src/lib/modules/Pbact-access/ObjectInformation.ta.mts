@@ -135,7 +135,7 @@ let _cached_decoder_for_ObjectInformation: $.ASN1Decoder<ObjectInformation> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ObjectInformation} The decoded data structure.
  */
-export function _decode_ObjectInformation(el: _Element) {
+export function _decode_ObjectInformation(el: _Element): ObjectInformation {
     if (!_cached_decoder_for_ObjectInformation) {
         _cached_decoder_for_ObjectInformation = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_ObjectInformation: $.ASN1Encoder<ObjectInformation> | nu
 export function _encode_ObjectInformation(
     value: ObjectInformation,
     elGetter: $.ASN1Encoder<ObjectInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectInformation) {
         _cached_encoder_for_ObjectInformation = function (
             value: ObjectInformation        ): _Element {

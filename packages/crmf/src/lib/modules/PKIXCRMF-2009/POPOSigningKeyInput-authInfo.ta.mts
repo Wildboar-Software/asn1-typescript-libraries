@@ -37,7 +37,7 @@ let _cached_decoder_for_POPOSigningKeyInput_authInfo: $.ASN1Decoder<POPOSigningK
  * @param {_Element} el The element being decoded.
  * @returns {POPOSigningKeyInput_authInfo} The decoded data structure.
  */
-export function _decode_POPOSigningKeyInput_authInfo(el: _Element) {
+export function _decode_POPOSigningKeyInput_authInfo(el: _Element): POPOSigningKeyInput_authInfo {
     if (!_cached_decoder_for_POPOSigningKeyInput_authInfo) {
         _cached_decoder_for_POPOSigningKeyInput_authInfo = $._decode_inextensible_choice<POPOSigningKeyInput_authInfo>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_POPOSigningKeyInput_authInfo: $.ASN1Encoder<POPOSigningK
 export function _encode_POPOSigningKeyInput_authInfo(
     value: POPOSigningKeyInput_authInfo,
     elGetter: $.ASN1Encoder<POPOSigningKeyInput_authInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_POPOSigningKeyInput_authInfo) {
         _cached_encoder_for_POPOSigningKeyInput_authInfo = $._encode_choice<POPOSigningKeyInput_authInfo>(
             {

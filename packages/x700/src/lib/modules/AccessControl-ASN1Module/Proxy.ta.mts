@@ -108,7 +108,7 @@ let _cached_decoder_for_Proxy: $.ASN1Decoder<Proxy> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Proxy} The decoded data structure.
  */
-export function _decode_Proxy(el: _Element) {
+export function _decode_Proxy(el: _Element): Proxy {
     if (!_cached_decoder_for_Proxy) {
         _cached_decoder_for_Proxy = function (el: _Element): Proxy {
             const sequence: _Element[] = el.sequence;
@@ -144,7 +144,7 @@ let _cached_encoder_for_Proxy: $.ASN1Encoder<Proxy> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Proxy, encoded as an ASN.1 Element.
  */
-export function _encode_Proxy(value: Proxy, elGetter: $.ASN1Encoder<Proxy>) {
+export function _encode_Proxy(value: Proxy, elGetter: $.ASN1Encoder<Proxy>): _Element {
     if (!_cached_encoder_for_Proxy) {
         _cached_encoder_for_Proxy = function (
             value: Proxy        ): _Element {

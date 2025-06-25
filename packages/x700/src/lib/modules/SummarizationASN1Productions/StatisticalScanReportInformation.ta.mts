@@ -219,7 +219,7 @@ let _cached_decoder_for_StatisticalScanReportInformation: $.ASN1Decoder<Statisti
  * @param {_Element} el The element being decoded.
  * @returns {StatisticalScanReportInformation} The decoded data structure.
  */
-export function _decode_StatisticalScanReportInformation(el: _Element) {
+export function _decode_StatisticalScanReportInformation(el: _Element): StatisticalScanReportInformation {
     if (!_cached_decoder_for_StatisticalScanReportInformation) {
         _cached_decoder_for_StatisticalScanReportInformation = function (
             el: _Element
@@ -300,7 +300,7 @@ let _cached_encoder_for_StatisticalScanReportInformation: $.ASN1Encoder<Statisti
 export function _encode_StatisticalScanReportInformation(
     value: StatisticalScanReportInformation,
     elGetter: $.ASN1Encoder<StatisticalScanReportInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_StatisticalScanReportInformation) {
         _cached_encoder_for_StatisticalScanReportInformation = function (
             value: StatisticalScanReportInformation        ): _Element {

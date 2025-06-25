@@ -126,7 +126,7 @@ let _cached_decoder_for_AuthorizationInformationField: $.ASN1Decoder<Authorizati
  * @param {_Element} el The element being decoded.
  * @returns {AuthorizationInformationField} The decoded data structure.
  */
-export function _decode_AuthorizationInformationField(el: _Element) {
+export function _decode_AuthorizationInformationField(el: _Element): AuthorizationInformationField {
     if (!_cached_decoder_for_AuthorizationInformationField) {
         _cached_decoder_for_AuthorizationInformationField = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_AuthorizationInformationField: $.ASN1Encoder<Authorizati
 export function _encode_AuthorizationInformationField(
     value: AuthorizationInformationField,
     elGetter: $.ASN1Encoder<AuthorizationInformationField>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthorizationInformationField) {
         _cached_encoder_for_AuthorizationInformationField = function (
             value: AuthorizationInformationField        ): _Element {

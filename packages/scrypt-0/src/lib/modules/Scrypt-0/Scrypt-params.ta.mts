@@ -137,7 +137,7 @@ let _cached_decoder_for_Scrypt_params: $.ASN1Decoder<Scrypt_params> | null = nul
  * @returns {Scrypt_params} The decoded data structure.
  */
 export
-function _decode_Scrypt_params (el: _Element) {
+function _decode_Scrypt_params (el: _Element): Scrypt_params {
     if (!_cached_decoder_for_Scrypt_params) { _cached_decoder_for_Scrypt_params = function (el: _Element): Scrypt_params {
     let salt!: OCTET_STRING;
     let costParameter!: INTEGER;
@@ -180,7 +180,7 @@ let _cached_encoder_for_Scrypt_params: $.ASN1Encoder<Scrypt_params> | null = nul
  * @returns {_Element} The Scrypt_params, encoded as an ASN.1 Element.
  */
 export
-function _encode_Scrypt_params (value: Scrypt_params, elGetter: $.ASN1Encoder<Scrypt_params>) {
+function _encode_Scrypt_params (value: Scrypt_params, elGetter: $.ASN1Encoder<Scrypt_params>): _Element {
     if (!_cached_encoder_for_Scrypt_params) { _cached_encoder_for_Scrypt_params = function (value: Scrypt_params): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

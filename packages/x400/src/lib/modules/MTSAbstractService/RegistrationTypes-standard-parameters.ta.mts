@@ -104,7 +104,7 @@ let _cached_decoder_for_RegistrationTypes_standard_parameters: $.ASN1Decoder<Reg
  * @param {_Element} el The element being decoded.
  * @returns {RegistrationTypes_standard_parameters} The decoded data structure.
  */
-export function _decode_RegistrationTypes_standard_parameters(el: _Element) {
+export function _decode_RegistrationTypes_standard_parameters(el: _Element): RegistrationTypes_standard_parameters {
     if (!_cached_decoder_for_RegistrationTypes_standard_parameters) {
         _cached_decoder_for_RegistrationTypes_standard_parameters =
             $._decodeBitString;
@@ -124,7 +124,7 @@ let _cached_encoder_for_RegistrationTypes_standard_parameters: $.ASN1Encoder<Reg
 export function _encode_RegistrationTypes_standard_parameters(
     value: RegistrationTypes_standard_parameters,
     elGetter: $.ASN1Encoder<RegistrationTypes_standard_parameters>
-) {
+): _Element {
     if (!_cached_encoder_for_RegistrationTypes_standard_parameters) {
         _cached_encoder_for_RegistrationTypes_standard_parameters =
             $._encodeBitString;

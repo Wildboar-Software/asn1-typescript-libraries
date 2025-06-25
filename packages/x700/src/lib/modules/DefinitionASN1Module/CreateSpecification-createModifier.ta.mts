@@ -63,7 +63,7 @@ let _cached_decoder_for_CreateSpecification_createModifier: $.ASN1Decoder<Create
  * @param {_Element} el The element being decoded.
  * @returns {CreateSpecification_createModifier} The decoded data structure.
  */
-export function _decode_CreateSpecification_createModifier(el: _Element) {
+export function _decode_CreateSpecification_createModifier(el: _Element): CreateSpecification_createModifier {
     if (!_cached_decoder_for_CreateSpecification_createModifier) {
         _cached_decoder_for_CreateSpecification_createModifier =
             $._decodeBitString;
@@ -85,7 +85,7 @@ let _cached_encoder_for_CreateSpecification_createModifier: $.ASN1Encoder<Create
 export function _encode_CreateSpecification_createModifier(
     value: CreateSpecification_createModifier,
     elGetter: $.ASN1Encoder<CreateSpecification_createModifier>
-) {
+): _Element {
     if (!_cached_encoder_for_CreateSpecification_createModifier) {
         _cached_encoder_for_CreateSpecification_createModifier =
             $._encodeBitString;

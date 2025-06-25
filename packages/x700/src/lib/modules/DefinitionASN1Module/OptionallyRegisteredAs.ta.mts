@@ -40,7 +40,7 @@ let _cached_decoder_for_OptionallyRegisteredAs: $.ASN1Decoder<OptionallyRegister
  * @param {_Element} el The element being decoded.
  * @returns {OptionallyRegisteredAs} The decoded data structure.
  */
-export function _decode_OptionallyRegisteredAs(el: _Element) {
+export function _decode_OptionallyRegisteredAs(el: _Element): OptionallyRegisteredAs {
     if (!_cached_decoder_for_OptionallyRegisteredAs) {
         _cached_decoder_for_OptionallyRegisteredAs = $._decode_inextensible_choice<OptionallyRegisteredAs>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_OptionallyRegisteredAs: $.ASN1Encoder<OptionallyRegister
 export function _encode_OptionallyRegisteredAs(
     value: OptionallyRegisteredAs,
     elGetter: $.ASN1Encoder<OptionallyRegisteredAs>
-) {
+): _Element {
     if (!_cached_encoder_for_OptionallyRegisteredAs) {
         _cached_encoder_for_OptionallyRegisteredAs = $._encode_choice<OptionallyRegisteredAs>(
             {

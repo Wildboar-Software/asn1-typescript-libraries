@@ -136,7 +136,7 @@ let _cached_decoder_for_RecipientKeyIdentifier: $.ASN1Decoder<RecipientKeyIdenti
  * @param {_Element} el The element being decoded.
  * @returns {RecipientKeyIdentifier} The decoded data structure.
  */
-export function _decode_RecipientKeyIdentifier(el: _Element) {
+export function _decode_RecipientKeyIdentifier(el: _Element): RecipientKeyIdentifier {
     if (!_cached_decoder_for_RecipientKeyIdentifier) {
         _cached_decoder_for_RecipientKeyIdentifier = function (
             el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_RecipientKeyIdentifier: $.ASN1Encoder<RecipientKeyIdenti
 export function _encode_RecipientKeyIdentifier(
     value: RecipientKeyIdentifier,
     elGetter: $.ASN1Encoder<RecipientKeyIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RecipientKeyIdentifier) {
         _cached_encoder_for_RecipientKeyIdentifier = function (
             value: RecipientKeyIdentifier        ): _Element {

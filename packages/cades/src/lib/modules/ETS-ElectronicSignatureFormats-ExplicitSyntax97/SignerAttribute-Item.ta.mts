@@ -36,7 +36,7 @@ let _cached_decoder_for_SignerAttribute_Item: $.ASN1Decoder<SignerAttribute_Item
  * @returns {SignerAttribute_Item} The decoded data structure.
  */
 export
-function _decode_SignerAttribute_Item (el: _Element) {
+function _decode_SignerAttribute_Item (el: _Element): SignerAttribute_Item {
     if (!_cached_decoder_for_SignerAttribute_Item) { _cached_decoder_for_SignerAttribute_Item = $._decode_inextensible_choice<SignerAttribute_Item>({
     "CONTEXT 0": [ "claimedAttributes", $._decode_implicit<ClaimedAttributes>(() => _decode_ClaimedAttributes) ],
     "CONTEXT 1": [ "certifiedAttributes", $._decode_implicit<CertifiedAttributes>(() => _decode_CertifiedAttributes) ]
@@ -54,7 +54,7 @@ let _cached_encoder_for_SignerAttribute_Item: $.ASN1Encoder<SignerAttribute_Item
  * @returns {_Element} The SignerAttribute_Item, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignerAttribute_Item (value: SignerAttribute_Item, elGetter: $.ASN1Encoder<SignerAttribute_Item>) {
+function _encode_SignerAttribute_Item (value: SignerAttribute_Item, elGetter: $.ASN1Encoder<SignerAttribute_Item>): _Element {
     if (!_cached_encoder_for_SignerAttribute_Item) { _cached_encoder_for_SignerAttribute_Item = $._encode_choice<SignerAttribute_Item>({
     "claimedAttributes": $._encode_implicit(_TagClass.context, 0, () => _encode_ClaimedAttributes, $.DER),
     "certifiedAttributes": $._encode_implicit(_TagClass.context, 1, () => _encode_CertifiedAttributes, $.DER),

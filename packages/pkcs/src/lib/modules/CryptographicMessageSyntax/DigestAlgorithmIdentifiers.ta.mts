@@ -29,7 +29,7 @@ let _cached_decoder_for_DigestAlgorithmIdentifiers: $.ASN1Decoder<DigestAlgorith
  * @param {_Element} el The element being decoded.
  * @returns {DigestAlgorithmIdentifiers} The decoded data structure.
  */
-export function _decode_DigestAlgorithmIdentifiers(el: _Element) {
+export function _decode_DigestAlgorithmIdentifiers(el: _Element): DigestAlgorithmIdentifiers {
     if (!_cached_decoder_for_DigestAlgorithmIdentifiers) {
         _cached_decoder_for_DigestAlgorithmIdentifiers = $._decodeSetOf<DigestAlgorithmIdentifier>(
             () => _decode_DigestAlgorithmIdentifier
@@ -52,7 +52,7 @@ let _cached_encoder_for_DigestAlgorithmIdentifiers: $.ASN1Encoder<DigestAlgorith
 export function _encode_DigestAlgorithmIdentifiers(
     value: DigestAlgorithmIdentifiers,
     elGetter: $.ASN1Encoder<DigestAlgorithmIdentifiers>
-) {
+): _Element {
     if (!_cached_encoder_for_DigestAlgorithmIdentifiers) {
         _cached_encoder_for_DigestAlgorithmIdentifiers = $._encodeSetOf<DigestAlgorithmIdentifier>(
             () => _encode_DigestAlgorithmIdentifier,

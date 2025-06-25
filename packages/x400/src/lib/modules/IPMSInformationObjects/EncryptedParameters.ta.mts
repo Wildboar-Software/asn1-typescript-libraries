@@ -131,7 +131,7 @@ let _cached_decoder_for_EncryptedParameters: $.ASN1Decoder<EncryptedParameters> 
  * @param {_Element} el The element being decoded.
  * @returns {EncryptedParameters} The decoded data structure.
  */
-export function _decode_EncryptedParameters(el: _Element) {
+export function _decode_EncryptedParameters(el: _Element): EncryptedParameters {
     if (!_cached_decoder_for_EncryptedParameters) {
         _cached_decoder_for_EncryptedParameters = function (
             el: _Element
@@ -181,7 +181,7 @@ let _cached_encoder_for_EncryptedParameters: $.ASN1Encoder<EncryptedParameters> 
 export function _encode_EncryptedParameters(
     value: EncryptedParameters,
     elGetter: $.ASN1Encoder<EncryptedParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptedParameters) {
         _cached_encoder_for_EncryptedParameters = function (
             value: EncryptedParameters        ): _Element {

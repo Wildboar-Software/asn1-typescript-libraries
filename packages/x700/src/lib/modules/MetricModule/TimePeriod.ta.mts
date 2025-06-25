@@ -49,7 +49,7 @@ let _cached_decoder_for_TimePeriod: $.ASN1Decoder<TimePeriod> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TimePeriod} The decoded data structure.
  */
-export function _decode_TimePeriod(el: _Element) {
+export function _decode_TimePeriod(el: _Element): TimePeriod {
     if (!_cached_decoder_for_TimePeriod) {
         _cached_decoder_for_TimePeriod = $._decode_inextensible_choice<TimePeriod>(
             {
@@ -103,7 +103,7 @@ let _cached_encoder_for_TimePeriod: $.ASN1Encoder<TimePeriod> | null = null;
 export function _encode_TimePeriod(
     value: TimePeriod,
     elGetter: $.ASN1Encoder<TimePeriod>
-) {
+): _Element {
     if (!_cached_encoder_for_TimePeriod) {
         _cached_encoder_for_TimePeriod = $._encode_choice<TimePeriod>(
             {

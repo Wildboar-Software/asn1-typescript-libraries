@@ -125,7 +125,7 @@ let _cached_decoder_for_CrlIdentifier: $.ASN1Decoder<CrlIdentifier> | null = nul
  * @returns {CrlIdentifier} The decoded data structure.
  */
 export
-function _decode_CrlIdentifier (el: _Element) {
+function _decode_CrlIdentifier (el: _Element): CrlIdentifier {
     if (!_cached_decoder_for_CrlIdentifier) { _cached_decoder_for_CrlIdentifier = function (el: _Element): CrlIdentifier {
     let crlissuer!: Name;
     let crlIssuedTime!: UTCTime;
@@ -160,7 +160,7 @@ let _cached_encoder_for_CrlIdentifier: $.ASN1Encoder<CrlIdentifier> | null = nul
  * @returns {_Element} The CrlIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_CrlIdentifier (value: CrlIdentifier, elGetter: $.ASN1Encoder<CrlIdentifier>) {
+function _encode_CrlIdentifier (value: CrlIdentifier, elGetter: $.ASN1Encoder<CrlIdentifier>): _Element {
     if (!_cached_encoder_for_CrlIdentifier) { _cached_encoder_for_CrlIdentifier = function (value: CrlIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

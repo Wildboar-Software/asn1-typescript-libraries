@@ -124,7 +124,7 @@ let _cached_decoder_for_OtherPrimeInfo: $.ASN1Decoder<OtherPrimeInfo> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {OtherPrimeInfo} The decoded data structure.
  */
-export function _decode_OtherPrimeInfo(el: _Element) {
+export function _decode_OtherPrimeInfo(el: _Element): OtherPrimeInfo {
     if (!_cached_decoder_for_OtherPrimeInfo) {
         _cached_decoder_for_OtherPrimeInfo = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_OtherPrimeInfo: $.ASN1Encoder<OtherPrimeInfo> | null = n
 export function _encode_OtherPrimeInfo(
     value: OtherPrimeInfo,
     elGetter: $.ASN1Encoder<OtherPrimeInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_OtherPrimeInfo) {
         _cached_encoder_for_OtherPrimeInfo = function (
             value: OtherPrimeInfo        ): _Element {

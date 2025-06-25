@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginalContent: $.ASN1Decoder<OriginalContent> | null =
  * @param {_Element} el The element being decoded.
  * @returns {OriginalContent} The decoded data structure.
  */
-export function _decode_OriginalContent(el: _Element) {
+export function _decode_OriginalContent(el: _Element): OriginalContent {
     if (!_cached_decoder_for_OriginalContent) {
         _cached_decoder_for_OriginalContent = _decode_Content;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginalContent: $.ASN1Encoder<OriginalContent> | null =
 export function _encode_OriginalContent(
     value: OriginalContent,
     elGetter: $.ASN1Encoder<OriginalContent>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginalContent) {
         _cached_encoder_for_OriginalContent = _encode_Content;
     }

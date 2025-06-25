@@ -38,7 +38,7 @@ let _cached_decoder_for_TemplateList: $.ASN1Decoder<TemplateList> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TemplateList} The decoded data structure.
  */
-export function _decode_TemplateList(el: _Element) {
+export function _decode_TemplateList(el: _Element): TemplateList {
     if (!_cached_decoder_for_TemplateList) {
         _cached_decoder_for_TemplateList = $._decodeSetOf<TemplateLabel>(
             () => _decode_TemplateLabel
@@ -61,7 +61,7 @@ let _cached_encoder_for_TemplateList: $.ASN1Encoder<TemplateList> | null = null;
 export function _encode_TemplateList(
     value: TemplateList,
     elGetter: $.ASN1Encoder<TemplateList>
-) {
+): _Element {
     if (!_cached_encoder_for_TemplateList) {
         _cached_encoder_for_TemplateList = $._encodeSetOf<TemplateLabel>(
             () => _encode_TemplateLabel,

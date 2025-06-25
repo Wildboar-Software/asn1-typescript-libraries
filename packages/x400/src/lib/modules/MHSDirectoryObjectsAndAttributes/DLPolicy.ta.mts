@@ -539,7 +539,7 @@ let _cached_decoder_for_DLPolicy: $.ASN1Decoder<DLPolicy> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DLPolicy} The decoded data structure.
  */
-export function _decode_DLPolicy(el: _Element) {
+export function _decode_DLPolicy(el: _Element): DLPolicy {
     if (!_cached_decoder_for_DLPolicy) {
         _cached_decoder_for_DLPolicy = function (el: _Element): DLPolicy {
             /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -713,7 +713,7 @@ let _cached_encoder_for_DLPolicy: $.ASN1Encoder<DLPolicy> | null = null;
 export function _encode_DLPolicy(
     value: DLPolicy,
     elGetter: $.ASN1Encoder<DLPolicy>
-) {
+): _Element {
     if (!_cached_encoder_for_DLPolicy) {
         _cached_encoder_for_DLPolicy = function (
             value: DLPolicy        ): _Element {

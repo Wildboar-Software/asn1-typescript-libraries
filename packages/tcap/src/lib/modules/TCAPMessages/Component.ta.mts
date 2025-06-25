@@ -48,7 +48,7 @@ let _cached_decoder_for_Component: $.ASN1Decoder<Component> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Component} The decoded data structure.
  */
-export function _decode_Component(el: _Element) {
+export function _decode_Component(el: _Element): Component {
   if (!_cached_decoder_for_Component) {
     _cached_decoder_for_Component = $._decode_inextensible_choice<Component>({
       'CONTEXT 1': ['basicROS', _decode_ROS],
@@ -78,7 +78,7 @@ let _cached_encoder_for_Component: $.ASN1Encoder<Component> | null = null;
 export function _encode_Component(
   value: Component,
   elGetter: $.ASN1Encoder<Component>
-) {
+): _Element {
   if (!_cached_encoder_for_Component) {
     _cached_encoder_for_Component = $._encode_choice<Component>(
       {

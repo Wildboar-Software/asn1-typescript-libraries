@@ -292,7 +292,7 @@ let _cached_decoder_for_CVResponse: $.ASN1Decoder<CVResponse> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CVResponse} The decoded data structure.
  */
-export function _decode_CVResponse(el: _Element) {
+export function _decode_CVResponse(el: _Element): CVResponse {
   if (!_cached_decoder_for_CVResponse) {
     _cached_decoder_for_CVResponse = function (el: _Element): CVResponse {
       let cvResponseVersion!: INTEGER;
@@ -407,7 +407,7 @@ let _cached_encoder_for_CVResponse: $.ASN1Encoder<CVResponse> | null = null;
 export function _encode_CVResponse(
   value: CVResponse,
   elGetter: $.ASN1Encoder<CVResponse>
-) {
+): _Element {
   if (!_cached_encoder_for_CVResponse) {
     _cached_encoder_for_CVResponse = function (
       value: CVResponse    ): _Element {

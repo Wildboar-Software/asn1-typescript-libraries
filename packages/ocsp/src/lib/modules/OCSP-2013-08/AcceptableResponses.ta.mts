@@ -24,7 +24,7 @@ let _cached_decoder_for_AcceptableResponses: $.ASN1Decoder<AcceptableResponses> 
  * @param {_Element} el The element being decoded.
  * @returns {AcceptableResponses} The decoded data structure.
  */
-export function _decode_AcceptableResponses(el: _Element) {
+export function _decode_AcceptableResponses(el: _Element): AcceptableResponses {
     if (!_cached_decoder_for_AcceptableResponses) {
         _cached_decoder_for_AcceptableResponses = $._decodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -47,7 +47,7 @@ let _cached_encoder_for_AcceptableResponses: $.ASN1Encoder<AcceptableResponses> 
 export function _encode_AcceptableResponses(
     value: AcceptableResponses,
     elGetter: $.ASN1Encoder<AcceptableResponses>
-) {
+): _Element {
     if (!_cached_encoder_for_AcceptableResponses) {
         _cached_encoder_for_AcceptableResponses = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

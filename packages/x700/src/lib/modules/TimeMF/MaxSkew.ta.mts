@@ -35,7 +35,7 @@ let _cached_decoder_for_MaxSkew: $.ASN1Decoder<MaxSkew> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MaxSkew} The decoded data structure.
  */
-export function _decode_MaxSkew(el: _Element) {
+export function _decode_MaxSkew(el: _Element): MaxSkew {
     if (!_cached_decoder_for_MaxSkew) {
         _cached_decoder_for_MaxSkew = _decode_TimeInterval;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MaxSkew: $.ASN1Encoder<MaxSkew> | null = null;
 export function _encode_MaxSkew(
     value: MaxSkew,
     elGetter: $.ASN1Encoder<MaxSkew>
-) {
+): _Element {
     if (!_cached_encoder_for_MaxSkew) {
         _cached_encoder_for_MaxSkew = _encode_TimeInterval;
     }

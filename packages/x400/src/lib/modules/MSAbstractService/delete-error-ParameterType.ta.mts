@@ -119,7 +119,7 @@ let _cached_decoder_for_delete_error_ParameterType: $.ASN1Decoder<delete_error_P
  * @param {_Element} el The element being decoded.
  * @returns {delete_error_ParameterType} The decoded data structure.
  */
-export function _decode_delete_error_ParameterType(el: _Element) {
+export function _decode_delete_error_ParameterType(el: _Element): delete_error_ParameterType {
     if (!_cached_decoder_for_delete_error_ParameterType) {
         _cached_decoder_for_delete_error_ParameterType = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_delete_error_ParameterType: $.ASN1Encoder<delete_error_P
 export function _encode_delete_error_ParameterType(
     value: delete_error_ParameterType,
     elGetter: $.ASN1Encoder<delete_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_delete_error_ParameterType) {
         _cached_encoder_for_delete_error_ParameterType = function (
             value: delete_error_ParameterType        ): _Element {

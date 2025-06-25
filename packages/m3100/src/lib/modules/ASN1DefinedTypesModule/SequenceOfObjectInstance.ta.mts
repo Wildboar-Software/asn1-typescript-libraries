@@ -38,7 +38,7 @@ let _cached_decoder_for_SequenceOfObjectInstance: $.ASN1Decoder<SequenceOfObject
  * @param {_Element} el The element being decoded.
  * @returns {SequenceOfObjectInstance} The decoded data structure.
  */
-export function _decode_SequenceOfObjectInstance(el: _Element) {
+export function _decode_SequenceOfObjectInstance(el: _Element): SequenceOfObjectInstance {
     if (!_cached_decoder_for_SequenceOfObjectInstance) {
         _cached_decoder_for_SequenceOfObjectInstance = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_SequenceOfObjectInstance: $.ASN1Encoder<SequenceOfObject
 export function _encode_SequenceOfObjectInstance(
     value: SequenceOfObjectInstance,
     elGetter: $.ASN1Encoder<SequenceOfObjectInstance>
-) {
+): _Element {
     if (!_cached_encoder_for_SequenceOfObjectInstance) {
         _cached_encoder_for_SequenceOfObjectInstance = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

@@ -33,7 +33,7 @@ let _cached_decoder_for_ProposedRepairActions: $.ASN1Decoder<ProposedRepairActio
  * @returns {ProposedRepairActions} The decoded data structure.
  */
 export
-function _decode_ProposedRepairActions (el: _Element) {
+function _decode_ProposedRepairActions (el: _Element): ProposedRepairActions {
     if (!_cached_decoder_for_ProposedRepairActions) { _cached_decoder_for_ProposedRepairActions = $._decodeSetOf<SpecificIdentifier>(() => _decode_SpecificIdentifier); }
     return _cached_decoder_for_ProposedRepairActions(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_ProposedRepairActions: $.ASN1Encoder<ProposedRepairActio
  * @returns {_Element} The ProposedRepairActions, encoded as an ASN.1 Element.
  */
 export
-function _encode_ProposedRepairActions (value: ProposedRepairActions, elGetter: $.ASN1Encoder<ProposedRepairActions>) {
+function _encode_ProposedRepairActions (value: ProposedRepairActions, elGetter: $.ASN1Encoder<ProposedRepairActions>): _Element {
     if (!_cached_encoder_for_ProposedRepairActions) { _cached_encoder_for_ProposedRepairActions = $._encodeSetOf<SpecificIdentifier>(() => _encode_SpecificIdentifier, $.BER); }
     return _cached_encoder_for_ProposedRepairActions(value, elGetter);
 }

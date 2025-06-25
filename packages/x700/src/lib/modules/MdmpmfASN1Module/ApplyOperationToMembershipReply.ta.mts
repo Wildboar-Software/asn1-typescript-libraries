@@ -35,7 +35,7 @@ let _cached_decoder_for_ApplyOperationToMembershipReply: $.ASN1Decoder<ApplyOper
  * @param {_Element} el The element being decoded.
  * @returns {ApplyOperationToMembershipReply} The decoded data structure.
  */
-export function _decode_ApplyOperationToMembershipReply(el: _Element) {
+export function _decode_ApplyOperationToMembershipReply(el: _Element): ApplyOperationToMembershipReply {
     if (!_cached_decoder_for_ApplyOperationToMembershipReply) {
         _cached_decoder_for_ApplyOperationToMembershipReply = $._decodeSequenceOf<OperationResult>(
             () => _decode_OperationResult
@@ -56,7 +56,7 @@ let _cached_encoder_for_ApplyOperationToMembershipReply: $.ASN1Encoder<ApplyOper
 export function _encode_ApplyOperationToMembershipReply(
     value: ApplyOperationToMembershipReply,
     elGetter: $.ASN1Encoder<ApplyOperationToMembershipReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ApplyOperationToMembershipReply) {
         _cached_encoder_for_ApplyOperationToMembershipReply = $._encodeSequenceOf<OperationResult>(
             () => _encode_OperationResult,

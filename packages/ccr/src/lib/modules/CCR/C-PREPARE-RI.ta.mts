@@ -116,7 +116,7 @@ let _cached_decoder_for_C_PREPARE_RI: $.ASN1Decoder<C_PREPARE_RI> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {C_PREPARE_RI} The decoded data structure.
  */
-export function _decode_C_PREPARE_RI(el: _Element) {
+export function _decode_C_PREPARE_RI(el: _Element): C_PREPARE_RI {
   if (!_cached_decoder_for_C_PREPARE_RI) {
     _cached_decoder_for_C_PREPARE_RI = $._decode_implicit<C_PREPARE_RI>(
       () =>
@@ -162,7 +162,7 @@ let _cached_encoder_for_C_PREPARE_RI: $.ASN1Encoder<C_PREPARE_RI> | null = null;
 export function _encode_C_PREPARE_RI(
   value: C_PREPARE_RI,
   elGetter: $.ASN1Encoder<C_PREPARE_RI>
-) {
+): _Element {
   if (!_cached_encoder_for_C_PREPARE_RI) {
     _cached_encoder_for_C_PREPARE_RI = $._encode_implicit(
       _TagClass.context,

@@ -33,7 +33,7 @@ let _cached_decoder_for_SignatureTimeStampToken: $.ASN1Decoder<SignatureTimeStam
  * @returns {SignatureTimeStampToken} The decoded data structure.
  */
 export
-function _decode_SignatureTimeStampToken (el: _Element) {
+function _decode_SignatureTimeStampToken (el: _Element): SignatureTimeStampToken {
     if (!_cached_decoder_for_SignatureTimeStampToken) { _cached_decoder_for_SignatureTimeStampToken = _decode_TimeStampToken; }
     return _cached_decoder_for_SignatureTimeStampToken(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SignatureTimeStampToken: $.ASN1Encoder<SignatureTimeStam
  * @returns {_Element} The SignatureTimeStampToken, encoded as an ASN.1 Element.
  */
 export
-function _encode_SignatureTimeStampToken (value: SignatureTimeStampToken, elGetter: $.ASN1Encoder<SignatureTimeStampToken>) {
+function _encode_SignatureTimeStampToken (value: SignatureTimeStampToken, elGetter: $.ASN1Encoder<SignatureTimeStampToken>): _Element {
     if (!_cached_encoder_for_SignatureTimeStampToken) { _cached_encoder_for_SignatureTimeStampToken = _encode_TimeStampToken; }
     return _cached_encoder_for_SignatureTimeStampToken(value, elGetter);
 }

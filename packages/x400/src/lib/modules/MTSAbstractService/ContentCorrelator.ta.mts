@@ -37,7 +37,7 @@ let _cached_decoder_for_ContentCorrelator: $.ASN1Decoder<ContentCorrelator> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ContentCorrelator} The decoded data structure.
  */
-export function _decode_ContentCorrelator(el: _Element) {
+export function _decode_ContentCorrelator(el: _Element): ContentCorrelator {
     if (!_cached_decoder_for_ContentCorrelator) {
         _cached_decoder_for_ContentCorrelator = $._decode_inextensible_choice<ContentCorrelator>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_ContentCorrelator: $.ASN1Encoder<ContentCorrelator> | nu
 export function _encode_ContentCorrelator(
     value: ContentCorrelator,
     elGetter: $.ASN1Encoder<ContentCorrelator>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentCorrelator) {
         _cached_encoder_for_ContentCorrelator = $._encode_choice<ContentCorrelator>(
             {

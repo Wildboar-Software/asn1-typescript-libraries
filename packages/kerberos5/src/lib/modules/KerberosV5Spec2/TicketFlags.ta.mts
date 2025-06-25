@@ -38,7 +38,7 @@ let _cached_decoder_for_TicketFlags: $.ASN1Decoder<TicketFlags> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TicketFlags} The decoded data structure.
  */
-export function _decode_TicketFlags(el: _Element) {
+export function _decode_TicketFlags(el: _Element): TicketFlags {
   if (!_cached_decoder_for_TicketFlags) {
     _cached_decoder_for_TicketFlags = _decode_KerberosFlags;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_TicketFlags: $.ASN1Encoder<TicketFlags> | null = null;
 export function _encode_TicketFlags(
   value: TicketFlags,
   elGetter: $.ASN1Encoder<TicketFlags>
-) {
+): _Element {
   if (!_cached_encoder_for_TicketFlags) {
     _cached_encoder_for_TicketFlags = _encode_KerberosFlags;
   }

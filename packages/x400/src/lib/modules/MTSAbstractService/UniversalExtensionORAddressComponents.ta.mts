@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalExtensionORAddressComponents: $.ASN1Decoder<Uni
  * @param {_Element} el The element being decoded.
  * @returns {UniversalExtensionORAddressComponents} The decoded data structure.
  */
-export function _decode_UniversalExtensionORAddressComponents(el: _Element) {
+export function _decode_UniversalExtensionORAddressComponents(el: _Element): UniversalExtensionORAddressComponents {
     if (!_cached_decoder_for_UniversalExtensionORAddressComponents) {
         _cached_decoder_for_UniversalExtensionORAddressComponents = _decode_UniversalPDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalExtensionORAddressComponents: $.ASN1Encoder<Uni
 export function _encode_UniversalExtensionORAddressComponents(
     value: UniversalExtensionORAddressComponents,
     elGetter: $.ASN1Encoder<UniversalExtensionORAddressComponents>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalExtensionORAddressComponents) {
         _cached_encoder_for_UniversalExtensionORAddressComponents = _encode_UniversalPDSParameter;
     }

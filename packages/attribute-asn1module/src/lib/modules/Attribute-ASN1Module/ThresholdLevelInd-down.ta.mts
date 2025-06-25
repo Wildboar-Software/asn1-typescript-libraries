@@ -108,7 +108,7 @@ let _cached_decoder_for_ThresholdLevelInd_down: $.ASN1Decoder<ThresholdLevelInd_
  * @returns {ThresholdLevelInd_down} The decoded data structure.
  */
 export
-function _decode_ThresholdLevelInd_down (el: _Element) {
+function _decode_ThresholdLevelInd_down (el: _Element): ThresholdLevelInd_down {
     if (!_cached_decoder_for_ThresholdLevelInd_down) { _cached_decoder_for_ThresholdLevelInd_down = function (el: _Element): ThresholdLevelInd_down {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -139,7 +139,7 @@ let _cached_encoder_for_ThresholdLevelInd_down: $.ASN1Encoder<ThresholdLevelInd_
  * @returns {_Element} The ThresholdLevelInd_down, encoded as an ASN.1 Element.
  */
 export
-function _encode_ThresholdLevelInd_down (value: ThresholdLevelInd_down, elGetter: $.ASN1Encoder<ThresholdLevelInd_down>) {
+function _encode_ThresholdLevelInd_down (value: ThresholdLevelInd_down, elGetter: $.ASN1Encoder<ThresholdLevelInd_down>): _Element {
     if (!_cached_encoder_for_ThresholdLevelInd_down) { _cached_encoder_for_ThresholdLevelInd_down = function (value: ThresholdLevelInd_down): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

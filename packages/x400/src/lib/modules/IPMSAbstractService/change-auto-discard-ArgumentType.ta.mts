@@ -113,7 +113,7 @@ let _cached_decoder_for_change_auto_discard_ArgumentType: $.ASN1Decoder<change_a
  * @param {_Element} el The element being decoded.
  * @returns {change_auto_discard_ArgumentType} The decoded data structure.
  */
-export function _decode_change_auto_discard_ArgumentType(el: _Element) {
+export function _decode_change_auto_discard_ArgumentType(el: _Element): change_auto_discard_ArgumentType {
     if (!_cached_decoder_for_change_auto_discard_ArgumentType) {
         _cached_decoder_for_change_auto_discard_ArgumentType = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_change_auto_discard_ArgumentType: $.ASN1Encoder<change_a
 export function _encode_change_auto_discard_ArgumentType(
     value: change_auto_discard_ArgumentType,
     elGetter: $.ASN1Encoder<change_auto_discard_ArgumentType>
-) {
+): _Element {
     if (!_cached_encoder_for_change_auto_discard_ArgumentType) {
         _cached_encoder_for_change_auto_discard_ArgumentType = function (
             value: change_auto_discard_ArgumentType        ): _Element {

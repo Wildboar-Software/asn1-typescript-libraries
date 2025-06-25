@@ -36,7 +36,7 @@ let _cached_decoder_for_TimeTicks: $.ASN1Decoder<TimeTicks> | null = null;
  * @returns {TimeTicks} The decoded data structure.
  */
 export
-function _decode_TimeTicks (el: _Element) {
+function _decode_TimeTicks (el: _Element): TimeTicks {
     if (!_cached_decoder_for_TimeTicks) { _cached_decoder_for_TimeTicks = $._decode_implicit<TimeTicks>(() => $._decodeInteger); }
     return _cached_decoder_for_TimeTicks(el);
 }
@@ -51,7 +51,7 @@ let _cached_encoder_for_TimeTicks: $.ASN1Encoder<TimeTicks> | null = null;
  * @returns {_Element} The TimeTicks, encoded as an ASN.1 Element.
  */
 export
-function _encode_TimeTicks (value: TimeTicks, elGetter: $.ASN1Encoder<TimeTicks>) {
+function _encode_TimeTicks (value: TimeTicks, elGetter: $.ASN1Encoder<TimeTicks>): _Element {
     if (!_cached_encoder_for_TimeTicks) { _cached_encoder_for_TimeTicks = $._encode_implicit(_TagClass.application, 3, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_TimeTicks(value, elGetter);
 }

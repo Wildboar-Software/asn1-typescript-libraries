@@ -132,7 +132,7 @@ let _cached_decoder_for_ThresholdInfo: $.ASN1Decoder<ThresholdInfo> | null = nul
  * @returns {ThresholdInfo} The decoded data structure.
  */
 export
-function _decode_ThresholdInfo (el: _Element) {
+function _decode_ThresholdInfo (el: _Element): ThresholdInfo {
     if (!_cached_decoder_for_ThresholdInfo) { _cached_decoder_for_ThresholdInfo = function (el: _Element): ThresholdInfo {
     let triggeredThreshold!: AttributeId;
     let observedValue!: ObservedValue;
@@ -170,7 +170,7 @@ let _cached_encoder_for_ThresholdInfo: $.ASN1Encoder<ThresholdInfo> | null = nul
  * @returns {_Element} The ThresholdInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_ThresholdInfo (value: ThresholdInfo, elGetter: $.ASN1Encoder<ThresholdInfo>) {
+function _encode_ThresholdInfo (value: ThresholdInfo, elGetter: $.ASN1Encoder<ThresholdInfo>): _Element {
     if (!_cached_encoder_for_ThresholdInfo) { _cached_encoder_for_ThresholdInfo = function (value: ThresholdInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

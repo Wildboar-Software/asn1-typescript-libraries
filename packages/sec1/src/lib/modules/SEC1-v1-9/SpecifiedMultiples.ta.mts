@@ -35,7 +35,7 @@ let _cached_decoder_for_SpecifiedMultiples: $.ASN1Decoder<SpecifiedMultiples> | 
  * @returns {SpecifiedMultiples} The decoded data structure.
  */
 export
-function _decode_SpecifiedMultiples (el: _Element) {
+function _decode_SpecifiedMultiples (el: _Element): SpecifiedMultiples {
     if (!_cached_decoder_for_SpecifiedMultiples) { _cached_decoder_for_SpecifiedMultiples = $._decodeSequenceOf<SpecifiedMultiples_Item>(() => _decode_SpecifiedMultiples_Item); }
     return _cached_decoder_for_SpecifiedMultiples(el);
 }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SpecifiedMultiples: $.ASN1Encoder<SpecifiedMultiples> | 
  * @returns {_Element} The SpecifiedMultiples, encoded as an ASN.1 Element.
  */
 export
-function _encode_SpecifiedMultiples (value: SpecifiedMultiples, elGetter: $.ASN1Encoder<SpecifiedMultiples>) {
+function _encode_SpecifiedMultiples (value: SpecifiedMultiples, elGetter: $.ASN1Encoder<SpecifiedMultiples>): _Element {
     if (!_cached_encoder_for_SpecifiedMultiples) { _cached_encoder_for_SpecifiedMultiples = $._encodeSequenceOf<SpecifiedMultiples_Item>(() => _encode_SpecifiedMultiples_Item, $.DER); }
     return _cached_encoder_for_SpecifiedMultiples(value, elGetter);
 }

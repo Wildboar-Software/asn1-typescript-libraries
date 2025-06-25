@@ -43,7 +43,7 @@ let _cached_decoder_for_JoinXCReply: $.ASN1Decoder<JoinXCReply> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {JoinXCReply} The decoded data structure.
  */
-export function _decode_JoinXCReply(el: _Element) {
+export function _decode_JoinXCReply(el: _Element): JoinXCReply {
     if (!_cached_decoder_for_JoinXCReply) {
         _cached_decoder_for_JoinXCReply = $._decodeSequenceOf<JoinXCReply_Item>(
             () => _decode_JoinXCReply_Item
@@ -66,7 +66,7 @@ let _cached_encoder_for_JoinXCReply: $.ASN1Encoder<JoinXCReply> | null = null;
 export function _encode_JoinXCReply(
     value: JoinXCReply,
     elGetter: $.ASN1Encoder<JoinXCReply>
-) {
+): _Element {
     if (!_cached_encoder_for_JoinXCReply) {
         _cached_encoder_for_JoinXCReply = $._encodeSequenceOf<JoinXCReply_Item>(
             () => _encode_JoinXCReply_Item,

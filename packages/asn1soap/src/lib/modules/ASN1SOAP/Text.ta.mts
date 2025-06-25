@@ -118,7 +118,7 @@ let _cached_decoder_for_Text: $.ASN1Decoder<Text> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Text} The decoded data structure.
  */
-export function _decode_Text(el: _Element) {
+export function _decode_Text(el: _Element): Text {
   if (!_cached_decoder_for_Text) {
     _cached_decoder_for_Text = function (el: _Element): Text {
       const sequence: _Element[] = el.sequence;
@@ -150,7 +150,7 @@ let _cached_encoder_for_Text: $.ASN1Encoder<Text> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Text, encoded as an ASN.1 Element.
  */
-export function _encode_Text(value: Text, elGetter: $.ASN1Encoder<Text>) {
+export function _encode_Text(value: Text, elGetter: $.ASN1Encoder<Text>): _Element {
   if (!_cached_encoder_for_Text) {
     _cached_encoder_for_Text = function (
       value: Text    ): _Element {

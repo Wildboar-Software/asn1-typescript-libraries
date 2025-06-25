@@ -46,7 +46,7 @@ let _cached_decoder_for_SchemeSyntax: $.ASN1Decoder<SchemeSyntax> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SchemeSyntax} The decoded data structure.
  */
-export function _decode_SchemeSyntax(el: _Element) {
+export function _decode_SchemeSyntax(el: _Element): SchemeSyntax {
     if (!_cached_decoder_for_SchemeSyntax) {
         _cached_decoder_for_SchemeSyntax = $._decode_inextensible_choice<SchemeSyntax>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_SchemeSyntax: $.ASN1Encoder<SchemeSyntax> | null = null;
 export function _encode_SchemeSyntax(
     value: SchemeSyntax,
     elGetter: $.ASN1Encoder<SchemeSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_SchemeSyntax) {
         _cached_encoder_for_SchemeSyntax = $._encode_choice<SchemeSyntax>(
             {

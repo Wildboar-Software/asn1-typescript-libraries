@@ -138,7 +138,7 @@ let _cached_decoder_for_CompareOK: $.ASN1Decoder<CompareOK> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CompareOK} The decoded data structure.
  */
-export function _decode_CompareOK(el: _Element) {
+export function _decode_CompareOK(el: _Element): CompareOK {
     if (!_cached_decoder_for_CompareOK) {
         _cached_decoder_for_CompareOK = function (el: _Element): CompareOK {
             let matched!: BOOLEAN;
@@ -191,7 +191,7 @@ let _cached_encoder_for_CompareOK: $.ASN1Encoder<CompareOK> | null = null;
 export function _encode_CompareOK(
     value: CompareOK,
     elGetter: $.ASN1Encoder<CompareOK>
-) {
+): _Element {
     if (!_cached_encoder_for_CompareOK) {
         _cached_encoder_for_CompareOK = function (
             value: CompareOK        ): _Element {

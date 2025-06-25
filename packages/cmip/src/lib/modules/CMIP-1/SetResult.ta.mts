@@ -169,7 +169,7 @@ let _cached_decoder_for_SetResult: $.ASN1Decoder<SetResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SetResult} The decoded data structure.
  */
-export function _decode_SetResult(el: _Element) {
+export function _decode_SetResult(el: _Element): SetResult {
   if (!_cached_decoder_for_SetResult) {
     _cached_decoder_for_SetResult = function (el: _Element): SetResult {
       let managedObjectClass: OPTIONAL<ObjectClass>;
@@ -231,7 +231,7 @@ let _cached_encoder_for_SetResult: $.ASN1Encoder<SetResult> | null = null;
 export function _encode_SetResult(
   value: SetResult,
   elGetter: $.ASN1Encoder<SetResult>
-) {
+): _Element {
   if (!_cached_encoder_for_SetResult) {
     _cached_encoder_for_SetResult = function (
       value: SetResult    ): _Element {

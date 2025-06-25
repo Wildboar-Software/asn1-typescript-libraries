@@ -69,7 +69,7 @@ let _cached_decoder_for_Object_Availability_Attribute_actual_values: $.ASN1Decod
  */
 export function _decode_Object_Availability_Attribute_actual_values(
   el: _Element
-) {
+): Object_Availability_Attribute_actual_values {
   if (!_cached_decoder_for_Object_Availability_Attribute_actual_values) {
     _cached_decoder_for_Object_Availability_Attribute_actual_values =
       $._decodeInteger;
@@ -91,7 +91,7 @@ let _cached_encoder_for_Object_Availability_Attribute_actual_values: $.ASN1Encod
 export function _encode_Object_Availability_Attribute_actual_values(
   value: Object_Availability_Attribute_actual_values,
   elGetter: $.ASN1Encoder<Object_Availability_Attribute_actual_values>
-) {
+): _Element {
   if (!_cached_encoder_for_Object_Availability_Attribute_actual_values) {
     _cached_encoder_for_Object_Availability_Attribute_actual_values =
       $._encodeInteger;

@@ -141,7 +141,7 @@ let _cached_decoder_for_BSPLoadCallParams: $.ASN1Decoder<BSPLoadCallParams> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BSPLoadCallParams} The decoded data structure.
  */
-export function _decode_BSPLoadCallParams(el: _Element) {
+export function _decode_BSPLoadCallParams(el: _Element): BSPLoadCallParams {
   if (!_cached_decoder_for_BSPLoadCallParams) {
     _cached_decoder_for_BSPLoadCallParams = function (
       el: _Element
@@ -187,7 +187,7 @@ let _cached_encoder_for_BSPLoadCallParams: $.ASN1Encoder<BSPLoadCallParams> | nu
 export function _encode_BSPLoadCallParams(
   value: BSPLoadCallParams,
   elGetter: $.ASN1Encoder<BSPLoadCallParams>
-) {
+): _Element {
   if (!_cached_encoder_for_BSPLoadCallParams) {
     _cached_encoder_for_BSPLoadCallParams = function (
       value: BSPLoadCallParams    ): _Element {

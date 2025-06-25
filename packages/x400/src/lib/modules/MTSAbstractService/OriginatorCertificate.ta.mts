@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginatorCertificate: $.ASN1Decoder<OriginatorCertifica
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorCertificate} The decoded data structure.
  */
-export function _decode_OriginatorCertificate(el: _Element) {
+export function _decode_OriginatorCertificate(el: _Element): OriginatorCertificate {
     if (!_cached_decoder_for_OriginatorCertificate) {
         _cached_decoder_for_OriginatorCertificate = _decode_Certificates;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginatorCertificate: $.ASN1Encoder<OriginatorCertifica
 export function _encode_OriginatorCertificate(
     value: OriginatorCertificate,
     elGetter: $.ASN1Encoder<OriginatorCertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginatorCertificate) {
         _cached_encoder_for_OriginatorCertificate = _encode_Certificates;
     }

@@ -117,7 +117,7 @@ let _cached_decoder_for_TOsState: $.ASN1Decoder<TOsState> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TOsState} The decoded data structure.
  */
-export function _decode_TOsState(el: _Element) {
+export function _decode_TOsState(el: _Element): TOsState {
     if (!_cached_decoder_for_TOsState) {
         _cached_decoder_for_TOsState = function (el: _Element): TOsState {
             let tOInstance: OPTIONAL<ObjectInstance>;
@@ -159,7 +159,7 @@ let _cached_encoder_for_TOsState: $.ASN1Encoder<TOsState> | null = null;
 export function _encode_TOsState(
     value: TOsState,
     elGetter: $.ASN1Encoder<TOsState>
-) {
+): _Element {
     if (!_cached_encoder_for_TOsState) {
         _cached_encoder_for_TOsState = function (
             value: TOsState        ): _Element {

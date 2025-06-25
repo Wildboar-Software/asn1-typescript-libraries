@@ -47,7 +47,7 @@ let _cached_decoder_for_EMailStrongCredentials: $.ASN1Decoder<EMailStrongCredent
  * @param {_Element} el The element being decoded.
  * @returns {EMailStrongCredentials} The decoded data structure.
  */
-export function _decode_EMailStrongCredentials(el: _Element) {
+export function _decode_EMailStrongCredentials(el: _Element): EMailStrongCredentials {
     if (!_cached_decoder_for_EMailStrongCredentials) {
         _cached_decoder_for_EMailStrongCredentials = $._decode_inextensible_choice<EMailStrongCredentials>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_EMailStrongCredentials: $.ASN1Encoder<EMailStrongCredent
 export function _encode_EMailStrongCredentials(
     value: EMailStrongCredentials,
     elGetter: $.ASN1Encoder<EMailStrongCredentials>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailStrongCredentials) {
         _cached_encoder_for_EMailStrongCredentials = $._encode_choice<EMailStrongCredentials>(
             {

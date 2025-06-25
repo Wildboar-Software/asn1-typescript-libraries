@@ -35,7 +35,7 @@ let _cached_decoder_for_EquipmentHolderAddress: $.ASN1Decoder<EquipmentHolderAdd
  * @param {_Element} el The element being decoded.
  * @returns {EquipmentHolderAddress} The decoded data structure.
  */
-export function _decode_EquipmentHolderAddress(el: _Element) {
+export function _decode_EquipmentHolderAddress(el: _Element): EquipmentHolderAddress {
     if (!_cached_decoder_for_EquipmentHolderAddress) {
         _cached_decoder_for_EquipmentHolderAddress = $._decodeSequenceOf<PrintableString>(
             () => $._decodePrintableString
@@ -58,7 +58,7 @@ let _cached_encoder_for_EquipmentHolderAddress: $.ASN1Encoder<EquipmentHolderAdd
 export function _encode_EquipmentHolderAddress(
     value: EquipmentHolderAddress,
     elGetter: $.ASN1Encoder<EquipmentHolderAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_EquipmentHolderAddress) {
         _cached_encoder_for_EquipmentHolderAddress = $._encodeSequenceOf<PrintableString>(
             () => $._encodePrintableString,

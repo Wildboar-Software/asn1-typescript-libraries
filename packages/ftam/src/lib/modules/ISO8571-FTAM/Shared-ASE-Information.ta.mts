@@ -35,7 +35,7 @@ let _cached_decoder_for_Shared_ASE_Information: $.ASN1Decoder<Shared_ASE_Informa
  * @param {_Element} el The element being decoded.
  * @returns {Shared_ASE_Information} The decoded data structure.
  */
-export function _decode_Shared_ASE_Information(el: _Element) {
+export function _decode_Shared_ASE_Information(el: _Element): Shared_ASE_Information {
   if (!_cached_decoder_for_Shared_ASE_Information) {
     _cached_decoder_for_Shared_ASE_Information = $._decode_implicit<Shared_ASE_Information>(
       () => $._decodeExternal
@@ -58,7 +58,7 @@ let _cached_encoder_for_Shared_ASE_Information: $.ASN1Encoder<Shared_ASE_Informa
 export function _encode_Shared_ASE_Information(
   value: Shared_ASE_Information,
   elGetter: $.ASN1Encoder<Shared_ASE_Information>
-) {
+): _Element {
   if (!_cached_encoder_for_Shared_ASE_Information) {
     _cached_encoder_for_Shared_ASE_Information = $._encode_implicit(
       _TagClass.application,

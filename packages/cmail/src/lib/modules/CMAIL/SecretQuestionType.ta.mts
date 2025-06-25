@@ -125,7 +125,7 @@ let _cached_decoder_for_SecretQuestionType: $.ASN1Decoder<SecretQuestionType> | 
  * @param {_Element} el The element being decoded.
  * @returns {SecretQuestionType} The decoded data structure.
  */
-export function _decode_SecretQuestionType(el: _Element) {
+export function _decode_SecretQuestionType(el: _Element): SecretQuestionType {
   if (!_cached_decoder_for_SecretQuestionType) {
     _cached_decoder_for_SecretQuestionType = function (
       el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_SecretQuestionType: $.ASN1Encoder<SecretQuestionType> | 
 export function _encode_SecretQuestionType(
   value: SecretQuestionType,
   elGetter: $.ASN1Encoder<SecretQuestionType>
-) {
+): _Element {
   if (!_cached_encoder_for_SecretQuestionType) {
     _cached_encoder_for_SecretQuestionType = function (
       value: SecretQuestionType    ): _Element {

@@ -109,7 +109,7 @@ let _cached_decoder_for_ThresholdLevelInd_up: $.ASN1Decoder<ThresholdLevelInd_up
  * @returns {ThresholdLevelInd_up} The decoded data structure.
  */
 export
-function _decode_ThresholdLevelInd_up (el: _Element) {
+function _decode_ThresholdLevelInd_up (el: _Element): ThresholdLevelInd_up {
     if (!_cached_decoder_for_ThresholdLevelInd_up) { _cached_decoder_for_ThresholdLevelInd_up = function (el: _Element): ThresholdLevelInd_up {
     let high!: ObservedValue;
     let low: OPTIONAL<ObservedValue>;
@@ -141,7 +141,7 @@ let _cached_encoder_for_ThresholdLevelInd_up: $.ASN1Encoder<ThresholdLevelInd_up
  * @returns {_Element} The ThresholdLevelInd_up, encoded as an ASN.1 Element.
  */
 export
-function _encode_ThresholdLevelInd_up (value: ThresholdLevelInd_up, elGetter: $.ASN1Encoder<ThresholdLevelInd_up>) {
+function _encode_ThresholdLevelInd_up (value: ThresholdLevelInd_up, elGetter: $.ASN1Encoder<ThresholdLevelInd_up>): _Element {
     if (!_cached_encoder_for_ThresholdLevelInd_up) { _cached_encoder_for_ThresholdLevelInd_up = function (value: ThresholdLevelInd_up): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

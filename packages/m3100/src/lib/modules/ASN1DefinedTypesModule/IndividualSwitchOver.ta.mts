@@ -130,7 +130,7 @@ let _cached_decoder_for_IndividualSwitchOver: $.ASN1Decoder<IndividualSwitchOver
  * @param {_Element} el The element being decoded.
  * @returns {IndividualSwitchOver} The decoded data structure.
  */
-export function _decode_IndividualSwitchOver(el: _Element) {
+export function _decode_IndividualSwitchOver(el: _Element): IndividualSwitchOver {
     if (!_cached_decoder_for_IndividualSwitchOver) {
         _cached_decoder_for_IndividualSwitchOver = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_IndividualSwitchOver: $.ASN1Encoder<IndividualSwitchOver
 export function _encode_IndividualSwitchOver(
     value: IndividualSwitchOver,
     elGetter: $.ASN1Encoder<IndividualSwitchOver>
-) {
+): _Element {
     if (!_cached_encoder_for_IndividualSwitchOver) {
         _cached_encoder_for_IndividualSwitchOver = function (
             value: IndividualSwitchOver        ): _Element {

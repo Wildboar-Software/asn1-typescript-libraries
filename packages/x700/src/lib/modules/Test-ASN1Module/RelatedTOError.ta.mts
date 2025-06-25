@@ -37,7 +37,7 @@ let _cached_decoder_for_RelatedTOError: $.ASN1Decoder<RelatedTOError> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {RelatedTOError} The decoded data structure.
  */
-export function _decode_RelatedTOError(el: _Element) {
+export function _decode_RelatedTOError(el: _Element): RelatedTOError {
     if (!_cached_decoder_for_RelatedTOError) {
         _cached_decoder_for_RelatedTOError = $._decodeSequenceOf<RelatedTOError_Item>(
             () => _decode_RelatedTOError_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_RelatedTOError: $.ASN1Encoder<RelatedTOError> | null = n
 export function _encode_RelatedTOError(
     value: RelatedTOError,
     elGetter: $.ASN1Encoder<RelatedTOError>
-) {
+): _Element {
     if (!_cached_encoder_for_RelatedTOError) {
         _cached_encoder_for_RelatedTOError = $._encodeSequenceOf<RelatedTOError_Item>(
             () => _encode_RelatedTOError_Item,

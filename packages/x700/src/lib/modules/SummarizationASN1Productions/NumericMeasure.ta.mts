@@ -55,7 +55,7 @@ let _cached_decoder_for_NumericMeasure: $.ASN1Decoder<NumericMeasure> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {NumericMeasure} The decoded data structure.
  */
-export function _decode_NumericMeasure(el: _Element) {
+export function _decode_NumericMeasure(el: _Element): NumericMeasure {
     if (!_cached_decoder_for_NumericMeasure) {
         _cached_decoder_for_NumericMeasure = $._decode_inextensible_choice<NumericMeasure>(
             {
@@ -84,7 +84,7 @@ let _cached_encoder_for_NumericMeasure: $.ASN1Encoder<NumericMeasure> | null = n
 export function _encode_NumericMeasure(
     value: NumericMeasure,
     elGetter: $.ASN1Encoder<NumericMeasure>
-) {
+): _Element {
     if (!_cached_encoder_for_NumericMeasure) {
         _cached_encoder_for_NumericMeasure = $._encode_choice<NumericMeasure>(
             {

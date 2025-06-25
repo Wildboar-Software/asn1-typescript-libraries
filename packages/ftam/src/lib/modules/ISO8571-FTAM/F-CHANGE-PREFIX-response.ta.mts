@@ -158,7 +158,7 @@ let _cached_decoder_for_F_CHANGE_PREFIX_response: $.ASN1Decoder<F_CHANGE_PREFIX_
  * @param {_Element} el The element being decoded.
  * @returns {F_CHANGE_PREFIX_response} The decoded data structure.
  */
-export function _decode_F_CHANGE_PREFIX_response(el: _Element) {
+export function _decode_F_CHANGE_PREFIX_response(el: _Element): F_CHANGE_PREFIX_response {
   if (!_cached_decoder_for_F_CHANGE_PREFIX_response) {
     _cached_decoder_for_F_CHANGE_PREFIX_response = function (
       el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_F_CHANGE_PREFIX_response: $.ASN1Encoder<F_CHANGE_PREFIX_
 export function _encode_F_CHANGE_PREFIX_response(
   value: F_CHANGE_PREFIX_response,
   elGetter: $.ASN1Encoder<F_CHANGE_PREFIX_response>
-) {
+): _Element {
   if (!_cached_encoder_for_F_CHANGE_PREFIX_response) {
     _cached_encoder_for_F_CHANGE_PREFIX_response = function (
       value: F_CHANGE_PREFIX_response    ): _Element {

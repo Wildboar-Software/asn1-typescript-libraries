@@ -125,7 +125,7 @@ let _cached_decoder_for_BPUCertificateReferrerInformation: $.ASN1Decoder<BPUCert
  * @param {_Element} el The element being decoded.
  * @returns {BPUCertificateReferrerInformation} The decoded data structure.
  */
-export function _decode_BPUCertificateReferrerInformation(el: _Element) {
+export function _decode_BPUCertificateReferrerInformation(el: _Element): BPUCertificateReferrerInformation {
     if (!_cached_decoder_for_BPUCertificateReferrerInformation) {
         _cached_decoder_for_BPUCertificateReferrerInformation = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_BPUCertificateReferrerInformation: $.ASN1Encoder<BPUCert
 export function _encode_BPUCertificateReferrerInformation(
     value: BPUCertificateReferrerInformation,
     elGetter: $.ASN1Encoder<BPUCertificateReferrerInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUCertificateReferrerInformation) {
         _cached_encoder_for_BPUCertificateReferrerInformation = function (
             value: BPUCertificateReferrerInformation        ): _Element {

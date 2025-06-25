@@ -126,7 +126,7 @@ let _cached_decoder_for_SecurityEnvironmentInfo: $.ASN1Decoder<SecurityEnvironme
  * @param {_Element} el The element being decoded.
  * @returns {SecurityEnvironmentInfo} The decoded data structure.
  */
-export function _decode_SecurityEnvironmentInfo(el: _Element) {
+export function _decode_SecurityEnvironmentInfo(el: _Element): SecurityEnvironmentInfo {
     if (!_cached_decoder_for_SecurityEnvironmentInfo) {
         _cached_decoder_for_SecurityEnvironmentInfo = function (
             el: _Element
@@ -165,7 +165,7 @@ let _cached_encoder_for_SecurityEnvironmentInfo: $.ASN1Encoder<SecurityEnvironme
 export function _encode_SecurityEnvironmentInfo(
     value: SecurityEnvironmentInfo,
     elGetter: $.ASN1Encoder<SecurityEnvironmentInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityEnvironmentInfo) {
         _cached_encoder_for_SecurityEnvironmentInfo = function (
             value: SecurityEnvironmentInfo        ): _Element {

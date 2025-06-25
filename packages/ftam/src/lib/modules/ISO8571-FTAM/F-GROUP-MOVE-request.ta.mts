@@ -250,7 +250,7 @@ let _cached_decoder_for_F_GROUP_MOVE_request: $.ASN1Decoder<F_GROUP_MOVE_request
  * @param {_Element} el The element being decoded.
  * @returns {F_GROUP_MOVE_request} The decoded data structure.
  */
-export function _decode_F_GROUP_MOVE_request(el: _Element) {
+export function _decode_F_GROUP_MOVE_request(el: _Element): F_GROUP_MOVE_request {
   if (!_cached_decoder_for_F_GROUP_MOVE_request) {
     _cached_decoder_for_F_GROUP_MOVE_request = function (
       el: _Element
@@ -329,7 +329,7 @@ let _cached_encoder_for_F_GROUP_MOVE_request: $.ASN1Encoder<F_GROUP_MOVE_request
 export function _encode_F_GROUP_MOVE_request(
   value: F_GROUP_MOVE_request,
   elGetter: $.ASN1Encoder<F_GROUP_MOVE_request>
-) {
+): _Element {
   if (!_cached_encoder_for_F_GROUP_MOVE_request) {
     _cached_encoder_for_F_GROUP_MOVE_request = function (
       value: F_GROUP_MOVE_request    ): _Element {

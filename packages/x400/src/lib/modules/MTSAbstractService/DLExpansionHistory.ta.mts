@@ -35,7 +35,7 @@ let _cached_decoder_for_DLExpansionHistory: $.ASN1Decoder<DLExpansionHistory> | 
  * @param {_Element} el The element being decoded.
  * @returns {DLExpansionHistory} The decoded data structure.
  */
-export function _decode_DLExpansionHistory(el: _Element) {
+export function _decode_DLExpansionHistory(el: _Element): DLExpansionHistory {
     if (!_cached_decoder_for_DLExpansionHistory) {
         _cached_decoder_for_DLExpansionHistory = $._decodeSequenceOf<DLExpansion>(
             () => _decode_DLExpansion
@@ -56,7 +56,7 @@ let _cached_encoder_for_DLExpansionHistory: $.ASN1Encoder<DLExpansionHistory> | 
 export function _encode_DLExpansionHistory(
     value: DLExpansionHistory,
     elGetter: $.ASN1Encoder<DLExpansionHistory>
-) {
+): _Element {
     if (!_cached_encoder_for_DLExpansionHistory) {
         _cached_encoder_for_DLExpansionHistory = $._encodeSequenceOf<DLExpansion>(
             () => _encode_DLExpansion,

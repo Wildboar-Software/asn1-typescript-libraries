@@ -30,7 +30,7 @@ let _cached_decoder_for_UnSigncryptedAttributes: $.ASN1Decoder<UnSigncryptedAttr
  * @param {_Element} el The element being decoded.
  * @returns {UnSigncryptedAttributes} The decoded data structure.
  */
-export function _decode_UnSigncryptedAttributes(el: _Element) {
+export function _decode_UnSigncryptedAttributes(el: _Element): UnSigncryptedAttributes {
     if (!_cached_decoder_for_UnSigncryptedAttributes) {
         _cached_decoder_for_UnSigncryptedAttributes = $._decodeSequenceOf<Attribute>(
             () => _decode_Attribute
@@ -53,7 +53,7 @@ let _cached_encoder_for_UnSigncryptedAttributes: $.ASN1Encoder<UnSigncryptedAttr
 export function _encode_UnSigncryptedAttributes(
     value: UnSigncryptedAttributes,
     elGetter: $.ASN1Encoder<UnSigncryptedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UnSigncryptedAttributes) {
         _cached_encoder_for_UnSigncryptedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,

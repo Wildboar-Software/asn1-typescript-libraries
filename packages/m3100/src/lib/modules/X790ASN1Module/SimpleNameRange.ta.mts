@@ -45,7 +45,7 @@ let _cached_decoder_for_SimpleNameRange: $.ASN1Decoder<SimpleNameRange> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SimpleNameRange} The decoded data structure.
  */
-export function _decode_SimpleNameRange(el: _Element) {
+export function _decode_SimpleNameRange(el: _Element): SimpleNameRange {
     if (!_cached_decoder_for_SimpleNameRange) {
         _cached_decoder_for_SimpleNameRange = $._decode_extensible_choice<SimpleNameRange>(
             {
@@ -71,7 +71,7 @@ let _cached_encoder_for_SimpleNameRange: $.ASN1Encoder<SimpleNameRange> | null =
 export function _encode_SimpleNameRange(
     value: SimpleNameRange,
     elGetter: $.ASN1Encoder<SimpleNameRange>
-) {
+): _Element {
     if (!_cached_encoder_for_SimpleNameRange) {
         _cached_encoder_for_SimpleNameRange = $._encode_choice<SimpleNameRange>(
             {

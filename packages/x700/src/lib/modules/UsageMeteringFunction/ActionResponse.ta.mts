@@ -128,7 +128,7 @@ let _cached_decoder_for_ActionResponse: $.ASN1Decoder<ActionResponse> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ActionResponse} The decoded data structure.
  */
-export function _decode_ActionResponse(el: _Element) {
+export function _decode_ActionResponse(el: _Element): ActionResponse {
     if (!_cached_decoder_for_ActionResponse) {
         _cached_decoder_for_ActionResponse = function (
             el: _Element
@@ -189,7 +189,7 @@ let _cached_encoder_for_ActionResponse: $.ASN1Encoder<ActionResponse> | null = n
 export function _encode_ActionResponse(
     value: ActionResponse,
     elGetter: $.ASN1Encoder<ActionResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_ActionResponse) {
         _cached_encoder_for_ActionResponse = function (
             value: ActionResponse        ): _Element {

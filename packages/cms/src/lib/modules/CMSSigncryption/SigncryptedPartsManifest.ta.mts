@@ -29,7 +29,7 @@ let _cached_decoder_for_SigncryptedPartsManifest: $.ASN1Decoder<SigncryptedParts
  * @param {_Element} el The element being decoded.
  * @returns {SigncryptedPartsManifest} The decoded data structure.
  */
-export function _decode_SigncryptedPartsManifest(el: _Element) {
+export function _decode_SigncryptedPartsManifest(el: _Element): SigncryptedPartsManifest {
     if (!_cached_decoder_for_SigncryptedPartsManifest) {
         _cached_decoder_for_SigncryptedPartsManifest = _decode_Signcrypted;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_SigncryptedPartsManifest: $.ASN1Encoder<SigncryptedParts
 export function _encode_SigncryptedPartsManifest(
     value: SigncryptedPartsManifest,
     elGetter: $.ASN1Encoder<SigncryptedPartsManifest>
-) {
+): _Element {
     if (!_cached_encoder_for_SigncryptedPartsManifest) {
         _cached_encoder_for_SigncryptedPartsManifest = _encode_Signcrypted;
     }

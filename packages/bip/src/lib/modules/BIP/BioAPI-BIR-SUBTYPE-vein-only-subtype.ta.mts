@@ -105,7 +105,7 @@ let _cached_decoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype: $.ASN1Decoder<BioA
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_SUBTYPE_vein_only_subtype} The decoded data structure.
  */
-export function _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype(el: _Element) {
+export function _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype(el: _Element): BioAPI_BIR_SUBTYPE_vein_only_subtype {
   if (!_cached_decoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype) {
     _cached_decoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype =
       $._decodeBitString;
@@ -127,7 +127,7 @@ let _cached_encoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype: $.ASN1Encoder<BioA
 export function _encode_BioAPI_BIR_SUBTYPE_vein_only_subtype(
   value: BioAPI_BIR_SUBTYPE_vein_only_subtype,
   elGetter: $.ASN1Encoder<BioAPI_BIR_SUBTYPE_vein_only_subtype>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype) {
     _cached_encoder_for_BioAPI_BIR_SUBTYPE_vein_only_subtype =
       $._encodeBitString;

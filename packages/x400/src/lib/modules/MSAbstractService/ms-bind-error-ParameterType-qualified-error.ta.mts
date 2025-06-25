@@ -142,7 +142,7 @@ let _cached_decoder_for_ms_bind_error_ParameterType_qualified_error: $.ASN1Decod
  */
 export function _decode_ms_bind_error_ParameterType_qualified_error(
     el: _Element
-) {
+): ms_bind_error_ParameterType_qualified_error {
     if (!_cached_decoder_for_ms_bind_error_ParameterType_qualified_error) {
         _cached_decoder_for_ms_bind_error_ParameterType_qualified_error = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_ms_bind_error_ParameterType_qualified_error: $.ASN1Encod
 export function _encode_ms_bind_error_ParameterType_qualified_error(
     value: ms_bind_error_ParameterType_qualified_error,
     elGetter: $.ASN1Encoder<ms_bind_error_ParameterType_qualified_error>
-) {
+): _Element {
     if (!_cached_encoder_for_ms_bind_error_ParameterType_qualified_error) {
         _cached_encoder_for_ms_bind_error_ParameterType_qualified_error = function (
             value: ms_bind_error_ParameterType_qualified_error        ): _Element {

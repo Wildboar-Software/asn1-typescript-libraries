@@ -38,7 +38,7 @@ let _cached_decoder_for_EnumBFPsCallOutputParams: $.ASN1Decoder<EnumBFPsCallOutp
  * @param {_Element} el The element being decoded.
  * @returns {EnumBFPsCallOutputParams} The decoded data structure.
  */
-export function _decode_EnumBFPsCallOutputParams(el: _Element) {
+export function _decode_EnumBFPsCallOutputParams(el: _Element): EnumBFPsCallOutputParams {
   if (!_cached_decoder_for_EnumBFPsCallOutputParams) {
     _cached_decoder_for_EnumBFPsCallOutputParams = $._decodeSequenceOf<BioAPI_BFP_SCHEMA>(
       () => _decode_BioAPI_BFP_SCHEMA
@@ -61,7 +61,7 @@ let _cached_encoder_for_EnumBFPsCallOutputParams: $.ASN1Encoder<EnumBFPsCallOutp
 export function _encode_EnumBFPsCallOutputParams(
   value: EnumBFPsCallOutputParams,
   elGetter: $.ASN1Encoder<EnumBFPsCallOutputParams>
-) {
+): _Element {
   if (!_cached_encoder_for_EnumBFPsCallOutputParams) {
     _cached_encoder_for_EnumBFPsCallOutputParams = $._encodeSequenceOf<BioAPI_BFP_SCHEMA>(
       () => _encode_BioAPI_BFP_SCHEMA,

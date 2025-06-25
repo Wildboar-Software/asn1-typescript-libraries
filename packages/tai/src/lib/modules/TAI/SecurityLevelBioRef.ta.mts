@@ -122,7 +122,7 @@ let _cached_decoder_for_SecurityLevelBioRef: $.ASN1Decoder<SecurityLevelBioRef> 
  * @returns {SecurityLevelBioRef} The decoded data structure.
  */
 export
-function _decode_SecurityLevelBioRef (el: _Element) {
+function _decode_SecurityLevelBioRef (el: _Element): SecurityLevelBioRef {
     if (!_cached_decoder_for_SecurityLevelBioRef) { _cached_decoder_for_SecurityLevelBioRef = function (el: _Element): SecurityLevelBioRef {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 3) {
@@ -157,7 +157,7 @@ let _cached_encoder_for_SecurityLevelBioRef: $.ASN1Encoder<SecurityLevelBioRef> 
  * @returns {_Element} The SecurityLevelBioRef, encoded as an ASN.1 Element.
  */
 export
-function _encode_SecurityLevelBioRef (value: SecurityLevelBioRef, elGetter: $.ASN1Encoder<SecurityLevelBioRef>) {
+function _encode_SecurityLevelBioRef (value: SecurityLevelBioRef, elGetter: $.ASN1Encoder<SecurityLevelBioRef>): _Element {
     if (!_cached_encoder_for_SecurityLevelBioRef) { _cached_encoder_for_SecurityLevelBioRef = function (value: SecurityLevelBioRef): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

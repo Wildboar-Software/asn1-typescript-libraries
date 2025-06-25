@@ -35,7 +35,7 @@ let _cached_decoder_for_AlgorithmParameters: $.ASN1Decoder<AlgorithmParameters> 
  * @param {_Element} el The element being decoded.
  * @returns {AlgorithmParameters} The decoded data structure.
  */
-export function _decode_AlgorithmParameters(el: _Element) {
+export function _decode_AlgorithmParameters(el: _Element): AlgorithmParameters {
     if (!_cached_decoder_for_AlgorithmParameters) {
         _cached_decoder_for_AlgorithmParameters = $._decodeSequenceOf<ObservedValue>(
             () => _decode_ObservedValue
@@ -56,7 +56,7 @@ let _cached_encoder_for_AlgorithmParameters: $.ASN1Encoder<AlgorithmParameters> 
 export function _encode_AlgorithmParameters(
     value: AlgorithmParameters,
     elGetter: $.ASN1Encoder<AlgorithmParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_AlgorithmParameters) {
         _cached_encoder_for_AlgorithmParameters = $._encodeSequenceOf<ObservedValue>(
             () => _encode_ObservedValue,

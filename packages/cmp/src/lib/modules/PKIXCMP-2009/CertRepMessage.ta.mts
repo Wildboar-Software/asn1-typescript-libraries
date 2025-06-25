@@ -126,7 +126,7 @@ let _cached_decoder_for_CertRepMessage: $.ASN1Decoder<CertRepMessage> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {CertRepMessage} The decoded data structure.
  */
-export function _decode_CertRepMessage(el: _Element) {
+export function _decode_CertRepMessage(el: _Element): CertRepMessage {
   if (!_cached_decoder_for_CertRepMessage) {
     _cached_decoder_for_CertRepMessage = function (
       el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_CertRepMessage: $.ASN1Encoder<CertRepMessage> | null = n
 export function _encode_CertRepMessage(
   value: CertRepMessage,
   elGetter: $.ASN1Encoder<CertRepMessage>
-) {
+): _Element {
   if (!_cached_encoder_for_CertRepMessage) {
     _cached_encoder_for_CertRepMessage = function (
       value: CertRepMessage    ): _Element {

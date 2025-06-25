@@ -30,7 +30,7 @@ let _cached_decoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Decoder<Messag
  * @param {_Element} el The element being decoded.
  * @returns {MessageAuthenticationCodeAlgorithm} The decoded data structure.
  */
-export function _decode_MessageAuthenticationCodeAlgorithm(el: _Element) {
+export function _decode_MessageAuthenticationCodeAlgorithm(el: _Element): MessageAuthenticationCodeAlgorithm {
     if (!_cached_decoder_for_MessageAuthenticationCodeAlgorithm) {
         _cached_decoder_for_MessageAuthenticationCodeAlgorithm = _decode_AlgorithmIdentifier;
     }
@@ -51,7 +51,7 @@ let _cached_encoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Encoder<Messag
 export function _encode_MessageAuthenticationCodeAlgorithm(
     value: MessageAuthenticationCodeAlgorithm,
     elGetter: $.ASN1Encoder<MessageAuthenticationCodeAlgorithm>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageAuthenticationCodeAlgorithm) {
         _cached_encoder_for_MessageAuthenticationCodeAlgorithm = _encode_AlgorithmIdentifier;
     }

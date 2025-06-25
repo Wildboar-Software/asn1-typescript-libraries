@@ -128,7 +128,7 @@ let _cached_decoder_for_Data_Field_Item: $.ASN1Decoder<Data_Field_Item> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Data_Field_Item} The decoded data structure.
  */
-export function _decode_Data_Field_Item(el: _Element) {
+export function _decode_Data_Field_Item(el: _Element): Data_Field_Item {
   if (!_cached_decoder_for_Data_Field_Item) {
     _cached_decoder_for_Data_Field_Item = function (
       el: _Element
@@ -174,7 +174,7 @@ let _cached_encoder_for_Data_Field_Item: $.ASN1Encoder<Data_Field_Item> | null =
 export function _encode_Data_Field_Item(
   value: Data_Field_Item,
   elGetter: $.ASN1Encoder<Data_Field_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_Data_Field_Item) {
     _cached_encoder_for_Data_Field_Item = function (
       value: Data_Field_Item    ): _Element {

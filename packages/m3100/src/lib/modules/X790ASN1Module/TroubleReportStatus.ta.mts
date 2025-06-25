@@ -62,7 +62,7 @@ let _cached_decoder_for_TroubleReportStatus: $.ASN1Decoder<TroubleReportStatus> 
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportStatus} The decoded data structure.
  */
-export function _decode_TroubleReportStatus(el: _Element) {
+export function _decode_TroubleReportStatus(el: _Element): TroubleReportStatus {
     if (!_cached_decoder_for_TroubleReportStatus) {
         _cached_decoder_for_TroubleReportStatus = $._decode_extensible_choice<TroubleReportStatus>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_TroubleReportStatus: $.ASN1Encoder<TroubleReportStatus> 
 export function _encode_TroubleReportStatus(
     value: TroubleReportStatus,
     elGetter: $.ASN1Encoder<TroubleReportStatus>
-) {
+): _Element {
     if (!_cached_encoder_for_TroubleReportStatus) {
         _cached_encoder_for_TroubleReportStatus = $._encode_choice<TroubleReportStatus>(
             {

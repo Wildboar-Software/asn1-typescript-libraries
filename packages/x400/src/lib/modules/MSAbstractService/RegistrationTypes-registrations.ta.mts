@@ -104,7 +104,7 @@ let _cached_decoder_for_RegistrationTypes_registrations: $.ASN1Decoder<Registrat
  * @param {_Element} el The element being decoded.
  * @returns {RegistrationTypes_registrations} The decoded data structure.
  */
-export function _decode_RegistrationTypes_registrations(el: _Element) {
+export function _decode_RegistrationTypes_registrations(el: _Element): RegistrationTypes_registrations {
     if (!_cached_decoder_for_RegistrationTypes_registrations) {
         _cached_decoder_for_RegistrationTypes_registrations =
             $._decodeBitString;
@@ -124,7 +124,7 @@ let _cached_encoder_for_RegistrationTypes_registrations: $.ASN1Encoder<Registrat
 export function _encode_RegistrationTypes_registrations(
     value: RegistrationTypes_registrations,
     elGetter: $.ASN1Encoder<RegistrationTypes_registrations>
-) {
+): _Element {
     if (!_cached_encoder_for_RegistrationTypes_registrations) {
         _cached_encoder_for_RegistrationTypes_registrations =
             $._encodeBitString;

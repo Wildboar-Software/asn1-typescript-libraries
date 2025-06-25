@@ -33,7 +33,7 @@ let _cached_decoder_for_Report_PDU: $.ASN1Decoder<Report_PDU> | null = null;
  * @returns {Report_PDU} The decoded data structure.
  */
 export
-function _decode_Report_PDU (el: _Element) {
+function _decode_Report_PDU (el: _Element): Report_PDU {
     if (!_cached_decoder_for_Report_PDU) { _cached_decoder_for_Report_PDU = $._decode_implicit<Report_PDU>(() => _decode_PDU); }
     return _cached_decoder_for_Report_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_Report_PDU: $.ASN1Encoder<Report_PDU> | null = null;
  * @returns {_Element} The Report_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_Report_PDU (value: Report_PDU, elGetter: $.ASN1Encoder<Report_PDU>) {
+function _encode_Report_PDU (value: Report_PDU, elGetter: $.ASN1Encoder<Report_PDU>): _Element {
     if (!_cached_encoder_for_Report_PDU) { _cached_encoder_for_Report_PDU = $._encode_implicit(_TagClass.context, 8, () => _encode_PDU, $.BER); }
     return _cached_encoder_for_Report_PDU(value, elGetter);
 }

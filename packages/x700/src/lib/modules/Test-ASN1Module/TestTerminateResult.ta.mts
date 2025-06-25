@@ -35,7 +35,7 @@ let _cached_decoder_for_TestTerminateResult: $.ASN1Decoder<TestTerminateResult> 
  * @param {_Element} el The element being decoded.
  * @returns {TestTerminateResult} The decoded data structure.
  */
-export function _decode_TestTerminateResult(el: _Element) {
+export function _decode_TestTerminateResult(el: _Element): TestTerminateResult {
     if (!_cached_decoder_for_TestTerminateResult) {
         _cached_decoder_for_TestTerminateResult = $._decodeSetOf<TestInvocationId>(
             () => _decode_TestInvocationId
@@ -56,7 +56,7 @@ let _cached_encoder_for_TestTerminateResult: $.ASN1Encoder<TestTerminateResult> 
 export function _encode_TestTerminateResult(
     value: TestTerminateResult,
     elGetter: $.ASN1Encoder<TestTerminateResult>
-) {
+): _Element {
     if (!_cached_encoder_for_TestTerminateResult) {
         _cached_encoder_for_TestTerminateResult = $._encodeSetOf<TestInvocationId>(
             () => _encode_TestInvocationId,

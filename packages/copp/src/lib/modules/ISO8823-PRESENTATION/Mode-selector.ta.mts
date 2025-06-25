@@ -108,7 +108,7 @@ let _cached_decoder_for_Mode_selector: $.ASN1Decoder<Mode_selector> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Mode_selector} The decoded data structure.
  */
-export function _decode_Mode_selector(el: _Element) {
+export function _decode_Mode_selector(el: _Element): Mode_selector {
     if (!_cached_decoder_for_Mode_selector) {
         _cached_decoder_for_Mode_selector = function (
             el: _Element
@@ -151,7 +151,7 @@ let _cached_encoder_for_Mode_selector: $.ASN1Encoder<Mode_selector> | null = nul
 export function _encode_Mode_selector(
     value: Mode_selector,
     elGetter: $.ASN1Encoder<Mode_selector>
-) {
+): _Element {
     if (!_cached_encoder_for_Mode_selector) {
         _cached_encoder_for_Mode_selector = function (
             value: Mode_selector        ): _Element {

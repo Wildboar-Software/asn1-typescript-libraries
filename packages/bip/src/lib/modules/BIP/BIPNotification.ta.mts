@@ -182,7 +182,7 @@ let _cached_decoder_for_BIPNotification: $.ASN1Decoder<BIPNotification> | null =
  * @param {_Element} el The element being decoded.
  * @returns {BIPNotification} The decoded data structure.
  */
-export function _decode_BIPNotification(el: _Element) {
+export function _decode_BIPNotification(el: _Element): BIPNotification {
   if (!_cached_decoder_for_BIPNotification) {
     _cached_decoder_for_BIPNotification = function (
       el: _Element
@@ -236,7 +236,7 @@ let _cached_encoder_for_BIPNotification: $.ASN1Encoder<BIPNotification> | null =
 export function _encode_BIPNotification(
   value: BIPNotification,
   elGetter: $.ASN1Encoder<BIPNotification>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPNotification) {
     _cached_encoder_for_BIPNotification = function (
       value: BIPNotification    ): _Element {

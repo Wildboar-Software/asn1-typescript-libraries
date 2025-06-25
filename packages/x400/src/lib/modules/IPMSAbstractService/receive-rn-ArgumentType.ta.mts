@@ -114,7 +114,7 @@ let _cached_decoder_for_receive_rn_ArgumentType: $.ASN1Decoder<receive_rn_Argume
  * @param {_Element} el The element being decoded.
  * @returns {receive_rn_ArgumentType} The decoded data structure.
  */
-export function _decode_receive_rn_ArgumentType(el: _Element) {
+export function _decode_receive_rn_ArgumentType(el: _Element): receive_rn_ArgumentType {
     if (!_cached_decoder_for_receive_rn_ArgumentType) {
         _cached_decoder_for_receive_rn_ArgumentType = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_receive_rn_ArgumentType: $.ASN1Encoder<receive_rn_Argume
 export function _encode_receive_rn_ArgumentType(
     value: receive_rn_ArgumentType,
     elGetter: $.ASN1Encoder<receive_rn_ArgumentType>
-) {
+): _Element {
     if (!_cached_encoder_for_receive_rn_ArgumentType) {
         _cached_encoder_for_receive_rn_ArgumentType = function (
             value: receive_rn_ArgumentType        ): _Element {

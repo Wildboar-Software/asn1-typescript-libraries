@@ -35,7 +35,7 @@ let _cached_decoder_for_Membership: $.ASN1Decoder<Membership> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Membership} The decoded data structure.
  */
-export function _decode_Membership(el: _Element) {
+export function _decode_Membership(el: _Element): Membership {
     if (!_cached_decoder_for_Membership) {
         _cached_decoder_for_Membership = $._decodeSetOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -56,7 +56,7 @@ let _cached_encoder_for_Membership: $.ASN1Encoder<Membership> | null = null;
 export function _encode_Membership(
     value: Membership,
     elGetter: $.ASN1Encoder<Membership>
-) {
+): _Element {
     if (!_cached_encoder_for_Membership) {
         _cached_encoder_for_Membership = $._encodeSetOf<ObjectInstance>(
             () => _encode_ObjectInstance,

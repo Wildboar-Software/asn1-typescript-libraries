@@ -32,7 +32,7 @@ let _cached_decoder_for_DestTransactionID: $.ASN1Decoder<DestTransactionID> | nu
  * @param {_Element} el The element being decoded.
  * @returns {DestTransactionID} The decoded data structure.
  */
-export function _decode_DestTransactionID(el: _Element) {
+export function _decode_DestTransactionID(el: _Element): DestTransactionID {
   if (!_cached_decoder_for_DestTransactionID) {
     _cached_decoder_for_DestTransactionID = $._decode_implicit<DestTransactionID>(
       () => $._decodeOctetString
@@ -53,7 +53,7 @@ let _cached_encoder_for_DestTransactionID: $.ASN1Encoder<DestTransactionID> | nu
 export function _encode_DestTransactionID(
   value: DestTransactionID,
   elGetter: $.ASN1Encoder<DestTransactionID>
-) {
+): _Element {
   if (!_cached_encoder_for_DestTransactionID) {
     _cached_encoder_for_DestTransactionID = $._encode_implicit(
       _TagClass.application,

@@ -38,7 +38,7 @@ let _cached_decoder_for_LocationAccessHours: $.ASN1Decoder<LocationAccessHours> 
  * @param {_Element} el The element being decoded.
  * @returns {LocationAccessHours} The decoded data structure.
  */
-export function _decode_LocationAccessHours(el: _Element) {
+export function _decode_LocationAccessHours(el: _Element): LocationAccessHours {
     if (!_cached_decoder_for_LocationAccessHours) {
         _cached_decoder_for_LocationAccessHours = $._decodeSetOf<WeekMask>(
             () => _decode_WeekMask
@@ -61,7 +61,7 @@ let _cached_encoder_for_LocationAccessHours: $.ASN1Encoder<LocationAccessHours> 
 export function _encode_LocationAccessHours(
     value: LocationAccessHours,
     elGetter: $.ASN1Encoder<LocationAccessHours>
-) {
+): _Element {
     if (!_cached_encoder_for_LocationAccessHours) {
         _cached_encoder_for_LocationAccessHours = $._encodeSetOf<WeekMask>(
             () => _encode_WeekMask,

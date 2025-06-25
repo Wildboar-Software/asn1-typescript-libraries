@@ -38,7 +38,7 @@ let _cached_decoder_for_Application_context_name: $.ASN1Decoder<Application_cont
  * @param {_Element} el The element being decoded.
  * @returns {Application_context_name} The decoded data structure.
  */
-export function _decode_Application_context_name(el: _Element) {
+export function _decode_Application_context_name(el: _Element): Application_context_name {
     if (!_cached_decoder_for_Application_context_name) {
         _cached_decoder_for_Application_context_name = _decode_ASO_context_name;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Application_context_name: $.ASN1Encoder<Application_cont
 export function _encode_Application_context_name(
     value: Application_context_name,
     elGetter: $.ASN1Encoder<Application_context_name>
-) {
+): _Element {
     if (!_cached_encoder_for_Application_context_name) {
         _cached_encoder_for_Application_context_name = _encode_ASO_context_name;
     }

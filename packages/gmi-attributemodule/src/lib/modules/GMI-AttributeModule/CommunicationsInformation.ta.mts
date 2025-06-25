@@ -119,7 +119,7 @@ let _cached_decoder_for_CommunicationsInformation: $.ASN1Decoder<CommunicationsI
  * @returns {CommunicationsInformation} The decoded data structure.
  */
 export
-function _decode_CommunicationsInformation (el: _Element) {
+function _decode_CommunicationsInformation (el: _Element): CommunicationsInformation {
     if (!_cached_decoder_for_CommunicationsInformation) { _cached_decoder_for_CommunicationsInformation = function (el: _Element): CommunicationsInformation {
     let informationType!: InformationType;
     let informationData: OPTIONAL<InformationData>;
@@ -153,7 +153,7 @@ let _cached_encoder_for_CommunicationsInformation: $.ASN1Encoder<CommunicationsI
  * @returns {_Element} The CommunicationsInformation, encoded as an ASN.1 Element.
  */
 export
-function _encode_CommunicationsInformation (value: CommunicationsInformation, elGetter: $.ASN1Encoder<CommunicationsInformation>) {
+function _encode_CommunicationsInformation (value: CommunicationsInformation, elGetter: $.ASN1Encoder<CommunicationsInformation>): _Element {
     if (!_cached_encoder_for_CommunicationsInformation) { _cached_encoder_for_CommunicationsInformation = function (value: CommunicationsInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

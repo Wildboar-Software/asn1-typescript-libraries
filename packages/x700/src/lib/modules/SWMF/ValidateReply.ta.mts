@@ -47,7 +47,7 @@ let _cached_decoder_for_ValidateReply: $.ASN1Decoder<ValidateReply> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ValidateReply} The decoded data structure.
  */
-export function _decode_ValidateReply(el: _Element) {
+export function _decode_ValidateReply(el: _Element): ValidateReply {
     if (!_cached_decoder_for_ValidateReply) {
         _cached_decoder_for_ValidateReply = $._decode_inextensible_choice<ValidateReply>(
             {
@@ -97,7 +97,7 @@ let _cached_encoder_for_ValidateReply: $.ASN1Encoder<ValidateReply> | null = nul
 export function _encode_ValidateReply(
     value: ValidateReply,
     elGetter: $.ASN1Encoder<ValidateReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ValidateReply) {
         _cached_encoder_for_ValidateReply = $._encode_choice<ValidateReply>(
             {

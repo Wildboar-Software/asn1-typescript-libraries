@@ -135,7 +135,7 @@ let _cached_decoder_for_E_setupResponse: $.ASN1Decoder<E_setupResponse> | null =
  * @param {_Element} el The element being decoded.
  * @returns {E_setupResponse} The decoded data structure.
  */
-export function _decode_E_setupResponse(el: _Element) {
+export function _decode_E_setupResponse(el: _Element): E_setupResponse {
     if (!_cached_decoder_for_E_setupResponse) {
         _cached_decoder_for_E_setupResponse = function (
             el: _Element
@@ -178,7 +178,7 @@ let _cached_encoder_for_E_setupResponse: $.ASN1Encoder<E_setupResponse> | null =
 export function _encode_E_setupResponse(
     value: E_setupResponse,
     elGetter: $.ASN1Encoder<E_setupResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_E_setupResponse) {
         _cached_encoder_for_E_setupResponse = function (
             value: E_setupResponse        ): _Element {

@@ -39,7 +39,7 @@ let _cached_decoder_for_CPC_type: $.ASN1Decoder<CPC_type> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CPC_type} The decoded data structure.
  */
-export function _decode_CPC_type(el: _Element) {
+export function _decode_CPC_type(el: _Element): CPC_type {
     if (!_cached_decoder_for_CPC_type) {
         _cached_decoder_for_CPC_type = _decode_User_data;
     }
@@ -60,7 +60,7 @@ let _cached_encoder_for_CPC_type: $.ASN1Encoder<CPC_type> | null = null;
 export function _encode_CPC_type(
     value: CPC_type,
     elGetter: $.ASN1Encoder<CPC_type>
-) {
+): _Element {
     if (!_cached_encoder_for_CPC_type) {
         _cached_encoder_for_CPC_type = _encode_User_data;
     }

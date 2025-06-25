@@ -35,7 +35,7 @@ let _cached_decoder_for_BIRCreationDate: $.ASN1Decoder<BIRCreationDate> | null =
  * @param {_Element} el The element being decoded.
  * @returns {BIRCreationDate} The decoded data structure.
  */
-export function _decode_BIRCreationDate(el: _Element) {
+export function _decode_BIRCreationDate(el: _Element): BIRCreationDate {
   if (!_cached_decoder_for_BIRCreationDate) {
     _cached_decoder_for_BIRCreationDate = _decode_Date_Time;
   }
@@ -54,7 +54,7 @@ let _cached_encoder_for_BIRCreationDate: $.ASN1Encoder<BIRCreationDate> | null =
 export function _encode_BIRCreationDate(
   value: BIRCreationDate,
   elGetter: $.ASN1Encoder<BIRCreationDate>
-) {
+): _Element {
   if (!_cached_encoder_for_BIRCreationDate) {
     _cached_encoder_for_BIRCreationDate = _encode_Date_Time;
   }

@@ -200,7 +200,7 @@ let _cached_decoder_for_RTORQapdu: $.ASN1Decoder<RTORQapdu> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RTORQapdu} The decoded data structure.
  */
-export function _decode_RTORQapdu(el: _Element) {
+export function _decode_RTORQapdu(el: _Element): RTORQapdu {
   if (!_cached_decoder_for_RTORQapdu) {
     _cached_decoder_for_RTORQapdu = function (el: _Element): RTORQapdu {
       /* START_OF_SET_COMPONENT_DECLARATIONS */
@@ -272,7 +272,7 @@ let _cached_encoder_for_RTORQapdu: $.ASN1Encoder<RTORQapdu> | null = null;
 export function _encode_RTORQapdu(
   value: RTORQapdu,
   elGetter: $.ASN1Encoder<RTORQapdu>
-) {
+): _Element {
   if (!_cached_encoder_for_RTORQapdu) {
     _cached_encoder_for_RTORQapdu = function (
       value: RTORQapdu    ): _Element {

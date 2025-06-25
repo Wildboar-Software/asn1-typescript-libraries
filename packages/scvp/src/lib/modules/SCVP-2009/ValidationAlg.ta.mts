@@ -107,7 +107,7 @@ let _cached_decoder_for_ValidationAlg: $.ASN1Decoder<ValidationAlg> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ValidationAlg} The decoded data structure.
  */
-export function _decode_ValidationAlg(el: _Element) {
+export function _decode_ValidationAlg(el: _Element): ValidationAlg {
   if (!_cached_decoder_for_ValidationAlg) {
     _cached_decoder_for_ValidationAlg = function (el: _Element): ValidationAlg {
       let valAlgId!: OBJECT_IDENTIFIER;
@@ -149,7 +149,7 @@ let _cached_encoder_for_ValidationAlg: $.ASN1Encoder<ValidationAlg> | null = nul
 export function _encode_ValidationAlg(
   value: ValidationAlg,
   elGetter: $.ASN1Encoder<ValidationAlg>
-) {
+): _Element {
   if (!_cached_encoder_for_ValidationAlg) {
     _cached_encoder_for_ValidationAlg = function (
       value: ValidationAlg    ): _Element {

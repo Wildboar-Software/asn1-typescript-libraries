@@ -42,7 +42,7 @@ let _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item_rest
  */
 export function _decode_fetch_restriction_error_ParameterType_problems_Item_restriction(
     el: _Element
-) {
+): fetch_restriction_error_ParameterType_problems_Item_restriction {
     if (
         !_cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction
     ) {
@@ -82,7 +82,7 @@ let _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item_rest
 export function _encode_fetch_restriction_error_ParameterType_problems_Item_restriction(
     value: fetch_restriction_error_ParameterType_problems_Item_restriction,
     elGetter: $.ASN1Encoder<fetch_restriction_error_ParameterType_problems_Item_restriction>
-) {
+): _Element {
     if (
         !_cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction
     ) {

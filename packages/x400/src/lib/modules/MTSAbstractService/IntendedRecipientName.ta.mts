@@ -122,7 +122,7 @@ let _cached_decoder_for_IntendedRecipientName: $.ASN1Decoder<IntendedRecipientNa
  * @param {_Element} el The element being decoded.
  * @returns {IntendedRecipientName} The decoded data structure.
  */
-export function _decode_IntendedRecipientName(el: _Element) {
+export function _decode_IntendedRecipientName(el: _Element): IntendedRecipientName {
     if (!_cached_decoder_for_IntendedRecipientName) {
         _cached_decoder_for_IntendedRecipientName = function (
             el: _Element
@@ -164,7 +164,7 @@ let _cached_encoder_for_IntendedRecipientName: $.ASN1Encoder<IntendedRecipientNa
 export function _encode_IntendedRecipientName(
     value: IntendedRecipientName,
     elGetter: $.ASN1Encoder<IntendedRecipientName>
-) {
+): _Element {
     if (!_cached_encoder_for_IntendedRecipientName) {
         _cached_encoder_for_IntendedRecipientName = function (
             value: IntendedRecipientName        ): _Element {

@@ -119,7 +119,7 @@ let _cached_decoder_for_NotifyGUIProgressEvent_ResponseParams: $.ASN1Decoder<Not
  * @param {_Element} el The element being decoded.
  * @returns {NotifyGUIProgressEvent_ResponseParams} The decoded data structure.
  */
-export function _decode_NotifyGUIProgressEvent_ResponseParams(el: _Element) {
+export function _decode_NotifyGUIProgressEvent_ResponseParams(el: _Element): NotifyGUIProgressEvent_ResponseParams {
   if (!_cached_decoder_for_NotifyGUIProgressEvent_ResponseParams) {
     _cached_decoder_for_NotifyGUIProgressEvent_ResponseParams = function (
       el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_NotifyGUIProgressEvent_ResponseParams: $.ASN1Encoder<Not
 export function _encode_NotifyGUIProgressEvent_ResponseParams(
   value: NotifyGUIProgressEvent_ResponseParams,
   elGetter: $.ASN1Encoder<NotifyGUIProgressEvent_ResponseParams>
-) {
+): _Element {
   if (!_cached_encoder_for_NotifyGUIProgressEvent_ResponseParams) {
     _cached_encoder_for_NotifyGUIProgressEvent_ResponseParams = function (
       value: NotifyGUIProgressEvent_ResponseParams    ): _Element {

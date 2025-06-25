@@ -35,7 +35,7 @@ let _cached_decoder_for_PostOfficeBoxAddress: $.ASN1Decoder<PostOfficeBoxAddress
  * @param {_Element} el The element being decoded.
  * @returns {PostOfficeBoxAddress} The decoded data structure.
  */
-export function _decode_PostOfficeBoxAddress(el: _Element) {
+export function _decode_PostOfficeBoxAddress(el: _Element): PostOfficeBoxAddress {
     if (!_cached_decoder_for_PostOfficeBoxAddress) {
         _cached_decoder_for_PostOfficeBoxAddress = _decode_PDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PostOfficeBoxAddress: $.ASN1Encoder<PostOfficeBoxAddress
 export function _encode_PostOfficeBoxAddress(
     value: PostOfficeBoxAddress,
     elGetter: $.ASN1Encoder<PostOfficeBoxAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_PostOfficeBoxAddress) {
         _cached_encoder_for_PostOfficeBoxAddress = _encode_PDSParameter;
     }

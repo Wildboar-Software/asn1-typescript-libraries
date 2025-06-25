@@ -136,7 +136,7 @@ let _cached_decoder_for_MITSearch: $.ASN1Decoder<MITSearch> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {MITSearch} The decoded data structure.
  */
-export function _decode_MITSearch(el: _Element) {
+export function _decode_MITSearch(el: _Element): MITSearch {
     if (!_cached_decoder_for_MITSearch) {
         _cached_decoder_for_MITSearch = function (el: _Element): MITSearch {
             let base!: ObjectInstance;
@@ -184,7 +184,7 @@ let _cached_encoder_for_MITSearch: $.ASN1Encoder<MITSearch> | null = null;
 export function _encode_MITSearch(
     value: MITSearch,
     elGetter: $.ASN1Encoder<MITSearch>
-) {
+): _Element {
     if (!_cached_encoder_for_MITSearch) {
         _cached_encoder_for_MITSearch = function (
             value: MITSearch        ): _Element {

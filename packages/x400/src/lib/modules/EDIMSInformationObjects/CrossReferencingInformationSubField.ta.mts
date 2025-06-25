@@ -143,7 +143,7 @@ let _cached_decoder_for_CrossReferencingInformationSubField: $.ASN1Decoder<Cross
  * @param {_Element} el The element being decoded.
  * @returns {CrossReferencingInformationSubField} The decoded data structure.
  */
-export function _decode_CrossReferencingInformationSubField(el: _Element) {
+export function _decode_CrossReferencingInformationSubField(el: _Element): CrossReferencingInformationSubField {
     if (!_cached_decoder_for_CrossReferencingInformationSubField) {
         _cached_decoder_for_CrossReferencingInformationSubField = function (
             el: _Element
@@ -198,7 +198,7 @@ let _cached_encoder_for_CrossReferencingInformationSubField: $.ASN1Encoder<Cross
 export function _encode_CrossReferencingInformationSubField(
     value: CrossReferencingInformationSubField,
     elGetter: $.ASN1Encoder<CrossReferencingInformationSubField>
-) {
+): _Element {
     if (!_cached_encoder_for_CrossReferencingInformationSubField) {
         _cached_encoder_for_CrossReferencingInformationSubField = function (
             value: CrossReferencingInformationSubField        ): _Element {

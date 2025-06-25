@@ -46,7 +46,7 @@ let _cached_decoder_for_CTPDownstreamPointer: $.ASN1Decoder<CTPDownstreamPointer
  * @param {_Element} el The element being decoded.
  * @returns {CTPDownstreamPointer} The decoded data structure.
  */
-export function _decode_CTPDownstreamPointer(el: _Element) {
+export function _decode_CTPDownstreamPointer(el: _Element): CTPDownstreamPointer {
     if (!_cached_decoder_for_CTPDownstreamPointer) {
         _cached_decoder_for_CTPDownstreamPointer = _decode_DownstreamConnectivityPointer;
     }
@@ -67,7 +67,7 @@ let _cached_encoder_for_CTPDownstreamPointer: $.ASN1Encoder<CTPDownstreamPointer
 export function _encode_CTPDownstreamPointer(
     value: CTPDownstreamPointer,
     elGetter: $.ASN1Encoder<CTPDownstreamPointer>
-) {
+): _Element {
     if (!_cached_encoder_for_CTPDownstreamPointer) {
         _cached_encoder_for_CTPDownstreamPointer = _encode_DownstreamConnectivityPointer;
     }

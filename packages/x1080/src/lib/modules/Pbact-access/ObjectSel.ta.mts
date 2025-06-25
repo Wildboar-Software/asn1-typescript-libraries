@@ -136,7 +136,7 @@ let _cached_decoder_for_ObjectSel: $.ASN1Decoder<ObjectSel> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ObjectSel} The decoded data structure.
  */
-export function _decode_ObjectSel(el: _Element) {
+export function _decode_ObjectSel(el: _Element): ObjectSel {
     if (!_cached_decoder_for_ObjectSel) {
         _cached_decoder_for_ObjectSel = function (el: _Element): ObjectSel {
             const sequence: _Element[] = el.sequence;
@@ -173,7 +173,7 @@ let _cached_encoder_for_ObjectSel: $.ASN1Encoder<ObjectSel> | null = null;
 export function _encode_ObjectSel(
     value: ObjectSel,
     elGetter: $.ASN1Encoder<ObjectSel>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectSel) {
         _cached_encoder_for_ObjectSel = function (
             value: ObjectSel        ): _Element {

@@ -117,7 +117,7 @@ let _cached_decoder_for_Contents_Type_Attribute_document_type: $.ASN1Decoder<Con
  * @param {_Element} el The element being decoded.
  * @returns {Contents_Type_Attribute_document_type} The decoded data structure.
  */
-export function _decode_Contents_Type_Attribute_document_type(el: _Element) {
+export function _decode_Contents_Type_Attribute_document_type(el: _Element): Contents_Type_Attribute_document_type {
     if (!_cached_decoder_for_Contents_Type_Attribute_document_type) {
         _cached_decoder_for_Contents_Type_Attribute_document_type = function (
             el: _Element
@@ -163,7 +163,7 @@ let _cached_encoder_for_Contents_Type_Attribute_document_type: $.ASN1Encoder<Con
 export function _encode_Contents_Type_Attribute_document_type(
     value: Contents_Type_Attribute_document_type,
     elGetter: $.ASN1Encoder<Contents_Type_Attribute_document_type>
-) {
+): _Element {
     if (!_cached_encoder_for_Contents_Type_Attribute_document_type) {
         _cached_encoder_for_Contents_Type_Attribute_document_type = function (
             value: Contents_Type_Attribute_document_type        ): _Element {

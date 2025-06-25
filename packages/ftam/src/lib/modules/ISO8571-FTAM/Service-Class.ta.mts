@@ -107,7 +107,7 @@ let _cached_decoder_for_Service_Class: $.ASN1Decoder<Service_Class> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Service_Class} The decoded data structure.
  */
-export function _decode_Service_Class(el: _Element) {
+export function _decode_Service_Class(el: _Element): Service_Class {
   if (!_cached_decoder_for_Service_Class) {
     _cached_decoder_for_Service_Class = $._decode_implicit<Service_Class>(
       () => $._decodeBitString
@@ -130,7 +130,7 @@ let _cached_encoder_for_Service_Class: $.ASN1Encoder<Service_Class> | null = nul
 export function _encode_Service_Class(
   value: Service_Class,
   elGetter: $.ASN1Encoder<Service_Class>
-) {
+): _Element {
   if (!_cached_encoder_for_Service_Class) {
     _cached_encoder_for_Service_Class = $._encode_implicit(
       _TagClass.context,

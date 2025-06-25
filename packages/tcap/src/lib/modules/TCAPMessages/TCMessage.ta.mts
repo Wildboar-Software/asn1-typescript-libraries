@@ -54,7 +54,7 @@ let _cached_decoder_for_TCMessage: $.ASN1Decoder<TCMessage> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TCMessage} The decoded data structure.
  */
-export function _decode_TCMessage(el: _Element) {
+export function _decode_TCMessage(el: _Element): TCMessage {
   if (!_cached_decoder_for_TCMessage) {
     _cached_decoder_for_TCMessage = $._decode_inextensible_choice<TCMessage>({
       'APPLICATION 1': [
@@ -91,7 +91,7 @@ let _cached_encoder_for_TCMessage: $.ASN1Encoder<TCMessage> | null = null;
 export function _encode_TCMessage(
   value: TCMessage,
   elGetter: $.ASN1Encoder<TCMessage>
-) {
+): _Element {
   if (!_cached_encoder_for_TCMessage) {
     _cached_encoder_for_TCMessage = $._encode_choice<TCMessage>(
       {

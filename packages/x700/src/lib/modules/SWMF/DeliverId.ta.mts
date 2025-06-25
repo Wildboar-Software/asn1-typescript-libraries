@@ -37,7 +37,7 @@ let _cached_decoder_for_DeliverId: $.ASN1Decoder<DeliverId> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {DeliverId} The decoded data structure.
  */
-export function _decode_DeliverId(el: _Element) {
+export function _decode_DeliverId(el: _Element): DeliverId {
     if (!_cached_decoder_for_DeliverId) {
         _cached_decoder_for_DeliverId = $._decode_inextensible_choice<DeliverId>(
             {
@@ -61,7 +61,7 @@ let _cached_encoder_for_DeliverId: $.ASN1Encoder<DeliverId> | null = null;
 export function _encode_DeliverId(
     value: DeliverId,
     elGetter: $.ASN1Encoder<DeliverId>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliverId) {
         _cached_encoder_for_DeliverId = $._encode_choice<DeliverId>(
             {

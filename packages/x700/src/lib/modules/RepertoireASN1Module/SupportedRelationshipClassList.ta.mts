@@ -32,7 +32,7 @@ let _cached_decoder_for_SupportedRelationshipClassList: $.ASN1Decoder<SupportedR
  * @param {_Element} el The element being decoded.
  * @returns {SupportedRelationshipClassList} The decoded data structure.
  */
-export function _decode_SupportedRelationshipClassList(el: _Element) {
+export function _decode_SupportedRelationshipClassList(el: _Element): SupportedRelationshipClassList {
     if (!_cached_decoder_for_SupportedRelationshipClassList) {
         _cached_decoder_for_SupportedRelationshipClassList = $._decodeSetOf<OBJECT_IDENTIFIER>(
             () => $._decodeObjectIdentifier
@@ -53,7 +53,7 @@ let _cached_encoder_for_SupportedRelationshipClassList: $.ASN1Encoder<SupportedR
 export function _encode_SupportedRelationshipClassList(
     value: SupportedRelationshipClassList,
     elGetter: $.ASN1Encoder<SupportedRelationshipClassList>
-) {
+): _Element {
     if (!_cached_encoder_for_SupportedRelationshipClassList) {
         _cached_encoder_for_SupportedRelationshipClassList = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,

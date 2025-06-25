@@ -36,7 +36,7 @@ let _cached_decoder_for_SecurityLevelofPrivilege_bioSecLevel: $.ASN1Decoder<Secu
  * @returns {SecurityLevelofPrivilege_bioSecLevel} The decoded data structure.
  */
 export
-function _decode_SecurityLevelofPrivilege_bioSecLevel (el: _Element) {
+function _decode_SecurityLevelofPrivilege_bioSecLevel (el: _Element): SecurityLevelofPrivilege_bioSecLevel {
     if (!_cached_decoder_for_SecurityLevelofPrivilege_bioSecLevel) { _cached_decoder_for_SecurityLevelofPrivilege_bioSecLevel = $._decode_inextensible_choice<SecurityLevelofPrivilege_bioSecLevel>({
     "CONTEXT 0": [ "x520identifier", _decode_UniqueIdentifierOfBioParaInfo ],
     "CONTEXT 1": [ "simpleidentifier", $._decodeInteger ]
@@ -54,7 +54,7 @@ let _cached_encoder_for_SecurityLevelofPrivilege_bioSecLevel: $.ASN1Encoder<Secu
  * @returns {_Element} The SecurityLevelofPrivilege_bioSecLevel, encoded as an ASN.1 Element.
  */
 export
-function _encode_SecurityLevelofPrivilege_bioSecLevel (value: SecurityLevelofPrivilege_bioSecLevel, elGetter: $.ASN1Encoder<SecurityLevelofPrivilege_bioSecLevel>) {
+function _encode_SecurityLevelofPrivilege_bioSecLevel (value: SecurityLevelofPrivilege_bioSecLevel, elGetter: $.ASN1Encoder<SecurityLevelofPrivilege_bioSecLevel>): _Element {
     if (!_cached_encoder_for_SecurityLevelofPrivilege_bioSecLevel) { _cached_encoder_for_SecurityLevelofPrivilege_bioSecLevel = $._encode_choice<SecurityLevelofPrivilege_bioSecLevel>({
     "x520identifier": _encode_UniqueIdentifierOfBioParaInfo,
     "simpleidentifier": $._encodeInteger,

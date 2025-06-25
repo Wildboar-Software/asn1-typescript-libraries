@@ -116,7 +116,7 @@ let _cached_decoder_for_SecurityProtocol: $.ASN1Decoder<SecurityProtocol> | null
  * @param {_Element} el The element being decoded.
  * @returns {SecurityProtocol} The decoded data structure.
  */
-export function _decode_SecurityProtocol(el: _Element) {
+export function _decode_SecurityProtocol(el: _Element): SecurityProtocol {
   if (!_cached_decoder_for_SecurityProtocol) {
     _cached_decoder_for_SecurityProtocol = function (
       el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_SecurityProtocol: $.ASN1Encoder<SecurityProtocol> | null
 export function _encode_SecurityProtocol(
   value: SecurityProtocol,
   elGetter: $.ASN1Encoder<SecurityProtocol>
-) {
+): _Element {
   if (!_cached_encoder_for_SecurityProtocol) {
     _cached_encoder_for_SecurityProtocol = function (
       value: SecurityProtocol    ): _Element {

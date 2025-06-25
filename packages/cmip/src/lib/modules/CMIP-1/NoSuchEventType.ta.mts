@@ -133,7 +133,7 @@ let _cached_decoder_for_NoSuchEventType: $.ASN1Decoder<NoSuchEventType> | null =
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchEventType} The decoded data structure.
  */
-export function _decode_NoSuchEventType(el: _Element) {
+export function _decode_NoSuchEventType(el: _Element): NoSuchEventType {
   if (!_cached_decoder_for_NoSuchEventType) {
     _cached_decoder_for_NoSuchEventType = function (
       el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_NoSuchEventType: $.ASN1Encoder<NoSuchEventType> | null =
 export function _encode_NoSuchEventType(
   value: NoSuchEventType,
   elGetter: $.ASN1Encoder<NoSuchEventType>
-) {
+): _Element {
   if (!_cached_encoder_for_NoSuchEventType) {
     _cached_encoder_for_NoSuchEventType = function (
       value: NoSuchEventType    ): _Element {

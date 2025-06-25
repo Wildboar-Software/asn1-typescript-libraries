@@ -216,7 +216,7 @@ let _cached_decoder_for_File_PDU: $.ASN1Decoder<File_PDU> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {File_PDU} The decoded data structure.
  */
-export function _decode_File_PDU(el: _Element) {
+export function _decode_File_PDU(el: _Element): File_PDU {
   if (!_cached_decoder_for_File_PDU) {
     _cached_decoder_for_File_PDU = $._decode_inextensible_choice<File_PDU>({
       'CONTEXT 6': [
@@ -364,7 +364,7 @@ let _cached_encoder_for_File_PDU: $.ASN1Encoder<File_PDU> | null = null;
 export function _encode_File_PDU(
   value: File_PDU,
   elGetter: $.ASN1Encoder<File_PDU>
-) {
+): _Element {
   if (!_cached_encoder_for_File_PDU) {
     _cached_encoder_for_File_PDU = $._encode_choice<File_PDU>(
       {

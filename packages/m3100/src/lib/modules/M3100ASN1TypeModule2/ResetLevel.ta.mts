@@ -40,7 +40,7 @@ let _cached_decoder_for_ResetLevel: $.ASN1Decoder<ResetLevel> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ResetLevel} The decoded data structure.
  */
-export function _decode_ResetLevel(el: _Element) {
+export function _decode_ResetLevel(el: _Element): ResetLevel {
     if (!_cached_decoder_for_ResetLevel) {
         _cached_decoder_for_ResetLevel = $._decode_inextensible_choice<ResetLevel>(
             {
@@ -66,7 +66,7 @@ let _cached_encoder_for_ResetLevel: $.ASN1Encoder<ResetLevel> | null = null;
 export function _encode_ResetLevel(
     value: ResetLevel,
     elGetter: $.ASN1Encoder<ResetLevel>
-) {
+): _Element {
     if (!_cached_encoder_for_ResetLevel) {
         _cached_encoder_for_ResetLevel = $._encode_choice<ResetLevel>(
             {

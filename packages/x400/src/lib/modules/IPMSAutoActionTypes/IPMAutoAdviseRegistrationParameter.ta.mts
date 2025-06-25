@@ -212,7 +212,7 @@ let _cached_decoder_for_IPMAutoAdviseRegistrationParameter: $.ASN1Decoder<IPMAut
  * @param {_Element} el The element being decoded.
  * @returns {IPMAutoAdviseRegistrationParameter} The decoded data structure.
  */
-export function _decode_IPMAutoAdviseRegistrationParameter(el: _Element) {
+export function _decode_IPMAutoAdviseRegistrationParameter(el: _Element): IPMAutoAdviseRegistrationParameter {
     if (!_cached_decoder_for_IPMAutoAdviseRegistrationParameter) {
         _cached_decoder_for_IPMAutoAdviseRegistrationParameter = function (
             el: _Element
@@ -296,7 +296,7 @@ let _cached_encoder_for_IPMAutoAdviseRegistrationParameter: $.ASN1Encoder<IPMAut
 export function _encode_IPMAutoAdviseRegistrationParameter(
     value: IPMAutoAdviseRegistrationParameter,
     elGetter: $.ASN1Encoder<IPMAutoAdviseRegistrationParameter>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMAutoAdviseRegistrationParameter) {
         _cached_encoder_for_IPMAutoAdviseRegistrationParameter = function (
             value: IPMAutoAdviseRegistrationParameter        ): _Element {

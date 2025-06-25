@@ -194,7 +194,7 @@ let _cached_decoder_for_ScanReportInformation: $.ASN1Decoder<ScanReportInformati
  * @param {_Element} el The element being decoded.
  * @returns {ScanReportInformation} The decoded data structure.
  */
-export function _decode_ScanReportInformation(el: _Element) {
+export function _decode_ScanReportInformation(el: _Element): ScanReportInformation {
     if (!_cached_decoder_for_ScanReportInformation) {
         _cached_decoder_for_ScanReportInformation = function (
             el: _Element
@@ -266,7 +266,7 @@ let _cached_encoder_for_ScanReportInformation: $.ASN1Encoder<ScanReportInformati
 export function _encode_ScanReportInformation(
     value: ScanReportInformation,
     elGetter: $.ASN1Encoder<ScanReportInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_ScanReportInformation) {
         _cached_encoder_for_ScanReportInformation = function (
             value: ScanReportInformation        ): _Element {

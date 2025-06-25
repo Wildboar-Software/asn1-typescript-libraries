@@ -119,7 +119,7 @@ let _cached_decoder_for_OCSPRequest: $.ASN1Decoder<OCSPRequest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {OCSPRequest} The decoded data structure.
  */
-export function _decode_OCSPRequest(el: _Element) {
+export function _decode_OCSPRequest(el: _Element): OCSPRequest {
     if (!_cached_decoder_for_OCSPRequest) {
         _cached_decoder_for_OCSPRequest = function (el: _Element): OCSPRequest {
             let tbsRequest!: TBSRequest;
@@ -165,7 +165,7 @@ let _cached_encoder_for_OCSPRequest: $.ASN1Encoder<OCSPRequest> | null = null;
 export function _encode_OCSPRequest(
     value: OCSPRequest,
     elGetter: $.ASN1Encoder<OCSPRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_OCSPRequest) {
         _cached_encoder_for_OCSPRequest = function (
             value: OCSPRequest        ): _Element {

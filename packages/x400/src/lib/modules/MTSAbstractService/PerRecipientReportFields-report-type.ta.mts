@@ -44,7 +44,7 @@ let _cached_decoder_for_PerRecipientReportFields_report_type: $.ASN1Decoder<PerR
  * @param {_Element} el The element being decoded.
  * @returns {PerRecipientReportFields_report_type} The decoded data structure.
  */
-export function _decode_PerRecipientReportFields_report_type(el: _Element) {
+export function _decode_PerRecipientReportFields_report_type(el: _Element): PerRecipientReportFields_report_type {
     if (!_cached_decoder_for_PerRecipientReportFields_report_type) {
         _cached_decoder_for_PerRecipientReportFields_report_type = $._decode_inextensible_choice<PerRecipientReportFields_report_type>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_PerRecipientReportFields_report_type: $.ASN1Encoder<PerR
 export function _encode_PerRecipientReportFields_report_type(
     value: PerRecipientReportFields_report_type,
     elGetter: $.ASN1Encoder<PerRecipientReportFields_report_type>
-) {
+): _Element {
     if (!_cached_encoder_for_PerRecipientReportFields_report_type) {
         _cached_encoder_for_PerRecipientReportFields_report_type = $._encode_choice<PerRecipientReportFields_report_type>(
             {

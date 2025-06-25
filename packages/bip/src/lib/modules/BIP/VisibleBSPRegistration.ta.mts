@@ -38,7 +38,7 @@ let _cached_decoder_for_VisibleBSPRegistration: $.ASN1Decoder<VisibleBSPRegistra
  * @param {_Element} el The element being decoded.
  * @returns {VisibleBSPRegistration} The decoded data structure.
  */
-export function _decode_VisibleBSPRegistration(el: _Element) {
+export function _decode_VisibleBSPRegistration(el: _Element): VisibleBSPRegistration {
   if (!_cached_decoder_for_VisibleBSPRegistration) {
     _cached_decoder_for_VisibleBSPRegistration = _decode_BioAPI_BSP_SCHEMA;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_VisibleBSPRegistration: $.ASN1Encoder<VisibleBSPRegistra
 export function _encode_VisibleBSPRegistration(
   value: VisibleBSPRegistration,
   elGetter: $.ASN1Encoder<VisibleBSPRegistration>
-) {
+): _Element {
   if (!_cached_encoder_for_VisibleBSPRegistration) {
     _cached_encoder_for_VisibleBSPRegistration = _encode_BioAPI_BSP_SCHEMA;
   }

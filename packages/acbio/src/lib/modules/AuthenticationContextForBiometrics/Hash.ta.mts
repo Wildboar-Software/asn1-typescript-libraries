@@ -118,7 +118,7 @@ let _cached_decoder_for_Hash: $.ASN1Decoder<Hash> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Hash} The decoded data structure.
  */
-export function _decode_Hash(el: _Element) {
+export function _decode_Hash(el: _Element): Hash {
     if (!_cached_decoder_for_Hash) {
         _cached_decoder_for_Hash = function (el: _Element): Hash {
             const sequence: _Element[] = el.sequence;
@@ -152,7 +152,7 @@ let _cached_encoder_for_Hash: $.ASN1Encoder<Hash> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Hash, encoded as an ASN.1 Element.
  */
-export function _encode_Hash(value: Hash, elGetter: $.ASN1Encoder<Hash>) {
+export function _encode_Hash(value: Hash, elGetter: $.ASN1Encoder<Hash>): _Element {
     if (!_cached_encoder_for_Hash) {
         _cached_encoder_for_Hash = function (
             value: Hash        ): _Element {

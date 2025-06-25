@@ -45,7 +45,7 @@ let _cached_decoder_for_HandOffPersonPtr: $.ASN1Decoder<HandOffPersonPtr> | null
  * @param {_Element} el The element being decoded.
  * @returns {HandOffPersonPtr} The decoded data structure.
  */
-export function _decode_HandOffPersonPtr(el: _Element) {
+export function _decode_HandOffPersonPtr(el: _Element): HandOffPersonPtr {
     if (!_cached_decoder_for_HandOffPersonPtr) {
         _cached_decoder_for_HandOffPersonPtr = $._decode_extensible_choice<HandOffPersonPtr>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_HandOffPersonPtr: $.ASN1Encoder<HandOffPersonPtr> | null
 export function _encode_HandOffPersonPtr(
     value: HandOffPersonPtr,
     elGetter: $.ASN1Encoder<HandOffPersonPtr>
-) {
+): _Element {
     if (!_cached_encoder_for_HandOffPersonPtr) {
         _cached_encoder_for_HandOffPersonPtr = $._encode_choice<HandOffPersonPtr>(
             {

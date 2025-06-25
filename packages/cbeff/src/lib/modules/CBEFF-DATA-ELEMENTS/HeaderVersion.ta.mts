@@ -119,7 +119,7 @@ let _cached_decoder_for_HeaderVersion: $.ASN1Decoder<HeaderVersion> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {HeaderVersion} The decoded data structure.
  */
-export function _decode_HeaderVersion(el: _Element) {
+export function _decode_HeaderVersion(el: _Element): HeaderVersion {
   if (!_cached_decoder_for_HeaderVersion) {
     _cached_decoder_for_HeaderVersion = function (el: _Element): HeaderVersion {
       const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_HeaderVersion: $.ASN1Encoder<HeaderVersion> | null = nul
 export function _encode_HeaderVersion(
   value: HeaderVersion,
   elGetter: $.ASN1Encoder<HeaderVersion>
-) {
+): _Element {
   if (!_cached_encoder_for_HeaderVersion) {
     _cached_encoder_for_HeaderVersion = function (
       value: HeaderVersion    ): _Element {

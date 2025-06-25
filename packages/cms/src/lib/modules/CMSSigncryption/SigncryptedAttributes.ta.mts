@@ -30,7 +30,7 @@ let _cached_decoder_for_SigncryptedAttributes: $.ASN1Decoder<SigncryptedAttribut
  * @param {_Element} el The element being decoded.
  * @returns {SigncryptedAttributes} The decoded data structure.
  */
-export function _decode_SigncryptedAttributes(el: _Element) {
+export function _decode_SigncryptedAttributes(el: _Element): SigncryptedAttributes {
     if (!_cached_decoder_for_SigncryptedAttributes) {
         _cached_decoder_for_SigncryptedAttributes = $._decodeSequenceOf<Attribute>(
             () => _decode_Attribute
@@ -53,7 +53,7 @@ let _cached_encoder_for_SigncryptedAttributes: $.ASN1Encoder<SigncryptedAttribut
 export function _encode_SigncryptedAttributes(
     value: SigncryptedAttributes,
     elGetter: $.ASN1Encoder<SigncryptedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_SigncryptedAttributes) {
         _cached_encoder_for_SigncryptedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,

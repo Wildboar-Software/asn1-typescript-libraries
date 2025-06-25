@@ -38,7 +38,7 @@ let _cached_decoder_for_POPODecKeyChallContent: $.ASN1Decoder<POPODecKeyChallCon
  * @param {_Element} el The element being decoded.
  * @returns {POPODecKeyChallContent} The decoded data structure.
  */
-export function _decode_POPODecKeyChallContent(el: _Element) {
+export function _decode_POPODecKeyChallContent(el: _Element): POPODecKeyChallContent {
   if (!_cached_decoder_for_POPODecKeyChallContent) {
     _cached_decoder_for_POPODecKeyChallContent = $._decodeSequenceOf<Challenge>(
       () => _decode_Challenge
@@ -61,7 +61,7 @@ let _cached_encoder_for_POPODecKeyChallContent: $.ASN1Encoder<POPODecKeyChallCon
 export function _encode_POPODecKeyChallContent(
   value: POPODecKeyChallContent,
   elGetter: $.ASN1Encoder<POPODecKeyChallContent>
-) {
+): _Element {
   if (!_cached_encoder_for_POPODecKeyChallContent) {
     _cached_encoder_for_POPODecKeyChallContent = $._encodeSequenceOf<Challenge>(
       () => _encode_Challenge,

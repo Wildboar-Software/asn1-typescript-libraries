@@ -35,7 +35,7 @@ let _cached_decoder_for_FirstRecipientField: $.ASN1Decoder<FirstRecipientField> 
  * @param {_Element} el The element being decoded.
  * @returns {FirstRecipientField} The decoded data structure.
  */
-export function _decode_FirstRecipientField(el: _Element) {
+export function _decode_FirstRecipientField(el: _Element): FirstRecipientField {
     if (!_cached_decoder_for_FirstRecipientField) {
         _cached_decoder_for_FirstRecipientField = _decode_ORName;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_FirstRecipientField: $.ASN1Encoder<FirstRecipientField> 
 export function _encode_FirstRecipientField(
     value: FirstRecipientField,
     elGetter: $.ASN1Encoder<FirstRecipientField>
-) {
+): _Element {
     if (!_cached_encoder_for_FirstRecipientField) {
         _cached_encoder_for_FirstRecipientField = _encode_ORName;
     }

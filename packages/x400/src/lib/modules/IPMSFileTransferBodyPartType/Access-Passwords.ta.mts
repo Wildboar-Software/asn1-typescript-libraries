@@ -226,7 +226,7 @@ let _cached_decoder_for_Access_Passwords: $.ASN1Decoder<Access_Passwords> | null
  * @param {_Element} el The element being decoded.
  * @returns {Access_Passwords} The decoded data structure.
  */
-export function _decode_Access_Passwords(el: _Element) {
+export function _decode_Access_Passwords(el: _Element): Access_Passwords {
     if (!_cached_decoder_for_Access_Passwords) {
         _cached_decoder_for_Access_Passwords = function (
             el: _Element
@@ -318,7 +318,7 @@ let _cached_encoder_for_Access_Passwords: $.ASN1Encoder<Access_Passwords> | null
 export function _encode_Access_Passwords(
     value: Access_Passwords,
     elGetter: $.ASN1Encoder<Access_Passwords>
-) {
+): _Element {
     if (!_cached_encoder_for_Access_Passwords) {
         _cached_encoder_for_Access_Passwords = function (
             value: Access_Passwords        ): _Element {

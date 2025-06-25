@@ -122,7 +122,7 @@ let _cached_decoder_for_Curve: $.ASN1Decoder<Curve> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Curve} The decoded data structure.
  */
-export function _decode_Curve(el: _Element) {
+export function _decode_Curve(el: _Element): Curve {
     if (!_cached_decoder_for_Curve) {
         _cached_decoder_for_Curve = function (el: _Element): Curve {
             let a!: FieldElement;
@@ -162,7 +162,7 @@ let _cached_encoder_for_Curve: $.ASN1Encoder<Curve> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Curve, encoded as an ASN.1 Element.
  */
-export function _encode_Curve(value: Curve, elGetter: $.ASN1Encoder<Curve>) {
+export function _encode_Curve(value: Curve, elGetter: $.ASN1Encoder<Curve>): _Element {
     if (!_cached_encoder_for_Curve) {
         _cached_encoder_for_Curve = function (
             value: Curve        ): _Element {

@@ -43,7 +43,7 @@ let _cached_decoder_for_WithSyntax: $.ASN1Decoder<WithSyntax> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {WithSyntax} The decoded data structure.
  */
-export function _decode_WithSyntax(el: _Element) {
+export function _decode_WithSyntax(el: _Element): WithSyntax {
     if (!_cached_decoder_for_WithSyntax) {
         _cached_decoder_for_WithSyntax = $._decode_inextensible_choice<WithSyntax>(
             {
@@ -69,7 +69,7 @@ let _cached_encoder_for_WithSyntax: $.ASN1Encoder<WithSyntax> | null = null;
 export function _encode_WithSyntax(
     value: WithSyntax,
     elGetter: $.ASN1Encoder<WithSyntax>
-) {
+): _Element {
     if (!_cached_encoder_for_WithSyntax) {
         _cached_encoder_for_WithSyntax = $._encode_choice<WithSyntax>(
             {

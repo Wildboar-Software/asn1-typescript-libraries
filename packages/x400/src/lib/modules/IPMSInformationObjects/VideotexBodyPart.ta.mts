@@ -119,7 +119,7 @@ let _cached_decoder_for_VideotexBodyPart: $.ASN1Decoder<VideotexBodyPart> | null
  * @param {_Element} el The element being decoded.
  * @returns {VideotexBodyPart} The decoded data structure.
  */
-export function _decode_VideotexBodyPart(el: _Element) {
+export function _decode_VideotexBodyPart(el: _Element): VideotexBodyPart {
     if (!_cached_decoder_for_VideotexBodyPart) {
         _cached_decoder_for_VideotexBodyPart = function (
             el: _Element
@@ -156,7 +156,7 @@ let _cached_encoder_for_VideotexBodyPart: $.ASN1Encoder<VideotexBodyPart> | null
 export function _encode_VideotexBodyPart(
     value: VideotexBodyPart,
     elGetter: $.ASN1Encoder<VideotexBodyPart>
-) {
+): _Element {
     if (!_cached_encoder_for_VideotexBodyPart) {
         _cached_encoder_for_VideotexBodyPart = function (
             value: VideotexBodyPart        ): _Element {

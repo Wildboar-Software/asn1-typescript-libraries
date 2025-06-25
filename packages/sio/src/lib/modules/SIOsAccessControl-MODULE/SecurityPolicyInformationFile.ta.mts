@@ -34,7 +34,7 @@ let _cached_decoder_for_SecurityPolicyInformationFile: $.ASN1Decoder<SecurityPol
  * @param {_Element} el The element being decoded.
  * @returns {SecurityPolicyInformationFile} The decoded data structure.
  */
-export function _decode_SecurityPolicyInformationFile(el: _Element) {
+export function _decode_SecurityPolicyInformationFile(el: _Element): SecurityPolicyInformationFile {
     if (!_cached_decoder_for_SecurityPolicyInformationFile) {
         _cached_decoder_for_SecurityPolicyInformationFile = _get_decoder_for_SIGNED<EncodedSPIF>(
             _decode_EncodedSPIF
@@ -57,7 +57,7 @@ let _cached_encoder_for_SecurityPolicyInformationFile: $.ASN1Encoder<SecurityPol
 export function _encode_SecurityPolicyInformationFile(
     value: SecurityPolicyInformationFile,
     elGetter: $.ASN1Encoder<SecurityPolicyInformationFile>
-) {
+): _Element {
     if (!_cached_encoder_for_SecurityPolicyInformationFile) {
         _cached_encoder_for_SecurityPolicyInformationFile = _get_encoder_for_SIGNED<EncodedSPIF>(
             _encode_EncodedSPIF

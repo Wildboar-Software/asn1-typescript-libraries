@@ -38,7 +38,7 @@ let _cached_decoder_for_SeverityIndicatingGaugeThreshold: $.ASN1Decoder<Severity
  * @param {_Element} el The element being decoded.
  * @returns {SeverityIndicatingGaugeThreshold} The decoded data structure.
  */
-export function _decode_SeverityIndicatingGaugeThreshold(el: _Element) {
+export function _decode_SeverityIndicatingGaugeThreshold(el: _Element): SeverityIndicatingGaugeThreshold {
     if (!_cached_decoder_for_SeverityIndicatingGaugeThreshold) {
         _cached_decoder_for_SeverityIndicatingGaugeThreshold = $._decodeSetOf<SeverityIndicatingGaugeThreshold_Item>(
             () => _decode_SeverityIndicatingGaugeThreshold_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_SeverityIndicatingGaugeThreshold: $.ASN1Encoder<Severity
 export function _encode_SeverityIndicatingGaugeThreshold(
     value: SeverityIndicatingGaugeThreshold,
     elGetter: $.ASN1Encoder<SeverityIndicatingGaugeThreshold>
-) {
+): _Element {
     if (!_cached_encoder_for_SeverityIndicatingGaugeThreshold) {
         _cached_encoder_for_SeverityIndicatingGaugeThreshold = $._encodeSetOf<SeverityIndicatingGaugeThreshold_Item>(
             () => _encode_SeverityIndicatingGaugeThreshold_Item,

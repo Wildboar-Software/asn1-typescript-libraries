@@ -36,7 +36,7 @@ let _cached_decoder_for_TCSingleAS: $.ASN1Decoder<TCSingleAS> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TCSingleAS} The decoded data structure.
  */
-export function _decode_TCSingleAS(el: _Element) {
+export function _decode_TCSingleAS(el: _Element): TCSingleAS {
     if (!_cached_decoder_for_TCSingleAS) {
         _cached_decoder_for_TCSingleAS = _decode_TCMessage;
     }
@@ -55,7 +55,7 @@ let _cached_encoder_for_TCSingleAS: $.ASN1Encoder<TCSingleAS> | null = null;
 export function _encode_TCSingleAS(
     value: TCSingleAS,
     elGetter: $.ASN1Encoder<TCSingleAS>
-) {
+): _Element {
     if (!_cached_encoder_for_TCSingleAS) {
         _cached_encoder_for_TCSingleAS = _encode_TCMessage;
     }

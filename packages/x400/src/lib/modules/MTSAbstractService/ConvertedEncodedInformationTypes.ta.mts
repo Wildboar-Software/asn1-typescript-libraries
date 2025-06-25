@@ -35,7 +35,7 @@ let _cached_decoder_for_ConvertedEncodedInformationTypes: $.ASN1Decoder<Converte
  * @param {_Element} el The element being decoded.
  * @returns {ConvertedEncodedInformationTypes} The decoded data structure.
  */
-export function _decode_ConvertedEncodedInformationTypes(el: _Element) {
+export function _decode_ConvertedEncodedInformationTypes(el: _Element): ConvertedEncodedInformationTypes {
     if (!_cached_decoder_for_ConvertedEncodedInformationTypes) {
         _cached_decoder_for_ConvertedEncodedInformationTypes = _decode_EncodedInformationTypes;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ConvertedEncodedInformationTypes: $.ASN1Encoder<Converte
 export function _encode_ConvertedEncodedInformationTypes(
     value: ConvertedEncodedInformationTypes,
     elGetter: $.ASN1Encoder<ConvertedEncodedInformationTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertedEncodedInformationTypes) {
         _cached_encoder_for_ConvertedEncodedInformationTypes = _encode_EncodedInformationTypes;
     }

@@ -47,7 +47,7 @@ let _cached_decoder_for_Representation: $.ASN1Decoder<Representation> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Representation} The decoded data structure.
  */
-export function _decode_Representation(el: _Element) {
+export function _decode_Representation(el: _Element): Representation {
     if (!_cached_decoder_for_Representation) {
         _cached_decoder_for_Representation = $._decode_inextensible_choice<Representation>(
             {
@@ -94,7 +94,7 @@ let _cached_encoder_for_Representation: $.ASN1Encoder<Representation> | null = n
 export function _encode_Representation(
     value: Representation,
     elGetter: $.ASN1Encoder<Representation>
-) {
+): _Element {
     if (!_cached_encoder_for_Representation) {
         _cached_encoder_for_Representation = $._encode_choice<Representation>(
             {

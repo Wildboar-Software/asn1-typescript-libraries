@@ -141,7 +141,7 @@ let _cached_decoder_for_ErrorMsgContent: $.ASN1Decoder<ErrorMsgContent> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ErrorMsgContent} The decoded data structure.
  */
-export function _decode_ErrorMsgContent(el: _Element) {
+export function _decode_ErrorMsgContent(el: _Element): ErrorMsgContent {
   if (!_cached_decoder_for_ErrorMsgContent) {
     _cached_decoder_for_ErrorMsgContent = function (
       el: _Element
@@ -192,7 +192,7 @@ let _cached_encoder_for_ErrorMsgContent: $.ASN1Encoder<ErrorMsgContent> | null =
 export function _encode_ErrorMsgContent(
   value: ErrorMsgContent,
   elGetter: $.ASN1Encoder<ErrorMsgContent>
-) {
+): _Element {
   if (!_cached_encoder_for_ErrorMsgContent) {
     _cached_encoder_for_ErrorMsgContent = function (
       value: ErrorMsgContent    ): _Element {

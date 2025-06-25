@@ -113,7 +113,7 @@ let _cached_decoder_for_URL_urlWithDigest: $.ASN1Decoder<URL_urlWithDigest> | nu
  * @param {_Element} el The element being decoded.
  * @returns {URL_urlWithDigest} The decoded data structure.
  */
-export function _decode_URL_urlWithDigest(el: _Element) {
+export function _decode_URL_urlWithDigest(el: _Element): URL_urlWithDigest {
     if (!_cached_decoder_for_URL_urlWithDigest) {
         _cached_decoder_for_URL_urlWithDigest = function (
             el: _Element
@@ -152,7 +152,7 @@ let _cached_encoder_for_URL_urlWithDigest: $.ASN1Encoder<URL_urlWithDigest> | nu
 export function _encode_URL_urlWithDigest(
     value: URL_urlWithDigest,
     elGetter: $.ASN1Encoder<URL_urlWithDigest>
-) {
+): _Element {
     if (!_cached_encoder_for_URL_urlWithDigest) {
         _cached_encoder_for_URL_urlWithDigest = function (
             value: URL_urlWithDigest        ): _Element {

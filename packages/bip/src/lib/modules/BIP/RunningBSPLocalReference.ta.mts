@@ -173,7 +173,7 @@ let _cached_decoder_for_RunningBSPLocalReference: $.ASN1Decoder<RunningBSPLocalR
  * @param {_Element} el The element being decoded.
  * @returns {RunningBSPLocalReference} The decoded data structure.
  */
-export function _decode_RunningBSPLocalReference(el: _Element) {
+export function _decode_RunningBSPLocalReference(el: _Element): RunningBSPLocalReference {
   if (!_cached_decoder_for_RunningBSPLocalReference) {
     _cached_decoder_for_RunningBSPLocalReference = function (
       el: _Element
@@ -227,7 +227,7 @@ let _cached_encoder_for_RunningBSPLocalReference: $.ASN1Encoder<RunningBSPLocalR
 export function _encode_RunningBSPLocalReference(
   value: RunningBSPLocalReference,
   elGetter: $.ASN1Encoder<RunningBSPLocalReference>
-) {
+): _Element {
   if (!_cached_encoder_for_RunningBSPLocalReference) {
     _cached_encoder_for_RunningBSPLocalReference = function (
       value: RunningBSPLocalReference    ): _Element {

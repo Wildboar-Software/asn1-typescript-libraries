@@ -122,7 +122,7 @@ let _cached_decoder_for_MessageGroupNameAndDescriptor: $.ASN1Decoder<MessageGrou
  * @param {_Element} el The element being decoded.
  * @returns {MessageGroupNameAndDescriptor} The decoded data structure.
  */
-export function _decode_MessageGroupNameAndDescriptor(el: _Element) {
+export function _decode_MessageGroupNameAndDescriptor(el: _Element): MessageGroupNameAndDescriptor {
     if (!_cached_decoder_for_MessageGroupNameAndDescriptor) {
         _cached_decoder_for_MessageGroupNameAndDescriptor = function (
             el: _Element
@@ -172,7 +172,7 @@ let _cached_encoder_for_MessageGroupNameAndDescriptor: $.ASN1Encoder<MessageGrou
 export function _encode_MessageGroupNameAndDescriptor(
     value: MessageGroupNameAndDescriptor,
     elGetter: $.ASN1Encoder<MessageGroupNameAndDescriptor>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageGroupNameAndDescriptor) {
         _cached_encoder_for_MessageGroupNameAndDescriptor = function (
             value: MessageGroupNameAndDescriptor        ): _Element {

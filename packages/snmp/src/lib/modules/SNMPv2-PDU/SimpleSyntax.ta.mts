@@ -44,7 +44,7 @@ let _cached_decoder_for_SimpleSyntax: $.ASN1Decoder<SimpleSyntax> | null = null;
  * @returns {SimpleSyntax} The decoded data structure.
  */
 export
-function _decode_SimpleSyntax (el: _Element) {
+function _decode_SimpleSyntax (el: _Element): SimpleSyntax {
     if (!_cached_decoder_for_SimpleSyntax) { _cached_decoder_for_SimpleSyntax = $._decode_inextensible_choice<SimpleSyntax>({
     "UNIVERSAL 2": [ "integer_value", $._decodeInteger ],
     "UNIVERSAL 4": [ "string_value", $._decodeOctetString ],
@@ -63,7 +63,7 @@ let _cached_encoder_for_SimpleSyntax: $.ASN1Encoder<SimpleSyntax> | null = null;
  * @returns {_Element} The SimpleSyntax, encoded as an ASN.1 Element.
  */
 export
-function _encode_SimpleSyntax (value: SimpleSyntax, elGetter: $.ASN1Encoder<SimpleSyntax>) {
+function _encode_SimpleSyntax (value: SimpleSyntax, elGetter: $.ASN1Encoder<SimpleSyntax>): _Element {
     if (!_cached_encoder_for_SimpleSyntax) { _cached_encoder_for_SimpleSyntax = $._encode_choice<SimpleSyntax>({
     "integer_value": $._encodeInteger,
     "string_value": $._encodeOctetString,

@@ -113,7 +113,7 @@ let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<D
  * @param {_Element} el The element being decoded.
  * @returns {DLPolicy_disclosure_of_other_recipients} The decoded data structure.
  */
-export function _decode_DLPolicy_disclosure_of_other_recipients(el: _Element) {
+export function _decode_DLPolicy_disclosure_of_other_recipients(el: _Element): DLPolicy_disclosure_of_other_recipients {
     if (!_cached_decoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_decoder_for_DLPolicy_disclosure_of_other_recipients =
             $._decodeEnumerated;
@@ -133,7 +133,7 @@ let _cached_encoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Encoder<D
 export function _encode_DLPolicy_disclosure_of_other_recipients(
     value: DLPolicy_disclosure_of_other_recipients,
     elGetter: $.ASN1Encoder<DLPolicy_disclosure_of_other_recipients>
-) {
+): _Element {
     if (!_cached_encoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_encoder_for_DLPolicy_disclosure_of_other_recipients =
             $._encodeEnumerated;

@@ -168,7 +168,7 @@ let _cached_decoder_for_Invoke: $.ASN1Decoder<Invoke> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Invoke} The decoded data structure.
  */
-export function _decode_Invoke(el: _Element) {
+export function _decode_Invoke(el: _Element): Invoke {
   if (!_cached_decoder_for_Invoke) {
     _cached_decoder_for_Invoke = function (el: _Element): Invoke {
       let invokeId!: InvokeId;
@@ -219,7 +219,7 @@ let _cached_encoder_for_Invoke: $.ASN1Encoder<Invoke> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Invoke, encoded as an ASN.1 Element.
  */
-export function _encode_Invoke(value: Invoke, elGetter: $.ASN1Encoder<Invoke>) {
+export function _encode_Invoke(value: Invoke, elGetter: $.ASN1Encoder<Invoke>): _Element {
   if (!_cached_encoder_for_Invoke) {
     _cached_encoder_for_Invoke = function (
       value: Invoke    ): _Element {

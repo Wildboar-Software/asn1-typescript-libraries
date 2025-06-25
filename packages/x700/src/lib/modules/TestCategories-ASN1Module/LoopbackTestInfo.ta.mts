@@ -195,7 +195,7 @@ let _cached_decoder_for_LoopbackTestInfo: $.ASN1Decoder<LoopbackTestInfo> | null
  * @param {_Element} el The element being decoded.
  * @returns {LoopbackTestInfo} The decoded data structure.
  */
-export function _decode_LoopbackTestInfo(el: _Element) {
+export function _decode_LoopbackTestInfo(el: _Element): LoopbackTestInfo {
     if (!_cached_decoder_for_LoopbackTestInfo) {
         _cached_decoder_for_LoopbackTestInfo = function (
             el: _Element
@@ -270,7 +270,7 @@ let _cached_encoder_for_LoopbackTestInfo: $.ASN1Encoder<LoopbackTestInfo> | null
 export function _encode_LoopbackTestInfo(
     value: LoopbackTestInfo,
     elGetter: $.ASN1Encoder<LoopbackTestInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_LoopbackTestInfo) {
         _cached_encoder_for_LoopbackTestInfo = function (
             value: LoopbackTestInfo        ): _Element {

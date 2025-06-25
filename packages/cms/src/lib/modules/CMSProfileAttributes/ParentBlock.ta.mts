@@ -29,7 +29,7 @@ let _cached_decoder_for_ParentBlock: $.ASN1Decoder<ParentBlock> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ParentBlock} The decoded data structure.
  */
-export function _decode_ParentBlock(el: _Element) {
+export function _decode_ParentBlock(el: _Element): ParentBlock {
     if (!_cached_decoder_for_ParentBlock) {
         _cached_decoder_for_ParentBlock = _decode_HashPointer;
     }
@@ -50,7 +50,7 @@ let _cached_encoder_for_ParentBlock: $.ASN1Encoder<ParentBlock> | null = null;
 export function _encode_ParentBlock(
     value: ParentBlock,
     elGetter: $.ASN1Encoder<ParentBlock>
-) {
+): _Element {
     if (!_cached_encoder_for_ParentBlock) {
         _cached_encoder_for_ParentBlock = _encode_HashPointer;
     }

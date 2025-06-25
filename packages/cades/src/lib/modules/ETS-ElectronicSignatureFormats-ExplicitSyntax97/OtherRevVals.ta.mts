@@ -110,7 +110,7 @@ let _cached_decoder_for_OtherRevVals: $.ASN1Decoder<OtherRevVals> | null = null;
  * @returns {OtherRevVals} The decoded data structure.
  */
 export
-function _decode_OtherRevVals (el: _Element) {
+function _decode_OtherRevVals (el: _Element): OtherRevVals {
     if (!_cached_decoder_for_OtherRevVals) { _cached_decoder_for_OtherRevVals = function (el: _Element): OtherRevVals {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -141,7 +141,7 @@ let _cached_encoder_for_OtherRevVals: $.ASN1Encoder<OtherRevVals> | null = null;
  * @returns {_Element} The OtherRevVals, encoded as an ASN.1 Element.
  */
 export
-function _encode_OtherRevVals (value: OtherRevVals, elGetter: $.ASN1Encoder<OtherRevVals>) {
+function _encode_OtherRevVals (value: OtherRevVals, elGetter: $.ASN1Encoder<OtherRevVals>): _Element {
     if (!_cached_encoder_for_OtherRevVals) { _cached_encoder_for_OtherRevVals = function (value: OtherRevVals): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

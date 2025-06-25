@@ -177,7 +177,7 @@ let _cached_decoder_for_CommonFields: $.ASN1Decoder<CommonFields> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {CommonFields} The decoded data structure.
  */
-export function _decode_CommonFields(el: _Element) {
+export function _decode_CommonFields(el: _Element): CommonFields {
     if (!_cached_decoder_for_CommonFields) {
         _cached_decoder_for_CommonFields = function (
             el: _Element
@@ -244,7 +244,7 @@ let _cached_encoder_for_CommonFields: $.ASN1Encoder<CommonFields> | null = null;
 export function _encode_CommonFields(
     value: CommonFields,
     elGetter: $.ASN1Encoder<CommonFields>
-) {
+): _Element {
     if (!_cached_encoder_for_CommonFields) {
         _cached_encoder_for_CommonFields = function (
             value: CommonFields        ): _Element {

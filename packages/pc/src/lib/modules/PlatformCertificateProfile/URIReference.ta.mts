@@ -121,7 +121,7 @@ let _cached_decoder_for_URIReference: $.ASN1Decoder<URIReference> | null = null;
  * @returns {URIReference} The decoded data structure.
  */
 export
-function _decode_URIReference (el: _Element) {
+function _decode_URIReference (el: _Element): URIReference {
     if (!_cached_decoder_for_URIReference) { _cached_decoder_for_URIReference = function (el: _Element): URIReference {
     let uniformResourceIdentifier!: IA5String;
     let hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
@@ -156,7 +156,7 @@ let _cached_encoder_for_URIReference: $.ASN1Encoder<URIReference> | null = null;
  * @returns {_Element} The URIReference, encoded as an ASN.1 Element.
  */
 export
-function _encode_URIReference (value: URIReference, elGetter: $.ASN1Encoder<URIReference>) {
+function _encode_URIReference (value: URIReference, elGetter: $.ASN1Encoder<URIReference>): _Element {
     if (!_cached_encoder_for_URIReference) { _cached_encoder_for_URIReference = function (value: URIReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

@@ -38,7 +38,7 @@ let _cached_decoder_for_GraphicString128: $.ASN1Decoder<GraphicString128> | null
  * @param {_Element} el The element being decoded.
  * @returns {GraphicString128} The decoded data structure.
  */
-export function _decode_GraphicString128(el: _Element) {
+export function _decode_GraphicString128(el: _Element): GraphicString128 {
     if (!_cached_decoder_for_GraphicString128) {
         _cached_decoder_for_GraphicString128 = _decode_GraphicStringBase;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_GraphicString128: $.ASN1Encoder<GraphicString128> | null
 export function _encode_GraphicString128(
     value: GraphicString128,
     elGetter: $.ASN1Encoder<GraphicString128>
-) {
+): _Element {
     if (!_cached_encoder_for_GraphicString128) {
         _cached_encoder_for_GraphicString128 = _encode_GraphicStringBase;
     }

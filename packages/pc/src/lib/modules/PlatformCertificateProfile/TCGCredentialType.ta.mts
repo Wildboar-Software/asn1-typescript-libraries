@@ -102,7 +102,7 @@ let _cached_decoder_for_TCGCredentialType: $.ASN1Decoder<TCGCredentialType> | nu
  * @returns {TCGCredentialType} The decoded data structure.
  */
 export
-function _decode_TCGCredentialType (el: _Element) {
+function _decode_TCGCredentialType (el: _Element): TCGCredentialType {
     if (!_cached_decoder_for_TCGCredentialType) { _cached_decoder_for_TCGCredentialType = function (el: _Element): TCGCredentialType {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 1) {
@@ -129,7 +129,7 @@ let _cached_encoder_for_TCGCredentialType: $.ASN1Encoder<TCGCredentialType> | nu
  * @returns {_Element} The TCGCredentialType, encoded as an ASN.1 Element.
  */
 export
-function _encode_TCGCredentialType (value: TCGCredentialType, elGetter: $.ASN1Encoder<TCGCredentialType>) {
+function _encode_TCGCredentialType (value: TCGCredentialType, elGetter: $.ASN1Encoder<TCGCredentialType>): _Element {
     if (!_cached_encoder_for_TCGCredentialType) { _cached_encoder_for_TCGCredentialType = function (value: TCGCredentialType): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

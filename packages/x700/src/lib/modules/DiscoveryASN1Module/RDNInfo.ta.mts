@@ -120,7 +120,7 @@ let _cached_decoder_for_RDNInfo: $.ASN1Decoder<RDNInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RDNInfo} The decoded data structure.
  */
-export function _decode_RDNInfo(el: _Element) {
+export function _decode_RDNInfo(el: _Element): RDNInfo {
     if (!_cached_decoder_for_RDNInfo) {
         _cached_decoder_for_RDNInfo = function (el: _Element): RDNInfo {
             let rdn!: RelativeDistinguishedName;
@@ -159,7 +159,7 @@ let _cached_encoder_for_RDNInfo: $.ASN1Encoder<RDNInfo> | null = null;
 export function _encode_RDNInfo(
     value: RDNInfo,
     elGetter: $.ASN1Encoder<RDNInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RDNInfo) {
         _cached_encoder_for_RDNInfo = function (
             value: RDNInfo        ): _Element {

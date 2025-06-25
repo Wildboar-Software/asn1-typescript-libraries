@@ -122,7 +122,7 @@ let _cached_decoder_for_RenewCnfMsgContent: $.ASN1Decoder<RenewCnfMsgContent> | 
  * @returns {RenewCnfMsgContent} The decoded data structure.
  */
 export
-function _decode_RenewCnfMsgContent (el: _Element) {
+function _decode_RenewCnfMsgContent (el: _Element): RenewCnfMsgContent {
     if (!_cached_decoder_for_RenewCnfMsgContent) { _cached_decoder_for_RenewCnfMsgContent = function (el: _Element): RenewCnfMsgContent {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -155,7 +155,7 @@ let _cached_encoder_for_RenewCnfMsgContent: $.ASN1Encoder<RenewCnfMsgContent> | 
  * @returns {_Element} The RenewCnfMsgContent, encoded as an ASN.1 Element.
  */
 export
-function _encode_RenewCnfMsgContent (value: RenewCnfMsgContent, elGetter: $.ASN1Encoder<RenewCnfMsgContent>) {
+function _encode_RenewCnfMsgContent (value: RenewCnfMsgContent, elGetter: $.ASN1Encoder<RenewCnfMsgContent>): _Element {
     if (!_cached_encoder_for_RenewCnfMsgContent) { _cached_encoder_for_RenewCnfMsgContent = function (value: RenewCnfMsgContent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

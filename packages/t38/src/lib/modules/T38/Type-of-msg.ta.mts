@@ -61,7 +61,7 @@ let _cached_decoder_for_Type_of_msg: $.ASN1Decoder<Type_of_msg> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Type_of_msg} The decoded data structure.
  */
-export function _decode_Type_of_msg(el: _Element) {
+export function _decode_Type_of_msg(el: _Element): Type_of_msg {
   if (!_cached_decoder_for_Type_of_msg) {
     _cached_decoder_for_Type_of_msg = $._decode_inextensible_choice<Type_of_msg>(
       {
@@ -87,7 +87,7 @@ let _cached_encoder_for_Type_of_msg: $.ASN1Encoder<Type_of_msg> | null = null;
 export function _encode_Type_of_msg(
   value: Type_of_msg,
   elGetter: $.ASN1Encoder<Type_of_msg>
-) {
+): _Element {
   if (!_cached_encoder_for_Type_of_msg) {
     _cached_encoder_for_Type_of_msg = $._encode_choice<Type_of_msg>(
       {

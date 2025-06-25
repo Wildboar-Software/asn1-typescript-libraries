@@ -42,7 +42,7 @@ let _cached_decoder_for_GeneralError: $.ASN1Decoder<GeneralError> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GeneralError} The decoded data structure.
  */
-export function _decode_GeneralError(el: _Element) {
+export function _decode_GeneralError(el: _Element): GeneralError {
     if (!_cached_decoder_for_GeneralError) {
         _cached_decoder_for_GeneralError = $._decodeSequenceOf<GeneralError_Item>(
             () => _decode_GeneralError_Item
@@ -65,7 +65,7 @@ let _cached_encoder_for_GeneralError: $.ASN1Encoder<GeneralError> | null = null;
 export function _encode_GeneralError(
     value: GeneralError,
     elGetter: $.ASN1Encoder<GeneralError>
-) {
+): _Element {
     if (!_cached_encoder_for_GeneralError) {
         _cached_encoder_for_GeneralError = $._encodeSequenceOf<GeneralError_Item>(
             () => _encode_GeneralError_Item,

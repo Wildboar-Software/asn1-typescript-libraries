@@ -111,7 +111,7 @@ let _cached_decoder_for_ConvertPtoPToMulticastReply_Item_success: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {ConvertPtoPToMulticastReply_Item_success} The decoded data structure.
  */
-export function _decode_ConvertPtoPToMulticastReply_Item_success(el: _Element) {
+export function _decode_ConvertPtoPToMulticastReply_Item_success(el: _Element): ConvertPtoPToMulticastReply_Item_success {
     if (!_cached_decoder_for_ConvertPtoPToMulticastReply_Item_success) {
         _cached_decoder_for_ConvertPtoPToMulticastReply_Item_success = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_ConvertPtoPToMulticastReply_Item_success: $.ASN1Encoder<
 export function _encode_ConvertPtoPToMulticastReply_Item_success(
     value: ConvertPtoPToMulticastReply_Item_success,
     elGetter: $.ASN1Encoder<ConvertPtoPToMulticastReply_Item_success>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertPtoPToMulticastReply_Item_success) {
         _cached_encoder_for_ConvertPtoPToMulticastReply_Item_success = function (
             value: ConvertPtoPToMulticastReply_Item_success        ): _Element {

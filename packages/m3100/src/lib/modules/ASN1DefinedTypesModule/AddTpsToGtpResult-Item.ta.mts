@@ -45,7 +45,7 @@ let _cached_decoder_for_AddTpsToGtpResult_Item: $.ASN1Decoder<AddTpsToGtpResult_
  * @param {_Element} el The element being decoded.
  * @returns {AddTpsToGtpResult_Item} The decoded data structure.
  */
-export function _decode_AddTpsToGtpResult_Item(el: _Element) {
+export function _decode_AddTpsToGtpResult_Item(el: _Element): AddTpsToGtpResult_Item {
     if (!_cached_decoder_for_AddTpsToGtpResult_Item) {
         _cached_decoder_for_AddTpsToGtpResult_Item = $._decode_inextensible_choice<AddTpsToGtpResult_Item>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_AddTpsToGtpResult_Item: $.ASN1Encoder<AddTpsToGtpResult_
 export function _encode_AddTpsToGtpResult_Item(
     value: AddTpsToGtpResult_Item,
     elGetter: $.ASN1Encoder<AddTpsToGtpResult_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_AddTpsToGtpResult_Item) {
         _cached_encoder_for_AddTpsToGtpResult_Item = $._encode_choice<AddTpsToGtpResult_Item>(
             {

@@ -128,7 +128,7 @@ let _cached_decoder_for_KEKIdentifier: $.ASN1Decoder<KEKIdentifier> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {KEKIdentifier} The decoded data structure.
  */
-export function _decode_KEKIdentifier(el: _Element) {
+export function _decode_KEKIdentifier(el: _Element): KEKIdentifier {
     if (!_cached_decoder_for_KEKIdentifier) {
         _cached_decoder_for_KEKIdentifier = function (
             el: _Element
@@ -179,7 +179,7 @@ let _cached_encoder_for_KEKIdentifier: $.ASN1Encoder<KEKIdentifier> | null = nul
 export function _encode_KEKIdentifier(
     value: KEKIdentifier,
     elGetter: $.ASN1Encoder<KEKIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_KEKIdentifier) {
         _cached_encoder_for_KEKIdentifier = function (
             value: KEKIdentifier        ): _Element {

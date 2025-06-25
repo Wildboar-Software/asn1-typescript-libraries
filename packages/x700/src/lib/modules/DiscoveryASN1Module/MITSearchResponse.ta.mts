@@ -35,7 +35,7 @@ let _cached_decoder_for_MITSearchResponse: $.ASN1Decoder<MITSearchResponse> | nu
  * @param {_Element} el The element being decoded.
  * @returns {MITSearchResponse} The decoded data structure.
  */
-export function _decode_MITSearchResponse(el: _Element) {
+export function _decode_MITSearchResponse(el: _Element): MITSearchResponse {
     if (!_cached_decoder_for_MITSearchResponse) {
         _cached_decoder_for_MITSearchResponse = $._decodeSetOf<RootedNameTree>(
             () => _decode_RootedNameTree
@@ -56,7 +56,7 @@ let _cached_encoder_for_MITSearchResponse: $.ASN1Encoder<MITSearchResponse> | nu
 export function _encode_MITSearchResponse(
     value: MITSearchResponse,
     elGetter: $.ASN1Encoder<MITSearchResponse>
-) {
+): _Element {
     if (!_cached_encoder_for_MITSearchResponse) {
         _cached_encoder_for_MITSearchResponse = $._encodeSetOf<RootedNameTree>(
             () => _encode_RootedNameTree,

@@ -189,7 +189,7 @@ let _cached_decoder_for_PKIBody: $.ASN1Decoder<PKIBody> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKIBody} The decoded data structure.
  */
-export function _decode_PKIBody(el: _Element) {
+export function _decode_PKIBody(el: _Element): PKIBody {
   if (!_cached_decoder_for_PKIBody) {
     _cached_decoder_for_PKIBody = $._decode_inextensible_choice<PKIBody>({
       'CONTEXT 0': [
@@ -331,7 +331,7 @@ let _cached_encoder_for_PKIBody: $.ASN1Encoder<PKIBody> | null = null;
 export function _encode_PKIBody(
   value: PKIBody,
   elGetter: $.ASN1Encoder<PKIBody>
-) {
+): _Element {
   if (!_cached_encoder_for_PKIBody) {
     _cached_encoder_for_PKIBody = $._encode_choice<PKIBody>(
       {

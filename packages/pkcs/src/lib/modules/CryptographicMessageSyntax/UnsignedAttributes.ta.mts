@@ -29,7 +29,7 @@ let _cached_decoder_for_UnsignedAttributes: $.ASN1Decoder<UnsignedAttributes> | 
  * @param {_Element} el The element being decoded.
  * @returns {UnsignedAttributes} The decoded data structure.
  */
-export function _decode_UnsignedAttributes(el: _Element) {
+export function _decode_UnsignedAttributes(el: _Element): UnsignedAttributes {
     if (!_cached_decoder_for_UnsignedAttributes) {
         _cached_decoder_for_UnsignedAttributes = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -52,7 +52,7 @@ let _cached_encoder_for_UnsignedAttributes: $.ASN1Encoder<UnsignedAttributes> | 
 export function _encode_UnsignedAttributes(
     value: UnsignedAttributes,
     elGetter: $.ASN1Encoder<UnsignedAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_UnsignedAttributes) {
         _cached_encoder_for_UnsignedAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

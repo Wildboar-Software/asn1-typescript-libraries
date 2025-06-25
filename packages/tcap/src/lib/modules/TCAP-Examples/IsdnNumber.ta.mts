@@ -128,7 +128,7 @@ let _cached_decoder_for_IsdnNumber: $.ASN1Decoder<IsdnNumber> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IsdnNumber} The decoded data structure.
  */
-export function _decode_IsdnNumber(el: _Element) {
+export function _decode_IsdnNumber(el: _Element): IsdnNumber {
     if (!_cached_decoder_for_IsdnNumber) {
         _cached_decoder_for_IsdnNumber = function (el: _Element): IsdnNumber {
             const sequence: _Element[] = el.sequence;
@@ -163,7 +163,7 @@ let _cached_encoder_for_IsdnNumber: $.ASN1Encoder<IsdnNumber> | null = null;
 export function _encode_IsdnNumber(
     value: IsdnNumber,
     elGetter: $.ASN1Encoder<IsdnNumber>
-) {
+): _Element {
     if (!_cached_encoder_for_IsdnNumber) {
         _cached_encoder_for_IsdnNumber = function (
             value: IsdnNumber        ): _Element {

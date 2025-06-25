@@ -35,7 +35,7 @@ let _cached_decoder_for_SoftwareProcessingFailure: $.ASN1Decoder<SoftwareProcess
  * @param {_Element} el The element being decoded.
  * @returns {SoftwareProcessingFailure} The decoded data structure.
  */
-export function _decode_SoftwareProcessingFailure(el: _Element) {
+export function _decode_SoftwareProcessingFailure(el: _Element): SoftwareProcessingFailure {
     if (!_cached_decoder_for_SoftwareProcessingFailure) {
         _cached_decoder_for_SoftwareProcessingFailure = $._decodeSetOf<Attribute>(
             () => _decode_Attribute
@@ -56,7 +56,7 @@ let _cached_encoder_for_SoftwareProcessingFailure: $.ASN1Encoder<SoftwareProcess
 export function _encode_SoftwareProcessingFailure(
     value: SoftwareProcessingFailure,
     elGetter: $.ASN1Encoder<SoftwareProcessingFailure>
-) {
+): _Element {
     if (!_cached_encoder_for_SoftwareProcessingFailure) {
         _cached_encoder_for_SoftwareProcessingFailure = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,

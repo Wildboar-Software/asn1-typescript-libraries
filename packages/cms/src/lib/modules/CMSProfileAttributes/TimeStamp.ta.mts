@@ -37,7 +37,7 @@ let _cached_decoder_for_TimeStamp: $.ASN1Decoder<TimeStamp> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TimeStamp} The decoded data structure.
  */
-export function _decode_TimeStamp(el: _Element) {
+export function _decode_TimeStamp(el: _Element): TimeStamp {
     if (!_cached_decoder_for_TimeStamp) {
         _cached_decoder_for_TimeStamp = $._decode_extensible_choice<TimeStamp>({
             "CONTEXT 0": ["timeStampToken", _decode_TimeStampToken],
@@ -61,7 +61,7 @@ let _cached_encoder_for_TimeStamp: $.ASN1Encoder<TimeStamp> | null = null;
 export function _encode_TimeStamp(
     value: TimeStamp,
     elGetter: $.ASN1Encoder<TimeStamp>
-) {
+): _Element {
     if (!_cached_encoder_for_TimeStamp) {
         _cached_encoder_for_TimeStamp = $._encode_choice<TimeStamp>(
             {

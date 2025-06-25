@@ -112,7 +112,7 @@ let _cached_decoder_for_TypeOfDaysMaskWps_Item: $.ASN1Decoder<TypeOfDaysMaskWps_
  * @param {_Element} el The element being decoded.
  * @returns {TypeOfDaysMaskWps_Item} The decoded data structure.
  */
-export function _decode_TypeOfDaysMaskWps_Item(el: _Element) {
+export function _decode_TypeOfDaysMaskWps_Item(el: _Element): TypeOfDaysMaskWps_Item {
     if (!_cached_decoder_for_TypeOfDaysMaskWps_Item) {
         _cached_decoder_for_TypeOfDaysMaskWps_Item = function (
             el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_TypeOfDaysMaskWps_Item: $.ASN1Encoder<TypeOfDaysMaskWps_
 export function _encode_TypeOfDaysMaskWps_Item(
     value: TypeOfDaysMaskWps_Item,
     elGetter: $.ASN1Encoder<TypeOfDaysMaskWps_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_TypeOfDaysMaskWps_Item) {
         _cached_encoder_for_TypeOfDaysMaskWps_Item = function (
             value: TypeOfDaysMaskWps_Item        ): _Element {

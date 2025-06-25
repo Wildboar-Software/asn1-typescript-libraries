@@ -35,7 +35,7 @@ let _cached_decoder_for_ExtendedSubject: $.ASN1Decoder<ExtendedSubject> | null =
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedSubject} The decoded data structure.
  */
-export function _decode_ExtendedSubject(el: _Element) {
+export function _decode_ExtendedSubject(el: _Element): ExtendedSubject {
     if (!_cached_decoder_for_ExtendedSubject) {
         _cached_decoder_for_ExtendedSubject = _decode_UniversalOrBMPString;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ExtendedSubject: $.ASN1Encoder<ExtendedSubject> | null =
 export function _encode_ExtendedSubject(
     value: ExtendedSubject,
     elGetter: $.ASN1Encoder<ExtendedSubject>
-) {
+): _Element {
     if (!_cached_encoder_for_ExtendedSubject) {
         _cached_encoder_for_ExtendedSubject = _encode_UniversalOrBMPString;
     }

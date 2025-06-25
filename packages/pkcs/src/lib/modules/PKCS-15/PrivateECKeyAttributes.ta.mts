@@ -135,7 +135,7 @@ let _cached_decoder_for_PrivateECKeyAttributes: $.ASN1Decoder<PrivateECKeyAttrib
  * @param {_Element} el The element being decoded.
  * @returns {PrivateECKeyAttributes} The decoded data structure.
  */
-export function _decode_PrivateECKeyAttributes(el: _Element) {
+export function _decode_PrivateECKeyAttributes(el: _Element): PrivateECKeyAttributes {
     if (!_cached_decoder_for_PrivateECKeyAttributes) {
         _cached_decoder_for_PrivateECKeyAttributes = function (
             el: _Element
@@ -193,7 +193,7 @@ let _cached_encoder_for_PrivateECKeyAttributes: $.ASN1Encoder<PrivateECKeyAttrib
 export function _encode_PrivateECKeyAttributes(
     value: PrivateECKeyAttributes,
     elGetter: $.ASN1Encoder<PrivateECKeyAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_PrivateECKeyAttributes) {
         _cached_encoder_for_PrivateECKeyAttributes = function (
             value: PrivateECKeyAttributes        ): _Element {

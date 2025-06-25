@@ -102,7 +102,7 @@ let _cached_decoder_for_OcspListID: $.ASN1Decoder<OcspListID> | null = null;
  * @returns {OcspListID} The decoded data structure.
  */
 export
-function _decode_OcspListID (el: _Element) {
+function _decode_OcspListID (el: _Element): OcspListID {
     if (!_cached_decoder_for_OcspListID) { _cached_decoder_for_OcspListID = function (el: _Element): OcspListID {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 1) {
@@ -129,7 +129,7 @@ let _cached_encoder_for_OcspListID: $.ASN1Encoder<OcspListID> | null = null;
  * @returns {_Element} The OcspListID, encoded as an ASN.1 Element.
  */
 export
-function _encode_OcspListID (value: OcspListID, elGetter: $.ASN1Encoder<OcspListID>) {
+function _encode_OcspListID (value: OcspListID, elGetter: $.ASN1Encoder<OcspListID>): _Element {
     if (!_cached_encoder_for_OcspListID) { _cached_encoder_for_OcspListID = function (value: OcspListID): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

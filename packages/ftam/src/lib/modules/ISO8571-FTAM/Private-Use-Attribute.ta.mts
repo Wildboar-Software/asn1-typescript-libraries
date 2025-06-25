@@ -46,7 +46,7 @@ let _cached_decoder_for_Private_Use_Attribute: $.ASN1Decoder<Private_Use_Attribu
  * @param {_Element} el The element being decoded.
  * @returns {Private_Use_Attribute} The decoded data structure.
  */
-export function _decode_Private_Use_Attribute(el: _Element) {
+export function _decode_Private_Use_Attribute(el: _Element): Private_Use_Attribute {
   if (!_cached_decoder_for_Private_Use_Attribute) {
     _cached_decoder_for_Private_Use_Attribute = $._decode_inextensible_choice<Private_Use_Attribute>(
       {
@@ -82,7 +82,7 @@ let _cached_encoder_for_Private_Use_Attribute: $.ASN1Encoder<Private_Use_Attribu
 export function _encode_Private_Use_Attribute(
   value: Private_Use_Attribute,
   elGetter: $.ASN1Encoder<Private_Use_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Private_Use_Attribute) {
     _cached_encoder_for_Private_Use_Attribute = $._encode_choice<Private_Use_Attribute>(
       {

@@ -35,7 +35,7 @@ let _cached_decoder_for_InformationData: $.ASN1Decoder<InformationData> | null =
  * @param {_Element} el The element being decoded.
  * @returns {InformationData} The decoded data structure.
  */
-export function _decode_InformationData(el: _Element) {
+export function _decode_InformationData(el: _Element): InformationData {
   if (!_cached_decoder_for_InformationData) {
     _cached_decoder_for_InformationData = $._decodeSetOf<Parameter>(
       () => _decode_Parameter
@@ -56,7 +56,7 @@ let _cached_encoder_for_InformationData: $.ASN1Encoder<InformationData> | null =
 export function _encode_InformationData(
   value: InformationData,
   elGetter: $.ASN1Encoder<InformationData>
-) {
+): _Element {
   if (!_cached_encoder_for_InformationData) {
     _cached_encoder_for_InformationData = $._encodeSetOf<Parameter>(
       () => _encode_Parameter,

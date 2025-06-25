@@ -143,7 +143,7 @@ let _cached_decoder_for_TCPIPBIPMessage: $.ASN1Decoder<TCPIPBIPMessage> | null =
  * @param {_Element} el The element being decoded.
  * @returns {TCPIPBIPMessage} The decoded data structure.
  */
-export function _decode_TCPIPBIPMessage(el: _Element) {
+export function _decode_TCPIPBIPMessage(el: _Element): TCPIPBIPMessage {
   if (!_cached_decoder_for_TCPIPBIPMessage) {
     _cached_decoder_for_TCPIPBIPMessage = function (
       el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_TCPIPBIPMessage: $.ASN1Encoder<TCPIPBIPMessage> | null =
 export function _encode_TCPIPBIPMessage(
   value: TCPIPBIPMessage,
   elGetter: $.ASN1Encoder<TCPIPBIPMessage>
-) {
+): _Element {
   if (!_cached_encoder_for_TCPIPBIPMessage) {
     _cached_encoder_for_TCPIPBIPMessage = function (
       value: TCPIPBIPMessage    ): _Element {

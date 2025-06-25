@@ -118,7 +118,7 @@ let _cached_decoder_for_Pentanomial: $.ASN1Decoder<Pentanomial> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Pentanomial} The decoded data structure.
  */
-export function _decode_Pentanomial(el: _Element) {
+export function _decode_Pentanomial(el: _Element): Pentanomial {
     if (!_cached_decoder_for_Pentanomial) {
         _cached_decoder_for_Pentanomial = function (el: _Element): Pentanomial {
             const sequence: _Element[] = el.sequence;
@@ -156,7 +156,7 @@ let _cached_encoder_for_Pentanomial: $.ASN1Encoder<Pentanomial> | null = null;
 export function _encode_Pentanomial(
     value: Pentanomial,
     elGetter: $.ASN1Encoder<Pentanomial>
-) {
+): _Element {
     if (!_cached_encoder_for_Pentanomial) {
         _cached_encoder_for_Pentanomial = function (
             value: Pentanomial        ): _Element {

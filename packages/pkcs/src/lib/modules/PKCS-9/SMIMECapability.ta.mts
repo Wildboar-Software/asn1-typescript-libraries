@@ -108,7 +108,7 @@ let _cached_decoder_for_SMIMECapability: $.ASN1Decoder<SMIMECapability> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SMIMECapability} The decoded data structure.
  */
-export function _decode_SMIMECapability(el: _Element) {
+export function _decode_SMIMECapability(el: _Element): SMIMECapability {
     if (!_cached_decoder_for_SMIMECapability) {
         _cached_decoder_for_SMIMECapability = function (
             el: _Element
@@ -147,7 +147,7 @@ let _cached_encoder_for_SMIMECapability: $.ASN1Encoder<SMIMECapability> | null =
 export function _encode_SMIMECapability(
     value: SMIMECapability,
     elGetter: $.ASN1Encoder<SMIMECapability>
-) {
+): _Element {
     if (!_cached_encoder_for_SMIMECapability) {
         _cached_encoder_for_SMIMECapability = function (
             value: SMIMECapability        ): _Element {

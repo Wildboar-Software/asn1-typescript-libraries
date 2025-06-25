@@ -111,7 +111,7 @@ let _cached_decoder_for_TransferInfo: $.ASN1Decoder<TransferInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {TransferInfo} The decoded data structure.
  */
-export function _decode_TransferInfo(el: _Element) {
+export function _decode_TransferInfo(el: _Element): TransferInfo {
     if (!_cached_decoder_for_TransferInfo) {
         _cached_decoder_for_TransferInfo = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_TransferInfo: $.ASN1Encoder<TransferInfo> | null = null;
 export function _encode_TransferInfo(
     value: TransferInfo,
     elGetter: $.ASN1Encoder<TransferInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_TransferInfo) {
         _cached_encoder_for_TransferInfo = function (
             value: TransferInfo        ): _Element {

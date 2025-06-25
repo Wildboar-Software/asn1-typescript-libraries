@@ -38,7 +38,7 @@ let _cached_decoder_for_BiometricTemplateInfo: $.ASN1Decoder<BiometricTemplateIn
  * @returns {BiometricTemplateInfo} The decoded data structure.
  */
 export
-function _decode_BiometricTemplateInfo (el: _Element) {
+function _decode_BiometricTemplateInfo (el: _Element): BiometricTemplateInfo {
     if (!_cached_decoder_for_BiometricTemplateInfo) { _cached_decoder_for_BiometricTemplateInfo = $._decode_extensible_choice<BiometricTemplateInfo>({
     "CONTEXT 0": [ "biometricTemplateInfo19785", _decode_BiometricInformationTemplate ]
 }); }
@@ -55,7 +55,7 @@ let _cached_encoder_for_BiometricTemplateInfo: $.ASN1Encoder<BiometricTemplateIn
  * @returns {_Element} The BiometricTemplateInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricTemplateInfo (value: BiometricTemplateInfo, elGetter: $.ASN1Encoder<BiometricTemplateInfo>) {
+function _encode_BiometricTemplateInfo (value: BiometricTemplateInfo, elGetter: $.ASN1Encoder<BiometricTemplateInfo>): _Element {
     if (!_cached_encoder_for_BiometricTemplateInfo) { _cached_encoder_for_BiometricTemplateInfo = $._encode_choice<BiometricTemplateInfo>({
     "biometricTemplateInfo19785": _encode_BiometricInformationTemplate,
 }, $.BER); }

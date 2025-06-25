@@ -50,7 +50,7 @@ let _cached_decoder_for_FetchRestrictionError_problems_Item_restriction: $.ASN1D
  */
 export function _decode_FetchRestrictionError_problems_Item_restriction(
     el: _Element
-) {
+): FetchRestrictionError_problems_Item_restriction {
     if (!_cached_decoder_for_FetchRestrictionError_problems_Item_restriction) {
         _cached_decoder_for_FetchRestrictionError_problems_Item_restriction = $._decode_inextensible_choice<FetchRestrictionError_problems_Item_restriction>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_FetchRestrictionError_problems_Item_restriction: $.ASN1E
 export function _encode_FetchRestrictionError_problems_Item_restriction(
     value: FetchRestrictionError_problems_Item_restriction,
     elGetter: $.ASN1Encoder<FetchRestrictionError_problems_Item_restriction>
-) {
+): _Element {
     if (!_cached_encoder_for_FetchRestrictionError_problems_Item_restriction) {
         _cached_encoder_for_FetchRestrictionError_problems_Item_restriction = $._encode_choice<FetchRestrictionError_problems_Item_restriction>(
             {

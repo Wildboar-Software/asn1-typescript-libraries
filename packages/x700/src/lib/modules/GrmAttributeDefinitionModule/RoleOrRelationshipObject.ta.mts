@@ -41,7 +41,7 @@ let _cached_decoder_for_RoleOrRelationshipObject: $.ASN1Decoder<RoleOrRelationsh
  * @param {_Element} el The element being decoded.
  * @returns {RoleOrRelationshipObject} The decoded data structure.
  */
-export function _decode_RoleOrRelationshipObject(el: _Element) {
+export function _decode_RoleOrRelationshipObject(el: _Element): RoleOrRelationshipObject {
     if (!_cached_decoder_for_RoleOrRelationshipObject) {
         _cached_decoder_for_RoleOrRelationshipObject = $._decode_inextensible_choice<RoleOrRelationshipObject>(
             {
@@ -65,7 +65,7 @@ let _cached_encoder_for_RoleOrRelationshipObject: $.ASN1Encoder<RoleOrRelationsh
 export function _encode_RoleOrRelationshipObject(
     value: RoleOrRelationshipObject,
     elGetter: $.ASN1Encoder<RoleOrRelationshipObject>
-) {
+): _Element {
     if (!_cached_encoder_for_RoleOrRelationshipObject) {
         _cached_encoder_for_RoleOrRelationshipObject = $._encode_choice<RoleOrRelationshipObject>(
             {

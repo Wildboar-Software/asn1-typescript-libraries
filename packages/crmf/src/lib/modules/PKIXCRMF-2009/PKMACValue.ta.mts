@@ -117,7 +117,7 @@ let _cached_decoder_for_PKMACValue: $.ASN1Decoder<PKMACValue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PKMACValue} The decoded data structure.
  */
-export function _decode_PKMACValue(el: _Element) {
+export function _decode_PKMACValue(el: _Element): PKMACValue {
     if (!_cached_decoder_for_PKMACValue) {
         _cached_decoder_for_PKMACValue = function (el: _Element): PKMACValue {
             const sequence: _Element[] = el.sequence;
@@ -154,7 +154,7 @@ let _cached_encoder_for_PKMACValue: $.ASN1Encoder<PKMACValue> | null = null;
 export function _encode_PKMACValue(
     value: PKMACValue,
     elGetter: $.ASN1Encoder<PKMACValue>
-) {
+): _Element {
     if (!_cached_encoder_for_PKMACValue) {
         _cached_encoder_for_PKMACValue = function (
             value: PKMACValue        ): _Element {

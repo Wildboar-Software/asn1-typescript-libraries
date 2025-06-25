@@ -38,7 +38,7 @@ let _cached_decoder_for_RevertInfo: $.ASN1Decoder<RevertInfo> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {RevertInfo} The decoded data structure.
  */
-export function _decode_RevertInfo(el: _Element) {
+export function _decode_RevertInfo(el: _Element): RevertInfo {
     if (!_cached_decoder_for_RevertInfo) {
         _cached_decoder_for_RevertInfo = $._decodeSequenceOf<RevertInfo_Item>(
             () => _decode_RevertInfo_Item
@@ -59,7 +59,7 @@ let _cached_encoder_for_RevertInfo: $.ASN1Encoder<RevertInfo> | null = null;
 export function _encode_RevertInfo(
     value: RevertInfo,
     elGetter: $.ASN1Encoder<RevertInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_RevertInfo) {
         _cached_encoder_for_RevertInfo = $._encodeSequenceOf<RevertInfo_Item>(
             () => _encode_RevertInfo_Item,

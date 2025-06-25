@@ -165,7 +165,7 @@ let _cached_decoder_for_TrustAnchorInfo: $.ASN1Decoder<TrustAnchorInfo> | null =
  * @returns {TrustAnchorInfo} The decoded data structure.
  */
 export
-function _decode_TrustAnchorInfo (el: _Element) {
+function _decode_TrustAnchorInfo (el: _Element): TrustAnchorInfo {
     if (!_cached_decoder_for_TrustAnchorInfo) { _cached_decoder_for_TrustAnchorInfo = function (el: _Element): TrustAnchorInfo {
     let version: OPTIONAL<TrustAnchorInfoVersion> = TrustAnchorInfo._default_value_for_version;
     let pubKey!: SubjectPublicKeyInfo;
@@ -212,7 +212,7 @@ let _cached_encoder_for_TrustAnchorInfo: $.ASN1Encoder<TrustAnchorInfo> | null =
  * @returns {_Element} The TrustAnchorInfo, encoded as an ASN.1 Element.
  */
 export
-function _encode_TrustAnchorInfo (value: TrustAnchorInfo, elGetter: $.ASN1Encoder<TrustAnchorInfo>) {
+function _encode_TrustAnchorInfo (value: TrustAnchorInfo, elGetter: $.ASN1Encoder<TrustAnchorInfo>): _Element {
     if (!_cached_encoder_for_TrustAnchorInfo) { _cached_encoder_for_TrustAnchorInfo = function (value: TrustAnchorInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

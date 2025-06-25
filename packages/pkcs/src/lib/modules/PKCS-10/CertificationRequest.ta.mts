@@ -137,7 +137,7 @@ let _cached_decoder_for_CertificationRequest: $.ASN1Decoder<CertificationRequest
  * @param {_Element} el The element being decoded.
  * @returns {CertificationRequest} The decoded data structure.
  */
-export function _decode_CertificationRequest(el: _Element) {
+export function _decode_CertificationRequest(el: _Element): CertificationRequest {
     if (!_cached_decoder_for_CertificationRequest) {
         _cached_decoder_for_CertificationRequest = function (
             el: _Element
@@ -185,7 +185,7 @@ let _cached_encoder_for_CertificationRequest: $.ASN1Encoder<CertificationRequest
 export function _encode_CertificationRequest(
     value: CertificationRequest,
     elGetter: $.ASN1Encoder<CertificationRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_CertificationRequest) {
         _cached_encoder_for_CertificationRequest = function (
             value: CertificationRequest        ): _Element {

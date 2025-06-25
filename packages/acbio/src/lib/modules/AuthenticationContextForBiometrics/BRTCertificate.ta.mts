@@ -114,7 +114,7 @@ let _cached_decoder_for_BRTCertificate: $.ASN1Decoder<BRTCertificate> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {BRTCertificate} The decoded data structure.
  */
-export function _decode_BRTCertificate(el: _Element) {
+export function _decode_BRTCertificate(el: _Element): BRTCertificate {
     if (!_cached_decoder_for_BRTCertificate) {
         _cached_decoder_for_BRTCertificate = function (
             el: _Element
@@ -157,7 +157,7 @@ let _cached_encoder_for_BRTCertificate: $.ASN1Encoder<BRTCertificate> | null = n
 export function _encode_BRTCertificate(
     value: BRTCertificate,
     elGetter: $.ASN1Encoder<BRTCertificate>
-) {
+): _Element {
     if (!_cached_encoder_for_BRTCertificate) {
         _cached_encoder_for_BRTCertificate = function (
             value: BRTCertificate        ): _Element {

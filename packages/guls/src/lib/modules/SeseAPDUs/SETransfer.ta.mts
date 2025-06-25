@@ -232,7 +232,7 @@ let _cached_decoder_for_SETransfer: $.ASN1Decoder<SETransfer> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SETransfer} The decoded data structure.
  */
-export function _decode_SETransfer(el: _Element) {
+export function _decode_SETransfer(el: _Element): SETransfer {
   if (!_cached_decoder_for_SETransfer) {
     _cached_decoder_for_SETransfer = function (el: _Element): SETransfer {
       let seIdentifier!: Identifier;
@@ -298,7 +298,7 @@ let _cached_encoder_for_SETransfer: $.ASN1Encoder<SETransfer> | null = null;
 export function _encode_SETransfer(
   value: SETransfer,
   elGetter: $.ASN1Encoder<SETransfer>
-) {
+): _Element {
   if (!_cached_encoder_for_SETransfer) {
     _cached_encoder_for_SETransfer = function (
       value: SETransfer    ): _Element {

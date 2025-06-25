@@ -111,7 +111,7 @@ let _cached_decoder_for_AttributeCertificateIdentifier: $.ASN1Decoder<AttributeC
  * @returns {AttributeCertificateIdentifier} The decoded data structure.
  */
 export
-function _decode_AttributeCertificateIdentifier (el: _Element) {
+function _decode_AttributeCertificateIdentifier (el: _Element): AttributeCertificateIdentifier {
     if (!_cached_decoder_for_AttributeCertificateIdentifier) { _cached_decoder_for_AttributeCertificateIdentifier = function (el: _Element): AttributeCertificateIdentifier {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 2) {
@@ -142,7 +142,7 @@ let _cached_encoder_for_AttributeCertificateIdentifier: $.ASN1Encoder<AttributeC
  * @returns {_Element} The AttributeCertificateIdentifier, encoded as an ASN.1 Element.
  */
 export
-function _encode_AttributeCertificateIdentifier (value: AttributeCertificateIdentifier, elGetter: $.ASN1Encoder<AttributeCertificateIdentifier>) {
+function _encode_AttributeCertificateIdentifier (value: AttributeCertificateIdentifier, elGetter: $.ASN1Encoder<AttributeCertificateIdentifier>): _Element {
     if (!_cached_encoder_for_AttributeCertificateIdentifier) { _cached_encoder_for_AttributeCertificateIdentifier = function (value: AttributeCertificateIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

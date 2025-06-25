@@ -158,7 +158,7 @@ let _cached_decoder_for_HeaderBlock: $.ASN1Decoder<HeaderBlock> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {HeaderBlock} The decoded data structure.
  */
-export function _decode_HeaderBlock(el: _Element) {
+export function _decode_HeaderBlock(el: _Element): HeaderBlock {
   if (!_cached_decoder_for_HeaderBlock) {
     _cached_decoder_for_HeaderBlock = function (el: _Element): HeaderBlock {
       let mustUnderstand: OPTIONAL<BOOLEAN>;
@@ -212,7 +212,7 @@ let _cached_encoder_for_HeaderBlock: $.ASN1Encoder<HeaderBlock> | null = null;
 export function _encode_HeaderBlock(
   value: HeaderBlock,
   elGetter: $.ASN1Encoder<HeaderBlock>
-) {
+): _Element {
   if (!_cached_encoder_for_HeaderBlock) {
     _cached_encoder_for_HeaderBlock = function (
       value: HeaderBlock    ): _Element {

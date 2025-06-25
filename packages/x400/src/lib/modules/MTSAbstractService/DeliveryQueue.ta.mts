@@ -112,7 +112,7 @@ let _cached_decoder_for_DeliveryQueue: $.ASN1Decoder<DeliveryQueue> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryQueue} The decoded data structure.
  */
-export function _decode_DeliveryQueue(el: _Element) {
+export function _decode_DeliveryQueue(el: _Element): DeliveryQueue {
     if (!_cached_decoder_for_DeliveryQueue) {
         _cached_decoder_for_DeliveryQueue = function (
             el: _Element
@@ -162,7 +162,7 @@ let _cached_encoder_for_DeliveryQueue: $.ASN1Encoder<DeliveryQueue> | null = nul
 export function _encode_DeliveryQueue(
     value: DeliveryQueue,
     elGetter: $.ASN1Encoder<DeliveryQueue>
-) {
+): _Element {
     if (!_cached_encoder_for_DeliveryQueue) {
         _cached_encoder_for_DeliveryQueue = function (
             value: DeliveryQueue        ): _Element {

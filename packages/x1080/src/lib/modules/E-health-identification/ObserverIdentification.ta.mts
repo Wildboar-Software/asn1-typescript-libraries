@@ -139,7 +139,7 @@ let _cached_decoder_for_ObserverIdentification: $.ASN1Decoder<ObserverIdentifica
  * @param {_Element} el The element being decoded.
  * @returns {ObserverIdentification} The decoded data structure.
  */
-export function _decode_ObserverIdentification(el: _Element) {
+export function _decode_ObserverIdentification(el: _Element): ObserverIdentification {
     if (!_cached_decoder_for_ObserverIdentification) {
         _cached_decoder_for_ObserverIdentification = function (
             el: _Element
@@ -190,7 +190,7 @@ let _cached_encoder_for_ObserverIdentification: $.ASN1Encoder<ObserverIdentifica
 export function _encode_ObserverIdentification(
     value: ObserverIdentification,
     elGetter: $.ASN1Encoder<ObserverIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_ObserverIdentification) {
         _cached_encoder_for_ObserverIdentification = function (
             value: ObserverIdentification        ): _Element {

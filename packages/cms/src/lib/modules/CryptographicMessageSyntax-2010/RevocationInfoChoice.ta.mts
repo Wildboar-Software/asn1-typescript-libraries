@@ -42,7 +42,7 @@ let _cached_decoder_for_RevocationInfoChoice: $.ASN1Decoder<RevocationInfoChoice
  * @param {_Element} el The element being decoded.
  * @returns {RevocationInfoChoice} The decoded data structure.
  */
-export function _decode_RevocationInfoChoice(el: _Element) {
+export function _decode_RevocationInfoChoice(el: _Element): RevocationInfoChoice {
     if (!_cached_decoder_for_RevocationInfoChoice) {
         _cached_decoder_for_RevocationInfoChoice = $._decode_extensible_choice<RevocationInfoChoice>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_RevocationInfoChoice: $.ASN1Encoder<RevocationInfoChoice
 export function _encode_RevocationInfoChoice(
     value: RevocationInfoChoice,
     elGetter: $.ASN1Encoder<RevocationInfoChoice>
-) {
+): _Element {
     if (!_cached_encoder_for_RevocationInfoChoice) {
         _cached_encoder_for_RevocationInfoChoice = $._encode_choice<RevocationInfoChoice>(
             {

@@ -131,7 +131,7 @@ let _cached_decoder_for_CMIPAbortInfo: $.ASN1Decoder<CMIPAbortInfo> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CMIPAbortInfo} The decoded data structure.
  */
-export function _decode_CMIPAbortInfo(el: _Element) {
+export function _decode_CMIPAbortInfo(el: _Element): CMIPAbortInfo {
   if (!_cached_decoder_for_CMIPAbortInfo) {
     _cached_decoder_for_CMIPAbortInfo = function (el: _Element): CMIPAbortInfo {
       let abortSource!: CMIPAbortSource;
@@ -177,7 +177,7 @@ let _cached_encoder_for_CMIPAbortInfo: $.ASN1Encoder<CMIPAbortInfo> | null = nul
 export function _encode_CMIPAbortInfo(
   value: CMIPAbortInfo,
   elGetter: $.ASN1Encoder<CMIPAbortInfo>
-) {
+): _Element {
   if (!_cached_encoder_for_CMIPAbortInfo) {
     _cached_encoder_for_CMIPAbortInfo = function (
       value: CMIPAbortInfo    ): _Element {

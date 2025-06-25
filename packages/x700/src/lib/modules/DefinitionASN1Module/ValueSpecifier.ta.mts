@@ -48,7 +48,7 @@ let _cached_decoder_for_ValueSpecifier: $.ASN1Decoder<ValueSpecifier> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {ValueSpecifier} The decoded data structure.
  */
-export function _decode_ValueSpecifier(el: _Element) {
+export function _decode_ValueSpecifier(el: _Element): ValueSpecifier {
     if (!_cached_decoder_for_ValueSpecifier) {
         _cached_decoder_for_ValueSpecifier = $._decode_inextensible_choice<ValueSpecifier>(
             {
@@ -84,7 +84,7 @@ let _cached_encoder_for_ValueSpecifier: $.ASN1Encoder<ValueSpecifier> | null = n
 export function _encode_ValueSpecifier(
     value: ValueSpecifier,
     elGetter: $.ASN1Encoder<ValueSpecifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ValueSpecifier) {
         _cached_encoder_for_ValueSpecifier = $._encode_choice<ValueSpecifier>(
             {

@@ -143,7 +143,7 @@ let _cached_decoder_for_ResourceSelfTestResults_nonIntermediate: $.ASN1Decoder<R
  * @param {_Element} el The element being decoded.
  * @returns {ResourceSelfTestResults_nonIntermediate} The decoded data structure.
  */
-export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element) {
+export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element): ResourceSelfTestResults_nonIntermediate {
     if (!_cached_decoder_for_ResourceSelfTestResults_nonIntermediate) {
         _cached_decoder_for_ResourceSelfTestResults_nonIntermediate = function (
             el: _Element
@@ -203,7 +203,7 @@ let _cached_encoder_for_ResourceSelfTestResults_nonIntermediate: $.ASN1Encoder<R
 export function _encode_ResourceSelfTestResults_nonIntermediate(
     value: ResourceSelfTestResults_nonIntermediate,
     elGetter: $.ASN1Encoder<ResourceSelfTestResults_nonIntermediate>
-) {
+): _Element {
     if (!_cached_encoder_for_ResourceSelfTestResults_nonIntermediate) {
         _cached_encoder_for_ResourceSelfTestResults_nonIntermediate = function (
             value: ResourceSelfTestResults_nonIntermediate        ): _Element {

@@ -133,7 +133,7 @@ let _cached_decoder_for_NoSuchAction: $.ASN1Decoder<NoSuchAction> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchAction} The decoded data structure.
  */
-export function _decode_NoSuchAction(el: _Element) {
+export function _decode_NoSuchAction(el: _Element): NoSuchAction {
   if (!_cached_decoder_for_NoSuchAction) {
     _cached_decoder_for_NoSuchAction = function (el: _Element): NoSuchAction {
       const sequence: _Element[] = el.sequence;
@@ -174,7 +174,7 @@ let _cached_encoder_for_NoSuchAction: $.ASN1Encoder<NoSuchAction> | null = null;
 export function _encode_NoSuchAction(
   value: NoSuchAction,
   elGetter: $.ASN1Encoder<NoSuchAction>
-) {
+): _Element {
   if (!_cached_encoder_for_NoSuchAction) {
     _cached_encoder_for_NoSuchAction = function (
       value: NoSuchAction    ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_MessageDeliveryIdentifier: $.ASN1Decoder<MessageDelivery
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryIdentifier} The decoded data structure.
  */
-export function _decode_MessageDeliveryIdentifier(el: _Element) {
+export function _decode_MessageDeliveryIdentifier(el: _Element): MessageDeliveryIdentifier {
     if (!_cached_decoder_for_MessageDeliveryIdentifier) {
         _cached_decoder_for_MessageDeliveryIdentifier = _decode_MTSIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_MessageDeliveryIdentifier: $.ASN1Encoder<MessageDelivery
 export function _encode_MessageDeliveryIdentifier(
     value: MessageDeliveryIdentifier,
     elGetter: $.ASN1Encoder<MessageDeliveryIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_MessageDeliveryIdentifier) {
         _cached_encoder_for_MessageDeliveryIdentifier = _encode_MTSIdentifier;
     }

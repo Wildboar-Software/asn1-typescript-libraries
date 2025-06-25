@@ -121,7 +121,7 @@ let _cached_decoder_for_BodyPartSignatureVerification_Item: $.ASN1Decoder<BodyPa
  * @param {_Element} el The element being decoded.
  * @returns {BodyPartSignatureVerification_Item} The decoded data structure.
  */
-export function _decode_BodyPartSignatureVerification_Item(el: _Element) {
+export function _decode_BodyPartSignatureVerification_Item(el: _Element): BodyPartSignatureVerification_Item {
     if (!_cached_decoder_for_BodyPartSignatureVerification_Item) {
         _cached_decoder_for_BodyPartSignatureVerification_Item = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_BodyPartSignatureVerification_Item: $.ASN1Encoder<BodyPa
 export function _encode_BodyPartSignatureVerification_Item(
     value: BodyPartSignatureVerification_Item,
     elGetter: $.ASN1Encoder<BodyPartSignatureVerification_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_BodyPartSignatureVerification_Item) {
         _cached_encoder_for_BodyPartSignatureVerification_Item = function (
             value: BodyPartSignatureVerification_Item        ): _Element {

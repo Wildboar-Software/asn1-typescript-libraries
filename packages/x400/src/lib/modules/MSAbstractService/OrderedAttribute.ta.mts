@@ -127,7 +127,7 @@ let _cached_decoder_for_OrderedAttribute: $.ASN1Decoder<OrderedAttribute> | null
  * @param {_Element} el The element being decoded.
  * @returns {OrderedAttribute} The decoded data structure.
  */
-export function _decode_OrderedAttribute(el: _Element) {
+export function _decode_OrderedAttribute(el: _Element): OrderedAttribute {
     if (!_cached_decoder_for_OrderedAttribute) {
         _cached_decoder_for_OrderedAttribute = function (
             el: _Element
@@ -166,7 +166,7 @@ let _cached_encoder_for_OrderedAttribute: $.ASN1Encoder<OrderedAttribute> | null
 export function _encode_OrderedAttribute(
     value: OrderedAttribute,
     elGetter: $.ASN1Encoder<OrderedAttribute>
-) {
+): _Element {
     if (!_cached_encoder_for_OrderedAttribute) {
         _cached_encoder_for_OrderedAttribute = function (
             value: OrderedAttribute        ): _Element {

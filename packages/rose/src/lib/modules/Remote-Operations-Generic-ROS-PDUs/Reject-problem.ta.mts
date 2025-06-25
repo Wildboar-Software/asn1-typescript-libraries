@@ -57,7 +57,7 @@ let _cached_decoder_for_Reject_problem: $.ASN1Decoder<Reject_problem> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Reject_problem} The decoded data structure.
  */
-export function _decode_Reject_problem(el: _Element) {
+export function _decode_Reject_problem(el: _Element): Reject_problem {
   if (!_cached_decoder_for_Reject_problem) {
     _cached_decoder_for_Reject_problem = $._decode_inextensible_choice<Reject_problem>(
       {
@@ -101,7 +101,7 @@ let _cached_encoder_for_Reject_problem: $.ASN1Encoder<Reject_problem> | null = n
 export function _encode_Reject_problem(
   value: Reject_problem,
   elGetter: $.ASN1Encoder<Reject_problem>
-) {
+): _Element {
   if (!_cached_encoder_for_Reject_problem) {
     _cached_encoder_for_Reject_problem = $._encode_choice<Reject_problem>(
       {

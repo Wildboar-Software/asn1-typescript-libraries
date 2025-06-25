@@ -149,7 +149,7 @@ let _cached_decoder_for_Access_Request: $.ASN1Decoder<Access_Request> | null = n
  * @param {_Element} el The element being decoded.
  * @returns {Access_Request} The decoded data structure.
  */
-export function _decode_Access_Request(el: _Element) {
+export function _decode_Access_Request(el: _Element): Access_Request {
   if (!_cached_decoder_for_Access_Request) {
     _cached_decoder_for_Access_Request = $._decode_implicit<Access_Request>(
       () => $._decodeBitString
@@ -172,7 +172,7 @@ let _cached_encoder_for_Access_Request: $.ASN1Encoder<Access_Request> | null = n
 export function _encode_Access_Request(
   value: Access_Request,
   elGetter: $.ASN1Encoder<Access_Request>
-) {
+): _Element {
   if (!_cached_encoder_for_Access_Request) {
     _cached_encoder_for_Access_Request = $._encode_implicit(
       _TagClass.application,

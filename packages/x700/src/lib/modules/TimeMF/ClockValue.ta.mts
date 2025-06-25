@@ -35,7 +35,7 @@ let _cached_decoder_for_ClockValue: $.ASN1Decoder<ClockValue> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ClockValue} The decoded data structure.
  */
-export function _decode_ClockValue(el: _Element) {
+export function _decode_ClockValue(el: _Element): ClockValue {
     if (!_cached_decoder_for_ClockValue) {
         _cached_decoder_for_ClockValue = _decode_GlobalTime;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ClockValue: $.ASN1Encoder<ClockValue> | null = null;
 export function _encode_ClockValue(
     value: ClockValue,
     elGetter: $.ASN1Encoder<ClockValue>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockValue) {
         _cached_encoder_for_ClockValue = _encode_GlobalTime;
     }

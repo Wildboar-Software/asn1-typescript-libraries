@@ -130,7 +130,7 @@ let _cached_decoder_for_BPUSubprocessInformation: $.ASN1Decoder<BPUSubprocessInf
  * @param {_Element} el The element being decoded.
  * @returns {BPUSubprocessInformation} The decoded data structure.
  */
-export function _decode_BPUSubprocessInformation(el: _Element) {
+export function _decode_BPUSubprocessInformation(el: _Element): BPUSubprocessInformation {
     if (!_cached_decoder_for_BPUSubprocessInformation) {
         _cached_decoder_for_BPUSubprocessInformation = function (
             el: _Element
@@ -176,7 +176,7 @@ let _cached_encoder_for_BPUSubprocessInformation: $.ASN1Encoder<BPUSubprocessInf
 export function _encode_BPUSubprocessInformation(
     value: BPUSubprocessInformation,
     elGetter: $.ASN1Encoder<BPUSubprocessInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUSubprocessInformation) {
         _cached_encoder_for_BPUSubprocessInformation = function (
             value: BPUSubprocessInformation        ): _Element {

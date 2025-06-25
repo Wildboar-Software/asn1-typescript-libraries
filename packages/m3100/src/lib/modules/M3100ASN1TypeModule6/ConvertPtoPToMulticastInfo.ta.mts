@@ -38,7 +38,7 @@ let _cached_decoder_for_ConvertPtoPToMulticastInfo: $.ASN1Decoder<ConvertPtoPToM
  * @param {_Element} el The element being decoded.
  * @returns {ConvertPtoPToMulticastInfo} The decoded data structure.
  */
-export function _decode_ConvertPtoPToMulticastInfo(el: _Element) {
+export function _decode_ConvertPtoPToMulticastInfo(el: _Element): ConvertPtoPToMulticastInfo {
     if (!_cached_decoder_for_ConvertPtoPToMulticastInfo) {
         _cached_decoder_for_ConvertPtoPToMulticastInfo = $._decodeSequenceOf<ObjectInstance>(
             () => _decode_ObjectInstance
@@ -61,7 +61,7 @@ let _cached_encoder_for_ConvertPtoPToMulticastInfo: $.ASN1Encoder<ConvertPtoPToM
 export function _encode_ConvertPtoPToMulticastInfo(
     value: ConvertPtoPToMulticastInfo,
     elGetter: $.ASN1Encoder<ConvertPtoPToMulticastInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_ConvertPtoPToMulticastInfo) {
         _cached_encoder_for_ConvertPtoPToMulticastInfo = $._encodeSequenceOf<ObjectInstance>(
             () => _encode_ObjectInstance,

@@ -41,7 +41,7 @@ let _cached_decoder_for_Password: $.ASN1Decoder<Password> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Password} The decoded data structure.
  */
-export function _decode_Password(el: _Element) {
+export function _decode_Password(el: _Element): Password {
   if (!_cached_decoder_for_Password) {
     _cached_decoder_for_Password = $._decode_explicit<Password>(() =>
       $._decode_inextensible_choice<Password>({
@@ -67,7 +67,7 @@ let _cached_encoder_for_Password: $.ASN1Encoder<Password> | null = null;
 export function _encode_Password(
   value: Password,
   elGetter: $.ASN1Encoder<Password>
-) {
+): _Element {
   if (!_cached_encoder_for_Password) {
     _cached_encoder_for_Password = $._encode_explicit(
       _TagClass.application,

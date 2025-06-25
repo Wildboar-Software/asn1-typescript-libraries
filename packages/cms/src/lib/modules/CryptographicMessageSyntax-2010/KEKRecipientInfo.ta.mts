@@ -158,7 +158,7 @@ let _cached_decoder_for_KEKRecipientInfo: $.ASN1Decoder<KEKRecipientInfo> | null
  * @param {_Element} el The element being decoded.
  * @returns {KEKRecipientInfo} The decoded data structure.
  */
-export function _decode_KEKRecipientInfo(el: _Element) {
+export function _decode_KEKRecipientInfo(el: _Element): KEKRecipientInfo {
     if (!_cached_decoder_for_KEKRecipientInfo) {
         _cached_decoder_for_KEKRecipientInfo = function (
             el: _Element
@@ -210,7 +210,7 @@ let _cached_encoder_for_KEKRecipientInfo: $.ASN1Encoder<KEKRecipientInfo> | null
 export function _encode_KEKRecipientInfo(
     value: KEKRecipientInfo,
     elGetter: $.ASN1Encoder<KEKRecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_KEKRecipientInfo) {
         _cached_encoder_for_KEKRecipientInfo = function (
             value: KEKRecipientInfo        ): _Element {

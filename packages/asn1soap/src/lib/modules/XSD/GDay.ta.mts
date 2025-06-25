@@ -38,7 +38,7 @@ let _cached_decoder_for_GDay: $.ASN1Decoder<GDay> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {GDay} The decoded data structure.
  */
-export function _decode_GDay(el: _Element) {
+export function _decode_GDay(el: _Element): GDay {
   if (!_cached_decoder_for_GDay) {
     _cached_decoder_for_GDay = _decode_DateTimeType;
   }
@@ -56,7 +56,7 @@ let _cached_encoder_for_GDay: $.ASN1Encoder<GDay> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GDay, encoded as an ASN.1 Element.
  */
-export function _encode_GDay(value: GDay, elGetter: $.ASN1Encoder<GDay>) {
+export function _encode_GDay(value: GDay, elGetter: $.ASN1Encoder<GDay>): _Element {
   if (!_cached_encoder_for_GDay) {
     _cached_encoder_for_GDay = _encode_DateTimeType;
   }

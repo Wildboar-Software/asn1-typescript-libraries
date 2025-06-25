@@ -44,7 +44,7 @@ let _cached_decoder_for_Operation_Result: $.ASN1Decoder<Operation_Result> | null
  * @param {_Element} el The element being decoded.
  * @returns {Operation_Result} The decoded data structure.
  */
-export function _decode_Operation_Result(el: _Element) {
+export function _decode_Operation_Result(el: _Element): Operation_Result {
   if (!_cached_decoder_for_Operation_Result) {
     _cached_decoder_for_Operation_Result = $._decode_explicit<Operation_Result>(
       () =>
@@ -79,7 +79,7 @@ let _cached_encoder_for_Operation_Result: $.ASN1Encoder<Operation_Result> | null
 export function _encode_Operation_Result(
   value: Operation_Result,
   elGetter: $.ASN1Encoder<Operation_Result>
-) {
+): _Element {
   if (!_cached_encoder_for_Operation_Result) {
     _cached_encoder_for_Operation_Result = $._encode_explicit(
       _TagClass.application,

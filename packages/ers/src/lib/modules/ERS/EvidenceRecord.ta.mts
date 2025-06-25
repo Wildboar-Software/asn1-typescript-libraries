@@ -149,7 +149,7 @@ let _cached_decoder_for_EvidenceRecord: $.ASN1Decoder<EvidenceRecord> | null = n
  * @returns {EvidenceRecord} The decoded data structure.
  */
 export
-function _decode_EvidenceRecord (el: _Element) {
+function _decode_EvidenceRecord (el: _Element): EvidenceRecord {
     if (!_cached_decoder_for_EvidenceRecord) { _cached_decoder_for_EvidenceRecord = function (el: _Element): EvidenceRecord {
     let version!: EvidenceRecord_version;
     let digestAlgorithms!: AlgorithmIdentifier[];
@@ -192,7 +192,7 @@ let _cached_encoder_for_EvidenceRecord: $.ASN1Encoder<EvidenceRecord> | null = n
  * @returns {_Element} The EvidenceRecord, encoded as an ASN.1 Element.
  */
 export
-function _encode_EvidenceRecord (value: EvidenceRecord, elGetter: $.ASN1Encoder<EvidenceRecord>) {
+function _encode_EvidenceRecord (value: EvidenceRecord, elGetter: $.ASN1Encoder<EvidenceRecord>): _Element {
     if (!_cached_encoder_for_EvidenceRecord) { _cached_encoder_for_EvidenceRecord = function (value: EvidenceRecord): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

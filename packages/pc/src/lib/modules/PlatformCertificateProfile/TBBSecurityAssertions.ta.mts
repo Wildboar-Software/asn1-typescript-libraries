@@ -174,7 +174,7 @@ let _cached_decoder_for_TBBSecurityAssertions: $.ASN1Decoder<TBBSecurityAssertio
  * @returns {TBBSecurityAssertions} The decoded data structure.
  */
 export
-function _decode_TBBSecurityAssertions (el: _Element) {
+function _decode_TBBSecurityAssertions (el: _Element): TBBSecurityAssertions {
     if (!_cached_decoder_for_TBBSecurityAssertions) { _cached_decoder_for_TBBSecurityAssertions = function (el: _Element): TBBSecurityAssertions {
     let version: OPTIONAL<Version> = TBBSecurityAssertions._default_value_for_version;
     let ccInfo: OPTIONAL<CommonCriteriaMeasures>;
@@ -218,7 +218,7 @@ let _cached_encoder_for_TBBSecurityAssertions: $.ASN1Encoder<TBBSecurityAssertio
  * @returns {_Element} The TBBSecurityAssertions, encoded as an ASN.1 Element.
  */
 export
-function _encode_TBBSecurityAssertions (value: TBBSecurityAssertions, elGetter: $.ASN1Encoder<TBBSecurityAssertions>) {
+function _encode_TBBSecurityAssertions (value: TBBSecurityAssertions, elGetter: $.ASN1Encoder<TBBSecurityAssertions>): _Element {
     if (!_cached_encoder_for_TBBSecurityAssertions) { _cached_encoder_for_TBBSecurityAssertions = function (value: TBBSecurityAssertions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

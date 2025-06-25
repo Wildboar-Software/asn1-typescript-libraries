@@ -177,7 +177,7 @@ let _cached_decoder_for_KeyAgreeRecipientInfo: $.ASN1Decoder<KeyAgreeRecipientIn
  * @param {_Element} el The element being decoded.
  * @returns {KeyAgreeRecipientInfo} The decoded data structure.
  */
-export function _decode_KeyAgreeRecipientInfo(el: _Element) {
+export function _decode_KeyAgreeRecipientInfo(el: _Element): KeyAgreeRecipientInfo {
     if (!_cached_decoder_for_KeyAgreeRecipientInfo) {
         _cached_decoder_for_KeyAgreeRecipientInfo = function (
             el: _Element
@@ -246,7 +246,7 @@ let _cached_encoder_for_KeyAgreeRecipientInfo: $.ASN1Encoder<KeyAgreeRecipientIn
 export function _encode_KeyAgreeRecipientInfo(
     value: KeyAgreeRecipientInfo,
     elGetter: $.ASN1Encoder<KeyAgreeRecipientInfo>
-) {
+): _Element {
     if (!_cached_encoder_for_KeyAgreeRecipientInfo) {
         _cached_encoder_for_KeyAgreeRecipientInfo = function (
             value: KeyAgreeRecipientInfo        ): _Element {

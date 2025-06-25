@@ -38,7 +38,7 @@ let _cached_decoder_for_TriggerResultInfo_resultType: $.ASN1Decoder<TriggerResul
  * @param {_Element} el The element being decoded.
  * @returns {TriggerResultInfo_resultType} The decoded data structure.
  */
-export function _decode_TriggerResultInfo_resultType(el: _Element) {
+export function _decode_TriggerResultInfo_resultType(el: _Element): TriggerResultInfo_resultType {
     if (!_cached_decoder_for_TriggerResultInfo_resultType) {
         _cached_decoder_for_TriggerResultInfo_resultType = $._decode_inextensible_choice<TriggerResultInfo_resultType>(
             {
@@ -78,7 +78,7 @@ let _cached_encoder_for_TriggerResultInfo_resultType: $.ASN1Encoder<TriggerResul
 export function _encode_TriggerResultInfo_resultType(
     value: TriggerResultInfo_resultType,
     elGetter: $.ASN1Encoder<TriggerResultInfo_resultType>
-) {
+): _Element {
     if (!_cached_encoder_for_TriggerResultInfo_resultType) {
         _cached_encoder_for_TriggerResultInfo_resultType = $._encode_choice<TriggerResultInfo_resultType>(
             {

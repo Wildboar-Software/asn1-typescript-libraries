@@ -35,7 +35,7 @@ let _cached_decoder_for_QualifiedBy: $.ASN1Decoder<QualifiedBy> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {QualifiedBy} The decoded data structure.
  */
-export function _decode_QualifiedBy(el: _Element) {
+export function _decode_QualifiedBy(el: _Element): QualifiedBy {
     if (!_cached_decoder_for_QualifiedBy) {
         _cached_decoder_for_QualifiedBy = _decode_TemplateList;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_QualifiedBy: $.ASN1Encoder<QualifiedBy> | null = null;
 export function _encode_QualifiedBy(
     value: QualifiedBy,
     elGetter: $.ASN1Encoder<QualifiedBy>
-) {
+): _Element {
     if (!_cached_encoder_for_QualifiedBy) {
         _cached_encoder_for_QualifiedBy = _encode_TemplateList;
     }

@@ -165,7 +165,7 @@ let _cached_decoder_for_BPUIOStaticInformation: $.ASN1Decoder<BPUIOStaticInforma
  * @param {_Element} el The element being decoded.
  * @returns {BPUIOStaticInformation} The decoded data structure.
  */
-export function _decode_BPUIOStaticInformation(el: _Element) {
+export function _decode_BPUIOStaticInformation(el: _Element): BPUIOStaticInformation {
     if (!_cached_decoder_for_BPUIOStaticInformation) {
         _cached_decoder_for_BPUIOStaticInformation = function (
             el: _Element
@@ -221,7 +221,7 @@ let _cached_encoder_for_BPUIOStaticInformation: $.ASN1Encoder<BPUIOStaticInforma
 export function _encode_BPUIOStaticInformation(
     value: BPUIOStaticInformation,
     elGetter: $.ASN1Encoder<BPUIOStaticInformation>
-) {
+): _Element {
     if (!_cached_encoder_for_BPUIOStaticInformation) {
         _cached_encoder_for_BPUIOStaticInformation = function (
             value: BPUIOStaticInformation        ): _Element {

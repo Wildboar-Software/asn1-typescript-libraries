@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Decoder<Unive
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPhysicalDeliveryOfficeName} The decoded data structure.
  */
-export function _decode_UniversalPhysicalDeliveryOfficeName(el: _Element) {
+export function _decode_UniversalPhysicalDeliveryOfficeName(el: _Element): UniversalPhysicalDeliveryOfficeName {
     if (!_cached_decoder_for_UniversalPhysicalDeliveryOfficeName) {
         _cached_decoder_for_UniversalPhysicalDeliveryOfficeName = _decode_UniversalPDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Encoder<Unive
 export function _encode_UniversalPhysicalDeliveryOfficeName(
     value: UniversalPhysicalDeliveryOfficeName,
     elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryOfficeName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPhysicalDeliveryOfficeName) {
         _cached_encoder_for_UniversalPhysicalDeliveryOfficeName = _encode_UniversalPDSParameter;
     }

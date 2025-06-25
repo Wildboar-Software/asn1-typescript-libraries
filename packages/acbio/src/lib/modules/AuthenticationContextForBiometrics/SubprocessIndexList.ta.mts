@@ -38,7 +38,7 @@ let _cached_decoder_for_SubprocessIndexList: $.ASN1Decoder<SubprocessIndexList> 
  * @param {_Element} el The element being decoded.
  * @returns {SubprocessIndexList} The decoded data structure.
  */
-export function _decode_SubprocessIndexList(el: _Element) {
+export function _decode_SubprocessIndexList(el: _Element): SubprocessIndexList {
     if (!_cached_decoder_for_SubprocessIndexList) {
         _cached_decoder_for_SubprocessIndexList = $._decodeSequenceOf<SubprocessIndex>(
             () => _decode_SubprocessIndex
@@ -61,7 +61,7 @@ let _cached_encoder_for_SubprocessIndexList: $.ASN1Encoder<SubprocessIndexList> 
 export function _encode_SubprocessIndexList(
     value: SubprocessIndexList,
     elGetter: $.ASN1Encoder<SubprocessIndexList>
-) {
+): _Element {
     if (!_cached_encoder_for_SubprocessIndexList) {
         _cached_encoder_for_SubprocessIndexList = $._encodeSequenceOf<SubprocessIndex>(
             () => _encode_SubprocessIndex,

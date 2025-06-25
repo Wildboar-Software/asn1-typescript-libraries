@@ -41,7 +41,7 @@ let _cached_decoder_for_ThresholdLevelInd: $.ASN1Decoder<ThresholdLevelInd> | nu
  * @returns {ThresholdLevelInd} The decoded data structure.
  */
 export
-function _decode_ThresholdLevelInd (el: _Element) {
+function _decode_ThresholdLevelInd (el: _Element): ThresholdLevelInd {
     if (!_cached_decoder_for_ThresholdLevelInd) { _cached_decoder_for_ThresholdLevelInd = $._decode_inextensible_choice<ThresholdLevelInd>({
     "CONTEXT 1": [ "up", $._decode_implicit<ThresholdLevelInd_up>(() => _decode_ThresholdLevelInd_up) ],
     "CONTEXT 2": [ "down", $._decode_implicit<ThresholdLevelInd_down>(() => _decode_ThresholdLevelInd_down) ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_ThresholdLevelInd: $.ASN1Encoder<ThresholdLevelInd> | nu
  * @returns {_Element} The ThresholdLevelInd, encoded as an ASN.1 Element.
  */
 export
-function _encode_ThresholdLevelInd (value: ThresholdLevelInd, elGetter: $.ASN1Encoder<ThresholdLevelInd>) {
+function _encode_ThresholdLevelInd (value: ThresholdLevelInd, elGetter: $.ASN1Encoder<ThresholdLevelInd>): _Element {
     if (!_cached_encoder_for_ThresholdLevelInd) { _cached_encoder_for_ThresholdLevelInd = $._encode_choice<ThresholdLevelInd>({
     "up": $._encode_implicit(_TagClass.context, 1, () => _encode_ThresholdLevelInd_up, $.BER),
     "down": $._encode_implicit(_TagClass.context, 2, () => _encode_ThresholdLevelInd_down, $.BER),

@@ -43,7 +43,7 @@ let _cached_decoder_for_Object_Size_Attribute: $.ASN1Decoder<Object_Size_Attribu
  * @param {_Element} el The element being decoded.
  * @returns {Object_Size_Attribute} The decoded data structure.
  */
-export function _decode_Object_Size_Attribute(el: _Element) {
+export function _decode_Object_Size_Attribute(el: _Element): Object_Size_Attribute {
   if (!_cached_decoder_for_Object_Size_Attribute) {
     _cached_decoder_for_Object_Size_Attribute = $._decode_inextensible_choice<Object_Size_Attribute>(
       {
@@ -75,7 +75,7 @@ let _cached_encoder_for_Object_Size_Attribute: $.ASN1Encoder<Object_Size_Attribu
 export function _encode_Object_Size_Attribute(
   value: Object_Size_Attribute,
   elGetter: $.ASN1Encoder<Object_Size_Attribute>
-) {
+): _Element {
   if (!_cached_encoder_for_Object_Size_Attribute) {
     _cached_encoder_for_Object_Size_Attribute = $._encode_choice<Object_Size_Attribute>(
       {

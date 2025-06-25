@@ -41,7 +41,7 @@ let _cached_decoder_for_ObservedValue: $.ASN1Decoder<ObservedValue> | null = nul
  * @returns {ObservedValue} The decoded data structure.
  */
 export
-function _decode_ObservedValue (el: _Element) {
+function _decode_ObservedValue (el: _Element): ObservedValue {
     if (!_cached_decoder_for_ObservedValue) { _cached_decoder_for_ObservedValue = $._decode_inextensible_choice<ObservedValue>({
     "UNIVERSAL 2": [ "integer", $._decodeInteger ],
     "UNIVERSAL 9": [ "real", $._decodeReal ]
@@ -59,7 +59,7 @@ let _cached_encoder_for_ObservedValue: $.ASN1Encoder<ObservedValue> | null = nul
  * @returns {_Element} The ObservedValue, encoded as an ASN.1 Element.
  */
 export
-function _encode_ObservedValue (value: ObservedValue, elGetter: $.ASN1Encoder<ObservedValue>) {
+function _encode_ObservedValue (value: ObservedValue, elGetter: $.ASN1Encoder<ObservedValue>): _Element {
     if (!_cached_encoder_for_ObservedValue) { _cached_encoder_for_ObservedValue = $._encode_choice<ObservedValue>({
     "integer": $._encodeInteger,
     "real": $._encodeReal,

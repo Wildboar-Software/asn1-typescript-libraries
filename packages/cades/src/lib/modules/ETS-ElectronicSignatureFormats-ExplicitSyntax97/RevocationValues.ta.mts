@@ -123,7 +123,7 @@ let _cached_decoder_for_RevocationValues: $.ASN1Decoder<RevocationValues> | null
  * @returns {RevocationValues} The decoded data structure.
  */
 export
-function _decode_RevocationValues (el: _Element) {
+function _decode_RevocationValues (el: _Element): RevocationValues {
     if (!_cached_decoder_for_RevocationValues) { _cached_decoder_for_RevocationValues = function (el: _Element): RevocationValues {
     let crlVals: OPTIONAL<CertificateList[]>;
     let ocspVals: OPTIONAL<BasicOCSPResponse[]>;
@@ -158,7 +158,7 @@ let _cached_encoder_for_RevocationValues: $.ASN1Encoder<RevocationValues> | null
  * @returns {_Element} The RevocationValues, encoded as an ASN.1 Element.
  */
 export
-function _encode_RevocationValues (value: RevocationValues, elGetter: $.ASN1Encoder<RevocationValues>) {
+function _encode_RevocationValues (value: RevocationValues, elGetter: $.ASN1Encoder<RevocationValues>): _Element {
     if (!_cached_encoder_for_RevocationValues) { _cached_encoder_for_RevocationValues = function (value: RevocationValues): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

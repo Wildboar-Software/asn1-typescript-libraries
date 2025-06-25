@@ -157,7 +157,7 @@ let _cached_decoder_for_PDV_list: $.ASN1Decoder<PDV_list> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PDV_list} The decoded data structure.
  */
-export function _decode_PDV_list(el: _Element) {
+export function _decode_PDV_list(el: _Element): PDV_list {
     if (!_cached_decoder_for_PDV_list) {
         _cached_decoder_for_PDV_list = function (el: _Element): PDV_list {
             let transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
@@ -210,7 +210,7 @@ let _cached_encoder_for_PDV_list: $.ASN1Encoder<PDV_list> | null = null;
 export function _encode_PDV_list(
     value: PDV_list,
     elGetter: $.ASN1Encoder<PDV_list>
-) {
+): _Element {
     if (!_cached_encoder_for_PDV_list) {
         _cached_encoder_for_PDV_list = function (
             value: PDV_list        ): _Element {

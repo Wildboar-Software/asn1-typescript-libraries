@@ -119,7 +119,7 @@ let _cached_decoder_for_GUIProgressEvent_AcknowledgementParams: $.ASN1Decoder<GU
  * @param {_Element} el The element being decoded.
  * @returns {GUIProgressEvent_AcknowledgementParams} The decoded data structure.
  */
-export function _decode_GUIProgressEvent_AcknowledgementParams(el: _Element) {
+export function _decode_GUIProgressEvent_AcknowledgementParams(el: _Element): GUIProgressEvent_AcknowledgementParams {
   if (!_cached_decoder_for_GUIProgressEvent_AcknowledgementParams) {
     _cached_decoder_for_GUIProgressEvent_AcknowledgementParams = function (
       el: _Element
@@ -155,7 +155,7 @@ let _cached_encoder_for_GUIProgressEvent_AcknowledgementParams: $.ASN1Encoder<GU
 export function _encode_GUIProgressEvent_AcknowledgementParams(
   value: GUIProgressEvent_AcknowledgementParams,
   elGetter: $.ASN1Encoder<GUIProgressEvent_AcknowledgementParams>
-) {
+): _Element {
   if (!_cached_encoder_for_GUIProgressEvent_AcknowledgementParams) {
     _cached_encoder_for_GUIProgressEvent_AcknowledgementParams = function (
       value: GUIProgressEvent_AcknowledgementParams    ): _Element {

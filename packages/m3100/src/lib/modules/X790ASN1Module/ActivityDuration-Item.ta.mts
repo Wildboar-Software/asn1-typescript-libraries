@@ -156,7 +156,7 @@ let _cached_decoder_for_ActivityDuration_Item: $.ASN1Decoder<ActivityDuration_It
  * @param {_Element} el The element being decoded.
  * @returns {ActivityDuration_Item} The decoded data structure.
  */
-export function _decode_ActivityDuration_Item(el: _Element) {
+export function _decode_ActivityDuration_Item(el: _Element): ActivityDuration_Item {
     if (!_cached_decoder_for_ActivityDuration_Item) {
         _cached_decoder_for_ActivityDuration_Item = function (
             el: _Element
@@ -218,7 +218,7 @@ let _cached_encoder_for_ActivityDuration_Item: $.ASN1Encoder<ActivityDuration_It
 export function _encode_ActivityDuration_Item(
     value: ActivityDuration_Item,
     elGetter: $.ASN1Encoder<ActivityDuration_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_ActivityDuration_Item) {
         _cached_encoder_for_ActivityDuration_Item = function (
             value: ActivityDuration_Item        ): _Element {

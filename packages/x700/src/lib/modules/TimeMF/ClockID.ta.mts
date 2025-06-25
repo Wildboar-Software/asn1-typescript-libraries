@@ -35,7 +35,7 @@ let _cached_decoder_for_ClockID: $.ASN1Decoder<ClockID> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ClockID} The decoded data structure.
  */
-export function _decode_ClockID(el: _Element) {
+export function _decode_ClockID(el: _Element): ClockID {
     if (!_cached_decoder_for_ClockID) {
         _cached_decoder_for_ClockID = _decode_SimpleNameType;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ClockID: $.ASN1Encoder<ClockID> | null = null;
 export function _encode_ClockID(
     value: ClockID,
     elGetter: $.ASN1Encoder<ClockID>
-) {
+): _Element {
     if (!_cached_encoder_for_ClockID) {
         _cached_encoder_for_ClockID = _encode_SimpleNameType;
     }

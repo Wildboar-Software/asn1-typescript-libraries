@@ -122,7 +122,7 @@ let _cached_decoder_for_Envelope: $.ASN1Decoder<Envelope> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Envelope} The decoded data structure.
  */
-export function _decode_Envelope(el: _Element) {
+export function _decode_Envelope(el: _Element): Envelope {
   if (!_cached_decoder_for_Envelope) {
     _cached_decoder_for_Envelope = function (el: _Element): Envelope {
       const sequence: _Element[] = el.sequence;
@@ -157,7 +157,7 @@ let _cached_encoder_for_Envelope: $.ASN1Encoder<Envelope> | null = null;
 export function _encode_Envelope(
   value: Envelope,
   elGetter: $.ASN1Encoder<Envelope>
-) {
+): _Element {
   if (!_cached_encoder_for_Envelope) {
     _cached_encoder_for_Envelope = function (
       value: Envelope    ): _Element {

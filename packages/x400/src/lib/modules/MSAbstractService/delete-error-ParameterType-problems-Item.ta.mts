@@ -121,7 +121,7 @@ let _cached_decoder_for_delete_error_ParameterType_problems_Item: $.ASN1Decoder<
  * @param {_Element} el The element being decoded.
  * @returns {delete_error_ParameterType_problems_Item} The decoded data structure.
  */
-export function _decode_delete_error_ParameterType_problems_Item(el: _Element) {
+export function _decode_delete_error_ParameterType_problems_Item(el: _Element): delete_error_ParameterType_problems_Item {
     if (!_cached_decoder_for_delete_error_ParameterType_problems_Item) {
         _cached_decoder_for_delete_error_ParameterType_problems_Item = function (
             el: _Element
@@ -171,7 +171,7 @@ let _cached_encoder_for_delete_error_ParameterType_problems_Item: $.ASN1Encoder<
 export function _encode_delete_error_ParameterType_problems_Item(
     value: delete_error_ParameterType_problems_Item,
     elGetter: $.ASN1Encoder<delete_error_ParameterType_problems_Item>
-) {
+): _Element {
     if (!_cached_encoder_for_delete_error_ParameterType_problems_Item) {
         _cached_encoder_for_delete_error_ParameterType_problems_Item = function (
             value: delete_error_ParameterType_problems_Item        ): _Element {

@@ -153,7 +153,7 @@ let _cached_decoder_for_ManufacturerIdentification: $.ASN1Decoder<ManufacturerId
  * @param {_Element} el The element being decoded.
  * @returns {ManufacturerIdentification} The decoded data structure.
  */
-export function _decode_ManufacturerIdentification(el: _Element) {
+export function _decode_ManufacturerIdentification(el: _Element): ManufacturerIdentification {
     if (!_cached_decoder_for_ManufacturerIdentification) {
         _cached_decoder_for_ManufacturerIdentification = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_ManufacturerIdentification: $.ASN1Encoder<ManufacturerId
 export function _encode_ManufacturerIdentification(
     value: ManufacturerIdentification,
     elGetter: $.ASN1Encoder<ManufacturerIdentification>
-) {
+): _Element {
     if (!_cached_encoder_for_ManufacturerIdentification) {
         _cached_encoder_for_ManufacturerIdentification = function (
             value: ManufacturerIdentification        ): _Element {

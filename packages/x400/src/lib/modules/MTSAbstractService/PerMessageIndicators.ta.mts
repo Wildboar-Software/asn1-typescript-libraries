@@ -156,7 +156,7 @@ let _cached_decoder_for_PerMessageIndicators: $.ASN1Decoder<PerMessageIndicators
  * @param {_Element} el The element being decoded.
  * @returns {PerMessageIndicators} The decoded data structure.
  */
-export function _decode_PerMessageIndicators(el: _Element) {
+export function _decode_PerMessageIndicators(el: _Element): PerMessageIndicators {
     if (!_cached_decoder_for_PerMessageIndicators) {
         _cached_decoder_for_PerMessageIndicators = $._decode_implicit<PerMessageIndicators>(
             () => $._decodeBitString
@@ -177,7 +177,7 @@ let _cached_encoder_for_PerMessageIndicators: $.ASN1Encoder<PerMessageIndicators
 export function _encode_PerMessageIndicators(
     value: PerMessageIndicators,
     elGetter: $.ASN1Encoder<PerMessageIndicators>
-) {
+): _Element {
     if (!_cached_encoder_for_PerMessageIndicators) {
         _cached_encoder_for_PerMessageIndicators = $._encode_implicit(
             _TagClass.application,

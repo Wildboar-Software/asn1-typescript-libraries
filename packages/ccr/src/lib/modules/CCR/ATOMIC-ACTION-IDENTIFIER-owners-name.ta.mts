@@ -47,7 +47,7 @@ let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name: $.ASN1Decoder<ATOM
  * @param {_Element} el The element being decoded.
  * @returns {ATOMIC_ACTION_IDENTIFIER_owners_name} The decoded data structure.
  */
-export function _decode_ATOMIC_ACTION_IDENTIFIER_owners_name(el: _Element) {
+export function _decode_ATOMIC_ACTION_IDENTIFIER_owners_name(el: _Element): ATOMIC_ACTION_IDENTIFIER_owners_name {
   if (!_cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name) {
     _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name = $._decode_extensible_choice<ATOMIC_ACTION_IDENTIFIER_owners_name>(
       {
@@ -81,7 +81,7 @@ let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name: $.ASN1Encoder<ATOM
 export function _encode_ATOMIC_ACTION_IDENTIFIER_owners_name(
   value: ATOMIC_ACTION_IDENTIFIER_owners_name,
   elGetter: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER_owners_name>
-) {
+): _Element {
   if (!_cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name) {
     _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name = $._encode_choice<ATOMIC_ACTION_IDENTIFIER_owners_name>(
       {

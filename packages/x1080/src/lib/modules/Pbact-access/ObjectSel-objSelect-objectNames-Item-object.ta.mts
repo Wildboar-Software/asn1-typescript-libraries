@@ -43,7 +43,7 @@ let _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object: $.ASN1Decod
  */
 export function _decode_ObjectSel_objSelect_objectNames_Item_object(
     el: _Element
-) {
+): ObjectSel_objSelect_objectNames_Item_object {
     if (!_cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object) {
         _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object = $._decode_extensible_choice<ObjectSel_objSelect_objectNames_Item_object>(
             {
@@ -81,7 +81,7 @@ let _cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object: $.ASN1Encod
 export function _encode_ObjectSel_objSelect_objectNames_Item_object(
     value: ObjectSel_objSelect_objectNames_Item_object,
     elGetter: $.ASN1Encoder<ObjectSel_objSelect_objectNames_Item_object>
-) {
+): _Element {
     if (!_cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object) {
         _cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object = $._encode_choice<ObjectSel_objSelect_objectNames_Item_object>(
             {

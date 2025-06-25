@@ -157,7 +157,7 @@ let _cached_decoder_for_DeleteRequest: $.ASN1Decoder<DeleteRequest> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {DeleteRequest} The decoded data structure.
  */
-export function _decode_DeleteRequest(el: _Element) {
+export function _decode_DeleteRequest(el: _Element): DeleteRequest {
     if (!_cached_decoder_for_DeleteRequest) {
         _cached_decoder_for_DeleteRequest = function (
             el: _Element
@@ -223,7 +223,7 @@ let _cached_encoder_for_DeleteRequest: $.ASN1Encoder<DeleteRequest> | null = nul
 export function _encode_DeleteRequest(
     value: DeleteRequest,
     elGetter: $.ASN1Encoder<DeleteRequest>
-) {
+): _Element {
     if (!_cached_encoder_for_DeleteRequest) {
         _cached_encoder_for_DeleteRequest = function (
             value: DeleteRequest        ): _Element {

@@ -37,7 +37,7 @@ let _cached_decoder_for_InformationSize: $.ASN1Decoder<InformationSize> | null =
  * @param {_Element} el The element being decoded.
  * @returns {InformationSize} The decoded data structure.
  */
-export function _decode_InformationSize(el: _Element) {
+export function _decode_InformationSize(el: _Element): InformationSize {
     if (!_cached_decoder_for_InformationSize) {
         _cached_decoder_for_InformationSize = $._decode_inextensible_choice<InformationSize>(
             {
@@ -67,7 +67,7 @@ let _cached_encoder_for_InformationSize: $.ASN1Encoder<InformationSize> | null =
 export function _encode_InformationSize(
     value: InformationSize,
     elGetter: $.ASN1Encoder<InformationSize>
-) {
+): _Element {
     if (!_cached_encoder_for_InformationSize) {
         _cached_encoder_for_InformationSize = $._encode_choice<InformationSize>(
             {

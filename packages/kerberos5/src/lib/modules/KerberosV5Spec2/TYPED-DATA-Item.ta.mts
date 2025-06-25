@@ -119,7 +119,7 @@ let _cached_decoder_for_TYPED_DATA_Item: $.ASN1Decoder<TYPED_DATA_Item> | null =
  * @param {_Element} el The element being decoded.
  * @returns {TYPED_DATA_Item} The decoded data structure.
  */
-export function _decode_TYPED_DATA_Item(el: _Element) {
+export function _decode_TYPED_DATA_Item(el: _Element): TYPED_DATA_Item {
   if (!_cached_decoder_for_TYPED_DATA_Item) {
     _cached_decoder_for_TYPED_DATA_Item = function (
       el: _Element
@@ -167,7 +167,7 @@ let _cached_encoder_for_TYPED_DATA_Item: $.ASN1Encoder<TYPED_DATA_Item> | null =
 export function _encode_TYPED_DATA_Item(
   value: TYPED_DATA_Item,
   elGetter: $.ASN1Encoder<TYPED_DATA_Item>
-) {
+): _Element {
   if (!_cached_encoder_for_TYPED_DATA_Item) {
     _cached_encoder_for_TYPED_DATA_Item = function (
       value: TYPED_DATA_Item    ): _Element {

@@ -38,7 +38,7 @@ let _cached_decoder_for_PA_ENC_TIMESTAMP: $.ASN1Decoder<PA_ENC_TIMESTAMP> | null
  * @param {_Element} el The element being decoded.
  * @returns {PA_ENC_TIMESTAMP} The decoded data structure.
  */
-export function _decode_PA_ENC_TIMESTAMP(el: _Element) {
+export function _decode_PA_ENC_TIMESTAMP(el: _Element): PA_ENC_TIMESTAMP {
   if (!_cached_decoder_for_PA_ENC_TIMESTAMP) {
     _cached_decoder_for_PA_ENC_TIMESTAMP = _decode_EncryptedData;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_PA_ENC_TIMESTAMP: $.ASN1Encoder<PA_ENC_TIMESTAMP> | null
 export function _encode_PA_ENC_TIMESTAMP(
   value: PA_ENC_TIMESTAMP,
   elGetter: $.ASN1Encoder<PA_ENC_TIMESTAMP>
-) {
+): _Element {
   if (!_cached_encoder_for_PA_ENC_TIMESTAMP) {
     _cached_encoder_for_PA_ENC_TIMESTAMP = _encode_EncryptedData;
   }

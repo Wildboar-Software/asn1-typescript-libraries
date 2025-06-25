@@ -102,7 +102,7 @@ let _cached_decoder_for_auto_action_request_error_ParameterType: $.ASN1Decoder<a
  * @param {_Element} el The element being decoded.
  * @returns {auto_action_request_error_ParameterType} The decoded data structure.
  */
-export function _decode_auto_action_request_error_ParameterType(el: _Element) {
+export function _decode_auto_action_request_error_ParameterType(el: _Element): auto_action_request_error_ParameterType {
     if (!_cached_decoder_for_auto_action_request_error_ParameterType) {
         _cached_decoder_for_auto_action_request_error_ParameterType = function (
             el: _Element
@@ -150,7 +150,7 @@ let _cached_encoder_for_auto_action_request_error_ParameterType: $.ASN1Encoder<a
 export function _encode_auto_action_request_error_ParameterType(
     value: auto_action_request_error_ParameterType,
     elGetter: $.ASN1Encoder<auto_action_request_error_ParameterType>
-) {
+): _Element {
     if (!_cached_encoder_for_auto_action_request_error_ParameterType) {
         _cached_encoder_for_auto_action_request_error_ParameterType = function (
             value: auto_action_request_error_ParameterType        ): _Element {

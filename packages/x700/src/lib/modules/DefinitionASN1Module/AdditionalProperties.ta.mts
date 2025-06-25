@@ -35,7 +35,7 @@ let _cached_decoder_for_AdditionalProperties: $.ASN1Decoder<AdditionalProperties
  * @param {_Element} el The element being decoded.
  * @returns {AdditionalProperties} The decoded data structure.
  */
-export function _decode_AdditionalProperties(el: _Element) {
+export function _decode_AdditionalProperties(el: _Element): AdditionalProperties {
     if (!_cached_decoder_for_AdditionalProperties) {
         _cached_decoder_for_AdditionalProperties = $._decodeSetOf<ManagementExtension>(
             () => _decode_ManagementExtension
@@ -56,7 +56,7 @@ let _cached_encoder_for_AdditionalProperties: $.ASN1Encoder<AdditionalProperties
 export function _encode_AdditionalProperties(
     value: AdditionalProperties,
     elGetter: $.ASN1Encoder<AdditionalProperties>
-) {
+): _Element {
     if (!_cached_encoder_for_AdditionalProperties) {
         _cached_encoder_for_AdditionalProperties = $._encodeSetOf<ManagementExtension>(
             () => _encode_ManagementExtension,

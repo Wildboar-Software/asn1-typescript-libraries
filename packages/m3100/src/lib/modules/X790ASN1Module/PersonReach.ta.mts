@@ -246,7 +246,7 @@ let _cached_decoder_for_PersonReach: $.ASN1Decoder<PersonReach> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {PersonReach} The decoded data structure.
  */
-export function _decode_PersonReach(el: _Element) {
+export function _decode_PersonReach(el: _Element): PersonReach {
     if (!_cached_decoder_for_PersonReach) {
         _cached_decoder_for_PersonReach = function (el: _Element): PersonReach {
             let number_: OPTIONAL<PersonNumber> =
@@ -335,7 +335,7 @@ let _cached_encoder_for_PersonReach: $.ASN1Encoder<PersonReach> | null = null;
 export function _encode_PersonReach(
     value: PersonReach,
     elGetter: $.ASN1Encoder<PersonReach>
-) {
+): _Element {
     if (!_cached_encoder_for_PersonReach) {
         _cached_encoder_for_PersonReach = function (
             value: PersonReach        ): _Element {

@@ -41,7 +41,7 @@ let _cached_decoder_for_LastReq: $.ASN1Decoder<LastReq> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {LastReq} The decoded data structure.
  */
-export function _decode_LastReq(el: _Element) {
+export function _decode_LastReq(el: _Element): LastReq {
   if (!_cached_decoder_for_LastReq) {
     _cached_decoder_for_LastReq = $._decodeSequenceOf<LastReq_Item>(
       () => _decode_LastReq_Item
@@ -64,7 +64,7 @@ let _cached_encoder_for_LastReq: $.ASN1Encoder<LastReq> | null = null;
 export function _encode_LastReq(
   value: LastReq,
   elGetter: $.ASN1Encoder<LastReq>
-) {
+): _Element {
   if (!_cached_encoder_for_LastReq) {
     _cached_encoder_for_LastReq = $._encodeSequenceOf<LastReq_Item>(
       () => _encode_LastReq_Item,

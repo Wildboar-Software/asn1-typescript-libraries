@@ -33,7 +33,7 @@ let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformati
  * @returns {AdditionalInformation} The decoded data structure.
  */
 export
-function _decode_AdditionalInformation (el: _Element) {
+function _decode_AdditionalInformation (el: _Element): AdditionalInformation {
     if (!_cached_decoder_for_AdditionalInformation) { _cached_decoder_for_AdditionalInformation = $._decodeSetOf<ManagementExtension>(() => _decode_ManagementExtension); }
     return _cached_decoder_for_AdditionalInformation(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformati
  * @returns {_Element} The AdditionalInformation, encoded as an ASN.1 Element.
  */
 export
-function _encode_AdditionalInformation (value: AdditionalInformation, elGetter: $.ASN1Encoder<AdditionalInformation>) {
+function _encode_AdditionalInformation (value: AdditionalInformation, elGetter: $.ASN1Encoder<AdditionalInformation>): _Element {
     if (!_cached_encoder_for_AdditionalInformation) { _cached_encoder_for_AdditionalInformation = $._encodeSetOf<ManagementExtension>(() => _encode_ManagementExtension, $.BER); }
     return _cached_encoder_for_AdditionalInformation(value, elGetter);
 }

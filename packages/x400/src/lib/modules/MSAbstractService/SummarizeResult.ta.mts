@@ -172,7 +172,7 @@ let _cached_decoder_for_SummarizeResult: $.ASN1Decoder<SummarizeResult> | null =
  * @param {_Element} el The element being decoded.
  * @returns {SummarizeResult} The decoded data structure.
  */
-export function _decode_SummarizeResult(el: _Element) {
+export function _decode_SummarizeResult(el: _Element): SummarizeResult {
     if (!_cached_decoder_for_SummarizeResult) {
         _cached_decoder_for_SummarizeResult = function (
             el: _Element
@@ -241,7 +241,7 @@ let _cached_encoder_for_SummarizeResult: $.ASN1Encoder<SummarizeResult> | null =
 export function _encode_SummarizeResult(
     value: SummarizeResult,
     elGetter: $.ASN1Encoder<SummarizeResult>
-) {
+): _Element {
     if (!_cached_encoder_for_SummarizeResult) {
         _cached_encoder_for_SummarizeResult = function (
             value: SummarizeResult        ): _Element {

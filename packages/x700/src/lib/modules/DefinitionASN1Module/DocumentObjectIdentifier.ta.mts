@@ -38,7 +38,7 @@ let _cached_decoder_for_DocumentObjectIdentifier: $.ASN1Decoder<DocumentObjectId
  * @param {_Element} el The element being decoded.
  * @returns {DocumentObjectIdentifier} The decoded data structure.
  */
-export function _decode_DocumentObjectIdentifier(el: _Element) {
+export function _decode_DocumentObjectIdentifier(el: _Element): DocumentObjectIdentifier {
     if (!_cached_decoder_for_DocumentObjectIdentifier) {
         _cached_decoder_for_DocumentObjectIdentifier = _decode_OptionallyRegisteredAs;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_DocumentObjectIdentifier: $.ASN1Encoder<DocumentObjectId
 export function _encode_DocumentObjectIdentifier(
     value: DocumentObjectIdentifier,
     elGetter: $.ASN1Encoder<DocumentObjectIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_DocumentObjectIdentifier) {
         _cached_encoder_for_DocumentObjectIdentifier = _encode_OptionallyRegisteredAs;
     }

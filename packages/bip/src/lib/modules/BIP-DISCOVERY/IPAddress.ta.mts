@@ -40,7 +40,7 @@ let _cached_decoder_for_IPAddress: $.ASN1Decoder<IPAddress> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPAddress} The decoded data structure.
  */
-export function _decode_IPAddress(el: _Element) {
+export function _decode_IPAddress(el: _Element): IPAddress {
   if (!_cached_decoder_for_IPAddress) {
     _cached_decoder_for_IPAddress = $._decode_inextensible_choice<IPAddress>({
       'CONTEXT 0': ['ipv4', $._decodeOctetString],
@@ -64,7 +64,7 @@ let _cached_encoder_for_IPAddress: $.ASN1Encoder<IPAddress> | null = null;
 export function _encode_IPAddress(
   value: IPAddress,
   elGetter: $.ASN1Encoder<IPAddress>
-) {
+): _Element {
   if (!_cached_encoder_for_IPAddress) {
     _cached_encoder_for_IPAddress = $._encode_choice<IPAddress>(
       {

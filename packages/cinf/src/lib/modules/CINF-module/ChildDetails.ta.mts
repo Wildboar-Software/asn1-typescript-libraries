@@ -122,7 +122,7 @@ let _cached_decoder_for_ChildDetails: $.ASN1Decoder<ChildDetails> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ChildDetails} The decoded data structure.
  */
-export function _decode_ChildDetails(el: _Element) {
+export function _decode_ChildDetails(el: _Element): ChildDetails {
   if (!_cached_decoder_for_ChildDetails) {
     _cached_decoder_for_ChildDetails = function (el: _Element): ChildDetails {
       const sequence: _Element[] = el.sequence;
@@ -159,7 +159,7 @@ let _cached_encoder_for_ChildDetails: $.ASN1Encoder<ChildDetails> | null = null;
 export function _encode_ChildDetails(
   value: ChildDetails,
   elGetter: $.ASN1Encoder<ChildDetails>
-) {
+): _Element {
   if (!_cached_encoder_for_ChildDetails) {
     _cached_encoder_for_ChildDetails = function (
       value: ChildDetails    ): _Element {

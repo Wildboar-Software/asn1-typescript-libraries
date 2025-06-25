@@ -139,7 +139,7 @@ let _cached_decoder_for_ETYPE_INFO2_ENTRY: $.ASN1Decoder<ETYPE_INFO2_ENTRY> | nu
  * @param {_Element} el The element being decoded.
  * @returns {ETYPE_INFO2_ENTRY} The decoded data structure.
  */
-export function _decode_ETYPE_INFO2_ENTRY(el: _Element) {
+export function _decode_ETYPE_INFO2_ENTRY(el: _Element): ETYPE_INFO2_ENTRY {
   if (!_cached_decoder_for_ETYPE_INFO2_ENTRY) {
     _cached_decoder_for_ETYPE_INFO2_ENTRY = function (
       el: _Element
@@ -194,7 +194,7 @@ let _cached_encoder_for_ETYPE_INFO2_ENTRY: $.ASN1Encoder<ETYPE_INFO2_ENTRY> | nu
 export function _encode_ETYPE_INFO2_ENTRY(
   value: ETYPE_INFO2_ENTRY,
   elGetter: $.ASN1Encoder<ETYPE_INFO2_ENTRY>
-) {
+): _Element {
   if (!_cached_encoder_for_ETYPE_INFO2_ENTRY) {
     _cached_encoder_for_ETYPE_INFO2_ENTRY = function (
       value: ETYPE_INFO2_ENTRY    ): _Element {

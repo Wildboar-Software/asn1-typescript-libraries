@@ -121,7 +121,7 @@ let _cached_decoder_for_Checksum: $.ASN1Decoder<Checksum> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Checksum} The decoded data structure.
  */
-export function _decode_Checksum(el: _Element) {
+export function _decode_Checksum(el: _Element): Checksum {
   if (!_cached_decoder_for_Checksum) {
     _cached_decoder_for_Checksum = function (el: _Element): Checksum {
       const sequence: _Element[] = el.sequence;
@@ -158,7 +158,7 @@ let _cached_encoder_for_Checksum: $.ASN1Encoder<Checksum> | null = null;
 export function _encode_Checksum(
   value: Checksum,
   elGetter: $.ASN1Encoder<Checksum>
-) {
+): _Element {
   if (!_cached_encoder_for_Checksum) {
     _cached_encoder_for_Checksum = function (
       value: Checksum    ): _Element {

@@ -113,7 +113,7 @@ let _cached_decoder_for_BioAPI_IDENTIFY_POPULATION: $.ASN1Decoder<BioAPI_IDENTIF
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_IDENTIFY_POPULATION} The decoded data structure.
  */
-export function _decode_BioAPI_IDENTIFY_POPULATION(el: _Element) {
+export function _decode_BioAPI_IDENTIFY_POPULATION(el: _Element): BioAPI_IDENTIFY_POPULATION {
   if (!_cached_decoder_for_BioAPI_IDENTIFY_POPULATION) {
     _cached_decoder_for_BioAPI_IDENTIFY_POPULATION = function (
       el: _Element
@@ -149,7 +149,7 @@ let _cached_encoder_for_BioAPI_IDENTIFY_POPULATION: $.ASN1Encoder<BioAPI_IDENTIF
 export function _encode_BioAPI_IDENTIFY_POPULATION(
   value: BioAPI_IDENTIFY_POPULATION,
   elGetter: $.ASN1Encoder<BioAPI_IDENTIFY_POPULATION>
-) {
+): _Element {
   if (!_cached_encoder_for_BioAPI_IDENTIFY_POPULATION) {
     _cached_encoder_for_BioAPI_IDENTIFY_POPULATION = function (
       value: BioAPI_IDENTIFY_POPULATION    ): _Element {

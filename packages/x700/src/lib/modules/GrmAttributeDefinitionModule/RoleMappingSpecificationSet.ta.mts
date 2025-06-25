@@ -35,7 +35,7 @@ let _cached_decoder_for_RoleMappingSpecificationSet: $.ASN1Decoder<RoleMappingSp
  * @param {_Element} el The element being decoded.
  * @returns {RoleMappingSpecificationSet} The decoded data structure.
  */
-export function _decode_RoleMappingSpecificationSet(el: _Element) {
+export function _decode_RoleMappingSpecificationSet(el: _Element): RoleMappingSpecificationSet {
     if (!_cached_decoder_for_RoleMappingSpecificationSet) {
         _cached_decoder_for_RoleMappingSpecificationSet = $._decodeSetOf<RoleMappingSpecification>(
             () => _decode_RoleMappingSpecification
@@ -56,7 +56,7 @@ let _cached_encoder_for_RoleMappingSpecificationSet: $.ASN1Encoder<RoleMappingSp
 export function _encode_RoleMappingSpecificationSet(
     value: RoleMappingSpecificationSet,
     elGetter: $.ASN1Encoder<RoleMappingSpecificationSet>
-) {
+): _Element {
     if (!_cached_encoder_for_RoleMappingSpecificationSet) {
         _cached_encoder_for_RoleMappingSpecificationSet = $._encodeSetOf<RoleMappingSpecification>(
             () => _encode_RoleMappingSpecification,

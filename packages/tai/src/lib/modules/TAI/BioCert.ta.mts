@@ -128,7 +128,7 @@ let _cached_decoder_for_BioCert: $.ASN1Decoder<BioCert> | null = null;
  * @returns {BioCert} The decoded data structure.
  */
 export
-function _decode_BioCert (el: _Element) {
+function _decode_BioCert (el: _Element): BioCert {
     if (!_cached_decoder_for_BioCert) { _cached_decoder_for_BioCert = function (el: _Element): BioCert {
     let baseCertificateID: OPTIONAL<IssuerSerial>;
     let entityName: OPTIONAL<GeneralNames>;
@@ -163,7 +163,7 @@ let _cached_encoder_for_BioCert: $.ASN1Encoder<BioCert> | null = null;
  * @returns {_Element} The BioCert, encoded as an ASN.1 Element.
  */
 export
-function _encode_BioCert (value: BioCert, elGetter: $.ASN1Encoder<BioCert>) {
+function _encode_BioCert (value: BioCert, elGetter: $.ASN1Encoder<BioCert>): _Element {
     if (!_cached_encoder_for_BioCert) { _cached_encoder_for_BioCert = function (value: BioCert): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

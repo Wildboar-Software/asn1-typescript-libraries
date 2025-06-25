@@ -159,7 +159,7 @@ let _cached_decoder_for_TeletexNonBasicParameters: $.ASN1Decoder<TeletexNonBasic
  * @param {_Element} el The element being decoded.
  * @returns {TeletexNonBasicParameters} The decoded data structure.
  */
-export function _decode_TeletexNonBasicParameters(el: _Element) {
+export function _decode_TeletexNonBasicParameters(el: _Element): TeletexNonBasicParameters {
     if (!_cached_decoder_for_TeletexNonBasicParameters) {
         _cached_decoder_for_TeletexNonBasicParameters = function (
             el: _Element
@@ -232,7 +232,7 @@ let _cached_encoder_for_TeletexNonBasicParameters: $.ASN1Encoder<TeletexNonBasic
 export function _encode_TeletexNonBasicParameters(
     value: TeletexNonBasicParameters,
     elGetter: $.ASN1Encoder<TeletexNonBasicParameters>
-) {
+): _Element {
     if (!_cached_encoder_for_TeletexNonBasicParameters) {
         _cached_encoder_for_TeletexNonBasicParameters = function (
             value: TeletexNonBasicParameters        ): _Element {

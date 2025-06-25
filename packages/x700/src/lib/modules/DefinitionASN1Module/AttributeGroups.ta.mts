@@ -37,7 +37,7 @@ let _cached_decoder_for_AttributeGroups: $.ASN1Decoder<AttributeGroups> | null =
  * @param {_Element} el The element being decoded.
  * @returns {AttributeGroups} The decoded data structure.
  */
-export function _decode_AttributeGroups(el: _Element) {
+export function _decode_AttributeGroups(el: _Element): AttributeGroups {
     if (!_cached_decoder_for_AttributeGroups) {
         _cached_decoder_for_AttributeGroups = $._decodeSetOf<AttributeGroups_Item>(
             () => _decode_AttributeGroups_Item
@@ -58,7 +58,7 @@ let _cached_encoder_for_AttributeGroups: $.ASN1Encoder<AttributeGroups> | null =
 export function _encode_AttributeGroups(
     value: AttributeGroups,
     elGetter: $.ASN1Encoder<AttributeGroups>
-) {
+): _Element {
     if (!_cached_encoder_for_AttributeGroups) {
         _cached_encoder_for_AttributeGroups = $._encodeSetOf<AttributeGroups_Item>(
             () => _encode_AttributeGroups_Item,

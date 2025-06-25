@@ -146,7 +146,7 @@ let _cached_decoder_for_ArchiveTimeStamp: $.ASN1Decoder<ArchiveTimeStamp> | null
  * @returns {ArchiveTimeStamp} The decoded data structure.
  */
 export
-function _decode_ArchiveTimeStamp (el: _Element) {
+function _decode_ArchiveTimeStamp (el: _Element): ArchiveTimeStamp {
     if (!_cached_decoder_for_ArchiveTimeStamp) { _cached_decoder_for_ArchiveTimeStamp = function (el: _Element): ArchiveTimeStamp {
     let digestAlgorithm: OPTIONAL<AlgorithmIdentifier>;
     let attributes: OPTIONAL<Attributes>;
@@ -186,7 +186,7 @@ let _cached_encoder_for_ArchiveTimeStamp: $.ASN1Encoder<ArchiveTimeStamp> | null
  * @returns {_Element} The ArchiveTimeStamp, encoded as an ASN.1 Element.
  */
 export
-function _encode_ArchiveTimeStamp (value: ArchiveTimeStamp, elGetter: $.ASN1Encoder<ArchiveTimeStamp>) {
+function _encode_ArchiveTimeStamp (value: ArchiveTimeStamp, elGetter: $.ASN1Encoder<ArchiveTimeStamp>): _Element {
     if (!_cached_encoder_for_ArchiveTimeStamp) { _cached_encoder_for_ArchiveTimeStamp = function (value: ArchiveTimeStamp): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

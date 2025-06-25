@@ -57,7 +57,7 @@ let _cached_decoder_for_BIPMessage_nature: $.ASN1Decoder<BIPMessage_nature> | nu
  * @param {_Element} el The element being decoded.
  * @returns {BIPMessage_nature} The decoded data structure.
  */
-export function _decode_BIPMessage_nature(el: _Element) {
+export function _decode_BIPMessage_nature(el: _Element): BIPMessage_nature {
   if (!_cached_decoder_for_BIPMessage_nature) {
     _cached_decoder_for_BIPMessage_nature = $._decode_inextensible_choice<BIPMessage_nature>(
       {
@@ -85,7 +85,7 @@ let _cached_encoder_for_BIPMessage_nature: $.ASN1Encoder<BIPMessage_nature> | nu
 export function _encode_BIPMessage_nature(
   value: BIPMessage_nature,
   elGetter: $.ASN1Encoder<BIPMessage_nature>
-) {
+): _Element {
   if (!_cached_encoder_for_BIPMessage_nature) {
     _cached_encoder_for_BIPMessage_nature = $._encode_choice<BIPMessage_nature>(
       {

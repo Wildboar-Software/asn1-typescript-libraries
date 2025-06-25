@@ -45,7 +45,7 @@ let _cached_decoder_for_AddResult: $.ASN1Decoder<AddResult> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {AddResult} The decoded data structure.
  */
-export function _decode_AddResult(el: _Element) {
+export function _decode_AddResult(el: _Element): AddResult {
     if (!_cached_decoder_for_AddResult) {
         _cached_decoder_for_AddResult = $._decode_extensible_choice<AddResult>({
             'CONTEXT 0': [
@@ -75,7 +75,7 @@ let _cached_encoder_for_AddResult: $.ASN1Encoder<AddResult> | null = null;
 export function _encode_AddResult(
     value: AddResult,
     elGetter: $.ASN1Encoder<AddResult>
-) {
+): _Element {
     if (!_cached_encoder_for_AddResult) {
         _cached_encoder_for_AddResult = $._encode_choice<AddResult>(
             {

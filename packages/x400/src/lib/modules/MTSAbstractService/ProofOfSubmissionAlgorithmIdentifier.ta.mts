@@ -35,7 +35,7 @@ let _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Decoder<Proo
  * @param {_Element} el The element being decoded.
  * @returns {ProofOfSubmissionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_ProofOfSubmissionAlgorithmIdentifier(el: _Element) {
+export function _decode_ProofOfSubmissionAlgorithmIdentifier(el: _Element): ProofOfSubmissionAlgorithmIdentifier {
     if (!_cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier) {
         _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Encoder<Proo
 export function _encode_ProofOfSubmissionAlgorithmIdentifier(
     value: ProofOfSubmissionAlgorithmIdentifier,
     elGetter: $.ASN1Encoder<ProofOfSubmissionAlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier) {
         _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

@@ -35,7 +35,7 @@ let _cached_decoder_for_PrimaryRecipientsSubfield: $.ASN1Decoder<PrimaryRecipien
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryRecipientsSubfield} The decoded data structure.
  */
-export function _decode_PrimaryRecipientsSubfield(el: _Element) {
+export function _decode_PrimaryRecipientsSubfield(el: _Element): PrimaryRecipientsSubfield {
     if (!_cached_decoder_for_PrimaryRecipientsSubfield) {
         _cached_decoder_for_PrimaryRecipientsSubfield = _decode_RecipientSpecifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_PrimaryRecipientsSubfield: $.ASN1Encoder<PrimaryRecipien
 export function _encode_PrimaryRecipientsSubfield(
     value: PrimaryRecipientsSubfield,
     elGetter: $.ASN1Encoder<PrimaryRecipientsSubfield>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryRecipientsSubfield) {
         _cached_encoder_for_PrimaryRecipientsSubfield = _encode_RecipientSpecifier;
     }

@@ -47,7 +47,7 @@ let _cached_decoder_for_CertOrEncCert: $.ASN1Decoder<CertOrEncCert> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {CertOrEncCert} The decoded data structure.
  */
-export function _decode_CertOrEncCert(el: _Element) {
+export function _decode_CertOrEncCert(el: _Element): CertOrEncCert {
   if (!_cached_decoder_for_CertOrEncCert) {
     _cached_decoder_for_CertOrEncCert = $._decode_inextensible_choice<CertOrEncCert>(
       {
@@ -79,7 +79,7 @@ let _cached_encoder_for_CertOrEncCert: $.ASN1Encoder<CertOrEncCert> | null = nul
 export function _encode_CertOrEncCert(
   value: CertOrEncCert,
   elGetter: $.ASN1Encoder<CertOrEncCert>
-) {
+): _Element {
   if (!_cached_encoder_for_CertOrEncCert) {
     _cached_encoder_for_CertOrEncCert = $._encode_choice<CertOrEncCert>(
       {

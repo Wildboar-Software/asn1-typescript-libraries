@@ -44,7 +44,7 @@ let _cached_decoder_for_Capacity: $.ASN1Decoder<Capacity> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Capacity} The decoded data structure.
  */
-export function _decode_Capacity(el: _Element) {
+export function _decode_Capacity(el: _Element): Capacity {
     if (!_cached_decoder_for_Capacity) {
         _cached_decoder_for_Capacity = $._decode_inextensible_choice<Capacity>({
             'CONTEXT 0': [
@@ -74,7 +74,7 @@ let _cached_encoder_for_Capacity: $.ASN1Encoder<Capacity> | null = null;
 export function _encode_Capacity(
     value: Capacity,
     elGetter: $.ASN1Encoder<Capacity>
-) {
+): _Element {
     if (!_cached_encoder_for_Capacity) {
         _cached_encoder_for_Capacity = $._encode_choice<Capacity>(
             {

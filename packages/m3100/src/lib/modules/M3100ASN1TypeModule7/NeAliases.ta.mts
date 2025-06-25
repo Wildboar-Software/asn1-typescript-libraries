@@ -35,7 +35,7 @@ let _cached_decoder_for_NeAliases: $.ASN1Decoder<NeAliases> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {NeAliases} The decoded data structure.
  */
-export function _decode_NeAliases(el: _Element) {
+export function _decode_NeAliases(el: _Element): NeAliases {
     if (!_cached_decoder_for_NeAliases) {
         _cached_decoder_for_NeAliases = $._decodeSetOf<GraphicString>(
             () => $._decodeGraphicString
@@ -58,7 +58,7 @@ let _cached_encoder_for_NeAliases: $.ASN1Encoder<NeAliases> | null = null;
 export function _encode_NeAliases(
     value: NeAliases,
     elGetter: $.ASN1Encoder<NeAliases>
-) {
+): _Element {
     if (!_cached_encoder_for_NeAliases) {
         _cached_encoder_for_NeAliases = $._encodeSetOf<GraphicString>(
             () => $._encodeGraphicString,

@@ -506,7 +506,7 @@ let _cached_decoder_for_Read_Attributes: $.ASN1Decoder<Read_Attributes> | null =
  * @param {_Element} el The element being decoded.
  * @returns {Read_Attributes} The decoded data structure.
  */
-export function _decode_Read_Attributes(el: _Element) {
+export function _decode_Read_Attributes(el: _Element): Read_Attributes {
   if (!_cached_decoder_for_Read_Attributes) {
     _cached_decoder_for_Read_Attributes = $._decode_implicit<Read_Attributes>(
       () =>
@@ -711,7 +711,7 @@ let _cached_encoder_for_Read_Attributes: $.ASN1Encoder<Read_Attributes> | null =
 export function _encode_Read_Attributes(
   value: Read_Attributes,
   elGetter: $.ASN1Encoder<Read_Attributes>
-) {
+): _Element {
   if (!_cached_encoder_for_Read_Attributes) {
     _cached_encoder_for_Read_Attributes = $._encode_implicit(
       _TagClass.application,

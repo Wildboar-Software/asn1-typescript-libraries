@@ -38,7 +38,7 @@ let _cached_decoder_for_GenRepContent: $.ASN1Decoder<GenRepContent> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {GenRepContent} The decoded data structure.
  */
-export function _decode_GenRepContent(el: _Element) {
+export function _decode_GenRepContent(el: _Element): GenRepContent {
   if (!_cached_decoder_for_GenRepContent) {
     _cached_decoder_for_GenRepContent = $._decodeSequenceOf<InfoTypeAndValue>(
       () => _decode_InfoTypeAndValue
@@ -61,7 +61,7 @@ let _cached_encoder_for_GenRepContent: $.ASN1Encoder<GenRepContent> | null = nul
 export function _encode_GenRepContent(
   value: GenRepContent,
   elGetter: $.ASN1Encoder<GenRepContent>
-) {
+): _Element {
   if (!_cached_encoder_for_GenRepContent) {
     _cached_encoder_for_GenRepContent = $._encodeSequenceOf<InfoTypeAndValue>(
       () => _encode_InfoTypeAndValue,

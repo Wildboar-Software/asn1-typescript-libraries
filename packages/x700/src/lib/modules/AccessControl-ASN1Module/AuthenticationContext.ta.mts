@@ -116,7 +116,7 @@ let _cached_decoder_for_AuthenticationContext: $.ASN1Decoder<AuthenticationConte
  * @param {_Element} el The element being decoded.
  * @returns {AuthenticationContext} The decoded data structure.
  */
-export function _decode_AuthenticationContext(el: _Element) {
+export function _decode_AuthenticationContext(el: _Element): AuthenticationContext {
     if (!_cached_decoder_for_AuthenticationContext) {
         _cached_decoder_for_AuthenticationContext = function (
             el: _Element
@@ -160,7 +160,7 @@ let _cached_encoder_for_AuthenticationContext: $.ASN1Encoder<AuthenticationConte
 export function _encode_AuthenticationContext(
     value: AuthenticationContext,
     elGetter: $.ASN1Encoder<AuthenticationContext>
-) {
+): _Element {
     if (!_cached_encoder_for_AuthenticationContext) {
         _cached_encoder_for_AuthenticationContext = function (
             value: AuthenticationContext        ): _Element {

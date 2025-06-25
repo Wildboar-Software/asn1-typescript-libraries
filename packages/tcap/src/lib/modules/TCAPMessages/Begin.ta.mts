@@ -135,7 +135,7 @@ let _cached_decoder_for_Begin: $.ASN1Decoder<Begin> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Begin} The decoded data structure.
  */
-export function _decode_Begin(el: _Element) {
+export function _decode_Begin(el: _Element): Begin {
   if (!_cached_decoder_for_Begin) {
     _cached_decoder_for_Begin = function (el: _Element): Begin {
       let otid!: OrigTransactionID;
@@ -179,7 +179,7 @@ let _cached_encoder_for_Begin: $.ASN1Encoder<Begin> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Begin, encoded as an ASN.1 Element.
  */
-export function _encode_Begin(value: Begin, elGetter: $.ASN1Encoder<Begin>) {
+export function _encode_Begin(value: Begin, elGetter: $.ASN1Encoder<Begin>): _Element {
   if (!_cached_encoder_for_Begin) {
     _cached_encoder_for_Begin = function (
       value: Begin    ): _Element {

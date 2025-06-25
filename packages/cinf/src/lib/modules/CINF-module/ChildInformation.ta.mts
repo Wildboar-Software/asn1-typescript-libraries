@@ -44,7 +44,7 @@ let _cached_decoder_for_ChildInformation: $.ASN1Decoder<ChildInformation> | null
  * @param {_Element} el The element being decoded.
  * @returns {ChildInformation} The decoded data structure.
  */
-export function _decode_ChildInformation(el: _Element) {
+export function _decode_ChildInformation(el: _Element): ChildInformation {
   if (!_cached_decoder_for_ChildInformation) {
     _cached_decoder_for_ChildInformation = $._decode_inextensible_choice<ChildInformation>(
       {
@@ -70,7 +70,7 @@ let _cached_encoder_for_ChildInformation: $.ASN1Encoder<ChildInformation> | null
 export function _encode_ChildInformation(
   value: ChildInformation,
   elGetter: $.ASN1Encoder<ChildInformation>
-) {
+): _Element {
   if (!_cached_encoder_for_ChildInformation) {
     _cached_encoder_for_ChildInformation = $._encode_choice<ChildInformation>(
       {

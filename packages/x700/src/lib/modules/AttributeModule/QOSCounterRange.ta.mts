@@ -35,7 +35,7 @@ let _cached_decoder_for_QOSCounterRange: $.ASN1Decoder<QOSCounterRange> | null =
  * @param {_Element} el The element being decoded.
  * @returns {QOSCounterRange} The decoded data structure.
  */
-export function _decode_QOSCounterRange(el: _Element) {
+export function _decode_QOSCounterRange(el: _Element): QOSCounterRange {
     if (!_cached_decoder_for_QOSCounterRange) {
         _cached_decoder_for_QOSCounterRange = _decode_QOSErrorCounter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_QOSCounterRange: $.ASN1Encoder<QOSCounterRange> | null =
 export function _encode_QOSCounterRange(
     value: QOSCounterRange,
     elGetter: $.ASN1Encoder<QOSCounterRange>
-) {
+): _Element {
     if (!_cached_encoder_for_QOSCounterRange) {
         _cached_encoder_for_QOSCounterRange = _encode_QOSErrorCounter;
     }

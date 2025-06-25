@@ -47,7 +47,7 @@ let _cached_decoder_for_SubordinateCircuitPackSoftwareLoad: $.ASN1Decoder<Subord
  * @param {_Element} el The element being decoded.
  * @returns {SubordinateCircuitPackSoftwareLoad} The decoded data structure.
  */
-export function _decode_SubordinateCircuitPackSoftwareLoad(el: _Element) {
+export function _decode_SubordinateCircuitPackSoftwareLoad(el: _Element): SubordinateCircuitPackSoftwareLoad {
     if (!_cached_decoder_for_SubordinateCircuitPackSoftwareLoad) {
         _cached_decoder_for_SubordinateCircuitPackSoftwareLoad = $._decode_inextensible_choice<SubordinateCircuitPackSoftwareLoad>(
             {
@@ -88,7 +88,7 @@ let _cached_encoder_for_SubordinateCircuitPackSoftwareLoad: $.ASN1Encoder<Subord
 export function _encode_SubordinateCircuitPackSoftwareLoad(
     value: SubordinateCircuitPackSoftwareLoad,
     elGetter: $.ASN1Encoder<SubordinateCircuitPackSoftwareLoad>
-) {
+): _Element {
     if (!_cached_encoder_for_SubordinateCircuitPackSoftwareLoad) {
         _cached_encoder_for_SubordinateCircuitPackSoftwareLoad = $._encode_choice<SubordinateCircuitPackSoftwareLoad>(
             {

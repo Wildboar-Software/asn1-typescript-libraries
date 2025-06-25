@@ -151,7 +151,7 @@ let _cached_decoder_for_ActivateReply: $.ASN1Decoder<ActivateReply> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {ActivateReply} The decoded data structure.
  */
-export function _decode_ActivateReply(el: _Element) {
+export function _decode_ActivateReply(el: _Element): ActivateReply {
     if (!_cached_decoder_for_ActivateReply) {
         _cached_decoder_for_ActivateReply = function (
             el: _Element
@@ -209,7 +209,7 @@ let _cached_encoder_for_ActivateReply: $.ASN1Encoder<ActivateReply> | null = nul
 export function _encode_ActivateReply(
     value: ActivateReply,
     elGetter: $.ASN1Encoder<ActivateReply>
-) {
+): _Element {
     if (!_cached_encoder_for_ActivateReply) {
         _cached_encoder_for_ActivateReply = function (
             value: ActivateReply        ): _Element {

@@ -39,7 +39,7 @@ let _cached_decoder_for_Digest: $.ASN1Decoder<Digest> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {Digest} The decoded data structure.
  */
-export function _decode_Digest(el: _Element) {
+export function _decode_Digest(el: _Element): Digest {
     if (!_cached_decoder_for_Digest) {
         _cached_decoder_for_Digest = _get_decoder_for_HASH<_Element>(
             $._decodeAny
@@ -62,7 +62,7 @@ let _cached_encoder_for_Digest: $.ASN1Encoder<Digest> | null = null;
 export function _encode_Digest(
     value: Digest,
     elGetter: $.ASN1Encoder<Digest>
-) {
+): _Element {
     if (!_cached_encoder_for_Digest) {
         _cached_encoder_for_Digest = _get_encoder_for_HASH<ASN1Element>(
             $._encodeAny

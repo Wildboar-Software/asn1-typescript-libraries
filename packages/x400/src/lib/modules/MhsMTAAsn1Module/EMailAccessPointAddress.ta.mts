@@ -45,7 +45,7 @@ let _cached_decoder_for_EMailAccessPointAddress: $.ASN1Decoder<EMailAccessPointA
  * @param {_Element} el The element being decoded.
  * @returns {EMailAccessPointAddress} The decoded data structure.
  */
-export function _decode_EMailAccessPointAddress(el: _Element) {
+export function _decode_EMailAccessPointAddress(el: _Element): EMailAccessPointAddress {
     if (!_cached_decoder_for_EMailAccessPointAddress) {
         _cached_decoder_for_EMailAccessPointAddress = $._decode_inextensible_choice<EMailAccessPointAddress>(
             {
@@ -77,7 +77,7 @@ let _cached_encoder_for_EMailAccessPointAddress: $.ASN1Encoder<EMailAccessPointA
 export function _encode_EMailAccessPointAddress(
     value: EMailAccessPointAddress,
     elGetter: $.ASN1Encoder<EMailAccessPointAddress>
-) {
+): _Element {
     if (!_cached_encoder_for_EMailAccessPointAddress) {
         _cached_encoder_for_EMailAccessPointAddress = $._encode_choice<EMailAccessPointAddress>(
             {

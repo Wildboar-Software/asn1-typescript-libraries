@@ -151,7 +151,7 @@ let _cached_decoder_for_FirstPdvExplicit: $.ASN1Decoder<FirstPdvExplicit> | null
  * @param {_Element} el The element being decoded.
  * @returns {FirstPdvExplicit} The decoded data structure.
  */
-export function _decode_FirstPdvExplicit(el: _Element) {
+export function _decode_FirstPdvExplicit(el: _Element): FirstPdvExplicit {
   if (!_cached_decoder_for_FirstPdvExplicit) {
     _cached_decoder_for_FirstPdvExplicit = function (
       el: _Element
@@ -207,7 +207,7 @@ let _cached_encoder_for_FirstPdvExplicit: $.ASN1Encoder<FirstPdvExplicit> | null
 export function _encode_FirstPdvExplicit(
   value: FirstPdvExplicit,
   elGetter: $.ASN1Encoder<FirstPdvExplicit>
-) {
+): _Element {
   if (!_cached_encoder_for_FirstPdvExplicit) {
     _cached_encoder_for_FirstPdvExplicit = function (
       value: FirstPdvExplicit    ): _Element {

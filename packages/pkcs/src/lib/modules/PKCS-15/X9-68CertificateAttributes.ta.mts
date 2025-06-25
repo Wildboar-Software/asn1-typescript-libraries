@@ -110,7 +110,7 @@ let _cached_decoder_for_X9_68CertificateAttributes: $.ASN1Decoder<X9_68Certifica
  * @param {_Element} el The element being decoded.
  * @returns {X9_68CertificateAttributes} The decoded data structure.
  */
-export function _decode_X9_68CertificateAttributes(el: _Element) {
+export function _decode_X9_68CertificateAttributes(el: _Element): X9_68CertificateAttributes {
     if (!_cached_decoder_for_X9_68CertificateAttributes) {
         _cached_decoder_for_X9_68CertificateAttributes = function (
             el: _Element
@@ -148,7 +148,7 @@ let _cached_encoder_for_X9_68CertificateAttributes: $.ASN1Encoder<X9_68Certifica
 export function _encode_X9_68CertificateAttributes(
     value: X9_68CertificateAttributes,
     elGetter: $.ASN1Encoder<X9_68CertificateAttributes>
-) {
+): _Element {
     if (!_cached_encoder_for_X9_68CertificateAttributes) {
         _cached_encoder_for_X9_68CertificateAttributes = function (
             value: X9_68CertificateAttributes        ): _Element {

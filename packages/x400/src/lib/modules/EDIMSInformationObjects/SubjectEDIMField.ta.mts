@@ -35,7 +35,7 @@ let _cached_decoder_for_SubjectEDIMField: $.ASN1Decoder<SubjectEDIMField> | null
  * @param {_Element} el The element being decoded.
  * @returns {SubjectEDIMField} The decoded data structure.
  */
-export function _decode_SubjectEDIMField(el: _Element) {
+export function _decode_SubjectEDIMField(el: _Element): SubjectEDIMField {
     if (!_cached_decoder_for_SubjectEDIMField) {
         _cached_decoder_for_SubjectEDIMField = _decode_EDIMIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_SubjectEDIMField: $.ASN1Encoder<SubjectEDIMField> | null
 export function _encode_SubjectEDIMField(
     value: SubjectEDIMField,
     elGetter: $.ASN1Encoder<SubjectEDIMField>
-) {
+): _Element {
     if (!_cached_encoder_for_SubjectEDIMField) {
         _cached_encoder_for_SubjectEDIMField = _encode_EDIMIdentifier;
     }

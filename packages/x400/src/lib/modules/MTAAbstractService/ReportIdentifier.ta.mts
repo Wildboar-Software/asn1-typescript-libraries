@@ -35,7 +35,7 @@ let _cached_decoder_for_ReportIdentifier: $.ASN1Decoder<ReportIdentifier> | null
  * @param {_Element} el The element being decoded.
  * @returns {ReportIdentifier} The decoded data structure.
  */
-export function _decode_ReportIdentifier(el: _Element) {
+export function _decode_ReportIdentifier(el: _Element): ReportIdentifier {
     if (!_cached_decoder_for_ReportIdentifier) {
         _cached_decoder_for_ReportIdentifier = _decode_MTSIdentifier;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_ReportIdentifier: $.ASN1Encoder<ReportIdentifier> | null
 export function _encode_ReportIdentifier(
     value: ReportIdentifier,
     elGetter: $.ASN1Encoder<ReportIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_ReportIdentifier) {
         _cached_encoder_for_ReportIdentifier = _encode_MTSIdentifier;
     }

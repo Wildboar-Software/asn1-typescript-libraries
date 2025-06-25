@@ -203,7 +203,7 @@ let _cached_decoder_for_EncryptionToken: $.ASN1Decoder<EncryptionToken> | null =
  * @param {_Element} el The element being decoded.
  * @returns {EncryptionToken} The decoded data structure.
  */
-export function _decode_EncryptionToken(el: _Element) {
+export function _decode_EncryptionToken(el: _Element): EncryptionToken {
     if (!_cached_decoder_for_EncryptionToken) {
         _cached_decoder_for_EncryptionToken = function (
             el: _Element
@@ -285,7 +285,7 @@ let _cached_encoder_for_EncryptionToken: $.ASN1Encoder<EncryptionToken> | null =
 export function _encode_EncryptionToken(
     value: EncryptionToken,
     elGetter: $.ASN1Encoder<EncryptionToken>
-) {
+): _Element {
     if (!_cached_encoder_for_EncryptionToken) {
         _cached_encoder_for_EncryptionToken = function (
             value: EncryptionToken        ): _Element {

@@ -35,7 +35,7 @@ let _cached_decoder_for_ContentTypes: $.ASN1Decoder<ContentTypes> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {ContentTypes} The decoded data structure.
  */
-export function _decode_ContentTypes(el: _Element) {
+export function _decode_ContentTypes(el: _Element): ContentTypes {
     if (!_cached_decoder_for_ContentTypes) {
         _cached_decoder_for_ContentTypes = $._decodeSetOf<ContentType>(
             () => _decode_ContentType
@@ -56,7 +56,7 @@ let _cached_encoder_for_ContentTypes: $.ASN1Encoder<ContentTypes> | null = null;
 export function _encode_ContentTypes(
     value: ContentTypes,
     elGetter: $.ASN1Encoder<ContentTypes>
-) {
+): _Element {
     if (!_cached_encoder_for_ContentTypes) {
         _cached_encoder_for_ContentTypes = $._encodeSetOf<ContentType>(
             () => _encode_ContentType,

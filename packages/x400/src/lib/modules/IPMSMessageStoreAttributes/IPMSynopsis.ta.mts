@@ -35,7 +35,7 @@ let _cached_decoder_for_IPMSynopsis: $.ASN1Decoder<IPMSynopsis> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {IPMSynopsis} The decoded data structure.
  */
-export function _decode_IPMSynopsis(el: _Element) {
+export function _decode_IPMSynopsis(el: _Element): IPMSynopsis {
     if (!_cached_decoder_for_IPMSynopsis) {
         _cached_decoder_for_IPMSynopsis = $._decodeSequenceOf<BodyPartSynopsis>(
             () => _decode_BodyPartSynopsis
@@ -56,7 +56,7 @@ let _cached_encoder_for_IPMSynopsis: $.ASN1Encoder<IPMSynopsis> | null = null;
 export function _encode_IPMSynopsis(
     value: IPMSynopsis,
     elGetter: $.ASN1Encoder<IPMSynopsis>
-) {
+): _Element {
     if (!_cached_encoder_for_IPMSynopsis) {
         _cached_encoder_for_IPMSynopsis = $._encodeSequenceOf<BodyPartSynopsis>(
             () => _encode_BodyPartSynopsis,

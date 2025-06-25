@@ -38,7 +38,7 @@ let _cached_decoder_for_LinkConnectionList: $.ASN1Decoder<LinkConnectionList> | 
  * @param {_Element} el The element being decoded.
  * @returns {LinkConnectionList} The decoded data structure.
  */
-export function _decode_LinkConnectionList(el: _Element) {
+export function _decode_LinkConnectionList(el: _Element): LinkConnectionList {
     if (!_cached_decoder_for_LinkConnectionList) {
         _cached_decoder_for_LinkConnectionList = _decode_ConnectionList;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_LinkConnectionList: $.ASN1Encoder<LinkConnectionList> | 
 export function _encode_LinkConnectionList(
     value: LinkConnectionList,
     elGetter: $.ASN1Encoder<LinkConnectionList>
-) {
+): _Element {
     if (!_cached_encoder_for_LinkConnectionList) {
         _cached_encoder_for_LinkConnectionList = _encode_ConnectionList;
     }

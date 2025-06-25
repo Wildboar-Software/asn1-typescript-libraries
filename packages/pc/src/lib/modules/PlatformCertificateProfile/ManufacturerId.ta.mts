@@ -102,7 +102,7 @@ let _cached_decoder_for_ManufacturerId: $.ASN1Decoder<ManufacturerId> | null = n
  * @returns {ManufacturerId} The decoded data structure.
  */
 export
-function _decode_ManufacturerId (el: _Element) {
+function _decode_ManufacturerId (el: _Element): ManufacturerId {
     if (!_cached_decoder_for_ManufacturerId) { _cached_decoder_for_ManufacturerId = function (el: _Element): ManufacturerId {
     const sequence: _Element[] = el.sequence;
     if (sequence.length < 1) {
@@ -129,7 +129,7 @@ let _cached_encoder_for_ManufacturerId: $.ASN1Encoder<ManufacturerId> | null = n
  * @returns {_Element} The ManufacturerId, encoded as an ASN.1 Element.
  */
 export
-function _encode_ManufacturerId (value: ManufacturerId, elGetter: $.ASN1Encoder<ManufacturerId>) {
+function _encode_ManufacturerId (value: ManufacturerId, elGetter: $.ASN1Encoder<ManufacturerId>): _Element {
     if (!_cached_encoder_for_ManufacturerId) { _cached_encoder_for_ManufacturerId = function (value: ManufacturerId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [

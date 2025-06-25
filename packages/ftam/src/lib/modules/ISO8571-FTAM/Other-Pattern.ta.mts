@@ -38,7 +38,7 @@ let _cached_decoder_for_Other_Pattern: $.ASN1Decoder<Other_Pattern> | null = nul
  * @param {_Element} el The element being decoded.
  * @returns {Other_Pattern} The decoded data structure.
  */
-export function _decode_Other_Pattern(el: _Element) {
+export function _decode_Other_Pattern(el: _Element): Other_Pattern {
   if (!_cached_decoder_for_Other_Pattern) {
     _cached_decoder_for_Other_Pattern = _decode_Equality_Comparision;
   }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Other_Pattern: $.ASN1Encoder<Other_Pattern> | null = nul
 export function _encode_Other_Pattern(
   value: Other_Pattern,
   elGetter: $.ASN1Encoder<Other_Pattern>
-) {
+): _Element {
   if (!_cached_encoder_for_Other_Pattern) {
     _cached_encoder_for_Other_Pattern = _encode_Equality_Comparision;
   }

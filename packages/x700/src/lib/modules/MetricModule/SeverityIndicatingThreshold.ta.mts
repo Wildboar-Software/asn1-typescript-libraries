@@ -144,7 +144,7 @@ let _cached_decoder_for_SeverityIndicatingThreshold: $.ASN1Decoder<SeverityIndic
  * @param {_Element} el The element being decoded.
  * @returns {SeverityIndicatingThreshold} The decoded data structure.
  */
-export function _decode_SeverityIndicatingThreshold(el: _Element) {
+export function _decode_SeverityIndicatingThreshold(el: _Element): SeverityIndicatingThreshold {
     if (!_cached_decoder_for_SeverityIndicatingThreshold) {
         _cached_decoder_for_SeverityIndicatingThreshold = function (
             el: _Element
@@ -193,7 +193,7 @@ let _cached_encoder_for_SeverityIndicatingThreshold: $.ASN1Encoder<SeverityIndic
 export function _encode_SeverityIndicatingThreshold(
     value: SeverityIndicatingThreshold,
     elGetter: $.ASN1Encoder<SeverityIndicatingThreshold>
-) {
+): _Element {
     if (!_cached_encoder_for_SeverityIndicatingThreshold) {
         _cached_encoder_for_SeverityIndicatingThreshold = function (
             value: SeverityIndicatingThreshold        ): _Element {

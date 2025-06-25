@@ -160,7 +160,7 @@ let _cached_decoder_for_SEUAbort: $.ASN1Decoder<SEUAbort> | null = null;
  * @param {_Element} el The element being decoded.
  * @returns {SEUAbort} The decoded data structure.
  */
-export function _decode_SEUAbort(el: _Element) {
+export function _decode_SEUAbort(el: _Element): SEUAbort {
   if (!_cached_decoder_for_SEUAbort) {
     _cached_decoder_for_SEUAbort = function (el: _Element): SEUAbort {
       let invocationId: OPTIONAL<InvocationId> =
@@ -210,7 +210,7 @@ let _cached_encoder_for_SEUAbort: $.ASN1Encoder<SEUAbort> | null = null;
 export function _encode_SEUAbort(
   value: SEUAbort,
   elGetter: $.ASN1Encoder<SEUAbort>
-) {
+): _Element {
   if (!_cached_encoder_for_SEUAbort) {
     _cached_encoder_for_SEUAbort = function (
       value: SEUAbort    ): _Element {

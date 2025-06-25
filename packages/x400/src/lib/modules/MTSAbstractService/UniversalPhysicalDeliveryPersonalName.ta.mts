@@ -35,7 +35,7 @@ let _cached_decoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Decoder<Uni
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPhysicalDeliveryPersonalName} The decoded data structure.
  */
-export function _decode_UniversalPhysicalDeliveryPersonalName(el: _Element) {
+export function _decode_UniversalPhysicalDeliveryPersonalName(el: _Element): UniversalPhysicalDeliveryPersonalName {
     if (!_cached_decoder_for_UniversalPhysicalDeliveryPersonalName) {
         _cached_decoder_for_UniversalPhysicalDeliveryPersonalName = _decode_UniversalPDSParameter;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Encoder<Uni
 export function _encode_UniversalPhysicalDeliveryPersonalName(
     value: UniversalPhysicalDeliveryPersonalName,
     elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryPersonalName>
-) {
+): _Element {
     if (!_cached_encoder_for_UniversalPhysicalDeliveryPersonalName) {
         _cached_encoder_for_UniversalPhysicalDeliveryPersonalName = _encode_UniversalPDSParameter;
     }

@@ -31,7 +31,7 @@ let _cached_decoder_for_RSASSA_AlgorithmIdentifier: $.ASN1Decoder<RSASSA_Algorit
  * @param {_Element} el The element being decoded.
  * @returns {RSASSA_AlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_RSASSA_AlgorithmIdentifier(el: _Element) {
+export function _decode_RSASSA_AlgorithmIdentifier(el: _Element): RSASSA_AlgorithmIdentifier {
     if (!_cached_decoder_for_RSASSA_AlgorithmIdentifier) {
         _cached_decoder_for_RSASSA_AlgorithmIdentifier = _decode_AlgorithmIdentifier;
     }
@@ -52,7 +52,7 @@ let _cached_encoder_for_RSASSA_AlgorithmIdentifier: $.ASN1Encoder<RSASSA_Algorit
 export function _encode_RSASSA_AlgorithmIdentifier(
     value: RSASSA_AlgorithmIdentifier,
     elGetter: $.ASN1Encoder<RSASSA_AlgorithmIdentifier>
-) {
+): _Element {
     if (!_cached_encoder_for_RSASSA_AlgorithmIdentifier) {
         _cached_encoder_for_RSASSA_AlgorithmIdentifier = _encode_AlgorithmIdentifier;
     }

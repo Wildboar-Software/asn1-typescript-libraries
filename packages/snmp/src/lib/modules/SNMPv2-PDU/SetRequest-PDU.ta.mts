@@ -33,7 +33,7 @@ let _cached_decoder_for_SetRequest_PDU: $.ASN1Decoder<SetRequest_PDU> | null = n
  * @returns {SetRequest_PDU} The decoded data structure.
  */
 export
-function _decode_SetRequest_PDU (el: _Element) {
+function _decode_SetRequest_PDU (el: _Element): SetRequest_PDU {
     if (!_cached_decoder_for_SetRequest_PDU) { _cached_decoder_for_SetRequest_PDU = $._decode_implicit<SetRequest_PDU>(() => _decode_PDU); }
     return _cached_decoder_for_SetRequest_PDU(el);
 }
@@ -48,7 +48,7 @@ let _cached_encoder_for_SetRequest_PDU: $.ASN1Encoder<SetRequest_PDU> | null = n
  * @returns {_Element} The SetRequest_PDU, encoded as an ASN.1 Element.
  */
 export
-function _encode_SetRequest_PDU (value: SetRequest_PDU, elGetter: $.ASN1Encoder<SetRequest_PDU>) {
+function _encode_SetRequest_PDU (value: SetRequest_PDU, elGetter: $.ASN1Encoder<SetRequest_PDU>): _Element {
     if (!_cached_encoder_for_SetRequest_PDU) { _cached_encoder_for_SetRequest_PDU = $._encode_implicit(_TagClass.context, 3, () => _encode_PDU, $.BER); }
     return _cached_encoder_for_SetRequest_PDU(value, elGetter);
 }

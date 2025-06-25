@@ -45,7 +45,7 @@ let _cached_decoder_for_CryptoInfos: $.ASN1Decoder<CryptoInfos> | null = null;
  * @returns {CryptoInfos} The decoded data structure.
  */
 export
-function _decode_CryptoInfos (el: _Element) {
+function _decode_CryptoInfos (el: _Element): CryptoInfos {
     if (!_cached_decoder_for_CryptoInfos) { _cached_decoder_for_CryptoInfos = $._decodeSequenceOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_CryptoInfos(el);
 }
@@ -62,7 +62,7 @@ let _cached_encoder_for_CryptoInfos: $.ASN1Encoder<CryptoInfos> | null = null;
  * @returns {_Element} The CryptoInfos, encoded as an ASN.1 Element.
  */
 export
-function _encode_CryptoInfos (value: CryptoInfos, elGetter: $.ASN1Encoder<CryptoInfos>) {
+function _encode_CryptoInfos (value: CryptoInfos, elGetter: $.ASN1Encoder<CryptoInfos>): _Element {
     if (!_cached_encoder_for_CryptoInfos) { _cached_encoder_for_CryptoInfos = $._encodeSequenceOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_CryptoInfos(value, elGetter);
 }

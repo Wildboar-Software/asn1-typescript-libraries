@@ -35,7 +35,7 @@ let _cached_decoder_for_OriginalContentIntegrityCheck: $.ASN1Decoder<OriginalCon
  * @param {_Element} el The element being decoded.
  * @returns {OriginalContentIntegrityCheck} The decoded data structure.
  */
-export function _decode_OriginalContentIntegrityCheck(el: _Element) {
+export function _decode_OriginalContentIntegrityCheck(el: _Element): OriginalContentIntegrityCheck {
     if (!_cached_decoder_for_OriginalContentIntegrityCheck) {
         _cached_decoder_for_OriginalContentIntegrityCheck = _decode_ContentIntegrityCheck;
     }
@@ -54,7 +54,7 @@ let _cached_encoder_for_OriginalContentIntegrityCheck: $.ASN1Encoder<OriginalCon
 export function _encode_OriginalContentIntegrityCheck(
     value: OriginalContentIntegrityCheck,
     elGetter: $.ASN1Encoder<OriginalContentIntegrityCheck>
-) {
+): _Element {
     if (!_cached_encoder_for_OriginalContentIntegrityCheck) {
         _cached_encoder_for_OriginalContentIntegrityCheck = _encode_ContentIntegrityCheck;
     }

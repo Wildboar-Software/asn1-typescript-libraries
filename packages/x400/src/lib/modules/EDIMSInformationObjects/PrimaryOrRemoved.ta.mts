@@ -41,7 +41,7 @@ let _cached_decoder_for_PrimaryOrRemoved: $.ASN1Decoder<PrimaryOrRemoved> | null
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryOrRemoved} The decoded data structure.
  */
-export function _decode_PrimaryOrRemoved(el: _Element) {
+export function _decode_PrimaryOrRemoved(el: _Element): PrimaryOrRemoved {
     if (!_cached_decoder_for_PrimaryOrRemoved) {
         _cached_decoder_for_PrimaryOrRemoved = $._decode_inextensible_choice<PrimaryOrRemoved>(
             {
@@ -73,7 +73,7 @@ let _cached_encoder_for_PrimaryOrRemoved: $.ASN1Encoder<PrimaryOrRemoved> | null
 export function _encode_PrimaryOrRemoved(
     value: PrimaryOrRemoved,
     elGetter: $.ASN1Encoder<PrimaryOrRemoved>
-) {
+): _Element {
     if (!_cached_encoder_for_PrimaryOrRemoved) {
         _cached_encoder_for_PrimaryOrRemoved = $._encode_choice<PrimaryOrRemoved>(
             {

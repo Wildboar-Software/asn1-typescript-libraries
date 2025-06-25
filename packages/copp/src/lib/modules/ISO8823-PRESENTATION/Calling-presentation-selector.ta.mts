@@ -38,7 +38,7 @@ let _cached_decoder_for_Calling_presentation_selector: $.ASN1Decoder<Calling_pre
  * @param {_Element} el The element being decoded.
  * @returns {Calling_presentation_selector} The decoded data structure.
  */
-export function _decode_Calling_presentation_selector(el: _Element) {
+export function _decode_Calling_presentation_selector(el: _Element): Calling_presentation_selector {
     if (!_cached_decoder_for_Calling_presentation_selector) {
         _cached_decoder_for_Calling_presentation_selector = _decode_Presentation_selector;
     }
@@ -59,7 +59,7 @@ let _cached_encoder_for_Calling_presentation_selector: $.ASN1Encoder<Calling_pre
 export function _encode_Calling_presentation_selector(
     value: Calling_presentation_selector,
     elGetter: $.ASN1Encoder<Calling_presentation_selector>
-) {
+): _Element {
     if (!_cached_encoder_for_Calling_presentation_selector) {
         _cached_encoder_for_Calling_presentation_selector = _encode_Presentation_selector;
     }

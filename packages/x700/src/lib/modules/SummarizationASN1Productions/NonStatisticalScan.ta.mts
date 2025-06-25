@@ -122,7 +122,7 @@ let _cached_decoder_for_NonStatisticalScan: $.ASN1Decoder<NonStatisticalScan> | 
  * @param {_Element} el The element being decoded.
  * @returns {NonStatisticalScan} The decoded data structure.
  */
-export function _decode_NonStatisticalScan(el: _Element) {
+export function _decode_NonStatisticalScan(el: _Element): NonStatisticalScan {
     if (!_cached_decoder_for_NonStatisticalScan) {
         _cached_decoder_for_NonStatisticalScan = function (
             el: _Element
@@ -168,7 +168,7 @@ let _cached_encoder_for_NonStatisticalScan: $.ASN1Encoder<NonStatisticalScan> | 
 export function _encode_NonStatisticalScan(
     value: NonStatisticalScan,
     elGetter: $.ASN1Encoder<NonStatisticalScan>
-) {
+): _Element {
     if (!_cached_encoder_for_NonStatisticalScan) {
         _cached_encoder_for_NonStatisticalScan = function (
             value: NonStatisticalScan        ): _Element {
