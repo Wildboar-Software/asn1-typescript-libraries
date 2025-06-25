@@ -1,3 +1,38 @@
+/**
+ * ASN.1 data structures for Association Control Service Element (ACSE) as
+ * defined in ITU-T Recommendation X.227 and X.227bis.
+ * 
+ * @example
+ * ```typescript
+ * // This is the PDU for setting up a new association.
+ * const acsePdu = new AARQ_apdu(
+ *     protocol_version,
+ *     aSO_context_name,
+ *     called_AP_title,
+ *     called_AE_qualifier,
+ *     called_AP_invocation_identifier,
+ *     called_AE_invocation_identifier,
+ *     calling_AP_title,
+ *     calling_AE_qualifier,
+ *     calling_AP_invocation_identifier,
+ *     calling_AE_invocation_identifier,
+ *     sender_acse_requirements,
+ *     mechanism_name,
+ *     calling_authentication_value,
+ *     aSO_context_name_list,
+ *     implementation_information,
+ *     p_context_definition_list,
+ *     called_asoi_tag,
+ *     calling_asoi_tag,
+ *     _unrecognizedExtensionsList,
+ *     user_information
+ * );
+ * const apduBytes = _encode_AARQ_apdu(acsePdu).toBytes();
+ * // Write the bytes to the network.
+ * ```
+ * 
+ * @module
+ */
 export * from './lib/modules/ACSE-1/AARE-apdu.ta.mjs';
 export * from './lib/modules/ACSE-1/AARQ-apdu.ta.mjs';
 export * from './lib/modules/ACSE-1/A-DT-apdu.ta.mjs';
