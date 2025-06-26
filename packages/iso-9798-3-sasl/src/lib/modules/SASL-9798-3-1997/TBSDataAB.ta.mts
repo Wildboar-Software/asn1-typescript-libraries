@@ -98,8 +98,8 @@ export
 const _root_component_type_list_1_spec_for_TBSDataAB: $.ComponentSpec[] = [
     new $.ComponentSpec("randomA", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("randomB", false, $.hasTag(_TagClass.universal, 4)),
-    /* FIXME: entityB COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: authID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("entityB", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("authID", true, $.hasTag(_TagClass.context, 1)),
 ];
 
 

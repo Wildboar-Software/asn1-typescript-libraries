@@ -74,7 +74,7 @@ export
 async function userWithinACIUserClass (
     tuple: ACDFTuple,
     user: NameAndOptionalUID | undefined | null,
-    authLevel: AuthenticationLevel, // FIXME: Not in JSDoc.
+    authLevel: AuthenticationLevel,
     entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,

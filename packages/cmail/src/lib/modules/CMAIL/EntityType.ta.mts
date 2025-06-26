@@ -155,8 +155,12 @@ export const _root_component_type_list_1_spec_for_EntityType: $.ComponentSpec[] 
     false,
     $.hasTag(_TagClass.context, 2)
   ),
-  ,
-  /* FIXME: emailAddress COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
+  new $.ComponentSpec(
+    'emailAddress',
+    false,
+    $.hasTag(_TagClass.context, 3)
+  ),
+  new $.ComponentSpec(
     'type',
     false,
     $.hasTag(_TagClass.context, 4)

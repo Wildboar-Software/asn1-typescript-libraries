@@ -60,10 +60,7 @@ function escapeATAV (str: string): string {
  */
 export
 function defaultValueEncoder (value: ASN1Element): string {
-    // FIXME: Why do you serialize then de-serialize?
-    const el = new BERElement();
-    el.fromBytes(value.toBytes());
-    return "#" + Array.from(el.toBytes())
+    return "#" + Array.from(value.toBytes())
         .map((byte) => byte.toString(16).padStart(2, "0"))
         .join("");
 }

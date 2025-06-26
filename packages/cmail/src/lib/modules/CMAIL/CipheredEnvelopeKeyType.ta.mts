@@ -96,12 +96,10 @@ export class CipheredEnvelopeKeyType {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CipheredEnvelopeKeyType: $.ComponentSpec[] = [
-  ,
-  ,
-  ,/* FIXME: algorithm COULD_NOT_RESOLVE_TYPE_DEF */
-/* FIXME: cipherededKey COULD_NOT_RESOLVE_TYPE_DEF */
-/* FIXME: encoding COULD_NOT_RESOLVE_TYPE_DEF */
-/* FIXME: keySize COULD_NOT_RESOLVE_TYPE_DEF */
+  new $.ComponentSpec("algorithm", false, $.hasTag(_TagClass.context, 0)),
+  new $.ComponentSpec("cipherededKey", false, $.hasTag(_TagClass.context, 1)),
+  new $.ComponentSpec("encoding", false, $.hasTag(_TagClass.context, 2)),
+  new $.ComponentSpec("keySize", false, $.hasTag(_TagClass.context, 3)),
 ];
 
 

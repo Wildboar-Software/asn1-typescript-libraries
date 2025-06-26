@@ -16,7 +16,6 @@ import {
   _encode_FilterItem,
 } from '../CMIP-1/FilterItem.ta.mjs';
 
-// TODO: CHECK_RECURSIVE_DEFINITION
 /**
  * @summary CMISFilter
  * @description

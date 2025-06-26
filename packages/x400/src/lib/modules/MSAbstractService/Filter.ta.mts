@@ -15,7 +15,7 @@ import {
     _decode_FilterItem,
     _encode_FilterItem,
 } from '../MSAbstractService/FilterItem.ta.mjs';
-// TODO: CHECK_RECURSIVE_DEFINITION
+
 /**
  * @summary Filter
  * @description

@@ -15,7 +15,7 @@ import {
     _decode_NoticeReference,
     _encode_NoticeReference,
 } from "../PKIX1Implicit93/NoticeReference.ta.mjs";
-// FIXME: Deduplicate this whole module.
+// TODO: Deduplicate this whole module.
 
 /**
  * @summary UserNotice

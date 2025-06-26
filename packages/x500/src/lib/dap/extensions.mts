@@ -263,7 +263,7 @@ const extensions: Record<string, ExtensionInfo> = {
             search: true,
             removeEntry: true,
         },
-        critical: CRITICAL, // FIXME: Varies per operation
+        critical: CRITICAL, // TODO: Varies per operation
     },
     familyReturn: {
         identifier: EXT_BIT_FAMILY_RETURN,

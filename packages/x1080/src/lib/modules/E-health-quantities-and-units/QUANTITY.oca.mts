@@ -12,6 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ENUMERATED,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';
@@ -94,7 +95,10 @@ export interface QUANTITY {
      * @summary &Modalities
      */
     readonly '&Modalities'?: OBJECT_IDENTIFIER;
-    // FIXME: &direction;
+    /**
+     * @summary &direction
+     */
+    readonly '&direction'?: ENUMERATED;
     /**
      * @summary &id
      */

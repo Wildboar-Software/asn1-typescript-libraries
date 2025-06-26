@@ -133,7 +133,11 @@ export const _root_component_type_list_1_spec_for_ArcAlarmDetail: $.ComponentSpe
         true,
         $.hasTag(_TagClass.universal, 10)
     ),
-    /* FIXME: eventTime COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec(
+        'eventTime',
+        true,
+        $.hasTag(_TagClass.universal, _UniversalType.generalizedTime)
+    ),
 ];
 
 

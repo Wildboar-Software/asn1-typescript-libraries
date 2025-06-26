@@ -186,9 +186,17 @@ export const _root_component_type_list_1_spec_for_AUTHENTICATEDDATA: $.Component
         false,
         $.hasTag(_TagClass.universal, 17)
     ),
-    ,
-    ,
-    /* FIXME: macAlgorithm COULD_NOT_RESOLVE_TYPE_DEF */ /* FIXME: digestAlgorithm COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
+    new $.ComponentSpec(
+        'macAlgorithm',
+        false,
+        $.hasTag(_TagClass.universal, 16)
+    ),
+    new $.ComponentSpec(
+        'digestAlgorithm',
+        true,
+        $.hasTag(_TagClass.context, 1)
+    ),
+    new $.ComponentSpec(
         'encapContentInfo',
         false,
         $.hasAnyTag

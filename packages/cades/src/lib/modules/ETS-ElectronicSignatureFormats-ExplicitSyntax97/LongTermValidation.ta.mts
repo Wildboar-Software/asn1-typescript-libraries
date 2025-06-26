@@ -27,7 +27,12 @@ import {
 /**
  * @summary LongTermValidation
  * @description
- *
+ * 
+ * **WARNING**: This ASN.1 `SEQUENCE` is not valid, because the tagging for
+ * `poeValue`, `extraCertificates`, and `extraRevocation` conflict with each other.
+ * There is no erratum for this, as far as I know, but this data structure is
+ * deprecated anyway.
+ * 
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +47,7 @@ import {
  * ```
  *
  * @class
+ * @deprecated in ETSI TS 101 733 - V2.2.1 (or earlier) in Section 6.5.1.
  */
 export
 class LongTermValidation {
@@ -102,9 +108,12 @@ class LongTermValidation {
 export
 const _root_component_type_list_1_spec_for_LongTermValidation: $.ComponentSpec[] = [
     new $.ComponentSpec("poeDate", false, $.hasTag(_TagClass.universal, 24)),
-    new $.ComponentSpec("poeValue", true, $.hasAnyTag),
-    /* FIXME: extraCertificates COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extraRevocation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("poeValue", true, $.or(
+        $.hasTag(_TagClass.context, 0),
+        $.hasTag(_TagClass.context, 1),
+    )),
+    new $.ComponentSpec("extraCertificates", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extraRevocation", true, $.hasTag(_TagClass.context, 1)),
 ];
 
 /**
@@ -149,10 +158,26 @@ function _decode_LongTermValidation (el: _Element): LongTermValidation {
     let extraCertificates: OPTIONAL<CertificateSet>;
     let extraRevocation: OPTIONAL<RevocationInfoChoices>;
     const callbacks: $.DecodingMap = {
-        "poeDate": (_el: _Element): void => { poeDate = $._decodeGeneralizedTime(_el); },
-        "poeValue": (_el: _Element): void => { poeValue = _decode_LongTermValidation_poeValue(_el); },
-        "extraCertificates": (_el: _Element): void => { extraCertificates = $._decode_implicit<CertificateSet>(() => _decode_CertificateSet)(_el); },
-        "extraRevocation": (_el: _Element): void => { extraRevocation = $._decode_implicit<RevocationInfoChoices>(() => _decode_RevocationInfoChoices)(_el); }
+        "poeDate": (_el: _Element): void => {
+            poeDate = $._decodeGeneralizedTime(_el);
+        },
+        "poeValue": (_el: _Element): void => {
+            try {
+                poeValue = _decode_LongTermValidation_poeValue(_el);
+            } catch {
+                if (_el.tagNumber === 0) {
+                    extraCertificates = $._decode_implicit<CertificateSet>(() => _decode_CertificateSet)(_el);
+                } else if (_el.tagNumber === 1) {
+                    extraRevocation = $._decode_implicit<RevocationInfoChoices>(() => _decode_RevocationInfoChoices)(_el);
+                }
+            }
+        },
+        "extraCertificates": (_el: _Element): void => {
+            extraCertificates = $._decode_implicit<CertificateSet>(() => _decode_CertificateSet)(_el);
+        },
+        "extraRevocation": (_el: _Element): void => {
+            extraRevocation = $._decode_implicit<RevocationInfoChoices>(() => _decode_RevocationInfoChoices)(_el);
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_LongTermValidation,

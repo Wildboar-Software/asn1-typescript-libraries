@@ -128,7 +128,7 @@ interface EvaluateFilterOptions {
  * ```
  *
  * @param filter The LDAP Filter by which to filter the entry.
- * @param dn The distinguished name of the entry. // TODO: Order
+ * @param dn The distinguished name of the entry. The order of RDNs does not matter.
  * @param entry The attributes of the entry.
  * @param options Despite the name, all fields of this object are not optional.
  * @returns `true` if the entry matched, `false` if it does not, or `undefined`
@@ -389,6 +389,7 @@ function evaluateFilter (
                             const decodedValue = valueDecoder(val);
                             return matcher(decodedAssertion, decodedValue);
                         }))
+                // TODO: This is the only place where the DN is used. Does that make sense?
                 || (mra.dnAttributes && dn
                     .some((rdn) => rdn
                         .some((atav) => mra.type_

@@ -30,8 +30,6 @@ const telephoneNumberSubstringsMatch: SubstringsMatcher = (
             const ass: string = directoryStringToString(str.final);
             return v.endsWith(ass);
         } else {
-            // FIXME: This is not the correct behavior. This should return UNDEFINED.
-            // We don't understand this match.
             return false;
         }
     });

@@ -135,8 +135,12 @@ export const _root_component_type_list_1_spec_for_DigitalPostmarkType: $.Compone
     false,
     $.hasTag(_TagClass.context, 1)
   ),
-  ,
-  /* FIXME: envelopeId COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
+  new $.ComponentSpec(
+    'envelopeId',
+    false,
+    $.hasTag(_TagClass.context, 2)
+  ),
+  new $.ComponentSpec(
     'deliveryType',
     false,
     $.hasTag(_TagClass.context, 3)

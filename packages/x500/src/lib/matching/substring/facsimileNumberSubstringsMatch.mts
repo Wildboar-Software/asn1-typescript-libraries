@@ -30,7 +30,6 @@ const facsimileNumberSubstringsMatch: SubstringsMatcher = (
             const ass: string = directoryStringToString(str.final);
             return v.endsWith(ass);
         } else {
-            // FIXME: This is not correct behavior. This should return UNDEFINED.
             return false;
         }
     });

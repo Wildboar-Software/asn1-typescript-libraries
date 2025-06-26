@@ -113,7 +113,7 @@ export * from "./lib/modules/ISIS/originatingL2LSPBufferSize-Default.va.mjs";
 export * from "./lib/modules/ISIS/originatingLSPBufferSizeMismatch.va.mjs";
 export * from "./lib/modules/ISIS/OriginatingLSPBufferSize.ta.mjs";
 export * from "./lib/modules/ISIS/OutputAdjacencies.ta.mjs";
-export * from "./lib/modules/ISIS/OverloadStateChange.ta.mjs"; // FIXME:
+export * from "./lib/modules/ISIS/OverloadStateChange.ta.mjs";
 export * from "./lib/modules/ISIS/ownLSPPurge.va.mjs";
 export * from "./lib/modules/ISIS/partialSNPInterval-Default.va.mjs";
 export * from "./lib/modules/ISIS/partitionVirtualLinkChange.va.mjs";

@@ -30,7 +30,7 @@ import {
   _decode_MatchingRuleAssertion,
   _encode_MatchingRuleAssertion,
 } from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs';
-// TODO: CHECK_RECURSIVE_DEFINITION
+
 /**
  * @summary Filter
  * @description

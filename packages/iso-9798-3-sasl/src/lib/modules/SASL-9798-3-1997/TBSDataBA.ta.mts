@@ -99,7 +99,7 @@ const _root_component_type_list_1_spec_for_TBSDataBA: $.ComponentSpec[] = [
     new $.ComponentSpec("randomB", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("randomA", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("randomC", false, $.hasTag(_TagClass.universal, 4)),
-    /* FIXME: entityA COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("entityA", true, $.hasAnyTag),
 ];
 
 

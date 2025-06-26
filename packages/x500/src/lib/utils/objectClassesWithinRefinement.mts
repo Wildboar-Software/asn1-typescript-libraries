@@ -1,7 +1,6 @@
 import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca.mjs";
 import type { Refinement } from "../modules/InformationFramework/Refinement.ta.mjs";
 
-// TODO: Re-write to use for loops?
 /**
  * @summary Determine whether object classes match a refinement
  * @description

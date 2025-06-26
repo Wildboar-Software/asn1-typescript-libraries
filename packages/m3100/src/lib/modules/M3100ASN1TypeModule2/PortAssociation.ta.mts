@@ -82,8 +82,16 @@ export class PortAssociation {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PortAssociation: $.ComponentSpec[] = [
-    ,/* FIXME: portId COULD_NOT_RESOLVE_TYPE_DEF */
-/* FIXME: portTrail COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("portId", false, $.or(
+        $.hasTag(_TagClass.universal, _UniversalType.integer),
+        $.hasTag(_TagClass.context, _UniversalType.graphicString),
+    )),
+    new $.ComponentSpec("portTrail", false, $.or(
+        $.hasTag(_TagClass.context, 2),
+        $.hasTag(_TagClass.context, 3),
+        $.hasTag(_TagClass.context, 4),
+        $.hasTag(_TagClass.universal, _UniversalType.nill),
+    )),
 ];
 
 

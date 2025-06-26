@@ -82,8 +82,8 @@ export class Application_Entity_Title {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_Application_Entity_Title: $.ComponentSpec[] = [
-    ,/* FIXME: ap-title COULD_NOT_RESOLVE_TYPE_DEF */
-/* FIXME: ae-qualifier COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("ap-title", false, $.hasAnyTag),
+    new $.ComponentSpec("ae-qualifier", false, $.hasAnyTag),
 ];
 
 /**

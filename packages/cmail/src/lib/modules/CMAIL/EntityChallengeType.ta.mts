@@ -86,7 +86,11 @@ export const _root_component_type_list_1_spec_for_EntityChallengeType: $.Compone
     false,
     $.hasTag(_TagClass.context, 0)
   ),
-  /* FIXME: signature COULD_NOT_RESOLVE_TYPE_DEF */
+  new $.ComponentSpec(
+    'signature',
+    false,
+    $.hasTag(_TagClass.context, 1)
+  ),
 ];
 
 

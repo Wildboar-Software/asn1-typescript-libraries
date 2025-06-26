@@ -70,7 +70,11 @@ export class ResponseType {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ResponseType: $.ComponentSpec[] = [
-  /* FIXME: algorithmIdentifier COULD_NOT_RESOLVE_TYPE_DEF */
+  new $.ComponentSpec(
+    'algorithmIdentifier',
+    false,
+    $.hasTag(_TagClass.context, 0)
+  ),
 ];
 
 

@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ENUMERATED,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
@@ -72,7 +73,12 @@ export interface INTERACTIVE_MESSAGE<
      * @summary &id
      */
     readonly '&id'?: INTEGER;
-    // FIXME: &direction;
+
+    /**
+     * @summary &direction
+     */
+    readonly '&direction'?: ENUMERATED;
+
     /**
      * @summary &Type
      */

@@ -16,7 +16,7 @@ import {
     _decode_RDNInfo,
     _encode_RDNInfo,
 } from '../DiscoveryASN1Module/RDNInfo.ta.mjs';
-// TODO: CHECK_RECURSIVE_DEFINITION
+
 /**
  * @summary NameTree
  * @description

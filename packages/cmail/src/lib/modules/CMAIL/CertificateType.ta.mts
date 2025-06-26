@@ -70,7 +70,7 @@ export class CertificateType {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertificateType: $.ComponentSpec[] = [
-  /* FIXME: encoding COULD_NOT_RESOLVE_TYPE_DEF */
+  new $.ComponentSpec("encoding", false, $.hasTag(_TagClass.context, 0)),
 ];
 
 

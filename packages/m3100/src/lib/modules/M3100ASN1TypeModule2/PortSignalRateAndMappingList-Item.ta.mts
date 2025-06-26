@@ -97,8 +97,15 @@ export class PortSignalRateAndMappingList_Item {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PortSignalRateAndMappingList_Item: $.ComponentSpec[] = [
-    ,
-    /* FIXME: portId COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
+    new $.ComponentSpec(
+        'portId',
+        false,
+        $.or(
+            $.hasTag(_TagClass.universal, _UniversalType.graphicString),
+            $.hasTag(_TagClass.universal, _UniversalType.integer),
+        )
+    ),
+    new $.ComponentSpec(
         'signalRate',
         false,
         $.hasAnyTag
