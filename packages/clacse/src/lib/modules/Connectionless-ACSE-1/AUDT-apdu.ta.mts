@@ -29,12 +29,12 @@ import {
     AP_title,
     _decode_AP_title,
     _encode_AP_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.mjs';
+} from '@wildboar/acse';
 import {
     AE_qualifier,
     _decode_AE_qualifier,
     _encode_AE_qualifier,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.mjs';
+} from '@wildboar/acse';
 import {
     AP_invocation_id,
     _decode_AP_invocation_id,
@@ -49,12 +49,12 @@ import {
     Mechanism_name,
     _decode_Mechanism_name,
     _encode_Mechanism_name,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta.mjs';
+} from '@wildboar/acse';
 import {
     Authentication_value,
     _decode_Authentication_value,
     _encode_Authentication_value,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta.mjs';
+} from '@wildboar/acse';
 import {
     Default_P_context,
     _decode_Default_P_context,

@@ -14,7 +14,7 @@ import {
   AE_title,
   _decode_AE_title,
   _encode_AE_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs';
+} from '@wildboar/acse';
 import {
   ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side,

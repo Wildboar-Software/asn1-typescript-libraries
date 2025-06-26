@@ -28,14 +28,14 @@ import {
 export type GroupBIT = BiometricInformationTemplate[]; // SetOfType
 
 
-export const _decode_GroupBIT = $._decode_implicit<GroupBIT>(() =>
+export const _decode_GroupBIT: $.ASN1Decoder<GroupBIT> = $._decode_implicit<GroupBIT>(() =>
   $._decodeSetOf<BiometricInformationTemplate>(
     () => _decode_BiometricInformationTemplate
   )
 );
 
 
-export const _encode_GroupBIT = $._encode_implicit(
+export const _encode_GroupBIT: $.ASN1Encoder<GroupBIT> = $._encode_implicit(
   _TagClass.application,
   97,
   () =>

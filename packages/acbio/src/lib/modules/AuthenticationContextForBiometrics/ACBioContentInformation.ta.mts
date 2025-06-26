@@ -117,7 +117,7 @@ export class ACBioContentInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_version() {
+    public static get _default_value_for_version(): Version {
         return v0;
     }
 }

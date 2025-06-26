@@ -9,22 +9,20 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import {
+import type {
     ATTRIBUTE,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     id_clearanceSponsor,
 } from "./id-clearanceSponsor.va.mjs";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
+} from "@wildboar/x500/SelectedAttributeTypes";
 import {
     caseIgnoreMatch,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
-
-
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 /**
  * @summary at_clearanceSponsor

@@ -11,9 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 
-
-
-
 /**
  * @summary id_clearanceSponsor
  * @description

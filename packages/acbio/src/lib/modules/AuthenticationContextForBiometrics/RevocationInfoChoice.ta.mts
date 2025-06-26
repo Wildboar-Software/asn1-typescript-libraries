@@ -14,7 +14,7 @@ import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import {
     OtherRevocationInfoFormat,
     _decode_OtherRevocationInfoFormat,

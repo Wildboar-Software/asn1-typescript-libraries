@@ -251,7 +251,7 @@ export const _extension_additions_list_spec_for_AUTHENTICATEDDATA: $.ComponentSp
  */
 export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
     _decode_EncapsulatedContentInfo: $.ASN1Decoder<EncapsulatedContentInfo>
-) {
+): $.ASN1Decoder<AUTHENTICATEDDATA<EncapsulatedContentInfo>> {
     return function (el: _Element): AUTHENTICATEDDATA<EncapsulatedContentInfo> {
         let version!: CMSVersion;
         let originatorInfo: OPTIONAL<OriginatorInfo>;
@@ -331,7 +331,7 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
  */
 export function _get_encoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
     _encode_EncapsulatedContentInfo: $.ASN1Encoder<EncapsulatedContentInfo>
-) {
+): $.ASN1Encoder<AUTHENTICATEDDATA<EncapsulatedContentInfo>> {
     return function (
         value: AUTHENTICATEDDATA<EncapsulatedContentInfo>    ): _Element {
         return $._encodeSequence(

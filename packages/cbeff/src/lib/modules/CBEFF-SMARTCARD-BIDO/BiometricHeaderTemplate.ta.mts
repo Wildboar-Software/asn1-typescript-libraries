@@ -143,7 +143,7 @@ class BiometricHeaderTemplate {
      * @static
      * @method
      */
-    public static get _default_value_for_patronHeaderVersion () { return new Uint8Array([ 0x01, 0x01 ]); }
+    public static get _default_value_for_patronHeaderVersion (): PatronHeaderVersion { return new Uint8Array([ 0x01, 0x01 ]); }
 }
 
 /**

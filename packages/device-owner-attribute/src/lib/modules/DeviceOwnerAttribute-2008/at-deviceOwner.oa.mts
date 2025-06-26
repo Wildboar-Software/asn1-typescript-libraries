@@ -11,11 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs";
+import { objectIdentifierMatch } from "@wildboar/x500/InformationFramework";
 import { id_deviceOwner } from "../DeviceOwnerAttribute-2008/id-deviceOwner.va.mjs";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-
-
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary at_deviceOwner
