@@ -5,13 +5,12 @@ import {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "@wildboar/ansi-x9-42/src/lib/modules/ANSI-X9-42/DomainParameters.ta.mjs";
+} from "@wildboar/ansi-x9-42";
 import {
     ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECDomainParameters.ta.mjs";
-
+} from "@wildboar/ansi-x9-62";
 
 /**
  * @summary DomainParams
@@ -21,8 +20,8 @@ import {
  *
  * ```asn1
  * DomainParams  ::=  CHOICE {
- * dhParams    [0] DomainParameters,
- * ecParams    [1] ECDomainParameters
+ *      dhParams    [0] DomainParameters,
+ *      ecParams    [1] ECDomainParameters
  * }
  * ```
  */
@@ -32,7 +31,6 @@ export type DomainParams =
 
 
 let _cached_decoder_for_DomainParams: $.ASN1Decoder<DomainParams> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainParams
@@ -62,9 +60,7 @@ export function _decode_DomainParams(el: _Element): DomainParams {
     return _cached_decoder_for_DomainParams(el);
 }
 
-
 let _cached_encoder_for_DomainParams: $.ASN1Encoder<DomainParams> | null = null;
-
 
 /**
  * @summary Encodes a(n) DomainParams into an ASN.1 Element.
@@ -98,6 +94,5 @@ export function _encode_DomainParams(
     }
     return _cached_encoder_for_DomainParams(value, elGetter);
 }
-
 
 /* eslint-enable */
