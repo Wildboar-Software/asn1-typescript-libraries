@@ -5,7 +5,7 @@ import {
     _encode_ContentType,
 } from "../CryptographicMessageSyntax-2010/ContentType.ta.mjs";
 import { id_contentType } from "../CryptographicMessageSyntax-2010/id-contentType.va.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary aa_contentType

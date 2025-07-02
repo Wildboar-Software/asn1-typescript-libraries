@@ -5,7 +5,7 @@ import {
     _encode_Countersignature,
 } from "../CryptographicMessageSyntax-2010/Countersignature.ta.mjs";
 import { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary aa_countersignature

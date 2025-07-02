@@ -2,7 +2,7 @@
 import { aa_contentType } from "../CryptographicMessageSyntax-2010/aa-contentType.oa.mjs";
 import { aa_messageDigest } from "../CryptographicMessageSyntax-2010/aa-messageDigest.oa.mjs";
 import { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTime.oa.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary AuthAttributeSet

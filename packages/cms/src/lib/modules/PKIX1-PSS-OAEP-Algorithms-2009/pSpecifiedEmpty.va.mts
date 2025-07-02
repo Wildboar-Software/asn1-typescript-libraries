@@ -4,7 +4,7 @@ import { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetStri
 import { PSourceAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.mjs";
 import {
     AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     ASN1TagClass,
     ASN1Construction,

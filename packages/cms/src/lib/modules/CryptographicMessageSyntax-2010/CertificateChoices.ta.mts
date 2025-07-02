@@ -5,12 +5,12 @@ import {
     AttributeCertificate as AttributeCertificateV1,
     _decode_AttributeCertificate as _decode_AttributeCertificateV1,
     _encode_AttributeCertificate as _encode_AttributeCertificateV1,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
+} from "@wildboar/x500/AttributeCertificateDefinitions";
 import {
     AttributeCertificate as AttributeCertificateV2,
     _decode_AttributeCertificate as _decode_AttributeCertificateV2,
     _encode_AttributeCertificate as _encode_AttributeCertificateV2,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
+} from "@wildboar/x500/AttributeCertificateDefinitions";
 import {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
@@ -25,7 +25,7 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary CertificateChoices

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary PSourceAlgorithm

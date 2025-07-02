@@ -91,7 +91,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_hashFunc() {
+    public static get _default_value_for_hashFunc(): HashAlgorithm {
         return sha1Identifier;
     }
     /**
@@ -100,7 +100,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_maskGenFunc() {
+    public static get _default_value_for_maskGenFunc(): MaskGenAlgorithm {
         return mgf1SHA1;
     }
     /**
@@ -109,7 +109,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_pSourceFunc() {
+    public static get _default_value_for_pSourceFunc(): PSourceAlgorithm {
         return pSpecifiedEmpty;
     }
 }

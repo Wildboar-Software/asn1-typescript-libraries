@@ -5,7 +5,7 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
 import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     DERElement,
 } from "@wildboar/asn1";

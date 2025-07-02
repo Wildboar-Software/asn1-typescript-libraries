@@ -1,7 +1,7 @@
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     id_tokenizedParts,
 } from "../CMSObjectIdentifiers/id-tokenizedParts.va.mjs";

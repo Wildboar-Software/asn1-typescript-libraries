@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
+import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
 
 /**
  * @summary PUBLIC_KEY
@@ -12,18 +12,18 @@ import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/K
  *
  * ```asn1
  * PUBLIC-KEY ::= CLASS {
- * &id                OBJECT IDENTIFIER UNIQUE,
- * &KeyValue        OPTIONAL,
- * &Params        OPTIONAL,
- * &paramPresence    ParamOptions DEFAULT absent,
- * &keyUsage        KeyUsage OPTIONAL,
- * &PrivateKey        OPTIONAL
+ *      &id                OBJECT IDENTIFIER UNIQUE,
+ *      &KeyValue        OPTIONAL,
+ *      &Params        OPTIONAL,
+ *      &paramPresence    ParamOptions DEFAULT absent,
+ *      &keyUsage        KeyUsage OPTIONAL,
+ *      &PrivateKey        OPTIONAL
  * } WITH SYNTAX {
- * IDENTIFIER &id
- * [KEY &KeyValue]
- * [PARAMS [TYPE &Params] ARE &paramPresence]
- * [CERT-KEY-USAGE &keyUsage]
- * [PRIVATE-KEY &PrivateKey]
+ *      IDENTIFIER &id
+ *      [KEY &KeyValue]
+ *      [PARAMS [TYPE &Params] ARE &paramPresence]
+ *      [CERT-KEY-USAGE &keyUsage]
+ *      [PRIVATE-KEY &PrivateKey]
  * }
  * ```
  *

@@ -5,7 +5,7 @@ import {
     _decode_SigningTime,
     _encode_SigningTime,
 } from "../CryptographicMessageSyntax-2010/SigningTime.ta.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary aa_signingTime

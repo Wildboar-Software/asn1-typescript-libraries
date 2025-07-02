@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa.mjs";
 import { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary SigncryptionAttributes

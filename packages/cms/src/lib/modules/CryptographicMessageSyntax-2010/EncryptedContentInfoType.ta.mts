@@ -128,7 +128,7 @@ export const _extension_additions_list_spec_for_EncryptedContentInfoType: $.Comp
  */
 export function _get_decoder_for_EncryptedContentInfoType<
     AlgorithmIdentifierType
->(_decode_AlgorithmIdentifierType: $.ASN1Decoder<AlgorithmIdentifierType>) {
+>(_decode_AlgorithmIdentifierType: $.ASN1Decoder<AlgorithmIdentifierType>): $.ASN1Decoder<EncryptedContentInfoType<AlgorithmIdentifierType>> {
     return function (
         el: _Element
     ): EncryptedContentInfoType<AlgorithmIdentifierType> {
@@ -174,7 +174,7 @@ export function _get_decoder_for_EncryptedContentInfoType<
  */
 export function _get_encoder_for_EncryptedContentInfoType<
     AlgorithmIdentifierType
->(_encode_AlgorithmIdentifierType: $.ASN1Encoder<AlgorithmIdentifierType>) {
+>(_encode_AlgorithmIdentifierType: $.ASN1Encoder<AlgorithmIdentifierType>): $.ASN1Encoder<EncryptedContentInfoType<AlgorithmIdentifierType>> {
     return function (
         value: EncryptedContentInfoType<AlgorithmIdentifierType>    ): _Element {
         return $._encodeSequence(

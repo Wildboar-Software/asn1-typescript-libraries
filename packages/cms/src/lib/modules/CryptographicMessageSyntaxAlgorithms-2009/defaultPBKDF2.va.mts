@@ -3,7 +3,7 @@ import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-
 import { PBKDF2_PRFsAlgorithmIdentifier } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";
 import {
     AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     ASN1TagClass,
     ASN1Construction,

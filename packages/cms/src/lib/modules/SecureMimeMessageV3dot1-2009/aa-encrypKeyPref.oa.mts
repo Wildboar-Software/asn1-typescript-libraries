@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va.mjs";
 import {
     SMIMEEncryptionKeyPreference,

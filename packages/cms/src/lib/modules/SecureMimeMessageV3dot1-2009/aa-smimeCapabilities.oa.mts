@@ -4,7 +4,7 @@ import {
     _decode_SMIMECapabilities,
     _encode_SMIMECapabilities,
 } from "../AlgorithmInformation-2009/SMIMECapabilities.ta.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.mjs";
 
 /**

@@ -5,7 +5,7 @@ import {
     _decode_MessageDigest,
     _encode_MessageDigest,
 } from "../CryptographicMessageSyntax-2010/MessageDigest.ta.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary aa_messageDigest

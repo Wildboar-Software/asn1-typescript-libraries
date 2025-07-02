@@ -1,3 +1,39 @@
+/**
+ * You can create a Cryptographic Message Syntax (CMS) object by using the
+ * `ContentInfo` class. Here is a really simple example that just creates a
+ * CMS object that contains completely unprotected `data`.
+ * 
+ * @example
+ * ```typescript
+ * import {
+ *     ContentInfo,
+ *     _encode_ContentInfo,
+ *     id_data,
+ * } from "@wildboar/cms";
+ * import {
+ *     _encodeOctetString,
+ * } from "@wildboar/asn1";
+ * import * as $ from "@wildboar/asn1/functional";
+ * 
+ * const contentInfo = new ContentInfo(
+ *     id_data,
+ *     _encodeOctetString(Buffer.from("hi mom!"), $.DER),
+ * );
+ * const contentInfoBytes = _encode_ContentInfo(contentInfo, $.DER);
+ * // contentInfoBytes can be base64 encoded and put in a PEM object now.
+ * ```
+ * 
+ * This library supports creating all of the standard CMS objects, meaning:
+ * 
+ * - `Data`
+ * - `Signed-data`
+ * - `Enveloped-data`
+ * - `Digested-data`
+ * - `Encrypted-data`
+ * - `Authenticated-data`
+ * 
+ * @module
+ */
 export * from "./lib/modules/AlgorithmInformation-2009/ALGORITHM.oca.mjs";
 export * from "./lib/modules/AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.mjs";
 export * from "./lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";

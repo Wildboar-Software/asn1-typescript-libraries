@@ -5,7 +5,7 @@ import {
     _encode_UniqueIdentifier,
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
 import { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.mjs";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 
 /**
  * @summary uniqueIdentifier

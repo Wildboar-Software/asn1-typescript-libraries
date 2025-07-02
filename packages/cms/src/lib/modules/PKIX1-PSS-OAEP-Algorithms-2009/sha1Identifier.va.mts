@@ -3,7 +3,7 @@ import { HashAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.t
 import { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va.mjs";
 import {
     AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     ASN1TagClass,
     ASN1Construction,
