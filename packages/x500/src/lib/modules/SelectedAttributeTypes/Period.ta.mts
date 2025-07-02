@@ -80,7 +80,6 @@ import isPositionalInt from "../../utils/isPositionalInt.mjs";
  *   ... }
  * ```
  *
- * @class
  */
 export class Period {
     constructor(

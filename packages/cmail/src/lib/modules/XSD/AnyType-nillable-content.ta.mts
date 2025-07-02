@@ -22,7 +22,6 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  * AnyType-nillable-content ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AnyType_nillable_content {
   constructor(

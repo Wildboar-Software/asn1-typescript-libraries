@@ -24,7 +24,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     qualifier                   COMMITMENT-QUALIFIER.&Qualifier OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CommitmentTypeQualifier {

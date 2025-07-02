@@ -25,7 +25,6 @@ import {
  * CertUpdateOK-Item-ok ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertUpdateOK_Item_ok {
     constructor(

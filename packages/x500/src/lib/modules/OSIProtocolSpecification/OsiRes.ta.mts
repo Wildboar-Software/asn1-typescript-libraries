@@ -29,7 +29,6 @@ import {
  *     result    OPERATION.&ResultType({Operations}{@.opcode}) }}
  * ```
  *
- * @class
  */
 export class OsiRes {
     constructor(

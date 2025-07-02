@@ -26,7 +26,6 @@ import {
  * ConvertPtoPToMulticastReply-Item-success ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ConvertPtoPToMulticastReply_Item_success {
     constructor(

@@ -31,7 +31,6 @@ import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd
  * }
  * ```
  *
- * @class
  */
 export
 class ThresholdInfo {

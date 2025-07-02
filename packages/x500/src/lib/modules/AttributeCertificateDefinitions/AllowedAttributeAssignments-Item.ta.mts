@@ -25,7 +25,6 @@ import {
  * AllowedAttributeAssignments-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AllowedAttributeAssignments_Item {
     constructor(

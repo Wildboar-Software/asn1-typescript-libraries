@@ -26,7 +26,6 @@ import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_
  * }
  * ```
  * 
- * @class
  */
 export
 class SecurityLevelofPrivilege {

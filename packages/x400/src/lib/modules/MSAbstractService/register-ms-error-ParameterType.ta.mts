@@ -31,7 +31,6 @@ import {
  * register-ms-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class register_ms_error_ParameterType {
     constructor(

@@ -41,7 +41,6 @@ import {
  * BodyPartSignatures-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BodyPartSignatures_Item {
     constructor(

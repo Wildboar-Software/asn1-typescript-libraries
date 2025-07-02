@@ -98,7 +98,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BIPRequest {
   constructor(

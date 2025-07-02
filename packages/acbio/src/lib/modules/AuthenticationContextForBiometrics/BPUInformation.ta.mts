@@ -34,7 +34,6 @@ import {
  *     bpuReportInformation                BPUReportInformation }
  * ```
  *
- * @class
  */
 export class BPUInformation {
     constructor(

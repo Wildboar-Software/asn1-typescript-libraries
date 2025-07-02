@@ -37,7 +37,6 @@ import {
  * OsiBindResult-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiBindResult_normal_mode_parameters {
     constructor(

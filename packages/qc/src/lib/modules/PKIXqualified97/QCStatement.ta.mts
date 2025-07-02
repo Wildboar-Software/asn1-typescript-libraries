@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     ({SupportedStatements}{@statementId}) OPTIONAL }
  * ```
  *
- * @class
  */
 export class QCStatement {
     constructor(

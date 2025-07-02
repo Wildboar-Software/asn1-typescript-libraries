@@ -34,7 +34,6 @@ import {
  *   software       SOFTWARE-SCHEME.&Software ({SoftwareSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class SoftwareIdentification {
     constructor(

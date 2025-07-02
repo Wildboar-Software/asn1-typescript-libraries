@@ -34,7 +34,6 @@ import {
  *     qualityEvaluationExtensionInformation   QualityEvaluationExtensionInformation OPTIONAL }
  * ```
  *
- * @class
  */
 export class QualityEvaluation {
     constructor(

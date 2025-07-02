@@ -69,7 +69,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Enroll_RequestParams {
   constructor(

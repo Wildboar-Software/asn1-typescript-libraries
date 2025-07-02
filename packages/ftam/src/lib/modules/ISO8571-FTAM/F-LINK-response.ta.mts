@@ -61,7 +61,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_LINK_response {
   constructor(

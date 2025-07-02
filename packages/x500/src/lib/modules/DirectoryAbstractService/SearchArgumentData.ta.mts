@@ -148,7 +148,6 @@ import {
  *   COMPONENTS OF              CommonArguments }
  * ```
  *
- * @class
  */
 export class SearchArgumentData implements CommonArguments {
     constructor(

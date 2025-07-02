@@ -23,7 +23,6 @@ import {
  *   subjectAltPublicKey    BIT STRING }
  * ```
  *
- * @class
  */
 export class SubjectAltPublicKeyInfo {
     constructor(

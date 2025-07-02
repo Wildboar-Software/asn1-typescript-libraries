@@ -40,7 +40,6 @@ import {
  * digest             Digest, ... }
  * ```
  *
- * @class
  */
 export class DigestedData {
     constructor(

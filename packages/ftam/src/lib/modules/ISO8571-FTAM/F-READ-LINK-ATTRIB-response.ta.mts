@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_READ_LINK_ATTRIB_response {
   constructor(

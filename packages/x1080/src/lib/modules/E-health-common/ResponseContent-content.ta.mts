@@ -30,7 +30,6 @@ import {
  * ResponseContent-content ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ResponseContent_content {
     constructor(

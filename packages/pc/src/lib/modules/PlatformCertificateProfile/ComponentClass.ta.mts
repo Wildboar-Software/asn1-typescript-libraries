@@ -24,7 +24,6 @@ import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_Compone
  *     componentClassValue         OCTET STRING (SIZE(4)) }
  * ```
  *
- * @class
  */
 export
 class ComponentClass {

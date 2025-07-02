@@ -29,7 +29,6 @@ import {
  * PROTECTED-dirSign ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PROTECTED_dirSign<BaseType> {
   constructor(

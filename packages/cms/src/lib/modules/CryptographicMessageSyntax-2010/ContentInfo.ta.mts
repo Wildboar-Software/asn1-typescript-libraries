@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  * content    [0] EXPLICIT CONTENT-TYPE.&Type({ContentSet}{@contentType})}
  * ```
  *
- * @class
  */
 export class ContentInfo {
     constructor(

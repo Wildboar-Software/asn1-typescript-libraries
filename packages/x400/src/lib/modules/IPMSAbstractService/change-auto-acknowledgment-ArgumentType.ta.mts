@@ -27,7 +27,6 @@ import {
  * change-auto-acknowledgment-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class change_auto_acknowledgment_ArgumentType {
     constructor(

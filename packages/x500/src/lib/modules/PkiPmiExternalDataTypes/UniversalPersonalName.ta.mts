@@ -30,7 +30,6 @@ import {
  *     [3]  UniversalOrBMPString{ub-universal-generation-qualifier-length} OPTIONAL }
  * ```
  *
- * @class
  */
 export class UniversalPersonalName {
     constructor(

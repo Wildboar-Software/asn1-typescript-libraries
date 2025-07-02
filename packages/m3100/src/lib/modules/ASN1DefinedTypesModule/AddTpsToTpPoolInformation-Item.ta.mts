@@ -32,7 +32,6 @@ import {
  * AddTpsToTpPoolInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AddTpsToTpPoolInformation_Item {
     constructor(

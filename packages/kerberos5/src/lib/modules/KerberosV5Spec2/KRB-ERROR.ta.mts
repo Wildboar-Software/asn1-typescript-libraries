@@ -68,7 +68,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class KRB_ERROR {
   constructor(

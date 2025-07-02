@@ -53,7 +53,6 @@ import {
  * ConnectInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ConnectInformation_Item {
     constructor(

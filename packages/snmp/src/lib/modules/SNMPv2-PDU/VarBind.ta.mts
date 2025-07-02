@@ -36,7 +36,6 @@ import { VarBind_valueType, _decode_VarBind_valueType, _encode_VarBind_valueType
  * }
  * ```
  *
- * @class
  */
 export
 class VarBind {

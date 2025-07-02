@@ -50,7 +50,6 @@ import {
  *     ... } OPTIONAL }
  * ```
  *
- * @class
  */
 export class UnitOfReplication {
     constructor(

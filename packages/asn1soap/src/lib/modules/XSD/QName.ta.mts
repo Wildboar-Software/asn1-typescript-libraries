@@ -26,7 +26,6 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * name     NCName }
  * ```
  *
- * @class
  */
 export class QName {
   constructor(

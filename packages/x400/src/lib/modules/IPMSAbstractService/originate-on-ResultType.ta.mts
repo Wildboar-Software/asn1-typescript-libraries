@@ -30,7 +30,6 @@ import {
  * originate-on-ResultType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_on_ResultType {
     constructor(

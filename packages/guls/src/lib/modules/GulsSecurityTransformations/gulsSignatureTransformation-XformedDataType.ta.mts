@@ -36,7 +36,6 @@ import {
  * gulsSignatureTransformation-XformedDataType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class gulsSignatureTransformation_XformedDataType {
   constructor(

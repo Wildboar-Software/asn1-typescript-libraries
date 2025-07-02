@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class NamedCrossConnection {
     constructor(

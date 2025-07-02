@@ -25,7 +25,6 @@ import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../
  *     crlIdentifier   CrlIdentifier OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CrlValidatedID {

@@ -137,7 +137,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DLPolicy {
     constructor(

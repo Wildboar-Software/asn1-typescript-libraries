@@ -28,7 +28,6 @@ import {
  * dirSignatureTransformation-XformedDataType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class dirSignatureTransformation_XformedDataType {
   constructor(

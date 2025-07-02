@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   value  TeletexString(SIZE (1..ub-domain-defined-attribute-value-length)) }
  * ```
  *
- * @class
  */
 export class TeletexDomainDefinedAttribute {
     constructor(

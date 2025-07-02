@@ -28,7 +28,6 @@ import { Properties, _decode_Properties, _encode_Properties } from "../PlatformC
  *     platformPropertiesUri       [3] IMPLICIT URIReference OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class PlatformConfiguration {

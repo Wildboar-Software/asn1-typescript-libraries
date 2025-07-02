@@ -29,7 +29,6 @@ import {
  *     hashValue                   OCTET STRING }
  * ```
  *
- * @class
  */
 export class Hash {
     constructor(

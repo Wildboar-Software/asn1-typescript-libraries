@@ -27,7 +27,6 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  *     hashValue                   BIT STRING OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class URIReference {

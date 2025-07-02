@@ -42,7 +42,6 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  * -- It must equal an authID in one AuthRecord in the AODF -- })
  * ```
  *
- * @class
  */
 export class CommonObjectAttributes {
     constructor(

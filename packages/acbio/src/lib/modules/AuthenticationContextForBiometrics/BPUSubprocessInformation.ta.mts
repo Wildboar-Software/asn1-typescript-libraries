@@ -34,7 +34,6 @@ import {
  *     qualityEvaluation   QualityEvaluation OPTIONAL }
  * ```
  *
- * @class
  */
 export class BPUSubprocessInformation {
     constructor(

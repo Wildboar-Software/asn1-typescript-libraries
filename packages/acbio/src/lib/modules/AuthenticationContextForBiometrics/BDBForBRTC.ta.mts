@@ -67,7 +67,6 @@ import {
  *     enrolmentACBioInstances     SequenceOfACBioInstances OPTIONAL }
  * ```
  *
- * @class
  */
 export class BDBForBRTC {
     constructor(

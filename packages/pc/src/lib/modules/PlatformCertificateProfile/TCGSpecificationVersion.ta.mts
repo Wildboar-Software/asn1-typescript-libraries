@@ -27,7 +27,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     revision        INTEGER }
  * ```
  *
- * @class
  */
 export
 class TCGSpecificationVersion {

@@ -73,7 +73,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Authenticator {
   constructor(

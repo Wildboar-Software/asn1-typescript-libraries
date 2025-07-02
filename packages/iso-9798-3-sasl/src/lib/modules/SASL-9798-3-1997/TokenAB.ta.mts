@@ -41,7 +41,6 @@ import {
  *     -- client believes it knows the identity of the server.--})
  * ```
  *
- * @class
  */
 export
 class TokenAB {

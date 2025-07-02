@@ -32,7 +32,6 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
  * }
  * ```
  * 
- * @class
  */
 export
 class Restriction {

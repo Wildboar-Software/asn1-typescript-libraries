@@ -75,7 +75,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ActionArgument implements BaseManagedObjectId {
   constructor(

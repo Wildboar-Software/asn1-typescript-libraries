@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  * UserAddress-x121 ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class UserAddress_x121 {
     constructor(

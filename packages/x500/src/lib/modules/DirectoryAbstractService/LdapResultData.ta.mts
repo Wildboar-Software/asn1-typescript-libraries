@@ -46,7 +46,6 @@ import {
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class LdapResultData implements CommonResultsSeq {
     constructor(

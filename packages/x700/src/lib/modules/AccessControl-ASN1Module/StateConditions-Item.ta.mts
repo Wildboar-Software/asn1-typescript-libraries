@@ -30,7 +30,6 @@ import {
  * StateConditions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class StateConditions_Item {
     constructor(

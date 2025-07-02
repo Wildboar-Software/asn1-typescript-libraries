@@ -28,7 +28,6 @@ import {
  * ResourceSelfTestResults-nonIntermediate ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ResourceSelfTestResults_nonIntermediate {
     constructor(

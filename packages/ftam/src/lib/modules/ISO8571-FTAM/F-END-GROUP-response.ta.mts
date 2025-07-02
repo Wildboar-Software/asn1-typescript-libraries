@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * }
  * ```
  *
- * @class
  */
 export class F_END_GROUP_response {
   constructor() {}

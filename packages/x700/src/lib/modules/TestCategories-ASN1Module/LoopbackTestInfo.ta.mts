@@ -46,7 +46,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class LoopbackTestInfo {
     constructor(

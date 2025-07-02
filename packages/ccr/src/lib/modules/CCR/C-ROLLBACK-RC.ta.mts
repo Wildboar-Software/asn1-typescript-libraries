@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_ROLLBACK_RC {
   constructor(

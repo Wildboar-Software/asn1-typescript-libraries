@@ -52,7 +52,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CompareRequest implements CommonReqComp {
     constructor(

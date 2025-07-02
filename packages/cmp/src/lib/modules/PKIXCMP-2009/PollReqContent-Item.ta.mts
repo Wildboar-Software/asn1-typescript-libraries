@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * PollReqContent-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PollReqContent_Item {
   constructor(

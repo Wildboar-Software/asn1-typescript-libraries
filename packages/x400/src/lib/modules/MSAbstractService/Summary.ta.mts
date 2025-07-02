@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Summary {
     constructor(

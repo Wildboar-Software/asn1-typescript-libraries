@@ -103,7 +103,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class TroubleHistoryInfo {
     constructor(

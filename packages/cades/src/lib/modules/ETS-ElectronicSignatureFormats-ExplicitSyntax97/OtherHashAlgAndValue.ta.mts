@@ -26,7 +26,6 @@ import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "
  *     hashValue           OtherHashValue }
  * ```
  *
- * @class
  */
 export
 class OtherHashAlgAndValue {

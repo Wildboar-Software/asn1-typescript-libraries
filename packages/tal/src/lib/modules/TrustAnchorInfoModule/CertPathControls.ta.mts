@@ -35,7 +35,6 @@ import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConst
  *     pathLenConstraint[4] INTEGER (0..MAX) OPTIONAL}
  * ```
  *
- * @class
  */
 export
 class CertPathControls {

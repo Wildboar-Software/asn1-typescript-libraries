@@ -28,7 +28,6 @@ import { BiometricPara, _decode_BiometricPara, _encode_BiometricPara } from "../
  * }
  * ```
  * 
- * @class
  */
 export
 class SecurityLevelBioRef {

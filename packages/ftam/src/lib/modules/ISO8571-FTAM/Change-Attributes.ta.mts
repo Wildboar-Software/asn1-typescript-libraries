@@ -79,7 +79,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Change_Attributes {
   constructor(

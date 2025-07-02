@@ -64,7 +64,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EDIProcessableDocument {
     constructor(

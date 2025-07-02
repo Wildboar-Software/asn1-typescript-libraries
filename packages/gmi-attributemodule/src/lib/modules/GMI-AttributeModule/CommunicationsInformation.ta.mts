@@ -27,7 +27,6 @@ import { InformationData, _decode_InformationData, _encode_InformationData } fro
  * }
  * ```
  * 
- * @class
  */
 export
 class CommunicationsInformation {

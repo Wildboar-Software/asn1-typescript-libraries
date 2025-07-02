@@ -48,7 +48,6 @@ import {
  *     COMPONENTS OF CommonResults }
  * ```
  *
- * @class
  */
 export class AbandonedData implements CommonResults {
     constructor(

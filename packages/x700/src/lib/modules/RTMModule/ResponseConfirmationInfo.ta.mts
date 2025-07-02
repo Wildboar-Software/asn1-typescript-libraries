@@ -94,7 +94,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ResponseConfirmationInfo {
     constructor(

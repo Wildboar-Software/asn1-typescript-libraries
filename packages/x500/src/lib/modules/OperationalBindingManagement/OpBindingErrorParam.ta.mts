@@ -70,7 +70,6 @@ import {
  *   COMPONENTS OF           CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class OpBindingErrorParam implements CommonResultsSeq {
     constructor(

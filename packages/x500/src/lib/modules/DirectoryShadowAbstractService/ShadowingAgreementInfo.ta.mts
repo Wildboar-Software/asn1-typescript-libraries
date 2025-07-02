@@ -35,7 +35,6 @@ import {
  *   secondaryShadows  [2]  BOOLEAN DEFAULT FALSE }
  * ```
  *
- * @class
  */
 export class ShadowingAgreementInfo {
     constructor(

@@ -25,7 +25,6 @@ import {
  *   iso-639-language-code  PrintableString(SIZE (2 | 5)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class UniversalOrBMPString {
     constructor(

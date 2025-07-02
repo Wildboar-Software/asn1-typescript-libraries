@@ -26,7 +26,6 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  *     status              [0] IMPLICIT AttributeStatus OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class Properties {

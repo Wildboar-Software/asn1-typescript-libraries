@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * ImplementedValues-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ImplementedValues_Item {
     constructor(

@@ -26,7 +26,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SafeBag {
     constructor(

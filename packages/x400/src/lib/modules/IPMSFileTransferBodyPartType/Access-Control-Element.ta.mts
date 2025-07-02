@@ -52,7 +52,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Access_Control_Element {
     constructor(

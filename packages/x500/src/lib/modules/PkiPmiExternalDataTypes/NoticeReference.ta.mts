@@ -23,7 +23,6 @@ import {
  *   noticeNumbers  SEQUENCE OF INTEGER }
  * ```
  *
- * @class
  */
 export class NoticeReference {
     constructor(

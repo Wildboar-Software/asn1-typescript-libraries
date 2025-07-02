@@ -102,7 +102,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Register_MSArgument {
     constructor(

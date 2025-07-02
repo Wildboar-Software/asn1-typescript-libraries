@@ -29,7 +29,6 @@ import {
  *     WITH COMPONENTS {..., altAlgorithmIdentifier ABSENT,  altIcv ABSENT } )
  * ```
  *
- * @class
  */
 export class ICV_Total<ToBeProtected> {
     constructor(

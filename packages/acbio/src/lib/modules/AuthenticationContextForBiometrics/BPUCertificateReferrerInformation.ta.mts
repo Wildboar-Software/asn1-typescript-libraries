@@ -29,7 +29,6 @@ import {
  *     crlsReferrer                URI OPTIONAL }
  * ```
  *
- * @class
  */
 export class BPUCertificateReferrerInformation {
     constructor(

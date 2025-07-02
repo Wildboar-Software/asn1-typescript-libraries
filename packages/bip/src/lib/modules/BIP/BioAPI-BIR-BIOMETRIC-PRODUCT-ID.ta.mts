@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BIR_BIOMETRIC_PRODUCT_ID {
   constructor(

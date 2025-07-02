@@ -45,7 +45,6 @@ import {
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class AbandonResultData implements CommonResultsSeq {
     constructor(

@@ -24,7 +24,6 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  *     noticeNumbers   SEQUENCE OF INTEGER }
  * ```
  *
- * @class
  */
 export
 class NoticeReference {

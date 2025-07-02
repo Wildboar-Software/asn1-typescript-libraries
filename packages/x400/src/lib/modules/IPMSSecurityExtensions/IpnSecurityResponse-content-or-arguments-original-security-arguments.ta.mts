@@ -36,7 +36,6 @@ import {
  * IpnSecurityResponse-content-or-arguments-original-security-arguments ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class IpnSecurityResponse_content_or_arguments_original_security_arguments {
     constructor(

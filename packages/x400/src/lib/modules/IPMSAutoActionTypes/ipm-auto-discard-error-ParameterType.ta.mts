@@ -25,7 +25,6 @@ import {
  * ipm-auto-discard-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ipm_auto_discard_error_ParameterType {
     constructor(

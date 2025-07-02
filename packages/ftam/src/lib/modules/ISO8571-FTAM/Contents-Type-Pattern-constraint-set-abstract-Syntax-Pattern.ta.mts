@@ -27,7 +27,6 @@ import {
  * Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
   constructor(

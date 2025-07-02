@@ -26,7 +26,6 @@ import {
  * BodyPartReference-stored-body-part ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BodyPartReference_stored_body_part {
     constructor(

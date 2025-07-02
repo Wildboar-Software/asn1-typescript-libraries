@@ -28,7 +28,6 @@ import * as $ from "@wildboar/asn1/functional";
  * -- selected fields --})
  * ```
  *
- * @class
  */
 export class RSAPrivateKeyObject {
     constructor(

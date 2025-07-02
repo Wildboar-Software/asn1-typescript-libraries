@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Wrap_Header {
     constructor(

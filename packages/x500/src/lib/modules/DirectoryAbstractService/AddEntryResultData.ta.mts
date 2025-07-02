@@ -39,7 +39,6 @@ import {
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class AddEntryResultData implements CommonResultsSeq {
     constructor(

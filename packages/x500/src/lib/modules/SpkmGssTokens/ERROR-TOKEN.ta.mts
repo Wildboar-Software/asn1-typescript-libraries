@@ -24,7 +24,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ERROR_TOKEN {
     constructor(

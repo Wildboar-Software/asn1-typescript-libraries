@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_LIST_request {
   constructor(

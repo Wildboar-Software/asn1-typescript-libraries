@@ -46,7 +46,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_BEGIN_RI {
   constructor(

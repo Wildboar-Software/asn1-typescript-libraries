@@ -83,7 +83,6 @@ import {
  *   COMPONENTS OF  CommonArgumentsSeq }
  * ```
  *
- * @class
  */
 export class LinkedArgumentData implements CommonArgumentsSeq {
     constructor(

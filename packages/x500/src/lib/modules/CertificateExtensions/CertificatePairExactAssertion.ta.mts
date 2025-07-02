@@ -25,7 +25,6 @@ import {
  *    WITH COMPONENTS { ..., issuedByThisCAAssertion  PRESENT } )
  * ```
  *
- * @class
  */
 export class CertificatePairExactAssertion {
     constructor(

@@ -22,7 +22,6 @@ import * as $ from "@wildboar/asn1/functional";
  *            ({ExtensionAttributeTable}{@extension-attribute-type}) }
  * ```
  *
- * @class
  */
 export class ExtensionAttribute {
     constructor(

@@ -22,7 +22,6 @@ import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } fro
  *     ocspResponses   SEQUENCE OF OcspResponsesID }
  * ```
  *
- * @class
  */
 export
 class OcspListID {

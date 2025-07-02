@@ -66,7 +66,6 @@ import {
  *   avlExtensions              Extensions OPTIONAL }
  * ```
  *
- * @class
  */
 export class TBSCertAVL {
     constructor(

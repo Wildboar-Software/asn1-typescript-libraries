@@ -25,7 +25,6 @@ import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar
  *     }
  * ```
  *
- * @class
  */
 export
 class OcspIdentifier {

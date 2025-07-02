@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Pathname_Pattern {
   constructor(

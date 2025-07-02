@@ -33,7 +33,6 @@ import {
  *         {{UnprotectedEncAttributes}} OPTIONAL ]] }
  * ```
  *
- * @class
  */
 export class EncryptedData {
     constructor(

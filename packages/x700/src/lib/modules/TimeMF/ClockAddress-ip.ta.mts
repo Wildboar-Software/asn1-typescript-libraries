@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * ClockAddress-ip ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ClockAddress_ip {
     constructor(

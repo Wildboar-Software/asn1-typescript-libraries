@@ -33,7 +33,6 @@ import {
  * NoSuchArgument-actionId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class NoSuchArgument_actionId {
   constructor(

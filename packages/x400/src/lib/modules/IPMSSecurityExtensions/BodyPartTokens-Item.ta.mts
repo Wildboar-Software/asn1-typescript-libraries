@@ -30,7 +30,6 @@ import {
  * BodyPartTokens-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BodyPartTokens_Item {
     constructor(

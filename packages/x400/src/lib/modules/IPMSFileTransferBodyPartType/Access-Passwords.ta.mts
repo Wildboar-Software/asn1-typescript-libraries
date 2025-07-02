@@ -41,7 +41,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Access_Passwords {
     constructor(

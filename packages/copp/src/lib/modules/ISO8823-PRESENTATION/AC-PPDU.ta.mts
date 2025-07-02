@@ -43,7 +43,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AC_PPDU {
     constructor(

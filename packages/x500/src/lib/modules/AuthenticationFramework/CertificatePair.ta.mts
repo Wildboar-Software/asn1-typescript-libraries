@@ -25,7 +25,6 @@ import {
  *    WITH COMPONENTS { ..., issuedByThisCA PRESENT})
  * ```
  *
- * @class
  */
 export class CertificatePair {
     constructor(

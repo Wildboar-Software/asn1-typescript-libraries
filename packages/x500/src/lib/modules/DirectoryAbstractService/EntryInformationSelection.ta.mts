@@ -56,7 +56,6 @@ import {
  *                                    {memberSelect contributingEntriesOnly} }
  * ```
  *
- * @class
  */
 export class EntryInformationSelection {
     constructor(

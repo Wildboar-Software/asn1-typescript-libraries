@@ -24,7 +24,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class DeltaRefInfo {
     constructor(

@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Process_ResponseParams {
   constructor(

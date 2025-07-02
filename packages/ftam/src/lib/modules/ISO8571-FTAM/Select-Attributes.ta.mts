@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Select_Attributes {
   constructor(

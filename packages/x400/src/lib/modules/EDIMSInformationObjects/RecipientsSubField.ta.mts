@@ -113,7 +113,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RecipientsSubField {
     constructor(

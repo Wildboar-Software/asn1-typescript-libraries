@@ -45,7 +45,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_WRITE_request {
   constructor(

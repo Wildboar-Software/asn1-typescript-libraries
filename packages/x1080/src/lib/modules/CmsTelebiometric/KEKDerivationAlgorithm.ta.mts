@@ -33,7 +33,6 @@ import {
  *   pbkdf2Param  PBKDF2-params }
  * ```
  *
- * @class
  */
 export class KEKDerivationAlgorithm {
     constructor(

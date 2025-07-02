@@ -89,7 +89,6 @@ import {
  *   COMPONENTS OF      CommonArguments }
  * ```
  *
- * @class
  */
 export class AddEntryArgumentData implements CommonArguments {
     constructor(

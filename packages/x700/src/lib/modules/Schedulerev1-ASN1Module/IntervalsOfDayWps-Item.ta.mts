@@ -26,7 +26,6 @@ import {
  * IntervalsOfDayWps-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class IntervalsOfDayWps_Item {
     constructor(

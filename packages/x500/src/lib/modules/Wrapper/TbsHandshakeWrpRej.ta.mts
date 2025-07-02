@@ -53,7 +53,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class TbsHandshakeWrpRej {
     constructor(

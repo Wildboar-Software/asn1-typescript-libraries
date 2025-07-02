@@ -51,7 +51,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_TRANSFER_END_response {
   constructor(

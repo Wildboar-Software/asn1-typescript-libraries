@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerRecipientReportDeliveryFields {
     constructor(

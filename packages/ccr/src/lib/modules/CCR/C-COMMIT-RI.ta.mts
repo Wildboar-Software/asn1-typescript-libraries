@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_COMMIT_RI {
   constructor(

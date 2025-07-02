@@ -26,7 +26,6 @@ import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportIn
  * }
  * ```
  * 
- * @class
  */
 export
 class BDCReportContentInformation {

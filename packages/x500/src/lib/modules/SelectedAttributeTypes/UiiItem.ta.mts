@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   length INTEGER OPTIONAL }
  * ```
  *
- * @class
  */
 export class UiiItem {
     constructor(

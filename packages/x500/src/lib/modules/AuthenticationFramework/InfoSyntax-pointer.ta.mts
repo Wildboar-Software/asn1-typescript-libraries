@@ -30,7 +30,6 @@ import {
  * InfoSyntax-pointer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class InfoSyntax_pointer {
     constructor(

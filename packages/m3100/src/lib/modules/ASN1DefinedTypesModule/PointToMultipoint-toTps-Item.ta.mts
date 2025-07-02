@@ -26,7 +26,6 @@ import {
  * PointToMultipoint-toTps-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PointToMultipoint_toTps_Item {
     constructor(

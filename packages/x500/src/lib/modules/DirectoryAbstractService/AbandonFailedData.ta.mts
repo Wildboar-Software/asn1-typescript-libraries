@@ -53,7 +53,6 @@ import {
  *   COMPONENTS OF   CommonResults }
  * ```
  *
- * @class
  */
 export class AbandonFailedData implements CommonResults {
     constructor(

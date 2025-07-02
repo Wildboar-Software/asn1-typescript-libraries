@@ -46,7 +46,6 @@ import {
  *     extraRevocation     [1] IMPLICIT RevocationInfoChoices OPTIONAL }
  * ```
  *
- * @class
  * @deprecated in ETSI TS 101 733 - V2.2.1 (or earlier) in Section 6.5.1.
  */
 export

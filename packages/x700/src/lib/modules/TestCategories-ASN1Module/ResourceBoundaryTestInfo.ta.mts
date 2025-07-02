@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ResourceBoundaryTestInfo {
     constructor(

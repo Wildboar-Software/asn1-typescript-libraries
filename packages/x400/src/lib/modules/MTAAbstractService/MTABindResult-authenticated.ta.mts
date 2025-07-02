@@ -30,7 +30,6 @@ import {
  * MTABindResult-authenticated ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MTABindResult_authenticated {
     constructor(

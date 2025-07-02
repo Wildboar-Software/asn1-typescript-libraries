@@ -26,7 +26,6 @@ import {
  * NonIdentifyingStringOrIndex-literal-character-string ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class NonIdentifyingStringOrIndex_literal_character_string {
   constructor(

@@ -42,7 +42,6 @@ import {
  * RequestContent-content ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RequestContent_content {
     constructor(

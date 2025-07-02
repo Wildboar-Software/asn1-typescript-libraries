@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_RECOVER_response {
   constructor(

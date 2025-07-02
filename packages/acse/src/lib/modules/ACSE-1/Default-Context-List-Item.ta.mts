@@ -31,7 +31,6 @@ import {
  * Default-Context-List-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Default_Context_List_Item {
   constructor(

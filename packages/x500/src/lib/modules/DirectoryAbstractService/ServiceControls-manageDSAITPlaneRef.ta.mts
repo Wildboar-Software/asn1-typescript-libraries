@@ -25,7 +25,6 @@ import {
  * ServiceControls-manageDSAITPlaneRef ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ServiceControls_manageDSAITPlaneRef {
     constructor(

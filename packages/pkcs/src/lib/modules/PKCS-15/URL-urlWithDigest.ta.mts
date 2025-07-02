@@ -22,7 +22,6 @@ import {
  * URL-urlWithDigest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class URL_urlWithDigest {
     constructor(

@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_SELECT_ANOTHER_request {
   constructor(

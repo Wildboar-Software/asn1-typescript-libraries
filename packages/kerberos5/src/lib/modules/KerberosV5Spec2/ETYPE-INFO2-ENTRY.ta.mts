@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ETYPE_INFO2_ENTRY {
   constructor(

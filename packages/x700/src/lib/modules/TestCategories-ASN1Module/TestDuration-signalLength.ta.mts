@@ -27,7 +27,6 @@ import {
  * TestDuration-signalLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TestDuration_signalLength {
     constructor(

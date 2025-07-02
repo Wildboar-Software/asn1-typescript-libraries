@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   profiles  SET OF OBJECT IDENTIFIER }
  * ```
  *
- * @class
  */
 export class ProtocolInformation {
     constructor(

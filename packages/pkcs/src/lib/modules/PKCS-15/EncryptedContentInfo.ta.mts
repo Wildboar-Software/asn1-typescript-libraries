@@ -30,7 +30,6 @@ import {
  *     -- value of type -- Type})
  * ```
  *
- * @class
  */
 export class EncryptedContentInfo<_Type> {
     constructor(

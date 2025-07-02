@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  * oriValue   OTHER-RECIPIENT.&Type({SupportedOtherRecipInfo}{@oriType})}
  * ```
  *
- * @class
  */
 export class OtherRecipientInfo {
     constructor(

@@ -21,7 +21,6 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * CertReplaceOK-Item-ok ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertReplaceOK_Item_ok {
     constructor(

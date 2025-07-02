@@ -56,7 +56,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CreateArgument {
   constructor(

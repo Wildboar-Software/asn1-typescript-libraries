@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AddMaster_RequestParams {
   constructor(

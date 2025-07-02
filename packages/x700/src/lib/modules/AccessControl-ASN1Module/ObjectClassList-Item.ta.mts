@@ -27,7 +27,6 @@ import {
  * ObjectClassList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ObjectClassList_Item {
     constructor(

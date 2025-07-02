@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * OrderedAttribute-attribute-values-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OrderedAttribute_attribute_values_Item {
     constructor(

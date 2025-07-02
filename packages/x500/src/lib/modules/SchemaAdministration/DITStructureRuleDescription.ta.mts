@@ -37,7 +37,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class DITStructureRuleDescription extends DITStructureRule {
     constructor(

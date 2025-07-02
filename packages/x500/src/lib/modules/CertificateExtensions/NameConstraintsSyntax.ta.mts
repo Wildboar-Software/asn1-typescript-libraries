@@ -25,7 +25,6 @@ import {
  *    WITH COMPONENTS {..., excludedSubtrees   PRESENT } )
  * ```
  *
- * @class
  */
 export class NameConstraintsSyntax {
     constructor(

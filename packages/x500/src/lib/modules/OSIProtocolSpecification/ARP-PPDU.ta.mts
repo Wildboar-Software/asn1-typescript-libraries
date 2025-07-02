@@ -27,7 +27,6 @@ import {
  *   event-identifier  [1] IMPLICIT Event-identifier OPTIONAL }
  * ```
  *
- * @class
  */
 export class ARP_PPDU {
     constructor(

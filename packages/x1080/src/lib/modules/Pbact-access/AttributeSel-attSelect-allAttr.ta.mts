@@ -27,7 +27,6 @@ import {
  * AttributeSel-attSelect-allAttr ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AttributeSel_attSelect_allAttr {
     constructor(

@@ -19,7 +19,6 @@ import {
  * OsiRes-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiRes_result {
     constructor(

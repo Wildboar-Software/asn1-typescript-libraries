@@ -33,7 +33,6 @@ import { CASSInfo, _decode_CASSInfo, _encode_CASSInfo } from "../CASS-CAM-MESSAG
  * }
  * ```
  * 
- * @class
  */
 export
 class RcasAncMsgContent {

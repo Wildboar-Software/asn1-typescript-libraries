@@ -23,7 +23,6 @@ import {
  * AuthenticationLevel-basicLevels ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AuthenticationLevel_basicLevels {
     constructor(

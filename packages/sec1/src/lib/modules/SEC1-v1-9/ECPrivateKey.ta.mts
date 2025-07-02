@@ -30,7 +30,6 @@ import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParamet
  * }
  * ```
  *
- * @class
  */
 export
 class ECPrivateKey {

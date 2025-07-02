@@ -34,7 +34,6 @@ import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
  *     value             OCTET STRING }
  * ```
  *
- * @class
  */
 export class HashValue {
   constructor(

@@ -32,7 +32,6 @@ import {
  * AddTpsToGtpInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AddTpsToGtpInformation_Item {
     constructor(

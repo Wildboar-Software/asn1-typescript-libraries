@@ -28,7 +28,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ExtensionAttribute {
     constructor(

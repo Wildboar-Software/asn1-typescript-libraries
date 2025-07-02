@@ -34,7 +34,6 @@ import {
  *     pubLocation  GeneralName OPTIONAL }
  * ```
  *
- * @class
  */
 export class SinglePubInfo {
     constructor(

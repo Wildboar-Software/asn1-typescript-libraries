@@ -134,7 +134,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AARE_apdu {
   constructor(

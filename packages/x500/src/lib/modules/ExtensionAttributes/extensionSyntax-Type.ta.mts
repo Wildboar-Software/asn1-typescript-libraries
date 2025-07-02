@@ -17,7 +17,6 @@ import * as $ from "@wildboar/asn1/functional";
  * extensionSyntax-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class extensionSyntax_Type {
     constructor(

@@ -39,7 +39,6 @@ import {
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class AdministerPasswordResultData implements CommonResultsSeq {
     constructor(

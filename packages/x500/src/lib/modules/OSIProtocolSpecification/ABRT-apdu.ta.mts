@@ -21,7 +21,6 @@ import {
  *   abort-source  [0] IMPLICIT ABRT-source }
  * ```
  *
- * @class
  */
 export class ABRT_apdu {
     constructor(

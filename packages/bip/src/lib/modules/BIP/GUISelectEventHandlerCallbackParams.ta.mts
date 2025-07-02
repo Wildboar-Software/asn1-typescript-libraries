@@ -89,7 +89,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class GUISelectEventHandlerCallbackParams {
   constructor(

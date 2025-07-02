@@ -33,7 +33,6 @@ import {
  *   qualifications  MEDICAL-STAFF-SCHEME.&Qualifications ({MedicalStaffSchemes}{@.scheme}) OPTIONAL}
  * ```
  *
- * @class
  */
 export class PharmaceuticalStaffIdentification {
     constructor(

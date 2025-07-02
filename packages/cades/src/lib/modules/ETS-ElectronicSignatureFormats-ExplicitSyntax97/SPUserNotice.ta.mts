@@ -25,7 +25,6 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  *     explicitText    DisplayText OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class SPUserNotice {

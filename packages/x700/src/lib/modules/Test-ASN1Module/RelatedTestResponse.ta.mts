@@ -33,7 +33,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RelatedTestResponse {
     constructor(

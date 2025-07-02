@@ -32,7 +32,6 @@ import {
  * CertSubscribeOK-Item-ok ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertSubscribeOK_Item_ok {
     constructor(

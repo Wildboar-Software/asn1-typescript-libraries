@@ -40,7 +40,6 @@ import {
  *     timeStamp           ContentInfo }
  * ```
  *
- * @class
  */
 export
 class ArchiveTimeStamp {

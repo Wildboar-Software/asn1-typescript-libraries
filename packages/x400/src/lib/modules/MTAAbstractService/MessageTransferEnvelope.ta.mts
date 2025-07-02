@@ -97,7 +97,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MessageTransferEnvelope implements PerMessageTransferFields {
     constructor(

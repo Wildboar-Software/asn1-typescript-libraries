@@ -90,7 +90,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class GUISelectEventInfo {
   constructor(

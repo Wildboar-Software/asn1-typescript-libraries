@@ -63,7 +63,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SearchRequest {
   constructor(

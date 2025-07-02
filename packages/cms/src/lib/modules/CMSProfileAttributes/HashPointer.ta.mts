@@ -30,7 +30,6 @@ import {
  *    (WITH COMPONENTS {...,pointers PRESENT}))
  * ```
  *
- * @class
  */
 export class HashPointer {
     constructor(

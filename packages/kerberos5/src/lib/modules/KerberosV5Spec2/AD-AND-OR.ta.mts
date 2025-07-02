@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AD_AND_OR {
   constructor(

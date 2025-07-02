@@ -85,7 +85,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SetArgument implements BaseManagedObjectId {
   constructor(

@@ -68,7 +68,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_SELECT_request {
   constructor(

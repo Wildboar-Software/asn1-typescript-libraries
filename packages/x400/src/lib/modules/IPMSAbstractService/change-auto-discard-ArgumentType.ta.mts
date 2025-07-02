@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * change-auto-discard-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class change_auto_discard_ArgumentType {
     constructor(

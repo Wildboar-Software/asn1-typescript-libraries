@@ -37,7 +37,6 @@ import {
  * SignalRateAndMappingList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SignalRateAndMappingList_Item {
     constructor(

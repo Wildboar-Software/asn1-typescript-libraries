@@ -34,7 +34,6 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
  * }
  * ```
  *
- * @class
  */
 export class RSASSA_PSS_params {
     constructor(

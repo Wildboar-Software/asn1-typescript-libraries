@@ -26,7 +26,6 @@ import {
  * RemoveTpsFromTpPoolInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RemoveTpsFromTpPoolInformation_Item {
     constructor(

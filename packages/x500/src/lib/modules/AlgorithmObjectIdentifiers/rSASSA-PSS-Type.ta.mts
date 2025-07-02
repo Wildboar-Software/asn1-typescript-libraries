@@ -21,7 +21,6 @@ import {
  * rSASSA-PSS-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class rSASSA_PSS_Type {
     constructor(

@@ -50,7 +50,6 @@ import {
  * SubSchemaSyntax-Item-subSchema ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SubSchemaSyntax_Item_subSchema {
     constructor(

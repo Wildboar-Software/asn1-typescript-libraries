@@ -36,7 +36,6 @@ import {
  * Attributes-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Attributes_Item {
     constructor(

@@ -30,7 +30,6 @@ import {
  * ForwardedContentToken-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ForwardedContentToken_Item {
     constructor(

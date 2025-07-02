@@ -18,7 +18,6 @@ import * as $ from "@wildboar/asn1/functional";
  * AuthorizationData-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AuthorizationData_Item {
     constructor(

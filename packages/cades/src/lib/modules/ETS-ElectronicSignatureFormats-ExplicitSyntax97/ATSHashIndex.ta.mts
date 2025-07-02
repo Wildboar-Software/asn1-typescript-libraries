@@ -36,7 +36,6 @@ import {
  *     unsignedAttrsHashIndex  SEQUENCE OF OCTET STRING }
  * ```
  *
- * @class
  */
 export
 class ATSHashIndex {

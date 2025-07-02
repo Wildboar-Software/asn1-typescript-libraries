@@ -32,7 +32,6 @@ import {
  *     signature             BIT STRING }
  * ```
  *
- * @class
  */
 export class POPOSigningKey {
     constructor(

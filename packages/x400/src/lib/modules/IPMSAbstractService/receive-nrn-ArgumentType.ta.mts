@@ -30,7 +30,6 @@ import {
  * receive-nrn-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class receive_nrn_ArgumentType {
     constructor(

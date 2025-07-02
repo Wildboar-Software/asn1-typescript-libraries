@@ -46,7 +46,6 @@ import {
  *                                 re-ocsp-extended-revoke}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class ResponseData {
     constructor(

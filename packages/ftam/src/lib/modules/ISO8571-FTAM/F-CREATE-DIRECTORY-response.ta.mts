@@ -55,7 +55,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_CREATE_DIRECTORY_response {
   constructor(

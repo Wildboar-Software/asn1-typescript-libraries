@@ -32,7 +32,6 @@ import {
  * AttributeGroups-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AttributeGroups_Item {
     constructor(

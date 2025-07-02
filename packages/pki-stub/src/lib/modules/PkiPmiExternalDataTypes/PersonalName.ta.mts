@@ -24,7 +24,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     [3]  PrintableString(SIZE (1..ub-generation-qualifier-length)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class PersonalName {
     constructor(

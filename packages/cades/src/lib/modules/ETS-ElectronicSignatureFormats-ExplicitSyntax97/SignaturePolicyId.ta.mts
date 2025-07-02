@@ -27,7 +27,6 @@ import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPoli
  *     sigPolicyQualifiers     SEQUENCE SIZE (1..MAX) OF SigPolicyQualifierInfo OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class SignaturePolicyId {

@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * gulsSignatureTransformation-XformedDataType-keyInformation ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class gulsSignatureTransformation_XformedDataType_keyInformation {
   constructor(

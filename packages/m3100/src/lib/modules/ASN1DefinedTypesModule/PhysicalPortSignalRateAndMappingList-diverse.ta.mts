@@ -26,7 +26,6 @@ import {
  * PhysicalPortSignalRateAndMappingList-diverse ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PhysicalPortSignalRateAndMappingList_diverse {
     constructor(

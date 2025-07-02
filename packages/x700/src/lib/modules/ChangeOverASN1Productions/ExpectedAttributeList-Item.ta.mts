@@ -29,7 +29,6 @@ import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar
  * ExpectedAttributeList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ExpectedAttributeList_Item {
     constructor(

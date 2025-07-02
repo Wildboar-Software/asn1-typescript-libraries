@@ -75,7 +75,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CommonArgumentsSeq {
     constructor(

@@ -66,7 +66,6 @@ import {
  *   COMPONENTS OF      CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class EstablishOperationalBindingResultData implements CommonResultsSeq {
     constructor(

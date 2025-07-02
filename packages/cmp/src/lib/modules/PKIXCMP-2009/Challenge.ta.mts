@@ -48,7 +48,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Challenge {
   constructor(

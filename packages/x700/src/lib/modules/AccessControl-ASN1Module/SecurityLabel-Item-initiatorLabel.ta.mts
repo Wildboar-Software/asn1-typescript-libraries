@@ -27,7 +27,6 @@ import {
  * SecurityLabel-Item-initiatorLabel ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SecurityLabel_Item_initiatorLabel {
     constructor(

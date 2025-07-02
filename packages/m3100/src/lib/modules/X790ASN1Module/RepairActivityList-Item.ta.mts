@@ -34,7 +34,6 @@ import {
  * RepairActivityList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RepairActivityList_Item {
     constructor(

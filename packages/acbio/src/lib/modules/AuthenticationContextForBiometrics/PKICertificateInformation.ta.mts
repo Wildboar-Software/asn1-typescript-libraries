@@ -40,7 +40,6 @@ import {
  *     pkiCertificateIssuerUniqueIdentifier    UniqueIdentifier OPTIONAL }
  * ```
  *
- * @class
  */
 export class PKICertificateInformation {
     constructor(

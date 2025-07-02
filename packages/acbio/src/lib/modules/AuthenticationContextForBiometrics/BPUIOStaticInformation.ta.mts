@@ -47,7 +47,6 @@ import {
  *     subprocessIOIndex   IOIndex }
  * ```
  *
- * @class
  */
 export class BPUIOStaticInformation {
     constructor(

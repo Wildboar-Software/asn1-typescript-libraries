@@ -31,7 +31,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AP_REP {
   constructor(

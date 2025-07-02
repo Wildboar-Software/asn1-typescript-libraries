@@ -32,7 +32,6 @@ import {
  * NumericMeasure-qualifiedValue ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class NumericMeasure_qualifiedValue {
     constructor(

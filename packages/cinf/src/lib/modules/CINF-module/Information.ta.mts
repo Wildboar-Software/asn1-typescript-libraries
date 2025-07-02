@@ -31,7 +31,6 @@ import {
  *            node is not prepared to disclose the number of other children) * / }
  * ```
  *
- * @class
  */
 export class Information {
   constructor(

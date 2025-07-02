@@ -31,7 +31,6 @@ import {
  * receive-report-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class receive_report_ArgumentType {
     constructor(

@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_SELECT_response {
   constructor(

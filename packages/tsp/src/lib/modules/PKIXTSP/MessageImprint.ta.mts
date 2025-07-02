@@ -24,7 +24,6 @@ import {
  *     hashedMessage                OCTET STRING  }
  * ```
  *
- * @class
  */
 export class MessageImprint {
     constructor(

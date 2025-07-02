@@ -41,7 +41,6 @@ import {
  *                                             } OPTIONAL }
  * ```
  *
- * @class
  */
 export class SingleResponse {
     constructor(

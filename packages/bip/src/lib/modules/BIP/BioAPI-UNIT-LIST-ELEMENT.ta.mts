@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_UNIT_LIST_ELEMENT {
   constructor(

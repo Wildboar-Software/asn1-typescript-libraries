@@ -35,7 +35,6 @@ import {
  *     postalAdddress [2] PostalAddress OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class SignerLocation {

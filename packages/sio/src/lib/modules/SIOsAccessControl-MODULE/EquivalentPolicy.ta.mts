@@ -25,7 +25,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EquivalentPolicy {
     constructor(

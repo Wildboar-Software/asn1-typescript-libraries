@@ -39,7 +39,6 @@ import {
  *     encValue       BIT STRING }
  * ```
  *
- * @class
  */
 export class EncryptedValue {
     constructor(

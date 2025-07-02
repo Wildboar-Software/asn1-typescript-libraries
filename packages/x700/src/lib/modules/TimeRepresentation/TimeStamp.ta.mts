@@ -45,7 +45,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class TimeStamp {
     constructor(

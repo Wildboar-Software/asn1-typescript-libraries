@@ -42,7 +42,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class RejectAVL implements AVMPcommonComponents {
     constructor(

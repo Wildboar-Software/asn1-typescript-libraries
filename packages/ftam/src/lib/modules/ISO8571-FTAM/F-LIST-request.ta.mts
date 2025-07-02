@@ -55,7 +55,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_LIST_request {
   constructor(

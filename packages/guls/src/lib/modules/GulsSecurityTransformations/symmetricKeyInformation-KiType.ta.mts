@@ -27,7 +27,6 @@ import {
  * symmetricKeyInformation-KiType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class symmetricKeyInformation_KiType {
   constructor(

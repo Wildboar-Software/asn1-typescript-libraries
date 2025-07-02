@@ -43,7 +43,6 @@ import {
  *                                     CertifiedKeyPair OPTIONAL }
  * ```
  *
- * @class
  */
 export class KeyRecRepContent {
   constructor(

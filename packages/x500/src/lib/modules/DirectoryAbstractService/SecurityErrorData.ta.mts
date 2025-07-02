@@ -59,7 +59,6 @@ import {
  *   COMPONENTS OF CommonResults }
  * ```
  *
- * @class
  */
 export class SecurityErrorData implements CommonResults {
     constructor(

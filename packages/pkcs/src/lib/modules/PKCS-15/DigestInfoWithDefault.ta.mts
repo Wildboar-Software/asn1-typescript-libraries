@@ -27,7 +27,6 @@ import { alg_id_sha1 } from "../PKCS-15/alg-id-sha1.va.mjs";
  * }
  * ```
  *
- * @class
  */
 export class DigestInfoWithDefault {
     constructor(

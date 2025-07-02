@@ -43,7 +43,6 @@ import {
  * AuthorizationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AuthorizationList_Item {
     constructor(

@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_READ_ATTRIB_request {
   constructor(

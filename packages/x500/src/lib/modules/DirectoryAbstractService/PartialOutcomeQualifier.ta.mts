@@ -56,7 +56,6 @@ import {
  *   --                            [10] Not to be used -- }
  * ```
  *
- * @class
  */
 export class PartialOutcomeQualifier {
     constructor(

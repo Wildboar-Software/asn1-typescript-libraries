@@ -22,7 +22,6 @@ import * as $ from "@wildboar/asn1/functional";
  * }
  * ```
  *
- * @class
  */
 export class RC2_CBC_Parameter {
     constructor(

@@ -39,7 +39,6 @@ import {
  * certs            [0] EXPLICIT SEQUENCE OF Certificate OPTIONAL }
  * ```
  *
- * @class
  */
 export class BasicOCSPResponse {
     constructor(

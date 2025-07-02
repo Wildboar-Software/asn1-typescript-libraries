@@ -26,7 +26,6 @@ import {
  * QualifiedNameOrIndex-literal-qualified-name ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class QualifiedNameOrIndex_literal_qualified_name {
   constructor(

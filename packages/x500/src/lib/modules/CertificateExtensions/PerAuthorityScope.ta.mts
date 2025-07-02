@@ -59,7 +59,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class PerAuthorityScope {
     constructor(

@@ -52,7 +52,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerDomainBilateralInformation implements BilateralDomain {
     constructor(

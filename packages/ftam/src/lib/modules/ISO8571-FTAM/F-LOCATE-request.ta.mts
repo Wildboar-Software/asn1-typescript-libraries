@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_LOCATE_request {
   constructor(

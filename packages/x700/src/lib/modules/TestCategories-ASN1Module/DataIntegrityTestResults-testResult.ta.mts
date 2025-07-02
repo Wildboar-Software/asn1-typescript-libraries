@@ -31,7 +31,6 @@ import {
  * DataIntegrityTestResults-testResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class DataIntegrityTestResults_testResult {
     constructor(

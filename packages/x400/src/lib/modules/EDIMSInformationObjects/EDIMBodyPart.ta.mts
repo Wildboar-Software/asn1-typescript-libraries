@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EDIMBodyPart {
     constructor(

@@ -30,7 +30,6 @@ import {
  * receive-edin-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class receive_edin_ArgumentType {
     constructor(

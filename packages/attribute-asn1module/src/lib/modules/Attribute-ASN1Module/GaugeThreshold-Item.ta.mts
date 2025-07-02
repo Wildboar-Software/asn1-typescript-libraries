@@ -21,7 +21,6 @@ import { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } fro
  * GaugeThreshold-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class GaugeThreshold_Item {

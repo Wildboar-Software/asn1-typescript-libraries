@@ -27,7 +27,6 @@ import {
  * Access-Control-Change-Attribute-actual-values ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Access_Control_Change_Attribute_actual_values {
   constructor(

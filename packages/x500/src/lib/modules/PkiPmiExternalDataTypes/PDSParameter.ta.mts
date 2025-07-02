@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   teletex-string    TeletexString(SIZE (1..ub-pds-parameter-length)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class PDSParameter {
     constructor(

@@ -48,7 +48,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_UNLINK_response {
   constructor(

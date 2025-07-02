@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * NormalValue-value-range ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class NormalValue_value_range {
     constructor(

@@ -64,7 +64,6 @@ import {
  * CPA-PPDU-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CPA_PPDU_normal_mode_parameters {
     constructor(

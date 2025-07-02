@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EnableEventNotifications_RequestParams {
   constructor(

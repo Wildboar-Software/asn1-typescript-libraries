@@ -31,7 +31,6 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  * }
  * ```
  *
- * @class
  */
 export class EncryptedData {
     constructor(

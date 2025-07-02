@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_BEGIN_RC {
   constructor(

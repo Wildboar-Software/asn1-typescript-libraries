@@ -28,7 +28,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RC5_CBC_Parameters {
     constructor(

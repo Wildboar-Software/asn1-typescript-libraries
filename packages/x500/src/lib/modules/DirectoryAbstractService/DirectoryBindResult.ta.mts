@@ -36,7 +36,6 @@ import {
  *   pwdResponseValue  [2]  PwdResponseValue OPTIONAL }
  * ```
  *
- * @class
  */
 export class DirectoryBindResult {
     constructor(

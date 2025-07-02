@@ -31,7 +31,6 @@ import {
  * cancelFailed-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class cancelFailed_ParameterType {
   constructor(

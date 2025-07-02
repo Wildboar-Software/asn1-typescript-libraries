@@ -30,7 +30,6 @@ import {
  * OperationSpecifications-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OperationSpecifications_Item {
     constructor(

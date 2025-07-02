@@ -92,7 +92,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerMessageTransferFields {
     constructor(

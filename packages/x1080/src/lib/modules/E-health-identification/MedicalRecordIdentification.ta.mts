@@ -34,7 +34,6 @@ import {
  *   record       MEDICAL-RECORD-SCHEME.&Record ({MedicalRecordSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class MedicalRecordIdentification {
     constructor(

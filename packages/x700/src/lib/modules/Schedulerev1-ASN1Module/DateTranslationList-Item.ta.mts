@@ -31,7 +31,6 @@ import {
  * DateTranslationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class DateTranslationList_Item {
     constructor(

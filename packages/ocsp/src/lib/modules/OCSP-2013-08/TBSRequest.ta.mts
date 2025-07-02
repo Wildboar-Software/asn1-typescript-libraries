@@ -44,7 +44,6 @@ import {
  *                     re-ocsp-preferred-signature-algorithms}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class TBSRequest {
     constructor(

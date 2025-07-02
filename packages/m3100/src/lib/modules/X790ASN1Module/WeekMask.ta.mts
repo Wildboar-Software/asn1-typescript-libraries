@@ -46,7 +46,6 @@ import { Time24 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute
  * }
  * ```
  *
- * @class
  */
 export class WeekMask {
     constructor(

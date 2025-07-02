@@ -34,7 +34,6 @@ import {
  *     ... } OPTIONAL}
  * ```
  *
- * @class
  */
 export class PwdResponseValue {
     constructor(

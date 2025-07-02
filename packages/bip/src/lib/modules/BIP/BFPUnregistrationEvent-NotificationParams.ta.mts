@@ -28,7 +28,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BFPUnregistrationEvent_NotificationParams {
   constructor(

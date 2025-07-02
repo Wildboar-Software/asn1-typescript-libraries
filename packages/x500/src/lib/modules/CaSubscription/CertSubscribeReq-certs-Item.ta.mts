@@ -21,7 +21,6 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * CertSubscribeReq-certs-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertSubscribeReq_certs_Item {
     constructor(

@@ -28,7 +28,6 @@ import * as $ from '@wildboar/asn1/functional';
  *    IPMBodyPartTable})
  * ```
  *
- * @class
  */
 export class ExtendedBodyPart {
     constructor(

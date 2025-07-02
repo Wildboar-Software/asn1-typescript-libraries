@@ -26,7 +26,6 @@ import {
  * Contents-Type-Attribute-document-type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Contents_Type_Attribute_document_type {
     constructor(

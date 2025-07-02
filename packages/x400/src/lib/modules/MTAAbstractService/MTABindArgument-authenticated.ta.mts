@@ -36,7 +36,6 @@ import {
  * MTABindArgument-authenticated ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MTABindArgument_authenticated {
     constructor(

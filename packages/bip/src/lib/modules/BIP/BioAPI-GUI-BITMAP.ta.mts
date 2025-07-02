@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_GUI_BITMAP {
   constructor(

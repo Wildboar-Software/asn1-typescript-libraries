@@ -82,7 +82,6 @@ import {
  *   COMPONENTS OF CommonArgumentsSeq }
  * ```
  *
- * @class
  */
 export class LdapArgumentData implements CommonArgumentsSeq {
     constructor(

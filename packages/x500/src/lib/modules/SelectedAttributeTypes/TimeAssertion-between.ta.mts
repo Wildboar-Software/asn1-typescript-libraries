@@ -18,7 +18,6 @@ import * as $ from "@wildboar/asn1/functional";
  * TimeAssertion-between ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TimeAssertion_between {
     constructor(

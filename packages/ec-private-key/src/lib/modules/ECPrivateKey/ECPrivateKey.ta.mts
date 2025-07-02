@@ -31,7 +31,6 @@ import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKI
  * }
  * ```
  *
- * @class
  */
 export
 class ECPrivateKey {

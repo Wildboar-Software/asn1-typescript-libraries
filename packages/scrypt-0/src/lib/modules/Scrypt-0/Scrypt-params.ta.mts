@@ -24,7 +24,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     keyLength                   INTEGER (1..MAX) OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class Scrypt_params {

@@ -77,7 +77,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CP_type {
     constructor(

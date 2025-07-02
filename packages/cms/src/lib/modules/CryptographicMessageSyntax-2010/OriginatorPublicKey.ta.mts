@@ -20,7 +20,6 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * publicKey     BIT STRING }
  * ```
  *
- * @class
  */
 export class OriginatorPublicKey {
     constructor(

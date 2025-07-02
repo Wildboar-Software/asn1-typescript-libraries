@@ -31,7 +31,6 @@ import {
  * RegisterResult-non-empty-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RegisterResult_non_empty_result {
     constructor(

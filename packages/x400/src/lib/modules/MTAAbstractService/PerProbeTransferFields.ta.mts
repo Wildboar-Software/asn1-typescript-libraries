@@ -85,7 +85,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerProbeTransferFields {
     constructor(

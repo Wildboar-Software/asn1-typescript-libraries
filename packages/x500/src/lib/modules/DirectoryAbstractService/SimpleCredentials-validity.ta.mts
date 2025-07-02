@@ -26,7 +26,6 @@ import {
  * SimpleCredentials-validity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SimpleCredentials_validity {
     constructor(

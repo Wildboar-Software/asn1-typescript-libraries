@@ -26,7 +26,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes> {
     constructor(

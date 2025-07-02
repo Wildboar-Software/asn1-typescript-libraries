@@ -30,7 +30,6 @@ import {
  * originate-rn-ResultType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_rn_ResultType {
     constructor(

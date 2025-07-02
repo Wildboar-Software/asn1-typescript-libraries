@@ -33,7 +33,6 @@ import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modu
  * }
  * ```
  *
- * @class
  */
 export class MITSearch {
     constructor(

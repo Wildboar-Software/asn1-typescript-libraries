@@ -34,7 +34,6 @@ import {
  *     ... -- For future extensions -- }
  * ```
  *
- * @class
  */
 export class BiometricData {
     constructor(

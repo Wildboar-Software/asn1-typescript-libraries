@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_MOVE_request {
   constructor(

@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class QueryUnits_RequestParams {
   constructor(

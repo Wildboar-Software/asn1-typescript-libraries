@@ -29,7 +29,6 @@ import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS
  *     otherRevVals    [2] OtherRevVals OPTIONAL}
  * ```
  *
- * @class
  */
 export
 class RevocationValues {

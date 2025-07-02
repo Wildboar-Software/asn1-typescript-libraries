@@ -38,7 +38,6 @@ import {
  * BridgeRollArg-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BridgeRollArg_Item {
     constructor(

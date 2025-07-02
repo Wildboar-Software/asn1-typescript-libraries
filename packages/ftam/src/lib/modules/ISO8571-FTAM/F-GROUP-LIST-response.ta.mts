@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_LIST_response {
   constructor(

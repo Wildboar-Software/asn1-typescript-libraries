@@ -41,7 +41,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SetPowerMode_RequestParams {
   constructor(

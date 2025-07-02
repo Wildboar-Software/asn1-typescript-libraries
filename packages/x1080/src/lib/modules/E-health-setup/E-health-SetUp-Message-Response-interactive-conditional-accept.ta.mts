@@ -23,7 +23,6 @@ import { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.mjs";
  * E-health-SetUp-Message-Response-interactive-conditional-accept ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export
 class E_health_SetUp_Message_Response_interactive_conditional_accept {

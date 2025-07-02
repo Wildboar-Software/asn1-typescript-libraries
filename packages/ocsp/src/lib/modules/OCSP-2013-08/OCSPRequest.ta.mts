@@ -28,7 +28,6 @@ import {
  * optionalSignature   [0]     EXPLICIT Signature OPTIONAL }
  * ```
  *
- * @class
  */
 export class OCSPRequest {
     constructor(

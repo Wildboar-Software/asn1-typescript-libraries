@@ -39,7 +39,6 @@ import {
  * ProtectionStatus-Item-forcedSwitch ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ProtectionStatus_Item_forcedSwitch {
     constructor(

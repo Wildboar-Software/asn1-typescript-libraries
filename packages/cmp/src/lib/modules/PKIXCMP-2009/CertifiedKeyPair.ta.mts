@@ -42,7 +42,6 @@ import {
  *     publicationInfo [1] PKIPublicationInfo  OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertifiedKeyPair {
   constructor(

@@ -54,7 +54,6 @@ import {
  *     signerInfos         SignerInfos }
  * ```
  *
- * @class
  */
 export class SIGNEDDATA<EncapsulatedContentInfo> {
     constructor(

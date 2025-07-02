@@ -33,7 +33,6 @@ import {
  *   certDigestInfo     ObjectDigestInfo OPTIONAL }
  * ```
  *
- * @class
  */
 export class TargetCert {
     constructor(

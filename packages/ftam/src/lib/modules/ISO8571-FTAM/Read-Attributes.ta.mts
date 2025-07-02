@@ -152,7 +152,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Read_Attributes {
   constructor(

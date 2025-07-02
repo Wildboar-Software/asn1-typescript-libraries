@@ -79,7 +79,6 @@ import {
  * CP-type-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CP_type_normal_mode_parameters {
     constructor(

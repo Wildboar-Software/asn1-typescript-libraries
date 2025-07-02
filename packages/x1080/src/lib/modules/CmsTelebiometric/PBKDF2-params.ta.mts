@@ -41,7 +41,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class PBKDF2_params {
     constructor(

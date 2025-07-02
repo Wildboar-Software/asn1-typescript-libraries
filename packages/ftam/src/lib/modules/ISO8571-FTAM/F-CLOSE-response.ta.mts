@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_CLOSE_response {
   constructor(

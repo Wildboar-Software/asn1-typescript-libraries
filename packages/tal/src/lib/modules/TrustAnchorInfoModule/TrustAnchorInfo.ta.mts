@@ -37,7 +37,6 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x5
  *     taTitleLangTag   [2] UTF8String OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class TrustAnchorInfo {

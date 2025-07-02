@@ -38,7 +38,6 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  * }
  * ```
  *
- * @class
  */
 export class AttributeMeasure {
     constructor(

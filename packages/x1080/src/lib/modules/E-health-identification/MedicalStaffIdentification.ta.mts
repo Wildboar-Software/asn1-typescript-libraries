@@ -36,7 +36,6 @@ import {
  *                  ({MedicalStaffSchemes}{@.scheme}) OPTIONAL}
  * ```
  *
- * @class
  */
 export class MedicalStaffIdentification {
     constructor(

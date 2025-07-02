@@ -65,7 +65,6 @@ import {
  *     extensions                   [1] IMPLICIT Extensions  OPTIONAL   }
  * ```
  *
- * @class
  */
 export class TSTInfo {
     constructor(

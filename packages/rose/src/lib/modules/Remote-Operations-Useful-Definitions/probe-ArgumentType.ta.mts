@@ -26,7 +26,6 @@ import {
  * probe-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class probe_ArgumentType {
   constructor(

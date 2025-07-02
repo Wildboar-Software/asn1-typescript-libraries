@@ -24,7 +24,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class LdapSyntaxDescription {
     constructor(

@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   teletex-string    TeletexString(SIZE (1..ub-unformatted-address-length)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class UnformattedPostalAddress {
     constructor(

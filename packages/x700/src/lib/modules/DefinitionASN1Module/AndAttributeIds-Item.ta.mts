@@ -31,7 +31,6 @@ import {
  * AndAttributeIds-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AndAttributeIds_Item {
     constructor(

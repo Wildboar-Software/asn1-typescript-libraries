@@ -38,7 +38,6 @@ import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
  * }
  * ```
  *
- * @class
  */
 export class Discovery {
   constructor(

@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_CANDIDATE {
   constructor(

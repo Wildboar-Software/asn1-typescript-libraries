@@ -26,7 +26,6 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * }
  * ```
  *
- * @class
  */
 export
 class SubjectPublicKeyInfo {

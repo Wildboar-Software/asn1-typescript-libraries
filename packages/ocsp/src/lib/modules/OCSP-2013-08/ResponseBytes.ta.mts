@@ -22,7 +22,6 @@ import * as $ from "@wildboar/asn1/functional";
  *                         &Type({ResponseSet}{@responseType}))}
  * ```
  *
- * @class
  */
 export class ResponseBytes {
     constructor(

@@ -30,7 +30,6 @@ import {
  * delete-error-ParameterType-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class delete_error_ParameterType_problems_Item {
     constructor(

@@ -47,7 +47,6 @@ import {
  *   COMPONENTS OF  CommonResults }
  * ```
  *
- * @class
  */
 export class ServiceErrorData implements CommonResults {
     constructor(

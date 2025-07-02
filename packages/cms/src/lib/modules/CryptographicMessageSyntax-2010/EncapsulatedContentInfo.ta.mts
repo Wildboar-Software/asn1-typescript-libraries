@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  * (CONTAINING CONTENT-TYPE.&Type({ContentSet}{@eContentType})) OPTIONAL }
  * ```
  *
- * @class
  */
 export class EncapsulatedContentInfo {
     constructor(

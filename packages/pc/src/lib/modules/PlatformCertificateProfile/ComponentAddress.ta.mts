@@ -24,7 +24,6 @@ import { AddressType, _decode_AddressType, _encode_AddressType } from "../Platfo
  *     addressValue    UTF8String (SIZE (1..strmax)) }
  * ```
  *
- * @class
  */
 export
 class ComponentAddress {

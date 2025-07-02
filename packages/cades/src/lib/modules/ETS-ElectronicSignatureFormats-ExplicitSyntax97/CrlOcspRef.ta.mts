@@ -27,7 +27,6 @@ import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS
  *     otherRev    [2] OtherRevRefs OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CrlOcspRef {

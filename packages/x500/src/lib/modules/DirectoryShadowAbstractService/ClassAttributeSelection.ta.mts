@@ -23,7 +23,6 @@ import {
  *   classAttributes  ClassAttributes DEFAULT allAttributes:NULL }
  * ```
  *
- * @class
  */
 export class ClassAttributeSelection {
     constructor(

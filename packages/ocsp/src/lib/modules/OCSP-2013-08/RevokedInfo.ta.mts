@@ -25,7 +25,6 @@ import {
  * revocationReason    [0]     EXPLICIT CRLReason OPTIONAL }
  * ```
  *
- * @class
  */
 export class RevokedInfo {
     constructor(

@@ -23,7 +23,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     otherRevVals        SEQUENCE OF OTHER-REVOCATION-REF.&Type }
  * ```
  *
- * @class
  */
 export
 class OtherRevVals {

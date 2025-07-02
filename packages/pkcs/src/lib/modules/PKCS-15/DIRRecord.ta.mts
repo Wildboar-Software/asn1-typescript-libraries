@@ -24,7 +24,6 @@ import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.mjs";
  * }
  * ```
  *
- * @class
  */
 export class DIRRecord {
     constructor(

@@ -45,7 +45,6 @@ import {
  *     functionDescription OCTET STRING (SIZE(1..MAX)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class FunctionDefinition {
     constructor(

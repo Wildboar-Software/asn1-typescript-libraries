@@ -30,7 +30,6 @@ import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedC
  * }
  * ```
  * 
- * @class
  */
 export
 class KeyRspMsgContent {

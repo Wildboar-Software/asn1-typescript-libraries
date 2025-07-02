@@ -26,7 +26,6 @@ import {
  * KeyManagementInfo-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class KeyManagementInfo_Item {
     constructor(

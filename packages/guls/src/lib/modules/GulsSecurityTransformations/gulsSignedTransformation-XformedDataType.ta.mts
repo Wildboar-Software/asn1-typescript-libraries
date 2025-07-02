@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  * gulsSignedTransformation-XformedDataType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class gulsSignedTransformation_XformedDataType {
   constructor(

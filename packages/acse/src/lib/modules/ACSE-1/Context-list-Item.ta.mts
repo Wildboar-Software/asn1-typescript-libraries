@@ -35,7 +35,6 @@ import {
  * Context-list-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Context_list_Item {
   constructor(

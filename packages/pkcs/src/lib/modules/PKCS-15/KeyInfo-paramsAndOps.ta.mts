@@ -13,7 +13,6 @@ import * as $ from "@wildboar/asn1/functional";
  * KeyInfo-paramsAndOps ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
     constructor(

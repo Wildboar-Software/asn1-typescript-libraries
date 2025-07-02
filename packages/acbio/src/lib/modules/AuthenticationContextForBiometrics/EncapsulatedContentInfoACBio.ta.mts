@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     eContent            [0] EXPLICIT CONTENT-TYPE.&Type({ContentTypeACBioContentInfo}{@eContentType}) }
  * ```
  *
- * @class
  */
 export class EncapsulatedContentInfoACBio {
     constructor(

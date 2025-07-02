@@ -31,7 +31,6 @@ import {
  * ServiceLocationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ServiceLocationList_Item {
     constructor(

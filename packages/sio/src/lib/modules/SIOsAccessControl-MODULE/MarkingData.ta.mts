@@ -29,7 +29,6 @@ import {
  * }(ALL EXCEPT ({ -- none; at least one component shall be present --}))
  * ```
  *
- * @class
  */
 export class MarkingData {
     constructor(

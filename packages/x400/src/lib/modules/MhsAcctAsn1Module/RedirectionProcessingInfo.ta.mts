@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RedirectionProcessingInfo {
     constructor(

@@ -55,7 +55,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SignerInfo {
     constructor(

@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class NotifyGUIStateEvent_ResponseParams {
   constructor(

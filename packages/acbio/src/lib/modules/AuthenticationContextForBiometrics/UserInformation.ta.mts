@@ -36,7 +36,6 @@ import {
  *     userUniqueIdentifier    UniqueIdentifier OPTIONAL }
  * ```
  *
- * @class
  */
 export class UserInformation {
     constructor(

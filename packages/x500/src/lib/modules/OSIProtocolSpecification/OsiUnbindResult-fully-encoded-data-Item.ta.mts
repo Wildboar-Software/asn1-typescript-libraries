@@ -25,7 +25,6 @@ import {
  * OsiUnbindResult-fully-encoded-data-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiUnbindResult_fully_encoded_data_Item {
     constructor(

@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Integer_Pattern {
   constructor(

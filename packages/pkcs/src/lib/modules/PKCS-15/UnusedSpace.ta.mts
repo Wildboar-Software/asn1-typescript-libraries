@@ -32,7 +32,6 @@ import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
  * }
  * ```
  *
- * @class
  */
 export class UnusedSpace {
     constructor(

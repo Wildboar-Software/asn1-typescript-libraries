@@ -35,7 +35,6 @@ import {
  *     bpuOuputExecutionInformationList    BPUIOExecutionInformationList OPTIONAL }
  * ```
  *
- * @class
  */
 export class BiometricProcess {
     constructor(

@@ -31,7 +31,6 @@ import {
  * Context-keyword ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Context_keyword {
     constructor(

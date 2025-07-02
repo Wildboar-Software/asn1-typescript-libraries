@@ -32,7 +32,6 @@ import {
  * Scope-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Scope_Item {
   constructor(

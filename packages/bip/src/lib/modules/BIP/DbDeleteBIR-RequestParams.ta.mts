@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DbDeleteBIR_RequestParams {
   constructor(

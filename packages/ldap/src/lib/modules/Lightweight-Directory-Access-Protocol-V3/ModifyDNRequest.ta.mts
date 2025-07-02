@@ -38,7 +38,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ModifyDNRequest {
   constructor(

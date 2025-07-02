@@ -22,7 +22,6 @@ import {
  * PagedResultsRequest-newRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PagedResultsRequest_newRequest {
     constructor(

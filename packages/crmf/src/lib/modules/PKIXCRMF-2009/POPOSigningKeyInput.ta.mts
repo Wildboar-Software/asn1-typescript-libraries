@@ -37,7 +37,6 @@ import {
  *     publicKey           SubjectPublicKeyInfo }
  * ```
  *
- * @class
  */
 export class POPOSigningKeyInput {
     constructor(

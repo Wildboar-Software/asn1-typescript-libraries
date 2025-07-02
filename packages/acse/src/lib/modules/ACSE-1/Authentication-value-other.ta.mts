@@ -21,7 +21,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Authentication-value-other ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Authentication_value_other {
   constructor(

@@ -36,7 +36,6 @@ import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../
  * }
  * ```
  *
- * @class
  */
 export
 class SpecifiedECDomain {

@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MSProbeSubmissionResult implements ProbeSubmissionResult {
     constructor(

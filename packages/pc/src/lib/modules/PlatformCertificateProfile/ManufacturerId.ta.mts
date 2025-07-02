@@ -22,7 +22,6 @@ import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_Priva
  *     manufacturerIdentifier  PrivateEnterpriseNumber }
  * ```
  *
- * @class
  */
 export
 class ManufacturerId {

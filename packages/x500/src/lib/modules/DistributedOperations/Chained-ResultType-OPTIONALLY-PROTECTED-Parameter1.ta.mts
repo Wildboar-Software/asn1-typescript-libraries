@@ -18,7 +18,6 @@ import {
  *     result          [0]  operation.&ResultType }
  * ```
  *
- * @class
  */
 export class Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(

@@ -29,7 +29,6 @@ import {
  * locator   AuthorityInfoAccessSyntax }
  * ```
  *
- * @class
  */
 export class ServiceLocator {
     constructor(

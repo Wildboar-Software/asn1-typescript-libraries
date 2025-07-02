@@ -37,7 +37,6 @@ import {
  * change-auto-forwarding-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class change_auto_forwarding_ArgumentType {
     constructor(

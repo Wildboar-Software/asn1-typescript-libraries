@@ -29,7 +29,6 @@ import {
  * asymmetricKeyInformation-KiType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class asymmetricKeyInformation_KiType {
   constructor(

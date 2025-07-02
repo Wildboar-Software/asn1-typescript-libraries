@@ -25,7 +25,6 @@ import {
  * Register-MSArgument-change-credentials ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Register_MSArgument_change_credentials {
     constructor(

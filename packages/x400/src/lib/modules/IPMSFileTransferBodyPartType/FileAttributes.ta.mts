@@ -111,7 +111,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class FileAttributes {
     constructor(

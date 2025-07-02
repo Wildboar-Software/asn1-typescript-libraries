@@ -37,7 +37,6 @@ import {
  *                                              (AARQ-apdu{{Protocols}})}}}}}
  * ```
  *
- * @class
  */
 export class OsiBind {
     constructor(

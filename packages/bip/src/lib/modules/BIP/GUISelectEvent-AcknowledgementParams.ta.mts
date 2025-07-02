@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class GUISelectEvent_AcknowledgementParams {
   constructor(

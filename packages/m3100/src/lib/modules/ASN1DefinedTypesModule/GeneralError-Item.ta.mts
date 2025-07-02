@@ -38,7 +38,6 @@ import {
  * GeneralError-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class GeneralError_Item {
     constructor(

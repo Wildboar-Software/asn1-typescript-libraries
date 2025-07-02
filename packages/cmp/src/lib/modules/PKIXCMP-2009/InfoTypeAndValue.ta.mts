@@ -26,7 +26,6 @@ import * as $ from '@wildboar/asn1/functional';
  *                     &Type({SupportedInfoSet}{@infoType}) }
  * ```
  *
- * @class
  */
 export class InfoTypeAndValue {
   constructor(

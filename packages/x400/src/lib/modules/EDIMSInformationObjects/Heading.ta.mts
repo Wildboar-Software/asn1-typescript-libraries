@@ -146,7 +146,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Heading {
     constructor(

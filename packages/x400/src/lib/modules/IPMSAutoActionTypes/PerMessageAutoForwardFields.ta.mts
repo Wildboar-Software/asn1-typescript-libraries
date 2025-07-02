@@ -69,7 +69,6 @@ export interface PerMessageAutoForwardFields {
  * }
  * ```
  *
- * @class
  */
 export class PerMessageAutoForwardFields {
     constructor(

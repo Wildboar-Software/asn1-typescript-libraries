@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     otherRevInfo        OTHERREVOCATION.&Type({OtherRevocation}{@otherRevInfoFormat}) }
  * ```
  *
- * @class
  */
 export class OtherRevocationInfoFormat {
     constructor(

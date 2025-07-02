@@ -25,7 +25,6 @@ import {
  * ACIItem-itemOrUserFirst-itemFirst ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ACIItem_itemOrUserFirst_itemFirst {
     constructor(

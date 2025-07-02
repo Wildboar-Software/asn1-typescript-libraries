@@ -26,7 +26,6 @@ import { SecurityLevelBioRef, _decode_SecurityLevelBioRef, _encode_SecurityLevel
  * }
  * ```
  * 
- * @class
  */
 export
 class SecurityLevelBioReference {

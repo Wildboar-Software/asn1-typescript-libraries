@@ -57,7 +57,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ExecutionResultInfo {
     constructor(

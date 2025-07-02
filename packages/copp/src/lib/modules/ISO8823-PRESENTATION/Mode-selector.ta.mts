@@ -28,7 +28,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Mode_selector {
     constructor(

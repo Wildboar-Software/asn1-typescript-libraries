@@ -30,7 +30,6 @@ import {
  * AlgorithmOutputBuffer-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AlgorithmOutputBuffer_Item {
     constructor(

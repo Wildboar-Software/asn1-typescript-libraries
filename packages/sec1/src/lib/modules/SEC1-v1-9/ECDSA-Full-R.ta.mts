@@ -25,7 +25,6 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  * }
  * ```
  *
- * @class
  */
 export
 class ECDSA_Full_R {

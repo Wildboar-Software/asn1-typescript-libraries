@@ -21,7 +21,6 @@ import {
  * UserPwd-encrypted ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class UserPwd_encrypted {
     constructor(

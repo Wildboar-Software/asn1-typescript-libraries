@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CreateSpecification {
     constructor(

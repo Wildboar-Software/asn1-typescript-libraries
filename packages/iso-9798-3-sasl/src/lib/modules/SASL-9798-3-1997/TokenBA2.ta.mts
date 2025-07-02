@@ -41,7 +41,6 @@ import {
  *     -- from their X.509 certificate.--})
  * ```
  *
- * @class
  */
 export
 class TokenBA2 {

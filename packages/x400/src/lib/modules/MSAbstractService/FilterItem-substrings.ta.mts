@@ -31,7 +31,6 @@ import {
  * FilterItem-substrings ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class FilterItem_substrings {
     constructor(

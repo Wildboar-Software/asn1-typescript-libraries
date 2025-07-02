@@ -27,7 +27,6 @@ import {
  * ToTPPools-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ToTPPools_Item {
     constructor(

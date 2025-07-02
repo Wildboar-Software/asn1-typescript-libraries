@@ -25,7 +25,6 @@ import {
  * attribute-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class attribute_error_ParameterType {
     constructor(

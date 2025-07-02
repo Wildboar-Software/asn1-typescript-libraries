@@ -25,7 +25,6 @@ import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mj
  * }
  * ```
  *
- * @class
  */
 export class TimeStamped {
     constructor(

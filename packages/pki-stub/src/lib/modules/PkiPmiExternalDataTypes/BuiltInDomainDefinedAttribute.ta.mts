@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   value  PrintableString(SIZE (1..ub-domain-defined-attribute-value-length)) }
  * ```
  *
- * @class
  */
 export class BuiltInDomainDefinedAttribute {
     constructor(

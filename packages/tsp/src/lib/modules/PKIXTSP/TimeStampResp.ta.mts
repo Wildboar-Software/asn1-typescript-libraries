@@ -27,7 +27,6 @@ import {
  *     timeStampToken          TimeStampToken     OPTIONAL  }
  * ```
  *
- * @class
  */
 export class TimeStampResp {
     constructor(

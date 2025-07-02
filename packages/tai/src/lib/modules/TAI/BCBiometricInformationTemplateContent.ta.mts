@@ -32,7 +32,6 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
  * }
  * ```
  * 
- * @class
  */
 export
 class BCBiometricInformationTemplateContent {

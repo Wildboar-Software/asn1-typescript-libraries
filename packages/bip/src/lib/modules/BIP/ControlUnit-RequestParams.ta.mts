@@ -46,7 +46,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ControlUnit_RequestParams {
   constructor(

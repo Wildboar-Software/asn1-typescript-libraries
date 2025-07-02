@@ -37,7 +37,6 @@ import {
  * TBSCertAVL-entries-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TBSCertAVL_entries_Item {
     constructor(

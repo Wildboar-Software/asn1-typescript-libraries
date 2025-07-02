@@ -78,7 +78,6 @@ import {
  *   }
  * ```
  *
- * @class
  */
 export class RemoveEntryArgumentData implements CommonArguments {
     constructor(

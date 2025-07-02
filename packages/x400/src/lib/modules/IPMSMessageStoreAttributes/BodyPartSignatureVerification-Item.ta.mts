@@ -30,7 +30,6 @@ import {
  * BodyPartSignatureVerification-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BodyPartSignatureVerification_Item {
     constructor(

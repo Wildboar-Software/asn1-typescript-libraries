@@ -38,7 +38,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SystemTiming {
     constructor(

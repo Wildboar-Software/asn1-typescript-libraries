@@ -30,7 +30,6 @@ import {
  * originate-probe-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_probe_ArgumentType {
     constructor(

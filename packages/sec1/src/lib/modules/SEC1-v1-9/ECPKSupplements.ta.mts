@@ -26,7 +26,6 @@ import { ECCSupplements, _decode_ECCSupplements, _encode_ECCSupplements } from "
  *     eccSupplements ECCSupplements }
  * ```
  *
- * @class
  */
 export
 class ECPKSupplements {

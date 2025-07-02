@@ -24,7 +24,6 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
  *     platformClass       OCTET STRING (SIZE(4)) }
  * ```
  *
- * @class
  */
 export
 class TCGPlatformSpecification {

@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Transform_RequestParams {
   constructor(

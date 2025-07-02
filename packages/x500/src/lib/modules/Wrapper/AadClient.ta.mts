@@ -41,7 +41,6 @@ import {
  *   keyEst   [2] AlgoInvoke{{SupportedKeyEstablishmentAlgos}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class AadClient {
     constructor(

@@ -74,7 +74,6 @@ import {
  *   -- see also teletex-organizational-unit-names --}
  * ```
  *
- * @class
  */
 export class BuiltInStandardAttributes {
     constructor(

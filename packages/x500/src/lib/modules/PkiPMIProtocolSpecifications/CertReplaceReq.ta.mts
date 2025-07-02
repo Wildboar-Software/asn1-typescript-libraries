@@ -43,7 +43,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CertReplaceReq implements CASPcommonComponents {
     constructor(

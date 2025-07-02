@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Enroll_ResponseParams {
   constructor(

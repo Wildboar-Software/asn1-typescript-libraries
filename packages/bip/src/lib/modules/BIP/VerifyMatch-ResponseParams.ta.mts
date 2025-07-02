@@ -43,7 +43,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class VerifyMatch_ResponseParams {
   constructor(

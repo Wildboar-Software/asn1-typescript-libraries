@@ -100,7 +100,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Create_Attributes {
   constructor(

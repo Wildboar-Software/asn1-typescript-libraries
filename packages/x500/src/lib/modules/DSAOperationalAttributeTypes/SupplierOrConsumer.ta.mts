@@ -45,7 +45,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SupplierOrConsumer extends AccessPoint {
     constructor(

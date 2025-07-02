@@ -56,7 +56,6 @@ import {
  *   COMPONENTS OF       CommonResults }
  * ```
  *
- * @class
  */
 export class UpdateErrorData implements CommonResults {
     constructor(

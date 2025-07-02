@@ -106,7 +106,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ChainingArguments {
     constructor(

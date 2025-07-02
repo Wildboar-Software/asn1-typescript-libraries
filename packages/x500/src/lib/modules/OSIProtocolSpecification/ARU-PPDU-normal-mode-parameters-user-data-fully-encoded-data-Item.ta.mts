@@ -25,7 +25,6 @@ import {
  * ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item {
     constructor(

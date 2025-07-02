@@ -63,7 +63,6 @@ import {
  * } (CONSTRAINED BY { -- Each AlgorithmInfo.reference value must be unique -- })
  * ```
  *
- * @class
  */
 export class TokenInfo {
     constructor(

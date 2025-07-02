@@ -38,7 +38,6 @@ import {
  *     timestamp             CirculationTime }
  * ```
  *
- * @class
  */
 export class TBSCirculationSignature {
     constructor(

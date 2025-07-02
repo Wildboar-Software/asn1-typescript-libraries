@@ -23,7 +23,6 @@ import {
  *   altNameValue  GeneralName OPTIONAL }
  * ```
  *
- * @class
  */
 export class AltName {
     constructor(

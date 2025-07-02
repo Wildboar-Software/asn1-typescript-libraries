@@ -30,7 +30,6 @@ import {
  * originate-ipm-ResultType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_ipm_ResultType {
     constructor(

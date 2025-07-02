@@ -22,7 +22,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class InitializationReq {
     constructor(

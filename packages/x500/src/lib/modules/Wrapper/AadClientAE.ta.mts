@@ -44,7 +44,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class AadClientAE extends AadClient {
     constructor(

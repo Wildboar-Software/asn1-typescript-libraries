@@ -96,7 +96,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SearchRule implements SearchRuleId {
     constructor(

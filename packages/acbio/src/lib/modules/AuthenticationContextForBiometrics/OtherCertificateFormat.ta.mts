@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     otherCert OTHERCERTIFICATE.&Type({OtherCertificate}{@otherFormat}) }
  * ```
  *
- * @class
  */
 export class OtherCertificateFormat {
     constructor(

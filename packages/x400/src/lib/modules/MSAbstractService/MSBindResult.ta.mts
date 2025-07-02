@@ -80,7 +80,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MSBindResult {
     constructor(

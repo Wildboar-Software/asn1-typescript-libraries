@@ -26,7 +26,6 @@ import * as $ from "@wildboar/asn1/functional";
  * BiometricPara-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class BiometricPara_Item {

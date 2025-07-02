@@ -30,7 +30,6 @@ import {
  * fetch-restriction-error-ParameterType-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class fetch_restriction_error_ParameterType_problems_Item {
     constructor(

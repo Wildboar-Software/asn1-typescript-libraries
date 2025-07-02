@@ -57,7 +57,6 @@ import {
  * MSMessageSubmissionResult-mts-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MSMessageSubmissionResult_mts_result implements MessageSubmissionResult {
     constructor(

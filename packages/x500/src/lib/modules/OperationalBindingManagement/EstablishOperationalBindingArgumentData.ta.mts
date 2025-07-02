@@ -57,7 +57,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class EstablishOperationalBindingArgumentData {
     constructor(

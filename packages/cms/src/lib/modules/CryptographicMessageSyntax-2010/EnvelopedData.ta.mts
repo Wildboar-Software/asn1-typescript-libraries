@@ -48,7 +48,6 @@ import {
  *             {{ UnprotectedEnvAttributes }} OPTIONAL ]] }
  * ```
  *
- * @class
  */
 export class EnvelopedData {
     constructor(

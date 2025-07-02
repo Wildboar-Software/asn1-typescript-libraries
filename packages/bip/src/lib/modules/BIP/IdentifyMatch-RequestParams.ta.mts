@@ -61,7 +61,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class IdentifyMatch_RequestParams {
   constructor(

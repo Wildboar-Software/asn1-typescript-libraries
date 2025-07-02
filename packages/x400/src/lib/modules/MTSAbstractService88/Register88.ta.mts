@@ -67,7 +67,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Register88 {
     constructor(

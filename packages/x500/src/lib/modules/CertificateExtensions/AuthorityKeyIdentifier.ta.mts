@@ -38,7 +38,6 @@ import {
  *                          authorityCertSerialNumber  ABSENT } )
  * ```
  *
- * @class
  */
 export class AuthorityKeyIdentifier {
     constructor(

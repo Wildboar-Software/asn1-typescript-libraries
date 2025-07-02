@@ -34,7 +34,6 @@ import {
  *   urnPrefix       UTF8String                     OPTIONAL }
  * ```
  *
- * @class
  */
 export class EpcFormat {
     constructor(

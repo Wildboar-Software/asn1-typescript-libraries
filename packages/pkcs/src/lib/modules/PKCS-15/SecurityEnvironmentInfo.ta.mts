@@ -23,7 +23,6 @@ import * as $ from "@wildboar/asn1/functional";
  * }
  * ```
  *
- * @class
  */
 export class SecurityEnvironmentInfo {
     constructor(

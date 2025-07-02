@@ -27,7 +27,6 @@ import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta.mjs";
  * }
  * ```
  *
- * @class
  */
 export class CommonPublicKeyAttributes {
     constructor(

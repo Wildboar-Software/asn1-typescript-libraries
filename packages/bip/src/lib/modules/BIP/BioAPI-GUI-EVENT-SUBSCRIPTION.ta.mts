@@ -38,7 +38,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_GUI_EVENT_SUBSCRIPTION {
   constructor(

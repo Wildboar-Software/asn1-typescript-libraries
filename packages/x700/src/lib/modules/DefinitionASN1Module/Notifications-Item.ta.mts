@@ -32,7 +32,6 @@ import {
  * Notifications-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Notifications_Item {
     constructor(

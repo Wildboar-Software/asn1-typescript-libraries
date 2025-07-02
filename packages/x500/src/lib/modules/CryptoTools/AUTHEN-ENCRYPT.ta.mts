@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   ... }
  * ```
  *
- * @class
  */
 export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
     constructor(

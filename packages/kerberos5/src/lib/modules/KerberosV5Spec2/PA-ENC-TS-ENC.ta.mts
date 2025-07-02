@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PA_ENC_TS_ENC {
   constructor(

@@ -33,7 +33,6 @@ import {
  * ActivityDuration-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ActivityDuration_Item {
     constructor(

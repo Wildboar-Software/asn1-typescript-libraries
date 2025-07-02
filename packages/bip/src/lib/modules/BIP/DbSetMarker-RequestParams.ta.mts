@@ -46,7 +46,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DbSetMarker_RequestParams {
   constructor(

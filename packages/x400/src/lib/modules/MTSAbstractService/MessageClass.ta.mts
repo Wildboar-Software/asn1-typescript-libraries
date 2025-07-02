@@ -76,7 +76,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MessageClass {
     constructor(

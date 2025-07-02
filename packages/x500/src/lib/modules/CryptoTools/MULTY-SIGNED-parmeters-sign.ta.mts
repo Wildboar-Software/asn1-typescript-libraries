@@ -21,7 +21,6 @@ import {
  * MULTY-SIGNED-parmeters-sign ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MULTY_SIGNED_parmeters_sign<_ToBeSigned> {
     constructor(

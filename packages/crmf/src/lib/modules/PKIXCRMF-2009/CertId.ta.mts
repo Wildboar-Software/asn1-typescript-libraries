@@ -25,7 +25,6 @@ import {
  *     serialNumber     INTEGER }
  * ```
  *
- * @class
  */
 export class CertId {
     constructor(

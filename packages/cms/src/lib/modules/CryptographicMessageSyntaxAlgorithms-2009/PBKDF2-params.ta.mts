@@ -34,7 +34,6 @@ import {
  * prf             PBKDF2-PRFsAlgorithmIdentifier DEFAULT defaultPBKDF2 }
  * ```
  *
- * @class
  */
 export class PBKDF2_params {
     constructor(

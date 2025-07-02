@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Application_Entity_Title {
     constructor(

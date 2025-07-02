@@ -70,7 +70,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SchedulingConflictInfo {
     constructor(

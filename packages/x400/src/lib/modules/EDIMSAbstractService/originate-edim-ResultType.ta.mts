@@ -30,7 +30,6 @@ import {
  * originate-edim-ResultType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_edim_ResultType {
     constructor(

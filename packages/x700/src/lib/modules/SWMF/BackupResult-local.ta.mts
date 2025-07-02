@@ -26,7 +26,6 @@ import {
  * BackupResult-local ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BackupResult_local {
     constructor(

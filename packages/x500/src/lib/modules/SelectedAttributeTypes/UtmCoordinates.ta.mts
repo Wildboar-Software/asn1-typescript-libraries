@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   northing  NumericString }
  * ```
  *
- * @class
  */
 export class UtmCoordinates {
     constructor(

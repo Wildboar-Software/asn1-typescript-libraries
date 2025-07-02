@@ -31,7 +31,6 @@ import {
  * ObjectSel-objSelect-objectNames-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ObjectSel_objSelect_objectNames_Item {
     constructor(

@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CurrentProblem {
     constructor(

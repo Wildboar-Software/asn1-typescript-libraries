@@ -33,7 +33,6 @@ import {
  *   serialNumber CertificateSerialNumber }
  * ```
  *
- * @class
  */
 export class IssuerAndSerialNumber {
     constructor(

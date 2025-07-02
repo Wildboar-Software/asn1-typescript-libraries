@@ -27,7 +27,6 @@ import {
  * RegistrationDetails-registrant-enciphered-registrant ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RegistrationDetails_registrant_enciphered_registrant {
   constructor(

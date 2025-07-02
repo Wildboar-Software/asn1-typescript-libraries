@@ -69,7 +69,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class E_setupRequest {
     constructor(

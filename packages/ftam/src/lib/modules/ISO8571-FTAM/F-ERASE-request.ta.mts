@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_ERASE_request {
   constructor(

@@ -36,7 +36,6 @@ import { ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../
  *     }
  * ```
  *
- * @class
  */
 export
 class SNMPv3Message {

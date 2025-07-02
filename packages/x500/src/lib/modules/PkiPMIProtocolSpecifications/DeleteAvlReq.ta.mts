@@ -41,7 +41,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class DeleteAvlReq implements AVMPcommonComponents {
     constructor(

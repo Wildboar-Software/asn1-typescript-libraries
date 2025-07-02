@@ -26,7 +26,6 @@ import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1M
  * }
  * ```
  * 
- * @class
  */
 export
 class TideMarkInfo {

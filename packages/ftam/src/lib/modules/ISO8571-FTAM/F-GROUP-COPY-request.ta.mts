@@ -74,7 +74,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_COPY_request {
   constructor(

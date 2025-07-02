@@ -30,7 +30,6 @@ import {
  * originate-edin-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_edin_ArgumentType {
     constructor(

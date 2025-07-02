@@ -25,7 +25,6 @@ import * as $ from "@wildboar/asn1/functional";
  *         ({SupportedSigPolicyQualifiers}{@sigPolicyQualifierId}) OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class SigPolicyQualifierInfo {

@@ -69,7 +69,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DeleteArgument implements BaseManagedObjectId {
   constructor(

@@ -80,7 +80,6 @@ import {
  *   COMPONENTS OF      CommonArguments }
  * ```
  *
- * @class
  */
 export class ModifyDNArgumentData implements CommonArguments {
     constructor(

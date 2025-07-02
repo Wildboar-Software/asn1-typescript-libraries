@@ -52,7 +52,6 @@ import {
  * Register-MSResult-registered-information ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Register_MSResult_registered_information {
     constructor(

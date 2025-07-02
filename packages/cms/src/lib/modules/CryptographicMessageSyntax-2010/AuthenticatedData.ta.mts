@@ -70,7 +70,6 @@ import {
  * unauthAttrs     [3] IMPLICIT UnauthAttributes OPTIONAL }
  * ```
  *
- * @class
  */
 export class AuthenticatedData {
     constructor(

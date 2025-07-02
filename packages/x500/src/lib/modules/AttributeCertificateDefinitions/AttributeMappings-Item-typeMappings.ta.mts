@@ -20,7 +20,6 @@ import {
  * AttributeMappings-Item-typeMappings ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AttributeMappings_Item_typeMappings {
     constructor(

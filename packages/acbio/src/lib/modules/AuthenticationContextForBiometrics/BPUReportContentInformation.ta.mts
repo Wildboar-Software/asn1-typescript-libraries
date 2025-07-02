@@ -33,7 +33,6 @@ import {
  *     bpuSecurityReport   BPUSecurityReport }
  * ```
  *
- * @class
  */
 export class BPUReportContentInformation {
     constructor(

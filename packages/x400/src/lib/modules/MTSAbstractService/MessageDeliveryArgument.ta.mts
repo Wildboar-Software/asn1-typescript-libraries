@@ -54,7 +54,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MessageDeliveryArgument implements MessageDeliveryEnvelope {
     constructor(

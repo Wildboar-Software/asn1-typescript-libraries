@@ -27,7 +27,6 @@ import {
  * AuthorizationData-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AuthorizationData_Item {
   constructor(

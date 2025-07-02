@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Ack-error ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Ack_error {
     constructor(

@@ -38,7 +38,6 @@ import {
  *   securityParameters    [30]  SecurityParameters OPTIONAL }
  * ```
  *
- * @class
  */
 export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(

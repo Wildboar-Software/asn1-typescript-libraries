@@ -31,7 +31,6 @@ import {
  * Path-Access-Passwords-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Path_Access_Passwords_Item {
   constructor(

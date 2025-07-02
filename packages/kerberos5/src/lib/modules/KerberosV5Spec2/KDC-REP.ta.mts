@@ -59,7 +59,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class KDC_REP {
   constructor(

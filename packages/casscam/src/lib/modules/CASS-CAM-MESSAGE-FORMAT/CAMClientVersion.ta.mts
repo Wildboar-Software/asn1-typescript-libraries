@@ -29,7 +29,6 @@ import { CAMClientInfo, _decode_CAMClientInfo, _encode_CAMClientInfo } from "../
  * }
  * ```
  * 
- * @class
  */
 export
 class CAMClientVersion {

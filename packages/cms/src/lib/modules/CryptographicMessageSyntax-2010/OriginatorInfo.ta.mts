@@ -28,7 +28,6 @@ import {
  * crls         [1] IMPLICIT RevocationInfoChoices OPTIONAL }
  * ```
  *
- * @class
  */
 export class OriginatorInfo {
     constructor(

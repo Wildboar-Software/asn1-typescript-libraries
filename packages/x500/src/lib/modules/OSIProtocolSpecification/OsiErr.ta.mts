@@ -23,7 +23,6 @@ import {
  *   error     OPERATION.&Errors.&ParameterType({Operations}{@.errcode}) }
  * ```
  *
- * @class
  */
 export class OsiErr {
     constructor(

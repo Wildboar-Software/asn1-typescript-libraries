@@ -30,7 +30,6 @@ import {
  * other             OtherKeyAttribute OPTIONAL }
  * ```
  *
- * @class
  */
 export class RecipientKeyIdentifier {
     constructor(

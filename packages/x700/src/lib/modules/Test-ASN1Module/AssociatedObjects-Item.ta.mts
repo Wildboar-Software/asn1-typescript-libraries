@@ -30,7 +30,6 @@ import {
  * AssociatedObjects-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AssociatedObjects_Item {
     constructor(

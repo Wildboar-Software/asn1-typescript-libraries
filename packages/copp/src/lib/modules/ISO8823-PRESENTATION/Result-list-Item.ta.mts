@@ -37,7 +37,6 @@ import {
  * Result-list-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Result_list_Item {
     constructor(

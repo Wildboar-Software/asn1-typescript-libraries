@@ -40,7 +40,6 @@ import {
  *     failInfo      PKIFailureInfo  OPTIONAL }
  * ```
  *
- * @class
  */
 export class PKIStatusInfo {
   constructor(

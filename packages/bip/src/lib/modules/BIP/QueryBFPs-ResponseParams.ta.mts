@@ -28,7 +28,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class QueryBFPs_ResponseParams {
   constructor(

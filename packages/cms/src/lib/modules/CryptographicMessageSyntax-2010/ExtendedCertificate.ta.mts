@@ -34,7 +34,6 @@ import {
  * signature             Signature }
  * ```
  *
- * @class
  */
 export class ExtendedCertificate {
     constructor(

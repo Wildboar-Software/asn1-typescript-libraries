@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_TERMINATE_request {
   constructor(

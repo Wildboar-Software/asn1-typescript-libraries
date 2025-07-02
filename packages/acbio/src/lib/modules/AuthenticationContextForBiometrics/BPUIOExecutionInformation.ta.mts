@@ -40,7 +40,6 @@ import {
  *     hash                    Hash }
  * ```
  *
- * @class
  */
 export class BPUIOExecutionInformation {
     constructor(

@@ -49,7 +49,6 @@ import {
  *   COMPONENTS OF   CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class TerminateOperationalBindingResultData implements CommonResultsSeq {
     constructor(

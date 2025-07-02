@@ -32,7 +32,6 @@ import {
  * ProtectionStatusR1-Item-manualSwitch ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ProtectionStatusR1_Item_manualSwitch {
     constructor(

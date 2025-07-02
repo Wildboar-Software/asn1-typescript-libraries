@@ -32,7 +32,6 @@ import {
  *     controls      Controls OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertRequest {
     constructor(

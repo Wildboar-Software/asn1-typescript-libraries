@@ -50,7 +50,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class FetchArgument {
     constructor(

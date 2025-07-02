@@ -90,7 +90,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class GUIProgressEventHandlerCallbackParams {
   constructor(

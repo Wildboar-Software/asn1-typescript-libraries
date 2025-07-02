@@ -22,7 +22,6 @@ import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "
  *     crls        SEQUENCE OF CrlValidatedID }
  * ```
  *
- * @class
  */
 export
 class CRLListID {

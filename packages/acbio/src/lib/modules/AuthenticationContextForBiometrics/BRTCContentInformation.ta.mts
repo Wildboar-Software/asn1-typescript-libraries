@@ -33,7 +33,6 @@ import {
  *     bdbForBRTC  BDBForBRTC }
  * ```
  *
- * @class
  */
 export class BRTCContentInformation {
     constructor(

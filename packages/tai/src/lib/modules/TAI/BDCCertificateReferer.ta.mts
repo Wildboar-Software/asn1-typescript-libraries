@@ -28,7 +28,6 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/src
  * }
  * ```
  * 
- * @class
  */
 export
 class BDCCertificateReferer {

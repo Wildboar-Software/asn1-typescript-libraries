@@ -31,7 +31,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BIR {
   constructor(

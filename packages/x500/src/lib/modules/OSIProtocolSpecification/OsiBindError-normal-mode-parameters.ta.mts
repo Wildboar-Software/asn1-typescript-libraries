@@ -42,7 +42,6 @@ import {
  * OsiBindError-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiBindError_normal_mode_parameters {
     constructor(

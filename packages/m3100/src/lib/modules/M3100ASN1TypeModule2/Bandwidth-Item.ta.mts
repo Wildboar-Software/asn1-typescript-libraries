@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Bandwidth-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Bandwidth_Item {
     constructor(

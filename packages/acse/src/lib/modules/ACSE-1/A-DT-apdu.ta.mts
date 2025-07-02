@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class A_DT_apdu {
   constructor(

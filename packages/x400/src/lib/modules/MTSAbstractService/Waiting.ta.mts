@@ -47,7 +47,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Waiting {
     constructor(

@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     micros     [1] INTEGER  (1..999) OPTIONAL  }
  * ```
  *
- * @class
  */
 export class Accuracy {
     constructor(

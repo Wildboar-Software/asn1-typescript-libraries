@@ -33,7 +33,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_DTG {
   constructor(

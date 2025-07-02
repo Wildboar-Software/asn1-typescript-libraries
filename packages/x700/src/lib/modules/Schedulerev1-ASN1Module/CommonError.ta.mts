@@ -40,7 +40,6 @@ import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1M
  * }
  * ```
  *
- * @class
  */
 export class CommonError {
     constructor(

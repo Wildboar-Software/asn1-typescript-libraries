@@ -35,7 +35,6 @@ import {
  *     response         SEQUENCE OF CertResponse }
  * ```
  *
- * @class
  */
 export class CertRepMessage {
   constructor(

@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_DATA_END_request {
   constructor(

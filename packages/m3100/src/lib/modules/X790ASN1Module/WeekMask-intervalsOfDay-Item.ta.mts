@@ -26,7 +26,6 @@ import {
  * WeekMask-intervalsOfDay-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class WeekMask_intervalsOfDay_Item {
     constructor(

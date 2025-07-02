@@ -30,7 +30,6 @@ import {
  * originate-edim-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_edim_ArgumentType {
     constructor(

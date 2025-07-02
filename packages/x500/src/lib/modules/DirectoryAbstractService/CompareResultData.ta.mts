@@ -55,7 +55,6 @@ import {
  *   COMPONENTS OF        CommonResults }
  * ```
  *
- * @class
  */
 export class CompareResultData implements CommonResults {
     constructor(

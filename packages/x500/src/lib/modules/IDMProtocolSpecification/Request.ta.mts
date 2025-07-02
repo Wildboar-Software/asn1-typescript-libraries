@@ -25,7 +25,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class Request {
     constructor(

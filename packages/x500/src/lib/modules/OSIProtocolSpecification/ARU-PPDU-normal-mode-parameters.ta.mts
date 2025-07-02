@@ -25,7 +25,6 @@ import {
  * ARU-PPDU-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ARU_PPDU_normal_mode_parameters {
     constructor(

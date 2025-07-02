@@ -54,7 +54,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_DELETE_response {
   constructor(

@@ -29,7 +29,6 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  * ModificationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ModificationList_Item {
     constructor(

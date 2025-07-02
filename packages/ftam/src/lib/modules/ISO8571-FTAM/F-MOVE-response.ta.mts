@@ -48,7 +48,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_MOVE_response {
   constructor(

@@ -32,7 +32,6 @@ import {
  *   patientId     PATIENT-SCHEME.&Identification ({PatientSchemes}{@.scheme}) }
  * ```
  *
- * @class
  */
 export class PatientIdentification {
     constructor(

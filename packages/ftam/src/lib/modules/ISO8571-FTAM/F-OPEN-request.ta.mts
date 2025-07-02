@@ -88,7 +88,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_OPEN_request {
   constructor(

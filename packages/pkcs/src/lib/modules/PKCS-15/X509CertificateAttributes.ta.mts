@@ -43,7 +43,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class X509CertificateAttributes {
     constructor(

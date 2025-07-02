@@ -26,7 +26,6 @@ import {
  * Document-additional-data-additional-datum ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Document_additional_data_additional_datum {
   constructor(

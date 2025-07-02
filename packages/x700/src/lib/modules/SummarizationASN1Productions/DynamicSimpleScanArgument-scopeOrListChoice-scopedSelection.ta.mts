@@ -31,7 +31,6 @@ import {
  * DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection {
     constructor(

@@ -74,7 +74,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BuiltInStandardAttributes {
     constructor(

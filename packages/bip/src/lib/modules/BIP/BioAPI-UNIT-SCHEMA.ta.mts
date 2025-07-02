@@ -75,7 +75,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_UNIT_SCHEMA {
   constructor(

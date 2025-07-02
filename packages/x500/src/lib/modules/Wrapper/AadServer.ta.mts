@@ -38,7 +38,6 @@ import {
  *   changedKey [2] BOOLEAN DEFAULT FALSE }
  * ```
  *
- * @class
  */
 export class AadServer {
     constructor(

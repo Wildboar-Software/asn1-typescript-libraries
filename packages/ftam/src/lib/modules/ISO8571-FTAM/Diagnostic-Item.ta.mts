@@ -34,7 +34,6 @@ import {
  * Diagnostic-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Diagnostic_Item {
   constructor(

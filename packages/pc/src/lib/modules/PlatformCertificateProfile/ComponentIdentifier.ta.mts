@@ -40,7 +40,6 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  *     status                      [7] IMPLICIT AttributeStatus OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class ComponentIdentifier {

@@ -41,7 +41,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class AddAvlReq implements AVMPcommonComponents {
     constructor(

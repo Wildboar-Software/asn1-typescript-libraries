@@ -22,7 +22,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class AbandonArgumentData {
     constructor(

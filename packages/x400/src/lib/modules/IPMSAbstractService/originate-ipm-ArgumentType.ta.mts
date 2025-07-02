@@ -30,7 +30,6 @@ import {
  * originate-ipm-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_ipm_ArgumentType {
     constructor(

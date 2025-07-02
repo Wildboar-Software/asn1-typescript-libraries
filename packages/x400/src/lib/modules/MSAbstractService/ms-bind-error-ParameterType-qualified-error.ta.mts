@@ -29,7 +29,6 @@ import {
  * ms-bind-error-ParameterType-qualified-error ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ms_bind_error_ParameterType_qualified_error {
     constructor(

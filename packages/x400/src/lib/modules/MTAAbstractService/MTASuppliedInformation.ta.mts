@@ -71,7 +71,6 @@ import {
  * InternalAdditionalActions ::= AdditionalActions
  * ```
  *
- * @class
  */
 export class MTASuppliedInformation implements AdditionalActions {
     constructor(

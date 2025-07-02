@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  *   identification IDENTIFICATION.&Identification({Categories}{@category}) }
  * ```
  *
- * @class
  */
 export class Identification {
     constructor(

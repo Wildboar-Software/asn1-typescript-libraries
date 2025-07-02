@@ -44,7 +44,6 @@ import {
  *    WITH COMPONENTS {..., objectDigestInfo  PRESENT } )
  * ```
  *
- * @class
  */
 export class AttCertIssuer {
     constructor(

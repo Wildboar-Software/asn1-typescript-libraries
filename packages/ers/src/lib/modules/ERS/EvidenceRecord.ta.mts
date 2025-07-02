@@ -36,7 +36,6 @@ import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_Arc
  *     archiveTimeStampSequence  ArchiveTimeStampSequence }
  * ```
  *
- * @class
  */
 export
 class EvidenceRecord {

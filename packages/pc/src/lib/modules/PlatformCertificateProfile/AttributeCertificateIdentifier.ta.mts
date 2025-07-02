@@ -24,7 +24,6 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  *     hashOverSignatureValue      OCTET STRING }
  * ```
  *
- * @class
  */
 export
 class AttributeCertificateIdentifier {

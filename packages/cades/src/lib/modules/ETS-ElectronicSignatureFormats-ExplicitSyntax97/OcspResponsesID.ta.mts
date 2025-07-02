@@ -25,7 +25,6 @@ import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-Electron
  *     ocspRepHash         OtherHash OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class OcspResponsesID {

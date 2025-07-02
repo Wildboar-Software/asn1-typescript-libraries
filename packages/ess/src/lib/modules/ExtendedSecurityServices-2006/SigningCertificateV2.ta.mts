@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SigningCertificateV2 {
     constructor(

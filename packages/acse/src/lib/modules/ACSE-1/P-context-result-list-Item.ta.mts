@@ -36,7 +36,6 @@ import {
  * P-context-result-list-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class P_context_result_list_Item {
   constructor(

@@ -38,7 +38,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Access_Context {
   constructor(

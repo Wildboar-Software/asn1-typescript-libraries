@@ -57,7 +57,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EDIAutoForwardRegistrationParameter {
     constructor(

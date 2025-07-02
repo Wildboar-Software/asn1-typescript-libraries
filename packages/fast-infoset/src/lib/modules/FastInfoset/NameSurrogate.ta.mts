@@ -27,7 +27,6 @@ import * as $ from '@wildboar/asn1/functional';
  * }(CONSTRAINED BY {})
  * ```
  *
- * @class
  */
 export class NameSurrogate {
   constructor(

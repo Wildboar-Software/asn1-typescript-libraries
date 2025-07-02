@@ -26,7 +26,6 @@ import {
  * }(WITH COMPONENTS {..., keyUsage PRESENT} | WITH COMPONENTS {..., extKeyUsage PRESENT})
  * ```
  *
- * @class
  */
 export class Usage {
     constructor(

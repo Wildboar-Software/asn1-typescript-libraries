@@ -31,7 +31,6 @@ import {
  * Attribute-Extensions-Pattern-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Attribute_Extensions_Pattern_Item {
   constructor(

@@ -24,7 +24,6 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  *     points SEQUENCE OF ECPoint }
  * ```
  *
- * @class
  */
 export
 class NamedMultiples {

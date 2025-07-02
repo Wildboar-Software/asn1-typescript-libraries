@@ -68,7 +68,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DomainSuppliedInformation implements AdditionalActions {
     constructor(

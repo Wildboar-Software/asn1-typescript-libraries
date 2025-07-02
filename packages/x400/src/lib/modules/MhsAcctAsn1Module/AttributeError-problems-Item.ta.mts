@@ -30,7 +30,6 @@ import {
  * AttributeError-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AttributeError_problems_Item {
     constructor(

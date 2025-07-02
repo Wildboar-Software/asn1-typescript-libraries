@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RSASSA_PSS_params {
     constructor(

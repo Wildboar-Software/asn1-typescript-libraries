@@ -84,7 +84,6 @@ import {
  *   COMPONENTS OF             CommonArguments }
  * ```
  *
- * @class
  */
 export class ReadArgumentData implements CommonArguments {
     constructor(

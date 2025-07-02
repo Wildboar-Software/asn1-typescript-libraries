@@ -20,7 +20,6 @@ import {
  * Attribute-valuesWithContext-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Attribute_valuesWithContext_Item {
     constructor(

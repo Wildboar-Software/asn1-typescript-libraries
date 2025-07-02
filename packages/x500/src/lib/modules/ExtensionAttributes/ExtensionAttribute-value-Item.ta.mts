@@ -16,7 +16,6 @@ import * as $ from "@wildboar/asn1/functional";
  * ExtensionAttribute-value-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ExtensionAttribute_value_Item {
     constructor(

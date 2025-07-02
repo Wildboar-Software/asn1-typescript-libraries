@@ -40,7 +40,6 @@ import {
  *     filter      UiiFilter } }
  * ```
  *
- * @class
  */
 export class UiiFormat {
     constructor(

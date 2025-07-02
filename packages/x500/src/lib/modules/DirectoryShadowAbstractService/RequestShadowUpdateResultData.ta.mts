@@ -48,7 +48,6 @@ import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class RequestShadowUpdateResultData implements CommonResultsSeq {
     constructor(

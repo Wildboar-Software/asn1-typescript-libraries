@@ -53,7 +53,6 @@ import {
  *  RejectProblem:general-mistypedPDU)
  * ```
  *
- * @class
  */
 export class ReturnError {
   constructor(

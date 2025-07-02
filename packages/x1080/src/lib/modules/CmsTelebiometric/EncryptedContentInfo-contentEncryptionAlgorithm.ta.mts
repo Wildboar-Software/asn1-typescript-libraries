@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * EncryptedContentInfo-contentEncryptionAlgorithm ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class EncryptedContentInfo_contentEncryptionAlgorithm {
     constructor(

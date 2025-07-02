@@ -30,7 +30,6 @@ import {
  * BilateralDomain-domain-private-domain ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BilateralDomain_domain_private_domain {
     constructor(

@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class REP_TI_TOKEN {
     constructor(

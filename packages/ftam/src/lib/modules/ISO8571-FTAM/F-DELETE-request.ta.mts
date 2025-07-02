@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_DELETE_request {
   constructor(

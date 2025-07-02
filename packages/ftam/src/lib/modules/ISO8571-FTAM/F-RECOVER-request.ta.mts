@@ -65,7 +65,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_RECOVER_request {
   constructor(

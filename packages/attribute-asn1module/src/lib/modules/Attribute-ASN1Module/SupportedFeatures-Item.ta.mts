@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  * SupportedFeatures-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class SupportedFeatures_Item {

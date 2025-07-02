@@ -21,7 +21,6 @@ import {
  * CertUnsubscribeOK-Item-not-ok ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertUnsubscribeOK_Item_not_ok {
     constructor(

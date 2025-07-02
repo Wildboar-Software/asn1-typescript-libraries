@@ -22,7 +22,6 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar
  * AttributeValueChangeDefinition-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export
 class AttributeValueChangeDefinition_Item {

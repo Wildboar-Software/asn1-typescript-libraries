@@ -21,7 +21,6 @@ import {
  * ListResultData-listInfo-subordinates-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ListResultData_listInfo_subordinates_Item {
     constructor(

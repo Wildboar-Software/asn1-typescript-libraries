@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DbStoreBIR_ResponseParams {
   constructor(

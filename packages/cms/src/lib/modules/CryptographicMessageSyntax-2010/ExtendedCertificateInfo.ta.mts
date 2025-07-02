@@ -34,7 +34,6 @@ import {
  * attributes     UnauthAttributes }
  * ```
  *
- * @class
  */
 export class ExtendedCertificateInfo {
     constructor(

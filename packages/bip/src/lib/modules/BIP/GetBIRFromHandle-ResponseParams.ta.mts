@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class GetBIRFromHandle_ResponseParams {
   constructor(

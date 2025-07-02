@@ -44,7 +44,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_CHANGE_ATTRIB_response {
   constructor(

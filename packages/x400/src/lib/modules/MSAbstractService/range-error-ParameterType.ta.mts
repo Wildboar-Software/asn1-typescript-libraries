@@ -25,7 +25,6 @@ import {
  * range-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class range_error_ParameterType {
     constructor(

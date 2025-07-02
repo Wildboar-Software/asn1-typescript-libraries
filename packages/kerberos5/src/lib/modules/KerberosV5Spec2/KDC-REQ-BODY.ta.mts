@@ -87,7 +87,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class KDC_REQ_BODY {
   constructor(

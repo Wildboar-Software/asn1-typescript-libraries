@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_TERMINATE_response {
   constructor(

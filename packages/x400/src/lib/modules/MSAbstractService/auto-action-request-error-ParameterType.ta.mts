@@ -25,7 +25,6 @@ import {
  * auto-action-request-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class auto_action_request_error_ParameterType {
     constructor(

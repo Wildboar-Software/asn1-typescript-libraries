@@ -35,7 +35,6 @@ import {
  * MprInfo-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MprInfo_Item {
     constructor(

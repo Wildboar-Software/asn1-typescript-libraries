@@ -28,7 +28,6 @@ import {
  *     encryptedData        EncryptedData }
  * ```
  *
- * @class
  */
 export class EncryptedPrivateKeyInfo {
     constructor(

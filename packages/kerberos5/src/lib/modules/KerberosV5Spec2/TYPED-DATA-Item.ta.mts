@@ -28,7 +28,6 @@ import {
  * TYPED-DATA-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TYPED_DATA_Item {
   constructor(

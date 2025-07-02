@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * CP-type-normal-mode-parameters-extensions ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CP_type_normal_mode_parameters_extensions {
     constructor(

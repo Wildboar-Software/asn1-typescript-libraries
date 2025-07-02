@@ -27,7 +27,6 @@ import {
  * Summary-present-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Summary_present_Item {
     constructor(

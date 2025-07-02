@@ -51,7 +51,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PDV_list {
     constructor(

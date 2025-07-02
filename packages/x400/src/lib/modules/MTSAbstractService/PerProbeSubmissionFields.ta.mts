@@ -65,7 +65,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerProbeSubmissionFields {
     constructor(

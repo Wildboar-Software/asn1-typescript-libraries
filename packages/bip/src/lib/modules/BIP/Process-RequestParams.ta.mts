@@ -41,7 +41,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Process_RequestParams {
   constructor(

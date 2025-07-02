@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DbFreeMarker_RequestParams {
   constructor(

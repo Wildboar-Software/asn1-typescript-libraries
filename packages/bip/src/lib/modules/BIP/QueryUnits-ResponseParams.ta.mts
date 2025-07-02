@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class QueryUnits_ResponseParams {
   constructor(

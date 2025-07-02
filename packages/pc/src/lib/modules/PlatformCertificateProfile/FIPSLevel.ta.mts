@@ -27,7 +27,6 @@ import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_
  *     plus            BOOLEAN DEFAULT FALSE }
  * ```
  *
- * @class
  */
 export
 class FIPSLevel {

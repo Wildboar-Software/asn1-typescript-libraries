@@ -37,7 +37,6 @@ import {
  * encryptedKey         EncryptedKey }
  * ```
  *
- * @class
  */
 export class KeyTransRecipientInfo {
     constructor(

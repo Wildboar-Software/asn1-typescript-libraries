@@ -29,7 +29,6 @@ import {
  *   distributionPoint  DistributionPointName OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertificateListExactAssertion {
     constructor(

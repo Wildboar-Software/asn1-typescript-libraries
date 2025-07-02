@@ -37,7 +37,6 @@ import {
  *    WITH COMPONENTS {..., attrSel  PRESENT } )
  * ```
  *
- * @class
  */
 export class TargetSelect {
     constructor(

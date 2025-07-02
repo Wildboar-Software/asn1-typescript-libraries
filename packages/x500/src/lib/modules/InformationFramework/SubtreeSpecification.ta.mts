@@ -44,7 +44,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SubtreeSpecification implements ChopSpecification {
     constructor(

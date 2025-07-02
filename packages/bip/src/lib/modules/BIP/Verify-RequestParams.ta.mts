@@ -57,7 +57,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Verify_RequestParams {
   constructor(

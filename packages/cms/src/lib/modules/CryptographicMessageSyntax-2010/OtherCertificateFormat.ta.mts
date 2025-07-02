@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     ({SupportedCertFormats}{@otherCertFormat})}
  * ```
  *
- * @class
  */
 export class OtherCertificateFormat {
     constructor(

@@ -16,7 +16,6 @@ import * as $ from "@wildboar/asn1/functional";
  * RequestAttribute-defaultValues-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RequestAttribute_defaultValues_Item {
     constructor(

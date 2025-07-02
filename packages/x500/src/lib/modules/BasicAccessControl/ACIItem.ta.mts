@@ -49,7 +49,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ACIItem {
     constructor(

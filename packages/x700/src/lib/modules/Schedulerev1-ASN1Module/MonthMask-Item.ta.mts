@@ -31,7 +31,6 @@ import {
  * MonthMask-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class MonthMask_Item {
     constructor(

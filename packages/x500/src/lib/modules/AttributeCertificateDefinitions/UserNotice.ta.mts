@@ -27,7 +27,6 @@ import {
  *   explicitText  DisplayText OPTIONAL }
  * ```
  *
- * @class
  */
 export class UserNotice {
     constructor(

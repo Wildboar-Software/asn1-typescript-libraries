@@ -38,7 +38,6 @@ import { sha1 } from "../PKCS-1/sha1.va.mjs";
  * }
  * ```
  *
- * @class
  */
 export class RSAES_OAEP_params {
     constructor(

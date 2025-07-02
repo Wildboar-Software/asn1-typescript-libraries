@@ -35,7 +35,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CertReq implements AVMPcommonComponents {
     constructor(

@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Object_Identifier_Pattern {
   constructor(

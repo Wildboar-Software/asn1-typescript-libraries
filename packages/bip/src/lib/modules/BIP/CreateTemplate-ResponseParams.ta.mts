@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CreateTemplate_ResponseParams {
   constructor(

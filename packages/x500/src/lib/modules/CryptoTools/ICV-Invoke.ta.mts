@@ -25,7 +25,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ICV_Invoke<ToBeProtected> {
     constructor(

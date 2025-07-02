@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ProtectionStatusParameterR1 {
     constructor(

@@ -31,7 +31,6 @@ import {
  * CPR-PPDU-x400-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CPR_PPDU_x400_mode_parameters {
     constructor(

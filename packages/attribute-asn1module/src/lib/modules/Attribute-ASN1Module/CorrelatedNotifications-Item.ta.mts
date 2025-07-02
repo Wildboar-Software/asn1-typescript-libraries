@@ -23,7 +23,6 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  * CorrelatedNotifications-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export
 class CorrelatedNotifications_Item {

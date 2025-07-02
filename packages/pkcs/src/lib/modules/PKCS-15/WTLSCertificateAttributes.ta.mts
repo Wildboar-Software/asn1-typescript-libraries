@@ -23,7 +23,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class WTLSCertificateAttributes {
     constructor(

@@ -31,7 +31,6 @@ import {
  *   subordinateUpdates  SEQUENCE SIZE (1..MAX) OF SubordinateChanges OPTIONAL }
  * ```
  *
- * @class
  */
 export class IncrementalStepRefresh {
     constructor(

@@ -55,7 +55,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ORName implements ORAddress {
     constructor(

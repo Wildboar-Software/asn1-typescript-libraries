@@ -38,7 +38,6 @@ import {
  * PortSignalRateAndMappingList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PortSignalRateAndMappingList_Item {
     constructor(

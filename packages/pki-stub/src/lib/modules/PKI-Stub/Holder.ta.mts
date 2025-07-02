@@ -43,7 +43,6 @@ import {
  *    WITH COMPONENTS {..., objectDigestInfo  PRESENT } )
  * ```
  *
- * @class
  */
 export class Holder {
     constructor(

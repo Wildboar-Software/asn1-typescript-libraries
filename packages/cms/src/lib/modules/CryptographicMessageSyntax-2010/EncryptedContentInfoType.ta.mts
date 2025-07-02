@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  * encryptedContent           [0] IMPLICIT OCTET STRING OPTIONAL }
  * ```
  *
- * @class
  */
 export class EncryptedContentInfoType<AlgorithmIdentifierType> {
     constructor(

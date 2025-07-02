@@ -25,7 +25,6 @@ import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../
  * }
  * ```
  *
- * @class
  */
 export
 class ECPKRestrictions {

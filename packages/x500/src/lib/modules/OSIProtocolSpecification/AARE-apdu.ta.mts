@@ -79,7 +79,6 @@ import {
  *                                         Association-informationBindRes{{Protocols}}}
  * ```
  *
- * @class
  */
 export class AARE_apdu {
     constructor(

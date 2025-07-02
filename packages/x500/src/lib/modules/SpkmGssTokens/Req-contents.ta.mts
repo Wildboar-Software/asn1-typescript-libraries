@@ -67,7 +67,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Req_contents {
     constructor(

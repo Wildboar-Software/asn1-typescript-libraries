@@ -43,7 +43,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ObjectDigestInfo {
     constructor(

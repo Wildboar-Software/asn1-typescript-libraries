@@ -56,7 +56,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Capture_RequestParams {
   constructor(

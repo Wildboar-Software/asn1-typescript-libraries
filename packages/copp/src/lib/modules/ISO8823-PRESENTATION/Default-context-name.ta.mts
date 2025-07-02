@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Default_context_name {
     constructor(

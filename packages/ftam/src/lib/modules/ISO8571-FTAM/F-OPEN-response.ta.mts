@@ -84,7 +84,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_OPEN_response {
   constructor(

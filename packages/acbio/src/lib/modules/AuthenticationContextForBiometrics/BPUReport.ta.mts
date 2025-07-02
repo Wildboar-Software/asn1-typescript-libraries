@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     content         [0] EXPLICIT CONTENT-TYPE.&Type({ContentTypeBPUReport}{@contentType}) }
  * ```
  *
- * @class
  */
 export class BPUReport {
     constructor(

@@ -24,7 +24,6 @@ import {
  *     notAfter   [1] Time OPTIONAL }
  * ```
  *
- * @class
  */
 export class OptionalValidity {
     constructor(

@@ -22,7 +22,6 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
  *     certificateType     CredentialType }
  * ```
  *
- * @class
  */
 export
 class TCGCredentialType {

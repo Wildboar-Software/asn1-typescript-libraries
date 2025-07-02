@@ -25,7 +25,6 @@ import {
  * CertReplaceReq-certs-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CertReplaceReq_certs_Item {
     constructor(

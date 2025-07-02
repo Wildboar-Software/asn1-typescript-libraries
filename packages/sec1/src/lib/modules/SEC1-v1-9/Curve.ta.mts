@@ -29,7 +29,6 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
  * }
  * ```
  *
- * @class
  */
 export
 class Curve {

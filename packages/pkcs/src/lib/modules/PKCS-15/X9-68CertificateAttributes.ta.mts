@@ -23,7 +23,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class X9_68CertificateAttributes {
     constructor(

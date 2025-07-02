@@ -22,7 +22,6 @@ import { PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priorit
  * PrioritisedObject-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export
 class PrioritisedObject_Item {

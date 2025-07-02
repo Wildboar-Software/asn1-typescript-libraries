@@ -25,7 +25,6 @@ import * as $ from "@wildboar/asn1/functional";
  *                 ({SupportedEncryptionAlgorithms}{@encryptionInfoType}) }
  * ```
  *
- * @class
  */
 export
 class EncryptionInfo {

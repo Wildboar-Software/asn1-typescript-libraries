@@ -43,7 +43,6 @@ import {
  *     targetUri           [4] IMPLICIT URIReference OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CommonCriteriaMeasures {

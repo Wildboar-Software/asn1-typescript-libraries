@@ -21,7 +21,6 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  * ThresholdLevelInd-down ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class ThresholdLevelInd_down {

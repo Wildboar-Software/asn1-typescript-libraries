@@ -25,7 +25,6 @@ import { Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
  *   ... }
  * ```
  *
- * @class
  */
 export class Validity {
     constructor(

@@ -25,7 +25,6 @@ import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs
  * }
  * ```
  *
- * @class
  */
 export class ContentInformation {
     constructor(

@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BSPDetach_RequestParams {
   constructor(

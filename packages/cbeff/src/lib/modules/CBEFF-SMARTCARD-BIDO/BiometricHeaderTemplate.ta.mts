@@ -48,7 +48,6 @@ import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD
  * }
  * ```
  *
- * @class
  */
 export
 class BiometricHeaderTemplate {

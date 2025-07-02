@@ -32,7 +32,6 @@ import {
  * ModifyRequest-changes-change ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ModifyRequest_changes_change {
   constructor(

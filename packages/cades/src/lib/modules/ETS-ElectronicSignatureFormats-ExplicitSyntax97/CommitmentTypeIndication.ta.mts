@@ -25,7 +25,6 @@ import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_Commi
  *     commitmentTypeQualifier     SEQUENCE SIZE (1..MAX) OF CommitmentTypeQualifier OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CommitmentTypeIndication {

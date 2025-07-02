@@ -32,7 +32,6 @@ import {
  * TestObjectList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TestObjectList_Item {
     constructor(

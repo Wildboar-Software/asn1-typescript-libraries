@@ -52,7 +52,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SupplierInformation implements SupplierOrConsumer {
     constructor(

@@ -41,7 +41,6 @@ import {
  * encryptedKey         EncryptedKey }
  * ```
  *
- * @class
  */
 export class PasswordRecipientInfo {
     constructor(

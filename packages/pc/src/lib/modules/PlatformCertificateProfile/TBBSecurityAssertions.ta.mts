@@ -40,7 +40,6 @@ import {
  *     iso9000Uri          IA5String (SIZE (1..urimax)) OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class TBBSecurityAssertions {

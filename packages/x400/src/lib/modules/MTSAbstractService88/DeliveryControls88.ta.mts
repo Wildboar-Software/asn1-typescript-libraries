@@ -76,7 +76,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DeliveryControls88 implements Controls {
     constructor(

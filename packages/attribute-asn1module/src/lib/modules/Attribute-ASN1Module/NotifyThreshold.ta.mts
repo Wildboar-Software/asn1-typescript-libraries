@@ -24,7 +24,6 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  * }
  * ```
  * 
- * @class
  */
 export
 class NotifyThreshold {

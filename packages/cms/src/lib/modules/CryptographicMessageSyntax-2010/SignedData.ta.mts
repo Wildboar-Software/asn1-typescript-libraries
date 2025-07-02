@@ -52,7 +52,6 @@ import {
  * signerInfos     SignerInfos }
  * ```
  *
- * @class
  */
 export class SignedData {
     constructor(

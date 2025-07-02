@@ -30,7 +30,6 @@ import {
  * sequence-number-error-ParameterType-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class sequence_number_error_ParameterType_problems_Item {
     constructor(

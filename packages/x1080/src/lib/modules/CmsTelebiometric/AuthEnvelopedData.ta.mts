@@ -54,7 +54,6 @@ import {
  *   unauthAttrs          [2] IMPLICIT Attributes {{UnauthAttributes}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class AuthEnvelopedData {
     constructor(

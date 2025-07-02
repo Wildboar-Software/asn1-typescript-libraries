@@ -30,7 +30,6 @@ import {
  *     pubInfos  SEQUENCE SIZE (1..MAX) OF SinglePubInfo OPTIONAL }
  * ```
  *
- * @class
  */
 export class PKIPublicationInfo {
     constructor(

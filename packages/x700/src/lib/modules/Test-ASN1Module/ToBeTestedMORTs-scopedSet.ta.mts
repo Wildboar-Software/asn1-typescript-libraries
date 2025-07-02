@@ -33,7 +33,6 @@ import {
  * ToBeTestedMORTs-scopedSet ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ToBeTestedMORTs_scopedSet {
     constructor(

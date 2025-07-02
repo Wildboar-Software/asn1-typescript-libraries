@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * AssociatedObjects-Item-associatedObjectInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AssociatedObjects_Item_associatedObjectInfo {
     constructor(

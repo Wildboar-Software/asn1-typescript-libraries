@@ -37,7 +37,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ReadResult {
     constructor(

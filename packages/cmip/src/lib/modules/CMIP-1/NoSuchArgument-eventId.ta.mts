@@ -33,7 +33,6 @@ import {
  * NoSuchArgument-eventId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class NoSuchArgument_eventId {
   constructor(

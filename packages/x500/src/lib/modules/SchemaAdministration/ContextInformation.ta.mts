@@ -19,7 +19,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ContextInformation {
     constructor(

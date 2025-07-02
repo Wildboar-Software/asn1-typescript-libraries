@@ -35,7 +35,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     msgPrivacyParameters         OCTET STRING }
  * ```
  * 
- * @class
  */
 export
 class UsmSecurityParameters {

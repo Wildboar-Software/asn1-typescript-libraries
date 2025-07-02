@@ -63,7 +63,6 @@ import {
  *     bdbFormatForBRTC        BDBFormat }
  * ```
  *
- * @class
  */
 export class SBHForBRTC {
     constructor(

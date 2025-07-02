@@ -41,7 +41,6 @@ import {
  *                / * Shall conform to Rec. ITU-T X.693 | ISO/IEC 8825-4, clause 25 * / } )
  * ```
  *
- * @class
  */
 export class AnyType_nillable {
   constructor(

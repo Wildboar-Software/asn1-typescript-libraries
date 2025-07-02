@@ -25,7 +25,6 @@ import {
  * sequence-number-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class sequence_number_error_ParameterType {
     constructor(

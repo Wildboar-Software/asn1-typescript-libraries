@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ToBeSigncrypted {
     constructor(

@@ -50,7 +50,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_INITIALIZE_RI {
   constructor(

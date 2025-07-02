@@ -48,7 +48,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_GROUP_CHANGE_ATTRIB_response {
   constructor(

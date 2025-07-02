@@ -40,7 +40,6 @@ import {
  *   formats        DEVICE-SCHEME.&supportedFormats ({DeviceSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class DeviceIdentification {
     constructor(

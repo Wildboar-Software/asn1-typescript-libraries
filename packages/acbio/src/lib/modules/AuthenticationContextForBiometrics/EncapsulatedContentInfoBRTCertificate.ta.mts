@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     eContent        [0] CONTENT-TYPE.&Type({ContentTypeBRTCertificateContentInfo}{@eContentType})}
  * ```
  *
- * @class
  */
 export class EncapsulatedContentInfoBRTCertificate {
     constructor(

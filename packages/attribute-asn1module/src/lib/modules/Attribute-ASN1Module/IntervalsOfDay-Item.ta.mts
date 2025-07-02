@@ -21,7 +21,6 @@ import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/
  * IntervalsOfDay-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class IntervalsOfDay_Item {

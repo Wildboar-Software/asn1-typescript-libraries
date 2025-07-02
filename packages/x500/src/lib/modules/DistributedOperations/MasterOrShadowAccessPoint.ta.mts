@@ -53,7 +53,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class MasterOrShadowAccessPoint extends AccessPoint {
     constructor(

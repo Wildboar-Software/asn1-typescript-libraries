@@ -66,7 +66,6 @@ import { Contents_Type_Attribute_document_type } from './Contents-Type-Attribute
  * }
  * ```
  *
- * @class
  */
 export class FileTransferParameters {
     constructor(

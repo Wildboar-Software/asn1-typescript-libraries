@@ -58,7 +58,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class ModifyRequest implements CommonReqComp {
     constructor(

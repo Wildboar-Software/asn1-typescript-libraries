@@ -40,7 +40,6 @@ import {
  *     securityEvaluationExtensionInformation  SecurityEvaluationExtensionInformation OPTIONAL }
  * ```
  *
- * @class
  */
 export class BPUSecurityReport {
     constructor(

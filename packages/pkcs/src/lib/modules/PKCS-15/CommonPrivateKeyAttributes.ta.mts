@@ -31,7 +31,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CommonPrivateKeyAttributes {
     constructor(

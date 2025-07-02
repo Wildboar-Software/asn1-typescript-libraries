@@ -49,7 +49,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SMASEUserData {
     constructor(

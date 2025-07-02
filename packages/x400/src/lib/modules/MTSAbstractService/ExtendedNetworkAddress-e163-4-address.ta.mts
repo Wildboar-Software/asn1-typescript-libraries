@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * ExtendedNetworkAddress-e163-4-address ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ExtendedNetworkAddress_e163_4_address {
     constructor(

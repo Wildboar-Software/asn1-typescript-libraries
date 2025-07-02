@@ -26,7 +26,6 @@ import {
  * other         OtherKeyAttribute OPTIONAL }
  * ```
  *
- * @class
  */
 export class KEKIdentifier {
     constructor(

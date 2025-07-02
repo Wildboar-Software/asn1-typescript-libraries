@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Charging-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Charging_Item {
   constructor(

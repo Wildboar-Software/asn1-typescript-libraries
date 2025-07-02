@@ -20,7 +20,6 @@ import {
  * supplierOrConsumerInformationMatch-AssertionType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class supplierOrConsumerInformationMatch_AssertionType {
     constructor(

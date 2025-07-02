@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Default_P_context {
     constructor(

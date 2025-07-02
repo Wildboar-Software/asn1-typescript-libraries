@@ -30,7 +30,6 @@ import {
  * LoopbackTestResult-passed ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class LoopbackTestResult_passed {
     constructor(

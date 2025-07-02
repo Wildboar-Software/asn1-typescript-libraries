@@ -58,7 +58,6 @@ import {
  * unsignedAttrs     [1] IMPLICIT Attributes{{UnsignedAttributes}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class SignerInfo {
     constructor(

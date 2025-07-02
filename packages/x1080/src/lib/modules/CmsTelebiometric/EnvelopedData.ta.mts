@@ -43,7 +43,6 @@ import {
  *        {{UnprotectedAttributes}} OPTIONAL ]] }
  * ```
  *
- * @class
  */
 export class EnvelopedData {
     constructor(

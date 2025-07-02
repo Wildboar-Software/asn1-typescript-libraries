@@ -20,7 +20,6 @@ import {
  * PolicyMappingsSyntax-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PolicyMappingsSyntax_Item {
     constructor(

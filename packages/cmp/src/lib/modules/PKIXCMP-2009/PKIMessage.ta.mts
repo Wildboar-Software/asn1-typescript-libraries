@@ -47,7 +47,6 @@ import {
  *                 OPTIONAL }
  * ```
  *
- * @class
  */
 export class PKIMessage {
   constructor(

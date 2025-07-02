@@ -25,7 +25,6 @@ import {
  * OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiBindResult_normal_mode_parameters_pres_context_result_list_Item {
     constructor(

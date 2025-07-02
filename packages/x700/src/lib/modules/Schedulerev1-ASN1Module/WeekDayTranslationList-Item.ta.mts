@@ -32,7 +32,6 @@ import {
  * WeekDayTranslationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class WeekDayTranslationList_Item {
     constructor(

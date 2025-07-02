@@ -81,7 +81,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class TbsHandshakeReq {
     constructor(

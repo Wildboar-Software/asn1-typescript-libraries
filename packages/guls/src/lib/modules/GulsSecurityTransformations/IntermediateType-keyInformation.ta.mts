@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  * IntermediateType-keyInformation ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class IntermediateType_keyInformation {
   constructor(

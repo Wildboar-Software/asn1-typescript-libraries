@@ -34,7 +34,6 @@ import {
  * ProtectionStatus-Item-lockout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ProtectionStatus_Item_lockout {
     constructor(

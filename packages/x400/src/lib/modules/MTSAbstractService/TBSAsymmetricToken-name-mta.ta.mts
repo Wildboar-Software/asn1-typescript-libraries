@@ -33,7 +33,6 @@ import {
  *     mta-name                    MTAName }
  * ```
  *
- * @class
  */
 export class TBSAsymmetricToken_name_mta {
     constructor(

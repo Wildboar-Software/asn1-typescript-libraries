@@ -30,7 +30,6 @@ import {
  * originate-edin-ResultType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_edin_ResultType {
     constructor(

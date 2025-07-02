@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SPKM_REP_TI {
     constructor(

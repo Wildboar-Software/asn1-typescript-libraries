@@ -30,7 +30,6 @@ import {
  * AutoActionRequestError-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AutoActionRequestError_problems_Item {
     constructor(

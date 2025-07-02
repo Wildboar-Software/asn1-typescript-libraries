@@ -31,7 +31,6 @@ import {
  * ASOI-tag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ASOI_tag_Item {
   constructor(

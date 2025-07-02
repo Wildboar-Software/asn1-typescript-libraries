@@ -45,7 +45,6 @@ import {
  *   encryptedKey           EncryptedKey }
  * ```
  *
- * @class
  */
 export class KEKRecipientInfo {
     constructor(

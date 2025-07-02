@@ -99,7 +99,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class OtherMessageDeliveryFields {
     constructor(

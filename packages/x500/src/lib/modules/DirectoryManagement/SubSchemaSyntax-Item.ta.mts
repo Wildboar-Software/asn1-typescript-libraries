@@ -25,7 +25,6 @@ import {
  * SubSchemaSyntax-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SubSchemaSyntax_Item {
     constructor(

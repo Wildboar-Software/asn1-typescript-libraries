@@ -31,7 +31,6 @@ import {
  * ReturnResult-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ReturnResult_result {
   constructor(

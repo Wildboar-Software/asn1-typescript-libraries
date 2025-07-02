@@ -64,7 +64,6 @@ import {
  *     extensions   [9] Extensions{{CertExtensions}}  OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertTemplate {
     constructor(

@@ -22,7 +22,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CertReq {
     constructor(

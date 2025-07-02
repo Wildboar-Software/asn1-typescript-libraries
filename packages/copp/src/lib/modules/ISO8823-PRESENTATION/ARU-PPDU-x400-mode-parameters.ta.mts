@@ -32,7 +32,6 @@ import {
  * ARU-PPDU-x400-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ARU_PPDU_x400_mode_parameters {
     constructor(

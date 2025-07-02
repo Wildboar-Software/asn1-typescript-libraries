@@ -71,7 +71,6 @@ import {
  *                                            Association-informationBind{{Protocols}}}
  * ```
  *
- * @class
  */
 export class AARQ_apdu {
     constructor(

@@ -28,7 +28,6 @@ import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y
  * }
  * ```
  *
- * @class
  */
 export
 class ECDSA_Sig_Value {

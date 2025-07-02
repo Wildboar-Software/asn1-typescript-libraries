@@ -24,7 +24,6 @@ import * as $ from '@wildboar/asn1/functional';
  * UDPTLPacket-error-recovery-fec-info ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class UDPTLPacket_error_recovery_fec_info {
   constructor(

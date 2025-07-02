@@ -53,7 +53,6 @@ import {
  * SearchResultData-searchInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SearchResultData_searchInfo implements CommonResults {
     constructor(

@@ -28,7 +28,6 @@ import {
  *   argument  OPERATION.&ArgumentType({Operations}{@opcode}) }
  * ```
  *
- * @class
  */
 export class OsiReq {
     constructor(

@@ -21,7 +21,6 @@ import * as $ from "@wildboar/asn1/functional";
  * iv OCTET STRING  }
  * ```
  *
- * @class
  */
 export class RC2CBCParameter {
     constructor(

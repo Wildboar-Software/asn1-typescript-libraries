@@ -43,7 +43,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_CHANGE_PREFIX_request {
   constructor(

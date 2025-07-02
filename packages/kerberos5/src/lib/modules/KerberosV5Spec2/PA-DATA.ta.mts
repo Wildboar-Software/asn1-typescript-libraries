@@ -31,7 +31,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PA_DATA {
   constructor(

@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Attribute-Extensions-Pattern-Item-extension-set-attribute-Patterns-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item {
   constructor(

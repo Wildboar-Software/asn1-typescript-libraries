@@ -23,7 +23,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class UUIDPair {
     constructor(

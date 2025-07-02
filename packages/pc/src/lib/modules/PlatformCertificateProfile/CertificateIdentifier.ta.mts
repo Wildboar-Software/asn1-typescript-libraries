@@ -31,7 +31,6 @@ import {
  *     genericCertIdentifier       [1] IMPLICIT IssuerSerial OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CertificateIdentifier {

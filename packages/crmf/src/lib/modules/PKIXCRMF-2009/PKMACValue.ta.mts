@@ -26,7 +26,6 @@ import {
  *     value  BIT STRING }
  * ```
  *
- * @class
  */
 export class PKMACValue {
     constructor(

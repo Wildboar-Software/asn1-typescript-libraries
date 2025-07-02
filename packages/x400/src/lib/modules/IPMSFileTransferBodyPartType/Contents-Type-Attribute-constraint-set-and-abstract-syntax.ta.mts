@@ -30,7 +30,6 @@ import {
  * Contents-Type-Attribute-constraint-set-and-abstract-syntax ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Contents_Type_Attribute_constraint_set_and_abstract_syntax {
     constructor(

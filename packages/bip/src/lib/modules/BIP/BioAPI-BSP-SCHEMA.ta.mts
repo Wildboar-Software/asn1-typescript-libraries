@@ -101,7 +101,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BSP_SCHEMA {
   constructor(

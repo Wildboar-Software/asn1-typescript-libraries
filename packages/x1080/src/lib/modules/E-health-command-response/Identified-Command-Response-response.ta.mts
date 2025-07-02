@@ -22,7 +22,6 @@ import * as $ from '@wildboar/asn1/functional';
  * Identified-Command-Response-response ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Identified_Command_Response_response {
     constructor(

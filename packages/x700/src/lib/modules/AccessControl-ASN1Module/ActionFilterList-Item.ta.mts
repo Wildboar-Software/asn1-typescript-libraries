@@ -31,7 +31,6 @@ import {
  * ActionFilterList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ActionFilterList_Item {
     constructor(

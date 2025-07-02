@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Attribute_Extension_Set_Name {
   constructor(

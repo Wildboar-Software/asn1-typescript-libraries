@@ -55,7 +55,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_RECOVER_RC {
   constructor(

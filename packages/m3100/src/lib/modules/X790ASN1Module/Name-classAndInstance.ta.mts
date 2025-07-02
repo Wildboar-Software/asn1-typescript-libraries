@@ -31,7 +31,6 @@ import {
  * Name-classAndInstance ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Name_classAndInstance {
     constructor(

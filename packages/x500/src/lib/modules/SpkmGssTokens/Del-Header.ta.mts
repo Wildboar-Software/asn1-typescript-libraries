@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Del_Header {
     constructor(

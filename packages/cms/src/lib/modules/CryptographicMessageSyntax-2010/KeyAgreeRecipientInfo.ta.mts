@@ -43,7 +43,6 @@ import {
  * recipientEncryptedKeys     RecipientEncryptedKeys }
  * ```
  *
- * @class
  */
 export class KeyAgreeRecipientInfo {
     constructor(

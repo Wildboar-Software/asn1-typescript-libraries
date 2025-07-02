@@ -26,7 +26,6 @@ import {
  * BackupResult-offLine ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class BackupResult_offLine {
     constructor(

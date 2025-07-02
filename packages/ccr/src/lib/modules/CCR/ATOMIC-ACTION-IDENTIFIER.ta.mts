@@ -41,7 +41,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ATOMIC_ACTION_IDENTIFIER {
   constructor(

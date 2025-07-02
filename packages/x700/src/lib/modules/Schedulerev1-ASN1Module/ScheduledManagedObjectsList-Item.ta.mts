@@ -31,7 +31,6 @@ import {
  * ScheduledManagedObjectsList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ScheduledManagedObjectsList_Item {
     constructor(

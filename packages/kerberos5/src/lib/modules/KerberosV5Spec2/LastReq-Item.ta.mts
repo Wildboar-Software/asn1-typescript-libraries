@@ -31,7 +31,6 @@ import {
  * LastReq-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class LastReq_Item {
   constructor(

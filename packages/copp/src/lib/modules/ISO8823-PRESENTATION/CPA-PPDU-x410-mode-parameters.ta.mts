@@ -32,7 +32,6 @@ import {
  * CPA-PPDU-x410-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CPA_PPDU_x410_mode_parameters {
     constructor(

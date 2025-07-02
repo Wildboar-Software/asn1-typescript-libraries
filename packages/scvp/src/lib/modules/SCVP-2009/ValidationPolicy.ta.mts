@@ -61,7 +61,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ValidationPolicy {
   constructor(

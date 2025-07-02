@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PositiveNotificationFields {
     constructor(

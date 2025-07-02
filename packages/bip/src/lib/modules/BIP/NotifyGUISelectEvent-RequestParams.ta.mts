@@ -83,7 +83,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class NotifyGUISelectEvent_RequestParams {
   constructor(

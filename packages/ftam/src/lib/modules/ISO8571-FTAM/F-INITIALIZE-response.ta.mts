@@ -98,7 +98,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_INITIALIZE_response {
   constructor(

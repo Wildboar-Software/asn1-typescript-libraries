@@ -33,7 +33,6 @@ import {
  *   observerId  MEDICAL-STAFF-SCHEME.&Observer ({MedicalStaffSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class ObserverIdentification {
     constructor(

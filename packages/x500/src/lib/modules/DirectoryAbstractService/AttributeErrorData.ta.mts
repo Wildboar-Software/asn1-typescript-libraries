@@ -57,7 +57,6 @@ import {
  *   COMPONENTS OF CommonResults }
  * ```
  *
- * @class
  */
 export class AttributeErrorData implements CommonResults {
     constructor(

@@ -31,7 +31,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     kPK        OCTET STRING(SIZE (20)) }
  * ```
  * 
- * @class
  */
 export
 class Content {

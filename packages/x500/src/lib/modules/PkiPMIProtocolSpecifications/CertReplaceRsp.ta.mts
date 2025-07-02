@@ -43,7 +43,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CertReplaceRsp implements CASPcommonComponents {
     constructor(

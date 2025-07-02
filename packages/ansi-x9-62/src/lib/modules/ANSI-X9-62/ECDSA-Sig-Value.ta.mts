@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  * }
  * ```
  *
- * @class
  */
 export class ECDSA_Sig_Value {
     constructor(

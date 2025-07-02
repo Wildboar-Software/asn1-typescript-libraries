@@ -31,7 +31,6 @@ import {
  * InvokeExerciseReply-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class InvokeExerciseReply_Item {
     constructor(

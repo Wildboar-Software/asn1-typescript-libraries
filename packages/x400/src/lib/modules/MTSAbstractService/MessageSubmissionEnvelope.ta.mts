@@ -83,7 +83,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class MessageSubmissionEnvelope implements PerMessageSubmissionFields {
     constructor(

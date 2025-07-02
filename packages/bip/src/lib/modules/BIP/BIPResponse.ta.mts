@@ -104,7 +104,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BIPResponse {
   constructor(

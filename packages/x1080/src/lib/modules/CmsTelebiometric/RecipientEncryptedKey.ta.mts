@@ -33,7 +33,6 @@ import {
  *   encryptedKey EncryptedKey }
  * ```
  *
- * @class
  */
 export class RecipientEncryptedKey {
     constructor(

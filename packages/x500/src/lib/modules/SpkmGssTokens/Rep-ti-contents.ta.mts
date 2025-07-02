@@ -56,7 +56,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Rep_ti_contents {
     constructor(

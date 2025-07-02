@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Capture_ResponseParams {
   constructor(

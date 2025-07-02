@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class REP_IT_TOKEN {
     constructor(

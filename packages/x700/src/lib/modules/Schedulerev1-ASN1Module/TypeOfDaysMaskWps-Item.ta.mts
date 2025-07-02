@@ -30,7 +30,6 @@ import {
  * TypeOfDaysMaskWps-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TypeOfDaysMaskWps_Item {
     constructor(

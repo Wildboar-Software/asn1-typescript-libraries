@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     eContent        [0] CONTENT-TYPE.&Type({ContentTypeBPUReportContentInfo}{@eContentType}) }
  * ```
  *
- * @class
  */
 export class EncapsulatedContentInfoBPUReport {
     constructor(

@@ -108,7 +108,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AlarmInfo {
     constructor(

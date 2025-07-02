@@ -30,7 +30,6 @@ import {
  * DeleteError-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class DeleteError_problems_Item {
     constructor(

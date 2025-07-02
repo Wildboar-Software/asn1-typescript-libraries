@@ -88,7 +88,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class TestResultInfo {
     constructor(

@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AARQ_apdu {
     constructor(

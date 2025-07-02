@@ -31,7 +31,6 @@ import {
  *     issuerSerial    IssuerSerial OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class OtherCertID {

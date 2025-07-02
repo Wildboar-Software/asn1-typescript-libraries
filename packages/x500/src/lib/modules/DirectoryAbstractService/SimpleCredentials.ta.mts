@@ -45,7 +45,6 @@ import {
  *     userPwd   [0]  UserPwd } OPTIONAL }
  * ```
  *
- * @class
  */
 export class SimpleCredentials {
     constructor(

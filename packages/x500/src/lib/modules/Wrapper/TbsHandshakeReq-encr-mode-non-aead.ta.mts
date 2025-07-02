@@ -20,7 +20,6 @@ import {
  * TbsHandshakeReq-encr-mode-non-aead ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TbsHandshakeReq_encr_mode_non_aead {
     constructor(

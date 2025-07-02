@@ -28,7 +28,6 @@ import {
  * AttributeSel-attSelect-attributes-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class AttributeSel_attSelect_attributes_Item {
     constructor(

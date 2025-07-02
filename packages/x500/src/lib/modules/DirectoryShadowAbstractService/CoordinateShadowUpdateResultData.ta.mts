@@ -51,7 +51,6 @@ import {
  *   COMPONENTS OF CommonResultsSeq }
  * ```
  *
- * @class
  */
 export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
     constructor(

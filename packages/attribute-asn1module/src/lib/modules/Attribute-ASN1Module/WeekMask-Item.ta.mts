@@ -22,7 +22,6 @@ import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "
  * WeekMask-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  * 
- * @class
  */
 export
 class WeekMask_Item {

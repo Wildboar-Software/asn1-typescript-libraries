@@ -30,7 +30,6 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * }
  * ```
  *
- * @class
  */
 export class Code {
   constructor(

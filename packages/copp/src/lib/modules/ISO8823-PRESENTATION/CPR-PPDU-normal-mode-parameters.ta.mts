@@ -54,7 +54,6 @@ import {
  * CPR-PPDU-normal-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CPR_PPDU_normal_mode_parameters {
     constructor(

@@ -91,7 +91,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ProbeTransferEnvelope implements PerProbeTransferFields {
     constructor(

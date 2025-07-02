@@ -84,7 +84,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class NotifyGUIProgressEvent_RequestParams {
   constructor(

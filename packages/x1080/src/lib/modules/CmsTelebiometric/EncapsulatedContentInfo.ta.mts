@@ -28,7 +28,6 @@ import * as $ from '@wildboar/asn1/functional';
  *      {@eContentType})) OPTIONAL }
  * ```
  *
- * @class
  */
 export class EncapsulatedContentInfo {
     constructor(

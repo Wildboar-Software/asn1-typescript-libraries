@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class SubscribeToGUIEvents_RequestParams {
   constructor(

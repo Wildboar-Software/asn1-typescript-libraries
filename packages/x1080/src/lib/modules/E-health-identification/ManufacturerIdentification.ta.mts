@@ -33,7 +33,6 @@ import {
  *   drugId         MANUFACTURER-SCHEME.&Drug ({ManufacturerSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class ManufacturerIdentification {
     constructor(

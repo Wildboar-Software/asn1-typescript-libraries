@@ -25,7 +25,6 @@ import {
  * OsiOperation-fully-encoded-data-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiOperation_fully_encoded_data_Item {
     constructor(

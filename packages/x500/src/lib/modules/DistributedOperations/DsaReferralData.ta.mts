@@ -48,7 +48,6 @@ import {
  *   COMPONENTS OF       CommonResults }
  * ```
  *
- * @class
  */
 export class DsaReferralData implements CommonResults {
     constructor(

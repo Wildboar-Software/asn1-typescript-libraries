@@ -26,7 +26,6 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  * } (CONSTRAINED BY {--keyID shall point to a KEKRecipientInfo--})
  * ```
  *
- * @class
  */
 export class PasswordInfo {
     constructor(

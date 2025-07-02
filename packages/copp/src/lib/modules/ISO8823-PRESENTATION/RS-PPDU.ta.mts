@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RS_PPDU {
     constructor(

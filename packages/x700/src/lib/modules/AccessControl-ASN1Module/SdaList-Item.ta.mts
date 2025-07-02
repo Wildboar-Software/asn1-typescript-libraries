@@ -31,7 +31,6 @@ import {
  * SdaList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SdaList_Item {
     constructor(

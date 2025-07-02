@@ -54,7 +54,6 @@ import {
  *  RejectProblem:general-mistypedPDU)
  * ```
  *
- * @class
  */
 export class ReturnResult {
   constructor(

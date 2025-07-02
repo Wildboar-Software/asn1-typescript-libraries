@@ -22,7 +22,6 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  * } (WITH COMPONENTS {..., applicationName PRESENT} | WITH COMPONENTS {..., applicationOID PRESENT})
  * ```
  *
- * @class
  */
 export class CommonDataObjectAttributes {
     constructor(

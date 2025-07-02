@@ -42,7 +42,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AutoForwardRegistrationParameter88 {
     constructor(

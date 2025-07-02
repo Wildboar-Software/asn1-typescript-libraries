@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BIR_SECURITY_BLOCK_FORMAT {
   constructor(

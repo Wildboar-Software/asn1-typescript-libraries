@@ -53,7 +53,6 @@ import {
  * ListResultData-listInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ListResultData_listInfo implements CommonResults {
     constructor(

@@ -72,7 +72,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AutoForwardArguments implements PerMessageAutoForwardFields {
     constructor(

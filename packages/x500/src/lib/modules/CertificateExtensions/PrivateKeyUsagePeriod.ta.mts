@@ -22,7 +22,6 @@ import * as $ from "@wildboar/asn1/functional";
  *    WITH COMPONENTS {..., notAfter   PRESENT } )
  * ```
  *
- * @class
  */
 export class PrivateKeyUsagePeriod {
     constructor(

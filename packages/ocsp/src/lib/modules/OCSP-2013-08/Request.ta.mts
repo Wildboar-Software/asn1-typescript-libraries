@@ -31,7 +31,6 @@ import {
  *                                             ...}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class Request {
     constructor(

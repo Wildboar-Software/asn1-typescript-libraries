@@ -52,7 +52,6 @@ import {
  *     encrypted-data                      [2]  ENCRYPTED{TokenData} OPTIONAL }
  * ```
  *
- * @class
  */
 export class TBSAsymmetricToken {
     constructor(

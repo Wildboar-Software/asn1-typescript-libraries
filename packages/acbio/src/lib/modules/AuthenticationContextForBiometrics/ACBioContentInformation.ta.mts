@@ -49,7 +49,6 @@ import {
  *     brtCertificateInformation   BRTCertificateInformation OPTIONAL }
  * ```
  *
- * @class
  */
 export class ACBioContentInformation {
     constructor(

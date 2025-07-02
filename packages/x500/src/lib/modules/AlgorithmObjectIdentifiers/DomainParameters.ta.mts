@@ -27,7 +27,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class DomainParameters {
     constructor(

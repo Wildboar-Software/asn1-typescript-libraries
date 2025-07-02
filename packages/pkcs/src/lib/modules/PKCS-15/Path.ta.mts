@@ -23,7 +23,6 @@ import * as $ from "@wildboar/asn1/functional";
  * }( WITH COMPONENTS {..., index PRESENT, length PRESENT} | WITH COMPONENTS {..., index ABSENT, length ABSENT})
  * ```
  *
- * @class
  */
 export class Path {
     constructor(

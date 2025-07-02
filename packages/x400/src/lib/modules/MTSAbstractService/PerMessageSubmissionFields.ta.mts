@@ -72,7 +72,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class PerMessageSubmissionFields {
     constructor(

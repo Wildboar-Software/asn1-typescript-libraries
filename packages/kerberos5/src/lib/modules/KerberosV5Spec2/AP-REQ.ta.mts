@@ -43,7 +43,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AP_REQ {
   constructor(

@@ -21,7 +21,6 @@ import {
  *   reason  [0] IMPLICIT Release-request-reason OPTIONAL}
  * ```
  *
- * @class
  */
 export class TheOsiUnbind {
     constructor(

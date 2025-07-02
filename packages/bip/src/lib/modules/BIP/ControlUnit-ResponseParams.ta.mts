@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ControlUnit_ResponseParams {
   constructor(

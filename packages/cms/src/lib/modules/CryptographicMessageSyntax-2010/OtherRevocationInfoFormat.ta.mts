@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     ({SupportedOtherRevokInfo}{@otherRevInfoFormat})}
  * ```
  *
- * @class
  */
 export class OtherRevocationInfoFormat {
     constructor(

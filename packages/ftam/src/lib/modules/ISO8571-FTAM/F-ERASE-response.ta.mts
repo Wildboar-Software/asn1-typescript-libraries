@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_ERASE_response {
   constructor(

@@ -28,7 +28,6 @@ import {
  * PollRepContent-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class PollRepContent_Item {
   constructor(

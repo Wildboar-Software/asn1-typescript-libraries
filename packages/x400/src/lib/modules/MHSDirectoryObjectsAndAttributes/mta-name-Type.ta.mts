@@ -30,7 +30,6 @@ import {
  * mta-name-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class mta_name_Type {
     constructor(

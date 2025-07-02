@@ -23,7 +23,6 @@ import * as $ from '@wildboar/asn1/functional';
  *     content         [0] EXPLICIT CONTENT-TYPE.&Type({ContentTypeACBio}{@contentType}) }
  * ```
  *
- * @class
  */
 export class ACBioInstance {
     constructor(

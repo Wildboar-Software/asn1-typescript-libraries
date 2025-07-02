@@ -30,7 +30,6 @@ import {
  *   (WITH COMPONENTS { ..., issuer ABSENT, serial ABSENT }))
  * ```
  *
- * @class
  */
 export class SpecificallyIdentified {
     constructor(

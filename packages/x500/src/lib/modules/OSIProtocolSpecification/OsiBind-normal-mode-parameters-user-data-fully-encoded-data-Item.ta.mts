@@ -30,7 +30,6 @@ import {
  * OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item {
     constructor(

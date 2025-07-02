@@ -40,7 +40,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BRANCH_IDENTIFIER {
   constructor(

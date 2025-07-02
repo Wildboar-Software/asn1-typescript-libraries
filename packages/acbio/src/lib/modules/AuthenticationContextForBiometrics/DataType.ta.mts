@@ -36,7 +36,6 @@ import {
  *     purpose         Purpose OPTIONAL }
  * ```
  *
- * @class
  */
 export class DataType {
     constructor(

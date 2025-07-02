@@ -29,7 +29,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_DESELECT_request {
   constructor(

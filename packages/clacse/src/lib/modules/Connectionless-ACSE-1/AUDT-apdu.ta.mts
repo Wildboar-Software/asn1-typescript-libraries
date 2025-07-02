@@ -93,7 +93,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class AUDT_apdu {
     constructor(

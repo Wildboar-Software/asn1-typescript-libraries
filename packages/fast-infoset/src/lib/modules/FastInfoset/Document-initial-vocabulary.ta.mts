@@ -37,7 +37,6 @@ import {
  * Document-initial-vocabulary ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Document_initial_vocabulary {
   constructor(

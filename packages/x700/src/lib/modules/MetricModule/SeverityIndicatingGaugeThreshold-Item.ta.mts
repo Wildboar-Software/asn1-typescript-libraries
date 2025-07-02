@@ -25,7 +25,6 @@ import {
  * SeverityIndicatingGaugeThreshold-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class SeverityIndicatingGaugeThreshold_Item {
     constructor(

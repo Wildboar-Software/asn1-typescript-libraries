@@ -33,7 +33,6 @@ import {
  *     body      PKIBody }
  * ```
  *
- * @class
  */
 export class ProtectedPart {
   constructor(

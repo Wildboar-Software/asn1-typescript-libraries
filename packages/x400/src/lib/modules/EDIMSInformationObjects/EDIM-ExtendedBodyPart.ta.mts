@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EDIM_ExtendedBodyPart {
     constructor(

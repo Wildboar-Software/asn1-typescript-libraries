@@ -54,7 +54,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class NonReceiptFields {
     constructor(

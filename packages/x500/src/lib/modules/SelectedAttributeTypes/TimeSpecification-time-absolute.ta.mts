@@ -17,7 +17,6 @@ import * as $ from "@wildboar/asn1/functional";
  * TimeSpecification-time-absolute ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class TimeSpecification_time_absolute {
     constructor(

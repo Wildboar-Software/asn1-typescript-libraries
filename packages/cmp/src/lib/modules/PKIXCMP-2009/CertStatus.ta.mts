@@ -35,7 +35,6 @@ import {
  *     statusInfo  PKIStatusInfo OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertStatus {
   constructor(

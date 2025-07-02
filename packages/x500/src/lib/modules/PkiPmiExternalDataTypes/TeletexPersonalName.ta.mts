@@ -24,7 +24,6 @@ import * as $ from "@wildboar/asn1/functional";
  *     [3]  TeletexString(SIZE (1..ub-generation-qualifier-length)) OPTIONAL }
  * ```
  *
- * @class
  */
 export class TeletexPersonalName {
     constructor(

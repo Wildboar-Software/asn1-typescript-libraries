@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class RLRQ_apdu {
     constructor(

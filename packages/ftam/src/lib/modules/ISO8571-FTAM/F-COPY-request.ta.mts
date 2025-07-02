@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_COPY_request {
   constructor(

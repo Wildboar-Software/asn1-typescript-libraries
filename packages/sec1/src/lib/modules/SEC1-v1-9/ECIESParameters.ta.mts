@@ -28,7 +28,6 @@ import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_M
  * }
  * ```
  *
- * @class
  */
 export
 class ECIESParameters {

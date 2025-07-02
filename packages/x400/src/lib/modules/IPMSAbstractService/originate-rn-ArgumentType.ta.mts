@@ -26,7 +26,6 @@ import { RN, _decode_RN, _encode_RN } from '../IPMSInformationObjects/RN.ta.mjs'
  * originate-rn-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class originate_rn_ArgumentType {
     constructor(

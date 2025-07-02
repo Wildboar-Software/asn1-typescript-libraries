@@ -16,7 +16,6 @@ import * as $ from "@wildboar/asn1/functional";
  * OsiBindResult-mode-selector ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class OsiBindResult_mode_selector {
     constructor(

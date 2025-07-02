@@ -35,7 +35,6 @@ import {
  *     bpuOutputStaticInformationList  BPUIOStaticInformationList OPTIONAL }
  * ```
  *
- * @class
  */
 export class BPUFunctionReport {
     constructor(

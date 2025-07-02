@@ -36,7 +36,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_U_ABORT_request {
   constructor(

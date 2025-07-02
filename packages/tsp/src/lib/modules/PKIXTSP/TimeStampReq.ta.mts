@@ -46,7 +46,6 @@ import {
  *     extensions               [0] IMPLICIT Extensions    OPTIONAL  }
  * ```
  *
- * @class
  */
 export class TimeStampReq {
     constructor(

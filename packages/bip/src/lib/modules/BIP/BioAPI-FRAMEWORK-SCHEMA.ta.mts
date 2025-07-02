@@ -57,7 +57,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_FRAMEWORK_SCHEMA {
   constructor(

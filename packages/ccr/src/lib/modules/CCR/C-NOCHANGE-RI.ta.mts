@@ -41,7 +41,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class C_NOCHANGE_RI {
   constructor(

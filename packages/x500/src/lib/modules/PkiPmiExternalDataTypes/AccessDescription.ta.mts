@@ -23,7 +23,6 @@ import {
  *   accessLocation  GeneralName }
  * ```
  *
- * @class
  */
 export class AccessDescription {
     constructor(

@@ -31,7 +31,6 @@ import {
  * CapabilityIdentitiesList-Item-knownForm ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CapabilityIdentitiesList_Item_knownForm {
     constructor(

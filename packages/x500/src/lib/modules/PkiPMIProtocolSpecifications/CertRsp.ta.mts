@@ -44,7 +44,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class CertRsp implements AVMPcommonComponents {
     constructor(

@@ -46,7 +46,6 @@ import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MES
  * }
  * ```
  * 
- * @class
  */
 export
 class RenewInfoMsgContent {

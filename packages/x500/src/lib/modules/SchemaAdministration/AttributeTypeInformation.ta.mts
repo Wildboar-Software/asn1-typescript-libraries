@@ -39,7 +39,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class AttributeTypeInformation {
     constructor(

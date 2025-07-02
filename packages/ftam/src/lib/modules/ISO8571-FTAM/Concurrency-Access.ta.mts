@@ -35,7 +35,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Concurrency_Access {
   constructor(

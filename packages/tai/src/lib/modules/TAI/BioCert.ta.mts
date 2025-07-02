@@ -34,7 +34,6 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
  *    })
  * ```
  * 
- * @class
  */
 export
 class BioCert {

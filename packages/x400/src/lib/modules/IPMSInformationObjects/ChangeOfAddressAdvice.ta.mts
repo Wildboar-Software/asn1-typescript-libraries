@@ -38,7 +38,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ChangeOfAddressAdvice {
     constructor(

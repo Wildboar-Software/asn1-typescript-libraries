@@ -80,7 +80,6 @@ import {
  *                                 Association-informationBindErr{{Protocols}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class AAREerr_apdu {
     constructor(

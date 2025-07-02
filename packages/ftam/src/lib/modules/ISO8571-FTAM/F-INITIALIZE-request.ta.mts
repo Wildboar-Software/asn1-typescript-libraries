@@ -96,7 +96,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_INITIALIZE_request {
   constructor(

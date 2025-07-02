@@ -29,7 +29,6 @@ import {
  * Data-Field-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Data_Field_Item {
   constructor(

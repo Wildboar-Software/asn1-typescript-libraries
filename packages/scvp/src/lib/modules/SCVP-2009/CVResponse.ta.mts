@@ -71,7 +71,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class CVResponse {
   constructor(

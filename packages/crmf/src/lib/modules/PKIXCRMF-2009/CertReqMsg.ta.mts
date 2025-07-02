@@ -36,7 +36,6 @@ import {
  *         SingleAttribute{{RegInfoSet}} OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertReqMsg {
     constructor(

@@ -78,7 +78,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BFP_SCHEMA {
   constructor(

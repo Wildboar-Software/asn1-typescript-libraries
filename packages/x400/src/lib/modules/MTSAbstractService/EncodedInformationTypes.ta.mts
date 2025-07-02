@@ -57,7 +57,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class EncodedInformationTypes implements NonBasicParameters {
     constructor(

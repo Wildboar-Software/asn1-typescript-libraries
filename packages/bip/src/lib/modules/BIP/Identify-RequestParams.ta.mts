@@ -62,7 +62,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Identify_RequestParams {
   constructor(

@@ -43,7 +43,6 @@ import {
  * EscalationList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class EscalationList_Item {
     constructor(

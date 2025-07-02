@@ -30,7 +30,6 @@ import { TotalRefresh, _root_component_type_list_1_spec_for_TotalRefresh } from 
  *   ...}
  * ```
  *
- * @class
  */
 export class Subtree implements TotalRefresh {
     constructor(

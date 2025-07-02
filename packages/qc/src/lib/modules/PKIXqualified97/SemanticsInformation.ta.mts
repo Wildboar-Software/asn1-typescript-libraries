@@ -26,7 +26,6 @@ import {
  *         WITH COMPONENTS {..., nameRegistrationAuthorities PRESENT})
  * ```
  *
- * @class
  */
 export class SemanticsInformation {
     constructor(

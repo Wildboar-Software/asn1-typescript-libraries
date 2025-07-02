@@ -22,7 +22,6 @@ import {
  *   value  UniversalOrBMPString{ub-domain-defined-attribute-value-length} }
  * ```
  *
- * @class
  */
 export class UniversalDomainDefinedAttribute {
     constructor(

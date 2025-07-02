@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class DbClose_RequestParams {
   constructor(

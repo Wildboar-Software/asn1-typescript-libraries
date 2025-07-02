@@ -34,7 +34,6 @@ import {
  *                  ({LaboratorySchemes}{@.scheme}) OPTIONAL}
  * ```
  *
- * @class
  */
 export class LaboratoryIdentification {
     constructor(

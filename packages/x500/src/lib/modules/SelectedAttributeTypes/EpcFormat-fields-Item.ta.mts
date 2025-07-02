@@ -28,7 +28,6 @@ import {
  * EpcFormat-fields-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class EpcFormat_fields_Item {
     constructor(

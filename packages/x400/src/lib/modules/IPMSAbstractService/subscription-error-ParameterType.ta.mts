@@ -26,7 +26,6 @@ import {
  * subscription-error-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class subscription_error_ParameterType {
     constructor(

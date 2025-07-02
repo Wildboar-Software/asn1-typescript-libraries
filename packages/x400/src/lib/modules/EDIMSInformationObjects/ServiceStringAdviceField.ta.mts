@@ -58,7 +58,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ServiceStringAdviceField {
     constructor(

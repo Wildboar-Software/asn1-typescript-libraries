@@ -21,7 +21,6 @@ import * as $ from '@wildboar/asn1/functional';
  * CapabilityIdentitiesList-Item-unknownForm ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CapabilityIdentitiesList_Item_unknownForm {
     constructor(

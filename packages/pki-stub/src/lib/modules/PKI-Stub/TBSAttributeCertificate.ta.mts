@@ -75,7 +75,6 @@ import {
  *  }  (CONSTRAINED BY { -- shall be DER encoded -- } )
  * ```
  *
- * @class
  */
 export class TBSAttributeCertificate {
     constructor(

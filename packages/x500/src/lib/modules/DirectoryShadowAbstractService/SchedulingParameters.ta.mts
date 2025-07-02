@@ -25,7 +25,6 @@ import {
  *   ... }
  * ```
  *
- * @class
  */
 export class SchedulingParameters {
     constructor(

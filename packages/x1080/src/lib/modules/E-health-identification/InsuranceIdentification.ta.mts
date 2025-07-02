@@ -34,7 +34,6 @@ import {
  *   insuranceCert  INSURANCE-SCHEME.&Certification ({InsuranceSchemes}{@.scheme})}
  * ```
  *
- * @class
  */
 export class InsuranceIdentification {
     constructor(

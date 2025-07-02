@@ -38,7 +38,6 @@ import {
  * CP-type-x410-mode-parameters ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class CP_type_x410_mode_parameters {
     constructor(

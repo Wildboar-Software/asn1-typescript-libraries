@@ -18,7 +18,6 @@ import {
  *     argument        [0]  operation.&ArgumentType }
  * ```
  *
- * @class
  */
 export class Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(

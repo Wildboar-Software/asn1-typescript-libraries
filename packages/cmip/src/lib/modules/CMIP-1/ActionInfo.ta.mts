@@ -32,7 +32,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ActionInfo {
   constructor(

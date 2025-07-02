@@ -26,7 +26,6 @@ import {
  * ConditionalPackages-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ConditionalPackages_Item {
     constructor(

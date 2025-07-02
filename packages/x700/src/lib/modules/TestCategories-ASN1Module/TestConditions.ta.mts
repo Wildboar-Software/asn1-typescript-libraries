@@ -34,7 +34,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class TestConditions {
     constructor(

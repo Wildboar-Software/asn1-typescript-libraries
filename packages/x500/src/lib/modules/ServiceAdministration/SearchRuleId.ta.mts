@@ -20,7 +20,6 @@ import * as $ from "@wildboar/asn1/functional";
  *   dmdId  [0]  OBJECT IDENTIFIER }
  * ```
  *
- * @class
  */
 export class SearchRuleId {
     constructor(

@@ -29,7 +29,6 @@ import {
  * ErrorContent-content ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ErrorContent_content {
     constructor(

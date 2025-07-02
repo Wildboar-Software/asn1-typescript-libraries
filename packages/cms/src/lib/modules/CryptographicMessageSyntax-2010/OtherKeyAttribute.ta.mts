@@ -19,7 +19,6 @@ import * as $ from "@wildboar/asn1/functional";
  * keyAttr    KEY-ATTRIBUTE.&Type({SupportedKeyAttributes}{@keyAttrId})}
  * ```
  *
- * @class
  */
 export class OtherKeyAttribute {
     constructor(

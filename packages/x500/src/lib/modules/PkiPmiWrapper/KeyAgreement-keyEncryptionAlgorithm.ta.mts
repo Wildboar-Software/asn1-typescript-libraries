@@ -16,7 +16,6 @@ import * as $ from "@wildboar/asn1/functional";
  * KeyAgreement-keyEncryptionAlgorithm ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class KeyAgreement_keyEncryptionAlgorithm {
     constructor(

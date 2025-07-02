@@ -28,7 +28,6 @@ import {
  * InvalidArgumentValue-eventValue ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class InvalidArgumentValue_eventValue {
   constructor(

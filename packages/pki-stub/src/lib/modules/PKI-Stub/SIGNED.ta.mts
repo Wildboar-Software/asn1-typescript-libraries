@@ -36,7 +36,6 @@ import {
  *      WITH COMPONENTS {..., altAlgorithmIdentifier ABSENT,  altSignature ABSENT } )
  * ```
  *
- * @class
  */
 export class SIGNED<ToBeSigned> {
     /**

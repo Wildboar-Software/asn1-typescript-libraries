@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class BioAPI_BIR_DATA_TYPE {
   constructor(

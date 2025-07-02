@@ -37,7 +37,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_RESTART_response {
   constructor(

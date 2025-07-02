@@ -27,7 +27,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_CHANGE_LINK_ATTRIB_request {
   constructor(

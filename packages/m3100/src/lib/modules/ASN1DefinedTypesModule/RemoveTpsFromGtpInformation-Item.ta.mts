@@ -26,7 +26,6 @@ import {
  * RemoveTpsFromGtpInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class RemoveTpsFromGtpInformation_Item {
     constructor(

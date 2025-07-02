@@ -30,7 +30,6 @@ import {
  * ConnectivityThreshold-time ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class ConnectivityThreshold_time {
     constructor(

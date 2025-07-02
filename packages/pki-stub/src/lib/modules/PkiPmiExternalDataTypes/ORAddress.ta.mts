@@ -35,7 +35,6 @@ import {
  *   extension-attributes                ExtensionAttributes OPTIONAL }
  * ```
  *
- * @class
  */
 export class ORAddress {
     constructor(

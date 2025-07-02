@@ -29,7 +29,6 @@ import {
  * responseBytes          [0] EXPLICIT ResponseBytes OPTIONAL }
  * ```
  *
- * @class
  */
 export class OCSPResponse {
     constructor(

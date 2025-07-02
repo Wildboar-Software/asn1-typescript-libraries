@@ -60,7 +60,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ACRQ_apdu {
   constructor(

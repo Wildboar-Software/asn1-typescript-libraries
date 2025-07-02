@@ -26,7 +26,6 @@ import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } fro
  * }
  * ```
  *
- * @class
  */
 export
 class ECWKTParameters {

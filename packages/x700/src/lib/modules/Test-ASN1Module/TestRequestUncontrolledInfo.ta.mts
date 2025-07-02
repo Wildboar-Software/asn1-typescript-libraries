@@ -52,7 +52,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class TestRequestUncontrolledInfo {
     constructor(

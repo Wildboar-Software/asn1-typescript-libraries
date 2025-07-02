@@ -31,7 +31,6 @@ import {
  * DeleteResult-delete-result-94 ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class DeleteResult_delete_result_94 {
     constructor(

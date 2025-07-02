@@ -30,7 +30,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class Date_and_Time_Pattern {
   constructor(

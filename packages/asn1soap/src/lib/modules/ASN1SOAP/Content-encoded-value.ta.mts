@@ -28,7 +28,6 @@ import {
  * Content-encoded-value ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Content_encoded_value {
   constructor(

@@ -25,7 +25,6 @@ import {
  *    WITH COMPONENTS {..., inhibitPolicyMapping  PRESENT } )
  * ```
  *
- * @class
  */
 export class PolicyConstraintsSyntax {
     constructor(

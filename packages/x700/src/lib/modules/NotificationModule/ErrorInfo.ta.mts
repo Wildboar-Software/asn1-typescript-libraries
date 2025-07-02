@@ -66,7 +66,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class ErrorInfo {
     constructor(

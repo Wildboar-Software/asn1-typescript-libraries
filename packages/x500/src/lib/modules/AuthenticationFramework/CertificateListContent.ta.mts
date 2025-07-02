@@ -59,7 +59,6 @@ import {
  *   crlExtensions   [0]  Extensions OPTIONAL }
  * ```
  *
- * @class
  */
 export class CertificateListContent {
     constructor(

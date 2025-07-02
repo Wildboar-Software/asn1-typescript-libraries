@@ -26,7 +26,6 @@ import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs'
  * receive-on-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class receive_on_ArgumentType {
     constructor(

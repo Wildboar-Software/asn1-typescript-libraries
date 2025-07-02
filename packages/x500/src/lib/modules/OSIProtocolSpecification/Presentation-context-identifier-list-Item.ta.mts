@@ -25,7 +25,6 @@ import {
  * Presentation-context-identifier-list-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
  *
- * @class
  */
 export class Presentation_context_identifier_list_Item {
     constructor(

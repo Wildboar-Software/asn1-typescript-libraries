@@ -44,7 +44,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_READ_request {
   constructor(

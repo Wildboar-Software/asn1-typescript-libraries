@@ -31,7 +31,6 @@ import {
  *     crlNumber       INTEGER OPTIONAL }
  * ```
  *
- * @class
  */
 export
 class CrlIdentifier {

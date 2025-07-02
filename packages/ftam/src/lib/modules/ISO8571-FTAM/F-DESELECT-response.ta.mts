@@ -50,7 +50,6 @@ import {
  * }
  * ```
  *
- * @class
  */
 export class F_DESELECT_response {
   constructor(
