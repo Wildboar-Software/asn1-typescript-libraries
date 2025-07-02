@@ -132,7 +132,7 @@ export class Announcement {
    * @static
    * @method
    */
-  public static get _default_value_for_bipMessagePort() {
+  public static get _default_value_for_bipMessagePort(): Port {
     return 4376;
   }
 }

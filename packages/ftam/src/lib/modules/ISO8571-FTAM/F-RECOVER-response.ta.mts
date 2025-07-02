@@ -156,7 +156,7 @@ export class F_RECOVER_response {
    * @static
    * @method
    */
-  public static get _default_value_for_state_result() {
+  public static get _default_value_for_state_result(): State_Result {
     return State_Result_success;
   }
   /**
@@ -165,7 +165,7 @@ export class F_RECOVER_response {
    * @static
    * @method
    */
-  public static get _default_value_for_action_result() {
+  public static get _default_value_for_action_result(): Action_Result {
     return State_Result_success;
   }
   /**
@@ -174,7 +174,7 @@ export class F_RECOVER_response {
    * @static
    * @method
    */
-  public static get _default_value_for_recovety_Point() {
+  public static get _default_value_for_recovety_Point(): INTEGER {
     return 0;
   }
   /**
@@ -183,7 +183,7 @@ export class F_RECOVER_response {
    * @static
    * @method
    */
-  public static get _default_value_for_presentation_action() {
+  public static get _default_value_for_presentation_action(): BOOLEAN {
     return false;
   }
 }

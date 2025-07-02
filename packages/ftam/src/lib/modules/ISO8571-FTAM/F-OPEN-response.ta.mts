@@ -185,7 +185,7 @@ export class F_OPEN_response {
    * @static
    * @method
    */
-  public static get _default_value_for_state_result() {
+  public static get _default_value_for_state_result(): State_Result {
     return State_Result_success;
   }
   /**
@@ -194,7 +194,7 @@ export class F_OPEN_response {
    * @static
    * @method
    */
-  public static get _default_value_for_action_result() {
+  public static get _default_value_for_action_result(): Action_Result {
     return Action_Result_success;
   }
   /**
@@ -203,7 +203,7 @@ export class F_OPEN_response {
    * @static
    * @method
    */
-  public static get _default_value_for_recovery_mode() {
+  public static get _default_value_for_recovery_mode(): F_OPEN_response_recovery_mode {
     return none;
   }
   /**
@@ -212,7 +212,7 @@ export class F_OPEN_response {
    * @static
    * @method
    */
-  public static get _default_value_for_presentation_action() {
+  public static get _default_value_for_presentation_action(): BOOLEAN {
     return false;
   }
 }

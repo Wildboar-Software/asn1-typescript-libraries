@@ -164,7 +164,7 @@ export class F_GROUP_SELECT_request {
    * @static
    * @method
    */
-  public static get _default_value_for_maximum_set_size() {
+  public static get _default_value_for_maximum_set_size(): INTEGER {
     return 0;
   }
 }

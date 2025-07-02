@@ -128,7 +128,7 @@ export class C_RECOVER_RC {
    * @static
    * @method
    */
-  public static get _default_value_for_reversed_branch() {
+  public static get _default_value_for_reversed_branch(): BOOLEAN {
     return false;
   }
   /**

@@ -116,7 +116,7 @@ export class C_INITIALIZE_RI {
    * @static
    * @method
    */
-  public static get _default_value_for_version_number() {
+  public static get _default_value_for_version_number(): C_INITIALIZE_RI_version_number {
     return (() => {
       const _ret = new Uint8ClampedArray(2);
       _ret[C_INITIALIZE_RI_version_number_version2] = TRUE_BIT;
@@ -129,7 +129,7 @@ export class C_INITIALIZE_RI {
    * @static
    * @method
    */
-  public static get _default_value_for_ccr_requirements() {
+  public static get _default_value_for_ccr_requirements(): Ccr_requirements {
     return (() => {
       const _ret = new Uint8ClampedArray(5);
       _ret[Ccr_requirements_static_commitment] = TRUE_BIT;

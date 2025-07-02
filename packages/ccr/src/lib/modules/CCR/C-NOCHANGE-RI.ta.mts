@@ -93,7 +93,7 @@ export class C_NOCHANGE_RI {
    * @static
    * @method
    */
-  public static get _default_value_for_confirmation() {
+  public static get _default_value_for_confirmation(): C_NOCHANGE_RI_confirmation {
     return C_NOCHANGE_RI_confirmation_result_requested;
   }
   /**

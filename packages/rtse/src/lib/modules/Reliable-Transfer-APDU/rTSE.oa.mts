@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 
-
 /**
  * @summary rTSE
  * @description
@@ -32,7 +31,7 @@ import {
  * @type {CONTRACT}
  * @implements {CONTRACT}
  */
-export const rTSE = {
+export const rTSE: { class: string, decoderFor: {}, encoderFor: {}, '&id': _OID } = {
   class: 'CONTRACT',
   decoderFor: {},
   encoderFor: {},
@@ -40,6 +39,6 @@ export const rTSE = {
     [/* reliable-transfer */ 3, /* aseID */ 1],
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-};
+} as const;
 
 /* eslint-enable */

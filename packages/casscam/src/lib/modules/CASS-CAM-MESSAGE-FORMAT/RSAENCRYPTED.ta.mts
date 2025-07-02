@@ -12,9 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
-
 /**
  * @summary RSAENCRYPTED
  * @description
@@ -22,28 +19,25 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RSAENCRYPTED{ToBeEnciphered}  ::= 
+ * RSAENCRYPTED{ToBeEnciphered} ::= 
  *   BIT STRING
  *     (CONSTRAINED BY {
  *        -- shall be the result of applying the encipherment procedure
- *        -- to the BER-encoded octets of a value of --ToBeEnciphered})
+ *        -- to the BER-encoded octets of a value of -- ToBeEnciphered })
  * ```
  */
 export
 type RSAENCRYPTED = BIT_STRING;
 
-
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) RSAENCRYPTED
  * @function
- * @param {_Element} el The element being decoded.
  * @returns A function that will decode an ASN.1 element.
  */
 export
-function _get_decoder_for_RSAENCRYPTED<ToBeEnciphered>(_decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>) {
+function _get_decoder_for_RSAENCRYPTED<ToBeEnciphered>(_decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>): $.ASN1Decoder<RSAENCRYPTED> {
     return $._decodeBitString;
 }
-
 
 /**
  * @summary Returns a function that will encode a(n) RSAENCRYPTED into an ASN.1 Element.
@@ -51,7 +45,7 @@ function _get_decoder_for_RSAENCRYPTED<ToBeEnciphered>(_decode_ToBeEnciphered: $
  * @returns A function that will encode a(n) RSAENCRYPTED as an ASN.1 element.
  */
 export
-function _get_encoder_for_RSAENCRYPTED<ToBeEnciphered>(_encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>) {
+function _get_encoder_for_RSAENCRYPTED<ToBeEnciphered>(_encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>): $.ASN1Encoder<RSAENCRYPTED> {
     return $._encodeBitString;
 }
 

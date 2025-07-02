@@ -102,7 +102,7 @@ export class F_CHANGE_PREFIX_request {
    * @static
    * @method
    */
-  public static get _default_value_for_reset() {
+  public static get _default_value_for_reset(): BOOLEAN {
     return false;
   }
 }

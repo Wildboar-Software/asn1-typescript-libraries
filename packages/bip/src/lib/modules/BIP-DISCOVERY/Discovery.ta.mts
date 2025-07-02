@@ -97,7 +97,7 @@ export class Discovery {
    * @static
    * @method
    */
-  public static get _default_value_for_masterEndPort() {
+  public static get _default_value_for_masterEndPort(): Port {
     return 4376;
   }
 }

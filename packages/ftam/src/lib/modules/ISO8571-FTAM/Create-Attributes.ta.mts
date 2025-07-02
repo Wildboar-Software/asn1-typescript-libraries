@@ -215,7 +215,7 @@ export class Create_Attributes {
    * @static
    * @method
    */
-  public static get _default_value_for_object_type() {
+  public static get _default_value_for_object_type(): Object_Type_Attribute {
     return file;
   }
 }

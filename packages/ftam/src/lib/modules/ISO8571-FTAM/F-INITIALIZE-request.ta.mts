@@ -218,7 +218,7 @@ export class F_INITIALIZE_request {
    * @static
    * @method
    */
-  public static get _default_value_for_protocol_Version() {
+  public static get _default_value_for_protocol_Version(): Protocol_Version {
     return new Uint8ClampedArray([ TRUE_BIT ]);
   }
   /**
@@ -227,7 +227,7 @@ export class F_INITIALIZE_request {
    * @static
    * @method
    */
-  public static get _default_value_for_presentation_tontext_management() {
+  public static get _default_value_for_presentation_tontext_management(): BOOLEAN {
     return false;
   }
   /**
@@ -236,7 +236,7 @@ export class F_INITIALIZE_request {
    * @static
    * @method
    */
-  public static get _default_value_for_service_class() {
+  public static get _default_value_for_service_class(): Service_Class {
     return new Uint8ClampedArray([
         FALSE_BIT,
         FALSE_BIT,
@@ -249,7 +249,7 @@ export class F_INITIALIZE_request {
    * @static
    * @method
    */
-  public static get _default_value_for_attribute_groups() {
+  public static get _default_value_for_attribute_groups(): Attribute_Groups {
     return new Uint8ClampedArray([]);
   }
   /**
@@ -258,7 +258,7 @@ export class F_INITIALIZE_request {
    * @static
    * @method
    */
-  public static get _default_value_for_checkpoint_window() {
+  public static get _default_value_for_checkpoint_window(): INTEGER {
     return 1;
   }
 }

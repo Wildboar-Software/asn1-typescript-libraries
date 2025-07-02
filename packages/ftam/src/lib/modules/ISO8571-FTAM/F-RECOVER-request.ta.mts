@@ -173,7 +173,7 @@ export class F_RECOVER_request {
    * @static
    * @method
    */
-  public static get _default_value_for_recovefy_Point() {
+  public static get _default_value_for_recovefy_Point(): INTEGER {
     return 0;
   }
 }

@@ -196,7 +196,7 @@ export class F_OPEN_request {
    * @static
    * @method
    */
-  public static get _default_value_for_processing_mode() {
+  public static get _default_value_for_processing_mode(): F_OPEN_request_processing_mode {
     return (() => {
       const _ret = new Uint8ClampedArray(5);
       _ret[F_OPEN_request_processing_mode_f_read] = TRUE_BIT;
@@ -209,7 +209,7 @@ export class F_OPEN_request {
    * @static
    * @method
    */
-  public static get _default_value_for_enable_fadu_locking() {
+  public static get _default_value_for_enable_fadu_locking(): BOOLEAN {
     return false;
   }
   /**
@@ -218,7 +218,7 @@ export class F_OPEN_request {
    * @static
    * @method
    */
-  public static get _default_value_for_recovery_mode() {
+  public static get _default_value_for_recovery_mode(): F_OPEN_request_recovery_mode {
     return none;
   }
 }

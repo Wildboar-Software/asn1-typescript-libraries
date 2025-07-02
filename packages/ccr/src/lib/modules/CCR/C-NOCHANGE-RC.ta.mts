@@ -94,7 +94,7 @@ export class C_NOCHANGE_RC {
    * @static
    * @method
    */
-  public static get _default_value_for_outcome() {
+  public static get _default_value_for_outcome(): C_NOCHANGE_RC_outcome {
     return C_NOCHANGE_RC_outcome_not_determined;
   }
   /**

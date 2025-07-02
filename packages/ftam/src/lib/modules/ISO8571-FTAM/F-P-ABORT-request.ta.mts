@@ -78,7 +78,7 @@ export class F_P_ABORT_request {
    * @static
    * @method
    */
-  public static get _default_value_for_action_result() {
+  public static get _default_value_for_action_result(): Action_Result {
     return Action_Result_success;
   }
 }

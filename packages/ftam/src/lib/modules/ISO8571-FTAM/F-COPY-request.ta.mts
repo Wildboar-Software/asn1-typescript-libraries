@@ -135,7 +135,7 @@ export class F_COPY_request {
    * @static
    * @method
    */
-  public static get _default_value_for_override() {
+  public static get _default_value_for_override(): Override {
     return create_failure;
   }
 }

@@ -41,7 +41,7 @@ export type GenericTimeTypeChoice<BasicType, Alternative> =
 export function _get_decoder_for_GenericTimeTypeChoice<BasicType, Alternative>(
   _decode_BasicType: $.ASN1Decoder<BasicType>,
   _decode_Alternative: $.ASN1Decoder<Alternative>
-) {
+): $.ASN1Decoder<GenericTimeTypeChoice<BasicType, Alternative>> {
   return $._decode_inextensible_choice<
     GenericTimeTypeChoice<BasicType, Alternative>
   >({
@@ -59,7 +59,7 @@ export function _get_decoder_for_GenericTimeTypeChoice<BasicType, Alternative>(
 export function _get_encoder_for_GenericTimeTypeChoice<BasicType, Alternative>(
   _encode_BasicType: $.ASN1Encoder<BasicType>,
   _encode_Alternative: $.ASN1Encoder<Alternative>
-) {
+): $.ASN1Encoder<GenericTimeTypeChoice<BasicType, Alternative>> {
   return $._encode_choice<GenericTimeTypeChoice<BasicType, Alternative>>(
     {
       asn1supportedvalue: _encode_BasicType,

@@ -108,7 +108,7 @@ export class RTORQapdu {
    * @static
    * @method
    */
-  public static get _default_value_for_checkpointSize() {
+  public static get _default_value_for_checkpointSize(): INTEGER {
     return 0;
   }
   /**
@@ -117,7 +117,7 @@ export class RTORQapdu {
    * @static
    * @method
    */
-  public static get _default_value_for_windowSize() {
+  public static get _default_value_for_windowSize(): INTEGER {
     return 3;
   }
   /**
@@ -126,7 +126,7 @@ export class RTORQapdu {
    * @static
    * @method
    */
-  public static get _default_value_for_dialogueMode() {
+  public static get _default_value_for_dialogueMode(): RTORQapdu_dialogueMode {
     return monologue;
   }
 }
