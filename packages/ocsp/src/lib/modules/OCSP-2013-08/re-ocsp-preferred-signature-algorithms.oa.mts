@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.mjs";
+import type { EXTENSION } from "@wildboar/pki-stub";
 import { id_pkix_ocsp_pref_sig_algs } from "../OCSP-2013-08/id-pkix-ocsp-pref-sig-algs.va.mjs";
 import {
     PreferredSignatureAlgorithms,

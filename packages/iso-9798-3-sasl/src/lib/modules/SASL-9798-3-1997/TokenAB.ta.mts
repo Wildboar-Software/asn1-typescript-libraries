@@ -19,7 +19,7 @@ import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 
 /**

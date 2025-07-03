@@ -15,7 +15,7 @@ import {
     Credentials,
     _decode_Credentials,
     _encode_Credentials,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Credentials.ta.mjs";
+} from "@wildboar/x500/DirectoryAbstractService";
 
 
 /**

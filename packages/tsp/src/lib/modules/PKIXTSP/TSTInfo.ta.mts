@@ -12,12 +12,10 @@ import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.mjs";
-import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     Accuracy,
     _decode_Accuracy,
@@ -165,7 +163,7 @@ export class TSTInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_ordering() {
+    public static get _default_value_for_ordering(): BOOLEAN {
         return false;
     }
 }

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import { id_pda_dateOfBirth } from "../PKIXqualified97/id-pda-dateOfBirth.va.mjs";
 
 

@@ -14,7 +14,7 @@ import {
     TBSAttributeCertificate as AttributeCertificateInfo,
     _decode_TBSAttributeCertificate as _decode_AttributeCertificateInfo,
     _encode_TBSAttributeCertificate as _encode_AttributeCertificateInfo,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/TBSAttributeCertificate.ta.mjs";
+} from "@wildboar/x500/AttributeCertificateDefinitions";
 
 
 /**

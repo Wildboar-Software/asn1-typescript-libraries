@@ -88,7 +88,7 @@ export class HeaderBlock {
    * @static
    * @method
    */
-  public static get _default_value_for_role() {
+  public static get _default_value_for_role(): AnyURI {
     return ultimateReceiver;
   }
 }

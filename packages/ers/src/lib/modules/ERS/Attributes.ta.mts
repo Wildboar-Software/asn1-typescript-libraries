@@ -14,9 +14,7 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.mjs";
-
-
+} from "@wildboar/pki-stub";
 
 /**
  * @summary Attributes
@@ -35,9 +33,7 @@ import {
 export
 type Attributes = Attribute[]; // SetOfType
 
-
 let _cached_decoder_for_Attributes: $.ASN1Decoder<Attributes> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Attributes
@@ -51,9 +47,7 @@ function _decode_Attributes (el: _Element): Attributes {
     return _cached_decoder_for_Attributes(el);
 }
 
-
 let _cached_encoder_for_Attributes: $.ASN1Encoder<Attributes> | null = null;
-
 
 /**
  * @summary Encodes a(n) Attributes into an ASN.1 Element.
@@ -67,6 +61,5 @@ function _encode_Attributes (value: Attributes, elGetter: $.ASN1Encoder<Attribut
     if (!_cached_encoder_for_Attributes) { _cached_encoder_for_Attributes = $._encodeSetOf<Attribute>(() => _encode_Attribute, $.DER); }
     return _cached_encoder_for_Attributes(value, elGetter);
 }
-
 
 /* eslint-enable */

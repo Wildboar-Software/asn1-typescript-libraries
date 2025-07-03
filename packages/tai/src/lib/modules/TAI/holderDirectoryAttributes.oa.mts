@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { AttributesSyntax, _decode_AttributesSyntax, _encode_AttributesSyntax } from "../TAI/AttributesSyntax.ta.mjs";
 import { id_tai_ce_holderDirectoryAttributes } from "../TAI/id-tai-ce-holderDirectoryAttributes.va.mjs";
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary holderDirectoryAttributes
  * @description

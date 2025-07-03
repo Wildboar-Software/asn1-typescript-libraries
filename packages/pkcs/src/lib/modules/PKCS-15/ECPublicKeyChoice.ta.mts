@@ -3,7 +3,7 @@ import {
     ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECPoint.ta.mjs";
+} from "@wildboar/ansi-x9-62";
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {

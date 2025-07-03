@@ -3,7 +3,7 @@ import {
     DiffieHellmanPublicNumber,
     _decode_DiffieHellmanPublicNumber,
     _encode_DiffieHellmanPublicNumber,
-} from "@wildboar/ansi-x9-42/src/lib/modules/ANSI-X9-42/DiffieHellmanPublicNumber.ta.mjs";
+} from "@wildboar/ansi-x9-42";
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {

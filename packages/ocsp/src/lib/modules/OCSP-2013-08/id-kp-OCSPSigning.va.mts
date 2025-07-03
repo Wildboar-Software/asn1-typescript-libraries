@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { id_kp } from "@wildboar/x500/src/lib/modules/UsefulDefinitions/id-kp.va.mjs";
-
+import { id_kp } from "@wildboar/x500/UsefulDefinitions";
 
 /**
  * @summary id_kp_OCSPSigning

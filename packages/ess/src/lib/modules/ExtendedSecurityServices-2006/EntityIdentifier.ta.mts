@@ -5,12 +5,12 @@ import {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "@wildboar/x500/src/lib/modules/EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
+} from "@wildboar/x500/EnhancedSecurity";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 
 /**

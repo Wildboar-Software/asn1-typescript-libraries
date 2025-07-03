@@ -9,12 +9,10 @@ import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.mjs";
-import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     Request,
     _decode_Request,

@@ -15,8 +15,7 @@ import {
     ACSE_apdu,
     _decode_ACSE_apdu,
     _encode_ACSE_apdu,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/ACSE-apdu.ta.mjs';
-
+} from '@wildboar/acse';
 
 /**
  * @summary acse_abstract_syntax

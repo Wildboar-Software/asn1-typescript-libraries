@@ -15,13 +15,12 @@ import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
-
+} from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary TrustedAuth
@@ -52,9 +51,7 @@ type TrustedAuth =
     | { authorityCertificate: Certificate } /* CHOICE_ALT_ROOT */
     | { pkcs15KeyHash: OCTET_STRING } /* CHOICE_ALT_ROOT */;
 
-
 let _cached_decoder_for_TrustedAuth: $.ASN1Decoder<TrustedAuth> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustedAuth
@@ -74,9 +71,7 @@ function _decode_TrustedAuth (el: _Element): TrustedAuth {
     return _cached_decoder_for_TrustedAuth(el);
 }
 
-
 let _cached_encoder_for_TrustedAuth: $.ASN1Encoder<TrustedAuth> | null = null;
-
 
 /**
  * @summary Encodes a(n) TrustedAuth into an ASN.1 Element.
@@ -96,6 +91,5 @@ function _encode_TrustedAuth (value: TrustedAuth, elGetter: $.ASN1Encoder<Truste
 }, $.BER); }
     return _cached_encoder_for_TrustedAuth(value, elGetter);
 }
-
 
 /* eslint-enable */

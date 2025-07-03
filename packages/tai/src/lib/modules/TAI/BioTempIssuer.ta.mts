@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/ObjectDigestInfo.ta.mjs";
+import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "@wildboar/x500/CertificateExtensions";
+import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildboar/x500/AttributeCertificateDefinitions";
+import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } from "@wildboar/x500/AttributeCertificateDefinitions";
 
 /**
  * @summary BioTempIssuer

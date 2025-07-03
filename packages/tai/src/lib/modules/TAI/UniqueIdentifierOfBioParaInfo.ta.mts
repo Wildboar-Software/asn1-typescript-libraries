@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UniqueIdentifier, _decode_UniqueIdentifier, _encode_UniqueIdentifier } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
+import { UniqueIdentifier, _decode_UniqueIdentifier, _encode_UniqueIdentifier } from "@wildboar/x500/SelectedAttributeTypes";
 /**
  * @summary UniqueIdentifierOfBioParaInfo
  * @description

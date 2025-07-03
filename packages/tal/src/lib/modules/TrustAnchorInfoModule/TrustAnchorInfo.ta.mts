@@ -13,12 +13,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TrustAnchorInfoVersion, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.mjs";
-import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta.mjs";
+import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/AuthenticationFramework";
+import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/CertificateExtensions";
 import { TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta.mjs";
 import { CertPathControls, _decode_CertPathControls, _encode_CertPathControls } from "../TrustAnchorInfoModule/CertPathControls.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs";
-
+import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary TrustAnchorInfo
@@ -107,7 +106,7 @@ class TrustAnchorInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_version () { return v1; }
+    public static get _default_value_for_version (): TrustAnchorInfoVersion { return v1; }
 }
 
 /**

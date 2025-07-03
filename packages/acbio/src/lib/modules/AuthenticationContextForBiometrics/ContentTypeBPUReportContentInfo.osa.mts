@@ -12,7 +12,7 @@ import {
 import { bpuReportContentInformation } from '../AuthenticationContextForBiometrics/bpuReportContentInformation.oa.mjs';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+} from "@wildboar/cms";
 
 
 /**

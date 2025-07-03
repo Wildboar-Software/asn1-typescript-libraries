@@ -3,7 +3,7 @@ import {
     Parameters,
     _decode_Parameters,
     _encode_Parameters,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/Parameters.ta.mjs";
+} from "@wildboar/ansi-x9-62";
 import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {

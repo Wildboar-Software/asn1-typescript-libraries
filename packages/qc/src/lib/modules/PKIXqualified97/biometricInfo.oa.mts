@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";
+import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 import {
     BiometricSyntax,
     _decode_BiometricSyntax,

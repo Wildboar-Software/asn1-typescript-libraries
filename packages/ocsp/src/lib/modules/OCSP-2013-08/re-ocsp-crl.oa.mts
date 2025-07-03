@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.mjs";
+import type { EXTENSION } from "@wildboar/pki-stub";
 import { CrlID, _decode_CrlID, _encode_CrlID } from "../OCSP-2013-08/CrlID.ta.mjs";
 import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va.mjs";
 

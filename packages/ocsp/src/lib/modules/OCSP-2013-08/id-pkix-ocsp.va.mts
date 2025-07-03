@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { id_ad_ocsp } from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/id-ad-ocsp.va.mjs";
-
+import { id_ad_ocsp } from "@wildboar/x500/PkiPmiExternalDataTypes";
 
 /**
  * @summary id_pkix_ocsp

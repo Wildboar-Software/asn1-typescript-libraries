@@ -15,12 +15,13 @@ import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.mjs';
-import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs';
+    SignerInfos,
+    _decode_SignerInfos,
+    _encode_SignerInfos,
+} from '@wildboar/cms';
 import {
     CertificateSet,
     _decode_CertificateSet,
@@ -31,12 +32,6 @@ import {
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta.mjs';
-import {
-    SignerInfos,
-    _decode_SignerInfos,
-    _encode_SignerInfos,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta.mjs';
-
 
 /**
  * @summary SIGNEDDATA
@@ -120,7 +115,6 @@ export class SIGNEDDATA<EncapsulatedContentInfo> {
         );
     }
 }
-
 
 /**
  * @summary The Leading Root Component Types of SIGNEDDATA
@@ -248,9 +242,6 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
         );
     };
 }
-
-
-
 
 /**
  * @summary Returns a function that will encode a(n) SIGNEDDATA into an ASN.1 Element.

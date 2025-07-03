@@ -15,8 +15,7 @@ import {
   Name,
   _decode_Name,
   _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs';
-
+} from '@wildboar/x500/InformationFramework';
 
 /**
  * @summary SecurityIdentity
@@ -35,9 +34,7 @@ export type SecurityIdentity =
   | { directoryName: Name } /* CHOICE_ALT_ROOT */
   | { objectIdentifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
 
-
 let _cached_decoder_for_SecurityIdentity: $.ASN1Decoder<SecurityIdentity> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityIdentity
@@ -57,9 +54,7 @@ export function _decode_SecurityIdentity(el: _Element): SecurityIdentity {
   return _cached_decoder_for_SecurityIdentity(el);
 }
 
-
 let _cached_encoder_for_SecurityIdentity: $.ASN1Encoder<SecurityIdentity> | null = null;
-
 
 /**
  * @summary Encodes a(n) SecurityIdentity into an ASN.1 Element.
@@ -83,6 +78,5 @@ export function _encode_SecurityIdentity(
   }
   return _cached_encoder_for_SecurityIdentity(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/InformationFramework";
+import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/AuthenticationFramework";
+import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/CertificateExtensions";
 
 /**
  * @summary BDCCertificateReferer

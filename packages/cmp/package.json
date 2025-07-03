@@ -36,6 +36,7 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/crmf": "npm:@jsr/wildboar__crmf@2.x.x",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x"
     }
 }

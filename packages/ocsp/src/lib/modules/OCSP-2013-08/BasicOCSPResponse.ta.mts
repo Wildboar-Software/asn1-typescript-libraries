@@ -10,18 +10,15 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     ResponseData,
     _decode_ResponseData,
     _encode_ResponseData,
 } from "../OCSP-2013-08/ResponseData.ta.mjs";
-
 
 /**
  * @summary BasicOCSPResponse
@@ -92,7 +89,6 @@ export class BasicOCSPResponse {
     }
 }
 
-
 /**
  * @summary The Leading Root Component Types of BasicOCSPResponse
  * @description
@@ -124,7 +120,6 @@ export const _root_component_type_list_1_spec_for_BasicOCSPResponse: $.Component
     ),
 ];
 
-
 /**
  * @summary The Trailing Root Component Types of BasicOCSPResponse
  * @description
@@ -134,7 +129,6 @@ export const _root_component_type_list_1_spec_for_BasicOCSPResponse: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BasicOCSPResponse: $.ComponentSpec[] = [];
-
 
 /**
  * @summary The Extension Addition Component Types of BasicOCSPResponse
@@ -146,9 +140,7 @@ export const _root_component_type_list_2_spec_for_BasicOCSPResponse: $.Component
  */
 export const _extension_additions_list_spec_for_BasicOCSPResponse: $.ComponentSpec[] = [];
 
-
 let _cached_decoder_for_BasicOCSPResponse: $.ASN1Decoder<BasicOCSPResponse> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) BasicOCSPResponse
@@ -202,9 +194,7 @@ export function _decode_BasicOCSPResponse(el: _Element): BasicOCSPResponse {
     return _cached_decoder_for_BasicOCSPResponse(el);
 }
 
-
 let _cached_encoder_for_BasicOCSPResponse: $.ASN1Encoder<BasicOCSPResponse> | null = null;
-
 
 /**
  * @summary Encodes a(n) BasicOCSPResponse into an ASN.1 Element.
@@ -255,6 +245,5 @@ export function _encode_BasicOCSPResponse(
     }
     return _cached_encoder_for_BasicOCSPResponse(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
 import { id_bpuReport } from '../AuthenticationContextForBiometrics/id-bpuReport.va.mjs';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+} from "@wildboar/cms";
 
 
 /**

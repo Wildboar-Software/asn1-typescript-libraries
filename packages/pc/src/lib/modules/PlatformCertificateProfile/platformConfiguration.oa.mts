@@ -9,10 +9,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
-import { PlatformConfiguration, _decode_PlatformConfiguration, _encode_PlatformConfiguration } from "../PlatformCertificateProfile/PlatformConfiguration.ta.mjs";
-import { tcg_at_platformConfiguration_v2 } from "../PlatformCertificateProfile/tcg-at-platformConfiguration-v2.va.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import {
+    _enum_for_AttributeUsage,
+    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_AttributeUsage,
+    _encode_AttributeUsage,
+} from "@wildboar/x500/InformationFramework";
+import {
+    PlatformConfiguration,
+    _decode_PlatformConfiguration,
+    _encode_PlatformConfiguration,
+} from "../PlatformCertificateProfile/PlatformConfiguration.ta.mjs";
+import {
+    tcg_at_platformConfiguration_v2,
+} from "../PlatformCertificateProfile/tcg-at-platformConfiguration-v2.va.mjs";
+
 /**
  * @summary platformConfiguration
  * @description

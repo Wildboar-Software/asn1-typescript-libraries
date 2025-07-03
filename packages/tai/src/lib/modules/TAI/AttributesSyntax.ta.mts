@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Attribute, _decode_Attribute, _encode_Attribute } from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
+import { Attribute, _decode_Attribute, _encode_Attribute } from "@wildboar/x500/InformationFramework";
 /**
  * @summary AttributesSyntax
  * @description

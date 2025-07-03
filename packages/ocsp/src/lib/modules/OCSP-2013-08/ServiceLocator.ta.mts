@@ -9,13 +9,12 @@ import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,
     _encode_AuthorityInfoAccessSyntax,
-} from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.mjs";
-
+} from "@wildboar/x500/PkiPmiExternalDataTypes";
 
 /**
  * @summary ServiceLocator
@@ -65,7 +64,6 @@ export class ServiceLocator {
     }
 }
 
-
 /**
  * @summary The Leading Root Component Types of ServiceLocator
  * @description
@@ -83,7 +81,6 @@ export const _root_component_type_list_1_spec_for_ServiceLocator: $.ComponentSpe
     ),
 ];
 
-
 /**
  * @summary The Trailing Root Component Types of ServiceLocator
  * @description
@@ -93,7 +90,6 @@ export const _root_component_type_list_1_spec_for_ServiceLocator: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceLocator: $.ComponentSpec[] = [];
-
 
 /**
  * @summary The Extension Addition Component Types of ServiceLocator
@@ -105,9 +101,7 @@ export const _root_component_type_list_2_spec_for_ServiceLocator: $.ComponentSpe
  */
 export const _extension_additions_list_spec_for_ServiceLocator: $.ComponentSpec[] = [];
 
-
 let _cached_decoder_for_ServiceLocator: $.ASN1Decoder<ServiceLocator> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceLocator
@@ -140,9 +134,7 @@ export function _decode_ServiceLocator(el: _Element): ServiceLocator {
     return _cached_decoder_for_ServiceLocator(el);
 }
 
-
 let _cached_encoder_for_ServiceLocator: $.ASN1Encoder<ServiceLocator> | null = null;
-
 
 /**
  * @summary Encodes a(n) ServiceLocator into an ASN.1 Element.
@@ -174,6 +166,5 @@ export function _encode_ServiceLocator(
     }
     return _cached_encoder_for_ServiceLocator(value, elGetter);
 }
-
 
 /* eslint-enable */

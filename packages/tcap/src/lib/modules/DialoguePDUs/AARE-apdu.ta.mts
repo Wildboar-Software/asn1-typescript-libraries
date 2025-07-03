@@ -12,6 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    BIT_STRING,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -112,7 +113,7 @@ export class AARE_apdu {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_version() {
+    public static get _default_value_for_protocol_version(): BIT_STRING {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[AARE_apdu_protocol_version_version1] = TRUE_BIT;

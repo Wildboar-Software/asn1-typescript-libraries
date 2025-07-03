@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { BDCCertificateReferer, _decode_BDCCertificateReferer, _encode_BDCCertificateReferer } from "../TAI/BDCCertificateReferer.ta.mjs";
 import { id_tai_ce_bDCCertificate } from "../TAI/id-tai-ce-bDCCertificate.va.mjs";
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary bDCCertificate
  * @description

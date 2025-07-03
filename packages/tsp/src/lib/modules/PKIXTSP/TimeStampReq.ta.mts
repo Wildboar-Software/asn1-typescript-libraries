@@ -11,7 +11,7 @@ import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.mjs";
+} from "@wildboar/pki-stub";
 import {
     MessageImprint,
     _decode_MessageImprint,
@@ -118,7 +118,7 @@ export class TimeStampReq {
      * @static
      * @method
      */
-    public static get _default_value_for_certReq() {
+    public static get _default_value_for_certReq(): BOOLEAN {
         return false;
     }
 }

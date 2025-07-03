@@ -26,7 +26,7 @@ import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 
 /**

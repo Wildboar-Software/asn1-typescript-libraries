@@ -15,42 +15,28 @@ import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.mjs';
-import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs';
-import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs';
-import {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs';
-import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs';
-import {
     AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/AuthAttributes.ta.mjs';
-import {
     MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.mjs';
-import {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs';
+} from '@wildboar/cms';
 
 
 /**

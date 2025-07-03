@@ -20,12 +20,12 @@ import {
   CertId,
   _decode_CertId,
   _encode_CertId,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta.mjs';
+} from '@wildboar/crmf';
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 
 /**

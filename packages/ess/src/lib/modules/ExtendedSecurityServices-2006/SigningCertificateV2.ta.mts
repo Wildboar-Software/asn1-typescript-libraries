@@ -14,7 +14,7 @@ import {
     PolicyInformation,
     _decode_PolicyInformation,
     _encode_PolicyInformation,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 /**
  * @summary SigningCertificateV2

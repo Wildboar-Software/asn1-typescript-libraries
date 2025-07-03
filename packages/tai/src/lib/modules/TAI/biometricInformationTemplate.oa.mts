@@ -9,8 +9,8 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/InformationFramework";
 import { BiometricInformationTemplateorPointer, _decode_BiometricInformationTemplateorPointer, _encode_BiometricInformationTemplateorPointer } from "../TAI/BiometricInformationTemplateorPointer.ta.mjs";
 import { id_tai_at_BiometricInformationTemplate } from "../TAI/id-tai-at-BiometricInformationTemplate.va.mjs";
 /**

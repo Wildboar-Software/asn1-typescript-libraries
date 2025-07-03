@@ -35,6 +35,7 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/cmip": "npm:@jsr/wildboar__cmip@2.x.x"
     }
 }

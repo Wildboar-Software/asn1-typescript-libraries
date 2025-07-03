@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.mjs";
+import type { EXTENSION } from "@wildboar/pki-stub";
 import { id_pkix_ocsp_nocheck } from "../OCSP-2013-08/id-pkix-ocsp-nocheck.va.mjs";
 
 

@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { BioCert, _decode_BioCert, _encode_BioCert } from "../TAI/BioCert.ta.mjs";
 import { id_tai_ce_bioCert } from "../TAI/id-tai-ce-bioCert.va.mjs";
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary bioCert
  * @description

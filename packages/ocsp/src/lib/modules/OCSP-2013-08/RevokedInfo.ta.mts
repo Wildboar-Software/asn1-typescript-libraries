@@ -10,7 +10,7 @@ import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
+} from "@wildboar/pki-stub";
 
 
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
+} from "@wildboar/x500/SelectedAttributeTypes";
 import { id_pda_placeOfBirth } from "../PKIXqualified97/id-pda-placeOfBirth.va.mjs";
 
 

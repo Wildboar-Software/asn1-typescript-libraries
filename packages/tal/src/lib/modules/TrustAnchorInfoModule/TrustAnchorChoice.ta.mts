@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
-import { TBSCertificate, _decode_TBSCertificate, _encode_TBSCertificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/TBSCertificate.ta.mjs";
+import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/AuthenticationFramework";
+import { TBSCertificate, _decode_TBSCertificate, _encode_TBSCertificate } from "@wildboar/x500/AuthenticationFramework";
 import { TrustAnchorInfo, _decode_TrustAnchorInfo, _encode_TrustAnchorInfo } from "../TrustAnchorInfoModule/TrustAnchorInfo.ta.mjs";
 
 

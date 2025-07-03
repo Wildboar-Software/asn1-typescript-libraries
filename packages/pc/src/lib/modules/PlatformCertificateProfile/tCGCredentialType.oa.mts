@@ -9,8 +9,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import {
+    _enum_for_AttributeUsage,
+    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_AttributeUsage,
+    _encode_AttributeUsage,
+} from "@wildboar/x500/InformationFramework";
 import { TCGCredentialType, _decode_TCGCredentialType, _encode_TCGCredentialType } from "../PlatformCertificateProfile/TCGCredentialType.ta.mjs";
 import { tcg_at_tcgCredentialType } from "../PlatformCertificateProfile/tcg-at-tcgCredentialType.va.mjs";
 /**
