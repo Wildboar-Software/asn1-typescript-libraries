@@ -128,7 +128,7 @@ export class CPR_PPDU_normal_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_version() {
+    public static get _default_value_for_protocol_version(): Protocol_version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[Protocol_version_version_1] = TRUE_BIT;

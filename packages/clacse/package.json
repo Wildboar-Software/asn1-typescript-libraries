@@ -38,6 +38,6 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/clacse": "npm:@jsr/wildboar__acse@2.x.x"
+        "@wildboar/acse": "npm:@jsr/wildboar__acse@2.x.x"
     }
 }

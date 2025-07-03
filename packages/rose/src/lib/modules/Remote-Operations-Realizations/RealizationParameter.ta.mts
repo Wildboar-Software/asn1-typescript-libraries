@@ -73,7 +73,7 @@ export class RealizationParameter {
    * @static
    * @method
    */
-  public static get _default_value_for_concatenation() {
+  public static get _default_value_for_concatenation(): BOOLEAN {
     return false;
   }
   /**

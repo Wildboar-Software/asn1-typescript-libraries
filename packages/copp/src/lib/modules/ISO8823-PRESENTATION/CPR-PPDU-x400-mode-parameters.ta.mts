@@ -14,12 +14,10 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.mjs';
-import {
     RefuseReason,
     _decode_RefuseReason,
     _encode_RefuseReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RefuseReason.ta.mjs';
+} from '@wildboar/rtse';
 
 /**
  * @summary CPR_PPDU_x400_mode_parameters

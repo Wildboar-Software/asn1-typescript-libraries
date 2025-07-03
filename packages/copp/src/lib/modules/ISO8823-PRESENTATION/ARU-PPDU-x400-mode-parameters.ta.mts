@@ -15,12 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTABapdu,
     _encode_RTABapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTABapdu.ta.mjs';
+} from '@wildboar/rtse';
 import {
     AbortReason,
     _decode_AbortReason,
     _encode_AbortReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/AbortReason.ta.mjs';
+} from '@wildboar/rtse';
 
 /**
  * @summary ARU_PPDU_x400_mode_parameters

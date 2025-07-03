@@ -102,3 +102,40 @@ export * from "./lib/modules/Remote-Operations-Useful-Definitions/Reverse.osa.mj
 // export * from "./lib/modules/Remote-Operations-Useful-Definitions/ROS-SupplierAS.ta.mjs"; (duplicate)
 export * from "./lib/modules/Remote-Operations-Useful-Definitions/SupplierPerforms.osa.mjs";
 export * from "./lib/modules/Remote-Operations-Useful-Definitions/switch.oa.mjs";
+
+import type { Code } from "./lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs";
+import type { InvokeId } from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
+
+/**
+ * @summary Compare two `Code` values
+ * @param a The first `Code` value
+ * @param b The second `Code` value
+ * @returns `true` if the two Code values are equal, `false` otherwise
+ * @function
+ */
+export function compareCode (a: Code, b: Code): boolean {
+    if ("local" in a && "local" in b) {
+        return a.local === b.local;
+    }
+    if ("global" in a && "global" in b) {
+        return a.global.isEqualTo(b.global);
+    }
+    return false;
+}
+
+/**
+ * @summary Compare two `InvokeId` values
+ * @param a The first `InvokeId` value
+ * @param b The second `InvokeId` value
+ * @returns `true` if the two InvokeId values are equal, `false` otherwise
+ * @function
+ */
+export function compareInvokeId (a: InvokeId, b: InvokeId): boolean {
+    if ("present" in a && "present" in b) {
+        return a.present === b.present;
+    }
+    if ("absent" in a && "absent" in b) {
+        return true;
+    }
+    return false;
+}

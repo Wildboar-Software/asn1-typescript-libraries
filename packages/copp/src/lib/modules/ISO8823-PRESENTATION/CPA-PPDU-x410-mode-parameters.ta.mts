@@ -15,12 +15,10 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.mjs';
-import {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.mjs';
+} from '@wildboar/rtse';
 
 /**
  * @summary CPA_PPDU_x410_mode_parameters
@@ -85,7 +83,7 @@ export class CPA_PPDU_x410_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_checkpointSize() {
+    public static get _default_value_for_checkpointSize(): INTEGER {
         return 0;
     }
     /**
@@ -94,7 +92,7 @@ export class CPA_PPDU_x410_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_windowSize() {
+    public static get _default_value_for_windowSize(): INTEGER {
         return 3;
     }
 }

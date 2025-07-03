@@ -14,7 +14,7 @@ import {
   BaseManagedObjectId,
   _decode_BaseManagedObjectId,
   _encode_BaseManagedObjectId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/BaseManagedObjectId.ta.mjs';
+} from '@wildboar/cmip';
 
 /**
  * @summary ProviderObjects

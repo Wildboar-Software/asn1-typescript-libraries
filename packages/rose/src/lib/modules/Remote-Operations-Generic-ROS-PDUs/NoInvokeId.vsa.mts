@@ -30,29 +30,15 @@ import {
  */
 export type NoInvokeId = InvokeId; // VALUE_SET_TYPE
 
-
-let _cached_decoder_for_NoInvokeId: $.ASN1Decoder<NoInvokeId> | null = null;
-
-
-export function _decode_NoInvokeId(el: _Element) {
-  if (!_cached_decoder_for_NoInvokeId) {
-    _cached_decoder_for_NoInvokeId = _decode_InvokeId;
-  }
-  return _cached_decoder_for_NoInvokeId(el);
+export function _decode_NoInvokeId(el: _Element): NoInvokeId {
+  return _decode_InvokeId(el);
 }
-
-
-let _cached_encoder_for_NoInvokeId: $.ASN1Encoder<NoInvokeId> | null = null;
-
 
 export function _encode_NoInvokeId(
   value: NoInvokeId,
   elGetter: $.ASN1Encoder<NoInvokeId>
-) {
-  if (!_cached_encoder_for_NoInvokeId) {
-    _cached_encoder_for_NoInvokeId = _encode_InvokeId;
-  }
-  return _cached_encoder_for_NoInvokeId(value, elGetter);
+): _Element {
+  return _encode_InvokeId(value, elGetter);
 }
 
 /* eslint-enable */

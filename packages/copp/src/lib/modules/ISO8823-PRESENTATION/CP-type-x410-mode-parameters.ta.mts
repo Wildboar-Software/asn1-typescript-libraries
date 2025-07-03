@@ -15,18 +15,14 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.mjs';
-import {
     RTORQapdu_dialogueMode,
     monologue /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RTORQapdu_dialogueMode,
     _encode_RTORQapdu_dialogueMode,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta.mjs';
-import {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.mjs';
+} from '@wildboar/rtse';
 
 /**
  * @summary CP_type_x410_mode_parameters
@@ -105,7 +101,7 @@ export class CP_type_x410_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_checkpointSize() {
+    public static get _default_value_for_checkpointSize(): INTEGER {
         return 0;
     }
     /**
@@ -114,7 +110,7 @@ export class CP_type_x410_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_windowSize() {
+    public static get _default_value_for_windowSize(): INTEGER {
         return 3;
     }
     /**
@@ -123,7 +119,7 @@ export class CP_type_x410_mode_parameters {
      * @static
      * @method
      */
-    public static get _default_value_for_dialogueMode() {
+    public static get _default_value_for_dialogueMode(): RTORQapdu_dialogueMode {
         return monologue;
     }
 }

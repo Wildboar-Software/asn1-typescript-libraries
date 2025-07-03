@@ -1,1 +1,1 @@
-export type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
+export type { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";

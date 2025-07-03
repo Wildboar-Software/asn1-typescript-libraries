@@ -235,7 +235,7 @@ export class AUDT_apdu {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_version() {
+    public static get _default_value_for_protocol_version(): AUDT_apdu_protocol_version {
         return (() => {
             const _ret = new Uint8ClampedArray(1);
             _ret[AUDT_apdu_protocol_version_version1] = TRUE_BIT;
