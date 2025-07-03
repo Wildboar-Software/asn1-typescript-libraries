@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
-import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.mjs";
+} from "@wildboar/x500/InformationFramework";
+import { octetStringMatch } from "@wildboar/x500/SelectedAttributeTypes";
 import { pkcs_9_at_localKeyId } from "../PKCS-9/pkcs-9-at-localKeyId.va.mjs";
 
 

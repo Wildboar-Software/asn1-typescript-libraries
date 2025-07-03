@@ -1,9 +1,22 @@
 {
   "name": "@wildboar/pkcs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./AsymmetricKeyPackageModuleV1": "./src/lib/modules/AsymmetricKeyPackageModuleV1/index.mts",
+    "./CryptographicMessageSyntax": "./src/lib/modules/CryptographicMessageSyntax/index.mts",
+    "./NIST-SHA2": "./src/lib/modules/NIST-SHA2/index.mts",
+    "./PKCS-1": "./src/lib/modules/PKCS-1/index.mts",
+    "./PKCS-10": "./src/lib/modules/PKCS-10/index.mts",
+    "./PKCS-12": "./src/lib/modules/PKCS-12/index.mts",
+    "./PKCS-15": "./src/lib/modules/PKCS-15/index.mts",
+    "./PKCS-3": "./src/lib/modules/PKCS-3/index.mts",
+    "./PKCS5v2-1": "./src/lib/modules/PKCS5v2-1/index.mts",
+    "./PKCS7": "./src/lib/modules/PKCS7/index.mts",
+    "./PKCS-9": "./src/lib/modules/PKCS-9/index.mts",
+    "./PKIXCMP-2009": "./src/lib/modules/PKIXCMP-2009/index.mts",
+    "./PKIXCRMF-2009": "./src/lib/modules/PKIXCRMF-2009/index.mts"
   },
   "publish": {
     "include": [

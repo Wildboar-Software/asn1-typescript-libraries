@@ -1,4 +1,4 @@
-# Qualified Certificates in TypeScript
+# Scrypt algorithm ASN.1 data structures in TypeScript
 
 ASN.1 data structures based on the ASN.1 definitions in
 [IETF RFC 7914](https://datatracker.ietf.org/doc/html/rfc7914), which defines

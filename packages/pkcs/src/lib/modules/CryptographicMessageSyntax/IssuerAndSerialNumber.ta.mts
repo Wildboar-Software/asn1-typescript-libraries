@@ -9,12 +9,12 @@ import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 
 
 /**

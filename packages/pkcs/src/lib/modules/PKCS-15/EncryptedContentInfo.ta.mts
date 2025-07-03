@@ -11,7 +11,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 
 
 /**
@@ -136,7 +136,7 @@ export const _extension_additions_list_spec_for_EncryptedContentInfo: $.Componen
  */
 export function _get_decoder_for_EncryptedContentInfo<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<EncryptedContentInfo<Type>> {
     return function (el: _Element): EncryptedContentInfo<Type> {
         let contentType!: OBJECT_IDENTIFIER;
         let contentEncryptionAlgorithm!: AlgorithmIdentifier;
@@ -178,7 +178,7 @@ export function _get_decoder_for_EncryptedContentInfo<Type>(
  */
 export function _get_encoder_for_EncryptedContentInfo<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<EncryptedContentInfo<Type>> {
     return function (
         value: EncryptedContentInfo<Type>,
         _elGetter: $.ASN1Encoder<EncryptedContentInfo<Type>>

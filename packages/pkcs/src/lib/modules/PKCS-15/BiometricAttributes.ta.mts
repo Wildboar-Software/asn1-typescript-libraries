@@ -121,7 +121,7 @@ export class BiometricAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_bioReference() {
+    public static get _default_value_for_bioReference(): Reference {
         return 0;
     }
 }

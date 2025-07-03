@@ -5,7 +5,7 @@ import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/HASH.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import { Attributes } from "../PKCS7/Attributes.ta.mjs";
 
 type ToBeHashed =

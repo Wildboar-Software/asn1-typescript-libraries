@@ -77,7 +77,7 @@ export class MacData {
      * @static
      * @method
      */
-    public static get _default_value_for_iterations() {
+    public static get _default_value_for_iterations(): INTEGER {
         return 1;
     }
 }

@@ -107,7 +107,7 @@ export function _get_decoder_for_KeyInfo_paramsAndOps<
 >(
     _decode_ParameterType: $.ASN1Decoder<ParameterType>,
     _decode_OperationsType: $.ASN1Decoder<OperationsType>
-) {
+): $.ASN1Decoder<KeyInfo_paramsAndOps<ParameterType, OperationsType>> {
     return function (
         el: _Element
     ): KeyInfo_paramsAndOps<ParameterType, OperationsType> {
@@ -148,7 +148,7 @@ export function _get_encoder_for_KeyInfo_paramsAndOps<
 >(
     _encode_ParameterType: $.ASN1Encoder<ParameterType>,
     _encode_OperationsType: $.ASN1Encoder<OperationsType>
-) {
+): $.ASN1Encoder<KeyInfo_paramsAndOps<ParameterType, OperationsType>> {
     return function (
         value: KeyInfo_paramsAndOps<ParameterType, OperationsType>    ): _Element {
         return $._encodeSequence(

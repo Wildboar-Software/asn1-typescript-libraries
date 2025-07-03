@@ -147,7 +147,7 @@ export class PinAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_pinReference() {
+    public static get _default_value_for_pinReference(): Reference {
         return 0;
     }
     /**

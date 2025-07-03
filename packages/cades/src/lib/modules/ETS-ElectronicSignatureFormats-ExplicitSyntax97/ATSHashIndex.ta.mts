@@ -16,10 +16,10 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     id_sha256,
-} from "@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha256.va.mjs";
+} from "@wildboar/x500/AlgorithmObjectIdentifiers";
 
 
 /**
@@ -88,11 +88,13 @@ class ATSHashIndex {
      * @static
      * @method
      */
-    public static get _default_value_for_hashIndAlgorithm () { return AlgorithmIdentifier._from_object({
-        algorithm: id_sha256,
-        parameters: undefined,
-        _unrecognizedExtensionsList: [],
-    }); }
+    public static get _default_value_for_hashIndAlgorithm (): AlgorithmIdentifier {
+        return AlgorithmIdentifier._from_object({
+            algorithm: id_sha256,
+            parameters: undefined,
+            _unrecognizedExtensionsList: [],
+        });
+    }
 }
 
 /**

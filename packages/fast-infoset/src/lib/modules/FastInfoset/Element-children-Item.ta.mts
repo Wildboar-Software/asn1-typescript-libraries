@@ -55,7 +55,7 @@ export type Element_children_Item =
   | { comment: Comment } /* CHOICE_ALT_ROOT */;
 
 
-export const _decode_Element_children_Item = $._decode_inextensible_choice<Element_children_Item>(
+export const _decode_Element_children_Item: $.ASN1Decoder<Element_children_Item> = $._decode_inextensible_choice<Element_children_Item>(
   {
     'CONTEXT 0': ['element', _decode_Element],
     'CONTEXT 1': ['processing_instruction', _decode_ProcessingInstruction],
@@ -69,7 +69,7 @@ export const _decode_Element_children_Item = $._decode_inextensible_choice<Eleme
 );
 
 
-export const _encode_Element_children_Item = $._encode_choice<Element_children_Item>(
+export const _encode_Element_children_Item: $.ASN1Encoder<Element_children_Item> = $._encode_choice<Element_children_Item>(
   {
     element: _encode_Element,
     processing_instruction: _encode_ProcessingInstruction,

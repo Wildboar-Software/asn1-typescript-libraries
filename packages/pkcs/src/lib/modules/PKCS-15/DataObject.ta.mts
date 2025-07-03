@@ -37,7 +37,7 @@ export type DataObject<DataObjectAttributes> = PKCS15Object<
  */
 export function _get_decoder_for_DataObject<DataObjectAttributes>(
     _decode_DataObjectAttributes: $.ASN1Decoder<DataObjectAttributes>
-) {
+): $.ASN1Decoder<DataObject<DataObjectAttributes>> {
     return _get_decoder_for_PKCS15Object<
         CommonDataObjectAttributes,
         NULL,
@@ -57,7 +57,7 @@ export function _get_decoder_for_DataObject<DataObjectAttributes>(
  */
 export function _get_encoder_for_DataObject<DataObjectAttributes>(
     _encode_DataObjectAttributes: $.ASN1Encoder<DataObjectAttributes>
-) {
+): $.ASN1Encoder<DataObject<DataObjectAttributes>> {
     return _get_encoder_for_PKCS15Object<
         CommonDataObjectAttributes,
         NULL,

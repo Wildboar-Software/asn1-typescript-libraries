@@ -1,14 +1,14 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import { pkcs_9_at_extendedCertificateAttributes } from "../PKCS-9/pkcs-9-at-extendedCertificateAttributes.va.mjs";
 
 

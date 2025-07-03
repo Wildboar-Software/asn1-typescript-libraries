@@ -37,7 +37,7 @@ export type CertificateObject<CertAttributes> = PKCS15Object<
  */
 export function _get_decoder_for_CertificateObject<CertAttributes>(
     _decode_CertAttributes: $.ASN1Decoder<CertAttributes>
-) {
+): $.ASN1Decoder<CertificateObject<CertAttributes>> {
     return _get_decoder_for_PKCS15Object<
         CommonCertificateAttributes,
         NULL,
@@ -57,7 +57,7 @@ export function _get_decoder_for_CertificateObject<CertAttributes>(
  */
 export function _get_encoder_for_CertificateObject<CertAttributes>(
     _encode_CertAttributes: $.ASN1Encoder<CertAttributes>
-) {
+): $.ASN1Encoder<CertificateObject<CertAttributes>> {
     return _get_encoder_for_PKCS15Object<
         CommonCertificateAttributes,
         NULL,

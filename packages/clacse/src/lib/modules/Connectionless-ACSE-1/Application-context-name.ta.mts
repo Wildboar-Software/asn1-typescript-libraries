@@ -23,14 +23,10 @@ import {
  * ### ASN.1 Definition:
  *
  * ```asn1
- * Application-context-name  ::=  ASO-context-name
+ * Application-context-name ::= ASO-context-name
  * ```
  */
 export type Application_context_name = ASO_context_name; // DefinedType
-
-
-let _cached_decoder_for_Application_context_name: $.ASN1Decoder<Application_context_name> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Application_context_name
@@ -38,16 +34,7 @@ let _cached_decoder_for_Application_context_name: $.ASN1Decoder<Application_cont
  * @param {_Element} el The element being decoded.
  * @returns {Application_context_name} The decoded data structure.
  */
-export function _decode_Application_context_name(el: _Element): Application_context_name {
-    if (!_cached_decoder_for_Application_context_name) {
-        _cached_decoder_for_Application_context_name = _decode_ASO_context_name;
-    }
-    return _cached_decoder_for_Application_context_name(el);
-}
-
-
-let _cached_encoder_for_Application_context_name: $.ASN1Encoder<Application_context_name> | null = null;
-
+export const _decode_Application_context_name: $.ASN1Decoder<Application_context_name> = _decode_ASO_context_name;
 
 /**
  * @summary Encodes a(n) Application_context_name into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_Application_context_name: $.ASN1Encoder<Application_cont
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Application_context_name, encoded as an ASN.1 Element.
  */
-export function _encode_Application_context_name(
-    value: Application_context_name,
-    elGetter: $.ASN1Encoder<Application_context_name>
-): _Element {
-    if (!_cached_encoder_for_Application_context_name) {
-        _cached_encoder_for_Application_context_name = _encode_ASO_context_name;
-    }
-    return _cached_encoder_for_Application_context_name(value, elGetter);
-}
+export const _encode_Application_context_name: $.ASN1Encoder<Application_context_name> = _encode_ASO_context_name;
 
 
 /* eslint-enable */

@@ -89,7 +89,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_hashAlgorithm() {
+    public static get _default_value_for_hashAlgorithm(): HashAlgorithm {
         return sha1;
     }
     /**
@@ -98,7 +98,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_maskGenAlgorithm() {
+    public static get _default_value_for_maskGenAlgorithm(): MaskGenAlgorithm {
         return mgf1SHA1;
     }
     /**
@@ -107,7 +107,7 @@ export class RSAES_OAEP_params {
      * @static
      * @method
      */
-    public static get _default_value_for_pSourceAlgorithm() {
+    public static get _default_value_for_pSourceAlgorithm(): PSourceAlgorithm {
         return pSpecifiedEmpty;
     }
 }

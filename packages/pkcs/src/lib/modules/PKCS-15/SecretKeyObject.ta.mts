@@ -42,7 +42,7 @@ export type SecretKeyObject<KeyAttributes> = PKCS15Object<
  */
 export function _get_decoder_for_SecretKeyObject<KeyAttributes>(
     _decode_KeyAttributes: $.ASN1Decoder<KeyAttributes>
-) {
+): $.ASN1Decoder<SecretKeyObject<KeyAttributes>> {
     return _get_decoder_for_PKCS15Object<
         CommonKeyAttributes,
         CommonSecretKeyAttributes,
@@ -62,7 +62,7 @@ export function _get_decoder_for_SecretKeyObject<KeyAttributes>(
  */
 export function _get_encoder_for_SecretKeyObject<KeyAttributes>(
     _encode_KeyAttributes: $.ASN1Encoder<KeyAttributes>
-) {
+): $.ASN1Encoder<SecretKeyObject<KeyAttributes>> {
     return _get_encoder_for_PKCS15Object<
         CommonKeyAttributes,
         CommonSecretKeyAttributes,

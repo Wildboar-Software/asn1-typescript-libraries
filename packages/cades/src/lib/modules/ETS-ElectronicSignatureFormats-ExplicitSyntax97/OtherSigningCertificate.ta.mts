@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherCertID.ta.mjs";
 import {
     PolicyInformation, _decode_PolicyInformation, _encode_PolicyInformation
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 
 /**

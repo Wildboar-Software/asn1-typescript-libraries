@@ -44,7 +44,7 @@ export type KeyInfo<ParameterType, OperationsType> =
 export function _get_decoder_for_KeyInfo<ParameterType, OperationsType>(
     _decode_ParameterType: $.ASN1Decoder<ParameterType>,
     _decode_OperationsType: $.ASN1Decoder<OperationsType>
-) {
+): $.ASN1Decoder<KeyInfo<ParameterType, OperationsType>> {
     return $._decode_inextensible_choice<
         KeyInfo<ParameterType, OperationsType>
     >({
@@ -68,7 +68,7 @@ export function _get_decoder_for_KeyInfo<ParameterType, OperationsType>(
 export function _get_encoder_for_KeyInfo<ParameterType, OperationsType>(
     _encode_ParameterType: $.ASN1Encoder<ParameterType>,
     _encode_OperationsType: $.ASN1Encoder<OperationsType>
-) {
+): $.ASN1Encoder<KeyInfo<ParameterType, OperationsType>> {
     return $._encode_choice<KeyInfo<ParameterType, OperationsType>>(
         {
             reference: _encode_Reference,

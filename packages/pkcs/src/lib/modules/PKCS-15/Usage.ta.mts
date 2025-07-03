@@ -10,7 +10,7 @@ import {
     KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 
 /**

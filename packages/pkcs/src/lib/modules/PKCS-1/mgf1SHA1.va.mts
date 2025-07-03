@@ -3,7 +3,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
 import { MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";

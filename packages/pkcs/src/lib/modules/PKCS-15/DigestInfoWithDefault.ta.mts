@@ -10,7 +10,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import { alg_id_sha1 } from "../PKCS-15/alg-id-sha1.va.mjs";
 
 
@@ -68,7 +68,7 @@ export class DigestInfoWithDefault {
      * @static
      * @method
      */
-    public static get _default_value_for_digestAlg() {
+    public static get _default_value_for_digestAlg(): AlgorithmIdentifier {
         return alg_id_sha1;
     }
 }

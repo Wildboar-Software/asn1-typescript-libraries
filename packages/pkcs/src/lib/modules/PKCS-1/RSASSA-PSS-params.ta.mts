@@ -98,7 +98,7 @@ export class RSASSA_PSS_params {
      * @static
      * @method
      */
-    public static get _default_value_for_hashAlgorithm() {
+    public static get _default_value_for_hashAlgorithm(): HashAlgorithm {
         return sha1;
     }
     /**
@@ -107,7 +107,7 @@ export class RSASSA_PSS_params {
      * @static
      * @method
      */
-    public static get _default_value_for_maskGenAlgorithm() {
+    public static get _default_value_for_maskGenAlgorithm(): MaskGenAlgorithm {
         return mgf1SHA1;
     }
     /**
@@ -116,7 +116,7 @@ export class RSASSA_PSS_params {
      * @static
      * @method
      */
-    public static get _default_value_for_saltLength() {
+    public static get _default_value_for_saltLength(): INTEGER {
         return 20;
     }
     /**
@@ -125,7 +125,7 @@ export class RSASSA_PSS_params {
      * @static
      * @method
      */
-    public static get _default_value_for_trailerField() {
+    public static get _default_value_for_trailerField(): TrailerField {
         return trailerFieldBC;
     }
 }

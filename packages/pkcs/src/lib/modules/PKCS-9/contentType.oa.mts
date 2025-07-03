@@ -1,9 +1,9 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
-import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs";
+} from "@wildboar/x500/InformationFramework";
+import { objectIdentifierMatch } from "@wildboar/x500/InformationFramework";
 import {
     ContentType,
     _decode_ContentType,

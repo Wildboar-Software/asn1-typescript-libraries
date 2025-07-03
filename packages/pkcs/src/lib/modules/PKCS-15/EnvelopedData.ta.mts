@@ -9,7 +9,7 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
+} from "@wildboar/x500/InformationFramework";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
@@ -176,7 +176,7 @@ export const _extension_additions_list_spec_for_EnvelopedData: $.ComponentSpec[]
  */
 export function _get_decoder_for_EnvelopedData<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<EnvelopedData<Type>> {
     return function (el: _Element): EnvelopedData<Type> {
         let version!: EnvelopedData_version;
         let originatorInfo: OPTIONAL<OriginatorInfo>;
@@ -234,7 +234,7 @@ export function _get_decoder_for_EnvelopedData<Type>(
  */
 export function _get_encoder_for_EnvelopedData<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<EnvelopedData<Type>> {
     return function (
         value: EnvelopedData<Type>    ): _Element {
         return $._encodeSequence(

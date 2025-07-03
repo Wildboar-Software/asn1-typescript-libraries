@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs";
+import { MATCHING_RULE } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.mjs";
 import {
     PKCS9String,

@@ -154,7 +154,7 @@ export function _get_decoder_for_PKCS15Object<
     _decode_ClassAttributes: $.ASN1Decoder<ClassAttributes>,
     _decode_SubClassAttributes: $.ASN1Decoder<SubClassAttributes>,
     _decode_TypeAttributes: $.ASN1Decoder<TypeAttributes>
-) {
+): $.ASN1Decoder<PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes>> {
     return function (
         el: _Element
     ): PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes> {
@@ -211,7 +211,7 @@ export function _get_encoder_for_PKCS15Object<
     _encode_ClassAttributes: $.ASN1Encoder<ClassAttributes>,
     _encode_SubClassAttributes: $.ASN1Encoder<SubClassAttributes>,
     _encode_TypeAttributes: $.ASN1Encoder<TypeAttributes>
-) {
+): $.ASN1Encoder<PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes>> {
     return function (
         value: PKCS15Object<
             ClassAttributes,

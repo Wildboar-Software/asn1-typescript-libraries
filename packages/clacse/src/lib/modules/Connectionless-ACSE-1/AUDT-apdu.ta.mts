@@ -244,7 +244,6 @@ export class AUDT_apdu {
     }
 }
 
-
 /**
  * @summary The Leading Root Component Types of AUDT_apdu
  * @description
@@ -326,7 +325,6 @@ export const _root_component_type_list_1_spec_for_AUDT_apdu: $.ComponentSpec[] =
     ),
 ];
 
-
 /**
  * @summary The Trailing Root Component Types of AUDT_apdu
  * @description
@@ -343,7 +341,6 @@ export const _root_component_type_list_2_spec_for_AUDT_apdu: $.ComponentSpec[] =
     ),
 ];
 
-
 /**
  * @summary The Extension Addition Component Types of AUDT_apdu
  * @description
@@ -354,9 +351,7 @@ export const _root_component_type_list_2_spec_for_AUDT_apdu: $.ComponentSpec[] =
  */
 export const _extension_additions_list_spec_for_AUDT_apdu: $.ComponentSpec[] = [];
 
-
 let _cached_decoder_for_AUDT_apdu: $.ASN1Decoder<AUDT_apdu> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AUDT_apdu
@@ -502,9 +497,7 @@ export function _decode_AUDT_apdu(el: _Element): AUDT_apdu {
     return _cached_decoder_for_AUDT_apdu(el);
 }
 
-
 let _cached_encoder_for_AUDT_apdu: $.ASN1Encoder<AUDT_apdu> | null = null;
-
 
 /**
  * @summary Encodes a(n) AUDT_apdu into an ASN.1 Element.

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import { emptyString } from "../PKCS-1/emptyString.va.mjs";
 import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.mjs";
 import { PSourceAlgorithm } from "../PKCS-1/PSourceAlgorithm.ta.mjs";

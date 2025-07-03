@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     Certificate, _decode_Certificate, _encode_Certificate
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 
 
 /**

@@ -196,7 +196,7 @@ export const _extension_additions_list_spec_for_SIGNEDDATA: $.ComponentSpec[] = 
  */
 export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
     _decode_EncapsulatedContentInfo: $.ASN1Decoder<EncapsulatedContentInfo>
-) {
+): $.ASN1Decoder<SIGNEDDATA<EncapsulatedContentInfo>> {
     return function (el: _Element): SIGNEDDATA<EncapsulatedContentInfo> {
         let version!: CMSVersion;
         let digestAlgorithms!: DigestAlgorithmIdentifier[];
@@ -259,7 +259,7 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
  */
 export function _get_encoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
     _encode_EncapsulatedContentInfo: $.ASN1Encoder<EncapsulatedContentInfo>
-) {
+): $.ASN1Encoder<SIGNEDDATA<EncapsulatedContentInfo>> {
     return function (
         value: SIGNEDDATA<EncapsulatedContentInfo>    ): _Element {
         return $._encodeSequence(

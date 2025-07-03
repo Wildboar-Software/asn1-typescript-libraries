@@ -47,7 +47,7 @@ export type PathOrObjects<ObjectType> =
  */
 export function _get_decoder_for_PathOrObjects<ObjectType>(
     _decode_ObjectType: $.ASN1Decoder<ObjectType>
-) {
+): $.ASN1Decoder<PathOrObjects<ObjectType>> {
     return $._decode_extensible_choice<PathOrObjects<ObjectType>>({
         "UNIVERSAL 16": ["path", _decode_Path],
         "CONTEXT 0": [
@@ -90,7 +90,7 @@ export function _get_decoder_for_PathOrObjects<ObjectType>(
  */
 export function _get_encoder_for_PathOrObjects<ObjectType>(
     _encode_ObjectType: $.ASN1Encoder<ObjectType>
-) {
+): $.ASN1Encoder<PathOrObjects<ObjectType>> {
     return $._encode_choice<PathOrObjects<ObjectType>>(
         {
             path: _encode_Path,

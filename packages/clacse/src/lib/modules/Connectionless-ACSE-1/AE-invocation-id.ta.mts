@@ -25,15 +25,21 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type AE_invocation_id = INTEGER;
 
-
-
-
+/**
+ * @summary Decode an `AE_invocation_id` value
+ * @param el The ASN.1 element to decode
+ * @returns The decoded `AE_invocation_id` value
+ * @function
+ */
 export const _decode_AE_invocation_id = $._decodeInteger;
 
-
-
-
+/**
+ * @summary Encode an `AE_invocation_id` value
+ * @param value The `AE_invocation_id` value to encode
+ * @param elGetter The function to get the ASN.1 element to encode
+ * @returns The encoded ASN.1 element
+ * @function
+ */
 export const _encode_AE_invocation_id = $._encodeInteger;
-
 
 /* eslint-enable */

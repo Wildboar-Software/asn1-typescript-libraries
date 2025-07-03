@@ -46,7 +46,7 @@ export type PrivateKeyObject<KeyAttributes> = PKCS15Object<
  */
 export function _get_decoder_for_PrivateKeyObject<KeyAttributes>(
     _decode_KeyAttributes: $.ASN1Decoder<KeyAttributes>
-) {
+): $.ASN1Decoder<PrivateKeyObject<KeyAttributes>> {
     return _get_decoder_for_PKCS15Object<
         CommonKeyAttributes,
         CommonPrivateKeyAttributes,
@@ -66,7 +66,7 @@ export function _get_decoder_for_PrivateKeyObject<KeyAttributes>(
  */
 export function _get_encoder_for_PrivateKeyObject<KeyAttributes>(
     _encode_KeyAttributes: $.ASN1Encoder<KeyAttributes>
-) {
+): $.ASN1Encoder<PrivateKeyObject<KeyAttributes>> {
     return _get_encoder_for_PKCS15Object<
         CommonKeyAttributes,
         CommonPrivateKeyAttributes,

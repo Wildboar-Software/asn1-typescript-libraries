@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va.mjs";
 import type { RSASSA_AlgorithmIdentifier } from "../PKCS-1/RSASSA-AlgorithmIdentifier.ta.mjs";
 import { RSASSA_PSS_params, _encode_RSASSA_PSS_params } from "./RSASSA-PSS-params.ta.mjs";

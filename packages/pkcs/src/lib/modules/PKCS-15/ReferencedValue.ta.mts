@@ -30,7 +30,7 @@ export type ReferencedValue<_Type> =
  */
 export function _get_decoder_for_ReferencedValue<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<ReferencedValue<Type>> {
     return $._decode_inextensible_choice<ReferencedValue<Type>>({
         "UNIVERSAL 16": ["path", _decode_Path],
         "UNIVERSAL 19": ["url", _decode_URL],
@@ -46,7 +46,7 @@ export function _get_decoder_for_ReferencedValue<Type>(
  */
 export function _get_encoder_for_ReferencedValue<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<ReferencedValue<Type>> {
     return $._encode_choice<ReferencedValue<Type>>(
         {
             path: _encode_Path,

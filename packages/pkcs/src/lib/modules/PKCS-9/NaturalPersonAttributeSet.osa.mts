@@ -1,6 +1,6 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-import { serialNumber } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/serialNumber.oa.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import { serialNumber } from "@wildboar/x500/SelectedAttributeTypes";
 import { countryOfCitizenship } from "../PKCS-9/countryOfCitizenship.oa.mjs";
 import { countryOfResidence } from "../PKCS-9/countryOfResidence.oa.mjs";
 import { dateOfBirth } from "../PKCS-9/dateOfBirth.oa.mjs";

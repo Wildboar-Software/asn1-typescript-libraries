@@ -95,7 +95,7 @@ export class PBKDF2_params {
      * @static
      * @method
      */
-    public static get _default_value_for_prf() {
+    public static get _default_value_for_prf(): AlgorithmIdentifier {
         return algid_hmacWithSHA1;
     }
 }

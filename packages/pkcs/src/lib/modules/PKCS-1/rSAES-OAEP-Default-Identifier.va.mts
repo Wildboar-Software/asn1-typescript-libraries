@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va.mjs";
 import { RSAES_AlgorithmIdentifier } from "../PKCS-1/RSAES-AlgorithmIdentifier.ta.mjs";
 import { mgf1SHA1 } from "./mgf1SHA1.va.mjs";

@@ -4,7 +4,7 @@ import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 // CertId ::= SEQUENCE {
 //     issuer           GeneralName,

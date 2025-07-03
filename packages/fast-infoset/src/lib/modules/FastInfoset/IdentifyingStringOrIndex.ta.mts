@@ -34,7 +34,7 @@ export type IdentifyingStringOrIndex =
   | { string_index: INTEGER } /* CHOICE_ALT_ROOT */;
 
 
-export const _decode_IdentifyingStringOrIndex = $._decode_inextensible_choice<IdentifyingStringOrIndex>(
+export const _decode_IdentifyingStringOrIndex: $.ASN1Decoder<IdentifyingStringOrIndex> = $._decode_inextensible_choice<IdentifyingStringOrIndex>(
   {
     'CONTEXT 0': ['literal_character_string', _decode_NonEmptyOctetString],
     'CONTEXT 1': ['string_index', $._decodeInteger],
@@ -42,7 +42,7 @@ export const _decode_IdentifyingStringOrIndex = $._decode_inextensible_choice<Id
 );
 
 
-export const _encode_IdentifyingStringOrIndex = $._encode_choice<IdentifyingStringOrIndex>(
+export const _encode_IdentifyingStringOrIndex: $.ASN1Encoder<IdentifyingStringOrIndex> = $._encode_choice<IdentifyingStringOrIndex>(
   {
     literal_character_string: _encode_NonEmptyOctetString,
     string_index: $._encodeInteger,

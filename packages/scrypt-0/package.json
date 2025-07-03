@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/scrypt-0",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Scrypt ASN.1 Algorithm Identifier in TypeScript",
     "keywords": [
         "scrypt",

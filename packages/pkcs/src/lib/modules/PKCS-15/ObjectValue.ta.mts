@@ -47,7 +47,7 @@ export type ObjectValue<Type> =
  */
 export function _get_decoder_for_ObjectValue<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<ObjectValue<Type>> {
     return $._decode_inextensible_choice<ObjectValue<Type>>({
         "UNIVERSAL 16": [
             "indirect",
@@ -87,7 +87,7 @@ export function _get_decoder_for_ObjectValue<Type>(
  */
 export function _get_encoder_for_ObjectValue<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<ObjectValue<Type>> {
     return $._encode_choice<ObjectValue<Type>>(
         {
             indirect: _get_encoder_for_ReferencedValue<Type>(_encode_Type),

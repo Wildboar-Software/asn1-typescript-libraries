@@ -11,14 +11,14 @@ jobs:
       fail-fast: false
       matrix:
         package:
-          # - "acbio"
+          - "acbio"
           - "acse"
           - "ansi-x9-42"
           - "ansi-x9-62"
           # - "asn1soap"
           # - "attribute-asn1module"
           - "bip"
-          # - "cades"
+          - "cades"
           - "casscam"
           - "cbeff"
           - "ccr"

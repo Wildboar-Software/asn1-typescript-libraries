@@ -1,9 +1,9 @@
 /* eslint-disable */
-import type { OBJECT_CLASS } from "@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs";
+import type { OBJECT_CLASS } from "@wildboar/x500/InformationFramework";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs";
+} from "@wildboar/x500/InformationFramework";
+import { top } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va.mjs";
 import { PKCSEntityAttributeSet } from "../PKCS-9/PKCSEntityAttributeSet.osa.mjs";
 

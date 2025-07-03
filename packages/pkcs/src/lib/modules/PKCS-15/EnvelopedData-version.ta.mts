@@ -104,7 +104,7 @@ export const v4: EnvelopedData_version = EnvelopedData_version_v4; /* SHORT_NAME
  */
 export function _get_decoder_for_EnvelopedData_version<Type>(
     _decode_Type: $.ASN1Decoder<Type>
-) {
+): $.ASN1Decoder<EnvelopedData_version> {
     return $._decodeInteger;
 }
 
@@ -116,7 +116,7 @@ export function _get_decoder_for_EnvelopedData_version<Type>(
  */
 export function _get_encoder_for_EnvelopedData_version<Type>(
     _encode_Type: $.ASN1Encoder<Type>
-) {
+): $.ASN1Encoder<EnvelopedData_version> {
     return $._encodeInteger;
 }
 

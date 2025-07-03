@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { encryptedPrivateKeyInfo } from "../PKCS-9/encryptedPrivateKeyInfo.oa.mjs";
 import { pKCS15Token } from "../PKCS-9/pKCS15Token.oa.mjs";
 import { pKCS7PDU } from "../PKCS-9/pKCS7PDU.oa.mjs";

@@ -37,7 +37,7 @@ export type AuthenticationObject<AuthObjectAttributes> = PKCS15Object<
  */
 export function _get_decoder_for_AuthenticationObject<AuthObjectAttributes>(
     _decode_AuthObjectAttributes: $.ASN1Decoder<AuthObjectAttributes>
-) {
+): $.ASN1Decoder<AuthenticationObject<AuthObjectAttributes>> {
     return _get_decoder_for_PKCS15Object<
         CommonAuthenticationObjectAttributes,
         NULL,
@@ -57,7 +57,7 @@ export function _get_decoder_for_AuthenticationObject<AuthObjectAttributes>(
  */
 export function _get_encoder_for_AuthenticationObject<AuthObjectAttributes>(
     _encode_AuthObjectAttributes: $.ASN1Encoder<AuthObjectAttributes>
-) {
+): $.ASN1Encoder<AuthenticationObject<AuthObjectAttributes>> {
     return _get_encoder_for_PKCS15Object<
         CommonAuthenticationObjectAttributes,
         NULL,

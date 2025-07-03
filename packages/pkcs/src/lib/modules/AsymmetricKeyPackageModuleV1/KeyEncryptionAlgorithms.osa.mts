@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
+import type { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 
 
 /**

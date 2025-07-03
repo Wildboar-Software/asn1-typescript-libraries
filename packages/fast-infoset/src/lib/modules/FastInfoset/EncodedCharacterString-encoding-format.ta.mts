@@ -30,7 +30,7 @@ export type EncodedCharacterString_encoding_format =
   | { encoding_algorithm: INTEGER } /* CHOICE_ALT_ROOT */;
 
 
-export const _decode_EncodedCharacterString_encoding_format = $._decode_inextensible_choice<EncodedCharacterString_encoding_format>(
+export const _decode_EncodedCharacterString_encoding_format: $.ASN1Decoder<EncodedCharacterString_encoding_format> = $._decode_inextensible_choice<EncodedCharacterString_encoding_format>(
   {
     'CONTEXT 0': ['utf_8', $._decodeNull],
     'CONTEXT 1': ['utf_16', $._decodeNull],
@@ -40,7 +40,7 @@ export const _decode_EncodedCharacterString_encoding_format = $._decode_inextens
 );
 
 
-export const _encode_EncodedCharacterString_encoding_format = $._encode_choice<EncodedCharacterString_encoding_format>(
+export const _encode_EncodedCharacterString_encoding_format: $.ASN1Encoder<EncodedCharacterString_encoding_format> = $._encode_choice<EncodedCharacterString_encoding_format>(
   {
     utf_8: $._encodeNull,
     utf_16: $._encodeNull,

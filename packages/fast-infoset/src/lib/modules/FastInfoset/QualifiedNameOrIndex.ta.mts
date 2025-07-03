@@ -39,7 +39,7 @@ export type QualifiedNameOrIndex =
   | { name_surrogate_index: INTEGER } /* CHOICE_ALT_ROOT */;
 
 
-export const _decode_QualifiedNameOrIndex = $._decode_inextensible_choice<QualifiedNameOrIndex>(
+export const _decode_QualifiedNameOrIndex: $.ASN1Decoder<QualifiedNameOrIndex> = $._decode_inextensible_choice<QualifiedNameOrIndex>(
   {
     'CONTEXT 0': [
       'literal_qualified_name',
@@ -50,7 +50,7 @@ export const _decode_QualifiedNameOrIndex = $._decode_inextensible_choice<Qualif
 );
 
 
-export const _encode_QualifiedNameOrIndex = $._encode_choice<QualifiedNameOrIndex>(
+export const _encode_QualifiedNameOrIndex: $.ASN1Encoder<QualifiedNameOrIndex> = $._encode_choice<QualifiedNameOrIndex>(
   {
     literal_qualified_name: _encode_QualifiedNameOrIndex_literal_qualified_name,
     name_surrogate_index: $._encodeInteger,

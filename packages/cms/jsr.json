@@ -3,7 +3,21 @@
   "version": "2.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./AlgorithmInformation-2009": "./src/lib/modules/AlgorithmInformation-2009/index.mts",
+    "./CMSCKMKeyManagement": "./src/lib/modules/CMSCKMKeyManagement/index.mts",
+    "./CMSDBKeyManagement": "./src/lib/modules/CMSDBKeyManagement/index.mts",
+    "./CMSObjectIdentifiers": "./src/lib/modules/CMSObjectIdentifiers/index.mts",
+    "./CMSProfileAttributes": "./src/lib/modules/CMSProfileAttributes/index.mts",
+    "./CMSSigncryption": "./src/lib/modules/CMSSigncryption/index.mts",
+    "./CryptographicMessageSyntax-2010": "./src/lib/modules/CryptographicMessageSyntax-2010/index.mts",
+    "./CryptographicMessageSyntaxAlgorithms-2009": "./src/lib/modules/CryptographicMessageSyntaxAlgorithms-2009/index.mts",
+    "./PKIX1Explicit-2009": "./src/lib/modules/PKIX1Explicit-2009/index.mts",
+    "./PKIX1-PSS-OAEP-Algorithms-2009": "./src/lib/modules/PKIX1-PSS-OAEP-Algorithms-2009/index.mts",
+    "./PKIXAlgs-2009": "./src/lib/modules/PKIXAlgs-2009/index.mts",
+    "./SecureMimeMessageV3dot1-2009": "./src/lib/modules/SecureMimeMessageV3dot1-2009/index.mts",
+    "./TokenizationManifest": "./src/lib/modules/TokenizationManifest/index.mts",
+    "./TrustedTimeStamp": "./src/lib/modules/TrustedTimeStamp/index.mts"
   },
   "publish": {
     "include": [

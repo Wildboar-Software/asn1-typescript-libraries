@@ -10,17 +10,17 @@ import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
+} from "@wildboar/x500/AttributeCertificateDefinitions";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,

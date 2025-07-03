@@ -71,7 +71,6 @@ export class Default_P_context {
     }
 }
 
-
 /**
  * @summary The Leading Root Component Types of Default_P_context
  * @description
@@ -92,7 +91,6 @@ export const _root_component_type_list_1_spec_for_Default_P_context: $.Component
         $.hasTag(_TagClass.context, 1)
     ),
 ];
-
 
 /**
  * @summary The Trailing Root Component Types of Default_P_context
@@ -115,9 +113,7 @@ export const _root_component_type_list_2_spec_for_Default_P_context: $.Component
  */
 export const _extension_additions_list_spec_for_Default_P_context: $.ComponentSpec[] = [];
 
-
 let _cached_decoder_for_Default_P_context: $.ASN1Decoder<Default_P_context> | null = null;
-
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_P_context
@@ -161,9 +157,7 @@ export function _decode_Default_P_context(el: _Element): Default_P_context {
     return _cached_decoder_for_Default_P_context(el);
 }
 
-
 let _cached_encoder_for_Default_P_context: $.ASN1Encoder<Default_P_context> | null = null;
-
 
 /**
  * @summary Encodes a(n) Default_P_context into an ASN.1 Element.
@@ -204,6 +198,5 @@ export function _encode_Default_P_context(
     }
     return _cached_encoder_for_Default_P_context(value, elGetter);
 }
-
 
 /* eslint-enable */

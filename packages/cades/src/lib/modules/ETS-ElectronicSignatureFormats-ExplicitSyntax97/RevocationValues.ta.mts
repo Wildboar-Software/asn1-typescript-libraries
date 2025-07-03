@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     CertificateList, _decode_CertificateList, _encode_CertificateList
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta.mjs";
 import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta.mjs";
 /**
