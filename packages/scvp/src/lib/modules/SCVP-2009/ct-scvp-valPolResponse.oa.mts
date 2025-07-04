@@ -15,8 +15,7 @@ import {
   _encode_ValPolResponse,
 } from '../SCVP-2009/ValPolResponse.ta.mjs';
 import { id_ct_scvp_valPolResponse } from '../SCVP-2009/id-ct-scvp-valPolResponse.va.mjs';
-import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs';
-
+import type { CONTENT_TYPE } from '@wildboar/cms';
 
 /**
  * @summary ct_scvp_valPolResponse

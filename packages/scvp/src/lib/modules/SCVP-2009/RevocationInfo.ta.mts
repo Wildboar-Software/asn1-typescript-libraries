@@ -14,12 +14,12 @@ import {
   CertificateList,
   _decode_CertificateList,
   _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import {
   OCSPResponse,
   _decode_OCSPResponse,
   _encode_OCSPResponse,
-} from '@wildboar/ocsp/src/lib/modules/OCSP-2013-08/OCSPResponse.ta.mjs';
+} from '@wildboar/ocsp';
 import {
   OtherRevInfo,
   _decode_OtherRevInfo,

@@ -13,9 +13,9 @@ import {
   SubjectPublicKeyInfo,
   _decode_SubjectPublicKeyInfo,
   _encode_SubjectPublicKeyInfo,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import { id_swb_pkc_public_key_info } from '../SCVP-2009/id-swb-pkc-public-key-info.va.mjs';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import type { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 
 /**
  * @summary swb_pkc_public_key_info

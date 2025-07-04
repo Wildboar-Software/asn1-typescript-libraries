@@ -10,12 +10,13 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  Certificate,
+  type Certificate,
   _decode_Certificate,
   _encode_Certificate,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import { id_swb_pkc_cert } from '../SCVP-2009/id-swb-pkc-cert.va.mjs';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import type { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+
 /**
  * @summary swb_pkc_cert
  * @description

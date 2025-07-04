@@ -20,22 +20,22 @@ import {
   GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs';
+} from '@wildboar/x500/CertificateExtensions';
 import {
   GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs';
+} from '@wildboar/x500/CertificateExtensions';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import {
   AlgorithmIdentifier,
   _encode_AlgorithmIdentifier,
   _decode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary CVRequest

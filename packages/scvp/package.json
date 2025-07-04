@@ -41,9 +41,6 @@
         "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x",
         "@wildboar/cms": "npm:@jsr/wildboar__cms@2.x.x",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
-        "@wildboar/ldap": "npm:@jsr/wildboar__ldap@2.x.x",
-        "@wildboar/ansi-x9-42": "npm:@jsr/wildboar__ansi-x9-42@2.x.x",
-        "@wildboar/ansi-x9-62": "npm:@jsr/wildboar__ansi-x9-62@2.x.x",
         "@wildboar/ocsp": "npm:@jsr/wildboar__ocsp@2.x.x"
     }
 }

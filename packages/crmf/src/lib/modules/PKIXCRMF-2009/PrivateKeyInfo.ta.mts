@@ -11,9 +11,9 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKIXCRMF-2009/Attributes.ta.mjs";

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 import {
-    SinglePubInfo_pubMethod,
+    type SinglePubInfo_pubMethod,
     _decode_SinglePubInfo_pubMethod,
     _encode_SinglePubInfo_pubMethod,
 } from "../PKIXCRMF-2009/SinglePubInfo-pubMethod.ta.mjs";
@@ -28,7 +28,6 @@ import {
  *     pubMethod    INTEGER {
  *         dontCare    (0),
  *         x500        (1),
- *
  *         web         (2),
  *         ldap        (3) },
  *     pubLocation  GeneralName OPTIONAL }

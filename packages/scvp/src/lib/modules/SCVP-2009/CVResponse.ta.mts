@@ -31,20 +31,20 @@ import {
   _encode_RequestReference,
 } from '../SCVP-2009/RequestReference.ta.mjs';
 import {
-  GeneralNames,
+  type GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs';
+} from '@wildboar/x500/CertificateExtensions';
 import {
   ReplyObjects,
   _decode_ReplyObjects,
   _encode_ReplyObjects,
 } from '../SCVP-2009/ReplyObjects.ta.mjs';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary CVResponse

@@ -17,7 +17,7 @@ import {
   _decode_ParamOptions,
   _encode_ParamOptions,
 } from '../AlgorithmInformation-2009/ParamOptions.ta.mjs';
-import { id_sha1 } from '@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha1.va.mjs';
+import { id_sha1 } from '@wildboar/x500/AlgorithmObjectIdentifiers';
 import { DIGEST_ALGORITHM } from '../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs';
 
 /**

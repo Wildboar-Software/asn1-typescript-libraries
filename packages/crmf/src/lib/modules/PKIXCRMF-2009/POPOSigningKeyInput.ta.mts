@@ -9,7 +9,7 @@ import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 import {
     POPOSigningKeyInput_authInfo,
     _decode_POPOSigningKeyInput_authInfo,

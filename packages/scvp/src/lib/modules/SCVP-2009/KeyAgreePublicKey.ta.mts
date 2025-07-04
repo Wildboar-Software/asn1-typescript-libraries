@@ -16,7 +16,7 @@ import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary KeyAgreePublicKey

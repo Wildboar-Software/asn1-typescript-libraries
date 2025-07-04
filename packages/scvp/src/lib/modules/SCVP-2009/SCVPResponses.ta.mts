@@ -14,7 +14,7 @@ import {
   ContentInfo,
   _decode_ContentInfo,
   _encode_ContentInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.mjs';
+} from '@wildboar/cms';
 
 /**
  * @summary SCVPResponses

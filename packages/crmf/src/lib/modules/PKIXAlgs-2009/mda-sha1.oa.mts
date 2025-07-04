@@ -5,7 +5,7 @@ import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInforma
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { id_sha1 } from "@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha1.va.mjs";
+import { id_sha1 } from "@wildboar/x500/AlgorithmObjectIdentifiers";
 
 
 /**

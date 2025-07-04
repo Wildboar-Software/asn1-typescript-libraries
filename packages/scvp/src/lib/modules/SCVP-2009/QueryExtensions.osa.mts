@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { EXTENSION } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs';
+import type { EXTENSION } from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary QueryExtensions

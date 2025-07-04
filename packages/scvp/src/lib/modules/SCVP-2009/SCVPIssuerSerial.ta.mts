@@ -2,4 +2,4 @@ export {
     IssuerSerial as SCVPIssuerSerial,
     _decode_IssuerSerial as _decode_SCVPIssuerSerial,
     _encode_IssuerSerial as _encode_SCVPIssuerSerial,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/IssuerSerial.ta.mjs";
+} from "@wildboar/pki-stub";

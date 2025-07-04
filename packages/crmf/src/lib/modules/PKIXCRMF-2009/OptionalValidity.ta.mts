@@ -6,10 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Time.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
 
 
 /**

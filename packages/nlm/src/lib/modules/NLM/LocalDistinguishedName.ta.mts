@@ -14,11 +14,11 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs";
+} from "@wildboar/cmip";
 import {
     _decode_RDNSequence,
     _encode_RDNSequence,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/RDNSequence.ta.mjs";
+} from "@wildboar/pki-stub";
 
 
 /**

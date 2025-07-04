@@ -10,32 +10,26 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs";
-import {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
-import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-import {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Version.ta.mjs";
+} from "@wildboar/x500/AuthenticationFramework";
+import {
+    type Name,
+    _decode_Name,
+    _encode_Name,
+} from "@wildboar/x500/InformationFramework";
+import {
+    type UniqueIdentifier,
+    _decode_UniqueIdentifier,
+    _encode_UniqueIdentifier,
+} from "@wildboar/x500/SelectedAttributeTypes";
 import {
     OptionalValidity,
     _decode_OptionalValidity,

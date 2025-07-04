@@ -24,7 +24,7 @@ import {
 } from '../SCVP-2009/HashAlgorithm.ta.mjs';
 import {
     AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
 
 /**

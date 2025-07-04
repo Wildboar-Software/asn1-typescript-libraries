@@ -15,8 +15,7 @@ import {
   _encode_CVRequest,
 } from '../SCVP-2009/CVRequest.ta.mjs';
 import { id_ct_scvp_certValRequest } from '../SCVP-2009/id-ct-scvp-certValRequest.va.mjs';
-import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs';
-
+import type { CONTENT_TYPE } from '@wildboar/cms';
 
 /**
  * @summary ct_scvp_certValRequest

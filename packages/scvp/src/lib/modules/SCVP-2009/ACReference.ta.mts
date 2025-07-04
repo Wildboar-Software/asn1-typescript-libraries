@@ -14,7 +14,7 @@ import {
   AttributeCertificate,
   _decode_AttributeCertificate,
   _encode_AttributeCertificate,
-} from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs';
+} from '@wildboar/x500/AttributeCertificateDefinitions';
 import {
   SCVPCertID,
   _decode_SCVPCertID,

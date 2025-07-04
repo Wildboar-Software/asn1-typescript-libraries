@@ -13,7 +13,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    TypeOfBiometricData,
+    type TypeOfBiometricData,
     _decode_TypeOfBiometricData,
     _encode_TypeOfBiometricData,
 } from "../PKIXqualified97/TypeOfBiometricData.ta.mjs";

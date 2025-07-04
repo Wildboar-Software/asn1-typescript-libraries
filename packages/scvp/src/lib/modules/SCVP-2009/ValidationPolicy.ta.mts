@@ -24,20 +24,18 @@ import {
   _encode_ValidationAlg,
 } from '../SCVP-2009/ValidationAlg.ta.mjs';
 import {
-  TrustAnchors,
+  type TrustAnchors,
   _decode_TrustAnchors,
   _encode_TrustAnchors,
 } from '../SCVP-2009/TrustAnchors.ta.mjs';
 import {
-  KeyUsage,
+  type KeyUsage,
   _decode_KeyUsage,
   _encode_KeyUsage,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs';
-import {
-  KeyPurposeId,
+  type KeyPurposeId,
   _decode_KeyPurposeId,
   _encode_KeyPurposeId,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyPurposeId.ta.mjs';
+} from '@wildboar/x500/CertificateExtensions';
 
 /**
  * @summary ValidationPolicy

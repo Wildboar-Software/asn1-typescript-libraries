@@ -2,10 +2,10 @@
 import { ASN1Element as _Element, UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
+} from "@wildboar/x500/CertificateExtensions";
 
 
 /**

@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs';
+import type { CONTENT_TYPE } from '@wildboar/cms';
 import { ct_scvp_certValRequest } from '../SCVP-2009/ct-scvp-certValRequest.oa.mjs';
 import { ct_scvp_certValResponse } from '../SCVP-2009/ct-scvp-certValResponse.oa.mjs';
 import { ct_scvp_valPolRequest } from '../SCVP-2009/ct-scvp-valPolRequest.oa.mjs';
