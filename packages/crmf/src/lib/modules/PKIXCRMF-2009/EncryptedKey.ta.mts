@@ -5,7 +5,7 @@ import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta.mjs";
+} from "@wildboar/cms";
 import {
     EncryptedValue,
     _decode_EncryptedValue,

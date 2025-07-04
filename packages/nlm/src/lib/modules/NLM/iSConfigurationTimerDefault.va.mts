@@ -13,7 +13,7 @@ import {
     Timer,
     _decode_Timer,
     _encode_Timer,
-} from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
+} from "@wildboar/gmi-attributemodule";
 
 
 /**

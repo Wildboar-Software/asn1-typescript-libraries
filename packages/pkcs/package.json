@@ -46,5 +46,20 @@
         "@wildboar/ansi-x9-42": "npm:@jsr/wildboar__ansi-x9-42@2.x.x",
         "@wildboar/ldap": "npm:@jsr/wildboar__ldap@2.x.x",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x"
+    },
+    "exports": {
+        "./AsymmetricKeyPackageModuleV1": "./src/lib/modules/AsymmetricKeyPackageModuleV1/index.mjs",
+        "./CryptographicMessageSyntax": "./src/lib/modules/CryptographicMessageSyntax/index.mjs",
+        "./NIST-SHA2": "./src/lib/modules/NIST-SHA2/index.mjs",
+        "./PKCS-1": "./src/lib/modules/PKCS-1/index.mjs",
+        "./PKCS-10": "./src/lib/modules/PKCS-10/index.mjs",
+        "./PKCS-12": "./src/lib/modules/PKCS-12/index.mjs",
+        "./PKCS-15": "./src/lib/modules/PKCS-15/index.mjs",
+        "./PKCS-3": "./src/lib/modules/PKCS-3/index.mjs",
+        "./PKCS5v2-1": "./src/lib/modules/PKCS5v2-1/index.mjs",
+        "./PKCS7": "./src/lib/modules/PKCS7/index.mjs",
+        "./PKCS-9": "./src/lib/modules/PKCS-9/index.mjs",
+        "./PKIXCMP-2009": "./src/lib/modules/PKIXCMP-2009/index.mjs",
+        "./PKIXCRMF-2009": "./src/lib/modules/PKIXCRMF-2009/index.mjs"
     }
 }

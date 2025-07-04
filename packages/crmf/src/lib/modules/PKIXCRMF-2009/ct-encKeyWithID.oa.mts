@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+import type { CONTENT_TYPE } from "@wildboar/cms";
 import {
     EncKeyWithID,
     _decode_EncKeyWithID,

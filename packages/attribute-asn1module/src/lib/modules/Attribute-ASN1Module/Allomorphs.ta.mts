@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.mjs";
+import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "@wildboar/cmip";
 /**
  * @summary Allomorphs
  * @description

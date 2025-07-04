@@ -14,7 +14,7 @@ import {
   CertReqMessages,
   _decode_CertReqMessages,
   _encode_CertReqMessages,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertReqMessages.ta.mjs';
+} from '@wildboar/crmf';
 import {
   CertRepMessage,
   _decode_CertRepMessage,
@@ -24,7 +24,7 @@ import {
   CertificationRequest,
   _decode_CertificationRequest,
   _encode_CertificationRequest,
-} from '@wildboar/pkcs/src/lib/modules/PKCS-10/CertificationRequest.ta.mjs';
+} from '@wildboar/pkcs/PKCS-10';
 import {
   POPODecKeyChallContent,
   _decode_POPODecKeyChallContent,

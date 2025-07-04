@@ -9,14 +9,14 @@ import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta.mjs";
+} from "@wildboar/cms";
 import {
     PKMACValue,
     _decode_PKMACValue,
     _encode_PKMACValue,
 } from "../PKIXCRMF-2009/PKMACValue.ta.mjs";
 import {
-    SubsequentMessage,
+    type SubsequentMessage,
     _decode_SubsequentMessage,
     _encode_SubsequentMessage,
 } from "../PKIXCRMF-2009/SubsequentMessage.ta.mjs";

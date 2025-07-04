@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs";
+import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip";
 /**
  * @summary DiscriminatorConstruct
  * @description

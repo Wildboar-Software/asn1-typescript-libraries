@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs";
+import type { MAC_ALGORITHM } from "@wildboar/cms";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";

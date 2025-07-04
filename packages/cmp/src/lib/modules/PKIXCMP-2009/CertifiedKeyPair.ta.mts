@@ -20,12 +20,12 @@ import {
   EncryptedValue,
   _decode_EncryptedValue,
   _encode_EncryptedValue,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/EncryptedValue.ta.mjs';
+} from '@wildboar/crmf';
 import {
   PKIPublicationInfo,
   _decode_PKIPublicationInfo,
   _encode_PKIPublicationInfo,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/PKIPublicationInfo.ta.mjs';
+} from '@wildboar/crmf';
 
 
 /**

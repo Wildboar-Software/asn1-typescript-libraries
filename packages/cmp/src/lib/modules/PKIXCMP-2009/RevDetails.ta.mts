@@ -15,7 +15,7 @@ import {
   CertTemplate,
   _decode_CertTemplate,
   _encode_CertTemplate,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertTemplate.ta.mjs';
+} from '@wildboar/crmf';
 import {
   Extensions,
   _decode_Extensions,

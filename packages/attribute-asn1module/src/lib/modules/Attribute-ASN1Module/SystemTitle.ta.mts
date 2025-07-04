@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.mjs";
+import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "@wildboar/cmip";
 /**
  * @summary SystemTitle
  * @description

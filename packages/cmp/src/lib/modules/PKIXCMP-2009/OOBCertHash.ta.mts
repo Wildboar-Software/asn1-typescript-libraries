@@ -21,7 +21,7 @@ import {
   CertId,
   _decode_CertId,
   _encode_CertId,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta.mjs';
+} from '@wildboar/crmf';
 
 
 /**

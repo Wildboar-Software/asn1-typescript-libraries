@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
+import type { DIGEST_ALGORITHM } from "@wildboar/cms";
 import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
 
 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs";
+import type { MAC_ALGORITHM } from "@wildboar/cms";
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { hMAC_SHA1 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va.mjs";
+import { hMAC_SHA1 } from "@wildboar/cms";
 
 
 /**

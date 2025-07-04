@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
+import type { DIGEST_ALGORITHM } from "@wildboar/cms";
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
