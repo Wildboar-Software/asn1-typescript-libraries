@@ -42,6 +42,6 @@
         "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x",
         "@wildboar/ftam": "npm:@jsr/wildboar__ftam@2.x.x",
         "@wildboar/cmip": "npm:@jsr/wildboar__cmip@2.x.x",
-        "@wildboar/attribute-asn1module": "npm:@jsr/wildboar__attribute-asn1module@2.x.x",
+        "@wildboar/attribute-asn1module": "npm:@jsr/wildboar__attribute-asn1module@2.x.x"
     }
 }
