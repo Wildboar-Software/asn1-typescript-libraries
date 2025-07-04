@@ -2,7 +2,7 @@
 import { statusReferrals } from "../CertificateExtensions/statusReferrals.oa.mjs";
 import { id_asx_statusReferrals } from "../ExtensionAttributes/id-asx-statusReferrals.va.mjs";
 import { id_ce_a_statusReferrals } from "../ExtensionAttributes/id-ce-a-statusReferrals.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

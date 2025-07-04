@@ -2,7 +2,7 @@
 import { toBeRevoked } from "../CertificateExtensions/toBeRevoked.oa.mjs";
 import { id_asx_toBeRevoked } from "../ExtensionAttributes/id-asx-toBeRevoked.va.mjs";
 import { id_ce_a_toBeRevoked } from "../ExtensionAttributes/id-ce-a-toBeRevoked.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

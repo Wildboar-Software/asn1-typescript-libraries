@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_aca_accessControlScheme } from "../BasicAccessControl/id-aca-accessControlScheme.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

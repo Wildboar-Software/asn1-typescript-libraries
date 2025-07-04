@@ -19,9 +19,9 @@ import {
     _decode_EDIMSEntryType,
     _encode_EDIMSEntryType,
 } from '../EDIMSMessageStoreAttributes/EDIMSEntryType.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_sat_edims_entry_type } from '../EDIMSObjectIdentifiers/id-sat-edims-entry-type.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

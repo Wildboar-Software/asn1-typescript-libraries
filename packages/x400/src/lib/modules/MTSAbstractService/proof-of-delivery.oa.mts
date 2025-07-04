@@ -22,7 +22,7 @@ import {
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary proof_of_delivery
  * @description

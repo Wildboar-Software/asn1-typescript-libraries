@@ -22,7 +22,7 @@ import {
     _decode_RecipientReassignmentProhibited,
     _encode_RecipientReassignmentProhibited,
 } from '../MTSAbstractService/RecipientReassignmentProhibited.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 
 /**
  * @summary recipient_reassignment_prohibited

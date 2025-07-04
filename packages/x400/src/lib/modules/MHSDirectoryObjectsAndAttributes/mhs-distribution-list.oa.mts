@@ -9,22 +9,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
+import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
+} from '@wildboar/x500/InformationFramework';
+import { top } from '@wildboar/x500/InformationFramework';
+import { commonName } from '@wildboar/x500/SelectedAttributeTypes';
 import { mhs_dl_submit_permissions } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-submit-permissions.oa.mjs';
 import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.mjs';
-import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.mjs';
-import { organizationName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationName.oa.mjs';
-import { organizationalUnitName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationalUnitName.oa.mjs';
-import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.mjs';
-import { seeAlso } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/seeAlso.oa.mjs';
+import { description } from '@wildboar/x500/SelectedAttributeTypes';
+import { organizationName } from '@wildboar/x500/SelectedAttributeTypes';
+import { organizationalUnitName } from '@wildboar/x500/SelectedAttributeTypes';
+import { owner } from '@wildboar/x500/SelectedAttributeTypes';
+import { seeAlso } from '@wildboar/x500/SelectedAttributeTypes';
 import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.mjs';
 import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.mjs';
 import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va.mjs";
 import {
     NameConstraintsSyntax,

@@ -14,7 +14,7 @@ import {
     FunctionalUnits,
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
+} from '@wildboar/cmip';
 /**
  * @summary CmiseFunctionalUnitsSupported
  * @description

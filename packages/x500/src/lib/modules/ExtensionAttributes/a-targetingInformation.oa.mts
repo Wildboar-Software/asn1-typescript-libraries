@@ -2,7 +2,7 @@
 import { targetingInformation } from "../AttributeCertificateDefinitions/targetingInformation.oa.mjs";
 import { id_asx_targetingInformation } from "../ExtensionAttributes/id-asx-targetingInformation.va.mjs";
 import { id_ce_a_targetingInformation } from "../ExtensionAttributes/id-ce-a-targetingInformation.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

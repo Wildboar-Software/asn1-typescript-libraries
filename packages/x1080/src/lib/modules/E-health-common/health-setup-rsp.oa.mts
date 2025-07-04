@@ -15,7 +15,7 @@ import {
     _encode_E_setupResponse,
 } from '../E-health-common/E-setupResponse.ta.mjs';
 import { id_health_setup_rsp } from '../E-health-common/id-health-setup-rsp.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary health_setup_rsp

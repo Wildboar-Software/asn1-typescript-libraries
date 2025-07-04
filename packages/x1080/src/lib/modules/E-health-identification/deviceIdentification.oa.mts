@@ -15,7 +15,7 @@ import {
     _decode_DeviceIdentification,
     _encode_DeviceIdentification,
 } from '../E-health-identification/DeviceIdentification.ta.mjs';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary deviceIdentification

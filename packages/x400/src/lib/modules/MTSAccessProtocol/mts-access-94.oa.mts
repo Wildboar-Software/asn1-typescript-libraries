@@ -10,15 +10,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { mts_access_contract } from '../MTSAbstractService/mts-access-contract.oa.mjs';
-import { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa.mjs';
-import { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa.mjs';
-import { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa.mjs';
+import { acse } from '@wildboar/rose';
+import { pData } from '@wildboar/rose';
+import { acse_abstract_syntax } from '@wildboar/rose';
 import { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa.mjs';
 import { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-delivery-abstract-syntax.oa.mjs';
 import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa.mjs';
 import { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa.mjs';
 import { id_ac_mts_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-access-94.va.mjs';
-import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.mjs';
+import { APPLICATION_CONTEXT } from '@wildboar/rose';
 /**
  * @summary mts_access_94
  * @description

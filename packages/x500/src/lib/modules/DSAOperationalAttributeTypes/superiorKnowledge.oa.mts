@@ -6,7 +6,7 @@ import {
 } from "../DistributedOperations/AccessPoint.ta.mjs";
 import { accessPointMatch } from "../DSAOperationalAttributeTypes/accessPointMatch.oa.mjs";
 import { id_doa_superiorKnowledge } from "../DSAOperationalAttributeTypes/id-doa-superiorKnowledge.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

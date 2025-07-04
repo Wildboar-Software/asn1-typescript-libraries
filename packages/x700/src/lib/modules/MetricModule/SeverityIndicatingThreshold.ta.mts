@@ -16,13 +16,13 @@ import {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary SeverityIndicatingThreshold
  * @description

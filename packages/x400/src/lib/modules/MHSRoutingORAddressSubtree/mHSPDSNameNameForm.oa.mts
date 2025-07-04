@@ -12,7 +12,7 @@ import {
 import { mHSPDSName } from '../MHSRoutingORAddressSubtree/mHSPDSName.oa.mjs';
 import { mHSPDSNameAttribute } from '../MHSRoutingORAddressSubtree/mHSPDSNameAttribute.oa.mjs';
 import { id_nf_mhs_pds_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-pds-name.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
+import { NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSPDSNameNameForm
  * @description

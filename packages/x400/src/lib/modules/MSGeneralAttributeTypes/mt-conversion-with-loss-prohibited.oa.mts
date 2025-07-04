@@ -19,9 +19,9 @@ import {
     _decode_ConversionWithLossProhibited,
     _encode_ConversionWithLossProhibited,
 } from '../MTSAbstractService/ConversionWithLossProhibited.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_att_conversion_with_loss_prohibited } from '../MSObjectIdentifiers/id-att-conversion-with-loss-prohibited.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

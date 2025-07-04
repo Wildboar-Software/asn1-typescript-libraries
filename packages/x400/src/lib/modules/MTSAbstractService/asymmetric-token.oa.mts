@@ -15,7 +15,7 @@ import {
     _encode_AsymmetricToken,
 } from '../MTSAbstractService/AsymmetricToken.ta.mjs';
 import { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va.mjs';
-import { TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
+import { type TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
 /**
  * @summary asymmetric_token
  * @description

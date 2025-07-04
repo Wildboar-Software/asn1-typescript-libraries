@@ -18,9 +18,9 @@ import {
     _decode_MS_EIT,
     _encode_MS_EIT,
 } from '../MSAbstractService/MS-EIT.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
+import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_att_converted_EITs } from '../MSObjectIdentifiers/id-att-converted-EITs.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

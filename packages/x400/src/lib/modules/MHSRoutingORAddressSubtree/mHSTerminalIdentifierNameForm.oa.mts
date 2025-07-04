@@ -12,7 +12,7 @@ import {
 import { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifier.oa.mjs';
 import { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa.mjs';
 import { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
+import { NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSTerminalIdentifierNameForm
  * @description

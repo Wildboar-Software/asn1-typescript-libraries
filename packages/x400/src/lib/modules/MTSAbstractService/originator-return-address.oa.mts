@@ -22,7 +22,7 @@ import {
     _decode_OriginatorReturnAddress,
     _encode_OriginatorReturnAddress,
 } from '../MTSAbstractService/OriginatorReturnAddress.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary originator_return_address
  * @description

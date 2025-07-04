@@ -5,7 +5,7 @@ import {
     _encode_AcceptablePrivilegePoliciesSyntax,
 } from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.mjs";
 import { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary acceptablePrivilegePolicies
  * @description

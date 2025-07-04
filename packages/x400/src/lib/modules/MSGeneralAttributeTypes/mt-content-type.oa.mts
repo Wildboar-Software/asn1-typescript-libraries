@@ -15,9 +15,9 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
+import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_att_content_type } from '../MSObjectIdentifiers/id-att-content-type.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -13,7 +13,7 @@ import { originate_probe } from '../EDIMSAbstractService/originate-probe.oa.mjs'
 import { originate_edim } from '../EDIMSAbstractService/originate-edim.oa.mjs';
 import { originate_edin } from '../EDIMSAbstractService/originate-edin.oa.mjs';
 import { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary origination
  * @description

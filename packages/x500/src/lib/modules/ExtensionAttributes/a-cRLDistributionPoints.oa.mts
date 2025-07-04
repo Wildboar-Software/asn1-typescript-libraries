@@ -2,7 +2,7 @@
 import { cRLDistributionPoints } from "../CertificateExtensions/cRLDistributionPoints.oa.mjs";
 import { id_asx_cRLDistributionPoints } from "../ExtensionAttributes/id-asx-cRLDistributionPoints.va.mjs";
 import { id_ce_a_cRLDistributionPoints } from "../ExtensionAttributes/id-ce-a-cRLDistributionPoints.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

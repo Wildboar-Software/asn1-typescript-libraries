@@ -5,7 +5,7 @@ import {
     _encode_AsymmetricKeyPackage,
 } from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.mjs";
 import { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.mjs";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
+import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
 
 /**
  * @summary ct_asymmetric_key_package

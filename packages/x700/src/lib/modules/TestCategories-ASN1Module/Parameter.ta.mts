@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
+import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
 
 /**
  * @summary Parameter

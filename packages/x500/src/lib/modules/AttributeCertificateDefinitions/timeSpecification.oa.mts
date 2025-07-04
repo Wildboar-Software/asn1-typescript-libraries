@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
     TimeSpecification,
     _decode_TimeSpecification,

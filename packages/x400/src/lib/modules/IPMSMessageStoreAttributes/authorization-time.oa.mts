@@ -18,10 +18,10 @@ import {
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
 } from '../IPMSHeadingExtensions/AuthorizationTime.ta.mjs';
-import { generalizedTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeMatch.oa.mjs';
-import { generalizedTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs';
+import { generalizedTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { generalizedTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_authorization_time } from '../IPMSObjectIdentifiers/id-hat-authorization-time.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -9,18 +9,18 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
+import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs';
+} from '@wildboar/x500/SelectedAttributeTypes';
 import { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va.mjs';
 /**
  * @summary edi_routing_address

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs';
+import { OPERATION_PACKAGE } from '@wildboar/rose';
 /**
  * @summary PORT
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 import {
     DigestedData,
     _decode_DigestedData,

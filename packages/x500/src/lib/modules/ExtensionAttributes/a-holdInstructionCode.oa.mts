@@ -2,7 +2,7 @@
 import { holdInstructionCode } from "../CertificateExtensions/holdInstructionCode.oa.mjs";
 import { id_asx_holdInstructionCode } from "../ExtensionAttributes/id-asx-holdInstructionCode.va.mjs";
 import { id_ce_a_holdInstructionCode } from "../ExtensionAttributes/id-ce-a-holdInstructionCode.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

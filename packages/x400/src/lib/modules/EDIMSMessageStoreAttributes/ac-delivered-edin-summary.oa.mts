@@ -18,9 +18,9 @@ import {
     _decode_EDINStatus,
     _encode_EDINStatus,
 } from '../EDIMSMessageStoreAttributes/EDINStatus.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_cat_delivered_edin_summary } from '../EDIMSObjectIdentifiers/id-cat-delivered-edin-summary.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

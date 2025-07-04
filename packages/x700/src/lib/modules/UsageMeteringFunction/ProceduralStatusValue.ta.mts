@@ -14,7 +14,7 @@ import {
     ProceduralStatus,
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProceduralStatus.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ProceduralStatusValue
  * @description

@@ -7,7 +7,7 @@ import {
 } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
 import { x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/x509SupportedPublicKeyAlgos.oa.mjs";
 import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

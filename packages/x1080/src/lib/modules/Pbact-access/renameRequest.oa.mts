@@ -15,7 +15,7 @@ import {
     _encode_RenameRequest,
 } from '../Pbact-access/RenameRequest.ta.mjs';
 import { id_renameRequest } from '../Pbact-access/id-renameRequest.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary renameRequest

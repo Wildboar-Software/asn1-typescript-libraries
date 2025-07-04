@@ -9,14 +9,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
+import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
-import { distinguishedName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/distinguishedName.oa.mjs';
+} from '@wildboar/x500/InformationFramework';
+import { distinguishedName } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_at_mhs_message_transfer_agent } from '../MHSRoutingObjectIdentifiers/id-at-mhs-message-transfer-agent.va.mjs';
 /**
  * @summary mHSMessageTransferAgentName

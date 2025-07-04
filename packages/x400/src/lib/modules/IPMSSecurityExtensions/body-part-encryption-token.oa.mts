@@ -24,7 +24,7 @@ import {
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary body_part_encryption_token
  * @description

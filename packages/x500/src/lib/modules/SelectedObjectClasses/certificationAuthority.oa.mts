@@ -3,7 +3,7 @@ import { authorityRevocationList } from "../AuthenticationFramework/authorityRev
 import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
 import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
 import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

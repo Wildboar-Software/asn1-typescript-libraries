@@ -1,5 +1,5 @@
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
 
 // pwdRecentlyExpired{ATTRIBUTE:passwordAttribute,OBJECT IDENTIFIER:id} ATTRIBUTE ::= {

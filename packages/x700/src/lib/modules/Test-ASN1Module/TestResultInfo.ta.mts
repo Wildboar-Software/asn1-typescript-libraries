@@ -40,32 +40,32 @@ import {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary TestResultInfo
  * @description

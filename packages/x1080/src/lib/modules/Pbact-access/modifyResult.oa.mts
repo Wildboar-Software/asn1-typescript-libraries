@@ -15,7 +15,7 @@ import {
     _encode_ModifyResult,
 } from '../Pbact-access/ModifyResult.ta.mjs';
 import { id_modifyResult } from '../Pbact-access/id-modifyResult.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary modifyResult

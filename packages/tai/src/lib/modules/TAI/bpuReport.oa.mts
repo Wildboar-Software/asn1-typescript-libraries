@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { BPUReport, _decode_BPUReport, _encode_BPUReport } from "../TAI/BPUReport.ta.mjs";
 import { id_bpuReport } from "../TAI/id-bpuReport.va.mjs";
-import { CONTENT_TYPE } from "../TAI/CONTENT-TYPE.oca.mjs";
+import { type CONTENT_TYPE } from "../TAI/CONTENT-TYPE.oca.mjs";
 /**
  * @summary bpuReport
  * @description

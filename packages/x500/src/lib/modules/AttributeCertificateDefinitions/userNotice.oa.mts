@@ -6,7 +6,7 @@ import {
     _decode_UserNotice,
     _encode_UserNotice,
 } from "../AttributeCertificateDefinitions/UserNotice.ta.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary userNotice
  * @description

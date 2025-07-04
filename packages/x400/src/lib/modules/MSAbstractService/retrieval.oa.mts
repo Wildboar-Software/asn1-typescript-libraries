@@ -18,7 +18,7 @@ import { register_MS } from '../MSAbstractService/register-MS.oa.mjs';
 import { modify } from '../MSAbstractService/modify.oa.mjs';
 import { alert } from '../MSAbstractService/alert.oa.mjs';
 import { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary retrieval
  * @description

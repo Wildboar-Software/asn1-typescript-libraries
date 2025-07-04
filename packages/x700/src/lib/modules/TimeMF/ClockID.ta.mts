@@ -14,7 +14,7 @@ import {
     SimpleNameType,
     _decode_SimpleNameType,
     _encode_SimpleNameType,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ClockID
  * @description

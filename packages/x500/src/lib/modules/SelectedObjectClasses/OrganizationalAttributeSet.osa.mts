@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";

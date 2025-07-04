@@ -18,7 +18,7 @@ import {
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa.mjs';
 import { id_att_message_notes } from '../MSObjectIdentifiers/id-att-message-notes.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

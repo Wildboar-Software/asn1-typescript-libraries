@@ -15,7 +15,7 @@ import {
     _decode_MedicalStaffIdentification,
     _encode_MedicalStaffIdentification,
 } from '../E-health-identification/MedicalStaffIdentification.ta.mjs';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary medicalStaffIdentification

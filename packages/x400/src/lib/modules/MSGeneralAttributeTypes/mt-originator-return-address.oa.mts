@@ -19,7 +19,7 @@ import {
     _encode_OriginatorReturnAddress,
 } from '../MTSAbstractService/OriginatorReturnAddress.ta.mjs';
 import { id_att_originator_return_address } from '../MSObjectIdentifiers/id-att-originator-return-address.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

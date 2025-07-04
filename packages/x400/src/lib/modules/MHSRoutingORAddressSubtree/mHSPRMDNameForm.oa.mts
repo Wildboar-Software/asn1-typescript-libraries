@@ -12,7 +12,7 @@ import {
 import { mHSPRMD } from '../MHSRoutingORAddressSubtree/mHSPRMD.oa.mjs';
 import { mHSPRMDName } from '../MHSRoutingORAddressSubtree/mHSPRMDName.oa.mjs';
 import { id_nf_mhs_prmd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-prmd.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
+import { NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSPRMDNameForm
  * @description

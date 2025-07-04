@@ -19,7 +19,7 @@ import {
     _encode_MessageParameters,
 } from '../IPMSInformationObjects/MessageParameters.ta.mjs';
 import { id_bat_message_parameters } from '../IPMSObjectIdentifiers/id-bat-message-parameters.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -24,7 +24,7 @@ import {
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary forwarded_content_token
  * @description

@@ -4,7 +4,7 @@ import {
     _decode_BasicAttConstraintsSyntax,
     _encode_BasicAttConstraintsSyntax,
 } from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_basicAttConstraints } from "./id-ce-basicAttConstraints.va.mjs";
 
 /**

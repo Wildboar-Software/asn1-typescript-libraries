@@ -31,12 +31,12 @@ import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ScanReportInformation
  * @description

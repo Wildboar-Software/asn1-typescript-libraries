@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { EXTENSION } from "../PKI-Stub/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../PKI-Stub/EXTENSION.oca.mjs";
 
 /**
  * @summary ExtensionSet

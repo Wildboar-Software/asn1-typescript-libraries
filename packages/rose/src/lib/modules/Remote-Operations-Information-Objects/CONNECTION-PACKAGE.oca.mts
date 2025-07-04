@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
+import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 
 /**
  * @summary CONNECTION_PACKAGE

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
 import { id_oc_alias } from "../InformationFramework/id-oc-alias.va.mjs";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa.mjs';
 import { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.mjs';
 import { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.mjs';

@@ -22,7 +22,7 @@ import {
     _decode_OriginatorCertificate,
     _encode_OriginatorCertificate,
 } from '../MTSAbstractService/OriginatorCertificate.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary originator_certificate
  * @description

@@ -14,11 +14,11 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
+} from '@wildboar/rose';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
 import { err_inconsistent_request } from '../MTSAccessProtocol/err-inconsistent-request.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**

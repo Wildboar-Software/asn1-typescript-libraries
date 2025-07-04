@@ -22,7 +22,7 @@ import {
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary multiple_originator_certificates
  * @description

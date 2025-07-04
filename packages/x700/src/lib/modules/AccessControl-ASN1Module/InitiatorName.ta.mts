@@ -14,12 +14,12 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.mjs';
+} from '@wildboar/cmip';
 import {
     AE_title,
     _decode_AE_title,
     _encode_AE_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs';
+} from '@wildboar/acse';
 
 /**
  * @summary InitiatorName

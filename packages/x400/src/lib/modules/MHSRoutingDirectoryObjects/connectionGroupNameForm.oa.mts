@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { connectionGroup } from '../MHSRoutingDirectoryObjects/connectionGroup.oa.mjs';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
+import { commonName } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_nf_connection_group } from '../MHSRoutingObjectIdentifiers/id-nf-connection-group.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
+import { NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary connectionGroupNameForm
  * @description

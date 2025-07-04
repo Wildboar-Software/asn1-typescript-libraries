@@ -14,7 +14,7 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/RelativeDistinguishedName.ta.mjs';
+} from '@wildboar/pki-stub';
 import {
     LastAttemptResult,
     _decode_LastAttemptResult,

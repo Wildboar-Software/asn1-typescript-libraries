@@ -6,7 +6,7 @@ import {
     _encode_DualStringSyntax,
 } from "../AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import { id_at_permission } from "../AttributeCertificateDefinitions/id-at-permission.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

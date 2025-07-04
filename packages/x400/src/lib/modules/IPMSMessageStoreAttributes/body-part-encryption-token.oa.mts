@@ -19,7 +19,7 @@ import {
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
 import { id_hat_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-hat-body-part-encryption-token.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -14,17 +14,17 @@ import {
     SetArgument,
     _decode_SetArgument,
     _encode_SetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetArgument.ta.mjs';
+} from '@wildboar/cmip';
 import {
     ActionArgument,
     _decode_ActionArgument,
     _encode_ActionArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionArgument.ta.mjs';
+} from '@wildboar/cmip';
 import {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.mjs';
+} from '@wildboar/cmip';
 /**
  * @summary ApplyOperationToMembershipRequest
  * @description

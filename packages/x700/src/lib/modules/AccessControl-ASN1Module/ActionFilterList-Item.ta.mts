@@ -15,7 +15,7 @@ import {
     ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionTypeId.ta.mjs';
+} from '@wildboar/cmip';
 import {
     FilterList,
     _decode_FilterList,

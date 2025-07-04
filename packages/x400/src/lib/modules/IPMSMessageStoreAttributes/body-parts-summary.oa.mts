@@ -19,7 +19,7 @@ import {
     _encode_BodyPartDescriptor,
 } from '../IPMSMessageStoreAttributes/BodyPartDescriptor.ta.mjs';
 import { id_sat_body_parts_summary } from '../IPMSObjectIdentifiers/id-sat-body-parts-summary.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

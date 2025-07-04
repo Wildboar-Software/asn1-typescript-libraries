@@ -12,7 +12,7 @@ import {
 import { mta_connect } from '../MTAAbstractService/mta-connect.oa.mjs';
 import { transfer } from '../MTAAbstractService/transfer.oa.mjs';
 import { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va.mjs';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
+import { CONTRACT } from '@wildboar/rose';
 /**
  * @summary mta_transfer
  * @description

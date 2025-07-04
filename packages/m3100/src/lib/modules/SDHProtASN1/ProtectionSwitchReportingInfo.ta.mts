@@ -14,12 +14,12 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/RelativeDistinguishedName.ta.mjs';
+} from '@wildboar/pki-stub';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 
 /**
  * @summary ProtectionSwitchReportingInfo

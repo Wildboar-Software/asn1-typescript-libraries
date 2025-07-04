@@ -15,7 +15,7 @@ import {
     _encode_E_setupError,
 } from '../E-health-common/E-setupError.ta.mjs';
 import { id_health_setup_err } from '../E-health-common/id-health-setup-err.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary health_setup_err

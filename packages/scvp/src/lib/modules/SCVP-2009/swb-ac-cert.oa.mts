@@ -15,7 +15,7 @@ import {
   _encode_AttributeCertificate,
 } from '@wildboar/x500/AttributeCertificateDefinitions';
 import { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va.mjs';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 /**
  * @summary swb_ac_cert
  * @description

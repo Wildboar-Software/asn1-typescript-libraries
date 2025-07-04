@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_oc_protectedPrivilegePolicy } from "../AttributeCertificateDefinitions/id-oc-protectedPrivilegePolicy.va.mjs";
 import { protPrivPolicy } from "../AttributeCertificateDefinitions/protPrivPolicy.oa.mjs";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

@@ -15,7 +15,7 @@ import {
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';
 import { id_swb_aa_cert_path } from '../SCVP-2009/id-swb-aa-cert-path.va.mjs';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 /**
  * @summary swb_aa_cert_path
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

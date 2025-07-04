@@ -20,7 +20,7 @@ import {
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';
 import { contentCorrelatorMatch } from '../MSMatchingRules/contentCorrelatorMatch.oa.mjs';
 import { id_att_content_correlator } from '../MSObjectIdentifiers/id-att-content-correlator.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

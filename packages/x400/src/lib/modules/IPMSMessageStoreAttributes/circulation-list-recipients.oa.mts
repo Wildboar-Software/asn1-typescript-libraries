@@ -24,7 +24,7 @@ import { circulationMemberSubstringElementsMatch } from '../IPMSMessageStoreAttr
 import { circulationMemberSingleElementMatch } from '../IPMSMessageStoreAttributes/circulationMemberSingleElementMatch.oa.mjs';
 import { circulationMemberCheckmarkMatch } from '../IPMSMessageStoreAttributes/circulationMemberCheckmarkMatch.oa.mjs';
 import { id_hat_circulation_list_recipients } from '../IPMSObjectIdentifiers/id-hat-circulation-list-recipients.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

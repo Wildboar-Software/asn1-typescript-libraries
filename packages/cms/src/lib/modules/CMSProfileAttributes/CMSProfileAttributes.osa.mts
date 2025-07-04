@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import { type ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { aa_contentLocation } from "../CMSProfileAttributes/aa-contentLocation.oa.mjs";
 import { aa_contentLocations } from "../CMSProfileAttributes/aa-contentLocations.oa.mjs";
 import { aa_parentBlock } from "../CMSProfileAttributes/aa-parentBlock.oa.mjs";

@@ -20,7 +20,7 @@ import {
 } from '../IPMSInformationObjects/RelatedIPMsSubfield.ta.mjs';
 import { iPMIdentifierMatch } from '../IPMSMessageStoreAttributes/iPMIdentifierMatch.oa.mjs';
 import { id_hat_related_IPMs } from '../IPMSObjectIdentifiers/id-hat-related-IPMs.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

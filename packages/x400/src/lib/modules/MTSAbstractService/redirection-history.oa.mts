@@ -22,7 +22,7 @@ import {
     _decode_RedirectionHistory,
     _encode_RedirectionHistory,
 } from '../MTSAbstractService/RedirectionHistory.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary redirection_history
  * @description

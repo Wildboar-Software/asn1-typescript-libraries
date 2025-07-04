@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,

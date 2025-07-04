@@ -18,9 +18,9 @@ import {
     _decode_EDINotificationRequests,
     _encode_EDINotificationRequests,
 } from '../EDIMSInformationObjects/EDINotificationRequests.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_rat_edi_notification_requests_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-edi-notification-requests-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

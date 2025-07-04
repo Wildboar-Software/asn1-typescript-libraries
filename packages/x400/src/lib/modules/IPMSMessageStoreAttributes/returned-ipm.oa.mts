@@ -19,7 +19,7 @@ import {
     _encode_ReturnedIPMField,
 } from '../IPMSInformationObjects/ReturnedIPMField.ta.mjs';
 import { id_nat_returned_ipm } from '../IPMSObjectIdentifiers/id-nat-returned-ipm.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

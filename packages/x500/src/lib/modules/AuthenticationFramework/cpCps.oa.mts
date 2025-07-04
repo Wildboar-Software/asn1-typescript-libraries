@@ -2,7 +2,7 @@
 import { certificatePolicy } from "../AuthenticationFramework/certificatePolicy.oa.mjs";
 import { certificationPracticeStmt } from "../AuthenticationFramework/certificationPracticeStmt.oa.mjs";
 import { id_oc_cpCps } from "../AuthenticationFramework/id-oc-cpCps.va.mjs";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

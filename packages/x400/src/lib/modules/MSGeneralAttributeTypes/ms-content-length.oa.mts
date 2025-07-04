@@ -18,9 +18,9 @@ import {
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
-import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
+import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_att_content_length } from '../MSObjectIdentifiers/id-att-content-length.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

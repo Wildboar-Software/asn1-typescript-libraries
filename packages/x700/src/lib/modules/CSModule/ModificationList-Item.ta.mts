@@ -17,7 +17,7 @@ import {
     replace /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.mjs';
+} from '@wildboar/cmip';
 /**
  * @summary ModificationList_Item
  * @description

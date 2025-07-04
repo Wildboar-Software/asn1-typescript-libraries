@@ -15,7 +15,7 @@ import {
     _encode_SignedData,
 } from '../CmsTelebiometric/SignedData.ta.mjs';
 import { id_signedData } from '../CmsTelebiometric/id-signedData.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary signedData

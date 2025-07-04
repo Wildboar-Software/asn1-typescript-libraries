@@ -5,7 +5,7 @@ import {
     _encode_HolderNameConstraintsSyntax,
 } from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.mjs";
 import { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary holderNameConstraints
  * @description

@@ -6,7 +6,7 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import { attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/attributeCertificateExactMatch.oa.mjs";
 import { id_at_aACertificate } from "../AttributeCertificateDefinitions/id-at-aACertificate.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

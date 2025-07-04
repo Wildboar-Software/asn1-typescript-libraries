@@ -2,7 +2,7 @@
 import { freshestCRL } from "../CertificateExtensions/freshestCRL.oa.mjs";
 import { id_asx_freshestCRL } from "../ExtensionAttributes/id-asx-freshestCRL.va.mjs";
 import { id_ce_a_freshestCRL } from "../ExtensionAttributes/id-ce-a-freshestCRL.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

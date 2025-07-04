@@ -2,7 +2,7 @@
 import { attributeMappings } from "../AttributeCertificateDefinitions/attributeMappings.oa.mjs";
 import { id_asx_attributeMappings } from "../ExtensionAttributes/id-asx-attributeMappings.va.mjs";
 import { id_ce_a_attributeMappings } from "../ExtensionAttributes/id-ce-a-attributeMappings.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

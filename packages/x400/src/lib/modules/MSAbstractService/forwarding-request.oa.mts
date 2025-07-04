@@ -22,7 +22,7 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary forwarding_request
  * @description

@@ -24,7 +24,7 @@ import {
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
 } from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary message_origin_authentication_check
  * @description

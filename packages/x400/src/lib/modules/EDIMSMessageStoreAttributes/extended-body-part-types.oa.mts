@@ -15,9 +15,9 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
+import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_bat_extended_body_part_types } from '../EDIMSObjectIdentifiers/id-bat-extended-body-part-types.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

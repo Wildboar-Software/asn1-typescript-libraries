@@ -18,9 +18,9 @@ import {
     _decode_InterchangeLength,
     _encode_InterchangeLength,
 } from '../EDIMSMessageStoreAttributes/InterchangeLength.ta.mjs';
-import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
+import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_bat_interchange_length } from '../EDIMSObjectIdentifiers/id-bat-interchange-length.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

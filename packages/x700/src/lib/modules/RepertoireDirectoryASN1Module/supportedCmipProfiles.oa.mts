@@ -11,14 +11,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
+import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+} from '@wildboar/x500/InformationFramework';
+import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
 /**
  * @summary supportedCmipProfiles

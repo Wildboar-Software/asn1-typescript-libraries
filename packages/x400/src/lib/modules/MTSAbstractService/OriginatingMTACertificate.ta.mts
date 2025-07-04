@@ -14,7 +14,7 @@ import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 /**
  * @summary OriginatingMTACertificate
  * @description

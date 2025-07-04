@@ -17,7 +17,7 @@ import { delete_ } from '../MSAbstractService/delete.oa.mjs';
 import { register_MS } from '../MSAbstractService/register-MS.oa.mjs';
 import { alert } from '../MSAbstractService/alert.oa.mjs';
 import { id_pt_retrieval_88 } from '../MSObjectIdentifiers/id-pt-retrieval-88.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary retrieval_88
  * @description

@@ -11,10 +11,10 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Pathname,
+    type Pathname,
     _decode_Pathname,
     _encode_Pathname,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Pathname.ta.mjs';
+} from '@wildboar/ftam';
 /**
  * @summary Pathname_Attribute
  * @description

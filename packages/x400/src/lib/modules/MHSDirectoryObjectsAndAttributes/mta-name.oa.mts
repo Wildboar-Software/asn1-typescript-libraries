@@ -15,7 +15,7 @@ import {
     _encode_mta_name_Type,
 } from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta.mjs';
 import { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va.mjs';
-import { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca.mjs';
+import { OTHER_NAME } from '@wildboar/x500/CertificateExtensions';
 /**
  * @summary mta_name
  * @description

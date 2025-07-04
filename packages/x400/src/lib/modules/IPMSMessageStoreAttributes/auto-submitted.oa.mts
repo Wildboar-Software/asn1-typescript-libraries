@@ -19,9 +19,9 @@ import {
     _decode_AutoSubmitted,
     _encode_AutoSubmitted,
 } from '../IPMSHeadingExtensions/AutoSubmitted.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_auto_submitted } from '../IPMSObjectIdentifiers/id-hat-auto-submitted.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

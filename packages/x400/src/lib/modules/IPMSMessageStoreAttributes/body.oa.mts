@@ -19,7 +19,7 @@ import {
     _encode_Body,
 } from '../IPMSInformationObjects/Body.ta.mjs';
 import { id_bat_body } from '../IPMSObjectIdentifiers/id-bat-body.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -5,7 +5,7 @@ import {
     _encode_AttributeIntegrityInfo,
 } from "../EnhancedSecurity/AttributeIntegrityInfo.ta.mjs";
 import { id_at_attributeIntegrityInfo } from "../EnhancedSecurity/id-at-attributeIntegrityInfo.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

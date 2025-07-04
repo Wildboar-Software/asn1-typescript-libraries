@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa.mjs';
 import { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa.mjs';
 /**

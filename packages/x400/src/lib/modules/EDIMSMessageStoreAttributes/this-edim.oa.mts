@@ -20,7 +20,7 @@ import {
 } from '../EDIMSInformationObjects/ThisEDIMField.ta.mjs';
 import { iPMIdentifierMatch } from '../IPMSMessageStoreAttributes/iPMIdentifierMatch.oa.mjs';
 import { id_hat_this_edim } from '../EDIMSObjectIdentifiers/id-hat-this-edim.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

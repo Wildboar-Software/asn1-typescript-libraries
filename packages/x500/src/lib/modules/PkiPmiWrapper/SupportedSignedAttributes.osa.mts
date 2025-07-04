@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { contentType } from "../PkiPmiWrapper/contentType.oa.mjs";
 import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.mjs";
 /**

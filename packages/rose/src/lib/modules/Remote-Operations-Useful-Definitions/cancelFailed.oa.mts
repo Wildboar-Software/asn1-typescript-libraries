@@ -22,7 +22,7 @@ import {
   _decode_cancelFailed_ParameterType,
   _encode_cancelFailed_ParameterType,
 } from '../Remote-Operations-Useful-Definitions/cancelFailed-ParameterType.ta.mjs';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.mjs';
+import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.mjs';
 
 /**
  * @summary cancelFailed

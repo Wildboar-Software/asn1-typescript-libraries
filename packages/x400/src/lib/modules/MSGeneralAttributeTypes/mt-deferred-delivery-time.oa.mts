@@ -18,10 +18,10 @@ import {
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
-import { uTCTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeMatch.oa.mjs';
-import { uTCTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeOrderingMatch.oa.mjs';
+import { uTCTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { uTCTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_att_deferred_delivery_time } from '../MSObjectIdentifiers/id-att-deferred-delivery-time.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

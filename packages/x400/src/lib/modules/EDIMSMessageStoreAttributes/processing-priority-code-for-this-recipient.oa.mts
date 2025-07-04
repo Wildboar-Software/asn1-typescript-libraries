@@ -20,7 +20,7 @@ import {
 } from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.mjs';
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { id_rat_processing_priority_code_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-processing-priority-code-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

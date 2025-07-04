@@ -22,7 +22,7 @@ import {
     _decode_ContentCorrelator,
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary content_correlator
  * @description

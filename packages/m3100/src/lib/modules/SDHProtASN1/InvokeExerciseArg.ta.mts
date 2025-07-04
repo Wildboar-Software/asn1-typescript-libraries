@@ -20,7 +20,7 @@ import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 
 /**
  * @summary InvokeExerciseArg

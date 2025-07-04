@@ -15,7 +15,7 @@ import {
     _encode_EnvelopedData,
 } from '../CmsTelebiometric/EnvelopedData.ta.mjs';
 import { id_envelopedData } from '../CmsTelebiometric/id-envelopedData.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary envelopedData

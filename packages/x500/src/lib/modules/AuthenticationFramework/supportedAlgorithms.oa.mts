@@ -7,7 +7,7 @@ import {
 } from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
 import { x509SupportedAlgorithm } from "../AuthenticationFramework/x509SupportedAlgorithm.oa.mjs";
 import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

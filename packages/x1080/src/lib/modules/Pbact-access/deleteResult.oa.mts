@@ -15,7 +15,7 @@ import {
     _encode_DeleteResult,
 } from '../Pbact-access/DeleteResult.ta.mjs';
 import { id_deleteResult } from '../Pbact-access/id-deleteResult.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary deleteResult

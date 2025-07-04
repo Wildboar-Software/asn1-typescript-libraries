@@ -18,9 +18,9 @@ import {
     _decode_ResponsibilityForwarded,
     _encode_ResponsibilityForwarded,
 } from '../EDIMSInformationObjects/ResponsibilityForwarded.ta.mjs';
-import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
+import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_responsibility_forwarded } from '../EDIMSObjectIdentifiers/id-hat-responsibility-forwarded.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

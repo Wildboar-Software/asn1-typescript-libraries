@@ -2,7 +2,7 @@
 import { protRestrict } from "../CertificateExtensions/protRestrict.oa.mjs";
 import { id_asx_protRestrict } from "../ExtensionAttributes/id-asx-protRestrict.va.mjs";
 import { id_ce_a_protRestrict } from "../ExtensionAttributes/id-ce-a-protRestrict.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

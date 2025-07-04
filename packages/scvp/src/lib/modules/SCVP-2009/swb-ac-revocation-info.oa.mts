@@ -15,7 +15,7 @@ import {
   _encode_RevInfoWantBack,
 } from '../SCVP-2009/RevInfoWantBack.ta.mjs';
 import { id_swb_ac_revocation_info } from '../SCVP-2009/id-swb-ac-revocation-info.va.mjs';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 /**
  * @summary swb_ac_revocation_info
  * @description

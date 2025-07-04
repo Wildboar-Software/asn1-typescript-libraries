@@ -16,32 +16,32 @@ import {
     _enum_for_SourceIndicator,
     _decode_SourceIndicator,
     _encode_SourceIndicator,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SourceIndicator.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ObjectInfo
  * @description
