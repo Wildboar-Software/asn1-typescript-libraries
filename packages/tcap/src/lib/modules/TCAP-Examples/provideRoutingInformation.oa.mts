@@ -9,15 +9,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.mjs';
+import type { OPERATION } from '@wildboar/rose';
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
-import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
 import {
     RequestArgument,
     _decode_RequestArgument,
@@ -33,6 +31,7 @@ import { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.
 import { calledBarred } from '../TCAP-Examples/calledBarred.oa.mjs';
 import { processingFailure } from '../TCAP-Examples/processingFailure.oa.mjs';
 import { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa.mjs';
+
 /**
  * @summary provideRoutingInformation
  * @description

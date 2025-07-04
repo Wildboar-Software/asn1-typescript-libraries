@@ -96,11 +96,10 @@ export class AttributeDescriptorSyntax {
      * @returns {AttributeDescriptorSyntax}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeDescriptorSyntax]: AttributeDescriptorSyntax[_K];
             }
-        >
     ): AttributeDescriptorSyntax {
         return new AttributeDescriptorSyntax(
             _o.identifier,

@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
+import type { CONTRACT } from '@wildboar/rose';
 import {
     DialogueMode,
     _enum_for_DialogueMode,
@@ -26,6 +26,7 @@ import {
     _decode_Termination,
     _encode_Termination,
 } from '../TC-Notation-Extensions/Termination.ta.mjs';
+
 /**
  * @summary APPLICATION_CONTEXT
  * @description

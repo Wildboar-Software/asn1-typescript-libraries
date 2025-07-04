@@ -11,10 +11,11 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
+} from '@wildboar/rose';
+
 /**
  * @summary TCInvokeIdSet
  * @description

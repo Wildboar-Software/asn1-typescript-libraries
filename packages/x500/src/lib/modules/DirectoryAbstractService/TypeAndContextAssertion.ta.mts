@@ -67,11 +67,10 @@ export class TypeAndContextAssertion {
      * @returns {TypeAndContextAssertion}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof TypeAndContextAssertion]: TypeAndContextAssertion[_K];
             }
-        >
     ): TypeAndContextAssertion {
         return new TypeAndContextAssertion(
             _o.type_,

@@ -56,11 +56,10 @@ export class AttributeMappings_Item_typeMappings {
      * @returns {AttributeMappings_Item_typeMappings}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeMappings_Item_typeMappings]: AttributeMappings_Item_typeMappings[_K];
             }
-        >
     ): AttributeMappings_Item_typeMappings {
         return new AttributeMappings_Item_typeMappings(
             _o.local,

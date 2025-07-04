@@ -64,11 +64,10 @@ export class AttributeValueIntegrityInfoContent {
      * @returns {AttributeValueIntegrityInfoContent}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeValueIntegrityInfoContent]: AttributeValueIntegrityInfoContent[_K];
             }
-        >
     ): AttributeValueIntegrityInfoContent {
         return new AttributeValueIntegrityInfoContent(
             _o.signer,

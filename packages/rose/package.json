@@ -38,7 +38,6 @@
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/acse": "npm:@jsr/wildboar__acse@2.x.x",
-        "@wildboar/rtse": "npm:@jsr/wildboar__rtse@2.x.x",
-        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x"
+        "@wildboar/rtse": "npm:@jsr/wildboar__rtse@2.x.x"
     }
 }

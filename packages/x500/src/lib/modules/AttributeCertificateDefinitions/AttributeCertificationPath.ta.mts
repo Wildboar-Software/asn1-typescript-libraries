@@ -64,11 +64,10 @@ export class AttributeCertificationPath {
      * @returns {AttributeCertificationPath}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeCertificationPath]: AttributeCertificationPath[_K];
             }
-        >
     ): AttributeCertificationPath {
         return new AttributeCertificationPath(
             _o.attributeCertificate,

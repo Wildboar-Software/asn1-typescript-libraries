@@ -56,11 +56,10 @@ export class Attribute_valuesWithContext_Item {
      * @returns {Attribute_valuesWithContext_Item}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof Attribute_valuesWithContext_Item]: Attribute_valuesWithContext_Item[_K];
             }
-        >
     ): Attribute_valuesWithContext_Item {
         return new Attribute_valuesWithContext_Item(
             _o.value,

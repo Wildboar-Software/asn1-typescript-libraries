@@ -72,11 +72,10 @@ export class SupportedPublicKeyAlgorithms {
      * @returns {SupportedPublicKeyAlgorithms}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof SupportedPublicKeyAlgorithms]: SupportedPublicKeyAlgorithms[_K];
             }
-        >
     ): SupportedPublicKeyAlgorithms {
         return new SupportedPublicKeyAlgorithms(
             _o.algorithmIdentifier,

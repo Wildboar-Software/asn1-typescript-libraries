@@ -10,6 +10,7 @@ import {
     _decode_DayTime,
     _encode_DayTime,
 } from "../SelectedAttributeTypes/DayTime.ta.mjs";
+
 /**
  * @summary DayTimeBand
  * @description
@@ -75,7 +76,7 @@ export class DayTimeBand {
      * @method
      */
     public static get _default_value_for_startDayTime(): DayTime {
-        return DayTime._from_object({ hour: 0 });
+        return DayTime._from_object({ hour: 0, minute: 0, second: 0, _unrecognizedExtensionsList: [] });
     }
     /**
      * @summary Getter that returns the default value for `endDayTime`.
@@ -84,7 +85,7 @@ export class DayTimeBand {
      * @method
      */
     public static get _default_value_for_endDayTime(): DayTime {
-        return DayTime._from_object({ hour: 23, minute: 59, second: 59 });
+        return DayTime._from_object({ hour: 23, minute: 59, second: 59, _unrecognizedExtensionsList: [] });
     }
 }
 

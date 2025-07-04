@@ -67,11 +67,10 @@ export class AttributeTypeValueContexts {
      * @returns {AttributeTypeValueContexts}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeTypeValueContexts]: AttributeTypeValueContexts[_K];
             }
-        >
     ): AttributeTypeValueContexts {
         return new AttributeTypeValueContexts(
             _o.type_,

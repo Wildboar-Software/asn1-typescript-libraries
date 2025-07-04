@@ -59,11 +59,10 @@ export class HolderNameConstraintsSyntax {
      * @returns {HolderNameConstraintsSyntax}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof HolderNameConstraintsSyntax]: HolderNameConstraintsSyntax[_K];
             }
-        >
     ): HolderNameConstraintsSyntax {
         return new HolderNameConstraintsSyntax(
             _o.permittedSubtrees,

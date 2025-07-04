@@ -33,6 +33,7 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/cms": "npm:@jsr/wildboar__cms@2.x.x"
     }
 }

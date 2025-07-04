@@ -56,11 +56,10 @@ export class PolicyMappingsSyntax_Item {
      * @returns {PolicyMappingsSyntax_Item}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof PolicyMappingsSyntax_Item]: PolicyMappingsSyntax_Item[_K];
             }
-        >
     ): PolicyMappingsSyntax_Item {
         return new PolicyMappingsSyntax_Item(
             _o.issuerDomainPolicy,

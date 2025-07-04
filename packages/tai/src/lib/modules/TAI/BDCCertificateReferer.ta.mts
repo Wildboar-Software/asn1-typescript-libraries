@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/InformationFramework";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/AuthenticationFramework";
-import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/CertificateExtensions";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/x500/InformationFramework";
+import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/AuthenticationFramework";
+import { type KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/CertificateExtensions";
 
 /**
  * @summary BDCCertificateReferer

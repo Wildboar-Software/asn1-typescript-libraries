@@ -17,12 +17,10 @@ import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CertificateSet.ta.mjs";
-import {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.mjs";
+} from "@wildboar/cms";
 
 /**
  * @summary LongTermValidation

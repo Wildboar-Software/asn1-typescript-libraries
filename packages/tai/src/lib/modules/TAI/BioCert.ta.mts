@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildboar/x500/AttributeCertificateDefinitions";
-import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "@wildboar/x500/CertificateExtensions";
+import { type GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "@wildboar/x500/CertificateExtensions";
 import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } from "@wildboar/x500/AttributeCertificateDefinitions";
 
 /**

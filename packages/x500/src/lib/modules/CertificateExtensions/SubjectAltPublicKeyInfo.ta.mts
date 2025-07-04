@@ -53,11 +53,10 @@ export class SubjectAltPublicKeyInfo {
      * @returns {SubjectAltPublicKeyInfo}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof SubjectAltPublicKeyInfo]: SubjectAltPublicKeyInfo[_K];
             }
-        >
     ): SubjectAltPublicKeyInfo {
         return new SubjectAltPublicKeyInfo(
             _o.algorithm,

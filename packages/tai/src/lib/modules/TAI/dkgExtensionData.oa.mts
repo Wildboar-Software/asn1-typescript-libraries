@@ -11,7 +11,8 @@ import {
 } from "@wildboar/asn1";
 import { DkgExtensionDataSyntax, _decode_DkgExtensionDataSyntax, _encode_DkgExtensionDataSyntax } from "../TAI/DkgExtensionDataSyntax.ta.mjs";
 import { id_tai_ce_dgkExtensionData } from "../TAI/id-tai-ce-dgkExtensionData.va.mjs";
-import { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
+import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
+
 /**
  * @summary dkgExtensionData
  * @description

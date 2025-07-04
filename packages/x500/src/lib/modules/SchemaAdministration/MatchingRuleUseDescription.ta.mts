@@ -82,11 +82,10 @@ export class MatchingRuleUseDescription {
      * @returns {MatchingRuleUseDescription}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof MatchingRuleUseDescription]: MatchingRuleUseDescription[_K];
             }
-        >
     ): MatchingRuleUseDescription {
         return new MatchingRuleUseDescription(
             _o.identifier,

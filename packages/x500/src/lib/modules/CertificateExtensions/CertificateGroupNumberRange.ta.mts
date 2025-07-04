@@ -56,11 +56,10 @@ export class CertificateGroupNumberRange {
      * @returns {CertificateGroupNumberRange}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof CertificateGroupNumberRange]: CertificateGroupNumberRange[_K];
             }
-        >
     ): CertificateGroupNumberRange {
         return new CertificateGroupNumberRange(
             _o.startingNumber,

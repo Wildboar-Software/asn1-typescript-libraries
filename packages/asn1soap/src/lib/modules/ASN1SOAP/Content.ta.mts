@@ -19,7 +19,7 @@ import {
 import {
   _decode_Document,
   _encode_Document,
-} from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/Document.ta.mjs';
+} from '@wildboar/fast-infoset';
 
 
 /**

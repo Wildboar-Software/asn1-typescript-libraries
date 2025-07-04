@@ -86,7 +86,7 @@ export class DayTime {
      * @returns {DayTime}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof DayTime]: DayTime[_K] }>
+        _o: { [_K in keyof DayTime]: DayTime[_K] }
     ): DayTime {
         return new DayTime(
             _o.hour,

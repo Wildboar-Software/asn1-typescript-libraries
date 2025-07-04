@@ -14,12 +14,11 @@ import {
     Bind,
     _decode_Bind,
     _encode_Bind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Bind.ta.mjs';
-import {
     Unbind,
     _decode_Unbind,
     _encode_Unbind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta.mjs';
+} from '@wildboar/rose';
+
 /**
  * @summary ConnectionAS
  * @description

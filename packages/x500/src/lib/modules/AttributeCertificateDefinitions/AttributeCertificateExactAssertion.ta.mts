@@ -64,11 +64,10 @@ export class AttributeCertificateExactAssertion {
      * @returns {AttributeCertificateExactAssertion}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeCertificateExactAssertion]: AttributeCertificateExactAssertion[_K];
             }
-        >
     ): AttributeCertificateExactAssertion {
         return new AttributeCertificateExactAssertion(
             _o.serialNumber,

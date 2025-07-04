@@ -93,11 +93,10 @@ export class SignedSecurityLabelContent {
      * @returns {SignedSecurityLabelContent}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof SignedSecurityLabelContent]: SignedSecurityLabelContent[_K];
             }
-        >
     ): SignedSecurityLabelContent {
         return new SignedSecurityLabelContent(
             _o.attHash,

@@ -72,11 +72,10 @@ export class CertificateListContent_revokedCertificates_Item {
      * @returns {CertificateListContent_revokedCertificates_Item}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof CertificateListContent_revokedCertificates_Item]: CertificateListContent_revokedCertificates_Item[_K];
             }
-        >
     ): CertificateListContent_revokedCertificates_Item {
         return new CertificateListContent_revokedCertificates_Item(
             _o.serialNumber,

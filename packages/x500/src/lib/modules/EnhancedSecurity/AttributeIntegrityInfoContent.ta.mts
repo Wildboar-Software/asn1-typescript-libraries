@@ -76,11 +76,10 @@ export class AttributeIntegrityInfoContent {
      * @returns {AttributeIntegrityInfoContent}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeIntegrityInfoContent]: AttributeIntegrityInfoContent[_K];
             }
-        >
     ): AttributeIntegrityInfoContent {
         return new AttributeIntegrityInfoContent(
             _o.scope,

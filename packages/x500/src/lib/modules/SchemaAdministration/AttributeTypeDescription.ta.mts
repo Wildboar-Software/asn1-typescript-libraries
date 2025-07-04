@@ -87,11 +87,10 @@ export class AttributeTypeDescription {
      * @returns {AttributeTypeDescription}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeTypeDescription]: AttributeTypeDescription[_K];
             }
-        >
     ): AttributeTypeDescription {
         return new AttributeTypeDescription(
             _o.identifier,

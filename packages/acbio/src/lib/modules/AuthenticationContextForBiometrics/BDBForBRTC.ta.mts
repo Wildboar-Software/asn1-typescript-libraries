@@ -32,7 +32,7 @@ import {
     PatronFormat,
     _decode_PatronFormat,
     _encode_PatronFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta.mjs';
+} from '@wildboar/cbeff';
 import {
     UserInformation,
     _decode_UserInformation,

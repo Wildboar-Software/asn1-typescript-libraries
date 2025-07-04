@@ -52,11 +52,10 @@ export class RequestAttribute_defaultValues_Item {
      * @returns {RequestAttribute_defaultValues_Item}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof RequestAttribute_defaultValues_Item]: RequestAttribute_defaultValues_Item[_K];
             }
-        >
     ): RequestAttribute_defaultValues_Item {
         return new RequestAttribute_defaultValues_Item(
             _o.entryType,

@@ -11,14 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ROS,
+  type ROS,
   _decode_ROS,
   _encode_ROS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';
-import {
-    _decode_ReturnResult,
-    _encode_ReturnResult,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta.mjs';
+  _decode_ReturnResult,
+  _encode_ReturnResult,
+} from '@wildboar/rose';
 
 /**
  * @summary Component

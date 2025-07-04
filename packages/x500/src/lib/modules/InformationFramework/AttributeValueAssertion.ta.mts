@@ -70,11 +70,10 @@ export class AttributeValueAssertion {
      * @returns {AttributeValueAssertion}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof AttributeValueAssertion]: AttributeValueAssertion[_K];
             }
-        >
     ): AttributeValueAssertion {
         return new AttributeValueAssertion(
             _o.type_,

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/InformationFramework";
 import { SecurityLevelBioReference, _decode_SecurityLevelBioReference, _encode_SecurityLevelBioReference } from "../TAI/SecurityLevelBioReference.ta.mjs";
 import { id_tai_at_bioSecLevelReference } from "../TAI/id-tai-at-bioSecLevelReference.va.mjs";

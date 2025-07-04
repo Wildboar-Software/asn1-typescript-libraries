@@ -61,11 +61,10 @@ export class AllowedAttributeAssignments_Item {
      * @returns {AllowedAttributeAssignments_Item}
      */
     public static _from_object(
-        _o: Partial<
+        _o: 
             {
                 [_K in keyof AllowedAttributeAssignments_Item]: AllowedAttributeAssignments_Item[_K];
             }
-        >
     ): AllowedAttributeAssignments_Item {
         return new AllowedAttributeAssignments_Item(
             _o.attributes,

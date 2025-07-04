@@ -60,11 +60,10 @@ export class MultipleMatchingLocalities {
      * @returns {MultipleMatchingLocalities}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof MultipleMatchingLocalities]: MultipleMatchingLocalities[_K];
             }
-        >
     ): MultipleMatchingLocalities {
         return new MultipleMatchingLocalities(
             _o.matchingRuleUsed,

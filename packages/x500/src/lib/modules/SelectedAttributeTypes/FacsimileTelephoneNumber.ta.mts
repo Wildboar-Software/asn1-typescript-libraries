@@ -64,11 +64,10 @@ export class FacsimileTelephoneNumber {
      * @returns {FacsimileTelephoneNumber}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof FacsimileTelephoneNumber]: FacsimileTelephoneNumber[_K];
             }
-        >
     ): FacsimileTelephoneNumber {
         return new FacsimileTelephoneNumber(
             _o.telephoneNumber,

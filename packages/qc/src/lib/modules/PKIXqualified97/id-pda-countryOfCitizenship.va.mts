@@ -1,8 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs";
+import type { AttributeType } from "@wildboar/x500/InformationFramework";
 import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
-
 
 /**
  * @summary id_pda_countryOfCitizenship

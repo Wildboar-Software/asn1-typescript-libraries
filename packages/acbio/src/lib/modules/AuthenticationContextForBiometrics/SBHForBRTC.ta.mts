@@ -14,37 +14,25 @@ import {
     CBEFFVersion,
     _decode_CBEFFVersion,
     _encode_CBEFFVersion,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta.mjs';
-import {
     BIRIndex,
     _decode_BIRIndex,
     _encode_BIRIndex,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs';
-import {
     BDBValidityPeriod,
     _decode_BDBValidityPeriod,
     _encode_BDBValidityPeriod,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs';
-import {
     Quality,
     _decode_Quality,
     _encode_Quality,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta.mjs';
-import {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs';
-import {
     IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs';
-import {
     BDBFormat,
     _decode_BDBFormat,
     _encode_BDBFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs';
+} from '@wildboar/cbeff';
 
 /**
  * @summary SBHForBRTC

@@ -120,11 +120,10 @@ export class DITContentRuleDescription extends DITContentRule {
      * @returns {DITContentRuleDescription}
      */
     public static override _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof DITContentRuleDescription]: DITContentRuleDescription[_K];
             }
-        >
     ): DITContentRuleDescription {
         return new DITContentRuleDescription(
             _o.structuralObjectClass,

@@ -32,6 +32,7 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/fast-infoset": "npm:@jsr/wildboar__fast-infoset@2.x.x"
     }
 }

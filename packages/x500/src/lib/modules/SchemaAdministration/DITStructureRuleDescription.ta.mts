@@ -101,11 +101,10 @@ export class DITStructureRuleDescription extends DITStructureRule {
      * @returns {DITStructureRuleDescription}
      */
     public static override _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof DITStructureRuleDescription]: DITStructureRuleDescription[_K];
             }
-        >
     ): DITStructureRuleDescription {
         return new DITStructureRuleDescription(
             _o.ruleIdentifier,

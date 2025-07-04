@@ -35,6 +35,7 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x"
+        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
+        "@wildboar/attribute-asn1module": "npm:@jsr/wildboar__attribute-asn1module@2.x.x"
     }
 }

@@ -64,11 +64,10 @@ export class PrivilegePolicyIdentifier {
      * @returns {PrivilegePolicyIdentifier}
      */
     public static _from_object(
-        _o: Partial<
+        _o:
             {
                 [_K in keyof PrivilegePolicyIdentifier]: PrivilegePolicyIdentifier[_K];
             }
-        >
     ): PrivilegePolicyIdentifier {
         return new PrivilegePolicyIdentifier(
             _o.privilegePolicy,

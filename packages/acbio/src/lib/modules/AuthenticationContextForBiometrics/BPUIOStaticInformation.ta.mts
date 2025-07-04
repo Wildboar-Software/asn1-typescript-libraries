@@ -15,12 +15,10 @@ import {
     BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs';
-import {
     BiometricSubtype,
     _decode_BiometricSubtype,
     _encode_BiometricSubtype,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs';
+} from '@wildboar/cbeff';
 import {
     DataType,
     _decode_DataType,
