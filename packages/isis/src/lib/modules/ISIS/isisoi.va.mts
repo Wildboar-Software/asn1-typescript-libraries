@@ -10,7 +10,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { nl } from "@wildboar/nlm/src/lib/modules/NLM/nl.va.mjs";
+import { nl } from "@wildboar/nlm";
 
 /**
  * @summary isisoi

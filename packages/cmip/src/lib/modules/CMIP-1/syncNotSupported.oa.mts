@@ -12,18 +12,16 @@ import {
 import {
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
-import {
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
+import type { ERROR } from '@wildboar/rose';
 import {
   CMISSync,
   _enum_for_CMISSync,
   _decode_CMISSync,
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
 
 /**
  * @summary syncNotSupported

@@ -12,17 +12,15 @@ import {
 import {
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
-import {
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
+import type { ERROR } from '@wildboar/rose';
 import {
   ComplexityLimitation,
   _decode_ComplexityLimitation,
   _encode_ComplexityLimitation,
 } from '../CMIP-1/ComplexityLimitation.ta.mjs';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
 
 /**
  * @summary complexityLimitation

@@ -12,17 +12,15 @@ import {
 import {
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
-import {
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
+import type { ERROR } from '@wildboar/rose';
 import {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
 
 /**
  * @summary invalidAttributeValue

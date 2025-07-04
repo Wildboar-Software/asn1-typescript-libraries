@@ -11,10 +11,10 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ROS,
+  type ROS,
   _decode_ROS,
   _encode_ROS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';
+} from '@wildboar/rose';
 
 
 /**

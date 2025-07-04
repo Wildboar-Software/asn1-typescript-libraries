@@ -37,6 +37,7 @@
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/rose": "npm:@jsr/wildboar__rose@2.x.x",
         "@wildboar/cmip": "npm:@jsr/wildboar__cmip@2.x.x",
-        "@wildboar/gmi-attributemodule": "npm:@jsr/wildboar__gmi-attributemodule@2.x.x"
+        "@wildboar/gmi-attributemodule": "npm:@jsr/wildboar__gmi-attributemodule@2.x.x",
+        "@wildboar/nlm": "npm:@jsr/wildboar__nlm@2.x.x"
     }
 }
