@@ -9,10 +9,10 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { applicationEntity } from '@wildboar/x500/SelectedObjectClasses';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.mjs';
 import { sMASE } from '../RepertoireDirectoryASN1Module/sMASE.oa.mjs';
 import { cMISE } from '../RepertoireDirectoryASN1Module/cMISE.oa.mjs';
-import { CONTENT_RULE } from '@wildboar/x500/InformationFramework';
+import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.mjs';
 /**
  * @summary managementServiceElementsCR
  * @description

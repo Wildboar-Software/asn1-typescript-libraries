@@ -10,15 +10,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa.mjs';
-import { acse } from '@wildboar/rose';
-import { pData } from '@wildboar/rose';
-import { acse_abstract_syntax } from '@wildboar/rose';
+import { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa.mjs';
+import { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa.mjs';
+import { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa.mjs';
 import { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa.mjs';
 import { message_retrieval_abstract_syntax_88 } from '../MSAccessProtocol/message-retrieval-abstract-syntax-88.oa.mjs';
 import { message_administration_abstract_syntax_88 } from '../MTSAccessProtocol/message-administration-abstract-syntax-88.oa.mjs';
 import { ms_bind_unbind_abstract_syntax_88 } from '../MSAccessProtocol/ms-bind-unbind-abstract-syntax-88.oa.mjs';
 import { id_ac_ms_access_88 } from '../MHSProtocolObjectIdentifiers/id-ac-ms-access-88.va.mjs';
-import { APPLICATION_CONTEXT } from '@wildboar/rose';
+import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.mjs';
 /**
  * @summary ms_access_88
  * @description

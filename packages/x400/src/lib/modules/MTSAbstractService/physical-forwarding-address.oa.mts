@@ -22,7 +22,7 @@ import {
     _decode_PhysicalForwardingAddress,
     _encode_PhysicalForwardingAddress,
 } from '../MTSAbstractService/PhysicalForwardingAddress.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_forwarding_address
  * @description

@@ -14,7 +14,7 @@ import {
     ControlStatus,
     _decode_ControlStatus,
     _encode_ControlStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ControlStatus.ta.mjs';
 /**
  * @summary ControlStatusValue
  * @description

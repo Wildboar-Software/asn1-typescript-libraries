@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 import { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa.mjs";
 import { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa.mjs";
 import { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa.mjs";

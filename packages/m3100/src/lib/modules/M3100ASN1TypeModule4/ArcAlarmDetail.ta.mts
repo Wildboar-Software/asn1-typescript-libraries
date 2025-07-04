@@ -15,23 +15,23 @@ import {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
 import {
     AlarmStatus,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AlarmStatus.ta.mjs';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
 import {
     EventTime,
     _decode_EventTime,
     _encode_EventTime,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/EventTime.ta.mjs';
 
 
 /**

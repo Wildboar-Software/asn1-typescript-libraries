@@ -14,12 +14,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs';
 /**
  * @summary StateConditions_Item
  * @description

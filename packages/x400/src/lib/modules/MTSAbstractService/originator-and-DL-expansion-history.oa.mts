@@ -22,7 +22,7 @@ import {
     _decode_OriginatorAndDLExpansionHistory,
     _encode_OriginatorAndDLExpansionHistory,
 } from '../MTSAbstractService/OriginatorAndDLExpansionHistory.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary originator_and_DL_expansion_history
  * @description

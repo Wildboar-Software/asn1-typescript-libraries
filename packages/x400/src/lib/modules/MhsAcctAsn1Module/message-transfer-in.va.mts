@@ -13,7 +13,7 @@ import {
     EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
 /**
  * @summary message_transfer_in
  * @description

@@ -19,7 +19,7 @@ import {
     _encode_BodyPartSecurityLabel,
 } from '../IPMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs';
 import { id_hat_body_part_security_label } from '../IPMSObjectIdentifiers/id-hat-body-part-security-label.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

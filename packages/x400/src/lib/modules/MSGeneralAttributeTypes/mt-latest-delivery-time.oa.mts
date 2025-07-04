@@ -18,10 +18,10 @@ import {
     _decode_LatestDeliveryTime,
     _encode_LatestDeliveryTime,
 } from '../MTSAbstractService/LatestDeliveryTime.ta.mjs';
-import { uTCTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { uTCTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { uTCTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeMatch.oa.mjs';
+import { uTCTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeOrderingMatch.oa.mjs';
 import { id_att_latest_delivery_time } from '../MSObjectIdentifiers/id-att-latest-delivery-time.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

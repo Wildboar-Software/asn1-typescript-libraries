@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";

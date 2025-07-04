@@ -12,11 +12,11 @@ import {
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { id_aae_auto_forwarding_loop } from '../IPMSObjectIdentifiers/id-aae-auto-forwarding-loop.va.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**

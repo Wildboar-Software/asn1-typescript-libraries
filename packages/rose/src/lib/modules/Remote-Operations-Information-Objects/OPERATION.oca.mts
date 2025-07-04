@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.mjs';
+import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.mjs';
 import {
   Priority,
   _decode_Priority,

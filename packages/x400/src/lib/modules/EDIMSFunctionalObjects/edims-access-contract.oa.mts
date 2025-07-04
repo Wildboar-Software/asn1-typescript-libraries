@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { origination } from '../EDIMSAbstractService/origination.oa.mjs';
 import { reception } from '../EDIMSAbstractService/reception.oa.mjs';
-import { CONTRACT } from '@wildboar/rose';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
 /**
  * @summary edims_access_contract
  * @description

@@ -24,7 +24,7 @@ import { redirectionOrDLExpansionSubstringElementsMatch } from '../MSMatchingRul
 import { redirectionOrDLExpansionSingleElementMatch } from '../MSMatchingRules/redirectionOrDLExpansionSingleElementMatch.oa.mjs';
 import { redirectionReasonMatch } from '../MSMatchingRules/redirectionReasonMatch.oa.mjs';
 import { id_att_redirection_history } from '../MSObjectIdentifiers/id-att-redirection-history.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

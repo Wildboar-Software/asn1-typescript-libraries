@@ -15,7 +15,7 @@ import {
     _decode_PatientIdentification,
     _encode_PatientIdentification,
 } from '../E-health-identification/PatientIdentification.ta.mjs';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary patientIdentification

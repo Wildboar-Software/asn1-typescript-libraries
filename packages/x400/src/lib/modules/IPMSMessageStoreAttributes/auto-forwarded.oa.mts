@@ -18,9 +18,9 @@ import {
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
 } from '../IPMSInformationObjects/AutoForwardedField.ta.mjs';
-import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
 import { id_hat_auto_forwarded } from '../IPMSObjectIdentifiers/id-hat-auto-forwarded.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -12,7 +12,7 @@ import {
 import { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa.mjs';
 import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.mjs';
 import { id_nf_mhs_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-country.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
 /**
  * @summary mHSCountryNameForm
  * @description

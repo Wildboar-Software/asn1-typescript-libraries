@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { type CONTENT_TYPE } from "../TAI/CONTENT-TYPE.oca.mjs";
+import { CONTENT_TYPE } from "../TAI/CONTENT-TYPE.oca.mjs";
 import { bpuReport } from "../TAI/bpuReport.oa.mjs";
 /**
  * @summary ContentTypeBPUReport

@@ -18,10 +18,10 @@ import {
     _decode_SubmittedReplyStatus,
     _encode_SubmittedReplyStatus,
 } from '../IPMSMessageStoreAttributes/SubmittedReplyStatus.ta.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
 import { id_cat_submitted_reply_status } from '../IPMSObjectIdentifiers/id-cat-submitted-reply-status.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -9,17 +9,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/InformationFramework';
-import { applicationEntity } from '@wildboar/x500/SelectedObjectClasses';
-import { owner } from '@wildboar/x500/SelectedAttributeTypes';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.mjs';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.mjs';
 import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.mjs';
-import { protocolInformation } from '@wildboar/x500/SelectedAttributeTypes';
+import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_message_transfer_agent } from '../MHSObjectIdentifiers/id-oc-mhs-message-transfer-agent.va.mjs';
 /**
  * @summary mhs_message_transfer_agent

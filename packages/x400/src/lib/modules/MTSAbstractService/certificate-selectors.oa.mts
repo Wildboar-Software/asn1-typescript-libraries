@@ -22,7 +22,7 @@ import {
     _decode_CertificateSelectors,
     _encode_CertificateSelectors,
 } from '../MTSAbstractService/CertificateSelectors.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary certificate_selectors
  * @description

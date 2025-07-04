@@ -18,10 +18,10 @@ import {
     _decode_DateAndTimeOfPreparationField,
     _encode_DateAndTimeOfPreparationField,
 } from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta.mjs';
-import { uTCTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { uTCTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { uTCTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeMatch.oa.mjs';
+import { uTCTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeOrderingMatch.oa.mjs';
 import { id_hat_date_and_time_of_preparation } from '../EDIMSObjectIdentifiers/id-hat-date-and-time-of-preparation.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

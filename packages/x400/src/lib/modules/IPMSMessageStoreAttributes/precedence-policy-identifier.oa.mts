@@ -18,9 +18,9 @@ import {
     _decode_PrecedencePolicyIdentifier,
     _encode_PrecedencePolicyIdentifier,
 } from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
+import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_hat_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hat-precedence-policy-id.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

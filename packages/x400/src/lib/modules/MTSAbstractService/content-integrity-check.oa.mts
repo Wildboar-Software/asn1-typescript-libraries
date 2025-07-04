@@ -24,7 +24,7 @@ import {
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary content_integrity_check
  * @description

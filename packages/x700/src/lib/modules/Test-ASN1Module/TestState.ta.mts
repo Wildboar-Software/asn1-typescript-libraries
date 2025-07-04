@@ -16,22 +16,22 @@ import {
     _enum_for_OperationalState,
     _decode_OperationalState,
     _encode_OperationalState,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.mjs';
 import {
     ProceduralStatus,
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProceduralStatus.ta.mjs';
 import {
     ControlStatus,
     _decode_ControlStatus,
     _encode_ControlStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ControlStatus.ta.mjs';
 import {
     AvailabilityStatus,
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AvailabilityStatus.ta.mjs';
 /**
  * @summary TestState
  * @description

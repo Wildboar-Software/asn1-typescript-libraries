@@ -20,7 +20,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
@@ -30,7 +30,7 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs';
 import {
     SignerInfos,
     _decode_SignerInfos,

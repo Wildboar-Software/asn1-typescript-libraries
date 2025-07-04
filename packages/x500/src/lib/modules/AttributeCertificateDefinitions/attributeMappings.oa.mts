@@ -5,7 +5,7 @@ import {
     _encode_AttributeMappings,
 } from "../AttributeCertificateDefinitions/AttributeMappings.ta.mjs";
 import { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.mjs";
-import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary attributeMappings
  * @description

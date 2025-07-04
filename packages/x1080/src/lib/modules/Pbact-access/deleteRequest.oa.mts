@@ -15,7 +15,7 @@ import {
     _encode_DeleteRequest,
 } from '../Pbact-access/DeleteRequest.ta.mjs';
 import { id_deleteRequest } from '../Pbact-access/id-deleteRequest.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary deleteRequest

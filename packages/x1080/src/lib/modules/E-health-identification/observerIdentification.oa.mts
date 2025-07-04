@@ -15,7 +15,7 @@ import {
     _decode_ObserverIdentification,
     _encode_ObserverIdentification,
 } from '../E-health-identification/ObserverIdentification.ta.mjs';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary observerIdentification

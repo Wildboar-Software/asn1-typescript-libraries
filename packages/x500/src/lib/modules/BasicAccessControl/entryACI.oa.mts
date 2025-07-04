@@ -5,7 +5,7 @@ import {
     _encode_ACIItem,
 } from "../BasicAccessControl/ACIItem.ta.mjs";
 import { id_aca_entryACI } from "../BasicAccessControl/id-aca-entryACI.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

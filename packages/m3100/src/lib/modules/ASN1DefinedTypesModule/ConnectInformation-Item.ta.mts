@@ -21,7 +21,7 @@ import {
     _enum_for_AdministrativeState,
     _decode_AdministrativeState,
     _encode_AdministrativeState,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdministrativeState.ta.mjs';
 import {
     NamedCrossConnection,
     _decode_NamedCrossConnection,
@@ -31,7 +31,7 @@ import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
 import {
     UserLabel,
     _decode_UserLabel,

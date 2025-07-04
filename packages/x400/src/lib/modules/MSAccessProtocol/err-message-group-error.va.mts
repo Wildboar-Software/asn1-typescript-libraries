@@ -13,7 +13,7 @@ import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 /**
  * @summary err_message_group_error
  * @description

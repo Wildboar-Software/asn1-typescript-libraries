@@ -2,7 +2,7 @@
 import { authorityAttributeIdentifier } from "../AttributeCertificateDefinitions/authorityAttributeIdentifier.oa.mjs";
 import { id_asx_authorityAttributeIdentifier } from "../ExtensionAttributes/id-asx-authorityAttributeIdentifier.va.mjs";
 import { id_ce_a_authorityAttributeIdentifier } from "../ExtensionAttributes/id-ce-a-authorityAttributeIdentifier.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

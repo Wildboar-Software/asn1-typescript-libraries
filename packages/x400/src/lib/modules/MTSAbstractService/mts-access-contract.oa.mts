@@ -14,7 +14,7 @@ import { submission } from '../MTSAbstractService/submission.oa.mjs';
 import { delivery } from '../MTSAbstractService/delivery.oa.mjs';
 import { administration } from '../MTSAbstractService/administration.oa.mjs';
 import { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va.mjs';
-import { CONTRACT } from '@wildboar/rose';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
 /**
  * @summary mts_access_contract
  * @description

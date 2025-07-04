@@ -6,7 +6,7 @@ import {
     _decode_Targets,
     _encode_Targets,
 } from "../AttributeCertificateDefinitions/Targets.ta.mjs";
-import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary targetingInformation
  * @description

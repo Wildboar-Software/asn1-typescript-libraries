@@ -22,7 +22,7 @@ import {
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary recipient_certificate
  * @description

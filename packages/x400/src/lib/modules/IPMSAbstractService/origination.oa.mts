@@ -14,7 +14,7 @@ import { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa.mjs';
 import { originate_rn } from '../IPMSAbstractService/originate-rn.oa.mjs';
 import { originate_on } from '../IPMSAbstractService/originate-on.oa.mjs';
 import { id_pt_origination } from '../IPMSObjectIdentifiers/id-pt-origination.va.mjs';
-import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary origination
  * @description

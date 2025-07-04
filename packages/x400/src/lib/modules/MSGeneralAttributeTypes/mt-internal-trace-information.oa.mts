@@ -19,7 +19,7 @@ import {
     _encode_InternalTraceInformationElement,
 } from '../MTAAbstractService/InternalTraceInformationElement.ta.mjs';
 import { id_att_internal_trace_information } from '../MSObjectIdentifiers/id-att-internal-trace-information.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

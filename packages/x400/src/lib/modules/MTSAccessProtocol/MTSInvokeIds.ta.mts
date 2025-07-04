@@ -14,7 +14,7 @@ import {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
 /**
  * @summary MTSInvokeIds
  * @description

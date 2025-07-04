@@ -20,7 +20,7 @@ import {
 } from '../EDIMSInformationObjects/OriginatorField.ta.mjs';
 import { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa.mjs';
 import { id_hat_originator } from '../EDIMSObjectIdentifiers/id-hat-originator.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

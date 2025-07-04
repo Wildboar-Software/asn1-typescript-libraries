@@ -19,7 +19,7 @@ import {
     _encode_IPMSynopsis,
 } from '../IPMSMessageStoreAttributes/IPMSynopsis.ta.mjs';
 import { id_sat_ipm_synopsis } from '../IPMSObjectIdentifiers/id-sat-ipm-synopsis.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

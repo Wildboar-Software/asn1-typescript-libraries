@@ -1,4 +1,4 @@
-import { type ATTRIBUTE } from "@wildboar/x500/InformationFramework";
+import { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
     userApplications,
 } from "@wildboar/x500/InformationFramework";

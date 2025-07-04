@@ -18,9 +18,9 @@ import {
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
 } from '../MTSAbstractService/DeliveryFlags.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
 import { id_att_delivery_flags } from '../MSObjectIdentifiers/id-att-delivery-flags.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

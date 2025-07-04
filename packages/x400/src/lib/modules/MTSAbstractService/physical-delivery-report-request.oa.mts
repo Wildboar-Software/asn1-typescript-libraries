@@ -25,7 +25,7 @@ import {
     _decode_PhysicalDeliveryReportRequest,
     _encode_PhysicalDeliveryReportRequest,
 } from '../MTSAbstractService/PhysicalDeliveryReportRequest.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_delivery_report_request
  * @description

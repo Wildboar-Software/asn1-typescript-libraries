@@ -15,7 +15,7 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
-import { MATCHING_RULE } from '@wildboar/x500/InformationFramework';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
 /**
  * @summary X413ATTRIBUTE
  * @description

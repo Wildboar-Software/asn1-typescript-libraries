@@ -2,7 +2,7 @@
 import { orderedList } from "../CertificateExtensions/orderedList.oa.mjs";
 import { id_asx_orderedList } from "../ExtensionAttributes/id-asx-orderedList.va.mjs";
 import { id_ce_a_orderedList } from "../ExtensionAttributes/id-ce-a-orderedList.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

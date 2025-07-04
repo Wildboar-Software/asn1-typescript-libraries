@@ -24,7 +24,7 @@ import {
     _decode_ContentConfidentialityAlgorithmIdentifier,
     _encode_ContentConfidentialityAlgorithmIdentifier,
 } from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary content_confidentiality_algorithm_identifier
  * @description

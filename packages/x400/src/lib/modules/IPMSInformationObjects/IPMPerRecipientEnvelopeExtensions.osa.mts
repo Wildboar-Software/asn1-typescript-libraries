@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa.mjs';
 import { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa.mjs';
 import { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa.mjs';

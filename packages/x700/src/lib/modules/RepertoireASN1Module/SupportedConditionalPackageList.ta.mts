@@ -14,7 +14,7 @@ import {
     Packages,
     _decode_Packages,
     _encode_Packages,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta.mjs';
 /**
  * @summary SupportedConditionalPackageList
  * @description

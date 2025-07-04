@@ -12,7 +12,7 @@ import {
 import { mHSGenerationQualifier } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifier.oa.mjs';
 import { mHSGenerationQualifierAttribute } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifierAttribute.oa.mjs';
 import { id_nf_mhs_generation_qualifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-generation-qualifier.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
 /**
  * @summary mHSGenerationQualifierNameForm
  * @description

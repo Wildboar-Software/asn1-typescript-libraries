@@ -25,7 +25,7 @@ import {
     Destination,
     _decode_Destination,
     _encode_Destination,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Destination.ta.mjs';
 import {
     TransferInfo,
     _decode_TransferInfo,
@@ -35,7 +35,7 @@ import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
 /**
  * @summary DeliverInfo
  * @description

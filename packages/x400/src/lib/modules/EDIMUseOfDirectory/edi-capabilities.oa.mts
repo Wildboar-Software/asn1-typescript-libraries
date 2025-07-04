@@ -9,19 +9,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import {
     EDIUserCapability,
     _decode_EDIUserCapability,
     _encode_EDIUserCapability,
 } from '../EDIMUseOfDirectory/EDIUserCapability.ta.mjs';
-import { objectIdentifierFirstComponentMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { objectIdentifierFirstComponentMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs';
 import { id_dat_edi_capabilities } from '../EDIMUseOfDirectory/id-dat-edi-capabilities.va.mjs';
 /**
  * @summary edi_capabilities

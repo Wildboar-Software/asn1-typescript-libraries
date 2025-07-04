@@ -2,7 +2,7 @@
 import { cRLStreamIdentifier } from "../CertificateExtensions/cRLStreamIdentifier.oa.mjs";
 import { id_asx_cRLStreamIdentifier } from "../ExtensionAttributes/id-asx-cRLStreamIdentifier.va.mjs";
 import { id_ce_a_cRLStreamIdentifier } from "../ExtensionAttributes/id-ce-a-cRLStreamIdentifier.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

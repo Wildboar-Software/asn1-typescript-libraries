@@ -19,7 +19,7 @@ import {
     _encode_MessageParameters,
 } from '../EDIMSInformationObjects/MessageParameters.ta.mjs';
 import { id_bat_message_parameters } from '../EDIMSObjectIdentifiers/id-bat-message-parameters.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

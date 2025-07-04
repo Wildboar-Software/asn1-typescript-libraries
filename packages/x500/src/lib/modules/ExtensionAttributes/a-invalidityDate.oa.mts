@@ -2,7 +2,7 @@
 import { invalidityDate } from "../CertificateExtensions/invalidityDate.oa.mjs";
 import { id_asx_invalidityDate } from "../ExtensionAttributes/id-asx-invalidityDate.va.mjs";
 import { id_ce_a_invalidityDate } from "../ExtensionAttributes/id-ce-a-invalidityDate.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

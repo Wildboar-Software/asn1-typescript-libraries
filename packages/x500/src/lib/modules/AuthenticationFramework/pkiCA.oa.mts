@@ -5,7 +5,7 @@ import { certificateRevocationList } from "../AuthenticationFramework/certificat
 import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
 import { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa.mjs";
 import { id_oc_pkiCA } from "../AuthenticationFramework/id-oc-pkiCA.va.mjs";
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

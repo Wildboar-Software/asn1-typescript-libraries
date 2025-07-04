@@ -4,7 +4,7 @@ import {
     _decode_AuthorityAttributeIdentifierSyntax,
     _encode_AuthorityAttributeIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
-import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_authorityAttributeIdentifier } from "./id-ce-authorityAttributeIdentifier.va.mjs";
 
 /**

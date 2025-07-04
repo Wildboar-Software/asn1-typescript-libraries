@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 /**
  * @summary OBJECT_CLASS

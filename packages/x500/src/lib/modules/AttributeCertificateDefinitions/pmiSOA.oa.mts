@@ -4,7 +4,7 @@ import { attributeCertificateRevocationList } from "../AttributeCertificateDefin
 import { attributeDescriptorCertificate } from "../AttributeCertificateDefinitions/attributeDescriptorCertificate.oa.mjs";
 import { eeAttrCertificateRevocationList } from "../AttributeCertificateDefinitions/eeAttrCertificateRevocationList.oa.mjs";
 import { id_oc_pmiSOA } from "../AttributeCertificateDefinitions/id-oc-pmiSOA.va.mjs";
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

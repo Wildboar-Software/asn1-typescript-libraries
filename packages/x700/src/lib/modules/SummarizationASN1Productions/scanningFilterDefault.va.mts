@@ -13,11 +13,11 @@ import {
     CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs';
 import {
     _decode_FilterItem,
     _encode_FilterItem,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.mjs';
 /**
  * @summary scanningFilterDefault
  * @description

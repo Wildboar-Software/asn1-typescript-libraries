@@ -2,7 +2,7 @@
 import { subjectAltName } from "../CertificateExtensions/subjectAltName.oa.mjs";
 import { id_asx_subjectAltName } from "../ExtensionAttributes/id-asx-subjectAltName.va.mjs";
 import { id_ce_a_subjectAltName } from "../ExtensionAttributes/id-ce-a-subjectAltName.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

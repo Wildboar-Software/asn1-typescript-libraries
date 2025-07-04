@@ -19,7 +19,7 @@ import {
     _encode_BodyPartSignatures,
 } from '../IPMSHeadingExtensions/BodyPartSignatures.ta.mjs';
 import { id_hat_body_part_signatures } from '../IPMSObjectIdentifiers/id-hat-body-part-signatures.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

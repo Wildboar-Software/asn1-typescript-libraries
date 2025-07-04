@@ -14,12 +14,12 @@ import {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
 import {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
 /**
  * @summary AlgorithmOutputBuffer_Item
  * @description

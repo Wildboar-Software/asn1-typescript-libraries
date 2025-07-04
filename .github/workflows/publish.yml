@@ -43,7 +43,7 @@ jobs:
           - "iso-9798-3-sasl"
           - "kerberos5"
           - "ldap"
-          - "m3100"
+          # - "m3100"
           - "nlm"
           - "ocsp"
           - "pc"
@@ -66,10 +66,10 @@ jobs:
           - "tcap"
           - "tsp"
           - "usm"
-          - "x1080"
-          - "x400"
+          # - "x1080"
+          # - "x400"
           - "x500"
-          - "x700"
+          # - "x700"
     permissions:
       contents: read
       id-token: write

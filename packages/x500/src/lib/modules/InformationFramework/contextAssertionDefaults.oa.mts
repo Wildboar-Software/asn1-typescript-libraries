@@ -4,7 +4,7 @@ import {
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
 } from "../DirectoryAbstractService/TypeAndContextAssertion.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

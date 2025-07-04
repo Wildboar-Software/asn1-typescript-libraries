@@ -14,7 +14,7 @@ import {
     Time24,
     _decode_Time24,
     _encode_Time24,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Time24.ta.mjs';
 
 /**
  * @summary WeekMask_intervalsOfDay_Item

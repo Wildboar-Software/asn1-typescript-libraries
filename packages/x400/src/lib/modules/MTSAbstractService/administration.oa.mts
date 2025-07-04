@@ -13,7 +13,7 @@ import { change_credentials } from '../MTSAbstractService/change-credentials.oa.
 import { register } from '../MTSAbstractService/register.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va.mjs';
-import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary administration
  * @description

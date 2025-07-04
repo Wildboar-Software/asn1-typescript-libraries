@@ -7,7 +7,7 @@ import {
 import { id_at_eepkCertificateRevocationList } from "../AuthenticationFramework/id-at-eepkCertificateRevocationList.va.mjs";
 import { x509CertificateList } from "../AuthenticationFramework/x509CertificateList.oa.mjs";
 import { certificateListExactMatch } from "../CertificateExtensions/certificateListExactMatch.oa.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

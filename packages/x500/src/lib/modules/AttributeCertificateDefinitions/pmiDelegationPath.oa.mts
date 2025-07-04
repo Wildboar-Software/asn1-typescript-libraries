@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { delegationPath } from "../AttributeCertificateDefinitions/delegationPath.oa.mjs";
 import { id_oc_pmiDelegationPath } from "../AttributeCertificateDefinitions/id-oc-pmiDelegationPath.va.mjs";
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

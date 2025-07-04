@@ -2,7 +2,7 @@
 import { timeSpecification } from "../AttributeCertificateDefinitions/timeSpecification.oa.mjs";
 import { id_asx_timeSpecification } from "../ExtensionAttributes/id-asx-timeSpecification.va.mjs";
 import { id_ce_a_timeSpecification } from "../ExtensionAttributes/id-ce-a-timeSpecification.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

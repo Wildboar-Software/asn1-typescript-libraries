@@ -13,12 +13,12 @@ import {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_ProbeOriginAuthenticationCheck,
     _encode_SIGNATURE as _encode_ProbeOriginAuthenticationCheck,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
 /**
  * @summary ProbeOriginAuthenticationCheck

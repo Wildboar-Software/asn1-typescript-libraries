@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va.mjs';
-import { CONTEXT } from '@wildboar/x500/InformationFramework';
+import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.mjs';
 /**
  * @summary dl_reset_originator
  * @description

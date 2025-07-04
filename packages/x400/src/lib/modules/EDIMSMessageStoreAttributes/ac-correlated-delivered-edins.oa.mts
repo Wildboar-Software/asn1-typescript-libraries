@@ -19,7 +19,7 @@ import {
     _encode_CorrelatedDeliveredEDINs,
 } from '../EDIMSMessageStoreAttributes/CorrelatedDeliveredEDINs.ta.mjs';
 import { id_cat_correlated_delivered_edins } from '../EDIMSObjectIdentifiers/id-cat-correlated-delivered-edins.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

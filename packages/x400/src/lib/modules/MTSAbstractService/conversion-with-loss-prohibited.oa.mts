@@ -26,7 +26,7 @@ import {
     _decode_ConversionWithLossProhibited,
     _encode_ConversionWithLossProhibited,
 } from '../MTSAbstractService/ConversionWithLossProhibited.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary conversion_with_loss_prohibited
  * @description

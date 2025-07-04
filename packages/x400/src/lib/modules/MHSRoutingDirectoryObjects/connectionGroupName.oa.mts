@@ -9,18 +9,18 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
 import { id_at_connection_group_name } from '../MHSRoutingObjectIdentifiers/id-at-connection-group-name.va.mjs';
 /**
  * @summary connectionGroupName

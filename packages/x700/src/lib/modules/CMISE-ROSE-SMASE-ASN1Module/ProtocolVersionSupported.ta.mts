@@ -14,7 +14,7 @@ import {
     ProtocolVersion,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
 /**
  * @summary ProtocolVersionSupported
  * @description

@@ -18,10 +18,10 @@ import {
     _decode_DeliveredIPNStatus,
     _encode_DeliveredIPNStatus,
 } from '../IPMSMessageStoreAttributes/DeliveredIPNStatus.ta.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
 import { id_cat_delivered_ipn_summary } from '../IPMSObjectIdentifiers/id-cat-delivered-ipn-summary.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -17,7 +17,7 @@ import {
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
+import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
 
 /**
  * @summary AttributeMeasure

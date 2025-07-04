@@ -12,48 +12,60 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    type Pathname_Attribute,
+    Pathname_Attribute,
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
 } from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.mjs';
 import {
-    type Account_Attribute,
+    Permitted_Actions_Attribute,
+    _decode_Permitted_Actions_Attribute,
+    _encode_Permitted_Actions_Attribute,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta.mjs';
+import {
+    Account_Attribute,
     _decode_Account_Attribute,
     _encode_Account_Attribute,
 } from '../IPMSFileTransferBodyPartType/Account-Attribute.ta.mjs';
 import {
-    type User_Identity_Attribute,
+    Date_and_Time_Attribute,
+    _decode_Date_and_Time_Attribute,
+    _encode_Date_and_Time_Attribute,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta.mjs';
+import {
+    User_Identity_Attribute,
     _decode_User_Identity_Attribute,
     _encode_User_Identity_Attribute,
 } from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta.mjs';
 import {
-    type Access_Control_Attribute,
+    Object_Availability_Attribute,
+    _decode_Object_Availability_Attribute,
+    _encode_Object_Availability_Attribute,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
+import {
+    Object_Size_Attribute,
+    _decode_Object_Size_Attribute,
+    _encode_Object_Size_Attribute,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
+import {
+    Access_Control_Attribute,
     _decode_Access_Control_Attribute,
     _encode_Access_Control_Attribute,
 } from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta.mjs';
 import {
-    type Permitted_Actions_Attribute,
-    _decode_Permitted_Actions_Attribute,
-    _encode_Permitted_Actions_Attribute,
-    type Date_and_Time_Attribute,
-    _decode_Date_and_Time_Attribute,
-    _encode_Date_and_Time_Attribute,
-    type Object_Availability_Attribute,
-    _decode_Object_Availability_Attribute,
-    _encode_Object_Availability_Attribute,
-    type Object_Size_Attribute,
-    _decode_Object_Size_Attribute,
-    _encode_Object_Size_Attribute,
-    type Legal_Qualification_Attribute,
+    Legal_Qualification_Attribute,
     _decode_Legal_Qualification_Attribute,
     _encode_Legal_Qualification_Attribute,
-    type Private_Use_Attribute,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
+import {
+    Private_Use_Attribute,
     _decode_Private_Use_Attribute,
     _encode_Private_Use_Attribute,
-    type Attribute_Extensions,
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
+import {
+    Attribute_Extensions,
     _decode_Attribute_Extensions,
     _encode_Attribute_Extensions,
-} from '@wildboar/ftam';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.mjs';
 /**
  * @summary FileAttributes
  * @description

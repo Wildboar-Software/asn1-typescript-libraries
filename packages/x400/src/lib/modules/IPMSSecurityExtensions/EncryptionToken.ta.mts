@@ -15,12 +15,12 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.mjs';
 import {
     EncryptionKey,
     _decode_EncryptionKey,
@@ -30,12 +30,12 @@ import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/CertificateExtensions';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.mjs';
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
 import {
     ExtendedCertificates,
     _decode_ExtendedCertificates,

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca.mjs';
+import { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca.mjs';
 
 /**
  * @summary OtherRevocation

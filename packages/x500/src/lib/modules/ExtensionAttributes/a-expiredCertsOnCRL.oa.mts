@@ -2,7 +2,7 @@
 import { expiredCertsOnCRL } from "../CertificateExtensions/expiredCertsOnCRL.oa.mjs";
 import { id_asx_expiredCertsOnCRL } from "../ExtensionAttributes/id-asx-expiredCertsOnCRL.va.mjs";
 import { id_ce_a_expiredCertsOnCRL } from "../ExtensionAttributes/id-ce-a-expiredCertsOnCRL.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

@@ -4,7 +4,7 @@ import {
     _decode_AttributeDescriptorSyntax,
     _encode_AttributeDescriptorSyntax,
 } from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
-import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_attributeDescriptor } from "./id-ce-attributeDescriptor.va.mjs";
 
 /**

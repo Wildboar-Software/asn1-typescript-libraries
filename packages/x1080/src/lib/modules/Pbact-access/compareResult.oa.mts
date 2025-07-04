@@ -15,7 +15,7 @@ import {
     _encode_CompareResult,
 } from '../Pbact-access/CompareResult.ta.mjs';
 import { id_compareResult } from '../Pbact-access/id-compareResult.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary compareResult

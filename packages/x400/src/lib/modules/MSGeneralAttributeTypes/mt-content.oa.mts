@@ -19,7 +19,7 @@ import {
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import { id_att_content } from '../MSObjectIdentifiers/id-att-content.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -15,7 +15,7 @@ import {
     _encode_ReadRequest,
 } from '../Pbact-access/ReadRequest.ta.mjs';
 import { id_readRequest } from '../Pbact-access/id-readRequest.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary readRequest

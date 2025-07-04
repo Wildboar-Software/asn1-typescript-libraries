@@ -15,7 +15,7 @@ import {
     _decode_ManufacturerIdentification,
     _encode_ManufacturerIdentification,
 } from '../E-health-identification/ManufacturerIdentification.ta.mjs';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary manufacturerIdentification

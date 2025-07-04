@@ -2,7 +2,7 @@
 import { cRLNumber } from "../CertificateExtensions/cRLNumber.oa.mjs";
 import { id_asx_cRLNumber } from "../ExtensionAttributes/id-asx-cRLNumber.va.mjs";
 import { id_ce_a_cRLNumber } from "../ExtensionAttributes/id-ce-a-cRLNumber.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

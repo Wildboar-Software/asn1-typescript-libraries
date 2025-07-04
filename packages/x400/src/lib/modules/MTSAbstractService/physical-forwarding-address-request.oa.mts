@@ -26,7 +26,7 @@ import {
     _decode_PhysicalForwardingAddressRequest,
     _encode_PhysicalForwardingAddressRequest,
 } from '../MTSAbstractService/PhysicalForwardingAddressRequest.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_forwarding_address_request
  * @description

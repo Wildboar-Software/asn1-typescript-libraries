@@ -15,12 +15,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
 /**
  * @summary ScheduledManagedObjectsList_Item
  * @description

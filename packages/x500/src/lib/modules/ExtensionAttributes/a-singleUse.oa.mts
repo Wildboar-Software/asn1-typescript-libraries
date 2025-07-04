@@ -2,7 +2,7 @@
 import { singleUse } from "../AttributeCertificateDefinitions/singleUse.oa.mjs";
 import { id_asx_singleUse } from "../ExtensionAttributes/id-asx-singleUse.va.mjs";
 import { id_ce_a_singleUse } from "../ExtensionAttributes/id-ce-a-singleUse.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

@@ -15,7 +15,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 import {
     TBSAsymmetricToken_name,
     _decode_TBSAsymmetricToken_name,
@@ -35,7 +35,7 @@ import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.mjs';
 /**
  * @summary TBSAsymmetricToken
  * @description

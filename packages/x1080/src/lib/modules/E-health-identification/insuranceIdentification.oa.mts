@@ -15,7 +15,7 @@ import {
     _decode_InsuranceIdentification,
     _encode_InsuranceIdentification,
 } from '../E-health-identification/InsuranceIdentification.ta.mjs';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary insuranceIdentification

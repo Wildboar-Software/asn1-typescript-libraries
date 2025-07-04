@@ -19,7 +19,7 @@ import {
     _encode_ProbeOriginAuthenticationCheck,
 } from '../MTSAbstractService/ProbeOriginAuthenticationCheck.ta.mjs';
 import { id_att_probe_origin_authentication_check } from '../MSObjectIdentifiers/id-att-probe-origin-authentication-check.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

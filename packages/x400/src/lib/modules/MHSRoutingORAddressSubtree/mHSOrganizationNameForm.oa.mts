@@ -12,7 +12,7 @@ import {
 import { mHSOrganization } from '../MHSRoutingORAddressSubtree/mHSOrganization.oa.mjs';
 import { mHSOrganizationName } from '../MHSRoutingORAddressSubtree/mHSOrganizationName.oa.mjs';
 import { id_nf_mhs_organization } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organization.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
 /**
  * @summary mHSOrganizationNameForm
  * @description

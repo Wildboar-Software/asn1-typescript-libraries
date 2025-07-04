@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { type CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
+import { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
 
 /**
  * @summary ROS_OBJECT_CLASS

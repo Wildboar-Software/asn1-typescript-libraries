@@ -15,7 +15,7 @@ import {
     _encode_E_terminateError,
 } from '../E-health-common/E-terminateError.ta.mjs';
 import { id_health_term_err } from '../E-health-common/id-health-term-err.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary health_term_err

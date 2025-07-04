@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa.mjs';
 import { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa.mjs';
 import { swb_pkc_revocation_info } from '../SCVP-2009/swb-pkc-revocation-info.oa.mjs';

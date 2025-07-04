@@ -9,20 +9,20 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MATCHING_RULE } from '@wildboar/x500/InformationFramework';
-import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
+import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
 import { contentIdentifierMatch } from '../MSMatchingRules/contentIdentifierMatch.oa.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
 import { mSStringCaseSensitiveMatch } from '../MSMatchingRules/mSStringCaseSensitiveMatch.oa.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
+import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa.mjs';
-import { uTCTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { uTCTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { uTCTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeMatch.oa.mjs';
+import { uTCTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeOrderingMatch.oa.mjs';
 import { contentCorrelatorMatch } from '../MSMatchingRules/contentCorrelatorMatch.oa.mjs';
-import { generalizedTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { generalizedTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { generalizedTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeMatch.oa.mjs';
+import { generalizedTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs';
 import { mSSingleSubstringMatch } from '../MSMatchingRules/mSSingleSubstringMatch.oa.mjs';
 import { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElementsMatch.oa.mjs';
 import { mSStringListMatch } from '../MSMatchingRules/mSStringListMatch.oa.mjs';

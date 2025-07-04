@@ -22,7 +22,7 @@ import {
     _decode_ReportingDLName,
     _encode_ReportingDLName,
 } from '../MTSAbstractService/ReportingDLName.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary reporting_DL_name
  * @description

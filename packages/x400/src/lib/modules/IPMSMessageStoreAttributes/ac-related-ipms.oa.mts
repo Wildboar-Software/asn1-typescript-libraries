@@ -20,7 +20,7 @@ import {
 } from '../IPMSMessageStoreAttributes/IPMLocation.ta.mjs';
 import { iPMLocationMatch } from '../IPMSMessageStoreAttributes/iPMLocationMatch.oa.mjs';
 import { id_cat_related_ipms } from '../IPMSObjectIdentifiers/id-cat-related-ipms.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

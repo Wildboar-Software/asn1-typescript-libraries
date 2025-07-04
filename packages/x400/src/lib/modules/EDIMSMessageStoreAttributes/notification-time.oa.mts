@@ -18,10 +18,10 @@ import {
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
 } from '../EDIMSInformationObjects/NotificationTimeField.ta.mjs';
-import { uTCTimeMatch } from '@wildboar/x500/SelectedAttributeTypes';
-import { uTCTimeOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { uTCTimeMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeMatch.oa.mjs';
+import { uTCTimeOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/uTCTimeOrderingMatch.oa.mjs';
 import { id_nat_notification_time } from '../EDIMSObjectIdentifiers/id-nat-notification-time.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

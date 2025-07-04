@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.mjs';
 import { dl_administrator_annotation } from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation.oa.mjs';
-import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/InformationFramework';
+import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca.mjs';
 /**
  * @summary dl_administrator_annotation_use_rule
  * @description

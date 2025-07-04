@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_oc_parent } from "../InformationFramework/id-oc-parent.va.mjs";
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

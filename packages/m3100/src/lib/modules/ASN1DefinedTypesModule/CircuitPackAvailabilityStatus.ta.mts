@@ -14,7 +14,7 @@ import {
     AvailabilityStatus,
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
-} from '@wildboar/attribute-asn1module';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AvailabilityStatus.ta.mjs';
 
 /**
  * @summary CircuitPackAvailabilityStatus

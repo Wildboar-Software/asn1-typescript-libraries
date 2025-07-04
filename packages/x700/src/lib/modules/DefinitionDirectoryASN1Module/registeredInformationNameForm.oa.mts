@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.mjs';
-import { commonName } from '@wildboar/x500/SelectedAttributeTypes';
+import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
 /**
  * @summary registeredInformationNameForm
  * @description

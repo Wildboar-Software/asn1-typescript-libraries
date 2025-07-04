@@ -14,27 +14,27 @@ import {
     GetResult,
     _decode_GetResult,
     _encode_GetResult,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta.mjs';
 import {
     GetListError,
     _decode_GetListError,
     _encode_GetListError,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta.mjs';
 import {
     SetResult,
     _decode_SetResult,
     _encode_SetResult,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta.mjs';
 import {
     SetListError,
     _decode_SetListError,
     _encode_SetListError,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta.mjs';
 import {
     ActionResult,
     _decode_ActionResult,
     _encode_ActionResult,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta.mjs';
 import {
     CommonError,
     _decode_CommonError,

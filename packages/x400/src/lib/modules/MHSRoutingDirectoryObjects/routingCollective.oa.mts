@@ -9,16 +9,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/InformationFramework';
-import { top } from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
+import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs';
 import { routingCollectiveName } from '../MHSRoutingDirectoryObjects/routingCollectiveName.oa.mjs';
-import { description } from '@wildboar/x500/SelectedAttributeTypes';
+import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.mjs';
 import { entryConnectionGroupName } from '../MHSRoutingDirectoryObjects/entryConnectionGroupName.oa.mjs';
 import { localExitConnectionGroupName } from '../MHSRoutingDirectoryObjects/localExitConnectionGroupName.oa.mjs';
 import { transitExitConnectionGroupName } from '../MHSRoutingDirectoryObjects/transitExitConnectionGroupName.oa.mjs';

@@ -19,7 +19,7 @@ import {
     _encode_EDIMSynopsis,
 } from '../EDIMSMessageStoreAttributes/EDIMSynopsis.ta.mjs';
 import { id_sat_edim_synopsis } from '../EDIMSObjectIdentifiers/id-sat-edim-synopsis.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

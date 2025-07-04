@@ -12,11 +12,11 @@ import {
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { submission_control } from '../MTSAbstractService/submission-control.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**

@@ -13,11 +13,11 @@ import {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 export {
     _decode_SIGNATURE as _decode_ProofOfSubmission,
     _encode_SIGNATURE as _encode_ProofOfSubmission,
-} from '@wildboar/x500/AuthenticationFramework';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
 /**
  * @summary ProofOfSubmission

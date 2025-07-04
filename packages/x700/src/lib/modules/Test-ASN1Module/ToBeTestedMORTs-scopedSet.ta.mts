@@ -15,14 +15,14 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip';
-import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip';
-import { Scope_namedNumbers_baseObject } from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
+import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope.ta.mjs';
+import { Scope_namedNumbers_baseObject } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope-namedNumbers.ta.mjs';
 import {
     CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs';
 /**
  * @summary ToBeTestedMORTs_scopedSet
  * @description

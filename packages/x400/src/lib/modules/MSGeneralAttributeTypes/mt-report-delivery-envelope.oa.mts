@@ -19,7 +19,7 @@ import {
     _encode_ReportDeliveryEnvelope,
 } from '../MTSAbstractService/ReportDeliveryEnvelope.ta.mjs';
 import { id_att_report_delivery_envelope } from '../MSObjectIdentifiers/id-att-report-delivery-envelope.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

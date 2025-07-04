@@ -15,7 +15,7 @@ import {
   _decode_RealizationParameter,
   _encode_RealizationParameter,
 } from '../Remote-Operations-Realizations/RealizationParameter.ta.mjs';
-import { type REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.mjs';
+import { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.mjs';
 
 /**
  * @summary pData_with_concatenation

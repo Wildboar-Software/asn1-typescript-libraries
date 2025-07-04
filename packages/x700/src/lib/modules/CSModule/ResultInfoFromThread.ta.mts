@@ -29,7 +29,7 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
 /**
  * @summary ResultInfoFromThread
  * @description

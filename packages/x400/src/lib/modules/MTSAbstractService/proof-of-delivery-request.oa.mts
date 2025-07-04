@@ -26,7 +26,7 @@ import {
     _decode_ProofOfDeliveryRequest,
     _encode_ProofOfDeliveryRequest,
 } from '../MTSAbstractService/ProofOfDeliveryRequest.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary proof_of_delivery_request
  * @description

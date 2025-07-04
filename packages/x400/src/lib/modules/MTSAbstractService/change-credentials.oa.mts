@@ -14,11 +14,11 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import {
     ChangeCredentialsArgument,
     _decode_ChangeCredentialsArgument,

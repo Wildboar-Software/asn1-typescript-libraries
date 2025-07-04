@@ -12,12 +12,12 @@ import {
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose';
-import { emptyUnbind } from '@wildboar/rose';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary ms_unbind

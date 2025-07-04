@@ -15,7 +15,7 @@ import {
     _encode_AuthEnvelopedData,
 } from '../CmsTelebiometric/AuthEnvelopedData.ta.mjs';
 import { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary ct_authEnvelopedData

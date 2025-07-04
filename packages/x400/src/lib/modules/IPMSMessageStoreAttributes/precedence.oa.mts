@@ -18,9 +18,9 @@ import {
     _decode_Precedence,
     _encode_Precedence,
 } from '../IPMSHeadingExtensions/Precedence.ta.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { id_hat_precedence } from '../IPMSObjectIdentifiers/id-hat-precedence.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

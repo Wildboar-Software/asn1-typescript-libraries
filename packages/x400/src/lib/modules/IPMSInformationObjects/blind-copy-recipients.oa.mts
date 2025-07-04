@@ -22,7 +22,7 @@ import {
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
 } from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary blind_copy_recipients
  * @description

@@ -5,7 +5,7 @@ import {
     _decode_SigncryptedData,
     _encode_SigncryptedData,
 } from "../CMSSigncryption/SigncryptedData.ta.mjs";
-import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
 /**
  * @summary ct_SigncryptedData

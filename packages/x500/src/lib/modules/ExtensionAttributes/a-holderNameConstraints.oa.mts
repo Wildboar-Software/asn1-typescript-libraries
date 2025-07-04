@@ -2,7 +2,7 @@
 import { holderNameConstraints } from "../AttributeCertificateDefinitions/holderNameConstraints.oa.mjs";
 import { id_asx_holderNameConstraints } from "../ExtensionAttributes/id-asx-holderNameConstraints.va.mjs";
 import { id_ce_a_holderNameConstraints } from "../ExtensionAttributes/id-ce-a-holderNameConstraints.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

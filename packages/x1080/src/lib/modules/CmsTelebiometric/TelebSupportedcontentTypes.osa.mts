@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 import { signedData } from '../CmsTelebiometric/signedData.oa.mjs';
 import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.mjs';
 import { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa.mjs';

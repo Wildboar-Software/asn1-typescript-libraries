@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 import { patientIdentification } from '../E-health-identification/patientIdentification.oa.mjs';
 import { medicalStaffIdentification } from '../E-health-identification/medicalStaffIdentification.oa.mjs';
 import { observerIdentification } from '../E-health-identification/observerIdentification.oa.mjs';

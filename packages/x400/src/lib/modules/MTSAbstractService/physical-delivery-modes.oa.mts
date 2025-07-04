@@ -24,7 +24,7 @@ import {
     _decode_PhysicalDeliveryModes,
     _encode_PhysicalDeliveryModes,
 } from '../MTSAbstractService/PhysicalDeliveryModes.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_delivery_modes
  * @description

@@ -25,7 +25,7 @@ import {
     _decode_RegisteredMailType,
     _encode_RegisteredMailType,
 } from '../MTSAbstractService/RegisteredMailType.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary registered_mail_type
  * @description

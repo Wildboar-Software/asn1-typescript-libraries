@@ -19,7 +19,7 @@ import {
     _encode_FNExtensionsSubField,
 } from '../EDIMSInformationObjects/FNExtensionsSubField.ta.mjs';
 import { id_nat_fn_extensions } from '../EDIMSObjectIdentifiers/id-nat-fn-extensions.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

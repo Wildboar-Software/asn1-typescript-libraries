@@ -19,9 +19,9 @@ import {
     _decode_AcknowledgmentModeField,
     _encode_AcknowledgmentModeField,
 } from '../IPMSInformationObjects/AcknowledgmentModeField.ta.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { id_nat_acknowledgment_mode } from '../IPMSObjectIdentifiers/id-nat-acknowledgment-mode.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

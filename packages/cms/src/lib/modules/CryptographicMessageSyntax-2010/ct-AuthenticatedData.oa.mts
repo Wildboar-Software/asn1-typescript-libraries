@@ -4,7 +4,7 @@ import {
     _decode_AuthenticatedData,
     _encode_AuthenticatedData,
 } from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta.mjs";
-import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 import { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va.mjs";
 
 /**

@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { id_svp_defaultValPolicy } from '../SCVP-2009/id-svp-defaultValPolicy.va.mjs';
-import { type POLICY } from '../SCVP-2009/POLICY.oca.mjs';
+import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 /**
  * @summary svp_defaultValPolicy
  * @description

@@ -22,7 +22,7 @@ import {
     _decode_DLExemptedRecipients,
     _encode_DLExemptedRecipients,
 } from '../MTSAbstractService/DLExemptedRecipients.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary dl_exempted_recipients
  * @description

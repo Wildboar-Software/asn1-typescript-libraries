@@ -2,7 +2,7 @@
 import { policyMappings } from "../CertificateExtensions/policyMappings.oa.mjs";
 import { id_asx_policyMappings } from "../ExtensionAttributes/id-asx-policyMappings.va.mjs";
 import { id_ce_a_policyMappings } from "../ExtensionAttributes/id-ce-a-policyMappings.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

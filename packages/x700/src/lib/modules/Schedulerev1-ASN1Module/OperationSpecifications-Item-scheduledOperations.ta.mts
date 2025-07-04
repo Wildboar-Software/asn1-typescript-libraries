@@ -19,12 +19,12 @@ import {
     ActionInfo,
     _decode_ActionInfo,
     _encode_ActionInfo,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionInfo.ta.mjs';
 import {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.mjs';
 
 /**
  * @summary OperationSpecifications_Item_scheduledOperations

@@ -19,7 +19,7 @@ import {
     _encode_CorrelatedDeliveredReplies,
 } from '../IPMSMessageStoreAttributes/CorrelatedDeliveredReplies.ta.mjs';
 import { id_cat_correlated_delivered_replies } from '../IPMSObjectIdentifiers/id-cat-correlated-delivered-replies.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

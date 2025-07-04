@@ -9,15 +9,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/InformationFramework';
-import { applicationEntity } from '@wildboar/x500/SelectedObjectClasses';
-import { owner } from '@wildboar/x500/SelectedAttributeTypes';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.mjs';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.mjs';
 import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.mjs';
 import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.mjs';
 import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.mjs';
@@ -25,7 +25,7 @@ import { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttrib
 import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa.mjs';
 import { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-classes.oa.mjs';
 import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.mjs';
-import { protocolInformation } from '@wildboar/x500/SelectedAttributeTypes';
+import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va.mjs';
 /**
  * @summary mhs_user_agent

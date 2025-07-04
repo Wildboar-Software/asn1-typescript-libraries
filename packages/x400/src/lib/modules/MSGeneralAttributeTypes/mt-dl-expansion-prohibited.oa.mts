@@ -19,9 +19,9 @@ import {
     _decode_DLExpansionProhibited,
     _encode_DLExpansionProhibited,
 } from '../MTSAbstractService/DLExpansionProhibited.ta.mjs';
-import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { id_att_dl_expansion_prohibited } from '../MSObjectIdentifiers/id-att-dl-expansion-prohibited.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

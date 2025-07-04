@@ -2,7 +2,7 @@
 import { reasonCode } from "../CertificateExtensions/reasonCode.oa.mjs";
 import { id_asx_reasonCode } from "../ExtensionAttributes/id-asx-reasonCode.va.mjs";
 import { id_ce_a_reasonCode } from "../ExtensionAttributes/id-ce-a-reasonCode.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

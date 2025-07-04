@@ -22,7 +22,7 @@ import {
     _decode_OriginatorRequestedAlternateRecipient,
     _encode_OriginatorRequestedAlternateRecipient,
 } from '../MTAAbstractService/OriginatorRequestedAlternateRecipient.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary originator_requested_alternate_recipient
  * @description

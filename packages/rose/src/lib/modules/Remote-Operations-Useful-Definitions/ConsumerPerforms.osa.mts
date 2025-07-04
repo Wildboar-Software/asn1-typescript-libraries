@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs';
-import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { Forward } from './Forward.osa.mjs';
 import { Reverse } from './Reverse.osa.mjs';
 

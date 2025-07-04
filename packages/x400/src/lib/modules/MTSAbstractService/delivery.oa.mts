@@ -14,7 +14,7 @@ import { delivery_control } from '../MTSAbstractService/delivery-control.oa.mjs'
 import { message_delivery } from '../MTSAbstractService/message-delivery.oa.mjs';
 import { report_delivery } from '../MTSAbstractService/report-delivery.oa.mjs';
 import { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va.mjs';
-import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary delivery
  * @description

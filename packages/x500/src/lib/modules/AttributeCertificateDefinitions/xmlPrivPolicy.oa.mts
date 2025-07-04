@@ -2,7 +2,7 @@
 import { UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_at_xmlPrivPolicy } from "../AttributeCertificateDefinitions/id-at-xmlPrivPolicy.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

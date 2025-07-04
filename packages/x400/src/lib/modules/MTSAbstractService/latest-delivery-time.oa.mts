@@ -24,7 +24,7 @@ import {
     _decode_LatestDeliveryTime,
     _encode_LatestDeliveryTime,
 } from '../MTSAbstractService/LatestDeliveryTime.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary latest_delivery_time
  * @description

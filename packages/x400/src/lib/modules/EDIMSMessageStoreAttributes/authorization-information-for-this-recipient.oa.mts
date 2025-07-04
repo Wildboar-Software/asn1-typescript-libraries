@@ -19,7 +19,7 @@ import {
     _encode_AuthorizationInformationField,
 } from '../EDIMSInformationObjects/AuthorizationInformationField.ta.mjs';
 import { id_rat_authorization_information_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-authorization-information-for-this-recipient.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

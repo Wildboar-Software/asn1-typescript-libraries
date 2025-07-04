@@ -25,7 +25,7 @@ import {
     _encode_PhysicalRenditionAttributes,
 } from '../MTSAbstractService/PhysicalRenditionAttributes.ta.mjs';
 import { id_att_physicalRendition_basic } from '../MTSObjectIdentifiers/id-att-physicalRendition-basic.va.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_rendition_attributes
  * @description

@@ -19,7 +19,7 @@ import {
     _encode_IPMSecurityLabel,
 } from '../IPMSHeadingExtensions/IPMSecurityLabel.ta.mjs';
 import { id_hat_ipm_security_label } from '../IPMSObjectIdentifiers/id-hat-ipm-security-label.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

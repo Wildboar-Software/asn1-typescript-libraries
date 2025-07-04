@@ -2,7 +2,7 @@
 import { keyUsage } from "../CertificateExtensions/keyUsage.oa.mjs";
 import { id_asx_keyUsage } from "../ExtensionAttributes/id-asx-keyUsage.va.mjs";
 import { id_ce_a_keyUsage } from "../ExtensionAttributes/id-ce-a-keyUsage.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

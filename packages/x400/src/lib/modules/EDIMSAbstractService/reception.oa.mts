@@ -13,7 +13,7 @@ import { receive_report } from '../EDIMSAbstractService/receive-report.oa.mjs';
 import { receive_edim } from '../EDIMSAbstractService/receive-edim.oa.mjs';
 import { receive_edin } from '../EDIMSAbstractService/receive-edin.oa.mjs';
 import { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va.mjs';
-import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary reception
  * @description

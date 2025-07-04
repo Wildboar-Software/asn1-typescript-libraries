@@ -24,7 +24,7 @@ import {
     _decode_ReportingMTACertificate,
     _encode_ReportingMTACertificate,
 } from '../MTSAbstractService/ReportingMTACertificate.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary reporting_MTA_certificate
  * @description

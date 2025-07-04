@@ -15,12 +15,12 @@ import {
     ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 
 /**
  * @summary TroubleReportAlreadyExists

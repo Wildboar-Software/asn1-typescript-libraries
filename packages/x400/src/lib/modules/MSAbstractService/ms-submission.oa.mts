@@ -15,7 +15,7 @@ import { ms_probe_submission } from '../MSAbstractService/ms-probe-submission.oa
 import { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-deferred-delivery.oa.mjs';
 import { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa.mjs';
 import { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va.mjs';
-import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary ms_submission
  * @description

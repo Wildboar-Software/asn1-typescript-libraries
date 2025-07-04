@@ -15,7 +15,7 @@ import {
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';
 import { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va.mjs';
-import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 /**
  * @summary swb_pkc_best_cert_path
  * @description

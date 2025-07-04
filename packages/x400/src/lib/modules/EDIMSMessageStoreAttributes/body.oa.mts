@@ -19,7 +19,7 @@ import {
     _encode_Body,
 } from '../EDIMSInformationObjects/Body.ta.mjs';
 import { id_bat_body } from '../EDIMSObjectIdentifiers/id-bat-body.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -2,7 +2,7 @@
 import { certificatePolicies } from "../CertificateExtensions/certificatePolicies.oa.mjs";
 import { id_asx_certificatePolicies } from "../ExtensionAttributes/id-asx-certificatePolicies.va.mjs";
 import { id_ce_a_certificatePolicies } from "../ExtensionAttributes/id-ce-a-certificatePolicies.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

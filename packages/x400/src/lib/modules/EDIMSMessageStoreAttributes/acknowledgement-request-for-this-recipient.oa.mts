@@ -18,9 +18,9 @@ import {
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
 } from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.mjs';
-import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
 import { id_rat_acknowledgement_request_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-acknowledgement-request-for-this-recipient.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

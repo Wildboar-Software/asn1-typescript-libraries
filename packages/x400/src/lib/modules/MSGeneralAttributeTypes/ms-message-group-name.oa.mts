@@ -24,7 +24,7 @@ import { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElemen
 import { mSSingleSubstringListElementsMatch } from '../MSMatchingRules/mSSingleSubstringListElementsMatch.oa.mjs';
 import { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa.mjs';
 import { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message-group-name.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

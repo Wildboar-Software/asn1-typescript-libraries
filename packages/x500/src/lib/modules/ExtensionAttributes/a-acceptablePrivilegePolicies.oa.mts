@@ -2,7 +2,7 @@
 import { acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/acceptablePrivilegePolicies.oa.mjs";
 import { id_asx_acceptablePrivilegePolicies } from "../ExtensionAttributes/id-asx-acceptablePrivilegePolicies.va.mjs";
 import { id_ce_a_acceptablePrivilegePolicies } from "../ExtensionAttributes/id-ce-a-acceptablePrivilegePolicies.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

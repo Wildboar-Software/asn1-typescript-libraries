@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
+import { TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
 import { asymmetric_token } from '../MTSAbstractService/asymmetric-token.oa.mjs';
 /**
  * @summary TokensTable

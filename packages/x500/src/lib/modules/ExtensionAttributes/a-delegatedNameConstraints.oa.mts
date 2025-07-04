@@ -2,7 +2,7 @@
 import { delegatedNameConstraints } from "../AttributeCertificateDefinitions/delegatedNameConstraints.oa.mjs";
 import { id_asx_delegatedNameConstraints } from "../ExtensionAttributes/id-asx-delegatedNameConstraints.va.mjs";
 import { id_ce_a_delegatedNameConstraints } from "../ExtensionAttributes/id-ce-a-delegatedNameConstraints.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

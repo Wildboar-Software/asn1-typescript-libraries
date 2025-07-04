@@ -15,7 +15,7 @@ import {
   _encode_SCVPResponses,
 } from '../SCVP-2009/SCVPResponses.ta.mjs';
 import { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va.mjs';
-import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 /**
  * @summary swb_relayed_responses
  * @description

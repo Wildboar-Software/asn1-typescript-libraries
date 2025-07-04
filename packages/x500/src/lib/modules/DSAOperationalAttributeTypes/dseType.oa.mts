@@ -5,7 +5,7 @@ import {
     _encode_DSEType,
 } from "../DSAOperationalAttributeTypes/DSEType.ta.mjs";
 import { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

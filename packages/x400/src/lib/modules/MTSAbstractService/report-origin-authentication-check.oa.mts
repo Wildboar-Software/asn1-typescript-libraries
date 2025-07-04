@@ -24,7 +24,7 @@ import {
     _decode_ReportOriginAuthenticationCheck,
     _encode_ReportOriginAuthenticationCheck,
 } from '../MTSAbstractService/ReportOriginAuthenticationCheck.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary report_origin_authentication_check
  * @description

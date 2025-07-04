@@ -25,7 +25,7 @@ import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/CertificateExtensions';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.mjs';
 import {
     ExtendedCertificates,
     _decode_ExtendedCertificates,

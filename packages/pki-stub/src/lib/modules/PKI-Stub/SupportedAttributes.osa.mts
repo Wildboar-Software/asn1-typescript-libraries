@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { type ATTRIBUTE } from "../PKI-Stub/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../PKI-Stub/ATTRIBUTE.oca.mjs";
 
 /**
  * @summary SupportedAttributes

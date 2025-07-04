@@ -6,7 +6,7 @@ import {
 } from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
 import { id_doa_nonSpecificKnowledge } from "../DSAOperationalAttributeTypes/id-doa-nonSpecificKnowledge.va.mjs";
 import { masterAndShadowAccessPointsMatch } from "../DSAOperationalAttributeTypes/masterAndShadowAccessPointsMatch.oa.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

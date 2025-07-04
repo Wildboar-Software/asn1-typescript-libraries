@@ -20,7 +20,7 @@ import {
 } from '../IPMSHeadingExtensions/ManualHandlingInstruction.ta.mjs';
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { id_hat_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hat-manual-handling-instructions.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

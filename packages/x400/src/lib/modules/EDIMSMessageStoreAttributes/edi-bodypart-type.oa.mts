@@ -18,9 +18,9 @@ import {
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
 } from '../EDIMSInformationObjects/EDIBodyPartType.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
+import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_hat_edi_bodypart_type } from '../EDIMSObjectIdentifiers/id-hat-edi-bodypart-type.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

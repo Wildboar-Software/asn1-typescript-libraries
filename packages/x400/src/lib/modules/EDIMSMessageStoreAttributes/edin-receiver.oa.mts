@@ -19,7 +19,7 @@ import {
     _encode_EDINReceiverField,
 } from '../EDIMSInformationObjects/EDINReceiverField.ta.mjs';
 import { id_hat_edin_receiver } from '../EDIMSObjectIdentifiers/id-hat-edin-receiver.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

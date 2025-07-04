@@ -2,7 +2,7 @@
 import { revokedGroups } from "../CertificateExtensions/revokedGroups.oa.mjs";
 import { id_asx_revokedGroups } from "../ExtensionAttributes/id-asx-revokedGroups.va.mjs";
 import { id_ce_a_revokedGroups } from "../ExtensionAttributes/id-ce-a-revokedGroups.va.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

@@ -19,7 +19,7 @@ import {
     _encode_SubmissionError,
 } from '../MSGeneralAttributeTypes/SubmissionError.ta.mjs';
 import { id_att_ms_submission_error } from '../MSObjectIdentifiers/id-att-ms-submission-error.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { WantBackSet } from '../SCVP-2009/WantBackSet.osa.mjs';
 import { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa.mjs';
 import { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa.mjs';

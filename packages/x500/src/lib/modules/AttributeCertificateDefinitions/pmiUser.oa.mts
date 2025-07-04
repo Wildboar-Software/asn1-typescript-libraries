@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { attributeCertificateAttribute } from "../AttributeCertificateDefinitions/attributeCertificateAttribute.oa.mjs";
 import { id_oc_pmiUser } from "../AttributeCertificateDefinitions/id-oc-pmiUser.va.mjs";
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

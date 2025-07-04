@@ -14,12 +14,12 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs';
 
 /**
  * @summary ObjectModification

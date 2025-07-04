@@ -14,12 +14,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
 /**
  * @summary Condition
  * @description

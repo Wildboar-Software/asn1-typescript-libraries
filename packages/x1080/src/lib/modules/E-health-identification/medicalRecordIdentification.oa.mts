@@ -15,7 +15,7 @@ import {
     _decode_MedicalRecordIdentification,
     _encode_MedicalRecordIdentification,
 } from '../E-health-identification/MedicalRecordIdentification.ta.mjs';
-import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary medicalRecordIdentification

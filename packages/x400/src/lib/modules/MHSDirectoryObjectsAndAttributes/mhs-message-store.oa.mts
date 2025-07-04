@@ -9,20 +9,20 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/InformationFramework';
-import { applicationEntity } from '@wildboar/x500/SelectedObjectClasses';
-import { owner } from '@wildboar/x500/SelectedAttributeTypes';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.mjs';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.mjs';
 import { mhs_supported_attributes } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-attributes.oa.mjs';
 import { mhs_supported_automatic_actions } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-automatic-actions.oa.mjs';
 import { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-matching-rules.oa.mjs';
 import { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa.mjs';
-import { protocolInformation } from '@wildboar/x500/SelectedAttributeTypes';
+import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va.mjs';
 /**
  * @summary mhs_message_store

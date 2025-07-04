@@ -20,7 +20,7 @@ import {
     Concurrency_Access,
     _decode_Concurrency_Access,
     _encode_Concurrency_Access,
-} from '@wildboar/ftam';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Concurrency-Access.ta.mjs';
 import {
     User_Identity,
     _decode_User_Identity,

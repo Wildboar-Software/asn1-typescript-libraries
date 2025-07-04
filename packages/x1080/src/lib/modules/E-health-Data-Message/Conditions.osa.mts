@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { type CONDITION } from '../E-health-Data-Message/CONDITION.oca.mjs';
+import { CONDITION } from '../E-health-Data-Message/CONDITION.oca.mjs';
 
 /**
  * @summary Conditions

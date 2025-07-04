@@ -19,7 +19,7 @@ import {
     _encode_RelatedMessageReference,
 } from '../EDIMSInformationObjects/RelatedMessageReference.ta.mjs';
 import { id_hat_related_messages } from '../EDIMSObjectIdentifiers/id-hat-related-messages.va.mjs';
-import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

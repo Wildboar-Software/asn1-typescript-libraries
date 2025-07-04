@@ -26,7 +26,7 @@ import {
     _decode_DLExpansionProhibited,
     _encode_DLExpansionProhibited,
 } from '../MTSAbstractService/DLExpansionProhibited.ta.mjs';
-import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary dl_expansion_prohibited
  * @description

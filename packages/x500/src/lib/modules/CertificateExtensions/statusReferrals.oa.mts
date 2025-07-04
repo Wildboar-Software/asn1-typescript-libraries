@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va.mjs";
 import {
     StatusReferrals,

@@ -15,7 +15,7 @@ import {
     _encode_PrivAssignRequest,
 } from '../Pbact-access/PrivAssignRequest.ta.mjs';
 import { id_privAssignRequest } from '../Pbact-access/id-privAssignRequest.va.mjs';
-import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary privAssignRequest
