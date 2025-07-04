@@ -4,7 +4,7 @@ import {
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_roleSpecCertIdentifier } from "./id-ce-roleSpecCertIdentifier.va.mjs";
 
 /**

@@ -5,7 +5,7 @@ import {
     _decode_PolicySyntax,
     _encode_PolicySyntax,
 } from "../AuthenticationFramework/PolicySyntax.ta.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

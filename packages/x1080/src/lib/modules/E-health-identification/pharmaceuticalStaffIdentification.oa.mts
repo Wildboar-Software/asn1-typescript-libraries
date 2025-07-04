@@ -15,7 +15,7 @@ import {
     _decode_PharmaceuticalStaffIdentification,
     _encode_PharmaceuticalStaffIdentification,
 } from '../E-health-identification/PharmaceuticalStaffIdentification.ta.mjs';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary pharmaceuticalStaffIdentification

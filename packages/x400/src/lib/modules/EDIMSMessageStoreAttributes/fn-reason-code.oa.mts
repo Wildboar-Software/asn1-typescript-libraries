@@ -19,7 +19,7 @@ import {
     _encode_FNReasonCodeField,
 } from '../EDIMSInformationObjects/FNReasonCodeField.ta.mjs';
 import { id_nat_fn_reason_code } from '../EDIMSObjectIdentifiers/id-nat-fn-reason-code.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

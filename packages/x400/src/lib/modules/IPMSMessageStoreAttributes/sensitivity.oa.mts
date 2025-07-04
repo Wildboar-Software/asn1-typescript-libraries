@@ -19,10 +19,10 @@ import {
     _decode_SensitivityField,
     _encode_SensitivityField,
 } from '../IPMSInformationObjects/SensitivityField.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
-import { integerOrderingMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerOrderingMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
+import { integerOrderingMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_sensitivity } from '../IPMSObjectIdentifiers/id-hat-sensitivity.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

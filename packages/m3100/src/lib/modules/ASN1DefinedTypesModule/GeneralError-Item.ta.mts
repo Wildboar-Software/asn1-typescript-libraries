@@ -21,12 +21,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
+} from '@wildboar/cmip';
 import {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 
 /**
  * @summary GeneralError_Item

@@ -12,7 +12,7 @@ import {
 import { ms_bind } from '../MSAbstractService/ms-bind.oa.mjs';
 import { ms_unbind } from '../MSAbstractService/ms-unbind.oa.mjs';
 import { id_cp_ms_connection } from '../MSObjectIdentifiers/id-cp-ms-connection.va.mjs';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.mjs';
+import { CONNECTION_PACKAGE } from '@wildboar/rose';
 /**
  * @summary ms_connect
  * @description

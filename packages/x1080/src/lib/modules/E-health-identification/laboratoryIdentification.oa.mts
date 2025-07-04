@@ -15,7 +15,7 @@ import {
     _decode_LaboratoryIdentification,
     _encode_LaboratoryIdentification,
 } from '../E-health-identification/LaboratoryIdentification.ta.mjs';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary laboratoryIdentification

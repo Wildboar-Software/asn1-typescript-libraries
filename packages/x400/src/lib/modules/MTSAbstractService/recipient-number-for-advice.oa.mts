@@ -24,7 +24,7 @@ import {
     _decode_RecipientNumberForAdvice,
     _encode_RecipientNumberForAdvice,
 } from '../MTSAbstractService/RecipientNumberForAdvice.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary recipient_number_for_advice
  * @description

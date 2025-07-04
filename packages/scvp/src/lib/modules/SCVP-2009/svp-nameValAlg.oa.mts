@@ -15,7 +15,7 @@ import {
   _encode_NameValidationAlgParams,
 } from '../SCVP-2009/NameValidationAlgParams.ta.mjs';
 import { id_svp_nameValAlg } from '../SCVP-2009/id-svp-nameValAlg.va.mjs';
-import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
+import { type POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 /**
  * @summary svp_nameValAlg
  * @description

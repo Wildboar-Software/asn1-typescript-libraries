@@ -14,17 +14,17 @@ import {
     RTORQapdu,
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.mjs';
+} from '@wildboar/rtse';
 import {
     RTOACapdu,
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.mjs';
+} from '@wildboar/rtse';
 import {
     RTORJapdu,
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.mjs';
+} from '@wildboar/rtse';
 import {
     RTTPapdu,
     _decode_RTTPapdu,

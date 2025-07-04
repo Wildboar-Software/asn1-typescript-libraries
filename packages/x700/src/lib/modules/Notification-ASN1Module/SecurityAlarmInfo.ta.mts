@@ -15,50 +15,50 @@ import {
     SecurityAlarmCause,
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     SecurityAlarmDetector,
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ServiceUser,
     _decode_ServiceUser,
     _encode_ServiceUser,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ServiceProvider,
     _decode_ServiceProvider,
     _encode_ServiceProvider,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     _enum_for_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 
 /**
  * @summary SecurityAlarmInfo

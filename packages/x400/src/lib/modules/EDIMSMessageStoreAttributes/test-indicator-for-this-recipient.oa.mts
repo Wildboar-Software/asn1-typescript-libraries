@@ -18,9 +18,9 @@ import {
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
 } from '../EDIMSInformationObjects/TestIndicatorField.ta.mjs';
-import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
+import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_rat_test_indicator_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-test-indicator-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

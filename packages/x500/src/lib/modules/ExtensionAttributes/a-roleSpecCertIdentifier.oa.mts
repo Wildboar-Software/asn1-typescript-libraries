@@ -2,7 +2,7 @@
 import { roleSpecCertIdentifier } from "../AttributeCertificateDefinitions/roleSpecCertIdentifier.oa.mjs";
 import { id_asx_roleSpecCertIdentifier } from "../ExtensionAttributes/id-asx-roleSpecCertIdentifier.va.mjs";
 import { id_ce_a_roleSpecCertIdentifier } from "../ExtensionAttributes/id-ce-a-roleSpecCertIdentifier.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

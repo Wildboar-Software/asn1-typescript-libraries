@@ -19,7 +19,7 @@ import {
     _encode_RecipientExtensionsSubField,
 } from '../EDIMSInformationObjects/RecipientExtensionsSubField.ta.mjs';
 import { id_rat_recipient_extensions_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-recipient-extensions-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

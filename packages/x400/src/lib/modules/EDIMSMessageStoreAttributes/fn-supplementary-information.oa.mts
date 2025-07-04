@@ -21,7 +21,7 @@ import {
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa.mjs';
 import { id_nat_fn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-fn-supplementary-info.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -14,7 +14,7 @@ import { retrieval } from '../MSAbstractService/retrieval.oa.mjs';
 import { ms_submission } from '../MSAbstractService/ms-submission.oa.mjs';
 import { administration } from '../MTSAbstractService/administration.oa.mjs';
 import { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va.mjs';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
+import { CONTRACT } from '@wildboar/rose';
 /**
  * @summary ms_access_contract_94
  * @description

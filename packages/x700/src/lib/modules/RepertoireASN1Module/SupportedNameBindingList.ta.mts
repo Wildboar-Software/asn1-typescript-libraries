@@ -14,7 +14,7 @@ import {
     NameBinding,
     _decode_NameBinding,
     _encode_NameBinding,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary SupportedNameBindingList
  * @description

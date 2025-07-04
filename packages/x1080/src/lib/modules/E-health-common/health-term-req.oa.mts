@@ -15,7 +15,7 @@ import {
     _encode_E_terminateRequest,
 } from '../E-health-common/E-terminateRequest.ta.mjs';
 import { id_health_term_req } from '../E-health-common/id-health-term-req.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary health_term_req

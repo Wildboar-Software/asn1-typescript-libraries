@@ -16,12 +16,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
+} from '@wildboar/cmip';
 import {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ArcState,
     _enum_for_ArcState,

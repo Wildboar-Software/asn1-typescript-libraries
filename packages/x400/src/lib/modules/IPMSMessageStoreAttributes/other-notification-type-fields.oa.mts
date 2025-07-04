@@ -19,7 +19,7 @@ import {
     _encode_IPMSExtension,
 } from '../IPMSInformationObjects/IPMSExtension.ta.mjs';
 import { id_nat_other_notification_type_fields } from '../IPMSObjectIdentifiers/id-nat-other-notification-type-fields.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

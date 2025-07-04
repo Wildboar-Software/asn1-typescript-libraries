@@ -9,19 +9,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
+import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     TemplateLabel,
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-import { directoryStringFirstComponentMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.mjs';
+import { directoryStringFirstComponentMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
 /**
  * @summary withAttribute

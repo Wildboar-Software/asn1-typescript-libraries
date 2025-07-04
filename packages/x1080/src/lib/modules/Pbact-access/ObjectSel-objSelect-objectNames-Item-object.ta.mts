@@ -14,7 +14,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 
 /**
  * @summary ObjectSel_objSelect_objectNames_Item_object

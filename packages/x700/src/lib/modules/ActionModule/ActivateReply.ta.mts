@@ -16,7 +16,7 @@ import {
     _enum_for_OperationalState,
     _decode_OperationalState,
     _encode_OperationalState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ActivateReply_responseCode,
     _decode_ActivateReply_responseCode,
@@ -26,7 +26,7 @@ import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ActivateReply
  * @description

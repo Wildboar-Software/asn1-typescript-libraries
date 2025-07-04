@@ -21,7 +21,7 @@ import {
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa.mjs';
 import { id_rat_interchange_control_reference_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-interchange-control-reference-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

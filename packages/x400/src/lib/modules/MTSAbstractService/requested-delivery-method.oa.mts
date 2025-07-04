@@ -22,7 +22,7 @@ import {
     _decode_RequestedDeliveryMethod,
     _encode_RequestedDeliveryMethod,
 } from '../MTSAbstractService/RequestedDeliveryMethod.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary requested_delivery_method
  * @description

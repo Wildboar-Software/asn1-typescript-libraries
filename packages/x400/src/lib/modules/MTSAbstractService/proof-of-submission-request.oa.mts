@@ -26,7 +26,7 @@ import {
     _decode_ProofOfSubmissionRequest,
     _encode_ProofOfSubmissionRequest,
 } from '../MTSAbstractService/ProofOfSubmissionRequest.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary proof_of_submission_request
  * @description

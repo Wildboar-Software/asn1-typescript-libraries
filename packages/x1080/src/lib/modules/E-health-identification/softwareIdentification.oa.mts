@@ -15,7 +15,7 @@ import {
     _decode_SoftwareIdentification,
     _encode_SoftwareIdentification,
 } from '../E-health-identification/SoftwareIdentification.ta.mjs';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
+import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
 
 /**
  * @summary softwareIdentification

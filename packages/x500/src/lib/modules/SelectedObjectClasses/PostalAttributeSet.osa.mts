@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { physicalDeliveryOfficeName } from "../SelectedAttributeTypes/physicalDeliveryOfficeName.oa.mjs";
 import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
 import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";

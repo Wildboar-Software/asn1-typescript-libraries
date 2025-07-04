@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa.mjs";
 import { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va.mjs";
 import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";

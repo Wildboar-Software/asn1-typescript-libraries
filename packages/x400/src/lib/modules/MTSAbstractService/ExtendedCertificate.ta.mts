@@ -14,12 +14,12 @@ import {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 /**
  * @summary ExtendedCertificate
  * @description

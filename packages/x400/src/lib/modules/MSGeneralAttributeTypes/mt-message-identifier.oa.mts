@@ -20,7 +20,7 @@ import {
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
 import { mTSIdentifierMatch } from '../MSMatchingRules/mTSIdentifierMatch.oa.mjs';
 import { id_att_message_identifier } from '../MSObjectIdentifiers/id-att-message-identifier.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -21,7 +21,7 @@ import {
     _decode_WeekMask_intervalsOfDay_Item,
     _encode_WeekMask_intervalsOfDay_Item,
 } from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta.mjs';
-import { Time24 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Time24.ta.mjs';
+import { Time24 } from '@wildboar/attribute-asn1module';
 
 
 /**

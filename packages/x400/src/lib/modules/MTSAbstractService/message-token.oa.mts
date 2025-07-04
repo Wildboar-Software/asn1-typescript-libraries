@@ -24,7 +24,7 @@ import {
     _decode_MessageToken,
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary message_token
  * @description

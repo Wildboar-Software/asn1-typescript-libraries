@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va.mjs";
 import {
     SubjectInfoAccessSyntax,

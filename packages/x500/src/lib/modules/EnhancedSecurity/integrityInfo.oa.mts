@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { attributeIntegrityInfo } from "../EnhancedSecurity/attributeIntegrityInfo.oa.mjs";
 import { id_oc_integrityInfo } from "../EnhancedSecurity/id-oc-integrityInfo.va.mjs";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";

@@ -19,9 +19,9 @@ import {
     _decode_DiscardReasonField,
     _encode_DiscardReasonField,
 } from '../IPMSInformationObjects/DiscardReasonField.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_nat_discard_reason } from '../IPMSObjectIdentifiers/id-nat-discard-reason.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -14,11 +14,11 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
+} from '@wildboar/rose';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
 import { err_message_submission_identifier_invalid } from '../MTSAccessProtocol/err-message-submission-identifier-invalid.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**

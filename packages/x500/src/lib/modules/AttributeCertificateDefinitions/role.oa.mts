@@ -5,7 +5,7 @@ import {
     _decode_RoleSyntax,
     _encode_RoleSyntax,
 } from "../AttributeCertificateDefinitions/RoleSyntax.ta.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

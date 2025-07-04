@@ -19,7 +19,7 @@ import {
     _encode_ProbeSubmissionEnvelope,
 } from '../MTSAbstractService/ProbeSubmissionEnvelope.ta.mjs';
 import { id_att_probe_submission_envelope } from '../MSObjectIdentifiers/id-att-probe-submission-envelope.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

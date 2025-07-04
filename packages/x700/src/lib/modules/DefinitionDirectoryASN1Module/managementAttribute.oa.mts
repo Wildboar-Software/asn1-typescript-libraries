@@ -9,13 +9,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
+import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_ObjectClassKind,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.mjs';
 import { derivedOrWithSyntaxChoice } from '../DefinitionDirectoryASN1Module/derivedOrWithSyntaxChoice.oa.mjs';
 import { matchesFor } from '../DefinitionDirectoryASN1Module/matchesFor.oa.mjs';

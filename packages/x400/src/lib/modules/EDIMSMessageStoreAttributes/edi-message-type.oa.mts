@@ -20,7 +20,7 @@ import {
 } from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.mjs';
 import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.mjs';
 import { id_hat_edi_message_type } from '../EDIMSObjectIdentifiers/id-hat-edi-message-type.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

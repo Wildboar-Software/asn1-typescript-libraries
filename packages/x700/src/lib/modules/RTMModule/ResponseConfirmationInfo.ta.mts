@@ -15,12 +15,12 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
+} from '@wildboar/cmip';
 import {
     GroupObjects,
     _decode_GroupObjects,
     _encode_GroupObjects,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/GroupObjects.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     RequestIdentifier,
     _decode_RequestIdentifier,
@@ -30,12 +30,12 @@ import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     ResponseTime,
     _decode_ResponseTime,
@@ -61,12 +61,12 @@ import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 /**
  * @summary ResponseConfirmationInfo
  * @description

@@ -14,7 +14,7 @@ import {
     ROS_SingleAS,
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.mjs';
+} from '@wildboar/rose';
 /**
  * @summary MessageDeliveryPDUs88
  * @description

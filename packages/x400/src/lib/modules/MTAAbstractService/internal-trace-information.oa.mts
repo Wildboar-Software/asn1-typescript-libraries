@@ -22,7 +22,7 @@ import {
     _decode_InternalTraceInformation,
     _encode_InternalTraceInformation,
 } from '../MTAAbstractService/InternalTraceInformation.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary internal_trace_information
  * @description

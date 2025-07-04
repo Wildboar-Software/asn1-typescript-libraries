@@ -26,7 +26,7 @@ import {
     _decode_PhysicalForwardingProhibited,
     _encode_PhysicalForwardingProhibited,
 } from '../MTSAbstractService/PhysicalForwardingProhibited.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary physical_forwarding_prohibited
  * @description

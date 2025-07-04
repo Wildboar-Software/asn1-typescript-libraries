@@ -5,7 +5,7 @@ import {
     _encode_AllowedAttributeAssignments,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.mjs";
 import { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary allowedAttributeAssignments
  * @description

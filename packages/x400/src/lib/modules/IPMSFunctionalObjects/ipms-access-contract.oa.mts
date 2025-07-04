@@ -12,7 +12,7 @@ import {
 import { origination } from '../IPMSAbstractService/origination.oa.mjs';
 import { reception } from '../IPMSAbstractService/reception.oa.mjs';
 import { management } from '../IPMSAbstractService/management.oa.mjs';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
+import { CONTRACT } from '@wildboar/rose';
 /**
  * @summary ipms_access_contract
  * @description

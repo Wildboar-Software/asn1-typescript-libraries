@@ -5,7 +5,7 @@ import {
     _encode_Clearance,
 } from "../EnhancedSecurity/Clearance.ta.mjs";
 import { id_at_clearance } from "../EnhancedSecurity/id-at-clearance.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

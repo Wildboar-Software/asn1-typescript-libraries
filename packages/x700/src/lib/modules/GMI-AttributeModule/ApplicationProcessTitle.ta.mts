@@ -16,7 +16,7 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.mjs';
+} from '@wildboar/cmip';
 
 /**
  * @summary ApplicationProcessTitle

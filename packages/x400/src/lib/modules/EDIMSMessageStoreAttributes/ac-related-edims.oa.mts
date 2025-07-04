@@ -20,7 +20,7 @@ import {
 } from '../EDIMSMessageStoreAttributes/EDIMLocation.ta.mjs';
 import { iPMLocationMatch } from '../IPMSMessageStoreAttributes/iPMLocationMatch.oa.mjs';
 import { id_cat_related_edims } from '../EDIMSObjectIdentifiers/id-cat-related-edims.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

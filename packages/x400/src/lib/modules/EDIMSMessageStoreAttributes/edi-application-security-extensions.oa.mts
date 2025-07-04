@@ -18,9 +18,9 @@ import {
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_edi_application_security_extensions } from '../EDIMSObjectIdentifiers/id-hat-edi-application-security-extensions.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

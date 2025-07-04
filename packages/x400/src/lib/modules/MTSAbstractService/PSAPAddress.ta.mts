@@ -14,7 +14,7 @@ import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta.mjs';
+} from '@wildboar/x500/SelectedAttributeTypes';
 /**
  * @summary PSAPAddress
  * @description

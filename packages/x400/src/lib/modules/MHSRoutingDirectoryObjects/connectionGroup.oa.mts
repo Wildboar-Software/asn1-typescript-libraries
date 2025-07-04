@@ -9,17 +9,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.mjs';
+import { type OBJECT_CLASS } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_ObjectClassKind,
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.mjs';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
+} from '@wildboar/x500/InformationFramework';
+import { top } from '@wildboar/x500/InformationFramework';
+import { commonName } from '@wildboar/x500/SelectedAttributeTypes';
 import { enumeratedFlag } from '../MHSRoutingDirectoryObjects/enumeratedFlag.oa.mjs';
-import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.mjs';
+import { description } from '@wildboar/x500/SelectedAttributeTypes';
 import { connectionType } from '../MHSRoutingDirectoryObjects/connectionType.oa.mjs';
 import { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword.oa.mjs';
 import { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa.mjs';

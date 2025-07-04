@@ -19,7 +19,7 @@ import {
     _encode_ServiceStringAdviceField,
 } from '../EDIMSInformationObjects/ServiceStringAdviceField.ta.mjs';
 import { id_hat_service_string_advice } from '../EDIMSObjectIdentifiers/id-hat-service-string-advice.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

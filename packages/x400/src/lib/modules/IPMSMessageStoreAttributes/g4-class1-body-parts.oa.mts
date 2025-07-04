@@ -19,7 +19,7 @@ import {
     _encode_G4Class1BodyPart,
 } from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';
 import { id_bat_g4_class1_body_parts } from '../IPMSObjectIdentifiers/id-bat-g4-class1-body-parts.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

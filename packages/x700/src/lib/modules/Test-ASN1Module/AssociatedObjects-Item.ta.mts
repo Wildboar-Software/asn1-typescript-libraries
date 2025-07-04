@@ -14,7 +14,7 @@ import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
+} from '@wildboar/cmip';
 import {
     AssociatedObjects_Item_associatedObjectInfo,
     _decode_AssociatedObjects_Item_associatedObjectInfo,

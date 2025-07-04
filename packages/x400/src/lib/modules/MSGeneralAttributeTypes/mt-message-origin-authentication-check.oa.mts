@@ -19,7 +19,7 @@ import {
     _encode_MessageOriginAuthenticationCheck,
 } from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.mjs';
 import { id_att_message_origin_authentication_check } from '../MSObjectIdentifiers/id-att-message-origin-authentication-check.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

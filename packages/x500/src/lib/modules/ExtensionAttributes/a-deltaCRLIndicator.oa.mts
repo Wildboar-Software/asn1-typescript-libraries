@@ -2,7 +2,7 @@
 import { deltaCRLIndicator } from "../CertificateExtensions/deltaCRLIndicator.oa.mjs";
 import { id_asx_deltaCRLIndicator } from "../ExtensionAttributes/id-asx-deltaCRLIndicator.va.mjs";
 import { id_ce_a_deltaCRLIndicator } from "../ExtensionAttributes/id-ce-a-deltaCRLIndicator.va.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

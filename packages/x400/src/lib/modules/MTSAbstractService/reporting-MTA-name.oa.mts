@@ -22,7 +22,7 @@ import {
     _decode_ReportingMTAName,
     _encode_ReportingMTAName,
 } from '../MTSAbstractService/ReportingMTAName.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary reporting_MTA_name
  * @description

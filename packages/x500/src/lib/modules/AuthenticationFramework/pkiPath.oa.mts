@@ -6,7 +6,7 @@ import {
     _encode_PkiPath,
 } from "../AuthenticationFramework/PkiPath.ta.mjs";
 import { pkiPathMatch } from "../CertificateExtensions/pkiPathMatch.oa.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

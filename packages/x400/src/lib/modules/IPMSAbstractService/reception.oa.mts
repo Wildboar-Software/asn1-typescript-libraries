@@ -15,7 +15,7 @@ import { receive_rn } from '../IPMSAbstractService/receive-rn.oa.mjs';
 import { receive_nrn } from '../IPMSAbstractService/receive-nrn.oa.mjs';
 import { receive_on } from '../IPMSAbstractService/receive-on.oa.mjs';
 import { id_pt_reception } from '../IPMSObjectIdentifiers/id-pt-reception.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary reception
  * @description

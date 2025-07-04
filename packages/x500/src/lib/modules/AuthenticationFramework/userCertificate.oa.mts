@@ -7,7 +7,7 @@ import {
 import { id_at_userCertificate } from "../AuthenticationFramework/id-at-userCertificate.va.mjs";
 import { x509Certificate } from "../AuthenticationFramework/x509Certificate.oa.mjs";
 import { certificateExactMatch } from "../CertificateExtensions/certificateExactMatch.oa.mjs";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";

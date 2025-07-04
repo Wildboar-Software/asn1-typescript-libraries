@@ -16,12 +16,12 @@ import {
     _root_component_type_list_1_spec_for_SIGNATURE,
     _extension_additions_list_spec_for_SIGNATURE,
     _root_component_type_list_2_spec_for_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_MessageOriginAuthenticationCheck,
     _encode_SIGNATURE as _encode_MessageOriginAuthenticationCheck,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
+} from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary MessageOriginAuthenticationCheck

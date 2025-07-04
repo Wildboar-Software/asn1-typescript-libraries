@@ -15,7 +15,7 @@ import {
     _encode_E_terminateResponse,
 } from '../E-health-common/E-terminateResponse.ta.mjs';
 import { id_health_term_rsp } from '../E-health-common/id-health-term-rsp.va.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
+import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 
 /**
  * @summary health_term_rsp

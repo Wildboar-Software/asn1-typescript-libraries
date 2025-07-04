@@ -19,7 +19,7 @@ import {
     _encode_SignatureVerificationStatus,
 } from '../MSGeneralAttributeTypes/SignatureVerificationStatus.ta.mjs';
 import { id_att_signature_verification_status } from '../MSObjectIdentifiers/id-att-signature-verification-status.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca.mjs';
+import { type OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca.mjs';
 
 /**
  * @summary OtherCertificate

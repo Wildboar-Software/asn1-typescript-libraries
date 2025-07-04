@@ -13,7 +13,7 @@ import { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.
 import { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa.mjs';
 import { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa.mjs';
 import { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary management
  * @description

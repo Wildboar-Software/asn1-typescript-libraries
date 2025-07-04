@@ -14,7 +14,7 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
+} from '@wildboar/cmip';
 /**
  * @summary OnceReportAttributeList
  * @description

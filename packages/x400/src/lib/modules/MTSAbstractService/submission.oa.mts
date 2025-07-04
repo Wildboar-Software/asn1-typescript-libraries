@@ -15,7 +15,7 @@ import { probe_submission } from '../MTSAbstractService/probe-submission.oa.mjs'
 import { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa.mjs';
 import { submission_control } from '../MTSAbstractService/submission-control.oa.mjs';
 import { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary submission
  * @description

@@ -13,7 +13,7 @@ import {
     SpecificIdentifier,
     _decode_SpecificIdentifier,
     _encode_SpecificIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta.mjs';
+} from '@wildboar/attribute-asn1module';
 import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs';
 /**
  * @summary resourceRequestRate

@@ -2,7 +2,7 @@
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_ce_sOAIdentifier } from "../AttributeCertificateDefinitions/id-ce-sOAIdentifier.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary sOAIdentifier
  * @description

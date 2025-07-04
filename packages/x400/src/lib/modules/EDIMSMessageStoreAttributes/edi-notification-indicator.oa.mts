@@ -19,9 +19,9 @@ import {
     _decode_EDINotificationIndicator,
     _encode_EDINotificationIndicator,
 } from '../EDIMSMessageStoreAttributes/EDINotificationIndicator.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_sat_edi_notification_indicator } from '../EDIMSObjectIdentifiers/id-sat-edi-notification-indicator.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

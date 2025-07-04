@@ -14,7 +14,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';
+import { type SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;
 

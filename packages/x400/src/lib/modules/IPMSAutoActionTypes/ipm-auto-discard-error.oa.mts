@@ -12,11 +12,11 @@ import {
 import {
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.mjs';
+} from '@wildboar/rose';
 import {
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
+} from '@wildboar/rose';
 import {
     ipm_auto_discard_error_ParameterType,
     _decode_ipm_auto_discard_error_ParameterType,

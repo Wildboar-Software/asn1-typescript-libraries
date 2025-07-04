@@ -19,9 +19,9 @@ import {
     _decode_ProofOfDeliveryRequest,
     _encode_ProofOfDeliveryRequest,
 } from '../MTSAbstractService/ProofOfDeliveryRequest.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_att_proof_of_delivery_request } from '../MSObjectIdentifiers/id-att-proof-of-delivery-request.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

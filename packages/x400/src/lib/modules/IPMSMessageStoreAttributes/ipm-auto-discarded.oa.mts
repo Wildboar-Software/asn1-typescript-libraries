@@ -15,9 +15,9 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
-import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.mjs';
+import { booleanMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_sat_ipm_auto_discarded } from '../IPMSObjectIdentifiers/id-sat-ipm-auto-discarded.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

@@ -24,7 +24,7 @@ import {
     _decode_ProbeOriginAuthenticationCheck,
     _encode_ProbeOriginAuthenticationCheck,
 } from '../MTSAbstractService/ProbeOriginAuthenticationCheck.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
+import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 /**
  * @summary probe_origin_authentication_check
  * @description

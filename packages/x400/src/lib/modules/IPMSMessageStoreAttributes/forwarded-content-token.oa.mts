@@ -19,7 +19,7 @@ import {
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
 import { id_hat_forwarded_content_token } from '../IPMSObjectIdentifiers/id-hat-forwarded-content-token.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

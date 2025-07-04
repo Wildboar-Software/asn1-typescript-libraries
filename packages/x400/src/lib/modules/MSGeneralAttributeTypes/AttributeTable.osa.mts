@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { GeneralAttributes } from '../MSGeneralAttributeTypes/GeneralAttributes.osa.mjs';
 import { ContentSpecificAttributes } from '../MSGeneralAttributeTypes/ContentSpecificAttributes.osa.mjs';
 /**

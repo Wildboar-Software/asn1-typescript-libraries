@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { PARAMETER } from '../CommonMgt/PARAMETER.oca.mjs';
+import { type PARAMETER } from '../CommonMgt/PARAMETER.oca.mjs';
 /**
  * @summary Parameters
  * @description

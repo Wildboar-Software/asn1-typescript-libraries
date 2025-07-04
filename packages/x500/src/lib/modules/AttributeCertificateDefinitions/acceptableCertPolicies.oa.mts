@@ -5,7 +5,7 @@ import {
     _encode_AcceptableCertPoliciesSyntax,
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary acceptableCertPolicies
  * @description

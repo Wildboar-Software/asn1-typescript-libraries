@@ -19,7 +19,7 @@ import {
     _encode_OriginatorReportRequest,
 } from '../MTSAbstractService/OriginatorReportRequest.ta.mjs';
 import { id_att_originator_report_request } from '../MSObjectIdentifiers/id-att-originator-report-request.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

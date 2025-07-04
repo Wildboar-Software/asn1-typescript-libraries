@@ -2,7 +2,7 @@
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_ce_singleUse } from "../AttributeCertificateDefinitions/id-ce-singleUse.va.mjs";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary singleUse
  * @description

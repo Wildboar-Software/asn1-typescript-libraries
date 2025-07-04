@@ -19,9 +19,9 @@ import {
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
 } from '../IPMSInformationObjects/NonReceiptReasonField.ta.mjs';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
+import { integerMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_nat_non_receipt_reason } from '../IPMSObjectIdentifiers/id-nat-non-receipt-reason.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

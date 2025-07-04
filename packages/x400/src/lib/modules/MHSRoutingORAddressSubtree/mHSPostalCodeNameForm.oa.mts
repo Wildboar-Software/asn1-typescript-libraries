@@ -12,7 +12,7 @@ import {
 import { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa.mjs';
 import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.mjs';
 import { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
+import { NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSPostalCodeNameForm
  * @description

@@ -13,7 +13,7 @@ import { message_transfer } from '../MTAAbstractService/message-transfer.oa.mjs'
 import { probe_transfer } from '../MTAAbstractService/probe-transfer.oa.mjs';
 import { report_transfer } from '../MTAAbstractService/report-transfer.oa.mjs';
 import { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va.mjs';
-import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
+import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
 /**
  * @summary transfer
  * @description

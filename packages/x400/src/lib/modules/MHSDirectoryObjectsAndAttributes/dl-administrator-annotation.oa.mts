@@ -16,7 +16,7 @@ import {
     _encode_dl_administrator_annotation_Type,
 } from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta.mjs';
 import { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va.mjs';
-import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.mjs';
+import { CONTEXT } from '@wildboar/x500/InformationFramework';
 /**
  * @summary dl_administrator_annotation
  * @description

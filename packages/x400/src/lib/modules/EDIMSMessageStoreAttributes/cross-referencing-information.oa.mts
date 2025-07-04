@@ -18,9 +18,9 @@ import {
     _decode_CrossReferencingInformationSubField,
     _encode_CrossReferencingInformationSubField,
 } from '../EDIMSInformationObjects/CrossReferencingInformationSubField.ta.mjs';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
+import { bitStringMatch } from '@wildboar/x500/SelectedAttributeTypes';
 import { id_hat_cross_referencing_information } from '../EDIMSObjectIdentifiers/id-hat-cross-referencing-information.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

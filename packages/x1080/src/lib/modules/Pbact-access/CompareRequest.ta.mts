@@ -22,12 +22,12 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeValueAssertion.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     AttributeCertificates,
     _decode_AttributeCertificates,

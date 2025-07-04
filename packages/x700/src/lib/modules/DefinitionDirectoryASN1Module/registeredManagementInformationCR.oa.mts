@@ -22,7 +22,7 @@ import { managementBehaviour } from '../DefinitionDirectoryASN1Module/management
 import { managementAction } from '../DefinitionDirectoryASN1Module/managementAction.oa.mjs';
 import { managementNotification } from '../DefinitionDirectoryASN1Module/managementNotification.oa.mjs';
 import { asn1Module } from '../DefinitionDirectoryASN1Module/asn1Module.oa.mjs';
-import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.mjs';
+import { CONTENT_RULE } from '@wildboar/x500/InformationFramework';
 /**
  * @summary registeredManagementInformationCR
  * @description

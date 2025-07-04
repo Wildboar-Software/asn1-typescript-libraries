@@ -9,19 +9,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
+import { type ATTRIBUTE } from '@wildboar/x500/InformationFramework';
 import {
     _enum_for_AttributeUsage,
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
+} from '@wildboar/x500/InformationFramework';
 import {
     ExtendedEncodedInformationType,
     _decode_ExtendedEncodedInformationType,
     _encode_ExtendedEncodedInformationType,
 } from '../MTSAbstractService/ExtendedEncodedInformationType.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
+import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_at_mhs_unacceptable_eits } from '../MHSObjectIdentifiers/id-at-mhs-unacceptable-eits.va.mjs';
 /**
  * @summary mhs_unacceptable_eits

@@ -19,7 +19,7 @@ import {
     _encode_InterchangeRecipientField,
 } from '../EDIMSInformationObjects/InterchangeRecipientField.ta.mjs';
 import { id_rat_interchange_recipient_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-interchange-recipient-for-this-recipient.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**

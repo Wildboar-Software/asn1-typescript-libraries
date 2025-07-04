@@ -18,9 +18,9 @@ import {
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
+import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_att_auto_action_type } from '../MSObjectIdentifiers/id-att-auto-action-type.va.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
+import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
 /**
