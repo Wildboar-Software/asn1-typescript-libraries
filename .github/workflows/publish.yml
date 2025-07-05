@@ -43,7 +43,7 @@ jobs:
           - "iso-9798-3-sasl"
           - "kerberos5"
           - "ldap"
-          - "m3100"
+          # - "m3100"
           - "nlm"
           - "ocsp"
           - "pc"
