@@ -74,7 +74,7 @@ class ManagementExtension {
      * @static
      * @method
      */
-    public static get _default_value_for_significance () { return false; }
+    public static get _default_value_for_significance (): BOOLEAN { return false; }
 }
 
 /**

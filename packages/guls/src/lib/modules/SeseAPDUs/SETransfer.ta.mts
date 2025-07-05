@@ -134,7 +134,7 @@ export class SETransfer {
    * @static
    * @method
    */
-  public static get _default_value_for_invocationId() {
+  public static get _default_value_for_invocationId(): InvocationId {
     return noInvocationId;
   }
   /**
@@ -143,7 +143,7 @@ export class SETransfer {
    * @static
    * @method
    */
-  public static get _default_value_for_startFlag() {
+  public static get _default_value_for_startFlag(): BOOLEAN {
     return false;
   }
   /**
@@ -152,7 +152,7 @@ export class SETransfer {
    * @static
    * @method
    */
-  public static get _default_value_for_endFlag() {
+  public static get _default_value_for_endFlag(): BOOLEAN {
     return false;
   }
 }

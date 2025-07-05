@@ -129,7 +129,7 @@ export const _extension_additions_list_spec_for_PROTECTED_dirSign: $.ComponentSp
  */
 export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
   _decode_BaseType: $.ASN1Decoder<BaseType>
-) {
+): $.ASN1Decoder<PROTECTED_dirSign<BaseType>> {
   return function (el: _Element): PROTECTED_dirSign<BaseType> {
     let baseType: OPTIONAL<BaseType>;
     let algorithmId!: AlgorithmIdentifier;
@@ -169,7 +169,7 @@ export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
  */
 export function _get_encoder_for_PROTECTED_dirSign<BaseType>(
   _encode_BaseType: $.ASN1Encoder<BaseType>
-) {
+): $.ASN1Encoder<PROTECTED_dirSign<BaseType>> {
   return function (
     value: PROTECTED_dirSign<BaseType>  ): _Element {
     return $._encodeSequence(

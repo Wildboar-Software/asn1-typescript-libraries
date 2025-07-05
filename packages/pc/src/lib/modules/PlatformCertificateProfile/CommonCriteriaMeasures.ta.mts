@@ -125,18 +125,18 @@ class CommonCriteriaMeasures {
      * @static
      * @method
      */
-    public static get _default_value_for_plus () { return false; }        /**
-         * @summary The enum used as the type of the component `assurancelevel`
-         * @public
-         * @static
-         */
-
-    public static _enum_for_assurancelevel = _enum_for_EvaluationAssuranceLevel;        /**
-         * @summary The enum used as the type of the component `strengthOfFunction`
-         * @public
-         * @static
-         */
-
+    public static get _default_value_for_plus (): BOOLEAN { return false; }
+    /**
+     * @summary The enum used as the type of the component `assurancelevel`
+     * @public
+     * @static
+     */
+    public static _enum_for_assurancelevel = _enum_for_EvaluationAssuranceLevel;
+    /**
+     * @summary The enum used as the type of the component `strengthOfFunction`
+     * @public
+     * @static
+     */
     public static _enum_for_strengthOfFunction = _enum_for_StrengthOfFunction;
 }
 

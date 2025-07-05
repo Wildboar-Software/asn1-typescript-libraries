@@ -34,7 +34,7 @@ export type NoInvocationId = InvocationId; // VALUE_SET_TYPE
 let _cached_decoder_for_NoInvocationId: $.ASN1Decoder<NoInvocationId> | null = null;
 
 
-export function _decode_NoInvocationId(el: _Element) {
+export function _decode_NoInvocationId(el: _Element): NoInvocationId {
   if (!_cached_decoder_for_NoInvocationId) {
     _cached_decoder_for_NoInvocationId = _decode_InvocationId;
   }
@@ -48,7 +48,7 @@ let _cached_encoder_for_NoInvocationId: $.ASN1Encoder<NoInvocationId> | null = n
 export function _encode_NoInvocationId(
   value: NoInvocationId,
   elGetter: $.ASN1Encoder<NoInvocationId>
-) {
+): _Element {
   if (!_cached_encoder_for_NoInvocationId) {
     _cached_encoder_for_NoInvocationId = _encode_InvocationId;
   }

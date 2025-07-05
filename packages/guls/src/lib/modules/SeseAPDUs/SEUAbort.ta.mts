@@ -95,7 +95,7 @@ export class SEUAbort {
    * @static
    * @method
    */
-  public static get _default_value_for_invocationId() {
+  public static get _default_value_for_invocationId(): InvocationId {
     return noInvocationId;
   }
 }

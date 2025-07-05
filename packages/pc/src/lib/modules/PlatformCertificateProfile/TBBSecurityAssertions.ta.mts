@@ -104,19 +104,19 @@ class TBBSecurityAssertions {
      * @static
      * @method
      */
-    public static get _default_value_for_version () { return v1; }
+    public static get _default_value_for_version (): Version { return v1; }
     /**
      * @summary Getter that returns the default value for `iso9000Certified`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_iso9000Certified () { return false; }        /**
-         * @summary The enum used as the type of the component `rtmType`
-         * @public
-         * @static
-         */
-
+    public static get _default_value_for_iso9000Certified (): BOOLEAN { return false; }
+    /**
+     * @summary The enum used as the type of the component `rtmType`
+     * @public
+     * @static
+     */
     public static _enum_for_rtmType = _enum_for_MeasurementRootType;
 }
 

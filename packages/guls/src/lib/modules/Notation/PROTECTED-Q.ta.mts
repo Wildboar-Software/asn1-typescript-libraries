@@ -45,7 +45,7 @@ export type PROTECTED_Q<BaseType> = PROTECTED<BaseType>; // DefinedType
  */
 export function _get_decoder_for_PROTECTED_Q<BaseType>(
   _decode_BaseType: $.ASN1Decoder<BaseType>
-) {
+): $.ASN1Decoder<PROTECTED_Q<BaseType>> {
   return _get_decoder_for_PROTECTED<BaseType>(_decode_BaseType);
 }
 
@@ -57,7 +57,7 @@ export function _get_decoder_for_PROTECTED_Q<BaseType>(
  */
 export function _get_encoder_for_PROTECTED_Q<BaseType>(
   _encode_BaseType: $.ASN1Encoder<BaseType>
-) {
+): $.ASN1Encoder<PROTECTED_Q<BaseType>> {
   return _get_encoder_for_PROTECTED<BaseType>(_encode_BaseType);
 }
 

@@ -108,7 +108,7 @@ export type PROTECTED<BaseType> =
  */
 export function _get_decoder_for_PROTECTED<BaseType>(
   _decode_BaseType: $.ASN1Decoder<BaseType>
-) {
+): $.ASN1Decoder<PROTECTED<BaseType>> {
   return $._decode_inextensible_choice<PROTECTED<BaseType>>({
     'UNIVERSAL 3': ['dirEncrypt', $._decodeBitString],
     'UNIVERSAL 16': [
@@ -138,7 +138,7 @@ export function _get_decoder_for_PROTECTED<BaseType>(
  */
 export function _get_encoder_for_PROTECTED<BaseType>(
   _encode_BaseType: $.ASN1Encoder<BaseType>
-) {
+): $.ASN1Encoder<PROTECTED<BaseType>> {
   return $._encode_choice<PROTECTED<BaseType>>(
     {
       dirEncrypt: $._encodeBitString,

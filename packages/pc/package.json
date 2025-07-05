@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/pc",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Trusted Computing Group Platform Certificate ASN.1 data structures in TypeScript",
     "keywords": [
         "tcg",

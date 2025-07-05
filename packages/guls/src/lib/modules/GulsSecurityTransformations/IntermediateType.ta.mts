@@ -129,7 +129,7 @@ export class IntermediateType {
    * @static
    * @method
    */
-  public static get _default_value_for_initEncRules() {
+  public static get _default_value_for_initEncRules(): OBJECT_IDENTIFIER {
     return _OID.fromParts(
       [/* asn1 */ 1, /* ber-derived */ 2, /* canonical-encoding */ 0],
       joint_iso_itu_t

@@ -73,12 +73,12 @@ class FIPSLevel {
      * @static
      * @method
      */
-    public static get _default_value_for_plus () { return false; }        /**
-         * @summary The enum used as the type of the component `level`
-         * @public
-         * @static
-         */
-
+    public static get _default_value_for_plus (): BOOLEAN { return false; }
+    /**
+     * @summary The enum used as the type of the component `level`
+     * @public
+     * @static
+     */
     public static _enum_for_level = _enum_for_SecurityLevel;
 }
 

@@ -98,7 +98,7 @@ export class CMIPUserInfo {
    * @static
    * @method
    */
-  public static get _default_value_for_protocolVersion() {
+  public static get _default_value_for_protocolVersion(): ProtocolVersion {
     return (() => {
       const _ret = new Uint8ClampedArray(2);
       _ret[ProtocolVersion_version1] = TRUE_BIT;
@@ -111,7 +111,7 @@ export class CMIPUserInfo {
    * @static
    * @method
    */
-  public static get _default_value_for_functionalUnits() {
+  public static get _default_value_for_functionalUnits(): FunctionalUnits {
     return new Uint8ClampedArray([]);
   }
 }

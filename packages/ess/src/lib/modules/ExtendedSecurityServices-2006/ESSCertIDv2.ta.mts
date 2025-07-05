@@ -84,7 +84,7 @@ export class ESSCertIDv2 {
      * @static
      * @method
      */
-    public static get _default_value_for_hashAlgorithm() {
+    public static get _default_value_for_hashAlgorithm(): AlgorithmIdentifier {
         return AlgorithmIdentifier._from_object({
             algorithm: id_sha256,
             parameters: undefined,

@@ -161,7 +161,7 @@ export class ActionArgument implements BaseManagedObjectId {
    * @static
    * @method
    */
-  public static get _default_value_for_synchronization() {
+  public static get _default_value_for_synchronization(): CMISSync {
     return CMISSync_bestEffort;
   }
   /**
@@ -170,7 +170,7 @@ export class ActionArgument implements BaseManagedObjectId {
    * @static
    * @method
    */
-  public static get _default_value_for_scope() {
+  public static get _default_value_for_scope(): Scope {
     return { namedNumbers: Scope_namedNumbers_baseObject };
   }
   /**
