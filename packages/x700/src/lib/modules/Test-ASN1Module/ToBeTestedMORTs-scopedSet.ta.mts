@@ -86,7 +86,7 @@ export class ToBeTestedMORTs_scopedSet {
      * @static
      * @method
      */
-    public static get _default_value_for_mORTsScope0() {
+    public static get _default_value_for_mORTsScope0(): Scope {
         return { namedNumbers: Scope_namedNumbers_baseObject };
     }
     /**

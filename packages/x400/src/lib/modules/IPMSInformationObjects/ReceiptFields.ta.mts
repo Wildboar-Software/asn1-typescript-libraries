@@ -106,7 +106,7 @@ export class ReceiptFields {
      * @static
      * @method
      */
-    public static get _default_value_for_acknowledgment_mode() {
+    public static get _default_value_for_acknowledgment_mode(): AcknowledgmentModeField {
         return AcknowledgmentModeField_manual;
     }
     /**

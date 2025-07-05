@@ -64,7 +64,7 @@ export class IA5TextParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_repertoire() {
+    public static get _default_value_for_repertoire(): Repertoire {
         return Repertoire_ia5;
     }
     /**

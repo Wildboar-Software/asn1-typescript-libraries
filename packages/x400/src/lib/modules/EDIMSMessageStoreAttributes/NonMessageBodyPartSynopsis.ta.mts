@@ -91,7 +91,7 @@ export class NonMessageBodyPartSynopsis {
      * @static
      * @method
      */
-    public static get _default_value_for_processed() {
+    public static get _default_value_for_processed(): BOOLEAN {
         return false;
     }
 }

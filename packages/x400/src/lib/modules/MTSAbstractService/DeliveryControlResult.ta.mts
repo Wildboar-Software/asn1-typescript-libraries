@@ -128,7 +128,7 @@ export class DeliveryControlResult implements Waiting {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_operations() {
+    public static get _default_value_for_waiting_operations(): Operations {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -137,7 +137,7 @@ export class DeliveryControlResult implements Waiting {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_messages() {
+    public static get _default_value_for_waiting_messages(): WaitingMessages {
         return new Uint8ClampedArray([]);
     }
     /**

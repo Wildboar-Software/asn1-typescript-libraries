@@ -112,7 +112,7 @@ export class Selector {
      * @static
      * @method
      */
-    public static get _default_value_for_child_entries() {
+    public static get _default_value_for_child_entries(): BOOLEAN {
         return false;
     }
 }

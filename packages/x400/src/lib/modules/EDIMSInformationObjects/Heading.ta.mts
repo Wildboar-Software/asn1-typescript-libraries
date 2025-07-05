@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type BOOLEAN,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -309,7 +310,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_responsibility_forwarded() {
+    public static get _default_value_for_responsibility_forwarded(): BOOLEAN {
         return false;
     }
     /**
@@ -318,7 +319,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_edi_bodypart_type() {
+    public static get _default_value_for_edi_bodypart_type(): EDIBodyPartType {
         return id_bp_edifact_ISO646;
     }
     /**
@@ -327,7 +328,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_incomplete_copy() {
+    public static get _default_value_for_incomplete_copy(): BOOLEAN {
         return false;
     }
 }

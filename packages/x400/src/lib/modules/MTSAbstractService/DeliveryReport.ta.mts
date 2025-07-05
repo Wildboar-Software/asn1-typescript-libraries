@@ -79,7 +79,7 @@ export class DeliveryReport {
      * @static
      * @method
      */
-    public static get _default_value_for_type_of_MTS_user() {
+    public static get _default_value_for_type_of_MTS_user(): TypeOfMTSUser {
         return public_;
     }
 }

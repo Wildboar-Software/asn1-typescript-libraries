@@ -169,7 +169,7 @@ export class E_setupRequest {
      * @static
      * @method
      */
-    public static get _default_value_for_requirement() {
+    public static get _default_value_for_requirement(): Requirements {
         return Requirements_none;
     }
     /**

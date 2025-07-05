@@ -72,7 +72,7 @@ export class NamingObjectClass {
      * @static
      * @method
      */
-    public static get _default_value_for_andSubclasses() {
+    public static get _default_value_for_andSubclasses(): BOOLEAN {
         return false;
     }
 }

@@ -80,7 +80,7 @@ export class V42BisCompressionParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_dictionary_size() {
+    public static get _default_value_for_dictionary_size(): INTEGER {
         return 12;
     }
     /**
@@ -89,7 +89,7 @@ export class V42BisCompressionParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_largest_compressed_chain() {
+    public static get _default_value_for_largest_compressed_chain(): INTEGER {
         return 512;
     }
     /**
@@ -98,7 +98,7 @@ export class V42BisCompressionParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_last_entries_to_delete() {
+    public static get _default_value_for_last_entries_to_delete(): INTEGER {
         return 256;
     }
 }

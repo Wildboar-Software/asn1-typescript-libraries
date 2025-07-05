@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type BOOLEAN,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -91,7 +92,7 @@ export class FNUAMSReasonCodeField {
      * @static
      * @method
      */
-    public static get _default_value_for_fn_security_check() {
+    public static get _default_value_for_fn_security_check(): BOOLEAN {
         return false;
     }
 }

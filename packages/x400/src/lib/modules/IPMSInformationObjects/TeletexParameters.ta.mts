@@ -83,7 +83,7 @@ export class TeletexParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_telex_compatible() {
+    public static get _default_value_for_telex_compatible(): BOOLEAN {
         return false;
     }
 }

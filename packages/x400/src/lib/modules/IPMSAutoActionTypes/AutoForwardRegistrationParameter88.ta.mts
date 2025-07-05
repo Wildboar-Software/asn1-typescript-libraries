@@ -102,7 +102,7 @@ export class AutoForwardRegistrationParameter88 {
      * @static
      * @method
      */
-    public static get _default_value_for_delete_after_auto_forwarding() {
+    public static get _default_value_for_delete_after_auto_forwarding(): BOOLEAN {
         return false;
     }
 }

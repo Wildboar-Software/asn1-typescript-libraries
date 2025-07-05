@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type BOOLEAN,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -234,7 +235,7 @@ export class RecipientsSubField {
      * @static
      * @method
      */
-    public static get _default_value_for_action_request() {
+    public static get _default_value_for_action_request(): ActionRequestField {
         return id_for_action;
     }
     /**
@@ -243,7 +244,7 @@ export class RecipientsSubField {
      * @static
      * @method
      */
-    public static get _default_value_for_responsibility_passing_allowed() {
+    public static get _default_value_for_responsibility_passing_allowed(): BOOLEAN {
         return false;
     }
     /**
@@ -252,7 +253,7 @@ export class RecipientsSubField {
      * @static
      * @method
      */
-    public static get _default_value_for_acknowledgement_request() {
+    public static get _default_value_for_acknowledgement_request(): BOOLEAN {
         return false;
     }
     /**
@@ -261,7 +262,7 @@ export class RecipientsSubField {
      * @static
      * @method
      */
-    public static get _default_value_for_test_indicator() {
+    public static get _default_value_for_test_indicator(): BOOLEAN {
         return false;
     }
 }

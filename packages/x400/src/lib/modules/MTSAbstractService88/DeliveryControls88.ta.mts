@@ -162,7 +162,7 @@ export class DeliveryControls88 implements Controls {
      * @static
      * @method
      */
-    public static get _default_value_for_restrict() {
+    public static get _default_value_for_restrict(): BOOLEAN {
         return false;
     }
 }

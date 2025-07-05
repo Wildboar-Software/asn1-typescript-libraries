@@ -162,7 +162,7 @@ export class MessageClass {
      * @static
      * @method
      */
-    public static get _default_value_for_objects() {
+    public static get _default_value_for_objects(): MessageClass_objects {
         return MessageClass_objects_both;
     }
     /**

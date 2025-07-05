@@ -217,7 +217,7 @@ export class MessageTransferEnvelope implements PerMessageTransferFields {
      * @static
      * @method
      */
-    public static get _default_value_for_priority() {
+    public static get _default_value_for_priority(): Priority {
         return Priority_normal;
     }
     /**
@@ -226,7 +226,7 @@ export class MessageTransferEnvelope implements PerMessageTransferFields {
      * @static
      * @method
      */
-    public static get _default_value_for_per_message_indicators() {
+    public static get _default_value_for_per_message_indicators(): PerMessageIndicators {
         return new Uint8ClampedArray([]);
     }
     /**

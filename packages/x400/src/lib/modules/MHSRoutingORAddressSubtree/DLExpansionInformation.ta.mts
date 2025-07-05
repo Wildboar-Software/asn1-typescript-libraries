@@ -87,7 +87,7 @@ export class DLExpansionInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_any_mta_may_expand() {
+    public static get _default_value_for_any_mta_may_expand(): BOOLEAN {
         return false;
     }
 }

@@ -84,7 +84,7 @@ export class FunctionalUnitPackage {
      * @static
      * @method
      */
-    public static get _default_value_for_managerRoleFunctionalUnit() {
+    public static get _default_value_for_managerRoleFunctionalUnit(): BIT_STRING {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -93,7 +93,7 @@ export class FunctionalUnitPackage {
      * @static
      * @method
      */
-    public static get _default_value_for_agentRoleFunctionalUnit() {
+    public static get _default_value_for_agentRoleFunctionalUnit(): BIT_STRING {
         return new Uint8ClampedArray([]);
     }
 }

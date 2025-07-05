@@ -100,7 +100,7 @@ export class RecipientSpecifier {
      * @static
      * @method
      */
-    public static get _default_value_for_notification_requests() {
+    public static get _default_value_for_notification_requests(): NotificationRequests {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -109,7 +109,7 @@ export class RecipientSpecifier {
      * @static
      * @method
      */
-    public static get _default_value_for_reply_requested() {
+    public static get _default_value_for_reply_requested(): BOOLEAN {
         return false;
     }
 }

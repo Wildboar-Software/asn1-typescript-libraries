@@ -135,7 +135,7 @@ export class RequestContent_content {
      * @static
      * @method
      */
-    public static get _default_value_for_requirement() {
+    public static get _default_value_for_requirement(): Requirements {
         return Requirements_none;
     }
     /**
@@ -144,7 +144,7 @@ export class RequestContent_content {
      * @static
      * @method
      */
-    public static get _default_value_for_exchangeMode() {
+    public static get _default_value_for_exchangeMode(): ExchangeMode {
         return ExchangeMode_sync;
     }
 }

@@ -201,7 +201,7 @@ export class MSBindResult {
      * @static
      * @method
      */
-    public static get _default_value_for_alert_indication() {
+    public static get _default_value_for_alert_indication(): BOOLEAN {
         return false;
     }
     /**
@@ -210,7 +210,7 @@ export class MSBindResult {
      * @static
      * @method
      */
-    public static get _default_value_for_ua_registration_id_unknown() {
+    public static get _default_value_for_ua_registration_id_unknown(): BOOLEAN {
         return false;
     }
 }

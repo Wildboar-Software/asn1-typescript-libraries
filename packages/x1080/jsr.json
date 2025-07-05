@@ -1,9 +1,19 @@
 {
   "name": "@wildboar/x1080",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./CmsTelebiometric": "./src/lib/modules/CmsTelebiometric/index.mts",
+    "./E-health-command-response": "./src/lib/modules/E-health-command-response/index.mts",
+    "./E-health-common": "./src/lib/modules/E-health-common/index.mts",
+    "./E-health-Data-Message": "./src/lib/modules/E-health-Data-Message/index.mts",
+    "./E-health-identification": "./src/lib/modules/E-health-identification/index.mts",
+    "./E-health-quantities-and-units": "./src/lib/modules/E-health-quantities-and-units/index.mts",
+    "./E-health-send-and-ack": "./src/lib/modules/E-health-send-and-ack/index.mts",
+    "./E-health-setup": "./src/lib/modules/E-health-setup/index.mts",
+    "./Pbact-access": "./src/lib/modules/Pbact-access/index.mts",
+    "./Telebiometrics": "./src/lib/modules/Telebiometrics/index.mts"
   },
   "publish": {
     "include": [

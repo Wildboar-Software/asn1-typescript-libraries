@@ -93,7 +93,7 @@ export class EDINotificationRequestsField {
      * @static
      * @method
      */
-    public static get _default_value_for_edi_notification_requests() {
+    public static get _default_value_for_edi_notification_requests(): EDINotificationRequests {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -102,7 +102,7 @@ export class EDINotificationRequestsField {
      * @static
      * @method
      */
-    public static get _default_value_for_edi_notification_security() {
+    public static get _default_value_for_edi_notification_security(): EDINotificationSecurity {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -111,7 +111,7 @@ export class EDINotificationRequestsField {
      * @static
      * @method
      */
-    public static get _default_value_for_edi_reception_security() {
+    public static get _default_value_for_edi_reception_security(): EDIReceptionSecurity {
         return new Uint8ClampedArray([]);
     }
 }

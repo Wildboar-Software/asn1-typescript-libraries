@@ -71,7 +71,7 @@ export class PerRecipientReport {
      * @static
      * @method
      */
-    public static get _default_value_for_position() {
+    public static get _default_value_for_position(): INTEGER {
         return 1;
     }
 }

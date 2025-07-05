@@ -96,7 +96,7 @@ export class DeleteArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_entry_class() {
+    public static get _default_value_for_entry_class(): EntryClass {
         return delivery;
     }
 }

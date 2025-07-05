@@ -155,7 +155,7 @@ export class PropertyList {
      * @static
      * @method
      */
-    public static get _default_value_for_replaceWithDefault() {
+    public static get _default_value_for_replaceWithDefault(): BOOLEAN {
         return false;
     }
     /**
@@ -164,7 +164,7 @@ export class PropertyList {
      * @static
      * @method
      */
-    public static get _default_value_for_setByCreate() {
+    public static get _default_value_for_setByCreate(): BOOLEAN {
         return false;
     }
     /**

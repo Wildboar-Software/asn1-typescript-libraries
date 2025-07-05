@@ -203,7 +203,7 @@ export class PerMessageTransferFields {
      * @static
      * @method
      */
-    public static get _default_value_for_priority() {
+    public static get _default_value_for_priority(): Priority {
         return Priority_normal;
     }
     /**

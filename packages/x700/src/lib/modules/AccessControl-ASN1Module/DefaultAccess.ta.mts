@@ -142,7 +142,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_action() {
+    public static get _default_value_for_action(): EnforcementAction {
         return deny;
     }
     /**
@@ -151,7 +151,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_create() {
+    public static get _default_value_for_create(): EnforcementAction {
         return deny;
     }
     /**
@@ -160,7 +160,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_delete_() {
+    public static get _default_value_for_delete_(): EnforcementAction {
         return deny;
     }
     /**
@@ -169,7 +169,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_get_() {
+    public static get _default_value_for_get_(): EnforcementAction {
         return deny;
     }
     /**
@@ -178,7 +178,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_replace() {
+    public static get _default_value_for_replace(): EnforcementAction {
         return deny;
     }
     /**
@@ -187,7 +187,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_addMember() {
+    public static get _default_value_for_addMember(): EnforcementAction {
         return deny;
     }
     /**
@@ -196,7 +196,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_removeMember() {
+    public static get _default_value_for_removeMember(): EnforcementAction {
         return deny;
     }
     /**
@@ -205,7 +205,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_replaceWithDefault() {
+    public static get _default_value_for_replaceWithDefault(): EnforcementAction {
         return deny;
     }
     /**
@@ -214,7 +214,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_multipleObjectSelection() {
+    public static get _default_value_for_multipleObjectSelection(): EnforcementAction {
         return deny;
     }
     /**
@@ -223,7 +223,7 @@ export class DefaultAccess {
      * @static
      * @method
      */
-    public static get _default_value_for_filter() {
+    public static get _default_value_for_filter(): EnforcementAction {
         return deny;
     }
     /**

@@ -105,7 +105,7 @@ export class Waiting {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_operations() {
+    public static get _default_value_for_waiting_operations(): Operations {
         return new Uint8ClampedArray([]);
     }
     /**

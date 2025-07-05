@@ -85,7 +85,7 @@ export class NumericMeasure_qualifiedValue {
      * @static
      * @method
      */
-    public static get _default_value_for_suspectFlag() {
+    public static get _default_value_for_suspectFlag(): BOOLEAN {
         return false;
     }
 }

@@ -76,7 +76,7 @@ export class RelatedStoredFile_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_relationship() {
+    public static get _default_value_for_relationship(): Relationship {
         return { explicit_relationship: ExplicitRelationship_unspecified };
     }
 }

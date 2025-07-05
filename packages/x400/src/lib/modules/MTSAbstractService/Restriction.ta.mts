@@ -85,7 +85,7 @@ class Restriction {
      * @static
      * @method
      */
-    public static get _default_value_for_source_type () {
+    public static get _default_value_for_source_type (): Restriction_source_type {
         return (() => {
             const _ret = new Uint8ClampedArray(3);
             _ret[Restriction_source_type_originated_by] = TRUE_BIT;

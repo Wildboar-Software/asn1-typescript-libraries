@@ -79,7 +79,7 @@ export class ModificationList_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_modifyOperator() {
+    public static get _default_value_for_modifyOperator(): ModifyOperator {
         return replace;
     }
 }

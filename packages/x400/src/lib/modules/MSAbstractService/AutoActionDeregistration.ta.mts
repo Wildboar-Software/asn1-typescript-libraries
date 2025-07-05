@@ -77,7 +77,7 @@ export class AutoActionDeregistration {
      * @static
      * @method
      */
-    public static get _default_value_for_registration_identifier() {
+    public static get _default_value_for_registration_identifier(): INTEGER {
         return 1;
     }
 }

@@ -92,7 +92,7 @@ export class AdditionalActions {
      * @static
      * @method
      */
-    public static get _default_value_for_other_actions() {
+    public static get _default_value_for_other_actions(): OtherActions {
         return new Uint8ClampedArray([]);
     }
 }

@@ -75,7 +75,7 @@ export class EntryModification {
      * @static
      * @method
      */
-    public static get _default_value_for_strict() {
+    public static get _default_value_for_strict(): BOOLEAN {
         return false;
     }
 }

@@ -117,7 +117,7 @@ export class EncodedInformationTypes implements NonBasicParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_g3_facsimile() {
+    public static get _default_value_for_g3_facsimile(): G3FacsimileNonBasicParameters {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -126,7 +126,7 @@ export class EncodedInformationTypes implements NonBasicParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_teletex() {
+    public static get _default_value_for_teletex(): TeletexNonBasicParameters {
         return TeletexNonBasicParameters._from_object(new TeletexNonBasicParameters(
             undefined,
             undefined,

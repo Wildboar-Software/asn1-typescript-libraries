@@ -102,7 +102,7 @@ export class MSSubmissionOptions {
      * @static
      * @method
      */
-    public static get _default_value_for_disable_auto_modify() {
+    public static get _default_value_for_disable_auto_modify(): BOOLEAN {
         return false;
     }
 }

@@ -140,7 +140,7 @@ export class MSBindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_ms_configuration_request() {
+    public static get _default_value_for_ms_configuration_request(): BOOLEAN {
         return false;
     }
 }

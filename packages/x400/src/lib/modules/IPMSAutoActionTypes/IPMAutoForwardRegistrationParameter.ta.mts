@@ -145,7 +145,7 @@ export class IPMAutoForwardRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_ipm_auto_forward_options() {
+    public static get _default_value_for_ipm_auto_forward_options(): IPMAutoForwardOptions {
         return new Uint8ClampedArray([]);
     }
 }

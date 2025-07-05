@@ -114,7 +114,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_content_integrity_check() {
+    public static get _default_value_for_content_integrity_check(): SignatureStatus {
         return signature_absent;
     }
     /**
@@ -123,7 +123,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_message_origin_authentication_check() {
+    public static get _default_value_for_message_origin_authentication_check(): SignatureStatus {
         return signature_absent;
     }
     /**
@@ -132,7 +132,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_message_token() {
+    public static get _default_value_for_message_token(): SignatureStatus {
         return signature_absent;
     }
     /**
@@ -141,7 +141,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_report_origin_authentication_check() {
+    public static get _default_value_for_report_origin_authentication_check(): SignatureStatus {
         return signature_absent;
     }
     /**
@@ -150,7 +150,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_proof_of_delivery() {
+    public static get _default_value_for_proof_of_delivery(): SignatureStatus {
         return signature_absent;
     }
     /**
@@ -159,7 +159,7 @@ export class SignatureVerificationStatus {
      * @static
      * @method
      */
-    public static get _default_value_for_proof_of_submission() {
+    public static get _default_value_for_proof_of_submission(): SignatureStatus {
         return signature_absent;
     }
 }

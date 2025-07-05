@@ -36,7 +36,7 @@ export type TerminateValidationReply =
     | { resultOfPartialValidation: ValidateReply } /* CHOICE_ALT_ROOT */;
 
 
-export const _decode_TerminateValidationReply = $._decode_inextensible_choice<TerminateValidationReply>(
+export const _decode_TerminateValidationReply: $.ASN1Decoder<TerminateValidationReply> = $._decode_inextensible_choice<TerminateValidationReply>(
         {
             'CONTEXT 0': [
                 'noOutStandingValidation',
@@ -56,7 +56,7 @@ export const _decode_TerminateValidationReply = $._decode_inextensible_choice<Te
     );
 
 
-export const _encode_TerminateValidationReply = $._encode_choice<TerminateValidationReply>(
+export const _encode_TerminateValidationReply: $.ASN1Encoder<TerminateValidationReply> = $._encode_choice<TerminateValidationReply>(
         {
             noOutStandingValidation: $._encode_implicit(
                 _TagClass.context,

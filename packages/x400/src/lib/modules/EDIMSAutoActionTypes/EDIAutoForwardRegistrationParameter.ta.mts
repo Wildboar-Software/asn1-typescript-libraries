@@ -131,7 +131,7 @@ export class EDIAutoForwardRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_delete_after_forwarding() {
+    public static get _default_value_for_delete_after_forwarding(): BOOLEAN {
         return false;
     }
 }
