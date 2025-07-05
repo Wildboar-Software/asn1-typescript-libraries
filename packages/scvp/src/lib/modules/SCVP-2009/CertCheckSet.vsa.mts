@@ -30,7 +30,7 @@ export type CertCheckSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_CertCheckSet: $.ASN1Decoder<CertCheckSet> | null = null;
 
-export function _decode_CertCheckSet(el: _Element) {
+export function _decode_CertCheckSet(el: _Element): CertCheckSet {
   if (!_cached_decoder_for_CertCheckSet) {
     _cached_decoder_for_CertCheckSet = $._decodeObjectIdentifier;
   }
@@ -42,7 +42,7 @@ let _cached_encoder_for_CertCheckSet: $.ASN1Encoder<CertCheckSet> | null = null;
 export function _encode_CertCheckSet(
   value: CertCheckSet,
   elGetter: $.ASN1Encoder<CertCheckSet>
-) {
+): _Element {
   if (!_cached_encoder_for_CertCheckSet) {
     _cached_encoder_for_CertCheckSet = $._encodeObjectIdentifier;
   }

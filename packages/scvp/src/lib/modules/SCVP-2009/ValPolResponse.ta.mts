@@ -264,7 +264,7 @@ export class ValPolResponse {
    * @static
    * @method
    */
-  public static get _default_value_for_clockSkew() {
+  public static get _default_value_for_clockSkew(): INTEGER {
     return 10;
   }
   /**

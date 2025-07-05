@@ -31,7 +31,7 @@ export type NameValidationErrorSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_NameValidationErrorSet: $.ASN1Decoder<NameValidationErrorSet> | null = null;
 
-export function _decode_NameValidationErrorSet(el: _Element) {
+export function _decode_NameValidationErrorSet(el: _Element): NameValidationErrorSet {
   if (!_cached_decoder_for_NameValidationErrorSet) {
     _cached_decoder_for_NameValidationErrorSet = $._decodeObjectIdentifier;
   }
@@ -43,7 +43,7 @@ let _cached_encoder_for_NameValidationErrorSet: $.ASN1Encoder<NameValidationErro
 export function _encode_NameValidationErrorSet(
   value: NameValidationErrorSet,
   elGetter: $.ASN1Encoder<NameValidationErrorSet>
-) {
+): _Element {
   if (!_cached_encoder_for_NameValidationErrorSet) {
     _cached_encoder_for_NameValidationErrorSet = $._encodeObjectIdentifier;
   }

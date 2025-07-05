@@ -149,7 +149,7 @@ export class CertReply {
    * @static
    * @method
    */
-  public static get _default_value_for_replyStatus() {
+  public static get _default_value_for_replyStatus(): ReplyStatus {
     return ReplyStatus_success;
   }
   /**

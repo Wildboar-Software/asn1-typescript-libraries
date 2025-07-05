@@ -68,7 +68,7 @@ export class ReplyCheck {
    * @static
    * @method
    */
-  public static get _default_value_for_status() {
+  public static get _default_value_for_status(): INTEGER {
     return 0;
   }
 }

@@ -30,7 +30,7 @@ export type NameCompAlgSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_NameCompAlgSet: $.ASN1Decoder<NameCompAlgSet> | null = null;
 
-export function _decode_NameCompAlgSet(el: _Element) {
+export function _decode_NameCompAlgSet(el: _Element): NameCompAlgSet {
   if (!_cached_decoder_for_NameCompAlgSet) {
     _cached_decoder_for_NameCompAlgSet = $._decodeObjectIdentifier;
   }
@@ -42,7 +42,7 @@ let _cached_encoder_for_NameCompAlgSet: $.ASN1Encoder<NameCompAlgSet> | null = n
 export function _encode_NameCompAlgSet(
   value: NameCompAlgSet,
   elGetter: $.ASN1Encoder<NameCompAlgSet>
-) {
+): _Element {
   if (!_cached_encoder_for_NameCompAlgSet) {
     _cached_encoder_for_NameCompAlgSet = $._encodeObjectIdentifier;
   }

@@ -34,7 +34,7 @@ export type BasicValidationErrorSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_BasicValidationErrorSet: $.ASN1Decoder<BasicValidationErrorSet> | null = null;
 
-export function _decode_BasicValidationErrorSet(el: _Element) {
+export function _decode_BasicValidationErrorSet(el: _Element): BasicValidationErrorSet {
   if (!_cached_decoder_for_BasicValidationErrorSet) {
     _cached_decoder_for_BasicValidationErrorSet = $._decodeObjectIdentifier;
   }
@@ -46,7 +46,7 @@ let _cached_encoder_for_BasicValidationErrorSet: $.ASN1Encoder<BasicValidationEr
 export function _encode_BasicValidationErrorSet(
   value: BasicValidationErrorSet,
   elGetter: $.ASN1Encoder<BasicValidationErrorSet>
-) {
+): _Element {
   if (!_cached_encoder_for_BasicValidationErrorSet) {
     _cached_encoder_for_BasicValidationErrorSet = $._encodeObjectIdentifier;
   }

@@ -89,7 +89,7 @@ export class SCVPCertID {
    * @static
    * @method
    */
-  public static get _default_value_for_hashAlgorithm() {
+  public static get _default_value_for_hashAlgorithm(): AlgorithmIdentifier {
     return AlgorithmIdentifier._from_object({
         algorithm: mda_sha1['&id'],
         parameters: undefined,

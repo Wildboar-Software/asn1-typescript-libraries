@@ -73,7 +73,7 @@ export class ResponseStatus {
    * @static
    * @method
    */
-  public static get _default_value_for_statusCode() {
+  public static get _default_value_for_statusCode(): CVStatusCode {
     return CVStatusCode_okay;
   }
   /**

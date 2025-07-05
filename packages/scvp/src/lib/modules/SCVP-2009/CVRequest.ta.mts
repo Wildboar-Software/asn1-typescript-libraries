@@ -163,7 +163,7 @@ export class CVRequest {
    * @static
    * @method
    */
-  public static get _default_value_for_cvRequestVersion() {
+  public static get _default_value_for_cvRequestVersion(): INTEGER {
     return 1;
   }
 }

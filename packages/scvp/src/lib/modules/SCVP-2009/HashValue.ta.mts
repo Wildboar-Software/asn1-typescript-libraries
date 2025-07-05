@@ -75,7 +75,7 @@ export class HashValue {
    * @static
    * @method
    */
-  public static get _default_value_for_algorithm() {
+  public static get _default_value_for_algorithm(): AlgorithmIdentifier {
     return AlgorithmIdentifier._from_object({
         algorithm: mda_sha1['&id'],
         parameters: undefined,

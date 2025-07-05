@@ -31,7 +31,7 @@ export type SvcpExtKeyUsageSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
 
 let _cached_decoder_for_SvcpExtKeyUsageSet: $.ASN1Decoder<SvcpExtKeyUsageSet> | null = null;
 
-export function _decode_SvcpExtKeyUsageSet(el: _Element) {
+export function _decode_SvcpExtKeyUsageSet(el: _Element): SvcpExtKeyUsageSet {
   if (!_cached_decoder_for_SvcpExtKeyUsageSet) {
     _cached_decoder_for_SvcpExtKeyUsageSet = $._decodeObjectIdentifier;
   }
@@ -43,7 +43,7 @@ let _cached_encoder_for_SvcpExtKeyUsageSet: $.ASN1Encoder<SvcpExtKeyUsageSet> | 
 export function _encode_SvcpExtKeyUsageSet(
   value: SvcpExtKeyUsageSet,
   elGetter: $.ASN1Encoder<SvcpExtKeyUsageSet>
-) {
+): _Element {
   if (!_cached_encoder_for_SvcpExtKeyUsageSet) {
     _cached_encoder_for_SvcpExtKeyUsageSet = $._encodeObjectIdentifier;
   }

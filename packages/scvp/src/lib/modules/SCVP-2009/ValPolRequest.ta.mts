@@ -68,7 +68,7 @@ export class ValPolRequest {
    * @static
    * @method
    */
-  public static get _default_value_for_vpRequestVersion() {
+  public static get _default_value_for_vpRequestVersion(): INTEGER {
     return 1;
   }
 }
