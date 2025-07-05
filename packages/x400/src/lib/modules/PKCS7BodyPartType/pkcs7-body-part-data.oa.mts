@@ -14,8 +14,9 @@ import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.mjs";
+} from "@wildboar/cms";
 import { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va.mjs';
+
 /**
  * @summary pkcs7_body_part_data
  * @description
