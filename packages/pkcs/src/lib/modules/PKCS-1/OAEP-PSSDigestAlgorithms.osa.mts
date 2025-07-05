@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { OAEP_PSSDigestAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union0-Intersection0-Element.oa.mjs";
 import { OAEP_PSSDigestAlgorithms_Union1_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union1-Intersection0-Element.oa.mjs";
 import { OAEP_PSSDigestAlgorithms_Union2_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union2-Intersection0-Element.oa.mjs";

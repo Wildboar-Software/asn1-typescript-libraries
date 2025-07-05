@@ -18,7 +18,7 @@ import { message_retrieval_abstract_syntax_94 } from '../MSAccessProtocol/messag
 import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa.mjs';
 import { ms_bind_unbind_rtse_abstract_syntax } from '../MSAccessProtocol/ms-bind-unbind-rtse-abstract-syntax.oa.mjs';
 import { id_ac_ms_reliable_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-ms-reliable-access-94.va.mjs';
-import { APPLICATION_CONTEXT } from '@wildboar/rose';
+import { type APPLICATION_CONTEXT } from '@wildboar/rose';
 /**
  * @summary ms_reliable_access_94
  * @description

@@ -15,7 +15,7 @@ import { rejectAVL } from "../PkiPMIProtocolSpecifications/rejectAVL.oa.mjs";
 import { rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/rejectCAsubscribe.oa.mjs";
 import { replaceAvlReq } from "../PkiPMIProtocolSpecifications/replaceAvlReq.oa.mjs";
 import { replaceAvlRsp } from "../PkiPMIProtocolSpecifications/replaceAvlRsp.oa.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary AvlPduSet
  * @description

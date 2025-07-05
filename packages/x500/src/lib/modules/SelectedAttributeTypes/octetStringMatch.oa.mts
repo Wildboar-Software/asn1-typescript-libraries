@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_octetStringMatch } from "../SelectedAttributeTypes/id-mr-octetStringMatch.va.mjs";
 import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 /**

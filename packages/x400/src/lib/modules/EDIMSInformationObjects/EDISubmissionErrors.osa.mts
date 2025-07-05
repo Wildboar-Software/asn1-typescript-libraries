@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
+import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 import { invalid_assembly_instructions } from '../EDIMSInformationObjects/invalid-assembly-instructions.oa.mjs';
 /**
  * @summary EDISubmissionErrors

@@ -12,7 +12,7 @@ import {
 import { mHSSurname } from '../MHSRoutingORAddressSubtree/mHSSurname.oa.mjs';
 import { mHSSurnameAttribute } from '../MHSRoutingORAddressSubtree/mHSSurnameAttribute.oa.mjs';
 import { id_nf_mhs_surname } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-surname.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSSurnameNameForm
  * @description

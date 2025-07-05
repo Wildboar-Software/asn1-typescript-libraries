@@ -14,7 +14,7 @@ import {
     _decode_BindTokenSignedData,
     _encode_BindTokenSignedData,
 } from '../MTSAbstractService/BindTokenSignedData.ta.mjs';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
+import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
 /**
  * @summary bind_token_signed_data
  * @description

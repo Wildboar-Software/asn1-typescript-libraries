@@ -6,7 +6,7 @@ import {
     _decode_ModificationParameter,
     _encode_ModificationParameter,
 } from "../DirectoryShadowAbstractService/ModificationParameter.ta.mjs";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
+import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
 /**
  * @summary shadowOperationalBinding_roleB
  * @description

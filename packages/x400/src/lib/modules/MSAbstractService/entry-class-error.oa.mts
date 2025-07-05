@@ -23,7 +23,7 @@ import {
     _encode_EntryClassErrorParameter,
 } from '../MSAbstractService/EntryClassErrorParameter.ta.mjs';
 import { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary entry_class_error
  * @description

@@ -28,7 +28,7 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa.mjs';
 import { id_aa_ipm_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-acknowledgement.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary ipm_auto_acknowledgement
  * @description

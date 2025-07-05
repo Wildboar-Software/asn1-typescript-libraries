@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
+import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 /**
  * @summary OPERATION
  * @description

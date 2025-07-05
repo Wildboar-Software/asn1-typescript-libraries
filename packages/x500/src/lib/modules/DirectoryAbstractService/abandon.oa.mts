@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     AbandonArgument,
     _decode_AbandonArgument,

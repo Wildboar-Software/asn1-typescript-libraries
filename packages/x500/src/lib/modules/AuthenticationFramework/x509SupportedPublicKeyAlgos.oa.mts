@@ -5,7 +5,7 @@ import {
     _decode_SupportedPublicKeyAlgorithms,
     _encode_SupportedPublicKeyAlgorithms,
 } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary x509SupportedPublicKeyAlgos
  * @description

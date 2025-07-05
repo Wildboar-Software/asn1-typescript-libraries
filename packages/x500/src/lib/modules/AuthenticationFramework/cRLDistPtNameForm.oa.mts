@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { cRLDistributionPoint } from "../AuthenticationFramework/cRLDistributionPoint.oa.mjs";
 import { id_nf_cRLDistPtNameForm } from "../AuthenticationFramework/id-nf-cRLDistPtNameForm.va.mjs";
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
+import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary cRLDistPtNameForm

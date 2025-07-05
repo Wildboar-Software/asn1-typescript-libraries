@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { dbekmRecipientInfo } from "../CMSDBKeyManagement/dbekmRecipientInfo.oa.mjs";
-import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
+import { type KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
 
 /**
  * @summary DB_Encryption_Key_Management

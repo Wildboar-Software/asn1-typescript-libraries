@@ -22,7 +22,7 @@ import {
     _decode_mts_bind_error_ParameterType,
     _encode_mts_bind_error_ParameterType,
 } from '../MTSAbstractService/mts-bind-error-ParameterType.ta.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary mts_bind_error
  * @description

@@ -14,7 +14,7 @@ import {
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
 } from '../MTSAbstractService/TeletexOrganizationalUnitNames.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary teletex_organizational_unit_names
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandon } from "../DirectoryAbstractService/abandon.oa.mjs";
 /**
  * @summary chainedAbandon

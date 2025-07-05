@@ -14,7 +14,7 @@ import {
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
 } from '../MTSAbstractService/ExtensionORAddressComponents.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary extension_OR_address_components
  * @description

@@ -23,7 +23,7 @@ import {
     _encode_auto_action_request_error_ParameterType,
 } from '../MSAbstractService/auto-action-request-error-ParameterType.ta.mjs';
 import { err_auto_action_request_error } from '../MSAccessProtocol/err-auto-action-request-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary auto_action_request_error
  * @description

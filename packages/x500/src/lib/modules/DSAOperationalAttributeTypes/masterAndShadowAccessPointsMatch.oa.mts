@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { id_kmr_masterShadowMatch } from "../DSAOperationalAttributeTypes/id-kmr-masterShadowMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import {
     Name,
     _decode_Name,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     AdministerPasswordArgument,
     _decode_AdministerPasswordArgument,

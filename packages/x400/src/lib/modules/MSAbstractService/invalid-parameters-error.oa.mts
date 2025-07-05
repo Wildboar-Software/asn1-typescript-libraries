@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_invalid_parameters_error } from '../MSAccessProtocol/err-invalid-parameters-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary invalid_parameters_error
  * @description

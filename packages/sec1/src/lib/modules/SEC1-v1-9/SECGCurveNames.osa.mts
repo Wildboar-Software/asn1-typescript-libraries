@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ECDOMAIN } from "../SEC1-v1-9/ECDOMAIN.oca.mjs";
+import { type ECDOMAIN } from "../SEC1-v1-9/ECDOMAIN.oca.mjs";
 /**
  * @summary SECGCurveNames
  * @description

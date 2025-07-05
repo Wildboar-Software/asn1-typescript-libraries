@@ -15,7 +15,7 @@ import {
     _encode_IpnSecurityResponse,
 } from '../IPMSSecurityExtensions/IpnSecurityResponse.ta.mjs';
 import { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary ipn_security_response
  * @description

@@ -5,7 +5,7 @@ import {
     _encode_BasicAttConstraintsSyntax,
 } from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
 import { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary basicAttConstraintsMatch
  * @description

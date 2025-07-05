@@ -20,7 +20,7 @@ import {
 } from '../MSGeneralAutoActionTypes/AutoAlertRegistrationParameter.ta.mjs';
 import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.mjs';
 import { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary auto_alert
  * @description

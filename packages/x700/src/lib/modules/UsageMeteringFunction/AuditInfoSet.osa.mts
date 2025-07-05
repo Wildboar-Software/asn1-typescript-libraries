@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.mjs';
+import { type UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.mjs';
 /**
  * @summary AuditInfoSet
  * @description

@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.mjs';
+import { type INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.mjs';
 
 /**
  * @summary SupportedInfoSet

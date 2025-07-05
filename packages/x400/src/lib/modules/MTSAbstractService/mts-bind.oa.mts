@@ -28,7 +28,7 @@ import {
     _encode_MTSBindResult,
 } from '../MTSAbstractService/MTSBindResult.ta.mjs';
 import { mts_bind_error } from '../MTSAbstractService/mts-bind-error.oa.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary mts_bind
  * @description

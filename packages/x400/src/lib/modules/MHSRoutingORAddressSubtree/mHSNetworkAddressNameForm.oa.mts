@@ -12,7 +12,7 @@ import {
 import { mHSNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSNetworkAddress.oa.mjs';
 import { mHSNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSNetworkAddressAttribute.oa.mjs';
 import { id_nf_mhs_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-network-address.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSNetworkAddressNameForm
  * @description

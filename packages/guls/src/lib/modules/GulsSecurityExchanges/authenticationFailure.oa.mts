@@ -13,7 +13,7 @@ import {
   _decode_Identifier,
   _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
+import { type SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
 import {
     SecurityProblem,
     _decode_SecurityProblem,

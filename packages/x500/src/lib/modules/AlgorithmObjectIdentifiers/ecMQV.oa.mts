@@ -5,7 +5,7 @@ import {
     _decode_X509Curves,
     _encode_X509Curves,
 } from "../AlgorithmObjectIdentifiers/X509Curves.vsa.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary ecMQV
  * @description

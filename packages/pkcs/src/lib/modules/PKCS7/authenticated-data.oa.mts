@@ -5,7 +5,7 @@ import {
     _encode_AuthenticatedData,
 } from "../PKCS7/AuthenticatedData.ta.mjs";
 import { id_authenticated_data } from "../PKCS7/id-authenticated-data.va.mjs";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
+import { type PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
 
 /**
  * @summary authenticated_data

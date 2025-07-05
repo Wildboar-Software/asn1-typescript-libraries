@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_inconsistent_request } from '../MTSAccessProtocol/err-inconsistent-request.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary inconsistent_request
  * @description

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
+import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.mjs";
 /**
  * @summary STRUCTURE_RULE

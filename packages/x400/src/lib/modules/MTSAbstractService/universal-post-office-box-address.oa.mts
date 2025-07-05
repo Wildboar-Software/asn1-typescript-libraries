@@ -14,7 +14,7 @@ import {
     _decode_UniversalPostOfficeBoxAddress,
     _encode_UniversalPostOfficeBoxAddress,
 } from '../MTSAbstractService/UniversalPostOfficeBoxAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_post_office_box_address
  * @description

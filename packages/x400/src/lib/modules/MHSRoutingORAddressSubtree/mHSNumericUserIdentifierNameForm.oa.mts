@@ -12,7 +12,7 @@ import {
 import { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifier.oa.mjs';
 import { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa.mjs';
 import { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSNumericUserIdentifierNameForm
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
+import { type OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
 
 /**
  * @summary CatData

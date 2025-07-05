@@ -23,7 +23,7 @@ import {
     _encode_ImproperlySpecifiedRecipients,
 } from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.mjs';
 import { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary recipient_improperly_specified
  * @description

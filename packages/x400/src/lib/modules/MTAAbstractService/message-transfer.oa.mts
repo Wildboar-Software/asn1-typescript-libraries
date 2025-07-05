@@ -22,7 +22,7 @@ import {
     _decode_Message,
     _encode_Message,
 } from '../MTAAbstractService/Message.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary message_transfer
  * @description

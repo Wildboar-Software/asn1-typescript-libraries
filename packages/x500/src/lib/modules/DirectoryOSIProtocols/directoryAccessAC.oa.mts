@@ -11,7 +11,7 @@ import { modifyEntry } from "../DirectoryAbstractService/modifyEntry.oa.mjs";
 import { read } from "../DirectoryAbstractService/read.oa.mjs";
 import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
-import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
+import { type APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
 import { id_ac_directoryAccessAC } from "../DirectoryOSIProtocols/id-ac-directoryAccessAC.va.mjs";
 /**
  * @summary directoryAccessAC

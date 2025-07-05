@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
+import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { crlTypes } from "../PKCS-9/crlTypes.va.mjs";
 
 /**

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va.mjs";
 /**
  * @summary ANSIX9HashFunctions_Union8_Intersection0_Element

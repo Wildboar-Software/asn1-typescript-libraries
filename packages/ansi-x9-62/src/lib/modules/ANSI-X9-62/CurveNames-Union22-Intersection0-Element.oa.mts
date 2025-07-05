@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
+import { type CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 import { prime192v3 } from "../ANSI-X9-62/prime192v3.va.mjs";
 /**
  * @summary CurveNames_Union22_Intersection0_Element

@@ -1,7 +1,7 @@
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import {
     PwdHistory,
     _decode_PwdHistory,

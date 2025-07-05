@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MKMF_VALUES } from '../RepertoireASN1Module/MKMF-VALUES.oca.mjs';
+import { type MKMF_VALUES } from '../RepertoireASN1Module/MKMF-VALUES.oca.mjs';
 /**
  * @summary ImplementedValuesSet
  * @description

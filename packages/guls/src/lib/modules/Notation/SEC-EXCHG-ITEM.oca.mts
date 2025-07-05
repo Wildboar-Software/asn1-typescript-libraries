@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
+import { type SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
 
 /**
  * @summary SEC_EXCHG_ITEM

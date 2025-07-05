@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     ChangePasswordArgument,
     _decode_ChangePasswordArgument,

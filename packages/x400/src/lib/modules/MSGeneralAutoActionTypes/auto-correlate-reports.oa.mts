@@ -14,7 +14,7 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { id_act_auto_correlate_reports } from '../MSObjectIdentifiers/id-act-auto-correlate-reports.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary auto_correlate_reports
  * @description

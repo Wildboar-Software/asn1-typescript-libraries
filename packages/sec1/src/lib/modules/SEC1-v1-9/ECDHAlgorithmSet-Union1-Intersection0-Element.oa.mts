@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { dhSinglePass_cofactorDH_sha1kdf } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha1kdf.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECDHAlgorithmSet_Union1_Intersection0_Element
  * @description

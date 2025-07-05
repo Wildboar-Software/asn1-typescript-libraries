@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs';
+import { type SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs';
 /**
  * @summary CommonErrorSet
  * @description

@@ -14,7 +14,7 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { id_act_edi_auto_correlate } from '../EDIMSObjectIdentifiers/id-act-edi-auto-correlate.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary edi_auto_correlate
  * @description

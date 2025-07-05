@@ -16,7 +16,7 @@ import {
 import { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredentials.oa.mjs';
 import { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
+import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
 
 /**
  * @summary dirAuthenticationTwoWay

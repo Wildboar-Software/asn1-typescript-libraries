@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.mjs';
+import { type SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.mjs';
 
 /**
  * @summary Simple_Messages

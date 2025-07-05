@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs";
+import { type KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs";
 import { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBKDF2.oa.mjs";
 
 /**

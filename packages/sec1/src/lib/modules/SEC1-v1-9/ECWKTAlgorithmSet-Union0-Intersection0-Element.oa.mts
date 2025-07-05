@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { ecwkt_recommendedParameters } from "../SEC1-v1-9/ecwkt-recommendedParameters.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECWKTAlgorithmSet_Union0_Intersection0_Element
  * @description

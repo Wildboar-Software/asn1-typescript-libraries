@@ -22,7 +22,7 @@ import {
     _decode_ms_bind_error_ParameterType,
     _encode_ms_bind_error_ParameterType,
 } from '../MSAbstractService/ms-bind-error-ParameterType.ta.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary ms_bind_error
  * @description

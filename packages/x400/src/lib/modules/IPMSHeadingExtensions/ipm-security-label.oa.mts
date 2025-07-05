@@ -15,7 +15,7 @@ import {
     _encode_IPMSecurityLabel,
 } from '../IPMSHeadingExtensions/IPMSecurityLabel.ta.mjs';
 import { id_hex_ipm_security_label } from '../IPMSObjectIdentifiers/id-hex-ipm-security-label.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary ipm_security_label
  * @description

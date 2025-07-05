@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_qcs_pkixQCSyntax_v1 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v1.va.mjs";
-import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
+import { type QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
 import {
     SemanticsInformation,
     _decode_SemanticsInformation,

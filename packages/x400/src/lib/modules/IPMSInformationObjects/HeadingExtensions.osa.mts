@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { authorization_time } from '../IPMSHeadingExtensions/authorization-time.oa.mjs';
 import { auto_submitted } from '../IPMSHeadingExtensions/auto-submitted.oa.mjs';
 import { body_part_signatures } from '../IPMSHeadingExtensions/body-part-signatures.oa.mjs';

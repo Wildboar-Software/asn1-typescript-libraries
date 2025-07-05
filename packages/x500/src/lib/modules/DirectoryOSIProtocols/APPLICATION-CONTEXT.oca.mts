@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 /**
  * @summary APPLICATION_CONTEXT
  * @description

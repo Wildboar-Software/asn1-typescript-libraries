@@ -5,7 +5,7 @@ import {
     _encode_AuthorityAttributeIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
 import { id_mr_authAttIdMatch } from "../AttributeCertificateDefinitions/id-mr-authAttIdMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary authAttIdMatch
  * @description

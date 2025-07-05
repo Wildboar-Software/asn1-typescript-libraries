@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { IA5String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va.mjs";
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
+import { type CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
 import { gnBasis } from "../ANSI-X9-62/gnBasis.va.mjs";
 /**
  * @summary BasisTypes_Union0_Intersection0_Element

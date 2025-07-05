@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ansix9t163r2 } from "../ANSI-X9-62/ansix9t163r2.va.mjs";
-import { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
+import { type ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
 /**
  * @summary ANSIX9NamedDomains_Union1_Intersection0_Element
  * @description

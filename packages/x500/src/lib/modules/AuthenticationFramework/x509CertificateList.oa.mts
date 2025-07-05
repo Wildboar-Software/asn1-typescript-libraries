@@ -5,7 +5,7 @@ import {
     _encode_CertificateList,
 } from "../AuthenticationFramework/CertificateList.ta.mjs";
 import { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary x509CertificateList
  * @description

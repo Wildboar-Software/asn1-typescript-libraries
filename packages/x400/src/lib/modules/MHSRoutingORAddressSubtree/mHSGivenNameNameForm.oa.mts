@@ -12,7 +12,7 @@ import {
 import { mHSGivenName } from '../MHSRoutingORAddressSubtree/mHSGivenName.oa.mjs';
 import { mHSGivenNameAttribute } from '../MHSRoutingORAddressSubtree/mHSGivenNameAttribute.oa.mjs';
 import { id_nf_mhs_given_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-given-name.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSGivenNameNameForm
  * @description

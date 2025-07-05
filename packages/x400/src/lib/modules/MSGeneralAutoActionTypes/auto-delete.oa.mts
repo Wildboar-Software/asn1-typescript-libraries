@@ -15,7 +15,7 @@ import {
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { id_act_auto_delete } from '../MSObjectIdentifiers/id-act-auto-delete.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary auto_delete
  * @description

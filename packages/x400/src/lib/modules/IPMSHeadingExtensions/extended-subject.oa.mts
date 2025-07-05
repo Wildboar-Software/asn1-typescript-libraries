@@ -15,7 +15,7 @@ import {
     _encode_ExtendedSubject,
 } from '../IPMSHeadingExtensions/ExtendedSubject.ta.mjs';
 import { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary extended_subject
  * @description

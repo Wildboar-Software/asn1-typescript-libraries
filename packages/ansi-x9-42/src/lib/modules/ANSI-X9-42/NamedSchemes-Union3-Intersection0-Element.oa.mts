@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
+import { type KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import { dhHybrid1_sha1 } from "./dhHybrid1-sha1.va.mjs";
 
 

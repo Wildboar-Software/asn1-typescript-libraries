@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { aes128_ctr_in_ecies } from "../SEC1-v1-9/aes128-ctr-in-ecies.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary SYMENCSet_Union5_Intersection0_Element
  * @description

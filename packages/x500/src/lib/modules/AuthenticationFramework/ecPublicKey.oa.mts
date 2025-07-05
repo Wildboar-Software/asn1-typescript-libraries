@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
 import {
     SupportedCurves,

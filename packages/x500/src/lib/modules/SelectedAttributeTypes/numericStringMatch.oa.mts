@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NumericString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_numericStringMatch } from "../SelectedAttributeTypes/id-mr-numericStringMatch.va.mjs";
 import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
 /**

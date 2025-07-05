@@ -5,7 +5,7 @@ import {
     _encode_AcceptableCertPoliciesSyntax,
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary acceptableCertPoliciesMatch
  * @description

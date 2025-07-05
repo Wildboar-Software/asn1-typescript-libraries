@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_new_credentials_unacceptable } from '../MTSAccessProtocol/err-new-credentials-unacceptable.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary new_credentials_unacceptable
  * @description

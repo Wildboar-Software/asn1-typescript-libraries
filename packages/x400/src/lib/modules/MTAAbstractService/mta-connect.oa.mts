@@ -12,7 +12,7 @@ import {
 import { mta_bind } from '../MTAAbstractService/mta-bind.oa.mjs';
 import { mta_unbind } from '../MTAAbstractService/mta-unbind.oa.mjs';
 import { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va.mjs';
-import { CONNECTION_PACKAGE } from '@wildboar/rose';
+import { type CONNECTION_PACKAGE } from '@wildboar/rose';
 /**
  * @summary mta_connect
  * @description

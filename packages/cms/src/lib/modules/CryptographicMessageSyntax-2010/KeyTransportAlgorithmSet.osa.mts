@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
+import { type KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
 import { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyTransportAlgs.osa.mjs";
 
 /**

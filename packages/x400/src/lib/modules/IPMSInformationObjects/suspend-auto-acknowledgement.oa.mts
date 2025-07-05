@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary suspend_auto_acknowledgement
  * @description

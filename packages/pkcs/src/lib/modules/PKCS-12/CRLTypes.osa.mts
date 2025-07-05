@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
+import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { x509CRL } from "../PKCS-12/x509CRL.oa.mjs";
 
 /**

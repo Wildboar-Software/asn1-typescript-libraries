@@ -5,7 +5,7 @@ import {
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
 } from "../CryptoTools/MultipleSignaturesAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multipleSignaturesAlgo
  * @description

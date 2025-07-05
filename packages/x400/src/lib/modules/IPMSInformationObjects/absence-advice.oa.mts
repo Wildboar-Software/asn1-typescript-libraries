@@ -15,7 +15,7 @@ import {
     _encode_AbsenceAdvice,
 } from '../IPMSInformationObjects/AbsenceAdvice.ta.mjs';
 import { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary absence_advice
  * @description

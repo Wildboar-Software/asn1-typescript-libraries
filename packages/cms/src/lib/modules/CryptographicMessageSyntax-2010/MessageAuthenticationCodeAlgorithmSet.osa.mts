@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs";
+import { type MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs";
 import { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageAuthAlgs.osa.mjs";
 
 /**

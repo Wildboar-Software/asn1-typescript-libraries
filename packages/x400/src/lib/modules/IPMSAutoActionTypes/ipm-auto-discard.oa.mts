@@ -28,7 +28,7 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
 import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mjs';
 import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.mjs';
 import { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary ipm_auto_discard
  * @description

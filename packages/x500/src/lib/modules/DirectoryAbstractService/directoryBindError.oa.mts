@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
+import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 import {
     DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,

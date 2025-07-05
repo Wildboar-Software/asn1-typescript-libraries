@@ -39,7 +39,7 @@ import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.m
 import { register_ms_error } from '../MSAbstractService/register-ms-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_register_ms } from '../MSAccessProtocol/op-register-ms.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary register_MS
  * @description

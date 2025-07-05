@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_delivery_control_violated } from '../MTSAccessProtocol/err-delivery-control-violated.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary delivery_control_violated
  * @description

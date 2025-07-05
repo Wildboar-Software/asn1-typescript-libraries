@@ -28,7 +28,7 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_act_edi_auto_forward_v2 } from '../EDIMSObjectIdentifiers/id-act-edi-auto-forward-v2.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary edi_auto_forward
  * @description

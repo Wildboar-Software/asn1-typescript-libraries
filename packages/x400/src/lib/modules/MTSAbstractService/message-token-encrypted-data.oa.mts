@@ -14,7 +14,7 @@ import {
     _decode_MessageTokenEncryptedData,
     _encode_MessageTokenEncryptedData,
 } from '../MTSAbstractService/MessageTokenEncryptedData.ta.mjs';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
+import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
 /**
  * @summary message_token_encrypted_data
  * @description

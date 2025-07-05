@@ -15,7 +15,7 @@ import {
     _encode_BodyPartSpecifiers,
 } from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.mjs';
 import { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va.mjs';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
+import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 /**
  * @summary invalid_assembly_instructions
  * @description

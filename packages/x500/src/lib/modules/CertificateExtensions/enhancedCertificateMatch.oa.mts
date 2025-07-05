@@ -5,7 +5,7 @@ import {
     _encode_EnhancedCertificateAssertion,
 } from "../CertificateExtensions/EnhancedCertificateAssertion.ta.mjs";
 import { id_mr_enhancedCertificateMatch } from "../CertificateExtensions/id-mr-enhancedCertificateMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary enhancedCertificateMatch
  * @description

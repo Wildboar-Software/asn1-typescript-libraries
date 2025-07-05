@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca.mjs';
+import { type MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca.mjs';
 
 /**
  * @summary ManufacturerSchemes

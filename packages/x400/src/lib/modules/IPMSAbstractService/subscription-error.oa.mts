@@ -22,7 +22,7 @@ import {
     _decode_subscription_error_ParameterType,
     _encode_subscription_error_ParameterType,
 } from '../IPMSAbstractService/subscription-error-ParameterType.ta.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary subscription_error
  * @description

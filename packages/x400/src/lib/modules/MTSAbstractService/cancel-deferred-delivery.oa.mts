@@ -32,7 +32,7 @@ import { message_submission_identifier_invalid } from '../MTSAbstractService/mes
 import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_cancel_deferred_delivery } from '../MTSAccessProtocol/op-cancel-deferred-delivery.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary cancel_deferred_delivery
  * @description

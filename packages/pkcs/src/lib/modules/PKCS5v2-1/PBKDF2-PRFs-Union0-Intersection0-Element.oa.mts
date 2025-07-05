@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.mjs";
 
 /**

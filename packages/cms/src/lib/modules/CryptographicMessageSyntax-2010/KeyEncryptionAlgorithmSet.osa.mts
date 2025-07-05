@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
+import { type KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 import { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgs.osa.mjs";
 
 /**

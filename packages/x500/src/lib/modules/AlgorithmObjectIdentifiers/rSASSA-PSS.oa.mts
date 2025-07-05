@@ -5,7 +5,7 @@ import {
     _decode_rSASSA_PSS_Type,
     _encode_rSASSA_PSS_Type,
 } from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary rSASSA_PSS
  * @description

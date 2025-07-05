@@ -12,7 +12,7 @@ import {
 import { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa.mjs';
 import { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa.mjs';
 import { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSCommonNameForm
  * @description

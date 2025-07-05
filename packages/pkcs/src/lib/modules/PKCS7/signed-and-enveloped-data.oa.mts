@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_signed_and_enveloped_data } from "../PKCS7/id-signed-and-enveloped-data.va.mjs";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
+import { type PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
 import {
     SignedAndEnvelopedData,
     _decode_SignedAndEnvelopedData,

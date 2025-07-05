@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_op_establishOperationalBinding } from "../CommonProtocolSpecification/id-op-establishOperationalBinding.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import {
     EstablishOperationalBindingArgument,

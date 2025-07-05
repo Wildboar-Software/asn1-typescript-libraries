@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { common_name } from "../PkiPmiExternalDataTypes/common-name.oa.mjs";
 import { extended_network_address } from "../PkiPmiExternalDataTypes/extended-network-address.oa.mjs";
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
+import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import { extension_OR_address_components } from "../PkiPmiExternalDataTypes/extension-OR-address-components.oa.mjs";
 import { extension_physical_delivery_address_components } from "../PkiPmiExternalDataTypes/extension-physical-delivery-address-components.oa.mjs";
 import { local_postal_attributes } from "../PkiPmiExternalDataTypes/local-postal-attributes.oa.mjs";

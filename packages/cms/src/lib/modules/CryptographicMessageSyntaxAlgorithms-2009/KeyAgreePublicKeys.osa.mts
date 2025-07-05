@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
+import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
 
 /**

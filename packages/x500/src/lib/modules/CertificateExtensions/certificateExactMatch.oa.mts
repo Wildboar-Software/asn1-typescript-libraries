@@ -6,7 +6,7 @@ import {
     _encode_CertificateExactAssertion,
 } from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
 import { id_mr_certificateExactMatch } from "../CertificateExtensions/id-mr-certificateExactMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary certificateExactMatch
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.mjs";
+import { type OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.mjs";
 
 /**
  * @summary SupportedOtherRecipInfo

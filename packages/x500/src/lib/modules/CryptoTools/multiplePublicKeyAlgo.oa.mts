@@ -5,7 +5,7 @@ import {
     _decode_MultiplePublicKeyAlgo,
     _encode_MultiplePublicKeyAlgo,
 } from "../CryptoTools/MultiplePublicKeyAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multiplePublicKeyAlgo
  * @description

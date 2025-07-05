@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_nf_subentryNameForm } from "../InformationFramework/id-nf-subentryNameForm.va.mjs";
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
+import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { subentry } from "../InformationFramework/subentry.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**

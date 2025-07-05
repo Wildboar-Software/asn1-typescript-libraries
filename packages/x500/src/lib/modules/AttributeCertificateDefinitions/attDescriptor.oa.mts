@@ -5,7 +5,7 @@ import {
     _encode_AttributeDescriptorSyntax,
 } from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import { id_mr_attDescriptorMatch } from "../AttributeCertificateDefinitions/id-mr-attDescriptorMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary attDescriptor
  * @description

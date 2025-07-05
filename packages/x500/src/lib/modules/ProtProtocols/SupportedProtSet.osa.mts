@@ -2,7 +2,7 @@
 import { avlProt } from "../ProtProtocols/avlProt.oa.mjs";
 import { casubProt } from "../ProtProtocols/casubProt.oa.mjs";
 import { tbprot } from "../ProtProtocols/tbprot.oa.mjs";
-import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
+import { type WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
 /**
  * @summary SupportedProtSet
  * @description

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { dhSinglePass_stdDH_sha256kdf_scheme } from "../SEC1-v1-9/dhSinglePass-stdDH-sha256kdf-scheme.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECDHAlgorithmSet_Union5_Intersection0_Element
  * @description

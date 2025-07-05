@@ -2,7 +2,7 @@
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_sha512 } from "../NIST-SHA2/id-sha512.va.mjs";
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 
 /**
  * @summary PKCS1_v1_5DigestAlgorithms_Union6_Intersection0_Element

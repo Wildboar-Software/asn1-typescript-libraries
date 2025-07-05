@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_remote_bind_error } from '../MTSAccessProtocol/err-remote-bind-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary remote_bind_error
  * @description

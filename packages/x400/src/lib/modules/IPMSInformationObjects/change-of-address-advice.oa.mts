@@ -15,7 +15,7 @@ import {
     _encode_ChangeOfAddressAdvice,
 } from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta.mjs';
 import { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary change_of_address_advice
  * @description

@@ -5,7 +5,7 @@ import {
     _encode_AttributeCertificateExactAssertion,
 } from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.mjs";
 import { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary attributeCertificateExactMatch
  * @description

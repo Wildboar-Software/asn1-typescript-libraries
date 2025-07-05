@@ -3,7 +3,7 @@ import { issuerAndSerialNumber } from "../PKCS-15/issuerAndSerialNumber.oa.mjs";
 import { issuerAndSerialNumberHash } from "../PKCS-15/issuerAndSerialNumberHash.oa.mjs";
 import { issuerKeyHash } from "../PKCS-15/issuerKeyHash.oa.mjs";
 import { issuerNameHash } from "../PKCS-15/issuerNameHash.oa.mjs";
-import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
+import { type KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
 import { subjectKeyHash } from "../PKCS-15/subjectKeyHash.oa.mjs";
 import { subjectKeyId } from "../PKCS-15/subjectKeyId.oa.mjs";
 import { subjectNameHash } from "../PKCS-15/subjectNameHash.oa.mjs";

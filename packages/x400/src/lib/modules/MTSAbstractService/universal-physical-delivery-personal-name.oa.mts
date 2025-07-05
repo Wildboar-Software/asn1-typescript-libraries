@@ -14,7 +14,7 @@ import {
     _decode_UniversalPhysicalDeliveryPersonalName,
     _encode_UniversalPhysicalDeliveryPersonalName,
 } from '../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_physical_delivery_personal_name
  * @description

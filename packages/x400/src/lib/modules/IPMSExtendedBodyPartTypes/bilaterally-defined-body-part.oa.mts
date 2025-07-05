@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { bilaterally_defined_body_part_data } from '../IPMSExtendedBodyPartTypes/bilaterally-defined-body-part-data.oa.mjs';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
+import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 /**
  * @summary bilaterally_defined_body_part
  * @description

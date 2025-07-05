@@ -23,7 +23,7 @@ import {
     _encode_RefusedOperation,
 } from '../MTSAbstractService/RefusedOperation.ta.mjs';
 import { err_operation_refused } from '../MTSAccessProtocol/err-operation-refused.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary operation_refused
  * @description

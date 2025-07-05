@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { OPERATION } from '@wildboar/rose';
+import { type OPERATION } from '@wildboar/rose';
 /**
  * @summary ABSTRACT_OPERATION
  * @description

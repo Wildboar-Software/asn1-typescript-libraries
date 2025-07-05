@@ -13,7 +13,7 @@ import { _enum_for_ParamOptions, preferredPresent /* IMPORTED_SHORT_ENUMERATION_
 import { id_X448 } from "../Safecurves-pkix-18/id-X448.va.mjs";
 import { pk_X448 } from "../Safecurves-pkix-18/pk-X448.oa.mjs";
 import { kaa_X448_smimeCaps } from "../Safecurves-pkix-18/kaa-X448-smimeCaps.oa.mjs";
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
+import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 
 /**
  * @summary kaa_X448

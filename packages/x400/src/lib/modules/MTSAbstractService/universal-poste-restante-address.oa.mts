@@ -14,7 +14,7 @@ import {
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
 } from '../MTSAbstractService/UniversalPosteRestanteAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_poste_restante_address
  * @description

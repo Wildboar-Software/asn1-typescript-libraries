@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module';
+import { type DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module';
 /**
  * @summary TMF_OBJECT
  * @description

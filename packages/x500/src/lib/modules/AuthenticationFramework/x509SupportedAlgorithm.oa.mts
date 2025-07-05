@@ -5,7 +5,7 @@ import {
     _decode_SupportedAlgorithm,
     _encode_SupportedAlgorithm,
 } from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary x509SupportedAlgorithm
  * @description

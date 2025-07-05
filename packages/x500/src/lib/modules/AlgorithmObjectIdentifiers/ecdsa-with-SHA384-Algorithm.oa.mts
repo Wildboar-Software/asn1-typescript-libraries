@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ecdsa_with_SHA384 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA384.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary ecdsa_with_SHA384_Algorithm
  * @description

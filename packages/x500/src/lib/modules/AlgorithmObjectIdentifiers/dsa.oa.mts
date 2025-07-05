@@ -5,7 +5,7 @@ import {
     _encode_DSS_Parms,
 } from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.mjs";
 import { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary dsa
  * @description

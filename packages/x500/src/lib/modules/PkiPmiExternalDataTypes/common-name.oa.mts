@@ -4,7 +4,7 @@ import {
     _decode_CommonName,
     _encode_CommonName,
 } from "../PkiPmiExternalDataTypes/CommonName.ta.mjs";
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
+import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 /**
  * @summary common_name
  * @description

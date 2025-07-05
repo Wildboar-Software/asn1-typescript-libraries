@@ -12,7 +12,7 @@ import {
 import { routingCollective } from '../MHSRoutingDirectoryObjects/routingCollective.oa.mjs';
 import { routingCollectiveName } from '../MHSRoutingDirectoryObjects/routingCollectiveName.oa.mjs';
 import { id_nf_routing_collective } from '../MHSRoutingObjectIdentifiers/id-nf-routing-collective.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary routingCollectiveNameForm
  * @description

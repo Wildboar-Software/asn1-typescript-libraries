@@ -22,7 +22,7 @@ import {
     _decode_change_auto_discard_ArgumentType,
     _encode_change_auto_discard_ArgumentType,
 } from '../IPMSAbstractService/change-auto-discard-ArgumentType.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary change_auto_discard
  * @description

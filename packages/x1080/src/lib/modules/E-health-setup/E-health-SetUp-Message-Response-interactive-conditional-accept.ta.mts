@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.mjs";
+import { type CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.mjs";
 
 /**
  * @summary E_health_SetUp_Message_Response_interactive_conditional_accept

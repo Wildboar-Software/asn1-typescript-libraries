@@ -15,7 +15,7 @@ import {
     _encode_Precedence,
 } from '../IPMSHeadingExtensions/Precedence.ta.mjs';
 import { id_rex_precedence } from '../IPMSObjectIdentifiers/id-rex-precedence.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary precedence
  * @description

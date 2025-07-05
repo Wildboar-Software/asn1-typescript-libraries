@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
+import { type ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
 import { ANSIX9NamedDomains_Union0_Intersection0_Element } from "./ANSIX9NamedDomains-Union0-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union1_Intersection0_Element } from "./ANSIX9NamedDomains-Union1-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union10_Intersection0_Element } from "./ANSIX9NamedDomains-Union10-Intersection0-Element.oa.mjs";

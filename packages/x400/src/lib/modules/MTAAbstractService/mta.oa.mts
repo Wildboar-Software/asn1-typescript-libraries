@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { mta_transfer } from '../MTAAbstractService/mta-transfer.oa.mjs';
 import { id_ot_mta } from '../MTSObjectIdentifiers/id-ot-mta.va.mjs';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
+import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
 /**
  * @summary mta
  * @description

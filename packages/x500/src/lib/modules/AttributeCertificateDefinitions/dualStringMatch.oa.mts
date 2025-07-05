@@ -5,7 +5,7 @@ import {
     _encode_DualStringSyntax,
 } from "../AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary dualStringMatch
  * @description

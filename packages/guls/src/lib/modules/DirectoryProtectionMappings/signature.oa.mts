@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa.mjs';
-import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
+import { type PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
 
 /**
  * @summary signature

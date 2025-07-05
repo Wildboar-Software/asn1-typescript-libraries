@@ -4,7 +4,7 @@ import {
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
 } from "../InformationFramework/SubtreeSpecification.ta.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va.mjs";
 /**
  * @summary subtreeSpec

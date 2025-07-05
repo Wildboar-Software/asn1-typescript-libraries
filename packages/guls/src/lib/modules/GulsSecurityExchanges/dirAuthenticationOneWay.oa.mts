@@ -15,7 +15,7 @@ import {
 } from '../Notation/Identifier.ta.mjs';
 import { credentials } from '../GulsSecurityExchanges/credentials.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
+import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
 
 /**
  * @summary dirAuthenticationOneWay

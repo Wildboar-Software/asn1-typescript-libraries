@@ -15,7 +15,7 @@ import {
     _encode_IncompleteCopy,
 } from '../IPMSHeadingExtensions/IncompleteCopy.ta.mjs';
 import { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary incomplete_copy
  * @description

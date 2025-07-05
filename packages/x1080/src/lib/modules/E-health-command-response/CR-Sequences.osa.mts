@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.mjs';
+import { type CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.mjs';
 
 /**
  * @summary CR_Sequences

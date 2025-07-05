@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.mjs';
+import { type CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.mjs';
 
 /**
  * @summary AvaSet

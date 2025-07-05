@@ -16,7 +16,7 @@ import {
 import { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa.mjs';
 import { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
+import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
 
 /**
  * @summary simpleNegotiationSE

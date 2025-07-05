@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { id_mst_assembly_capability } from '../IPMSObjectIdentifiers/id-mst-assembly-capability.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary assembly_capability
  * @description

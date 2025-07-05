@@ -16,7 +16,7 @@ import {
   _decode_dirSignedTransformation_XformedDataType,
   _encode_dirSignedTransformation_XformedDataType,
 } from '../GulsSecurityTransformations/dirSignedTransformation-XformedDataType.ta.mjs';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
+import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
 
 /**
  * @summary dirSignedTransformation

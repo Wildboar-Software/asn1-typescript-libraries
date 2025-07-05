@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { videotex_body_part_parameters } from '../IPMSExtendedBodyPartTypes/videotex-body-part-parameters.oa.mjs';
 import { videotex_body_part_data } from '../IPMSExtendedBodyPartTypes/videotex-body-part-data.oa.mjs';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
+import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 /**
  * @summary videotex_body_part
  * @description

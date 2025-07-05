@@ -23,7 +23,7 @@ import {
     _encode_ServiceErrorParameter,
 } from '../MSAbstractService/ServiceErrorParameter.ta.mjs';
 import { err_service_error } from '../MSAccessProtocol/err-service-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary service_error
  * @description

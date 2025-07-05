@@ -23,7 +23,7 @@ import {
     _encode_range_error_ParameterType,
 } from '../MSAbstractService/range-error-ParameterType.ta.mjs';
 import { err_range_error } from '../MSAccessProtocol/err-range-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary range_error
  * @description

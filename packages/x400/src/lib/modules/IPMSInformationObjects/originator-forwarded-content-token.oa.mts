@@ -15,7 +15,7 @@ import {
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
 import { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary originator_forwarded_content_token
  * @description

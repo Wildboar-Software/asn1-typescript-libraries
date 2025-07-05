@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.mjs';
+import { type SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.mjs';
 /**
  * @summary TransferInfoSet
  * @description

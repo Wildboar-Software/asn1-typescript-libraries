@@ -6,7 +6,7 @@ import {
     _decode_SignedSecurityLabel,
     _encode_SignedSecurityLabel,
 } from "../EnhancedSecurity/SignedSecurityLabel.ta.mjs";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
+import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 /**
  * @summary attributeValueSecurityLabelContext
  * @description

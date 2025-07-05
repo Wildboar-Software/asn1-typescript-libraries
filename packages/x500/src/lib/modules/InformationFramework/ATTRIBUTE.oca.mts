@@ -2,7 +2,7 @@
 import { BOOLEAN, OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary ATTRIBUTE
  * @description

@@ -23,7 +23,7 @@ import {
     _encode_MessageGroupErrorParameter,
 } from '../MSAbstractService/MessageGroupErrorParameter.ta.mjs';
 import { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary message_group_error
  * @description

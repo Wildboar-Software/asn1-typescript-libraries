@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
+import { type KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
 
 /**
  * @summary SupportedKeyAttributes

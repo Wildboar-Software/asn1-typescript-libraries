@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { IA5String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
 /**
  * @summary ia5String

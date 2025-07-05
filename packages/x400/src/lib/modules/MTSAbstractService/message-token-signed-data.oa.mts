@@ -14,7 +14,7 @@ import {
     _decode_MessageTokenSignedData,
     _encode_MessageTokenSignedData,
 } from '../MTSAbstractService/MessageTokenSignedData.ta.mjs';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
+import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
 /**
  * @summary message_token_signed_data
  * @description

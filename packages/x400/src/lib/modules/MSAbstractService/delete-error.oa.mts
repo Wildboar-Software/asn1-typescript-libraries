@@ -23,7 +23,7 @@ import {
     _encode_delete_error_ParameterType,
 } from '../MSAbstractService/delete-error-ParameterType.ta.mjs';
 import { err_delete_error } from '../MSAccessProtocol/err-delete-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary delete_error
  * @description

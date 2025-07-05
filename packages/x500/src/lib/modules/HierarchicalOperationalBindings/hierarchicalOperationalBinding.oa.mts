@@ -8,7 +8,7 @@ import {
 } from "../HierarchicalOperationalBindings/HierarchicalAgreement.ta.mjs";
 import { hierarchicalOperationalBinding_roleA } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleA.oa.mjs";
 import { hierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleB.oa.mjs";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
+import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 
 /**
  * @summary hierarchicalOperationalBinding

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
+import { type KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import { NamedSchemes } from "../ANSI-X9-42/NamedSchemes.osa.mjs";
 import { Schemes_Union0_Intersection0_Element } from "./Schemes-Union0-Intersection0-Element.oa.mjs";
 import { Schemes_Union1_Intersection0_Element } from "./Schemes-Union1-Intersection0-Element.oa.mjs";

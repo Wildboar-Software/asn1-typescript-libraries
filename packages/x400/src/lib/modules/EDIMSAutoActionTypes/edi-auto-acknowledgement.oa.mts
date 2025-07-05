@@ -28,7 +28,7 @@ import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mj
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa.mjs';
 import { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary edi_auto_acknowledgement
  * @description

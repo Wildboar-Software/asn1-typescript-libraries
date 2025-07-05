@@ -14,7 +14,7 @@ import {
     _decode_TerminalType,
     _encode_TerminalType,
 } from '../MTSAbstractService/TerminalType.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary terminal_type
  * @description

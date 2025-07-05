@@ -6,7 +6,7 @@ import {
     _encode_AttributeValueIntegrityInfo,
 } from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.mjs";
 import { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.mjs";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
+import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 /**
  * @summary attributeValueIntegrityInfoContext
  * @description

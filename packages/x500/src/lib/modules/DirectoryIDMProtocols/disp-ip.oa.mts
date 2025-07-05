@@ -4,7 +4,7 @@ import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordi
 import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
+import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
 /**
  * @summary disp_ip
  * @description

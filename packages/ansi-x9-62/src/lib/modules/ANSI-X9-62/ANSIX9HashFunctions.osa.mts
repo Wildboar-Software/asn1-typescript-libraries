@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ANSIX9HashFunctions_Union0_Intersection0_Element } from "./ANSIX9HashFunctions-Union0-Intersection0-Element.oa.mjs";
 import { ANSIX9HashFunctions_Union1_Intersection0_Element } from "./ANSIX9HashFunctions-Union1-Intersection0-Element.oa.mjs";
 import { ANSIX9HashFunctions_Union2_Intersection0_Element } from "./ANSIX9HashFunctions-Union2-Intersection0-Element.oa.mjs";

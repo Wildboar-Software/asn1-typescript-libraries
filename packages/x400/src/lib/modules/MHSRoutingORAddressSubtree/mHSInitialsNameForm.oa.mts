@@ -12,7 +12,7 @@ import {
 import { mHSInitials } from '../MHSRoutingORAddressSubtree/mHSInitials.oa.mjs';
 import { mHSInitialsAttribute } from '../MHSRoutingORAddressSubtree/mHSInitialsAttribute.oa.mjs';
 import { id_nf_mhs_initials } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-initials.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary mHSInitialsNameForm
  * @description

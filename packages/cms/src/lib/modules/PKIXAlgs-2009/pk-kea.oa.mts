@@ -2,7 +2,7 @@
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
+import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va.mjs";
 import {
     KEA_Params_Id,

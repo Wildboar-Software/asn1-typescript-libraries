@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ecPublicKeyType
  * @description

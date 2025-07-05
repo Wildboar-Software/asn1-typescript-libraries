@@ -15,7 +15,7 @@ import {
     _encode_V42BisCompressionParameter,
 } from '../EDIMSInformationObjects/V42BisCompressionParameter.ta.mjs';
 import { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va.mjs';
-import { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca.mjs';
+import { type COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca.mjs';
 /**
  * @summary v42BisCompression
  * @description

@@ -15,7 +15,7 @@ import {
     _encode_OriginatorsReference,
 } from '../IPMSHeadingExtensions/OriginatorsReference.ta.mjs';
 import { id_hex_originators_reference } from '../IPMSObjectIdentifiers/id-hex-originators-reference.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary originators_reference
  * @description

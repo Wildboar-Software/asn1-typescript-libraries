@@ -36,7 +36,7 @@ import { entry_class_error } from '../MSAbstractService/entry-class-error.oa.mjs
 import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_list } from '../MSAccessProtocol/op-list.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary list
  * @description

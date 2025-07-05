@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
+import { type ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary SigncryptAlgorithms

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
+import { type QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
 import { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa.mjs";
 import { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa.mjs";
 

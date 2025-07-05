@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
 
 /**
  * @summary SupportedAlgorithms

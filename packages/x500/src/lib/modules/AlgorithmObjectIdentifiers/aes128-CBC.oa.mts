@@ -5,7 +5,7 @@ import {
     _encode_AES_InitializationVector,
 } from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";
 import { id_aes128_CBC } from "../AlgorithmObjectIdentifiers/id-aes128-CBC.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary aes128_CBC
  * @description

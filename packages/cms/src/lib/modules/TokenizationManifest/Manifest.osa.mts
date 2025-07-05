@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
+import { type TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
 import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.mjs";
 
 /**

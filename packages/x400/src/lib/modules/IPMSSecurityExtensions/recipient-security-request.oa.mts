@@ -15,7 +15,7 @@ import {
     _encode_RecipientSecurityRequest,
 } from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta.mjs';
 import { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary recipient_security_request
  * @description

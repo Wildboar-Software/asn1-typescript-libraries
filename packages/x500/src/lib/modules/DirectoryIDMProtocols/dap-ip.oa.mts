@@ -12,7 +12,7 @@ import { read } from "../DirectoryAbstractService/read.oa.mjs";
 import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
 import { id_idm_dap } from "../DirectoryIDMProtocols/id-idm-dap.va.mjs";
-import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
+import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
 /**
  * @summary dap_ip
  * @description

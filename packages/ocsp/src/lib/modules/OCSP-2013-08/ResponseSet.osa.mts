@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { basicResponse } from "../OCSP-2013-08/basicResponse.oa.mjs";
-import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
+import { type RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
 
 /**
  * @summary ResponseSet

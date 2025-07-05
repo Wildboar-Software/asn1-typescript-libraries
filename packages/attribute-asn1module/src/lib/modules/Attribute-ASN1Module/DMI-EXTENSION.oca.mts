@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { DMI_TYPE_IDENTIFIER } from "../Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs";
+import { type DMI_TYPE_IDENTIFIER } from "../Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs";
 /**
  * @summary DMI_EXTENSION
  * @description

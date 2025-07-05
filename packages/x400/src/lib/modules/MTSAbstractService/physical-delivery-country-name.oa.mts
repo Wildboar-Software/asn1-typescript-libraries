@@ -14,7 +14,7 @@ import {
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
 } from '../MTSAbstractService/PhysicalDeliveryCountryName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary physical_delivery_country_name
  * @description

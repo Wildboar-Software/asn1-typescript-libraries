@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
+import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 import { id_errcode_updateError } from "../CommonProtocolSpecification/id-errcode-updateError.va.mjs";
 import {
     UpdateErrorData,

@@ -15,7 +15,7 @@ import {
     _encode_ProtectedChangeCredentials,
 } from '../MSAbstractService/ProtectedChangeCredentials.ta.mjs';
 import { id_ext_protected_change_credentials } from '../MSObjectIdentifiers/id-ext-protected-change-credentials.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary protected_change_credentials
  * @description

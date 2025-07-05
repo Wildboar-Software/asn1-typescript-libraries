@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { UTCTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_uTCTimeMatch } from "../SelectedAttributeTypes/id-mr-uTCTimeMatch.va.mjs";
 /**
  * @summary uTCTimeMatch

@@ -31,7 +31,7 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_submission_control } from '../MTSAccessProtocol/op-submission-control.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary submission_control
  * @description

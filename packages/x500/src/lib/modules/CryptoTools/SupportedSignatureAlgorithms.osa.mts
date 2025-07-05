@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary SupportedSignatureAlgorithms
  * @description

@@ -5,7 +5,7 @@ import {
     _encode_CertReq,
 } from "../PkiPMIProtocolSpecifications/CertReq.ta.mjs";
 import { id_certReq } from "../PkiPMIProtocolSpecifications/id-certReq.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary certReq
  * @description

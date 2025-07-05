@@ -5,7 +5,7 @@ import {
     _decode_ReplaceAvlReq,
     _encode_ReplaceAvlReq,
 } from "../PkiPMIProtocolSpecifications/ReplaceAvlReq.ta.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary replaceAvlReq
  * @description

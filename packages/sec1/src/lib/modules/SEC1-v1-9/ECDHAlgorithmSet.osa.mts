@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { ECDHAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union0-Intersection0-Element.oa.mjs";
 import { ECDHAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union1-Intersection0-Element.oa.mjs";
 import { ECDHAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union2-Intersection0-Element.oa.mjs";

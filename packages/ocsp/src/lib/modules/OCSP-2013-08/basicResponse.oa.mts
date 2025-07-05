@@ -5,7 +5,7 @@ import {
     _encode_BasicOCSPResponse,
 } from "../OCSP-2013-08/BasicOCSPResponse.ta.mjs";
 import { id_pkix_ocsp_basic } from "../OCSP-2013-08/id-pkix-ocsp-basic.va.mjs";
-import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
+import { type RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
 
 /**
  * @summary basicResponse

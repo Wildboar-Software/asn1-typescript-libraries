@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     DirectoryBindArgument,
     _decode_DirectoryBindArgument,

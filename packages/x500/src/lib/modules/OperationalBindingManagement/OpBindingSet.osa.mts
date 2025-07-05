@@ -2,7 +2,7 @@
 import { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa.mjs";
 import { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.mjs";
 import { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.mjs";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
+import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 /**
  * @summary OpBindingSet
  * @description

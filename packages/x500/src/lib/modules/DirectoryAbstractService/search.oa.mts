@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_search } from "../CommonProtocolSpecification/id-opcode-search.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

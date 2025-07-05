@@ -5,7 +5,7 @@ import {
     _encode_CertificatePairAssertion,
 } from "../CertificateExtensions/CertificatePairAssertion.ta.mjs";
 import { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary certPairAssertion
  * @description

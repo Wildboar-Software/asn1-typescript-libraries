@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
 /**
  * @summary ANSIX9HashFunctions_Union1_Intersection0_Element

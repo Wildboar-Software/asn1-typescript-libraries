@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
+import { type CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
 
 /**
  * @summary EventSet

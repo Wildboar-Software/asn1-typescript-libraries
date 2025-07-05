@@ -29,7 +29,7 @@ import {
 } from '../IPMSAbstractService/originate-ipm-ResultType.ta.mjs';
 import { subscription_error } from '../IPMSAbstractService/subscription-error.oa.mjs';
 import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary originate_ipm
  * @description

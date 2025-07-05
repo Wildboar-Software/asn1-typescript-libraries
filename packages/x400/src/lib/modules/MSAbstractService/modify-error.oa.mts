@@ -23,7 +23,7 @@ import {
     _encode_ModifyErrorParameter,
 } from '../MSAbstractService/ModifyErrorParameter.ta.mjs';
 import { err_modify_error } from '../MSAccessProtocol/err-modify-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary modify_error
  * @description

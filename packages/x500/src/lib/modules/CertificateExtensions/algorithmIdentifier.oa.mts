@@ -5,7 +5,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary algorithmIdentifier
  * @description

@@ -5,7 +5,7 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "../AlgorithmObjectIdentifiers/DomainParameters.ta.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary dh_public_numberAlgorithm
  * @description

@@ -14,7 +14,7 @@ import {
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
 } from '../MTSAbstractService/UniversalDomainDefinedAttributes.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_domain_defined_attributes
  * @description

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     RequestShadowUpdateArgument,
     _decode_RequestShadowUpdateArgument,

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
 import {
     Jid,

@@ -14,7 +14,7 @@ import {
     _decode_UniversalStreetAddress,
     _encode_UniversalStreetAddress,
 } from '../MTSAbstractService/UniversalStreetAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_street_address
  * @description

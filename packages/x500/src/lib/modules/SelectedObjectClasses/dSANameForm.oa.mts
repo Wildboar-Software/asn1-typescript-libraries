@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
+import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
 import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.mjs";

@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { gulsSignedTransformation } from '../GulsSecurityTransformations/gulsSignedTransformation.oa.mjs';
-import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
+import { type PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
 import { symmetricKeyInformation } from '../GulsSecurityTransformations/symmetricKeyInformation.oa.mjs';
 import { asymmetricKeyInformation } from '../GulsSecurityTransformations/asymmetricKeyInformation.oa.mjs';
 

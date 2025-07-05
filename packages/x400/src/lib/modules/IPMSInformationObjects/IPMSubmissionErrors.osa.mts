@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 import { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa.mjs';
 import { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa.mjs';
 /**

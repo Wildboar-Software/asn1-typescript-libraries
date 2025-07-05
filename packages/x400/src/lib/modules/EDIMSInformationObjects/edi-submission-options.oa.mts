@@ -15,7 +15,7 @@ import {
     _encode_EDISubmissionOptions,
 } from '../EDIMSInformationObjects/EDISubmissionOptions.ta.mjs';
 import { id_ext_submission_options } from '../EDIMSObjectIdentifiers/id-ext-submission-options.va.mjs';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
+import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 /**
  * @summary edi_submission_options
  * @description

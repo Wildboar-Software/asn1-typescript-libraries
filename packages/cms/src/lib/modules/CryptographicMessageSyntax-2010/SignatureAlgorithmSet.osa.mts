@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
+import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
 import { SignatureAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/SignatureAlgs.osa.mjs";
 
 /**

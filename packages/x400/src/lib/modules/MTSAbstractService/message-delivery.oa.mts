@@ -32,7 +32,7 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_message_delivery } from '../MTSAccessProtocol/op-message-delivery.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary message_delivery
  * @description

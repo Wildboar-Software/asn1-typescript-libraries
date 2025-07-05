@@ -18,7 +18,7 @@ import { message_delivery_abstract_syntax_88 } from '../MTSAccessProtocol/messag
 import { message_administration_abstract_syntax_88 } from '../MTSAccessProtocol/message-administration-abstract-syntax-88.oa.mjs';
 import { mts_bind_unbind_rtse_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-rtse-abstract-syntax.oa.mjs';
 import { id_ac_mts_forced_reliable_access_88 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-reliable-access-88.va.mjs';
-import { APPLICATION_CONTEXT } from '@wildboar/rose';
+import { type APPLICATION_CONTEXT } from '@wildboar/rose';
 /**
  * @summary mts_forced_reliable_access_88
  * @description

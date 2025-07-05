@@ -27,7 +27,7 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_aa_ipm_auto_advise } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-advise.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary ipm_auto_advise
  * @description

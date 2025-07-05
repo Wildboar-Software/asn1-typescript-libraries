@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
+import { type DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import { HashAlgorithms_Union0_Intersection0_Element } from "./HashAlgorithms-Union0-Intersection0-Element.oa.mjs";
 import { HashAlgorithms_Union1_Intersection0_Element } from "./HashAlgorithms-Union1-Intersection0-Element.oa.mjs";
 import { HashAlgorithms_Union2_Intersection0_Element } from "./HashAlgorithms-Union2-Intersection0-Element.oa.mjs";

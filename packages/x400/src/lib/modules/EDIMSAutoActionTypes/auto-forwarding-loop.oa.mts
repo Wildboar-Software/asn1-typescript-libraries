@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { id_aae_edi_auto_forwarding_loop } from '../EDIMSObjectIdentifiers/id-aae-edi-auto-forwarding-loop.va.mjs';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
+import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**
  * @summary auto_forwarding_loop
  * @description

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_shake128 } from "../AlgorithmObjectIdentifiers/id-shake128.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary shake128
  * @description

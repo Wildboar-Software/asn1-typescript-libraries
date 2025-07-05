@@ -15,7 +15,7 @@ import {
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
+import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**
  * @summary AUTO_ACTION
  * @description

@@ -5,7 +5,7 @@ import {
     _encode_DelMatchSyntax,
 } from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.mjs";
 import { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary delegationPathMatch
  * @description

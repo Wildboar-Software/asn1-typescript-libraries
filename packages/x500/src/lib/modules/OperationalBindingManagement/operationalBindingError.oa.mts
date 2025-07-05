@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
+import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 import { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va.mjs";
 import {
     OPTIONALLY_PROTECTED_SEQ,

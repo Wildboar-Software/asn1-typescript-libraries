@@ -23,7 +23,7 @@ import {
     _encode_sequence_number_error_ParameterType,
 } from '../MSAbstractService/sequence-number-error-ParameterType.ta.mjs';
 import { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary sequence_number_error
  * @description

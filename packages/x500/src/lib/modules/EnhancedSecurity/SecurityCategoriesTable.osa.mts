@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.mjs";
+import { type SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.mjs";
 /**
  * @summary SecurityCategoriesTable
  * @description

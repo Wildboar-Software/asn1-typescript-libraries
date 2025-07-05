@@ -23,7 +23,7 @@ import {
     _encode_SecurityProblem,
 } from '../MTSAbstractService/SecurityProblem.ta.mjs';
 import { err_security_error } from '../MTSAccessProtocol/err-security-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary security_error
  * @description

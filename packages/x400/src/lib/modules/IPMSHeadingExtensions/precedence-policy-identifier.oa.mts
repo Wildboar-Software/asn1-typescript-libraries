@@ -15,7 +15,7 @@ import {
     _encode_PrecedencePolicyIdentifier,
 } from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.mjs';
 import { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary precedence_policy_identifier
  * @description

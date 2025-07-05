@@ -14,7 +14,7 @@ import {
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
 } from '../MTSAbstractService/UnformattedPostalAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary unformatted_postal_address
  * @description

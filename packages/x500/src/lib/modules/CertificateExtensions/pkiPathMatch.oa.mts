@@ -5,7 +5,7 @@ import {
     _decode_PkiPathMatchSyntax,
     _encode_PkiPathMatchSyntax,
 } from "../CertificateExtensions/PkiPathMatchSyntax.ta.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary pkiPathMatch
  * @description

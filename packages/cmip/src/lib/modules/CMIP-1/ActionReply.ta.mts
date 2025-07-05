@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
+import { type CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
 import {
     _decode_ActionTypeId,
     _encode_ActionTypeId,

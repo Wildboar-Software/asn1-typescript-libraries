@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { FALSE } from "@wildboar/asn1";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
+import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import {
     AttributeOptionList,
     _decode_AttributeOptionList,

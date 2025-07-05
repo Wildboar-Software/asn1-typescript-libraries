@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.mjs";
 /**
  * @summary ECCAlgorithmSet_Union1_Intersection0_Element

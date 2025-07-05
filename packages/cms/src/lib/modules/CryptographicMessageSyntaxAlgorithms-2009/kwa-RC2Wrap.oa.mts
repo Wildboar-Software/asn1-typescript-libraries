@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
+import { type KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";

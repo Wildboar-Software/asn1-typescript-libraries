@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa.mjs";
-import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
+import { type PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
 
 /**
  * @summary AlgorithmSet

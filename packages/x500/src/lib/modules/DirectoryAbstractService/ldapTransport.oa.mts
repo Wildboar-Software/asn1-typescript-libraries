@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { id_opcode_ldapTransport } from "../CommonProtocolSpecification/id-opcode-ldapTransport.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.mjs";
 import {

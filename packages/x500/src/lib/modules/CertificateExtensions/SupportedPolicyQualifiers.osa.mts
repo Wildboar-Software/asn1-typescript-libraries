@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.mjs";
+import { type CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.mjs";
 /**
  * @summary SupportedPolicyQualifiers
  * @description

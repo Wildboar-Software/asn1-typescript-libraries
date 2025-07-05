@@ -2,7 +2,7 @@
 import { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { sha256WithRSAEncryption } from "../AlgorithmObjectIdentifiers/sha256WithRSAEncryption.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary sha256WithRSAEncryptionAlgorithm
  * @description

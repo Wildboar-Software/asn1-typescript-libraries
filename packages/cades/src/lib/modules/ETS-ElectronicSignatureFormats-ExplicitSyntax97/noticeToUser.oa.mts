@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va.mjs";
 import { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta.mjs";
-import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
+import { type SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
 /**
  * @summary noticeToUser
  * @description

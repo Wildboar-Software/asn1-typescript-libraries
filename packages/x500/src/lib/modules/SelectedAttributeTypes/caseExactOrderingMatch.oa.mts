@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_caseExactOrderingMatch } from "../SelectedAttributeTypes/id-mr-caseExactOrderingMatch.va.mjs";
 import {

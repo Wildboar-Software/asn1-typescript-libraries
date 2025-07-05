@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.mjs";
+import { type ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.mjs";
 
 /**
  * @summary SupportedEncryptionAlgorithms

@@ -14,7 +14,7 @@ import {
   _decode_Negotiation_SEI,
   _encode_Negotiation_SEI,
 } from '../GulsSecurityExchanges/Negotiation-SEI.ta.mjs';
-import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
+import { type SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
 
 /**
  * @summary offeredIds

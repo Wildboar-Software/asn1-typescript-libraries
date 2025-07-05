@@ -9,8 +9,8 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
+import { type SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
+import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
 
 /**
  * @summary Errors

@@ -14,7 +14,7 @@ import {
     _decode_UniversalLocalPostalAttributes,
     _encode_UniversalLocalPostalAttributes,
 } from '../MTSAbstractService/UniversalLocalPostalAttributes.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_local_postal_attributes
  * @description

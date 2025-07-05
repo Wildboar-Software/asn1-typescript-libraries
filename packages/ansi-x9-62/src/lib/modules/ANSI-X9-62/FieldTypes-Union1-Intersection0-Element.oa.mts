@@ -5,7 +5,7 @@ import {
     _decode_Characteristic_two,
     _encode_Characteristic_two,
 } from "../ANSI-X9-62/Characteristic-two.ta.mjs";
-import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
+import { type FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
 /**
  * @summary FieldTypes_Union1_Intersection0_Element
  * @description

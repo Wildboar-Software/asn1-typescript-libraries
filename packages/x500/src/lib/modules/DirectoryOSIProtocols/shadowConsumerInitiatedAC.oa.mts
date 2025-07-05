@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
+import { type APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
 import { id_ac_shadowConsumerInitiatedAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAC.va.mjs";
 import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";

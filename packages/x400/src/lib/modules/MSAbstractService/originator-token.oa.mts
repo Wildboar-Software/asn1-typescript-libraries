@@ -15,7 +15,7 @@ import {
     _encode_OriginatorToken,
 } from '../MSAbstractService/OriginatorToken.ta.mjs';
 import { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary originator_token
  * @description

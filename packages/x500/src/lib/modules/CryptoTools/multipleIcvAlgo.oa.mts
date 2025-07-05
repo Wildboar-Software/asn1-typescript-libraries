@@ -5,7 +5,7 @@ import {
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
 } from "../CryptoTools/MultipleIcvAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multipleIcvAlgo
  * @description

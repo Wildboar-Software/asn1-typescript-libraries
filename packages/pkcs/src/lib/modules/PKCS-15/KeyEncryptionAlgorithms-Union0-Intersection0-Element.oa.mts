@@ -1,7 +1,7 @@
 import type { NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntax/id-alg-CMS3DESwrap.va.mjs";
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 
 /**
  * ### ASN.1 Definition

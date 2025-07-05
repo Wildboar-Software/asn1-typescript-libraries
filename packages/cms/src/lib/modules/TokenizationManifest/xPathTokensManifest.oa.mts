@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va.mjs";
-import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
+import { type TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
 import {
     XPathTokensSet,
     _decode_XPathTokensSet,

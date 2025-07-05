@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { ecwkt_specifiedParameters } from "../SEC1-v1-9/ecwkt-specifiedParameters.va.mjs";
 import { ECWKTParameters, _decode_ECWKTParameters, _encode_ECWKTParameters } from "../SEC1-v1-9/ECWKTParameters.ta.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECWKTAlgorithmSet_Union1_Intersection0_Element
  * @description

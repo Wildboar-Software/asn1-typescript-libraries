@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
+import { type SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
 import { xPathManifest } from "../CMSSigncryption/xPathManifest.oa.mjs";
 
 /**

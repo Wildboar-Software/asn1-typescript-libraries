@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.mjs';
 import { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa.mjs';
-import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/InformationFramework';
+import { type DIT_CONTEXT_USE_RULE } from '@wildboar/x500/InformationFramework';
 /**
  * @summary dl_nested_dl_use_rule
  * @description

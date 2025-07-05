@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { mqvSinglePass_recommendedKDF } from "../SEC1-v1-9/mqvSinglePass-recommendedKDF.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECMQVAlgorithmSet_Union1_Intersection0_Element
  * @description

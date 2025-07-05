@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MAPPING_BASED_MATCHING } from "../InformationFramework/MAPPING-BASED-MATCHING.oca.mjs";
+import { type MAPPING_BASED_MATCHING } from "../InformationFramework/MAPPING-BASED-MATCHING.oca.mjs";
 import { ZonalResult } from "../SelectedAttributeTypes/ZonalResult.ta.mjs";
 import { ZonalSelect } from "../SelectedAttributeTypes/ZonalSelect.ta.mjs";
 /**

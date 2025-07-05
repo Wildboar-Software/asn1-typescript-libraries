@@ -12,7 +12,7 @@ import {
 import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.mjs';
 import { commonName } from '@wildboar/x500/SelectedAttributeTypes';
 import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.mjs';
-import { NAME_FORM } from '@wildboar/x500/InformationFramework';
+import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
 /**
  * @summary registeredInformationNameForm
  * @description

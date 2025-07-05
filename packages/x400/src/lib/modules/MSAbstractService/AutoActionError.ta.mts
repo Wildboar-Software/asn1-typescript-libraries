@@ -12,10 +12,10 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
-} from "@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs";
+} from "@wildboar/rose";
 
 /**
  * @summary AutoActionError

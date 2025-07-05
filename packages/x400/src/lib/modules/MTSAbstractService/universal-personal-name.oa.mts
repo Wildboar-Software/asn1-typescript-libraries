@@ -14,7 +14,7 @@ import {
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
 } from '../MTSAbstractService/UniversalPersonalName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary universal_personal_name
  * @description

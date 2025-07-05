@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
+import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
 import { md2WithRSAEncryption } from "../PKIXAlgs-2009/md2WithRSAEncryption.va.mjs";
 import { mda_md2 } from "../PKIXAlgs-2009/mda-md2.oa.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";

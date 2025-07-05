@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { ipms_access_contract } from '../IPMSFunctionalObjects/ipms-access-contract.oa.mjs';
 import { id_ot_ipms } from '../IPMSObjectIdentifiers/id-ot-ipms.va.mjs';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
+import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
 /**
  * @summary ipms
  * @description

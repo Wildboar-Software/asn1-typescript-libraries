@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     AddEntryArgument,
     _decode_AddEntryArgument,

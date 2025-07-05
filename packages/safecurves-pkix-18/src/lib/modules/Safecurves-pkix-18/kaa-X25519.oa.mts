@@ -13,7 +13,7 @@ import { _enum_for_ParamOptions, preferredPresent /* IMPORTED_SHORT_ENUMERATION_
 import { id_X25519 } from "../Safecurves-pkix-18/id-X25519.va.mjs";
 import { pk_X25519 } from "../Safecurves-pkix-18/pk-X25519.oa.mjs";
 import { kaa_X25519_smimeCaps } from "../Safecurves-pkix-18/kaa-X25519-smimeCaps.oa.mjs";
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
+import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 
 /**
  * @summary kaa_X25519

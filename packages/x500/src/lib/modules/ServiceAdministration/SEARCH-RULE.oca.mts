@@ -10,8 +10,8 @@ import { ControlOptions } from "../ServiceAdministration/ControlOptions.ta.mjs";
 import { EntryLimit } from "../ServiceAdministration/EntryLimit.ta.mjs";
 import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
 import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta.mjs";
-import { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.mjs";
-import { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.mjs";
+import { type REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.mjs";
+import { type RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.mjs";
 /**
  * @summary SEARCH_RULE
  * @description

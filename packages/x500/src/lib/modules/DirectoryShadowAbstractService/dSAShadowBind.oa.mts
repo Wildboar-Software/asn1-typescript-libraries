@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
 /**
  * @summary dSAShadowBind

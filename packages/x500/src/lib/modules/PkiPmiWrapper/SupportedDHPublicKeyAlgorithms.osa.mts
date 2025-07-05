@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary SupportedDHPublicKeyAlgorithms
  * @description

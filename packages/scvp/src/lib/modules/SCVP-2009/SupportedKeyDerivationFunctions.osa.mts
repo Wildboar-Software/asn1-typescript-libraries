@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs';
+import { type KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs';
 
 /**
  * @summary SupportedKeyDerivationFunctions

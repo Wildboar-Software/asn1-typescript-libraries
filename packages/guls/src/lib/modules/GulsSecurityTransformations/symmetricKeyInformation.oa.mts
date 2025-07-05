@@ -14,7 +14,7 @@ import {
   _decode_symmetricKeyInformation_KiType,
   _encode_symmetricKeyInformation_KiType,
 } from '../GulsSecurityTransformations/symmetricKeyInformation-KiType.ta.mjs';
-import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
+import { type KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
 
 /**
  * @summary symmetricKeyInformation

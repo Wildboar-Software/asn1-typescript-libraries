@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     CoordinateShadowUpdateArgument,
     _decode_CoordinateShadowUpdateArgument,

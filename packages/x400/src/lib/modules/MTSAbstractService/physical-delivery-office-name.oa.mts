@@ -14,7 +14,7 @@ import {
     _decode_PhysicalDeliveryOfficeName,
     _encode_PhysicalDeliveryOfficeName,
 } from '../MTSAbstractService/PhysicalDeliveryOfficeName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary physical_delivery_office_name
  * @description

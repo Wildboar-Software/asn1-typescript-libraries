@@ -15,7 +15,7 @@ import {
     _encode_CompressionParameter,
 } from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.mjs';
 import { id_edi_compression } from '../EDIMSObjectIdentifiers/id-edi-compression.va.mjs';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
+import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 /**
  * @summary primary_body_part_compression_indication
  * @description

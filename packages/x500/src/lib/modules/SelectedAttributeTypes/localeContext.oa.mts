@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { TRUE } from "@wildboar/asn1";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
+import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.mjs";
 import {
     LocaleContextSyntax,

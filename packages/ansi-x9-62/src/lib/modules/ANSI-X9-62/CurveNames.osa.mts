@@ -26,7 +26,7 @@ import { CurveNames_Union6_Intersection0_Element } from "../ANSI-X9-62/CurveName
 import { CurveNames_Union7_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union7-Intersection0-Element.oa.mjs";
 import { CurveNames_Union8_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union8-Intersection0-Element.oa.mjs";
 import { CurveNames_Union9_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union9-Intersection0-Element.oa.mjs";
-import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
+import { type CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 /**
  * @summary CurveNames
  * @description

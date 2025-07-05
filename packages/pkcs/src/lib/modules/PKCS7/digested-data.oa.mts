@@ -5,7 +5,7 @@ import {
     _encode_DigestedData,
 } from "../PKCS7/DigestedData.ta.mjs";
 import { id_digested_data } from "../PKCS7/id-digested-data.va.mjs";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
+import { type PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
 
 /**
  * @summary digested_data

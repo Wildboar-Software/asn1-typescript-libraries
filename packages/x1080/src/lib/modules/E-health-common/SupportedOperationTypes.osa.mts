@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.mjs';
+import { type INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.mjs';
 
 /**
  * @summary SupportedOperationTypes

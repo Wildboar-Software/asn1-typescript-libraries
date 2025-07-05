@@ -14,7 +14,7 @@ import {
     _decode_ExtensionPhysicalDeliveryAddressComponents,
     _encode_ExtensionPhysicalDeliveryAddressComponents,
 } from '../MTSAbstractService/ExtensionPhysicalDeliveryAddressComponents.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary extension_physical_delivery_address_components
  * @description

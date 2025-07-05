@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { mqvFull_sha224kdf_scheme } from "../SEC1-v1-9/mqvFull-sha224kdf-scheme.va.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECMQVAlgorithmSet_Union13_Intersection0_Element
  * @description

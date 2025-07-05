@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { c2pnb163v2 } from "../ANSI-X9-62/c2pnb163v2.va.mjs";
-import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
+import { type CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 /**
  * @summary CurveNames_Union1_Intersection0_Element
  * @description

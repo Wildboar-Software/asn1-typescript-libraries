@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_list } from "../CommonProtocolSpecification/id-opcode-list.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import {
     ListArgument,

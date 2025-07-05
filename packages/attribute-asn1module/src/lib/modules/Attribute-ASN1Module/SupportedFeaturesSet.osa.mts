@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca.mjs";
+import { type DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca.mjs";
 /**
  * @summary SupportedFeaturesSet
  * @description

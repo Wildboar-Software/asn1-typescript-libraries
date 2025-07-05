@@ -15,7 +15,7 @@ import {
     _encode_ManualHandlingInstructions,
 } from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta.mjs';
 import { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary manual_handling_instructions
  * @description

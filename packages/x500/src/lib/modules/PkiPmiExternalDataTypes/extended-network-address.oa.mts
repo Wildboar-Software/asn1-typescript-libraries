@@ -4,7 +4,7 @@ import {
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
 } from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.mjs";
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
+import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 /**
  * @summary extended_network_address
  * @description

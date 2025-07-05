@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 import { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa.mjs';
 import { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa.mjs';
 import { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa.mjs';

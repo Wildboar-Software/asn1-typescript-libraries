@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.mjs";
 /**
  * @summary ECCAlgorithmSet_Union8_Intersection0_Element

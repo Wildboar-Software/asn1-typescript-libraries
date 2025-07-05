@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 import { id_mr_generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeOrderingMatch.va.mjs";
 /**

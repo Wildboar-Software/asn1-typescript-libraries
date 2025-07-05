@@ -18,7 +18,7 @@ import { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-d
 import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa.mjs';
 import { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa.mjs';
 import { id_ac_mts_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-access-94.va.mjs';
-import { APPLICATION_CONTEXT } from '@wildboar/rose';
+import { type APPLICATION_CONTEXT } from '@wildboar/rose';
 /**
  * @summary mts_access_94
  * @description

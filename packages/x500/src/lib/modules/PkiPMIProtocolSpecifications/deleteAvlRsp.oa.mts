@@ -5,7 +5,7 @@ import {
     _encode_DeleteAvlRsp,
 } from "../PkiPMIProtocolSpecifications/DeleteAvlRsp.ta.mjs";
 import { id_deleteAvlRsp } from "../PkiPMIProtocolSpecifications/id-deleteAvlRsp.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary deleteAvlRsp
  * @description

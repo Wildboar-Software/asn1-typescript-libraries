@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
 import { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va.mjs";
 /**

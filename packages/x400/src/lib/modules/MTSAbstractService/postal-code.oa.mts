@@ -14,7 +14,7 @@ import {
     _decode_PostalCode,
     _encode_PostalCode,
 } from '../MTSAbstractService/PostalCode.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary postal_code
  * @description

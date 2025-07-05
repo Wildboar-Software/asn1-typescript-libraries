@@ -4,7 +4,7 @@ import {
     _decode_SubordinateToSuperior,
     _encode_SubordinateToSuperior,
 } from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.mjs";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
+import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
 /**
  * @summary hierarchicalOperationalBinding_roleB
  * @description

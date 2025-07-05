@@ -15,7 +15,7 @@ import {
     _encode_BodyPartSignatures,
 } from '../IPMSHeadingExtensions/BodyPartSignatures.ta.mjs';
 import { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary body_part_signatures
  * @description

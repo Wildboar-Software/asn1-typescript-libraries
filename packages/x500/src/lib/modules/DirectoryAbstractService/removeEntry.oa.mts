@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_removeEntry } from "../CommonProtocolSpecification/id-opcode-removeEntry.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import {

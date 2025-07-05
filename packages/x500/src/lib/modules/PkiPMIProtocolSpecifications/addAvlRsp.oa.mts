@@ -5,7 +5,7 @@ import {
     _encode_AddAvlRsp,
 } from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta.mjs";
 import { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary addAvlRsp
  * @description

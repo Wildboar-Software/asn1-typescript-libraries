@@ -30,7 +30,7 @@ import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_act_ipm_auto_forward } from '../MSObjectIdentifiers/id-act-ipm-auto-forward.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary ipm_auto_forward
  * @description

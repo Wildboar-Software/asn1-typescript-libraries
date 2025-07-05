@@ -6,7 +6,7 @@ import {
 } from "../CertificateExtensions/CertificateListAssertion.ta.mjs";
 import { certListAssertion } from "../CertificateExtensions/certListAssertion.oa.mjs";
 import { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary certificateListMatch
  * @description

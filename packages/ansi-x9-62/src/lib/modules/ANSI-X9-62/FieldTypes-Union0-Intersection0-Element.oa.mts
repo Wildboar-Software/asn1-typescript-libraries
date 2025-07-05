@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
+import { type FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
 import { prime_field } from "../ANSI-X9-62/prime-field.va.mjs";
 import {
     Prime_p,

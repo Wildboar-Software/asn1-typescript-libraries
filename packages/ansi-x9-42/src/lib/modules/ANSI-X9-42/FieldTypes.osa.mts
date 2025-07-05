@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
+import { type FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
 import {
     _decode_DomainParameters,
     _encode_DomainParameters,

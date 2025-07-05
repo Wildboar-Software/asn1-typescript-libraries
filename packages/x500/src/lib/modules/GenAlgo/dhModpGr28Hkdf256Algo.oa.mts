@@ -10,7 +10,7 @@ import {
     _decode_Payload28,
     _encode_Payload28,
 } from "../GenAlgo/Payload28.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary dhModpGr28Hkdf256Algo
  * @description

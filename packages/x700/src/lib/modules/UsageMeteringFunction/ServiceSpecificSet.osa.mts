@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.mjs';
+import { type UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.mjs';
 /**
  * @summary ServiceSpecificSet
  * @description

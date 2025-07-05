@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
+import { type CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
 import { secp521r1 } from "../PKIXAlgs-2009/secp521r1.va.mjs";
 
 /**

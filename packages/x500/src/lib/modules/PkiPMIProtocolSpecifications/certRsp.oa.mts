@@ -5,7 +5,7 @@ import {
     _encode_CertRsp,
 } from "../PkiPMIProtocolSpecifications/CertRsp.ta.mjs";
 import { id_certRsp } from "../PkiPMIProtocolSpecifications/id-certRsp.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary certRsp
  * @description

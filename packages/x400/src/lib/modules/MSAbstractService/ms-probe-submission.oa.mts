@@ -41,7 +41,7 @@ import { entry_class_error } from '../MSAbstractService/entry-class-error.oa.mjs
 import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_ms_probe_submission } from '../MSAccessProtocol/op-ms-probe-submission.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary ms_probe_submission
  * @description

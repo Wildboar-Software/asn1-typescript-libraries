@@ -5,7 +5,7 @@ import {
     _decode_KEA_Parms_Id,
     _encode_KEA_Parms_Id,
 } from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary keyExchangeAlgorithm
  * @description

@@ -2,7 +2,7 @@
 import {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
+import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va.mjs";
 import {
     DHPublicKey,

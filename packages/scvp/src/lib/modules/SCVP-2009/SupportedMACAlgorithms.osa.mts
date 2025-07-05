@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { MAC_ALGORITHM } from '../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs';
+import { type MAC_ALGORITHM } from '../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs';
 
 /**
  * @summary SupportedMACAlgorithms

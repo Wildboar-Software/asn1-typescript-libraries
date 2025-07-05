@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.mjs';
+import { type SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.mjs';
 
 /**
  * @summary SecurityProtocols

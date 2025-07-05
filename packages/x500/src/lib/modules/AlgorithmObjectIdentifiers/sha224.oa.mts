@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_sha224 } from "../AlgorithmObjectIdentifiers/id-sha224.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary sha224
  * @description

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
+import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa.mjs";
 import { x509Certificate } from "../PKCS-12/x509Certificate.oa.mjs";
 

@@ -10,14 +10,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ObjectIdentifier,
 } from '@wildboar/asn1';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
+import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
 import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.mjs';
 import {
     gulsSignedTransformation_XformedDataType,
     _decode_gulsSignedTransformation_XformedDataType,
     _encode_gulsSignedTransformation_XformedDataType,
 } from "../GulsSecurityTransformations/gulsSignedTransformation-XformedDataType.ta.mjs";
-import { KEY_INFORMATION } from './KEY-INFORMATION.oca.mjs';
+import { type KEY_INFORMATION } from './KEY-INFORMATION.oca.mjs';
 
 
 /**

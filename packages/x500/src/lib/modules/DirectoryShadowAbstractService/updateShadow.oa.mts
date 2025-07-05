@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_updateShadow } from "../CommonProtocolSpecification/id-opcode-updateShadow.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
 import {
     UpdateShadowArgument,

@@ -15,7 +15,7 @@ import {
     _encode_IPMAssemblyInstructions,
 } from '../IPMSInformationObjects/IPMAssemblyInstructions.ta.mjs';
 import { id_mst_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-assembly-instructions.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary ipm_assembly_instructions
  * @description

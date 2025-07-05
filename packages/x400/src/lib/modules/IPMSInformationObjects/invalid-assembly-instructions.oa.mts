@@ -15,7 +15,7 @@ import {
     _encode_BodyPartReferences,
 } from '../IPMSInformationObjects/BodyPartReferences.ta.mjs';
 import { id_mst_invalid_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-invalid-assembly-instructions.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary invalid_assembly_instructions
  * @description

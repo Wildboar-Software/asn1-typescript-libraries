@@ -13,7 +13,7 @@ import { mts_user } from '../MTSAbstractService/mts-user.oa.mjs';
 import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa.mjs';
 import { ms_access_contract_94 } from '../MSAbstractService/ms-access-contract-94.oa.mjs';
 import { id_ot_ms } from '../MSObjectIdentifiers/id-ot-ms.va.mjs';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
+import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
 /**
  * @summary ms
  * @description

@@ -16,7 +16,7 @@ import {
     _encode_Language,
 } from '../IPMSHeadingExtensions/Language.ta.mjs';
 import { id_hex_languages } from '../IPMSObjectIdentifiers/id-hex-languages.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary languages
  * @description

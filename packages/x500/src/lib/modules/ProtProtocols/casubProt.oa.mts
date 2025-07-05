@@ -5,7 +5,7 @@ import {
     _encode_CasubProt,
 } from "../CaSubscription/CasubProt.ta.mjs";
 import { id_casubprot } from "../ProtProtocols/id-casubprot.va.mjs";
-import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
+import { type WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
 /**
  * @summary casubProt
  * @description

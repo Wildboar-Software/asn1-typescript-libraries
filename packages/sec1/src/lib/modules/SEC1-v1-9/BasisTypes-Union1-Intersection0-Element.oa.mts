@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.mjs";
 import { tpBasis } from "../SEC1-v1-9/tpBasis.va.mjs";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
+import { type CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
 /**
  * @summary BasisTypes_Union1_Intersection0_Element
  * @description

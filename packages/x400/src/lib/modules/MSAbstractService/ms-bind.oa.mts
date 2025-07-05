@@ -28,7 +28,7 @@ import {
     _encode_MSBindResult,
 } from '../MSAbstractService/MSBindResult.ta.mjs';
 import { ms_bind_error } from '../MSAbstractService/ms-bind-error.oa.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary ms_bind
  * @description

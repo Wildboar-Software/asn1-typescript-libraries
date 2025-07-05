@@ -5,7 +5,7 @@ import {
     _decode_ShakeOutputLen,
     _encode_ShakeOutputLen,
 } from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary shake128_len
  * @description

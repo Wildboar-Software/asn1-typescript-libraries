@@ -14,7 +14,7 @@ import {
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
 } from '../MTSAbstractService/BindTokenEncryptedData.ta.mjs';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
+import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
 /**
  * @summary bind_token_encrypted_data
  * @description

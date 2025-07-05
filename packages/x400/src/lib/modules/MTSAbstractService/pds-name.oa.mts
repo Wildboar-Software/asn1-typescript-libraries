@@ -14,7 +14,7 @@ import {
     _decode_PDSName,
     _encode_PDSName,
 } from '../MTSAbstractService/PDSName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary pds_name
  * @description

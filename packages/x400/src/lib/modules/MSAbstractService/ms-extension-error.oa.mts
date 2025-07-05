@@ -23,7 +23,7 @@ import {
     _encode_MSExtensionErrorParameter,
 } from '../MSAbstractService/MSExtensionErrorParameter.ta.mjs';
 import { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary ms_extension_error
  * @description

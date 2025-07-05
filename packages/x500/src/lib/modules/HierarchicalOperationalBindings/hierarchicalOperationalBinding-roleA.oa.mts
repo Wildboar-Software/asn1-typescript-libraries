@@ -9,7 +9,7 @@ import {
     _decode_SuperiorToSubordinateModification,
     _encode_SuperiorToSubordinateModification,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.mjs";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
+import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
 /**
  * @summary hierarchicalOperationalBinding_roleA
  * @description

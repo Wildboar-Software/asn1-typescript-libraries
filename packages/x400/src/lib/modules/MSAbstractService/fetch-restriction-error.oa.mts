@@ -23,7 +23,7 @@ import {
     _encode_fetch_restriction_error_ParameterType,
 } from '../MSAbstractService/fetch-restriction-error-ParameterType.ta.mjs';
 import { err_fetch_restriction_error } from '../MSAccessProtocol/err-fetch-restriction-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary fetch_restriction_error
  * @description

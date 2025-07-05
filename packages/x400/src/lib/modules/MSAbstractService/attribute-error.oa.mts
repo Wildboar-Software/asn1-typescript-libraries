@@ -23,7 +23,7 @@ import {
     _encode_attribute_error_ParameterType,
 } from '../MSAbstractService/attribute-error-ParameterType.ta.mjs';
 import { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary attribute_error
  * @description

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { common_name } from "../MTSAbstractService/common-name.oa.mjs";
 import { extended_network_address } from "../MTSAbstractService/extended-network-address.oa.mjs";
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
+import { type EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
 import { extension_OR_address_components } from "../MTSAbstractService/extension-OR-address-components.oa.mjs";
 import { extension_physical_delivery_address_components } from "../MTSAbstractService/extension-physical-delivery-address-components.oa.mjs";
 import { local_postal_attributes } from "../MTSAbstractService/local-postal-attributes.oa.mjs";

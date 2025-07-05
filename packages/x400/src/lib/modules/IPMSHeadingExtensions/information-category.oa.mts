@@ -15,7 +15,7 @@ import {
     _encode_InformationCategories,
 } from '../IPMSHeadingExtensions/InformationCategories.ta.mjs';
 import { id_hex_information_category } from '../IPMSObjectIdentifiers/id-hex-information-category.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary information_category
  * @description

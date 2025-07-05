@@ -20,7 +20,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { err_deferred_delivery_cancellation_rejected } from '../MTSAccessProtocol/err-deferred-delivery-cancellation-rejected.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary deferred_delivery_cancellation_rejected
  * @description

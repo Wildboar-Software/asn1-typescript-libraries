@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/id-mr-directoryStringFirstComponentMatch.va.mjs";
 import {

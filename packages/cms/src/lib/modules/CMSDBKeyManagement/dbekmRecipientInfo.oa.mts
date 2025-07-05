@@ -3,7 +3,7 @@ import {
     _decode_DBEKMRecipientInfo,
     _encode_DBEKMRecipientInfo,
 } from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.mjs";
-import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
+import { type KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
 import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.mjs";
 
 /**

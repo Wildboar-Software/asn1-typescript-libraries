@@ -22,7 +22,7 @@ import {
     _decode_receive_on_ArgumentType,
     _encode_receive_on_ArgumentType,
 } from '../IPMSAbstractService/receive-on-ArgumentType.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary receive_on
  * @description

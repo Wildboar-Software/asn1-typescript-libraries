@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
+import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
 import {
     ECDSA_Sig_Value,
     _decode_ECDSA_Sig_Value,

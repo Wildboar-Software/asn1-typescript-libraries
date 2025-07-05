@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca.mjs';
+import { type SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca.mjs';
 /**
  * @summary SecurityCategoriesTable
  * @description

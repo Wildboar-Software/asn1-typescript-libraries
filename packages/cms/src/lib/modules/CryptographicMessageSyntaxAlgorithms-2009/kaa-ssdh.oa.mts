@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
+import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 import {
     optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,

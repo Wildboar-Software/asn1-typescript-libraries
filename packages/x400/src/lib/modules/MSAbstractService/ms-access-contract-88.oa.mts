@@ -14,7 +14,7 @@ import { retrieval_88 } from '../MSAbstractService/retrieval-88.oa.mjs';
 import { submission } from '../MTSAbstractService/submission.oa.mjs';
 import { administration_88 } from '../MTSAbstractService88/administration-88.oa.mjs';
 import { id_crt_ms_access_88 } from '../MSObjectIdentifiers/id-crt-ms-access-88.va.mjs';
-import { CONTRACT } from '@wildboar/rose';
+import { type CONTRACT } from '@wildboar/rose';
 /**
  * @summary ms_access_contract_88
  * @description

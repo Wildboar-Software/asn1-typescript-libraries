@@ -2,7 +2,7 @@
 import { OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { aes256_CBC_PAD } from "../PKCS5v2-1/aes256-CBC-PAD.va.mjs";
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 
 /**
  * @summary SupportingAlgorithms_Union7_Intersection0_Element

@@ -24,7 +24,7 @@ import {
     _encode_AutoAlertErrorIndication,
 } from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta.mjs';
 import { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va.mjs';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
+import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**
  * @summary auto_alert_error
  * @description

@@ -5,7 +5,7 @@ import {
     _decode_MultipleAuthenEncryptAlgo,
     _encode_MultipleAuthenEncryptAlgo,
 } from "../CryptoTools/MultipleAuthenEncryptAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multipleAuthenEncryptAlgo
  * @description

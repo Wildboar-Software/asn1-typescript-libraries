@@ -15,7 +15,7 @@ import {
     _encode_AuthorizationTime,
 } from '../IPMSHeadingExtensions/AuthorizationTime.ta.mjs';
 import { id_hex_authorization_time } from '../IPMSObjectIdentifiers/id-hex-authorization-time.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary authorization_time
  * @description

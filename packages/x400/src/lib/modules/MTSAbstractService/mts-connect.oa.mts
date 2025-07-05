@@ -12,7 +12,7 @@ import {
 import { mts_bind } from '../MTSAbstractService/mts-bind.oa.mjs';
 import { mts_unbind } from '../MTSAbstractService/mts-unbind.oa.mjs';
 import { id_cp_mts_connect } from '../MTSObjectIdentifiers/id-cp-mts-connect.va.mjs';
-import { CONNECTION_PACKAGE } from '@wildboar/rose';
+import { type CONNECTION_PACKAGE } from '@wildboar/rose';
 /**
  * @summary mts_connect
  * @description

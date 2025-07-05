@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { dhHybrid2 } from "../ANSI-X9-42/dhHybrid2.va.mjs";
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
+import { type KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import {
     SchemeParameters,
     _decode_SchemeParameters,

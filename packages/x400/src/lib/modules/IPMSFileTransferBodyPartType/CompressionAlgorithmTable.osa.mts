@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca.mjs';
+import { type COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca.mjs';
 /**
  * @summary CompressionAlgorithmTable
  * @description

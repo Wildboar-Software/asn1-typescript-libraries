@@ -14,7 +14,7 @@ import {
     _decode_TeletexPersonalName,
     _encode_TeletexPersonalName,
 } from '../MTSAbstractService/TeletexPersonalName.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary teletex_personal_name
  * @description

@@ -14,7 +14,7 @@ import {
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
 } from '../MTSAbstractService/PostOfficeBoxAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary post_office_box_address
  * @description

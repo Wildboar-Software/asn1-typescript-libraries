@@ -5,7 +5,7 @@ import {
     _encode_AES_InitializationVector,
 } from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";
 import { id_aes192_CBC } from "../AlgorithmObjectIdentifiers/id-aes192-CBC.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary aes192_CBC
  * @description

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.mjs';
+import { type AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.mjs';
 /**
  * @summary ProxySet
  * @description

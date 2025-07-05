@@ -15,7 +15,7 @@ import {
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
 import { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary originator_body_part_encryption_token
  * @description

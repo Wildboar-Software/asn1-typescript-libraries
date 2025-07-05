@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { id_aes256_wrap } from "../CMSAesRsaesOaep-2009/id-aes256-wrap.va.mjs";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
+import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 
 /**
  * @summary kwa_aes256_wrap_smimeCaps

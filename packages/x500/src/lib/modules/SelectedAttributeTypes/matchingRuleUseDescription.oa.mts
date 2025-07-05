@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import {
     MatchingRuleUseDescription,
     _decode_MatchingRuleUseDescription,

@@ -22,7 +22,7 @@ import {
     _decode_receive_ipm_ArgumentType,
     _encode_receive_ipm_ArgumentType,
 } from '../IPMSAbstractService/receive-ipm-ArgumentType.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary receive_ipm
  * @description

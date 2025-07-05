@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import { id_aae_duplicate_edin } from '../EDIMSObjectIdentifiers/id-aae-duplicate-edin.va.mjs';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
+import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**
  * @summary duplicate_edin
  * @description

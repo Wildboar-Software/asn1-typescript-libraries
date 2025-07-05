@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta.mjs";
 import { id_X25519 } from "../Safecurves-pkix-18/id-X25519.va.mjs";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
+import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 
 /**
  * @summary kaa_X25519_smimeCaps

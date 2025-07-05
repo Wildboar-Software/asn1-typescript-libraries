@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
+import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 import { kaa_esdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-esdh.oa.mjs";
 import { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.oa.mjs";
 

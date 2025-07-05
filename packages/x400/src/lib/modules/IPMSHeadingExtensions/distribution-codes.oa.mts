@@ -15,7 +15,7 @@ import {
     _encode_DistributionCodes,
 } from '../IPMSHeadingExtensions/DistributionCodes.ta.mjs';
 import { id_hex_distribution_codes } from '../IPMSObjectIdentifiers/id-hex-distribution-codes.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary distribution_codes
  * @description

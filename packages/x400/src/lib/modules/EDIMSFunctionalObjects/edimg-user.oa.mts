@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa.mjs';
 import { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va.mjs';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
+import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
 /**
  * @summary edimg_user
  * @description

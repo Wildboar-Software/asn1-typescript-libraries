@@ -13,7 +13,7 @@ import { _enum_for_ParamOptions, absent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _
 import { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va.mjs";
 import { pk_Ed25519 } from "../Safecurves-pkix-18/pk-Ed25519.oa.mjs";
 import { sa_Ed25519_smimeCaps } from "../Safecurves-pkix-18/sa-Ed25519-smimeCaps.oa.mjs";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
+import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
 
 /**
  * @summary sa_Ed25519

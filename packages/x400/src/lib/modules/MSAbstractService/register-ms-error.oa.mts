@@ -23,7 +23,7 @@ import {
     _encode_register_ms_error_ParameterType,
 } from '../MSAbstractService/register-ms-error-ParameterType.ta.mjs';
 import { err_register_ms_error } from '../MSAccessProtocol/err-register-ms-error.va.mjs';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
+import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
 /**
  * @summary register_ms_error
  * @description

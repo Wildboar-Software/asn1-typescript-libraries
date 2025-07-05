@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca.mjs";
+import { type EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca.mjs";
 import {
     _decode_KeyConstructRecipientInfo,
     _encode_KeyConstructRecipientInfo,

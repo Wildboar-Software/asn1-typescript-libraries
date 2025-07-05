@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.mjs";
+import { type MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.mjs";
 /**
  * @summary SupportedMatchingRestrictions
  * @description

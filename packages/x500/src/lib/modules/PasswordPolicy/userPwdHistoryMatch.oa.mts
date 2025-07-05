@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { pwdHistoryMatch } from "../InformationFramework/pwdHistoryMatch.oa.mjs";
 import { id_mr_userPwdHistoryMatch } from "../PasswordPolicy/id-mr-userPwdHistoryMatch.va.mjs";
 import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";

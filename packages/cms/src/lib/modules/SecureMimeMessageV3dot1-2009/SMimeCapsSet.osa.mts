@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
+import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 import { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa.mjs";
 import { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa.mjs";
 import { SMimeCaps as PKIXAlgs_SMimeCaps } from "../PKIXAlgs-2009/SMimeCaps.osa.mjs";

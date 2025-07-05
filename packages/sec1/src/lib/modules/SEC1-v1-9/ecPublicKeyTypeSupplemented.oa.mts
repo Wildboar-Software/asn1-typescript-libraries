@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va.mjs";
 import { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ecPublicKeyTypeSupplemented
  * @description

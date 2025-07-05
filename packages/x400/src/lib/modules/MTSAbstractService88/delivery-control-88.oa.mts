@@ -31,7 +31,7 @@ import { control_violates_registration } from '../MTSAbstractService/control-vio
 import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary delivery_control_88
  * @description

@@ -12,7 +12,7 @@ import {
 import { applicationEntity } from '@wildboar/x500/SelectedObjectClasses';
 import { sMASE } from '../RepertoireDirectoryASN1Module/sMASE.oa.mjs';
 import { cMISE } from '../RepertoireDirectoryASN1Module/cMISE.oa.mjs';
-import { CONTENT_RULE } from '@wildboar/x500/InformationFramework';
+import { type CONTENT_RULE } from '@wildboar/x500/InformationFramework';
 /**
  * @summary managementServiceElementsCR
  * @description

@@ -5,7 +5,7 @@ import {
     _encode_EncryptedData,
 } from "../PKCS7/EncryptedData.ta.mjs";
 import { id_encrypted_data } from "../PKCS7/id-encrypted-data.va.mjs";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
+import { type PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
 
 /**
  * @summary encrypted_data

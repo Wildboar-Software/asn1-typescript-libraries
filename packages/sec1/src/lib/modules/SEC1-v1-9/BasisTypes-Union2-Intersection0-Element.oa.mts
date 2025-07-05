@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta.mjs";
 import { ppBasis } from "../SEC1-v1-9/ppBasis.va.mjs";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
+import { type CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
 /**
  * @summary BasisTypes_Union2_Intersection0_Element
  * @description

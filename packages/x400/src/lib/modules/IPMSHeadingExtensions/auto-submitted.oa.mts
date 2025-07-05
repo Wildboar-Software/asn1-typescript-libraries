@@ -16,7 +16,7 @@ import {
     _encode_AutoSubmitted,
 } from '../IPMSHeadingExtensions/AutoSubmitted.ta.mjs';
 import { id_hex_auto_submitted } from '../IPMSObjectIdentifiers/id-hex-auto-submitted.va.mjs';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
+import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 /**
  * @summary auto_submitted
  * @description

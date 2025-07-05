@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
+import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
 import { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-data.oa.mjs';
 import { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa.mjs';
 import { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa.mjs';

@@ -5,7 +5,7 @@ import {
     _encode_DeleteAvlReq,
 } from "../PkiPMIProtocolSpecifications/DeleteAvlReq.ta.mjs";
 import { id_deleteAvlReq } from "../PkiPMIProtocolSpecifications/id-deleteAvlReq.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary deleteAvlReq
  * @description

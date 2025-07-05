@@ -12,7 +12,7 @@ import {
 import { _enum_for_ParamOptions, absent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_aes256_wrap } from "../CMSAesRsaesOaep-2009/id-aes256-wrap.va.mjs";
 import { kwa_aes256_wrap_smimeCaps } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap-smimeCaps.oa.mjs";
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
+import { type KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 
 /**
  * @summary kwa_aes256_wrap

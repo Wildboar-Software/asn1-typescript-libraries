@@ -22,7 +22,7 @@ import {
     _decode_receive_edim_ArgumentType,
     _encode_receive_edim_ArgumentType,
 } from '../EDIMSAbstractService/receive-edim-ArgumentType.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary receive_edim
  * @description

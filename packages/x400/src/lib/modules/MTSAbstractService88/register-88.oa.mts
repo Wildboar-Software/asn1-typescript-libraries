@@ -27,7 +27,7 @@ import {
 import { register_rejected } from '../MTSAbstractService/register-rejected.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_register } from '../MTSAccessProtocol/op-register.va.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary register_88
  * @description

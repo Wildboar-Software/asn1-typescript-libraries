@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
+import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 import { StandardBodyParts } from '../IPMSInformationObjects/StandardBodyParts.osa.mjs';
 import { ApplicationSpecificBodyParts } from '../IPMSInformationObjects/ApplicationSpecificBodyParts.osa.mjs';
 /**

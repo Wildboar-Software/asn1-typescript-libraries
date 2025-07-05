@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
+import { type CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
 import { NamedCurve_Union0_Intersection0_Element } from "./NamedCurve-Union0-Intersection0-Element.oa.mjs";
 import { NamedCurve_Union1_Intersection0_Element } from "./NamedCurve-Union1-Intersection0-Element.oa.mjs";
 import { NamedCurve_Union2_Intersection0_Element } from "./NamedCurve-Union2-Intersection0-Element.oa.mjs";

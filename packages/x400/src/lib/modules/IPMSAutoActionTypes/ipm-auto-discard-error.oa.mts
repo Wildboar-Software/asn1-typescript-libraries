@@ -23,7 +23,7 @@ import {
     _encode_ipm_auto_discard_error_ParameterType,
 } from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta.mjs';
 import { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va.mjs';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
+import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 /**
  * @summary ipm_auto_discard_error
  * @description

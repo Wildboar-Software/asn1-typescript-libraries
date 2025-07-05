@@ -3,7 +3,7 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
-import { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
+import { type FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
 import { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
 
 /**

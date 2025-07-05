@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.mjs';
+import { type PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.mjs';
 
 /**
  * @summary PatientSchemes

@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { hmac_full_ecies } from "../SEC1-v1-9/hmac-full-ecies.va.mjs";
 import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary MACSet_Union0_Intersection0_Element
  * @description

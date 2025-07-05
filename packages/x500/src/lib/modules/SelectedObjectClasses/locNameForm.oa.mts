@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
+import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.mjs";
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";

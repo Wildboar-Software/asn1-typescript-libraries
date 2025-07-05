@@ -22,7 +22,7 @@ import {
     _decode_Probe,
     _encode_Probe,
 } from '../MTAAbstractService/Probe.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary probe_transfer
  * @description

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 import { edi_auto_correlate } from '../EDIMSAutoActionTypes/edi-auto-correlate.oa.mjs';
 import { edi_auto_forward } from '../EDIMSAutoActionTypes/edi-auto-forward.oa.mjs';
 import { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-acknowledgement.oa.mjs';

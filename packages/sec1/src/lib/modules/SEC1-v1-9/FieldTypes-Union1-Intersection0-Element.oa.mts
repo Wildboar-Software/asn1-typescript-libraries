@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta.mjs";
 import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.mjs";
-import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
+import { type FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
 /**
  * @summary FieldTypes_Union1_Intersection0_Element
  * @description

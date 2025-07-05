@@ -28,7 +28,7 @@ import {
     _encode_originate_edim_ResultType,
 } from '../EDIMSAbstractService/originate-edim-ResultType.ta.mjs';
 import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary originate_edim
  * @description

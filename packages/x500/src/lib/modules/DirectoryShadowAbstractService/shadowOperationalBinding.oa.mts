@@ -11,7 +11,7 @@ import {
 } from "../DirectoryShadowAbstractService/ShadowingAgreementInfo.ta.mjs";
 import { shadowOperationalBinding_roleA } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleA.oa.mjs";
 import { shadowOperationalBinding_roleB } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleB.oa.mjs";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
+import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 
 /**
  * @summary shadowOperationalBinding

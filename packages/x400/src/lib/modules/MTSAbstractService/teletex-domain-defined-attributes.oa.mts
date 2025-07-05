@@ -14,7 +14,7 @@ import {
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
 } from '../MTSAbstractService/TeletexDomainDefinedAttributes.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary teletex_domain_defined_attributes
  * @description

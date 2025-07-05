@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa.mjs";
 import { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa.mjs";
 import { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa.mjs";

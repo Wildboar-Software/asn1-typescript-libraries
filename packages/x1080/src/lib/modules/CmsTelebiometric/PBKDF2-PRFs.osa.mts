@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ALGORITHM } from '@wildboar/x500/AuthenticationFramework';
+import { type ALGORITHM } from '@wildboar/x500/AuthenticationFramework';
 
 /**
  * @summary PBKDF2_PRFs

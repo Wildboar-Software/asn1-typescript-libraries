@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ECCAlgorithmSet_Union0_Intersection0_Element } from "./ECCAlgorithmSet-Union0-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union1_Intersection0_Element } from "./ECCAlgorithmSet-Union1-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union2_Intersection0_Element } from "./ECCAlgorithmSet-Union2-Intersection0-Element.oa.mjs";

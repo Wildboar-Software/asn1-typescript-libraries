@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
+import { type ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.mjs";
 
 /**

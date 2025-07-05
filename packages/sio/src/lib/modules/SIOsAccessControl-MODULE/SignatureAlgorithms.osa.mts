@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.mjs";
 
 /**
  * @summary SignatureAlgorithms

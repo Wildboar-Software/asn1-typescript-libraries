@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_modifyDN } from "../CommonProtocolSpecification/id-opcode-modifyDN.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
     ModifyDNArgument,
     _decode_ModifyDNArgument,

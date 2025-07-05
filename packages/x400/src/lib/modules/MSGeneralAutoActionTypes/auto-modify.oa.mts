@@ -23,7 +23,7 @@ import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { modify_error } from '../MSAbstractService/modify-error.oa.mjs';
 import { message_group_error } from '../MSAbstractService/message-group-error.oa.mjs';
 import { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary auto_modify
  * @description

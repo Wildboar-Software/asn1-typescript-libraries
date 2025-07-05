@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { xPath } from "../CMSObjectIdentifiers/xPath.va.mjs";
-import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
+import { type SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
 import {
     XPathSet,
     _decode_XPathSet,

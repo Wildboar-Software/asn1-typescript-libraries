@@ -14,7 +14,7 @@ import {
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
 } from '../MTSAbstractService/PosteRestanteAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary poste_restante_address
  * @description

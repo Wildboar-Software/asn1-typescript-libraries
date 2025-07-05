@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
+import { type MODE } from "../CMSSigncryption/MODE.oca.mjs";
 import { signcryptedAttributes } from "../CMSSigncryption/signcryptedAttributes.oa.mjs";
 import { signcryptedComponents } from "../CMSSigncryption/signcryptedComponents.oa.mjs";
 import { signcryptedContent } from "../CMSSigncryption/signcryptedContent.oa.mjs";

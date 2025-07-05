@@ -14,7 +14,7 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va.mjs';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
+import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 /**
  * @summary ipm_auto_correlate
  * @description

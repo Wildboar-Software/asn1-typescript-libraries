@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
+import { type CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
 import { tpBasis } from "../ANSI-X9-62/tpBasis.va.mjs";
 import {
     Trinomial,

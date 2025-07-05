@@ -5,7 +5,7 @@ import {
     _decode_RejectCAsubscribe,
     _encode_RejectCAsubscribe,
 } from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary rejectCAsubscribe
  * @description

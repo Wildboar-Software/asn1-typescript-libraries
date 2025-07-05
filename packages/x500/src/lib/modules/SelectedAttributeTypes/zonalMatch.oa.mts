@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
 import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
 /**

@@ -5,7 +5,7 @@ import {
     _decode_MultipleSymmetricKeyAlgo,
     _encode_MultipleSymmetricKeyAlgo,
 } from "../CryptoTools/MultipleSymmetricKeyAlgo.ta.mjs";
-import { ALGORITHM } from "@wildboar/pki-stub";
+import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary multipleSymmetricKeyAlgo
  * @description

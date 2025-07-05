@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { DMI_SERVICEUSER } from "../Attribute-ASN1Module/DMI-SERVICEUSER.oca.mjs";
+import { type DMI_SERVICEUSER } from "../Attribute-ASN1Module/DMI-SERVICEUSER.oca.mjs";
 /**
  * @summary ServiceUserSet
  * @description

@@ -12,7 +12,7 @@ import {
 import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.mjs';
 import { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa.mjs';
 import { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa.mjs';
-import { CONTENT_RULE } from '@wildboar/x500/InformationFramework';
+import { type CONTENT_RULE } from '@wildboar/x500/InformationFramework';
 /**
  * @summary registeredManagementRelationshipInformationCR
  * @description

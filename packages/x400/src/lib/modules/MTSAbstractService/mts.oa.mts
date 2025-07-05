@@ -12,7 +12,7 @@ import {
 import { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa.mjs';
 import { mts_access_contract } from '../MTSAbstractService/mts-access-contract.oa.mjs';
 import { id_ot_mts } from '../MTSObjectIdentifiers/id-ot-mts.va.mjs';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
+import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
 /**
  * @summary mts
  * @description

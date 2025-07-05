@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va.mjs";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**
  * @summary dsa_with_sha256
  * @description

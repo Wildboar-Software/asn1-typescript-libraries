@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca.mjs";
+import { type OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca.mjs";
 
 /**
  * @summary SupportedOtherRevokInfo

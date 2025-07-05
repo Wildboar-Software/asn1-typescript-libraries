@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { id_opcode_modifyEntry } from "../CommonProtocolSpecification/id-opcode-modifyEntry.va.mjs";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
+import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 import {
     ModifyEntryArgument,

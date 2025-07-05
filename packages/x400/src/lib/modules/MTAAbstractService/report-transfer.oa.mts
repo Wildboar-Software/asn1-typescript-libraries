@@ -22,7 +22,7 @@ import {
     _decode_Report,
     _encode_Report,
 } from '../MTAAbstractService/Report.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary report_transfer
  * @description

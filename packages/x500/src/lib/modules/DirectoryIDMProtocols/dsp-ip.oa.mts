@@ -14,7 +14,7 @@ import { chainedRead } from "../DistributedOperations/chainedRead.oa.mjs";
 import { chainedRemoveEntry } from "../DistributedOperations/chainedRemoveEntry.oa.mjs";
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
-import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
+import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
 /**
  * @summary dsp_ip
  * @description

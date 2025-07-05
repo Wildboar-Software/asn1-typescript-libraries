@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.mjs';
+import { type INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.mjs';
 /**
  * @summary InfoReplyTable
  * @description

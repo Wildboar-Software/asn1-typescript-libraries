@@ -22,7 +22,7 @@ import {
     _decode_receive_rn_ArgumentType,
     _encode_receive_rn_ArgumentType,
 } from '../IPMSAbstractService/receive-rn-ArgumentType.ta.mjs';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
+import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
 /**
  * @summary receive_rn
  * @description

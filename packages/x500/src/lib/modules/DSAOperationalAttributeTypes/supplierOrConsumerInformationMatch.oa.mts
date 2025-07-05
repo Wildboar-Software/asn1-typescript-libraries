@@ -5,7 +5,7 @@ import {
     _decode_supplierOrConsumerInformationMatch_AssertionType,
     _encode_supplierOrConsumerInformationMatch_AssertionType,
 } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary supplierOrConsumerInformationMatch
  * @description

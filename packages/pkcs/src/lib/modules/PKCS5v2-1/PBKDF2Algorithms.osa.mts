@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { PBKDF2Algorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/PBKDF2Algorithms-Union0-Intersection0-Element.oa.mjs";
 
 

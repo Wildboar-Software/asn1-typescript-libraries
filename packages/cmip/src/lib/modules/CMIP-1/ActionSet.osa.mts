@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
+import { type CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
 
 /**
  * @summary ActionSet

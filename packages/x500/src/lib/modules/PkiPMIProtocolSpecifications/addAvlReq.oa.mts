@@ -5,7 +5,7 @@ import {
     _encode_AddAvlReq,
 } from "../PkiPMIProtocolSpecifications/AddAvlReq.ta.mjs";
 import { id_addAvlReq } from "../PkiPMIProtocolSpecifications/id-addAvlReq.va.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary addAvlReq
  * @description

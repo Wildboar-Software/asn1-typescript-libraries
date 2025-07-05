@@ -5,7 +5,7 @@ import {
     _encode_CertificateListExactAssertion,
 } from "../CertificateExtensions/CertificateListExactAssertion.ta.mjs";
 import { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va.mjs";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 /**
  * @summary certListExactAssertion
  * @description

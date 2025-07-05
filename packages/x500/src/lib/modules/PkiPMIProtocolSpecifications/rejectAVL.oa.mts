@@ -5,7 +5,7 @@ import {
     _decode_RejectAVL,
     _encode_RejectAVL,
 } from "../PkiPMIProtocolSpecifications/RejectAVL.ta.mjs";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
+import { type WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
 /**
  * @summary rejectAVL
  * @description

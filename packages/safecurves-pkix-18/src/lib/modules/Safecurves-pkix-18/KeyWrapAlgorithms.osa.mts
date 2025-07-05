@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
+import { type KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 import { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa.mjs";
 import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.mjs";
 

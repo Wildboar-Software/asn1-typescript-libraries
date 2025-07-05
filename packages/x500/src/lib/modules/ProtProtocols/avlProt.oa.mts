@@ -5,7 +5,7 @@ import {
     _encode_AvlProt,
 } from "../AVL-management/AvlProt.ta.mjs";
 import { id_avlprot } from "../ProtProtocols/id-avlprot.va.mjs";
-import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
+import { type WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
 /**
  * @summary avlProt
  * @description

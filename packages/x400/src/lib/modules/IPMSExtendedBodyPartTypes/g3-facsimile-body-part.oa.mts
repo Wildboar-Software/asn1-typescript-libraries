@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa.mjs';
 import { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa.mjs';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
+import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 /**
  * @summary g3_facsimile_body_part
  * @description

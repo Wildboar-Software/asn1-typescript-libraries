@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.mjs';
+import { type CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.mjs';
 
 /**
  * @summary AttributeSet

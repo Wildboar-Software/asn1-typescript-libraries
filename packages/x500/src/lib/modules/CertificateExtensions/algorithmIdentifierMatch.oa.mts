@@ -6,7 +6,7 @@ import {
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.mjs";
 import { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.mjs";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary algorithmIdentifierMatch
  * @description

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
 
 /**
  * @summary sha224WithRSAEncryptionAlgorithm

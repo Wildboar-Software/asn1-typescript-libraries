@@ -14,7 +14,7 @@ import {
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
 } from '../MTSAbstractService/ExtendedNetworkAddress.ta.mjs';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
+import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
  * @summary extended_network_address
  * @description

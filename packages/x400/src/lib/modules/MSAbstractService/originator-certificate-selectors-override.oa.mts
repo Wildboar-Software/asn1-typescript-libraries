@@ -15,7 +15,7 @@ import {
     _encode_CertificateSelectors,
 } from '../MTSAbstractService/CertificateSelectors.ta.mjs';
 import { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
+import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 /**
  * @summary originator_certificate_selectors_override
  * @description

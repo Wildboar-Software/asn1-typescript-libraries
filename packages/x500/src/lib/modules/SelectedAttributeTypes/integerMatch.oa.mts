@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_integerMatch } from "../SelectedAttributeTypes/id-mr-integerMatch.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 /**
