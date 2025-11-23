@@ -128,6 +128,7 @@ export { default as compareRelativeDistinguishedName } from "./lib/comparators/c
 export { compareRoleSpecCertIdentifier } from "./lib/comparators/compareRoleSpecCertIdentifier.mjs";
 export { codeToString } from "./lib/stringifiers/codeToString.mjs";
 export { directoryStringToString } from "./lib/stringifiers/directoryStringToString.mjs";
+export { default as generalNameToString } from "./lib/stringifiers/generalNameToString.mjs";
 export { teletexToString } from "./lib/stringifiers/teletexToString.mjs";
 export { compareSocketToNSAP } from "./lib/distributed/compareSocketToNSAP.mjs";
 export { IPV4_AFI_IDI } from "./lib/distributed/IPV4_AFI_IDI.mjs";
