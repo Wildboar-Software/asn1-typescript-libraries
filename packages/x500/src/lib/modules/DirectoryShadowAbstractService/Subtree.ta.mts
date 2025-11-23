@@ -15,7 +15,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-import { TotalRefresh, _root_component_type_list_1_spec_for_TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
+import { TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
 
 /**
  * @summary Subtree
@@ -97,7 +97,18 @@ export const _root_component_type_list_1_spec_for_Subtree: $.ComponentSpec[] = [
         false,
         $.hasTag(_TagClass.universal, 17)
     ),
-    ..._root_component_type_list_1_spec_for_TotalRefresh,
+    // You cannot spread, because Subtree and TotalRefresh are mutually recursive,
+    // so _root_component_type_list_1_spec_for_TotalRefresh will be undefined.
+    new $.ComponentSpec(
+        "sDSE",
+        true,
+        $.hasTag(_TagClass.universal, 16)
+    ),
+    new $.ComponentSpec(
+        "subtree",
+        true,
+        $.hasTag(_TagClass.universal, 17)
+    ),
 ];
 
 /**
