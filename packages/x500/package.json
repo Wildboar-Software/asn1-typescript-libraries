@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/x500",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "X.500 directory protocol data structures and business logic in TypeScript",
     "keywords": [
         "x500",
@@ -45,6 +45,7 @@
         "@wildboar/ldap": "npm:@jsr/wildboar__ldap@2.x.x"
     },
     "exports": {
+        ".": "./src/index.mts",
         "./matching/equality": "./src/lib/matching/equality/index.mjs",
         "./matching/ordering": "./src/lib/matching/ordering/index.mjs",
         "./matching/substring": "./src/lib/matching/substring/index.mjs",

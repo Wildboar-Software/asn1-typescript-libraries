@@ -34,7 +34,7 @@ export const EXT_BIT_REPLACE_VALUES: number = 35;
 /**
  * X.500 directory operations to which critical extensions can apply
  */
-type Operations = {
+export type Operations = {
     read: boolean;
     compare: boolean;
     list: boolean;
@@ -49,7 +49,7 @@ type Operations = {
 /**
  * Information about a Directory Access Protocol (DAP) Critical Extension
  */
-type ExtensionInfo = {
+export type ExtensionInfo = {
 
     /**
      * The 1-based index of the bit in the `criticalExtensions` `BIT STRING`

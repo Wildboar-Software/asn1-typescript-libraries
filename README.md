@@ -19,6 +19,11 @@ leap. I will not maintain the CommonJS versions any more.
 Due to both Jest not supporting ESM (yet), the tests are broken and will stay
 broken for as long as it takes. I hate the entire Javashit ecosystem.
 
+**UPDATE**: I will eventually convert these tests to use Vitest. I have had a
+great experience doing this elsewhere: Vitest (via Nx) was basically a drop-in
+replacement that seemed to handle Typescript out of the box, and it seemed
+faster than Jest too.
+
 I wanted to use `esbuild` or `swc` for faster compilation, but both of these
 will not be much faster due to type-checking still being done by TypeScript.
 The TypeScript compiler is being ported to Go anyway, and once that's done, it
@@ -49,7 +54,7 @@ npx tslint --config tslint-imports.json --fix --project ./libs/<project>/tsconfi
 
 ## Publish All Modules
 
-`cd` into `dist/libs`, then run
+`cd` into `dist/packages`, then run
 
 ```bash
 for dir in $(ls -1);

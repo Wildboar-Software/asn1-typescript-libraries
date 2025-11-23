@@ -12,10 +12,10 @@
  * - Functions for implementing distributed operations
  * - Functions for evaluating filters and entry information selection
  * - Functions for PKI / PMI verification
- * 
+ *
  * Below is a very stripped down example of how to use the module to perform a
  * `compare` operation.
- * 
+ *
  * @example
  * ```typescript
  * const reqData = new CompareArgumentData(
@@ -31,13 +31,13 @@
  *     unsigned: reqData,
  * };
  * const compareArgumentEl = _encode_CompareArgument(arg);
- * 
+ *
  * const idmPdu: IDM_PDU = {
  *     request: new Request(1, id_opcode_compare, compareArgumentEl),
  * };
  * const idmPduEl = _encode_IDM_PDU(idmPdu);
  * const idmPduBytes = idmPduEl.toBytes();
- * 
+ *
  * // Frame idmPduBytes and send it to the server
  * // Read response from IDM frame
  * const idmResponseEl = new BERElement();
@@ -52,9 +52,9 @@
  *         console.log("we found the 'hi mom' entry");
  *     }
  * }
- * 
+ *
  * ```
- * 
+ *
  * @module
  */
 export * from "./lib/errors.mjs";
@@ -78,7 +78,27 @@ export type { StringDecoder } from "./lib/types/StringDecoder.mjs";
 export type { StringEncoder } from "./lib/types/StringEncoder.mjs";
 export { SubstringSelection } from "./lib/types/SubstringSelection.mjs";
 export type { SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
-export { bacACDF } from "./lib/bac/bacACDF.mjs";
+export {
+    bacACDF,
+    PERMISSION_CATEGORY_ADD,
+    PERMISSION_CATEGORY_DISCLOSE_ON_ERROR,
+    PERMISSION_CATEGORY_READ,
+    PERMISSION_CATEGORY_REMOVE,
+    PERMISSION_CATEGORY_BROWSE,
+    PERMISSION_CATEGORY_EXPORT,
+    PERMISSION_CATEGORY_IMPORT,
+    PERMISSION_CATEGORY_MODIFY,
+    PERMISSION_CATEGORY_RENAME,
+    PERMISSION_CATEGORY_RETURN_DN,
+    PERMISSION_CATEGORY_COMPARE,
+    PERMISSION_CATEGORY_FILTER_MATCH,
+    PERMISSION_CATEGORY_INVOKE,
+} from "./lib/bac/bacACDF.mjs";
+export type {
+    ACDFReturn,
+    ACDFSettings,
+    BACACDFReturn,
+} from "./lib/bac/bacACDF.mjs";
 export { deniesAccess } from "./lib/bac/deniesAccess.mjs";
 export { discardNonRelevantACDFTuples } from "./lib/bac/discardNonRelevantACDFTuples.mjs";
 export { getACDFTuplesFromACIItem } from "./lib/bac/getACDFTuplesFromACIItem.mjs";
@@ -125,6 +145,7 @@ export { dnWithinGeneralSubtree } from "./lib/utils/dnWithinGeneralSubtree.mjs";
 export { dnWithinSubtreeSpecification } from "./lib/utils/dnWithinSubtreeSpecification.mjs";
 export { dnWithinSubtree } from "./lib/utils/dnWithinSubtree.mjs";
 export { evaluateContextAssertion } from "./lib/utils/evaluateContextAssertion.mjs";
+export type { EvaluateFilterReturn, EvaluateFilterSettings } from "./lib/utils/evaluateFilter.mjs";
 export { evaluateFilter } from "./lib/utils/evaluateFilter.mjs";
 export { getAttributeSize } from "./lib/utils/getAttributeSize.mjs";
 export { getAttributeTypesFromFilterItem } from "./lib/utils/getAttributeTypesFromFilterItem.mjs";
@@ -147,3 +168,51 @@ export * as contexts from "./lib/collections/contexts.mjs";
 export * as matchingRules from "./lib/collections/matchingRules.mjs";
 export * as ldapSyntaxes from "./lib/collections/ldapSyntaxes.mjs";
 export * as nameForms from "./lib/collections/nameForms.mjs";
+export type { X500DirectoryErrorCoded } from './lib/dap/errors.mjs';
+export {
+    AbandonError,
+    AbandonFailedError,
+    AttributeError,
+    NameError,
+    ReferralError,
+    SecurityError,
+    ServiceError,
+    UpdateError,
+    UnknownOperationError,
+} from "./lib/dap/errors.mjs";
+export type { ExtensionInfo, Operations } from './lib/dap/extensions.mjs';
+export {
+    EXT_BIT_SUBENTRIES,
+    EXT_BIT_COPY_SHALL_DO,
+    EXT_BIT_ATTRIBUTE_SIZE_LIMIT,
+    EXT_BIT_EXTRA_ATTRIBUTES,
+    EXT_BIT_MODIFY_RIGHTS_REQUEST,
+    EXT_BIT_PAGED_RESULTS_REQUEST,
+    EXT_BIT_MATCHED_VALUES_ONLY,
+    EXT_BIT_EXTENDED_FILTER,
+    EXT_BIT_TARGET_SYSTEM,
+    EXT_BIT_USE_ALIAS_ON_UPDATE,
+    EXT_BIT_NEW_SUPERIOR,
+    EXT_BIT_MANAGE_DSA_IT,
+    EXT_BIT_USE_OF_CONTEXTS,
+    EXT_BIT_PARTIAL_NAME_RESOLUTION,
+    EXT_BIT_OVERSPEC_FILTER,
+    EXT_BIT_SELECTION_ON_MODIFY,
+    EXT_BIT_SECURITY_OPERATION_CODE,
+    EXT_BIT_SECURITY_ATTRIBUTE_CERTIFICATION_PATH,
+    EXT_BIT_SECURITY_ERROR_PROTECTION,
+    EXT_BIT_SERVICE_ADMINISTRATION,
+    EXT_BIT_ENTRY_COUNT,
+    EXT_BIT_HIERARCHY_SELECTIONS,
+    EXT_BIT_RELAXATION,
+    EXT_BIT_FAMILY_GROUPING,
+    EXT_BIT_FAMILY_RETURN,
+    EXT_BIT_DN_ATTRIBUTES,
+    EXT_BIT_FRIEND_ATTRIBUTES,
+    EXT_BIT_ABANDON_OF_PAGED_RESULTS,
+    EXT_BIT_PAGED_RESULTS_ON_THE_DSP,
+    EXT_BIT_REPLACE_VALUES,
+    extensions,
+} from './lib/dap/extensions.mjs';
+export { sort as sortEntries } from './lib/dap/sort.mjs';
+export * from './lib/errors.mjs';
