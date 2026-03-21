@@ -25,6 +25,9 @@ function cheaplyNormalizeName (name: Name): string {
  * @param traceItems The trace items detailing the history of distributed
  *  operations as they travel between DSAs.
  * @returns {boolean} `true` if a loop was detected; `false` if one was not.
+ *
+ * @deprecated This is not a good implementation and will not detect DSA or
+ *  target object names that differ by a single byte. Write your own.
  */
 export
 function loopDetected (
