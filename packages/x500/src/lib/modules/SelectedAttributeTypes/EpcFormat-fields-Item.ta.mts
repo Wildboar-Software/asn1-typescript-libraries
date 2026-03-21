@@ -48,7 +48,7 @@ export class EpcFormat_fields_Item {
          * @public
          * @readonly
          */
-        readonly result: OPTIONAL<EpcFormat_fields_Item_result>
+        readonly result?: OPTIONAL<EpcFormat_fields_Item_result>
     ) {}
 
     /**

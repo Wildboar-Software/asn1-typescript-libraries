@@ -43,37 +43,37 @@ export class IssuingDistPointSyntax {
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>,
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `onlyContainsUserPublicKeyCerts`.
          * @public
          * @readonly
          */
-        readonly onlyContainsUserPublicKeyCerts: OPTIONAL<BOOLEAN>,
+        readonly onlyContainsUserPublicKeyCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlyContainsCACerts`.
          * @public
          * @readonly
          */
-        readonly onlyContainsCACerts: OPTIONAL<BOOLEAN>,
+        readonly onlyContainsCACerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlySomeReasons`.
          * @public
          * @readonly
          */
-        readonly onlySomeReasons: OPTIONAL<ReasonFlags>,
+        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `indirectCRL`.
          * @public
          * @readonly
          */
-        readonly indirectCRL: OPTIONAL<BOOLEAN>,
+        readonly indirectCRL?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlyContainsAttributeCerts`.
          * @public
          * @readonly
          */
-        readonly onlyContainsAttributeCerts: OPTIONAL<BOOLEAN>,
+        readonly onlyContainsAttributeCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

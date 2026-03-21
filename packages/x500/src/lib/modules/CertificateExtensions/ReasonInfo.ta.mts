@@ -43,7 +43,7 @@ export class ReasonInfo {
          * @public
          * @readonly
          */
-        readonly holdInstructionCode: OPTIONAL<HoldInstruction>,
+        readonly holdInstructionCode?: OPTIONAL<HoldInstruction>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -50,31 +50,31 @@ export class OsiBindError_normal_mode_parameters {
          * @public
          * @readonly
          */
-        readonly protocol_version: OPTIONAL<OsiBindError_normal_mode_parameters_protocol_version>,
+        readonly protocol_version?: OPTIONAL<OsiBindError_normal_mode_parameters_protocol_version>,
         /**
          * @summary `responding_presentation_selector`.
          * @public
          * @readonly
          */
-        readonly responding_presentation_selector: OPTIONAL<Presentation_selector>,
+        readonly responding_presentation_selector?: OPTIONAL<Presentation_selector>,
         /**
          * @summary `presentation_context_definition_result_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_definition_result_list: OPTIONAL<Result_list>,
+        readonly presentation_context_definition_result_list?: OPTIONAL<Result_list>,
         /**
          * @summary `provider_reason`.
          * @public
          * @readonly
          */
-        readonly provider_reason: OPTIONAL<Provider_reason>,
+        readonly provider_reason?: OPTIONAL<Provider_reason>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<OsiBindError_normal_mode_parameters_user_data>
+        readonly user_data?: OPTIONAL<OsiBindError_normal_mode_parameters_user_data>
     ) {}
 
     /**

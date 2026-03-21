@@ -44,25 +44,25 @@ export class SubordinateToSuperior {
          * @public
          * @readonly
          */
-        readonly accessPoints: OPTIONAL<MasterAndShadowAccessPoints>,
+        readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary `alias`.
          * @public
          * @readonly
          */
-        readonly alias: OPTIONAL<BOOLEAN>,
+        readonly alias?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `entryInfo`.
          * @public
          * @readonly
          */
-        readonly entryInfo: OPTIONAL<Attribute[]>,
+        readonly entryInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `subentries`.
          * @public
          * @readonly
          */
-        readonly subentries: OPTIONAL<SubentryInfo[]>,
+        readonly subentries?: OPTIONAL<SubentryInfo[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

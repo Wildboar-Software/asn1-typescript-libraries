@@ -72,7 +72,7 @@ export class RequestShadowUpdateArgumentData {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

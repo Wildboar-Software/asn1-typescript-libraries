@@ -45,19 +45,19 @@ export class DirectoryInformationServiceElement {
          * @public
          * @readonly
          */
-        readonly operationType: OPTIONAL<DirectoryInformationServiceElement_operationType>,
+        readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
         /**
          * @summary `attributeType`.
          * @public
          * @readonly
          */
-        readonly attributeType: OPTIONAL<AttributeType>,
+        readonly attributeType?: OPTIONAL<AttributeType>,
         /**
          * @summary `attributeValue`.
          * @public
          * @readonly
          */
-        readonly attributeValue: OPTIONAL<AttributeValue>
+        readonly attributeValue?: OPTIONAL<AttributeValue>
     ) {}
 
     /**

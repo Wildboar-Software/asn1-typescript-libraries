@@ -33,13 +33,13 @@ export class CertificatePairExactAssertion {
          * @public
          * @readonly
          */
-        readonly issuedToThisCAAssertion: OPTIONAL<CertificateExactAssertion>,
+        readonly issuedToThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
         /**
          * @summary `issuedByThisCAAssertion`.
          * @public
          * @readonly
          */
-        readonly issuedByThisCAAssertion: OPTIONAL<CertificateExactAssertion>,
+        readonly issuedByThisCAAssertion?: OPTIONAL<CertificateExactAssertion>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -70,25 +70,25 @@ export class UnitOfReplication {
          * @public
          * @readonly
          */
-        readonly knowledge: OPTIONAL<Knowledge>,
+        readonly knowledge?: OPTIONAL<Knowledge>,
         /**
          * @summary `subordinates`.
          * @public
          * @readonly
          */
-        readonly subordinates: OPTIONAL<BOOLEAN>,
+        readonly subordinates?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `contextSelection`.
          * @public
          * @readonly
          */
-        readonly contextSelection: OPTIONAL<ContextSelection>,
+        readonly contextSelection?: OPTIONAL<ContextSelection>,
         /**
          * @summary `supplyContexts`.
          * @public
          * @readonly
          */
-        readonly supplyContexts: OPTIONAL<UnitOfReplication_supplyContexts>
+        readonly supplyContexts?: OPTIONAL<UnitOfReplication_supplyContexts>
     ) {}
 
     /**

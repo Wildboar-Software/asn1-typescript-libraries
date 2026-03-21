@@ -31,13 +31,13 @@ export class ClassAttributeSelection {
          * @public
          * @readonly
          */
-        readonly class_: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `classAttributes`.
          * @public
          * @readonly
          */
-        readonly classAttributes: OPTIONAL<ClassAttributes>
+        readonly classAttributes?: OPTIONAL<ClassAttributes>
     ) {}
 
     /**

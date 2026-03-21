@@ -39,7 +39,7 @@ export class UniversalOrBMPString {
          * @public
          * @readonly
          */
-        readonly iso_639_language_code: OPTIONAL<PrintableString>
+        readonly iso_639_language_code?: OPTIONAL<PrintableString>
     ) {}
 
     /**

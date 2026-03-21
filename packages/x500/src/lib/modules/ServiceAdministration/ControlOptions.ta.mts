@@ -44,19 +44,19 @@ export class ControlOptions {
          * @public
          * @readonly
          */
-        readonly serviceControls: OPTIONAL<ServiceControlOptions>,
+        readonly serviceControls?: OPTIONAL<ServiceControlOptions>,
         /**
          * @summary `searchOptions`.
          * @public
          * @readonly
          */
-        readonly searchOptions: OPTIONAL<SearchControlOptions>,
+        readonly searchOptions?: OPTIONAL<SearchControlOptions>,
         /**
          * @summary `hierarchyOptions`.
          * @public
          * @readonly
          */
-        readonly hierarchyOptions: OPTIONAL<HierarchySelections>,
+        readonly hierarchyOptions?: OPTIONAL<HierarchySelections>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -64,37 +64,37 @@ export class RequestAttribute {
          * @public
          * @readonly
          */
-        readonly includeSubtypes: OPTIONAL<BOOLEAN>,
+        readonly includeSubtypes?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `selectedValues`.
          * @public
          * @readonly
          */
-        readonly selectedValues: OPTIONAL<_Element[]>,
+        readonly selectedValues?: OPTIONAL<_Element[]>,
         /**
          * @summary `defaultValues`.
          * @public
          * @readonly
          */
-        readonly defaultValues: OPTIONAL<RequestAttribute_defaultValues_Item[]>,
+        readonly defaultValues?: OPTIONAL<RequestAttribute_defaultValues_Item[]>,
         /**
          * @summary `contexts`.
          * @public
          * @readonly
          */
-        readonly contexts: OPTIONAL<ContextProfile[]>,
+        readonly contexts?: OPTIONAL<ContextProfile[]>,
         /**
          * @summary `contextCombination`.
          * @public
          * @readonly
          */
-        readonly contextCombination: OPTIONAL<ContextCombination>,
+        readonly contextCombination?: OPTIONAL<ContextCombination>,
         /**
          * @summary `matchingUse`.
          * @public
          * @readonly
          */
-        readonly matchingUse: OPTIONAL<MatchingUse[]>,
+        readonly matchingUse?: OPTIONAL<MatchingUse[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

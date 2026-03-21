@@ -48,13 +48,13 @@ export class SupportedAlgorithm {
          * @public
          * @readonly
          */
-        readonly intendedUsage: OPTIONAL<KeyUsage>,
+        readonly intendedUsage?: OPTIONAL<KeyUsage>,
         /**
          * @summary `intendedCertificatePolicies`.
          * @public
          * @readonly
          */
-        readonly intendedCertificatePolicies: OPTIONAL<CertificatePoliciesSyntax>,
+        readonly intendedCertificatePolicies?: OPTIONAL<CertificatePoliciesSyntax>,
         /**
          * @summary Extensions that are not recognized.
          * @public

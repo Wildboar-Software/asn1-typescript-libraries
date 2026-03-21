@@ -29,13 +29,13 @@ export class PDSParameter {
          * @public
          * @readonly
          */
-        readonly printable_string: OPTIONAL<PrintableString>,
+        readonly printable_string?: OPTIONAL<PrintableString>,
         /**
          * @summary `teletex_string`.
          * @public
          * @readonly
          */
-        readonly teletex_string: OPTIONAL<TeletexString>
+        readonly teletex_string?: OPTIONAL<TeletexString>
     ) {}
 
     /**

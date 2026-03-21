@@ -49,25 +49,25 @@ export class SecurityLabel {
          * @public
          * @readonly
          */
-        readonly security_policy_identifier: OPTIONAL<SecurityPolicyIdentifier>,
+        readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
         /**
          * @summary `security_classification`.
          * @public
          * @readonly
          */
-        readonly security_classification: OPTIONAL<SecurityClassification>,
+        readonly security_classification?: OPTIONAL<SecurityClassification>,
         /**
          * @summary `privacy_mark`.
          * @public
          * @readonly
          */
-        readonly privacy_mark: OPTIONAL<PrivacyMark>,
+        readonly privacy_mark?: OPTIONAL<PrivacyMark>,
         /**
          * @summary `security_categories`.
          * @public
          * @readonly
          */
-        readonly security_categories: OPTIONAL<SecurityCategories>,
+        readonly security_categories?: OPTIONAL<SecurityCategories>,
         /**
          * @summary Extensions that are not recognized.
          * @public

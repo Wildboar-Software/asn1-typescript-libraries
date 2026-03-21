@@ -32,13 +32,13 @@ export class DayTimeBand {
          * @public
          * @readonly
          */
-        readonly startDayTime: OPTIONAL<DayTime>,
+        readonly startDayTime?: OPTIONAL<DayTime>,
         /**
          * @summary `endDayTime`.
          * @public
          * @readonly
          */
-        readonly endDayTime: OPTIONAL<DayTime>,
+        readonly endDayTime?: OPTIONAL<DayTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

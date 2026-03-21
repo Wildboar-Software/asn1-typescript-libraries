@@ -69,7 +69,7 @@ export class SDSEContent {
          * @public
          * @readonly
          */
-        readonly attValIncomplete: OPTIONAL<AttributeType[]>,
+        readonly attValIncomplete?: OPTIONAL<AttributeType[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

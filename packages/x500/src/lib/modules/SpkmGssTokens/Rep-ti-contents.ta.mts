@@ -118,19 +118,19 @@ export class Rep_ti_contents {
          * @public
          * @readonly
          */
-        readonly validity: OPTIONAL<Validity>,
+        readonly validity?: OPTIONAL<Validity>,
         /**
          * @summary `key_estb_id`.
          * @public
          * @readonly
          */
-        readonly key_estb_id: OPTIONAL<AlgorithmIdentifier>,
+        readonly key_estb_id?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `key_estb_str`.
          * @public
          * @readonly
          */
-        readonly key_estb_str: OPTIONAL<BIT_STRING>
+        readonly key_estb_str?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

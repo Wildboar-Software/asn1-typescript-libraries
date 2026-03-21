@@ -48,19 +48,19 @@ export class EpcFormat {
          * @public
          * @readonly
          */
-        readonly digitShift: OPTIONAL<INTEGER>,
+        readonly digitShift?: OPTIONAL<INTEGER>,
         /**
          * @summary `checkCalc`.
          * @public
          * @readonly
          */
-        readonly checkCalc: OPTIONAL<INTEGER>,
+        readonly checkCalc?: OPTIONAL<INTEGER>,
         /**
          * @summary `urnPrefix`.
          * @public
          * @readonly
          */
-        readonly urnPrefix: OPTIONAL<UTF8String>
+        readonly urnPrefix?: OPTIONAL<UTF8String>
     ) {}
 
     /**

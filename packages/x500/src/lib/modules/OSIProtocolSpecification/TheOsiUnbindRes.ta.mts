@@ -29,7 +29,7 @@ export class TheOsiUnbindRes {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<Release_response_reason>
+        readonly reason?: OPTIONAL<Release_response_reason>
     ) {}
 
     /**

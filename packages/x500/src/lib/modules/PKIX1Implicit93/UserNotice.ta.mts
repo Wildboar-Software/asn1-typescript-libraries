@@ -38,13 +38,13 @@ export class UserNotice {
          * @public
          * @readonly
          */
-        readonly noticeRef: OPTIONAL<NoticeReference>,
+        readonly noticeRef?: OPTIONAL<NoticeReference>,
         /**
          * @summary `explicitText`.
          * @public
          * @readonly
          */
-        readonly explicitText: OPTIONAL<DisplayText>
+        readonly explicitText?: OPTIONAL<DisplayText>
     ) {}
 
     /**

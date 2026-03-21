@@ -49,13 +49,13 @@ export class TimeSpecification {
          * @public
          * @readonly
          */
-        readonly notThisTime: OPTIONAL<BOOLEAN>,
+        readonly notThisTime?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeZone`.
          * @public
          * @readonly
          */
-        readonly timeZone: OPTIONAL<TimeZone>,
+        readonly timeZone?: OPTIONAL<TimeZone>,
         /**
          * @summary Extensions that are not recognized.
          * @public

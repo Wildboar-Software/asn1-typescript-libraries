@@ -73,7 +73,7 @@ export class AadClient {
          * @public
          * @readonly
          */
-        readonly keyEst: OPTIONAL<AlgoInvoke>
+        readonly keyEst?: OPTIONAL<AlgoInvoke>
     ) {}
 
     /**

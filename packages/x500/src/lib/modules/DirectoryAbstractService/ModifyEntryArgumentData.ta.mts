@@ -109,7 +109,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<EntryInformationSelection>,
+        readonly selection?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary Extensions that are not recognized.
          * @public

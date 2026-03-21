@@ -36,13 +36,13 @@ export class HolderIssuerAssertion {
          * @public
          * @readonly
          */
-        readonly holder: OPTIONAL<Holder>,
+        readonly holder?: OPTIONAL<Holder>,
         /**
          * @summary `issuer`.
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<AttCertIssuer>,
+        readonly issuer?: OPTIONAL<AttCertIssuer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

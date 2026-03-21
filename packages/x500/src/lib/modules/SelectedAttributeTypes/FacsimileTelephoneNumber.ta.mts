@@ -42,7 +42,7 @@ export class FacsimileTelephoneNumber {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<G3FacsimileNonBasicParameters>,
+        readonly parameters?: OPTIONAL<G3FacsimileNonBasicParameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -73,19 +73,19 @@ export class ContentChange {
          * @public
          * @readonly
          */
-        readonly subComplete: OPTIONAL<BOOLEAN>,
+        readonly subComplete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attComplete`.
          * @public
          * @readonly
          */
-        readonly attComplete: OPTIONAL<BOOLEAN>,
+        readonly attComplete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attValIncomplete`.
          * @public
          * @readonly
          */
-        readonly attValIncomplete: OPTIONAL<AttributeType[]>,
+        readonly attValIncomplete?: OPTIONAL<AttributeType[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

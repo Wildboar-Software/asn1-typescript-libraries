@@ -42,7 +42,7 @@ export class AttributeCertificationPath {
          * @public
          * @readonly
          */
-        readonly acPath: OPTIONAL<ACPathData[]>,
+        readonly acPath?: OPTIONAL<ACPathData[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

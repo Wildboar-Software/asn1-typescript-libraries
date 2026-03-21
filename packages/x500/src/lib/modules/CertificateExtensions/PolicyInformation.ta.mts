@@ -42,7 +42,7 @@ export class PolicyInformation {
          * @public
          * @readonly
          */
-        readonly policyQualifiers: OPTIONAL<PolicyQualifierInfo[]>,
+        readonly policyQualifiers?: OPTIONAL<PolicyQualifierInfo[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

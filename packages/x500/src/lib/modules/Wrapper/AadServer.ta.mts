@@ -70,13 +70,13 @@ export class AadServer {
          * @public
          * @readonly
          */
-        readonly reqRekey: OPTIONAL<BOOLEAN>,
+        readonly reqRekey?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `changedKey`.
          * @public
          * @readonly
          */
-        readonly changedKey: OPTIONAL<BOOLEAN>
+        readonly changedKey?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

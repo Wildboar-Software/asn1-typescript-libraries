@@ -91,7 +91,7 @@ export class TbsHandshakeWrpRej {
          * @public
          * @readonly
          */
-        readonly diag: OPTIONAL<WrpError>,
+        readonly diag?: OPTIONAL<WrpError>,
         /**
          * @summary Extensions that are not recognized.
          * @public

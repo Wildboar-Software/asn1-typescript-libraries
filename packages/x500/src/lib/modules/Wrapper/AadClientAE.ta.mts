@@ -82,7 +82,7 @@ export class AadClientAE extends AadClient {
          * @public
          * @readonly
          */
-        readonly encInvoke: OPTIONAL<AlgoInvoke>,
+        readonly encInvoke?: OPTIONAL<AlgoInvoke>,
         /**
          * @summary Extensions that are not recognized.
          * @public

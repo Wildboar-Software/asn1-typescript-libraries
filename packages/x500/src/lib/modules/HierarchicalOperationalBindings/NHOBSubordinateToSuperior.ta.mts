@@ -36,13 +36,13 @@ export class NHOBSubordinateToSuperior {
          * @public
          * @readonly
          */
-        readonly accessPoints: OPTIONAL<MasterAndShadowAccessPoints>,
+        readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary `subentries`.
          * @public
          * @readonly
          */
-        readonly subentries: OPTIONAL<SubentryInfo[]>,
+        readonly subentries?: OPTIONAL<SubentryInfo[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

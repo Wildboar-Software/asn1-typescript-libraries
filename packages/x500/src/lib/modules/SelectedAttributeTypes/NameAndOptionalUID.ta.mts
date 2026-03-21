@@ -42,7 +42,7 @@ export class NameAndOptionalUID {
          * @public
          * @readonly
          */
-        readonly uid: OPTIONAL<UniqueIdentifier>,
+        readonly uid?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary Extensions that are not recognized.
          * @public

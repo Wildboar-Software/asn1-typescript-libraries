@@ -55,13 +55,13 @@ export class ICV_Total<ToBeProtected> {
          * @public
          * @readonly
          */
-        readonly altAlgorithmIdentifier: OPTIONAL<AlgorithmWithInvoke>,
+        readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmWithInvoke>,
         /**
          * @summary `altIcv`.
          * @public
          * @readonly
          */
-        readonly altIcv: OPTIONAL<BIT_STRING>,
+        readonly altIcv?: OPTIONAL<BIT_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

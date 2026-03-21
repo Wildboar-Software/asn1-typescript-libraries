@@ -50,7 +50,7 @@ export class SupportedPublicKeyAlgorithms {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<OidOrAttr[]>,
+        readonly extensions?: OPTIONAL<OidOrAttr[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

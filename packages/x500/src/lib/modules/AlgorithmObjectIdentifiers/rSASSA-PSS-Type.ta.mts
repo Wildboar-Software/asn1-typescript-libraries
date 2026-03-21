@@ -35,13 +35,13 @@ export class rSASSA_PSS_Type {
          * @public
          * @readonly
          */
-        readonly saltLength: OPTIONAL<INTEGER>,
+        readonly saltLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `trailerField`.
          * @public
          * @readonly
          */
-        readonly trailerField: OPTIONAL<INTEGER>
+        readonly trailerField?: OPTIONAL<INTEGER>
     ) {}
 
     /**

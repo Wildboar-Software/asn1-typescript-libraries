@@ -1,7 +1,9 @@
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 
 /**
- * Normalizes a Filter as specified in ITU Recommendation X.501 (2016), Annex Q.
+ * Normalizes a Filter as specified in ITU Recommendation X.501 (2019), Annex Q.
+ * 
+ * 
  *
  * @param filter The filter to be normalized.
  * @returns A normalized filter.

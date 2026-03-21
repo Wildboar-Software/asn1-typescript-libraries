@@ -42,7 +42,7 @@ export class Certificates {
          * @public
          * @readonly
          */
-        readonly certificationPath: OPTIONAL<ForwardCertificationPath>,
+        readonly certificationPath?: OPTIONAL<ForwardCertificationPath>,
         /**
          * @summary Extensions that are not recognized.
          * @public

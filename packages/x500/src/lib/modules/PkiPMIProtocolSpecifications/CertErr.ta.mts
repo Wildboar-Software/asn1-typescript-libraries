@@ -45,7 +45,7 @@ export class CertErr {
          * @public
          * @readonly
          */
-        readonly note: OPTIONAL<Notifications>,
+        readonly note?: OPTIONAL<Notifications>,
         /**
          * @summary Extensions that are not recognized.
          * @public

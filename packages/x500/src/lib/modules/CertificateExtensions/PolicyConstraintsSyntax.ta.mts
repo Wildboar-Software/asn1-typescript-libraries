@@ -33,13 +33,13 @@ export class PolicyConstraintsSyntax {
          * @public
          * @readonly
          */
-        readonly requireExplicitPolicy: OPTIONAL<SkipCerts>,
+        readonly requireExplicitPolicy?: OPTIONAL<SkipCerts>,
         /**
          * @summary `inhibitPolicyMapping`.
          * @public
          * @readonly
          */
-        readonly inhibitPolicyMapping: OPTIONAL<SkipCerts>,
+        readonly inhibitPolicyMapping?: OPTIONAL<SkipCerts>,
         /**
          * @summary Extensions that are not recognized.
          * @public

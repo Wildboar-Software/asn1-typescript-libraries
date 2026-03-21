@@ -37,7 +37,7 @@ export class AltName {
          * @public
          * @readonly
          */
-        readonly altNameValue: OPTIONAL<GeneralName>
+        readonly altNameValue?: OPTIONAL<GeneralName>
     ) {}
 
     /**

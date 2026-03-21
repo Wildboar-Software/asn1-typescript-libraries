@@ -42,7 +42,7 @@ export class DeleteAvlReq {
          * @public
          * @readonly
          */
-        readonly avl_Id: OPTIONAL<AvlSerialNumber>,
+        readonly avl_Id?: OPTIONAL<AvlSerialNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -47,13 +47,13 @@ export class TargetCert {
          * @public
          * @readonly
          */
-        readonly targetName: OPTIONAL<GeneralName>,
+        readonly targetName?: OPTIONAL<GeneralName>,
         /**
          * @summary `certDigestInfo`.
          * @public
          * @readonly
          */
-        readonly certDigestInfo: OPTIONAL<ObjectDigestInfo>
+        readonly certDigestInfo?: OPTIONAL<ObjectDigestInfo>
     ) {}
 
     /**

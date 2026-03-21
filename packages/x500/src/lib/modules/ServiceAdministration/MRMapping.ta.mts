@@ -36,13 +36,13 @@ export class MRMapping {
          * @public
          * @readonly
          */
-        readonly mapping: OPTIONAL<Mapping[]>,
+        readonly mapping?: OPTIONAL<Mapping[]>,
         /**
          * @summary `substitution`.
          * @public
          * @readonly
          */
-        readonly substitution: OPTIONAL<MRSubstitution[]>,
+        readonly substitution?: OPTIONAL<MRSubstitution[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

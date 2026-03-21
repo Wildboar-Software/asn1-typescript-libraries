@@ -42,13 +42,13 @@ export class PwdResponse {
          * @public
          * @readonly
          */
-        readonly warning: OPTIONAL<PwdResponse_warning>,
+        readonly warning?: OPTIONAL<PwdResponse_warning>,
         /**
          * @summary `error`.
          * @public
          * @readonly
          */
-        readonly error: OPTIONAL<PwdResponse_error>
+        readonly error?: OPTIONAL<PwdResponse_error>
     ) {}
 
     /**

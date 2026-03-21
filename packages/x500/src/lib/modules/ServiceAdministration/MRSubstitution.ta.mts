@@ -39,13 +39,13 @@ export class MRSubstitution {
          * @public
          * @readonly
          */
-        readonly oldMatchingRule: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `newMatchingRule`.
          * @public
          * @readonly
          */
-        readonly newMatchingRule: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

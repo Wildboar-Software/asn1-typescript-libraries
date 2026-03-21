@@ -71,13 +71,13 @@ export class CRLReferral {
          * @public
          * @readonly
          */
-        readonly lastUpdate: OPTIONAL<GeneralizedTime>,
+        readonly lastUpdate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `lastChangedCRL`.
          * @public
          * @readonly
          */
-        readonly lastChangedCRL: OPTIONAL<GeneralizedTime>,
+        readonly lastChangedCRL?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

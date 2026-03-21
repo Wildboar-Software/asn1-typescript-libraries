@@ -54,19 +54,19 @@ export class Vertex {
          * @public
          * @readonly
          */
-        readonly admPointInfo: OPTIONAL<Attribute[]>,
+        readonly admPointInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `subentries`.
          * @public
          * @readonly
          */
-        readonly subentries: OPTIONAL<SubentryInfo[]>,
+        readonly subentries?: OPTIONAL<SubentryInfo[]>,
         /**
          * @summary `accessPoints`.
          * @public
          * @readonly
          */
-        readonly accessPoints: OPTIONAL<MasterAndShadowAccessPoints>,
+        readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary Extensions that are not recognized.
          * @public

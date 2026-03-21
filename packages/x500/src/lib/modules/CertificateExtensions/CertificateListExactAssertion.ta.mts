@@ -49,7 +49,7 @@ export class CertificateListExactAssertion {
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>
     ) {}
 
     /**

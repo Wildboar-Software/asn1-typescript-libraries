@@ -42,7 +42,7 @@ export class Knowledge {
          * @public
          * @readonly
          */
-        readonly extendedKnowledge: OPTIONAL<BOOLEAN>,
+        readonly extendedKnowledge?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

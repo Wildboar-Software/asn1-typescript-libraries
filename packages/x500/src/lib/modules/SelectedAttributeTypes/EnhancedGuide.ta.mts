@@ -54,7 +54,7 @@ export class EnhancedGuide {
          * @public
          * @readonly
          */
-        readonly subset: OPTIONAL<EnhancedGuide_subset>,
+        readonly subset?: OPTIONAL<EnhancedGuide_subset>,
         /**
          * @summary Extensions that are not recognized.
          * @public

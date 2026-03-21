@@ -49,7 +49,7 @@ export class TBerror {
          * @public
          * @readonly
          */
-        readonly diagnostic: OPTIONAL<UTF8String>,
+        readonly diagnostic?: OPTIONAL<UTF8String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -38,13 +38,13 @@ export class DirectoryBindArgument {
          * @public
          * @readonly
          */
-        readonly credentials: OPTIONAL<Credentials>,
+        readonly credentials?: OPTIONAL<Credentials>,
         /**
          * @summary `versions`.
          * @public
          * @readonly
          */
-        readonly versions: OPTIONAL<Versions>,
+        readonly versions?: OPTIONAL<Versions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

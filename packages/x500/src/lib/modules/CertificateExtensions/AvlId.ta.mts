@@ -42,7 +42,7 @@ export class AvlId {
          * @public
          * @readonly
          */
-        readonly serialNumber: OPTIONAL<AvlSerialNumber>,
+        readonly serialNumber?: OPTIONAL<AvlSerialNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

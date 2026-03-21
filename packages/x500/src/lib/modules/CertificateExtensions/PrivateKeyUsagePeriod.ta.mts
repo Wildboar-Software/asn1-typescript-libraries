@@ -30,13 +30,13 @@ export class PrivateKeyUsagePeriod {
          * @public
          * @readonly
          */
-        readonly notBefore: OPTIONAL<GeneralizedTime>,
+        readonly notBefore?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `notAfter`.
          * @public
          * @readonly
          */
-        readonly notAfter: OPTIONAL<GeneralizedTime>,
+        readonly notAfter?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

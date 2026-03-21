@@ -33,7 +33,7 @@ export class UiiItem {
          * @public
          * @readonly
          */
-        readonly length: OPTIONAL<INTEGER>
+        readonly length?: OPTIONAL<INTEGER>
     ) {}
 
     /**

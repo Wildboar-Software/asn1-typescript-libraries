@@ -37,7 +37,7 @@ export class HolderNameConstraintsSyntax {
          * @public
          * @readonly
          */
-        readonly excludedSubtrees: OPTIONAL<GeneralSubtrees>,
+        readonly excludedSubtrees?: OPTIONAL<GeneralSubtrees>,
         /**
          * @summary Extensions that are not recognized.
          * @public

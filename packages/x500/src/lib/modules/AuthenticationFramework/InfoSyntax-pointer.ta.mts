@@ -44,7 +44,7 @@ export class InfoSyntax_pointer {
          * @public
          * @readonly
          */
-        readonly hash: OPTIONAL<HASH<HashedPolicyInfo>>,
+        readonly hash?: OPTIONAL<HASH<HashedPolicyInfo>>,
         /**
          * @summary Extensions that are not recognized.
          * @public

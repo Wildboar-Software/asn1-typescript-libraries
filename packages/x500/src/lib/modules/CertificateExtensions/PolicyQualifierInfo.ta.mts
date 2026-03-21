@@ -34,7 +34,7 @@ export class PolicyQualifierInfo {
          * @public
          * @readonly
          */
-        readonly qualifier: OPTIONAL<_Element>,
+        readonly qualifier?: OPTIONAL<_Element>,
         /**
          * @summary Extensions that are not recognized.
          * @public

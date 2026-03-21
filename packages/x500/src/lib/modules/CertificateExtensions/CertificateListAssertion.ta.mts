@@ -61,43 +61,43 @@ export class CertificateListAssertion {
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<Name>,
+        readonly issuer?: OPTIONAL<Name>,
         /**
          * @summary `minCRLNumber`.
          * @public
          * @readonly
          */
-        readonly minCRLNumber: OPTIONAL<CRLNumber>,
+        readonly minCRLNumber?: OPTIONAL<CRLNumber>,
         /**
          * @summary `maxCRLNumber`.
          * @public
          * @readonly
          */
-        readonly maxCRLNumber: OPTIONAL<CRLNumber>,
+        readonly maxCRLNumber?: OPTIONAL<CRLNumber>,
         /**
          * @summary `reasonFlags`.
          * @public
          * @readonly
          */
-        readonly reasonFlags: OPTIONAL<ReasonFlags>,
+        readonly reasonFlags?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `dateAndTime`.
          * @public
          * @readonly
          */
-        readonly dateAndTime: OPTIONAL<Time>,
+        readonly dateAndTime?: OPTIONAL<Time>,
         /**
          * @summary `distributionPoint`.
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>,
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `authorityKeyIdentifier`.
          * @public
          * @readonly
          */
-        readonly authorityKeyIdentifier: OPTIONAL<AuthorityKeyIdentifier>,
+        readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -47,25 +47,25 @@ export class AttributeCertificateAssertion {
          * @public
          * @readonly
          */
-        readonly holder: OPTIONAL<AttributeCertificateAssertion_holder>,
+        readonly holder?: OPTIONAL<AttributeCertificateAssertion_holder>,
         /**
          * @summary `issuer`.
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<GeneralNames>,
+        readonly issuer?: OPTIONAL<GeneralNames>,
         /**
          * @summary `attCertValidity`.
          * @public
          * @readonly
          */
-        readonly attCertValidity: OPTIONAL<GeneralizedTime>,
+        readonly attCertValidity?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `attType`.
          * @public
          * @readonly
          */
-        readonly attType: OPTIONAL<AttributeType[]>,
+        readonly attType?: OPTIONAL<AttributeType[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

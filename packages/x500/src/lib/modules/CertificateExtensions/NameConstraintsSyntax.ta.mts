@@ -33,13 +33,13 @@ export class NameConstraintsSyntax {
          * @public
          * @readonly
          */
-        readonly permittedSubtrees: OPTIONAL<GeneralSubtrees>,
+        readonly permittedSubtrees?: OPTIONAL<GeneralSubtrees>,
         /**
          * @summary `excludedSubtrees`.
          * @public
          * @readonly
          */
-        readonly excludedSubtrees: OPTIONAL<GeneralSubtrees>,
+        readonly excludedSubtrees?: OPTIONAL<GeneralSubtrees>,
         /**
          * @summary Extensions that are not recognized.
          * @public

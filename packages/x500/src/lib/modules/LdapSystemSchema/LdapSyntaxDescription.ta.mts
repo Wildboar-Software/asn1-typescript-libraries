@@ -38,7 +38,7 @@ export class LdapSyntaxDescription {
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<UnboundedDirectoryString>,
+        readonly description?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

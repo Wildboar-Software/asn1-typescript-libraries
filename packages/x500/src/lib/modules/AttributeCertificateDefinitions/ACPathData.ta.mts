@@ -36,13 +36,13 @@ export class ACPathData {
          * @public
          * @readonly
          */
-        readonly certificate: OPTIONAL<Certificate>,
+        readonly certificate?: OPTIONAL<Certificate>,
         /**
          * @summary `attributeCertificate`.
          * @public
          * @readonly
          */
-        readonly attributeCertificate: OPTIONAL<AttributeCertificate>,
+        readonly attributeCertificate?: OPTIONAL<AttributeCertificate>,
         /**
          * @summary Extensions that are not recognized.
          * @public

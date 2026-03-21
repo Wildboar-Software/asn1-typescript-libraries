@@ -44,13 +44,13 @@ export class Result_list_Item {
          * @public
          * @readonly
          */
-        readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
+        readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
         /**
          * @summary `provider_reason`.
          * @public
          * @readonly
          */
-        readonly provider_reason: OPTIONAL<Result_list_Item_provider_reason>
+        readonly provider_reason?: OPTIONAL<Result_list_Item_provider_reason>
     ) {}
 
     /**

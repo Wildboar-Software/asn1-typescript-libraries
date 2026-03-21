@@ -44,13 +44,13 @@ export class Subtree implements TotalRefresh {
          * @public
          * @readonly
          */
-        readonly sDSE: OPTIONAL<SDSEContent> /* REPLICATED_COMPONENT */,
+        readonly sDSE?: OPTIONAL<SDSEContent> /* REPLICATED_COMPONENT */,
         /**
          * @summary `subtree`.
          * @public
          * @readonly
          */
-        readonly subtree: OPTIONAL<Subtree[]> /* REPLICATED_COMPONENT */,
+        readonly subtree?: OPTIONAL<Subtree[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary Extensions that are not recognized.
          * @public

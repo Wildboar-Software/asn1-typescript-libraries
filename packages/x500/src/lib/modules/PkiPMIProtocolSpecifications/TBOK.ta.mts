@@ -50,7 +50,7 @@ export class TBOK {
          * @public
          * @readonly
          */
-        readonly info: OPTIONAL<UTF8String>,
+        readonly info?: OPTIONAL<UTF8String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

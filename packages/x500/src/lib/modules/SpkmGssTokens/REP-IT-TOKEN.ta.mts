@@ -73,13 +73,13 @@ export class REP_IT_TOKEN {
          * @public
          * @readonly
          */
-        readonly src_name: OPTIONAL<Name>,
+        readonly src_name?: OPTIONAL<Name>,
         /**
          * @summary `key_estb_rep`.
          * @public
          * @readonly
          */
-        readonly key_estb_rep: OPTIONAL<BIT_STRING>
+        readonly key_estb_rep?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

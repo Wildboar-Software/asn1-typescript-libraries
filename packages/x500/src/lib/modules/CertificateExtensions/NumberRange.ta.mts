@@ -29,19 +29,19 @@ export class NumberRange {
          * @public
          * @readonly
          */
-        readonly startingNumber: OPTIONAL<OCTET_STRING>,
+        readonly startingNumber?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `endingNumber`.
          * @public
          * @readonly
          */
-        readonly endingNumber: OPTIONAL<OCTET_STRING>,
+        readonly endingNumber?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `modulus`.
          * @public
          * @readonly
          */
-        readonly modulus: OPTIONAL<OCTET_STRING>,
+        readonly modulus?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

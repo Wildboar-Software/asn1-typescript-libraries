@@ -45,7 +45,7 @@ export class AttributeTypeValueContexts {
          * @public
          * @readonly
          */
-        readonly contextList: OPTIONAL<Context[]>,
+        readonly contextList?: OPTIONAL<Context[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

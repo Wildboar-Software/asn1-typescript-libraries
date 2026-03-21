@@ -57,7 +57,7 @@ export class FamilyEntry {
          * @public
          * @readonly
          */
-        readonly family_info: OPTIONAL<FamilyEntries[]>,
+        readonly family_info?: OPTIONAL<FamilyEntries[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

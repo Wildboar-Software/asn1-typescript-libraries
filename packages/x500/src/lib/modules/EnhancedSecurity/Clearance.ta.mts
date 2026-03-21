@@ -46,13 +46,13 @@ export class Clearance {
          * @public
          * @readonly
          */
-        readonly classList: OPTIONAL<ClassList>,
+        readonly classList?: OPTIONAL<ClassList>,
         /**
          * @summary `securityCategories`.
          * @public
          * @readonly
          */
-        readonly securityCategories: OPTIONAL<SecurityCategory[]>,
+        readonly securityCategories?: OPTIONAL<SecurityCategory[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -41,37 +41,37 @@ export class AAIssuingDistPointSyntax {
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>,
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `onlySomeReasons`.
          * @public
          * @readonly
          */
-        readonly onlySomeReasons: OPTIONAL<ReasonFlags>,
+        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `indirectCRL`.
          * @public
          * @readonly
          */
-        readonly indirectCRL: OPTIONAL<BOOLEAN>,
+        readonly indirectCRL?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsUserAttributeCerts`.
          * @public
          * @readonly
          */
-        readonly containsUserAttributeCerts: OPTIONAL<BOOLEAN>,
+        readonly containsUserAttributeCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsAACerts`.
          * @public
          * @readonly
          */
-        readonly containsAACerts: OPTIONAL<BOOLEAN>,
+        readonly containsAACerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsSOAPublicKeyCerts`.
          * @public
          * @readonly
          */
-        readonly containsSOAPublicKeyCerts: OPTIONAL<BOOLEAN>,
+        readonly containsSOAPublicKeyCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

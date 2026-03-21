@@ -52,7 +52,7 @@ export class CertSubscribeOK_Item_ok {
          * @public
          * @readonly
          */
-        readonly revokeReason: OPTIONAL<CRLReason>,
+        readonly revokeReason?: OPTIONAL<CRLReason>,
         /**
          * @summary Extensions that are not recognized.
          * @public

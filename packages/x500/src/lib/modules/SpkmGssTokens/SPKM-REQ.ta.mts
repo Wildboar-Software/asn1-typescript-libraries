@@ -48,13 +48,13 @@ export class SPKM_REQ {
          * @public
          * @readonly
          */
-        readonly certif_data: OPTIONAL<CertificationData>,
+        readonly certif_data?: OPTIONAL<CertificationData>,
         /**
          * @summary `auth_data`.
          * @public
          * @readonly
          */
-        readonly auth_data: OPTIONAL<AuthorizationData>
+        readonly auth_data?: OPTIONAL<AuthorizationData>
     ) {}
 
     /**

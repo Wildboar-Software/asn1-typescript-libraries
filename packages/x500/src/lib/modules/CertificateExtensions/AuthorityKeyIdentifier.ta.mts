@@ -46,19 +46,19 @@ export class AuthorityKeyIdentifier {
          * @public
          * @readonly
          */
-        readonly keyIdentifier: OPTIONAL<KeyIdentifier>,
+        readonly keyIdentifier?: OPTIONAL<KeyIdentifier>,
         /**
          * @summary `authorityCertIssuer`.
          * @public
          * @readonly
          */
-        readonly authorityCertIssuer: OPTIONAL<GeneralNames>,
+        readonly authorityCertIssuer?: OPTIONAL<GeneralNames>,
         /**
          * @summary `authorityCertSerialNumber`.
          * @public
          * @readonly
          */
-        readonly authorityCertSerialNumber: OPTIONAL<CertificateSerialNumber>,
+        readonly authorityCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

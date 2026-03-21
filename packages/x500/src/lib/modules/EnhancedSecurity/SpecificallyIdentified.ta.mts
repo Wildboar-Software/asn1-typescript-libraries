@@ -44,13 +44,13 @@ export class SpecificallyIdentified {
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<GeneralName>,
+        readonly issuer?: OPTIONAL<GeneralName>,
         /**
          * @summary `serial`.
          * @public
          * @readonly
          */
-        readonly serial: OPTIONAL<CertificateSerialNumber>
+        readonly serial?: OPTIONAL<CertificateSerialNumber>
     ) {}
 
     /**

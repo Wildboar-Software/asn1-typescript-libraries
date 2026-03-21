@@ -35,13 +35,13 @@ export class ARP_PPDU {
          * @public
          * @readonly
          */
-        readonly provider_reason: OPTIONAL<Abort_reason>,
+        readonly provider_reason?: OPTIONAL<Abort_reason>,
         /**
          * @summary `event_identifier`.
          * @public
          * @readonly
          */
-        readonly event_identifier: OPTIONAL<Event_identifier>
+        readonly event_identifier?: OPTIONAL<Event_identifier>
     ) {}
 
     /**

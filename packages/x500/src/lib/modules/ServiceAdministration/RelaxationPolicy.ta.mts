@@ -35,31 +35,31 @@ export class RelaxationPolicy {
          * @public
          * @readonly
          */
-        readonly basic: OPTIONAL<MRMapping>,
+        readonly basic?: OPTIONAL<MRMapping>,
         /**
          * @summary `tightenings`.
          * @public
          * @readonly
          */
-        readonly tightenings: OPTIONAL<MRMapping[]>,
+        readonly tightenings?: OPTIONAL<MRMapping[]>,
         /**
          * @summary `relaxations`.
          * @public
          * @readonly
          */
-        readonly relaxations: OPTIONAL<MRMapping[]>,
+        readonly relaxations?: OPTIONAL<MRMapping[]>,
         /**
          * @summary `maximum`.
          * @public
          * @readonly
          */
-        readonly maximum: OPTIONAL<INTEGER>,
+        readonly maximum?: OPTIONAL<INTEGER>,
         /**
          * @summary `minimum`.
          * @public
          * @readonly
          */
-        readonly minimum: OPTIONAL<INTEGER>,
+        readonly minimum?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

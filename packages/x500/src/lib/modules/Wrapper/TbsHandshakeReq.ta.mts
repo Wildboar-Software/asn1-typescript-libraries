@@ -149,13 +149,13 @@ export class TbsHandshakeReq {
          * @public
          * @readonly
          */
-        readonly attCert: OPTIONAL<DER_AttributeCertificate>,
+        readonly attCert?: OPTIONAL<DER_AttributeCertificate>,
         /**
          * @summary `applData`.
          * @public
          * @readonly
          */
-        readonly applData: OPTIONAL<WrappedProt>,
+        readonly applData?: OPTIONAL<WrappedProt>,
         /**
          * @summary Extensions that are not recognized.
          * @public

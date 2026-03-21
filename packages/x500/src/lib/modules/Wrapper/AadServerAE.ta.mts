@@ -77,19 +77,19 @@ export class AadServerAE extends AadServer {
          * @public
          * @readonly
          */
-        override readonly reqRekey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        override readonly reqRekey?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `changedKey`.
          * @public
          * @readonly
          */
-        override readonly changedKey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        override readonly changedKey?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
          * @public
          * @readonly
          */
-        readonly encInvoke: OPTIONAL<AlgoInvoke>,
+        readonly encInvoke?: OPTIONAL<AlgoInvoke>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -56,13 +56,13 @@ export class Mic_Header {
          * @public
          * @readonly
          */
-        readonly int_alg: OPTIONAL<AlgorithmIdentifier>,
+        readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `snd_seq`.
          * @public
          * @readonly
          */
-        readonly snd_seq: OPTIONAL<SeqNum>
+        readonly snd_seq?: OPTIONAL<SeqNum>
     ) {}
 
     /**

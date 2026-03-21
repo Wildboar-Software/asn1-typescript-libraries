@@ -35,13 +35,13 @@ export class DayTime {
          * @public
          * @readonly
          */
-        readonly minute: OPTIONAL<INTEGER>,
+        readonly minute?: OPTIONAL<INTEGER>,
         /**
          * @summary `second`.
          * @public
          * @readonly
          */
-        readonly second: OPTIONAL<INTEGER>,
+        readonly second?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

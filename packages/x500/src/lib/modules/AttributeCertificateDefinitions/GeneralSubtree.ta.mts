@@ -44,13 +44,13 @@ export class GeneralSubtree {
          * @public
          * @readonly
          */
-        readonly minimum: OPTIONAL<BaseDistance>,
+        readonly minimum?: OPTIONAL<BaseDistance>,
         /**
          * @summary `maximum`.
          * @public
          * @readonly
          */
-        readonly maximum: OPTIONAL<BaseDistance>,
+        readonly maximum?: OPTIONAL<BaseDistance>,
         /**
          * @summary Extensions that are not recognized.
          * @public

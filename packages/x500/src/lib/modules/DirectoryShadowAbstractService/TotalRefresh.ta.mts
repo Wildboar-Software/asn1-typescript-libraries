@@ -36,13 +36,13 @@ export class TotalRefresh {
          * @public
          * @readonly
          */
-        readonly sDSE: OPTIONAL<SDSEContent>,
+        readonly sDSE?: OPTIONAL<SDSEContent>,
         /**
          * @summary `subtree`.
          * @public
          * @readonly
          */
-        readonly subtree: OPTIONAL<Subtree[]>,
+        readonly subtree?: OPTIONAL<Subtree[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

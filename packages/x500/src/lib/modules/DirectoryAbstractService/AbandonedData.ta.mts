@@ -56,7 +56,7 @@ export class AbandonedData implements CommonResults {
          * @public
          * @readonly
          */
-        readonly problem: OPTIONAL<AbandonedProblem>,
+        readonly problem?: OPTIONAL<AbandonedProblem>,
         /**
          * @summary Extensions that are not recognized.
          * @public

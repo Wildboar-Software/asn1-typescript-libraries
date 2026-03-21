@@ -37,13 +37,13 @@ export class AuthenticationLevel_basicLevels {
          * @public
          * @readonly
          */
-        readonly localQualifier: OPTIONAL<INTEGER>,
+        readonly localQualifier?: OPTIONAL<INTEGER>,
         /**
          * @summary `signed`.
          * @public
          * @readonly
          */
-        readonly signed: OPTIONAL<BOOLEAN>,
+        readonly signed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

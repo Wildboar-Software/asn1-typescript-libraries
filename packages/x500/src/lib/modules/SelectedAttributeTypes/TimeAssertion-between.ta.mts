@@ -32,13 +32,13 @@ export class TimeAssertion_between {
          * @public
          * @readonly
          */
-        readonly endTime: OPTIONAL<GeneralizedTime>,
+        readonly endTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `entirely`.
          * @public
          * @readonly
          */
-        readonly entirely: OPTIONAL<BOOLEAN>,
+        readonly entirely?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

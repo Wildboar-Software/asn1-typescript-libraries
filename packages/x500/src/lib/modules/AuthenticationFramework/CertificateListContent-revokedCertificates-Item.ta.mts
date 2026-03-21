@@ -50,7 +50,7 @@ export class CertificateListContent_revokedCertificates_Item {
          * @public
          * @readonly
          */
-        readonly crlEntryExtensions: OPTIONAL<Extensions>,
+        readonly crlEntryExtensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

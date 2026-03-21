@@ -29,13 +29,13 @@ export class BasicAttConstraintsSyntax {
          * @public
          * @readonly
          */
-        readonly authority: OPTIONAL<BOOLEAN>,
+        readonly authority?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pathLenConstraint`.
          * @public
          * @readonly
          */
-        readonly pathLenConstraint: OPTIONAL<INTEGER>,
+        readonly pathLenConstraint?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

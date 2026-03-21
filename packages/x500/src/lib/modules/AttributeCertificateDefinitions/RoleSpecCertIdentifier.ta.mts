@@ -55,13 +55,13 @@ export class RoleSpecCertIdentifier {
          * @public
          * @readonly
          */
-        readonly roleCertSerialNumber: OPTIONAL<CertificateSerialNumber>,
+        readonly roleCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary `roleCertLocator`.
          * @public
          * @readonly
          */
-        readonly roleCertLocator: OPTIONAL<GeneralNames>,
+        readonly roleCertLocator?: OPTIONAL<GeneralNames>,
         /**
          * @summary Extensions that are not recognized.
          * @public

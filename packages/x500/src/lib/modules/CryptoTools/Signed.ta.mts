@@ -41,7 +41,7 @@ export class Signed<ToBeSigned> {
          * @public
          * @readonly
          */
-        readonly altSignature: OPTIONAL<BIT_STRING>,
+        readonly altSignature?: OPTIONAL<BIT_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

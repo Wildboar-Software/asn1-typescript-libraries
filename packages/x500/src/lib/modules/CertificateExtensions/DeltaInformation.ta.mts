@@ -38,7 +38,7 @@ export class DeltaInformation {
          * @public
          * @readonly
          */
-        readonly nextDelta: OPTIONAL<GeneralizedTime>,
+        readonly nextDelta?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

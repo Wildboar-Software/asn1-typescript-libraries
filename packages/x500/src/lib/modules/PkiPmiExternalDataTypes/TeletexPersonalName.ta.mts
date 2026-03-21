@@ -38,19 +38,19 @@ export class TeletexPersonalName {
          * @public
          * @readonly
          */
-        readonly given_name: OPTIONAL<TeletexString>,
+        readonly given_name?: OPTIONAL<TeletexString>,
         /**
          * @summary `initials`.
          * @public
          * @readonly
          */
-        readonly initials: OPTIONAL<TeletexString>,
+        readonly initials?: OPTIONAL<TeletexString>,
         /**
          * @summary `generation_qualifier`.
          * @public
          * @readonly
          */
-        readonly generation_qualifier: OPTIONAL<TeletexString>
+        readonly generation_qualifier?: OPTIONAL<TeletexString>
     ) {}
 
     /**

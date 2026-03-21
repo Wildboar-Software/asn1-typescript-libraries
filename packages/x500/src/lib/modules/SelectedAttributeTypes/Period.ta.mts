@@ -88,31 +88,31 @@ export class Period {
          * @public
          * @readonly
          */
-        readonly timesOfDay: OPTIONAL<DayTimeBand[]>,
+        readonly timesOfDay?: OPTIONAL<DayTimeBand[]>,
         /**
          * @summary `days`.
          * @public
          * @readonly
          */
-        readonly days: OPTIONAL<Period_days>,
+        readonly days?: OPTIONAL<Period_days>,
         /**
          * @summary `weeks`.
          * @public
          * @readonly
          */
-        readonly weeks: OPTIONAL<Period_weeks>,
+        readonly weeks?: OPTIONAL<Period_weeks>,
         /**
          * @summary `months`.
          * @public
          * @readonly
          */
-        readonly months: OPTIONAL<Period_months>,
+        readonly months?: OPTIONAL<Period_months>,
         /**
          * @summary `years`.
          * @public
          * @readonly
          */
-        readonly years: OPTIONAL<INTEGER[]>,
+        readonly years?: OPTIONAL<INTEGER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

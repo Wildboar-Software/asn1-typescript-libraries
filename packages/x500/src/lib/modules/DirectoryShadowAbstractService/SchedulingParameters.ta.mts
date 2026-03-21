@@ -33,13 +33,13 @@ export class SchedulingParameters {
          * @public
          * @readonly
          */
-        readonly periodic: OPTIONAL<PeriodicStrategy>,
+        readonly periodic?: OPTIONAL<PeriodicStrategy>,
         /**
          * @summary `othertimes`.
          * @public
          * @readonly
          */
-        readonly othertimes: OPTIONAL<BOOLEAN>,
+        readonly othertimes?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

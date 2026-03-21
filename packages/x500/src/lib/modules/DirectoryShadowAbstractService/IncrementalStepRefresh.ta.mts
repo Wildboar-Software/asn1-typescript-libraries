@@ -39,13 +39,13 @@ export class IncrementalStepRefresh {
          * @public
          * @readonly
          */
-        readonly sDSEChanges: OPTIONAL<IncrementalStepRefresh_sDSEChanges>,
+        readonly sDSEChanges?: OPTIONAL<IncrementalStepRefresh_sDSEChanges>,
         /**
          * @summary `subordinateUpdates`.
          * @public
          * @readonly
          */
-        readonly subordinateUpdates: OPTIONAL<SubordinateChanges[]>
+        readonly subordinateUpdates?: OPTIONAL<SubordinateChanges[]>
     ) {}
 
     /**

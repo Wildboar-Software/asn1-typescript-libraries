@@ -49,19 +49,19 @@ export class ShadowingAgreementInfo {
          * @public
          * @readonly
          */
-        readonly updateMode: OPTIONAL<UpdateMode>,
+        readonly updateMode?: OPTIONAL<UpdateMode>,
         /**
          * @summary `master`.
          * @public
          * @readonly
          */
-        readonly master: OPTIONAL<AccessPoint>,
+        readonly master?: OPTIONAL<AccessPoint>,
         /**
          * @summary `secondaryShadows`.
          * @public
          * @readonly
          */
-        readonly secondaryShadows: OPTIONAL<BOOLEAN>
+        readonly secondaryShadows?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

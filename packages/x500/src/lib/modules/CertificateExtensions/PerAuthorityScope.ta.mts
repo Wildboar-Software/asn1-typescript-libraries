@@ -67,49 +67,49 @@ export class PerAuthorityScope {
          * @public
          * @readonly
          */
-        readonly authorityName: OPTIONAL<GeneralName>,
+        readonly authorityName?: OPTIONAL<GeneralName>,
         /**
          * @summary `distributionPoint`.
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>,
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `onlyContains`.
          * @public
          * @readonly
          */
-        readonly onlyContains: OPTIONAL<OnlyCertificateTypes>,
+        readonly onlyContains?: OPTIONAL<OnlyCertificateTypes>,
         /**
          * @summary `onlySomeReasons`.
          * @public
          * @readonly
          */
-        readonly onlySomeReasons: OPTIONAL<ReasonFlags>,
+        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `serialNumberRange`.
          * @public
          * @readonly
          */
-        readonly serialNumberRange: OPTIONAL<NumberRange>,
+        readonly serialNumberRange?: OPTIONAL<NumberRange>,
         /**
          * @summary `subjectKeyIdRange`.
          * @public
          * @readonly
          */
-        readonly subjectKeyIdRange: OPTIONAL<NumberRange>,
+        readonly subjectKeyIdRange?: OPTIONAL<NumberRange>,
         /**
          * @summary `nameSubtrees`.
          * @public
          * @readonly
          */
-        readonly nameSubtrees: OPTIONAL<GeneralNames>,
+        readonly nameSubtrees?: OPTIONAL<GeneralNames>,
         /**
          * @summary `baseRevocationInfo`.
          * @public
          * @readonly
          */
-        readonly baseRevocationInfo: OPTIONAL<BaseRevocationInfo>,
+        readonly baseRevocationInfo?: OPTIONAL<BaseRevocationInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

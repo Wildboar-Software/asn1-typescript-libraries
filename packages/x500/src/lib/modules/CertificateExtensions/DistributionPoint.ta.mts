@@ -42,19 +42,19 @@ export class DistributionPoint {
          * @public
          * @readonly
          */
-        readonly distributionPoint: OPTIONAL<DistributionPointName>,
+        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `reasons`.
          * @public
          * @readonly
          */
-        readonly reasons: OPTIONAL<ReasonFlags>,
+        readonly reasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `cRLIssuer`.
          * @public
          * @readonly
          */
-        readonly cRLIssuer: OPTIONAL<GeneralNames>,
+        readonly cRLIssuer?: OPTIONAL<GeneralNames>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -45,13 +45,13 @@ export class SuperiorToSubordinate {
          * @public
          * @readonly
          */
-        readonly entryInfo: OPTIONAL<Attribute[]>,
+        readonly entryInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `immediateSuperiorInfo`.
          * @public
          * @readonly
          */
-        readonly immediateSuperiorInfo: OPTIONAL<Attribute[]>,
+        readonly immediateSuperiorInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

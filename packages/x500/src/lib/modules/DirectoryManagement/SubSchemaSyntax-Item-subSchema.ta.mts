@@ -58,43 +58,43 @@ export class SubSchemaSyntax_Item_subSchema {
          * @public
          * @readonly
          */
-        readonly structureRules: OPTIONAL<DITStructureRuleDescription[]>,
+        readonly structureRules?: OPTIONAL<DITStructureRuleDescription[]>,
         /**
          * @summary `contentRules`.
          * @public
          * @readonly
          */
-        readonly contentRules: OPTIONAL<DITContentRuleDescription[]>,
+        readonly contentRules?: OPTIONAL<DITContentRuleDescription[]>,
         /**
          * @summary `matchingRules`.
          * @public
          * @readonly
          */
-        readonly matchingRules: OPTIONAL<MatchingRuleDescription[]>,
+        readonly matchingRules?: OPTIONAL<MatchingRuleDescription[]>,
         /**
          * @summary `attributeTypes`.
          * @public
          * @readonly
          */
-        readonly attributeTypes: OPTIONAL<AttributeTypeDescription[]>,
+        readonly attributeTypes?: OPTIONAL<AttributeTypeDescription[]>,
         /**
          * @summary `objectClasses`.
          * @public
          * @readonly
          */
-        readonly objectClasses: OPTIONAL<ObjectClassDescription[]>,
+        readonly objectClasses?: OPTIONAL<ObjectClassDescription[]>,
         /**
          * @summary `nameForms`.
          * @public
          * @readonly
          */
-        readonly nameForms: OPTIONAL<NameFormDescription[]>,
+        readonly nameForms?: OPTIONAL<NameFormDescription[]>,
         /**
          * @summary `matchRuleUses`.
          * @public
          * @readonly
          */
-        readonly matchRuleUses: OPTIONAL<MatchingRuleUseDescription[]>
+        readonly matchRuleUses?: OPTIONAL<MatchingRuleUseDescription[]>
     ) {}
 
     /**

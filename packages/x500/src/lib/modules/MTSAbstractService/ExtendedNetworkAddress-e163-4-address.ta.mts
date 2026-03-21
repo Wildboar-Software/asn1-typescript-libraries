@@ -31,7 +31,7 @@ export class ExtendedNetworkAddress_e163_4_address {
          * @public
          * @readonly
          */
-        readonly sub_address: OPTIONAL<NumericString>
+        readonly sub_address?: OPTIONAL<NumericString>
     ) {}
 
     /**

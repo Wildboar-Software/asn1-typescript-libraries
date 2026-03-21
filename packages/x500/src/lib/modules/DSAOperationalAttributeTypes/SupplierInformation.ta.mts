@@ -86,13 +86,13 @@ export class SupplierInformation implements SupplierOrConsumer {
          * @public
          * @readonly
          */
-        readonly supplier_is_master: OPTIONAL<BOOLEAN>,
+        readonly supplier_is_master?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `non_supplying_master`.
          * @public
          * @readonly
          */
-        readonly non_supplying_master: OPTIONAL<AccessPoint>,
+        readonly non_supplying_master?: OPTIONAL<AccessPoint>,
         /**
          * @summary Extensions that are not recognized.
          * @public

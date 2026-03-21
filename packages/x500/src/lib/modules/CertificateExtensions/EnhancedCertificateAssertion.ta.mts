@@ -90,79 +90,79 @@ export class EnhancedCertificateAssertion {
          * @public
          * @readonly
          */
-        readonly serialNumber: OPTIONAL<CertificateSerialNumber>,
+        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary `issuer`.
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<Name>,
+        readonly issuer?: OPTIONAL<Name>,
         /**
          * @summary `subjectKeyIdentifier`.
          * @public
          * @readonly
          */
-        readonly subjectKeyIdentifier: OPTIONAL<SubjectKeyIdentifier>,
+        readonly subjectKeyIdentifier?: OPTIONAL<SubjectKeyIdentifier>,
         /**
          * @summary `authorityKeyIdentifier`.
          * @public
          * @readonly
          */
-        readonly authorityKeyIdentifier: OPTIONAL<AuthorityKeyIdentifier>,
+        readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
         /**
          * @summary `certificateValid`.
          * @public
          * @readonly
          */
-        readonly certificateValid: OPTIONAL<Time>,
+        readonly certificateValid?: OPTIONAL<Time>,
         /**
          * @summary `privateKeyValid`.
          * @public
          * @readonly
          */
-        readonly privateKeyValid: OPTIONAL<GeneralizedTime>,
+        readonly privateKeyValid?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `subjectPublicKeyAlgID`.
          * @public
          * @readonly
          */
-        readonly subjectPublicKeyAlgID: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly subjectPublicKeyAlgID?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `keyUsage`.
          * @public
          * @readonly
          */
-        readonly keyUsage: OPTIONAL<KeyUsage>,
+        readonly keyUsage?: OPTIONAL<KeyUsage>,
         /**
          * @summary `subjectAltName`.
          * @public
          * @readonly
          */
-        readonly subjectAltName: OPTIONAL<AltName>,
+        readonly subjectAltName?: OPTIONAL<AltName>,
         /**
          * @summary `policy`.
          * @public
          * @readonly
          */
-        readonly policy: OPTIONAL<CertPolicySet>,
+        readonly policy?: OPTIONAL<CertPolicySet>,
         /**
          * @summary `pathToName`.
          * @public
          * @readonly
          */
-        readonly pathToName: OPTIONAL<GeneralNames>,
+        readonly pathToName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `subject`.
          * @public
          * @readonly
          */
-        readonly subject: OPTIONAL<Name>,
+        readonly subject?: OPTIONAL<Name>,
         /**
          * @summary `nameConstraints`.
          * @public
          * @readonly
          */
-        readonly nameConstraints: OPTIONAL<NameConstraintsSyntax>,
+        readonly nameConstraints?: OPTIONAL<NameConstraintsSyntax>,
         /**
          * @summary Extensions that are not recognized.
          * @public

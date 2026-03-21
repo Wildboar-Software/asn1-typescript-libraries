@@ -33,13 +33,13 @@ export class CertificatePairAssertion {
          * @public
          * @readonly
          */
-        readonly issuedToThisCAAssertion: OPTIONAL<CertificateAssertion>,
+        readonly issuedToThisCAAssertion?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `issuedByThisCAAssertion`.
          * @public
          * @readonly
          */
-        readonly issuedByThisCAAssertion: OPTIONAL<CertificateAssertion>,
+        readonly issuedByThisCAAssertion?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary Extensions that are not recognized.
          * @public

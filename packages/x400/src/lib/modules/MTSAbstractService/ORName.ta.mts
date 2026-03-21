@@ -56,33 +56,35 @@ import {
  * ```
  *
  */
-export class ORName implements ORAddress {
+export class ORName extends ORAddress {
     constructor(
         /**
          * @summary `built_in_standard_attributes`.
          * @public
          * @readonly
          */
-        readonly built_in_standard_attributes: BuiltInStandardAttributes /* REPLICATED_COMPONENT */,
+        override readonly built_in_standard_attributes: BuiltInStandardAttributes /* REPLICATED_COMPONENT */,
         /**
          * @summary `built_in_domain_defined_attributes`.
          * @public
          * @readonly
          */
-        readonly built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
+        override readonly built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extension_attributes`.
          * @public
          * @readonly
          */
-        readonly extension_attributes: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
+        override readonly extension_attributes: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `directory_name`.
          * @public
          * @readonly
          */
-        readonly directory_name: OPTIONAL<Name>
-    ) {}
+        readonly directory_name?: OPTIONAL<Name>
+    ) {
+        super(built_in_standard_attributes, built_in_domain_defined_attributes, extension_attributes);
+    }
 
     /**
      * @summary Restructures an object into a ORName
@@ -96,7 +98,7 @@ export class ORName implements ORAddress {
      * @param {Object} _o An object having all of the keys and values of a `ORName`.
      * @returns {ORName}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: { [_K in keyof ORName]: ORName[_K] }
     ): ORName {
         return new ORName(

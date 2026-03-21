@@ -78,13 +78,13 @@ export class SIGNED<ToBeSigned> {
          * @public
          * @readonly
          */
-        readonly altAlgorithmIdentifier: OPTIONAL<AlgorithmIdentifier>,
+        readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `altSignature`.
          * @public
          * @readonly
          */
-        readonly altSignature: OPTIONAL<BIT_STRING>,
+        readonly altSignature?: OPTIONAL<BIT_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

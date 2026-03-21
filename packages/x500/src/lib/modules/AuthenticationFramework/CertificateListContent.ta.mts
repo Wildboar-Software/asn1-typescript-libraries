@@ -91,13 +91,13 @@ export class CertificateListContent {
          * @public
          * @readonly
          */
-        readonly nextUpdate: OPTIONAL<Time>,
+        readonly nextUpdate?: OPTIONAL<Time>,
         /**
          * @summary `revokedCertificates`.
          * @public
          * @readonly
          */
-        readonly revokedCertificates: OPTIONAL<
+        readonly revokedCertificates?: OPTIONAL<
             CertificateListContent_revokedCertificates_Item[]
         >,
         /**
@@ -111,7 +111,7 @@ export class CertificateListContent {
          * @public
          * @readonly
          */
-        readonly crlExtensions: OPTIONAL<Extensions>
+        readonly crlExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

@@ -42,7 +42,7 @@ export class CertificationPath {
          * @public
          * @readonly
          */
-        readonly theCACertificates: OPTIONAL<CertificatePair[]>,
+        readonly theCACertificates?: OPTIONAL<CertificatePair[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

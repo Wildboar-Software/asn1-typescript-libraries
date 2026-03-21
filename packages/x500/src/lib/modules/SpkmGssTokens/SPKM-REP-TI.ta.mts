@@ -43,7 +43,7 @@ export class SPKM_REP_TI {
          * @public
          * @readonly
          */
-        readonly certif_data: OPTIONAL<CertificationData>
+        readonly certif_data?: OPTIONAL<CertificationData>
     ) {}
 
     /**

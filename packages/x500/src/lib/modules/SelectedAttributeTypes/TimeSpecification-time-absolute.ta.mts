@@ -25,13 +25,13 @@ export class TimeSpecification_time_absolute {
          * @public
          * @readonly
          */
-        readonly startTime: OPTIONAL<GeneralizedTime>,
+        readonly startTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endTime`.
          * @public
          * @readonly
          */
-        readonly endTime: OPTIONAL<GeneralizedTime>,
+        readonly endTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

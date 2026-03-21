@@ -29,13 +29,13 @@ export class BasicConstraintsSyntax {
          * @public
          * @readonly
          */
-        readonly cA: OPTIONAL<BOOLEAN>,
+        readonly cA?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pathLenConstraint`.
          * @public
          * @readonly
          */
-        readonly pathLenConstraint: OPTIONAL<INTEGER>,
+        readonly pathLenConstraint?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

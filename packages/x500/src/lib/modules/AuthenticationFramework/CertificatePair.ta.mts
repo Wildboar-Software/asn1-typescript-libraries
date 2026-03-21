@@ -33,13 +33,13 @@ export class CertificatePair {
          * @public
          * @readonly
          */
-        readonly issuedToThisCA: OPTIONAL<Certificate>,
+        readonly issuedToThisCA?: OPTIONAL<Certificate>,
         /**
          * @summary `issuedByThisCA`.
          * @public
          * @readonly
          */
-        readonly issuedByThisCA: OPTIONAL<Certificate>,
+        readonly issuedByThisCA?: OPTIONAL<Certificate>,
         /**
          * @summary Extensions that are not recognized.
          * @public
