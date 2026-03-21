@@ -69,6 +69,12 @@ import {
  *
  */
 export class Req_contents {
+
+    /**
+     * The original DER encoding
+     */
+    public originalDER: Buffer | null = null;
+
     constructor(
         /**
          * @summary `tok_id`.
@@ -135,13 +141,13 @@ export class Req_contents {
          * @public
          * @readonly
          */
-        readonly key_estb_req: OPTIONAL<BIT_STRING>,
+        readonly key_estb_req?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `key_src_bind`.
          * @public
          * @readonly
          */
-        readonly key_src_bind: OPTIONAL<OCTET_STRING>
+        readonly key_src_bind?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**
@@ -338,7 +344,7 @@ export function _decode_Req_contents(el: _Element): Req_contents {
                 _root_component_type_list_2_spec_for_Req_contents,
                 undefined
             );
-            return new Req_contents(
+            const ret = new Req_contents(
                 tok_id,
                 context_id,
                 pvno,
@@ -352,6 +358,8 @@ export function _decode_Req_contents(el: _Element): Req_contents {
                 key_estb_req,
                 key_src_bind
             );
+            ret.originalDER = el.toBytes();
+            return ret;
         };
     }
     return _cached_decoder_for_Req_contents(el);
