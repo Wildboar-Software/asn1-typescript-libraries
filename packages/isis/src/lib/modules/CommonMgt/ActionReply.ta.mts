@@ -44,7 +44,7 @@ export class ActionReply {
      * @public
      * @readonly
      */
-    readonly responseArgs: OPTIONAL<Parameter[]>
+    readonly responseArgs?: OPTIONAL<Parameter[]>
   ) {}
 
   /**

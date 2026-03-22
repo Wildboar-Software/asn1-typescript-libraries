@@ -48,7 +48,7 @@ export class CommunicationsInformation {
      * @public
      * @readonly
      */
-    readonly informationData: OPTIONAL<InformationData>
+    readonly informationData?: OPTIONAL<InformationData>
   ) {}
 
   /**
