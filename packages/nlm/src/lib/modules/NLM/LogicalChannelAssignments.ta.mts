@@ -51,19 +51,19 @@ export class LogicalChannelAssignments {
          * @public
          * @readonly
          */
-        readonly incoming: OPTIONAL<LogicalChannelRange>,
+        readonly incoming?: OPTIONAL<LogicalChannelRange>,
         /**
          * @summary `twoWay`.
          * @public
          * @readonly
          */
-        readonly twoWay: OPTIONAL<LogicalChannelRange>,
+        readonly twoWay?: OPTIONAL<LogicalChannelRange>,
         /**
          * @summary `outgoing`.
          * @public
          * @readonly
          */
-        readonly outgoing: OPTIONAL<LogicalChannelRange>
+        readonly outgoing?: OPTIONAL<LogicalChannelRange>
     ) {}
 
     /**

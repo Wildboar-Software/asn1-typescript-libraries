@@ -47,13 +47,13 @@ export class NonStandardDPS {
          * @public
          * @readonly
          */
-        readonly supportedPacketSizes: OPTIONAL<INTEGER[]>,
+        readonly supportedPacketSizes?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `selectedPacketSizes`.
          * @public
          * @readonly
          */
-        readonly selectedPacketSizes: OPTIONAL<BidirectionalValues>
+        readonly selectedPacketSizes?: OPTIONAL<BidirectionalValues>
     ) {}
 
     /**

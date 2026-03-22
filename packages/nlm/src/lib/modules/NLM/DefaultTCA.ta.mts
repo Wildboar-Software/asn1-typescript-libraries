@@ -47,13 +47,13 @@ export class DefaultTCA {
          * @public
          * @readonly
          */
-        readonly supportedThroughClasses: OPTIONAL<INTEGER[]>,
+        readonly supportedThroughClasses?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `selectedThroughputClasses`.
          * @public
          * @readonly
          */
-        readonly selectedThroughputClasses: OPTIONAL<BidirectionalValues>
+        readonly selectedThroughputClasses?: OPTIONAL<BidirectionalValues>
     ) {}
 
     /**

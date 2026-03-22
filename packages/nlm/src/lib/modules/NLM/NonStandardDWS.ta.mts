@@ -47,13 +47,13 @@ export class NonStandardDWS {
          * @public
          * @readonly
          */
-        readonly supportedWindowSizes: OPTIONAL<INTEGER[]>,
+        readonly supportedWindowSizes?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `selectedWindowSizes`.
          * @public
          * @readonly
          */
-        readonly selectedWindowSizes: OPTIONAL<BidirectionalValues>
+        readonly selectedWindowSizes?: OPTIONAL<BidirectionalValues>
     ) {}
 
     /**

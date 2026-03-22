@@ -70,13 +70,13 @@ export class ReachabilityChangeSyntax {
          * @public
          * @readonly
          */
-        readonly sNPAAddress: OPTIONAL<SNPAAddress>,
+        readonly sNPAAddress?: OPTIONAL<SNPAAddress>,
         /**
          * @summary `reason`.
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<ReachabilityChangeSyntax_reason>
+        readonly reason?: OPTIONAL<ReachabilityChangeSyntax_reason>
     ) {}
 
     /**

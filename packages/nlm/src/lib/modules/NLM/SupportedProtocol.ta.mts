@@ -53,7 +53,7 @@ export class SupportedProtocol {
          * @public
          * @readonly
          */
-        readonly defectsRepaired: OPTIONAL<OBJECT_IDENTIFIER[]>
+        readonly defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {}
 
     /**
