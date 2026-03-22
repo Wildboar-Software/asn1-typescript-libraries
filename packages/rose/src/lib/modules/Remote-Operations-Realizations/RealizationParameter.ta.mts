@@ -46,7 +46,7 @@ export class RealizationParameter {
      * @public
      * @readonly
      */
-    readonly concatenation: OPTIONAL<BOOLEAN>
+    readonly concatenation?: OPTIONAL<BOOLEAN>
   ) {}
 
   /**

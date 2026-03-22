@@ -73,7 +73,7 @@ export class ReturnError {
      * @public
      * @readonly
      */
-    readonly parameter: OPTIONAL<_Element>
+    readonly parameter?: OPTIONAL<_Element>
   ) {}
 
   /**

@@ -99,7 +99,7 @@ export class Invoke {
      * @public
      * @readonly
      */
-    readonly argument: OPTIONAL<_Element>
+    readonly argument?: OPTIONAL<_Element>
   ) {}
 
   /**
