@@ -19,13 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BiometricPara_Item
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * BiometricPara-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  */
 export
 class BiometricPara_Item {
@@ -47,13 +47,13 @@ class BiometricPara_Item {
          * @public
          * @readonly
          */
-        readonly trialNumber: OPTIONAL<INTEGER>,
+        readonly trialNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `requestQuality`.
          * @public
          * @readonly
          */
-        readonly requestQuality: OPTIONAL<INTEGER>,
+        readonly requestQuality?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -65,9 +65,9 @@ class BiometricPara_Item {
     /**
      * @summary Restructures an object into a BiometricPara_Item
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `BiometricPara_Item`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -84,9 +84,9 @@ class BiometricPara_Item {
 /**
  * @summary The Leading Root Component Types of BiometricPara_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -100,27 +100,27 @@ const _root_component_type_list_1_spec_for_BiometricPara_Item: $.ComponentSpec[]
 /**
  * @summary The Trailing Root Component Types of BiometricPara_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_BiometricPara_Item: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of BiometricPara_Item
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_BiometricPara_Item: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_BiometricPara_Item: $.ASN1Decoder<BiometricPara_Item> | null = null;
@@ -151,7 +151,7 @@ function _decode_BiometricPara_Item (el: _Element): BiometricPara_Item {
         _root_component_type_list_2_spec_for_BiometricPara_Item,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new BiometricPara_Item( 
+    return new BiometricPara_Item(
         biometricType,
         fMR_Value,
         trialNumber,

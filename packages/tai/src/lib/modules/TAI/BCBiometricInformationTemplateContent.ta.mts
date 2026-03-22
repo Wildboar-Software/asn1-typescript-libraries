@@ -19,9 +19,9 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
 /**
  * @summary BCBiometricInformationTemplateContent
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * BCBiometricInformationTemplateContent ::= SEQUENCE {
  *   biometricTemplateVersion         BiometricTemplateVersion,
@@ -31,7 +31,7 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
  *   bioTempIssuer                    BioTempIssuer OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class BCBiometricInformationTemplateContent {
@@ -53,21 +53,21 @@ class BCBiometricInformationTemplateContent {
          * @public
          * @readonly
          */
-        readonly issuerDigitalSignatureAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `bioTempIssuer`.
          * @public
          * @readonly
          */
-        readonly bioTempIssuer: OPTIONAL<BioTempIssuer>
+        readonly bioTempIssuer?: OPTIONAL<BioTempIssuer>
     ) {}
 
     /**
      * @summary Restructures an object into a BCBiometricInformationTemplateContent
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `BCBiometricInformationTemplateContent`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -84,9 +84,9 @@ class BCBiometricInformationTemplateContent {
 /**
  * @summary The Leading Root Component Types of BCBiometricInformationTemplateContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -100,27 +100,27 @@ const _root_component_type_list_1_spec_for_BCBiometricInformationTemplateContent
 /**
  * @summary The Trailing Root Component Types of BCBiometricInformationTemplateContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_BCBiometricInformationTemplateContent: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of BCBiometricInformationTemplateContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_BCBiometricInformationTemplateContent: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_BCBiometricInformationTemplateContent: $.ASN1Decoder<BCBiometricInformationTemplateContent> | null = null;
@@ -150,7 +150,7 @@ function _decode_BCBiometricInformationTemplateContent (el: _Element): BCBiometr
         _root_component_type_list_2_spec_for_BCBiometricInformationTemplateContent,
         undefined,
     );
-    return new BCBiometricInformationTemplateContent( 
+    return new BCBiometricInformationTemplateContent(
         biometricTemplateVersion,
         biometricTemplateInfo,
         issuerDigitalSignatureAlgorithm,

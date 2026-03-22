@@ -18,9 +18,9 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
 /**
  * @summary BioCert
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * BioCert ::= SEQUENCE {
  *   baseCertificateID  [0]  IssuerSerial OPTIONAL,
@@ -28,12 +28,12 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
  *   objectDigestInfo   [2]  ObjectDigestInfo OPTIONAL -- [b-ISO-IEC-TR-24722] --
  * }
  * (CONSTRAINED BY { -- at least one of baseCertificateID,
- * 
+ *
  *    -- entityName or
  *    -- objectDigestInfo shall be present 
  *    })
  * ```
- * 
+ *
  */
 export
 class BioCert {
@@ -43,27 +43,27 @@ class BioCert {
          * @public
          * @readonly
          */
-        readonly baseCertificateID: OPTIONAL<IssuerSerial>,
+        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
         /**
          * @summary `entityName`.
          * @public
          * @readonly
          */
-        readonly entityName: OPTIONAL<GeneralNames>,
+        readonly entityName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `objectDigestInfo`.
          * @public
          * @readonly
          */
-        readonly objectDigestInfo: OPTIONAL<ObjectDigestInfo>
+        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
     ) {}
 
     /**
      * @summary Restructures an object into a BioCert
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `BioCert`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -80,9 +80,9 @@ class BioCert {
 /**
  * @summary The Leading Root Component Types of BioCert
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -95,27 +95,27 @@ const _root_component_type_list_1_spec_for_BioCert: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of BioCert
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_BioCert: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of BioCert
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_BioCert: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_BioCert: $.ASN1Decoder<BioCert> | null = null;
@@ -143,7 +143,7 @@ function _decode_BioCert (el: _Element): BioCert {
         _root_component_type_list_2_spec_for_BioCert,
         undefined,
     );
-    return new BioCert( 
+    return new BioCert(
         baseCertificateID,
         entityName,
         objectDigestInfo

@@ -18,9 +18,9 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
 /**
  * @summary BioTempIssuer
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * BioTempIssuer ::= [0]  SEQUENCE {
  *   issuerName         GeneralNames OPTIONAL,
@@ -28,7 +28,7 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
  *   objectDigestInfo   [1]  ObjectDigestInfo OPTIONAL -- [b-ISO-IEC-TR-24741] --
  * }
  * ```
- * 
+ *
  */
 export
 class BioTempIssuer {
@@ -38,27 +38,27 @@ class BioTempIssuer {
          * @public
          * @readonly
          */
-        readonly issuerName: OPTIONAL<GeneralNames>,
+        readonly issuerName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `baseCertificateID`.
          * @public
          * @readonly
          */
-        readonly baseCertificateID: OPTIONAL<IssuerSerial>,
+        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
         /**
          * @summary `objectDigestInfo`.
          * @public
          * @readonly
          */
-        readonly objectDigestInfo: OPTIONAL<ObjectDigestInfo>
+        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
     ) {}
 
     /**
      * @summary Restructures an object into a BioTempIssuer
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `BioTempIssuer`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -75,9 +75,9 @@ class BioTempIssuer {
 /**
  * @summary The Leading Root Component Types of BioTempIssuer
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -90,27 +90,27 @@ const _root_component_type_list_1_spec_for_BioTempIssuer: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of BioTempIssuer
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_BioTempIssuer: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of BioTempIssuer
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_BioTempIssuer: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_BioTempIssuer: $.ASN1Decoder<BioTempIssuer> | null = null;
@@ -138,7 +138,7 @@ function _decode_BioTempIssuer (el: _Element): BioTempIssuer {
         _root_component_type_list_2_spec_for_BioTempIssuer,
         undefined,
     );
-    return new BioTempIssuer( 
+    return new BioTempIssuer(
         issuerName,
         baseCertificateID,
         objectDigestInfo
