@@ -68,31 +68,31 @@ export class ACRQ_apdu {
      * @public
      * @readonly
      */
-    readonly aso_qualifier: OPTIONAL<ASO_qualifier>,
+    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
      * @public
      * @readonly
      */
-    readonly asoi_identifier: OPTIONAL<ASOI_identifier>,
+    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
     /**
      * @summary `aSO_context_name`.
      * @public
      * @readonly
      */
-    readonly aSO_context_name: OPTIONAL<ASO_context_name>,
+    readonly aSO_context_name?: OPTIONAL<ASO_context_name>,
     /**
      * @summary `aSO_context_name_list`.
      * @public
      * @readonly
      */
-    readonly aSO_context_name_list: OPTIONAL<ASO_context_name_list>,
+    readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `p_context_definition_list`.
      * @public
      * @readonly
      */
-    readonly p_context_definition_list: OPTIONAL<Syntactic_context_list>,
+    readonly p_context_definition_list?: OPTIONAL<Syntactic_context_list>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -104,7 +104,7 @@ export class ACRQ_apdu {
      * @public
      * @readonly
      */
-    readonly user_information: OPTIONAL<User_information>
+    readonly user_information?: OPTIONAL<User_information>
   ) {}
 
   /**

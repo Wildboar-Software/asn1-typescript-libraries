@@ -166,73 +166,73 @@ export class AARE_apdu {
      * @public
      * @readonly
      */
-    readonly responding_AP_title: OPTIONAL<AP_title>,
+    readonly responding_AP_title?: OPTIONAL<AP_title>,
     /**
      * @summary `responding_AE_qualifier`.
      * @public
      * @readonly
      */
-    readonly responding_AE_qualifier: OPTIONAL<AE_qualifier>,
+    readonly responding_AE_qualifier?: OPTIONAL<AE_qualifier>,
     /**
      * @summary `responding_AP_invocation_identifier`.
      * @public
      * @readonly
      */
-    readonly responding_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
+    readonly responding_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>,
     /**
      * @summary `responding_AE_invocation_identifier`.
      * @public
      * @readonly
      */
-    readonly responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
+    readonly responding_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>,
     /**
      * @summary `responder_acse_requirements`.
      * @public
      * @readonly
      */
-    readonly responder_acse_requirements: OPTIONAL<ACSE_requirements>,
+    readonly responder_acse_requirements?: OPTIONAL<ACSE_requirements>,
     /**
      * @summary `mechanism_name`.
      * @public
      * @readonly
      */
-    readonly mechanism_name: OPTIONAL<Mechanism_name>,
+    readonly mechanism_name?: OPTIONAL<Mechanism_name>,
     /**
      * @summary `responding_authentication_value`.
      * @public
      * @readonly
      */
-    readonly responding_authentication_value: OPTIONAL<Authentication_value>,
+    readonly responding_authentication_value?: OPTIONAL<Authentication_value>,
     /**
      * @summary `aSO_context_name_list`.
      * @public
      * @readonly
      */
-    readonly aSO_context_name_list: OPTIONAL<ASO_context_name_list>,
+    readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `implementation_information`.
      * @public
      * @readonly
      */
-    readonly implementation_information: OPTIONAL<Implementation_data>,
+    readonly implementation_information?: OPTIONAL<Implementation_data>,
     /**
      * @summary `p_context_result_list`.
      * @public
      * @readonly
      */
-    readonly p_context_result_list: OPTIONAL<P_context_result_list>,
+    readonly p_context_result_list?: OPTIONAL<P_context_result_list>,
     /**
      * @summary `called_asoi_tag`.
      * @public
      * @readonly
      */
-    readonly called_asoi_tag: OPTIONAL<ASOI_tag>,
+    readonly called_asoi_tag?: OPTIONAL<ASOI_tag>,
     /**
      * @summary `calling_asoi_tag`.
      * @public
      * @readonly
      */
-    readonly calling_asoi_tag: OPTIONAL<ASOI_tag>,
+    readonly calling_asoi_tag?: OPTIONAL<ASOI_tag>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -244,7 +244,7 @@ export class AARE_apdu {
      * @public
      * @readonly
      */
-    readonly user_information: OPTIONAL<Association_data>
+    readonly user_information?: OPTIONAL<Association_data>
   ) {}
 
   /**

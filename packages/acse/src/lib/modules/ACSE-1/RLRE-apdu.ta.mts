@@ -58,19 +58,19 @@ export class RLRE_apdu {
      * @public
      * @readonly
      */
-    readonly reason: OPTIONAL<Release_response_reason>,
+    readonly reason?: OPTIONAL<Release_response_reason>,
     /**
      * @summary `aso_qualifier`.
      * @public
      * @readonly
      */
-    readonly aso_qualifier: OPTIONAL<ASO_qualifier>,
+    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
      * @public
      * @readonly
      */
-    readonly asoi_identifier: OPTIONAL<ASOI_identifier>,
+    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -82,7 +82,7 @@ export class RLRE_apdu {
      * @public
      * @readonly
      */
-    readonly user_information: OPTIONAL<Association_data>
+    readonly user_information?: OPTIONAL<Association_data>
   ) {}
 
   /**

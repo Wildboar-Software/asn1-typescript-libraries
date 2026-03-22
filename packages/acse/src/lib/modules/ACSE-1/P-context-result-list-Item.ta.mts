@@ -50,13 +50,13 @@ export class P_context_result_list_Item {
      * @public
      * @readonly
      */
-    readonly concrete_syntax_name: OPTIONAL<Concrete_syntax_name>,
+    readonly concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>,
     /**
      * @summary `provider_reason`.
      * @public
      * @readonly
      */
-    readonly provider_reason: OPTIONAL<P_context_result_list_Item_provider_reason>
+    readonly provider_reason?: OPTIONAL<P_context_result_list_Item_provider_reason>
   ) {}
 
   /**

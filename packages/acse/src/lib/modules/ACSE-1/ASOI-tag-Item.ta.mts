@@ -39,13 +39,13 @@ export class ASOI_tag_Item {
      * @public
      * @readonly
      */
-    readonly qualifier: OPTIONAL<ASO_qualifier>,
+    readonly qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `identifier`.
      * @public
      * @readonly
      */
-    readonly identifier: OPTIONAL<ASOI_identifier>
+    readonly identifier?: OPTIONAL<ASOI_identifier>
   ) {}
 
   /**
