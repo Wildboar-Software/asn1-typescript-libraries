@@ -42,7 +42,7 @@ class SMIMECapability {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>
+        readonly parameters?: OPTIONAL<_Element>
     ) {}
 
     /**
@@ -132,7 +132,7 @@ function _decode_SMIMECapability (el: _Element): SMIMECapability {
         _root_component_type_list_2_spec_for_SMIMECapability,
         undefined,
     );
-    return new SMIMECapability( 
+    return new SMIMECapability(
         capabilityID,
         parameters
     );
