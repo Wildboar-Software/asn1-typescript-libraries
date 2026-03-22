@@ -17,16 +17,16 @@ import { InformationData, _decode_InformationData, _encode_InformationData } fro
 /**
  * @summary CommunicationsInformation
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CommunicationsInformation ::= SEQUENCE {
  *   informationType  InformationType,
  *   informationData  InformationData OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class CommunicationsInformation {
@@ -42,15 +42,15 @@ class CommunicationsInformation {
          * @public
          * @readonly
          */
-        readonly informationData: OPTIONAL<InformationData>
+        readonly informationData?: OPTIONAL<InformationData>
     ) {}
 
     /**
      * @summary Restructures an object into a CommunicationsInformation
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CommunicationsInformation`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -68,9 +68,9 @@ class CommunicationsInformation {
 /**
  * @summary The Leading Root Component Types of CommunicationsInformation
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -83,28 +83,28 @@ const _root_component_type_list_1_spec_for_CommunicationsInformation: $.Componen
 /**
  * @summary The Trailing Root Component Types of CommunicationsInformation
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_CommunicationsInformation: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of CommunicationsInformation
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_CommunicationsInformation: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -132,7 +132,7 @@ function _decode_CommunicationsInformation (el: _Element): CommunicationsInforma
         _root_component_type_list_2_spec_for_CommunicationsInformation,
         undefined,
     );
-    return new CommunicationsInformation( 
+    return new CommunicationsInformation(
         informationType,
         informationData
     );
