@@ -38,13 +38,13 @@ export class HashPointer {
          * @public
          * @readonly
          */
-        readonly hash: OPTIONAL<DigestedData>,
+        readonly hash?: OPTIONAL<DigestedData>,
         /**
          * @summary `pointers`.
          * @public
          * @readonly
          */
-        readonly pointers: OPTIONAL<Pointers>
+        readonly pointers?: OPTIONAL<Pointers>
     ) {}
 
     /**

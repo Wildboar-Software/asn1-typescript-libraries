@@ -85,13 +85,13 @@ export class Signcrypter {
          * @public
          * @readonly
          */
-        readonly signatureInformation: OPTIONAL<SignatureInformation>,
+        readonly signatureInformation?: OPTIONAL<SignatureInformation>,
         /**
          * @summary `unsigncryptedAttributes`.
          * @public
          * @readonly
          */
-        readonly unsigncryptedAttributes: OPTIONAL<UnSigncryptedAttributes>
+        readonly unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>
     ) {}
 
     /**

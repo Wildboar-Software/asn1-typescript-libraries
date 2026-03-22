@@ -102,7 +102,7 @@ export class SignerInfo {
          * @public
          * @readonly
          */
-        readonly unsignedAttrs: OPTIONAL<Attributes>
+        readonly unsignedAttrs?: OPTIONAL<Attributes>
     ) {}
 
     /**

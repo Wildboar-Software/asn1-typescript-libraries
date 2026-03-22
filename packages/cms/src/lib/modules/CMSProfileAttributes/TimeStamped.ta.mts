@@ -39,7 +39,7 @@ export class TimeStamped {
          * @public
          * @readonly
          */
-        readonly timeStampService: OPTIONAL<URI>
+        readonly timeStampService?: OPTIONAL<URI>
     ) {}
 
     /**

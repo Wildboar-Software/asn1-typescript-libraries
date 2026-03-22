@@ -39,7 +39,7 @@ export class ContentInformation {
          * @public
          * @readonly
          */
-        readonly content: OPTIONAL<Content>
+        readonly content?: OPTIONAL<Content>
     ) {}
 
     /**

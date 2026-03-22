@@ -41,7 +41,7 @@ export class EncryptedContentInfoType<AlgorithmIdentifierType> {
          * @public
          * @readonly
          */
-        readonly encryptedContent: OPTIONAL<OCTET_STRING>
+        readonly encryptedContent?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

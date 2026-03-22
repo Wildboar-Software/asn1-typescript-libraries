@@ -64,7 +64,7 @@ export class NamedKeyEncryptedData {
          * @public
          * @readonly
          */
-        readonly unprotectedAttrs: OPTIONAL<Attributes>
+        readonly unprotectedAttrs?: OPTIONAL<Attributes>
     ) {}
 
     /**

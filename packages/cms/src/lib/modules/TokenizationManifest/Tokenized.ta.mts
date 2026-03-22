@@ -34,7 +34,7 @@ export class Tokenized {
          * @public
          * @readonly
          */
-        readonly parts: OPTIONAL<_Element>
+        readonly parts?: OPTIONAL<_Element>
     ) {}
 
     /**

@@ -80,7 +80,7 @@ export class EnvelopedData {
          * @public
          * @readonly
          */
-        readonly unprotectedAttrs: OPTIONAL<Attributes>,
+        readonly unprotectedAttrs?: OPTIONAL<Attributes>,
         /**
          * @summary Extensions that are not recognized.
          * @public

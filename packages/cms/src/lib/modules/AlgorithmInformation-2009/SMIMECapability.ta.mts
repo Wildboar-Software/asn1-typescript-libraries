@@ -35,7 +35,7 @@ export class SMIMECapability {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>
+        readonly parameters?: OPTIONAL<_Element>
     ) {}
 
     /**

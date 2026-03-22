@@ -42,25 +42,25 @@ export class RSASSA_PSS_params {
          * @public
          * @readonly
          */
-        readonly hashAlgorithm: OPTIONAL<HashAlgorithm>,
+        readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>,
         /**
          * @summary `maskGenAlgorithm`.
          * @public
          * @readonly
          */
-        readonly maskGenAlgorithm: OPTIONAL<MaskGenAlgorithm>,
+        readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
         /**
          * @summary `saltLength`.
          * @public
          * @readonly
          */
-        readonly saltLength: OPTIONAL<INTEGER>,
+        readonly saltLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `trailerField`.
          * @public
          * @readonly
          */
-        readonly trailerField: OPTIONAL<INTEGER>
+        readonly trailerField?: OPTIONAL<INTEGER>
     ) {}
 
     /**

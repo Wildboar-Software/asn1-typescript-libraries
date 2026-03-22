@@ -44,7 +44,7 @@ export class DatabaseServerToKeyManager {
          * @public
          * @readonly
          */
-        readonly uniqueID: OPTIONAL<UniqueIdentifier>
+        readonly uniqueID?: OPTIONAL<UniqueIdentifier>
     ) {}
 
     /**

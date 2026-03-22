@@ -47,19 +47,19 @@ export class RSAES_OAEP_params {
          * @public
          * @readonly
          */
-        readonly hashFunc: OPTIONAL<HashAlgorithm>,
+        readonly hashFunc?: OPTIONAL<HashAlgorithm>,
         /**
          * @summary `maskGenFunc`.
          * @public
          * @readonly
          */
-        readonly maskGenFunc: OPTIONAL<MaskGenAlgorithm>,
+        readonly maskGenFunc?: OPTIONAL<MaskGenAlgorithm>,
         /**
          * @summary `pSourceFunc`.
          * @public
          * @readonly
          */
-        readonly pSourceFunc: OPTIONAL<PSourceAlgorithm>
+        readonly pSourceFunc?: OPTIONAL<PSourceAlgorithm>
     ) {}
 
     /**

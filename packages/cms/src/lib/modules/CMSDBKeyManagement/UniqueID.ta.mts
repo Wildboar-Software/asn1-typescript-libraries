@@ -34,7 +34,7 @@ export class UniqueID {
          * @public
          * @readonly
          */
-        readonly type_: OPTIONAL<_Element>
+        readonly type_?: OPTIONAL<_Element>
     ) {}
 
     /**

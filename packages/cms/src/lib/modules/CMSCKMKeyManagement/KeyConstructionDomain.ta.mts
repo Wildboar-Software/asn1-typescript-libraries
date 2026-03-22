@@ -56,7 +56,7 @@ export class KeyConstructionDomain {
          * @public
          * @readonly
          */
-        readonly domainParams: OPTIONAL<DomainParams>
+        readonly domainParams?: OPTIONAL<DomainParams>
     ) {}
 
     /**
