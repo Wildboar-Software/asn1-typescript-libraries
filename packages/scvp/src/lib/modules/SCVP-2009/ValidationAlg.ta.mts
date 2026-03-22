@@ -39,7 +39,7 @@ export class ValidationAlg {
      * @public
      * @readonly
      */
-    readonly parameters: OPTIONAL<_Element>
+    readonly parameters?: OPTIONAL<_Element>
   ) {}
 
   /**

@@ -39,7 +39,7 @@ export class ValidationPolRef {
      * @public
      * @readonly
      */
-    readonly valPolParams: OPTIONAL<_Element>
+    readonly valPolParams?: OPTIONAL<_Element>
   ) {}
 
   /**

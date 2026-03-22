@@ -41,7 +41,7 @@ export class ReplyCheck {
      * @public
      * @readonly
      */
-    readonly status: OPTIONAL<INTEGER>
+    readonly status?: OPTIONAL<INTEGER>
   ) {}
 
   /**

@@ -107,43 +107,43 @@ export class Query {
      * @public
      * @readonly
      */
-    readonly responseFlags: OPTIONAL<ResponseFlags>,
+    readonly responseFlags?: OPTIONAL<ResponseFlags>,
     /**
      * @summary `serverContextInfo`.
      * @public
      * @readonly
      */
-    readonly serverContextInfo: OPTIONAL<OCTET_STRING>,
+    readonly serverContextInfo?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `validationTime`.
      * @public
      * @readonly
      */
-    readonly validationTime: OPTIONAL<GeneralizedTime>,
+    readonly validationTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `intermediateCerts`.
      * @public
      * @readonly
      */
-    readonly intermediateCerts: OPTIONAL<CertBundle>,
+    readonly intermediateCerts?: OPTIONAL<CertBundle>,
     /**
      * @summary `revInfos`.
      * @public
      * @readonly
      */
-    readonly revInfos: OPTIONAL<RevocationInfos>,
+    readonly revInfos?: OPTIONAL<RevocationInfos>,
     /**
      * @summary `producedAt`.
      * @public
      * @readonly
      */
-    readonly producedAt: OPTIONAL<GeneralizedTime>,
+    readonly producedAt?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `queryExtensions`.
      * @public
      * @readonly
      */
-    readonly queryExtensions: OPTIONAL<Extensions>
+    readonly queryExtensions?: OPTIONAL<Extensions>
   ) {}
 
   /**

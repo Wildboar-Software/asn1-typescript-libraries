@@ -40,13 +40,13 @@ export class ResponseStatus {
      * @public
      * @readonly
      */
-    readonly statusCode: OPTIONAL<CVStatusCode>,
+    readonly statusCode?: OPTIONAL<CVStatusCode>,
     /**
      * @summary `errorMessage`.
      * @public
      * @readonly
      */
-    readonly errorMessage: OPTIONAL<UTF8String>
+    readonly errorMessage?: OPTIONAL<UTF8String>
   ) {}
 
   /**

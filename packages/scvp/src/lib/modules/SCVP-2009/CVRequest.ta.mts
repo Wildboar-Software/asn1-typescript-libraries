@@ -83,49 +83,49 @@ export class CVRequest {
      * @public
      * @readonly
      */
-    readonly requestorRef: OPTIONAL<GeneralNames>,
+    readonly requestorRef?: OPTIONAL<GeneralNames>,
     /**
      * @summary `requestNonce`.
      * @public
      * @readonly
      */
-    readonly requestNonce: OPTIONAL<OCTET_STRING>,
+    readonly requestNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `requestorName`.
      * @public
      * @readonly
      */
-    readonly requestorName: OPTIONAL<GeneralName>,
+    readonly requestorName?: OPTIONAL<GeneralName>,
     /**
      * @summary `responderName`.
      * @public
      * @readonly
      */
-    readonly responderName: OPTIONAL<GeneralName>,
+    readonly responderName?: OPTIONAL<GeneralName>,
     /**
      * @summary `requestExtensions`.
      * @public
      * @readonly
      */
-    readonly requestExtensions: OPTIONAL<Extensions>,
+    readonly requestExtensions?: OPTIONAL<Extensions>,
     /**
      * @summary `signatureAlg`.
      * @public
      * @readonly
      */
-    readonly signatureAlg: OPTIONAL<AlgorithmIdentifier>,
+    readonly signatureAlg?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `hashAlg`.
      * @public
      * @readonly
      */
-    readonly hashAlg: OPTIONAL<OBJECT_IDENTIFIER>,
+    readonly hashAlg?: OPTIONAL<OBJECT_IDENTIFIER>,
     /**
      * @summary `requestorText`.
      * @public
      * @readonly
      */
-    readonly requestorText: OPTIONAL<UTF8String>
+    readonly requestorText?: OPTIONAL<UTF8String>
   ) {}
 
   /**

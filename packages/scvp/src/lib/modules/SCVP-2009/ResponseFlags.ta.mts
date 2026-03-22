@@ -37,25 +37,25 @@ export class ResponseFlags {
      * @public
      * @readonly
      */
-    readonly fullRequestInResponse: OPTIONAL<BOOLEAN>,
+    readonly fullRequestInResponse?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `responseValidationPolByRef`.
      * @public
      * @readonly
      */
-    readonly responseValidationPolByRef: OPTIONAL<BOOLEAN>,
+    readonly responseValidationPolByRef?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `protectResponse`.
      * @public
      * @readonly
      */
-    readonly protectResponse: OPTIONAL<BOOLEAN>,
+    readonly protectResponse?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `cachedResponse`.
      * @public
      * @readonly
      */
-    readonly cachedResponse: OPTIONAL<BOOLEAN>
+    readonly cachedResponse?: OPTIONAL<BOOLEAN>
   ) {}
 
   /**

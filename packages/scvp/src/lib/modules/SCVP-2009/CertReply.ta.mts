@@ -101,19 +101,19 @@ export class CertReply {
      * @public
      * @readonly
      */
-    readonly validationErrors: OPTIONAL<OBJECT_IDENTIFIER[]>,
+    readonly validationErrors?: OPTIONAL<OBJECT_IDENTIFIER[]>,
     /**
      * @summary `nextUpdate`.
      * @public
      * @readonly
      */
-    readonly nextUpdate: OPTIONAL<GeneralizedTime>,
+    readonly nextUpdate?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `certReplyExtensions`.
      * @public
      * @readonly
      */
-    readonly certReplyExtensions: OPTIONAL<Extensions>
+    readonly certReplyExtensions?: OPTIONAL<Extensions>
   ) {}
 
   /**

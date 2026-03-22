@@ -48,7 +48,7 @@ export class RevInfoWantBack {
      * @public
      * @readonly
      */
-    readonly extraCerts: OPTIONAL<CertBundle>
+    readonly extraCerts?: OPTIONAL<CertBundle>
   ) {}
 
   /**

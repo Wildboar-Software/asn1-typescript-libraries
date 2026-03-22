@@ -63,7 +63,7 @@ export class KeyAgreePublicKey {
      * @public
      * @readonly
      */
-    readonly kDF: OPTIONAL<AlgorithmIdentifier>
+    readonly kDF?: OPTIONAL<AlgorithmIdentifier>
   ) {}
 
   /**

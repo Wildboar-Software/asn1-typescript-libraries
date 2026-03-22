@@ -103,55 +103,55 @@ export class CVResponse {
      * @public
      * @readonly
      */
-    readonly respValidationPolicy: OPTIONAL<RespValidationPolicy>,
+    readonly respValidationPolicy?: OPTIONAL<RespValidationPolicy>,
     /**
      * @summary `requestRef`.
      * @public
      * @readonly
      */
-    readonly requestRef: OPTIONAL<RequestReference>,
+    readonly requestRef?: OPTIONAL<RequestReference>,
     /**
      * @summary `requestorRef`.
      * @public
      * @readonly
      */
-    readonly requestorRef: OPTIONAL<GeneralNames>,
+    readonly requestorRef?: OPTIONAL<GeneralNames>,
     /**
      * @summary `requestorName`.
      * @public
      * @readonly
      */
-    readonly requestorName: OPTIONAL<GeneralNames>,
+    readonly requestorName?: OPTIONAL<GeneralNames>,
     /**
      * @summary `replyObjects`.
      * @public
      * @readonly
      */
-    readonly replyObjects: OPTIONAL<ReplyObjects>,
+    readonly replyObjects?: OPTIONAL<ReplyObjects>,
     /**
      * @summary `respNonce`.
      * @public
      * @readonly
      */
-    readonly respNonce: OPTIONAL<OCTET_STRING>,
+    readonly respNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `serverContextInfo`.
      * @public
      * @readonly
      */
-    readonly serverContextInfo: OPTIONAL<OCTET_STRING>,
+    readonly serverContextInfo?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `cvResponseExtensions`.
      * @public
      * @readonly
      */
-    readonly cvResponseExtensions: OPTIONAL<Extensions>,
+    readonly cvResponseExtensions?: OPTIONAL<Extensions>,
     /**
      * @summary `requestorText`.
      * @public
      * @readonly
      */
-    readonly requestorText: OPTIONAL<UTF8String>
+    readonly requestorText?: OPTIONAL<UTF8String>
   ) {}
 
   /**

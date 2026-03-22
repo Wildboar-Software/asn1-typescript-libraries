@@ -62,7 +62,7 @@ export class SCVPCertID {
      * @public
      * @readonly
      */
-    readonly hashAlgorithm: OPTIONAL<HashAlgorithm>
+    readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>
   ) {}
 
   /**

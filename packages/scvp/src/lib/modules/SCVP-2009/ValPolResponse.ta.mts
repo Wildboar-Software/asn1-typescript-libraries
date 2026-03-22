@@ -204,19 +204,19 @@ export class ValPolResponse {
      * @public
      * @readonly
      */
-    readonly serverPublicKeys: OPTIONAL<KeyAgreePublicKey[]>,
+    readonly serverPublicKeys?: OPTIONAL<KeyAgreePublicKey[]>,
     /**
      * @summary `clockSkew`.
      * @public
      * @readonly
      */
-    readonly clockSkew: OPTIONAL<INTEGER>,
+    readonly clockSkew?: OPTIONAL<INTEGER>,
     /**
      * @summary `requestNonce`.
      * @public
      * @readonly
      */
-    readonly requestNonce: OPTIONAL<OCTET_STRING>
+    readonly requestNonce?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

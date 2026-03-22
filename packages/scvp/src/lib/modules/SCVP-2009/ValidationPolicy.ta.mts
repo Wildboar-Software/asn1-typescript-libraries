@@ -73,55 +73,55 @@ export class ValidationPolicy {
      * @public
      * @readonly
      */
-    readonly validationAlg: OPTIONAL<ValidationAlg>,
+    readonly validationAlg?: OPTIONAL<ValidationAlg>,
     /**
      * @summary `userPolicySet`.
      * @public
      * @readonly
      */
-    readonly userPolicySet: OPTIONAL<OBJECT_IDENTIFIER[]>,
+    readonly userPolicySet?: OPTIONAL<OBJECT_IDENTIFIER[]>,
     /**
      * @summary `inhibitPolicyMapping`.
      * @public
      * @readonly
      */
-    readonly inhibitPolicyMapping: OPTIONAL<BOOLEAN>,
+    readonly inhibitPolicyMapping?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `requireExplicitPolicy`.
      * @public
      * @readonly
      */
-    readonly requireExplicitPolicy: OPTIONAL<BOOLEAN>,
+    readonly requireExplicitPolicy?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `inhibitAnyPolicy`.
      * @public
      * @readonly
      */
-    readonly inhibitAnyPolicy: OPTIONAL<BOOLEAN>,
+    readonly inhibitAnyPolicy?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `trustAnchors`.
      * @public
      * @readonly
      */
-    readonly trustAnchors: OPTIONAL<TrustAnchors>,
+    readonly trustAnchors?: OPTIONAL<TrustAnchors>,
     /**
      * @summary `keyUsages`.
      * @public
      * @readonly
      */
-    readonly keyUsages: OPTIONAL<KeyUsage[]>,
+    readonly keyUsages?: OPTIONAL<KeyUsage[]>,
     /**
      * @summary `extendedKeyUsages`.
      * @public
      * @readonly
      */
-    readonly extendedKeyUsages: OPTIONAL<KeyPurposeId[]>,
+    readonly extendedKeyUsages?: OPTIONAL<KeyPurposeId[]>,
     /**
      * @summary `specifiedKeyUsages`.
      * @public
      * @readonly
      */
-    readonly specifiedKeyUsages: OPTIONAL<KeyPurposeId[]>
+    readonly specifiedKeyUsages?: OPTIONAL<KeyPurposeId[]>
   ) {}
 
   /**
