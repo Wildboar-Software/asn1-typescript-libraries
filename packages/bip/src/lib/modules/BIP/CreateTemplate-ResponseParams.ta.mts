@@ -49,7 +49,7 @@ export class CreateTemplate_ResponseParams {
      * @public
      * @readonly
      */
-    readonly templateUuid: OPTIONAL<BioAPI_UUID>
+    readonly templateUuid?: OPTIONAL<BioAPI_UUID>
   ) {}
 
   /**

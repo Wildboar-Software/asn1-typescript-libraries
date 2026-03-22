@@ -68,7 +68,7 @@ export class BioAPI_GUI_BITMAP {
      * @public
      * @readonly
      */
-    readonly bitmap: OPTIONAL<BioAPI_DATA>
+    readonly bitmap?: OPTIONAL<BioAPI_DATA>
   ) {}
 
   /**

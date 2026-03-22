@@ -84,13 +84,13 @@ export class Announcement {
      * @public
      * @readonly
      */
-    readonly bipMessagePort: OPTIONAL<Port>,
+    readonly bipMessagePort?: OPTIONAL<Port>,
     /**
      * @summary `securityProtocols`.
      * @public
      * @readonly
      */
-    readonly securityProtocols: OPTIONAL<SecurityProtocol[]>,
+    readonly securityProtocols?: OPTIONAL<SecurityProtocol[]>,
     /**
      * @summary Extensions that are not recognized.
      * @public

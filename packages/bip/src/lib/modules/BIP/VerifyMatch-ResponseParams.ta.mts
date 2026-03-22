@@ -63,13 +63,13 @@ export class VerifyMatch_ResponseParams {
      * @public
      * @readonly
      */
-    readonly fmrAchieved: OPTIONAL<BioAPI_FMR>,
+    readonly fmrAchieved?: OPTIONAL<BioAPI_FMR>,
     /**
      * @summary `payload`.
      * @public
      * @readonly
      */
-    readonly payload: OPTIONAL<BioAPI_DATA>
+    readonly payload?: OPTIONAL<BioAPI_DATA>
   ) {}
 
   /**

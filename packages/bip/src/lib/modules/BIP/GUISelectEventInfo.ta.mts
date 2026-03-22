@@ -176,7 +176,7 @@ export class GUISelectEventInfo {
      * @public
      * @readonly
      */
-    readonly text: OPTIONAL<UTF8String>
+    readonly text?: OPTIONAL<UTF8String>
   ) {}
 
   /**

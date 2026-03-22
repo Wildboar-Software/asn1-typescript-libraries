@@ -50,13 +50,13 @@ export class Enroll_ResponseParams {
      * @public
      * @readonly
      */
-    readonly auditData: OPTIONAL<BioAPI_BIR_HANDLE>,
+    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>,
     /**
      * @summary `templateUuid`.
      * @public
      * @readonly
      */
-    readonly templateUuid: OPTIONAL<BioAPI_UUID>
+    readonly templateUuid?: OPTIONAL<BioAPI_UUID>
   ) {}
 
   /**

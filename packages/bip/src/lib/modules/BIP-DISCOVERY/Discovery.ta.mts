@@ -58,7 +58,7 @@ export class Discovery {
      * @public
      * @readonly
      */
-    readonly masterEndPort: OPTIONAL<Port>,
+    readonly masterEndPort?: OPTIONAL<Port>,
     /**
      * @summary Extensions that are not recognized.
      * @public

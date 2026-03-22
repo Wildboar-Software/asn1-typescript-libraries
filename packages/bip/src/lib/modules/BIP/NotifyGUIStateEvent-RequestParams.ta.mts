@@ -158,13 +158,13 @@ export class NotifyGUIStateEvent_RequestParams {
      * @public
      * @readonly
      */
-    readonly bitmaps: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
+    readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
      * @public
      * @readonly
      */
-    readonly text: OPTIONAL<UTF8String>
+    readonly text?: OPTIONAL<UTF8String>
   ) {}
 
   /**

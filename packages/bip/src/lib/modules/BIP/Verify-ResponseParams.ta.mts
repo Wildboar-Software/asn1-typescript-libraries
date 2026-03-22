@@ -64,19 +64,19 @@ export class Verify_ResponseParams {
      * @public
      * @readonly
      */
-    readonly fmrAchieved: OPTIONAL<BioAPI_FMR>,
+    readonly fmrAchieved?: OPTIONAL<BioAPI_FMR>,
     /**
      * @summary `payload`.
      * @public
      * @readonly
      */
-    readonly payload: OPTIONAL<BioAPI_DATA>,
+    readonly payload?: OPTIONAL<BioAPI_DATA>,
     /**
      * @summary `auditData`.
      * @public
      * @readonly
      */
-    readonly auditData: OPTIONAL<BioAPI_BIR_HANDLE>
+    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
   ) {}
 
   /**

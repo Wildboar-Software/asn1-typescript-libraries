@@ -44,7 +44,7 @@ export class Capture_ResponseParams {
      * @public
      * @readonly
      */
-    readonly auditData: OPTIONAL<BioAPI_BIR_HANDLE>
+    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
   ) {}
 
   /**

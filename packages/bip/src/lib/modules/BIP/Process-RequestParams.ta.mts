@@ -61,7 +61,7 @@ export class Process_RequestParams {
      * @public
      * @readonly
      */
-    readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>
+    readonly outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>
   ) {}
 
   /**
