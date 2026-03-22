@@ -66,61 +66,61 @@ export class CertTemplate {
          * @public
          * @readonly
          */
-        readonly version: OPTIONAL<Version>,
+        readonly version?: OPTIONAL<Version>,
         /**
          * @summary `serialNumber`.
          * @public
          * @readonly
          */
-        readonly serialNumber: OPTIONAL<INTEGER>,
+        readonly serialNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `signingAlg`.
          * @public
          * @readonly
          */
-        readonly signingAlg: OPTIONAL<AlgorithmIdentifier>,
+        readonly signingAlg?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `issuer`.
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<Name>,
+        readonly issuer?: OPTIONAL<Name>,
         /**
          * @summary `validity`.
          * @public
          * @readonly
          */
-        readonly validity: OPTIONAL<OptionalValidity>,
+        readonly validity?: OPTIONAL<OptionalValidity>,
         /**
          * @summary `subject`.
          * @public
          * @readonly
          */
-        readonly subject: OPTIONAL<Name>,
+        readonly subject?: OPTIONAL<Name>,
         /**
          * @summary `publicKey`.
          * @public
          * @readonly
          */
-        readonly publicKey: OPTIONAL<SubjectPublicKeyInfo>,
+        readonly publicKey?: OPTIONAL<SubjectPublicKeyInfo>,
         /**
          * @summary `issuerUID`.
          * @public
          * @readonly
          */
-        readonly issuerUID: OPTIONAL<UniqueIdentifier>,
+        readonly issuerUID?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `subjectUID`.
          * @public
          * @readonly
          */
-        readonly subjectUID: OPTIONAL<UniqueIdentifier>,
+        readonly subjectUID?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

@@ -44,7 +44,7 @@ export class PKIPublicationInfo {
          * @public
          * @readonly
          */
-        readonly pubInfos: OPTIONAL<SinglePubInfo[]>
+        readonly pubInfos?: OPTIONAL<SinglePubInfo[]>
     ) {}
 
     /**

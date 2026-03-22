@@ -61,7 +61,7 @@ export class PrivateKeyInfo {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<Attributes>
+        readonly attributes?: OPTIONAL<Attributes>
     ) {}
 
     /**

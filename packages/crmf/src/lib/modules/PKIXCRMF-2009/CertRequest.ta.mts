@@ -52,7 +52,7 @@ export class CertRequest {
          * @public
          * @readonly
          */
-        readonly controls: OPTIONAL<Controls>
+        readonly controls?: OPTIONAL<Controls>
     ) {}
 
     /**

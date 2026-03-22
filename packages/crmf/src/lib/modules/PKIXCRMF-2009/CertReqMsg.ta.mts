@@ -50,13 +50,13 @@ export class CertReqMsg {
          * @public
          * @readonly
          */
-        readonly popo: OPTIONAL<ProofOfPossession>,
+        readonly popo?: OPTIONAL<ProofOfPossession>,
         /**
          * @summary `regInfo`.
          * @public
          * @readonly
          */
-        readonly regInfo: OPTIONAL<SingleAttribute[]>
+        readonly regInfo?: OPTIONAL<SingleAttribute[]>
     ) {}
 
     /**

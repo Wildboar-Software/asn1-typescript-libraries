@@ -47,7 +47,7 @@ export class SinglePubInfo {
          * @public
          * @readonly
          */
-        readonly pubLocation: OPTIONAL<GeneralName>
+        readonly pubLocation?: OPTIONAL<GeneralName>
     ) {}
 
     /**

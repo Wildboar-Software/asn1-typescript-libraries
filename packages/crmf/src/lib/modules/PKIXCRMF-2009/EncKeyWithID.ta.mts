@@ -46,7 +46,7 @@ export class EncKeyWithID {
          * @public
          * @readonly
          */
-        readonly identifier: OPTIONAL<EncKeyWithID_identifier>
+        readonly identifier?: OPTIONAL<EncKeyWithID_identifier>
     ) {}
 
     /**

@@ -32,13 +32,13 @@ export class OptionalValidity {
          * @public
          * @readonly
          */
-        readonly notBefore: OPTIONAL<Time>,
+        readonly notBefore?: OPTIONAL<Time>,
         /**
          * @summary `notAfter`.
          * @public
          * @readonly
          */
-        readonly notAfter: OPTIONAL<Time>
+        readonly notAfter?: OPTIONAL<Time>
     ) {}
 
     /**
