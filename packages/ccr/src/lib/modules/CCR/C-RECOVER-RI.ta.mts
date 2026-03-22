@@ -81,7 +81,7 @@ export class C_RECOVER_RI {
      * @public
      * @readonly
      */
-    readonly reversed_branch: OPTIONAL<BOOLEAN>,
+    readonly reversed_branch?: OPTIONAL<BOOLEAN>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -93,7 +93,7 @@ export class C_RECOVER_RI {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**

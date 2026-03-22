@@ -49,7 +49,7 @@ export class C_NOCHANGE_RI {
      * @public
      * @readonly
      */
-    readonly confirmation: OPTIONAL<C_NOCHANGE_RI_confirmation>,
+    readonly confirmation?: OPTIONAL<C_NOCHANGE_RI_confirmation>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -61,7 +61,7 @@ export class C_NOCHANGE_RI {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**

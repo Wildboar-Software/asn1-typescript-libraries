@@ -44,7 +44,7 @@ export class C_COMMIT_RC {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**

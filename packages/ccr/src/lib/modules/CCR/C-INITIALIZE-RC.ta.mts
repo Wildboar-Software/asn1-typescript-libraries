@@ -58,19 +58,19 @@ export class C_INITIALIZE_RC {
      * @public
      * @readonly
      */
-    readonly version_number: OPTIONAL<C_INITIALIZE_RC_version_number>,
+    readonly version_number?: OPTIONAL<C_INITIALIZE_RC_version_number>,
     /**
      * @summary `ccr_requirements`.
      * @public
      * @readonly
      */
-    readonly ccr_requirements: OPTIONAL<Ccr_requirements>,
+    readonly ccr_requirements?: OPTIONAL<Ccr_requirements>,
     /**
      * @summary `ready_collision_reservation`.
      * @public
      * @readonly
      */
-    readonly ready_collision_reservation: OPTIONAL<BOOLEAN>,
+    readonly ready_collision_reservation?: OPTIONAL<BOOLEAN>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -82,7 +82,7 @@ export class C_INITIALIZE_RC {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**

@@ -72,7 +72,7 @@ export class C_BEGIN_RI {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**

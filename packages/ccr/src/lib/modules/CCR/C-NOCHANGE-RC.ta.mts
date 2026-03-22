@@ -50,7 +50,7 @@ export class C_NOCHANGE_RC {
      * @public
      * @readonly
      */
-    readonly outcome: OPTIONAL<C_NOCHANGE_RC_outcome>,
+    readonly outcome?: OPTIONAL<C_NOCHANGE_RC_outcome>,
     /**
      * @summary Extensions that are not recognized.
      * @public
@@ -62,7 +62,7 @@ export class C_NOCHANGE_RC {
      * @public
      * @readonly
      */
-    readonly user_data: OPTIONAL<User_data>
+    readonly user_data?: OPTIONAL<User_data>
   ) {}
 
   /**
