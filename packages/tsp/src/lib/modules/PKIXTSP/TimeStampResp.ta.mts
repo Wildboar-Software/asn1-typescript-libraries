@@ -41,7 +41,7 @@ export class TimeStampResp {
          * @public
          * @readonly
          */
-        readonly timeStampToken: OPTIONAL<TimeStampToken>
+        readonly timeStampToken?: OPTIONAL<TimeStampToken>
     ) {}
 
     /**

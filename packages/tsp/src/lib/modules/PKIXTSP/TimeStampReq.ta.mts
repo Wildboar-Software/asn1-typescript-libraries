@@ -66,25 +66,25 @@ export class TimeStampReq {
          * @public
          * @readonly
          */
-        readonly reqPolicy: OPTIONAL<TSAPolicyId>,
+        readonly reqPolicy?: OPTIONAL<TSAPolicyId>,
         /**
          * @summary `nonce`.
          * @public
          * @readonly
          */
-        readonly nonce: OPTIONAL<OCTET_STRING>,
+        readonly nonce?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `certReq`.
          * @public
          * @readonly
          */
-        readonly certReq: OPTIONAL<BOOLEAN>,
+        readonly certReq?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

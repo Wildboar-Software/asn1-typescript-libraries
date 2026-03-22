@@ -28,19 +28,19 @@ export class Accuracy {
          * @public
          * @readonly
          */
-        readonly seconds: OPTIONAL<INTEGER>,
+        readonly seconds?: OPTIONAL<INTEGER>,
         /**
          * @summary `millis`.
          * @public
          * @readonly
          */
-        readonly millis: OPTIONAL<INTEGER>,
+        readonly millis?: OPTIONAL<INTEGER>,
         /**
          * @summary `micros`.
          * @public
          * @readonly
          */
-        readonly micros: OPTIONAL<INTEGER>
+        readonly micros?: OPTIONAL<INTEGER>
     ) {}
 
     /**

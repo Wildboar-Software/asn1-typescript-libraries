@@ -101,31 +101,31 @@ export class TSTInfo {
          * @public
          * @readonly
          */
-        readonly accuracy: OPTIONAL<Accuracy>,
+        readonly accuracy?: OPTIONAL<Accuracy>,
         /**
          * @summary `ordering`.
          * @public
          * @readonly
          */
-        readonly ordering: OPTIONAL<BOOLEAN>,
+        readonly ordering?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nonce`.
          * @public
          * @readonly
          */
-        readonly nonce: OPTIONAL<OCTET_STRING>,
+        readonly nonce?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `tsa`.
          * @public
          * @readonly
          */
-        readonly tsa: OPTIONAL<GeneralName>,
+        readonly tsa?: OPTIONAL<GeneralName>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**
