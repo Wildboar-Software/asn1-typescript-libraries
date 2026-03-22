@@ -37,13 +37,13 @@ export class BDBValidityPeriod {
      * @public
      * @readonly
      */
-    readonly not_valid_before: OPTIONAL<Date_Time>,
+    readonly not_valid_before?: OPTIONAL<Date_Time>,
     /**
      * @summary `not_valid_after`.
      * @public
      * @readonly
      */
-    readonly not_valid_after: OPTIONAL<Date_Time>
+    readonly not_valid_after?: OPTIONAL<Date_Time>
   ) {}
 
   /**

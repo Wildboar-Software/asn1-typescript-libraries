@@ -34,13 +34,13 @@ export class PatronFormat {
      * @public
      * @readonly
      */
-    readonly patron_format_owner: OPTIONAL<INTEGER>,
+    readonly patron_format_owner?: OPTIONAL<INTEGER>,
     /**
      * @summary `patron_format_type`.
      * @public
      * @readonly
      */
-    readonly patron_format_type: OPTIONAL<INTEGER>
+    readonly patron_format_type?: OPTIONAL<INTEGER>
   ) {}
 
   /**

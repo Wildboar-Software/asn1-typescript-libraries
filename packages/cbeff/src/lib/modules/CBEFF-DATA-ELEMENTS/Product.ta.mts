@@ -34,13 +34,13 @@ export class Product {
      * @public
      * @readonly
      */
-    readonly product_owner: OPTIONAL<INTEGER>,
+    readonly product_owner?: OPTIONAL<INTEGER>,
     /**
      * @summary `product_type`.
      * @public
      * @readonly
      */
-    readonly product_type: OPTIONAL<INTEGER>
+    readonly product_type?: OPTIONAL<INTEGER>
   ) {}
 
   /**

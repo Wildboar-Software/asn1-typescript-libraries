@@ -111,13 +111,13 @@ class BiometricHeaderTemplate {
          * @public
          * @readonly
          */
-        readonly birIndex: OPTIONAL<BIRIndex>,
+        readonly birIndex?: OPTIONAL<BIRIndex>,
         /**
          * @summary `matchingAlgParameters`.
          * @public
          * @readonly
          */
-        readonly matchingAlgParameters: OPTIONAL<OCTET_STRING>
+        readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

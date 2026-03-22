@@ -34,13 +34,13 @@ export class SBFormat {
      * @public
      * @readonly
      */
-    readonly sb_owner: OPTIONAL<INTEGER>,
+    readonly sb_owner?: OPTIONAL<INTEGER>,
     /**
      * @summary `sb_type`.
      * @public
      * @readonly
      */
-    readonly sb_type: OPTIONAL<INTEGER>
+    readonly sb_type?: OPTIONAL<INTEGER>
   ) {}
 
   /**

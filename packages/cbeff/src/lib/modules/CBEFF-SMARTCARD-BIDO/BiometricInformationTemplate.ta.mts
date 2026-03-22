@@ -65,13 +65,13 @@ export class BiometricInformationTemplate {
      * @public
      * @readonly
      */
-    readonly bdbReferenceData: OPTIONAL<EXTERNAL>,
+    readonly bdbReferenceData?: OPTIONAL<EXTERNAL>,
     /**
      * @summary `birPayLoad`.
      * @public
      * @readonly
      */
-    readonly birPayLoad: OPTIONAL<OCTET_STRING>
+    readonly birPayLoad?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**
