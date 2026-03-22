@@ -72,49 +72,49 @@ export class CPA_PPDU_normal_mode_parameters {
          * @public
          * @readonly
          */
-        readonly protocol_version: OPTIONAL<Protocol_version>,
+        readonly protocol_version?: OPTIONAL<Protocol_version>,
         /**
          * @summary `responding_presentation_selector`.
          * @public
          * @readonly
          */
-        readonly responding_presentation_selector: OPTIONAL<Responding_presentation_selector>,
+        readonly responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>,
         /**
          * @summary `presentation_context_definition_result_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_definition_result_list: OPTIONAL<Presentation_context_definition_result_list>,
+        readonly presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>,
         /**
          * @summary `presentation_requirements`.
          * @public
          * @readonly
          */
-        readonly presentation_requirements: OPTIONAL<Presentation_requirements>,
+        readonly presentation_requirements?: OPTIONAL<Presentation_requirements>,
         /**
          * @summary `user_session_requirements`.
          * @public
          * @readonly
          */
-        readonly user_session_requirements: OPTIONAL<User_session_requirements>,
+        readonly user_session_requirements?: OPTIONAL<User_session_requirements>,
         /**
          * @summary `protocol_options`.
          * @public
          * @readonly
          */
-        readonly protocol_options: OPTIONAL<Protocol_options>,
+        readonly protocol_options?: OPTIONAL<Protocol_options>,
         /**
          * @summary `responders_nominated_context`.
          * @public
          * @readonly
          */
-        readonly responders_nominated_context: OPTIONAL<Presentation_context_identifier>,
+        readonly responders_nominated_context?: OPTIONAL<Presentation_context_identifier>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**

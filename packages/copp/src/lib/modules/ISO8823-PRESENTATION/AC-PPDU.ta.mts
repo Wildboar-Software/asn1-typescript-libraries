@@ -51,19 +51,19 @@ export class AC_PPDU {
          * @public
          * @readonly
          */
-        readonly presentation_context_addition_list: OPTIONAL<Presentation_context_addition_list>,
+        readonly presentation_context_addition_list?: OPTIONAL<Presentation_context_addition_list>,
         /**
          * @summary `presentation_context_deletion_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_deletion_list: OPTIONAL<Presentation_context_deletion_list>,
+        readonly presentation_context_deletion_list?: OPTIONAL<Presentation_context_deletion_list>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**

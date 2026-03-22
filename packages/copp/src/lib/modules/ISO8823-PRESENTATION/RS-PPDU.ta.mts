@@ -44,13 +44,13 @@ export class RS_PPDU {
          * @public
          * @readonly
          */
-        readonly presentation_context_identifier_list: OPTIONAL<Presentation_context_identifier_list>,
+        readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**

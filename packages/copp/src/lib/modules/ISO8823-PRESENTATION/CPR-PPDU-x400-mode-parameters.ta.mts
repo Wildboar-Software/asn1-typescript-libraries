@@ -37,13 +37,13 @@ export class CPR_PPDU_x400_mode_parameters {
          * @public
          * @readonly
          */
-        readonly refuseReason: OPTIONAL<RefuseReason> /* REPLICATED_COMPONENT */,
+        readonly refuseReason?: OPTIONAL<RefuseReason> /* REPLICATED_COMPONENT */,
         /**
          * @summary `userDataRJ`.
          * @public
          * @readonly
          */
-        readonly userDataRJ: OPTIONAL<_Element> /* REPLICATED_COMPONENT */
+        readonly userDataRJ?: OPTIONAL<_Element> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

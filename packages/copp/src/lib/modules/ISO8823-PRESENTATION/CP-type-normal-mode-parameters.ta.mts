@@ -87,67 +87,67 @@ export class CP_type_normal_mode_parameters {
          * @public
          * @readonly
          */
-        readonly protocol_version: OPTIONAL<Protocol_version>,
+        readonly protocol_version?: OPTIONAL<Protocol_version>,
         /**
          * @summary `calling_presentation_selector`.
          * @public
          * @readonly
          */
-        readonly calling_presentation_selector: OPTIONAL<Calling_presentation_selector>,
+        readonly calling_presentation_selector?: OPTIONAL<Calling_presentation_selector>,
         /**
          * @summary `called_presentation_selector`.
          * @public
          * @readonly
          */
-        readonly called_presentation_selector: OPTIONAL<Called_presentation_selector>,
+        readonly called_presentation_selector?: OPTIONAL<Called_presentation_selector>,
         /**
          * @summary `presentation_context_definition_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_definition_list: OPTIONAL<Presentation_context_definition_list>,
+        readonly presentation_context_definition_list?: OPTIONAL<Presentation_context_definition_list>,
         /**
          * @summary `default_context_name`.
          * @public
          * @readonly
          */
-        readonly default_context_name: OPTIONAL<Default_context_name>,
+        readonly default_context_name?: OPTIONAL<Default_context_name>,
         /**
          * @summary `presentation_requirements`.
          * @public
          * @readonly
          */
-        readonly presentation_requirements: OPTIONAL<Presentation_requirements>,
+        readonly presentation_requirements?: OPTIONAL<Presentation_requirements>,
         /**
          * @summary `user_session_requirements`.
          * @public
          * @readonly
          */
-        readonly user_session_requirements: OPTIONAL<User_session_requirements>,
+        readonly user_session_requirements?: OPTIONAL<User_session_requirements>,
         /**
          * @summary `protocol_options`.
          * @public
          * @readonly
          */
-        readonly protocol_options: OPTIONAL<Protocol_options>,
+        readonly protocol_options?: OPTIONAL<Protocol_options>,
         /**
          * @summary `initiators_nominated_context`.
          * @public
          * @readonly
          */
-        readonly initiators_nominated_context: OPTIONAL<Presentation_context_identifier>,
+        readonly initiators_nominated_context?: OPTIONAL<Presentation_context_identifier>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CP_type_normal_mode_parameters_extensions>,
+        readonly extensions?: OPTIONAL<CP_type_normal_mode_parameters_extensions>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**

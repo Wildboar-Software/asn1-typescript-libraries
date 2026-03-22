@@ -51,19 +51,19 @@ export class ACA_PPDU {
          * @public
          * @readonly
          */
-        readonly presentation_context_addition_result_list: OPTIONAL<Presentation_context_addition_result_list>,
+        readonly presentation_context_addition_result_list?: OPTIONAL<Presentation_context_addition_result_list>,
         /**
          * @summary `presentation_context_deletion_result_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_deletion_result_list: OPTIONAL<Presentation_context_deletion_result_list>,
+        readonly presentation_context_deletion_result_list?: OPTIONAL<Presentation_context_deletion_result_list>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**

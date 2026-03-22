@@ -66,7 +66,7 @@ export class CP_type_x410_mode_parameters {
          * @public
          * @readonly
          */
-        readonly applicationProtocol: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */
+        readonly applicationProtocol?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

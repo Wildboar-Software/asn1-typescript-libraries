@@ -91,13 +91,13 @@ export class CP_type {
          * @public
          * @readonly
          */
-        readonly x410_mode_parameters: OPTIONAL<CP_type_x410_mode_parameters>,
+        readonly x410_mode_parameters?: OPTIONAL<CP_type_x410_mode_parameters>,
         /**
          * @summary `normal_mode_parameters`.
          * @public
          * @readonly
          */
-        readonly normal_mode_parameters: OPTIONAL<CP_type_normal_mode_parameters>
+        readonly normal_mode_parameters?: OPTIONAL<CP_type_normal_mode_parameters>
     ) {}
 
     /**

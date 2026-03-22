@@ -84,13 +84,13 @@ export class CPA_PPDU {
          * @public
          * @readonly
          */
-        readonly x410_mode_parameters: OPTIONAL<CPA_PPDU_x410_mode_parameters>,
+        readonly x410_mode_parameters?: OPTIONAL<CPA_PPDU_x410_mode_parameters>,
         /**
          * @summary `normal_mode_parameters`.
          * @public
          * @readonly
          */
-        readonly normal_mode_parameters: OPTIONAL<CPA_PPDU_normal_mode_parameters>
+        readonly normal_mode_parameters?: OPTIONAL<CPA_PPDU_normal_mode_parameters>
     ) {}
 
     /**

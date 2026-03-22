@@ -62,37 +62,37 @@ export class CPR_PPDU_normal_mode_parameters {
          * @public
          * @readonly
          */
-        readonly protocol_version: OPTIONAL<Protocol_version>,
+        readonly protocol_version?: OPTIONAL<Protocol_version>,
         /**
          * @summary `responding_presentation_selector`.
          * @public
          * @readonly
          */
-        readonly responding_presentation_selector: OPTIONAL<Responding_presentation_selector>,
+        readonly responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>,
         /**
          * @summary `presentation_context_definition_result_list`.
          * @public
          * @readonly
          */
-        readonly presentation_context_definition_result_list: OPTIONAL<Presentation_context_definition_result_list>,
+        readonly presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>,
         /**
          * @summary `default_context_result`.
          * @public
          * @readonly
          */
-        readonly default_context_result: OPTIONAL<Default_context_result>,
+        readonly default_context_result?: OPTIONAL<Default_context_result>,
         /**
          * @summary `provider_reason`.
          * @public
          * @readonly
          */
-        readonly provider_reason: OPTIONAL<Provider_reason>,
+        readonly provider_reason?: OPTIONAL<Provider_reason>,
         /**
          * @summary `user_data`.
          * @public
          * @readonly
          */
-        readonly user_data: OPTIONAL<User_data>
+        readonly user_data?: OPTIONAL<User_data>
     ) {}
 
     /**
