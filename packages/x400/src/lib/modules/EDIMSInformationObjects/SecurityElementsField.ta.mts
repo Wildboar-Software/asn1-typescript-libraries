@@ -55,25 +55,25 @@ export class SecurityElementsField {
          * @public
          * @readonly
          */
-        readonly original_content: OPTIONAL<Content>,
+        readonly original_content?: OPTIONAL<Content>,
         /**
          * @summary `original_content_integrity_check`.
          * @public
          * @readonly
          */
-        readonly original_content_integrity_check: OPTIONAL<ContentIntegrityCheck>,
+        readonly original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
         /**
          * @summary `edi_application_security_elements`.
          * @public
          * @readonly
          */
-        readonly edi_application_security_elements: OPTIONAL<EDIApplicationSecurityElementsField>,
+        readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
         /**
          * @summary `security_extensions`.
          * @public
          * @readonly
          */
-        readonly security_extensions: OPTIONAL<SecurityExtensionsField>
+        readonly security_extensions?: OPTIONAL<SecurityExtensionsField>
     ) {}
 
     /**

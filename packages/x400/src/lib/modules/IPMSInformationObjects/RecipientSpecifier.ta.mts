@@ -56,19 +56,19 @@ export class RecipientSpecifier {
          * @public
          * @readonly
          */
-        readonly notification_requests: OPTIONAL<NotificationRequests>,
+        readonly notification_requests?: OPTIONAL<NotificationRequests>,
         /**
          * @summary `reply_requested`.
          * @public
          * @readonly
          */
-        readonly reply_requested: OPTIONAL<BOOLEAN>,
+        readonly reply_requested?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `recipient_extensions`.
          * @public
          * @readonly
          */
-        readonly recipient_extensions: OPTIONAL<RecipientExtensionsField>
+        readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>
     ) {}
 
     /**

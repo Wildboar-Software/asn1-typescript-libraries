@@ -61,13 +61,13 @@ export class BodyPartSignatures_Item {
          * @public
          * @readonly
          */
-        readonly originator_certificate_selector: OPTIONAL<CertificateAssertion>,
+        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `originator_certificates`.
          * @public
          * @readonly
          */
-        readonly originator_certificates: OPTIONAL<ExtendedCertificates>,
+        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
         /**
          * @summary Extensions that are not recognized.
          * @public

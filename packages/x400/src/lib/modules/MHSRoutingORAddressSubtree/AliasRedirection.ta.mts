@@ -44,7 +44,7 @@ export class AliasRedirection {
          * @public
          * @readonly
          */
-        readonly edit: OPTIONAL<BOOLEAN>
+        readonly edit?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

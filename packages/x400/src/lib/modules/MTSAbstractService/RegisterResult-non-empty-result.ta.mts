@@ -39,13 +39,13 @@ export class RegisterResult_non_empty_result {
          * @public
          * @readonly
          */
-        readonly registered_information: OPTIONAL<RegisterArgument>,
+        readonly registered_information?: OPTIONAL<RegisterArgument>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

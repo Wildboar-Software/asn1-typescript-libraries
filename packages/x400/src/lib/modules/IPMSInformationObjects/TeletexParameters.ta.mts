@@ -40,19 +40,19 @@ export class TeletexParameters {
          * @public
          * @readonly
          */
-        readonly number_of_pages: OPTIONAL<INTEGER>,
+        readonly number_of_pages?: OPTIONAL<INTEGER>,
         /**
          * @summary `telex_compatible`.
          * @public
          * @readonly
          */
-        readonly telex_compatible: OPTIONAL<BOOLEAN>,
+        readonly telex_compatible?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `non_basic_parameters`.
          * @public
          * @readonly
          */
-        readonly non_basic_parameters: OPTIONAL<TeletexNonBasicParameters>
+        readonly non_basic_parameters?: OPTIONAL<TeletexNonBasicParameters>
     ) {}
 
     /**

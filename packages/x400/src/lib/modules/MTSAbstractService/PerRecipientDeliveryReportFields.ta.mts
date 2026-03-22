@@ -66,13 +66,13 @@ export class PerRecipientDeliveryReportFields {
          * @public
          * @readonly
          */
-        readonly recipient_certificate: OPTIONAL<RecipientCertificate>,
+        readonly recipient_certificate?: OPTIONAL<RecipientCertificate>,
         /**
          * @summary `proof_of_delivery`.
          * @public
          * @readonly
          */
-        readonly proof_of_delivery: OPTIONAL<ProofOfDelivery>
+        readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>
     ) {}
 
     /**

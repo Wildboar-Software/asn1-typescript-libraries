@@ -49,7 +49,7 @@ export class AuthorizationInformationField {
          * @public
          * @readonly
          */
-        readonly authorization_information_qualifier: OPTIONAL<AuthorizationInformationQualifier>
+        readonly authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>
     ) {}
 
     /**

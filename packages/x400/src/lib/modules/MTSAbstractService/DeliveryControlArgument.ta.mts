@@ -80,49 +80,49 @@ export class DeliveryControlArgument implements DeliveryControls {
          * @public
          * @readonly
          */
-        readonly restrict: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly restrict?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_operations`.
          * @public
          * @readonly
          */
-        readonly permissible_operations: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
+        readonly permissible_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_maximum_content_length`.
          * @public
          * @readonly
          */
-        readonly permissible_maximum_content_length: OPTIONAL<ContentLength> /* REPLICATED_COMPONENT */,
+        readonly permissible_maximum_content_length?: OPTIONAL<ContentLength> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_lowest_priority`.
          * @public
          * @readonly
          */
-        readonly permissible_lowest_priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly permissible_lowest_priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_content_types`.
          * @public
          * @readonly
          */
-        readonly permissible_content_types: OPTIONAL<ContentTypes> /* REPLICATED_COMPONENT */,
+        readonly permissible_content_types?: OPTIONAL<ContentTypes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly permissible_encoded_information_types: OPTIONAL<PermissibleEncodedInformationTypes> /* REPLICATED_COMPONENT */,
+        readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `permissible_security_context`.
          * @public
          * @readonly
          */
-        readonly permissible_security_context: OPTIONAL<SecurityContext> /* REPLICATED_COMPONENT */,
+        readonly permissible_security_context?: OPTIONAL<SecurityContext> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

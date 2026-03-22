@@ -67,25 +67,25 @@ export class PerReportDeliveryFields {
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
         /**
          * @summary `content_type`.
          * @public
          * @readonly
          */
-        readonly content_type: OPTIONAL<ContentType>,
+        readonly content_type?: OPTIONAL<ContentType>,
         /**
          * @summary `original_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        readonly original_encoded_information_types?: OPTIONAL<OriginalEncodedInformationTypes>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

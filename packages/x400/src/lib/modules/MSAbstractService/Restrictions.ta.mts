@@ -41,19 +41,19 @@ export class Restrictions {
          * @public
          * @readonly
          */
-        readonly allowed_content_types: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly allowed_content_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `allowed_EITs`.
          * @public
          * @readonly
          */
-        readonly allowed_EITs: OPTIONAL<MS_EITs>,
+        readonly allowed_EITs?: OPTIONAL<MS_EITs>,
         /**
          * @summary `maximum_attribute_length`.
          * @public
          * @readonly
          */
-        readonly maximum_attribute_length: OPTIONAL<INTEGER>
+        readonly maximum_attribute_length?: OPTIONAL<INTEGER>
     ) {}
 
     /**

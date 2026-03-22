@@ -37,13 +37,13 @@ export class TimeRange {
          * @public
          * @readonly
          */
-        readonly from_: OPTIONAL<CreationTime>,
+        readonly from_?: OPTIONAL<CreationTime>,
         /**
          * @summary `to`.
          * @public
          * @readonly
          */
-        readonly to: OPTIONAL<CreationTime>
+        readonly to?: OPTIONAL<CreationTime>
     ) {}
 
     /**

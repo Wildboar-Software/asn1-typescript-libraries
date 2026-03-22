@@ -39,7 +39,7 @@ export class IPMSExtension {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<_Element>
+        readonly value?: OPTIONAL<_Element>
     ) {}
 
     /**

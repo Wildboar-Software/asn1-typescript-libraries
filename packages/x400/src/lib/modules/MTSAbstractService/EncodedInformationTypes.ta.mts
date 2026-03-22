@@ -71,19 +71,19 @@ export class EncodedInformationTypes implements NonBasicParameters {
          * @public
          * @readonly
          */
-        readonly g3_facsimile: OPTIONAL<G3FacsimileNonBasicParameters> /* REPLICATED_COMPONENT */,
+        readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `teletex`.
          * @public
          * @readonly
          */
-        readonly teletex: OPTIONAL<TeletexNonBasicParameters> /* REPLICATED_COMPONENT */,
+        readonly teletex?: OPTIONAL<TeletexNonBasicParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extended_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly extended_encoded_information_types: OPTIONAL<ExtendedEncodedInformationTypes>
+        readonly extended_encoded_information_types?: OPTIONAL<ExtendedEncodedInformationTypes>
     ) {}
 
     /**

@@ -45,7 +45,7 @@ export class receive_report_ArgumentType {
          * @public
          * @readonly
          */
-        readonly undelivered_object: OPTIONAL<InformationObject>
+        readonly undelivered_object?: OPTIONAL<InformationObject>
     ) {}
 
     /**

@@ -69,13 +69,13 @@ export class ORName extends ORAddress {
          * @public
          * @readonly
          */
-        override readonly built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
+        override readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extension_attributes`.
          * @public
          * @readonly
          */
-        override readonly extension_attributes: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
+        override readonly extension_attributes?: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `directory_name`.
          * @public

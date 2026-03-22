@@ -70,7 +70,7 @@ export class MSMessageSubmissionArgument implements MessageSubmissionArgument {
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
     ) {}
 
     /**

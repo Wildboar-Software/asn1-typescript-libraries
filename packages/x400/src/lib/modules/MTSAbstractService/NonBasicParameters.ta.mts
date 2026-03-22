@@ -42,13 +42,13 @@ export class NonBasicParameters {
          * @public
          * @readonly
          */
-        readonly g3_facsimile: OPTIONAL<G3FacsimileNonBasicParameters>,
+        readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
         /**
          * @summary `teletex`.
          * @public
          * @readonly
          */
-        readonly teletex: OPTIONAL<TeletexNonBasicParameters>
+        readonly teletex?: OPTIONAL<TeletexNonBasicParameters>
     ) {}
 
     /**

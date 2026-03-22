@@ -48,19 +48,19 @@ export class EDINotificationRequestsField {
          * @public
          * @readonly
          */
-        readonly edi_notification_requests: OPTIONAL<EDINotificationRequests>,
+        readonly edi_notification_requests?: OPTIONAL<EDINotificationRequests>,
         /**
          * @summary `edi_notification_security`.
          * @public
          * @readonly
          */
-        readonly edi_notification_security: OPTIONAL<EDINotificationSecurity>,
+        readonly edi_notification_security?: OPTIONAL<EDINotificationSecurity>,
         /**
          * @summary `edi_reception_security`.
          * @public
          * @readonly
          */
-        readonly edi_reception_security: OPTIONAL<EDIReceptionSecurity>
+        readonly edi_reception_security?: OPTIONAL<EDIReceptionSecurity>
     ) {}
 
     /**

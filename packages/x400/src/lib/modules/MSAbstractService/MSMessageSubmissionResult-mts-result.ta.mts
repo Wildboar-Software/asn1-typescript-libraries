@@ -77,13 +77,13 @@ export class MSMessageSubmissionResult_mts_result implements MessageSubmissionRe
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<
+        readonly extensions?: OPTIONAL<
             ExtensionField[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -91,7 +91,7 @@ export class MSMessageSubmissionResult_mts_result implements MessageSubmissionRe
          * @public
          * @readonly
          */
-        readonly ms_message_result: OPTIONAL<CommonSubmissionResults>
+        readonly ms_message_result?: OPTIONAL<CommonSubmissionResults>
     ) {}
 
     /**

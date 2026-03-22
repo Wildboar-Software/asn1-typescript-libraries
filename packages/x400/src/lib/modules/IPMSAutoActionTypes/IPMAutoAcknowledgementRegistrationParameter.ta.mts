@@ -42,13 +42,13 @@ export class IPMAutoAcknowledgementRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly auto_acknowledge_suppl_receipt_info: OPTIONAL<SupplReceiptInfoField>,
+        readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
         /**
          * @summary `submission_options`.
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
     ) {}
 
     /**

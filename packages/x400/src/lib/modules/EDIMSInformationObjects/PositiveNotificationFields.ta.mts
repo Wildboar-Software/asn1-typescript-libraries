@@ -54,13 +54,13 @@ export class PositiveNotificationFields {
          * @public
          * @readonly
          */
-        readonly pn_supplementary_information: OPTIONAL<EDISupplementaryInformation>,
+        readonly pn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
         /**
          * @summary `pn_extensions`.
          * @public
          * @readonly
          */
-        readonly pn_extensions: OPTIONAL<PNExtensionsField>
+        readonly pn_extensions?: OPTIONAL<PNExtensionsField>
     ) {}
 
     /**

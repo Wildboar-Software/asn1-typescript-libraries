@@ -50,13 +50,13 @@ export class AttributeSelection {
          * @public
          * @readonly
          */
-        readonly from_: OPTIONAL<INTEGER>,
+        readonly from_?: OPTIONAL<INTEGER>,
         /**
          * @summary `count`.
          * @public
          * @readonly
          */
-        readonly count: OPTIONAL<INTEGER>
+        readonly count?: OPTIONAL<INTEGER>
     ) {}
 
     /**

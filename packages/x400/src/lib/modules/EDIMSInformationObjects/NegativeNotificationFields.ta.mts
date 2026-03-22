@@ -66,13 +66,13 @@ export class NegativeNotificationFields {
          * @public
          * @readonly
          */
-        readonly nn_supplementary_information: OPTIONAL<EDISupplementaryInformation>,
+        readonly nn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
         /**
          * @summary `nn_extensions`.
          * @public
          * @readonly
          */
-        readonly nn_extensions: OPTIONAL<NNExtensionsField>
+        readonly nn_extensions?: OPTIONAL<NNExtensionsField>
     ) {}
 
     /**

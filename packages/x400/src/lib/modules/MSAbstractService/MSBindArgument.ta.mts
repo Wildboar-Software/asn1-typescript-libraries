@@ -81,31 +81,31 @@ export class MSBindArgument {
          * @public
          * @readonly
          */
-        readonly security_context: OPTIONAL<SecurityContext>,
+        readonly security_context?: OPTIONAL<SecurityContext>,
         /**
          * @summary `fetch_restrictions`.
          * @public
          * @readonly
          */
-        readonly fetch_restrictions: OPTIONAL<Restrictions>,
+        readonly fetch_restrictions?: OPTIONAL<Restrictions>,
         /**
          * @summary `ms_configuration_request`.
          * @public
          * @readonly
          */
-        readonly ms_configuration_request: OPTIONAL<BOOLEAN>,
+        readonly ms_configuration_request?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `ua_registration_identifier`.
          * @public
          * @readonly
          */
-        readonly ua_registration_identifier: OPTIONAL<RegistrationIdentifier>,
+        readonly ua_registration_identifier?: OPTIONAL<RegistrationIdentifier>,
         /**
          * @summary `bind_extensions`.
          * @public
          * @readonly
          */
-        readonly bind_extensions: OPTIONAL<MSExtensions>
+        readonly bind_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

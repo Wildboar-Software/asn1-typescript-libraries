@@ -43,13 +43,13 @@ export class EDIAutoAcknowledgementRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly auto_acknowledge_suppl_receipt_info: OPTIONAL<EDISupplementaryInformation>,
+        readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<EDISupplementaryInformation>,
         /**
          * @summary `submission_options`.
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
     ) {}
 
     /**

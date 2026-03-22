@@ -41,7 +41,7 @@ export class change_auto_acknowledgment_ArgumentType {
          * @public
          * @readonly
          */
-        readonly auto_acknowledge_suppl_receipt_info: OPTIONAL<SupplementaryInformation>
+        readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<SupplementaryInformation>
     ) {}
 
     /**

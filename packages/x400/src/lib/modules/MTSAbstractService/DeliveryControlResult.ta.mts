@@ -69,19 +69,19 @@ export class DeliveryControlResult implements Waiting {
          * @public
          * @readonly
          */
-        readonly waiting_operations: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
+        readonly waiting_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
         /**
          * @summary `waiting_messages`.
          * @public
          * @readonly
          */
-        readonly waiting_messages: OPTIONAL<WaitingMessages> /* REPLICATED_COMPONENT */,
+        readonly waiting_messages?: OPTIONAL<WaitingMessages> /* REPLICATED_COMPONENT */,
         /**
          * @summary `waiting_content_types`.
          * @public
          * @readonly
          */
-        readonly waiting_content_types: OPTIONAL<
+        readonly waiting_content_types?: OPTIONAL<
             ContentType[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -89,13 +89,13 @@ export class DeliveryControlResult implements Waiting {
          * @public
          * @readonly
          */
-        readonly waiting_encoded_information_types: OPTIONAL<EncodedInformationTypes> /* REPLICATED_COMPONENT */,
+        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

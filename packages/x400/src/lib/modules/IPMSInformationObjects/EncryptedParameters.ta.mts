@@ -49,7 +49,7 @@ export class EncryptedParameters {
          * @public
          * @readonly
          */
-        readonly originator_certificates: OPTIONAL<ExtendedCertificates>,
+        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
         /**
          * @summary Extensions that are not recognized.
          * @public

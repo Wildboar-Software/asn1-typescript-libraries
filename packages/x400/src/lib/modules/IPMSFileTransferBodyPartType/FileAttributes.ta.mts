@@ -107,109 +107,109 @@ export class FileAttributes {
          * @public
          * @readonly
          */
-        readonly pathname: OPTIONAL<Pathname_Attribute>,
+        readonly pathname?: OPTIONAL<Pathname_Attribute>,
         /**
          * @summary `permitted_actions`.
          * @public
          * @readonly
          */
-        readonly permitted_actions: OPTIONAL<Permitted_Actions_Attribute>,
+        readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>,
         /**
          * @summary `storage_account`.
          * @public
          * @readonly
          */
-        readonly storage_account: OPTIONAL<Account_Attribute>,
+        readonly storage_account?: OPTIONAL<Account_Attribute>,
         /**
          * @summary `date_and_time_of_creation`.
          * @public
          * @readonly
          */
-        readonly date_and_time_of_creation: OPTIONAL<Date_and_Time_Attribute>,
+        readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>,
         /**
          * @summary `date_and_time_of_last_modification`.
          * @public
          * @readonly
          */
-        readonly date_and_time_of_last_modification: OPTIONAL<Date_and_Time_Attribute>,
+        readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>,
         /**
          * @summary `date_and_time_of_last_read_access`.
          * @public
          * @readonly
          */
-        readonly date_and_time_of_last_read_access: OPTIONAL<Date_and_Time_Attribute>,
+        readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>,
         /**
          * @summary `date_and_time_of_last_attribute_modification`.
          * @public
          * @readonly
          */
-        readonly date_and_time_of_last_attribute_modification: OPTIONAL<Date_and_Time_Attribute>,
+        readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>,
         /**
          * @summary `identity_of_creator`.
          * @public
          * @readonly
          */
-        readonly identity_of_creator: OPTIONAL<User_Identity_Attribute>,
+        readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>,
         /**
          * @summary `identity_of_last_modifier`.
          * @public
          * @readonly
          */
-        readonly identity_of_last_modifier: OPTIONAL<User_Identity_Attribute>,
+        readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>,
         /**
          * @summary `identity_of_last_reader`.
          * @public
          * @readonly
          */
-        readonly identity_of_last_reader: OPTIONAL<User_Identity_Attribute>,
+        readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>,
         /**
          * @summary `identity_of_last_attribute_modifier`.
          * @public
          * @readonly
          */
-        readonly identity_of_last_attribute_modifier: OPTIONAL<User_Identity_Attribute>,
+        readonly identity_of_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>,
         /**
          * @summary `object_availability`.
          * @public
          * @readonly
          */
-        readonly object_availability: OPTIONAL<Object_Availability_Attribute>,
+        readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
         /**
          * @summary `object_size`.
          * @public
          * @readonly
          */
-        readonly object_size: OPTIONAL<Object_Size_Attribute>,
+        readonly object_size?: OPTIONAL<Object_Size_Attribute>,
         /**
          * @summary `future_object_size`.
          * @public
          * @readonly
          */
-        readonly future_object_size: OPTIONAL<Object_Size_Attribute>,
+        readonly future_object_size?: OPTIONAL<Object_Size_Attribute>,
         /**
          * @summary `access_control`.
          * @public
          * @readonly
          */
-        readonly access_control: OPTIONAL<Access_Control_Attribute>,
+        readonly access_control?: OPTIONAL<Access_Control_Attribute>,
         /**
          * @summary `legal_qualifications`.
          * @public
          * @readonly
          */
-        readonly legal_qualifications: OPTIONAL<Legal_Qualification_Attribute>,
+        readonly legal_qualifications?: OPTIONAL<Legal_Qualification_Attribute>,
         /**
          * @summary `private_use`.
          * @public
          * @readonly
          */
-        readonly private_use: OPTIONAL<Private_Use_Attribute>,
+        readonly private_use?: OPTIONAL<Private_Use_Attribute>,
         /**
          * @summary `attribute_extensions`.
          * @public
          * @readonly
          */
-        readonly attribute_extensions: OPTIONAL<Attribute_Extensions>
+        readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
     ) {}
 
     /**

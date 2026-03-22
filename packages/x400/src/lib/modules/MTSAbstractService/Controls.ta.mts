@@ -71,43 +71,43 @@ export class Controls {
          * @public
          * @readonly
          */
-        readonly restrict: OPTIONAL<BOOLEAN>,
+        readonly restrict?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `permissible_operations`.
          * @public
          * @readonly
          */
-        readonly permissible_operations: OPTIONAL<Operations>,
+        readonly permissible_operations?: OPTIONAL<Operations>,
         /**
          * @summary `permissible_maximum_content_length`.
          * @public
          * @readonly
          */
-        readonly permissible_maximum_content_length: OPTIONAL<ContentLength>,
+        readonly permissible_maximum_content_length?: OPTIONAL<ContentLength>,
         /**
          * @summary `permissible_lowest_priority`.
          * @public
          * @readonly
          */
-        readonly permissible_lowest_priority: OPTIONAL<Priority>,
+        readonly permissible_lowest_priority?: OPTIONAL<Priority>,
         /**
          * @summary `permissible_content_types`.
          * @public
          * @readonly
          */
-        readonly permissible_content_types: OPTIONAL<ContentTypes>,
+        readonly permissible_content_types?: OPTIONAL<ContentTypes>,
         /**
          * @summary `permissible_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly permissible_encoded_information_types: OPTIONAL<PermissibleEncodedInformationTypes>,
+        readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes>,
         /**
          * @summary `permissible_security_context`.
          * @public
          * @readonly
          */
-        readonly permissible_security_context: OPTIONAL<SecurityContext>
+        readonly permissible_security_context?: OPTIONAL<SecurityContext>
     ) {}
 
     /**

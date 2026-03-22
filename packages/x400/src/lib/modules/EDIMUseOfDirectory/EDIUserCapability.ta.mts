@@ -42,13 +42,13 @@ export class EDIUserCapability {
          * @public
          * @readonly
          */
-        readonly edi_bodypart_type: OPTIONAL<EDIBodyPartType>,
+        readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
         /**
          * @summary `edi_processable_document`.
          * @public
          * @readonly
          */
-        readonly edi_processable_document: OPTIONAL<EDIProcessableDocument>
+        readonly edi_processable_document?: OPTIONAL<EDIProcessableDocument>
     ) {}
 
     /**

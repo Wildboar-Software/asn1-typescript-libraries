@@ -45,7 +45,7 @@ export class AutoActionDeregistration {
          * @public
          * @readonly
          */
-        readonly registration_identifier: OPTIONAL<INTEGER>
+        readonly registration_identifier?: OPTIONAL<INTEGER>
     ) {}
 
     /**

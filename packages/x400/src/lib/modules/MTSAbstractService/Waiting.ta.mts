@@ -55,25 +55,25 @@ export class Waiting {
          * @public
          * @readonly
          */
-        readonly waiting_operations: OPTIONAL<Operations>,
+        readonly waiting_operations?: OPTIONAL<Operations>,
         /**
          * @summary `waiting_messages`.
          * @public
          * @readonly
          */
-        readonly waiting_messages: OPTIONAL<WaitingMessages>,
+        readonly waiting_messages?: OPTIONAL<WaitingMessages>,
         /**
          * @summary `waiting_content_types`.
          * @public
          * @readonly
          */
-        readonly waiting_content_types: OPTIONAL<ContentType[]>,
+        readonly waiting_content_types?: OPTIONAL<ContentType[]>,
         /**
          * @summary `waiting_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly waiting_encoded_information_types: OPTIONAL<EncodedInformationTypes>
+        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>
     ) {}
 
     /**

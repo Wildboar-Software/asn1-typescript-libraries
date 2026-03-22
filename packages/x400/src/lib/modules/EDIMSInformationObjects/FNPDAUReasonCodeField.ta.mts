@@ -48,7 +48,7 @@ export class FNPDAUReasonCodeField {
          * @public
          * @readonly
          */
-        readonly fn_pdau_diagnostic: OPTIONAL<FNPDAUDiagnosticField>
+        readonly fn_pdau_diagnostic?: OPTIONAL<FNPDAUDiagnosticField>
     ) {}
 
     /**

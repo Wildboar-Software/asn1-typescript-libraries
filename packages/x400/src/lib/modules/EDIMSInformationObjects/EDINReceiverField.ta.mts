@@ -54,13 +54,13 @@ export class EDINReceiverField {
          * @public
          * @readonly
          */
-        readonly original_edim_identifier: OPTIONAL<EDIMIdentifier>,
+        readonly original_edim_identifier?: OPTIONAL<EDIMIdentifier>,
         /**
          * @summary `first_recipient`.
          * @public
          * @readonly
          */
-        readonly first_recipient: OPTIONAL<FirstRecipientField>
+        readonly first_recipient?: OPTIONAL<FirstRecipientField>
     ) {}
 
     /**

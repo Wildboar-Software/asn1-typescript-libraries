@@ -43,13 +43,13 @@ export class ms_bind_error_ParameterType_qualified_error {
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<GeneralString>,
+        readonly supplementary_information?: OPTIONAL<GeneralString>,
         /**
          * @summary `bind_extension_errors`.
          * @public
          * @readonly
          */
-        readonly bind_extension_errors: OPTIONAL<OBJECT_IDENTIFIER[]>
+        readonly bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {}
 
     /**

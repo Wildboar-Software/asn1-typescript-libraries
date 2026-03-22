@@ -43,13 +43,13 @@ export class ModifyResult {
          * @public
          * @readonly
          */
-        readonly entries_modified: OPTIONAL<SequenceNumber[]>,
+        readonly entries_modified?: OPTIONAL<SequenceNumber[]>,
         /**
          * @summary `modify_result_extensions`.
          * @public
          * @readonly
          */
-        readonly modify_result_extensions: OPTIONAL<MSExtensions>
+        readonly modify_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

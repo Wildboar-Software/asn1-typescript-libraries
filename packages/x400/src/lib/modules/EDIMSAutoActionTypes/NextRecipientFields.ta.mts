@@ -68,19 +68,19 @@ export class NextRecipientFields {
          * @public
          * @readonly
          */
-        readonly next_recipient_action_request: OPTIONAL<ActionRequestField>,
+        readonly next_recipient_action_request?: OPTIONAL<ActionRequestField>,
         /**
          * @summary `next_recipient_edi_notification_requests_field`.
          * @public
          * @readonly
          */
-        readonly next_recipient_edi_notification_requests_field: OPTIONAL<EDINotificationRequestsField>,
+        readonly next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
         /**
          * @summary `next_responsibility_passing_allowed`.
          * @public
          * @readonly
          */
-        readonly next_responsibility_passing_allowed: OPTIONAL<ResponsibilityPassingAllowedField>
+        readonly next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>
     ) {}
 
     /**

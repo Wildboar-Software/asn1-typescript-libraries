@@ -71,19 +71,19 @@ export class IPMAutoAdviseRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly suppress_subsequent_notifications: OPTIONAL<BOOLEAN>,
+        readonly suppress_subsequent_notifications?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `use_ipm_if_an_not_supported`.
          * @public
          * @readonly
          */
-        readonly use_ipm_if_an_not_supported: OPTIONAL<BOOLEAN>,
+        readonly use_ipm_if_an_not_supported?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `submission_options`.
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
     ) {}
 
     /**

@@ -50,19 +50,19 @@ export class MessageDeliveryResult {
          * @public
          * @readonly
          */
-        readonly recipient_certificate: OPTIONAL<RecipientCertificate>,
+        readonly recipient_certificate?: OPTIONAL<RecipientCertificate>,
         /**
          * @summary `proof_of_delivery`.
          * @public
          * @readonly
          */
-        readonly proof_of_delivery: OPTIONAL<ProofOfDelivery>,
+        readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -52,25 +52,25 @@ export class FetchResult {
          * @public
          * @readonly
          */
-        readonly entry_information: OPTIONAL<EntryInformation>,
+        readonly entry_information?: OPTIONAL<EntryInformation>,
         /**
          * @summary `list`.
          * @public
          * @readonly
          */
-        readonly list: OPTIONAL<SequenceNumber[]>,
+        readonly list?: OPTIONAL<SequenceNumber[]>,
         /**
          * @summary `next`.
          * @public
          * @readonly
          */
-        readonly next: OPTIONAL<SequenceNumber>,
+        readonly next?: OPTIONAL<SequenceNumber>,
         /**
          * @summary `fetch_result_extensions`.
          * @public
          * @readonly
          */
-        readonly fetch_result_extensions: OPTIONAL<MSExtensions>
+        readonly fetch_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

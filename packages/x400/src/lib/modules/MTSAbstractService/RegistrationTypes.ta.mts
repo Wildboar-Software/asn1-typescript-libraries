@@ -47,13 +47,13 @@ export class RegistrationTypes {
          * @public
          * @readonly
          */
-        readonly standard_parameters: OPTIONAL<RegistrationTypes_standard_parameters>,
+        readonly standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionType[]>
+        readonly extensions?: OPTIONAL<ExtensionType[]>
     ) {}
 
     /**

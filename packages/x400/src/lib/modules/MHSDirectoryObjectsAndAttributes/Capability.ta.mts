@@ -57,25 +57,25 @@ export class Capability {
          * @public
          * @readonly
          */
-        readonly content_types: OPTIONAL<ExtendedContentType[]>,
+        readonly content_types?: OPTIONAL<ExtendedContentType[]>,
         /**
          * @summary `maximum_content_length`.
          * @public
          * @readonly
          */
-        readonly maximum_content_length: OPTIONAL<ContentLength>,
+        readonly maximum_content_length?: OPTIONAL<ContentLength>,
         /**
          * @summary `encoded_information_types_constraints`.
          * @public
          * @readonly
          */
-        readonly encoded_information_types_constraints: OPTIONAL<EncodedInformationTypesConstraints>,
+        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
         /**
          * @summary `security_labels`.
          * @public
          * @readonly
          */
-        readonly security_labels: OPTIONAL<SecurityContext>,
+        readonly security_labels?: OPTIONAL<SecurityContext>,
         /**
          * @summary Extensions that are not recognized.
          * @public

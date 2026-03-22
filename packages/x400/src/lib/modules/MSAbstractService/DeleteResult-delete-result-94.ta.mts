@@ -39,13 +39,13 @@ export class DeleteResult_delete_result_94 {
          * @public
          * @readonly
          */
-        readonly entries_deleted: OPTIONAL<SequenceNumber[]>,
+        readonly entries_deleted?: OPTIONAL<SequenceNumber[]>,
         /**
          * @summary `delete_result_extensions`.
          * @public
          * @readonly
          */
-        readonly delete_result_extensions: OPTIONAL<MSExtensions>
+        readonly delete_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

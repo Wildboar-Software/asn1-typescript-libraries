@@ -75,43 +75,43 @@ export class Register88 {
          * @public
          * @readonly
          */
-        readonly user_name: OPTIONAL<UserName>,
+        readonly user_name?: OPTIONAL<UserName>,
         /**
          * @summary `user_address`.
          * @public
          * @readonly
          */
-        readonly user_address: OPTIONAL<UserAddress>,
+        readonly user_address?: OPTIONAL<UserAddress>,
         /**
          * @summary `deliverable_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly deliverable_encoded_information_types: OPTIONAL<EncodedInformationTypes>,
+        readonly deliverable_encoded_information_types?: OPTIONAL<EncodedInformationTypes>,
         /**
          * @summary `deliverable_maximum_content_length`.
          * @public
          * @readonly
          */
-        readonly deliverable_maximum_content_length: OPTIONAL<ContentLength>,
+        readonly deliverable_maximum_content_length?: OPTIONAL<ContentLength>,
         /**
          * @summary `default_delivery_controls`.
          * @public
          * @readonly
          */
-        readonly default_delivery_controls: OPTIONAL<DefaultDeliveryControls>,
+        readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
         /**
          * @summary `deliverable_content_types`.
          * @public
          * @readonly
          */
-        readonly deliverable_content_types: OPTIONAL<ContentTypes>,
+        readonly deliverable_content_types?: OPTIONAL<ContentTypes>,
         /**
          * @summary `labels_and_redirections`.
          * @public
          * @readonly
          */
-        readonly labels_and_redirections: OPTIONAL<LabelAndRedirection[]>
+        readonly labels_and_redirections?: OPTIONAL<LabelAndRedirection[]>
     ) {}
 
     /**

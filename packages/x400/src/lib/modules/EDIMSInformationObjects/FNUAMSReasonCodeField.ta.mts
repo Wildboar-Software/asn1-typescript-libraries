@@ -55,13 +55,13 @@ export class FNUAMSReasonCodeField {
          * @public
          * @readonly
          */
-        readonly fn_ua_ms_diagnostic: OPTIONAL<FNUAMSDiagnosticField>,
+        readonly fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>,
         /**
          * @summary `fn_security_check`.
          * @public
          * @readonly
          */
-        readonly fn_security_check: OPTIONAL<FNUAMSSecurityCheckField>
+        readonly fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>
     ) {}
 
     /**

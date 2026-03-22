@@ -49,13 +49,13 @@ export class AlgorithmInformation {
          * @public
          * @readonly
          */
-        readonly originator_certificate_selector: OPTIONAL<CertificateAssertion>,
+        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `recipient_certificate_selector`.
          * @public
          * @readonly
          */
-        readonly recipient_certificate_selector: OPTIONAL<CertificateAssertion>
+        readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>
     ) {}
 
     /**

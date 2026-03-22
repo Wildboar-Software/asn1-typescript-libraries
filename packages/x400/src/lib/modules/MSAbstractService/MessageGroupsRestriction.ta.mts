@@ -40,19 +40,19 @@ export class MessageGroupsRestriction {
          * @public
          * @readonly
          */
-        readonly parent_group: OPTIONAL<MessageGroupName>,
+        readonly parent_group?: OPTIONAL<MessageGroupName>,
         /**
          * @summary `immediate_descendants_only`.
          * @public
          * @readonly
          */
-        readonly immediate_descendants_only: OPTIONAL<BOOLEAN>,
+        readonly immediate_descendants_only?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `omit_descriptors`.
          * @public
          * @readonly
          */
-        readonly omit_descriptors: OPTIONAL<BOOLEAN>
+        readonly omit_descriptors?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

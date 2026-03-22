@@ -52,7 +52,7 @@ export class ChangeOfAddressAdvice {
          * @public
          * @readonly
          */
-        readonly effective_from: OPTIONAL<Time>
+        readonly effective_from?: OPTIONAL<Time>
     ) {}
 
     /**

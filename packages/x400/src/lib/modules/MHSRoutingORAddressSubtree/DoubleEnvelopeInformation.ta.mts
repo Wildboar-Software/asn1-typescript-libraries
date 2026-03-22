@@ -62,7 +62,7 @@ export class DoubleEnvelopeInformation {
          * @public
          * @readonly
          */
-        readonly key_encryption_algorithm_preference: OPTIONAL<
+        readonly key_encryption_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
         /**
@@ -70,7 +70,7 @@ export class DoubleEnvelopeInformation {
          * @public
          * @readonly
          */
-        readonly message_origin_algorithm_preference: OPTIONAL<
+        readonly message_origin_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
         /**
@@ -78,7 +78,7 @@ export class DoubleEnvelopeInformation {
          * @public
          * @readonly
          */
-        readonly token_signature_algorithm_preference: OPTIONAL<
+        readonly token_signature_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
         /**

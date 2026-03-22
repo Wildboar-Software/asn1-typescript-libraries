@@ -55,31 +55,31 @@ export class Selector {
          * @public
          * @readonly
          */
-        readonly child_entries: OPTIONAL<BOOLEAN>,
+        readonly child_entries?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `range`.
          * @public
          * @readonly
          */
-        readonly range: OPTIONAL<Range>,
+        readonly range?: OPTIONAL<Range>,
         /**
          * @summary `filter`.
          * @public
          * @readonly
          */
-        readonly filter: OPTIONAL<Filter>,
+        readonly filter?: OPTIONAL<Filter>,
         /**
          * @summary `limit`.
          * @public
          * @readonly
          */
-        readonly limit: OPTIONAL<INTEGER>,
+        readonly limit?: OPTIONAL<INTEGER>,
         /**
          * @summary `override`.
          * @public
          * @readonly
          */
-        readonly override: OPTIONAL<OverrideRestrictions>
+        readonly override?: OPTIONAL<OverrideRestrictions>
     ) {}
 
     /**

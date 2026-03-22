@@ -52,25 +52,25 @@ export class MSSubmissionOptions {
          * @public
          * @readonly
          */
-        readonly object_entry_class: OPTIONAL<EntryClass>,
+        readonly object_entry_class?: OPTIONAL<EntryClass>,
         /**
          * @summary `disable_auto_modify`.
          * @public
          * @readonly
          */
-        readonly disable_auto_modify: OPTIONAL<BOOLEAN>,
+        readonly disable_auto_modify?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `add_message_group_names`.
          * @public
          * @readonly
          */
-        readonly add_message_group_names: OPTIONAL<MessageGroupName[]>,
+        readonly add_message_group_names?: OPTIONAL<MessageGroupName[]>,
         /**
          * @summary `ms_submission_extensions`.
          * @public
          * @readonly
          */
-        readonly ms_submission_extensions: OPTIONAL<MSExtensions>
+        readonly ms_submission_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

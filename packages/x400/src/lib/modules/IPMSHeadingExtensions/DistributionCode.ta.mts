@@ -44,19 +44,19 @@ export class DistributionCode {
          * @public
          * @readonly
          */
-        readonly oid_code: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly oid_code?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `alphanumeric_code`.
          * @public
          * @readonly
          */
-        readonly alphanumeric_code: OPTIONAL<AlphaCode>,
+        readonly alphanumeric_code?: OPTIONAL<AlphaCode>,
         /**
          * @summary `or_descriptor`.
          * @public
          * @readonly
          */
-        readonly or_descriptor: OPTIONAL<ORDescriptor>
+        readonly or_descriptor?: OPTIONAL<ORDescriptor>
     ) {}
 
     /**

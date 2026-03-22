@@ -60,37 +60,37 @@ export class Register_MSResult_registered_information {
          * @public
          * @readonly
          */
-        readonly auto_action_registrations: OPTIONAL<AutoActionRegistration[]>,
+        readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
         /**
          * @summary `list_attribute_defaults`.
          * @public
          * @readonly
          */
-        readonly list_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `fetch_attribute_defaults`.
          * @public
          * @readonly
          */
-        readonly fetch_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `ua_registrations`.
          * @public
          * @readonly
          */
-        readonly ua_registrations: OPTIONAL<UARegistration[]>,
+        readonly ua_registrations?: OPTIONAL<UARegistration[]>,
         /**
          * @summary `submission_defaults`.
          * @public
          * @readonly
          */
-        readonly submission_defaults: OPTIONAL<MSSubmissionOptions>,
+        readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>,
         /**
          * @summary `message_group_registrations`.
          * @public
          * @readonly
          */
-        readonly message_group_registrations: OPTIONAL<
+        readonly message_group_registrations?: OPTIONAL<
             MessageGroupNameAndDescriptor[]
         >,
         /**
@@ -98,7 +98,7 @@ export class Register_MSResult_registered_information {
          * @public
          * @readonly
          */
-        readonly register_ms_result_extensions: OPTIONAL<MSExtensions>
+        readonly register_ms_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

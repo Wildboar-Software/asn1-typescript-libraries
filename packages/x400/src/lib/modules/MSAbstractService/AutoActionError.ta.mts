@@ -47,7 +47,7 @@ export class AutoActionError {
          * @public
          * @readonly
          */
-        readonly error_parameter: OPTIONAL<_Element>
+        readonly error_parameter?: OPTIONAL<_Element>
     ) {}
 
     /**

@@ -45,7 +45,7 @@ export class delete_error_ParameterType {
          * @public
          * @readonly
          */
-        readonly entries_deleted: OPTIONAL<SequenceNumber[]>
+        readonly entries_deleted?: OPTIONAL<SequenceNumber[]>
     ) {}
 
     /**

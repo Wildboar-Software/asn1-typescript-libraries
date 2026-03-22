@@ -66,25 +66,25 @@ export class Access_Control_Element {
          * @public
          * @readonly
          */
-        readonly concurrency_access: OPTIONAL<Concurrency_Access>,
+        readonly concurrency_access?: OPTIONAL<Concurrency_Access>,
         /**
          * @summary `identity`.
          * @public
          * @readonly
          */
-        readonly identity: OPTIONAL<User_Identity>,
+        readonly identity?: OPTIONAL<User_Identity>,
         /**
          * @summary `passwords`.
          * @public
          * @readonly
          */
-        readonly passwords: OPTIONAL<Access_Passwords>,
+        readonly passwords?: OPTIONAL<Access_Passwords>,
         /**
          * @summary `location`.
          * @public
          * @readonly
          */
-        readonly location: OPTIONAL<Application_Entity_Title>
+        readonly location?: OPTIONAL<Application_Entity_Title>
     ) {}
 
     /**

@@ -40,31 +40,31 @@ export class TeletexNonBasicParameters {
          * @public
          * @readonly
          */
-        readonly graphic_character_sets: OPTIONAL<TeletexString>,
+        readonly graphic_character_sets?: OPTIONAL<TeletexString>,
         /**
          * @summary `control_character_sets`.
          * @public
          * @readonly
          */
-        readonly control_character_sets: OPTIONAL<TeletexString>,
+        readonly control_character_sets?: OPTIONAL<TeletexString>,
         /**
          * @summary `page_formats`.
          * @public
          * @readonly
          */
-        readonly page_formats: OPTIONAL<OCTET_STRING>,
+        readonly page_formats?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `miscellaneous_terminal_capabilities`.
          * @public
          * @readonly
          */
-        readonly miscellaneous_terminal_capabilities: OPTIONAL<TeletexString>,
+        readonly miscellaneous_terminal_capabilities?: OPTIONAL<TeletexString>,
         /**
          * @summary `private_use`.
          * @public
          * @readonly
          */
-        readonly private_use: OPTIONAL<OCTET_STRING>
+        readonly private_use?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

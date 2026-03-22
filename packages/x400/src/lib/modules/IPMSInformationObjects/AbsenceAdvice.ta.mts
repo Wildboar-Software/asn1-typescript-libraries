@@ -42,13 +42,13 @@ export class AbsenceAdvice {
          * @public
          * @readonly
          */
-        readonly advice: OPTIONAL<BodyPart>,
+        readonly advice?: OPTIONAL<BodyPart>,
         /**
          * @summary `next_available`.
          * @public
          * @readonly
          */
-        readonly next_available: OPTIONAL<Time>
+        readonly next_available?: OPTIONAL<Time>
     ) {}
 
     /**

@@ -48,7 +48,7 @@ export class RecipientReferenceField {
          * @public
          * @readonly
          */
-        readonly recipient_reference_qualifier: OPTIONAL<RecipientReferenceQualifier>
+        readonly recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>
     ) {}
 
     /**

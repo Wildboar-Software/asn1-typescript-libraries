@@ -48,7 +48,7 @@ export class NNPDAUReasonCodeField {
          * @public
          * @readonly
          */
-        readonly nn_pdau_diagnostic: OPTIONAL<NNPDAUDiagnosticField>
+        readonly nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>
     ) {}
 
     /**

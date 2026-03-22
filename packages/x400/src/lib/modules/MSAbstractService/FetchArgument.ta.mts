@@ -70,13 +70,13 @@ export class FetchArgument {
          * @public
          * @readonly
          */
-        readonly requested_attributes: OPTIONAL<EntryInformationSelection>,
+        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `fetch_extensions`.
          * @public
          * @readonly
          */
-        readonly fetch_extensions: OPTIONAL<MSExtensions>
+        readonly fetch_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

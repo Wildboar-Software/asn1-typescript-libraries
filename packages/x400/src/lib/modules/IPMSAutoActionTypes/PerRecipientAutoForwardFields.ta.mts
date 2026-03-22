@@ -69,13 +69,13 @@ export class PerRecipientAutoForwardFields {
          * @public
          * @readonly
          */
-        readonly explicit_conversion: OPTIONAL<ExplicitConversion>,
+        readonly explicit_conversion?: OPTIONAL<ExplicitConversion>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

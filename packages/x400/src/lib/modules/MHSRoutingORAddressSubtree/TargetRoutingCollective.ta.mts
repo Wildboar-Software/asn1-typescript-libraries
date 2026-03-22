@@ -49,7 +49,7 @@ export class TargetRoutingCollective {
          * @public
          * @readonly
          */
-        readonly local_user_identifier: OPTIONAL<UniversalOrBMPString>
+        readonly local_user_identifier?: OPTIONAL<UniversalOrBMPString>
     ) {}
 
     /**

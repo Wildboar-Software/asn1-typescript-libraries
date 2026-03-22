@@ -60,7 +60,7 @@ export class GlobalDomainIdentifier {
          * @public
          * @readonly
          */
-        readonly private_domain_identifier: OPTIONAL<PrivateDomainIdentifier>
+        readonly private_domain_identifier?: OPTIONAL<PrivateDomainIdentifier>
     ) {}
 
     /**

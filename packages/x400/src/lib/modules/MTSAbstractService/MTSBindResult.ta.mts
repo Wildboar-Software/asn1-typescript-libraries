@@ -74,7 +74,7 @@ export class MTSBindResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

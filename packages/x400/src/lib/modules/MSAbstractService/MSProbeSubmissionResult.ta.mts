@@ -82,13 +82,13 @@ export class MSProbeSubmissionResult implements ProbeSubmissionResult {
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<
+        readonly extensions?: OPTIONAL<
             ExtensionField[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -96,7 +96,7 @@ export class MSProbeSubmissionResult implements ProbeSubmissionResult {
          * @public
          * @readonly
          */
-        readonly ms_probe_result: OPTIONAL<CommonSubmissionResults>
+        readonly ms_probe_result?: OPTIONAL<CommonSubmissionResults>
     ) {}
 
     /**

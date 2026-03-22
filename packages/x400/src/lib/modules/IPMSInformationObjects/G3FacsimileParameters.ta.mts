@@ -38,13 +38,13 @@ export class G3FacsimileParameters {
          * @public
          * @readonly
          */
-        readonly number_of_pages: OPTIONAL<INTEGER>,
+        readonly number_of_pages?: OPTIONAL<INTEGER>,
         /**
          * @summary `non_basic_parameters`.
          * @public
          * @readonly
          */
-        readonly non_basic_parameters: OPTIONAL<G3FacsimileNonBasicParameters>
+        readonly non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>
     ) {}
 
     /**

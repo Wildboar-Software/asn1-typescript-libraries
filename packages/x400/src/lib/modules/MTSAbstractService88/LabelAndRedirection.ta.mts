@@ -43,13 +43,13 @@ export class LabelAndRedirection {
          * @public
          * @readonly
          */
-        readonly user_security_label: OPTIONAL<UserSecurityLabel>,
+        readonly user_security_label?: OPTIONAL<UserSecurityLabel>,
         /**
          * @summary `recipient_assigned_alternate_recipient`.
          * @public
          * @readonly
          */
-        readonly recipient_assigned_alternate_recipient: OPTIONAL<RecipientAssignedAlternateRecipient>
+        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
     ) {}
 
     /**

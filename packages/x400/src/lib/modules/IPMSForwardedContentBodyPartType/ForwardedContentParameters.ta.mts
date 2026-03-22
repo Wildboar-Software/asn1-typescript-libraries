@@ -54,25 +54,25 @@ export class ForwardedContentParameters {
          * @public
          * @readonly
          */
-        readonly delivery_time: OPTIONAL<MessageDeliveryTime>,
+        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
         /**
          * @summary `delivery_envelope`.
          * @public
          * @readonly
          */
-        readonly delivery_envelope: OPTIONAL<OtherMessageDeliveryFields>,
+        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
         /**
          * @summary `mts_identifier`.
          * @public
          * @readonly
          */
-        readonly mts_identifier: OPTIONAL<MessageDeliveryIdentifier>,
+        readonly mts_identifier?: OPTIONAL<MessageDeliveryIdentifier>,
         /**
          * @summary `submission_proof`.
          * @public
          * @readonly
          */
-        readonly submission_proof: OPTIONAL<SubmissionProof>
+        readonly submission_proof?: OPTIONAL<SubmissionProof>
     ) {}
 
     /**

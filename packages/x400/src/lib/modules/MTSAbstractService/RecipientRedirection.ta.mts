@@ -44,13 +44,13 @@ export class RecipientRedirection {
          * @public
          * @readonly
          */
-        readonly redirection_classes: OPTIONAL<RedirectionClass[]>,
+        readonly redirection_classes?: OPTIONAL<RedirectionClass[]>,
         /**
          * @summary `recipient_assigned_alternate_recipient`.
          * @public
          * @readonly
          */
-        readonly recipient_assigned_alternate_recipient: OPTIONAL<RecipientAssignedAlternateRecipient>
+        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
     ) {}
 
     /**

@@ -54,13 +54,13 @@ export class NonDeliveryInformation {
          * @public
          * @readonly
          */
-        readonly diagnostic: OPTIONAL<NonDeliveryDiagnosticCode>,
+        readonly diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>,
         /**
          * @summary `supplementary_information`.
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<SupplementaryInformation>
+        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>
     ) {}
 
     /**

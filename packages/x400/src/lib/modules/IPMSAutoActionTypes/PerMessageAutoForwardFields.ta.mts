@@ -43,11 +43,11 @@ import {
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
 
 export interface PerMessageAutoForwardFields {
-    readonly originator_name: OriginatorName;
-    readonly content_identifier: OPTIONAL<ContentIdentifier>;
-    readonly priority: OPTIONAL<Priority>;
-    readonly per_message_indicators: OPTIONAL<PerMessageIndicators>;
-    readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>;
+    readonly originator_name?: OriginatorName;
+    readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    readonly priority?: OPTIONAL<Priority>;
+    readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>;
+    readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>;
 }
 
 /**
@@ -77,37 +77,37 @@ export class PerMessageAutoForwardFields {
          * @public
          * @readonly
          */
-        readonly originator_name: OriginatorName,
+        readonly originator_name?: OriginatorName,
         /**
          * @summary `content_identifier`.
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
         /**
          * @summary `priority`.
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `per_message_indicators`.
          * @public
          * @readonly
          */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>,
         /**
          * @summary `deferred_delivery_time`.
          * @public
          * @readonly
          */
-        readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
+        readonly deferred_delivery_time?: OPTIONAL<DeferredDeliveryTime>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

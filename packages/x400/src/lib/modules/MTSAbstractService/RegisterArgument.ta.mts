@@ -80,49 +80,49 @@ export class RegisterArgument {
          * @public
          * @readonly
          */
-        readonly user_name: OPTIONAL<UserName>,
+        readonly user_name?: OPTIONAL<UserName>,
         /**
          * @summary `user_address`.
          * @public
          * @readonly
          */
-        readonly user_address: OPTIONAL<UserAddress>,
+        readonly user_address?: OPTIONAL<UserAddress>,
         /**
          * @summary `deliverable_class`.
          * @public
          * @readonly
          */
-        readonly deliverable_class: OPTIONAL<DeliverableClass[]>,
+        readonly deliverable_class?: OPTIONAL<DeliverableClass[]>,
         /**
          * @summary `default_delivery_controls`.
          * @public
          * @readonly
          */
-        readonly default_delivery_controls: OPTIONAL<DefaultDeliveryControls>,
+        readonly default_delivery_controls?: OPTIONAL<DefaultDeliveryControls>,
         /**
          * @summary `redirections`.
          * @public
          * @readonly
          */
-        readonly redirections: OPTIONAL<Redirections>,
+        readonly redirections?: OPTIONAL<Redirections>,
         /**
          * @summary `restricted_delivery`.
          * @public
          * @readonly
          */
-        readonly restricted_delivery: OPTIONAL<RestrictedDelivery>,
+        readonly restricted_delivery?: OPTIONAL<RestrictedDelivery>,
         /**
          * @summary `retrieve_registrations`.
          * @public
          * @readonly
          */
-        readonly retrieve_registrations: OPTIONAL<RegistrationTypes>,
+        readonly retrieve_registrations?: OPTIONAL<RegistrationTypes>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

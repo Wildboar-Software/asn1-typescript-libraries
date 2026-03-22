@@ -74,37 +74,37 @@ export class FileTransferParameters {
          * @public
          * @readonly
          */
-        readonly related_stored_file: OPTIONAL<RelatedStoredFile>,
+        readonly related_stored_file?: OPTIONAL<RelatedStoredFile>,
         /**
          * @summary `contents_type`.
          * @public
          * @readonly
          */
-        readonly contents_type: OPTIONAL<ContentsTypeParameter>,
+        readonly contents_type?: OPTIONAL<ContentsTypeParameter>,
         /**
          * @summary `environment`.
          * @public
          * @readonly
          */
-        readonly environment: OPTIONAL<EnvironmentParameter>,
+        readonly environment?: OPTIONAL<EnvironmentParameter>,
         /**
          * @summary `compression`.
          * @public
          * @readonly
          */
-        readonly compression: OPTIONAL<CompressionParameter>,
+        readonly compression?: OPTIONAL<CompressionParameter>,
         /**
          * @summary `file_attributes`.
          * @public
          * @readonly
          */
-        readonly file_attributes: OPTIONAL<FileAttributes>,
+        readonly file_attributes?: OPTIONAL<FileAttributes>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionsField>
+        readonly extensions?: OPTIONAL<ExtensionsField>
     ) {}
 
     /**

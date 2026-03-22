@@ -161,109 +161,109 @@ export class Heading {
          * @public
          * @readonly
          */
-        readonly originator: OPTIONAL<OriginatorField>,
+        readonly originator?: OPTIONAL<OriginatorField>,
         /**
          * @summary `recipients`.
          * @public
          * @readonly
          */
-        readonly recipients: OPTIONAL<RecipientsField>,
+        readonly recipients?: OPTIONAL<RecipientsField>,
         /**
          * @summary `edin_receiver`.
          * @public
          * @readonly
          */
-        readonly edin_receiver: OPTIONAL<EDINReceiverField>,
+        readonly edin_receiver?: OPTIONAL<EDINReceiverField>,
         /**
          * @summary `responsibility_forwarded`.
          * @public
          * @readonly
          */
-        readonly responsibility_forwarded: OPTIONAL<ResponsibilityForwarded>,
+        readonly responsibility_forwarded?: OPTIONAL<ResponsibilityForwarded>,
         /**
          * @summary `edi_bodypart_type`.
          * @public
          * @readonly
          */
-        readonly edi_bodypart_type: OPTIONAL<EDIBodyPartType>,
+        readonly edi_bodypart_type?: OPTIONAL<EDIBodyPartType>,
         /**
          * @summary `incomplete_copy`.
          * @public
          * @readonly
          */
-        readonly incomplete_copy: OPTIONAL<IncompleteCopyField>,
+        readonly incomplete_copy?: OPTIONAL<IncompleteCopyField>,
         /**
          * @summary `expiry_time`.
          * @public
          * @readonly
          */
-        readonly expiry_time: OPTIONAL<ExpiryTimeField>,
+        readonly expiry_time?: OPTIONAL<ExpiryTimeField>,
         /**
          * @summary `related_messages`.
          * @public
          * @readonly
          */
-        readonly related_messages: OPTIONAL<RelatedMessagesField>,
+        readonly related_messages?: OPTIONAL<RelatedMessagesField>,
         /**
          * @summary `obsoleted_EDIMs`.
          * @public
          * @readonly
          */
-        readonly obsoleted_EDIMs: OPTIONAL<ObsoletedEDIMsField>,
+        readonly obsoleted_EDIMs?: OPTIONAL<ObsoletedEDIMsField>,
         /**
          * @summary `edi_application_security_elements`.
          * @public
          * @readonly
          */
-        readonly edi_application_security_elements: OPTIONAL<EDIApplicationSecurityElementsField>,
+        readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
         /**
          * @summary `cross_referencing_information`.
          * @public
          * @readonly
          */
-        readonly cross_referencing_information: OPTIONAL<CrossReferencingInformationField>,
+        readonly cross_referencing_information?: OPTIONAL<CrossReferencingInformationField>,
         /**
          * @summary `edi_message_type`.
          * @public
          * @readonly
          */
-        readonly edi_message_type: OPTIONAL<EDIMessageTypeField>,
+        readonly edi_message_type?: OPTIONAL<EDIMessageTypeField>,
         /**
          * @summary `service_string_advice`.
          * @public
          * @readonly
          */
-        readonly service_string_advice: OPTIONAL<ServiceStringAdviceField>,
+        readonly service_string_advice?: OPTIONAL<ServiceStringAdviceField>,
         /**
          * @summary `syntax_identifier`.
          * @public
          * @readonly
          */
-        readonly syntax_identifier: OPTIONAL<SyntaxIdentifierField>,
+        readonly syntax_identifier?: OPTIONAL<SyntaxIdentifierField>,
         /**
          * @summary `interchange_sender`.
          * @public
          * @readonly
          */
-        readonly interchange_sender: OPTIONAL<InterchangeSenderField>,
+        readonly interchange_sender?: OPTIONAL<InterchangeSenderField>,
         /**
          * @summary `date_and_time_of_preparation`.
          * @public
          * @readonly
          */
-        readonly date_and_time_of_preparation: OPTIONAL<DateAndTimeOfPreparationField>,
+        readonly date_and_time_of_preparation?: OPTIONAL<DateAndTimeOfPreparationField>,
         /**
          * @summary `application_reference`.
          * @public
          * @readonly
          */
-        readonly application_reference: OPTIONAL<ApplicationReferenceField>,
+        readonly application_reference?: OPTIONAL<ApplicationReferenceField>,
         /**
          * @summary `heading_extensions`.
          * @public
          * @readonly
          */
-        readonly heading_extensions: OPTIONAL<HeadingExtensionsField>
+        readonly heading_extensions?: OPTIONAL<HeadingExtensionsField>
     ) {}
 
     /**

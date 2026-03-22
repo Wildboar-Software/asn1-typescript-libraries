@@ -90,25 +90,25 @@ export class IPMAutoForwardRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly forwarding_cover_note: OPTIONAL<BodyPart>,
+        readonly forwarding_cover_note?: OPTIONAL<BodyPart>,
         /**
          * @summary `submission_options`.
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>,
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>,
         /**
          * @summary `nrn_comment`.
          * @public
          * @readonly
          */
-        readonly nrn_comment: OPTIONAL<AutoForwardComment>,
+        readonly nrn_comment?: OPTIONAL<AutoForwardComment>,
         /**
          * @summary `ipm_auto_forward_options`.
          * @public
          * @readonly
          */
-        readonly ipm_auto_forward_options: OPTIONAL<IPMAutoForwardOptions>
+        readonly ipm_auto_forward_options?: OPTIONAL<IPMAutoForwardOptions>
     ) {}
 
     /**

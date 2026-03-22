@@ -53,25 +53,25 @@ export class AutoAlertRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly filter: OPTIONAL<Filter>,
+        readonly filter?: OPTIONAL<Filter>,
         /**
          * @summary `alert_destinations`.
          * @public
          * @readonly
          */
-        readonly alert_destinations: OPTIONAL<AlertDestination[]>,
+        readonly alert_destinations?: OPTIONAL<AlertDestination[]>,
         /**
          * @summary `requested_attributes`.
          * @public
          * @readonly
          */
-        readonly requested_attributes: OPTIONAL<EntryInformationSelection>,
+        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `suppress_alert_destinations`.
          * @public
          * @readonly
          */
-        readonly suppress_alert_destinations: OPTIONAL<BOOLEAN>
+        readonly suppress_alert_destinations?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

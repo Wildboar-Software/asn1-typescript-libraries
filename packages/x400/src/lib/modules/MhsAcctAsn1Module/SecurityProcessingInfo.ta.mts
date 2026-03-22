@@ -44,7 +44,7 @@ export class SecurityProcessingInfo {
          * @public
          * @readonly
          */
-        readonly security_policy: OPTIONAL<OBJECT_IDENTIFIER>
+        readonly security_policy?: OPTIONAL<OBJECT_IDENTIFIER>
     ) {}
 
     /**

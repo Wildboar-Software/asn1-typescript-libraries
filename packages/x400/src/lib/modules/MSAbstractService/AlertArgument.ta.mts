@@ -44,7 +44,7 @@ export class AlertArgument {
          * @public
          * @readonly
          */
-        readonly new_entry: OPTIONAL<EntryInformation>
+        readonly new_entry?: OPTIONAL<EntryInformation>
     ) {}
 
     /**

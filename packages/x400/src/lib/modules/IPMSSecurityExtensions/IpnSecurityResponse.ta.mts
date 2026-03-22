@@ -56,7 +56,7 @@ export class IpnSecurityResponse {
          * @public
          * @readonly
          */
-        readonly security_diagnostic_code: OPTIONAL<SecurityDiagnosticCode>
+        readonly security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>
     ) {}
 
     /**

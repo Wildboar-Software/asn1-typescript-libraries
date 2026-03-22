@@ -67,13 +67,13 @@ export class ProbeSubmissionResult {
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

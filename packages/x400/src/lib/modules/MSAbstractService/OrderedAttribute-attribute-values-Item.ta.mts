@@ -30,13 +30,13 @@ export class OrderedAttribute_attribute_values_Item {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<_Element>,
+        readonly value?: OPTIONAL<_Element>,
         /**
          * @summary `position`.
          * @public
          * @readonly
          */
-        readonly position: OPTIONAL<INTEGER>
+        readonly position?: OPTIONAL<INTEGER>
     ) {}
 
     /**

@@ -45,13 +45,13 @@ export class Summary {
          * @public
          * @readonly
          */
-        readonly absent: OPTIONAL<INTEGER>,
+        readonly absent?: OPTIONAL<INTEGER>,
         /**
          * @summary `present`.
          * @public
          * @readonly
          */
-        readonly present: OPTIONAL<Summary_present_Item[]>
+        readonly present?: OPTIONAL<Summary_present_Item[]>
     ) {}
 
     /**

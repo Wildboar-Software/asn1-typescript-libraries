@@ -95,7 +95,7 @@ export class EDIAutoForwardRegistrationParameter {
          * @public
          * @readonly
          */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>
+        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
     ) {}
 
     /**

@@ -50,19 +50,19 @@ export class ListResult {
          * @public
          * @readonly
          */
-        readonly next: OPTIONAL<SequenceNumber>,
+        readonly next?: OPTIONAL<SequenceNumber>,
         /**
          * @summary `requested`.
          * @public
          * @readonly
          */
-        readonly requested: OPTIONAL<EntryInformation[]>,
+        readonly requested?: OPTIONAL<EntryInformation[]>,
         /**
          * @summary `list_result_extensions`.
          * @public
          * @readonly
          */
-        readonly list_result_extensions: OPTIONAL<MSExtensions>
+        readonly list_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

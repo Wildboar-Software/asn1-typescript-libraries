@@ -32,13 +32,13 @@ export class UserAddress_x121 {
          * @public
          * @readonly
          */
-        readonly x121_address: OPTIONAL<NumericString>,
+        readonly x121_address?: OPTIONAL<NumericString>,
         /**
          * @summary `tsap_id`.
          * @public
          * @readonly
          */
-        readonly tsap_id: OPTIONAL<PrintableString>
+        readonly tsap_id?: OPTIONAL<PrintableString>
     ) {}
 
     /**

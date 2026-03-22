@@ -68,13 +68,13 @@ export class ListArgument {
          * @public
          * @readonly
          */
-        readonly requested_attributes: OPTIONAL<EntryInformationSelection>,
+        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `list_extensions`.
          * @public
          * @readonly
          */
-        readonly list_extensions: OPTIONAL<MSExtensions>
+        readonly list_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

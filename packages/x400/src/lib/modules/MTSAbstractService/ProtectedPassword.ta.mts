@@ -57,25 +57,25 @@ export class ProtectedPassword {
          * @public
          * @readonly
          */
-        readonly time1: OPTIONAL<UTCTime>,
+        readonly time1?: OPTIONAL<UTCTime>,
         /**
          * @summary `time2`.
          * @public
          * @readonly
          */
-        readonly time2: OPTIONAL<UTCTime>,
+        readonly time2?: OPTIONAL<UTCTime>,
         /**
          * @summary `random1`.
          * @public
          * @readonly
          */
-        readonly random1: OPTIONAL<BIT_STRING>,
+        readonly random1?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `random2`.
          * @public
          * @readonly
          */
-        readonly random2: OPTIONAL<BIT_STRING>
+        readonly random2?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

@@ -44,7 +44,7 @@ export class PerRecipientReport {
          * @public
          * @readonly
          */
-        readonly position: OPTIONAL<INTEGER>
+        readonly position?: OPTIONAL<INTEGER>
     ) {}
 
     /**

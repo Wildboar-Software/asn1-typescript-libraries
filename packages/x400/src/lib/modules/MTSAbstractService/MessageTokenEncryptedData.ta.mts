@@ -51,31 +51,31 @@ export class MessageTokenEncryptedData {
          * @public
          * @readonly
          */
-        readonly content_confidentiality_key: OPTIONAL<EncryptionKey>,
+        readonly content_confidentiality_key?: OPTIONAL<EncryptionKey>,
         /**
          * @summary `content_integrity_check`.
          * @public
          * @readonly
          */
-        readonly content_integrity_check: OPTIONAL<ContentIntegrityCheck>,
+        readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
         /**
          * @summary `message_security_label`.
          * @public
          * @readonly
          */
-        readonly message_security_label: OPTIONAL<MessageSecurityLabel>,
+        readonly message_security_label?: OPTIONAL<MessageSecurityLabel>,
         /**
          * @summary `content_integrity_key`.
          * @public
          * @readonly
          */
-        readonly content_integrity_key: OPTIONAL<EncryptionKey>,
+        readonly content_integrity_key?: OPTIONAL<EncryptionKey>,
         /**
          * @summary `message_sequence_number`.
          * @public
          * @readonly
          */
-        readonly message_sequence_number: OPTIONAL<INTEGER>
+        readonly message_sequence_number?: OPTIONAL<INTEGER>
     ) {}
 
     /**

@@ -145,97 +145,97 @@ export class Heading {
          * @public
          * @readonly
          */
-        readonly originator: OPTIONAL<OriginatorField>,
+        readonly originator?: OPTIONAL<OriginatorField>,
         /**
          * @summary `authorizing_users`.
          * @public
          * @readonly
          */
-        readonly authorizing_users: OPTIONAL<AuthorizingUsersField>,
+        readonly authorizing_users?: OPTIONAL<AuthorizingUsersField>,
         /**
          * @summary `primary_recipients`.
          * @public
          * @readonly
          */
-        readonly primary_recipients: OPTIONAL<PrimaryRecipientsField>,
+        readonly primary_recipients?: OPTIONAL<PrimaryRecipientsField>,
         /**
          * @summary `copy_recipients`.
          * @public
          * @readonly
          */
-        readonly copy_recipients: OPTIONAL<CopyRecipientsField>,
+        readonly copy_recipients?: OPTIONAL<CopyRecipientsField>,
         /**
          * @summary `blind_copy_recipients`.
          * @public
          * @readonly
          */
-        readonly blind_copy_recipients: OPTIONAL<BlindCopyRecipientsField>,
+        readonly blind_copy_recipients?: OPTIONAL<BlindCopyRecipientsField>,
         /**
          * @summary `replied_to_IPM`.
          * @public
          * @readonly
          */
-        readonly replied_to_IPM: OPTIONAL<RepliedToIPMField>,
+        readonly replied_to_IPM?: OPTIONAL<RepliedToIPMField>,
         /**
          * @summary `obsoleted_IPMs`.
          * @public
          * @readonly
          */
-        readonly obsoleted_IPMs: OPTIONAL<ObsoletedIPMsField>,
+        readonly obsoleted_IPMs?: OPTIONAL<ObsoletedIPMsField>,
         /**
          * @summary `related_IPMs`.
          * @public
          * @readonly
          */
-        readonly related_IPMs: OPTIONAL<RelatedIPMsField>,
+        readonly related_IPMs?: OPTIONAL<RelatedIPMsField>,
         /**
          * @summary `subject`.
          * @public
          * @readonly
          */
-        readonly subject: OPTIONAL<SubjectField>,
+        readonly subject?: OPTIONAL<SubjectField>,
         /**
          * @summary `expiry_time`.
          * @public
          * @readonly
          */
-        readonly expiry_time: OPTIONAL<ExpiryTimeField>,
+        readonly expiry_time?: OPTIONAL<ExpiryTimeField>,
         /**
          * @summary `reply_time`.
          * @public
          * @readonly
          */
-        readonly reply_time: OPTIONAL<ReplyTimeField>,
+        readonly reply_time?: OPTIONAL<ReplyTimeField>,
         /**
          * @summary `reply_recipients`.
          * @public
          * @readonly
          */
-        readonly reply_recipients: OPTIONAL<ReplyRecipientsField>,
+        readonly reply_recipients?: OPTIONAL<ReplyRecipientsField>,
         /**
          * @summary `importance`.
          * @public
          * @readonly
          */
-        readonly importance: OPTIONAL<ImportanceField>,
+        readonly importance?: OPTIONAL<ImportanceField>,
         /**
          * @summary `sensitivity`.
          * @public
          * @readonly
          */
-        readonly sensitivity: OPTIONAL<SensitivityField>,
+        readonly sensitivity?: OPTIONAL<SensitivityField>,
         /**
          * @summary `auto_forwarded`.
          * @public
          * @readonly
          */
-        readonly auto_forwarded: OPTIONAL<AutoForwardedField>,
+        readonly auto_forwarded?: OPTIONAL<AutoForwardedField>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionsField>
+        readonly extensions?: OPTIONAL<ExtensionsField>
     ) {}
 
     /**

@@ -68,25 +68,25 @@ export class NonReceiptFields {
          * @public
          * @readonly
          */
-        readonly discard_reason: OPTIONAL<DiscardReasonField>,
+        readonly discard_reason?: OPTIONAL<DiscardReasonField>,
         /**
          * @summary `auto_forward_comment`.
          * @public
          * @readonly
          */
-        readonly auto_forward_comment: OPTIONAL<AutoForwardCommentField>,
+        readonly auto_forward_comment?: OPTIONAL<AutoForwardCommentField>,
         /**
          * @summary `returned_ipm`.
          * @public
          * @readonly
          */
-        readonly returned_ipm: OPTIONAL<ReturnedIPMField>,
+        readonly returned_ipm?: OPTIONAL<ReturnedIPMField>,
         /**
          * @summary `nrn_extensions`.
          * @public
          * @readonly
          */
-        readonly nrn_extensions: OPTIONAL<NRNExtensionsField>
+        readonly nrn_extensions?: OPTIONAL<NRNExtensionsField>
     ) {}
 
     /**

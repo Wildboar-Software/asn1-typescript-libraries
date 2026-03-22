@@ -49,7 +49,7 @@ export class DeliveryReport {
          * @public
          * @readonly
          */
-        readonly type_of_MTS_user: OPTIONAL<TypeOfMTSUser>
+        readonly type_of_MTS_user?: OPTIONAL<TypeOfMTSUser>
     ) {}
 
     /**

@@ -56,13 +56,13 @@ export class EntryInformation {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<Attribute[]>,
+        readonly attributes?: OPTIONAL<Attribute[]>,
         /**
          * @summary `value_count_exceeded`.
          * @public
          * @readonly
          */
-        readonly value_count_exceeded: OPTIONAL<AttributeValueCount[]>
+        readonly value_count_exceeded?: OPTIONAL<AttributeValueCount[]>
     ) {}
 
     /**

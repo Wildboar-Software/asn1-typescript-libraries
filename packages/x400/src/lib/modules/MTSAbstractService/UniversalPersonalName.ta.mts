@@ -51,19 +51,19 @@ export class UniversalPersonalName {
          * @public
          * @readonly
          */
-        readonly given_name: OPTIONAL<UniversalOrBMPString>,
+        readonly given_name?: OPTIONAL<UniversalOrBMPString>,
         /**
          * @summary `initials`.
          * @public
          * @readonly
          */
-        readonly initials: OPTIONAL<UniversalOrBMPString>,
+        readonly initials?: OPTIONAL<UniversalOrBMPString>,
         /**
          * @summary `generation_qualifier`.
          * @public
          * @readonly
          */
-        readonly generation_qualifier: OPTIONAL<UniversalOrBMPString>
+        readonly generation_qualifier?: OPTIONAL<UniversalOrBMPString>
     ) {}
 
     /**

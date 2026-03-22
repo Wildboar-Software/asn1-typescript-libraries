@@ -87,43 +87,43 @@ export class PerReportTransferFields {
          * @public
          * @readonly
          */
-        readonly subject_intermediate_trace_information: OPTIONAL<SubjectIntermediateTraceInformation>,
+        readonly subject_intermediate_trace_information?: OPTIONAL<SubjectIntermediateTraceInformation>,
         /**
          * @summary `original_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        readonly original_encoded_information_types?: OPTIONAL<OriginalEncodedInformationTypes>,
         /**
          * @summary `content_type`.
          * @public
          * @readonly
          */
-        readonly content_type: OPTIONAL<ContentType>,
+        readonly content_type?: OPTIONAL<ContentType>,
         /**
          * @summary `content_identifier`.
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
         /**
          * @summary `returned_content`.
          * @public
          * @readonly
          */
-        readonly returned_content: OPTIONAL<Content>,
+        readonly returned_content?: OPTIONAL<Content>,
         /**
          * @summary `additional_information`.
          * @public
          * @readonly
          */
-        readonly additional_information: OPTIONAL<AdditionalInformation>,
+        readonly additional_information?: OPTIONAL<AdditionalInformation>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

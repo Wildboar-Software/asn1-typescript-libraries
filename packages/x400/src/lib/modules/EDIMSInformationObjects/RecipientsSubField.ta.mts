@@ -128,73 +128,73 @@ export class RecipientsSubField {
          * @public
          * @readonly
          */
-        readonly action_request: OPTIONAL<ActionRequestField>,
+        readonly action_request?: OPTIONAL<ActionRequestField>,
         /**
          * @summary `edi_notification_requests_field`.
          * @public
          * @readonly
          */
-        readonly edi_notification_requests_field: OPTIONAL<EDINotificationRequestsField>,
+        readonly edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
         /**
          * @summary `responsibility_passing_allowed`.
          * @public
          * @readonly
          */
-        readonly responsibility_passing_allowed: OPTIONAL<ResponsibilityPassingAllowedField>,
+        readonly responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>,
         /**
          * @summary `interchange_recipient`.
          * @public
          * @readonly
          */
-        readonly interchange_recipient: OPTIONAL<InterchangeRecipientField>,
+        readonly interchange_recipient?: OPTIONAL<InterchangeRecipientField>,
         /**
          * @summary `recipient_reference`.
          * @public
          * @readonly
          */
-        readonly recipient_reference: OPTIONAL<RecipientReferenceField>,
+        readonly recipient_reference?: OPTIONAL<RecipientReferenceField>,
         /**
          * @summary `interchange_control_reference`.
          * @public
          * @readonly
          */
-        readonly interchange_control_reference: OPTIONAL<InterchangeControlReferenceField>,
+        readonly interchange_control_reference?: OPTIONAL<InterchangeControlReferenceField>,
         /**
          * @summary `processing_priority_code`.
          * @public
          * @readonly
          */
-        readonly processing_priority_code: OPTIONAL<ProcessingPriorityCodeField>,
+        readonly processing_priority_code?: OPTIONAL<ProcessingPriorityCodeField>,
         /**
          * @summary `acknowledgement_request`.
          * @public
          * @readonly
          */
-        readonly acknowledgement_request: OPTIONAL<AcknowledgementRequestField>,
+        readonly acknowledgement_request?: OPTIONAL<AcknowledgementRequestField>,
         /**
          * @summary `communications_agreement_id`.
          * @public
          * @readonly
          */
-        readonly communications_agreement_id: OPTIONAL<CommunicationsAgreementIdField>,
+        readonly communications_agreement_id?: OPTIONAL<CommunicationsAgreementIdField>,
         /**
          * @summary `test_indicator`.
          * @public
          * @readonly
          */
-        readonly test_indicator: OPTIONAL<TestIndicatorField>,
+        readonly test_indicator?: OPTIONAL<TestIndicatorField>,
         /**
          * @summary `authorization_information`.
          * @public
          * @readonly
          */
-        readonly authorization_information: OPTIONAL<AuthorizationInformationField>,
+        readonly authorization_information?: OPTIONAL<AuthorizationInformationField>,
         /**
          * @summary `recipient_extensions`.
          * @public
          * @readonly
          */
-        readonly recipient_extensions: OPTIONAL<RecipientExtensionsField>
+        readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>
     ) {}
 
     /**

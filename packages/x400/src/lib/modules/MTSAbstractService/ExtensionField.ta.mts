@@ -50,13 +50,13 @@ export class ExtensionField {
          * @public
          * @readonly
          */
-        readonly criticality: OPTIONAL<Criticality>,
+        readonly criticality?: OPTIONAL<Criticality>,
         /**
          * @summary `value`.
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<_Element>
+        readonly value?: OPTIONAL<_Element>
     ) {}
 
     /**

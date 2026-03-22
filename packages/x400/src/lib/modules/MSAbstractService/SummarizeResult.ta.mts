@@ -67,19 +67,19 @@ export class SummarizeResult {
          * @public
          * @readonly
          */
-        readonly span: OPTIONAL<Span>,
+        readonly span?: OPTIONAL<Span>,
         /**
          * @summary `summaries`.
          * @public
          * @readonly
          */
-        readonly summaries: OPTIONAL<Summary[]>,
+        readonly summaries?: OPTIONAL<Summary[]>,
         /**
          * @summary `summarize_result_extensions`.
          * @public
          * @readonly
          */
-        readonly summarize_result_extensions: OPTIONAL<MSExtensions>
+        readonly summarize_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

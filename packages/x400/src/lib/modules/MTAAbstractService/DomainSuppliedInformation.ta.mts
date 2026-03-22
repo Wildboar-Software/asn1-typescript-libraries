@@ -88,25 +88,25 @@ export class DomainSuppliedInformation implements AdditionalActions {
          * @public
          * @readonly
          */
-        readonly attempted_domain: OPTIONAL<GlobalDomainIdentifier>,
+        readonly attempted_domain?: OPTIONAL<GlobalDomainIdentifier>,
         /**
          * @summary `deferred_time`.
          * @public
          * @readonly
          */
-        readonly deferred_time: OPTIONAL<DeferredTime> /* REPLICATED_COMPONENT */,
+        readonly deferred_time?: OPTIONAL<DeferredTime> /* REPLICATED_COMPONENT */,
         /**
          * @summary `converted_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes> /* REPLICATED_COMPONENT */,
+        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes> /* REPLICATED_COMPONENT */,
         /**
          * @summary `other_actions`.
          * @public
          * @readonly
          */
-        readonly other_actions: OPTIONAL<OtherActions> /* REPLICATED_COMPONENT */
+        readonly other_actions?: OPTIONAL<OtherActions> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

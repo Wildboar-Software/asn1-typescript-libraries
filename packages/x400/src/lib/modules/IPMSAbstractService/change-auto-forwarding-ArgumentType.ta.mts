@@ -51,19 +51,19 @@ export class change_auto_forwarding_ArgumentType {
          * @public
          * @readonly
          */
-        readonly auto_forward_recipients: OPTIONAL<ORName[]>,
+        readonly auto_forward_recipients?: OPTIONAL<ORName[]>,
         /**
          * @summary `auto_forward_heading`.
          * @public
          * @readonly
          */
-        readonly auto_forward_heading: OPTIONAL<Heading>,
+        readonly auto_forward_heading?: OPTIONAL<Heading>,
         /**
          * @summary `auto_forward_comment`.
          * @public
          * @readonly
          */
-        readonly auto_forward_comment: OPTIONAL<AutoForwardComment>
+        readonly auto_forward_comment?: OPTIONAL<AutoForwardComment>
     ) {}
 
     /**

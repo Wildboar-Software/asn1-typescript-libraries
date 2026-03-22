@@ -77,7 +77,7 @@ export class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly modify_extensions: OPTIONAL<MSExtensions>
+        readonly modify_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

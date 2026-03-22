@@ -44,7 +44,7 @@ export class PathnameandVersion {
          * @public
          * @readonly
          */
-        readonly file_version: OPTIONAL<GraphicString>
+        readonly file_version?: OPTIONAL<GraphicString>
     ) {}
 
     /**

@@ -48,19 +48,19 @@ export class MessageParameters {
          * @public
          * @readonly
          */
-        readonly delivery_time: OPTIONAL<MessageDeliveryTime>,
+        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
         /**
          * @summary `delivery_envelope`.
          * @public
          * @readonly
          */
-        readonly delivery_envelope: OPTIONAL<OtherMessageDeliveryFields>,
+        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
         /**
          * @summary `other_parameters`.
          * @public
          * @readonly
          */
-        readonly other_parameters: OPTIONAL<EDISupplementaryInformation>
+        readonly other_parameters?: OPTIONAL<EDISupplementaryInformation>
     ) {}
 
     /**

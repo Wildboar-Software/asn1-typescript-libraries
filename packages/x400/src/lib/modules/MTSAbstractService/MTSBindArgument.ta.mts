@@ -80,13 +80,13 @@ export class MTSBindArgument {
          * @public
          * @readonly
          */
-        readonly security_context: OPTIONAL<SecurityContext>,
+        readonly security_context?: OPTIONAL<SecurityContext>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

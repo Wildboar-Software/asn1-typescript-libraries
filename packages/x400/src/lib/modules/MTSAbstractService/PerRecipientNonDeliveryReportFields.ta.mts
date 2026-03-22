@@ -48,7 +48,7 @@ export class PerRecipientNonDeliveryReportFields {
          * @public
          * @readonly
          */
-        readonly non_delivery_diagnostic_code: OPTIONAL<NonDeliveryDiagnosticCode>
+        readonly non_delivery_diagnostic_code?: OPTIONAL<NonDeliveryDiagnosticCode>
     ) {}
 
     /**

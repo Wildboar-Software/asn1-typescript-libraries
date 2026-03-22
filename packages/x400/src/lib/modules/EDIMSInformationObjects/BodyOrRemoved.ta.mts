@@ -48,7 +48,7 @@ export class BodyOrRemoved {
          * @public
          * @readonly
          */
-        readonly additional_body_parts: OPTIONAL<AdditionalBodyParts>
+        readonly additional_body_parts?: OPTIONAL<AdditionalBodyParts>
     ) {}
 
     /**

@@ -72,13 +72,13 @@ export class SummarizeArgument {
          * @public
          * @readonly
          */
-        readonly summary_requests: OPTIONAL<AttributeType[]>,
+        readonly summary_requests?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `summarize_extensions`.
          * @public
          * @readonly
          */
-        readonly summarize_extensions: OPTIONAL<MSExtensions>
+        readonly summarize_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

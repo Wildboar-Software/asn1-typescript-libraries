@@ -49,19 +49,19 @@ export class StrongCredentials {
          * @public
          * @readonly
          */
-        readonly bind_token: OPTIONAL<Token>,
+        readonly bind_token?: OPTIONAL<Token>,
         /**
          * @summary `certificate`.
          * @public
          * @readonly
          */
-        readonly certificate: OPTIONAL<Certificates>,
+        readonly certificate?: OPTIONAL<Certificates>,
         /**
          * @summary `certificate_selector`.
          * @public
          * @readonly
          */
-        readonly certificate_selector: OPTIONAL<CertificateAssertion>,
+        readonly certificate_selector?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary Extensions that are not recognized.
          * @public

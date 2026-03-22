@@ -49,7 +49,7 @@ export class RelatedStoredFile_Item {
          * @public
          * @readonly
          */
-        readonly relationship: OPTIONAL<Relationship>
+        readonly relationship?: OPTIONAL<Relationship>
     ) {}
 
     /**

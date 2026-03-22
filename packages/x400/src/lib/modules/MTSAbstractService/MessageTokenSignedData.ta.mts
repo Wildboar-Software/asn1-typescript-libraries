@@ -61,31 +61,31 @@ export class MessageTokenSignedData {
          * @public
          * @readonly
          */
-        readonly content_confidentiality_algorithm_identifier: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>,
+        readonly content_confidentiality_algorithm_identifier?: OPTIONAL<ContentConfidentialityAlgorithmIdentifier>,
         /**
          * @summary `content_integrity_check`.
          * @public
          * @readonly
          */
-        readonly content_integrity_check: OPTIONAL<ContentIntegrityCheck>,
+        readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
         /**
          * @summary `message_security_label`.
          * @public
          * @readonly
          */
-        readonly message_security_label: OPTIONAL<MessageSecurityLabel>,
+        readonly message_security_label?: OPTIONAL<MessageSecurityLabel>,
         /**
          * @summary `proof_of_delivery_request`.
          * @public
          * @readonly
          */
-        readonly proof_of_delivery_request: OPTIONAL<ProofOfDeliveryRequest>,
+        readonly proof_of_delivery_request?: OPTIONAL<ProofOfDeliveryRequest>,
         /**
          * @summary `message_sequence_number`.
          * @public
          * @readonly
          */
-        readonly message_sequence_number: OPTIONAL<INTEGER>
+        readonly message_sequence_number?: OPTIONAL<INTEGER>
     ) {}
 
     /**

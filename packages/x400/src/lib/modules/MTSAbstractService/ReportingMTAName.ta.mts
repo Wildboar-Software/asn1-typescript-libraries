@@ -60,7 +60,7 @@ export class ReportingMTAName {
          * @public
          * @readonly
          */
-        readonly mta_directory_name: OPTIONAL<Name>
+        readonly mta_directory_name?: OPTIONAL<Name>
     ) {}
 
     /**

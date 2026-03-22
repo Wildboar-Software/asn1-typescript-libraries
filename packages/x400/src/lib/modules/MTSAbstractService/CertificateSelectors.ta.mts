@@ -40,31 +40,31 @@ export class CertificateSelectors {
          * @public
          * @readonly
          */
-        readonly encryption_recipient: OPTIONAL<CertificateAssertion>,
+        readonly encryption_recipient?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `encryption_originator`.
          * @public
          * @readonly
          */
-        readonly encryption_originator: OPTIONAL<CertificateAssertion>,
+        readonly encryption_originator?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `content_integrity_check`.
          * @public
          * @readonly
          */
-        readonly content_integrity_check: OPTIONAL<CertificateAssertion>,
+        readonly content_integrity_check?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `token_signature`.
          * @public
          * @readonly
          */
-        readonly token_signature: OPTIONAL<CertificateAssertion>,
+        readonly token_signature?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `message_origin_authentication`.
          * @public
          * @readonly
          */
-        readonly message_origin_authentication: OPTIONAL<CertificateAssertion>
+        readonly message_origin_authentication?: OPTIONAL<CertificateAssertion>
     ) {}
 
     /**

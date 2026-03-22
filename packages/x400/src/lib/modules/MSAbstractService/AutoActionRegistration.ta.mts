@@ -48,13 +48,13 @@ export class AutoActionRegistration {
          * @public
          * @readonly
          */
-        readonly registration_identifier: OPTIONAL<INTEGER>,
+        readonly registration_identifier?: OPTIONAL<INTEGER>,
         /**
          * @summary `registration_parameter`.
          * @public
          * @readonly
          */
-        readonly registration_parameter: OPTIONAL<_Element>
+        readonly registration_parameter?: OPTIONAL<_Element>
     ) {}
 
     /**

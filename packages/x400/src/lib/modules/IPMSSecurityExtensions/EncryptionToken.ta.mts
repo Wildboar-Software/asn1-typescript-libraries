@@ -79,25 +79,25 @@ export class EncryptionToken {
          * @public
          * @readonly
          */
-        readonly recipient_certificate_selector: OPTIONAL<CertificateAssertion>,
+        readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `recipient_certificate`.
          * @public
          * @readonly
          */
-        readonly recipient_certificate: OPTIONAL<Certificates>,
+        readonly recipient_certificate?: OPTIONAL<Certificates>,
         /**
          * @summary `originator_certificate_selector`.
          * @public
          * @readonly
          */
-        readonly originator_certificate_selector: OPTIONAL<CertificateAssertion>,
+        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
         /**
          * @summary `originator_certificates`.
          * @public
          * @readonly
          */
-        readonly originator_certificates: OPTIONAL<ExtendedCertificates>,
+        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
         /**
          * @summary Extensions that are not recognized.
          * @public

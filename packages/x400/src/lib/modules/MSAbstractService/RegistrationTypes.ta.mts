@@ -48,19 +48,19 @@ export class RegistrationTypes {
          * @public
          * @readonly
          */
-        readonly registrations: OPTIONAL<RegistrationTypes_registrations>,
+        readonly registrations?: OPTIONAL<RegistrationTypes_registrations>,
         /**
          * @summary `extended_registrations`.
          * @public
          * @readonly
          */
-        readonly extended_registrations: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `restrict_message_groups`.
          * @public
          * @readonly
          */
-        readonly restrict_message_groups: OPTIONAL<MessageGroupsRestriction>
+        readonly restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>
     ) {}
 
     /**

@@ -52,31 +52,31 @@ export class ConnectionInformation {
          * @public
          * @readonly
          */
-        readonly profiles: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly profiles?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `dn_used_in_a_associate`.
          * @public
          * @readonly
          */
-        readonly dn_used_in_a_associate: OPTIONAL<BOOLEAN>,
+        readonly dn_used_in_a_associate?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `network_address_reliable`.
          * @public
          * @readonly
          */
-        readonly network_address_reliable: OPTIONAL<BOOLEAN>,
+        readonly network_address_reliable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `authentication_method`.
          * @public
          * @readonly
          */
-        readonly authentication_method: OPTIONAL<AuthenticationMethod>,
+        readonly authentication_method?: OPTIONAL<AuthenticationMethod>,
         /**
          * @summary `weighting_factors`.
          * @public
          * @readonly
          */
-        readonly weighting_factors: OPTIONAL<INSTANCE_OF>
+        readonly weighting_factors?: OPTIONAL<INSTANCE_OF>
     ) {}
 
     /**

@@ -100,19 +100,19 @@ export class PerRecipientReportTransferFields {
          * @public
          * @readonly
          */
-        readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
+        readonly originally_intended_recipient_name?: OPTIONAL<OriginallyIntendedRecipientName>,
         /**
          * @summary `supplementary_information`.
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<SupplementaryInformation>,
+        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

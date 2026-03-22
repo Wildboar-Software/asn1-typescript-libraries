@@ -46,19 +46,19 @@ export class EDIApplicationSecurityElementsField {
          * @public
          * @readonly
          */
-        readonly edi_application_security_element: OPTIONAL<EDIApplicationSecurityElement>,
+        readonly edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>,
         /**
          * @summary `edi_encrypted_primary_bodypart`.
          * @public
          * @readonly
          */
-        readonly edi_encrypted_primary_bodypart: OPTIONAL<BOOLEAN>,
+        readonly edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `edi_application_security_extensions`.
          * @public
          * @readonly
          */
-        readonly edi_application_security_extensions: OPTIONAL<EDIApplicationSecurityExtensions>
+        readonly edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>
     ) {}
 
     /**

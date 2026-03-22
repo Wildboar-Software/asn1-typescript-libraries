@@ -38,13 +38,13 @@ export class InformationCategory {
          * @public
          * @readonly
          */
-        readonly reference: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly reference?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `description`.
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<DescriptionString>
+        readonly description?: OPTIONAL<DescriptionString>
     ) {}
 
     /**

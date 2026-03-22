@@ -41,25 +41,25 @@ export class EnvironmentParameter {
          * @public
          * @readonly
          */
-        readonly application_reference: OPTIONAL<GeneralIdentifier>,
+        readonly application_reference?: OPTIONAL<GeneralIdentifier>,
         /**
          * @summary `machine`.
          * @public
          * @readonly
          */
-        readonly machine: OPTIONAL<GeneralIdentifier>,
+        readonly machine?: OPTIONAL<GeneralIdentifier>,
         /**
          * @summary `operating_system`.
          * @public
          * @readonly
          */
-        readonly operating_system: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly operating_system?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `user_visible_string`.
          * @public
          * @readonly
          */
-        readonly user_visible_string: OPTIONAL<GraphicString[]>
+        readonly user_visible_string?: OPTIONAL<GraphicString[]>
     ) {}
 
     /**

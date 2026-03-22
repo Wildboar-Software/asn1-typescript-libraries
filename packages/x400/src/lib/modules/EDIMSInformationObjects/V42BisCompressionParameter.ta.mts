@@ -35,19 +35,19 @@ export class V42BisCompressionParameter {
          * @public
          * @readonly
          */
-        readonly dictionary_size: OPTIONAL<INTEGER>,
+        readonly dictionary_size?: OPTIONAL<INTEGER>,
         /**
          * @summary `largest_compressed_chain`.
          * @public
          * @readonly
          */
-        readonly largest_compressed_chain: OPTIONAL<INTEGER>,
+        readonly largest_compressed_chain?: OPTIONAL<INTEGER>,
         /**
          * @summary `last_entries_to_delete`.
          * @public
          * @readonly
          */
-        readonly last_entries_to_delete: OPTIONAL<INTEGER>
+        readonly last_entries_to_delete?: OPTIONAL<INTEGER>
     ) {}
 
     /**

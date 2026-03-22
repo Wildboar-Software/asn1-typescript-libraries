@@ -48,7 +48,7 @@ export class FNUserReasonCodeField {
          * @public
          * @readonly
          */
-        readonly fn_user_diagnostic: OPTIONAL<FNUserDiagnosticField>
+        readonly fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>
     ) {}
 
     /**

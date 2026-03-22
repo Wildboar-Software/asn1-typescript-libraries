@@ -45,19 +45,19 @@ export class ForwardingInformation1988 {
          * @public
          * @readonly
          */
-        readonly auto_forwarding_comment: OPTIONAL<AutoForwardComment>,
+        readonly auto_forwarding_comment?: OPTIONAL<AutoForwardComment>,
         /**
          * @summary `ia5_cover_note`.
          * @public
          * @readonly
          */
-        readonly ia5_cover_note: OPTIONAL<IA5TextBodyPart>,
+        readonly ia5_cover_note?: OPTIONAL<IA5TextBodyPart>,
         /**
          * @summary `this_ipm_prefix`.
          * @public
          * @readonly
          */
-        readonly this_ipm_prefix: OPTIONAL<PrintableString>
+        readonly this_ipm_prefix?: OPTIONAL<PrintableString>
     ) {}
 
     /**

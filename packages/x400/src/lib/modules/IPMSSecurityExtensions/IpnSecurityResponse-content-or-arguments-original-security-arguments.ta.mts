@@ -44,19 +44,19 @@ export class IpnSecurityResponse_content_or_arguments_original_security_argument
          * @public
          * @readonly
          */
-        readonly original_content_integrity_check: OPTIONAL<OriginalContentIntegrityCheck>,
+        readonly original_content_integrity_check?: OPTIONAL<OriginalContentIntegrityCheck>,
         /**
          * @summary `original_message_origin_authentication_check`.
          * @public
          * @readonly
          */
-        readonly original_message_origin_authentication_check: OPTIONAL<OriginalMessageOriginAuthenticationCheck>,
+        readonly original_message_origin_authentication_check?: OPTIONAL<OriginalMessageOriginAuthenticationCheck>,
         /**
          * @summary `original_message_token`.
          * @public
          * @readonly
          */
-        readonly original_message_token: OPTIONAL<OriginalMessageToken>
+        readonly original_message_token?: OPTIONAL<OriginalMessageToken>
     ) {}
 
     /**

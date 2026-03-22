@@ -48,19 +48,19 @@ export class ORDescriptor {
          * @public
          * @readonly
          */
-        readonly formal_name: OPTIONAL<ORName>,
+        readonly formal_name?: OPTIONAL<ORName>,
         /**
          * @summary `free_form_name`.
          * @public
          * @readonly
          */
-        readonly free_form_name: OPTIONAL<FreeFormName>,
+        readonly free_form_name?: OPTIONAL<FreeFormName>,
         /**
          * @summary `telephone_number`.
          * @public
          * @readonly
          */
-        readonly telephone_number: OPTIONAL<TelephoneNumber>
+        readonly telephone_number?: OPTIONAL<TelephoneNumber>
     ) {}
 
     /**

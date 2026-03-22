@@ -66,25 +66,25 @@ export class CommonFields {
          * @public
          * @readonly
          */
-        readonly ipn_originator: OPTIONAL<IPNOriginatorField>,
+        readonly ipn_originator?: OPTIONAL<IPNOriginatorField>,
         /**
          * @summary `ipm_intended_recipient`.
          * @public
          * @readonly
          */
-        readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>,
+        readonly ipm_intended_recipient?: OPTIONAL<IPMIntendedRecipientField>,
         /**
          * @summary `conversion_eits`.
          * @public
          * @readonly
          */
-        readonly conversion_eits: OPTIONAL<ConversionEITsField>,
+        readonly conversion_eits?: OPTIONAL<ConversionEITsField>,
         /**
          * @summary `notification_extensions`.
          * @public
          * @readonly
          */
-        readonly notification_extensions: OPTIONAL<NotificationExtensionsField>
+        readonly notification_extensions?: OPTIONAL<NotificationExtensionsField>
     ) {}
 
     /**

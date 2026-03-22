@@ -50,13 +50,13 @@ export class RedirectionProcessingInfo {
          * @public
          * @readonly
          */
-        readonly original: OPTIONAL<ORName>,
+        readonly original?: OPTIONAL<ORName>,
         /**
          * @summary `redirected_to`.
          * @public
          * @readonly
          */
-        readonly redirected_to: OPTIONAL<ORName>
+        readonly redirected_to?: OPTIONAL<ORName>
     ) {}
 
     /**

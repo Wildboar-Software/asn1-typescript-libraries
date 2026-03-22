@@ -116,7 +116,7 @@ export class ReportDeliveryArgument implements ReportDeliveryEnvelope {
          * @public
          * @readonly
          */
-        readonly returned_content: OPTIONAL<Content>
+        readonly returned_content?: OPTIONAL<Content>
     ) {}
 
     /**

@@ -38,13 +38,13 @@ export class UnformattedPostalAddress {
          * @public
          * @readonly
          */
-        readonly printable_address: OPTIONAL<PrintableString[]>,
+        readonly printable_address?: OPTIONAL<PrintableString[]>,
         /**
          * @summary `teletex_string`.
          * @public
          * @readonly
          */
-        readonly teletex_string: OPTIONAL<TeletexString>
+        readonly teletex_string?: OPTIONAL<TeletexString>
     ) {}
 
     /**

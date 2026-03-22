@@ -78,19 +78,19 @@ export class TBSAsymmetricToken {
          * @public
          * @readonly
          */
-        readonly signed_data: OPTIONAL<TokenData>,
+        readonly signed_data?: OPTIONAL<TokenData>,
         /**
          * @summary `encryption_algorithm_identifier`.
          * @public
          * @readonly
          */
-        readonly encryption_algorithm_identifier: OPTIONAL<AlgorithmIdentifier>,
+        readonly encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `encrypted_data`.
          * @public
          * @readonly
          */
-        readonly encrypted_data: OPTIONAL<ENCRYPTED<TokenData>>
+        readonly encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>
     ) {}
 
     /**

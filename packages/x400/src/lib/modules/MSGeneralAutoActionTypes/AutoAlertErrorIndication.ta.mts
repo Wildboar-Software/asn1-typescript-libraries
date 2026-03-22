@@ -39,13 +39,13 @@ export class AutoAlertErrorIndication {
          * @public
          * @readonly
          */
-        readonly failing_alert_destination: OPTIONAL<AlertDestination>,
+        readonly failing_alert_destination?: OPTIONAL<AlertDestination>,
         /**
          * @summary `supplementary_information`.
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<GeneralString>
+        readonly supplementary_information?: OPTIONAL<GeneralString>
     ) {}
 
     /**

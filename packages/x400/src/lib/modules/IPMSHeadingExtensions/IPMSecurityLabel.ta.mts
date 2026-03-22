@@ -49,13 +49,13 @@ export class IPMSecurityLabel {
          * @public
          * @readonly
          */
-        readonly heading_security_label: OPTIONAL<SecurityLabel>,
+        readonly heading_security_label?: OPTIONAL<SecurityLabel>,
         /**
          * @summary `body_part_security_labels`.
          * @public
          * @readonly
          */
-        readonly body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>
+        readonly body_part_security_labels?: OPTIONAL<BodyPartSecurityLabel[]>
     ) {}
 
     /**

@@ -110,13 +110,13 @@ export class Register_MSArgument {
          * @public
          * @readonly
          */
-        readonly auto_action_registrations: OPTIONAL<AutoActionRegistration[]>,
+        readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
         /**
          * @summary `auto_action_deregistrations`.
          * @public
          * @readonly
          */
-        readonly auto_action_deregistrations: OPTIONAL<
+        readonly auto_action_deregistrations?: OPTIONAL<
             AutoActionDeregistration[]
         >,
         /**
@@ -124,55 +124,55 @@ export class Register_MSArgument {
          * @public
          * @readonly
          */
-        readonly list_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `fetch_attribute_defaults`.
          * @public
          * @readonly
          */
-        readonly fetch_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `change_credentials`.
          * @public
          * @readonly
          */
-        readonly change_credentials: OPTIONAL<Register_MSArgument_change_credentials>,
+        readonly change_credentials?: OPTIONAL<Register_MSArgument_change_credentials>,
         /**
          * @summary `user_security_labels`.
          * @public
          * @readonly
          */
-        readonly user_security_labels: OPTIONAL<SecurityLabel[]>,
+        readonly user_security_labels?: OPTIONAL<SecurityLabel[]>,
         /**
          * @summary `ua_registrations`.
          * @public
          * @readonly
          */
-        readonly ua_registrations: OPTIONAL<UARegistration[]>,
+        readonly ua_registrations?: OPTIONAL<UARegistration[]>,
         /**
          * @summary `submission_defaults`.
          * @public
          * @readonly
          */
-        readonly submission_defaults: OPTIONAL<MSSubmissionOptions>,
+        readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>,
         /**
          * @summary `message_group_registrations`.
          * @public
          * @readonly
          */
-        readonly message_group_registrations: OPTIONAL<MessageGroupRegistrations>,
+        readonly message_group_registrations?: OPTIONAL<MessageGroupRegistrations>,
         /**
          * @summary `registration_status_request`.
          * @public
          * @readonly
          */
-        readonly registration_status_request: OPTIONAL<RegistrationTypes>,
+        readonly registration_status_request?: OPTIONAL<RegistrationTypes>,
         /**
          * @summary `register_ms_extensions`.
          * @public
          * @readonly
          */
-        readonly register_ms_extensions: OPTIONAL<MSExtensions>
+        readonly register_ms_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

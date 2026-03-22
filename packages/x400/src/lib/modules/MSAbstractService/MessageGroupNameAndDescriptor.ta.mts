@@ -45,7 +45,7 @@ export class MessageGroupNameAndDescriptor {
          * @public
          * @readonly
          */
-        readonly message_group_descriptor: OPTIONAL<GeneralString>
+        readonly message_group_descriptor?: OPTIONAL<GeneralString>
     ) {}
 
     /**

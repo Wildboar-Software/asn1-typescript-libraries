@@ -57,7 +57,7 @@ export class NonMessageBodyPartSynopsis {
          * @public
          * @readonly
          */
-        readonly processed: OPTIONAL<BOOLEAN>
+        readonly processed?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

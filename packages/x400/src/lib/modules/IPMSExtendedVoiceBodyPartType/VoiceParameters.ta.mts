@@ -49,7 +49,7 @@ export class VoiceParameters {
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<IA5String>
+        readonly supplementary_information?: OPTIONAL<IA5String>
     ) {}
 
     /**

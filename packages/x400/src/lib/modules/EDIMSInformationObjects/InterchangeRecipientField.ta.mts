@@ -54,13 +54,13 @@ export class InterchangeRecipientField {
          * @public
          * @readonly
          */
-        readonly identification_code_qualifier: OPTIONAL<IdentificationCodeQualifier>,
+        readonly identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>,
         /**
          * @summary `routing_address`.
          * @public
          * @readonly
          */
-        readonly routing_address: OPTIONAL<RoutingAddress>
+        readonly routing_address?: OPTIONAL<RoutingAddress>
     ) {}
 
     /**

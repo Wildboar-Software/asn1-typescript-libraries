@@ -38,19 +38,19 @@ export class EncodedInformationTypesConstraints {
          * @public
          * @readonly
          */
-        readonly unacceptable_eits: OPTIONAL<ExtendedEncodedInformationTypes>,
+        readonly unacceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
         /**
          * @summary `acceptable_eits`.
          * @public
          * @readonly
          */
-        readonly acceptable_eits: OPTIONAL<ExtendedEncodedInformationTypes>,
+        readonly acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
         /**
          * @summary `exclusively_acceptable_eits`.
          * @public
          * @readonly
          */
-        readonly exclusively_acceptable_eits: OPTIONAL<ExtendedEncodedInformationTypes>
+        readonly exclusively_acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>
     ) {}
 
     /**

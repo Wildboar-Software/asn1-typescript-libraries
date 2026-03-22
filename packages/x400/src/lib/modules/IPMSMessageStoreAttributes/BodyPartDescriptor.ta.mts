@@ -74,7 +74,7 @@ export class BodyPartDescriptor {
          * @public
          * @readonly
          */
-        readonly processed: OPTIONAL<BOOLEAN>
+        readonly processed?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

@@ -48,19 +48,19 @@ export class CommonSubmissionResults {
          * @public
          * @readonly
          */
-        readonly created_entry: OPTIONAL<SequenceNumber>,
+        readonly created_entry?: OPTIONAL<SequenceNumber>,
         /**
          * @summary `auto_action_error_indication`.
          * @public
          * @readonly
          */
-        readonly auto_action_error_indication: OPTIONAL<AutoActionErrorIndication>,
+        readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
         /**
          * @summary `ms_submission_result_extensions`.
          * @public
          * @readonly
          */
-        readonly ms_submission_result_extensions: OPTIONAL<MSExtensions>
+        readonly ms_submission_result_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

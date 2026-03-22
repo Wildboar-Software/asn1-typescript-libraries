@@ -54,13 +54,13 @@ export class DeliveryService {
          * @public
          * @readonly
          */
-        readonly per_message_component_rate: OPTIONAL<PerMessageComponentRate>,
+        readonly per_message_component_rate?: OPTIONAL<PerMessageComponentRate>,
         /**
          * @summary `per_octet_component_rate`.
          * @public
          * @readonly
          */
-        readonly per_octet_component_rate: OPTIONAL<PerOctetComponentRate>
+        readonly per_octet_component_rate?: OPTIONAL<PerOctetComponentRate>
     ) {}
 
     /**

@@ -66,25 +66,25 @@ export class UARegistration {
          * @public
          * @readonly
          */
-        readonly ua_list_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `ua_fetch_attribute_defaults`.
          * @public
          * @readonly
          */
-        readonly ua_fetch_attribute_defaults: OPTIONAL<AttributeType[]>,
+        readonly ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `ua_submission_defaults`.
          * @public
          * @readonly
          */
-        readonly ua_submission_defaults: OPTIONAL<MSSubmissionOptions>,
+        readonly ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>,
         /**
          * @summary `content_specific_defaults`.
          * @public
          * @readonly
          */
-        readonly content_specific_defaults: OPTIONAL<MSExtensions>
+        readonly content_specific_defaults?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

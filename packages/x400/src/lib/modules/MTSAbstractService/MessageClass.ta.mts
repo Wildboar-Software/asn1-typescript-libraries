@@ -84,49 +84,49 @@ export class MessageClass {
          * @public
          * @readonly
          */
-        readonly content_types: OPTIONAL<ContentTypes>,
+        readonly content_types?: OPTIONAL<ContentTypes>,
         /**
          * @summary `maximum_content_length`.
          * @public
          * @readonly
          */
-        readonly maximum_content_length: OPTIONAL<ContentLength>,
+        readonly maximum_content_length?: OPTIONAL<ContentLength>,
         /**
          * @summary `encoded_information_types_constraints`.
          * @public
          * @readonly
          */
-        readonly encoded_information_types_constraints: OPTIONAL<EncodedInformationTypesConstraints>,
+        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
         /**
          * @summary `security_labels`.
          * @public
          * @readonly
          */
-        readonly security_labels: OPTIONAL<SecurityContext>,
+        readonly security_labels?: OPTIONAL<SecurityContext>,
         /**
          * @summary `priority`.
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority[]>,
+        readonly priority?: OPTIONAL<Priority[]>,
         /**
          * @summary `objects`.
          * @public
          * @readonly
          */
-        readonly objects: OPTIONAL<MessageClass_objects>,
+        readonly objects?: OPTIONAL<MessageClass_objects>,
         /**
          * @summary `applies_only_to`.
          * @public
          * @readonly
          */
-        readonly applies_only_to: OPTIONAL<Restriction[]>,
+        readonly applies_only_to?: OPTIONAL<Restriction[]>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

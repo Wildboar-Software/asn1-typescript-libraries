@@ -56,7 +56,7 @@ export class CirculationMember {
          * @public
          * @readonly
          */
-        readonly checked: OPTIONAL<Checkmark>
+        readonly checked?: OPTIONAL<Checkmark>
     ) {}
 
     /**

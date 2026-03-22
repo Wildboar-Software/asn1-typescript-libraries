@@ -145,85 +145,85 @@ export class DLPolicy {
          * @public
          * @readonly
          */
-        readonly report_propagation: OPTIONAL<DLPolicy_report_propagation>,
+        readonly report_propagation?: OPTIONAL<DLPolicy_report_propagation>,
         /**
          * @summary `report_from_dl`.
          * @public
          * @readonly
          */
-        readonly report_from_dl: OPTIONAL<DLPolicy_report_from_dl>,
+        readonly report_from_dl?: OPTIONAL<DLPolicy_report_from_dl>,
         /**
          * @summary `originating_MTA_report`.
          * @public
          * @readonly
          */
-        readonly originating_MTA_report: OPTIONAL<DLPolicy_originating_MTA_report>,
+        readonly originating_MTA_report?: OPTIONAL<DLPolicy_originating_MTA_report>,
         /**
          * @summary `originator_report`.
          * @public
          * @readonly
          */
-        readonly originator_report: OPTIONAL<DLPolicy_originator_report>,
+        readonly originator_report?: OPTIONAL<DLPolicy_originator_report>,
         /**
          * @summary `return_of_content`.
          * @public
          * @readonly
          */
-        readonly return_of_content: OPTIONAL<DLPolicy_return_of_content>,
+        readonly return_of_content?: OPTIONAL<DLPolicy_return_of_content>,
         /**
          * @summary `priority`.
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<DLPolicy_priority>,
+        readonly priority?: OPTIONAL<DLPolicy_priority>,
         /**
          * @summary `disclosure_of_other_recipients`.
          * @public
          * @readonly
          */
-        readonly disclosure_of_other_recipients: OPTIONAL<DLPolicy_disclosure_of_other_recipients>,
+        readonly disclosure_of_other_recipients?: OPTIONAL<DLPolicy_disclosure_of_other_recipients>,
         /**
          * @summary `implicit_conversion_prohibited`.
          * @public
          * @readonly
          */
-        readonly implicit_conversion_prohibited: OPTIONAL<DLPolicy_implicit_conversion_prohibited>,
+        readonly implicit_conversion_prohibited?: OPTIONAL<DLPolicy_implicit_conversion_prohibited>,
         /**
          * @summary `conversion_with_loss_prohibited`.
          * @public
          * @readonly
          */
-        readonly conversion_with_loss_prohibited: OPTIONAL<DLPolicy_conversion_with_loss_prohibited>,
+        readonly conversion_with_loss_prohibited?: OPTIONAL<DLPolicy_conversion_with_loss_prohibited>,
         /**
          * @summary `further_dl_expansion_allowed`.
          * @public
          * @readonly
          */
-        readonly further_dl_expansion_allowed: OPTIONAL<BOOLEAN>,
+        readonly further_dl_expansion_allowed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `originator_requested_alternate_recipient_removed`.
          * @public
          * @readonly
          */
-        readonly originator_requested_alternate_recipient_removed: OPTIONAL<BOOLEAN>,
+        readonly originator_requested_alternate_recipient_removed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `proof_of_delivery`.
          * @public
          * @readonly
          */
-        readonly proof_of_delivery: OPTIONAL<DLPolicy_proof_of_delivery>,
+        readonly proof_of_delivery?: OPTIONAL<DLPolicy_proof_of_delivery>,
         /**
          * @summary `requested_delivery_method`.
          * @public
          * @readonly
          */
-        readonly requested_delivery_method: OPTIONAL<DLPolicy_requested_delivery_method>,
+        readonly requested_delivery_method?: OPTIONAL<DLPolicy_requested_delivery_method>,
         /**
          * @summary `token_encryption_algorithm_preference`.
          * @public
          * @readonly
          */
-        readonly token_encryption_algorithm_preference: OPTIONAL<
+        readonly token_encryption_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
         /**
@@ -231,7 +231,7 @@ export class DLPolicy {
          * @public
          * @readonly
          */
-        readonly token_signature_algorithm_preference: OPTIONAL<
+        readonly token_signature_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
         /**

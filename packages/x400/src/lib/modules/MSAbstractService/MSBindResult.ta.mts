@@ -94,73 +94,73 @@ export class MSBindResult {
          * @public
          * @readonly
          */
-        readonly available_auto_actions: OPTIONAL<AutoActionType[]>,
+        readonly available_auto_actions?: OPTIONAL<AutoActionType[]>,
         /**
          * @summary `available_attribute_types`.
          * @public
          * @readonly
          */
-        readonly available_attribute_types: OPTIONAL<AttributeType[]>,
+        readonly available_attribute_types?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `alert_indication`.
          * @public
          * @readonly
          */
-        readonly alert_indication: OPTIONAL<BOOLEAN>,
+        readonly alert_indication?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `content_types_supported`.
          * @public
          * @readonly
          */
-        readonly content_types_supported: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly content_types_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `entry_classes_supported`.
          * @public
          * @readonly
          */
-        readonly entry_classes_supported: OPTIONAL<EntryClass[]>,
+        readonly entry_classes_supported?: OPTIONAL<EntryClass[]>,
         /**
          * @summary `matching_rules_supported`.
          * @public
          * @readonly
          */
-        readonly matching_rules_supported: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly matching_rules_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `bind_result_extensions`.
          * @public
          * @readonly
          */
-        readonly bind_result_extensions: OPTIONAL<MSExtensions>,
+        readonly bind_result_extensions?: OPTIONAL<MSExtensions>,
         /**
          * @summary `message_group_depth`.
          * @public
          * @readonly
          */
-        readonly message_group_depth: OPTIONAL<INTEGER>,
+        readonly message_group_depth?: OPTIONAL<INTEGER>,
         /**
          * @summary `auto_action_error_indication`.
          * @public
          * @readonly
          */
-        readonly auto_action_error_indication: OPTIONAL<AutoActionErrorIndication>,
+        readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
         /**
          * @summary `unsupported_extensions`.
          * @public
          * @readonly
          */
-        readonly unsupported_extensions: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly unsupported_extensions?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `ua_registration_id_unknown`.
          * @public
          * @readonly
          */
-        readonly ua_registration_id_unknown: OPTIONAL<BOOLEAN>,
+        readonly ua_registration_id_unknown?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `service_information`.
          * @public
          * @readonly
          */
-        readonly service_information: OPTIONAL<GeneralString>
+        readonly service_information?: OPTIONAL<GeneralString>
     ) {}
 
     /**

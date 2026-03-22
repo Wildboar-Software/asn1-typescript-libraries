@@ -46,13 +46,13 @@ export class CrossReference {
          * @public
          * @readonly
          */
-        readonly message_reference: OPTIONAL<MessageReference>,
+        readonly message_reference?: OPTIONAL<MessageReference>,
         /**
          * @summary `body_part_reference`.
          * @public
          * @readonly
          */
-        readonly body_part_reference: OPTIONAL<INTEGER>
+        readonly body_part_reference?: OPTIONAL<INTEGER>
     ) {}
 
     /**

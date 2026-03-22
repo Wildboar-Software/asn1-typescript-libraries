@@ -40,7 +40,7 @@ export class DeliveryQueue {
          * @public
          * @readonly
          */
-        readonly octets: OPTIONAL<INTEGER>
+        readonly octets?: OPTIONAL<INTEGER>
     ) {}
 
     /**

@@ -68,19 +68,19 @@ export class DeliveredRecipientField {
          * @public
          * @readonly
          */
-        readonly delivery_service: OPTIONAL<DeliveryService>,
+        readonly delivery_service?: OPTIONAL<DeliveryService>,
         /**
          * @summary `conversion_statistics`.
          * @public
          * @readonly
          */
-        readonly conversion_statistics: OPTIONAL<ConversionStatistics>,
+        readonly conversion_statistics?: OPTIONAL<ConversionStatistics>,
         /**
          * @summary `edirector_name`.
          * @public
          * @readonly
          */
-        readonly edirector_name: OPTIONAL<ORAddressAndOptionalDirectoryName>
+        readonly edirector_name?: OPTIONAL<ORAddressAndOptionalDirectoryName>
     ) {}
 
     /**

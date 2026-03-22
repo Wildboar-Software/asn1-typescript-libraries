@@ -109,7 +109,7 @@ export class CommonFields {
          * @public
          * @readonly
          */
-        readonly notifications_extensions: OPTIONAL<NotificationExtensionsField>
+        readonly notifications_extensions?: OPTIONAL<NotificationExtensionsField>
     ) {}
 
     /**

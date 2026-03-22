@@ -48,7 +48,7 @@ export class NNUserReasonCodeField {
          * @public
          * @readonly
          */
-        readonly nn_user_diagnostic: OPTIONAL<NNUserDiagnosticField>
+        readonly nn_user_diagnostic?: OPTIONAL<NNUserDiagnosticField>
     ) {}
 
     /**

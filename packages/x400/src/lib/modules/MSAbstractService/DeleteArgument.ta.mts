@@ -65,7 +65,7 @@ export class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly delete_extensions: OPTIONAL<MSExtensions>
+        readonly delete_extensions?: OPTIONAL<MSExtensions>
     ) {}
 
     /**

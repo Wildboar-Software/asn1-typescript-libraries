@@ -35,7 +35,7 @@ export class VideotexParameters {
          * @public
          * @readonly
          */
-        readonly syntax: OPTIONAL<VideotexSyntax>
+        readonly syntax?: OPTIONAL<VideotexSyntax>
     ) {}
 
     /**

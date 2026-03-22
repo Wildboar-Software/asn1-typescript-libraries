@@ -50,13 +50,13 @@ export class DLExpansionInformation {
          * @public
          * @readonly
          */
-        readonly dl_name: OPTIONAL<MHSDistributionListName>,
+        readonly dl_name?: OPTIONAL<MHSDistributionListName>,
         /**
          * @summary `any_mta_may_expand`.
          * @public
          * @readonly
          */
-        readonly any_mta_may_expand: OPTIONAL<BOOLEAN>
+        readonly any_mta_may_expand?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

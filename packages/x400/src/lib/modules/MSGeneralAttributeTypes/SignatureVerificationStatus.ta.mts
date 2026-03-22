@@ -48,37 +48,37 @@ export class SignatureVerificationStatus {
          * @public
          * @readonly
          */
-        readonly content_integrity_check: OPTIONAL<SignatureStatus>,
+        readonly content_integrity_check?: OPTIONAL<SignatureStatus>,
         /**
          * @summary `message_origin_authentication_check`.
          * @public
          * @readonly
          */
-        readonly message_origin_authentication_check: OPTIONAL<SignatureStatus>,
+        readonly message_origin_authentication_check?: OPTIONAL<SignatureStatus>,
         /**
          * @summary `message_token`.
          * @public
          * @readonly
          */
-        readonly message_token: OPTIONAL<SignatureStatus>,
+        readonly message_token?: OPTIONAL<SignatureStatus>,
         /**
          * @summary `report_origin_authentication_check`.
          * @public
          * @readonly
          */
-        readonly report_origin_authentication_check: OPTIONAL<SignatureStatus>,
+        readonly report_origin_authentication_check?: OPTIONAL<SignatureStatus>,
         /**
          * @summary `proof_of_delivery`.
          * @public
          * @readonly
          */
-        readonly proof_of_delivery: OPTIONAL<SignatureStatus>,
+        readonly proof_of_delivery?: OPTIONAL<SignatureStatus>,
         /**
          * @summary `proof_of_submission`.
          * @public
          * @readonly
          */
-        readonly proof_of_submission: OPTIONAL<SignatureStatus>
+        readonly proof_of_submission?: OPTIONAL<SignatureStatus>
     ) {}
 
     /**

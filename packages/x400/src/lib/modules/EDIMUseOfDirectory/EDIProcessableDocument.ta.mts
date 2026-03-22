@@ -72,43 +72,43 @@ export class EDIProcessableDocument {
          * @public
          * @readonly
          */
-        readonly standardVersion: OPTIONAL<SyntaxVersion>,
+        readonly standardVersion?: OPTIONAL<SyntaxVersion>,
         /**
          * @summary `standardSyntaxId`.
          * @public
          * @readonly
          */
-        readonly standardSyntaxId: OPTIONAL<SyntaxIdentifier>,
+        readonly standardSyntaxId?: OPTIONAL<SyntaxIdentifier>,
         /**
          * @summary `documentType`.
          * @public
          * @readonly
          */
-        readonly documentType: OPTIONAL<EDIMessageTypeFieldSubField>,
+        readonly documentType?: OPTIONAL<EDIMessageTypeFieldSubField>,
         /**
          * @summary `documentVersion`.
          * @public
          * @readonly
          */
-        readonly documentVersion: OPTIONAL<DocumentVersion>,
+        readonly documentVersion?: OPTIONAL<DocumentVersion>,
         /**
          * @summary `documentRelease`.
          * @public
          * @readonly
          */
-        readonly documentRelease: OPTIONAL<DocumentRelease>,
+        readonly documentRelease?: OPTIONAL<DocumentRelease>,
         /**
          * @summary `controllingAgency`.
          * @public
          * @readonly
          */
-        readonly controllingAgency: OPTIONAL<ControllingAgency>,
+        readonly controllingAgency?: OPTIONAL<ControllingAgency>,
         /**
          * @summary `associationAssignedCode`.
          * @public
          * @readonly
          */
-        readonly associationAssignedCode: OPTIONAL<AssociationAssignedCode>
+        readonly associationAssignedCode?: OPTIONAL<AssociationAssignedCode>
     ) {}
 
     /**

@@ -49,19 +49,19 @@ export class AdditionalActions {
          * @public
          * @readonly
          */
-        readonly deferred_time: OPTIONAL<DeferredTime>,
+        readonly deferred_time?: OPTIONAL<DeferredTime>,
         /**
          * @summary `converted_encoded_information_types`.
          * @public
          * @readonly
          */
-        readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
+        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
         /**
          * @summary `other_actions`.
          * @public
          * @readonly
          */
-        readonly other_actions: OPTIONAL<OtherActions>
+        readonly other_actions?: OPTIONAL<OtherActions>
     ) {}
 
     /**

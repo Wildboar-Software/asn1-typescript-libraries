@@ -78,13 +78,13 @@ export class ForwardedNotificationFields {
          * @public
          * @readonly
          */
-        readonly fn_supplementary_information: OPTIONAL<EDISupplementaryInformation>,
+        readonly fn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
         /**
          * @summary `fn_extensions`.
          * @public
          * @readonly
          */
-        readonly fn_extensions: OPTIONAL<FNExtensionsField>
+        readonly fn_extensions?: OPTIONAL<FNExtensionsField>
     ) {}
 
     /**

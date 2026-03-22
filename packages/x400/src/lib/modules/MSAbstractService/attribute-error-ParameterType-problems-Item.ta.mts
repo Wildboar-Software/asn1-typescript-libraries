@@ -53,7 +53,7 @@ export class attribute_error_ParameterType_problems_Item {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<_Element>
+        readonly value?: OPTIONAL<_Element>
     ) {}
 
     /**

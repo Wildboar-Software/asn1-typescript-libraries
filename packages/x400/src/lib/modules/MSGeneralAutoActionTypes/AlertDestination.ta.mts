@@ -41,7 +41,7 @@ export class AlertDestination {
          * @public
          * @readonly
          */
-        readonly alert_qualifier: OPTIONAL<OCTET_STRING>
+        readonly alert_qualifier?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

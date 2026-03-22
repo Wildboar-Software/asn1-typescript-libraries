@@ -56,7 +56,7 @@ export class MTABindArgument_authenticated {
          * @public
          * @readonly
          */
-        readonly security_context: OPTIONAL<SecurityContext>
+        readonly security_context?: OPTIONAL<SecurityContext>
     ) {}
 
     /**

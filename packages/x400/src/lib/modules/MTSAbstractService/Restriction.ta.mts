@@ -19,9 +19,9 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
 /**
  * @summary Restriction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Restriction ::= SET {
  *   permitted    BOOLEAN DEFAULT TRUE,
@@ -31,7 +31,7 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
  *   source-name  ExactOrPattern OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class Restriction {
@@ -41,27 +41,27 @@ class Restriction {
          * @public
          * @readonly
          */
-        readonly permitted: OPTIONAL<BOOLEAN>,
+        readonly permitted?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `source_type`.
          * @public
          * @readonly
          */
-        readonly source_type: OPTIONAL<Restriction_source_type>,
+        readonly source_type?: OPTIONAL<Restriction_source_type>,
         /**
          * @summary `source_name`.
          * @public
          * @readonly
          */
-        readonly source_name: OPTIONAL<ExactOrPattern>
+        readonly source_name?: OPTIONAL<ExactOrPattern>
     ) {}
 
     /**
      * @summary Restructures an object into a Restriction
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Restriction`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -99,9 +99,9 @@ class Restriction {
 /**
  * @summary The Leading Root Component Types of Restriction
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -114,27 +114,27 @@ const _root_component_type_list_1_spec_for_Restriction: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of Restriction
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_Restriction: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of Restriction
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_Restriction: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_Restriction: $.ASN1Decoder<Restriction> | null = null;

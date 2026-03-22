@@ -37,13 +37,13 @@ export class NumberRange {
          * @public
          * @readonly
          */
-        readonly from_: OPTIONAL<SequenceNumber>,
+        readonly from_?: OPTIONAL<SequenceNumber>,
         /**
          * @summary `to`.
          * @public
          * @readonly
          */
-        readonly to: OPTIONAL<SequenceNumber>
+        readonly to?: OPTIONAL<SequenceNumber>
     ) {}
 
     /**

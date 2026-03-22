@@ -46,7 +46,7 @@ export class ServiceErrorParameter {
          * @public
          * @readonly
          */
-        readonly supplementary_information: OPTIONAL<GeneralString>
+        readonly supplementary_information?: OPTIONAL<GeneralString>
     ) {}
 
     /**

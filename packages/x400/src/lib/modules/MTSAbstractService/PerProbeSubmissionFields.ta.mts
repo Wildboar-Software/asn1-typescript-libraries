@@ -91,25 +91,25 @@ export class PerProbeSubmissionFields {
          * @public
          * @readonly
          */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
+        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
         /**
          * @summary `content_length`.
          * @public
          * @readonly
          */
-        readonly content_length: OPTIONAL<ContentLength>,
+        readonly content_length?: OPTIONAL<ContentLength>,
         /**
          * @summary `per_message_indicators`.
          * @public
          * @readonly
          */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

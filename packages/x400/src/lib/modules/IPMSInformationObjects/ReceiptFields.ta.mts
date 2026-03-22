@@ -62,19 +62,19 @@ export class ReceiptFields {
          * @public
          * @readonly
          */
-        readonly acknowledgment_mode: OPTIONAL<AcknowledgmentModeField>,
+        readonly acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>,
         /**
          * @summary `suppl_receipt_info`.
          * @public
          * @readonly
          */
-        readonly suppl_receipt_info: OPTIONAL<SupplReceiptInfoField>,
+        readonly suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
         /**
          * @summary `rn_extensions`.
          * @public
          * @readonly
          */
-        readonly rn_extensions: OPTIONAL<RNExtensionsField>
+        readonly rn_extensions?: OPTIONAL<RNExtensionsField>
     ) {}
 
     /**
