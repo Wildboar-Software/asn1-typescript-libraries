@@ -37,13 +37,13 @@ export class MarkingData {
          * @public
          * @readonly
          */
-        readonly markingPhrase: OPTIONAL<MarkingPhrase>,
+        readonly markingPhrase?: OPTIONAL<MarkingPhrase>,
         /**
          * @summary `markingCodes`.
          * @public
          * @readonly
          */
-        readonly markingCodes: OPTIONAL<MarkingCodes>
+        readonly markingCodes?: OPTIONAL<MarkingCodes>
     ) {}
 
     /**

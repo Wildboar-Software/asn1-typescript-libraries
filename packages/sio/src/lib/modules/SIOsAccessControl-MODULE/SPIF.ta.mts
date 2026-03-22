@@ -102,31 +102,31 @@ export class SPIF {
          * @public
          * @readonly
          */
-        readonly securityClassifications: OPTIONAL<SecurityClassifications>,
+        readonly securityClassifications?: OPTIONAL<SecurityClassifications>,
         /**
          * @summary `securityCategories`.
          * @public
          * @readonly
          */
-        readonly securityCategories: OPTIONAL<SPIF_SecurityCategories>,
+        readonly securityCategories?: OPTIONAL<SPIF_SecurityCategories>,
         /**
          * @summary `equivalentPolicies`.
          * @public
          * @readonly
          */
-        readonly equivalentPolicies: OPTIONAL<EquivalentPolicies>,
+        readonly equivalentPolicies?: OPTIONAL<EquivalentPolicies>,
         /**
          * @summary `defaultSecurityPolicyIdData`.
          * @public
          * @readonly
          */
-        readonly defaultSecurityPolicyIdData: OPTIONAL<ObjectIdData>,
+        readonly defaultSecurityPolicyIdData?: OPTIONAL<ObjectIdData>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

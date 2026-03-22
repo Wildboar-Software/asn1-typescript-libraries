@@ -39,7 +39,7 @@ export class EquivalentPolicy {
          * @public
          * @readonly
          */
-        readonly securityPolicyName: OPTIONAL<SecurityPolicyName>
+        readonly securityPolicyName?: OPTIONAL<SecurityPolicyName>
     ) {}
 
     /**

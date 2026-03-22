@@ -59,7 +59,7 @@ export class UpdateInformationData {
          * @public
          * @readonly
          */
-        readonly keyIdentifier: OPTIONAL<OCTET_STRING>
+        readonly keyIdentifier?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

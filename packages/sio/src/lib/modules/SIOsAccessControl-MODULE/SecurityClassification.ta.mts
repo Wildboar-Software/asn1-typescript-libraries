@@ -83,19 +83,19 @@ export class SecurityClassification {
          * @public
          * @readonly
          */
-        readonly markingData: OPTIONAL<MarkingDataInfo>,
+        readonly markingData?: OPTIONAL<MarkingDataInfo>,
         /**
          * @summary `requiredCategory`.
          * @public
          * @readonly
          */
-        readonly requiredCategory: OPTIONAL<OptionalCategoryGroups>,
+        readonly requiredCategory?: OPTIONAL<OptionalCategoryGroups>,
         /**
          * @summary `obsolete`.
          * @public
          * @readonly
          */
-        readonly obsolete: OPTIONAL<BOOLEAN>
+        readonly obsolete?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**
