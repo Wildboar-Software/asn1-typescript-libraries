@@ -75,13 +75,13 @@ class SpecifiedECDomain {
          * @public
          * @readonly
          */
-        readonly cofactor: OPTIONAL<INTEGER>,
+        readonly cofactor?: OPTIONAL<INTEGER>,
         /**
          * @summary `hash`.
          * @public
          * @readonly
          */
-        readonly hash: OPTIONAL<HashAlgorithm>,
+        readonly hash?: OPTIONAL<HashAlgorithm>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -188,7 +188,7 @@ function _decode_SpecifiedECDomain (el: _Element): SpecifiedECDomain {
         _root_component_type_list_2_spec_for_SpecifiedECDomain,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new SpecifiedECDomain( 
+    return new SpecifiedECDomain(
         version,
         fieldID,
         curve,

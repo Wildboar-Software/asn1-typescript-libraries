@@ -35,13 +35,13 @@ class ECWKTParameters {
          * @public
          * @readonly
          */
-        readonly kdf: OPTIONAL<KeyDerivationFunction>,
+        readonly kdf?: OPTIONAL<KeyDerivationFunction>,
         /**
          * @summary `wrap`.
          * @public
          * @readonly
          */
-        readonly wrap: OPTIONAL<KeyWrapFunction>
+        readonly wrap?: OPTIONAL<KeyWrapFunction>
     ) {}
 
     /**
@@ -126,7 +126,7 @@ function _decode_ECWKTParameters (el: _Element): ECWKTParameters {
         _root_component_type_list_2_spec_for_ECWKTParameters,
         undefined,
     );
-    return new ECWKTParameters( 
+    return new ECWKTParameters(
         kdf,
         wrap
     );

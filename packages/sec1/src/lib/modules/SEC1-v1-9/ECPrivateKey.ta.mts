@@ -51,13 +51,13 @@ class ECPrivateKey {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<ECDomainParameters>,
+        readonly parameters?: OPTIONAL<ECDomainParameters>,
         /**
          * @summary `publicKey`.
          * @public
          * @readonly
          */
-        readonly publicKey: OPTIONAL<BIT_STRING>
+        readonly publicKey?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**
@@ -148,7 +148,7 @@ function _decode_ECPrivateKey (el: _Element): ECPrivateKey {
         _root_component_type_list_2_spec_for_ECPrivateKey,
         undefined,
     );
-    return new ECPrivateKey( 
+    return new ECPrivateKey(
         version,
         privateKey,
         parameters,

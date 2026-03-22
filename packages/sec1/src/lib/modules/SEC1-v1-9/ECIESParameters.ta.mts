@@ -37,19 +37,19 @@ class ECIESParameters {
          * @public
          * @readonly
          */
-        readonly kdf: OPTIONAL<KeyDerivationFunction>,
+        readonly kdf?: OPTIONAL<KeyDerivationFunction>,
         /**
          * @summary `sym`.
          * @public
          * @readonly
          */
-        readonly sym: OPTIONAL<SymmetricEncryption>,
+        readonly sym?: OPTIONAL<SymmetricEncryption>,
         /**
          * @summary `mac`.
          * @public
          * @readonly
          */
-        readonly mac: OPTIONAL<MessageAuthenticationCode>
+        readonly mac?: OPTIONAL<MessageAuthenticationCode>
     ) {}
 
     /**
@@ -137,7 +137,7 @@ function _decode_ECIESParameters (el: _Element): ECIESParameters {
         _root_component_type_list_2_spec_for_ECIESParameters,
         undefined,
     );
-    return new ECIESParameters( 
+    return new ECIESParameters(
         kdf,
         sym,
         mac

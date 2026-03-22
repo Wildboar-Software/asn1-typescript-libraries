@@ -50,7 +50,7 @@ class Curve {
          * @public
          * @readonly
          */
-        readonly seed: OPTIONAL<BIT_STRING>
+        readonly seed?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**
@@ -138,7 +138,7 @@ function _decode_Curve (el: _Element): Curve {
         _root_component_type_list_2_spec_for_Curve,
         undefined,
     );
-    return new Curve( 
+    return new Curve(
         a,
         b,
         seed

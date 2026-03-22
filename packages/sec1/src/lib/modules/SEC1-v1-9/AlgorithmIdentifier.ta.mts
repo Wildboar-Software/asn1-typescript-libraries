@@ -40,7 +40,7 @@ class AlgorithmIdentifier {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>
+        readonly parameters?: OPTIONAL<_Element>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_AlgorithmIdentifier (el: _Element): AlgorithmIdentifier {
         _root_component_type_list_2_spec_for_AlgorithmIdentifier,
         undefined,
     );
-    return new AlgorithmIdentifier( 
+    return new AlgorithmIdentifier(
         algorithm,
         parameters
     );

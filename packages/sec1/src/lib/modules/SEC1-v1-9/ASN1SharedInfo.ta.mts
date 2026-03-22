@@ -44,25 +44,25 @@ class ASN1SharedInfo {
          * @public
          * @readonly
          */
-        readonly entityUInfo: OPTIONAL<OCTET_STRING>,
+        readonly entityUInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `entityVInfo`.
          * @public
          * @readonly
          */
-        readonly entityVInfo: OPTIONAL<OCTET_STRING>,
+        readonly entityVInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPubInfo`.
          * @public
          * @readonly
          */
-        readonly suppPubInfo: OPTIONAL<OCTET_STRING>,
+        readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPrivInfo`.
          * @public
          * @readonly
          */
-        readonly suppPrivInfo: OPTIONAL<OCTET_STRING>
+        readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**
@@ -156,7 +156,7 @@ function _decode_ASN1SharedInfo (el: _Element): ASN1SharedInfo {
         _root_component_type_list_2_spec_for_ASN1SharedInfo,
         undefined,
     );
-    return new ASN1SharedInfo( 
+    return new ASN1SharedInfo(
         keyInfo,
         entityUInfo,
         entityVInfo,

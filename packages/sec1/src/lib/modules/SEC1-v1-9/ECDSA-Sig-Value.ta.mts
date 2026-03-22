@@ -49,13 +49,13 @@ class ECDSA_Sig_Value {
          * @public
          * @readonly
          */
-        readonly a: OPTIONAL<INTEGER>,
+        readonly a?: OPTIONAL<INTEGER>,
         /**
          * @summary `y`.
          * @public
          * @readonly
          */
-        readonly y: OPTIONAL<ECDSA_Sig_Value_y>
+        readonly y?: OPTIONAL<ECDSA_Sig_Value_y>
     ) {}
 
     /**
@@ -146,7 +146,7 @@ function _decode_ECDSA_Sig_Value (el: _Element): ECDSA_Sig_Value {
         _root_component_type_list_2_spec_for_ECDSA_Sig_Value,
         undefined,
     );
-    return new ECDSA_Sig_Value( 
+    return new ECDSA_Sig_Value(
         r,
         s,
         a,
