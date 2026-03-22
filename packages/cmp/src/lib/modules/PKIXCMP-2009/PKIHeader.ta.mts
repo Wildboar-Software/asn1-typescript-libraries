@@ -114,55 +114,55 @@ export class PKIHeader {
      * @public
      * @readonly
      */
-    readonly messageTime: OPTIONAL<GeneralizedTime>,
+    readonly messageTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `protectionAlg`.
      * @public
      * @readonly
      */
-    readonly protectionAlg: OPTIONAL<AlgorithmIdentifier>,
+    readonly protectionAlg?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `senderKID`.
      * @public
      * @readonly
      */
-    readonly senderKID: OPTIONAL<KeyIdentifier>,
+    readonly senderKID?: OPTIONAL<KeyIdentifier>,
     /**
      * @summary `recipKID`.
      * @public
      * @readonly
      */
-    readonly recipKID: OPTIONAL<KeyIdentifier>,
+    readonly recipKID?: OPTIONAL<KeyIdentifier>,
     /**
      * @summary `transactionID`.
      * @public
      * @readonly
      */
-    readonly transactionID: OPTIONAL<OCTET_STRING>,
+    readonly transactionID?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `senderNonce`.
      * @public
      * @readonly
      */
-    readonly senderNonce: OPTIONAL<OCTET_STRING>,
+    readonly senderNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `recipNonce`.
      * @public
      * @readonly
      */
-    readonly recipNonce: OPTIONAL<OCTET_STRING>,
+    readonly recipNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `freeText`.
      * @public
      * @readonly
      */
-    readonly freeText: OPTIONAL<PKIFreeText>,
+    readonly freeText?: OPTIONAL<PKIFreeText>,
     /**
      * @summary `generalInfo`.
      * @public
      * @readonly
      */
-    readonly generalInfo: OPTIONAL<InfoTypeAndValue[]>
+    readonly generalInfo?: OPTIONAL<InfoTypeAndValue[]>
   ) {}
 
   /**

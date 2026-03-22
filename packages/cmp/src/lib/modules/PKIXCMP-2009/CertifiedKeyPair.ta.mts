@@ -56,13 +56,13 @@ export class CertifiedKeyPair {
      * @public
      * @readonly
      */
-    readonly privateKey: OPTIONAL<EncryptedValue>,
+    readonly privateKey?: OPTIONAL<EncryptedValue>,
     /**
      * @summary `publicationInfo`.
      * @public
      * @readonly
      */
-    readonly publicationInfo: OPTIONAL<PKIPublicationInfo>
+    readonly publicationInfo?: OPTIONAL<PKIPublicationInfo>
   ) {}
 
   /**

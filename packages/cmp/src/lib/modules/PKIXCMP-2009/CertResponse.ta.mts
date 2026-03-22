@@ -64,13 +64,13 @@ export class CertResponse {
      * @public
      * @readonly
      */
-    readonly certifiedKeyPair: OPTIONAL<CertifiedKeyPair>,
+    readonly certifiedKeyPair?: OPTIONAL<CertifiedKeyPair>,
     /**
      * @summary `rspInfo`.
      * @public
      * @readonly
      */
-    readonly rspInfo: OPTIONAL<OCTET_STRING>
+    readonly rspInfo?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

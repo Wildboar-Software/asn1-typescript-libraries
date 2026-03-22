@@ -78,7 +78,7 @@ export class RevAnnContent {
      * @public
      * @readonly
      */
-    readonly crlDetails: OPTIONAL<Extensions>
+    readonly crlDetails?: OPTIONAL<Extensions>
   ) {}
 
   /**

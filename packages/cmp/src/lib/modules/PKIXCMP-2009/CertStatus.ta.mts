@@ -55,7 +55,7 @@ export class CertStatus {
      * @public
      * @readonly
      */
-    readonly statusInfo: OPTIONAL<PKIStatusInfo>
+    readonly statusInfo?: OPTIONAL<PKIStatusInfo>
   ) {}
 
   /**

@@ -57,19 +57,19 @@ export class KeyRecRepContent {
      * @public
      * @readonly
      */
-    readonly newSigCert: OPTIONAL<CMPCertificate>,
+    readonly newSigCert?: OPTIONAL<CMPCertificate>,
     /**
      * @summary `caCerts`.
      * @public
      * @readonly
      */
-    readonly caCerts: OPTIONAL<CMPCertificate[]>,
+    readonly caCerts?: OPTIONAL<CMPCertificate[]>,
     /**
      * @summary `keyPairHist`.
      * @public
      * @readonly
      */
-    readonly keyPairHist: OPTIONAL<CertifiedKeyPair[]>
+    readonly keyPairHist?: OPTIONAL<CertifiedKeyPair[]>
   ) {}
 
   /**

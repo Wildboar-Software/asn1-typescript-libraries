@@ -55,7 +55,7 @@ export class RevDetails {
      * @public
      * @readonly
      */
-    readonly crlEntryDetails: OPTIONAL<Extensions>
+    readonly crlEntryDetails?: OPTIONAL<Extensions>
   ) {}
 
   /**

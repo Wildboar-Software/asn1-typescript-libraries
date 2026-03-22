@@ -53,13 +53,13 @@ export class ErrorMsgContent {
      * @public
      * @readonly
      */
-    readonly errorCode: OPTIONAL<INTEGER>,
+    readonly errorCode?: OPTIONAL<INTEGER>,
     /**
      * @summary `errorDetails`.
      * @public
      * @readonly
      */
-    readonly errorDetails: OPTIONAL<PKIFreeText>
+    readonly errorDetails?: OPTIONAL<PKIFreeText>
   ) {}
 
   /**

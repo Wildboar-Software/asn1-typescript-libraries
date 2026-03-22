@@ -60,13 +60,13 @@ export class RevRepContent {
      * @public
      * @readonly
      */
-    readonly revCerts: OPTIONAL<CertId[]>,
+    readonly revCerts?: OPTIONAL<CertId[]>,
     /**
      * @summary `crls`.
      * @public
      * @readonly
      */
-    readonly crls: OPTIONAL<CertificateList[]>
+    readonly crls?: OPTIONAL<CertificateList[]>
   ) {}
 
   /**

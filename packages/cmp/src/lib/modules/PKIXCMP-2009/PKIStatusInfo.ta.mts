@@ -54,13 +54,13 @@ export class PKIStatusInfo {
      * @public
      * @readonly
      */
-    readonly statusString: OPTIONAL<PKIFreeText>,
+    readonly statusString?: OPTIONAL<PKIFreeText>,
     /**
      * @summary `failInfo`.
      * @public
      * @readonly
      */
-    readonly failInfo: OPTIONAL<PKIFailureInfo>
+    readonly failInfo?: OPTIONAL<PKIFailureInfo>
   ) {}
 
   /**

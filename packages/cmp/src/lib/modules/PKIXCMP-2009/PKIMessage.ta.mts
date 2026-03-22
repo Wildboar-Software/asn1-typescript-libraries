@@ -67,13 +67,13 @@ export class PKIMessage {
      * @public
      * @readonly
      */
-    readonly protection: OPTIONAL<PKIProtection>,
+    readonly protection?: OPTIONAL<PKIProtection>,
     /**
      * @summary `extraCerts`.
      * @public
      * @readonly
      */
-    readonly extraCerts: OPTIONAL<CMPCertificate[]>
+    readonly extraCerts?: OPTIONAL<CMPCertificate[]>
   ) {}
 
   /**

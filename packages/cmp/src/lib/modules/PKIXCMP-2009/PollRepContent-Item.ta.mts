@@ -48,7 +48,7 @@ export class PollRepContent_Item {
      * @public
      * @readonly
      */
-    readonly reason: OPTIONAL<PKIFreeText>
+    readonly reason?: OPTIONAL<PKIFreeText>
   ) {}
 
   /**
