@@ -45,7 +45,7 @@ export class Actions_Item {
          * @public
          * @readonly
          */
-        readonly parameter: OPTIONAL<TemplateList>
+        readonly parameter?: OPTIONAL<TemplateList>
     ) {}
 
     /**

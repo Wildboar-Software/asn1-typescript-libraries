@@ -97,19 +97,19 @@ export class BufferedScanReportInformation {
          * @public
          * @readonly
          */
-        readonly incompleteScan: OPTIONAL<IncompleteScan>,
+        readonly incompleteScan?: OPTIONAL<IncompleteScan>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

@@ -70,55 +70,55 @@ export class PropertyList {
          * @public
          * @readonly
          */
-        readonly replaceWithDefault: OPTIONAL<BOOLEAN>,
+        readonly replaceWithDefault?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `defaultValue`.
          * @public
          * @readonly
          */
-        readonly defaultValue: OPTIONAL<ValueSpecifier>,
+        readonly defaultValue?: OPTIONAL<ValueSpecifier>,
         /**
          * @summary `initialValue`.
          * @public
          * @readonly
          */
-        readonly initialValue: OPTIONAL<ValueSpecifier>,
+        readonly initialValue?: OPTIONAL<ValueSpecifier>,
         /**
          * @summary `permittedValues`.
          * @public
          * @readonly
          */
-        readonly permittedValues: OPTIONAL<DefinedType>,
+        readonly permittedValues?: OPTIONAL<DefinedType>,
         /**
          * @summary `requiredValues`.
          * @public
          * @readonly
          */
-        readonly requiredValues: OPTIONAL<DefinedType>,
+        readonly requiredValues?: OPTIONAL<DefinedType>,
         /**
          * @summary `getReplace`.
          * @public
          * @readonly
          */
-        readonly getReplace: OPTIONAL<PropertyList_getReplace>,
+        readonly getReplace?: OPTIONAL<PropertyList_getReplace>,
         /**
          * @summary `addRemove`.
          * @public
          * @readonly
          */
-        readonly addRemove: OPTIONAL<PropertyList_addRemove>,
+        readonly addRemove?: OPTIONAL<PropertyList_addRemove>,
         /**
          * @summary `setByCreate`.
          * @public
          * @readonly
          */
-        readonly setByCreate: OPTIONAL<BOOLEAN>,
+        readonly setByCreate?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `additionalProperties`.
          * @public
          * @readonly
          */
-        readonly additionalProperties: OPTIONAL<AdditionalProperties>
+        readonly additionalProperties?: OPTIONAL<AdditionalProperties>
     ) {}
 
     /**

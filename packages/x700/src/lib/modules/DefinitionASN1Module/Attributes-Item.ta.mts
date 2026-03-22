@@ -56,7 +56,7 @@ export class Attributes_Item {
          * @public
          * @readonly
          */
-        readonly parameterLabel: OPTIONAL<TemplateList>
+        readonly parameterLabel?: OPTIONAL<TemplateList>
     ) {}
 
     /**

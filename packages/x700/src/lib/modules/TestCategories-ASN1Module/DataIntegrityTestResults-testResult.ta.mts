@@ -51,7 +51,7 @@ export class DataIntegrityTestResults_testResult {
          * @public
          * @readonly
          */
-        readonly corruptedData: OPTIONAL<DataUnits>
+        readonly corruptedData?: OPTIONAL<DataUnits>
     ) {}
 
     /**

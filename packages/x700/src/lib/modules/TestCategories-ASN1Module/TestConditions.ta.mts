@@ -48,7 +48,7 @@ export class TestConditions {
          * @public
          * @readonly
          */
-        readonly second: OPTIONAL<TestConditions_second>
+        readonly second?: OPTIONAL<TestConditions_second>
     ) {}
 
     /**

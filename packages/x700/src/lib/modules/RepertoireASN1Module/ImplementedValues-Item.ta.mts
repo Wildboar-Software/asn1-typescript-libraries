@@ -36,25 +36,25 @@ export class ImplementedValues_Item {
          * @public
          * @readonly
          */
-        readonly defaultValue: OPTIONAL<_Element>,
+        readonly defaultValue?: OPTIONAL<_Element>,
         /**
          * @summary `initialValue`.
          * @public
          * @readonly
          */
-        readonly initialValue: OPTIONAL<_Element>,
+        readonly initialValue?: OPTIONAL<_Element>,
         /**
          * @summary `minValue`.
          * @public
          * @readonly
          */
-        readonly minValue: OPTIONAL<_Element>,
+        readonly minValue?: OPTIONAL<_Element>,
         /**
          * @summary `maxValue`.
          * @public
          * @readonly
          */
-        readonly maxValue: OPTIONAL<_Element>
+        readonly maxValue?: OPTIONAL<_Element>
     ) {}
 
     /**

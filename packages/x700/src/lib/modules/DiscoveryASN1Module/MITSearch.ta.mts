@@ -53,7 +53,7 @@ export class MITSearch {
          * @public
          * @readonly
          */
-        readonly classRequest: OPTIONAL<BOOLEAN>
+        readonly classRequest?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

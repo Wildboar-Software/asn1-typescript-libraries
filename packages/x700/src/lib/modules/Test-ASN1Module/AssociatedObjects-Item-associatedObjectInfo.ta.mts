@@ -36,7 +36,7 @@ export class AssociatedObjects_Item_associatedObjectInfo {
          * @public
          * @readonly
          */
-        readonly associatedObjectInform: OPTIONAL<_Element>
+        readonly associatedObjectInform?: OPTIONAL<_Element>
     ) {}
 
     /**

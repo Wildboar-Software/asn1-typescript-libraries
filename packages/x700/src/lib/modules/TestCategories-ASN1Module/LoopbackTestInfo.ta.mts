@@ -54,43 +54,43 @@ export class LoopbackTestInfo {
          * @public
          * @readonly
          */
-        readonly loopbackData: OPTIONAL<TestPatternSequence>,
+        readonly loopbackData?: OPTIONAL<TestPatternSequence>,
         /**
          * @summary `testStartTime`.
          * @public
          * @readonly
          */
-        readonly testStartTime: OPTIONAL<GeneralizedTime>,
+        readonly testStartTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `testIntervalTime`.
          * @public
          * @readonly
          */
-        readonly testIntervalTime: OPTIONAL<Timespec>,
+        readonly testIntervalTime?: OPTIONAL<Timespec>,
         /**
          * @summary `reportingIntervalTime`.
          * @public
          * @readonly
          */
-        readonly reportingIntervalTime: OPTIONAL<Timespec>,
+        readonly reportingIntervalTime?: OPTIONAL<Timespec>,
         /**
          * @summary `loopbackType`.
          * @public
          * @readonly
          */
-        readonly loopbackType: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly loopbackType?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `loopbackTimeout`.
          * @public
          * @readonly
          */
-        readonly loopbackTimeout: OPTIONAL<Timespec>,
+        readonly loopbackTimeout?: OPTIONAL<Timespec>,
         /**
          * @summary `loopbackErrorThreshold`.
          * @public
          * @readonly
          */
-        readonly loopbackErrorThreshold: OPTIONAL<LoopbackError>
+        readonly loopbackErrorThreshold?: OPTIONAL<LoopbackError>
     ) {}
 
     /**

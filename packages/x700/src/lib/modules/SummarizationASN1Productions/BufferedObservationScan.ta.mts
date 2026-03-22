@@ -52,25 +52,25 @@ export class BufferedObservationScan {
          * @public
          * @readonly
          */
-        readonly objectInstance: OPTIONAL<ObjectInstance>,
+        readonly objectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `reportTimeAttributeList`.
          * @public
          * @readonly
          */
-        readonly reportTimeAttributeList: OPTIONAL<AttributeMeasure[]>,
+        readonly reportTimeAttributeList?: OPTIONAL<AttributeMeasure[]>,
         /**
          * @summary `attributesBuffer`.
          * @public
          * @readonly
          */
-        readonly attributesBuffer: OPTIONAL<AttributeMeasure[][]>,
+        readonly attributesBuffer?: OPTIONAL<AttributeMeasure[][]>,
         /**
          * @summary `numericAttributesBuff`.
          * @public
          * @readonly
          */
-        readonly numericAttributesBuff: OPTIONAL<NumericMeasure[][]>
+        readonly numericAttributesBuff?: OPTIONAL<NumericMeasure[][]>
     ) {}
 
     /**

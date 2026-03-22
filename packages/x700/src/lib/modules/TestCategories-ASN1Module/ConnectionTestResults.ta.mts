@@ -50,25 +50,25 @@ export class ConnectionTestResults {
          * @public
          * @readonly
          */
-        readonly receivedTestPattern: OPTIONAL<TestPattern>,
+        readonly receivedTestPattern?: OPTIONAL<TestPattern>,
         /**
          * @summary `errorRatio`.
          * @public
          * @readonly
          */
-        readonly errorRatio: OPTIONAL<REAL>,
+        readonly errorRatio?: OPTIONAL<REAL>,
         /**
          * @summary `testDirection`.
          * @public
          * @readonly
          */
-        readonly testDirection: OPTIONAL<TestDirection>,
+        readonly testDirection?: OPTIONAL<TestDirection>,
         /**
          * @summary `testDurationMade`.
          * @public
          * @readonly
          */
-        readonly testDurationMade: OPTIONAL<Timespec>
+        readonly testDurationMade?: OPTIONAL<Timespec>
     ) {}
 
     /**

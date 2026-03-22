@@ -46,7 +46,7 @@ export class TestSessionId {
          * @public
          * @readonly
          */
-        readonly globalRef: OPTIONAL<TestSessionId_globalRef>
+        readonly globalRef?: OPTIONAL<TestSessionId_globalRef>
     ) {}
 
     /**

@@ -44,13 +44,13 @@ export class NonStatisticalScan {
          * @public
          * @readonly
          */
-        readonly objectInstance: OPTIONAL<ObjectInstance>,
+        readonly objectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `attributeValues`.
          * @public
          * @readonly
          */
-        readonly attributeValues: OPTIONAL<AttributeMeasure[]>
+        readonly attributeValues?: OPTIONAL<AttributeMeasure[]>
     ) {}
 
     /**

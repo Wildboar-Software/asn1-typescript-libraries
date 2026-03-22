@@ -46,19 +46,19 @@ export class ResourceBoundaryTestResults {
          * @public
          * @readonly
          */
-        readonly signalReceived: OPTIONAL<SignalReceived>,
+        readonly signalReceived?: OPTIONAL<SignalReceived>,
         /**
          * @summary `intermediateResourceBoundaryTestOutcome`.
          * @public
          * @readonly
          */
-        readonly intermediateResourceBoundaryTestOutcome: OPTIONAL<IntermediateResourceBoundaryTestOutcome>,
+        readonly intermediateResourceBoundaryTestOutcome?: OPTIONAL<IntermediateResourceBoundaryTestOutcome>,
         /**
          * @summary `eventId`.
          * @public
          * @readonly
          */
-        readonly eventId: OPTIONAL<INTEGER>
+        readonly eventId?: OPTIONAL<INTEGER>
     ) {}
 
     /**

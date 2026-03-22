@@ -56,7 +56,7 @@ export class AutoRestoreReportInfo {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<ManagementExtension[]>
+        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

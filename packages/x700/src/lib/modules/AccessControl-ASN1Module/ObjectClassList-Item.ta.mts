@@ -41,7 +41,7 @@ export class ObjectClassList_Item {
          * @public
          * @readonly
          */
-        readonly nameBinding: OPTIONAL<OBJECT_IDENTIFIER>
+        readonly nameBinding?: OPTIONAL<OBJECT_IDENTIFIER>
     ) {}
 
     /**

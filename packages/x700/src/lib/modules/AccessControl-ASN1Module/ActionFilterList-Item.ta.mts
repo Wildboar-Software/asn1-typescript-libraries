@@ -45,7 +45,7 @@ export class ActionFilterList_Item {
          * @public
          * @readonly
          */
-        readonly attributeFilterList: OPTIONAL<FilterList>
+        readonly attributeFilterList?: OPTIONAL<FilterList>
     ) {}
 
     /**

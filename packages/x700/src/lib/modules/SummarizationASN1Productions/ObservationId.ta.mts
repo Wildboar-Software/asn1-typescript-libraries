@@ -54,13 +54,13 @@ export class ObservationId {
          * @public
          * @readonly
          */
-        readonly scanAttributeIdList: OPTIONAL<ScanAttributeIdList>,
+        readonly scanAttributeIdList?: OPTIONAL<ScanAttributeIdList>,
         /**
          * @summary `numericAttributeIdArray`.
          * @public
          * @readonly
          */
-        readonly numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>
+        readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>
     ) {}
 
     /**

@@ -45,7 +45,7 @@ export class NamingObjectClass {
          * @public
          * @readonly
          */
-        readonly andSubclasses: OPTIONAL<BOOLEAN>
+        readonly andSubclasses?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

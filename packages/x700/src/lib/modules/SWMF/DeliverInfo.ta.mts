@@ -73,19 +73,19 @@ export class DeliverInfo {
          * @public
          * @readonly
          */
-        readonly targetSystem: OPTIONAL<Destination>,
+        readonly targetSystem?: OPTIONAL<Destination>,
         /**
          * @summary `transferInfo`.
          * @public
          * @readonly
          */
-        readonly transferInfo: OPTIONAL<TransferInfo>,
+        readonly transferInfo?: OPTIONAL<TransferInfo>,
         /**
          * @summary `additionalInfo`.
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<ManagementExtension[]>
+        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

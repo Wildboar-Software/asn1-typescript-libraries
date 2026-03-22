@@ -45,7 +45,7 @@ export class CapabilityIdentitiesList_Item_knownForm {
          * @public
          * @readonly
          */
-        readonly sdaList: OPTIONAL<SdaList>
+        readonly sdaList?: OPTIONAL<SdaList>
     ) {}
 
     /**

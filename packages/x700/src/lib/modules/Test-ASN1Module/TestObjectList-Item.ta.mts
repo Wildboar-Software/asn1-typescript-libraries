@@ -46,19 +46,19 @@ export class TestObjectList_Item {
          * @public
          * @readonly
          */
-        readonly tOInstance: OPTIONAL<ObjectInstance>,
+        readonly tOInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `referenceTOInstance`.
          * @public
          * @readonly
          */
-        readonly referenceTOInstance: OPTIONAL<ObjectInstance>,
+        readonly referenceTOInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `initialAttributeList`.
          * @public
          * @readonly
          */
-        readonly initialAttributeList: OPTIONAL<AttributeList>
+        readonly initialAttributeList?: OPTIONAL<AttributeList>
     ) {}
 
     /**

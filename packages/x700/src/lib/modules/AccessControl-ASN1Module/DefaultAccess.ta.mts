@@ -50,61 +50,61 @@ export class DefaultAccess {
          * @public
          * @readonly
          */
-        readonly action: OPTIONAL<EnforcementAction>,
+        readonly action?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `create`.
          * @public
          * @readonly
          */
-        readonly create: OPTIONAL<EnforcementAction>,
+        readonly create?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `delete_`.
          * @public
          * @readonly
          */
-        readonly delete_: OPTIONAL<EnforcementAction>,
+        readonly delete_?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `get_`.
          * @public
          * @readonly
          */
-        readonly get_: OPTIONAL<EnforcementAction>,
+        readonly get_?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `replace`.
          * @public
          * @readonly
          */
-        readonly replace: OPTIONAL<EnforcementAction>,
+        readonly replace?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `addMember`.
          * @public
          * @readonly
          */
-        readonly addMember: OPTIONAL<EnforcementAction>,
+        readonly addMember?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `removeMember`.
          * @public
          * @readonly
          */
-        readonly removeMember: OPTIONAL<EnforcementAction>,
+        readonly removeMember?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `replaceWithDefault`.
          * @public
          * @readonly
          */
-        readonly replaceWithDefault: OPTIONAL<EnforcementAction>,
+        readonly replaceWithDefault?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `multipleObjectSelection`.
          * @public
          * @readonly
          */
-        readonly multipleObjectSelection: OPTIONAL<EnforcementAction>,
+        readonly multipleObjectSelection?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `filter`.
          * @public
          * @readonly
          */
-        readonly filter: OPTIONAL<EnforcementAction>
+        readonly filter?: OPTIONAL<EnforcementAction>
     ) {}
 
     /**

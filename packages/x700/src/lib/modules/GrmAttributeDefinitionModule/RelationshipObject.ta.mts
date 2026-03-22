@@ -48,7 +48,7 @@ export class RelationshipObject {
          * @public
          * @readonly
          */
-        readonly qualifies: OPTIONAL<TemplateList>
+        readonly qualifies?: OPTIONAL<TemplateList>
     ) {}
 
     /**

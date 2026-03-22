@@ -48,7 +48,7 @@ export class TestObjectResponse {
          * @public
          * @readonly
          */
-        readonly tOAttributeList: OPTIONAL<AttributeList>
+        readonly tOAttributeList?: OPTIONAL<AttributeList>
     ) {}
 
     /**

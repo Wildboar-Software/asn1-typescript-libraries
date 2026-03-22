@@ -48,7 +48,7 @@ export class OptionalIdentifierAndRole {
          * @public
          * @readonly
          */
-        readonly optionalRoleName: OPTIONAL<Identifier>
+        readonly optionalRoleName?: OPTIONAL<Identifier>
     ) {}
 
     /**

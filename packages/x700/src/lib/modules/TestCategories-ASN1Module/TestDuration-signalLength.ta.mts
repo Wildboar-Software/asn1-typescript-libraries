@@ -41,7 +41,7 @@ export class TestDuration_signalLength {
          * @public
          * @readonly
          */
-        readonly dataRate: OPTIONAL<DataRate>
+        readonly dataRate?: OPTIONAL<DataRate>
     ) {}
 
     /**

@@ -45,13 +45,13 @@ export class DeleteSpecification {
          * @public
          * @readonly
          */
-        readonly deleteModifier: OPTIONAL<DeleteSpecification_deleteModifier>,
+        readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
         /**
          * @summary `parameter`.
          * @public
          * @readonly
          */
-        readonly parameter: OPTIONAL<TemplateList>
+        readonly parameter?: OPTIONAL<TemplateList>
     ) {}
 
     /**

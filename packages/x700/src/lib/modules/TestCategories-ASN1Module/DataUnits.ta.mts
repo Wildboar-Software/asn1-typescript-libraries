@@ -66,25 +66,25 @@ export class DataUnits {
          * @public
          * @readonly
          */
-        readonly dataCategory: OPTIONAL<DataCategory>,
+        readonly dataCategory?: OPTIONAL<DataCategory>,
         /**
          * @summary `dataSize`.
          * @public
          * @readonly
          */
-        readonly dataSize: OPTIONAL<DataSize>,
+        readonly dataSize?: OPTIONAL<DataSize>,
         /**
          * @summary `dataNumber`.
          * @public
          * @readonly
          */
-        readonly dataNumber: OPTIONAL<UnitsTotal>,
+        readonly dataNumber?: OPTIONAL<UnitsTotal>,
         /**
          * @summary `dataRate`.
          * @public
          * @readonly
          */
-        readonly dataRate: OPTIONAL<DataRate>
+        readonly dataRate?: OPTIONAL<DataRate>
     ) {}
 
     /**

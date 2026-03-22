@@ -64,7 +64,7 @@ export class ExecuteProgramReply {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<ManagementExtension[]>
+        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

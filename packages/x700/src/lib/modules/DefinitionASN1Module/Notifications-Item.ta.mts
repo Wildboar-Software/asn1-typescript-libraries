@@ -46,7 +46,7 @@ export class Notifications_Item {
          * @public
          * @readonly
          */
-        readonly parameter: OPTIONAL<TemplateList>
+        readonly parameter?: OPTIONAL<TemplateList>
     ) {}
 
     /**

@@ -114,13 +114,13 @@ export class SchedulingConflictInfo {
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

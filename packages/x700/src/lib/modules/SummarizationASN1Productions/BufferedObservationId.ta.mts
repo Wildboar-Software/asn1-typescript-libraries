@@ -60,19 +60,19 @@ export class BufferedObservationId {
          * @public
          * @readonly
          */
-        readonly scanAttributeIdList: OPTIONAL<AttributeId[]>,
+        readonly scanAttributeIdList?: OPTIONAL<AttributeId[]>,
         /**
          * @summary `numericAttributeIdArray`.
          * @public
          * @readonly
          */
-        readonly numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>,
+        readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>,
         /**
          * @summary `reportTimeAttributeIdList`.
          * @public
          * @readonly
          */
-        readonly reportTimeAttributeIdList: OPTIONAL<ReportTimeAttributeIdList>
+        readonly reportTimeAttributeIdList?: OPTIONAL<ReportTimeAttributeIdList>
     ) {}
 
     /**

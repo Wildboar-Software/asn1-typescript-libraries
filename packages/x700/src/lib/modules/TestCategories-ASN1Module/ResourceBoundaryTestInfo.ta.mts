@@ -43,13 +43,13 @@ export class ResourceBoundaryTestInfo {
          * @public
          * @readonly
          */
-        readonly resultReportIndicator: OPTIONAL<ResultReportIndicator>,
+        readonly resultReportIndicator?: OPTIONAL<ResultReportIndicator>,
         /**
          * @summary `sequenceOfEvents`.
          * @public
          * @readonly
          */
-        readonly sequenceOfEvents: OPTIONAL<SequenceOfEvents>
+        readonly sequenceOfEvents?: OPTIONAL<SequenceOfEvents>
     ) {}
 
     /**

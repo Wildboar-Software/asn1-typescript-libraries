@@ -54,13 +54,13 @@ export class RootedNameTree {
          * @public
          * @readonly
          */
-        readonly classOfRoot: OPTIONAL<GdmoObjectClass>,
+        readonly classOfRoot?: OPTIONAL<GdmoObjectClass>,
         /**
          * @summary `subordinates`.
          * @public
          * @readonly
          */
-        readonly subordinates: OPTIONAL<NameTree[]>
+        readonly subordinates?: OPTIONAL<NameTree[]>
     ) {}
 
     /**

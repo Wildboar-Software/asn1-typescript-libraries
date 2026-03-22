@@ -57,19 +57,19 @@ export class SMASEUserData {
          * @public
          * @readonly
          */
-        readonly smfuPackages: OPTIONAL<FunctionalUnitPackage[]>,
+        readonly smfuPackages?: OPTIONAL<FunctionalUnitPackage[]>,
         /**
          * @summary `reason`.
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<Reason>,
+        readonly reason?: OPTIONAL<Reason>,
         /**
          * @summary `systemsManagementUserInformation`.
          * @public
          * @readonly
          */
-        readonly systemsManagementUserInformation: OPTIONAL<GraphicString>
+        readonly systemsManagementUserInformation?: OPTIONAL<GraphicString>
     ) {}
 
     /**

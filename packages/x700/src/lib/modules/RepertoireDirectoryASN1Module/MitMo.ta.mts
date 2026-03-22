@@ -48,7 +48,7 @@ export class MitMo {
          * @public
          * @readonly
          */
-        readonly instances: OPTIONAL<InstanceIdList>
+        readonly instances?: OPTIONAL<InstanceIdList>
     ) {}
 
     /**

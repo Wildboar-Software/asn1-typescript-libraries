@@ -60,31 +60,31 @@ export class TestRequestUncontrolledResult {
          * @public
          * @readonly
          */
-        readonly testOutcome: OPTIONAL<TestOutcome>,
+        readonly testOutcome?: OPTIONAL<TestOutcome>,
         /**
          * @summary `mORTs`.
          * @public
          * @readonly
          */
-        readonly mORTs: OPTIONAL<ObjectInstance[]>,
+        readonly mORTs?: OPTIONAL<ObjectInstance[]>,
         /**
          * @summary `proposedRepairActions`.
          * @public
          * @readonly
          */
-        readonly proposedRepairActions: OPTIONAL<ProposedRepairActions>,
+        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

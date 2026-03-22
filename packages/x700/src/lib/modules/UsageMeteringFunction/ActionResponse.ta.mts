@@ -39,19 +39,19 @@ export class ActionResponse {
          * @public
          * @readonly
          */
-        readonly success: OPTIONAL<ObjectInstance[]>,
+        readonly success?: OPTIONAL<ObjectInstance[]>,
         /**
          * @summary `failed`.
          * @public
          * @readonly
          */
-        readonly failed: OPTIONAL<ObjectInstance[]>,
+        readonly failed?: OPTIONAL<ObjectInstance[]>,
         /**
          * @summary `indeterminate`.
          * @public
          * @readonly
          */
-        readonly indeterminate: OPTIONAL<ObjectInstance[]>
+        readonly indeterminate?: OPTIONAL<ObjectInstance[]>
     ) {}
 
     /**

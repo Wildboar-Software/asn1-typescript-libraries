@@ -55,19 +55,19 @@ export class ChangeOverInfo {
          * @public
          * @readonly
          */
-        readonly secondary: OPTIONAL<OptionalObject>,
+        readonly secondary?: OPTIONAL<OptionalObject>,
         /**
          * @summary `primaryChanges`.
          * @public
          * @readonly
          */
-        readonly primaryChanges: OPTIONAL<ExpectedAttributeList>,
+        readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `secondaryChanges`.
          * @public
          * @readonly
          */
-        readonly secondaryChanges: OPTIONAL<ExpectedAttributeList>
+        readonly secondaryChanges?: OPTIONAL<ExpectedAttributeList>
     ) {}
 
     /**

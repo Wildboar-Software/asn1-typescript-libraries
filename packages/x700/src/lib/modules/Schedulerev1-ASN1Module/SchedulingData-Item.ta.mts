@@ -52,7 +52,7 @@ export class SchedulingData_Item {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<INTEGER>
+        readonly priority?: OPTIONAL<INTEGER>
     ) {}
 
     /**

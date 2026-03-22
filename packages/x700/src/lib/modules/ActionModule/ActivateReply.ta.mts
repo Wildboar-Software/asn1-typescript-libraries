@@ -62,7 +62,7 @@ export class ActivateReply {
          * @public
          * @readonly
          */
-        readonly responseParams: OPTIONAL<ManagementExtension[]>
+        readonly responseParams?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

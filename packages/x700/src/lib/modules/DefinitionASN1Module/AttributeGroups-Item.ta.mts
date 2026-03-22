@@ -46,7 +46,7 @@ export class AttributeGroups_Item {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<TemplateList>
+        readonly attributes?: OPTIONAL<TemplateList>
     ) {}
 
     /**

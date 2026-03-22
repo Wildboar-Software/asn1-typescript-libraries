@@ -96,67 +96,67 @@ export class TestResultInfo {
          * @public
          * @readonly
          */
-        readonly testInvocationId: OPTIONAL<TestInvocationId>,
+        readonly testInvocationId?: OPTIONAL<TestInvocationId>,
         /**
          * @summary `testSessionId`.
          * @public
          * @readonly
          */
-        readonly testSessionId: OPTIONAL<TestSessionId>,
+        readonly testSessionId?: OPTIONAL<TestSessionId>,
         /**
          * @summary `testOutcome`.
          * @public
          * @readonly
          */
-        readonly testOutcome: OPTIONAL<TestOutcome>,
+        readonly testOutcome?: OPTIONAL<TestOutcome>,
         /**
          * @summary `mORTs`.
          * @public
          * @readonly
          */
-        readonly mORTs: OPTIONAL<MORTs>,
+        readonly mORTs?: OPTIONAL<MORTs>,
         /**
          * @summary `associatedObjects`.
          * @public
          * @readonly
          */
-        readonly associatedObjects: OPTIONAL<AssociatedObjects>,
+        readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
         /**
          * @summary `monitoredAttributes`.
          * @public
          * @readonly
          */
-        readonly monitoredAttributes: OPTIONAL<MonitoredAttributes>,
+        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
         /**
          * @summary `proposedRepairActions`.
          * @public
          * @readonly
          */
-        readonly proposedRepairActions: OPTIONAL<ProposedRepairActions>,
+        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>,
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>,
         /**
          * @summary `notificationIdentifier`.
          * @public
          * @readonly
          */
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
+        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
          * @public
          * @readonly
          */
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>
+        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>
     ) {}
 
     /**

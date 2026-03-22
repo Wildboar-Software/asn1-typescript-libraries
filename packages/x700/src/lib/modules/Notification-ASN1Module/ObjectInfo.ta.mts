@@ -67,37 +67,37 @@ export class ObjectInfo {
          * @public
          * @readonly
          */
-        readonly sourceIndicator: OPTIONAL<SourceIndicator>,
+        readonly sourceIndicator?: OPTIONAL<SourceIndicator>,
         /**
          * @summary `attributeList`.
          * @public
          * @readonly
          */
-        readonly attributeList: OPTIONAL<AttributeList>,
+        readonly attributeList?: OPTIONAL<AttributeList>,
         /**
          * @summary `notificationIdentifier`.
          * @public
          * @readonly
          */
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
+        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
          * @public
          * @readonly
          */
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
+        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

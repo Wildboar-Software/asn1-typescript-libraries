@@ -72,7 +72,7 @@ export class PDUSequence {
          * @public
          * @readonly
          */
-        readonly waitDuration: OPTIONAL<WaitDuration>
+        readonly waitDuration?: OPTIONAL<WaitDuration>
     ) {}
 
     /**

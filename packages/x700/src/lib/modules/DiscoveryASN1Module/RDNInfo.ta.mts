@@ -48,7 +48,7 @@ export class RDNInfo {
          * @public
          * @readonly
          */
-        readonly moClass: OPTIONAL<GdmoObjectClass>
+        readonly moClass?: OPTIONAL<GdmoObjectClass>
     ) {}
 
     /**

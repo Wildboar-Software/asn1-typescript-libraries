@@ -91,25 +91,25 @@ export class AttributeValueChangeInfo {
          * @public
          * @readonly
          */
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
+        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
          * @public
          * @readonly
          */
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
+        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

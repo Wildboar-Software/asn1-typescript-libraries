@@ -37,13 +37,13 @@ export class Conditions {
          * @public
          * @readonly
          */
-        readonly primary: OPTIONAL<Condition>,
+        readonly primary?: OPTIONAL<Condition>,
         /**
          * @summary `secondary`.
          * @public
          * @readonly
          */
-        readonly secondary: OPTIONAL<Condition>
+        readonly secondary?: OPTIONAL<Condition>
     ) {}
 
     /**

@@ -35,13 +35,13 @@ export class AdditionalInformation {
          * @public
          * @readonly
          */
-        readonly creationDate: OPTIONAL<GeneralizedTime>,
+        readonly creationDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `comment`.
          * @public
          * @readonly
          */
-        readonly comment: OPTIONAL<GraphicString>
+        readonly comment?: OPTIONAL<GraphicString>
     ) {}
 
     /**

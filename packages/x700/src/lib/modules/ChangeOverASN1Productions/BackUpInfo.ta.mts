@@ -39,25 +39,25 @@ export class BackUpInfo {
          * @public
          * @readonly
          */
-        readonly backedUpObjectSpecified: OPTIONAL<OptionalObject>,
+        readonly backedUpObjectSpecified?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backUpObjectSpecified`.
          * @public
          * @readonly
          */
-        readonly backUpObjectSpecified: OPTIONAL<OptionalObject>,
+        readonly backUpObjectSpecified?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backedUpObjectExisting`.
          * @public
          * @readonly
          */
-        readonly backedUpObjectExisting: OPTIONAL<OptionalObject>,
+        readonly backedUpObjectExisting?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backUpObjectExisting`.
          * @public
          * @readonly
          */
-        readonly backUpObjectExisting: OPTIONAL<OptionalObject>
+        readonly backUpObjectExisting?: OPTIONAL<OptionalObject>
     ) {}
 
     /**

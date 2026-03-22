@@ -174,25 +174,25 @@ export class ResponseConfirmationInfo {
          * @public
          * @readonly
          */
-        readonly responseDelayTime: OPTIONAL<TimePeriod>,
+        readonly responseDelayTime?: OPTIONAL<TimePeriod>,
         /**
          * @summary `responseTimeout`.
          * @public
          * @readonly
          */
-        readonly responseTimeout: OPTIONAL<TimePeriod>,
+        readonly responseTimeout?: OPTIONAL<TimePeriod>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

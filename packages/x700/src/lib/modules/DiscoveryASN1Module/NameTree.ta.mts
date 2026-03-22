@@ -44,7 +44,7 @@ export class NameTree {
          * @public
          * @readonly
          */
-        readonly subordinates: OPTIONAL<NameTree[]>
+        readonly subordinates?: OPTIONAL<NameTree[]>
     ) {}
 
     /**

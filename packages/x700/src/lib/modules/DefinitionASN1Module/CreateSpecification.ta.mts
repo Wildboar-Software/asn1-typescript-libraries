@@ -45,13 +45,13 @@ export class CreateSpecification {
          * @public
          * @readonly
          */
-        readonly createModifier: OPTIONAL<CreateSpecification_createModifier>,
+        readonly createModifier?: OPTIONAL<CreateSpecification_createModifier>,
         /**
          * @summary `parameter`.
          * @public
          * @readonly
          */
-        readonly parameter: OPTIONAL<TemplateList>
+        readonly parameter?: OPTIONAL<TemplateList>
     ) {}
 
     /**

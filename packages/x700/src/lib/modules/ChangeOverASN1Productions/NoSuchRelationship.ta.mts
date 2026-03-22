@@ -45,13 +45,13 @@ export class NoSuchRelationship {
          * @public
          * @readonly
          */
-        readonly relationshipBinding: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly relationshipBinding?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `relationshipInstance`.
          * @public
          * @readonly
          */
-        readonly relationshipInstance: OPTIONAL<RelationshipInstance>
+        readonly relationshipInstance?: OPTIONAL<RelationshipInstance>
     ) {}
 
     /**

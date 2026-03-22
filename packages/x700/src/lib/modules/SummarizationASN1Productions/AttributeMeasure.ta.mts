@@ -52,19 +52,19 @@ export class AttributeMeasure {
          * @public
          * @readonly
          */
-        readonly attributeValue: OPTIONAL<_Element>,
+        readonly attributeValue?: OPTIONAL<_Element>,
         /**
          * @summary `timeStamp`.
          * @public
          * @readonly
          */
-        readonly timeStamp: OPTIONAL<TimePeriod>,
+        readonly timeStamp?: OPTIONAL<TimePeriod>,
         /**
          * @summary `suspectFlag`.
          * @public
          * @readonly
          */
-        readonly suspectFlag: OPTIONAL<BOOLEAN>
+        readonly suspectFlag?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

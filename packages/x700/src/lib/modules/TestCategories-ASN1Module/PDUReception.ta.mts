@@ -60,7 +60,7 @@ export class PDUReception {
          * @public
          * @readonly
          */
-        readonly responseTimeout: OPTIONAL<ResponseTimeout>
+        readonly responseTimeout?: OPTIONAL<ResponseTimeout>
     ) {}
 
     /**

@@ -134,67 +134,67 @@ export class AlarmInfo {
          * @public
          * @readonly
          */
-        readonly backedUpStatus: OPTIONAL<BackedUpStatus>,
+        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
         /**
          * @summary `backUpObject`.
          * @public
          * @readonly
          */
-        readonly backUpObject: OPTIONAL<ObjectInstance>,
+        readonly backUpObject?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `trendIndication`.
          * @public
          * @readonly
          */
-        readonly trendIndication: OPTIONAL<TrendIndication>,
+        readonly trendIndication?: OPTIONAL<TrendIndication>,
         /**
          * @summary `thresholdInfo`.
          * @public
          * @readonly
          */
-        readonly thresholdInfo: OPTIONAL<ThresholdInfo>,
+        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
         /**
          * @summary `notificationIdentifier`.
          * @public
          * @readonly
          */
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
+        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
          * @public
          * @readonly
          */
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
+        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `stateChangeDefinition`.
          * @public
          * @readonly
          */
-        readonly stateChangeDefinition: OPTIONAL<AttributeValueChangeDefinition>,
+        readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
         /**
          * @summary `monitoredAttributes`.
          * @public
          * @readonly
          */
-        readonly monitoredAttributes: OPTIONAL<MonitoredAttributes>,
+        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
         /**
          * @summary `proposedRepairActions`.
          * @public
          * @readonly
          */
-        readonly proposedRepairActions: OPTIONAL<ProposedRepairActions>,
+        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `additionalText`.
          * @public
          * @readonly
          */
-        readonly additionalText: OPTIONAL<AdditionalText>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

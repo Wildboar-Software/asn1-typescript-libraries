@@ -42,13 +42,13 @@ export class OptionalLabelAndParameters {
          * @public
          * @readonly
          */
-        readonly label: OPTIONAL<TemplateLabel>,
+        readonly label?: OPTIONAL<TemplateLabel>,
         /**
          * @summary `parameters`.
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<TemplateList>
+        readonly parameters?: OPTIONAL<TemplateList>
     ) {}
 
     /**

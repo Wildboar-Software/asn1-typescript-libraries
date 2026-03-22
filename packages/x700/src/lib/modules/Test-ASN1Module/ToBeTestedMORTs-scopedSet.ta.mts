@@ -47,13 +47,13 @@ export class ToBeTestedMORTs_scopedSet {
          * @public
          * @readonly
          */
-        readonly mORTsScope0: OPTIONAL<Scope>,
+        readonly mORTsScope0?: OPTIONAL<Scope>,
         /**
          * @summary `mORTsFilter`.
          * @public
          * @readonly
          */
-        readonly mORTsFilter: OPTIONAL<CMISFilter>
+        readonly mORTsFilter?: OPTIONAL<CMISFilter>
     ) {}
 
     /**

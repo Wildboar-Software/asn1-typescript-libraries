@@ -66,25 +66,25 @@ export class ProtocolIntegrityTestInfo {
          * @public
          * @readonly
          */
-        readonly pDUReception: OPTIONAL<PDUReception>,
+        readonly pDUReception?: OPTIONAL<PDUReception>,
         /**
          * @summary `waitingInterval`.
          * @public
          * @readonly
          */
-        readonly waitingInterval: OPTIONAL<WaitingInterval>,
+        readonly waitingInterval?: OPTIONAL<WaitingInterval>,
         /**
          * @summary `startTime`.
          * @public
          * @readonly
          */
-        readonly startTime: OPTIONAL<StartTime>,
+        readonly startTime?: OPTIONAL<StartTime>,
         /**
          * @summary `stopTime`.
          * @public
          * @readonly
          */
-        readonly stopTime: OPTIONAL<StopTime>
+        readonly stopTime?: OPTIONAL<StopTime>
     ) {}
 
     /**

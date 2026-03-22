@@ -54,25 +54,25 @@ export class ConnectionTestInfo {
          * @public
          * @readonly
          */
-        readonly testPattern: OPTIONAL<TestPattern>,
+        readonly testPattern?: OPTIONAL<TestPattern>,
         /**
          * @summary `testDirection`.
          * @public
          * @readonly
          */
-        readonly testDirection: OPTIONAL<TestDirection>,
+        readonly testDirection?: OPTIONAL<TestDirection>,
         /**
          * @summary `testDuration`.
          * @public
          * @readonly
          */
-        readonly testDuration: OPTIONAL<TestDuration>,
+        readonly testDuration?: OPTIONAL<TestDuration>,
         /**
          * @summary `reportingInterval`.
          * @public
          * @readonly
          */
-        readonly reportingInterval: OPTIONAL<Timespec>
+        readonly reportingInterval?: OPTIONAL<Timespec>
     ) {}
 
     /**

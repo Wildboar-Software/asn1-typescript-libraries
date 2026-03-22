@@ -49,7 +49,7 @@ export class InvalidAccessControlFilter {
          * @public
          * @readonly
          */
-        readonly filter: OPTIONAL<CMISFilter>
+        readonly filter?: OPTIONAL<CMISFilter>
     ) {}
 
     /**

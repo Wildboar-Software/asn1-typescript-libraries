@@ -45,37 +45,37 @@ export class Time24Wps {
          * @public
          * @readonly
          */
-        readonly minute: OPTIONAL<INTEGER>,
+        readonly minute?: OPTIONAL<INTEGER>,
         /**
          * @summary `second`.
          * @public
          * @readonly
          */
-        readonly second: OPTIONAL<INTEGER>,
+        readonly second?: OPTIONAL<INTEGER>,
         /**
          * @summary `milliseconds`.
          * @public
          * @readonly
          */
-        readonly milliseconds: OPTIONAL<INTEGER>,
+        readonly milliseconds?: OPTIONAL<INTEGER>,
         /**
          * @summary `microseconds`.
          * @public
          * @readonly
          */
-        readonly microseconds: OPTIONAL<INTEGER>,
+        readonly microseconds?: OPTIONAL<INTEGER>,
         /**
          * @summary `nanoseconds`.
          * @public
          * @readonly
          */
-        readonly nanoseconds: OPTIONAL<INTEGER>,
+        readonly nanoseconds?: OPTIONAL<INTEGER>,
         /**
          * @summary `picoseconds`.
          * @public
          * @readonly
          */
-        readonly picoseconds: OPTIONAL<INTEGER>
+        readonly picoseconds?: OPTIONAL<INTEGER>
     ) {}
 
     /**

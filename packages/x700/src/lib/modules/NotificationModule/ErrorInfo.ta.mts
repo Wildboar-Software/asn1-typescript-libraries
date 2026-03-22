@@ -74,43 +74,43 @@ export class ErrorInfo {
          * @public
          * @readonly
          */
-        readonly probableCause: OPTIONAL<ProbableCause>,
+        readonly probableCause?: OPTIONAL<ProbableCause>,
         /**
          * @summary `perceivedSeverity`.
          * @public
          * @readonly
          */
-        readonly perceivedSeverity: OPTIONAL<PerceivedSeverity>,
+        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
         /**
          * @summary `trendIndication`.
          * @public
          * @readonly
          */
-        readonly trendIndication: OPTIONAL<TrendIndication>,
+        readonly trendIndication?: OPTIONAL<TrendIndication>,
         /**
          * @summary `backedUpStatus`.
          * @public
          * @readonly
          */
-        readonly backedUpStatus: OPTIONAL<BackedUpStatus>,
+        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
         /**
          * @summary `proposedRepairActions`.
          * @public
          * @readonly
          */
-        readonly proposedRepairActions: OPTIONAL<ProposedRepairActions>,
+        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `thresholdInfo`.
          * @public
          * @readonly
          */
-        readonly thresholdInfo: OPTIONAL<ThresholdInfo>,
+        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
         /**
          * @summary `otherInfo`.
          * @public
          * @readonly
          */
-        readonly otherInfo: OPTIONAL<OtherInfo>
+        readonly otherInfo?: OPTIONAL<OtherInfo>
     ) {}
 
     /**

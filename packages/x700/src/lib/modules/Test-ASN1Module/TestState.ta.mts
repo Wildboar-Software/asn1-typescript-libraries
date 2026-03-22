@@ -67,13 +67,13 @@ export class TestState {
          * @public
          * @readonly
          */
-        readonly controlStatus: OPTIONAL<ControlStatus>,
+        readonly controlStatus?: OPTIONAL<ControlStatus>,
         /**
          * @summary `availabilityStatus`.
          * @public
          * @readonly
          */
-        readonly availabilityStatus: OPTIONAL<AvailabilityStatus>
+        readonly availabilityStatus?: OPTIONAL<AvailabilityStatus>
     ) {}
 
     /**

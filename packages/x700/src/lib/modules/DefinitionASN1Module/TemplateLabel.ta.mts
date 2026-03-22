@@ -51,7 +51,7 @@ export class TemplateLabel {
          * @public
          * @readonly
          */
-        readonly documentId: OPTIONAL<TemplateLabel_documentId>
+        readonly documentId?: OPTIONAL<TemplateLabel_documentId>
     ) {}
 
     /**

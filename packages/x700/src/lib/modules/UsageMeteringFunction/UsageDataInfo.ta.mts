@@ -102,13 +102,13 @@ export class UsageDataInfo {
          * @public
          * @readonly
          */
-        readonly providerId: OPTIONAL<ProviderId>,
+        readonly providerId?: OPTIONAL<ProviderId>,
         /**
          * @summary `additionalInformation`.
          * @public
          * @readonly
          */
-        readonly additionalInformation: OPTIONAL<ManagementExtension[]>
+        readonly additionalInformation?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

@@ -55,19 +55,19 @@ export class ChangeBackInfo {
          * @public
          * @readonly
          */
-        readonly backUpObject: OPTIONAL<OptionalObject>,
+        readonly backUpObject?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backedUpObjectChanges`.
          * @public
          * @readonly
          */
-        readonly backedUpObjectChanges: OPTIONAL<ExpectedAttributeList>,
+        readonly backedUpObjectChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `backUpObjectChanges`.
          * @public
          * @readonly
          */
-        readonly backUpObjectChanges: OPTIONAL<ExpectedAttributeList>
+        readonly backUpObjectChanges?: OPTIONAL<ExpectedAttributeList>
     ) {}
 
     /**

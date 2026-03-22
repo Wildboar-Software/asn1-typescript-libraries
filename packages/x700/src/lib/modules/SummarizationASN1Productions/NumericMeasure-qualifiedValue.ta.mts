@@ -46,13 +46,13 @@ export class NumericMeasure_qualifiedValue {
          * @public
          * @readonly
          */
-        readonly timeStamp: OPTIONAL<TimePeriod>,
+        readonly timeStamp?: OPTIONAL<TimePeriod>,
         /**
          * @summary `suspectFlag`.
          * @public
          * @readonly
          */
-        readonly suspectFlag: OPTIONAL<BOOLEAN>
+        readonly suspectFlag?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

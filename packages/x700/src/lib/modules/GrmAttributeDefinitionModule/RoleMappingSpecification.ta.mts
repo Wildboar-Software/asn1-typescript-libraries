@@ -61,13 +61,13 @@ export class RoleMappingSpecification {
          * @public
          * @readonly
          */
-        readonly representedBy: OPTIONAL<Representation>,
+        readonly representedBy?: OPTIONAL<Representation>,
         /**
          * @summary `qualifies`.
          * @public
          * @readonly
          */
-        readonly qualifies: OPTIONAL<TemplateList>
+        readonly qualifies?: OPTIONAL<TemplateList>
     ) {}
 
     /**

@@ -49,7 +49,7 @@ export class ExpectedAttributeList_Item {
          * @public
          * @readonly
          */
-        readonly attributeValue: OPTIONAL<_Element>
+        readonly attributeValue?: OPTIONAL<_Element>
     ) {}
 
     /**

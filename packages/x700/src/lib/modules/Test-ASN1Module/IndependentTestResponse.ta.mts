@@ -54,13 +54,13 @@ export class IndependentTestResponse {
          * @public
          * @readonly
          */
-        readonly tOName: OPTIONAL<TOName>,
+        readonly tOName?: OPTIONAL<TOName>,
         /**
          * @summary `tOAttributeList`.
          * @public
          * @readonly
          */
-        readonly tOAttributeList: OPTIONAL<AttributeList>
+        readonly tOAttributeList?: OPTIONAL<AttributeList>
     ) {}
 
     /**

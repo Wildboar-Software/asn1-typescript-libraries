@@ -47,13 +47,13 @@ export class FunctionalUnitPackage {
          * @public
          * @readonly
          */
-        readonly managerRoleFunctionalUnit: OPTIONAL<BIT_STRING>,
+        readonly managerRoleFunctionalUnit?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `agentRoleFunctionalUnit`.
          * @public
          * @readonly
          */
-        readonly agentRoleFunctionalUnit: OPTIONAL<BIT_STRING>
+        readonly agentRoleFunctionalUnit?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

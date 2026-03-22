@@ -48,7 +48,7 @@ export class LabelAndParameters {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<TemplateList>
+        readonly parameters?: OPTIONAL<TemplateList>
     ) {}
 
     /**

@@ -45,7 +45,7 @@ export class ScheduledManagedObjectsList_Item {
          * @public
          * @readonly
          */
-        readonly activity: OPTIONAL<AttributeId>
+        readonly activity?: OPTIONAL<AttributeId>
     ) {}
 
     /**

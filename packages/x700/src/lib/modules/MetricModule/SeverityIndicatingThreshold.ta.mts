@@ -57,7 +57,7 @@ export class SeverityIndicatingThreshold {
          * @public
          * @readonly
          */
-        readonly severityIndication: OPTIONAL<PerceivedSeverity>
+        readonly severityIndication?: OPTIONAL<PerceivedSeverity>
     ) {}
 
     /**

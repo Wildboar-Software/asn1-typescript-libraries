@@ -37,13 +37,13 @@ export class UnattainableAttributeList {
          * @public
          * @readonly
          */
-        readonly primaryChanges: OPTIONAL<ExpectedAttributeList>,
+        readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `secondaryChanges`.
          * @public
          * @readonly
          */
-        readonly secondaryChanges: OPTIONAL<ExpectedAttributeList>
+        readonly secondaryChanges?: OPTIONAL<ExpectedAttributeList>
     ) {}
 
     /**

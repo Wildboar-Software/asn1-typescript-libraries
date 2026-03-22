@@ -66,7 +66,7 @@ export class CommonError {
          * @public
          * @readonly
          */
-        readonly errorValue: OPTIONAL<_Element>
+        readonly errorValue?: OPTIONAL<_Element>
     ) {}
 
     /**

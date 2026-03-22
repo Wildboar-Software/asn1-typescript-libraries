@@ -48,19 +48,19 @@ export class ObservationScan {
          * @public
          * @readonly
          */
-        readonly observedObjectInstance: OPTIONAL<ObjectInstance>,
+        readonly observedObjectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `attributeMeasureList`.
          * @public
          * @readonly
          */
-        readonly attributeMeasureList: OPTIONAL<AttributeMeasure[]>,
+        readonly attributeMeasureList?: OPTIONAL<AttributeMeasure[]>,
         /**
          * @summary `numericValueArray`.
          * @public
          * @readonly
          */
-        readonly numericValueArray: OPTIONAL<NumericMeasure[]>
+        readonly numericValueArray?: OPTIONAL<NumericMeasure[]>
     ) {}
 
     /**

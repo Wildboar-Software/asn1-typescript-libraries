@@ -91,19 +91,19 @@ export class DynamicSimpleScanArgument {
          * @public
          * @readonly
          */
-        readonly suppressObjectInstance: OPTIONAL<SuppressObjectInstance>,
+        readonly suppressObjectInstance?: OPTIONAL<SuppressObjectInstance>,
         /**
          * @summary `onceReportAttributeIdList`.
          * @public
          * @readonly
          */
-        readonly onceReportAttributeIdList: OPTIONAL<OnceReportAttributeIdList>,
+        readonly onceReportAttributeIdList?: OPTIONAL<OnceReportAttributeIdList>,
         /**
          * @summary `timeStampReportMode`.
          * @public
          * @readonly
          */
-        readonly timeStampReportMode: OPTIONAL<TimeStampReportMode>
+        readonly timeStampReportMode?: OPTIONAL<TimeStampReportMode>
     ) {}
 
     /**

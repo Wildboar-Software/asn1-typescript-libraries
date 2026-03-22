@@ -41,7 +41,7 @@ export class SecurityLabel_Item_initiatorLabel {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<BIT_STRING>
+        readonly category?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

@@ -66,25 +66,25 @@ export class TestRequestUncontrolledInfo {
          * @public
          * @readonly
          */
-        readonly testSessionId: OPTIONAL<TestSessionId>,
+        readonly testSessionId?: OPTIONAL<TestSessionId>,
         /**
          * @summary `timeoutPeriod`.
          * @public
          * @readonly
          */
-        readonly timeoutPeriod: OPTIONAL<TimeoutPeriod>,
+        readonly timeoutPeriod?: OPTIONAL<TimeoutPeriod>,
         /**
          * @summary `associatedObjects`.
          * @public
          * @readonly
          */
-        readonly associatedObjects: OPTIONAL<AssociatedObjects>,
+        readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
         /**
          * @summary `toBeTestedMORTs`.
          * @public
          * @readonly
          */
-        readonly toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>
+        readonly toBeTestedMORTs?: OPTIONAL<ToBeTestedMORTs>
     ) {}
 
     /**

@@ -54,7 +54,7 @@ export class ResourceSelfTestResults_nonIntermediate {
          * @public
          * @readonly
          */
-        readonly finalResponse: OPTIONAL<PrintableString>
+        readonly finalResponse?: OPTIONAL<PrintableString>
     ) {}
 
     /**
