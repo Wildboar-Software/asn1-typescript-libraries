@@ -60,7 +60,7 @@ export class PKICertificateInformation {
          * @public
          * @readonly
          */
-        readonly pkiCertificateIssuerUniqueIdentifier: OPTIONAL<UniqueIdentifier>
+        readonly pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
     ) {}
 
     /**

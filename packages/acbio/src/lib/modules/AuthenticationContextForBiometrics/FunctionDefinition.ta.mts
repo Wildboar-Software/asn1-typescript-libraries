@@ -83,7 +83,7 @@ export class FunctionDefinition {
          * @public
          * @readonly
          */
-        readonly functionDescription: OPTIONAL<OCTET_STRING>
+        readonly functionDescription?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

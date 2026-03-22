@@ -48,7 +48,7 @@ export class BPUSubprocessInformation {
          * @public
          * @readonly
          */
-        readonly qualityEvaluation: OPTIONAL<QualityEvaluation>
+        readonly qualityEvaluation?: OPTIONAL<QualityEvaluation>
     ) {}
 
     /**

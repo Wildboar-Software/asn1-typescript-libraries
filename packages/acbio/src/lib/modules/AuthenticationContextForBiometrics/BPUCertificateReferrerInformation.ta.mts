@@ -43,7 +43,7 @@ export class BPUCertificateReferrerInformation {
          * @public
          * @readonly
          */
-        readonly crlsReferrer: OPTIONAL<URI>
+        readonly crlsReferrer?: OPTIONAL<URI>
     ) {}
 
     /**

@@ -49,13 +49,13 @@ export class BiometricProcess {
          * @public
          * @readonly
          */
-        readonly bpuInputExecutionInformationList: OPTIONAL<BPUIOExecutionInformationList>,
+        readonly bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>,
         /**
          * @summary `bpuOuputExecutionInformationList`.
          * @public
          * @readonly
          */
-        readonly bpuOuputExecutionInformationList: OPTIONAL<BPUIOExecutionInformationList>
+        readonly bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>
     ) {}
 
     /**

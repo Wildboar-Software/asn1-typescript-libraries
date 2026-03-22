@@ -56,7 +56,7 @@ export class UserInformation {
          * @public
          * @readonly
          */
-        readonly userUniqueIdentifier: OPTIONAL<UniqueIdentifier>
+        readonly userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
     ) {}
 
     /**

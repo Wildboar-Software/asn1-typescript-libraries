@@ -81,7 +81,7 @@ export class ACBioContentInformation {
          * @public
          * @readonly
          */
-        readonly brtCertificateInformation: OPTIONAL<BRTCertificateInformation>
+        readonly brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>
     ) {}
 
     /**

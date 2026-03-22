@@ -105,19 +105,19 @@ export class BDBForBRTC {
          * @public
          * @readonly
          */
-        readonly userInformation: OPTIONAL<UserInformation>,
+        readonly userInformation?: OPTIONAL<UserInformation>,
         /**
          * @summary `pkiCertificateInformation`.
          * @public
          * @readonly
          */
-        readonly pkiCertificateInformation: OPTIONAL<PKICertificateInformation>,
+        readonly pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>,
         /**
          * @summary `enrolmentACBioInstances`.
          * @public
          * @readonly
          */
-        readonly enrolmentACBioInstances: OPTIONAL<SequenceOfACBioInstances>
+        readonly enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>
     ) {}
 
     /**

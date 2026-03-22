@@ -114,7 +114,7 @@ export class AUTHENTICATEDDATA<EncapsulatedContentInfo> {
          * @public
          * @readonly
          */
-        readonly unauthAttrs: OPTIONAL<UnauthAttributes>
+        readonly unauthAttrs?: OPTIONAL<UnauthAttributes>
     ) {}
 
     /**

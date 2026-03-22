@@ -48,19 +48,19 @@ export class BPUSecurityReport {
          * @public
          * @readonly
          */
-        readonly cryptoModuleSecurityInformation: OPTIONAL<CryptoModuleSecurityInformation>,
+        readonly cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>,
         /**
          * @summary `biometricProcessSecurityInformation`.
          * @public
          * @readonly
          */
-        readonly biometricProcessSecurityInformation: OPTIONAL<BiometricProcessSecurityInformation>,
+        readonly biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>,
         /**
          * @summary `securityEvaluationExtensionInformation`.
          * @public
          * @readonly
          */
-        readonly securityEvaluationExtensionInformation: OPTIONAL<SecurityEvaluationExtensionInformation>
+        readonly securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>
     ) {}
 
     /**

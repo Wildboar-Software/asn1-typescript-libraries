@@ -49,13 +49,13 @@ export class BPUFunctionReport {
          * @public
          * @readonly
          */
-        readonly bpuInputStaticInformationList: OPTIONAL<BPUIOStaticInformationList>,
+        readonly bpuInputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>,
         /**
          * @summary `bpuOutputStaticInformationList`.
          * @public
          * @readonly
          */
-        readonly bpuOutputStaticInformationList: OPTIONAL<BPUIOStaticInformationList>
+        readonly bpuOutputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>
     ) {}
 
     /**

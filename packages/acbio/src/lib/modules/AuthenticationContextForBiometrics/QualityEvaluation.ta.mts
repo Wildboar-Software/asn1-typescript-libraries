@@ -42,13 +42,13 @@ export class QualityEvaluation {
          * @public
          * @readonly
          */
-        readonly biometricProcessQualityInformation: OPTIONAL<BiometricProcessQualityInformation>,
+        readonly biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>,
         /**
          * @summary `qualityEvaluationExtensionInformation`.
          * @public
          * @readonly
          */
-        readonly qualityEvaluationExtensionInformation: OPTIONAL<QualityEvaluationExtensionInformation>
+        readonly qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>
     ) {}
 
     /**
