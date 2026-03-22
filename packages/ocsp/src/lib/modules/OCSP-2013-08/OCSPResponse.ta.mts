@@ -43,7 +43,7 @@ export class OCSPResponse {
          * @public
          * @readonly
          */
-        readonly responseBytes: OPTIONAL<ResponseBytes>
+        readonly responseBytes?: OPTIONAL<ResponseBytes>
     ) {}
 
     /**

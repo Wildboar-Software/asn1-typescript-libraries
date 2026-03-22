@@ -78,7 +78,7 @@ export class ResponseData {
          * @public
          * @readonly
          */
-        readonly responseExtensions: OPTIONAL<Extensions>
+        readonly responseExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

@@ -68,7 +68,7 @@ export class TBSRequest {
          * @public
          * @readonly
          */
-        readonly requestExtensions: OPTIONAL<Extensions>
+        readonly requestExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

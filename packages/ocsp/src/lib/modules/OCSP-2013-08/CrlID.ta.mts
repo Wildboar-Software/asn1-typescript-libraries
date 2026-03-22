@@ -31,19 +31,19 @@ export class CrlID {
          * @public
          * @readonly
          */
-        readonly crlUrl: OPTIONAL<IA5String>,
+        readonly crlUrl?: OPTIONAL<IA5String>,
         /**
          * @summary `crlNum`.
          * @public
          * @readonly
          */
-        readonly crlNum: OPTIONAL<INTEGER>,
+        readonly crlNum?: OPTIONAL<INTEGER>,
         /**
          * @summary `crlTime`.
          * @public
          * @readonly
          */
-        readonly crlTime: OPTIONAL<GeneralizedTime>
+        readonly crlTime?: OPTIONAL<GeneralizedTime>
     ) {}
 
     /**

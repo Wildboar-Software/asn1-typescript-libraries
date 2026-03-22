@@ -62,7 +62,7 @@ export class BasicOCSPResponse {
          * @public
          * @readonly
          */
-        readonly certs: OPTIONAL<Certificate[]>
+        readonly certs?: OPTIONAL<Certificate[]>
     ) {}
 
     /**

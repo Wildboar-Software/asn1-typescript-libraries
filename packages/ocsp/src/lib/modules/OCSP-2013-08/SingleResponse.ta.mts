@@ -67,13 +67,13 @@ export class SingleResponse {
          * @public
          * @readonly
          */
-        readonly nextUpdate: OPTIONAL<GeneralizedTime>,
+        readonly nextUpdate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `singleExtensions`.
          * @public
          * @readonly
          */
-        readonly singleExtensions: OPTIONAL<Extensions>
+        readonly singleExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

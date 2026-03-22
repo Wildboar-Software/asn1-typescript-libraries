@@ -42,7 +42,7 @@ export class OCSPRequest {
          * @public
          * @readonly
          */
-        readonly optionalSignature: OPTIONAL<Signature>
+        readonly optionalSignature?: OPTIONAL<Signature>
     ) {}
 
     /**

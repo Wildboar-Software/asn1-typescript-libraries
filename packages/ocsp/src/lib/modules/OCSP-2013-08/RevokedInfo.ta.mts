@@ -39,7 +39,7 @@ export class RevokedInfo {
          * @public
          * @readonly
          */
-        readonly revocationReason: OPTIONAL<CRLReason>
+        readonly revocationReason?: OPTIONAL<CRLReason>
     ) {}
 
     /**

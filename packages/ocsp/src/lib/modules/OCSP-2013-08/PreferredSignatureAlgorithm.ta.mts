@@ -39,7 +39,7 @@ export class PreferredSignatureAlgorithm {
          * @public
          * @readonly
          */
-        readonly certIdentifier: OPTIONAL<AlgorithmIdentifier>
+        readonly certIdentifier?: OPTIONAL<AlgorithmIdentifier>
     ) {}
 
     /**

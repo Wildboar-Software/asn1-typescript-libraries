@@ -45,7 +45,7 @@ export class Request {
          * @public
          * @readonly
          */
-        readonly singleRequestExtensions: OPTIONAL<Extensions>
+        readonly singleRequestExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

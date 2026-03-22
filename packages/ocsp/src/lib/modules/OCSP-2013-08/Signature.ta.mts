@@ -51,7 +51,7 @@ export class Signature {
          * @public
          * @readonly
          */
-        readonly certs: OPTIONAL<Certificate[]>
+        readonly certs?: OPTIONAL<Certificate[]>
     ) {}
 
     /**
