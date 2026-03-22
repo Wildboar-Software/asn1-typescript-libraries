@@ -39,37 +39,37 @@ export class RegistrantContactDetails {
      * @public
      * @readonly
      */
-    readonly familyNameOrOrganization: OPTIONAL<UTF8String>,
+    readonly familyNameOrOrganization?: OPTIONAL<UTF8String>,
     /**
      * @summary `givenName`.
      * @public
      * @readonly
      */
-    readonly givenName: OPTIONAL<UTF8String>,
+    readonly givenName?: OPTIONAL<UTF8String>,
     /**
      * @summary `e_mailAddress`.
      * @public
      * @readonly
      */
-    readonly e_mailAddress: OPTIONAL<UTF8String>,
+    readonly e_mailAddress?: OPTIONAL<UTF8String>,
     /**
      * @summary `phone`.
      * @public
      * @readonly
      */
-    readonly phone: OPTIONAL<IA5String>,
+    readonly phone?: OPTIONAL<IA5String>,
     /**
      * @summary `fax`.
      * @public
      * @readonly
      */
-    readonly fax: OPTIONAL<IA5String>,
+    readonly fax?: OPTIONAL<IA5String>,
     /**
      * @summary `postalAddress`.
      * @public
      * @readonly
      */
-    readonly postalAddress: OPTIONAL<UTF8String[]>
+    readonly postalAddress?: OPTIONAL<UTF8String[]>
   ) {}
 
   /**

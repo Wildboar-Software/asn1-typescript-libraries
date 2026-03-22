@@ -52,19 +52,19 @@ export class Information {
      * @public
      * @readonly
      */
-    readonly additionalInformation: OPTIONAL<HTMLString>,
+    readonly additionalInformation?: OPTIONAL<HTMLString>,
     /**
      * @summary `firstRegistration`.
      * @public
      * @readonly
      */
-    readonly firstRegistration: OPTIONAL<RegistrationDetails>,
+    readonly firstRegistration?: OPTIONAL<RegistrationDetails>,
     /**
      * @summary `currentRegistration`.
      * @public
      * @readonly
      */
-    readonly currentRegistration: OPTIONAL<RegistrationDetails>
+    readonly currentRegistration?: OPTIONAL<RegistrationDetails>
   ) {}
 
   /**
