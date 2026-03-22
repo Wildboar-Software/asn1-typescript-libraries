@@ -40,13 +40,13 @@ class CertificateIdentifier {
          * @public
          * @readonly
          */
-        readonly attributeCertIdentifier: OPTIONAL<AttributeCertificateIdentifier>,
+        readonly attributeCertIdentifier?: OPTIONAL<AttributeCertificateIdentifier>,
         /**
          * @summary `genericCertIdentifier`.
          * @public
          * @readonly
          */
-        readonly genericCertIdentifier: OPTIONAL<IssuerSerial>
+        readonly genericCertIdentifier?: OPTIONAL<IssuerSerial>
     ) {}
 
     /**
@@ -131,7 +131,7 @@ function _decode_CertificateIdentifier (el: _Element): CertificateIdentifier {
         _root_component_type_list_2_spec_for_CertificateIdentifier,
         undefined,
     );
-    return new CertificateIdentifier( 
+    return new CertificateIdentifier(
         attributeCertIdentifier,
         genericCertIdentifier
     );

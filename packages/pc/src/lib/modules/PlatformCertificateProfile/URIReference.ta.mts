@@ -47,13 +47,13 @@ class URIReference {
          * @public
          * @readonly
          */
-        readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `hashValue`.
          * @public
          * @readonly
          */
-        readonly hashValue: OPTIONAL<BIT_STRING>
+        readonly hashValue?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**
@@ -141,7 +141,7 @@ function _decode_URIReference (el: _Element): URIReference {
         _root_component_type_list_2_spec_for_URIReference,
         undefined,
     );
-    return new URIReference( 
+    return new URIReference(
         uniformResourceIdentifier,
         hashAlgorithm,
         hashValue

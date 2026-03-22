@@ -48,7 +48,7 @@ class FIPSLevel {
          * @public
          * @readonly
          */
-        readonly plus: OPTIONAL<BOOLEAN>
+        readonly plus?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**
@@ -148,7 +148,7 @@ function _decode_FIPSLevel (el: _Element): FIPSLevel {
         _root_component_type_list_2_spec_for_FIPSLevel,
         undefined,
     );
-    return new FIPSLevel( 
+    return new FIPSLevel(
         version,
         level,
         plus

@@ -67,49 +67,49 @@ class ComponentIdentifier {
          * @public
          * @readonly
          */
-        readonly componentSerial: OPTIONAL<UTF8String>,
+        readonly componentSerial?: OPTIONAL<UTF8String>,
         /**
          * @summary `componentRevision`.
          * @public
          * @readonly
          */
-        readonly componentRevision: OPTIONAL<UTF8String>,
+        readonly componentRevision?: OPTIONAL<UTF8String>,
         /**
          * @summary `componentManufacturerId`.
          * @public
          * @readonly
          */
-        readonly componentManufacturerId: OPTIONAL<PrivateEnterpriseNumber>,
+        readonly componentManufacturerId?: OPTIONAL<PrivateEnterpriseNumber>,
         /**
          * @summary `fieldReplaceable`.
          * @public
          * @readonly
          */
-        readonly fieldReplaceable: OPTIONAL<BOOLEAN>,
+        readonly fieldReplaceable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `componentAddresses`.
          * @public
          * @readonly
          */
-        readonly componentAddresses: OPTIONAL<ComponentAddress[]>,
+        readonly componentAddresses?: OPTIONAL<ComponentAddress[]>,
         /**
          * @summary `componentPlatformCert`.
          * @public
          * @readonly
          */
-        readonly componentPlatformCert: OPTIONAL<CertificateIdentifier>,
+        readonly componentPlatformCert?: OPTIONAL<CertificateIdentifier>,
         /**
          * @summary `componentPlatformCertUri`.
          * @public
          * @readonly
          */
-        readonly componentPlatformCertUri: OPTIONAL<URIReference>,
+        readonly componentPlatformCertUri?: OPTIONAL<URIReference>,
         /**
          * @summary `status`.
          * @public
          * @readonly
          */
-        readonly status: OPTIONAL<AttributeStatus>
+        readonly status?: OPTIONAL<AttributeStatus>
     ) {}
 
     /**
@@ -227,7 +227,7 @@ function _decode_ComponentIdentifier (el: _Element): ComponentIdentifier {
         _root_component_type_list_2_spec_for_ComponentIdentifier,
         undefined,
     );
-    return new ComponentIdentifier( 
+    return new ComponentIdentifier(
         componentClass,
         componentManufacturer,
         componentModel,

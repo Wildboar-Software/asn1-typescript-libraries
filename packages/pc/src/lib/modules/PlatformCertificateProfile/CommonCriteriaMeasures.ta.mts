@@ -70,37 +70,37 @@ class CommonCriteriaMeasures {
          * @public
          * @readonly
          */
-        readonly plus: OPTIONAL<BOOLEAN>,
+        readonly plus?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `strengthOfFunction`.
          * @public
          * @readonly
          */
-        readonly strengthOfFunction: OPTIONAL<StrengthOfFunction>,
+        readonly strengthOfFunction?: OPTIONAL<StrengthOfFunction>,
         /**
          * @summary `profileOid`.
          * @public
          * @readonly
          */
-        readonly profileOid: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly profileOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `profileUri`.
          * @public
          * @readonly
          */
-        readonly profileUri: OPTIONAL<URIReference>,
+        readonly profileUri?: OPTIONAL<URIReference>,
         /**
          * @summary `targetOid`.
          * @public
          * @readonly
          */
-        readonly targetOid: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly targetOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `targetUri`.
          * @public
          * @readonly
          */
-        readonly targetUri: OPTIONAL<URIReference>
+        readonly targetUri?: OPTIONAL<URIReference>
     ) {}
 
     /**
@@ -224,7 +224,7 @@ function _decode_CommonCriteriaMeasures (el: _Element): CommonCriteriaMeasures {
         _root_component_type_list_2_spec_for_CommonCriteriaMeasures,
         undefined,
     );
-    return new CommonCriteriaMeasures( 
+    return new CommonCriteriaMeasures(
         version,
         assurancelevel,
         evaluationStatus,

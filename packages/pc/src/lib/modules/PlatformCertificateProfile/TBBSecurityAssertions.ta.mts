@@ -49,37 +49,37 @@ class TBBSecurityAssertions {
          * @public
          * @readonly
          */
-        readonly version: OPTIONAL<Version>,
+        readonly version?: OPTIONAL<Version>,
         /**
          * @summary `ccInfo`.
          * @public
          * @readonly
          */
-        readonly ccInfo: OPTIONAL<CommonCriteriaMeasures>,
+        readonly ccInfo?: OPTIONAL<CommonCriteriaMeasures>,
         /**
          * @summary `fipsLevel`.
          * @public
          * @readonly
          */
-        readonly fipsLevel: OPTIONAL<FIPSLevel>,
+        readonly fipsLevel?: OPTIONAL<FIPSLevel>,
         /**
          * @summary `rtmType`.
          * @public
          * @readonly
          */
-        readonly rtmType: OPTIONAL<MeasurementRootType>,
+        readonly rtmType?: OPTIONAL<MeasurementRootType>,
         /**
          * @summary `iso9000Certified`.
          * @public
          * @readonly
          */
-        readonly iso9000Certified: OPTIONAL<BOOLEAN>,
+        readonly iso9000Certified?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iso9000Uri`.
          * @public
          * @readonly
          */
-        readonly iso9000Uri: OPTIONAL<IA5String>
+        readonly iso9000Uri?: OPTIONAL<IA5String>
     ) {}
 
     /**
@@ -195,7 +195,7 @@ function _decode_TBBSecurityAssertions (el: _Element): TBBSecurityAssertions {
         _root_component_type_list_2_spec_for_TBBSecurityAssertions,
         undefined,
     );
-    return new TBBSecurityAssertions( 
+    return new TBBSecurityAssertions(
         version,
         ccInfo,
         fipsLevel,

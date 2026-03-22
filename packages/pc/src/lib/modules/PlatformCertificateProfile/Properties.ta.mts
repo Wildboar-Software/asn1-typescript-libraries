@@ -47,7 +47,7 @@ class Properties {
          * @public
          * @readonly
          */
-        readonly status: OPTIONAL<AttributeStatus>
+        readonly status?: OPTIONAL<AttributeStatus>
     ) {}
 
     /**
@@ -141,7 +141,7 @@ function _decode_Properties (el: _Element): Properties {
         _root_component_type_list_2_spec_for_Properties,
         undefined,
     );
-    return new Properties( 
+    return new Properties(
         propertyName,
         propertyValue,
         status

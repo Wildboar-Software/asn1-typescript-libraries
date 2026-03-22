@@ -37,25 +37,25 @@ class PlatformConfiguration {
          * @public
          * @readonly
          */
-        readonly componentIdentifiers: OPTIONAL<ComponentIdentifier[]>,
+        readonly componentIdentifiers?: OPTIONAL<ComponentIdentifier[]>,
         /**
          * @summary `componentIdentifiersUri`.
          * @public
          * @readonly
          */
-        readonly componentIdentifiersUri: OPTIONAL<URIReference>,
+        readonly componentIdentifiersUri?: OPTIONAL<URIReference>,
         /**
          * @summary `platformProperties`.
          * @public
          * @readonly
          */
-        readonly platformProperties: OPTIONAL<Properties[]>,
+        readonly platformProperties?: OPTIONAL<Properties[]>,
         /**
          * @summary `platformPropertiesUri`.
          * @public
          * @readonly
          */
-        readonly platformPropertiesUri: OPTIONAL<URIReference>
+        readonly platformPropertiesUri?: OPTIONAL<URIReference>
     ) {}
 
     /**
@@ -146,7 +146,7 @@ function _decode_PlatformConfiguration (el: _Element): PlatformConfiguration {
         _root_component_type_list_2_spec_for_PlatformConfiguration,
         undefined,
     );
-    return new PlatformConfiguration( 
+    return new PlatformConfiguration(
         componentIdentifiers,
         componentIdentifiersUri,
         platformProperties,
