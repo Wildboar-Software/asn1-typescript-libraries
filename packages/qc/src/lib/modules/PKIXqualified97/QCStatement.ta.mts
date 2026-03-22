@@ -34,7 +34,7 @@ export class QCStatement {
          * @public
          * @readonly
          */
-        readonly statementInfo: OPTIONAL<_Element>
+        readonly statementInfo?: OPTIONAL<_Element>
     ) {}
 
     /**

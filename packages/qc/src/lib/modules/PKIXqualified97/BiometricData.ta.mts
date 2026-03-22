@@ -60,7 +60,7 @@ export class BiometricData {
          * @public
          * @readonly
          */
-        readonly sourceDataUri: OPTIONAL<IA5String>,
+        readonly sourceDataUri?: OPTIONAL<IA5String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

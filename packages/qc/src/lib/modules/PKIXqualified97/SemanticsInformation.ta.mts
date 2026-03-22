@@ -34,13 +34,13 @@ export class SemanticsInformation {
          * @public
          * @readonly
          */
-        readonly semanticsIdentifier: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly semanticsIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `nameRegistrationAuthorities`.
          * @public
          * @readonly
          */
-        readonly nameRegistrationAuthorities: OPTIONAL<NameRegistrationAuthorities>
+        readonly nameRegistrationAuthorities?: OPTIONAL<NameRegistrationAuthorities>
     ) {}
 
     /**
