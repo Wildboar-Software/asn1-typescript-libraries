@@ -44,19 +44,19 @@ class SignerLocation {
          * @public
          * @readonly
          */
-        readonly countryName: OPTIONAL<DirectoryString>,
+        readonly countryName?: OPTIONAL<DirectoryString>,
         /**
          * @summary `localityName`.
          * @public
          * @readonly
          */
-        readonly localityName: OPTIONAL<DirectoryString>,
+        readonly localityName?: OPTIONAL<DirectoryString>,
         /**
          * @summary `postalAdddress`.
          * @public
          * @readonly
          */
-        readonly postalAdddress: OPTIONAL<PostalAddress>
+        readonly postalAdddress?: OPTIONAL<PostalAddress>
     ) {}
 
     /**
@@ -144,7 +144,7 @@ function _decode_SignerLocation (el: _Element): SignerLocation {
         _root_component_type_list_2_spec_for_SignerLocation,
         undefined,
     );
-    return new SignerLocation( 
+    return new SignerLocation(
         countryName,
         localityName,
         postalAdddress

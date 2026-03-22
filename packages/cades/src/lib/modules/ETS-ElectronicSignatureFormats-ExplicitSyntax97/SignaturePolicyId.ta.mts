@@ -48,7 +48,7 @@ class SignaturePolicyId {
          * @public
          * @readonly
          */
-        readonly sigPolicyQualifiers: OPTIONAL<SigPolicyQualifierInfo[]>
+        readonly sigPolicyQualifiers?: OPTIONAL<SigPolicyQualifierInfo[]>
     ) {}
 
     /**
@@ -136,7 +136,7 @@ function _decode_SignaturePolicyId (el: _Element): SignaturePolicyId {
         _root_component_type_list_2_spec_for_SignaturePolicyId,
         undefined,
     );
-    return new SignaturePolicyId( 
+    return new SignaturePolicyId(
         sigPolicyId,
         sigPolicyHash,
         sigPolicyQualifiers

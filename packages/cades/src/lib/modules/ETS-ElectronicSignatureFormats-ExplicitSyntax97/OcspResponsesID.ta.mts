@@ -40,7 +40,7 @@ class OcspResponsesID {
          * @public
          * @readonly
          */
-        readonly ocspRepHash: OPTIONAL<OtherHash>
+        readonly ocspRepHash?: OPTIONAL<OtherHash>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_OcspResponsesID (el: _Element): OcspResponsesID {
         _root_component_type_list_2_spec_for_OcspResponsesID,
         undefined,
     );
-    return new OcspResponsesID( 
+    return new OcspResponsesID(
         ocspIdentifier,
         ocspRepHash
     );

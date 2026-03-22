@@ -52,7 +52,7 @@ class CrlIdentifier {
          * @public
          * @readonly
          */
-        readonly crlNumber: OPTIONAL<INTEGER>
+        readonly crlNumber?: OPTIONAL<INTEGER>
     ) {}
 
     /**
@@ -140,7 +140,7 @@ function _decode_CrlIdentifier (el: _Element): CrlIdentifier {
         _root_component_type_list_2_spec_for_CrlIdentifier,
         undefined,
     );
-    return new CrlIdentifier( 
+    return new CrlIdentifier(
         crlissuer,
         crlIssuedTime,
         crlNumber

@@ -38,19 +38,19 @@ class RevocationValues {
          * @public
          * @readonly
          */
-        readonly crlVals: OPTIONAL<CertificateList[]>,
+        readonly crlVals?: OPTIONAL<CertificateList[]>,
         /**
          * @summary `ocspVals`.
          * @public
          * @readonly
          */
-        readonly ocspVals: OPTIONAL<BasicOCSPResponse[]>,
+        readonly ocspVals?: OPTIONAL<BasicOCSPResponse[]>,
         /**
          * @summary `otherRevVals`.
          * @public
          * @readonly
          */
-        readonly otherRevVals: OPTIONAL<OtherRevVals>
+        readonly otherRevVals?: OPTIONAL<OtherRevVals>
     ) {}
 
     /**
@@ -138,7 +138,7 @@ function _decode_RevocationValues (el: _Element): RevocationValues {
         _root_component_type_list_2_spec_for_RevocationValues,
         undefined,
     );
-    return new RevocationValues( 
+    return new RevocationValues(
         crlVals,
         ocspVals,
         otherRevVals

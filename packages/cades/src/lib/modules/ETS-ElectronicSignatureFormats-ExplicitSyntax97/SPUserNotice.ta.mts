@@ -34,13 +34,13 @@ class SPUserNotice {
          * @public
          * @readonly
          */
-        readonly noticeRef: OPTIONAL<NoticeReference>,
+        readonly noticeRef?: OPTIONAL<NoticeReference>,
         /**
          * @summary `explicitText`.
          * @public
          * @readonly
          */
-        readonly explicitText: OPTIONAL<DisplayText>
+        readonly explicitText?: OPTIONAL<DisplayText>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_SPUserNotice (el: _Element): SPUserNotice {
         _root_component_type_list_2_spec_for_SPUserNotice,
         undefined,
     );
-    return new SPUserNotice( 
+    return new SPUserNotice(
         noticeRef,
         explicitText
     );

@@ -40,7 +40,7 @@ class CrlValidatedID {
          * @public
          * @readonly
          */
-        readonly crlIdentifier: OPTIONAL<CrlIdentifier>
+        readonly crlIdentifier?: OPTIONAL<CrlIdentifier>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_CrlValidatedID (el: _Element): CrlValidatedID {
         _root_component_type_list_2_spec_for_CrlValidatedID,
         undefined,
     );
-    return new CrlValidatedID( 
+    return new CrlValidatedID(
         crlHash,
         crlIdentifier
     );

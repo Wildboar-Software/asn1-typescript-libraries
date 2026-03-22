@@ -40,7 +40,7 @@ class SigPolicyQualifierInfo {
          * @public
          * @readonly
          */
-        readonly qualifier: OPTIONAL<_Element>
+        readonly qualifier?: OPTIONAL<_Element>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_SigPolicyQualifierInfo (el: _Element): SigPolicyQualifierInfo {
         _root_component_type_list_2_spec_for_SigPolicyQualifierInfo,
         undefined,
     );
-    return new SigPolicyQualifierInfo( 
+    return new SigPolicyQualifierInfo(
         sigPolicyQualifierId,
         qualifier
     );

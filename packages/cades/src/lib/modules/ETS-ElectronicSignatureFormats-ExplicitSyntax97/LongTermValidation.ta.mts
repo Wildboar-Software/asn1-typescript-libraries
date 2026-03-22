@@ -25,12 +25,12 @@ import {
 /**
  * @summary LongTermValidation
  * @description
- * 
+ *
  * **WARNING**: This ASN.1 `SEQUENCE` is not valid, because the tagging for
  * `poeValue`, `extraCertificates`, and `extraRevocation` conflict with each other.
  * There is no erratum for this, as far as I know, but this data structure is
  * deprecated anyway.
- * 
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,19 +60,19 @@ class LongTermValidation {
          * @public
          * @readonly
          */
-        readonly poeValue: OPTIONAL<LongTermValidation_poeValue>,
+        readonly poeValue?: OPTIONAL<LongTermValidation_poeValue>,
         /**
          * @summary `extraCertificates`.
          * @public
          * @readonly
          */
-        readonly extraCertificates: OPTIONAL<CertificateSet>,
+        readonly extraCertificates?: OPTIONAL<CertificateSet>,
         /**
          * @summary `extraRevocation`.
          * @public
          * @readonly
          */
-        readonly extraRevocation: OPTIONAL<RevocationInfoChoices>
+        readonly extraRevocation?: OPTIONAL<RevocationInfoChoices>
     ) {}
 
     /**
@@ -182,7 +182,7 @@ function _decode_LongTermValidation (el: _Element): LongTermValidation {
         _root_component_type_list_2_spec_for_LongTermValidation,
         undefined,
     );
-    return new LongTermValidation( 
+    return new LongTermValidation(
         poeDate,
         poeValue,
         extraCertificates,

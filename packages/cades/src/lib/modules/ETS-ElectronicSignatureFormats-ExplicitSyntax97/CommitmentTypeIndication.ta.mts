@@ -40,7 +40,7 @@ class CommitmentTypeIndication {
          * @public
          * @readonly
          */
-        readonly commitmentTypeQualifier: OPTIONAL<CommitmentTypeQualifier[]>
+        readonly commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>
     ) {}
 
     /**
@@ -125,7 +125,7 @@ function _decode_CommitmentTypeIndication (el: _Element): CommitmentTypeIndicati
         _root_component_type_list_2_spec_for_CommitmentTypeIndication,
         undefined,
     );
-    return new CommitmentTypeIndication( 
+    return new CommitmentTypeIndication(
         commitmentTypeId,
         commitmentTypeQualifier
     );

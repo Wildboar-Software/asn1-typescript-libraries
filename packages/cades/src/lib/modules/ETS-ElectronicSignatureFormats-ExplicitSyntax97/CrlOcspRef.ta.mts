@@ -36,19 +36,19 @@ class CrlOcspRef {
          * @public
          * @readonly
          */
-        readonly crlids: OPTIONAL<CRLListID>,
+        readonly crlids?: OPTIONAL<CRLListID>,
         /**
          * @summary `ocspids`.
          * @public
          * @readonly
          */
-        readonly ocspids: OPTIONAL<OcspListID>,
+        readonly ocspids?: OPTIONAL<OcspListID>,
         /**
          * @summary `otherRev`.
          * @public
          * @readonly
          */
-        readonly otherRev: OPTIONAL<OtherRevRefs>
+        readonly otherRev?: OPTIONAL<OtherRevRefs>
     ) {}
 
     /**
@@ -136,7 +136,7 @@ function _decode_CrlOcspRef (el: _Element): CrlOcspRef {
         _root_component_type_list_2_spec_for_CrlOcspRef,
         undefined,
     );
-    return new CrlOcspRef( 
+    return new CrlOcspRef(
         crlids,
         ocspids,
         otherRev

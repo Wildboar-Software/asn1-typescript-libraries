@@ -46,7 +46,7 @@ class OtherSigningCertificate {
          * @public
          * @readonly
          */
-        readonly policies: OPTIONAL<PolicyInformation[]>
+        readonly policies?: OPTIONAL<PolicyInformation[]>
     ) {}
 
     /**
@@ -131,7 +131,7 @@ function _decode_OtherSigningCertificate (el: _Element): OtherSigningCertificate
         _root_component_type_list_2_spec_for_OtherSigningCertificate,
         undefined,
     );
-    return new OtherSigningCertificate( 
+    return new OtherSigningCertificate(
         certs,
         policies
     );

@@ -39,7 +39,7 @@ class CommitmentTypeQualifier {
          * @public
          * @readonly
          */
-        readonly qualifier: OPTIONAL<_Element>
+        readonly qualifier?: OPTIONAL<_Element>
     ) {}
 
     /**
@@ -124,7 +124,7 @@ function _decode_CommitmentTypeQualifier (el: _Element): CommitmentTypeQualifier
         _root_component_type_list_2_spec_for_CommitmentTypeQualifier,
         undefined,
     );
-    return new CommitmentTypeQualifier( 
+    return new CommitmentTypeQualifier(
         commitmentQualifierId,
         qualifier
     );

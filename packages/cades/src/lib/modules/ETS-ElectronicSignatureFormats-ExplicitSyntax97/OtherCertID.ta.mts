@@ -46,7 +46,7 @@ class OtherCertID {
          * @public
          * @readonly
          */
-        readonly issuerSerial: OPTIONAL<IssuerSerial>
+        readonly issuerSerial?: OPTIONAL<IssuerSerial>
     ) {}
 
     /**
@@ -131,7 +131,7 @@ function _decode_OtherCertID (el: _Element): OtherCertID {
         _root_component_type_list_2_spec_for_OtherCertID,
         undefined,
     );
-    return new OtherCertID( 
+    return new OtherCertID(
         otherCertHash,
         issuerSerial
     );
