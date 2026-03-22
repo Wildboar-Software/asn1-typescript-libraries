@@ -43,7 +43,7 @@ export class ESSCertID {
          * @public
          * @readonly
          */
-        readonly issuerSerial: OPTIONAL<IssuerSerial>
+        readonly issuerSerial?: OPTIONAL<IssuerSerial>
     ) {}
 
     /**

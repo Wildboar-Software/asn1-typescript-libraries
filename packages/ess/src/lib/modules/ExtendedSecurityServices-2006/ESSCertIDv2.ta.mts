@@ -57,7 +57,7 @@ export class ESSCertIDv2 {
          * @public
          * @readonly
          */
-        readonly issuerSerial: OPTIONAL<IssuerSerial>
+        readonly issuerSerial?: OPTIONAL<IssuerSerial>
     ) {}
 
     /**

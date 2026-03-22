@@ -51,7 +51,7 @@ export class MLData {
          * @public
          * @readonly
          */
-        readonly mlReceiptPolicy: OPTIONAL<MLReceiptPolicy>
+        readonly mlReceiptPolicy?: OPTIONAL<MLReceiptPolicy>
     ) {}
 
     /**

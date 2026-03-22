@@ -56,19 +56,19 @@ export class ESSSecurityLabel {
          * @public
          * @readonly
          */
-        readonly security_classification: OPTIONAL<SecurityClassification>,
+        readonly security_classification?: OPTIONAL<SecurityClassification>,
         /**
          * @summary `privacy_mark`.
          * @public
          * @readonly
          */
-        readonly privacy_mark: OPTIONAL<ESSPrivacyMark>,
+        readonly privacy_mark?: OPTIONAL<ESSPrivacyMark>,
         /**
          * @summary `security_categories`.
          * @public
          * @readonly
          */
-        readonly security_categories: OPTIONAL<SecurityCategories>
+        readonly security_categories?: OPTIONAL<SecurityCategories>
     ) {}
 
     /**

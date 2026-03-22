@@ -43,7 +43,7 @@ export class SigningCertificateV2 {
          * @public
          * @readonly
          */
-        readonly policies: OPTIONAL<PolicyInformation[]>
+        readonly policies?: OPTIONAL<PolicyInformation[]>
     ) {}
 
     /**
