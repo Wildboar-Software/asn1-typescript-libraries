@@ -57,7 +57,7 @@ class Scrypt_params {
          * @public
          * @readonly
          */
-        readonly keyLength: OPTIONAL<INTEGER>
+        readonly keyLength?: OPTIONAL<INTEGER>
     ) {}
 
     /**
@@ -156,7 +156,7 @@ function _decode_Scrypt_params (el: _Element): Scrypt_params {
         _root_component_type_list_2_spec_for_Scrypt_params,
         undefined,
     );
-    return new Scrypt_params( 
+    return new Scrypt_params(
         salt,
         costParameter,
         blockSize,
