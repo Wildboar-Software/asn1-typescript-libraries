@@ -45,79 +45,79 @@ export class Document_initial_vocabulary {
      * @public
      * @readonly
      */
-    readonly external_vocabulary: OPTIONAL<URI>,
+    readonly external_vocabulary?: OPTIONAL<URI>,
     /**
      * @summary `restricted_alphabets`.
      * @public
      * @readonly
      */
-    readonly restricted_alphabets: OPTIONAL<NonEmptyOctetString[]>,
+    readonly restricted_alphabets?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `encoding_algorithms`.
      * @public
      * @readonly
      */
-    readonly encoding_algorithms: OPTIONAL<NonEmptyOctetString[]>,
+    readonly encoding_algorithms?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `prefixes`.
      * @public
      * @readonly
      */
-    readonly prefixes: OPTIONAL<NonEmptyOctetString[]>,
+    readonly prefixes?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `namespace_names`.
      * @public
      * @readonly
      */
-    readonly namespace_names: OPTIONAL<NonEmptyOctetString[]>,
+    readonly namespace_names?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `local_names`.
      * @public
      * @readonly
      */
-    readonly local_names: OPTIONAL<NonEmptyOctetString[]>,
+    readonly local_names?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `other_ncnames`.
      * @public
      * @readonly
      */
-    readonly other_ncnames: OPTIONAL<NonEmptyOctetString[]>,
+    readonly other_ncnames?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `other_uris`.
      * @public
      * @readonly
      */
-    readonly other_uris: OPTIONAL<NonEmptyOctetString[]>,
+    readonly other_uris?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `attribute_values`.
      * @public
      * @readonly
      */
-    readonly attribute_values: OPTIONAL<EncodedCharacterString[]>,
+    readonly attribute_values?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `content_character_chunks`.
      * @public
      * @readonly
      */
-    readonly content_character_chunks: OPTIONAL<EncodedCharacterString[]>,
+    readonly content_character_chunks?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `other_strings`.
      * @public
      * @readonly
      */
-    readonly other_strings: OPTIONAL<EncodedCharacterString[]>,
+    readonly other_strings?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `element_name_surrogates`.
      * @public
      * @readonly
      */
-    readonly element_name_surrogates: OPTIONAL<NameSurrogate[]>,
+    readonly element_name_surrogates?: OPTIONAL<NameSurrogate[]>,
     /**
      * @summary `attribute_name_surrogates`.
      * @public
      * @readonly
      */
-    readonly attribute_name_surrogates: OPTIONAL<NameSurrogate[]>
+    readonly attribute_name_surrogates?: OPTIONAL<NameSurrogate[]>
   ) {}
 
   /**

@@ -37,13 +37,13 @@ export class NamespaceAttribute {
      * @public
      * @readonly
      */
-    readonly prefix: OPTIONAL<IdentifyingStringOrIndex>,
+    readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `namespace_name`.
      * @public
      * @readonly
      */
-    readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>
+    readonly namespace_name?: OPTIONAL<IdentifyingStringOrIndex>
   ) {}
 
   /**

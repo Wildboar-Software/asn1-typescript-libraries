@@ -44,13 +44,13 @@ export class UnexpandedEntityReference {
      * @public
      * @readonly
      */
-    readonly system_identifier: OPTIONAL<IdentifyingStringOrIndex>,
+    readonly system_identifier?: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `public_identifier`.
      * @public
      * @readonly
      */
-    readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>
+    readonly public_identifier?: OPTIONAL<IdentifyingStringOrIndex>
   ) {}
 
   /**
