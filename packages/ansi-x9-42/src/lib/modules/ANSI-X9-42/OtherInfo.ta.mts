@@ -42,25 +42,25 @@ export class OtherInfo {
          * @public
          * @readonly
          */
-        readonly partyUInfo: OPTIONAL<OCTET_STRING>,
+        readonly partyUInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `partyVInfo`.
          * @public
          * @readonly
          */
-        readonly partyVInfo: OPTIONAL<OCTET_STRING>,
+        readonly partyVInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPubInfo`.
          * @public
          * @readonly
          */
-        readonly suppPubInfo: OPTIONAL<OCTET_STRING>,
+        readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPrivInfo`.
          * @public
          * @readonly
          */
-        readonly suppPrivInfo: OPTIONAL<OCTET_STRING>
+        readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**
