@@ -43,7 +43,7 @@ export class Data_Field_Item {
      * @public
      * @readonly
      */
-    readonly field_data: OPTIONAL<OCTET_STRING>
+    readonly field_data?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

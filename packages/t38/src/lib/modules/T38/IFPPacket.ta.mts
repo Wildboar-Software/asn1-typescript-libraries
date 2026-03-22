@@ -49,7 +49,7 @@ export class IFPPacket {
      * @public
      * @readonly
      */
-    readonly data_field: OPTIONAL<Data_Field>
+    readonly data_field?: OPTIONAL<Data_Field>
   ) {}
 
   /**
