@@ -44,7 +44,7 @@ export class ABRT_apdu {
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<EXTERNAL[]>
+        readonly user_information?: OPTIONAL<EXTERNAL[]>
     ) {}
 
     /**

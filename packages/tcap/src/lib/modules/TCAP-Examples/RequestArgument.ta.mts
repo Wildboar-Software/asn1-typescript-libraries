@@ -49,7 +49,7 @@ export class RequestArgument {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<BasicServiceIndicator>
+        readonly basicService?: OPTIONAL<BasicServiceIndicator>
     ) {}
 
     /**

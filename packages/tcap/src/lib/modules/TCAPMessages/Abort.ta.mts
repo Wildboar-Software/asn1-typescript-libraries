@@ -49,7 +49,7 @@ export class Abort {
      * @public
      * @readonly
      */
-    readonly reason: OPTIONAL<Abort_reason>
+    readonly reason?: OPTIONAL<Abort_reason>
   ) {}
 
   /**

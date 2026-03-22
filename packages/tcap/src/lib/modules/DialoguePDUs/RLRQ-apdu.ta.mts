@@ -38,13 +38,13 @@ export class RLRQ_apdu {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<Release_request_reason>,
+        readonly reason?: OPTIONAL<Release_request_reason>,
         /**
          * @summary `user_information`.
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<EXTERNAL[]>
+        readonly user_information?: OPTIONAL<EXTERNAL[]>
     ) {}
 
     /**

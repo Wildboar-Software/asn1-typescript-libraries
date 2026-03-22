@@ -56,7 +56,7 @@ export class AARQ_apdu {
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<EXTERNAL[]>
+        readonly user_information?: OPTIONAL<EXTERNAL[]>
     ) {}
 
     /**

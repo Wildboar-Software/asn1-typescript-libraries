@@ -80,7 +80,7 @@ export class AARE_apdu {
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<EXTERNAL[]>
+        readonly user_information?: OPTIONAL<EXTERNAL[]>
     ) {}
 
     /**

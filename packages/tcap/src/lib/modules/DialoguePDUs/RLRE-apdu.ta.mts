@@ -38,13 +38,13 @@ export class RLRE_apdu {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<Release_response_reason>,
+        readonly reason?: OPTIONAL<Release_response_reason>,
         /**
          * @summary `user_information`.
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<EXTERNAL[]>
+        readonly user_information?: OPTIONAL<EXTERNAL[]>
     ) {}
 
     /**

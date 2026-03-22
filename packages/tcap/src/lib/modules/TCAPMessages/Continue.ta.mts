@@ -66,13 +66,13 @@ export class Continue {
      * @public
      * @readonly
      */
-    readonly dialoguePortion: OPTIONAL<DialoguePortion>,
+    readonly dialoguePortion?: OPTIONAL<DialoguePortion>,
     /**
      * @summary `components`.
      * @public
      * @readonly
      */
-    readonly components: OPTIONAL<ComponentPortion>
+    readonly components?: OPTIONAL<ComponentPortion>
   ) {}
 
   /**
