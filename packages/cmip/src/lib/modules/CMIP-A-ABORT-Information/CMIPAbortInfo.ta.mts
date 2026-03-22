@@ -46,7 +46,7 @@ export class CMIPAbortInfo {
      * @public
      * @readonly
      */
-    readonly userInfo: OPTIONAL<EXTERNAL>
+    readonly userInfo?: OPTIONAL<EXTERNAL>
   ) {}
 
   /**

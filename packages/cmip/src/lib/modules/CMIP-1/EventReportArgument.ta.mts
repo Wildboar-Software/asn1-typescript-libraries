@@ -79,7 +79,7 @@ export class EventReportArgument {
      * @public
      * @readonly
      */
-    readonly eventInfo: OPTIONAL<_Element>,
+    readonly eventInfo?: OPTIONAL<_Element>,
     /**
      * @summary Extensions that are not recognized.
      * @public

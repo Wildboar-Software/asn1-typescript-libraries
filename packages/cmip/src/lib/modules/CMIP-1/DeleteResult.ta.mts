@@ -46,19 +46,19 @@ export class DeleteResult {
      * @public
      * @readonly
      */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
+    readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
      * @public
      * @readonly
      */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
+    readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
      * @public
      * @readonly
      */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
+    readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary Extensions that are not recognized.
      * @public

@@ -52,25 +52,25 @@ export class EventReportResult {
      * @public
      * @readonly
      */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
+    readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
      * @public
      * @readonly
      */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
+    readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
      * @public
      * @readonly
      */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
+    readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `eventReply`.
      * @public
      * @readonly
      */
-    readonly eventReply: OPTIONAL<EventReply>,
+    readonly eventReply?: OPTIONAL<EventReply>,
     /**
      * @summary Extensions that are not recognized.
      * @public

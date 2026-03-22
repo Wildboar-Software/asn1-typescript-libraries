@@ -46,7 +46,7 @@ export class ActionInfo {
      * @public
      * @readonly
      */
-    readonly actionInfoArg: OPTIONAL<_Element>
+    readonly actionInfoArg?: OPTIONAL<_Element>
   ) {}
 
   /**

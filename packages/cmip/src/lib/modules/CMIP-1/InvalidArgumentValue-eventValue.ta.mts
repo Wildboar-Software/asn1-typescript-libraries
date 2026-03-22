@@ -42,7 +42,7 @@ export class InvalidArgumentValue_eventValue {
      * @public
      * @readonly
      */
-    readonly eventInfo: OPTIONAL<_Element>
+    readonly eventInfo?: OPTIONAL<_Element>
   ) {}
 
   /**

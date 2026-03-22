@@ -48,25 +48,25 @@ export class CMIPUserInfo {
      * @public
      * @readonly
      */
-    readonly protocolVersion: OPTIONAL<ProtocolVersion>,
+    readonly protocolVersion?: OPTIONAL<ProtocolVersion>,
     /**
      * @summary `functionalUnits`.
      * @public
      * @readonly
      */
-    readonly functionalUnits: OPTIONAL<FunctionalUnits>,
+    readonly functionalUnits?: OPTIONAL<FunctionalUnits>,
     /**
      * @summary `accessControl`.
      * @public
      * @readonly
      */
-    readonly accessControl: OPTIONAL<EXTERNAL>,
+    readonly accessControl?: OPTIONAL<EXTERNAL>,
     /**
      * @summary `userInfo`.
      * @public
      * @readonly
      */
-    readonly userInfo: OPTIONAL<EXTERNAL>
+    readonly userInfo?: OPTIONAL<EXTERNAL>
   ) {}
 
   /**

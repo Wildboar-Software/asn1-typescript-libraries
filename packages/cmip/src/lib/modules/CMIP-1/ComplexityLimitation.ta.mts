@@ -47,19 +47,19 @@ export class ComplexityLimitation {
      * @public
      * @readonly
      */
-    readonly scope: OPTIONAL<Scope>,
+    readonly scope?: OPTIONAL<Scope>,
     /**
      * @summary `filter`.
      * @public
      * @readonly
      */
-    readonly filter: OPTIONAL<CMISFilter>,
+    readonly filter?: OPTIONAL<CMISFilter>,
     /**
      * @summary `sync`.
      * @public
      * @readonly
      */
-    readonly sync: OPTIONAL<CMISSync>,
+    readonly sync?: OPTIONAL<CMISSync>,
     /**
      * @summary Extensions that are not recognized.
      * @public

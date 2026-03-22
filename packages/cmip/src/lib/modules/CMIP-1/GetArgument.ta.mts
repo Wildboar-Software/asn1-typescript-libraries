@@ -95,31 +95,31 @@ export class GetArgument implements BaseManagedObjectId {
      * @public
      * @readonly
      */
-    readonly accessControl: OPTIONAL<AccessControl>,
+    readonly accessControl?: OPTIONAL<AccessControl>,
     /**
      * @summary `synchronization`.
      * @public
      * @readonly
      */
-    readonly synchronization: OPTIONAL<CMISSync>,
+    readonly synchronization?: OPTIONAL<CMISSync>,
     /**
      * @summary `scope`.
      * @public
      * @readonly
      */
-    readonly scope: OPTIONAL<Scope>,
+    readonly scope?: OPTIONAL<Scope>,
     /**
      * @summary `filter`.
      * @public
      * @readonly
      */
-    readonly filter: OPTIONAL<CMISFilter>,
+    readonly filter?: OPTIONAL<CMISFilter>,
     /**
      * @summary `attributeIdList`.
      * @public
      * @readonly
      */
-    readonly attributeIdList: OPTIONAL<AttributeId[]>,
+    readonly attributeIdList?: OPTIONAL<AttributeId[]>,
     /**
      * @summary Extensions that are not recognized.
      * @public

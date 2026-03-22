@@ -70,25 +70,25 @@ export class CreateArgument {
      * @public
      * @readonly
      */
-    readonly managedOrSuperiorObjectInstance: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>,
+    readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>,
     /**
      * @summary `accessControl`.
      * @public
      * @readonly
      */
-    readonly accessControl: OPTIONAL<AccessControl>,
+    readonly accessControl?: OPTIONAL<AccessControl>,
     /**
      * @summary `referenceObjectInstance`.
      * @public
      * @readonly
      */
-    readonly referenceObjectInstance: OPTIONAL<ObjectInstance>,
+    readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `attributeList`.
      * @public
      * @readonly
      */
-    readonly attributeList: OPTIONAL<Attribute[]>,
+    readonly attributeList?: OPTIONAL<Attribute[]>,
     /**
      * @summary Extensions that are not recognized.
      * @public
