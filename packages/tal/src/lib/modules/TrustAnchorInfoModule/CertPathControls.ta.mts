@@ -50,31 +50,31 @@ class CertPathControls {
          * @public
          * @readonly
          */
-        readonly certificate: OPTIONAL<Certificate>,
+        readonly certificate?: OPTIONAL<Certificate>,
         /**
          * @summary `policySet`.
          * @public
          * @readonly
          */
-        readonly policySet: OPTIONAL<CertificatePoliciesSyntax>,
+        readonly policySet?: OPTIONAL<CertificatePoliciesSyntax>,
         /**
          * @summary `policyFlags`.
          * @public
          * @readonly
          */
-        readonly policyFlags: OPTIONAL<CertPolicyFlags>,
+        readonly policyFlags?: OPTIONAL<CertPolicyFlags>,
         /**
          * @summary `nameConstr`.
          * @public
          * @readonly
          */
-        readonly nameConstr: OPTIONAL<NameConstraintsSyntax>,
+        readonly nameConstr?: OPTIONAL<NameConstraintsSyntax>,
         /**
          * @summary `pathLenConstraint`.
          * @public
          * @readonly
          */
-        readonly pathLenConstraint: OPTIONAL<INTEGER>
+        readonly pathLenConstraint?: OPTIONAL<INTEGER>
     ) {}
 
     /**
@@ -171,7 +171,7 @@ function _decode_CertPathControls (el: _Element): CertPathControls {
         _root_component_type_list_2_spec_for_CertPathControls,
         undefined,
     );
-    return new CertPathControls( 
+    return new CertPathControls(
         taName,
         certificate,
         policySet,

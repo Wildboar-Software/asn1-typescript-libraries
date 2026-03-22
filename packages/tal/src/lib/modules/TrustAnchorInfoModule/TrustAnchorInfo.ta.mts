@@ -63,25 +63,25 @@ class TrustAnchorInfo {
          * @public
          * @readonly
          */
-        readonly taTitle: OPTIONAL<TrustAnchorTitle>,
+        readonly taTitle?: OPTIONAL<TrustAnchorTitle>,
         /**
          * @summary `certPath`.
          * @public
          * @readonly
          */
-        readonly certPath: OPTIONAL<CertPathControls>,
+        readonly certPath?: OPTIONAL<CertPathControls>,
         /**
          * @summary `exts`.
          * @public
          * @readonly
          */
-        readonly exts: OPTIONAL<Extensions>,
+        readonly exts?: OPTIONAL<Extensions>,
         /**
          * @summary `taTitleLangTag`.
          * @public
          * @readonly
          */
-        readonly taTitleLangTag: OPTIONAL<UTF8String>
+        readonly taTitleLangTag?: OPTIONAL<UTF8String>
     ) {}
 
     /**
@@ -187,7 +187,7 @@ function _decode_TrustAnchorInfo (el: _Element): TrustAnchorInfo {
         _root_component_type_list_2_spec_for_TrustAnchorInfo,
         undefined,
     );
-    return new TrustAnchorInfo( 
+    return new TrustAnchorInfo(
         version,
         pubKey,
         keyId,
