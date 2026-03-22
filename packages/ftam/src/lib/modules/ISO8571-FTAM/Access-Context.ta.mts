@@ -52,7 +52,7 @@ export class Access_Context {
      * @public
      * @readonly
      */
-    readonly level_number: OPTIONAL<INTEGER>
+    readonly level_number?: OPTIONAL<INTEGER>
   ) {}
 
   /**

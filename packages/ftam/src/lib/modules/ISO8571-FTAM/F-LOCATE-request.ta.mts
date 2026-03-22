@@ -49,7 +49,7 @@ export class F_LOCATE_request {
      * @public
      * @readonly
      */
-    readonly fadu_lock: OPTIONAL<FADU_Lock>
+    readonly fadu_lock?: OPTIONAL<FADU_Lock>
   ) {}
 
   /**

@@ -166,19 +166,19 @@ export class F_INITIALIZE_response {
      * @public
      * @readonly
      */
-    readonly contents_type_list: OPTIONAL<Contents_Type_List>,
+    readonly contents_type_list?: OPTIONAL<Contents_Type_List>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>,
+    readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `checkpoint_window`.
      * @public
      * @readonly
      */
-    readonly checkpoint_window: OPTIONAL<INTEGER>
+    readonly checkpoint_window?: OPTIONAL<INTEGER>
   ) {}
 
   /**

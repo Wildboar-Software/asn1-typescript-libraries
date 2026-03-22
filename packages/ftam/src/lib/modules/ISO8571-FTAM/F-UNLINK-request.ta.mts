@@ -37,7 +37,7 @@ export class F_UNLINK_request {
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
   ) {}
 
   /**

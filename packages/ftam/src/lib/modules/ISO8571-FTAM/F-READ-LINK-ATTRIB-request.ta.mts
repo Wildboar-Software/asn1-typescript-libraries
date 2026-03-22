@@ -49,7 +49,7 @@ export class F_READ_LINK_ATTRIB_request {
      * @public
      * @readonly
      */
-    readonly attribute_extension_names: OPTIONAL<Attribute_Extension_Names>
+    readonly attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>
   ) {}
 
   /**

@@ -50,19 +50,19 @@ export class F_LIST_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `objects_attributes_list`.
      * @public
      * @readonly
      */
-    readonly objects_attributes_list: OPTIONAL<Objects_Attributes_List>,
+    readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

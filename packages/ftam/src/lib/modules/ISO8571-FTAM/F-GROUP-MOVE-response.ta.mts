@@ -56,25 +56,25 @@ export class F_GROUP_MOVE_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `destination_file_directory`.
      * @public
      * @readonly
      */
-    readonly destination_file_directory: OPTIONAL<Destination_File_Directory>,
+    readonly destination_file_directory?: OPTIONAL<Destination_File_Directory>,
     /**
      * @summary `operation_result`.
      * @public
      * @readonly
      */
-    readonly operation_result: OPTIONAL<Operation_Result>,
+    readonly operation_result?: OPTIONAL<Operation_Result>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

@@ -56,25 +56,25 @@ export class F_MOVE_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `destination_file_directory`.
      * @public
      * @readonly
      */
-    readonly destination_file_directory: OPTIONAL<Destination_File_Directory>,
+    readonly destination_file_directory?: OPTIONAL<Destination_File_Directory>,
     /**
      * @summary `attributes`.
      * @public
      * @readonly
      */
-    readonly attributes: OPTIONAL<Change_Attributes>,
+    readonly attributes?: OPTIONAL<Change_Attributes>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

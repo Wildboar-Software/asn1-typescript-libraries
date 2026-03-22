@@ -108,55 +108,55 @@ export class F_OPEN_request {
      * @public
      * @readonly
      */
-    readonly concurrency_control: OPTIONAL<Concurrency_Control>,
+    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `enable_fadu_locking`.
      * @public
      * @readonly
      */
-    readonly enable_fadu_locking: OPTIONAL<BOOLEAN>,
+    readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `activity_identifier`.
      * @public
      * @readonly
      */
-    readonly activity_identifier: OPTIONAL<Activity_Identifier>,
+    readonly activity_identifier?: OPTIONAL<Activity_Identifier>,
     /**
      * @summary `recovery_mode`.
      * @public
      * @readonly
      */
-    readonly recovery_mode: OPTIONAL<F_OPEN_request_recovery_mode>,
+    readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>,
     /**
      * @summary `remove_contexts`.
      * @public
      * @readonly
      */
-    readonly remove_contexts: OPTIONAL<Abstract_Syntax_Name[]>,
+    readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `define_contexts`.
      * @public
      * @readonly
      */
-    readonly define_contexts: OPTIONAL<Abstract_Syntax_Name[]>,
+    readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `degree_of_overlap`.
      * @public
      * @readonly
      */
-    readonly degree_of_overlap: OPTIONAL<Degree_Of_Overlap>,
+    readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
     /**
      * @summary `transfer_window`.
      * @public
      * @readonly
      */
-    readonly transfer_window: OPTIONAL<INTEGER>
+    readonly transfer_window?: OPTIONAL<INTEGER>
   ) {}
 
   /**

@@ -152,31 +152,31 @@ export class F_INITIALIZE_request {
      * @public
      * @readonly
      */
-    readonly contents_type_list: OPTIONAL<Contents_Type_List>,
+    readonly contents_type_list?: OPTIONAL<Contents_Type_List>,
     /**
      * @summary `initiator_identity`.
      * @public
      * @readonly
      */
-    readonly initiator_identity: OPTIONAL<User_Identity>,
+    readonly initiator_identity?: OPTIONAL<User_Identity>,
     /**
      * @summary `account`.
      * @public
      * @readonly
      */
-    readonly account: OPTIONAL<Account>,
+    readonly account?: OPTIONAL<Account>,
     /**
      * @summary `filestore_password`.
      * @public
      * @readonly
      */
-    readonly filestore_password: OPTIONAL<Password>,
+    readonly filestore_password?: OPTIONAL<Password>,
     /**
      * @summary `checkpoint_window`.
      * @public
      * @readonly
      */
-    readonly checkpoint_window: OPTIONAL<INTEGER>
+    readonly checkpoint_window?: OPTIONAL<INTEGER>
   ) {}
 
   /**

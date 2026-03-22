@@ -63,13 +63,13 @@ export class F_CHANGE_PREFIX_request {
      * @public
      * @readonly
      */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
+    readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
      * @public
      * @readonly
      */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>
+    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>
   ) {}
 
   /**

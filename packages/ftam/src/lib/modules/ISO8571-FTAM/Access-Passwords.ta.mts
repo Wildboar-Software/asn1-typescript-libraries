@@ -99,13 +99,13 @@ export class Access_Passwords {
      * @public
      * @readonly
      */
-    readonly pass_passwords: OPTIONAL<Pass_Passwords>,
+    readonly pass_passwords?: OPTIONAL<Pass_Passwords>,
     /**
      * @summary `link_password`.
      * @public
      * @readonly
      */
-    readonly link_password: OPTIONAL<Password>
+    readonly link_password?: OPTIONAL<Password>
   ) {}
 
   /**

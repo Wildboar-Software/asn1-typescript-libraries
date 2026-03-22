@@ -100,31 +100,31 @@ export class F_GROUP_MOVE_request {
      * @public
      * @readonly
      */
-    readonly create_password: OPTIONAL<Password>,
+    readonly create_password?: OPTIONAL<Password>,
     /**
      * @summary `access_passwords`.
      * @public
      * @readonly
      */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
+    readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
      * @public
      * @readonly
      */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>,
+    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `request_Operation_result`.
      * @public
      * @readonly
      */
-    readonly request_Operation_result: OPTIONAL<Request_Operation_Result>,
+    readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
     /**
      * @summary `attributes`.
      * @public
      * @readonly
      */
-    readonly attributes: OPTIONAL<Change_Attributes>
+    readonly attributes?: OPTIONAL<Change_Attributes>
   ) {}
 
   /**

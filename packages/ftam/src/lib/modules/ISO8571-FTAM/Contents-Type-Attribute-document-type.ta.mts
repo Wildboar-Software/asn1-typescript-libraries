@@ -41,7 +41,7 @@ export class Contents_Type_Attribute_document_type {
      * @public
      * @readonly
      */
-    readonly parameter: OPTIONAL<_Element>
+    readonly parameter?: OPTIONAL<_Element>
   ) {}
 
   /**

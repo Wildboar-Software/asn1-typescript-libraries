@@ -48,31 +48,31 @@ export class F_TRANSFER_END_request {
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `request_type`.
      * @public
      * @readonly
      */
-    readonly request_type: OPTIONAL<Request_Type>,
+    readonly request_type?: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
      * @public
      * @readonly
      */
-    readonly transfer_number: OPTIONAL<INTEGER>,
+    readonly transfer_number?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_response: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_response: OPTIONAL<INTEGER>
+    readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>
   ) {}
 
   /**

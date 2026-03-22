@@ -89,19 +89,19 @@ export class F_SELECT_response {
      * @public
      * @readonly
      */
-    readonly referent_indicator: OPTIONAL<Referent_Indicator>,
+    readonly referent_indicator?: OPTIONAL<Referent_Indicator>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

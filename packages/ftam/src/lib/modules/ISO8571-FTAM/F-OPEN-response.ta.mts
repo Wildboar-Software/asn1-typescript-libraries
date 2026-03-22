@@ -110,43 +110,43 @@ export class F_OPEN_response {
      * @public
      * @readonly
      */
-    readonly concurrency_control: OPTIONAL<Concurrency_Control>,
+    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>,
+    readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `recovery_mode`.
      * @public
      * @readonly
      */
-    readonly recovery_mode: OPTIONAL<F_OPEN_response_recovery_mode>,
+    readonly recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>,
     /**
      * @summary `presentation_action`.
      * @public
      * @readonly
      */
-    readonly presentation_action: OPTIONAL<BOOLEAN>,
+    readonly presentation_action?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `degree_of_overlap`.
      * @public
      * @readonly
      */
-    readonly degree_of_overlap: OPTIONAL<Degree_Of_Overlap>,
+    readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
     /**
      * @summary `transfer_window`.
      * @public
      * @readonly
      */
-    readonly transfer_window: OPTIONAL<INTEGER>
+    readonly transfer_window?: OPTIONAL<INTEGER>
   ) {}
 
   /**

@@ -65,37 +65,37 @@ export class F_SELECT_ANOTHER_response {
      * @public
      * @readonly
      */
-    readonly state_result: OPTIONAL<State_Result>,
+    readonly state_result?: OPTIONAL<State_Result>,
     /**
      * @summary `action_result`.
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `last_member_indicator`.
      * @public
      * @readonly
      */
-    readonly last_member_indicator: OPTIONAL<BOOLEAN>,
+    readonly last_member_indicator?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `referent_indicator`.
      * @public
      * @readonly
      */
-    readonly referent_indicator: OPTIONAL<Referent_Indicator>,
+    readonly referent_indicator?: OPTIONAL<Referent_Indicator>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

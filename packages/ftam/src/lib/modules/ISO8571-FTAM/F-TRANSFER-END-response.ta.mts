@@ -59,31 +59,31 @@ export class F_TRANSFER_END_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>,
+    readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `request_type`.
      * @public
      * @readonly
      */
-    readonly request_type: OPTIONAL<Request_Type>,
+    readonly request_type?: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
      * @public
      * @readonly
      */
-    readonly transfer_number: OPTIONAL<INTEGER>
+    readonly transfer_number?: OPTIONAL<INTEGER>
   ) {}
 
   /**

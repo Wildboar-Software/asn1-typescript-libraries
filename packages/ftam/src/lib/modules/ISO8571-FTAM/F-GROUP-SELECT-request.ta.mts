@@ -120,13 +120,13 @@ export class F_GROUP_SELECT_request {
      * @public
      * @readonly
      */
-    readonly account: OPTIONAL<Account>,
+    readonly account?: OPTIONAL<Account>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
   ) {}
 
   /**

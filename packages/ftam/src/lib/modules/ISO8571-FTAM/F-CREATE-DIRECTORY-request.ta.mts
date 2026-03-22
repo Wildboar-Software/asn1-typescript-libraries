@@ -79,13 +79,13 @@ export class F_CREATE_DIRECTORY_request {
      * @public
      * @readonly
      */
-    readonly shared_ASE_infonnation: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_infonnation?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `account`.
      * @public
      * @readonly
      */
-    readonly account: OPTIONAL<Account>
+    readonly account?: OPTIONAL<Account>
   ) {}
 
   /**

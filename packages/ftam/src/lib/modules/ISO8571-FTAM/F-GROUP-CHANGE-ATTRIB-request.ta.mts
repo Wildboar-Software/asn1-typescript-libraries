@@ -67,13 +67,13 @@ export class F_GROUP_CHANGE_ATTRIB_request {
      * @public
      * @readonly
      */
-    readonly request_Operation_result: OPTIONAL<Request_Operation_Result>,
+    readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
   ) {}
 
   /**

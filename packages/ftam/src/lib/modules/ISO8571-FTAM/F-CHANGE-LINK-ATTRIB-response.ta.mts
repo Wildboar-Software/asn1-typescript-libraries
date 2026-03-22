@@ -50,19 +50,19 @@ export class F_CHANGE_LINK_ATTRIB_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
      * @public
      * @readonly
      */
-    readonly attributes: OPTIONAL<Change_Attributes>,
+    readonly attributes?: OPTIONAL<Change_Attributes>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

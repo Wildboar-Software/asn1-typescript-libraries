@@ -50,19 +50,19 @@ export class F_LOCATE_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `file_access_data_unit_identity`.
      * @public
      * @readonly
      */
-    readonly file_access_data_unit_identity: OPTIONAL<FADU_Identity>,
+    readonly file_access_data_unit_identity?: OPTIONAL<FADU_Identity>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>
+    readonly diagnostic?: OPTIONAL<Diagnostic>
   ) {}
 
   /**

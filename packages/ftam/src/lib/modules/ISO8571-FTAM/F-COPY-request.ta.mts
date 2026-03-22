@@ -76,31 +76,31 @@ export class F_COPY_request {
      * @public
      * @readonly
      */
-    readonly override: OPTIONAL<Override>,
+    readonly override?: OPTIONAL<Override>,
     /**
      * @summary `create_password`.
      * @public
      * @readonly
      */
-    readonly create_password: OPTIONAL<Password>,
+    readonly create_password?: OPTIONAL<Password>,
     /**
      * @summary `access_passwords`.
      * @public
      * @readonly
      */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
+    readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
      * @public
      * @readonly
      */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>,
+    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `attributes`.
      * @public
      * @readonly
      */
-    readonly attributes: OPTIONAL<Change_Attributes>
+    readonly attributes?: OPTIONAL<Change_Attributes>
   ) {}
 
   /**

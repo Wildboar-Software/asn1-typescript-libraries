@@ -35,13 +35,13 @@ export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
      * @public
      * @readonly
      */
-    readonly constraint_Set_Pattern: OPTIONAL<Object_Identifier_Pattern>,
+    readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>,
     /**
      * @summary `abstract_Syntax_Pattern`.
      * @public
      * @readonly
      */
-    readonly abstract_Syntax_Pattern: OPTIONAL<Object_Identifier_Pattern>
+    readonly abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>
   ) {}
 
   /**

@@ -91,49 +91,49 @@ export class F_RECOVER_request {
      * @public
      * @readonly
      */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
+    readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `recovefy_Point`.
      * @public
      * @readonly
      */
-    readonly recovefy_Point: OPTIONAL<INTEGER>,
+    readonly recovefy_Point?: OPTIONAL<INTEGER>,
     /**
      * @summary `remove_contexts`.
      * @public
      * @readonly
      */
-    readonly remove_contexts: OPTIONAL<Abstract_Syntax_Name[]>,
+    readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `define_contexts`.
      * @public
      * @readonly
      */
-    readonly define_contexts: OPTIONAL<Abstract_Syntax_Name[]>,
+    readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `concurrent_bulk_transfer_number`.
      * @public
      * @readonly
      */
-    readonly concurrent_bulk_transfer_number: OPTIONAL<INTEGER>,
+    readonly concurrent_bulk_transfer_number?: OPTIONAL<INTEGER>,
     /**
      * @summary `concurrent_recovery_point`.
      * @public
      * @readonly
      */
-    readonly concurrent_recovery_point: OPTIONAL<INTEGER>,
+    readonly concurrent_recovery_point?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_response: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_response: OPTIONAL<INTEGER>
+    readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>
   ) {}
 
   /**

@@ -64,13 +64,13 @@ export class F_READ_request {
      * @public
      * @readonly
      */
-    readonly fadu_lock: OPTIONAL<FADU_Lock>,
+    readonly fadu_lock?: OPTIONAL<FADU_Lock>,
     /**
      * @summary `transfer_number`.
      * @public
      * @readonly
      */
-    readonly transfer_number: OPTIONAL<INTEGER>
+    readonly transfer_number?: OPTIONAL<INTEGER>
   ) {}
 
   /**

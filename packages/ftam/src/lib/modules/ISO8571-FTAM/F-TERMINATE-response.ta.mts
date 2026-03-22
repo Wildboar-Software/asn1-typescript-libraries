@@ -43,13 +43,13 @@ export class F_TERMINATE_response {
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `charging`.
      * @public
      * @readonly
      */
-    readonly charging: OPTIONAL<Charging>
+    readonly charging?: OPTIONAL<Charging>
   ) {}
 
   /**

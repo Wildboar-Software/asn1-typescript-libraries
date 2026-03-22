@@ -63,55 +63,55 @@ export class F_CANCEL_response {
      * @public
      * @readonly
      */
-    readonly action_result: OPTIONAL<Action_Result>,
+    readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>,
+    readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `request_type`.
      * @public
      * @readonly
      */
-    readonly request_type: OPTIONAL<Request_Type>,
+    readonly request_type?: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
      * @public
      * @readonly
      */
-    readonly transfer_number: OPTIONAL<INTEGER>,
+    readonly transfer_number?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_request`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_request: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_response: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_request`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_request: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_response: OPTIONAL<INTEGER>
+    readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>
   ) {}
 
   /**

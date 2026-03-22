@@ -88,31 +88,31 @@ export class F_SELECT_request {
      * @public
      * @readonly
      */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
+    readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
      * @public
      * @readonly
      */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>,
+    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `concurrency_control`.
      * @public
      * @readonly
      */
-    readonly concurrency_control: OPTIONAL<Concurrency_Control>,
+    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
     /**
      * @summary `shared_ASE_information`.
      * @public
      * @readonly
      */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `account`.
      * @public
      * @readonly
      */
-    readonly account: OPTIONAL<Account>
+    readonly account?: OPTIONAL<Account>
   ) {}
 
   /**

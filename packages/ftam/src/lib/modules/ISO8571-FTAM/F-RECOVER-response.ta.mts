@@ -88,37 +88,37 @@ export class F_RECOVER_response {
      * @public
      * @readonly
      */
-    readonly recovety_Point: OPTIONAL<INTEGER>,
+    readonly recovety_Point?: OPTIONAL<INTEGER>,
     /**
      * @summary `diagnostic`.
      * @public
      * @readonly
      */
-    readonly diagnostic: OPTIONAL<Diagnostic>,
+    readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `presentation_action`.
      * @public
      * @readonly
      */
-    readonly presentation_action: OPTIONAL<BOOLEAN>,
+    readonly presentation_action?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `concurrent_recovery_point`.
      * @public
      * @readonly
      */
-    readonly concurrent_recovery_point: OPTIONAL<INTEGER>,
+    readonly concurrent_recovery_point?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_request`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_request: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_request`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_request: OPTIONAL<INTEGER>
+    readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>
   ) {}
 
   /**

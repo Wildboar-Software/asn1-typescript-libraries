@@ -63,25 +63,25 @@ export class F_RESTART_response {
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_request: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_read_response: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_request`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_request: OPTIONAL<INTEGER>,
+    readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
      * @public
      * @readonly
      */
-    readonly last_transfer_end_write_response: OPTIONAL<INTEGER>
+    readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>
   ) {}
 
   /**

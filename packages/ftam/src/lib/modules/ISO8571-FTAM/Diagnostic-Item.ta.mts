@@ -66,13 +66,13 @@ export class Diagnostic_Item {
      * @public
      * @readonly
      */
-    readonly suggested_delay: OPTIONAL<INTEGER>,
+    readonly suggested_delay?: OPTIONAL<INTEGER>,
     /**
      * @summary `further_details`.
      * @public
      * @readonly
      */
-    readonly further_details: OPTIONAL<GraphicString>
+    readonly further_details?: OPTIONAL<GraphicString>
   ) {}
 
   /**

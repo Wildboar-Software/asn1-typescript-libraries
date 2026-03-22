@@ -132,49 +132,49 @@ export class Create_Attributes {
      * @public
      * @readonly
      */
-    readonly storage_account: OPTIONAL<Account_Attribute>,
+    readonly storage_account?: OPTIONAL<Account_Attribute>,
     /**
      * @summary `object_availability`.
      * @public
      * @readonly
      */
-    readonly object_availability: OPTIONAL<Object_Availability_Attribute>,
+    readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
     /**
      * @summary `future_Object_size`.
      * @public
      * @readonly
      */
-    readonly future_Object_size: OPTIONAL<Object_Size_Attribute>,
+    readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>,
     /**
      * @summary `access_control`.
      * @public
      * @readonly
      */
-    readonly access_control: OPTIONAL<Access_Control_Attribute>,
+    readonly access_control?: OPTIONAL<Access_Control_Attribute>,
     /**
      * @summary `path_access_control`.
      * @public
      * @readonly
      */
-    readonly path_access_control: OPTIONAL<Access_Control_Attribute>,
+    readonly path_access_control?: OPTIONAL<Access_Control_Attribute>,
     /**
      * @summary `legal_qualification`.
      * @public
      * @readonly
      */
-    readonly legal_qualification: OPTIONAL<Legal_Qualification_Attribute>,
+    readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
     /**
      * @summary `private_use`.
      * @public
      * @readonly
      */
-    readonly private_use: OPTIONAL<Private_Use_Attribute>,
+    readonly private_use?: OPTIONAL<Private_Use_Attribute>,
     /**
      * @summary `attribute_extensions`.
      * @public
      * @readonly
      */
-    readonly attribute_extensions: OPTIONAL<Attribute_Extensions>
+    readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
   ) {}
 
   /**
