@@ -46,7 +46,7 @@ export class ExternalSAID {
      * @public
      * @readonly
      */
-    readonly assignerIdentity: OPTIONAL<SecurityIdentity>
+    readonly assignerIdentity?: OPTIONAL<SecurityIdentity>
   ) {}
 
   /**

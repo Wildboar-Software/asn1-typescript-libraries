@@ -78,25 +78,25 @@ export class IntermediateType {
      * @public
      * @readonly
      */
-    readonly initEncRules: OPTIONAL<OBJECT_IDENTIFIER>,
+    readonly initEncRules?: OPTIONAL<OBJECT_IDENTIFIER>,
     /**
      * @summary `signOrSealAlgorithm`.
      * @public
      * @readonly
      */
-    readonly signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+    readonly signOrSealAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `hashAlgorithm`.
      * @public
      * @readonly
      */
-    readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+    readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `keyInformation`.
      * @public
      * @readonly
      */
-    readonly keyInformation: OPTIONAL<IntermediateType_keyInformation>
+    readonly keyInformation?: OPTIONAL<IntermediateType_keyInformation>
   ) {}
 
   /**

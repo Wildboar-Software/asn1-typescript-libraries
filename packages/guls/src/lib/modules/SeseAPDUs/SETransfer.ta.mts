@@ -88,19 +88,19 @@ export class SETransfer {
      * @public
      * @readonly
      */
-    readonly invocationId: OPTIONAL<InvocationId>,
+    readonly invocationId?: OPTIONAL<InvocationId>,
     /**
      * @summary `startFlag`.
      * @public
      * @readonly
      */
-    readonly startFlag: OPTIONAL<BOOLEAN>,
+    readonly startFlag?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `endFlag`.
      * @public
      * @readonly
      */
-    readonly endFlag: OPTIONAL<BOOLEAN>
+    readonly endFlag?: OPTIONAL<BOOLEAN>
   ) {}
 
   /**

@@ -40,13 +40,13 @@ export class SEerror {
      * @public
      * @readonly
      */
-    readonly errorCode: OPTIONAL<Identifier>,
+    readonly errorCode?: OPTIONAL<Identifier>,
     /**
      * @summary `errorParameter`.
      * @public
      * @readonly
      */
-    readonly errorParameter: OPTIONAL<_Element>
+    readonly errorParameter?: OPTIONAL<_Element>
   ) {}
 
   /**

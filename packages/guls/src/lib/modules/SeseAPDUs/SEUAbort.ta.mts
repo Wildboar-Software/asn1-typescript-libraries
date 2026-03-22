@@ -56,19 +56,19 @@ export class SEUAbort {
      * @public
      * @readonly
      */
-    readonly invocationId: OPTIONAL<InvocationId>,
+    readonly invocationId?: OPTIONAL<InvocationId>,
     /**
      * @summary `itemIdentifier`.
      * @public
      * @readonly
      */
-    readonly itemIdentifier: OPTIONAL<_Element>,
+    readonly itemIdentifier?: OPTIONAL<_Element>,
     /**
      * @summary `errors`.
      * @public
      * @readonly
      */
-    readonly errors: OPTIONAL<SEerror[]>
+    readonly errors?: OPTIONAL<SEerror[]>
   ) {}
 
   /**

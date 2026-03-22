@@ -37,25 +37,25 @@ export class asymmetricKeyInformation_KiType {
      * @public
      * @readonly
      */
-    readonly issuerCAName: OPTIONAL<SecurityIdentity>,
+    readonly issuerCAName?: OPTIONAL<SecurityIdentity>,
     /**
      * @summary `certSerialNumber`.
      * @public
      * @readonly
      */
-    readonly certSerialNumber: OPTIONAL<INTEGER>,
+    readonly certSerialNumber?: OPTIONAL<INTEGER>,
     /**
      * @summary `signerName`.
      * @public
      * @readonly
      */
-    readonly signerName: OPTIONAL<SecurityIdentity>,
+    readonly signerName?: OPTIONAL<SecurityIdentity>,
     /**
      * @summary `keyIdentifier`.
      * @public
      * @readonly
      */
-    readonly keyIdentifier: OPTIONAL<BIT_STRING>
+    readonly keyIdentifier?: OPTIONAL<BIT_STRING>
   ) {}
 
   /**
