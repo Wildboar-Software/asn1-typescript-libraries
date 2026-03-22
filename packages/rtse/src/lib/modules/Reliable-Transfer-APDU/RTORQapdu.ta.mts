@@ -74,7 +74,7 @@ export class RTORQapdu {
      * @public
      * @readonly
      */
-    readonly applicationProtocol: OPTIONAL<INTEGER>
+    readonly applicationProtocol?: OPTIONAL<INTEGER>
   ) {}
 
   /**

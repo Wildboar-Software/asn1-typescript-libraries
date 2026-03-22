@@ -43,19 +43,19 @@ export class RTABapdu {
      * @public
      * @readonly
      */
-    readonly abortReason: OPTIONAL<AbortReason>,
+    readonly abortReason?: OPTIONAL<AbortReason>,
     /**
      * @summary `reflectedParameter`.
      * @public
      * @readonly
      */
-    readonly reflectedParameter: OPTIONAL<BIT_STRING>,
+    readonly reflectedParameter?: OPTIONAL<BIT_STRING>,
     /**
      * @summary `userdataAB`.
      * @public
      * @readonly
      */
-    readonly userdataAB: OPTIONAL<_Element>
+    readonly userdataAB?: OPTIONAL<_Element>
   ) {}
 
   /**

@@ -39,13 +39,13 @@ export class RTORJapdu {
      * @public
      * @readonly
      */
-    readonly refuseReason: OPTIONAL<RefuseReason>,
+    readonly refuseReason?: OPTIONAL<RefuseReason>,
     /**
      * @summary `userDataRJ`.
      * @public
      * @readonly
      */
-    readonly userDataRJ: OPTIONAL<_Element>
+    readonly userDataRJ?: OPTIONAL<_Element>
   ) {}
 
   /**

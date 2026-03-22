@@ -62,7 +62,7 @@ export class SessionConnectionIdentifier {
      * @public
      * @readonly
      */
-    readonly additionalReferenceInformation: OPTIONAL<AdditionalReferenceInformation>
+    readonly additionalReferenceInformation?: OPTIONAL<AdditionalReferenceInformation>
   ) {}
 
   /**
