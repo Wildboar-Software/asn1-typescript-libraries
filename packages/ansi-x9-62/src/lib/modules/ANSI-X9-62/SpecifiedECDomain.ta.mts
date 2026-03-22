@@ -84,13 +84,13 @@ export class SpecifiedECDomain {
          * @public
          * @readonly
          */
-        readonly cofactor: OPTIONAL<INTEGER>,
+        readonly cofactor?: OPTIONAL<INTEGER>,
         /**
          * @summary `hash`.
          * @public
          * @readonly
          */
-        readonly hash: OPTIONAL<HashAlgorithm>,
+        readonly hash?: OPTIONAL<HashAlgorithm>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -47,7 +47,7 @@ export class Curve {
          * @public
          * @readonly
          */
-        readonly seed: OPTIONAL<BIT_STRING>
+        readonly seed?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

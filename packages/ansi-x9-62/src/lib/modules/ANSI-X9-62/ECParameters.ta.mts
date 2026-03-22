@@ -78,7 +78,7 @@ export class ECParameters {
          * @public
          * @readonly
          */
-        readonly cofactor: OPTIONAL<INTEGER>,
+        readonly cofactor?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public
