@@ -44,7 +44,7 @@ export class SystemTimingSource {
          * @public
          * @readonly
          */
-        readonly secondaryTimingSource: OPTIONAL<SystemTiming>
+        readonly secondaryTimingSource?: OPTIONAL<SystemTiming>
     ) {}
 
     /**

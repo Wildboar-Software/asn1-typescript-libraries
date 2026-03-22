@@ -70,7 +70,7 @@ export class AlarmReportingControl {
          * @public
          * @readonly
          */
-        readonly timeRemainingInARCState: OPTIONAL<INTEGER>
+        readonly timeRemainingInARCState?: OPTIONAL<INTEGER>
     ) {}
 
     /**

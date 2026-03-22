@@ -52,7 +52,7 @@ export class SystemTiming {
          * @public
          * @readonly
          */
-        readonly sourceID: OPTIONAL<ObjectInstance>
+        readonly sourceID?: OPTIONAL<ObjectInstance>
     ) {}
 
     /**

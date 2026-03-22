@@ -63,13 +63,13 @@ export class AuthorizationList_Item {
          * @public
          * @readonly
          */
-        readonly authTime: OPTIONAL<AuthorizationTime>,
+        readonly authTime?: OPTIONAL<AuthorizationTime>,
         /**
          * @summary `authPerson`.
          * @public
          * @readonly
          */
-        readonly authPerson: OPTIONAL<PersonReach>,
+        readonly authPerson?: OPTIONAL<PersonReach>,
         /**
          * @summary Extensions that are not recognized.
          * @public

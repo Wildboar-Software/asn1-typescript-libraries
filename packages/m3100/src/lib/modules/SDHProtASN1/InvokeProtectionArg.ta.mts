@@ -56,13 +56,13 @@ export class InvokeProtectionArg {
          * @public
          * @readonly
          */
-        readonly protectionEntity: OPTIONAL<ProtectionEntity>,
+        readonly protectionEntity?: OPTIONAL<ProtectionEntity>,
         /**
          * @summary `otherInfo`.
          * @public
          * @readonly
          */
-        readonly otherInfo: OPTIONAL<ManagementExtension[]>
+        readonly otherInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

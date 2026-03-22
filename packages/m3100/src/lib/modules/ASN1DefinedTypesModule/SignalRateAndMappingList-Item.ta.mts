@@ -51,13 +51,13 @@ export class SignalRateAndMappingList_Item {
          * @public
          * @readonly
          */
-        readonly mappingList: OPTIONAL<MappingList>,
+        readonly mappingList?: OPTIONAL<MappingList>,
         /**
          * @summary `wavelength`.
          * @public
          * @readonly
          */
-        readonly wavelength: OPTIONAL<WaveLength>
+        readonly wavelength?: OPTIONAL<WaveLength>
     ) {}
 
     /**

@@ -70,13 +70,13 @@ export class ArcAlarmDetail {
          * @public
          * @readonly
          */
-        readonly perceivedSeverity: OPTIONAL<PerceivedSeverity>,
+        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
         /**
          * @summary `eventTime`.
          * @public
          * @readonly
          */
-        readonly eventTime: OPTIONAL<EventTime>
+        readonly eventTime?: OPTIONAL<EventTime>
     ) {}
 
     /**

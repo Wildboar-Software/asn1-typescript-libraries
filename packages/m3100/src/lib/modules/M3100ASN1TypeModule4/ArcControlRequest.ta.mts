@@ -62,7 +62,7 @@ export class ArcControlRequest {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInformation>
+        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

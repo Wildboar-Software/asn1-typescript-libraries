@@ -38,13 +38,13 @@ export class ProtectionEntity {
          * @public
          * @readonly
          */
-        readonly protectedUnits: OPTIONAL<RelativeDistinguishedName[]>,
+        readonly protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>,
         /**
          * @summary `protectingUnits`.
          * @public
          * @readonly
          */
-        readonly protectingUnits: OPTIONAL<RelativeDistinguishedName[]>
+        readonly protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>
     ) {}
 
     /**

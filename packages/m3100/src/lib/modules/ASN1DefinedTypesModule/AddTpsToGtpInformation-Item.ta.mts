@@ -46,7 +46,7 @@ export class AddTpsToGtpInformation_Item {
          * @public
          * @readonly
          */
-        readonly gtp: OPTIONAL<ObjectInstance>
+        readonly gtp?: OPTIONAL<ObjectInstance>
     ) {}
 
     /**

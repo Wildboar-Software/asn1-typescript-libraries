@@ -129,79 +129,79 @@ export class TroubleHistoryInfo {
          * @public
          * @readonly
          */
-        readonly activityDuration: OPTIONAL<ActivityDuration>,
+        readonly activityDuration?: OPTIONAL<ActivityDuration>,
         /**
          * @summary `additionalTroubleInfoList`.
          * @public
          * @readonly
          */
-        readonly additionalTroubleInfoList: OPTIONAL<AdditionalTroubleInfoList>,
+        readonly additionalTroubleInfoList?: OPTIONAL<AdditionalTroubleInfoList>,
         /**
          * @summary `authorizationList`.
          * @public
          * @readonly
          */
-        readonly authorizationList: OPTIONAL<AuthorizationList>,
+        readonly authorizationList?: OPTIONAL<AuthorizationList>,
         /**
          * @summary `cancelRequestedByManager`.
          * @public
          * @readonly
          */
-        readonly cancelRequestedByManager: OPTIONAL<CancelRequestedByManager>,
+        readonly cancelRequestedByManager?: OPTIONAL<CancelRequestedByManager>,
         /**
          * @summary `closeOutNarr`.
          * @public
          * @readonly
          */
-        readonly closeOutNarr: OPTIONAL<GraphicString>,
+        readonly closeOutNarr?: OPTIONAL<GraphicString>,
         /**
          * @summary `closeOutVerification`.
          * @public
          * @readonly
          */
-        readonly closeOutVerification: OPTIONAL<CloseOutVerification>,
+        readonly closeOutVerification?: OPTIONAL<CloseOutVerification>,
         /**
          * @summary `commitmentTime`.
          * @public
          * @readonly
          */
-        readonly commitmentTime: OPTIONAL<CommitmentTime>,
+        readonly commitmentTime?: OPTIONAL<CommitmentTime>,
         /**
          * @summary `custTroubleTickNum`.
          * @public
          * @readonly
          */
-        readonly custTroubleTickNum: OPTIONAL<GraphicString>,
+        readonly custTroubleTickNum?: OPTIONAL<GraphicString>,
         /**
          * @summary `perceivedTroubleSeverity`.
          * @public
          * @readonly
          */
-        readonly perceivedTroubleSeverity: OPTIONAL<PerceivedTroubleSeverity>,
+        readonly perceivedTroubleSeverity?: OPTIONAL<PerceivedTroubleSeverity>,
         /**
          * @summary `restoredTime`.
          * @public
          * @readonly
          */
-        readonly restoredTime: OPTIONAL<GeneralizedTime>,
+        readonly restoredTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `troubleClearancePerson`.
          * @public
          * @readonly
          */
-        readonly troubleClearancePerson: OPTIONAL<PersonReach>,
+        readonly troubleClearancePerson?: OPTIONAL<PersonReach>,
         /**
          * @summary `troubleReportNumberList`.
          * @public
          * @readonly
          */
-        readonly troubleReportNumberList: OPTIONAL<TroubleReportNumberList>,
+        readonly troubleReportNumberList?: OPTIONAL<TroubleReportNumberList>,
         /**
          * @summary `troubleType`.
          * @public
          * @readonly
          */
-        readonly troubleType: OPTIONAL<TroubleType>,
+        readonly troubleType?: OPTIONAL<TroubleType>,
         /**
          * @summary Extensions that are not recognized.
          * @public

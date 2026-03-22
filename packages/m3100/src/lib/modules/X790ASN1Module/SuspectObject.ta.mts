@@ -55,7 +55,7 @@ export class SuspectObject {
          * @public
          * @readonly
          */
-        readonly failureProbability: OPTIONAL<INTEGER>,
+        readonly failureProbability?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

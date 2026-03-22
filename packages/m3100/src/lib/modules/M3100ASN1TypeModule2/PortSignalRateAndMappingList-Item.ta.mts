@@ -58,7 +58,7 @@ export class PortSignalRateAndMappingList_Item {
          * @public
          * @readonly
          */
-        readonly mappingList: OPTIONAL<MappingList>
+        readonly mappingList?: OPTIONAL<MappingList>
     ) {}
 
     /**

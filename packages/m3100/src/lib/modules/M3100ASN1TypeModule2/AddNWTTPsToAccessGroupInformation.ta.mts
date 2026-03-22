@@ -44,7 +44,7 @@ export class AddNWTTPsToAccessGroupInformation {
          * @public
          * @readonly
          */
-        readonly accessGroup: OPTIONAL<ObjectInstance>
+        readonly accessGroup?: OPTIONAL<ObjectInstance>
     ) {}
 
     /**

@@ -58,7 +58,7 @@ export class ProtectionStatusParameter {
          * @public
          * @readonly
          */
-        readonly psDirection: OPTIONAL<ProtectionDirection>
+        readonly psDirection?: OPTIONAL<ProtectionDirection>
     ) {}
 
     /**

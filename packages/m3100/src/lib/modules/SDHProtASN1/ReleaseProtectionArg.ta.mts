@@ -62,7 +62,7 @@ export class ReleaseProtectionArg {
          * @public
          * @readonly
          */
-        readonly otherInfo: OPTIONAL<ManagementExtension[]>
+        readonly otherInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**

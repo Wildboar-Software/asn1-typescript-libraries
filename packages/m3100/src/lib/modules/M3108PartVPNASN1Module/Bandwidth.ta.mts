@@ -36,13 +36,13 @@ export class Bandwidth {
          * @public
          * @readonly
          */
-        readonly peakBandwidth: OPTIONAL<INTEGER>,
+        readonly peakBandwidth?: OPTIONAL<INTEGER>,
         /**
          * @summary `sustainableBandwidth`.
          * @public
          * @readonly
          */
-        readonly sustainableBandwidth: OPTIONAL<INTEGER>,
+        readonly sustainableBandwidth?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

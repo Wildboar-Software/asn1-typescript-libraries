@@ -53,7 +53,7 @@ export class RestrictionsOnSLC {
          * @public
          * @readonly
          */
-        readonly restrictionText: OPTIONAL<GraphicString>,
+        readonly restrictionText?: OPTIONAL<GraphicString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

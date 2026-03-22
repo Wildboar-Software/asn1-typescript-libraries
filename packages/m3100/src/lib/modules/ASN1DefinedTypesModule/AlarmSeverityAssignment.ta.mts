@@ -52,19 +52,19 @@ export class AlarmSeverityAssignment {
          * @public
          * @readonly
          */
-        readonly severityAssignedServiceAffecting: OPTIONAL<AlarmSeverityCode>,
+        readonly severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
         /**
          * @summary `severityAssignedNonServiceAffecting`.
          * @public
          * @readonly
          */
-        readonly severityAssignedNonServiceAffecting: OPTIONAL<AlarmSeverityCode>,
+        readonly severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
         /**
          * @summary `severityAssignedServiceIndependent`.
          * @public
          * @readonly
          */
-        readonly severityAssignedServiceIndependent: OPTIONAL<AlarmSeverityCode>
+        readonly severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>
     ) {}
 
     /**

@@ -67,25 +67,25 @@ export class ConnectInformation_Item {
          * @public
          * @readonly
          */
-        readonly administrativeState: OPTIONAL<AdministrativeState>,
+        readonly administrativeState?: OPTIONAL<AdministrativeState>,
         /**
          * @summary `namedCrossConnection`.
          * @public
          * @readonly
          */
-        readonly namedCrossConnection: OPTIONAL<NamedCrossConnection>,
+        readonly namedCrossConnection?: OPTIONAL<NamedCrossConnection>,
         /**
          * @summary `userLabel`.
          * @public
          * @readonly
          */
-        readonly userLabel: OPTIONAL<UserLabel>,
+        readonly userLabel?: OPTIONAL<UserLabel>,
         /**
          * @summary `redline`.
          * @public
          * @readonly
          */
-        readonly redline: OPTIONAL<Boolean>,
+        readonly redline?: OPTIONAL<Boolean>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -97,7 +97,7 @@ export class ConnectInformation_Item {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInformation>
+        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
     ) {}
 
     /**

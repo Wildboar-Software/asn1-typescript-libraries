@@ -52,19 +52,19 @@ export class GeneralError_Item {
          * @public
          * @readonly
          */
-        readonly details: OPTIONAL<GraphicString>,
+        readonly details?: OPTIONAL<GraphicString>,
         /**
          * @summary `relatedObjects`.
          * @public
          * @readonly
          */
-        readonly relatedObjects: OPTIONAL<ObjectInstance[]>,
+        readonly relatedObjects?: OPTIONAL<ObjectInstance[]>,
         /**
          * @summary `attributeList`.
          * @public
          * @readonly
          */
-        readonly attributeList: OPTIONAL<AttributeList>
+        readonly attributeList?: OPTIONAL<AttributeList>
     ) {}
 
     /**

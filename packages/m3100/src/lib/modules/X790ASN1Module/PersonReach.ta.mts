@@ -74,43 +74,43 @@ export class PersonReach {
          * @public
          * @readonly
          */
-        readonly number_: OPTIONAL<PersonNumber>,
+        readonly number_?: OPTIONAL<PersonNumber>,
         /**
          * @summary `name`.
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<PersonName>,
+        readonly name?: OPTIONAL<PersonName>,
         /**
          * @summary `phone`.
          * @public
          * @readonly
          */
-        readonly phone: OPTIONAL<PersonPhone>,
+        readonly phone?: OPTIONAL<PersonPhone>,
         /**
          * @summary `loc`.
          * @public
          * @readonly
          */
-        readonly loc: OPTIONAL<PersonLocation>,
+        readonly loc?: OPTIONAL<PersonLocation>,
         /**
          * @summary `email`.
          * @public
          * @readonly
          */
-        readonly email: OPTIONAL<PersonEmail>,
+        readonly email?: OPTIONAL<PersonEmail>,
         /**
          * @summary `fax`.
          * @public
          * @readonly
          */
-        readonly fax: OPTIONAL<PersonFax>,
+        readonly fax?: OPTIONAL<PersonFax>,
         /**
          * @summary `respon`.
          * @public
          * @readonly
          */
-        readonly respon: OPTIONAL<PersonRespon>,
+        readonly respon?: OPTIONAL<PersonRespon>,
         /**
          * @summary Extensions that are not recognized.
          * @public

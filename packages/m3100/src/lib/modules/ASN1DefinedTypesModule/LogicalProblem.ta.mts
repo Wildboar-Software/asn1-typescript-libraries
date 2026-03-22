@@ -49,7 +49,7 @@ export class LogicalProblem {
          * @public
          * @readonly
          */
-        readonly incorrectInstances: OPTIONAL<ObjectInstance[]>
+        readonly incorrectInstances?: OPTIONAL<ObjectInstance[]>
     ) {}
 
     /**

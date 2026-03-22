@@ -46,7 +46,7 @@ export class AddTpsToTpPoolInformation_Item {
          * @public
          * @readonly
          */
-        readonly toTpPool: OPTIONAL<ObjectInstance>
+        readonly toTpPool?: OPTIONAL<ObjectInstance>
     ) {}
 
     /**

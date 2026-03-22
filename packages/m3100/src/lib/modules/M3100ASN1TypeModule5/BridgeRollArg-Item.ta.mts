@@ -70,7 +70,7 @@ export class BridgeRollArg_Item {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<ManagementExtension[]>
+        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
     ) {}
 
     /**
