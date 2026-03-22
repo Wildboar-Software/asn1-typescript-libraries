@@ -50,7 +50,7 @@ export class DIRRecord {
          * @public
          * @readonly
          */
-        readonly ddo: OPTIONAL<DDO>
+        readonly ddo?: OPTIONAL<DDO>
     ) {}
 
     /**

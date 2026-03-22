@@ -39,7 +39,7 @@ export class ContentInfo {
          * @public
          * @readonly
          */
-        readonly pkcs7_content: OPTIONAL<_Element>
+        readonly pkcs7_content?: OPTIONAL<_Element>
     ) {}
 
     /**

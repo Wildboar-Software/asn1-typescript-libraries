@@ -27,7 +27,7 @@ export class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
          * @public
          * @readonly
          */
-        readonly supportedOperations: OPTIONAL<OperationsType>
+        readonly supportedOperations?: OPTIONAL<OperationsType>
     ) {}
 
     /**

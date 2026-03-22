@@ -50,31 +50,31 @@ export class CommonObjectAttributes {
          * @public
          * @readonly
          */
-        readonly label: OPTIONAL<Label>,
+        readonly label?: OPTIONAL<Label>,
         /**
          * @summary `flags`.
          * @public
          * @readonly
          */
-        readonly flags: OPTIONAL<CommonObjectFlags>,
+        readonly flags?: OPTIONAL<CommonObjectFlags>,
         /**
          * @summary `authId`.
          * @public
          * @readonly
          */
-        readonly authId: OPTIONAL<Identifier>,
+        readonly authId?: OPTIONAL<Identifier>,
         /**
          * @summary `userConsent`.
          * @public
          * @readonly
          */
-        readonly userConsent: OPTIONAL<INTEGER>,
+        readonly userConsent?: OPTIONAL<INTEGER>,
         /**
          * @summary `accessControlRules`.
          * @public
          * @readonly
          */
-        readonly accessControlRules: OPTIONAL<AccessControlRule[]>,
+        readonly accessControlRules?: OPTIONAL<AccessControlRule[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

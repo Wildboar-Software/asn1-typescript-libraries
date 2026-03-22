@@ -62,13 +62,13 @@ export class AlgorithmInfo {
          * @public
          * @readonly
          */
-        readonly algId: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly algId?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `algRef`.
          * @public
          * @readonly
          */
-        readonly algRef: OPTIONAL<Reference>
+        readonly algRef?: OPTIONAL<Reference>
     ) {}
 
     /**

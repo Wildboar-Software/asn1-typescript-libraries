@@ -68,19 +68,19 @@ export class BiometricAttributes {
          * @public
          * @readonly
          */
-        readonly bioReference: OPTIONAL<Reference>,
+        readonly bioReference?: OPTIONAL<Reference>,
         /**
          * @summary `lastChange`.
          * @public
          * @readonly
          */
-        readonly lastChange: OPTIONAL<GeneralizedTime>,
+        readonly lastChange?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `path`.
          * @public
          * @readonly
          */
-        readonly path: OPTIONAL<Path>,
+        readonly path?: OPTIONAL<Path>,
         /**
          * @summary Extensions that are not recognized.
          * @public

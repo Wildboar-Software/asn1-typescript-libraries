@@ -101,43 +101,43 @@ export class TokenInfo {
          * @public
          * @readonly
          */
-        readonly seInfo: OPTIONAL<SecurityEnvironmentInfo[]>,
+        readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
         /**
          * @summary `recordInfo`.
          * @public
          * @readonly
          */
-        readonly recordInfo: OPTIONAL<RecordInfo>,
+        readonly recordInfo?: OPTIONAL<RecordInfo>,
         /**
          * @summary `supportedAlgorithms`.
          * @public
          * @readonly
          */
-        readonly supportedAlgorithms: OPTIONAL<AlgorithmInfo[]>,
+        readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
         /**
          * @summary `issuerId`.
          * @public
          * @readonly
          */
-        readonly issuerId: OPTIONAL<Label>,
+        readonly issuerId?: OPTIONAL<Label>,
         /**
          * @summary `holderId`.
          * @public
          * @readonly
          */
-        readonly holderId: OPTIONAL<Label>,
+        readonly holderId?: OPTIONAL<Label>,
         /**
          * @summary `lastUpdate`.
          * @public
          * @readonly
          */
-        readonly lastUpdate: OPTIONAL<LastUpdate>,
+        readonly lastUpdate?: OPTIONAL<LastUpdate>,
         /**
          * @summary `preferredLanguage`.
          * @public
          * @readonly
          */
-        readonly preferredLanguage: OPTIONAL<PrintableString>,
+        readonly preferredLanguage?: OPTIONAL<PrintableString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

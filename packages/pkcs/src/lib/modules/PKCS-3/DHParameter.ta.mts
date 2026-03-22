@@ -43,7 +43,7 @@ export class DHParameter {
          * @public
          * @readonly
          */
-        readonly privateValueLength: OPTIONAL<INTEGER>
+        readonly privateValueLength?: OPTIONAL<INTEGER>
     ) {}
 
     /**

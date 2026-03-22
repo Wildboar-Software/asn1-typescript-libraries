@@ -94,7 +94,7 @@ export class SignerInfo {
          * @public
          * @readonly
          */
-        readonly unauthenticatedAttributes: OPTIONAL<Attributes>
+        readonly unauthenticatedAttributes?: OPTIONAL<Attributes>
     ) {}
 
     /**

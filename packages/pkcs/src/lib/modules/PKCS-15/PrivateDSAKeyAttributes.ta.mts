@@ -56,7 +56,7 @@ export class PrivateDSAKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<
+        readonly keyInfo?: OPTIONAL<
             KeyInfo<DomainParameters, PublicKeyOperations>
         >,
         /**

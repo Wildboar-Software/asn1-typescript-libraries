@@ -50,7 +50,7 @@ export class MacData {
          * @public
          * @readonly
          */
-        readonly iterations: OPTIONAL<INTEGER>
+        readonly iterations?: OPTIONAL<INTEGER>
     ) {}
 
     /**

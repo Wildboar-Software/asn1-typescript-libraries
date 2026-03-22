@@ -54,7 +54,7 @@ export class RC5_CBC_Parameters {
          * @public
          * @readonly
          */
-        readonly iv: OPTIONAL<OCTET_STRING>
+        readonly iv?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

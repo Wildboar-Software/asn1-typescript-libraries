@@ -39,7 +39,7 @@ export class EncapsulatedContentInfo {
          * @public
          * @readonly
          */
-        readonly eContent: OPTIONAL<OCTET_STRING>
+        readonly eContent?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

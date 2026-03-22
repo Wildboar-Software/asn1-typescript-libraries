@@ -67,31 +67,31 @@ export class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly native: OPTIONAL<BOOLEAN>,
+        readonly native?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accessFlags`.
          * @public
          * @readonly
          */
-        readonly accessFlags: OPTIONAL<KeyAccessFlags>,
+        readonly accessFlags?: OPTIONAL<KeyAccessFlags>,
         /**
          * @summary `keyReference`.
          * @public
          * @readonly
          */
-        readonly keyReference: OPTIONAL<Reference>,
+        readonly keyReference?: OPTIONAL<Reference>,
         /**
          * @summary `startDate`.
          * @public
          * @readonly
          */
-        readonly startDate: OPTIONAL<GeneralizedTime>,
+        readonly startDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endDate`.
          * @public
          * @readonly
          */
-        readonly endDate: OPTIONAL<GeneralizedTime>,
+        readonly endDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

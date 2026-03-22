@@ -30,13 +30,13 @@ export class CommonDataObjectAttributes {
          * @public
          * @readonly
          */
-        readonly applicationName: OPTIONAL<Label>,
+        readonly applicationName?: OPTIONAL<Label>,
         /**
          * @summary `applicationOID`.
          * @public
          * @readonly
          */
-        readonly applicationOID: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

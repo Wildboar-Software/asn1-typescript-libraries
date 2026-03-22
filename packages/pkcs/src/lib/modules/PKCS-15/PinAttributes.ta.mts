@@ -79,31 +79,31 @@ export class PinAttributes {
          * @public
          * @readonly
          */
-        readonly maxLength: OPTIONAL<INTEGER>,
+        readonly maxLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `pinReference`.
          * @public
          * @readonly
          */
-        readonly pinReference: OPTIONAL<Reference>,
+        readonly pinReference?: OPTIONAL<Reference>,
         /**
          * @summary `padChar`.
          * @public
          * @readonly
          */
-        readonly padChar: OPTIONAL<OCTET_STRING>,
+        readonly padChar?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `lastPinChange`.
          * @public
          * @readonly
          */
-        readonly lastPinChange: OPTIONAL<GeneralizedTime>,
+        readonly lastPinChange?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `path`.
          * @public
          * @readonly
          */
-        readonly path: OPTIONAL<Path>,
+        readonly path?: OPTIONAL<Path>,
         /**
          * @summary Extensions that are not recognized.
          * @public

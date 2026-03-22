@@ -53,7 +53,7 @@ export class EncryptedContentInfo {
          * @public
          * @readonly
          */
-        readonly encryptedContent: OPTIONAL<ENCRYPTED<_Element>>
+        readonly encryptedContent?: OPTIONAL<ENCRYPTED<_Element>>
     ) {}
 
     /**

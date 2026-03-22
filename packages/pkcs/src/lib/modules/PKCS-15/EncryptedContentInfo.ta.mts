@@ -50,7 +50,7 @@ export class EncryptedContentInfo<_Type> {
          * @public
          * @readonly
          */
-        readonly encryptedContent: OPTIONAL<OCTET_STRING>
+        readonly encryptedContent?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

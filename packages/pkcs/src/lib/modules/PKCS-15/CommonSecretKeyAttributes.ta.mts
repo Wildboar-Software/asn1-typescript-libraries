@@ -29,7 +29,7 @@ export class CommonSecretKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyLen: OPTIONAL<INTEGER>,
+        readonly keyLen?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

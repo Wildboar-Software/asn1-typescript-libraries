@@ -57,13 +57,13 @@ export class PBKDF2_params {
          * @public
          * @readonly
          */
-        readonly keyLength: OPTIONAL<INTEGER>,
+        readonly keyLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `prf`.
          * @public
          * @readonly
          */
-        readonly prf: OPTIONAL<AlgorithmIdentifier>
+        readonly prf?: OPTIONAL<AlgorithmIdentifier>
     ) {}
 
     /**

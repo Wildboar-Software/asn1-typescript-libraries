@@ -56,7 +56,7 @@ export class PFX {
          * @public
          * @readonly
          */
-        readonly macData: OPTIONAL<MacData>
+        readonly macData?: OPTIONAL<MacData>
     ) {}
 
     /**

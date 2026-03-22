@@ -75,7 +75,7 @@ export class EnvelopedData {
          * @public
          * @readonly
          */
-        readonly unprotectedAttributes: OPTIONAL<Attributes>
+        readonly unprotectedAttributes?: OPTIONAL<Attributes>
     ) {}
 
     /**

@@ -39,13 +39,13 @@ export class CommonPrivateKeyAttributes {
          * @public
          * @readonly
          */
-        readonly subjectName: OPTIONAL<Name>,
+        readonly subjectName?: OPTIONAL<Name>,
         /**
          * @summary `keyIdentifiers`.
          * @public
          * @readonly
          */
-        readonly keyIdentifiers: OPTIONAL<CredentialIdentifier[]>,
+        readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

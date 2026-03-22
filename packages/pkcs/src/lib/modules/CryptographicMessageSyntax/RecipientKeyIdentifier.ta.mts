@@ -45,13 +45,13 @@ export class RecipientKeyIdentifier {
          * @public
          * @readonly
          */
-        readonly date: OPTIONAL<GeneralizedTime>,
+        readonly date?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `other`.
          * @public
          * @readonly
          */
-        readonly other: OPTIONAL<OtherKeyAttribute>
+        readonly other?: OPTIONAL<OtherKeyAttribute>
     ) {}
 
     /**

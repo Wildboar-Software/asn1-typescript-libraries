@@ -34,43 +34,43 @@ export class RecordInfo {
          * @public
          * @readonly
          */
-        readonly oDFRecordLength: OPTIONAL<INTEGER>,
+        readonly oDFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `prKDFRecordLength`.
          * @public
          * @readonly
          */
-        readonly prKDFRecordLength: OPTIONAL<INTEGER>,
+        readonly prKDFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `puKDFRecordLength`.
          * @public
          * @readonly
          */
-        readonly puKDFRecordLength: OPTIONAL<INTEGER>,
+        readonly puKDFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `sKDFRecordLength`.
          * @public
          * @readonly
          */
-        readonly sKDFRecordLength: OPTIONAL<INTEGER>,
+        readonly sKDFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `cDFRecordLength`.
          * @public
          * @readonly
          */
-        readonly cDFRecordLength: OPTIONAL<INTEGER>,
+        readonly cDFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `dODFRecordLength`.
          * @public
          * @readonly
          */
-        readonly dODFRecordLength: OPTIONAL<INTEGER>,
+        readonly dODFRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `aODFRecordLength`.
          * @public
          * @readonly
          */
-        readonly aODFRecordLength: OPTIONAL<INTEGER>
+        readonly aODFRecordLength?: OPTIONAL<INTEGER>
     ) {}
 
     /**

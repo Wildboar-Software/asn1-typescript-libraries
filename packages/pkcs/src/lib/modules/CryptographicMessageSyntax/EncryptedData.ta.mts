@@ -55,7 +55,7 @@ export class EncryptedData {
          * @public
          * @readonly
          */
-        readonly unprotectedAttrs: OPTIONAL<UnprotectedAttributes>
+        readonly unprotectedAttrs?: OPTIONAL<UnprotectedAttributes>
     ) {}
 
     /**

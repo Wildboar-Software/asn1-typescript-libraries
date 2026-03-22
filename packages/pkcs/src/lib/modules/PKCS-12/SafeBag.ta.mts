@@ -46,7 +46,7 @@ export class SafeBag {
          * @public
          * @readonly
          */
-        readonly bagAttributes: OPTIONAL<PKCS12Attribute[]>
+        readonly bagAttributes?: OPTIONAL<PKCS12Attribute[]>
     ) {}
 
     /**

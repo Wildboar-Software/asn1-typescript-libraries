@@ -56,7 +56,7 @@ export class PrivateKEAKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<
+        readonly keyInfo?: OPTIONAL<
             KeyInfo<DomainParameters, PublicKeyOperations>
         >,
         /**

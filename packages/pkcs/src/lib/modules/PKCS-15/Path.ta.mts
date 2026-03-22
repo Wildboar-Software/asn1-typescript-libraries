@@ -37,13 +37,13 @@ export class Path {
          * @public
          * @readonly
          */
-        readonly index: OPTIONAL<INTEGER>,
+        readonly index?: OPTIONAL<INTEGER>,
         /**
          * @summary `length`.
          * @public
          * @readonly
          */
-        readonly length: OPTIONAL<INTEGER>
+        readonly length?: OPTIONAL<INTEGER>
     ) {}
 
     /**

@@ -36,49 +36,49 @@ export class RSAPrivateKeyObject {
          * @public
          * @readonly
          */
-        readonly modulus: OPTIONAL<INTEGER>,
+        readonly modulus?: OPTIONAL<INTEGER>,
         /**
          * @summary `publicExponent`.
          * @public
          * @readonly
          */
-        readonly publicExponent: OPTIONAL<INTEGER>,
+        readonly publicExponent?: OPTIONAL<INTEGER>,
         /**
          * @summary `privateExponent`.
          * @public
          * @readonly
          */
-        readonly privateExponent: OPTIONAL<INTEGER>,
+        readonly privateExponent?: OPTIONAL<INTEGER>,
         /**
          * @summary `prime1`.
          * @public
          * @readonly
          */
-        readonly prime1: OPTIONAL<INTEGER>,
+        readonly prime1?: OPTIONAL<INTEGER>,
         /**
          * @summary `prime2`.
          * @public
          * @readonly
          */
-        readonly prime2: OPTIONAL<INTEGER>,
+        readonly prime2?: OPTIONAL<INTEGER>,
         /**
          * @summary `exponent1`.
          * @public
          * @readonly
          */
-        readonly exponent1: OPTIONAL<INTEGER>,
+        readonly exponent1?: OPTIONAL<INTEGER>,
         /**
          * @summary `exponent2`.
          * @public
          * @readonly
          */
-        readonly exponent2: OPTIONAL<INTEGER>,
+        readonly exponent2?: OPTIONAL<INTEGER>,
         /**
          * @summary `coefficient`.
          * @public
          * @readonly
          */
-        readonly coefficient: OPTIONAL<INTEGER>
+        readonly coefficient?: OPTIONAL<INTEGER>
     ) {}
 
     /**

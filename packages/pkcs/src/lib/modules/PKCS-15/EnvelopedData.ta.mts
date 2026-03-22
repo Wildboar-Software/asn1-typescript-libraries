@@ -80,7 +80,7 @@ export class EnvelopedData<Type> {
          * @public
          * @readonly
          */
-        readonly unprotectedAttrs: OPTIONAL<Attribute[]>
+        readonly unprotectedAttrs?: OPTIONAL<Attribute[]>
     ) {}
 
     /**

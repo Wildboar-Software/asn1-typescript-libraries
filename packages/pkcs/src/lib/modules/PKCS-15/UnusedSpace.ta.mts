@@ -46,13 +46,13 @@ export class UnusedSpace {
          * @public
          * @readonly
          */
-        readonly authId: OPTIONAL<Identifier>,
+        readonly authId?: OPTIONAL<Identifier>,
         /**
          * @summary `accessControlRules`.
          * @public
          * @readonly
          */
-        readonly accessControlRules: OPTIONAL<AccessControlRule[]>,
+        readonly accessControlRules?: OPTIONAL<AccessControlRule[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -37,13 +37,13 @@ export class OriginatorInfo {
          * @public
          * @readonly
          */
-        readonly certificates: OPTIONAL<CertificateSet>,
+        readonly certificates?: OPTIONAL<CertificateSet>,
         /**
          * @summary `crls`.
          * @public
          * @readonly
          */
-        readonly crls: OPTIONAL<CertificateRevocationLists>
+        readonly crls?: OPTIONAL<CertificateRevocationLists>
     ) {}
 
     /**

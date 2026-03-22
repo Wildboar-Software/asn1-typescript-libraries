@@ -76,13 +76,13 @@ export class OneAsymmetricKey {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<Attributes>,
+        readonly attributes?: OPTIONAL<Attributes>,
         /**
          * @summary `publicKey`.
          * @public
          * @readonly
          */
-        readonly publicKey: OPTIONAL<PublicKey>,
+        readonly publicKey?: OPTIONAL<PublicKey>,
         /**
          * @summary Extensions that are not recognized.
          * @public

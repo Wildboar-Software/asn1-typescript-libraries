@@ -118,7 +118,7 @@ export class AuthenticatedData {
          * @public
          * @readonly
          */
-        readonly unauthenticatedAttributes: OPTIONAL<Attributes>
+        readonly unauthenticatedAttributes?: OPTIONAL<Attributes>
     ) {}
 
     /**

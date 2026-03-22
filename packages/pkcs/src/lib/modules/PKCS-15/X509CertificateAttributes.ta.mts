@@ -57,19 +57,19 @@ export class X509CertificateAttributes {
          * @public
          * @readonly
          */
-        readonly subject: OPTIONAL<Name>,
+        readonly subject?: OPTIONAL<Name>,
         /**
          * @summary `issuer`.
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<Name>,
+        readonly issuer?: OPTIONAL<Name>,
         /**
          * @summary `serialNumber`.
          * @public
          * @readonly
          */
-        readonly serialNumber: OPTIONAL<CertificateSerialNumber>,
+        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

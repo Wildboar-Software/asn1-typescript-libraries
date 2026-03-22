@@ -57,37 +57,37 @@ export class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly authority: OPTIONAL<BOOLEAN>,
+        readonly authority?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `identifier`.
          * @public
          * @readonly
          */
-        readonly identifier: OPTIONAL<CredentialIdentifier>,
+        readonly identifier?: OPTIONAL<CredentialIdentifier>,
         /**
          * @summary `certHash`.
          * @public
          * @readonly
          */
-        readonly certHash: OPTIONAL<OOBCertHash>,
+        readonly certHash?: OPTIONAL<OOBCertHash>,
         /**
          * @summary `trustedUsage`.
          * @public
          * @readonly
          */
-        readonly trustedUsage: OPTIONAL<Usage>,
+        readonly trustedUsage?: OPTIONAL<Usage>,
         /**
          * @summary `identifiers`.
          * @public
          * @readonly
          */
-        readonly identifiers: OPTIONAL<CredentialIdentifier[]>,
+        readonly identifiers?: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary `implicitTrust`.
          * @public
          * @readonly
          */
-        readonly implicitTrust: OPTIONAL<BOOLEAN>,
+        readonly implicitTrust?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

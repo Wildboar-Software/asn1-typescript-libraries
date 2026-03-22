@@ -100,7 +100,7 @@ export class RSAPrivateKey {
          * @public
          * @readonly
          */
-        readonly otherPrimeInfos: OPTIONAL<OtherPrimeInfos>
+        readonly otherPrimeInfos?: OPTIONAL<OtherPrimeInfos>
     ) {}
 
     /**

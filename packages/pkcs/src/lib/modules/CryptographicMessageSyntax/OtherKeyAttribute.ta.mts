@@ -36,7 +36,7 @@ export class OtherKeyAttribute {
          * @public
          * @readonly
          */
-        readonly keyAttribute: OPTIONAL<_Element>
+        readonly keyAttribute?: OPTIONAL<_Element>
     ) {}
 
     /**

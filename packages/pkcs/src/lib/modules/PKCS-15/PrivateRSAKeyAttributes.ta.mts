@@ -63,7 +63,7 @@ export class PrivateRSAKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
+        readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
         /**
          * @summary Extensions that are not recognized.
          * @public

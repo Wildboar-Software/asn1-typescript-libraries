@@ -38,19 +38,19 @@ export class DDO {
          * @public
          * @readonly
          */
-        readonly odfPath: OPTIONAL<Path>,
+        readonly odfPath?: OPTIONAL<Path>,
         /**
          * @summary `tokenInfoPath`.
          * @public
          * @readonly
          */
-        readonly tokenInfoPath: OPTIONAL<Path>,
+        readonly tokenInfoPath?: OPTIONAL<Path>,
         /**
          * @summary `unusedPath`.
          * @public
          * @readonly
          */
-        readonly unusedPath: OPTIONAL<Path>,
+        readonly unusedPath?: OPTIONAL<Path>,
         /**
          * @summary Extensions that are not recognized.
          * @public

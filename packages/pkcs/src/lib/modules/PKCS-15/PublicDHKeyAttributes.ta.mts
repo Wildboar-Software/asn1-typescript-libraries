@@ -56,7 +56,7 @@ export class PublicDHKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<
+        readonly keyInfo?: OPTIONAL<
             KeyInfo<DomainParameters, PublicKeyOperations>
         >,
         /**

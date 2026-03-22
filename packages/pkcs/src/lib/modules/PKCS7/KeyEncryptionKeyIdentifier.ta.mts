@@ -41,13 +41,13 @@ export class KeyEncryptionKeyIdentifier {
          * @public
          * @readonly
          */
-        readonly date: OPTIONAL<GeneralizedTime>,
+        readonly date?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `otherKeyAttribute`.
          * @public
          * @readonly
          */
-        readonly otherKeyAttribute: OPTIONAL<OtherKeyAttribute>
+        readonly otherKeyAttribute?: OPTIONAL<OtherKeyAttribute>
     ) {}
 
     /**

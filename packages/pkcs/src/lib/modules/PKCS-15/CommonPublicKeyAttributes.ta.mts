@@ -35,13 +35,13 @@ export class CommonPublicKeyAttributes {
          * @public
          * @readonly
          */
-        readonly subjectName: OPTIONAL<Name>,
+        readonly subjectName?: OPTIONAL<Name>,
         /**
          * @summary `trustedUsage`.
          * @public
          * @readonly
          */
-        readonly trustedUsage: OPTIONAL<Usage>,
+        readonly trustedUsage?: OPTIONAL<Usage>,
         /**
          * @summary Extensions that are not recognized.
          * @public

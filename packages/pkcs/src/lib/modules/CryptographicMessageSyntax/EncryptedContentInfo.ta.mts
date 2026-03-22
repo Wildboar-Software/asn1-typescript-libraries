@@ -55,7 +55,7 @@ export class EncryptedContentInfo {
          * @public
          * @readonly
          */
-        readonly encryptedContent: OPTIONAL<EncryptedContent>
+        readonly encryptedContent?: OPTIONAL<EncryptedContent>
     ) {}
 
     /**
