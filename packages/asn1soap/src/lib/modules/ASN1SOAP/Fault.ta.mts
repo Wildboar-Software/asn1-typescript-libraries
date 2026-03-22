@@ -56,19 +56,19 @@ export class Fault {
      * @public
      * @readonly
      */
-    readonly node: OPTIONAL<AnyURI>,
+    readonly node?: OPTIONAL<AnyURI>,
     /**
      * @summary `role`.
      * @public
      * @readonly
      */
-    readonly role: OPTIONAL<AnyURI>,
+    readonly role?: OPTIONAL<AnyURI>,
     /**
      * @summary `detail`.
      * @public
      * @readonly
      */
-    readonly detail: OPTIONAL<Content>
+    readonly detail?: OPTIONAL<Content>
   ) {}
 
   /**

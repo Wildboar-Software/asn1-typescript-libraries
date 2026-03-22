@@ -36,7 +36,7 @@ export class Body {
      * @public
      * @readonly
      */
-    readonly content: OPTIONAL<Content>
+    readonly content?: OPTIONAL<Content>
   ) {}
 
   /**

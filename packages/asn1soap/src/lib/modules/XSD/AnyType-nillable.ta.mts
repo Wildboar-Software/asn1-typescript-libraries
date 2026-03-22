@@ -61,7 +61,7 @@ export class AnyType_nillable {
      * @public
      * @readonly
      */
-    readonly content: OPTIONAL<AnyType_nillable_content>
+    readonly content?: OPTIONAL<AnyType_nillable_content>
   ) {}
 
   /**
