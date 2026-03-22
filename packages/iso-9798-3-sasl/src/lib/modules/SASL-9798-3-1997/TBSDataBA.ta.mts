@@ -62,7 +62,7 @@ class TBSDataBA {
          * @public
          * @readonly
          */
-        readonly entityA: OPTIONAL<GeneralNames>
+        readonly entityA?: OPTIONAL<GeneralNames>
     ) {}
 
     /**
@@ -158,7 +158,7 @@ function _decode_TBSDataBA (el: _Element): TBSDataBA {
         _root_component_type_list_2_spec_for_TBSDataBA,
         undefined,
     );
-    return new TBSDataBA( 
+    return new TBSDataBA(
         randomB,
         randomA,
         randomC,

@@ -49,13 +49,13 @@ class TokenBA1 {
          * @public
          * @readonly
          */
-        readonly entityB: OPTIONAL<GeneralNames>,
+        readonly entityB?: OPTIONAL<GeneralNames>,
         /**
          * @summary `certPref`.
          * @public
          * @readonly
          */
-        readonly certPref: OPTIONAL<TrustedAuth[]>
+        readonly certPref?: OPTIONAL<TrustedAuth[]>
     ) {}
 
     /**
@@ -148,7 +148,7 @@ function _decode_TokenBA1 (el: _Element): TokenBA1 {
         _root_component_type_list_2_spec_for_TokenBA1,
         undefined,
     );
-    return new TokenBA1( 
+    return new TokenBA1(
         randomB,
         entityB,
         certPref

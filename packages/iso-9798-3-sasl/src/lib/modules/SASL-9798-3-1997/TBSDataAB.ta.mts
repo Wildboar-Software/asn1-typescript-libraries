@@ -56,13 +56,13 @@ class TBSDataAB {
          * @public
          * @readonly
          */
-        readonly entityB: OPTIONAL<GeneralNames>,
+        readonly entityB?: OPTIONAL<GeneralNames>,
         /**
          * @summary `authID`.
          * @public
          * @readonly
          */
-        readonly authID: OPTIONAL<GeneralNames>
+        readonly authID?: OPTIONAL<GeneralNames>
     ) {}
 
     /**
@@ -158,7 +158,7 @@ function _decode_TBSDataAB (el: _Element): TBSDataAB {
         _root_component_type_list_2_spec_for_TBSDataAB,
         undefined,
     );
-    return new TBSDataAB( 
+    return new TBSDataAB(
         randomA,
         randomB,
         entityB,
