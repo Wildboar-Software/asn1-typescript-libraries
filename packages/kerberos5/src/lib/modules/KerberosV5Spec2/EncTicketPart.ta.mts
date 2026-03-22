@@ -132,19 +132,19 @@ export class EncTicketPart {
      * @public
      * @readonly
      */
-    readonly renew_till: OPTIONAL<KerberosTime>,
+    readonly renew_till?: OPTIONAL<KerberosTime>,
     /**
      * @summary `caddr`.
      * @public
      * @readonly
      */
-    readonly caddr: OPTIONAL<HostAddresses>,
+    readonly caddr?: OPTIONAL<HostAddresses>,
     /**
      * @summary `authorization_data`.
      * @public
      * @readonly
      */
-    readonly authorization_data: OPTIONAL<AuthorizationData>
+    readonly authorization_data?: OPTIONAL<AuthorizationData>
   ) {}
 
   /**

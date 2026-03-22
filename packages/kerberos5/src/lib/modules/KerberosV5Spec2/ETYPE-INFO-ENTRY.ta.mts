@@ -45,7 +45,7 @@ export class ETYPE_INFO_ENTRY {
      * @public
      * @readonly
      */
-    readonly salt: OPTIONAL<OCTET_STRING>
+    readonly salt?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

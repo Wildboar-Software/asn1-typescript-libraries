@@ -78,61 +78,61 @@ export class KrbCredInfo {
      * @public
      * @readonly
      */
-    readonly prealm: OPTIONAL<Realm>,
+    readonly prealm?: OPTIONAL<Realm>,
     /**
      * @summary `pname`.
      * @public
      * @readonly
      */
-    readonly pname: OPTIONAL<PrincipalName>,
+    readonly pname?: OPTIONAL<PrincipalName>,
     /**
      * @summary `flags`.
      * @public
      * @readonly
      */
-    readonly flags: OPTIONAL<TicketFlags>,
+    readonly flags?: OPTIONAL<TicketFlags>,
     /**
      * @summary `authtime`.
      * @public
      * @readonly
      */
-    readonly authtime: OPTIONAL<KerberosTime>,
+    readonly authtime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `starttime`.
      * @public
      * @readonly
      */
-    readonly starttime: OPTIONAL<KerberosTime>,
+    readonly starttime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `endtime`.
      * @public
      * @readonly
      */
-    readonly endtime: OPTIONAL<KerberosTime>,
+    readonly endtime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `renew_till`.
      * @public
      * @readonly
      */
-    readonly renew_till: OPTIONAL<KerberosTime>,
+    readonly renew_till?: OPTIONAL<KerberosTime>,
     /**
      * @summary `srealm`.
      * @public
      * @readonly
      */
-    readonly srealm: OPTIONAL<Realm>,
+    readonly srealm?: OPTIONAL<Realm>,
     /**
      * @summary `sname`.
      * @public
      * @readonly
      */
-    readonly sname: OPTIONAL<PrincipalName>,
+    readonly sname?: OPTIONAL<PrincipalName>,
     /**
      * @summary `caddr`.
      * @public
      * @readonly
      */
-    readonly caddr: OPTIONAL<HostAddresses>
+    readonly caddr?: OPTIONAL<HostAddresses>
   ) {}
 
   /**

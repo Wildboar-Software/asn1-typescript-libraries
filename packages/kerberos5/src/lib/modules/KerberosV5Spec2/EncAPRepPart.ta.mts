@@ -67,13 +67,13 @@ export class EncAPRepPart {
      * @public
      * @readonly
      */
-    readonly subkey: OPTIONAL<EncryptionKey>,
+    readonly subkey?: OPTIONAL<EncryptionKey>,
     /**
      * @summary `seq_number`.
      * @public
      * @readonly
      */
-    readonly seq_number: OPTIONAL<UInt32>
+    readonly seq_number?: OPTIONAL<UInt32>
   ) {}
 
   /**

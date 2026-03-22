@@ -88,7 +88,7 @@ export class KRB_SAFE_BODY {
      * @public
      * @readonly
      */
-    readonly r_address: OPTIONAL<HostAddress>
+    readonly r_address?: OPTIONAL<HostAddress>
   ) {}
 
   /**

@@ -49,7 +49,7 @@ export class PA_ENC_TS_ENC {
      * @public
      * @readonly
      */
-    readonly pausec: OPTIONAL<Microseconds>
+    readonly pausec?: OPTIONAL<Microseconds>
   ) {}
 
   /**

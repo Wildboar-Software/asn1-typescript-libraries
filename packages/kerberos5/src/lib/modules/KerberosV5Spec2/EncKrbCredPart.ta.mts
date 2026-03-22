@@ -68,31 +68,31 @@ export class EncKrbCredPart {
      * @public
      * @readonly
      */
-    readonly nonce: OPTIONAL<UInt32>,
+    readonly nonce?: OPTIONAL<UInt32>,
     /**
      * @summary `timestamp`.
      * @public
      * @readonly
      */
-    readonly timestamp: OPTIONAL<KerberosTime>,
+    readonly timestamp?: OPTIONAL<KerberosTime>,
     /**
      * @summary `usec`.
      * @public
      * @readonly
      */
-    readonly usec: OPTIONAL<Microseconds>,
+    readonly usec?: OPTIONAL<Microseconds>,
     /**
      * @summary `s_address`.
      * @public
      * @readonly
      */
-    readonly s_address: OPTIONAL<HostAddress>,
+    readonly s_address?: OPTIONAL<HostAddress>,
     /**
      * @summary `r_address`.
      * @public
      * @readonly
      */
-    readonly r_address: OPTIONAL<HostAddress>
+    readonly r_address?: OPTIONAL<HostAddress>
   ) {}
 
   /**

@@ -149,19 +149,19 @@ export class KDC_REQ_BODY {
      * @public
      * @readonly
      */
-    readonly addresses: OPTIONAL<HostAddresses>,
+    readonly addresses?: OPTIONAL<HostAddresses>,
     /**
      * @summary `enc_authorization_data`.
      * @public
      * @readonly
      */
-    readonly enc_authorization_data: OPTIONAL<EncryptedData>,
+    readonly enc_authorization_data?: OPTIONAL<EncryptedData>,
     /**
      * @summary `additional_tickets`.
      * @public
      * @readonly
      */
-    readonly additional_tickets: OPTIONAL<Ticket[]>
+    readonly additional_tickets?: OPTIONAL<Ticket[]>
   ) {}
 
   /**

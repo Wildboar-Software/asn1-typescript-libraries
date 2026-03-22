@@ -149,7 +149,7 @@ export class EncKDCRepPart {
      * @public
      * @readonly
      */
-    readonly caddr: OPTIONAL<HostAddresses>
+    readonly caddr?: OPTIONAL<HostAddresses>
   ) {}
 
   /**

@@ -88,7 +88,7 @@ export class EncKrbPrivPart {
      * @public
      * @readonly
      */
-    readonly r_address: OPTIONAL<HostAddress>
+    readonly r_address?: OPTIONAL<HostAddress>
   ) {}
 
   /**

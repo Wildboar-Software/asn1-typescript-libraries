@@ -117,19 +117,19 @@ export class Authenticator {
      * @public
      * @readonly
      */
-    readonly subkey: OPTIONAL<EncryptionKey>,
+    readonly subkey?: OPTIONAL<EncryptionKey>,
     /**
      * @summary `seq_number`.
      * @public
      * @readonly
      */
-    readonly seq_number: OPTIONAL<UInt32>,
+    readonly seq_number?: OPTIONAL<UInt32>,
     /**
      * @summary `authorization_data`.
      * @public
      * @readonly
      */
-    readonly authorization_data: OPTIONAL<AuthorizationData>
+    readonly authorization_data?: OPTIONAL<AuthorizationData>
   ) {}
 
   /**

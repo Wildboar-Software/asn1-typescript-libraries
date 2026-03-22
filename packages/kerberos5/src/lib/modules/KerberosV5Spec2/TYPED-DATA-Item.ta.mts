@@ -42,7 +42,7 @@ export class TYPED_DATA_Item {
      * @public
      * @readonly
      */
-    readonly data_value: OPTIONAL<OCTET_STRING>
+    readonly data_value?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

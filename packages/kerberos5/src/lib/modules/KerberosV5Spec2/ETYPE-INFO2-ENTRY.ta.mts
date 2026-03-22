@@ -51,13 +51,13 @@ export class ETYPE_INFO2_ENTRY {
      * @public
      * @readonly
      */
-    readonly salt: OPTIONAL<KerberosString>,
+    readonly salt?: OPTIONAL<KerberosString>,
     /**
      * @summary `s2kparams`.
      * @public
      * @readonly
      */
-    readonly s2kparams: OPTIONAL<OCTET_STRING>
+    readonly s2kparams?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**

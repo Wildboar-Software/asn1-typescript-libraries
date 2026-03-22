@@ -142,13 +142,13 @@ export class KRB_ERROR {
      * @public
      * @readonly
      */
-    readonly e_text: OPTIONAL<KerberosString>,
+    readonly e_text?: OPTIONAL<KerberosString>,
     /**
      * @summary `e_data`.
      * @public
      * @readonly
      */
-    readonly e_data: OPTIONAL<OCTET_STRING>
+    readonly e_data?: OPTIONAL<OCTET_STRING>
   ) {}
 
   /**
