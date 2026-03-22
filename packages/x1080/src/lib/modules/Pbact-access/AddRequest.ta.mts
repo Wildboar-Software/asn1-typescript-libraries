@@ -85,7 +85,7 @@ export class AddRequest implements CommonReqComp {
          * @public
          * @readonly
          */
-        readonly attr: OPTIONAL<Attribute[]>,
+        readonly attr?: OPTIONAL<Attribute[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

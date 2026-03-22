@@ -59,7 +59,7 @@ export class PharmaceuticalStaffIdentification {
          * @public
          * @readonly
          */
-        readonly qualifications: OPTIONAL<_Element>
+        readonly qualifications?: OPTIONAL<_Element>
     ) {}
 
     /**

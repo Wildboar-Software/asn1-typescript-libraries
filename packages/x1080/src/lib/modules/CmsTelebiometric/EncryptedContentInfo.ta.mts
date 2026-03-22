@@ -54,13 +54,13 @@ export class EncryptedContentInfo {
          * @public
          * @readonly
          */
-        readonly contentEncryptionAlgorithm: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>,
+        readonly contentEncryptionAlgorithm?: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>,
         /**
          * @summary `encryptedContent`.
          * @public
          * @readonly
          */
-        readonly encryptedContent: OPTIONAL<EncryptedContent>,
+        readonly encryptedContent?: OPTIONAL<EncryptedContent>,
         /**
          * @summary Extensions that are not recognized.
          * @public

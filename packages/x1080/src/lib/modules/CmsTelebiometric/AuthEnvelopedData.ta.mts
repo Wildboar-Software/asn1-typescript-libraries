@@ -92,7 +92,7 @@ export class AuthEnvelopedData {
          * @public
          * @readonly
          */
-        readonly unauthAttrs: OPTIONAL<Attributes>
+        readonly unauthAttrs?: OPTIONAL<Attributes>
     ) {}
 
     /**

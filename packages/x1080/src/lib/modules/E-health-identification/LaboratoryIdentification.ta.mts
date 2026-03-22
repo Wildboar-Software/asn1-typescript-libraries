@@ -48,13 +48,13 @@ export class LaboratoryIdentification {
          * @public
          * @readonly
          */
-        readonly schemeName: OPTIONAL<SchemeName>,
+        readonly schemeName?: OPTIONAL<SchemeName>,
         /**
          * @summary `qualifications`.
          * @public
          * @readonly
          */
-        readonly qualifications: OPTIONAL<_Element>
+        readonly qualifications?: OPTIONAL<_Element>
     ) {}
 
     /**

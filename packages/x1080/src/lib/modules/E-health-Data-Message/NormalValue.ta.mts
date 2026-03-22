@@ -53,7 +53,7 @@ export class NormalValue {
          * @public
          * @readonly
          */
-        readonly conditions: OPTIONAL<Condition[]>
+        readonly conditions?: OPTIONAL<Condition[]>
     ) {}
 
     /**

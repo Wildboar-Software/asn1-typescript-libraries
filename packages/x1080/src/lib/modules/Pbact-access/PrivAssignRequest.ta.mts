@@ -37,7 +37,7 @@ export class PrivAssignRequest {
          * @public
          * @readonly
          */
-        readonly attrCerts: OPTIONAL<AttributeCertificates>,
+        readonly attrCerts?: OPTIONAL<AttributeCertificates>,
         /**
          * @summary Extensions that are not recognized.
          * @public

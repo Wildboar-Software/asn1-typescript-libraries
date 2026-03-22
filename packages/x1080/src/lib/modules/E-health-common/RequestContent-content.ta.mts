@@ -92,7 +92,7 @@ export class RequestContent_content {
          * @public
          * @readonly
          */
-        readonly exchangeMode: OPTIONAL<ExchangeMode>,
+        readonly exchangeMode?: OPTIONAL<ExchangeMode>,
         /**
          * @summary Extensions that are not recognized.
          * @public

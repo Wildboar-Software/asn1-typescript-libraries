@@ -75,7 +75,7 @@ export class DataMessage {
          * @public
          * @readonly
          */
-        readonly normalValues: OPTIONAL<NormalValues>,
+        readonly normalValues?: OPTIONAL<NormalValues>,
         /**
          * @summary Extensions that are not recognized.
          * @public

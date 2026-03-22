@@ -35,7 +35,7 @@ export class AttributeSel_attSelect_allAttr {
          * @public
          * @readonly
          */
-        readonly attrOper1: OPTIONAL<AttributeOperations>,
+        readonly attrOper1?: OPTIONAL<AttributeOperations>,
         /**
          * @summary Extensions that are not recognized.
          * @public

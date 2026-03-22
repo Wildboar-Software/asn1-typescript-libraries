@@ -42,7 +42,7 @@ export class AttributeSel_attSelect_attributes_Item {
          * @public
          * @readonly
          */
-        readonly attrOper2: OPTIONAL<AttributeOperations>,
+        readonly attrOper2?: OPTIONAL<AttributeOperations>,
         /**
          * @summary Extensions that are not recognized.
          * @public

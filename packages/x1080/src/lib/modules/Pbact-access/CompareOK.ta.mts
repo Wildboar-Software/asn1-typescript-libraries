@@ -41,7 +41,7 @@ export class CompareOK {
          * @public
          * @readonly
          */
-        readonly matchedSubtype: OPTIONAL<BOOLEAN>,
+        readonly matchedSubtype?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

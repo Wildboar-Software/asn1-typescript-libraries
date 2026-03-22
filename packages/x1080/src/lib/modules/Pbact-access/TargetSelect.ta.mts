@@ -45,13 +45,13 @@ export class TargetSelect {
          * @public
          * @readonly
          */
-        readonly objOper: OPTIONAL<ObjectOperations>,
+        readonly objOper?: OPTIONAL<ObjectOperations>,
         /**
          * @summary `attrSel`.
          * @public
          * @readonly
          */
-        readonly attrSel: OPTIONAL<AttributeSel>,
+        readonly attrSel?: OPTIONAL<AttributeSel>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -41,7 +41,7 @@ export class ContentInfo {
          * @public
          * @readonly
          */
-        readonly content: OPTIONAL<_Element>,
+        readonly content?: OPTIONAL<_Element>,
         /**
          * @summary Extensions that are not recognized.
          * @public

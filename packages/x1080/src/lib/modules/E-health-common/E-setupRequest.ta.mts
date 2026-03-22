@@ -125,7 +125,7 @@ export class E_setupRequest {
          * @public
          * @readonly
          */
-        readonly first: OPTIONAL<INTEGER>,
+        readonly first?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public
