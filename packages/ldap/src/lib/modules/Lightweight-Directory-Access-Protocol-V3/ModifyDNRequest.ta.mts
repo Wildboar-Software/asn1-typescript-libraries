@@ -64,7 +64,7 @@ export class ModifyDNRequest {
      * @public
      * @readonly
      */
-    readonly newSuperior: OPTIONAL<LDAPDN>,
+    readonly newSuperior?: OPTIONAL<LDAPDN>,
     /**
      * @summary Extensions that are not recognized.
      * @public

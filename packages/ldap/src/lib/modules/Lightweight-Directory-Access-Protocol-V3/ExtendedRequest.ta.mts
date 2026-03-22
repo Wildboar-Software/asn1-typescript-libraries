@@ -45,7 +45,7 @@ export class ExtendedRequest {
      * @public
      * @readonly
      */
-    readonly requestValue: OPTIONAL<OCTET_STRING>,
+    readonly requestValue?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary Extensions that are not recognized.
      * @public

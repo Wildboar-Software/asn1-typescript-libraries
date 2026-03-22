@@ -83,7 +83,7 @@ export class LDAPMessage {
      * @public
      * @readonly
      */
-    readonly controls: OPTIONAL<Controls>,
+    readonly controls?: OPTIONAL<Controls>,
     /**
      * @summary Extensions that are not recognized.
      * @public

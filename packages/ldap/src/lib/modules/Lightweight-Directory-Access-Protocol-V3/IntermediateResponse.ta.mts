@@ -39,13 +39,13 @@ export class IntermediateResponse {
      * @public
      * @readonly
      */
-    readonly responseName: OPTIONAL<LDAPOID>,
+    readonly responseName?: OPTIONAL<LDAPOID>,
     /**
      * @summary `responseValue`.
      * @public
      * @readonly
      */
-    readonly responseValue: OPTIONAL<OCTET_STRING>,
+    readonly responseValue?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary Extensions that are not recognized.
      * @public

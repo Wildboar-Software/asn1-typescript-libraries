@@ -69,7 +69,7 @@ export class MatchingRuleAssertion {
      * @public
      * @readonly
      */
-    readonly dnAttributes: OPTIONAL<BOOLEAN>,
+    readonly dnAttributes?: OPTIONAL<BOOLEAN>,
     /**
      * @summary Extensions that are not recognized.
      * @public

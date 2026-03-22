@@ -81,13 +81,13 @@ export class BindResponse {
      * @public
      * @readonly
      */
-    readonly referral: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
+    readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
     /**
      * @summary `serverSaslCreds`.
      * @public
      * @readonly
      */
-    readonly serverSaslCreds: OPTIONAL<OCTET_STRING>,
+    readonly serverSaslCreds?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary Extensions that are not recognized.
      * @public

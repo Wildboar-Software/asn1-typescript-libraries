@@ -88,19 +88,19 @@ export class ExtendedResponse implements LDAPResult {
      * @public
      * @readonly
      */
-    readonly referral: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
+    readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
     /**
      * @summary `responseName`.
      * @public
      * @readonly
      */
-    readonly responseName: OPTIONAL<LDAPOID>,
+    readonly responseName?: OPTIONAL<LDAPOID>,
     /**
      * @summary `responseValue`.
      * @public
      * @readonly
      */
-    readonly responseValue: OPTIONAL<OCTET_STRING>,
+    readonly responseValue?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary Extensions that are not recognized.
      * @public

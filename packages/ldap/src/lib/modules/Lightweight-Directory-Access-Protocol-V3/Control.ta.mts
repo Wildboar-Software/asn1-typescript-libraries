@@ -47,13 +47,13 @@ export class Control {
      * @public
      * @readonly
      */
-    readonly criticality: OPTIONAL<BOOLEAN>,
+    readonly criticality?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `controlValue`.
      * @public
      * @readonly
      */
-    readonly controlValue: OPTIONAL<OCTET_STRING>,
+    readonly controlValue?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary Extensions that are not recognized.
      * @public

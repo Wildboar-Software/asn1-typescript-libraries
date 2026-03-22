@@ -106,7 +106,7 @@ export class LDAPResult {
      * @public
      * @readonly
      */
-    readonly referral: OPTIONAL<Referral>,
+    readonly referral?: OPTIONAL<Referral>,
     /**
      * @summary Extensions that are not recognized.
      * @public
