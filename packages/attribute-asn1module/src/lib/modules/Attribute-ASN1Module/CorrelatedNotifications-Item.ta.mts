@@ -38,7 +38,7 @@ class CorrelatedNotifications_Item {
          * @public
          * @readonly
          */
-        readonly sourceObjectInst: OPTIONAL<ObjectInstance>
+        readonly sourceObjectInst?: OPTIONAL<ObjectInstance>
     ) {}
 
     /**
@@ -123,7 +123,7 @@ function _decode_CorrelatedNotifications_Item (el: _Element): CorrelatedNotifica
         _root_component_type_list_2_spec_for_CorrelatedNotifications_Item,
         undefined,
     );
-    return new CorrelatedNotifications_Item( 
+    return new CorrelatedNotifications_Item(
         correlatedNotifications,
         sourceObjectInst
     );

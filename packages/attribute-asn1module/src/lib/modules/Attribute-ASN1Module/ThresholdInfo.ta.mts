@@ -52,13 +52,13 @@ class ThresholdInfo {
          * @public
          * @readonly
          */
-        readonly thresholdLevel: OPTIONAL<ThresholdLevelInd>,
+        readonly thresholdLevel?: OPTIONAL<ThresholdLevelInd>,
         /**
          * @summary `armTime`.
          * @public
          * @readonly
          */
-        readonly armTime: OPTIONAL<GeneralizedTime>
+        readonly armTime?: OPTIONAL<GeneralizedTime>
     ) {}
 
     /**
@@ -149,7 +149,7 @@ function _decode_ThresholdInfo (el: _Element): ThresholdInfo {
         _root_component_type_list_2_spec_for_ThresholdInfo,
         undefined,
     );
-    return new ThresholdInfo( 
+    return new ThresholdInfo(
         triggeredThreshold,
         observedValue,
         thresholdLevel,

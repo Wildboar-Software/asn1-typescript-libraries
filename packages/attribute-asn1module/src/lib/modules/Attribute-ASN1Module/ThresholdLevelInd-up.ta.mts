@@ -15,13 +15,13 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
 /**
  * @summary ThresholdLevelInd_up
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ThresholdLevelInd-up ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  */
 export
 class ThresholdLevelInd_up {
@@ -37,15 +37,15 @@ class ThresholdLevelInd_up {
          * @public
          * @readonly
          */
-        readonly low: OPTIONAL<ObservedValue>
+        readonly low?: OPTIONAL<ObservedValue>
     ) {}
 
     /**
      * @summary Restructures an object into a ThresholdLevelInd_up
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ThresholdLevelInd_up`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -62,9 +62,9 @@ class ThresholdLevelInd_up {
 /**
  * @summary The Leading Root Component Types of ThresholdLevelInd_up
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -76,27 +76,27 @@ const _root_component_type_list_1_spec_for_ThresholdLevelInd_up: $.ComponentSpec
 /**
  * @summary The Trailing Root Component Types of ThresholdLevelInd_up
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ThresholdLevelInd_up: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of ThresholdLevelInd_up
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ThresholdLevelInd_up: $.ComponentSpec[] = [
-    
+
 ];
 
 let _cached_decoder_for_ThresholdLevelInd_up: $.ASN1Decoder<ThresholdLevelInd_up> | null = null;
@@ -122,7 +122,7 @@ function _decode_ThresholdLevelInd_up (el: _Element): ThresholdLevelInd_up {
         _root_component_type_list_2_spec_for_ThresholdLevelInd_up,
         undefined,
     );
-    return new ThresholdLevelInd_up( 
+    return new ThresholdLevelInd_up(
         high,
         low
     );
