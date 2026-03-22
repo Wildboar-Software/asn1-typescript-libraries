@@ -19,16 +19,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LogRcAMessageContent
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LogRcAMessageContent ::= SEQUENCE {
  *   sessionID        OCTET STRING(SIZE (10)),
  *   logResponseInfo  OCTET STRING OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class LogRcAMessageContent {
@@ -44,15 +44,15 @@ class LogRcAMessageContent {
          * @public
          * @readonly
          */
-        readonly logResponseInfo: OPTIONAL<OCTET_STRING>
+        readonly logResponseInfo?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**
      * @summary Restructures an object into a LogRcAMessageContent
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `LogRcAMessageContent`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -70,9 +70,9 @@ class LogRcAMessageContent {
 /**
  * @summary The Leading Root Component Types of LogRcAMessageContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -85,28 +85,28 @@ const _root_component_type_list_1_spec_for_LogRcAMessageContent: $.ComponentSpec
 /**
  * @summary The Trailing Root Component Types of LogRcAMessageContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_LogRcAMessageContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of LogRcAMessageContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_LogRcAMessageContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -134,7 +134,7 @@ function _decode_LogRcAMessageContent (el: _Element): LogRcAMessageContent {
         _root_component_type_list_2_spec_for_LogRcAMessageContent,
         undefined,
     );
-    return new LogRcAMessageContent( 
+    return new LogRcAMessageContent(
         sessionID,
         logResponseInfo
     );

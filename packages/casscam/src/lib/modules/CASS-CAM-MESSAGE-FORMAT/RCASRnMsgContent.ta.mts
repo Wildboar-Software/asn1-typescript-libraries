@@ -20,9 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RCASRnMsgContent
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * RCASRnMsgContent ::= SEQUENCE {
  *   -- "YYMMDDhhmmss" - e.g., 2013-May-13, PM 5h50m30s => "130513175030"
@@ -32,7 +32,7 @@ import * as $ from "@wildboar/asn1/functional";
  *   purchaseReport-Req  BOOLEAN(TRUE) OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class RCASRnMsgContent {
@@ -48,21 +48,21 @@ class RCASRnMsgContent {
          * @public
          * @readonly
          */
-        readonly keyRequest_Req: OPTIONAL<BOOLEAN>,
+        readonly keyRequest_Req?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `purchaseReport_Req`.
          * @public
          * @readonly
          */
-        readonly purchaseReport_Req: OPTIONAL<BOOLEAN>
+        readonly purchaseReport_Req?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**
      * @summary Restructures an object into a RCASRnMsgContent
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `RCASRnMsgContent`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -80,9 +80,9 @@ class RCASRnMsgContent {
 /**
  * @summary The Leading Root Component Types of RCASRnMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -96,28 +96,28 @@ const _root_component_type_list_1_spec_for_RCASRnMsgContent: $.ComponentSpec[] =
 /**
  * @summary The Trailing Root Component Types of RCASRnMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_RCASRnMsgContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of RCASRnMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_RCASRnMsgContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -147,7 +147,7 @@ function _decode_RCASRnMsgContent (el: _Element): RCASRnMsgContent {
         _root_component_type_list_2_spec_for_RCASRnMsgContent,
         undefined,
     );
-    return new RCASRnMsgContent( 
+    return new RCASRnMsgContent(
         downloadSchedule,
         keyRequest_Req,
         purchaseReport_Req

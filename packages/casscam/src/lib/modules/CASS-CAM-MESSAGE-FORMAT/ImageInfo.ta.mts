@@ -20,9 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ImageInfo
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ImageInfo ::= SEQUENCE {
  *   -- Download Server IP address
@@ -39,7 +39,7 @@ import * as $ from "@wildboar/asn1/functional";
  *   fn    PrintableString OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class ImageInfo {
@@ -61,15 +61,15 @@ class ImageInfo {
          * @public
          * @readonly
          */
-        readonly fn: OPTIONAL<PrintableString>
+        readonly fn?: OPTIONAL<PrintableString>
     ) {}
 
     /**
      * @summary Restructures an object into a ImageInfo
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ImageInfo`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -87,9 +87,9 @@ class ImageInfo {
 /**
  * @summary The Leading Root Component Types of ImageInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -103,28 +103,28 @@ const _root_component_type_list_1_spec_for_ImageInfo: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of ImageInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_ImageInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of ImageInfo
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_ImageInfo: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -154,7 +154,7 @@ function _decode_ImageInfo (el: _Element): ImageInfo {
         _root_component_type_list_2_spec_for_ImageInfo,
         undefined,
     );
-    return new ImageInfo( 
+    return new ImageInfo(
         dSIP,
         tm,
         fn

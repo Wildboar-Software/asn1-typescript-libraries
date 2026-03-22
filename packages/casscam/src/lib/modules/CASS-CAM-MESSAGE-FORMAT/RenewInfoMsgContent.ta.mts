@@ -18,9 +18,9 @@ import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MES
 /**
  * @summary RenewInfoMsgContent
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * RenewInfoMsgContent ::= SEQUENCE {
  *   sessionID           OCTET STRING(SIZE (10)),
@@ -45,7 +45,7 @@ import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MES
  *   directives          OCTET STRING OPTIONAL
  * }
  * ```
- * 
+ *
  */
 export
 class RenewInfoMsgContent {
@@ -97,15 +97,15 @@ class RenewInfoMsgContent {
          * @public
          * @readonly
          */
-        readonly directives: OPTIONAL<OCTET_STRING>
+        readonly directives?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**
      * @summary Restructures an object into a RenewInfoMsgContent
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `RenewInfoMsgContent`.
-     * 
+     *
      * @public
      * @static
      * @method
@@ -123,9 +123,9 @@ class RenewInfoMsgContent {
 /**
  * @summary The Leading Root Component Types of RenewInfoMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -144,28 +144,28 @@ const _root_component_type_list_1_spec_for_RenewInfoMsgContent: $.ComponentSpec[
 /**
  * @summary The Trailing Root Component Types of RenewInfoMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_RenewInfoMsgContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
 /**
  * @summary The Extension Addition Component Types of RenewInfoMsgContent
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_RenewInfoMsgContent: $.ComponentSpec[] = [
-    
+
 ];
 
 
@@ -205,7 +205,7 @@ function _decode_RenewInfoMsgContent (el: _Element): RenewInfoMsgContent {
         _root_component_type_list_2_spec_for_RenewInfoMsgContent,
         undefined,
     );
-    return new RenewInfoMsgContent( 
+    return new RenewInfoMsgContent(
         sessionID,
         clientType,
         imageFlag,
