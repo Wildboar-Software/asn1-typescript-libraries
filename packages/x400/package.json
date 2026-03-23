@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/x400",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "description": "X.400 message handling system ASN.1 data structures and business logic in TypeScript",
     "keywords": [
         "x400",

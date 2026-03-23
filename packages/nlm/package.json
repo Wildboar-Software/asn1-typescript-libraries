@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/nlm",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "ITU X.283 Network Layer Management ASN.1 data structures in TypeScript",
     "keywords": [
         "x283",

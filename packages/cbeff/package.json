@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/cbeff",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Common Biometric Exchange Formats Framework in TypeScript",
     "keywords": [
         "common",

@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/ess",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Enhanced Security Services in TypeScript",
     "keywords": [
         "enhanced",

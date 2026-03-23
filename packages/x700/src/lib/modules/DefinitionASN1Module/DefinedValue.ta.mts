@@ -37,7 +37,7 @@ export class DefinedValue {
          * @public
          * @readonly
          */
-        readonly module_?: OPTIONAL<Identifier>,
+        readonly module_: OPTIONAL<Identifier>,
         /**
          * @summary `reference`.
          * @public

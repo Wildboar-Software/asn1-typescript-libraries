@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/m3100",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "M.3100 network data structures and business logic in TypeScript",
     "keywords": [
         "m3100",

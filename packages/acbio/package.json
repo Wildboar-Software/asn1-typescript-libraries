@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/acbio",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Authenticated Contexts for Biometrics PDUs defined in TypeScript",
     "keywords": [
         "acbio",

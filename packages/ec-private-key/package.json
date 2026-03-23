@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/ec-private-key",
     "type": "module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "IETF RFC 5915 Elliptic Curve Private Key ASN.1 data structures in TypeScript",
     "keywords": [
         "rfc5915",
