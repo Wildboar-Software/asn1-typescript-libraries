@@ -34,6 +34,16 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
+
+/**
+ * This is the `Buffer` equivalent of {@link SingleThreadUint8Array}. See it's
+ * documentation for more details.
+ *
+ * Equivalent to `Buffer` before TypeScript 5.7, and `Buffer<ArrayBuffer>` in
+ * TypeScript 5.7 and beyond.
+ */
+export type SingleThreadBuffer = ReturnType<Buffer["filter"]>;
+
 /**
  * @summary Req_contents
  * @description
@@ -73,7 +83,7 @@ export class Req_contents {
     /**
      * The original DER encoding
      */
-    public originalDER: Buffer | null = null;
+    public originalDER: SingleThreadBuffer | null = null;
 
     constructor(
         /**
