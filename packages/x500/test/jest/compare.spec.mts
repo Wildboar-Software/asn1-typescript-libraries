@@ -1,17 +1,17 @@
 import * as asn1 from "@wildboar/asn1";
 import {
     AttributeTypeAndValue,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
     id_at_givenName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-givenName.va.mjs";
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-givenName.va.mjs";
 import {
     id_at_surname,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-surname.va.mjs";
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-surname.va.mjs";
 import {
     id_at_organizationName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.mjs";
-import compareRDNSequence from "@wildboar/x500/src/lib/comparators/compareRDNSequence";
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.mjs";
+import compareRDNSequence from "../../src/lib/comparators/compareRDNSequence.mjs";
 
 describe("Comparators", () => {
     const issuerCN = "Bigboi";

@@ -1,23 +1,23 @@
 import * as asn1 from "@wildboar/asn1";
 import {
     AttributeTypeAndValue,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
     id_at_givenName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-givenName.va.mjs";
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-givenName.va.mjs";
 import {
     id_at_surname,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-surname.va.mjs";
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-surname.va.mjs";
 import {
     id_at_organizationName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.mjs";
-import rdnSequenceToString from "@wildboar/x500/src/lib/stringifiers/rdnSequenceToString";
-import generalNameToString from "@wildboar/x500/src/lib/stringifiers/generalNameToString";
-import rdnSequenceFromString from "@wildboar/x500/src/lib/stringifiers/rdnSequenceFromString";
-import directoryStringToString from "@wildboar/x500/src/lib/stringifiers/directoryStringToString.mjs";;
+} from "../../src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.mjs";
+import rdnSequenceToString from "../../src/lib/stringifiers/rdnSequenceToString.mjs";
+import generalNameToString from "../../src/lib/stringifiers/generalNameToString.mjs";
+import rdnSequenceFromString from "../../src/lib/stringifiers/rdnSequenceFromString.mjs";
+import directoryStringToString from "../../src/lib/stringifiers/directoryStringToString.mjs";;
 import {
     _decode_UnboundedDirectoryString as decodeUBS,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+} from "../../src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 
 describe("Stringifiers", () => {
     const issuerCN = "Mr. Is/uer, Jr.";

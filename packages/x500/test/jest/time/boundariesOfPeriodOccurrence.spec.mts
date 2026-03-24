@@ -1,14 +1,14 @@
-import boundariesOfPeriodOccurrence from "@wildboar/x500/src/lib/utils/boundariesOfPeriodOccurrence";
+import boundariesOfPeriodOccurrence from "../../../src/lib/utils/boundariesOfPeriodOccurrence.mjs";
 import {
     Period,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/Period.ta.mjs";
+} from "../../../src/lib/modules/SelectedAttributeTypes/Period.ta.mjs";
 import {
     DayTimeBand,
     _encode_Period_months,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/index.mjs";
-import { DayTime } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DayTime.ta.mjs";
+} from "../../../src/lib/modules/SelectedAttributeTypes/index.mjs";
+import { DayTime } from "../../../src/lib/modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { DERElement, FALSE_BIT, TRUE_BIT } from "@wildboar/asn1";
-import { NamedDay_intNamedDays_friday } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
+import { NamedDay_intNamedDays_friday } from "../../../src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
 import { addDays } from "date-fns";
 
 const GENERIC_DAY_TIME_BAND = new DayTimeBand(
@@ -38,7 +38,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 6, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -69,7 +69,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 6, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2015);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -98,7 +98,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 6, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(2);
         expect(s.getDate()).toBe(1);
@@ -127,7 +127,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -158,7 +158,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 3, 18, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(8);
@@ -187,7 +187,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 18, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(16);
@@ -218,7 +218,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 3, 18, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(16);
@@ -249,7 +249,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 14, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(12);
@@ -278,7 +278,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 5, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
         expect(s.getDate()).toBe(1);
@@ -307,7 +307,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(8);
@@ -336,7 +336,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(10);
@@ -365,7 +365,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 12, 13, 37, 58);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(12);
@@ -396,7 +396,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 5, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
         expect(s.getDate()).toBe(8);
@@ -427,7 +427,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 5, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
         expect(s.getDate()).toBe(13);
@@ -458,7 +458,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 5, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
         expect(s.getDate()).toBe(15);
@@ -491,7 +491,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 5, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(5);
         expect(s.getDate()).toBe(8);
@@ -522,7 +522,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(11);
@@ -553,7 +553,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 6, 13, 45, 58);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(6);
@@ -586,7 +586,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 6, 13, 45, 58);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(6);
@@ -621,7 +621,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 6, 13, 45, 58);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(6);
@@ -730,7 +730,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 14, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(14);
@@ -813,7 +813,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 14, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(14);
@@ -860,7 +860,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 13, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(12);
@@ -893,7 +893,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 1, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -928,7 +928,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 1, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(1);
         expect(s.getDate()).toBe(1);
@@ -965,7 +965,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 17, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(16);
@@ -1025,7 +1025,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 17, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(16);
@@ -1071,7 +1071,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d2 = new Date(2021, 4, 17, 12, 34, 56);
         const r2 = boundariesOfPeriodOccurrence(p2, d2);
         expect(r2).not.toBeNull();
-        const [ s2, e2 ] = r2;
+        const [ s2, e2 ] = r2!;
         expect(s2.getFullYear()).toBe(2021);
         expect(s2.getMonth()).toBe(4);
         expect(s2.getDate()).toBe(16);
@@ -1100,7 +1100,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 1, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2020);
         expect(s.getMonth()).toBe(11);
         expect(s.getDate()).toBe(30);
@@ -1131,7 +1131,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 1, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(30);
@@ -1164,7 +1164,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 16, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(14);
@@ -1195,7 +1195,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 3, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(23);
@@ -1231,7 +1231,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(22);
@@ -1260,7 +1260,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 3, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2020);
         expect(s.getMonth()).toBe(11);
         expect(s.getDate()).toBe(25);
@@ -1289,7 +1289,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 1, 3, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2020);
         expect(s.getMonth()).toBe(10);
         expect(s.getDate()).toBe(1);
@@ -1320,7 +1320,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(1);
@@ -1352,7 +1352,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(1);
@@ -1381,7 +1381,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -1410,7 +1410,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 1, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(1);
@@ -1441,7 +1441,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 1, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(1);
@@ -1474,7 +1474,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(7);
@@ -1616,7 +1616,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 17, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(17);
@@ -1662,7 +1662,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d2 = new Date(2021, 4, 17, 12, 34, 56);
         const r2 = boundariesOfPeriodOccurrence(p2, d2);
         expect(r2).not.toBeNull();
-        const [ s2, e2 ] = r2;
+        const [ s2, e2 ] = r2!;
         expect(s2.getFullYear()).toBe(2021);
         expect(s2.getMonth()).toBe(4);
         expect(s2.getDate()).toBe(17);
@@ -1693,7 +1693,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 4, 14, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
         expect(s.getDate()).toBe(14);
@@ -1724,7 +1724,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2016, 0, 31, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(31);
@@ -1753,7 +1753,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 11, 31, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(11);
         expect(s.getDate()).toBe(31);
@@ -1784,7 +1784,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 28, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(22);
@@ -1813,7 +1813,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 11, 28, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(11);
         expect(s.getDate()).toBe(24);
@@ -1842,7 +1842,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 11, 28, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(11);
         expect(s.getDate()).toBe(1);
@@ -1876,7 +1876,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 0, 31, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
         expect(s.getDate()).toBe(31);
@@ -1910,7 +1910,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const d = new Date(2021, 1, 20, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
-        const [ s, e ] = r;
+        const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(1);
         expect(s.getDate()).toBe(18);

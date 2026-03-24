@@ -1,45 +1,45 @@
 import * as asn1 from "@wildboar/asn1";
 import type {
     Filter,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Filter.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/Filter.ta.mjs";
 import type {
     FilterItem,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FilterItem.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/FilterItem.ta.mjs";
 import {
     AttributeValueAssertion,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeValueAssertion.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/AttributeValueAssertion.ta.mjs";
 import {
     Context,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/Context.ta.mjs";
 import {
     ContextAssertion,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ContextAssertion.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/ContextAssertion.ta.mjs";
 import {
     AttributeTypeAssertion,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAssertion.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/AttributeTypeAssertion.ta.mjs";
 import {
     MatchingRuleAssertion,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
 import {
     Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/Attribute.ta.mjs";
 import {
     Attribute_valuesWithContext_Item,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import {
     EntryInformation,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import {
     FilterItem_substrings,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type {
     Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
+} from "../../src/lib/modules/InformationFramework/Name.ta.mjs";
 import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
-import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher.mjs";
-import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher.mjs";
-import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher.mjs";
-import SubstringSelection from "@wildboar/x500/src/lib/types/SubstringSelection.mjs";
+import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
+import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
+import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
+import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 const TRUE_ELEMENT = new asn1.DERElement(

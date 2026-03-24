@@ -1,4 +1,4 @@
-import selectFromEntry from "../../src/lib/utils/selectFromEntry";
+import selectFromEntry from "../../src/lib/utils/selectFromEntry.mjs";
 import {
     ASN1Element,
     ObjectIdentifier,
@@ -40,13 +40,13 @@ import {
     FamilyEntries,
     _encode_FamilyEntries,
     _decode_FamilyEntries,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntries.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/FamilyEntries.ta.mjs";
 import {
     FamilyEntry,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntry.ta.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/FamilyEntry.ta.mjs";
 import {
     id_at_family_information,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/id-at-family-information.va.mjs";
+} from "../../src/lib/modules/DirectoryAbstractService/id-at-family-information.va.mjs";
 
 const EMPTY_NAME: Name = {
     rdnSequence: [],
@@ -191,7 +191,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(entryBefore.information.length);
+        expect(entryAfter.information!.length).toBe(entryBefore.information!.length);
     });
 
     it("only returns attribute types when they are requested", () => {
@@ -216,8 +216,8 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(entryBefore.information.length);
-        expect(entryAfter.information.every((info) => ("attributeType" in info))).toBeTruthy();
+        expect(entryAfter.information!.length).toBe(entryBefore.information!.length);
+        expect(entryAfter.information!.every((info) => ("attributeType" in info))).toBeTruthy();
     });
 
     it("can filter out selected attributes", () => {
@@ -247,8 +247,8 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
-        expect(entryAfter.information.every((info) => (
+        expect(entryAfter.information!.length).toBe(1);
+        expect(entryAfter.information!.every((info) => (
             ("attribute" in info)
             && (info.attribute.type_.toString() === ID_COMMON_NAME.toString())
         ))).toBeTruthy();
@@ -278,7 +278,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(0);
+        expect(entryAfter.information!.length).toBe(0);
     });
 
     it("does not filter out operational attributes when they are requested", () => {
@@ -305,7 +305,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
+        expect(entryAfter.information!.length).toBe(1);
     });
 
     it("can select for specific operational attributes", () => {
@@ -335,10 +335,10 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
+        expect(entryAfter.information!.length).toBe(1);
         expect(
-            ("attribute" in entryAfter.information[0])
-            && entryAfter.information[0].attribute.type_.toString()
+            ("attribute" in entryAfter.information![0])
+            && entryAfter.information![0].attribute.type_.toString()
         ).toBe(ID_MY_ACCESS_POINT.toString());
     });
 
@@ -378,7 +378,7 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
+        expect(entryAfter.information!.length).toBe(1);
     });
 
     it("does not select attributes that do not match the contextSelection", () => {
@@ -417,7 +417,7 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(0);
+        expect(entryAfter.information!.length).toBe(0);
     });
 
     it("select attributes according to the preferences in contextSelection when returning contexts", () => {
@@ -498,15 +498,15 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
-        if (!("attribute" in entryAfter.information[0])) {
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
             expect(false).toBeTruthy();
             return;
         }
-        const attr = entryAfter.information[0].attribute;
+        const attr = entryAfter.information![0].attribute;
         expect(attr.values.length).toBe(1); // It should have selected the one attribute value with no contexts.
-        expect(attr.valuesWithContext.length).toBe(1); // It also should have selected the french value.
-        expect(attr.valuesWithContext[0].value.utf8String).toBe("le jwilbur");
+        expect(attr.valuesWithContext!.length).toBe(1); // It also should have selected the french value.
+        expect(attr.valuesWithContext![0].value.utf8String).toBe("le jwilbur");
     });
 
     it("select attributes according to the preferences in contextSelection when omitting contexts", () => {
@@ -587,12 +587,12 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
-        if (!("attribute" in entryAfter.information[0])) {
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
             expect(false).toBeTruthy();
             return;
         }
-        const attr = entryAfter.information[0].attribute;
+        const attr = entryAfter.information![0].attribute;
         expect(attr.values.length).toBe(2); // Two values total should have matched.
         expect(attr.values[0].utf8String).toBe("jwilbur");
         expect(attr.values[1].utf8String).toBe("le jwilbur");
@@ -631,7 +631,7 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
+        expect(entryAfter.information!.length).toBe(1);
     });
 
     it("applies context assertions to attribute subtypes", () => {
@@ -712,12 +712,12 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
-        if (!("attribute" in entryAfter.information[0])) {
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
             expect(false).toBeTruthy();
             return;
         }
-        const attr = entryAfter.information[0].attribute;
+        const attr = entryAfter.information![0].attribute;
         expect(attr.values.length).toBe(2); // Two values total should have matched.
         expect(attr.values[0].utf8String).toBe("jwilbur");
         expect(attr.values[1].utf8String).toBe("le jwilbur");
@@ -801,12 +801,12 @@ describe("selectFromEntry()", () => {
             STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(1);
-        if (!("attribute" in entryAfter.information[0])) {
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
             expect(false).toBeTruthy();
             return;
         }
-        const attr = entryAfter.information[0].attribute;
+        const attr = entryAfter.information![0].attribute;
         expect(attr.values.length).toBe(2); // Two values total should have matched.
         expect(attr.values[0].utf8String).toBe("jwilbur");
         expect(attr.values[1].utf8String).toBe("le jwilbur");
@@ -855,12 +855,12 @@ describe("selectFromEntry()", () => {
             ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
-        expect(entryAfter.information.length).toBe(entryBefore.information.length);
-        if (!("attribute" in entryAfter.information[0])) {
+        expect(entryAfter.information!.length).toBe(entryBefore.information!.length);
+        if (!("attribute" in entryAfter.information![0])) {
             expect(false).toBeTruthy();
             return;
         }
-        const attr = entryAfter.information[0].attribute;
+        const attr = entryAfter.information![0].attribute;
         const decodedFamilyEntries = _decode_FamilyEntries(attr.values[0]);
         expect(
             decodedFamilyEntries.familyEntries

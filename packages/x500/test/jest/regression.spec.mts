@@ -1,7 +1,7 @@
 import * as asn1 from "@wildboar/asn1";
 import {
   _decode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
+} from "../../src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 
 
 describe("This library", () => {
@@ -20,7 +20,7 @@ describe("This library", () => {
          * For some reason, when I use BERElement or create a Uint8Array from certBytes, it works. DERElement does not work.
          */
         // el.fromBytes(new Uint8Array(certBytes));
-        el.fromBytes(certBytes);
+        el.fromBytes(certBytes as Uint8Array<ArrayBuffer>);
         // el2.fromBytes(certBytes);
         // expect(el.value.length).toBe(el2.value.length);
         // console.log(Buffer.from(el.value).toString("hex"));
