@@ -1,6 +1,6 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import { URL } from "url";
+import { URL } from "node:url"; // TODO: Replace with WHATWG URL
 
 export
 const uriMatch: EqualityMatcher = (

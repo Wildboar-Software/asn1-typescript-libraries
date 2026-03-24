@@ -1,5 +1,5 @@
 import asn1 from "asn1-ts";
-import fs from "fs";
+import fs from "node:fs";
 import { SIGNED } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/SIGNED.ta.mjs";
 import { _encode_Certificate } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 import { TBSCertificate } from "../../../dist/packages/x500/src/lib/modules/AuthenticationFramework/TBSCertificate.ta.mjs";

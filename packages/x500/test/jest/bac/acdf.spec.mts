@@ -1,6 +1,6 @@
 import bacACDF, {
     PERMISSION_CATEGORY_ADD,
-} from "../../../src/lib/bac/bacACDF";
+} from "../../../src/lib/bac/bacACDF.mjs";
 import {
     TRUE_BIT,
     OBJECT_IDENTIFIER,
@@ -13,8 +13,8 @@ import {
     ASN1Element,
     External,
 } from "@wildboar/asn1";
-import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended";
-import type ProtectedItem from "../../../src/lib/types/ProtectedItem";
+import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended.mjs";
+import type ProtectedItem from "../../../src/lib/types/ProtectedItem.mjs";
 import {
     ProtectedItems,
 } from "../../../src/lib/modules/BasicAccessControl/ProtectedItems.ta.mjs";
@@ -32,7 +32,7 @@ import {
 import type EqualityMatcher from "../../../src/lib/types/EqualityMatcher.mjs";
 import {
     ACIItem, ACIItem_itemOrUserFirst
-} from "../../../src/lib/modules/BasicAccessControl/ACIItem.ta.mjs";
+} from "../../../src/lib/modules/BasicAccessControl/index.mjs";
 import {
     UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
@@ -56,10 +56,10 @@ import type { GrantsAndDenials } from "../../../src/lib/modules/BasicAccessContr
 import {
     AttributeTypeAndValue,
 } from "../../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials";
-import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem";
-import itemIsProtected from "../../../src/lib/bac/itemIsProtected";
-import type { EvaluateFilterSettings } from "../../../src/lib/utils/evaluateFilter";
+import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials.mjs";
+import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem.mjs";
+import itemIsProtected from "../../../src/lib/bac/itemIsProtected.mjs";
+import type { EvaluateFilterSettings } from "../../../src/lib/utils/evaluateFilter.mjs";
 import {
     NameAndOptionalUID,
 } from "../../../src/lib/modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";

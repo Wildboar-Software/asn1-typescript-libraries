@@ -1,5 +1,5 @@
-import { ipv4FromNSAP, ipv4ToNSAP } from "../../src/lib/distributed/ipv4";
-import { uriFromNSAP, uriToNSAP } from "../../src/lib/distributed/uri";
+import { ipv4FromNSAP, ipv4ToNSAP } from "../../src/lib/distributed/ipv4.mjs";
+import { uriFromNSAP, uriToNSAP } from "../../src/lib/distributed/uri.mjs";
 
 describe("ipv4FromNSAP()", () => {
     it("decodes an IPv4 address with a TCP port", () => {

@@ -1,10 +1,10 @@
-import type { Socket } from "net";
-import { TLSSocket, checkServerIdentity } from "tls";
+import type { Socket } from "node:net";
+import { type TLSSocket, checkServerIdentity } from "node:tls";
 import type { OCTET_STRING } from "@wildboar/asn1";
-import { lookup } from "dns/promises";
+import { lookup } from "node:dns/promises";
 import { ipv4FromNSAP } from "./ipv4.mjs";
 import { uriFromNSAP } from "./uri.mjs";
-import { URL } from "url";
+import { URL } from "node:url"; // TODO: Replace with WHATWG URL
 import IPV4_AFI_IDI from "./IPV4_AFI_IDI.mjs";
 
 /**

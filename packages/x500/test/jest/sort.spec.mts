@@ -7,7 +7,7 @@ import {
     ASN1Construction,
     ASN1UniversalType,
 } from "@wildboar/asn1";
-import sort from "../../src/lib/dap/sort";
+import sort from "../../src/lib/dap/sort.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import {
     SortKey,
@@ -24,8 +24,6 @@ import type {
 import {
     Attribute,
 } from "../../src/lib/modules/InformationFramework/Attribute.ta.mjs";
-import type ATVAC from "../../src/lib/types/AttributeTypeValueAndContextsTuple";
-import getValueTuplesFromAttribute from "../../src/lib/utils/getValueTuplesFromAttribute";
 
 const EMPTY_NAME: Name = {
     rdnSequence: [],

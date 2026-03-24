@@ -25,7 +25,7 @@ import {
     id_oa_allAttributeTypes,
 } from "../modules/InformationFramework/id-oa-allAttributeTypes.va.mjs";
 import groupByOID from "./groupByOID.mjs";
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import {
     family_information,

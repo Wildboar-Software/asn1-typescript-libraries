@@ -1,6 +1,6 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import { domainToUnicode } from "url";
+import { domainToUnicode } from "node:url"; // TODO: Replace with WHATWG URL
 
 function isNotPunycodeOrUnicode (label: string): boolean {
     return (

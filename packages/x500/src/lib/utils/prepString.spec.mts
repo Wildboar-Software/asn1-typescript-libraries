@@ -1,4 +1,4 @@
-import { prepString } from "./prepString";
+import { prepString } from "./prepString.mjs";
 
 describe("prepString()", () => {
     it("works", () => {
