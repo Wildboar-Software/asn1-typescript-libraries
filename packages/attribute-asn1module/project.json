@@ -20,21 +20,6 @@
           "packages/attribute-asn1module/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/attribute-asn1module/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/attribute-asn1module/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

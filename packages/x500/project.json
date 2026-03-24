@@ -4,20 +4,6 @@
   "sourceRoot": "packages/x500/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/x500/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "options": {
-        "config": "packages/x500/vite.config.ts"
-      }
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": [

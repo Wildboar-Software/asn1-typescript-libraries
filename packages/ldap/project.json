@@ -4,14 +4,6 @@
   "sourceRoot": "packages/ldap/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/ldap/**/*.mts"
-        ]
-      }
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": [

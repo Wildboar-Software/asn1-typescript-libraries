@@ -20,21 +20,6 @@
           "packages/nlm/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/nlm/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/nlm/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

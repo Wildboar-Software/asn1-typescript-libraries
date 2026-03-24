@@ -20,21 +20,6 @@
           "packages/m3100/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/m3100/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/m3100/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

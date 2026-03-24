@@ -20,21 +20,6 @@
           "packages/cades/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/cades/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/cades/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

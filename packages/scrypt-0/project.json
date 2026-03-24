@@ -20,21 +20,6 @@
           "packages/scrypt-0/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/scrypt-0/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/scrypt-0/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

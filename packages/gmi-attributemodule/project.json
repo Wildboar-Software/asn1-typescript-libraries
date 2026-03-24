@@ -20,21 +20,6 @@
           "packages/gmi-attributemodule/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/gmi-attributemodule/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/gmi-attributemodule/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

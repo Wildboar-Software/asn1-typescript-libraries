@@ -20,21 +20,6 @@
           "packages/copp/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/copp/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/copp/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

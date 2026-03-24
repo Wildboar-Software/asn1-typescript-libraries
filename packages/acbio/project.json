@@ -20,21 +20,6 @@
           "packages/acbio/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/acbio/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/acbio/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

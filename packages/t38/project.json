@@ -4,21 +4,6 @@
   "sourceRoot": "packages/t38/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/t38/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/t38/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": [

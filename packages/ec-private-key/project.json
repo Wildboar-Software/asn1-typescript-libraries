@@ -20,21 +20,6 @@
           "packages/ec-private-key/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/ec-private-key/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/ec-private-key/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

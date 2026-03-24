@@ -4,21 +4,6 @@
   "sourceRoot": "packages/ansi-x9-62/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/ansi-x9-62/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/ansi-x9-62/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": [

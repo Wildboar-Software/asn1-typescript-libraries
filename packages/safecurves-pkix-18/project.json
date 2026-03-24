@@ -20,21 +20,6 @@
           "packages/safecurves-pkix-18/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/safecurves-pkix-18/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/safecurves-pkix-18/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

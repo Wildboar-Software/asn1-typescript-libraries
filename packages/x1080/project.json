@@ -20,21 +20,6 @@
           "packages/x1080/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/x1080/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/x1080/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

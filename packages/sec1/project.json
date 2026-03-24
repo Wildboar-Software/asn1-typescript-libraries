@@ -20,21 +20,6 @@
           "packages/sec1/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/sec1/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/sec1/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

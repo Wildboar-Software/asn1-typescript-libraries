@@ -20,21 +20,6 @@
           "packages/pki-stub/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/pki-stub/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/pki-stub/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

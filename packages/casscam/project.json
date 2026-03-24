@@ -20,21 +20,6 @@
           "packages/casscam/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/casscam/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/casscam/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

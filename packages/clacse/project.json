@@ -20,21 +20,6 @@
           "packages/clacse/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/clacse/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/clacse/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

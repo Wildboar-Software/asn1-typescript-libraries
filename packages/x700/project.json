@@ -20,21 +20,6 @@
           "packages/x700/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/x700/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/x700/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }

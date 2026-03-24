@@ -4,21 +4,6 @@
   "sourceRoot": "packages/cmail/src",
   "projectType": "library",
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/cmail/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/cmail/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": [

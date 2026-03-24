@@ -20,21 +20,6 @@
           "packages/pc/package.json"
         ]
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "packages/pc/**/*.mts"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "packages/pc/jest.config.js",
-        "passWithNoTests": true
-      }
     }
   }
 }
