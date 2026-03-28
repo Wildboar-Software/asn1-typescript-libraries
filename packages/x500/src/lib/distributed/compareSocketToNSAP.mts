@@ -4,7 +4,7 @@ import type { OCTET_STRING } from "@wildboar/asn1";
 import { lookup } from "node:dns/promises";
 import { ipv4FromNSAP } from "./ipv4.mjs";
 import { uriFromNSAP } from "./uri.mjs";
-import { URL } from "node:url"; // TODO: Replace with WHATWG URL
+import { URL } from "node:url";
 import IPV4_AFI_IDI from "./IPV4_AFI_IDI.mjs";
 
 /**

@@ -3,8 +3,6 @@ import IPV4_AFI_IDI from "./IPV4_AFI_IDI.mjs";
 type IPv4 = Uint8Array;
 type NSAP = Uint8Array;
 
-const MAX_PORT: number = 65535;
-
 // See ITU Recommendation X.213 (2001), Annex A.5.3.
 // IDP:
 //   AFI (authority and format identifier) = two hexadecimal digits
@@ -117,6 +115,10 @@ function ipv4FromNSAP (
     ];
 
     if (nsap.length < 15) {
+        if (nsap[5] === 0x03) {
+            // TCP port 102 is the default for ITOT. No others have defaults.
+            return [ nsap[5], new Uint8Array(ipv4), 102 ];
+        }
         return [ nsap[5], new Uint8Array(ipv4), undefined ];
     }
 
@@ -128,5 +130,5 @@ function ipv4FromNSAP (
         + ((nsap[14] & 0xF0) >> 4)
     );
 
-    return [ nsap[5], new Uint8Array(ipv4), (port > MAX_PORT ? MAX_PORT : port) ];
+    return [ nsap[5], new Uint8Array(ipv4), port ];
 }
