@@ -9,15 +9,23 @@ import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.m
  * @function
  */
 export
-function getAttributeTypesFromFilter (filter: Filter): AttributeType[] {
+function getAttributeTypesFromFilter (
+    filter: Filter,
+    recursionTTL: number = 20,
+): AttributeType[] {
+    if (recursionTTL <= 0) {
+        return [];
+    }
     if ("item" in filter) {
         return getAttributeTypesFromFilterItem(filter.item);
     } else if ("and" in filter) {
-        return filter.and.flatMap(getAttributeTypesFromFilter);
+        return filter.and
+            .flatMap((sub) => getAttributeTypesFromFilter(sub, recursionTTL - 1));
     } else if ("or" in filter) {
-        return filter.or.flatMap(getAttributeTypesFromFilter);
+        return filter.or
+            .flatMap((sub) => getAttributeTypesFromFilter(sub, recursionTTL - 1));
     } else if ("not" in filter) {
-        return getAttributeTypesFromFilter(filter.not);
+        return getAttributeTypesFromFilter(filter.not, recursionTTL - 1);
     } else {
         return [];
     }

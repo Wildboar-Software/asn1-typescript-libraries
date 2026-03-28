@@ -16,13 +16,21 @@ import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @function
  */
 export
-function getMatchingRulesFromFilter (filter: Filter): OBJECT_IDENTIFIER[] {
+function getMatchingRulesFromFilter (
+    filter: Filter,
+    recursionTTL: number = 20,
+): OBJECT_IDENTIFIER[] {
+    if (recursionTTL <= 0) {
+        return [];
+    }
     if ("and" in filter) {
-        return filter.and.flatMap((sub) => getMatchingRulesFromFilter(sub));
+        return filter.and
+            .flatMap((sub) => getMatchingRulesFromFilter(sub, recursionTTL - 1));
     } else if ("or" in filter) {
-        return filter.or.flatMap((sub) => getMatchingRulesFromFilter(sub));
+        return filter.or
+            .flatMap((sub) => getMatchingRulesFromFilter(sub, recursionTTL - 1));
     } else if ("not" in filter) {
-        return getMatchingRulesFromFilter(filter.not);
+        return getMatchingRulesFromFilter(filter.not, recursionTTL - 1);
     } else if ("item" in filter) {
         if ("extensibleMatch" in filter.item) {
             const item = filter.item.extensibleMatch;
