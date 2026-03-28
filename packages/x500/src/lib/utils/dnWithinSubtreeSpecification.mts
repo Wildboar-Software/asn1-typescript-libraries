@@ -9,8 +9,13 @@ import type {
 import type {
     OBJECT_CLASS,
 } from "../modules/InformationFramework/OBJECT-CLASS.oca.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
-import objectClassesWithinRefinement from "./objectClassesWithinRefinement.mjs";
+import {
+    default as compareDN,
+} from "../comparators/compareDistinguishedName.mjs";
+import {
+    objectClassesWithinRefinement as withinRefinement,
+} from "./objectClassesWithinRefinement.mjs";
+import compareElements from "../comparators/compareElements.mjs";
 
 /**
  * @summary Determine whether a distinguished name falls within a subtree.
@@ -52,10 +57,15 @@ import objectClassesWithinRefinement from "./objectClassesWithinRefinement.mjs";
  *
  * @param {DistinguishedName} entryDN The full distinguished name of the entry.
  * @param {OBJECT_IDENTIFIER[]} entryObjectClasses The entry's object classes
- * @param {SubtreeSpecification} sts The subtree specification used to subcategorize the administrative area.
- * @param {DistinguishedName} scope The vertex that forms the root to which the subtree specification is applied.
- * @param {Function} getEqualityMatcher A function that takes an object identifier that identifies a type and returns an equality matcher.
- * @returns {boolean} A boolean, which will be `true` if the entry falls within the subtree specification.
+ * @param {SubtreeSpecification} sts The subtree specification used to
+ *  subcategorize the administrative area.
+ * @param {DistinguishedName} scope The vertex that forms the root to which the
+ *  subtree specification is applied.
+ * @param {Function} getEqualityMatcher A function that takes an object
+ *  identifier that identifies a type and returns an equality matcher.
+ * @returns {boolean | undefined} A boolean, which will be `true` if the entry
+ *  falls within the subtree specification. `undefined` if a chop exclusion
+ *  choice variant is not understood.
  * @function
  */
 export
@@ -65,22 +75,28 @@ function dnWithinSubtreeSpecification (
     sts: SubtreeSpecification,
     scope: DistinguishedName,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
+): boolean | undefined {
     const base: DistinguishedName = [
         ...scope,
         ...(sts.base ?? []),
     ];
+    const minimum = (sts.minimum ? Number(sts.minimum) : 0);
+    const maximum = (sts.maximum ? Number(sts.maximum) : Infinity);
     // Short circuits to avoid the more costly ATAV comparisons later on.
-    if (entryDN.length < (base.length + (sts.minimum ? Number(sts.minimum) : 0))) {
+    if (entryDN.length < (base.length + minimum)) {
         return false;
     }
-    if (entryDN.length > (base.length + (sts.maximum ? Number(sts.maximum) : Infinity))) {
+    if (entryDN.length > (base.length + maximum)) {
         return false;
     }
-    if (sts.specificationFilter && !objectClassesWithinRefinement(entryObjectClasses, sts.specificationFilter)) {
+    if (
+        sts.specificationFilter
+        && !withinRefinement(entryObjectClasses, sts.specificationFilter)
+    ) {
         return false;
     }
-    const baseMatches = compareDistinguishedName(base, entryDN.slice(0, base.length), getEqualityMatcher ?? (() => () => false));
+    const namingMatcher = getEqualityMatcher ?? (() => compareElements);
+    const baseMatches = compareDN(base, entryDN.slice(0, base.length), namingMatcher);
     if (!baseMatches) {
         return false;
     }
@@ -88,18 +104,20 @@ function dnWithinSubtreeSpecification (
     for (const spex of sts.specificExclusions ?? []) {
         if ("chopBefore" in spex) {
             const chop: DistinguishedName = spex.chopBefore;
-            const chopMatches = compareDistinguishedName(chop, localName.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
+            const chopped: DistinguishedName = localName.slice(0, chop.length);
+            const chopMatches = compareDN(chop, chopped, namingMatcher);
             if (chopMatches) {
                 return false;
             }
         } else if ("chopAfter" in spex) {
             const chop: DistinguishedName = spex.chopAfter;
-            const chopMatches = compareDistinguishedName(chop, localName.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
+            const chopped: DistinguishedName = localName.slice(0, chop.length);
+            const chopMatches = compareDN(chop, chopped, namingMatcher);
             if (chopMatches && (localName.length > chop.length)) {
                 return false;
             }
         } else {
-            return false; // Extension not understood.
+            return undefined; // Extension not understood.
         }
     }
     return true;
