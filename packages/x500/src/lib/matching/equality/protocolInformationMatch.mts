@@ -4,8 +4,8 @@ import {
     ProtocolInformation,
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
+import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
 
-// TODO: This could use a little more intelligence when it comes to comparing addresses.
 export
 const protocolInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -13,7 +13,7 @@ const protocolInformationMatch: EqualityMatcher = (
 ): boolean => {
     const a: ProtocolInformation = _decode_ProtocolInformation(assertion);
     const v: ProtocolInformation = _decode_ProtocolInformation(value);
-    return !Buffer.compare(a.nAddress, v.nAddress);
+    return compareNSAP(a.nAddress, v.nAddress);
 }
 
 export default protocolInformationMatch;
