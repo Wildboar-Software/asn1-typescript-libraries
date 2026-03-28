@@ -1,5 +1,5 @@
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
-import normalizeFilter from "../lib/normalizeFilter";
+import normalizeFilter from "../lib/normalizeFilter.mjs";
 
 describe("normalizeFilter()", () => {
 
@@ -303,5 +303,69 @@ describe("normalizeFilter()", () => {
             return;
         }
         expect(normed.or.length).toBe(0);
+    });
+
+    it("handles excessively deep recursion gracefully", () => {
+        let filter: Filter = {
+            present: new Uint8Array([ "x".charCodeAt(0) ]),
+        };
+        let i = 0;
+        while (i < 10000) {
+            filter = { or: [ filter ] };
+            i++;
+        }
+        const normed = normalizeFilter(filter);
+        expect("or" in normed).toBeTruthy();
+        if (!("or" in normed)) {
+            return;
+        }
+        expect(normed.or.length).toBe(1);
+    });
+
+    // This tests this problematic production:
+    // "and { or {x,y,z}, p, q} is the same as or { and {x,p,q}, and {y,p,q}, and {z,p,q} }"
+    it("handles excessive expansion recursion gracefully", () => {
+        let filter = {
+            and: [
+                {
+                    or: [] as Filter[],
+                },
+                {
+                    or: [] as Filter[],
+                },
+                {
+                    or: [] as Filter[],
+                },
+                {
+                    or: [] as Filter[],
+                },
+                {
+                    or: [] as Filter[],
+                },
+            ],
+        };
+        const items: Filter[] = [
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+            { present: new Uint8Array([ "x".charCodeAt(0) ]) },
+        ];
+        filter.and[0].or.push(...items.slice(0, 3));
+        filter.and[1].or.push(...items.slice(0, 5));
+        filter.and[2].or.push(...items.slice(0, 7));
+        filter.and[3].or.push(...items);
+        filter.and[4].or.push(...items);
+        const normed = normalizeFilter(filter);
+        expect("or" in normed).toBeTruthy();
+        if (!("or" in normed)) {
+            return;
+        }
+        expect(normed.or.length).toBeLessThanOrEqual(10);
     });
 });
