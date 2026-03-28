@@ -11,12 +11,19 @@ import {
  * @description
  * 
  * NOTE: There may only be one structural object class chain in an entry.
+ * 
+ * If non-sense object classes are provided, the return value of this function
+ * is undefined behavior.
  *
  * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes the entry has
- * @param {Function} getKind A function that can retrieve the object class kind by its ID
- * @param {Function} getSuperclasses A function that can retrieve an object class'
- *  superclasses by its ID
- * @returns {OBJECT_IDENTIFIER} 
+ * @param {Function} getKind A function that can retrieve the object class kind
+ *  by its object identifier
+ * @param {Function} getSuperclasses A function that can retrieve an object
+ *  class' direct (not-transitive) superclasses by its object identifier
+ * @returns {OBJECT_IDENTIFIER} The object identifier of the structural object
+ *  class of the entry
+ * 
+ * @function
  */
 export
 function determineStructuralObjectClass (
@@ -25,7 +32,6 @@ function determineStructuralObjectClass (
     getSuperclasses: (objectClass: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
 ): OBJECT_IDENTIFIER {
     const structural: Set<string> = new Set();
-    const abstract_: Set<string> = new Set([ top["&id"].toString() ]);
     const parents: Set<string> = new Set();
     for (const objectClass of objectClasses) {
         const kind = getKind(objectClass);
@@ -41,7 +47,6 @@ function determineStructuralObjectClass (
             superclasses.forEach((sc) => parents.add(sc.toString()));
             break;
         case (ObjectClassKind_abstract):
-            abstract_.add(OC);
             superclasses.forEach((sc) => parents.add(sc.toString()));
             break;
         }
