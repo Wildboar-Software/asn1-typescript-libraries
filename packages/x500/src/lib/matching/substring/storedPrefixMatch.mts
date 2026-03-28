@@ -16,9 +16,17 @@ const storedPrefixMatch: SubstringsMatcher = (
     value: ASN1Element,
     selection?: SubstringSelection,
 ): boolean => {
-    const a: string = prepString(directoryStringToString(_decode_UDS(assertion))).toUpperCase();
-    const v: string = prepString(directoryStringToString(_decode_UDS(value))).toUpperCase();
-    return v.startsWith(a);
+    let a: string = directoryStringToString(_decode_UDS(assertion));
+    let v: string = directoryStringToString(_decode_UDS(value));
+    if (v.startsWith(a)) {
+        return true;
+    }
+    a = prepString(a);
+    v = prepString(v);
+    if (a.length > v.length) {
+        return false;
+    }
+    return v.toUpperCase().startsWith(a.toUpperCase());
 }
 
 export default storedPrefixMatch;

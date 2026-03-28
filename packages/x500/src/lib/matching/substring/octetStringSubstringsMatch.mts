@@ -14,7 +14,7 @@ const octetStringSubstringsMatch: SubstringsMatcher = (
 ): boolean => {
     const v: Uint8Array = value.octetString;
     const osa: OctetSubstringAssertion = _decode_OctetSubstringAssertion(assertion);
-    return osa.every((o) => { // REVIEW: Not really clear whether this should be .every() or .some().
+    return osa.every((o) => {
         if ("initial" in o) {
             return !Buffer.compare(v.subarray(0, o.initial.length), o.initial);
         } else if ("any_" in o) {
