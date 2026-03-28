@@ -11,6 +11,7 @@ type EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    flags?: number,
 ) => boolean;
 
 export default EqualityMatcher;

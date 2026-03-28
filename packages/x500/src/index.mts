@@ -143,6 +143,7 @@ export { dateIsBetweenDayTimeBand } from "./lib/utils/dateIsBetweenDayTimeBand.m
 export { defaultEntryInformationSelection } from "./lib/utils/defaultEntryInformationSelection.mjs";
 export { determineStructuralObjectClass } from "./lib/utils/determineStructuralObjectClass.mjs";
 export { dnWithinGeneralSubtree } from "./lib/utils/dnWithinGeneralSubtree.mjs";
+export { gnWithinGeneralSubtree, evaluateSRVNameConstraints } from "./lib/utils/gnWithinGeneralSubtree.mjs";
 export { dnWithinSubtreeSpecification } from "./lib/utils/dnWithinSubtreeSpecification.mjs";
 export { dnWithinSubtree } from "./lib/utils/dnWithinSubtree.mjs";
 export { evaluateContextAssertion } from "./lib/utils/evaluateContextAssertion.mjs";
