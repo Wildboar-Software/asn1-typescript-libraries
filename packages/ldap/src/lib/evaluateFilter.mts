@@ -142,35 +142,35 @@ function evaluateFilter (
     entry: PartialAttributeList,
     options: EvaluateFilterOptions,
 ): boolean | undefined {
+    let subresult_undefined: boolean = false;
     if ("and" in filter) {
-        const results = filter.and
-            .map((subfilter: Filter): boolean | undefined => evaluateFilter(subfilter, dn, entry, options));
-        const allPassed = results.every((result) => result);
-        if (allPassed) {
-            return true;
+        for (const subfilter of filter.and) {
+            const result = evaluateFilter(subfilter, dn, entry, options);
+            if (result === false) {
+                return false;
+            }
+            if (result === undefined) {
+                subresult_undefined = true;
+            }
         }
-        return (results.some((r) => r === undefined))
-            ? undefined
-            : false;
+        return subresult_undefined ? undefined : true;
     } else if ("or" in filter) {
-        const results = filter.or
-            .map((subfilter: Filter): boolean | undefined => evaluateFilter(subfilter, dn, entry, options));
-        const anyMatched = results.some((result) => result);
-        if (anyMatched) {
-            return true;
+        for (const subfilter of filter.or) {
+            const result = evaluateFilter(subfilter, dn, entry, options);
+            if (result === true) {
+                return true;
+            }
+            if (result === undefined) {
+                subresult_undefined = true;
+            }
         }
-        return (results.some((r) => r === undefined))
-            ? undefined
-            : false;
+        return subresult_undefined ? undefined : false;
     } else if ("not" in filter) {
         const result = evaluateFilter(filter.not, dn, entry, options);
-        if (result === false) {
-            return true;
-        } else if (result === true) {
-            return false;
-        } else {
+        if (result === undefined) {
             return undefined;
         }
+        return !result;
     } else if ("equalityMatch" in filter) {
         try {
             const ava = filter.equalityMatch;
@@ -389,7 +389,6 @@ function evaluateFilter (
                             const decodedValue = valueDecoder(val);
                             return matcher(decodedAssertion, decodedValue);
                         }))
-                // TODO: This is the only place where the DN is used. Does that make sense?
                 || (mra.dnAttributes && dn
                     .some((rdn) => rdn
                         .some((atav) => mra.type_
