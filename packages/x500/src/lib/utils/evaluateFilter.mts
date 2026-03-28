@@ -734,9 +734,15 @@ function evaluateAttributePresence (
         attributeType,
         ...(options.getFriends?.(attributeType) ?? []),
     ];
-    const relevantAttributes = attributes
-        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
-    return relevantAttributes.some((attr: Attribute) => options.permittedToMatch(attr.type_));
+    for (const attr of attributes) {
+        if (!friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f))) {
+            continue;
+        }
+        if (options.permittedToMatch(attr.type_)) {
+            return true; // The attribute matched and was permitted to match.
+        }
+    }
+    return false;
 }
 
 export
@@ -795,11 +801,14 @@ function evaluateMatchingRuleAssertion (
         ? attributes
             .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)))
         : attributes
-            .filter((attr: Attribute): boolean => options.isMatchingRuleCompatibleWithAttributeType(
-                mra.matchingRule[0],
-                attr.type_,
+            .filter((attr: Attribute): boolean => (
+                options.permittedToMatch(attr.type_)
+                && options.isMatchingRuleCompatibleWithAttributeType(
+                    mra.matchingRule[0],
+                    attr.type_,
+                )
             )))
-            .filter((attr) => options.permittedToMatch(attr.type_));
+            ;
     const matchedValues: MatchedValue[] = [];
     if (relevantAttributes.length === 0) {
         if (options.performExactly && !mra.type_ && (attributes.length > 0)) {
@@ -947,16 +956,24 @@ function evaluateAttributeTypeAssertion (
     if (!ata.assertedContexts || (ata.assertedContexts.length === 0)) {
         return true;
     }
-    return relevantAttributes
-        .some((attr: Attribute): boolean | undefined => attr.valuesWithContext // Check that there are some attributes...
-            ?.some((vwc): boolean | undefined => ata.assertedContexts // That have some values...
-                // ... for which every context assertion evaluates to TRUE.
-                ?.every((ac: ContextAssertion): boolean => evaluateContextAssertion(
+    for (const attr of relevantAttributes) {
+    next_value:
+        for (const vwc of attr.valuesWithContext ?? []) {
+            for (const ac of ata.assertedContexts ?? []) {
+                const matched = evaluateContextAssertion(
                     ac,
                     vwc.contextList,
                     options.getContextMatcher,
                     options.determineAbsentMatch,
-                ))));
+                );
+                if (!matched) {
+                    continue next_value;
+                }
+            }
+            return true; // Every context assertion matched this value `vwc`.
+        }
+    }
+    return false; // No values matched.
 }
 
 export
@@ -1053,6 +1070,7 @@ function evaluateFilter (
     options: EvaluateFilterSettings,
     contributingEntries: Set<number> = new Set(),
 ): EvaluateFilterReturn {
+    let subresult_undefined: boolean = false;
     if ("item" in filter) {
         const familyResults: MatchedEntryInfo[] = [];
         let undefinedResultFound: boolean = false;
@@ -1084,49 +1102,84 @@ function evaluateFilter (
             matchedValues: familyResults,
         };
     } else if ("and" in filter) {
-        // Array.every() returns `true` when `Array.length` is 0.
-        const results = filter.and.map((subfilter) => evaluateFilter(subfilter, family, options));
-        if (results.every((result) => result.matched)) {
-            return {
-                matched: true,
-                contributingEntries: new Set([
-                    ...contributingEntries.values(),
-                    ...results.flatMap((r) => Array.from(r.contributingEntries.values())),
-                ]),
-                matchedValues: results.flatMap((r) => r.matchedValues ?? []),
-            };
-        } else if (results.some((result) => result.matched === false)) {
-            return {
-                matched: false,
-                contributingEntries,
-                matchedValues: [],
-            };
-        } else {
+        const newContributingEntries: Set<number> = new Set();
+        const matchedValues: MatchedEntryInfo[] = [];
+        for (const subfilter of filter.and) {
+            const result = evaluateFilter(subfilter, family, options);
+            if (result.matched === false) {
+                return {
+                    matched: false,
+                    contributingEntries,
+                    matchedValues: [],
+                };
+            }
+            if (result.matched === undefined) {
+                subresult_undefined = true;
+                continue;
+            }
+            for (const ce of result.contributingEntries.values()) {
+                newContributingEntries.add(ce);
+            }
+            result.matchedValues && matchedValues.push(...result.matchedValues);
+        }
+        if (subresult_undefined) {
             return {
                 matched: undefined,
                 contributingEntries,
                 matchedValues: [],
             };
         }
-    } else if ("or" in filter) {
-        const results = filter.or.map((subfilter) => evaluateFilter(subfilter, family, options));
-        const undefinedResult: boolean = results.some((r) => (r.matched === undefined));
-        const matchedResults = results.filter((r) => r.matched);
-        if (matchedResults.length === 0) {
-            return {
-                matched: undefinedResult ? undefined : false,
-                contributingEntries,
-            };
-        }
-        for (const mr of matchedResults) {
-            for (const contrib of mr.contributingEntries.values()) {
-                contributingEntries.add(contrib);
-            }
+        for (const ce of contributingEntries.values()) {
+            newContributingEntries.add(ce);
         }
         return {
             matched: true,
+            contributingEntries: newContributingEntries,
+            matchedValues,
+        };
+    } else if ("or" in filter) {
+        const newContributingEntries: Set<number> = new Set();
+        const matchedValues: MatchedEntryInfo[] = [];
+        let matched: boolean = false;
+        /* Unlike with and, we still have to iterate over all subfilters so that
+        we can determine if other entries contribute to the match or if other
+        values match. */
+        for (const subfilter of filter.or) {
+            const result = evaluateFilter(subfilter, family, options);
+            if (result.matched === false) {
+                continue;
+            }
+            if (result.matched === undefined) {
+                subresult_undefined = true;
+                continue;
+            }
+            matched = true;
+            for (const ce of result.contributingEntries.values()) {
+                newContributingEntries.add(ce);
+            }
+            result.matchedValues && matchedValues.push(...result.matchedValues);
+        }
+        if (matched) {
+            for (const ce of contributingEntries.values()) {
+                newContributingEntries.add(ce);
+            }
+            return {
+                matched: true,
+                contributingEntries: newContributingEntries,
+                matchedValues,
+            };
+        }
+        if (subresult_undefined) {
+            return {
+                matched: undefined,
+                contributingEntries,
+                matchedValues: [],
+            };
+        }
+        return {
+            matched: false,
             contributingEntries,
-            matchedValues: matchedResults.flatMap((mr) => mr.matchedValues ?? []),
+            matchedValues: [],
         };
     } else if ("not" in filter) {
         if (
