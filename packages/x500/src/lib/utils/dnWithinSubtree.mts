@@ -4,16 +4,15 @@ import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
 import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
-
-// TODO: This should be split into two: nameWithinGeneralSubtree and dnWithinSubtreeSpecification
+import compareElements from "../comparators/compareElements.mjs";
 
 /**
  * @summary Determine whether a distinguished name falls within a subtree of the DIT
  * @description
- * 
+ *
  * The `minimum` and `maximum` bounds are inclusive. A minimum of `0` is the
  * default. A maximum of `0` is the default.
- * 
+ *
  * @param {DistinguishedName} dn The distinguished name to be evaluated
  * @param {DistinguishedName} dit The vertex that forms the top of the subtree
  * @param {number} minimum The number of "levels" below `dit` that should comprise the matching area
@@ -30,7 +29,7 @@ function dnWithinSubtree (
     dn: DistinguishedName,
     dit: DistinguishedName,
     minimum: number = 0,
-    maximum: number = 0,
+    maximum: number = Number.MAX_SAFE_INTEGER,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (dn.length < (dit.length + minimum)) {
@@ -41,9 +40,9 @@ function dnWithinSubtree (
     }
     // We spread the arrays, because Array.reverse() reverses in-place!
     return compareDistinguishedName(
-        [ ...dit ].reverse(),
-        [ ...dn ].reverse().slice(0, dit.length),
-        getEqualityMatcher ?? (() => () => false),
+        dit,
+        dn.slice(0, dit.length),
+        getEqualityMatcher ?? (() => compareElements),
     );
 }
 
