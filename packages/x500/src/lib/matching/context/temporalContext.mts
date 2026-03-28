@@ -1,11 +1,11 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element } from "@wildboar/asn1";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import {
-    TimeSpecification,
+    type TimeSpecification,
     _decode_TimeSpecification,
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import {
-    TimeAssertion,
+    type TimeAssertion,
     _decode_TimeAssertion,
 } from "../../modules/SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import type {
@@ -21,7 +21,7 @@ function xor (a: boolean, b: boolean): boolean {
 }
 
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0): boolean {
-    const adjustedTime = addHours(time, timezone); // TODO: I am not sure this is correct.
+    const adjustedTime = addHours(time, -timezone);
     const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
     if (!boundaries) {
         return false;
@@ -75,8 +75,10 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             }
         } else if ("periodic" in spec.time) {
             return spec.time.periodic.some((period) => {
-                const adjustedStart = addHours(start, timezone ?? 0); // TODO: I am not sure this is correct.
-                const adjustedEnd = addHours(end, timezone ?? 0); // TODO: I am not sure this is correct.
+                // We cannot adjust the period by timezone, so instead, we
+                // modify the asserted times
+                const adjustedStart = addHours(start, timezone ?? 0);
+                const adjustedEnd = addHours(end, timezone ?? 0);
                 const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
                 if (!boundaries) {
                     return false;

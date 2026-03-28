@@ -165,15 +165,8 @@ export class Period {
                         )
                     )
                     || (
-                        this.years
-                        && (
-                            (this.weeks.intWeek.length > 53)
-                            || !this.weeks.intWeek.every(isPositionalInt(53))
-                        )
-                    )
-                    || (
-                        !this.months
-                        && !this.years
+                        (this.weeks.intWeek.length > 53)
+                        || !this.weeks.intWeek.every(isPositionalInt(53))
                     )
                 )
             )
@@ -184,22 +177,18 @@ export class Period {
             )
             || (
                 this.months
-                && ("intMonth" in this.months)
                 && (
-                    (this.months.intMonth.length > 12)
-                    || !this.months.intMonth.every(isPositionalInt(12))
-                )
-            || (
-                this.months
-                && ("bitMonth" in this.months)
-                && (this.months.bitMonth.length > 12)
-            )
-            ) || (
-                this.days
-                && !(
-                    this.weeks
-                    ?? this.months
-                    ?? this.years
+                    (
+                        ("intMonth" in this.months)
+                        && (
+                            (this.months.intMonth.length > 12)
+                            || !this.months.intMonth.every(isPositionalInt(12))
+                        )
+                    )
+                    || (
+                        ("bitMonth" in this.months)
+                        && (this.months.bitMonth.length > 12)
+                    )
                 )
             )
         ) {

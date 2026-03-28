@@ -687,30 +687,6 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(() => boundariesOfPeriodOccurrence(p, d)).toThrow();
     });
 
-    it("throws when encountering a Period with days, but no coarser unit of time", () => {
-        expect(() => new Period(
-            undefined,
-            {
-                intDay: [ 1 ],
-            },
-            undefined,
-            undefined,
-            undefined,
-        )).toThrow();
-    });
-
-    it("throws when encountering a Period with weeks, but no coarser unit of time", () => {
-        expect(() => new Period(
-            undefined,
-            undefined,
-            {
-                intWeek: [ 1 ],
-            },
-            undefined,
-            undefined,
-        )).toThrow();
-    });
-
     it("dayOf.*.intNamedDays works", () => {
         const p = new Period( // The second Friday of any month.
             undefined,
