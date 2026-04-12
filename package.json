@@ -13,13 +13,13 @@
     "date-fns": "^4.1.0"
   },
   "devDependencies": {
-    "@nx/js": "22.6.1",
-    "@nx/vite": "22.6.1",
-    "@nx/vitest": "22.6.1",
+    "@nx/js": "22.6.5",
+    "@nx/vite": "22.6.5",
+    "@nx/vitest": "22.6.5",
     "@types/node": "25.5.0",
     "@vitest/coverage-v8": "4.1.1",
     "benchmark": "^2.1.4",
-    "nx": "22.6.1",
+    "nx": "22.6.5",
     "ts-morph": "^26.0.0",
     "typescript": "6.0.2",
     "vite": "7.3.1",

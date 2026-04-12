@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    // Unfortunately, I have to add this until this issue is fixed:
-    // https://github.com/nrwl/nx/issues/32958
-    "ignoreDeprecations": "6.0",
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": false,
@@ -26,7 +23,6 @@
     "noImplicitAny": true,
     "strictFunctionTypes": true,
     "target": "es2022",
-    "baseUrl": ".",
     "customConditions": [
       "development"
     ],
