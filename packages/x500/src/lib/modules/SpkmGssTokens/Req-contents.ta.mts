@@ -34,6 +34,7 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
+import type { Buffer } from "node:buffer";
 
 /**
  * This is the `Buffer` equivalent of {@link SingleThreadUint8Array}. See it's

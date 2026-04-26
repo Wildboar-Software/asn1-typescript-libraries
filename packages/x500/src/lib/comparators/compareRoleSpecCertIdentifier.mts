@@ -5,6 +5,7 @@ import {
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
 import compareGeneralName from "./compareGeneralName.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
+import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `RoleSpecCertIdentifier` values

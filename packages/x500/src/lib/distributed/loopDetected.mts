@@ -4,6 +4,7 @@ import type {
 import type {
     Name,
 } from "../modules/InformationFramework/Name.ta.mjs";
+import { Buffer } from "node:buffer";
 
 function cheaplyNormalizeName (name: Name): string {
     return name.rdnSequence

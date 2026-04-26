@@ -1,5 +1,6 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { Buffer } from "node:buffer";
 
 export
 const integerMatch: EqualityMatcher = (

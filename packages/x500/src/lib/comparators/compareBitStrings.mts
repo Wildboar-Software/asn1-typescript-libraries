@@ -1,4 +1,5 @@
 import type { BIT_STRING } from "@wildboar/asn1";
+import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `BIT STRING` values

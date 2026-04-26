@@ -13,6 +13,7 @@ import {
     DERElement,
     OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
+import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `GeneralName` values

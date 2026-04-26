@@ -73,6 +73,7 @@ import {
     anyPolicy,
 } from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
+import { Buffer } from "node:buffer";
 
 const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();
 const SKI_OID: string = id_ce_subjectKeyIdentifier.toString();

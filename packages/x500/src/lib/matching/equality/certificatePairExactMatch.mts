@@ -9,6 +9,7 @@ import {
     CertificatePair,
     _decode_CertificatePair,
 } from "../../modules/AuthenticationFramework/CertificatePair.ta.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const certificatePairExactMatch: EqualityMatcher = (

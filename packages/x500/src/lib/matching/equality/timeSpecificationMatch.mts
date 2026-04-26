@@ -19,6 +19,7 @@ import {
     type Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { DER } from "@wildboar/asn1/functional";
+import { Buffer } from "node:buffer";
 
 function periodHashKey(period: Period): string {
     const encoding = _encode_Period(period, DER).toBytes();

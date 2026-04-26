@@ -4,6 +4,7 @@ import type {
     AuthorityKeyIdentifier,
 } from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
+import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `AuthorityKeyIdentifier` values

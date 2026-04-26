@@ -4,6 +4,7 @@ import type {
     IssuerSerial,
 } from "../modules/AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
+import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `IssuerSerial` values

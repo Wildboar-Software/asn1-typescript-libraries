@@ -5,6 +5,7 @@ import {
     OctetSubstringAssertion,
     _decode_OctetSubstringAssertion,
 } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const octetStringSubstringsMatch: SubstringsMatcher = (

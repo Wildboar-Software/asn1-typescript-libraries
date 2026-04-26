@@ -1,6 +1,7 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Construction, ASN1Element, unpackBits } from "@wildboar/asn1";
 import { compareBitStrings } from "../../comparators/compareBitStrings.mjs";
+import { Buffer } from "node:buffer";
 
 function lastBits (
     numberOfTrailingBits: number,

@@ -4,7 +4,8 @@ import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const attDescriptor: EqualityMatcher = (

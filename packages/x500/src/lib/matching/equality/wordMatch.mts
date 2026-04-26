@@ -11,12 +11,21 @@ import {
 import { directoryStringToString as ds } from "../../stringifiers/directoryStringToString.mjs";
 import { prepString as ps } from "../../utils/prepString.mjs";
 
-function isWordChar(c: string) {
+function isWordChar(c: string): boolean {
     return c && /[\p{L}\p{N}_]/u.test(c);
 }
 
+/**
+ * @summary Check for a contained word per `wordMatch` as defined in ITU-T X.520.
+ * @param haystack The string in which to search
+ * @param needle The string sought for
+ * @returns `true` if the substring is present
+ *
+ * @function
+ * @internal Only exported so this can be used in tests
+ */
 export
-function containsWord (haystack: string, needle: string) {
+function containsWord (haystack: string, needle: string): boolean {
     let i = haystack.indexOf(needle);
     while (i >= 0) {
         const before = haystack[i - 1];

@@ -4,6 +4,7 @@ import {
     UUIDPair,
     _decode_UUIDPair,
 } from "../../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const uUIDPairMatch: EqualityMatcher = (

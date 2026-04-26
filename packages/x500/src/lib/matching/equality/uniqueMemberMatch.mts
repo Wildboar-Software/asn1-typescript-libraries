@@ -6,6 +6,7 @@ import {
     _decode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const uniqueMemberMatch: EqualityMatcher = (

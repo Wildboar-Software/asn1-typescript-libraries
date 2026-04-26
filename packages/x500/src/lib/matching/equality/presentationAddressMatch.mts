@@ -4,6 +4,7 @@ import {
     PresentationAddress,
     _decode_PresentationAddress,
 } from "../../modules/SelectedAttributeTypes/PresentationAddress.ta.mjs";
+import { Buffer } from "node:buffer";
 
 function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
     return (
