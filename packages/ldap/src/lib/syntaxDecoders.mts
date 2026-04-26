@@ -1,6 +1,7 @@
 import type LDAPSyntaxDecoder from "./types/LDAPSyntaxDecoder.mjs";
 import { ASN1Element, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import decodeLDAPOID from "./decodeLDAPOID.mjs";
+import { Buffer } from "node:buffer";
 
 export
 const bitString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {

@@ -2,6 +2,7 @@ import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3
 import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.mjs";
 import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
+import { Buffer } from "node:buffer";
 
 interface ParserState {
     readonly input: string;
@@ -12,7 +13,7 @@ interface ParserState {
 /**
  * @summary Parse an LDAP Filter from a string according to RFC 4515.
  * @description
- * 
+ *
  * This function parses an LDAP Filter from a string, according to
  * [IETF RFC 4515](https://www.rfc-editor.org/rfc/rfc4515).
  *
