@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/rtse",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Reliable Transport Service Element PDUs in TypeScript",
     "keywords": [
         "rtse",

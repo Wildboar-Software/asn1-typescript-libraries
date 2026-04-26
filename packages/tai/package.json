@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/tai",
     "type": "module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript",
     "keywords": [
         "snmp",

@@ -1,37 +1,37 @@
 {
   "name": "@wildboar/cmail",
   "type": "module",
-  "version": "2.0.2",
-    "description": "CMAIL PDUs in TypeScript",
-    "keywords": [
-        "cmail",
-        "email"
-    ],
-    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
-    "bugs": {
-        "email": "jonathan@wilbur.space"
-    },
-    "license": "MIT",
-    "author": {
-        "name": "Jonathan M. Wilbur",
-        "email": "jonathan@wilbur.space",
-        "url": "https://github.com/JonathanWilbur"
-    },
-    "contributors": [
-        {
-            "email": "jonathan@wilbur.space",
-            "name": "Jonathan M. Wilbur",
-            "url": "https://github.com/JonathanWilbur"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
-    },
-    "types": "./src/index.d.mts",
-    "module": "./src/index.mjs",
-    "main": "./src/index.mjs",
-    "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+  "version": "2.0.3",
+  "description": "CMAIL PDUs in TypeScript",
+  "keywords": [
+    "cmail",
+    "email"
+  ],
+  "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+  "bugs": {
+    "email": "jonathan@wilbur.space"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jonathan M. Wilbur",
+    "email": "jonathan@wilbur.space",
+    "url": "https://github.com/JonathanWilbur"
+  },
+  "contributors": [
+    {
+      "email": "jonathan@wilbur.space",
+      "name": "Jonathan M. Wilbur",
+      "url": "https://github.com/JonathanWilbur"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+  },
+  "types": "./src/index.d.mts",
+  "module": "./src/index.mjs",
+  "main": "./src/index.mjs",
+  "dependencies": {
+    "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+  }
 }

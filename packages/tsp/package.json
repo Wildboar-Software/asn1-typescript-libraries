@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/tsp",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Timestamp Protocol PDUs in TypeScript",
     "keywords": [
         "tsp",
@@ -40,4 +40,3 @@
         "@wildboar/cms": "npm:@jsr/wildboar__cms@2.x.x"
     }
 }
-

@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/ocsp",
     "type": "module",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "Online Certificate Status Protocol PDUs in TypeScript",
     "keywords": [
         "ocsp",
@@ -42,4 +42,3 @@
         "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x"
     }
 }
-

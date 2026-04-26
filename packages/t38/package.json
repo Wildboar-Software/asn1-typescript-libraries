@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/t38",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "T.38 Fax-over-IP (FoIP) PDUs in TypeScript",
     "keywords": [
         "t38",
@@ -37,4 +37,3 @@
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
 }
-

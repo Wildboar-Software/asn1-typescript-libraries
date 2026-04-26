@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/tcap",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Transaction Capabilities Application Part PDUs in TypeScript",
     "keywords": [
         "tcap",
@@ -41,4 +41,3 @@
         "@wildboar/rose": "npm:@jsr/wildboar__rose@2.x.x"
     }
 }
-

@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/sec1",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "ASN.1 data structures for SEC-1 in TypeScript",
     "keywords": [
         "sec1",

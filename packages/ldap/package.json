@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/ldap",
     "type": "module",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Lightweight Directory Access Protocol PDUs in TypeScript",
     "keywords": [
         "ldap",
@@ -38,4 +38,3 @@
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
 }
-

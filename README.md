@@ -19,16 +19,6 @@ leap. I will not maintain the CommonJS versions any more.
 Due to both Jest not supporting ESM (yet), the tests are broken and will stay
 broken for as long as it takes. I hate the entire Javashit ecosystem.
 
-**UPDATE**: I will eventually convert these tests to use Vitest. I have had a
-great experience doing this elsewhere: Vitest (via Nx) was basically a drop-in
-replacement that seemed to handle Typescript out of the box, and it seemed
-faster than Jest too.
-
-I wanted to use `esbuild` or `swc` for faster compilation, but both of these
-will not be much faster due to type-checking still being done by TypeScript.
-The TypeScript compiler is being ported to Go anyway, and once that's done, it
-will be nearly as fast.
-
 ## Testing
 
 The project uses Vitest for running tests. You can run tests for the X.500 package using:
@@ -61,6 +51,19 @@ for dir in $(ls -1);
 do
     cd $dir
     npm publish
+    cd ..
+done
+```
+
+## Version Bump All Modules
+
+`cd` into `packages`, then run
+
+```bash
+for dir in $(ls -1);
+do
+    cd $dir
+    jq --arg v "$(jq -r '.version' package.json)" '.version = $v' jsr.json > jsr.tmp && mv jsr.tmp jsr.json
     cd ..
 done
 ```

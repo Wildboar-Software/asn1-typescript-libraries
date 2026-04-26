@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/crmf",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Certificate Request Message Syntax in TypeScript",
     "keywords": [
         "crmf",
