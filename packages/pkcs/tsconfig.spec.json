@@ -3,7 +3,11 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
 
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node"
+    ],
+    "rootDir": "."
   },
   "include": [
     "**/*.spec.mts",
