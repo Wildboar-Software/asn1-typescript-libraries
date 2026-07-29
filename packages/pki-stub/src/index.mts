@@ -20,6 +20,9 @@
  * 
  * @module
  */
+export { getDateFromTime } from "./getDateFromTime.mjs";
+export { getTimeFromDate } from "./getTimeFromDate.mjs";
+
 export * from "./lib/modules/AuthenticationFramework/SCOPE-RESTRICTION.oca.mjs";
 export * from "./lib/modules/AuthenticationFramework/ScopeRestrictions.ta.mjs";
 export * from "./lib/modules/AuthenticationFramework/ScopeRestriction.ta.mjs";
