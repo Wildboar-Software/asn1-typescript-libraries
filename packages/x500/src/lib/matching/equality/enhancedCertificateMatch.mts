@@ -61,7 +61,7 @@ import {
 } from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import compareGeneralName from "../../comparators/compareGeneralName.mjs";
-import getDateFromTime from "../../utils/getDateFromTime.mjs";
+import { getDateFromTime } from "@wildboar/pki-stub";
 import {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,

@@ -27,7 +27,7 @@ import {
     _decode_GeneralNames,
 } from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
-import getDateFromTime from "../../utils/getDateFromTime.mjs";
+import { getDateFromTime } from "@wildboar/pki-stub";
 import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
