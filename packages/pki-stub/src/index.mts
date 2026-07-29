@@ -20,6 +20,7 @@
  * 
  * @module
  */
+export { compareContextLists } from "./compareContextLists.mjs";
 export { getDateFromTime } from "./getDateFromTime.mjs";
 export { getTimeFromDate } from "./getTimeFromDate.mjs";
 
