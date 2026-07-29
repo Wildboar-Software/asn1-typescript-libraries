@@ -1,0 +1,26 @@
+{
+    "name": "presentation-address",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/presentation-address/src",
+    "projectType": "library",
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "dist/packages/presentation-address",
+          "tsConfig": "packages/presentation-address/tsconfig.lib.json",
+          "packageJson": "packages/presentation-address/package.json",
+          "main": "packages/presentation-address/src/index.mts",
+          "assets": [
+            "packages/presentation-address/*.md",
+            "packages/presentation-address/LICENSE.txt",
+            "packages/presentation-address/package.json"
+          ]
+        }
+      }
+    }
+  }
+  

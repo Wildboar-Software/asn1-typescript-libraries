@@ -1,0 +1,41 @@
+{
+  "name": "@wildboar/presentation-address",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ASN.1 data structures for Presentation Address in TypeScript",
+  "keywords": [
+    "asn1",
+    "asn",
+    "osi",
+    "presentation",
+    "address"
+  ],
+  "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+  "bugs": {
+      "email": "jonathan@wilbur.space"
+  },
+  "license": "MIT",
+  "author": {
+      "name": "Jonathan M. Wilbur",
+      "email": "jonathan@wilbur.space",
+      "url": "https://github.com/JonathanWilbur"
+  },
+  "contributors": [
+      {
+          "email": "jonathan@wilbur.space",
+          "name": "Jonathan M. Wilbur",
+          "url": "https://github.com/JonathanWilbur"
+      }
+  ],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+  },
+  "types": "./src/index.d.ts",
+  "module": "./src/index.js",
+  "main": "./src/index.js",
+  "dependencies": {
+    "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+    "@wildboar/nsap-address": "npm:@jsr/wildboar__nsap-address@^1.0.3"
+  }
+}
