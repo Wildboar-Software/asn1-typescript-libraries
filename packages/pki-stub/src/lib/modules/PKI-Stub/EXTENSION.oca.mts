@@ -61,7 +61,7 @@ export interface EXTENSION<
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
     /**
      * @summary &ExtnType
      */

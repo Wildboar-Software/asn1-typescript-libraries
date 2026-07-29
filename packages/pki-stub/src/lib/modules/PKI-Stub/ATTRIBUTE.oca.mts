@@ -60,7 +60,7 @@ export interface ATTRIBUTE {
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
 }
 
 /* eslint-enable */
