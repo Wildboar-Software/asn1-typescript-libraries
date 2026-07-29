@@ -17,8 +17,19 @@ import {
 } from "../PKI-Stub/Certificate.ta.mjs";
 
 /**
- * @summary PkiPath
+ * @summary Ordered list of public key certificates 
  * @description
+ * 
+ * To quote ITU-T Recommendation X.509 (2019), Section 7.7:
+ * 
+ * > Within the sequence, the order of public-key certificates is such that the
+ * > subject of the first public-key certificate is the issuer of the second
+ * > public-key certificate, etc.
+ * 
+ * In other words, if it includes a root CA, that will be the first
+ * certificate, and if it includes an end-entity certificate, it will be the
+ * last certificate in the `SEQUENCE`. It sounds like it does not have to
+ * include a root CA or an end-entity certificate, though.
  *
  * ### ASN.1 Definition:
  *

@@ -12,7 +12,9 @@ import {
  * @description
  *
  * A sequence of relative distinguished names in an order that descends from the
- * root of the DIT.
+ * root of the DIT. Note that this is the opposite of the ordering used in LDAP.
+ * So in LDAP, the DN represented by `cn=Bob,o=Company,st=Florida,c=US` would be
+ * `{c=US, st=Florida, o=Company, cn=Bob}` using this type.
  *
  * ### ASN.1 Definition:
  *

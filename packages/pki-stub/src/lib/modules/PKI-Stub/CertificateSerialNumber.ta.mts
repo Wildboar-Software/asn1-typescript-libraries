@@ -5,11 +5,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CertificateSerialNumber
  * @description
+ * 
+ * Note: this MAY be negative per ITU-T Recommendation X.509 (2019), but it MAY
+ * NOT be negative per [IETF RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280).
  *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * CertificateSerialNumber  ::=  INTEGER
+ * CertificateSerialNumber ::= INTEGER
  * ```
  */
 export type CertificateSerialNumber = OCTET_STRING;

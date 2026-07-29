@@ -29,6 +29,33 @@ export enum _enum_for_CRLReason {
 /**
  * @summary CRLReason
  * @description
+ * 
+ * To quote ITU-T Recommendation X.509 (2019), Section 9.5.3.1, here are the
+ * meanings of each of these values:
+ * 
+ * - `unspecified` can be used to revoke public-key certificates for reasons other
+ *   than the specific codes.
+ * - `keyCompromise` is used in revoking an end-entity public-key certificate; it
+ *   indicates that it is known or suspected that the subject's private key, or
+ *   other aspects of the subject validated in the public-key certificate, have
+ *   been compromised.
+ * - `cACompromise` is used in revoking a CA certificate; it indicates that it is
+ *   known or suspected that the subject's private key, or other aspects of the
+ *   subject validated in the CA certificate, have been compromised.
+ * - `affiliationChanged` indicates that the subject's name or other information in
+ *   the public-key certificate has been modified but there is no cause to suspect
+ *   that the private key has been compromised.
+ * - `superseded` indicates that the public-key certificate has been superseded but
+ *   there is no cause to suspect that the private key has been compromised.
+ * - `cessationOfOperation` indicates that the public-key certificate is no longer
+ *   needed for the purpose for which it was issued but there is no cause to
+ *   suspect that the private key has been compromised.
+ * - `privilegeWithdrawn` indicates that a public-key certificate was revoked because
+ *   a privilege contained within that public-key certificate has been withdrawn.
+ * - `aACompromise` is only relevant for ACRL entries (see 17.2.3.1).
+ * - `weakAlgorithm` indicates that the public-key certificate was revoked due to a
+ *   weak cryptographic algorithm and/or key (e.g., due to short key length or
+ *   unsafe key generation).
  *
  * ### ASN.1 Definition:
  *
