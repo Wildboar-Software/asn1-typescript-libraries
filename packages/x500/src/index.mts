@@ -126,6 +126,7 @@ export { default as compareNSAPs } from "./lib/comparators/compareNSAPs.mjs";
 export { default as compareRDNSequence } from "./lib/comparators/compareRDNSequence.mjs";
 export { default as compareRelativeDistinguishedName } from "./lib/comparators/compareRelativeDistinguishedName.mjs";
 export { compareRoleSpecCertIdentifier } from "./lib/comparators/compareRoleSpecCertIdentifier.mjs";
+export { compareTarget } from "./lib/comparators/compareTarget.mjs";
 export { codeToString } from "./lib/stringifiers/codeToString.mjs";
 export { directoryStringToString } from "./lib/stringifiers/directoryStringToString.mjs";
 export { default as generalNameToString } from "./lib/stringifiers/generalNameToString.mjs";
