@@ -10,5 +10,15 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../ansi-x9-62/tsconfig.lib.json"
+    },
+    {
+      "path": "../ansi-x9-42/tsconfig.lib.json"
+    }
+  ]
 }

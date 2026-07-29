@@ -10,5 +10,18 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    },
+    {
+      "path": "../ocsp/tsconfig.lib.json"
+    },
+    {
+      "path": "../cms/tsconfig.lib.json"
+    }
+  ]
 }

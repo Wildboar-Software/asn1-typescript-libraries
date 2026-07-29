@@ -2,7 +2,188 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": [],
+  "references": [
+    {
+      "path": "./packages/presentation-address"
+    },
+    {
+      "path": "./packages/clearance-sponsor-attribute"
+    },
+    {
+      "path": "./packages/device-owner-attribute"
+    },
+    {
+      "path": "./packages/attribute-asn1module"
+    },
+    {
+      "path": "./packages/gmi-attributemodule"
+    },
+    {
+      "path": "./packages/safecurves-pkix-18"
+    },
+    {
+      "path": "./packages/iso-9798-3-sasl"
+    },
+    {
+      "path": "./packages/ec-private-key"
+    },
+    {
+      "path": "./packages/fast-infoset"
+    },
+    {
+      "path": "./packages/ansi-x9-42"
+    },
+    {
+      "path": "./packages/ansi-x9-62"
+    },
+    {
+      "path": "./packages/kerberos5"
+    },
+    {
+      "path": "./packages/asn1soap"
+    },
+    {
+      "path": "./packages/pki-stub"
+    },
+    {
+      "path": "./packages/scrypt-0"
+    },
+    {
+      "path": "./packages/casscam"
+    },
+    {
+      "path": "./packages/clacse"
+    },
+    {
+      "path": "./packages/acbio"
+    },
+    {
+      "path": "./packages/cades"
+    },
+    {
+      "path": "./packages/cbeff"
+    },
+    {
+      "path": "./packages/cmail"
+    },
+    {
+      "path": "./packages/m3100"
+    },
+    {
+      "path": "./packages/spkac"
+    },
+    {
+      "path": "./packages/x1080"
+    },
+    {
+      "path": "./packages/acse"
+    },
+    {
+      "path": "./packages/cinf"
+    },
+    {
+      "path": "./packages/cmip"
+    },
+    {
+      "path": "./packages/copp"
+    },
+    {
+      "path": "./packages/crmf"
+    },
+    {
+      "path": "./packages/ftam"
+    },
+    {
+      "path": "./packages/guls"
+    },
+    {
+      "path": "./packages/isis"
+    },
+    {
+      "path": "./packages/ldap"
+    },
+    {
+      "path": "./packages/ocsp"
+    },
+    {
+      "path": "./packages/pkcs"
+    },
+    {
+      "path": "./packages/rinf"
+    },
+    {
+      "path": "./packages/rose"
+    },
+    {
+      "path": "./packages/rtse"
+    },
+    {
+      "path": "./packages/scvp"
+    },
+    {
+      "path": "./packages/sec1"
+    },
+    {
+      "path": "./packages/snmp"
+    },
+    {
+      "path": "./packages/tcap"
+    },
+    {
+      "path": "./packages/x400"
+    },
+    {
+      "path": "./packages/x500"
+    },
+    {
+      "path": "./packages/x700"
+    },
+    {
+      "path": "./packages/bip"
+    },
+    {
+      "path": "./packages/ccr"
+    },
+    {
+      "path": "./packages/cmp"
+    },
+    {
+      "path": "./packages/cms"
+    },
+    {
+      "path": "./packages/ers"
+    },
+    {
+      "path": "./packages/ess"
+    },
+    {
+      "path": "./packages/nlm"
+    },
+    {
+      "path": "./packages/sio"
+    },
+    {
+      "path": "./packages/t38"
+    },
+    {
+      "path": "./packages/tai"
+    },
+    {
+      "path": "./packages/tal"
+    },
+    {
+      "path": "./packages/tsp"
+    },
+    {
+      "path": "./packages/usm"
+    },
+    {
+      "path": "./packages/pc"
+    },
+    {
+      "path": "./packages/qc"
+    }
+  ],
   "compilerOptions": {
     "ignoreDeprecations": "6.0"
   }

@@ -9,5 +9,30 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../cms/tsconfig.lib.json"
+    },
+    {
+      "path": "../attribute-asn1module/tsconfig.lib.json"
+    },
+    {
+      "path": "../cmip/tsconfig.lib.json"
+    },
+    {
+      "path": "../rtse/tsconfig.lib.json"
+    },
+    {
+      "path": "../acse/tsconfig.lib.json"
+    },
+    {
+      "path": "../ftam/tsconfig.lib.json"
+    },
+    {
+      "path": "../rose/tsconfig.lib.json"
+    }
+  ]
 }

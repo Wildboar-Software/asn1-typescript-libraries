@@ -9,5 +9,12 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../cbeff/tsconfig.lib.json"
+    }
+  ]
 }

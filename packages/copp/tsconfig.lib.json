@@ -10,5 +10,12 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../rtse/tsconfig.lib.json"
+    }
+  ]
 }

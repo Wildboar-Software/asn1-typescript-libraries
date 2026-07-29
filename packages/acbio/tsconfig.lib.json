@@ -13,5 +13,13 @@
     ],
     "include": [
         "**/*.mts"
+    ],
+    "references": [
+      {
+        "path": "../cbeff/tsconfig.lib.json"
+      },
+      {
+        "path": "../cms/tsconfig.lib.json"
+      }
     ]
 }

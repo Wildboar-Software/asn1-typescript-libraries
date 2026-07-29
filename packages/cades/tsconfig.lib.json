@@ -10,5 +10,21 @@
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
-  "include": ["**/*.mts"]
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../ocsp/tsconfig.lib.json"
+    },
+    {
+      "path": "../cms/tsconfig.lib.json"
+    },
+    {
+      "path": "../ers/tsconfig.lib.json"
+    },
+    {
+      "path": "../tsp/tsconfig.lib.json"
+    }
+  ]
 }
