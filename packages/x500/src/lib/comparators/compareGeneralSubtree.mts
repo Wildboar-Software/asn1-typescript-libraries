@@ -11,6 +11,8 @@ const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum as num
  * @summary Compare two `GeneralSubtree` values
  * @param a One value
  * @param b The other
+ * @param getEqualityMatcher A function that takes an attribute type and
+ *  returns a function that can equality-match two values of that type
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */

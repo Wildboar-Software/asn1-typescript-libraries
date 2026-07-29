@@ -10,6 +10,8 @@ import { Buffer } from "node:buffer";
  * @summary Compare two `IssuerSerial` values
  * @param a One value
  * @param b The other
+ * @param getEqualityMatcher A function that takes an attribute type and
+ *  returns a function that can equality-match two values of that type
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */
@@ -25,6 +27,7 @@ function compareIssuerSerial (
     if (Buffer.compare(a.serial, b.serial)) {
         return false;
     }
+    // TODO: Do these really have to be identical? Sometimes this can be a subset, I think.
     return compareGeneralNames(a.issuer, b.issuer, getEqualityMatcher);
 }
 

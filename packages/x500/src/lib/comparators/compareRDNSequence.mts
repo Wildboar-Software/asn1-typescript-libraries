@@ -7,10 +7,12 @@ import compareRelativeDistinguishedName from "./compareRelativeDistinguishedName
  * @summary Compare two `RDNSequence` values
  * @param a One value
  * @param b The other
+ * @param getEqualityMatcher A function that takes an attribute type and
+ *  returns a function that can equality-match two values of that type
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */
-export default function compare(
+export function compareRDNSequence(
     a: RDNSequence,
     b: RDNSequence,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
@@ -25,3 +27,5 @@ export default function compare(
     }
     return true;
 }
+
+export default compareRDNSequence;
