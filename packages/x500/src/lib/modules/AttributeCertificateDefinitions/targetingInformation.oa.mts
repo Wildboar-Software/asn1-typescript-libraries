@@ -10,6 +10,11 @@ import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary targetingInformation
  * @description
+ * 
+ * Just a heads up: the fact that this syntax is a `SEQUENCE OF SEQUENCE OF`
+ * means absolutely nothing. I think it was a mistake that is part of the
+ * permanent specification now. IETF RFC 5755 says that this extension
+ * should always only have a single `Targets`.
  *
  * ### ASN.1 Definition:
  *

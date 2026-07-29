@@ -15,9 +15,28 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
+
 /**
  * @summary ACPathData
  * @description
+ * 
+ * It is not clear what the meaning of the fields in each `ACPathData`
+ * are. The specification says nothing. I would assume that each field of
+ * `ACPathData` must refer to the same subject / holder / person, etc.,
+ * and that the purpose for having both is that some attribute certificates
+ * refer to the corresponding public key certificate by way of an object
+ * digest, so it would be impossible in some cases, to resolve a digest to
+ * a public key certificate: the PKC has to be provided. Also, an SOA might
+ * not have an attribute certificate, since it is presumed to have all
+ * privileges. An attribute certificate may be provided without a PKC; maybe
+ * this was made optional because relying parties could cache PKI verification
+ * and therefore, sending a full certificate (for each path data) would waste
+ * bandwidth (this protocol was created in the early 2000s when bandwidth
+ * mattered a lot more).
+ * 
+ * Interestingly, no constraints are present to require at least one field to
+ * be populated: both may be empty, at least according to the ASN.1 definition.
+ * I would assume this is an error if you see it.
  *
  * ### ASN.1 Definition:
  *
@@ -32,13 +51,13 @@ import {
 export class ACPathData {
     constructor(
         /**
-         * @summary `certificate`.
+         * @summary `certificate`: an X.509 public key certificate
          * @public
          * @readonly
          */
         readonly certificate?: OPTIONAL<Certificate>,
         /**
-         * @summary `attributeCertificate`.
+         * @summary `attributeCertificate`: an X.509 attribute certificate
          * @public
          * @readonly
          */

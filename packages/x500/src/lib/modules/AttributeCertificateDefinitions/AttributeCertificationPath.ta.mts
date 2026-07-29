@@ -18,6 +18,11 @@ import {
 /**
  * @summary AttributeCertificationPath
  * @description
+ * 
+ * ASN.1 type that represents a delegation path in Privilege Management
+ * Infrastructure (PMI). Just like a chain of certificates constitutes
+ * Public Key Infrastructure (PKI), a chain of attribute certificates
+ * constitutes Privilege Management Infrastructure (PMI).
  *
  * ### ASN.1 Definition:
  *
@@ -32,13 +37,29 @@ import {
 export class AttributeCertificationPath {
     constructor(
         /**
-         * @summary `attributeCertificate`.
+         * @summary `attributeCertificate`: the asserted attribute certificate
+         * @description
+         * 
+         * This does NOT have to be an end-entity. AAs can assert privileges too.
+         * 
          * @public
          * @readonly
          */
         readonly attributeCertificate: AttributeCertificate,
         /**
-         * @summary `acPath`.
+         * @summary `acPath`: delegation path up to, but excluding, the SOA
+         * @description
+         * 
+         * It is not clear in ITU-T Recommendation X.509 what the proper ordering of
+         * elements in `acPath` is supposed to be. Because this data structure appears
+         * to be analogous to a `CertificationPath`, I would assume that `acPath`
+         * should contain an `ACPathData` for each AA, starting from the AA that
+         * issued the attribute certificate in `attributeCertificate`, and up until,
+         * but excluding, the SOA. This was both my opinion and the opinion of an
+         * LLM that read the X.509 specification. I would advise _assuming_
+         * this to be the case and fail if it is not in the interest of
+         * [virtuous intolerance](https://datatracker.ietf.org/doc/html/draft-iab-protocol-maintenance-04#section-7).
+         * 
          * @public
          * @readonly
          */

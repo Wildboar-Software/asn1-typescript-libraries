@@ -15,9 +15,19 @@ import {
     _decode_CertificatePair,
     _encode_CertificatePair,
 } from "../AuthenticationFramework/CertificatePair.ta.mjs";
+import type { PkiPath } from "./PkiPath.ta.mjs";
+
 /**
  * @summary CertificationPath
  * @description
+ * 
+ * To quote ITU-T Recommendation X.509 (2019), Section 7.7:
+ * 
+ * > The CertificationPath data type was defined at an early stage, before the
+ * > concept of certification path was fully developed. The order of elements
+ * > in a CertificationPath instance is the opposite of that of a certification
+ * > path as it is defined now. [...] It is recommended that new applications
+ * > use the PkiPath data type.
  *
  * ### ASN.1 Definition:
  *
@@ -32,13 +42,20 @@ import {
 export class CertificationPath {
     constructor(
         /**
-         * @summary `userCertificate`.
+         * @summary `userCertificate`: the end-entity public-key certificate
          * @public
          * @readonly
          */
         readonly userCertificate: Certificate,
         /**
-         * @summary `theCACertificates`.
+         * @summary `theCACertificates`: each CA up to and including the CA certified by the trust anchor
+         * @description
+         * 
+         * This is not intended to contain the trust anchor itself, only the CA
+         * certs leading up to it. If the end-entity public-key certificate has
+         * been issued directly by the trust anchor, this component shall be
+         * absent.
+         * 
          * @public
          * @readonly
          */
@@ -71,6 +88,66 @@ export class CertificationPath {
             _o.theCACertificates,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Obtain a `CertificationPath` from a `PkiPath`
+     * @description
+     * 
+     * This function exists because it is easy to make mistakes in this
+     * conversion. For one, the ordering of certificates is reversed between
+     * this type and `PkiPath`. Second, it required a bit of research to
+     * determine which field of `CertificatePair` each CA certificate should
+     * occupy.
+     * 
+     * @param pkiPath The ordered array of public key certificates, where the
+     *  subject of the first is the issuer of the second, and so on. This MAY
+     *  or MAY NOT start with a root CA, but it MUST end with an end-entity
+     *  certificate.
+     * @returns The `CertificationPath`, or `null` if the `PkiPath` supplied
+     *  was empty.
+     * @function
+     */
+    public static fromPkiPath(pkiPath: PkiPath): CertificationPath | null {
+        const ee_cert = pkiPath[pkiPath.length - 1];
+        if (!ee_cert) {
+            return null;
+        }
+        return new CertificationPath(
+            ee_cert,
+            pkiPath.slice(0, -1)
+                .map((cert) => new CertificatePair(cert, undefined))
+                .reverse(),
+        );
+    }
+
+    /**
+     * @summary Convert this `CertificationPath` into its `PkiPath` equivalent
+     * @description
+     * 
+     * This function exists because it is easy to make mistakes in this
+     * conversion. For one, the ordering of certificates is reversed between
+     * this type and `PkiPath`. Second, it required a bit of research to
+     * determine which field of `CertificatePair` each CA certificate should
+     * occupy.
+     * 
+     * @returns The equivalent `PkiPath`
+     * @function
+     */
+    public intoPkiPath(): PkiPath | null {
+        const maybeIssuedToTheseCAs = this
+            .theCACertificates
+            ?.map((cp) => cp.issuedToThisCA);
+        const issuedToTheseCAs = maybeIssuedToTheseCAs
+            .filter((cp): cp is Certificate => !!cp);
+        if (issuedToTheseCAs.length !== maybeIssuedToTheseCAs.length) {
+            // We filtered out a certificate pair, because it didn't have issuedToThisCA.
+            return null;
+        }
+        return [
+            ...issuedToTheseCAs.reverse(),
+            this.userCertificate,
+        ];
     }
 }
 
