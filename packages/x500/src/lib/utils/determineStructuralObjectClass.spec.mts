@@ -1,7 +1,6 @@
 import { ObjectIdentifier, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { top } from "../modules/InformationFramework/top.oa.mjs";
 import {
-    ObjectClassKind,
     ObjectClassKind_structural,
     ObjectClassKind_abstract,
     ObjectClassKind_auxiliary,

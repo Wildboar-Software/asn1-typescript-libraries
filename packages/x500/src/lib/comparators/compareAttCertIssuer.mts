@@ -12,6 +12,8 @@ import compareBitStrings from "./compareBitStrings.mjs";
  * @summary Compare two `AttCertIssuer` values
  * @param a One value
  * @param b The other
+ * @param getEqualityMatcher A function that takes an attribute type and
+ *  returns a function that can equality-match two values of that type
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */

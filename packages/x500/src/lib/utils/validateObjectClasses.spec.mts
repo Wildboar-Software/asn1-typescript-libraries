@@ -1,6 +1,5 @@
-import { ObjectIdentifier, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
-    ObjectClassKind,
     ObjectClassKind_structural,
     ObjectClassKind_abstract,
     ObjectClassKind_auxiliary,
