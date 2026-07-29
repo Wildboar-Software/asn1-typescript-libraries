@@ -3,19 +3,13 @@
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
 offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1
-compiler itself is closed-source and proprietary, but some of the libraries
-produced with it are released publicly under the
-[MIT license](https://mit-license.org/).
-
-If you would like to see additional ASN.1 libraries in TypeScript or other
-programming languages, or if you have any other questions, please contact us at
-[contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+compiler itself is closed-source and proprietary, but the ASN.1 parser
+is [open source](https://github.com/Wildboar-Software/asn1parser).
 
 ## Note
 
 These modules were recently converted to being ESM only. It is time to make the
 leap. I will not maintain the CommonJS versions any more.
-
 Due to both Jest not supporting ESM (yet), the tests are broken and will stay
 broken for as long as it takes. I hate the entire Javashit ecosystem.
 
@@ -91,16 +85,14 @@ done
 ## Usage
 
 Some libraries expose few or no imports directly from the main file. Instead,
-users must "deep-import" symbols from these libraries.
+users must import from alternative entrypoints instead.
 
 ```typescript
-// This will not work.
+// This might not work.
 import { Certificate } from "@wildboar/x500";
 
 // This will work.
-import {
-    Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+import { Certificate } from "@wildboar/x500/AuthenticationFramework";
 ```
 
 ## Notes
