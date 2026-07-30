@@ -1,6 +1,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    BERElement,
     OCTET_STRING,
     OPTIONAL,
 } from "@wildboar/asn1";
@@ -103,6 +104,7 @@ function selectorFromRfc1278String(s: string): OCTET_STRING | string {
                 return "malformed";
             }
             const sub = s.slice(1, -1);
+            // TODO: I think a regex would be faster.
             if (!Array.from(sub).every((c: string) => is_other_char(c.charCodeAt(0)))) {
                 return "malformed";
             }
@@ -120,6 +122,9 @@ function selectorFromRfc1278String(s: string): OCTET_STRING | string {
             return Buffer.from(sub, "hex");
         case "#":
             // US GOSIP
+            if (!/^\d+$/.test(s.slice(1))) {
+                return "malformed";
+            }
             const num = Number.parseInt(s.slice(1), 10);
             if (Number.isNaN(num) || num < 0 || num > 65535) {
                 return "malformed";
@@ -184,30 +189,6 @@ export class PresentationAddress {
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
     ) { }
-
-    /**
-     * @summary Restructures an object into a PresentationAddress
-     * @description
-     *
-     * This takes an `object` and converts it to a `PresentationAddress`.
-     *
-     * @public
-     * @static
-     * @method
-     * @param {Object} _o An object having all of the keys and values of a `PresentationAddress`.
-     * @returns {PresentationAddress}
-     */
-    public static _from_object(
-        _o: { [_K in keyof PresentationAddress]: PresentationAddress[_K] }
-    ): PresentationAddress {
-        return new PresentationAddress(
-            _o.pSelector,
-            _o.sSelector,
-            _o.tSelector,
-            _o.nAddresses,
-            _o._unrecognizedExtensionsList
-        );
-    }
 
     /**
      * @summary Converts the PresentationAddress to the ASN.1 string representation.
@@ -629,12 +610,14 @@ export class PresentationAddress {
         if (this.nAddresses.length > other.nAddresses.length) {
             return false;
         }
+        // TODO: If naddresses.length === 1, we can just compare the strings directly.
         const othern = new Set(
             other
                 .nAddresses
                 .map(naddr => Buffer.from(naddr).toString("latin1"))
         );
         for (const naddr of this.nAddresses) {
+            // TODO: Does this need to be delete()?
             if (!othern.has(Buffer.from(naddr).toString("latin1"))) {
                 return false;
             }
@@ -672,10 +655,6 @@ export class PresentationAddress {
         if (!compareSelectors(this.tSelector, other.tSelector)) {
             return false;
         }
-        if (this.nAddresses.length === 0) {
-            // Empty PresentationAddresses should match nothing.
-            return false;
-        }
         if (this.nAddresses.length !== other.nAddresses.length) {
             return false;
         }
@@ -694,6 +673,31 @@ export class PresentationAddress {
             }
         }
         return true;
+    }
+
+    /**
+     * @summary Encodes the PresentationAddress into bytes using the distinguished encoding rules (DER).
+     * @returns Bytes of the encoded PresentationAddress.
+     * @public
+     * @method
+     */
+    public toX690Bytes(): Uint8Array {
+        return _encode_PresentationAddress(this).toBytes();
+    }
+
+    /**
+     * @summary Decodes a PresentationAddress from bytes using the basic encoding rules (BER).
+     * @param bytes Bytes of the encoded PresentationAddress.
+     * @returns The decoded PresentationAddress.
+     * @public
+     * @method
+     */
+    public static fromX690Bytes(bytes: Uint8Array): PresentationAddress {
+        const el = new BERElement();
+        if (el.fromBytes(bytes) !== bytes.length) {
+            throw new Error("Malformed PresentationAddress");
+        }
+        return _decode_PresentationAddress(el);
     }
 }
 
@@ -847,7 +851,7 @@ export function _encode_PresentationAddress(value: PresentationAddress): _Elemen
         () =>
             $._encodeSetOf<OCTET_STRING>(
                 () => $._encodeOctetString,
-                $.BER
+                $.DER
             ),
         $.BER
     )(value.nAddresses, $.BER));
