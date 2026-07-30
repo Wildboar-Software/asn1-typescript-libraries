@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { PresentationAddress } from "./presentation-address.js";
+import { PresentationAddress } from "./presentation-address.mjs";
 import { Buffer } from "node:buffer";
 import { X213NetworkAddress } from "@wildboar/nsap-address";
 import assert from "node:assert";

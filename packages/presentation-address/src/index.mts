@@ -1,1 +1,1 @@
-export * from './lib/presentation-address.js';
+export * from './lib/presentation-address.mjs';
