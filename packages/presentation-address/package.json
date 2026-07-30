@@ -31,9 +31,9 @@
       "type": "git",
       "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
   },
-  "types": "./src/index.d.ts",
-  "module": "./src/index.js",
-  "main": "./src/index.js",
+  "types": "./src/index.d.mts",
+  "module": "./src/index.mjs",
+  "main": "./src/index.mjs",
   "dependencies": {
     "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
     "@wildboar/nsap-address": "npm:@jsr/wildboar__nsap-address@^1.0.3"
