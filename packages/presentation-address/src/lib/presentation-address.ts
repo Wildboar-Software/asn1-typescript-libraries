@@ -37,24 +37,10 @@ export type PresentationAddressStrings = {
 }
 
 function is_other_char(c: number): boolean {
-    return (
-        /[a-zA-Z0-9+/]/.test(String.fromCharCode(c))
-        || c == '+'.charCodeAt(0)
-        || c == '-'.charCodeAt(0)
-        || c == '.'.charCodeAt(0)
-    );
+    return /[a-zA-Z0-9+-.]/.test(String.fromCharCode(c));
 }
 
-/// Displays the selector according to
-/// [IETF RFC 1278](https://datatracker.ietf.org/doc/html/rfc1278)
-/// 
-/// ```abnf
-/// <selector>  ::= '"' <otherstring> '"'        -- IA5
-///                 | "#" <digitstring>          -- US GOSIP            40
-///                 | "'" <hexstring> "'H"       -- Hex
-///                 | ""                         -- Empty but present
-/// ```
-export function selectorToRfc1278String(
+function selectorToRfc1278String(
     selector: OCTET_STRING,
 ): string {
     const len = selector.length;
@@ -104,8 +90,7 @@ function selectorFromRfc1278String(s: string): OCTET_STRING | string {
                 return "malformed";
             }
             const sub = s.slice(1, -1);
-            // TODO: I think a regex would be faster.
-            if (!Array.from(sub).every((c: string) => is_other_char(c.charCodeAt(0)))) {
+            if (!/^[a-zA-Z0-9+-.]*$/.test(sub)) {
                 return "malformed";
             }
             return Buffer.from(sub, "ascii");
@@ -610,14 +595,18 @@ export class PresentationAddress {
         if (this.nAddresses.length > other.nAddresses.length) {
             return false;
         }
-        // TODO: If naddresses.length === 1, we can just compare the strings directly.
+        if (this.nAddresses.length === 1) {
+            return other.nAddresses.some((naddr) => !Buffer.compare(
+                naddr,
+                this.nAddresses[0],
+            ));
+        }
         const othern = new Set(
             other
                 .nAddresses
                 .map(naddr => Buffer.from(naddr).toString("latin1"))
         );
         for (const naddr of this.nAddresses) {
-            // TODO: Does this need to be delete()?
             if (!othern.has(Buffer.from(naddr).toString("latin1"))) {
                 return false;
             }
@@ -657,6 +646,12 @@ export class PresentationAddress {
         }
         if (this.nAddresses.length !== other.nAddresses.length) {
             return false;
+        }
+        if (this.nAddresses.length === 1) {
+            return !Buffer.compare(
+                other.nAddresses[0],
+                this.nAddresses[0],
+            );
         }
         const selfn = new Set(
             this.nAddresses.map(naddr => Buffer.from(naddr).toString("latin1"))
