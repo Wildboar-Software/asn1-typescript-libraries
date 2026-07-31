@@ -1,0 +1,40 @@
+{
+  "name": "@wildboar/or-address",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "X.400 Message Handling System (MHS) O/R Address in TypeScript",
+  "keywords": [
+    "x400",
+    "mhs",
+    "x.400",
+    "messaging"
+  ],
+  "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+  "bugs": {
+    "email": "jonathan@wilbur.space"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jonathan M. Wilbur",
+    "email": "jonathan@wilbur.space",
+    "url": "https://github.com/JonathanWilbur"
+  },
+  "contributors": [
+    {
+      "email": "jonathan@wilbur.space",
+      "name": "Jonathan M. Wilbur",
+      "url": "https://github.com/JonathanWilbur"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+  },
+  "types": "./src/index.d.mts",
+  "module": "./src/index.mjs",
+  "main": "./src/index.mjs",
+  "dependencies": {
+    "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+    "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.2"
+  }
+}

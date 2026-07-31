@@ -1,0 +1,25 @@
+{
+    "name": "or-address",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/or-address/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "outputPath": "dist/packages/or-address",
+                "tsConfig": "packages/or-address/tsconfig.lib.json",
+                "packageJson": "packages/or-address/package.json",
+                "main": "packages/or-address/src/index.mts",
+                "assets": [
+                    "packages/or-address/*.md",
+                    "packages/or-address/LICENSE.txt",
+                    "packages/or-address/package.json"
+                ]
+            }
+        }
+    }
+}

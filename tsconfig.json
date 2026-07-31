@@ -182,6 +182,9 @@
     },
     {
       "path": "./packages/qc"
+    },
+    {
+      "path": "./packages/or-address"
     }
   ],
   "compilerOptions": {
