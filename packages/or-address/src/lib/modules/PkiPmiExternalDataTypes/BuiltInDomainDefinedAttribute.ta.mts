@@ -6,6 +6,7 @@ import {
     PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
 
 /**
  * @summary BuiltInDomainDefinedAttribute
@@ -50,6 +51,27 @@ export class BuiltInDomainDefinedAttribute {
      */
     public static _from_object(_o: { type_: PrintableString, value: PrintableString }): BuiltInDomainDefinedAttribute {
         return new BuiltInDomainDefinedAttribute(_o.type_, _o.value);
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        return `DDA:${this.type_.replaceAll("=", "==")}=${escape_oraddress_attribute_value(this.value, ';'.charCodeAt(0))}`;
     }
 }
 

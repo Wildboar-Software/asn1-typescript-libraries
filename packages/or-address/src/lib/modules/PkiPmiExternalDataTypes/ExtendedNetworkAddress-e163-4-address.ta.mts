@@ -58,6 +58,28 @@ export class ExtendedNetworkAddress_e163_4_address {
             _o.sub_address
         );
     }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * ISDN=1234567890
+     * ISDN=1234567890x1234
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        return `ISDN=${this.number_}${this.sub_address ? `x${this.sub_address}` : ""}`;
+    }
 }
 
 /**

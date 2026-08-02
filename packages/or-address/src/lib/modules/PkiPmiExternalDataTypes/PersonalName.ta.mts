@@ -6,6 +6,9 @@ import {
     PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
+
+const DELIMITER = ';'.charCodeAt(0);
 
 /**
  * @summary PersonalName
@@ -74,6 +77,40 @@ export class PersonalName {
             _o.initials,
             _o.generation_qualifier
         );
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * S=John;G=Doe;I=J;Q=JR
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const components: string[] = [];
+        if (this.given_name) {
+            components.push(`G=${escape_oraddress_attribute_value(this.given_name, DELIMITER)}`);
+        }
+        if (this.initials) {
+            components.push(`I=${escape_oraddress_attribute_value(this.initials, DELIMITER)}`);
+        }
+        if (this.surname) {
+            components.push(`S=${escape_oraddress_attribute_value(this.surname, DELIMITER)}`);
+        }
+        if (this.generation_qualifier) {
+            components.push(`Q=${escape_oraddress_attribute_value(this.generation_qualifier, DELIMITER)}`);
+        }
+        return components.join(";");
     }
 }
 

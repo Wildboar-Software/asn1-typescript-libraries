@@ -1,11 +1,22 @@
-# or-address
+## X.400 Message Handling Service O/R Address Type
 
-This library was generated with [Nx](https://nx.dev).
+## RFC 1685 Display Behavior
 
-## Building
+This crate implements `Display` for several types according to the
+procedures defined in [IETF RFC 1685](https://www.rfc-editor.org/rfc/rfc1685). It is not entirely clear, if there are multiple conflicting attribute types using different encodings, which should be displayed. Consider the following passage:
 
-Run `nx build or-address` to build the library.
+> If the attributes of an O/R address include characters from an
+> extended character set, human users who do not normally use the
+> same extended character set may have difficulty representing the
+> O/R address or entering it into their messaging system. In this
+> situation, an alias of the O/R address should be provided which is
+> composed entirely of printable string characters.
 
-## Running unit tests
+In addition to this, at the time at which [IETF RFC 1685](https://www.rfc-editor.org/rfc/rfc1685) was published, the "universal" equivalents of the X.400 MHS attributes were not defined, although teletex equivalents were. This does not mean that we cannot display them or parse them from strings, but it seems like the implementation should heavily prefer the printable syntaxes and teletex syntaxes, in that order.
 
-Run `nx test or-address` to execute the unit tests via [Vitest](https://vitest.dev/).
+## To Do
+
+- [ ] X.402, Section 18.5 Name Forms
+  - [ ] `getNameForm()`
+- [ ] Verify character limits in constructors
+- [ ] Don't I need to trim attribute values in OR address components?

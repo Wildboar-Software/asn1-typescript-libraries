@@ -7,6 +7,7 @@ import {
     TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import teletexToString from "@wildboar/teletex";
 
 /**
  * @summary UnformattedPostalAddress
@@ -61,6 +62,46 @@ export class UnformattedPostalAddress {
             _o.printable_address,
             _o.teletex_string
         );
+    }
+
+    /**
+     * @returns The lines of the UnformattedPostalAddress.
+     * @public
+     * @function
+     */
+    public toLines(): string[] {
+        if (this.printable_address) {
+            return this.printable_address;
+        }
+        return this.teletex_string
+            ? teletexToString(this.teletex_string)
+                .split(/\r?\n/)
+            : []
+            ;
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * PD-A1=123 South Main St;PD-A2=Jacksonville, FL 32256;PD-A3=United States
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        return this
+            .toLines()
+            .map((s, i) => `PD-A${i + 1}=${s.replaceAll(";", ";;")}`)
+            .join(";");
     }
 }
 

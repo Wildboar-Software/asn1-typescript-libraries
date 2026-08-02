@@ -35,6 +35,7 @@
   "main": "./src/index.mjs",
   "dependencies": {
     "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+    "@wildboar/nsap-address": "npm:@jsr/wildboar__nsap-address@^1.0.3",
     "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.2"
   }
 }

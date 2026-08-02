@@ -7,6 +7,7 @@ import {
     TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import teletexToString from "@wildboar/teletex";
 
 /**
  * @summary PDSParameter
@@ -53,6 +54,16 @@ export class PDSParameter {
         _o: { [_K in keyof PDSParameter]: PDSParameter[_K] }
     ): PDSParameter {
         return new PDSParameter(_o.printable_string, _o.teletex_string);
+    }
+
+    public toString(): string {
+        if (this.printable_string) {
+            return this.printable_string;
+        }
+        return this.teletex_string
+            ? teletexToString(this.teletex_string)
+            : ""
+            ;
     }
 }
 

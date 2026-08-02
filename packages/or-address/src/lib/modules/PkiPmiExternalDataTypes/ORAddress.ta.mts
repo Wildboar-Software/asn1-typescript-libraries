@@ -9,17 +9,18 @@ import {
     BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInDomainDefinedAttributes.ta.mjs";
-import {
     BuiltInStandardAttributes,
     _decode_BuiltInStandardAttributes,
     _encode_BuiltInStandardAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInStandardAttributes.ta.mjs";
-import {
     ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
-} from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta.mjs";
+    _decode_TeletexPersonalName,
+    _decode_UniversalPersonalName,
+} from "../PkiPmiExternalDataTypes/index.mjs";
+import { displayORAddressComponents } from "../../display.mjs";
+
+const DELIMITER = ';'.charCodeAt(0);
 
 /**
  * @summary ORAddress
@@ -78,6 +79,29 @@ export class ORAddress {
             _o.built_in_domain_defined_attributes,
             _o.extension_attributes
         );
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * G=Jonathan;I=M;S=Wilbur;O=Wildboar Software;A=123;C=US
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        return displayORAddressComponents(this)
+            .join(String.fromCharCode(DELIMITER))
+            ;
     }
 }
 

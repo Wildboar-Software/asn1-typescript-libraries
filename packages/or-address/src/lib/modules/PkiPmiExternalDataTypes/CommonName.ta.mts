@@ -14,11 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export type CommonName = PrintableString; // PrintableString
 
-
 export const _decode_CommonName = $._decodePrintableString;
 
-
 export const _encode_CommonName = $._encodePrintableString;
-
 
 /* eslint-enable */

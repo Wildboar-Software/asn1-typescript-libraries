@@ -50,6 +50,10 @@ import {
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";
+import { displayCountryName, displayDomainNameValue } from "../../display.mjs";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
+
+const DELIMITER = ';'.charCodeAt(0);
 
 /**
  * @summary BuiltInStandardAttributes
@@ -163,6 +167,69 @@ export class BuiltInStandardAttributes {
             _o.personal_name,
             _o.organizational_unit_names
         );
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * G=Jonathan;I=M;S=Wilbur;O=Wildboar Software;A=123;C=US
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const components: string[] = [];
+        if (this.personal_name) {
+            components.push(this.personal_name.toString());
+        }
+        if (this.numeric_user_identifier) {
+            components.push("N-ID=" + this.numeric_user_identifier);
+        }
+        if (this.terminal_identifier) {
+            if (!this.terminal_identifier.includes(';')) {
+                components.push("T-ID=" + this.terminal_identifier);
+            } else { // PrintableString is not allowed to contain a semicolon.
+                components.push("T-ID=?");
+            }
+        }
+        if (this.network_address) {
+            components.push("X.121=" + this.network_address);
+        }
+        if (this.organization_name) {
+            if (!this.organization_name.includes(';')) {
+                components.push("O=" + this.organization_name);
+            } else { // PrintableString is not allowed to contain a semicolon.
+                components.push("O=?");
+            }
+        }
+        if (this.organizational_unit_names) {
+            for (const [i, ou] of this.organizational_unit_names.entries()) {
+                if (ou.includes(';')) {
+                    components.push(`OU${i + 1}=?`);
+                    continue;
+                }
+                components.push(`OU${i + 1}=${escape_oraddress_attribute_value(ou, DELIMITER)}`);
+            }
+        }
+        if (this.private_domain_name) {
+            components.push("P=" + displayDomainNameValue(this.private_domain_name));
+        }
+        if (this.administration_domain_name) {
+            components.push("A=" + displayDomainNameValue(this.administration_domain_name));
+        }
+        if (this.country_name) {
+            components.push(displayCountryName(this.country_name));
+        }
+        return components.join(";");
     }
 }
 

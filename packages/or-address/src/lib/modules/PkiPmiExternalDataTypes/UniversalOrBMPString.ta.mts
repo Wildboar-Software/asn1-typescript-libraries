@@ -62,6 +62,22 @@ export class UniversalOrBMPString {
             _o.iso_639_language_code
         );
     }
+
+    /**
+     * Convert this to a string.
+     * @returns The string representation of this `UniversalOrBMPString`.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        if ("two_octets" in this.character_encoding) {
+            return this.character_encoding.two_octets;
+        } else if ("four_octets" in this.character_encoding) {
+            return this.character_encoding.four_octets;
+        } else {
+            return "?";
+        }
+    }
 }
 
 /**
