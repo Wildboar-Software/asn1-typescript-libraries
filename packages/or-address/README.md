@@ -16,6 +16,8 @@ In addition to this, at the time at which [IETF RFC 1685](https://www.rfc-editor
 
 ## To Do
 
+- [x] `ORAddress.toAttributes()`
+- [ ] MIXER functionality
 - [ ] Unit tests
 - [ ] JSDoc
 - [ ] README documentation

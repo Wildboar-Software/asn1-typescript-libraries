@@ -1,3 +1,4 @@
+import type { PresentationAddressStrings } from "@wildboar/presentation-address";
 
 /**
  * X.400 Message Handling System (MHS) O/R Address Name Forms
@@ -137,4 +138,36 @@ export type ORAddressJSON = {
      * The extension attributes of the O/R address
      */
     "extension-attributes"?: ExtensionAttributeJSON[];
+};
+
+export type ORAddressAttributes = {
+    country?: string;
+    administration_domain_name?: string;
+    network_address?: string;
+    terminal_identifier?: string;
+    private_domain_name?: string;
+    organization_name: string[];
+    numeric_user_identifier?: string;
+    personal_name: PersonalNameJSON[];
+    organizational_unit_names: string[][];
+    common_names: string[];
+    pds_names: string[];
+    pd_countries: string[];
+    postal_codes: string[];
+    pd_office_names: string[];
+    pd_office_numbers: string[];
+    pd_organization_names: string[];
+    extension_or_address_components: string[];
+    pd_personal_names: string[];
+    extension_pd_address_components: string[];
+    unformatted_postal_addresses: string[][];
+    street_addresses: string[];
+    po_boxes: string[];
+    poste_restantes: string[];
+    unique_postal_names: string[];
+    local_postal_attributes: string[];
+    isdn_addresses: { number: string; subaddress?: string }[];
+    psap_addresses: PresentationAddressStrings[];
+    terminal_types: number[];
+    domain_defined_attributes: DomainDefinedAttributeJSON[];
 };

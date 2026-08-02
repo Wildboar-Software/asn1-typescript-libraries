@@ -25,7 +25,8 @@ import {
     ub_extension_attributes,
 } from "../PkiPmiExternalDataTypes/index.mjs";
 import { displayORAddressComponents } from "../../display.mjs";
-import { NameForm, ORAddressJSON } from "../../types.mjs";
+import type { NameForm, ORAddressAttributes, ORAddressJSON } from "../../types.mjs";
+import { orAddressToAttributes } from "../../attrs.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -182,6 +183,11 @@ export class ORAddress {
             return has_unformatted ? "post_u" : "post_f";
         }
         return "mnem";
+    }
+
+
+    public toAttributes(): ORAddressAttributes {
+        return orAddressToAttributes(this);
     }
 }
 
