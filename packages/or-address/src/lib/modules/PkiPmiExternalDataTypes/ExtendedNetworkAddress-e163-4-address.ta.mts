@@ -80,6 +80,40 @@ export class ExtendedNetworkAddress_e163_4_address {
     public toString(): string {
         return `ISDN=${this.number_}${this.sub_address ? `x${this.sub_address}` : ""}`;
     }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `ExtendedNetworkAddress_e163_4_address`.
+     * @public
+     * @function
+     */
+    public toJSON(): { number: string, "sub-address"?: string } {
+        return {
+            number: this.number_.toString(),
+            "sub-address": this.sub_address?.toString(),
+        };
+    }
+
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `ExtendedNetworkAddress_e163_4_address`.
+     * @returns The `ExtendedNetworkAddress_e163_4_address` represented by the JSON.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromJSON(json: { number: string, "sub-address"?: string }): ExtendedNetworkAddress_e163_4_address {
+        if (!/^[0-9 ]+$/.test(json.number)) {
+            throw new Error("Invalid ExtendedNetworkAddress-e163-4-address.number");
+        }
+        if (json["sub-address"] && !/^[0-9 ]+$/.test(json["sub-address"])) {
+            throw new Error("Invalid ExtendedNetworkAddress-e163-4-address.sub-address");
+        }
+        return new ExtendedNetworkAddress_e163_4_address(
+            json.number,
+            json["sub-address"],
+        );
+    }
 }
 
 /**

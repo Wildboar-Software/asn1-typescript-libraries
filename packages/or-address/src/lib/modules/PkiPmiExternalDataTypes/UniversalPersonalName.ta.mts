@@ -11,6 +11,7 @@ import {
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { type PersonalNameJSON } from "../../types.mjs";
 
 const DELIMITER = ";".charCodeAt(0);
 
@@ -123,6 +124,39 @@ export class UniversalPersonalName {
         }
         return components.join(";");
     }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `UniversalPersonalName`.
+     * @public
+     * @function
+     */
+    public toJSON(): PersonalNameJSON {
+        return {
+            surname: this.surname.toString(),
+            "given-name": this.given_name?.toString(),
+            initials: this.initials?.toString(),
+            "generation-qualifier": this.generation_qualifier?.toString(),
+        };
+    }
+
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `UniversalPersonalName`.
+     * @returns The `UniversalPersonalName` represented by the JSON.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromJSON(json: PersonalNameJSON): UniversalPersonalName {
+        return new UniversalPersonalName(
+            new UniversalOrBMPString({ four_octets: json.surname }),
+            json["given-name"] ? new UniversalOrBMPString({ four_octets: json["given-name"] }) : undefined,
+            json.initials ? new UniversalOrBMPString({ four_octets: json.initials }) : undefined,
+            json["generation-qualifier"] ? new UniversalOrBMPString({ four_octets: json["generation-qualifier"] }) : undefined,
+        );
+    }
+
 }
 
 /**

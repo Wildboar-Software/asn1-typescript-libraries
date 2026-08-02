@@ -73,6 +73,31 @@ export class BuiltInDomainDefinedAttribute {
     public toString(): string {
         return `DDA:${this.type_.replaceAll("=", "==")}=${escape_oraddress_attribute_value(this.value, ';'.charCodeAt(0))}`;
     }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `BuiltInDomainDefinedAttribute`.
+     * @public
+     * @function
+     */
+    public toJSON(): { type: string, value: string } {
+        return {
+            type: this.type_,
+            value: this.value,
+        };
+    }
+    
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `BuiltInDomainDefinedAttribute`.
+     * @returns The `BuiltInDomainDefinedAttribute` represented by the JSON.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromJSON(json: { type: string, value: string }): BuiltInDomainDefinedAttribute {
+        return new BuiltInDomainDefinedAttribute(json.type, json.value);
+    }
 }
 
 /**

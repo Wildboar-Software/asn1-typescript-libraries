@@ -6,6 +6,8 @@ import {
     TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { teletexToString } from "@wildboar/teletex";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
 
 /**
  * @summary TeletexDomainDefinedAttribute
@@ -57,6 +59,43 @@ export class TeletexDomainDefinedAttribute {
     ): TeletexDomainDefinedAttribute {
         return new TeletexDomainDefinedAttribute(_o.type_, _o.value);
     }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const type_ = teletexToString(this.type_);
+        const value = teletexToString(this.value);
+        return `DDA:${type_.replaceAll("=", "==")}=${escape_oraddress_attribute_value(value, ';'.charCodeAt(0))}`;
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `TeletexDomainDefinedAttribute`.
+     * @public
+     * @function
+     */
+    public toJSON(): { type: string, value: string } {
+        return {
+            type: teletexToString(this.type_),
+            value: teletexToString(this.value),
+        };
+    }
+
 }
 
 /**

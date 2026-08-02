@@ -20,14 +20,6 @@ In addition to this, at the time at which [IETF RFC 1685](https://www.rfc-editor
   - [ ] `getNameForm()`
 - [ ] Verify character limits in constructors
 - [ ] Don't I need to trim attribute values in OR address components?
-- [ ] `toJSON()` / `fromJSON()`
-  - `BuiltInStandardAttributes`
-  - `BuiltInDomainDefinedAttribute`
-  - `PDSParameter`
-  - `UniversalOrBMPString`
-  - `PersonalName`
-  - `UniversalPersonalName`
-  - `UniversalDomainDefinedAttribute`
-  - `TeletexDomainDefinedAttributes`
-  - `ExtendedNetworkAddress_e163_4_address`
-  - `UnformattedPostalAddress`
+- [ ] Unit tests
+- [ ] JSDoc
+- [ ] README documentation

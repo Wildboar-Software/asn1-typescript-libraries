@@ -85,6 +85,34 @@ export class UniversalDomainDefinedAttribute {
         const value = this.value.toString();
         return `DDA:${type_.replaceAll("=", "==")}=${escape_oraddress_attribute_value(value, ';'.charCodeAt(0))}`;
     }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `TeletexDomainDefinedAttribute`.
+     * @public
+     * @function
+     */
+    public toJSON(): { type: string, value: string } {
+        return {
+            type: this.type_.toString(),
+            value: this.value.toString(),
+        };
+    }
+
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `UniversalDomainDefinedAttribute`.
+     * @returns The `UniversalDomainDefinedAttribute` represented by the JSON.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromJSON(json: { type: string, value: string }): UniversalDomainDefinedAttribute {
+        return new UniversalDomainDefinedAttribute(
+            new UniversalOrBMPString({ four_octets: json.type }),
+            new UniversalOrBMPString({ four_octets: json.value }),
+        );
+    }
 }
 
 /**

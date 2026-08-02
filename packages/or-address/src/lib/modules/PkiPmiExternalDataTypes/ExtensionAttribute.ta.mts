@@ -6,6 +6,7 @@ import {
     INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ExtensionAttributeJSON } from "../../types.mjs";
 
 /**
  * @summary ExtensionAttribute
@@ -58,6 +59,19 @@ export class ExtensionAttribute {
             _o.extension_attribute_type,
             _o.extension_attribute_value
         );
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `ExtensionAttribute`.
+     * @public
+     * @function
+     */
+    public toJSON(): ExtensionAttributeJSON {
+        return {
+            "extension-attribute-type": this.extension_attribute_type.toString(),
+            "extension-attribute-value": this.extension_attribute_value.toJSON(),
+        };
     }
 }
 

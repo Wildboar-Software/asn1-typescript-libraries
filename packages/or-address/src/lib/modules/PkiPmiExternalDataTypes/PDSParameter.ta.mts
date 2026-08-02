@@ -56,6 +56,12 @@ export class PDSParameter {
         return new PDSParameter(_o.printable_string, _o.teletex_string);
     }
 
+    /**
+     * Convert to a string representation.
+     * @returns The string representation of this `PDSParameter`.
+     * @public
+     * @function
+     */
     public toString(): string {
         if (this.printable_string) {
             return this.printable_string;
@@ -64,6 +70,21 @@ export class PDSParameter {
             ? teletexToString(this.teletex_string)
             : ""
             ;
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `PDSParameter`.
+     * @public
+     * @function
+     */
+    public toJSON(): { printable_string?: string, teletex_string?: string } {
+        return {
+            printable_string: this.printable_string?.toString(),
+            teletex_string: this.teletex_string
+                ? teletexToString(this.teletex_string)
+                : undefined,
+        };
     }
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -102,6 +101,19 @@ export class UnformattedPostalAddress {
             .toLines()
             .map((s, i) => `PD-A${i + 1}=${s.replaceAll(";", ";;")}`)
             .join(";");
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `UnformattedPostalAddress`.
+     * @public
+     * @function
+     */
+    public toJSON(): { "printable-address"?: string[], "teletex-string"?: string } {
+        return {
+            "printable-address": this.printable_address?.map((s) => s.toString()),
+            "teletex-string": this.teletex_string ? teletexToString(this.teletex_string) : undefined,
+        };
     }
 }
 
@@ -229,6 +241,3 @@ export function _encode_UnformattedPostalAddress(
     }
     return _cached_encoder_for_UnformattedPostalAddress(value, elGetter);
 }
-
-
-/* eslint-enable */

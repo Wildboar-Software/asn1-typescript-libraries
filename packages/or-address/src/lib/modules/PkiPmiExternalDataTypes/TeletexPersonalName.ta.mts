@@ -8,6 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { teletexToString } from "@wildboar/teletex";
+import { type PersonalNameJSON } from "../../types.mjs";
 
 const DELIMITER = ";".charCodeAt(0);
 
@@ -116,6 +117,21 @@ export class TeletexPersonalName {
             components.push(`Q=${escape_oraddress_attribute_value(s, DELIMITER)}`);
         }
         return components.join(";");
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `TeletexPersonalName`.
+     * @public
+     * @function
+     */
+    public toJSON(): PersonalNameJSON {
+        return {
+            surname: teletexToString(this.surname),
+            "given-name": this.given_name ? teletexToString(this.given_name) : undefined,
+            initials: this.initials ? teletexToString(this.initials) : undefined,
+            "generation-qualifier": this.generation_qualifier ? teletexToString(this.generation_qualifier) : undefined,
+        };
     }
 }
 

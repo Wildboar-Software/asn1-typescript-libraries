@@ -6,7 +6,8 @@ import {
     PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
+import { type PersonalNameJSON } from "../../types.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -111,6 +112,50 @@ export class PersonalName {
             components.push(`Q=${escape_oraddress_attribute_value(this.generation_qualifier, DELIMITER)}`);
         }
         return components.join(";");
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `PersonalName`.
+     * @public
+     * @function
+     */
+    public toJSON(): PersonalNameJSON {
+        return {
+            surname: this.surname.toString(),
+            "given-name": this.given_name?.toString(),
+            initials: this.initials?.toString(),
+            "generation-qualifier": this.generation_qualifier?.toString(),
+        };
+    }
+
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `PersonalName`.
+     * @returns The `PersonalName` represented by the JSON.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromJSON(json: PersonalNameJSON): PersonalName {
+        if (!isPrintableString(json.surname)) {
+            throw new Error("Invalid PersonalName.surname");
+        }
+        if (json["given-name"] && !isPrintableString(json["given-name"])) {
+            throw new Error("Invalid PersonalName.given-name");
+        }
+        if (json.initials && !isPrintableString(json.initials)) {
+            throw new Error("Invalid PersonalName.initials");
+        }
+        if (json["generation-qualifier"] && !isPrintableString(json["generation-qualifier"])) {
+            throw new Error("Invalid PersonalName.generation-qualifier");
+        }
+        return new PersonalName(
+            json.surname,
+            json["given-name"],
+            json.initials,
+            json["generation-qualifier"],
+        );
     }
 }
 

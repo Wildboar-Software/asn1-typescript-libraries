@@ -23,3 +23,27 @@ export type NameForm =
     | "post_u"
     | "term"
     ;
+
+export type PersonalNameJSON = {
+    surname: string;
+    "given-name"?: string;
+    "initials"?: string;
+    "generation-qualifier"?: string;
+};
+
+export type BuiltInStandardAttributesJSON = {
+    "country-name"?: string;
+    "administration-domain-name"?: string;
+    "network-address"?: string;
+    "terminal-identifier"?: string;
+    "private-domain-name"?: string;
+    "organization-name"?: string;
+    "numeric-user-identifier"?: string;
+    "personal-name"?: PersonalNameJSON;
+    "organizational-unit-names"?: string[];
+};
+
+export type ExtensionAttributeJSON = {
+    "extension-attribute-type": string;
+    "extension-attribute-value": unknown;
+};

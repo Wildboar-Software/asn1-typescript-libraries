@@ -66,3 +66,8 @@ export function canEncodeAsBMPString(value: string): boolean {
     }
     return true;
 }
+
+// TODO: Define this in @wildboar/asn1. I think it will be faster.
+export function isPrintableString(s: string): boolean {
+    return /^[A-Za-z0-9 '()+,-./:=?]*$/.test(s);
+}

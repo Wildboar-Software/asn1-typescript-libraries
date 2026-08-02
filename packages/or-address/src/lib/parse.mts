@@ -71,7 +71,7 @@ import {
     UniversalPDSParameter,
 } from "./modules/PkiPmiExternalDataTypes/index.mjs";
 import { isPrintableCharacter } from "@wildboar/asn1";
-import { findLabelValueSeparator } from "./utils.mjs";
+import { findLabelValueSeparator, isPrintableString } from "./utils.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { term_type_from_str } from "./display.mjs";
 
@@ -105,11 +105,6 @@ export function postalCodeFromString(s: string): PostalCode | null {
         return { numeric_code: s };
     }
     return null;
-}
-
-// TODO: Define this in @wildboar/asn1. I think it will be faster.
-function isPrintableString(s: string): boolean {
-    return /^[A-Za-z0-9 '()+,-./:=?]*$/.test(s);
 }
 
 export interface NameComponents {

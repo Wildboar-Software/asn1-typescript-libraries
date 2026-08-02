@@ -52,6 +52,8 @@ import {
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";
 import { displayCountryName, displayDomainNameValue } from "../../display.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { builtInStandardAttributesFromString } from "../../parse.mjs";
+import { type BuiltInStandardAttributesJSON } from "../../types.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -231,6 +233,119 @@ export class BuiltInStandardAttributes {
         }
         return components.join(";");
     }
+
+    /**
+     * @summary Convert from the IETF RFC 1685 string representation.
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `BuiltInStandardAttributes`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * G=Jonathan;I=M;S=Wilbur;O=Wildboar Software;A=123;C=US
+     * ```
+     * 
+     * This does not tolerate Unicode or even Teletex strings. In fact, every
+     * string must be--at least--an ASN.1 `PrintableString`.
+     * 
+     * @param s The string representation of this `BuiltInStandardAttributes`.
+     * @returns The `BuiltInStandardAttributes` represented by the string.
+     * @public
+     * @function
+     */
+    public fromString(s: string): BuiltInStandardAttributes {
+        return builtInStandardAttributesFromString(s);
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `BuiltInStandardAttributes`.
+     * @public
+     * @function
+     */
+    public toJSON(): BuiltInStandardAttributesJSON {
+        const c = this.country_name
+            ? ("iso_3166_alpha2_code" in this.country_name
+                ? this.country_name.iso_3166_alpha2_code
+                : this.country_name.x121_dcc_code)
+            : undefined;
+            ;
+        const a = this.administration_domain_name
+            ? (("numeric" in this.administration_domain_name)
+                ? this.administration_domain_name.numeric
+                : this.administration_domain_name.printable)
+            : undefined
+            ;
+        const p = this.private_domain_name
+            ? (("numeric" in this.private_domain_name)
+                ? this.private_domain_name.numeric
+                : this.private_domain_name.printable)
+            : undefined
+            ;
+        return {
+            "country-name": c,
+            "administration-domain-name": a,
+            "network-address": this.network_address?.toString(),
+            "terminal-identifier": this.terminal_identifier?.toString(),
+            "private-domain-name": p,
+            "organization-name": this.organization_name?.toString(),
+            "numeric-user-identifier": this.numeric_user_identifier?.toString(),
+            "personal-name": this.personal_name?.toJSON(),
+            "organizational-unit-names": this.organizational_unit_names?.map((ou) => ou.toString()),
+        };
+    }
+
+    /**
+     * Convert from a JSON representation.
+     * @param json The JSON representation of this `BuiltInStandardAttributes`.
+     * @returns The `BuiltInStandardAttributes` represented by the JSON.
+     * @public
+     * @function
+     */
+    public static fromJSON(json: BuiltInStandardAttributesJSON): BuiltInStandardAttributes {
+        let c;
+        if (json["country-name"]) {
+            if (/^[A-Z]{2}$/.test(json["country-name"])) {
+                c = { iso_3166_alpha2_code: json["country-name"] };
+            } else if (/^[0-9]+$/.test(json["country-name"])) {
+                c = { x121_dcc_code: json["country-name"] };
+            } else {
+                throw new Error("Invalid country name");
+            }
+        }
+        let a;
+        if (json["administration-domain-name"]) {
+            if (/^[0-9]+$/.test(json["administration-domain-name"])) {
+                a = { numeric: json["administration-domain-name"] };
+            } else {
+                a = { printable: json["administration-domain-name"] };
+            }
+        }
+        let p;
+        if (json["private-domain-name"]) {
+            if (/^[0-9]+$/.test(json["private-domain-name"])) {
+                p = { numeric: json["private-domain-name"] };
+            } else {
+                p = { printable: json["private-domain-name"] };
+            }
+        }
+        const pn = json["personal-name"]
+            ? PersonalName.fromJSON(json["personal-name"])
+            : undefined;
+        return new BuiltInStandardAttributes(
+            c,
+            a,
+            json["network-address"],
+            json["terminal-identifier"],
+            p,
+            json["organization-name"],
+            json["numeric-user-identifier"],
+            pn,
+            json["organizational-unit-names"],
+        );
+    }
+
 }
 
 /**
