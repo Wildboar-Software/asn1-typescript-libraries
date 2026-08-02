@@ -11,6 +11,8 @@ import {
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { type DomainDefinedAttributeJSON } from "../../types.mjs";
+
 /**
  * @summary UniversalDomainDefinedAttribute
  * @description
@@ -92,7 +94,7 @@ export class UniversalDomainDefinedAttribute {
      * @public
      * @function
      */
-    public toJSON(): { type: string, value: string } {
+    public toJSON(): DomainDefinedAttributeJSON {
         return {
             type: this.type_.toString(),
             value: this.value.toString(),
@@ -107,7 +109,7 @@ export class UniversalDomainDefinedAttribute {
      * @static
      * @function
      */
-    public static fromJSON(json: { type: string, value: string }): UniversalDomainDefinedAttribute {
+    public static fromJSON(json: DomainDefinedAttributeJSON): UniversalDomainDefinedAttribute {
         return new UniversalDomainDefinedAttribute(
             new UniversalOrBMPString({ four_octets: json.type }),
             new UniversalOrBMPString({ four_octets: json.value }),

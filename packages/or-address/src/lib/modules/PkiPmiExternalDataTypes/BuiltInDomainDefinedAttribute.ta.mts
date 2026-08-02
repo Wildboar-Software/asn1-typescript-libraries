@@ -7,6 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { type DomainDefinedAttributeJSON } from "../../types.mjs";
 
 /**
  * @summary BuiltInDomainDefinedAttribute
@@ -80,7 +81,7 @@ export class BuiltInDomainDefinedAttribute {
      * @public
      * @function
      */
-    public toJSON(): { type: string, value: string } {
+    public toJSON(): DomainDefinedAttributeJSON {
         return {
             type: this.type_,
             value: this.value,
@@ -95,7 +96,7 @@ export class BuiltInDomainDefinedAttribute {
      * @static
      * @function
      */
-    public static fromJSON(json: { type: string, value: string }): BuiltInDomainDefinedAttribute {
+    public static fromJSON(json: DomainDefinedAttributeJSON): BuiltInDomainDefinedAttribute {
         return new BuiltInDomainDefinedAttribute(json.type, json.value);
     }
 }

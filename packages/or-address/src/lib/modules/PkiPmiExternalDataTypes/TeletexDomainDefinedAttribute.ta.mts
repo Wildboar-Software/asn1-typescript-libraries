@@ -8,6 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { teletexToString } from "@wildboar/teletex";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { type DomainDefinedAttributeJSON } from "../../types.mjs";
 
 /**
  * @summary TeletexDomainDefinedAttribute
@@ -89,7 +90,7 @@ export class TeletexDomainDefinedAttribute {
      * @public
      * @function
      */
-    public toJSON(): { type: string, value: string } {
+    public toJSON(): DomainDefinedAttributeJSON {
         return {
             type: teletexToString(this.type_),
             value: teletexToString(this.value),

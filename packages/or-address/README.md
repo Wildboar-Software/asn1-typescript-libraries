@@ -16,8 +16,6 @@ In addition to this, at the time at which [IETF RFC 1685](https://www.rfc-editor
 
 ## To Do
 
-- [ ] X.402, Section 18.5 Name Forms
-  - [ ] `getNameForm()`
 - [ ] Verify character limits in constructors
 - [ ] Don't I need to trim attribute values in OR address components?
 - [ ] Unit tests

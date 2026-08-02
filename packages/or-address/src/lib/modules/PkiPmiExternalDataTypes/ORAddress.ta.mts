@@ -17,8 +17,12 @@ import {
     _encode_ExtensionAttributes,
     _decode_TeletexPersonalName,
     _decode_UniversalPersonalName,
+    physical_delivery_country_name,
+    unformatted_postal_address,
+    universal_unformatted_postal_address,
 } from "../PkiPmiExternalDataTypes/index.mjs";
 import { displayORAddressComponents } from "../../display.mjs";
+import { NameForm, ORAddressJSON } from "../../types.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -102,6 +106,67 @@ export class ORAddress {
         return displayORAddressComponents(this)
             .join(String.fromCharCode(DELIMITER))
             ;
+    }
+
+    /**
+     * Convert to a JSON representation.
+     * @returns The JSON representation of this `ORAddress`.
+     * @public
+     * @function
+     */
+    public toJSON(): ORAddressJSON {
+        return {
+            "built-in-standard-attributes": this.built_in_standard_attributes.toJSON(),
+            "built-in-domain-defined-attributes": this.built_in_domain_defined_attributes
+                ?.map((built_in_domain_defined_attribute) => built_in_domain_defined_attribute.toJSON()),
+            "extension-attributes": this.extension_attributes
+                ?.map((extension_attribute) => extension_attribute.toJSON()),
+        };
+    }
+
+
+    /**
+     * @summary Determine the name form of the O/R address
+     * @description
+     * 
+     * This determines the name form of the O/R address according to the
+     * procedure described in ITU-T Recommendation X.402, Section 18.5.5.
+     * 
+     * > The form of an OR-address shall be determined as follows:
+     * > 
+     * >   - if it contains a numeric-user-identifier, it is a numeric OR-address;
+     * >   - if it contains a network-address, it is a terminal OR-address;
+     * >   - if it contains a physical-delivery-country, it is a postal OR-address;
+     * >   - any other OR-address is a mnemonic OR-address.
+     * >
+     * > If a postal OR-address contains an unformatted-postal-address it is an
+     * > unformatted postal OR-address, otherwise it is a formatted postal
+     * > OR-address.
+     * 
+     * @returns The name form of the O/R address: one of `mnem`, `numr`, `post_f`, `post_u`, or `term`.
+     * @public
+     * @function
+     */
+    public determineNameForm(): NameForm {
+        if (this.built_in_standard_attributes.numeric_user_identifier) {
+            return "numr";
+        }
+        if (this.built_in_standard_attributes.network_address) {
+            return "term";
+        }
+        const has_pd_country = this.extension_attributes
+            ?.some((ext) => ext.extension_attribute_type == physical_delivery_country_name["&id"])
+            ;
+        if (has_pd_country) {
+            const has_unformatted = this.extension_attributes
+                ?.some((ext) => (
+                    (ext.extension_attribute_type == unformatted_postal_address["&id"])
+                    || (ext.extension_attribute_type == universal_unformatted_postal_address["&id"])
+                ))
+                ;
+            return has_unformatted ? "post_u" : "post_f";
+        }
+        return "mnem";
     }
 }
 
