@@ -10,6 +10,7 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
 /**
  * @summary UniversalDomainDefinedAttribute
  * @description
@@ -59,6 +60,30 @@ export class UniversalDomainDefinedAttribute {
         >
     ): UniversalDomainDefinedAttribute {
         return new UniversalDomainDefinedAttribute(_o.type_, _o.value);
+    }
+
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const type_ = this.type_.toString();
+        const value = this.value.toString();
+        return `DDA:${type_.replaceAll("=", "==")}=${escape_oraddress_attribute_value(value, ';'.charCodeAt(0))}`;
     }
 }
 

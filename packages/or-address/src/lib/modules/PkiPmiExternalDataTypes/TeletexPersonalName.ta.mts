@@ -6,6 +6,10 @@ import {
     TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { teletexToString } from "@wildboar/teletex";
+
+const DELIMITER = ";".charCodeAt(0);
 
 /**
  * @summary TeletexPersonalName
@@ -74,6 +78,44 @@ export class TeletexPersonalName {
             _o.initials,
             _o.generation_qualifier
         );
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * S=John;G=Doe;I=J;Q=JR
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const components: string[] = [];
+        if (this.given_name) {
+            const s = teletexToString(this.given_name);
+            components.push(`G=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.initials) {
+            const s = teletexToString(this.initials);
+            components.push(`I=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.surname) {
+            const s = teletexToString(this.surname);
+            components.push(`S=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.generation_qualifier) {
+            const s = teletexToString(this.generation_qualifier);
+            components.push(`Q=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        return components.join(";");
     }
 }
 

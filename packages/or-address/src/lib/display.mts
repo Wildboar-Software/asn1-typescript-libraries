@@ -554,9 +554,3 @@ export function displayORAddressComponents(address: ORAddress): string[] {
     }
     return components;
 }
-
-// TODO: impl Display for TeletexPersonalName
-// TODO: impl Display for UniversalPersonalName
-// TODO: impl Display for BuiltInDomainDefinedAttribute
-// TODO: impl Display for TeletexDomainDefinedAttribute
-// TODO: impl Display for UniversalDomainDefinedAttribute\

@@ -10,6 +10,10 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
+import { escape_oraddress_attribute_value } from "../../utils.mjs";
+
+const DELIMITER = ";".charCodeAt(0);
+
 /**
  * @summary UniversalPersonalName
  * @description
@@ -80,6 +84,44 @@ export class UniversalPersonalName {
             _o.initials,
             _o.generation_qualifier
         );
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * 
+     * This assumes the semicolon (`;`) as the delimiter and escapes it
+     * accordingly.
+     * 
+     * Example output:
+     * 
+     * ```
+     * S=John;G=Doe;I=J;Q=JR
+     * ```
+     * 
+     * @returns The IETF RFC 1685 string representation.
+     * @public
+     * @function
+     */
+    public toString(): string {
+        const components: string[] = [];
+        if (this.given_name) {
+            const s =this.given_name.toString();
+            components.push(`G=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.initials) {
+            const s = this.initials.toString();
+            components.push(`I=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.surname) {
+            const s = this.surname.toString();
+            components.push(`S=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        if (this.generation_qualifier) {
+            const s = this.generation_qualifier.toString();
+            components.push(`Q=${escape_oraddress_attribute_value(s, DELIMITER)}`);
+        }
+        return components.join(";");
     }
 }
 
