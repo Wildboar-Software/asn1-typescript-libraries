@@ -12,6 +12,10 @@ import {
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { type PersonalNameJSON } from "../../types.mjs";
+import { ub_universal_surname_length } from "./ub-universal-surname-length.va.mjs";
+import { ub_universal_given_name_length } from "./ub-universal-given-name-length.va.mjs";
+import { ub_universal_initials_length } from "./ub-universal-initials-length.va.mjs";
+import { ub_universal_generation_qualifier_length } from "./ub-universal-generation-qualifier-length.va.mjs";
 
 const DELIMITER = ";".charCodeAt(0);
 
@@ -62,7 +66,21 @@ export class UniversalPersonalName {
          * @readonly
          */
         readonly generation_qualifier?: OPTIONAL<UniversalOrBMPString>
-    ) {}
+    ) {
+        const s = this.surname.toString();
+        if (s.length > ub_universal_surname_length) {
+            throw new Error("UniversalPersonalName.surname must be 64 characters or less");
+        }
+        if (given_name && given_name.toString().length > ub_universal_given_name_length) {
+            throw new Error("UniversalPersonalName.given_name must be 40 characters or less");
+        }
+        if (initials && initials.toString().length > ub_universal_initials_length) {
+            throw new Error("UniversalPersonalName.initials must be 16 characters or less");
+        }
+        if (generation_qualifier && generation_qualifier.toString().length > ub_universal_generation_qualifier_length) {
+            throw new Error("UniversalPersonalName.generation_qualifier must be 16 characters or less");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UniversalPersonalName

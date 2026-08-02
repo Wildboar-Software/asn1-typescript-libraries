@@ -12,6 +12,8 @@ import {
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { type DomainDefinedAttributeJSON } from "../../types.mjs";
+import { ub_domain_defined_attribute_type_length } from "./ub-domain-defined-attribute-type-length.va.mjs";
+import { ub_domain_defined_attribute_value_length } from "./ub-domain-defined-attribute-value-length.va.mjs";
 
 /**
  * @summary UniversalDomainDefinedAttribute
@@ -40,7 +42,16 @@ export class UniversalDomainDefinedAttribute {
          * @readonly
          */
         readonly value: UniversalOrBMPString
-    ) {}
+    ) {
+        const t = this.type_.toString();
+        const v = this.value.toString();
+        if (t.length > ub_domain_defined_attribute_type_length) {
+            throw new Error("UniversalDomainDefinedAttribute.type must be 16 characters or less");
+        }
+        if (v.length > ub_domain_defined_attribute_value_length) {
+            throw new Error("UniversalDomainDefinedAttribute.value must be 16 characters or less");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UniversalDomainDefinedAttribute

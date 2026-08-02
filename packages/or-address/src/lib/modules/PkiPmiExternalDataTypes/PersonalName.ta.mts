@@ -8,6 +8,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
 import { type PersonalNameJSON } from "../../types.mjs";
+import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length.va.mjs";
+import { ub_initials_length } from "./ub-initials-length.va.mjs";
+import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
+import { ub_surname_length } from "./ub-surname-length.va.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -55,7 +59,32 @@ export class PersonalName {
          * @readonly
          */
         readonly generation_qualifier?: OPTIONAL<PrintableString>
-    ) {}
+    ) {
+        if (surname.length > ub_surname_length) {
+            throw new Error("PersonalName.surname must be 40 characters or less");
+        }
+        if (given_name && given_name.length > ub_given_name_length) {
+            throw new Error("PersonalName.given_name must be 16 characters or less");
+        }
+        if (initials && initials.length > ub_initials_length) {
+            throw new Error("PersonalName.initials must be 5 characters or less");
+        }
+        if (generation_qualifier && generation_qualifier.length > ub_generation_qualifier_length) {
+            throw new Error("PersonalName.generation_qualifier must be 3 characters or less");
+        }
+        if (!isPrintableString(surname)) {
+            throw new Error("Invalid PersonalName.surname");
+        }
+        if (given_name && !isPrintableString(given_name)) {
+            throw new Error("Invalid PersonalName.given_name");
+        }
+        if (initials && !isPrintableString(initials)) {
+            throw new Error("Invalid PersonalName.initials");
+        }
+        if (generation_qualifier && !isPrintableString(generation_qualifier)) {
+            throw new Error("Invalid PersonalName.generation_qualifier");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PersonalName

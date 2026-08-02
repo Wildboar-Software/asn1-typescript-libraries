@@ -9,6 +9,10 @@ import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { teletexToString } from "@wildboar/teletex";
 import { type PersonalNameJSON } from "../../types.mjs";
+import { ub_surname_length } from "./ub-surname-length.va.mjs";
+import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
+import { ub_initials_length } from "./ub-initials-length.va.mjs";
+import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length.va.mjs";
 
 const DELIMITER = ";".charCodeAt(0);
 
@@ -56,7 +60,20 @@ export class TeletexPersonalName {
          * @readonly
          */
         readonly generation_qualifier?: OPTIONAL<TeletexString>
-    ) {}
+    ) {
+        if (surname.length > ub_surname_length) {
+            throw new Error("TeletexPersonalName.surname must be 40 characters or less");
+        }
+        if (given_name && given_name.length > ub_given_name_length) {
+            throw new Error("TeletexPersonalName.given_name must be 16 characters or less");
+        }
+        if (initials && initials.length > ub_initials_length) {
+            throw new Error("TeletexPersonalName.initials must be 5 characters or less");
+        }
+        if (generation_qualifier && generation_qualifier.length > ub_generation_qualifier_length) {
+            throw new Error("TeletexPersonalName.generation_qualifier must be 3 characters or less");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexPersonalName

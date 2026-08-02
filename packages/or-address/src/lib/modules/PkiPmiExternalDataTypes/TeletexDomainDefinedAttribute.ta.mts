@@ -37,7 +37,17 @@ export class TeletexDomainDefinedAttribute {
          * @readonly
          */
         readonly value: TeletexString
-    ) {}
+    ) {
+        // We use 32 here because I think diacritics don't count as characters
+        // for these purposes. This limit is the worst-case scenario: a
+        // diacritic on every character.
+        if (type_.length > 32) {
+            throw new Error("TeletexDomainDefinedAttribute.type must be 16 characters or less");
+        }
+        if (value.length > 32) {
+            throw new Error("TeletexDomainDefinedAttribute.value must be 16 characters or less");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexDomainDefinedAttribute

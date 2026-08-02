@@ -6,8 +6,10 @@ import {
     PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
 import { type DomainDefinedAttributeJSON } from "../../types.mjs";
+import { ub_domain_defined_attribute_type_length } from "./ub-domain-defined-attribute-type-length.va.mjs";
+import { ub_domain_defined_attribute_value_length } from "./ub-domain-defined-attribute-value-length.va.mjs";
 
 /**
  * @summary BuiltInDomainDefinedAttribute
@@ -36,7 +38,20 @@ export class BuiltInDomainDefinedAttribute {
          * @readonly
          */
         readonly value: PrintableString
-    ) {}
+    ) {
+        if (type_.length > ub_domain_defined_attribute_type_length) {
+            throw new Error("BuiltInDomainDefinedAttribute.type must be 16 characters or less");
+        }
+        if (value.length > ub_domain_defined_attribute_value_length) {
+            throw new Error("BuiltInDomainDefinedAttribute.value must be 16 characters or less");
+        }
+        if (!isPrintableString(type_)) {
+            throw new Error("Invalid BuiltInDomainDefinedAttribute.type");
+        }
+        if (!isPrintableString(value)) {
+            throw new Error("Invalid BuiltInDomainDefinedAttribute.value");
+        }
+    }
 
     /**
      * @summary Restructures an object into a BuiltInDomainDefinedAttribute

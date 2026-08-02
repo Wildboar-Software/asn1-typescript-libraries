@@ -51,9 +51,16 @@ import {
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";
 import { displayCountryName, displayDomainNameValue } from "../../display.mjs";
-import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
 import { builtInStandardAttributesFromString } from "../../parse.mjs";
 import { type BuiltInStandardAttributesJSON } from "../../types.mjs";
+import { ub_organization_name_length } from "./ub-organization-name-length.va.mjs";
+import { ub_domain_name_length } from "./ub-domain-name-length.va.mjs";
+import { ub_terminal_id_length } from "./ub-terminal-id-length.va.mjs";
+import { ub_x121_address_length } from "./ub-x121-address-length.va.mjs";
+import { ub_numeric_user_id_length } from "./ub-numeric-user-id-length.va.mjs";
+import { ub_organizational_unit_name_length } from "./ub-organizational-unit-name-length.va.mjs";
+import { ub_organizational_units } from "./ub-organizational-units.va.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -137,7 +144,98 @@ export class BuiltInStandardAttributes {
          * @readonly
          */
         readonly organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>
-    ) {}
+    ) {
+        if (this.country_name) {
+            if ("iso_3166_alpha2_code" in this.country_name) {
+                if (!/^[A-Z]{2}$/.test(this.country_name.iso_3166_alpha2_code)) {
+                    throw new Error("ISO 3166-1 alpha-2 code must be 2 uppercase letters");
+                }
+            } else if ("x121_dcc_code" in this.country_name) {
+                if (!/^[0-9]{3}$/.test(this.country_name.x121_dcc_code)) {
+                    throw new Error("X.121 DCC code must be three numeric digits");
+                }
+            }
+        }
+        if (this.administration_domain_name) {
+            let s;
+            if ("numeric" in this.administration_domain_name) {
+                if (!/^[0-9 ]+$/.test(this.administration_domain_name.numeric)) {
+                    throw new Error("Administration domain name must be numeric");
+                }
+                s = this.administration_domain_name.numeric;
+            } else if ("printable" in this.administration_domain_name) {
+                if (!isPrintableString(this.administration_domain_name.printable)) {
+                    throw new Error("Administration domain name must be printable");
+                }
+                s = this.administration_domain_name.printable;
+            }
+            if (s.length > ub_domain_name_length) {
+                throw new Error("Administration domain name must be 16 characters or less");
+            }
+        }
+        if (this.network_address) {
+            if (this.network_address.length > ub_x121_address_length) {
+                throw new Error("Network address must be 16 characters or less");
+            }
+            if (!/^[0-9 ]+$/.test(this.network_address)) {
+                throw new Error("Network address must be numeric");
+            }
+        }
+        if (this.terminal_identifier) {
+            if (this.terminal_identifier.length > ub_terminal_id_length) {
+                throw new Error("Terminal identifier must be 16 characters or less");
+            }
+            if (!isPrintableString(this.terminal_identifier)) {
+                throw new Error("Terminal identifier must be printable");
+            }
+        }
+        if (this.private_domain_name) {
+            let s;
+            if ("numeric" in this.private_domain_name) {
+                if (!/^[0-9 ]+$/.test(this.private_domain_name.numeric)) {
+                    throw new Error("Private domain name must be numeric");
+                }
+                s = this.private_domain_name.numeric;
+            } else if ("printable" in this.private_domain_name) {
+                if (!isPrintableString(this.private_domain_name.printable)) {
+                    throw new Error("Private domain name must be printable");
+                }
+                s = this.private_domain_name.printable;
+            }
+            if (s.length > ub_domain_name_length) {
+                throw new Error("Private domain name must be 16 characters or less");
+            }
+        }
+        if (this.organization_name) {
+            if (this.organization_name.length > ub_organization_name_length) {
+                throw new Error("Organization name must be 64 characters or less");
+            }
+            if (!isPrintableString(this.organization_name)) {
+                throw new Error("Organization name must be printable");
+            }
+        }
+        if (this.numeric_user_identifier) {
+            if (this.numeric_user_identifier.length > ub_numeric_user_id_length) {
+                throw new Error("Numeric user identifier must be 16 characters or less");
+            }
+            if (!/^[0-9 ]+$/.test(this.numeric_user_identifier)) {
+                throw new Error("Numeric user identifier must be numeric");
+            }
+        }
+        if (this.organizational_unit_names) {
+            if (this.organizational_unit_names.length > ub_organizational_units) {
+                throw new Error("There must be no more than 4 organizational unit names");
+            }
+            for (const ou of this.organizational_unit_names) {
+                if (ou.length > ub_organizational_unit_name_length) {
+                    throw new Error("Organizational unit name must be 16 characters or less");
+                }
+                if (!isPrintableString(ou)) {
+                    throw new Error("Organizational unit name must be printable");
+                }
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a BuiltInStandardAttributes

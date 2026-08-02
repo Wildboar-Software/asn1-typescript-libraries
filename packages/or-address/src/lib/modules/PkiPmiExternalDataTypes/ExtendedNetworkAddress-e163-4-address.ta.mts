@@ -6,6 +6,8 @@ import {
     OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_e163_4_number_length } from "./ub-e163-4-number-length.va.mjs";
+import { ub_e163_4_sub_address_length } from "./ub-e163-4-sub-address-length.va.mjs";
 
 /**
  * @summary ExtendedNetworkAddress_e163_4_address
@@ -32,7 +34,20 @@ export class ExtendedNetworkAddress_e163_4_address {
          * @readonly
          */
         readonly sub_address?: OPTIONAL<NumericString>
-    ) {}
+    ) {
+        if (number_.length > ub_e163_4_number_length) {
+            throw new Error("ExtendedNetworkAddress-e163-4-address.number must be 15 characters or less");
+        }
+        if (sub_address && sub_address.length > ub_e163_4_sub_address_length) {
+            throw new Error("ExtendedNetworkAddress-e163-4-address.sub-address must be 40 characters or less");
+        }
+        if (!/^[0-9 ]+$/.test(number_)) {
+            throw new Error("Invalid ExtendedNetworkAddress-e163-4-address.number");
+        }
+        if (sub_address && !/^[0-9 ]+$/.test(sub_address)) {
+            throw new Error("Invalid ExtendedNetworkAddress-e163-4-address.sub-address");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ExtendedNetworkAddress_e163_4_address

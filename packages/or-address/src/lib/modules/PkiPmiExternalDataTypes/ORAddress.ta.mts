@@ -20,6 +20,9 @@ import {
     physical_delivery_country_name,
     unformatted_postal_address,
     universal_unformatted_postal_address,
+    ub_domain_defined_attribute_type_length,
+    ub_domain_defined_attributes,
+    ub_extension_attributes,
 } from "../PkiPmiExternalDataTypes/index.mjs";
 import { displayORAddressComponents } from "../../display.mjs";
 import { NameForm, ORAddressJSON } from "../../types.mjs";
@@ -61,7 +64,20 @@ export class ORAddress {
          * @readonly
          */
         readonly extension_attributes?: OPTIONAL<ExtensionAttributes>
-    ) {}
+    ) {
+        if (
+            this.built_in_domain_defined_attributes
+            && (this.built_in_domain_defined_attributes.length > ub_domain_defined_attributes)
+        ) {
+            throw new Error("There must be no more than 4 built-in domain defined attributes in an ORAddress");
+        }
+        if (
+            this.extension_attributes
+            && (this.extension_attributes.length > ub_extension_attributes)
+        ) {
+            throw new Error("There must be no more than 256 extension attributes in an ORAddress");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ORAddress
@@ -123,7 +139,6 @@ export class ORAddress {
                 ?.map((extension_attribute) => extension_attribute.toJSON()),
         };
     }
-
 
     /**
      * @summary Determine the name form of the O/R address
