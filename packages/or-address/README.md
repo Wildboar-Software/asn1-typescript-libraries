@@ -16,7 +16,6 @@ In addition to this, at the time at which [IETF RFC 1685](https://www.rfc-editor
 
 ## To Do
 
-- [ ] Don't I need to trim attribute values in OR address components?
 - [ ] Unit tests
 - [ ] JSDoc
 - [ ] README documentation

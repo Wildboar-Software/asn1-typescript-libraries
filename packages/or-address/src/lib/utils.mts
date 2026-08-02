@@ -34,7 +34,7 @@ export function escape_oraddress_attribute_value(s: string, delim: number): stri
     return s.replaceAll(d, replacement);
 }
 
-export function findLabelValueSeparator(s: string): number { 
+export function findLabelValueSeparator(s: string): number {
     let eqIdx = -1;
     for (let i = 0; i < s.length; i++) {
         if (s[i] === "=") {
@@ -70,4 +70,28 @@ export function canEncodeAsBMPString(value: string): boolean {
 // TODO: Define this in @wildboar/asn1. I think it will be faster.
 export function isPrintableString(s: string): boolean {
     return /^[A-Za-z0-9 '()+,-./:=?]*$/.test(s);
+}
+
+export function* splitORAddressComponents(
+    input: string,
+    delimiter_code_point: number,
+): Generator<string, void, undefined> {
+    let field_start = 0;
+    for (let i = 0; i < input.length; i++) {
+        const char = input.codePointAt(i);
+        if (char !== delimiter_code_point) {
+            continue;
+        }
+        if (input.codePointAt(i + 1) === delimiter_code_point) {
+            // field += delimiter_code_point;
+            i++;
+        } else {
+            yield input.slice(field_start, i).trimStart();
+            field_start = i + 1;
+        }
+    }
+    const last = input.slice(field_start);
+    if (last.trimStart().length > 0) {
+        yield last.trimStart();
+    }
 }

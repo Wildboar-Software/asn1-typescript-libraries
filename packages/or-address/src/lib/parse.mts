@@ -71,7 +71,7 @@ import {
     UniversalPDSParameter,
 } from "./modules/PkiPmiExternalDataTypes/index.mjs";
 import { isPrintableCharacter } from "@wildboar/asn1";
-import { findLabelValueSeparator, isPrintableString } from "./utils.mjs";
+import { findLabelValueSeparator, isPrintableString, splitORAddressComponents } from "./utils.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { term_type_from_str } from "./display.mjs";
 
@@ -159,9 +159,12 @@ function getNameComponents(components: string[]): NameComponents {
 }
 
 export function personalNameFromString(s: string): PersonalName | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components = Array.from(splitORAddressComponents(s, delim));
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     const {
@@ -218,9 +221,12 @@ export function teletexDomainDefinedAttributeFromString(s: string): TeletexDomai
 }
 
 export function teletexPersonalNameFromString(s: string): TeletexPersonalName | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components = Array.from(splitORAddressComponents(s, delim));
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     const {
@@ -242,9 +248,12 @@ export function teletexPersonalNameFromString(s: string): TeletexPersonalName | 
 }
 
 export function universalPersonalNameFromString(s: string): UniversalPersonalName | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components = Array.from(splitORAddressComponents(s, delim));
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     const {
@@ -270,9 +279,12 @@ export function universalOrBMPStringFromString(s: string): UniversalOrBMPString 
 }
 
 export function unformattedPostalAddressFromString(s: string): UnformattedPostalAddress | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components = Array.from(splitORAddressComponents(s, delim));
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     components.sort();
@@ -296,7 +308,7 @@ export function unformattedPostalAddressFromString(s: string): UnformattedPostal
         if (lines.length >= 6) {
             return null; // Only 6 lines are allowed.
         }
-        lines.push(value.replaceAll(delim.repeat(2), delim));
+        lines.push(value.replaceAll(String.fromCodePoint(delim).repeat(2), String.fromCodePoint(delim)));
     }
     if (!isPrintable) {
         return new UnformattedPostalAddress(
@@ -324,9 +336,12 @@ export function universalDomainDefinedAttributeFromString(s: string): UniversalD
 }
 
 export function builtInStandardAttributesFromString(s: string): BuiltInStandardAttributes | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components = Array.from(splitORAddressComponents(s, delim));
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     let givenName: string | undefined;
@@ -474,9 +489,14 @@ export function pdsParameterToExtension(
 }
 
 export function orAddressFromString(s: string): ORAddress | null {
-    const delim = s.startsWith("/") ? "/" : ";";
-    const components = s.split(delim);
-    if (delim === "/") {
+    const delim = s.startsWith("/")
+        ? "/".codePointAt(0)!
+        : ";".codePointAt(0)!
+        ;
+    const components =
+        Array.from(splitORAddressComponents(s, delim))
+        ;
+    if (delim === "/".codePointAt(0)!) {
         components.shift();
     }
     let cn: string | undefined;
