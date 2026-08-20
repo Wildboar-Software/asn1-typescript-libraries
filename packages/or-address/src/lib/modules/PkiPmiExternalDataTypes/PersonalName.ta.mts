@@ -14,6 +14,14 @@ import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
 import { ub_surname_length } from "./ub-surname-length.va.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
+const FULL_STOP = ".".charCodeAt(0);
+
+function isAlpha(c: number): boolean {
+    return (
+        ((c >= 0x41) && (c <= 0x5A))
+        || ((c >= 0x61) && (c <= 0x7A))
+    );
+}
 
 /**
  * @summary PersonalName
@@ -186,6 +194,80 @@ export class PersonalName {
             json["generation-qualifier"],
         );
     }
+
+    /**
+     * Parse a dot-delimited personal name as defined by
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1.2
+     * (`encoded-pn`).
+     *
+     * ```
+     * encoded-pn = [ given "." ] *( initial "." ) surname
+     * given      = 2*<ps-char not including ".">
+     * initial    = ALPHA
+     * surname    = printablestring
+     * ```
+     *
+     * Given name and surname are assigned directly. All `initial` tokens are
+     * concatenated without intervening full stops to form the initials
+     * component. This encoding does not represent a generation qualifier.
+     *
+     * Example inputs:
+     *
+     * ```
+     * Marshall.Rose       → given-name=Marshall, surname=Rose
+     * M.T.Rose            → initials=MT, surname=Rose
+     * Marshall.M.T.Rose   → given-name=Marshall, initials=MT, surname=Rose
+     * ```
+     *
+     * @param s The RFC 2156 encoded personal name.
+     * @returns The `PersonalName` represented by the string.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromRFC2156String(s: string): PersonalName {
+        if (
+            (s.length === 0)
+            || !isPrintableString(s)
+        ) {
+            throw new Error("invalid encoded personal name");
+        }
+
+        let offset = 0;
+        let given_name: OPTIONAL<PrintableString>;
+        const firstFullStopIndex = s.indexOf(".");
+        if (
+            (firstFullStopIndex >= 2)
+            && ((firstFullStopIndex + 1) < s.length)
+        ) {
+            given_name = s.slice(0, firstFullStopIndex);
+            offset = firstFullStopIndex + 1;
+        }
+
+        let initials = "";
+        while (
+            ((offset + 2) < s.length)
+            && isAlpha(s.charCodeAt(offset))
+            && (s.charCodeAt(offset + 1) === FULL_STOP)
+        ) {
+            initials += s.charAt(offset);
+            offset += 2;
+        }
+
+        const surname = s.slice(offset);
+        if (surname.length === 0) {
+            throw new Error("invalid encoded personal name");
+        }
+
+        return new PersonalName(
+            surname,
+            given_name,
+            (initials.length > 0)
+                ? initials
+                : undefined,
+        );
+    }
+
 }
 
 /**

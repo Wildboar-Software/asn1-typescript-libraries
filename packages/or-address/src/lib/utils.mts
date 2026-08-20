@@ -34,21 +34,94 @@ export function escape_oraddress_attribute_value(s: string, delim: number): stri
     return s.replaceAll(d, replacement);
 }
 
-export function findLabelValueSeparator(s: string): number {
-    let eqIdx = -1;
+/**
+ * An abstract O/R address attribute label after quoting has been undone.
+ */
+export type AddressAttributeLabel = string;
+
+/**
+ * An abstract O/R address attribute value after quoting has been undone.
+ */
+export type AddressAttributeValue = string;
+
+/**
+ * An abstract label/value pair yielded by the RFC 1685 or RFC 2156 lexers.
+ */
+export type AddressComponent = readonly [AddressAttributeLabel, AddressAttributeValue];
+
+const SOLIDUS = "/".codePointAt(0)!;
+const SEMICOLON = ";".codePointAt(0)!;
+const DOLLAR = "$".codePointAt(0)!;
+const EQUALS_SIGN = "=";
+
+/**
+ * @summary Find the label/value separator in an IETF RFC 1685 component.
+ * @description
+ *
+ * Returns the index of the first `=` that is not doubled. Doubled `=` is used
+ * only in a domain-defined attribute type (`DDA:<type>`), so `DDA:foo==bar=value`
+ * splits after the type, not inside it.
+ *
+ * @param s The `LABEL=value` component.
+ * @returns The index of the separator, or `-1` if none is found.
+ */
+export function findRFC1685LabelValueSeparator(s: string): number {
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === "=") {
-            // Check if this equals sign is not doubled up with the next char
-            if ((s[i + 1] === "=")) {
-                i++;
-                continue; // Skip, as this is doubled up
-            } else {
-                eqIdx = i;
-                break;
-            }
+        if (s[i] !== EQUALS_SIGN) {
+            continue;
+        }
+        if (s[i + 1] === EQUALS_SIGN) {
+            i++;
+            continue;
+        }
+        return i;
+    }
+    return -1;
+}
+
+/**
+ * @summary Find the label/value separator in an IETF RFC 2156 component.
+ * @description
+ *
+ * Returns the index of the first `=` that is not quoted by a preceding `$`.
+ *
+ * @param s The `LABEL=value` component.
+ * @returns The index of the separator, or `-1` if none is found.
+ */
+export function findRFC2156LabelValueSeparator(s: string): number {
+    for (let i = 0; i < s.length; i++) {
+        if (s.codePointAt(i) === DOLLAR) {
+            i++;
+            continue;
+        }
+        if (s[i] === EQUALS_SIGN) {
+            return i;
         }
     }
-    return eqIdx;
+    return -1;
+}
+
+function unescapeRFC2156Quoted(s: string): string | null {
+    let out = "";
+    for (let i = 0; i < s.length; i++) {
+        if (s.codePointAt(i) !== DOLLAR) {
+            out += s[i];
+            continue;
+        }
+        if ((i + 1) >= s.length) {
+            return null; // Trailing unescaped $. Not valid.
+        }
+        out += s[i + 1];
+        i++;
+    }
+    return out;
+}
+
+function rfc1685DelimiterCodePoint(s: string): number {
+    return s.startsWith("/")
+        ? SOLIDUS
+        : SEMICOLON
+        ;
 }
 
 
@@ -72,7 +145,18 @@ export function isPrintableString(s: string): boolean {
     return /^[A-Za-z0-9 '()+,-./:=?]*$/.test(s);
 }
 
-export function* splitORAddressComponents(
+/**
+ * @summary Split an IETF RFC 1685 O/R address into `LABEL=value` components.
+ * @description
+ *
+ * Splits on a single delimiter (`/` or `;`). A doubled delimiter is part of a
+ * value, not a split. Empty chunks (a leading `/`) are skipped.
+ *
+ * @param input The RFC 1685 address string.
+ * @param delimiter_code_point The delimiter code point.
+ * @returns The raw components, still containing doubled-delimiter quoting.
+ */
+export function* splitRFC1685AddressComponents(
     input: string,
     delimiter_code_point: number,
 ): Generator<string, void, undefined> {
@@ -83,15 +167,121 @@ export function* splitORAddressComponents(
             continue;
         }
         if (input.codePointAt(i + 1) === delimiter_code_point) {
-            // field += delimiter_code_point;
             i++;
-        } else {
-            yield input.slice(field_start, i).trimStart();
-            field_start = i + 1;
+            continue;
         }
+        const piece = input.slice(field_start, i).trimStart();
+        if (piece.length > 0) {
+            yield piece;
+        }
+        field_start = i + 1;
     }
-    const last = input.slice(field_start);
-    if (last.trimStart().length > 0) {
-        yield last.trimStart();
+    const last = input.slice(field_start).trimStart();
+    if (last.length > 0) {
+        yield last;
+    }
+}
+
+/**
+ * @summary Split an IETF RFC 2156 O/R address into `LABEL=value` components.
+ * @description
+ *
+ * Splits on `/` or `;` (they may be mixed). A `$` quotes the next character, so
+ * `$/` and `$;` are not separators. Empty chunks from leading or trailing
+ * separators are skipped. A delimiter may be followed by spaces.
+ *
+ * @param input The RFC 2156 address string.
+ * @returns The raw components, still containing `$` quoting.
+ */
+export function* splitRFC2156AddressComponents(
+    input: string,
+): Generator<string, void, undefined> {
+    let field_start = 0;
+    for (let i = 0; i < input.length; i++) {
+        const char = input.codePointAt(i);
+        if (char === DOLLAR) {
+            i++;
+            continue;
+        }
+        if (
+            (char !== SOLIDUS)
+            && (char !== SEMICOLON)
+        ) {
+            continue;
+        }
+        const piece = input.slice(field_start, i).trimStart();
+        if (piece.length > 0) {
+            yield piece;
+        }
+        field_start = i + 1;
+    }
+    const last = input.slice(field_start).trimStart();
+    if (last.length > 0) {
+        yield last;
+    }
+}
+
+function unescapeRFC1685DdaType(label: string): string {
+    if (label.slice(0, 4).toUpperCase() !== "DDA:") {
+        return label;
+    }
+    return `${label.slice(0, 4)}${label.slice(4).replaceAll("==", "=")}`;
+}
+
+/**
+ * @summary Yield abstract IETF RFC 1685 label/value pairs.
+ * @description
+ *
+ * Splits the address, finds each `=`, undoes doubled delimiters in values, and
+ * undoes `==` only in a `DDA:<type>`. Yields `null` for a malformed component.
+ *
+ * @param s The RFC 1685 address string.
+ */
+export function* rfc1685LabelValuePairs(
+    s: string,
+): Generator<AddressComponent | null, void, undefined> {
+    const delimiter_code_point = rfc1685DelimiterCodePoint(s);
+    const delimiter = String.fromCodePoint(delimiter_code_point);
+    for (const chunk of splitRFC1685AddressComponents(s, delimiter_code_point)) {
+        const eqIdx = findRFC1685LabelValueSeparator(chunk);
+        if (eqIdx === -1) {
+            yield null;
+            return;
+        }
+        const label = unescapeRFC1685DdaType(chunk.slice(0, eqIdx));
+        const value = chunk.slice(eqIdx + 1).replaceAll(delimiter.repeat(2), delimiter);
+        yield [label, value];
+    }
+}
+
+/**
+ * @summary Yield abstract IETF RFC 2156 label/value pairs.
+ * @description
+ *
+ * Splits the address, finds each unquoted `=`, and undoes `$` quoting on both
+ * the label and the value. Yields `null` for a malformed component (including a
+ * trailing `$`).
+ *
+ * @param s The RFC 2156 address string.
+ */
+export function* rfc2156LabelValuePairs(
+    s: string,
+): Generator<AddressComponent | null, void, undefined> {
+    for (const chunk of splitRFC2156AddressComponents(s)) {
+        const eqIdx = findRFC2156LabelValueSeparator(chunk);
+        if (eqIdx === -1) {
+            yield null;
+            return;
+        }
+        const maybeLabel = unescapeRFC2156Quoted(chunk.slice(0, eqIdx));
+        const maybeValue = unescapeRFC2156Quoted(chunk.slice(eqIdx + 1));
+        if (
+            (maybeLabel === null)
+            || (maybeValue === null)
+        ) {
+            yield null;
+            return;
+        }
+        yield [maybeLabel, maybeValue];
     }
 }
