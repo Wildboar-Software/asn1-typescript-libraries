@@ -1,9 +1,11 @@
 # OSI Presentation Address in TypeScript
 
-TypeScript implementation of the ASN.1 data structures and PDUs defined in the
-`SelectedAttributeTypes` ASN.1 Module defined by the
+TypeScript implementation of the ASN.1 data structure for `PresentationAddress`
+as defined in the `SelectedAttributeTypes` ASN.1 Module defined by the
 [International Telecommunication Union's (ITU)](https://www.itu.int/en/Pages/default.aspx)
-[recommendation X.520](https://www.itu.int/rec/T-REC-X.520/en).
+[recommendation X.520](https://www.itu.int/rec/T-REC-X.520/en), as well as
+related functionality for printing, parsing, and comparing presentation
+addresses according.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)

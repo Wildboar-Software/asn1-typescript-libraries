@@ -29,10 +29,25 @@ function printOctetString(octetString: OCTET_STRING): string {
     return `'${hex}'H`;
 }
 
+/**
+ * The strings representation of the components of a `PresentationAddress`.
+ */
 export type PresentationAddressStrings = {
+    /**
+     * The presentation-layer selector as a string.
+     */
     pSelector?: string;
+    /**
+     * The session-layer selector as a string.
+     */
     sSelector?: string;
+    /**
+     * The transport-layer selector as a string.
+     */
     tSelector?: string;
+    /**
+     * The network-layer addresses as strings.
+     */
     nAddresses: string[];
 }
 
@@ -142,6 +157,16 @@ function selectorFromRfc1278String(s: string): OCTET_STRING | string {
 *
 */
 export class PresentationAddress {
+    /**
+     * @summary Constructs a new `PresentationAddress` from its parts
+     * @param pSelector The presentation-layer selector.
+     * @param sSelector The session-layer selector.
+     * @param tSelector The transport-layer selector.
+     * @param nAddresses The network-layer addresses.
+     * @param _unrecognizedExtensionsList The unrecognized ASN.1 tag-length-value components.
+     * @public
+     * @constructor
+     */
     constructor(
         /**
          * @summary `pSelector`: presentation-layer selector.
