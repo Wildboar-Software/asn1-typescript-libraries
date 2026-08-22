@@ -297,6 +297,28 @@ export class PersonalName {
         );
     }
 
+    /**
+     * @summary Compares this PersonalName to another, for equality.
+     * @description
+     * Compares all fields of the PersonalName. If `tolerateMissingInitials` is true,
+     * then the initials are not compared; the rationale for this feature is that
+     * initials are sometimes omitted from people's names in real life, and it does
+     * not mean that the names do not refer to the same person. However, any other
+     * field that is missing should probably not be assumed to match a present field.
+     * 
+     * @param other The other PersonalName to compare against.
+     * @param tolerateMissingInitials Whether to tolerate missing initials.
+     * @returns `true` if and only if all relevant fields are equal.
+     */
+    public isEqualTo(other: PersonalName, tolerateMissingInitials: boolean = false): boolean {
+        return (
+            (this.surname === other.surname)
+            && (this.given_name === other.given_name)
+            && (tolerateMissingInitials ? true : this.initials === other.initials)
+            && (this.generation_qualifier === other.generation_qualifier)
+        );
+    }
+
 }
 
 /**

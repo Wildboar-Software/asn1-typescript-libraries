@@ -88,3 +88,53 @@ describe("PersonalName.toRFC2156String", () => {
         expect(name.toRFC2156String()).toBe("G=J/S=Smith");
     });
 });
+
+describe("PersonalName.isEqualTo", () => {
+    it("should treat identical names as equal", () => {
+        const a = new PersonalName("Rose", "Marshall", "MT", "Jr");
+        const b = new PersonalName("Rose", "Marshall", "MT", "Jr");
+        expect(a.isEqualTo(b)).toBe(true);
+    });
+
+    it("should treat surname-only names as equal when the surnames match", () => {
+        expect(new PersonalName("Rose").isEqualTo(new PersonalName("Rose"))).toBe(true);
+    });
+
+    it("should treat names as unequal when the surname differs", () => {
+        expect(new PersonalName("Rose").isEqualTo(new PersonalName("Smith"))).toBe(false);
+    });
+
+    it("should treat names as unequal when the given name differs", () => {
+        const a = new PersonalName("Rose", "Marshall");
+        const b = new PersonalName("Rose", "Andrew");
+        expect(a.isEqualTo(b)).toBe(false);
+    });
+
+    it("should treat a missing given name as unequal to a present one", () => {
+        const a = new PersonalName("Rose", "Marshall");
+        const b = new PersonalName("Rose");
+        expect(a.isEqualTo(b)).toBe(false);
+        expect(a.isEqualTo(b, true)).toBe(false);
+    });
+
+    it("should treat names as unequal when the generation qualifier differs", () => {
+        const a = new PersonalName("Rose", "Marshall", undefined, "Jr");
+        const b = new PersonalName("Rose", "Marshall", undefined, "Sr");
+        expect(a.isEqualTo(b)).toBe(false);
+        expect(a.isEqualTo(b, true)).toBe(false);
+    });
+
+    it("should treat missing initials as unequal unless they are tolerated", () => {
+        const withInitials = new PersonalName("Rose", "Marshall", "MT");
+        const withoutInitials = new PersonalName("Rose", "Marshall");
+        expect(withInitials.isEqualTo(withoutInitials)).toBe(false);
+        expect(withInitials.isEqualTo(withoutInitials, true)).toBe(true);
+    });
+
+    it("should ignore differing initials when they are tolerated", () => {
+        const a = new PersonalName("Rose", "Marshall", "MT");
+        const b = new PersonalName("Rose", "Marshall", "M");
+        expect(a.isEqualTo(b)).toBe(false);
+        expect(a.isEqualTo(b, true)).toBe(true);
+    });
+});

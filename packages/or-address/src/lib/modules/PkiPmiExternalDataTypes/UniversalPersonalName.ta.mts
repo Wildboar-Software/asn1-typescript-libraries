@@ -21,6 +21,29 @@ import { ub_universal_generation_qualifier_length } from "./ub-universal-generat
 const DELIMITER = ";".charCodeAt(0);
 
 /**
+ * @summary Whether two UniversalOrBMPString values represent the same text.
+ *
+ * @param a A UniversalOrBMPString, or `undefined` if the field is absent.
+ * @param b The other UniversalOrBMPString, or `undefined` if the field is absent.
+ * @returns `true` if both are absent, or both have the same text and language.
+ */
+function universalOrBMPStringsAreEqual(
+    a: UniversalOrBMPString | undefined,
+    b: UniversalOrBMPString | undefined,
+): boolean {
+    if (a === b) {
+        return true;
+    }
+    if (
+        (typeof a === "undefined")
+        || (typeof b === "undefined")
+    ) {
+        return false;
+    }
+    return (a.toString() === b.toString());
+}
+
+/**
  * @summary UniversalPersonalName
  * @description
  *
@@ -189,6 +212,28 @@ export class UniversalPersonalName {
             json["given-name"] ? new UniversalOrBMPString({ four_octets: json["given-name"] }) : undefined,
             json.initials ? new UniversalOrBMPString({ four_octets: json.initials }) : undefined,
             json["generation-qualifier"] ? new UniversalOrBMPString({ four_octets: json["generation-qualifier"] }) : undefined,
+        );
+    }
+
+    /**
+     * @summary Compares this UniversalPersonalName to another, for equality.
+     * @description
+     * Compares all fields of the UniversalPersonalName. If `tolerateMissingInitials` is true,
+     * then the initials are not compared; the rationale for this feature is that
+     * initials are sometimes omitted from people's names in real life, and it does
+     * not mean that the names do not refer to the same person. However, any other
+     * field that is missing should probably not be assumed to match a present field.
+     *
+     * @param other The other UniversalPersonalName to compare against.
+     * @param tolerateMissingInitials Whether to tolerate missing initials.
+     * @returns `true` if and only if all relevant fields are equal.
+     */
+    public isEqualTo(other: UniversalPersonalName, tolerateMissingInitials: boolean = false): boolean {
+        return (
+            universalOrBMPStringsAreEqual(this.surname, other.surname)
+            && universalOrBMPStringsAreEqual(this.given_name, other.given_name)
+            && (tolerateMissingInitials ? true : universalOrBMPStringsAreEqual(this.initials, other.initials))
+            && universalOrBMPStringsAreEqual(this.generation_qualifier, other.generation_qualifier)
         );
     }
 

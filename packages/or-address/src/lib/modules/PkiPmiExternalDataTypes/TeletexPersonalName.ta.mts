@@ -18,6 +18,35 @@ import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length
 const DELIMITER = ";".charCodeAt(0);
 
 /**
+ * @summary Whether two TeletexString values contain the same octets.
+ *
+ * @param a A TeletexString, or `undefined` if the field is absent.
+ * @param b The other TeletexString, or `undefined` if the field is absent.
+ * @returns `true` if both are absent or both have identical octets.
+ */
+function teletexStringsAreEqual(
+    a: TeletexString | undefined,
+    b: TeletexString | undefined,
+): boolean {
+    if (a === b) {
+        return true;
+    }
+    if (
+        (typeof a === "undefined")
+        || (typeof b === "undefined")
+        || (a.length !== b.length)
+    ) {
+        return false;
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
  * @summary TeletexPersonalName
  * @description
  *
@@ -166,6 +195,28 @@ export class TeletexPersonalName {
             initials: this.initials ? teletexToString(this.initials) : undefined,
             "generation-qualifier": this.generation_qualifier ? teletexToString(this.generation_qualifier) : undefined,
         };
+    }
+
+    /**
+     * @summary Compares this TeletexPersonalName to another, for equality.
+     * @description
+     * Compares all fields of the TeletexPersonalName. If `tolerateMissingInitials` is true,
+     * then the initials are not compared; the rationale for this feature is that
+     * initials are sometimes omitted from people's names in real life, and it does
+     * not mean that the names do not refer to the same person. However, any other
+     * field that is missing should probably not be assumed to match a present field.
+     *
+     * @param other The other TeletexPersonalName to compare against.
+     * @param tolerateMissingInitials Whether to tolerate missing initials.
+     * @returns `true` if and only if all relevant fields are equal.
+     */
+    public isEqualTo(other: TeletexPersonalName, tolerateMissingInitials: boolean = false): boolean {
+        return (
+            teletexStringsAreEqual(this.surname, other.surname)
+            && teletexStringsAreEqual(this.given_name, other.given_name)
+            && (tolerateMissingInitials ? true : teletexStringsAreEqual(this.initials, other.initials))
+            && teletexStringsAreEqual(this.generation_qualifier, other.generation_qualifier)
+        );
     }
 }
 

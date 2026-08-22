@@ -60,6 +60,7 @@ import { escape_oraddress_attribute_value, isPrintableString } from "../../utils
 import { builtInStandardAttributesFromString } from "../../parse.mjs";
 import { type BuiltInStandardAttributesJSON } from "../../types.mjs";
 import { ORAddress } from "./ORAddress.ta.mjs";
+import { x121_dcc_country_code_to_iso_3166 } from "../../country.mjs";
 import { ub_organization_name_length } from "./ub-organization-name-length.va.mjs";
 import { ub_domain_name_length } from "./ub-domain-name-length.va.mjs";
 import { ub_terminal_id_length } from "./ub-terminal-id-length.va.mjs";
@@ -357,6 +358,116 @@ export class BuiltInStandardAttributes {
         return formatRFC2156Address(
             displayRFC2156ORAddressComponents(new ORAddress(this)),
         );
+    }
+
+    /**
+     * @summary ISO 3166-1 alpha-2 country code for this address.
+     * @description
+     *
+     * Returns the stored ISO 3166-1 alpha-2 code, or maps an X.121 data country
+     * code to ISO 3166-1 when the country is stored in that form.
+     *
+     * @returns The two-letter country code, or `undefined` if country is absent
+     * or the X.121 code has no mapping.
+     * @public
+     * @function
+     */
+    public getISO3166Country(): string | undefined {
+        const c = this.country_name;
+        if (!c) {
+            return undefined;
+        }
+        if ("x121_dcc_code" in c) {
+            const cnum = Number.parseInt(c.x121_dcc_code, 10);
+            return x121_dcc_country_code_to_iso_3166(cnum);
+        }
+        return c.iso_3166_alpha2_code;
+    }
+
+    /**
+     * @summary Administration domain name as a string.
+     * @description
+     *
+     * Returns the numeric or printable ADMD value. A single space is the X.400
+     * "any ADMD" value described in ITU-T Recommendation X.402 (1999),
+     * section 18.3.1.
+     *
+     * @returns The ADMD string, or `undefined` if ADMD is absent.
+     * @public
+     * @function
+     */
+    public getADMDString(): string | undefined {
+        const admd = this.administration_domain_name;
+        if (typeof admd === "undefined") {
+            return undefined;
+        }
+        if ("numeric" in admd) {
+            return admd.numeric;
+        }
+        return admd.printable;
+    }
+
+    /**
+     * @summary Private domain name as a string.
+     *
+     * @returns The numeric or printable PRMD value, or `undefined` if PRMD is
+     * absent.
+     * @public
+     * @function
+     */
+    public getPRMDString(): string | undefined {
+        const prmd = this.private_domain_name;
+        if (typeof prmd === "undefined") {
+            return undefined;
+        }
+        if ("numeric" in prmd) {
+            return prmd.numeric;
+        }
+        return prmd.printable;
+    }
+
+    /**
+     * @summary Whether two addresses name the same country.
+     * @description
+     *
+     * Compares ISO 3166-1 alpha-2 codes, so an X.121 DCC and an ISO code for
+     * the same country are treated as equal.
+     *
+     * @param other The other built-in standard attributes.
+     * @returns `true` if both country values map to the same ISO code (including
+     * both being absent).
+     * @public
+     * @function
+     */
+    public isEqualCountry(other: BuiltInStandardAttributes): boolean {
+        const thisc = this.getISO3166Country();
+        const otherc = other.getISO3166Country();
+        return thisc === otherc;
+    }
+
+    /**
+     * @summary Whether two addresses name the same administration domain.
+     * @description
+     *
+     * A single-space ADMD is the X.400 "any ADMD" value. If either side has
+     * that value, the ADMDs are treated as equal. See ITU-T Recommendation
+     * X.402 (1999), section 18.3.1.
+     *
+     * @param other The other built-in standard attributes.
+     * @returns `true` if the ADMDs match, or if either is the any-ADMD value.
+     * @public
+     * @function
+     */
+    public isEqualADMD(other: BuiltInStandardAttributes): boolean {
+        const thisa = this.getADMDString();
+        const othera = other.getADMDString();
+        if (
+            (thisa === " ")
+            || (othera === " ")
+        ) {
+            return true;
+        }
+        return thisa === othera;
     }
 
     /**
