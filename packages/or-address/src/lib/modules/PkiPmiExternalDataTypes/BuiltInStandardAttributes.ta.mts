@@ -50,10 +50,16 @@ import {
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";
-import { displayCountryName, displayDomainNameValue } from "../../display.mjs";
+import {
+    displayCountryName,
+    displayDomainNameValue,
+    displayRFC2156ORAddressComponents,
+    formatRFC2156Address,
+} from "../../display.mjs";
 import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
 import { builtInStandardAttributesFromString } from "../../parse.mjs";
 import { type BuiltInStandardAttributesJSON } from "../../types.mjs";
+import { ORAddress } from "./ORAddress.ta.mjs";
 import { ub_organization_name_length } from "./ub-organization-name-length.va.mjs";
 import { ub_domain_name_length } from "./ub-domain-name-length.va.mjs";
 import { ub_terminal_id_length } from "./ub-terminal-id-length.va.mjs";
@@ -330,6 +336,27 @@ export class BuiltInStandardAttributes {
             components.push(displayCountryName(this.country_name));
         }
         return components.join(";");
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1
+     * (`std-or-address`).
+     *
+     * Only built-in standard attributes are included. Example output:
+     *
+     * ```
+     * /G=Jonathan/I=M/S=Wilbur/O=Wildboar Software/ADMD=123/C=US/
+     * ```
+     *
+     * @returns The IETF RFC 2156 string representation.
+     * @public
+     * @function
+     */
+    public toRFC2156String(): string {
+        return formatRFC2156Address(
+            displayRFC2156ORAddressComponents(new ORAddress(this)),
+        );
     }
 
     /**

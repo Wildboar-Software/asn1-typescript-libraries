@@ -35,6 +35,52 @@ export function escape_oraddress_attribute_value(s: string, delim: number): stri
 }
 
 /**
+ * Options for IETF RFC 2156 `std-printablestring` quoting.
+ */
+export interface EscapeRFC2156StdPrintableOptions {
+    /**
+     * When `true` (the default), prefix `*` with `$` so a printable-only value
+     * is not later parsed as `teletex-and-or-ps`.
+     */
+    escapeStar?: boolean;
+}
+
+/**
+ * @summary Quote `$`, `/`, `=`, and optionally `*` for IETF RFC 2156.
+ * @description
+ *
+ * RFC 2156 §4.1.3 uses `$` to quote the next character so `/` and `=` are not
+ * taken as `std-or-address` delimiters. `*` is quoted in printable-only values
+ * so it is not taken as the `teletex-and-or-ps` separator.
+ *
+ * @param s The unquoted string.
+ * @param options Quoting options.
+ * @returns The quoted string.
+ */
+export function escapeRFC2156StdPrintable(
+    s: string,
+    options: EscapeRFC2156StdPrintableOptions = {},
+): string {
+    const escapeStar = options.escapeStar ?? true;
+    let out = "";
+    for (const c of s) {
+        if (
+            (c === "$")
+            || (c === "/")
+            || (c === "=")
+            || (
+                escapeStar
+                && (c === "*")
+            )
+        ) {
+            out += "$";
+        }
+        out += c;
+    }
+    return out;
+}
+
+/**
  * An abstract O/R address attribute label after quoting has been undone.
  */
 export type AddressAttributeLabel = string;

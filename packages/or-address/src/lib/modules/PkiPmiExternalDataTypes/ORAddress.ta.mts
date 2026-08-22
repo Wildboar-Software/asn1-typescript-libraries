@@ -24,7 +24,11 @@ import {
     ub_domain_defined_attributes,
     ub_extension_attributes,
 } from "../PkiPmiExternalDataTypes/index.mjs";
-import { displayORAddressComponents } from "../../display.mjs";
+import {
+    displayORAddressComponents,
+    displayRFC2156ORAddressComponents,
+    formatRFC2156Address,
+} from "../../display.mjs";
 import type { NameForm, ORAddressAttributes, ORAddressJSON } from "../../types.mjs";
 import { orAddressToAttributes } from "../../attrs.mjs";
 
@@ -123,6 +127,25 @@ export class ORAddress {
         return displayORAddressComponents(this)
             .join(String.fromCharCode(DELIMITER))
             ;
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1
+     * (`std-or-address`).
+     *
+     * Example output:
+     *
+     * ```
+     * /G=Andy/S=Wharol/O=MMNY/ADMD=ATT/C=US/
+     * ```
+     *
+     * @returns The IETF RFC 2156 string representation.
+     * @public
+     * @function
+     */
+    public toRFC2156String(): string {
+        return formatRFC2156Address(displayRFC2156ORAddressComponents(this));
     }
 
     /**

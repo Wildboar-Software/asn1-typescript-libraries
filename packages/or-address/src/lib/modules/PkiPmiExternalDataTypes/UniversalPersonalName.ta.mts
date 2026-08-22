@@ -11,6 +11,7 @@ import {
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
+import { universalPersonalNameToRFC2156String } from "../../display.mjs";
 import { type PersonalNameJSON } from "../../types.mjs";
 import { ub_universal_surname_length } from "./ub-universal-surname-length.va.mjs";
 import { ub_universal_given_name_length } from "./ub-universal-given-name-length.va.mjs";
@@ -141,6 +142,22 @@ export class UniversalPersonalName {
             components.push(`Q=${escape_oraddress_attribute_value(s, DELIMITER)}`);
         }
         return components.join(";");
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1.
+     *
+     * UniversalString / BMPString code points are converted with `toString()`.
+     * Printable names use `encoded-pn` when §4.1.2 allows it; otherwise `G=` /
+     * `I=` / `S=` / `GQ=` pairs are returned.
+     *
+     * @returns The IETF RFC 2156 string representation.
+     * @public
+     * @function
+     */
+    public toRFC2156String(): string {
+        return universalPersonalNameToRFC2156String(this);
     }
 
     /**

@@ -7,6 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
+import { personalNameFieldsToRFC2156String } from "../../display.mjs";
 import { type PersonalNameJSON } from "../../types.mjs";
 import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length.va.mjs";
 import { ub_initials_length } from "./ub-initials-length.va.mjs";
@@ -149,6 +150,34 @@ export class PersonalName {
             components.push(`Q=${escape_oraddress_attribute_value(this.generation_qualifier, DELIMITER)}`);
         }
         return components.join(";");
+    }
+
+    /**
+     * Convert to a string representation based on
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1.2
+     * (`encoded-pn`).
+     *
+     * When that compact form cannot represent the name (for example a
+     * generation qualifier is present), `G=` / `I=` / `S=` / `GQ=` pairs are
+     * returned instead.
+     *
+     * Example output:
+     *
+     * ```
+     * Marshall.M.T.Rose
+     * ```
+     *
+     * @returns The IETF RFC 2156 string representation.
+     * @public
+     * @function
+     */
+    public toRFC2156String(): string {
+        return personalNameFieldsToRFC2156String(
+            this.surname,
+            this.given_name,
+            this.initials,
+            this.generation_qualifier,
+        );
     }
 
     /**
