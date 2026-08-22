@@ -32,6 +32,10 @@ import {
 import type { NameForm, ORAddressAttributes, ORAddressJSON } from "../../types.mjs";
 import { orAddressToAttributes } from "../../attrs.mjs";
 import { x121_dcc_country_code_to_iso_3166 } from "../../country.mjs";
+import {
+    orAddressFromString,
+    type ORAddressFromStringOptions,
+} from "../../parse.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 
@@ -209,7 +213,22 @@ export class ORAddress {
         return "mnem";
     }
 
-
+    /**
+     * @summary Returns an object of O/R address attributes.
+     * @description
+     *
+     * Converts this O/R address instance into an {@link ORAddressAttributes} object,
+     * mapping all available standard, domain-defined, and extension attributes into a plain structure
+     * suitable for access or serialization. The returned object includes all available
+     * address fields extracted from this instance, such as organization names, personal names,
+     * organizational unit names, delivery information, and other address components.
+     *
+     * This method internally delegates to the `orAddressToAttributes` function,
+     * ensuring attribute structure is consistent with the shape expected across the library.
+     *
+     * @returns {ORAddressAttributes} The attributes object representing this O/R address.
+     * @public
+     */
     public toAttributes(): ORAddressAttributes {
         return orAddressToAttributes(this);
     }
@@ -323,6 +342,40 @@ export class ORAddress {
         const thisa = this.getPRMDString();
         const othera = other.getPRMDString();
         return thisa === othera;
+    }
+
+    /**
+     * @summary Convert from an IETF RFC 1685 or RFC 2156 string.
+     * @description
+     *
+     * By default this parses [IETF RFC 1685](https://www.rfc-editor.org/rfc/rfc1685)
+     * labelled form. Pass `{ rfc: 2156 }` to parse the MIXER
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) `std-or-address` form.
+     *
+     * Example input (RFC 1685):
+     *
+     * ```
+     * G=Jonathan;I=M;S=Wilbur;O=Wildboar Software;A=123;C=US
+     * ```
+     *
+     * Example input (RFC 2156):
+     *
+     * ```
+     * /G=Andy/S=Wharol/O=MMNY/ADMD=ATT/C=US/
+     * ```
+     *
+     * @param s The string representation of this `ORAddress`.
+     * @param options Which RFC syntax to use.
+     * @returns The `ORAddress` represented by the string, or `null` if parsing fails.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromString(
+        s: string,
+        options: ORAddressFromStringOptions = {},
+    ): ORAddress | null {
+        return orAddressFromString(s, options);
     }
 
 }

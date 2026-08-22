@@ -146,10 +146,26 @@ export class BuiltInStandardAttributes {
          */
         readonly personal_name?: OPTIONAL<PersonalName>,
         /**
-         * @summary `organizational_unit_names`.
-         * @public
-         * @readonly
-         */
+         /**
+          * @summary `organizational_unit_names`.
+          *
+          * @remarks
+          * Order is significant—OU1 is the highest-level (most significant) organizational unit,
+          * OU2 is the next most significant, and so on through OU4 (least significant).
+          *
+          * Note: The order of organizational unit names in the encoded data structure is [OU1, OU2, OU3, OU4]
+          * (most significant to least significant).
+          *
+          * However, when writing the string representation for an O/R Address (see RFC 2156 and RFC 1685),
+          * the attributes are listed in reverse order: OU4 (if present) first, down to OU1 last.
+          * (See RFC 2156, Section 4.1.3: "The string representation reverses the order of the attributes—OU4, ..., OU1.")
+          *
+          * Always respect this order for both serialization and parsing to ensure interoperability.
+          *
+          * @public
+          * @readonly
+          */
+   
         readonly organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>
     ) {
         if (this.country_name) {

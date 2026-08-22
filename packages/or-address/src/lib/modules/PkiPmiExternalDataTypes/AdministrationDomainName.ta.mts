@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AdministrationDomainName
  * @description
+ * 
+ * A single space " " matches any other ADMD.
+ * See ITU-T Recommendation X.402 (1999), section 18.3.1.
  *
  * ### ASN.1 Definition:
  *

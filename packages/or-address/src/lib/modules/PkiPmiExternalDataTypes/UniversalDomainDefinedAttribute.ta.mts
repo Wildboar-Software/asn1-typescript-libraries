@@ -14,6 +14,7 @@ import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { type DomainDefinedAttributeJSON } from "../../types.mjs";
 import { ub_domain_defined_attribute_type_length } from "./ub-domain-defined-attribute-type-length.va.mjs";
 import { ub_domain_defined_attribute_value_length } from "./ub-domain-defined-attribute-value-length.va.mjs";
+import { universalDomainDefinedAttributeFromString } from "../../parse.mjs";
 
 /**
  * @summary UniversalDomainDefinedAttribute
@@ -125,6 +126,26 @@ export class UniversalDomainDefinedAttribute {
             new UniversalOrBMPString({ four_octets: json.type }),
             new UniversalOrBMPString({ four_octets: json.value }),
         );
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `UniversalDomainDefinedAttribute`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @param s The string representation of this `UniversalDomainDefinedAttribute`.
+     * @returns The `UniversalDomainDefinedAttribute` represented by the string.
+     */
+    public static fromString(s: string): UniversalDomainDefinedAttribute {
+        return universalDomainDefinedAttributeFromString(s);
     }
 }
 

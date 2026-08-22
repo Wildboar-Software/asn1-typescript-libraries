@@ -46,6 +46,7 @@ jobs:
           # - "m3100"
           - "nlm"
           - "ocsp"
+          - "or-address"
           - "pc"
           - "pkcs"
           - "pki-stub"

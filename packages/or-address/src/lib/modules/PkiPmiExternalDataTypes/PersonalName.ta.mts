@@ -13,6 +13,7 @@ import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length
 import { ub_initials_length } from "./ub-initials-length.va.mjs";
 import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
 import { ub_surname_length } from "./ub-surname-length.va.mjs";
+import { personalNameFromString } from "../../parse.mjs";
 
 const DELIMITER = ';'.charCodeAt(0);
 const FULL_STOP = ".".charCodeAt(0);
@@ -317,6 +318,26 @@ export class PersonalName {
             && (tolerateMissingInitials ? true : this.initials === other.initials)
             && (this.generation_qualifier === other.generation_qualifier)
         );
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `PersonalName`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * S=John;G=Doe;I=J;Q=JR
+     * ```
+     * 
+     * @param s The string representation of this `PersonalName`.
+     * @returns The `PersonalName` represented by the string.
+     */
+    public static fromString(s: string): PersonalName {
+        return personalNameFromString(s);
     }
 
 }

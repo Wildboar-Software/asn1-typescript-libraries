@@ -10,6 +10,7 @@ import { escape_oraddress_attribute_value, isPrintableString } from "../../utils
 import { type DomainDefinedAttributeJSON } from "../../types.mjs";
 import { ub_domain_defined_attribute_type_length } from "./ub-domain-defined-attribute-type-length.va.mjs";
 import { ub_domain_defined_attribute_value_length } from "./ub-domain-defined-attribute-value-length.va.mjs";
+import { builtInDomainDefinedAttributeFromString } from "../../parse.mjs";
 
 /**
  * @summary BuiltInDomainDefinedAttribute
@@ -113,6 +114,26 @@ export class BuiltInDomainDefinedAttribute {
      */
     public static fromJSON(json: DomainDefinedAttributeJSON): BuiltInDomainDefinedAttribute {
         return new BuiltInDomainDefinedAttribute(json.type, json.value);
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `BuiltInDomainDefinedAttribute`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @param s The string representation of this `BuiltInDomainDefinedAttribute`.
+     * @returns The `BuiltInDomainDefinedAttribute` represented by the string.
+     */
+    public static fromString(s: string): BuiltInDomainDefinedAttribute {
+        return builtInDomainDefinedAttributeFromString(s);
     }
 }
 

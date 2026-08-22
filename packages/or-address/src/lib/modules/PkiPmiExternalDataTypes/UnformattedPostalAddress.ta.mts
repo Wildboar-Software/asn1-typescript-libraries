@@ -7,6 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
+import { unformattedPostalAddressFromString } from "../../parse.mjs";
 
 /**
  * @summary UnformattedPostalAddress
@@ -114,6 +115,19 @@ export class UnformattedPostalAddress {
             "printable-address": this.printable_address?.map((s) => s.toString()),
             "teletex-string": this.teletex_string ? teletexToString(this.teletex_string) : undefined,
         };
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `UnformattedPostalAddress`.
+     * @param s The string representation of this `UnformattedPostalAddress`.
+     * @returns The `UnformattedPostalAddress` represented by the string.
+     */
+    public static fromString(s: string): UnformattedPostalAddress {
+        return unformattedPostalAddressFromString(s);
     }
 }
 

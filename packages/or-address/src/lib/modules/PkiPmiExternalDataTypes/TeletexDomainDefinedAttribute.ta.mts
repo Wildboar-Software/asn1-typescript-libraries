@@ -9,6 +9,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { teletexToString } from "@wildboar/teletex";
 import { escape_oraddress_attribute_value } from "../../utils.mjs";
 import { type DomainDefinedAttributeJSON } from "../../types.mjs";
+import { teletexDomainDefinedAttributeFromString } from "../../parse.mjs";
 
 /**
  * @summary TeletexDomainDefinedAttribute
@@ -105,6 +106,26 @@ export class TeletexDomainDefinedAttribute {
             type: teletexToString(this.type_),
             value: teletexToString(this.value),
         };
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `TeletexDomainDefinedAttribute`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * DDA:RFC-822=fred(a)widget.co.uk
+     * ```
+     * 
+     * @param s The string representation of this `TeletexDomainDefinedAttribute`.
+     * @returns The `TeletexDomainDefinedAttribute` represented by the string.
+     */
+    public static fromString(s: string): TeletexDomainDefinedAttribute {
+        return teletexDomainDefinedAttributeFromString(s);
     }
 
 }

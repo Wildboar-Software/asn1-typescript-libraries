@@ -85,6 +85,14 @@ export function print_teletex(ts: Buffer, delim: number): string {
     }
 }
 
+/**
+ * @summary Convert a terminal type number to a string.
+ * @description
+ * 
+ * Converts a terminal type number to a string.
+ * @param tt The terminal type number to convert.
+ * @returns The terminal type string.
+ */
 export function term_type_to_str(tt: number): string {
     switch (tt) {
         case (TerminalType_g3_facsimile): return "g3fax";
@@ -97,6 +105,14 @@ export function term_type_to_str(tt: number): string {
     }
 }
 
+/**
+ * @summary Convert a terminal type string to a number.
+ * @description
+ * 
+ * Converts a terminal type string to a number.
+ * @param tt The terminal type string to convert.
+ * @returns The terminal type number.
+ */
 export function term_type_from_str(tt: string): TerminalType | undefined {
     switch (tt) {
         case "g3fax": return TerminalType_g3_facsimile;

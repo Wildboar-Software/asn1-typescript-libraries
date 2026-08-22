@@ -140,34 +140,129 @@ export type ORAddressJSON = {
     "extension-attributes"?: ExtensionAttributeJSON[];
 };
 
+/**
+ * X.400 Message Handling System (MHS) O/R Address Attributes as a
+ * 
+ * This is a plain object that can be serialized to JSON.
+ */
 export type ORAddressAttributes = {
+    /**
+     * Country, which is either an ISO 3166-1 alpha-2 code or an X.121 DCC code.
+     */
     country?: string;
+    /**
+     * Administration domain name, which is always a printable string.
+     * (A numeric string is always a printable string.)
+     */
     administration_domain_name?: string;
+    /**
+     * Network address for X.121 DCC.
+     */
     network_address?: string;
+    /**
+     * Numeric Terminal identifier.
+     */
     terminal_identifier?: string;
+    /**
+     * Private domain name (PRMD).
+     */
     private_domain_name?: string;
+    /**
+     * Organization name.
+     */
     organization_name: string[];
+    /**
+     * Numeric user identifier.
+     */
     numeric_user_identifier?: string;
+    /**
+     * Personal name.
+     */
     personal_name: PersonalNameJSON[];
+    /**
+     * Organizational unit names, in order of increasing specificity.
+     */
     organizational_unit_names: string[][];
+    /**
+     * Common names.
+     */
     common_names: string[];
+    /**
+     * Physical Delivery System (PDS) names.
+     */
     pds_names: string[];
+    /**
+     * Physical Delivery (PD) countries.
+     */
     pd_countries: string[];
+    /**
+     * Postal codes used for physical delivery.
+     */
     postal_codes: string[];
+    /**
+     * Physical Delivery (PD) office names.
+     */
     pd_office_names: string[];
+    /**
+     * Physical Delivery (PD) office numbers.
+     */
     pd_office_numbers: string[];
+    /**
+     * Physical Delivery (PD) organization names.
+     */
     pd_organization_names: string[];
+    /**
+     * Extension O/R address components.
+     */
     extension_or_address_components: string[];
+    /**
+     * Physical Delivery (PD) personal names.
+     */
     pd_personal_names: string[];
+    /**
+     * Extension Physical Delivery (PD) address components.
+     */
     extension_pd_address_components: string[];
+    /**
+     * Unformatted postal addresses.
+     * 
+     * Each string is a line of the unformatted postal address.
+     */
     unformatted_postal_addresses: string[][];
+    /**
+     * Street addresses.
+     */
     street_addresses: string[];
+    /**
+     * PO boxes.
+     */
     po_boxes: string[];
+    /**
+     * Poste restantes.
+     */
     poste_restantes: string[];
+    /**
+     * Unique postal names.
+     */
     unique_postal_names: string[];
+    /**
+     * Local postal attributes.
+     */
     local_postal_attributes: string[];
+    /**
+     * ISDN addresses (telephone numbers).
+     */
     isdn_addresses: { number: string; subaddress?: string }[];
+    /**
+     * Presentation addresses.
+     */
     psap_addresses: PresentationAddressStrings[];
+    /**
+     * Terminal types.
+     */
     terminal_types: number[];
+    /**
+     * Domain defined attributes.
+     */
     domain_defined_attributes: DomainDefinedAttributeJSON[];
 };

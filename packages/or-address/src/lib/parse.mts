@@ -289,6 +289,15 @@ export function universalOrBMPStringFromString(s: string): UniversalOrBMPString 
     return new UniversalOrBMPString({ four_octets: s });
 }
 
+/**
+ * @summary Convert from a string representation based on
+ * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+ * @description
+ * 
+ * This takes an IETF RFC 1685 string and converts it to a `UnformattedPostalAddress`.
+ * @param s The string representation of this `UnformattedPostalAddress`.
+ * @returns The `UnformattedPostalAddress` represented by the string.
+ */
 export function unformattedPostalAddressFromString(s: string): UnformattedPostalAddress | null {
     const delim = s.startsWith("/")
         ? "/".codePointAt(0)!
@@ -305,9 +314,7 @@ export function unformattedPostalAddressFromString(s: string): UnformattedPostal
         }
         const label = component.slice(0, eqIdx);
         const value = component.slice(eqIdx + 1);
-        if (
-            !label.startsWith(`PD-A${lines.length + 1}`)
-        ) {
+        if (!label.startsWith(`PD-A${lines.length + 1}=`)) {
             continue;
         }
         if (!isPrintableString(value)) {
@@ -342,7 +349,6 @@ export function universalDomainDefinedAttributeFromString(s: string): UniversalD
         new UniversalOrBMPString({ four_octets: value }),
     );
 }
-
 
 export type ORAddressStringSyntax = 1685 | 2156;
 

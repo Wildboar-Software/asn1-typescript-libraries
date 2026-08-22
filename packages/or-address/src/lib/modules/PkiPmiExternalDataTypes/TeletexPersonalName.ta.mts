@@ -14,6 +14,8 @@ import { ub_surname_length } from "./ub-surname-length.va.mjs";
 import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
 import { ub_initials_length } from "./ub-initials-length.va.mjs";
 import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length.va.mjs";
+import { teletexPersonalNameFromString } from "../../parse.mjs";
+import { PersonalName } from "./PersonalName.ta.mjs";
 
 const DELIMITER = ";".charCodeAt(0);
 
@@ -216,6 +218,70 @@ export class TeletexPersonalName {
             && teletexStringsAreEqual(this.given_name, other.given_name)
             && (tolerateMissingInitials ? true : teletexStringsAreEqual(this.initials, other.initials))
             && teletexStringsAreEqual(this.generation_qualifier, other.generation_qualifier)
+        );
+    }
+
+    /**
+     * @summary Convert from a string representation based on
+     * [IETF RFC 1685](https://www.rfc-editor.org/info/rfc1685/).
+     * @description
+     * 
+     * This takes an IETF RFC 1685 string and converts it to a `TeletexPersonalName`.
+     * 
+     * Example input:
+     * 
+     * ```
+     * S=John;G=Doe;I=J;Q=JR
+     * ```
+     * 
+     * @param s The string representation of this `TeletexPersonalName`.
+     * @returns The `TeletexPersonalName` represented by the string.
+     */
+    public static fromString(s: string): TeletexPersonalName {
+        return teletexPersonalNameFromString(s);
+    }
+
+    /**
+     * Parse a dot-delimited personal name as defined by
+     * [IETF RFC 2156](https://www.rfc-editor.org/rfc/rfc2156) section 4.1.2
+     * (`encoded-pn`).
+     *
+     * ```
+     * encoded-pn = [ given "." ] *( initial "." ) surname
+     * given      = 2*<ps-char not including ".">
+     * initial    = ALPHA
+     * surname    = printablestring
+     * ```
+     *
+     * Given name and surname are assigned directly. All `initial` tokens are
+     * concatenated without intervening full stops to form the initials
+     * component. This encoding does not represent a generation qualifier.
+     * Each PrintableString component is stored as T.61 octets.
+     *
+     * Example inputs:
+     *
+     * ```
+     * Marshall.Rose       → given-name=Marshall, surname=Rose
+     * M.T.Rose            → initials=MT, surname=Rose
+     * Marshall.M.T.Rose   → given-name=Marshall, initials=MT, surname=Rose
+     * ```
+     *
+     * @param s The RFC 2156 encoded personal name.
+     * @returns The `TeletexPersonalName` represented by the string.
+     * @public
+     * @static
+     * @function
+     */
+    public static fromRFC2156String(s: string): TeletexPersonalName {
+        const name = PersonalName.fromRFC2156String(s);
+        return new TeletexPersonalName(
+            new TextEncoder().encode(name.surname),
+            name.given_name
+                ? new TextEncoder().encode(name.given_name)
+                : undefined,
+            name.initials
+                ? new TextEncoder().encode(name.initials)
+                : undefined,
         );
     }
 }
