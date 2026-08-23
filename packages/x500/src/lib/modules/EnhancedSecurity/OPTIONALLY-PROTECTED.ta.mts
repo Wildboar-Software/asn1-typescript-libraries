@@ -10,6 +10,11 @@ import {
  * @summary OPTIONALLY_PROTECTED
  * @description
  *
+ * CHOICE: unsigned `Type` vs `SIGNED{Type}`. Use this when `Type` is not an
+ * untagged SEQUENCE (else {@link OPTIONALLY_PROTECTED_SEQ}). Signed alternative
+ * DER-encodes `Type` per X.509 HASH/SIGNED rules. Protects the argument/result
+ * value, not the enclosing PDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

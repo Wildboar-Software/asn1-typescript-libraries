@@ -5,6 +5,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TerminateOperationalBindingArgumentData_initiator
  * @description
  *
+ * Who initiates terminate: `symmetric` [2], `roleA-initiates` [3], or
+ * `roleB-initiates` [4] (tags differ from establish/modify). Present iff that
+ * role's TERMINATION-PARAMETER is defined.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

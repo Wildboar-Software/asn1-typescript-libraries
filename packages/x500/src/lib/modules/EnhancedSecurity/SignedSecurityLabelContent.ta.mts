@@ -34,6 +34,10 @@ import {
  * @summary SignedSecurityLabelContent
  * @description
  *
+ * SEQUENCE: `attHash` (HASH over DER of AttributeTypeAndValue), optional
+ * `issuer` (labelling authority Name), optional `keyIdentifier`, then
+ * `securityLabel`. Not used as a selectable context (no fallback/default).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,18 +54,21 @@ export class SignedSecurityLabelContent {
     constructor(
         /**
          * @summary `attHash`.
+         * @description HASH of DER-encoded AttributeTypeAndValue.
          * @public
          * @readonly
          */
         readonly attHash: HASH<AttributeTypeAndValue>,
         /**
          * @summary `issuer`.
+         * @description Name of the labelling authority.
          * @public
          * @readonly
          */
         readonly issuer: OPTIONAL<Name>,
         /**
          * @summary `keyIdentifier`.
+         * @description Subject key identifier or symmetric-key identifier.
          * @public
          * @readonly
          */

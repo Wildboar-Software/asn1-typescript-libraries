@@ -15,6 +15,12 @@ import {
  * @summary ExtensionAttribute
  * @description
  *
+ * Certificate (or AC) extension stored as a Directory attribute. Always single-
+ * valued; no contexts. `type` is the attribute OID (`id-ce-a-*`).
+ *
+ * `value` is SET SIZE (0..1): empty SET = no extension payload; one element
+ * holds mandatory/critical flags plus `ext` in the extension's own syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

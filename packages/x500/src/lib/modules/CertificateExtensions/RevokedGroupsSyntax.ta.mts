@@ -10,6 +10,9 @@ import {
  * @summary RevokedGroupsSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF RevokedGroup. Empty not allowed. The extension
+ * shall be critical. Entries must not duplicate revokedCertificates.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

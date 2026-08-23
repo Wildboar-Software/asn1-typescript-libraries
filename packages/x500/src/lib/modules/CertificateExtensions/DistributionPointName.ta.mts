@@ -15,6 +15,11 @@ import {
  * @summary DistributionPointName
  * @description
  *
+ * CHOICE: `fullName` (GeneralNames) or `nameRelativeToCRLIssuer` (one RDN
+ * directly under the CRL issuer DN — append to issuer DN for comparison).
+ * At least one name form of fullName shall equal a name in the CRL's
+ * issuingDistributionPoint. RP need not implement every GeneralName form.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

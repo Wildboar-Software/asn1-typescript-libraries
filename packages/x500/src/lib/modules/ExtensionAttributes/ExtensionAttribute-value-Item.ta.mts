@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtensionAttribute_value_Item
  * @description
  *
+ * One extension-attribute payload. `mandatory` DEFAULT FALSE (may be omitted
+ * when not meaningful in the context). `critical` DEFAULT FALSE is the
+ * extension criticality bit. `ext` is `EXTENSION.&ExtnType` of that extension -
+ * same syntax as in the certificate, not wrapped again.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

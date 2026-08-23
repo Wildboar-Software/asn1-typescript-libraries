@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CertPolicyId
  * @description
  *
+ * OBJECT IDENTIFIER of one certificate policy. `anyPolicy`
+ * ({id-ce-certificatePolicies 0}) is special: matches every policy and shall
+ * not be mapped to or from. Qualifiers do not change this identity.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

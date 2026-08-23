@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SearchRuleId
  * @description
  *
+ * Identity of a search-rule. `id` is unique within the DMD of `dmdId` (not
+ * globally by itself); together they form a global id. `id` 0 is reserved for
+ * the empty search-rule.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

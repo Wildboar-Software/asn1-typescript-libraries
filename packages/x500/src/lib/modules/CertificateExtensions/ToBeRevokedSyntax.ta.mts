@@ -10,6 +10,10 @@ import {
  * @summary ToBeRevokedSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF ToBeRevokedGroup. Empty not allowed.
+ * Recommended non-critical (future notices). After revocationTime the CA
+ * must either list the certs as revoked or drop/revise this notice.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

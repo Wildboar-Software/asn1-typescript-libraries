@@ -10,6 +10,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DITContentRule
  * @description
  *
+ * Content rule for entries of `structuralObjectClass` (plus its
+ * superclasses). Identified by that class: at most one rule per structural
+ * class in a subschema. If no rule exists, the class definitions alone
+ * apply.
+ *
+ * `auxiliaries` lists auxiliary classes that *may* be used (not must).
+ * `mandatory`/`optional` add attribute types; `precluded` forbids types
+ * that would otherwise be allowed. All three are SET SIZE (1..MAX),
+ * unordered. An attribute listed in both mandatory and optional is
+ * mandatory. Precluded wins over class MAY CONTAIN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

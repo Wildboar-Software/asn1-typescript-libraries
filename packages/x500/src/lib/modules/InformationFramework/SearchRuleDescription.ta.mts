@@ -80,6 +80,11 @@ import {
  * @summary SearchRuleDescription
  * @description
  *
+ * Published search-rule (`searchRules` on a service-admin subentry):
+ * {@link SearchRule} plus optional `name` / `description`.
+ * `name` is a SET SIZE (1..MAX) of directory strings (unordered aliases).
+ * `id` is unique within the DMD identified by `dmdId`, not globally.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

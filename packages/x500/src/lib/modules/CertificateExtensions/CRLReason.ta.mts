@@ -1,3 +1,10 @@
+/**
+ * Re-export of {@link CRLReason} from `@wildboar/pki-stub`.
+ *
+ * ENUMERATED; there is no value 7 (`removeFromCRL` is 8). `removeFromCRL`
+ * is for delta CRLs only (pairs with `certificateHold`). Hold-instruction
+ * extension applies only with `certificateHold`. `aACompromise` is ACRL-only.
+ */
 export type {
     CRLReason,
 } from "@wildboar/pki-stub";

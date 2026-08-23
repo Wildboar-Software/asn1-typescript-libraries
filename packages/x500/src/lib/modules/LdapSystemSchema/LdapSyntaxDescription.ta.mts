@@ -15,6 +15,11 @@ import {
  * @summary LdapSyntaxDescription
  * @description
  *
+ * LDAP syntax published in `ldapSyntaxes` (X.501 LDAP system schema).
+ * `identifier` is the LDAP syntax OID (`SYNTAX-NAME.&id`), not a Directory
+ * attribute-type OID. `description` is optional human text (not the LDAP
+ * DESC encoding of an attribute type).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

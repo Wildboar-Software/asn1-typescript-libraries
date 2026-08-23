@@ -22,6 +22,13 @@ export enum _enum_for_OpBindingErrorParam_problem {
  * @summary OpBindingErrorParam_problem
  * @description
  *
+ * ENUMERATED: `invalidID`(0), `duplicateID`(1), `unsupportedBindingType`(2),
+ * `notAllowedForRole`(3), `parametersMissing`(4), `roleAssignment`(5),
+ * `invalidStartTime`(6), `invalidEndTime`(7), `invalidAgreement`(8),
+ * `currentlyNotDecidable`(9), `modificationNotAllowed`(10),
+ * `invalidBindingType`(11), `invalidNewID`(12). Extensible (`...`). 0 is a
+ * defined problem, not "no error".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary ACIItem_itemOrUserFirst_userFirst
  * @description
  *
+ * SEQUENCE: `userClasses` then `userPermissions` as an unordered SET OF
+ * {@link UserPermission}. Empty SET grants/denies nothing. Each permission's
+ * optional precedence may override the ACIItem.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KEA_Parms_Id
  * @description
  *
+ * KEA parameter identifier: OCTET STRING SIZE (10) exactly. Not the KEA
+ * parameters themselves.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

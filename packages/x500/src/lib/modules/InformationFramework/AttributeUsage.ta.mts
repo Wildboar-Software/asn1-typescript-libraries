@@ -13,6 +13,19 @@ export enum _enum_for_AttributeUsage {
  * @summary AttributeUsage
  * @description
  *
+ * Where an attribute type may appear. Default in {@link ATTRIBUTE} is
+ * `userApplications`.
+ * - `userApplications` (0): user (entry) attributes.
+ * - `directoryOperation` (1): Directory operational (held with the entry;
+ *   replicated).
+ * - `distributedOperation` (2): DSA-shared operational (DSA information
+ *   model; not a user-visible entry attribute).
+ * - `dSAOperation` (3): DSA-specific operational (not shared).
+ *
+ * Collective attributes shall be `userApplications`. Operational attributes
+ * shall not have contexts. User modification of operational attributes is
+ * controlled by `no-user-modification`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

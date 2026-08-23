@@ -10,6 +10,10 @@ import {
  * @summary ChopSpecification_specificExclusions_Item
  * @description
  *
+ * One chop point, as a {@link LocalName} relative to the subtree base.
+ * `chopBefore`: exclude that entry and everything below it. `chopAfter`:
+ * include that entry, exclude its subordinates.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,13 @@ import {
  * @summary AuthorityKeyIdentifier
  * @description
  *
+ * Always non-critical. Identifies the issuer key that signed this cert/CRL.
+ * `keyIdentifier` shall be unique among this issuer's keys.
+ * `authorityCertIssuer`
+ * and `authorityCertSerialNumber` are both present or both absent (WITH
+ * COMPONENTS); they are a path-building preference, not a hard identifier.
+ * Need not support every GeneralName form in `authorityCertIssuer`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,18 +50,31 @@ export class AuthorityKeyIdentifier {
     constructor(
         /**
          * @summary `keyIdentifier`.
+         * @description
+         *
+         * Unique among this issuer's keys. Preferred selector in path building.
+         *
          * @public
          * @readonly
          */
         readonly keyIdentifier?: OPTIONAL<KeyIdentifier>,
         /**
          * @summary `authorityCertIssuer`.
+         * @description
+         *
+         * With serial, a preference hint — not a hard identifier. Both present
+         * or both absent.
+         *
          * @public
          * @readonly
          */
         readonly authorityCertIssuer?: OPTIONAL<GeneralNames>,
         /**
          * @summary `authorityCertSerialNumber`.
+         * @description
+         *
+         * Paired with authorityCertIssuer; both present or both absent.
+         *
          * @public
          * @readonly
          */

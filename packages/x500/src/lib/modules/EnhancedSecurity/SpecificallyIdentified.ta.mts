@@ -19,6 +19,9 @@ import {
  * @summary SpecificallyIdentified
  * @description
  *
+ * SEQUENCE identifying a third-party signer. Constraint: `issuer` and `serial`
+ * are **both present or both absent**. `name` is a {@link GeneralName}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +44,14 @@ export class SpecificallyIdentified {
         readonly name: GeneralName,
         /**
          * @summary `issuer`.
+         * @description Must be present iff `serial` is present.
          * @public
          * @readonly
          */
         readonly issuer?: OPTIONAL<GeneralName>,
         /**
          * @summary `serial`.
+         * @description Must be present iff `issuer` is present.
          * @public
          * @readonly
          */

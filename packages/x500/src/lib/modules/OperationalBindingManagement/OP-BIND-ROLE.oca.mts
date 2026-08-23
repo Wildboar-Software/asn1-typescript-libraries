@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OP_BIND_ROLE
  * @description
  *
+ * Role template. `&establish`/`&modify`/`&terminate` DEFAULT FALSE (whether
+ * this role may initiate that operation). Establishment parameter is required
+ * in the syntax; modify/terminate parameters are OPTIONAL (absent -> no
+ * initiator CHOICE payload for that op).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

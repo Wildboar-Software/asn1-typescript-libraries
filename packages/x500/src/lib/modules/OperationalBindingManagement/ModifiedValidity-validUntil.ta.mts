@@ -14,6 +14,9 @@ import {
  * @summary ModifiedValidity_validUntil
  * @description
  *
+ * Modified end: `explicitTermination`, `time`, or `unchanged` (NULL). DEFAULT
+ * `unchanged:NULL` - not the establish default.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

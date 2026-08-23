@@ -29,6 +29,11 @@ import {
  * @summary SecurityLabel
  * @description
  *
+ * SET (not SEQUENCE): components unordered; DER sorts by tag. All four fields
+ * OPTIONAL but **at least one shall be present** (empty SET is invalid).
+ * `security-categories` is SET SIZE (1..MAX) if present. Used with clearance
+ * in rule-based access control; comparison rules are policy-defined.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

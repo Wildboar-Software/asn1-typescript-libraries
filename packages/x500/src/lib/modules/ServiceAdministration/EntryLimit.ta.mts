@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EntryLimit
  * @description
  *
+ * Size-limit policy for Search. `default` is used when the request omits
+ * `sizeLimit`; `max` caps a supplied `sizeLimit` (effective limit is reduced to
+ * `max` if exceeded). Ignored for Read/ModifyEntry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

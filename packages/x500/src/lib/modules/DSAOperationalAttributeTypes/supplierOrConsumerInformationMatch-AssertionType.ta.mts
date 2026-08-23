@@ -14,6 +14,11 @@ import {
  * @summary supplierOrConsumerInformationMatch_AssertionType
  * @description
  *
+ * Assertion SET for `supplierOrConsumerInformationMatch`: `ae-title` [0] Name
+ * and `agreement-identifier` [2] INTEGER (the `identifier` of
+ * `OperationalBindingID`, not the version). Match is DN-match on ae-title plus
+ * INTEGER-match on the identifier; other AccessPoint fields are ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

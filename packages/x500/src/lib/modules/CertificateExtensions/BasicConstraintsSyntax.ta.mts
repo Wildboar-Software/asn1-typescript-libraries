@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BasicConstraintsSyntax
  * @description
  *
+ * `cA` DEFAULT FALSE. `pathLenConstraint` only if `cA` TRUE, else absent.
+ * 0 = this CA may issue only end-entity certs (no subordinate CAs). Absent
+ * pathLen = no path-length limit from this cert. CA certs shall include this
+ * with `cA` TRUE and critical (v3). Empty SEQUENCE (default `cA` FALSE) marks
+ * an end entity. Missing extension entirely also means end-entity.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +32,22 @@ export class BasicConstraintsSyntax {
     constructor(
         /**
          * @summary `cA`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE required (and critical) on CA certs. keyCertSign
+         * requires this TRUE.
+         *
          * @public
          * @readonly
          */
         readonly cA?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pathLenConstraint`.
+         * @description
+         *
+         * Only if cA TRUE. 0 = issue end-entity certs only. Absent = no limit
+         * from this cert.
+         *
          * @public
          * @readonly
          */

@@ -19,6 +19,9 @@ import {
  * @summary Certificates
  * @description
  *
+ * End-entity `userCertificate` plus optional {@link ForwardCertificationPath}
+ * toward a trust anchor.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

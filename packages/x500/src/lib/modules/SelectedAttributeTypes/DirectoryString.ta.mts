@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DirectoryString
  * @description
  *
+ * Directory character string: CHOICE of TeletexString (T.61),
+ * PrintableString, BMPString (UCS-2), UniversalString (UCS-4), UTF8String.
+ * Each alternative is SIZE (1..maxSize) — empty strings are forbidden.
+ * Matching uses character content under the matching rule, not which
+ * encoding was chosen. Prefer `uTF8String` for new values. TeletexString
+ * is obsolete in practice.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

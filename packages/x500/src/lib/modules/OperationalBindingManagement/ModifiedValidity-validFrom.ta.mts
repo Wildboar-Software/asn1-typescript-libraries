@@ -14,6 +14,9 @@ import {
  * @summary ModifiedValidity_validFrom
  * @description
  *
+ * Modified start: `now` or `time`. DEFAULT `now:NULL`. Future `time` defers the
+ * new agreement; the old one remains until that instant (unless terminated).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AllowedSubset
  * @description
  *
+ * BIT STRING of permitted Search `subset` values: `baseObject`(0),
+ * `oneLevel`(1), `wholeSubtree`(2). Default in a search-rule is `'111'B` (all
+ * allowed).
+ *
+ * Empty string or all-zero bits allows no subset - Search validation fails.
+ * Read/ModifyEntry comply only if `baseObject` is set. Ignored when
+ * `imposedSubset` is present and `useSubset` is not set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

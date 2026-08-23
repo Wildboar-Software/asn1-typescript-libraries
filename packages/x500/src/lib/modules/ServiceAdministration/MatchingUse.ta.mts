@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MatchingUse
  * @description
  *
+ * Constraint on the matching rule actually used (after basic substitution,
+ * before relaxation), e.g. minimum substring lengths. Several restrictions may
+ * exist for a rule; only one applies in a given situation. Applies only to
+ * basic matching rules (no `&ParentMatchingRules`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

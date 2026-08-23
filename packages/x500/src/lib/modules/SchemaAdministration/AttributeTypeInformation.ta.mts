@@ -23,6 +23,14 @@ import {
  * @summary AttributeTypeInformation
  * @description
  *
+ * Technical fields of an `AttributeTypeDescription`. `multi-valued` DEFAULT
+ * TRUE; `collective` DEFAULT FALSE; `userModifiable` DEFAULT TRUE;
+ * `application` DEFAULT `userApplications`.
+ *
+ * `attributeSyntax` is ASN.1 type text (same convention as matching-rule
+ * `information`), not a human comment. Matching-rule OIDs and `derivation` are
+ * optional; omission means that matching/derivation is unspecified here.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

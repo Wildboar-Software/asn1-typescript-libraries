@@ -15,6 +15,10 @@ import {
  * @summary AttributeValueIntegrityInfo
  * @description
  *
+ * `SIGNED{AttributeValueIntegrityInfoContent}`: context protecting **one**
+ * attribute value. Other contexts on that value are included in the hash;
+ * this integrity context itself is excluded.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

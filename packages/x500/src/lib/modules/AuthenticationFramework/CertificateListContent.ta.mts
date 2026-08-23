@@ -39,6 +39,12 @@ import {
  * @summary CertificateListContent
  * @description
  *
+ * TBS of a CRL. `revokedCertificates` omitted or empty means no revocations
+ * *in this list*, not that nothing is revoked in the world. Order is not
+ * significant unless an `orderedList` extension says otherwise. `version`
+ * shall be v2 if extensions are present (absent means v1). `thisUpdate` /
+ * `nextUpdate` are issue times. `issuer` shall be a non-empty DN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

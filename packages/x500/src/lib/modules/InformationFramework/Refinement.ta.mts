@@ -9,6 +9,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Refinement
  * @description
  *
+ * Filter on `objectClass` only (equality), used to refine a subtree.
+ * `item` is an object-class OID; `and`/`or` are SET SIZE (1..MAX)
+ * (unordered, at least one). If a family member is excluded, all of its
+ * subordinate family members are excluded too.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

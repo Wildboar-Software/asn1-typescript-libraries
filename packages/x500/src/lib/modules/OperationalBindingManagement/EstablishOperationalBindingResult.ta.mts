@@ -15,6 +15,9 @@ import {
  * @summary EstablishOperationalBindingResult
  * @description
  *
+ * OPTIONALLY-PROTECTED-SEQ wrapper around
+ * `EstablishOperationalBindingResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

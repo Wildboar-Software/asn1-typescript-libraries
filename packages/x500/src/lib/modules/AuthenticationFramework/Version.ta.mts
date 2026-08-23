@@ -1,3 +1,7 @@
+/**
+ * Certificate version INTEGER {v1(0), v2(1), v3(2)} — the number is not
+ * the digit in the name. Re-exported from `@wildboar/pki-stub`.
+ */
 export type {
     Version,
 } from "@wildboar/pki-stub";

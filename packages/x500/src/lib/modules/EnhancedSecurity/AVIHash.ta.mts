@@ -15,6 +15,9 @@ import {
  * @summary AVIHash
  * @description
  *
+ * `HASH{AttributeTypeValueContexts}`: digest of one attribute type, value, and
+ * context list (SET-ordered; integrity context omitted).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

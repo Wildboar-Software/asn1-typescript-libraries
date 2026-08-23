@@ -19,6 +19,10 @@ import {
  * @summary AvlId
  * @description
  *
+ * Identifies an authorization validation list. `serialNumber` present iff the
+ * AVL itself carries a serial. Used by the critical `authorizationValidation`
+ * end-entity extension — reject the cert if that AVL cannot be checked.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,14 @@ import {
  * @summary Clearance
  * @description
  *
+ * SEQUENCE bound to a named entity (attribute, attribute certificate, or
+ * subjectDirectoryAttributes). `policyId` identifies the policy for
+ * `classList` and `securityCategories`. `classList` DEFAULT `{unclassified}`
+ * (bit 1 only); omitted encodes as that default, not empty. `securityCategories`
+ * is SET SIZE (1..MAX) if present (empty invalid). Rule-based ACDF compares
+ * this with a {@link SecurityLabel}; deny by either rule-based or basic ACI
+ * cannot be overridden by the other.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,12 +51,14 @@ export class Clearance {
         readonly policyId: OBJECT_IDENTIFIER,
         /**
          * @summary `classList`.
+         * @description DEFAULT `{unclassified}` (bit 1). Several bits may be set.
          * @public
          * @readonly
          */
         readonly classList?: OPTIONAL<ClassList>,
         /**
          * @summary `securityCategories`.
+         * @description SET SIZE (1..MAX); further restrictions within `classList`.
          * @public
          * @readonly
          */

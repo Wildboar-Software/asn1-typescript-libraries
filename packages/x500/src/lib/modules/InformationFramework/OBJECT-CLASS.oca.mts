@@ -7,6 +7,13 @@ import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs"
  * @summary OBJECT_CLASS
  * @description
  *
+ * Information object class for an object class. `&kind` defaults to
+ * `structural`. `&Superclasses` are *direct* superclasses only; `top` is
+ * implied for structural/auxiliary classes that omit it. An attribute in
+ * both MUST CONTAIN and MAY CONTAIN is mandatory. Auxiliary classes do not
+ * name entries. Exactly one structural class (with its superclass chain)
+ * per entry. `&id` is UNIQUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

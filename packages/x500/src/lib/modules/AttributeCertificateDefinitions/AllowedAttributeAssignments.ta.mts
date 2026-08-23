@@ -10,6 +10,9 @@ import {
  * @summary AllowedAttributeAssignments
  * @description
  *
+ * SET OF assignments: unordered. Each item is attributes (SET of type or
+ * type-and-values) plus a holder domain GeneralName.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

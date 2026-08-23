@@ -18,6 +18,11 @@ import {
 /**
  * @summary AttributeCertificationPath
  * @description
+ *
+ * PMI analogue of a PKC path: holder's AC first, then `acPath` of AA
+ * certificates toward (but excluding) the SOA. `acPath` omitted if the AC
+ * was issued directly by the SOA. SEQUENCE OF has no SIZE — empty means
+ * no AA hops, not "omit the field".
  * 
  * ASN.1 type that represents a delegation path in Privilege Management
  * Infrastructure (PMI). Just like a chain of certificates constitutes

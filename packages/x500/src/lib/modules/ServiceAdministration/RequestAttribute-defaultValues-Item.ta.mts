@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RequestAttribute_defaultValues_Item
  * @description
  *
+ * One default-values group for a request-attribute-profile. Optional
+ * `entryType` (object-class OID) scopes the defaults; `values` is SEQUENCE OF
+ * (order as encoded). Empty `values` is part of the parent rule that empty
+ * `defaultValues` makes a missing-attribute filter item TRUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

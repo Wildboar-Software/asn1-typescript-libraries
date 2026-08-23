@@ -7,6 +7,11 @@ import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";
  * @summary userPwdRecentlyExpired
  * @description
  *
+ * Single-valued operational attribute of syntax {@link UserPwd} (the expired
+ * password itself, not a history SEQUENCE). Equality matching is the same as
+ * the password attribute (`userPwdMatch`). Duration of retention is
+ * `pwdRecentlyExpiredDuration`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

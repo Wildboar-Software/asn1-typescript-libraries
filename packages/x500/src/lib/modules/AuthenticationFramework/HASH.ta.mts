@@ -1,3 +1,7 @@
+/**
+ * Algorithm + BIT STRING hash of DER(`ToBeHashed`). Re-exported from
+ * `@wildboar/pki-stub`.
+ */
 export {
     HASH,
     _get_decoder_for_HASH,

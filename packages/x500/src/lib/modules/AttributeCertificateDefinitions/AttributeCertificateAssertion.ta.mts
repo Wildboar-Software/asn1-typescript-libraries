@@ -25,6 +25,10 @@ import {
  * @summary AttributeCertificateAssertion
  * @description
  *
+ * Matching assertion for an AC. Omitted components are unconstrained.
+ * Present components must all match. `attType` is SET OF AttributeType
+ * (unordered); empty SET would match no types.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

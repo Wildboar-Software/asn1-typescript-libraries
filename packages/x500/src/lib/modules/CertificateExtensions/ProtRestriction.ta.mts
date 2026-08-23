@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProtRestriction
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF OBJECT IDENTIFIER — allowed protocols on an
+ * AVL entry. Empty not allowed. Peer using an unlisted protocol shall be
+ * rejected.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

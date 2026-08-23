@@ -19,6 +19,9 @@ import {
  * @summary PolicySyntax
  * @description
  *
+ * Certificate-policy attribute value: policy OID plus {@link InfoSyntax}
+ * (inline content or pointer + optional hash of that content).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

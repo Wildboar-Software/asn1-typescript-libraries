@@ -10,6 +10,9 @@ import {
  * @summary CertificateSerialNumbers
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF CertificateSerialNumber. Empty not allowed.
+ * Order is encoding order; serials unique per issuer, not sequential.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

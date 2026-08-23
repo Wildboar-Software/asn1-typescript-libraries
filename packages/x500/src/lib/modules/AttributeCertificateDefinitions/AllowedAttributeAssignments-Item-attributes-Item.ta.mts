@@ -15,6 +15,9 @@ import {
  * @summary AllowedAttributeAssignments_Item_attributes_Item
  * @description
  *
+ * Either an AttributeType (any values of that type) or a full Attribute
+ * (type plus specific values).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

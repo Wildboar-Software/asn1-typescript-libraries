@@ -15,6 +15,9 @@ import {
  * @summary AttribsHash
  * @description
  *
+ * `HASH{HashedAttributes}`: digest of DER-encoded attributes in scope order
+ * (`wholeEntry` as SET order per X.509 6.2; else {@link SelectedTypes} order).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CERT_POLICY_QUALIFIER
  * @description
  *
+ * Information object class for a policy qualifier: unique OID plus optional
+ * `&Qualifier` type. Qualifiers do not change policy identity. `anyPolicy`
+ * should not carry qualifiers. A definition may allow the OID without a
+ * value; specify the implied semantics if so.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

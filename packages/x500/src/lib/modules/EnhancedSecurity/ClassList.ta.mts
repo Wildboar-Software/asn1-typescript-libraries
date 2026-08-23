@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ClassList
  * @description
  *
+ * BIT STRING of classifications the entity holds: unmarked(0),
+ * unclassified(1), restricted(2), confidential(3), secret(4), topSecret(5).
+ * Multiple bits may be set. DEFAULT on {@link Clearance} is unclassified only
+ * (bit 1), not unmarked (0) and not empty. Distinct from
+ * {@link SecurityClassification} INTEGER.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

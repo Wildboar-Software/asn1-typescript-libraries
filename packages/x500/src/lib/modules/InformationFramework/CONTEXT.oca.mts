@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CONTEXT
  * @description
  *
+ * Information object class for a context type (language, temporal, etc.).
+ * `&Type` is the stored syntax; `&Assertion` is the assertion syntax (may
+ * differ). `&absentMatch` defaults to TRUE: a value with *no* context of
+ * this type still satisfies a context assertion of this type. `&id` is
+ * UNIQUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

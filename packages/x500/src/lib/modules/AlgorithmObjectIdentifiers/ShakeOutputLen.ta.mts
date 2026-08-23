@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ShakeOutputLen
  * @description
  *
+ * SHAKE XOF output length in bits (INTEGER), not bytes. Parameters for
+ * `shake128-len` / `shake256-len`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

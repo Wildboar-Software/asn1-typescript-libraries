@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityCategory
  * @description
  *
+ * SEQUENCE: [0] type OID then [1] EXPLICIT value. Open type identified by
+ * {@link SECURITY_CATEGORY}; `value` encoding depends on `type`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

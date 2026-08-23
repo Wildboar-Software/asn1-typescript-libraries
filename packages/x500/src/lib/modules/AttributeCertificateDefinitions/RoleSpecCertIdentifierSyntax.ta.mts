@@ -10,6 +10,8 @@ import {
  * @summary RoleSpecCertIdentifierSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF RoleSpecCertIdentifier. Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

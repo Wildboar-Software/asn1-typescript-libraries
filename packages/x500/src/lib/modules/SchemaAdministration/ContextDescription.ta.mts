@@ -21,6 +21,13 @@ import {
  * @summary ContextDescription
  * @description
  *
+ * Subschema-subentry value describing one context type. `identifier` is the
+ * context-type OID.
+ *
+ * `name` is a SET of Directory-string aliases (unordered). `obsolete` DEFAULT
+ * FALSE. `information` holds syntax/assertion-syntax ASN.1 text (see
+ * `ContextInformation`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

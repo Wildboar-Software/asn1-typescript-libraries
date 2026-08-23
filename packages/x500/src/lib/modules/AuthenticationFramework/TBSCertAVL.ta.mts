@@ -1,3 +1,6 @@
+/**
+ * To-be-signed AVL. Re-exported from `@wildboar/pki-stub`.
+ */
 export {
     TBSCertAVL,
     _decode_TBSCertAVL,

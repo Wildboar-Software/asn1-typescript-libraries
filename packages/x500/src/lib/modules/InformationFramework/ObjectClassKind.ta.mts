@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ObjectClassKind
  * @description
  *
+ * Kind of object class. Default in {@link OBJECT_CLASS} is `structural`.
+ * - `abstract` (0): cannot itself be an entry's structural class (`top` is
+ *   abstract). Used only as a superclass.
+ * - `structural` (1): exactly one structural class (plus its superclasses)
+ *   per entry; it determines name form and DIT structure rules.
+ * - `auxiliary` (2): extra attributes; an entry may have several. Auxiliary
+ *   classes do not participate in naming.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +35,14 @@ export enum _enum_for_ObjectClassKind {
  * @summary ObjectClassKind
  * @description
  *
+ * Kind of object class. Default in {@link OBJECT_CLASS} is `structural`.
+ * - `abstract` (0): cannot itself be an entry's structural class (`top` is
+ *   abstract). Used only as a superclass.
+ * - `structural` (1): exactly one structural class (plus its superclasses)
+ *   per entry; it determines name form and DIT structure rules.
+ * - `auxiliary` (2): extra attributes; an entry may have several. Auxiliary
+ *   classes do not participate in naming.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,14 +60,8 @@ export type ObjectClassKind = _enum_for_ObjectClassKind;
  * @summary ObjectClassKind
  * @description
  *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ObjectClassKind  ::=  ENUMERATED {
- *   abstract   (0),
- *   structural (1),
- *   auxiliary  (2)}
- * ```
+ * Kind of object class. Default in {@link OBJECT_CLASS} is `structural`.
+ * See {@link _enum_for_ObjectClassKind}.
  *
  * @enum {number}
  */

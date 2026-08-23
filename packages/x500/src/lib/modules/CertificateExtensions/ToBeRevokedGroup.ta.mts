@@ -25,6 +25,11 @@ import {
  * @summary ToBeRevokedGroup
  * @description
  *
+ * Future revocation notice. `certificateIssuer` omitted = CRL issuer.
+ * `revocationTime` after thisUpdate; if before nextUpdate, treat as revoked
+ * in that window. `holdInstructionCode` only with certificateHold, and only
+ * after revocationTime. nameSubtree uses name-constraints hierarchy rules.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,10 @@ export class ToBeRevokedGroup {
     constructor(
         /**
          * @summary `certificateIssuer`.
+         * @description
+         *
+         * Omitted = CRL issuer.
+         *
          * @public
          * @readonly
          */
@@ -53,6 +62,11 @@ export class ToBeRevokedGroup {
         readonly reasonInfo: OPTIONAL<ReasonInfo>,
         /**
          * @summary `revocationTime`.
+         * @description
+         *
+         * Shall be after thisUpdate. If before nextUpdate, treat as revoked in
+         * that window.
+         *
          * @public
          * @readonly
          */

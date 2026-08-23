@@ -10,6 +10,10 @@ import {
  * @summary OPTIONALLY_PROTECTED_SEQ
  * @description
  *
+ * CHOICE used when `Type` is an untagged SEQUENCE so unsigned vs signed would
+ * otherwise both be UNIVERSAL 16. `signed` is [0] IMPLICIT SIGNED{Type}.
+ * Signed content is DER-encoded per X.509.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,12 @@ import {
  * @summary GeneralName
  * @description
  *
+ * One name form in SAN/IAN, DPs, AKI, etc. Empty subject DN only with a
+ * critical SAN. `directoryName` is EXPLICIT [4] because Name is a CHOICE.
+ * `iPAddress` is 4 or 16 raw octets (RFC 5280 name constraints use 8/32 with
+ * a mask — clash). `dNSName` is LDH/A-label, not U-label. If the containing
+ * extension is critical, at least one recognized form shall be processed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

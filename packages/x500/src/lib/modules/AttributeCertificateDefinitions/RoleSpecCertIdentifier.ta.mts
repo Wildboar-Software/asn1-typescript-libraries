@@ -24,6 +24,9 @@ import {
  * @summary RoleSpecCertIdentifier
  * @description
  *
+ * Identifies a role-specification certificate: role name, issuer name,
+ * optional serial, optional locator names.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

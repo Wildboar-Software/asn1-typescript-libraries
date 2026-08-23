@@ -20,6 +20,11 @@ import {
  * @summary BaseRevocationInfo
  * @description
  *
+ * Delta-from-time marker in `crlScope` (deprecated vs `deltaCRLIndicator`).
+ * `cRLNumber` + `baseThisUpdate` identify the point in time from which this
+ * dCRL updates; the referenced CRL need not itself be complete for scope.
+ * `cRLStreamIdentifier` omitted = same stream as this CRL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

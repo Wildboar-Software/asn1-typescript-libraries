@@ -41,6 +41,10 @@ import {
  * @summary ModifyOperationalBindingResultData
  * @description
  *
+ * Modify result: echoes `newBindingID`, `bindingType`, `newAgreement`, and
+ * `valid` from the request. The responder cannot return its own modify
+ * parameter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

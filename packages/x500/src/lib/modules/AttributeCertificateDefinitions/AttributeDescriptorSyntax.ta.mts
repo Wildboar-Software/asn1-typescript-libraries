@@ -30,6 +30,11 @@ import {
  * @summary AttributeDescriptorSyntax
  * @description
  *
+ * Describes an assignable attribute. `attributeSyntax` is OCTET STRING
+ * SIZE (1..MAX) — empty not allowed. Optional name/description are
+ * UTF8String SIZE (1..MAX). `dominationRule` identifies the privilege
+ * policy that dominates this attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

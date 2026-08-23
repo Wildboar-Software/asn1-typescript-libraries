@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DisplayText
  * @description
  *
+ * CHOICE of VisibleString / BMPString / UTF8String, each SIZE (1..200).
+ * Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

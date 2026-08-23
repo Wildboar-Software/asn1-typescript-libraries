@@ -17,6 +17,11 @@ import {
  * @summary AuthenticationLevel_basicLevels
  * @description
  *
+ * SEQUENCE: `level` then optional `localQualifier` then `signed` (DEFAULT
+ * FALSE; omit when false). `level` is `none` < `simple` < `strong`. If
+ * `localQualifier` is absent here, any requestor qualifier is ignored; if
+ * present, the requestor's INTEGER must be ≥ this value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,18 +33,21 @@ export class AuthenticationLevel_basicLevels {
     constructor(
         /**
          * @summary `level`.
+         * @description `none`(0) < `simple`(1) < `strong`(2); requestor must meet or exceed.
          * @public
          * @readonly
          */
         readonly level: AuthenticationLevel_basicLevels_level,
         /**
          * @summary `localQualifier`.
+         * @description Compared only if present; requestor must be arithmetically ≥ this INTEGER.
          * @public
          * @readonly
          */
         readonly localQualifier?: OPTIONAL<INTEGER>,
         /**
          * @summary `signed`.
+         * @description DEFAULT FALSE. TRUE requires the Directory request to be signed.
          * @public
          * @readonly
          */

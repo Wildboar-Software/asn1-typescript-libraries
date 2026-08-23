@@ -19,6 +19,10 @@ import {
  * @summary CertificateExactAssertion
  * @description
  *
+ * Exact certificate match: issuer Name + serialNumber. Serials are unique
+ * per issuer, not sequential. Both components required. Selects a single
+ * Certificate attribute value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +37,21 @@ export class CertificateExactAssertion {
     constructor(
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Unique per issuer, not sequential.
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: CertificateSerialNumber,
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * X.501 Name (RDNSequence, root first). Combined with serial, uniquely
+         * identifies the cert.
+         *
          * @public
          * @readonly
          */

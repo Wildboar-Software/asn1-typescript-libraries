@@ -1,3 +1,6 @@
+/**
+ * SEQUENCE OF scope restriction. Re-exported from `@wildboar/pki-stub`.
+ */
 export type {
     ScopeRestrictions,
 } from "@wildboar/pki-stub";

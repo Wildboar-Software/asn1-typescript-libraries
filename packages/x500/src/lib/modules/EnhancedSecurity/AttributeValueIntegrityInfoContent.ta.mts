@@ -19,6 +19,9 @@ import {
  * @summary AttributeValueIntegrityInfoContent
  * @description
  *
+ * SEQUENCE: optional `signer` then `aVIHash` ({@link AVIHash} over
+ * {@link AttributeTypeValueContexts}, including other contexts).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

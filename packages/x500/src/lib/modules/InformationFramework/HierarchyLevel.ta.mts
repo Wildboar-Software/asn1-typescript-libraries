@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HierarchyLevel
  * @description
  *
+ * Distance from this entry to the hierarchical-group top (the
+ * `hierarchyParent` chain). The top has level `0`. A compound entry is one
+ * vertex: the ancestor holds this operational attribute. An entry belongs
+ * to at most one hierarchical group.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

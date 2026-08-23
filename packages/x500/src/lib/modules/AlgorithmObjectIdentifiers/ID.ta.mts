@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ID
  * @description
  *
+ * Alias of OBJECT IDENTIFIER used for algorithm OIDs in this module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

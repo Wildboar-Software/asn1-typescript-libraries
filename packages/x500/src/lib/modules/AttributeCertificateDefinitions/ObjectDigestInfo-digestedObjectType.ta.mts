@@ -1,3 +1,6 @@
+/**
+ * ENUMERATED digested-object type. Re-exported from `@wildboar/pki-stub`.
+ */
 export {
     ObjectDigestInfo_digestedObjectType,
     _decode_ObjectDigestInfo_digestedObjectType,

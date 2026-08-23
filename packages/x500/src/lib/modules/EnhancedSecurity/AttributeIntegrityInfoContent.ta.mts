@@ -24,6 +24,11 @@ import {
  * @summary AttributeIntegrityInfoContent
  * @description
  *
+ * SEQUENCE: `scope`, optional `signer`, then `attribsHash`. Hash is over DER
+ * of {@link HashedAttributes}. `wholeEntry` orders attributes as a SET (X.509
+ * 6.2); `selectedTypes` uses {@link SelectedTypes} order. Verifier must know
+ * every syntax in scope.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +44,21 @@ export class AttributeIntegrityInfoContent {
     constructor(
         /**
          * @summary `scope`.
+         * @description `wholeEntry` vs `selectedTypes`; determines hash input and attribute order.
          * @public
          * @readonly
          */
         readonly scope: Scope,
         /**
          * @summary `signer`.
+         * @description Authority or originator; omit when the verifying key is known by off-line means.
          * @public
          * @readonly
          */
         readonly signer: OPTIONAL<Signer>,
         /**
          * @summary `attribsHash`.
+         * @description HASH of DER-encoded {@link HashedAttributes} in scope order.
          * @public
          * @readonly
          */

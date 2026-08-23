@@ -19,6 +19,9 @@ import {
  * @summary TerminateOperationalBindingResult
  * @description
  *
+ * CHOICE of `[0] NULL` or `[1] OPTIONALLY-PROTECTED-SEQ` of
+ * `TerminateOperationalBindingResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

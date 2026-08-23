@@ -24,6 +24,10 @@ import {
  * @summary InfoSyntax_pointer
  * @description
  *
+ * Locator for a policy/CPS: `name` is GeneralNames; optional `hash` is
+ * HASH of {@link HashedPolicyInfo} (DER of the document that should be
+ * found at those names).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

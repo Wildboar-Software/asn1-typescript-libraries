@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReasonFlags
  * @description
  *
+ * BIT STRING of CRL reasons. Bit 0 `unused` is reserved. Bit 7 is
+ * `privilegeWithdrawn` here; CRLReason ENUMERATED has no value 7
+ * (`removeFromCRL` is 8). Omit vs all-zero: omitted DP reasons = all
+ * reasons; all-zero is not "all". `certificateHold` / `removeFromCRL`
+ * (delta only) pairing. `aACompromise` is ACRL-only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

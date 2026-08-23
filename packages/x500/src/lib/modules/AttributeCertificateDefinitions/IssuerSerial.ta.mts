@@ -1,3 +1,6 @@
+/**
+ * Issuer names plus serial. Re-exported from `@wildboar/pki-stub`.
+ */
 export {
     IssuerSerial,
     _decode_IssuerSerial,

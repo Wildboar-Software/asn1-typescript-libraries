@@ -14,6 +14,13 @@ import {
  * @summary AttributeValueAssertion_assertedContexts
  * @description
  *
+ * Optional context constraint on an {@link AttributeValueAssertion}:
+ * `allContexts` (`NULL`) matches regardless of contexts and suppresses
+ * default context assertions; `selectedContexts` is a SET SIZE (1..MAX) of
+ * {@link ContextAssertion} (all must hold). If this CHOICE is omitted from
+ * the AVA, defaults from the operation, context-assertion subentries, or
+ * the DSA may still apply.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

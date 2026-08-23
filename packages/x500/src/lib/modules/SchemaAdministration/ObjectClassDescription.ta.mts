@@ -21,6 +21,13 @@ import {
  * @summary ObjectClassDescription
  * @description
  *
+ * Subschema-subentry value describing one object class. `identifier` is the
+ * object- class OID (static once registered).
+ *
+ * `name` is a SET of Directory-string aliases (unordered; not LDAP-NAME).
+ * `obsolete` DEFAULT FALSE. `information` holds superclasses, kind, MUST/MAY
+ * attribute OIDs (see `ObjectClassInformation`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

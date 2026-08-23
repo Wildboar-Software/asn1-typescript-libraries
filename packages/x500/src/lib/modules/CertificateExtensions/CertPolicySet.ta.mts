@@ -10,6 +10,10 @@ import {
  * @summary CertPolicySet
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF CertPolicyId for matching. Empty not allowed.
+ * Match if any listed OID appears in the cert's certificatePolicies, or if
+ * either side contains `anyPolicy`. No policies extension => no match.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time
  * @description
  *
+ * CHOICE of `utcTime` or `generalizedTime`. UTCTime two-digit year: 00-49 ->
+ * 2000+, 50-99 -> 1900+; do not use UTCTime for dates after 2049.
+ * GeneralizedTime may not interwork with older peers.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -9,6 +9,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContextCombination
  * @description
  *
+ * Boolean combination of context types (`context` / `and` / `or` / `not`).
+ * `and`/`or` are SEQUENCE OF (encoded order; semantically a set). Default
+ * `and:{}` means no restriction on combining the profile's context types.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

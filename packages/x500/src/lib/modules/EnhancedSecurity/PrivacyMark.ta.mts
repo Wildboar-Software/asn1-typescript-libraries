@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrivacyMark
  * @description
  *
+ * PrintableString SIZE (1..MAX): empty is invalid. Human-readable privacy
+ * marking on a {@link SecurityLabel}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

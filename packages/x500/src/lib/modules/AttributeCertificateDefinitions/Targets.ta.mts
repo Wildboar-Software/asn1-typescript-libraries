@@ -10,6 +10,9 @@ import {
  * @summary Targets
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF Target — targeting the AC. Empty is not
+ * allowed if the component is present; omit the extension instead.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

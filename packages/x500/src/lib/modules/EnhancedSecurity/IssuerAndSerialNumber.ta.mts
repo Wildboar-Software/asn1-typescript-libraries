@@ -19,6 +19,9 @@ import {
  * @summary IssuerAndSerialNumber
  * @description
  *
+ * SEQUENCE: issuer {@link Name} then `serial`. Identifies one certificate of
+ * the entry owner. Name is CHOICE; serial is INTEGER (0 is a valid serial).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

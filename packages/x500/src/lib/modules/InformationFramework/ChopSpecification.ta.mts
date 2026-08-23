@@ -20,6 +20,13 @@ import {
  * @summary ChopSpecification
  * @description
  *
+ * Cuts a subtree below its base. `specificExclusions` is a SET SIZE (1..MAX)
+ * (unordered). `chopBefore` drops the named entry and its subordinates;
+ * `chopAfter` keeps the named entry and drops only its subordinates.
+ * `minimum` defaults to `0` (include the base); `maximum` absent means no
+ * lower bound. Distances use {@link BaseDistance} (compound entries count
+ * as one).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

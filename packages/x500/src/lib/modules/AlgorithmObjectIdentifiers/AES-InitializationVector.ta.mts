@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AES_InitializationVector
  * @description
  *
+ * AES-CBC IV: OCTET STRING SIZE (16) - 16 octets for AES-128, AES-192, and
+ * AES-256 alike. Wrong length is invalid.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

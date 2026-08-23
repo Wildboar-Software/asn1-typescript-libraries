@@ -19,6 +19,11 @@ import {
  * @summary Validity
  * @description
  *
+ * Binding lifetime. Empty SEQUENCE (or omitted `valid` on establish) means from
+ * now until explicit termination. `validFrom` DEFAULT `now:NULL`; `validUntil`
+ * DEFAULT `explicitTermination:NULL`. Explicit `time` uses `Time` (UTCTime year
+ * window as on that type).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

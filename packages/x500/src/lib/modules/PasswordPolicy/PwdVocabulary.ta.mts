@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PwdVocabulary
  * @description
  *
+ * BIT STRING restrictions on password words. Set bits forbid that class:
+ * `noDictionaryWords`(0), `noPersonNames`(1), `noGeographicalNames`(2).
+ * Unset bits impose no restriction. All-zero / empty bit string means no
+ * vocabulary constraint.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

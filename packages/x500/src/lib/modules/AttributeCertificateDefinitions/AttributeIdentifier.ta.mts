@@ -5,6 +5,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeIdentifier
  * @description
  *
+ * ATTRIBUTE.&id — OID of an attribute type. Compare as OID equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

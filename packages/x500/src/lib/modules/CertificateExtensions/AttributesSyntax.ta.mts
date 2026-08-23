@@ -10,6 +10,10 @@ import {
  * @summary AttributesSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF Attribute — subject directory attributes.
+ * Empty not allowed. Order is encoding order, not a SET. Critical SAN-style
+ * rule: if critical, at least one recognized attribute type must be processed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

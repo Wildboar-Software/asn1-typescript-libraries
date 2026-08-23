@@ -7,6 +7,12 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @summary NAME_FORM
  * @description
  *
+ * Information object class naming a structural object class: which
+ * attributes form the RDN. `&namedObjectClass` shall be structural.
+ * `&MandatoryAttributes` become distinguished attributes (at least one).
+ * Optional naming attributes may appear in the RDN. A given attribute type
+ * still appears at most once in one RDN. `&id` is UNIQUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,6 @@
+/**
+ * Attribute-certificate issuer. Re-exported from `@wildboar/pki-stub`.
+ */
 export {
     AttCertIssuer,
     _decode_AttCertIssuer,

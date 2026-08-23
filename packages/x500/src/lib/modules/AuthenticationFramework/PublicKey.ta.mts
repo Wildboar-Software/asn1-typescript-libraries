@@ -1,3 +1,6 @@
+/**
+ * BIT STRING public key. Re-exported from `@wildboar/pki-stub`.
+ */
 export type {
     PublicKey,
 } from "@wildboar/pki-stub";

@@ -5,6 +5,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EstablishOperationalBindingArgumentData_initiator
  * @description
  *
+ * Who initiates establish: `symmetric` [3], `roleA-initiates` [4], or
+ * `roleB-initiates` [5]. Inner type is the binding's establish parameter (NULL
+ * when the role defines none - wrong type -> `parametersMissing`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

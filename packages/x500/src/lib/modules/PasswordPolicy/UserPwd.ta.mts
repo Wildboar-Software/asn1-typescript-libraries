@@ -10,6 +10,13 @@ import {
  * @summary UserPwd
  * @description
  *
+ * CHOICE: `clear` UTF8String vs `encrypted` SEQUENCE, extensible. Matching
+ * (`userPwdMatch`) compares a presented value with the stored password.
+ * History uses `userPwdHistory` (`PwdHistory{UserPwd}`: `time` then
+ * `password`) and `userPwdHistoryMatch`, whose assertion syntax is
+ * {@link UserPwd} (not the history SEQUENCE). Recently-expired also uses
+ * this type. Single-valued user attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

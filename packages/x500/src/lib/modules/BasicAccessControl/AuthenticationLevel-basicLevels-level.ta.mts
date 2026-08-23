@@ -12,6 +12,10 @@ export enum _enum_for_AuthenticationLevel_basicLevels_level {
  * @summary AuthenticationLevel_basicLevels_level
  * @description
  *
+ * Extensible ENUMERATED: `none`(0) < `simple`(1) < `strong`(2). Strong exceeds
+ * simple and none; simple exceeds none. `simple` needs a password;
+ * identification-only is `none`. Unknown enumerations are still integers.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

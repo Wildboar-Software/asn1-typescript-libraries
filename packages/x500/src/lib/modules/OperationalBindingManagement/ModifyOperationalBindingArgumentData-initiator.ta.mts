@@ -5,6 +5,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ModifyOperationalBindingArgumentData_initiator
  * @description
  *
+ * Who initiates modify: `symmetric` [3], `roleA-initiates` [4], or
+ * `roleB-initiates` [5]. Present iff that role's MODIFICATION-PARAMETER is
+ * defined; otherwise absent. Wrong role -> `roleAssignment`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

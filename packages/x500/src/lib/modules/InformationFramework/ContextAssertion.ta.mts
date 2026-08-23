@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContextAssertion
  * @description
  *
+ * Assertion against contexts of one `contextType` on an attribute value.
+ * `contextValues` is a SET SIZE (1..MAX): unordered, at least one. True if
+ * any stored context value of that type matches any asserted value; also
+ * true if the value has *no* context of that type; also true (fallback) if
+ * no other value of the attribute matches but this value has the context
+ * type with `fallback` TRUE. False otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

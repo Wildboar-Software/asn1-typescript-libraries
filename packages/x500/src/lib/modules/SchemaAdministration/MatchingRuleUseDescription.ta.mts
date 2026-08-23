@@ -16,6 +16,13 @@ import {
  * @summary MatchingRuleUseDescription
  * @description
  *
+ * Subschema-subentry value listing attribute types to which a matching rule
+ * applies. `identifier` is the matching-rule OID.
+ *
+ * `information` is SET OF attribute-type OIDs (unordered; empty SET means the
+ * rule applies to no types). `name` is a SET of Directory-string aliases.
+ * `obsolete` DEFAULT FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,12 @@ import {
  * @summary DistributionPoint
  * @description
  *
+ * One cRLDistributionPoints / freshestCRL element. If `distributionPoint`
+ * omitted, the DP name defaults to the CRL issuer name. `reasons` omitted =
+ * all reasons (omitted vs all-zero are not the same for matching).
+ * `cRLIssuer` omitted = CRL issued by the cert issuer. fullName vs
+ * nameRelativeToCRLIssuer: see DistributionPointName.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +45,31 @@ export class DistributionPoint {
     constructor(
         /**
          * @summary `distributionPoint`.
+         * @description
+         *
+         * Omitted = DP name defaults to CRL issuer. fullName vs
+         * nameRelativeToCRLIssuer.
+         *
          * @public
          * @readonly
          */
         readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `reasons`.
+         * @description
+         *
+         * Omitted = all reasons. Not the same as all-zero bits.
+         *
          * @public
          * @readonly
          */
         readonly reasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `cRLIssuer`.
+         * @description
+         *
+         * Omitted = CRL issued by the certificate issuer.
+         *
          * @public
          * @readonly
          */

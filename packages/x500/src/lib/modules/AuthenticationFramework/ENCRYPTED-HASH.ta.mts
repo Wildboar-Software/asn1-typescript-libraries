@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ENCRYPTED_HASH
  * @description
  *
+ * BIT STRING: hash the DER encoding of `ToBeSigned`, then encipher those
+ * octets. X.509 itself no longer uses this type; retained for other specs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

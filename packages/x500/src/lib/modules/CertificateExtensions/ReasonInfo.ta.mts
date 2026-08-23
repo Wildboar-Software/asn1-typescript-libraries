@@ -20,6 +20,10 @@ import {
  * @summary ReasonInfo
  * @description
  *
+ * Revocation reason plus optional hold instruction. `holdInstructionCode`
+ * only when reason is `certificateHold`; omit when converting a hold to a
+ * final revocation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,6 +44,10 @@ export class ReasonInfo {
         readonly reasonCode: CRLReason,
         /**
          * @summary `holdInstructionCode`.
+         * @description
+         *
+         * Only with CRLReason certificateHold.
+         *
          * @public
          * @readonly
          */

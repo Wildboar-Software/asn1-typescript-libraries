@@ -20,6 +20,9 @@ import {
  * @summary SupportedPublicKeyAlgorithms
  * @description
  *
+ * Acceptable public-key algorithm and `minKeySize`. Optional `extensions`
+ * is SEQUENCE SIZE (1..MAX) of {@link OidOrAttr} — omit rather than empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

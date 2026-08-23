@@ -24,6 +24,11 @@ import {
  * @summary UserPermission
  * @description
  *
+ * SEQUENCE used under `userFirst`: {@link ProtectedItems} plus
+ * {@link GrantsAndDenials} for the outer {@link UserClasses}. Optional
+ * `precedence` defaults to the enclosing {@link ACIItem}; if present it
+ * **overrides**. Equal precedence: deny beats grant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,6 +45,7 @@ export class UserPermission {
     constructor(
         /**
          * @summary `precedence`.
+         * @description Defaults to the ACIItem precedence; if present, this value is used instead.
          * @public
          * @readonly
          */

@@ -15,6 +15,11 @@ import {
  * @summary SignedSecurityLabel
  * @description
  *
+ * `SIGNED{SignedSecurityLabelContent}`: syntax of
+ * `attributeValueSecurityLabelContext`. At most one such context per attribute
+ * value. Signature covers the SEQUENCE; `attHash` itself hashes DER of the
+ * AttributeTypeAndValue.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

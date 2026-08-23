@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrivateKeyUsagePeriod
  * @description
  *
+ * At least one of notBefore/notAfter (WITH COMPONENTS). Always
+ * non-critical. GeneralizedTime. Period may differ from cert Validity;
+ * typically the private-key sign period is shorter. Signing keys only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +31,22 @@ export class PrivateKeyUsagePeriod {
     constructor(
         /**
          * @summary `notBefore`.
+         * @description
+         *
+         * Earliest signing time. Omitted = no extra lower bound beyond cert
+         * validity. At least one bound required.
+         *
          * @public
          * @readonly
          */
         readonly notBefore?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `notAfter`.
+         * @description
+         *
+         * Latest signing time. Omitted = no extra upper bound beyond cert
+         * validity. Typically shorter than cert notAfter.
+         *
          * @public
          * @readonly
          */

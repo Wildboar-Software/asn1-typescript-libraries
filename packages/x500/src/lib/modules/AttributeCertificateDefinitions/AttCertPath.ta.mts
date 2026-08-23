@@ -10,6 +10,10 @@ import {
  * @summary AttCertPath
  * @description
  *
+ * SEQUENCE OF AttributeCertificate — a delegation path of ACs. Order is
+ * significant (each AC's holder is the next issuer). Empty SEQUENCE is
+ * allowed by the type (no SIZE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary HolderIssuerAssertion
  * @description
  *
+ * Optional holder and/or issuer. Omitted component is unconstrained; both
+ * may be absent (matches any AC).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

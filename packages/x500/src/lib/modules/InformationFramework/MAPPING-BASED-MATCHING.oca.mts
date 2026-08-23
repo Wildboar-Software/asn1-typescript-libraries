@@ -6,6 +6,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @summary MAPPING_BASED_MATCHING
  * @description
  *
+ * Matching via a mapped value rather than the stored syntax (e.g. zonal
+ * matching). `&subtypesIncluded` defaults TRUE. `&combinable` is a
+ * parameterized Boolean (not a default). `&userControl` default FALSE:
+ * the user may not override. `&exclusive` default TRUE: other matching
+ * rules for the attribute are displaced. `&matching-rule` is the OID of
+ * the rule applied *after* mapping.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

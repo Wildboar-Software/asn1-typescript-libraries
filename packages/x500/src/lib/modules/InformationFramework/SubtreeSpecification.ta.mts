@@ -34,6 +34,13 @@ import {
  * @summary SubtreeSpecification
  * @description
  *
+ * Selects a subtree (or a non-contiguous "refinement") within an
+ * administrative area. Empty sequence `{}` means the whole area implied by
+ * context (the administrative point). `base` defaults to `{}` (the context
+ * vertex). Chop components (`specificExclusions`, `minimum`, `maximum`)
+ * are relative to `base`. `specificationFilter` further restricts by
+ * object class ({@link Refinement}).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

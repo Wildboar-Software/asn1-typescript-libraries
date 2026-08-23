@@ -16,6 +16,14 @@ import {
  * @summary MatchingRuleDescription
  * @description
  *
+ * Subschema-subentry value describing one matching rule. `identifier` is the
+ * matching-rule OID (static once registered).
+ *
+ * `name` is a SET of Directory-string aliases (unordered; not LDAP-NAME).
+ * `obsolete` DEFAULT FALSE. `information` is the assertion syntax as ASN.1 text
+ * (Imports/Assignment/Type; Directory type names are implicitly imported), not
+ * a Directory-string comment - that is `description`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

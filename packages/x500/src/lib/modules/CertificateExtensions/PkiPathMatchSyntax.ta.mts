@@ -13,6 +13,10 @@ import {
  * @summary PkiPathMatchSyntax
  * @description
  *
+ * Matches a PkiPath if firstIssuer equals the first cert's issuer and
+ * lastSubject equals the last cert's subject. Both required. DN comparison
+ * is distinguishedNameMatch (X.501 order: root first, opposite of LDAP).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

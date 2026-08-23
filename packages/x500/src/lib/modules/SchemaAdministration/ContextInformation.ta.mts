@@ -10,6 +10,11 @@ import {
  * @summary ContextInformation
  * @description
  *
+ * Technical fields of a `ContextDescription`. `syntax` is required ASN.1 type
+ * text for the context value; `assertionSyntax` is optional ASN.1 text for the
+ * assertion. Same Imports/Assignment/Type convention as matching-rule
+ * `information`; Directory type names are implicitly imported.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

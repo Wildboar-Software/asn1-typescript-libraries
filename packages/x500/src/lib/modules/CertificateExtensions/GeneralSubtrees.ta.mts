@@ -10,6 +10,10 @@ import {
  * @summary GeneralSubtrees
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF GeneralSubtree — empty not allowed if the
+ * component is present. Order is encoding order; matching is by subtree
+ * rules, not position.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

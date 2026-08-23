@@ -20,6 +20,13 @@ import {
  * @summary IssuingDistPointSyntax
  * @description
  *
+ * If present on a CRL, only certs in that DP. Always critical.
+ * `onlyContainsUserPublicKeyCerts` / `onlyContainsCACerts` /
+ * `onlyContainsAttributeCerts` are mutually exclusive-ish: user and CA shall
+ * not both be TRUE; attribute is deprecated (use AA IDP). Both user and CA
+ * FALSE = both PKI cert types. `indirectCRL` DEFAULT FALSE.
+ * `onlySomeReasons` omitted = all reasons. Absent IDP+scope = full CRL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,30 +53,54 @@ export class IssuingDistPointSyntax {
         readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `onlyContainsUserPublicKeyCerts`.
+         * @description
+         *
+         * DEFAULT FALSE. Must not both be TRUE with onlyContainsCACerts. Both
+         * FALSE = both PKI types.
+         *
          * @public
          * @readonly
          */
         readonly onlyContainsUserPublicKeyCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlyContainsCACerts`.
+         * @description
+         *
+         * DEFAULT FALSE. Must not both be TRUE with
+         * onlyContainsUserPublicKeyCerts.
+         *
          * @public
          * @readonly
          */
         readonly onlyContainsCACerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlySomeReasons`.
+         * @description
+         *
+         * Omitted = all reasons.
+         *
          * @public
          * @readonly
          */
         readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `indirectCRL`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE => certificateIssuer entry extension names the
+         * cert issuer.
+         *
          * @public
          * @readonly
          */
         readonly indirectCRL?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `onlyContainsAttributeCerts`.
+         * @description
+         *
+         * Deprecated; use AA issuing DP. Must not mix with the PKI-only flags as
+         * TRUE together.
+         *
          * @public
          * @readonly
          */

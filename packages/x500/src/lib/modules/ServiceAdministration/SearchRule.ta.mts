@@ -73,6 +73,18 @@ import {
  * @summary SearchRule
  * @description
  *
+ * Search-rule governing Search/Read/ModifyEntry in a service-specific area.
+ * `id` is unique within the DMD identified by `dmdId`; `id` 0 is reserved for
+ * the empty search-rule (only `id`+`dmdId` then apply).
+ *
+ * `inputAttributeTypes` absent = no request-attribute restriction; present but
+ * empty SEQUENCE = only Read, ModifyEntry, or Search with default filter
+ * `and:{}` comply. `attributeCombination` DEFAULT `and:{}` (no combination
+ * restriction); shall be absent if input types are absent or empty.
+ *
+ * `allowedSubset` DEFAULT `'111'B` (all subsets). `outputAttributeTypes` does
+ * not affect search-validation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,12 @@ import {
  * @summary Scope
  * @description
  *
+ * CHOICE of what an {@link AttributeIntegrityInfo} signature covers:
+ * `wholeEntry` [0] NULL (all applicable user attribute values; excludes
+ * operational, collective, and attributeIntegrityInfo) vs `selectedTypes` [1]
+ * (all values of those types, in that SEQUENCE order). Incomplete retrieval
+ * prevents verification.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

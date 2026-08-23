@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OperationalBindingID
  * @description
  *
+ * Binding instance id: `identifier` INTEGER + `version` INTEGER. The assigning
+ * DSA chooses both starting values. `identifier` shall be unique for bindings
+ * between the two DSAs (peer may accept uniqueness only per binding type).
+ *
+ * On modify, `identifier` is unchanged and `version` shall increase. Duplicate
+ * `identifier` on establish yields `duplicateID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

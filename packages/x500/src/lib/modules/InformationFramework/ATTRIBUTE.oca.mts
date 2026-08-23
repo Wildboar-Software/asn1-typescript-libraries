@@ -7,6 +7,17 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * @summary ATTRIBUTE
  * @description
  *
+ * Information object class for an attribute type. Either `&Type` or
+ * `&derivation` (SUBTYPE OF) is required. Matching rules, if present, must
+ * apply to the syntax. `&single-valued` FALSE (default) still encodes
+ * values as SET OF; the Directory just forbids a second value.
+ * `&collective` TRUE: values come from a collective-attribute subentry, not
+ * the entry; collective types shall be `userApplications` and not
+ * single-valued. `&dummy` TRUE: not stored; used only to hang matching
+ * rules. Operational attributes (`usage` other than `userApplications`)
+ * shall not have contexts. `&no-user-modification` applies to operational
+ * types. `&id` is UNIQUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary AllowedAttributeAssignments_Item
  * @description
  *
+ * One allowed assignment: SET of attribute types or type-and-values, plus
+ * `holderDomain` (GeneralName). Attribute SET is unordered.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import {
  * @summary AltName
  * @description
  *
+ * Enhanced-certificate-match name assertion: a name form plus optional value.
+ * Omit `altNameValue` to match any SAN of that form; both present => same form
+ * and equal value. Stored cert must have a SAN extension or the match fails.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,11 @@ export class AltName {
         readonly altnameType: AltNameType,
         /**
          * @summary `altNameValue`.
+         * @description
+         *
+         * Omitted = match any SAN of altnameType. If present, form must match
+         * altnameType.
+         *
          * @public
          * @readonly
          */

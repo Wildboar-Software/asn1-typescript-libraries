@@ -15,6 +15,9 @@ import {
  * @summary SubjectAltPublicKeyInfo
  * @description
  *
+ * Alternative subject public key + algorithm. KeyUsage / extKeyUsage /
+ * privateKeyUsagePeriod also apply to this key. Non-critical recommended.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

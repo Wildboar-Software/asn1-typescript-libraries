@@ -1,3 +1,6 @@
+/**
+ * UTCTime or GeneralizedTime. Re-exported from `@wildboar/pki-stub`.
+ */
 export type {
     Time,
 } from "@wildboar/pki-stub";

@@ -1,3 +1,7 @@
+/**
+ * Attribute-certificate validity (`notBeforeTime` / `notAfterTime`).
+ * Re-exported from `@wildboar/pki-stub`.
+ */
 export {
     AttCertValidityPeriod,
     _decode_AttCertValidityPeriod,

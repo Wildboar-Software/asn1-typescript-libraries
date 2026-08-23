@@ -20,6 +20,12 @@ import type { PkiPath } from "./PkiPath.ta.mjs";
 /**
  * @summary CertificationPath
  * @description
+ *
+ * `userCertificate` FIRST, then `theCACertificates` (SEQUENCE of
+ * {@link CertificatePair}) toward the trust anchor — opposite of
+ * {@link PkiPath} (trust anchor first). Deprecated for new applications;
+ * prefer `PkiPath`. SIZE (1..MAX) on the CA sequence: omit it rather than
+ * send empty (direct trust-anchor issuance).
  * 
  * To quote ITU-T Recommendation X.509 (2019), Section 7.7:
  * 

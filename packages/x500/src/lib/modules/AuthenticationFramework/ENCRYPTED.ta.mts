@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ENCRYPTED
  * @description
  *
+ * BIT STRING wrapping ciphertext of the BER encoding of `ToBeEnciphered`
+ * (BER, not DER). X.509 itself no longer uses this type; retained for
+ * other specs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

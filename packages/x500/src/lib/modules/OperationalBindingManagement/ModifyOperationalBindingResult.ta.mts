@@ -19,6 +19,9 @@ import {
  * @summary ModifyOperationalBindingResult
  * @description
  *
+ * CHOICE of unprotected `null` or `[1] OPTIONALLY-PROTECTED-SEQ` of
+ * `ModifyOperationalBindingResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

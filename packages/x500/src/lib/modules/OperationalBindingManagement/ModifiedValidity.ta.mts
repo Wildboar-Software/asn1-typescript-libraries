@@ -19,6 +19,11 @@ import {
  * @summary ModifiedValidity
  * @description
  *
+ * Revised lifetime on modify. `validFrom` DEFAULT `now:NULL`. `validUntil`
+ * DEFAULT `unchanged:NULL` (unlike establish, which defaults to explicit
+ * termination). Omitted `valid` on modify means from now, until unchanged. A
+ * future `validFrom` leaves the current agreement in force until then.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import {
  * @summary ACIItem_itemOrUserFirst
  * @description
  *
+ * CHOICE of grouping only: `itemFirst` [0] (ProtectedItems outer) vs
+ * `userFirst` [1] (UserClasses outer). Semantically equivalent; pick whichever
+ * is administratively convenient. Extensible.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

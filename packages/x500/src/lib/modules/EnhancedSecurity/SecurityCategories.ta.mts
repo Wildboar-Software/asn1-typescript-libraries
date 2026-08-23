@@ -10,6 +10,9 @@ import {
  * @summary SecurityCategories
  * @description
  *
+ * SET SIZE (1..MAX) OF {@link SecurityCategory}: unordered; empty is invalid.
+ * Further restricts clearance/label within a classification.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

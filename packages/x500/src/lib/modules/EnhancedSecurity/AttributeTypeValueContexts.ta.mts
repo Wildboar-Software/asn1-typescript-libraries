@@ -15,6 +15,11 @@ import {
  * @summary AttributeTypeValueContexts
  * @description
  *
+ * SEQUENCE hashed for a single-value integrity context: `type`, `value`,
+ * optional `contextList` SET SIZE (1..MAX). If present, contexts are ordered
+ * as a SET (X.509 6.2); empty SET is invalid. Omit `contextList` when there
+ * are no other contexts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +47,7 @@ export class AttributeTypeValueContexts {
         readonly value: _Element,
         /**
          * @summary `contextList`.
+         * @description Other contexts, SET-ordered; omit rather than empty. Excludes this integrity context.
          * @public
          * @readonly
          */

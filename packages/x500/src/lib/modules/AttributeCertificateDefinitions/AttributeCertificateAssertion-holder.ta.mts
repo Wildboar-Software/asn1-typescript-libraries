@@ -15,6 +15,9 @@ import {
  * @summary AttributeCertificateAssertion_holder
  * @description
  *
+ * Holder alternative of the assertion: a specific PKC (IssuerSerial) or
+ * holder GeneralNames.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

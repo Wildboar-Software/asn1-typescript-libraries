@@ -21,6 +21,12 @@ import {
  * @summary DITContextUseDescription
  * @description
  *
+ * Subschema-subentry value constraining which contexts shall or may appear with
+ * an attribute type. `identifier` is that attribute-type OID, or
+ * `id-oa-allAttributeTypes` to apply to all types.
+ *
+ * `name` is a SET of Directory-string aliases. `obsolete` DEFAULT FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

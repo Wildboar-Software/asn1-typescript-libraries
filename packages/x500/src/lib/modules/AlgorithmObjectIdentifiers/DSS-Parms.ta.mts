@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSS_Parms
  * @description
  *
+ * DSA domain parameters SEQUENCE `p`, `q`, `g` (modulus, subgroup order,
+ * generator). Order differs from DH `DomainParameters` (`p`,`g`,`q`). All
+ * INTEGERs; no optional validation fields here.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

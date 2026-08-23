@@ -15,6 +15,14 @@ import {
  * @summary RelaxationPolicy
  * @description
  *
+ * Matching-rule relaxation/tightening policy. `basic` DEFAULT `{}` (empty
+ * mapping: first evaluation uses normal matching, no mapping-based match).
+ *
+ * `tightenings`/`relaxations` are SEQUENCE SIZE (1..MAX), applied in that order
+ * one at a time. `maximum` is mandatory if `tightenings` is present. `minimum`
+ * ASN.1 DEFAULT 1; clause 16.10.7 text says absent defaults to zero - prefer
+ * the ASN.1 DEFAULT 1 unless an implementation documents otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSEType
  * @description
  *
+ * BIT STRING of DSE roles. Several bits may be set (`"a DSE of type x"` means
+ * bit x is set; others may also be set) except `glue`(1), which shall be the
+ * only bit.
+ *
+ * `root`(0) is the DSA root (empty name). `immSupr` is bit 13 (bit 12 unused).
+ * `writeableCopy`(19) is defined but currently not used. Single-valued DSA-
+ * specific operational attribute; no user modification.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

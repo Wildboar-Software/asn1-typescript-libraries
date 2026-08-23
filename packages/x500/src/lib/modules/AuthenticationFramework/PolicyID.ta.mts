@@ -10,6 +10,9 @@ import {
  * @summary PolicyID
  * @description
  *
+ * Alias of `CertPolicyId`: OID of a certificate policy. Compare as OID
+ * equality, not string form.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

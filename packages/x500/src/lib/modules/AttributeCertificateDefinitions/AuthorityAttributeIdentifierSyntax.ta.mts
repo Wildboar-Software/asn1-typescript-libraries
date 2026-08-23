@@ -10,6 +10,9 @@ import {
  * @summary AuthorityAttributeIdentifierSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF AuthAttId (IssuerSerial of AA certificates).
+ * Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

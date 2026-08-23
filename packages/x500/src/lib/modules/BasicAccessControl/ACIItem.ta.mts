@@ -29,6 +29,14 @@ import {
  * @summary ACIItem
  * @description
  *
+ * One ACI value. `identificationTag` uniquely names this item among sibling ACI
+ * for modify/remove (not used by the ACDF). `precedence` is 0..255; **higher
+ * wins**. Equal precedence and specificity: deny beats grant. No matching ACI
+ * denies. `authenticationLevel` is a *minimum*. `itemOrUserFirst` only changes
+ * grouping (`itemFirst` vs `userFirst` are equivalent). SEQUENCE order is
+ * significant; inner `itemPermissions` / `userPermissions` are unordered SETs
+ * (empty SET grants/denies nothing).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,24 +62,28 @@ export class ACIItem {
     constructor(
         /**
          * @summary `identificationTag`.
+         * @description Discriminates this ACIItem among siblings; not evaluated in access decisions.
          * @public
          * @readonly
          */
         readonly identificationTag: UnboundedDirectoryString,
         /**
          * @summary `precedence`.
+         * @description INTEGER 0..255; higher number prevails. Inner permissions may override.
          * @public
          * @readonly
          */
         readonly precedence: Precedence,
         /**
          * @summary `authenticationLevel`.
+         * @description Minimum requestor level; `none` < `simple` < `strong`.
          * @public
          * @readonly
          */
         readonly authenticationLevel: AuthenticationLevel,
         /**
          * @summary `itemOrUserFirst`.
+         * @description Outer grouping: protected items first, or user classes first.
          * @public
          * @readonly
          */

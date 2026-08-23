@@ -15,6 +15,9 @@ import {
  * @summary ModifyOperationalBindingArgument
  * @description
  *
+ * OPTIONALLY-PROTECTED-SEQ wrapper around
+ * `ModifyOperationalBindingArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

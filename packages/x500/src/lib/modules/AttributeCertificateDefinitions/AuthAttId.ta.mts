@@ -10,6 +10,8 @@ import {
  * @summary AuthAttId
  * @description
  *
+ * Alias of IssuerSerial identifying an AA's attribute certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

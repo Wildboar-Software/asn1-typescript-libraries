@@ -15,6 +15,12 @@ import {
  * @summary DomainParameters
  * @description
  *
+ * DH domain parameters: `p` odd prime (`p = j*q + 1`), `g` generator, `q`
+ * factor of `p-1`, optional `j` (subgroup factor), optional `validationParms`.
+ *
+ * Component order is `p`,`g`,`q` - not DSA's `p`,`q`,`g`. Compare `p`,`g`,`q`;
+ * if both sides have `validationParms`, also compare `seed` and `pgenCounter`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

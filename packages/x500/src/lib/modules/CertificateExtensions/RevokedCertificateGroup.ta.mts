@@ -15,6 +15,10 @@ import {
  * @summary RevokedCertificateGroup
  * @description
  *
+ * CHOICE: NumberRange of serials (exclusive end, optional modulus) or
+ * `nameSubtree`. Used in revokedGroups (always critical). A serial shall
+ * not appear in both revokedCertificates and this extension.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

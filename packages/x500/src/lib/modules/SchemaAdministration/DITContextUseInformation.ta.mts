@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DITContextUseInformation
  * @description
  *
+ * Mandatory and optional context-type OIDs for a `DITContextUseDescription`.
+ * Both are SET SIZE (1..MAX) OPTIONAL (unordered). Omission of a SET means that
+ * category is unconstrained here; an empty SET cannot be encoded.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

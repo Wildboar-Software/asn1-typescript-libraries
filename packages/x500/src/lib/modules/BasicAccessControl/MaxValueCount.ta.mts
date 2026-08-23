@@ -15,6 +15,11 @@ import {
  * @summary MaxValueCount
  * @description
  *
+ * SEQUENCE: attribute `type` then `maxCount`. Examined on **add** of a value
+ * of `type`. Values are counted without regard to context or ACI, as if the
+ * add succeeded. If the count would exceed `maxCount` (including 0), the ACI
+ * is treated as not granting add. Order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

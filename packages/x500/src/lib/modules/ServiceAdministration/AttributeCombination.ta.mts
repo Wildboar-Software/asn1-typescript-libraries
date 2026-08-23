@@ -10,6 +10,14 @@ import {
  * @summary AttributeCombination
  * @description
  *
+ * Boolean combination of request-attribute types (`attribute` / `and` / `or` /
+ * `not`). `and`/`or` are SEQUENCE OF (encoded order; semantically a set).
+ * Default `and:{}` (empty) means no combination restriction.
+ *
+ * Empty `and`/`or` SEQUENCE is the empty combination (always true for `and`,
+ * always false for `or`). Invalid combinations fail search-validation. Shall
+ * not be used if `inputAttributeTypes` is absent or empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

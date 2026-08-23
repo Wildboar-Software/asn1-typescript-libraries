@@ -15,6 +15,9 @@ import {
  * @summary TerminateOperationalBindingArgument
  * @description
  *
+ * OPTIONALLY-PROTECTED-SEQ wrapper around
+ * `TerminateOperationalBindingArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

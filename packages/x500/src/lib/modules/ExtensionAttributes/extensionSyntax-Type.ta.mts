@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary extensionSyntax_Type
  * @description
  *
+ * DIRECTORY SYNTAX of `extensionSyntax{...}`: same SEQUENCE as an
+ * `ExtensionAttribute` value item (`mandatory`/`critical` DEFAULT FALSE, plus
+ * `ext`). LDAP-DESC/ID bind this syntax to the extension attribute type. One
+ * value per extension.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

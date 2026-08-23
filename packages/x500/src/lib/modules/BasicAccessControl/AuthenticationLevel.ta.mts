@@ -10,6 +10,14 @@ import {
  * @summary AuthenticationLevel
  * @description
  *
+ * Minimum requestor authentication for this ACI. `basicLevels.level`: `none`(0)
+ * < `simple`(1) < `strong`(2). Identification without a password is `none`;
+ * `simple` requires a password. `localQualifier` is compared only if present on
+ * the ACI (requestor must be ≥); if omitted, the requestor's qualifier is
+ * ignored. `signed` DEFAULT FALSE: TRUE requires a signed request. `other` is
+ * EXTERNAL; comparison is a local matter. Deny ACI with a high level also
+ * retains the denial when the requestor cannot prove non-membership.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

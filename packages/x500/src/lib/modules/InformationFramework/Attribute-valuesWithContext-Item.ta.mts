@@ -1,3 +1,8 @@
+/**
+ * One attribute value plus its contexts. Re-exported from
+ * `@wildboar/pki-stub`. `contextList` is SET SIZE (1..MAX); context types
+ * in the list are distinct. Not used in an RDN distinguished value.
+ */
 export {
     Attribute_valuesWithContext_Item,
     type Attribute_valuesWithContext_ItemJSON,

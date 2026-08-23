@@ -17,6 +17,13 @@ import {
  * @summary ObjectClassInformation
  * @description
  *
+ * Technical fields of an `ObjectClassDescription`. `subclassOf`, `mandatories`,
+ * and `optionals` are SETs (unordered OIDs); if present, SIZE (1..MAX) - empty
+ * SET is not encoded.
+ *
+ * `kind` DEFAULT `structural`. An attribute listed in both MUST and MAY is
+ * treated as mandatory.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HierarchyBelow
  * @description
  *
+ * `TRUE` if this hierarchical-group member has at least one hierarchical
+ * child. Held on the ancestor of a compound entry. Complements
+ * {@link HierarchyLevel}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

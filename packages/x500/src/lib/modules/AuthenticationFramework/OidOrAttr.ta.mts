@@ -10,6 +10,9 @@ import {
  * @summary OidOrAttr
  * @description
  *
+ * CHOICE: OID of an extension/attribute, or a full `Attribute` (type plus
+ * value). Used in {@link SupportedPublicKeyAlgorithms}.`extensions`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,13 @@ import {
  * @summary ResultAttribute
  * @description
  *
+ * How one attribute type may appear in a search result. Only one specification
+ * per type. Does not affect search-validation.
+ *
+ * Omitted `outputValues` = all values are candidates. `contexts` is SEQUENCE
+ * SIZE (1..MAX): omitted = no context-based restriction; a type not listed
+ * yields no context of that type on returned values.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

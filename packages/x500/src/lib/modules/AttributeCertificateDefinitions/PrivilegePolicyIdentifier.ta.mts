@@ -19,6 +19,9 @@ import {
  * @summary PrivilegePolicyIdentifier
  * @description
  *
+ * Privilege-policy OID plus {@link InfoSyntax} (inline content or pointer
+ * + optional hash of that content).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

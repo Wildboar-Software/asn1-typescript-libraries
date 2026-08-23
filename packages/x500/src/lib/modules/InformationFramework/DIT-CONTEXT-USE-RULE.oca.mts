@@ -6,6 +6,10 @@ import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
  * @summary DIT_CONTEXT_USE_RULE
  * @description
  *
+ * Information object class form of {@link DITContextUse}. `&attributeType`
+ * is UNIQUE. Contexts in neither mandatory nor optional are forbidden when
+ * a rule exists.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

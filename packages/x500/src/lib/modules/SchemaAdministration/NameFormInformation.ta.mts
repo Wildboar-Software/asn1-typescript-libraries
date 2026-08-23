@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NameFormInformation
  * @description
  *
+ * Technical fields of a `NameFormDescription`. `subordinate` is the structural
+ * object-class OID of named entries (not subclasses).
+ *
+ * `namingMandatories` is SET OF (empty SET is legal). `namingOptionals` is SET
+ * SIZE (1..MAX) OPTIONAL - if present, at least one OID; unordered.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,15 @@ import {
  * @summary MRSubstitution
  * @description
  *
+ * Replace `oldMatchingRule` with `newMatchingRule` for `attribute`. Omitted
+ * `oldMatchingRule` applies to the previously applicable rule; if it names a
+ * rule that is not currently applicable, no substitution occurs.
+ *
+ * Omitted `newMatchingRule` makes matching items TRUE (FALSE if negated), i.e.
+ * null-match. Among several substitutions, a present `oldMatchingRule` beats an
+ * omitted one for that rule. Combination of attribute + old rule must be unique
+ * in one `MRMapping`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

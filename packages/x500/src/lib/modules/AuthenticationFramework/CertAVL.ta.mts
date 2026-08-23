@@ -1,3 +1,7 @@
+/**
+ * Signed authority revocation list (AVL). Re-exported from
+ * `@wildboar/pki-stub`.
+ */
 export type {
     CertAVL,
 } from "@wildboar/pki-stub";

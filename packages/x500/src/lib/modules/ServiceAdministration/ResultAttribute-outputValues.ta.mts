@@ -5,6 +5,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ResultAttribute_outputValues
  * @description
  *
+ * Candidate result values for a `ResultAttribute`. `selectedValues` is SEQUENCE
+ * OF (only listed values may be returned). `matchedValuesOnly` (NULL) returns
+ * only values that contributed to the filter being TRUE, excluding `present`
+ * items.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

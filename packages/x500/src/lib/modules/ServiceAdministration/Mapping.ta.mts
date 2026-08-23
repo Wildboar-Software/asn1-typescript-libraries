@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Mapping
  * @description
  *
+ * Mapping-based matching function plus `level` (DEFAULT 0). Negative `level` is
+ * tightening. Ignored if the mapping's `&userControl` is set and the request
+ * includes `extendedArea` (that value is used instead).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

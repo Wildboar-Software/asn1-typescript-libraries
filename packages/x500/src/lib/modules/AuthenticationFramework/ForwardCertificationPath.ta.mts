@@ -10,6 +10,10 @@ import {
  * @summary ForwardCertificationPath
  * @description
  *
+ * SEQUENCE OF {@link CrossCertificates}: one SET of unordered certificate
+ * alternatives per hop, pointing toward the originator / trust anchor.
+ * SIZE (1..MAX): empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

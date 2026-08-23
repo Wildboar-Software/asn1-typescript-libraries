@@ -14,6 +14,10 @@ import {
  * @summary StatusReferral
  * @description
  *
+ * CHOICE: cRLReferral or INSTANCE OF OTHER-REFERRAL. Appears in a CRL
+ * that must not be used as a revocation source (statusReferrals is
+ * critical).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

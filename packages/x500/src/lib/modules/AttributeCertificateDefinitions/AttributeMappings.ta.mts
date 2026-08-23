@@ -10,6 +10,9 @@ import {
  * @summary AttributeMappings
  * @description
  *
+ * SET OF CHOICE — unordered type-to-type or type-and-value mappings
+ * between local and remote attributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

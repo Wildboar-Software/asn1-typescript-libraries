@@ -15,6 +15,12 @@ import {
  * @summary AttributeIntegrityInfo
  * @description
  *
+ * `SIGNED{AttributeIntegrityInfoContent}`: single-valued operational attribute
+ * protecting a whole entry or selected types. Hash/signature created by an
+ * authority or user, not by the Directory. Whole-entry scope **excludes**
+ * operational attributes, collective attributes, and this attribute itself;
+ * contexts on user attributes **are** included.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

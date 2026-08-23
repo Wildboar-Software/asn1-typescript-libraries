@@ -15,6 +15,10 @@ import {
  * @summary EstablishOperationalBindingArgument
  * @description
  *
+ * OPTIONALLY-PROTECTED-SEQ wrapper around
+ * `EstablishOperationalBindingArgumentData`. Sign when required by
+ * `SecurityParameters`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,11 @@ import {
  * @summary ConsumerInformation
  * @description
  *
+ * Alias of `SupplierOrConsumer` for a shadow consumer access point plus
+ * agreement id (SET). Held on a `cp` DSE of the supplier; multi-valued DSA-
+ * specific. Same matching as supplier information (ae-title + agreement
+ * identifier).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

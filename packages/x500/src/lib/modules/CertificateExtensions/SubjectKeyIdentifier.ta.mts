@@ -10,6 +10,9 @@ import {
  * @summary SubjectKeyIdentifier
  * @description
  *
+ * Always non-critical. KeyIdentifier unique among keys of this subject.
+ * Octet-for-octet comparison. Typical AKI.keyIdentifier of issued certs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

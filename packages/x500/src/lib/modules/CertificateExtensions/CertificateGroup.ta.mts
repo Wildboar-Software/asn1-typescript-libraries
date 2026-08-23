@@ -20,6 +20,10 @@ import {
  * @summary CertificateGroup
  * @description
  *
+ * CHOICE of serial list, inclusive serial range, or name subtree for
+ * to-be-revoked groups. `nameSubtree` uses the same hierarchy rules as name
+ * constraints (not every GeneralName form is a subtree).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

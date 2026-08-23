@@ -26,6 +26,17 @@ import {
  * @summary DITStructureRuleDescription
  * @description
  *
+ * Subschema-subentry value describing one DIT structure rule. Multi-valued
+ * attribute; each value is one rule. `ruleIdentifier` is unique within this
+ * subschema, not globally.
+ *
+ * Omitted `superiorStructureRules` means the rule governs a subschema
+ * administrative point (the area root). Present SET is unordered identifiers of
+ * permitted superior rules.
+ *
+ * `name` is a SET of Directory-string aliases (unordered; not LDAP-NAME UTF-8).
+ * `obsolete` DEFAULT FALSE: only non-obsolete (active) rules regulate the DIT.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

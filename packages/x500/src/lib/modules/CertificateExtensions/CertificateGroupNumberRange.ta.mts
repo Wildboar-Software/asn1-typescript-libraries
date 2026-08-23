@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CertificateGroupNumberRange
  * @description
  *
+ * Inclusive serial range: startingNumber through endingNumber (both
+ * required). Serials are unique per issuer, not sequential. Contrast
+ * `NumberRange`, whose endingNumber is exclusive after optional modulus.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +29,20 @@ export class CertificateGroupNumberRange {
     constructor(
         /**
          * @summary `startingNumber`.
+         * @description
+         *
+         * Inclusive lower serial. Serials unique per issuer, not sequential.
+         *
          * @public
          * @readonly
          */
         readonly startingNumber: INTEGER,
         /**
          * @summary `endingNumber`.
+         * @description
+         *
+         * Inclusive upper serial (unlike NumberRange).
+         *
          * @public
          * @readonly
          */

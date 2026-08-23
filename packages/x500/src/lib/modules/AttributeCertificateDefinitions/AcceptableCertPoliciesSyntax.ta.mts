@@ -10,6 +10,9 @@ import {
  * @summary AcceptableCertPoliciesSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF CertPolicyId. Empty is not allowed. Compare
+ * as OID equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

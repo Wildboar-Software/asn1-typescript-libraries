@@ -15,6 +15,9 @@ import {
  * @summary Target
  * @description
  *
+ * One targeting constraint: a name, a group name, or a specific
+ * certificate. The AC is usable only at a matching target.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

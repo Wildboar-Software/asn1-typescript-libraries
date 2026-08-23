@@ -46,6 +46,11 @@ import {
  * @summary EstablishOperationalBindingResultData
  * @description
  *
+ * Establish result. `bindingID` required if the request omitted it; otherwise
+ * may echo the request. `initiator` here is the responder's role
+ * (`roleA-replies` if the requestor took role B, and conversely). `accessPoint`
+ * is the responder.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

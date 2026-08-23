@@ -15,6 +15,11 @@ import {
  * @summary UserPwd_encrypted
  * @description
  *
+ * SEQUENCE: `algorithmIdentifier` then `encryptedString` OCTET STRING.
+ * Order is significant. Compare by encrypting a presented clear password
+ * with this algorithm (when matching) rather than comparing ciphertexts
+ * from different algorithms.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +31,7 @@ export class UserPwd_encrypted {
     constructor(
         /**
          * @summary `algorithmIdentifier`.
+         * @description Algorithm used to produce `encryptedString`; must match for equality comparison.
          * @public
          * @readonly
          */

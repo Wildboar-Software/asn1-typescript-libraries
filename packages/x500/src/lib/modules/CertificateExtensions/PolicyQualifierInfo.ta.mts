@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PolicyQualifierInfo
  * @description
  *
+ * One qualifier: OID plus optional value of the type registered for that
+ * OID. Qualifiers do not change policy identity. May appear without a
+ * value if the qualifier definition allows it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

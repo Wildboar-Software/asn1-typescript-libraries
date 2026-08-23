@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BaseDistance
  * @description
  *
+ * INTEGER (0..MAX) hop count from a subtree `base`. 0 is the base itself.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

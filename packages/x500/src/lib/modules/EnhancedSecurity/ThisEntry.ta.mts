@@ -10,6 +10,10 @@ import {
  * @summary ThisEntry
  * @description
  *
+ * CHOICE identifying the entry owner's signing key: `onlyOne` NULL if the
+ * owner has a single certificate; `specific` {@link IssuerAndSerialNumber}
+ * if several (or future) certificates exist.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,11 @@ import { RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.mjs";
  * @summary STRUCTURE_RULE
  * @description
  *
+ * Information object class form of {@link DITStructureRule}. `&id` is a
+ * {@link RuleIdentifier} (INTEGER in the subschema), not an OID. Omitted
+ * `&SuperiorStructureRules` means the rule applies at an administrative
+ * point.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

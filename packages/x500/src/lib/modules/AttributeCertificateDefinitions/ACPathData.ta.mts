@@ -19,6 +19,9 @@ import {
 /**
  * @summary ACPathData
  * @description
+ *
+ * One hop in an AC path: optional PKC and/or AC for the same AA. ASN.1
+ * allows both absent (treat as an error). SOA may have only a PKC.
  * 
  * It is not clear what the meaning of the fields in each `ACPathData`
  * are. The specification says nothing. I would assume that each field of

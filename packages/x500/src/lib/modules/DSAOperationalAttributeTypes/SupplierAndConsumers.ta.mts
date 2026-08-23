@@ -35,6 +35,13 @@ import {
  * @summary SupplierAndConsumers
  * @description
  *
+ * SET of a supplier `AccessPoint` plus `consumers` SET OF AccessPoint
+ * (secondary shadow knowledge). `consumers` lists DSAs holding commonly usable
+ * copies; empty SET means no listed consumers.
+ *
+ * Equality (`supplierAndConsumersMatch`) compares only `ae-title`, not the
+ * consumer set. Held on a `cp` DSE; support is optional.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

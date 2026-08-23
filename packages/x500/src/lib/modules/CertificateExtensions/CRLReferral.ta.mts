@@ -25,6 +25,11 @@ import {
  * @summary CRLReferral
  * @description
  *
+ * Pointer to another CRL in a critical `statusReferrals` extension (that CRL
+ * is not itself a revocation source). `issuer`/`location` default to the
+ * encompassing CRL issuer. `cRLScope` is the scope found at `location`.
+ * `lastUpdate` = thisUpdate of the latest referenced CRL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,12 +49,20 @@ export class CRLReferral {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Omitted = encompassing CRL issuer.
+         *
          * @public
          * @readonly
          */
         readonly issuer: OPTIONAL<GeneralName>,
         /**
          * @summary `location`.
+         * @description
+         *
+         * Omitted = same as issuer.
+         *
          * @public
          * @readonly
          */

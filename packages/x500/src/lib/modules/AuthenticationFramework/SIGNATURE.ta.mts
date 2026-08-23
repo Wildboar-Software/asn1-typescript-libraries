@@ -15,6 +15,10 @@ import {
  * @summary SIGNATURE
  * @description
  *
+ * Algorithm identifier plus BIT STRING signature. Hash/sign over the DER
+ * encoding of the signed value. (ASN.1 field name `agorithmIdentifier` is
+ * spelled that way in X.509.)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

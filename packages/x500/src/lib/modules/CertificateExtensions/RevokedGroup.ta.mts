@@ -25,6 +25,11 @@ import {
  * @summary RevokedGroup
  * @description
  *
+ * One revoked-groups element. `certificateIssuer` omitted = CRL issuer.
+ * Always-critical extension; may be the only revocation notices (revoked
+ * Certificates empty). `invalidityDate` earlier than thisUpdate; omitted =
+ * invalid at least from thisUpdate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,10 @@ export class RevokedGroup {
     constructor(
         /**
          * @summary `certificateIssuer`.
+         * @description
+         *
+         * Omitted = CRL issuer.
+         *
          * @public
          * @readonly
          */

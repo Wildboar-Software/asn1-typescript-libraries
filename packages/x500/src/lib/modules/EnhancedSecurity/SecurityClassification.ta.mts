@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityClassification
  * @description
  *
+ * INTEGER with named values: unmarked(0), unclassified(1), restricted(2),
+ * confidential(3), secret(4), top-secret(5). 0 is unmarked, not "no
+ * classification omitted". Other integers are allowed (not an ENUMERATED).
+ * Distinct from {@link ClassList}, which is a BIT STRING of the same names.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

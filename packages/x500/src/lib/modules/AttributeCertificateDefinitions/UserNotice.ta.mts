@@ -19,6 +19,9 @@ import {
  * @summary UserNotice
  * @description
  *
+ * User notice: optional `noticeRef` and/or `explicitText`. At least one
+ * should be present in practice; both may be absent per the ASN.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

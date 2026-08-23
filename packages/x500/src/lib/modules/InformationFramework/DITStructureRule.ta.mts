@@ -15,6 +15,13 @@ import {
  * @summary DITStructureRule
  * @description
  *
+ * One DIT structure rule in a subschema. `ruleIdentifier` is an INTEGER
+ * unique within that subschema (not an OID). `nameForm` identifies the
+ * {@link NAME_FORM} that names entries governed by this rule.
+ * `superiorStructureRules` omitted means this rule applies to an
+ * administrative point (no superior in this subschema). The SET is
+ * unordered; at least one identifier if present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

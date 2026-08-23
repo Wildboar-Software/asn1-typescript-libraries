@@ -10,6 +10,9 @@ import {
  * @summary CrossCertificates
  * @description
  *
+ * SET OF Certificate — unordered alternatives for one hop. SIZE (1..MAX):
+ * empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

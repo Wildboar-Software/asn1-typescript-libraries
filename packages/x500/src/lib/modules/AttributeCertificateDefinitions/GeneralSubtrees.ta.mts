@@ -10,6 +10,8 @@ import {
  * @summary GeneralSubtrees
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF GeneralSubtree. Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,7 @@
+/**
+ * Directory name. Currently only `rdnSequence`. Re-exported from
+ * `@wildboar/pki-stub`. Unambiguous but not necessarily unique (aliases).
+ */
 export type {
     Name,
 } from "@wildboar/pki-stub";

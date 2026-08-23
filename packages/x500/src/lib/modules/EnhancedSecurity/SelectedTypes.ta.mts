@@ -10,6 +10,9 @@ import {
  * @summary SelectedTypes
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF AttributeType: empty invalid; **order is the hash
+ * order** for `selectedTypes` scope (not a SET).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

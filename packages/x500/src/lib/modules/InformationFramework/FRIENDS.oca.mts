@@ -6,6 +6,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @summary FRIENDS
  * @description
  *
+ * Documents friend attributes of an anchor user attribute. Friends are
+ * extra user attributes that may be selected or used in matching when the
+ * anchor is requested; they need not appear in an object class. They do
+ * not follow the anchor into an RDN. Operational attributes cannot be
+ * friends. The anchor may be absent even if friends are present (unless
+ * the anchor is mandatory).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

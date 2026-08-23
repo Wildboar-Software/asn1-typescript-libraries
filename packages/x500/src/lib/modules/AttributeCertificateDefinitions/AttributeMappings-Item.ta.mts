@@ -15,6 +15,9 @@ import {
  * @summary AttributeMappings_Item
  * @description
  *
+ * One mapping: either AttributeType pair (`typeMappings`) or
+ * AttributeTypeAndValue pair (`typeValueMappings`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

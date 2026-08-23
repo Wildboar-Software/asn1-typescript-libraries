@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OnlyCertificateTypes
  * @description
  *
+ * BIT STRING { user (0), authority (1), attribute (2) } on IDP/scope. Absent
+ * onlyContains = all types. Bits may be combined; user+CA both TRUE is
+ * forbidden on issuingDistributionPoint.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

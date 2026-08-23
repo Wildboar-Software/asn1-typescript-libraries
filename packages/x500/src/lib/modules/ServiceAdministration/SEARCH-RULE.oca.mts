@@ -16,6 +16,10 @@ import { type RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE
  * @summary SEARCH_RULE
  * @description
  *
+ * Information-object class documenting a search-rule. `&id` UNIQUE is the
+ * integer id within `&dmdId` (0 = empty search-rule). `&allowedSubset` DEFAULT
+ * `'111'B`. Mirrors `SearchRule` fields; not a protocol type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

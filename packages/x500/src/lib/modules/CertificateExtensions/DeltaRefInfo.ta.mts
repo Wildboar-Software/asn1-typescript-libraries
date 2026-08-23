@@ -15,6 +15,9 @@ import {
  * @summary DeltaRefInfo
  * @description
  *
+ * In a CRLReferral: optional alternate location of a dCRL plus optional
+ * `lastDelta` time of the previous delta.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

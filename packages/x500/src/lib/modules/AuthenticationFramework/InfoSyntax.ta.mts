@@ -15,6 +15,10 @@ import {
  * @summary InfoSyntax
  * @description
  *
+ * CHOICE of inline `content` vs `pointer` (names plus optional hash of the
+ * remote document). Hash is over the policy/CPS content for integrity of
+ * what is fetched, not over the pointer structure itself.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

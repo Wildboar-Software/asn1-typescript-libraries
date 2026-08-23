@@ -8,6 +8,12 @@ import { userPwdHistoryMatch } from "../PasswordPolicy/userPwdHistoryMatch.oa.mj
  * @summary userPwdHistory
  * @description
  *
+ * Operational attribute `pwdHistory{userPwd,userPwdHistoryMatch,…}`: SEQUENCE
+ * `{ time GeneralizedTime, password UserPwd, ... }`. Equality matching is
+ * {@link userPwdHistoryMatch}, whose assertion is {@link UserPwd} (a presented
+ * password), not a history tuple. Multi-valued; slot count is policy
+ * (`pwdHistorySlots`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

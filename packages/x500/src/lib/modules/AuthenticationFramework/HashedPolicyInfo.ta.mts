@@ -5,6 +5,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HashedPolicyInfo
  * @description
  *
+ * Open type (`POLICY.&Type`): the value whose DER encoding is hashed in
+ * {@link InfoSyntax_pointer}.`hash`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

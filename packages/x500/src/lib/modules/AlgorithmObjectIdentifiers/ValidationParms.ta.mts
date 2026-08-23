@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ValidationParms
  * @description
  *
+ * DH parameter-generation evidence: `seed` BIT STRING and `pgenCounter`
+ * INTEGER. Used to verify `p`/`q`; when both DomainParameters include this
+ * SEQUENCE, seed and counter shall match for the parameters to be considered
+ * the same.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

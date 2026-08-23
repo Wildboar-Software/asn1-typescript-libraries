@@ -36,6 +36,13 @@ import {
  * @summary SupplierOrConsumer
  * @description
  *
+ * SET (not SEQUENCE) of an `AccessPoint` plus `agreementID`. Access point:
+ * `ae-title`, `address` (`PresentationAddress`), optional `protocolInformation`
+ * SET SIZE (1..MAX).
+ *
+ * `agreementID` is the shadowing operational-binding id. Same syntax for
+ * supplier or consumer; role is determined by which attribute holds it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

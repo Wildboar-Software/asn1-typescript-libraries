@@ -20,6 +20,14 @@ import {
  * @summary AAIssuingDistPointSyntax
  * @description
  *
+ * AA CRL issuing-distribution-point syntax. If present on an ACRL, that ACRL
+ * covers only certificates in this DP. `indirectCRL` DEFAULT FALSE: TRUE means
+ * entries may name a different issuer. `containsUserAttributeCerts` /
+ * `containsAACerts` / `containsSOAPublicKeyCerts` DEFAULT TRUE — FALSE
+ * excludes
+ * that population. `onlySomeReasons` omitted = all reasons. Always critical
+ * when used as the issuing DP extension.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,24 +58,40 @@ export class AAIssuingDistPointSyntax {
         readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
         /**
          * @summary `indirectCRL`.
+         * @description
+         *
+         * DEFAULT FALSE.
+         *
          * @public
          * @readonly
          */
         readonly indirectCRL?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsUserAttributeCerts`.
+         * @description
+         *
+         * DEFAULT TRUE. FALSE excludes end-entity ACs.
+         *
          * @public
          * @readonly
          */
         readonly containsUserAttributeCerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsAACerts`.
+         * @description
+         *
+         * DEFAULT TRUE. FALSE excludes AA certificates.
+         *
          * @public
          * @readonly
          */
         readonly containsAACerts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `containsSOAPublicKeyCerts`.
+         * @description
+         *
+         * DEFAULT TRUE. FALSE excludes SOA public-key certs.
+         *
          * @public
          * @readonly
          */

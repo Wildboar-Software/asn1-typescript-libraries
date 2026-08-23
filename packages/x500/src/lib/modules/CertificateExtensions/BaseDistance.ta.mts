@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BaseDistance
  * @description
  *
+ * INTEGER (0..MAX) tree distance from a GeneralSubtree `base`. 0 = the name
+ * itself. Used as `minimum` (DEFAULT 0) and optional `maximum` (absent = no
+ * upper bound).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

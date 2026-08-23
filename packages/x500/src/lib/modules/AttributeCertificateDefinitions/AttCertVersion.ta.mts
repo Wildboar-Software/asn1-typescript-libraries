@@ -1,3 +1,7 @@
+/**
+ * Attribute-certificate version (v2(1)). Re-exported from
+ * `@wildboar/pki-stub`.
+ */
 export type {
     AttCertVersion,
 } from "@wildboar/pki-stub";

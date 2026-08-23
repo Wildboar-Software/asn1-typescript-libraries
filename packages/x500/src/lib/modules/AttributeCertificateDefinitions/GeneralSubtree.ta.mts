@@ -20,6 +20,9 @@ import {
  * @summary GeneralSubtree
  * @description
  *
+ * Name subtree: `base` plus optional distance bounds. `minimum` DEFAULT 0
+ * (the base itself). `maximum` absent means unbounded below.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

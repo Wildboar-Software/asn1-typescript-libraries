@@ -10,6 +10,11 @@ import {
  * @summary PolicyMappingsSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) of issuerDomainPolicy -> subjectDomainPolicy.
+ * CA certificates only. Mapping direction is from this CA's issuer policy
+ * to the subject's. `anyPolicy` mapping restricted (shall not map to/from).
+ * Recommended critical. Empty not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

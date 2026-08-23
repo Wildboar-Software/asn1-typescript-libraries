@@ -10,6 +10,11 @@ import {
  * @summary AltNameType
  * @description
  *
+ * CHOICE of built-in SAN form (ENUMERATED 1..8) or `otherNameForm` OID.
+ * Used in certificate matching: omitted components do not constrain.
+ * `otherName`
+ * is identified by OID, not by the built-in enum.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

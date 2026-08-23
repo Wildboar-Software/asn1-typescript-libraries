@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyPurposeId
  * @description
  *
+ * OBJECT IDENTIFIER of one extended key purpose. SEQUENCE SIZE (1..MAX) in
+ * extKeyUsage. `anyExtendedKeyUsage` removes restriction. Critical EKU:
+ * use only for a listed purpose. Independent of KeyUsage when both critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

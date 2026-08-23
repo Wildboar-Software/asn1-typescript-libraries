@@ -1,3 +1,7 @@
+/**
+ * Fingerprint of a value (algorithm + BIT STRING). Re-exported from
+ * `@wildboar/pki-stub`.
+ */
 export {
     FingerPrint,
     _get_decoder_for_FingerPrint,

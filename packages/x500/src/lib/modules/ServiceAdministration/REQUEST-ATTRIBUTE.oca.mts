@@ -13,6 +13,10 @@ import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
  * @summary REQUEST_ATTRIBUTE
  * @description
  *
+ * Information-object class documenting a request-attribute-profile.
+ * `&includeSubtypes` DEFAULT FALSE. Empty selected/default value SETs have the
+ * same empty-vs-omitted meanings as `RequestAttribute`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

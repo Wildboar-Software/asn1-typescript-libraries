@@ -19,6 +19,10 @@ import {
  * @summary RoleSyntax
  * @description
  *
+ * Role attribute: optional `roleAuthority` (issuing authorities);
+ * `roleName` is a GeneralName. If `roleAuthority` is present, a role
+ * specification certificate's issuer shall match one of those names.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

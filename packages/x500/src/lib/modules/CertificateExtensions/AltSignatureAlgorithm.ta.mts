@@ -10,6 +10,10 @@ import {
  * @summary AltSignatureAlgorithm
  * @description
  *
+ * AlgorithmIdentifier for the alternative signature. Pair with
+ * `AltSignatureValue`; both or neither. Non-critical recommended — critical
+ * would force every RP to understand the alt algorithm.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,9 @@ export enum _enum_for_OrderedListSyntax {
  * @summary OrderedListSyntax
  * @description
  *
+ * ENUMERATED CRL entry order: `ascSerialNum` (0) or `ascRevDate` (1).
+ * Always non-critical. Absent orderedList = no order promised.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

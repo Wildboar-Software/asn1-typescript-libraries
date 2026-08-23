@@ -19,6 +19,8 @@ import {
  * @summary AttributeCertificateExactAssertion
  * @description
  *
+ * Uniquely selects one AC by serial number plus issuer. Both required.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,11 @@ import {
  * @summary RestrictedValue
  * @description
  *
+ * SEQUENCE: `type` then `valuesIn` (another AttributeType, not a Filter). On
+ * **add** of a value of `type`, that value must already exist in this entry as
+ * a value of `valuesIn` (ignoring context and ACI). Otherwise the ACI is
+ * treated as not granting add.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

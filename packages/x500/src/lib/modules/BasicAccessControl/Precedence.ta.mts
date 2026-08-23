@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Precedence
  * @description
  *
+ * INTEGER (0..255,...). Compared numerically; **higher is stronger**. 0 is
+ * weakest. Inner `ItemPermission` / `UserPermission` precedence, if present,
+ * replaces the enclosing {@link ACIItem} value for those tuples.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

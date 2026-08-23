@@ -1,3 +1,7 @@
+/**
+ * Attribute certificate (`SIGNED{TBSAttributeCertificate}`). Re-exported
+ * from `@wildboar/pki-stub`.
+ */
 export type {
     AttributeCertificate,
 } from "@wildboar/pki-stub";

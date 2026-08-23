@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyUsage
  * @description
  *
+ * BIT STRING of intended key uses. `contentCommitment` (1) is the old
+ * `nonRepudiation` bit — same bit (RFC 5280 still uses that name).
+ * `keyCertSign` only on CA certs and requires BasicConstraints `cA` TRUE.
+ * `encipherOnly`/`decipherOnly` only defined together with `keyAgreement`;
+ * otherwise undefined. All bits zero => key intended for some other purpose.
+ * Critical or recognized: use only for set bits. Multiple bits may be set;
+ * they do not change each other's meaning.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

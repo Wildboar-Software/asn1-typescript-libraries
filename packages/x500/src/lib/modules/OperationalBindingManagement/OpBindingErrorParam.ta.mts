@@ -42,6 +42,10 @@ import {
  * @summary OpBindingErrorParam
  * @description
  *
+ * Operational-binding error. `problem` is the ENUMERATED cause.
+ * `agreementProposal` only with `invalidAgreement` on establish. `retryAt` only
+ * with `currentlyNotDecidable`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

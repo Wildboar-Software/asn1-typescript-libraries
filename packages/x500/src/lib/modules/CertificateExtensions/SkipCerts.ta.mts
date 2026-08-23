@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SkipCerts
  * @description
  *
+ * INTEGER (0..MAX). 0 means this certificate (constraint starts here).
+ * Used by policyConstraints and inhibitAnyPolicy.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

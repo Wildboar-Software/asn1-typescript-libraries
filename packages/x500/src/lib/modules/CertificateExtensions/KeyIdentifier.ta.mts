@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyIdentifier
  * @description
  *
+ * OCTET STRING key identifier. Comparison is octet-for-octet, not a hash
+ * algorithm identifier. Uniqueness is per subject (SKI) or per issuer (AKI
+ * keyIdentifier).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

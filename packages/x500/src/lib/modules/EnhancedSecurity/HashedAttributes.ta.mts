@@ -10,6 +10,10 @@ import {
  * @summary HashedAttributes
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF Attribute: empty invalid. Type, values, and
+ * associated contexts for the selected {@link Scope}. Order follows SET
+ * encoding (`wholeEntry`) or {@link SelectedTypes}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

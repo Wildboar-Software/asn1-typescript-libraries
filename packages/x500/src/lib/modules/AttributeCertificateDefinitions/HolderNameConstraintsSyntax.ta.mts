@@ -14,6 +14,9 @@ import {
  * @summary HolderNameConstraintsSyntax
  * @description
  *
+ * Name constraints on AC holders. `permittedSubtrees` is required;
+ * `excludedSubtrees` optional. Each is SIZE (1..MAX) GeneralSubtrees.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

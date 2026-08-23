@@ -6,6 +6,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @summary MATCHING_RULE
  * @description
  *
+ * Information object class for a matching rule. `&AssertionType` is the
+ * assertion syntax (often not the attribute syntax). `&ParentMatchingRules`
+ * records derivation. Equality rules used in naming shall be commutative
+ * and transitive, and the assertion syntax shall equal the attribute
+ * syntax. If an attribute omits a rule, the corresponding filter item is
+ * UNDEFINED. `&id` is UNIQUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

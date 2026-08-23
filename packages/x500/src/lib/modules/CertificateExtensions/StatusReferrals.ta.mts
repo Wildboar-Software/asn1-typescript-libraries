@@ -10,6 +10,9 @@ import {
  * @summary StatusReferrals
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF StatusReferral. Empty not allowed. Containing
+ * CRL is never a revocation source — critical by design.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

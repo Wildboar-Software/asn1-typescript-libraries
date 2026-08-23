@@ -15,6 +15,10 @@ import {
  * @summary CertificateList
  * @description
  *
+ * A CRL: {@link SIGNED} wrapping {@link CertificateListContent}. Signature
+ * is over the DER encoding of the content. When generating, alternative
+ * signature components of `SIGNED` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

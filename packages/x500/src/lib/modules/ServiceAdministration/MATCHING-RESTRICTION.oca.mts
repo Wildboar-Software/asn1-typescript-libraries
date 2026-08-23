@@ -5,6 +5,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MATCHING_RESTRICTION
  * @description
  *
+ * Information-object class for a matching restriction. `&Restriction` is the
+ * restriction syntax; `&Rules` is the set of matching-rule OIDs it may apply to
+ * (basic rules only); `&id` UNIQUE. Only one restriction applies in a given
+ * situation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

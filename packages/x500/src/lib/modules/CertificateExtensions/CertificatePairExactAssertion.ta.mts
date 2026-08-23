@@ -14,6 +14,10 @@ import {
  * @summary CertificatePairExactAssertion
  * @description
  *
+ * Exact cross-certificate pair match. At least one of
+ * issuedToThisCAAssertion / issuedByThisCAAssertion present; each is
+ * issuer+serial of that half.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PwdHistory
  * @description
  *
+ * One historic password: `time` is when it was set (`GeneralizedTime`);
+ * `password` is the value in the password attribute's syntax (often a hash,
+ * not plaintext). Used with `userPwdHistory` / `userPwdHistoryMatch`.
+ * Comparison is via that matching rule, not byte equality of `password`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

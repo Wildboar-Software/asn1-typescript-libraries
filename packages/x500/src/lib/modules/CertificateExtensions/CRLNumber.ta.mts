@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CRLNumber
  * @description
  *
+ * INTEGER (0..MAX) monotonic sequence number per CRL issuer and DP/stream.
+ * Not necessarily +1. Always non-critical. Combined with
+ * `CRLStreamIdentifier` uniquely names a CRL from that authority.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

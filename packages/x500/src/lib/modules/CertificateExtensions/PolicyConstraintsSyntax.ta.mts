@@ -14,6 +14,11 @@ import {
  * @summary PolicyConstraintsSyntax
  * @description
  *
+ * At least one of `requireExplicitPolicy` / `inhibitPolicyMapping` present
+ * (WITH COMPONENTS). SkipCerts 0 = constraint starts at this certificate.
+ * Recommended critical. requireExplicitPolicy 0 = this cert's issuer;
+ * inhibitPolicyMapping 0 = this cert's subject CA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +35,22 @@ export class PolicyConstraintsSyntax {
     constructor(
         /**
          * @summary `requireExplicitPolicy`.
+         * @description
+         *
+         * SkipCerts; 0 = this cert's issuer. At least one of the two components
+         * required.
+         *
          * @public
          * @readonly
          */
         readonly requireExplicitPolicy?: OPTIONAL<SkipCerts>,
         /**
          * @summary `inhibitPolicyMapping`.
+         * @description
+         *
+         * SkipCerts; 0 = this cert's subject CA. At least one of the two
+         * components required.
+         *
          * @public
          * @readonly
          */

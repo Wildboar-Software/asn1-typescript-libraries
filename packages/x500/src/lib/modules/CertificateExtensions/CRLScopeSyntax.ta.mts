@@ -10,6 +10,11 @@ import {
  * @summary CRLScopeSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF PerAuthorityScope. Empty not allowed. Multiple
+ * elements: indirect CRLs (per authority) or dCRLs (per base). Do not combine
+ * with issuingDistributionPoint — they conflict. If present, shall be
+ * critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

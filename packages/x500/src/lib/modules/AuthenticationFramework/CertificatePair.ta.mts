@@ -14,6 +14,11 @@ import {
  * @summary CertificatePair
  * @description
  *
+ * Cross-certificate pair: `issuedToThisCA` / `issuedByThisCA`; at least one
+ * shall be present. Used for cross-certification. When both are present,
+ * issuer of one matches subject of the other (and vice versa), and each
+ * public key verifies the other signature.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,12 @@ import {
  * @summary rSASSA_PSS_Type
  * @description
  *
+ * RSASSA-PSS parameters. `hashAlgorithm` is required. `saltLength` DEFAULT 20.
+ * `trailerField` DEFAULT 1 (trailerFieldBC).
+ *
+ * X.509 comments out `maskGenAlgorithm`; RFC 4055 includes it (typically MGF1
+ * with the same hash). Absence here does not mean "no MGF".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

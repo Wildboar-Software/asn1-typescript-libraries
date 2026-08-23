@@ -7,6 +7,11 @@ import { type OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING
  * @summary OPERATIONAL_BINDING
  * @description
  *
+ * Template for a binding type (HOB, NHOB, shadow, ...). `&id` UNIQUE is the type
+ * OID. Symmetric bindings fill `&both`; asymmetric fill `&roleA`/`&roleB`.
+ * `&Agreement` is the agreement ASN.1 type; `&Cooperation` lists application
+ * contexts/operations of the cooperative phase.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

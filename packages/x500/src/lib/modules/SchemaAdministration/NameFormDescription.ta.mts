@@ -21,6 +21,13 @@ import {
  * @summary NameFormDescription
  * @description
  *
+ * Subschema-subentry value describing one name form. `identifier` is the
+ * name-form OID. X.501's prose mistakenly says this identifies an object class;
+ * the OID is the name form itself.
+ *
+ * `name` is a SET of Directory-string aliases (unordered). `obsolete` DEFAULT
+ * FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

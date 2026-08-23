@@ -7,6 +7,10 @@ import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs"
  * @summary userPwdMatch
  * @description
  *
+ * Equality matching rule whose assertion and stored syntax are
+ * {@link UserPwd}. Used to compare a proposed password with the directory
+ * value (clear vs encrypted alternatives).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

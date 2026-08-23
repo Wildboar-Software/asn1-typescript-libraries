@@ -19,6 +19,10 @@ import {
  * @summary PolicyInformation
  * @description
  *
+ * One policy OID plus optional SEQUENCE SIZE (1..MAX) of qualifiers (empty
+ * qualifier SEQUENCE not allowed if present). Qualifiers do not change
+ * policy identity. `anyPolicy` should not have qualifiers.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +43,11 @@ export class PolicyInformation {
         readonly policyIdentifier: CertPolicyId,
         /**
          * @summary `policyQualifiers`.
+         * @description
+         *
+         * SIZE (1..MAX) if present. Do not change policy identity. Avoid on
+         * anyPolicy.
+         *
          * @public
          * @readonly
          */

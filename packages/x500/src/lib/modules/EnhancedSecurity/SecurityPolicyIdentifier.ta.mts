@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityPolicyIdentifier
  * @description
  *
+ * OBJECT IDENTIFIER naming the security policy that interprets classification
+ * and categories. Compared for equality with {@link Clearance}.`policyId`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

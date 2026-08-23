@@ -24,6 +24,9 @@ import {
  * @summary TargetCert
  * @description
  *
+ * Target identified by issuer+serial, optional name, optional object
+ * digest of that certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,10 @@ import {
  * @summary CertificateListExactAssertion
  * @description
  *
+ * Exact CRL match: issuer + thisUpdate, optional distributionPoint. DP
+ * matches if the stored CRL's issuingDistributionPoint names that DP in at
+ * least one name form.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

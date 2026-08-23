@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RuleIdentifier
  * @description
  *
+ * INTEGER identifier of a DIT structure rule, unique within a subschema
+ * (not globally, and not an object identifier). Zero is a legal identifier.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

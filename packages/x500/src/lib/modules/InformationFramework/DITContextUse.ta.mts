@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DITContextUse
  * @description
  *
+ * Which context types may appear on values of `attributeType`. If no rule
+ * exists for a type, any context is allowed. `mandatoryContexts`: every
+ * value of the attribute shall have those context types.
+ * `optionalContexts`: those types may appear. A context type in neither
+ * set is forbidden. Both are SET SIZE (1..MAX), unordered. Operational
+ * attributes shall not have contexts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

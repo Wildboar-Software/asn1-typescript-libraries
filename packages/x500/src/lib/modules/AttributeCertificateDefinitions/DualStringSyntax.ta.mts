@@ -14,6 +14,9 @@ import {
  * @summary DualStringSyntax
  * @description
  *
+ * Two UnboundedDirectoryString values (`operation` and `object`). Neither
+ * may be omitted; empty strings depend on the string subtype.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

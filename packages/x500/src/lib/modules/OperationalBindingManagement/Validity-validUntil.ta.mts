@@ -14,6 +14,9 @@ import {
  * @summary Validity_validUntil
  * @description
  *
+ * End of validity: `explicitTermination` (NULL) = until terminate; `time` =
+ * ends at that `Time`. Rejected with `invalidEndTime` if unacceptable.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

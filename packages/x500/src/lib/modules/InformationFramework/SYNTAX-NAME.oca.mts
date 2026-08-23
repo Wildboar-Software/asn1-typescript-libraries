@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SYNTAX_NAME
  * @description
  *
+ * LDAP syntax description: `&id` is the LDAP syntax OID, `&ldapDesc` the
+ * DESC, `&Type` the corresponding Directory ASN.1 type (optional). Not a
+ * Directory attribute syntax identifier by itself.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary DelMatchSyntax
  * @description
  *
+ * Matches a delegation path: `firstIssuer` (AA that started the chain) and
+ * `lastHolder` (final holder).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

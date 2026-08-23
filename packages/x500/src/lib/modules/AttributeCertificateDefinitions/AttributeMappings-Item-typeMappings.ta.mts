@@ -14,6 +14,8 @@ import {
  * @summary AttributeMappings_Item_typeMappings
  * @description
  *
+ * Local AttributeType mapped to a remote AttributeType.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

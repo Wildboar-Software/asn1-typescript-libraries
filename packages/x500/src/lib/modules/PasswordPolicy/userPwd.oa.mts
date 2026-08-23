@@ -15,6 +15,10 @@ import { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa.mjs";
  * @summary userPwd
  * @description
  *
+ * Single-valued user attribute of syntax {@link UserPwd} (clear or encrypted).
+ * Equality matching is {@link userPwdMatch}. History and recently-expired
+ * companions are `userPwdHistory` and `userPwdRecentlyExpired`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

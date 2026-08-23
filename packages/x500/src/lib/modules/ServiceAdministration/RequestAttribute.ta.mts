@@ -31,6 +31,17 @@ import {
  * @summary RequestAttribute
  * @description
  *
+ * Request-attribute-profile for one attribute type in a search-rule. Only one
+ * profile per type. `includeSubtypes` DEFAULT FALSE.
+ *
+ * `selectedValues` absent = that check is TRUE; empty SEQUENCE = the type is
+ * effectively present only via `present`/`contextPresent`. `defaultValues` do
+ * not affect validation: empty SEQUENCE means a missing attribute makes the
+ * filter item TRUE (FALSE if negated); omitted means no defaults.
+ *
+ * `contexts` absent = any contexts; empty SEQUENCE = no contexts allowed.
+ * `contextCombination` DEFAULT `and:{}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

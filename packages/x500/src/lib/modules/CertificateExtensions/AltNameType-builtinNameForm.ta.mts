@@ -17,6 +17,10 @@ export enum _enum_for_AltNameType_builtinNameForm {
  * @summary AltNameType_builtinNameForm
  * @description
  *
+ * Built-in GeneralName form discriminator for matching (values 1..8). Does not
+ * include `otherName` (0) — that uses `otherNameForm` with an OID. Matching
+ * tests presence of that form in SAN, not the encoding of the name itself.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

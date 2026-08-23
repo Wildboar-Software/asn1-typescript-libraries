@@ -14,6 +14,10 @@ import {
  * @summary Validity_validFrom
  * @description
  *
+ * Start of validity: `now` (NULL) = active when establish succeeds; `time` =
+ * becomes active at that `Time`. Rejected with `invalidStartTime` if
+ * unacceptable.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

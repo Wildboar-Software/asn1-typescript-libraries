@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CertPolicyId
  * @description
  *
+ * Certificate policy OID. Compare as OID equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

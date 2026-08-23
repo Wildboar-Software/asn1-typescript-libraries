@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BasicAttConstraintsSyntax
  * @description
  *
+ * Analogous to BasicConstraints, but for AAs. `authority` DEFAULT FALSE
+ * (end-entity AC; TRUE if this holder may act as an AA).
+ * `pathLenConstraint` 0 means no subordinate AAs; meaningful only when
+ * `authority` is TRUE. Absent `pathLenConstraint` means no path-length
+ * limit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

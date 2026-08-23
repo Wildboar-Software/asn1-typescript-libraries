@@ -44,6 +44,12 @@ import {
  * @summary PerAuthorityScope
  * @description
  *
+ * One authority's slice of a crlScope. `authorityName` omitted = CRL issuer.
+ * `onlyContains` omitted = all certificate types. `onlySomeReasons` omitted
+ * = all reasons. `serialNumberRange` uses NumberRange (exclusive end,
+ * optional modulus). `baseRevocationInfo` present => this slice is a dCRL
+ * from that time.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +70,10 @@ export class PerAuthorityScope {
     constructor(
         /**
          * @summary `authorityName`.
+         * @description
+         *
+         * Omitted = CRL issuer.
+         *
          * @public
          * @readonly
          */
@@ -76,12 +86,20 @@ export class PerAuthorityScope {
         readonly distributionPoint?: OPTIONAL<DistributionPointName>,
         /**
          * @summary `onlyContains`.
+         * @description
+         *
+         * Omitted = all certificate types.
+         *
          * @public
          * @readonly
          */
         readonly onlyContains?: OPTIONAL<OnlyCertificateTypes>,
         /**
          * @summary `onlySomeReasons`.
+         * @description
+         *
+         * Omitted = all reasons.
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GrantsAndDenials
  * @description
  *
+ * BIT STRING of paired grant/deny bits. If both grant and deny for the same
+ * permission are set, **deny wins**. Unset bits are neither grant nor deny.
+ * Absent ACI also denies (no implicit grant). `discloseOnError` controls
+ * whether a denial may reveal the item versus concealing it as no-such-object.
+ * Browse/export/import/modify/rename/returnDN apply only with `entry`;
+ * compare/filterMatch/invoke apply to non-entry items.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

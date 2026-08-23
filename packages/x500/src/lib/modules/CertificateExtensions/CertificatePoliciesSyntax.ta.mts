@@ -10,6 +10,11 @@ import {
  * @summary CertificatePoliciesSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF PolicyInformation. Empty not allowed. `anyPolicy`
+ * OID is special. Qualifiers do not change policy identity and are not used
+ * in path validation (they are an output). Critical: cert used only under
+ * one of the listed policies.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

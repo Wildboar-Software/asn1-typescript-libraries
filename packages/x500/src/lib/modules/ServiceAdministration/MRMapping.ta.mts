@@ -19,6 +19,11 @@ import {
  * @summary MRMapping
  * @description
  *
+ * One mapping/substitution step. `mapping` and `substitution` are SEQUENCE SIZE
+ * (1..MAX) OPTIONAL; sequence order has no significance. Empty/omitted `basic`
+ * mapping means no substitution and no mapping-based matching on first
+ * evaluation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

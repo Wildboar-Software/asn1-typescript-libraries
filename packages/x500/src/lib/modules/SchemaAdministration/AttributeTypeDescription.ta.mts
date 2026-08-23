@@ -21,6 +21,14 @@ import {
  * @summary AttributeTypeDescription
  * @description
  *
+ * Subschema-subentry value describing one attribute type. `identifier` is the
+ * attribute-type OID (static once registered).
+ *
+ * `name` is a SET of Directory-string aliases (unordered; distinct from
+ * LDAP-NAME UTF-8 names on the ATTRIBUTE class). `obsolete` DEFAULT FALSE.
+ * `information` holds derivation, matching rules, syntax text, and flags (see
+ * `AttributeTypeInformation`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

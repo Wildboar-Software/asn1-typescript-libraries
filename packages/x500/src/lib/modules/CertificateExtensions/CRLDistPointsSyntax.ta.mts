@@ -10,6 +10,11 @@ import {
  * @summary CRLDistPointsSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF DistributionPoint — cRLDistributionPoints /
+ * freshestCRL. Empty not allowed. Order is encoding order. Non-critical
+ * recommended. Critical: RP shall not use the cert without a CRL from a
+ * nominated DP covering the reasons of interest.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

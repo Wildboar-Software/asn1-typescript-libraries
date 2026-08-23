@@ -16,6 +16,12 @@ import {
  * @summary FriendsDescription
  * @description
  *
+ * Subschema-subentry value naming a friends set. `anchor` is the attribute-type
+ * OID that keys the set; `friends` is SET SIZE (1..MAX) of friend
+ * attribute-type OIDs (unordered, at least one).
+ *
+ * `name` is a SET of Directory-string aliases. `obsolete` DEFAULT FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

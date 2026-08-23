@@ -35,6 +35,14 @@ import {
  * @summary ModifyOperationalBindingArgumentData
  * @description
  *
+ * Modify arguments. `bindingID` identifies the instance; `newBindingID` must
+ * keep the same `identifier` and a strictly greater `version` (else
+ * `invalidNewID`).
+ *
+ * Omitted `newAgreement` leaves the agreement unchanged. Omitted `valid` means
+ * from now, until unchanged. `initiator` required only if the role defines a
+ * modify parameter. `accessPoint` present if the initiator's AP changed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

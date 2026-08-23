@@ -5,6 +5,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeType
  * @description
  *
+ * Object identifier of an attribute type (`ATTRIBUTE.&id`). Matching of two
+ * types for schema and filter purposes uses this OID, not a string name.
+ * Subtyping (`SUBTYPE OF`) does not change the identifier: a subtype is a
+ * distinct type. Collective (collective) attributes share this form of
+ * identifier with their corresponding non-collective types only when so
+ * defined; they are still a separate type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

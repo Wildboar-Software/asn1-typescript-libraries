@@ -19,6 +19,12 @@ import {
  * @summary GeneralSubtree
  * @description
  *
+ * One constrained name-space tree. `minimum` DEFAULT 0 (the name itself);
+ * `maximum` absent = no upper bound. Only hierarchical forms support
+ * subtrees (directoryName, dNSName, rfc822Name, iPAddress); URI/otherName
+ * often do not. Unrecognized form in a critical nameConstraints => treat as
+ * unrecognized critical extension.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,21 @@ export class GeneralSubtree {
         readonly base: GeneralName,
         /**
          * @summary `minimum`.
+         * @description
+         *
+         * DEFAULT 0 = the base name itself. 1 excludes the base but includes
+         * subordinates.
+         *
          * @public
          * @readonly
          */
         readonly minimum?: OPTIONAL<BaseDistance>,
         /**
          * @summary `maximum`.
+         * @description
+         *
+         * Absent = no upper bound. 0 = only the base.
+         *
          * @public
          * @readonly
          */

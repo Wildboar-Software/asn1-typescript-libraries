@@ -10,6 +10,8 @@ import {
  * @summary AcceptablePrivilegePoliciesSyntax
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF PrivilegePolicy (OIDs). Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,12 @@ import {
  * @summary NameConstraintsSyntax
  * @description
  *
+ * CA certificates only. At least one of permitted/excluded present.
+ * `permittedSubtrees` absent = all names permitted (except excluded).
+ * `excludedSubtrees` take precedence. Empty GeneralSubtrees not allowed
+ * (SIZE 1..MAX) if the component is present. Applies to subject and SAN
+ * (including non-critical SAN). Recommended critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +36,21 @@ export class NameConstraintsSyntax {
     constructor(
         /**
          * @summary `permittedSubtrees`.
+         * @description
+         *
+         * Absent = all names permitted except excluded. SIZE (1..MAX) if
+         * present.
+         *
          * @public
          * @readonly
          */
         readonly permittedSubtrees?: OPTIONAL<GeneralSubtrees>,
         /**
          * @summary `excludedSubtrees`.
+         * @description
+         *
+         * Takes precedence over permitted. SIZE (1..MAX) if present.
+         *
          * @public
          * @readonly
          */

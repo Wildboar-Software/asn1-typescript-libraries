@@ -24,6 +24,10 @@ import {
  * @summary CertificateListContent_revokedCertificates_Item
  * @description
  *
+ * One CRL entry: serial unique to that issuer, revocation time, optional
+ * entry extensions. Sequence order among entries is not significant unless
+ * an `orderedList` extension applies.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

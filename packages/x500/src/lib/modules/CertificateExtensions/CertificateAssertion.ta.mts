@@ -56,6 +56,12 @@ import {
  * @summary CertificateAssertion
  * @description
  *
+ * Directory certificateMatch assertion. Present components are ANDed; omitted
+ * = do not constrain. `keyUsage` matches if every presented 1-bit is also set
+ * (or stored has no keyUsage). `policy` is OR of OIDs / anyPolicy.
+ * `pathToName` matches unless stored nameConstraints would block that name.
+ * Issuer+serial uniquely identify a cert; this type is not exact-match.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -123,6 +129,11 @@ export class CertificateAssertion {
         readonly subjectPublicKeyAlgID?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `keyUsage`.
+         * @description
+         *
+         * Matches if every presented 1-bit is set in stored keyUsage, or stored
+         * has no keyUsage.
+         *
          * @public
          * @readonly
          */
@@ -135,6 +146,10 @@ export class CertificateAssertion {
         readonly subjectAltName?: OPTIONAL<AltNameType>,
         /**
          * @summary `policy`.
+         * @description
+         *
+         * OR: any listed OID or anyPolicy. No policies extension => no match.
+         *
          * @public
          * @readonly
          */

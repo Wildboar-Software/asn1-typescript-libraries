@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContextProfile
  * @description
  *
+ * Allowed context type (and optionally values) in a request or result profile.
+ * A context type shall appear at most once in a profile's `contexts` SEQUENCE.
+ *
+ * Omitted `contextValue` = any assertion of that type. Present SEQUENCE SIZE
+ * (1..MAX) restricts assertions to those values.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

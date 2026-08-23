@@ -26,6 +26,14 @@ import {
  * @summary ControlOptions
  * @description
  *
+ * Service/search/hierarchy option bit strings used as search-rule defaults,
+ * mandatory bits, and forced substitutions.
+ *
+ * `serviceControls` DEFAULT `{}` (no bits). `searchOptions` DEFAULT
+ * `{searchAliases}`. Omitted `hierarchyOptions` (or omitted `defaultControls`)
+ * forbids hierarchy selection other than `self`. Unspecified bits in
+ * `mandatoryControls`/`searchRuleControls` are taken as zero.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

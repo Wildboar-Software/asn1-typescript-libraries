@@ -14,6 +14,10 @@ import {
  * @summary PolicyMappingsSyntax_Item
  * @description
  *
+ * One mapping: issuerDomainPolicy (this CA's domain) ->
+ * subjectDomainPolicy (subject CA's domain). Do not map to or from
+ * `anyPolicy`. Direction is issuer-policy to subject-policy.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +29,21 @@ export class PolicyMappingsSyntax_Item {
     constructor(
         /**
          * @summary `issuerDomainPolicy`.
+         * @description
+         *
+         * Policy in this CA's domain; maps to subjectDomainPolicy. Not
+         * anyPolicy.
+         *
          * @public
          * @readonly
          */
         readonly issuerDomainPolicy: CertPolicyId,
         /**
          * @summary `subjectDomainPolicy`.
+         * @description
+         *
+         * Equivalent policy in the subject CA's domain. Not anyPolicy.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,9 @@ import {
  * @summary NoticeReference
  * @description
  *
+ * Organization DisplayText plus SEQUENCE OF INTEGER notice numbers.
+ * Empty `noticeNumbers` is allowed by the type (no SIZE constraint).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

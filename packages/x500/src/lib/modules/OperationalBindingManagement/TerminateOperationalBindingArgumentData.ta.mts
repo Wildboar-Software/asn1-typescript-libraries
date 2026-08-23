@@ -30,6 +30,11 @@ import {
  * @summary TerminateOperationalBindingArgumentData
  * @description
  *
+ * Terminate arguments. `bindingID.version` is ignored; identify by
+ * `bindingType` + identifier if ids collide across types. Omitted `terminateAt`
+ * means terminate when the operation completes. `initiator` present iff the
+ * role defines a termination parameter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

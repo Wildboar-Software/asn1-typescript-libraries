@@ -5,6 +5,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EstablishOperationalBindingResultData_initiator
  * @description
  *
+ * Responder role on establish: `symmetric` [3], `roleA-replies` [4], or
+ * `roleB-replies` [5]. Shall match the request's class (symmetric stays
+ * symmetric; A-initiates is answered by B-replies).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

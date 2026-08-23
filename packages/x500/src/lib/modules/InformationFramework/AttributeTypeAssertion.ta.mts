@@ -15,6 +15,11 @@ import {
  * @summary AttributeTypeAssertion
  * @description
  *
+ * Proposition that an entry holds attribute `type_` (presence, not a
+ * particular value). UNDEFINED if the type is unknown or the attribute is
+ * absent; TRUE if at least one value satisfies `assertedContexts` (same
+ * defaulting as {@link AttributeValueAssertion} when omitted).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

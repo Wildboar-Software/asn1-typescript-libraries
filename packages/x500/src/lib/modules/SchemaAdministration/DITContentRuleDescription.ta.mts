@@ -21,6 +21,14 @@ import {
  * @summary DITContentRuleDescription
  * @description
  *
+ * Subschema-subentry value describing one DIT content rule. Tagged by the
+ * structural object class OID; at most one rule per structural class in a
+ * subschema.
+ *
+ * `name` is a SET of Directory-string aliases (unordered). `obsolete` DEFAULT
+ * FALSE: only active rules regulate content. Components of `DITContentRule`
+ * (auxiliaries, mandatory, optional, precluded) are SETs of OIDs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

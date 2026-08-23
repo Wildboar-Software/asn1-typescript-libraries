@@ -24,6 +24,10 @@ import {
  * @summary SupportedAlgorithm
  * @description
  *
+ * Algorithm a CA/EE supports: identifier, optional `intendedUsage`
+ * (KeyUsage bits), optional certificate policies with which it may be
+ * used. Distinct `algorithmIdentifier` per attribute value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

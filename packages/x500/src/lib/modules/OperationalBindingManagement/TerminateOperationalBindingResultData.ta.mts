@@ -37,6 +37,10 @@ import {
  * @summary TerminateOperationalBindingResultData
  * @description
  *
+ * Terminate result. Echoes `bindingID`, `bindingType`, and `terminateAt` (as
+ * `GeneralizedTime`, not the argument's `Time` CHOICE). Responder cannot return
+ * its termination parameter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

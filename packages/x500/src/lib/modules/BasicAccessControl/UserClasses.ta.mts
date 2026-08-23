@@ -20,6 +20,15 @@ import {
  * @summary UserClasses
  * @description
  *
+ * SEQUENCE of optional selectors; omitted means not selected on that axis.
+ * Present `SET SIZE (1..MAX)` cannot be empty. `allUsers` is everyone (still
+ * subject to `authenticationLevel`). `thisEntry` is the accessed entry's DN
+ * (or the family ancestor). `name` is exact NameAndOptionalUID (UID, if
+ * present, must match). `userGroup` names a groupOfNames /
+ * groupOfUniqueNames; nested groups are not followed; if membership cannot be
+ * evaluated locally, assume non-member for grants and member for denials.
+ * `subtree` is SubtreeSpecification (`specificationFilter` is ignored).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,30 +48,35 @@ export class UserClasses {
     constructor(
         /**
          * @summary `allUsers`.
+         * @description Every directory user (lowest specificity).
          * @public
          * @readonly
          */
         readonly allUsers?: OPTIONAL<NULL>,
         /**
          * @summary `thisEntry`.
+         * @description The user whose DN is the entry being accessed (or its family ancestor).
          * @public
          * @readonly
          */
         readonly thisEntry?: OPTIONAL<NULL>,
         /**
          * @summary `name`.
+         * @description Exact names; uniqueIdentifier, if present, must also match.
          * @public
          * @readonly
          */
         readonly name?: OPTIONAL<NameAndOptionalUID[]>,
         /**
          * @summary `userGroup`.
+         * @description DN of groupOfNames/groupOfUniqueNames; nested groups are not expanded.
          * @public
          * @readonly
          */
         readonly userGroup?: OPTIONAL<NameAndOptionalUID[]>,
         /**
          * @summary `subtree`.
+         * @description Users in the (unrefined) subtree; `specificationFilter` is ignored.
          * @public
          * @readonly
          */

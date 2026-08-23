@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeDescription
  * @description
  *
+ * UTF8String SIZE (1..MAX). Empty is not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import {
  * @summary Signer
  * @description
  *
+ * CHOICE: `thisEntry` [0] EXPLICIT {@link ThisEntry} (entry owner; `onlyOne`
+ * vs a specific certificate) vs `thirdParty` [1] {@link SpecificallyIdentified}.
+ * OPTIONAL on integrity info when the key is known off-line.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

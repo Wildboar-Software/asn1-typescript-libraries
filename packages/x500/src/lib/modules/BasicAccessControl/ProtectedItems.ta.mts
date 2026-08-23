@@ -47,6 +47,16 @@ import {
  * @summary ProtectedItems
  * @description
  *
+ * SEQUENCE of optional axes; **omitted means unconstrained by that axis**.
+ * Present `SET SIZE (1..MAX)` components cannot be empty (empty ≠ all).
+ * `allUserAttributeTypes` is types only; `allUserAttributeTypesAndValues`
+ * includes values; neither covers operational attributes. `selfValue` matches
+ * the requestor's DN as a DistinguishedName or uniqueMember value.
+ * `rangeOfValues` is a Filter on a fictitious single-value entry.
+ * `maxValueCount` / `maxImmSub` / `restrictedBy` / `contexts` constrain **add**
+ * (and import for `maxImmSub`): failure treats the ACI as not granting.
+ * `classes` (Refinement) selects by object class and **ignores** `entry`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -80,12 +90,14 @@ export class ProtectedItems {
     constructor(
         /**
          * @summary `entry`.
+         * @description Entry contents as a whole; ignored if `classes` is present.
          * @public
          * @readonly
          */
         readonly entry?: OPTIONAL<NULL>,
         /**
          * @summary `allUserAttributeTypes`.
+         * @description All user attribute *types* (not values); excludes operational attributes.
          * @public
          * @readonly
          */
@@ -104,6 +116,7 @@ export class ProtectedItems {
         readonly allAttributeValues?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `allUserAttributeTypesAndValues`.
+         * @description All user attribute types *and* values; excludes operational attributes.
          * @public
          * @readonly
          */
@@ -116,42 +129,49 @@ export class ProtectedItems {
         readonly attributeValue?: OPTIONAL<AttributeTypeAndValue[]>,
         /**
          * @summary `selfValue`.
+         * @description Attribute types whose DistinguishedName/uniqueMember value is the requestor's name.
          * @public
          * @readonly
          */
         readonly selfValue?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `rangeOfValues`.
+         * @description Filter evaluated on a fictitious entry holding only the candidate value.
          * @public
          * @readonly
          */
         readonly rangeOfValues?: OPTIONAL<Filter>,
         /**
          * @summary `maxValueCount`.
+         * @description Add constraint: if value count would exceed `maxCount`, treat as not granting add.
          * @public
          * @readonly
          */
         readonly maxValueCount?: OPTIONAL<MaxValueCount[]>,
         /**
          * @summary `maxImmSub`.
+         * @description Add/import constraint on immediate subordinates of the superior entry.
          * @public
          * @readonly
          */
         readonly maxImmSub?: OPTIONAL<INTEGER>,
         /**
          * @summary `restrictedBy`.
+         * @description Add constraint: new value must already appear in `valuesIn` of the same entry.
          * @public
          * @readonly
          */
         readonly restrictedBy?: OPTIONAL<RestrictedValue[]>,
         /**
          * @summary `contexts`.
+         * @description Add constraint: all ContextAssertions must be satisfied, else not granting add.
          * @public
          * @readonly
          */
         readonly contexts?: OPTIONAL<ContextAssertion[]>,
         /**
          * @summary `classes`.
+         * @description Refinement on object class; if present, `entry` is ignored.
          * @public
          * @readonly
          */

@@ -6,6 +6,10 @@ import { type APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-C
  * @summary OP_BINDING_COOP
  * @description
  *
+ * Cooperative-phase operations of a binding type. `&applContext` names the
+ * application context; omitted `&Operations` means all operations of that
+ * context apply.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

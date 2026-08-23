@@ -6,6 +6,10 @@ import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
  * @summary RESULT_ATTRIBUTE
  * @description
  *
+ * Information-object class documenting a result-attribute profile. Omitted
+ * `&outputValues` means all values are candidates; `&contexts` is a single
+ * `ContextProfile` here (the SEQUENCE type uses SEQUENCE OF).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

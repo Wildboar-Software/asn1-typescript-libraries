@@ -15,6 +15,17 @@ import {
  * @summary AttributeValueAssertion
  * @description
  *
+ * Proposition that an entry holds a value of `type_` matching `assertion`.
+ * Evaluates to TRUE, FALSE, or UNDEFINED (unknown type, no equality matching
+ * rule, or assertion syntax mismatch).
+ *
+ * `assertion` uses the attribute's *equality matching rule* assertion syntax,
+ * which may differ from the stored attribute syntax. Omit `assertedContexts`
+ * to apply default context assertions (operation, then subentry, then DSA
+ * local). `allContexts` overrides those defaults and matches any context.
+ * `selectedContexts` is a SET: every {@link ContextAssertion} must be true
+ * (see that type). Order of context assertions does not matter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

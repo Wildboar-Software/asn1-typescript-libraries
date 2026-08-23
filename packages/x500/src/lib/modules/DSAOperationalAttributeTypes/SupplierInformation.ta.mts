@@ -42,6 +42,13 @@ import {
  * @summary SupplierInformation
  * @description
  *
+ * SET extending `SupplierOrConsumer` for a shadow supplier.
+ * `supplier-is-master` DEFAULT TRUE. `non-supplying-master` (AccessPoint) is
+ * optional and used when the supplier is not the master.
+ *
+ * Held on a `cp` DSE; multi-valued DSA-specific. Equality uses
+ * `supplierOrConsumerInformationMatch` (ae-title + agreement identifier only).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

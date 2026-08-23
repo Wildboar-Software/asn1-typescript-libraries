@@ -10,6 +10,11 @@ import {
  * @summary BaseCRLNumber
  * @description
  *
+ * CRLNumber of the complete-for-scope base CRL that a delta updates.
+ * Monotonic, not necessarily +1. The combination of this base plus the delta
+ * is equivalent to a full CRL for that scope at delta publication. Delta
+ * indicator extension is always critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

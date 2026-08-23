@@ -15,6 +15,10 @@ import {
  * @summary DeltaInformation
  * @description
  *
+ * On a non-delta CRL: where dCRLs live (`deltaLocation`) and optional
+ * `nextDelta` time. Always non-critical. Do not confuse with
+ * `deltaCRLIndicator` (on the dCRL itself).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

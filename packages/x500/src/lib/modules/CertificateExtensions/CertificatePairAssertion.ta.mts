@@ -14,6 +14,10 @@ import {
  * @summary CertificatePairAssertion
  * @description
  *
+ * Cross-certificate pair match. At least one of issuedToThisCAAssertion /
+ * issuedByThisCAAssertion present. Each present side is a CertificateAssertion
+ * (ANDed components) against that half of the pair.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

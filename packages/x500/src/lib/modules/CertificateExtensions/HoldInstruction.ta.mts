@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HoldInstruction
  * @description
  *
+ * OBJECT IDENTIFIER hold instruction. Only with reason `certificateHold`.
+ * Always non-critical. No codes defined in X.509 itself. Shall be absent
+ * when a hold is converted to a final revocation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

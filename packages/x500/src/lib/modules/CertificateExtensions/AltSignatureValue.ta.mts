@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AltSignatureValue
  * @description
  *
+ * BIT STRING alternative signature over the TBS with this extension omitted
+ * from the input. Always non-critical. Verify with the issuer's alternative
+ * public key (`subjectAltPublicKeyInfo` on the issuer cert).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

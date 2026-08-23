@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrivilegePolicy
  * @description
  *
+ * OID identifying a privilege policy. Compare as OID equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

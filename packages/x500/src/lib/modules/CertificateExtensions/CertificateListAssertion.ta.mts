@@ -39,6 +39,12 @@ import {
  * @summary CertificateListAssertion
  * @description
  *
+ * Directory certificateListMatch. Present components ANDed; omitted = do not
+ * constrain. `minCRLNumber`/`maxCRLNumber` require a cRLNumber extension.
+ * `reasonFlags` matches if any presented 1-bit is in IDP onlySomeReasons, or
+ * if the CRL has no IDP/reasons. `dateAndTime` needs thisUpdate ≤ t <
+ * nextUpdate (no nextUpdate => no match).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,18 +70,31 @@ export class CertificateListAssertion {
         readonly issuer?: OPTIONAL<Name>,
         /**
          * @summary `minCRLNumber`.
+         * @description
+         *
+         * Stored cRLNumber ≥ this. No cRLNumber extension => no match.
+         *
          * @public
          * @readonly
          */
         readonly minCRLNumber?: OPTIONAL<CRLNumber>,
         /**
          * @summary `maxCRLNumber`.
+         * @description
+         *
+         * Stored cRLNumber ≤ this. No cRLNumber extension => no match.
+         *
          * @public
          * @readonly
          */
         readonly maxCRLNumber?: OPTIONAL<CRLNumber>,
         /**
          * @summary `reasonFlags`.
+         * @description
+         *
+         * Any presented 1-bit in IDP onlySomeReasons, or match if CRL has no
+         * reasons/IDP.
+         *
          * @public
          * @readonly
          */

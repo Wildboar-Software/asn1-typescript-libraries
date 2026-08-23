@@ -35,6 +35,14 @@ import {
  * @summary EstablishOperationalBindingArgumentData
  * @description
  *
+ * Establish arguments. `bindingType` is HOB, NHOB, or shadow (OpBindingSet).
+ * Omitted `bindingID` -> responder assigns both identifier and version.
+ *
+ * `initiator` CHOICE selects symmetric vs role A vs role B (wrong choice ->
+ * `notAllowedForRole` / `roleAssignment`). `valid` DEFAULT `{}` (now until
+ * explicit terminate). `accessPoint` is the initiator's AccessPoint for later
+ * DOP/DISP.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

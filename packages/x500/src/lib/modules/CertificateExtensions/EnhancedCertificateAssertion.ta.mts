@@ -61,6 +61,11 @@ import {
  * @summary EnhancedCertificateAssertion
  * @description
  *
+ * Enhanced certificate match. At least one component present (CONSTRAINT).
+ * Present components ANDed. `subjectAltName` is AltName (type and optional
+ * value), not merely a form enum. `pathToName` is GeneralNames — fails if
+ * stored nameConstraints would block any presented name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

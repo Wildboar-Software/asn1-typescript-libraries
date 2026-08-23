@@ -12,6 +12,11 @@ export enum _enum_for_ImposedSubset {
  * @summary ImposedSubset
  * @description
  *
+ * ENUMERATED (one value, not a BIT STRING) that replaces the Search `subset`.
+ * Extensible (`...`). Absent, or if the request sets `useSubset`, no
+ * substitution occurs and `allowedSubset` applies. Ignored for
+ * Read/ModifyEntry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

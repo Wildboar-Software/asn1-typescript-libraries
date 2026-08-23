@@ -10,6 +10,11 @@ import {
  * @summary LocalName
  * @description
  *
+ * Name relative to a context vertex (administrative point, subtree base,
+ * etc.): an {@link RDNSequence} from that vertex toward the leaf. The empty
+ * sequence is the context vertex itself. Ordering is DIT-descending (root
+ * of the local scope first), opposite LDAP string order.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

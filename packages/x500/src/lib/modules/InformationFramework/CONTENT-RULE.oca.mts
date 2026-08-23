@@ -7,6 +7,11 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @summary CONTENT_RULE
  * @description
  *
+ * Information object class form of {@link DITContentRule}. Identified by
+ * `&structuralClass` (UNIQUE). Auxiliaries listed are permitted, not
+ * required. Precluded attributes are forbidden even if the class allows
+ * them.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

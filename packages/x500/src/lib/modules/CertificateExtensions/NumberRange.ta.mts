@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NumberRange
  * @description
  *
+ * CRL-scope numeric range. After optional `modulus`, in-scope if ≥
+ * `startingNumber` (when present) and < `endingNumber` (when present) —
+ * ending is exclusive (X.509). Omitted bound = unbounded that side. Serials
+ * unique per issuer, not sequential. Contrast CertificateGroupNumberRange
+ * (inclusive).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +32,32 @@ export class NumberRange {
     constructor(
         /**
          * @summary `startingNumber`.
+         * @description
+         *
+         * Inclusive lower bound after optional modulus. Omitted = no lower
+         * bound.
+         *
          * @public
          * @readonly
          */
         readonly startingNumber?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `endingNumber`.
+         * @description
+         *
+         * Exclusive upper bound after optional modulus (X.509: less than).
+         * Omitted = no upper bound.
+         *
          * @public
          * @readonly
          */
         readonly endingNumber?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `modulus`.
+         * @description
+         *
+         * If present, reduce the serial/key-id modulo this before range check.
+         *
          * @public
          * @readonly
          */
