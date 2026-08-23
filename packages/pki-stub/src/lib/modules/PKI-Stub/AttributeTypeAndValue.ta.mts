@@ -90,6 +90,32 @@ export class AttributeTypeAndValue {
             value: this.value.toJSON(),
         };
     }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to a string
+     * @description
+     *
+     * Returns the attribute type as a dot-delimited object identifier and the
+     * attribute value as `value.toString()`, with surrounding double quotes stripped,
+     * separated by `=`.
+     *
+     * @returns A string of the form `type=value`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const valueString = this.value.toString();
+        const firstCharacter = valueString.charAt(0);
+        const lastCharacter = valueString.charAt(valueString.length - 1);
+        const quotesSurroundValue = (
+            (valueString.length >= 2)
+            && ((firstCharacter === '"') && (lastCharacter === '"'))
+        );
+        const unquotedValue = quotesSurroundValue
+            ? valueString.slice(1, -1)
+            : valueString;
+        return `${this.type_.toString()}=${unquotedValue}`;
+    }
 }
 
 /**

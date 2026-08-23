@@ -184,6 +184,20 @@ export class TBSCertificate {
     public static get _default_value_for_version(): Version {
         return v1;
     }
+
+    /**
+     * @summary Check whether an instant falls within this certificate's validity period.
+     * @description
+     *
+     * Both `notBefore` and `notAfter` of {@link Validity} are inclusive.
+     *
+     * @param {Date} date The asserted instant.
+     * @returns {boolean} `true` if `date` is within this certificate's validity period.
+     * @method
+     */
+    public isWithinValidityPeriodAt(date: Date): boolean {
+        return this.validity.contains(date);
+    }
 }
 
 /**

@@ -170,6 +170,25 @@ export class TBSAttributeCertificate {
             _o.extensions
         );
     }
+
+    /**
+     * @summary Check whether an instant falls within this attribute certificate's validity period.
+     * @description
+     *
+     * Both `notBeforeTime` and `notAfterTime` of {@link AttCertValidityPeriod}
+     * are inclusive.
+     *
+     * @param {Date} date The asserted instant.
+     * @returns {boolean} `true` if `date` is within this attribute certificate's validity period.
+     * @method
+     */
+    public isWithinValidityPeriodAt(date: Date): boolean {
+        const t = date.getTime();
+        return (
+            (t >= this.attrCertValidityPeriod.notBeforeTime.getTime())
+            && (t <= this.attrCertValidityPeriod.notAfterTime.getTime())
+        );
+    }
 }
 
 /**
