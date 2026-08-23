@@ -18,7 +18,7 @@ import {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from "../PkiPmiExternalDataTypes/ORAddress.ta.mjs";
+} from "@wildboar/or-address";
 
 /**
  * @summary GeneralName
