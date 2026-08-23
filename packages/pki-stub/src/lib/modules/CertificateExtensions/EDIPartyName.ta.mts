@@ -27,6 +27,8 @@ export type EDIPartyNameJSON = {
 /**
  * @summary EDIPartyName
  * @description
+ * 
+ * Electronic Data Interchange (EDI) party name.
  *
  * ### ASN.1 Definition:
  *

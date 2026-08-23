@@ -18,6 +18,8 @@ export type AttributeTypeAndValueJSON = {
 /**
  * @summary AttributeTypeAndValue
  * @description
+ * 
+ * An X.500 directory attribute type and value pair.
  *
  * ### ASN.1 Definition:
  *

@@ -24,6 +24,8 @@ export type Attribute_valuesWithContext_ItemJSON = {
 /**
  * @summary Attribute_valuesWithContext_Item
  * @description
+ * 
+ * An attribute value that has associated contexts.
  *
  * ### ASN.1 Definition:
  *

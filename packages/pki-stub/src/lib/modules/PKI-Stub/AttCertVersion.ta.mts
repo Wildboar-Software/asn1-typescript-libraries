@@ -15,6 +15,8 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttCertVersion
  * @description
+ * 
+ * Version of an attribute certificate.
  *
  * ### ASN.1 Definition:
  *

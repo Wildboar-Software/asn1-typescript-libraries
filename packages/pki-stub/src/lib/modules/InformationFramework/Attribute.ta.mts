@@ -26,6 +26,8 @@ export type AttributeJSON = {
 /**
  * @summary Attribute
  * @description
+ * 
+ * X.500 directory attribute.
  *
  * ### ASN.1 Definition:
  *

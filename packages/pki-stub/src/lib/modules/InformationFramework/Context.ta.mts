@@ -21,6 +21,10 @@ export type ContextJSON = {
 /**
  * @summary Context
  * @description
+ * 
+ * X.500 directory context, which is used to annotate attribute values with
+ * contextual information such as the language of the attribute value or
+ * the time at which the attribute value is valid.
  *
  * ### ASN.1 Definition:
  *

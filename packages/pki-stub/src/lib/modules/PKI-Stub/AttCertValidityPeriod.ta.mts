@@ -23,6 +23,8 @@ export type AttCertValidityPeriodJSON = {
 /**
  * @summary AttCertValidityPeriod
  * @description
+ * 
+ * Timespan within which an attribute certificate is valid.
  *
  * ### ASN.1 Definition:
  *

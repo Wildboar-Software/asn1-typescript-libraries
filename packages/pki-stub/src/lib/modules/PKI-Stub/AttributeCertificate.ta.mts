@@ -24,6 +24,16 @@ import {
 /**
  * @summary AttributeCertificate
  * @description
+ * 
+ * A cryptographic object that binds X.500 directory attributes to a subject
+ * using a cryptographic signature from a (presumably) trusted issuer. The
+ * act of signing is proof of the issuer's claim that the subject possesses
+ * those attributes.
+ * 
+ * These are often used for access control in particular.
+ * 
+ * They are originally defined in ITU-T X.509, but also referenced in
+ * [IETF RFC 5755](https://www.rfc-editor.org/rfc/rfc5755).
  *
  * ### ASN.1 Definition:
  *

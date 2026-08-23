@@ -30,6 +30,8 @@ import {
 /**
  * @summary AttCertIssuer
  * @description
+ * 
+ * Issuer of an attribute certificate.
  *
  * ### ASN.1 Definition:
  *
