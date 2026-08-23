@@ -67,11 +67,10 @@ export class UniversalDomainDefinedAttribute {
      * @returns {UniversalDomainDefinedAttribute}
      */
     public static _from_object(
-        _o: Partial<
-            {
-                [_K in keyof UniversalDomainDefinedAttribute]: UniversalDomainDefinedAttribute[_K];
-            }
-        >
+        _o: {
+            type_: UniversalOrBMPString;
+            value: UniversalOrBMPString;
+        }
     ): UniversalDomainDefinedAttribute {
         return new UniversalDomainDefinedAttribute(_o.type_, _o.value);
     }
@@ -144,7 +143,7 @@ export class UniversalDomainDefinedAttribute {
      * @param s The string representation of this `UniversalDomainDefinedAttribute`.
      * @returns The `UniversalDomainDefinedAttribute` represented by the string.
      */
-    public static fromString(s: string): UniversalDomainDefinedAttribute {
+    public static fromString(s: string): UniversalDomainDefinedAttribute | null {
         return universalDomainDefinedAttributeFromString(s);
     }
 }

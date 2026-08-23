@@ -126,7 +126,7 @@ export class UnformattedPostalAddress {
      * @param s The string representation of this `UnformattedPostalAddress`.
      * @returns The `UnformattedPostalAddress` represented by the string.
      */
-    public static fromString(s: string): UnformattedPostalAddress {
+    public static fromString(s: string): UnformattedPostalAddress | null {
         return unformattedPostalAddressFromString(s);
     }
 }

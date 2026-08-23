@@ -132,7 +132,7 @@ export class BuiltInDomainDefinedAttribute {
      * @param s The string representation of this `BuiltInDomainDefinedAttribute`.
      * @returns The `BuiltInDomainDefinedAttribute` represented by the string.
      */
-    public static fromString(s: string): BuiltInDomainDefinedAttribute {
+    public static fromString(s: string): BuiltInDomainDefinedAttribute | null {
         return builtInDomainDefinedAttributeFromString(s);
     }
 }

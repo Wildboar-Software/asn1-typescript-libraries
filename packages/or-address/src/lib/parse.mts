@@ -250,7 +250,7 @@ export function teletexPersonalNameFromString(s: string): TeletexPersonalName | 
     }
     // TODO: Validate that this is actually teletex.
     return new TeletexPersonalName(
-        surname ? new TextEncoder().encode(surname) : undefined,
+        new TextEncoder().encode(surname),
         givenName ? new TextEncoder().encode(givenName) : undefined,
         initials ? new TextEncoder().encode(initials) : undefined,
         generationQualifier ? new TextEncoder().encode(generationQualifier) : undefined,
@@ -647,14 +647,14 @@ export function pdsParameterToExtension(
     return isPrintableString(s)
         ? new ExtensionAttribute(
             non_universal_ext["&id"],
-            non_universal_ext.encoderFor["&Type"](
+            non_universal_ext.encoderFor["&Type"]!(
                 pdsParameterFromString(s),
                 $.DER,
             ),
         )
         : new ExtensionAttribute(
             universal_ext["&id"],
-            universal_ext.encoderFor["&Type"](
+            universal_ext.encoderFor["&Type"]!(
                 new UniversalOrBMPString({ four_octets: s }),
                 $.DER,
             ),
@@ -1183,7 +1183,7 @@ export function parseAddressComponents(
             );
             ext_attrs.push(new ExtensionAttribute(
                 universal_personal_name["&id"],
-                universal_personal_name.encoderFor["&Type"](upn, $.DER),
+                universal_personal_name.encoderFor["&Type"]!(upn, $.DER),
             ));
         }
     }
@@ -1192,11 +1192,11 @@ export function parseAddressComponents(
             isPrintableString(cn)
                 ? new ExtensionAttribute(
                     common_name["&id"],
-                    common_name.encoderFor["&Type"](cn, $.DER),
+                    common_name.encoderFor["&Type"]!(cn, $.DER),
                 )
                 : new ExtensionAttribute(
                     universal_common_name["&id"],
-                    universal_common_name.encoderFor["&Type"](
+                    universal_common_name.encoderFor["&Type"]!(
                         new UniversalOrBMPString({ four_octets: cn }),
                         $.DER,
                     ),
@@ -1206,7 +1206,7 @@ export function parseAddressComponents(
     if (organization_name && !isPrintableString(organization_name)) {
         ext_attrs.push(new ExtensionAttribute(
             universal_organization_name["&id"],
-            universal_organization_name.encoderFor["&Type"](
+            universal_organization_name.encoderFor["&Type"]!(
                 new UniversalOrBMPString({ four_octets: organization_name }),
                 $.DER,
             ),
@@ -1227,7 +1227,7 @@ export function parseAddressComponents(
     if (ous.some((ou) => !isPrintableString(ou))) {
         ext_attrs.push(new ExtensionAttribute(
             universal_organizational_unit_names["&id"],
-            universal_organizational_unit_names.encoderFor["&Type"](
+            universal_organizational_unit_names.encoderFor["&Type"]!(
                 ous.map((ou) => new UniversalOrBMPString({ four_octets: ou })),
                 $.DER,
             ),
@@ -1249,7 +1249,7 @@ export function parseAddressComponents(
     if (address_lines.some((address_line) => !isPrintableString(address_line))) {
         ext_attrs.push(new ExtensionAttribute(
             universal_unformatted_postal_address["&id"],
-            universal_unformatted_postal_address.encoderFor["&Type"](
+            universal_unformatted_postal_address.encoderFor["&Type"]!(
                 new UniversalOrBMPString({ four_octets: address_lines.join("\r\n") }),
                 $.DER,
             ),
@@ -1257,7 +1257,7 @@ export function parseAddressComponents(
     } else if (address_lines.length) {
         ext_attrs.push(new ExtensionAttribute(
             unformatted_postal_address["&id"],
-            unformatted_postal_address.encoderFor["&Type"](
+            unformatted_postal_address.encoderFor["&Type"]!(
                 new UnformattedPostalAddress(address_lines),
                 $.DER,
             ),
@@ -1297,7 +1297,7 @@ export function parseAddressComponents(
         }
         ext_attrs.push(new ExtensionAttribute(
             extended_network_address["&id"],
-            extended_network_address.encoderFor["&Type"]({
+            extended_network_address.encoderFor["&Type"]!({
                 e163_4_address: new ExtendedNetworkAddress_e163_4_address(
                     number,
                     sub_address,
@@ -1307,7 +1307,7 @@ export function parseAddressComponents(
     } else if (typeof netNum !== "undefined") {
         ext_attrs.push(new ExtensionAttribute(
             extended_network_address["&id"],
-            extended_network_address.encoderFor["&Type"]({
+            extended_network_address.encoderFor["&Type"]!({
                 e163_4_address: new ExtendedNetworkAddress_e163_4_address(
                     netNum,
                     netSub,
@@ -1321,7 +1321,7 @@ export function parseAddressComponents(
         }
         ext_attrs.push(new ExtensionAttribute(
             extended_network_address["&id"],
-            extended_network_address.encoderFor["&Type"]({
+            extended_network_address.encoderFor["&Type"]!({
                 psap_address: paddr,
             }, $.DER),
         ));
@@ -1333,13 +1333,13 @@ export function parseAddressComponents(
         }
         ext_attrs.push(new ExtensionAttribute(
             terminal_type["&id"],
-            terminal_type.encoderFor["&Type"](parsedTty, $.DER),
+            terminal_type.encoderFor["&Type"]!(parsedTty, $.DER),
         ));
     }
     if (pd_sn) {
         ext_attrs.push(new ExtensionAttribute(
             pds_name["&id"],
-            pds_name.encoderFor["&Type"](pd_sn, $.DER),
+            pds_name.encoderFor["&Type"]!(pd_sn, $.DER),
         ));
     }
     if (pd_c) {
@@ -1349,7 +1349,7 @@ export function parseAddressComponents(
         }
         ext_attrs.push(new ExtensionAttribute(
             physical_delivery_country_name["&id"],
-            physical_delivery_country_name.encoderFor["&Type"](extvalue, $.DER),
+            physical_delivery_country_name.encoderFor["&Type"]!(extvalue, $.DER),
         ));
     }
     if (pd_pc) {
@@ -1359,7 +1359,7 @@ export function parseAddressComponents(
         }
         ext_attrs.push(new ExtensionAttribute(
             postal_code["&id"],
-            postal_code.encoderFor["&Type"](extvalue, $.DER),
+            postal_code.encoderFor["&Type"]!(extvalue, $.DER),
         ));
     }
     if (pd_pn) {
@@ -1479,7 +1479,7 @@ export function parseAddressComponents(
     if (universal_ddas.length) {
         ext_attrs.push(new ExtensionAttribute(
             universal_domain_defined_attributes["&id"],
-            universal_domain_defined_attributes.encoderFor["&Type"](universal_ddas, $.DER),
+            universal_domain_defined_attributes.encoderFor["&Type"]!(universal_ddas, $.DER),
         ));
     }
 

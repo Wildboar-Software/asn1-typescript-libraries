@@ -255,7 +255,7 @@ export class UniversalPersonalName {
      * @param s The string representation of this `UniversalPersonalName`.
      * @returns The `UniversalPersonalName` represented by the string.
      */
-    public static fromString(s: string): UniversalPersonalName {
+    public static fromString(s: string): UniversalPersonalName | null {
         return universalPersonalNameFromString(s);
     }
 

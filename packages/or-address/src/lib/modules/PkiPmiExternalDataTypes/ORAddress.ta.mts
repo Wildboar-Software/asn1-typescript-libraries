@@ -270,8 +270,11 @@ export class ORAddress {
      * @public
      * @function
      */
-    public getADMDString(): string {
+    public getADMDString(): string | undefined {
         const admd = this.built_in_standard_attributes.administration_domain_name;
+        if (!admd) {
+            return undefined;
+        }
         if ("numeric" in admd) {
             return admd.numeric;
         } else {
@@ -289,6 +292,9 @@ export class ORAddress {
      */
     public getPRMDString(): string | undefined {
         const prmd = this.built_in_standard_attributes.private_domain_name;
+        if (!prmd) {
+            return undefined;
+        }
         if ("numeric" in prmd) {
             return prmd.numeric;
         } else {

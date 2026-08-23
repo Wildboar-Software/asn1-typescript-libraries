@@ -192,7 +192,7 @@ export class BuiltInStandardAttributes {
                 }
                 s = this.administration_domain_name.printable;
             }
-            if (s.length > ub_domain_name_length) {
+            if (s && s.length > ub_domain_name_length) {
                 throw new Error("Administration domain name must be 16 characters or less");
             }
         }
@@ -225,7 +225,7 @@ export class BuiltInStandardAttributes {
                 }
                 s = this.private_domain_name.printable;
             }
-            if (s.length > ub_domain_name_length) {
+            if (s && s.length > ub_domain_name_length) {
                 throw new Error("Private domain name must be 16 characters or less");
             }
         }
@@ -506,7 +506,7 @@ export class BuiltInStandardAttributes {
      * @public
      * @function
      */
-    public fromString(s: string): BuiltInStandardAttributes {
+    public static fromString(s: string): BuiltInStandardAttributes | null {
         return builtInStandardAttributesFromString(s);
     }
 

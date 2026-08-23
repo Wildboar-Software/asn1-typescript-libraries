@@ -62,11 +62,10 @@ export class ExtendedNetworkAddress_e163_4_address {
      * @returns {ExtendedNetworkAddress_e163_4_address}
      */
     public static _from_object(
-        _o: Partial<
-            {
-                [_K in keyof ExtendedNetworkAddress_e163_4_address]: ExtendedNetworkAddress_e163_4_address[_K];
-            }
-        >
+        _o: {
+            number_: NumericString;
+            sub_address?: OPTIONAL<NumericString>;
+        }
     ): ExtendedNetworkAddress_e163_4_address {
         return new ExtendedNetworkAddress_e163_4_address(
             _o.number_,

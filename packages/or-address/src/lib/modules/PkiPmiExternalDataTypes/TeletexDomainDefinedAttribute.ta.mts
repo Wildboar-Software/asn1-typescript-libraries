@@ -63,11 +63,10 @@ export class TeletexDomainDefinedAttribute {
      * @returns {TeletexDomainDefinedAttribute}
      */
     public static _from_object(
-        _o: Partial<
-            {
-                [_K in keyof TeletexDomainDefinedAttribute]: TeletexDomainDefinedAttribute[_K];
-            }
-        >
+        _o: {
+            type_: TeletexString;
+            value: TeletexString;
+        }
     ): TeletexDomainDefinedAttribute {
         return new TeletexDomainDefinedAttribute(_o.type_, _o.value);
     }
@@ -124,7 +123,7 @@ export class TeletexDomainDefinedAttribute {
      * @param s The string representation of this `TeletexDomainDefinedAttribute`.
      * @returns The `TeletexDomainDefinedAttribute` represented by the string.
      */
-    public static fromString(s: string): TeletexDomainDefinedAttribute {
+    public static fromString(s: string): TeletexDomainDefinedAttribute | null {
         return teletexDomainDefinedAttributeFromString(s);
     }
 

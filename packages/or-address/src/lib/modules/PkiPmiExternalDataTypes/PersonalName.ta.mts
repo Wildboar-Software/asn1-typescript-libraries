@@ -336,7 +336,7 @@ export class PersonalName {
      * @param s The string representation of this `PersonalName`.
      * @returns The `PersonalName` represented by the string.
      */
-    public static fromString(s: string): PersonalName {
+    public static fromString(s: string): PersonalName | null {
         return personalNameFromString(s);
     }
 

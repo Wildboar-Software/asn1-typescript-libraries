@@ -237,7 +237,7 @@ export class TeletexPersonalName {
      * @param s The string representation of this `TeletexPersonalName`.
      * @returns The `TeletexPersonalName` represented by the string.
      */
-    public static fromString(s: string): TeletexPersonalName {
+    public static fromString(s: string): TeletexPersonalName | null {
         return teletexPersonalNameFromString(s);
     }
 
