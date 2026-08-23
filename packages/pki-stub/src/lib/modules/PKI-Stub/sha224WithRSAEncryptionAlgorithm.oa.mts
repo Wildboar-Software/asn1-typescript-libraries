@@ -17,6 +17,9 @@ import { type ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
  * @summary sha224WithRSAEncryptionAlgorithm
  * @description
  *
+ * RSA signature with SHA-224. `PARMS` is `NULL` and shall be encoded as such
+ * (not omitted). Defined by IETF RFC 5754.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

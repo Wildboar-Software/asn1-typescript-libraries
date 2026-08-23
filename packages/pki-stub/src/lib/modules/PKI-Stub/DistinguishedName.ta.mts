@@ -11,10 +11,15 @@ import {
  * @summary DistinguishedName
  * @description
  *
- * A sequence of relative distinguished names in an order that descends from the
- * root of the DIT. Note that this is the opposite of the ordering used in LDAP.
- * So in LDAP, the DN represented by `cn=Bob,o=Company,st=Florida,c=US` would be
- * `{c=US, st=Florida, o=Company, cn=Bob}` using this type.
+ * The unique name of an entry: the sequence of RDNs of the entry and all of its
+ * superiors, descending from the root of the DIT. Alias entries also have a DN,
+ * but that DN is never the DN of an object. The empty sequence is the DN of the
+ * root.
+ *
+ * Ordering is the opposite of LDAP. The LDAP string
+ * `cn=Bob,o=Company,st=Florida,c=US` is
+ * `{c=US, st=Florida, o=Company, cn=Bob}` as this type. Compare DNs with
+ * `distinguishedNameMatch` (corresponding RDNs, not string equality).
  *
  * ### ASN.1 Definition:
  *

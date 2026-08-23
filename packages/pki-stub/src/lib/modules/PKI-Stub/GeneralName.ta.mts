@@ -24,6 +24,25 @@ import {
  * @summary GeneralName
  * @description
  *
+ * One name form used in `subjectAltName`, `issuerAltName`, holders, issuers,
+ * and similar extensions. A name of a given form together with the issuing CA
+ * shall uniquely identify an entity. Unrecognized alternatives may be ignored
+ * unless the containing extension is critical, in which case at least one
+ * recognized form must be processed.
+ *
+ * Encoding and comparison gotchas:
+ * - `rfc822Name`: Internet mailbox per RFC 822, as `IA5String`.
+ * - `dNSName`: FQDN in LDH labels, or A-labels (`xn--` + Punycode). Not
+ *   U-labels. A-labels are at most 59 octets after `xn--`.
+ * - `x400Address`: X.411 OR-address, not a directory name.
+ * - `directoryName`: an X.500 {@link Name}. Encoded EXPLICIT `[4]` because
+ *   `Name` is a CHOICE (the other alternatives are IMPLICIT).
+ * - `iPAddress`: raw address octets, not a dotted string: 4 octets for IPv4
+ *   (RFC 791) or 16 octets for IPv6 (RFC 2460).
+ * - `uniformResourceIdentifier`: URI per RFC 1630, as `IA5String`.
+ * - `otherName`: `INSTANCE OF OTHER-NAME` (`TYPE-IDENTIFIER`).
+ * - `ediPartyName`: see {@link EDIPartyName}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

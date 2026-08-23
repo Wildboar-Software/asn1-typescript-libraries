@@ -26,8 +26,21 @@ export type AttributeJSON = {
 /**
  * @summary Attribute
  * @description
- * 
- * X.500 directory attribute.
+ *
+ * An X.500 directory attribute: an object identifier `type_` plus one or more
+ * values of that type.
+ *
+ * `values` and `valuesWithContext` are both `SET OF` (unordered, no duplicates).
+ * A given stored value appears in exactly one of the two sets. Contexts annotate
+ * a value (language, locale, time, etc.) and are not part of a distinguished
+ * value used in a relative distinguished name. Operational attribute values
+ * shall not have contexts.
+ *
+ * An attribute in storage shall have at least one value, but a transferred
+ * `Attribute` may have zero values (for example because access control hid
+ * them). `values` therefore has `SIZE (0..MAX)`. Single-valued attribute types
+ * are still encoded with these sets; the Directory merely constrains the
+ * combined cardinality to one.
  *
  * ### ASN.1 Definition:
  *

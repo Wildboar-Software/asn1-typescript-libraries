@@ -16,6 +16,9 @@ import {
  * @summary der
  * @description
  *
+ * Object identifier naming the distinguished encoding rules (DER), used as the
+ * `ENCODED BY` identifier for {@link Extension} `extnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

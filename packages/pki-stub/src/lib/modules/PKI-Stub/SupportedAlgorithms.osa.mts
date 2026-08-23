@@ -15,6 +15,9 @@ import { type ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
  * @summary SupportedAlgorithms
  * @description
  *
+ * Information object set constraining {@link AlgorithmIdentifier} algorithm
+ * OIDs. Empty in this stub; a referencing specification fills it in.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

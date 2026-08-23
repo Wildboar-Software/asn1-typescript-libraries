@@ -44,6 +44,21 @@ export type ObjectDigestInfoJSON = {
  * @summary ObjectDigestInfo
  * @description
  *
+ * Identifies an entity by a digest of some object associated with it.
+ *
+ * How `objectDigest` is computed depends on `digestedObjectType`:
+ * - `publicKey` (0): hash the DER encoding of {@link SubjectPublicKeyInfo},
+ *   including `AlgorithmIdentifier` and the BIT STRING. If the key was taken
+ *   from a certificate, inherited algorithm parameters must be filled in; the
+ *   input may therefore differ from the `SubjectPublicKeyInfo` actually stored
+ *   in the certificate. The same public key may appear in more than one
+ *   certificate.
+ * - `publicKeyCert` (1): hash the entire DER encoding of the public-key
+ *   certificate, including the signature bits.
+ * - `otherObjectTypes` (2): hash some other object (for example software).
+ *   `otherObjectTypeID` may identify the type; if omitted, the portion hashed
+ *   is determined by context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

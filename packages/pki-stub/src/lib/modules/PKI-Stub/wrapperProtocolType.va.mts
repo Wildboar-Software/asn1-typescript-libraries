@@ -16,6 +16,9 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  * @summary wrapperProtocolType
  * @description
  *
+ * Arc `{ds 43}` for X.510 wrapper protocol type identifiers. Alias:
+ * {@link id_wrprot}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

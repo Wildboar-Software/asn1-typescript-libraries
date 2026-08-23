@@ -25,10 +25,20 @@ import {
  * @summary TBSCertAVL_entries_Item_idType
  * @description
  *
+ * How an AVL entry names its subject:
+ * - `certIdentifier`: a specific public-key certificate
+ *   ({@link PKCertIdentifier}). Mandatory when `constrained` is `TRUE`.
+ * - `entityGroup`: a distinguished-name prefix common to the `subject` of
+ *   certificates issued to members of the group. Shall not be used when
+ *   `constrained` is `TRUE`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * TBSCertAVL-entries-Item-idType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TBSCertAVL-entries-Item-idType ::= CHOICE {
+ *   certIdentifier   PKCertIdentifier,
+ *   entityGroup      DistinguishedName,
+ *   ... }
  * ```
  */
 export type TBSCertAVL_entries_Item_idType =

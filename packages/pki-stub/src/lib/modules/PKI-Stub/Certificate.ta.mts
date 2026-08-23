@@ -25,6 +25,17 @@ import {
  * @summary Certificate
  * @description
  *
+ * A public-key certificate: {@link SIGNED} wrapping {@link TBSCertificate}.
+ *
+ * The signature is computed over the DER encoding of `toBeSigned`
+ * (`TBSCertificate`). X.509 requires that when generating this signature the
+ * `altAlgorithmIdentifier` / `altSignature` components of {@link SIGNED} be
+ * absent; alternative algorithms are carried as certificate extensions instead.
+ *
+ * The CA DN hierarchy does not imply a hierarchy of CAs. Issuer and subject
+ * names on adjacent certificates in a path are compared with
+ * `distinguishedNameMatch`, not string equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

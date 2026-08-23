@@ -1,3 +1,11 @@
+/**
+ * OSI presentation address (P-selector, S-selector, T-selector, and one or
+ * more N-addresses). Re-exported from `@wildboar/presentation-address`.
+ *
+ * X.501 notes that the equality matching rule for `presentationAddress` is not
+ * commutative. Selector comparison is typically octet-for-octet; n-addresses
+ * are a SET.
+ */
 export {
     PresentationAddress,
     _decode_PresentationAddress,

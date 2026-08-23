@@ -25,6 +25,13 @@ import {
  * @summary CertAVL
  * @description
  *
+ * An authorization and validation list: {@link SIGNED} wrapping
+ * {@link TBSCertAVL}. Placed on an AVL entity so a relying party can check
+ * which peer public-key certificates (or name prefixes) are authorized.
+ *
+ * When generating the signature, {@link SIGNED} `altAlgorithmIdentifier` /
+ * `altSignature` shall be absent; alternative algorithms use AVL extensions.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

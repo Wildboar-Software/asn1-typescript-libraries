@@ -21,6 +21,10 @@ import {
  * @summary IssuerSerialNumber
  * @description
  *
+ * Identifies a public-key certificate by issuer directory {@link Name} and
+ * serial number. Used in AVLs ({@link PKCertIdentifier}). Not the same as
+ * {@link IssuerSerial}, which uses {@link GeneralNames} and an optional UID.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

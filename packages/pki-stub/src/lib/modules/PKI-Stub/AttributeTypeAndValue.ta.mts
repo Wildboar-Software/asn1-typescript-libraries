@@ -18,8 +18,14 @@ export type AttributeTypeAndValueJSON = {
 /**
  * @summary AttributeTypeAndValue
  * @description
- * 
- * An X.500 directory attribute type and value pair.
+ *
+ * One distinguished attribute type-and-value pair as used in a relative
+ * distinguished name. `value` is an open type whose syntax is that of the
+ * attribute identified by `type_`.
+ *
+ * When matching names, two such pairs of the same type are compared with that
+ * attribute type's equality matching rule (for naming attributes, the assertion
+ * syntax is the same as the attribute syntax).
  *
  * ### ASN.1 Definition:
  *

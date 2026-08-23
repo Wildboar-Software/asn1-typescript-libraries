@@ -16,6 +16,9 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  * @summary algorithms
  * @description
  *
+ * Arc `{ds 44}` for algorithm object identifiers allocated by the Directory
+ * specifications. Alias: {@link id_algo}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

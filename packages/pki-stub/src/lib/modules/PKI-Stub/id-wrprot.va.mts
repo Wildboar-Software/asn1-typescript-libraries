@@ -16,6 +16,8 @@ import { wrapperProtocolType } from "../PKI-Stub/wrapperProtocolType.va.mjs";
  * @summary id_wrprot
  * @description
  *
+ * Alias of {@link wrapperProtocolType} (`{ds 43}`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

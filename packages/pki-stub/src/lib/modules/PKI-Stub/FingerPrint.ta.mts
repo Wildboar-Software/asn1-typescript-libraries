@@ -34,6 +34,10 @@ export type FingerPrintJSON = {
  * @summary FingerPrint
  * @description
  *
+ * A fingerprint of a `ToBeFingerprinted` value. Typically a hash algorithm is
+ * used, but the type is not restricted to hashes. Unlike {@link HASH}, X.509
+ * still uses this type (for example in {@link PKCertIdentifier}).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -23,8 +23,10 @@ export type AttCertValidityPeriodJSON = {
 /**
  * @summary AttCertValidityPeriod
  * @description
- * 
- * Timespan within which an attribute certificate is valid.
+ *
+ * Inclusive timespan during which an attribute certificate is considered valid.
+ * Both bounds are `GeneralizedTime` (not the {@link Time} CHOICE used in
+ * public-key certificates, so there is no UTCTime year-window).
  *
  * ### ASN.1 Definition:
  *

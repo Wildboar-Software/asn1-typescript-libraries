@@ -16,6 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PublicKey
  * @description
  *
+ * The BIT STRING contents of a subject's public key, without the accompanying
+ * {@link AlgorithmIdentifier}. For hashing a key in isolation see
+ * {@link SubjectPublicKeyInfo}; for a fingerprint of these bits see
+ * {@link FingerPrint}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ export type ScopeRestrictionJSON = {
  * @summary ScopeRestriction
  * @description
  *
+ * One restriction on the communications an AVL entry authorizes. `id` selects
+ * a {@link SCOPE_RESTRICTION} information object; `restriction` is an open
+ * type whose syntax is determined by that object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

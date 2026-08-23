@@ -21,6 +21,11 @@ import {
  * @summary Extensions
  * @description
  *
+ * A `SEQUENCE SIZE (1..MAX)` of {@link Extension}. Empty is not allowed; order
+ * is the encoded order (not a SET). An `extnId` should not appear more than
+ * once. Presence of this component on a public-key certificate requires
+ * {@link Version} v3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

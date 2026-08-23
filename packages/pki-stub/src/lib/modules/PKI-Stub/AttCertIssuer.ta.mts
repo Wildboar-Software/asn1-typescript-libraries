@@ -30,8 +30,12 @@ import {
 /**
  * @summary AttCertIssuer
  * @description
- * 
+ *
  * Issuer of an attribute certificate.
+ *
+ * `baseCertificateID` points at a specific public-key certificate whose subject
+ * is the AA. `issuerName` is one or more names for the AA. `objectDigestInfo`
+ * identifies the AA by a hash of identifying information.
  *
  * ### ASN.1 Definition:
  *

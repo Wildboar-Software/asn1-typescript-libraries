@@ -16,6 +16,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UniqueIdentifier
  * @description
  *
+ * A BIT STRING used to disambiguate names when a distinguished name is reused.
+ *
+ * In public-key certificates (`issuerUniqueIdentifier` /
+ * `subjectUniqueIdentifier`) and attribute certificates (`issuerUniqueID`) this
+ * field is deprecated. IETF RFC 5280 forbids the certificate unique-identifier
+ * fields.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

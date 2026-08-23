@@ -19,6 +19,8 @@ import {
 /**
  * @summary Ordered list of public key certificates 
  * @description
+ *
+ * A certification path: `SEQUENCE SIZE (1..MAX)` of {@link Certificate}.
  * 
  * To quote ITU-T Recommendation X.509 (2019), Section 7.7:
  * 

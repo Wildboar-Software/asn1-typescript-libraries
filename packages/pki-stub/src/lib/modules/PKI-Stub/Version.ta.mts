@@ -16,6 +16,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Version
  * @description
  *
+ * Public-key certificate version as an INTEGER named value, not the digit in
+ * the name: `v1` is 0, `v2` is 1, `v3` is 2.
+ *
+ * v1 is the default when unique identifiers and extensions are absent. Unique
+ * identifiers require v2 or v3. Extensions require v3. AVLs use this type as
+ * well, but shall be absent or v1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

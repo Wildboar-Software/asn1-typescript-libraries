@@ -17,6 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time
  * @description
  *
+ * A time used in a public-key certificate {@link Validity} period: either
+ * `UTCTime` or `GeneralizedTime`.
+ *
+ * Before comparing a `UTCTime` value, expand the two-digit year: 00–49 means
+ * 2000–2049; 50–99 means 1950–1999. UTCTime shall not be used for dates after
+ * 2049. Some older implementations cannot accept `GeneralizedTime` in
+ * certificates.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

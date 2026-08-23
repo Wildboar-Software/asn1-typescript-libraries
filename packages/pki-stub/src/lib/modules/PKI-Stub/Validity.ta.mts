@@ -31,19 +31,16 @@ export type ValidityJSON = {
  * @summary Validity
  * @description
  *
+ * Inclusive interval during which the CA warrants that it will maintain status
+ * information for the public-key certificate. `notBefore` and `notAfter` are
+ * {@link Time} values; UTCTime years must be expanded before comparison (see
+ * {@link Time}).
+ *
+ * Treated analogously to VS Code's `Range`, with `Date` playing the role of
+ * `Position` (`notBefore` as `start`, `notAfter` as `end`). Both bounds are
+ * inclusive.
+ *
  * ### ASN.1 Definition:
- *
- * ```asn1
- * Validity ::= SEQUENCE {
- *   notBefore  Time,
- *   notAfter   Time,
- *   ... }
- * ```
- *
- * `Validity` is treated analogously to VS Code's `Range`, with `Date` playing
- * the role of `Position` (`notBefore` as `start`, `notAfter` as `end`). Both
- * bounds are inclusive.
- *
  */
 export class Validity {
     constructor(

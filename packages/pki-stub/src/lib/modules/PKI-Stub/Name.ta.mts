@@ -20,6 +20,15 @@ import {
  * @summary Name
  * @description
  *
+ * A directory name. Currently the only alternative is `rdnSequence` (an
+ * {@link RDNSequence} / {@link DistinguishedName}). A name is unambiguous
+ * (denotes one object) but need not be unique (the same object may have alias
+ * names in addition to its distinguished name).
+ * 
+ * A recent amendment to ITU-T X.501 defines new alternatives for `Name`, but
+ * these will not be supported purely for the selfish reason that this would
+ * break a lot of code that I wrote.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

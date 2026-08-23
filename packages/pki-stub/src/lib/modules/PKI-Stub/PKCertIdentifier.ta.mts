@@ -35,6 +35,12 @@ import {
  * @summary PKCertIdentifier
  * @description
  *
+ * Identifies a public-key certificate in an AVL entry by one of:
+ * - `issuerSerialNumber`: issuer {@link Name} plus serial
+ *   ({@link IssuerSerialNumber}, not {@link IssuerSerial});
+ * - `fingerprintPKC`: {@link FingerPrint} of the whole certificate;
+ * - `fingerprintPK`: {@link FingerPrint} of the public key bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

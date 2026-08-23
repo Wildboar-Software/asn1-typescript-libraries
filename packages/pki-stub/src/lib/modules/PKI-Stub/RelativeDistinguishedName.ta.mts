@@ -11,6 +11,16 @@ import {
  * @summary RelativeDistinguishedName
  * @description
  *
+ * One RDN: a `SET SIZE (1..MAX)` of {@link AttributeTypeAndValue}. Order of
+ * the attribute type-and-value pairs does not matter. A given attribute type
+ * shall appear at most once. Each pair is a distinguished value of the named
+ * entry (contexts on that value are not part of the RDN).
+ *
+ * Two RDNs match if, for every AVA in one, there is an AVA of the same type in
+ * the other whose values match under that attribute type's equality matching
+ * rule. Naming attributes use an assertion syntax identical to the attribute
+ * syntax, and that equality rule is required to be commutative and transitive.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

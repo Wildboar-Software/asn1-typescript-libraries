@@ -16,6 +16,9 @@ import {
  * @summary ds
  * @description
  *
+ * Arc `{joint-iso-itu-t ds(5)}` under which Directory (X.500) object
+ * identifiers are allocated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

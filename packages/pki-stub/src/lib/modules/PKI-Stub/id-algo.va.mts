@@ -16,6 +16,8 @@ import { algorithms } from "../PKI-Stub/algorithms.va.mjs";
  * @summary id_algo
  * @description
  *
+ * Alias of {@link algorithms} (`{ds 44}`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

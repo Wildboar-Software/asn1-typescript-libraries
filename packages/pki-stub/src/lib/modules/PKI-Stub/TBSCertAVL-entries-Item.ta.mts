@@ -31,10 +31,21 @@ import {
  * @summary TBSCertAVL_entries_Item
  * @description
  *
+ * One AVL entry: an identifier plus optional per-entry scope restrictions and
+ * extensions. `idType` is either a specific public-key certificate
+ * (`certIdentifier`) or, only when the AVL is not constrained, an
+ * `entityGroup` DN prefix shared by the subjects of certificates issued to
+ * members of that group. `scope` limits what communications the relying party
+ * may have with the identified entity.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * TBSCertAVL-entries-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TBSCertAVL-entries-Item ::= SEQUENCE {
+ *   idType              TBSCertAVL-entries-Item-idType,
+ *   scope               [0]  IMPLICIT ScopeRestrictions OPTIONAL,
+ *   entryExtensions     [1]  IMPLICIT Extensions OPTIONAL,
+ *   ... }
  * ```
  *
  */

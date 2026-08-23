@@ -34,6 +34,17 @@ export type ExtensionJSON = {
  * @summary Extension
  * @description
  *
+ * One certificate, CRL, attribute-certificate, or AVL extension.
+ *
+ * `extnValue` is an OCTET STRING that contains the DER encoding of the
+ * extension syntax identified by `extnId` (the `der` encoding identifier is
+ * `{joint-iso-itu-t asn1(1) ber-derived(2) distinguished-encoding(1)}`).
+ *
+ * `critical` defaults to `FALSE`. If a relying party does not recognize an
+ * extension flagged critical, it shall reject the certificate (or other signed
+ * object). Unrecognized non-critical extensions (and unknown elements inside
+ * them) are ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,12 +68,22 @@ export class Extension {
         readonly extnId: OBJECT_IDENTIFIER,
         /**
          * @summary `critical`.
+         * @description
+         *
+         * Defaults to `FALSE`. If `TRUE` and the relying party does not
+         * recognize this extension, the signed object shall be rejected.
+         *
          * @public
          * @readonly
          */
         readonly critical: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extnValue`.
+         * @description
+         *
+         * DER encoding of the extension syntax identified by `extnId`, wrapped
+         * in an OCTET STRING.
+         *
          * @public
          * @readonly
          */

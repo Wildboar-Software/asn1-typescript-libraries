@@ -26,6 +26,11 @@ export type AlgorithmWithInvokeJSON = {
  * @summary AlgorithmWithInvoke
  * @description
  *
+ * Algorithm identifier with optional static `parameters` and optional
+ * invoke-time `dynamParms` (X.510). Unlike {@link AlgorithmIdentifier}, both
+ * optional components are context-tagged (`[0]` and `[1]`), so a lone dynamic
+ * parameter cannot be confused with static parameters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

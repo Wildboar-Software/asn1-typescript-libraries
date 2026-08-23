@@ -57,6 +57,15 @@ import {
  * @summary TBSAttributeCertificate
  * @description
  *
+ * To-be-signed attribute certificate. Shall be DER-encoded when signed.
+ * `version` shall be v2 (`1`, not `2`). `issuerUniqueID` is deprecated.
+ *
+ * `serialNumber` is unique within the issuing AA. `attrCertValidityPeriod` uses
+ * GeneralizedTime only (not the {@link Time} CHOICE). `attributes` is a
+ * `SEQUENCE OF` the privileges being certified and may be empty for an
+ * attribute descriptor certificate. Alternative signatures are carried as
+ * extensions, not as {@link SIGNED} `altSignature` fields.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -80,6 +89,10 @@ export class TBSAttributeCertificate {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Shall be v2 (`1`, not `2`) for the current syntax.
+         *
          * @public
          * @readonly
          */
@@ -116,12 +129,21 @@ export class TBSAttributeCertificate {
         readonly attrCertValidityPeriod: AttCertValidityPeriod,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Privileges being certified. May be an empty sequence for an attribute
+         * descriptor certificate.
+         *
          * @public
          * @readonly
          */
         readonly attributes: Attribute[],
         /**
          * @summary `issuerUniqueID`.
+         * @description
+         *
+         * Deprecated disambiguator for reused issuer names.
+         *
          * @public
          * @readonly
          */

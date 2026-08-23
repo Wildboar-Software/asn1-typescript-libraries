@@ -24,9 +24,13 @@ export type AlgorithmIdentifierJSON = {
 /**
  * @summary AlgorithmIdentifier
  * @description
- * 
- * Identifier, including any parameters, of a cryptographic algorithm,
- * such as a hash algorithm or a public key algorithm.
+ *
+ * Identifies a cryptographic algorithm and, when required, its parameters.
+ *
+ * `parameters` is optional and algorithm-specific (for example an elliptic-curve
+ * OID). Some algorithms have no parameters; others (many RSA signature OIDs)
+ * require an explicit `NULL`. Omitting `NULL` versus encoding `NULL` is not
+ * interchangeable for those OIDs.
  *
  * ### ASN.1 Definition:
  *

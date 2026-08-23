@@ -44,6 +44,19 @@ import {
  * @summary TBSCertAVL
  * @description
  *
+ * To-be-signed authorization and validation list.
+ *
+ * `version` shall be absent or v1. `serialNumber` shall be present if the
+ * authorizer places more than one AVL in the same entity (and should be present
+ * if more AVLs may be added later); uniqueness is per authorizer within that
+ * entity. `signature` shall match the algorithm used to sign the AVL.
+ * `issuer` is the authorizer's DN and shall match the subject of the public-key
+ * certificate used to verify the AVL signature.
+ *
+ * `constrained` is `TRUE` for a constrained AVL entity (entries shall use
+ * `certIdentifier`, not `entityGroup`) and `FALSE` for a non-constrained one
+ * (may name an entity group by a DN prefix of the subjects' DNs).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,30 +84,53 @@ export class TBSCertAVL {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Shall be absent or v1.
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Required if this authorizer places more than one AVL in the entity;
+         * unique per authorizer within that entity.
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: OPTIONAL<AvlSerialNumber>,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Shall match the algorithm used to sign the AVL.
+         *
          * @public
          * @readonly
          */
         readonly signature: AlgorithmIdentifier,
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Authorizer DN; shall match the subject of the public-key certificate
+         * used to verify the AVL signature.
+         *
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `constrained`.
+         * @description
+         *
+         * `TRUE` if this AVL is for a constrained AVL entity: entries shall
+         * identify a specific certificate, not an `entityGroup` DN prefix.
+         *
          * @public
          * @readonly
          */

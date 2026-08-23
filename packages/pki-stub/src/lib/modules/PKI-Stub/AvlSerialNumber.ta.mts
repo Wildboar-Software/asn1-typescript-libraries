@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AvlSerialNumber
  * @description
  *
+ * Non-negative INTEGER serial of an AVL, unique for a given authorizer within
+ * the AVL entity where the list is placed. Bound here as an `OCTET_STRING`
+ * (two's complement contents) so large values fit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

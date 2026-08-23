@@ -38,6 +38,13 @@ export type SubjectPublicKeyInfoJSON = {
  * @summary SubjectPublicKeyInfo
  * @description
  *
+ * Algorithm identifier plus the subject's public key bits.
+ *
+ * When hashing a public key for {@link ObjectDigestInfo} (`publicKey`), the
+ * hash input is the DER encoding of this entire sequence (algorithm and BIT
+ * STRING), including any inherited algorithm parameters, which may differ from
+ * the encoding stored in a certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -53,6 +53,21 @@ import {
  * @summary TBSCertificate
  * @description
  *
+ * To-be-signed public-key certificate. Shall be DER-encoded when the signature
+ * is generated. If the received encoding is BER, an otherwise valid signature
+ * fails unless the verifier re-encodes with DER (a local policy choice).
+ *
+ * `version` defaults to v1 (`0`). Presence of `issuerUniqueIdentifier` or
+ * `subjectUniqueIdentifier` requires v2 or v3; presence of `extensions`
+ * requires v3. Those unique-identifier fields are deprecated (RFC 5280 forbids
+ * them).
+ *
+ * `serialNumber` is unique per issuing CA but need not be sequential.
+ * `signature` identifies the algorithm used to sign the certificate and shall
+ * match the algorithm identifier in the outer {@link SIGNED}. `issuer` shall be
+ * a non-empty DN. `subject` may be an empty DN only for an end-entity
+ * certificate that also has a critical `subjectAltName` extension.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -79,24 +94,44 @@ export class TBSCertificate {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Named INTEGER: `v1` is 0, `v2` is 1, `v3` is 2. Defaults to v1.
+         * Unique identifiers require v2 or v3; `extensions` requires v3.
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Unique for this issuer; need not be sequential. See
+         * {@link CertificateSerialNumber} for the negative-INTEGER / RFC 5280
+         * clash.
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: CertificateSerialNumber,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Algorithm used to sign the certificate. Shall equal the
+         * `algorithmIdentifier` of the outer {@link SIGNED}.
+         *
          * @public
          * @readonly
          */
         readonly signature: AlgorithmIdentifier,
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Distinguished name of the issuing CA. Shall be non-empty.
+         *
          * @public
          * @readonly
          */
@@ -109,6 +144,12 @@ export class TBSCertificate {
         readonly validity: Validity,
         /**
          * @summary `subject`.
+         * @description
+         *
+         * Entity bound to `subjectPublicKey`. May be an empty DN only for an
+         * end-entity certificate that also has a critical `subjectAltName`
+         * extension; otherwise shall be a non-empty DN.
+         *
          * @public
          * @readonly
          */
@@ -121,18 +162,32 @@ export class TBSCertificate {
         readonly subjectPublicKeyInfo: SubjectPublicKeyInfo,
         /**
          * @summary `issuerUniqueIdentifier`.
+         * @description
+         *
+         * Deprecated disambiguator for reused issuer DNs. Requires version v2
+         * or v3. IETF RFC 5280 forbids this field.
+         *
          * @public
          * @readonly
          */
         readonly issuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `subjectUniqueIdentifier`.
+         * @description
+         *
+         * Deprecated disambiguator for reused subject DNs. Requires version v2
+         * or v3. IETF RFC 5280 forbids this field.
+         *
          * @public
          * @readonly
          */
         readonly subjectUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * If present, `version` shall be v3.
+         *
          * @public
          * @readonly
          */

@@ -21,10 +21,17 @@ export type ContextJSON = {
 /**
  * @summary Context
  * @description
- * 
- * X.500 directory context, which is used to annotate attribute values with
- * contextual information such as the language of the attribute value or
- * the time at which the attribute value is valid.
+ *
+ * A property associated with an attribute value (language, time, locale, etc.).
+ *
+ * `contextValues` is a `SET SIZE (1..MAX)` of values of the syntax identified by
+ * `contextType`. An attribute value with no context of a given type is treated
+ * as applicable under every value of that type.
+ *
+ * `fallback` defaults to `FALSE`. When `TRUE` for a context type, the value is
+ * also selected if a context assertion of that type matches no other values of
+ * the attribute, and it is preserved by a Modify (reset value) that otherwise
+ * drops values whose fallback is `FALSE`.
  *
  * ### ASN.1 Definition:
  *
@@ -54,6 +61,12 @@ export class Context {
         readonly contextValues: _Element[],
         /**
          * @summary `fallback`.
+         * @description
+         *
+         * Defaults to `FALSE`. When `TRUE`, this value is selected if a context
+         * assertion of this type matches no other values, and it is kept by a
+         * Modify (reset value) that drops values whose fallback is `FALSE`.
+         *
          * @public
          * @readonly
          */

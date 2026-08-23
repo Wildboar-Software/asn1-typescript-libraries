@@ -15,6 +15,10 @@ import { type ATTRIBUTE } from "../PKI-Stub/ATTRIBUTE.oca.mjs";
  * @summary SupportedAttributes
  * @description
  *
+ * Information object set constraining {@link Attribute} type OIDs. Empty in
+ * this stub; a referencing specification fills it in. X.501's corresponding set
+ * starts with `objectClass` and `aliasedEntryName`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

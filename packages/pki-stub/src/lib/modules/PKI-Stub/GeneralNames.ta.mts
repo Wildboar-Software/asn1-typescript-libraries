@@ -21,6 +21,11 @@ import {
  * @summary GeneralNames
  * @description
  *
+ * A `SEQUENCE SIZE (1..MAX)` of {@link GeneralName}. Empty is not allowed.
+ * Sequence order is the encoded order; matching is by the rules of each name
+ * form, not by position. The issuing CA shall not assign the same name of a
+ * given form to different entities.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

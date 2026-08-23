@@ -15,6 +15,9 @@ import { type EXTENSION } from "../PKI-Stub/EXTENSION.oca.mjs";
  * @summary ExtensionSet
  * @description
  *
+ * Information object set constraining {@link Extension} `extnId` values. Empty
+ * in this stub; a referencing specification fills it in.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

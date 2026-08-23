@@ -34,6 +34,13 @@ export type HASHJSON = {
  * @summary HASH
  * @description
  *
+ * A hash of a `ToBeHashed` value: algorithm identifier plus `hashValue` bits.
+ *
+ * `hashValue` shall be the result of hashing the DER encoding of the
+ * `ToBeHashed` value. X.509 no longer uses this type itself; it is retained for
+ * import by other specifications. Prefer {@link FingerPrint} for new AVL-style
+ * fingerprints.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

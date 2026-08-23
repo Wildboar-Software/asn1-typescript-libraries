@@ -31,6 +31,17 @@ import {
  * @summary Holder
  * @description
  *
+ * Identifies the holder of an attribute certificate. At least one of
+ * `baseCertificateID`, `entityName`, and `objectDigestInfo` shall be present.
+ *
+ * If `baseCertificateID` is present, only that public-key certificate may be
+ * used to authenticate the holder; `entityName` is then only a hint for
+ * locating it. `entityName` alone is weaker: any PKC whose subject matches one
+ * of the names may be used, and some `GeneralName` forms are unsuitable for
+ * naming a holder (especially a role). `objectDigestInfo` authenticates by
+ * comparing a digest of the holder (including an executable) with
+ * `objectDigest`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,18 +59,34 @@ export class Holder {
     constructor(
         /**
          * @summary `baseCertificateID`.
+         * @description
+         *
+         * If present, only this public-key certificate may authenticate the
+         * holder. `entityName` is then only a locator hint.
+         *
          * @public
          * @readonly
          */
         readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
         /**
          * @summary `entityName`.
+         * @description
+         *
+         * One or more names for the holder. Alone, any PKC whose subject
+         * matches one of these names may be used. Some `GeneralName` forms are
+         * a poor identifier for a holder (especially a role).
+         *
          * @public
          * @readonly
          */
         readonly entityName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `objectDigestInfo`.
+         * @description
+         *
+         * Authenticates the holder by comparing a digest (including of an
+         * executable) with `objectDigest`. See {@link ObjectDigestInfo}.
+         *
          * @public
          * @readonly
          */

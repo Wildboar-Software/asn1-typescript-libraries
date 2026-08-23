@@ -11,6 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 
+/**
+ * @summary OTHER-NAME
+ * @description
+ *
+ * Information object class for {@link GeneralName} `otherName`: ASN.1
+ * `TYPE-IDENTIFIER` (`&id` plus `&Type`). Encoded as `INSTANCE OF OTHER-NAME`.
+ *
+ * @interface
+ */
 export type OTHER_NAME<Type> = TYPE_IDENTIFIER<Type>;
 
 /* eslint-enable */

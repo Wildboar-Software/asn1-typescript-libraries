@@ -12,7 +12,9 @@ import {
  * @description
  *
  * A sequence of relative distinguished names in an order that descends from the
- * root of the DIT.
+ * root of the DIT. This does **NOT** mean that an `RDNSequence` is a complete
+ * `DistinguishedName`. A `DistinguishedName` is fully qualified; an `RDNSequence`
+ * may not be.
  *
  * ### ASN.1 Definition:
  *

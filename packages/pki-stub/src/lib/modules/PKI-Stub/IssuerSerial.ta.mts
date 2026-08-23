@@ -31,6 +31,14 @@ import {
  * @summary IssuerSerial
  * @description
  *
+ * Identifies a public-key certificate by issuer {@link GeneralNames}, serial
+ * number, and optional issuer unique identifier. Used in attribute-certificate
+ * holder and issuer fields. Not the same as {@link IssuerSerialNumber}, which
+ * uses a directory {@link Name} and has no UID (that type is for AVLs).
+ *
+ * `issuerUID` is the deprecated unique identifier from the referenced
+ * public-key certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

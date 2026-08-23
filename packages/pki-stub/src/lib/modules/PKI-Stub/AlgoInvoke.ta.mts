@@ -15,6 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlgoInvoke
  * @description
  *
+ * Open type: the `&DynParms` field of an {@link ALGORITHM} information object.
+ * Bound here as a raw ASN.1 element; the syntax depends on the algorithm being
+ * invoked.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

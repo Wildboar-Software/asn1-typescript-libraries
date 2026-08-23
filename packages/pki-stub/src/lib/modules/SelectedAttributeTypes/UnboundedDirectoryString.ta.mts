@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UnboundedDirectoryString
  * @description
  *
+ * Directory string with no upper bound: a CHOICE among TeletexString (T.61),
+ * PrintableString, BMPString (UCS-2), UniversalString (UCS-4), and UTF8String.
+ *
+ * Matching is on character content under the applicable matching rule, not on
+ * which string type was used. Empty strings are forbidden (`SIZE (1..MAX)`).
+ * Prefer `uTF8String` for new values.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

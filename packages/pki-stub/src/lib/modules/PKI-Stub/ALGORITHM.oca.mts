@@ -16,6 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ALGORITHM
  * @description
  *
+ * Information object class for a cryptographic algorithm. `&Type` is the
+ * static parameters syntax (see {@link AlgorithmIdentifier} `parameters`).
+ * `&DynParms` is the invoke-time / dynamic parameters syntax used by
+ * {@link AlgorithmWithInvoke} and {@link AlgoInvoke} (X.510); X.509's class
+ * has only `&Type` and `&id`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -52,10 +52,19 @@ export enum _enum_for_CRLReason {
  *   suspect that the private key has been compromised.
  * - `privilegeWithdrawn` indicates that a public-key certificate was revoked because
  *   a privilege contained within that public-key certificate has been withdrawn.
+ * - `certificateHold` places the certificate on hold. The hold may later remain
+ *   (treat as invalid), be replaced by a final revocation (revocation date is
+ *   the hold date; hold-instruction extension shall be absent), or be released
+ *   and the entry removed.
+ * - `removeFromCRL` is for delta CRLs only: the corresponding base (or later)
+ *   CRL has a `certificateHold` entry for the same certificate, and that hold
+ *   is now released or the certificate has expired.
  * - `aACompromise` is only relevant for ACRL entries (see 17.2.3.1).
- * - `weakAlgorithm` indicates that the public-key certificate was revoked due to a
+ * - `weakAlgorithmOrKey` indicates that the public-key certificate was revoked due to a
  *   weak cryptographic algorithm and/or key (e.g., due to short key length or
  *   unsafe key generation).
+ *
+ * There is no enumerated value 7.
  *
  * ### ASN.1 Definition:
  *

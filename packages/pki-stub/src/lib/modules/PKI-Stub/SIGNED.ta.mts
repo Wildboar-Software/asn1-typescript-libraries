@@ -22,6 +22,22 @@ import {
  * @summary SIGNED
  * @description
  *
+ * A value of type `ToBeSigned` with a digital signature appended.
+ *
+ * The signature is over the DER encoding of `toBeSigned` (see X.509 clause 6.3
+ * for the DER restrictions). When checking a signature, compare against the
+ * bits actually received, not a re-encoded value, unless the profile requires
+ * re-DER-encoding.
+ *
+ * `altAlgorithmIdentifier` and `altSignature` shall both be present or both
+ * absent. For public-key certificates, attribute certificates, and AVLs, X.509
+ * requires those alternative components to be absent at generation; use the
+ * `altSignatureAlgorithm` / `altSignatureValue` extensions instead.
+ *
+ * `originalDER`, when set by the decoder, is the original encoding of the
+ * entire signed object so the signature (and whole-certificate hashes) can be
+ * verified without re-encoding.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

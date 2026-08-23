@@ -5,9 +5,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CertificateSerialNumber
  * @description
- * 
- * Note: this MAY be negative per ITU-T Recommendation X.509 (2019), but it MAY
- * NOT be negative per [IETF RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280).
+ *
+ * INTEGER assigned by the issuer; unique for that issuer (issuer name plus
+ * serial number identify a certificate). Serial numbers need not be sequential.
+ *
+ * X.509 allows a negative INTEGER. IETF RFC 5280 requires a positive number of
+ * at most 20 octets. This TypeScript binding uses an `OCTET_STRING` (the two's
+ * complement contents) so values larger than `number` can be represented.
  *
  * ### ASN.1 Definition:
  *

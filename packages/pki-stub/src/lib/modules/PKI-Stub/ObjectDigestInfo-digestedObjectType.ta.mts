@@ -15,6 +15,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
  *
+ * What was hashed in {@link ObjectDigestInfo}:
+ * - `publicKey` (0): DER of {@link SubjectPublicKeyInfo} (see that type).
+ * - `publicKeyCert` (1): entire DER of the public-key certificate, including
+ *   the signature.
+ * - `otherObjectTypes` (2): some other object; see `otherObjectTypeID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +39,12 @@ export enum _enum_for_ObjectDigestInfo_digestedObjectType {
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
  *
+ * What was hashed in {@link ObjectDigestInfo}:
+ * - `publicKey` (0): DER of {@link SubjectPublicKeyInfo} (see that type).
+ * - `publicKeyCert` (1): entire DER of the public-key certificate, including
+ *   the signature.
+ * - `otherObjectTypes` (2): some other object; see `otherObjectTypeID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +59,12 @@ export type ObjectDigestInfo_digestedObjectType =
 /**
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
+ *
+ * What was hashed in {@link ObjectDigestInfo}:
+ * - `publicKey` (0): DER of {@link SubjectPublicKeyInfo} (see that type).
+ * - `publicKeyCert` (1): entire DER of the public-key certificate, including
+ *   the signature.
+ * - `otherObjectTypes` (2): some other object; see `otherObjectTypeID`.
  *
  * ### ASN.1 Definition:
  *

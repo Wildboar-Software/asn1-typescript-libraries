@@ -16,6 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EXTENSION
  * @description
  *
+ * Information object class for a certificate, CRL, attribute-certificate, or
+ * AVL extension: unique `&id` and the ASN.1 type `&ExtnType` carried (DER)
+ * inside {@link Extension} `extnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

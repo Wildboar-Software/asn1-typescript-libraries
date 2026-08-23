@@ -24,8 +24,13 @@ export type Attribute_valuesWithContext_ItemJSON = {
 /**
  * @summary Attribute_valuesWithContext_Item
  * @description
- * 
- * An attribute value that has associated contexts.
+ *
+ * One attribute value together with the contexts that qualify it.
+ *
+ * `contextList` is a `SET SIZE (1..MAX)`: at least one context, unordered, and
+ * all contexts in the list shall be of distinct context types. Contexts are not
+ * part of a distinguished value when that value is used in a relative
+ * distinguished name.
  *
  * ### ASN.1 Definition:
  *

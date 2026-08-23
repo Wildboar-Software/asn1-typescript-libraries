@@ -15,8 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttCertVersion
  * @description
- * 
- * Version of an attribute certificate.
+ *
+ * Attribute certificate version. Only `v2(1)` is defined for the current
+ * syntax; the integer value is `1`, not `2`.
  *
  * ### ASN.1 Definition:
  *
