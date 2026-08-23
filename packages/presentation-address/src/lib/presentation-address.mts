@@ -429,9 +429,15 @@ export class PresentationAddress {
      */
     public static fromJER(json: PresentationAddressStrings, encoding: "base64" | "hex"): PresentationAddress {
         return new PresentationAddress(
-            json.pSelector && Buffer.from(json.pSelector, encoding),
-            json.sSelector && Buffer.from(json.sSelector, encoding),
-            json.tSelector && Buffer.from(json.tSelector, encoding),
+            (typeof json.pSelector === "string")
+                ? Buffer.from(json.pSelector, encoding)
+                : undefined,
+            (typeof json.sSelector === "string")
+                ? Buffer.from(json.sSelector, encoding)
+                : undefined,
+            (typeof json.tSelector === "string")
+                ? Buffer.from(json.tSelector, encoding)
+                : undefined,
             json.nAddresses.map(address => Buffer.from(address, encoding)),
         );
     }
