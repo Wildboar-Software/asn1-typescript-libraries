@@ -13,6 +13,19 @@ import * as $ from "@wildboar/asn1/functional";
 import { Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
 import getDateFromTime from "../../../getDateFromTime.mjs";
 import getTimeFromDate from "../../../getTimeFromDate.mjs";
+import {
+    timeFromJSON,
+    timeToJSON,
+    type TimeJSON,
+} from "../../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link Validity}.
+ */
+export type ValidityJSON = {
+    notBefore: TimeJSON;
+    notAfter: TimeJSON;
+};
 
 /**
  * @summary Validity
@@ -73,6 +86,45 @@ export class Validity {
             _o.notBefore,
             _o.notAfter,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary Convert this `Validity` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Each `Time` alternative is encoded as a wrapped choice whose value is an
+     * ISO 8601 timestamp. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ValidityJSON {
+        return {
+            notBefore: timeToJSON(this.notBefore),
+            notAfter: timeToJSON(this.notAfter),
+        };
+    }
+
+    /**
+     * @summary Decode a JSON encoding of a `Validity` loosely following ITU-T X.697 (JER)
+     * @param json The JSON Encoding Rules encoding of this value
+     * @returns The decoded `Validity`
+     * @function
+     * @public
+     * @static
+     */
+    public static fromJSON(json: ValidityJSON): Validity {
+        if (
+            (typeof json !== "object")
+            || (json === null)
+        ) {
+            throw new Error("invalid Validity json");
+        }
+        return new Validity(
+            timeFromJSON(json.notBefore),
+            timeFromJSON(json.notAfter),
         );
     }
 

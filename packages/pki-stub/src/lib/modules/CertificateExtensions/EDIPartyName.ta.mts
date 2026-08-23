@@ -10,6 +10,19 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import {
+    unboundedDirectoryStringFromJSON,
+    unboundedDirectoryStringToJSON,
+    type UnboundedDirectoryStringJSON,
+} from "../../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link EDIPartyName}.
+ */
+export type EDIPartyNameJSON = {
+    nameAssigner?: UnboundedDirectoryStringJSON;
+    partyName: UnboundedDirectoryStringJSON;
+};
 
 /**
  * @summary EDIPartyName
@@ -66,6 +79,51 @@ export class EDIPartyName {
             _o.nameAssigner,
             _o.partyName,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary Convert this `EDIPartyName` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `UnboundedDirectoryString` choices are encoded as a single-member object.
+     * Absent optional components are omitted.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): EDIPartyNameJSON {
+        const json: EDIPartyNameJSON = {
+            partyName: unboundedDirectoryStringToJSON(this.partyName),
+        };
+        if (this.nameAssigner) {
+            json.nameAssigner = unboundedDirectoryStringToJSON(this.nameAssigner);
+        }
+        return json;
+    }
+
+    /**
+     * @summary Decode a JSON encoding of an `EDIPartyName` loosely following ITU-T X.697 (JER)
+     * @param json The JSON Encoding Rules encoding of this value
+     * @returns The decoded `EDIPartyName`
+     * @function
+     * @public
+     * @static
+     */
+    public static fromJSON(json: EDIPartyNameJSON): EDIPartyName {
+        if (
+            (typeof json !== "object")
+            || (json === null)
+            || (json.partyName === undefined)
+        ) {
+            throw new Error("invalid EDIPartyName json");
+        }
+        return new EDIPartyName(
+            json.nameAssigner
+                ? unboundedDirectoryStringFromJSON(json.nameAssigner)
+                : undefined,
+            unboundedDirectoryStringFromJSON(json.partyName),
         );
     }
 }

@@ -13,6 +13,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link AttCertValidityPeriod}.
+ */
+export type AttCertValidityPeriodJSON = {
+    notBeforeTime: string;
+    notAfterTime: string;
+};
+
+/**
  * @summary AttCertValidityPeriod
  * @description
  *
@@ -68,6 +76,52 @@ export class AttCertValidityPeriod {
             _o.notAfterTime,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `AttCertValidityPeriod` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `GeneralizedTime` values are encoded as ISO 8601 timestamps.
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AttCertValidityPeriodJSON {
+        return {
+            notBeforeTime: this.notBeforeTime.toISOString(),
+            notAfterTime: this.notAfterTime.toISOString(),
+        };
+    }
+
+    /**
+     * @summary Decode a JSON encoding of an `AttCertValidityPeriod` loosely following ITU-T X.697 (JER)
+     * @param json The JSON Encoding Rules encoding of this value
+     * @returns The decoded `AttCertValidityPeriod`
+     * @function
+     * @public
+     * @static
+     */
+    public static fromJSON(json: AttCertValidityPeriodJSON): AttCertValidityPeriod {
+        if (
+            (typeof json !== "object")
+            || (json === null)
+            || (typeof json.notBeforeTime !== "string")
+            || (typeof json.notAfterTime !== "string")
+        ) {
+            throw new Error("invalid AttCertValidityPeriod json");
+        }
+        const notBeforeTime = new Date(json.notBeforeTime);
+        const notAfterTime = new Date(json.notAfterTime);
+        if (
+            Number.isNaN(notBeforeTime.valueOf())
+            || Number.isNaN(notAfterTime.valueOf())
+        ) {
+            throw new Error("invalid AttCertValidityPeriod json");
+        }
+        return new AttCertValidityPeriod(notBeforeTime, notAfterTime);
     }
 }
 

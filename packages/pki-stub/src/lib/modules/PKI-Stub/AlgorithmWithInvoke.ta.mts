@@ -14,6 +14,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link AlgorithmWithInvoke}.
+ */
+export type AlgorithmWithInvokeJSON = {
+    algorithm: string;
+    parameters?: unknown;
+    dynamParms?: unknown;
+};
+
+/**
  * @summary AlgorithmWithInvoke
  * @description
  *
@@ -77,6 +86,30 @@ export class AlgorithmWithInvoke {
             _o.dynamParms,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `AlgorithmWithInvoke` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `parameters` and `dynamParms` are encoded with {@link _Element.toJSON}.
+     * Absent optional components are omitted. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AlgorithmWithInvokeJSON {
+        const json: AlgorithmWithInvokeJSON = {
+            algorithm: this.algorithm.toJSON(),
+        };
+        if (this.parameters !== undefined) {
+            json.parameters = this.parameters.toJSON();
+        }
+        if (this.dynamParms !== undefined) {
+            json.dynamParms = this.dynamParms.toJSON();
+        }
+        return json;
     }
 }
 

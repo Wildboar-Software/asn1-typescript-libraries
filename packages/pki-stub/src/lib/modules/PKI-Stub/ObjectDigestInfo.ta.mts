@@ -24,6 +24,21 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
+import {
+    bitStringToJSON,
+    type BitStringJSON,
+} from "../../../json.mjs";
+import type { AlgorithmIdentifierJSON } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link ObjectDigestInfo}.
+ */
+export type ObjectDigestInfoJSON = {
+    digestedObjectType: "publicKey" | "publicKeyCert" | "otherObjectTypes";
+    otherObjectTypeID?: string;
+    digestAlgorithm: AlgorithmIdentifierJSON;
+    objectDigest: BitStringJSON;
+};
 
 /**
  * @summary ObjectDigestInfo
@@ -110,6 +125,37 @@ export class ObjectDigestInfo {
 
     public static _enum_for_digestedObjectType =
         _enum_for_ObjectDigestInfo_digestedObjectType;
+
+    /**
+     * @summary Convert this `ObjectDigestInfo` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `digestedObjectType` is encoded as the identifier of the chosen
+     * enumeration item (X.697 clause 22). `objectDigest` is encoded as a
+     * `{ value, length }` object. Absent optional components are omitted.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ObjectDigestInfoJSON {
+        const digestedObjectType = (
+            (this.digestedObjectType === ObjectDigestInfo_digestedObjectType.publicKey)
+                ? "publicKey"
+                : (this.digestedObjectType === ObjectDigestInfo_digestedObjectType.publicKeyCert)
+                    ? "publicKeyCert"
+                    : "otherObjectTypes"
+        );
+        const json: ObjectDigestInfoJSON = {
+            digestedObjectType,
+            digestAlgorithm: this.digestAlgorithm.toJSON(),
+            objectDigest: bitStringToJSON(this.objectDigest),
+        };
+        if (this.otherObjectTypeID) {
+            json.otherObjectTypeID = this.otherObjectTypeID.toJSON();
+        }
+        return json;
+    }
 }
 
 /**

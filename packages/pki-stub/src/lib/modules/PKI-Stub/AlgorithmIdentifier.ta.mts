@@ -14,6 +14,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link AlgorithmIdentifier}.
+ */
+export type AlgorithmIdentifierJSON = {
+    algorithm: string;
+    parameters?: unknown;
+};
+
+/**
  * @summary AlgorithmIdentifier
  * @description
  *
@@ -69,6 +77,27 @@ export class AlgorithmIdentifier {
             _o.parameters,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `AlgorithmIdentifier` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `parameters` are encoded with {@link _Element.toJSON}. Absent
+     * optional components are omitted. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AlgorithmIdentifierJSON {
+        const json: AlgorithmIdentifierJSON = {
+            algorithm: this.algorithm.toJSON(),
+        };
+        if (this.parameters !== undefined) {
+            json.parameters = this.parameters.toJSON();
+        }
+        return json;
     }
 }
 

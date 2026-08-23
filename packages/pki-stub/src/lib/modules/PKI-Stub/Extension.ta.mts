@@ -15,6 +15,20 @@ import {
     DERElement,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    octetStringFromJSON,
+    octetStringToJSON,
+    objectIdentifierFromJSON,
+} from "../../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link Extension}.
+ */
+export type ExtensionJSON = {
+    extnId: string;
+    critical?: boolean;
+    extnValue: string;
+};
 
 /**
  * @summary Extension
@@ -98,6 +112,52 @@ export class Extension {
         const el = new DERElement();
         el.fromBytes(this.extnValue);
         return el;
+    }
+
+    /**
+     * @summary Convert this `Extension` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `extnValue` is encoded as a hexadecimal string (X.697 clause 25.3).
+     * `critical` is omitted when it still has its DEFAULT value of `FALSE`.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ExtensionJSON {
+        const json: ExtensionJSON = {
+            extnId: this.extnId.toJSON(),
+            extnValue: octetStringToJSON(this.extnValue),
+        };
+        if (this.critical) {
+            json.critical = this.critical;
+        }
+        return json;
+    }
+
+    /**
+     * @summary Decode a JSON encoding of an `Extension` loosely following ITU-T X.697 (JER)
+     * @param json The JSON Encoding Rules encoding of this value
+     * @returns The decoded `Extension`
+     * @function
+     * @public
+     * @static
+     */
+    public static fromJSON(json: ExtensionJSON): Extension {
+        if (
+            (typeof json !== "object")
+            || (json === null)
+            || (typeof json.extnId !== "string")
+            || (typeof json.extnValue !== "string")
+        ) {
+            throw new Error("invalid Extension json");
+        }
+        return new Extension(
+            objectIdentifierFromJSON(json.extnId),
+            json.critical,
+            octetStringFromJSON(json.extnValue),
+        );
     }
 }
 

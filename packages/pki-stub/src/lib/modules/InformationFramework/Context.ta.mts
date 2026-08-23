@@ -10,6 +10,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link Context}.
+ */
+export type ContextJSON = {
+    contextType: string;
+    contextValues: unknown[];
+    fallback?: boolean;
+};
+
+/**
  * @summary Context
  * @description
  *
@@ -84,6 +93,28 @@ export class Context {
      */
     public static get _default_value_for_fallback(): BOOLEAN {
         return false;
+    }
+
+    /**
+     * @summary Convert this `Context` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `contextValues` are encoded with {@link _Element.toJSON}.
+     * `fallback` is omitted when it still has its DEFAULT value of `FALSE`.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ContextJSON {
+        const json: ContextJSON = {
+            contextType: this.contextType.toJSON(),
+            contextValues: this.contextValues.map((v) => v.toJSON()),
+        };
+        if (this.fallback) {
+            json.fallback = this.fallback;
+        }
+        return json;
     }
 }
 

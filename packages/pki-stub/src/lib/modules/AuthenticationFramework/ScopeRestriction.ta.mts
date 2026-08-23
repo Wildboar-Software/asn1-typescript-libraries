@@ -8,6 +8,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link ScopeRestriction}.
+ */
+export type ScopeRestrictionJSON = {
+    id: string;
+    restriction: unknown;
+};
+
+/**
  * @summary ScopeRestriction
  * @description
  *
@@ -63,6 +71,24 @@ export class ScopeRestriction {
             _o.restriction,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `ScopeRestriction` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `restriction` is encoded with {@link _Element.toJSON}.
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ScopeRestrictionJSON {
+        return {
+            id: this.id.toJSON(),
+            restriction: this.restriction.toJSON(),
+        };
     }
 }
 

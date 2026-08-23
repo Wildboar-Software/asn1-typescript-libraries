@@ -15,7 +15,20 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
+    type AlgorithmIdentifierJSON,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
+import {
+    bitStringToJSON,
+    type BitStringJSON,
+} from "../../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link FingerPrint}.
+ */
+export type FingerPrintJSON = {
+    algorithmIdentifier: AlgorithmIdentifierJSON;
+    fingerprint: BitStringJSON;
+};
 
 /**
  * @summary FingerPrint
@@ -73,6 +86,24 @@ export class FingerPrint<_ToBeFingerprinted> {
             _o.fingerprint,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `FingerPrint` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `fingerprint` is encoded as a `{ value, length }` object (X.697 clause 24.3).
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): FingerPrintJSON {
+        return {
+            algorithmIdentifier: this.algorithmIdentifier.toJSON(),
+            fingerprint: bitStringToJSON(this.fingerprint),
+        };
     }
 }
 

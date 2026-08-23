@@ -12,6 +12,16 @@ import {
     _decode_Attribute_valuesWithContext_Item as _decode_VWC,
     _encode_Attribute_valuesWithContext_Item as _encode_VWC,
 } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
+import type { Attribute_valuesWithContext_ItemJSON } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link Attribute}.
+ */
+export type AttributeJSON = {
+    type: string;
+    values: unknown[];
+    valuesWithContext?: Attribute_valuesWithContext_ItemJSON[];
+};
 
 /**
  * @summary Attribute
@@ -80,6 +90,29 @@ export class Attribute {
             _o.valuesWithContext,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `Attribute` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `values` are encoded with {@link _Element.toJSON}. The ASN.1
+     * identifier `type` is used as the JSON member name. Absent optional
+     * components are omitted.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AttributeJSON {
+        const json: AttributeJSON = {
+            type: this.type_.toJSON(),
+            values: this.values.map((v) => v.toJSON()),
+        };
+        if (this.valuesWithContext?.length) {
+            json.valuesWithContext = this.valuesWithContext.map((item) => item.toJSON());
+        }
+        return json;
     }
 }
 

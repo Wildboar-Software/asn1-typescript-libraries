@@ -15,7 +15,20 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
+    type AlgorithmIdentifierJSON,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
+import {
+    bitStringToJSON,
+    type BitStringJSON,
+} from "../../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link HASH}.
+ */
+export type HASHJSON = {
+    algorithmIdentifier: AlgorithmIdentifierJSON;
+    hashValue: BitStringJSON;
+};
 
 /**
  * @summary HASH
@@ -73,6 +86,24 @@ export class HASH<_ToBeHashed> {
             _o.hashValue,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `HASH` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `hashValue` is encoded as a `{ value, length }` object (X.697 clause 24.3).
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): HASHJSON {
+        return {
+            algorithmIdentifier: this.algorithmIdentifier.toJSON(),
+            hashValue: bitStringToJSON(this.hashValue),
+        };
     }
 }
 

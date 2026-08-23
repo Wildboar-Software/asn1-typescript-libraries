@@ -20,6 +20,19 @@ import {
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";
+import {
+    bitStringToJSON,
+    type BitStringJSON,
+} from "../../../json.mjs";
+import type { AlgorithmIdentifierJSON } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link SubjectPublicKeyInfo}.
+ */
+export type SubjectPublicKeyInfoJSON = {
+    algorithm: AlgorithmIdentifierJSON;
+    subjectPublicKey: BitStringJSON;
+};
 
 /**
  * @summary SubjectPublicKeyInfo
@@ -77,6 +90,24 @@ export class SubjectPublicKeyInfo {
             _o.subjectPublicKey,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `SubjectPublicKeyInfo` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `subjectPublicKey` is encoded as a `{ value, length }` object
+     * (X.697 clause 24.3). Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): SubjectPublicKeyInfoJSON {
+        return {
+            algorithm: this.algorithm.toJSON(),
+            subjectPublicKey: bitStringToJSON(this.subjectPublicKey),
+        };
     }
 }
 

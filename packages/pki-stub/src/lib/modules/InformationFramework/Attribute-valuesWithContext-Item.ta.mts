@@ -11,6 +11,15 @@ import {
     _decode_Context,
     _encode_Context,
 } from "../InformationFramework/Context.ta.mjs";
+import type { ContextJSON } from "../InformationFramework/Context.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link Attribute_valuesWithContext_Item}.
+ */
+export type Attribute_valuesWithContext_ItemJSON = {
+    value: unknown;
+    contextList: ContextJSON[];
+};
 
 /**
  * @summary Attribute_valuesWithContext_Item
@@ -69,6 +78,24 @@ export class Attribute_valuesWithContext_Item {
             _o.contextList ?? [],
             _o._unrecognizedExtensionsList ?? []
         );
+    }
+
+    /**
+     * @summary Convert this `Attribute_valuesWithContext_Item` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `value` is encoded with {@link _Element.toJSON}.
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): Attribute_valuesWithContext_ItemJSON {
+        return {
+            value: this.value.toJSON(),
+            contextList: this.contextList.map((c) => c.toJSON()),
+        };
     }
 }
 

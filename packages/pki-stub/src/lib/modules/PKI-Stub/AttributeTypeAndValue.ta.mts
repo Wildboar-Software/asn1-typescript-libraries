@@ -8,6 +8,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link AttributeTypeAndValue}.
+ */
+export type AttributeTypeAndValueJSON = {
+    type: string;
+    value: unknown;
+};
+
+/**
  * @summary AttributeTypeAndValue
  * @description
  *
@@ -63,6 +71,24 @@ export class AttributeTypeAndValue {
             _o.value,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Open-type `value` is encoded with {@link _Element.toJSON}. The ASN.1
+     * identifier `type` is used as the JSON member name.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AttributeTypeAndValueJSON {
+        return {
+            type: this.type_.toJSON(),
+            value: this.value.toJSON(),
+        };
     }
 }
 
