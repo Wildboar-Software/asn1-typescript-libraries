@@ -137,7 +137,8 @@ export class CertificationPath {
     public intoPkiPath(): PkiPath | null {
         const maybeIssuedToTheseCAs = this
             .theCACertificates
-            ?.map((cp) => cp.issuedToThisCA);
+            ?.map((cp) => cp.issuedToThisCA)
+            ?? [];
         const issuedToTheseCAs = maybeIssuedToTheseCAs
             .filter((cp): cp is Certificate => !!cp);
         if (issuedToTheseCAs.length !== maybeIssuedToTheseCAs.length) {
