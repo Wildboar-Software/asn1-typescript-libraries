@@ -56,6 +56,11 @@ import {
  * @summary PerMessageSubmissionFields
  * @description
  *
+ * `PerMessageSubmissionFields`. Defined in ITU-T X.411 (1999) (§8). SET OF: order is
+ * insignificant; duplicates are typically meaningless. ASN.1 DEFAULT `normal`: that
+ * value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

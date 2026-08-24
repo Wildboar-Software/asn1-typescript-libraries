@@ -24,6 +24,8 @@ import {
  * @summary originate_ipm_ResultType
  * @description
  *
+ * `originate_ipm_ResultType`. Defined in ITU-T X.420 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

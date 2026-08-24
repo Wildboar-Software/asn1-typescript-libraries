@@ -20,6 +20,9 @@ import { id_ep_encrypted } from '../IPMSObjectIdentifiers/id-ep-encrypted.va.mjs
  * @summary encrypted_body_part_parameters
  * @description
  *
+ * Information object `encrypted_body_part_parameters`. Defined in ITU-T X.420 (1999)
+ * (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

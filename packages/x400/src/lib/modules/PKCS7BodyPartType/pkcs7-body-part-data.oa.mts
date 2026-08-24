@@ -21,6 +21,8 @@ import { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va.mjs';
  * @summary pkcs7_body_part_data
  * @description
  *
+ * Information object `pkcs7_body_part_data`. Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

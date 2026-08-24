@@ -15,7 +15,11 @@ import type { PresentationAddressStrings } from "@wildboar/presentation-address"
  *   its universal equivalent.
  * - `term`: Terminal, meaning usage of terminal-related attributes
  * 
- * See Section 18.5 for the attributes required and permitted for each name form.
+ * See ITU-T X.402 (1999), §18.5 (especially Table 10) for the attributes
+ * required and permitted for each name form. Determination of the form
+ * (§18.5.5): `numeric-user-identifier` ⇒ `numr`; `network-address` ⇒ `term`;
+ * `physical-delivery-country-name` ⇒ postal (`post_u` if
+ * `unformatted-postal-address` is present, else `post_f`); otherwise `mnem`.
  */
 export type NameForm =
     | "mnem"

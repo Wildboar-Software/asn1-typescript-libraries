@@ -17,6 +17,8 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary mHSTerminalTypeNameForm
  * @description
  *
+ * Information object `mHSTerminalTypeNameForm`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

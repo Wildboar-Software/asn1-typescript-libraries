@@ -19,6 +19,9 @@ import {
  * @summary DeferredDeliveryTime
  * @description
  *
+ * Earliest time the MTS may deliver; type `Time` (ITU-T X.411 (1999), §8.2.1.1.1.14 /
+ * Annex A). Cancellation may be rejected if transfer has already begun.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,9 @@ import { id_at_transit_exit_connection_group_name } from '../MHSRoutingObjectIde
  * @summary transitExitConnectionGroupName
  * @description
  *
+ * Information object `transitExitConnectionGroupName`. Defined in ITU-T X.412 (1999)
+ * (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

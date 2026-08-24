@@ -19,6 +19,8 @@ import { id_wf } from '../MHSRoutingObjectIdentifiers/id-wf.va.mjs';
  * @summary id_wf_integer
  * @description
  *
+ * OBJECT IDENTIFIER `id_wf_integer`. Defined in ITU-T X.412 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

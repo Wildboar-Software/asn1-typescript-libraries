@@ -29,6 +29,8 @@ import {
  * @summary MprInfo_Item
  * @description
  *
+ * `MprInfo_Item`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

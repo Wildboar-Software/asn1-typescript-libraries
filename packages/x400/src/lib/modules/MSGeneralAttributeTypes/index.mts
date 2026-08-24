@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MSGeneralAttributeTypes` (ITU-T X.413 (1999), §11).
+ */
 export * from "./AttributeTable.osa.mjs";
 export * from "./ContentSpecificAttributes.osa.mjs";
 export * from "./DeferredDeliveryCancellationTime.ta.mjs";

@@ -40,6 +40,9 @@ import { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-d
  * @summary mhs_distribution_list
  * @description
  *
+ * Information object `mhs_distribution_list`. Defined in ITU-T X.402 (1999) (§17 / Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary ub_security_categories
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_security_categories`. Defined in ITU-T X.411 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,9 @@ import {
  * @summary AddressCapabilities
  * @description
  *
+ * `AddressCapabilities`. Defined in ITU-T X.402 (1999) (§17 / Annex A). SET OF: order is
+ * insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

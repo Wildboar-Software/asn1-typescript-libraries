@@ -51,6 +51,13 @@ import {
  * @summary MSProbeSubmissionResult
  * @description
  *
+ * `MSProbeSubmissionResult`. Should the request succeed, the MS-probe-submission-result
+ * is returned. MSProbeSubmissionResult ::= SET { COMPONENTS OF ProbeSubmissionResult --
+ * This imported type has IMPLICIT tags -- , -- 1994 extension -- ms-probe-result [4]
+ * CommonSubmissionResults OPTIONAL } The parameters of MS-probe-submission-result have
+ * the following meaning: a) Probe-submission-result (M): This is the result of the
+ * Probe-submission… See ITU-T X.413 (1999), §8.3.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

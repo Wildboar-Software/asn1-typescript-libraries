@@ -19,6 +19,9 @@ import {
  * @summary EntryExitMTANames
  * @description
  *
+ * `EntryExitMTANames`. Defined in ITU-T X.411 (1999) (accounting objects). SEQUENCE OF:
+ * element order is significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

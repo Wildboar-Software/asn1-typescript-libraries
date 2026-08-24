@@ -19,6 +19,14 @@ import {
  * @summary Redirections
  * @description
  *
+ * `Redirections`. This argument contains, if the assignment of alternate-recipients is
+ * to be changed, an ordered list of the OR-names of
+ * recipient-assigned-alternate-recipients and, optionally, one or more
+ * redirection-classes associated with each alternate-recipient. If this argument is
+ * present its value completely replaces any previous assignment of alternate-
+ * recipients. See ITU-T X.411 (1999), §8.4.1.1.1.4. SEQUENCE SIZE (1..…): omit this
+ * component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

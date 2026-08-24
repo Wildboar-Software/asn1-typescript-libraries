@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_defaultUrgentMprExpiryDuration
  * @description
  *
+ * OBJECT IDENTIFIER `id_attribute_defaultUrgentMprExpiryDuration`. Defined in ITU-T
+ * X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

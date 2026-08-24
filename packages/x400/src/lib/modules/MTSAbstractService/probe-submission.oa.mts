@@ -42,6 +42,13 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary probe_submission
  * @description
  *
+ * Information object `probe_submission`. The Probe-submission abstract-operation enables
+ * an MTS-user to submit a probe in order to determine whether or not a message (the
+ * subject-message) could be transferred and delivered to one or more recipient MTS-users
+ * if it were to be submitted. Success of a probe does not guarantee that a subsequently
+ * submitted message can actually be delivered, but rather that, currently, the recipient
+ * is valid and the message… See ITU-T X.411 (1999), §8.2.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

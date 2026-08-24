@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_destinationDomainDeliveryList
  * @description
  *
+ * OBJECT IDENTIFIER `id_attribute_destinationDomainDeliveryList`. Defined in ITU-T X.411
+ * (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

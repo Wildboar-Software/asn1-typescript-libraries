@@ -1,3 +1,19 @@
+/**
+ * @summary Map an X.121 Data Country Code to ISO 3166-1 alpha-2.
+ * @description
+ *
+ * Used when comparing `CountryName` values that mix `x121-dcc-code` and
+ * `iso-3166-alpha2-code`. ITU-T X.402 (1999), §18.4 b NOTE says the choice
+ * between those encodings is insignificant; this table implements that mapping.
+ * One ISO country may have several DCCs (e.g. `310`–`316` → `US`). If X.121
+ * allocates more than one number to a country, which number appears in an
+ * address is not standardized. Returns `undefined` when the DCC is unknown.
+ *
+ * @param dcc Numeric X.121 DCC (typically three digits).
+ * @returns ISO 3166-1 alpha-2 code, or `undefined`.
+ * @function
+ * @see ITU-T X.402 (1999) §18.3.3 / §18.4 b
+ */
 export function x121_dcc_country_code_to_iso_3166 (dcc: number): string | undefined {
     switch (dcc) {
         case (202): return "GR"; // Greece

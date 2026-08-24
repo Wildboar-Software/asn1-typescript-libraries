@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Password
  * @description
  *
+ * `Password`. A password comprises either an IA5 String or an Octet String. Where the
+ * octets of an Octet String value are the encoding in an 8-bit environment of the
+ * characters of an IA5 String value, the choice between the IA5 String and the Octet
+ * String representations shall be considered insignificant. See ITU-T X.411 (1999),
+ * §8.5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

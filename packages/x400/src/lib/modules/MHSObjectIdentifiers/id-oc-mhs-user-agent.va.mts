@@ -15,6 +15,8 @@ import { id_oc } from '../MHSObjectIdentifiers/id-oc.va.mjs';
  * @summary id_oc_mhs_user_agent
  * @description
  *
+ * OBJECT IDENTIFIER `id_oc_mhs_user_agent`. Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

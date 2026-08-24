@@ -17,6 +17,9 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary MessageSubmissionResultExtensions
  * @description
  *
+ * Information object set `MessageSubmissionResultExtensions`. Defined in ITU-T X.411
+ * (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

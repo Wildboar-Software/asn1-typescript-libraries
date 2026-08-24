@@ -9,6 +9,9 @@ import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-A
  * @summary extended_network_address
  * @description
  *
+ * OR-address extension attribute number 22 (`ExtendedNetworkAddress`) (ITU-T X.411
+ * (1999), Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary Body
  * @description
  *
+ * SEQUENCE OF `BodyPart` (ITU-T X.420 (1999), §7.3). Order is significant (the author's
+ * intended order). Empty SEQUENCE is a legal heading-only IPM.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

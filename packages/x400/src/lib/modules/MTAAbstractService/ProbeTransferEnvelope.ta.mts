@@ -81,6 +81,9 @@ import {
  * @summary ProbeTransferEnvelope
  * @description
  *
+ * `ProbeTransferEnvelope`. Defined in ITU-T X.411 (1999) (§12). SEQUENCE SIZE (1..…):
+ * omit this component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

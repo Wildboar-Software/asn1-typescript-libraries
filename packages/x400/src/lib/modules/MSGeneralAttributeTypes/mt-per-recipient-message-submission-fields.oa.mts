@@ -26,6 +26,14 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_per_recipient_message_submission_fields
  * @description
  *
+ * Information object `mt_per_recipient_message_submission_fields`. This
+ * general-attribute, which is multi-valued, contains the per-recipient-fields component
+ * of the Message-submission- envelope. See Figure 2 (Part 7) of WITH ATTRIBUTE-SYNTAX
+ * PerRecipientMessageSubmissionFields, NUMERATION multi-valued, ID
+ * id-att-per-recipient-message-submission-fields } 11.2.59
+ * Per-recipient-probe-submission-fields This general-attribute, which is multi-valued,
+ * contains the per-recipient-fields… See ITU-T X.413 (1999), §11.2.58.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary SequenceNumberError
  * @description
  *
+ * `SequenceNumberError`. Defined in ITU-T X.411 (1999) (accounting objects). SET SIZE
+ * (1..…): omit this component rather than encode an empty SET; SET order is
+ * insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

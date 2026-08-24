@@ -31,6 +31,9 @@ import { conversion_with_loss_prohibited } from "../MTSAbstractService/conversio
  * @summary PerMessageSubmissionExtensions
  * @description
  *
+ * Information object set `PerMessageSubmissionExtensions`. Defined in ITU-T X.411 (1999)
+ * (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

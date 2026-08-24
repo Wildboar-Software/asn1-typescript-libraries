@@ -66,6 +66,9 @@ import {
  * @summary ProbeSubmissionEnvelope
  * @description
  *
+ * `ProbeSubmissionEnvelope`. Defined in ITU-T X.411 (1999) (§8). SEQUENCE SIZE (1..…):
+ * omit this component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

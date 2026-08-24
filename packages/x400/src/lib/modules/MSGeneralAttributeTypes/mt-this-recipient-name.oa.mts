@@ -30,6 +30,14 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_this_recipient_name
  * @description
  *
+ * Information object `mt_this_recipient_name`. This general-attribute contains the
+ * this-recipient-name argument of the Message-delivery abstract-operation, and
+ * identifies the MS-user. See 8.3.1.1.1.3 of WITH ATTRIBUTE-SYNTAX ORName, EQUALITY
+ * MATCHING-RULE oRNameMatch, OTHER MATCHING-RULES {oRNameElementsMatch |
+ * oRNameSubstringElementsMatch | oRNameSingleElementMatch, ...}, NUMERATION
+ * single-valued, ID id-att-this-recipient-name } 11.2.82 Trace-information… See ITU-T
+ * X.413 (1999), §11.2.81.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

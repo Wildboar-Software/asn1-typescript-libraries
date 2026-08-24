@@ -20,6 +20,9 @@ import {
  * @summary ReportDeliveryResult
  * @description
  *
+ * `ReportDeliveryResult`. Defined in ITU-T X.411 (1999) (§8). SET SIZE (1..…): omit this
+ * component rather than encode an empty SET; SET order is insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

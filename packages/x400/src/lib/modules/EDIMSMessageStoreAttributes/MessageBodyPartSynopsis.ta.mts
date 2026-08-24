@@ -24,6 +24,8 @@ import {
  * @summary MessageBodyPartSynopsis
  * @description
  *
+ * `MessageBodyPartSynopsis`. Defined in ITU-T X.435 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

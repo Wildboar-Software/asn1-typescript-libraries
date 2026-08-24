@@ -45,6 +45,8 @@ import {
  * @summary MessageDeliveryArgument
  * @description
  *
+ * `MessageDeliveryArgument`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

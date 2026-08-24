@@ -20,6 +20,13 @@ import { id_mr_content_identifier_match } from '../MSObjectIdentifiers/id-mr-con
  * @summary contentIdentifierMatch
  * @description
  *
+ * Information object `contentIdentifierMatch`. The Content-identifier-match rule
+ * compares for equality the presented value with attribute-values of type content-
+ * identifier. contentIdentifierMatch MATCHING-RULE ::= { SYNTAX ContentIdentifier ID
+ * id-mr-content-identifier-match } The rule returns true if, and only if, the presented
+ * value matches at least one value of the attribute according to the MS-
+ * string-case-sensitive-match rule. See ITU-T X.413 (1999), §12.4.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

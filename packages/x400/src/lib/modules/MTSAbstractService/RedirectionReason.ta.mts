@@ -24,6 +24,9 @@ export enum _enum_for_RedirectionReason {
  * @summary RedirectionReason
  * @description
  *
+ * `RedirectionReason`. Defined in ITU-T X.411 (1999) (§8). ENUMERATED value `0` is a
+ * named variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

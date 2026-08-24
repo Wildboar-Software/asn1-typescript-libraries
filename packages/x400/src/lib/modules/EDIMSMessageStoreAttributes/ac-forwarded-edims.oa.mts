@@ -28,6 +28,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_forwarded_edims
  * @description
  *
+ * Information object `ac_forwarded_edims`. The AC Forwarded EDIMs attribute, which is
+ * multi-valued, contains the sequence-numbers of the stored EDIMs that correspond to the
+ * EDIM body-part that the present child-entry represents. One value of the attribute
+ * shall be generated for each stored EDIM that corresponds to the body-part that the
+ * present entry represents. See ITU-T X.435 (1999), §18.8.6.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubmittedReplyStatus
  * @description
  *
+ * `SubmittedReplyStatus`. The AC Submitted Reply Status attribute indicates whether a
+ * reply to a delivered IPM was requested and whether one has been sent.
+ * ac-submitted-reply-status ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX SubmittedReplyStatus,
+ * EQUALITY MATCHING-RULE integerMatch, ORDERING MATCHING-RULE integerOrderingMatch,
+ * NUMERATION single-valued, ID id-cat-submitted-reply-status } SubmittedReplyStatus ::=
+ * INTEGER { no-reply-requested… See ITU-T X.420 (1999), §19.6.5.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

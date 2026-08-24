@@ -33,6 +33,9 @@
     },
     {
       "path": "../rose/tsconfig.lib.json"
+    },
+    {
+      "path": "../or-address/tsconfig.lib.json"
     }
   ]
 }

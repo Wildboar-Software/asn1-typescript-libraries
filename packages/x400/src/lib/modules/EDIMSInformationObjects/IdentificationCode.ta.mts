@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IdentificationCode
  * @description
  *
+ * `IdentificationCode`. The Identification Code identifies a sender/recipient of an
+ * interchange. This is semantically identical to the "Sender identification/recipient
+ * identification" component of the Interchange sender/recipient of the EDIFACT UNB
+ * segment. See ITU-T X.435 (1999), §8.1.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

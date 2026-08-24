@@ -20,6 +20,8 @@ import { id_mr_orname_exact_match } from '../MHSObjectIdentifiers/id-mr-orname-e
  * @summary oRNameExactMatch
  * @description
  *
+ * Information object `oRNameExactMatch`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

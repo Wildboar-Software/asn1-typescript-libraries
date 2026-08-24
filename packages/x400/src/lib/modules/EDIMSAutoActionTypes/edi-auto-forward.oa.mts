@@ -33,6 +33,12 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary edi_auto_forward
  * @description
  *
+ * Information object `edi_auto_forward`. If the EDI auto-forward auto-action is
+ * subscribed to the EDI-MS performs the actions described below. If EDI Security
+ * Requests are present, then the EDI-auto-forward actions defined above may be
+ * prohibited, subject to the security policy in force. See ITU-T X.435 (1999),
+ * §18.9.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

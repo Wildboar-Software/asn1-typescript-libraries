@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDIM_EXTENSION
  * @description
  *
+ * Information object class `EDIM_EXTENSION`. Defined in ITU-T X.435 (1999) (§8). ASN.1
+ * DEFAULT `FALSE`, `NULL`: that value is assumed when the component is absent (do not
+ * encode the default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

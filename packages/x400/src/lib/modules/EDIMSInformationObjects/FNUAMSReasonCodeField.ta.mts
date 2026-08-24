@@ -31,6 +31,10 @@ import {
  * @summary FNUAMSReasonCodeField
  * @description
  *
+ * `FNUAMSReasonCodeField`. Defined in ITU-T X.435 (1999) (§8). ASN.1 DEFAULT `FALSE`:
+ * that value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

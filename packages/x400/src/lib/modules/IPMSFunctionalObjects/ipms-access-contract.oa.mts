@@ -18,6 +18,8 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary ipms_access_contract
  * @description
  *
+ * Information object `ipms_access_contract`. Defined in ITU-T X.420 (1999) (§5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

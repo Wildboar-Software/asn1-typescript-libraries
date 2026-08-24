@@ -15,6 +15,9 @@ import { id_notification } from '../MhsAcctObjectIdentifiers/id-notification.va.
  * @summary id_notification_objectCreation
  * @description
  *
+ * OBJECT IDENTIFIER `id_notification_objectCreation`. Defined in ITU-T X.411 (1999)
+ * (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

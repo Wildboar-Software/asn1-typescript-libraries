@@ -18,6 +18,8 @@ import {
  * @summary op_message_delivery
  * @description
  *
+ * `op_message_delivery`. Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

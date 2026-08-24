@@ -15,6 +15,12 @@ import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
  * @summary id_management
  * @description
  *
+ * OBJECT IDENTIFIER `id_management`. A private management domain (PRMD) comprises
+ * messaging systems managed by a private organization. While there is no restriction on
+ * a PRMD offering public messaging services, the PRMD has not accepted the
+ * Administration responsibilities in order to ensure its customers can communicate with
+ * any other MD attached to the Global MHS. See ITU-T X.402 (1999), §14.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary nn_reason_code
  * @description
  *
+ * Information object `nn_reason_code`. Defined in ITU-T X.435 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,9 @@ import {
  * @summary TeletexDomainDefinedAttributes
  * @description
  *
+ * `TeletexDomainDefinedAttributes`. Defined in ITU-T X.402 (1999) (§18). SEQUENCE SIZE
+ * (1..…): omit this component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

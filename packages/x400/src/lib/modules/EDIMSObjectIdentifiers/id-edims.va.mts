@@ -15,6 +15,10 @@ import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs'
  * @summary id_edims
  * @description
  *
+ * OBJECT IDENTIFIER `id_edims`. The Obsoleted EDIMs Field identifies one or more EDIMs
+ * that the present EDIM obsoletes. It is a sequence of subfields, each an EDIM
+ * Identifier. See ITU-T X.435 (1999), §8.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

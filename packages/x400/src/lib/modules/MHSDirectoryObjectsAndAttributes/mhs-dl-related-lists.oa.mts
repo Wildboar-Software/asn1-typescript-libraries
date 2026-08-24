@@ -23,6 +23,9 @@ import { id_at_mhs_dl_related_lists } from '../MHSObjectIdentifiers/id-at-mhs-dl
  * @summary mhs_dl_related_lists
  * @description
  *
+ * Information object `mhs_dl_related_lists`. Defined in ITU-T X.402 (1999) (§17 / Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

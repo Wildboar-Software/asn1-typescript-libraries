@@ -9,6 +9,9 @@ import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-A
  * @summary common_name
  * @description
  *
+ * OR-address extension attribute number 1 (`CommonName`) (ITU-T X.411 (1999), Annex A;
+ * X.402 (1999), §18.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary primary_recipients
  * @description
  *
+ * Information object `primary_recipients`. The Primary Recipients heading field (D no
+ * subfields (i.e., elements)) identifies the zero or more users and DLs who are the
+ * "primary recipients" of the IPM. It also identifies the responses the authorizing
+ * users ask of each of those users and of each member of those DLs. See ITU-T X.420
+ * (1999), §7.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,8 @@ import {
  * @summary operationObject4
  * @description
  *
+ * Information object `operationObject4`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

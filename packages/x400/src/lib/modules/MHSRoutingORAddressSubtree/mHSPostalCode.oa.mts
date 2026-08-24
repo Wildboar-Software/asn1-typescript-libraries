@@ -23,6 +23,8 @@ import { id_oc_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-
  * @summary mHSPostalCode
  * @description
  *
+ * Information object `mHSPostalCode`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

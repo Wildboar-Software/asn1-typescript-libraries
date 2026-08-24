@@ -15,6 +15,13 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_content_correlator_match
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_content_correlator_match`. The Content-correlator-match rule
+ * compares for equality the presented value with attribute-values of type content-
+ * correlator. contentCorrelatorMatch MATCHING-RULE ::= { SYNTAX ContentCorrelator ID
+ * id-mr-content-correlator-match } If the presented and stored values are encoded as
+ * Octet Strings, then the rule matches according to the Octet String Match rule. See
+ * ITU-T X.413 (1999), §12.4.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

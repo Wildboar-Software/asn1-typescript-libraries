@@ -30,6 +30,13 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_originator_name
  * @description
  *
+ * Information object `mt_originator_name`. This general-attribute contains the
+ * originator-name argument of the Message-submission, Probe-submission, and
+ * Message-delivery abstract-operations. See 8.2.1.1.1.1 of WITH ATTRIBUTE-SYNTAX ORName,
+ * EQUALITY MATCHING-RULE oRNameMatch, OTHER MATCHING-RULES {oRNameElementsMatch |
+ * oRNameSubstringElementsMatch | oRNameSingleElementMatch, ...}, NUMERATION
+ * single-valued, ID id-att-originator-name } 11.2.53… See ITU-T X.413 (1999), §11.2.52.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

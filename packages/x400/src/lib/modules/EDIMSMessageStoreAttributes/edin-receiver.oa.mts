@@ -26,6 +26,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edin_receiver
  * @description
  *
+ * Information object `edin_receiver`. Identifies the recipient to whom EDINs are to be
+ * sent. This is created by the originator of the EDIM when the Recipient of a requested
+ * notification is different from the Originator of the message. See ITU-T X.435 (1999),
+ * §8.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

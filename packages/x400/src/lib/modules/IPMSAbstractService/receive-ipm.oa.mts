@@ -27,6 +27,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_ipm
  * @description
  *
+ * Information object `receive_ipm`. The Receive IPM abstract operation receives a
+ * message whose content is an IPM. receive-ipm ABSTRACT-OPERATION ::= { ARGUMENT SET {
+ * envelope [0] MessageDeliveryEnvelope, content [1] IPM} } This abstract operation has
+ * the following arguments: a) Envelope (M): The message's delivery envelope. See ITU-T
+ * X.420 (1999), §12.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

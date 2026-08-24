@@ -17,6 +17,8 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary ms_user
  * @description
  *
+ * Information object `ms_user`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

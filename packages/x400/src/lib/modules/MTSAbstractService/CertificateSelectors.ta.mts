@@ -20,6 +20,13 @@ import {
  * @summary CertificateSelectors
  * @description
  *
+ * `CertificateSelectors`. This argument contains information sufficient to identify one
+ * certificate where a user has more than one certificate with the same
+ * algorithm-identifier. It allows a certificate of the originator to be identified to
+ * validate specific digital signatures within the message-origin-authentication-check,
+ * content-integrity-check, or message-token arguments, or to be used for key agreement
+ * for encryption. See ITU-T X.411 (1999), §8.2.1.1.1.43.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

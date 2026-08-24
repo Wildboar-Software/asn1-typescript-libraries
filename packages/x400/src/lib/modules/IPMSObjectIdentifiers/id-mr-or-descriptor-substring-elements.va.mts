@@ -15,6 +15,9 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_or_descriptor_substring_elements
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_or_descriptor_substring_elements`. Defined in ITU-T X.420
+ * (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

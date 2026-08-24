@@ -24,6 +24,8 @@ import {
  * @summary BilateralDomain_domain_private_domain
  * @description
  *
+ * `BilateralDomain_domain_private_domain`. Defined in ITU-T X.411 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

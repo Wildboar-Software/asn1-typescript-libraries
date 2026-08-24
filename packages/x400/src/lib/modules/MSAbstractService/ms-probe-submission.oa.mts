@@ -46,6 +46,14 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_probe_submission
  * @description
  *
+ * Information object `ms_probe_submission`. When the MS-user invokes the
+ * MS-probe-submission abstract-operation the MS performs the following actions: a) If a
+ * security-policy is in force, then to ensure that such a security-policy is not
+ * violated during MS-probe- submission, the message-security-label is checked against
+ * the security-context by the MS. If the MS-probe- submission is barred either by the
+ * security-policy or by temporary security restrictions,… See ITU-T X.413 (1999),
+ * §16.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

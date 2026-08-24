@@ -15,6 +15,8 @@ import { id_mod } from '../MTSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_upper_bounds
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_upper_bounds`. Defined in ITU-T X.411 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

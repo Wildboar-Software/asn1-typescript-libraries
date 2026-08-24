@@ -28,6 +28,13 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary recipient_improperly_specified
  * @description
  *
+ * Information object `recipient_improperly_specified`. The
+ * Recipient-improperly-specified abstract-error reports that the message or probe cannot
+ * be submitted because one or more recipients are improperly specified. The
+ * Recipient-improperly-specified abstract-error has the following parameters, generated
+ * by the MTS: improperly-specified-recipients: the improperly specified
+ * recipient-name(s). See ITU-T X.411 (1999), §8.2.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

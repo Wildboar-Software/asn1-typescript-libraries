@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `IPMSObjectIdentifiers` (ITU-T X.420 (1999), Annex A).
+ */
 export * from "./id-aae-auto-discard-error.va.mjs";
 export * from "./id-aae-auto-forwarding-loop.va.mjs";
 export * from "./id-aae-duplicate-ipn.va.mjs";

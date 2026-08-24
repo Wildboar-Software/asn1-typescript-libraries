@@ -18,6 +18,11 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary administration
  * @description
  *
+ * Information object `administration`. 14.8.1 Register Procedure This clause describes
+ * the behaviour of the MTA when the Register abstract-operation is invoked by an
+ * MTS-user served by this MTA. 14.8.1.1 Arguments The Register arguments listed in Table
+ * 23 and described in clauses indicated in that table. See ITU-T X.411 (1999), §14.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

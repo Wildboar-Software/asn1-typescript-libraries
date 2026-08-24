@@ -26,6 +26,13 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_submission_envelope
  * @description
  *
+ * Information object `mt_message_submission_envelope`. This general-attribute contains
+ * the envelope component of the argument of the Message-submission abstract-operation.
+ * See Figure 2 (Part 3) of WITH ATTRIBUTE-SYNTAX MessageSubmissionEnvelope, NUMERATION
+ * single-valued, ID id-att-message-submission-envelope } 11.2.43 Message-submission-time
+ * This general-attribute indicates the time at which the MTS a ccepted responsibility
+ * for the message or probe. See ITU-T X.413 (1999), §11.2.42.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

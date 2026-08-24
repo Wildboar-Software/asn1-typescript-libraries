@@ -23,6 +23,8 @@ import { id_oc_oraddress_subtree_base } from '../MHSRoutingObjectIdentifiers/id-
  * @summary oRAddressSubtreeBase
  * @description
  *
+ * Information object `oRAddressSubtreeBase`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

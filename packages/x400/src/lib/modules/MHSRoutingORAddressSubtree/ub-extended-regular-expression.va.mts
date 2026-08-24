@@ -15,6 +15,9 @@ import {
  * @summary ub_extended_regular_expression
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_extended_regular_expression`. Defined in ITU-T X.412
+ * (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_edi_application_security_element
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_edi_application_security_element`. Defined in ITU-T X.435
+ * (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

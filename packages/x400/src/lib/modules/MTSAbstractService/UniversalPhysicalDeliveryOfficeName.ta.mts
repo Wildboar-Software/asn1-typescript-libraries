@@ -1,68 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    UniversalPDSParameter,
-    _decode_UniversalPDSParameter,
-    _encode_UniversalPDSParameter,
-} from '../MTSAbstractService/UniversalPDSParameter.ta.mjs';
 /**
- * @summary UniversalPhysicalDeliveryOfficeName
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * UniversalPhysicalDeliveryOfficeName  ::=  UniversalPDSParameter
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type UniversalPhysicalDeliveryOfficeName = UniversalPDSParameter; // DefinedType
+export type {
+    UniversalPhysicalDeliveryOfficeName,
+} from "@wildboar/or-address";
+export {
+    _decode_UniversalPhysicalDeliveryOfficeName,
+    _encode_UniversalPhysicalDeliveryOfficeName,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Decoder<UniversalPhysicalDeliveryOfficeName> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryOfficeName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UniversalPhysicalDeliveryOfficeName} The decoded data structure.
- */
-export function _decode_UniversalPhysicalDeliveryOfficeName(el: _Element): UniversalPhysicalDeliveryOfficeName {
-    if (!_cached_decoder_for_UniversalPhysicalDeliveryOfficeName) {
-        _cached_decoder_for_UniversalPhysicalDeliveryOfficeName = _decode_UniversalPDSParameter;
-    }
-    return _cached_decoder_for_UniversalPhysicalDeliveryOfficeName(el);
-}
-
-let _cached_encoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Encoder<UniversalPhysicalDeliveryOfficeName> | null = null;
-
-/**
- * @summary Encodes a(n) UniversalPhysicalDeliveryOfficeName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UniversalPhysicalDeliveryOfficeName, encoded as an ASN.1 Element.
- */
-export function _encode_UniversalPhysicalDeliveryOfficeName(
-    value: UniversalPhysicalDeliveryOfficeName,
-    elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryOfficeName>
-): _Element {
-    if (!_cached_encoder_for_UniversalPhysicalDeliveryOfficeName) {
-        _cached_encoder_for_UniversalPhysicalDeliveryOfficeName = _encode_UniversalPDSParameter;
-    }
-    return _cached_encoder_for_UniversalPhysicalDeliveryOfficeName(
-        value,
-        elGetter
-    );
-}
-
-
-/* eslint-enable */

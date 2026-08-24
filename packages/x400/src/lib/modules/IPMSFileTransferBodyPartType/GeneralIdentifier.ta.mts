@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GeneralIdentifier
  * @description
  *
+ * `GeneralIdentifier`. Defined in ITU-T X.420 (1999) (Annex C). SEQUENCE OF: element
+ * order is significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

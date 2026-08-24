@@ -1,3 +1,8 @@
+/**
+ * Parse IETF RFC 1685 labelled O/R addresses and RFC 2156 MIXER
+ * `std-or-address` strings into `ORAddress` (ITU-T X.402 (1999), §18;
+ * display conventions are not defined by X.402 itself).
+ */
 import {
     PresentationAddress,
 } from "@wildboar/presentation-address";

@@ -20,6 +20,8 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary incomplete_copy
  * @description
  *
+ * Information object `incomplete_copy`. Defined in ITU-T X.420 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

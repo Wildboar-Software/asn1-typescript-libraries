@@ -29,6 +29,14 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary message_origin_authentication_check
  * @description
  *
+ * Information object `message_origin_authentication_check`. This argument provides the
+ * recipient(s) of the message, and any MTA through which the message is transferred,
+ * with a means of authenticating the origin of the message (to provide the Message
+ * Origin Authentication element-of-service as defined in Authentication), assurance that
+ * the message content has not been modified (the Content Integrity element-of-service as
+ * defined in The message-origin-authentication-check… See ITU-T X.411 (1999),
+ * §8.2.1.1.1.29.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TerminalType
  * @description
  *
+ * Terminal type INTEGER (ITU-T X.402 (1999), §18.3.24): `telex`(3), `teletex`(4),
+ * `g3-facsimile`(5), `g4-facsimile`(6), `ia5-terminal`(7), `videotex`(8). Values 0–2 are
+ * unused. Used only in terminal OR-addresses (X.402 Table 10). Constrained to
+ * 0..`ub-integer-options`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

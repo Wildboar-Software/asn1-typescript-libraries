@@ -27,6 +27,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_auto_action_type
  * @description
  *
+ * Information object `ms_auto_action_type`. This general-attribute identifies the type
+ * of the auto-action whose execution is the subject of this entry. The registered
+ * auto-action is identified by this attribute combined with the corresponding value of
+ * the auto-action-registration-identifier general-attribute. See ITU-T X.413 (1999),
+ * §11.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

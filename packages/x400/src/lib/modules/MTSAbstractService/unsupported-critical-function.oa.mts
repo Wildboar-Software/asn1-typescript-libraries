@@ -25,6 +25,12 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary unsupported_critical_function
  * @description
  *
+ * Information object `unsupported_critical_function`. The Unsupported-critical-function
+ * abstract-error reports that an argument of the abstract-operation was marked as
+ * critical-for-submission (see 9.2) but is unsupported by the MTS. The
+ * Unsupported-critical-function abstract-error has no parameters. See ITU-T X.411
+ * (1999), §8.2.2.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

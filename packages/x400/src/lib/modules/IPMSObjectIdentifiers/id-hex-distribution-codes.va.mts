@@ -15,6 +15,9 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  * @summary id_hex_distribution_codes
  * @description
  *
+ * OBJECT IDENTIFIER `id_hex_distribution_codes`. Defined in ITU-T X.420 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

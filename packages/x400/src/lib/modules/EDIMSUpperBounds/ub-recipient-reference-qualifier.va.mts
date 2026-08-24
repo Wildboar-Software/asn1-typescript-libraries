@@ -15,6 +15,9 @@ import {
  * @summary ub_recipient_reference_qualifier
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_recipient_reference_qualifier`. Defined in ITU-T X.435
+ * (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

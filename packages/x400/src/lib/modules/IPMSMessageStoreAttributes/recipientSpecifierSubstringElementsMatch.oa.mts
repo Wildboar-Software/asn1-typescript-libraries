@@ -20,6 +20,14 @@ import { id_mr_recipient_specifier_substring_elements } from '../IPMSObjectIdent
  * @summary recipientSpecifierSubstringElementsMatch
  * @description
  *
+ * Information object `recipientSpecifierSubstringElementsMatch`. The
+ * Recipient-specifier-substring-elements-match determines whether a presented value is a
+ * subset of the elements present in some value of an attribute of type recipient
+ * specifier, where each presented string value is a substring of the corresponding
+ * stored value. recipientSpecifierSubstringElementsMatch MATCHING-RULE ::= { SYNTAX
+ * RecipientSpecifier ID id-mr-recipient-specifier-substring-elements } The rule is… See
+ * ITU-T X.420 (1999), §19.7.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

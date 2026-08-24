@@ -19,6 +19,12 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_mhs_next_level_complete
  * @description
  *
+ * OBJECT IDENTIFIER `id_at_mhs_next_level_complete`. The Next Level Complete attribute
+ * type, which is single-valued, indicates by its presence or absence whether the set of
+ * immediate subordinate entries of the present entry is complete, i.e. whether a
+ * subordinate entry is actually present for every OR-address-element allocated at this
+ * point in the OR-address name-space. See ITU-T X.412 (1999), §8.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

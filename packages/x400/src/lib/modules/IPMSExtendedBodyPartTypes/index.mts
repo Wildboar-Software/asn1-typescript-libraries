@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `IPMSExtendedBodyPartTypes` (ITU-T X.420 (1999), Annex C).
+ */
 export * from "./bilaterally-defined-body-part-data.oa.mjs";
 export * from "./bilaterally-defined-body-part.oa.mjs";
 export * from "./encrypted-body-part-data.oa.mjs";

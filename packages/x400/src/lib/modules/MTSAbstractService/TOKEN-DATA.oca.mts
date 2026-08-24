@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TOKEN_DATA
  * @description
  *
+ * Information object class `TOKEN_DATA`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

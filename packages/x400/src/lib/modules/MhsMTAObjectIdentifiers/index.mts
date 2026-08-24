@@ -1,3 +1,9 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MhsMTAObjectIdentifiers` (ITU-T X.411 (1999), MTA managed
+ * objects).
+ */
 export * from "./id-attribute-adjMtaAccessPointAddress.va.mjs";
 export * from "./id-attribute-adjMtaGlobalDomainId.va.mjs";
 export * from "./id-attribute-adjMtaMaxMessageSize.va.mjs";

@@ -15,6 +15,12 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_heading
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_heading`. The Heading attribute is the (entire) Heading of
+ * an IPM. heading ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX Heading, NUMERATION
+ * single-valued, ID id-hat-heading } An IPMS-MS that supports this attribute shall
+ * maintain it for an information object that it holds if, and only if, that object is a
+ * message whose content is an IPM. See ITU-T X.420 (1999), §19.6.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

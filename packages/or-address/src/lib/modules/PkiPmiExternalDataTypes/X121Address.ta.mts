@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary X121Address
  * @description
  *
+ * X.121 NumericString SIZE (1..16) used as the built-in `network-address` (ITU-T X.402
+ * (1999), §18.3.7; X.411 Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

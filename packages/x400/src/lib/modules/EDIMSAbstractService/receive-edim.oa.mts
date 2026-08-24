@@ -27,6 +27,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_edim
  * @description
  *
+ * Information object `receive_edim`. The Receive EDIM abstract operation receives a
+ * message whose content is an EDIM. receive-edim ABSTRACT-OPERATION ::= { ARGUMENT SET {
+ * envelope [0] MessageDeliveryEnvelope, content [1] EDIM } } This abstract operation has
+ * the following arguments: a) Envelope: The message’s delivery envelope. See ITU-T X.435
+ * (1999), §12.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

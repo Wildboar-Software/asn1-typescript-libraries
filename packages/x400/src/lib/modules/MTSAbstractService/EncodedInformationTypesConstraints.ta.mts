@@ -20,6 +20,14 @@ import {
  * @summary EncodedInformationTypesConstraints
  * @description
  *
+ * `EncodedInformationTypesConstraints`. This component indicates the
+ * encoded-information-types that the MTS shall permit to appear in messages delivered to
+ * the MTS-user, if they are to be constrained within a deliverable-class. The component
+ * comprises acceptable-encoded-information-types,
+ * unacceptable-encoded-information-types, and
+ * exclusively-acceptable-encoded-information-types, each of which identifies a list of
+ * specific encoded-information- types. See ITU-T X.411 (1999), §8.4.1.1.1.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

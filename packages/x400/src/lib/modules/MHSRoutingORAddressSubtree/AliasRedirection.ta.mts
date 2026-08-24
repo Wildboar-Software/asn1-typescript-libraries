@@ -21,6 +21,10 @@ import {
  * @summary AliasRedirection
  * @description
  *
+ * `AliasRedirection`. Defined in ITU-T X.412 (1999) (§12). ASN.1 DEFAULT `TRUE`: that
+ * value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

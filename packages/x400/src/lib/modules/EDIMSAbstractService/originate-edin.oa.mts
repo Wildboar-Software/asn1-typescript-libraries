@@ -33,6 +33,13 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_edin
  * @description
  *
+ * Information object `originate_edin`. The Originate EDIN abstract operation originates
+ * a message whose content is an EDIN. originate-edin ABSTRACT-OPERATION ::= { ARGUMENT
+ * SET { envelope [0] MessageSubmissionEnvelope, content [1] EDIN } RESULT SET {
+ * submission-identifier [0] MessageSubmissionIdentifier, submission-time [1]
+ * MessageSubmissionTime } ERRORS { recipient-improperly-specified } } A user may, if
+ * notifications are requested, invoke an… See ITU-T X.435 (1999), §12.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,8 @@ import { type CONNECTION_PACKAGE } from '@wildboar/rose';
  * @summary ms_connect
  * @description
  *
+ * Information object `ms_connect`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

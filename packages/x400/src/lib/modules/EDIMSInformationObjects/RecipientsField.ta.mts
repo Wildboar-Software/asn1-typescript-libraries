@@ -19,6 +19,9 @@ import {
  * @summary RecipientsField
  * @description
  *
+ * `RecipientsField`. Defined in ITU-T X.435 (1999) (§8). SET OF: order is insignificant;
+ * duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import { id_mr_ipm_identifier } from '../IPMSObjectIdentifiers/id-mr-ipm-identif
  * @summary iPMIdentifierMatch
  * @description
  *
+ * Information object `iPMIdentifierMatch`. Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -28,6 +28,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_priority
  * @description
  *
+ * Information object `mt_priority`. This general-attribute contains the priority
+ * argument of the Message-submission and Message-delivery abstract- operations. If no
+ * value for the parameter is supplied in the Message-submission or Message-delivery
+ * abstract-operation then the attribute is generated with the default value for
+ * priority. See ITU-T X.413 (1999), §11.2.61.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

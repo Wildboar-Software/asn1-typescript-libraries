@@ -26,6 +26,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_originator_return_address
  * @description
  *
+ * Information object `mt_originator_return_address`. This general-attribute contains the
+ * originator-return-address argument of the Message-submission and Message-delivery
+ * abstract-operations; it indicates the postal-OR-address of the originator of the
+ * message. See 8.2.1.1.1.21 of ITU-T Rec. See ITU-T X.413 (1999), §11.2.54.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

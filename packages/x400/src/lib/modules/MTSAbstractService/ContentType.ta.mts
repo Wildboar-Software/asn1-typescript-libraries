@@ -24,6 +24,10 @@ import {
  * @summary ContentType
  * @description
  *
+ * Either a built-in INTEGER or an OBJECT IDENTIFIER (ITU-T X.411 (1999), Annex A).
+ * Built-in `interpersonal-messaging-1984`(2) / `interpersonal-messaging-1988`(22) vs OID
+ * forms for IPM must not be mixed carelessly when matching.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

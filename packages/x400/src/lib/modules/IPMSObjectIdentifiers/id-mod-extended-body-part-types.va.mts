@@ -15,6 +15,12 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_extended_body_part_types
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_extended_body_part_types`. The Extended Body Part Types
+ * attribute identifies the Extended body part types represented in an IPM. For the
+ * purposes of this attribute, all body parts of an IPM are considered to be of type
+ * Extended regardless of whether they were so conveyed to the IPMS-MS. See ITU-T X.420
+ * (1999), §19.6.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

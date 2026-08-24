@@ -15,6 +15,9 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_videotex
  * @description
  *
+ * OBJECT IDENTIFIER `id_et_videotex`. A Videotex body part represents Videotex data. It
+ * has Parameters and Data components. See ITU-T X.420 (1999), §7.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CompressionParameter
  * @description
  *
+ * `CompressionParameter`. The compression parameter describes the compression type if
+ * the file is transferred in a compressed mode. CompressionParameter ::= SEQUENCE {
+ * compression-algorithm-id [0] COMPRESSION-ALGORITHM.&id ({CompressionAlgorithmTable}),
+ * compression-algorithm-param [1] COMPRESSION-ALGORITHM.&Type
+ * ({CompressionAlgorithmTable} {@compression-algorithm-id})} COMPRESSION-ALGORITHM ::=
+ * TYPE-IDENTIFIER CompressionAlgorithmTable… See ITU-T X.420 (1999), §7.4.12.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

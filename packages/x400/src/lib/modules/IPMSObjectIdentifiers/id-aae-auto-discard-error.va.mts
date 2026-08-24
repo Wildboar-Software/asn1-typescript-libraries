@@ -15,6 +15,9 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  * @summary id_aae_auto_discard_error
  * @description
  *
+ * OBJECT IDENTIFIER `id_aae_auto_discard_error`. Defined in ITU-T X.420 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

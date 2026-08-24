@@ -15,6 +15,8 @@ import { id_mr } from '../MHSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_orname_exact_match
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_orname_exact_match`. Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

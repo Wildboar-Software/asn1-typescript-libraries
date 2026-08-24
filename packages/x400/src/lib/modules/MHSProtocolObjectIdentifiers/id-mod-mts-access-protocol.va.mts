@@ -19,6 +19,9 @@ import { id_mod } from '../MHSProtocolObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_mts_access_protocol
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_mts_access_protocol`. Defined in ITU-T X.419 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

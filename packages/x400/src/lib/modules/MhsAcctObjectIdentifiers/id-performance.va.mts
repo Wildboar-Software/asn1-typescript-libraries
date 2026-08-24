@@ -15,6 +15,9 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @summary id_performance
  * @description
  *
+ * OBJECT IDENTIFIER `id_performance`. Defined in ITU-T X.411 (1999) (accounting
+ * objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

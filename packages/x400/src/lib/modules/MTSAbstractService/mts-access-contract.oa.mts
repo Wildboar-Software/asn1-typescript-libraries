@@ -19,6 +19,8 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary mts_access_contract
  * @description
  *
+ * Information object `mts_access_contract`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

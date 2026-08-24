@@ -15,6 +15,11 @@ import {
  * @summary ub_entry_classes
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_entry_classes`. An entry-class comprises a category or
+ * categories of entries that represent a particular type of information object. Three
+ * principal entry-classes are defined: the Stored-message entry-class, the Message-log
+ * entry-class, and the Auto-action- log entry-class. See ITU-T X.413 (1999), §6.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

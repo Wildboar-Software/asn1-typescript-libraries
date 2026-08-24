@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AttributeType
  * @description
  *
+ * `AttributeType`. Some attribute-types are internationally standardized. Other
+ * attribute-types may be defined by national administrative authorities and private
+ * organizations. See ITU-T X.413 (1999), §6.3.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

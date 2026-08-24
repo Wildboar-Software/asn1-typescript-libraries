@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Content
  * @description
  *
+ * Opaque OCTET STRING of the UA-to-UA information object (ITU-T X.411 (1999),
+ * §8.2.1.1.1.37). Empty content has length 0.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

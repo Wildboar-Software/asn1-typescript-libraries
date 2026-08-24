@@ -24,6 +24,13 @@ import {
  * @summary MSMessageSubmissionResult
  * @description
  *
+ * `MSMessageSubmissionResult`. Should the request succeed, the
+ * MS-message-submission-result shall be returned. MSMessageSubmissionResult ::= CHOICE {
+ * mts-result SET { COMPONENTS OF MessageSubmissionResult -- This imported type has
+ * IMPLICIT tags -- , -- 1994 extension -- ms-message-result [4] CommonSubmissionResults
+ * OPTIONAL }, -- 1994 extension -- store-draft-result [4] CommonSubmissionResults } The
+ * parameters of MS-message-submission-result… See ITU-T X.413 (1999), §8.3.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

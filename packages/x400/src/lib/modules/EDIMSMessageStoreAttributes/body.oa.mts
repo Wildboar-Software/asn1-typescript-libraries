@@ -26,6 +26,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body
  * @description
  *
+ * Information object `body`. The Body attribute is the (entire) Body of an EDIM. body
+ * ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX Body, NUMERATION single-valued, ID id-bat-body }
+ * An MS that supports this attribute shall maintain it for an information object that it
+ * holds if, and only if, that object is a message whose content is an EDIM. See ITU-T
+ * X.435 (1999), §18.8.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

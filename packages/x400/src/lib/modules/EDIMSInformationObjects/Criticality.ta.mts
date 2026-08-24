@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Criticality
  * @description
  *
+ * BIT STRING { for-submission(0), for-transfer(1), for-delivery(2) } (ITU-T X.411
+ * (1999), Annex A). An extension marked critical for a step shall cause that step to
+ * fail if unrecognized. Empty means not critical for any step.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

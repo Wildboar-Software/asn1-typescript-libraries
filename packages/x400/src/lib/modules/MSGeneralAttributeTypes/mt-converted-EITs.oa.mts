@@ -27,6 +27,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_converted_EITs
  * @description
  *
+ * Information object `mt_converted_EITs`. This general-attribute, which is multi-valued,
+ * identifies the encoded-information-types of the content after conversion, as indicated
+ * by the Message-delivery abstract-operation. It is generated from the
+ * converted-encoded-information-types argument of the Message-delivery
+ * abstract-operation. See ITU-T X.413 (1999), §11.2.20.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

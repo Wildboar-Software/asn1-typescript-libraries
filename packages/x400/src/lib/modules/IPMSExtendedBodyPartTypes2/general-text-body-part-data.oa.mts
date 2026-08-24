@@ -20,6 +20,9 @@ import { id_et_general_text } from '../IPMSObjectIdentifiers/id-et-general-text.
  * @summary general_text_body_part_data
  * @description
  *
+ * Information object `general_text_body_part_data`. Defined in ITU-T X.420 (1999) (Annex
+ * C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

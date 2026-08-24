@@ -26,6 +26,13 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary heading_extensions
  * @description
  *
+ * Information object `heading_extensions`. A mechanism is provided which allows for
+ * future extensions to this Recommendation | International Standard. ExtensionField ::=
+ * SEQUENCE { type [0] EDIM-EXTENSION.&id, criticality [1] Criticality DEFAULT FALSE,
+ * value [2] EDIM-EXTENSION.&Type DEFAULT NULL:NULL } Each Extension has the following
+ * components: a) Type : Identifies the semantics and restricts the abstract syntax of
+ * the Value component. See ITU-T X.435 (1999), §7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

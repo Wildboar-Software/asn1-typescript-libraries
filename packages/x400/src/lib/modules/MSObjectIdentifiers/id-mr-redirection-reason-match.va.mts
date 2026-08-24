@@ -15,6 +15,13 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_redirection_reason_match
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_redirection_reason_match`. The Redirection-reason-match rule
+ * compares for equality a presented value with the Redirection-reason component of
+ * attribute-values of type Redirection-history. redirectionReasonMatch MATCHING-RULE ::=
+ * { SYNTAX RedirectionReason ID id-mr-redirection-reason-match } The rule returns true
+ * if, and only if, the presented value matches the redirection-reason component of at
+ * least one value of the attribute according to… See ITU-T X.413 (1999), §12.4.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

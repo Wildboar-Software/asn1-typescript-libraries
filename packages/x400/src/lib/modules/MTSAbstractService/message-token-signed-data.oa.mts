@@ -19,6 +19,8 @@ import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
  * @summary message_token_signed_data
  * @description
  *
+ * Information object `message_token_signed_data`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

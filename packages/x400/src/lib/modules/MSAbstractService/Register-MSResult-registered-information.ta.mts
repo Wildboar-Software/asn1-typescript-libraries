@@ -46,6 +46,8 @@ import {
  * @summary Register_MSResult_registered_information
  * @description
  *
+ * `Register_MSResult_registered_information`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

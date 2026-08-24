@@ -10,6 +10,14 @@ import {
  * @summary UniversalOrganizationalUnitNames
  * @description
  *
+ * `UniversalOrganizationalUnitNames`. An organizational-unit-names is a standard
+ * attribute that identifies one or more units (e.g., divisions or departments) of the
+ * organization denoted by an organization-name, each unit but the first being a sub-unit
+ * of the units whose names precede it in the attribute. The value of an
+ * organizational-unit-names is an ordered sequence of Printable Strings, an ordered
+ * sequence of Teletex Strings, an ordered sequence… See ITU-T X.402 (1999), §18.3.10.
+ * SEQUENCE SIZE (1..…): omit this component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

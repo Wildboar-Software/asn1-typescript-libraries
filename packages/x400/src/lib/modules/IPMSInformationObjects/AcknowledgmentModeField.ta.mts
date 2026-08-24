@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AcknowledgmentModeField
  * @description
  *
+ * `AcknowledgmentModeField`. Defined in ITU-T X.420 (1999) (§7). ENUMERATED value `0` is
+ * a named variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

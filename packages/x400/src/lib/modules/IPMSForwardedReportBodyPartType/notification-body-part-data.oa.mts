@@ -20,6 +20,9 @@ import { id_et_notification } from '../IPMSObjectIdentifiers/id-et-notification.
  * @summary notification_body_part_data
  * @description
  *
+ * Information object `notification_body_part_data`. Defined in ITU-T X.420 (1999)
+ * (§7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

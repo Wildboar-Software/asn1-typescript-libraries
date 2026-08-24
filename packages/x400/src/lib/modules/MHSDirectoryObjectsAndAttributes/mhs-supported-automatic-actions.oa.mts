@@ -29,6 +29,9 @@ import {
  * @summary mhs_supported_automatic_actions
  * @description
  *
+ * Information object `mhs_supported_automatic_actions`. Defined in ITU-T X.402 (1999)
+ * (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

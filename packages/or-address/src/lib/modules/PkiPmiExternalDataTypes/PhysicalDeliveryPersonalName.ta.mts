@@ -10,6 +10,9 @@ import {
  * @summary PhysicalDeliveryPersonalName
  * @description
  *
+ * Postal patron (ITU-T X.402 (1999), §18.3.17). Not the same type as mnemonic
+ * `PersonalName`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

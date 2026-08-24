@@ -1,3 +1,11 @@
+/**
+ * Flatten an `ORAddress` into the printable / teletex / universal attributes
+ * used for RFC 1685 / RFC 2156 display (ITU-T X.402 (1999), §18.2–§18.4).
+ *
+ * When both printable and teletex/universal encodings exist, display code
+ * prefers PrintableString, then Teletex, then Universal — matching the
+ * downgrade guidance in X.402 §18.2 NOTE 2 / X.419 Annex B.
+ */
 import type { ORAddressAttributes } from "./types.mjs";
 import {
     ORAddress,

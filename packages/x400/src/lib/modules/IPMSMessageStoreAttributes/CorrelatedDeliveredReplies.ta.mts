@@ -20,6 +20,14 @@ import {
  * @summary CorrelatedDeliveredReplies
  * @description
  *
+ * `CorrelatedDeliveredReplies`. The AC Correlated Delivered Replies attribute, which is
+ * multi-valued, identifies the delivered IPMs which were originated by an intended
+ * recipient of a submitted IPM, and which indicate, by means of their Replied-to IPM
+ * heading field, that they were sent in reply to the submitted IPM. The initial value of
+ * the attribute is set for each of the AC IPM Recipients and indicates that no reply has
+ * been received. See ITU-T X.420 (1999), §19.6.5.2.3. SEQUENCE OF: element order is
+ * significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

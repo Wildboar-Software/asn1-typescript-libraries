@@ -27,6 +27,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary this_edim
  * @description
  *
+ * Information object `this_edim`. The This EDIM field identifies the EDIM. It comprises
+ * an EDIM Identifier which provides a globally and forever unique identification for the
+ * EDIM. See ITU-T X.435 (1999), §8.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

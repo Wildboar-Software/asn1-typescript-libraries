@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Percent
  * @description
  *
+ * `Percent`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

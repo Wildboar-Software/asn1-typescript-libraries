@@ -23,6 +23,10 @@ import {
  * @summary BodyPartDescriptor
  * @description
  *
+ * `BodyPartDescriptor`. Defined in ITU-T X.420 (1999) (§20). ASN.1 DEFAULT `FALSE`: that
+ * value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

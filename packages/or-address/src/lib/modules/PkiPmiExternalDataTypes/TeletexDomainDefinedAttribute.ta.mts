@@ -15,6 +15,8 @@ import { teletexDomainDefinedAttributeFromString } from "../../parse.mjs";
  * @summary TeletexDomainDefinedAttribute
  * @description
  *
+ * `TeletexDomainDefinedAttribute`. Defined in ITU-T X.402 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

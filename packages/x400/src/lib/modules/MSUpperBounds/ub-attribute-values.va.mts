@@ -15,6 +15,12 @@ import {
  * @summary ub_attribute_values
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_attribute_values`. Defining an attribute-type also
+ * involves specifying the syntax, and hence data-type to which every value in the
+ * attribute shall conform. The data-type of an attribute-value for the attribute-type is
+ * indicated by the Object Identifier for the attribute-type. See ITU-T X.413 (1999),
+ * §6.3.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MSAbstractService` (ITU-T X.413 (1999), §6).
+ */
 export * from "./AlertArgument.ta.mjs";
 export * from "./alert.oa.mjs";
 export * from "./AlertResult.ta.mjs";

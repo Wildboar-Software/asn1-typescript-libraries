@@ -28,6 +28,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary nn_supplementary_information
  * @description
  *
+ * Information object `nn_supplementary_information`. The NN Supplementary Information
+ * field may be used to return further information to the EDIN recipient to clarify the
+ * Negative Notification. NOTE – EDI Supplementary Information is defined in 8.3.2. See
+ * ITU-T X.435 (1999), §9.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

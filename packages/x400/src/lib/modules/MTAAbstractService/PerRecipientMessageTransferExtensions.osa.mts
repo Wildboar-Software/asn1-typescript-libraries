@@ -31,6 +31,9 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary PerRecipientMessageTransferExtensions
  * @description
  *
+ * Information object set `PerRecipientMessageTransferExtensions`. Defined in ITU-T X.411
+ * (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

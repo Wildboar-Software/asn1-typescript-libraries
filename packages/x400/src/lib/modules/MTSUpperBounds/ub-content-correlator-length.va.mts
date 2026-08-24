@@ -15,6 +15,9 @@ import {
  * @summary ub_content_correlator_length
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_content_correlator_length`. Defined in ITU-T X.411
+ * (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

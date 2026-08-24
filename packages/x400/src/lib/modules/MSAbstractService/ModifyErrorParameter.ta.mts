@@ -26,6 +26,9 @@ import {
  * @summary ModifyErrorParameter
  * @description
  *
+ * `ModifyErrorParameter`. Defined in ITU-T X.413 (1999) (§6). SEQUENCE SIZE (1..…): omit
+ * this component rather than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

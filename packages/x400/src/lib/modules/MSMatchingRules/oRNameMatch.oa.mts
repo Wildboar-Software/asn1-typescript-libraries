@@ -20,6 +20,8 @@ import { id_mr_orname_match } from '../MSObjectIdentifiers/id-mr-orname-match.va
  * @summary oRNameMatch
  * @description
  *
+ * Information object `oRNameMatch`. Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

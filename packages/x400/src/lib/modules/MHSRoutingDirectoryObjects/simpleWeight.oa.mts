@@ -17,6 +17,8 @@ import { id_wf_integer } from '../MHSRoutingObjectIdentifiers/id-wf-integer.va.m
  * @summary simpleWeight
  * @description
  *
+ * Information object `simpleWeight`. Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

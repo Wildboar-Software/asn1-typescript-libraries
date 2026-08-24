@@ -21,6 +21,9 @@ import { type CONTEXT } from '@wildboar/x500/InformationFramework';
  * @summary dl_administrator_annotation
  * @description
  *
+ * Information object `dl_administrator_annotation`. Defined in ITU-T X.402 (1999) (§17 /
+ * Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

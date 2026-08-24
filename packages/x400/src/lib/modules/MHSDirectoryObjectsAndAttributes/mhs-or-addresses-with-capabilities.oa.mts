@@ -27,6 +27,9 @@ import { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifier
  * @summary mhs_or_addresses_with_capabilities
  * @description
  *
+ * Information object `mhs_or_addresses_with_capabilities`. Defined in ITU-T X.402 (1999)
+ * (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

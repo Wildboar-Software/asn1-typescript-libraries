@@ -24,6 +24,8 @@ import {
  * @summary VideotexBodyPart
  * @description
  *
+ * `VideotexBodyPart`. Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

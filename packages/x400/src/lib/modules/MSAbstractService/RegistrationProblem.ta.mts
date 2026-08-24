@@ -22,6 +22,9 @@ export enum _enum_for_RegistrationProblem {
  * @summary RegistrationProblem
  * @description
  *
+ * `RegistrationProblem`. Defined in ITU-T X.413 (1999) (§6). ENUMERATED value `0` is a
+ * named variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

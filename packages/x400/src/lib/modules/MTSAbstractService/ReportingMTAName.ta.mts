@@ -30,6 +30,11 @@ import {
  * @summary ReportingMTAName
  * @description
  *
+ * `ReportingMTAName`. This argument identifies the MTA which created the report. It
+ * comprises an MTA-name, a global-domain-identifier, and optionally a directory-name of
+ * an MHS Message Transfer Agent (see A.1.3 of by the security policy in force. See ITU-T
+ * X.411 (1999), §8.3.1.2.1.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

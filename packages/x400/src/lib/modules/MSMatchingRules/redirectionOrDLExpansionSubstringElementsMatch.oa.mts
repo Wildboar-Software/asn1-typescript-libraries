@@ -20,6 +20,14 @@ import { id_mr_redirection_or_dl_expansion_substring_elements_match } from '../M
  * @summary redirectionOrDLExpansionSubstringElementsMatch
  * @description
  *
+ * Information object `redirectionOrDLExpansionSubstringElementsMatch`. The
+ * Redirection-or-DL-expansion-substring-elements-match rule determines whether a
+ * presented value of element substrings is a matching subset of the elements present in
+ * the OR-address-and-optional-directory-name component of some value of an attribute of
+ * type Redirection-history or DL-expansion-history.
+ * redirectionOrDLExpansionSubstringElementsMatch MATCHING-RULE ::= { SYNTAX
+ * ORAddressAndOptionalDirectoryName ID… See ITU-T X.413 (1999), §12.4.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

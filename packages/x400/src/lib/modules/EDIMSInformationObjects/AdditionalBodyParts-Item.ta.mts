@@ -24,6 +24,8 @@ import {
  * @summary AdditionalBodyParts_Item
  * @description
  *
+ * `AdditionalBodyParts_Item`. Defined in ITU-T X.435 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MTSObjectIdentifiers` (ITU-T X.411 (1999), Annex A).
+ */
 export * from "./id-att-physicalRendition-basic.va.mjs";
 export * from "./id-att-physicalRendition-no-cover-page.va.mjs";
 export * from "./id-att.va.mjs";

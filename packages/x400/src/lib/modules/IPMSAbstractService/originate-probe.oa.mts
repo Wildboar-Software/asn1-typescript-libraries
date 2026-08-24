@@ -34,6 +34,14 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_probe
  * @description
  *
+ * Information object `originate_probe`. The Originate Probe abstract operation
+ * originates a probe concerning (a class of) messages whose contents are IPMs.
+ * originate-probe ABSTRACT-OPERATION ::= { ARGUMENT SET { envelope [0]
+ * ProbeSubmissionEnvelope, content [1] IPM} RESULT SET { submission-identifier [0]
+ * ProbeSubmissionIdentifier, submission-time [1] ProbeSubmissionTime} ERRORS {
+ * subscription-error | recipient-improperly-specified} } This abstract… See ITU-T X.420
+ * (1999), §12.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary ub_error_reasons
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_error_reasons`. Defined in ITU-T X.413 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

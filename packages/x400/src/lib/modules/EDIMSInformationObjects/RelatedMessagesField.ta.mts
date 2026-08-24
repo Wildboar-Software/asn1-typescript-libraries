@@ -19,6 +19,9 @@ import {
  * @summary RelatedMessagesField
  * @description
  *
+ * `RelatedMessagesField`. Defined in ITU-T X.435 (1999) (§8). SEQUENCE OF: element order
+ * is significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

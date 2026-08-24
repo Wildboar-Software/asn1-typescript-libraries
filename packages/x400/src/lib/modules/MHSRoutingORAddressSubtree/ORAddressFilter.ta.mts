@@ -24,6 +24,10 @@ import {
  * @summary ORAddressFilter
  * @description
  *
+ * Routing OR-address filter (ITU-T X.412 (1999), §12). An empty OR-name pattern (an
+ * `ORName` containing only an empty OR-address) has special matching meaning in the
+ * routing DIT (see X.402 §19 / X.412).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -28,6 +28,15 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary sequence_number_error
  * @description
  *
+ * Information object `sequence_number_error`. A Sequence-number-error reports a problem
+ * related to the sequence-number specified in the argument of an abstract- operation.
+ * sequence-number-error ABSTRACT-ERROR ::= { PARAMETER SET { problems [1] SET SIZE
+ * (1..ub-messages) OF SET { problem [0] SequenceNumberProblem, sequence-number [1]
+ * SequenceNumber} } CODE err-sequence-number-error } SequenceNumberProblem ::= INTEGER {
+ * no-such-entry (0)} (0..ub-error-reasons)… See ITU-T X.413 (1999), §9.9. SET SIZE
+ * (1..…): omit this component rather than encode an empty SET; SET order is
+ * insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

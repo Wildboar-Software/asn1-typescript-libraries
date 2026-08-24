@@ -21,6 +21,8 @@ import {
  * @summary MessageGroupNameAndDescriptor
  * @description
  *
+ * `MessageGroupNameAndDescriptor`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,9 @@ import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.o
  * @summary invalid_assembly_instructions
  * @description
  *
+ * Information object `invalid_assembly_instructions`. Defined in ITU-T X.435 (1999)
+ * (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary DLExpansionHistory
  * @description
  *
+ * SEQUENCE SIZE (1..`ub-dl-expansions`) of `DLExpansion`, **oldest expansion first**
+ * (ITU-T X.411 (1999), §12.3.1 / Annex A). Omit rather than send empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

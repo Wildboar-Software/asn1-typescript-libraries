@@ -15,6 +15,8 @@ import { id_con } from '../MHSObjectIdentifiers/id-con.va.mjs';
  * @summary id_con_dl_nested_dl
  * @description
  *
+ * OBJECT IDENTIFIER `id_con_dl_nested_dl`. Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -66,6 +66,15 @@ import {
  * @summary Register_MSArgument
  * @description
  *
+ * `Register_MSArgument`. Register-MSArgument ::= SET { auto-action-registrations [0] SET
+ * SIZE (1..ub-auto-registrations) OF AutoActionRegistration OPTIONAL,
+ * auto-action-deregistrations [1] SET SIZE (1..ub-auto-registrations) OF
+ * AutoActionDeregistration OPTIONAL, list-attribute-defaults [2] SET SIZE
+ * (0..ub-default-registrations) OF ATTRIBUTE.&id ({AttributeTable}) OPTIONAL,
+ * fetch-attribute-defaults [3] SET SIZE… See ITU-T X.413 (1999), §8.2.5.1. SET SIZE
+ * (1..…): omit this component rather than encode an empty SET; SET order is
+ * insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

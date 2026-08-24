@@ -27,6 +27,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_delivery_flags
  * @description
  *
+ * Information object `mt_delivery_flags`. This general-attribute contains information
+ * derived from the arguments of the Message-delivery abstract-operation. It indicates
+ * whether implicit-conversion of the content is prohibited. See ITU-T X.413 (1999),
+ * §11.2.26.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

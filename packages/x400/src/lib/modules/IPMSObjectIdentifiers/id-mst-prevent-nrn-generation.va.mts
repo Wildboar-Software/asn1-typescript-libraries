@@ -15,6 +15,9 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  * @summary id_mst_prevent_nrn_generation
  * @description
  *
+ * OBJECT IDENTIFIER `id_mst_prevent_nrn_generation`. Defined in ITU-T X.420 (1999)
+ * (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

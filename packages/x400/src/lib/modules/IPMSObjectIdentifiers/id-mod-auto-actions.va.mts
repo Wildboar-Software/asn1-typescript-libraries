@@ -15,6 +15,8 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_auto_actions
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_auto_actions`. Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

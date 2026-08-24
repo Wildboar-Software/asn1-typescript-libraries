@@ -36,6 +36,15 @@ import {
  * @summary FetchArgument
  * @description
  *
+ * `FetchArgument`. FetchArgument ::= SET { entry-class [0] EntryClass DEFAULT delivery,
+ * item CHOICE { search [1] Selector, precise [2] SequenceNumber}, requested-attributes
+ * [3] EntryInformationSelection OPTIONAL, -- 1994 extension -- fetch-extensions [4]
+ * MSExtensions OPTIONAL } The parameters of fetch-argument have the following meaning:
+ * a) Entry-class (O): This specifies which entry-class is addressed by the
+ * abstract-operation… See ITU-T X.413 (1999), §8.2.3.1. ASN.1 DEFAULT `delivery`: that
+ * value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

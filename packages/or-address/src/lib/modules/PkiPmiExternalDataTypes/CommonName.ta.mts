@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CommonName
  * @description
  *
+ * Identifies a user or DL relative to another attribute, often an organizational role
+ * such as `Director of Marketing` (ITU-T X.402 (1999), §18.3.2). Printable form;
+ * teletex/universal twins are extension attributes 2 and 24.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

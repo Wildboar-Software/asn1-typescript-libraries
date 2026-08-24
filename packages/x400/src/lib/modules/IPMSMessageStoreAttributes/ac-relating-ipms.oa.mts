@@ -28,6 +28,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_relating_ipms
  * @description
  *
+ * Information object `ac_relating_ipms`. The AC Relating IPMs attribute, which is
+ * multi-valued, contains the sequence-numbers of the IPM entries which indicate, by
+ * means of their Related IPMs heading field, that they are related to the present IPM.
+ * The attribute values are stored in ascending order of the relating entries' creation
+ * times. See ITU-T X.420 (1999), §19.6.5.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

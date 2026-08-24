@@ -14,6 +14,8 @@ import { type SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.
  * @summary SecurityCategoriesTable
  * @description
  *
+ * Information object set `SecurityCategoriesTable`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import { type OTHER_NAME } from '@wildboar/x500/CertificateExtensions';
  * @summary mta_name
  * @description
  *
+ * Information object `mta_name`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

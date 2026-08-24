@@ -19,6 +19,8 @@ import {
  * @summary Register_MSArgument_change_credentials
  * @description
  *
+ * `Register_MSArgument_change_credentials`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

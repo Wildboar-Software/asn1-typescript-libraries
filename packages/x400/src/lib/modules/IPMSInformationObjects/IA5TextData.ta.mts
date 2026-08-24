@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IA5TextData
  * @description
  *
+ * `IA5TextData`. Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

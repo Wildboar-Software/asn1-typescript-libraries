@@ -28,6 +28,13 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_delivered_replies_summary
  * @description
  *
+ * Information object `ac_delivered_replies_summary`. The AC Delivered Replies Summary
+ * attribute, which is multi-valued, records whether replies have been solicited from
+ * each of the AC IPM Recipients of a submitted IPM and whether replies have been
+ * received. The initial value of the attribute is set for each of the AC IPM Recipients
+ * according to whether a reply was requested of that recipient. See ITU-T X.420 (1999),
+ * §19.6.5.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

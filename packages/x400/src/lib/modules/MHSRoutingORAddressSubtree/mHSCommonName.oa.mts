@@ -23,6 +23,8 @@ import { id_oc_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-
  * @summary mHSCommonName
  * @description
  *
+ * Information object `mHSCommonName`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

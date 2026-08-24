@@ -27,6 +27,9 @@ import { id_at_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id
  * @summary mHSTerminalIdentifierAttribute
  * @description
  *
+ * Information object `mHSTerminalIdentifierAttribute`. Defined in ITU-T X.412 (1999)
+ * (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

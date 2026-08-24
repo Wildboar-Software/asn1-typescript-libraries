@@ -14,6 +14,9 @@ import { type COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMP
  * @summary CompressionAlgorithmTable
  * @description
  *
+ * Information object set `CompressionAlgorithmTable`. Defined in ITU-T X.420 (1999)
+ * (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

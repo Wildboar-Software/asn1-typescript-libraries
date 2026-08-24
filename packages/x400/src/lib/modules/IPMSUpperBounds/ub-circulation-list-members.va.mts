@@ -15,6 +15,9 @@ import {
  * @summary ub_circulation_list_members
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_circulation_list_members`. Defined in ITU-T X.420 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

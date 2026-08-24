@@ -25,6 +25,8 @@ import {
  * @summary NonBasicParameters
  * @description
  *
+ * `NonBasicParameters`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

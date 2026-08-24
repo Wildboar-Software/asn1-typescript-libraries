@@ -25,6 +25,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ms_message_notes
  * @description
  *
+ * Information object `ms_message_notes`. This general-attribute, which is multi-valued,
+ * contains textual annotations specified by the MS-user. The meaning attached to
+ * message-notes is of concern only to the MS-user. See ITU-T X.413 (1999), §11.2.39.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

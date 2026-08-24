@@ -20,6 +20,15 @@ import {
  * @summary Register_MSResult
  * @description
  *
+ * `Register_MSResult`. Should the request succeed, the register-MS-result shall be
+ * returned. Register-MSResult ::= CHOICE { no-status-information NULL, -- 1994 extension
+ * -- registered-information SET { auto-action-registrations [0] SET
+ * SIZE(1..ub-auto-registrations) OF AutoActionRegistration OPTIONAL,
+ * list-attribute-defaults [1] SET SIZE(1..ub-default-registrations) OF ATTRIBUTE.&id
+ * ({AttributeTable}) OPTIONAL, fetch-attribute-defaults… See ITU-T X.413 (1999),
+ * §8.2.5.2. SET SIZE (1..…): omit this component rather than encode an empty SET; SET
+ * order is insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

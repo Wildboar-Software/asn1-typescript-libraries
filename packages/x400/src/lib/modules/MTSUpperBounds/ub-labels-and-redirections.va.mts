@@ -15,6 +15,9 @@ import {
  * @summary ub_labels_and_redirections
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_labels_and_redirections`. Defined in ITU-T X.411 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

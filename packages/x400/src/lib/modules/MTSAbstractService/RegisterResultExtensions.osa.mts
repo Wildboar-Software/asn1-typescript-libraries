@@ -15,6 +15,8 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary RegisterResultExtensions
  * @description
  *
+ * Information object set `RegisterResultExtensions`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

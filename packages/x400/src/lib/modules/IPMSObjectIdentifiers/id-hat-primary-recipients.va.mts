@@ -15,6 +15,12 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_primary_recipients
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_primary_recipients`. The Primary Recipients heading field (D
+ * no subfields (i.e., elements)) identifies the zero or more users and DLs who are the
+ * "primary recipients" of the IPM. It also identifies the responses the authorizing
+ * users ask of each of those users and of each member of those DLs. See ITU-T X.420
+ * (1999), §7.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

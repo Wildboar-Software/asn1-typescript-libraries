@@ -47,6 +47,9 @@ import {
  * @summary Controls
  * @description
  *
+ * `Controls`. Defined in ITU-T X.411 (1999) (§8). ASN.1 DEFAULT `TRUE`: that value is
+ * assumed when the component is absent (do not encode the default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary ub_per_auto_action
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_per_auto_action`. Defined in ITU-T X.413 (1999) (Annex
+ * B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

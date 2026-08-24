@@ -115,6 +115,13 @@ import {
  * @summary Heading
  * @description
  *
+ * EDI heading (ITU-T X.435 (1999), §8.2). `this-EDIM` is mandatory. Unlike an IPM
+ * heading, recipients are a single `recipients` field (not primary/copy/bcc).
+ * `responsibility-forwarded` DEFAULT `FALSE` and `incomplete-copy` DEFAULT `FALSE`:
+ * omit them rather than encode the default. `edi-bodypart-type` DEFAULT
+ * `{id-bp-edifact-ISO646}`. `related-messages` / `obsoleted-EDIMs` are SEQUENCE
+ * OF identifiers — omit rather than send empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

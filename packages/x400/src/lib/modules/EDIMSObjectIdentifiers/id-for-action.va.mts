@@ -15,6 +15,8 @@ import { id_for } from '../EDIMSObjectIdentifiers/id-for.va.mjs';
  * @summary id_for_action
  * @description
  *
+ * OBJECT IDENTIFIER `id_for_action`. Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

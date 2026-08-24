@@ -26,6 +26,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_originator_report_request
  * @description
  *
+ * Information object `mt_originator_report_request`. This general-attribute, which is
+ * multi-valued, contains the originator-report-request argument of the Message-
+ * submission and Probe-submission abstract-operations. See 8.2.1.1.1.22 of attribute.
+ * See ITU-T X.413 (1999), §11.2.53.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

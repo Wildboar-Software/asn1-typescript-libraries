@@ -15,6 +15,10 @@ import {
  * @summary ub_edi_message_type
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_edi_message_type`. Indicates the Message type(s) present
+ * in the EDI Interchange. It consists of a set of distinct strings. See ITU-T X.435
+ * (1999), §8.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

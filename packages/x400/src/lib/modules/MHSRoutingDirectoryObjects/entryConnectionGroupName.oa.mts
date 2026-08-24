@@ -22,6 +22,8 @@ import { id_at_entry_connection_group_name } from '../MHSRoutingObjectIdentifier
  * @summary entryConnectionGroupName
  * @description
  *
+ * Information object `entryConnectionGroupName`. Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

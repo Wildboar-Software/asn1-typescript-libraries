@@ -15,6 +15,12 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_messageTransfer
  * @description
  *
+ * OBJECT IDENTIFIER `id_package_messageTransfer`. The Message-transfer
+ * abstract-operation enables an MTA to transfer a message to another MTA. 12.2.1.1.1
+ * Arguments Table 30 lists the arguments of the Message-transfer abstract-operation, and
+ * for each argument qualifies its presence and identifies the clause in which the
+ * argument is defined. See ITU-T X.411 (1999), §12.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

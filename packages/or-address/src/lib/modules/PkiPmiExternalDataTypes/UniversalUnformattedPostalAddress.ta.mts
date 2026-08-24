@@ -10,6 +10,9 @@ import {
  * @summary UniversalUnformattedPostalAddress
  * @description
  *
+ * Universal-string unformatted postal address (ITU-T X.402 (1999), §18.3.25 / §18.5.3).
+ * Language code is ignored in comparison.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

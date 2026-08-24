@@ -30,6 +30,9 @@ import {
  * @summary IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @description
  *
+ * `IpnSecurityResponse_content_or_arguments_original_security_arguments`. Defined in
+ * ITU-T X.420 (1999) (§15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

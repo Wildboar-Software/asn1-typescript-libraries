@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GeneralTextData
  * @description
  *
+ * `GeneralTextData`. Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

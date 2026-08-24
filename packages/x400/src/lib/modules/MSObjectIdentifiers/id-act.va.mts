@@ -15,6 +15,8 @@ import { id_ms } from '../MHSObjectIdentifiers/id-ms.va.mjs';
  * @summary id_act
  * @description
  *
+ * OBJECT IDENTIFIER `id_act`. Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

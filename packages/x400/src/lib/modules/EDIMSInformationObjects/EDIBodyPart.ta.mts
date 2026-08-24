@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDIBodyPart
  * @description
  *
+ * `EDIBodyPart`. An EDI Body Part carries a single EDI Interchange. EDIBodyPart ::=
+ * OCTET STRING The reference definition of EDI Interchange used is that used by EDIFACT
+ * (ISO 9735). See ITU-T X.435 (1999), §8.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

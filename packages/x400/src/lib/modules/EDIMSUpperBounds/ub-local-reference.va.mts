@@ -15,6 +15,9 @@ import {
  * @summary ub_local_reference
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_local_reference`. Defined in ITU-T X.435 (1999) (Annex
+ * B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

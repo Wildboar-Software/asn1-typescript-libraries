@@ -28,6 +28,15 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary fetch_restriction_error
  * @description
  *
+ * Information object `fetch_restriction_error`. A Fetch-restriction-error reports an
+ * attempt to violate a restriction associated with the Fetch abstract-operation.
+ * fetch-restriction-error ABSTRACT-ERROR ::= { PARAMETER SET { problems [0] SET SIZE
+ * (1..ub-default-registrations) OF SET { problem [3] FetchRestrictionProblem,
+ * restriction CHOICE { content-type [0] OBJECT IDENTIFIER, eit [1] MS-EITs,
+ * attribute-length [2] INTEGER} } } CODE err-fetch-restriction-error… See ITU-T X.413
+ * (1999), §9.5. SET SIZE (1..…): omit this component rather than encode an empty SET;
+ * SET order is insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

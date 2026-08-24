@@ -15,6 +15,9 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_secVerifGenRecipFunctionPackage
  * @description
  *
+ * OBJECT IDENTIFIER `id_package_secVerifGenRecipFunctionPackage`. Defined in ITU-T X.411
+ * (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

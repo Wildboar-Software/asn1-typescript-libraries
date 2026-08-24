@@ -15,6 +15,13 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_original_EITs
  * @description
  *
+ * OBJECT IDENTIFIER `id_att_original_EITs`. This general-attribute, which is
+ * multi-valued, identifies the encoded-information-types in the content of the message
+ * as submitted, or specified in the envelope of a submitted probe. It is generated from
+ * the original-encoded-information-types argument of the Message-delivery,
+ * Report-delivery, Message-submission, and Probe-submission abstract-operations. See
+ * ITU-T X.413 (1999), §11.2.48.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

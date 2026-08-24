@@ -15,6 +15,10 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_voice
  * @description
  *
+ * OBJECT IDENTIFIER `id_ep_voice`. A Voice body part represents speech, or other types
+ * of audio data such as music. It has Parameters and Data components. See ITU-T X.420
+ * (1999), §7.4.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

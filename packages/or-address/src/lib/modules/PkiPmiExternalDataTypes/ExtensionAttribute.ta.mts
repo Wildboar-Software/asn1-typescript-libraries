@@ -12,6 +12,10 @@ import { ExtensionAttributeJSON } from "../../types.mjs";
  * @summary ExtensionAttribute
  * @description
  *
+ * One OR-address extension: INTEGER `extension-type` (0..256) plus ANY defined by
+ * `EXTENSION-ATTRIBUTE.&Type`. Unknown types with a critical need should be handled per
+ * the using specification; the type table is `ExtensionAttributeTable`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

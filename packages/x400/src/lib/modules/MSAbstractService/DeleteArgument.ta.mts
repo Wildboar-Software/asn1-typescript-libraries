@@ -31,6 +31,16 @@ import {
  * @summary DeleteArgument
  * @description
  *
+ * `DeleteArgument`. DeleteArgument ::= SET { entry-class [0] EntryClass DEFAULT
+ * delivery, items CHOICE { selector [1] Selector, sequence-numbers [2] SET SIZE
+ * (1..ub-messages) OF SequenceNumber}, -- 1994 extension -- delete-extensions [3]
+ * MSExtensions OPTIONAL } The parameters of delete-argument have the following meaning:
+ * a) Entry-class (O): This specifies which entry-class is addressed by the
+ * abstract-operation (see 6.3.1). b)… See ITU-T X.413 (1999), §8.2.4.1. SET SIZE (1..…):
+ * omit this component rather than encode an empty SET; SET order is insignificant. ASN.1
+ * DEFAULT `delivery`: that value is assumed when the component is absent (do not encode
+ * the default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

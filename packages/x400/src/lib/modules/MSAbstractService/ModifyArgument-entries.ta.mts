@@ -24,6 +24,11 @@ import {
  * @summary ModifyArgument_entries
  * @description
  *
+ * `ModifyArgument_entries`. Each information object stored in the MS (e.g., each
+ * submitted-message or delivered-report) is represented as an entry. An entry is
+ * identified by its sequence-number which the MS generates when the entry is created.
+ * See ITU-T X.413 (1999), §6.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

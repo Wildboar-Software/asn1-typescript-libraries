@@ -24,6 +24,8 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
  * @summary EDIAutoActionErrorTable
  * @description
  *
+ * Information object set `EDIAutoActionErrorTable`. Defined in ITU-T X.435 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

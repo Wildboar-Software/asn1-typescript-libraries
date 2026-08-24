@@ -1,3 +1,9 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MHSRoutingObjectIdentifiers` (ITU-T X.412 (1999), Annex
+ * A).
+ */
 export * from "./id-at-calling-psaps.va.mjs";
 export * from "./id-at-connection-group-name.va.mjs";
 export * from "./id-at-connection-type.va.mjs";

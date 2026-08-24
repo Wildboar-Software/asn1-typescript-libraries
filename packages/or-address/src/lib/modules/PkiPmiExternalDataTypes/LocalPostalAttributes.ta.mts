@@ -10,6 +10,9 @@ import {
  * @summary LocalPostalAttributes
  * @description
  *
+ * Locus of distribution other than `physical-delivery-office-name`, e.g. a geographical
+ * area (ITU-T X.402 (1999), §18.3.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

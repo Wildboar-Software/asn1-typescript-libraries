@@ -20,6 +20,14 @@ import { id_mr_circulation_member_elements } from '../IPMSObjectIdentifiers/id-m
  * @summary circulationMemberElementsMatch
  * @description
  *
+ * Information object `circulationMemberElementsMatch`. The
+ * Circulation-member-elements-match determines whether a presented value is a subset of
+ * the elements present in some value of an attribute of type Circulation Member.
+ * circulationMemberElementsMatch MATCHING-RULE ::= { SYNTAX CirculationMember ID
+ * id-mr-circulation-member-elements } The rule is identical to the
+ * recipient-specifier-elements-match rule as applied to the circulation-recipient
+ * component of the… See ITU-T X.420 (1999), §19.7.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

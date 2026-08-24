@@ -27,6 +27,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary incomplete_copy
  * @description
  *
+ * Information object `incomplete_copy`. The Incomplete Copy field indicates that the
+ * forwarded EDIM is an incomplete copy of an EDIM. Its value is a Boolean. See ITU-T
+ * X.435 (1999), §8.2.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

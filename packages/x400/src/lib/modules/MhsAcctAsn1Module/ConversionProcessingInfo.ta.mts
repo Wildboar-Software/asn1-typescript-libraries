@@ -19,6 +19,9 @@ import {
  * @summary ConversionProcessingInfo
  * @description
  *
+ * `ConversionProcessingInfo`. Defined in ITU-T X.411 (1999) (accounting objects). SET
+ * OF: order is insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

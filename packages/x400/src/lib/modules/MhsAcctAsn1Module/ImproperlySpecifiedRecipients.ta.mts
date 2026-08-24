@@ -19,6 +19,9 @@ import {
  * @summary ImproperlySpecifiedRecipients
  * @description
  *
+ * SEQUENCE SIZE (1..`ub-recipients`) of names the MTS could not use (ITU-T X.411 (1999),
+ * Annex A). Empty is not allowed; omit the error parameter instead.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

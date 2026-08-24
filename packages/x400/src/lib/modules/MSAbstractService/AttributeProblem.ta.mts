@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AttributeProblem
  * @description
  *
+ * `AttributeProblem`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

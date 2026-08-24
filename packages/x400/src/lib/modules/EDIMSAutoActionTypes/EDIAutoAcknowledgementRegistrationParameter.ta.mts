@@ -25,6 +25,8 @@ import {
  * @summary EDIAutoAcknowledgementRegistrationParameter
  * @description
  *
+ * `EDIAutoAcknowledgementRegistrationParameter`. Defined in ITU-T X.435 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary err_deferred_delivery_cancellation_rejected
  * @description
  *
+ * `err_deferred_delivery_cancellation_rejected`. Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

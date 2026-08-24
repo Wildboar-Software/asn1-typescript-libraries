@@ -15,6 +15,8 @@ import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
  * @summary id_voice_11khz_sample
  * @description
  *
+ * OBJECT IDENTIFIER `id_voice_11khz_sample`. Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

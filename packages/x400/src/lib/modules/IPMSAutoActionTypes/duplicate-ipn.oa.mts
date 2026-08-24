@@ -23,6 +23,8 @@ import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.o
  * @summary duplicate_ipn
  * @description
  *
+ * Information object `duplicate_ipn`. Defined in ITU-T X.420 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

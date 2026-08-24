@@ -20,6 +20,9 @@ import { id_as_ms_msse } from '../MHSProtocolObjectIdentifiers/id-as-ms-msse.va.
  * @summary ms_message_submission_abstract_syntax
  * @description
  *
+ * Information object `ms_message_submission_abstract_syntax`. Defined in ITU-T X.419
+ * (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

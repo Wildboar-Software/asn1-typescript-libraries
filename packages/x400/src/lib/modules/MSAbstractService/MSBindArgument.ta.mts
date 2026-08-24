@@ -46,6 +46,14 @@ import {
  * @summary MSBindArgument
  * @description
  *
+ * `MSBindArgument`. The MS-bind-argument parameters are used to identify, authenticate
+ * and set the security-context for an MS-user. They also contain a set of restrictions
+ * for entries to be returned as the result of the Fetch abstract-operation, identify a
+ * set of registrations associated with this instance of the MS-user, and may contain a
+ * request to be informed of the entry-classes, auto-action-types, attribute-types,… See
+ * ITU-T X.413 (1999), §7.1.1. ASN.1 DEFAULT `FALSE`: that value is assumed when the
+ * component is absent (do not encode the default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

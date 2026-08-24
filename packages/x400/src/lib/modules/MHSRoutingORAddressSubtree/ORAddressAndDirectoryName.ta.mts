@@ -19,6 +19,8 @@ import {
  * @summary ORAddressAndDirectoryName
  * @description
  *
+ * `ORAddressAndDirectoryName`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

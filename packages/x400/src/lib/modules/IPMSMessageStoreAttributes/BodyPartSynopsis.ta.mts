@@ -24,6 +24,8 @@ import {
  * @summary BodyPartSynopsis
  * @description
  *
+ * `BodyPartSynopsis`. Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

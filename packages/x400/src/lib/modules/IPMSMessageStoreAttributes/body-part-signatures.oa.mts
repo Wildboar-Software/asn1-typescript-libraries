@@ -26,6 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body_part_signatures
  * @description
  *
+ * Information object `body_part_signatures`. Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

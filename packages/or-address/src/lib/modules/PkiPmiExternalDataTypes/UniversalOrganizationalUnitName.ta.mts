@@ -10,6 +10,8 @@ import {
  * @summary UniversalOrganizationalUnitName
  * @description
  *
+ * `UniversalOrganizationalUnitName`. Defined in ITU-T X.402 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

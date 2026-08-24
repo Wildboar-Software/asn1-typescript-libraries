@@ -19,6 +19,14 @@ import {
  * @summary MSExtensions
  * @description
  *
+ * `MSExtensions`. This Service Definition defines MS operation regardless of the
+ * content-types of the messages present. To accommodate the additional functions which
+ * may be required to support specific content-types, and other extensions, the following
+ * information object class is defined: MS-EXTENSION ::= TYPE-IDENTIFIER This information
+ * object class has two fields: an identifier field (an Object Identifier), and a type
+ * field… See ITU-T X.413 (1999), §6.6. SEQUENCE SIZE (1..…): omit this component rather
+ * than encode an empty SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_sensitivity
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_sensitivity`. The Sensitivity heading field (C) identifies
+ * the sensitivity that the authorizing users attribute to the IPM. SensitivityField ::=
+ * ENUMERATED { personal (1), private (2), company-confidential(3)} This field may assume
+ * any one of the following values: a) personal: The IPM is conveyed to its intended
+ * recipients as individuals, rather than in their professional capacities. See ITU-T
+ * X.420 (1999), §7.2.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

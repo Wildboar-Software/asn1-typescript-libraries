@@ -10,6 +10,12 @@ import {
  * @summary UniversalPhysicalDeliveryOfficeNumber
  * @description
  *
+ * `UniversalPhysicalDeliveryOfficeNumber`. A physical-delivery-office-number is a
+ * standard attribute that distinguishes among several post offices denoted by a single
+ * physical-delivery-office-name. The value of a physical-delivery-office-number is a
+ * Printable String, Teletex String, Universal String, or a combination of these types.
+ * See ITU-T X.402 (1999), §18.3.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

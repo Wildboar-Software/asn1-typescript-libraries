@@ -27,6 +27,9 @@ import { id_at_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifier
  * @summary mHSNumericUserIdentifierAttribute
  * @description
  *
+ * Information object `mHSNumericUserIdentifierAttribute`. Defined in ITU-T X.412 (1999)
+ * (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

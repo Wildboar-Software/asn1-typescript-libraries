@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MSUpperBounds` (ITU-T X.413 (1999), Annex B).
+ */
 export * from "./index.mjs";
 export * from "./ub-alert-addresses.va.mjs";
 export * from "./ub-attributes-supported.va.mjs";

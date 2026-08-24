@@ -15,6 +15,8 @@ import { id_cont } from '../MTSObjectIdentifiers/id-cont.va.mjs';
  * @summary id_cont_inner_envelope
  * @description
  *
+ * OBJECT IDENTIFIER `id_cont_inner_envelope`. Defined in ITU-T X.411 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

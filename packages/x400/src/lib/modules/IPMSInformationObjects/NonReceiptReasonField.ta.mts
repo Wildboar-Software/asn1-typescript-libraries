@@ -21,6 +21,9 @@ export enum _enum_for_NonReceiptReasonField {
  * @summary NonReceiptReasonField
  * @description
  *
+ * `NonReceiptReasonField`. Defined in ITU-T X.420 (1999) (§7). ENUMERATED value `0` is a
+ * named variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

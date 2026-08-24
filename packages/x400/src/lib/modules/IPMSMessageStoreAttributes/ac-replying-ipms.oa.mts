@@ -28,6 +28,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_replying_ipms
  * @description
  *
+ * Information object `ac_replying_ipms`. The AC Replying IPMs attribute, which is
+ * multi-valued, contains the sequence-numbers of the IPM entries which indicate, by
+ * means of their Replied-to IPM heading field, that they were sent in reply to the
+ * present IPM. The attribute values are stored in ascending order of the replying
+ * entries' creation times. See ITU-T X.420 (1999), §19.6.5.1.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

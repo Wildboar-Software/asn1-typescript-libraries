@@ -19,6 +19,9 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  * @summary id_oc_mhs_organizational_unit
  * @description
  *
+ * OBJECT IDENTIFIER `id_oc_mhs_organizational_unit`. Defined in ITU-T X.412 (1999)
+ * (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

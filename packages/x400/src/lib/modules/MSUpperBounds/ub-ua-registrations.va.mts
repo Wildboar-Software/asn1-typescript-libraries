@@ -15,6 +15,9 @@ import {
  * @summary ub_ua_registrations
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_ua_registrations`. Defined in ITU-T X.413 (1999) (Annex
+ * B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

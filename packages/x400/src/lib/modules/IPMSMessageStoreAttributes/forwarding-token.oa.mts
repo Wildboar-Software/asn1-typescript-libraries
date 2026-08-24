@@ -26,6 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary forwarding_token
  * @description
  *
+ * Information object `forwarding_token`. Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

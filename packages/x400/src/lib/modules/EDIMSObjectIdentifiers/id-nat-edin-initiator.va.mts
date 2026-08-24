@@ -15,6 +15,13 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_edin_initiator
  * @description
  *
+ * OBJECT IDENTIFIER `id_nat_edin_initiator`. The EDIN Initiator field can take one of
+ * the following values: a) "internal-UA" means that the UA generated the EDIN either for
+ * local reasons or because the generation had been delegated to it by the user; b)
+ * "internal-MS" means that the MS generated the EDIN either for local reasons or because
+ * the generation had been delegated to it by the user; c) "external-UA" means that the
+ * generation of the EDIN was… See ITU-T X.435 (1999), §9.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

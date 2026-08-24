@@ -30,6 +30,10 @@ import {
  * @summary ORDescriptor
  * @description
  *
+ * Identifies a user by `formal-name` (ORName) and/or `freeform-name` and/or
+ * `telephone-number` (ITU-T X.420 (1999), §7.2.4). At least one component should be
+ * present for the descriptor to be useful; ASN.1 allows all optional.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

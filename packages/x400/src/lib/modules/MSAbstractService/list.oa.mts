@@ -41,6 +41,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary list
  * @description
  *
+ * Information object `list`. This general-attribute, which is multi-valued, identifies
+ * the delivered-report entries which have been correlated with the originally specified
+ * recipients of a submitted message or probe. The attribute contains one value for each
+ * value of the recipient-name argument of the Message-submission or Probe-submission
+ * abstract-operation. See ITU-T X.413 (1999), §11.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

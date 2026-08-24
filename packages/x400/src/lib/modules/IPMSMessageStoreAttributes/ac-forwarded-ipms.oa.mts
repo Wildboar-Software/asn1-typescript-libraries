@@ -28,6 +28,12 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_forwarded_ipms
  * @description
  *
+ * Information object `ac_forwarded_ipms`. The AC Forwarded IPMs attribute, which is
+ * multi-valued, contains the sequence-numbers of the stored IPMs that correspond to the
+ * Message or Forwarded Content body-part that the present child-entry represents. One
+ * value of the attribute shall be generated for each stored IPM that corresponds to the
+ * body part that the present entry represents. See ITU-T X.420 (1999), §19.6.5.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_secMtsUserPackage
  * @description
  *
+ * OBJECT IDENTIFIER `id_package_secMtsUserPackage`. Defined in ITU-T X.411 (1999) (MTA
+ * managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

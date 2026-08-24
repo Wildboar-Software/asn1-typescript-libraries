@@ -28,6 +28,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary pn_supplementary_information
  * @description
  *
+ * Information object `pn_supplementary_information`. The PN Supplementary Information
+ * field may be used to return further information to the EDIN recipient to clarify the
+ * Positive Notification. NOTE – EDI Supplementary Information Field is defined in 8.3.2.
+ * See ITU-T X.435 (1999), §9.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

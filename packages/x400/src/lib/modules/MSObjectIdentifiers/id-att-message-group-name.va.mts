@@ -15,6 +15,12 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_message_group_name
  * @description
  *
+ * OBJECT IDENTIFIER `id_att_message_group_name`. This general-attribute, which is
+ * multi-valued, identifies the message-group-names which the MS-user has attached to an
+ * entry (see 6.4). Support for this general-attribute implies that the MS-user shall be
+ * able to create or amend it by use of the Modify abstract-operation and the Auto-modify
+ * auto-action. See ITU-T X.413 (1999), §11.2.37.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

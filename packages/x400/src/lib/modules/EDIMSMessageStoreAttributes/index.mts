@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `EDIMSMessageStoreAttributes` (ITU-T X.435 (1999), §19).
+ */
 export * from "./ac-correlated-delivered-edins.oa.mjs";
 export * from "./ac-delivered-edin-summary.oa.mjs";
 export * from "./ac-edim-recipients.oa.mjs";

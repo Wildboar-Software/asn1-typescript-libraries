@@ -19,6 +19,13 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary edi_auto_correlate
  * @description
  *
+ * Information object `edi_auto_correlate`. If the EDI auto-correlate auto-action is
+ * subscribed to, the EDI-MS performs the following actions: a) If the delivered message
+ * contains an EDIM, then each Recipient subfield in the Recipients field is examined. If
+ * any Recipient subfield identifies the present EDI-MS-user, and the EDI Notification
+ * Requests component indicates that an EDIN is requested, then the EDI-MS shall create
+ * an AC Submitted EDIN Status… See ITU-T X.435 (1999), §18.9.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

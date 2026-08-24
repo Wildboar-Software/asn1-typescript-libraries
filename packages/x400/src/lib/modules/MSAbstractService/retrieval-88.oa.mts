@@ -22,6 +22,8 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary retrieval_88
  * @description
  *
+ * Information object `retrieval_88`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,8 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  * @summary id_oc_mta_information
  * @description
  *
+ * OBJECT IDENTIFIER `id_oc_mta_information`. Defined in ITU-T X.412 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,15 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary ms_bind_error
  * @description
  *
+ * Information object `ms_bind_error`. An MS-bind-error reports a problem in attempting
+ * to establish an abstract-association. It is defined as follows: ms-bind-error
+ * ABSTRACT-ERROR ::= { PARAMETER CHOICE { unqualified-error BindProblem, -- 1994
+ * extension -- qualified-error SET { bind-problem [0] BindProblem,
+ * supplementary-information [1] GeneralString (SIZE(1..ub-supplementary-info-length))
+ * OPTIONAL, bind-extension-errors [2] SET… See ITU-T X.413 (1999), §7.1.3. SET SIZE
+ * (1..…): omit this component rather than encode an empty SET; SET order is
+ * insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

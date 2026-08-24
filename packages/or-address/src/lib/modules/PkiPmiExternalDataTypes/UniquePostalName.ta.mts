@@ -10,6 +10,9 @@ import {
  * @summary UniquePostalName
  * @description
  *
+ * Point of delivery other than street / PO box / poste restante, e.g. a building or
+ * hamlet (ITU-T X.402 (1999), §18.3.26).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

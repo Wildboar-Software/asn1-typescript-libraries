@@ -26,6 +26,14 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_delivery_envelope
  * @description
  *
+ * Information object `mt_message_delivery_envelope`. This general-attribute contains the
+ * message-delivery-envelope component of the argument of the Message-delivery
+ * abstract-operation. See Figure 2 (Part 5) of WITH ATTRIBUTE-SYNTAX
+ * MessageDeliveryEnvelope, NUMERATION single-valued, ID id-att-message-delivery-envelope
+ * } 11.2.36 Message-delivery-time This general-attribute contains the
+ * message-delivery-time argument of the Message-delivery abstract-operation. See ITU-T
+ * X.413 (1999), §11.2.35.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

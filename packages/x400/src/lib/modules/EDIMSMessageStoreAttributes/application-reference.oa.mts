@@ -28,6 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary application_reference
  * @description
  *
+ * Information object `application_reference`. Provides a general reference to an
+ * application or function. This is semantically identical to the "Application reference"
+ * segment of the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

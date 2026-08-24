@@ -71,6 +71,13 @@ import {
  * @summary MSProbeSubmissionArgument
  * @description
  *
+ * `MSProbeSubmissionArgument`. MSProbeSubmissionArgument ::= SET { COMPONENTS OF
+ * ProbeSubmissionArgument -- This imported type has IMPLICIT tags -- , -- 1994 extension
+ * -- submission-options [4] MSSubmissionOptions OPTIONAL } The parameters of
+ * MS-probe-submission-argument have the following meaning: a) Probe-submission-argument
+ * (M): This specifies the argument of the Probe-submission abstract-operation as defined
+ * in 8.2.1.2.1 of The MS removes… See ITU-T X.413 (1999), §8.3.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

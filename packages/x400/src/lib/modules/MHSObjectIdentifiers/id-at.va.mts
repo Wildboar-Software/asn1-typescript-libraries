@@ -15,6 +15,8 @@ import { id_arch } from '../MHSObjectIdentifiers/id-arch.va.mjs';
  * @summary id_at
  * @description
  *
+ * OBJECT IDENTIFIER `id_at`. Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary ub_group_part_length
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_group_part_length`. Defined in ITU-T X.413 (1999) (Annex
+ * B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

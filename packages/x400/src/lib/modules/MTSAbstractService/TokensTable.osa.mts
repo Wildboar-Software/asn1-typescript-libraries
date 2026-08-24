@@ -15,6 +15,8 @@ import { asymmetric_token } from '../MTSAbstractService/asymmetric-token.oa.mjs'
  * @summary TokensTable
  * @description
  *
+ * Information object set `TokensTable`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

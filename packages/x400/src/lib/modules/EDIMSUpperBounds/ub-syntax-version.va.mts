@@ -15,6 +15,9 @@ import {
  * @summary ub_syntax_version
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_syntax_version`. Defined in ITU-T X.435 (1999) (Annex
+ * B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

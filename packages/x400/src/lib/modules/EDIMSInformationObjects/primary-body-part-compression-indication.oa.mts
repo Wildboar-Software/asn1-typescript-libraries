@@ -20,6 +20,9 @@ import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.o
  * @summary primary_body_part_compression_indication
  * @description
  *
+ * Information object `primary_body_part_compression_indication`. Defined in ITU-T X.435
+ * (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

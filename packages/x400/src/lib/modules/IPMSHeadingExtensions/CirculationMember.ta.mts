@@ -25,6 +25,12 @@ import {
  * @summary CirculationMember
  * @description
  *
+ * `CirculationMember`. The Circulation-member-checkmark-match rule compares a presented
+ * value with attribute-values of type Circulation Member for the presence of the checked
+ * component value. circulationMemberCheckmarkMatch MATCHING-RULE ::= { SYNTAX
+ * CirculationMember ID id-mr-circulation-member-checkmark } The rule returns true if,
+ * and only if, the checked component is present. See ITU-T X.420 (1999), §19.7.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

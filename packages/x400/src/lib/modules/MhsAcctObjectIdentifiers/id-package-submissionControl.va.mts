@@ -15,6 +15,13 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_submissionControl
  * @description
  *
+ * OBJECT IDENTIFIER `id_package_submissionControl`. The Submission-control
+ * abstract-operation enables the MTS to temporarily limit the submission-port abstract-
+ * operations that the MTS-user may invoke, and the messages that the MTS-user may submit
+ * to the MTS via the Message-submission abstract-operation. The MTS-user should hold
+ * until a later time, rather than abandon, abstract-operations and messages presently
+ * forbidden. See ITU-T X.411 (1999), §8.2.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

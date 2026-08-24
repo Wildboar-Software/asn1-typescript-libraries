@@ -15,6 +15,8 @@ import {
  * @summary ub_restrictions
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_restrictions`. Defined in ITU-T X.411 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

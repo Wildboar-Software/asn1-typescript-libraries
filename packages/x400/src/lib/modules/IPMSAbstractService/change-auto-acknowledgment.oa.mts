@@ -28,6 +28,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary change_auto_acknowledgment
  * @description
  *
+ * Information object `change_auto_acknowledgment`. The Change Auto-acknowledgment
+ * abstract operation enables or disables auto-acknowledgment, the automatic origination
+ * of RNs by the IPMS on the user's behalf. Such origination occurs upon delivery of IPMs
+ * that request RNs of the user by means of the Notification-requests components of their
+ * subject recipient specifiers. See ITU-T X.420 (1999), §12.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

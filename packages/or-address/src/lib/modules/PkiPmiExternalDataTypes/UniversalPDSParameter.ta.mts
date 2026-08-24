@@ -10,6 +10,9 @@ import {
  * @summary UniversalPDSParameter
  * @description
  *
+ * Universal-string form of `PDSParameter` (ITU-T X.402 (1999), §18.2). Compare without
+ * the language code.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

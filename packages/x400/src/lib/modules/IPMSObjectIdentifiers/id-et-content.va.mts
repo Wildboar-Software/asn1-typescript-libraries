@@ -15,6 +15,13 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_content
  * @description
  *
+ * OBJECT IDENTIFIER `id_et_content`. A secondary object that submits a message
+ * containing an IPM or IPN shall supply as the octets of the Octet String that
+ * constitutes the content of the message the result of encoding the InformationObject of
+ * section two in accordance with the Basic Encoding Rules of 20.2 Content Type A
+ * secondary object that submits a message containing an IPM or IPN shall select its
+ * content type as follows. If the IPM or IPN… See ITU-T X.420 (1999), §20.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

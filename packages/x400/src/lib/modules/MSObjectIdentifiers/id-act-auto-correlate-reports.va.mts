@@ -15,6 +15,13 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  * @summary id_act_auto_correlate_reports
  * @description
  *
+ * OBJECT IDENTIFIER `id_act_auto_correlate_reports`. The Auto-correlate-reports
+ * auto-action enables the MS-user to instruct the MS to correlate, automatically,
+ * delivered- report entries of the Delivery entry-class with the submitted messages and
+ * probes to which they are related. The auto- action also records each successful
+ * invocation of the MS-cancel-deferred-delivery abstract-operation. See ITU-T X.413
+ * (1999), §13.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

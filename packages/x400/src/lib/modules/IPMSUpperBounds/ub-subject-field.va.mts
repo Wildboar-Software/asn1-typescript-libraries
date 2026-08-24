@@ -15,6 +15,8 @@ import {
  * @summary ub_subject_field
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_subject_field`. Defined in ITU-T X.420 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

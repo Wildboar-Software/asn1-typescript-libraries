@@ -14,6 +14,12 @@ import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
  * @summary ContentSpecificMatchingRules
  * @description
  *
+ * Information object set `ContentSpecificMatchingRules`. An important capability of the
+ * Message Store abstract-service is the ability to select a set of entries of some
+ * entry-class based on assertions concerning attribute-values held by those entries. A
+ * matching-rule allows entries to be selected by making a particular assertion
+ * concerning their attribute-values. See ITU-T X.413 (1999), §6.3.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

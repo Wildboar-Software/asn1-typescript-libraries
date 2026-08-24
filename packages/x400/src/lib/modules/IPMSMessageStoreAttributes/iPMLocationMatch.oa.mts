@@ -20,6 +20,8 @@ import { id_mr_ipm_location } from '../IPMSObjectIdentifiers/id-mr-ipm-location.
  * @summary iPMLocationMatch
  * @description
  *
+ * Information object `iPMLocationMatch`. Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

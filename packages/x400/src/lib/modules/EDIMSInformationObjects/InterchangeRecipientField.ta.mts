@@ -30,6 +30,8 @@ import {
  * @summary InterchangeRecipientField
  * @description
  *
+ * `InterchangeRecipientField`. Defined in ITU-T X.435 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

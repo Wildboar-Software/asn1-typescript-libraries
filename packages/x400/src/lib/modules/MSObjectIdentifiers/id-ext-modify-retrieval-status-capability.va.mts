@@ -15,6 +15,9 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  * @summary id_ext_modify_retrieval_status_capability
  * @description
  *
+ * OBJECT IDENTIFIER `id_ext_modify_retrieval_status_capability`. Defined in ITU-T X.413
+ * (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

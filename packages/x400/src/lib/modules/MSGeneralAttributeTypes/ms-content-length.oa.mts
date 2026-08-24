@@ -27,6 +27,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_content_length
  * @description
  *
+ * Information object `ms_content_length`. This general-attribute indicates the length of
+ * the content, in octets, of a submitted message, a submitted probe, a draft- message, a
+ * delivered message, or the returned-content of a delivery-report. For a submitted
+ * probe, the attribute indicates the length in octets of the content of the
+ * subject-message. See ITU-T X.413 (1999), §11.2.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,11 @@ import {
  * @summary IPMAutoAdviseRegistrationParameter
  * @description
  *
+ * `IPMAutoAdviseRegistrationParameter`. Defined in ITU-T X.420 (1999) (§19). SET OF:
+ * order is insignificant; duplicates are typically meaningless. ASN.1 DEFAULT `TRUE`,
+ * `TRUE`, `FALSE`: that value is assumed when the component is absent (do not encode the
+ * default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

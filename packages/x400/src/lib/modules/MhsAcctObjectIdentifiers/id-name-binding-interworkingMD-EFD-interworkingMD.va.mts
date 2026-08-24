@@ -15,6 +15,9 @@ import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.
  * @summary id_name_binding_interworkingMD_EFD_interworkingMD
  * @description
  *
+ * OBJECT IDENTIFIER `id_name_binding_interworkingMD_EFD_interworkingMD`. Defined in
+ * ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

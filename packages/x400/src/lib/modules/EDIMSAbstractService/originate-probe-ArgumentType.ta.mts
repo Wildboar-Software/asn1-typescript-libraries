@@ -24,6 +24,8 @@ import {
  * @summary originate_probe_ArgumentType
  * @description
  *
+ * `originate_probe_ArgumentType`. Defined in ITU-T X.435 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

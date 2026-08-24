@@ -30,6 +30,9 @@ import {
  * @summary MessageDeliveryResult
  * @description
  *
+ * `MessageDeliveryResult`. Defined in ITU-T X.411 (1999) (§8). SET OF: order is
+ * insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

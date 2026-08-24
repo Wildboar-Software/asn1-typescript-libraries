@@ -17,6 +17,8 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary mHSPDSNameNameForm
  * @description
  *
+ * Information object `mHSPDSNameNameForm`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

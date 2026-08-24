@@ -13,6 +13,8 @@ import { ub_e163_4_sub_address_length } from "./ub-e163-4-sub-address-length.va.
  * @summary ExtendedNetworkAddress_e163_4_address
  * @description
  *
+ * E.164 (`e163-4`) number and optional sub-address (ITU-T X.402 (1999), §18.3.7 b).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

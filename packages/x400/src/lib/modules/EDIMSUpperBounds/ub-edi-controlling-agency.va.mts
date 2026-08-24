@@ -15,6 +15,9 @@ import {
  * @summary ub_edi_controlling_agency
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_edi_controlling_agency`. Defined in ITU-T X.435 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

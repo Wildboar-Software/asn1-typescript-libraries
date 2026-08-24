@@ -34,6 +34,13 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_on
  * @description
  *
+ * Information object `originate_on`. The Originate ON abstract operation originates a
+ * message whose content is an ON. originate-on ABSTRACT-OPERATION ::= { ARGUMENT SET {
+ * envelope [0] MessageSubmissionEnvelope, content [1] ON} RESULT SET {
+ * submission-identifier [0] MessageSubmissionIdentifier, submission-time [1]
+ * MessageSubmissionTime} ERRORS { subscription-error | recipient-improperly-specified} }
+ * This abstract operation has the following… See ITU-T X.420 (1999), §12.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

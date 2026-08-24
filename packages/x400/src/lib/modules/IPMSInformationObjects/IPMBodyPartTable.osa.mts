@@ -16,6 +16,8 @@ import { ApplicationSpecificBodyParts } from '../IPMSInformationObjects/Applicat
  * @summary IPMBodyPartTable
  * @description
  *
+ * Information object set `IPMBodyPartTable`. Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

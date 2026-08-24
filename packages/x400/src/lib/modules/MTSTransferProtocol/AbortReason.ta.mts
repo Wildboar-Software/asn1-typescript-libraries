@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AbortReason
  * @description
  *
+ * `AbortReason`. Defined in ITU-T X.419 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_contentIntegrityCheck
  * @description
  *
+ * OBJECT IDENTIFIER `id_attribute_contentIntegrityCheck`. This argument provides the
+ * recipient of the message with a means of validating that the message content has not
+ * been modified (to provide the Content Integrity element-of-service as defined in
+ * recipient of the message. If the value of this argument is specific to a recipient,
+ * because either a specific algorithm or key has been used to generate this value (i.e.
+ * See ITU-T X.411 (1999), §8.2.1.1.1.28.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,8 @@ import { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa.mjs';
  * @summary IPMAutoActions
  * @description
  *
+ * Information object set `IPMAutoActions`. Defined in ITU-T X.420 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

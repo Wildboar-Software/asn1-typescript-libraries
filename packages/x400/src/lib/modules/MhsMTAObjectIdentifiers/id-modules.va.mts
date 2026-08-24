@@ -15,6 +15,8 @@ import { id_mta } from '../MhsMTAObjectIdentifiers/id-mta.va.mjs';
  * @summary id_modules
  * @description
  *
+ * OBJECT IDENTIFIER `id_modules`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

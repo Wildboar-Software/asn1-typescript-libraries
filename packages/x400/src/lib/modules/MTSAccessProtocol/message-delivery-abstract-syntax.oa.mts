@@ -20,6 +20,9 @@ import { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va.
  * @summary message_delivery_abstract_syntax
  * @description
  *
+ * Information object `message_delivery_abstract_syntax`. Defined in ITU-T X.419 (1999)
+ * (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

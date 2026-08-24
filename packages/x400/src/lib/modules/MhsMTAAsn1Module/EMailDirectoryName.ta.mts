@@ -24,6 +24,9 @@ import {
  * @summary EMailDirectoryName
  * @description
  *
+ * `EMailDirectoryName`. Defined in ITU-T X.411 (1999) (MTA managed objects). SET OF:
+ * order is insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

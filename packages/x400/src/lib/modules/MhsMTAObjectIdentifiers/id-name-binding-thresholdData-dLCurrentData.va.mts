@@ -15,6 +15,9 @@ import { id_name_binding } from '../MhsMTAObjectIdentifiers/id-name-binding.va.m
  * @summary id_name_binding_thresholdData_dLCurrentData
  * @description
  *
+ * OBJECT IDENTIFIER `id_name_binding_thresholdData_dLCurrentData`. Defined in ITU-T
+ * X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

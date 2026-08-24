@@ -26,6 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary message_parameters
  * @description
  *
+ * Information object `message_parameters`. Defined in ITU-T X.435 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import {
  * @summary ub_deliverable_class
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_deliverable_class`. This argument contains all the sets
+ * of criteria that determine which messages shall be delivered to the MTS-user, if any
+ * of these criteria are to be changed. If present, this argument replaces the previously
+ * registered deliverable-classes. See ITU-T X.411 (1999), §8.4.1.1.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

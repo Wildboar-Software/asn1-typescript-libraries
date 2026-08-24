@@ -21,6 +21,13 @@ import {
  * @summary Summary
  * @description
  *
+ * `Summary`. This general-attribute, which is multi-valued, contains a summary of the
+ * reports requested and reports received from each originally specified recipient of a
+ * submitted message or probe. The attribute contains one value for each value of the
+ * recipient-name argument of the Message-submission or Probe-submission
+ * abstract-operation. See ITU-T X.413 (1999), §11.2.3. SET SIZE (1..…): omit this
+ * component rather than encode an empty SET; SET order is insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

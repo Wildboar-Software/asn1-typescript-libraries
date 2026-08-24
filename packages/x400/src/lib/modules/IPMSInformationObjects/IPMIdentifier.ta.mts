@@ -25,6 +25,13 @@ import {
  * @summary IPMIdentifier
  * @description
  *
+ * `IPMIdentifier`. An IPM identifier is an information item that unambiguously and
+ * uniquely identifies an IPM, distinguishing it from all other IPMs ever conveyed by any
+ * user. IPMIdentifier ::= [APPLICATION 11] SET { user ORName OPTIONAL,
+ * user-relative-identifier LocalIPMIdentifier} An IPM identifier has the following
+ * components: a) User (O): Identifies the user who originates the IPM. See ITU-T X.420
+ * (1999), §7.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

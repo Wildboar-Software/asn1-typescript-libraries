@@ -15,6 +15,8 @@ import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED
  * @summary report_body_part
  * @description
  *
+ * Information object `report_body_part`. Defined in ITU-T X.420 (1999) (§7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

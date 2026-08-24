@@ -23,6 +23,13 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_locally_originated
  * @description
  *
+ * Information object `ms_locally_originated`. This general-attribute indicates, by its
+ * presence or absence, whether this delivered-message entry was originated by this
+ * MS-user. ms-locally-originated ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX NULL, NUMERATION
+ * single-valued, ID id-att-locally-originated } 11.2.34 Marked-for-deletion This
+ * general-attribute indicates (by its presence or absence) whether the MS-user has
+ * marked the entry for subsequent deletion. See ITU-T X.413 (1999), §11.2.33.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

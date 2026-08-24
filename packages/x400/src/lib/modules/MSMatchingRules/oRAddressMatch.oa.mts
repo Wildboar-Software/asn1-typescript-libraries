@@ -20,6 +20,8 @@ import { id_mr_oraddress_match } from '../MSObjectIdentifiers/id-mr-oraddress-ma
  * @summary oRAddressMatch
  * @description
  *
+ * Information object `oRAddressMatch`. Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,9 @@ import { id_at_mhs_dl_submit_permissions } from '../MHSObjectIdentifiers/id-at-m
  * @summary mhs_dl_submit_permissions
  * @description
  *
+ * Information object `mhs_dl_submit_permissions`. Defined in ITU-T X.402 (1999) (§17 /
+ * Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

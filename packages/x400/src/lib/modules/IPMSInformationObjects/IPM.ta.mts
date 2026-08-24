@@ -24,6 +24,10 @@ import {
  * @summary IPM
  * @description
  *
+ * Interpersonal message: `heading` then `body` (ITU-T X.420 (1999), §7.1). The body is a
+ * SEQUENCE OF body parts; order is the originator's intended reading order. An empty
+ * body SEQUENCE is allowed (a heading-only IPM).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,11 @@ import {
  * @summary Pathname_Attribute
  * @description
  *
+ * `Pathname_Attribute`. The pathname attribute provides a file name. Pathname-Attribute
+ * ::= CHOICE { incomplete-pathname [0] Pathname, complete-pathname [23] Pathname }
+ * 7.4.12.5.2 Permitted Actions Attribute The permitted actions attribute indicates the
+ * set of actions that can be performed on the file. See ITU-T X.420 (1999), §7.4.12.5.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary GeneralTextParameters
  * @description
  *
+ * `GeneralTextParameters`. Defined in ITU-T X.420 (1999) (Annex C). SET OF: order is
+ * insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -35,6 +35,13 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary change_credentials
  * @description
  *
+ * Information object `change_credentials`. The Change-credentials abstract-operation
+ * enables the MTS-user to change the MTS-user’s simple-authentication credentials held
+ * by the MTS, or enables the MTS to change the MTS’s simple-authentication credentials
+ * held by the MTS-user. The credentials are exchanged during the establishment of an
+ * association for the mutual authentication of identity of the MTS-user and the MTS. See
+ * ITU-T X.411 (1999), §8.4.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

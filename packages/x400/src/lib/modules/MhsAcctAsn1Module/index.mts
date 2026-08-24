@@ -1,3 +1,9 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MhsAcctAsn1Module` (ITU-T X.411 (1999), accounting
+ * objects).
+ */
 export * from "./AccessRatePerDeliveryServiceType.ta.mjs";
 export * from "./Actions.ta.mjs";
 export {

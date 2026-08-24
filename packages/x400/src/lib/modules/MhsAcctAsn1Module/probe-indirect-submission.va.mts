@@ -18,6 +18,8 @@ import {
  * @summary probe_indirect_submission
  * @description
  *
+ * `probe_indirect_submission`. Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

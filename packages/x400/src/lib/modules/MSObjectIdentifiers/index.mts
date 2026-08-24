@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `MSObjectIdentifiers` (ITU-T X.413 (1999), Annex A).
+ */
 export * from "./id-aae-auto-alert-error.va.mjs";
 export * from "./id-aae.va.mjs";
 export * from "./id-act-auto-alert.va.mjs";

@@ -29,6 +29,13 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary probe_origin_authentication_check
  * @description
  *
+ * Information object `probe_origin_authentication_check`. This argument provides any MTA
+ * through which the probe is transferred, with a means of authenticating the origin of
+ * the probe (to provide the Probe Origin Authentication element-of-service as defined in
+ * The probe-origin-authentication-check provides proof of the origin of the probe (Probe
+ * Origin Authentication), and proof of association between the message-security-label
+ * and the content-identifier of the… See ITU-T X.411 (1999), §8.2.1.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

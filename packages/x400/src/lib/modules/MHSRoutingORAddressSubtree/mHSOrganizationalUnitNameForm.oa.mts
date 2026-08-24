@@ -17,6 +17,9 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary mHSOrganizationalUnitNameForm
  * @description
  *
+ * Information object `mHSOrganizationalUnitNameForm`. Defined in ITU-T X.412 (1999)
+ * (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

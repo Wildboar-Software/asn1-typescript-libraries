@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Operations
  * @description
  *
+ * `Operations`. This clause defines the following submission-port abstract-operations:
+ * a) Message-submission b) Probe-submission c) Cancel-deferred-delivery d)
+ * Submission-control. 8.2.1.1 Message-submission The Message-submission
+ * abstract-operation enables an MTS-user to submit a message to the MTS for transfer and
+ * delivery to one or more recipient MTS-users. See ITU-T X.411 (1999), §8.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

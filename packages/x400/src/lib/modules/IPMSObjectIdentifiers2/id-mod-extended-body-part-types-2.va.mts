@@ -15,6 +15,9 @@ import { id_iso_mod } from '../IPMSObjectIdentifiers2/id-iso-mod.va.mjs';
  * @summary id_mod_extended_body_part_types_2
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_extended_body_part_types_2`. Defined in ITU-T X.420 (1999)
+ * (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

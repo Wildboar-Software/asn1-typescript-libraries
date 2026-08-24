@@ -23,6 +23,8 @@ import { id_oc_mhs_generation_qualifier } from '../MHSRoutingObjectIdentifiers/i
  * @summary mHSGenerationQualifier
  * @description
  *
+ * Information object `mHSGenerationQualifier`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

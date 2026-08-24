@@ -51,6 +51,13 @@ import {
  * @summary CommonFields
  * @description
  *
+ * `CommonFields`. The Common fields are defined and described below. CommonFields ::=
+ * SEQUENCE { subject-edim [1] SubjectEDIMField, edin-originator [2] EDINOriginatorField,
+ * first-recipient [3] FirstRecipientField OPTIONAL, notification-time [4]
+ * NotificationTimeField, notification-security-elements [5] SecurityElementsField
+ * OPTIONAL, edin-initiator [6] EDINInitiatorField, notifications-extensions [7]
+ * NotificationExtensionsField… See ITU-T X.435 (1999), §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

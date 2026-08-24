@@ -20,6 +20,8 @@ import { type COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSI
  * @summary v42BisCompression
  * @description
  *
+ * Information object `v42BisCompression`. Defined in ITU-T X.435 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

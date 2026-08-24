@@ -27,6 +27,8 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary forwarding_request
  * @description
  *
+ * Information object `forwarding_request`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

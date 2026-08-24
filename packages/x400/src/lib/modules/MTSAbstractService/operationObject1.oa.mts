@@ -23,6 +23,8 @@ import { operationObject2 } from '../MTSAbstractService/operationObject2.oa.mjs'
  * @summary operationObject1
  * @description
  *
+ * Information object `operationObject1`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,13 @@ import { pkcs7_body_part } from '../PKCS7BodyPartType/pkcs7-body-part.oa.mjs';
  * @summary StandardBodyParts
  * @description
  *
+ * Information object set `StandardBodyParts`. The IPM Body Part Table information object
+ * set has as its members the types of body part that may appear in the Body of an IPM:
+ * IPMBodyPartTable EXTENDED-BODY-PART-TYPE ::= { StandardBodyParts |
+ * ApplicationSpecificBodyParts } The Standard Body Parts information object set has as
+ * its members the types of body part defined in this Specification: StandardBodyParts
+ * EXTENDED-BODY-PART-TYPE ::= { ia5-text-body-part |… See ITU-T X.420 (1999), §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,13 @@ import { id_at_recipient_md_assigned_alternate_recipient } from '../MHSRoutingOb
  * @summary recipientMDAssignedAlternateRecipient
  * @description
  *
+ * Information object `recipientMDAssignedAlternateRecipient`. The Recipient MD Assigned
+ * Alternate Recipient attribute type identifies an alternate-recipient, assigned by the
+ * administrator of the OR-address-subtree, to receive messages for unknown or
+ * ambiguously addressed recipients with this OR-address prefix. If redirection to an
+ * MD-specified alternate-recipient is required for an OR-address, the Error-processing
+ * procedure, defined in 14.3.6 of… See ITU-T X.412 (1999), §8.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

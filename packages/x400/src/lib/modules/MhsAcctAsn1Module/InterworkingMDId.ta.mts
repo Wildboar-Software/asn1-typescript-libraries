@@ -19,6 +19,8 @@ import {
  * @summary InterworkingMDId
  * @description
  *
+ * `InterworkingMDId`. Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

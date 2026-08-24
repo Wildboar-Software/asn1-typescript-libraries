@@ -15,6 +15,9 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_originator
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_originator`. The Originator heading field (O) identifies the
+ * IPM's originator. It comprises an OR-descriptor. See ITU-T X.420 (1999), §7.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

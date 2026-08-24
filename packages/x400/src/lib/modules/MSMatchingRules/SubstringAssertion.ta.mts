@@ -19,6 +19,9 @@ import {
  * @summary SubstringAssertion
  * @description
  *
+ * `SubstringAssertion`. Defined in ITU-T X.413 (1999) (§12.4 / §13). SEQUENCE OF:
+ * element order is significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

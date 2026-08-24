@@ -49,6 +49,9 @@ function universalOrBMPStringsAreEqual(
  * @summary UniversalPersonalName
  * @description
  *
+ * Universal-string twin of `PersonalName`. Language codes are ignored in comparison
+ * (ITU-T X.402 (1999), §18.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

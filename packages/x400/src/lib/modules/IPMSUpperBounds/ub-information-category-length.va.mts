@@ -15,6 +15,9 @@ import {
  * @summary ub_information_category_length
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_information_category_length`. Defined in ITU-T X.420
+ * (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,8 @@ import {
  * @summary MessageDeliveryEnvelope
  * @description
  *
+ * `MessageDeliveryEnvelope`. Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

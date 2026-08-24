@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TeletexOrganizationalUnitName
  * @description
  *
+ * `TeletexOrganizationalUnitName`. Defined in ITU-T X.402 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

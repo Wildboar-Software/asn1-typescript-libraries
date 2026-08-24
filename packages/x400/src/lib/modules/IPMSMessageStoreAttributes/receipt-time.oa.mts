@@ -28,6 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary receipt_time
  * @description
  *
+ * Information object `receipt_time`. The Receipt Time receipt field (M) identifies when
+ * the RN's originator received the subject IPM. It comprises a date and time. See ITU-T
+ * X.420 (1999), §8.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

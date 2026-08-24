@@ -28,6 +28,13 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary range_error
  * @description
  *
+ * Information object `range_error`. A Range-error reports a problem related to the range
+ * specified in a selector as an argument of an abstract-operation. range-error
+ * ABSTRACT-ERROR ::= { PARAMETER SET { problem [0] RangeProblem} CODE err-range-error }
+ * RangeProblem ::= INTEGER { reversed (0) } (0..ub-error-reasons) The parameter has the
+ * following meaning: Problem (M): The particular problem encountered. See ITU-T X.413
+ * (1999), §9.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

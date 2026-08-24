@@ -44,6 +44,9 @@ import { universal_unique_postal_name } from "../PkiPmiExternalDataTypes/univers
  * @summary ExtensionAttributeTable
  * @description
  *
+ * Object set of all standard OR-address `EXTENSION-ATTRIBUTE`s (ITU-T X.411 (1999),
+ * Annex A; X.402 (1999), Table 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

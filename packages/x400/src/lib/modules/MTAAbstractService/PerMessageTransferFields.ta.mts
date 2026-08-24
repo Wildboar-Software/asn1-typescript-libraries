@@ -71,6 +71,11 @@ import {
  * @summary PerMessageTransferFields
  * @description
  *
+ * `PerMessageTransferFields`. Defined in ITU-T X.411 (1999) (§12). SEQUENCE SIZE (1..…):
+ * omit this component rather than encode an empty SEQUENCE. ASN.1 DEFAULT `normal`: that
+ * value is assumed when the component is absent (do not encode the default unless
+ * required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import { RN, _decode_RN, _encode_RN } from '../IPMSInformationObjects/RN.ta.mjs'
  * @summary originate_rn_ArgumentType
  * @description
  *
+ * `originate_rn_ArgumentType`. Defined in ITU-T X.420 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

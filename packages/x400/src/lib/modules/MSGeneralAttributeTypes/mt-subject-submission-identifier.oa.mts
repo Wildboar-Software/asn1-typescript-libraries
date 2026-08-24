@@ -27,6 +27,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_subject_submission_identifier
  * @description
  *
+ * Information object `mt_subject_submission_identifier`. This general-attribute contains
+ * the subject-submission-identifier argument of the Report-delivery abstract-operation.
+ * It indicates the message-submission-identifier or the probe-submission-identifier of
+ * the subject of the report. See ITU-T X.413 (1999), §11.2.80.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

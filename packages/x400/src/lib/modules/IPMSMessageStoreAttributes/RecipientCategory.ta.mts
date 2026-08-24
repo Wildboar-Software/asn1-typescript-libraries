@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RecipientCategory
  * @description
  *
+ * `RecipientCategory`. The Recipient Category attribute indicates the category of
+ * recipient (primary, copy, blind copy, or circulation list), if known, in which this
+ * IPMS-MS-user was placed by the originator of a delivered IPM. If this recipient is
+ * represented in more than one category, the attribute assumes the lowest applicable
+ * value. See ITU-T X.420 (1999), §19.6.5.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

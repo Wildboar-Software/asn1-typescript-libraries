@@ -10,6 +10,10 @@ import {
  * @summary ExtensionORAddressComponents
  * @description
  *
+ * Formatted-postal extra addressee information, e.g. an organizational unit (ITU-T X.402
+ * (1999), §18.3.4). Named `extension-OR-address-components` in ASN.1 /
+ * `extension-postal-OR-address-components` in X.402 Table 9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

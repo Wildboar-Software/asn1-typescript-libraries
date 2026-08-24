@@ -15,6 +15,8 @@ import { id_mct } from '../EDIMSObjectIdentifiers/id-mct.va.mjs';
  * @summary id_mct_pedi
  * @description
  *
+ * OBJECT IDENTIFIER `id_mct_pedi`. Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

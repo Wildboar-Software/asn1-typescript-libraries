@@ -35,6 +35,8 @@ import {
  * @summary BodyPartSignatures_Item
  * @description
  *
+ * `BodyPartSignatures_Item`. Defined in ITU-T X.420 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

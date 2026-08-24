@@ -15,6 +15,10 @@ import {
  * @summary ub_communications_agreement_id
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_communications_agreement_id`. The Communications
+ * Agreement Id indicates the type of Communications Agreement controlling the
+ * interchange, e.g. Customs or other agreement. See ITU-T X.435 (1999), §8.2.3.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

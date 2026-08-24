@@ -19,6 +19,10 @@ import {
  * @summary FetchErrors
  * @description
  *
+ * `FetchErrors`. The message with instructions detailing the problem encountered. 126
+ * 14.2.1.4 Procedure Description 1) The message is checked for presence of the
+ * deferred-delivery-time field. See ITU-T X.411 (1999), §14.2.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

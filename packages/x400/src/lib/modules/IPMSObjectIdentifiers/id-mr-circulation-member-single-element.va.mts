@@ -15,6 +15,9 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_circulation_member_single_element
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_circulation_member_single_element`. Defined in ITU-T X.420
+ * (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

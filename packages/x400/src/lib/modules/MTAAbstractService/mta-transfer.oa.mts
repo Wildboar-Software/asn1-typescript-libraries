@@ -17,6 +17,8 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary mta_transfer
  * @description
  *
+ * Information object `mta_transfer`. Defined in ITU-T X.411 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,14 @@ import {
  * @summary PerRecipientReport
  * @description
  *
+ * `PerRecipientReport`. This general-attribute, which is multi-valued, contains the
+ * per-recipient-fields component of the Report-delivery- envelope. See Figure 2 (Part 9)
+ * of WITH ATTRIBUTE-SYNTAX PerRecipientReportDeliveryFields, NUMERATION multi-valued, ID
+ * id-att-per-recipient-report-delivery-fields } 11.2.61 Priority This general-attribute
+ * contains the priority argument of the Message-submission and Message-delivery
+ * abstract- operations. See ITU-T X.413 (1999), §11.2.60. ASN.1 DEFAULT `1`: that value
+ * is assumed when the component is absent (do not encode the default unless required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

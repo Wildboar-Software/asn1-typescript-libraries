@@ -15,6 +15,9 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  * @summary id_parameter_improperlySpecifiedRecipients
  * @description
  *
+ * OBJECT IDENTIFIER `id_parameter_improperlySpecifiedRecipients`. Defined in ITU-T X.411
+ * (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

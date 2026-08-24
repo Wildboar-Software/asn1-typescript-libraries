@@ -20,6 +20,9 @@ import { id_as_mrse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-88.va.
  * @summary message_retrieval_abstract_syntax_88
  * @description
  *
+ * Information object `message_retrieval_abstract_syntax_88`. Defined in ITU-T X.419
+ * (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

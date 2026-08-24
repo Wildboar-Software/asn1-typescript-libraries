@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ChangeCredentialsAlgorithms
  * @description
  *
+ * `ChangeCredentialsAlgorithms`. Defined in ITU-T X.413 (1999) (§6). SET OF: order is
+ * insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

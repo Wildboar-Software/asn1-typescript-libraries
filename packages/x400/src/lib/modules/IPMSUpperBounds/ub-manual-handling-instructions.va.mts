@@ -15,6 +15,9 @@ import {
  * @summary ub_manual_handling_instructions
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_manual_handling_instructions`. Defined in ITU-T X.420
+ * (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

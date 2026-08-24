@@ -28,6 +28,13 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_submitted_ipns
  * @description
  *
+ * Information object `ac_submitted_ipns`. The AC Submitted IPNs attribute, which is
+ * multi-valued, identifies the IPNs submitted in response to a delivered IPM. The
+ * IPMS-MS shall record, by means of this attribute, any IPN submitted by the
+ * IPMS-MS-user, and any NRN caused by the invocation of the Delete abstract-operation
+ * (see 19.4), or caused as a consequence of auto-actions performed by the IPMS-MS. See
+ * ITU-T X.420 (1999), §19.6.5.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeliveryFlags
  * @description
  *
+ * BIT STRING: bit 1 `implicit-conversion-prohibited` is 'one'; 'zero' means
+ * implicit-conversion-allowed (ITU-T X.411 (1999), Annex A). Bit 0 is unused. SIZE
+ * (0..`ub-bit-options`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

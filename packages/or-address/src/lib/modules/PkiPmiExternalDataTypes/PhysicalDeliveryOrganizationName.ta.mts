@@ -10,6 +10,8 @@ import {
  * @summary PhysicalDeliveryOrganizationName
  * @description
  *
+ * Postal patron's organization (ITU-T X.402 (1999), §18.3.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

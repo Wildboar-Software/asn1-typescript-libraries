@@ -27,6 +27,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary conversion_eits
  * @description
  *
+ * Information object `conversion_eits`. The Conversion EITs common field (C) identifies
+ * the EITs of the subject IPM upon delivery to the IPN's originator. It comprises an
+ * EITs descriptor. See ITU-T X.420 (1999), §8.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

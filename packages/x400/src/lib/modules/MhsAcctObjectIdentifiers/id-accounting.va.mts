@@ -15,6 +15,8 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @summary id_accounting
  * @description
  *
+ * OBJECT IDENTIFIER `id_accounting`. Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
  * @summary id_eit_sfd
  * @description
  *
+ * OBJECT IDENTIFIER `id_eit_sfd`. Defined in ITU-T X.411 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

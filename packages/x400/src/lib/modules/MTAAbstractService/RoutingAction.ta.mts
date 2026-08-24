@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RoutingAction
  * @description
  *
+ * `RoutingAction`. Defined in ITU-T X.411 (1999) (§12). ENUMERATED value `0` is a named
+ * variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

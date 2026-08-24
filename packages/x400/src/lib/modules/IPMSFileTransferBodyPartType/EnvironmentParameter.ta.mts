@@ -22,6 +22,14 @@ import {
  * @summary EnvironmentParameter
  * @description
  *
+ * `EnvironmentParameter`. The environment parameter describes the environment (e.g.,
+ * machine, operating system, and application) from which the file originated. It has the
+ * following syntax: EnvironmentParameter ::= SEQUENCE { application-reference [0]
+ * GeneralIdentifier OPTIONAL, machine [1] GeneralIdentifier OPTIONAL, operating-system
+ * [2] OBJECT IDENTIFIER OPTIONAL, user-visible-string [3] SEQUENCE OF GraphicString
+ * OPTIONAL }… See ITU-T X.420 (1999), §7.4.12.3. SEQUENCE OF: element order is
+ * significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

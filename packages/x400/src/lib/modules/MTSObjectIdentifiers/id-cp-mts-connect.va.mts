@@ -15,6 +15,8 @@ import { id_cp } from '../MTSObjectIdentifiers/id-cp.va.mjs';
  * @summary id_cp_mts_connect
  * @description
  *
+ * OBJECT IDENTIFIER `id_cp_mts_connect`. Defined in ITU-T X.411 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

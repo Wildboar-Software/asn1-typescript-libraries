@@ -15,6 +15,9 @@ import {
  * @summary ub_orig_and_dl_expansions
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_orig_and_dl_expansions`. Defined in ITU-T X.411 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

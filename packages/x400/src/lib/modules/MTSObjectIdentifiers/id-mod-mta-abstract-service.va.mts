@@ -15,6 +15,9 @@ import { id_mod } from '../MTSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_mta_abstract_service
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_mta_abstract_service`. Defined in ITU-T X.411 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

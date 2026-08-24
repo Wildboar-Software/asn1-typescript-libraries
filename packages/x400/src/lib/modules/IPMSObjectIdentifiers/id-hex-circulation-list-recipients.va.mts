@@ -15,6 +15,9 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  * @summary id_hex_circulation_list_recipients
  * @description
  *
+ * OBJECT IDENTIFIER `id_hex_circulation_list_recipients`. Defined in ITU-T X.420 (1999)
+ * (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary AUTO_ACTION_ERROR
  * @description
  *
+ * Information object class `AUTO_ACTION_ERROR`. This general-attribute identifies the
+ * auto-action-error which occurred when a registered auto-action was applied to an
+ * entry. The attribute may be present only in entries of the Auto-action-log entry-class
+ * (see 6.5.3). See ITU-T X.413 (1999), §11.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_dir } from '../EDIMSObjectIdentifiers/id-dir.va.mjs';
  * @summary id_doc
  * @description
  *
+ * OBJECT IDENTIFIER `id_doc`. Defined in ITU-T X.435 (1999) (§16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

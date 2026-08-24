@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ExtendedBodyPart
  * @description
  *
+ * `ExtendedBodyPart`. Every body part type defined in this Specification is defined as
+ * an instance of the Extended Body Part Type information object class. Every body part
+ * type defined elsewhere shall be defined in the same way. See ITU-T X.420 (1999),
+ * §7.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

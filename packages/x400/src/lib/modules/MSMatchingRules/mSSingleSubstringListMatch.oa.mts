@@ -21,6 +21,10 @@ import { id_mr_ms_single_substring_list_match } from '../MSObjectIdentifiers/id-
  * @summary mSSingleSubstringListMatch
  * @description
  *
+ * Information object `mSSingleSubstringListMatch`. Defined in ITU-T X.413 (1999) (§12.4
+ * / §13). SEQUENCE OF: element order is significant unless the using specification says
+ * otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_conversion_eits
  * @description
  *
+ * OBJECT IDENTIFIER `id_nat_conversion_eits`. The Conversion EITs common field (C)
+ * identifies the EITs of the subject IPM upon delivery to the IPN's originator. It
+ * comprises an EITs descriptor. See ITU-T X.420 (1999), §8.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

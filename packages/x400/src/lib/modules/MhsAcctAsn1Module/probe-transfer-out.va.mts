@@ -18,6 +18,8 @@ import {
  * @summary probe_transfer_out
  * @description
  *
+ * `probe_transfer_out`. Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

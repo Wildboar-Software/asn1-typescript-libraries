@@ -1,28 +1,8 @@
-/* eslint-disable */
-import {
-    INTEGER,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-
 /**
- * @summary ub_organization_name_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-organization-name-length INTEGER ::= 64
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex B (MTS upper bounds) / ITU-T X.402 (1999) §18.
  */
-export const ub_organization_name_length: INTEGER = 64;
+export {
+    ub_organization_name_length,
+} from "@wildboar/or-address";
 
-/* eslint-enable */

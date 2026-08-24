@@ -15,6 +15,12 @@ import { id_bat } from '../IPMSObjectIdentifiers/id-bat.va.mjs';
  * @summary id_bat_body
  * @description
  *
+ * OBJECT IDENTIFIER `id_bat_body`. The Body attribute is the (entire) Body of an IPM.
+ * body ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX Body, NUMERATION single-valued, ID
+ * id-bat-body } An IPMS-MS that supports this attribute shall maintain it for an
+ * information object that it holds if, and only if, that object is a message whose
+ * content is an IPM. See ITU-T X.420 (1999), §19.6.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

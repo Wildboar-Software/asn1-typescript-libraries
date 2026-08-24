@@ -15,6 +15,8 @@ import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers2/ID.ta.mjs'
  * @summary id_iso_ipms
  * @description
  *
+ * OBJECT IDENTIFIER `id_iso_ipms`. Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

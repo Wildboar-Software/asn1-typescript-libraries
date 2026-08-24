@@ -23,6 +23,9 @@ import { conversion_with_loss_prohibited } from "./conversion-with-loss-prohibit
  * @summary PerProbeSubmissionExtensions
  * @description
  *
+ * Information object set `PerProbeSubmissionExtensions`. Defined in ITU-T X.411 (1999)
+ * (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,13 @@ import { id_mr_information_category } from '../IPMSObjectIdentifiers/id-mr-infor
  * @summary informationCategoryMatch
  * @description
  *
+ * Information object `informationCategoryMatch`. The Information-category-match rule
+ * compares for equality a presented value with attribute-values of type Information
+ * Category as defined in A.1.10. informationCategoryMatch MATCHING-RULE ::= { SYNTAX
+ * InformationCategory ID id-mr-information-category } The rule returns true if, and only
+ * if, one of the following conditions is fulfilled for the presented value and at least
+ * one value of the attribute: a) the… See ITU-T X.420 (1999), §19.7.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

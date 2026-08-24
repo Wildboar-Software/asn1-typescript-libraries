@@ -19,6 +19,8 @@ import { id_nf } from '../MHSRoutingObjectIdentifiers/id-nf.va.mjs';
  * @summary id_nf_mhs_admd
  * @description
  *
+ * OBJECT IDENTIFIER `id_nf_mhs_admd`. Defined in ITU-T X.412 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

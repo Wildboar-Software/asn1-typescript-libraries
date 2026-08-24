@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDINInitiatorField
  * @description
  *
+ * `EDINInitiatorField`. Defined in ITU-T X.435 (1999) (§8). ENUMERATED value `0` is a
+ * named variant, not a sentinel for 'absent' or 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary op_ms_cancel_deferred_delivery
  * @description
  *
+ * `op_ms_cancel_deferred_delivery`. Defined in ITU-T X.419 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

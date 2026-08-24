@@ -24,6 +24,8 @@ import {
  * @summary receive_edin_ArgumentType
  * @description
  *
+ * `receive_edin_ArgumentType`. Defined in ITU-T X.435 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

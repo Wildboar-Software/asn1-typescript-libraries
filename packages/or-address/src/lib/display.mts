@@ -1,3 +1,8 @@
+/**
+ * RFC 1685 labelled form and RFC 2156 MIXER `std-or-address` printers for
+ * O/R addresses. Organizational unit order is reversed in the string forms
+ * relative to the ASN.1 SEQUENCE (ITU-T X.402 (1999), §18.3.10).
+ */
 import {
     escapeRFC2156StdPrintable,
     escape_oraddress_attribute_value,

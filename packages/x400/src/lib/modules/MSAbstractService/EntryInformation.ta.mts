@@ -30,6 +30,14 @@ import {
  * @summary EntryInformation
  * @description
  *
+ * `EntryInformation`. An entry-information parameter conveys selected information from
+ * an entry. EntryInformation ::= SEQUENCE { sequence-number SequenceNumber, attributes
+ * SET SIZE (1..ub-per-entry) OF Attribute OPTIONAL, -- 1994 extension --
+ * value-count-exceeded [0] SET SIZE(1..ub-per-entry) OF AttributeValueCount OPTIONAL }
+ * AttributeValueCount ::= SEQUENCE { type [0] ATTRIBUTE.&id ({AttributeTable}), total
+ * [1] INTEGER } The… See ITU-T X.413 (1999), §8.1.5. SET SIZE (1..…): omit this
+ * component rather than encode an empty SET; SET order is insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

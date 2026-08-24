@@ -17,6 +17,8 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary assembly_capability
  * @description
  *
+ * Information object `assembly_capability`. Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

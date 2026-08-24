@@ -26,6 +26,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_probe_origin_authentication_check
  * @description
  *
+ * Information object `mt_probe_origin_authentication_check`. This general-attribute
+ * contains the probe-origin-authentication-check argument of the Probe-submission
+ * abstract- operation. It provides any MTA through which the probe is transferred with a
+ * means of authenticating its origin. See ITU-T X.413 (1999), §11.2.62.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

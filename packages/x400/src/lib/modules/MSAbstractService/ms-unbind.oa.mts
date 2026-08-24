@@ -23,6 +23,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_unbind
  * @description
  *
+ * Information object `ms_unbind`. The MS-unbind abstract-operation closes the
+ * abstract-association, and causes the relaxation of any fetch-restrictions that were
+ * specified in the argument of the MS-bind abstract-operation. There is no argument,
+ * result, or error associated with the MS-unbind abstract-operation. See ITU-T X.413
+ * (1999), §7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

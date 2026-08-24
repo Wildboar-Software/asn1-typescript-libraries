@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `EDIMUseOfDirectory` (ITU-T X.435 (1999), §16).
+ */
 export * from "./AssociationAssignedCode.ta.mjs";
 export * from "./ControllingAgency.ta.mjs";
 export * from "./DocumentRelease.ta.mjs";

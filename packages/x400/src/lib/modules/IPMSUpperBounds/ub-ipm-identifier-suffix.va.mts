@@ -15,6 +15,9 @@ import {
  * @summary ub_ipm_identifier_suffix
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_ipm_identifier_suffix`. Defined in ITU-T X.420 (1999)
+ * (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

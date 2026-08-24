@@ -14,6 +14,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FilterItem_substrings_strings_Item
  * @description
  *
+ * `FilterItem_substrings_strings_Item`. Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

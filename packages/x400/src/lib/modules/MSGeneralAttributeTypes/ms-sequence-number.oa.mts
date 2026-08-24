@@ -28,6 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_sequence_number
  * @description
  *
+ * Information object `ms_sequence_number`. This general-attribute identifies the entry
+ * containing the attribute. It is allocated by the MS when the entry is created (see
+ * 6.3.2). See ITU-T X.413 (1999), §11.2.76.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary err_range_error
  * @description
  *
+ * `err_range_error`. Defined in ITU-T X.419 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,9 @@ import {
  * @summary BodyPartTokens
  * @description
  *
+ * `BodyPartTokens`. Defined in ITU-T X.420 (1999) (§15). SET OF: order is insignificant;
+ * duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

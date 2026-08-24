@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AutoForwardComment
  * @description
  *
+ * PrintableString comment inserted when auto-forwarding (ITU-T X.420 (1999), §19). Empty
+ * string is a comment that is present but blank, distinct from omitting the field.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

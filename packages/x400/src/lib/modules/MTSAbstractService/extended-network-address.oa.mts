@@ -1,47 +1,8 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import {
-    ExtendedNetworkAddress,
-    _decode_ExtendedNetworkAddress,
-    _encode_ExtendedNetworkAddress,
-} from '../MTSAbstractService/ExtendedNetworkAddress.ta.mjs';
-import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
- * @summary extended_network_address
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * extended-network-address EXTENSION-ATTRIBUTE ::= {
- *   ExtendedNetworkAddress
- *   IDENTIFIED BY  22
- * }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<ExtendedNetworkAddress>}
- * @implements {EXTENSION_ATTRIBUTE<ExtendedNetworkAddress>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const extended_network_address: EXTENSION_ATTRIBUTE<ExtendedNetworkAddress> = {
-    class: 'EXTENSION-ATTRIBUTE',
-    decoderFor: {
-        '&Type': _decode_ExtendedNetworkAddress,
-    },
-    encoderFor: {
-        '&Type': _encode_ExtendedNetworkAddress,
-    },
-    '&id': 22 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
+export {
+    extended_network_address,
+} from "@wildboar/or-address";
 
-/* eslint-enable */

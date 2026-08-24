@@ -10,6 +10,9 @@ import {
  * @summary PosteRestanteAddress
  * @description
  *
+ * Code a user gives a post office to collect held physical messages (ITU-T X.402 (1999),
+ * §18.3.20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

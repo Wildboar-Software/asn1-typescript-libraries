@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EnvelopeType
  * @description
  *
+ * `EnvelopeType`. Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

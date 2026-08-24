@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubmittedIPNStatus
  * @description
  *
+ * `SubmittedIPNStatus`. The AC Submitted IPN Status attribute indicates whether an
+ * interpersonal notification for a delivered message was requested and whether one has
+ * been sent. ac-submitted-ipn-status ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX
+ * SubmittedIPNStatus, EQUALITY MATCHING-RULE integerMatch, ORDERING MATCHING-RULE
+ * integerOrderingMatch, NUMERATION single-valued, ID id-cat-submitted-ipn-status }
+ * SubmittedIPNStatus ::= INTEGER{… See ITU-T X.420 (1999), §19.6.5.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary ub_local_user_identifier
  * @description
  *
+ * ASN.1 upper-bound INTEGER `ub_local_user_identifier`. Defined in ITU-T X.412 (1999)
+ * (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_dl_expansion_history
  * @description
  *
+ * OBJECT IDENTIFIER `id_att_dl_expansion_history`. This general-attribute, which is
+ * multi-valued, contains a history of distribution-list expansion. If present in a
+ * delivered- message, it contains one or more distribution-list names used during the
+ * expansion process. See ITU-T X.413 (1999), §11.2.28.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

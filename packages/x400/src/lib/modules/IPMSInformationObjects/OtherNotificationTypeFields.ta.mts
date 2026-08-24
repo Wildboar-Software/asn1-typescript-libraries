@@ -19,6 +19,12 @@ import {
  * @summary OtherNotificationTypeFields
  * @description
  *
+ * `OtherNotificationTypeFields`. The other notification type fields are defined and
+ * described below. OtherNotificationTypeFields ::= SET OF IPMSExtension {{
+ * OtherNotifications }} OtherNotifications IPMS-EXTENSION ::= { AdviceNotifications |
+ * PrivateIPMSExtensions, ... See ITU-T X.420 (1999), §8.4. SET OF: order is
+ * insignificant; duplicates are typically meaningless.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

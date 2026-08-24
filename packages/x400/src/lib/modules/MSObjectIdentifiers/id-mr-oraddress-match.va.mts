@@ -15,6 +15,8 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_oraddress_match
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_oraddress_match`. Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

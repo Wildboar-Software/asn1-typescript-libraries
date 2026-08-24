@@ -1,3 +1,9 @@
+/**
+ * @description
+ *
+ * Re-exports of ASN.1 module `IPMSFileTransferBodyPartType` (ITU-T X.420 (1999), Annex
+ * C).
+ */
 export * from "./Abstract-Syntax-Name.ta.mjs";
 export * from "./Access-Control-Attribute.ta.mjs";
 export * from "./Access-Control-Element.ta.mjs";

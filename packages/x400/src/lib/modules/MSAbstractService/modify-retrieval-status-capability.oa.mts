@@ -17,6 +17,9 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary modify_retrieval_status_capability
  * @description
  *
+ * Information object `modify_retrieval_status_capability`. Defined in ITU-T X.413 (1999)
+ * (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

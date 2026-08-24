@@ -19,6 +19,9 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  * @summary id_oc_oraddress_subtree_base
  * @description
  *
+ * OBJECT IDENTIFIER `id_oc_oraddress_subtree_base`. Defined in ITU-T X.412 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

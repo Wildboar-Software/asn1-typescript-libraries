@@ -10,6 +10,13 @@ import {
  * @summary UniversalPostOfficeBoxAddress
  * @description
  *
+ * `UniversalPostOfficeBoxAddress`. A post-office-box-address is a standard attribute
+ * that specifies the number of the post office box by means of which a user takes
+ * delivery of physical messages. The value of a post-office-box-address is a Printable
+ * String, Teletex String, Universal String, or a combination of these types chosen from
+ * the set of such strings assigned for this purpose by the post office denoted by a
+ * physical-delivery- office-name… See ITU-T X.402 (1999), §18.3.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

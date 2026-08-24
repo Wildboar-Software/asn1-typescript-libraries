@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OtherActions
  * @description
  *
+ * `OtherActions`. Defined in ITU-T X.411 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

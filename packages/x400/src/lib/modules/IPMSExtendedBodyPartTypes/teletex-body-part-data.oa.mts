@@ -20,6 +20,8 @@ import { id_et_teletex } from '../IPMSObjectIdentifiers/id-et-teletex.va.mjs';
  * @summary teletex_body_part_data
  * @description
  *
+ * Information object `teletex_body_part_data`. Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

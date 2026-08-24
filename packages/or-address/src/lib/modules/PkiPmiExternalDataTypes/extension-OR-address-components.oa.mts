@@ -9,6 +9,11 @@ import {
  * @summary extension_OR_address_components
  * @description
  *
+ * OR-address extension attribute for the Printable encoding of
+ * `extension-OR-address-components` (ITU-T X.402 (1999), §18.3.4; X.411 (1999), Annex
+ * A). Printable, Teletex and Universal encodings of the same value are equivalent for
+ * comparison (X.402 §18.4). Universal language codes are ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

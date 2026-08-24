@@ -20,6 +20,8 @@ import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs'
  * @summary receive_on_ArgumentType
  * @description
  *
+ * `receive_on_ArgumentType`. Defined in ITU-T X.420 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

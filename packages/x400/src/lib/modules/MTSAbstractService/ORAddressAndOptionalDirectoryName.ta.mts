@@ -19,6 +19,9 @@ import {
  * @summary ORAddressAndOptionalDirectoryName
  * @description
  *
+ * Alias of `ORName`: O/R address plus optional directory name (ITU-T X.411 (1999), Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

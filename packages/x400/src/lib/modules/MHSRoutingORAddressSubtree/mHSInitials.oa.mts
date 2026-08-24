@@ -23,6 +23,8 @@ import { id_oc_mhs_initials } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-ini
  * @summary mHSInitials
  * @description
  *
+ * Information object `mHSInitials`. Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

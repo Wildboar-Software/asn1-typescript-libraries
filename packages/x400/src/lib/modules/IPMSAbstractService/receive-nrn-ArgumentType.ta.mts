@@ -24,6 +24,8 @@ import {
  * @summary receive_nrn_ArgumentType
  * @description
  *
+ * `receive_nrn_ArgumentType`. Defined in ITU-T X.420 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

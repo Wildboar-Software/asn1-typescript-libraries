@@ -1,65 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    PDSParameter,
-    _decode_PDSParameter,
-    _encode_PDSParameter,
-} from '../MTSAbstractService/PDSParameter.ta.mjs';
 /**
- * @summary LocalPostalAttributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * LocalPostalAttributes  ::=  PDSParameter
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type LocalPostalAttributes = PDSParameter; // DefinedType
+export type {
+    LocalPostalAttributes,
+} from "@wildboar/or-address";
+export {
+    _decode_LocalPostalAttributes,
+    _encode_LocalPostalAttributes,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_LocalPostalAttributes: $.ASN1Decoder<LocalPostalAttributes> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LocalPostalAttributes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LocalPostalAttributes} The decoded data structure.
- */
-export function _decode_LocalPostalAttributes(el: _Element): LocalPostalAttributes {
-    if (!_cached_decoder_for_LocalPostalAttributes) {
-        _cached_decoder_for_LocalPostalAttributes = _decode_PDSParameter;
-    }
-    return _cached_decoder_for_LocalPostalAttributes(el);
-}
-
-let _cached_encoder_for_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttributes> | null = null;
-
-/**
- * @summary Encodes a(n) LocalPostalAttributes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LocalPostalAttributes, encoded as an ASN.1 Element.
- */
-export function _encode_LocalPostalAttributes(
-    value: LocalPostalAttributes,
-    elGetter: $.ASN1Encoder<LocalPostalAttributes>
-): _Element {
-    if (!_cached_encoder_for_LocalPostalAttributes) {
-        _cached_encoder_for_LocalPostalAttributes = _encode_PDSParameter;
-    }
-    return _cached_encoder_for_LocalPostalAttributes(value, elGetter);
-}
-
-
-/* eslint-enable */

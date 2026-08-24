@@ -27,6 +27,13 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary proof_of_delivery
  * @description
  *
+ * Information object `proof_of_delivery`. This argument provides the originator of the
+ * message with proof that the message has been delivered to the recipient (to provide
+ * the Proof of Delivery element-of-service as defined in Delivery element-of-service (as
+ * defined in The proof-of-delivery is computed using the algorithm identified by the
+ * proof-of-delivery-algorithm-identifier (an algorithm-identifier). The
+ * proof-of-delivery contains the… See ITU-T X.411 (1999), §8.3.1.1.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

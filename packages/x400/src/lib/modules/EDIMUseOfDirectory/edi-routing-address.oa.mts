@@ -26,6 +26,12 @@ import { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-rou
  * @summary edi_routing_address
  * @description
  *
+ * Information object `edi_routing_address`. The Routing Address, if present, is an
+ * address for routing to the sender/recipient specified in the Identification Code. This
+ * is semantically identical to the "Address for reverse routing / Routing address"
+ * component of the Interchange sender/recipient of the EDIFACT UNB segment. See ITU-T
+ * X.435 (1999), §8.1.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

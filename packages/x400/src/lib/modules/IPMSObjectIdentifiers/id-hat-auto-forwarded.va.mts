@@ -15,6 +15,10 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_auto_forwarded
  * @description
  *
+ * OBJECT IDENTIFIER `id_hat_auto_forwarded`. The Auto-forwarded heading field (D false)
+ * indicates whether the IPM is the result of auto-forwarding. It is a Boolean. See ITU-T
+ * X.420 (1999), §7.2.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

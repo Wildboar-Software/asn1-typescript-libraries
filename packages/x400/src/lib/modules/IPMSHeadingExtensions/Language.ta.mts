@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Language
  * @description
  *
+ * `Language`. This Specification cites the following Language Code specification: – ISO
+ * 639: 1988, Code for the representation of names of languages. 2.5 Character Sets This
+ * Specification cites the following Character Set specifications: – – ISO 2375:1985,
+ * Data processing – Procedure for registration of escape sequences. See ITU-T X.420
+ * (1999), §2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

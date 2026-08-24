@@ -42,6 +42,13 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary delete_
  * @description
  *
+ * Information object `delete_`. The Auto-delete auto-action enables the MS-user to
+ * instruct the MS to delete an entry (and any child-entries associated with it)
+ * automatically at a predetermined interval after its creation. The MS shall subject to
+ * Auto-deletion every entry in the Stored-message entry-class which possesses a
+ * storage-time general-attribute whose value is less than the current date and time. See
+ * ITU-T X.413 (1999), §13.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

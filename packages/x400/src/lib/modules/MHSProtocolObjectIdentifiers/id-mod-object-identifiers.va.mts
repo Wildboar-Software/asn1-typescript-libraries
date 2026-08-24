@@ -19,6 +19,9 @@ import { id_mod } from '../MHSProtocolObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_object_identifiers
  * @description
  *
+ * OBJECT IDENTIFIER `id_mod_object_identifiers`. Defined in ITU-T X.419 (1999) (Annex
+ * A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

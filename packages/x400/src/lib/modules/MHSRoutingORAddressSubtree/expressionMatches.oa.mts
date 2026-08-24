@@ -26,6 +26,13 @@ import { id_at_mhs_expression_matches } from '../MHSRoutingObjectIdentifiers/id-
  * @summary expressionMatches
  * @description
  *
+ * Information object `expressionMatches`. The Expression Matches attribute type, which
+ * is single-valued, contains information which enables a routing-MTA to relate
+ * routing-advice to an OR-address that satisfies an OR-address pattern match expression.
+ * expressionMatches ATTRIBUTE ::= { WITH SYNTAX ExpressionMatches SINGLE VALUE TRUE ID
+ * id-at-mhs-expression-match } ExpressionMatches ::= SEQUENCE OF ExpressionMatch Each
+ * expression-match is ordered in… See ITU-T X.412 (1999), §8.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,13 @@ import {
  * @summary EXTENSION
  * @description
  *
+ * Information object class `EXTENSION`. A mechanism is defined in Figure 2 (part 17) to
+ * enable extensions to be defined. Where extensions may appear, a parameterized
+ * information object set indicates those extensions defined in this Service Definition
+ * which may be present, but other extensions defined elsewhere (e.g., privately, or by
+ * addenda or future versions of this Recommendation | International Standard) may also
+ * be included. See ITU-T X.411 (1999), §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

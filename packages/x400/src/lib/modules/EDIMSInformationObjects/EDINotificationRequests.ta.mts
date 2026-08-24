@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDINotificationRequests
  * @description
  *
+ * `EDINotificationRequests`. The EDI Notification Requests component (Default: no
+ * notifications, no notification security and no reception security) may make certain
+ * requests of the preferred recipient deNOTEd by the Recipient field. NOTE 1 – The fact
+ * that a message can be redirected or forwarded is reflected in the word "preferred"
+ * above. See ITU-T X.435 (1999), §8.2.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

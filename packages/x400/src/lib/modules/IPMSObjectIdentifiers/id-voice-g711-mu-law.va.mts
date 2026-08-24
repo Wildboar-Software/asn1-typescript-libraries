@@ -15,6 +15,8 @@ import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
  * @summary id_voice_g711_mu_law
  * @description
  *
+ * OBJECT IDENTIFIER `id_voice_g711_mu_law`. Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_mts_identifier_match
  * @description
  *
+ * OBJECT IDENTIFIER `id_mr_mts_identifier_match`. The MTS-identifier-match rule compares
+ * for equality a presented value with attribute-values of type MTS-identifier.
+ * mTSIdentifierMatch MATCHING-RULE ::= { SYNTAX MTSIdentifier ID
+ * id-mr-mts-identifier-match } Each element of MTS-identifier (country-name,
+ * administration-domain-name, private-domain-identifier, and local- identifier) is
+ * matched using the MS-string-match rule. See ITU-T X.413 (1999), §12.4.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

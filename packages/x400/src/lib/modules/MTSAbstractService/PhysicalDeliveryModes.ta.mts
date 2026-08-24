@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PhysicalDeliveryModes
  * @description
  *
+ * BIT STRING (ITU-T X.411 (1999), Annex A, extension 9). Bits 0–6 (`ordinary-mail` …
+ * `counter-collection-with-teletex-advice`) are mutually exclusive; bit 7
+ * `bureau-fax-delivery` may be set independently. IF ABSENT default is `ordinary-mail`.
+ * An empty BIT STRING is not the default — omit the extension instead.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

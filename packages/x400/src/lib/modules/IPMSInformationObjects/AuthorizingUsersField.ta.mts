@@ -19,6 +19,9 @@ import {
  * @summary AuthorizingUsersField
  * @description
  *
+ * `AuthorizingUsersField`. Defined in ITU-T X.420 (1999) (§7). SEQUENCE OF: element
+ * order is significant unless the using specification says otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

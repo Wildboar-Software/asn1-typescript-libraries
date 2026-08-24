@@ -96,6 +96,9 @@ import { mt_trace_information } from '../MSGeneralAttributeTypes/mt-trace-inform
  * @summary GeneralAttributes
  * @description
  *
+ * Information object set `GeneralAttributes`. An entry consists of a set of attributes.
+ * This is depicted in Figure 2. See ITU-T X.413 (1999), §6.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

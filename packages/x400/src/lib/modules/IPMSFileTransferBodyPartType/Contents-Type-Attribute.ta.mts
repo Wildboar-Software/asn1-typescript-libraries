@@ -24,6 +24,8 @@ import {
  * @summary Contents_Type_Attribute
  * @description
  *
+ * `Contents_Type_Attribute`. Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,71 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    OrganizationalUnitName,
-    _decode_OrganizationalUnitName,
-    _encode_OrganizationalUnitName,
-} from '../MTSAbstractService/OrganizationalUnitName.ta.mjs';
 /**
- * @summary OrganizationalUnitNames
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * OrganizationalUnitNames  ::=
- *   SEQUENCE SIZE (1..ub-organizational-units) OF OrganizationalUnitName
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type OrganizationalUnitNames = OrganizationalUnitName[]; // SequenceOfType
+export type {
+    OrganizationalUnitNames,
+} from "@wildboar/or-address";
+export {
+    _decode_OrganizationalUnitNames,
+    _encode_OrganizationalUnitNames,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_OrganizationalUnitNames: $.ASN1Decoder<OrganizationalUnitNames> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) OrganizationalUnitNames
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OrganizationalUnitNames} The decoded data structure.
- */
-export function _decode_OrganizationalUnitNames(el: _Element): OrganizationalUnitNames {
-    if (!_cached_decoder_for_OrganizationalUnitNames) {
-        _cached_decoder_for_OrganizationalUnitNames = $._decodeSequenceOf<OrganizationalUnitName>(
-            () => _decode_OrganizationalUnitName
-        );
-    }
-    return _cached_decoder_for_OrganizationalUnitNames(el);
-}
-
-let _cached_encoder_for_OrganizationalUnitNames: $.ASN1Encoder<OrganizationalUnitNames> | null = null;
-
-/**
- * @summary Encodes a(n) OrganizationalUnitNames into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OrganizationalUnitNames, encoded as an ASN.1 Element.
- */
-export function _encode_OrganizationalUnitNames(
-    value: OrganizationalUnitNames,
-    elGetter: $.ASN1Encoder<OrganizationalUnitNames>
-): _Element {
-    if (!_cached_encoder_for_OrganizationalUnitNames) {
-        _cached_encoder_for_OrganizationalUnitNames = $._encodeSequenceOf<OrganizationalUnitName>(
-            () => _encode_OrganizationalUnitName,
-            $.BER
-        );
-    }
-    return _cached_encoder_for_OrganizationalUnitNames(value, elGetter);
-}
-
-
-/* eslint-enable */

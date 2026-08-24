@@ -15,6 +15,9 @@ import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
  * @summary id_moc_misManagementDomain
  * @description
  *
+ * OBJECT IDENTIFIER `id_moc_misManagementDomain`. Defined in ITU-T X.411 (1999)
+ * (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

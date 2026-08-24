@@ -15,6 +15,10 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_g3_facsimile
  * @description
  *
+ * OBJECT IDENTIFIER `id_ep_g3_facsimile`. A G3 Facsimile body part represents Group 3
+ * facsimile images. It has Parameters and Data components. See ITU-T X.420 (1999),
+ * §7.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

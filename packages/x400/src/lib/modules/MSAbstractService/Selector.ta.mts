@@ -32,6 +32,9 @@ import {
  * @summary Selector
  * @description
  *
+ * MS selector: child-entries, filter, and limits (ITU-T X.413 (1999), §8.1). An absent
+ * filter means no filtering (all selected children), not 'match nothing'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  * @summary id_act_auto_modify
  * @description
  *
+ * OBJECT IDENTIFIER `id_act_auto_modify`. The Auto-modify auto-action enables the
+ * MS-user to instruct the MS to apply modifications automatically to the attributes of
+ * an entry provided that the entry satisfies given criteria. The auto-action is
+ * performed whenever an entry of the Stored-message or Message-log entry-classes is
+ * created, i.e., when a message or report is delivered, or when a draft message is
+ * stored, or when a message or probe is submitted… See ITU-T X.413 (1999), §13.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

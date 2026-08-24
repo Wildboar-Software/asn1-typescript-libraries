@@ -25,6 +25,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary new_credentials_unacceptable
  * @description
  *
+ * Information object `new_credentials_unacceptable`. The New-credentials-unacceptable
+ * abstract-error reports that the credentials cannot be changed because the
+ * new-credentials are unacceptable. The New-credentials-unacceptable abstract-error has
+ * no parameters. See ITU-T X.411 (1999), §8.4.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,13 @@ import {
  * @summary Range
  * @description
  *
+ * `Range`. A range parameter is used to select a contiguous sequence of entries of a
+ * specified entry-class. Range ::= CHOICE { sequence-number-range [0] NumberRange,
+ * creation-time-range [1] TimeRange } NumberRange ::= SEQUENCE { from [0] SequenceNumber
+ * OPTIONAL -- omitted means no lower bound--, to [1] SequenceNumber OPTIONAL -- omitted
+ * means no upper bound--} TimeRange ::= SEQUENCE { from [0] CreationTime OPTIONAL --…
+ * See ITU-T X.413 (1999), §8.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -28,6 +28,13 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edims_entry_type
  * @description
  *
+ * Information object `edims_entry_type`. The EDIMS Entry Type attribute identifies an
+ * information object’s type. edims-entry-type ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX
+ * EDIMSEntryType, EQUALITY MATCHING-RULE integerMatch, NUMERATION single-valued, ID
+ * id-sat-edims-entry-type } EDIMSEntryType ::= ENUMERATED { edim (0), pn (1), nn (2), fn
+ * (3) } Attribute Single/ multi valued Support level by EDI-MS Presence in delivered
+ * EDIM Presence in submitted EDIM… See ITU-T X.435 (1999), §18.8.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

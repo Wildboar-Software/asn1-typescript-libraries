@@ -23,6 +23,8 @@ import { type APPLICATION_CONTEXT } from '@wildboar/rose';
  * @summary mts_reliable_access_94
  * @description
  *
+ * Information object `mts_reliable_access_94`. Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

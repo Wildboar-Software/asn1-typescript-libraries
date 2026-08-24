@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_recipientTokenSigAlg
  * @description
  *
+ * OBJECT IDENTIFIER `id_attribute_recipientTokenSigAlg`. Defined in ITU-T X.411 (1999)
+ * (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

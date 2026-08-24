@@ -20,6 +20,13 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary originator_forwarded_content_token
  * @description
  *
+ * Information object `originator_forwarded_content_token`. The Originator forwarded
+ * content token MS-submission-extension is used where the submitted message contains a
+ * Forwarded Content Token (see B.6.2) that has been encrypted such that it cannot
+ * subsequently be decrypted by the originator. This extension enables the originator to
+ * supply a Forwarded Content Token constructed as if the originator were a recipient of
+ * the message, to be stored in the submitted-message… See ITU-T X.420 (1999), §19.5.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

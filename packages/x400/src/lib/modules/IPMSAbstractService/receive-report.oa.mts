@@ -27,6 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_report
  * @description
  *
+ * Information object `receive_report`. A Report body part represents an MTS Report. It
+ * has a Data component. See ITU-T X.420 (1999), §7.4.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary err_element_of_service_not_subscribed
  * @description
  *
+ * `err_element_of_service_not_subscribed`. Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

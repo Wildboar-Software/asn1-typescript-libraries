@@ -15,6 +15,9 @@ import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
  * @summary id_aae_edi_auto_forwarding_loop
  * @description
  *
+ * OBJECT IDENTIFIER `id_aae_edi_auto_forwarding_loop`. Defined in ITU-T X.435 (1999)
+ * (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

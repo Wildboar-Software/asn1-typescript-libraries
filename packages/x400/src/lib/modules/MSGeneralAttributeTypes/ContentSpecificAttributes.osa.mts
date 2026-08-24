@@ -15,6 +15,9 @@ import { type X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
  * @summary ContentSpecificAttributes
  * @description
  *
+ * Information object set `ContentSpecificAttributes`. An entry consists of a set of
+ * attributes. This is depicted in Figure 2. See ITU-T X.413 (1999), §6.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
