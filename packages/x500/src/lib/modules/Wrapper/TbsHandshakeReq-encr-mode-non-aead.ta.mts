@@ -14,6 +14,11 @@ import {
  * @summary TbsHandshakeReq_encr_mode_non_aead
  * @description
  *
+ * Separate encryption and ICV. `encr` OPTIONAL SEQUENCE (1..MAX)
+ * preference-ordered; **absent ⇒ no confidentiality**. `icvAlgID`
+ * required SEQUENCE (1..MAX). Always 2 ICV keys; +2 enc keys if `encr`
+ * is present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +30,14 @@ export class TbsHandshakeReq_encr_mode_non_aead {
     constructor(
         /**
          * @summary `encr`.
+         * @description Preference-ordered symmetric-key algorithms; absent ⇒ no confidentiality.
          * @public
          * @readonly
          */
         readonly encr: OPTIONAL<AlgorithmIdentifier[]>,
         /**
          * @summary `icvAlgID`.
+         * @description Preference-ordered ICV algorithms (required; non-empty).
          * @public
          * @readonly
          */

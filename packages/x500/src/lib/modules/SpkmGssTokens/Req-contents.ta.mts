@@ -49,6 +49,11 @@ export type SingleThreadBuffer = ReturnType<Buffer["filter"]>;
  * @summary Req_contents
  * @description
  *
+ * Body of the initiator token. `tok-id` is 256 (0x0100). SPKM-2 requires
+ * `timestamp`. `src-name` is omitted only for an anonymous initiator.
+ * `key-src-bind` is mandatory for SPKM-2 unilateral authentication if the
+ * chosen K-ALG does not bind initiator name to the context key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -82,79 +87,146 @@ export type SingleThreadBuffer = ReturnType<Buffer["filter"]>;
 export class Req_contents {
 
     /**
-     * The original DER encoding
+     * DER of this value as received (or `null` if constructed locally).
+     * Integrity is over DER of `Req-contents`; re-encode only if this is
+     * absent.
      */
     public originalDER: SingleThreadBuffer | null = null;
 
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 256 (0x0100). Distinct from the CHOICE tag on
+         * `SPKMInnerContextToken`; this value is inside the signed/MACed
+         * bytes.
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * Initiator's fresh random. If a reply is expected, the target
+         * concatenates its own random onto this; for SPKM-2 unilateral
+         * this value is the context-id as-is. Need only be fresh, not
+         * unpredictable.
+         *
          * @public
          * @readonly
          */
         readonly context_id: Random_Integer,
         /**
          * @summary `pvno`.
+         * @description
+         *
+         * One bit per protocol version; bit 0 is this RFC (version 0).
+         * Token version is the highest bit set. SPKM-2 unilateral: set
+         * exactly one bit (no negotiation).
+         *
          * @public
          * @readonly
          */
         readonly pvno: BIT_STRING,
         /**
          * @summary `timestamp`.
+         * @description
+         *
+         * Mandatory for SPKM-2 (timestamp replay detection). SPKM-1 uses
+         * `randSrc` instead and may omit this.
+         *
          * @public
          * @readonly
          */
         readonly timestamp: OPTIONAL<UTCTime>,
         /**
          * @summary `randSrc`.
+         * @description
+         *
+         * Initiator nonce; echoed by the target in `SPKM-REP-TI`.
+         *
          * @public
          * @readonly
          */
         readonly randSrc: Random_Integer,
         /**
          * @summary `targ_name`.
+         * @description
+         *
+         * Intended target. Must match the name in the target's cert.
+         *
          * @public
          * @readonly
          */
         readonly targ_name: Name,
         /**
          * @summary `src_name`.
+         * @description
+         *
+         * Required unless the initiator is anonymous. Echoed in later
+         * tokens if present.
+         *
          * @public
          * @readonly
          */
         readonly src_name: OPTIONAL<Name>,
         /**
          * @summary `req_data`.
+         * @description
+         *
+         * Offered algorithms, options, and optional channel bindings /
+         * initial sequence number.
+         *
          * @public
          * @readonly
          */
         readonly req_data: Context_Data,
         /**
          * @summary `validity`.
+         * @description
+         *
+         * Only SPKM way to send desired context lifetime. Clocks need not
+         * be synced: the *span* is authoritative, not the absolute times.
+         *
          * @public
          * @readonly
          */
         readonly validity: OPTIONAL<Validity>,
         /**
          * @summary `key_estb_set`.
+         * @description
+         *
+         * Offered K-ALGs in preference order. `key-estb-req` is the key
+         * (or half) for the *first* algorithm. SPKM-2 unilateral: no
+         * K-ALG negotiation. Two-pass K-ALGs (e.g. DH) need SPKM-1 mutual.
+         *
          * @public
          * @readonly
          */
         readonly key_estb_set: Key_Estb_Algs,
         /**
          * @summary `key_estb_req`.
+         * @description
+         *
+         * Key material for the first K-ALG. Omit if the initiator cannot
+         * or will not generate the context key (target must then supply
+         * it). Established key length: L ≤ M ≤ U (RFC 2025 §2.4).
+         *
          * @public
          * @readonly
          */
         readonly key_estb_req?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `key_src_bind`.
+         * @description
+         *
+         * MD5(DER(`src-name`) || unprotected context key). Required for
+         * SPKM-2 unilateral if the K-ALG itself does not bind source to
+         * key; optional otherwise.
+         *
          * @public
          * @readonly
          */

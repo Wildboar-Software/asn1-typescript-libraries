@@ -37,6 +37,12 @@ import {
  * @summary DsaReferralData
  * @description
  *
+ * DSP replacement for DAP `referral`. `reference` is a
+ * ContinuationReference. `contextPrefix` only if the request
+ * `returnCrossRefs` was TRUE and the referral is based on a
+ * subordinate or cross reference; else absent. COMPONENTS OF
+ * CommonResults. Optionally signed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,12 +59,22 @@ export class DsaReferralData implements CommonResults {
     constructor(
         /**
          * @summary `reference`.
+         * @description
+         *
+         * ContinuationReference to follow (possibly LDAP).
+         *
          * @public
          * @readonly
          */
         readonly reference: ContinuationReference,
         /**
          * @summary `contextPrefix`.
+         * @description
+         *
+         * Only if request `returnCrossRefs` was TRUE and the referral is
+         * based on a subordinate or cross reference; else absent. Admin
+         * decides which knowledge may be returned.
+         *
          * @public
          * @readonly
          */
@@ -71,24 +87,42 @@ export class DsaReferralData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the error is signed; absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the error is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the error; not necessarily
+         * stored attributes.
+         *
          * @public
          * @readonly
          */

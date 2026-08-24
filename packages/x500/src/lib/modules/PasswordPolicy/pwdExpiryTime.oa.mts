@@ -13,6 +13,9 @@ import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generali
  * @summary pwdExpiryTime
  * @description
  *
+ * Admin-set expiry instant. **If absent, default = `pwdStartTime` +
+ * `pwdExpiryAge`.**
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

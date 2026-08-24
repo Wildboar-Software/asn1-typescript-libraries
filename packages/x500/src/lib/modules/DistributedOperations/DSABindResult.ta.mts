@@ -10,6 +10,9 @@ import {
  * @summary DSABindResult
  * @description
  *
+ * `DSABindResult ::= DSABindArgument` (same components). Responder
+ * AE-title as a DN in `credentials`; no SASL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

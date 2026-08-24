@@ -11,6 +11,10 @@ import { id_contentType } from "../PkiPmiWrapper/id-contentType.va.mjs";
  * @summary contentType
  * @description
  *
+ * RFC 5652 signed attribute. SINGLE VALUE; syntax WRAPPED-PDU.&id
+ * (`SupportedPduSet`); equality `objectIdentifierMatch`; PKCS #9 3
+ * `{iso member-body us rsadsi pkcs pkcs9 3}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

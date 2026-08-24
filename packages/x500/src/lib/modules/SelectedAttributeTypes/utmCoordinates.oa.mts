@@ -14,6 +14,8 @@ import { utmCoords } from "../SelectedAttributeTypes/utmCoords.oa.mjs";
  * @summary utmCoordinates
  * @description
  *
+ * SINGLE VALUE. SEQUENCE `zone` (PrintableString: one letter then up to two digits), `easting` / `northing` (NumericString, metres). Component order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

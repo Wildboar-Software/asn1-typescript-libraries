@@ -15,6 +15,9 @@ import {
  * @summary ERROR_TOKEN
  * @description
  *
+ * Error-token body. `tok-id` is 1024 (0x0400). Used only during context
+ * establishment. No diagnostic code — the token itself signals failure.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +32,21 @@ export class ERROR_TOKEN {
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 1024 (0x0400).
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * Context-id of the failed establishment (may still be initiator-
+         * only if REP-TI was never sent).
+         *
          * @public
          * @readonly
          */

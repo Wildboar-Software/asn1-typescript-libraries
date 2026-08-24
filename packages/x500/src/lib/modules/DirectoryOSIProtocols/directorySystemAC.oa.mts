@@ -19,6 +19,11 @@ import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
  * @summary directorySystemAC
  * @description
  *
+ * DSP application-context. Either DSA may Bind; both sides invoke.
+ * Always asynchronous. Implies all DSP ops, including chained
+ * `ldapTransport` and `linkedLDAP`. Wait for BindResult before ops.
+ * Version on Bind does not constrain later PDUs (unlike DISP/DOP).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,10 @@ import {
  * @summary Mic_Header
  * @description
  *
+ * MIC header. `tok-id` is 257 (0x0101). Omitted `int-alg` means the
+ * default I-ALG. Omitted `snd-seq` is allowed but sequencing is
+ * recommended. Header bytes are part of the checksum.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +45,42 @@ export class Mic_Header {
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 257 (0x0101). Cryptographically bound into the checksum
+         * so a MIC cannot be spliced onto another token type.
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * Established context-id.
+         *
          * @public
          * @readonly
          */
         readonly context_id: Random_Integer,
         /**
          * @summary `int_alg`.
+         * @description
+         *
+         * Must be one of the agreed I-ALGs. Omit for the default (first
+         * agreed I-ALG).
+         *
          * @public
          * @readonly
          */
         readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `snd_seq`.
+         * @description
+         *
+         * Sender sequence number; increment by 1 after emitting the token.
+         *
          * @public
          * @readonly
          */

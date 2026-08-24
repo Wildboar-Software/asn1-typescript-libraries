@@ -8,6 +8,11 @@ import { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseE
  * @summary caseExactIA5Match
  * @description
  *
+ * IA5String + clause 7 prep. Any step fail ⇒ UNDEFINED. Empty after
+ * prohibit ⇒ UNDEFINED. All-spaces after space-removal ⇒ single SPACE.
+ * Prepared strings ephemeral.
+ * TRUE iff identical prepared chars.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_updateError
  * @description
  *
+ * DAP/DSP local:8 (`updateError`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

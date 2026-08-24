@@ -10,6 +10,8 @@ import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-fa
  * @summary facsimileTelephoneNr
  * @description
  *
+ * LDAP syntax object for Directory `FacsimileTelephoneNumber` (used by `facsimileTelephoneNumber`). LDAP transfer is typically number `$` G3 parameters; matching ignores parameters (on the ATTRIBUTE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,10 @@ import {
  * @summary PostalAddress
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) — order is address lines; empty invalid. Typically
+ * ≤6 lines × 30 characters including country. `caseIgnoreListMatch`: same
+ * line count; substrings must not span lines.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

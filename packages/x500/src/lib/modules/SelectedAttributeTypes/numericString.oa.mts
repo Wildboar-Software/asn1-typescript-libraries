@@ -7,6 +7,8 @@ import { id_lsx_numericString } from "../SelectedAttributeTypes/id-lsx-numericSt
  * @summary numericString
  * @description
  *
+ * LDAP transfer of NumericString: digits and spaces (IETF RFC 4517).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

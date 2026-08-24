@@ -15,6 +15,11 @@ import {
  * @summary HandshakeWrpRej
  * @description
  *
+ * Wrapper-level reject of `HandshakeReq`: `Signed{TbsHandshakeWrpRej}`.
+ * `altSignature` shall be absent. `diag` **absent if alert** (possible
+ * adversary), else present. If none of the suggested versions is
+ * supported, still return some version the server supports.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

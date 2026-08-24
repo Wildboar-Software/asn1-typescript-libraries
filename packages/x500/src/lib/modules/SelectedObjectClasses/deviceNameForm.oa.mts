@@ -7,6 +7,9 @@ import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameF
  * @summary deviceNameForm
  * @description
  *
+ * Names `device` by `commonName`. Typical superiors: organization or
+ * organizationalUnit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

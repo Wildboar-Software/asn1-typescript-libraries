@@ -118,6 +118,17 @@ import {
  * @summary SearchArgumentData
  * @description
  *
+ * `filter` DEFAULT `and:{}` (matches all). `subset` DEFAULT `baseObject`.
+ * `searchAliases` DEFAULT TRUE (subordinate aliases, not the base).
+ * `matchedValuesOnly`: no effect on `present`, negated items, or
+ * FALSE/UNDEFINED `or` elements; for `or` evaluate ALL arms. If
+ * `searchControlOptions` present, ignore corresponding BOOLEAN
+ * components. `joinArguments` SEQUENCE order not significant.
+ * `joinType` DEFAULT `leftOuterJoin`. `hierarchySelections` DEFAULT
+ * `{self}`. Compound entry counts as one vs `subset` unless
+ * `searchFamily`. Unfiltered search of one entry ≠ Read (Read
+ * `attributeError`s if none of the selected attributes exist).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -159,48 +170,87 @@ export class SearchArgumentData implements CommonArguments {
         readonly baseObject: Name,
         /**
          * @summary `subset`.
+         * @description
+         *
+         * DEFAULT `baseObject`. Compound entry counts as one vs `subset`
+         * unless `searchFamily`. If base is a child family member, members
+         * count as individual entries.
+         *
          * @public
          * @readonly
          */
         readonly subset?: OPTIONAL<SearchArgumentData_subset>,
         /**
          * @summary `filter`.
+         * @description
+         *
+         * DEFAULT `and:{}` (matches all).
+         *
          * @public
          * @readonly
          */
         readonly filter?: OPTIONAL<Filter>,
         /**
          * @summary `searchAliases`.
+         * @description
+         *
+         * DEFAULT TRUE. Subordinate aliases, not the base (that is
+         * `dontDereferenceAliases`). Ignored if `searchControlOptions`
+         * present.
+         *
          * @public
          * @readonly
          */
         readonly searchAliases?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `selection`.
+         * @description
+         *
+         * DEFAULT {}. Unfiltered search of one entry ≠ Read.
+         *
          * @public
          * @readonly
          */
         readonly selection?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `pagedResults`.
+         * @description
+         *
+         * DSA may ignore. If paging is performed, the paging DSA ignores
+         * `sizeLimit`.
+         *
          * @public
          * @readonly
          */
         readonly pagedResults?: OPTIONAL<PagedResultsRequest>,
         /**
          * @summary `matchedValuesOnly`.
+         * @description
+         *
+         * DEFAULT FALSE. No effect on `present`, negated items, or
+         * FALSE/UNDEFINED `or` elements. For `or`, evaluate ALL arms.
+         *
          * @public
          * @readonly
          */
         readonly matchedValuesOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extendedFilter`.
+         * @description
+         *
+         * 1993+: ignore `filter` if present. 1988: ignore `extendedFilter`.
+         *
          * @public
          * @readonly
          */
         readonly extendedFilter?: OPTIONAL<Filter>,
         /**
          * @summary `checkOverspecified`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ `overspecFilter` in POQ if empty due to
+         * overspecification.
+         *
          * @public
          * @readonly
          */
@@ -213,30 +263,52 @@ export class SearchArgumentData implements CommonArguments {
         readonly relaxation?: OPTIONAL<RelaxationPolicy>,
         /**
          * @summary `extendedArea`.
+         * @description
+         *
+         * >0 relax, <0 tighten.
+         *
          * @public
          * @readonly
          */
         readonly extendedArea?: OPTIONAL<INTEGER>,
         /**
          * @summary `hierarchySelections`.
+         * @description
+         *
+         * DEFAULT `{self}`. Ignored for entries not in a hierarchical group.
+         *
          * @public
          * @readonly
          */
         readonly hierarchySelections?: OPTIONAL<HierarchySelections>,
         /**
          * @summary `searchControlOptions`.
+         * @description
+         *
+         * DEFAULT `{searchAliases}`. If this component is present, ignore the
+         * corresponding BOOLEAN components.
+         *
          * @public
          * @readonly
          */
         readonly searchControlOptions?: OPTIONAL<SearchControlOptions>,
         /**
          * @summary `joinArguments`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Order not significant. All joins done
+         * before returning; intermediates not visible.
+         *
          * @public
          * @readonly
          */
         readonly joinArguments?: OPTIONAL<JoinArgument[]>,
         /**
          * @summary `joinType`.
+         * @description
+         *
+         * DEFAULT `leftOuterJoin`.
+         *
          * @public
          * @readonly
          */

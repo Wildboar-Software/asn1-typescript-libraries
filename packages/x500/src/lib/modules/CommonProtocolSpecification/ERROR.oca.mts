@@ -5,6 +5,12 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary ERROR
  * @description
  *
+ * Unsuccessful outcome of an operation. `&ParameterType` is required.
+ * `&errorCode` is UNIQUE within a protocol. Local integers are reused
+ * across protocols (`shadowError` is local:1, same as DAP
+ * `attributeError`). Unknown error types/problems are not protocol
+ * violations (ignore / pass through; do not abort).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,10 +55,18 @@ export interface ERROR<
     >;
     /**
      * @summary &ParameterType
+     * @description
+     *
+     * Required. Nature of the error; unknown problems/parameters shall not
+     * be treated as a protocol violation.
      */
     readonly "&ParameterType": ParameterType;
     /**
      * @summary &errorCode
+     * @description
+     *
+     * UNIQUE within the protocol. Directory uses `local` integers;
+     * `referral` (4) is DAP-only, `dsaReferral` (9) is DSP-only.
      */
     readonly "&errorCode"?: Code;
 }

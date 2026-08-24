@@ -15,6 +15,10 @@ import {
  * @summary IdmBindResult
  * @description
  *
+ * Successful Bind. `protocolID` shall equal the Bind's. Association is
+ * in place once received. Responder may originate requests immediately
+ * after sending this if the protocol allows it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,18 +35,30 @@ export class IdmBindResult {
     constructor(
         /**
          * @summary `protocolID`.
+         * @description
+         *
+         * Shall equal the Bind's `protocolID`.
+         *
          * @public
          * @readonly
          */
         readonly protocolID: OBJECT_IDENTIFIER,
         /**
          * @summary `respondingAETitle`.
+         * @description
+         *
+         * Responder's AE name. Optional.
+         *
          * @public
          * @readonly
          */
         readonly respondingAETitle: OPTIONAL<GeneralName>,
         /**
          * @summary `result`.
+         * @description
+         *
+         * Bind-operation RESULT for `protocolID` (open type).
+         *
          * @public
          * @readonly
          */

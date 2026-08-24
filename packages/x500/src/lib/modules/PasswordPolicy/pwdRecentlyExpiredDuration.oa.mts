@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdRecentlyExpiredDuration
  * @description
  *
+ * Seconds the old password remains valid in `userPwdRecentlyExpired`
+ * after replace. INTEGER (0..MAX). Object-entry value overrides a
+ * covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

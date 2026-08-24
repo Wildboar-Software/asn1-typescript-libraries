@@ -7,6 +7,8 @@ import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.
  * @summary orgUnitNameForm
  * @description
  *
+ * Names `organizationalUnit` by `organizationalUnitName`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -13,6 +13,11 @@ import { id_not_searchControlOptionsList } from "../SelectedAttributeTypes/id-no
  * @summary searchControlOptionsList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. `SearchControlOptions` bit string (X.511). A set bit
+ * means that option is invalid (forbidden, unsupported, or required but
+ * absent). SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

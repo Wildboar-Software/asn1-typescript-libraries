@@ -10,6 +10,8 @@ import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs"
  * @summary epcForm
  * @description
  *
+ * LDAP transfer of EpcFormat using GSER (IETF RFC 3641, 3642 and 4792).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

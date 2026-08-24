@@ -14,6 +14,10 @@ import {
  * @summary NonSpecificHierarchicalAgreement
  * @description
  *
+ * Only `immediateSuperior` [1]; no `rdn`. Tag [0] unused (aligned with
+ * HOB tagging). Uniqueness of the new context prefix name is outside
+ * this specification.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +31,11 @@ export class NonSpecificHierarchicalAgreement {
     constructor(
         /**
          * @summary `immediateSuperior`.
+         * @description
+         *
+         * DN of the entry immediately superior to the new naming context.
+         * Supplied by the initiator.
+         *
          * @public
          * @readonly
          */

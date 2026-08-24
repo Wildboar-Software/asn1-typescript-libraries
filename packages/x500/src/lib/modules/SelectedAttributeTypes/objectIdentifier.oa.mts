@@ -12,6 +12,9 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary objectIdentifier
  * @description
  *
+ * SINGLE VALUE OBJECT IDENTIFIER. May be used as the only RDN of a
+ * distinguished name that uniquely identifies the object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

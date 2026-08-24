@@ -7,6 +7,9 @@ import { id_mr_uTCTimeOrderingMatch } from "../SelectedAttributeTypes/id-mr-uTCT
  * @summary uTCTimeOrderingMatch
  * @description
  *
+ * Omitted seconds = 0. Year 00–49 → 2000+; 50–99 → 1900+. Years 50–99 are
+ * earlier than 00–49. TRUE iff stored is earlier than presented.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

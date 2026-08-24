@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedRead
  * @description
  *
+ * `chained{read}`. Same opcode as DAP `read`. `dsaReferral` instead of
+ * `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

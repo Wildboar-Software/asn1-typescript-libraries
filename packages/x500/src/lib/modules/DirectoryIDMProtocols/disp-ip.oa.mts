@@ -9,6 +9,10 @@ import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.
  * @summary disp_ip
  * @description
  *
+ * DISP over IDM. Unlike OSI (four ACs splitting ops and sync/async),
+ * this single protocol carries all three DISP ops. Both sides may
+ * request. Always async. Same opcodes as DISP (6.4.2 / 6.5.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

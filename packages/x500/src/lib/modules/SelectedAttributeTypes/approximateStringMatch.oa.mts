@@ -5,6 +5,10 @@ import { id_mr_approximateStringMatch } from "../SelectedAttributeTypes/id-mr-ap
  * @summary approximateStringMatch
  * @description
  *
+ * Local algorithm; same as Filter approximateMatch. Assertion syntax = the
+ * attribute's equality MR assertion syntax. No equality MR ⇒ always
+ * UNDEFINED.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

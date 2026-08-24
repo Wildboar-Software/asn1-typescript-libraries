@@ -10,6 +10,10 @@ import {
  * @summary AttributeTypes
  * @description
  *
+ * Unordered SET OF attribute type OIDs. Naming a supertype implicitly
+ * includes its subtypes. Empty SET is legal (include nothing / exclude
+ * nothing, depending on which `ClassAttributes` alternative holds it).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,10 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  * @summary id_ac_shadowConsumerInitiatedAsynchronousAC
  * @description
  *
+ * {id-ac 9}. Same ops as `shadowConsumerInitiatedAC`; ROS mode is
+ * asynchronous. Optional if the DSA already supports the sync
+ * consumer-initiated AC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

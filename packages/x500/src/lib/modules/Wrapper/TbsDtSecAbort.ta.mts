@@ -36,6 +36,10 @@ import {
  * @summary TbsDtSecAbort
  * @description
  *
+ * To-be-signed data-transfer **wrapper** abort. Integrity via **signature,
+ * not ICV**. `seq` is the sequence number that caused the exception.
+ * `diag` absent iff alert. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,36 +58,42 @@ export class TbsDtSecAbort {
     constructor(
         /**
          * @summary `sigAlg`.
+         * @description Signature algorithm selected at handshake (clause 9.3). Signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigAlg: AlgorithmIdentifier,
         /**
          * @summary `assoID`.
+         * @description Same value as in the corresponding `HandshakeReq`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `seq`.
+         * @description Sequence number of the data-transfer WrPDU that caused the exception.
          * @public
          * @readonly
          */
         readonly seq: SequenceNumber,
         /**
          * @summary `diag`.
+         * @description `WrpError` when not an alert; **absent if alert**.
          * @public
          * @readonly
          */

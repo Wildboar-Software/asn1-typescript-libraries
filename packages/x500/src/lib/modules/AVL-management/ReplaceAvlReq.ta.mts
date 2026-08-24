@@ -24,6 +24,8 @@ import {
  * @summary ReplaceAvlReq
  * @description
  *
+ * Authorizer replaces an AVL. Embed in `DataTransferClient`. `old` present: must match a local serial. **Absent**: the unique local AVL with no `serialNumber`; otherwise `unknownAVL`. `new` is the replacement `CertAVL`. Also 13.7 a–h (invalid signature → alert + `AbortAVL` `noReason`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +41,30 @@ export class ReplaceAvlReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with `ReplaceAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `old`.
+         * @description
+         *
+         * Serial of the AVL to replace. Absent means the unique local AVL that itself has no `serialNumber`.
+         *
          * @public
          * @readonly
          */
         readonly old: OPTIONAL<AvlSerialNumber>,
         /**
          * @summary `new_`.
+         * @description
+         *
+         * Replacement `CertAVL` (ASN.1 `new`). Subject to the same 13.7 checks as add, including signature.
+         *
          * @public
          * @readonly
          */

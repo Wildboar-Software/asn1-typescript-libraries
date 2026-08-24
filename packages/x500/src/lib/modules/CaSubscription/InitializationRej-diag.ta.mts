@@ -10,6 +10,9 @@ export enum _enum_for_InitializationRej_diag {
  * @summary InitializationRej_diag
  * @description
  *
+ * Init-reject diagnostic. TS/ASN.1 name is `unsupportedVersion`(0); clause
+ * 14.5 prose says unsupportedVersions.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +27,9 @@ export type InitializationRej_diag =
 
 /**
  * @summary InitializationRej_diag_unsupportedVersion
+ * @description
+ *
+ * Server supports none of the versions the client proposed.
  * @constant
  * @type {number}
  */
@@ -31,6 +37,9 @@ export const InitializationRej_diag_unsupportedVersion: InitializationRej_diag =
 
 /**
  * @summary unsupportedVersion
+ * @description
+ *
+ * Server supports none of the versions the client proposed.
  * @constant
  * @type {number}
  */

@@ -10,6 +10,8 @@ import {
  * @summary telexNr
  * @description
  *
+ * LDAP syntax object for Directory `TelexNumber` (used by `telexNumber`). Three PrintableStrings; LDAP transfer typically `$`-separated `telexNumber`, `countryCode`, `answerback`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -34,6 +34,10 @@ import {
  * @summary UpdateShadowArgumentData
  * @description
  *
+ * The actual refresh. Requires a completed coordinate or request for this
+ * agreement. Updates need not be a freeze-frame of the supplier, but shall
+ * be internally consistent for the replicated area.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,30 +55,54 @@ export class UpdateShadowArgumentData {
     constructor(
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Must match the preceding coordinate/request. No prior
+         * coordinate/request → `invalidSequencing`.
+         *
          * @public
          * @readonly
          */
         readonly agreementID: AgreementID,
         /**
          * @summary `updateTime`.
+         * @description
+         *
+         * Supplier-assigned. Used as `lastUpdate` on the next coordinate
+         * or request so both sides share a view of the copy.
+         *
          * @public
          * @readonly
          */
         readonly updateTime: Time,
         /**
          * @summary `updateWindow`.
+         * @description
+         *
+         * Next window the supplier expects to send. Allowed only if the
+         * agreement's `SchedulingParameters.othertimes` is TRUE.
+         *
          * @public
          * @readonly
          */
         readonly updateWindow: OPTIONAL<UpdateWindow>,
         /**
          * @summary `updatedInfo`.
+         * @description
+         *
+         * Total, incremental, `noRefresh`, or an external strategy. Applied
+         * independently of previously transmitted updates.
+         *
          * @public
          * @readonly
          */
         readonly updatedInfo: RefreshInformation,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this argument is signed. `target` is `none`.
+         *
          * @public
          * @readonly
          */

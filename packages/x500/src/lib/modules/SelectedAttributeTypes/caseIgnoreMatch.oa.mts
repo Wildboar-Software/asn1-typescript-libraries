@@ -11,6 +11,12 @@ import {
  * @summary caseIgnoreMatch
  * @description
  *
+ * Prep both: Transcode→Map (case-fold)→Normalize KC→Prohibit→bidi→
+ * insignificant space removal. Any step fail ⇒ UNDEFINED. Empty after
+ * prohibit ⇒ UNDEFINED. All-spaces after space-removal ⇒ single SPACE,
+ * not empty. Prepared strings ephemeral.
+ * TRUE iff identical prepared chars.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

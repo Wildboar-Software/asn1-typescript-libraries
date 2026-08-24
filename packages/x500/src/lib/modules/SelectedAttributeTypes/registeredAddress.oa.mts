@@ -15,6 +15,8 @@ import {
  * @summary registeredAddress
  * @description
  *
+ * SUBTYPE OF `postalAddress`. Mnemonic for an address at a city, registered in that country for the Public Telegram Service (F.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,11 @@ import {
  * @summary DAP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{directoryAccessAC}`: Bind/Result/Error, operations, Unbind,
+ * and presentation abort for DAP. Initiator must wait for BindResult
+ * before sending operations. Abort (ARU/ARP) may be sent at any time
+ * after Bind. Two concurrent Binds = two associations.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

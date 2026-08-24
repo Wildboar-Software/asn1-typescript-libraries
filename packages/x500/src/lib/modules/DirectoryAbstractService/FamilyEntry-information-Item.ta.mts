@@ -15,6 +15,9 @@ import {
  * @summary FamilyEntry_information_Item
  * @description
  *
+ * CHOICE type-only vs full `Attribute`. `infoTypes` applies to these
+ * contained attrs, not the family-information carrier.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

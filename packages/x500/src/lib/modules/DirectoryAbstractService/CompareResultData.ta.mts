@@ -42,6 +42,9 @@ import {
  * @summary CompareResultData
  * @description
  *
+ * `matchedSubtype` only if `matched` is TRUE because of a subtype; if
+ * several, the highest in the hierarchy. `fromEntry` DEFAULT TRUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,24 +63,41 @@ export class CompareResultData implements CommonResults {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * Present if an alias was deref'd and the returned name ≠ `object`.
+         *
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<Name>,
         /**
          * @summary `matched`.
+         * @description
+         *
+         * TRUE if the equality MR succeeded on type or subtype (not friends).
+         *
          * @public
          * @readonly
          */
         readonly matched: BOOLEAN,
         /**
          * @summary `fromEntry`.
+         * @description
+         *
+         * DEFAULT TRUE. TRUE = entry, FALSE = copy.
+         *
          * @public
          * @readonly
          */
         readonly fromEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `matchedSubtype`.
+         * @description
+         *
+         * Only if `matched` is TRUE because of a subtype; if several, the
+         * highest in the hierarchy.
+         *
          * @public
          * @readonly
          */
@@ -90,6 +110,10 @@ export class CompareResultData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this result is signed; absence ≡ empty.
+         *
          * @public
          * @readonly
          */

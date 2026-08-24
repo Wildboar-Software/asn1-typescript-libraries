@@ -17,6 +17,13 @@ import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.
  * @summary dap_ip
  * @description
  *
+ * DAP over IDM. Only DUAs initiate; only the initiator requests.
+ * Always async. Requests may be sent after Bind and before BindResult;
+ * the responder shall finish Bind before processing them. Same opcodes
+ * as DAP/DSP (6.4.1 / 6.5.1). No `ldapTransport` / `linkedLDAP`.
+ * `protocolID` also selects the application context — one
+ * IDM-PROTOCOL per AC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

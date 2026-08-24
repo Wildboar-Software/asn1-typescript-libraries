@@ -11,6 +11,14 @@ import {
  * @summary caseExactSubstringsMatch
  * @description
  *
+ * Prep both: Transcode→Map→Normalize KC→Prohibit→bidi→insignificant
+ * space removal. Any step fail ⇒ UNDEFINED. Empty after prohibit ⇒
+ * UNDEFINED. All-spaces after space-removal ⇒ single SPACE, not empty.
+ * Prepared strings ephemeral.
+ * SubstringAssertion: at most one initial (must be first) and one final
+ * (must be last). Partition stored so components match successive
+ * portions. Combining chars match with base. `control` ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

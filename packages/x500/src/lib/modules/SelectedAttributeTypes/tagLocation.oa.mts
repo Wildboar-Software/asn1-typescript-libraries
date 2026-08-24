@@ -10,6 +10,9 @@ import { utmCoords } from "../SelectedAttributeTypes/utmCoords.oa.mjs";
  * @summary tagLocation
  * @description
  *
+ * Tag position as UTM coordinates. SUBTYPE OF `utmCoordinates`. SINGLE
+ * VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

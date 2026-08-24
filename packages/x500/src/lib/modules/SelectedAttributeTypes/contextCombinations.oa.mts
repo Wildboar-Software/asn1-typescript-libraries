@@ -13,6 +13,11 @@ import {
  * @summary contextCombinations
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Context combinations that were required in the filter
+ * but were
+ * not supplied.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

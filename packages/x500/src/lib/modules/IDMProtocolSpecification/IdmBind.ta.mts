@@ -15,6 +15,13 @@ import {
  * @summary IdmBind
  * @description
  *
+ * Opens an IDM association. Initiator of TCP sends Bind. `protocolID`
+ * selects the IDM-PROTOCOL (and implicitly the AC). AE titles are
+ * `GeneralName`s; both optional. Requests may follow Bind before
+ * BindResult; responder processes Bind first. If the protocol allows
+ * responder-originated requests, those may start as soon as BindResult
+ * is sent. On BindError the initiator may retry Bind or close TCP.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,24 +39,43 @@ export class IdmBind {
     constructor(
         /**
          * @summary `protocolID`.
+         * @description
+         *
+         * IDM-PROTOCOL.&id. Selects the protocol and, implicitly, the
+         * application context. Echoed in BindResult / BindError.
+         *
          * @public
          * @readonly
          */
         readonly protocolID: OBJECT_IDENTIFIER,
         /**
          * @summary `callingAETitle`.
+         * @description
+         *
+         * Sender's AE name (`GeneralName`). Optional. BindError
+         * `callingAETitleNotAccepted` if present and unacceptable.
+         *
          * @public
          * @readonly
          */
         readonly callingAETitle: OPTIONAL<GeneralName>,
         /**
          * @summary `calledAETitle`.
+         * @description
+         *
+         * Intended recipient AE name. Optional. BindError
+         * `calledAETitleNotRecognized` if present and not this AE.
+         *
          * @public
          * @readonly
          */
         readonly calledAETitle: OPTIONAL<GeneralName>,
         /**
          * @summary `argument`.
+         * @description
+         *
+         * Bind-operation ARGUMENT for `protocolID` (open type).
+         *
          * @public
          * @readonly
          */

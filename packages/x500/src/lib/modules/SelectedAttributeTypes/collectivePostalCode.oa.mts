@@ -10,6 +10,8 @@ import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
  * @summary collectivePostalCode
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `postalCode`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

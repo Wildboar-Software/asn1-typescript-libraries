@@ -10,6 +10,9 @@ import {
  * @summary octetStringSubstringsMatch
  * @description
  *
+ * OctetSubstringAssertion: at most one initial (must be first) and one
+ * final (must be last). Partition stored like string substrings.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time
  * @description
  *
+ * UTCTime 00–49 ⇒ 20xx, 50–99 ⇒ 19xx. Do not use UTCTime for dates after
+ * 2049. GeneralizedTime if negotiated version is v2 or greater; using it
+ * on v1 may break old implementations.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary initials
  * @description
  *
+ * SUBTYPE OF `name`. Initials of some or all of an individual's names **except the surname(s)**.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

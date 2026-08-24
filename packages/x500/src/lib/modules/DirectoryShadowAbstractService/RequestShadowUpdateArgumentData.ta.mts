@@ -29,6 +29,10 @@ import {
  * @summary RequestShadowUpdateArgumentData
  * @description
  *
+ * Consumer request for an update of one agreement. Must complete before
+ * the matching `updateShadow`. No `noChanges` strategy — that exists only
+ * on `coordinateShadowUpdate`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +55,45 @@ export class RequestShadowUpdateArgumentData {
     constructor(
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Agreement being requested. Unknown → `invalidAgreementID`;
+         * inactive → `inactiveAgreement`.
+         *
          * @public
          * @readonly
          */
         readonly agreementID: AgreementID,
         /**
          * @summary `lastUpdate`.
+         * @description
+         *
+         * Time from the most recent successful update (supplier-assigned).
+         * Absent if none, or if a full update is wanted even with no
+         * changes. Supplier that cannot build an incremental from this
+         * value returns `fullUpdateRequired`.
+         *
          * @public
          * @readonly
          */
         readonly lastUpdate: OPTIONAL<Time>,
         /**
          * @summary `requestedStrategy`.
+         * @description
+         *
+         * `incremental` (1) or `total` (2) — no `noChanges` (0). Supplier
+         * may still refuse incremental with `fullUpdateRequired`.
+         *
          * @public
          * @readonly
          */
         readonly requestedStrategy: RequestShadowUpdateArgumentData_requestedStrategy,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this argument is signed. `target` is `none`.
+         *
          * @public
          * @readonly
          */

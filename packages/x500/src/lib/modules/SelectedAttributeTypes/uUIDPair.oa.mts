@@ -14,6 +14,8 @@ import { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa.mjs";
  * @summary uUIDPair
  * @description
  *
+ * SEQUENCE of 16-octet UUIDs: `issuerUUID` then `subjectUUID` (issuer/subject relationship, e.g. an account). `uUIDPairMatch` requires both equal. Order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

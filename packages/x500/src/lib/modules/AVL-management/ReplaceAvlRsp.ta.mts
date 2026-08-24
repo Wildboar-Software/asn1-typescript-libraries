@@ -19,6 +19,8 @@ import {
  * @summary ReplaceAvlRsp
  * @description
  *
+ * Outcome of `ReplaceAvlReq`. Embed in `DataTransferServer`. `invokeID` equals the request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,20 @@ export class ReplaceAvlRsp {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding `ReplaceAvlReq`.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `result`.
+         * @description
+         *
+         * `success` (`RepAvlOK`) or `failure` (`RepAvlErr`).
+         *
          * @public
          * @readonly
          */

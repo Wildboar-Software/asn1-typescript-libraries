@@ -10,6 +10,11 @@ import {
  * @summary TbsHandshakeWrpRej_sigSel
  * @description
  *
+ * `altSigAlg` iff the client offered an alternative and the server
+ * supports it; else `sigAlg`. If the server supports neither, it still
+ * places a supported algorithm in `sigAlg`. `altSignature` shall be
+ * absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

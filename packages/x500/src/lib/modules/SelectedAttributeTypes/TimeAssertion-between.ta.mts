@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeAssertion_between
  * @description
  *
+ * `entirely` DEFAULT FALSE ⇒ any overlap; TRUE ⇒ assertion band fully
+ * inside stored spec. Missing `endTime` ⇒ open-ended.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,18 +26,31 @@ export class TimeAssertion_between {
     constructor(
         /**
          * @summary `startTime`.
+         * @description
+         *
+         * Start of assertion band.
+         *
          * @public
          * @readonly
          */
         readonly startTime: GeneralizedTime,
         /**
          * @summary `endTime`.
+         * @description
+         *
+         * Missing ⇒ open-ended.
+         *
          * @public
          * @readonly
          */
         readonly endTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `entirely`.
+         * @description
+         *
+         * DEFAULT FALSE (any overlap) vs TRUE (assertion fully inside
+         * stored spec).
+         *
          * @public
          * @readonly
          */

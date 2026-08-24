@@ -15,6 +15,11 @@ import {
  * @summary HandshakeSecAbort
  * @description
  *
+ * Client wrapper reject of `HandshakeAcc`:
+ * `Signed{TbsHandshakeSecAbort}`. `version` bits **same as the original
+ * `HandshakeReq`**. `diag` absent iff alert. `altSignature` shall be
+ * absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

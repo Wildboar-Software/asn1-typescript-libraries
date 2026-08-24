@@ -53,6 +53,14 @@ import {
  * @summary TbsHandshakeReq
  * @description
  *
+ * To-be-signed client handshake. `version` may have **multiple** bits
+ * (DEFAULT `{v1}` = bit 0 set). `prProt` is the protected-protocol OID.
+ * `sigAlg` produces `signature`; `altSigAlg` (migration) produces
+ * `altSignature` and shall be present iff that component is. `keyEst`
+ * includes Payload dyn parms (DH public + nonce). `encr_mode`: see
+ * `TbsHandshakeReq_encr_mode`. `applData` holds the init PrPDU when the
+ * protected protocol requires it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -86,72 +94,84 @@ export class TbsHandshakeReq {
     constructor(
         /**
          * @summary `version`.
+         * @description BIT STRING of supported wrapper versions; client may set multiple bits. DEFAULT `{v1}`.
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `prProt`.
+         * @description OID of the protocol to be protected (`WRAPPED-PROT.&id`).
          * @public
          * @readonly
          */
         readonly prProt: OBJECT_IDENTIFIER,
         /**
          * @summary `sigAlg`.
+         * @description Native signature algorithm; used to produce `signature`.
          * @public
          * @readonly
          */
         readonly sigAlg: AlgorithmIdentifier,
         /**
          * @summary `altSigAlg`.
+         * @description Alternative signature algorithm (migration). Present iff `altSignature` is present.
          * @public
          * @readonly
          */
         readonly altSigAlg: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `assoID`.
+         * @description Association identifier unique within this client–server pair.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `keyEst`.
+         * @description Key-establishment algorithm with invoke/Payload dyn parms (DH public + nonce).
          * @public
          * @readonly
          */
         readonly keyEst: AlgorithmWithInvoke,
         /**
          * @summary `altKeyEst`.
+         * @description Alternative key-establishment algorithm (migration).
          * @public
          * @readonly
          */
         readonly altKeyEst: OPTIONAL<AlgorithmWithInvoke>,
         /**
          * @summary `encr_mode`.
+         * @description `aead` (preference sequence, 2 keys) or `non_aead` (`encr` optional + required `icvAlgID`).
          * @public
          * @readonly
          */
         readonly encr_mode: TbsHandshakeReq_encr_mode,
         /**
          * @summary `attCert`.
+         * @description Optional DER-encapsulated attribute certificate (access control).
          * @public
          * @readonly
          */
         readonly attCert?: OPTIONAL<DER_AttributeCertificate>,
         /**
          * @summary `applData`.
+         * @description Init PrPDU when the protected protocol requires one.
          * @public
          * @readonly
          */

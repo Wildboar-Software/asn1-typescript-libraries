@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OctetSubstringAssertion_Item
  * @description
  *
+ * Same `initial`/`any`/`final` placement as SubstringAssertion (at most one
+ * `initial`, first; at most one `final`, last). No `control`. TypeScript
+ * `any_` is ASN.1 `any`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

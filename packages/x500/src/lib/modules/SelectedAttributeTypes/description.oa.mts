@@ -16,6 +16,8 @@ import {
  * @summary description
  * @description
  *
+ * Human-readable text describing the associated object. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

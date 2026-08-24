@@ -19,6 +19,9 @@ import {
  * @summary HierarchicalAgreement
  * @description
  *
+ * Supplied by whichever DSA initiates the HOB. `rdn` and
+ * `immediateSuperior` together name the new context prefix.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,20 @@ export class HierarchicalAgreement {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * RDN of the new context prefix (not of the superior).
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `immediateSuperior`.
+         * @description
+         *
+         * DN of the entry immediately above the new context prefix.
+         *
          * @public
          * @readonly
          */

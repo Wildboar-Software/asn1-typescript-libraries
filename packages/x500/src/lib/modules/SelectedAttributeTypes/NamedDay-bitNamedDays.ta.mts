@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NamedDay_bitNamedDays
  * @description
  *
+ * BIT STRING; sunday = 0 … saturday = 6 (off-by-one vs intNamedDays
+ * sunday = 1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,12 +19,20 @@ export type NamedDay_bitNamedDays = BIT_STRING;
 
 /**
  * @summary NamedDay_bitNamedDays_sunday
+ * @description
+ *
+ * BIT sunday = 0 (`intNamedDays` sunday = 1).
+ *
  * @constant
  */
 export const NamedDay_bitNamedDays_sunday: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary sunday
+ * @description
+ *
+ * BIT sunday = 0 (`intNamedDays` sunday = 1).
+ *
  * @constant
  */
 export const sunday: number = NamedDay_bitNamedDays_sunday; /* SHORT_NAMED_BIT */

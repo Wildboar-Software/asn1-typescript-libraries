@@ -6,6 +6,11 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
  * @summary IDM_PROTOCOL
  * @description
  *
+ * Bind operation, request/response operations, and a unique
+ * `protocolID`. The ID also selects the application context, so there
+ * is one IDM-PROTOCOL per AC. Bind ARGUMENT/RESULT/ERRORS map to
+ * bind / bindResult / bindError PDUs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,14 +51,26 @@ export interface IDM_PROTOCOL {
     >;
     /**
      * @summary &bind-operation
+     * @description
+     *
+     * Bind OPERATION whose ARGUMENT/RESULT/ERRORS map to bind /
+     * bindResult / bindError PDUs.
      */
     readonly "&bind-operation"?: OPERATION;
     /**
      * @summary &Operations
+     * @description
+     *
+     * Operations allowed in request / result / error PDUs. Set membership
+     * is not ordered.
      */
     readonly "&Operations"?: OPERATION[];
     /**
      * @summary &id
+     * @description
+     *
+     * UNIQUE protocol OID. Also selects the application context — one
+     * IDM-PROTOCOL per AC.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }

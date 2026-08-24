@@ -15,6 +15,11 @@ import {
  * @summary HandshakeAcc
  * @description
  *
+ * Server accept of `HandshakeReq`: `Signed{TbsHandshakeAcc}`.
+ * `altSignature` **shall be absent** (only one signature after
+ * selection). `encr-mode` takes the **same CHOICE alternative** as the
+ * request, with a **single** algorithm (not a sequence).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,11 @@ import {
  * @summary SPKM_WRAP
  * @description
  *
+ * Per-message wrap token (`gss_wrap`). Header is plaintext; body holds
+ * checksum and plaintext or ciphertext. Checksum is over plaintext
+ * `wrap-header` prepended to plaintext user data. 8-byte random
+ * confounder is prepended before encryption (IV is zero).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,20 @@ export class SPKM_WRAP {
     constructor(
         /**
          * @summary `wrap_header`.
+         * @description
+         *
+         * Plaintext header; included in the checksum.
+         *
          * @public
          * @readonly
          */
         readonly wrap_header: Wrap_Header,
         /**
          * @summary `wrap_body`.
+         * @description
+         *
+         * Checksum plus plaintext or encrypted data.
+         *
          * @public
          * @readonly
          */

@@ -65,6 +65,9 @@ import {
  * @summary WrapperPDU
  * @description
  *
+ * Top WrPDU CHOICE (handshake, data transfer, abort, release). Maps to
+ * TCP port **9877**; IANA service name `x510`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -9,6 +9,9 @@ import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.
  * @summary hierarchicalOperationalBinding_roleB
  * @description
  *
+ * Subordinate. All three initiators TRUE. EstablishParam = ModifyParam
+ * = `SubordinateToSuperior`; TerminateParam undefined.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

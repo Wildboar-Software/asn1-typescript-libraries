@@ -10,6 +10,9 @@ import {
  * @summary AttributeCertificateV2
  * @description
  *
+ * Alias of `AttributeCertificate`. X.509 2016 PkiPmiWrapper; not an
+ * X.510 type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

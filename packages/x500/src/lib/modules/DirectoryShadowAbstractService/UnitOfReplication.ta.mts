@@ -35,6 +35,14 @@ import {
  * @summary UnitOfReplication
  * @description
  *
+ * Scope, attributes, and subordinate knowledge to replicate. Always also
+ * includes access-control ACI, `createTimestamp`/`modifyTimestamp`, schema
+ * subentries, and (when relevant) password-policy operational attributes —
+ * those need not be listed in `attributes`. Policy SDSEs from an autonomous
+ * administrative point down to, but not including, the replication base
+ * entry are included implicitly. Overlapping units on one consumer are
+ * optional; DSAs that do not support them shall refuse.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,36 +63,74 @@ export class UnitOfReplication {
     constructor(
         /**
          * @summary `area`.
+         * @description
+         *
+         * Context prefix plus subtree specification. Names are primary DNs
+         * (no context lists, no alternative distinguished values).
+         *
          * @public
          * @readonly
          */
         readonly area: AreaSpecification,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * User, collective, and extra operational attributes to copy.
+         * Selection is applied only by the supplier; the consumer does not
+         * re-filter. Knowledge operational attributes are implied if
+         * `knowledge` is present and need not be enumerated here.
+         *
          * @public
          * @readonly
          */
         readonly attributes: AttributeSelection,
         /**
          * @summary `knowledge`.
+         * @description
+         *
+         * Absent = no subordinate knowledge references. If present, those
+         * knowledge attributes are included automatically.
+         *
          * @public
          * @readonly
          */
         readonly knowledge?: OPTIONAL<Knowledge>,
         /**
          * @summary `subordinates`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE copies subordinate *entries*, not just
+         * references. May be TRUE only if `knowledge` is present and
+         * `extendedKnowledge` is FALSE.
+         *
          * @public
          * @readonly
          */
         readonly subordinates?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `contextSelection`.
+         * @description
+         *
+         * Which attribute values (and alternative distinguished values) to
+         * shadow. Absent = all values of selected attributes — default
+         * contexts from EntryInformationSelection are *not* applied.
+         * Never applied to primary distinguished values.
+         *
          * @public
          * @readonly
          */
         readonly contextSelection?: OPTIONAL<ContextSelection>,
         /**
          * @summary `supplyContexts`.
+         * @description
+         *
+         * Absent = strip all context information from shadowed values.
+         * Not applied to distinguished values in the SDSE name; if any
+         * alternative distinguished values are included in an RDN, the
+         * context list for the primary and all alternatives shall be
+         * included.
+         *
          * @public
          * @readonly
          */

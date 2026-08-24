@@ -10,6 +10,9 @@ import {
  * @summary OctetSubstringAssertion
  * @description
  *
+ * At most one `initial` (must be first) and one `final` (must be last);
+ * zero or more `any`. No `control`. Empty SEQUENCE is ASN.1-legal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

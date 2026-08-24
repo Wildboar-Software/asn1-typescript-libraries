@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AssociationEstablishment
  * @description
  *
+ * BIT STRING of association directions a DSA supports for DSP, DOP, or DISP
+ * (separate attributes share this syntax). Both bits may be set. `inward`(0)
+ * = accept incoming; `outward`(1) = initiate outgoing. Empty / no bits = that
+ * protocol's associations are established in neither direction. MATCHES FOR
+ * EQUALITY is exact bit-string match, not subset.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

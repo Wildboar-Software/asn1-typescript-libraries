@@ -10,6 +10,8 @@ import {
  * @summary intEmailString
  * @description
  *
+ * LDAP transfer of IntEmail (internationalized email).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

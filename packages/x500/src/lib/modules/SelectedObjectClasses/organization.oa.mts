@@ -11,6 +11,11 @@ import { OrganizationalAttributeSet } from "../SelectedObjectClasses/Organizatio
  * @summary organization
  * @description
  *
+ * Organization DIT entry. Directly under the root denotes an international
+ * organization; those `organizationName` values must be globally distinct
+ * (Annex B, illustrative). Also typically permitted under country or
+ * locality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

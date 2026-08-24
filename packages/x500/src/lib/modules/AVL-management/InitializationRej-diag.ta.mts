@@ -10,6 +10,8 @@ export enum _enum_for_InitializationRej_diag {
  * @summary InitializationRej_diag
  * @description
  *
+ * Server reject of `InitializationRec`. Sole named value `unsupportedVersion` (0): none of the client’s Version bits are supported. Prose sometimes says unsupportedVersions — use this TS name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +26,10 @@ export type InitializationRej_diag =
 
 /**
  * @summary InitializationRej_diag_unsupportedVersion
+ * @description
+ *
+ * Server supports none of the Version bits offered in `InitializationRec`.
+ *
  * @constant
  * @type {number}
  */
@@ -31,6 +37,10 @@ export const InitializationRej_diag_unsupportedVersion: InitializationRej_diag =
 
 /**
  * @summary unsupportedVersion
+ * @description
+ *
+ * Server supports none of the Version bits offered in `InitializationRec`.
+ *
  * @constant
  * @type {number}
  */

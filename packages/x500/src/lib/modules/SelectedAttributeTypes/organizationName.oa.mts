@@ -15,6 +15,8 @@ import {
  * @summary organizationName
  * @description
  *
+ * SUBTYPE OF `name`. Organization of affiliation. Variants are **separate values**.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

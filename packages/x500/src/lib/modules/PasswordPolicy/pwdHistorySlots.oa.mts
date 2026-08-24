@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdHistorySlots
  * @description
  *
+ * History slot count. INTEGER **(2..MAX)** — minimum 2 for admin
+ * reset. Object-entry value overrides a covering password-policy
+ * subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

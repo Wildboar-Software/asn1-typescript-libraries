@@ -19,6 +19,10 @@ import {
  * @summary CertSubscribeReq
  * @description
  *
+ * Authorizer→CA: subscribe to EE cert status. `certs` SIZE (1..MAX);
+ * empty illegal. Unknown cert → per-item `not_ok` `unknownCert`, not a
+ * whole-message error. Data-transfer WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,18 @@ export class CertSubscribeReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with the matching response; unique per pair; reusable after completion.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX); empty is illegal. Each item is `subject`+`serialNumber`. Response SEQUENCE OF has the same count and order as this request (one element per requested cert).
          * @public
          * @readonly
          */

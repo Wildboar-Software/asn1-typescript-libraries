@@ -7,6 +7,10 @@ import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
  * @summary sOPNameForm
  * @description
  *
+ * Names `locality` by `stateOrProvinceName`. Annex B alternative:
+ * typically immediately under country (then other structure rules that
+ * allow locality as superior should include this rule).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary TypeAndContextAssertion
  * @description
  *
+ * `preference` SEQUENCE: order matters (first TRUE wins; later ignored;
+ * fallback only after the whole SEQUENCE). `all` SET OF: every assertion
+ * TRUE; order irrelevant. Type `id-oa-allAttributeTypes` forces eval
+ * against every attr type. A TACA for a different type is TRUE (does not
+ * eliminate the value).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,23 @@ export class TypeAndContextAssertion {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * `id-oa-allAttributeTypes` forces evaluation against every attr
+         * type. A TACA whose type is neither the value's type nor a
+         * supertype (nor allAttributeTypes) is TRUE (does not eliminate).
+         *
          * @public
          * @readonly
          */
         readonly type_: AttributeType,
         /**
          * @summary `contextAssertions`.
+         * @description
+         *
+         * `preference` SEQUENCE: order matters. `all` SET OF: every
+         * assertion TRUE; order irrelevant.
+         *
          * @public
          * @readonly
          */

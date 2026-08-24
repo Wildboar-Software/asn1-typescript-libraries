@@ -6,6 +6,10 @@ import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.
  * @summary shadowOperationalBinding_roleA
  * @description
  *
+ * Shadow supplier. May establish, modify, and terminate. Establishment
+ * parameter is NULL; no modification parameter (secondary-shadow reports
+ * come from ROLE-B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -60,6 +60,13 @@ import {
  * @summary IDM_PDU
  * @description
  *
+ * IDM envelope over TCP (optional TLS). Fully asynchronous;
+ * connection-oriented. Unknown CHOICE alts: ignore per extensibility
+ * or abort if the invoke ID cannot be recovered. `startTLS` may be
+ * sent at any time by the TCP initiator; no further PDUs until
+ * `tLSResponse`. Fragments of one IDM-PDU must finish before the next
+ * PDU. All PDUs on an association share the same TCP-mapping version.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

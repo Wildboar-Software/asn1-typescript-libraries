@@ -1,8 +1,11 @@
 /**
+ * @summary UnboundedDirectoryString
+ * @description
+ *
  * Unbounded directory string (no upper bound). Re-exported from
  * `@wildboar/pki-stub`. CHOICE of Teletex/Printable/BMP/Universal/UTF-8.
  * Empty strings forbidden (`SIZE (1..MAX)`). Equality is on characters, not
- * which string type was used. Prefer UTF-8.
+ * which string type was used. TeletexString is deprecated; prefer UTF-8.
  */
 export type {
     UnboundedDirectoryString,

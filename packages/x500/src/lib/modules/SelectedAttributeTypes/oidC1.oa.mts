@@ -11,6 +11,8 @@ import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
  * @summary oidC1
  * @description
  *
+ * Top-level OID arc. SINGLE VALUE INTEGER; `integerMatch`. Shall be 0, 1 or 2. Naming attribute of `oidC1Obj` / `oidRoot`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

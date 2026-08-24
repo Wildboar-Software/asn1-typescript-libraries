@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SearchArgumentData_subset
  * @description
  *
+ * DEFAULT `baseObject`. Compound entry counts as one versus `subset`
+ * unless `searchFamily` (then members count separately). If base is a
+ * child family member, members count as individual entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

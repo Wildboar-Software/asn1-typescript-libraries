@@ -17,6 +17,13 @@ import { id_ac_directoryAccessAC } from "../DirectoryOSIProtocols/id-ac-director
  * @summary directoryAccessAC
  * @description
  *
+ * DAP application-context. DUA initiates; only initiator invokes.
+ * DUA must support ≥1 DAP op besides abandon; DSA must support all.
+ * Needs `id-acseAS` + `id-as-directoryAccessAS`. OSI: wait for
+ * BindResult before operations (IDM DAP may send requests after Bind
+ * but before BindResult). OSI DAP may be sync or async; IDM always
+ * async. Does not include `ldapTransport` / `linkedLDAP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

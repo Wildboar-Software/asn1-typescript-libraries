@@ -10,6 +10,10 @@ import {
  * @summary SuperiorToSubordinateModification
  * @description
  *
+ * `SuperiorToSubordinate` with `entryInfo` ABSENT. Superior-initiated
+ * HOB modify does not re-send CP entry content. Other components same
+ * as establishment; a changed component is sent in full.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

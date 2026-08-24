@@ -10,6 +10,8 @@ import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
  * @summary collectiveStreetAddress
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `streetAddress`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

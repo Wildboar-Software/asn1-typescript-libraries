@@ -10,6 +10,8 @@ import { id_at_collectiveFacsimileTelephoneNumber } from "../SelectedAttributeTy
  * @summary collectiveFacsimileTelephoneNumber
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `facsimileTelephoneNumber`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

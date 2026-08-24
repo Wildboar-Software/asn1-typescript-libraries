@@ -11,6 +11,8 @@ import { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta.mjs";
  * @summary TBresponse
  * @description
  *
+ * TB answer. `success` is `TBOK` (including LoA 0 when validated but untrusted). `failure` is `TBerror` when validation itself failed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

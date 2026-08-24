@@ -15,6 +15,8 @@ import {
  * @summary ModifyDNArgument
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `ModifyDNArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

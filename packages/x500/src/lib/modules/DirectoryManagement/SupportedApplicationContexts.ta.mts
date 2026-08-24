@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SupportedApplicationContexts
  * @description
  *
+ * SET OF application-context OIDs the DSA supports. Unordered; SET forbids
+ * duplicates. Empty SET means none listed. MATCHES FOR EQUALITY is set
+ * equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

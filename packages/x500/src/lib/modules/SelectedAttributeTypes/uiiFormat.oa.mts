@@ -14,6 +14,12 @@ import {
  * @summary uiiFormat
  * @description
  *
+ * How a UII bit string is partitioned. `baseObject` is the URN at which
+ * a subsequent Search should start (absent ⇒ root). `subset` recommends
+ * the Search subset. `next.length` is the next field's length in
+ * characters; `next.filter` (`UiiFilter`) guides probing a
+ * variable-length field.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

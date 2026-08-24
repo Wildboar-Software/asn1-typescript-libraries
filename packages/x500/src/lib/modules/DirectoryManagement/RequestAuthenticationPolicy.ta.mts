@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RequestAuthenticationPolicy
  * @description
  *
+ * BIT STRING of *supported* request-authentication methods: `none`(0),
+ * `simpleName`(1) (not the peer-entity `simpleUnprotected`/`simpleProtected`
+ * split), `strong`(2). Several bits may be set. `none` is a named method, not
+ * "no bits". MATCHES FOR EQUALITY is exact match.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,12 +21,20 @@ export type RequestAuthenticationPolicy = BIT_STRING;
 
 /**
  * @summary RequestAuthenticationPolicy_none
+ * @description
+ *
+ * Named supported method, not "no bits set".
+ *
  * @constant
  */
 export const RequestAuthenticationPolicy_none: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary none
+ * @description
+ *
+ * Named supported method, not "no bits set".
+ *
  * @constant
  */
 export const none: number = RequestAuthenticationPolicy_none; /* SHORT_NAMED_BIT */

@@ -19,6 +19,10 @@ import {
  * @summary CertReplaceReq
  * @description
  *
+ * CA→authorizer replacements. `certs` SIZE (1..MAX); empty illegal. Each
+ * item: `old` = serial to replace; `new_` = replacement Certificate.
+ * Unknown `old` → per-item `not_ok` `unknownCert`. Data-transfer WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,18 @@ export class CertReplaceReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with the matching response; unique per pair; reusable after completion.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX); empty is illegal. Same count and order in the response. Each item is `old`+`new_`.
          * @public
          * @readonly
          */

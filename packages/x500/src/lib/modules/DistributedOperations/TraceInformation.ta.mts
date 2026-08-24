@@ -10,6 +10,10 @@ import {
  * @summary TraceInformation
  * @description
  *
+ * SEQUENCE OF TraceItem. Order matters. Each forwarding DSA appends a
+ * TraceItem to the end. Used for loop detection. Empty only for the
+ * first hop from a DUA/LDAP client.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

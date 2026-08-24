@@ -10,6 +10,10 @@ import {
  * @summary SignedAttributes
  * @description
  *
+ * SET SIZE (1..MAX) — empty illegal. Only `contentType` |
+ * `messageDigest` (RFC 5652 / PKCS #9). OPTIONAL on TBSPDU-wrapper;
+ * when present the SET still cannot be empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,9 @@ import { id_lsx_ldapSyntaxDescription } from "../SelectedAttributeTypes/id-lsx-l
  * @summary ldapSyntaxDescription
  * @description
  *
+ * LDAP schema listing of an LDAP syntax (IETF RFC 4517). DIRECTORY
+ * SYNTAX is NULL — no corresponding Directory syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,11 @@ import {
  * @summary Exclusions
  * @description
  *
+ * SET SIZE (1..MAX) OF RDNSequence. Order insignificant. Cannot be
+ * empty (omit the component instead). Each value is relative to
+ * ChainingArguments.targetObject, not the full DN. Non-conforming
+ * values may be ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

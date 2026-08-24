@@ -17,6 +17,12 @@ import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERAT
  * @summary shadowOperationalBinding
  * @description
  *
+ * Asymmetric operational binding for shadowing. ROLE-A = supplier, ROLE-B
+ * = consumer; either may establish, modify, or terminate. Establishment
+ * parameter is NULL (ignored if present). Agreement values are accepted or
+ * rejected as a whole. Cannot modify the replicated-base name or roles.
+ * Protocol loss during DOP: neither success nor failure can be assumed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

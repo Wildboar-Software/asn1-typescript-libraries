@@ -8,6 +8,9 @@ import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
  * @summary integerFirstComponentMatch
  * @description
  *
+ * Stored SEQUENCE; first component mandatory INTEGER. Compare that
+ * component only (integerMatch). Assertion is the INTEGER.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

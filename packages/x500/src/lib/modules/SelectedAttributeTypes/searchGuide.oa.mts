@@ -14,6 +14,8 @@ import { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.v
  * @summary searchGuide
  * @description
  *
+ * Suggested **search recipe** for a convenient base object — not evaluated as a filter by the DSA. `Guide.criteria` items are **attribute types only** (no values; the DUA supplies those). Optional `objectClass` omitted ⇒ not class-specific. Matching kind per CriteriaItem (equality / substrings / greaterOrEqual / lessOrEqual / approximateMatch).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

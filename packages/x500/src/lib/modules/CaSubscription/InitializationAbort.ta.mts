@@ -15,6 +15,9 @@ import {
  * @summary InitializationAbort
  * @description
  *
+ * Client rejects InitializationAcc. Embed in ApplAbort (14.6), not
+ * HandshakeProAbort.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +34,11 @@ export class InitializationAbort {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersion` if Acc’s single version was not among those
+         * offered; `onlySingleVersionAllowed` if Acc set more than one version
+         * bit.
          * @public
          * @readonly
          */

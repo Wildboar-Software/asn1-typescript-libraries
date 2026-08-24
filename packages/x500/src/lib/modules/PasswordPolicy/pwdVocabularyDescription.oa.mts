@@ -10,6 +10,9 @@ import {
  * @summary pwdVocabularyDescription
  * @description
  *
+ * LDAP transfer syntax for {@link PwdVocabulary} (BIT STRING; set bit
+ * forbids that class as the whole password).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

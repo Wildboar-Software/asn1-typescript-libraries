@@ -10,6 +10,10 @@ import {
  * @summary TbsHandshakeProRej_sigSel
  * @description
  *
+ * `altSigAlg` iff the client offered an alternative and the server
+ * supports it; otherwise `sigAlg`. Selected alg produces `signature`;
+ * `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

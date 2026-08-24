@@ -9,6 +9,10 @@ import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
  * @summary PostalAttributeSet
  * @description
  *
+ * Attributes used directly for postal delivery. `streetAddress` is also in
+ * `LocaleAttributeSet`; `OrganizationalAttributeSet` therefore includes it
+ * via both unions (same attribute).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

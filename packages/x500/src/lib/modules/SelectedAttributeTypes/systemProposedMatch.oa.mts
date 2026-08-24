@@ -5,6 +5,9 @@ import { id_mr_systemProposedMatch } from "../SelectedAttributeTypes/id-mr-syste
  * @summary systemProposedMatch
  * @description
  *
+ * Dummy. Requester puts it in RelaxationPolicy so the Directory chooses the
+ * substitute matching rule.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

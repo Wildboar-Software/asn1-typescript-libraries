@@ -1,9 +1,10 @@
 /**
+ * @summary UniqueIdentifier
+ * @description
+ *
  * BIT STRING used to disambiguate reused names. Re-exported from
- * `@wildboar/pki-stub`. In public-key certificates
- * (`issuerUniqueIdentifier` / `subjectUniqueIdentifier`) and attribute
- * certificates (`issuerUniqueID`) this field is deprecated; RFC 5280
- * forbids the PKC unique-identifier fields.
+ * `@wildboar/pki-stub`. No NamedBitList, so trailing zeros are significant
+ * in bitStringMatch.
  */
 export type {
     UniqueIdentifier,

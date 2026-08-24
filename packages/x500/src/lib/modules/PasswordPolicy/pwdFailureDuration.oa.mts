@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdFailureDuration
  * @description
  *
+ * Seconds to **delay** a failed bind/compare response. INTEGER
+ * (0..MAX); 0 = no delay. Object-entry value overrides a covering
+ * password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

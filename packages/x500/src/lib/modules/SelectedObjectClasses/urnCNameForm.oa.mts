@@ -7,6 +7,8 @@ import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
  * @summary urnCNameForm
  * @description
  *
+ * Names `urnCobj` by `urnC` (case-exact `PrintableString`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

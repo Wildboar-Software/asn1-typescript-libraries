@@ -10,6 +10,9 @@ import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countrySt
  * @summary countryString
  * @description
  *
+ * LDAP transfer of CountryName: two PrintableString characters
+ * (ISO 3166-1 alpha-2; IETF RFC 4517).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

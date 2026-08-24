@@ -19,6 +19,8 @@ import {
  * @summary DeleteAvlRsp
  * @description
  *
+ * Outcome of `DeleteAvlReq`. Embed in `DataTransferServer`. `invokeID` equals the request. Clause 13.12 prose wrongly cites ReplaceAvlReq; pairing is with `DeleteAvlReq`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,20 @@ export class DeleteAvlRsp {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding `DeleteAvlReq`.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `result`.
+         * @description
+         *
+         * `success` (`DelAvlOK`) or `failure` (`DelAvlErr`).
+         *
          * @public
          * @readonly
          */

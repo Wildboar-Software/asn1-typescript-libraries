@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdExpiryAge
  * @description
  *
+ * Seconds after modification until expiry. INTEGER (1..MAX); 0 invalid.
+ * **Absent ⇒ infinity.** Object-entry value overrides a covering
+ * password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va.mjs";
  * @summary dnsName
  * @description
  *
+ * DNS name (may be an IDN). Equality `dnsNameMatch`: label-for-label; mixed LDH vs A-label/U-label is FALSE; wildcard `*` at most one and must be leftmost (`*.example.com` matches `a.example.com`, not `a.b.example.com` or `example.com`). Certificate use requires an FQDN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

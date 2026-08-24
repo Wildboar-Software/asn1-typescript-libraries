@@ -12,6 +12,9 @@ import { id_at_uii } from "../SelectedAttributeTypes/id-at-uii.va.mjs";
  * @summary uii
  * @description
  *
+ * Bit-encoded Unique Item Identifier allocated in the ISO environment.
+ * Equality `bitStringMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,9 @@ import {
  * @summary EncryptedPduInfo
  * @description
  *
+ * `encryptedKey` OPTIONAL (wrapped CEK). `pduEncryptionAlgorithm`
+ * OPTIONAL. `encryptedPdu` [0] required OCTET STRING.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,24 +47,41 @@ export class EncryptedPduInfo {
     constructor(
         /**
          * @summary `pduType`.
+         * @description
+         *
+         * WRAPPED-PDU.&id from `SupportedPduSet`.
+         *
          * @public
          * @readonly
          */
         readonly pduType: OBJECT_IDENTIFIER,
         /**
          * @summary `encryptedKey`.
+         * @description
+         *
+         * OPTIONAL wrapped content-encryption key.
+         *
          * @public
          * @readonly
          */
         readonly encryptedKey: OPTIONAL<EncryptedKey>,
         /**
          * @summary `pduEncryptionAlgorithm`.
+         * @description
+         *
+         * OPTIONAL. Inner `parameter` is ALGORITHM.&Type
+         * (`SymmetricEncryptionAlgorithms`).
+         *
          * @public
          * @readonly
          */
         readonly pduEncryptionAlgorithm: OPTIONAL<EncryptedPduInfo_pduEncryptionAlgorithm>,
         /**
          * @summary `encryptedPdu`.
+         * @description
+         *
+         * Required ciphertext [0] EncryptedPdu.
+         *
          * @public
          * @readonly
          */

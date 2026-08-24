@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Jid
  * @description
  *
+ * XMPP JID (RFC 7622). `jidMatch`: both values normalized; domain same
+ * format and octet-identical; localpart both present or both absent and
+ * octet-identical; resourcepart the same.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

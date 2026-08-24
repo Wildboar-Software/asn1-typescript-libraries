@@ -16,6 +16,8 @@ import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericS
  * @summary internationalISDNNumber
  * @description
  *
+ * E.164 international ISDN number. NumericString SIZE (1..16). `numericStringMatch` / `numericStringSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

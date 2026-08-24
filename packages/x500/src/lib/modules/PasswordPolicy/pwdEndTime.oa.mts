@@ -13,6 +13,9 @@ import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generali
  * @summary pwdEndTime
  * @description
  *
+ * Instant after which the password is unusable. **If absent, default =
+ * `pwdStartTime` + `pwdMaxAge`.**
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

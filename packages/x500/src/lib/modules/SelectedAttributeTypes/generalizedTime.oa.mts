@@ -7,6 +7,9 @@ import { id_lsx_generalizedTime } from "../SelectedAttributeTypes/id-lsx-general
  * @summary generalizedTime
  * @description
  *
+ * LDAP transfer of GeneralizedTime (IETF RFC 4517). Omitted minutes or
+ * seconds are taken as 0 for matching.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

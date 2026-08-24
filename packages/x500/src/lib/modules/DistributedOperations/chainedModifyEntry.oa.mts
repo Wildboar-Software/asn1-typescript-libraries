@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedModifyEntry
  * @description
  *
+ * `chained{modifyEntry}`. Same opcode as DAP `modifyEntry`.
+ * `dsaReferral` instead of `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

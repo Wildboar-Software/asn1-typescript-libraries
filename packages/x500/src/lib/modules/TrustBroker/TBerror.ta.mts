@@ -16,6 +16,8 @@ import {
  * @summary TBerror
  * @description
  *
+ * TB could not validate the presented cert. Validated-but-untrusted is `TBOK` with LoA 0, not this type. No `code` 0. `diagnostic` is mandatory when `code` is `other`(99).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +42,20 @@ export class TBerror {
     constructor(
         /**
          * @summary `code`.
+         * @description
+         *
+         * No value 0. `other`(99) requires `diagnostic`. `pathValidationFailed` and `timeOut` may succeed later.
+         *
          * @public
          * @readonly
          */
         readonly code: TBerror_code,
         /**
          * @summary `diagnostic`.
+         * @description
+         *
+         * Optional text for client logs/display. Mandatory when `code` is `other`(99).
+         *
          * @public
          * @readonly
          */

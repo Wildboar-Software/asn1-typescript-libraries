@@ -10,6 +10,9 @@ import {
  * @summary LocaleContextSyntax
  * @description
  *
+ * POSIX locale: `localeID1` OID or `localeID2` string. Match only the same
+ * alternative (OID=OID or string=string). Registered locales only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

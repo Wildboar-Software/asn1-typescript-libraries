@@ -14,6 +14,13 @@ import {
  * @summary PagedResultsRequest
  * @description
  *
+ * DSA may ignore. If paging is performed, the paging DSA ignores
+ * `sizeLimit`. `queryReference`: DUA has no understanding; copy from
+ * `PartialOutcomeQualifier.queryReference`. Valid only on the same DAP
+ * association. Follow-up must match original `object`/`baseObject`,
+ * `serviceControls.options`, and `operationProgress`. `abandonQuery` [0]:
+ * 2005+; critical extension 33; returns `abandoned` `pagingAbandoned`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

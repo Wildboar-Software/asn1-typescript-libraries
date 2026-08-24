@@ -9,6 +9,10 @@ import { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.
  * @summary userPwdClass
  * @description
  *
+ * Auxiliary class so an entry can hold `userPwd`. No `SUBCLASS OF {top}`
+ * in the ASN.1 (unusual). No `LDAP-NAME`. `userPwd` is MAY, not MUST —
+ * the class may be present without a password value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

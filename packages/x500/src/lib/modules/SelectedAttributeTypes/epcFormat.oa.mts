@@ -14,6 +14,17 @@ import { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va.mj
  * @summary epcFormat
  * @description
  *
+ * How an EPC bit string is partitioned into fields. `fields` order is
+ * bit-field order. Only fields after Header, Filter and Partition are
+ * converted. `result` `numericPad`(0) default pads with leading `'0'`;
+ * `numeric` has no leading zeros (all-zero → a single `'0'`);
+ * `alpha7bits` is 7-bit ASCII packed in 7-bit subfields. `digitShift`
+ * moves that digit to the front for character encoding, not for URN.
+ * `checkCalc` check digit is for character encoding only, not URN (GS1:
+ * odd-position digits ×3; digit inserted after the last digit used).
+ * URN concatenates converted fields with `'.'`, optionally prefixed by
+ * `urnPrefix`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,8 @@ import { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-
  * @summary facsimileTelephoneNumber
  * @description
  *
+ * E.123 telephone number plus optional T.30 G3 parameters. `facsimileNumberMatch` / `facsimileNumberSubstringsMatch` compare **only** `telephoneNumber`; `parameters` are **ignored**. Assertion syntax is TelephoneNumber, not the full SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

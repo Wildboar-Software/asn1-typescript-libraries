@@ -14,6 +14,8 @@ import {
  * @summary knowledgeInformation
  * @description
  *
+ * **OBSOLETE.** Human-readable accumulated description of knowledge mastered by a specific DSA. `caseIgnoreMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

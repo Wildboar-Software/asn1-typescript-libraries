@@ -15,6 +15,9 @@ import {
  * @summary RequestShadowUpdateResult
  * @description
  *
+ * `null` if unsigned (no information conveyed). `information` if the
+ * supplier signs the result.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

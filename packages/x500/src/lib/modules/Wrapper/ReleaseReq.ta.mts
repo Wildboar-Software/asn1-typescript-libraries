@@ -15,6 +15,11 @@ import {
  * @summary ReleaseReq
  * @description
  *
+ * Graceful association close request: `Signed{TbsReleaseReq}`.
+ * `altSignature` shall be absent. Collision (9.12): if both sides send
+ * `ReleaseReq`, the **client** sends `ReleaseRsp` first; the server
+ * waits, then sends `ReleaseRsp`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

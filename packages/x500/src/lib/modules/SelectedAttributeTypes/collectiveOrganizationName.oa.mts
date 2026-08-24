@@ -10,6 +10,8 @@ import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.
  * @summary collectiveOrganizationName
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `organizationName`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

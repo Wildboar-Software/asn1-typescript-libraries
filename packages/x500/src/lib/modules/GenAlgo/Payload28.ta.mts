@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Payload28
  * @description
  *
+ * DYN-PARMS of `dhModpGr28Hkdf256Algo` (RFC 6932 brainpoolP256r1).
+ * `dhPublicKey` SIZE 512; `nonce` SIZE 32. New DH pair per association;
+ * client new pair each rekey; new nonce each establishment; server retains
+ * DH private for rekey. HKDF: salt=`nonce`, IKM=DH secret, info=empty.
+ * hmacWithSHA256. 6.4.6: certs of both parties are not mixed into the
+ * shared secret.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +32,22 @@ export class Payload28 {
     constructor(
         /**
          * @summary `dhPublicKey`.
+         * @description
+         *
+         * SIZE 512. New DH pair per association; client new pair each rekey;
+         * server retains DH private for rekey.
+         *
          * @public
          * @readonly
          */
         readonly dhPublicKey: OCTET_STRING,
         /**
          * @summary `nonce`.
+         * @description
+         *
+         * SIZE 32. New value each establishment. HKDF salt; IKM=DH secret;
+         * info=empty.
+         *
          * @public
          * @readonly
          */

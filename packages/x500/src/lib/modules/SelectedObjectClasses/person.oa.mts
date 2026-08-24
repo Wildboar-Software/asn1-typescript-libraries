@@ -15,6 +15,10 @@ import { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va.mjs";
  * @summary person
  * @description
  *
+ * Generic person. `surname` is mandatory on the entry but
+ * `personNameForm` names only with `commonName` (`surname` is not in the
+ * RDN). Not `organizationalPerson` — no org/postal/telecom sets.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,10 @@ import {
  * @summary Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1
  * @description
  *
+ * Inner SET of the OPTIONALLY-PROTECTED argument wrapper:
+ * `chainedArgument` plus `argument` (the DAP argument as `_Element`
+ * here).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,12 +27,20 @@ export class Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(
         /**
          * @summary `chainedArgument`.
+         * @description
+         *
+         * ChainingArguments supplementing the DAP `argument`.
+         *
          * @public
          * @readonly
          */
         readonly chainedArgument: ChainingArguments,
         /**
          * @summary `argument`.
+         * @description
+         *
+         * Original DAP argument (`operation.&ArgumentType`) as `_Element`.
+         *
          * @public
          * @readonly
          */

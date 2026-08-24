@@ -15,6 +15,9 @@ import {
  * @summary CertSubscribeErr
  * @description
  *
+ * Whole-message subscribe failure: used only when no per-item results can
+ * be returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,9 @@ export class CertSubscribeErr {
     constructor(
         /**
          * @summary `code`.
+         * @description
+         *
+         * CASP-error for the whole-message failure.
          * @public
          * @readonly
          */

@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_abandoned
  * @description
  *
+ * DAP/DSP local:5 (`abandoned`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

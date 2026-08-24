@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Period_weeks_bitWeek
  * @description
  *
+ * week1 = 0 … week5 = 4. week1 = first week with ≥4 days of that
+ * month/year. week5 = last week of the month.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,12 +19,20 @@ export type Period_weeks_bitWeek = BIT_STRING;
 
 /**
  * @summary Period_weeks_bitWeek_week1
+ * @description
+ *
+ * First week = first week with ≥4 days of that month/year.
+ *
  * @constant
  */
 export const Period_weeks_bitWeek_week1: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary week1
+ * @description
+ *
+ * First week = first week with ≥4 days of that month/year.
+ *
  * @constant
  */
 export const week1: number = Period_weeks_bitWeek_week1; /* SHORT_NAMED_BIT */
@@ -64,12 +75,20 @@ export const week4: number = Period_weeks_bitWeek_week4; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Period_weeks_bitWeek_week5
+ * @description
+ *
+ * Last week of the month.
+ *
  * @constant
  */
 export const Period_weeks_bitWeek_week5: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary week5
+ * @description
+ *
+ * Last week of the month.
+ *
  * @constant
  */
 export const week5: number = Period_weeks_bitWeek_week5; /* SHORT_NAMED_BIT */

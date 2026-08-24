@@ -15,6 +15,10 @@ import {
  * @summary ReleaseRsp
  * @description
  *
+ * Reply to `ReleaseReq`: `Signed{TbsReleaseRsp}`. `altSignature` shall
+ * be absent. Collision (9.12): client sends `ReleaseRsp` first; server
+ * waits then sends `ReleaseRsp`; then both terminate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PeerEntityAuthenticationPolicy
  * @description
  *
+ * BIT STRING of *supported* peer-entity authentication methods. Several bits
+ * may be set. `none`(0) is a named supported method, not "no bits". Empty BIT
+ * STRING asserts no methods. MATCHES FOR EQUALITY is exact bit-string match,
+ * not subset.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -18,12 +23,20 @@ export type PeerEntityAuthenticationPolicy = BIT_STRING;
 
 /**
  * @summary PeerEntityAuthenticationPolicy_none
+ * @description
+ *
+ * Named supported method, not "no bits set".
+ *
  * @constant
  */
 export const PeerEntityAuthenticationPolicy_none: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary none
+ * @description
+ *
+ * Named supported method, not "no bits set".
+ *
  * @constant
  */
 export const none: number = PeerEntityAuthenticationPolicy_none; /* SHORT_NAMED_BIT */

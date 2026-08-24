@@ -7,6 +7,8 @@ import { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs"
  * @summary integer
  * @description
  *
+ * LDAP transfer of INTEGER: numeric characters as in IETF RFC 4517.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

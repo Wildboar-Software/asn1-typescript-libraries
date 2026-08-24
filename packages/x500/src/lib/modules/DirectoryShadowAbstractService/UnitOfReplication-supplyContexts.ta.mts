@@ -5,6 +5,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UnitOfReplication_supplyContexts
  * @description
  *
+ * Whether context lists ride along with shadowed attribute values.
+ * `allContexts` = every context; `selectedContexts` = only those context
+ * types (SET SIZE (1..MAX), so empty is illegal). Omission of this CHOICE
+ * (on `UnitOfReplication.supplyContexts`) strips all contexts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

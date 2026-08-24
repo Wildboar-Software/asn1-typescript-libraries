@@ -10,6 +10,9 @@ import {
  * @summary Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1
  * @description
  *
+ * Inner SET of the OPTIONALLY-PROTECTED result wrapper:
+ * `chainedResult` plus `result` (the DAP result as `_Element` here).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,12 +26,21 @@ export class Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(
         /**
          * @summary `chainedResult`.
+         * @description
+         *
+         * ChainingResults for previous DSAs in the chain.
+         *
          * @public
          * @readonly
          */
         readonly chainedResult: ChainingResults,
         /**
          * @summary `result`.
+         * @description
+         *
+         * DAP result (`operation.&ResultType`) as `_Element`, intended for
+         * the original requester.
+         *
          * @public
          * @readonly
          */

@@ -17,6 +17,10 @@ import { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.mjs";
  * @summary device
  * @description
  *
+ * Physical unit that can communicate (modem, disk, etc.). X.521 note: at
+ * least one of `localityName`, `serialNumber`, or `owner` should be
+ * present — choice depends on device type; not a MUST CONTAIN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

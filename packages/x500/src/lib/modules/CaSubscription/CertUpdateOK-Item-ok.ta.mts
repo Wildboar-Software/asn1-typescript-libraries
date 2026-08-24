@@ -15,6 +15,8 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * @summary CertUpdateOK_Item_ok
  * @description
  *
+ * Confirms the status update was processed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +28,18 @@ export class CertUpdateOK_Item_ok {
     constructor(
         /**
          * @summary `subject`.
+         * @description
+         *
+         * Name the EE cert was issued to.
          * @public
          * @readonly
          */
         readonly subject: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial of that EE cert.
          * @public
          * @readonly
          */

@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EntryInformationSelection_infoTypes
  * @description
  *
+ * DEFAULT `attributeTypesAndValues`. Meaningless if `attributes` request
+ * nothing. Carrier attrs (e.g. family-information) always return values;
+ * this applies to contained attrs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +20,11 @@ export type EntryInformationSelection_infoTypes = INTEGER;
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesOnly
+ * @description
+ *
+ * Types only. Carrier attrs still return their own values; this applies
+ * to contained attrs.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +32,11 @@ export const EntryInformationSelection_infoTypes_attributeTypesOnly: EntryInform
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesOnly
+ * @description
+ *
+ * Types only. Carrier attrs still return their own values; this applies
+ * to contained attrs.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +44,11 @@ export const attributeTypesOnly: EntryInformationSelection_infoTypes = EntryInfo
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesAndValues
+ * @description
+ *
+ * DEFAULT. Types and values. Carrier attrs always return values either
+ * way; this applies to contained attrs.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +56,11 @@ export const EntryInformationSelection_infoTypes_attributeTypesAndValues: EntryI
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesAndValues
+ * @description
+ *
+ * DEFAULT. Types and values. Carrier attrs always return values either
+ * way; this applies to contained attrs.
+ *
  * @constant
  * @type {number}
  */

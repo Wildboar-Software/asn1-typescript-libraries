@@ -16,6 +16,13 @@ import {
  * @summary MatchingRuleAssertion
  * @description
  *
+ * `matchingRule` SET SIZE (1..MAX); several ⇒ locally-defined combination.
+ * `type_` omitted ⇒ all types compatible with the identified matching rules.
+ * `matchValue` shall be `&AssertionType` of one of those matching rules.
+ * `dnAttributes` DEFAULT FALSE. In `filter` (not `extendedFilter`), set the
+ * `extendedFilter` bit in `criticalExtensions`. Unsupported/incompatible
+ * matching rules: UNDEFINED unless `performExactly`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +41,40 @@ export class MatchingRuleAssertion {
     constructor(
         /**
          * @summary `matchingRule`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Several ⇒ locally-defined combination.
+         *
          * @public
          * @readonly
          */
         readonly matchingRule: OBJECT_IDENTIFIER[],
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Omitted ⇒ match all types compatible with the matching rules.
+         *
          * @public
          * @readonly
          */
         readonly type_: OPTIONAL<AttributeType>,
         /**
          * @summary `matchValue`.
+         * @description
+         *
+         * Shall be `&AssertionType` of one of the identified matching rules.
+         *
          * @public
          * @readonly
          */
         readonly matchValue: _Element,
         /**
          * @summary `dnAttributes`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ also match DN attributes of the entry.
+         *
          * @public
          * @readonly
          */

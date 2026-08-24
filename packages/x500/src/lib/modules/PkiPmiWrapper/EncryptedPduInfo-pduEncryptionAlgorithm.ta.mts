@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncryptedPduInfo_pduEncryptionAlgorithm
  * @description
  *
+ * OPTIONAL nested SEQUENCE. `parameter` (singular) is
+ * ALGORITHM.&Type for `SymmetricEncryptionAlgorithms`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -21,16 +24,24 @@ export class EncryptedPduInfo_pduEncryptionAlgorithm {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * ALGORITHM.&id from `SymmetricEncryptionAlgorithms`.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * ALGORITHM.&Type for that algorithm (singular field name).
+         *
          * @public
          * @readonly
          */
-        readonly parameter: _Element
+        readonly parameter: _Element,
     ) {}
 
     /**

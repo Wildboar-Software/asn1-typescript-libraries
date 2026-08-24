@@ -15,6 +15,10 @@ import {
  * @summary HandshakeReq
  * @description
  *
+ * Client association request: `Signed{TbsHandshakeReq}`. `signature` is
+ * produced with `sigAlg`; `altSignature` present **iff** `altSigAlg` is
+ * present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

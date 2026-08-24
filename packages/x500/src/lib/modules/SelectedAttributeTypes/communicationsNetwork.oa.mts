@@ -15,6 +15,8 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary communicationsNetwork
  * @description
  *
+ * OID identifying the network type of a communications address (PSTN, ISDN, GSM, etc.). `objectIdentifierMatch`. **SINGLE VALUE**. OID allocation is outside X.520.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

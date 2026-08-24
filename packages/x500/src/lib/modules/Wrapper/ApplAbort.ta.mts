@@ -15,6 +15,10 @@ import {
  * @summary ApplAbort
  * @description
  *
+ * Data-transfer **protected-protocol** abort: `Signed{TbsApplAbort}`.
+ * `seq` is the sequence number of the WrPDU that carried the offending
+ * PrPDU; `applData` is the reason. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

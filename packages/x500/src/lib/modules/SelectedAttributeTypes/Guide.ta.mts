@@ -15,6 +15,9 @@ import {
  * @summary Guide
  * @description
  *
+ * Search-guide recipe, not a filter. `objectClass` OPTIONAL ⇒ not
+ * class-specific.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +32,20 @@ export class Guide {
     constructor(
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * OPTIONAL; omitted ⇒ not class-specific.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `criteria`.
+         * @description
+         *
+         * Attribute types only; DUA supplies values.
+         *
          * @public
          * @readonly
          */

@@ -14,6 +14,12 @@ import {
  * @summary Conf_Alg
  * @description
  *
+ * Per-wrap confidentiality choice. `algId` must be one of the agreed
+ * C-ALGs. `null` means no encryption (integrity-only wrap). Omitted
+ * `conf-alg` in `Wrap-Header` means the default C-ALG — not the same as
+ * explicit `null`. DES-CBC IV is unused (confounding); parameter may
+ * still carry an IV in the OID definition.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

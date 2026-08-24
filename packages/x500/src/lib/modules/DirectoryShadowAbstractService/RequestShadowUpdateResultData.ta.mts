@@ -37,6 +37,10 @@ import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq
  * @summary RequestShadowUpdateResultData
  * @description
  *
+ * Present when the result is signed. `lastUpdate` is the supplier's time
+ * of the last update sent; omit only before the first `updateShadow` for
+ * this agreement.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,12 +57,21 @@ export class RequestShadowUpdateResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Echo of the agreement being requested.
+         *
          * @public
          * @readonly
          */
         readonly agreementID: AgreementID,
         /**
          * @summary `lastUpdate`.
+         * @description
+         *
+         * Supplier's time of the last update sent. Omit only before the
+         * first `updateShadow` for this agreement.
+         *
          * @public
          * @readonly
          */
@@ -71,6 +84,10 @@ export class RequestShadowUpdateResultData implements CommonResultsSeq {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Shall be included if this result is signed.
+         *
          * @public
          * @readonly
          */

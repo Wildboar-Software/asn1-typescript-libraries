@@ -10,6 +10,8 @@ import { url } from "../SelectedAttributeTypes/url.oa.mjs";
  * @summary contentUrl
  * @description
  *
+ * SUBTYPE OF `url`. URL of the information content associated with an EPC or UII (inherits `uriMatch`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

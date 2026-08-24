@@ -11,6 +11,10 @@ import { id_not_contextTypeList } from "../SelectedAttributeTypes/id-not-context
  * @summary contextTypeList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Context types that further qualify a
+ * searchServiceProblem.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

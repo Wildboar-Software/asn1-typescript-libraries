@@ -73,6 +73,17 @@ import {
  * @summary ChainingArguments
  * @description
  *
+ * Present on every chained DSP operation except chainedAbandon. Tags
+ * [22] and [23] unused. `timeLimit` is an absolute deadline, not DAP
+ * elapsed seconds. `aliasedRDNs` present iff `aliasDereferenced` is
+ * TRUE; 1993+ omit from subsequent CommonArguments. `exclusions` SIZE
+ * (1..MAX) relative to `targetObject`; omit rather than empty SET.
+ * `relatedEntry` is a 0-based index into `joinArguments`. `dspPaging`
+ * is not forwarded by the initial performer. `authenticationLevel`
+ * absent ⇒ anonymous. `securityParameters` absence ≡ empty.
+ * `targetObject` omit iff equal to DAP object/baseObject.
+ * `referenceType` DEFAULT `superior`; mismatch ⇒ invalidReference.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -111,138 +122,266 @@ export class ChainingArguments {
     constructor(
         /**
          * @summary `originator`.
+         * @description
+         *
+         * Omit if DAP `requestor` is present, if `certification-path` is in
+         * SecurityParameters, or if requester info is only in the request
+         * not Bind. Shall not be present if requester info is unavailable.
+         * Shall be present if requester info is only available from Bind.
+         *
          * @public
          * @readonly
          */
         readonly originator: OPTIONAL<DistinguishedName>,
         /**
          * @summary `targetObject`.
+         * @description
+         *
+         * Object being routed to (operated-on entry, or base of List/Search
+         * subrequest). Omit iff equal to DAP object/baseObject. Else
+         * required.
+         *
          * @public
          * @readonly
          */
         readonly targetObject: OPTIONAL<DistinguishedName>,
         /**
          * @summary `operationProgress`.
+         * @description
+         *
+         * DEFAULT `{nameResolutionPhase notStarted}`.
+         *
          * @public
          * @readonly
          */
         readonly operationProgress: OPTIONAL<OperationProgress>,
         /**
          * @summary `traceInformation`.
+         * @description
+         *
+         * Required. Append a TraceItem to the end before chaining onward;
+         * receiver checks for loops.
+         *
          * @public
          * @readonly
          */
         readonly traceInformation: TraceInformation,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias was dereferenced during
+         * distributed name resolution so far.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `aliasedRDNs`.
+         * @description
+         *
+         * Count of `targetObject` RDNs from aliasedEntryName. Present iff
+         * `aliasDereferenced` is TRUE; else absent. 1988 compatibility;
+         * 1993+ omit from subsequent CommonArguments.
+         *
          * @public
          * @readonly
          */
         readonly aliasedRDNs?: OPTIONAL<INTEGER>,
         /**
          * @summary `returnCrossRefs`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ knowledge used during the op may be
+         * returned as CrossReference values on result or referral.
+         *
          * @public
          * @readonly
          */
         readonly returnCrossRefs?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `referenceType`.
+         * @description
+         *
+         * DEFAULT `superior`. Tells the next DSA what knowledge routed the
+         * request. Mismatch ⇒ serviceError `invalidReference`.
+         *
          * @public
          * @readonly
          */
         readonly referenceType?: OPTIONAL<ReferenceType>,
         /**
          * @summary `info`.
+         * @description
+         *
+         * Unconstrained DMD-private DomainInfo. Opaque to the spec.
+         *
          * @public
          * @readonly
          */
         readonly info?: OPTIONAL<DomainInfo>,
         /**
          * @summary `timeLimit`.
+         * @description
+         *
+         * Absolute deadline (Time CHOICE), not DAP elapsed seconds. Compare
+         * after UTCTime century window (00–49 ⇒ 20xx, 50–99 ⇒ 19xx). Do
+         * not use utcTime after 2049.
+         *
          * @public
          * @readonly
          */
         readonly timeLimit?: OPTIONAL<Time>,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * DEFAULT `{}`. Absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `entryOnly`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE only when original Search subset was oneLevel
+         * and an alias was an immediate subordinate of baseObject.
+         * Completing DSA evaluates only the named entry.
+         *
          * @public
          * @readonly
          */
         readonly entryOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `uniqueIdentifier`.
+         * @description
+         *
+         * Optional confirmation of requester name (X.501 UniqueIdentifier).
+         *
          * @public
          * @readonly
          */
         readonly uniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `authenticationLevel`.
+         * @description
+         *
+         * Bind-established AuthenticationLevel. Absent ⇒ treat as
+         * anonymous Bind. Should be present if the requester was
+         * authenticated.
+         *
          * @public
          * @readonly
          */
         readonly authenticationLevel?: OPTIONAL<AuthenticationLevel>,
         /**
          * @summary `exclusions`.
+         * @description
+         *
+         * Search only. SET SIZE (1..MAX) of RDNSequence relative to
+         * `targetObject`, not full DNs. Empty SET is illegal; omit the
+         * component. Non-conforming values may be ignored.
+         *
          * @public
          * @readonly
          */
         readonly exclusions?: OPTIONAL<Exclusions>,
         /**
          * @summary `excludeShadows`.
+         * @description
+         *
+         * DEFAULT FALSE. Search/LDAP Search/List: search entries, not
+         * copies. LDAP requester shall not forward to an LDAP server whose
+         * naming context is category shadow.
+         *
          * @public
          * @readonly
          */
         readonly excludeShadows?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nameResolveOnMaster`.
+         * @description
+         *
+         * DEFAULT FALSE. Only during name resolution after NSSRs. TRUE ⇒
+         * remaining RDNs from `nextRDNToBeResolved` shall not use entry
+         * copies (incl. writeable copies); each remaining RDN at that
+         * entry's master.
+         *
          * @public
          * @readonly
          */
         readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `operationIdentifier`.
+         * @description
+         *
+         * Assigned by the first DSA that received the DAP (or copied from
+         * incoming DSP). Do not reuse soon. Correlate logs with the first
+         * DSA on `traceInformation`.
+         *
          * @public
          * @readonly
          */
         readonly operationIdentifier?: OPTIONAL<INTEGER>,
         /**
          * @summary `searchRuleId`.
+         * @description
+         *
+         * Unique id of a search-rule. Included by the DSA doing initial
+         * Search procedure (I) when that starts in a service-specific admin
+         * area and the Search continues to other DSAs.
+         *
          * @public
          * @readonly
          */
         readonly searchRuleId?: OPTIONAL<SearchRuleId>,
         /**
          * @summary `chainedRelaxation`.
+         * @description
+         *
+         * If present, a DSA that supports relaxation shall use this instead
+         * of its local policy.
+         *
          * @public
          * @readonly
          */
         readonly chainedRelaxation?: OPTIONAL<MRMapping>,
         /**
          * @summary `relatedEntry`.
+         * @description
+         *
+         * 0-based index into SearchArgument.joinArguments; never exceeds
+         * n−1. Present ⇒ this DSP op is the related-entry part, not the
+         * base search. Absent on a related-entry-capable DSP op ⇒ this is
+         * the base search. Handling both needs two distinct DSP operations.
+         *
          * @public
          * @readonly
          */
         readonly relatedEntry?: OPTIONAL<INTEGER>,
         /**
          * @summary `dspPaging`.
+         * @description
+         *
+         * DEFAULT FALSE. Bound DSA ≠ initial performer may set TRUE to ask
+         * the initial performer for DSP paged results. FALSE ⇒ initial
+         * performer shall not DSP-page. Initial performer shall not forward
+         * this on subrequests.
+         *
          * @public
          * @readonly
          */
         readonly dspPaging?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `excludeWriteableCopies`.
+         * @description
+         *
+         * DEFAULT FALSE. LDAP requester + Search/LDAP search/List: do not
+         * forward if the LDAP naming context is category writeableCopy.
+         *
          * @public
          * @readonly
          */

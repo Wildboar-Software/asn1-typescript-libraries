@@ -7,6 +7,9 @@ import { oidArc } from "../SelectedObjectClasses/oidArc.oa.mjs";
  * @summary oidArcNf
  * @description
  *
+ * Names `oidArc` by `oidC`. Moved from X.660. OID is `{id 6}`, not under
+ * `id-nf`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

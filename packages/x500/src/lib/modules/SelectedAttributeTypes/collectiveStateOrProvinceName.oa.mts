@@ -10,6 +10,8 @@ import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceNa
  * @summary collectiveStateOrProvinceName
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `stateOrProvinceName`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

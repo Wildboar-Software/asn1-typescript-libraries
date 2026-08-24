@@ -15,6 +15,8 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary communicationsService
  * @description
  *
+ * OID identifying the class of service a communications address provides (voice, fax, email, SMS, etc.). `objectIdentifierMatch`. OID allocation is outside X.520.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

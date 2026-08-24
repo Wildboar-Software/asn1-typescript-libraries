@@ -19,6 +19,9 @@ import {
  * @summary ServiceControls_manageDSAITPlaneRef
  * @description
  *
+ * Ignored unless `manageDSAIT` is SET. Identifies the replication plane
+ * by supplying DSA name + shadowing agreement ID.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +33,20 @@ export class ServiceControls_manageDSAITPlaneRef {
     constructor(
         /**
          * @summary `dsaName`.
+         * @description
+         *
+         * Name of the supplying DSA of the replication plane.
+         *
          * @public
          * @readonly
          */
         readonly dsaName: Name,
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Shadowing agreement ID of the plane; paired with `dsaName`.
+         *
          * @public
          * @readonly
          */

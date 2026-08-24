@@ -15,6 +15,10 @@ import {
  * @summary SPKM_MIC
  * @description
  *
+ * Per-message integrity token (`gss_getMIC`). Checksum is over the
+ * plaintext `mic-header` logically prepended to the user data. Token and
+ * data may travel separately; the application must associate them.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +32,21 @@ export class SPKM_MIC {
     constructor(
         /**
          * @summary `mic_header`.
+         * @description
+         *
+         * Plaintext header included in the checksum input.
+         *
          * @public
          * @readonly
          */
         readonly mic_header: Mic_Header,
         /**
          * @summary `int_cksum`.
+         * @description
+         *
+         * Signature or MAC of header||data per `int-alg`. Length implied
+         * by that algorithm (e.g. RSA modulus size for md5WithRSA).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,9 @@ import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
  * @summary guide
  * @description
  *
+ * LDAP transfer of Guide: ABNF as in IETF RFC 4517 (suggested filter
+ * criteria, not a Filter).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

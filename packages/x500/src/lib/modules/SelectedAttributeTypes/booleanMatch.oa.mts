@@ -8,6 +8,8 @@ import { id_mr_booleanMatch } from "../SelectedAttributeTypes/id-mr-booleanMatch
  * @summary booleanMatch
  * @description
  *
+ * TRUE iff both TRUE or both FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

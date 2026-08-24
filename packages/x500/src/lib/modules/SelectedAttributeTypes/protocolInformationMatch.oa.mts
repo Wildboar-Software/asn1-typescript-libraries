@@ -7,6 +7,9 @@ import { id_mr_protocolInformationMatch } from "../SelectedAttributeTypes/id-mr-
  * @summary protocolInformationMatch
  * @description
  *
+ * Assertion is OCTET STRING = nAddress only (not profiles).
+ * octetStringMatch on nAddress.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

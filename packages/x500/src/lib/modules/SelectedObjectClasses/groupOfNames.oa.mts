@@ -17,6 +17,12 @@ import { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.
  * @summary groupOfNames
  * @description
  *
+ * Unordered set of names (`member`). Membership is static (updated by
+ * admin action, not computed on use). Nested groups are allowed; flatten
+ * by recursively replacing each group with its members until only
+ * individual names remain. Empty `member` is not allowed (MUST CONTAIN).
+ * No selected name form for `groupOfUniqueNames`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,10 @@ import {
  * @summary TimeSpecification
  * @description
  *
+ * Stored temporal context. `notThisTime` DEFAULT FALSE; TRUE =
+ * complement (SET OF periods = neither). `timeZone` absent ⇒ DSA
+ * local.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +44,30 @@ export class TimeSpecification {
     constructor(
         /**
          * @summary `time`.
+         * @description
+         *
+         * `absolute` or `periodic` (OR of Period).
+         *
          * @public
          * @readonly
          */
         readonly time: TimeSpecification_time,
         /**
          * @summary `notThisTime`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = complement of `time`.
+         *
          * @public
          * @readonly
          */
         readonly notThisTime?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeZone`.
+         * @description
+         *
+         * INTEGER -12..12 hours from GMT. Absent ⇒ DSA local.
+         *
          * @public
          * @readonly
          */

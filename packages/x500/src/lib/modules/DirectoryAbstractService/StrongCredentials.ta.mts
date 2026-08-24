@@ -29,6 +29,9 @@ import {
  * @summary StrongCredentials
  * @description
  *
+ * `bind-token` required (SIGNED TokenContent). `certification-path`
+ * optional. `name` is the requester DN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +48,30 @@ export class StrongCredentials {
     constructor(
         /**
          * @summary `certification_path`.
+         * @description
+         *
+         * If present, a certification path as in X.509 7.6.
+         *
          * @public
          * @readonly
          */
         readonly certification_path: OPTIONAL<CertificationPath>,
         /**
          * @summary `bind_token`.
+         * @description
+         *
+         * Required. SIGNED TokenContent.
+         *
          * @public
          * @readonly
          */
         readonly bind_token: Token,
         /**
          * @summary `name`.
+         * @description
+         *
+         * Requester DN.
+         *
          * @public
          * @readonly
          */

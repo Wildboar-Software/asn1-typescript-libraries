@@ -10,6 +10,9 @@ import {
  * @summary ShadowConsumerInitiatedDISP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{shadowConsumerInitiatedAC}`: consumer-initiated synchronous
+ * DISP. No `coordinateShadowUpdate` on this association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary CompareResult
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `CompareResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

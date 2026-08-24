@@ -10,6 +10,8 @@ import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mj
  * @summary collectiveTelephoneNumber
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `telephoneNumber`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

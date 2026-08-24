@@ -21,6 +21,12 @@ import {
  * @summary DirectoryBindArgument
  * @description
  *
+ * `versions` DEFAULT `{v1}` (v1=bit0, v2=bit1). v2 required for
+ * `alterValues`/`resetValue`, non-NULL modify results, and signed
+ * errors/results of Add/Remove/Modify/ModifyDN. Unknown extra elements
+ * and unknown named bits: accept and ignore. Empty SASL `mechanism` ⇒
+ * `inappropriateAuthentication`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,23 @@ export class DirectoryBindArgument {
     constructor(
         /**
          * @summary `credentials`.
+         * @description
+         *
+         * CHOICE simple/strong/externalProcedure/spkm/sasl. Empty SASL
+         * `mechanism` ⇒ `inappropriateAuthentication`.
+         *
          * @public
          * @readonly
          */
         readonly credentials?: OPTIONAL<Credentials>,
         /**
          * @summary `versions`.
+         * @description
+         *
+         * DEFAULT `{v1}`. v1=bit 0, v2=bit 1. v2 required for
+         * `alterValues`/`resetValue`, non-NULL modify results, and signed
+         * update errors/results.
+         *
          * @public
          * @readonly
          */

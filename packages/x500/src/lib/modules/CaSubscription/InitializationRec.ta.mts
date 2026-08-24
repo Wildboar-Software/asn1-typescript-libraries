@@ -14,6 +14,9 @@ import {
  * @summary InitializationRec
  * @description
  *
+ * CASP version offer. Client may set multiple `version` bits; current is v1.
+ * Server shall pick exactly one among those offered. Embed in HandshakeReq.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +30,10 @@ export class InitializationRec {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Client may set multiple bits; server shall pick exactly one among
+         * those suggested (highest should be chosen). Current version is v1.
          * @public
          * @readonly
          */

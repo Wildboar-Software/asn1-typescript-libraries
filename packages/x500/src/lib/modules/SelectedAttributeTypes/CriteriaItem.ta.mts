@@ -10,6 +10,9 @@ import {
  * @summary CriteriaItem
  * @description
  *
+ * Matching kind plus AttributeType only (no values). DUA fills values
+ * when constructing a Filter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

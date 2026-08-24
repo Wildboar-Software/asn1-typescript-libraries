@@ -15,6 +15,8 @@ import {
  * @summary ReadResult
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `ReadResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

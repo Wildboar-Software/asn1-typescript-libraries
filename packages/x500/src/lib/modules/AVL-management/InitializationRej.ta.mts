@@ -15,6 +15,8 @@ import {
  * @summary InitializationRej
  * @description
  *
+ * AVL entity rejects AVMP init. Embed in `HandshakeProRej`. `diag` `unsupportedVersion` (TS name): server supports none of the client’s Version bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +32,10 @@ export class InitializationRej {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersion`: none of the versions in `InitializationRec` are supported (prose sometimes says unsupportedVersions).
+         *
          * @public
          * @readonly
          */

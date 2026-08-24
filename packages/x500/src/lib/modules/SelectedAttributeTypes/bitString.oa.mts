@@ -7,6 +7,10 @@ import { id_lsx_bitString } from "../SelectedAttributeTypes/id-lsx-bitString.va.
  * @summary bitString
  * @description
  *
+ * LDAP transfer of BIT STRING: `'0'`/`'1'` characters in single quotes
+ * followed by `B` (IETF RFC 4517). Trailing bits added for BER octet
+ * alignment shall not be included.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

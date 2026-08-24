@@ -35,6 +35,8 @@ import {
  * @summary TBprot
  * @description
  *
+ * Top-level TB PrPDU CHOICE. Relying party is the client; TB is the server. 2020 module: `initReq`/`initAcc`/`initRej`/`initAbt` plus `tBrequest`/`tBresponse` (not the older clause 15.2 `caCert`/`subjectCert`/`tbresponse` CHOICE). `initAbt` is carried in `ApplAbort` (15.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

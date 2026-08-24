@@ -20,6 +20,10 @@ import {
  * @summary CAsubscribeAbort
  * @description
  *
+ * Rejects a CASP response. `invokeID` is that of the rejected response.
+ * `reason` is a CASP-error (14.15 cites 13.12 by mistake). Data-transfer
+ * WrPDU (`cAsubscribeAbort`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +38,18 @@ export class CAsubscribeAbort {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * InvokeID of the response being rejected.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * CASP-error for the abort.
          * @public
          * @readonly
          */

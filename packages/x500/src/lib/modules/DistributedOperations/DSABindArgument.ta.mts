@@ -21,6 +21,10 @@ import {
  * @summary DSABindArgument
  * @description
  *
+ * Same shape as DirectoryBindArgument except `credentials` carry the
+ * DSA AE-title as a DN; no SASL. `versions` DEFAULT `{v1}`. Bind/Unbind
+ * of a DSP association does not discard distributed paged results.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,21 @@ export class DSABindArgument {
     constructor(
         /**
          * @summary `credentials`.
+         * @description
+         *
+         * DSA AE-title as a DN. CHOICE `simple`/`strong`/
+         * `externalProcedure`/`spkm`; no `sasl`.
+         *
          * @public
          * @readonly
          */
         readonly credentials?: OPTIONAL<DSACredentials>,
         /**
          * @summary `versions`.
+         * @description
+         *
+         * DEFAULT `{v1}`.
+         *
          * @public
          * @readonly
          */

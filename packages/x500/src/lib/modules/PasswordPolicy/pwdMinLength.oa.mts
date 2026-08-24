@@ -12,6 +12,10 @@ import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
  * @summary pwdMinLength
  * @description
  *
+ * Minimum password length in characters. INTEGER (0..MAX); **0 = no
+ * minimum.** Object-entry value overrides a covering password-policy
+ * subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

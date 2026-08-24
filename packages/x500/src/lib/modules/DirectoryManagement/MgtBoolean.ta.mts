@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MgtBoolean
  * @description
  *
+ * CMIP BOOLEAN wrapper. For `prohibitChaining`, TRUE means the DSA shall not
+ * chain.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

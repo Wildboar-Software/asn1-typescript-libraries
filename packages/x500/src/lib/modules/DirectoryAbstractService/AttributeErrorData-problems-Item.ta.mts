@@ -24,6 +24,9 @@ import {
  * @summary AttributeErrorData_problems_Item
  * @description
  *
+ * One element of the unordered `problems` SET. `value` is included when
+ * needed to disambiguate which value is at fault.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +38,30 @@ export class AttributeErrorData_problems_Item {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * `AttributeProblem` 1–7 (no 0).
+         *
          * @public
          * @readonly
          */
         readonly problem: AttributeProblem,
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type of the problem (`type` in ASN.1).
+         *
          * @public
          * @readonly
          */
         readonly type_: AttributeType,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Present when needed to disambiguate which value is at fault.
+         *
          * @public
          * @readonly
          */

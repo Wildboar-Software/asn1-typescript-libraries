@@ -11,6 +11,9 @@ import {
  * @summary directoryStringFirstComponentMatch
  * @description
  *
+ * Stored SEQUENCE; first component mandatory DirectoryString. Compare that
+ * component only (caseIgnoreMatch). Assertion is the DirectoryString.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

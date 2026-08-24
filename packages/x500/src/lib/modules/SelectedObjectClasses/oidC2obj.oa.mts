@@ -10,6 +10,11 @@ import { id_oc_oidC2obj } from "../SelectedObjectClasses/id-oc-oidC2obj.va.mjs";
  * @summary oidC2obj
  * @description
  *
+ * Second-arc OID component entry. MUST CONTAIN `oidC` (not `oidC2`).
+ * X.520 says `oidC2` is the intended naming attribute for this class and
+ * for `oidRoot`. No name form in this module names this class
+ * (`oidC2NameForm` names `oidCobj`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

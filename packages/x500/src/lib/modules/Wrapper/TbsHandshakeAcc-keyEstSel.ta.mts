@@ -10,6 +10,10 @@ import {
  * @summary TbsHandshakeAcc_keyEstSel
  * @description
  *
+ * `altKeyEst` iff the client included an alternative key-establishment
+ * algorithm **and** the server supports it; otherwise `keyEst`. Carries
+ * the server’s DH Payload.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

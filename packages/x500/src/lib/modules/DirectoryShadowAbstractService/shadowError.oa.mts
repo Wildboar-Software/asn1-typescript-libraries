@@ -15,6 +15,10 @@ import {
  * @summary shadowError
  * @description
  *
+ * Sole DISP error. If the request was signed, the responder may sign the
+ * error. Which `ShadowProblem` values are legal depends on the operation
+ * (see `ShadowProblem`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

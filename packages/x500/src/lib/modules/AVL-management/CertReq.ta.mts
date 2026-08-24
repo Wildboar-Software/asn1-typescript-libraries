@@ -14,6 +14,8 @@ import {
  * @summary CertReq
  * @description
  *
+ * Cert-exchange request. Little prose in X.510; only `invokeID`. Pairs with `CertRsp`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class CertReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with `CertRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+         *
          * @public
          * @readonly
          */

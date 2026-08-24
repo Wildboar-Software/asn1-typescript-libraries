@@ -16,6 +16,8 @@ import {
  * @summary postOfficeBox
  * @description
  *
+ * Post office box by which the object receives physical postal delivery; if present, is part of the postal address. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

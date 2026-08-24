@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UserKeyingMaterial
  * @description
  *
+ * OCTET STRING **SIZE (64) exactly** (UKM / `partyAinfo`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

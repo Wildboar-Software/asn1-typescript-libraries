@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedSearch
  * @description
  *
+ * `chained{search}`. Same opcode as DAP `search`. `dsaReferral`
+ * instead of `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

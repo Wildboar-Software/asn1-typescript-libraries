@@ -10,6 +10,9 @@ import {
  * @summary DOP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{directoryOperationalBindingManagementAC}` for DOP. Only the
+ * Bind initiator invokes. Bind version constrains later PDUs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

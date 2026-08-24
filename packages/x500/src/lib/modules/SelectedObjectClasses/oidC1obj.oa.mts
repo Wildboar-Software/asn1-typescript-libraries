@@ -10,6 +10,12 @@ import { id_oc_oidC1obj } from "../SelectedObjectClasses/id-oc-oidC1obj.va.mjs";
  * @summary oidC1obj
  * @description
  *
+ * First-arc OID component entry. MUST CONTAIN `oidC` (not `oidC1`).
+ * X.520 says `oidC1` (INTEGER 0, 1, or 2 only) is the intended naming
+ * attribute for this class and for `oidRoot` — the object class ASN.1
+ * does not require `oidC1`. No name form in this module names this class
+ * (`oidC1NameForm` names `oidCobj`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

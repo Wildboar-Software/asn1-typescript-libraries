@@ -5,6 +5,9 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  * @summary id_oc_certificationAuthority_V2
  * @description
  *
+ * Deprecated. OID is `{id-oc 16 2}` (under `certificationAuthority`'s
+ * 16), not `{id-oc 19}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

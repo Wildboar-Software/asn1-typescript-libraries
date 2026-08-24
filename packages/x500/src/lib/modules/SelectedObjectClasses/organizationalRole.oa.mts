@@ -18,6 +18,11 @@ import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/Telecomm
  * @summary organizationalRole
  * @description
  *
+ * A position or role, not a person. Typically filled by an organizational
+ * person, but over its lifetime by a succession of people, or by a
+ * non-human entity. `roleOccupant` holds the current occupant(s). Distinct
+ * from `organizationalPerson`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

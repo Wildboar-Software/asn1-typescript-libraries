@@ -10,6 +10,10 @@ import {
  * @summary AgreementID
  * @description
  *
+ * Identifies one shadowing agreement between a pair of DSAs. Must be unique
+ * for that pair. Changed by `modifyOperationalBinding` (old and new IDs are
+ * both supplied). Reusing an active ID on establish yields `duplicateID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

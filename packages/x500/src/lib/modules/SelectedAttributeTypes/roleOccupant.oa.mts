@@ -10,6 +10,8 @@ import { id_at_roleOccupant } from "../SelectedAttributeTypes/id-at-roleOccupant
  * @summary roleOccupant
  * @description
  *
+ * SUBTYPE OF `distinguishedName`. Object that fulfils an organizational role.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

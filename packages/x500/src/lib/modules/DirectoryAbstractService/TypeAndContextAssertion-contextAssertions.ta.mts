@@ -10,6 +10,12 @@ import {
  * @summary TypeAndContextAssertion_contextAssertions
  * @description
  *
+ * `preference` SEQUENCE OF: order matters. Evaluate each assertion in
+ * turn against all candidate values of that type until one is TRUE; then
+ * apply that assertion to every candidate; later assertions ignored.
+ * Fallback flag not considered until the whole SEQUENCE is exhausted.
+ * `all` SET OF: every ContextAssertion must be TRUE; order irrelevant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -12,6 +12,9 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary tagOid
  * @description
  *
+ * Object identifier indicating the type of UII that follows it in the
+ * ID tag (e.g. RFID). SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -13,6 +13,10 @@ import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-cer
  * @summary certificationAuthority
  * @description
  *
+ * DEPRECATED auxiliary CA class (X.521 6.18). Prefer `pkiUser` / `pkiCA`.
+ * MUST `cACertificate`, `certificateRevocationList`, and
+ * `authorityRevocationList` (all three). Auxiliary.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

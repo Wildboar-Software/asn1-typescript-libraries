@@ -30,6 +30,11 @@ import {
  * @summary Wrap_Header
  * @description
  *
+ * Wrap header. `tok-id` is 513 (0x0201). Omitted `int-alg` / `conf-alg`
+ * means the default I-ALG / C-ALG. Explicit `conf-alg` `null` means no
+ * confidentiality (not the same as omit). `sum64-DES-CBC` as I-ALG
+ * requires `conf-alg` DES-CBC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,30 +52,53 @@ export class Wrap_Header {
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 513 (0x0201). Bound into the checksum.
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * Established context-id.
+         *
          * @public
          * @readonly
          */
         readonly context_id: Random_Integer,
         /**
          * @summary `int_alg`.
+         * @description
+         *
+         * Must be an agreed I-ALG. Omit for default. `sum64-DES-CBC`
+         * forces confidentiality.
+         *
          * @public
          * @readonly
          */
         readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `conf_alg`.
+         * @description
+         *
+         * Agreed C-ALG, or `null` for no encryption. Omit for default
+         * C-ALG (not `null`). Combined encrypt+integrity when DES-CBC
+         * with md5-DES-CBC or sum64-DES-CBC.
+         *
          * @public
          * @readonly
          */
         readonly conf_alg?: OPTIONAL<Conf_Alg>,
         /**
          * @summary `snd_seq`.
+         * @description
+         *
+         * Same sequencing rules as MIC. Increment after emitting.
+         *
          * @public
          * @readonly
          */

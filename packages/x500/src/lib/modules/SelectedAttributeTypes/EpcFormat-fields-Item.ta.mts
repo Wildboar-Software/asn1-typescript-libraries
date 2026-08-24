@@ -22,6 +22,9 @@ import {
  * @summary EpcFormat_fields_Item
  * @description
  *
+ * One EPC bit-field. Order of `fields` is bit-field order. `result`
+ * DEFAULT numericPad.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +36,30 @@ export class EpcFormat_fields_Item {
     constructor(
         /**
          * @summary `bits`.
+         * @description
+         *
+         * How many bits the field occupies.
+         *
          * @public
          * @readonly
          */
         readonly bits: INTEGER,
         /**
          * @summary `charField`.
+         * @description
+         *
+         * `characters` width or `maxValue` cap.
+         *
          * @public
          * @readonly
          */
         readonly charField: EpcFormat_fields_Item_charField,
         /**
          * @summary `result`.
+         * @description
+         *
+         * DEFAULT numericPad.
+         *
          * @public
          * @readonly
          */

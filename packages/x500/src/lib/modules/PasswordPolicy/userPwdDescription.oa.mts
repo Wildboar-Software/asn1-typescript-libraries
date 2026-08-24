@@ -10,6 +10,9 @@ import {
  * @summary userPwdDescription
  * @description
  *
+ * LDAP transfer syntax for {@link UserPwd} (`clear` vs `encrypted`
+ * CHOICE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

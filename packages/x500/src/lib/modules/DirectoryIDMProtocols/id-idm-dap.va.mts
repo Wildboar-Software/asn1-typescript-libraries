@@ -5,6 +5,10 @@ import { id_idm } from "../UsefulDefinitions/id-idm.va.mjs";
  * @summary id_idm_dap
  * @description
  *
+ * {id-idm 0}. `protocolID` for DAP-over-IDM (`dap-ip`). Only DUAs
+ * initiate; only the initiator requests operations. Always async.
+ * Also implicitly selects the DAP application context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

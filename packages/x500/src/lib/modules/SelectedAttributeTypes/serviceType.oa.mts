@@ -11,6 +11,9 @@ import { id_not_serviceType } from "../SelectedAttributeTypes/id-not-serviceType
  * @summary serviceType
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Service-type OID for the failing search. SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

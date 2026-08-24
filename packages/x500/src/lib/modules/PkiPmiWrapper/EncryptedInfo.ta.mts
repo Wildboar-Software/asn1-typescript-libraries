@@ -19,6 +19,9 @@ import {
  * @summary EncryptedInfo
  * @description
  *
+ * Confidential alternative of TBSPDU-wrapper `conf`: DH
+ * `keyAgreement` plus `encryptedPduInfo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,20 @@ export class EncryptedInfo {
     constructor(
         /**
          * @summary `keyAgreement`.
+         * @description
+         *
+         * Sender DH info plus KEK algorithm (KDF/wrap of the content key).
+         *
          * @public
          * @readonly
          */
         readonly keyAgreement: KeyAgreement,
         /**
          * @summary `encryptedPduInfo`.
+         * @description
+         *
+         * Optional wrapped CEK plus required encrypted PDU.
+         *
          * @public
          * @readonly
          */

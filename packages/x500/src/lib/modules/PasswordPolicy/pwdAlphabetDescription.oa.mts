@@ -10,6 +10,9 @@ import {
  * @summary pwdAlphabetDescription
  * @description
  *
+ * LDAP transfer syntax for {@link PwdAlphabet} (SEQUENCE OF UTF8String;
+ * each string is a required character class).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

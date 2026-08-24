@@ -10,6 +10,8 @@ import { uri } from "../SelectedAttributeTypes/uri.oa.mjs";
  * @summary url
  * @description
  *
+ * SUBTYPE OF `uri`. Uniform Resource Locator (inherits `uriMatch`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

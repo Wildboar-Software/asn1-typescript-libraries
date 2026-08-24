@@ -42,6 +42,9 @@ import {
  * @summary ReadResultData
  * @description
  *
+ * `modifyRights` only if requested, the user has some modify rights, and
+ * local policy allows.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +67,12 @@ export class ReadResultData implements CommonResults {
         readonly entry: EntryInformation,
         /**
          * @summary `modifyRights`.
+         * @description
+         *
+         * SET OF: one for the entry, one per user attribute the user may
+         * add/remove, one per value whose rights differ. Omitted unless
+         * requested and permitted.
+         *
          * @public
          * @readonly
          */

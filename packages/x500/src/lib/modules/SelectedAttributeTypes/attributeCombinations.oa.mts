@@ -13,6 +13,11 @@ import {
  * @summary attributeCombinations
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Attribute combinations that were required in the
+ * filter but were
+ * not supplied.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

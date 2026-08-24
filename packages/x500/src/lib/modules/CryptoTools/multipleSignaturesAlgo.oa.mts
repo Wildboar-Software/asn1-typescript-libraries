@@ -10,6 +10,10 @@ import { type ALGORITHM } from "@wildboar/pki-stub";
  * @summary multipleSignaturesAlgo
  * @description
  *
+ * Outer ALGORITHM for migration (Annex H). PARMS = fixed
+ * MultipleSignaturesAlgo SEQUENCE SIZE (1..MAX); empty illegal; order =
+ * preference. No DYN-PARMS. Instance is an invocation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

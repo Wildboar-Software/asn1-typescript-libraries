@@ -16,6 +16,8 @@ import {
  * @summary postalAddress
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF UnboundedDirectoryString (address **lines**; empty SEQUENCE invalid). Typically ≤6×30 characters including country. Line **order is significant**. `caseIgnoreListMatch` requires the same number of lines; `caseIgnoreListSubstringsMatch` — initial/any/final **cannot span lines**.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

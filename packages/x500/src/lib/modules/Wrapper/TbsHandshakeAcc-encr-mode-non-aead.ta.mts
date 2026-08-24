@@ -14,6 +14,11 @@ import {
  * @summary TbsHandshakeAcc_encr_mode_non_aead
  * @description
  *
+ * Server’s selected non-AEAD algorithms (single identifiers, not
+ * sequences). `encr` present iff the client included `encr`; then the
+ * first supported symmetric-key alg. `icvAlgID` is the first supported
+ * ICV alg.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +30,14 @@ export class TbsHandshakeAcc_encr_mode_non_aead {
     constructor(
         /**
          * @summary `encr`.
+         * @description First supported symmetric-key algorithm of those suggested; present iff the client included `encr`.
          * @public
          * @readonly
          */
         readonly encr: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `icvAlgID`.
+         * @description First supported ICV algorithm of those suggested.
          * @public
          * @readonly
          */

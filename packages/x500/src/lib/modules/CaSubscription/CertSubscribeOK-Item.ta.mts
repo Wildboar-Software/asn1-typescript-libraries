@@ -15,6 +15,9 @@ import {
  * @summary CertSubscribeOK_Item
  * @description
  *
+ * One per requested cert, same order. `ok` if retrieved; `not_ok` if the
+ * request element did not identify a cert issued by this CA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

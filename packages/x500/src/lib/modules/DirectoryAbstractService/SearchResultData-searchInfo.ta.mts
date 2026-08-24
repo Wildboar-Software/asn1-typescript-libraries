@@ -47,6 +47,10 @@ import {
  * @summary SearchResultData_searchInfo
  * @description
  *
+ * Succeeds if the base is located even if `entries` is empty.
+ * `altMatching` DEFAULT FALSE. `appliedRelaxation` notification lists
+ * attrs relaxed/tightened other than basic policy.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,24 +62,43 @@ export class SearchResultData_searchInfo implements CommonResults {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * Present if an alias was deref'd and the returned name differs from
+         * the base.
+         *
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<Name>,
         /**
          * @summary `entries`.
+         * @description
+         *
+         * SET OF; zero or more. Empty is success if the base was located.
+         *
          * @public
          * @readonly
          */
         readonly entries: EntryInformation[],
         /**
          * @summary `partialOutcomeQualifier`.
+         * @description
+         *
+         * Present when the outcome is incomplete (limits, unexplored, paging,
+         * etc.).
+         *
          * @public
          * @readonly
          */
         readonly partialOutcomeQualifier?: OPTIONAL<PartialOutcomeQualifier>,
         /**
          * @summary `altMatching`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ some matching rule was not applied exactly as
+         * requested.
+         *
          * @public
          * @readonly
          */
@@ -88,24 +111,42 @@ export class SearchResultData_searchInfo implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the result is signed; absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the result is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the result. `appliedRelaxation`
+         * lists attrs relaxed/tightened other than basic policy.
+         *
          * @public
          * @readonly
          */

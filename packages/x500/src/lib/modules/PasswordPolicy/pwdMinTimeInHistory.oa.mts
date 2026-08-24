@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdMinTimeInHistory
  * @description
  *
+ * Min seconds a replaced password **shall** stay in `userPwdHistory`.
+ * INTEGER (0..MAX). **Absent ⇒ 0.** Object-entry value overrides a
+ * covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

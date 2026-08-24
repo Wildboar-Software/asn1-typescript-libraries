@@ -15,6 +15,8 @@ import {
  * @summary surname
  * @description
  *
+ * SUBTYPE OF `name` (inherits `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`). Inherited or assumed family name by which the individual is commonly known.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

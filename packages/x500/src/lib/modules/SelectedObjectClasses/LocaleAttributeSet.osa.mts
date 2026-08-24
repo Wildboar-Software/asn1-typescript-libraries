@@ -7,6 +7,11 @@ import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
  * @summary LocaleAttributeSet
  * @description
  *
+ * Locale of an object, mainly for search. `streetAddress` is also in
+ * `PostalAttributeSet`. For `locality`, X.521 additionally requires at
+ * least one of `localityName` or `stateOrProvinceName` (not expressed in
+ * that object class ASN.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,10 @@ import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
  * @summary oidC1NameForm
  * @description
  *
+ * Despite the name, NAMES `oidCobj` (not `oidC1obj`) WITH `oidC`. X.521
+ * prose says it names the first-arc class. Functionally the same as
+ * `oidC2NameForm` and `oidCNameForm` in this module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

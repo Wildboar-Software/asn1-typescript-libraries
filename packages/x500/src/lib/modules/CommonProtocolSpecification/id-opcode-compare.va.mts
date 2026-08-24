@@ -4,6 +4,9 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_opcode_compare
  * @description
  *
+ * DAP/DSP local:2 (`compare` / `chainedCompare`). Same integer as DISP
+ * `updateShadow`. Protocol-scoped.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

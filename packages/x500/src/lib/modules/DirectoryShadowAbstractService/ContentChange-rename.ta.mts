@@ -15,6 +15,12 @@ import {
  * @summary ContentChange_rename
  * @description
  *
+ * `newRDN` = RDN-only rename (new distinguished values of the entry).
+ * `newDN` = move the subtree to a new parent. Does not add or delete
+ * attribute values. Primary names; include contexts and alternative
+ * distinguished values unless the agreement's context selection reduced
+ * them.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

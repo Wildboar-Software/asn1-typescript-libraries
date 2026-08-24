@@ -10,6 +10,10 @@ import {
  * @summary FilterItem_substrings_strings_Item
  * @description
  *
+ * At most one `initial` and it must be first; at most one `final` and it
+ * must be last; `any_` in between. `control` Attribute interprets
+ * following items, not preceding.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

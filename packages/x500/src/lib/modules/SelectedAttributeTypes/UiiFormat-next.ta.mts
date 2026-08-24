@@ -10,6 +10,10 @@ import {
  * @summary UiiFormat_next
  * @description
  *
+ * Remaining UII field. `length` = following field has fixed length in
+ * characters. `filter` = not fixed length; guidance to construct filter
+ * items to explore actual length.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

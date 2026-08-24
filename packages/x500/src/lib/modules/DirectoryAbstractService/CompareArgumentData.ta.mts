@@ -72,6 +72,11 @@ import {
  * @summary CompareArgumentData
  * @description
  *
+ * TRUE if the entry (or collective) holds `purported` type or a subtype
+ * matching the equality MR. Friend types cannot satisfy. `sizeLimit`
+ * ignored. `familyGrouping` except `multiStrand`: all grouped members'
+ * attrs used; `multiStrand` treated as `compoundEntry`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -88,12 +93,23 @@ export class CompareArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Name of the entry to compare against.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `purported`.
+         * @description
+         *
+         * AVA. TRUE if the entry (or collective) holds this type or a
+         * subtype matching the equality MR. Friend types cannot satisfy.
+         * Contexts: only values matching all assertions (or defaults if
+         * none).
+         *
          * @public
          * @readonly
          */
@@ -172,6 +188,11 @@ export class CompareArgumentData implements CommonArguments {
         readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
+         * @description
+         *
+         * DEFAULT `entryOnly`. Except `multiStrand`, all grouped members'
+         * attrs are used. `multiStrand` is treated as `compoundEntry`.
+         *
          * @public
          * @readonly
          */

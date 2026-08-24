@@ -10,6 +10,8 @@ import { id_at_member } from "../SelectedAttributeTypes/id-at-member.va.mjs";
  * @summary member
  * @description
  *
+ * SUBTYPE OF `distinguishedName`. Group of names associated with the object (inherits `distinguishedNameMatch`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

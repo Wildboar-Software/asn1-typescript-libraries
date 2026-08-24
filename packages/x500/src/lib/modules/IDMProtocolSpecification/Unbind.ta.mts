@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Unbind
  * @description
  *
+ * NULL. Orderly close; destructive — outstanding operation results
+ * are lost. DAP: initiator only; other protocols: either side. Either
+ * side may also just drop TCP. To avoid data loss, Unbind only when
+ * all requests have been responded to.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

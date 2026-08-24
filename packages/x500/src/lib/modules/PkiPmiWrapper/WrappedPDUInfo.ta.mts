@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WrappedPDUInfo
  * @description
  *
+ * Cleartext alternative of `conf`: `pduType` WRAPPED-PDU.&id plus
+ * `pduInfo` open type WRAPPED-PDU.&Type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +27,20 @@ export class WrappedPDUInfo {
     constructor(
         /**
          * @summary `pduType`.
+         * @description
+         *
+         * WRAPPED-PDU.&id from `SupportedPduSet`.
+         *
          * @public
          * @readonly
          */
         readonly pduType: OBJECT_IDENTIFIER,
         /**
          * @summary `pduInfo`.
+         * @description
+         *
+         * WRAPPED-PDU.&Type open type selected by `pduType`.
+         *
          * @public
          * @readonly
          */

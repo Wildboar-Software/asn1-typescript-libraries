@@ -15,6 +15,9 @@ import {
  * @summary ChangePasswordArgument
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on
+ * `ChangePasswordArgumentData`. User-initiated; old password required.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

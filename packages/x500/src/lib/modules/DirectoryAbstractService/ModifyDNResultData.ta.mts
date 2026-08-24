@@ -32,6 +32,9 @@ import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq
  * @summary ModifyDNResultData
  * @description
  *
+ * Carries the resulting `newRDN` plus `CommonResultsSeq`. Present when the
+ * result is `information`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

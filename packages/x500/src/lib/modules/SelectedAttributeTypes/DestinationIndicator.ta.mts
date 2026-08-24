@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DestinationIndicator
  * @description
  *
+ * Uppercase letters only (F.1/F.31 telegram destination). SIZE 1..MAX.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

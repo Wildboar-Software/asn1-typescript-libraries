@@ -7,6 +7,9 @@ import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
  * @summary orgNameForm
  * @description
  *
+ * Names `organization` by `organizationName`. Directly under root is an
+ * international organization (Annex B); those names must be distinct.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

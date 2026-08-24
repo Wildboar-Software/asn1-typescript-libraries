@@ -10,6 +10,9 @@ import { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va.mjs";
  * @summary dSA
  * @description
  *
+ * Directory System Agent (X.501). Subclass of `applicationEntity` (so
+ * `commonName` and `presentationAddress` remain mandatory).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

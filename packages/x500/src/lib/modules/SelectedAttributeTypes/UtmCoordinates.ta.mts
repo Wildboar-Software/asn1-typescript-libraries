@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UtmCoordinates
  * @description
  *
+ * `zone` is a letter plus up to two digits. `easting` and `northing` are
+ * metres. SEQUENCE order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +29,30 @@ export class UtmCoordinates {
     constructor(
         /**
          * @summary `zone`.
+         * @description
+         *
+         * UTM zone: one letter followed by up to two digits.
+         *
          * @public
          * @readonly
          */
         readonly zone: PrintableString,
         /**
          * @summary `easting`.
+         * @description
+         *
+         * Easting in metres.
+         *
          * @public
          * @readonly
          */
         readonly easting: NumericString,
         /**
          * @summary `northing`.
+         * @description
+         *
+         * Northing in metres.
+         *
          * @public
          * @readonly
          */

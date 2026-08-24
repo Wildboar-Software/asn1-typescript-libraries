@@ -15,6 +15,9 @@ import {
  * @summary TBSPDU_wrapper_conf
  * @description
  *
+ * `clear` [2] WrappedPDUInfo (plaintext PDU). `protected_` [3]
+ * EncryptedInfo (DH + encrypted PDU); ASN.1 name `protected`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

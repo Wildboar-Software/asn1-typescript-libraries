@@ -15,6 +15,11 @@ import {
  * @summary FamilyEntries
  * @description
  *
+ * Packaging only — the family-information attribute does not exist;
+ * selecting it is ignored; cannot be ACI-protected directly. `family_class`
+ * is the structural object class of the family (members immediately
+ * under the designated source).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +34,22 @@ export class FamilyEntries {
     constructor(
         /**
          * @summary `family_class`.
+         * @description
+         *
+         * Structural object class of the family (members immediately
+         * subordinate to the designated source).
+         *
          * @public
          * @readonly
          */
         readonly family_class: OBJECT_IDENTIFIER,
         /**
          * @summary `familyEntries`.
+         * @description
+         *
+         * SEQUENCE OF selected members. Unselected members omitted unless
+         * superior to a selected member.
+         *
          * @public
          * @readonly
          */

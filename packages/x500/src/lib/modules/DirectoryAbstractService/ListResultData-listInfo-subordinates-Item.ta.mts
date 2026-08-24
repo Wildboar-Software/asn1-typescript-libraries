@@ -15,6 +15,9 @@ import {
  * @summary ListResultData_listInfo_subordinates_Item
  * @description
  *
+ * One immediate subordinate. `aliasEntry` DEFAULT FALSE; `fromEntry`
+ * DEFAULT TRUE. Parent SET OF order is insignificant unless paging/sort.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +29,30 @@ export class ListResultData_listInfo_subordinates_Item {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * RDN of the subordinate relative to the listed object.
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `aliasEntry`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if this subordinate is an alias entry.
+         *
          * @public
          * @readonly
          */
         readonly aliasEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fromEntry`.
+         * @description
+         *
+         * DEFAULT TRUE. TRUE = entry; FALSE = copy.
+         *
          * @public
          * @readonly
          */

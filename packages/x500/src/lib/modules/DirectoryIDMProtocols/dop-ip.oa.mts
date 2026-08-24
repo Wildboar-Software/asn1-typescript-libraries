@@ -9,6 +9,9 @@ import { terminateOperationalBinding } from "../OperationalBindingManagement/ter
  * @summary dop_ip
  * @description
  *
+ * DOP over IDM. Both sides may request (OSI DOP: initiator only).
+ * Always async. Same opcodes as DOP (6.4.3 / 6.5.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

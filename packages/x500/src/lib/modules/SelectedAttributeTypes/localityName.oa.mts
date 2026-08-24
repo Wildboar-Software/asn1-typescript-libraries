@@ -15,6 +15,8 @@ import {
  * @summary localityName
  * @description
  *
+ * SUBTYPE OF `name`. Geographical area or locality of physical location or other important association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

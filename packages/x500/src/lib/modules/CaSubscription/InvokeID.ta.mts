@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary InvokeID
  * @description
  *
+ * INTEGER (0..127). Unique per authorizer–CA pair for one request/response;
+ * reusable after that interaction completes. Not the wrapper InvokeID
+ * (OCTET STRING SIZE (6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

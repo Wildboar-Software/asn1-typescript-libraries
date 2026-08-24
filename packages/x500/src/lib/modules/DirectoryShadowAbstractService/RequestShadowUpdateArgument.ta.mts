@@ -15,6 +15,10 @@ import {
  * @summary RequestShadowUpdateArgument
  * @description
  *
+ * OPTIONALLY-PROTECTED wrapper. If signed, inner `securityParameters`
+ * shall be present (`target` is `none`). Result may be signed only if
+ * request `target` is `signed`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

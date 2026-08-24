@@ -5,6 +5,12 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  * @summary id_ac_shadowConsumerInitiatedAC
  * @description
  *
+ * {id-ac 4}. DISP, consumer-initiated, synchronous. Ops:
+ * `requestShadowUpdate` and `updateShadow` — not
+ * `coordinateShadowUpdate`. Conformance minimum is this or the
+ * supplier-initiated sync AC; async ACs are optional extras.
+ * DISP Bind version constrains all subsequent PDUs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -4,6 +4,9 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_opcode_administerPassword
  * @description
  *
+ * DAP/DSP local:11 (`administerPassword` /
+ * `chainedAdministerPassword`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

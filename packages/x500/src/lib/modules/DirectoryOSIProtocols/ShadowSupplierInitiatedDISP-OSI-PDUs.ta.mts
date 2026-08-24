@@ -10,6 +10,9 @@ import {
  * @summary ShadowSupplierInitiatedDISP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{shadowSupplierInitiatedAC}`: supplier-initiated synchronous
+ * DISP. No `requestShadowUpdate` on this association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

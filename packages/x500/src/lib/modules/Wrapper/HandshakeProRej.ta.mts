@@ -15,6 +15,11 @@ import {
  * @summary HandshakeProRej
  * @description
  *
+ * Protected-protocol reject of `HandshakeReq`:
+ * `Signed{TbsHandshakeProRej}`. `applData` **required** (reason PrPDU).
+ * `altSignature` shall be absent. Relevant only if the client sent init
+ * `applData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

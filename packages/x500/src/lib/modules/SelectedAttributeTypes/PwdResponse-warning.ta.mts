@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PwdResponse_warning
  * @description
  *
+ * `timeleft` INTEGER (0..MAX) seconds remaining. `graceRemaining`
+ * remaining grace binds. If `timeleft` present and ≠ 0, `error` shall
+ * be absent. Zero with `passwordExpired` ⇒ only change-password
+ * (master).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

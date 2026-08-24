@@ -10,6 +10,9 @@ import {
  * @summary facsimileNumberSubstringsMatch
  * @description
  *
+ * parameters ignored; telephoneNumber only. Like
+ * telephoneNumberSubstringsMatch on the number.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

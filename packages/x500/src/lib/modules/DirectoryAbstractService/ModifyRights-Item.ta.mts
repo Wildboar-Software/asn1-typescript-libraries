@@ -19,6 +19,9 @@ import {
  * @summary ModifyRights_Item
  * @description
  *
+ * Pairs `item` with `permission`. Permission meaning depends on which
+ * `item` alternative is used.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +33,22 @@ export class ModifyRights_Item {
     constructor(
         /**
          * @summary `item`.
+         * @description
+         *
+         * `entry`, `attribute`, or `value`. One `entry`; one `attribute` per
+         * user attribute the user may add/remove; one `value` per value whose
+         * rights differ from the attribute.
+         *
          * @public
          * @readonly
          */
         readonly item: ModifyRights_Item_item,
         /**
          * @summary `permission`.
+         * @description
+         *
+         * Interpretation depends on `item` (`entry` vs `attribute`/`value`).
+         *
          * @public
          * @readonly
          */

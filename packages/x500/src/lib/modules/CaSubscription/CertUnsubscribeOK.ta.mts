@@ -10,6 +10,9 @@ import {
  * @summary CertUnsubscribeOK
  * @description
  *
+ * SEQUENCE SIZE (1..MAX); empty illegal. Same count and order as
+ * CertUnsubscribeReq.`certs`. `ok` returns `subject`+`serialNumber`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

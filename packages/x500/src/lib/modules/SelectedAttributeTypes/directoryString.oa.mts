@@ -10,6 +10,10 @@ import {
  * @summary directoryString
  * @description
  *
+ * LDAP transfer of UnboundedDirectoryString is UTF-8. Mapping an LDAP
+ * string onto a DirectoryString alternative is a local choice of the
+ * LDAP requester.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DomainName
  * @description
  *
+ * DNS labels (RFC 5890): LDH, A-label (`xn--`), or U-label.
+ * `dnsNameMatch` is label-for-label (different counts ⇒ FALSE). Mixed LDH
+ * vs A-label/U-label ⇒ FALSE. Wildcard `*` at most one and must be
+ * leftmost; `*.example.com` matches `a.example.com`, not `a.b.example.com`
+ * nor `example.com`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

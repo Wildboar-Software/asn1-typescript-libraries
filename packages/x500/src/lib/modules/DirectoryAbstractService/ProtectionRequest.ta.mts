@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProtectionRequest
  * @description
  *
+ * INTEGER `none`(0), `signed`(1). Default `none`. Actual protection ≤
+ * requested.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +19,10 @@ export type ProtectionRequest = INTEGER;
 
 /**
  * @summary ProtectionRequest_none
+ * @description
+ *
+ * Request no protection (default). Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +30,10 @@ export const ProtectionRequest_none: ProtectionRequest = 0; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ProtectionRequest_none
+ * @description
+ *
+ * Request no protection (default). Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +41,10 @@ export const none: ProtectionRequest = ProtectionRequest_none; /* SHORT_NAMED_IN
 
 /**
  * @summary ProtectionRequest_signed
+ * @description
+ *
+ * Request signed; actual protection may still be `none`.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +52,10 @@ export const ProtectionRequest_signed: ProtectionRequest = 1; /* LONG_NAMED_INTE
 
 /**
  * @summary ProtectionRequest_signed
+ * @description
+ *
+ * Request signed; actual protection may still be `none`.
+ *
  * @constant
  * @type {number}
  */

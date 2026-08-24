@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthorizationData_Item
  * @description
  *
+ * One Kerberos authorization element (RFC 1510). Negative `ad-type` is
+ * optional (skip if unknown); unknown non-negative type rejects the
+ * request. Interpretation of `ad-data` is defined by `ad-type`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,12 +27,20 @@ export class AuthorizationData_Item {
     constructor(
         /**
          * @summary `ad_type`.
+         * @description
+         *
+         * Authorization data type. Negative means optional if unrecognized.
+         *
          * @public
          * @readonly
          */
         readonly ad_type: INTEGER,
         /**
          * @summary `ad_data`.
+         * @description
+         *
+         * Type-specific payload; empty is valid if the type allows it.
+         *
          * @public
          * @readonly
          */

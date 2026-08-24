@@ -11,6 +11,9 @@ export enum _enum_for_CASP_CertStatusCode {
  * @summary CASP_CertStatusCode
  * @description
  *
+ * Per-item failure code. `noReason` is (1), not (0). Used on `not_ok`
+ * alternatives.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +29,9 @@ export type CASP_CertStatusCode = _enum_for_CASP_CertStatusCode | ENUMERATED;
 
 /**
  * @summary CASP_CertStatusCode_noReason
+ * @description
+ *
+ * No other per-item code applies. Numbered (1), not (0).
  * @constant
  * @type {number}
  */
@@ -33,6 +39,9 @@ export const CASP_CertStatusCode_noReason: CASP_CertStatusCode = 1; /* LONG_NAME
 
 /**
  * @summary noReason
+ * @description
+ *
+ * No other per-item code applies. Numbered (1), not (0).
  * @constant
  * @type {number}
  */
@@ -40,6 +49,9 @@ export const noReason: CASP_CertStatusCode = CASP_CertStatusCode_noReason; /* SH
 
 /**
  * @summary CASP_CertStatusCode_unknownCert
+ * @description
+ *
+ * Request element did not identify a cert issued by this CA (subscribe/unsubscribe) or unknown at the authorizer (replace).
  * @constant
  * @type {number}
  */
@@ -47,6 +59,9 @@ export const CASP_CertStatusCode_unknownCert: CASP_CertStatusCode = 2; /* LONG_N
 
 /**
  * @summary unknownCert
+ * @description
+ *
+ * Request element did not identify a cert issued by this CA (subscribe/unsubscribe) or unknown at the authorizer (replace).
  * @constant
  * @type {number}
  */

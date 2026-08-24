@@ -11,6 +11,9 @@ import {
  * @summary caseIgnoreListSubstringsMatch
  * @description
  *
+ * Concat stored strings, then caseIgnoreSubstringsMatch. initial/any/final
+ * must not span stored-string boundaries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

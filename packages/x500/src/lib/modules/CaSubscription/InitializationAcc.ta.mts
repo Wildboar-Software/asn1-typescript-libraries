@@ -14,6 +14,10 @@ import {
  * @summary InitializationAcc
  * @description
  *
+ * CASP version accept. `version` shall be exactly one bit among those offered.
+ * Embed in HandshakeAcc. Client that rejects this issues InitializationAbort
+ * (ApplAbort, 14.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +31,10 @@ export class InitializationAcc {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Exactly one bit, among those suggested by the client (highest should
+         * be chosen).
          * @public
          * @readonly
          */

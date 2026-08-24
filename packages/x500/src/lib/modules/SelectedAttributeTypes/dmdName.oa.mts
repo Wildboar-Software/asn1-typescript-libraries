@@ -14,6 +14,8 @@ import {
  * @summary dmdName
  * @description
  *
+ * SUBTYPE OF `name`. DMD that manages the named object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

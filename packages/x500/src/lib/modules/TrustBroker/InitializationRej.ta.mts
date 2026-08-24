@@ -15,6 +15,8 @@ import {
  * @summary InitializationRej
  * @description
  *
+ * TB (server) rejects `InitializationReq`. Embed in a `HandshakeProRej` WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +32,10 @@ export class InitializationRej {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersions`(0): server supports none of the versions the client proposed.
+         *
          * @public
          * @readonly
          */

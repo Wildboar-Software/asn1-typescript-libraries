@@ -26,6 +26,10 @@ import {
  * @summary UiiFormat
  * @description
  *
+ * Tag UII format. `baseObject` absent ⇒ start at root. `subset`
+ * DEFAULT baseObject. `next` describes the following UII field (fixed
+ * `length` vs `filter` for remaining bits).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +49,31 @@ export class UiiFormat {
     constructor(
         /**
          * @summary `baseObject`.
+         * @description
+         *
+         * URI of search base; omitted ⇒ start at root.
+         *
          * @public
          * @readonly
          */
         readonly baseObject: OPTIONAL<URI>,
         /**
          * @summary `subset`.
+         * @description
+         *
+         * DEFAULT baseObject. Recommended Search subset.
+         *
          * @public
          * @readonly
          */
         readonly subset: OPTIONAL<UiiFormat_subset>,
         /**
          * @summary `next`.
+         * @description
+         *
+         * Following UII field: fixed `length` vs `filter` for remaining
+         * bits.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,8 @@ import {
  * @summary AddAvlErr
  * @description
  *
+ * Add failure. Carried as `AddAvlRsp.result.failure` in `DataTransferServer`. Invalid AVL signature is an **alert** (`AbortAVL` `noReason`), not this PDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +30,10 @@ export class AddAvlErr {
     constructor(
         /**
          * @summary `notOK`.
+         * @description
+         *
+         * Why the add failed (`duplicateAVL`, `maxAVLsExceeded`, constrained mismatch, etc.).
+         *
          * @public
          * @readonly
          */

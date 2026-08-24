@@ -11,6 +11,9 @@ import {
  * @summary uniqueMemberMatch
  * @description
  *
+ * DN via distinguishedNameMatch. Stored uid may be absent (then ignored);
+ * else bitStringMatch vs presented uid.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

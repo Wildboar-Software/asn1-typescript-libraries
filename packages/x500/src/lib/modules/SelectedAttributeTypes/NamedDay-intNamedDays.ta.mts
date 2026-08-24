@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NamedDay_intNamedDays
  * @description
  *
+ * ENUMERATED; sunday = 1 … saturday = 7 (off-by-one vs bitNamedDays
+ * sunday = 0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,9 @@ export enum _enum_for_NamedDay_intNamedDays {
  * @summary NamedDay_intNamedDays
  * @description
  *
+ * ENUMERATED; sunday = 1 … saturday = 7 (off-by-one vs bitNamedDays
+ * sunday = 0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +48,9 @@ export type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  * @summary NamedDay_intNamedDays
  * @description
  *
+ * ENUMERATED; sunday = 1 … saturday = 7 (off-by-one vs bitNamedDays
+ * sunday = 0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,6 +63,10 @@ export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
 
 /**
  * @summary NamedDay_intNamedDays_sunday
+ * @description
+ *
+ * INTEGER sunday = 1 (`bitNamedDays` sunday = 0).
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +75,10 @@ export const NamedDay_intNamedDays_sunday: NamedDay_intNamedDays =
 
 /**
  * @summary sunday
+ * @description
+ *
+ * INTEGER sunday = 1 (`bitNamedDays` sunday = 0).
+ *
  * @constant
  * @type {number}
  */

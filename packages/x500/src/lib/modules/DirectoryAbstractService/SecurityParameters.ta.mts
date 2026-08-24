@@ -40,6 +40,9 @@ import {
  * @summary SecurityParameters
  * @description
  *
+ * Conveyed sender→recipient (reversed on results). Required if signed.
+ * [5] and [7] not to be used. Actual protection ≤ requested.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,48 +65,89 @@ export class SecurityParameters {
     constructor(
         /**
          * @summary `certification_path`.
+         * @description
+         *
+         * Required if signed. Cert subject shall equal `name`. If the
+         * recipient needs a path and it is missing, reject vs fetch is
+         * local.
+         *
          * @public
          * @readonly
          */
         readonly certification_path?: OPTIONAL<CertificationPath>,
         /**
          * @summary `name`.
+         * @description
+         *
+         * DN of the first intended recipient (e.g. the DSA the DUA submits
+         * to).
+         *
          * @public
          * @readonly
          */
         readonly name?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `time`.
+         * @description
+         *
+         * Intended expiry; with `random`, detects replay.
+         *
          * @public
          * @readonly
          */
         readonly time?: OPTIONAL<Time>,
         /**
          * @summary `random`.
+         * @description
+         *
+         * Should differ per request/result/error. May carry sequence
+         * integrity: args derived from bind random then previous in the same
+         * direction; results/errors derived from the request random
+         * (e.g. +1).
+         *
          * @public
          * @readonly
          */
         readonly random?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `target`.
+         * @description
+         *
+         * Request only. `none`(0) default, `signed`(1). Actual protection
+         * ≤ requested.
+         *
          * @public
          * @readonly
          */
         readonly target?: OPTIONAL<ProtectionRequest>,
         /**
          * @summary `operationCode`.
+         * @description
+         *
+         * Bind opcode into signed content; receiver checks equality with the
+         * PDU opcode or discards. Only bound if signed.
+         *
          * @public
          * @readonly
          */
         readonly operationCode?: OPTIONAL<Code>,
         /**
          * @summary `errorProtection`.
+         * @description
+         *
+         * Request only. `none`/`signed`; actual ≤ requested.
+         *
          * @public
          * @readonly
          */
         readonly errorProtection?: OPTIONAL<ErrorProtectionRequest>,
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * Binds the error code into signed content when returning an error;
+         * mismatch ⇒ discard.
+         *
          * @public
          * @readonly
          */

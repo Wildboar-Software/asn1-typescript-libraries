@@ -15,6 +15,10 @@ import {
  * @summary AddEntryResult
  * @description
  *
+ * `null` when unsigned and nothing to return. `information` is the
+ * signed-or-unsigned wrapper; semantics live on `AddEntryResultData`.
+ * Signing requires protocol v2+.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

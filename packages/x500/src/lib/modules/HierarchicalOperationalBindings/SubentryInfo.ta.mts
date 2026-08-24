@@ -19,6 +19,8 @@ import {
  * @summary SubentryInfo
  * @description
  *
+ * One subentry of an administrative point (`Vertex.subentries`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +35,21 @@ export class SubentryInfo {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * Relative to the administrative point.
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `info`.
+         * @description
+         *
+         * Subentry attributes. SET OF Attribute without SIZE (1..MAX) — empty
+         * SET is legal here, unlike most other attribute SETs in this module.
+         *
          * @public
          * @readonly
          */

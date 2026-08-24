@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LinkId
  * @description
  *
+ * INTEGER uniquely identifying an outstanding LDAP operation among those
+ * forwarded to a particular adjacent DSA. OPTIONAL on `LdapArgument`
+ * (present iff the LDAP op may yield multiple results); required on
+ * `LinkedArgument`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

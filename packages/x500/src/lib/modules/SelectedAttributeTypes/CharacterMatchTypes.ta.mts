@@ -12,6 +12,11 @@ export enum _enum_for_CharacterMatchTypes {
  * @summary CharacterMatchTypes
  * @description
  *
+ * Control-attribute syntax for generalWordMatch. SINGLE VALUE; applies
+ * to following initial/any/final. Default characterExact
+ * (characterCaseIgnore if the attribute's equality matching rule is
+ * caseIgnoreMatch). Extra words use the last rule.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +33,10 @@ export type CharacterMatchTypes = _enum_for_CharacterMatchTypes | ENUMERATED;
 
 /**
  * @summary CharacterMatchTypes_characterExact
+ * @description
+ *
+ * Characters identical. Default unless attr equality is caseIgnoreMatch.
+ *
  * @constant
  * @type {number}
  */
@@ -35,6 +44,10 @@ export const CharacterMatchTypes_characterExact: CharacterMatchTypes = 0; /* LON
 
 /**
  * @summary characterExact
+ * @description
+ *
+ * Characters identical. Default unless attr equality is caseIgnoreMatch.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +55,10 @@ export const characterExact: CharacterMatchTypes = CharacterMatchTypes_character
 
 /**
  * @summary CharacterMatchTypes_characterCaseIgnore
+ * @description
+ *
+ * Ignore case. Default if attr equality is caseIgnoreMatch.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +66,10 @@ export const CharacterMatchTypes_characterCaseIgnore: CharacterMatchTypes = 1; /
 
 /**
  * @summary characterCaseIgnore
+ * @description
+ *
+ * Ignore case. Default if attr equality is caseIgnoreMatch.
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +77,11 @@ export const characterCaseIgnore: CharacterMatchTypes = CharacterMatchTypes_char
 
 /**
  * @summary CharacterMatchTypes_characterMapped
+ * @description
+ *
+ * Implementation table (T.51 national → A–Z0–9; may map sequences,
+ * e.g. ue → u-umlaut).
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +89,11 @@ export const CharacterMatchTypes_characterMapped: CharacterMatchTypes = 2; /* LO
 
 /**
  * @summary characterMapped
+ * @description
+ *
+ * Implementation table (T.51 national → A–Z0–9; may map sequences,
+ * e.g. ue → u-umlaut).
+ *
  * @constant
  * @type {number}
  */

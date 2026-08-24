@@ -38,6 +38,11 @@ import {
  * @summary TbsHandshakeSecAbort
  * @description
  *
+ * To-be-signed client wrapper abort of `HandshakeAcc`. `version` bits
+ * **same as the original `HandshakeReq`**. `sigAlg` is the Acc’s
+ * algorithm if valid, else the native `sigAlg` from that Req. `diag`
+ * absent iff alert. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,36 +61,42 @@ export class TbsHandshakeSecAbort {
     constructor(
         /**
          * @summary `version`.
+         * @description Same bits as in the original `HandshakeReq`. DEFAULT `{v1}`.
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `sigAlg`.
+         * @description Acc’s algorithm if the client accepted it; otherwise the native `sigAlg` from the original `HandshakeReq`. Signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigAlg: AlgorithmIdentifier,
         /**
          * @summary `assoID`.
+         * @description Same value as in the rejected `HandshakeAcc`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `diag`.
+         * @description `WrpError` when not an alert; **absent if alert**.
          * @public
          * @readonly
          */

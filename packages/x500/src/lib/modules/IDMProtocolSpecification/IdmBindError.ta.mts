@@ -21,6 +21,11 @@ import {
  * @summary IdmBindError
  * @description
  *
+ * Failed Bind. `protocolID` shall equal the Bind's. `errcode` is
+ * commented out in the ASN.1 — the error parameter is untagged by
+ * code. `aETitleError` is set only when both peers use AE-title info.
+ * After this, retry Bind or close TCP; do not send requests.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +47,42 @@ export class IdmBindError {
     constructor(
         /**
          * @summary `protocolID`.
+         * @description
+         *
+         * Shall equal the Bind's `protocolID`.
+         *
          * @public
          * @readonly
          */
         readonly protocolID: OBJECT_IDENTIFIER,
         /**
          * @summary `respondingAETitle`.
+         * @description
+         *
+         * Responder's AE name. Optional.
+         *
          * @public
          * @readonly
          */
         readonly respondingAETitle: OPTIONAL<GeneralName>,
         /**
          * @summary `aETitleError`.
+         * @description
+         *
+         * Set only if both peers use AE-title info. See
+         * `IdmBindError-aETitleError`.
+         *
          * @public
          * @readonly
          */
         readonly aETitleError: OPTIONAL<IdmBindError_aETitleError>,
         /**
          * @summary `error`.
+         * @description
+         *
+         * Bind-operation ERROR parameter (open type). The ASN.1 `errcode`
+         * field is commented out — this is not tagged by error code.
+         *
          * @public
          * @readonly
          */

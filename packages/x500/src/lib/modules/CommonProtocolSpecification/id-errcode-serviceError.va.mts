@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_serviceError
  * @description
  *
+ * DAP/DSP local:3 (`serviceError`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

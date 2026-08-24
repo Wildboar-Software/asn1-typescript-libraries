@@ -10,6 +10,8 @@ export enum _enum_for_InitializationRej_diag {
  * @summary InitializationRej_diag
  * @description
  *
+ * Why the TB (server) rejected `InitializationReq`. ASN.1 name is `unsupportedVersions` (plural); wrap the PrPDU in `HandshakeProRej`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +26,10 @@ export type InitializationRej_diag =
 
 /**
  * @summary InitializationRej_diag_unsupportedVersions
+ * @description
+ *
+ * Server supports none of the versions the client proposed.
+ *
  * @constant
  * @type {number}
  */
@@ -31,6 +37,10 @@ export const InitializationRej_diag_unsupportedVersions: InitializationRej_diag 
 
 /**
  * @summary unsupportedVersions
+ * @description
+ *
+ * Server supports none of the versions the client proposed.
+ *
  * @constant
  * @type {number}
  */

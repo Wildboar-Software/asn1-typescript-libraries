@@ -16,6 +16,12 @@ import {
  * @summary IdmReject
  * @description
  *
+ * Protocol error on a Request, Result, or Error from which an invoke
+ * ID could be recovered. If the invoke ID cannot be determined, close
+ * the connection instead. `invokeID` is that of the bad PDU.
+ * Version-related reasons (11–13) refer to the TCP segment header
+ * version, not the Directory protocol version.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,12 +51,22 @@ export class IdmReject {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Invoke ID recovered from the bad Request/Result/Error. If it cannot
+         * be recovered, close the connection instead of Reject.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: INTEGER,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * See `IdmReject-reason`. Reasons 11–13 are TCP-mapping version
+         * problems, not Directory protocol version.
+         *
          * @public
          * @readonly
          */

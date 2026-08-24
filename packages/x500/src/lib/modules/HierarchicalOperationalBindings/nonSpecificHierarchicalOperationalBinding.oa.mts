@@ -14,6 +14,12 @@ import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERAT
  * @summary nonSpecificHierarchicalOperationalBinding
  * @description
  *
+ * Asymmetric. Superior holds an NSSR (`nonSpecificKnowledge`);
+ * subordinate holds an immediate superior reference. Only the
+ * subordinate may initiate establishment. Either role may modify or
+ * terminate. No termination parameter. Cooperative operations use
+ * `directorySystemAC`; DOP uses `operationalBindingManagementAC`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

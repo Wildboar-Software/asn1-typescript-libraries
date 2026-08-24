@@ -15,6 +15,10 @@ import {
  * @summary SearchResultData
  * @description
  *
+ * Succeeds if the base is located even if zero entries.
+ * `uncorrelatedSearchInfo` is an unordered SET OF `SearchResult` from
+ * multiple DSAs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,13 @@ import {
  * @summary SDSEContent
  * @description
  *
+ * Attributes and completeness flags of one shadowed DSE. Consumer builds a
+ * DSE whose `dseType` is this `sDSEType` after setting the `shadow` bit
+ * and clearing bits not permitted in `SDSEType`. Consumer may add extra
+ * local operational attributes. `createTimestamp` is sent on total refresh
+ * or when adding a new shadow DSE; `modifyTimestamp` is sent whenever
+ * present on the supplier.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,30 +49,57 @@ export class SDSEContent {
     constructor(
         /**
          * @summary `sDSEType`.
+         * @description
+         *
+         * Same BIT STRING as `DSEType`. Bits `supr`, `xr`, `shadow`,
+         * `immSupr`, and `rhob`, if set, are ignored.
+         *
          * @public
          * @readonly
          */
         readonly sDSEType: SDSEType,
         /**
          * @summary `subComplete`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = subordinate knowledge is complete; FALSE =
+         * incomplete or unknown.
+         *
          * @public
          * @readonly
          */
         readonly subComplete: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attComplete`.
+         * @description
+         *
+         * TRUE iff all user attributes, all of their values, and all
+         * associated contexts are present. FALSE = some omitted. Absent =
+         * undefined whether complete.
+         *
          * @public
          * @readonly
          */
         readonly attComplete: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Unordered SET OF user and operational attributes selected by the
+         * agreement. Empty SET is legal (e.g. glue with only ACI/type).
+         *
          * @public
          * @readonly
          */
         readonly attributes: Attribute[],
         /**
          * @summary `attValIncomplete`.
+         * @description
+         *
+         * DEFAULT {} (empty). Types present in `attributes` for which some
+         * values were omitted (usually context selection). Types not listed
+         * have all values. Shall not name a type absent from `attributes`.
+         *
          * @public
          * @readonly
          */

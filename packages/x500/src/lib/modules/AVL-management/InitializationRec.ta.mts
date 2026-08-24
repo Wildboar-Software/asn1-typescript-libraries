@@ -14,6 +14,8 @@ import {
  * @summary InitializationRec
  * @description
  *
+ * Authorizer (client) starts AVMP. Embed in `HandshakeReq`. `version` is Wrapper BIT STRING; the client **may set multiple** bits. Current version is v1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class InitializationRec {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Offered AVMP versions; multiple bits allowed. Server must pick exactly one of these.
+         *
          * @public
          * @readonly
          */

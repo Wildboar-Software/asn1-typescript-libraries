@@ -7,6 +7,9 @@ import { id_lsx_fax } from "../SelectedAttributeTypes/id-lsx-fax.va.mjs";
  * @summary fax
  * @description
  *
+ * LDAP fax-image transfer (IETF RFC 4517). DIRECTORY SYNTAX is NULL — no
+ * corresponding Directory syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,8 @@ import { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString
  * @summary octetString
  * @description
  *
+ * LDAP transfer of OCTET STRING (zero or more octets; IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

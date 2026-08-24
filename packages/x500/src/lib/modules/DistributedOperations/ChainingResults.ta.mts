@@ -29,6 +29,11 @@ import {
  * @summary ChainingResults
  * @description
  *
+ * On every chained result. `crossReferences` absent unless the request
+ * had `returnCrossRefs` TRUE; SEQUENCE SIZE (1..MAX) order = append
+ * order; cannot be empty if present. `alreadySearched` same Exclusions
+ * rules. `securityParameters` absence ≡ empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +50,44 @@ export class ChainingResults {
     constructor(
         /**
          * @summary `info`.
+         * @description
+         *
+         * Unconstrained DMD-private DomainInfo. Opaque to the spec.
+         *
          * @public
          * @readonly
          */
         readonly info?: OPTIONAL<DomainInfo>,
         /**
          * @summary `crossReferences`.
+         * @description
+         *
+         * Shall be absent unless the request had `returnCrossRefs` TRUE.
+         * SEQUENCE SIZE (1..MAX); order = order DSAs appended them. Cannot
+         * be empty if present. Admin policy may refuse to add.
+         *
          * @public
          * @readonly
          */
         readonly crossReferences?: OPTIONAL<CrossReference[]>,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * DEFAULT `{}`. Absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `alreadySearched`.
+         * @description
+         *
+         * Subordinate RDNSequences under `targetObject` already processed
+         * in a chained Search. Same Exclusions rules (relative, SIZE
+         * (1..MAX)).
+         *
          * @public
          * @readonly
          */

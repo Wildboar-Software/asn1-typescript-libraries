@@ -16,6 +16,11 @@ import {
  * @summary OperationProgress
  * @description
  *
+ * `nameResolutionPhase` numbering starts at 1: `notStarted`(1)
+ * `proceeding`(2) `completed`(3). DEFAULT phase `notStarted`.
+ * `nextRDNToBeResolved` is 1-based 1..N, present only when
+ * `proceeding`, absent when `completed`/`notStarted`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +39,25 @@ export class OperationProgress {
     constructor(
         /**
          * @summary `nameResolutionPhase`.
+         * @description
+         *
+         * `notStarted`(1) default: initial RDN(s) not yet reached.
+         * `proceeding`(2): `nextRDNToBeResolved` shall be present.
+         * `completed`(3): DSA holding the target reached;
+         * `nextRDNToBeResolved` shall be absent. Numbering starts at 1.
+         *
          * @public
          * @readonly
          */
         readonly nameResolutionPhase: OperationProgress_nameResolutionPhase,
         /**
          * @summary `nextRDNToBeResolved`.
+         * @description
+         *
+         * Integer 1..N (N = RDNs in targetObject). 1-based. Present only
+         * when phase is `proceeding`; absent when `completed` or
+         * `notStarted`.
+         *
          * @public
          * @readonly
          */

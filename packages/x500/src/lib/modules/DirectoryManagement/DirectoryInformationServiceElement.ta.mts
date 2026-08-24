@@ -24,6 +24,11 @@ import {
  * @summary DirectoryInformationServiceElement
  * @description
  *
+ * One allowed or disallowed Directory information-service element (same syntax
+ * for both lists). All components OPTIONAL. `operationType` is a BIT STRING
+ * (several DAP ops per element). `attributeValue` is [0] because it is an open
+ * type. No extension marker. MATCHES FOR EQUALITY.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +47,32 @@ export class DirectoryInformationServiceElement {
     constructor(
         /**
          * @summary `operationType`.
+         * @description
+         *
+         * BIT STRING of DAP ops; multiple bits may be set. Absent: this
+         * element does not constrain by operation.
+         *
          * @public
          * @readonly
          */
         readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
         /**
          * @summary `attributeType`.
+         * @description
+         *
+         * Absent: this element does not constrain by attribute type.
+         *
          * @public
          * @readonly
          */
         readonly attributeType?: OPTIONAL<AttributeType>,
         /**
          * @summary `attributeValue`.
+         * @description
+         *
+         * Tagged [0] (open type). Typically paired with `attributeType`.
+         * Absent: no value constraint.
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,9 @@ import {
  * @summary CertUpdateOK
  * @description
  *
+ * SEQUENCE SIZE (1..MAX); empty illegal. Same count and order as
+ * CertUpdateReq.`certs`. `ok` returns `subject`+`serialNumber`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

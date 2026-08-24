@@ -39,6 +39,11 @@ import {
  * @summary MasterOrShadowAccessPoint
  * @description
  *
+ * COMPONENTS OF AccessPoint plus `category` DEFAULT `master` and
+ * `chainingRequired` DEFAULT FALSE. `writeableCopy` is LDAP-only; a
+ * shadow LDAP server may still write. `chainingRequired` TRUE ⇒ do
+ * not refer, must chain.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,18 +63,32 @@ export class MasterOrShadowAccessPoint extends AccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
+         * @description
+         *
+         * DSA's Name. Ignored for LDAP servers.
+         *
          * @public
          * @readonly
          */
         override readonly ae_title: Name /* REPLICATED_COMPONENT */,
         /**
          * @summary `address`.
+         * @description
+         *
+         * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
+         * sSelector / tSelector. LDAP: those selectors ignored too.
+         *
          * @public
          * @readonly
          */
         override readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
         /**
          * @summary `protocolInformation`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
+         * instead.
+         *
          * @public
          * @readonly
          */
@@ -78,12 +97,23 @@ export class MasterOrShadowAccessPoint extends AccessPoint {
         > /* REPLICATED_COMPONENT */,
         /**
          * @summary `category`.
+         * @description
+         *
+         * DEFAULT `master`. `master`(0) naming-context master; `shadow`(1)
+         * commonly usable replica (LDAP shadow may still update);
+         * `writeableCopy`(2) LDAP only.
+         *
          * @public
          * @readonly
          */
         readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category>,
         /**
          * @summary `chainingRequired`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ do not return a referral for that DSA;
+         * chain.
+         *
          * @public
          * @readonly
          */

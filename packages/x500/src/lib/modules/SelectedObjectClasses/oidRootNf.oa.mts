@@ -9,6 +9,11 @@ import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
  * @summary oidRootNf
  * @description
  *
+ * Names `oidRoot` by `oidC1`, `oidC2`, and `oidC` — `|` is set union;
+ * this binding treats all three as mandatory distinguished attributes
+ * (the RDN contains all three). Moved from X.660. OID is `{id 4}`, not
+ * under `id-nf`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

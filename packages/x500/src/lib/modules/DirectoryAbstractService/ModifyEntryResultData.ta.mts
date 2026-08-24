@@ -32,6 +32,9 @@ import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq
  * @summary ModifyEntryResultData
  * @description
  *
+ * If no `selection` but signed ⇒ omit `entry`. If not signed, no entry
+ * information shall be conveyed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +50,10 @@ export class ModifyEntryResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Present only if `selection` was supplied and the result is signed.
+         *
          * @public
          * @readonly
          */

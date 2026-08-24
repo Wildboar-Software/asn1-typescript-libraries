@@ -8,6 +8,10 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary shadowConsumerInitiatedAC
  * @description
  *
+ * DISP, consumer-initiated, synchronous. Ops: `requestShadowUpdate`
+ * and `updateShadow` — not `coordinateShadowUpdate`. Bind version
+ * constrains all subsequent PDUs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

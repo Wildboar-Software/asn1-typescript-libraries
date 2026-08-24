@@ -10,6 +10,9 @@ import { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.mjs";
  * @summary oidArc
  * @description
  *
+ * Moved from X.660. Subclass of `alias` (so `aliasedEntryName` applies).
+ * MUST `oidC`. OID is `{id 5}`, not under `id-oc`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

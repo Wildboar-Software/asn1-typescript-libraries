@@ -19,6 +19,12 @@ import {
  * @summary InitialContextToken
  * @description
  *
+ * GSS framing (`[APPLICATION 0] IMPLICIT`). Applied to *every* SPKM
+ * token (not only the first), including REP-TI, REP-IT, ERROR, MIC,
+ * WRAP, and DEL. Encoded DER. `thisMech` is `spkm-1` or `spkm-2`. CHOICE
+ * tags on the inner token are for decoding; `tok-id` inside binds the
+ * type cryptographically.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +39,21 @@ export class InitialContextToken {
     constructor(
         /**
          * @summary `thisMech`.
+         * @description
+         *
+         * `spkm-1` or `spkm-2`.
+         *
          * @public
          * @readonly
          */
         readonly thisMech: MechType,
         /**
          * @summary `innerContextToken`.
+         * @description
+         *
+         * The SPKM token; CHOICE tag `[0]`–`[6]` is the token-id for
+         * parsing.
+         *
          * @public
          * @readonly
          */

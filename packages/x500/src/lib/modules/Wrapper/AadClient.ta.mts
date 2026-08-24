@@ -30,6 +30,12 @@ import {
  * @summary AadClient
  * @description
  *
+ * Unencrypted associated data for client data-transfer WrPDUs. `keyEst`
+ * present = client rekey (prose "rekey component"): new DH pair + nonce.
+ * Only the client initiates rekey; interval configurable 15 min–24 h. Do
+ * not send another rekey until a server PDU with `changedKey` TRUE for the
+ * outstanding rekey.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,30 +52,57 @@ export class AadClient {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: OPTIONAL<InvokeID>,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier agreed at handshake for this association.
+         *
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction client sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         readonly seq: SequenceNumber,
         /**
          * @summary `keyEst`.
+         * @description
+         *
+         * Present = client rekey (prose "rekey component"). New DH pair +
+         * nonce in Payload. Do not send another until a server PDU with
+         * `changedKey` TRUE for the outstanding rekey. Only the client
+         * initiates; interval 15 min–24 h.
+         *
          * @public
          * @readonly
          */

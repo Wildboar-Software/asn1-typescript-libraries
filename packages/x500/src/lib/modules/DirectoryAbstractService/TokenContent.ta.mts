@@ -25,6 +25,9 @@ import {
  * @summary TokenContent
  * @description
  *
+ * `name` = intended recipient; `time` = expiry. `random` should differ for
+ * each unexpired token. `response` for challenge-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,30 +45,50 @@ export class TokenContent {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Signature algorithm of this token.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: AlgorithmIdentifier,
         /**
          * @summary `name`.
+         * @description
+         *
+         * Intended recipient.
+         *
          * @public
          * @readonly
          */
         readonly name: DistinguishedName,
         /**
          * @summary `time`.
+         * @description
+         *
+         * Expiry.
+         *
          * @public
          * @readonly
          */
         readonly time: Time,
         /**
          * @summary `random`.
+         * @description
+         *
+         * Should differ for each unexpired token.
+         *
          * @public
          * @readonly
          */
         readonly random: BIT_STRING,
         /**
          * @summary `response`.
+         * @description
+         *
+         * Challenge-response derived from `random`.
+         *
          * @public
          * @readonly
          */

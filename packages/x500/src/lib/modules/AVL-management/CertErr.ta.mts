@@ -20,6 +20,8 @@ import {
  * @summary CertErr
  * @description
  *
+ * Cert-exchange failure (`CertRsp.result.failure`). Little prose in X.510. `note` is OPTIONAL; if present, `Notifications` SIZE (1..MAX) — empty illegal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +36,20 @@ export class CertErr {
     constructor(
         /**
          * @summary `notOK`.
+         * @description
+         *
+         * Why the cert exchange failed.
+         *
          * @public
          * @readonly
          */
         readonly notOK: AVMP_error,
         /**
          * @summary `note`.
+         * @description
+         *
+         * OPTIONAL. If present, SIZE (1..MAX) — empty `Notifications` is illegal.
+         *
          * @public
          * @readonly
          */

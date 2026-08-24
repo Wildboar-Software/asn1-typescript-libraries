@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SeqNum
  * @description
  *
+ * Per-message sequence number. `num` is a 4-byte counter; default
+ * initial value is 0 if omitted from context data. `dir-ind` FALSE =
+ * sender is initiator, TRUE = acceptor (detects reflected tokens).
+ * Higher than expected → gap (adjust expected); lower → duplicate /
+ * unseq / old (do not adjust); wrong direction → unseq (do not adjust).
+ * Not encrypted: protected by being inside the checksum.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +32,21 @@ export class SeqNum {
     constructor(
         /**
          * @summary `num`.
+         * @description
+         *
+         * Sender's sequence number; increment by 1 after each MIC/WRAP/DEL.
+         *
          * @public
          * @readonly
          */
         readonly num: INTEGER,
         /**
          * @summary `dir_ind`.
+         * @description
+         *
+         * FALSE if the sender initiated the context; TRUE if the sender
+         * accepted it.
+         *
          * @public
          * @readonly
          */

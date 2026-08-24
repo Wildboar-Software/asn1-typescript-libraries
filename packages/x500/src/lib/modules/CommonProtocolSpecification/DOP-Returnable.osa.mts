@@ -7,6 +7,10 @@ import { terminateOperationalBinding } from "../OperationalBindingManagement/ter
  * @summary DOP_Returnable
  * @description
  *
+ * ROS operations the DOP responder may return. Same three ops as
+ * `DOP-Invokable`. OSI: only the Bind initiator invokes; IDM (`dop-ip`)
+ * allows either side to request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

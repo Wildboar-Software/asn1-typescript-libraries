@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UiiFormat_subset
  * @description
  *
+ * Recommended Search subset. DEFAULT in UiiFormat is baseObject(0)
+ * (unlike EnhancedGuide's oneLevel).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +27,9 @@ export enum _enum_for_UiiFormat_subset {
  * @summary UiiFormat_subset
  * @description
  *
+ * Recommended Search subset. DEFAULT in UiiFormat is baseObject(0)
+ * (unlike EnhancedGuide's oneLevel).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +44,9 @@ export type UiiFormat_subset = _enum_for_UiiFormat_subset;
  * @summary UiiFormat_subset
  * @description
  *
+ * Recommended Search subset. DEFAULT in UiiFormat is baseObject(0)
+ * (unlike EnhancedGuide's oneLevel).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +59,10 @@ export const UiiFormat_subset = _enum_for_UiiFormat_subset;
 
 /**
  * @summary UiiFormat_subset_baseObject
+ * @description
+ *
+ * DEFAULT in UiiFormat (unlike EnhancedGuide DEFAULT oneLevel).
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +71,10 @@ export const UiiFormat_subset_baseObject: UiiFormat_subset =
 
 /**
  * @summary baseObject
+ * @description
+ *
+ * DEFAULT in UiiFormat (unlike EnhancedGuide DEFAULT oneLevel).
+ *
  * @constant
  * @type {number}
  */

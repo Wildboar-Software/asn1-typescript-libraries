@@ -14,6 +14,10 @@ import {
  * @summary EntryInformationSelection_attributes
  * @description
  *
+ * DEFAULT `allUserAttributes:NULL`. `select` with empty SET ⇒ no
+ * attributes requested. `attributeError` `noSuchAttributeOrValue` only
+ * if none of the selected attrs is present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

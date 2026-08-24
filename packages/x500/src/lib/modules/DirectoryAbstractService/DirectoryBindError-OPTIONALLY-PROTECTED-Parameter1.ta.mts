@@ -26,6 +26,9 @@ import {
  * @summary DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1
  * @description
  *
+ * Inner SET of the signed-or-unsigned bind error. `versions` = versions
+ * the DSA supports. `securityParameters` if signed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,18 +46,35 @@ export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
     constructor(
         /**
          * @summary `versions`.
+         * @description
+         *
+         * Versions the DSA supports. DEFAULT `{v1}`.
+         *
          * @public
          * @readonly
          */
         readonly versions: OPTIONAL<Versions>,
         /**
          * @summary `error`.
+         * @description
+         *
+         * CHOICE `serviceError` / `securityError`. Bind service:
+         * `unavailable`, `saslBindInProgress`. Bind security:
+         * `inappropriateAuthentication`, `invalidCredentials`,
+         * `blockedCredentials`, `spkmError`,
+         * `unsupportedAuthenticationMethod`, `passwordExpired`,
+         * `inappropriateAlgorithms`.
+         *
          * @public
          * @readonly
          */
         readonly error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Shall be included if this error is signed.
+         *
          * @public
          * @readonly
          */

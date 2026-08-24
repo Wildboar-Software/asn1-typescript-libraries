@@ -10,6 +10,11 @@ import {
  * @summary IncrementalRefresh
  * @description
  *
+ * SEQUENCE OF steps applied to the replicated area *in the order
+ * supplied*. Ordering is required so a Distinguished Name can be reused
+ * (delete then re-add, etc.). Empty SEQUENCE is a no-op but is not a
+ * substitute for `noRefresh`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

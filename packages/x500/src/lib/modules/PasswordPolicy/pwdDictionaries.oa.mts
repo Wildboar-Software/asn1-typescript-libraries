@@ -10,6 +10,10 @@ import { uri } from "../SelectedAttributeTypes/uri.oa.mjs";
  * @summary pwdDictionaries
  * @description
  *
+ * URIs (`SUBTYPE OF uri`); dictionary words are forbidden **as the
+ * whole password**. Object-entry value overrides a covering
+ * password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

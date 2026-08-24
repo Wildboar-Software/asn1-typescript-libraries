@@ -16,6 +16,10 @@ import {
  * @summary SaslCredentials
  * @description
  *
+ * Empty `mechanism` string ⇒ `securityError`
+ * `inappropriateAuthentication`. `saslAbort` DEFAULT FALSE.
+ * `ub-saslMechanism` = 20.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,18 +35,31 @@ export class SaslCredentials {
     constructor(
         /**
          * @summary `mechanism`.
+         * @description
+         *
+         * DirectoryString; upper bound 20. Empty ⇒
+         * `inappropriateAuthentication`.
+         *
          * @public
          * @readonly
          */
         readonly mechanism: DirectoryString,
         /**
          * @summary `credentials`.
+         * @description
+         *
+         * OPTIONAL; used in multi-step SASL.
+         *
          * @public
          * @readonly
          */
         readonly credentials?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `saslAbort`.
+         * @description
+         *
+         * DEFAULT FALSE. Abort a multi-step SASL exchange.
+         *
          * @public
          * @readonly
          */

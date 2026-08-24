@@ -14,6 +14,11 @@ import { id_oc_applicationProcess } from "../SelectedObjectClasses/id-oc-applica
  * @summary applicationProcess
  * @description
  *
+ * OSI application process (X.200): the information-processing element
+ * within a real open system. Distinct from `applicationEntity`
+ * (communications aspects). Typical superiors: organization or
+ * organizationalUnit. Typical subordinate: `applicationEntity`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

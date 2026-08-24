@@ -10,6 +10,8 @@ import { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedG
  * @summary enhancedGuide
  * @description
  *
+ * LDAP transfer of EnhancedGuide: ABNF as in IETF RFC 4517.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

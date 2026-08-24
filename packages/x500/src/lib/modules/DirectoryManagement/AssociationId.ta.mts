@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AssociationId
  * @description
  *
+ * Local INTEGER identifier of an application association. MATCHES FOR
+ * EQUALITY only. `0` is a valid id, not "none" or unset.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

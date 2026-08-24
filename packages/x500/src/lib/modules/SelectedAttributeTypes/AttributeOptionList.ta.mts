@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeOptionList
  * @description
  *
+ * Empty SEQUENCE allowed. Equality is set-like (same strings, any order,
+ * case-ignore). A context assertion matches if it is a subset of the stored
+ * list. SEQUENCE OF is for DER only; semantically a set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

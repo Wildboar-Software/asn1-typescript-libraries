@@ -15,6 +15,13 @@ import {
  * @summary SchedulingParameters
  * @description
  *
+ * Periodic windows, ad-hoc (`othertimes`), or both. `periodic` shall be
+ * present if `othertimes` is FALSE (otherwise there is no schedule).
+ * Windows are guidance only; updates may still be attempted outside them.
+ * If both are set, an `UpdateWindow` carried on a DISP operation takes
+ * precedence over `PeriodicStrategy` (even if it is later than the next
+ * periodic window).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +37,22 @@ export class SchedulingParameters {
     constructor(
         /**
          * @summary `periodic`.
+         * @description
+         *
+         * Regular windows. Required if `othertimes` is FALSE.
+         *
          * @public
          * @readonly
          */
         readonly periodic?: OPTIONAL<PeriodicStrategy>,
         /**
          * @summary `othertimes`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE allows locally scheduled updates and lets the
+         * supplier send `updateWindow` on `updateShadow` (and the peer
+         * return one on `unsuitableTiming`).
+         *
          * @public
          * @readonly
          */

@@ -4,6 +4,9 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_op_modifyOperationalBinding
  * @description
  *
+ * DOP local:102 (`modifyOperationalBinding`). Not 101 — `terminate`
+ * is 101.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

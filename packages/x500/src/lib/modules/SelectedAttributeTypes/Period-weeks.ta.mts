@@ -10,6 +10,12 @@ import {
  * @summary Period_weeks
  * @description
  *
+ * `intWeek` 1–5 if preceding `months` (5 = last week of month); 1–53
+ * if preceding `years` (53 = last week of year). First week = first
+ * week with ≥4 days of that month/year. `allWeeks` = all weeks (lets
+ * `days` be days-of-week). Omitted weeks on Period ⇒ all weeks.
+ * Ignored if `dayOf` used.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PreferredDeliveryMethod_Item
  * @description
  *
+ * INTEGER (not ENUMERATED). Position in PreferredDeliveryMethod is
+ * preference order. `any_delivery_method` (0) means any method.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +19,10 @@ export type PreferredDeliveryMethod_Item = INTEGER;
 
 /**
  * @summary PreferredDeliveryMethod_Item_any_delivery_method
+ * @description
+ *
+ * Any delivery method (0).
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +30,10 @@ export const PreferredDeliveryMethod_Item_any_delivery_method: PreferredDelivery
 
 /**
  * @summary PreferredDeliveryMethod_Item_any_delivery_method
+ * @description
+ *
+ * Any delivery method (0).
+ *
  * @constant
  * @type {number}
  */

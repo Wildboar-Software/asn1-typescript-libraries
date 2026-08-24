@@ -14,6 +14,8 @@ import { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhan
  * @summary enhancedSearchGuide
  * @description
  *
+ * Like `searchGuide` plus recommended search depth: `EnhancedGuide.subset` DEFAULT **oneLevel** (0=baseObject, 1=oneLevel, 2=wholeSubtree). `objectClass` is required. Recipe only; not auto-evaluated as a filter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

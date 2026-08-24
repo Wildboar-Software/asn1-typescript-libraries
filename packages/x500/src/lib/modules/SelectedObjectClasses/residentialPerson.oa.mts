@@ -15,6 +15,10 @@ import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/Telecomm
  * @summary residentialPerson
  * @description
  *
+ * Person in a residential environment. Subclass of `person`; also MUST
+ * `localityName`. Named by `commonName` and optionally `streetAddress`.
+ * Typical superior: locality (not organization).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

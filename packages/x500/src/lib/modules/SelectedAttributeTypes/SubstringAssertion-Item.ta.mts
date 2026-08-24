@@ -15,6 +15,11 @@ import {
  * @summary SubstringAssertion_Item
  * @description
  *
+ * `initial` at most once and first; `final` at most once and last; `any_`
+ * zero or more. `control` applies to following items only and is ignored
+ * unless the matching rule defines it (generalWordMatch). TypeScript `any_`
+ * is ASN.1 `any`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

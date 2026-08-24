@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EpcFormat_fields_Item_charField
  * @description
  *
+ * `characters` = output width; numeric overflow ⇒ EPC invalid.
+ * `maxValue` only valid for a numeric field; value above max ⇒ EPC
+ * invalid.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

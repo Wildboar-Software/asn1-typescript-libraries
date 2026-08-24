@@ -35,6 +35,9 @@ import {
  * @summary AadClientAE
  * @description
  *
+ * AAD for `DataTransferClientAE` (AUTHEN-ENCRYPT): not encrypted; the PrPDU
+ * is. COMPONENTS OF `AadClient` plus `encInvoke` (AEAD dyn parms if any).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,36 +52,68 @@ export class AadClientAE extends AadClient {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier agreed at handshake for this association.
+         *
          * @public
          * @readonly
          */
         override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction client sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `keyEst`.
+         * @description
+         *
+         * Present = client rekey (prose "rekey component"). New DH pair +
+         * nonce in Payload. Do not send another until a server PDU with
+         * `changedKey` TRUE for the outstanding rekey. Only the client
+         * initiates; interval 15 min–24 h.
+         *
          * @public
          * @readonly
          */
         override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
+         * @description
+         *
+         * AEAD algorithm dynamic parameters, if any. Present iff the selected
+         * AEAD algorithm has `&DynParms`.
+         *
          * @public
          * @readonly
          */

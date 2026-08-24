@@ -15,6 +15,8 @@ import { jidString } from "../SelectedAttributeTypes/jidString.oa.mjs";
  * @summary jid
  * @description
  *
+ * XMPP Jabber identifier. SINGLE VALUE. Equality `jidMatch` (RFC 7622 normalized; domain format+octets identical; localpart both present or both absent and octet-identical; resourcepart the same).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

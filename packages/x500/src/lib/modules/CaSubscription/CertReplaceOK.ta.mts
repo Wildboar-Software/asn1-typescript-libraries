@@ -10,6 +10,10 @@ import {
  * @summary CertReplaceOK
  * @description
  *
+ * SEQUENCE SIZE (1..MAX); empty illegal. Same count and order as
+ * CertReplaceReq.`certs`. Successful `ok` uses `issuer`+`serialNumber` (not
+ * subject).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

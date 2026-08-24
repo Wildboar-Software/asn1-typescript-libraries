@@ -10,6 +10,12 @@ import {
  * @summary SupplierUpdateMode
  * @description
  *
+ * `onChange` TRUE = supplier sends when the replicated area changes
+ * (unavailable consumer: resend later; outstanding changes may be batched
+ * into one `updateShadow`). `onChange` FALSE is unusual — prefer
+ * `scheduled` for timed updates. `scheduled` uses
+ * `SchedulingParameters`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

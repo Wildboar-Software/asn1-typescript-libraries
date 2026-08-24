@@ -4,6 +4,9 @@ import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
  * @summary SupportedSignatureAlgorithms
  * @description
  *
+ * Extensible ALGORITHM set for PDU-wrapper signatures; annex leaves
+ * `{...}` empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

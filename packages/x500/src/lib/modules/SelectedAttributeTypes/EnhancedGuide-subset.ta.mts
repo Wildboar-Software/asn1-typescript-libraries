@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EnhancedGuide_subset
  * @description
  *
+ * Recommended search depth. DEFAULT in EnhancedGuide is oneLevel(1).
+ * 0 = baseObject, 1 = oneLevel, 2 = wholeSubtree.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +33,10 @@ export const baseObject: EnhancedGuide_subset = EnhancedGuide_subset_baseObject;
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
+ * @description
+ *
+ * DEFAULT recommended depth in EnhancedGuide.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +44,10 @@ export const EnhancedGuide_subset_oneLevel: EnhancedGuide_subset = 1; /* LONG_NA
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
+ * @description
+ *
+ * DEFAULT recommended depth in EnhancedGuide.
+ *
  * @constant
  * @type {number}
  */

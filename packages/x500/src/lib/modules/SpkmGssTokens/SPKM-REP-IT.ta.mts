@@ -24,6 +24,11 @@ import {
  * @summary SPKM_REP_IT
  * @description
  *
+ * Initiator-to-target third token; completes SPKM-1 mutual
+ * authentication. Not used for SPKM-2. Integrity is over DER of
+ * `REP-IT-TOKEN` (the whole inner sequence), unlike REQ/REP-TI where
+ * integrity covers only the contents.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +44,30 @@ export class SPKM_REP_IT {
     constructor(
         /**
          * @summary `responseToken`.
+         * @description
+         *
+         * The "token" over which `rep_it_integ` is computed.
+         *
          * @public
          * @readonly
          */
         readonly responseToken: REP_IT_TOKEN,
         /**
          * @summary `algId`.
+         * @description
+         *
+         * Signature or MAC algorithm for `rep_it_integ`.
+         *
          * @public
          * @readonly
          */
         readonly algId: AlgorithmIdentifier,
         /**
          * @summary `rep_it_integ`.
+         * @description
+         *
+         * Signature or MAC of DER(`REP-IT-TOKEN`) per `algId`.
+         *
          * @public
          * @readonly
          */

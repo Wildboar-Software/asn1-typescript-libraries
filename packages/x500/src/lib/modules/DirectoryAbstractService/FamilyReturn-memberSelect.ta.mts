@@ -12,6 +12,12 @@ export enum _enum_for_FamilyReturn_memberSelect {
  * @summary FamilyReturn_memberSelect
  * @description
  *
+ * `contributingEntriesOnly` (1): only members marked contributing.
+ * `participatingEntriesOnly` (2): only participating. Read/ModifyEntry:
+ * contributing and participating are the same (the named object).
+ * `compoundEntry` (3): every family member except those unmarked by a
+ * governing-search-rule; `familySelect` has no effect.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +32,12 @@ export type FamilyReturn_memberSelect =
 
 /**
  * @summary FamilyReturn_memberSelect_contributingEntriesOnly
+ * @description
+ *
+ * (1) Only members marked contributing. Read/ModifyEntry: the named
+ * object. Search: members that contributed to the match. DEFAULT Search
+ * filter `and:{}` ⇒ none contributing (all participating).
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +45,12 @@ export const FamilyReturn_memberSelect_contributingEntriesOnly: FamilyReturn_mem
 
 /**
  * @summary contributingEntriesOnly
+ * @description
+ *
+ * (1) Only members marked contributing. Read/ModifyEntry: the named
+ * object. Search: members that contributed to the match. DEFAULT Search
+ * filter `and:{}` ⇒ none contributing (all participating).
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +58,11 @@ export const contributingEntriesOnly: FamilyReturn_memberSelect = FamilyReturn_m
 
 /**
  * @summary FamilyReturn_memberSelect_participatingEntriesOnly
+ * @description
+ *
+ * (2) Only participating members. Read/ModifyEntry: same as
+ * contributing (the named object).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +70,11 @@ export const FamilyReturn_memberSelect_participatingEntriesOnly: FamilyReturn_me
 
 /**
  * @summary participatingEntriesOnly
+ * @description
+ *
+ * (2) Only participating members. Read/ModifyEntry: same as
+ * contributing (the named object).
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +82,11 @@ export const participatingEntriesOnly: FamilyReturn_memberSelect = FamilyReturn_
 
 /**
  * @summary FamilyReturn_memberSelect_compoundEntry
+ * @description
+ *
+ * (3) Every family member except those unmarked by a
+ * governing-search-rule. `familySelect` has no effect.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +94,11 @@ export const FamilyReturn_memberSelect_compoundEntry: FamilyReturn_memberSelect 
 
 /**
  * @summary compoundEntry
+ * @description
+ *
+ * (3) Every family member except those unmarked by a
+ * governing-search-rule. `familySelect` has no effect.
+ *
  * @constant
  * @type {number}
  */

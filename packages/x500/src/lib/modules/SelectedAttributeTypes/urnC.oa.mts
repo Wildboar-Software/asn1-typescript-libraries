@@ -12,6 +12,8 @@ import { printableString } from "../SelectedAttributeTypes/printableString.oa.mj
  * @summary urnC
  * @description
  *
+ * URN path component when mapping a URN into a DIT. SINGLE VALUE PrintableString; **`caseExactMatch`**. Naming attribute of `urnCObj`. Subtree root holds the IANA URN namespace identifier.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

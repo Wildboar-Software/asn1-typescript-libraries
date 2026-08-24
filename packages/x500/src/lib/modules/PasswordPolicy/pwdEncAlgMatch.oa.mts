@@ -11,6 +11,8 @@ import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.
  * @summary pwdEncAlgMatch
  * @description
  *
+ * TRUE iff algorithm identifier **and** parameters are equal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

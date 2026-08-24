@@ -11,6 +11,9 @@ import {
  * @summary localeContext
  * @description
  *
+ * POSIX locale as OID (`localeID1`) or string (`localeID2`). Match
+ * requires the same CHOICE alternative. Registered locales only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -42,6 +42,9 @@ import {
  * @summary UpdateErrorData
  * @description
  *
+ * `attributeInfo` SET SIZE (1..MAX) OPTIONAL; CHOICE type vs full
+ * Attribute. Signing of update errors requires protocol v2+.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,12 +64,24 @@ export class UpdateErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * `entryAlreadyExists` includes multi-valued RDN distinguished
+         * values differing only by context. `noPasswordSlot` = history full
+         * with no slot older than `pwdMinTimeInHistory`.
+         *
          * @public
          * @readonly
          */
         readonly problem: UpdateProblem,
         /**
          * @summary `attributeInfo`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Identifies the type(s) and possibly value(s)
+         * causing the problem. For `objectClassViolation`, an `attribute`
+         * item shall list `objectClass` and the class(es) that caused it.
+         *
          * @public
          * @readonly
          */
@@ -79,24 +94,42 @@ export class UpdateErrorData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the error is signed; absence ≡ empty set. Signing of
+         * update errors requires protocol v2+.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the error is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the error.
+         *
          * @public
          * @readonly
          */

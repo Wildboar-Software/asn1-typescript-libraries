@@ -10,6 +10,8 @@ import {
  * @summary DOP_IDM_PDUs
  * @description
  *
+ * `IDM-PDU{dop-ip}`. Either side may request (unlike OSI DOP).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

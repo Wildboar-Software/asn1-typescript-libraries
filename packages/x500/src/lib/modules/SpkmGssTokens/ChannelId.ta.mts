@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChannelId
  * @description
  *
+ * GSS-API channel bindings. Absent means no channel bindings. Empty
+ * octet string is a present (empty) binding, not "none".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

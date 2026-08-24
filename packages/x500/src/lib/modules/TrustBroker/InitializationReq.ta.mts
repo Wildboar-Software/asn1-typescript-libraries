@@ -14,6 +14,8 @@ import {
  * @summary InitializationReq
  * @description
  *
+ * Relying party (client) proposes TB protocol versions during association establishment. Embed in a `HandshakeReq` WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class InitializationReq {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * BIT STRING: client may set multiple bits; server shall pick exactly one of those. Current version is `v1`.
+         *
          * @public
          * @readonly
          */

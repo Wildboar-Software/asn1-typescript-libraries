@@ -15,6 +15,9 @@ import {
  * @summary DayTimeBand
  * @description
  *
+ * `startDayTime` DEFAULT {hour 0}; `endDayTime` DEFAULT {hour 23,
+ * minute 59, second 59}.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +32,20 @@ export class DayTimeBand {
     constructor(
         /**
          * @summary `startDayTime`.
+         * @description
+         *
+         * DEFAULT {hour 0}.
+         *
          * @public
          * @readonly
          */
         readonly startDayTime?: OPTIONAL<DayTime>,
         /**
          * @summary `endDayTime`.
+         * @description
+         *
+         * DEFAULT {hour 23, minute 59, second 59}.
+         *
          * @public
          * @readonly
          */

@@ -19,6 +19,10 @@ import {
  * @summary CertSubscribeRsp
  * @description
  *
+ * CA outcome of CertSubscribeReq. `invokeID` matches the request.
+ * `success` if at least one cert was accepted; `failure` only if no per-item
+ * results can be returned. Data-transfer WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,18 @@ export class CertSubscribeRsp {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding request.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `result`.
+         * @description
+         *
+         * `success` if at least one cert was accepted; `failure` only if no per-item results can be returned.
          * @public
          * @readonly
          */

@@ -5,6 +5,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary JoinContextType
  * @description
  *
+ * Context-type OID. If `JoinAttPair.joinContext` is present, only these
+ * context types participate in the join; if absent, all contexts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

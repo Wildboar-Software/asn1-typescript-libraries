@@ -20,6 +20,10 @@ import {
  * @summary SimpleCredentials_validity
  * @description
  *
+ * Meaning of `time1`/`time2`/`random1`/`random2` is bilateral agreement
+ * (replay detection). GeneralizedTime for times if v2+. UTCTime not after
+ * 2049.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,24 +35,42 @@ export class SimpleCredentials_validity {
     constructor(
         /**
          * @summary `time1`.
+         * @description
+         *
+         * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
+         * not after 2049.
+         *
          * @public
          * @readonly
          */
         readonly time1?: OPTIONAL<SimpleCredentials_validity_time1>,
         /**
          * @summary `time2`.
+         * @description
+         *
+         * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
+         * not after 2049.
+         *
          * @public
          * @readonly
          */
         readonly time2?: OPTIONAL<SimpleCredentials_validity_time2>,
         /**
          * @summary `random1`.
+         * @description
+         *
+         * Meaning is bilateral agreement (replay detection).
+         *
          * @public
          * @readonly
          */
         readonly random1?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `random2`.
+         * @description
+         *
+         * Meaning is bilateral agreement (replay detection).
+         *
          * @public
          * @readonly
          */

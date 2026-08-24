@@ -7,6 +7,8 @@ import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNam
  * @summary countryNameForm
  * @description
  *
+ * Names `country` by `countryName`. Typical superior (Annex B): root only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

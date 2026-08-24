@@ -15,6 +15,10 @@ import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs"
  * @summary pwdVocabulary
  * @description
  *
+ * A **set** bit forbids that class as the **whole** password. Unset =
+ * no restriction. All-zero ⇒ no vocabulary constraint. Object-entry
+ * value overrides a covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

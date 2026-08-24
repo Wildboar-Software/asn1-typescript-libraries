@@ -8,6 +8,12 @@ import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
  * @summary numericStringOrderingMatch
  * @description
  *
+ * Prep both: Transcode→Map (case-fold)→Normalize KC→Prohibit→bidi→all
+ * spaces removed. Any step fail ⇒ UNDEFINED. All-spaces ⇒ empty ⇒
+ * UNDEFINED. Prepared strings ephemeral.
+ * TRUE iff stored is less/earlier than presented (Unicode code-point
+ * order). Not less-or-equal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

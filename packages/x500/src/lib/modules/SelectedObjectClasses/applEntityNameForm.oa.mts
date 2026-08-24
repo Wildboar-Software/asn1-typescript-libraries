@@ -7,6 +7,10 @@ import { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEnt
  * @summary applEntityNameForm
  * @description
  *
+ * Names `applicationEntity` by `commonName` (not `presentationAddress`,
+ * which is still mandatory on the entry). Typical superior:
+ * `applicationProcess`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

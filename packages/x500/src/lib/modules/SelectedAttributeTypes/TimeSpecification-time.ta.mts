@@ -15,6 +15,9 @@ import {
  * @summary TimeSpecification_time
  * @description
  *
+ * `periodic` SET SIZE (1..MAX) is OR of Period. `absolute` start = end
+ * ⇒ instant; missing endTime ⇒ all times after start.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

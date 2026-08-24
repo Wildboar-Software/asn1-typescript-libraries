@@ -15,6 +15,9 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * @summary CertReplaceOK_Item_ok
  * @description
  *
+ * Confirms a replacement. Identifies the cert by `issuer` and `serialNumber`
+ * (14.12 prose says subject — use `issuer`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +29,18 @@ export class CertReplaceOK_Item_ok {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Issuer name of the cert (not subject; 14.12 prose disagrees).
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial of that cert.
          * @public
          * @readonly
          */

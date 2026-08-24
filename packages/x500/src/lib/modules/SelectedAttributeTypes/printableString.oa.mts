@@ -7,6 +7,9 @@ import { id_lsx_printableString } from "../SelectedAttributeTypes/id-lsx-printab
  * @summary printableString
  * @description
  *
+ * LDAP transfer of PrintableString (X.680 repertoire; one or more
+ * characters).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

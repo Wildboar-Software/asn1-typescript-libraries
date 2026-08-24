@@ -35,6 +35,11 @@ import {
  * @summary Context_Data
  * @description
  *
+ * Algorithm offers/agreements and context flags. Target returns a subset
+ * of `conf-alg` / `intg-alg` in the same relative order; first remaining
+ * entry is the default. `owf-alg` in a reply is always exactly one
+ * algorithm.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,36 +58,68 @@ export class Context_Data {
     constructor(
         /**
          * @summary `channelId`.
+         * @description
+         *
+         * Channel bindings. Absent = none; empty OCTET STRING is a present
+         * empty binding.
+         *
          * @public
          * @readonly
          */
         readonly channelId: OPTIONAL<ChannelId>,
         /**
          * @summary `seq_number`.
+         * @description
+         *
+         * Initial per-message sequence number. Omit to use default 0.
+         * After each MIC/WRAP/DEL, the sender increments by 1. Higher than
+         * expected → gap; lower → duplicate/unseq/old; wrong `dir-ind` →
+         * unseq. Sequence numbers are not encrypted.
+         *
          * @public
          * @readonly
          */
         readonly seq_number: OPTIONAL<INTEGER>,
         /**
          * @summary `options`.
+         * @description
+         *
+         * Context flags. See `Options` bits; bit 6 ignored for SPKM-2
+         * unilateral.
+         *
          * @public
          * @readonly
          */
         readonly options: Options,
         /**
          * @summary `conf_alg`.
+         * @description
+         *
+         * Offered (REQ) or agreed (REP) C-ALGs. `null` = confidentiality
+         * unavailable.
+         *
          * @public
          * @readonly
          */
         readonly conf_alg: Conf_Algs,
         /**
          * @summary `intg_alg`.
+         * @description
+         *
+         * Offered/agreed I-ALGs. Must include at least one signature and
+         * one MAC algorithm.
+         *
          * @public
          * @readonly
          */
         readonly intg_alg: Intg_Algs,
         /**
          * @summary `owf_alg`.
+         * @description
+         *
+         * Subkey OWF. REQ: one alg for SPKM-2 unilateral, ≥1 otherwise.
+         * REP: always exactly one.
+         *
          * @public
          * @readonly
          */

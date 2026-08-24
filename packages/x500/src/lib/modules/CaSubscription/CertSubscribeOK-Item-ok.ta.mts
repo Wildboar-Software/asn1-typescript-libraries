@@ -26,6 +26,9 @@ import {
  * @summary CertSubscribeOK_Item_ok
  * @description
  *
+ * Successful subscribe item. `revokeReason` present only if `status` is
+ * `revoked`; otherwise absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +40,28 @@ export class CertSubscribeOK_Item_ok {
     constructor(
         /**
          * @summary `cert`.
+         * @description
+         *
+         * The EE public-key certificate for the requested subject.
          * @public
          * @readonly
          */
         readonly cert: Certificate,
         /**
          * @summary `status`.
+         * @description
+         *
+         * Current CertStatus of `cert`.
          * @public
          * @readonly
          */
         readonly status: CertStatus,
         /**
          * @summary `revokeReason`.
+         * @description
+         *
+         * Present only if `status` is `revoked`; otherwise shall be absent.
+         * CRLReason as in X.509 9.5.3.1.
          * @public
          * @readonly
          */

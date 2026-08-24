@@ -14,6 +14,13 @@ import {
  * @summary Conf_Algs
  * @description
  *
+ * Offered/agreed C-ALGs. `algs` order matters: first is default; target
+ * returns the supported subset in the same relative order. `null` means
+ * confidentiality is unavailable (not an empty SEQUENCE). SPKM-2
+ * unilateral: initiator's list is the agreed set (target deletes the
+ * context if unacceptable). Subkeys: C-ALGs numbered from "0"; `x` is
+ * ASCII `'C'`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

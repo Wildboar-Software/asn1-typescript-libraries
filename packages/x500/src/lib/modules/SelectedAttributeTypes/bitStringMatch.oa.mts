@@ -8,6 +8,9 @@ import { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringM
  * @summary bitStringMatch
  * @description
  *
+ * TRUE iff same bit length and bitwise equal. NamedBitList ⇒ trailing
+ * zeros ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary IncrementalStepRefresh_sDSEChanges
  * @description
  *
+ * `add` = complete SDSE; resulting shadow DSE has no subordinates; if a
+ * DSE of this name already exists it is replaced and its subordinates
+ * deleted. `remove` = this SDSE and all subordinates must not remain.
+ * `modify` = incremental content/`rename`. Adding or removing the same
+ * SDSE twice (separate updates) is not an error and must not be skipped.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

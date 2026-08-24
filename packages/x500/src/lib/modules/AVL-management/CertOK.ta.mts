@@ -14,6 +14,8 @@ import {
  * @summary CertOK
  * @description
  *
+ * Cert-exchange success (`CertRsp.result.success`). Little prose in X.510. `dhCert` is a **DH** certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class CertOK {
     constructor(
         /**
          * @summary `dhCert`.
+         * @description
+         *
+         * A Diffie-Hellman certificate (not an arbitrary EE cert).
+         *
          * @public
          * @readonly
          */

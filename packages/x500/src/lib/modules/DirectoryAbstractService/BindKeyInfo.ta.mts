@@ -10,6 +10,8 @@ import {
  * @summary BindKeyInfo
  * @description
  *
+ * ENCRYPTED wrapping a BIT STRING. No additional X.511 constraints.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

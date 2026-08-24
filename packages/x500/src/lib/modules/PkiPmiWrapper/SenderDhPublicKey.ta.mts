@@ -15,6 +15,8 @@ import {
  * @summary SenderDhPublicKey
  * @description
  *
+ * Ephemeral sender DH: algorithm plus BIT STRING `publicKey`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +31,20 @@ export class SenderDhPublicKey {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * From `SupportedDHPublicKeyAlgorithms`.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: AlgorithmIdentifier,
         /**
          * @summary `publicKey`.
+         * @description
+         *
+         * Ephemeral DH public key BIT STRING.
+         *
          * @public
          * @readonly
          */

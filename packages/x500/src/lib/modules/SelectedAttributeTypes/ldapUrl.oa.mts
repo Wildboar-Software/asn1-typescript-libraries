@@ -10,6 +10,8 @@ import { url } from "../SelectedAttributeTypes/url.oa.mjs";
  * @summary ldapUrl
  * @description
  *
+ * URL of an LDAP system. SUBTYPE OF `url`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

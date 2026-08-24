@@ -15,6 +15,10 @@ import {
  * @summary DtSecAbort
  * @description
  *
+ * Data-transfer **wrapper** abort: `Signed{TbsDtSecAbort}`. Integrity via
+ * **signature, not ICV**. `seq` is the offending sequence number.
+ * `diag` absent iff alert. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

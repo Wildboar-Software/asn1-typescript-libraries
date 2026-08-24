@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DayTime
  * @description
  *
+ * `hour` 0..23; `minute`/`second` DEFAULT 0 (0..59).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +28,30 @@ export class DayTime {
     constructor(
         /**
          * @summary `hour`.
+         * @description
+         *
+         * 0..23.
+         *
          * @public
          * @readonly
          */
         readonly hour: INTEGER,
         /**
          * @summary `minute`.
+         * @description
+         *
+         * DEFAULT 0; 0..59.
+         *
          * @public
          * @readonly
          */
         readonly minute?: OPTIONAL<INTEGER>,
         /**
          * @summary `second`.
+         * @description
+         *
+         * DEFAULT 0; 0..59.
+         *
          * @public
          * @readonly
          */

@@ -42,6 +42,9 @@ import {
  * @summary AbandonFailedData
  * @description
  *
+ * Abandon itself failed. If Abandon races a completing op, Directory may
+ * return `tooLate` plus the actual error. COMPONENTS OF `CommonResults`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,12 +61,20 @@ export class AbandonFailedData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * `noSuchOperation` (1), `tooLate` (2), or `cannotAbandon` (3).
+         *
          * @public
          * @readonly
          */
         readonly problem: AbandonProblem,
         /**
          * @summary `operation`.
+         * @description
+         *
+         * InvokeId of the operation that could not be abandoned.
+         *
          * @public
          * @readonly
          */
@@ -76,6 +87,10 @@ export class AbandonFailedData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this error is signed; absence ≡ empty.
+         *
          * @public
          * @readonly
          */

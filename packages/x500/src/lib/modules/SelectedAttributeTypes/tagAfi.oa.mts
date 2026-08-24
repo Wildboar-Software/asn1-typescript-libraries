@@ -12,6 +12,11 @@ import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.
  * @summary tagAfi
  * @description
  *
+ * Application Family Identifier associated with an ISO UII. Typically
+ * one octet; multi-octet AFIs are permitted. ISO UII plus AFI is a
+ * globally unique item identification. AFIs are allocated only in the
+ * ISO environment.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

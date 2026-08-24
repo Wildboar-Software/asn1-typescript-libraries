@@ -11,6 +11,10 @@ import { id_not_matchingRuleList } from "../SelectedAttributeTypes/id-not-matchi
  * @summary matchingRuleList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Matching rules that further qualify a
+ * searchServiceProblem.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

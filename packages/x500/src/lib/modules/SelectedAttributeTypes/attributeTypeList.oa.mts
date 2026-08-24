@@ -11,6 +11,10 @@ import { id_not_attributeTypeList } from "../SelectedAttributeTypes/id-not-attri
  * @summary attributeTypeList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Attribute types that further qualify a
+ * searchServiceProblem.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

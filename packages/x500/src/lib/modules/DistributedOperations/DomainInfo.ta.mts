@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DomainInfo
  * @description
  *
+ * Unconstrained DMD-private type. No Directory-wide syntax or matching.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

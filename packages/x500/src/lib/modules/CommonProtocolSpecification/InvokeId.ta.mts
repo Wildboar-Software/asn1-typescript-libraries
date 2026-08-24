@@ -6,6 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary InvokeId
  * @description
  *
+ * CHOICE `present` INTEGER or `absent` NULL. Correlates an OSI
+ * request/result/error. Operations with no `&operationCode` (Bind) cannot
+ * have an InvokeId assigned. IDM uses a bare INTEGER `invokeID` instead of
+ * this CHOICE; that INTEGER shall be a positive integer unique among
+ * previous requests on the TCP connection (LDAP `messageID` equivalent).
+ * Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

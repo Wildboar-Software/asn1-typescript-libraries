@@ -19,6 +19,8 @@ import {
  * @summary CertRsp
  * @description
  *
+ * Outcome of `CertReq`. Little prose in X.510. `invokeID` equals the request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,20 @@ export class CertRsp {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding `CertReq`.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `result`.
+         * @description
+         *
+         * `success` (`CertOK`) or `failure` (`CertErr`).
+         *
          * @public
          * @readonly
          */

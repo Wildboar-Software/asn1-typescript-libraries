@@ -10,9 +10,9 @@ import {
  * @summary PwdEncAlg
  * @description
  *
- * `AlgorithmIdentifier{{SupportedAlgorithms}}` naming the algorithm used to
- * store encrypted {@link UserPwd} values. SEQUENCE: algorithm OID then
- * optional parameters. Compared with `pwdEncAlgMatch`.
+ * Algorithm used when creating encrypted passwords. Equality
+ * (`pwdEncAlgMatch`) requires `algorithm` identifier **and** `parameters`
+ * equal.
  *
  * ### ASN.1 Definition:
  *

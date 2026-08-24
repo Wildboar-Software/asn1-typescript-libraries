@@ -10,6 +10,9 @@ import {
  * @summary deliveryMethod
  * @description
  *
+ * LDAP transfer of PreferredDeliveryMethod (IETF RFC 4517). Sequence
+ * order is preference (first = most preferred).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

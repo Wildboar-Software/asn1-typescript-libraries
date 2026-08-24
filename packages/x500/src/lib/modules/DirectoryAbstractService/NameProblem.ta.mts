@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NameProblem
  * @description
  *
+ * INTEGER: `noSuchObject`(1), `aliasProblem`(2),
+ * `invalidAttributeSyntax`(3), `aliasDereferencingProblem`(4). (5) not to
+ * be used. Bad AVAs in names are `nameError`, not `attributeError`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -21,6 +25,10 @@ export type NameProblem = INTEGER;
 
 /**
  * @summary NameProblem_noSuchObject
+ * @description
+ *
+ * Named object does not exist.
+ *
  * @constant
  * @type {number}
  */
@@ -28,6 +36,10 @@ export const NameProblem_noSuchObject: NameProblem = 1; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary NameProblem_noSuchObject
+ * @description
+ *
+ * Named object does not exist.
+ *
  * @constant
  * @type {number}
  */
@@ -35,6 +47,10 @@ export const noSuchObject: NameProblem = NameProblem_noSuchObject; /* SHORT_NAME
 
 /**
  * @summary NameProblem_aliasProblem
+ * @description
+ *
+ * Dereferenced alias names no object.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +58,10 @@ export const NameProblem_aliasProblem: NameProblem = 2; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary NameProblem_aliasProblem
+ * @description
+ *
+ * Dereferenced alias names no object.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +69,10 @@ export const aliasProblem: NameProblem = NameProblem_aliasProblem; /* SHORT_NAME
 
 /**
  * @summary NameProblem_invalidAttributeSyntax
+ * @description
+ *
+ * Bad AVAs in a name are `nameError`, not `attributeError`.
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +80,10 @@ export const NameProblem_invalidAttributeSyntax: NameProblem = 3; /* LONG_NAMED_
 
 /**
  * @summary NameProblem_invalidAttributeSyntax
+ * @description
+ *
+ * Bad AVAs in a name are `nameError`, not `attributeError`.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +91,10 @@ export const invalidAttributeSyntax: NameProblem = NameProblem_invalidAttributeS
 
 /**
  * @summary NameProblem_aliasDereferencingProblem
+ * @description
+ *
+ * Alias where not allowed, or ACI denies deref.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +102,10 @@ export const NameProblem_aliasDereferencingProblem: NameProblem = 4; /* LONG_NAM
 
 /**
  * @summary NameProblem_aliasDereferencingProblem
+ * @description
+ *
+ * Alias where not allowed, or ACI denies deref.
+ *
  * @constant
  * @type {number}
  */

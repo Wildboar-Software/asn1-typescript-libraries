@@ -16,6 +16,8 @@ import { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/teleph
  * @summary telephoneNumber
  * @description
  *
+ * E.123 international form (`+`, digits, spaces, hyphens only). PrintableString SIZE (1..32). `telephoneNumberMatch` / `telephoneNumberSubstringsMatch` treat hyphens and spaces as **insignificant**.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

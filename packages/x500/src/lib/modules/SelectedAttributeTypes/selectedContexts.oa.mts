@@ -13,6 +13,10 @@ import { id_cat_selectedContexts } from "../SelectedAttributeTypes/id-cat-select
  * @summary selectedContexts
  * @description
  *
+ * Control attribute for `generalWordMatch`. If present, shall be the
+ * first assertion element and there shall be only one; restricts the
+ * stored value by ContextAssertion.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

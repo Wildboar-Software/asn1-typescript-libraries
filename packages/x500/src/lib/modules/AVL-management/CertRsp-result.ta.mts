@@ -15,6 +15,8 @@ import {
  * @summary CertRsp_result
  * @description
  *
+ * `success` (`CertOK`, `dhCert` is a DH certificate) or `failure` (`CertErr`). Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

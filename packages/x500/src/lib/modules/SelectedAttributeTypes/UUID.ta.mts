@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UUID
  * @description
  *
+ * OCTET STRING SIZE 16 (X.667 layout), not hex text.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

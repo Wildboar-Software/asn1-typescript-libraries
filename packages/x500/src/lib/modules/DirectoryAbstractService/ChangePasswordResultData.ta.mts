@@ -30,6 +30,8 @@ import {
  * @summary ChangePasswordResultData
  * @description
  *
+ * COMPONENTS OF `CommonResultsSeq` only. Signing requires protocol v2+.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +52,11 @@ export class ChangePasswordResultData implements CommonResultsSeq {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this result is signed; absence ≡ empty. Signing
+         * requires protocol v2+.
+         *
          * @public
          * @readonly
          */

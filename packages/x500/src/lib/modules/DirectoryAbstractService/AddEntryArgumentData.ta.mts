@@ -77,6 +77,11 @@ import {
  * @summary AddEntryArgumentData
  * @description
  *
+ * `entry` SET is unordered. `targetSystem` is critical extension 9.
+ * Alias deref on update needs `useAliasOnUpdate` (critical ext 10);
+ * else `dontDereferenceAliases` is treated as set. 1988 DSAs always
+ * fail alias-deref updates. Signed results/errors require protocol v2+.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -94,18 +99,30 @@ export class AddEntryArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Name of the entry to create. Alias deref needs `useAliasOnUpdate`.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `entry`.
+         * @description
+         *
+         * SET OF Attribute; unordered.
+         *
          * @public
          * @readonly
          */
         readonly entry: Attribute[],
         /**
          * @summary `targetSystem`.
+         * @description
+         *
+         * Where to create if not locally. Critical extension 9.
+         *
          * @public
          * @readonly
          */

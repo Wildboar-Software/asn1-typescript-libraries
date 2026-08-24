@@ -10,6 +10,11 @@ import {
  * @summary SubstringAssertion
  * @description
  *
+ * At most one `initial` (must be first) and one `final` (must be last);
+ * zero or more `any`. `control` applies to following items only; ignored
+ * unless the matching rule defines it (generalWordMatch). Empty SEQUENCE
+ * is ASN.1-legal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

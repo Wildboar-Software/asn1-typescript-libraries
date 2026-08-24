@@ -15,6 +15,12 @@ import {
  * @summary DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
  * @description
  *
+ * CHOICE of bind `serviceError` or `securityError`. Bind security
+ * problems: `inappropriateAuthentication`, `invalidCredentials`,
+ * `blockedCredentials`, `spkmError`, `unsupportedAuthenticationMethod`,
+ * `passwordExpired`, `inappropriateAlgorithms`. Bind service:
+ * `unavailable`, `saslBindInProgress`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

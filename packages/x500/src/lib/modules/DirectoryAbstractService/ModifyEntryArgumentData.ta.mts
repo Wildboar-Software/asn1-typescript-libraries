@@ -77,6 +77,14 @@ import {
  * @summary ModifyEntryArgumentData
  * @description
  *
+ * `changes` SEQUENCE applied in order; atomic (any failure ⇒ `attributeError`,
+ * entry unchanged). Intermediate steps may appear to violate schema; the
+ * final result shall not. `selection` only if bind v2+.
+ * `serviceControls.sizeLimit` ignored. Alias deref needs
+ * `dontDereferenceAliases` unset and `useAliasOnUpdate`. Collective
+ * attributes only if `subentries` service control and `object` is the
+ * holding subentry. Structural object-class change prohibited.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -94,18 +102,33 @@ export class ModifyEntryArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Collective attributes only if `subentries` is set and this is the
+         * holding subentry.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `changes`.
+         * @description
+         *
+         * Applied in order; atomic. Intermediate schema violations allowed;
+         * final result shall not violate schema.
+         *
          * @public
          * @readonly
          */
         readonly changes: EntryModification[],
         /**
          * @summary `selection`.
+         * @description
+         *
+         * Only if bind version v2+. Controls whether the result carries
+         * entry information.
+         *
          * @public
          * @readonly
          */

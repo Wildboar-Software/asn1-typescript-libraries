@@ -15,6 +15,9 @@ import { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va.m
  * @summary isoTagInfo
  * @description
  *
+ * Auxiliary: tag attributes for a specific ISO tag instance (not the tag
+ * type). See X.520 Annex G. Contrast `isoTagType`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary AddAvlRsp_result
  * @description
  *
+ * `success` if the AVL was added; `failure` with `AVMP-error` otherwise. Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

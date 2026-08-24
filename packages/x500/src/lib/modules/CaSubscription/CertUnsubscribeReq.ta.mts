@@ -19,6 +19,10 @@ import {
  * @summary CertUnsubscribeReq
  * @description
  *
+ * Authorizer→CA: stop the status feed for listed EE certs. `certs` SIZE
+ * (1..MAX); empty illegal. Unknown cert → per-item `not_ok` `unknownCert`.
+ * Data-transfer WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,18 @@ export class CertUnsubscribeReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with the matching response; unique per pair; reusable after completion.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX); empty is illegal. Each item is `subject`+`serialNumber`. Response has the same count and order.
          * @public
          * @readonly
          */

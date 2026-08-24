@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityProblem
  * @description
  *
+ * (8) obsolete `invalidQOPMatch` — do not use (no named constant).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +30,10 @@ export type SecurityProblem = INTEGER;
 
 /**
  * @summary SecurityProblem_inappropriateAuthentication
+ * @description
+ *
+ * e.g. simple when strong required.
+ *
  * @constant
  * @type {number}
  */
@@ -35,6 +41,10 @@ export const SecurityProblem_inappropriateAuthentication: SecurityProblem = 1; /
 
 /**
  * @summary SecurityProblem_inappropriateAuthentication
+ * @description
+ *
+ * e.g. simple when strong required.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +52,10 @@ export const inappropriateAuthentication: SecurityProblem = SecurityProblem_inap
 
 /**
  * @summary SecurityProblem_invalidCredentials
+ * @description
+ *
+ * Supplied credentials were invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +63,10 @@ export const SecurityProblem_invalidCredentials: SecurityProblem = 2; /* LONG_NA
 
 /**
  * @summary SecurityProblem_invalidCredentials
+ * @description
+ *
+ * Supplied credentials were invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +74,10 @@ export const invalidCredentials: SecurityProblem = SecurityProblem_invalidCreden
 
 /**
  * @summary SecurityProblem_insufficientAccessRights
+ * @description
+ *
+ * Requester does not have the right to carry out the requested operation.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +85,10 @@ export const SecurityProblem_insufficientAccessRights: SecurityProblem = 3; /* L
 
 /**
  * @summary SecurityProblem_insufficientAccessRights
+ * @description
+ *
+ * Requester does not have the right to carry out the requested operation.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +96,10 @@ export const insufficientAccessRights: SecurityProblem = SecurityProblem_insuffi
 
 /**
  * @summary SecurityProblem_invalidSignature
+ * @description
+ *
+ * Signature of the request was invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +107,10 @@ export const SecurityProblem_invalidSignature: SecurityProblem = 4; /* LONG_NAME
 
 /**
  * @summary SecurityProblem_invalidSignature
+ * @description
+ *
+ * Signature of the request was invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +118,10 @@ export const invalidSignature: SecurityProblem = SecurityProblem_invalidSignatur
 
 /**
  * @summary SecurityProblem_protectionRequired
+ * @description
+ *
+ * Unsigned argument; Directory unwilling to proceed unprotected.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +129,10 @@ export const SecurityProblem_protectionRequired: SecurityProblem = 5; /* LONG_NA
 
 /**
  * @summary SecurityProblem_protectionRequired
+ * @description
+ *
+ * Unsigned argument; Directory unwilling to proceed unprotected.
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +140,10 @@ export const protectionRequired: SecurityProblem = SecurityProblem_protectionReq
 
 /**
  * @summary SecurityProblem_noInformation
+ * @description
+ *
+ * Security error for which no information is available.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +151,10 @@ export const SecurityProblem_noInformation: SecurityProblem = 6; /* LONG_NAMED_I
 
 /**
  * @summary SecurityProblem_noInformation
+ * @description
+ *
+ * Security error for which no information is available.
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +162,11 @@ export const noInformation: SecurityProblem = SecurityProblem_noInformation; /* 
 
 /**
  * @summary SecurityProblem_blockedCredentials
+ * @description
+ *
+ * e.g. too many bad passwords. Whether to return this is DSA security
+ * policy.
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +174,11 @@ export const SecurityProblem_blockedCredentials: SecurityProblem = 7; /* LONG_NA
 
 /**
  * @summary SecurityProblem_blockedCredentials
+ * @description
+ *
+ * e.g. too many bad passwords. Whether to return this is DSA security
+ * policy.
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +186,10 @@ export const blockedCredentials: SecurityProblem = SecurityProblem_blockedCreden
 
 /**
  * @summary SecurityProblem_spkmError
+ * @description
+ *
+ * `spkmInfo` holds the SPKM error token and context id.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +197,10 @@ export const SecurityProblem_spkmError: SecurityProblem = 9; /* LONG_NAMED_INTEG
 
 /**
  * @summary SecurityProblem_spkmError
+ * @description
+ *
+ * `spkmInfo` holds the SPKM error token and context id.
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +208,10 @@ export const spkmError: SecurityProblem = SecurityProblem_spkmError; /* SHORT_NA
 
 /**
  * @summary SecurityProblem_unsupportedAuthenticationMethod
+ * @description
+ *
+ * Requested authentication method is not supported.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +219,10 @@ export const SecurityProblem_unsupportedAuthenticationMethod: SecurityProblem = 
 
 /**
  * @summary SecurityProblem_unsupportedAuthenticationMethod
+ * @description
+ *
+ * Requested authentication method is not supported.
+ *
  * @constant
  * @type {number}
  */
@@ -154,6 +230,10 @@ export const unsupportedAuthenticationMethod: SecurityProblem = SecurityProblem_
 
 /**
  * @summary SecurityProblem_passwordExpired
+ * @description
+ *
+ * Requester cannot bind; password has to be reset by an administrator.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +241,10 @@ export const SecurityProblem_passwordExpired: SecurityProblem = 11; /* LONG_NAME
 
 /**
  * @summary SecurityProblem_passwordExpired
+ * @description
+ *
+ * Requester cannot bind; password has to be reset by an administrator.
+ *
  * @constant
  * @type {number}
  */
@@ -168,6 +252,12 @@ export const passwordExpired: SecurityProblem = SecurityProblem_passwordExpired;
 
 /**
  * @summary SecurityProblem_inappropriateAlgorithms
+ * @description
+ *
+ * `encPwdInfo.algorithms` = algorithms the DSA supports. Bind/Compare:
+ * 1–2 algs (current + recently expired). Change password: current + all
+ * history algs.
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +265,12 @@ export const SecurityProblem_inappropriateAlgorithms: SecurityProblem = 12; /* L
 
 /**
  * @summary SecurityProblem_inappropriateAlgorithms
+ * @description
+ *
+ * `encPwdInfo.algorithms` = algorithms the DSA supports. Bind/Compare:
+ * 1–2 algs (current + recently expired). Change password: current + all
+ * history algs.
+ *
  * @constant
  * @type {number}
  */

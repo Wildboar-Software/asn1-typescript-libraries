@@ -13,6 +13,9 @@ import { id_not_filterItem } from "../SelectedAttributeTypes/id-not-filterItem.v
  * @summary filterItem
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Invalid `FilterItem` values from a search filter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

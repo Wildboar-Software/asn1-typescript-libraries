@@ -15,6 +15,9 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * @summary CertUnsubscribeReq_certs_Item
  * @description
  *
+ * One EE cert to unsubscribe: `subject` + `serialNumber`. Unknown at the CA
+ * → corresponding `not_ok` `unknownCert`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +29,18 @@ export class CertUnsubscribeReq_certs_Item {
     constructor(
         /**
          * @summary `subject`.
+         * @description
+         *
+         * Name of the entity the EE cert was issued to.
          * @public
          * @readonly
          */
         readonly subject: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial of that EE cert.
          * @public
          * @readonly
          */

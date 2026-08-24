@@ -5,6 +5,11 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  * @summary id_ac_shadowSupplierInitiatedAC
  * @description
  *
+ * {id-ac 5}. DISP, supplier-initiated, synchronous. Ops:
+ * `updateShadow` and `coordinateShadowUpdate` — not
+ * `requestShadowUpdate`. {id-ac 6} and {id-ac 7} were reliable-shadow
+ * ACs (withdrawn).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

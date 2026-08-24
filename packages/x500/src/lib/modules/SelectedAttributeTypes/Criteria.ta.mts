@@ -10,6 +10,10 @@ import {
  * @summary Criteria
  * @description
  *
+ * Search-guide recipe CHOICE like Filter, but `type_` items are
+ * attribute types only (DUA supplies values). Empty `and`/`or` SET is
+ * legal ASN.1 but useless as a guide.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary EpcFormat
  * @description
  *
+ * RFID/EPC formatting. `fields` SEQUENCE SIZE (1..MAX); order is
+ * bit-field order. Per-field `result` DEFAULT numericPad(0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,24 +42,42 @@ export class EpcFormat {
     constructor(
         /**
          * @summary `fields`.
+         * @description
+         *
+         * SIZE (1..MAX); order is bit-field order.
+         *
          * @public
          * @readonly
          */
         readonly fields: EpcFormat_fields_Item[],
         /**
          * @summary `digitShift`.
+         * @description
+         *
+         * Position of numeric character to move to front (not when
+         * producing a URN).
+         *
          * @public
          * @readonly
          */
         readonly digitShift?: OPTIONAL<INTEGER>,
         /**
          * @summary `checkCalc`.
+         * @description
+         *
+         * How many initial numeric characters generate the check digit
+         * (not for URN).
+         *
          * @public
          * @readonly
          */
         readonly checkCalc?: OPTIONAL<INTEGER>,
         /**
          * @summary `urnPrefix`.
+         * @description
+         *
+         * Optional URN prefix for global uniqueness.
+         *
          * @public
          * @readonly
          */

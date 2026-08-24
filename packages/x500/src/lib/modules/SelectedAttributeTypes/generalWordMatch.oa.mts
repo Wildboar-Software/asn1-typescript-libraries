@@ -10,6 +10,15 @@ import {
  * @summary generalWordMatch
  * @description
  *
+ * Controls sequenceMatchType, wordMatchTypes, characterMatchTypes,
+ * selectedContexts apply to following assertion items. No controls ⇒
+ * caseExactSubstringsMatch (caseIgnoreSubstringsMatch if attr equality is
+ * caseIgnoreMatch). Defaults: sequenceExact, wordExact, characterExact
+ * (characterCaseIgnore if attr equality is caseIgnoreMatch).
+ * selectedContexts if present must be first and only one.
+ * sequenceMatchType does not apply to initial/final. Noise words dropped
+ * except for initial/final.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

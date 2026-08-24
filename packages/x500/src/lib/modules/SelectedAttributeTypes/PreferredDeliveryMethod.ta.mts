@@ -10,6 +10,10 @@ import {
  * @summary PreferredDeliveryMethod
  * @description
  *
+ * SEQUENCE OF INTEGER — order is preference (first = most preferred).
+ * `any_delivery_method` (0) = any method. SINGLE VALUE attribute. Empty
+ * SEQUENCE is ASN.1-legal (no SIZE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

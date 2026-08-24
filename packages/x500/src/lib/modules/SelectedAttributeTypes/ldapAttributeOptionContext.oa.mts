@@ -11,6 +11,11 @@ import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-lda
  * @summary ldapAttributeOptionContext
  * @description
  *
+ * Aligns X.500 contexts with LDAP attribute options. ABSENT-MATCH
+ * FALSE. Empty list is a distinct value (unoptioned attribute).
+ * Assertion matches if it is a subset of the stored list (case-ignore;
+ * order irrelevant). SEQUENCE OF is for DER; semantically a set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

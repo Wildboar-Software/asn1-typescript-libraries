@@ -6,6 +6,9 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary All_operations_consumer_initiated
  * @description
  *
+ * Operations of `shadowConsumerInitiatedAC`: consumer
+ * `requestShadowUpdate` then supplier `updateShadow`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

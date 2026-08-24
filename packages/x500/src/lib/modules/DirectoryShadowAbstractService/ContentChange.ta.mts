@@ -30,6 +30,10 @@ import {
  * @summary ContentChange
  * @description
  *
+ * Incremental modification of one existing SDSE. `rename` does *not* add
+ * or delete attribute values. If changes are extensive, use `replace`
+ * rather than a sequence of `EntryModification`s.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,36 +56,71 @@ export class ContentChange {
     constructor(
         /**
          * @summary `rename`.
+         * @description
+         *
+         * `newRDN` = only the RDN changed (new distinguished values).
+         * `newDN` = subtree moved under a new parent. Primary RDNs; include
+         * contexts and alternative distinguished values unless context
+         * selection reduced them. Does not add/delete attribute values.
+         *
          * @public
          * @readonly
          */
         readonly rename: OPTIONAL<ContentChange_rename>,
         /**
          * @summary `attributeChanges`.
+         * @description
+         *
+         * `replace` = complete replacement of content (SET SIZE 1..MAX).
+         * `changes` = ordered SEQUENCE SIZE (1..MAX) of
+         * `EntryModification`. Omit rather than send empty.
+         *
          * @public
          * @readonly
          */
         readonly attributeChanges: OPTIONAL<ContentChange_attributeChanges>,
         /**
          * @summary `sDSEType`.
+         * @description
+         *
+         * Resulting SDSE type after this modify. Same ignore-bits rules as
+         * `SDSEContent.sDSEType`.
+         *
          * @public
          * @readonly
          */
         readonly sDSEType: SDSEType,
         /**
          * @summary `subComplete`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = subordinate knowledge complete; FALSE =
+         * incomplete or unknown.
+         *
          * @public
          * @readonly
          */
         readonly subComplete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attComplete`.
+         * @description
+         *
+         * Absent = undefined *and* the flag should not be stored in the
+         * SDSE. TRUE/FALSE same meaning as on `SDSEContent`.
+         *
          * @public
          * @readonly
          */
         readonly attComplete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `attValIncomplete`.
+         * @description
+         *
+         * DEFAULT {}. Types in the *resulting* SDSE for which some values
+         * are still missing after this refresh. Types not listed are
+         * complete. Shall not name a type that does not appear in the
+         * changed SDSE.
+         *
          * @public
          * @readonly
          */

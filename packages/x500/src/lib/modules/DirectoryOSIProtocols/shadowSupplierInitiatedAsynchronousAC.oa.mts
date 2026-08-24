@@ -8,6 +8,10 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary shadowSupplierInitiatedAsynchronousAC
  * @description
  *
+ * Same operations as `shadowSupplierInitiatedAC`; ROS mode is
+ * asynchronous. Optional extra if the DSA already supports the sync
+ * supplier AC. IDM DISP has no separate async protocol.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

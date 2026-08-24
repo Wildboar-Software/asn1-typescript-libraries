@@ -24,6 +24,10 @@ import {
  * @summary REQ_TOKEN
  * @description
  *
+ * Integrity wrapper around `Req-contents`. `algId` currently must be
+ * `md5WithRSAEncryption` when this token is signed (not MACed). Context
+ * establishment tokens are DER-encoded.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +43,33 @@ export class REQ_TOKEN {
     constructor(
         /**
          * @summary `req_contents`.
+         * @description
+         *
+         * The "token" over which `req_integrity` is computed.
+         *
          * @public
          * @readonly
          */
         readonly req_contents: Req_contents,
         /**
          * @summary `algId`.
+         * @description
+         *
+         * Signature or MAC algorithm. For a MAC, must be one of the
+         * initiator's offered I-ALGs; the key is the corresponding subkey
+         * derived from the context key (RFC 2025 §2.4).
+         *
          * @public
          * @readonly
          */
         readonly algId: AlgorithmIdentifier,
         /**
          * @summary `req_integrity`.
+         * @description
+         *
+         * Signature: sign(hash(DER(`req-contents`))) per `algId`. MAC:
+         * MAC(DER(`req-contents`)) with the derived I-ALG subkey.
+         *
          * @public
          * @readonly
          */

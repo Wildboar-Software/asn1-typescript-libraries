@@ -47,6 +47,9 @@ import {
  * @summary SecurityErrorData
  * @description
  *
+ * `spkmInfo` with `spkmError`; `encPwdInfo` with
+ * `inappropriateAlgorithms`. (8) obsolete `invalidQOPMatch` — do not use.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,18 +67,32 @@ export class SecurityErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * (8) obsolete `invalidQOPMatch` — do not use.
+         *
          * @public
          * @readonly
          */
         readonly problem: SecurityProblem,
         /**
          * @summary `spkmInfo`.
+         * @description
+         *
+         * With `spkmError`: SPKM error token and context id.
+         *
          * @public
          * @readonly
          */
         readonly spkmInfo?: OPTIONAL<SPKM_ERROR>,
         /**
          * @summary `encPwdInfo`.
+         * @description
+         *
+         * With `inappropriateAlgorithms`: algorithms the DSA supports.
+         * Bind/Compare: 1–2 algs (current + recently expired). Change
+         * password: current + all history algs.
+         *
          * @public
          * @readonly
          */
@@ -88,24 +105,41 @@ export class SecurityErrorData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the error is signed; absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the error is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the error.
+         *
          * @public
          * @readonly
          */

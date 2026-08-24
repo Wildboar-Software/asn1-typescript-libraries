@@ -10,6 +10,9 @@ import { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-l
  * @summary dITContentRuleDescription
  * @description
  *
+ * LDAP schema listing: ABNF encoding of a DIT content rule
+ * (IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

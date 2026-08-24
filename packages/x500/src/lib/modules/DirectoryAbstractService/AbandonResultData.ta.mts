@@ -35,6 +35,9 @@ import {
  * @summary AbandonResultData
  * @description
  *
+ * Present when the result is signed (or otherwise has information).
+ * `invokeID` of the abandoned enquiry + COMPONENTS OF `CommonResultsSeq`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +53,10 @@ export class AbandonResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * InvokeId of the abandoned enquiry.
+         *
          * @public
          * @readonly
          */
@@ -62,6 +69,10 @@ export class AbandonResultData implements CommonResultsSeq {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this result is signed; absence ≡ empty.
+         *
          * @public
          * @readonly
          */

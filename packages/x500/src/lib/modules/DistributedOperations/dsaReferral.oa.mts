@@ -15,6 +15,10 @@ import {
  * @summary dsaReferral
  * @description
  *
+ * Used instead of `referral` on DSP. `serviceError`
+ * `invalidReference` = invoker's `referenceType` knowledge is wrong.
+ * `serviceError` `loopDetected` = knowledge loop.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

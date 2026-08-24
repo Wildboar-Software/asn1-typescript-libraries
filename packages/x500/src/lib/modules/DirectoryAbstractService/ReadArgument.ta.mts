@@ -15,6 +15,8 @@ import {
  * @summary ReadArgument
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `ReadArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { uniqueMemberMatch } from "../SelectedAttributeTypes/uniqueMemberMatch.o
  * @summary uniqueMember
  * @description
  *
+ * `NameAndOptionalUID` (`dn` plus optional `uid` BIT STRING). `uniqueMemberMatch`: DN via `distinguishedNameMatch`; stored `uid` may be **absent** (then ignored); if present, `bitStringMatch` against presented `uid`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

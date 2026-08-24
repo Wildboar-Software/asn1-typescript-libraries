@@ -13,6 +13,11 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdGraces
  * @description
  *
+ * Times an expired password may still authenticate. INTEGER (0..MAX).
+ * **Absent ⇒ authentication shall fail** (no graces). 0 = no grace
+ * logins. Object-entry value overrides a covering password-policy
+ * subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

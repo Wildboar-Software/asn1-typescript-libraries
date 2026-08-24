@@ -6,6 +6,9 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary All_operations_supplier_initiated
  * @description
  *
+ * Operations of `shadowSupplierInitiatedAC`: supplier
+ * `coordinateShadowUpdate` then `updateShadow`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

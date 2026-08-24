@@ -32,6 +32,12 @@ import isPositionalInt from "../../utils/isPositionalInt.mjs";
  * @summary Period
  * @description
  *
+ * Temporal context. SEQUENCE finer-to-coarser; omitted coarser ⇒ all
+ * of that unit. SET OF Period is OR. `years` INTEGER 1000..MAX.
+ * `intDay` Sunday = 1 vs `bitDay` sunday = 0. `dayOf` fifth = last
+ * that weekday; `weeks` ignored if `dayOf` present. Week 5/53 = last
+ * week; first week has ≥4 days of that month/year.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -85,30 +91,53 @@ export class Period {
     constructor(
         /**
          * @summary `timesOfDay`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Omitted ⇒ all times of day within the next
+         * element.
+         *
          * @public
          * @readonly
          */
         readonly timesOfDay?: OPTIONAL<DayTimeBand[]>,
         /**
          * @summary `days`.
+         * @description
+         *
+         * Omitted ⇒ all days within the next element. `dayOf` ⇒ `weeks`
+         * ignored.
+         *
          * @public
          * @readonly
          */
         readonly days?: OPTIONAL<Period_days>,
         /**
          * @summary `weeks`.
+         * @description
+         *
+         * Omitted ⇒ all weeks. Ignored if `dayOf` used. week 5/53 = last
+         * week.
+         *
          * @public
          * @readonly
          */
         readonly weeks?: OPTIONAL<Period_weeks>,
         /**
          * @summary `months`.
+         * @description
+         *
+         * Omitted ⇒ all months. intMonth 1 = January.
+         *
          * @public
          * @readonly
          */
         readonly months?: OPTIONAL<Period_months>,
         /**
          * @summary `years`.
+         * @description
+         *
+         * INTEGER 1000..MAX. Omitted ⇒ all years.
+         *
          * @public
          * @readonly
          */

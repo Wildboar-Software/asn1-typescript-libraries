@@ -5,6 +5,12 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary md5_DES_CBC
  * @description
  *
+ * Integrity algorithm: DES-CBC of a *confounded* MD5 hash. Without the
+ * confounder, strength is at most DES under known-plaintext. When wrap
+ * `conf-alg` is also DES-CBC, encryption and integrity are combined:
+ * MD5(header||data) is appended after confounder+padding and CBC-encrypted;
+ * the last two ciphertext blocks are also stored in `int-cksum`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

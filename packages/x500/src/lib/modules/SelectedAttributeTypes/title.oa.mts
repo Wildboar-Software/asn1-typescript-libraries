@@ -15,6 +15,8 @@ import {
  * @summary title
  * @description
  *
+ * SUBTYPE OF `name`. Designated position or function of the object within an organization.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

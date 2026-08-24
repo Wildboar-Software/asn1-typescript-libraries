@@ -15,6 +15,8 @@ import {
  * @summary CertUpdateOK_Item_not_ok
  * @description
  *
+ * Per-item failure. `unknownCert` if not identified; `noReason` otherwise.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +28,9 @@ export class CertUpdateOK_Item_not_ok {
     constructor(
         /**
          * @summary `status`.
+         * @description
+         *
+         * CASP-CertStatusCode: `noReason`(1) or `unknownCert`(2).
          * @public
          * @readonly
          */

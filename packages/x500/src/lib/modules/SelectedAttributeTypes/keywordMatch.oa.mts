@@ -11,6 +11,9 @@ import {
  * @summary keywordMatch
  * @description
  *
+ * TRUE iff presented matches any keyword in stored. Keyword identification
+ * and exactness are local.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

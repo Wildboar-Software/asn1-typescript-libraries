@@ -15,6 +15,10 @@ import {
  * @summary HandshakeProAbort
  * @description
  *
+ * Client protected-protocol reject of `HandshakeAcc`:
+ * `Signed{TbsHandshakeProAbort}`. `applData` **required**.
+ * `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

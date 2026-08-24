@@ -10,6 +10,10 @@ import { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-
  * @summary certificationAuthority_V2
  * @description
  *
+ * DEPRECATED. Subclass of `certificationAuthority` adding optional
+ * `deltaRevocationList`. OID is `{id-oc 16 2}`, not a new `id-oc n`.
+ * Prefer `pkiCA`. Auxiliary.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

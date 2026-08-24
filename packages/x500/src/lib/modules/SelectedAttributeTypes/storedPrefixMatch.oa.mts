@@ -10,6 +10,12 @@ import {
  * @summary storedPrefixMatch
  * @description
  *
+ * Prep both: Transcode→Map (case-fold)→Normalize KC→Prohibit→bidi→
+ * insignificant space removal. Any step fail ⇒ UNDEFINED. Empty after
+ * prohibit ⇒ UNDEFINED. All-spaces after space-removal ⇒ single SPACE,
+ * not empty. Prepared strings ephemeral.
+ * TRUE iff stored is a prefix of presented (inverse of usual prefix match).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

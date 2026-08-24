@@ -15,6 +15,8 @@ import {
  * @summary ReplaceAvlRsp_result
  * @description
  *
+ * `success` if the AVL was replaced; `failure` with `AVMP-error` otherwise. Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

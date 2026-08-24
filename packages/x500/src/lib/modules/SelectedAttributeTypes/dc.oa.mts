@@ -13,6 +13,8 @@ import { id_coat_dc } from "../SelectedAttributeTypes/id-coat-dc.va.mjs";
  * @summary dc
  * @description
  *
+ * Domain component (typically one DNS label). IA5String; `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`. Not a complete domain name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

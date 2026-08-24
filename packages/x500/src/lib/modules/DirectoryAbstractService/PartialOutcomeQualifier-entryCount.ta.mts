@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartialOutcomeQualifier_entryCount
  * @description
  *
+ * CHOICE `bestEstimate` [7], `lowEstimate` [8], `exact` [9]. Tag [10] not
+ * to be used. Count of how many would have been returned if size/admin
+ * limit not hit; ignored if `subentries` service control set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

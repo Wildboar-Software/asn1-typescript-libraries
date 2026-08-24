@@ -9,6 +9,11 @@ import { terminateOperationalBinding } from "../OperationalBindingManagement/ter
  * @summary directoryOperationalBindingManagementAC
  * @description
  *
+ * DOP application-context. Who may Bind depends on operational-binding
+ * roles; only the initiator invokes (OSI). Multiple binding types on
+ * one association only if DSA roles are compatible. Bind version
+ * constrains all subsequent PDUs. Currently one version.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

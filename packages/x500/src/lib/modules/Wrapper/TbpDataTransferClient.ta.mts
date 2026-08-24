@@ -40,6 +40,12 @@ import {
  * @summary TbpDataTransferClient
  * @description
  *
+ * To-be-ICV-protected client data-transfer. COMPONENTS OF `AadClient` plus
+ * `encEnvoke` (spec spelling) and `conf`. `encEnvoke` = symmetric dyn parms
+ * (AES-CBC IV 16 octets) if encryption is required and the alg has dyn
+ * parms; otherwise absent. `conf.clear` if confidentiality not required;
+ * `conf.protected` if required (ENCIPHERED PrPDU).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,42 +64,81 @@ export class TbpDataTransferClient extends AadClient {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier agreed at handshake for this association.
+         *
          * @public
          * @readonly
          */
         override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction client sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `keyEst`.
+         * @description
+         *
+         * Present = client rekey (prose "rekey component"). New DH pair +
+         * nonce in Payload. Do not send another until a server PDU with
+         * `changedKey` TRUE for the outstanding rekey. Only the client
+         * initiates; interval 15 min–24 h.
+         *
          * @public
          * @readonly
          */
         override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encEnvoke`.
+         * @description
+         *
+         * Spec spelling. Symmetric-key dyn parms (e.g. AES-CBC IV of 16
+         * octets). Present if encryption is required and the algorithm has
+         * dyn parms; otherwise absent.
+         *
          * @public
          * @readonly
          */
         readonly encEnvoke: OPTIONAL<AlgoInvoke>,
         /**
          * @summary `conf`.
+         * @description
+         *
+         * `clear` if confidentiality is not required (plain WrappedProt);
+         * `protected` if required (ENCIPHERED PrPDU). TS alternative is
+         * `protected_`.
+         *
          * @public
          * @readonly
          */

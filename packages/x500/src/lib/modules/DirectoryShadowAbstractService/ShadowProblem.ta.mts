@@ -6,6 +6,25 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ShadowProblem
  * @description
  *
+ * INTEGER, not ENUMERATED (unknown values possible). No 0.
+ * `invalidAgreementID` (1) = ID not known with that peer.
+ * `inactiveAgreement` (2) = known but not yet active, or inactive and
+ * still held. `invalidInformationReceived` (3) = consumer cannot serve
+ * from the data (extraneous filtered entries/attrs are *not* this — ignore
+ * them); not returned for coordinate or request. `unsupportedStrategy`
+ * (4) = strategy not in the agreement or not supported; not returned for
+ * `updateShadow`. `missedPrevious` (5) = `lastUpdate` later than the
+ * consumer's last-update (coordinate only; may carry consumer
+ * `lastUpdate`). `fullUpdateRequired` (6) = only a total refresh will
+ * resync; not returned for `updateShadow`. `unwillingToPerform` (7) =
+ * follow-up is unspecified. `unsuitableTiming` (8) = not now; may carry
+ * `updateWindow`; not returned for `updateShadow`.
+ * `updateAlreadyReceived` (9) = consumer's last-update is later than
+ * received `lastUpdate` (coordinate only). `invalidSequencing` (10) =
+ * consecutive coordinate/request without an intervening `updateShadow`
+ * (or transport failure), or `updateShadow` with no prior
+ * coordinate/request. `insufficientResources` (11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,11 @@ import { id_oc_urnCobj } from "../SelectedObjectClasses/id-oc-urnCobj.va.mjs";
  * @summary urnCobj
  * @description
  *
+ * One component of a URN mapped into the DIT. Named by `urnC`
+ * (`PrintableString`, `caseExactMatch`). X.520: the subtree root for a
+ * class of URNs holds the IANA namespace identifier in `urnC`. Spec
+ * prose for this class is truncated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

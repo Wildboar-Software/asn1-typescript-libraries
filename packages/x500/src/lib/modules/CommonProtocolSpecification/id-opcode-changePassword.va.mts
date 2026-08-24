@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_opcode_changePassword
  * @description
  *
+ * DAP/DSP local:10 (`changePassword` / `chainedChangePassword`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

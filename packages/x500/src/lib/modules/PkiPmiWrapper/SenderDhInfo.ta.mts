@@ -15,6 +15,10 @@ import {
  * @summary SenderDhInfo
  * @description
  *
+ * `senderStaticInfo`: issuer+serial of the **static DH cert** plus
+ * `partyAinfo` UKM. `senderDhPublicKey`: ephemeral AlgorithmIdentifier
+ * plus BIT STRING public key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

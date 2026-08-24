@@ -29,6 +29,10 @@ import {
  * @summary Credentials
  * @description
  *
+ * CHOICE of `simple` / `strong` / `externalProcedure` / `spkm` /
+ * `sasl`. Bind result credentials shall be the same CHOICE form as
+ * supplied. Empty SASL `mechanism` ⇒ `inappropriateAuthentication`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

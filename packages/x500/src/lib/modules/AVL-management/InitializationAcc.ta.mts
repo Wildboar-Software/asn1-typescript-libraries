@@ -14,6 +14,8 @@ import {
  * @summary InitializationAcc
  * @description
  *
+ * AVL entity (server) accepts AVMP init. Embed in `HandshakeAcc`. `version` is Wrapper BIT STRING with **exactly one** bit, chosen from those the client offered (highest should be chosen).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class InitializationAcc {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Exactly one Version bit, among those suggested in `InitializationRec`.
+         *
          * @public
          * @readonly
          */

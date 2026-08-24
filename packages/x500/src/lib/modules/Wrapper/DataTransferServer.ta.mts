@@ -15,6 +15,10 @@ import {
  * @summary DataTransferServer
  * @description
  *
+ * Server data-transfer WrPDU. CHOICE `aead` vs `non_aead` shall match
+ * handshake `encr-mode`. Only the client initiates rekey; the server may
+ * request it (`reqRekey`) or confirm it (`changedKey`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

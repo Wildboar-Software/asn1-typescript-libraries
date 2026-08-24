@@ -10,6 +10,9 @@ import {
  * @summary pwdEncAlgDescription
  * @description
  *
+ * LDAP transfer syntax for {@link PwdEncAlg} (`algorithm` then optional
+ * `parameters`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

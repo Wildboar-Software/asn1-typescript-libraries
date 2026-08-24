@@ -14,6 +14,11 @@ import {
  * @summary ModificationParameter
  * @description
  *
+ * ROLE-B (shadow consumer) only, on `modifyOperationalBinding`. Conveys
+ * the complete set of secondary-shadow DSA access points holding commonly
+ * usable copies of the replicated area. Empty SET = none. Order does not
+ * matter. The supplier role has no modification parameter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +32,11 @@ export class ModificationParameter {
     constructor(
         /**
          * @summary `secondaryShadows`.
+         * @description
+         *
+         * Complete SET OF secondary-shadow access points. Empty = no
+         * secondary shadows. Unordered.
+         *
          * @public
          * @readonly
          */

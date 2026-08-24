@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CountryName
  * @description
  *
+ * ISO 3166-1 alpha-2; SIZE 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,12 @@ export enum _enum_for_ReferenceType {
  * @summary ReferenceType
  * @description
  *
+ * What knowledge routed the request. DEFAULT in ChainingArguments is
+ * `superior`. Wrong value ⇒ `invalidReference`. Numbering starts at 1.
+ * `nonSpecificSubordinate` is the only case
+ * ContinuationReference.accessPoints may have more than one
+ * AccessPointInformation. `self` used with `returnToDUA`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,6 +46,11 @@ export type ReferenceType = _enum_for_ReferenceType | ENUMERATED;
 
 /**
  * @summary ReferenceType_superior
+ * @description
+ *
+ * Superior reference (toward the root). DEFAULT in ChainingArguments.
+ * Numbering starts at 1.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +58,11 @@ export const ReferenceType_superior: ReferenceType = 1; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary superior
+ * @description
+ *
+ * Superior reference (toward the root). DEFAULT in ChainingArguments.
+ * Numbering starts at 1.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +70,10 @@ export const superior: ReferenceType = ReferenceType_superior; /* SHORT_NAMED_EN
 
 /**
  * @summary ReferenceType_subordinate
+ * @description
+ *
+ * Specific subordinate reference.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +81,10 @@ export const ReferenceType_subordinate: ReferenceType = 2; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary subordinate
+ * @description
+ *
+ * Specific subordinate reference.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +92,10 @@ export const subordinate: ReferenceType = ReferenceType_subordinate; /* SHORT_NA
 
 /**
  * @summary ReferenceType_cross
+ * @description
+ *
+ * Cross reference.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +103,10 @@ export const ReferenceType_cross: ReferenceType = 3; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary cross
+ * @description
+ *
+ * Cross reference.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +114,11 @@ export const cross: ReferenceType = ReferenceType_cross; /* SHORT_NAMED_ENUMERAT
 
 /**
  * @summary ReferenceType_nonSpecificSubordinate
+ * @description
+ *
+ * NSSR. ContinuationReference.accessPoints may then hold more than one
+ * AccessPointInformation.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +126,11 @@ export const ReferenceType_nonSpecificSubordinate: ReferenceType = 4; /* LONG_NA
 
 /**
  * @summary nonSpecificSubordinate
+ * @description
+ *
+ * NSSR. ContinuationReference.accessPoints may then hold more than one
+ * AccessPointInformation.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +138,10 @@ export const nonSpecificSubordinate: ReferenceType = ReferenceType_nonSpecificSu
 
 /**
  * @summary ReferenceType_supplier
+ * @description
+ *
+ * Supplier (shadowing) reference.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +149,10 @@ export const ReferenceType_supplier: ReferenceType = 5; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary supplier
+ * @description
+ *
+ * Supplier (shadowing) reference.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +160,10 @@ export const supplier: ReferenceType = ReferenceType_supplier; /* SHORT_NAMED_EN
 
 /**
  * @summary ReferenceType_master
+ * @description
+ *
+ * Master reference (to the master of a shadowed context).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +171,10 @@ export const ReferenceType_master: ReferenceType = 6; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary master
+ * @description
+ *
+ * Master reference (to the master of a shadowed context).
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +182,10 @@ export const master: ReferenceType = ReferenceType_master; /* SHORT_NAMED_ENUMER
 
 /**
  * @summary ReferenceType_immediateSuperior
+ * @description
+ *
+ * Immediate superior reference (HOB/NHOB subordinate side).
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +193,10 @@ export const ReferenceType_immediateSuperior: ReferenceType = 7; /* LONG_NAMED_E
 
 /**
  * @summary immediateSuperior
+ * @description
+ *
+ * Immediate superior reference (HOB/NHOB subordinate side).
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +204,10 @@ export const immediateSuperior: ReferenceType = ReferenceType_immediateSuperior;
 
 /**
  * @summary ReferenceType_self
+ * @description
+ *
+ * This DSA. Used with ContinuationReference.returnToDUA TRUE.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +215,10 @@ export const ReferenceType_self: ReferenceType = 8; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary self
+ * @description
+ *
+ * This DSA. Used with ContinuationReference.returnToDUA TRUE.
+ *
  * @constant
  * @type {number}
  */
@@ -152,6 +226,10 @@ export const self: ReferenceType = ReferenceType_self; /* SHORT_NAMED_ENUMERATED
 
 /**
  * @summary ReferenceType_ditBridge
+ * @description
+ *
+ * DIT bridge knowledge (another DIT).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +237,10 @@ export const ReferenceType_ditBridge: ReferenceType = 9; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary ditBridge
+ * @description
+ *
+ * DIT bridge knowledge (another DIT).
+ *
  * @constant
  * @type {number}
  */

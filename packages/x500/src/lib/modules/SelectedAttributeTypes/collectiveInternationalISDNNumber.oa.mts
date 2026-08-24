@@ -10,6 +10,8 @@ import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
  * @summary collectiveInternationalISDNNumber
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `internationalISDNNumber`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

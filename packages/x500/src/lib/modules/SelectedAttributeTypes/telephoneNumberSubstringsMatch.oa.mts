@@ -11,6 +11,9 @@ import {
  * @summary telephoneNumberSubstringsMatch
  * @description
  *
+ * Like caseExactSubstringsMatch but hyphens and spaces insignificant. At
+ * most one initial (first) and one final (last). `control` ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

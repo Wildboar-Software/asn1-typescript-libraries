@@ -70,6 +70,8 @@ import {
  * @summary AvlProt
  * @description
  *
+ * AVMP PrPDU CHOICE. Authorizer is client; AVL entity is server; both EE certs from the same trusted CA. `initReq`→`HandshakeReq`, `initAcc`→`HandshakeAcc`, `initRej`→`HandshakeProRej`, `initAbt`→`HandshakeProAbort`. Add/replace/delete requests→`DataTransferClient`, responses→`DataTransferServer`. `abortAVL`→`ApplAbort`. `certReq`/`certRsp`: little prose (no WrPDU stated).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

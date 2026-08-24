@@ -5,6 +5,8 @@ import { id } from "../UsefulDefinitions/id.va.mjs";
  * @summary id_oidRoot
  * @description
  *
+ * Not under `id-oc`; `{id 3}` from the X.660 arc.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

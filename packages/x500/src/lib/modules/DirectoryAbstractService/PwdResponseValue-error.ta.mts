@@ -11,6 +11,9 @@ export enum _enum_for_PwdResponseValue_error {
  * @summary PwdResponseValue_error
  * @description
  *
+ * `passwordExpired` may pair with `graceRemaining`. `changeAfterReset` ⇒
+ * warning shall not be present; only change-password accepted.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,6 +28,11 @@ export type PwdResponseValue_error =
 
 /**
  * @summary PwdResponseValue_error_passwordExpired
+ * @description
+ *
+ * May pair with `graceRemaining`. With `timeLeft`=0 or `graceRemaining`=0
+ * on master ⇒ only change-password accepted.
+ *
  * @constant
  * @type {number}
  */
@@ -32,6 +40,11 @@ export const PwdResponseValue_error_passwordExpired: PwdResponseValue_error = 0;
 
 /**
  * @summary passwordExpired
+ * @description
+ *
+ * May pair with `graceRemaining`. With `timeLeft`=0 or `graceRemaining`=0
+ * on master ⇒ only change-password accepted.
+ *
  * @constant
  * @type {number}
  */
@@ -39,6 +52,10 @@ export const passwordExpired: PwdResponseValue_error = PwdResponseValue_error_pa
 
 /**
  * @summary PwdResponseValue_error_changeAfterReset
+ * @description
+ *
+ * Warning shall not be present; only change-password accepted.
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +63,10 @@ export const PwdResponseValue_error_changeAfterReset: PwdResponseValue_error = 1
 
 /**
  * @summary changeAfterReset
+ * @description
+ *
+ * Warning shall not be present; only change-password accepted.
+ *
  * @constant
  * @type {number}
  */

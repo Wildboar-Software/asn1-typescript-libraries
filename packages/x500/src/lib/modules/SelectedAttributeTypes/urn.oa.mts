@@ -10,6 +10,8 @@ import { uri } from "../SelectedAttributeTypes/uri.oa.mjs";
  * @summary urn
  * @description
  *
+ * SUBTYPE OF `uri`. Uniform Resource Name as in RFC 3406 (inherits `uriMatch`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

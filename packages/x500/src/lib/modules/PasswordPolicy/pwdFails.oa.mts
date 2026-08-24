@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdFails
  * @description
  *
+ * Consecutive failed bind/compare count. **0 after success.** INTEGER
+ * (0..MAX). USAGE dSAOperation. `pwdFailureTime` is significant only
+ * when this ≠ 0.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

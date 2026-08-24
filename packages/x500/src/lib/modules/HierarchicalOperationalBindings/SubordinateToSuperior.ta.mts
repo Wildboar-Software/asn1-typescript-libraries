@@ -25,6 +25,9 @@ import {
  * @summary SubordinateToSuperior
  * @description
  *
+ * Subordinate→superior establishment and modification parameter. If a
+ * component later changes, send that component in its entirety.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +44,46 @@ export class SubordinateToSuperior {
     constructor(
         /**
          * @summary `accessPoints`.
+         * @description
+         *
+         * Feeds the superior's subordinate reference. Master AP equals the DOP
+         * `accessPoint` parameter.
+         *
          * @public
          * @readonly
          */
         readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary `alias`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ the subordinate naming context is a single
+         * alias entry.
+         *
          * @public
          * @readonly
          */
         readonly alias?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `entryInfo`.
+         * @description
+         *
+         * Copy of CP-entry attributes (`objectClass`, `entryACI`, and
+         * `administrativeRole` if applicable) for List/one-level Search
+         * optimization and to avoid a search entering or leaving a
+         * service-specific area. SET SIZE (1..MAX); omit rather than empty SET.
+         *
          * @public
          * @readonly
          */
         readonly entryInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `subentries`.
+         * @description
+         *
+         * Subentries containing prescriptive ACI. SET SIZE (1..MAX); omit
+         * rather than empty. Order insignificant.
+         *
          * @public
          * @readonly
          */

@@ -36,6 +36,9 @@ import {
  * @summary AadServerAE
  * @description
  *
+ * AAD for `DataTransferServerAE` (AUTHEN-ENCRYPT): not encrypted; the PrPDU
+ * is. COMPONENTS OF `AadServer` plus `encInvoke` (AEAD dyn parms if any).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,42 +53,80 @@ export class AadServerAE extends AadServer {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier for the association to which this WrPDU
+         * belongs.
+         *
          * @public
          * @readonly
          */
         override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction server sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `reqRekey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server wants the client to rekey. Must not be
+         * TRUE if a client rekey is outstanding without `changedKey`
+         * confirmation.
+         *
          * @public
          * @readonly
          */
         override readonly reqRekey?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `changedKey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server accepted the client's rekey. This
+         * WrPDU still uses the old keys; subsequent server PDUs use the new.
+         * Must not be TRUE unless a client rekey is outstanding.
+         *
          * @public
          * @readonly
          */
         override readonly changedKey?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
+         * @description
+         *
+         * AEAD algorithm dynamic parameters, if any. Present iff the selected
+         * AEAD algorithm has `&DynParms`.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,10 @@ import {
  * @summary CertUpdateRsp_result
  * @description
  *
+ * `success` if at least one update was processed (CertUpdateOK: same count
+ * and order as the request); `failure` only if no per-item results can be
+ * returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

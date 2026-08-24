@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CommunicationsNetwork
  * @description
  *
+ * OID identifying the network (e.g. PSTN, ISDN, GSM). OID allocation is
+ * outside X.520.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

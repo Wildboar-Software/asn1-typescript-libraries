@@ -15,6 +15,9 @@ import {
  * @summary CertUpdateErr
  * @description
  *
+ * Whole-message update failure: no per-item results, including 14.13
+ * `unknownSubject`(7) / `unknownCert`(8) when subject or serial is unknown.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,9 @@ export class CertUpdateErr {
     constructor(
         /**
          * @summary `code`.
+         * @description
+         *
+         * CASP-error. 14.13 uses `unknownSubject`/`unknownCert` as whole-message errors.
          * @public
          * @readonly
          */

@@ -17,6 +17,10 @@ import { id_oc_groupOfUniqueNames } from "../SelectedObjectClasses/id-oc-groupOf
  * @summary groupOfUniqueNames
  * @description
  *
+ * Like `groupOfNames`, but `uniqueMember` values can have their integrity
+ * assured. Unordered, static membership. No selected name form in this
+ * module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

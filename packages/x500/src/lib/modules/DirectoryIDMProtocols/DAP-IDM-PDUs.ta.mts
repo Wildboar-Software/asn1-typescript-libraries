@@ -10,6 +10,10 @@ import {
  * @summary DAP_IDM_PDUs
  * @description
  *
+ * `IDM-PDU{dap-ip}`. DUA-initiated; initiator-only requests. Unbind
+ * from initiator only. Unbind is destructive (outstanding results
+ * lost). Either side may drop TCP at any time.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

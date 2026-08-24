@@ -4,6 +4,9 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_referral
  * @description
  *
+ * DAP local:4 (`referral`). DAP only — DSP uses `dsaReferral` (9)
+ * instead. Do not send this on DSP.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

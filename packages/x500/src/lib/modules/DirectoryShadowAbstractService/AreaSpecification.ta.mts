@@ -19,6 +19,13 @@ import {
  * @summary AreaSpecification
  * @description
  *
+ * Replicated area: naming-context prefix plus a subtree relative to it.
+ * Names are primary DNs (no contexts / alternative values). `chop.minimum`
+ * of the `SubtreeSpecification` shall not be used. Absent `chop` = the
+ * whole naming context from `base` down. `specificationFilter` is object
+ * class only; filtering can disconnect the subtree, in which case glue
+ * SDSEs are supplied.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +40,23 @@ export class AreaSpecification {
     constructor(
         /**
          * @summary `contextPrefix`.
+         * @description
+         *
+         * Context prefix of the naming context holding the replicated area.
+         * Empty when a first-level DSA is shadowing first-level knowledge.
+         *
          * @public
          * @readonly
          */
         readonly contextPrefix: DistinguishedName,
         /**
          * @summary `replicationArea`.
+         * @description
+         *
+         * `base` is the replication-base entry relative to `contextPrefix`.
+         * `chop` lower bounds cannot cross the naming-context boundary.
+         * Do not use `minimum`.
+         *
          * @public
          * @readonly
          */

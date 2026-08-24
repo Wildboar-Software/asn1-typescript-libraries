@@ -7,6 +7,9 @@ import { id_nf_gONNameForm } from "../SelectedObjectClasses/id-nf-gONNameForm.va
  * @summary gONNameForm
  * @description
  *
+ * Names `groupOfNames` by `commonName`. No selected name form for
+ * `groupOfUniqueNames`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,8 @@ import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
  * @summary collectiveTelexNumber
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `telexNumber`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

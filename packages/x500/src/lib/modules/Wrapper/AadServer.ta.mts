@@ -26,6 +26,10 @@ import {
  * @summary AadServer
  * @description
  *
+ * Unencrypted associated data for server data-transfer WrPDUs. `reqRekey`
+ * TRUE asks the client to rekey. `changedKey` TRUE accepts a client rekey:
+ * this WrPDU still uses the old keys; subsequent server PDUs use the new.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,36 +47,69 @@ export class AadServer {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: OPTIONAL<InvokeID>,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier for the association to which this WrPDU
+         * belongs.
+         *
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction server sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         readonly seq: SequenceNumber,
         /**
          * @summary `reqRekey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server wants the client to rekey. Must not be
+         * TRUE if a client rekey is outstanding without `changedKey`
+         * confirmation.
+         *
          * @public
          * @readonly
          */
         readonly reqRekey?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `changedKey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server accepted the client's rekey. This
+         * WrPDU still uses the old keys; subsequent server PDUs use the new.
+         * Must not be TRUE unless a client rekey is outstanding.
+         *
          * @public
          * @readonly
          */

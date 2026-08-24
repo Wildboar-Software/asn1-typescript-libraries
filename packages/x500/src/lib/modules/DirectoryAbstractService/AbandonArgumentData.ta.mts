@@ -14,6 +14,9 @@ import {
  * @summary AbandonArgumentData
  * @description
  *
+ * Enquire-only (Read, Compare, List, Search); cannot abandon modify.
+ * `invokeID` names the outstanding operation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +30,10 @@ export class AbandonArgumentData {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * InvokeId of the outstanding enquiry to abandon.
+         *
          * @public
          * @readonly
          */

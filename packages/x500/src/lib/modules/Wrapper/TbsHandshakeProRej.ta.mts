@@ -30,6 +30,10 @@ import {
  * @summary TbsHandshakeProRej
  * @description
  *
+ * To-be-signed protected-protocol reject of `HandshakeReq`. `applData`
+ * **required** (reason PrPDU). `sigSel` as in accept (`altSigAlg` iff
+ * offered and supported). `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,30 +53,35 @@ export class TbsHandshakeProRej {
     constructor(
         /**
          * @summary `sigSel`.
+         * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. Signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigSel: TbsHandshakeProRej_sigSel,
         /**
          * @summary `assoID`.
+         * @description Same value as in the corresponding `HandshakeReq`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `applData`.
+         * @description Required. Protected-protocol PrPDU giving the reason for rejection.
          * @public
          * @readonly
          */

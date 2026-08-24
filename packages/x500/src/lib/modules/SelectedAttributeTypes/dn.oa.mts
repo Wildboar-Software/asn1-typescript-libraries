@@ -10,6 +10,8 @@ import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
  * @summary dn
  * @description
  *
+ * LDAP syntax object for Directory `DistinguishedName` (used by `distinguishedName` and subtypes). Matching is `distinguishedNameMatch` on the ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CountryCode3n
  * @description
  *
+ * ISO 3166-1 numeric-3; SIZE 3 digits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import {
  * @summary SortKey
  * @description
  *
+ * Use `orderingRule` if present, else the attr's ordering MR; ignore the
+ * key if none. Multi-valued: least value (greatest if reverse). Missing
+ * attr: greater than all (less than all if reverse).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +33,22 @@ export class SortKey {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * List: only attrs in the RDN. Search: only attrs actually returned
+         * (selection+ACI); fallback sort by DN.
+         *
          * @public
          * @readonly
          */
         readonly type_: AttributeType,
         /**
          * @summary `orderingRule`.
+         * @description
+         *
+         * If present, use this matching rule; else the attr's ordering MR.
+         * Ignore the key if neither is available.
+         *
          * @public
          * @readonly
          */

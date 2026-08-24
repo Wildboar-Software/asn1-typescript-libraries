@@ -13,6 +13,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TBOK
  * @description
  *
+ * Successful TB answer. If the presented cert is valid but untrusted, return this with `levelOfAssurance` 0 — not `TBerror`. Different TBs may return different LoA for the same cert.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,24 +31,40 @@ export class TBOK {
     constructor(
         /**
          * @summary `levelOfAssurance`.
+         * @description
+         *
+         * 0..100: 0 = none, 100 = full. Validated-but-untrusted → 0, not `TBerror`. TBs may differ for the same cert.
+         *
          * @public
          * @readonly
          */
         readonly levelOfAssurance: INTEGER,
         /**
          * @summary `confidenceLevel`.
+         * @description
+         *
+         * 0..100: confidence in the `levelOfAssurance` figure (0 = none, 100 = full).
+         *
          * @public
          * @readonly
          */
         readonly confidenceLevel: INTEGER,
         /**
          * @summary `validationTime`.
+         * @description
+         *
+         * UTCTime of the TB's last revocation check of the presented certificate.
+         *
          * @public
          * @readonly
          */
         readonly validationTime: UTCTime,
         /**
          * @summary `info`.
+         * @description
+         *
+         * Optional extra text for the requestor.
+         *
          * @public
          * @readonly
          */

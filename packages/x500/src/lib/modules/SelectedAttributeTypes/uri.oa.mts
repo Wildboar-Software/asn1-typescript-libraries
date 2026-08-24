@@ -15,6 +15,8 @@ import { uriMatch } from "../SelectedAttributeTypes/uriMatch.oa.mjs";
  * @summary uri
  * @description
  *
+ * UTF8String URI as in RFC 3986. Equality `uriMatch` (RFC 3986 §6.2.2 normalize, then compare).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

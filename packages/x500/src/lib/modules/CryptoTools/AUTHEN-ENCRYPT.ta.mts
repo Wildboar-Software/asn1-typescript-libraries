@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AUTHEN_ENCRYPT
  * @description
  *
+ * AEAD. Prose: `aad` mandatory (unlike RFC 5084). 2020 ASN.1/TS: `aad` [0]
+ * OPTIONAL, `encr` [1] required. Wrapper data-transfer uses AAD.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +27,22 @@ export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
     constructor(
         /**
          * @summary `aad`.
+         * @description
+         *
+         * Prose: mandatory (unlike RFC 5084). 2020 ASN.1/TS: OPTIONAL tagged
+         * [0]. Wrapper data-transfer uses AAD.
+         *
          * @public
          * @readonly
          */
         readonly aad: OPTIONAL<ToBeAuth>,
         /**
          * @summary `encr`.
+         * @description
+         *
+         * Ciphertext of encoded `ToBeEnciphered` (not a nested ENCIPHERED
+         * unless the parameter says so). Required; tagged [1].
+         *
          * @public
          * @readonly
          */

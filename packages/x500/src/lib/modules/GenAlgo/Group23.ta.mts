@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Group23
  * @description
  *
+ * Always INTEGER (23). RFC 5114 secp256r1 ECDH. Fixed PARMS of
+ * `dhModpGr23Hkdf256Algo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,10 @@ import {
  * @summary NHOBSuperiorToSubordinate
  * @description
  *
+ * `SuperiorToSubordinate` with `entryInfo` ABSENT. NHOB does not
+ * establish a single named subordinate entry. On modify, a changed
+ * component is sent in full.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

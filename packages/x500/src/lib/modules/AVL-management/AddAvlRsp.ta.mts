@@ -19,6 +19,8 @@ import {
  * @summary AddAvlRsp
  * @description
  *
+ * Outcome of `AddAvlReq`. Embed in `DataTransferServer`. `invokeID` equals the request. Invalid AVL signature is not reported here (alert + `AbortAVL`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,20 @@ export class AddAvlRsp {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding `AddAvlReq`.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `result`.
+         * @description
+         *
+         * `success` (`AddAvlOK`) or `failure` (`AddAvlErr`).
+         *
          * @public
          * @readonly
          */

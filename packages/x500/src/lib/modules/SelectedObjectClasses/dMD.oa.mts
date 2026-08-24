@@ -11,6 +11,10 @@ import { OrganizationalAttributeSet } from "../SelectedObjectClasses/Organizatio
  * @summary dMD
  * @description
  *
+ * Directory Management Domain. Named by `dmdName`. May contain
+ * `OrganizationalAttributeSet` (same extras as organization, including
+ * `userPassword`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

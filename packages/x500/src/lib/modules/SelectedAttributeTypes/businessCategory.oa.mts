@@ -16,6 +16,8 @@ import {
  * @summary businessCategory
  * @description
  *
+ * Occupation or similar category of common objects (e.g. people), for finding entries that share it. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

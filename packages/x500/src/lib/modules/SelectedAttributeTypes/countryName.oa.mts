@@ -15,6 +15,8 @@ import { name } from "../SelectedAttributeTypes/name.oa.mjs";
  * @summary countryName
  * @description
  *
+ * SUBTYPE OF `name`. SINGLE VALUE. ISO 3166-1 **alpha-2** (PrintableString SIZE 2). Identifies the country of physical location or other important association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

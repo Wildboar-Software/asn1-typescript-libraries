@@ -19,6 +19,11 @@ import {
  * @summary SPKM_REP_TI
  * @description
  *
+ * Target-to-initiator context token (`gss_accept_sec_context`). Used for
+ * SPKM-1 unilateral and all mutual authentication. Completes SPKM-2
+ * mutual; SPKM-1 mutual still needs `SPKM-REP-IT`. `certif-data` is
+ * present if the initiator set `target-certif-data-required`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +39,21 @@ export class SPKM_REP_TI {
     constructor(
         /**
          * @summary `responseToken`.
+         * @description
+         *
+         * Signed or MACed `Rep-ti-contents`.
+         *
          * @public
          * @readonly
          */
         readonly responseToken: REP_TI_TOKEN,
         /**
          * @summary `certif_data`.
+         * @description
+         *
+         * Target's certs/CRL when `target-certif-data-required` was set
+         * in the request.
+         *
          * @public
          * @readonly
          */

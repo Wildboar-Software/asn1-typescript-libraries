@@ -15,6 +15,11 @@ import {
  * @summary UpdateErrorData_attributeInfo_Item
  * @description
  *
+ * Type-only vs full Attribute. For `objectClassViolation`, an `attribute`
+ * item shall list `objectClass` and the class(es) that caused the
+ * problem; extra `attributeType` items may identify missing mandatory or
+ * extraneous attrs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

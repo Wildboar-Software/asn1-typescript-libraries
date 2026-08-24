@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceControls_priority
  * @description
  *
+ * DEFAULT `medium` on ServiceControls. Not a guaranteed queue; no
+ * relationship to lower-layer priority.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +33,10 @@ export const low: ServiceControls_priority = ServiceControls_priority_low; /* SH
 
 /**
  * @summary ServiceControls_priority_medium
+ * @description
+ *
+ * DEFAULT. Not a guaranteed queue.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +44,10 @@ export const ServiceControls_priority_medium: ServiceControls_priority = 1; /* L
 
 /**
  * @summary ServiceControls_priority_medium
+ * @description
+ *
+ * DEFAULT. Not a guaranteed queue.
+ *
  * @constant
  * @type {number}
  */

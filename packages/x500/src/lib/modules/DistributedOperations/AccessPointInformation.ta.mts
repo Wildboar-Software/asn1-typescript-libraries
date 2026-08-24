@@ -44,6 +44,12 @@ import {
  * @summary AccessPointInformation
  * @description
  *
+ * COMPONENTS OF MasterOrShadowAccessPoint plus `additionalPoints`.
+ * 1988 producer: `additionalPoints` absent. 1988 consumer: ignore
+ * `additionalPoints` if present. 1993+: the MasterOrShadowAccessPoint
+ * part is a suggested AP; `additionalPoints` is extra info for the
+ * consumer's knowledge-selection.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,18 +64,32 @@ export class AccessPointInformation implements MasterOrShadowAccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
+         * @description
+         *
+         * DSA's Name. Ignored for LDAP servers.
+         *
          * @public
          * @readonly
          */
         readonly ae_title: Name /* REPLICATED_COMPONENT */,
         /**
          * @summary `address`.
+         * @description
+         *
+         * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
+         * sSelector / tSelector. LDAP: those selectors ignored too.
+         *
          * @public
          * @readonly
          */
         readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
         /**
          * @summary `protocolInformation`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
+         * instead.
+         *
          * @public
          * @readonly
          */
@@ -78,18 +98,34 @@ export class AccessPointInformation implements MasterOrShadowAccessPoint {
         > /* REPLICATED_COMPONENT */,
         /**
          * @summary `category`.
+         * @description
+         *
+         * DEFAULT `master`. `master`(0) naming-context master; `shadow`(1)
+         * commonly usable replica (LDAP shadow may still update);
+         * `writeableCopy`(2) LDAP only.
+         *
          * @public
          * @readonly
          */
         readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category> /* REPLICATED_COMPONENT */,
         /**
          * @summary `chainingRequired`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ do not return a referral for that DSA;
+         * chain.
+         *
          * @public
          * @readonly
          */
         readonly chainingRequired?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `additionalPoints`.
+         * @description
+         *
+         * Ignored by 1988 DSAs. 1993+: extra APs for the consumer's
+         * knowledge-selection. 1988 producer leaves this absent.
+         *
          * @public
          * @readonly
          */

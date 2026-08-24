@@ -10,6 +10,11 @@ import { id_oc_oidCobj } from "../SelectedObjectClasses/id-oc-oidCobj.va.mjs";
  * @summary oidCobj
  * @description
  *
+ * Third-or-lower OID arc entry. MUST `oidC`. Tag-based OIDs typically
+ * have only three levels, first two `{2 27}` (X.521). All three name
+ * forms `oidC1NameForm` / `oidC2NameForm` / `oidCNameForm` name this
+ * class with `oidC`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

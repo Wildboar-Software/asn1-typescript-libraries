@@ -37,6 +37,10 @@ import {
  * @summary ReferralData
  * @description
  *
+ * Not a real error. DUA shall not follow a continuation identical to one
+ * already issued for this request (loops). LDAP: `nAddresses` hold LDAP
+ * URLs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +56,11 @@ export class ReferralData implements CommonResults {
     constructor(
         /**
          * @summary `candidate`.
+         * @description
+         *
+         * Do not follow if identical to a continuation already issued for
+         * this request. LDAP: `nAddresses` hold LDAP URLs.
+         *
          * @public
          * @readonly
          */

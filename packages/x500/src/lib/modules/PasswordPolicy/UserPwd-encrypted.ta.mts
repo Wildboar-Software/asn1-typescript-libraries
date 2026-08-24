@@ -15,10 +15,10 @@ import {
  * @summary UserPwd_encrypted
  * @description
  *
- * SEQUENCE: `algorithmIdentifier` then `encryptedString` OCTET STRING.
- * Order is significant. Compare by encrypting a presented clear password
- * with this algorithm (when matching) rather than comparing ciphertexts
- * from different algorithms.
+ * SEQUENCE: `algorithmIdentifier` then `encryptedString`. Order is
+ * significant. Both-encrypted match: identifier and parameters must
+ * equal else fail, then octet-compare ciphertexts. Storing encrypted is
+ * not always compatible with presenting encrypted.
  *
  * ### ASN.1 Definition:
  *
@@ -31,13 +31,22 @@ export class UserPwd_encrypted {
     constructor(
         /**
          * @summary `algorithmIdentifier`.
-         * @description Algorithm used to produce `encryptedString`; must match for equality comparison.
+         * @description
+         *
+         * Must match (id + parameters) when comparing two encrypted values;
+         * else matching fails.
+         *
          * @public
          * @readonly
          */
         readonly algorithmIdentifier: AlgorithmIdentifier,
         /**
          * @summary `encryptedString`.
+         * @description
+         *
+         * Ciphertext octets. Compared with octetStringMatch only after
+         * algorithm identifier and parameters match.
+         *
          * @public
          * @readonly
          */

@@ -72,6 +72,10 @@ import {
  * @summary ReadArgumentData
  * @description
  *
+ * `serviceControls.sizeLimit` ignored. If none of the explicitly listed
+ * `selection` attributes can be returned ⇒ `attributeError`
+ * `noSuchAttributeOrValue`. `modifyRightsRequest` DEFAULT FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -89,18 +93,32 @@ export class ReadArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Aliases dereferenced unless `dontDereferenceAliases`.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `selection`.
+         * @description
+         *
+         * DEFAULT {}. If none of the explicitly listed attributes can be
+         * returned ⇒ `attributeError` `noSuchAttributeOrValue`.
+         *
          * @public
          * @readonly
          */
         readonly selection?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `modifyRightsRequest`.
+         * @description
+         *
+         * DEFAULT FALSE. Result includes `modifyRights` only if requested,
+         * the user has some modify rights, and local policy allows.
+         *
          * @public
          * @readonly
          */

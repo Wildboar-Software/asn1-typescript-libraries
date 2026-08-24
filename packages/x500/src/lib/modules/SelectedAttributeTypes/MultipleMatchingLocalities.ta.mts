@@ -15,6 +15,9 @@ import {
  * @summary MultipleMatchingLocalities
  * @description
  *
+ * Gazetteer hit set for zonal multiple-mappings. Each value = AVAs that
+ * uniquely match one gazetteer entry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +32,20 @@ export class MultipleMatchingLocalities {
     constructor(
         /**
          * @summary `matchingRuleUsed`.
+         * @description
+         *
+         * OPTIONAL mapping-based matching rule that was used.
+         *
          * @public
          * @readonly
          */
         readonly matchingRuleUsed: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `attributeList`.
+         * @description
+         *
+         * AVAs that, AND'ed, uniquely match one gazetteer entry.
+         *
          * @public
          * @readonly
          */

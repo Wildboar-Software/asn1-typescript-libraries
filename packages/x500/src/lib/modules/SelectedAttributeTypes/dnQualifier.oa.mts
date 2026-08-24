@@ -14,6 +14,8 @@ import { printableString } from "../SelectedAttributeTypes/printableString.oa.mj
  * @summary dnQualifier
  * @description
  *
+ * Disambiguating RDN component when the same name is held in multiple DSAs. Same value in a given DSA for all entries it disambiguates. PrintableString; `caseIgnoreMatch` / `caseIgnoreOrderingMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

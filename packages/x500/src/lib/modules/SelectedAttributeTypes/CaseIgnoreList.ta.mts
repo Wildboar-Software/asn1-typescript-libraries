@@ -10,6 +10,11 @@ import {
  * @summary CaseIgnoreList
  * @description
  *
+ * Element order matters: `caseIgnoreListMatch` requires the same string count
+ * and pairwise `caseIgnoreMatch`. Substrings concatenate then match, but
+ * `initial`/`any`/`final` must not span stored-string boundaries. Empty
+ * SEQUENCE is ASN.1-legal (no SIZE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

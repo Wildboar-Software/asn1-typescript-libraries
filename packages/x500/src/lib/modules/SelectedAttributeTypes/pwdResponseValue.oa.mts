@@ -13,6 +13,12 @@ import {
  * @summary pwdResponseValue
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Extra information in a password compare result. If
+ * `timeleft` is present and ≠ 0, `error` shall be absent.
+ * `changeAfterReset` ⇒ `warning` shall not be present. `graceRemaining`
+ * may pair with `passwordExpired`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

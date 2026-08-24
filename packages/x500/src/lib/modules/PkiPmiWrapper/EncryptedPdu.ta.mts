@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncryptedPdu
  * @description
  *
+ * Ciphertext of the wrapped PDU. Required on EncryptedPduInfo
+ * (`encryptedPdu` [0]).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

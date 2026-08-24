@@ -13,6 +13,10 @@ import { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoOb
  * @summary epcTagInfoObj
  * @description
  *
+ * Auxiliary: attributes for a specific EPC tag. X.521 prose also lists
+ * `epcHeader` and `epcPartition`; this ASN.1/TS omits them. Contrast
+ * `isoTagInfo` for generic ISO tags and `epcTagTypeObj` for the tag type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

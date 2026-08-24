@@ -11,6 +11,12 @@ import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.
  * @summary shadowOperationalBinding_roleB
  * @description
  *
+ * Shadow consumer. May establish, modify, and terminate. Establishment
+ * parameter is NULL. Modification parameter is `ModificationParameter`
+ * (complete set of secondary-shadow access points). Terminating the
+ * primary binding requires the consumer to deactivate dependent secondary
+ * agreements (typically later, not in the same operation).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

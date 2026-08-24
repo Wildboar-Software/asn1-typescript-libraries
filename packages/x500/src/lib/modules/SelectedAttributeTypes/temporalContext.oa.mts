@@ -16,6 +16,12 @@ import {
  * @summary temporalContext
  * @description
  *
+ * Stored syntax `TimeSpecification`; asserted as `TimeAssertion`. Match
+ * on overlap. `notThisTime` TRUE is a logical NOT (SET OF Period =
+ * neither). Absent `timeZone` ⇒ DSA local zone. SET OF Period is OR.
+ * `between.entirely` DEFAULT FALSE (any overlap); TRUE requires the
+ * assertion band fully inside the stored spec.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

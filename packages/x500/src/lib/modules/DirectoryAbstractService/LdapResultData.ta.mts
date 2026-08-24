@@ -35,6 +35,12 @@ import {
  * @summary LdapResultData
  * @description
  *
+ * `ldapMessages` SEQUENCE SIZE (1..MAX) OPTIONAL; absent for abandon /
+ * abandoned with no result (those results discarded). Transmit in
+ * sequence. `returnToClient` DEFAULT FALSE: present when an LDAP
+ * referral is returned; TRUE ⇒ return the referral to the LDAP client
+ * rather than handling it in the bound DSA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,12 +57,22 @@ export class LdapResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `ldapMessages`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Absent for abandon / abandoned with no
+         * result. Transmit one by one in this sequence.
+         *
          * @public
          * @readonly
          */
         readonly ldapMessages?: OPTIONAL<LDAPMessage[]>,
         /**
          * @summary `returnToClient`.
+         * @description
+         *
+         * DEFAULT FALSE. Present when an LDAP referral is returned;
+         * otherwise absent. TRUE ⇒ return the referral to the LDAP client.
+         *
          * @public
          * @readonly
          */

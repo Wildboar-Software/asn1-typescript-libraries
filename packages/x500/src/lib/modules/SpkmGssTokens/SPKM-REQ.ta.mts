@@ -24,6 +24,10 @@ import {
  * @summary SPKM_REQ
  * @description
  *
+ * Initiator context-establishment token (`gss_init_sec_context`). SPKM-2
+ * unilateral authentication uses only this token; SPKM-1 unilateral and all
+ * mutual authentications also expect `SPKM-REP-TI`. Inner tokens are DER.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +43,33 @@ export class SPKM_REQ {
     constructor(
         /**
          * @summary `requestToken`.
+         * @description
+         *
+         * Signed or MACed `Req-contents`. Typical use is a true signature;
+         * MAC is for anonymity or cached-context re-establishment.
+         *
          * @public
          * @readonly
          */
         readonly requestToken: REQ_TOKEN,
         /**
          * @summary `certif_data`.
+         * @description
+         *
+         * Initiator's certs/CRL so the target need not fetch them. How a
+         * Name is resolved to certificates is a local matter.
+         *
          * @public
          * @readonly
          */
         readonly certif_data?: OPTIONAL<CertificationData>,
         /**
          * @summary `auth_data`.
+         * @description
+         *
+         * Kerberos-style authorization data (RFC 1510). Optional; not
+         * interpreted by SPKM itself.
+         *
          * @public
          * @readonly
          */

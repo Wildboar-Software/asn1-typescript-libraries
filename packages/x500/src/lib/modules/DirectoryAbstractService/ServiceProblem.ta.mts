@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceProblem
  * @description
  *
+ * `timeLimitExceeded` / `administrativeLimitExceeded` return NO partial
+ * results (unlike List/Search POQ).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +37,10 @@ export type ServiceProblem = INTEGER;
 
 /**
  * @summary ServiceProblem_busy
+ * @description
+ *
+ * Try shortly; Directory or some part is too busy now.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +48,10 @@ export const ServiceProblem_busy: ServiceProblem = 1; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ServiceProblem_busy
+ * @description
+ *
+ * Try shortly; Directory or some part is too busy now.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +59,10 @@ export const busy: ServiceProblem = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_
 
 /**
  * @summary ServiceProblem_unavailable
+ * @description
+ *
+ * Directory or some part of it is currently unavailable.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +70,10 @@ export const ServiceProblem_unavailable: ServiceProblem = 2; /* LONG_NAMED_INTEG
 
 /**
  * @summary ServiceProblem_unavailable
+ * @description
+ *
+ * Directory or some part of it is currently unavailable.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +81,10 @@ export const unavailable: ServiceProblem = ServiceProblem_unavailable; /* SHORT_
 
 /**
  * @summary ServiceProblem_unwillingToPerform
+ * @description
+ *
+ * Resources or policy; Directory is not prepared to execute this request.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +92,10 @@ export const ServiceProblem_unwillingToPerform: ServiceProblem = 3; /* LONG_NAME
 
 /**
  * @summary ServiceProblem_unwillingToPerform
+ * @description
+ *
+ * Resources or policy; Directory is not prepared to execute this request.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +103,10 @@ export const unwillingToPerform: ServiceProblem = ServiceProblem_unwillingToPerf
 
 /**
  * @summary ServiceProblem_chainingRequired
+ * @description
+ *
+ * Only chaining would work, but `chainingProhibited` is SET.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +114,10 @@ export const ServiceProblem_chainingRequired: ServiceProblem = 4; /* LONG_NAMED_
 
 /**
  * @summary ServiceProblem_chainingRequired
+ * @description
+ *
+ * Only chaining would work, but `chainingProhibited` is SET.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +125,11 @@ export const chainingRequired: ServiceProblem = ServiceProblem_chainingRequired;
 
 /**
  * @summary ServiceProblem_unableToProceed
+ * @description
+ *
+ * DSA is not administrative authority for the naming context; cannot
+ * participate in name resolution.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +137,11 @@ export const ServiceProblem_unableToProceed: ServiceProblem = 5; /* LONG_NAMED_I
 
 /**
  * @summary ServiceProblem_unableToProceed
+ * @description
+ *
+ * DSA is not administrative authority for the naming context; cannot
+ * participate in name resolution.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +149,10 @@ export const unableToProceed: ServiceProblem = ServiceProblem_unableToProceed; /
 
 /**
  * @summary ServiceProblem_invalidReference
+ * @description
+ *
+ * DUA-directed `operationProgress` / referral is invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +160,10 @@ export const ServiceProblem_invalidReference: ServiceProblem = 6; /* LONG_NAMED_
 
 /**
  * @summary ServiceProblem_invalidReference
+ * @description
+ *
+ * DUA-directed `operationProgress` / referral is invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +171,10 @@ export const invalidReference: ServiceProblem = ServiceProblem_invalidReference;
 
 /**
  * @summary ServiceProblem_timeLimitExceeded
+ * @description
+ *
+ * User `timeLimit` reached. NO partial results (unlike List/Search POQ).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +182,10 @@ export const ServiceProblem_timeLimitExceeded: ServiceProblem = 7; /* LONG_NAMED
 
 /**
  * @summary ServiceProblem_timeLimitExceeded
+ * @description
+ *
+ * User `timeLimit` reached. NO partial results (unlike List/Search POQ).
+ *
  * @constant
  * @type {number}
  */
@@ -132,6 +193,11 @@ export const timeLimitExceeded: ServiceProblem = ServiceProblem_timeLimitExceede
 
 /**
  * @summary ServiceProblem_administrativeLimitExceeded
+ * @description
+ *
+ * Administrative limit reached. NO partial results (unlike List/Search
+ * POQ).
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +205,11 @@ export const ServiceProblem_administrativeLimitExceeded: ServiceProblem = 8; /* 
 
 /**
  * @summary ServiceProblem_administrativeLimitExceeded
+ * @description
+ *
+ * Administrative limit reached. NO partial results (unlike List/Search
+ * POQ).
+ *
  * @constant
  * @type {number}
  */
@@ -146,6 +217,10 @@ export const administrativeLimitExceeded: ServiceProblem = ServiceProblem_admini
 
 /**
  * @summary ServiceProblem_loopDetected
+ * @description
+ *
+ * Internal loop; Directory cannot accomplish the request.
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +228,10 @@ export const ServiceProblem_loopDetected: ServiceProblem = 9; /* LONG_NAMED_INTE
 
 /**
  * @summary ServiceProblem_loopDetected
+ * @description
+ *
+ * Internal loop; Directory cannot accomplish the request.
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +239,10 @@ export const loopDetected: ServiceProblem = ServiceProblem_loopDetected; /* SHOR
 
 /**
  * @summary ServiceProblem_unavailableCriticalExtension
+ * @description
+ *
+ * One or more critical extensions were not available.
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +250,10 @@ export const ServiceProblem_unavailableCriticalExtension: ServiceProblem = 10; /
 
 /**
  * @summary ServiceProblem_unavailableCriticalExtension
+ * @description
+ *
+ * One or more critical extensions were not available.
+ *
  * @constant
  * @type {number}
  */
@@ -174,6 +261,10 @@ export const unavailableCriticalExtension: ServiceProblem = ServiceProblem_unava
 
 /**
  * @summary ServiceProblem_outOfScope
+ * @description
+ *
+ * No referrals within the requested `scopeOfReferral`.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +272,10 @@ export const ServiceProblem_outOfScope: ServiceProblem = 11; /* LONG_NAMED_INTEG
 
 /**
  * @summary ServiceProblem_outOfScope
+ * @description
+ *
+ * No referrals within the requested `scopeOfReferral`.
+ *
  * @constant
  * @type {number}
  */
@@ -188,6 +283,10 @@ export const outOfScope: ServiceProblem = ServiceProblem_outOfScope; /* SHORT_NA
 
 /**
  * @summary ServiceProblem_ditError
+ * @description
+ *
+ * DIT consistency problem.
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +294,10 @@ export const ServiceProblem_ditError: ServiceProblem = 12; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ServiceProblem_ditError
+ * @description
+ *
+ * DIT consistency problem.
+ *
  * @constant
  * @type {number}
  */
@@ -202,6 +305,10 @@ export const ditError: ServiceProblem = ServiceProblem_ditError; /* SHORT_NAMED_
 
 /**
  * @summary ServiceProblem_invalidQueryReference
+ * @description
+ *
+ * Paged `queryReference` is invalid. Not in 1988 implementations.
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +316,10 @@ export const ServiceProblem_invalidQueryReference: ServiceProblem = 13; /* LONG_
 
 /**
  * @summary ServiceProblem_invalidQueryReference
+ * @description
+ *
+ * Paged `queryReference` is invalid. Not in 1988 implementations.
+ *
  * @constant
  * @type {number}
  */
@@ -216,6 +327,11 @@ export const invalidQueryReference: ServiceProblem = ServiceProblem_invalidQuery
 
 /**
  * @summary ServiceProblem_requestedServiceNotAvailable
+ * @description
+ *
+ * Service-specific area: no search-rule or search violated one; extra
+ * diagnostics in X.511 clause 14.
+ *
  * @constant
  * @type {number}
  */
@@ -223,6 +339,11 @@ export const ServiceProblem_requestedServiceNotAvailable: ServiceProblem = 14; /
 
 /**
  * @summary ServiceProblem_requestedServiceNotAvailable
+ * @description
+ *
+ * Service-specific area: no search-rule or search violated one; extra
+ * diagnostics in X.511 clause 14.
+ *
  * @constant
  * @type {number}
  */
@@ -230,6 +351,10 @@ export const requestedServiceNotAvailable: ServiceProblem = ServiceProblem_reque
 
 /**
  * @summary ServiceProblem_unsupportedMatchingUse
+ * @description
+ *
+ * `performExactly` SET and the matching rule is unsupported.
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +362,10 @@ export const ServiceProblem_unsupportedMatchingUse: ServiceProblem = 15; /* LONG
 
 /**
  * @summary ServiceProblem_unsupportedMatchingUse
+ * @description
+ *
+ * `performExactly` SET and the matching rule is unsupported.
+ *
  * @constant
  * @type {number}
  */
@@ -244,6 +373,11 @@ export const unsupportedMatchingUse: ServiceProblem = ServiceProblem_unsupported
 
 /**
  * @summary ServiceProblem_ambiguousKeyAttributes
+ * @description
+ *
+ * Mapping-based MR: multiple mapping-table hits; accompanied by a
+ * notification attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -251,6 +385,11 @@ export const ServiceProblem_ambiguousKeyAttributes: ServiceProblem = 16; /* LONG
 
 /**
  * @summary ServiceProblem_ambiguousKeyAttributes
+ * @description
+ *
+ * Mapping-based MR: multiple mapping-table hits; accompanied by a
+ * notification attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -258,6 +397,11 @@ export const ambiguousKeyAttributes: ServiceProblem = ServiceProblem_ambiguousKe
 
 /**
  * @summary ServiceProblem_saslBindInProgress
+ * @description
+ *
+ * Continue bind with the same SASL mechanism; abort with `saslAbort`
+ * TRUE.
+ *
  * @constant
  * @type {number}
  */
@@ -265,6 +409,11 @@ export const ServiceProblem_saslBindInProgress: ServiceProblem = 17; /* LONG_NAM
 
 /**
  * @summary ServiceProblem_saslBindInProgress
+ * @description
+ *
+ * Continue bind with the same SASL mechanism; abort with `saslAbort`
+ * TRUE.
+ *
  * @constant
  * @type {number}
  */
@@ -272,6 +421,10 @@ export const saslBindInProgress: ServiceProblem = ServiceProblem_saslBindInProgr
 
 /**
  * @summary ServiceProblem_notSupportedByLDAP
+ * @description
+ *
+ * DAP→LDAP conversion is impossible.
+ *
  * @constant
  * @type {number}
  */
@@ -279,6 +432,10 @@ export const ServiceProblem_notSupportedByLDAP: ServiceProblem = 18; /* LONG_NAM
 
 /**
  * @summary ServiceProblem_notSupportedByLDAP
+ * @description
+ *
+ * DAP→LDAP conversion is impossible.
+ *
  * @constant
  * @type {number}
  */

@@ -12,6 +12,11 @@ import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/Telecomm
  * @summary OrganizationalAttributeSet
  * @description
  *
+ * Typical attributes of an organization or organizational unit. Unions
+ * Locale, Postal, and Telecommunication sets with `description`,
+ * `businessCategory`, `seeAlso`, `searchGuide`, and `userPassword`.
+ * `streetAddress` appears in both Locale and Postal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

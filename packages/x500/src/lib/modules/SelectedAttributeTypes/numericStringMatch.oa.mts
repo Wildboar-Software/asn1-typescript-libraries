@@ -8,6 +8,11 @@ import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
  * @summary numericStringMatch
  * @description
  *
+ * Prep both: Transcode→Map (case-fold)→Normalize KC→Prohibit→bidi→all
+ * spaces removed. Any step fail ⇒ UNDEFINED. All-spaces ⇒ empty ⇒
+ * UNDEFINED. Prepared strings ephemeral.
+ * TRUE iff identical prepared chars.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

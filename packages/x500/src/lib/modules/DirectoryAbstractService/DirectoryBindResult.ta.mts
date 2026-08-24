@@ -26,6 +26,14 @@ import {
  * @summary DirectoryBindResult
  * @description
  *
+ * `credentials` shall be the same CHOICE form as supplied. `versions` =
+ * which version the DSA will actually provide. `pwdResponseValue`
+ * pairing: if `timeLeft` present and ≠ 0, `error` shall be absent; if
+ * `graceRemaining` present, `passwordExpired` may be set. On a master
+ * entry, `timeLeft`=0 or `graceRemaining`=0 with `passwordExpired` ⇒
+ * only change-password accepted. `changeAfterReset` ⇒ warning shall not
+ * be present; only change-password accepted.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +49,36 @@ export class DirectoryBindResult {
     constructor(
         /**
          * @summary `credentials`.
+         * @description
+         *
+         * Same CHOICE form as supplied in the bind argument.
+         *
          * @public
          * @readonly
          */
         readonly credentials?: OPTIONAL<Credentials>,
         /**
          * @summary `versions`.
+         * @description
+         *
+         * Which requested version the DSA will actually provide. DEFAULT
+         * `{v1}`.
+         *
          * @public
          * @readonly
          */
         readonly versions?: OPTIONAL<Versions>,
         /**
          * @summary `pwdResponseValue`.
+         * @description
+         *
+         * If `timeLeft` present and ≠ 0, `error` shall be absent. If
+         * `graceRemaining` present, `passwordExpired` may be set. On a
+         * master entry: `timeLeft`=0 or `graceRemaining`=0 with
+         * `passwordExpired` ⇒ only change-password accepted.
+         * `changeAfterReset` ⇒ warning shall not be present; only
+         * change-password accepted.
+         *
          * @public
          * @readonly
          */

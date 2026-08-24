@@ -15,6 +15,8 @@ import {
  * @summary DeleteAvlRsp_result
  * @description
  *
+ * `success` if the AVL was deleted; `failure` with `AVMP-error` otherwise. Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

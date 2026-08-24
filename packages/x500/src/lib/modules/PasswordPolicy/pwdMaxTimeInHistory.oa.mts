@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdMaxTimeInHistory
  * @description
  *
+ * Max seconds a replaced password stays in `userPwdHistory`. INTEGER
+ * (1..MAX). **Absent ⇒ infinity.** Object-entry value overrides a
+ * covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

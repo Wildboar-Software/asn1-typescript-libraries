@@ -15,6 +15,10 @@ import {
  * @summary TbpDataTransferServer_conf
  * @description
  *
+ * Confidentiality CHOICE of the server NEA payload. `clear`: confidentiality
+ * not required; holds the PrPDU (WrappedProt). `protected_`: confidentiality
+ * required; ENCIPHERED PrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

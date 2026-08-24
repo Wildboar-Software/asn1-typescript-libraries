@@ -4,6 +4,9 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_shadowError
  * @description
  *
+ * DISP local:1 (`shadowError`). Same integer as DAP/DSP
+ * `attributeError`. Protocol-scoped.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

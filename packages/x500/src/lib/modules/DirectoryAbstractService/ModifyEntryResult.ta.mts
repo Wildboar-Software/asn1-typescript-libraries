@@ -15,6 +15,9 @@ import {
  * @summary ModifyEntryResult
  * @description
  *
+ * `null_` if no `selection` and unsigned. If not signed, no entry
+ * information shall be conveyed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

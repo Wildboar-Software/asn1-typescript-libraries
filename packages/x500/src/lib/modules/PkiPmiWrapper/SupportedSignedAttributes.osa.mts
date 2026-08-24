@@ -6,6 +6,9 @@ import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.mjs";
  * @summary SupportedSignedAttributes
  * @description
  *
+ * Only `contentType` | `messageDigest` (RFC 5652 / PKCS #9). Empty
+ * SET of signed attributes is still illegal (SIZE (1..MAX)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

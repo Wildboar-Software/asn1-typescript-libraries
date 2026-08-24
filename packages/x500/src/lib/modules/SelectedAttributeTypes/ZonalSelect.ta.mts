@@ -10,6 +10,10 @@ import {
  * @summary ZonalSelect
  * @description
  *
+ * SEQUENCE OF AttributeType to pick mapping instance. All listed types
+ * must appear in the filter; subtypes do not count. Order not specified
+ * as significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

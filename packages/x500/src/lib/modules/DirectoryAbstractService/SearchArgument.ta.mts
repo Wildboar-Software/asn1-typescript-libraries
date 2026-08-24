@@ -15,6 +15,8 @@ import {
  * @summary SearchArgument
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `SearchArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

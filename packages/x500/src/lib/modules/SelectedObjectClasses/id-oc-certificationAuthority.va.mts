@@ -5,6 +5,8 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  * @summary id_oc_certificationAuthority
  * @description
  *
+ * Deprecated object class (X.521 6.18). Prefer `pkiCA`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

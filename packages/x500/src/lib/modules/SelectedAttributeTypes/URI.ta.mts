@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary URI
  * @description
  *
+ * RFC 3986 UTF8String. `uriMatch` normalizes (percent hex uppercase;
+ * decode unreserved; `.`/`..` path; drop empty/default scheme components).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,9 @@ import {
  * @summary SenderStaticInfo
  * @description
  *
+ * Static DH: `issuer`+`serialNumber` identify the static DH
+ * certificate; `partyAinfo` is UserKeyingMaterial SIZE (64).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +42,30 @@ export class SenderStaticInfo {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Issuer Name of the static DH certificate.
+         *
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial of the static DH certificate.
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: CertificateSerialNumber,
         /**
          * @summary `partyAinfo`.
+         * @description
+         *
+         * UserKeyingMaterial — OCTET STRING SIZE (64) exactly.
+         *
          * @public
          * @readonly
          */

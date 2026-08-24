@@ -7,6 +7,8 @@ import { id_lsx_otherMailbox } from "../SelectedAttributeTypes/id-lsx-otherMailb
  * @summary otherMailbox
  * @description
  *
+ * LDAP "Other Mailbox" syntax: mailbox **type** plus **address** (RFC 4517 ABNF, typically `mailboxType$mailbox`). DIRECTORY SYNTAX is NULL in X.520 — LDAP-only transfer encoding, not a Directory ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

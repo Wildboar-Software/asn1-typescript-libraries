@@ -14,6 +14,9 @@ import {
  * @summary UUIDPair
  * @description
  *
+ * `issuerUUID` then `subjectUUID` (issuer/subject, e.g. account). Both must
+ * match (same length, corresponding octets). Order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +31,20 @@ export class UUIDPair {
     constructor(
         /**
          * @summary `issuerUUID`.
+         * @description
+         *
+         * Issuer UUID (16 octets). First; both components must match.
+         *
          * @public
          * @readonly
          */
         readonly issuerUUID: UUID,
         /**
          * @summary `subjectUUID`.
+         * @description
+         *
+         * Subject UUID (16 octets). Second; both components must match.
+         *
          * @public
          * @readonly
          */

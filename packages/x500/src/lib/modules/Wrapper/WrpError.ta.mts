@@ -45,6 +45,9 @@ export enum _enum_for_WrpError {
  * @summary WrpError
  * @description
  *
+ * Wrapper diagnostic (clause 12.5). Omit `diag` on alerts (possible
+ * adversary). ASN.1 names use hyphens; TypeScript uses underscores.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -94,6 +97,7 @@ export type WrpError = _enum_for_WrpError | ENUMERATED;
 
 /**
  * @summary WrpError_protocol_error
+ * @description Unspecified wrapper protocol error.
  * @constant
  * @type {number}
  */
@@ -101,6 +105,7 @@ export const WrpError_protocol_error: WrpError = 0; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary protocol_error
+ * @description Unspecified wrapper protocol error.
  * @constant
  * @type {number}
  */
@@ -108,6 +113,7 @@ export const protocol_error: WrpError = WrpError_protocol_error; /* SHORT_NAMED_
 
 /**
  * @summary WrpError_invalid_signatureAlgorithm
+ * @description Neither `sigAlg` nor `altSigAlg` (if present) is supported or accepted.
  * @constant
  * @type {number}
  */
@@ -115,6 +121,7 @@ export const WrpError_invalid_signatureAlgorithm: WrpError = 1; /* LONG_NAMED_EN
 
 /**
  * @summary invalid_signatureAlgorithm
+ * @description Neither `sigAlg` nor `altSigAlg` (if present) is supported or accepted.
  * @constant
  * @type {number}
  */
@@ -122,6 +129,7 @@ export const invalid_signatureAlgorithm: WrpError = WrpError_invalid_signatureAl
 
 /**
  * @summary WrpError_unexpected_version
+ * @description None of the suggested versions is supported, or the selected version was not in the request.
  * @constant
  * @type {number}
  */
@@ -129,6 +137,7 @@ export const WrpError_unexpected_version: WrpError = 2; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary unexpected_version
+ * @description None of the suggested versions is supported, or the selected version was not in the request.
  * @constant
  * @type {number}
  */
@@ -136,6 +145,7 @@ export const unexpected_version: WrpError = WrpError_unexpected_version; /* SHOR
 
 /**
  * @summary WrpError_protected_protocol_not_supported
+ * @description `prProt` identifies a protocol the server does not support.
  * @constant
  * @type {number}
  */
@@ -143,6 +153,7 @@ export const WrpError_protected_protocol_not_supported: WrpError = 3; /* LONG_NA
 
 /**
  * @summary protected_protocol_not_supported
+ * @description `prProt` identifies a protocol the server does not support.
  * @constant
  * @type {number}
  */
@@ -150,6 +161,7 @@ export const protected_protocol_not_supported: WrpError = WrpError_protected_pro
 
 /**
  * @summary WrpError_duplicate_assoID
+ * @description `assoID` already identifies an association between this client–server pair.
  * @constant
  * @type {number}
  */
@@ -157,6 +169,7 @@ export const WrpError_duplicate_assoID: WrpError = 4; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary duplicate_assoID
+ * @description `assoID` already identifies an association between this client–server pair.
  * @constant
  * @type {number}
  */
@@ -164,6 +177,7 @@ export const duplicate_assoID: WrpError = WrpError_duplicate_assoID; /* SHORT_NA
 
 /**
  * @summary WrpError_invalid_time_value
+ * @description `time` differs from local UTC by more than 5 minutes.
  * @constant
  * @type {number}
  */
@@ -171,6 +185,7 @@ export const WrpError_invalid_time_value: WrpError = 5; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary invalid_time_value
+ * @description `time` differs from local UTC by more than 5 minutes.
  * @constant
  * @type {number}
  */
@@ -178,6 +193,7 @@ export const invalid_time_value: WrpError = WrpError_invalid_time_value; /* SHOR
 
 /**
  * @summary WrpError_key_estab_algorithm_not_supported
+ * @description None of `keyEst` / `altKeyEst` (if present) is supported.
  * @constant
  * @type {number}
  */
@@ -185,6 +201,7 @@ export const WrpError_key_estab_algorithm_not_supported: WrpError = 6; /* LONG_N
 
 /**
  * @summary key_estab_algorithm_not_supported
+ * @description None of `keyEst` / `altKeyEst` (if present) is supported.
  * @constant
  * @type {number}
  */
@@ -192,6 +209,7 @@ export const key_estab_algorithm_not_supported: WrpError = WrpError_key_estab_al
 
 /**
  * @summary WrpError_encr_mode_aead_not_supported
+ * @description `aead` was selected but the server does not support (or will not use) AEAD.
  * @constant
  * @type {number}
  */
@@ -199,6 +217,7 @@ export const WrpError_encr_mode_aead_not_supported: WrpError = 7; /* LONG_NAMED_
 
 /**
  * @summary encr_mode_aead_not_supported
+ * @description `aead` was selected but the server does not support (or will not use) AEAD.
  * @constant
  * @type {number}
  */
@@ -206,6 +225,7 @@ export const encr_mode_aead_not_supported: WrpError = WrpError_encr_mode_aead_no
 
 /**
  * @summary WrpError_encryption_not_supported
+ * @description Encryption was offered or used, but the server does not support or will not use confidentiality.
  * @constant
  * @type {number}
  */
@@ -213,6 +233,7 @@ export const WrpError_encryption_not_supported: WrpError = 8; /* LONG_NAMED_ENUM
 
 /**
  * @summary encryption_not_supported
+ * @description Encryption was offered or used, but the server does not support or will not use confidentiality.
  * @constant
  * @type {number}
  */
@@ -220,6 +241,7 @@ export const encryption_not_supported: WrpError = WrpError_encryption_not_suppor
 
 /**
  * @summary WrpError_encryption_required
+ * @description Encryption was omitted (`encr` absent / clear data) but the server requires confidentiality.
  * @constant
  * @type {number}
  */
@@ -227,6 +249,7 @@ export const WrpError_encryption_required: WrpError = 9; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary encryption_required
+ * @description Encryption was omitted (`encr` absent / clear data) but the server requires confidentiality.
  * @constant
  * @type {number}
  */
@@ -234,6 +257,7 @@ export const encryption_required: WrpError = WrpError_encryption_required; /* SH
 
 /**
  * @summary WrpError_aead_algorithms_not_supported
+ * @description None of the proposed AEAD algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -241,6 +265,7 @@ export const WrpError_aead_algorithms_not_supported: WrpError = 10; /* LONG_NAME
 
 /**
  * @summary aead_algorithms_not_supported
+ * @description None of the proposed AEAD algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -248,6 +273,7 @@ export const aead_algorithms_not_supported: WrpError = WrpError_aead_algorithms_
 
 /**
  * @summary WrpError_aead_is_required
+ * @description Non-AEAD was selected or used, but AEAD is required (server policy or handshake was `aead`).
  * @constant
  * @type {number}
  */
@@ -255,6 +281,7 @@ export const WrpError_aead_is_required: WrpError = 11; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary aead_is_required
+ * @description Non-AEAD was selected or used, but AEAD is required (server policy or handshake was `aead`).
  * @constant
  * @type {number}
  */
@@ -262,6 +289,7 @@ export const aead_is_required: WrpError = WrpError_aead_is_required; /* SHORT_NA
 
 /**
  * @summary WrpError_symmetricKey_algorithms_not_supported
+ * @description None of the proposed symmetric-key algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -269,6 +297,7 @@ export const WrpError_symmetricKey_algorithms_not_supported: WrpError = 12; /* L
 
 /**
  * @summary symmetricKey_algorithms_not_supported
+ * @description None of the proposed symmetric-key algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -276,6 +305,7 @@ export const symmetricKey_algorithms_not_supported: WrpError = WrpError_symmetri
 
 /**
  * @summary WrpError_icv_algorithms_not_supported
+ * @description None of the proposed ICV algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -283,6 +313,7 @@ export const WrpError_icv_algorithms_not_supported: WrpError = 13; /* LONG_NAMED
 
 /**
  * @summary icv_algorithms_not_supported
+ * @description None of the proposed ICV algorithms is supported.
  * @constant
  * @type {number}
  */
@@ -290,6 +321,7 @@ export const icv_algorithms_not_supported: WrpError = WrpError_icv_algorithms_no
 
 /**
  * @summary WrpError_invalid_attribute_certificate
+ * @description `attCert` failed validation (unless an alert is raised instead).
  * @constant
  * @type {number}
  */
@@ -297,6 +329,7 @@ export const WrpError_invalid_attribute_certificate: WrpError = 14; /* LONG_NAME
 
 /**
  * @summary invalid_attribute_certificate
+ * @description `attCert` failed validation (unless an alert is raised instead).
  * @constant
  * @type {number}
  */
@@ -304,6 +337,7 @@ export const invalid_attribute_certificate: WrpError = WrpError_invalid_attribut
 
 /**
  * @summary WrpError_alt_signature_not_allowed
+ * @description `altSignature` present on a Signed value after algorithm selection (e.g. HandshakeAcc).
  * @constant
  * @type {number}
  */
@@ -311,6 +345,7 @@ export const WrpError_alt_signature_not_allowed: WrpError = 15; /* LONG_NAMED_EN
 
 /**
  * @summary alt_signature_not_allowed
+ * @description `altSignature` present on a Signed value after algorithm selection (e.g. HandshakeAcc).
  * @constant
  * @type {number}
  */
@@ -318,6 +353,7 @@ export const alt_signature_not_allowed: WrpError = WrpError_alt_signature_not_al
 
 /**
  * @summary WrpError_only_one_version
+ * @description Accept/reject `version` has more than one bit set (server shall set exactly one).
  * @constant
  * @type {number}
  */
@@ -325,6 +361,7 @@ export const WrpError_only_one_version: WrpError = 16; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary only_one_version
+ * @description Accept/reject `version` has more than one bit set (server shall set exactly one).
  * @constant
  * @type {number}
  */
@@ -332,6 +369,7 @@ export const only_one_version: WrpError = WrpError_only_one_version; /* SHORT_NA
 
 /**
  * @summary WrpError_invalid_key_estab_algorithm
+ * @description `keyEst` in the accept differs from `keyEst` in the request.
  * @constant
  * @type {number}
  */
@@ -339,6 +377,7 @@ export const WrpError_invalid_key_estab_algorithm: WrpError = 17; /* LONG_NAMED_
 
 /**
  * @summary invalid_key_estab_algorithm
+ * @description `keyEst` in the accept differs from `keyEst` in the request.
  * @constant
  * @type {number}
  */
@@ -346,6 +385,7 @@ export const invalid_key_estab_algorithm: WrpError = WrpError_invalid_key_estab_
 
 /**
  * @summary WrpError_invalid_alt_key_estab_algorithm
+ * @description `altKeyEst` in the accept differs from the request or the request omitted it.
  * @constant
  * @type {number}
  */
@@ -353,6 +393,7 @@ export const WrpError_invalid_alt_key_estab_algorithm: WrpError = 18; /* LONG_NA
 
 /**
  * @summary invalid_alt_key_estab_algorithm
+ * @description `altKeyEst` in the accept differs from the request or the request omitted it.
  * @constant
  * @type {number}
  */
@@ -360,6 +401,7 @@ export const invalid_alt_key_estab_algorithm: WrpError = WrpError_invalid_alt_ke
 
 /**
  * @summary WrpError_invalid_aead_algorithm
+ * @description Accept `aead` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -367,6 +409,7 @@ export const WrpError_invalid_aead_algorithm: WrpError = 19; /* LONG_NAMED_ENUME
 
 /**
  * @summary invalid_aead_algorithm
+ * @description Accept `aead` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -374,6 +417,7 @@ export const invalid_aead_algorithm: WrpError = WrpError_invalid_aead_algorithm;
 
 /**
  * @summary WrpError_aead_not_allowed
+ * @description AEAD was selected or used after a non-AEAD handshake (or accept took `aead` when the request took `non_aead`).
  * @constant
  * @type {number}
  */
@@ -381,6 +425,7 @@ export const WrpError_aead_not_allowed: WrpError = 20; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary aead_not_allowed
+ * @description AEAD was selected or used after a non-AEAD handshake (or accept took `aead` when the request took `non_aead`).
  * @constant
  * @type {number}
  */
@@ -388,6 +433,7 @@ export const aead_not_allowed: WrpError = WrpError_aead_not_allowed; /* SHORT_NA
 
 /**
  * @summary WrpError_invalid_symmetricKey_algorithm
+ * @description Accept `encr` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -395,6 +441,7 @@ export const WrpError_invalid_symmetricKey_algorithm: WrpError = 21; /* LONG_NAM
 
 /**
  * @summary invalid_symmetricKey_algorithm
+ * @description Accept `encr` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -402,6 +449,7 @@ export const invalid_symmetricKey_algorithm: WrpError = WrpError_invalid_symmetr
 
 /**
  * @summary WrpError_invalid_icv_algorithm
+ * @description Accept `icvAlgID` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -409,6 +457,7 @@ export const WrpError_invalid_icv_algorithm: WrpError = 22; /* LONG_NAMED_ENUMER
 
 /**
  * @summary invalid_icv_algorithm
+ * @description Accept `icvAlgID` algorithm was not among those proposed in the request.
  * @constant
  * @type {number}
  */
@@ -416,6 +465,7 @@ export const invalid_icv_algorithm: WrpError = WrpError_invalid_icv_algorithm; /
 
 /**
  * @summary WrpError_dynamic_aead_algo_parms_required
+ * @description AEAD `&DynParms` required but `encInvoke` / dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -423,6 +473,7 @@ export const WrpError_dynamic_aead_algo_parms_required: WrpError = 23; /* LONG_N
 
 /**
  * @summary dynamic_aead_algo_parms_required
+ * @description AEAD `&DynParms` required but `encInvoke` / dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -430,6 +481,7 @@ export const dynamic_aead_algo_parms_required: WrpError = WrpError_dynamic_aead_
 
 /**
  * @summary WrpError_invalid_dynamic_aead_algo_parms
+ * @description AEAD dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -437,6 +489,7 @@ export const WrpError_invalid_dynamic_aead_algo_parms: WrpError = 24; /* LONG_NA
 
 /**
  * @summary invalid_dynamic_aead_algo_parms
+ * @description AEAD dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -444,6 +497,7 @@ export const invalid_dynamic_aead_algo_parms: WrpError = WrpError_invalid_dynami
 
 /**
  * @summary WrpError_dynamic_aead_algo_parms_not_required
+ * @description AEAD dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -451,6 +505,7 @@ export const WrpError_dynamic_aead_algo_parms_not_required: WrpError = 25; /* LO
 
 /**
  * @summary dynamic_aead_algo_parms_not_required
+ * @description AEAD dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -458,6 +513,7 @@ export const dynamic_aead_algo_parms_not_required: WrpError = WrpError_dynamic_a
 
 /**
  * @summary WrpError_dynamic_symKey_algo_parms_required
+ * @description Symmetric-key `&DynParms` required but dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -465,6 +521,7 @@ export const WrpError_dynamic_symKey_algo_parms_required: WrpError = 26; /* LONG
 
 /**
  * @summary dynamic_symKey_algo_parms_required
+ * @description Symmetric-key `&DynParms` required but dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -472,6 +529,7 @@ export const dynamic_symKey_algo_parms_required: WrpError = WrpError_dynamic_sym
 
 /**
  * @summary WrpError_invalid_dynamic_symKey_algo_parms
+ * @description Symmetric-key dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -479,6 +537,7 @@ export const WrpError_invalid_dynamic_symKey_algo_parms: WrpError = 27; /* LONG_
 
 /**
  * @summary invalid_dynamic_symKey_algo_parms
+ * @description Symmetric-key dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -486,6 +545,7 @@ export const invalid_dynamic_symKey_algo_parms: WrpError = WrpError_invalid_dyna
 
 /**
  * @summary WrpError_dynamic_symKey_algo_parms_not_required
+ * @description Symmetric-key dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -493,6 +553,7 @@ export const WrpError_dynamic_symKey_algo_parms_not_required: WrpError = 28; /* 
 
 /**
  * @summary dynamic_symKey_algo_parms_not_required
+ * @description Symmetric-key dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -500,6 +561,7 @@ export const dynamic_symKey_algo_parms_not_required: WrpError = WrpError_dynamic
 
 /**
  * @summary WrpError_dynamic_icv_algo_parms_required
+ * @description ICV `&DynParms` required but dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -507,6 +569,7 @@ export const WrpError_dynamic_icv_algo_parms_required: WrpError = 29; /* LONG_NA
 
 /**
  * @summary dynamic_icv_algo_parms_required
+ * @description ICV `&DynParms` required but dyn parms absent.
  * @constant
  * @type {number}
  */
@@ -514,6 +577,7 @@ export const dynamic_icv_algo_parms_required: WrpError = WrpError_dynamic_icv_al
 
 /**
  * @summary WrpError_invalid_dynamic_icv_algo_parms
+ * @description ICV dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -521,6 +585,7 @@ export const WrpError_invalid_dynamic_icv_algo_parms: WrpError = 30; /* LONG_NAM
 
 /**
  * @summary invalid_dynamic_icv_algo_parms
+ * @description ICV dynamic parameters present but invalid.
  * @constant
  * @type {number}
  */
@@ -528,6 +593,7 @@ export const invalid_dynamic_icv_algo_parms: WrpError = WrpError_invalid_dynamic
 
 /**
  * @summary WrpError_dynamic_icv_algo_parms_not_required
+ * @description ICV dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -535,6 +601,7 @@ export const WrpError_dynamic_icv_algo_parms_not_required: WrpError = 31; /* LON
 
 /**
  * @summary dynamic_icv_algo_parms_not_required
+ * @description ICV dyn parms present but the algorithm has no `&DynParms`.
  * @constant
  * @type {number}
  */
@@ -542,6 +609,7 @@ export const dynamic_icv_algo_parms_not_required: WrpError = WrpError_dynamic_ic
 
 /**
  * @summary WrpError_unexpected_invokeID_received
+ * @description `invokeID` starts with RSP when no matching REQ has been sent.
  * @constant
  * @type {number}
  */
@@ -549,6 +617,7 @@ export const WrpError_unexpected_invokeID_received: WrpError = 32; /* LONG_NAMED
 
 /**
  * @summary unexpected_invokeID_received
+ * @description `invokeID` starts with RSP when no matching REQ has been sent.
  * @constant
  * @type {number}
  */
@@ -556,6 +625,7 @@ export const unexpected_invokeID_received: WrpError = WrpError_unexpected_invoke
 
 /**
  * @summary WrpError_rekey_out_of_sequence
+ * @description Client `rekey`/`keyEst` while a previous rekey is still unconfirmed (`changedKey`).
  * @constant
  * @type {number}
  */
@@ -563,6 +633,7 @@ export const WrpError_rekey_out_of_sequence: WrpError = 33; /* LONG_NAMED_ENUMER
 
 /**
  * @summary rekey_out_of_sequence
+ * @description Client `rekey`/`keyEst` while a previous rekey is still unconfirmed (`changedKey`).
  * @constant
  * @type {number}
  */
@@ -570,6 +641,7 @@ export const rekey_out_of_sequence: WrpError = WrpError_rekey_out_of_sequence; /
 
 /**
  * @summary WrpError_invalid_dynamic_keyEst_algo_parms
+ * @description Key-establishment dynamic parameters (rekey Payload) invalid.
  * @constant
  * @type {number}
  */
@@ -577,6 +649,7 @@ export const WrpError_invalid_dynamic_keyEst_algo_parms: WrpError = 34; /* LONG_
 
 /**
  * @summary invalid_dynamic_keyEst_algo_parms
+ * @description Key-establishment dynamic parameters (rekey Payload) invalid.
  * @constant
  * @type {number}
  */
@@ -584,6 +657,7 @@ export const invalid_dynamic_keyEst_algo_parms: WrpError = WrpError_invalid_dyna
 
 /**
  * @summary WrpError_changedKey_out_of_sequence
+ * @description `changedKey` TRUE when no outstanding client rekey remains to confirm.
  * @constant
  * @type {number}
  */
@@ -591,6 +665,7 @@ export const WrpError_changedKey_out_of_sequence: WrpError = 35; /* LONG_NAMED_E
 
 /**
  * @summary changedKey_out_of_sequence
+ * @description `changedKey` TRUE when no outstanding client rekey remains to confirm.
  * @constant
  * @type {number}
  */

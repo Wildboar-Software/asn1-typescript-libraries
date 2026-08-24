@@ -12,6 +12,8 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary supportedApplicationContext
  * @description
  *
+ * OIDs of OSI application contexts the object (an AE) supports. `objectIdentifierMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

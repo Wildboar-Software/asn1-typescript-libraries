@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SimpleCredentials_validity_time1
  * @description
  *
+ * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime not
+ * after 2049. UTCTime 00–49 ⇒ 20xx, 50–99 ⇒ 19xx.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

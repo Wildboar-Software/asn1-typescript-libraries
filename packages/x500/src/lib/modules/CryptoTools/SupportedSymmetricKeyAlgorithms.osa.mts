@@ -4,6 +4,8 @@ import { type ALGORITHM } from "@wildboar/pki-stub";
  * @summary SupportedSymmetricKeyAlgorithms
  * @description
  *
+ * Extensible empty object set of supported symmetric-key algorithms.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

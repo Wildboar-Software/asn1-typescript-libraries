@@ -10,6 +10,14 @@ import {
  * @summary Key_Estb_Algs
  * @description
  *
+ * Offered K-ALGs in preference order. `key-estb-req` matches the *first*
+ * algorithm. Target may pick another from the set (or send a delete
+ * token). `rsaEncryption` is one-pass (initiator generates the key).
+ * `dhKeyAgreement` is two-pass and cannot be used with SPKM-2
+ * unilateral. SPKM-2 unilateral: no K-ALG negotiation. Context key
+ * length: L ≤ M ≤ U (longest needed C/I-ALG key … K-ALG max). DH:
+ * discard the high-order byte of the DH result.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

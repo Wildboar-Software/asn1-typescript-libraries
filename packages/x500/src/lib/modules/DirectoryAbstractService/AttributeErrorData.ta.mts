@@ -42,6 +42,11 @@ import {
  * @summary AttributeErrorData
  * @description
  *
+ * `problems` is an unordered SET. `value` in each item is included when
+ * needed to disambiguate. Precedence if several errors detected:
+ * nameError > updateError > attributeError > securityError >
+ * serviceError.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,12 +67,21 @@ export class AttributeErrorData implements CommonResults {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Name of the entry to which the problems apply.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `problems`.
+         * @description
+         *
+         * Unordered SET. `value` on an item is included when needed to
+         * disambiguate.
+         *
          * @public
          * @readonly
          */
@@ -80,6 +94,10 @@ export class AttributeErrorData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this error is signed; absence ≡ empty.
+         *
          * @public
          * @readonly
          */

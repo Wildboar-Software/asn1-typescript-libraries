@@ -5,6 +5,8 @@ import { id_as } from "../UsefulDefinitions/id-as.va.mjs";
  * @summary id_as_directoryOperationalBindingManagementAS
  * @description
  *
+ * {id-as 4}. DOP abstract syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

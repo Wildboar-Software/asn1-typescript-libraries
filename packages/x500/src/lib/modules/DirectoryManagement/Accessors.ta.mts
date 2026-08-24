@@ -10,6 +10,10 @@ import {
  * @summary Accessors
  * @description
  *
+ * SET OF `Name` of Directory users that may access a Directory information
+ * service. Unordered; SET encoding forbids duplicates. Empty SET means no
+ * accessors. GDMO MATCHES FOR EQUALITY is set equality, not subset.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

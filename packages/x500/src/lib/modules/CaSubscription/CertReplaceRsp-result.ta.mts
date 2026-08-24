@@ -15,6 +15,10 @@ import {
  * @summary CertReplaceRsp_result
  * @description
  *
+ * `success` if at least one replacement was accepted (CertReplaceOK: same
+ * count and order as the request); `failure` only if no per-item results can
+ * be returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

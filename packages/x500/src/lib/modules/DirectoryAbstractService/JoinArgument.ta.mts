@@ -41,6 +41,11 @@ import {
  * @summary JoinArgument
  * @description
  *
+ * SEQUENCE order of `joinArguments` is not significant. All joins done
+ * before returning; intermediate results not visible. Invalid/empty
+ * `joinAttributes`: `innerJoin` empty; `leftOuterJoin` primary only;
+ * `fullOuterJoin` primary + unjoined additional.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,36 +68,66 @@ export class JoinArgument {
     constructor(
         /**
          * @summary `joinBaseObject`.
+         * @description
+         *
+         * Object (or root) relative to which the additional search runs.
+         * May be an alternative name with contexts.
+         *
          * @public
          * @readonly
          */
         readonly joinBaseObject: Name,
         /**
          * @summary `domainLocalID`.
+         * @description
+         *
+         * Which DIT to start `joinBaseObject` in. Absent ⇒ all DITs the DSA
+         * knows.
+         *
          * @public
          * @readonly
          */
         readonly domainLocalID: OPTIONAL<DomainLocalID>,
         /**
          * @summary `joinSubset`.
+         * @description
+         *
+         * DEFAULT `baseObject`. `baseObject` / `oneLevel` / `wholeSubtree`.
+         *
          * @public
          * @readonly
          */
         readonly joinSubset: OPTIONAL<JoinArgument_joinSubset>,
         /**
          * @summary `joinFilter`.
+         * @description
+         *
+         * Absent ⇒ use the Search `filter` (or its DEFAULT `and:{}`).
+         * Treated as `extendedFilter`.
+         *
          * @public
          * @readonly
          */
         readonly joinFilter: OPTIONAL<Filter>,
         /**
          * @summary `joinAttributes`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX) of join pairs. Invalid/empty:
+         * `innerJoin` ⇒ empty; `leftOuterJoin` ⇒ primary only;
+         * `fullOuterJoin` ⇒ primary + unjoined additional.
+         *
          * @public
          * @readonly
          */
         readonly joinAttributes: OPTIONAL<JoinAttPair[]>,
         /**
          * @summary `joinSelection`.
+         * @description
+         *
+         * EIS for the additional search (strip uninteresting attrs from
+         * the intermediate).
+         *
          * @public
          * @readonly
          */

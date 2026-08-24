@@ -14,6 +14,8 @@ import {
  * @summary preferredDeliveryMethod
  * @description
  *
+ * SINGLE VALUE. SEQUENCE OF INTEGER — **order is priority** (first = most preferred). 0=any, 1=mhs, 2=physical, 3=telex, 4=teletex, 5=g3-fax, 6=g4-fax, 7=ia5, 8=videotex, 9=telephone.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

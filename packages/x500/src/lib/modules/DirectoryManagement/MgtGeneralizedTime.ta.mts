@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MgtGeneralizedTime
  * @description
  *
+ * GeneralizedTime (not UTCTime). createTimestamp MATCHES FOR EQUALITY and
+ * ORDERING; other time attributes often EQUALITY only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,8 @@ import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
  * @summary dSAShadowBind
  * @description
  *
+ * Bind for DISP. Identical to `dSABind` (same argument/result/errors).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

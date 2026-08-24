@@ -12,6 +12,8 @@ import { id_at_epc } from "../SelectedAttributeTypes/id-at-epc.va.mjs";
  * @summary epc
  * @description
  *
+ * Bit-encoded Electronic Product Code. Equality `bitStringMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

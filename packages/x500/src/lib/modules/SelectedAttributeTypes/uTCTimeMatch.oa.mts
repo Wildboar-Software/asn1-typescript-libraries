@@ -7,6 +7,9 @@ import { id_mr_uTCTimeMatch } from "../SelectedAttributeTypes/id-mr-uTCTimeMatch
  * @summary uTCTimeMatch
  * @description
  *
+ * Omitted seconds = 0. Year 00–49 → 2000+; 50–99 → 1900+. TRUE iff same
+ * instant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

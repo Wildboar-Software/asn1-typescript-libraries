@@ -30,6 +30,10 @@ import {
  * @summary TbsHandshakeProAbort
  * @description
  *
+ * To-be-signed client protected-protocol abort of `HandshakeAcc`.
+ * `applData` **required** (reason PrPDU). `sigAlg` is the one used in
+ * that Acc. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,30 +51,35 @@ export class TbsHandshakeProAbort {
     constructor(
         /**
          * @summary `sigAlg`.
+         * @description Same algorithm as in the rejected `HandshakeAcc`. Signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigAlg: AlgorithmIdentifier,
         /**
          * @summary `assoID`.
+         * @description Same value as in the rejected `HandshakeAcc`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `applData`.
+         * @description Required. Protected-protocol PrPDU giving the reason for abort.
          * @public
          * @readonly
          */

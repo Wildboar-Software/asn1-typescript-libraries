@@ -14,6 +14,10 @@ import {
  * @summary EntryInformationSelection_extraAttributes
  * @description
  *
+ * OPTIONAL. Same type listed in both `attributes` and `extraAttributes`
+ * is requested once. `allOperationalAttributes` = all directory
+ * operational attrs. `select` SET SIZE (1..MAX).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

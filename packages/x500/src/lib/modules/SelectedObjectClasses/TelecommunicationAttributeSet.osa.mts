@@ -12,6 +12,9 @@ import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
  * @summary TelecommunicationAttributeSet
  * @description
  *
+ * Business communications attributes. `teletexTerminalIdentifier` was
+ * removed from this set. Does not include `streetAddress`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

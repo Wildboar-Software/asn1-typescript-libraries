@@ -10,6 +10,9 @@ import { id_asx_countryString3n } from "../SelectedAttributeTypes/id-asx-country
  * @summary countryString3n
  * @description
  *
+ * LDAP transfer of CountryCode3n: three numeric digits
+ * (ISO 3166-1 numeric-3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

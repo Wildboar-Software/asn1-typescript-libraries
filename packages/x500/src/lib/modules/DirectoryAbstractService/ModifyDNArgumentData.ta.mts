@@ -67,6 +67,10 @@ import {
  * @summary ModifyDNArgumentData
  * @description
  *
+ * `object` is `DistinguishedName`, not `Name`. `deleteOldRDN` DEFAULT FALSE.
+ * `newSuperior` is critical extension 11. Alias deref needs
+ * `dontDereferenceAliases` unset and `useAliasOnUpdate`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -85,6 +89,10 @@ export class ModifyDNArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * `DistinguishedName`, not `Name`.
+         *
          * @public
          * @readonly
          */
@@ -97,12 +105,20 @@ export class ModifyDNArgumentData implements CommonArguments {
         readonly newRDN: RelativeDistinguishedName,
         /**
          * @summary `deleteOldRDN`.
+         * @description
+         *
+         * DEFAULT FALSE.
+         *
          * @public
          * @readonly
          */
         readonly deleteOldRDN?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `newSuperior`.
+         * @description
+         *
+         * Critical extension 11.
+         *
          * @public
          * @readonly
          */

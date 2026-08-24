@@ -20,6 +20,13 @@ import {
  * @summary CertificationPath
  * @description
  *
+ * Sender keys/certs. `[0]`/`[1]` are enc/dec; `[2]`/`[3]` are
+ * verify/sign. `[0]` or `[1]` without `[2]` and `[3]` means the same
+ * key pair is used for both (not typically recommended). `[2]` or `[3]`
+ * implies a separate verification key, so `[0]` or `[1]` must also be
+ * present. `[4]` implies at least one of `[0]`–`[3]`. Path is from
+ * target toward source.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,30 +44,53 @@ export class CertificationPath {
     constructor(
         /**
          * @summary `userKeyId`.
+         * @description
+         *
+         * Identifier of the sender's encryption public key.
+         *
          * @public
          * @readonly
          */
         readonly userKeyId?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `userCertif`.
+         * @description
+         *
+         * Certificate containing the sender's encryption public key.
+         *
          * @public
          * @readonly
          */
         readonly userCertif?: OPTIONAL<Certificate>,
         /**
          * @summary `verifKeyId`.
+         * @description
+         *
+         * Identifier of the sender's verification public key. If present,
+         * `userKeyId` or `userCertif` must also be present.
+         *
          * @public
          * @readonly
          */
         readonly verifKeyId?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `userVerifCertif`.
+         * @description
+         *
+         * Certificate containing the sender's verification public key.
+         * Same co-presence rule as `verifKeyId`.
+         *
          * @public
          * @readonly
          */
         readonly userVerifCertif?: OPTIONAL<Certificate>,
         /**
          * @summary `theCACertificates`.
+         * @description
+         *
+         * CA certificate pairs from target toward source. Requires at
+         * least one of the key/cert fields above.
+         *
          * @public
          * @readonly
          */

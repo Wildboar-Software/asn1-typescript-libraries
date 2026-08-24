@@ -8,6 +8,8 @@ import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
  * @summary integerMatch
  * @description
  *
+ * INTEGER or ENUMERATED numeric equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

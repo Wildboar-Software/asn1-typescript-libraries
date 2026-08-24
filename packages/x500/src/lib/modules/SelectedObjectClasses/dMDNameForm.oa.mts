@@ -7,6 +7,8 @@ import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va
  * @summary dMDNameForm
  * @description
  *
+ * Names `dMD` by `dmdName`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

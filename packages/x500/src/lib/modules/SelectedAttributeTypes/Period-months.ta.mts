@@ -10,6 +10,10 @@ import {
  * @summary Period_months
  * @description
  *
+ * `intMonth` 1 = January … 12. `bitMonth` january = 0. `allMonths` =
+ * all months (lets `weeks`/`days` be of-the-month). Omitted months on
+ * Period ⇒ all months.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

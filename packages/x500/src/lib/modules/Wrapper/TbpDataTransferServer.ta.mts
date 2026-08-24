@@ -41,6 +41,12 @@ import {
  * @summary TbpDataTransferServer
  * @description
  *
+ * To-be-ICV-protected server data-transfer. COMPONENTS OF `AadServer` plus
+ * `encInvoke` and `conf`. `encInvoke` = symmetric dyn parms (AES-CBC IV 16
+ * octets) if encryption is required and the alg has dyn parms; otherwise
+ * absent. `conf.clear` if confidentiality not required; `conf.protected` if
+ * required (ENCIPHERED PrPDU).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,48 +65,93 @@ export class TbpDataTransferServer extends AadServer {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+         * from the protected protocol. Distinct from AVMP/CASP INTEGER
+         * InvokeID.
+         *
          * @public
          * @readonly
          */
         override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
+         * @description
+         *
+         * Association identifier for the association to which this WrPDU
+         * belongs.
+         *
          * @public
          * @readonly
          */
         override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
+         * @description
+         *
+         * UTC GeneralizedTime of creation.
+         *
          * @public
          * @readonly
          */
         override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
+         * @description
+         *
+         * Per-direction server sequence. First data-transfer WrPDU of the
+         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+         * detection. Not used on handshake.
+         *
          * @public
          * @readonly
          */
         override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `reqRekey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server wants the client to rekey. Must not be
+         * TRUE if a client rekey is outstanding without `changedKey`
+         * confirmation.
+         *
          * @public
          * @readonly
          */
         override readonly reqRekey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `changedKey`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE = server accepted the client's rekey. This
+         * WrPDU still uses the old keys; subsequent server PDUs use the new.
+         * Must not be TRUE unless a client rekey is outstanding.
+         *
          * @public
          * @readonly
          */
         override readonly changedKey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
+         * @description
+         *
+         * Symmetric-key dyn parms (e.g. AES-CBC IV of 16 octets). Present if
+         * encryption is required and the algorithm has dyn parms; otherwise
+         * absent.
+         *
          * @public
          * @readonly
          */
         readonly encInvoke: OPTIONAL<AlgoInvoke>,
         /**
          * @summary `conf`.
+         * @description
+         *
+         * `clear` if confidentiality is not required (plain WrappedProt);
+         * `protected` if required (ENCIPHERED PrPDU). TS alternative is
+         * `protected_`.
+         *
          * @public
          * @readonly
          */

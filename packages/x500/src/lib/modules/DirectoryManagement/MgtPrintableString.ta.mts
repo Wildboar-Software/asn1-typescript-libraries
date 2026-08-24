@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MgtPrintableString
  * @description
  *
+ * PrintableString (A-Z a-z 0-9 space `'()+,-./:=?`). Used for service
+ * descriptions. Empty string is empty description, not absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

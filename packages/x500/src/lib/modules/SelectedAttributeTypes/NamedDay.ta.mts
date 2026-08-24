@@ -15,6 +15,8 @@ import {
  * @summary NamedDay
  * @description
  *
+ * `intNamedDays` sunday = 1 vs `bitNamedDays` sunday = 0.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

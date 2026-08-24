@@ -35,6 +35,14 @@ import {
  * @summary TBSPDU_wrapper
  * @description
  *
+ * To-be-signed PDU wrapper. `version` DEFAULT v1 is
+ * AuthenticationFramework INTEGER Version, not X.510 Wrapper BIT
+ * STRING. `certPath` [0] IMPLICIT PkiPath is required.
+ * `signedAttrs` SET SIZE (1..MAX) — empty illegal; only
+ * `contentType` | `messageDigest` (RFC 5652). `conf.clear` =
+ * WrappedPDUInfo; `conf.protected` = EncryptedInfo. X.509 2016
+ * PkiPmiWrapper; not specified in X.510.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,30 +63,53 @@ export class TBSPDU_wrapper {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * AuthenticationFramework INTEGER Version DEFAULT v1 — not the
+         * X.510 Wrapper BIT STRING Version.
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `signatureAlgorithm`.
+         * @description
+         *
+         * Constrained to `SupportedSignatureAlgorithms`.
+         *
          * @public
          * @readonly
          */
         readonly signatureAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `certPath`.
+         * @description
+         *
+         * [0] IMPLICIT PkiPath — required.
+         *
          * @public
          * @readonly
          */
         readonly certPath: PkiPath,
         /**
          * @summary `signedAttrs`.
+         * @description
+         *
+         * [1] IMPLICIT OPTIONAL. SET SIZE (1..MAX) — empty illegal; only
+         * `contentType` | `messageDigest` (RFC 5652 / PKCS #9).
+         *
          * @public
          * @readonly
          */
         readonly signedAttrs: OPTIONAL<SignedAttributes>,
         /**
          * @summary `conf`.
+         * @description
+         *
+         * `clear` WrappedPDUInfo vs `protected` EncryptedInfo (DH +
+         * encrypted PDU). TS alternative is `protected_`.
+         *
          * @public
          * @readonly
          */

@@ -24,6 +24,10 @@ import {
  * @summary SimpleCredentials
  * @description
  *
+ * `name` is always an object DN. `validity` `time1`/`time2`/`random1`/
+ * `random2` meaning is bilateral agreement. Password: unprotected OCTET
+ * STRING, HASH, or `userPwd` [0].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,18 +54,33 @@ export class SimpleCredentials {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * Always an object DN.
+         *
          * @public
          * @readonly
          */
         readonly name: DistinguishedName,
         /**
          * @summary `validity`.
+         * @description
+         *
+         * `time1`/`time2`/`random1`/`random2` meaning is bilateral agreement
+         * (replay detection).
+         *
          * @public
          * @readonly
          */
         readonly validity?: OPTIONAL<SimpleCredentials_validity>,
         /**
          * @summary `password`.
+         * @description
+         *
+         * Unprotected OCTET STRING, protected HASH{OCTET STRING}
+         * (Protected1/Protected2 per X.509 18.1), or `userPwd` [0]
+         * (matching rule X.509 18.1.8).
+         *
          * @public
          * @readonly
          */

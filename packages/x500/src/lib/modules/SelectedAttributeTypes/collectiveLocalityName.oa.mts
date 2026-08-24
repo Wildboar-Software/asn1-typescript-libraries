@@ -10,6 +10,8 @@ import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
  * @summary collectiveLocalityName
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `localityName`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary organizationalUnitName
  * @description
  *
+ * SUBTYPE OF `name`. Organizational unit of affiliation; understood to belong to an `organizationName` (if used in a DN, an `organizationName` shall be associated). Abbreviations are separate values.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

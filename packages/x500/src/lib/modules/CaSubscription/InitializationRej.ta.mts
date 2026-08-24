@@ -15,6 +15,9 @@ import {
  * @summary InitializationRej
  * @description
  *
+ * CASP init reject. Embed in HandshakeProRej. `diag` uses TS
+ * `unsupportedVersion` (clause 14.5 prose sometimes says unsupportedVersions).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +33,10 @@ export class InitializationRej {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersion`(0): server supports none of the versions the
+         * client proposed.
          * @public
          * @readonly
          */

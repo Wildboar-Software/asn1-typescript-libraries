@@ -19,6 +19,10 @@ import {
  * @summary TotalRefresh
  * @description
  *
+ * Complete copy starting at the DIT root of the shadowed information.
+ * SDSEs that used to be in the copy and are absent here are deleted.
+ * Recursive via `Subtree` (COMPONENTS OF this type).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +37,25 @@ export class TotalRefresh {
     constructor(
         /**
          * @summary `sDSE`.
+         * @description
+         *
+         * Content of this SDSE. Absent is legal (e.g. a glue/place-holder
+         * with only subordinates).
+         *
          * @public
          * @readonly
          */
         readonly sDSE?: OPTIONAL<SDSEContent>,
         /**
          * @summary `subtree`.
+         * @description
+         *
+         * Immediate subordinate SDSEs. SET SIZE (1..MAX) — omit the
+         * component rather than send empty; omit when there are no
+         * subordinate SDSEs. Order does not matter. RDNs are primary and
+         * include contexts plus all alternative distinguished values unless
+         * the agreement's context selection reduced them.
+         *
          * @public
          * @readonly
          */

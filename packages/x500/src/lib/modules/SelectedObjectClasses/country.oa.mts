@@ -12,6 +12,9 @@ import { id_oc_country } from "../SelectedObjectClasses/id-oc-country.va.mjs";
  * @summary country
  * @description
  *
+ * Country DIT entry. Typical DIT (X.521 Annex B, illustrative): immediately
+ * under the root; named by `countryName` (ISO 3166).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary InitializationAbort
  * @description
  *
+ * Client rejects `InitializationAcc`. Embed in an `ApplAbort` WrPDU (15.6), not `HandshakeProAbort`. Relying party is the client; TB is the server.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +33,10 @@ export class InitializationAbort {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersion`: server picked a version not in the client's bits. `onlySingleVersionAllowed`: server returned multiple version bits.
+         *
          * @public
          * @readonly
          */

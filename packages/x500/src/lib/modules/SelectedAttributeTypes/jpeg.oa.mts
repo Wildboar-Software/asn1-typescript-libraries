@@ -7,6 +7,9 @@ import { id_lsx_jpeg } from "../SelectedAttributeTypes/id-lsx-jpeg.va.mjs";
  * @summary jpeg
  * @description
  *
+ * LDAP JPEG image as an octet string (IETF RFC 4517). DIRECTORY SYNTAX
+ * is NULL — no corresponding Directory syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

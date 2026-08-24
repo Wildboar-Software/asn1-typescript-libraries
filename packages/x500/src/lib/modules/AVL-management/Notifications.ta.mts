@@ -10,6 +10,8 @@ import {
  * @summary Notifications
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF Attribute. Empty is illegal when this type is present (`CertErr.note`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

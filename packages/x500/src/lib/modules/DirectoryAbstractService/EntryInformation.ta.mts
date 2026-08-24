@@ -20,6 +20,11 @@ import {
  * @summary EntryInformation
  * @description
  *
+ * `name` may be a valid alias if DN ACI is denied. If `derivedEntry` is
+ * TRUE, do not use `name` in subsequent operations. `incompleteEntry` is
+ * not set merely because an alias name was returned. `partialName` only
+ * with `partialNameResolution` after name-resolution is fully exhausted.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,36 +46,72 @@ export class EntryInformation {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * DN if ACI allows; else a valid alias or omit. Prefer a stable
+         * alias for the same requester. If `derivedEntry` TRUE, may be any
+         * related entry or alias — do not use in subsequent operations.
+         *
          * @public
          * @readonly
          */
         readonly name: Name,
         /**
          * @summary `fromEntry`.
+         * @description
+         *
+         * DEFAULT TRUE. TRUE = entry; FALSE = copy.
+         *
          * @public
          * @readonly
          */
         readonly fromEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `information`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Omitted if no attr info. CHOICE type-only vs
+         * full Attribute.
+         *
          * @public
          * @readonly
          */
         readonly information?: OPTIONAL<EntryInformation_information_Item[]>,
         /**
          * @summary `incompleteEntry`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if incomplete vs request (ACI omission if
+         * DiscloseOnError, incomplete shadow + `copyShallDo`,
+         * `attributeSizeLimit`). Not set merely because an alias name was
+         * returned. Absent in 1988 impls.
+         *
          * @public
          * @readonly
          */
         readonly incompleteEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `partialName`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE only if the request had
+         * `partialNameResolution`, name resolution was fully exhausted
+         * (incl. knowledge/referrals), ≥1 RDN resolved, and not all RDNs
+         * resolved. Info is from the last successfully resolved entry.
+         * 1997+.
+         *
          * @public
          * @readonly
          */
         readonly partialName?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `derivedEntry`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if joined from more than one entry. If
+         * signed, the signature is of the joining DSA. Do not use `name`
+         * subsequently. 2001+.
+         *
          * @public
          * @readonly
          */

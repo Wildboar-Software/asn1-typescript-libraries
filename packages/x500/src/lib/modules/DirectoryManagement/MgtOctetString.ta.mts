@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MgtOctetString
  * @description
  *
+ * CMIP OCTET STRING wrapper. Used for PDU octets in communications
+ * notifications. Empty is a valid empty encoding, not "absent".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

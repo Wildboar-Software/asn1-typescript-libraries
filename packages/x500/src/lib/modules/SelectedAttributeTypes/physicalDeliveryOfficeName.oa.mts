@@ -16,6 +16,8 @@ import {
  * @summary physicalDeliveryOfficeName
  * @description
  *
+ * Name of the city, village, etc. where a physical delivery office is situated. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

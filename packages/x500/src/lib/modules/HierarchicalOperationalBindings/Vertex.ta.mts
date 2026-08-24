@@ -29,6 +29,9 @@ import {
  * @summary Vertex
  * @description
  *
+ * One RDN of `contextPrefixInfo` plus optional administrative-point,
+ * subentry, and access-point information.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +48,44 @@ export class Vertex {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * This vertex's RDN in the immediate-superior DN (rootward first).
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `admPointInfo`.
+         * @description
+         *
+         * Present ⇒ this vertex is an administrative point; includes at least
+         * `administrativeRole`. SET SIZE (1..MAX); omit rather than empty.
+         *
          * @public
          * @readonly
          */
         readonly admPointInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `subentries`.
+         * @description
+         *
+         * Subentries of that administrative point. SET SIZE (1..MAX); omit
+         * rather than empty. Order insignificant.
+         *
          * @public
          * @readonly
          */
         readonly subentries?: OPTIONAL<SubentryInfo[]>,
         /**
          * @summary `accessPoints`.
+         * @description
+         *
+         * Present ⇒ this vertex is the CP of the immediately superior naming
+         * context (immediate-superior reference). Master AP in this set equals
+         * the DOP Establish/Modify `accessPoint` parameter.
+         *
          * @public
          * @readonly
          */

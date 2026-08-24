@@ -10,6 +10,9 @@ import { urn } from "../SelectedAttributeTypes/urn.oa.mjs";
  * @summary epcInUrn
  * @description
  *
+ * EPC encoded as a unique URN. SUBTYPE OF `urn`. SINGLE VALUE. Converted
+ * fields joined by `'.'`; no check digit and no `digitShift`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

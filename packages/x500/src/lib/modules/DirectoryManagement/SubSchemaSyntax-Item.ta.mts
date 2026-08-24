@@ -19,6 +19,10 @@ import {
  * @summary SubSchemaSyntax_Item
  * @description
  *
+ * One published subschema: `name` [1] is the name of the *subschema subentry*
+ * (not the administrative point); `subSchema` [2] holds the descriptions.
+ * Both tags are EXPLICIT.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,21 @@ export class SubSchemaSyntax_Item {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * Name of the subschema subentry, not the administrative point.
+         * Tagged [1] EXPLICIT.
+         *
          * @public
          * @readonly
          */
         readonly name: Name,
         /**
          * @summary `subSchema`.
+         * @description
+         *
+         * Published schema components. Tagged [2] EXPLICIT.
+         *
          * @public
          * @readonly
          */

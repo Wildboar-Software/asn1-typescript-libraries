@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TelexNumber
  * @description
  *
+ * `telexNumber`, `countryCode`, and `answerback` are all required; SEQUENCE
+ * order is significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +29,30 @@ export class TelexNumber {
     constructor(
         /**
          * @summary `telexNumber`.
+         * @description
+         *
+         * Telex subscriber number. Required; first in SEQUENCE.
+         *
          * @public
          * @readonly
          */
         readonly telexNumber: PrintableString,
         /**
          * @summary `countryCode`.
+         * @description
+         *
+         * Telex country code. Required.
+         *
          * @public
          * @readonly
          */
         readonly countryCode: PrintableString,
         /**
          * @summary `answerback`.
+         * @description
+         *
+         * Answerback code. Required.
+         *
          * @public
          * @readonly
          */

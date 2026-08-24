@@ -10,6 +10,9 @@ import {
  * @summary MgtName
  * @description
  *
+ * `Name` wrapper (currently `rdnSequence`). CMIP syntax for names (calling
+ * AE-title, customer/user names, DMD name).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

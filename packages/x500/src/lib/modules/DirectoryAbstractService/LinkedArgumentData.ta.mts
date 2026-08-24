@@ -70,6 +70,10 @@ import {
  * @summary LinkedArgumentData
  * @description
  *
+ * Carries a single result of a multi-result LDAP operation (not the
+ * final result). `linkId` required (same value as the corresponding
+ * ldapTransport). `returnToClient` DEFAULT FALSE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -88,24 +92,42 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * DN of the bound DSA as in the first `TraceItem` of
+         * `TraceInformation`.
+         *
          * @public
          * @readonly
          */
         readonly object: DistinguishedName,
         /**
          * @summary `ldapMessage`.
+         * @description
+         *
+         * An LDAPMessage result (one of several).
+         *
          * @public
          * @readonly
          */
         readonly ldapMessage: LDAPMessage,
         /**
          * @summary `linkId`.
+         * @description
+         *
+         * Required. Same value as the corresponding ldapTransport request.
+         *
          * @public
          * @readonly
          */
         readonly linkId: LinkId,
         /**
          * @summary `returnToClient`.
+         * @description
+         *
+         * DEFAULT FALSE. Present when an LDAP referral is returned;
+         * TRUE ⇒ return the referral to the LDAP client.
+         *
          * @public
          * @readonly
          */

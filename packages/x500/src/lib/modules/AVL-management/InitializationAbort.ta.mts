@@ -15,6 +15,8 @@ import {
  * @summary InitializationAbort
  * @description
  *
+ * Client rejects `InitializationAcc`. Embed in `HandshakeProAbort` (13.6). `diag` `unsupportedVersion`: server picked a version not in the client’s bits. `onlySingleVersionAllowed`: server set **multiple** version bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +33,10 @@ export class InitializationAbort {
     constructor(
         /**
          * @summary `diag`.
+         * @description
+         *
+         * `unsupportedVersion`: Acc version not among Rec bits. `onlySingleVersionAllowed`: Acc set more than one Version bit.
+         *
          * @public
          * @readonly
          */

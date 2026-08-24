@@ -10,6 +10,9 @@ import {
  * @summary DITcontext
  * @description
  *
+ * `SEQUENCE OF Vertex`; order matters (RDNs of the immediate superior,
+ * rootward first). Empty = immediate superior is the DIT root.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

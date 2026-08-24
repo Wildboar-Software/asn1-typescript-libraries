@@ -19,6 +19,11 @@ import {
  * @summary TraceItem
  * @description
  *
+ * `dsa` is the DSA adding the item. `targetObject` omit if from
+ * DUA/LDAP or equal to outgoing `targetObject`. `operationProgress`
+ * from DAP CommonArguments (default `notStarted`), LDAP ⇒ `notStarted`,
+ * DSP ⇒ chaining args.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +39,36 @@ export class TraceItem {
     constructor(
         /**
          * @summary `dsa`.
+         * @description
+         *
+         * Name of the DSA adding the item (the one about to chain).
+         *
          * @public
          * @readonly
          */
         readonly dsa: Name,
         /**
          * @summary `targetObject`.
+         * @description
+         *
+         * Incoming ChainingArguments.targetObject. Omit if the request came
+         * from a DUA (implied = DAP object/baseObject), from an LDAP client
+         * (implied = LDAP object/base), or equal to the outgoing (actual or
+         * implied) targetObject.
+         *
          * @public
          * @readonly
          */
         readonly targetObject: OPTIONAL<Name>,
         /**
          * @summary `operationProgress`.
+         * @description
+         *
+         * From DAP CommonArguments (default `notStarted` if absent); LDAP
+         * client ⇒ `notStarted`; incoming DSP ⇒
+         * ChainingArguments.operationProgress (default `notStarted` if
+         * absent).
+         *
          * @public
          * @readonly
          */

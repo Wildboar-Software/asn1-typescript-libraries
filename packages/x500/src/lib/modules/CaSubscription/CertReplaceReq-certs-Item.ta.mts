@@ -19,6 +19,9 @@ import {
  * @summary CertReplaceReq_certs_Item
  * @description
  *
+ * One replacement. `old` is the serial of the cert to replace; `new_` is the
+ * replacement Certificate (ASN.1 `new`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +33,18 @@ export class CertReplaceReq_certs_Item {
     constructor(
         /**
          * @summary `old`.
+         * @description
+         *
+         * Serial of the cert to replace.
          * @public
          * @readonly
          */
         readonly old: CertificateSerialNumber,
         /**
          * @summary `new_`.
+         * @description
+         *
+         * Replacement Certificate (ASN.1 `new`).
          * @public
          * @readonly
          */

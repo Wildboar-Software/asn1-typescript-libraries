@@ -7,6 +7,9 @@ import { person } from "../SelectedObjectClasses/person.oa.mjs";
  * @summary personNameForm
  * @description
  *
+ * Names `person` by `commonName` only. `surname` is mandatory on the
+ * entry but is not a distinguished attribute in this form.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

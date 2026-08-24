@@ -10,6 +10,9 @@ import {
  * @summary UiiFilter
  * @description
  *
+ * Recursive like Filter. `item` recommends one UiiItem (attribute type
+ * + character length) to probe remaining UII bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

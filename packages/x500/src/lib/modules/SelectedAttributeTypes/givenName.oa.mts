@@ -15,6 +15,8 @@ import {
  * @summary givenName
  * @description
  *
+ * SUBTYPE OF `name` (inherits `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`). Name given by a parent, chosen by the individual, or by which the individual is commonly known.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

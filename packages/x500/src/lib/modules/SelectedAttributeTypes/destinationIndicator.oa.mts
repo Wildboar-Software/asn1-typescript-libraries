@@ -16,6 +16,8 @@ import { printableString } from "../SelectedAttributeTypes/printableString.oa.mj
  * @summary destinationIndicator
  * @description
  *
+ * Country and city of the addressee for the Public Telegram Service (F.1 / F.31). PrintableString SIZE (1..MAX), **uppercase letters only**. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

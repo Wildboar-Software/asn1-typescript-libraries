@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeZone
  * @description
  *
+ * INTEGER -12..12 hours from GMT. Absent on TimeSpecification ⇒ DSA
+ * local.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

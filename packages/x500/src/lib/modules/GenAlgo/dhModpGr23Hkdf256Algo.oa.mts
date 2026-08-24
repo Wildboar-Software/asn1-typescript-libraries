@@ -15,6 +15,15 @@ import { type ALGORITHM } from "@wildboar/pki-stub";
  * @summary dhModpGr23Hkdf256Algo
  * @description
  *
+ * DH group 23 + HKDF-256. PARMS `Group23` = INTEGER (23) always; RFC 5114
+ * secp256r1 ECDH. DYN-PARMS `Payload23`: `dhPublicKey` SIZE 512, `nonce`
+ * SIZE 32. New DH pair per association; client new pair each rekey; new
+ * nonce each establishment; server retains DH private for rekey. HKDF
+ * hmacWithSHA256: salt=`nonce`, IKM=DH secret, info=empty. 2 keys (AEAD):
+ * client then server. 4 keys: client ICV, server ICV, client enc, server
+ * enc. 6.4.6: certs of both parties are not mixed into the shared secret.
+ * Instance is an invocation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

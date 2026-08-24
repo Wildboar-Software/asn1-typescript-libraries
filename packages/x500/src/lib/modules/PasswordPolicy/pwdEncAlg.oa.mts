@@ -15,6 +15,10 @@ import { pwdEncAlgMatch } from "../PasswordPolicy/pwdEncAlgMatch.oa.mjs";
  * @summary pwdEncAlg
  * @description
  *
+ * Algorithm used when creating encrypted passwords. Equality is
+ * {@link pwdEncAlgMatch} (identifier and parameters). Object-entry
+ * value overrides a covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

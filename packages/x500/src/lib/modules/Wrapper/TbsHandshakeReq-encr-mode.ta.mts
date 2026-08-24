@@ -15,6 +15,12 @@ import {
  * @summary TbsHandshakeReq_encr_mode
  * @description
  *
+ * `aead`: SEQUENCE SIZE (1..MAX) of AEAD algorithms in **preference
+ * order**; server picks the first it supports; generates **2** keys
+ * (one per direction). `non_aead`: optional `encr` (absent ⇒ no
+ * confidentiality) + required `icvAlgID`; **2 ICV keys** always, **+2
+ * enc keys** if `encr` is present. Sequences cannot be empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

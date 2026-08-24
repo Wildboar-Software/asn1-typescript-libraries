@@ -10,6 +10,11 @@ import {
  * @summary ModifyRights
  * @description
  *
+ * SET OF. One element for the entry; one per user attribute the user may
+ * add/remove; one per value whose rights differ from the attribute.
+ * Returned only if requested, the user has some modify rights, and local
+ * policy allows.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

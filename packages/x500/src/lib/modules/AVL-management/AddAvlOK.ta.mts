@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AddAvlOK
  * @description
  *
+ * Add succeeded. Carried as `AddAvlRsp.result.success` in `DataTransferServer`. `ok` is `NULL`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +26,10 @@ export class AddAvlOK {
     constructor(
         /**
          * @summary `ok`.
+         * @description
+         *
+         * Success marker (`NULL`).
+         *
          * @public
          * @readonly
          */

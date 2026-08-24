@@ -15,6 +15,8 @@ import {
  * @summary RepAvlErr
  * @description
  *
+ * Replace failure. Carried as `ReplaceAvlRsp.result.failure` in `DataTransferServer`. Invalid AVL signature is an **alert** (`AbortAVL` `noReason`), not this PDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +30,10 @@ export class RepAvlErr {
     constructor(
         /**
          * @summary `notOK`.
+         * @description
+         *
+         * Why the replace failed (`unknownAVL`, `duplicateAVL`, constrained mismatch, etc.).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,11 @@ import {
  * @summary ConsumerUpdateMode
  * @description
  *
+ * Consumer-driven update schedule. Same encoding as
+ * `SchedulingParameters`. The consumer still uses
+ * `requestShadowUpdate` then `updateShadow`; this only says when those
+ * requests are expected.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

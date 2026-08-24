@@ -38,6 +38,9 @@ import {
  * @summary AbandonedData
  * @description
  *
+ * Not a "real" error. `problem` shall be absent for Abandon, and shall be
+ * `pagingAbandoned` for `abandonQuery`. COMPONENTS OF `CommonResults`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,6 +56,10 @@ export class AbandonedData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Absent for Abandon. Shall be `pagingAbandoned` for `abandonQuery`.
+         *
          * @public
          * @readonly
          */
@@ -65,6 +72,10 @@ export class AbandonedData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this error is signed; absence ≡ empty.
+         *
          * @public
          * @readonly
          */

@@ -13,6 +13,10 @@ import { id_cat_characterMatchTypes } from "../SelectedAttributeTypes/id-cat-cha
  * @summary characterMatchTypes
  * @description
  *
+ * Control attribute (not a matching rule) for generalWordMatch. SINGLE
+ * VALUE. Applies to following assertion items. Default characterExact
+ * (characterCaseIgnore if attr equality is caseIgnoreMatch).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

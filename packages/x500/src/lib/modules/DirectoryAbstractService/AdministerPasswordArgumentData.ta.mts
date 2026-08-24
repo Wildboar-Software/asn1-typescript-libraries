@@ -64,7 +64,10 @@ import {
 /**
  * @summary AdministerPasswordArgumentData
  * @description
- * 
+ *
+ * Admin password reset: `newPwd` only (no old password; contrast
+ * `ChangePassword`). Errors `securityError` | `updateError`.
+ *
  * Note that the official ASN.1 SEQUENCE does NOT include the
  * `COMPONENTS OF CommonArguments`. Since I believe this to be a mistake, I
  * have added this component to the sequence here. Since the common
@@ -86,12 +89,20 @@ export class AdministerPasswordArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * DN of the entry whose password is reset.
+         *
          * @public
          * @readonly
          */
         readonly object: DistinguishedName,
         /**
          * @summary `newPwd`.
+         * @description
+         *
+         * New password. Old password is not supplied (admin reset).
+         *
          * @public
          * @readonly
          */

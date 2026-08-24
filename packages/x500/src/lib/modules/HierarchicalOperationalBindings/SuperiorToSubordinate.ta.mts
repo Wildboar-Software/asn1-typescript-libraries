@@ -19,6 +19,9 @@ import {
  * @summary SuperiorToSubordinate
  * @description
  *
+ * Superior→subordinate establishment parameter. If a component later
+ * changes, send that component in its entirety on modify.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +39,34 @@ export class SuperiorToSubordinate {
     constructor(
         /**
          * @summary `contextPrefixInfo`.
+         * @description
+         *
+         * DITcontext (`SEQUENCE OF Vertex`); order = RDNs of the immediate
+         * superior, rootward first. Empty ⇒ superior is the DIT root.
+         *
          * @public
          * @readonly
          */
         readonly contextPrefixInfo: DITcontext,
         /**
          * @summary `entryInfo`.
+         * @description
+         *
+         * Attributes of the new CP entry. SET SIZE (1..MAX); omit rather than
+         * empty SET. Absent on modification.
+         *
          * @public
          * @readonly
          */
         readonly entryInfo?: OPTIONAL<Attribute[]>,
         /**
          * @summary `immediateSuperiorInfo`.
+         * @description
+         *
+         * Copy from the immediately superior entry, especially `objectClass` and
+         * `entryACI`, to optimize an otherwise empty List of that superior.
+         * SET SIZE (1..MAX); omit rather than empty SET.
+         *
          * @public
          * @readonly
          */

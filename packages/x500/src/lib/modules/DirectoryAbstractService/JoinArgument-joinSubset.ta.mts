@@ -12,6 +12,9 @@ export enum _enum_for_JoinArgument_joinSubset {
  * @summary JoinArgument_joinSubset
  * @description
  *
+ * DEFAULT `baseObject`. Same subset semantics as Search: `baseObject`(0),
+ * `oneLevel`(1), `wholeSubtree`(2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +29,10 @@ export type JoinArgument_joinSubset =
 
 /**
  * @summary JoinArgument_joinSubset_baseObject
+ * @description
+ *
+ * (0) DEFAULT. Additional search of `joinBaseObject` only.
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +40,10 @@ export const JoinArgument_joinSubset_baseObject: JoinArgument_joinSubset = 0; /*
 
 /**
  * @summary baseObject
+ * @description
+ *
+ * (0) DEFAULT. Additional search of `joinBaseObject` only.
+ *
  * @constant
  * @type {number}
  */

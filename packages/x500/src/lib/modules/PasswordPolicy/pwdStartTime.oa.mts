@@ -13,6 +13,9 @@ import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generali
  * @summary pwdStartTime
  * @description
  *
+ * When the password was created. Origin for default `pwdExpiryTime`
+ * (`+ pwdExpiryAge`) and `pwdEndTime` (`+ pwdMaxAge`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

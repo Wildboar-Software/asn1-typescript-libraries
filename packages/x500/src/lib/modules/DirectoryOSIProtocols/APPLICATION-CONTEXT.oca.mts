@@ -6,6 +6,12 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
  * @summary APPLICATION_CONTEXT
  * @description
  *
+ * Abbreviated X.881 APPLICATION-CONTEXT: bind op, invokable ops, and
+ * the AC name OID signalled in OSI Bind. Presentation-context list
+ * has exactly two entries (ACSE AS + Directory AS) with distinct odd
+ * PCIs. Simultaneous Bind attempts yield two associations, not one.
+ * Unknown extra parameters shall be ignored (extensibility).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,14 +56,26 @@ export interface APPLICATION_CONTEXT {
     >;
     /**
      * @summary &bind-operation
+     * @description
+     *
+     * Bind OPERATION for this AC (directoryBind, dSABind, dSAShadowBind,
+     * or dSAOperationalBindingManagementBind).
      */
     readonly "&bind-operation"?: OPERATION;
     /**
      * @summary &Operations
+     * @description
+     *
+     * Invokable Directory operations. DISP ACs subset these (supplier vs
+     * consumer); IDM DISP does not. Set membership is not ordered.
      */
     readonly "&Operations"?: OPERATION[];
     /**
      * @summary &applicationContextName
+     * @description
+     *
+     * UNIQUE OID signalled in OSI Bind. Unknown name ⇒ BindError
+     * `application-context-name-not-supported`.
      */
     readonly "&applicationContextName"?: OBJECT_IDENTIFIER;
 }

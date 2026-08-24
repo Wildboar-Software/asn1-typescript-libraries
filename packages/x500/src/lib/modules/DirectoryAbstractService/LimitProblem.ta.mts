@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LimitProblem
  * @description
  *
+ * `timeLimitExceeded`(0), `sizeLimitExceeded`(1),
+ * `administrativeLimitExceeded`(2). Partial results are an arbitrary
+ * selection of what was accumulated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -19,6 +23,10 @@ export type LimitProblem = INTEGER;
 
 /**
  * @summary LimitProblem_timeLimitExceeded
+ * @description
+ *
+ * (0) Elapsed-time limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */
@@ -26,6 +34,10 @@ export const LimitProblem_timeLimitExceeded: LimitProblem = 0; /* LONG_NAMED_INT
 
 /**
  * @summary LimitProblem_timeLimitExceeded
+ * @description
+ *
+ * (0) Elapsed-time limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +45,10 @@ export const timeLimitExceeded: LimitProblem = LimitProblem_timeLimitExceeded; /
 
 /**
  * @summary LimitProblem_sizeLimitExceeded
+ * @description
+ *
+ * (1) Entry-count limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +56,10 @@ export const LimitProblem_sizeLimitExceeded: LimitProblem = 1; /* LONG_NAMED_INT
 
 /**
  * @summary LimitProblem_sizeLimitExceeded
+ * @description
+ *
+ * (1) Entry-count limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +67,10 @@ export const sizeLimitExceeded: LimitProblem = LimitProblem_sizeLimitExceeded; /
 
 /**
  * @summary LimitProblem_administrativeLimitExceeded
+ * @description
+ *
+ * (2) Admin limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +78,10 @@ export const LimitProblem_administrativeLimitExceeded: LimitProblem = 2; /* LONG
 
 /**
  * @summary LimitProblem_administrativeLimitExceeded
+ * @description
+ *
+ * (2) Admin limit. Partial results are an arbitrary selection.
+ *
  * @constant
  * @type {number}
  */

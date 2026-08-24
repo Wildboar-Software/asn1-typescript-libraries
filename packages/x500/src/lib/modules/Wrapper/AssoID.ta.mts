@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AssoID
  * @description
  *
+ * INTEGER (0..32767) uniquely identifying an association within a
+ * client–server pair.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

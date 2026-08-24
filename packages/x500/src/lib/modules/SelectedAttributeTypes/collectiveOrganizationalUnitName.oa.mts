@@ -10,6 +10,8 @@ import { organizationalUnitName } from "../SelectedAttributeTypes/organizational
  * @summary collectiveOrganizationalUnitName
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `organizationalUnitName`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

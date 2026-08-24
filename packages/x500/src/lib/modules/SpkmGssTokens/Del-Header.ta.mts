@@ -25,6 +25,9 @@ import {
  * @summary Del_Header
  * @description
  *
+ * Delete-token header. `tok-id` is 769 (0x0301). Omitted `int-alg` means
+ * default I-ALG. Sequencing as for MIC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +44,40 @@ export class Del_Header {
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 769 (0x0301). Bound into the checksum.
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * Context to delete.
+         *
          * @public
          * @readonly
          */
         readonly context_id: Random_Integer,
         /**
          * @summary `int_alg`.
+         * @description
+         *
+         * Must be an agreed I-ALG. Omit for default.
+         *
          * @public
          * @readonly
          */
         readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `snd_seq`.
+         * @description
+         *
+         * Same construction as MIC/WRAP sequence numbers.
+         *
          * @public
          * @readonly
          */

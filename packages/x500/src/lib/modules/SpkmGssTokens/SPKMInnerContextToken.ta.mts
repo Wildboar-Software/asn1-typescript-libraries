@@ -40,6 +40,11 @@ import {
  * @summary SPKMInnerContextToken
  * @description
  *
+ * Inner token CHOICE. Tags `[0]`–`[6]` are the parse-time token-id
+ * (redundant with `tok-id` but used to decode `InitialContextToken`).
+ * `tok-id` values: REQ 256/0x0100, REP-TI 512/0x0200, REP-IT 768/0x0300,
+ * ERROR 1024/0x0400, MIC 257/0x0101, WRAP 513/0x0201, DEL 769/0x0301.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

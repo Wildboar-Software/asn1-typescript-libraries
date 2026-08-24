@@ -7,6 +7,8 @@ import { type WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
  * @summary SupportedProtSet
  * @description
  *
+ * Extensible set of protected protocols: `avlProt` | `casubProt` | `tbprot`. Wrapper imports this; an implementation should include only one object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

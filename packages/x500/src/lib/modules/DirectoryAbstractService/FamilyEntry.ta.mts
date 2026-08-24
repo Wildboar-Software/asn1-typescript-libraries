@@ -24,6 +24,11 @@ import {
  * @summary FamilyEntry
  * @description
  *
+ * One selected family member. `information` SEQUENCE OF (order from the
+ * member); empty if no attrs selected. Nested `family_info` SEQUENCE SIZE
+ * (1..MAX) optional. Unselected members omitted unless superior to a
+ * selected member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +47,32 @@ export class FamilyEntry {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * RDN of this family member relative to its immediate superior.
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `information`.
+         * @description
+         *
+         * SEQUENCE OF (order from the member). Empty if no attrs selected.
+         * `infoTypes` applies here, not to the carrier.
+         *
          * @public
          * @readonly
          */
         readonly information: FamilyEntry_information_Item[],
         /**
          * @summary `family_info`.
+         * @description
+         *
+         * Nested families SEQUENCE SIZE (1..MAX). Split by structural OC of
+         * immediately subordinate members.
+         *
          * @public
          * @readonly
          */

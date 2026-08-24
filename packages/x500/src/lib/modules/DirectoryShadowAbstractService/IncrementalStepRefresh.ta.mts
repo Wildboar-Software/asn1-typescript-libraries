@@ -19,6 +19,10 @@ import {
  * @summary IncrementalStepRefresh
  * @description
  *
+ * One group of changes at the current name. Both fields optional (a step
+ * may only touch subordinates). `subordinateUpdates` is a SEQUENCE
+ * SIZE (1..MAX) applied *in order* — omit rather than send empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,25 @@ export class IncrementalStepRefresh {
     constructor(
         /**
          * @summary `sDSEChanges`.
+         * @description
+         *
+         * Change to *this* SDSE: `add` (full content; existing DSE of this
+         * name is replaced and its subordinates deleted), `remove` (this
+         * SDSE and all subordinates disappear), or `modify`. Absent = no
+         * change at this node (only subordinates).
+         *
          * @public
          * @readonly
          */
         readonly sDSEChanges?: OPTIONAL<IncrementalStepRefresh_sDSEChanges>,
         /**
          * @summary `subordinateUpdates`.
+         * @description
+         *
+         * Changes to subordinates, applied in the order given (DN reuse).
+         * SIZE (1..MAX) — omit if none. The same subordinate may also
+         * appear in later `IncrementalStepRefresh` elements.
+         *
          * @public
          * @readonly
          */

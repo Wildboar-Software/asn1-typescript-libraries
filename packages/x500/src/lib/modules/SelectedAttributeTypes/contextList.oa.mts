@@ -13,6 +13,11 @@ import { id_not_contextList } from "../SelectedAttributeTypes/id-not-contextList
  * @summary contextList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. A context type plus some values of that type that are
+ * not
+ * allowed in the situation that produced this attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -70,6 +70,10 @@ import {
  * @summary LdapArgumentData
  * @description
  *
+ * LDAP transport argument. `linkId` OPTIONAL INTEGER: present iff the
+ * LDAP op may yield multiple results; uniquely identifies the outstanding
+ * op among those forwarded to a particular adjacent DSA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -87,18 +91,32 @@ export class LdapArgumentData implements CommonArgumentsSeq {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * DN converted from the LDAP DN. If the LDAPMessage is AddRequest,
+         * the last RDN is removed.
+         *
          * @public
          * @readonly
          */
         readonly object: DistinguishedName,
         /**
          * @summary `ldapMessage`.
+         * @description
+         *
+         * The LDAP request as defined by RFC 4511.
+         *
          * @public
          * @readonly
          */
         readonly ldapMessage: LDAPMessage,
         /**
          * @summary `linkId`.
+         * @description
+         *
+         * Present iff the LDAP op may yield multiple results. Unique among
+         * outstanding LDAP ops forwarded to a particular adjacent DSA.
+         *
          * @public
          * @readonly
          */

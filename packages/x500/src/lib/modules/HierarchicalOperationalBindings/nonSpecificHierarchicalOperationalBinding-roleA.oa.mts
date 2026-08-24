@@ -9,6 +9,11 @@ import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.
  * @summary nonSpecificHierarchicalOperationalBinding_roleA
  * @description
  *
+ * Superior. Not an establishment initiator. EstablishParam =
+ * ModifyParam = `NHOBSuperiorToSubordinate`. Terminate initiator TRUE.
+ * If the last `nonSpecificKnowledge` value is removed, also remove the
+ * `nssr` DSE type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

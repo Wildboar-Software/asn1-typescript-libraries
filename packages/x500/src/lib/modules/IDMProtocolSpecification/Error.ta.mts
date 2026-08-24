@@ -16,6 +16,10 @@ import {
  * @summary Error
  * @description
  *
+ * Unsuccessful operation. `invokeID` shall equal the Request. No
+ * `opcode` field (unlike Result). `errcode` must be an error of that
+ * operation/protocol (`unknownError` otherwise).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,18 +35,32 @@ export class Error {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Shall equal the Request. Unknown ⇒ reject `unknownInvokeIDError`.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: INTEGER,
         /**
          * @summary `errcode`.
+         * @description
+         *
+         * Must be an error of that operation/protocol; otherwise reject
+         * `unknownError`. No `opcode` field on this PDU (unlike Result).
+         *
          * @public
          * @readonly
          */
         readonly errcode: Code,
         /**
          * @summary `error`.
+         * @description
+         *
+         * ERROR.&ParameterType for `errcode`. Malformed ⇒ reject
+         * `mistypedParameterError`.
+         *
          * @public
          * @readonly
          */

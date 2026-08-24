@@ -15,6 +15,8 @@ import {
  * @summary RemoveEntryArgument
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `RemoveEntryArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import {
  * @summary SearchResult
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `SearchResultData`.
+ * Succeeds if the base is located even if zero entries. Unfiltered search
+ * of one entry is not identical to Read of the same attrs (Read
+ * `attributeError`s if none exist).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

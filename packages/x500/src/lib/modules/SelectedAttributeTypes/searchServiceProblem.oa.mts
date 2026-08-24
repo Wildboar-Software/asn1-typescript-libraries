@@ -11,6 +11,12 @@ import { id_not_searchServiceProblem } from "../SelectedAttributeTypes/id-not-se
  * @summary searchServiceProblem
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Used with a service-error or PartialOutcomeQualifier.
+ * SINGLE VALUE problem OID from `id-pr-*` (e.g.
+ * `id-pr-unidentifiedOperation`, `id-pr-unavailableOperation`,
+ * `id-pr-matchingUseViolation`, `id-pr-emptyHierarchySelection`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

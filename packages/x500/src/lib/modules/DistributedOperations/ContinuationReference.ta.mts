@@ -37,6 +37,14 @@ import {
  * @summary ContinuationReference
  * @description
  *
+ * How to continue at other servers. DUA must not follow a CR identical
+ * to one already used for this request. `aliasedRDNs` 1988 only; 1993+
+ * omit. `accessPoints` SET OF, more than one item only for NSSRs.
+ * `entryOnly` for oneLevel Search + alias as immediate subordinate.
+ * `returnToDUA` ⇒ DUA should bind directly; may set `referenceType`
+ * `self`. `nameResolveOnMaster` after NSSRs. `rdnsResolved` = RDNs
+ * resolved via internal refs only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,60 +67,117 @@ export class ContinuationReference {
     constructor(
         /**
          * @summary `targetObject`.
+         * @description
+         *
+         * Name to use when continuing (may differ from incoming
+         * `targetObject` after alias deref or after locating a Search
+         * base).
+         *
          * @public
          * @readonly
          */
         readonly targetObject: Name,
         /**
          * @summary `aliasedRDNs`.
+         * @description
+         *
+         * How many RDNs of `targetObject` came from alias deref. Present
+         * only if an alias was dereferenced. 1988 compatibility; 1993+
+         * shall not include this in CommonArguments.
+         *
          * @public
          * @readonly
          */
         readonly aliasedRDNs: OPTIONAL<INTEGER>,
         /**
          * @summary `operationProgress`.
+         * @description
+         *
+         * How much name resolution is done; governs the next DSA/DUA if the
+         * CR is followed.
+         *
          * @public
          * @readonly
          */
         readonly operationProgress: OperationProgress,
         /**
          * @summary `rdnsResolved`.
+         * @description
+         *
+         * How many RDNs were actually resolved via internal references
+         * only. Needed when some RDNs were assumed correct from a cross
+         * reference.
+         *
          * @public
          * @readonly
          */
         readonly rdnsResolved: OPTIONAL<INTEGER>,
         /**
          * @summary `referenceType`.
+         * @description
+         *
+         * Knowledge type used to generate this continuation. With
+         * `returnToDUA` TRUE, may be `self`.
+         *
          * @public
          * @readonly
          */
         readonly referenceType: ReferenceType,
         /**
          * @summary `accessPoints`.
+         * @description
+         *
+         * SET OF AccessPointInformation. More than one item only for
+         * NSSRs. Order insignificant.
+         *
          * @public
          * @readonly
          */
         readonly accessPoints: AccessPointInformation[],
         /**
          * @summary `entryOnly`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE iff original Search subset was oneLevel and
+         * an alias was an immediate subordinate of baseObject. Completing
+         * DSA evaluates only the named entry. Else absent or FALSE.
+         *
          * @public
          * @readonly
          */
         readonly entryOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `exclusions`.
+         * @description
+         *
+         * Subordinate naming contexts the receiving DSA should not explore.
+         * Same Exclusions rules (relative, SIZE (1..MAX); omit rather than
+         * empty SET).
+         *
          * @public
          * @readonly
          */
         readonly exclusions?: OPTIONAL<Exclusions>,
         /**
          * @summary `returnToDUA`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ unwilling to return data via an
+         * intermediate DSA; DUA/LDAP client should bind directly
+         * (DAP/LDAP). May set `referenceType` to `self`.
+         *
          * @public
          * @readonly
          */
         readonly returnToDUA?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nameResolveOnMaster`.
+         * @description
+         *
+         * DEFAULT FALSE. Set when NSSRs were encountered. TRUE ⇒ remaining
+         * RDNs from `nextRDNToBeResolved` shall not use copies (incl.
+         * writeable copies); each remaining RDN at that entry's master.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,8 @@ import { name } from "../SelectedAttributeTypes/name.oa.mjs";
  * @summary countryCode3c
  * @description
  *
+ * SUBTYPE OF `name`. SINGLE VALUE. ISO 3166-1 **alpha-3** (PrintableString SIZE 3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

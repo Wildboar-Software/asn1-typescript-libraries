@@ -6,11 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PwdAlphabet
  * @description
  *
- * SEQUENCE OF UTF8String (order of strings matters; order of characters
- * within a string does not). Odd positions (1st, 3rd, …) are **allowed**
- * sets: the password must contain at least one character from each. Even
- * positions (2nd, 4th, …) are **disallowed** sets: no character from those
- * strings may appear. **Empty SEQUENCE means no alphabet restriction.**
+ * Password shall contain at least one character from **each** UTF8String
+ * (each string is a required character class). Empty SEQUENCE ⇒ no extra
+ * alphabet constraint. Order of strings is not a matching order.
  *
  * ### ASN.1 Definition:
  *

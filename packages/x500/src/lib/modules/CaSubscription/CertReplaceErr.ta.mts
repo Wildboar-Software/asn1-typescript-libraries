@@ -15,6 +15,9 @@ import {
  * @summary CertReplaceErr
  * @description
  *
+ * Whole-message replace failure: used only when no per-item results can be
+ * returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,9 @@ export class CertReplaceErr {
     constructor(
         /**
          * @summary `code`.
+         * @description
+         *
+         * CASP-error for the whole-message failure.
          * @public
          * @readonly
          */

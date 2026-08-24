@@ -10,6 +10,10 @@ import {
  * @summary CertSubscribeOK
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) OF per-cert CHOICE; empty illegal. Same count and
+ * order as CertSubscribeReq.`certs`. `ok` when retrieved; `not_ok` when not
+ * identified (`unknownCert` if not issued by this CA).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

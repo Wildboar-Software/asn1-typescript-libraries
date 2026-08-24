@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_opcode_list
  * @description
  *
+ * DAP/DSP local:4 (`list` / `chainedList`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

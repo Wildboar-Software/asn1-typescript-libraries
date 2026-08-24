@@ -15,6 +15,9 @@ import {
  * @summary EntryInformation_information_Item
  * @description
  *
+ * CHOICE type-only vs full `Attribute`. Parent `information` SET SIZE
+ * (1..MAX) is omitted if no attr info is returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

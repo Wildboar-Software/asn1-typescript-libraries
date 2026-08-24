@@ -7,6 +7,9 @@ import { id_lsx_boolean } from "../SelectedAttributeTypes/id-lsx-boolean.va.mjs"
  * @summary boolean_
  * @description
  *
+ * LDAP transfer of BOOLEAN: the character string `TRUE` or `FALSE`
+ * (IETF RFC 4517).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

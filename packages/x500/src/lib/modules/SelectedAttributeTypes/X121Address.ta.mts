@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary X121Address
  * @description
  *
+ * NumericString SIZE (1..15) as in ITU-T X.121.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

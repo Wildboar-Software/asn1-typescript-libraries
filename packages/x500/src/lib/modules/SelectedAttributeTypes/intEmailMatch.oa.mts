@@ -11,6 +11,8 @@ import {
  * @summary intEmailMatch
  * @description
  *
+ * Local-part caseIgnoreMatch; domain dnsNameMatch.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

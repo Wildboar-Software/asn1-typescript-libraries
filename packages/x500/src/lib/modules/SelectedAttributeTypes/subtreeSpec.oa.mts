@@ -10,6 +10,9 @@ import { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec
  * @summary subtreeSpec
  * @description
  *
+ * LDAP transfer of SubtreeSpecification as specified in IETF RFC 3672,
+ * using GSER (IETF RFC 3641, 3642 and 4792).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

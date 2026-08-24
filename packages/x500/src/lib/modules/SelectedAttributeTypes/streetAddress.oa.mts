@@ -16,6 +16,8 @@ import {
  * @summary streetAddress
  * @description
  *
+ * Street name, place, avenue and house number for local distribution / physical delivery. **Not** SUBTYPE OF `name`. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

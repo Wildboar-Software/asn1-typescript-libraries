@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyAgreement_keyEncryptionAlgorithm
  * @description
  *
+ * Nested SEQUENCE. `parameters` (plural) is ALGORITHM.&Type —
+ * `keyEncAlgorithmParametersMissing` vs `…NotAllowed`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -21,12 +24,20 @@ export class KeyAgreement_keyEncryptionAlgorithm {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * ALGORITHM.&id from `SupportedKeyEncryptionAlgorithm`.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * ALGORITHM.&Type. Missing vs not-allowed → PkiWaError 15/16.
+         *
          * @public
          * @readonly
          */

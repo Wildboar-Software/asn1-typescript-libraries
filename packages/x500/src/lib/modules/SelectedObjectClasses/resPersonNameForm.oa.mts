@@ -8,6 +8,9 @@ import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa
  * @summary resPersonNameForm
  * @description
  *
+ * Names `residentialPerson` by `commonName`; `streetAddress` may also
+ * appear in the RDN. Typical superior: locality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

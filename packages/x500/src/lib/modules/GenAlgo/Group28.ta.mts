@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Group28
  * @description
  *
+ * Always INTEGER (28). RFC 6932 brainpoolP256r1. Fixed PARMS of
+ * `dhModpGr28Hkdf256Algo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

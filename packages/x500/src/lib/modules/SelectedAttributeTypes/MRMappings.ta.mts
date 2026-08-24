@@ -10,6 +10,9 @@ import {
  * @summary MRMappings
  * @description
  *
+ * SEQUENCE OF MRMapping for applied/proposed relaxation. Sequence has
+ * no significance.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

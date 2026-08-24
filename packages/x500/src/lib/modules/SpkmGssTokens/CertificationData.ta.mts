@@ -19,6 +19,10 @@ import {
  * @summary CertificationData
  * @description
  *
+ * Certs and/or CRL sent with a context token so the peer need not fetch
+ * them. At least one of `certificationPath` and
+ * `certificateRevocationList` shall be present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +37,20 @@ export class CertificationData {
     constructor(
         /**
          * @summary `certificationPath`.
+         * @description
+         *
+         * Sender's keys/certs and CA path toward the recipient.
+         *
          * @public
          * @readonly
          */
         readonly certificationPath?: OPTIONAL<CertificationPath>,
         /**
          * @summary `certificateRevocationList`.
+         * @description
+         *
+         * Optional CRL. May be the only component present.
+         *
          * @public
          * @readonly
          */

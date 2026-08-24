@@ -10,6 +10,9 @@ import {
  * @summary ShadowConsumerInitiatedAsynchronousDISP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{shadowConsumerInitiatedAsynchronousAC}`: same ops as the
+ * sync consumer AC; ROS mode asynchronous.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

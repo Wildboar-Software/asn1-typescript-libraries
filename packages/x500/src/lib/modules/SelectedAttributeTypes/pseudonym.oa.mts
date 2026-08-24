@@ -14,6 +14,8 @@ import {
  * @summary pseudonym
  * @description
  *
+ * SUBTYPE OF `name`. Used when naming an object whose name is known to be a pseudonym.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,8 @@ import { type WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
  * @summary casubProt
  * @description
  *
+ * `WRAPPED-PROT` object binding `CasubProt` to `id-casubprot` (`id-wrprot` 1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

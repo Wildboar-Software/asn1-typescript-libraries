@@ -13,6 +13,11 @@ export enum _enum_for_FamilyGrouping {
  * @summary FamilyGrouping
  * @description
  *
+ * DEFAULT `entryOnly`. Compare/Search/RemoveEntry only; ignored for other
+ * ops. `compoundEntry` for RemoveEntry only if the object is the
+ * ancestor. `strands` invalid for RemoveEntry. `multiStrand` Search-only;
+ * ignored if the base is a child (substitute `entryOnly`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +35,10 @@ export type FamilyGrouping = _enum_for_FamilyGrouping | ENUMERATED;
 
 /**
  * @summary FamilyGrouping_entryOnly
+ * @description
+ *
+ * (1) Only the named family member. DEFAULT; 1988-compatible.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ export const FamilyGrouping_entryOnly: FamilyGrouping = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary entryOnly
+ * @description
+ *
+ * (1) Only the named family member. DEFAULT; 1988-compatible.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +57,11 @@ export const entryOnly: FamilyGrouping = FamilyGrouping_entryOnly; /* SHORT_NAME
 
 /**
  * @summary FamilyGrouping_compoundEntry
+ * @description
+ *
+ * (2) Whole compound entry as one unit. RemoveEntry: only valid when the
+ * object is the ancestor; removes all family members (subject to ACI).
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +69,11 @@ export const FamilyGrouping_compoundEntry: FamilyGrouping = 2; /* LONG_NAMED_ENU
 
 /**
  * @summary compoundEntry
+ * @description
+ *
+ * (2) Whole compound entry as one unit. RemoveEntry: only valid when the
+ * object is the ancestor; removes all family members (subject to ACI).
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +81,12 @@ export const compoundEntry: FamilyGrouping = FamilyGrouping_compoundEntry; /* SH
 
 /**
  * @summary FamilyGrouping_strands
+ * @description
+ *
+ * (3) All strands through the member. Invalid for RemoveEntry. Search:
+ * each strand filtered separately; match if any strand matches. If base
+ * is a child, only strands through that child.
+ *
  * @constant
  * @type {number}
  */
@@ -65,6 +94,12 @@ export const FamilyGrouping_strands: FamilyGrouping = 3; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary strands
+ * @description
+ *
+ * (3) All strands through the member. Invalid for RemoveEntry. Search:
+ * each strand filtered separately; match if any strand matches. If base
+ * is a child, only strands through that child.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +107,12 @@ export const strands: FamilyGrouping = FamilyGrouping_strands; /* SHORT_NAMED_EN
 
 /**
  * @summary FamilyGrouping_multiStrand
+ * @description
+ *
+ * (4) Search only; ignored otherwise. One strand from each family, all
+ * combinations. Not applicable if base is a child — ignore and
+ * substitute `entryOnly`.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +120,12 @@ export const FamilyGrouping_multiStrand: FamilyGrouping = 4; /* LONG_NAMED_ENUME
 
 /**
  * @summary multiStrand
+ * @description
+ *
+ * (4) Search only; ignored otherwise. One strand from each family, all
+ * combinations. Not applicable if base is a child — ignore and
+ * substitute `entryOnly`.
+ *
  * @constant
  * @type {number}
  */

@@ -16,6 +16,14 @@ import {
  * @summary updateShadow
  * @description
  *
+ * Supplier sends the actual refresh. Requires a completed
+ * `coordinateShadowUpdate` or `requestShadowUpdate` for the same
+ * agreement. Updates are applied independently of earlier ones: adding or
+ * deleting the same SDSE twice is not an error, and the second must not
+ * be ignored (intervening changes may make it significant).
+ * `unsupportedStrategy`, `missedPrevious`, `fullUpdateRequired`,
+ * `unsuitableTiming`, and `updateAlreadyReceived` are never returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

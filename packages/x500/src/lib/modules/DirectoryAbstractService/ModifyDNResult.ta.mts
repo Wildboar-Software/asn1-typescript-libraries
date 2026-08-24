@@ -15,6 +15,9 @@ import {
  * @summary ModifyDNResult
  * @description
  *
+ * `null_` when unsigned and nothing to return. `information` is the
+ * optionally-signed `ModifyDNResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

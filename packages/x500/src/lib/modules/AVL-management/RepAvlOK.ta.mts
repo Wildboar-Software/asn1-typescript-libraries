@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RepAvlOK
  * @description
  *
+ * Replace succeeded. Carried as `ReplaceAvlRsp.result.success` in `DataTransferServer`. `ok` is `NULL`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +26,10 @@ export class RepAvlOK {
     constructor(
         /**
          * @summary `ok`.
+         * @description
+         *
+         * Success marker (`NULL`).
+         *
          * @public
          * @readonly
          */

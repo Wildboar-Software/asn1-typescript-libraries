@@ -10,6 +10,8 @@ import { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nam
  * @summary nameFormDescription
  * @description
  *
+ * LDAP schema listing: ABNF encoding of a name form (IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

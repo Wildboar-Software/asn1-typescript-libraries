@@ -10,6 +10,11 @@ import {
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy
  * @description
  *
+ * `standard` = `noChanges` / `incremental` / `total`. `other` is outside
+ * this Specification. `noChanges` is only for "nothing changed since last
+ * scheduled update" and shall be followed by `updateShadow` with
+ * `noRefresh`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -4,6 +4,8 @@ import { type ALGORITHM } from "@wildboar/pki-stub";
  * @summary SupportedAuthenEncryptAlgorithms
  * @description
  *
+ * Extensible empty object set of supported AEAD algorithms.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

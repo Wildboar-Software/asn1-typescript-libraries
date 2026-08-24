@@ -7,6 +7,8 @@ import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va
  * @summary dSANameForm
  * @description
  *
+ * Names `dSA` by `commonName`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

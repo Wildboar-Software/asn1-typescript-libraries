@@ -10,6 +10,9 @@ import {
  * @summary DSP_IDM_PDUs
  * @description
  *
+ * `IDM-PDU{dsp-ip}`. Either side may Bind, request, or Unbind.
+ * Responses unordered; match by `invokeID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

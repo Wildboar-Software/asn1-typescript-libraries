@@ -11,6 +11,12 @@ import { id_not_dSAProblem } from "../SelectedAttributeTypes/id-not-dSAProblem.v
  * @summary dSAProblem
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Used with a serviceError or PartialOutcomeQualifier.
+ * Value is a problem OID: `id-pr-targetDsaUnavailable`,
+ * `id-pr-dataSourceUnavailable`, `id-pr-administratorImposedLimit`,
+ * `id-pr-permanentRestriction`, `id-pr-temporaryRestriction`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

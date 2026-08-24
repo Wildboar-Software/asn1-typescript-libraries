@@ -11,6 +11,10 @@ import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.
  * @summary messageDigest
  * @description
  *
+ * RFC 5652 signed attribute. SINGLE VALUE OCTET STRING; equality
+ * `octetStringMatch`; PKCS #9 4 `{iso member-body us rsadsi pkcs
+ * pkcs9 4}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

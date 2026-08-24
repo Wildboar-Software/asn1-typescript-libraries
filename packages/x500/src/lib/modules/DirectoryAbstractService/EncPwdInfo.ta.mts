@@ -19,6 +19,11 @@ import {
  * @summary EncPwdInfo
  * @description
  *
+ * With `securityError` `inappropriateAlgorithms` (and related password
+ * problems). `algorithms` = algorithms the DSA supports. Bind/Compare:
+ * 1–2 algs (current + recently expired). Change-password: current + all
+ * history algs. `pwdQualityRule` OPTIONAL SEQUENCE OF ATAV.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +39,21 @@ export class EncPwdInfo {
     constructor(
         /**
          * @summary `algorithms`.
+         * @description
+         *
+         * Algorithms the DSA supports. Bind/Compare: 1–2 (current + recently
+         * expired). Change-password: current + all history algs.
+         *
          * @public
          * @readonly
          */
         readonly algorithms?: OPTIONAL<AlgorithmIdentifier[]>,
         /**
          * @summary `pwdQualityRule`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF ATAV. Password construction rules.
+         *
          * @public
          * @readonly
          */

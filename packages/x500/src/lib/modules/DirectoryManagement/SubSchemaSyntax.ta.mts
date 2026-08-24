@@ -10,6 +10,10 @@ import {
  * @summary SubSchemaSyntax
  * @description
  *
+ * SEQUENCE OF named subschemas (DUA-facing publication). Order is not
+ * specified by X.530. Empty SEQUENCE means no subschemas. Inner SEQUENCE OF
+ * schema lists are OPTIONAL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

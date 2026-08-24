@@ -16,6 +16,14 @@ import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mj
  * @summary requestShadowUpdate
  * @description
  *
+ * Consumer-initiated: asks the supplier to send an update for one
+ * agreement. Request+result must precede `updateShadow`; only one
+ * `updateShadow` per request; only one outstanding request per agreement.
+ * Transport failure before a positive `updateShadow` result means the pair
+ * failed — a later request is accepted (prior outstanding discarded).
+ * `invalidInformationReceived`, `missedPrevious`, and
+ * `updateAlreadyReceived` are never returned for this operation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Signed
  * @description
  *
+ * Used when algs were already signalled. `signature` = native.
+ * `altSignature` present iff an alternative sig alg was signalled. After
+ * handshake selection, `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +36,21 @@ export class Signed<ToBeSigned> {
         readonly toBeSigned: ToBeSigned,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Native signature (previously signalled alg).
+         *
          * @public
          * @readonly
          */
         readonly signature: BIT_STRING,
         /**
          * @summary `altSignature`.
+         * @description
+         *
+         * Present iff an alternative sig alg was signalled. Shall be absent
+         * on handshake accept/reject/abort after selection.
+         *
          * @public
          * @readonly
          */

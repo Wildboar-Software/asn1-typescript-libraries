@@ -7,6 +7,9 @@ import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.
  * @summary orgRoleNameForm
  * @description
  *
+ * Names `organizationalRole` by `commonName`. Typical superiors:
+ * organization or organizationalUnit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

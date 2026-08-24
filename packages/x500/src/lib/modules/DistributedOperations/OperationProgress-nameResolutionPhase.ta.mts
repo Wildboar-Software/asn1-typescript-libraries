@@ -12,6 +12,10 @@ export enum _enum_for_OperationProgress_nameResolutionPhase {
  * @summary OperationProgress_nameResolutionPhase
  * @description
  *
+ * ENUMERATED `notStarted`(1) `proceeding`(2) `completed`(3). Numbering
+ * starts at 1, not 0. `nextRDNToBeResolved` present only when
+ * `proceeding`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +30,11 @@ export type OperationProgress_nameResolutionPhase =
 
 /**
  * @summary OperationProgress_nameResolutionPhase_notStarted
+ * @description
+ *
+ * No DSA holding the initial RDN(s) has been reached. Default.
+ * Numbering starts at 1.
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +42,11 @@ export const OperationProgress_nameResolutionPhase_notStarted: OperationProgress
 
 /**
  * @summary notStarted
+ * @description
+ *
+ * No DSA holding the initial RDN(s) has been reached. Default.
+ * Numbering starts at 1.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +54,11 @@ export const notStarted: OperationProgress_nameResolutionPhase = OperationProgre
 
 /**
  * @summary OperationProgress_nameResolutionPhase_proceeding
+ * @description
+ *
+ * Initial part recognized; DSA holding the target not yet reached.
+ * `nextRDNToBeResolved` shall be present.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +66,11 @@ export const OperationProgress_nameResolutionPhase_proceeding: OperationProgress
 
 /**
  * @summary proceeding
+ * @description
+ *
+ * Initial part recognized; DSA holding the target not yet reached.
+ * `nextRDNToBeResolved` shall be present.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +78,11 @@ export const proceeding: OperationProgress_nameResolutionPhase = OperationProgre
 
 /**
  * @summary OperationProgress_nameResolutionPhase_completed
+ * @description
+ *
+ * DSA holding the target reached; operation proper underway.
+ * `nextRDNToBeResolved` shall be absent.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +90,11 @@ export const OperationProgress_nameResolutionPhase_completed: OperationProgress_
 
 /**
  * @summary completed
+ * @description
+ *
+ * DSA holding the target reached; operation proper underway.
+ * `nextRDNToBeResolved` shall be absent.
+ *
  * @constant
  * @type {number}
  */

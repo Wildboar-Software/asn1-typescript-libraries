@@ -10,6 +10,8 @@ import {
  * @summary jidString
  * @description
  *
+ * LDAP transfer of Jid (XMPP / Jabber identifier).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

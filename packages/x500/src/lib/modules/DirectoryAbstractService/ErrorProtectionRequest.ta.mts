@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ErrorProtectionRequest
  * @description
  *
+ * INTEGER `none`(0) `signed`(1). Request only. Actual protection ≤
+ * requested. DEFAULT `none`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +19,10 @@ export type ErrorProtectionRequest = INTEGER;
 
 /**
  * @summary ErrorProtectionRequest_none
+ * @description
+ *
+ * (0) DEFAULT. Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +30,10 @@ export const ErrorProtectionRequest_none: ErrorProtectionRequest = 0; /* LONG_NA
 
 /**
  * @summary ErrorProtectionRequest_none
+ * @description
+ *
+ * (0) DEFAULT. Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +41,10 @@ export const none: ErrorProtectionRequest = ErrorProtectionRequest_none; /* SHOR
 
 /**
  * @summary ErrorProtectionRequest_signed
+ * @description
+ *
+ * (1) Requested signed errors. Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +52,10 @@ export const ErrorProtectionRequest_signed: ErrorProtectionRequest = 1; /* LONG_
 
 /**
  * @summary ErrorProtectionRequest_signed
+ * @description
+ *
+ * (1) Requested signed errors. Actual protection ≤ requested.
+ *
  * @constant
  * @type {number}
  */

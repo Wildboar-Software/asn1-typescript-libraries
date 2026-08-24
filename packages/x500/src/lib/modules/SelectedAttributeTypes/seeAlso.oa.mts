@@ -10,6 +10,8 @@ import { id_at_seeAlso } from "../SelectedAttributeTypes/id-at-seeAlso.va.mjs";
  * @summary seeAlso
  * @description
  *
+ * SUBTYPE OF `distinguishedName`. Other Directory objects that may be other aspects of the same real-world object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

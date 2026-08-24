@@ -10,6 +10,8 @@ import {
  * @summary uiiForm
  * @description
  *
+ * LDAP transfer of UiiFormat using GSER (IETF RFC 3641, 3642 and 4792).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

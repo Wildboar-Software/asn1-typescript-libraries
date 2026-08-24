@@ -15,6 +15,10 @@ import {
  * @summary CoordinateShadowUpdateResult
  * @description
  *
+ * `null` if the result is not signed (no information is conveyed).
+ * `information` if the consumer signs the result (`SecurityParameters`
+ * of `CommonResultsSeq` shall then be present).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

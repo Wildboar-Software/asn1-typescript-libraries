@@ -15,6 +15,9 @@ import {
  * @summary SpkmCredentials
  * @description
  *
+ * `req` [0] vs `rep` [1]. SPKM extension shall be critical unless the
+ * association is v2+.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

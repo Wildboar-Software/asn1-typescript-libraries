@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ApplicationContext
  * @description
  *
+ * OSI application-context OID in use on an association (DAP/DSP/DOP/DISP
+ * ACs), not an LDAP OID. MATCHES FOR EQUALITY.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

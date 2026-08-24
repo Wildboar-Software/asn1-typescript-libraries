@@ -10,6 +10,10 @@ import { id_oc_userSecurityInformation } from "../SelectedObjectClasses/id-oc-us
  * @summary userSecurityInformation
  * @description
  *
+ * Auxiliary class for X.509-related security information
+ * (`supportedAlgorithms`). Auxiliary: added onto an existing structural
+ * entry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

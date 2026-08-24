@@ -10,6 +10,10 @@ import {
  * @summary substringAssertion
  * @description
  *
+ * LDAP transfer of SubstringAssertion: sequence of zero or more
+ * character substrings for extensible substring matching
+ * (IETF RFC 4517). At most one initial (first) and one final (last).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

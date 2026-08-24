@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IntEmail
  * @description
  *
+ * Internationalized email. `intEmailMatch`: local-part `caseIgnoreMatch`;
+ * domain as `dnsNameMatch`. Domain shall not use `*` as a label. If both
+ * parts are ASCII, `mail` is preferred.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,10 @@ import {
  * @summary SDSEType
  * @description
  *
+ * Alias of `DSEType`. On receipt, bits `supr`, `xr`, `shadow`, `immSupr`,
+ * and `rhob` are ignored. The consumer's DSE type is this value after
+ * setting `shadow` and clearing bits not permitted in `SDSEType`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

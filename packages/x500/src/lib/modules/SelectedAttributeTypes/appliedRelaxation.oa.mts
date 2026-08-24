@@ -11,6 +11,11 @@ import { id_not_appliedRelaxation } from "../SelectedAttributeTypes/id-not-appli
  * @summary appliedRelaxation
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Lists filter attribute types that were relaxed or
+ * tightened other
+ * than those made by the basic element of a relaxation policy.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary LinkedArgument
  * @description
  *
+ * Signed or unsigned SEQUENCE wrapper; semantics live on
+ * `LinkedArgumentData`. `linkId` required. Result is `LinkedResult` NULL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

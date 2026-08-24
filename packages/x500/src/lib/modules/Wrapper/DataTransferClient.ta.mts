@@ -15,6 +15,10 @@ import {
  * @summary DataTransferClient
  * @description
  *
+ * Client data-transfer WrPDU. CHOICE `aead` vs `non_aead` shall match
+ * handshake `encr-mode`. Only the client initiates rekey (interval
+ * 15 min–24 h).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

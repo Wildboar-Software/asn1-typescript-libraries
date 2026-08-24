@@ -8,6 +8,10 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary shadowConsumerInitiatedAsynchronousAC
  * @description
  *
+ * Same operations as `shadowConsumerInitiatedAC`; ROS mode is
+ * asynchronous. Optional extra if the DSA already supports the sync
+ * consumer AC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

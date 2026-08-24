@@ -10,6 +10,8 @@ import {
  * @summary presentationAddressMatch
  * @description
  *
+ * TRUE iff selectors equal and presented nAddresses is a subset of stored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

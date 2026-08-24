@@ -8,6 +8,8 @@ import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
  * @summary integerOrderingMatch
  * @description
  *
+ * INTEGER or ENUMERATED. TRUE iff stored < presented (not ≤).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

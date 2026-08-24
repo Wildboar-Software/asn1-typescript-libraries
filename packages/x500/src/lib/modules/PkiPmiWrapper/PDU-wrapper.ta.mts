@@ -15,6 +15,11 @@ import {
  * @summary PDU_wrapper
  * @description
  *
+ * X.509 **SIGNED**{TBSPDU-wrapper} (not X.510 Signed). X.509 2016
+ * `pkiPmiWrapper(42)` version 8 — older PKI/PMI PDU wrapper; not
+ * specified in X.510 (08/2020); superseded in function by the X.510
+ * Wrapper.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,9 @@ import { id_idm } from "../UsefulDefinitions/id-idm.va.mjs";
  * @summary id_idm_dop
  * @description
  *
+ * {id-idm 3}. `protocolID` for DOP-over-IDM (`dop-ip`). IDM mapping
+ * allows either side to request (OSI DOP: initiator only).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,12 @@ import {
  * @summary SPKM_ERROR
  * @description
  *
+ * Context-establishment error only. If the peer is still establishing:
+ * send this, return CONTINUE_NEEDED. If the peer has finished: send
+ * `SPKM-DEL` instead and abort. Receiver of ERROR (valid or not)
+ * regenerates REQ or REP-TI. Also used to negotiate RSA modulus size:
+ * signature length equals modulus size.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +45,31 @@ export class SPKM_ERROR {
     constructor(
         /**
          * @summary `errorToken`.
+         * @description
+         *
+         * The "token" over which `integrity` is computed.
+         *
          * @public
          * @readonly
          */
         readonly errorToken: ERROR_TOKEN,
         /**
          * @summary `algId`.
+         * @description
+         *
+         * Algorithm for `integrity`. Signature size advertises RSA modulus
+         * bit length during error-driven negotiation.
+         *
          * @public
          * @readonly
          */
         readonly algId: AlgorithmIdentifier,
         /**
          * @summary `integrity`.
+         * @description
+         *
+         * Signature or MAC of DER(`ERROR-TOKEN`) per `algId`.
+         *
          * @public
          * @readonly
          */

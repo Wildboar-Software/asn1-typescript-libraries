@@ -21,6 +21,10 @@ import { TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.
  * @summary Subtree
  * @description
  *
+ * One child of a `TotalRefresh` node: RDN plus COMPONENTS OF
+ * `TotalRefresh`. Recurses. SET OF siblings is unordered; SIZE (1..MAX)
+ * so empty is illegal if the component is present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +39,33 @@ export class Subtree implements TotalRefresh {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * Primary RDN of this SDSE relative to its parent. Include context
+         * lists and all alternative distinguished values unless the
+         * agreement's context selection reduced them.
+         *
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `sDSE`.
+         * @description
+         *
+         * Content of this SDSE. Absent is legal (glue / subordinates only).
+         *
          * @public
          * @readonly
          */
         readonly sDSE?: OPTIONAL<SDSEContent> /* REPLICATED_COMPONENT */,
         /**
          * @summary `subtree`.
+         * @description
+         *
+         * Further subordinates. Omit if none; do not send empty
+         * (SIZE 1..MAX). Unordered.
+         *
          * @public
          * @readonly
          */

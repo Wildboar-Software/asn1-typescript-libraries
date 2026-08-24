@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSAScopeOfReferralValue
  * @description
  *
+ * Single INTEGER limitation on referrals this DSA may return: `dmd`(0),
+ * `country`(1), or `global`(2). Not a BIT STRING. `dmd`(0) is the most
+ * restrictive named value, not "unset". INTEGER, not ENUMERATED. MATCHES FOR
+ * EQUALITY only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +21,11 @@ export type DSAScopeOfReferralValue = INTEGER;
 
 /**
  * @summary DSAScopeOfReferralValue_dmd
+ * @description
+ *
+ * Most restrictive: only within this Directory Management Domain.
+ * Named `0`, not unset.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +33,11 @@ export const DSAScopeOfReferralValue_dmd: DSAScopeOfReferralValue = 0; /* LONG_N
 
 /**
  * @summary DSAScopeOfReferralValue_dmd
+ * @description
+ *
+ * Most restrictive: only within this Directory Management Domain.
+ * Named `0`, not unset.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +45,10 @@ export const dmd: DSAScopeOfReferralValue = DSAScopeOfReferralValue_dmd; /* SHOR
 
 /**
  * @summary DSAScopeOfReferralValue_country
+ * @description
+ *
+ * Limit to the country.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +56,10 @@ export const DSAScopeOfReferralValue_country: DSAScopeOfReferralValue = 1; /* LO
 
 /**
  * @summary DSAScopeOfReferralValue_country
+ * @description
+ *
+ * Limit to the country.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +67,10 @@ export const country: DSAScopeOfReferralValue = DSAScopeOfReferralValue_country;
 
 /**
  * @summary DSAScopeOfReferralValue_global
+ * @description
+ *
+ * No DMD/country limitation.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +78,10 @@ export const DSAScopeOfReferralValue_global: DSAScopeOfReferralValue = 2; /* LON
 
 /**
  * @summary DSAScopeOfReferralValue_global
+ * @description
+ *
+ * No DMD/country limitation.
+ *
  * @constant
  * @type {number}
  */

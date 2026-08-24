@@ -10,6 +10,9 @@ import {
  * @summary facsimileNumberMatch
  * @description
  *
+ * parameters ignored; telephoneNumber only. Same as telephoneNumberMatch.
+ * Assertion is TelephoneNumber, not the full SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

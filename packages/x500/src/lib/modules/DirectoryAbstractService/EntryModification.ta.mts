@@ -20,6 +20,13 @@ import {
  * @summary EntryModification
  * @description
  *
+ * SEQUENCE applied in order; atomic (any failure ⇒ `attributeError`,
+ * entry unchanged). Cannot in-place edit contexts. `alterValues`:
+ * INTEGER/REAL only, needs v2. `resetValue`: removes values with a
+ * fallback FALSE context, not valueless-of-context; needs v2.
+ * `replaceValues` empty removes the type, ignore if absent; critical
+ * ext 35. `notAllowedOnRDN` for remove of RDN types/values.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import {
  * @summary Knowledge
  * @description
  *
+ * Which subordinate (and optionally non-specific subordinate) knowledge
+ * references to include. Extended knowledge still must be subordinate to
+ * the area prefix; glue SDSEs fill the gap between the replicated area's
+ * lower bound and those references.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +38,23 @@ export class Knowledge {
     constructor(
         /**
          * @summary `knowledgeType`.
+         * @description
+         *
+         * `master` = refs to master naming contexts only; `shadow` = refs to
+         * commonly usable replicated areas only; `both` = both.
+         *
          * @public
          * @readonly
          */
         readonly knowledgeType: Knowledge_knowledgeType,
         /**
          * @summary `extendedKnowledge`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE includes subordinate / NSSR refs that are not
+         * immediately subordinate to entries in the replicated area (glue
+         * SDSEs fill the gap). Incompatible with `subordinates` TRUE.
+         *
          * @public
          * @readonly
          */

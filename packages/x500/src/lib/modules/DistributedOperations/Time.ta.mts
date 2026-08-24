@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time
  * @description
  *
+ * Absolute time (deadline), unlike DAP ServiceControls.timeLimit
+ * (elapsed seconds). utcTime 00–49 ⇒ 20xx, 50–99 ⇒ 19xx. Do not use
+ * utcTime after 2049.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,11 @@ import { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch
  * @summary dnsNameMatch
  * @description
  *
+ * Label-by-label; different label counts ⇒ FALSE. Mixed LDH vs
+ * A-label/U-label ⇒ FALSE. Wildcard `*` leftmost only (else FALSE).
+ * `*.example.com` matches `a.example.com`, not `example.com` or
+ * `a.b.example.com`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

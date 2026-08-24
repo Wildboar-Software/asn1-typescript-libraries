@@ -11,6 +11,10 @@ export enum _enum_for_InitializationAbort_diag {
  * @summary InitializationAbort_diag
  * @description
  *
+ * Client abort of InitializationAcc: `unsupportedVersion` if Acc’s single
+ * version was not among those offered; `onlySingleVersionAllowed` if Acc
+ * set more than one version bit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,6 +29,9 @@ export type InitializationAbort_diag =
 
 /**
  * @summary InitializationAbort_diag_unsupportedVersion
+ * @description
+ *
+ * Acc specified a single version not included in those the client proposed.
  * @constant
  * @type {number}
  */
@@ -32,6 +39,9 @@ export const InitializationAbort_diag_unsupportedVersion: InitializationAbort_di
 
 /**
  * @summary unsupportedVersion
+ * @description
+ *
+ * Acc specified a single version not included in those the client proposed.
  * @constant
  * @type {number}
  */
@@ -39,6 +49,9 @@ export const unsupportedVersion: InitializationAbort_diag = InitializationAbort_
 
 /**
  * @summary InitializationAbort_diag_onlySingleVersionAllowed
+ * @description
+ *
+ * Acc returned more than one version bit; server shall specify exactly one.
  * @constant
  * @type {number}
  */
@@ -46,6 +59,9 @@ export const InitializationAbort_diag_onlySingleVersionAllowed: InitializationAb
 
 /**
  * @summary onlySingleVersionAllowed
+ * @description
+ *
+ * Acc returned more than one version bit; server shall specify exactly one.
  * @constant
  * @type {number}
  */

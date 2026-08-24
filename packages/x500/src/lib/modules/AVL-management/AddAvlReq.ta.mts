@@ -19,6 +19,8 @@ import {
  * @summary AddAvlReq
  * @description
  *
+ * Authorizer adds a `CertAVL`. Embed in `DataTransferClient`. Invalid AVL signature → **alert** + `AbortAVL` `noReason`. Duplicate serial (including two AVLs both **without** serial) → `duplicateAVL`. Local max AVLs may be **1** (`maxAVLsExceeded`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +35,20 @@ export class AddAvlReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with `AddAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `certlist`.
+         * @description
+         *
+         * The `CertAVL` to add. Entity checks signature, mandatory components, version, serial uniqueness, `constrained` vs capabilities, entry `idType`/`entityGroup`, and critical extensions (13.7).
+         *
          * @public
          * @readonly
          */

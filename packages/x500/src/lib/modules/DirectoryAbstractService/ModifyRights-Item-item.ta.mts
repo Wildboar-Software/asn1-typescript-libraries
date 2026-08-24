@@ -19,6 +19,10 @@ import {
  * @summary ModifyRights_Item_item
  * @description
  *
+ * CHOICE of `entry`, `attribute`, or `value`. SET OF items: one `entry`;
+ * one `attribute` per user attribute the user may add/remove; one `value`
+ * per value whose rights differ from the attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,13 @@ import {
  * @summary Request
  * @description
  *
+ * `invokeID` is a positive INTEGER, unique among all previous requests
+ * on this TCP connection (never reuse; 0 is not positive). Semantically
+ * LDAP `messageID`. Not the OSI `InvokeId` CHOICE. `opcode`/`argument`
+ * constrained by the protocol's OPERATIONS. Responses are unordered;
+ * match primarily by `invokeID`. DAP: initiator only; DSP/DISP/DOP:
+ * both sides after Bind/BindResult.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,18 +37,34 @@ export class Request {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Positive INTEGER, unique among all previous requests on this TCP
+         * connection (never reuse; not zero). LDAP `messageID` equivalent.
+         * Not the OSI `InvokeId` CHOICE.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: INTEGER,
         /**
          * @summary `opcode`.
+         * @description
+         *
+         * OPERATION.&operationCode of the protocol. Local integers are
+         * protocol-scoped (DAP `read` and DISP `requestShadowUpdate` are
+         * both 1).
+         *
          * @public
          * @readonly
          */
         readonly opcode: Code,
         /**
          * @summary `argument`.
+         * @description
+         *
+         * OPERATION.&ArgumentType for `opcode` (open type).
+         *
          * @public
          * @readonly
          */

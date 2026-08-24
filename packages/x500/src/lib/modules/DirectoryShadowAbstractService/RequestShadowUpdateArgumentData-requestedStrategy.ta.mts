@@ -10,6 +10,10 @@ import {
  * @summary RequestShadowUpdateArgumentData_requestedStrategy
  * @description
  *
+ * `standard` is `incremental` (1) or `total` (2) — there is no
+ * `noChanges` (0). `other` is outside this Specification. Incremental
+ * may still be rejected with `fullUpdateRequired`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

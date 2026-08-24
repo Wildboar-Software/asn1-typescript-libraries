@@ -1,3 +1,12 @@
+/**
+ * @summary PresentationAddress
+ * @description
+ *
+ * Optional `pSelector`/`sSelector`/`tSelector` plus `nAddresses` SET
+ * SIZE (1..MAX) (at least one NSAP; unordered). presentationAddressMatch:
+ * selectors equal and presented `nAddresses` is a subset of stored.
+ * Re-exported from `@wildboar/presentation-address`.
+ */
 export {
     PresentationAddress,
     _decode_PresentationAddress,

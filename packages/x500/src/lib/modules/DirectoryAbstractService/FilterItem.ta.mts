@@ -30,6 +30,18 @@ import {
  * @summary FilterItem
  * @description
  *
+ * Also matches subtypes (unless `noSubtypeMatch`), collective attrs, and
+ * friends (unless `dontMatchFriends`) if a compatible MR applies.
+ * `substrings`: at most one `initial` (must be first), at most one
+ * `final` (must be last), `any` in between; `control` interprets
+ * following items. `greaterOrEqual` TRUE iff ordering MR is FALSE.
+ * `lessOrEqual` TRUE iff equality OR ordering TRUE. `approximateMatch`:
+ * unsupported ⇒ treat as equality; equality implies approximate.
+ * `extensibleMatch`: several MRs ⇒ locally-defined combo; `type`
+ * omitted ⇒ all compatible types; `dnAttributes` DEFAULT FALSE.
+ * Presence of an absent type is FALSE; asserting a value of an absent
+ * type is UNDEFINED.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

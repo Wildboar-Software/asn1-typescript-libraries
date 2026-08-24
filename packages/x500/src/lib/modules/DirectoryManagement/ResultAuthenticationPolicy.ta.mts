@@ -10,6 +10,9 @@ import {
  * @summary ResultAuthenticationPolicy
  * @description
  *
+ * Same encoding as `RequestAuthenticationPolicy` (alias), but for *result*
+ * authentication supported by the DSA. Do not confuse with request policy.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,9 @@ import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
  * @summary locNameForm
  * @description
  *
+ * Names `locality` by `localityName`. Alternative: `sOPNameForm`
+ * (`stateOrProvinceName`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

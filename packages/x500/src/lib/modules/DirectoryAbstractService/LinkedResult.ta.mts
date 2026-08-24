@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LinkedResult
  * @description
  *
+ * NULL. Returned for each `linkedLDAP` request so intermediate DSAs can
+ * complete handling. Final LDAP result is not carried here.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

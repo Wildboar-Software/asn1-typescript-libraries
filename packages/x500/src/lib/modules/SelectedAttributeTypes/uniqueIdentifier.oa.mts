@@ -15,6 +15,8 @@ import {
  * @summary uniqueIdentifier
  * @description
  *
+ * BIT STRING to distinguish reused DNs (`bitStringMatch`). LDAP-NAME `x500UniqueIdentifier` — **not** `uid`. No NamedBitList, so trailing zero bits are significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

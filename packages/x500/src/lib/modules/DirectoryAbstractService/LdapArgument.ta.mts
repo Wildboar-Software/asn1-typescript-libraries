@@ -15,6 +15,9 @@ import {
  * @summary LdapArgument
  * @description
  *
+ * Signed or unsigned SEQUENCE wrapper; semantics live on
+ * `LdapArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

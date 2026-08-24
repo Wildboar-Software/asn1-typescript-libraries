@@ -9,6 +9,9 @@ import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.
  * @summary nonSpecificHierarchicalOperationalBinding_roleB
  * @description
  *
+ * Subordinate. Establishment initiator TRUE. EstablishParam =
+ * ModifyParam = `NHOBSubordinateToSuperior`. Terminate initiator TRUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

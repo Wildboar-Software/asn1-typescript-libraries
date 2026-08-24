@@ -42,6 +42,11 @@ import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq
  * @summary ShadowErrorData
  * @description
  *
+ * DISP error body. `lastUpdate` is for `missedPrevious` (so the supplier
+ * can choose total vs incremental). `updateWindow` is only for
+ * `unsuitableTiming` (preferred next attempt). If the request was signed,
+ * the responder may sign this (`securityParameters` then required).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,18 +64,34 @@ export class ShadowErrorData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * INTEGER 1..11. Not all values are legal on every DISP operation
+         * (see `ShadowProblem`). There is no value 0.
+         *
          * @public
          * @readonly
          */
         readonly problem: ShadowProblem,
         /**
          * @summary `lastUpdate`.
+         * @description
+         *
+         * Optional on `missedPrevious`: consumer's idea of last-update time
+         * so the supplier can pick total vs incremental. Not used for other
+         * problems.
+         *
          * @public
          * @readonly
          */
         readonly lastUpdate?: OPTIONAL<Time>,
         /**
          * @summary `updateWindow`.
+         * @description
+         *
+         * Optional on `unsuitableTiming` only: responder's preferred window
+         * for the next refresh attempt.
+         *
          * @public
          * @readonly
          */
@@ -83,6 +104,10 @@ export class ShadowErrorData implements CommonResultsSeq {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Shall be included if this error is signed.
+         *
          * @public
          * @readonly
          */

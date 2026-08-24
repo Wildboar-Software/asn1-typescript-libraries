@@ -19,6 +19,10 @@ import {
  * @summary SimpleCredentials_password
  * @description
  *
+ * Unprotected OCTET STRING, protected HASH{OCTET STRING}
+ * (Protected1/Protected2 per X.509 18.1), or `userPwd` [0] (matching rule
+ * X.509 18.1.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

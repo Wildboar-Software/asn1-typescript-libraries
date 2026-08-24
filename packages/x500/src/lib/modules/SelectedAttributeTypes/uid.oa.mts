@@ -16,6 +16,8 @@ import {
  * @summary uid
  * @description
  *
+ * LDAP user identifier **string** (`caseIgnoreMatch` / `caseIgnoreSubstringsMatch`). **Not** UniqueIdentifier / `x500UniqueIdentifier` (BIT STRING).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

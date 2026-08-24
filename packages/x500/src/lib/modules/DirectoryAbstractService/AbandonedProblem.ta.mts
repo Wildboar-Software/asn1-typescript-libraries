@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AbandonedProblem
  * @description
  *
+ * Only `pagingAbandoned` (0). Shall not be present for Abandon; shall be
+ * present for `abandonQuery`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,6 +26,9 @@ export enum _enum_for_AbandonedProblem {
  * @summary AbandonedProblem
  * @description
  *
+ * Only `pagingAbandoned` (0). Shall not be present for Abandon; shall be
+ * present for `abandonQuery`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +44,9 @@ export type AbandonedProblem = _enum_for_AbandonedProblem;
  * @summary AbandonedProblem
  * @description
  *
+ * Only `pagingAbandoned` (0). Shall not be present for Abandon; shall be
+ * present for `abandonQuery`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +60,10 @@ export const AbandonedProblem = _enum_for_AbandonedProblem;
 
 /**
  * @summary AbandonedProblem_pagingAbandoned
+ * @description
+ *
+ * Only for `abandonQuery` (paged results), not Abandon.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +72,10 @@ export const AbandonedProblem_pagingAbandoned: AbandonedProblem =
 
 /**
  * @summary pagingAbandoned
+ * @description
+ *
+ * Only for `abandonQuery` (paged results), not Abandon.
+ *
  * @constant
  * @type {number}
  */

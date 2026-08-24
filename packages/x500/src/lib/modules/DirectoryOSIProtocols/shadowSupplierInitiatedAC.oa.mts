@@ -8,6 +8,11 @@ import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.
  * @summary shadowSupplierInitiatedAC
  * @description
  *
+ * DISP, supplier-initiated, synchronous. Ops: `updateShadow` and
+ * `coordinateShadowUpdate` — not `requestShadowUpdate`. Bind version
+ * constrains all subsequent PDUs. Conformance: this or
+ * `shadowConsumerInitiatedAC` is the minimum DISP AC.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

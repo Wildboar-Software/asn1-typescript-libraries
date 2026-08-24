@@ -52,6 +52,14 @@ import {
  * @summary TbsHandshakeAcc
  * @description
  *
+ * To-be-signed server accept. `version` is **exactly one** bit (highest
+ * of those offered; DEFAULT `{v1}`). `sigSel` / `keyEstSel`: take `alt*`
+ * **iff** the client offered it **and** the server supports it; else
+ * native. `encr_mode` uses the **same CHOICE alternative** as the
+ * request, with a **single** algorithm (first supported), not a
+ * sequence. Server `keyEst` carries the server’s DH Payload.
+ * `altSignature` on the enclosing `Signed` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -82,54 +90,63 @@ export class TbsHandshakeAcc {
     constructor(
         /**
          * @summary `version`.
+         * @description Exactly one bit, chosen among those in the corresponding `HandshakeReq` (highest should be used). DEFAULT `{v1}`.
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `sigSel`.
+         * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. Selected alg signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigSel: TbsHandshakeAcc_sigSel,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `assoID`.
+         * @description Same value as in the corresponding `HandshakeReq`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `keyEstSel`.
+         * @description `altKeyEst` iff the client offered it and the server supports it; else `keyEst`. Carries the server’s DH Payload.
          * @public
          * @readonly
          */
         readonly keyEstSel: TbsHandshakeAcc_keyEstSel,
         /**
          * @summary `encr_mode`.
+         * @description Same CHOICE alternative as the request; single selected algorithm, not a sequence.
          * @public
          * @readonly
          */
         readonly encr_mode: TbsHandshakeAcc_encr_mode,
         /**
          * @summary `attCert`.
+         * @description Optional DER-encapsulated attribute certificate.
          * @public
          * @readonly
          */
         readonly attCert?: OPTIONAL<DER_AttributeCertificate>,
         /**
          * @summary `applData`.
+         * @description Init-response PrPDU when the protected protocol requires one.
          * @public
          * @readonly
          */

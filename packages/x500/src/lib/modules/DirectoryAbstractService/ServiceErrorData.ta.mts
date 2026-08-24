@@ -37,6 +37,9 @@ import {
  * @summary ServiceErrorData
  * @description
  *
+ * `timeLimitExceeded` / `administrativeLimitExceeded` return NO partial
+ * results (unlike List/Search POQ).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +55,11 @@ export class ServiceErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * `timeLimitExceeded` / `administrativeLimitExceeded` ⇒ NO partial
+         * results.
+         *
          * @public
          * @readonly
          */
@@ -64,24 +72,41 @@ export class ServiceErrorData implements CommonResults {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the error is signed; absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the error is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the error.
+         *
          * @public
          * @readonly
          */

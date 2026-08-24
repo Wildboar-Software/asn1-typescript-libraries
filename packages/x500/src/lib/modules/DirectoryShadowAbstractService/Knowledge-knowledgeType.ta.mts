@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Knowledge_knowledgeType
  * @description
  *
+ * `master` (0) = only master naming-context refs; `shadow` (1) = only
+ * commonly usable replica refs; `both` (2) = both. Does not by itself
+ * include extended (non-immediate) subordinates — that is
+ * `extendedKnowledge`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +29,9 @@ export enum _enum_for_Knowledge_knowledgeType {
  * @summary Knowledge_knowledgeType
  * @description
  *
+ * `master` (0) = only master naming-context refs; `shadow` (1) = only
+ * commonly usable replica refs; `both` (2) = both.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +45,9 @@ export type Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
 /**
  * @summary Knowledge_knowledgeType
  * @description
+ *
+ * `master` (0) = only master naming-context refs; `shadow` (1) = only
+ * commonly usable replica refs; `both` (2) = both.
  *
  * ### ASN.1 Definition:
  *

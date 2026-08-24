@@ -15,6 +15,8 @@ import {
  * @summary stateOrProvinceName
  * @description
  *
+ * SUBTYPE OF `name`. Geographical subdivision of physical location or other important association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

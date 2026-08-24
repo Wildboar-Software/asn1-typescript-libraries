@@ -15,6 +15,10 @@ import {
  * @summary AdministerPasswordResult
  * @description
  *
+ * `null` when unsigned and nothing to return. `information` is the
+ * signed-or-unsigned wrapper; semantics live on
+ * `AdministerPasswordResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,11 @@ import {
  * @summary UpdateWindow
  * @description
  *
+ * Next expected (or preferred) update window. Allowed on `updateShadow`
+ * only if the agreement's `SchedulingParameters.othertimes` is TRUE. On
+ * `shadowError`, present only with `unsuitableTiming`. Takes precedence
+ * over `PeriodicStrategy` when `othertimes` is also TRUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +33,21 @@ export class UpdateWindow {
     constructor(
         /**
          * @summary `start`.
+         * @description
+         *
+         * Inclusive start of the window (UTC GeneralizedTime with seconds).
+         *
          * @public
          * @readonly
          */
         readonly start: Time,
         /**
          * @summary `stop`.
+         * @description
+         *
+         * End of the window. Spec does not define start == stop or
+         * start > stop.
+         *
          * @public
          * @readonly
          */

@@ -12,6 +12,12 @@ import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
  * @summary oidRoot
  * @description
  *
+ * Moved from X.660. Subclass of `alias` (so `aliasedEntryName` applies).
+ * MUST CONTAIN `oidC1`, `oidC2`, and `oidC` — the `|` in ASN.1 is set
+ * union, not a choice; this binding lists all three as mandatory.
+ * `oidC1` values are 0, 1, or 2 (X.520). OID is `{id 3}`, not under
+ * `id-oc`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

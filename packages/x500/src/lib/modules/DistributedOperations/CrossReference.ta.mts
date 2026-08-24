@@ -15,6 +15,8 @@ import {
  * @summary CrossReference
  * @description
  *
+ * `contextPrefix` plus `accessPoint` for a matched naming context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +31,20 @@ export class CrossReference {
     constructor(
         /**
          * @summary `contextPrefix`.
+         * @description
+         *
+         * Naming-context prefix that matched.
+         *
          * @public
          * @readonly
          */
         readonly contextPrefix: DistinguishedName,
         /**
          * @summary `accessPoint`.
+         * @description
+         *
+         * AccessPointInformation for that context.
+         *
          * @public
          * @readonly
          */

@@ -12,6 +12,11 @@ export enum _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy_standard
  * @description
  *
+ * `noChanges` (0) = no modifications since last update (then send
+ * `noRefresh`); `incremental` (1) = deltas; `total` (2) = full
+ * replacement. Extensible ENUMERATED — unknown values must be tolerated
+ * as `other` strategy / `unsupportedStrategy`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

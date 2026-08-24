@@ -10,6 +10,9 @@ import { id_lsx_matchingRuleUseDescription } from "../SelectedAttributeTypes/id-
  * @summary matchingRuleUseDescription
  * @description
  *
+ * LDAP schema listing: ABNF encoding of a matching rule use description
+ * (IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

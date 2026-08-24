@@ -5,6 +5,10 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  * @summary id_ac_directoryOperationalBindingManagementAC
  * @description
  *
+ * {id-ac 3}. DOP application-context name. Only the Bind initiator
+ * invokes DOP operations (OSI). Version negotiated on Bind constrains
+ * all subsequent PDUs (unlike DAP/DSP). Currently one version.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

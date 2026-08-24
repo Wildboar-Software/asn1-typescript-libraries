@@ -47,6 +47,10 @@ import {
  * @summary ListResultData_listInfo
  * @description
  *
+ * `name` OPTIONAL if alias deref'd and the returned name differs.
+ * `subordinates` SET OF: order insignificant unless paging/sort.
+ * Incomplete lists possible.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,18 +62,31 @@ export class ListResultData_listInfo implements CommonResults {
     constructor(
         /**
          * @summary `name`.
+         * @description
+         *
+         * Present if an alias was deref'd and the returned name ≠ `object`.
+         *
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<Name>,
         /**
          * @summary `subordinates`.
+         * @description
+         *
+         * SET OF. Order insignificant unless paging/sort.
+         *
          * @public
          * @readonly
          */
         readonly subordinates: ListResultData_listInfo_subordinates_Item[],
         /**
          * @summary `partialOutcomeQualifier`.
+         * @description
+         *
+         * Present for incomplete lists / limit problems. Partial results
+         * are an arbitrary selection.
+         *
          * @public
          * @readonly
          */

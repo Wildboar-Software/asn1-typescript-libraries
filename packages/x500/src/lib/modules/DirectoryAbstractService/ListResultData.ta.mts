@@ -16,6 +16,9 @@ import {
  * @summary ListResultData
  * @description
  *
+ * `listInfo` vs `uncorrelatedListInfo` (SET OF `ListResult` from
+ * multiple DSAs, unordered). Incomplete lists possible.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -13,6 +13,11 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdExpiryWarning
  * @description
  *
+ * Seconds before expiry to warn on bind. INTEGER (1..MAX). **Absent ⇒
+ * no warning.** If the user never binds in the window, the account
+ * should lock, but the user should still be able to change password.
+ * Object-entry value overrides a covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DirectoryInformationServiceElement_operationType
  * @description
  *
+ * BIT STRING of DAP operations this service element applies to. Multiple bits
+ * may be set. `search` is not split by subset (base/one-level/subtree) here.
+ * Empty / no bits constrains no operations by themselves. MATCHES FOR EQUALITY
+ * is exact bit-string match.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,16 @@ import {
  * @summary ContextSelection
  * @description
  *
+ * `allContexts` (NULL) selects every context and overrides DSA defaults.
+ * `selectedContexts` is SET SIZE (1..MAX) of TypeAndContextAssertion
+ * (order insignificant). Precedence (first governing source wins): EIS
+ * `contextSelection`, else CommonArguments `operationContexts`, else
+ * context-assertion-subentry defaults, else DSA-local default, else
+ * `allContexts`. Extra assertions about different context types still
+ * apply. Type `id-oa-allAttributeTypes` forces evaluation against every
+ * attr type. A TACA whose type is neither the value's type nor a
+ * supertype (nor allAttributeTypes) is TRUE (does not eliminate).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

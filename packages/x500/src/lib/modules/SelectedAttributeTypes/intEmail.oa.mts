@@ -15,6 +15,8 @@ import { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.mjs"
  * @summary intEmail
  * @description
  *
+ * Internationalized email address. SINGLE VALUE. `intEmailMatch`: local-part `caseIgnoreMatch`; domain as `dnsNameMatch`. Domain labels as for `dnsName` except `*` shall not be used. If both parts are ASCII, `mail` should be used instead.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

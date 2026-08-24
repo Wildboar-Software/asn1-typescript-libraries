@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary InternationalISDNNumber
  * @description
  *
+ * E.164 NumericString SIZE (1..16). `numericStringMatch` removes all
+ * spaces (all-spaces ⇒ empty ⇒ UNDEFINED).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

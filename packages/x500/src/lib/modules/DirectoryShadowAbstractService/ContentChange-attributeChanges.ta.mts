@@ -15,6 +15,10 @@ import {
  * @summary ContentChange_attributeChanges
  * @description
  *
+ * `replace` = full content replacement (unordered SET SIZE 1..MAX; empty
+ * illegal). `changes` = ordered SEQUENCE SIZE (1..MAX) of
+ * `EntryModification` — order is the application order.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

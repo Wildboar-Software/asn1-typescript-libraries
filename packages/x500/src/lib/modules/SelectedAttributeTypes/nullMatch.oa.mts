@@ -5,6 +5,9 @@ import { id_mr_nullMatch } from "../SelectedAttributeTypes/id-mr-nullMatch.va.mj
  * @summary nullMatch
  * @description
  *
+ * Non-negated filter item ⇒ TRUE; negated ⇒ FALSE. Item treated absent for
+ * search-rule compatibility checks.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

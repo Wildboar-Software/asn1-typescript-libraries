@@ -36,6 +36,11 @@ import {
  * @summary PartialOutcomeQualifier
  * @description
  *
+ * Partial results are an arbitrary selection. `entryCount` CHOICE
+ * `bestEstimate`[7]/`lowEstimate`[8]/`exact`[9]; tag [10] not used.
+ * `overspecFilter` if `checkOverspecified` and empty due to overspecified
+ * filter. `queryReference` for paging.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,48 +66,82 @@ export class PartialOutcomeQualifier {
     constructor(
         /**
          * @summary `limitProblem`.
+         * @description
+         *
+         * Partial results are an arbitrary selection.
+         *
          * @public
          * @readonly
          */
         readonly limitProblem?: OPTIONAL<LimitProblem>,
         /**
          * @summary `unexplored`.
+         * @description
+         *
+         * SET SIZE (1..MAX) of ContinuationReference.
+         *
          * @public
          * @readonly
          */
         readonly unexplored?: OPTIONAL<ContinuationReference[]>,
         /**
          * @summary `unavailableCriticalExtensions`.
+         * @description
+         *
+         * DEFAULT FALSE.
+         *
          * @public
          * @readonly
          */
         readonly unavailableCriticalExtensions?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `unknownErrors`.
+         * @description
+         *
+         * SET SIZE (1..MAX).
+         *
          * @public
          * @readonly
          */
         readonly unknownErrors?: OPTIONAL<_Element[]>,
         /**
          * @summary `queryReference`.
+         * @description
+         *
+         * Opaque; DUA copies into the next `PagedResultsRequest`.
+         *
          * @public
          * @readonly
          */
         readonly queryReference?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `overspecFilter`.
+         * @description
+         *
+         * Present if `checkOverspecified` and the result is empty because the
+         * filter was overspecified.
+         *
          * @public
          * @readonly
          */
         readonly overspecFilter?: OPTIONAL<Filter>,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX).
+         *
          * @public
          * @readonly
          */
         readonly notification?: OPTIONAL<Attribute[]>,
         /**
          * @summary `entryCount`.
+         * @description
+         *
+         * How many would have been returned if size/admin limit not hit;
+         * ignored if `subentries`. Tag [10] not used.
+         *
          * @public
          * @readonly
          */

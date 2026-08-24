@@ -11,6 +11,12 @@ import {
  * @summary numericStringSubstringsMatch
  * @description
  *
+ * Prep both: Transcode→Map (case-fold)→Normalize KC→Prohibit→bidi→all
+ * spaces removed. Any step fail ⇒ UNDEFINED. All-spaces ⇒ empty ⇒
+ * UNDEFINED. Prepared strings ephemeral.
+ * SubstringAssertion: at most one initial (must be first) and one final
+ * (must be last). `control` ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

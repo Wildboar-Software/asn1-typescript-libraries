@@ -10,6 +10,9 @@ import {
  * @summary XDayOf
  * @description
  *
+ * Occurrence of NamedDay in a month. `fifth` = last that NamedDay of
+ * the month. If `dayOf` used, Period `weeks` is ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

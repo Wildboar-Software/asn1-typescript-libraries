@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdGracesUsed
  * @description
  *
+ * 0 when the password is changed; incremented after successful
+ * authentication with an expired password. When ≥ `pwdGraces`, the
+ * password is unusable. INTEGER (0..MAX).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

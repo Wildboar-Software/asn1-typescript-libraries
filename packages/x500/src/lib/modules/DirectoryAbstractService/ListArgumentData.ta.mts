@@ -72,6 +72,11 @@ import {
  * @summary ListArgumentData
  * @description
  *
+ * Aliases deref'd unless prohibited. `listFamily` DEFAULT FALSE: TRUE and
+ * object is ancestor ⇒ list immediate subordinate family members only;
+ * else list immediate subordinates that are not family members.
+ * `sizeLimit` ignored by the paging DSA if paging is actually performed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -90,18 +95,32 @@ export class ListArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Aliases deref'd unless `dontDereferenceAliases`.
+         *
          * @public
          * @readonly
          */
         readonly object: Name,
         /**
          * @summary `pagedResults`.
+         * @description
+         *
+         * DSA may ignore. If paging is performed, the paging DSA ignores
+         * `sizeLimit`.
+         *
          * @public
          * @readonly
          */
         readonly pagedResults?: OPTIONAL<PagedResultsRequest>,
         /**
          * @summary `listFamily`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE and object is ancestor ⇒ only immediate
+         * family children; else only non-family immediate subordinates.
+         *
          * @public
          * @readonly
          */

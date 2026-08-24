@@ -2,6 +2,17 @@
 import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+/**
+ * @summary IdmReject_reason
+ * @description
+ *
+ * Reject of a Request/Result/Error whose invoke ID was recovered.
+ * Duplicate invoke IDs are for the whole TCP connection, not just
+ * outstanding ops. (11)–(13) are TCP-header version issues, not
+ * Directory version. Extensible.
+ *
+ * @enum {number}
+ */
 export enum _enum_for_IdmReject_reason {
     mistypedPDU = 0,
     duplicateInvokeIDRequest = 1,
@@ -23,6 +34,11 @@ export enum _enum_for_IdmReject_reason {
  * @summary IdmReject_reason
  * @description
  *
+ * Why a Request/Result/Error was rejected. (11)–(13) are TCP-mapping
+ * version problems, not Directory version. Duplicate invoke IDs are
+ * for the whole connection lifetime, not just outstanding ops.
+ * Extensible; unknown reasons: treat as protocol error / close.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +51,10 @@ export type IdmReject_reason = _enum_for_IdmReject_reason | ENUMERATED;
 
 /**
  * @summary IdmReject_reason_mistypedPDU
+ * @description
+ *
+ * PDU invalidly constructed. (0)
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +62,10 @@ export const IdmReject_reason_mistypedPDU: IdmReject_reason = 0; /* LONG_NAMED_E
 
 /**
  * @summary mistypedPDU
+ * @description
+ *
+ * PDU invalidly constructed. (0)
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +73,10 @@ export const mistypedPDU: IdmReject_reason = IdmReject_reason_mistypedPDU; /* SH
 
 /**
  * @summary IdmReject_reason_duplicateInvokeIDRequest
+ * @description
+ *
+ * Request invokeID already used on this TCP connection. Never reuse. (1)
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +84,10 @@ export const IdmReject_reason_duplicateInvokeIDRequest: IdmReject_reason = 1; /*
 
 /**
  * @summary duplicateInvokeIDRequest
+ * @description
+ *
+ * Request invokeID already used on this TCP connection. (1)
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +95,10 @@ export const duplicateInvokeIDRequest: IdmReject_reason = IdmReject_reason_dupli
 
 /**
  * @summary IdmReject_reason_unsupportedOperationRequest
+ * @description
+ *
+ * Operation known but not supported. (2)
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +106,10 @@ export const IdmReject_reason_unsupportedOperationRequest: IdmReject_reason = 2;
 
 /**
  * @summary unsupportedOperationRequest
+ * @description
+ *
+ * Operation known but not supported. (2)
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +117,10 @@ export const unsupportedOperationRequest: IdmReject_reason = IdmReject_reason_un
 
 /**
  * @summary IdmReject_reason_unknownOperationRequest
+ * @description
+ *
+ * Operation unknown to this protocol. (3)
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +128,10 @@ export const IdmReject_reason_unknownOperationRequest: IdmReject_reason = 3; /* 
 
 /**
  * @summary unknownOperationRequest
+ * @description
+ *
+ * Operation unknown to this protocol. (3)
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +139,10 @@ export const unknownOperationRequest: IdmReject_reason = IdmReject_reason_unknow
 
 /**
  * @summary IdmReject_reason_mistypedArgumentRequest
+ * @description
+ *
+ * Request argument invalidly constructed. (4)
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +150,10 @@ export const IdmReject_reason_mistypedArgumentRequest: IdmReject_reason = 4; /* 
 
 /**
  * @summary mistypedArgumentRequest
+ * @description
+ *
+ * Request argument invalidly constructed. (4)
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +161,10 @@ export const mistypedArgumentRequest: IdmReject_reason = IdmReject_reason_mistyp
 
 /**
  * @summary IdmReject_reason_resourceLimitationRequest
+ * @description
+ *
+ * Cannot perform the request due to resource limits. (5)
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +172,10 @@ export const IdmReject_reason_resourceLimitationRequest: IdmReject_reason = 5; /
 
 /**
  * @summary resourceLimitationRequest
+ * @description
+ *
+ * Cannot perform the request due to resource limits. (5)
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +183,10 @@ export const resourceLimitationRequest: IdmReject_reason = IdmReject_reason_reso
 
 /**
  * @summary IdmReject_reason_unknownInvokeIDResult
+ * @description
+ *
+ * Result invokeID is not an outstanding request. (6)
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +194,10 @@ export const IdmReject_reason_unknownInvokeIDResult: IdmReject_reason = 6; /* LO
 
 /**
  * @summary unknownInvokeIDResult
+ * @description
+ *
+ * Result invokeID is not an outstanding request. (6)
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +205,10 @@ export const unknownInvokeIDResult: IdmReject_reason = IdmReject_reason_unknownI
 
 /**
  * @summary IdmReject_reason_mistypedResultRequest
+ * @description
+ *
+ * Result malformed, or opcode does not match the Request. (7)
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +216,10 @@ export const IdmReject_reason_mistypedResultRequest: IdmReject_reason = 7; /* LO
 
 /**
  * @summary mistypedResultRequest
+ * @description
+ *
+ * Result malformed, or opcode does not match the Request. (7)
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +227,10 @@ export const mistypedResultRequest: IdmReject_reason = IdmReject_reason_mistyped
 
 /**
  * @summary IdmReject_reason_unknownInvokeIDError
+ * @description
+ *
+ * Error invokeID is not an outstanding request. (8)
+ *
  * @constant
  * @type {number}
  */
@@ -154,6 +238,10 @@ export const IdmReject_reason_unknownInvokeIDError: IdmReject_reason = 8; /* LON
 
 /**
  * @summary unknownInvokeIDError
+ * @description
+ *
+ * Error invokeID is not an outstanding request. (8)
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +249,10 @@ export const unknownInvokeIDError: IdmReject_reason = IdmReject_reason_unknownIn
 
 /**
  * @summary IdmReject_reason_unknownError
+ * @description
+ *
+ * errcode not in this protocol or not permitted for the operation. (9)
+ *
  * @constant
  * @type {number}
  */
@@ -168,6 +260,10 @@ export const IdmReject_reason_unknownError: IdmReject_reason = 9; /* LONG_NAMED_
 
 /**
  * @summary unknownError
+ * @description
+ *
+ * errcode not in this protocol or not permitted for the operation. (9)
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +271,10 @@ export const unknownError: IdmReject_reason = IdmReject_reason_unknownError; /* 
 
 /**
  * @summary IdmReject_reason_mistypedParameterError
+ * @description
+ *
+ * Error parameter malformed. (10)
+ *
  * @constant
  * @type {number}
  */
@@ -182,6 +282,10 @@ export const IdmReject_reason_mistypedParameterError: IdmReject_reason = 10; /* 
 
 /**
  * @summary mistypedParameterError
+ * @description
+ *
+ * Error parameter malformed. (10)
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +293,11 @@ export const mistypedParameterError: IdmReject_reason = IdmReject_reason_mistype
 
 /**
  * @summary IdmReject_reason_unsupportedIdmVersion
+ * @description
+ *
+ * TCP-mapping version (segment header) not supported. Respond in version 1
+ * format. (11)
+ *
  * @constant
  * @type {number}
  */
@@ -196,6 +305,10 @@ export const IdmReject_reason_unsupportedIdmVersion: IdmReject_reason = 11; /* L
 
 /**
  * @summary unsupportedIdmVersion
+ * @description
+ *
+ * TCP-mapping version not supported. Respond in version 1 format. (11)
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +316,11 @@ export const unsupportedIdmVersion: IdmReject_reason = IdmReject_reason_unsuppor
 
 /**
  * @summary IdmReject_reason_unsuitableIdmVersion
+ * @description
+ *
+ * Bind uses a mapping version different from existing associations. Echo
+ * Bind's version. (12)
+ *
  * @constant
  * @type {number}
  */
@@ -210,6 +328,10 @@ export const IdmReject_reason_unsuitableIdmVersion: IdmReject_reason = 12; /* LO
 
 /**
  * @summary unsuitableIdmVersion
+ * @description
+ *
+ * Bind mapping version differs from existing associations. (12)
+ *
  * @constant
  * @type {number}
  */
@@ -217,6 +339,11 @@ export const unsuitableIdmVersion: IdmReject_reason = IdmReject_reason_unsuitabl
 
 /**
  * @summary IdmReject_reason_invalidIdmVersion
+ * @description
+ *
+ * A PDU used a mapping version other than the one agreed for the
+ * association. Reject in the agreed version. (13)
+ *
  * @constant
  * @type {number}
  */
@@ -224,6 +351,10 @@ export const IdmReject_reason_invalidIdmVersion: IdmReject_reason = 13; /* LONG_
 
 /**
  * @summary invalidIdmVersion
+ * @description
+ *
+ * PDU mapping version differs from the association's agreed version. (13)
+ *
  * @constant
  * @type {number}
  */

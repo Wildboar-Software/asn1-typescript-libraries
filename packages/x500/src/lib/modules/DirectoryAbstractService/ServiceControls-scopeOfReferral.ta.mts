@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceControls_scopeOfReferral
  * @description
  *
+ * Restricts referrals (both referral error and unexplored) to DSAs in
+ * that scope.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +19,10 @@ export type ServiceControls_scopeOfReferral = INTEGER;
 
 /**
  * @summary ServiceControls_scopeOfReferral_dmd
+ * @description
+ *
+ * Referrals only to DSAs in the same DMD.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +30,10 @@ export const ServiceControls_scopeOfReferral_dmd: ServiceControls_scopeOfReferra
 
 /**
  * @summary ServiceControls_scopeOfReferral_dmd
+ * @description
+ *
+ * Referrals only to DSAs in the same DMD.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +41,10 @@ export const dmd: ServiceControls_scopeOfReferral = ServiceControls_scopeOfRefer
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
+ * @description
+ *
+ * Referrals only to DSAs in the same country.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +52,10 @@ export const ServiceControls_scopeOfReferral_country: ServiceControls_scopeOfRef
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
+ * @description
+ *
+ * Referrals only to DSAs in the same country.
+ *
  * @constant
  * @type {number}
  */

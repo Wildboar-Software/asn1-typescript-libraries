@@ -5,6 +5,11 @@ import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
  * @summary id_ac_shadowSupplierInitiatedAsynchronousAC
  * @description
  *
+ * {id-ac 8}. Same ops as `shadowSupplierInitiatedAC`; ROS mode is
+ * asynchronous. Optional if the DSA already supports the sync
+ * supplier-initiated AC. IDM DISP has no separate async protocol —
+ * IDM is always async.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

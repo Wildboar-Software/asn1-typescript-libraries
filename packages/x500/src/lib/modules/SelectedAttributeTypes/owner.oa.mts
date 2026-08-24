@@ -10,6 +10,8 @@ import { id_at_owner } from "../SelectedAttributeTypes/id-at-owner.va.mjs";
  * @summary owner
  * @description
  *
+ * SUBTYPE OF `distinguishedName`. Object (or group) with some responsibility for this object.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

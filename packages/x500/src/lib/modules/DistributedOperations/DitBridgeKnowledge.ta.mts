@@ -19,6 +19,9 @@ import {
  * @summary DitBridgeKnowledge
  * @description
  *
+ * Access into another DIT. `domainLocalID` is a readable string, not a
+ * DN. `accessPoints` required, SIZE (1..MAX).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,21 @@ export class DitBridgeKnowledge {
     constructor(
         /**
          * @summary `domainLocalID`.
+         * @description
+         *
+         * Human-readable id of that DIT. Not a DN.
+         *
          * @public
          * @readonly
          */
         readonly domainLocalID: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary `accessPoints`.
+         * @description
+         *
+         * MasterAndShadowAccessPoints of the other DIT. Required; SIZE
+         * (1..MAX).
+         *
          * @public
          * @readonly
          */

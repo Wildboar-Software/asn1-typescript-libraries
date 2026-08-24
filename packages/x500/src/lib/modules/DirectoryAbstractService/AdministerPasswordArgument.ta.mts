@@ -15,6 +15,9 @@ import {
  * @summary AdministerPasswordArgument
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on
+ * `AdministerPasswordArgumentData`. Admin reset (no old password).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

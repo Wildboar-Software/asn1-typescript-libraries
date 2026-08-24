@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UiiItem
  * @description
  *
+ * `type_` = attribute type for the AVA; `length` = how many characters
+ * to use as the AVA value when probing remaining bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +27,20 @@ export class UiiItem {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type for the AVA.
+         *
          * @public
          * @readonly
          */
         readonly type_: OBJECT_IDENTIFIER,
         /**
          * @summary `length`.
+         * @description
+         *
+         * How many characters to use as the AVA value.
+         *
          * @public
          * @readonly
          */

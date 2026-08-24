@@ -15,6 +15,10 @@ import {
  * @summary CoordinateShadowUpdateArgument
  * @description
  *
+ * OPTIONALLY-PROTECTED wrapper. If signed, `securityParameters` in the
+ * inner data shall be present (`target` is `none`). Result may be signed
+ * only if the request `target` is `signed`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

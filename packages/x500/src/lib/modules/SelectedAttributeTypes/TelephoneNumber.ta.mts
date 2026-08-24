@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TelephoneNumber
  * @description
  *
+ * PrintableString SIZE (1..32); E.123. Only `+`, digits, space, hyphen.
+ * `telephoneNumberMatch`: hyphens and spaces are insignificant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -8,6 +8,8 @@ import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
  * @summary octetStringMatch
  * @description
  *
+ * TRUE iff same length and identical octets.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

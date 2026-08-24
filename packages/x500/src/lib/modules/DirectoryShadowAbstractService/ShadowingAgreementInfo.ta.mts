@@ -25,6 +25,12 @@ import {
  * @summary ShadowingAgreementInfo
  * @description
  *
+ * Technical parameters of a shadowing agreement. Values are accepted or
+ * rejected as a whole — no negotiation. Modify cannot change the replicated
+ * base-entry name or the DSAs' roles. After modify, prior shadowed data
+ * remains and becomes the new agreement's copy (a total refresh may still
+ * be needed).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,24 +46,46 @@ export class ShadowingAgreementInfo {
     constructor(
         /**
          * @summary `shadowSubject`.
+         * @description
+         *
+         * Subtree, entries, and attributes to shadow. Completely within one
+         * DSA; may name beyond a naming context, but the replicated area is
+         * clipped to that context.
+         *
          * @public
          * @readonly
          */
         readonly shadowSubject: UnitOfReplication,
         /**
          * @summary `updateMode`.
+         * @description
+         *
+         * DEFAULT `supplierInitiated:onChange:TRUE`. Does not forbid either
+         * party from initiating an update outside the scheduled times.
+         *
          * @public
          * @readonly
          */
         readonly updateMode?: OPTIONAL<UpdateMode>,
         /**
          * @summary `master`.
+         * @description
+         *
+         * Access point of the DSA holding the mastered area. Optional;
+         * supplied only for optimization.
+         *
          * @public
          * @readonly
          */
         readonly master?: OPTIONAL<AccessPoint>,
         /**
          * @summary `secondaryShadows`.
+         * @description
+         *
+         * DEFAULT FALSE. If TRUE, the consumer may later supply secondary
+         * shadow access points to the supplier via
+         * `ModificationParameter`. Not the SET OF access points itself.
+         *
          * @public
          * @readonly
          */

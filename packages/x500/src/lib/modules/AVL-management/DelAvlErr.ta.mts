@@ -15,6 +15,8 @@ import {
  * @summary DelAvlErr
  * @description
  *
+ * Delete failure. Carried as `DeleteAvlRsp.result.failure` in `DataTransferServer`. Typical `notOK` is `unknownAVL`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +30,10 @@ export class DelAvlErr {
     constructor(
         /**
          * @summary `notOK`.
+         * @description
+         *
+         * Why the delete failed (often `unknownAVL` if `avl-Id` did not identify a local AVL).
+         *
          * @public
          * @readonly
          */

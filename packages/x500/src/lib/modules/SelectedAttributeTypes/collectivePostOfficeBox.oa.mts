@@ -10,6 +10,8 @@ import { postOfficeBox } from "../SelectedAttributeTypes/postOfficeBox.oa.mjs";
  * @summary collectivePostOfficeBox
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `postOfficeBox`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,8 @@ import {
  * @summary postalAddr
  * @description
  *
+ * LDAP syntax object for Directory `PostalAddress` (used by `postalAddress`). LDAP transfer is typically `$`-separated lines (RFC 4517); line order significant; empty SEQUENCE invalid.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

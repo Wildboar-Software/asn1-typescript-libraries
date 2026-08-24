@@ -15,6 +15,11 @@ import {
  * @summary IdmResult
  * @description
  *
+ * Successful operation. `invokeID` and `opcode` shall equal the
+ * Request. Reject with `unknownInvokeIDResult` if `invokeID` is not
+ * outstanding; `mistypedResultRequest` if the result is malformed or
+ * `opcode` does not match the Request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,18 +35,34 @@ export class IdmResult {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Shall equal the Request. Unknown / not outstanding ⇒ reject
+         * `unknownInvokeIDResult`. Primary correlation key; responses
+         * are unordered.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: INTEGER,
         /**
          * @summary `opcode`.
+         * @description
+         *
+         * Shall equal the Request's `opcode`. Mismatch ⇒ reject
+         * `mistypedResultRequest`.
+         *
          * @public
          * @readonly
          */
         readonly opcode: Code,
         /**
          * @summary `result`.
+         * @description
+         *
+         * OPERATION.&ResultType for `opcode`. Malformed ⇒ reject
+         * `mistypedResultRequest`.
+         *
          * @public
          * @readonly
          */

@@ -7,6 +7,9 @@ import { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.
  * @summary ia5String
  * @description
  *
+ * LDAP transfer of IA5String (International Alphabet 5 / ASCII;
+ * Rec. ITU-T X.680).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

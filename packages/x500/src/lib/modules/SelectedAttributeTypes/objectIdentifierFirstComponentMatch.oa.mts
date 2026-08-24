@@ -8,6 +8,9 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
  * @summary objectIdentifierFirstComponentMatch
  * @description
  *
+ * Stored SEQUENCE; first component mandatory OBJECT IDENTIFIER. Compare
+ * that component only (objectIdentifierMatch). Assertion is the OID.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

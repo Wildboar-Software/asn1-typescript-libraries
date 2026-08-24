@@ -15,6 +15,10 @@ import {
  * @summary PeriodicStrategy
  * @description
  *
+ * Recurring update windows. `windowSize` and `updateInterval` are in
+ * seconds. Interval is start-to-start, not stop-to-start. Zero sizes are
+ * not given a special meaning; a zero interval would collapse windows.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,18 +34,31 @@ export class PeriodicStrategy {
     constructor(
         /**
          * @summary `beginTime`.
+         * @description
+         *
+         * Start of the first window. Absent = the schedule starts when the
+         * shadowing agreement is activated.
+         *
          * @public
          * @readonly
          */
         readonly beginTime: OPTIONAL<Time>,
         /**
          * @summary `windowSize`.
+         * @description
+         *
+         * Length of each update window, in seconds.
+         *
          * @public
          * @readonly
          */
         readonly windowSize: INTEGER,
         /**
          * @summary `updateInterval`.
+         * @description
+         *
+         * Seconds between the start of one window and the start of the next.
+         *
          * @public
          * @readonly
          */

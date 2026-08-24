@@ -10,6 +10,9 @@ import {
  * @summary DISP_IDM_PDUs
  * @description
  *
+ * `IDM-PDU{disp-ip}`. All three DISP ops on one association. Either
+ * side may request or Unbind.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

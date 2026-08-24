@@ -14,6 +14,10 @@ import { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription
  * @summary pwdAlphabet
  * @description
  *
+ * Password shall contain at least one character from each UTF8String.
+ * Empty SEQUENCE ⇒ no extra alphabet constraint. Object-entry value
+ * overrides a covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

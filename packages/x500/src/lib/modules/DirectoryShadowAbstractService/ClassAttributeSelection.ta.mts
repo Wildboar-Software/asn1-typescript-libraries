@@ -15,6 +15,11 @@ import {
  * @summary ClassAttributeSelection
  * @description
  *
+ * Attribute include/exclude for one object class (and its subclasses).
+ * Omitted `class` applies to every class. Naming a supertype of an
+ * attribute implicitly covers its subtypes. Explicit include/exclude of a
+ * collective attribute also includes/excludes it in the holding subentries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +33,22 @@ export class ClassAttributeSelection {
     constructor(
         /**
          * @summary `class_`.
+         * @description
+         *
+         * Object-class OID. Absent = this selection applies to all classes.
+         * Also matches subclasses of the named class.
+         *
          * @public
          * @readonly
          */
         readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `classAttributes`.
+         * @description
+         *
+         * DEFAULT `allAttributes:NULL` (all user and collective attributes;
+         * extra operational attributes still need an `include`).
+         *
          * @public
          * @readonly
          */

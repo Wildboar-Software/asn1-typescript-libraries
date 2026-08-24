@@ -16,6 +16,8 @@ import {
  * @summary x121Address
  * @description
  *
+ * X.121 address. NumericString SIZE (1..15). `numericStringMatch` / `numericStringSubstringsMatch` (all spaces removed).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

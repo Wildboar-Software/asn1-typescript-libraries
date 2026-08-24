@@ -15,6 +15,8 @@ import {
  * @summary CompareArgument
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `CompareArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

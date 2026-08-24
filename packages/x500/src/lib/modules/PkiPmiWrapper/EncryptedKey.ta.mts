@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncryptedKey
  * @description
  *
+ * Wrapped content-encryption key. OPTIONAL on EncryptedPduInfo.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

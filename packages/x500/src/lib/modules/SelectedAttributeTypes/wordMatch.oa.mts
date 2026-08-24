@@ -11,6 +11,9 @@ import {
  * @summary wordMatch
  * @description
  *
+ * TRUE iff presented word matches any word in stored (caseIgnoreMatch per
+ * word). What a "word" is is local.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

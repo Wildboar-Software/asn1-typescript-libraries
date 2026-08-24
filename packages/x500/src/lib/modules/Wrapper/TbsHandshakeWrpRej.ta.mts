@@ -38,6 +38,12 @@ import {
  * @summary TbsHandshakeWrpRej
  * @description
  *
+ * To-be-signed wrapper reject of `HandshakeReq`. `version` is exactly one
+ * bit (prefer among those suggested; if none supported, still some
+ * version the server supports). If no offered signature alg is
+ * supported, put a supported alg in `sigAlg`. `diag` **absent if
+ * alert**, else present. `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,36 +64,42 @@ export class TbsHandshakeWrpRej {
     constructor(
         /**
          * @summary `version`.
+         * @description Exactly one bit; prefer among those in the `HandshakeReq`. If none of those is supported, still return a version the server supports. DEFAULT `{v1}`.
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `sigSel`.
+         * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. If neither is supported, put a supported alg in `sigAlg`. Signs this PDU; `altSignature` absent.
          * @public
          * @readonly
          */
         readonly sigSel: TbsHandshakeWrpRej_sigSel,
         /**
          * @summary `assoID`.
+         * @description Same value as in the corresponding `HandshakeReq`.
          * @public
          * @readonly
          */
         readonly assoID: AssoID,
         /**
          * @summary `time`.
+         * @description UTC GeneralizedTime of creation (clause 8.2).
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `pkiPath`.
+         * @description DER-encapsulated certification path verifying this signature.
          * @public
          * @readonly
          */
         readonly pkiPath: DER_PkiPath,
         /**
          * @summary `diag`.
+         * @description `WrpError` when not an alert; **absent if alert** (possible adversary).
          * @public
          * @readonly
          */

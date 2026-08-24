@@ -10,6 +10,10 @@ import {
  * @summary MultipleHashAlgo
  * @description
  *
+ * SEQUENCE SIZE (1..MAX) of hash AlgorithmIdentifier; empty illegal. Order
+ * = preference (first most preferred). Outer ALGORITHM PARMS for migration
+ * (Annex H).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

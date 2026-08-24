@@ -20,6 +20,8 @@ import {
  * @summary AbortAVL
  * @description
  *
+ * Authorizer (client) rejects an AVL-entity response. Embed in `ApplAbort`. `invokeID` is that of the **rejected response**. Alerts use `reason` `noReason` and omit wrapper `diag`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +36,20 @@ export class AbortAVL {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as in the response being rejected (not a new interaction).
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * `noReason` for alerts (e.g. invalid AVL signature); otherwise a diagnostic `AVMP-error`.
+         *
          * @public
          * @readonly
          */

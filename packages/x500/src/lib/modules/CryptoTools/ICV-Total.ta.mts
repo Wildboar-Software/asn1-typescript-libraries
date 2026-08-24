@@ -15,6 +15,10 @@ import {
  * @summary ICV_Total
  * @description
  *
+ * ICV alg not previously agreed. `icv` is BIT STRING (prose 6.5.3 says
+ * OCTET STRING). `altAlgorithmIdentifier` and `altIcv` both present or
+ * both absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,24 +44,41 @@ export class ICV_Total<ToBeProtected> {
         readonly toBeProtected: ToBeProtected,
         /**
          * @summary `algorithmIdentifier`.
+         * @description
+         *
+         * ICV alg (not previously agreed) plus PARMS/DYN-PARMS as required by
+         * `&Type`/`&DynParms`.
+         *
          * @public
          * @readonly
          */
         readonly algorithmIdentifier: AlgorithmWithInvoke,
         /**
          * @summary `icv`.
+         * @description
+         *
+         * BIT STRING (ignore prose OCTET STRING).
+         *
          * @public
          * @readonly
          */
         readonly icv: BIT_STRING,
         /**
          * @summary `altAlgorithmIdentifier`.
+         * @description
+         *
+         * Present iff `altIcv` present.
+         *
          * @public
          * @readonly
          */
         readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmWithInvoke>,
         /**
          * @summary `altIcv`.
+         * @description
+         *
+         * Present iff `altAlgorithmIdentifier` present.
+         *
          * @public
          * @readonly
          */

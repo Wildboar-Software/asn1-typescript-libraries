@@ -5,6 +5,8 @@ import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
  * @summary id_oc_strongAuthenticationUser
  * @description
  *
+ * Deprecated object class (X.521 6.15). Prefer `pkiUser`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

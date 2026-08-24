@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Group14
  * @description
  *
+ * Always INTEGER (14). RFC 3526 MODP 2048. Fixed PARMS of
+ * `dhModpGr14Hkdf256Algo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

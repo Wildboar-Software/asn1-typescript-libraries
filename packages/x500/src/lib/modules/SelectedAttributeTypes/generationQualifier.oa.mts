@@ -15,6 +15,8 @@ import {
  * @summary generationQualifier
  * @description
  *
+ * SUBTYPE OF `name`. Generation information qualifying an individual's name (e.g. "Jr.", "II").
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -12,6 +12,9 @@ import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.mjs";
  * @summary pwdChangeAllowed
  * @description
  *
+ * FALSE or **absent** ⇒ owner cannot Change Password. Object-entry
+ * value overrides a covering password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

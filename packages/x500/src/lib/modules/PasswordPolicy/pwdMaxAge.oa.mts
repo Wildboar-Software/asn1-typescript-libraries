@@ -13,6 +13,11 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdMaxAge
  * @description
  *
+ * Seconds until the password is no longer available. INTEGER (1..MAX);
+ * 0 invalid. **Absent ⇒ infinity.** Used as default for `pwdEndTime`
+ * (`pwdStartTime` + this). Object-entry value overrides a covering
+ * password-policy subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

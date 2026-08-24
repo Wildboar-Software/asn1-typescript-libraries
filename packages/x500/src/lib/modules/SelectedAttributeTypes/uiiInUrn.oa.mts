@@ -12,6 +12,8 @@ import { id_at_uiiInUrn } from "../SelectedAttributeTypes/id-at-uiiInUrn.va.mjs"
  * @summary uiiInUrn
  * @description
  *
+ * Unique Item Identifier encoded as a unique URN. SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

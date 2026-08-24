@@ -44,6 +44,10 @@ import {
  * @summary SubSchemaSyntax_Item_subSchema
  * @description
  *
+ * Published schema categories for one subschema. Each SEQUENCE OF is OPTIONAL:
+ * omitted means that category is not included (distinct from an empty
+ * SEQUENCE OF). Inner lists have no specified order.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,42 +59,77 @@ export class SubSchemaSyntax_Item_subSchema {
     constructor(
         /**
          * @summary `structureRules`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published (not
+         * the same as empty). Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly structureRules?: OPTIONAL<DITStructureRuleDescription[]>,
         /**
          * @summary `contentRules`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly contentRules?: OPTIONAL<DITContentRuleDescription[]>,
         /**
          * @summary `matchingRules`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly matchingRules?: OPTIONAL<MatchingRuleDescription[]>,
         /**
          * @summary `attributeTypes`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly attributeTypes?: OPTIONAL<AttributeTypeDescription[]>,
         /**
          * @summary `objectClasses`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly objectClasses?: OPTIONAL<ObjectClassDescription[]>,
         /**
          * @summary `nameForms`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */
         readonly nameForms?: OPTIONAL<NameFormDescription[]>,
         /**
          * @summary `matchRuleUses`.
+         * @description
+         *
+         * OPTIONAL SEQUENCE OF; omitted = category not published.
+         * Order unspecified.
+         *
          * @public
          * @readonly
          */

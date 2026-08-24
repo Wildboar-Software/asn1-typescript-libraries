@@ -10,6 +10,10 @@ import {
  * @summary Filter
  * @description
  *
+ * Three-valued logic (TRUE/FALSE/UNDEFINED). Empty `and` SET = TRUE;
+ * empty `or` SET = FALSE. Search DEFAULT `and:{}` matches all. `not` of
+ * UNDEFINED stays UNDEFINED. ACI may force UNDEFINED.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

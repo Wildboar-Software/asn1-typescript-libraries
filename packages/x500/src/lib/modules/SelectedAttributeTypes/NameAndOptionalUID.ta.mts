@@ -19,6 +19,10 @@ import {
  * @summary NameAndOptionalUID
  * @description
  *
+ * `uniqueMemberMatch`: `dn` via distinguishedNameMatch. Stored `uid` may
+ * be absent (then ignored) and still match; if present, bitStringMatch vs
+ * presented `uid`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +37,21 @@ export class NameAndOptionalUID {
     constructor(
         /**
          * @summary `dn`.
+         * @description
+         *
+         * Compared with distinguishedNameMatch.
+         *
          * @public
          * @readonly
          */
         readonly dn: DistinguishedName,
         /**
          * @summary `uid`.
+         * @description
+         *
+         * Optional. Absent stored `uid` still matches uniqueMemberMatch; if
+         * present, bitStringMatch (no NamedBitList ⇒ trailing zeros count).
+         *
          * @public
          * @readonly
          */

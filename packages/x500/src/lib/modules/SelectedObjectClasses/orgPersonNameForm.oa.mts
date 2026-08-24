@@ -8,6 +8,10 @@ import { organizationalPerson } from "../SelectedObjectClasses/organizationalPer
  * @summary orgPersonNameForm
  * @description
  *
+ * Names `organizationalPerson` by `commonName`; `organizationalUnitName`
+ * may also appear in the RDN (`AND OPTIONALLY`). Typical superiors:
+ * organization or organizationalUnit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

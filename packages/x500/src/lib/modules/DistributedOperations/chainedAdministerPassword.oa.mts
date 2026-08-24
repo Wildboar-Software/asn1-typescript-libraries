@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedAdministerPassword
  * @description
  *
+ * `chained{administerPassword}`. Same opcode as DAP
+ * `administerPassword`. `dsaReferral` instead of `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,8 @@ import {
  * @summary telephoneNr
  * @description
  *
+ * LDAP syntax object for Directory `TelephoneNumber` (used by `telephoneNumber`). E.123 PrintableString SIZE 1..32; hyphens/spaces insignificant in matching live on the ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

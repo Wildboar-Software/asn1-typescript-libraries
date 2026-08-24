@@ -16,6 +16,8 @@ import {
  * @summary houseIdentifier
  * @description
  *
+ * Identifier of a particular building (house number or name) relative to a street, town, etc. **Not** SUBTYPE OF `name`. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import {
  * @summary ICV_Invoke
  * @description
  *
+ * ICV alg already agreed. `dynParms` present iff that ICV alg has
+ * `&DynParms`. `icv` is BIT STRING.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,20 @@ export class ICV_Invoke<ToBeProtected> {
         readonly toBeProtected: ToBeProtected,
         /**
          * @summary `dynParms`.
+         * @description
+         *
+         * Present iff the agreed ICV alg has `&DynParms`.
+         *
          * @public
          * @readonly
          */
         readonly dynParms: OPTIONAL<AlgoInvoke>,
         /**
          * @summary `icv`.
+         * @description
+         *
+         * BIT STRING ICV.
+         *
          * @public
          * @readonly
          */

@@ -14,6 +14,13 @@ import {
  * @summary ClassAttributes
  * @description
  *
+ * `allAttributes` = all user/collective attributes (plus implicit
+ * `collectiveAttributeSubentry`s); other operational attributes still
+ * need `include`. `include` = only those types (and subtypes). `exclude`
+ * = all except those types; anything not listed is implicitly included.
+ * Empty `AttributeTypes` on `include` adds nothing; on `exclude` excludes
+ * nothing.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,9 @@ import { id_mr_ignoreIfAbsentMatch } from "../SelectedAttributeTypes/id-mr-ignor
  * @summary ignoreIfAbsentMatch
  * @description
  *
+ * Attribute absent ⇒ TRUE; present ⇒ UNDEFINED. Parent matching rule only;
+ * combine with a child MR for the present case.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

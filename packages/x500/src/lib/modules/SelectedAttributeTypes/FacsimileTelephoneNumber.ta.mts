@@ -19,6 +19,9 @@ import {
  * @summary FacsimileTelephoneNumber
  * @description
  *
+ * Equality and substrings compare `telephoneNumber` only; `parameters` are
+ * ignored. Assertion syntax is TelephoneNumber, not this SEQUENCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,22 @@ export class FacsimileTelephoneNumber {
     constructor(
         /**
          * @summary `telephoneNumber`.
+         * @description
+         *
+         * E.123 telephone number. The only component used by
+         * facsimileNumberMatch / facsimileNumberSubstringsMatch.
+         *
          * @public
          * @readonly
          */
         readonly telephoneNumber: TelephoneNumber,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Optional G3NonBasicParameters (T.30). Ignored by equality and
+         * substring matching.
+         *
          * @public
          * @readonly
          */

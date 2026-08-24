@@ -14,6 +14,8 @@ import { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInfo
  * @summary protocolInformation
  * @description
  *
+ * Associates protocol/profile OIDs with a presentation `nAddress`. `protocolInformationMatch` compares the `nAddress` OCTET STRING **only** (profiles ignored).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

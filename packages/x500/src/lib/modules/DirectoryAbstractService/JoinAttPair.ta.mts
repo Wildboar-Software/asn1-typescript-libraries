@@ -19,6 +19,11 @@ import {
  * @summary JoinAttPair
  * @description
  *
+ * Related iff primary has `baseAtt`, additional has `joinAtt`, and some
+ * values equal: same type ⇒ that equality MR; different type same syntax
+ * ⇒ primary's equality MR; else not related. Subtypes ignored — only the
+ * explicitly named types. `joinContext` present ⇒ only those contexts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +39,34 @@ export class JoinAttPair {
     constructor(
         /**
          * @summary `baseAtt`.
+         * @description
+         *
+         * Type on the primary entry. Subtypes ignored. Same type as
+         * `joinAtt` ⇒ that equality MR; different type same syntax ⇒ this
+         * type's equality MR.
+         *
          * @public
          * @readonly
          */
         readonly baseAtt: AttributeType,
         /**
          * @summary `joinAtt`.
+         * @description
+         *
+         * Type on the additional entry. Subtypes ignored. Only the
+         * explicitly named type.
+         *
          * @public
          * @readonly
          */
         readonly joinAtt: AttributeType,
         /**
          * @summary `joinContext`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). If present, only those context types; if
+         * absent, all contexts.
+         *
          * @public
          * @readonly
          */

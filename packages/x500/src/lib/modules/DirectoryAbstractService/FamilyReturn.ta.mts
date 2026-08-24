@@ -16,6 +16,10 @@ import {
  * @summary FamilyReturn
  * @description
  *
+ * DEFAULT `{memberSelect contributingEntriesOnly}`. `familySelect` order
+ * insignificant; no effect if `memberSelect` is `compoundEntry`.
+ * Contributing vs participating are the same for Read/ModifyEntry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +38,24 @@ export class FamilyReturn {
     constructor(
         /**
          * @summary `memberSelect`.
+         * @description
+         *
+         * Which compound-entry members to return. Contributing vs
+         * participating are the same for Read/ModifyEntry.
+         *
          * @public
          * @readonly
          */
         readonly memberSelect: FamilyReturn_memberSelect,
         /**
          * @summary `familySelect`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX) of structural OC of members immediately
+         * subordinate to the ancestor. Order insignificant. Adds those
+         * families' child members on top of `memberSelect`. No effect if
+         * `memberSelect` is `compoundEntry`.
+         *
          * @public
          * @readonly
          */

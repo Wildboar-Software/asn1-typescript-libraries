@@ -6,6 +6,11 @@ import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMa
  * @summary zonalMatch
  * @description
  *
+ * Gazetteer geography; combinable locality filter items; no tightening.
+ * Overlap of zones. Equality string match bypasses zonal. ZonalResult 1
+ * unused (`cannot_select_mapping`(0) ⇒ UNDEFINED; `zero_mappings`(2);
+ * `multiple_mappings`(3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

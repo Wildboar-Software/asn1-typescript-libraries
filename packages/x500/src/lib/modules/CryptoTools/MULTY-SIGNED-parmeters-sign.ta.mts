@@ -15,6 +15,8 @@ import {
  * @summary MULTY_SIGNED_parmeters_sign
  * @description
  *
+ * One `{algo, signature}` pair in MULTY-SIGNED `parmeters` (spec spelling).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

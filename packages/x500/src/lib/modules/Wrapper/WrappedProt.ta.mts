@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WrappedProt
  * @description
  *
+ * SEQUENCE `{ id, prot }`: `id` is the protected protocol’s OID;
+ * `prot` is an instance of that protocol’s top-level PrPDU CHOICE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +27,14 @@ export class WrappedProt {
     constructor(
         /**
          * @summary `id`.
+         * @description OID of the protected protocol (`WRAPPED-PROT.&id`).
          * @public
          * @readonly
          */
         readonly id: OBJECT_IDENTIFIER,
         /**
          * @summary `prot`.
+         * @description Top-level PrPDU CHOICE of the protocol identified by `id`.
          * @public
          * @readonly
          */

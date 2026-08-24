@@ -16,6 +16,8 @@ import {
  * @summary name
  * @description
  *
+ * Supertype of typical naming strings (`commonName`, `surname`, `givenName`, `initials`, `generationQualifier`, `title`, `organizationalUnitName`, `organizationName`, `localityName`, `stateOrProvinceName`, `dmdName`, country codes, `pseudonym`). Equality `caseIgnoreMatch`; substrings `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

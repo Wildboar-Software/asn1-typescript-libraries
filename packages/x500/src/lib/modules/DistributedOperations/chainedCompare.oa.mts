@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedCompare
  * @description
  *
+ * `chained{compare}`. Same opcode as DAP `compare`. `dsaReferral`
+ * instead of `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

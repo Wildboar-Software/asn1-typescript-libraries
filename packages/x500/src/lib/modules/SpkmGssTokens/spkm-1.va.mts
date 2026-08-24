@@ -5,6 +5,11 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary spkm_1
  * @description
  *
+ * SPKM-1 mechanism OID. Replay during context establishment uses random
+ * numbers (no secure timestamps). Unilateral: `SPKM-REQ` + `SPKM-REP-TI`
+ * (authenticates target to initiator). Mutual: also `SPKM-REP-IT`.
+ * Two-pass K-ALGs (e.g. DH) are allowed only for SPKM-1 mutual.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

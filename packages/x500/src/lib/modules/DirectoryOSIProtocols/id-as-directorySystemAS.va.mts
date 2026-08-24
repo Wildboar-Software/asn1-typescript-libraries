@@ -5,6 +5,9 @@ import { id_as } from "../UsefulDefinitions/id-as.va.mjs";
  * @summary id_as_directorySystemAS
  * @description
  *
+ * {id-as 2}. DSP abstract syntax. OSI Bind PC-list: this + `id-acseAS`,
+ * distinct odd PCIs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

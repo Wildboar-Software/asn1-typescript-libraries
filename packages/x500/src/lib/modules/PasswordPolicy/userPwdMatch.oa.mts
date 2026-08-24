@@ -7,9 +7,10 @@ import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs"
  * @summary userPwdMatch
  * @description
  *
- * Equality matching rule whose assertion and stored syntax are
- * {@link UserPwd}. Used to compare a proposed password with the directory
- * value (clear vs encrypted alternatives).
+ * `clear` vs `clear`: caseExactMatch. `clear` vs `encrypted`: encrypt
+ * the presented clear using the stored algorithm (or vice versa), then
+ * octetStringMatch. Both `encrypted`: algorithm id+params must match
+ * else fail, then octet-compare ciphertexts.
  *
  * ### ASN.1 Definition:
  *

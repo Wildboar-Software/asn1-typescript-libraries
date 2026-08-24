@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Period_months_bitMonth
  * @description
  *
+ * BIT STRING; january = 0 … december = 11 (`intMonth` January = 1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,12 +18,20 @@ export type Period_months_bitMonth = BIT_STRING;
 
 /**
  * @summary Period_months_bitMonth_january
+ * @description
+ *
+ * BIT january = 0 (`intMonth` January = 1).
+ *
  * @constant
  */
 export const Period_months_bitMonth_january: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary january
+ * @description
+ *
+ * BIT january = 0 (`intMonth` January = 1).
+ *
  * @constant
  */
 export const january: number = Period_months_bitMonth_january; /* SHORT_NAMED_BIT */

@@ -13,6 +13,11 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdLockoutDuration
  * @description
  *
+ * Lockout seconds after too many consecutive failures (more than
+ * `pwdMaxFailures` or its default). INTEGER (0..MAX). **Absent ⇒
+ * infinity.** Object-entry value overrides a covering password-policy
+ * subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

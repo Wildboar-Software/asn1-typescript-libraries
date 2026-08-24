@@ -10,6 +10,9 @@ import { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-ls
  * @summary attributeTypeDescription
  * @description
  *
+ * LDAP schema listing: ABNF encoding of an attribute type description
+ * (IETF RFC 4512) without line breaks.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

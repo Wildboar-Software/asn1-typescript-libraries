@@ -12,6 +12,11 @@ import {
  * @summary dSABind
  * @description
  *
+ * DSP bind. Errors `directoryBindError`. `strong`/`spkm` ⇒ responder
+ * may sign the error. Bind security problems:
+ * `inappropriateAuthentication`, `invalidCredentials`,
+ * `blockedCredentials`. Bind service: `unavailable`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

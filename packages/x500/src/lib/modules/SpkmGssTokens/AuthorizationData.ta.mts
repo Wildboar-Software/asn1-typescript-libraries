@@ -10,6 +10,12 @@ import {
  * @summary AuthorizationData
  * @description
  *
+ * Kerberos authorization data (RFC 1510), carried opaquely by SPKM.
+ * All elements must be satisfied (AND). Unknown `ad-type`: reject the
+ * request unless the type is optional (negative `ad-type` means skip if
+ * not understood). Duplicate types: first is preferred/more specific.
+ * Empty SEQUENCE means no authorization data constraints.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

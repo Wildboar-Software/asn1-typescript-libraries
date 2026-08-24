@@ -14,6 +14,8 @@ import {
  * @summary telexNumber
  * @description
  *
+ * SEQUENCE of three PrintableStrings: `telexNumber` (SIZE 1..14), `countryCode` (1..4), `answerback` (1..8). Component order is significant. No equality matching rule on the ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

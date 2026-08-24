@@ -10,6 +10,11 @@ import {
  * @summary TbsHandshakeAcc_sigSel
  * @description
  *
+ * `altSigAlg` iff the client included an alternative signature algorithm
+ * **and** the server supports it; otherwise `sigAlg`. That choice is
+ * used for the rest of the association and to produce `signature`;
+ * `altSignature` shall be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,9 @@ import {
  * @summary RemoteDSAList
  * @description
  *
+ * SET OF `AccessPoint`. Unordered; SET encoding forbids duplicates. Empty SET
+ * means no remote DSAs. MATCHES FOR EQUALITY is set equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

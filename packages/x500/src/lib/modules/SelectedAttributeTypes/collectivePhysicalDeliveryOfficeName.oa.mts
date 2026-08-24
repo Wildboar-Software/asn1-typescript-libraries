@@ -10,6 +10,8 @@ import { physicalDeliveryOfficeName } from "../SelectedAttributeTypes/physicalDe
  * @summary collectivePhysicalDeliveryOfficeName
  * @description
  *
+ * COLLECTIVE TRUE, SUBTYPE OF `physicalDeliveryOfficeName`. Stored in subentries covering a collection; not modified on ordinary entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

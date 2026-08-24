@@ -15,6 +15,10 @@ export enum _enum_for_SequenceMatchType {
  * @summary SequenceMatchType
  * @description
  *
+ * Control-attribute syntax for generalWordMatch. SINGLE VALUE; applies
+ * to following initial/any/final. Default sequenceExact. Does not apply
+ * to initial/final words.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,11 @@ export type SequenceMatchType = _enum_for_SequenceMatchType | ENUMERATED;
 
 /**
  * @summary SequenceMatchType_sequenceExact
+ * @description
+ *
+ * Unchanged sequence. Default before first sequenceMatchType control.
+ * Does not apply to initial/final words.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +50,11 @@ export const SequenceMatchType_sequenceExact: SequenceMatchType = 0; /* LONG_NAM
 
 /**
  * @summary sequenceExact
+ * @description
+ *
+ * Unchanged sequence. Default before first sequenceMatchType control.
+ * Does not apply to initial/final words.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +62,10 @@ export const sequenceExact: SequenceMatchType = SequenceMatchType_sequenceExact;
 
 /**
  * @summary SequenceMatchType_sequenceDeletion
+ * @description
+ *
+ * Delete ≥0 words.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +73,10 @@ export const SequenceMatchType_sequenceDeletion: SequenceMatchType = 1; /* LONG_
 
 /**
  * @summary sequenceDeletion
+ * @description
+ *
+ * Delete ≥0 words.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +84,10 @@ export const sequenceDeletion: SequenceMatchType = SequenceMatchType_sequenceDel
 
 /**
  * @summary SequenceMatchType_sequenceRestrictedDeletion
+ * @description
+ *
+ * Delete ≥0 words but not the first remaining word.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +95,10 @@ export const SequenceMatchType_sequenceRestrictedDeletion: SequenceMatchType = 2
 
 /**
  * @summary sequenceRestrictedDeletion
+ * @description
+ *
+ * Delete ≥0 words but not the first remaining word.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +106,10 @@ export const sequenceRestrictedDeletion: SequenceMatchType = SequenceMatchType_s
 
 /**
  * @summary SequenceMatchType_sequencePermutation
+ * @description
+ *
+ * Permute ≥0 words.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +117,10 @@ export const SequenceMatchType_sequencePermutation: SequenceMatchType = 3; /* LO
 
 /**
  * @summary sequencePermutation
+ * @description
+ *
+ * Permute ≥0 words.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +128,10 @@ export const sequencePermutation: SequenceMatchType = SequenceMatchType_sequence
 
 /**
  * @summary SequenceMatchType_sequencePermutationAndDeletion
+ * @description
+ *
+ * Delete ≥0 then permute remaining.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +139,10 @@ export const SequenceMatchType_sequencePermutationAndDeletion: SequenceMatchType
 
 /**
  * @summary sequencePermutationAndDeletion
+ * @description
+ *
+ * Delete ≥0 then permute remaining.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +150,10 @@ export const sequencePermutationAndDeletion: SequenceMatchType = SequenceMatchTy
 
 /**
  * @summary SequenceMatchType_sequenceProviderDefined
+ * @description
+ *
+ * Implementation-defined insert/delete/permute.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +161,10 @@ export const SequenceMatchType_sequenceProviderDefined: SequenceMatchType = 5; /
 
 /**
  * @summary sequenceProviderDefined
+ * @description
+ *
+ * Implementation-defined insert/delete/permute.
+ *
  * @constant
  * @type {number}
  */

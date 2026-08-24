@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProtocolInformation
  * @description
  *
+ * `protocolInformationMatch` uses `nAddress` only (octetStringMatch);
+ * assertion syntax is OCTET STRING. `profiles` SET is unordered and
+ * ignored by that match. Empty `profiles` SET is ASN.1-legal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +29,21 @@ export class ProtocolInformation {
     constructor(
         /**
          * @summary `nAddress`.
+         * @description
+         *
+         * NSAP octets. The only component used by protocolInformationMatch.
+         *
          * @public
          * @readonly
          */
         readonly nAddress: OCTET_STRING,
         /**
          * @summary `profiles`.
+         * @description
+         *
+         * Unordered SET OF OIDs (network/transport profiles). Ignored by
+         * protocolInformationMatch.
+         *
          * @public
          * @readonly
          */

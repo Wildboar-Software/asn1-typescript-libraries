@@ -15,9 +15,11 @@ import { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa.mjs";
  * @summary userPwd
  * @description
  *
- * Single-valued user attribute of syntax {@link UserPwd} (clear or encrypted).
- * Equality matching is {@link userPwdMatch}. History and recently-expired
- * companions are `userPwdHistory` and `userPwdRecentlyExpired`.
+ * SINGLE VALUE. `clear` UTF8 vs `encrypted` `{algorithmIdentifier,
+ * encryptedString}`. Storing encrypted is **not always compatible**
+ * with presenting encrypted (safe encrypted bind/compare when stored
+ * is `clear`). During rollover, the old value may go to
+ * `userPwdRecentlyExpired`.
  *
  * ### ASN.1 Definition:
  *

@@ -40,6 +40,9 @@ import {
  * @summary CoordinateShadowUpdateResultData
  * @description
  *
+ * Present only when the result is signed. `lastUpdate` may be omitted
+ * before the first successful `updateShadow` for this agreement.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,12 +59,20 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Echo of the agreement being coordinated.
+         *
          * @public
          * @readonly
          */
         readonly agreementID: AgreementID,
         /**
          * @summary `lastUpdate`.
+         * @description
+         *
+         * May be omitted before the first `updateShadow` for this agreement.
+         *
          * @public
          * @readonly
          */
@@ -74,6 +85,10 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Shall be included if this result is signed.
+         *
          * @public
          * @readonly
          */

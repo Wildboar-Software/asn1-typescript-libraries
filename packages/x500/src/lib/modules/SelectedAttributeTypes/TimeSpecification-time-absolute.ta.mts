@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeSpecification_time_absolute
  * @description
  *
+ * `startTime` = `endTime` ⇒ instant. Missing `endTime` ⇒ all times
+ * after `startTime`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,12 +25,20 @@ export class TimeSpecification_time_absolute {
     constructor(
         /**
          * @summary `startTime`.
+         * @description
+         *
+         * Equal to `endTime` ⇒ instant.
+         *
          * @public
          * @readonly
          */
         readonly startTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endTime`.
+         * @description
+         *
+         * Missing ⇒ all times after `startTime`.
+         *
          * @public
          * @readonly
          */

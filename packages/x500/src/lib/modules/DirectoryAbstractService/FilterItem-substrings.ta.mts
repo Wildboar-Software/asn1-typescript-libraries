@@ -15,6 +15,10 @@ import {
  * @summary FilterItem_substrings
  * @description
  *
+ * Substring MR. `strings` SEQUENCE: at most one `initial` (must be
+ * first), at most one `final` (must be last), `any_` in between.
+ * `control` interprets following items, not preceding.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +30,22 @@ export class FilterItem_substrings {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type whose substring MR is applied (subtypes unless
+         * `noSubtypeMatch`).
+         *
          * @public
          * @readonly
          */
         readonly type_: OBJECT_IDENTIFIER,
         /**
          * @summary `strings`.
+         * @description
+         *
+         * SEQUENCE OF. At most one `initial` (first), at most one `final`
+         * (last), `any_` in between. `control` applies to following items.
+         *
          * @public
          * @readonly
          */

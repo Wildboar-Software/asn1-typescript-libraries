@@ -11,6 +11,8 @@ export enum _enum_for_InitializationAbort_diag {
  * @summary InitializationAbort_diag
  * @description
  *
+ * Why the relying party (client) aborted `InitializationAcc`. Wrap this PrPDU in an `ApplAbort` WrPDU (15.6), not `HandshakeProAbort`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,6 +27,10 @@ export type InitializationAbort_diag =
 
 /**
  * @summary InitializationAbort_diag_unsupportedVersion
+ * @description
+ *
+ * Server specified a single version not among those the client proposed.
+ *
  * @constant
  * @type {number}
  */
@@ -32,6 +38,10 @@ export const InitializationAbort_diag_unsupportedVersion: InitializationAbort_di
 
 /**
  * @summary unsupportedVersion
+ * @description
+ *
+ * Server specified a single version not among those the client proposed.
+ *
  * @constant
  * @type {number}
  */
@@ -39,6 +49,10 @@ export const unsupportedVersion: InitializationAbort_diag = InitializationAbort_
 
 /**
  * @summary InitializationAbort_diag_onlySingleVersionAllowed
+ * @description
+ *
+ * Server returned more than one `version` bit. The server shall set exactly one.
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +60,10 @@ export const InitializationAbort_diag_onlySingleVersionAllowed: InitializationAb
 
 /**
  * @summary onlySingleVersionAllowed
+ * @description
+ *
+ * Server returned more than one `version` bit. The server shall set exactly one.
+ *
  * @constant
  * @type {number}
  */

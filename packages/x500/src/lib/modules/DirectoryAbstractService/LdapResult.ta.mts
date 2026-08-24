@@ -15,6 +15,9 @@ import {
  * @summary LdapResult
  * @description
  *
+ * Signed or unsigned SEQUENCE wrapper; semantics live on
+ * `LdapResultData`. ldapTransport result is SEQUENCE OF LDAPMessage.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

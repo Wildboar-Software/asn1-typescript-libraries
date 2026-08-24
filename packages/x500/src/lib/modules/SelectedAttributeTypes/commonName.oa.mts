@@ -15,6 +15,8 @@ import {
  * @summary commonName
  * @description
  *
+ * SUBTYPE OF `name`. Not itself a DN; possibly ambiguous within a limited scope. Variants (nicknames, different orderings) are **separate values**.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

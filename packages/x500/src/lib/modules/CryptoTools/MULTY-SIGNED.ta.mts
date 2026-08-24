@@ -15,6 +15,10 @@ import {
  * @summary MULTY_SIGNED
  * @description
  *
+ * `algorithm` shall be `id-algo-multipleSignaturesAlgo`. Field spelled
+ * `parmeters`. `parmeters` SIZE (1..MAX); empty illegal. Deployment may
+ * require verifying all signatures or any one.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +44,21 @@ export class MULTY_SIGNED<ToBeSigned> {
         readonly toBeSigned: ToBeSigned,
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Shall be `id-algo-multipleSignaturesAlgo`.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parmeters`.
+         * @description
+         *
+         * Spec spelling. SIZE (1..MAX) of `{algo, signature}`; empty illegal.
+         * May require all signatures or any one.
+         *
          * @public
          * @readonly
          */

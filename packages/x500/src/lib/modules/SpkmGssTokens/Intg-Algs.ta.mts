@@ -10,6 +10,14 @@ import {
  * @summary Intg_Algs
  * @description
  *
+ * Offered/agreed I-ALGs (signatures and MACs). Order matters: first is
+ * default; target returns the supported subset in the same relative
+ * order. Must include at least one non-repudiable (signature) and one
+ * repudiable (MAC) algorithm. `md5WithRSAEncryption` is MANDATORY and
+ * currently required for signed context tokens. Subkeys for keyed I-ALGs:
+ * numbered from "0"; `x` is ASCII `'I'`. Signatures do not use a context
+ * subkey.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

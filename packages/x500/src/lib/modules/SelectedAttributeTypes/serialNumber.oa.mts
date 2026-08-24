@@ -13,6 +13,8 @@ import { printableString } from "../SelectedAttributeTypes/printableString.oa.mj
  * @summary serialNumber
  * @description
  *
+ * PrintableString SIZE (1..MAX) identifier of an object — **not** certificate serial `INTEGER`. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

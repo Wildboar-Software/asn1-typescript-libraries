@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeStamp
  * @description
  *
+ * GeneralizedTime: pure UTC with `Z`, no `T` separator, YYYYMMDD +
+ * hhmmss[,frac]; accuracy 1 h / 1 min / 1 s / fraction. Used as trusted
+ * time in key generation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

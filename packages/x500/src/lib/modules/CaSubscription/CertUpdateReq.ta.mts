@@ -19,6 +19,11 @@ import {
  * @summary CertUpdateReq
  * @description
  *
+ * CA→authorizer status updates. `certs` SIZE (1..MAX); empty illegal. Unknown
+ * `subject`/`serialNumber` are whole-message CASP-error `unknownSubject`(7) /
+ * `unknownCert`(8) (14.13), not per-item. `certStatus` must be a valid
+ * CertStatus. Data-transfer WrPDU.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,18 @@ export class CertUpdateReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with the matching response; unique per pair; reusable after completion.
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX); empty is illegal. Same count and order in the response when per-item results are returned.
          * @public
          * @readonly
          */

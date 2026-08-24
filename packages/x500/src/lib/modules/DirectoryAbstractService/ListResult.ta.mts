@@ -15,6 +15,8 @@ import {
  * @summary ListResult
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `ListResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,12 @@ import {
  * @summary PwdResponse
  * @description
  *
+ * If `timeleft` present and ≠ 0, `error` shall be absent.
+ * `graceRemaining` may pair with `passwordExpired`. `timeleft` = 0 or
+ * `graceRemaining` = 0 plus `passwordExpired` ⇒ only change-password
+ * (master). `changeAfterReset` ⇒ warning shall not be present; only
+ * change-password.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class PwdResponse {
     constructor(
         /**
          * @summary `warning`.
+         * @description
+         *
+         * If `timeleft` present and ≠ 0, `error` shall be absent. Shall not
+         * be present with `changeAfterReset`.
+         *
          * @public
          * @readonly
          */
         readonly warning?: OPTIONAL<PwdResponse_warning>,
         /**
          * @summary `error`.
+         * @description
+         *
+         * Absent if `timeleft` present and ≠ 0. `changeAfterReset` ⇒
+         * warning shall not be present.
+         *
          * @public
          * @readonly
          */

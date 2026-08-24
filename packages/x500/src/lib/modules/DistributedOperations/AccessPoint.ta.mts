@@ -24,6 +24,10 @@ import {
  * @summary AccessPoint
  * @description
  *
+ * `ae_title` ignored for LDAP. `address` selectors ignored for IDM and
+ * LDAP. `protocolInformation` ignored for LDAP; SET SIZE (1..MAX) so
+ * omit rather than empty. Tag [6] unused.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +44,32 @@ export class AccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
+         * @description
+         *
+         * DSA's Name. Ignored for LDAP servers.
+         *
          * @public
          * @readonly
          */
         readonly ae_title: Name,
         /**
          * @summary `address`.
+         * @description
+         *
+         * PresentationAddress. For IDM/DSP-over-TCP, ignore pSelector /
+         * sSelector / tSelector. LDAP: those selectors ignored too.
+         *
          * @public
          * @readonly
          */
         readonly address: PresentationAddress,
         /**
          * @summary `protocolInformation`.
+         * @description
+         *
+         * SET SIZE (1..MAX). Ignored for LDAP. Empty SET illegal; omit
+         * instead.
+         *
          * @public
          * @readonly
          */

@@ -7,6 +7,9 @@ import { id_lsx_oid } from "../SelectedAttributeTypes/id-lsx-oid.va.mjs";
  * @summary oid
  * @description
  *
+ * LDAP transfer of OBJECT IDENTIFIER: dot-decimal or descriptor
+ * (IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

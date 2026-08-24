@@ -8,6 +8,9 @@ import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
  * @summary octetStringOrderingMatch
  * @description
  *
+ * MSB-first; first differing bit decides (0 < 1). If prefix-equal, shorter
+ * precedes longer. TRUE iff stored is less/earlier than presented.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary Token
  * @description
  *
+ * SIGNED `TokenContent`. `name` = intended recipient; `time` = expiry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

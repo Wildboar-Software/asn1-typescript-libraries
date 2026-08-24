@@ -10,6 +10,9 @@ import { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeOb
  * @summary epcTagTypeObj
  * @description
  *
+ * Auxiliary: attributes for a type of EPC tag. Only `uiiFormat` is
+ * optional. Sibling of `isoTagType`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,8 @@ import {
  * @summary organizationIdentifier
  * @description
  *
+ * Organization identifier **distinct from** `organizationName`. SINGLE VALUE. `caseIgnoreMatch` / `caseIgnoreSubstringsMatch`. Not a subtype of `name`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

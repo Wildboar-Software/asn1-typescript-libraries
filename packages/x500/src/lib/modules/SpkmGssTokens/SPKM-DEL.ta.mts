@@ -15,6 +15,11 @@ import {
  * @summary SPKM_DEL
  * @description
  *
+ * Context-deletion token (`gss_delete_sec_context` /
+ * `gss_process_context_token`). Same checksum construction as MIC but
+ * with zero-length user data. Valid token → delete context; invalid →
+ * do not delete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +33,20 @@ export class SPKM_DEL {
     constructor(
         /**
          * @summary `del_header`.
+         * @description
+         *
+         * Plaintext header; checksum input is header||empty.
+         *
          * @public
          * @readonly
          */
         readonly del_header: Del_Header,
         /**
          * @summary `int_cksum`.
+         * @description
+         *
+         * Checksum of the header only (empty user data).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,9 @@ import { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-
  * @summary objectClassDescription
  * @description
  *
+ * LDAP schema listing: ABNF encoding of an object class
+ * (IETF RFC 4512).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

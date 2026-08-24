@@ -15,6 +15,9 @@ import {
  * @summary RemoveEntryResult
  * @description
  *
+ * `null_` when unsigned and nothing to return. `information` is the
+ * optionally-signed `RemoveEntryResultData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

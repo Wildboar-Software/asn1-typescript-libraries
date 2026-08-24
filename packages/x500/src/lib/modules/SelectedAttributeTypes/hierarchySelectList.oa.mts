@@ -13,6 +13,11 @@ import { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hie
  * @summary hierarchySelectList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. `HierarchySelections` bit string (X.511). A set bit
+ * means that option is invalid (forbidden, unsupported, or required but
+ * absent). SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

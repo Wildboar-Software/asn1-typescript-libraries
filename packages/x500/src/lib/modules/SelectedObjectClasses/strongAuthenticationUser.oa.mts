@@ -10,6 +10,10 @@ import { id_oc_strongAuthenticationUser } from "../SelectedObjectClasses/id-oc-s
  * @summary strongAuthenticationUser
  * @description
  *
+ * DEPRECATED auxiliary class (X.521 6.15). Prefer `pkiUser` / `pkiCA`
+ * from X.509. Still conformant if used. MUST `userCertificate`. Auxiliary:
+ * added onto an existing structural entry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

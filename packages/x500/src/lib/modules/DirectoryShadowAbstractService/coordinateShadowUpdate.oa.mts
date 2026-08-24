@@ -16,6 +16,14 @@ import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mj
  * @summary coordinateShadowUpdate
  * @description
  *
+ * Supplier-initiated: names the agreement the supplier will next update.
+ * Request+result must precede `updateShadow` for that agreement; only one
+ * `updateShadow` per coordinate; only one outstanding coordinate per
+ * agreement. Transport failure before a positive `updateShadow` result
+ * means the pair failed — a later coordinate for the same agreement is
+ * accepted (the prior outstanding one is discarded, not errored).
+ * `invalidInformationReceived` is never returned for this operation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

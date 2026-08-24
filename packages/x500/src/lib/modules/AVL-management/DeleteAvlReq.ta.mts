@@ -19,6 +19,8 @@ import {
  * @summary DeleteAvlReq
  * @description
  *
+ * Authorizer deletes an AVL. Embed in `DataTransferClient`. `avl-Id` present: must match a local AVL serial. **Absent**: the unique local AVL that itself has no `serialNumber`; otherwise `unknownAVL`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +35,20 @@ export class DeleteAvlReq {
     constructor(
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Pairs this request with `DeleteAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+         *
          * @public
          * @readonly
          */
         readonly invokeID: InvokeID,
         /**
          * @summary `avl_Id`.
+         * @description
+         *
+         * Serial of the AVL to delete (`avl-Id`). Absent means the unique local AVL with no `serialNumber`.
+         *
          * @public
          * @readonly
          */

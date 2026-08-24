@@ -29,6 +29,9 @@ import {
  * @summary CoordinateShadowUpdateArgumentData
  * @description
  *
+ * Supplier's intent to send one update for `agreementID`. Must complete
+ * (request+result) before the matching `updateShadow`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +55,46 @@ export class CoordinateShadowUpdateArgumentData {
     constructor(
         /**
          * @summary `agreementID`.
+         * @description
+         *
+         * Agreement this coordinate applies to. Unknown →
+         * `invalidAgreementID`; known but inactive → `inactiveAgreement`.
+         *
          * @public
          * @readonly
          */
         readonly agreementID: AgreementID,
         /**
          * @summary `lastUpdate`.
+         * @description
+         *
+         * Supplier's time from the most recent successful update. Absent if
+         * there has never been one, or if a full update is wanted even with
+         * no changes (e.g. recovery). Later than the consumer's view →
+         * `missedPrevious`; earlier → `updateAlreadyReceived`.
+         *
          * @public
          * @readonly
          */
         readonly lastUpdate: OPTIONAL<Time>,
         /**
          * @summary `updateStrategy`.
+         * @description
+         *
+         * Strategy the supplier intends. `noChanges` shall be followed by
+         * `updateShadow` with `RefreshInformation.noRefresh`. Unsupported
+         * → `unsupportedStrategy`.
+         *
          * @public
          * @readonly
          */
         readonly updateStrategy: CoordinateShadowUpdateArgumentData_updateStrategy,
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if this argument is signed. `target` is `none`.
+         *
          * @public
          * @readonly
          */

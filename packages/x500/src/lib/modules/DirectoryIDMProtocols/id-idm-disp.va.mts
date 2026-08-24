@@ -5,6 +5,10 @@ import { id_idm } from "../UsefulDefinitions/id-idm.va.mjs";
  * @summary id_idm_disp
  * @description
  *
+ * {id-idm 2}. `protocolID` for DISP-over-IDM (`disp-ip`). One IDM
+ * protocol for all DISP ops (unlike OSI, which splits by initiator
+ * and sync/async). Both sides may request. Always async.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

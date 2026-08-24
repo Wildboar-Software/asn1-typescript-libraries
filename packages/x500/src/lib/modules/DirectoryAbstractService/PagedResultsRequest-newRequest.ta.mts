@@ -16,6 +16,15 @@ import {
  * @summary PagedResultsRequest_newRequest
  * @description
  *
+ * First page. DSA may ignore paging. If paging is performed, the paging
+ * DSA ignores `sizeLimit`. Family members packaged in
+ * `family-information` do not count toward `pageSize`. First `sortKeys`
+ * element is primary. List sorts by RDN (keys apply only to RDN
+ * attributes); Search fallback is DN. Multi-valued: least value (greatest
+ * if `reverse`). Missing attribute: greater than all (less if `reverse`).
+ * `reverse`/`unmerged` ignored if no `sortKeys`. `pageNumber` ignored if
+ * ordering not requested.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,30 +36,58 @@ export class PagedResultsRequest_newRequest {
     constructor(
         /**
          * @summary `pageSize`.
+         * @description
+         *
+         * Max subordinates/entries. Family members inside
+         * `family-information` do not count. If paging is performed, the
+         * paging DSA ignores `sizeLimit`.
+         *
          * @public
          * @readonly
          */
         readonly pageSize: INTEGER,
         /**
          * @summary `sortKeys`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX); first is primary. List: keys apply only to
+         * RDN attributes. Search: only returned attributes; fallback DN.
+         * Ignore a key with no ordering rule. Multi-valued: least value
+         * (greatest if `reverse`). Missing attr: greater than all (less if
+         * `reverse`).
+         *
          * @public
          * @readonly
          */
         readonly sortKeys?: OPTIONAL<SortKey[]>,
         /**
          * @summary `reverse`.
+         * @description
+         *
+         * DEFAULT FALSE. Ignored if no `sortKeys`.
+         *
          * @public
          * @readonly
          */
         readonly reverse?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `unmerged`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE ⇒ each contributing DSA's data (sorted) before
+         * the next; FALSE ⇒ merge then sort. Ignored if no `sortKeys`.
+         *
          * @public
          * @readonly
          */
         readonly unmerged?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pageNumber`.
+         * @description
+         *
+         * Start at that page, not the first. Ignored if ordering not
+         * requested.
+         *
          * @public
          * @readonly
          */

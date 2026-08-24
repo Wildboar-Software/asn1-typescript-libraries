@@ -14,6 +14,8 @@ import {
  * @summary InitializationAcc
  * @description
  *
+ * TB (server) accepts the client's `InitializationReq`. Embed in a `HandshakeAcc` WrPDU. If the client rejects this, it sends `InitializationAbort` in `ApplAbort`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +29,10 @@ export class InitializationAcc {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * BIT STRING: exactly one bit, chosen from those the client offered (highest should be chosen). Current version is `v1`.
+         *
          * @public
          * @readonly
          */

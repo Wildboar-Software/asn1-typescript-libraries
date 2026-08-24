@@ -12,6 +12,10 @@ export enum _enum_for_ZonalResult {
  * @summary ZonalResult
  * @description
  *
+ * 0 cannot-select-mapping ⇒ UNDEFINED; 1 unused; 2 zero-mappings ⇒
+ * serviceError unmatchedKeyAttributes; 3 multiple-mappings ⇒
+ * serviceError ambiguousKeyAttributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,10 @@ export type ZonalResult = _enum_for_ZonalResult | ENUMERATED;
 
 /**
  * @summary ZonalResult_cannot_select_mapping
+ * @description
+ *
+ * Insufficient info to pick mapping ⇒ match UNDEFINED.
+ *
  * @constant
  * @type {number}
  */
@@ -35,6 +43,10 @@ export const ZonalResult_cannot_select_mapping: ZonalResult = 0; /* LONG_NAMED_E
 
 /**
  * @summary cannot_select_mapping
+ * @description
+ *
+ * Insufficient info to pick mapping ⇒ match UNDEFINED.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +54,11 @@ export const cannot_select_mapping: ZonalResult = ZonalResult_cannot_select_mapp
 
 /**
  * @summary ZonalResult_zero_mappings
+ * @description
+ *
+ * No gazetteer mapping / zero filter items ⇒ serviceError
+ * unmatchedKeyAttributes. (Value 1 is unused.)
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +66,11 @@ export const ZonalResult_zero_mappings: ZonalResult = 2; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary zero_mappings
+ * @description
+ *
+ * No gazetteer mapping / zero filter items ⇒ serviceError
+ * unmatchedKeyAttributes. (Value 1 is unused.)
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +78,11 @@ export const zero_mappings: ZonalResult = ZonalResult_zero_mappings; /* SHORT_NA
 
 /**
  * @summary ZonalResult_multiple_mappings
+ * @description
+ *
+ * Multiple gazetteer hits ⇒ serviceError ambiguousKeyAttributes +
+ * MultipleMatchingLocalities.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +90,11 @@ export const ZonalResult_multiple_mappings: ZonalResult = 3; /* LONG_NAMED_ENUME
 
 /**
  * @summary multiple_mappings
+ * @description
+ *
+ * Multiple gazetteer hits ⇒ serviceError ambiguousKeyAttributes +
+ * MultipleMatchingLocalities.
+ *
  * @constant
  * @type {number}
  */

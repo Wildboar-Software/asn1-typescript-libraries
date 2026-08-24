@@ -14,6 +14,12 @@ import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/Telecomm
  * @summary organizationalPerson
  * @description
  *
+ * Person employed by, or otherwise associated with, an organization.
+ * Subclass of `person` (so `commonName` and `surname` remain mandatory).
+ * `orgPersonNameForm` names with `commonName` and optionally
+ * `organizationalUnitName` in the RDN. Typical superiors: organization or
+ * organizationalUnit, not locality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

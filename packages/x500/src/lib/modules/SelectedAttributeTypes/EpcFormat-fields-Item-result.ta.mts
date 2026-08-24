@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EpcFormat_fields_Item_result
  * @description
  *
+ * How to convert the bit field. DEFAULT numericPad(0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +26,8 @@ export enum _enum_for_EpcFormat_fields_Item_result {
  * @summary EpcFormat_fields_Item_result
  * @description
  *
+ * How to convert the bit field. DEFAULT numericPad(0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +42,8 @@ export type EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resul
  * @summary EpcFormat_fields_Item_result
  * @description
  *
+ * How to convert the bit field. DEFAULT numericPad(0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +56,11 @@ export const EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resu
 
 /**
  * @summary EpcFormat_fields_Item_result_numericPad
+ * @description
+ *
+ * Unsigned int to numeric string; pad with '0' to `characters` width.
+ * `characters` alternative of charField shall be taken. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +69,11 @@ export const EpcFormat_fields_Item_result_numericPad: EpcFormat_fields_Item_resu
 
 /**
  * @summary numericPad
+ * @description
+ *
+ * Unsigned int to numeric string; pad with '0' to `characters` width.
+ * `characters` alternative of charField shall be taken. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +82,10 @@ export const numericPad: EpcFormat_fields_Item_result =
 
 /**
  * @summary EpcFormat_fields_Item_result_numeric
+ * @description
+ *
+ * Unsigned int; no leading zeros; all-zero bits ⇒ single '0'.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +94,10 @@ export const EpcFormat_fields_Item_result_numeric: EpcFormat_fields_Item_result 
 
 /**
  * @summary numeric
+ * @description
+ *
+ * Unsigned int; no leading zeros; all-zero bits ⇒ single '0'.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +106,10 @@ export const numeric: EpcFormat_fields_Item_result =
 
 /**
  * @summary EpcFormat_fields_Item_result_alpha7bits
+ * @description
+ *
+ * 7-bit subfields as ASCII.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +118,10 @@ export const EpcFormat_fields_Item_result_alpha7bits: EpcFormat_fields_Item_resu
 
 /**
  * @summary alpha7bits
+ * @description
+ *
+ * 7-bit subfields as ASCII.
+ *
  * @constant
  * @type {number}
  */

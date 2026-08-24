@@ -13,6 +13,10 @@ import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingM
  * @summary pwdMaxFailures
  * @description
  *
+ * Consecutive failures before lockout. INTEGER (1..MAX). **Absent ⇒
+ * no limit.** Object-entry value overrides a covering password-policy
+ * subentry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

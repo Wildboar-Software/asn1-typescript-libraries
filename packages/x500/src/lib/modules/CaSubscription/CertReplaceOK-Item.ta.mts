@@ -15,6 +15,9 @@ import {
  * @summary CertReplaceOK_Item
  * @description
  *
+ * One per requested replacement, same order. `ok` uses `issuer`+`serialNumber`;
+ * `not_ok` if `old` unknown (`unknownCert`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

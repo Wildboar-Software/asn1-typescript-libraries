@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ResourceSyntax
  * @description
  *
+ * INTEGER, not ENUMERATED. Notification parameter identifying an exhausted
+ * resource. Named values are 0, 1, 2, and 4; there is no `3`.
+ * `insufficientMemory`(0) is a named reason, not "unspecified".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -18,6 +22,10 @@ export type ResourceSyntax = INTEGER;
 
 /**
  * @summary ResourceSyntax_insufficientMemory
+ * @description
+ *
+ * Named reason `0`, not "unspecified".
+ *
  * @constant
  * @type {number}
  */
@@ -25,6 +33,10 @@ export const ResourceSyntax_insufficientMemory: ResourceSyntax = 0; /* LONG_NAME
 
 /**
  * @summary ResourceSyntax_insufficientMemory
+ * @description
+ *
+ * Named reason `0`, not "unspecified".
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +72,10 @@ export const insufficientDiskSpace: ResourceSyntax = ResourceSyntax_insufficient
 
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
+ * @description
+ *
+ * Value 4; there is no ResourceSyntax 3.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +83,10 @@ export const ResourceSyntax_miscellaneousResourceExhausted: ResourceSyntax = 4; 
 
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
+ * @description
+ *
+ * Value 4; there is no ResourceSyntax 3.
+ *
  * @constant
  * @type {number}
  */

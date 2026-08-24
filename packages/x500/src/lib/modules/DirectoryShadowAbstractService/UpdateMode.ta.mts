@@ -15,6 +15,10 @@ import {
  * @summary UpdateMode
  * @description
  *
+ * Who is expected to drive updates. Does not forbid the other party from
+ * initiating an update outside the agreed times. Default on the agreement
+ * is `supplierInitiated:onChange:TRUE`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

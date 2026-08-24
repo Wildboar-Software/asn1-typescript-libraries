@@ -6,6 +6,12 @@ import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
  * @summary OPERATION
  * @description
  *
+ * Ties a request to optional result/errors via `&operationCode`. Absent
+ * `&ResultType` ⇒ no result; absent `&Errors` ⇒ no error; absent
+ * `&operationCode` ⇒ Bind (no InvokeId). Codes are UNIQUE within a
+ * protocol, not across DAP/DSP vs DISP vs DOP. Does not imply sequencing:
+ * sync vs async is a property of the association / application-context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,18 +61,32 @@ export interface OPERATION<
     >;
     /**
      * @summary &ArgumentType
+     * @description
+     *
+     * Open type for the request. Absent ⇒ no argument.
      */
     readonly "&ArgumentType": ArgumentType;
     /**
      * @summary &ResultType
+     * @description
+     *
+     * Open type for a successful reply. Absent ⇒ no result.
      */
     readonly "&ResultType": ResultType;
     /**
      * @summary &Errors
+     * @description
+     *
+     * Errors that may be returned instead of a result. Absent ⇒ no error
+     * associated with the operation.
      */
     readonly "&Errors"?: ERROR[];
     /**
      * @summary &operationCode
+     * @description
+     *
+     * UNIQUE within the protocol. Absent for Bind. Directory uses `local`
+     * integers; the same integer may mean different ops in DAP vs DISP.
      */
     readonly "&operationCode"?: Code;
 }

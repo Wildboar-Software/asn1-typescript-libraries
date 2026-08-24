@@ -20,6 +20,13 @@ import {
  * @summary RefreshInformation
  * @description
  *
+ * Payload of `updateShadow`. `noRefresh` = nothing changed; allowed for a
+ * scheduled empty tick, but *not* when the preceding coordinate/request
+ * omitted `lastUpdate`. `total` replaces the whole unit (SDSEs formerly
+ * present and now omitted are deleted). `incremental` is deltas between
+ * the last `lastUpdate` and this `updateTime`. `otherStrategy` is outside
+ * this Specification.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

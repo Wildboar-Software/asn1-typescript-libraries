@@ -7,6 +7,9 @@ import { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applPr
  * @summary applProcessNameForm
  * @description
  *
+ * Names `applicationProcess` by `commonName`. Typical superiors:
+ * organization or organizationalUnit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

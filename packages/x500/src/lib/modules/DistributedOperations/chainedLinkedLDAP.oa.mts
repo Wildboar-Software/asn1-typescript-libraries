@@ -7,6 +7,9 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @summary chainedLinkedLDAP
  * @description
  *
+ * `chained{linkedLDAP}`. Same opcode as DAP `linkedLDAP`.
+ * `dsaReferral` instead of `referral`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

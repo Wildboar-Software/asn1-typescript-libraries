@@ -9,6 +9,11 @@ import {
  * @summary id_acseAS
  * @description
  *
+ * ACSE abstract syntax `{joint-iso-itu-t association-control(2)
+ * abstract-syntax(1) apdus(0) version(1)}`. Always one of the two
+ * presentation contexts on a Directory OSI Bind. User-data of the CP
+ * PPDU uses the ACSE PCI, not the Directory PCI.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

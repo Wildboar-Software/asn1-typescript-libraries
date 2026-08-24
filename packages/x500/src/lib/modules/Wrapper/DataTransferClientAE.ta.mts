@@ -15,6 +15,10 @@ import {
  * @summary DataTransferClientAE
  * @description
  *
+ * AUTHEN-ENCRYPT{AadClientAE, PrPDU} when handshake `encr-mode` was `aead`.
+ * AAD is not encrypted; the PrPDU is. `encInvoke` on the AAD holds AEAD dyn
+ * parms if any.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

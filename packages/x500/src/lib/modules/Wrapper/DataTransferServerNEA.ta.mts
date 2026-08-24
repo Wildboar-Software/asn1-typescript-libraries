@@ -15,6 +15,11 @@ import {
  * @summary DataTransferServerNEA
  * @description
  *
+ * ICV-Invoke{TbpDataTransferServer} when handshake `encr-mode` was
+ * `non-aead`. `encInvoke` holds symmetric dyn parms (AES-CBC IV 16 octets)
+ * if encryption is required and the alg has dyn parms. `conf.clear` vs
+ * `conf.protected` (ENCIPHERED PrPDU).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

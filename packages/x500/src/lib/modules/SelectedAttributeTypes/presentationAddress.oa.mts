@@ -15,6 +15,8 @@ import { presentationAddressMatch } from "../SelectedAttributeTypes/presentation
  * @summary presentationAddress
  * @description
  *
+ * SINGLE VALUE. Optional `pSelector`/`sSelector`/`tSelector`; `nAddresses` SET SIZE (1..MAX) — unordered, at least one. `presentationAddressMatch`: selectors equal **and** presented `nAddresses` is a **subset** of stored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

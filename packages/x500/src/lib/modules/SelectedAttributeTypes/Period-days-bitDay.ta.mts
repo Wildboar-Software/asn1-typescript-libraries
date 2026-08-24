@@ -6,6 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Period_days_bitDay
  * @description
  *
+ * BIT STRING; sunday = 0 … saturday = 6 (not INTEGER Sunday = 1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,12 +18,20 @@ export type Period_days_bitDay = BIT_STRING;
 
 /**
  * @summary Period_days_bitDay_sunday
+ * @description
+ *
+ * BIT sunday = 0 (`intDay` Sunday = 1 when preceding weeks).
+ *
  * @constant
  */
 export const Period_days_bitDay_sunday: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary sunday
+ * @description
+ *
+ * BIT sunday = 0 (`intDay` Sunday = 1 when preceding weeks).
+ *
  * @constant
  */
 export const sunday: number = Period_days_bitDay_sunday; /* SHORT_NAMED_BIT */

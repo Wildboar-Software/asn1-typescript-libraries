@@ -24,6 +24,10 @@ import {
  * @summary REP_TI_TOKEN
  * @description
  *
+ * Integrity wrapper around `Rep-ti-contents`. `algId` currently must be
+ * `md5WithRSAEncryption` when signed. Integrity is over DER of
+ * `Rep-ti-contents`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +43,30 @@ export class REP_TI_TOKEN {
     constructor(
         /**
          * @summary `rep_ti_contents`.
+         * @description
+         *
+         * The "token" over which `rep_ti_integ` is computed.
+         *
          * @public
          * @readonly
          */
         readonly rep_ti_contents: Rep_ti_contents,
         /**
          * @summary `algId`.
+         * @description
+         *
+         * Signature or MAC algorithm for `rep_ti_integ`.
+         *
          * @public
          * @readonly
          */
         readonly algId: AlgorithmIdentifier,
         /**
          * @summary `rep_ti_integ`.
+         * @description
+         *
+         * Signature or MAC of DER(`rep-ti-contents`) per `algId`.
+         *
          * @public
          * @readonly
          */

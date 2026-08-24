@@ -10,6 +10,8 @@ import {
  * @summary uUIDPairMatch
  * @description
  *
+ * TRUE iff both UUIDs equal (16-octet each).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

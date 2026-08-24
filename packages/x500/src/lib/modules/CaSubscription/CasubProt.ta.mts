@@ -70,6 +70,11 @@ import {
  * @summary CasubProt
  * @description
  *
+ * CASP PrPDU CHOICE. Only for authorizers of constrained AVL entities;
+ * authorizer subscribes to CAs for EE cert status. `initReq` → HandshakeReq;
+ * `initAcc` → HandshakeAcc; `initRej` → HandshakeProRej; `initAbt` → ApplAbort
+ * (14.6). Remaining alternatives are data-transfer PrPDUs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

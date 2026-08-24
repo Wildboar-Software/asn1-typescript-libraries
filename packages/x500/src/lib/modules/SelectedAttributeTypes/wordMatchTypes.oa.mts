@@ -13,6 +13,9 @@ import {
  * @summary wordMatchTypes
  * @description
  *
+ * Control attribute (not a matching rule) for generalWordMatch. SINGLE
+ * VALUE. Applies to following assertion items. Default wordExact.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

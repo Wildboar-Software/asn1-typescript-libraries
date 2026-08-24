@@ -15,6 +15,9 @@ import {
  * @summary AbandonArgument
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `AbandonArgumentData`.
+ * Enquiry ops only (Read, Compare, List, Search).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

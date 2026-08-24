@@ -13,6 +13,12 @@ import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.
  * @summary locality
  * @description
  *
+ * Locality DIT entry. No MUST CONTAIN in ASN.1, but X.521 requires at
+ * least one of `localityName` or `stateOrProvinceName`. Two name forms:
+ * `locNameForm` (`localityName`) and `sOPNameForm`
+ * (`stateOrProvinceName`). Typical superiors (Annex B): root, country,
+ * locality, organization, or organizationalUnit.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

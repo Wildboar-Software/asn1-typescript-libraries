@@ -10,6 +10,11 @@ import {
  * @summary SecondaryShadows
  * @description
  *
+ * SET OF `SupplierAndConsumers`: access points of DSAs holding secondary
+ * shadows of a naming context. Unordered; SET forbids duplicates. Empty SET
+ * means none known. GDMO allows ADD-REMOVE. MATCHES FOR EQUALITY is set
+ * equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

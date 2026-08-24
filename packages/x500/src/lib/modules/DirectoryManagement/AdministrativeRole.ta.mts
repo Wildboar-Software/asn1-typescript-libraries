@@ -5,6 +5,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AdministrativeRole
  * @description
  *
+ * OBJECT-CLASS.&id of an administrative-role object class (`id-ar-*`, e.g.
+ * autonomous area, access-control specific area). Marks the start of that
+ * administrative area; maps to the Directory `administrativeRole` attribute.
+ * Equality is OID equality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary ModifyEntryArgument
  * @description
  *
+ * Signed or unsigned wrapper. Semantics live on `ModifyEntryArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

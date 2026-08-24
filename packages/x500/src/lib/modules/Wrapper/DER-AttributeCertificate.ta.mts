@@ -5,6 +5,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DER_AttributeCertificate
  * @description
  *
+ * OCTET STRING containing an AttributeCertificate **DER**-encoded
+ * (access control), so the outer WrPDU need not be DER.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,10 @@ import {
  * @summary CommonResults
  * @description
  *
+ * SET of common result fields. Present on retrieval results and every
+ * returned error. `CommonResultsSeq` is the SEQUENCE form.
+ * `securityParameters` absence ≡ empty; required if signed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +46,43 @@ export class CommonResults {
     constructor(
         /**
          * @summary `securityParameters`.
+         * @description
+         *
+         * Required if the result/error is signed; absence ≡ empty set.
+         *
          * @public
          * @readonly
          */
         readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `performer`.
+         * @description
+         *
+         * DN of the DSA that signed; needed when the result is signed.
+         *
          * @public
          * @readonly
          */
         readonly performer?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `aliasDereferenced`.
+         * @description
+         *
+         * DEFAULT FALSE. TRUE if any alias in the purported name was
+         * dereferenced.
+         *
          * @public
          * @readonly
          */
         readonly aliasDereferenced?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `notification`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..MAX). Qualifies the result/error; not
+         * necessarily stored attributes. Standard notification attrs in
+         * X.520 clause 6.13.
+         *
          * @public
          * @readonly
          */

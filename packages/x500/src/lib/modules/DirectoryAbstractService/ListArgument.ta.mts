@@ -15,6 +15,8 @@ import {
  * @summary ListArgument
  * @description
  *
+ * Signed or unsigned wrapper; semantics live on `ListArgumentData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

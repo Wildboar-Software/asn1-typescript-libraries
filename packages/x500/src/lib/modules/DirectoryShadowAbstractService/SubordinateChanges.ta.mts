@@ -19,6 +19,12 @@ import {
  * @summary SubordinateChanges
  * @description
  *
+ * Incremental changes under one subordinate RDN. SEQUENCE OF these (on
+ * `IncrementalStepRefresh.subordinateUpdates`) is applied in order, e.g.
+ * to reuse a distinguished name. The RDN is primary and includes contexts
+ * plus alternative distinguished values unless context selection reduced
+ * them.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +39,23 @@ export class SubordinateChanges {
     constructor(
         /**
          * @summary `subordinate`.
+         * @description
+         *
+         * Primary RDN of the subordinate SDSE. Include contexts and all
+         * alternative distinguished values unless the agreement's context
+         * selection reduced them.
+         *
          * @public
          * @readonly
          */
         readonly subordinate: RelativeDistinguishedName,
         /**
          * @summary `changes`.
+         * @description
+         *
+         * Incremental step to apply under that RDN (may itself recurse via
+         * `subordinateUpdates`).
+         *
          * @public
          * @readonly
          */

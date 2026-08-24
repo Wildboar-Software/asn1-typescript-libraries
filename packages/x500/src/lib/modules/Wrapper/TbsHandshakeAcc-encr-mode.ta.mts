@@ -15,6 +15,12 @@ import {
  * @summary TbsHandshakeAcc_encr_mode
  * @description
  *
+ * Same CHOICE alternative as the client’s `HandshakeReq`. `aead`: the
+ * **first supported** AEAD algorithm (single, not a sequence).
+ * `non_aead`: same components as the request; `encr` first supported
+ * symmetric-key alg if the client included `encr`; `icvAlgID` first
+ * supported ICV alg.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

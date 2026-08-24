@@ -17,6 +17,11 @@ import { id_oc_applicationEntity } from "../SelectedObjectClasses/id-oc-applicat
  * @summary applicationEntity
  * @description
  *
+ * OSI application-entity: those aspects of an application process
+ * pertinent to communications. If stored as a Directory object distinct
+ * from the process, `commonName` holds the Application Entity Qualifier.
+ * MUST `presentationAddress`. Typical superior: `applicationProcess`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

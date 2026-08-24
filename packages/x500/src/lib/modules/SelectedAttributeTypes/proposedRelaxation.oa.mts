@@ -13,6 +13,11 @@ import {
  * @summary proposedRelaxation
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. SEQUENCE OF `MRMapping` (`MRMappings`) that may be
+ * supplied as RelaxationPolicy.relaxation in a subsequent search. Sequence
+ * order has no significance.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

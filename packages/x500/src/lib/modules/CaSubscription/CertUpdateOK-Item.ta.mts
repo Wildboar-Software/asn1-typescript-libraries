@@ -15,6 +15,9 @@ import {
  * @summary CertUpdateOK_Item
  * @description
  *
+ * One per requested update, same order. `ok` if processed; `not_ok` if not
+ * identified.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -13,6 +13,11 @@ import { id_not_serviceControlOptionsList } from "../SelectedAttributeTypes/id-n
  * @summary serviceControlOptionsList
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. `ServiceControlOptions` bit string (X.511 clause 7.5).
+ * A set bit means that option is invalid (forbidden, unsupported, or required
+ * but absent). SINGLE VALUE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

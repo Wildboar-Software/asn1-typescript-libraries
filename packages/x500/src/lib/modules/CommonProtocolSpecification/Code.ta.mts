@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Code
  * @description
  *
+ * CHOICE `local` INTEGER or `global` OID. Directory protocols use `local`
+ * integers. Local codes are protocol-scoped, not globally unique: DAP/DSP
+ * share 1–13; DISP independently reuses 1–3; DOP uses 100–102. Bind has no
+ * code. Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

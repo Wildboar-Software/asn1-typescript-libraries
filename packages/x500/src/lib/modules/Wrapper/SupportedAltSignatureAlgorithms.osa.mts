@@ -4,6 +4,8 @@ import { type ALGORITHM } from "@wildboar/pki-stub";
  * @summary SupportedAltSignatureAlgorithms
  * @description
  *
+ * Extensible set of supported alternative signature algorithms; annex leaves `{...}` empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

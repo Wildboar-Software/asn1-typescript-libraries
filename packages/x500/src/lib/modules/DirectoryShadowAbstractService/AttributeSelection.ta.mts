@@ -10,6 +10,12 @@ import {
  * @summary AttributeSelection
  * @description
  *
+ * SET OF class-scoped include/exclude rules. Order does not matter; specs
+ * for several classes of one entry are cumulative. `include` beats an
+ * explicit exclude; `exclude` beats an implicit include. Empty SET still
+ * yields ACI, timestamps, password-policy attrs, and (if requested)
+ * knowledge attrs. Applied only by the supplier.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

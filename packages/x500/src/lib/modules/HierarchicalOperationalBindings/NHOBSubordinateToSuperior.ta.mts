@@ -19,6 +19,9 @@ import {
  * @summary NHOBSubordinateToSuperior
  * @description
  *
+ * `accessPoints` [0] and `subentries` [3] only; no `alias`, no
+ * `entryInfo` (tags [1] and [2] unused versus `SubordinateToSuperior`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,22 @@ export class NHOBSubordinateToSuperior {
     constructor(
         /**
          * @summary `accessPoints`.
+         * @description
+         *
+         * OPTIONAL. Master AP equals the DOP `accessPoint` parameter (as for
+         * `SubordinateToSuperior`).
+         *
          * @public
          * @readonly
          */
         readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary `subentries`.
+         * @description
+         *
+         * SET SIZE (1..MAX); omit rather than empty. Tag [3] retained; tags [1]
+         * and [2] unused.
+         *
          * @public
          * @readonly
          */

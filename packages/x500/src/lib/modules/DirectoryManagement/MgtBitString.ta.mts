@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MgtBitString
  * @description
  *
+ * CMIP BIT STRING wrapper. Used for critical extensions the DSA does not
+ * support (notification parameter). Empty BIT STRING = no such bits asserted.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

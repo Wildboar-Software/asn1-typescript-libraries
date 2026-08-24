@@ -15,6 +15,9 @@ import {
  * @summary CertUnsubscribeOK_Item
  * @description
  *
+ * One per requested cert, same order. `ok` if unsubscribed; `not_ok` if not
+ * identified (`unknownCert`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

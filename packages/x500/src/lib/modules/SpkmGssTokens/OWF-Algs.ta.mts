@@ -10,6 +10,13 @@ import {
  * @summary OWF_Algs
  * @description
  *
+ * One-way functions for subkey derivation. REQ: exactly one algorithm
+ * for SPKM-2 unilateral, at least one otherwise. REP: always exactly
+ * one (the chosen OWF). MD5 is MANDATORY. Subkey:
+ * `rightmost_k_bits(OWF(context_key || x || n || s || context_key))`
+ * where `x` is `'C'`/`'I'`, `n` is ASCII algorithm index `'0'`…, `s` is
+ * stage `'0'`… (incremented until `k` bits are produced).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

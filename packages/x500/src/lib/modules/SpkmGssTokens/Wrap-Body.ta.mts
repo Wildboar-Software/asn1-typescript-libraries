@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Wrap_Body
  * @description
  *
+ * Wrap payload. `int-cksum` is normally checksum(header||plaintext).
+ * Combined modes: last two CBC blocks (md5-DES-CBC+DES-CBC) or last
+ * block (sum64-DES-CBC) are also placed here. `data` is plaintext if
+ * `conf-alg` is `null`, else CBC with IV 0 of confounder||data||pad
+ * (Kerberos DES padding, 1–8 bytes). Encryption and MAC subkeys differ
+ * except in combined modes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +31,21 @@ export class Wrap_Body {
     constructor(
         /**
          * @summary `int_cksum`.
+         * @description
+         *
+         * Integrity checksum, or trailing ciphertext of a combined
+         * encrypt+integrity mode.
+         *
          * @public
          * @readonly
          */
         readonly int_cksum: BIT_STRING,
         /**
          * @summary `data`.
+         * @description
+         *
+         * Plaintext or ciphertext (confounder + payload + padding).
+         *
          * @public
          * @readonly
          */

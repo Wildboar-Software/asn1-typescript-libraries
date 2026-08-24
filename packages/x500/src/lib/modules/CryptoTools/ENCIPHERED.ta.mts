@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ENCIPHERED
  * @description
  *
+ * Ciphertext of the encoded `ToBeEnciphered` (ASN.1 comment: BER; 6.6.1:
+ * encoded octets).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

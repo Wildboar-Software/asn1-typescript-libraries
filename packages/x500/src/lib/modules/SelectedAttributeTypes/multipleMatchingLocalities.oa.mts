@@ -13,6 +13,9 @@ import {
  * @summary multipleMatchingLocalities
  * @description
  *
+ * Notification of zonal multiple gazetteer hits (not a matching rule). Each
+ * value is a set of AVAs that uniquely match one gazetteer entry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

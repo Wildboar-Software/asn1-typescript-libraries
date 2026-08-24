@@ -10,6 +10,8 @@ import {
  * @summary nameAndOptionalUID
  * @description
  *
+ * LDAP syntax object for Directory `NameAndOptionalUID` (used by `uniqueMember`). `dn` plus optional `uid` BIT STRING; stored `uid` may be absent (`uniqueMemberMatch` on the ATTRIBUTE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

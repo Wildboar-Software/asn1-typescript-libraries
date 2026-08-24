@@ -11,6 +11,9 @@ import {
  * @summary jidMatch
  * @description
  *
+ * RFC 7622 normalized. Domain same format and octet-identical. localpart
+ * and resourcepart: both present or both absent, and octet-identical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

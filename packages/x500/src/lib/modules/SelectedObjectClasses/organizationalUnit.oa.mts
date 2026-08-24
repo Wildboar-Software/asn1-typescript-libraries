@@ -11,6 +11,9 @@ import { OrganizationalAttributeSet } from "../SelectedObjectClasses/Organizatio
  * @summary organizationalUnit
  * @description
  *
+ * Subdivision of an organization. Typical superiors (Annex B):
+ * organization, organizationalUnit, or locality.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

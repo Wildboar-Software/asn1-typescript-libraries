@@ -8,6 +8,9 @@ import { id_mr_generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/id
  * @summary generalizedTimeOrderingMatch
  * @description
  *
+ * Omitted minutes/seconds = 0. TRUE iff stored is earlier than presented
+ * (not ≤).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

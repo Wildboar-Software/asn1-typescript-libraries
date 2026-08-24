@@ -10,6 +10,10 @@ import {
  * @summary DSP_OSI_PDUs
  * @description
  *
+ * `OSI-PDU{directorySystemAC}` for DSP. Both sides may invoke after
+ * BindResult. Always asynchronous. Operation order of responses is
+ * not tied to request order (match by InvokeId).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

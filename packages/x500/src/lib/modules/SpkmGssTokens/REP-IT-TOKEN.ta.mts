@@ -21,6 +21,11 @@ import {
  * @summary REP_IT_TOKEN
  * @description
  *
+ * Third-token body (SPKM-1 mutual only). `tok-id` is 768 (0x0300).
+ * `src-name` must echo the REQ; `targ-name` must echo REP-TI.
+ * `key-estb-rep` is the initiator's response to a two-pass K-ALG chosen
+ * by the target.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,42 +45,71 @@ export class REP_IT_TOKEN {
     constructor(
         /**
          * @summary `tok_id`.
+         * @description
+         *
+         * Must be 768 (0x0300).
+         *
          * @public
          * @readonly
          */
         readonly tok_id: INTEGER,
         /**
          * @summary `context_id`.
+         * @description
+         *
+         * The concatenated context-id from REP-TI.
+         *
          * @public
          * @readonly
          */
         readonly context_id: Random_Integer,
         /**
          * @summary `randSrc`.
+         * @description
+         *
+         * Echo of the initiator nonce.
+         *
          * @public
          * @readonly
          */
         readonly randSrc: Random_Integer,
         /**
          * @summary `randTarg`.
+         * @description
+         *
+         * Echo of the target nonce (binds this token to REP-TI).
+         *
          * @public
          * @readonly
          */
         readonly randTarg: Random_Integer,
         /**
          * @summary `targ_name`.
+         * @description
+         *
+         * Must be the `targ-name` from REP-TI.
+         *
          * @public
          * @readonly
          */
         readonly targ_name: Name,
         /**
          * @summary `src_name`.
+         * @description
+         *
+         * Must contain whatever value was in the REQ token.
+         *
          * @public
          * @readonly
          */
         readonly src_name?: OPTIONAL<Name>,
         /**
          * @summary `key_estb_rep`.
+         * @description
+         *
+         * Initiator's half/response when the target selected a two-pass
+         * K-ALG (e.g. DH). Omit for one-pass K-ALGs.
+         *
          * @public
          * @readonly
          */

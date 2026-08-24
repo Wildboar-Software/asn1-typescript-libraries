@@ -10,6 +10,10 @@ import {
  * @summary TimeAssertion
  * @description
  *
+ * `now` uses current time. `at`/`now` TRUE if that instant overlaps
+ * stored TimeSpecification. `between` overlap vs containment per
+ * `entirely`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

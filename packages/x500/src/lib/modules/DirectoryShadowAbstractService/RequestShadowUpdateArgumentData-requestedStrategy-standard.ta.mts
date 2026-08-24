@@ -11,6 +11,10 @@ export enum _enum_for_RequestShadowUpdateArgumentData_requestedStrategy_standard
  * @summary RequestShadowUpdateArgumentData_requestedStrategy_standard
  * @description
  *
+ * `incremental` (1) or `total` (2). Value 0 (`noChanges`) is *not*
+ * defined here — that exists only on `coordinateShadowUpdate`. Extensible
+ * ENUMERATED.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

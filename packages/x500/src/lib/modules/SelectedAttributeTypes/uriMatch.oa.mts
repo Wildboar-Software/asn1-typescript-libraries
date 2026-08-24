@@ -8,6 +8,10 @@ import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs"
  * @summary uriMatch
  * @description
  *
+ * RFC 3986 §6.2.2 normalize (percent hex uppercase; decode unreserved
+ * percent-octets; remove `.`/`..` path segments; drop empty/default scheme
+ * components) then compare.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

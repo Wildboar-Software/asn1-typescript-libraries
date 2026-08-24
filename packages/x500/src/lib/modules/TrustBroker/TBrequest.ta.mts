@@ -10,6 +10,8 @@ import {
  * @summary TBrequest
  * @description
  *
+ * Relying-party query. `caCert`: CA trustworthiness only (privacy — TB does not learn the subject); TB still checks CA cert validity, then reports trustworthiness of all EE certs of that CA. `subjectCert`: check subject validity and the CA, then return trustworthiness of all EE certs of that CA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

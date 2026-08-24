@@ -42,6 +42,11 @@ import {
  * @summary NameErrorData
  * @description
  *
+ * `matched` is the lowest matched entry (object or alias), a truncated
+ * form of the supplied name (or of the dereferenced name). Empty
+ * RDNSequence = DIT root. Bad AVAs in names are `nameError`, not
+ * `attributeError`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,12 +63,22 @@ export class NameErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.
+         * @description
+         *
+         * (5) not to be used. Bad AVAs in names are `nameError`, not
+         * `attributeError`.
+         *
          * @public
          * @readonly
          */
         readonly problem: NameProblem,
         /**
          * @summary `matched`.
+         * @description
+         *
+         * Lowest matched entry (object or alias). Empty RDNSequence = DIT
+         * root.
+         *
          * @public
          * @readonly
          */

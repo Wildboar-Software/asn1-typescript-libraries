@@ -10,6 +10,8 @@ import {
  * @summary utmCoords
  * @description
  *
+ * LDAP syntax object for Directory `UtmCoordinates` (used by `utmCoordinates`). SEQUENCE `zone` / `easting` / `northing`; SINGLE VALUE behaviour is on the ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

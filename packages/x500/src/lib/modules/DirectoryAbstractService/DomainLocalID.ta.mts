@@ -10,6 +10,9 @@ import {
  * @summary DomainLocalID
  * @description
  *
+ * Identifies which DIT to start `joinBaseObject` in. Absent on
+ * `JoinArgument` ⇒ search all DITs the DSA knows.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

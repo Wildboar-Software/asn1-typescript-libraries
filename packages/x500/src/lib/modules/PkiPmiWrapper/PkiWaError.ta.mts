@@ -28,6 +28,11 @@ export enum _enum_for_PkiWaError {
  * @summary PkiWaError
  * @description
  *
+ * X.509 2016 PkiPmiWrapper errors (not X.510 WrpError). Keep spec
+ * typos: `unknownDHpkCetificate` (Certificate), `invalideDhPublickey`
+ * (invalid). `keyEncAlgorithmParametersMissing` vs `…NotAllowed`:
+ * PARMS presence vs ALGORITHM.&Type. Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,6 +65,11 @@ export type PkiWaError = _enum_for_PkiWaError | ENUMERATED;
 
 /**
  * @summary PkiWaError_unsupportedWrapperVersion
+ * @description
+ *
+ * `version` is AuthenticationFramework INTEGER Version DEFAULT v1,
+ * not X.510 Wrapper BIT STRING.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +77,11 @@ export const PkiWaError_unsupportedWrapperVersion: PkiWaError = 0; /* LONG_NAMED
 
 /**
  * @summary unsupportedWrapperVersion
+ * @description
+ *
+ * `version` is AuthenticationFramework INTEGER Version DEFAULT v1,
+ * not X.510 Wrapper BIT STRING.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +89,10 @@ export const unsupportedWrapperVersion: PkiWaError = PkiWaError_unsupportedWrapp
 
 /**
  * @summary PkiWaError_unsupportedSignatureAlgorithm
+ * @description
+ *
+ * `signatureAlgorithm` not in `SupportedSignatureAlgorithms`.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +100,10 @@ export const PkiWaError_unsupportedSignatureAlgorithm: PkiWaError = 1; /* LONG_N
 
 /**
  * @summary unsupportedSignatureAlgorithm
+ * @description
+ *
+ * `signatureAlgorithm` not in `SupportedSignatureAlgorithms`.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +111,10 @@ export const unsupportedSignatureAlgorithm: PkiWaError = PkiWaError_unsupportedS
 
 /**
  * @summary PkiWaError_incompleteCertPath
+ * @description
+ *
+ * `certPath` [0] PkiPath required / incomplete.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +122,10 @@ export const PkiWaError_incompleteCertPath: PkiWaError = 2; /* LONG_NAMED_ENUMER
 
 /**
  * @summary incompleteCertPath
+ * @description
+ *
+ * `certPath` [0] PkiPath required / incomplete.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +133,10 @@ export const incompleteCertPath: PkiWaError = PkiWaError_incompleteCertPath; /* 
 
 /**
  * @summary PkiWaError_certificationPathFailure
+ * @description
+ *
+ * PkiPath validation failed.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +144,10 @@ export const PkiWaError_certificationPathFailure: PkiWaError = 3; /* LONG_NAMED_
 
 /**
  * @summary certificationPathFailure
+ * @description
+ *
+ * PkiPath validation failed.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +155,10 @@ export const certificationPathFailure: PkiWaError = PkiWaError_certificationPath
 
 /**
  * @summary PkiWaError_invalidSignature
+ * @description
+ *
+ * SIGNED{TBSPDU-wrapper} signature invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +166,10 @@ export const PkiWaError_invalidSignature: PkiWaError = 4; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary invalidSignature
+ * @description
+ *
+ * SIGNED{TBSPDU-wrapper} signature invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -130,6 +177,10 @@ export const invalidSignature: PkiWaError = PkiWaError_invalidSignature; /* SHOR
 
 /**
  * @summary PkiWaError_missingMandatoryAttributes
+ * @description
+ *
+ * `signedAttrs` lacked required `contentType` / `messageDigest`.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +188,10 @@ export const PkiWaError_missingMandatoryAttributes: PkiWaError = 5; /* LONG_NAME
 
 /**
  * @summary missingMandatoryAttributes
+ * @description
+ *
+ * `signedAttrs` lacked required `contentType` / `messageDigest`.
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +199,10 @@ export const missingMandatoryAttributes: PkiWaError = PkiWaError_missingMandator
 
 /**
  * @summary PkiWaError_unwantedAttribute
+ * @description
+ *
+ * `signedAttrs` member other than `contentType` | `messageDigest`.
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +210,10 @@ export const PkiWaError_unwantedAttribute: PkiWaError = 6; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary unwantedAttribute
+ * @description
+ *
+ * `signedAttrs` member other than `contentType` | `messageDigest`.
+ *
  * @constant
  * @type {number}
  */
@@ -158,6 +221,10 @@ export const unwantedAttribute: PkiWaError = PkiWaError_unwantedAttribute; /* SH
 
 /**
  * @summary PkiWaError_unsupportedPduType
+ * @description
+ *
+ * `pduType` not in `SupportedPduSet`.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +232,10 @@ export const PkiWaError_unsupportedPduType: PkiWaError = 7; /* LONG_NAMED_ENUMER
 
 /**
  * @summary unsupportedPduType
+ * @description
+ *
+ * `pduType` not in `SupportedPduSet`.
+ *
  * @constant
  * @type {number}
  */
@@ -172,6 +243,10 @@ export const unsupportedPduType: PkiWaError = PkiWaError_unsupportedPduType; /* 
 
 /**
  * @summary PkiWaError_unexpectedPduType
+ * @description
+ *
+ * `pduType` unexpected in this context.
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +254,10 @@ export const PkiWaError_unexpectedPduType: PkiWaError = 8; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary unexpectedPduType
+ * @description
+ *
+ * `pduType` unexpected in this context.
+ *
  * @constant
  * @type {number}
  */
@@ -186,6 +265,10 @@ export const unexpectedPduType: PkiWaError = PkiWaError_unexpectedPduType; /* SH
 
 /**
  * @summary PkiWaError_invalidPduSyntax
+ * @description
+ *
+ * `pduInfo` / `encryptedPdu` syntax invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +276,10 @@ export const PkiWaError_invalidPduSyntax: PkiWaError = 9; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary invalidPduSyntax
+ * @description
+ *
+ * `pduInfo` / `encryptedPdu` syntax invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -200,6 +287,10 @@ export const invalidPduSyntax: PkiWaError = PkiWaError_invalidPduSyntax; /* SHOR
 
 /**
  * @summary PkiWaError_unknownDHpkCetificate
+ * @description
+ *
+ * Spec typo for Certificate. Static DH certificate unknown.
+ *
  * @constant
  * @type {number}
  */
@@ -207,6 +298,10 @@ export const PkiWaError_unknownDHpkCetificate: PkiWaError = 10; /* LONG_NAMED_EN
 
 /**
  * @summary unknownDHpkCetificate
+ * @description
+ *
+ * Spec typo for Certificate. Static DH certificate unknown.
+ *
  * @constant
  * @type {number}
  */
@@ -214,6 +309,10 @@ export const unknownDHpkCetificate: PkiWaError = PkiWaError_unknownDHpkCetificat
 
 /**
  * @summary PkiWaError_invalidKeyingMaterial
+ * @description
+ *
+ * UserKeyingMaterial not SIZE (64) or otherwise invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +320,10 @@ export const PkiWaError_invalidKeyingMaterial: PkiWaError = 11; /* LONG_NAMED_EN
 
 /**
  * @summary invalidKeyingMaterial
+ * @description
+ *
+ * UserKeyingMaterial not SIZE (64) or otherwise invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -228,6 +331,10 @@ export const invalidKeyingMaterial: PkiWaError = PkiWaError_invalidKeyingMateria
 
 /**
  * @summary PkiWaError_dhAlgorithmMismatch
+ * @description
+ *
+ * DH algorithm mismatch.
+ *
  * @constant
  * @type {number}
  */
@@ -235,6 +342,10 @@ export const PkiWaError_dhAlgorithmMismatch: PkiWaError = 12; /* LONG_NAMED_ENUM
 
 /**
  * @summary dhAlgorithmMismatch
+ * @description
+ *
+ * DH algorithm mismatch.
+ *
  * @constant
  * @type {number}
  */
@@ -242,6 +353,10 @@ export const dhAlgorithmMismatch: PkiWaError = PkiWaError_dhAlgorithmMismatch; /
 
 /**
  * @summary PkiWaError_invalideDhPublickey
+ * @description
+ *
+ * Spec typo for invalid. Ephemeral DH public key invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -249,6 +364,10 @@ export const PkiWaError_invalideDhPublickey: PkiWaError = 13; /* LONG_NAMED_ENUM
 
 /**
  * @summary invalideDhPublickey
+ * @description
+ *
+ * Spec typo for invalid. Ephemeral DH public key invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -256,6 +375,10 @@ export const invalideDhPublickey: PkiWaError = PkiWaError_invalideDhPublickey; /
 
 /**
  * @summary PkiWaError_unsupportedKeyWrappingAlgorithm
+ * @description
+ *
+ * `keyEncryptionAlgorithm` unsupported.
+ *
  * @constant
  * @type {number}
  */
@@ -263,6 +386,10 @@ export const PkiWaError_unsupportedKeyWrappingAlgorithm: PkiWaError = 14; /* LON
 
 /**
  * @summary unsupportedKeyWrappingAlgorithm
+ * @description
+ *
+ * `keyEncryptionAlgorithm` unsupported.
+ *
  * @constant
  * @type {number}
  */
@@ -270,6 +397,10 @@ export const unsupportedKeyWrappingAlgorithm: PkiWaError = PkiWaError_unsupporte
 
 /**
  * @summary PkiWaError_keyEncAlgorithmParametersMissing
+ * @description
+ *
+ * PARMS required by ALGORITHM.&Type but absent.
+ *
  * @constant
  * @type {number}
  */
@@ -277,6 +408,10 @@ export const PkiWaError_keyEncAlgorithmParametersMissing: PkiWaError = 15; /* LO
 
 /**
  * @summary keyEncAlgorithmParametersMissing
+ * @description
+ *
+ * PARMS required by ALGORITHM.&Type but absent.
+ *
  * @constant
  * @type {number}
  */
@@ -284,6 +419,10 @@ export const keyEncAlgorithmParametersMissing: PkiWaError = PkiWaError_keyEncAlg
 
 /**
  * @summary PkiWaError_keyEncAlgorithmParametersNotAllowed
+ * @description
+ *
+ * PARMS present but ALGORITHM.&Type absent.
+ *
  * @constant
  * @type {number}
  */
@@ -291,6 +430,10 @@ export const PkiWaError_keyEncAlgorithmParametersNotAllowed: PkiWaError = 16; /*
 
 /**
  * @summary keyEncAlgorithmParametersNotAllowed
+ * @description
+ *
+ * PARMS present but ALGORITHM.&Type absent.
+ *
  * @constant
  * @type {number}
  */
@@ -298,6 +441,10 @@ export const keyEncAlgorithmParametersNotAllowed: PkiWaError = PkiWaError_keyEnc
 
 /**
  * @summary PkiWaError_invalidParmsForSymEncryptAlgorithms
+ * @description
+ *
+ * `pduEncryptionAlgorithm.parameter` invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -305,6 +452,10 @@ export const PkiWaError_invalidParmsForSymEncryptAlgorithms: PkiWaError = 17; /*
 
 /**
  * @summary invalidParmsForSymEncryptAlgorithms
+ * @description
+ *
+ * `pduEncryptionAlgorithm.parameter` invalid.
+ *
  * @constant
  * @type {number}
  */
@@ -312,6 +463,10 @@ export const invalidParmsForSymEncryptAlgorithms: PkiWaError = PkiWaError_invali
 
 /**
  * @summary PkiWaError_decryptionFailed
+ * @description
+ *
+ * Encrypted PDU / key unwrap failed.
+ *
  * @constant
  * @type {number}
  */
@@ -319,6 +474,10 @@ export const PkiWaError_decryptionFailed: PkiWaError = 18; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary decryptionFailed
+ * @description
+ *
+ * Encrypted PDU / key unwrap failed.
+ *
  * @constant
  * @type {number}
  */

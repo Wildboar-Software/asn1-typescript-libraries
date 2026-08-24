@@ -11,6 +11,9 @@ import {
  * @summary telephoneNumberMatch
  * @description
  *
+ * Like caseIgnoreMatch but hyphens and spaces insignificant (stripped).
+ * Stored syntax E.123.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

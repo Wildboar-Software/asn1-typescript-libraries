@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_errcode_securityError
  * @description
  *
+ * DAP/DSP local:6 (`securityError`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

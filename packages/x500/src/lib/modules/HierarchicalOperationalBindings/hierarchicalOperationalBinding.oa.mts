@@ -14,6 +14,16 @@ import { type OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERAT
  * @summary hierarchicalOperationalBinding
  * @description
  *
+ * Asymmetric. Role A = superior (master of the superior naming
+ * context); Role B = subordinate (master of the subordinate naming
+ * context). Superior holds a subordinate reference; subordinate holds
+ * an immediate superior reference. Either role may establish, modify,
+ * or terminate. No termination parameter. Cooperative operations use
+ * `directorySystemAC`. Establishment by the superior may follow AddEntry
+ * with `targetSystem`. Termination by the subordinate may follow
+ * RemoveEntry of the CP. `bindingID` version omitted on Terminate. DOP
+ * uses `operationalBindingManagementAC`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

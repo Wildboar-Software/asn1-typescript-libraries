@@ -4,6 +4,8 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @summary id_opcode_search
  * @description
  *
+ * DAP/DSP local:5 (`search` / `chainedSearch`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

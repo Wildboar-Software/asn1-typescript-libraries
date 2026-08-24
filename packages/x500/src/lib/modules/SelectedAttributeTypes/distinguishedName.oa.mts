@@ -15,6 +15,8 @@ import { id_at_distinguishedName } from "../SelectedAttributeTypes/id-at-disting
  * @summary distinguishedName
  * @description
  *
+ * Distinguished name of some object. `distinguishedNameMatch` (X.501).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

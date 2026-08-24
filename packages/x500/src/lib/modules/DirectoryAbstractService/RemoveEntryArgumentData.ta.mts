@@ -67,6 +67,9 @@ import {
  * @summary RemoveEntryArgumentData
  * @description
  *
+ * `familyGrouping` `compoundEntry` only if `object` is the ancestor;
+ * deletes the whole family (ACI permitting).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -83,6 +86,10 @@ export class RemoveEntryArgumentData implements CommonArguments {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * For `familyGrouping` `compoundEntry`, must be the ancestor.
+         *
          * @public
          * @readonly
          */
@@ -161,6 +168,11 @@ export class RemoveEntryArgumentData implements CommonArguments {
         readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
+         * @description
+         *
+         * `compoundEntry` only if `object` is the ancestor; deletes the whole
+         * family (ACI permitting).
+         *
          * @public
          * @readonly
          */

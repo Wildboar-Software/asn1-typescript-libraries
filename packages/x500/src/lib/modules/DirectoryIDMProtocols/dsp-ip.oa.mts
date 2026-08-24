@@ -19,6 +19,10 @@ import { type IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.
  * @summary dsp_ip
  * @description
  *
+ * DSP over IDM. Either DSA may Bind; both sides may request. Always
+ * async. Includes chained `ldapTransport` and `linkedLDAP`. Same
+ * opcodes as DAP/DSP.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

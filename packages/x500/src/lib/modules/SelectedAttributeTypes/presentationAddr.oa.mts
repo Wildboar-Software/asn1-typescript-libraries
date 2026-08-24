@@ -10,6 +10,8 @@ import {
  * @summary presentationAddr
  * @description
  *
+ * LDAP syntax object for Directory `PresentationAddress` (used by `presentationAddress`). Selectors plus `nAddresses` SET SIZE (1..MAX); match subset of NSAPs is on the ATTRIBUTE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

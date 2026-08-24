@@ -24,6 +24,11 @@ import {
  * @summary DSACredentials
  * @description
  *
+ * CHOICE `simple` / `strong` / `externalProcedure` / `spkm`. No `sasl`
+ * (unlike DAP Credentials). Identifies the DSA AE-title as a DN.
+ * `simple`: SimpleCredentials. `strong`: StrongCredentials.
+ * `externalProcedure`: EXTERNAL. `spkm`: SpkmCredentials.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

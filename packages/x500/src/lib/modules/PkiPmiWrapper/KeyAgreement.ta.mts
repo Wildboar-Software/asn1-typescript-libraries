@@ -19,6 +19,9 @@ import {
  * @summary KeyAgreement
  * @description
  *
+ * `senderDhInfo` plus `keyEncryptionAlgorithm` (KDF/wrap of the
+ * content key).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,20 @@ export class KeyAgreement {
     constructor(
         /**
          * @summary `senderDhInfo`.
+         * @description
+         *
+         * [0] CHOICE: static DH cert vs ephemeral DH public key.
+         *
          * @public
          * @readonly
          */
         readonly senderDhInfo: SenderDhInfo,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * KDF/wrap of the content key. `parameters` is ALGORITHM.&Type.
+         *
          * @public
          * @readonly
          */

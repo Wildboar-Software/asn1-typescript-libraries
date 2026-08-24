@@ -10,6 +10,10 @@ import {
  * @summary MgtCommonName
  * @description
  *
+ * `UnboundedDirectoryString` (not size-limited DirectoryString / PrintableString
+ * CommonName). Naming attribute for Directory components. Empty string is empty
+ * name content, not absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

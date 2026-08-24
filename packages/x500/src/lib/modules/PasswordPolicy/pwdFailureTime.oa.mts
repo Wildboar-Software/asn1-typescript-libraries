@@ -13,6 +13,9 @@ import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generali
  * @summary pwdFailureTime
  * @description
  *
+ * Time of last failed bind/compare. **Significant only when `pwdFails`
+ * ≠ 0.** USAGE dSAOperation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

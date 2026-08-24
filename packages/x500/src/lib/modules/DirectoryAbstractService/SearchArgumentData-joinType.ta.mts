@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SearchArgumentData_joinType
  * @description
  *
+ * `innerJoin`(0) only joined entries; `leftOuterJoin`(1) all primary;
+ * `fullOuterJoin`(2) all from both, joined as `relatedEntry` not explicit
+ * extras. DEFAULT `leftOuterJoin`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +28,10 @@ export enum _enum_for_SearchArgumentData_joinType {
  * @summary SearchArgumentData_joinType
  * @description
  *
+ * `innerJoin`(0) only joined entries; `leftOuterJoin`(1) all primary;
+ * `fullOuterJoin`(2) all from both, joined as `relatedEntry` not explicit
+ * extras. DEFAULT `leftOuterJoin`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +46,10 @@ export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
  * @summary SearchArgumentData_joinType
  * @description
  *
+ * `innerJoin`(0) only joined entries; `leftOuterJoin`(1) all primary;
+ * `fullOuterJoin`(2) all from both, joined as `relatedEntry` not explicit
+ * extras. DEFAULT `leftOuterJoin`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +62,10 @@ export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType
 
 /**
  * @summary SearchArgumentData_joinType_innerJoin
+ * @description
+ *
+ * Only joined entries with `relatedEntry` values.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +74,10 @@ export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType 
 
 /**
  * @summary innerJoin
+ * @description
+ *
+ * Only joined entries with `relatedEntry` values.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +86,10 @@ export const innerJoin: SearchArgumentData_joinType =
 
 /**
  * @summary SearchArgumentData_joinType_leftOuterJoin
+ * @description
+ *
+ * All primary entries; joined ones carry `relatedEntry`. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +98,10 @@ export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinT
 
 /**
  * @summary leftOuterJoin
+ * @description
+ *
+ * All primary entries; joined ones carry `relatedEntry`. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +110,11 @@ export const leftOuterJoin: SearchArgumentData_joinType =
 
 /**
  * @summary SearchArgumentData_joinType_fullOuterJoin
+ * @description
+ *
+ * All from both; joined represented as `relatedEntry`, not explicit extra
+ * entries.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +123,11 @@ export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinT
 
 /**
  * @summary fullOuterJoin
+ * @description
+ *
+ * All from both; joined represented as `relatedEntry`, not explicit extra
+ * entries.
+ *
  * @constant
  * @type {number}
  */

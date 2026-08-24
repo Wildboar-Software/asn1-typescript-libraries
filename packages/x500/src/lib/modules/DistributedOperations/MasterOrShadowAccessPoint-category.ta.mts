@@ -12,6 +12,9 @@ export enum _enum_for_MasterOrShadowAccessPoint_category {
  * @summary MasterOrShadowAccessPoint_category
  * @description
  *
+ * ENUMERATED `master`(0) `shadow`(1) `writeableCopy`(2). DEFAULT
+ * `master`. `writeableCopy` is LDAP-only. Shadow LDAP may still write.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +29,10 @@ export type MasterOrShadowAccessPoint_category =
 
 /**
  * @summary MasterOrShadowAccessPoint_category_master
+ * @description
+ *
+ * Naming-context master. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +40,10 @@ export const MasterOrShadowAccessPoint_category_master: MasterOrShadowAccessPoin
 
 /**
  * @summary master
+ * @description
+ *
+ * Naming-context master. DEFAULT.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +51,11 @@ export const master: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPo
 
 /**
  * @summary MasterOrShadowAccessPoint_category_shadow
+ * @description
+ *
+ * Commonly usable replica. An LDAP server labelled shadow may still
+ * update on LDAP modify.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +63,11 @@ export const MasterOrShadowAccessPoint_category_shadow: MasterOrShadowAccessPoin
 
 /**
  * @summary shadow
+ * @description
+ *
+ * Commonly usable replica. An LDAP server labelled shadow may still
+ * update on LDAP modify.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +75,10 @@ export const shadow: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPo
 
 /**
  * @summary MasterOrShadowAccessPoint_category_writeableCopy
+ * @description
+ *
+ * LDAP only — writeable copy entries.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +86,10 @@ export const MasterOrShadowAccessPoint_category_writeableCopy: MasterOrShadowAcc
 
 /**
  * @summary writeableCopy
+ * @description
+ *
+ * LDAP only — writeable copy entries.
+ *
  * @constant
  * @type {number}
  */

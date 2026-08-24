@@ -7,6 +7,9 @@ import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
  * @summary oidC2NameForm
  * @description
  *
+ * Despite the name, NAMES `oidCobj` (not `oidC2obj`) WITH `oidC`.
+ * Functionally the same as `oidC1NameForm` and `oidCNameForm`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

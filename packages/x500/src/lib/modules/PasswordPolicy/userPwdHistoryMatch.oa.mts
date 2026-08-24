@@ -7,9 +7,8 @@ import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";
  * @summary userPwdHistoryMatch
  * @description
  *
- * `pwdHistoryMatch{userPwd,…}`: assertion syntax is {@link UserPwd}. Compares
- * a presented password with a stored history value (the `password` component
- * of `PwdHistory`). Also used with `userPwdRecentlyExpired`.
+ * Assertion is {@link UserPwd} (not the history SEQUENCE). Ignores the
+ * history `time`; remaining passwords compared with {@link userPwdMatch}.
  *
  * ### ASN.1 Definition:
  *

@@ -21,6 +21,9 @@ import {
  * @summary EnhancedGuide
  * @description
  *
+ * Search-guide recipe. `objectClass` required. `subset` DEFAULT
+ * oneLevel (recommended depth).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +42,30 @@ export class EnhancedGuide {
     constructor(
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Required (unlike Guide).
+         *
          * @public
          * @readonly
          */
         readonly objectClass: OBJECT_IDENTIFIER,
         /**
          * @summary `criteria`.
+         * @description
+         *
+         * Attribute types only; DUA supplies values.
+         *
          * @public
          * @readonly
          */
         readonly criteria: Criteria,
         /**
          * @summary `subset`.
+         * @description
+         *
+         * DEFAULT oneLevel. Recommended search depth.
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,11 @@ import { id_not_ldapDiagnosticMsg } from "../SelectedAttributeTypes/id-not-ldapD
  * @summary ldapDiagnosticMsg
  * @description
  *
+ * Carried in CommonResults.notification / PartialOutcomeQualifier; typically
+ * not stored in entries. Carries the LDAP `diagnosticMessage` from an LDAP
+ * result.
+ * SINGLE VALUE UTF8String.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

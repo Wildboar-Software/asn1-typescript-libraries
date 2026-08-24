@@ -15,6 +15,10 @@ import {
  * @summary Period_days
  * @description
  *
+ * `intDay` 1–7 Sunday = 1 when preceding `weeks`; 1–31 day-of-month
+ * when preceding `months`; 1–366 day-of-year when preceding `years`.
+ * `bitDay` sunday = 0. `dayOf` ⇒ `weeks` ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

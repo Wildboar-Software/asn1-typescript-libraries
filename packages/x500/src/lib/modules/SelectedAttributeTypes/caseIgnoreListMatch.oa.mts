@@ -11,6 +11,9 @@ import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
  * @summary caseIgnoreListMatch
  * @description
  *
+ * TRUE iff same count of strings and pairwise caseIgnoreMatch. Order
+ * matters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

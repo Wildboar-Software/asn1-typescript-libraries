@@ -8,6 +8,8 @@ import { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-gene
  * @summary generalizedTimeMatch
  * @description
  *
+ * Omitted minutes/seconds = 0. TRUE iff same instant (X.680 46.3 b or c).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

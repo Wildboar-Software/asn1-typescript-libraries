@@ -4,6 +4,9 @@ import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
  * @summary SymmetricEncryptionAlgorithms
  * @description
  *
+ * Extensible ALGORITHM set for PDU encryption; annex leaves `{...}`
+ * empty.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,10 @@ import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
  * @summary CertUpdateReq_certs_Item
  * @description
  *
+ * One status update. Unknown `subject` → whole-message `unknownSubject`;
+ * unknown `serialNumber` → whole-message `unknownCert` (14.13). `certStatus`
+ * must be a valid CertStatus.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +36,27 @@ export class CertUpdateReq_certs_Item {
     constructor(
         /**
          * @summary `subject`.
+         * @description
+         *
+         * Identifies the EE. Unknown → whole-message `unknownSubject` (14.13).
          * @public
          * @readonly
          */
         readonly subject: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Identifies the EE cert. Unknown → whole-message `unknownCert` (14.13).
          * @public
          * @readonly
          */
         readonly serialNumber: CertificateSerialNumber,
         /**
          * @summary `certStatus`.
+         * @description
+         *
+         * Updated CertStatus; must be a valid value.
          * @public
          * @readonly
          */

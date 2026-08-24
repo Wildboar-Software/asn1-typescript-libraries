@@ -12,6 +12,9 @@ import { id_oc_isoTagType } from "../SelectedObjectClasses/id-oc-isoTagType.va.m
  * @summary isoTagType
  * @description
  *
+ * Auxiliary: tag attributes for a type of ISO tag (X.520 Annex G). Holds
+ * `uiiFormat` rather than instance UII/location. Contrast `isoTagInfo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

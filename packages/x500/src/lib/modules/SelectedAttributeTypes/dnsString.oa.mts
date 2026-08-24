@@ -10,6 +10,8 @@ import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.
  * @summary dnsString
  * @description
  *
+ * LDAP transfer of DomainName.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

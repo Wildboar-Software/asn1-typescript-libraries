@@ -10,6 +10,11 @@ import {
  * @summary MasterAndShadowAccessPoints
  * @description
  *
+ * SET SIZE (1..MAX) OF MasterOrShadowAccessPoint. Order insignificant.
+ * Cannot be empty. Master AP need not be included. All share a common
+ * naming context (or the set of contexts mastered in one DSA when this
+ * is a nonSpecificKnowledge value).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
