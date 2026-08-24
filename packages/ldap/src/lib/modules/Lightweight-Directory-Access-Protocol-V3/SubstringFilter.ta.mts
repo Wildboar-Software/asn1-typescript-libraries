@@ -25,6 +25,14 @@ import {
  * @summary SubstringFilter
  * @description
  *
+ * `substrings` SEQUENCE SIZE(1..MAX). At most one `initial` (MUST be
+ * first if present) and at most one `final` (MUST be last if present);
+ * any number of `any`. Item encodings use the EQUALITY assertion
+ * syntax, not SUBSTR -- the whole filter is converted into a SUBSTR
+ * assertion before the rule runs. RFC 4517 Substring Assertion (which
+ * forbids zero-length pieces) is for extensibleMatch only, not this
+ * type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,12 +51,22 @@ export class SubstringFilter {
   constructor(
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Attribute whose SUBSTR rule is applied.
+     *
      * @public
      * @readonly
      */
     readonly type_: AttributeDescription,
     /**
      * @summary `substrings`.
+     * @description
+     *
+     * Ordered; SIZE(1..MAX). `initial` first if present, `final` last
+     * if present; each at most once. Values use EQUALITY assertion
+     * syntax.
+     *
      * @public
      * @readonly
      */

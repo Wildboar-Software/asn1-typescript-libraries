@@ -20,6 +20,11 @@ import {
  * @summary MatchingRuleId
  * @description
  *
+ * Numericoid *or* short name (`caseIgnoreMatch` or `2.5.13.2`).
+ * Unrecognized IDs in filters evaluate to Undefined -- the server MUST
+ * NOT return an error for that. Comparison semantics live in RFC 4517,
+ * not in the syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

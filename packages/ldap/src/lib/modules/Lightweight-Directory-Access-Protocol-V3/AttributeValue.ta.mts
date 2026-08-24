@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AttributeValue
  * @description
  *
+ * LDAP-specific encoding of the attribute's syntax (RFC 4517), not BER
+ * unless `;binary` is on the description. No size limit (may be
+ * multi-megabyte). Do not display or decode an unrecognized syntax.
+ * Assertion syntax can differ from this value syntax.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

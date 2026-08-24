@@ -25,6 +25,11 @@ import {
  * @summary AttributeValueAssertion
  * @description
  *
+ * Attribute description plus assertion value. Matching rule depends on
+ * context: EQUALITY for Compare/`equalityMatch`, ORDERING for
+ * inequalities (see Filter). Assertion syntax is that of the matching
+ * rule, not necessarily the attribute's value syntax (RFC 4517).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,21 @@ export class AttributeValueAssertion {
   constructor(
     /**
      * @summary `attributeDesc`.
+     * @description
+     *
+     * Attribute type (and options) whose values are asserted.
+     *
      * @public
      * @readonly
      */
     readonly attributeDesc: AttributeDescription,
     /**
      * @summary `assertionValue`.
+     * @description
+     *
+     * Encoded in the matching rule's assertion syntax, which may differ
+     * from the attribute value syntax.
+     *
      * @public
      * @readonly
      */

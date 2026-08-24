@@ -31,6 +31,12 @@ import {
  * @summary LDAPMessage
  * @description
  *
+ * Envelope for every LDAP PDU. Responses echo the request `messageID`.
+ * Unsolicited notifications use `messageID` 0 with `extendedResp`.
+ * Unrecognized trailing SEQUENCE components MUST be ignored. Requests
+ * and responses for distinct operations may interleave; Bind is the
+ * notable exception (no further PDUs until BindResponse).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,18 +74,37 @@ export class LDAPMessage {
   constructor(
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * 0 is reserved for unsolicited notifications. Request IDs MUST be
+     * non-zero and unique among in-progress operations on the session.
+     * Reuse only after the earlier op is known finished (Abandon and
+     * successfully abandoned ops send no response).
+     *
      * @public
      * @readonly
      */
     readonly messageID: MessageID,
     /**
      * @summary `protocolOp`.
+     * @description
+     *
+     * Request or response CHOICE. Unsolicited notifications use
+     * `extendedResp`. IntermediateResponse is an extension addition.
+     *
      * @public
      * @readonly
      */
     readonly protocolOp: LDAPMessage_protocolOp,
     /**
      * @summary `controls`.
+     * @description
+     *
+     * Affect only this message. Order ignored unless a control spec
+     * says otherwise. Invalid or unspecified combinations →
+     * `protocolError`; non-critical controls may be dropped to form a
+     * valid combination.
+     *
      * @public
      * @readonly
      */

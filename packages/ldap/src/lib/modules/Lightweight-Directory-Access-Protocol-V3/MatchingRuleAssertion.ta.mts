@@ -32,6 +32,13 @@ import {
  * @summary MatchingRuleAssertion
  * @description
  *
+ * Extensible match. If `matchingRule` is absent, `type_` MUST be
+ * present and EQUALITY is used. If `type_` is absent, `matchValue` is
+ * compared to every attribute that supports the rule. If both present,
+ * compared to that type and subtypes. `dnAttributes` TRUE also matches
+ * AVAs in the entry's DN. Assertion syntax is that of the matching
+ * rule. Unrecognized/unsuitable rule or invalid assertion → Undefined.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,24 +55,44 @@ export class MatchingRuleAssertion {
   constructor(
     /**
      * @summary `matchingRule`.
+     * @description
+     *
+     * Rule id; omit to use the attribute's EQUALITY rule (`type_`
+     * required then).
+     *
      * @public
      * @readonly
      */
     readonly matchingRule: OPTIONAL<MatchingRuleId>,
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Attribute to match; omit to apply the rule to all supporting
+     * attributes. At least one of `matchingRule` / `type_` must be
+     * usable as above.
+     *
      * @public
      * @readonly
      */
     readonly type_: OPTIONAL<AttributeDescription>,
     /**
      * @summary `matchValue`.
+     * @description
+     *
+     * Encoded in the matching rule's assertion syntax.
+     *
      * @public
      * @readonly
      */
     readonly matchValue: AssertionValue,
     /**
      * @summary `dnAttributes`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE: also apply against AttributeValueAssertions
+     * in the entry's DN.
+     *
      * @public
      * @readonly
      */

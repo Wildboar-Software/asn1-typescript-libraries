@@ -58,6 +58,12 @@ export enum _enum_for_LDAPResult_resultCode {
  * @summary LDAPResult_resultCode
  * @description
  *
+ * Extensible ENUMERATED. Unrecognized values are an unknown error.
+ * Non-error: `success`(0), `compareFalse`(5), `compareTrue`(6),
+ * `referral`(10), `saslBindInProgress`(14). Servers may substitute
+ * codes to hide data. Unused/reserved: 9, 22-31, 35 (isLeaf), 37-47,
+ * 55-63, 70 (CLDAP), 72-79.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -72,6 +78,11 @@ export type LDAPResult_resultCode =
 
 /**
  * @summary LDAPResult_resultCode_success
+ * @description
+ *
+ * Successful completion. Not used with Compare -- see
+ * compareFalse/compareTrue.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +90,11 @@ export const LDAPResult_resultCode_success: LDAPResult_resultCode = 0; /* LONG_N
 
 /**
  * @summary success
+ * @description
+ *
+ * Successful completion. Not used with Compare -- see
+ * compareFalse/compareTrue.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +102,11 @@ export const success: LDAPResult_resultCode = LDAPResult_resultCode_success; /* 
 
 /**
  * @summary LDAPResult_resultCode_operationsError
+ * @description
+ *
+ * Operation not properly sequenced (e.g. StartTLS while other ops
+ * outstanding, or TLS already installed).
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +114,11 @@ export const LDAPResult_resultCode_operationsError: LDAPResult_resultCode = 1; /
 
 /**
  * @summary operationsError
+ * @description
+ *
+ * Operation not properly sequenced (e.g. StartTLS while other ops
+ * outstanding, or TLS already installed).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +126,12 @@ export const operationsError: LDAPResult_resultCode = LDAPResult_resultCode_oper
 
 /**
  * @summary LDAPResult_resultCode_protocolError
+ * @description
+ *
+ * Not well-formed. Also: Bind with unsupported version; unrecognized
+ * Extended requestName; invalid/unspecified control combination or order the
+ * server cannot ignore.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +139,12 @@ export const LDAPResult_resultCode_protocolError: LDAPResult_resultCode = 2; /* 
 
 /**
  * @summary protocolError
+ * @description
+ *
+ * Not well-formed. Also: Bind with unsupported version; unrecognized
+ * Extended requestName; invalid/unspecified control combination or order the
+ * server cannot ignore.
+ *
  * @constant
  * @type {number}
  */
@@ -114,6 +152,11 @@ export const protocolError: LDAPResult_resultCode = LDAPResult_resultCode_protoc
 
 /**
  * @summary LDAPResult_resultCode_timeLimitExceeded
+ * @description
+ *
+ * Client timeLimit hit before completion. Search may still have returned
+ * some entries.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +164,11 @@ export const LDAPResult_resultCode_timeLimitExceeded: LDAPResult_resultCode = 3;
 
 /**
  * @summary timeLimitExceeded
+ * @description
+ *
+ * Client timeLimit hit before completion. Search may still have returned
+ * some entries.
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +176,11 @@ export const timeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_ti
 
 /**
  * @summary LDAPResult_resultCode_sizeLimitExceeded
+ * @description
+ *
+ * Client sizeLimit hit before completion. Search may still have returned
+ * some entries.
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +188,11 @@ export const LDAPResult_resultCode_sizeLimitExceeded: LDAPResult_resultCode = 4;
 
 /**
  * @summary sizeLimitExceeded
+ * @description
+ *
+ * Client sizeLimit hit before completion. Search may still have returned
+ * some entries.
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +200,11 @@ export const sizeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_si
 
 /**
  * @summary LDAPResult_resultCode_compareFalse
+ * @description
+ *
+ * Compare succeeded and the assertion was FALSE or Undefined. Non-error /
+ * successful.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +212,11 @@ export const LDAPResult_resultCode_compareFalse: LDAPResult_resultCode = 5; /* L
 
 /**
  * @summary compareFalse
+ * @description
+ *
+ * Compare succeeded and the assertion was FALSE or Undefined. Non-error /
+ * successful.
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +224,10 @@ export const compareFalse: LDAPResult_resultCode = LDAPResult_resultCode_compare
 
 /**
  * @summary LDAPResult_resultCode_compareTrue
+ * @description
+ *
+ * Compare succeeded and the assertion was TRUE. Non-error / successful.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +235,10 @@ export const LDAPResult_resultCode_compareTrue: LDAPResult_resultCode = 6; /* LO
 
 /**
  * @summary compareTrue
+ * @description
+ *
+ * Compare succeeded and the assertion was TRUE. Non-error / successful.
+ *
  * @constant
  * @type {number}
  */
@@ -170,6 +246,11 @@ export const compareTrue: LDAPResult_resultCode = LDAPResult_resultCode_compareT
 
 /**
  * @summary LDAPResult_resultCode_authMethodNotSupported
+ * @description
+ *
+ * Authentication method/mechanism not supported. Also returned for empty
+ * SASL mechanism (abort).
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +258,11 @@ export const LDAPResult_resultCode_authMethodNotSupported: LDAPResult_resultCode
 
 /**
  * @summary authMethodNotSupported
+ * @description
+ *
+ * Authentication method/mechanism not supported. Also returned for empty
+ * SASL mechanism (abort).
+ *
  * @constant
  * @type {number}
  */
@@ -184,6 +270,11 @@ export const authMethodNotSupported: LDAPResult_resultCode = LDAPResult_resultCo
 
 /**
  * @summary LDAPResult_resultCode_strongerAuthRequired
+ * @description
+ *
+ * Stronger authentication required. On Notice of Disconnection: security
+ * association failed or was compromised.
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +282,11 @@ export const LDAPResult_resultCode_strongerAuthRequired: LDAPResult_resultCode =
 
 /**
  * @summary strongerAuthRequired
+ * @description
+ *
+ * Stronger authentication required. On Notice of Disconnection: security
+ * association failed or was compromised.
+ *
  * @constant
  * @type {number}
  */
@@ -198,6 +294,11 @@ export const strongerAuthRequired: LDAPResult_resultCode = LDAPResult_resultCode
 
 /**
  * @summary LDAPResult_resultCode_referral
+ * @description
+ *
+ * Non-error: chase the `referral` field to complete. Present iff this code
+ * is used.
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +306,11 @@ export const LDAPResult_resultCode_referral: LDAPResult_resultCode = 10; /* LONG
 
 /**
  * @summary referral
+ * @description
+ *
+ * Non-error: chase the `referral` field to complete. Present iff this code
+ * is used.
+ *
  * @constant
  * @type {number}
  */
@@ -212,6 +318,10 @@ export const referral: LDAPResult_resultCode = LDAPResult_resultCode_referral; /
 
 /**
  * @summary LDAPResult_resultCode_adminLimitExceeded
+ * @description
+ *
+ * An administrative limit was exceeded.
+ *
  * @constant
  * @type {number}
  */
@@ -219,6 +329,10 @@ export const LDAPResult_resultCode_adminLimitExceeded: LDAPResult_resultCode = 1
 
 /**
  * @summary adminLimitExceeded
+ * @description
+ *
+ * An administrative limit was exceeded.
+ *
  * @constant
  * @type {number}
  */
@@ -226,6 +340,10 @@ export const adminLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_a
 
 /**
  * @summary LDAPResult_resultCode_unavailableCriticalExtension
+ * @description
+ *
+ * A critical control was unrecognized, inappropriate, or refused.
+ *
  * @constant
  * @type {number}
  */
@@ -233,6 +351,10 @@ export const LDAPResult_resultCode_unavailableCriticalExtension: LDAPResult_resu
 
 /**
  * @summary unavailableCriticalExtension
+ * @description
+ *
+ * A critical control was unrecognized, inappropriate, or refused.
+ *
  * @constant
  * @type {number}
  */
@@ -240,6 +362,10 @@ export const unavailableCriticalExtension: LDAPResult_resultCode = LDAPResult_re
 
 /**
  * @summary LDAPResult_resultCode_confidentialityRequired
+ * @description
+ *
+ * Data confidentiality protections are required.
+ *
  * @constant
  * @type {number}
  */
@@ -247,6 +373,10 @@ export const LDAPResult_resultCode_confidentialityRequired: LDAPResult_resultCod
 
 /**
  * @summary confidentialityRequired
+ * @description
+ *
+ * Data confidentiality protections are required.
+ *
  * @constant
  * @type {number}
  */
@@ -254,6 +384,10 @@ export const confidentialityRequired: LDAPResult_resultCode = LDAPResult_resultC
 
 /**
  * @summary LDAPResult_resultCode_saslBindInProgress
+ * @description
+ *
+ * Non-error: send another Bind with the same SASL mechanism to continue.
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +395,10 @@ export const LDAPResult_resultCode_saslBindInProgress: LDAPResult_resultCode = 1
 
 /**
  * @summary saslBindInProgress
+ * @description
+ *
+ * Non-error: send another Bind with the same SASL mechanism to continue.
+ *
  * @constant
  * @type {number}
  */
@@ -268,6 +406,10 @@ export const saslBindInProgress: LDAPResult_resultCode = LDAPResult_resultCode_s
 
 /**
  * @summary LDAPResult_resultCode_noSuchAttribute
+ * @description
+ *
+ * Named entry does not contain the specified attribute or attribute value.
+ *
  * @constant
  * @type {number}
  */
@@ -275,6 +417,10 @@ export const LDAPResult_resultCode_noSuchAttribute: LDAPResult_resultCode = 16; 
 
 /**
  * @summary noSuchAttribute
+ * @description
+ *
+ * Named entry does not contain the specified attribute or attribute value.
+ *
  * @constant
  * @type {number}
  */
@@ -282,6 +428,10 @@ export const noSuchAttribute: LDAPResult_resultCode = LDAPResult_resultCode_noSu
 
 /**
  * @summary LDAPResult_resultCode_undefinedAttributeType
+ * @description
+ *
+ * A request field contains an unrecognized attribute description.
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +439,10 @@ export const LDAPResult_resultCode_undefinedAttributeType: LDAPResult_resultCode
 
 /**
  * @summary undefinedAttributeType
+ * @description
+ *
+ * A request field contains an unrecognized attribute description.
+ *
  * @constant
  * @type {number}
  */
@@ -296,6 +450,11 @@ export const undefinedAttributeType: LDAPResult_resultCode = LDAPResult_resultCo
 
 /**
  * @summary LDAPResult_resultCode_inappropriateMatching
+ * @description
+ *
+ * Matching rule used (e.g. in an assertion) is not defined for that
+ * attribute type.
+ *
  * @constant
  * @type {number}
  */
@@ -303,6 +462,11 @@ export const LDAPResult_resultCode_inappropriateMatching: LDAPResult_resultCode 
 
 /**
  * @summary inappropriateMatching
+ * @description
+ *
+ * Matching rule used (e.g. in an assertion) is not defined for that
+ * attribute type.
+ *
  * @constant
  * @type {number}
  */
@@ -310,6 +474,11 @@ export const inappropriateMatching: LDAPResult_resultCode = LDAPResult_resultCod
 
 /**
  * @summary LDAPResult_resultCode_constraintViolation
+ * @description
+ *
+ * Value violates data-model constraints (e.g. multiple values on a
+ * SINGLE-VALUE attribute).
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +486,11 @@ export const LDAPResult_resultCode_constraintViolation: LDAPResult_resultCode = 
 
 /**
  * @summary constraintViolation
+ * @description
+ *
+ * Value violates data-model constraints (e.g. multiple values on a
+ * SINGLE-VALUE attribute).
+ *
  * @constant
  * @type {number}
  */
@@ -324,6 +498,10 @@ export const constraintViolation: LDAPResult_resultCode = LDAPResult_resultCode_
 
 /**
  * @summary LDAPResult_resultCode_attributeOrValueExists
+ * @description
+ *
+ * Attribute or value to be added already exists.
+ *
  * @constant
  * @type {number}
  */
@@ -331,6 +509,10 @@ export const LDAPResult_resultCode_attributeOrValueExists: LDAPResult_resultCode
 
 /**
  * @summary attributeOrValueExists
+ * @description
+ *
+ * Attribute or value to be added already exists.
+ *
  * @constant
  * @type {number}
  */
@@ -338,6 +520,11 @@ export const attributeOrValueExists: LDAPResult_resultCode = LDAPResult_resultCo
 
 /**
  * @summary LDAPResult_resultCode_invalidAttributeSyntax
+ * @description
+ *
+ * Purported attribute value does not conform to the attribute's syntax (RFC
+ * 4517).
+ *
  * @constant
  * @type {number}
  */
@@ -345,6 +532,11 @@ export const LDAPResult_resultCode_invalidAttributeSyntax: LDAPResult_resultCode
 
 /**
  * @summary invalidAttributeSyntax
+ * @description
+ *
+ * Purported attribute value does not conform to the attribute's syntax (RFC
+ * 4517).
+ *
  * @constant
  * @type {number}
  */
@@ -352,6 +544,11 @@ export const invalidAttributeSyntax: LDAPResult_resultCode = LDAPResult_resultCo
 
 /**
  * @summary LDAPResult_resultCode_noSuchObject
+ * @description
+ *
+ * Object does not exist in the DIT. Often used as a substitute for
+ * insufficientAccessRights. `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -359,6 +556,11 @@ export const LDAPResult_resultCode_noSuchObject: LDAPResult_resultCode = 32; /* 
 
 /**
  * @summary noSuchObject
+ * @description
+ *
+ * Object does not exist in the DIT. Often used as a substitute for
+ * insufficientAccessRights. `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -366,6 +568,10 @@ export const noSuchObject: LDAPResult_resultCode = LDAPResult_resultCode_noSuchO
 
 /**
  * @summary LDAPResult_resultCode_aliasProblem
+ * @description
+ *
+ * Alias problem (e.g. deref names no object). `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -373,6 +579,10 @@ export const LDAPResult_resultCode_aliasProblem: LDAPResult_resultCode = 33; /* 
 
 /**
  * @summary aliasProblem
+ * @description
+ *
+ * Alias problem (e.g. deref names no object). `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -380,6 +590,11 @@ export const aliasProblem: LDAPResult_resultCode = LDAPResult_resultCode_aliasPr
 
 /**
  * @summary LDAPResult_resultCode_invalidDNSyntax
+ * @description
+ *
+ * LDAPDN or RelativeLDAPDN does not conform, or contains values that fail
+ * the attribute syntax. `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -387,6 +602,11 @@ export const LDAPResult_resultCode_invalidDNSyntax: LDAPResult_resultCode = 34; 
 
 /**
  * @summary invalidDNSyntax
+ * @description
+ *
+ * LDAPDN or RelativeLDAPDN does not conform, or contains values that fail
+ * the attribute syntax. `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -394,6 +614,11 @@ export const invalidDNSyntax: LDAPResult_resultCode = LDAPResult_resultCode_inva
 
 /**
  * @summary LDAPResult_resultCode_aliasDereferencingProblem
+ * @description
+ *
+ * Problem dereferencing an alias (not allowed, or access denied).
+ * `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -401,6 +626,11 @@ export const LDAPResult_resultCode_aliasDereferencingProblem: LDAPResult_resultC
 
 /**
  * @summary aliasDereferencingProblem
+ * @description
+ *
+ * Problem dereferencing an alias (not allowed, or access denied).
+ * `matchedDN` typically set.
+ *
  * @constant
  * @type {number}
  */
@@ -408,6 +638,10 @@ export const aliasDereferencingProblem: LDAPResult_resultCode = LDAPResult_resul
 
 /**
  * @summary LDAPResult_resultCode_inappropriateAuthentication
+ * @description
+ *
+ * Anonymous or credential-less bind rejected; credentials required.
+ *
  * @constant
  * @type {number}
  */
@@ -415,6 +649,10 @@ export const LDAPResult_resultCode_inappropriateAuthentication: LDAPResult_resul
 
 /**
  * @summary inappropriateAuthentication
+ * @description
+ *
+ * Anonymous or credential-less bind rejected; credentials required.
+ *
  * @constant
  * @type {number}
  */
@@ -422,6 +660,11 @@ export const inappropriateAuthentication: LDAPResult_resultCode = LDAPResult_res
 
 /**
  * @summary LDAPResult_resultCode_invalidCredentials
+ * @description
+ *
+ * Provided credentials are invalid. May substitute for
+ * insufficientAccessRights.
+ *
  * @constant
  * @type {number}
  */
@@ -429,6 +672,11 @@ export const LDAPResult_resultCode_invalidCredentials: LDAPResult_resultCode = 4
 
 /**
  * @summary invalidCredentials
+ * @description
+ *
+ * Provided credentials are invalid. May substitute for
+ * insufficientAccessRights.
+ *
  * @constant
  * @type {number}
  */
@@ -436,6 +684,10 @@ export const invalidCredentials: LDAPResult_resultCode = LDAPResult_resultCode_i
 
 /**
  * @summary LDAPResult_resultCode_insufficientAccessRights
+ * @description
+ *
+ * Client lacks sufficient access rights.
+ *
  * @constant
  * @type {number}
  */
@@ -443,6 +695,10 @@ export const LDAPResult_resultCode_insufficientAccessRights: LDAPResult_resultCo
 
 /**
  * @summary insufficientAccessRights
+ * @description
+ *
+ * Client lacks sufficient access rights.
+ *
  * @constant
  * @type {number}
  */
@@ -450,6 +706,10 @@ export const insufficientAccessRights: LDAPResult_resultCode = LDAPResult_result
 
 /**
  * @summary LDAPResult_resultCode_busy
+ * @description
+ *
+ * Server too busy to service the operation.
+ *
  * @constant
  * @type {number}
  */
@@ -457,6 +717,10 @@ export const LDAPResult_resultCode_busy: LDAPResult_resultCode = 51; /* LONG_NAM
 
 /**
  * @summary busy
+ * @description
+ *
+ * Server too busy to service the operation.
+ *
  * @constant
  * @type {number}
  */
@@ -464,6 +728,10 @@ export const busy: LDAPResult_resultCode = LDAPResult_resultCode_busy; /* SHORT_
 
 /**
  * @summary LDAPResult_resultCode_unavailable
+ * @description
+ *
+ * Server shutting down, or a required subsystem is offline.
+ *
  * @constant
  * @type {number}
  */
@@ -471,6 +739,10 @@ export const LDAPResult_resultCode_unavailable: LDAPResult_resultCode = 52; /* L
 
 /**
  * @summary unavailable
+ * @description
+ *
+ * Server shutting down, or a required subsystem is offline.
+ *
  * @constant
  * @type {number}
  */
@@ -478,6 +750,10 @@ export const unavailable: LDAPResult_resultCode = LDAPResult_resultCode_unavaila
 
 /**
  * @summary LDAPResult_resultCode_unwillingToPerform
+ * @description
+ *
+ * Server unwilling to perform the operation.
+ *
  * @constant
  * @type {number}
  */
@@ -485,6 +761,10 @@ export const LDAPResult_resultCode_unwillingToPerform: LDAPResult_resultCode = 5
 
 /**
  * @summary unwillingToPerform
+ * @description
+ *
+ * Server unwilling to perform the operation.
+ *
  * @constant
  * @type {number}
  */
@@ -492,6 +772,10 @@ export const unwillingToPerform: LDAPResult_resultCode = LDAPResult_resultCode_u
 
 /**
  * @summary LDAPResult_resultCode_loopDetect
+ * @description
+ *
+ * Internal loop (e.g. alias deref or chaining).
+ *
  * @constant
  * @type {number}
  */
@@ -499,6 +783,10 @@ export const LDAPResult_resultCode_loopDetect: LDAPResult_resultCode = 54; /* LO
 
 /**
  * @summary loopDetect
+ * @description
+ *
+ * Internal loop (e.g. alias deref or chaining).
+ *
  * @constant
  * @type {number}
  */
@@ -506,6 +794,10 @@ export const loopDetect: LDAPResult_resultCode = LDAPResult_resultCode_loopDetec
 
 /**
  * @summary LDAPResult_resultCode_namingViolation
+ * @description
+ *
+ * Entry's name violates naming restrictions.
+ *
  * @constant
  * @type {number}
  */
@@ -513,6 +805,10 @@ export const LDAPResult_resultCode_namingViolation: LDAPResult_resultCode = 64; 
 
 /**
  * @summary namingViolation
+ * @description
+ *
+ * Entry's name violates naming restrictions.
+ *
  * @constant
  * @type {number}
  */
@@ -520,6 +816,10 @@ export const namingViolation: LDAPResult_resultCode = LDAPResult_resultCode_nami
 
 /**
  * @summary LDAPResult_resultCode_objectClassViolation
+ * @description
+ *
+ * Entry violates object-class restrictions.
+ *
  * @constant
  * @type {number}
  */
@@ -527,6 +827,10 @@ export const LDAPResult_resultCode_objectClassViolation: LDAPResult_resultCode =
 
 /**
  * @summary objectClassViolation
+ * @description
+ *
+ * Entry violates object-class restrictions.
+ *
  * @constant
  * @type {number}
  */
@@ -534,6 +838,11 @@ export const objectClassViolation: LDAPResult_resultCode = LDAPResult_resultCode
 
 /**
  * @summary LDAPResult_resultCode_notAllowedOnNonLeaf
+ * @description
+ *
+ * Operation inappropriately acts on a non-leaf (typical Delete of an entry
+ * with children).
+ *
  * @constant
  * @type {number}
  */
@@ -541,6 +850,11 @@ export const LDAPResult_resultCode_notAllowedOnNonLeaf: LDAPResult_resultCode = 
 
 /**
  * @summary notAllowedOnNonLeaf
+ * @description
+ *
+ * Operation inappropriately acts on a non-leaf (typical Delete of an entry
+ * with children).
+ *
  * @constant
  * @type {number}
  */
@@ -548,6 +862,10 @@ export const notAllowedOnNonLeaf: LDAPResult_resultCode = LDAPResult_resultCode_
 
 /**
  * @summary LDAPResult_resultCode_notAllowedOnRDN
+ * @description
+ *
+ * Attempt to remove a value that forms the entry's RDN; use ModifyDN instead.
+ *
  * @constant
  * @type {number}
  */
@@ -555,6 +873,10 @@ export const LDAPResult_resultCode_notAllowedOnRDN: LDAPResult_resultCode = 67; 
 
 /**
  * @summary notAllowedOnRDN
+ * @description
+ *
+ * Attempt to remove a value that forms the entry's RDN; use ModifyDN instead.
+ *
  * @constant
  * @type {number}
  */
@@ -562,6 +884,10 @@ export const notAllowedOnRDN: LDAPResult_resultCode = LDAPResult_resultCode_notA
 
 /**
  * @summary LDAPResult_resultCode_entryAlreadyExists
+ * @description
+ *
+ * Add/move/rename target already exists.
+ *
  * @constant
  * @type {number}
  */
@@ -569,6 +895,10 @@ export const LDAPResult_resultCode_entryAlreadyExists: LDAPResult_resultCode = 6
 
 /**
  * @summary entryAlreadyExists
+ * @description
+ *
+ * Add/move/rename target already exists.
+ *
  * @constant
  * @type {number}
  */
@@ -576,6 +906,10 @@ export const entryAlreadyExists: LDAPResult_resultCode = LDAPResult_resultCode_e
 
 /**
  * @summary LDAPResult_resultCode_objectClassModsProhibited
+ * @description
+ *
+ * Forbidden change to `objectClass` (e.g. modifying the structural class).
+ *
  * @constant
  * @type {number}
  */
@@ -583,6 +917,10 @@ export const LDAPResult_resultCode_objectClassModsProhibited: LDAPResult_resultC
 
 /**
  * @summary objectClassModsProhibited
+ * @description
+ *
+ * Forbidden change to `objectClass` (e.g. modifying the structural class).
+ *
  * @constant
  * @type {number}
  */
@@ -590,6 +928,11 @@ export const objectClassModsProhibited: LDAPResult_resultCode = LDAPResult_resul
 
 /**
  * @summary LDAPResult_resultCode_affectsMultipleDSAs
+ * @description
+ *
+ * Operation would affect multiple servers (typical of ModifyDN across DSAs
+ * when mapped to DAP).
+ *
  * @constant
  * @type {number}
  */
@@ -597,6 +940,11 @@ export const LDAPResult_resultCode_affectsMultipleDSAs: LDAPResult_resultCode = 
 
 /**
  * @summary affectsMultipleDSAs
+ * @description
+ *
+ * Operation would affect multiple servers (typical of ModifyDN across DSAs
+ * when mapped to DAP).
+ *
  * @constant
  * @type {number}
  */
@@ -604,6 +952,10 @@ export const affectsMultipleDSAs: LDAPResult_resultCode = LDAPResult_resultCode_
 
 /**
  * @summary LDAPResult_resultCode_other
+ * @description
+ *
+ * Internal error not covered by another code.
+ *
  * @constant
  * @type {number}
  */
@@ -611,6 +963,10 @@ export const LDAPResult_resultCode_other: LDAPResult_resultCode = 80; /* LONG_NA
 
 /**
  * @summary other
+ * @description
+ *
+ * Internal error not covered by another code.
+ *
  * @constant
  * @type {number}
  */

@@ -20,6 +20,10 @@ import {
  * @summary ModifyResponse
  * @description
  *
+ * Single LDAPResult for the whole atomic Modify. Error ⇒ no DIT
+ * change; `success` ⇒ all changes applied. If this is never received,
+ * the client cannot determine whether the modify happened.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

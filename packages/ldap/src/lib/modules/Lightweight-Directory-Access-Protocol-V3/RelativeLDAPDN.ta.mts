@@ -20,6 +20,10 @@ import {
  * @summary RelativeLDAPDN
  * @description
  *
+ * RFC 4514 `<name-component>`: one RDN. Used as ModifyDN `newrdn`
+ * (supply the old RDN when moving without renaming). AVA order within
+ * a multi-valued RDN is not significant (SET).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -38,6 +38,12 @@ import {
  * @summary LDAPResult
  * @description
  *
+ * Final status of an operation. Only one `resultCode` even if multiple
+ * errors apply; servers may substitute codes to hide data (e.g.
+ * `noSuchObject` for `insufficientAccessRights`). Non-error codes:
+ * `success`, `compareFalse`, `compareTrue`, `referral`,
+ * `saslBindInProgress`. Unknown codes are an unknown error.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -85,24 +91,47 @@ export class LDAPResult {
   constructor(
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Extensible ENUMERATED. `success` is not used with Compare
+     * (`compareTrue`/`compareFalse` instead). `referral` requires
+     * `referral`; all other codes omit it.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: LDAPResult_resultCode,
     /**
      * @summary `matchedDN`.
+     * @description
+     *
+     * Last entry (object or alias) used finding the target -- typically
+     * for `noSuchObject`, `aliasProblem`, `invalidDNSyntax`,
+     * `aliasDereferencingProblem`. Otherwise empty. Subject to access
+     * controls.
+     *
      * @public
      * @readonly
      */
     readonly matchedDN: LDAPDN,
     /**
      * @summary `diagnosticMessage`.
+     * @description
+     *
+     * Optional human-readable text; MUST be empty if none. Not
+     * standardized -- do not parse or rely on values.
+     *
      * @public
      * @readonly
      */
     readonly diagnosticMessage: LDAPString,
     /**
      * @summary `referral`.
+     * @description
+     *
+     * Present if and only if `resultCode` is `referral`; absent
+     * otherwise. SIZE(1..MAX) URIs; any supported URI may be followed.
+     *
      * @public
      * @readonly
      */

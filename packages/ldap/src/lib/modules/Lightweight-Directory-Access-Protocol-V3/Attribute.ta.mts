@@ -20,6 +20,11 @@ import {
  * @summary Attribute
  * @description
  *
+ * `PartialAttribute` constrained to SIZE(1..MAX) `vals` -- at least one
+ * value. Unordered SET; no equivalent duplicates. Used in Add (clients
+ * MAY omit RDN attributes; MUST NOT supply NO-USER-MODIFICATION ops
+ * attrs).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

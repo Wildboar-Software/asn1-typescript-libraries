@@ -22,6 +22,12 @@ import {
  * @summary ExtendedRequest
  * @description
  *
+ * Extra operation identified by `requestName` (numericoid).
+ * Unrecognized name → `protocolError`. `requestValue` format is
+ * defined by that OID; prepare for arbitrary octets including NULs.
+ * StartTLS is `1.3.6.1.4.1.1466.20037` with `requestValue` absent.
+ * Advertised in root DSE `supportedExtension`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,21 @@ export class ExtendedRequest {
   constructor(
     /**
      * @summary `requestName`.
+     * @description
+     *
+     * Numericoid of the extended operation.
+     *
      * @public
      * @readonly
      */
     readonly requestName: LDAPOID,
     /**
      * @summary `requestValue`.
+     * @description
+     *
+     * Opaque; may contain NULs. Absent if the operation defines no
+     * value. BER-encoded inner values follow §4 extensibility.
+     *
      * @public
      * @readonly
      */

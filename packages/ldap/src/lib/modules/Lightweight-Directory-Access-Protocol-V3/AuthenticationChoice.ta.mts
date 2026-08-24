@@ -21,6 +21,12 @@ import {
  * @summary AuthenticationChoice
  * @description
  *
+ * `simple` [0] is UTF-8 password (SASLprep "query" for textual
+ * passwords; do not alter random octets) or empty for anonymous.
+ * Tags 1 and 2 are reserved. `sasl` [3] is SASL. Unrecognized choice →
+ * `authMethodNotSupported`. Empty SASL mechanism aborts a negotiation
+ * (server returns `authMethodNotSupported`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

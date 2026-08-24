@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MessageID
  * @description
  *
+ * INTEGER 0..`maxInt` (2^31−1). 0 is reserved for unsolicited
+ * notifications; request IDs MUST be non-zero and unique among
+ * in-progress operations. Typical clients increment a counter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

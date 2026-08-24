@@ -20,6 +20,8 @@ import {
  * @summary DelResponse
  * @description
  *
+ * LDAPResult for Delete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

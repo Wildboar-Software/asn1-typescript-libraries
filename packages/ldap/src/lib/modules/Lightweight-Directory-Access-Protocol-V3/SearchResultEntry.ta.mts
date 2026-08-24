@@ -27,6 +27,13 @@ import {
  * @summary SearchResultEntry
  * @description
  *
+ * One matching entry. May interleave in any order with
+ * SearchResultReference; SearchResultDone follows all of them.
+ * `attributes` may be empty (nothing requested/returnable). Individual
+ * `vals` SETs may be empty (`typesOnly` or access control). Some
+ * attributes may be constructed and not modifiable. Attributes appear
+ * at most once.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +48,21 @@ export class SearchResultEntry {
   constructor(
     /**
      * @summary `objectName`.
+     * @description
+     *
+     * DN of the entry found (after any alias deref).
+     *
      * @public
      * @readonly
      */
     readonly objectName: LDAPDN,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * May be empty. Order is not significant. Each description at most
+     * once.
+     *
      * @public
      * @readonly
      */

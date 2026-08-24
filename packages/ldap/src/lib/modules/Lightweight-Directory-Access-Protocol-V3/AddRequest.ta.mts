@@ -25,6 +25,12 @@ import {
  * @summary AddRequest
  * @description
  *
+ * Create an entry. `entry` MUST NOT already exist; its immediate
+ * parent MUST exist (`noSuchObject` + `matchedDN` = last existing
+ * ancestor). No alias deref. Clients MAY omit RDN attributes (server
+ * takes them from the DN) and MUST NOT supply NO-USER-MODIFICATION
+ * operational attributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class AddRequest {
   constructor(
     /**
      * @summary `entry`.
+     * @description
+     *
+     * DN of the new entry. MUST NOT exist; parent MUST exist. No alias
+     * deref.
+     *
      * @public
      * @readonly
      */
     readonly entry: LDAPDN,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Entry content plus optional RDN attributes. Each Attribute needs
+     * ≥1 value. Order not significant.
+     *
      * @public
      * @readonly
      */

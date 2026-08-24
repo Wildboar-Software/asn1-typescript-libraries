@@ -27,6 +27,11 @@ import {
  * @summary ModifyDNRequest
  * @description
  *
+ * Rename and/or move an entry (and its subtree). No alias deref on
+ * `entry` or `newSuperior`. `newrdn` values not already in the entry
+ * are added. Clients MUST NOT assume arbitrary moves across servers or
+ * naming contexts (`affectsMultipleDSAs`). `newSuperior` MUST exist.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,24 +48,44 @@ export class ModifyDNRequest {
   constructor(
     /**
      * @summary `entry`.
+     * @description
+     *
+     * DN of the entry to rename/move. May have subordinates. No alias
+     * deref.
+     *
      * @public
      * @readonly
      */
     readonly entry: LDAPDN,
     /**
      * @summary `newrdn`.
+     * @description
+     *
+     * New RDN. When moving without renaming, supply the old RDN.
+     * New AVA values are added to the entry.
+     *
      * @public
      * @readonly
      */
     readonly newrdn: RelativeLDAPDN,
     /**
      * @summary `deleteoldrdn`.
+     * @description
+     *
+     * TRUE: drop old-RDN attribute values (that are not also in
+     * `newrdn`). FALSE: keep them as non-distinguished values.
+     *
      * @public
      * @readonly
      */
     readonly deleteoldrdn: BOOLEAN,
     /**
      * @summary `newSuperior`.
+     * @description
+     *
+     * If present, existing object that becomes the new parent. MUST
+     * exist. No alias deref.
+     *
      * @public
      * @readonly
      */

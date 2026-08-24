@@ -23,6 +23,13 @@ import {
  * @summary Control
  * @description
  *
+ * Extends one message only. `criticality` is meaningful on requests
+ * except Unbind; on responses and Unbind it SHOULD be FALSE and MUST
+ * be ignored. TRUE + unrecognized/inappropriate →
+ * `unavailableCriticalExtension`. FALSE → ignore the control.
+ * `controlValue` may contain zero bytes; absent iff the control type
+ * has no value information.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +45,33 @@ export class Control {
   constructor(
     /**
      * @summary `controlType`.
+     * @description
+     *
+     * Numericoid uniquely identifying the control. Response controls
+     * often reuse the request control's OID.
+     *
      * @public
      * @readonly
      */
     readonly controlType: LDAPOID,
     /**
      * @summary `criticality`.
+     * @description
+     *
+     * DEFAULT FALSE. Meaningful only on requests other than Unbind.
+     *
      * @public
      * @readonly
      */
     readonly criticality?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `controlValue`.
+     * @description
+     *
+     * Opaque; format defined by the control spec. Prepare for arbitrary
+     * contents including NULs. BER-encoded inner values follow §4
+     * extensibility.
+     *
      * @public
      * @readonly
      */

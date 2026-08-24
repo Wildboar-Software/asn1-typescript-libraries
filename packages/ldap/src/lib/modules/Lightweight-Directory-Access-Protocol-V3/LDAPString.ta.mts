@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LDAPString
  * @description
  *
+ * OCTET STRING of UTF-8 [ISO 10646], not a native ASN.1 string type.
+ * U+0000..U+007F are single-octet (ASCII). Empty means a zero-length
+ * octet string. BER encoding uses primitive OCTET STRING only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

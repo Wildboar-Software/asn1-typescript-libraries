@@ -21,6 +21,13 @@ import {
  * @summary AttributeSelection
  * @description
  *
+ * SEQUENCE OF selector. Empty = all user attributes. `"*"` = all user
+ * attrs plus any listed operational attrs. `"1.1"` alone = return no
+ * attributes (`"1.1"` ignored if combined with others). Subtypes of
+ * listed types are included. Duplicates and unrecognized names are
+ * ignored. Operational attributes are returned only if named. Order
+ * does not affect which attributes are selected.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

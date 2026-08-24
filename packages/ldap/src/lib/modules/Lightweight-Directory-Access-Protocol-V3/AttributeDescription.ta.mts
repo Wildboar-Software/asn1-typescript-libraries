@@ -20,6 +20,11 @@ import {
  * @summary AttributeDescription
  * @description
  *
+ * Attribute type plus zero or more options (RFC 4512 §2.5):
+ * `type;opt1;opt2`. Type may be numericoid or short name. Options are
+ * semicolon-separated and case-insensitive; `;binary` requests BER
+ * transfer of values instead of the LDAP-specific encoding (RFC 4517).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

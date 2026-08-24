@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LDAPOID
  * @description
  *
+ * UTF-8 dotted-decimal `<numericoid>` (RFC 4512), e.g. `1.3.6.1.4.1.1466.1.2.3`.
+ * Encoded as OCTET STRING, not ASN.1 OBJECT IDENTIFIER. Short names
+ * (`descr`) are not permitted here.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

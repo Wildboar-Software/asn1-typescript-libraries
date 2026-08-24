@@ -22,6 +22,13 @@ import {
  * @summary IntermediateResponse
  * @description
  *
+ * Extra response(s) before the final result for Extended ops or
+ * request controls. SHALL NOT be sent unless the request solicits
+ * them. When used with request controls, `responseName` SHALL be
+ * present (so the client can tell which control produced it). Multiple
+ * kinds MUST use distinct `responseName` values (one of which may be
+ * absent). `responseValue` may contain NULs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +43,22 @@ export class IntermediateResponse {
   constructor(
     /**
      * @summary `responseName`.
+     * @description
+     *
+     * Identifies the kind of intermediate message. Required when
+     * solicited by a request control.
+     *
      * @public
      * @readonly
      */
     readonly responseName?: OPTIONAL<LDAPOID>,
     /**
      * @summary `responseValue`.
+     * @description
+     *
+     * Opaque; format defined by the soliciting extension. May contain
+     * NULs.
+     *
      * @public
      * @readonly
      */

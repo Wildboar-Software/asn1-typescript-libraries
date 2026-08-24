@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AssertionValue
  * @description
  *
+ * Encoded in the *assertion* syntax of the matching rule in use, which
+ * can differ from the attribute's value syntax (e.g.
+ * `objectIdentifierFirstComponentMatch` asserts an OID against a
+ * SEQUENCE). Compare and `equalityMatch` use the EQUALITY assertion
+ * syntax; substring items also use EQUALITY syntax, not SUBSTR.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

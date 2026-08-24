@@ -52,6 +52,13 @@ import {
  * @summary ExtendedResponse
  * @description
  *
+ * LDAPResult plus optional `responseName`/`responseValue`.
+ * `responseName` is optional even when the spec assigns an OID --
+ * absent when the server cannot determine it (e.g. unrecognized
+ * requestName). Unsolicited notifications use this CHOICE with
+ * `messageID` 0; Notice of Disconnection is
+ * `1.3.6.1.4.1.1466.20036` with no `responseValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,36 +74,63 @@ export class ExtendedResponse implements LDAPResult {
   constructor(
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * See LDAPResult. Unrecognized extended request → `protocolError`.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
     /**
      * @summary `matchedDN`.
+     * @description
+     *
+     * Last entry used finding the target, or empty.
+     *
      * @public
      * @readonly
      */
     readonly matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
     /**
      * @summary `diagnosticMessage`.
+     * @description
+     *
+     * Optional diagnostic; empty if none. Not standardized.
+     *
      * @public
      * @readonly
      */
     readonly diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
     /**
      * @summary `referral`.
+     * @description
+     *
+     * Present iff `resultCode` is `referral`.
+     *
      * @public
      * @readonly
      */
     readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
     /**
      * @summary `responseName`.
+     * @description
+     *
+     * Optional even when the spec assigns an OID; absent if the server
+     * cannot determine it. Unsolicited Notice of Disconnection is
+     * `1.3.6.1.4.1.1466.20036`.
+     *
      * @public
      * @readonly
      */
     readonly responseName?: OPTIONAL<LDAPOID>,
     /**
      * @summary `responseValue`.
+     * @description
+     *
+     * Opaque; may contain NULs. Absent if none (including Notice of
+     * Disconnection and StartTLS).
+     *
      * @public
      * @readonly
      */

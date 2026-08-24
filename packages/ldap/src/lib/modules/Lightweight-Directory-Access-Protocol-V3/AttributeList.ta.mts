@@ -20,6 +20,10 @@ import {
  * @summary AttributeList
  * @description
  *
+ * SEQUENCE OF Attribute for Add. Each item has ≥1 value. RDN
+ * attributes may be omitted (derived from `entry`). Order is not
+ * significant. No equivalent duplicate values within an Attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

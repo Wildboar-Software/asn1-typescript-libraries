@@ -20,6 +20,13 @@ import {
  * @summary Referral
  * @description
  *
+ * SEQUENCE SIZE(1..MAX) of URI -- never empty. Any supported URI may be
+ * used to progress the operation. LDAP URLs (RFC 4516): missing `<dn>`
+ * → original name; missing `<filter>`/`<scope>` → original. Escape
+ * illegal URI characters with `%`. Do not loop; handle at least 10
+ * nested referrals. Search continuation uses SearchResultReference
+ * instead, once the baseObject has been located.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

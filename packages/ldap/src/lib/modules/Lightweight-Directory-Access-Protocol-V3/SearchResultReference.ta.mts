@@ -20,6 +20,14 @@ import {
  * @summary SearchResultReference
  * @description
  *
+ * Continuation: unexplored area after the baseObject was located
+ * (never returned if the base was not found). SEQUENCE SIZE(1..MAX)
+ * of URI -- same data type as Referral. LDAP URL `<dn>` MUST be present.
+ * If original scope was `singleLevel`, URL scope is `"base"`. Missing
+ * `<scope>` → original scope. Unexplored subtree need not be
+ * subordinate to the search base. Abandon of the original Search does
+ * not abandon follow-up searches.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

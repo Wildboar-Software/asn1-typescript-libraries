@@ -46,6 +46,12 @@ import {
  * @summary BindResponse
  * @description
  *
+ * LDAPResult plus optional `serverSaslCreds`. `success` = bound.
+ * `protocolError` here also means unsupported protocol version.
+ * `saslBindInProgress` (non-error) means send another Bind with the
+ * same mechanism. `serverSaslCreds` SHALL be absent for simple bind
+ * or mechanisms that return nothing.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,30 +66,51 @@ export class BindResponse {
   constructor(
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * See LDAPResult. `saslBindInProgress` is not an error.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
     /**
      * @summary `matchedDN`.
+     * @description
+     *
+     * Last entry used finding the bind name, or empty.
+     *
      * @public
      * @readonly
      */
     readonly matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
     /**
      * @summary `diagnosticMessage`.
+     * @description
+     *
+     * Optional diagnostic; empty if none. Not standardized.
+     *
      * @public
      * @readonly
      */
     readonly diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
     /**
      * @summary `referral`.
+     * @description
+     *
+     * Present iff `resultCode` is `referral`.
+     *
      * @public
      * @readonly
      */
     readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
     /**
      * @summary `serverSaslCreds`.
+     * @description
+     *
+     * SASL challenge / server-auth material. Absent for simple bind
+     * and mechanisms that return nothing to the client.
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,9 @@ import {
  * @summary DelRequest
  * @description
  *
+ * DN of a *leaf* entry to remove. Non-leaf → `notAllowedOnNonLeaf`.
+ * No alias deref. APPLICATION 10 implicit on LDAPDN.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

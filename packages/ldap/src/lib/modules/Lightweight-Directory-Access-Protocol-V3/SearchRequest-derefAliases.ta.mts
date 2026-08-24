@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SearchRequest_derefAliases
  * @description
  *
+ * Whether aliases are dereferenced while locating the base and/or
+ * searching subordinates. Deref is recursive; servers MUST detect
+ * loops. Not extensible (no `...` in RFC 4511).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,10 @@ export enum _enum_for_SearchRequest_derefAliases {
  * @summary SearchRequest_derefAliases
  * @description
  *
+ * Whether aliases are dereferenced while locating the base and/or
+ * searching subordinates. Deref is recursive; servers MUST detect
+ * loops. Not extensible (no `...` in RFC 4511).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +59,10 @@ export type SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
  * @summary SearchRequest_derefAliases
  * @description
  *
+ * Whether aliases are dereferenced while locating the base and/or
+ * searching subordinates. Deref is recursive; servers MUST detect
+ * loops. Not extensible (no `...` in RFC 4511).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +76,10 @@ export const SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 
 /**
  * @summary SearchRequest_derefAliases_neverDerefAliases
+ * @description
+ *
+ * Dereference neither when locating the base nor when searching.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +89,10 @@ export const SearchRequest_derefAliases_neverDerefAliases: SearchRequest_derefAl
 
 /**
  * @summary neverDerefAliases
+ * @description
+ *
+ * Dereference neither when locating the base nor when searching.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +102,13 @@ export const neverDerefAliases: SearchRequest_derefAliases =
 
 /**
  * @summary SearchRequest_derefAliases_derefInSearching
+ * @description
+ *
+ * Deref aliases in scope while searching subordinates, not when
+ * finding the base. Dereferenced objects become new search vertices
+ * (wholeSubtree continues into their subtrees; singleLevel does not).
+ * Servers SHOULD drop duplicates from deref.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +118,13 @@ export const SearchRequest_derefAliases_derefInSearching: SearchRequest_derefAli
 
 /**
  * @summary derefInSearching
+ * @description
+ *
+ * Deref aliases in scope while searching subordinates, not when
+ * finding the base. Dereferenced objects become new search vertices
+ * (wholeSubtree continues into their subtrees; singleLevel does not).
+ * Servers SHOULD drop duplicates from deref.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +134,11 @@ export const derefInSearching: SearchRequest_derefAliases =
 
 /**
  * @summary SearchRequest_derefAliases_derefFindingBaseObj
+ * @description
+ *
+ * Deref aliases when locating the base only, not when searching
+ * subordinates.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +148,11 @@ export const SearchRequest_derefAliases_derefFindingBaseObj: SearchRequest_deref
 
 /**
  * @summary derefFindingBaseObj
+ * @description
+ *
+ * Deref aliases when locating the base only, not when searching
+ * subordinates.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +162,10 @@ export const derefFindingBaseObj: SearchRequest_derefAliases =
 
 /**
  * @summary SearchRequest_derefAliases_derefAlways
+ * @description
+ *
+ * Deref both when locating the base and when searching subordinates.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +175,10 @@ export const SearchRequest_derefAliases_derefAlways: SearchRequest_derefAliases 
 
 /**
  * @summary derefAlways
+ * @description
+ *
+ * Deref both when locating the base and when searching subordinates.
+ *
  * @constant
  * @type {number}
  */

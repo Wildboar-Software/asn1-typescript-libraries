@@ -21,6 +21,9 @@ import {
  * @summary PartialAttributeList
  * @description
  *
+ * SEQUENCE OF PartialAttribute in a SearchResultEntry. May be empty.
+ * Each attribute at most once. Order is not significant.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

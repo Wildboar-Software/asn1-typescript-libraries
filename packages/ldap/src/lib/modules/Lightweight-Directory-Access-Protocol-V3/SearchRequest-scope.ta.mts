@@ -22,6 +22,10 @@ export enum _enum_for_SearchRequest_scope {
  * @summary SearchRequest_scope
  * @description
  *
+ * Extensible ENUMERATED. `baseObject`(0): named entry only.
+ * `singleLevel`(1): immediate subordinates, *not* the base.
+ * `wholeSubtree`(2): base and all subordinates.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,10 @@ export type SearchRequest_scope = _enum_for_SearchRequest_scope | ENUMERATED;
 
 /**
  * @summary SearchRequest_scope_baseObject
+ * @description
+ *
+ * Named entry only.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +49,10 @@ export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NA
 
 /**
  * @summary baseObject
+ * @description
+ *
+ * Named entry only.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +60,10 @@ export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /
 
 /**
  * @summary SearchRequest_scope_singleLevel
+ * @description
+ *
+ * Immediate subordinates of the base -- not the base itself.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +71,10 @@ export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_N
 
 /**
  * @summary singleLevel
+ * @description
+ *
+ * Immediate subordinates of the base -- not the base itself.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +82,10 @@ export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel;
 
 /**
  * @summary SearchRequest_scope_wholeSubtree
+ * @description
+ *
+ * Base entry plus all subordinates.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +93,10 @@ export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_
 
 /**
  * @summary wholeSubtree
+ * @description
+ *
+ * Base entry plus all subordinates.
+ *
  * @constant
  * @type {number}
  */

@@ -35,6 +35,17 @@ import {
  * @summary Filter
  * @description
  *
+ * Three-valued logic (X.511): TRUE → entry returned; FALSE or
+ * Undefined → skipped. `and`/`or` SET SIZE(1..MAX) -- empty illegal;
+ * order insignificant. `and`: TRUE iff all TRUE, FALSE if any FALSE,
+ * else Undefined. `or`: FALSE iff all FALSE, TRUE if any TRUE, else
+ * Undefined. `not`: flips TRUE/FALSE, Undefined stays Undefined.
+ * Unrecognized type/rule or invalid assertion → Undefined, not an
+ * error. `not` is explicit-tagged in BER (implicit module).
+ * `greaterOrEqual` is TRUE when ORDERING returns FALSE (i.e. value ≥
+ * assertion). `lessOrEqual` is TRUE when ORDERING *or* EQUALITY is
+ * TRUE. `approxMatch` falls back to equality if approx is unsupported.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

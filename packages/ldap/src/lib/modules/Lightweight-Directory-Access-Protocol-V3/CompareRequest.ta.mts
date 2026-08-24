@@ -25,6 +25,12 @@ import {
  * @summary CompareRequest
  * @description
  *
+ * Compare `ava` to values of that attribute (and subtypes) in `entry`
+ * using the attribute's EQUALITY matching rule. No alias deref.
+ * Result is `compareTrue` / `compareFalse` (not `success`). Undefined
+ * filter outcome is reported as `compareFalse`. Some attrs (e.g.
+ * `userPassword`) may be comparable but not readable.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class CompareRequest {
   constructor(
     /**
      * @summary `entry`.
+     * @description
+     *
+     * Target DN. Server SHALL NOT alias-dereference.
+     *
      * @public
      * @readonly
      */
     readonly entry: LDAPDN,
     /**
      * @summary `ava`.
+     * @description
+     *
+     * Assertion compared with EQUALITY. Assertion syntax is that of
+     * the EQUALITY matching rule (RFC 4517).
+     *
      * @public
      * @readonly
      */

@@ -26,6 +26,12 @@ import {
  * @summary BindRequest
  * @description
  *
+ * Authenticate (not "connect"). Completes or abandons all uncompleted
+ * ops first. After sending, the client MUST NOT send further PDUs until
+ * BindResponse. No version negotiation: client sets `version`;
+ * unsupported → `protocolError`. Empty `name` is anonymous or SASL.
+ * Alias deref is NOT performed when locating `name`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +47,32 @@ export class BindRequest {
   constructor(
     /**
      * @summary `version`.
+     * @description
+     *
+     * LDAP message-layer version; this spec is 3. Range 1..127.
+     * Unsupported version → BindResponse `protocolError`.
+     *
      * @public
      * @readonly
      */
     readonly version: INTEGER,
     /**
      * @summary `name`.
+     * @description
+     *
+     * DN to bind as, or empty for anonymous (RFC 4513 §5.1) or SASL.
+     * Server SHALL NOT alias-dereference when locating this object.
+     *
      * @public
      * @readonly
      */
     readonly name: LDAPDN,
     /**
      * @summary `authentication`.
+     * @description
+     *
+     * Extensible CHOICE. Unsupported choice → `authMethodNotSupported`.
+     *
      * @public
      * @readonly
      */

@@ -24,6 +24,12 @@ export enum _enum_for_ModifyRequest_changes_change_operation {
  * @summary ModifyRequest_changes_change_operation
  * @description
  *
+ * Extensible ENUMERATED. `add`(0): add listed values, creating the
+ * attribute if needed. `delete_`(1): remove listed values; empty (or
+ * all current values) removes the whole attribute. `replace`(2):
+ * replace all values with those listed, creating if needed; empty
+ * vals deletes the attribute if it exists, ignored if it does not.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +45,10 @@ export type ModifyRequest_changes_change_operation =
 
 /**
  * @summary ModifyRequest_changes_change_operation_add
+ * @description
+ *
+ * Add listed values; create the attribute if necessary.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +57,10 @@ export const ModifyRequest_changes_change_operation_add: ModifyRequest_changes_c
 
 /**
  * @summary add
+ * @description
+ *
+ * Add listed values; create the attribute if necessary.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +69,11 @@ export const add: ModifyRequest_changes_change_operation = ModifyRequest_changes
 
 /**
  * @summary ModifyRequest_changes_change_operation_delete_
+ * @description
+ *
+ * Delete listed values. Empty vals (or listing every current value)
+ * removes the entire attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +82,11 @@ export const ModifyRequest_changes_change_operation_delete_: ModifyRequest_chang
 
 /**
  * @summary delete_
+ * @description
+ *
+ * Delete listed values. Empty vals (or listing every current value)
+ * removes the entire attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +95,11 @@ export const delete_: ModifyRequest_changes_change_operation = ModifyRequest_cha
 
 /**
  * @summary ModifyRequest_changes_change_operation_replace
+ * @description
+ *
+ * Replace all existing values with those listed (create if absent).
+ * Empty vals deletes the attribute if present; no-op if absent.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +108,11 @@ export const ModifyRequest_changes_change_operation_replace: ModifyRequest_chang
 
 /**
  * @summary replace
+ * @description
+ *
+ * Replace all existing values with those listed (create if absent).
+ * Empty vals deletes the attribute if present; no-op if absent.
+ *
  * @constant
  * @type {number}
  */

@@ -16,6 +16,9 @@ import {
  * @summary maxInt
  * @description
  *
+ * 2^31−1. Upper bound for `MessageID`, `sizeLimit`, and `timeLimit`.
+ * Not "unlimited" by itself -- those fields use 0 for "no client limit".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,12 @@ import {
  * @summary Controls
  * @description
  *
+ * SEQUENCE OF Control attached to one LDAPMessage. Order is ignored
+ * unless a specification defines order-dependent semantics; otherwise
+ * a server that cannot ignore order fails with `protocolError`.
+ * Combining controls is invalid unless the combination is specified.
+ * Non-critical controls may be ignored to reach a valid combination.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

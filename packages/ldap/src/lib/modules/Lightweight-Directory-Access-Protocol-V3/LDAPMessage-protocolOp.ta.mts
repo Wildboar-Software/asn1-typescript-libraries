@@ -120,6 +120,11 @@ import {
  * @summary LDAPMessage_protocolOp
  * @description
  *
+ * CHOICE of request or response. Unsolicited notifications use
+ * `extendedResp` with `messageID` 0. `intermediateResponse` is an
+ * extension addition (after `...`). Unrecognized tags on a *request*
+ * should yield Notice of Disconnection / `protocolError`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

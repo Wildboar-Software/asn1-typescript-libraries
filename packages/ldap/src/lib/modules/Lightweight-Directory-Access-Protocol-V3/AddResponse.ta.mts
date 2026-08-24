@@ -20,6 +20,8 @@ import {
  * @summary AddResponse
  * @description
  *
+ * LDAPResult for Add. `success` means the entry was added.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

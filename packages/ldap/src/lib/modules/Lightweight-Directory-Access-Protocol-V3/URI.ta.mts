@@ -20,6 +20,11 @@ import {
  * @summary URI
  * @description
  *
+ * LDAPString limited to characters permitted in URIs. LDAP URLs follow
+ * RFC 4516. Other schemes may appear; ignore those not supported.
+ * UTF-8 in DN/filter fields that is illegal in URIs MUST be `%`-escaped
+ * (RFC 3986).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

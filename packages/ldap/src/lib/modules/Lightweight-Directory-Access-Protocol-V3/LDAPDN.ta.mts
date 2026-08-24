@@ -20,8 +20,11 @@ import {
  * @summary LDAPDN
  * @description
  *
- * Note that LDAP DNs are _reversed_. In X.500 protocols, the RDNs are arranged
- * in order of descending superiority, but in LDAP, it is the opposite.
+ * RFC 4514 string encoding of a Distinguished Name. LDAP DNs are
+ * _reversed_ vs X.500: LDAP lists RDNs least-superior first
+ * (`cn=x,dc=example,dc=com`); X.500 lists most-superior first.
+ * Empty string is the root (anonymous bind name / root DSE).
+ * Update ops MUST NOT alias-dereference when locating the named entry.
  *
  * ### ASN.1 Definition:
  *

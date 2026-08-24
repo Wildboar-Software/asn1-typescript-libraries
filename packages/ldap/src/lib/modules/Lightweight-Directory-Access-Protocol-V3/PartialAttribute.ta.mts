@@ -29,6 +29,11 @@ import {
  * @summary PartialAttribute
  * @description
  *
+ * Attribute description plus a SET OF values; empty SET is allowed
+ * (typesOnly search, access control, or modify delete/replace-all).
+ * Values are unordered -- do not rely on repeatable order. No two
+ * values may be equivalent (RFC 4512 §2.2 / the EQUALITY rule).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,12 +48,22 @@ export class PartialAttribute {
   constructor(
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Attribute description. Servers SHOULD return a short name when
+     * unambiguous.
+     *
      * @public
      * @readonly
      */
     readonly type_: AttributeDescription,
     /**
      * @summary `vals`.
+     * @description
+     *
+     * Unordered SET; empty allowed. No equivalent duplicates. Empty in
+     * Search when `typesOnly` is TRUE or values are withheld.
+     *
      * @public
      * @readonly
      */

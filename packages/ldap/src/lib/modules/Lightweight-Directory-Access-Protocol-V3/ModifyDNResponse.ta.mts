@@ -20,6 +20,10 @@ import {
  * @summary ModifyDNResponse
  * @description
  *
+ * LDAPResult for Modify DN. `entryAlreadyExists` if the new name is
+ * taken. `affectsMultipleDSAs` if the move would span servers (X.500
+ * mapping).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,10 @@ import {
  * @summary SubstringFilter_substrings_substring
  * @description
  *
+ * One substring. `initial` [0] at most once and first in the SEQUENCE;
+ * `final` [2] at most once and last; `any_` [1] may repeat. Values use
+ * EQUALITY assertion syntax (not RFC 4517 Substring Assertion).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

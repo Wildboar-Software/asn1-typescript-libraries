@@ -26,6 +26,10 @@ import {
  * @summary ModifyRequest_changes_change
  * @description
  *
+ * One modification. `modification.vals` may be empty: `delete` with no
+ * (or all) values removes the attribute; `replace` with no values
+ * deletes the attribute if present and is ignored if absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +41,21 @@ export class ModifyRequest_changes_change {
   constructor(
     /**
      * @summary `operation`.
+     * @description
+     *
+     * `add`(0), `delete_`(1), `replace`(2). Extensible.
+     *
      * @public
      * @readonly
      */
     readonly operation: ModifyRequest_changes_change_operation,
     /**
      * @summary `modification`.
+     * @description
+     *
+     * Attribute type and optional values. Empty `vals` is meaningful
+     * for delete/replace.
+     *
      * @public
      * @readonly
      */

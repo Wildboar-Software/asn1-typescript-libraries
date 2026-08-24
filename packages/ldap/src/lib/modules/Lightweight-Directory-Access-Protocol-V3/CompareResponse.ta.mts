@@ -20,6 +20,9 @@ import {
  * @summary CompareResponse
  * @description
  *
+ * LDAPResult. `compareTrue`(6) = EQUALITY matched; `compareFalse`(5) =
+ * no match *or* Undefined (RFC 4511 §4.10). Do not expect `success`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,12 @@ import {
  * @summary SaslCredentials
  * @description
  *
+ * SASL bind. Empty `mechanism` aborts a negotiation and MUST be
+ * answered with `authMethodNotSupported`. Changing `mechanism` (or
+ * switching away from `sasl`) also aborts. Multi-stage SASL: no other
+ * ops between Bind requests. `credentials` absent if the mechanism
+ * sends nothing this round.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,22 @@ export class SaslCredentials {
   constructor(
     /**
      * @summary `mechanism`.
+     * @description
+     *
+     * SASL mechanism name. Empty string aborts (server →
+     * `authMethodNotSupported`).
+     *
      * @public
      * @readonly
      */
     readonly mechanism: LDAPString,
     /**
      * @summary `credentials`.
+     * @description
+     *
+     * Mechanism-defined octets; omit if none this round. May contain
+     * NULs.
+     *
      * @public
      * @readonly
      */

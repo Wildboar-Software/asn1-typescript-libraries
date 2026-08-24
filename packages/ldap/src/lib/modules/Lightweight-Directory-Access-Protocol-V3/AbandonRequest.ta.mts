@@ -20,6 +20,14 @@ import {
  * @summary AbandonRequest
  * @description
  *
+ * APPLICATION 16 MessageID of the operation to abandon -- distinct
+ * from this request's own messageID. No response. Bind, Unbind,
+ * Abandon, and StartTLS cannot be abandoned. Search in mid-stream:
+ * server MUST stop entries and MUST NOT send SearchResultDone.
+ * Server MAY ignore (unrecognized ID, non-abandonable, already
+ * abandoned). Client MUST be prepared to still receive the result
+ * (in-flight). Do not send Abandon twice for the same op.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

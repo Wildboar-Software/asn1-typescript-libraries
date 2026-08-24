@@ -25,6 +25,12 @@ import {
  * @summary ModifyRequest
  * @description
  *
+ * Atomic: all `changes` applied in listed order or none. Intermediate
+ * states may violate schema; the final entry MUST conform. No alias
+ * deref on `object`. Cannot remove distinguished (RDN) values --
+ * `notAllowedOnRDN`; use ModifyDN. If no response (abandon/disconnect),
+ * the client cannot tell whether it applied.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,12 +49,21 @@ export class ModifyRequest {
   constructor(
     /**
      * @summary `object`.
+     * @description
+     *
+     * Target DN. Server SHALL NOT alias-dereference.
+     *
      * @public
      * @readonly
      */
     readonly object: LDAPDN,
     /**
      * @summary `changes`.
+     * @description
+     *
+     * Ordered; applied as one atomic operation. Intermediate schema
+     * violations are allowed; the resulting entry MUST be valid.
+     *
      * @public
      * @readonly
      */

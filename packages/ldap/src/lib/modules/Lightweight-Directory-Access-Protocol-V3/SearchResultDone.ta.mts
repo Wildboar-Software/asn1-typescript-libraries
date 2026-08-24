@@ -20,6 +20,12 @@ import {
  * @summary SearchResultDone
  * @description
  *
+ * Final search result, after all SearchResultEntry and
+ * SearchResultReference messages. If the baseObject was not located,
+ * this (not SearchResultReference) carries `referral` or
+ * `noSuchObject`. `sizeLimitExceeded`/`timeLimitExceeded` may still
+ * have been preceded by some entries.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

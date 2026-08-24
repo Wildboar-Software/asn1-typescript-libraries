@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnbindRequest
  * @description
  *
+ * "Quit" -- not the inverse of Bind. APPLICATION 2 NULL. After send
+ * (client) or receipt (server), gracefully terminate the session.
+ * Uncompleted ops are abandoned or finished without sending a
+ * response. There is no Unbind response. Controls on Unbind: treat
+ * `criticality` as FALSE and ignore it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
